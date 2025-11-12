@@ -34,7 +34,7 @@ class Aliases extends \Google\Collection
   public $kind;
 
   /**
-   * @param array[]
+   * @param array[] $aliases
    */
   public function setAliases($aliases)
   {
@@ -48,7 +48,7 @@ class Aliases extends \Google\Collection
     return $this->aliases;
   }
   /**
-   * @param string
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -62,7 +62,7 @@ class Aliases extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {

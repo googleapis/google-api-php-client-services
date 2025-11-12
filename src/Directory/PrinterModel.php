@@ -20,20 +20,29 @@ namespace Google\Service\Directory;
 class PrinterModel extends \Google\Model
 {
   /**
+   * Display name. eq. "Brother MFC-8840D"
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Make and model as represented in "make_and_model" field in Printer object.
+   * eq. "brother mfc-8840d"
+   *
    * @var string
    */
   public $makeAndModel;
   /**
+   * Manufacturer. eq. "Brother"
+   *
    * @var string
    */
   public $manufacturer;
 
   /**
-   * @param string
+   * Display name. eq. "Brother MFC-8840D"
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +56,10 @@ class PrinterModel extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Make and model as represented in "make_and_model" field in Printer object.
+   * eq. "brother mfc-8840d"
+   *
+   * @param string $makeAndModel
    */
   public function setMakeAndModel($makeAndModel)
   {
@@ -61,7 +73,9 @@ class PrinterModel extends \Google\Model
     return $this->makeAndModel;
   }
   /**
-   * @param string
+   * Manufacturer. eq. "Brother"
+   *
+   * @param string $manufacturer
    */
   public function setManufacturer($manufacturer)
   {

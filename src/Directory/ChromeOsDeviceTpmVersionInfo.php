@@ -20,32 +20,49 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceTpmVersionInfo extends \Google\Model
 {
   /**
+   * TPM family. We use the TPM 2.0 style encoding, e.g.: TPM 1.2: "1.2" ->
+   * 312e3200 TPM 2.0: "2.0" -> 322e3000
+   *
    * @var string
    */
   public $family;
   /**
+   * TPM firmware version.
+   *
    * @var string
    */
   public $firmwareVersion;
   /**
+   * TPM manufacturer code.
+   *
    * @var string
    */
   public $manufacturer;
   /**
+   * TPM specification level. See Library Specification for TPM 2.0 and Main
+   * Specification for TPM 1.2.
+   *
    * @var string
    */
   public $specLevel;
   /**
+   * TPM model number.
+   *
    * @var string
    */
   public $tpmModel;
   /**
+   * Vendor-specific information such as Vendor ID.
+   *
    * @var string
    */
   public $vendorSpecific;
 
   /**
-   * @param string
+   * TPM family. We use the TPM 2.0 style encoding, e.g.: TPM 1.2: "1.2" ->
+   * 312e3200 TPM 2.0: "2.0" -> 322e3000
+   *
+   * @param string $family
    */
   public function setFamily($family)
   {
@@ -59,7 +76,9 @@ class ChromeOsDeviceTpmVersionInfo extends \Google\Model
     return $this->family;
   }
   /**
-   * @param string
+   * TPM firmware version.
+   *
+   * @param string $firmwareVersion
    */
   public function setFirmwareVersion($firmwareVersion)
   {
@@ -73,7 +92,9 @@ class ChromeOsDeviceTpmVersionInfo extends \Google\Model
     return $this->firmwareVersion;
   }
   /**
-   * @param string
+   * TPM manufacturer code.
+   *
+   * @param string $manufacturer
    */
   public function setManufacturer($manufacturer)
   {
@@ -87,7 +108,10 @@ class ChromeOsDeviceTpmVersionInfo extends \Google\Model
     return $this->manufacturer;
   }
   /**
-   * @param string
+   * TPM specification level. See Library Specification for TPM 2.0 and Main
+   * Specification for TPM 1.2.
+   *
+   * @param string $specLevel
    */
   public function setSpecLevel($specLevel)
   {
@@ -101,7 +125,9 @@ class ChromeOsDeviceTpmVersionInfo extends \Google\Model
     return $this->specLevel;
   }
   /**
-   * @param string
+   * TPM model number.
+   *
+   * @param string $tpmModel
    */
   public function setTpmModel($tpmModel)
   {
@@ -115,7 +141,9 @@ class ChromeOsDeviceTpmVersionInfo extends \Google\Model
     return $this->tpmModel;
   }
   /**
-   * @param string
+   * Vendor-specific information such as Vendor ID.
+   *
+   * @param string $vendorSpecific
    */
   public function setVendorSpecific($vendorSpecific)
   {

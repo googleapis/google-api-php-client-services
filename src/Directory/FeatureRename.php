@@ -20,12 +20,16 @@ namespace Google\Service\Directory;
 class FeatureRename extends \Google\Model
 {
   /**
+   * New name of the feature.
+   *
    * @var string
    */
   public $newName;
 
   /**
-   * @param string
+   * New name of the feature.
+   *
+   * @param string $newName
    */
   public function setNewName($newName)
   {

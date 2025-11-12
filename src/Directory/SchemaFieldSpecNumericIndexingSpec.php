@@ -19,7 +19,21 @@ namespace Google\Service\Directory;
 
 class SchemaFieldSpecNumericIndexingSpec extends \Google\Model
 {
+  /**
+   * Maximum value of this field. This is meant to be indicative rather than
+   * enforced. Values outside this range will still be indexed, but search may
+   * not be as performant.
+   *
+   * @var 
+   */
   public $maxValue;
+  /**
+   * Minimum value of this field. This is meant to be indicative rather than
+   * enforced. Values outside this range will still be indexed, but search may
+   * not be as performant.
+   *
+   * @var 
+   */
   public $minValue;
 
   public function setMaxValue($maxValue)

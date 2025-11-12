@@ -21,166 +21,274 @@ class MobileDevice extends \Google\Collection
 {
   protected $collection_key = 'otherAccountsInfo';
   /**
+   * Adb (USB debugging) enabled or disabled on device (Read-only)
+   *
    * @var bool
    */
   public $adbStatus;
   protected $applicationsType = MobileDeviceApplications::class;
   protected $applicationsDataType = 'array';
   /**
+   * The device's baseband version.
+   *
    * @var string
    */
   public $basebandVersion;
   /**
+   * Mobile Device Bootloader version (Read-only)
+   *
    * @var string
    */
   public $bootloaderVersion;
   /**
+   * Mobile Device Brand (Read-only)
+   *
    * @var string
    */
   public $brand;
   /**
+   * The device's operating system build number.
+   *
    * @var string
    */
   public $buildNumber;
   /**
+   * The default locale used on the device.
+   *
    * @var string
    */
   public $defaultLanguage;
   /**
+   * Developer options enabled or disabled on device (Read-only)
+   *
    * @var bool
    */
   public $developerOptionsStatus;
   /**
+   * The compromised device status.
+   *
    * @var string
    */
   public $deviceCompromisedStatus;
   /**
+   * The serial number for a Google Sync mobile device. For Android and iOS
+   * devices, this is a software generated unique identifier.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * DevicePasswordStatus (Read-only)
+   *
    * @var string
    */
   public $devicePasswordStatus;
   /**
+   * The list of the owner's email addresses. If your application needs the
+   * current list of user emails, use the [get](https://developers.google.com/wo
+   * rkspace/admin/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](https://developers.google
+   * .com/workspace/admin/directory/v1/guides/manage-users#get_user) method.
+   *
    * @var string[]
    */
   public $email;
   /**
+   * Mobile Device Encryption Status (Read-only)
+   *
    * @var string
    */
   public $encryptionStatus;
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Date and time the device was first synchronized with the policy settings in
+   * the G Suite administrator control panel (Read-only)
+   *
    * @var string
    */
   public $firstSync;
   /**
+   * Mobile Device Hardware (Read-only)
+   *
    * @var string
    */
   public $hardware;
   /**
+   * The IMEI/MEID unique identifier for Android hardware. It is not applicable
+   * to Google Sync devices. When adding an Android mobile device, this is an
+   * optional property. When updating one of these devices, this is a read-only
+   * property.
+   *
    * @var string
    */
   public $hardwareId;
   /**
+   * The device's IMEI number.
+   *
    * @var string
    */
   public $imei;
   /**
+   * The device's kernel version.
+   *
    * @var string
    */
   public $kernelVersion;
   /**
+   * The type of the API resource. For Mobiledevices resources, the value is
+   * `admin#directory#mobiledevice`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Date and time the device was last synchronized with the policy settings in
+   * the G Suite administrator control panel (Read-only)
+   *
    * @var string
    */
   public $lastSync;
   /**
+   * Boolean indicating if this account is on owner/primary profile or not.
+   *
    * @var bool
    */
   public $managedAccountIsOnOwnerProfile;
   /**
+   * Mobile Device manufacturer (Read-only)
+   *
    * @var string
    */
   public $manufacturer;
   /**
+   * The device's MEID number.
+   *
    * @var string
    */
   public $meid;
   /**
+   * The mobile device's model name, for example Nexus S. This property can be [
+   * updated](https://developers.google.com/workspace/admin/directory/v1/referen
+   * ce/mobiledevices/update.html). For more information, see the [Developer's G
+   * uide](https://developers.google.com/workspace/admin/directory/v1/guides/man
+   * age-mobile=devices#update_mobile_device).
+   *
    * @var string
    */
   public $model;
   /**
+   * The list of the owner's user names. If your application needs the current
+   * list of device owner names, use the [get](https://developers.google.com/wor
+   * kspace/admin/directory/v1/reference/mobiledevices/get.html) method. For
+   * more information about retrieving mobile device user information, see the
+   * [Developer's Guide](https://developers.google.com/workspace/admin/directory
+   * /v1/guides/manage-users#get_user).
+   *
    * @var string[]
    */
   public $name;
   /**
+   * Mobile Device mobile or network operator (if available) (Read-only)
+   *
    * @var string
    */
   public $networkOperator;
   /**
+   * The mobile device's operating system, for example IOS 4.3 or Android 2.3.5.
+   * This property can be [updated](https://developers.google.com/workspace/admi
+   * n/directory/v1/reference/mobiledevices/update.html). For more information,
+   * see the [Developer's Guide](https://developers.google.com/workspace/admin/d
+   * irectory/v1/guides/manage-mobile-devices#update_mobile_device).
+   *
    * @var string
    */
   public $os;
   /**
+   * The list of accounts added on device (Read-only)
+   *
    * @var string[]
    */
   public $otherAccountsInfo;
   /**
+   * DMAgentPermission (Read-only)
+   *
    * @var string
    */
   public $privilege;
   /**
+   * Mobile Device release version version (Read-only)
+   *
    * @var string
    */
   public $releaseVersion;
   /**
+   * The unique ID the API service uses to identify the mobile device.
+   *
    * @var string
    */
   public $resourceId;
   /**
+   * Mobile Device Security patch level (Read-only)
+   *
    * @var string
    */
   public $securityPatchLevel;
   /**
+   * The device's serial number.
+   *
    * @var string
    */
   public $serialNumber;
   /**
+   * The device's status.
+   *
    * @var string
    */
   public $status;
   /**
+   * Work profile supported on device (Read-only)
+   *
    * @var bool
    */
   public $supportsWorkProfile;
   /**
+   * The type of mobile device.
+   *
    * @var string
    */
   public $type;
   /**
+   * Unknown sources enabled or disabled on device (Read-only)
+   *
    * @var bool
    */
   public $unknownSourcesStatus;
   /**
+   * Gives information about the device such as `os` version. This property can
+   * be [updated](https://developers.google.com/workspace/admin/directory/v1/ref
+   * erence/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](https://developers.google.com/workspace/admin/directory
+   * /v1/guides/manage-mobile-devices#update_mobile_device).
+   *
    * @var string
    */
   public $userAgent;
   /**
+   * The device's MAC address on Wi-Fi networks.
+   *
    * @var string
    */
   public $wifiMacAddress;
 
   /**
-   * @param bool
+   * Adb (USB debugging) enabled or disabled on device (Read-only)
+   *
+   * @param bool $adbStatus
    */
   public function setAdbStatus($adbStatus)
   {
@@ -194,7 +302,15 @@ class MobileDevice extends \Google\Collection
     return $this->adbStatus;
   }
   /**
-   * @param MobileDeviceApplications[]
+   * The list of applications installed on an Android mobile device. It is not
+   * applicable to Google Sync and iOS devices. The list includes any Android
+   * applications that access Google Workspace data. When updating an
+   * applications list, it is important to note that updates replace the
+   * existing list. If the Android device has two existing applications and the
+   * API updates the list with five applications, the is now the updated list of
+   * five applications.
+   *
+   * @param MobileDeviceApplications[] $applications
    */
   public function setApplications($applications)
   {
@@ -208,7 +324,9 @@ class MobileDevice extends \Google\Collection
     return $this->applications;
   }
   /**
-   * @param string
+   * The device's baseband version.
+   *
+   * @param string $basebandVersion
    */
   public function setBasebandVersion($basebandVersion)
   {
@@ -222,7 +340,9 @@ class MobileDevice extends \Google\Collection
     return $this->basebandVersion;
   }
   /**
-   * @param string
+   * Mobile Device Bootloader version (Read-only)
+   *
+   * @param string $bootloaderVersion
    */
   public function setBootloaderVersion($bootloaderVersion)
   {
@@ -236,7 +356,9 @@ class MobileDevice extends \Google\Collection
     return $this->bootloaderVersion;
   }
   /**
-   * @param string
+   * Mobile Device Brand (Read-only)
+   *
+   * @param string $brand
    */
   public function setBrand($brand)
   {
@@ -250,7 +372,9 @@ class MobileDevice extends \Google\Collection
     return $this->brand;
   }
   /**
-   * @param string
+   * The device's operating system build number.
+   *
+   * @param string $buildNumber
    */
   public function setBuildNumber($buildNumber)
   {
@@ -264,7 +388,9 @@ class MobileDevice extends \Google\Collection
     return $this->buildNumber;
   }
   /**
-   * @param string
+   * The default locale used on the device.
+   *
+   * @param string $defaultLanguage
    */
   public function setDefaultLanguage($defaultLanguage)
   {
@@ -278,7 +404,9 @@ class MobileDevice extends \Google\Collection
     return $this->defaultLanguage;
   }
   /**
-   * @param bool
+   * Developer options enabled or disabled on device (Read-only)
+   *
+   * @param bool $developerOptionsStatus
    */
   public function setDeveloperOptionsStatus($developerOptionsStatus)
   {
@@ -292,7 +420,9 @@ class MobileDevice extends \Google\Collection
     return $this->developerOptionsStatus;
   }
   /**
-   * @param string
+   * The compromised device status.
+   *
+   * @param string $deviceCompromisedStatus
    */
   public function setDeviceCompromisedStatus($deviceCompromisedStatus)
   {
@@ -306,7 +436,10 @@ class MobileDevice extends \Google\Collection
     return $this->deviceCompromisedStatus;
   }
   /**
-   * @param string
+   * The serial number for a Google Sync mobile device. For Android and iOS
+   * devices, this is a software generated unique identifier.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -320,7 +453,9 @@ class MobileDevice extends \Google\Collection
     return $this->deviceId;
   }
   /**
-   * @param string
+   * DevicePasswordStatus (Read-only)
+   *
+   * @param string $devicePasswordStatus
    */
   public function setDevicePasswordStatus($devicePasswordStatus)
   {
@@ -334,7 +469,13 @@ class MobileDevice extends \Google\Collection
     return $this->devicePasswordStatus;
   }
   /**
-   * @param string[]
+   * The list of the owner's email addresses. If your application needs the
+   * current list of user emails, use the [get](https://developers.google.com/wo
+   * rkspace/admin/directory/v1/reference/mobiledevices/get.html) method. For
+   * additional information, see the [retrieve a user](https://developers.google
+   * .com/workspace/admin/directory/v1/guides/manage-users#get_user) method.
+   *
+   * @param string[] $email
    */
   public function setEmail($email)
   {
@@ -348,7 +489,9 @@ class MobileDevice extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param string
+   * Mobile Device Encryption Status (Read-only)
+   *
+   * @param string $encryptionStatus
    */
   public function setEncryptionStatus($encryptionStatus)
   {
@@ -362,7 +505,9 @@ class MobileDevice extends \Google\Collection
     return $this->encryptionStatus;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -376,7 +521,10 @@ class MobileDevice extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Date and time the device was first synchronized with the policy settings in
+   * the G Suite administrator control panel (Read-only)
+   *
+   * @param string $firstSync
    */
   public function setFirstSync($firstSync)
   {
@@ -390,7 +538,9 @@ class MobileDevice extends \Google\Collection
     return $this->firstSync;
   }
   /**
-   * @param string
+   * Mobile Device Hardware (Read-only)
+   *
+   * @param string $hardware
    */
   public function setHardware($hardware)
   {
@@ -404,7 +554,12 @@ class MobileDevice extends \Google\Collection
     return $this->hardware;
   }
   /**
-   * @param string
+   * The IMEI/MEID unique identifier for Android hardware. It is not applicable
+   * to Google Sync devices. When adding an Android mobile device, this is an
+   * optional property. When updating one of these devices, this is a read-only
+   * property.
+   *
+   * @param string $hardwareId
    */
   public function setHardwareId($hardwareId)
   {
@@ -418,7 +573,9 @@ class MobileDevice extends \Google\Collection
     return $this->hardwareId;
   }
   /**
-   * @param string
+   * The device's IMEI number.
+   *
+   * @param string $imei
    */
   public function setImei($imei)
   {
@@ -432,7 +589,9 @@ class MobileDevice extends \Google\Collection
     return $this->imei;
   }
   /**
-   * @param string
+   * The device's kernel version.
+   *
+   * @param string $kernelVersion
    */
   public function setKernelVersion($kernelVersion)
   {
@@ -446,7 +605,10 @@ class MobileDevice extends \Google\Collection
     return $this->kernelVersion;
   }
   /**
-   * @param string
+   * The type of the API resource. For Mobiledevices resources, the value is
+   * `admin#directory#mobiledevice`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -460,7 +622,10 @@ class MobileDevice extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Date and time the device was last synchronized with the policy settings in
+   * the G Suite administrator control panel (Read-only)
+   *
+   * @param string $lastSync
    */
   public function setLastSync($lastSync)
   {
@@ -474,7 +639,9 @@ class MobileDevice extends \Google\Collection
     return $this->lastSync;
   }
   /**
-   * @param bool
+   * Boolean indicating if this account is on owner/primary profile or not.
+   *
+   * @param bool $managedAccountIsOnOwnerProfile
    */
   public function setManagedAccountIsOnOwnerProfile($managedAccountIsOnOwnerProfile)
   {
@@ -488,7 +655,9 @@ class MobileDevice extends \Google\Collection
     return $this->managedAccountIsOnOwnerProfile;
   }
   /**
-   * @param string
+   * Mobile Device manufacturer (Read-only)
+   *
+   * @param string $manufacturer
    */
   public function setManufacturer($manufacturer)
   {
@@ -502,7 +671,9 @@ class MobileDevice extends \Google\Collection
     return $this->manufacturer;
   }
   /**
-   * @param string
+   * The device's MEID number.
+   *
+   * @param string $meid
    */
   public function setMeid($meid)
   {
@@ -516,7 +687,13 @@ class MobileDevice extends \Google\Collection
     return $this->meid;
   }
   /**
-   * @param string
+   * The mobile device's model name, for example Nexus S. This property can be [
+   * updated](https://developers.google.com/workspace/admin/directory/v1/referen
+   * ce/mobiledevices/update.html). For more information, see the [Developer's G
+   * uide](https://developers.google.com/workspace/admin/directory/v1/guides/man
+   * age-mobile=devices#update_mobile_device).
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -530,7 +707,14 @@ class MobileDevice extends \Google\Collection
     return $this->model;
   }
   /**
-   * @param string[]
+   * The list of the owner's user names. If your application needs the current
+   * list of device owner names, use the [get](https://developers.google.com/wor
+   * kspace/admin/directory/v1/reference/mobiledevices/get.html) method. For
+   * more information about retrieving mobile device user information, see the
+   * [Developer's Guide](https://developers.google.com/workspace/admin/directory
+   * /v1/guides/manage-users#get_user).
+   *
+   * @param string[] $name
    */
   public function setName($name)
   {
@@ -544,7 +728,9 @@ class MobileDevice extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Mobile Device mobile or network operator (if available) (Read-only)
+   *
+   * @param string $networkOperator
    */
   public function setNetworkOperator($networkOperator)
   {
@@ -558,7 +744,13 @@ class MobileDevice extends \Google\Collection
     return $this->networkOperator;
   }
   /**
-   * @param string
+   * The mobile device's operating system, for example IOS 4.3 or Android 2.3.5.
+   * This property can be [updated](https://developers.google.com/workspace/admi
+   * n/directory/v1/reference/mobiledevices/update.html). For more information,
+   * see the [Developer's Guide](https://developers.google.com/workspace/admin/d
+   * irectory/v1/guides/manage-mobile-devices#update_mobile_device).
+   *
+   * @param string $os
    */
   public function setOs($os)
   {
@@ -572,7 +764,9 @@ class MobileDevice extends \Google\Collection
     return $this->os;
   }
   /**
-   * @param string[]
+   * The list of accounts added on device (Read-only)
+   *
+   * @param string[] $otherAccountsInfo
    */
   public function setOtherAccountsInfo($otherAccountsInfo)
   {
@@ -586,7 +780,9 @@ class MobileDevice extends \Google\Collection
     return $this->otherAccountsInfo;
   }
   /**
-   * @param string
+   * DMAgentPermission (Read-only)
+   *
+   * @param string $privilege
    */
   public function setPrivilege($privilege)
   {
@@ -600,7 +796,9 @@ class MobileDevice extends \Google\Collection
     return $this->privilege;
   }
   /**
-   * @param string
+   * Mobile Device release version version (Read-only)
+   *
+   * @param string $releaseVersion
    */
   public function setReleaseVersion($releaseVersion)
   {
@@ -614,7 +812,9 @@ class MobileDevice extends \Google\Collection
     return $this->releaseVersion;
   }
   /**
-   * @param string
+   * The unique ID the API service uses to identify the mobile device.
+   *
+   * @param string $resourceId
    */
   public function setResourceId($resourceId)
   {
@@ -628,7 +828,9 @@ class MobileDevice extends \Google\Collection
     return $this->resourceId;
   }
   /**
-   * @param string
+   * Mobile Device Security patch level (Read-only)
+   *
+   * @param string $securityPatchLevel
    */
   public function setSecurityPatchLevel($securityPatchLevel)
   {
@@ -642,7 +844,9 @@ class MobileDevice extends \Google\Collection
     return $this->securityPatchLevel;
   }
   /**
-   * @param string
+   * The device's serial number.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {
@@ -656,7 +860,9 @@ class MobileDevice extends \Google\Collection
     return $this->serialNumber;
   }
   /**
-   * @param string
+   * The device's status.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {
@@ -670,7 +876,9 @@ class MobileDevice extends \Google\Collection
     return $this->status;
   }
   /**
-   * @param bool
+   * Work profile supported on device (Read-only)
+   *
+   * @param bool $supportsWorkProfile
    */
   public function setSupportsWorkProfile($supportsWorkProfile)
   {
@@ -684,7 +892,9 @@ class MobileDevice extends \Google\Collection
     return $this->supportsWorkProfile;
   }
   /**
-   * @param string
+   * The type of mobile device.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -698,7 +908,9 @@ class MobileDevice extends \Google\Collection
     return $this->type;
   }
   /**
-   * @param bool
+   * Unknown sources enabled or disabled on device (Read-only)
+   *
+   * @param bool $unknownSourcesStatus
    */
   public function setUnknownSourcesStatus($unknownSourcesStatus)
   {
@@ -712,7 +924,13 @@ class MobileDevice extends \Google\Collection
     return $this->unknownSourcesStatus;
   }
   /**
-   * @param string
+   * Gives information about the device such as `os` version. This property can
+   * be [updated](https://developers.google.com/workspace/admin/directory/v1/ref
+   * erence/mobiledevices/update.html). For more information, see the
+   * [Developer's Guide](https://developers.google.com/workspace/admin/directory
+   * /v1/guides/manage-mobile-devices#update_mobile_device).
+   *
+   * @param string $userAgent
    */
   public function setUserAgent($userAgent)
   {
@@ -726,7 +944,9 @@ class MobileDevice extends \Google\Collection
     return $this->userAgent;
   }
   /**
-   * @param string
+   * The device's MAC address on Wi-Fi networks.
+   *
+   * @param string $wifiMacAddress
    */
   public function setWifiMacAddress($wifiMacAddress)
   {

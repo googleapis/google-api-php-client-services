@@ -21,22 +21,32 @@ class CalendarResources extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = CalendarResource::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies this as a collection of CalendarResources. This is always
+   * `admin#directory#resources#calendars#calendarResourcesList`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +60,9 @@ class CalendarResources extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param CalendarResource[]
+   * The CalendarResources in this page of results.
+   *
+   * @param CalendarResource[] $items
    */
   public function setItems($items)
   {
@@ -64,7 +76,10 @@ class CalendarResources extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies this as a collection of CalendarResources. This is always
+   * `admin#directory#resources#calendars#calendarResourcesList`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +93,10 @@ class CalendarResources extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

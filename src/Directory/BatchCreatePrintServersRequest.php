@@ -24,7 +24,10 @@ class BatchCreatePrintServersRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param CreatePrintServerRequest[]
+   * Required. A list of `PrintServer` resources to be created (max `50` per
+   * batch).
+   *
+   * @param CreatePrintServerRequest[] $requests
    */
   public function setRequests($requests)
   {

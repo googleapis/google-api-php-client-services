@@ -20,20 +20,28 @@ namespace Google\Service\Directory;
 class Feature extends \Google\Model
 {
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etags;
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The name of the feature.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etags
    */
   public function setEtags($etags)
   {
@@ -47,7 +55,9 @@ class Feature extends \Google\Model
     return $this->etags;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +71,9 @@ class Feature extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The name of the feature.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -21,12 +21,16 @@ class Roles extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = Role::class;
   protected $itemsDataType = 'array';
   /**
+   * The type of the API resource. This is always `admin#directory#roles`.
+   *
    * @var string
    */
   public $kind;
@@ -36,7 +40,9 @@ class Roles extends \Google\Collection
   public $nextPageToken;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +56,9 @@ class Roles extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param Role[]
+   * A list of Role resources.
+   *
+   * @param Role[] $items
    */
   public function setItems($items)
   {
@@ -64,7 +72,9 @@ class Roles extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The type of the API resource. This is always `admin#directory#roles`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +88,7 @@ class Roles extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

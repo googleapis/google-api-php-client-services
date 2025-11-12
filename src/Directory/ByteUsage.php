@@ -20,16 +20,22 @@ namespace Google\Service\Directory;
 class ByteUsage extends \Google\Model
 {
   /**
+   * Output only. The total capacity value, in bytes.
+   *
    * @var string
    */
   public $capacityBytes;
   /**
+   * Output only. The current usage value, in bytes.
+   *
    * @var string
    */
   public $usedBytes;
 
   /**
-   * @param string
+   * Output only. The total capacity value, in bytes.
+   *
+   * @param string $capacityBytes
    */
   public function setCapacityBytes($capacityBytes)
   {
@@ -43,7 +49,9 @@ class ByteUsage extends \Google\Model
     return $this->capacityBytes;
   }
   /**
-   * @param string
+   * Output only. The current usage value, in bytes.
+   *
+   * @param string $usedBytes
    */
   public function setUsedBytes($usedBytes)
   {

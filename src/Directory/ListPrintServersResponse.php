@@ -21,6 +21,9 @@ class ListPrintServersResponse extends \Google\Collection
 {
   protected $collection_key = 'printServers';
   /**
+   * A token that can be sent as `page_token` in a request to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListPrintServersResponse extends \Google\Collection
   protected $printServersDataType = 'array';
 
   /**
-   * @param string
+   * A token that can be sent as `page_token` in a request to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListPrintServersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PrintServer[]
+   * List of print servers.
+   *
+   * @param PrintServer[] $printServers
    */
   public function setPrintServers($printServers)
   {

@@ -23,34 +23,54 @@ class Building extends \Google\Collection
   protected $addressType = BuildingAddress::class;
   protected $addressDataType = '';
   /**
+   * Unique identifier for the building. The maximum length is 100 characters.
+   *
    * @var string
    */
   public $buildingId;
   /**
+   * The building name as seen by users in Calendar. Must be unique for the
+   * customer. For example, "NYC-CHEL". The maximum length is 100 characters.
+   *
    * @var string
    */
   public $buildingName;
   protected $coordinatesType = BuildingCoordinates::class;
   protected $coordinatesDataType = '';
   /**
+   * A brief description of the building. For example, "Chelsea Market".
+   *
    * @var string
    */
   public $description;
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etags;
   /**
+   * The display names for all floors in this building. The floors are expected
+   * to be sorted in ascending order, from lowest floor to highest floor. For
+   * example, ["B2", "B1", "L", "1", "2", "2M", "3", "PH"] Must contain at least
+   * one entry.
+   *
    * @var string[]
    */
   public $floorNames;
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param BuildingAddress
+   * The postal address of the building. See [`PostalAddress`](/my-
+   * business/reference/rest/v4/PostalAddress) for details. Note that only a
+   * single address line and region code are required.
+   *
+   * @param BuildingAddress $address
    */
   public function setAddress(BuildingAddress $address)
   {
@@ -64,7 +84,9 @@ class Building extends \Google\Collection
     return $this->address;
   }
   /**
-   * @param string
+   * Unique identifier for the building. The maximum length is 100 characters.
+   *
+   * @param string $buildingId
    */
   public function setBuildingId($buildingId)
   {
@@ -78,7 +100,10 @@ class Building extends \Google\Collection
     return $this->buildingId;
   }
   /**
-   * @param string
+   * The building name as seen by users in Calendar. Must be unique for the
+   * customer. For example, "NYC-CHEL". The maximum length is 100 characters.
+   *
+   * @param string $buildingName
    */
   public function setBuildingName($buildingName)
   {
@@ -92,7 +117,10 @@ class Building extends \Google\Collection
     return $this->buildingName;
   }
   /**
-   * @param BuildingCoordinates
+   * The geographic coordinates of the center of the building, expressed as
+   * latitude and longitude in decimal degrees.
+   *
+   * @param BuildingCoordinates $coordinates
    */
   public function setCoordinates(BuildingCoordinates $coordinates)
   {
@@ -106,7 +134,9 @@ class Building extends \Google\Collection
     return $this->coordinates;
   }
   /**
-   * @param string
+   * A brief description of the building. For example, "Chelsea Market".
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -120,7 +150,9 @@ class Building extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etags
    */
   public function setEtags($etags)
   {
@@ -134,7 +166,12 @@ class Building extends \Google\Collection
     return $this->etags;
   }
   /**
-   * @param string[]
+   * The display names for all floors in this building. The floors are expected
+   * to be sorted in ascending order, from lowest floor to highest floor. For
+   * example, ["B2", "B1", "L", "1", "2", "2M", "3", "PH"] Must contain at least
+   * one entry.
+   *
+   * @param string[] $floorNames
    */
   public function setFloorNames($floorNames)
   {
@@ -148,7 +185,9 @@ class Building extends \Google\Collection
     return $this->floorNames;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

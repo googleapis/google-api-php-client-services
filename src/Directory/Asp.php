@@ -20,36 +20,55 @@ namespace Google\Service\Directory;
 class Asp extends \Google\Model
 {
   /**
+   * The unique ID of the ASP.
+   *
    * @var int
    */
   public $codeId;
   /**
+   * The time when the ASP was created. Expressed in [Unix
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
+   *
    * @var string
    */
   public $creationTime;
   /**
+   * ETag of the ASP.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The type of the API resource. This is always `admin#directory#asp`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The time when the ASP was last used. Expressed in [Unix
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
+   *
    * @var string
    */
   public $lastTimeUsed;
   /**
+   * The name of the application that the user, represented by their `userId`,
+   * entered when the ASP was created.
+   *
    * @var string
    */
   public $name;
   /**
+   * The unique ID of the user who issued the ASP.
+   *
    * @var string
    */
   public $userKey;
 
   /**
-   * @param int
+   * The unique ID of the ASP.
+   *
+   * @param int $codeId
    */
   public function setCodeId($codeId)
   {
@@ -63,7 +82,10 @@ class Asp extends \Google\Model
     return $this->codeId;
   }
   /**
-   * @param string
+   * The time when the ASP was created. Expressed in [Unix
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
+   *
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
@@ -77,7 +99,9 @@ class Asp extends \Google\Model
     return $this->creationTime;
   }
   /**
-   * @param string
+   * ETag of the ASP.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -91,7 +115,9 @@ class Asp extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The type of the API resource. This is always `admin#directory#asp`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -105,7 +131,10 @@ class Asp extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The time when the ASP was last used. Expressed in [Unix
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format.
+   *
+   * @param string $lastTimeUsed
    */
   public function setLastTimeUsed($lastTimeUsed)
   {
@@ -119,7 +148,10 @@ class Asp extends \Google\Model
     return $this->lastTimeUsed;
   }
   /**
-   * @param string
+   * The name of the application that the user, represented by their `userId`,
+   * entered when the ASP was created.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -133,7 +165,9 @@ class Asp extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The unique ID of the user who issued the ASP.
+   *
+   * @param string $userKey
    */
   public function setUserKey($userKey)
   {

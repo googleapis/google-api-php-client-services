@@ -20,16 +20,22 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo extends \Google\Model
 {
   /**
+   * CPU label
+   *
    * @var string
    */
   public $label;
   /**
+   * Temperature in Celsius degrees.
+   *
    * @var int
    */
   public $temperature;
 
   /**
-   * @param string
+   * CPU label
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -43,7 +49,9 @@ class ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo extends \Google\Model
     return $this->label;
   }
   /**
-   * @param int
+   * Temperature in Celsius degrees.
+   *
+   * @param int $temperature
    */
   public function setTemperature($temperature)
   {

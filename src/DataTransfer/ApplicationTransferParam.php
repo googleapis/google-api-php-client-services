@@ -21,16 +21,22 @@ class ApplicationTransferParam extends \Google\Collection
 {
   protected $collection_key = 'value';
   /**
+   * The type of the transfer parameter, such as `PRIVACY_LEVEL`.
+   *
    * @var string
    */
   public $key;
   /**
+   * The value of the transfer parameter, such as `PRIVATE` or `SHARED`.
+   *
    * @var string[]
    */
   public $value;
 
   /**
-   * @param string
+   * The type of the transfer parameter, such as `PRIVACY_LEVEL`.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -44,7 +50,9 @@ class ApplicationTransferParam extends \Google\Collection
     return $this->key;
   }
   /**
-   * @param string[]
+   * The value of the transfer parameter, such as `PRIVATE` or `SHARED`.
+   *
+   * @param string[] $value
    */
   public function setValue($value)
   {

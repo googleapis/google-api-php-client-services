@@ -19,7 +19,17 @@ namespace Google\Service\Directory;
 
 class BuildingCoordinates extends \Google\Model
 {
+  /**
+   * Latitude in decimal degrees.
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * Longitude in decimal degrees.
+   *
+   * @var 
+   */
   public $longitude;
 
   public function setLatitude($latitude)

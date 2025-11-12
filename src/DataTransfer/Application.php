@@ -21,18 +21,28 @@ class Application extends \Google\Collection
 {
   protected $collection_key = 'transferParams';
   /**
+   * Etag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The application's ID. Retrievable by using the
+   * [`applications.list()`](https://developers.google.com/workspace/admin/data-
+   * transfer/reference/rest/v1/applications/list) method.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies the resource as a DataTransfer Application Resource.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The application's name.
+   *
    * @var string
    */
   public $name;
@@ -40,7 +50,9 @@ class Application extends \Google\Collection
   protected $transferParamsDataType = 'array';
 
   /**
-   * @param string
+   * Etag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -54,7 +66,11 @@ class Application extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * The application's ID. Retrievable by using the
+   * [`applications.list()`](https://developers.google.com/workspace/admin/data-
+   * transfer/reference/rest/v1/applications/list) method.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -68,7 +84,9 @@ class Application extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies the resource as a DataTransfer Application Resource.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -82,7 +100,9 @@ class Application extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The application's name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -96,7 +116,10 @@ class Application extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ApplicationTransferParam[]
+   * The list of all possible transfer parameters for this application. These
+   * parameters select which categories of the user's data to transfer.
+   *
+   * @param ApplicationTransferParam[] $transferParams
    */
   public function setTransferParams($transferParams)
   {

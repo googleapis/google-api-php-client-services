@@ -19,26 +19,178 @@ namespace Google\Service\Directory;
 
 class ChromeOsDevice extends \Google\Collection
 {
+  /**
+   * Chrome OS Type unspecified.
+   */
+  public const CHROME_OS_TYPE_chromeOsTypeUnspecified = 'chromeOsTypeUnspecified';
+  /**
+   * Chrome OS Type Chrome OS Flex.
+   */
+  public const CHROME_OS_TYPE_chromeOsFlex = 'chromeOsFlex';
+  /**
+   * Chrome OS Type Chrome OS.
+   */
+  public const CHROME_OS_TYPE_chromeOs = 'chromeOs';
+  /**
+   * The deprovision reason is unknown.
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_UNSPECIFIED = 'DEPROVISION_REASON_UNSPECIFIED';
+  /**
+   * Same model replacement. You have return materials authorization (RMA) or
+   * you are replacing a malfunctioning device under warranty with the same
+   * device model.
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_SAME_MODEL_REPLACEMENT = 'DEPROVISION_REASON_SAME_MODEL_REPLACEMENT';
+  /**
+   * The device was upgraded.
+   *
+   * @deprecated
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_UPGRADE = 'DEPROVISION_REASON_UPGRADE';
+  /**
+   * The device's domain was changed.
+   *
+   * @deprecated
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_DOMAIN_MOVE = 'DEPROVISION_REASON_DOMAIN_MOVE';
+  /**
+   * Service expired for the device.
+   *
+   * @deprecated
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_SERVICE_EXPIRATION = 'DEPROVISION_REASON_SERVICE_EXPIRATION';
+  /**
+   * The device was deprovisioned for a legacy reason that is no longer
+   * supported.
+   *
+   * @deprecated
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_OTHER = 'DEPROVISION_REASON_OTHER';
+  /**
+   * Different model replacement. You are replacing this device with an upgraded
+   * or newer device model.
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_DIFFERENT_MODEL_REPLACEMENT = 'DEPROVISION_REASON_DIFFERENT_MODEL_REPLACEMENT';
+  /**
+   * Retiring from fleet. You are donating, discarding, or otherwise removing
+   * the device from use.
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_RETIRING_DEVICE = 'DEPROVISION_REASON_RETIRING_DEVICE';
+  /**
+   * ChromeOS Flex upgrade transfer. This is a ChromeOS Flex device that you are
+   * replacing with a Chromebook within a year.
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_UPGRADE_TRANSFER = 'DEPROVISION_REASON_UPGRADE_TRANSFER';
+  /**
+   * A reason was not required. For example, the licenses were returned to the
+   * customer's license pool.
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_NOT_REQUIRED = 'DEPROVISION_REASON_NOT_REQUIRED';
+  /**
+   * The device was deprovisioned by the Repair Service Center. Can only be set
+   * by Repair Service Center during RMA.
+   */
+  public const DEPROVISION_REASON_DEPROVISION_REASON_REPAIR_CENTER = 'DEPROVISION_REASON_REPAIR_CENTER';
+  /**
+   * The license type is unknown.
+   */
+  public const DEVICE_LICENSE_TYPE_deviceLicenseTypeUnspecified = 'deviceLicenseTypeUnspecified';
+  /**
+   * The device is bundled with a perpetual Chrome Enterprise Upgrade.
+   */
+  public const DEVICE_LICENSE_TYPE_enterprise = 'enterprise';
+  /**
+   * The device has an annual standalone Chrome Enterprise Upgrade.
+   *
+   * @deprecated
+   */
+  public const DEVICE_LICENSE_TYPE_enterpriseUpgrade = 'enterpriseUpgrade';
+  /**
+   * The device has a perpetual standalone Chrome Education Upgrade.
+   *
+   * @deprecated
+   */
+  public const DEVICE_LICENSE_TYPE_educationUpgrade = 'educationUpgrade';
+  /**
+   * The device is bundled with a perpetual Chrome Education Upgrade.
+   */
+  public const DEVICE_LICENSE_TYPE_education = 'education';
+  /**
+   * The device has an annual Kiosk Upgrade.
+   */
+  public const DEVICE_LICENSE_TYPE_kioskUpgrade = 'kioskUpgrade';
+  /**
+   * Indicates that the device is consuming a standalone, perpetual Chrome
+   * Enterprise Upgrade, a Chrome Enterprise license.
+   */
+  public const DEVICE_LICENSE_TYPE_enterpriseUpgradePerpetual = 'enterpriseUpgradePerpetual';
+  /**
+   * Indicates that the device is consuming a standalone, fixed-term Chrome
+   * Enterprise Upgrade, a Chrome Enterprise license.
+   */
+  public const DEVICE_LICENSE_TYPE_enterpriseUpgradeFixedTerm = 'enterpriseUpgradeFixedTerm';
+  /**
+   * Indicates that the device is consuming a standalone, perpetual Chrome
+   * Education Upgrade(AKA Chrome EDU perpetual license).
+   */
+  public const DEVICE_LICENSE_TYPE_educationUpgradePerpetual = 'educationUpgradePerpetual';
+  /**
+   * Indicates that the device is consuming a standalone, fixed-term Chrome
+   * Education Upgrade(AKA Chrome EDU fixed-term license).
+   */
+  public const DEVICE_LICENSE_TYPE_educationUpgradeFixedTerm = 'educationUpgradeFixedTerm';
+  /**
+   * Compliance status unspecified.
+   */
+  public const OS_VERSION_COMPLIANCE_complianceUnspecified = 'complianceUnspecified';
+  /**
+   * Compliance status compliant.
+   */
+  public const OS_VERSION_COMPLIANCE_compliant = 'compliant';
+  /**
+   * Compliance status pending.
+   */
+  public const OS_VERSION_COMPLIANCE_pending = 'pending';
+  /**
+   * Compliance status not compliant.
+   */
+  public const OS_VERSION_COMPLIANCE_notCompliant = 'notCompliant';
   protected $collection_key = 'systemRamFreeReports';
   protected $activeTimeRangesType = ChromeOsDeviceActiveTimeRanges::class;
   protected $activeTimeRangesDataType = 'array';
   /**
+   * The asset identifier as noted by an administrator or specified during
+   * enrollment.
+   *
    * @var string
    */
   public $annotatedAssetId;
   /**
+   * The address or location of the device as noted by the administrator.
+   * Maximum length is `200` characters. Empty values are allowed.
+   *
    * @var string
    */
   public $annotatedLocation;
   /**
+   * The user of the device as noted by the administrator. Maximum length is 100
+   * characters. Empty values are allowed.
+   *
    * @var string
    */
   public $annotatedUser;
   /**
+   * (Read-only) The timestamp after which the device will stop receiving Chrome
+   * updates or support. Please use "autoUpdateThrough" instead.
+   *
+   * @deprecated
    * @var string
    */
   public $autoUpdateExpiration;
   /**
+   * Output only. The timestamp after which the device will stop receiving
+   * Chrome updates or support.
+   *
    * @var string
    */
   public $autoUpdateThrough;
@@ -47,10 +199,20 @@ class ChromeOsDevice extends \Google\Collection
   protected $bluetoothAdapterInfoType = BluetoothAdapterInfo::class;
   protected $bluetoothAdapterInfoDataType = 'array';
   /**
+   * The boot mode for the device. The possible values are: * `Verified`: The
+   * device is running a valid version of the Chrome OS. * `Dev`: The devices's
+   * developer hardware switch is enabled. When booted, the device has a command
+   * line shell. For an example of a developer switch, see the [Chromebook
+   * developer information](https://www.chromium.org/chromium-os/developer-
+   * information-for-chrome-os-devices/samsung-series-5-chromebook#TOC-
+   * Developer-switch).
+   *
    * @var string
    */
   public $bootMode;
   /**
+   * Output only. Chrome OS type of the device.
+   *
    * @var string
    */
   public $chromeOsType;
@@ -59,16 +221,22 @@ class ChromeOsDevice extends \Google\Collection
   protected $cpuStatusReportsType = ChromeOsDeviceCpuStatusReports::class;
   protected $cpuStatusReportsDataType = 'array';
   /**
+   * (Read-only) Deprovision reason.
+   *
    * @var string
    */
   public $deprovisionReason;
   protected $deviceFilesType = ChromeOsDeviceDeviceFiles::class;
   protected $deviceFilesDataType = 'array';
   /**
+   * The unique ID of the Chrome device.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * Output only. Device license type.
+   *
    * @var string
    */
   public $deviceLicenseType;
@@ -77,104 +245,191 @@ class ChromeOsDevice extends \Google\Collection
   protected $diskVolumeReportsType = ChromeOsDeviceDiskVolumeReports::class;
   protected $diskVolumeReportsDataType = 'array';
   /**
+   * (Read-only) Built-in MAC address for the docking station that the device
+   * connected to. Factory sets Media access control address (MAC address)
+   * assigned for use by a dock. It is reserved specifically for MAC pass
+   * through device policy. The format is twelve (12) hexadecimal digits without
+   * any delimiter (uppercase letters). This is only relevant for some devices.
+   *
    * @var string
    */
   public $dockMacAddress;
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The device's MAC address on the ethernet network interface.
+   *
    * @var string
    */
   public $ethernetMacAddress;
   /**
+   * (Read-only) MAC address used by the Chromebook’s internal ethernet port,
+   * and for onboard network (ethernet) interface. The format is twelve (12)
+   * hexadecimal digits without any delimiter (uppercase letters). This is only
+   * relevant for some devices.
+   *
    * @var string
    */
   public $ethernetMacAddress0;
   /**
+   * Output only. Whether or not the device requires the extended support opt
+   * in.
+   *
    * @var bool
    */
   public $extendedSupportEligible;
   /**
+   * Output only. Whether extended support policy is enabled on the device.
+   *
    * @var bool
    */
   public $extendedSupportEnabled;
   /**
+   * Output only. Date of the device when extended support policy for automatic
+   * updates starts.
+   *
    * @var string
    */
   public $extendedSupportStart;
   protected $fanInfoType = FanInfo::class;
   protected $fanInfoDataType = 'array';
   /**
+   * The Chrome device's firmware version.
+   *
    * @var string
    */
   public $firmwareVersion;
   /**
+   * Date and time for the first time the device was enrolled.
+   *
    * @var string
    */
   public $firstEnrollmentTime;
   /**
+   * The type of resource. For the Chromeosdevices resource, the value is
+   * `admin#directory#chromeosdevice`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * (Read-only) Date and time for the last deprovision of the device.
+   *
    * @var string
    */
   public $lastDeprovisionTimestamp;
   /**
+   * Date and time the device was last enrolled (Read-only)
+   *
    * @var string
    */
   public $lastEnrollmentTime;
   protected $lastKnownNetworkType = ChromeOsDeviceLastKnownNetwork::class;
   protected $lastKnownNetworkDataType = 'array';
   /**
+   * Date and time the device was last synchronized with the policy settings in
+   * the G Suite administrator control panel (Read-only)
+   *
    * @var string
    */
   public $lastSync;
   /**
+   * The device's wireless MAC address. If the device does not have this
+   * information, it is not included in the response.
+   *
    * @var string
    */
   public $macAddress;
   /**
+   * (Read-only) The date the device was manufactured in yyyy-mm-dd format.
+   *
    * @var string
    */
   public $manufactureDate;
   /**
+   * The Mobile Equipment Identifier (MEID) or the International Mobile
+   * Equipment Identity (IMEI) for the 3G mobile card in a mobile device. A
+   * MEID/IMEI is typically used when adding a device to a wireless carrier's
+   * post-pay service plan. If the device does not have this information, this
+   * property is not included in the response. For more information on how to
+   * export a MEID/IMEI list, see the [Developer's Guide](https://developers.goo
+   * gle.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices.html#export_meid).
+   *
    * @var string
    */
   public $meid;
   /**
+   * The device's model information. If the device does not have this
+   * information, this property is not included in the response.
+   *
    * @var string
    */
   public $model;
   /**
+   * Notes about this device added by the administrator. This property can be
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [li
+   * st](https://developers.google.com/workspace/admin/directory/v1/reference/ch
+   * romeosdevices/list) method's `query` parameter. Maximum length is 500
+   * characters. Empty values are allowed.
+   *
    * @var string
    */
   public $notes;
   /**
+   * The device's order number. Only devices directly purchased from Google have
+   * an order number.
+   *
    * @var string
    */
   public $orderNumber;
   /**
+   * The unique ID of the organizational unit. orgUnitPath is the human readable
+   * version of orgUnitId. While orgUnitPath may change by renaming an
+   * organizational unit within the path, orgUnitId is unchangeable for one
+   * organizational unit. This property can be [updated](https://developers.goog
+   * le.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information
+   * about how to create an organizational structure for your device, see the
+   * [administration help center](https://support.google.com/a/answer/182433).
+   *
    * @var string
    */
   public $orgUnitId;
   /**
+   * The full parent path with the organizational unit's name associated with
+   * the device. Path names are case insensitive. If the parent organizational
+   * unit is the top-level organization, it is represented as a forward slash,
+   * `/`. This property can be [updated](https://developers.google.com/workspace
+   * /admin/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou)
+   * using the API. For more information about how to create an organizational
+   * structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
+   *
    * @var string
    */
   public $orgUnitPath;
   protected $osUpdateStatusType = OsUpdateStatus::class;
   protected $osUpdateStatusDataType = '';
   /**
+   * The Chrome device's operating system version.
+   *
    * @var string
    */
   public $osVersion;
   /**
+   * Output only. Device policy compliance status of the OS version.
+   *
    * @var string
    */
   public $osVersionCompliance;
   /**
+   * The Chrome device's platform version.
+   *
    * @var string
    */
   public $platformVersion;
@@ -183,32 +438,47 @@ class ChromeOsDevice extends \Google\Collection
   protected $screenshotFilesType = ChromeOsDeviceScreenshotFiles::class;
   protected $screenshotFilesDataType = 'array';
   /**
+   * The Chrome device serial number entered when the device was enabled. This
+   * value is the same as the Admin console's *Serial Number* in the *Chrome OS
+   * Devices* tab.
+   *
    * @var string
    */
   public $serialNumber;
   /**
+   * The status of the device.
+   *
    * @var string
    */
   public $status;
   /**
+   * Final date the device will be supported (Read-only)
+   *
    * @var string
    */
   public $supportEndDate;
   protected $systemRamFreeReportsType = ChromeOsDeviceSystemRamFreeReports::class;
   protected $systemRamFreeReportsDataType = 'array';
   /**
+   * Total RAM on the device [in bytes] (Read-only)
+   *
    * @var string
    */
   public $systemRamTotal;
   protected $tpmVersionInfoType = ChromeOsDeviceTpmVersionInfo::class;
   protected $tpmVersionInfoDataType = '';
   /**
+   * Determines if the device will auto renew its support after the support end
+   * date. This is a read-only property.
+   *
    * @var bool
    */
   public $willAutoRenew;
 
   /**
-   * @param ChromeOsDeviceActiveTimeRanges[]
+   * A list of active time ranges (Read-only).
+   *
+   * @param ChromeOsDeviceActiveTimeRanges[] $activeTimeRanges
    */
   public function setActiveTimeRanges($activeTimeRanges)
   {
@@ -222,7 +492,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->activeTimeRanges;
   }
   /**
-   * @param string
+   * The asset identifier as noted by an administrator or specified during
+   * enrollment.
+   *
+   * @param string $annotatedAssetId
    */
   public function setAnnotatedAssetId($annotatedAssetId)
   {
@@ -236,7 +509,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->annotatedAssetId;
   }
   /**
-   * @param string
+   * The address or location of the device as noted by the administrator.
+   * Maximum length is `200` characters. Empty values are allowed.
+   *
+   * @param string $annotatedLocation
    */
   public function setAnnotatedLocation($annotatedLocation)
   {
@@ -250,7 +526,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->annotatedLocation;
   }
   /**
-   * @param string
+   * The user of the device as noted by the administrator. Maximum length is 100
+   * characters. Empty values are allowed.
+   *
+   * @param string $annotatedUser
    */
   public function setAnnotatedUser($annotatedUser)
   {
@@ -264,13 +543,18 @@ class ChromeOsDevice extends \Google\Collection
     return $this->annotatedUser;
   }
   /**
-   * @param string
+   * (Read-only) The timestamp after which the device will stop receiving Chrome
+   * updates or support. Please use "autoUpdateThrough" instead.
+   *
+   * @deprecated
+   * @param string $autoUpdateExpiration
    */
   public function setAutoUpdateExpiration($autoUpdateExpiration)
   {
     $this->autoUpdateExpiration = $autoUpdateExpiration;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getAutoUpdateExpiration()
@@ -278,7 +562,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->autoUpdateExpiration;
   }
   /**
-   * @param string
+   * Output only. The timestamp after which the device will stop receiving
+   * Chrome updates or support.
+   *
+   * @param string $autoUpdateThrough
    */
   public function setAutoUpdateThrough($autoUpdateThrough)
   {
@@ -292,7 +579,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->autoUpdateThrough;
   }
   /**
-   * @param BacklightInfo[]
+   * Output only. Contains backlight information for the device.
+   *
+   * @param BacklightInfo[] $backlightInfo
    */
   public function setBacklightInfo($backlightInfo)
   {
@@ -306,7 +595,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->backlightInfo;
   }
   /**
-   * @param BluetoothAdapterInfo[]
+   * Output only. Information about bluetooth adapters of the device.
+   *
+   * @param BluetoothAdapterInfo[] $bluetoothAdapterInfo
    */
   public function setBluetoothAdapterInfo($bluetoothAdapterInfo)
   {
@@ -320,7 +611,15 @@ class ChromeOsDevice extends \Google\Collection
     return $this->bluetoothAdapterInfo;
   }
   /**
-   * @param string
+   * The boot mode for the device. The possible values are: * `Verified`: The
+   * device is running a valid version of the Chrome OS. * `Dev`: The devices's
+   * developer hardware switch is enabled. When booted, the device has a command
+   * line shell. For an example of a developer switch, see the [Chromebook
+   * developer information](https://www.chromium.org/chromium-os/developer-
+   * information-for-chrome-os-devices/samsung-series-5-chromebook#TOC-
+   * Developer-switch).
+   *
+   * @param string $bootMode
    */
   public function setBootMode($bootMode)
   {
@@ -334,21 +633,27 @@ class ChromeOsDevice extends \Google\Collection
     return $this->bootMode;
   }
   /**
-   * @param string
+   * Output only. Chrome OS type of the device.
+   *
+   * Accepted values: chromeOsTypeUnspecified, chromeOsFlex, chromeOs
+   *
+   * @param self::CHROME_OS_TYPE_* $chromeOsType
    */
   public function setChromeOsType($chromeOsType)
   {
     $this->chromeOsType = $chromeOsType;
   }
   /**
-   * @return string
+   * @return self::CHROME_OS_TYPE_*
    */
   public function getChromeOsType()
   {
     return $this->chromeOsType;
   }
   /**
-   * @param ChromeOsDeviceCpuInfo[]
+   * Information regarding CPU specs in the device.
+   *
+   * @param ChromeOsDeviceCpuInfo[] $cpuInfo
    */
   public function setCpuInfo($cpuInfo)
   {
@@ -362,7 +667,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->cpuInfo;
   }
   /**
-   * @param ChromeOsDeviceCpuStatusReports[]
+   * Reports of CPU utilization and temperature (Read-only)
+   *
+   * @param ChromeOsDeviceCpuStatusReports[] $cpuStatusReports
    */
   public function setCpuStatusReports($cpuStatusReports)
   {
@@ -376,21 +683,32 @@ class ChromeOsDevice extends \Google\Collection
     return $this->cpuStatusReports;
   }
   /**
-   * @param string
+   * (Read-only) Deprovision reason.
+   *
+   * Accepted values: DEPROVISION_REASON_UNSPECIFIED,
+   * DEPROVISION_REASON_SAME_MODEL_REPLACEMENT, DEPROVISION_REASON_UPGRADE,
+   * DEPROVISION_REASON_DOMAIN_MOVE, DEPROVISION_REASON_SERVICE_EXPIRATION,
+   * DEPROVISION_REASON_OTHER, DEPROVISION_REASON_DIFFERENT_MODEL_REPLACEMENT,
+   * DEPROVISION_REASON_RETIRING_DEVICE, DEPROVISION_REASON_UPGRADE_TRANSFER,
+   * DEPROVISION_REASON_NOT_REQUIRED, DEPROVISION_REASON_REPAIR_CENTER
+   *
+   * @param self::DEPROVISION_REASON_* $deprovisionReason
    */
   public function setDeprovisionReason($deprovisionReason)
   {
     $this->deprovisionReason = $deprovisionReason;
   }
   /**
-   * @return string
+   * @return self::DEPROVISION_REASON_*
    */
   public function getDeprovisionReason()
   {
     return $this->deprovisionReason;
   }
   /**
-   * @param ChromeOsDeviceDeviceFiles[]
+   * A list of device files to download (Read-only)
+   *
+   * @param ChromeOsDeviceDeviceFiles[] $deviceFiles
    */
   public function setDeviceFiles($deviceFiles)
   {
@@ -404,7 +722,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->deviceFiles;
   }
   /**
-   * @param string
+   * The unique ID of the Chrome device.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -418,21 +738,31 @@ class ChromeOsDevice extends \Google\Collection
     return $this->deviceId;
   }
   /**
-   * @param string
+   * Output only. Device license type.
+   *
+   * Accepted values: deviceLicenseTypeUnspecified, enterprise,
+   * enterpriseUpgrade, educationUpgrade, education, kioskUpgrade,
+   * enterpriseUpgradePerpetual, enterpriseUpgradeFixedTerm,
+   * educationUpgradePerpetual, educationUpgradeFixedTerm
+   *
+   * @param self::DEVICE_LICENSE_TYPE_* $deviceLicenseType
    */
   public function setDeviceLicenseType($deviceLicenseType)
   {
     $this->deviceLicenseType = $deviceLicenseType;
   }
   /**
-   * @return string
+   * @return self::DEVICE_LICENSE_TYPE_*
    */
   public function getDeviceLicenseType()
   {
     return $this->deviceLicenseType;
   }
   /**
-   * @param ByteUsage
+   * Output only. How much disk space the device has available and is currently
+   * using.
+   *
+   * @param ByteUsage $diskSpaceUsage
    */
   public function setDiskSpaceUsage(ByteUsage $diskSpaceUsage)
   {
@@ -446,7 +776,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->diskSpaceUsage;
   }
   /**
-   * @param ChromeOsDeviceDiskVolumeReports[]
+   * Reports of disk space and other info about mounted/connected volumes.
+   *
+   * @param ChromeOsDeviceDiskVolumeReports[] $diskVolumeReports
    */
   public function setDiskVolumeReports($diskVolumeReports)
   {
@@ -460,7 +792,13 @@ class ChromeOsDevice extends \Google\Collection
     return $this->diskVolumeReports;
   }
   /**
-   * @param string
+   * (Read-only) Built-in MAC address for the docking station that the device
+   * connected to. Factory sets Media access control address (MAC address)
+   * assigned for use by a dock. It is reserved specifically for MAC pass
+   * through device policy. The format is twelve (12) hexadecimal digits without
+   * any delimiter (uppercase letters). This is only relevant for some devices.
+   *
+   * @param string $dockMacAddress
    */
   public function setDockMacAddress($dockMacAddress)
   {
@@ -474,7 +812,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->dockMacAddress;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -488,7 +828,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * The device's MAC address on the ethernet network interface.
+   *
+   * @param string $ethernetMacAddress
    */
   public function setEthernetMacAddress($ethernetMacAddress)
   {
@@ -502,7 +844,12 @@ class ChromeOsDevice extends \Google\Collection
     return $this->ethernetMacAddress;
   }
   /**
-   * @param string
+   * (Read-only) MAC address used by the Chromebook’s internal ethernet port,
+   * and for onboard network (ethernet) interface. The format is twelve (12)
+   * hexadecimal digits without any delimiter (uppercase letters). This is only
+   * relevant for some devices.
+   *
+   * @param string $ethernetMacAddress0
    */
   public function setEthernetMacAddress0($ethernetMacAddress0)
   {
@@ -516,7 +863,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->ethernetMacAddress0;
   }
   /**
-   * @param bool
+   * Output only. Whether or not the device requires the extended support opt
+   * in.
+   *
+   * @param bool $extendedSupportEligible
    */
   public function setExtendedSupportEligible($extendedSupportEligible)
   {
@@ -530,7 +880,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->extendedSupportEligible;
   }
   /**
-   * @param bool
+   * Output only. Whether extended support policy is enabled on the device.
+   *
+   * @param bool $extendedSupportEnabled
    */
   public function setExtendedSupportEnabled($extendedSupportEnabled)
   {
@@ -544,7 +896,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->extendedSupportEnabled;
   }
   /**
-   * @param string
+   * Output only. Date of the device when extended support policy for automatic
+   * updates starts.
+   *
+   * @param string $extendedSupportStart
    */
   public function setExtendedSupportStart($extendedSupportStart)
   {
@@ -558,7 +913,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->extendedSupportStart;
   }
   /**
-   * @param FanInfo[]
+   * Output only. Fan information for the device.
+   *
+   * @param FanInfo[] $fanInfo
    */
   public function setFanInfo($fanInfo)
   {
@@ -572,7 +929,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->fanInfo;
   }
   /**
-   * @param string
+   * The Chrome device's firmware version.
+   *
+   * @param string $firmwareVersion
    */
   public function setFirmwareVersion($firmwareVersion)
   {
@@ -586,7 +945,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->firmwareVersion;
   }
   /**
-   * @param string
+   * Date and time for the first time the device was enrolled.
+   *
+   * @param string $firstEnrollmentTime
    */
   public function setFirstEnrollmentTime($firstEnrollmentTime)
   {
@@ -600,7 +961,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->firstEnrollmentTime;
   }
   /**
-   * @param string
+   * The type of resource. For the Chromeosdevices resource, the value is
+   * `admin#directory#chromeosdevice`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -614,7 +978,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * (Read-only) Date and time for the last deprovision of the device.
+   *
+   * @param string $lastDeprovisionTimestamp
    */
   public function setLastDeprovisionTimestamp($lastDeprovisionTimestamp)
   {
@@ -628,7 +994,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->lastDeprovisionTimestamp;
   }
   /**
-   * @param string
+   * Date and time the device was last enrolled (Read-only)
+   *
+   * @param string $lastEnrollmentTime
    */
   public function setLastEnrollmentTime($lastEnrollmentTime)
   {
@@ -642,7 +1010,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->lastEnrollmentTime;
   }
   /**
-   * @param ChromeOsDeviceLastKnownNetwork[]
+   * Contains last known network (Read-only)
+   *
+   * @param ChromeOsDeviceLastKnownNetwork[] $lastKnownNetwork
    */
   public function setLastKnownNetwork($lastKnownNetwork)
   {
@@ -656,7 +1026,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->lastKnownNetwork;
   }
   /**
-   * @param string
+   * Date and time the device was last synchronized with the policy settings in
+   * the G Suite administrator control panel (Read-only)
+   *
+   * @param string $lastSync
    */
   public function setLastSync($lastSync)
   {
@@ -670,7 +1043,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->lastSync;
   }
   /**
-   * @param string
+   * The device's wireless MAC address. If the device does not have this
+   * information, it is not included in the response.
+   *
+   * @param string $macAddress
    */
   public function setMacAddress($macAddress)
   {
@@ -684,7 +1060,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->macAddress;
   }
   /**
-   * @param string
+   * (Read-only) The date the device was manufactured in yyyy-mm-dd format.
+   *
+   * @param string $manufactureDate
    */
   public function setManufactureDate($manufactureDate)
   {
@@ -698,7 +1076,16 @@ class ChromeOsDevice extends \Google\Collection
     return $this->manufactureDate;
   }
   /**
-   * @param string
+   * The Mobile Equipment Identifier (MEID) or the International Mobile
+   * Equipment Identity (IMEI) for the 3G mobile card in a mobile device. A
+   * MEID/IMEI is typically used when adding a device to a wireless carrier's
+   * post-pay service plan. If the device does not have this information, this
+   * property is not included in the response. For more information on how to
+   * export a MEID/IMEI list, see the [Developer's Guide](https://developers.goo
+   * gle.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices.html#export_meid).
+   *
+   * @param string $meid
    */
   public function setMeid($meid)
   {
@@ -712,7 +1099,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->meid;
   }
   /**
-   * @param string
+   * The device's model information. If the device does not have this
+   * information, this property is not included in the response.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -726,7 +1116,13 @@ class ChromeOsDevice extends \Google\Collection
     return $this->model;
   }
   /**
-   * @param string
+   * Notes about this device added by the administrator. This property can be
+   * [searched](https://support.google.com/chrome/a/answer/1698333) with the [li
+   * st](https://developers.google.com/workspace/admin/directory/v1/reference/ch
+   * romeosdevices/list) method's `query` parameter. Maximum length is 500
+   * characters. Empty values are allowed.
+   *
+   * @param string $notes
    */
   public function setNotes($notes)
   {
@@ -740,7 +1136,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->notes;
   }
   /**
-   * @param string
+   * The device's order number. Only devices directly purchased from Google have
+   * an order number.
+   *
+   * @param string $orderNumber
    */
   public function setOrderNumber($orderNumber)
   {
@@ -754,7 +1153,16 @@ class ChromeOsDevice extends \Google\Collection
     return $this->orderNumber;
   }
   /**
-   * @param string
+   * The unique ID of the organizational unit. orgUnitPath is the human readable
+   * version of orgUnitId. While orgUnitPath may change by renaming an
+   * organizational unit within the path, orgUnitId is unchangeable for one
+   * organizational unit. This property can be [updated](https://developers.goog
+   * le.com/workspace/admin/directory/v1/guides/manage-chrome-
+   * devices#move_chrome_devices_to_ou) using the API. For more information
+   * about how to create an organizational structure for your device, see the
+   * [administration help center](https://support.google.com/a/answer/182433).
+   *
+   * @param string $orgUnitId
    */
   public function setOrgUnitId($orgUnitId)
   {
@@ -768,7 +1176,16 @@ class ChromeOsDevice extends \Google\Collection
     return $this->orgUnitId;
   }
   /**
-   * @param string
+   * The full parent path with the organizational unit's name associated with
+   * the device. Path names are case insensitive. If the parent organizational
+   * unit is the top-level organization, it is represented as a forward slash,
+   * `/`. This property can be [updated](https://developers.google.com/workspace
+   * /admin/directory/v1/guides/manage-chrome-devices#move_chrome_devices_to_ou)
+   * using the API. For more information about how to create an organizational
+   * structure for your device, see the [administration help
+   * center](https://support.google.com/a/answer/182433).
+   *
+   * @param string $orgUnitPath
    */
   public function setOrgUnitPath($orgUnitPath)
   {
@@ -782,7 +1199,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->orgUnitPath;
   }
   /**
-   * @param OsUpdateStatus
+   * The status of the OS updates for the device.
+   *
+   * @param OsUpdateStatus $osUpdateStatus
    */
   public function setOsUpdateStatus(OsUpdateStatus $osUpdateStatus)
   {
@@ -796,7 +1215,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->osUpdateStatus;
   }
   /**
-   * @param string
+   * The Chrome device's operating system version.
+   *
+   * @param string $osVersion
    */
   public function setOsVersion($osVersion)
   {
@@ -810,21 +1231,27 @@ class ChromeOsDevice extends \Google\Collection
     return $this->osVersion;
   }
   /**
-   * @param string
+   * Output only. Device policy compliance status of the OS version.
+   *
+   * Accepted values: complianceUnspecified, compliant, pending, notCompliant
+   *
+   * @param self::OS_VERSION_COMPLIANCE_* $osVersionCompliance
    */
   public function setOsVersionCompliance($osVersionCompliance)
   {
     $this->osVersionCompliance = $osVersionCompliance;
   }
   /**
-   * @return string
+   * @return self::OS_VERSION_COMPLIANCE_*
    */
   public function getOsVersionCompliance()
   {
     return $this->osVersionCompliance;
   }
   /**
-   * @param string
+   * The Chrome device's platform version.
+   *
+   * @param string $platformVersion
    */
   public function setPlatformVersion($platformVersion)
   {
@@ -838,7 +1265,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->platformVersion;
   }
   /**
-   * @param ChromeOsDeviceRecentUsers[]
+   * A list of recent device users, in descending order, by last login time.
+   *
+   * @param ChromeOsDeviceRecentUsers[] $recentUsers
    */
   public function setRecentUsers($recentUsers)
   {
@@ -852,7 +1281,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->recentUsers;
   }
   /**
-   * @param ChromeOsDeviceScreenshotFiles[]
+   * A list of screenshot files to download. Type is always "SCREENSHOT_FILE".
+   * (Read-only)
+   *
+   * @param ChromeOsDeviceScreenshotFiles[] $screenshotFiles
    */
   public function setScreenshotFiles($screenshotFiles)
   {
@@ -866,7 +1298,11 @@ class ChromeOsDevice extends \Google\Collection
     return $this->screenshotFiles;
   }
   /**
-   * @param string
+   * The Chrome device serial number entered when the device was enabled. This
+   * value is the same as the Admin console's *Serial Number* in the *Chrome OS
+   * Devices* tab.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {
@@ -880,7 +1316,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->serialNumber;
   }
   /**
-   * @param string
+   * The status of the device.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {
@@ -894,7 +1332,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->status;
   }
   /**
-   * @param string
+   * Final date the device will be supported (Read-only)
+   *
+   * @param string $supportEndDate
    */
   public function setSupportEndDate($supportEndDate)
   {
@@ -908,7 +1348,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->supportEndDate;
   }
   /**
-   * @param ChromeOsDeviceSystemRamFreeReports[]
+   * Reports of amounts of available RAM memory (Read-only)
+   *
+   * @param ChromeOsDeviceSystemRamFreeReports[] $systemRamFreeReports
    */
   public function setSystemRamFreeReports($systemRamFreeReports)
   {
@@ -922,7 +1364,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->systemRamFreeReports;
   }
   /**
-   * @param string
+   * Total RAM on the device [in bytes] (Read-only)
+   *
+   * @param string $systemRamTotal
    */
   public function setSystemRamTotal($systemRamTotal)
   {
@@ -936,7 +1380,9 @@ class ChromeOsDevice extends \Google\Collection
     return $this->systemRamTotal;
   }
   /**
-   * @param ChromeOsDeviceTpmVersionInfo
+   * Trusted Platform Module (TPM) (Read-only)
+   *
+   * @param ChromeOsDeviceTpmVersionInfo $tpmVersionInfo
    */
   public function setTpmVersionInfo(ChromeOsDeviceTpmVersionInfo $tpmVersionInfo)
   {
@@ -950,7 +1396,10 @@ class ChromeOsDevice extends \Google\Collection
     return $this->tpmVersionInfo;
   }
   /**
-   * @param bool
+   * Determines if the device will auto renew its support after the support end
+   * date. This is a read-only property.
+   *
+   * @param bool $willAutoRenew
    */
   public function setWillAutoRenew($willAutoRenew)
   {

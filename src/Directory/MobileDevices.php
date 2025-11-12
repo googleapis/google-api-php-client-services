@@ -21,22 +21,30 @@ class MobileDevices extends \Google\Collection
 {
   protected $collection_key = 'mobiledevices';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   protected $mobiledevicesType = MobileDevice::class;
   protected $mobiledevicesDataType = 'array';
   /**
+   * Token used to access next page of this result.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +58,9 @@ class MobileDevices extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -64,7 +74,9 @@ class MobileDevices extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param MobileDevice[]
+   * A list of Mobile Device objects.
+   *
+   * @param MobileDevice[] $mobiledevices
    */
   public function setMobiledevices($mobiledevices)
   {
@@ -78,7 +90,9 @@ class MobileDevices extends \Google\Collection
     return $this->mobiledevices;
   }
   /**
-   * @param string
+   * Token used to access next page of this result.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

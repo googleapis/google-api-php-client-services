@@ -23,16 +23,22 @@ class Domains2 extends \Google\Collection
   protected $domainsType = Domains::class;
   protected $domainsDataType = 'array';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param Domains[]
+   * A list of domain objects.
+   *
+   * @param Domains[] $domains
    */
   public function setDomains($domains)
   {
@@ -46,7 +52,9 @@ class Domains2 extends \Google\Collection
     return $this->domains;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -60,7 +68,9 @@ class Domains2 extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

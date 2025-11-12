@@ -23,20 +23,29 @@ class ApplicationsListResponse extends \Google\Collection
   protected $applicationsType = Application::class;
   protected $applicationsDataType = 'array';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Identifies the resource as a collection of Applications.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token to specify the next page in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Application[]
+   * The list of applications that support data transfer and are also installed
+   * for the customer.
+   *
+   * @param Application[] $applications
    */
   public function setApplications($applications)
   {
@@ -50,7 +59,9 @@ class ApplicationsListResponse extends \Google\Collection
     return $this->applications;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -64,7 +75,9 @@ class ApplicationsListResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Identifies the resource as a collection of Applications.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +91,9 @@ class ApplicationsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token to specify the next page in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

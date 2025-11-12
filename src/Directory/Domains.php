@@ -21,34 +21,50 @@ class Domains extends \Google\Collection
 {
   protected $collection_key = 'domainAliases';
   /**
+   * Creation time of the domain. Expressed in [Unix
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format. (Read-only).
+   *
    * @var string
    */
   public $creationTime;
   protected $domainAliasesType = DomainAlias::class;
   protected $domainAliasesDataType = 'array';
   /**
+   * The domain name of the customer.
+   *
    * @var string
    */
   public $domainName;
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Indicates if the domain is a primary domain (Read-only).
+   *
    * @var bool
    */
   public $isPrimary;
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Indicates the verification state of a domain. (Read-only).
+   *
    * @var bool
    */
   public $verified;
 
   /**
-   * @param string
+   * Creation time of the domain. Expressed in [Unix
+   * time](https://en.wikipedia.org/wiki/Epoch_time) format. (Read-only).
+   *
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
@@ -62,7 +78,9 @@ class Domains extends \Google\Collection
     return $this->creationTime;
   }
   /**
-   * @param DomainAlias[]
+   * A list of domain alias objects. (Read-only)
+   *
+   * @param DomainAlias[] $domainAliases
    */
   public function setDomainAliases($domainAliases)
   {
@@ -76,7 +94,9 @@ class Domains extends \Google\Collection
     return $this->domainAliases;
   }
   /**
-   * @param string
+   * The domain name of the customer.
+   *
+   * @param string $domainName
    */
   public function setDomainName($domainName)
   {
@@ -90,7 +110,9 @@ class Domains extends \Google\Collection
     return $this->domainName;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -104,7 +126,9 @@ class Domains extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param bool
+   * Indicates if the domain is a primary domain (Read-only).
+   *
+   * @param bool $isPrimary
    */
   public function setIsPrimary($isPrimary)
   {
@@ -118,7 +142,9 @@ class Domains extends \Google\Collection
     return $this->isPrimary;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -132,7 +158,9 @@ class Domains extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param bool
+   * Indicates the verification state of a domain. (Read-only).
+   *
+   * @param bool $verified
    */
   public function setVerified($verified)
   {

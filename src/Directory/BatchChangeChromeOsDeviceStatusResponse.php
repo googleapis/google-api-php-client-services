@@ -24,7 +24,9 @@ class BatchChangeChromeOsDeviceStatusResponse extends \Google\Collection
   protected $changeChromeOsDeviceStatusResultsDataType = 'array';
 
   /**
-   * @param ChangeChromeOsDeviceStatusResult[]
+   * The results for each of the ChromeOS devices provided in the request.
+   *
+   * @param ChangeChromeOsDeviceStatusResult[] $changeChromeOsDeviceStatusResults
    */
   public function setChangeChromeOsDeviceStatusResults($changeChromeOsDeviceStatusResults)
   {

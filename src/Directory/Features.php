@@ -21,22 +21,31 @@ class Features extends \Google\Collection
 {
   protected $collection_key = 'features';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   protected $featuresType = Feature::class;
   protected $featuresDataType = 'array';
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +59,9 @@ class Features extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param Feature[]
+   * The Features in this page of results.
+   *
+   * @param Feature[] $features
    */
   public function setFeatures($features)
   {
@@ -64,7 +75,9 @@ class Features extends \Google\Collection
     return $this->features;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +91,10 @@ class Features extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

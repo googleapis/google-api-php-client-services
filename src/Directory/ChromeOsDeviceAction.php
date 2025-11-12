@@ -20,16 +20,25 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceAction extends \Google\Model
 {
   /**
+   * Action to be taken on the Chrome OS device.
+   *
    * @var string
    */
   public $action;
   /**
+   * Only used when the action is `deprovision`. With the `deprovision` action,
+   * this field is required. *Note*: The deprovision reason is audited because
+   * it might have implications on licenses for perpetual subscription
+   * customers.
+   *
    * @var string
    */
   public $deprovisionReason;
 
   /**
-   * @param string
+   * Action to be taken on the Chrome OS device.
+   *
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -43,7 +52,12 @@ class ChromeOsDeviceAction extends \Google\Model
     return $this->action;
   }
   /**
-   * @param string
+   * Only used when the action is `deprovision`. With the `deprovision` action,
+   * this field is required. *Note*: The deprovision reason is audited because
+   * it might have implications on licenses for perpetual subscription
+   * customers.
+   *
+   * @param string $deprovisionReason
    */
   public function setDeprovisionReason($deprovisionReason)
   {

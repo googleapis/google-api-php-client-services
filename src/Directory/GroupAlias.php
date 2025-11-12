@@ -20,28 +20,41 @@ namespace Google\Service\Directory;
 class GroupAlias extends \Google\Model
 {
   /**
+   * The alias email address.
+   *
    * @var string
    */
   public $alias;
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The unique ID of the group.
+   *
    * @var string
    */
   public $id;
   /**
+   * The type of the API resource. For Alias resources, the value is
+   * `admin#directory#alias`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The primary email address of the group.
+   *
    * @var string
    */
   public $primaryEmail;
 
   /**
-   * @param string
+   * The alias email address.
+   *
+   * @param string $alias
    */
   public function setAlias($alias)
   {
@@ -55,7 +68,9 @@ class GroupAlias extends \Google\Model
     return $this->alias;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -69,7 +84,9 @@ class GroupAlias extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The unique ID of the group.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -83,7 +100,10 @@ class GroupAlias extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The type of the API resource. For Alias resources, the value is
+   * `admin#directory#alias`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -97,7 +117,9 @@ class GroupAlias extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The primary email address of the group.
+   *
+   * @param string $primaryEmail
    */
   public function setPrimaryEmail($primaryEmail)
   {

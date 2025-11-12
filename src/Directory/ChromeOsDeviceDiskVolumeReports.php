@@ -24,7 +24,9 @@ class ChromeOsDeviceDiskVolumeReports extends \Google\Collection
   protected $volumeInfoDataType = 'array';
 
   /**
-   * @param ChromeOsDeviceDiskVolumeReportsVolumeInfo[]
+   * Disk volumes
+   *
+   * @param ChromeOsDeviceDiskVolumeReportsVolumeInfo[] $volumeInfo
    */
   public function setVolumeInfo($volumeInfo)
   {

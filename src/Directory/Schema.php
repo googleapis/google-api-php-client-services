@@ -21,30 +21,43 @@ class Schema extends \Google\Collection
 {
   protected $collection_key = 'fields';
   /**
+   * Display name for the schema.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   protected $fieldsType = SchemaFieldSpec::class;
   protected $fieldsDataType = 'array';
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The unique identifier of the schema (Read-only)
+   *
    * @var string
    */
   public $schemaId;
   /**
+   * The schema's name. Each `schema_name` must be unique within a customer.
+   * Reusing a name results in a `409: Entity already exists` error.
+   *
    * @var string
    */
   public $schemaName;
 
   /**
-   * @param string
+   * Display name for the schema.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -58,7 +71,9 @@ class Schema extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * The ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -72,7 +87,9 @@ class Schema extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param SchemaFieldSpec[]
+   * A list of fields in the schema.
+   *
+   * @param SchemaFieldSpec[] $fields
    */
   public function setFields($fields)
   {
@@ -86,7 +103,9 @@ class Schema extends \Google\Collection
     return $this->fields;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -100,7 +119,9 @@ class Schema extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The unique identifier of the schema (Read-only)
+   *
+   * @param string $schemaId
    */
   public function setSchemaId($schemaId)
   {
@@ -114,7 +135,10 @@ class Schema extends \Google\Collection
     return $this->schemaId;
   }
   /**
-   * @param string
+   * The schema's name. Each `schema_name` must be unique within a customer.
+   * Reusing a name results in a `409: Entity already exists` error.
+   *
+   * @param string $schemaName
    */
   public function setSchemaName($schemaName)
   {

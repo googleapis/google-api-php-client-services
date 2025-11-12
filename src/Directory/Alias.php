@@ -41,7 +41,7 @@ class Alias extends \Google\Model
   public $primaryEmail;
 
   /**
-   * @param string
+   * @param string $alias
    */
   public function setAlias($alias)
   {
@@ -55,7 +55,7 @@ class Alias extends \Google\Model
     return $this->alias;
   }
   /**
-   * @param string
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -69,7 +69,7 @@ class Alias extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * @param string $id
    */
   public function setId($id)
   {
@@ -83,7 +83,7 @@ class Alias extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -97,7 +97,7 @@ class Alias extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $primaryEmail
    */
   public function setPrimaryEmail($primaryEmail)
   {

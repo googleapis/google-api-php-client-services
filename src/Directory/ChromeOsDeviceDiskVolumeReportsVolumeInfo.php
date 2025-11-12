@@ -20,20 +20,28 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceDiskVolumeReportsVolumeInfo extends \Google\Model
 {
   /**
+   * Free disk space [in bytes]
+   *
    * @var string
    */
   public $storageFree;
   /**
+   * Total disk space [in bytes]
+   *
    * @var string
    */
   public $storageTotal;
   /**
+   * Volume id
+   *
    * @var string
    */
   public $volumeId;
 
   /**
-   * @param string
+   * Free disk space [in bytes]
+   *
+   * @param string $storageFree
    */
   public function setStorageFree($storageFree)
   {
@@ -47,7 +55,9 @@ class ChromeOsDeviceDiskVolumeReportsVolumeInfo extends \Google\Model
     return $this->storageFree;
   }
   /**
-   * @param string
+   * Total disk space [in bytes]
+   *
+   * @param string $storageTotal
    */
   public function setStorageTotal($storageTotal)
   {
@@ -61,7 +71,9 @@ class ChromeOsDeviceDiskVolumeReportsVolumeInfo extends \Google\Model
     return $this->storageTotal;
   }
   /**
-   * @param string
+   * Volume id
+   *
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

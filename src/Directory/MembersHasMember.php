@@ -20,12 +20,18 @@ namespace Google\Service\Directory;
 class MembersHasMember extends \Google\Model
 {
   /**
+   * Output only. Identifies whether the given user is a member of the group.
+   * Membership can be direct or nested.
+   *
    * @var bool
    */
   public $isMember;
 
   /**
-   * @param bool
+   * Output only. Identifies whether the given user is a member of the group.
+   * Membership can be direct or nested.
+   *
+   * @param bool $isMember
    */
   public function setIsMember($isMember)
   {

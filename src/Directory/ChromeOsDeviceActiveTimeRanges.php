@@ -20,16 +20,22 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceActiveTimeRanges extends \Google\Model
 {
   /**
+   * Duration of usage in milliseconds.
+   *
    * @var int
    */
   public $activeTime;
   /**
+   * Date of usage
+   *
    * @var string
    */
   public $date;
 
   /**
-   * @param int
+   * Duration of usage in milliseconds.
+   *
+   * @param int $activeTime
    */
   public function setActiveTime($activeTime)
   {
@@ -43,7 +49,9 @@ class ChromeOsDeviceActiveTimeRanges extends \Google\Model
     return $this->activeTime;
   }
   /**
-   * @param string
+   * Date of usage
+   *
+   * @param string $date
    */
   public function setDate($date)
   {

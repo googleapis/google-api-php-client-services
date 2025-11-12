@@ -23,12 +23,16 @@ class BatchDeletePrintServersResponse extends \Google\Collection
   protected $failedPrintServersType = PrintServerFailureInfo::class;
   protected $failedPrintServersDataType = 'array';
   /**
+   * A list of print server IDs that were successfully deleted.
+   *
    * @var string[]
    */
   public $printServerIds;
 
   /**
-   * @param PrintServerFailureInfo[]
+   * A list of update failures.
+   *
+   * @param PrintServerFailureInfo[] $failedPrintServers
    */
   public function setFailedPrintServers($failedPrintServers)
   {
@@ -42,7 +46,9 @@ class BatchDeletePrintServersResponse extends \Google\Collection
     return $this->failedPrintServers;
   }
   /**
-   * @param string[]
+   * A list of print server IDs that were successfully deleted.
+   *
+   * @param string[] $printServerIds
    */
   public function setPrintServerIds($printServerIds)
   {

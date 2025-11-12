@@ -21,22 +21,30 @@ class Groups extends \Google\Collection
 {
   protected $collection_key = 'groups';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   protected $groupsType = Group::class;
   protected $groupsDataType = 'array';
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token used to access next page of this result.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +58,9 @@ class Groups extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param Group[]
+   * A list of group objects.
+   *
+   * @param Group[] $groups
    */
   public function setGroups($groups)
   {
@@ -64,7 +74,9 @@ class Groups extends \Google\Collection
     return $this->groups;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +90,9 @@ class Groups extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token used to access next page of this result.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

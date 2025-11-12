@@ -26,7 +26,10 @@ class BatchCreatePrintServersResponse extends \Google\Collection
   protected $printServersDataType = 'array';
 
   /**
-   * @param PrintServerFailureInfo[]
+   * A list of create failures. `PrintServer` IDs are not populated, as print
+   * servers were not created.
+   *
+   * @param PrintServerFailureInfo[] $failures
    */
   public function setFailures($failures)
   {
@@ -40,7 +43,9 @@ class BatchCreatePrintServersResponse extends \Google\Collection
     return $this->failures;
   }
   /**
-   * @param PrintServer[]
+   * A list of successfully created print servers with their IDs populated.
+   *
+   * @param PrintServer[] $printServers
    */
   public function setPrintServers($printServers)
   {

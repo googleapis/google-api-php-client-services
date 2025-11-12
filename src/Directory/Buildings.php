@@ -23,20 +23,29 @@ class Buildings extends \Google\Collection
   protected $buildingsType = Building::class;
   protected $buildingsDataType = 'array';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Building[]
+   * The Buildings in this page of results.
+   *
+   * @param Building[] $buildings
    */
   public function setBuildings($buildings)
   {
@@ -50,7 +59,9 @@ class Buildings extends \Google\Collection
     return $this->buildings;
   }
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -64,7 +75,9 @@ class Buildings extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +91,10 @@ class Buildings extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
