@@ -23,12 +23,17 @@ class GoogleCloudRecommendationengineV1beta1ListCatalogItemsResponse extends \Go
   protected $catalogItemsType = GoogleCloudRecommendationengineV1beta1CatalogItem::class;
   protected $catalogItemsDataType = 'array';
   /**
+   * If empty, the list is complete. If nonempty, the token to pass to the next
+   * request's ListCatalogItemRequest.page_token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudRecommendationengineV1beta1CatalogItem[]
+   * The catalog items.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1CatalogItem[] $catalogItems
    */
   public function setCatalogItems($catalogItems)
   {
@@ -42,7 +47,10 @@ class GoogleCloudRecommendationengineV1beta1ListCatalogItemsResponse extends \Go
     return $this->catalogItems;
   }
   /**
-   * @param string
+   * If empty, the list is complete. If nonempty, the token to pass to the next
+   * request's ListCatalogItemRequest.page_token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

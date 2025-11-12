@@ -20,20 +20,28 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1Image extends \Google\Model
 {
   /**
+   * Optional. Height of the image in number of pixels.
+   *
    * @var int
    */
   public $height;
   /**
+   * Required. URL of the image with a length limit of 5 KiB.
+   *
    * @var string
    */
   public $uri;
   /**
+   * Optional. Width of the image in number of pixels.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * Optional. Height of the image in number of pixels.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -47,7 +55,9 @@ class GoogleCloudRecommendationengineV1beta1Image extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * Required. URL of the image with a length limit of 5 KiB.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {
@@ -61,7 +71,9 @@ class GoogleCloudRecommendationengineV1beta1Image extends \Google\Model
     return $this->uri;
   }
   /**
-   * @param int
+   * Optional. Width of the image in number of pixels.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

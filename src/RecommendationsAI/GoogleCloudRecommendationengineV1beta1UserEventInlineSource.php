@@ -24,7 +24,9 @@ class GoogleCloudRecommendationengineV1beta1UserEventInlineSource extends \Googl
   protected $userEventsDataType = 'array';
 
   /**
-   * @param GoogleCloudRecommendationengineV1beta1UserEvent[]
+   * Optional. A list of user events to import. Recommended max of 10k items.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1UserEvent[] $userEvents
    */
   public function setUserEvents($userEvents)
   {

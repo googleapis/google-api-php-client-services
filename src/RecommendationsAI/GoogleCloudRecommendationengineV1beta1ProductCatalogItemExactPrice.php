@@ -20,16 +20,23 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice extends \Google\Model
 {
   /**
+   * Optional. Display price of the product.
+   *
    * @var float
    */
   public $displayPrice;
   /**
+   * Optional. Price of the product without any discount. If zero, by default
+   * set to be the 'displayPrice'.
+   *
    * @var float
    */
   public $originalPrice;
 
   /**
-   * @param float
+   * Optional. Display price of the product.
+   *
+   * @param float $displayPrice
    */
   public function setDisplayPrice($displayPrice)
   {
@@ -43,7 +50,10 @@ class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice extends
     return $this->displayPrice;
   }
   /**
-   * @param float
+   * Optional. Price of the product without any discount. If zero, by default
+   * set to be the 'displayPrice'.
+   *
+   * @param float $originalPrice
    */
   public function setOriginalPrice($originalPrice)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1ImportErrorsConfig extends \Google\Model
 {
   /**
+   * Google Cloud Storage path for import errors. This must be an empty,
+   * existing Cloud Storage bucket. Import errors will be written to a file in
+   * this bucket, one per line, as a JSON-encoded `google.rpc.Status` message.
+   *
    * @var string
    */
   public $gcsPrefix;
 
   /**
-   * @param string
+   * Google Cloud Storage path for import errors. This must be an empty,
+   * existing Cloud Storage bucket. Import errors will be written to a file in
+   * this bucket, one per line, as a JSON-encoded `google.rpc.Status` message.
+   *
+   * @param string $gcsPrefix
    */
   public function setGcsPrefix($gcsPrefix)
   {

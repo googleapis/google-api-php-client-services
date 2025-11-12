@@ -20,19 +20,41 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1RejoinUserEventsRequest extends \Google\Model
 {
   /**
+   * Rejoin catalogs with all events including both joined events and unjoined
+   * events.
+   */
+  public const USER_EVENT_REJOIN_SCOPE_USER_EVENT_REJOIN_SCOPE_UNSPECIFIED = 'USER_EVENT_REJOIN_SCOPE_UNSPECIFIED';
+  /**
+   * Only rejoin catalogs with joined events.
+   */
+  public const USER_EVENT_REJOIN_SCOPE_JOINED_EVENTS = 'JOINED_EVENTS';
+  /**
+   * Only rejoin catalogs with unjoined events.
+   */
+  public const USER_EVENT_REJOIN_SCOPE_UNJOINED_EVENTS = 'UNJOINED_EVENTS';
+  /**
+   * Required. The type of the catalog rejoin to define the scope and range of
+   * the user events to be rejoined with catalog items.
+   *
    * @var string
    */
   public $userEventRejoinScope;
 
   /**
-   * @param string
+   * Required. The type of the catalog rejoin to define the scope and range of
+   * the user events to be rejoined with catalog items.
+   *
+   * Accepted values: USER_EVENT_REJOIN_SCOPE_UNSPECIFIED, JOINED_EVENTS,
+   * UNJOINED_EVENTS
+   *
+   * @param self::USER_EVENT_REJOIN_SCOPE_* $userEventRejoinScope
    */
   public function setUserEventRejoinScope($userEventRejoinScope)
   {
     $this->userEventRejoinScope = $userEventRejoinScope;
   }
   /**
-   * @return string
+   * @return self::USER_EVENT_REJOIN_SCOPE_*
    */
   public function getUserEventRejoinScope()
   {

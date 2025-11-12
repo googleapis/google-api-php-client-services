@@ -21,6 +21,9 @@ class GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsRes
 {
   protected $collection_key = 'predictionApiKeyRegistrations';
   /**
+   * If empty, the list is complete. If nonempty, pass the token to the next
+   * request's `ListPredictionApiKeysRegistrationsRequest.pageToken`.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsRes
   protected $predictionApiKeyRegistrationsDataType = 'array';
 
   /**
-   * @param string
+   * If empty, the list is complete. If nonempty, pass the token to the next
+   * request's `ListPredictionApiKeysRegistrationsRequest.pageToken`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsRes
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration[]
+   * The list of registered API keys.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration[] $predictionApiKeyRegistrations
    */
   public function setPredictionApiKeyRegistrations($predictionApiKeyRegistrations)
   {

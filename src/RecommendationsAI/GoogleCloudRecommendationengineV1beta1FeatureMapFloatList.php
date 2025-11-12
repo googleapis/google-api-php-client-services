@@ -21,12 +21,16 @@ class GoogleCloudRecommendationengineV1beta1FeatureMapFloatList extends \Google\
 {
   protected $collection_key = 'value';
   /**
+   * Float feature value.
+   *
    * @var float[]
    */
   public $value;
 
   /**
-   * @param float[]
+   * Float feature value.
+   *
+   * @param float[] $value
    */
   public function setValue($value)
   {

@@ -20,16 +20,26 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult extends \Google\Model
 {
   /**
+   * ID of the recommended catalog item
+   *
    * @var string
    */
   public $id;
   /**
+   * Additional item metadata / annotations. Possible values: * `catalogItem`:
+   * JSON representation of the catalogItem. Will be set if `returnCatalogItem`
+   * is set to true in `PredictRequest.params`. * `score`: Prediction score in
+   * double value. Will be set if `returnItemScore` is set to true in
+   * `PredictRequest.params`.
+   *
    * @var array[]
    */
   public $itemMetadata;
 
   /**
-   * @param string
+   * ID of the recommended catalog item
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +53,13 @@ class GoogleCloudRecommendationengineV1beta1PredictResponsePredictionResult exte
     return $this->id;
   }
   /**
-   * @param array[]
+   * Additional item metadata / annotations. Possible values: * `catalogItem`:
+   * JSON representation of the catalogItem. Will be set if `returnCatalogItem`
+   * is set to true in `PredictRequest.params`. * `score`: Prediction score in
+   * double value. Will be set if `returnItemScore` is set to true in
+   * `PredictRequest.params`.
+   *
+   * @param array[] $itemMetadata
    */
   public function setItemMetadata($itemMetadata)
   {

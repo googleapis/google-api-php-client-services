@@ -23,7 +23,9 @@ class GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRe
   protected $predictionApiKeyRegistrationDataType = '';
 
   /**
-   * @param GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration
+   * Required. The prediction API key registration.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration $predictionApiKeyRegistration
    */
   public function setPredictionApiKeyRegistration(GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration $predictionApiKeyRegistration)
   {

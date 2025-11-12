@@ -20,32 +20,48 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1ImportMetadata extends \Google\Model
 {
   /**
+   * Operation create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Count of entries that encountered errors while processing.
+   *
    * @var string
    */
   public $failureCount;
   /**
+   * Name of the operation.
+   *
    * @var string
    */
   public $operationName;
   /**
+   * Id of the request / operation. This is parroting back the requestId that
+   * was passed in the request.
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Count of entries that were processed successfully.
+   *
    * @var string
    */
   public $successCount;
   /**
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Operation create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -59,7 +75,9 @@ class GoogleCloudRecommendationengineV1beta1ImportMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Count of entries that encountered errors while processing.
+   *
+   * @param string $failureCount
    */
   public function setFailureCount($failureCount)
   {
@@ -73,7 +91,9 @@ class GoogleCloudRecommendationengineV1beta1ImportMetadata extends \Google\Model
     return $this->failureCount;
   }
   /**
-   * @param string
+   * Name of the operation.
+   *
+   * @param string $operationName
    */
   public function setOperationName($operationName)
   {
@@ -87,7 +107,10 @@ class GoogleCloudRecommendationengineV1beta1ImportMetadata extends \Google\Model
     return $this->operationName;
   }
   /**
-   * @param string
+   * Id of the request / operation. This is parroting back the requestId that
+   * was passed in the request.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -101,7 +124,9 @@ class GoogleCloudRecommendationengineV1beta1ImportMetadata extends \Google\Model
     return $this->requestId;
   }
   /**
-   * @param string
+   * Count of entries that were processed successfully.
+   *
+   * @param string $successCount
    */
   public function setSuccessCount($successCount)
   {
@@ -115,7 +140,10 @@ class GoogleCloudRecommendationengineV1beta1ImportMetadata extends \Google\Model
     return $this->successCount;
   }
   /**
-   * @param string
+   * Operation last update time. If the operation is done, this is also the
+   * finish time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration extends \Google\Model
 {
   /**
+   * The API key.
+   *
    * @var string
    */
   public $apiKey;
 
   /**
-   * @param string
+   * The API key.
+   *
+   * @param string $apiKey
    */
   public function setApiKey($apiKey)
   {

@@ -19,17 +19,54 @@ namespace Google\Service\RecommendationsAI;
 
 class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
 {
+  /**
+   * Unspecified event source.
+   */
+  public const EVENT_SOURCE_EVENT_SOURCE_UNSPECIFIED = 'EVENT_SOURCE_UNSPECIFIED';
+  /**
+   * The event is ingested via a javascript pixel or Recommendations AI Tag
+   * through automl datalayer or JS Macros.
+   */
+  public const EVENT_SOURCE_AUTOML = 'AUTOML';
+  /**
+   * The event is ingested via Recommendations AI Tag through Enhanced Ecommerce
+   * datalayer.
+   */
+  public const EVENT_SOURCE_ECOMMERCE = 'ECOMMERCE';
+  /**
+   * The event is ingested via Import user events API.
+   */
+  public const EVENT_SOURCE_BATCH_UPLOAD = 'BATCH_UPLOAD';
   protected $eventDetailType = GoogleCloudRecommendationengineV1beta1EventDetail::class;
   protected $eventDetailDataType = '';
   /**
+   * Optional. This field should *not* be set when using JavaScript pixel or the
+   * Recommendations AI Tag. Defaults to `EVENT_SOURCE_UNSPECIFIED`.
+   *
    * @var string
    */
   public $eventSource;
   /**
+   * Optional. Only required for ImportUserEvents method. Timestamp of user
+   * event created.
+   *
    * @var string
    */
   public $eventTime;
   /**
+   * Required. User event type. Allowed values are: * `add-to-cart` Products
+   * being added to cart. * `add-to-list` Items being added to a list (shopping
+   * list, favorites etc). * `category-page-view` Special pages such as sale or
+   * promotion pages viewed. * `checkout-start` User starting a checkout
+   * process. * `detail-page-view` Products detail page viewed. * `home-page-
+   * view` Homepage viewed. * `page-visit` Generic page visits not included in
+   * the event types above. * `purchase-complete` User finishing a purchase. *
+   * `refund` Purchased items being refunded or returned. * `remove-from-cart`
+   * Products being removed from cart. * `remove-from-list` Items being removed
+   * from a list. * `search` Product search. * `shopping-cart-page-view` User
+   * viewing a shopping cart. * `impression` List of items displayed. Used by
+   * Google Tag Manager.
+   *
    * @var string
    */
   public $eventType;
@@ -39,7 +76,10 @@ class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
   protected $userInfoDataType = '';
 
   /**
-   * @param GoogleCloudRecommendationengineV1beta1EventDetail
+   * Optional. User event detailed information common across different
+   * recommendation types.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1EventDetail $eventDetail
    */
   public function setEventDetail(GoogleCloudRecommendationengineV1beta1EventDetail $eventDetail)
   {
@@ -53,21 +93,29 @@ class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
     return $this->eventDetail;
   }
   /**
-   * @param string
+   * Optional. This field should *not* be set when using JavaScript pixel or the
+   * Recommendations AI Tag. Defaults to `EVENT_SOURCE_UNSPECIFIED`.
+   *
+   * Accepted values: EVENT_SOURCE_UNSPECIFIED, AUTOML, ECOMMERCE, BATCH_UPLOAD
+   *
+   * @param self::EVENT_SOURCE_* $eventSource
    */
   public function setEventSource($eventSource)
   {
     $this->eventSource = $eventSource;
   }
   /**
-   * @return string
+   * @return self::EVENT_SOURCE_*
    */
   public function getEventSource()
   {
     return $this->eventSource;
   }
   /**
-   * @param string
+   * Optional. Only required for ImportUserEvents method. Timestamp of user
+   * event created.
+   *
+   * @param string $eventTime
    */
   public function setEventTime($eventTime)
   {
@@ -81,7 +129,20 @@ class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
     return $this->eventTime;
   }
   /**
-   * @param string
+   * Required. User event type. Allowed values are: * `add-to-cart` Products
+   * being added to cart. * `add-to-list` Items being added to a list (shopping
+   * list, favorites etc). * `category-page-view` Special pages such as sale or
+   * promotion pages viewed. * `checkout-start` User starting a checkout
+   * process. * `detail-page-view` Products detail page viewed. * `home-page-
+   * view` Homepage viewed. * `page-visit` Generic page visits not included in
+   * the event types above. * `purchase-complete` User finishing a purchase. *
+   * `refund` Purchased items being refunded or returned. * `remove-from-cart`
+   * Products being removed from cart. * `remove-from-list` Items being removed
+   * from a list. * `search` Product search. * `shopping-cart-page-view` User
+   * viewing a shopping cart. * `impression` List of items displayed. Used by
+   * Google Tag Manager.
+   *
+   * @param string $eventType
    */
   public function setEventType($eventType)
   {
@@ -95,7 +156,16 @@ class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
     return $this->eventType;
   }
   /**
-   * @param GoogleCloudRecommendationengineV1beta1ProductEventDetail
+   * Optional. Retail product specific user event metadata. This field is
+   * required for the following event types: * `add-to-cart` * `add-to-list` *
+   * `category-page-view` * `checkout-start` * `detail-page-view` * `purchase-
+   * complete` * `refund` * `remove-from-cart` * `remove-from-list` * `search`
+   * This field is optional for the following event types: * `page-visit` *
+   * `shopping-cart-page-view` - note that 'product_event_detail' should be set
+   * for this unless the shopping cart is empty. This field is not allowed for
+   * the following event types: * `home-page-view`
+   *
+   * @param GoogleCloudRecommendationengineV1beta1ProductEventDetail $productEventDetail
    */
   public function setProductEventDetail(GoogleCloudRecommendationengineV1beta1ProductEventDetail $productEventDetail)
   {
@@ -109,7 +179,9 @@ class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
     return $this->productEventDetail;
   }
   /**
-   * @param GoogleCloudRecommendationengineV1beta1UserInfo
+   * Required. User information.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1UserInfo $userInfo
    */
   public function setUserInfo(GoogleCloudRecommendationengineV1beta1UserInfo $userInfo)
   {

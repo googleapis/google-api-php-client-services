@@ -24,16 +24,26 @@ class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest extends \G
   protected $inputConfigType = GoogleCloudRecommendationengineV1beta1InputConfig::class;
   protected $inputConfigDataType = '';
   /**
+   * Optional. Unique identifier provided by client, within the ancestor dataset
+   * scope. Ensures idempotency and used for request deduplication. Server-
+   * generated if unspecified. Up to 128 characters long. This is returned as
+   * google.longrunning.Operation.name in the response.
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Optional. Indicates which fields in the provided imported 'items' to
+   * update. If not set, will by default update all fields.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GoogleCloudRecommendationengineV1beta1ImportErrorsConfig
+   * Optional. The desired location of errors incurred during the Import.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1ImportErrorsConfig $errorsConfig
    */
   public function setErrorsConfig(GoogleCloudRecommendationengineV1beta1ImportErrorsConfig $errorsConfig)
   {
@@ -47,7 +57,9 @@ class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest extends \G
     return $this->errorsConfig;
   }
   /**
-   * @param GoogleCloudRecommendationengineV1beta1InputConfig
+   * Required. The desired input location of the data.
+   *
+   * @param GoogleCloudRecommendationengineV1beta1InputConfig $inputConfig
    */
   public function setInputConfig(GoogleCloudRecommendationengineV1beta1InputConfig $inputConfig)
   {
@@ -61,7 +73,12 @@ class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest extends \G
     return $this->inputConfig;
   }
   /**
-   * @param string
+   * Optional. Unique identifier provided by client, within the ancestor dataset
+   * scope. Ensures idempotency and used for request deduplication. Server-
+   * generated if unspecified. Up to 128 characters long. This is returned as
+   * google.longrunning.Operation.name in the response.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -75,7 +92,10 @@ class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsRequest extends \G
     return $this->requestId;
   }
   /**
-   * @param string
+   * Optional. Indicates which fields in the provided imported 'items' to
+   * update. If not set, will by default update all fields.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

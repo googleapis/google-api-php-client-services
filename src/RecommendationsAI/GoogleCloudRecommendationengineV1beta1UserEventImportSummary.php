@@ -20,16 +20,23 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1UserEventImportSummary extends \Google\Model
 {
   /**
+   * Count of user events imported with complete existing catalog information.
+   *
    * @var string
    */
   public $joinedEventsCount;
   /**
+   * Count of user events imported, but with catalog information not found in
+   * the imported catalog.
+   *
    * @var string
    */
   public $unjoinedEventsCount;
 
   /**
-   * @param string
+   * Count of user events imported with complete existing catalog information.
+   *
+   * @param string $joinedEventsCount
    */
   public function setJoinedEventsCount($joinedEventsCount)
   {
@@ -43,7 +50,10 @@ class GoogleCloudRecommendationengineV1beta1UserEventImportSummary extends \Goog
     return $this->joinedEventsCount;
   }
   /**
-   * @param string
+   * Count of user events imported, but with catalog information not found in
+   * the imported catalog.
+   *
+   * @param string $unjoinedEventsCount
    */
   public function setUnjoinedEventsCount($unjoinedEventsCount)
   {
