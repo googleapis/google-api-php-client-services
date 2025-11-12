@@ -26,6 +26,14 @@ class GCPBackupPlanInfo extends \Google\Model
   /**
    * @var string
    */
+  public $backupPlanRevisionId;
+  /**
+   * @var string
+   */
+  public $backupPlanRevisionName;
+  /**
+   * @var string
+   */
   public $backupPlanRuleId;
 
   /**
@@ -41,6 +49,34 @@ class GCPBackupPlanInfo extends \Google\Model
   public function getBackupPlan()
   {
     return $this->backupPlan;
+  }
+  /**
+   * @param string
+   */
+  public function setBackupPlanRevisionId($backupPlanRevisionId)
+  {
+    $this->backupPlanRevisionId = $backupPlanRevisionId;
+  }
+  /**
+   * @return string
+   */
+  public function getBackupPlanRevisionId()
+  {
+    return $this->backupPlanRevisionId;
+  }
+  /**
+   * @param string
+   */
+  public function setBackupPlanRevisionName($backupPlanRevisionName)
+  {
+    $this->backupPlanRevisionName = $backupPlanRevisionName;
+  }
+  /**
+   * @return string
+   */
+  public function getBackupPlanRevisionName()
+  {
+    return $this->backupPlanRevisionName;
   }
   /**
    * @param string

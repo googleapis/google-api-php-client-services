@@ -28,7 +28,15 @@ class SqlServerConnectionProfile extends \Google\Model
   /**
    * @var string
    */
+  public $cloudSqlProjectId;
+  /**
+   * @var string
+   */
   public $database;
+  /**
+   * @var int
+   */
+  public $dbmPort;
   protected $forwardSshConnectivityType = ForwardSshTunnelConnectivity::class;
   protected $forwardSshConnectivityDataType = '';
   /**
@@ -91,6 +99,20 @@ class SqlServerConnectionProfile extends \Google\Model
   /**
    * @param string
    */
+  public function setCloudSqlProjectId($cloudSqlProjectId)
+  {
+    $this->cloudSqlProjectId = $cloudSqlProjectId;
+  }
+  /**
+   * @return string
+   */
+  public function getCloudSqlProjectId()
+  {
+    return $this->cloudSqlProjectId;
+  }
+  /**
+   * @param string
+   */
   public function setDatabase($database)
   {
     $this->database = $database;
@@ -101,6 +123,20 @@ class SqlServerConnectionProfile extends \Google\Model
   public function getDatabase()
   {
     return $this->database;
+  }
+  /**
+   * @param int
+   */
+  public function setDbmPort($dbmPort)
+  {
+    $this->dbmPort = $dbmPort;
+  }
+  /**
+   * @return int
+   */
+  public function getDbmPort()
+  {
+    return $this->dbmPort;
   }
   /**
    * @param ForwardSshTunnelConnectivity

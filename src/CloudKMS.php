@@ -804,6 +804,16 @@ class CloudKMS extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'decapsulate' => [
+              'path' => 'v1/{+name}:decapsulate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'destroy' => [
               'path' => 'v1/{+name}:destroy',
               'httpMethod' => 'POST',

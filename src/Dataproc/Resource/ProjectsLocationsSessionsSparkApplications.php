@@ -460,6 +460,7 @@ class ProjectsLocationsSessionsSparkApplications extends \Google\Service\Resourc
    * s/SESSION_ID/sparkApplications/APPLICATION_ID"
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string jobIds Optional. List of Job IDs to filter by if provided.
    * @opt_param string parent Required. Parent (Session) resource reference.
    * @return SummarizeSessionSparkApplicationJobsResponse
    * @throws \Google\Service\Exception
@@ -501,6 +502,8 @@ class ProjectsLocationsSessionsSparkApplications extends \Google\Service\Resourc
    * @param array $optParams Optional parameters.
    *
    * @opt_param string parent Required. Parent (Session) resource reference.
+   * @opt_param string stageIds Optional. List of Stage IDs to filter by if
+   * provided.
    * @return SummarizeSessionSparkApplicationStagesResponse
    * @throws \Google\Service\Exception
    */

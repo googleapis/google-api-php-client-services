@@ -75,6 +75,10 @@ class AwsVmDetails extends \Google\Collection
    */
   public $tags;
   /**
+   * @var int
+   */
+  public $vcpuCount;
+  /**
    * @var string
    */
   public $virtualizationType;
@@ -286,6 +290,20 @@ class AwsVmDetails extends \Google\Collection
   public function getTags()
   {
     return $this->tags;
+  }
+  /**
+   * @param int
+   */
+  public function setVcpuCount($vcpuCount)
+  {
+    $this->vcpuCount = $vcpuCount;
+  }
+  /**
+   * @return int
+   */
+  public function getVcpuCount()
+  {
+    return $this->vcpuCount;
   }
   /**
    * @param string

@@ -19,10 +19,14 @@ namespace Google\Service\HangoutsChat;
 
 class RichLinkMetadata extends \Google\Model
 {
+  protected $calendarEventLinkDataType = CalendarEventLinkData::class;
+  protected $calendarEventLinkDataDataType = '';
   protected $chatSpaceLinkDataType = ChatSpaceLinkData::class;
   protected $chatSpaceLinkDataDataType = '';
   protected $driveLinkDataType = DriveLinkData::class;
   protected $driveLinkDataDataType = '';
+  protected $meetSpaceLinkDataType = MeetSpaceLinkData::class;
+  protected $meetSpaceLinkDataDataType = '';
   /**
    * @var string
    */
@@ -32,6 +36,20 @@ class RichLinkMetadata extends \Google\Model
    */
   public $uri;
 
+  /**
+   * @param CalendarEventLinkData
+   */
+  public function setCalendarEventLinkData(CalendarEventLinkData $calendarEventLinkData)
+  {
+    $this->calendarEventLinkData = $calendarEventLinkData;
+  }
+  /**
+   * @return CalendarEventLinkData
+   */
+  public function getCalendarEventLinkData()
+  {
+    return $this->calendarEventLinkData;
+  }
   /**
    * @param ChatSpaceLinkData
    */
@@ -59,6 +77,20 @@ class RichLinkMetadata extends \Google\Model
   public function getDriveLinkData()
   {
     return $this->driveLinkData;
+  }
+  /**
+   * @param MeetSpaceLinkData
+   */
+  public function setMeetSpaceLinkData(MeetSpaceLinkData $meetSpaceLinkData)
+  {
+    $this->meetSpaceLinkData = $meetSpaceLinkData;
+  }
+  /**
+   * @return MeetSpaceLinkData
+   */
+  public function getMeetSpaceLinkData()
+  {
+    return $this->meetSpaceLinkData;
   }
   /**
    * @param string

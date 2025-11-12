@@ -20,9 +20,27 @@ namespace Google\Service\Container;
 class SoleTenantConfig extends \Google\Collection
 {
   protected $collection_key = 'nodeAffinities';
+  /**
+   * @var int
+   */
+  public $minNodeCpus;
   protected $nodeAffinitiesType = NodeAffinity::class;
   protected $nodeAffinitiesDataType = 'array';
 
+  /**
+   * @param int
+   */
+  public function setMinNodeCpus($minNodeCpus)
+  {
+    $this->minNodeCpus = $minNodeCpus;
+  }
+  /**
+   * @return int
+   */
+  public function getMinNodeCpus()
+  {
+    return $this->minNodeCpus;
+  }
   /**
    * @param NodeAffinity[]
    */

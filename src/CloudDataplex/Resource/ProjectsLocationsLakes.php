@@ -40,7 +40,7 @@ class ProjectsLocationsLakes extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource name of the lake location, of
    * the form: projects/{project_number}/locations/{location_id} where location_id
-   * refers to a GCP region.
+   * refers to a Google Cloud region.
    * @param GoogleCloudDataplexV1Lake $postBody
    * @param array $optParams Optional parameters.
    *
@@ -128,7 +128,7 @@ class ProjectsLocationsLakes extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource name of the lake location, of
    * the form: projects/{project_number}/locations/{location_id} where location_id
-   * refers to a GCP region.
+   * refers to a Google Cloud region.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter request.

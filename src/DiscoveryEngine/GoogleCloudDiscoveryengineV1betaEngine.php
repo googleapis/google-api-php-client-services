@@ -20,12 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
 {
   protected $collection_key = 'dataStoreIds';
+  /**
+   * @var string
+   */
+  public $appType;
   protected $chatEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig::class;
   protected $chatEngineConfigDataType = '';
   protected $chatEngineMetadataType = GoogleCloudDiscoveryengineV1betaEngineChatEngineMetadata::class;
   protected $chatEngineMetadataDataType = '';
+  protected $cmekConfigType = GoogleCloudDiscoveryengineV1betaCmekConfig::class;
+  protected $cmekConfigDataType = '';
   protected $commonConfigType = GoogleCloudDiscoveryengineV1betaEngineCommonConfig::class;
   protected $commonConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $configurableBillingApproach;
   /**
    * @var string
    */
@@ -53,6 +63,10 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   protected $mediaRecommendationEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig::class;
   protected $mediaRecommendationEngineConfigDataType = '';
   /**
+   * @var string[]
+   */
+  public $modelConfigs;
+  /**
    * @var string
    */
   public $name;
@@ -67,6 +81,20 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param string
+   */
+  public function setAppType($appType)
+  {
+    $this->appType = $appType;
+  }
+  /**
+   * @return string
+   */
+  public function getAppType()
+  {
+    return $this->appType;
+  }
   /**
    * @param GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig
    */
@@ -96,6 +124,20 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
     return $this->chatEngineMetadata;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1betaCmekConfig
+   */
+  public function setCmekConfig(GoogleCloudDiscoveryengineV1betaCmekConfig $cmekConfig)
+  {
+    $this->cmekConfig = $cmekConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaCmekConfig
+   */
+  public function getCmekConfig()
+  {
+    return $this->cmekConfig;
+  }
+  /**
    * @param GoogleCloudDiscoveryengineV1betaEngineCommonConfig
    */
   public function setCommonConfig(GoogleCloudDiscoveryengineV1betaEngineCommonConfig $commonConfig)
@@ -108,6 +150,20 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   public function getCommonConfig()
   {
     return $this->commonConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setConfigurableBillingApproach($configurableBillingApproach)
+  {
+    $this->configurableBillingApproach = $configurableBillingApproach;
+  }
+  /**
+   * @return string
+   */
+  public function getConfigurableBillingApproach()
+  {
+    return $this->configurableBillingApproach;
   }
   /**
    * @param string
@@ -206,6 +262,20 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
   public function getMediaRecommendationEngineConfig()
   {
     return $this->mediaRecommendationEngineConfig;
+  }
+  /**
+   * @param string[]
+   */
+  public function setModelConfigs($modelConfigs)
+  {
+    $this->modelConfigs = $modelConfigs;
+  }
+  /**
+   * @return string[]
+   */
+  public function getModelConfigs()
+  {
+    return $this->modelConfigs;
   }
   /**
    * @param string

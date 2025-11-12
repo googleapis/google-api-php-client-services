@@ -29,6 +29,8 @@ class TargetingTemplate extends \Google\Model
   public $advertiserId;
   protected $advertiserIdDimensionValueType = DimensionValue::class;
   protected $advertiserIdDimensionValueDataType = '';
+  protected $contextualKeywordTargetingType = ContextualKeywordTargeting::class;
+  protected $contextualKeywordTargetingDataType = '';
   protected $dayPartTargetingType = DayPartTargeting::class;
   protected $dayPartTargetingDataType = '';
   protected $geoTargetingType = GeoTargeting::class;
@@ -99,6 +101,20 @@ class TargetingTemplate extends \Google\Model
   public function getAdvertiserIdDimensionValue()
   {
     return $this->advertiserIdDimensionValue;
+  }
+  /**
+   * @param ContextualKeywordTargeting
+   */
+  public function setContextualKeywordTargeting(ContextualKeywordTargeting $contextualKeywordTargeting)
+  {
+    $this->contextualKeywordTargeting = $contextualKeywordTargeting;
+  }
+  /**
+   * @return ContextualKeywordTargeting
+   */
+  public function getContextualKeywordTargeting()
+  {
+    return $this->contextualKeywordTargeting;
   }
   /**
    * @param DayPartTargeting

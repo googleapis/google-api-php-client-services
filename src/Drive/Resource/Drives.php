@@ -31,7 +31,9 @@ use Google\Service\Drive\DriveList;
 class Drives extends \Google\Service\Resource
 {
   /**
-   * Creates a shared drive. (drives.create)
+   * Creates a shared drive. For more information, see [Manage shared
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * shareddrives). (drives.create)
    *
    * @param string $requestId Required. An ID, such as a random UUID, which
    * uniquely identifies this user's request for idempotent creation of a shared
@@ -51,7 +53,10 @@ class Drives extends \Google\Service\Resource
   }
   /**
    * Permanently deletes a shared drive for which the user is an `organizer`. The
-   * shared drive cannot contain any untrashed items. (drives.delete)
+   * shared drive cannot contain any untrashed items. For more information, see
+   * [Manage shared
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * shareddrives). (drives.delete)
    *
    * @param string $driveId The ID of the shared drive.
    * @param array $optParams Optional parameters.
@@ -71,7 +76,10 @@ class Drives extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Gets a shared drive's metadata by ID. (drives.get)
+   * Gets a shared drive's metadata by ID. For more information, see [Manage
+   * shared
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * shareddrives). (drives.get)
    *
    * @param string $driveId The ID of the shared drive.
    * @param array $optParams Optional parameters.
@@ -89,7 +97,10 @@ class Drives extends \Google\Service\Resource
     return $this->call('get', [$params], Drive::class);
   }
   /**
-   * Hides a shared drive from the default view. (drives.hide)
+   * Hides a shared drive from the default view. For more information, see [Manage
+   * shared
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * shareddrives). (drives.hide)
    *
    * @param string $driveId The ID of the shared drive.
    * @param array $optParams Optional parameters.
@@ -126,7 +137,10 @@ class Drives extends \Google\Service\Resource
     return $this->call('list', [$params], DriveList::class);
   }
   /**
-   * Restores a shared drive to the default view. (drives.unhide)
+   * Restores a shared drive to the default view. For more information, see
+   * [Manage shared
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * shareddrives). (drives.unhide)
    *
    * @param string $driveId The ID of the shared drive.
    * @param array $optParams Optional parameters.
@@ -140,7 +154,10 @@ class Drives extends \Google\Service\Resource
     return $this->call('unhide', [$params], Drive::class);
   }
   /**
-   * Updates the metadata for a shared drive. (drives.update)
+   * Updates the metadata for a shared drive. For more information, see [Manage
+   * shared
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * shareddrives). (drives.update)
    *
    * @param string $driveId The ID of the shared drive.
    * @param Drive $postBody

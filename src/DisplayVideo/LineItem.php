@@ -32,6 +32,10 @@ class LineItem extends \Google\Collection
    * @var string
    */
   public $campaignId;
+  /**
+   * @var string
+   */
+  public $containsEuPoliticalAds;
   protected $conversionCountingType = ConversionCountingConfig::class;
   protected $conversionCountingDataType = '';
   /**
@@ -152,6 +156,20 @@ class LineItem extends \Google\Collection
   public function getCampaignId()
   {
     return $this->campaignId;
+  }
+  /**
+   * @param string
+   */
+  public function setContainsEuPoliticalAds($containsEuPoliticalAds)
+  {
+    $this->containsEuPoliticalAds = $containsEuPoliticalAds;
+  }
+  /**
+   * @return string
+   */
+  public function getContainsEuPoliticalAds()
+  {
+    return $this->containsEuPoliticalAds;
   }
   /**
    * @param ConversionCountingConfig

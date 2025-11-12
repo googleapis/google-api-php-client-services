@@ -36,8 +36,8 @@ class Orgunits extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $orgUnitPath The full path of the organizational unit (minus
    * the leading `/`) or its unique ID.
    * @param array $optParams Optional parameters.
@@ -55,8 +55,8 @@ class Orgunits extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $orgUnitPath The full path of the organizational unit (minus
    * the leading `/`) or its unique ID.
    * @param array $optParams Optional parameters.
@@ -75,8 +75,8 @@ class Orgunits extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param OrgUnit $postBody
    * @param array $optParams Optional parameters.
    * @return OrgUnit
@@ -95,8 +95,8 @@ class Orgunits extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orgUnitPath The full path to the organizational unit or its
@@ -113,14 +113,15 @@ class Orgunits extends \Google\Service\Resource
     return $this->call('list', [$params], OrgUnitsModel::class);
   }
   /**
-   * Updates an organizational unit. This method supports [patch
-   * semantics](/admin-sdk/directory/v1/guides/performance#patch) (orgunits.patch)
+   * Updates an organizational unit. This method supports [patch semantics](https:
+   * //developers.google.com/workspace/admin/directory/v1/guides/performance#patch
+   * ) (orgunits.patch)
    *
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $orgUnitPath The full path of the organizational unit (minus
    * the leading `/`) or its unique ID.
    * @param OrgUnit $postBody
@@ -140,8 +141,8 @@ class Orgunits extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $orgUnitPath The full path of the organizational unit (minus
    * the leading `/`) or its unique ID.
    * @param OrgUnit $postBody

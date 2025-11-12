@@ -23,6 +23,7 @@ class RequestMirrorPolicy extends \Google\Model
    * @var string
    */
   public $backendService;
+  public $mirrorPercent;
 
   /**
    * @param string
@@ -37,6 +38,14 @@ class RequestMirrorPolicy extends \Google\Model
   public function getBackendService()
   {
     return $this->backendService;
+  }
+  public function setMirrorPercent($mirrorPercent)
+  {
+    $this->mirrorPercent = $mirrorPercent;
+  }
+  public function getMirrorPercent()
+  {
+    return $this->mirrorPercent;
   }
 }
 

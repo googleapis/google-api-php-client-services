@@ -23,7 +23,15 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutPar
   /**
    * @var bool
    */
+  public $enableGetProcessedDocument;
+  /**
+   * @var bool
+   */
   public $enableImageAnnotation;
+  /**
+   * @var bool
+   */
+  public $enableLlmLayoutParsing;
   /**
    * @var bool
    */
@@ -48,6 +56,20 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutPar
   /**
    * @param bool
    */
+  public function setEnableGetProcessedDocument($enableGetProcessedDocument)
+  {
+    $this->enableGetProcessedDocument = $enableGetProcessedDocument;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableGetProcessedDocument()
+  {
+    return $this->enableGetProcessedDocument;
+  }
+  /**
+   * @param bool
+   */
   public function setEnableImageAnnotation($enableImageAnnotation)
   {
     $this->enableImageAnnotation = $enableImageAnnotation;
@@ -58,6 +80,20 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutPar
   public function getEnableImageAnnotation()
   {
     return $this->enableImageAnnotation;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableLlmLayoutParsing($enableLlmLayoutParsing)
+  {
+    $this->enableLlmLayoutParsing = $enableLlmLayoutParsing;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableLlmLayoutParsing()
+  {
+    return $this->enableLlmLayoutParsing;
   }
   /**
    * @param bool

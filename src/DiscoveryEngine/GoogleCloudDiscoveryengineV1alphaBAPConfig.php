@@ -23,8 +23,26 @@ class GoogleCloudDiscoveryengineV1alphaBAPConfig extends \Google\Collection
   /**
    * @var string[]
    */
+  public $enabledActions;
+  /**
+   * @var string[]
+   */
   public $supportedConnectorModes;
 
+  /**
+   * @param string[]
+   */
+  public function setEnabledActions($enabledActions)
+  {
+    $this->enabledActions = $enabledActions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getEnabledActions()
+  {
+    return $this->enabledActions;
+  }
   /**
    * @param string[]
    */

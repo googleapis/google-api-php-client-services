@@ -23,6 +23,10 @@ class AdvancedVoiceOptions extends \Google\Model
    * @var bool
    */
   public $lowLatencyJourneySynthesis;
+  /**
+   * @var bool
+   */
+  public $relaxSafetyFilters;
 
   /**
    * @param bool
@@ -37,6 +41,20 @@ class AdvancedVoiceOptions extends \Google\Model
   public function getLowLatencyJourneySynthesis()
   {
     return $this->lowLatencyJourneySynthesis;
+  }
+  /**
+   * @param bool
+   */
+  public function setRelaxSafetyFilters($relaxSafetyFilters)
+  {
+    $this->relaxSafetyFilters = $relaxSafetyFilters;
+  }
+  /**
+   * @return bool
+   */
+  public function getRelaxSafetyFilters()
+  {
+    return $this->relaxSafetyFilters;
   }
 }
 

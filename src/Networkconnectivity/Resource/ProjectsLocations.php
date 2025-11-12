@@ -17,6 +17,8 @@
 
 namespace Google\Service\Networkconnectivity\Resource;
 
+use Google\Service\Networkconnectivity\CheckConsumerConfigRequest;
+use Google\Service\Networkconnectivity\CheckConsumerConfigResponse;
 use Google\Service\Networkconnectivity\ListLocationsResponse;
 use Google\Service\Networkconnectivity\Location;
 
@@ -30,6 +32,29 @@ use Google\Service\Networkconnectivity\Location;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * CheckConsumerConfig validates the consumer network and project for potential
+   * PSC connection creation. This method performs several checks, including: -
+   * Validating the existence and permissions of the service class. - Ensuring the
+   * consumer network exists and is accessible. - Verifying XPN relationships if
+   * applicable. - Checking for compatible IP versions between the consumer
+   * network and the requested version. This method performs a dynamic IAM check
+   * for the `networkconnectivity.serviceClasses.use` permission on the service
+   * class resource in the Prepare phase. (locations.checkConsumerConfig)
+   *
+   * @param string $location Required. The location resource path. Example: -
+   * projects/{project}/locations/{location}
+   * @param CheckConsumerConfigRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CheckConsumerConfigResponse
+   * @throws \Google\Service\Exception
+   */
+  public function checkConsumerConfig($location, CheckConsumerConfigRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkConsumerConfig', [$params], CheckConsumerConfigResponse::class);
+  }
   /**
    * Gets information about a location. (locations.get)
    *
@@ -52,9 +77,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string extraLocationTypes Optional. A list of extra location types
-   * that should be used as conditions for controlling the visibility of the
-   * locations.
+   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
+   * unsupported and is ignored unless explicitly documented otherwise. This is
+   * primarily for internal usage.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like `"displayName=tokyo"`,
    * and is documented in more detail in [AIP-160](https://google.aip.dev/160).

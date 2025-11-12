@@ -20,6 +20,8 @@ namespace Google\Service\Sheets;
 class CellData extends \Google\Collection
 {
   protected $collection_key = 'textFormatRuns';
+  protected $chipRunsType = ChipRun::class;
+  protected $chipRunsDataType = 'array';
   protected $dataSourceFormulaType = DataSourceFormula::class;
   protected $dataSourceFormulaDataType = '';
   protected $dataSourceTableType = DataSourceTable::class;
@@ -51,6 +53,20 @@ class CellData extends \Google\Collection
   protected $userEnteredValueType = ExtendedValue::class;
   protected $userEnteredValueDataType = '';
 
+  /**
+   * @param ChipRun[]
+   */
+  public function setChipRuns($chipRuns)
+  {
+    $this->chipRuns = $chipRuns;
+  }
+  /**
+   * @return ChipRun[]
+   */
+  public function getChipRuns()
+  {
+    return $this->chipRuns;
+  }
   /**
    * @param DataSourceFormula
    */

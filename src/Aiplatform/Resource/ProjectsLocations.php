@@ -21,9 +21,15 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1AugmentPromptRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1AugmentPromptResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CorroborateContentRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CorroborateContentResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1DeployRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1EvaluateDatasetRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1EvaluateInstancesRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1EvaluateInstancesResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateInstanceRubricsRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateInstanceRubricsResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateSyntheticDataRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateSyntheticDataResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1RagEngineConfig;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsResponse;
 use Google\Service\Aiplatform\GoogleCloudLocationListLocationsResponse;
@@ -78,6 +84,22 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('corroborateContent', [$params], GoogleCloudAiplatformV1CorroborateContentResponse::class);
   }
   /**
+   * Deploys a model to a new endpoint. (locations.deploy)
+   *
+   * @param string $destination Required. The resource name of the Location to
+   * deploy the model in. Format: `projects/{project}/locations/{location}`
+   * @param GoogleCloudAiplatformV1DeployRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function deploy($destination, GoogleCloudAiplatformV1DeployRequest $postBody, $optParams = [])
+  {
+    $params = ['destination' => $destination, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('deploy', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
    * Evaluates a dataset based on a set of given metrics.
    * (locations.evaluateDataset)
    *
@@ -111,6 +133,43 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('evaluateInstances', [$params], GoogleCloudAiplatformV1EvaluateInstancesResponse::class);
   }
   /**
+   * Generates rubrics for a given prompt. A rubric represents a single testable
+   * criterion for evaluation. One input prompt could have multiple rubrics This
+   * RPC allows users to get suggested rubrics based on provided prompt, which can
+   * then be reviewed and used for subsequent evaluations.
+   * (locations.generateInstanceRubrics)
+   *
+   * @param string $location Required. The resource name of the Location to
+   * generate rubrics from. Format: `projects/{project}/locations/{location}`
+   * @param GoogleCloudAiplatformV1GenerateInstanceRubricsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateInstanceRubricsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateInstanceRubrics($location, GoogleCloudAiplatformV1GenerateInstanceRubricsRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateInstanceRubrics', [$params], GoogleCloudAiplatformV1GenerateInstanceRubricsResponse::class);
+  }
+  /**
+   * Generates synthetic data based on the provided configuration.
+   * (locations.generateSyntheticData)
+   *
+   * @param string $location Required. The resource name of the Location to run
+   * the job. Format: `projects/{project}/locations/{location}`
+   * @param GoogleCloudAiplatformV1GenerateSyntheticDataRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateSyntheticDataResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateSyntheticData($location, GoogleCloudAiplatformV1GenerateSyntheticDataRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateSyntheticData', [$params], GoogleCloudAiplatformV1GenerateSyntheticDataResponse::class);
+  }
+  /**
    * Gets information about a location. (locations.get)
    *
    * @param string $name Resource name for the location.
@@ -125,6 +184,21 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudLocationLocation::class);
   }
   /**
+   * Gets a RagEngineConfig. (locations.getRagEngineConfig)
+   *
+   * @param string $name Required. The name of the RagEngineConfig resource.
+   * Format: `projects/{project}/locations/{location}/ragEngineConfig`
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1RagEngineConfig
+   * @throws \Google\Service\Exception
+   */
+  public function getRagEngineConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getRagEngineConfig', [$params], GoogleCloudAiplatformV1RagEngineConfig::class);
+  }
+  /**
    * Lists information about the supported locations for this service.
    * (locations.listProjectsLocations)
    *
@@ -132,9 +206,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string extraLocationTypes Optional. A list of extra location types
-   * that should be used as conditions for controlling the visibility of the
-   * locations.
+   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
+   * unsupported and is ignored unless explicitly documented otherwise. This is
+   * primarily for internal usage.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like `"displayName=tokyo"`,
    * and is documented in more detail in [AIP-160](https://google.aip.dev/160).
@@ -167,6 +241,22 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('retrieveContexts', [$params], GoogleCloudAiplatformV1RetrieveContextsResponse::class);
+  }
+  /**
+   * Updates a RagEngineConfig. (locations.updateRagEngineConfig)
+   *
+   * @param string $name Identifier. The name of the RagEngineConfig. Format:
+   * `projects/{project}/locations/{location}/ragEngineConfig`
+   * @param GoogleCloudAiplatformV1RagEngineConfig $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function updateRagEngineConfig($name, GoogleCloudAiplatformV1RagEngineConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateRagEngineConfig', [$params], GoogleLongrunningOperation::class);
   }
 }
 

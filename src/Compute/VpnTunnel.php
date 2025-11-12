@@ -20,6 +20,8 @@ namespace Google\Service\Compute;
 class VpnTunnel extends \Google\Collection
 {
   protected $collection_key = 'remoteTrafficSelector';
+  protected $cipherSuiteType = VpnTunnelCipherSuite::class;
+  protected $cipherSuiteDataType = '';
   /**
    * @var string
    */
@@ -117,6 +119,20 @@ class VpnTunnel extends \Google\Collection
    */
   public $vpnGatewayInterface;
 
+  /**
+   * @param VpnTunnelCipherSuite
+   */
+  public function setCipherSuite(VpnTunnelCipherSuite $cipherSuite)
+  {
+    $this->cipherSuite = $cipherSuite;
+  }
+  /**
+   * @return VpnTunnelCipherSuite
+   */
+  public function getCipherSuite()
+  {
+    return $this->cipherSuite;
+  }
   /**
    * @param string
    */

@@ -27,6 +27,10 @@ class GoogleAppsCardV1TextParagraph extends \Google\Model
    * @var string
    */
   public $text;
+  /**
+   * @var string
+   */
+  public $textSyntax;
 
   /**
    * @param int
@@ -55,6 +59,20 @@ class GoogleAppsCardV1TextParagraph extends \Google\Model
   public function getText()
   {
     return $this->text;
+  }
+  /**
+   * @param string
+   */
+  public function setTextSyntax($textSyntax)
+  {
+    $this->textSyntax = $textSyntax;
+  }
+  /**
+   * @return string
+   */
+  public function getTextSyntax()
+  {
+    return $this->textSyntax;
   }
 }
 

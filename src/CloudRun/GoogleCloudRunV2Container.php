@@ -54,6 +54,8 @@ class GoogleCloudRunV2Container extends \Google\Collection
   protected $portsDataType = 'array';
   protected $resourcesType = GoogleCloudRunV2ResourceRequirements::class;
   protected $resourcesDataType = '';
+  protected $sourceCodeType = GoogleCloudRunV2SourceCode::class;
+  protected $sourceCodeDataType = '';
   protected $startupProbeType = GoogleCloudRunV2Probe::class;
   protected $startupProbeDataType = '';
   protected $volumeMountsType = GoogleCloudRunV2VolumeMount::class;
@@ -216,6 +218,20 @@ class GoogleCloudRunV2Container extends \Google\Collection
   public function getResources()
   {
     return $this->resources;
+  }
+  /**
+   * @param GoogleCloudRunV2SourceCode
+   */
+  public function setSourceCode(GoogleCloudRunV2SourceCode $sourceCode)
+  {
+    $this->sourceCode = $sourceCode;
+  }
+  /**
+   * @return GoogleCloudRunV2SourceCode
+   */
+  public function getSourceCode()
+  {
+    return $this->sourceCode;
   }
   /**
    * @param GoogleCloudRunV2Probe

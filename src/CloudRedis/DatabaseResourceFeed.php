@@ -19,6 +19,12 @@ namespace Google\Service\CloudRedis;
 
 class DatabaseResourceFeed extends \Google\Model
 {
+  protected $backupdrMetadataType = BackupDRMetadata::class;
+  protected $backupdrMetadataDataType = '';
+  protected $configBasedSignalDataType = ConfigBasedSignalData::class;
+  protected $configBasedSignalDataDataType = '';
+  protected $databaseResourceSignalDataType = DatabaseResourceSignalData::class;
+  protected $databaseResourceSignalDataDataType = '';
   /**
    * @var string
    */
@@ -37,7 +43,53 @@ class DatabaseResourceFeed extends \Google\Model
   protected $resourceIdDataType = '';
   protected $resourceMetadataType = DatabaseResourceMetadata::class;
   protected $resourceMetadataDataType = '';
+  /**
+   * @var bool
+   */
+  public $skipIngestion;
 
+  /**
+   * @param BackupDRMetadata
+   */
+  public function setBackupdrMetadata(BackupDRMetadata $backupdrMetadata)
+  {
+    $this->backupdrMetadata = $backupdrMetadata;
+  }
+  /**
+   * @return BackupDRMetadata
+   */
+  public function getBackupdrMetadata()
+  {
+    return $this->backupdrMetadata;
+  }
+  /**
+   * @param ConfigBasedSignalData
+   */
+  public function setConfigBasedSignalData(ConfigBasedSignalData $configBasedSignalData)
+  {
+    $this->configBasedSignalData = $configBasedSignalData;
+  }
+  /**
+   * @return ConfigBasedSignalData
+   */
+  public function getConfigBasedSignalData()
+  {
+    return $this->configBasedSignalData;
+  }
+  /**
+   * @param DatabaseResourceSignalData
+   */
+  public function setDatabaseResourceSignalData(DatabaseResourceSignalData $databaseResourceSignalData)
+  {
+    $this->databaseResourceSignalData = $databaseResourceSignalData;
+  }
+  /**
+   * @return DatabaseResourceSignalData
+   */
+  public function getDatabaseResourceSignalData()
+  {
+    return $this->databaseResourceSignalData;
+  }
   /**
    * @param string
    */
@@ -135,6 +187,20 @@ class DatabaseResourceFeed extends \Google\Model
   public function getResourceMetadata()
   {
     return $this->resourceMetadata;
+  }
+  /**
+   * @param bool
+   */
+  public function setSkipIngestion($skipIngestion)
+  {
+    $this->skipIngestion = $skipIngestion;
+  }
+  /**
+   * @return bool
+   */
+  public function getSkipIngestion()
+  {
+    return $this->skipIngestion;
   }
 }
 

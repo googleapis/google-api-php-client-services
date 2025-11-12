@@ -40,6 +40,10 @@ class GoogleCloudApigeeV1SecurityProfileV2 extends \Google\Model
   /**
    * @var string
    */
+  public $riskAssessmentType;
+  /**
+   * @var string
+   */
   public $updateTime;
 
   /**
@@ -111,6 +115,20 @@ class GoogleCloudApigeeV1SecurityProfileV2 extends \Google\Model
   public function getProfileAssessmentConfigs()
   {
     return $this->profileAssessmentConfigs;
+  }
+  /**
+   * @param string
+   */
+  public function setRiskAssessmentType($riskAssessmentType)
+  {
+    $this->riskAssessmentType = $riskAssessmentType;
+  }
+  /**
+   * @return string
+   */
+  public function getRiskAssessmentType()
+  {
+    return $this->riskAssessmentType;
   }
   /**
    * @param string

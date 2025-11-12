@@ -20,6 +20,10 @@ namespace Google\Service\Spanner;
 class AdaptMessageResponse extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $last;
+  /**
    * @var string
    */
   public $payload;
@@ -28,6 +32,20 @@ class AdaptMessageResponse extends \Google\Model
    */
   public $stateUpdates;
 
+  /**
+   * @param bool
+   */
+  public function setLast($last)
+  {
+    $this->last = $last;
+  }
+  /**
+   * @return bool
+   */
+  public function getLast()
+  {
+    return $this->last;
+  }
   /**
    * @param string
    */

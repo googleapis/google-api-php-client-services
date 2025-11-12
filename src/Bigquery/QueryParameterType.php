@@ -29,6 +29,10 @@ class QueryParameterType extends \Google\Collection
   /**
    * @var string
    */
+  public $timestampPrecision;
+  /**
+   * @var string
+   */
   public $type;
 
   /**
@@ -72,6 +76,20 @@ class QueryParameterType extends \Google\Collection
   public function getStructTypes()
   {
     return $this->structTypes;
+  }
+  /**
+   * @param string
+   */
+  public function setTimestampPrecision($timestampPrecision)
+  {
+    $this->timestampPrecision = $timestampPrecision;
+  }
+  /**
+   * @return string
+   */
+  public function getTimestampPrecision()
+  {
+    return $this->timestampPrecision;
   }
   /**
    * @param string

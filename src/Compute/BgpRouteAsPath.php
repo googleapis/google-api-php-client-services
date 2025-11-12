@@ -19,11 +19,15 @@ namespace Google\Service\Compute;
 
 class BgpRouteAsPath extends \Google\Collection
 {
-  protected $collection_key = 'asns';
+  protected $collection_key = 'asns32';
   /**
    * @var int[]
    */
   public $asns;
+  /**
+   * @var string[]
+   */
+  public $asns32;
   /**
    * @var string
    */
@@ -42,6 +46,20 @@ class BgpRouteAsPath extends \Google\Collection
   public function getAsns()
   {
     return $this->asns;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAsns32($asns32)
+  {
+    $this->asns32 = $asns32;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAsns32()
+  {
+    return $this->asns32;
   }
   /**
    * @param string

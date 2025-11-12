@@ -44,6 +44,10 @@ class Job extends \Google\Model
   protected $retryConfigType = RetryConfig::class;
   protected $retryConfigDataType = '';
   /**
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * @var string
    */
   public $schedule;
@@ -177,6 +181,20 @@ class Job extends \Google\Model
   public function getRetryConfig()
   {
     return $this->retryConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param string

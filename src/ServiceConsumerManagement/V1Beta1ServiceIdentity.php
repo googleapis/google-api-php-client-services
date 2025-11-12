@@ -30,6 +30,10 @@ class V1Beta1ServiceIdentity extends \Google\Model
   /**
    * @var string
    */
+  public $projectRole;
+  /**
+   * @var string
+   */
   public $tag;
   /**
    * @var string
@@ -63,6 +67,20 @@ class V1Beta1ServiceIdentity extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setProjectRole($projectRole)
+  {
+    $this->projectRole = $projectRole;
+  }
+  /**
+   * @return string
+   */
+  public function getProjectRole()
+  {
+    return $this->projectRole;
   }
   /**
    * @param string

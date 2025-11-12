@@ -23,6 +23,10 @@ class GoogleCloudDocumentaiV1Processor extends \Google\Collection
   /**
    * @var string
    */
+  public $activeSchemaVersion;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var string
@@ -63,6 +67,20 @@ class GoogleCloudDocumentaiV1Processor extends \Google\Collection
    */
   public $type;
 
+  /**
+   * @param string
+   */
+  public function setActiveSchemaVersion($activeSchemaVersion)
+  {
+    $this->activeSchemaVersion = $activeSchemaVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getActiveSchemaVersion()
+  {
+    return $this->activeSchemaVersion;
+  }
   /**
    * @param string
    */

@@ -31,6 +31,10 @@ class ServerAndClientVerification extends \Google\Model
    * @var string
    */
   public $clientKey;
+  /**
+   * @var string
+   */
+  public $serverCertificateHostname;
 
   /**
    * @param string
@@ -73,6 +77,20 @@ class ServerAndClientVerification extends \Google\Model
   public function getClientKey()
   {
     return $this->clientKey;
+  }
+  /**
+   * @param string
+   */
+  public function setServerCertificateHostname($serverCertificateHostname)
+  {
+    $this->serverCertificateHostname = $serverCertificateHostname;
+  }
+  /**
+   * @return string
+   */
+  public function getServerCertificateHostname()
+  {
+    return $this->serverCertificateHostname;
   }
 }
 

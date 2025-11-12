@@ -30,13 +30,13 @@ use Google\Service\DriveLabels\GoogleAppsDriveLabelsV2ListLabelLocksResponse;
 class LabelsLocks extends \Google\Service\Resource
 {
   /**
-   * Lists the LabelLocks on a Label. (locks.listLabelsLocks)
+   * Lists the label locks on a label. (locks.listLabelsLocks)
    *
-   * @param string $parent Required. Label on which Locks are applied. Format:
-   * labels/{label}
+   * @param string $parent Required. Label on which locks are applied. Format:
+   * `labels/{label}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of Locks to return per page. Default:
+   * @opt_param int pageSize Maximum number of locks to return per page. Default:
    * 100. Max: 200.
    * @opt_param string pageToken The token of the page to return.
    * @return GoogleAppsDriveLabelsV2ListLabelLocksResponse

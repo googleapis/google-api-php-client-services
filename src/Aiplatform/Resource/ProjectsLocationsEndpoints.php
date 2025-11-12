@@ -276,6 +276,9 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
    * `base_model_name` only supports `=`. Some examples: * `endpoint=1` *
    * `displayName="myDisplayName"` * `labels.myKey="myValue"` *
    * `baseModelName="text-bison"`
+   * @opt_param string gdcZone Optional. Configures the Google Distributed Cloud
+   * (GDC) environment for online prediction. Only set this field when the
+   * Endpoint is to be deployed in a GDC environment.
    * @opt_param string orderBy A comma-separated list of fields to order by,
    * sorted in ascending order. Use "desc" after a field name for descending.
    * Supported fields: * `display_name` * `create_time` * `update_time` Example:
@@ -296,9 +299,9 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
   }
   /**
    * Updates an existing deployed model. Updatable fields include
-   * `min_replica_count`, `max_replica_count`, `autoscaling_metric_specs`,
-   * `disable_container_logging` (v1 only), and `enable_container_logging`
-   * (v1beta1 only). (endpoints.mutateDeployedModel)
+   * `min_replica_count`, `max_replica_count`, `required_replica_count`,
+   * `autoscaling_metric_specs`, `disable_container_logging` (v1 only), and
+   * `enable_container_logging` (v1beta1 only). (endpoints.mutateDeployedModel)
    *
    * @param string $endpoint Required. The name of the Endpoint resource into
    * which to mutate a DeployedModel. Format:

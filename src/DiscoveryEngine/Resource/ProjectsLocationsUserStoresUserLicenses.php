@@ -38,12 +38,13 @@ class ProjectsLocationsUserStoresUserLicenses extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter for the list request. Supported
-   * fields: * `license_assignment_state` Examples: * `license_assignment_state =
-   * ASSIGNED` to list assigned user licenses. * `license_assignment_state =
-   * NO_LICENSE` to list not licensed users. * `license_assignment_state =
-   * NO_LICENSE_ATTEMPTED_LOGIN` to list users who attempted login but no license
-   * assigned. * `license_assignment_state != NO_LICENSE_ATTEMPTED_LOGIN` to
-   * filter out users who attempted login but no license assigned.
+   * fields: * `license`_`assignment`_`state` * `user_principal` * `user_profile`
+   * Examples: * `license`_`assignment`_`state = ASSIGNED` to list assigned user
+   * licenses. * `license`_`assignment`_`state = NO_LICENSE` to list not licensed
+   * users. * `license`_`assignment`_`state = NO_LICENSE_ATTEMPTED_LOGIN` to list
+   * users who attempted login but no license assigned. *
+   * `license`_`assignment`_`state != NO_LICENSE_ATTEMPTED_LOGIN` to filter out
+   * users who attempted login but no license assigned.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, defaults to 10. The maximum value
    * is 50; values above 50 will be coerced to 50. If this field is negative, an

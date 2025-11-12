@@ -639,6 +639,10 @@ class VMwareEngine extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
@@ -770,6 +774,16 @@ class VMwareEngine extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'privateCloudDeletionNow' => [
+              'path' => 'v1/{+name}:privateCloudDeletionNow',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'resetNsxCredentials' => [

@@ -19,6 +19,7 @@ namespace Google\Service\NetAppFiles\Resource;
 
 use Google\Service\NetAppFiles\ListVolumesResponse;
 use Google\Service\NetAppFiles\Operation;
+use Google\Service\NetAppFiles\RestoreBackupFilesRequest;
 use Google\Service\NetAppFiles\RevertVolumeRequest;
 use Google\Service\NetAppFiles\Volume;
 
@@ -125,6 +126,22 @@ class ProjectsLocationsVolumes extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Restore files from a backup to a volume. (volumes.restore)
+   *
+   * @param string $name Required. The volume resource name, in the format
+   * `projects/{project_id}/locations/{location}/volumes/{volume_id}`
+   * @param RestoreBackupFilesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function restore($name, RestoreBackupFilesRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('restore', [$params], Operation::class);
   }
   /**
    * Revert an existing volume to a specified snapshot. Warning! This operation

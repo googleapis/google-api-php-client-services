@@ -33,6 +33,10 @@ class Settings extends \Google\Collection
    */
   public $authorizedGaeApplications;
   /**
+   * @var bool
+   */
+  public $autoUpgradeEnabled;
+  /**
    * @var string
    */
   public $availabilityType;
@@ -52,6 +56,10 @@ class Settings extends \Google\Collection
    * @var bool
    */
   public $crashSafeReplicationEnabled;
+  /**
+   * @var string
+   */
+  public $dataApiAccess;
   protected $dataCacheConfigType = DataCacheConfig::class;
   protected $dataCacheConfigDataType = '';
   /**
@@ -94,6 +102,8 @@ class Settings extends \Google\Collection
    * @var bool
    */
   public $enableGoogleMlIntegration;
+  protected $finalBackupConfigType = FinalBackupConfig::class;
+  protected $finalBackupConfigDataType = '';
   protected $insightsConfigType = InsightsConfig::class;
   protected $insightsConfigDataType = '';
   protected $ipConfigurationType = IpConfiguration::class;
@@ -112,6 +122,8 @@ class Settings extends \Google\Collection
    * @var string
    */
   public $pricingPlan;
+  protected $readPoolAutoScaleConfigType = ReadPoolAutoScaleConfig::class;
+  protected $readPoolAutoScaleConfigDataType = '';
   /**
    * @var int
    */
@@ -208,6 +220,20 @@ class Settings extends \Google\Collection
     return $this->authorizedGaeApplications;
   }
   /**
+   * @param bool
+   */
+  public function setAutoUpgradeEnabled($autoUpgradeEnabled)
+  {
+    $this->autoUpgradeEnabled = $autoUpgradeEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAutoUpgradeEnabled()
+  {
+    return $this->autoUpgradeEnabled;
+  }
+  /**
    * @param string
    */
   public function setAvailabilityType($availabilityType)
@@ -290,6 +316,20 @@ class Settings extends \Google\Collection
   public function getCrashSafeReplicationEnabled()
   {
     return $this->crashSafeReplicationEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setDataApiAccess($dataApiAccess)
+  {
+    $this->dataApiAccess = $dataApiAccess;
+  }
+  /**
+   * @return string
+   */
+  public function getDataApiAccess()
+  {
+    return $this->dataApiAccess;
   }
   /**
    * @param DataCacheConfig
@@ -460,6 +500,20 @@ class Settings extends \Google\Collection
     return $this->enableGoogleMlIntegration;
   }
   /**
+   * @param FinalBackupConfig
+   */
+  public function setFinalBackupConfig(FinalBackupConfig $finalBackupConfig)
+  {
+    $this->finalBackupConfig = $finalBackupConfig;
+  }
+  /**
+   * @return FinalBackupConfig
+   */
+  public function getFinalBackupConfig()
+  {
+    return $this->finalBackupConfig;
+  }
+  /**
    * @param InsightsConfig
    */
   public function setInsightsConfig(InsightsConfig $insightsConfig)
@@ -556,6 +610,20 @@ class Settings extends \Google\Collection
   public function getPricingPlan()
   {
     return $this->pricingPlan;
+  }
+  /**
+   * @param ReadPoolAutoScaleConfig
+   */
+  public function setReadPoolAutoScaleConfig(ReadPoolAutoScaleConfig $readPoolAutoScaleConfig)
+  {
+    $this->readPoolAutoScaleConfig = $readPoolAutoScaleConfig;
+  }
+  /**
+   * @return ReadPoolAutoScaleConfig
+   */
+  public function getReadPoolAutoScaleConfig()
+  {
+    return $this->readPoolAutoScaleConfig;
   }
   /**
    * @param int

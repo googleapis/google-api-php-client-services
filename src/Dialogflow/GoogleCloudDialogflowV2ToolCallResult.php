@@ -26,6 +26,10 @@ class GoogleCloudDialogflowV2ToolCallResult extends \Google\Model
   /**
    * @var string
    */
+  public $answerRecord;
+  /**
+   * @var string
+   */
   public $content;
   /**
    * @var string
@@ -55,6 +59,20 @@ class GoogleCloudDialogflowV2ToolCallResult extends \Google\Model
   public function getAction()
   {
     return $this->action;
+  }
+  /**
+   * @param string
+   */
+  public function setAnswerRecord($answerRecord)
+  {
+    $this->answerRecord = $answerRecord;
+  }
+  /**
+   * @return string
+   */
+  public function getAnswerRecord()
+  {
+    return $this->answerRecord;
   }
   /**
    * @param string

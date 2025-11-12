@@ -104,7 +104,8 @@ class ProjectsLocationsSessionTemplates extends \Google\Service\Resource
   /**
    * Updates the session template synchronously. (sessionTemplates.patch)
    *
-   * @param string $name Required. The resource name of the session template.
+   * @param string $name Required. Identifier. The resource name of the session
+   * template.
    * @param SessionTemplate $postBody
    * @param array $optParams Optional parameters.
    * @return SessionTemplate

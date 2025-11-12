@@ -27,6 +27,8 @@ class ReservationBlock extends \Google\Model
    * @var string
    */
   public $creationTimestamp;
+  protected $healthInfoType = ReservationBlockHealthInfo::class;
+  protected $healthInfoDataType = '';
   /**
    * @var string
    */
@@ -99,6 +101,20 @@ class ReservationBlock extends \Google\Model
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  /**
+   * @param ReservationBlockHealthInfo
+   */
+  public function setHealthInfo(ReservationBlockHealthInfo $healthInfo)
+  {
+    $this->healthInfo = $healthInfo;
+  }
+  /**
+   * @return ReservationBlockHealthInfo
+   */
+  public function getHealthInfo()
+  {
+    return $this->healthInfo;
   }
   /**
    * @param string

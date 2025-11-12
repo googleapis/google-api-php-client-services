@@ -19,6 +19,10 @@ namespace Google\Service\CloudRun;
 
 class GoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $artifactRegistryPackage;
   protected $fileHashesType = GoogleDevtoolsCloudbuildV1FileHashes::class;
   protected $fileHashesDataType = '';
   protected $pushTimingType = GoogleDevtoolsCloudbuildV1TimeSpan::class;
@@ -28,6 +32,20 @@ class GoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
    */
   public $uri;
 
+  /**
+   * @param string
+   */
+  public function setArtifactRegistryPackage($artifactRegistryPackage)
+  {
+    $this->artifactRegistryPackage = $artifactRegistryPackage;
+  }
+  /**
+   * @return string
+   */
+  public function getArtifactRegistryPackage()
+  {
+    return $this->artifactRegistryPackage;
+  }
   /**
    * @param GoogleDevtoolsCloudbuildV1FileHashes
    */

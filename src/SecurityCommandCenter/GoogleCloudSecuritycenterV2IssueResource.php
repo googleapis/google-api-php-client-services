@@ -19,6 +19,8 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2IssueResource extends \Google\Model
 {
+  protected $applicationType = GoogleCloudSecuritycenterV2IssueResourceApplication::class;
+  protected $applicationDataType = '';
   protected $awsMetadataType = GoogleCloudSecuritycenterV2IssueResourceAwsMetadata::class;
   protected $awsMetadataDataType = '';
   protected $azureMetadataType = GoogleCloudSecuritycenterV2IssueResourceAzureMetadata::class;
@@ -42,6 +44,20 @@ class GoogleCloudSecuritycenterV2IssueResource extends \Google\Model
    */
   public $type;
 
+  /**
+   * @param GoogleCloudSecuritycenterV2IssueResourceApplication
+   */
+  public function setApplication(GoogleCloudSecuritycenterV2IssueResourceApplication $application)
+  {
+    $this->application = $application;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2IssueResourceApplication
+   */
+  public function getApplication()
+  {
+    return $this->application;
+  }
   /**
    * @param GoogleCloudSecuritycenterV2IssueResourceAwsMetadata
    */

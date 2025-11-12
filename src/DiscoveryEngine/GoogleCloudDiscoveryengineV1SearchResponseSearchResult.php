@@ -29,6 +29,8 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResult extends \Google\Mod
   public $id;
   protected $modelScoresType = GoogleCloudDiscoveryengineV1DoubleList::class;
   protected $modelScoresDataType = 'map';
+  protected $rankSignalsType = GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals::class;
+  protected $rankSignalsDataType = '';
 
   /**
    * @param GoogleCloudDiscoveryengineV1Chunk
@@ -85,6 +87,20 @@ class GoogleCloudDiscoveryengineV1SearchResponseSearchResult extends \Google\Mod
   public function getModelScores()
   {
     return $this->modelScores;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals
+   */
+  public function setRankSignals(GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals $rankSignals)
+  {
+    $this->rankSignals = $rankSignals;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1SearchResponseSearchResultRankSignals
+   */
+  public function getRankSignals()
+  {
+    return $this->rankSignals;
   }
 }
 

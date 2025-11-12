@@ -42,6 +42,10 @@ class Advertiser extends \Google\Model
   /**
    * @var string
    */
+  public $euPoliticalAdsDeclaration;
+  /**
+   * @var string
+   */
   public $floodlightConfigurationId;
   protected $floodlightConfigurationIdDimensionValueType = DimensionValue::class;
   protected $floodlightConfigurationIdDimensionValueDataType = '';
@@ -147,6 +151,20 @@ class Advertiser extends \Google\Model
   public function getDefaultEmail()
   {
     return $this->defaultEmail;
+  }
+  /**
+   * @param string
+   */
+  public function setEuPoliticalAdsDeclaration($euPoliticalAdsDeclaration)
+  {
+    $this->euPoliticalAdsDeclaration = $euPoliticalAdsDeclaration;
+  }
+  /**
+   * @return string
+   */
+  public function getEuPoliticalAdsDeclaration()
+  {
+    return $this->euPoliticalAdsDeclaration;
   }
   /**
    * @param string

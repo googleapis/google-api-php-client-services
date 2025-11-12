@@ -59,6 +59,10 @@ class InstanceInfo extends \Google\Collection
   /**
    * @var string
    */
+  public $status;
+  /**
+   * @var string
+   */
   public $uri;
 
   /**
@@ -186,6 +190,20 @@ class InstanceInfo extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param string
+   */
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return string
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
   /**
    * @param string

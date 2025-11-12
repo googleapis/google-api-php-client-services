@@ -19,11 +19,29 @@ namespace Google\Service\PlayIntegrity;
 
 class PcTokenPayloadExternal extends \Google\Model
 {
+  protected $accountDetailsType = PcAccountDetails::class;
+  protected $accountDetailsDataType = '';
   protected $deviceIntegrityType = PcDeviceIntegrity::class;
   protected $deviceIntegrityDataType = '';
   protected $requestDetailsType = PcRequestDetails::class;
   protected $requestDetailsDataType = '';
+  protected $testingDetailsType = PcTestingDetails::class;
+  protected $testingDetailsDataType = '';
 
+  /**
+   * @param PcAccountDetails
+   */
+  public function setAccountDetails(PcAccountDetails $accountDetails)
+  {
+    $this->accountDetails = $accountDetails;
+  }
+  /**
+   * @return PcAccountDetails
+   */
+  public function getAccountDetails()
+  {
+    return $this->accountDetails;
+  }
   /**
    * @param PcDeviceIntegrity
    */
@@ -51,6 +69,20 @@ class PcTokenPayloadExternal extends \Google\Model
   public function getRequestDetails()
   {
     return $this->requestDetails;
+  }
+  /**
+   * @param PcTestingDetails
+   */
+  public function setTestingDetails(PcTestingDetails $testingDetails)
+  {
+    $this->testingDetails = $testingDetails;
+  }
+  /**
+   * @return PcTestingDetails
+   */
+  public function getTestingDetails()
+  {
+    return $this->testingDetails;
   }
 }
 

@@ -67,6 +67,10 @@ class FirewallInfo extends \Google\Collection
   /**
    * @var string
    */
+  public $targetType;
+  /**
+   * @var string
+   */
   public $uri;
 
   /**
@@ -222,6 +226,20 @@ class FirewallInfo extends \Google\Collection
   public function getTargetTags()
   {
     return $this->targetTags;
+  }
+  /**
+   * @param string
+   */
+  public function setTargetType($targetType)
+  {
+    $this->targetType = $targetType;
+  }
+  /**
+   * @return string
+   */
+  public function getTargetType()
+  {
+    return $this->targetType;
   }
   /**
    * @param string

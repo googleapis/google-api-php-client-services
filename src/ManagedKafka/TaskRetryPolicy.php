@@ -27,6 +27,10 @@ class TaskRetryPolicy extends \Google\Model
    * @var string
    */
   public $minimumBackoff;
+  /**
+   * @var bool
+   */
+  public $taskRetryDisabled;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class TaskRetryPolicy extends \Google\Model
   public function getMinimumBackoff()
   {
     return $this->minimumBackoff;
+  }
+  /**
+   * @param bool
+   */
+  public function setTaskRetryDisabled($taskRetryDisabled)
+  {
+    $this->taskRetryDisabled = $taskRetryDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getTaskRetryDisabled()
+  {
+    return $this->taskRetryDisabled;
   }
 }
 

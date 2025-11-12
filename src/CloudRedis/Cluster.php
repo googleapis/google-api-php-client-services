@@ -23,6 +23,10 @@ class Cluster extends \Google\Collection
   /**
    * @var bool
    */
+  public $allowFewerZonesDeployment;
+  /**
+   * @var bool
+   */
   public $asyncClusterEndpointsDeletionEnabled;
   /**
    * @var string
@@ -30,6 +34,10 @@ class Cluster extends \Google\Collection
   public $authorizationMode;
   protected $automatedBackupConfigType = AutomatedBackupConfig::class;
   protected $automatedBackupConfigDataType = '';
+  /**
+   * @var string[]
+   */
+  public $availableMaintenanceVersions;
   /**
    * @var string
    */
@@ -48,6 +56,10 @@ class Cluster extends \Google\Collection
   public $deletionProtectionEnabled;
   protected $discoveryEndpointsType = DiscoveryEndpoint::class;
   protected $discoveryEndpointsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $effectiveMaintenanceVersion;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   protected $gcsSourceType = GcsBackupSource::class;
@@ -56,10 +68,18 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $kmsKey;
+  /**
+   * @var string[]
+   */
+  public $labels;
   protected $maintenancePolicyType = ClusterMaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
   protected $maintenanceScheduleType = ClusterMaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
+  /**
+   * @var string
+   */
+  public $maintenanceVersion;
   protected $managedBackupSourceType = ManagedBackupSource::class;
   protected $managedBackupSourceDataType = '';
   /**
@@ -92,9 +112,21 @@ class Cluster extends \Google\Collection
    */
   public $replicaCount;
   /**
+   * @var bool
+   */
+  public $satisfiesPzi;
+  /**
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * @var int
    */
   public $shardCount;
+  /**
+   * @var bool
+   */
+  public $simulateMaintenanceEvent;
   /**
    * @var int
    */
@@ -116,6 +148,20 @@ class Cluster extends \Google\Collection
   protected $zoneDistributionConfigType = ZoneDistributionConfig::class;
   protected $zoneDistributionConfigDataType = '';
 
+  /**
+   * @param bool
+   */
+  public function setAllowFewerZonesDeployment($allowFewerZonesDeployment)
+  {
+    $this->allowFewerZonesDeployment = $allowFewerZonesDeployment;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowFewerZonesDeployment()
+  {
+    return $this->allowFewerZonesDeployment;
+  }
   /**
    * @param bool
    */
@@ -157,6 +203,20 @@ class Cluster extends \Google\Collection
   public function getAutomatedBackupConfig()
   {
     return $this->automatedBackupConfig;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAvailableMaintenanceVersions($availableMaintenanceVersions)
+  {
+    $this->availableMaintenanceVersions = $availableMaintenanceVersions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAvailableMaintenanceVersions()
+  {
+    return $this->availableMaintenanceVersions;
   }
   /**
    * @param string
@@ -243,6 +303,20 @@ class Cluster extends \Google\Collection
     return $this->discoveryEndpoints;
   }
   /**
+   * @param string
+   */
+  public function setEffectiveMaintenanceVersion($effectiveMaintenanceVersion)
+  {
+    $this->effectiveMaintenanceVersion = $effectiveMaintenanceVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getEffectiveMaintenanceVersion()
+  {
+    return $this->effectiveMaintenanceVersion;
+  }
+  /**
    * @param EncryptionInfo
    */
   public function setEncryptionInfo(EncryptionInfo $encryptionInfo)
@@ -285,6 +359,20 @@ class Cluster extends \Google\Collection
     return $this->kmsKey;
   }
   /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
+  }
+  /**
    * @param ClusterMaintenancePolicy
    */
   public function setMaintenancePolicy(ClusterMaintenancePolicy $maintenancePolicy)
@@ -311,6 +399,20 @@ class Cluster extends \Google\Collection
   public function getMaintenanceSchedule()
   {
     return $this->maintenanceSchedule;
+  }
+  /**
+   * @param string
+   */
+  public function setMaintenanceVersion($maintenanceVersion)
+  {
+    $this->maintenanceVersion = $maintenanceVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getMaintenanceVersion()
+  {
+    return $this->maintenanceVersion;
   }
   /**
    * @param ManagedBackupSource
@@ -461,6 +563,34 @@ class Cluster extends \Google\Collection
     return $this->replicaCount;
   }
   /**
+   * @param bool
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
+  }
+  /**
    * @param int
    */
   public function setShardCount($shardCount)
@@ -473,6 +603,20 @@ class Cluster extends \Google\Collection
   public function getShardCount()
   {
     return $this->shardCount;
+  }
+  /**
+   * @param bool
+   */
+  public function setSimulateMaintenanceEvent($simulateMaintenanceEvent)
+  {
+    $this->simulateMaintenanceEvent = $simulateMaintenanceEvent;
+  }
+  /**
+   * @return bool
+   */
+  public function getSimulateMaintenanceEvent()
+  {
+    return $this->simulateMaintenanceEvent;
   }
   /**
    * @param int

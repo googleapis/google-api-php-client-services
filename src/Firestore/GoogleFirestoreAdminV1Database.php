@@ -54,6 +54,10 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
    */
   public $etag;
   /**
+   * @var string
+   */
+  public $firestoreDataAccessMode;
+  /**
    * @var bool
    */
   public $freeTier;
@@ -68,6 +72,10 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   /**
    * @var string
    */
+  public $mongodbCompatibleDataAccessMode;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -77,6 +85,10 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
    * @var string
    */
   public $previousId;
+  /**
+   * @var string
+   */
+  public $realtimeUpdatesMode;
   protected $sourceInfoType = GoogleFirestoreAdminV1SourceInfo::class;
   protected $sourceInfoDataType = '';
   /**
@@ -227,6 +239,20 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
     return $this->etag;
   }
   /**
+   * @param string
+   */
+  public function setFirestoreDataAccessMode($firestoreDataAccessMode)
+  {
+    $this->firestoreDataAccessMode = $firestoreDataAccessMode;
+  }
+  /**
+   * @return string
+   */
+  public function getFirestoreDataAccessMode()
+  {
+    return $this->firestoreDataAccessMode;
+  }
+  /**
    * @param bool
    */
   public function setFreeTier($freeTier)
@@ -271,6 +297,20 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   /**
    * @param string
    */
+  public function setMongodbCompatibleDataAccessMode($mongodbCompatibleDataAccessMode)
+  {
+    $this->mongodbCompatibleDataAccessMode = $mongodbCompatibleDataAccessMode;
+  }
+  /**
+   * @return string
+   */
+  public function getMongodbCompatibleDataAccessMode()
+  {
+    return $this->mongodbCompatibleDataAccessMode;
+  }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
@@ -309,6 +349,20 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   public function getPreviousId()
   {
     return $this->previousId;
+  }
+  /**
+   * @param string
+   */
+  public function setRealtimeUpdatesMode($realtimeUpdatesMode)
+  {
+    $this->realtimeUpdatesMode = $realtimeUpdatesMode;
+  }
+  /**
+   * @return string
+   */
+  public function getRealtimeUpdatesMode()
+  {
+    return $this->realtimeUpdatesMode;
   }
   /**
    * @param GoogleFirestoreAdminV1SourceInfo

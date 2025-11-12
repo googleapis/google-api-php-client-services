@@ -106,6 +106,8 @@ class InterconnectAttachment extends \Google\Collection
    * @var string
    */
   public $kind;
+  protected $l2ForwardingType = InterconnectAttachmentL2Forwarding::class;
+  protected $l2ForwardingDataType = '';
   /**
    * @var string
    */
@@ -130,6 +132,8 @@ class InterconnectAttachment extends \Google\Collection
    * @var string
    */
   public $pairingKey;
+  protected $paramsType = InterconnectAttachmentParams::class;
+  protected $paramsDataType = '';
   /**
    * @var string
    */
@@ -488,6 +492,20 @@ class InterconnectAttachment extends \Google\Collection
     return $this->kind;
   }
   /**
+   * @param InterconnectAttachmentL2Forwarding
+   */
+  public function setL2Forwarding(InterconnectAttachmentL2Forwarding $l2Forwarding)
+  {
+    $this->l2Forwarding = $l2Forwarding;
+  }
+  /**
+   * @return InterconnectAttachmentL2Forwarding
+   */
+  public function getL2Forwarding()
+  {
+    return $this->l2Forwarding;
+  }
+  /**
    * @param string
    */
   public function setLabelFingerprint($labelFingerprint)
@@ -570,6 +588,20 @@ class InterconnectAttachment extends \Google\Collection
   public function getPairingKey()
   {
     return $this->pairingKey;
+  }
+  /**
+   * @param InterconnectAttachmentParams
+   */
+  public function setParams(InterconnectAttachmentParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return InterconnectAttachmentParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * @param string

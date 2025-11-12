@@ -34,10 +34,6 @@ class UsageMetrics extends \Google\Model
   /**
    * @var string
    */
-  public $milliSlotSeconds;
-  /**
-   * @var string
-   */
   public $shuffleStorageGbSeconds;
   /**
    * @var string
@@ -85,20 +81,6 @@ class UsageMetrics extends \Google\Model
   public function getMilliDcuSeconds()
   {
     return $this->milliDcuSeconds;
-  }
-  /**
-   * @param string
-   */
-  public function setMilliSlotSeconds($milliSlotSeconds)
-  {
-    $this->milliSlotSeconds = $milliSlotSeconds;
-  }
-  /**
-   * @return string
-   */
-  public function getMilliSlotSeconds()
-  {
-    return $this->milliSlotSeconds;
   }
   /**
    * @param string

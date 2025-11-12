@@ -23,6 +23,10 @@ class ListActionsResponse extends \Google\Collection
   protected $actionsType = Action::class;
   protected $actionsDataType = 'array';
   /**
+   * @var array[]
+   */
+  public $metadata;
+  /**
    * @var string
    */
   public $nextPageToken;
@@ -44,6 +48,20 @@ class ListActionsResponse extends \Google\Collection
   public function getActions()
   {
     return $this->actions;
+  }
+  /**
+   * @param array[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string

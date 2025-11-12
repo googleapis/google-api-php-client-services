@@ -17,13 +17,13 @@
 
 namespace Google\Service\Contactcenterinsights\Resource;
 
-use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CalculateStatsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CalculateStatsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1Conversation;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1IngestConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListConversationsResponse;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1SampleConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleLongrunningOperation;
 use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
 
@@ -37,22 +37,6 @@ use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
  */
 class ProjectsLocationsDatasetsConversations extends \Google\Service\Resource
 {
-  /**
-   * Analyzes multiple conversations in a single request.
-   * (conversations.bulkAnalyze)
-   *
-   * @param string $parent Required. The parent resource to create analyses in.
-   * @param GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleLongrunningOperation
-   * @throws \Google\Service\Exception
-   */
-  public function bulkAnalyze($parent, GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('bulkAnalyze', [$params], GoogleLongrunningOperation::class);
-  }
   /**
    * Deletes multiple conversations in a single request.
    * (conversations.bulkDelete)
@@ -170,6 +154,22 @@ class ProjectsLocationsDatasetsConversations extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudContactcenterinsightsV1ListConversationsResponse::class);
+  }
+  /**
+   * Samples conversations based on user configuration and handles the sampled
+   * conversations for different use cases. (conversations.sample)
+   *
+   * @param string $parent Required. The parent resource of the dataset.
+   * @param GoogleCloudContactcenterinsightsV1SampleConversationsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function sample($parent, GoogleCloudContactcenterinsightsV1SampleConversationsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('sample', [$params], GoogleLongrunningOperation::class);
   }
 }
 

@@ -19,9 +19,25 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ProcessingLocation extends \Google\Model
 {
+  protected $documentFallbackLocationType = GooglePrivacyDlpV2DocumentFallbackLocation::class;
+  protected $documentFallbackLocationDataType = '';
   protected $imageFallbackLocationType = GooglePrivacyDlpV2ImageFallbackLocation::class;
   protected $imageFallbackLocationDataType = '';
 
+  /**
+   * @param GooglePrivacyDlpV2DocumentFallbackLocation
+   */
+  public function setDocumentFallbackLocation(GooglePrivacyDlpV2DocumentFallbackLocation $documentFallbackLocation)
+  {
+    $this->documentFallbackLocation = $documentFallbackLocation;
+  }
+  /**
+   * @return GooglePrivacyDlpV2DocumentFallbackLocation
+   */
+  public function getDocumentFallbackLocation()
+  {
+    return $this->documentFallbackLocation;
+  }
   /**
    * @param GooglePrivacyDlpV2ImageFallbackLocation
    */

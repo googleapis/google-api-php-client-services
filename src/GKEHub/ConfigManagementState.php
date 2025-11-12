@@ -29,6 +29,10 @@ class ConfigManagementState extends \Google\Model
   protected $configSyncStateDataType = '';
   protected $hierarchyControllerStateType = ConfigManagementHierarchyControllerState::class;
   protected $hierarchyControllerStateDataType = '';
+  /**
+   * @var string
+   */
+  public $kubernetesApiServerVersion;
   protected $membershipSpecType = ConfigManagementSpec::class;
   protected $membershipSpecDataType = '';
   protected $operatorStateType = ConfigManagementOperatorState::class;
@@ -91,6 +95,20 @@ class ConfigManagementState extends \Google\Model
   public function getHierarchyControllerState()
   {
     return $this->hierarchyControllerState;
+  }
+  /**
+   * @param string
+   */
+  public function setKubernetesApiServerVersion($kubernetesApiServerVersion)
+  {
+    $this->kubernetesApiServerVersion = $kubernetesApiServerVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getKubernetesApiServerVersion()
+  {
+    return $this->kubernetesApiServerVersion;
   }
   /**
    * @param ConfigManagementSpec

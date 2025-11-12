@@ -29,10 +29,6 @@ class InstanceProperties extends \Google\Collection
    */
   public $machineType;
   /**
-   * @var string
-   */
-  public $role;
-  /**
    * @var string[]
    */
   public $roles;
@@ -72,20 +68,6 @@ class InstanceProperties extends \Google\Collection
   public function getMachineType()
   {
     return $this->machineType;
-  }
-  /**
-   * @param string
-   */
-  public function setRole($role)
-  {
-    $this->role = $role;
-  }
-  /**
-   * @return string
-   */
-  public function getRole()
-  {
-    return $this->role;
   }
   /**
    * @param string[]

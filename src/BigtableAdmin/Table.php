@@ -45,6 +45,8 @@ class Table extends \Google\Model
   protected $rowKeySchemaDataType = '';
   protected $statsType = TableStats::class;
   protected $statsDataType = '';
+  protected $tieredStorageConfigType = TieredStorageConfig::class;
+  protected $tieredStorageConfigDataType = '';
 
   /**
    * @param AutomatedBackupPolicy
@@ -185,6 +187,20 @@ class Table extends \Google\Model
   public function getStats()
   {
     return $this->stats;
+  }
+  /**
+   * @param TieredStorageConfig
+   */
+  public function setTieredStorageConfig(TieredStorageConfig $tieredStorageConfig)
+  {
+    $this->tieredStorageConfig = $tieredStorageConfig;
+  }
+  /**
+   * @return TieredStorageConfig
+   */
+  public function getTieredStorageConfig()
+  {
+    return $this->tieredStorageConfig;
   }
 }
 

@@ -27,6 +27,12 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Googl
    * @var array[]
    */
   public $authParams;
+  /**
+   * @var string
+   */
+  public $jsonAuthParams;
+  protected $tenantType = GoogleCloudDiscoveryengineV1alphaTenant::class;
+  protected $tenantDataType = '';
 
   /**
    * @param array[]
@@ -55,6 +61,34 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Googl
   public function getAuthParams()
   {
     return $this->authParams;
+  }
+  /**
+   * @param string
+   */
+  public function setJsonAuthParams($jsonAuthParams)
+  {
+    $this->jsonAuthParams = $jsonAuthParams;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonAuthParams()
+  {
+    return $this->jsonAuthParams;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaTenant
+   */
+  public function setTenant(GoogleCloudDiscoveryengineV1alphaTenant $tenant)
+  {
+    $this->tenant = $tenant;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaTenant
+   */
+  public function getTenant()
+  {
+    return $this->tenant;
   }
 }
 

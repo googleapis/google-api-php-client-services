@@ -30,6 +30,10 @@ class SimpleExportPolicyRule extends \Google\Model
   /**
    * @var string
    */
+  public $anonUid;
+  /**
+   * @var string
+   */
   public $hasRootAccess;
   /**
    * @var bool
@@ -63,6 +67,10 @@ class SimpleExportPolicyRule extends \Google\Model
    * @var bool
    */
   public $nfsv4;
+  /**
+   * @var string
+   */
+  public $squashMode;
 
   /**
    * @param string
@@ -91,6 +99,20 @@ class SimpleExportPolicyRule extends \Google\Model
   public function getAllowedClients()
   {
     return $this->allowedClients;
+  }
+  /**
+   * @param string
+   */
+  public function setAnonUid($anonUid)
+  {
+    $this->anonUid = $anonUid;
+  }
+  /**
+   * @return string
+   */
+  public function getAnonUid()
+  {
+    return $this->anonUid;
   }
   /**
    * @param string
@@ -217,6 +239,20 @@ class SimpleExportPolicyRule extends \Google\Model
   public function getNfsv4()
   {
     return $this->nfsv4;
+  }
+  /**
+   * @param string
+   */
+  public function setSquashMode($squashMode)
+  {
+    $this->squashMode = $squashMode;
+  }
+  /**
+   * @return string
+   */
+  public function getSquashMode()
+  {
+    return $this->squashMode;
   }
 }
 

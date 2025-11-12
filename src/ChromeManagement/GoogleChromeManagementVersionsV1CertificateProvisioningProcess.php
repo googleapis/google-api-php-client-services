@@ -43,6 +43,10 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
    * @var string
    */
   public $provisioningProfileId;
+  protected $scepCaConnectionType = GoogleChromeManagementVersionsV1ScepCaConnection::class;
+  protected $scepCaConnectionDataType = '';
+  protected $scepProfileType = GoogleChromeManagementVersionsV1ScepProfile::class;
+  protected $scepProfileDataType = '';
   /**
    * @var string
    */
@@ -175,6 +179,34 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
   public function getProvisioningProfileId()
   {
     return $this->provisioningProfileId;
+  }
+  /**
+   * @param GoogleChromeManagementVersionsV1ScepCaConnection
+   */
+  public function setScepCaConnection(GoogleChromeManagementVersionsV1ScepCaConnection $scepCaConnection)
+  {
+    $this->scepCaConnection = $scepCaConnection;
+  }
+  /**
+   * @return GoogleChromeManagementVersionsV1ScepCaConnection
+   */
+  public function getScepCaConnection()
+  {
+    return $this->scepCaConnection;
+  }
+  /**
+   * @param GoogleChromeManagementVersionsV1ScepProfile
+   */
+  public function setScepProfile(GoogleChromeManagementVersionsV1ScepProfile $scepProfile)
+  {
+    $this->scepProfile = $scepProfile;
+  }
+  /**
+   * @return GoogleChromeManagementVersionsV1ScepProfile
+   */
+  public function getScepProfile()
+  {
+    return $this->scepProfile;
   }
   /**
    * @param string

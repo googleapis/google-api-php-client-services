@@ -19,9 +19,27 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1DeployModelOperationMetadata extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $deploymentStage;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
 
+  /**
+   * @param string
+   */
+  public function setDeploymentStage($deploymentStage)
+  {
+    $this->deploymentStage = $deploymentStage;
+  }
+  /**
+   * @return string
+   */
+  public function getDeploymentStage()
+  {
+    return $this->deploymentStage;
+  }
   /**
    * @param GoogleCloudAiplatformV1GenericOperationMetadata
    */

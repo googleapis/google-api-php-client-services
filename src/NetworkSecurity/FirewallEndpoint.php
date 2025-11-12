@@ -38,6 +38,8 @@ class FirewallEndpoint extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $endpointSettingsType = FirewallEndpointEndpointSettings::class;
+  protected $endpointSettingsDataType = '';
   /**
    * @var string[]
    */
@@ -136,6 +138,20 @@ class FirewallEndpoint extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param FirewallEndpointEndpointSettings
+   */
+  public function setEndpointSettings(FirewallEndpointEndpointSettings $endpointSettings)
+  {
+    $this->endpointSettings = $endpointSettings;
+  }
+  /**
+   * @return FirewallEndpointEndpointSettings
+   */
+  public function getEndpointSettings()
+  {
+    return $this->endpointSettings;
   }
   /**
    * @param string[]

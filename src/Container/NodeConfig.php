@@ -24,6 +24,8 @@ class NodeConfig extends \Google\Collection
   protected $acceleratorsDataType = 'array';
   protected $advancedMachineFeaturesType = AdvancedMachineFeatures::class;
   protected $advancedMachineFeaturesDataType = '';
+  protected $bootDiskType = BootDisk::class;
+  protected $bootDiskDataType = '';
   /**
    * @var string
    */
@@ -180,6 +182,20 @@ class NodeConfig extends \Google\Collection
   public function getAdvancedMachineFeatures()
   {
     return $this->advancedMachineFeatures;
+  }
+  /**
+   * @param BootDisk
+   */
+  public function setBootDisk(BootDisk $bootDisk)
+  {
+    $this->bootDisk = $bootDisk;
+  }
+  /**
+   * @return BootDisk
+   */
+  public function getBootDisk()
+  {
+    return $this->bootDisk;
   }
   /**
    * @param string

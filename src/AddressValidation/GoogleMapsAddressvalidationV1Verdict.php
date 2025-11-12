@@ -38,11 +38,19 @@ class GoogleMapsAddressvalidationV1Verdict extends \Google\Model
   /**
    * @var bool
    */
+  public $hasSpellCorrectedComponents;
+  /**
+   * @var bool
+   */
   public $hasUnconfirmedComponents;
   /**
    * @var string
    */
   public $inputGranularity;
+  /**
+   * @var string
+   */
+  public $possibleNextAction;
   /**
    * @var string
    */
@@ -107,6 +115,20 @@ class GoogleMapsAddressvalidationV1Verdict extends \Google\Model
   /**
    * @param bool
    */
+  public function setHasSpellCorrectedComponents($hasSpellCorrectedComponents)
+  {
+    $this->hasSpellCorrectedComponents = $hasSpellCorrectedComponents;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasSpellCorrectedComponents()
+  {
+    return $this->hasSpellCorrectedComponents;
+  }
+  /**
+   * @param bool
+   */
   public function setHasUnconfirmedComponents($hasUnconfirmedComponents)
   {
     $this->hasUnconfirmedComponents = $hasUnconfirmedComponents;
@@ -131,6 +153,20 @@ class GoogleMapsAddressvalidationV1Verdict extends \Google\Model
   public function getInputGranularity()
   {
     return $this->inputGranularity;
+  }
+  /**
+   * @param string
+   */
+  public function setPossibleNextAction($possibleNextAction)
+  {
+    $this->possibleNextAction = $possibleNextAction;
+  }
+  /**
+   * @return string
+   */
+  public function getPossibleNextAction()
+  {
+    return $this->possibleNextAction;
   }
   /**
    * @param string

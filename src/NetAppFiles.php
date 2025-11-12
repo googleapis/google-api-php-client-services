@@ -615,6 +615,10 @@ class NetAppFiles extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
@@ -806,6 +810,16 @@ class NetAppFiles extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'restore' => [
+              'path' => 'v1/{+name}:restore',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'revert' => [

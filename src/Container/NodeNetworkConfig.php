@@ -34,6 +34,8 @@ class NodeNetworkConfig extends \Google\Collection
   public $enablePrivateNodes;
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
+  protected $networkTierConfigType = NetworkTierConfig::class;
+  protected $networkTierConfigDataType = '';
   protected $podCidrOverprovisionConfigType = PodCIDROverprovisionConfig::class;
   protected $podCidrOverprovisionConfigDataType = '';
   /**
@@ -45,6 +47,10 @@ class NodeNetworkConfig extends \Google\Collection
    * @var string
    */
   public $podRange;
+  /**
+   * @var string
+   */
+  public $subnetwork;
 
   /**
    * @param AdditionalNodeNetworkConfig[]
@@ -117,6 +123,20 @@ class NodeNetworkConfig extends \Google\Collection
     return $this->networkPerformanceConfig;
   }
   /**
+   * @param NetworkTierConfig
+   */
+  public function setNetworkTierConfig(NetworkTierConfig $networkTierConfig)
+  {
+    $this->networkTierConfig = $networkTierConfig;
+  }
+  /**
+   * @return NetworkTierConfig
+   */
+  public function getNetworkTierConfig()
+  {
+    return $this->networkTierConfig;
+  }
+  /**
    * @param PodCIDROverprovisionConfig
    */
   public function setPodCidrOverprovisionConfig(PodCIDROverprovisionConfig $podCidrOverprovisionConfig)
@@ -165,6 +185,20 @@ class NodeNetworkConfig extends \Google\Collection
   public function getPodRange()
   {
     return $this->podRange;
+  }
+  /**
+   * @param string
+   */
+  public function setSubnetwork($subnetwork)
+  {
+    $this->subnetwork = $subnetwork;
+  }
+  /**
+   * @return string
+   */
+  public function getSubnetwork()
+  {
+    return $this->subnetwork;
   }
 }
 

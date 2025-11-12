@@ -34,6 +34,14 @@ class User extends \Google\Model
   /**
    * @var string
    */
+  public $iamEmail;
+  /**
+   * @var string
+   */
+  public $iamStatus;
+  /**
+   * @var string
+   */
   public $instance;
   /**
    * @var string
@@ -101,6 +109,34 @@ class User extends \Google\Model
   public function getHost()
   {
     return $this->host;
+  }
+  /**
+   * @param string
+   */
+  public function setIamEmail($iamEmail)
+  {
+    $this->iamEmail = $iamEmail;
+  }
+  /**
+   * @return string
+   */
+  public function getIamEmail()
+  {
+    return $this->iamEmail;
+  }
+  /**
+   * @param string
+   */
+  public function setIamStatus($iamStatus)
+  {
+    $this->iamStatus = $iamStatus;
+  }
+  /**
+   * @return string
+   */
+  public function getIamStatus()
+  {
+    return $this->iamStatus;
   }
   /**
    * @param string

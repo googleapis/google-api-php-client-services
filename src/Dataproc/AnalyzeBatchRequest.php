@@ -23,6 +23,10 @@ class AnalyzeBatchRequest extends \Google\Model
    * @var string
    */
   public $requestId;
+  /**
+   * @var string
+   */
+  public $requestorId;
 
   /**
    * @param string
@@ -37,6 +41,20 @@ class AnalyzeBatchRequest extends \Google\Model
   public function getRequestId()
   {
     return $this->requestId;
+  }
+  /**
+   * @param string
+   */
+  public function setRequestorId($requestorId)
+  {
+    $this->requestorId = $requestorId;
+  }
+  /**
+   * @return string
+   */
+  public function getRequestorId()
+  {
+    return $this->requestorId;
   }
 }
 

@@ -22,12 +22,30 @@ class PermissionSetting extends \Google\Model
   /**
    * @var bool
    */
+  public $assistantManagersAllowed;
+  /**
+   * @var bool
+   */
   public $managersAllowed;
   /**
    * @var bool
    */
   public $membersAllowed;
 
+  /**
+   * @param bool
+   */
+  public function setAssistantManagersAllowed($assistantManagersAllowed)
+  {
+    $this->assistantManagersAllowed = $assistantManagersAllowed;
+  }
+  /**
+   * @return bool
+   */
+  public function getAssistantManagersAllowed()
+  {
+    return $this->assistantManagersAllowed;
+  }
   /**
    * @param bool
    */

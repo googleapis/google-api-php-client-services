@@ -45,6 +45,9 @@ class Networkconnectivity extends \Google\Service
   public $projects_locations_global_hubs_routeTables_routes;
   public $projects_locations_global_policyBasedRoutes;
   public $projects_locations_internalRanges;
+  public $projects_locations_multicloudDataTransferConfigs;
+  public $projects_locations_multicloudDataTransferConfigs_destinations;
+  public $projects_locations_multicloudDataTransferSupportedServices;
   public $projects_locations_operations;
   public $projects_locations_regionalEndpoints;
   public $projects_locations_serviceClasses;
@@ -77,7 +80,17 @@ class Networkconnectivity extends \Google\Service
         'locations',
         [
           'methods' => [
-            'get' => [
+            'checkConsumerConfig' => [
+              'path' => 'v1/{+location}:checkConsumerConfig',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -785,6 +798,252 @@ class Networkconnectivity extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_multicloudDataTransferConfigs = new Networkconnectivity\Resource\ProjectsLocationsMulticloudDataTransferConfigs(
+        $this,
+        $this->serviceName,
+        'multicloudDataTransferConfigs',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/multicloudDataTransferConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'multicloudDataTransferConfigId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/multicloudDataTransferConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_multicloudDataTransferConfigs_destinations = new Networkconnectivity\Resource\ProjectsLocationsMulticloudDataTransferConfigsDestinations(
+        $this,
+        $this->serviceName,
+        'destinations',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/destinations',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'destinationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/destinations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_multicloudDataTransferSupportedServices = new Networkconnectivity\Resource\ProjectsLocationsMulticloudDataTransferSupportedServices(
+        $this,
+        $this->serviceName,
+        'multicloudDataTransferSupportedServices',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/multicloudDataTransferSupportedServices',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_operations = new Networkconnectivity\Resource\ProjectsLocationsOperations(
         $this,
         $this->serviceName,
@@ -841,6 +1100,10 @@ class Networkconnectivity extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -1190,11 +1453,28 @@ class Networkconnectivity extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'autoSubnetworkConfig.allocRangeSpace' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'autoSubnetworkConfig.ipStack' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'autoSubnetworkConfig.prefixLength' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
                 'serviceConnectionPolicyId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'subnetworkMode' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

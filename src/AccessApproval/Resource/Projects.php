@@ -33,11 +33,10 @@ class Projects extends \Google\Service\Resource
 {
   /**
    * Deletes the settings associated with a project, folder, or organization. This
-   * will have the effect of disabling Access Approval for the project, folder, or
-   * organization, but only if all ancestors also have Access Approval disabled.
-   * If Access Approval is enabled at a higher level of the hierarchy, then Access
-   * Approval will still be enabled at this level as the settings are inherited.
-   * (projects.deleteAccessApprovalSettings)
+   * will have the effect of disabling Access Approval for the resource. Access
+   * Approval may remain active based on parent resource settings. To confirm the
+   * effective settings, call GetAccessApprovalSettings and verify effective
+   * setting is disabled. (projects.deleteAccessApprovalSettings)
    *
    * @param string $name Name of the AccessApprovalSettings to delete.
    * @param array $optParams Optional parameters.
@@ -51,8 +50,8 @@ class Projects extends \Google\Service\Resource
     return $this->call('deleteAccessApprovalSettings', [$params], AccessapprovalEmpty::class);
   }
   /**
-   * Gets the settings associated with a project, folder, or organization.
-   * (projects.getAccessApprovalSettings)
+   * Gets the Access Approval settings associated with a project, folder, or
+   * organization. (projects.getAccessApprovalSettings)
    *
    * @param string $name The name of the AccessApprovalSettings to retrieve.
    * Format: "{projects|folders|organizations}/{id}/accessApprovalSettings"

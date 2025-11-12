@@ -17,6 +17,7 @@
 
 namespace Google\Service\ArtifactRegistry\Resource;
 
+use Google\Service\ArtifactRegistry\ExportArtifactRequest;
 use Google\Service\ArtifactRegistry\ListRepositoriesResponse;
 use Google\Service\ArtifactRegistry\Operation;
 use Google\Service\ArtifactRegistry\Policy;
@@ -72,6 +73,22 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Exports an artifact. (repositories.exportArtifact)
+   *
+   * @param string $repository Required. The repository of the artifact to export.
+   * Format: projects/{project}/locations/{location}/repositories/{repository}
+   * @param ExportArtifactRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function exportArtifact($repository, ExportArtifactRequest $postBody, $optParams = [])
+  {
+    $params = ['repository' => $repository, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('exportArtifact', [$params], Operation::class);
   }
   /**
    * Gets a repository. (repositories.get)

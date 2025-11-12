@@ -17,8 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1EnterpriseWebSearch extends \Google\Model
+class GoogleCloudAiplatformV1EnterpriseWebSearch extends \Google\Collection
 {
+  protected $collection_key = 'excludeDomains';
+  /**
+   * @var string
+   */
+  public $blockingConfidence;
+  /**
+   * @var string[]
+   */
+  public $excludeDomains;
+
+  /**
+   * @param string
+   */
+  public function setBlockingConfidence($blockingConfidence)
+  {
+    $this->blockingConfidence = $blockingConfidence;
+  }
+  /**
+   * @return string
+   */
+  public function getBlockingConfidence()
+  {
+    return $this->blockingConfidence;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeDomains($excludeDomains)
+  {
+    $this->excludeDomains = $excludeDomains;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeDomains()
+  {
+    return $this->excludeDomains;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

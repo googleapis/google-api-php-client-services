@@ -66,7 +66,13 @@ class Reservation extends \Google\Model
   /**
    * @var string
    */
+  public $reservationGroup;
+  /**
+   * @var string
+   */
   public $scalingMode;
+  protected $schedulingPolicyType = SchedulingPolicy::class;
+  protected $schedulingPolicyDataType = '';
   /**
    * @var string
    */
@@ -251,6 +257,20 @@ class Reservation extends \Google\Model
   /**
    * @param string
    */
+  public function setReservationGroup($reservationGroup)
+  {
+    $this->reservationGroup = $reservationGroup;
+  }
+  /**
+   * @return string
+   */
+  public function getReservationGroup()
+  {
+    return $this->reservationGroup;
+  }
+  /**
+   * @param string
+   */
   public function setScalingMode($scalingMode)
   {
     $this->scalingMode = $scalingMode;
@@ -261,6 +281,20 @@ class Reservation extends \Google\Model
   public function getScalingMode()
   {
     return $this->scalingMode;
+  }
+  /**
+   * @param SchedulingPolicy
+   */
+  public function setSchedulingPolicy(SchedulingPolicy $schedulingPolicy)
+  {
+    $this->schedulingPolicy = $schedulingPolicy;
+  }
+  /**
+   * @return SchedulingPolicy
+   */
+  public function getSchedulingPolicy()
+  {
+    return $this->schedulingPolicy;
   }
   /**
    * @param string

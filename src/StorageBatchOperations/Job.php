@@ -38,6 +38,10 @@ class Job extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var bool
+   */
+  public $dryRun;
   protected $errorSummariesType = ErrorSummary::class;
   protected $errorSummariesDataType = 'array';
   protected $loggingConfigType = LoggingConfig::class;
@@ -144,6 +148,20 @@ class Job extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param bool
+   */
+  public function setDryRun($dryRun)
+  {
+    $this->dryRun = $dryRun;
+  }
+  /**
+   * @return bool
+   */
+  public function getDryRun()
+  {
+    return $this->dryRun;
   }
   /**
    * @param ErrorSummary[]

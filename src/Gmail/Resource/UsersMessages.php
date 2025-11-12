@@ -157,7 +157,9 @@ class UsersMessages extends \Google\Service\Resource
     return $this->call('insert', [$params], Message::class);
   }
   /**
-   * Lists the messages in the user's mailbox. (messages.listUsersMessages)
+   * Lists the messages in the user's mailbox. For example usage, see [List Gmail
+   * messages](https://developers.google.com/workspace/gmail/api/guides/list-
+   * messages). (messages.listUsersMessages)
    *
    * @param string $userId The user's email address. The special value `me` can be
    * used to indicate the authenticated user.

@@ -49,6 +49,10 @@ class PublicDelegatedPrefix extends \Google\Collection
    */
   public $ipCidrRange;
   /**
+   * @var string
+   */
+  public $ipv6AccessType;
+  /**
    * @var bool
    */
   public $isLiveMigration;
@@ -180,6 +184,20 @@ class PublicDelegatedPrefix extends \Google\Collection
   public function getIpCidrRange()
   {
     return $this->ipCidrRange;
+  }
+  /**
+   * @param string
+   */
+  public function setIpv6AccessType($ipv6AccessType)
+  {
+    $this->ipv6AccessType = $ipv6AccessType;
+  }
+  /**
+   * @return string
+   */
+  public function getIpv6AccessType()
+  {
+    return $this->ipv6AccessType;
   }
   /**
    * @param bool

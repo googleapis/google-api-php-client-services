@@ -56,6 +56,7 @@ class CloudHealthcare extends \Google\Service
   public $projects_locations_datasets_dicomStores_studies;
   public $projects_locations_datasets_dicomStores_studies_series;
   public $projects_locations_datasets_dicomStores_studies_series_instances;
+  public $projects_locations_datasets_dicomStores_studies_series_instances_bulkdata;
   public $projects_locations_datasets_dicomStores_studies_series_instances_frames;
   public $projects_locations_datasets_fhirStores;
   public $projects_locations_datasets_fhirStores_fhir;
@@ -1342,6 +1343,31 @@ class CloudHealthcare extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_datasets_dicomStores_studies_series_instances_bulkdata = new CloudHealthcare\Resource\ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesBulkdata(
+        $this,
+        $this->serviceName,
+        'bulkdata',
+        [
+          'methods' => [
+            'retrieveBulkdata' => [
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'dicomWebPath' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_datasets_dicomStores_studies_series_instances_frames = new CloudHealthcare\Resource\ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesFrames(
         $this,
         $this->serviceName,
@@ -2282,6 +2308,10 @@ class CloudHealthcare extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],

@@ -21,6 +21,10 @@ class RefreshAccessTokenResponse extends \Google\Model
 {
   protected $accessCredentialsType = AccessCredentials::class;
   protected $accessCredentialsDataType = '';
+  /**
+   * @var array[]
+   */
+  public $metadata;
 
   /**
    * @param AccessCredentials
@@ -35,6 +39,20 @@ class RefreshAccessTokenResponse extends \Google\Model
   public function getAccessCredentials()
   {
     return $this->accessCredentials;
+  }
+  /**
+   * @param array[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
 }
 

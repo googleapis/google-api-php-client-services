@@ -177,11 +177,18 @@ class ProjectsLocationsApisVersionsOperations extends \Google\Service\Resource
    * Update an operation in an API version. The following fields in the
    * ApiOperation resource can be updated: * details.description *
    * details.documentation * details.http_operation.path *
-   * details.http_operation.method * details.deprecated * attributes The
-   * update_mask should be used to specify the fields being updated. An operation
-   * can be updated only if the operation was created via CreateApiOperation API.
-   * If the operation was created by parsing the spec, then it can be edited by
-   * updating the spec. (operations.patch)
+   * details.http_operation.method * details.deprecated * attributes *
+   * details.mcp_tool.title * details.mcp_tool.description * details.input_schema
+   * * details.output_schema * details.mcp_tool.annotations.title *
+   * details.mcp_tool.annotations.read_only_hint *
+   * details.mcp_tool.annotations.destructive_hint *
+   * details.mcp_tool.annotations.idempotent_hint *
+   * details.mcp_tool.annotations.open_world_hint *
+   * details.mcp_tool.annotations.additional_hints The update_mask should be used
+   * to specify the fields being updated. An operation can be updated only if the
+   * operation was created via CreateApiOperation API. If the operation was
+   * created by parsing the spec, then it can be edited by updating the spec.
+   * (operations.patch)
    *
    * @param string $name Identifier. The name of the operation. Format: `projects/
    * {project}/locations/{location}/apis/{api}/versions/{version}/operations/{oper

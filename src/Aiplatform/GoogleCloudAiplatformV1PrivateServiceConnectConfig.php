@@ -19,7 +19,7 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PrivateServiceConnectConfig extends \Google\Collection
 {
-  protected $collection_key = 'projectAllowlist';
+  protected $collection_key = 'pscAutomationConfigs';
   /**
    * @var bool
    */
@@ -28,6 +28,8 @@ class GoogleCloudAiplatformV1PrivateServiceConnectConfig extends \Google\Collect
    * @var string[]
    */
   public $projectAllowlist;
+  protected $pscAutomationConfigsType = GoogleCloudAiplatformV1PSCAutomationConfig::class;
+  protected $pscAutomationConfigsDataType = 'array';
   /**
    * @var string
    */
@@ -60,6 +62,20 @@ class GoogleCloudAiplatformV1PrivateServiceConnectConfig extends \Google\Collect
   public function getProjectAllowlist()
   {
     return $this->projectAllowlist;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PSCAutomationConfig[]
+   */
+  public function setPscAutomationConfigs($pscAutomationConfigs)
+  {
+    $this->pscAutomationConfigs = $pscAutomationConfigs;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PSCAutomationConfig[]
+   */
+  public function getPscAutomationConfigs()
+  {
+    return $this->pscAutomationConfigs;
   }
   /**
    * @param string

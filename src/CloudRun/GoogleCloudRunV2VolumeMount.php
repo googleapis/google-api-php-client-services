@@ -27,6 +27,10 @@ class GoogleCloudRunV2VolumeMount extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $subPath;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class GoogleCloudRunV2VolumeMount extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setSubPath($subPath)
+  {
+    $this->subPath = $subPath;
+  }
+  /**
+   * @return string
+   */
+  public function getSubPath()
+  {
+    return $this->subPath;
   }
 }
 

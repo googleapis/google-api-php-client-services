@@ -34,8 +34,8 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
   /**
    * Uploads the specified SSL certificate. (authorizedCertificates.create)
    *
-   * @param string $appsId Part of `parent`. Name of the parent Application
-   * resource. Example: apps/myapp.
+   * @param string $appsId Part of `parent`. Required. Name of the parent
+   * Application resource. Example: apps/myapp.
    * @param AuthorizedCertificate $postBody
    * @param array $optParams Optional parameters.
    * @return AuthorizedCertificate
@@ -50,8 +50,8 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
   /**
    * Deletes the specified SSL certificate. (authorizedCertificates.delete)
    *
-   * @param string $appsId Part of `name`. Name of the resource to delete.
-   * Example: apps/myapp/authorizedCertificates/12345.
+   * @param string $appsId Part of `name`. Required. Name of the resource to
+   * delete. Example: apps/myapp/authorizedCertificates/12345.
    * @param string $authorizedCertificatesId Part of `name`. See documentation of
    * `appsId`.
    * @param array $optParams Optional parameters.
@@ -67,8 +67,8 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
   /**
    * Gets the specified SSL certificate. (authorizedCertificates.get)
    *
-   * @param string $appsId Part of `name`. Name of the resource requested.
-   * Example: apps/myapp/authorizedCertificates/12345.
+   * @param string $appsId Part of `name`. Required. Name of the resource
+   * requested. Example: apps/myapp/authorizedCertificates/12345.
    * @param string $authorizedCertificatesId Part of `name`. See documentation of
    * `appsId`.
    * @param array $optParams Optional parameters.
@@ -88,8 +88,8 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
    * Lists all SSL certificates the user is authorized to administer.
    * (authorizedCertificates.listAppsAuthorizedCertificates)
    *
-   * @param string $appsId Part of `parent`. Name of the parent Application
-   * resource. Example: apps/myapp.
+   * @param string $appsId Part of `parent`. Required. Name of the parent
+   * Application resource. Example: apps/myapp.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum results to return per page.
@@ -113,8 +113,8 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
    * certificate. The certificate display_name may also be updated.
    * (authorizedCertificates.patch)
    *
-   * @param string $appsId Part of `name`. Name of the resource to update.
-   * Example: apps/myapp/authorizedCertificates/12345.
+   * @param string $appsId Part of `name`. Required. Name of the resource to
+   * update. Example: apps/myapp/authorizedCertificates/12345.
    * @param string $authorizedCertificatesId Part of `name`. See documentation of
    * `appsId`.
    * @param AuthorizedCertificate $postBody

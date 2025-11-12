@@ -22,39 +22,93 @@ class ConnectorsResource extends \Google\Model
   /**
    * @var string
    */
-  public $pathTemplate;
+  public $description;
   /**
    * @var string
    */
-  public $type;
+  public $mimeType;
+  /**
+   * @var string
+   */
+  public $name;
+  /**
+   * @var string
+   */
+  public $size;
+  /**
+   * @var string
+   */
+  public $uri;
 
   /**
    * @param string
    */
-  public function setPathTemplate($pathTemplate)
+  public function setDescription($description)
   {
-    $this->pathTemplate = $pathTemplate;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getPathTemplate()
+  public function getDescription()
   {
-    return $this->pathTemplate;
+    return $this->description;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setMimeType($mimeType)
   {
-    $this->type = $type;
+    $this->mimeType = $mimeType;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getMimeType()
   {
-    return $this->type;
+    return $this->mimeType;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setSize($size)
+  {
+    $this->size = $size;
+  }
+  /**
+   * @return string
+   */
+  public function getSize()
+  {
+    return $this->size;
+  }
+  /**
+   * @param string
+   */
+  public function setUri($uri)
+  {
+    $this->uri = $uri;
+  }
+  /**
+   * @return string
+   */
+  public function getUri()
+  {
+    return $this->uri;
   }
 }
 

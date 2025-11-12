@@ -23,8 +23,16 @@ class CreateMaterializedViewMetadata extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var string
+   */
+  public $finishTime;
   protected $originalRequestType = CreateMaterializedViewRequest::class;
   protected $originalRequestDataType = '';
+  /**
+   * @var string
+   */
+  public $requestTime;
   /**
    * @var string
    */
@@ -45,6 +53,20 @@ class CreateMaterializedViewMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
+   * @param string
+   */
+  public function setFinishTime($finishTime)
+  {
+    $this->finishTime = $finishTime;
+  }
+  /**
+   * @return string
+   */
+  public function getFinishTime()
+  {
+    return $this->finishTime;
+  }
+  /**
    * @param CreateMaterializedViewRequest
    */
   public function setOriginalRequest(CreateMaterializedViewRequest $originalRequest)
@@ -57,6 +79,20 @@ class CreateMaterializedViewMetadata extends \Google\Model
   public function getOriginalRequest()
   {
     return $this->originalRequest;
+  }
+  /**
+   * @param string
+   */
+  public function setRequestTime($requestTime)
+  {
+    $this->requestTime = $requestTime;
+  }
+  /**
+   * @return string
+   */
+  public function getRequestTime()
+  {
+    return $this->requestTime;
   }
   /**
    * @param string

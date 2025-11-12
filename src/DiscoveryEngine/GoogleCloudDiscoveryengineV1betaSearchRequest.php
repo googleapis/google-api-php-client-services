@@ -106,6 +106,8 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var bool
    */
   public $safeSearch;
+  protected $searchAddonSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestSearchAddonSpec::class;
+  protected $searchAddonSpecDataType = '';
   protected $searchAsYouTypeSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestSearchAsYouTypeSpec::class;
   protected $searchAsYouTypeSpecDataType = '';
   /**
@@ -508,6 +510,20 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   public function getSafeSearch()
   {
     return $this->safeSearch;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestSearchAddonSpec
+   */
+  public function setSearchAddonSpec(GoogleCloudDiscoveryengineV1betaSearchRequestSearchAddonSpec $searchAddonSpec)
+  {
+    $this->searchAddonSpec = $searchAddonSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchRequestSearchAddonSpec
+   */
+  public function getSearchAddonSpec()
+  {
+    return $this->searchAddonSpec;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1betaSearchRequestSearchAsYouTypeSpec

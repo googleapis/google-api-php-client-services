@@ -22,8 +22,26 @@ class MaintenanceExclusionOptions extends \Google\Model
   /**
    * @var string
    */
+  public $endTimeBehavior;
+  /**
+   * @var string
+   */
   public $scope;
 
+  /**
+   * @param string
+   */
+  public function setEndTimeBehavior($endTimeBehavior)
+  {
+    $this->endTimeBehavior = $endTimeBehavior;
+  }
+  /**
+   * @return string
+   */
+  public function getEndTimeBehavior()
+  {
+    return $this->endTimeBehavior;
+  }
   /**
    * @param string
    */

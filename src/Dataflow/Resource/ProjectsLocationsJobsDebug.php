@@ -19,6 +19,8 @@ namespace Google\Service\Dataflow\Resource;
 
 use Google\Service\Dataflow\GetDebugConfigRequest;
 use Google\Service\Dataflow\GetDebugConfigResponse;
+use Google\Service\Dataflow\GetWorkerStacktracesRequest;
+use Google\Service\Dataflow\GetWorkerStacktracesResponse;
 use Google\Service\Dataflow\SendDebugCaptureRequest;
 use Google\Service\Dataflow\SendDebugCaptureResponse;
 
@@ -51,6 +53,25 @@ class ProjectsLocationsJobsDebug extends \Google\Service\Resource
     $params = ['projectId' => $projectId, 'location' => $location, 'jobId' => $jobId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('getConfig', [$params], GetDebugConfigResponse::class);
+  }
+  /**
+   * Get worker stacktraces from debug capture. (debug.getWorkerStacktraces)
+   *
+   * @param string $projectId The project id.
+   * @param string $location The [regional endpoint]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+   * contains the job specified by job_id.
+   * @param string $jobId The job for which to get stacktraces.
+   * @param GetWorkerStacktracesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GetWorkerStacktracesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function getWorkerStacktraces($projectId, $location, $jobId, GetWorkerStacktracesRequest $postBody, $optParams = [])
+  {
+    $params = ['projectId' => $projectId, 'location' => $location, 'jobId' => $jobId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('getWorkerStacktraces', [$params], GetWorkerStacktracesResponse::class);
   }
   /**
    * Send encoded debug capture data for component. (debug.sendCapture)

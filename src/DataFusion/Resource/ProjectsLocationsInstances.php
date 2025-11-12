@@ -64,6 +64,9 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param string $name Required. The instance resource name in the format
    * projects/{project}/locations/{location}/instances/{instance}
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force Optional. If set to true, any nested resources from
+   * this instance will also be deleted.
    * @return Operation
    * @throws \Google\Service\Exception
    */

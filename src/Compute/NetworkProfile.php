@@ -43,6 +43,8 @@ class NetworkProfile extends \Google\Model
    * @var string
    */
   public $name;
+  protected $profileTypeType = NetworkProfileProfileType::class;
+  protected $profileTypeDataType = '';
   /**
    * @var string
    */
@@ -149,6 +151,20 @@ class NetworkProfile extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param NetworkProfileProfileType
+   */
+  public function setProfileType(NetworkProfileProfileType $profileType)
+  {
+    $this->profileType = $profileType;
+  }
+  /**
+   * @return NetworkProfileProfileType
+   */
+  public function getProfileType()
+  {
+    return $this->profileType;
   }
   /**
    * @param string

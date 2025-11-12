@@ -17,8 +17,9 @@
 
 namespace Google\Service\Compute;
 
-class ReservationBlockPhysicalTopology extends \Google\Model
+class ReservationBlockPhysicalTopology extends \Google\Collection
 {
+  protected $collection_key = 'instances';
   /**
    * @var string
    */
@@ -27,6 +28,8 @@ class ReservationBlockPhysicalTopology extends \Google\Model
    * @var string
    */
   public $cluster;
+  protected $instancesType = ReservationBlockPhysicalTopologyInstance::class;
+  protected $instancesDataType = 'array';
 
   /**
    * @param string
@@ -55,6 +58,20 @@ class ReservationBlockPhysicalTopology extends \Google\Model
   public function getCluster()
   {
     return $this->cluster;
+  }
+  /**
+   * @param ReservationBlockPhysicalTopologyInstance[]
+   */
+  public function setInstances($instances)
+  {
+    $this->instances = $instances;
+  }
+  /**
+   * @return ReservationBlockPhysicalTopologyInstance[]
+   */
+  public function getInstances()
+  {
+    return $this->instances;
   }
 }
 

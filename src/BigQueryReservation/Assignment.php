@@ -35,6 +35,8 @@ class Assignment extends \Google\Model
    * @var string
    */
   public $name;
+  protected $schedulingPolicyType = SchedulingPolicy::class;
+  protected $schedulingPolicyDataType = '';
   /**
    * @var string
    */
@@ -95,6 +97,20 @@ class Assignment extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param SchedulingPolicy
+   */
+  public function setSchedulingPolicy(SchedulingPolicy $schedulingPolicy)
+  {
+    $this->schedulingPolicy = $schedulingPolicy;
+  }
+  /**
+   * @return SchedulingPolicy
+   */
+  public function getSchedulingPolicy()
+  {
+    return $this->schedulingPolicy;
   }
   /**
    * @param string

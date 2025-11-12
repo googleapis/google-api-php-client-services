@@ -20,6 +20,8 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2GeneratorSuggestion extends \Google\Collection
 {
   protected $collection_key = 'toolCallInfo';
+  protected $agentCoachingSuggestionType = GoogleCloudDialogflowV2AgentCoachingSuggestion::class;
+  protected $agentCoachingSuggestionDataType = '';
   protected $freeFormSuggestionType = GoogleCloudDialogflowV2FreeFormSuggestion::class;
   protected $freeFormSuggestionDataType = '';
   protected $summarySuggestionType = GoogleCloudDialogflowV2SummarySuggestion::class;
@@ -27,6 +29,20 @@ class GoogleCloudDialogflowV2GeneratorSuggestion extends \Google\Collection
   protected $toolCallInfoType = GoogleCloudDialogflowV2GeneratorSuggestionToolCallInfo::class;
   protected $toolCallInfoDataType = 'array';
 
+  /**
+   * @param GoogleCloudDialogflowV2AgentCoachingSuggestion
+   */
+  public function setAgentCoachingSuggestion(GoogleCloudDialogflowV2AgentCoachingSuggestion $agentCoachingSuggestion)
+  {
+    $this->agentCoachingSuggestion = $agentCoachingSuggestion;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2AgentCoachingSuggestion
+   */
+  public function getAgentCoachingSuggestion()
+  {
+    return $this->agentCoachingSuggestion;
+  }
   /**
    * @param GoogleCloudDialogflowV2FreeFormSuggestion
    */

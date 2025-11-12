@@ -20,7 +20,7 @@ namespace Google\Service\PaymentsResellerSubscription;
 class ProductBundleDetails extends \Google\Collection
 {
   protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement::class;
+  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
   protected $bundleElementsDataType = 'array';
   /**
    * @var string
@@ -28,14 +28,14 @@ class ProductBundleDetails extends \Google\Collection
   public $entitlementMode;
 
   /**
-   * @param GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement[]
+   * @param ProductBundleDetailsBundleElement[]
    */
   public function setBundleElements($bundleElements)
   {
     $this->bundleElements = $bundleElements;
   }
   /**
-   * @return GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement[]
+   * @return ProductBundleDetailsBundleElement[]
    */
   public function getBundleElements()
   {

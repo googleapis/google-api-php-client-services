@@ -17,12 +17,15 @@
 
 namespace Google\Service\CloudComposer;
 
-class CheckUpgradeResponse extends \Google\Model
+class CheckUpgradeResponse extends \Google\Collection
 {
+  protected $collection_key = 'configConflicts';
   /**
    * @var string
    */
   public $buildLogUri;
+  protected $configConflictsType = ConfigConflict::class;
+  protected $configConflictsDataType = 'array';
   /**
    * @var string
    */
@@ -53,6 +56,20 @@ class CheckUpgradeResponse extends \Google\Model
   public function getBuildLogUri()
   {
     return $this->buildLogUri;
+  }
+  /**
+   * @param ConfigConflict[]
+   */
+  public function setConfigConflicts($configConflicts)
+  {
+    $this->configConflicts = $configConflicts;
+  }
+  /**
+   * @return ConfigConflict[]
+   */
+  public function getConfigConflicts()
+  {
+    return $this->configConflicts;
   }
   /**
    * @param string

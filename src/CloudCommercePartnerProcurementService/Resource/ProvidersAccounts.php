@@ -55,6 +55,8 @@ class ProvidersAccounts extends \Google\Service\Resource
    *
    * @param string $name Required. The name of the account to retrieve.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. What information to include in the response.
    * @return Account
    * @throws \Google\Service\Exception
    */

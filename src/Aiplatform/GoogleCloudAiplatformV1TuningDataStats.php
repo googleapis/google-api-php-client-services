@@ -19,9 +19,25 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1TuningDataStats extends \Google\Model
 {
+  protected $preferenceOptimizationDataStatsType = GoogleCloudAiplatformV1PreferenceOptimizationDataStats::class;
+  protected $preferenceOptimizationDataStatsDataType = '';
   protected $supervisedTuningDataStatsType = GoogleCloudAiplatformV1SupervisedTuningDataStats::class;
   protected $supervisedTuningDataStatsDataType = '';
 
+  /**
+   * @param GoogleCloudAiplatformV1PreferenceOptimizationDataStats
+   */
+  public function setPreferenceOptimizationDataStats(GoogleCloudAiplatformV1PreferenceOptimizationDataStats $preferenceOptimizationDataStats)
+  {
+    $this->preferenceOptimizationDataStats = $preferenceOptimizationDataStats;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PreferenceOptimizationDataStats
+   */
+  public function getPreferenceOptimizationDataStats()
+  {
+    return $this->preferenceOptimizationDataStats;
+  }
   /**
    * @param GoogleCloudAiplatformV1SupervisedTuningDataStats
    */

@@ -158,7 +158,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
   /**
    * Updates a Service. (services.patch)
    *
-   * @param string $name The fully qualified name of this Service. In
+   * @param string $name Identifier. The fully qualified name of this Service. In
    * CreateServiceRequest, this field is ignored, and instead composed from
    * CreateServiceRequest.parent and CreateServiceRequest.service_id. Format:
    * projects/{project}/locations/{location}/services/{service_id}

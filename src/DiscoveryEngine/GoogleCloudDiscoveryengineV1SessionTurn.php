@@ -25,8 +25,14 @@ class GoogleCloudDiscoveryengineV1SessionTurn extends \Google\Model
   public $answer;
   protected $detailedAnswerType = GoogleCloudDiscoveryengineV1Answer::class;
   protected $detailedAnswerDataType = '';
+  protected $detailedAssistAnswerType = GoogleCloudDiscoveryengineV1AssistAnswer::class;
+  protected $detailedAssistAnswerDataType = '';
   protected $queryType = GoogleCloudDiscoveryengineV1Query::class;
   protected $queryDataType = '';
+  /**
+   * @var string[]
+   */
+  public $queryConfig;
 
   /**
    * @param string
@@ -57,6 +63,20 @@ class GoogleCloudDiscoveryengineV1SessionTurn extends \Google\Model
     return $this->detailedAnswer;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1AssistAnswer
+   */
+  public function setDetailedAssistAnswer(GoogleCloudDiscoveryengineV1AssistAnswer $detailedAssistAnswer)
+  {
+    $this->detailedAssistAnswer = $detailedAssistAnswer;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1AssistAnswer
+   */
+  public function getDetailedAssistAnswer()
+  {
+    return $this->detailedAssistAnswer;
+  }
+  /**
    * @param GoogleCloudDiscoveryengineV1Query
    */
   public function setQuery(GoogleCloudDiscoveryengineV1Query $query)
@@ -69,6 +89,20 @@ class GoogleCloudDiscoveryengineV1SessionTurn extends \Google\Model
   public function getQuery()
   {
     return $this->query;
+  }
+  /**
+   * @param string[]
+   */
+  public function setQueryConfig($queryConfig)
+  {
+    $this->queryConfig = $queryConfig;
+  }
+  /**
+   * @return string[]
+   */
+  public function getQueryConfig()
+  {
+    return $this->queryConfig;
   }
 }
 

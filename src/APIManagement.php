@@ -80,6 +80,16 @@ class APIManagement extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getEntitlement' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1alpha/{+name}/locations',
               'httpMethod' => 'GET',
@@ -423,6 +433,10 @@ class APIManagement extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],

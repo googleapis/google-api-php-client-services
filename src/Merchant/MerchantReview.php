@@ -20,14 +20,14 @@ namespace Google\Service\Merchant;
 class MerchantReview extends \Google\Collection
 {
   protected $collection_key = 'customAttributes';
-  protected $attributesType = MerchantReviewAttributes::class;
-  protected $attributesDataType = '';
   protected $customAttributesType = CustomAttribute::class;
   protected $customAttributesDataType = 'array';
   /**
    * @var string
    */
   public $dataSource;
+  protected $merchantReviewAttributesType = MerchantReviewAttributes::class;
+  protected $merchantReviewAttributesDataType = '';
   /**
    * @var string
    */
@@ -39,20 +39,6 @@ class MerchantReview extends \Google\Collection
    */
   public $name;
 
-  /**
-   * @param MerchantReviewAttributes
-   */
-  public function setAttributes(MerchantReviewAttributes $attributes)
-  {
-    $this->attributes = $attributes;
-  }
-  /**
-   * @return MerchantReviewAttributes
-   */
-  public function getAttributes()
-  {
-    return $this->attributes;
-  }
   /**
    * @param CustomAttribute[]
    */
@@ -80,6 +66,20 @@ class MerchantReview extends \Google\Collection
   public function getDataSource()
   {
     return $this->dataSource;
+  }
+  /**
+   * @param MerchantReviewAttributes
+   */
+  public function setMerchantReviewAttributes(MerchantReviewAttributes $merchantReviewAttributes)
+  {
+    $this->merchantReviewAttributes = $merchantReviewAttributes;
+  }
+  /**
+   * @return MerchantReviewAttributes
+   */
+  public function getMerchantReviewAttributes()
+  {
+    return $this->merchantReviewAttributes;
   }
   /**
    * @param string

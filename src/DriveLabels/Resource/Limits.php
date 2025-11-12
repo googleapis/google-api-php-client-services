@@ -30,13 +30,13 @@ use Google\Service\DriveLabels\GoogleAppsDriveLabelsV2LabelLimits;
 class Limits extends \Google\Service\Resource
 {
   /**
-   * Get the constraints on the structure of a Label; such as, the maximum number
-   * of Fields allowed and maximum length of the label title. (limits.getLabel)
+   * Get the constraints on the structure of a label; such as, the maximum number
+   * of fields allowed and maximum length of the label title. (limits.getLabel)
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string name Required. Label revision resource name Must be:
-   * "limits/label"
+   * @opt_param string name Required. Label revision resource name must be:
+   * "limits/label".
    * @return GoogleAppsDriveLabelsV2LabelLimits
    * @throws \Google\Service\Exception
    */

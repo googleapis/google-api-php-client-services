@@ -86,7 +86,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * Compute Engine instances. By default, the cluster is created in the project's
    * [default network](https://cloud.google.com/compute/docs/networks-and-
    * firewalls#networks). One firewall is added for the cluster. After cluster
-   * creation, the Kubelet creates routes for each node to allow the containers on
+   * creation, the kubelet creates routes for each node to allow the containers on
    * that node to communicate with all other instances in the cluster. Finally, an
    * entry is added to the project's global metadata indicating which CIDR range
    * the cluster is using. (clusters.create)

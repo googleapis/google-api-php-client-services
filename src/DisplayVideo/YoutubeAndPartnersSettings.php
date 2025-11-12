@@ -46,6 +46,8 @@ class YoutubeAndPartnersSettings extends \Google\Collection
   protected $targetFrequencyDataType = '';
   protected $thirdPartyMeasurementConfigsType = ThirdPartyMeasurementConfigs::class;
   protected $thirdPartyMeasurementConfigsDataType = '';
+  protected $videoAdInventoryControlType = VideoAdInventoryControl::class;
+  protected $videoAdInventoryControlDataType = '';
   protected $videoAdSequenceSettingsType = VideoAdSequenceSettings::class;
   protected $videoAdSequenceSettingsDataType = '';
   protected $viewFrequencyCapType = FrequencyCap::class;
@@ -162,6 +164,20 @@ class YoutubeAndPartnersSettings extends \Google\Collection
   public function getThirdPartyMeasurementConfigs()
   {
     return $this->thirdPartyMeasurementConfigs;
+  }
+  /**
+   * @param VideoAdInventoryControl
+   */
+  public function setVideoAdInventoryControl(VideoAdInventoryControl $videoAdInventoryControl)
+  {
+    $this->videoAdInventoryControl = $videoAdInventoryControl;
+  }
+  /**
+   * @return VideoAdInventoryControl
+   */
+  public function getVideoAdInventoryControl()
+  {
+    return $this->videoAdInventoryControl;
   }
   /**
    * @param VideoAdSequenceSettings

@@ -34,7 +34,9 @@ class Revisions extends \Google\Service\Resource
    * Permanently deletes a file version. You can only delete revisions for files
    * with binary content in Google Drive, like images or videos. Revisions for
    * other files, like Google Docs or Sheets, and the last remaining file version
-   * can't be deleted. (revisions.delete)
+   * can't be deleted. For more information, see [Manage file
+   * revisions](https://developers.google.com/drive/api/guides/manage-revisions).
+   * (revisions.delete)
    *
    * @param string $fileId The ID of the file.
    * @param string $revisionId The ID of the revision.
@@ -48,7 +50,10 @@ class Revisions extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Gets a revision's metadata or content by ID. (revisions.get)
+   * Gets a revision's metadata or content by ID. For more information, see
+   * [Manage file
+   * revisions](https://developers.google.com/workspace/drive/api/guides/manage-
+   * revisions). (revisions.get)
    *
    * @param string $fileId The ID of the file.
    * @param string $revisionId The ID of the revision.
@@ -68,7 +73,9 @@ class Revisions extends \Google\Service\Resource
     return $this->call('get', [$params], Revision::class);
   }
   /**
-   * Lists a file's revisions. (revisions.listRevisions)
+   * Lists a file's revisions. For more information, see [Manage file
+   * revisions](https://developers.google.com/workspace/drive/api/guides/manage-
+   * revisions). (revisions.listRevisions)
    *
    * @param string $fileId The ID of the file.
    * @param array $optParams Optional parameters.
@@ -87,7 +94,10 @@ class Revisions extends \Google\Service\Resource
     return $this->call('list', [$params], RevisionList::class);
   }
   /**
-   * Updates a revision with patch semantics. (revisions.update)
+   * Updates a revision with patch semantics. For more information, see [Manage
+   * file
+   * revisions](https://developers.google.com/workspace/drive/api/guides/manage-
+   * revisions). (revisions.update)
    *
    * @param string $fileId The ID of the file.
    * @param string $revisionId The ID of the revision.

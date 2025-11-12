@@ -128,6 +128,8 @@ class BackendService extends \Google\Collection
   public $network;
   protected $outlierDetectionType = OutlierDetection::class;
   protected $outlierDetectionDataType = '';
+  protected $paramsType = BackendServiceParams::class;
+  protected $paramsDataType = '';
   /**
    * @var int
    */
@@ -174,6 +176,8 @@ class BackendService extends \Google\Collection
    * @var int
    */
   public $timeoutSec;
+  protected $tlsSettingsType = BackendServiceTlsSettings::class;
+  protected $tlsSettingsDataType = '';
   protected $usedByType = BackendServiceUsedBy::class;
   protected $usedByDataType = 'array';
 
@@ -654,6 +658,20 @@ class BackendService extends \Google\Collection
     return $this->outlierDetection;
   }
   /**
+   * @param BackendServiceParams
+   */
+  public function setParams(BackendServiceParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return BackendServiceParams
+   */
+  public function getParams()
+  {
+    return $this->params;
+  }
+  /**
    * @param int
    */
   public function setPort($port)
@@ -834,6 +852,20 @@ class BackendService extends \Google\Collection
   public function getTimeoutSec()
   {
     return $this->timeoutSec;
+  }
+  /**
+   * @param BackendServiceTlsSettings
+   */
+  public function setTlsSettings(BackendServiceTlsSettings $tlsSettings)
+  {
+    $this->tlsSettings = $tlsSettings;
+  }
+  /**
+   * @return BackendServiceTlsSettings
+   */
+  public function getTlsSettings()
+  {
+    return $this->tlsSettings;
   }
   /**
    * @param BackendServiceUsedBy[]

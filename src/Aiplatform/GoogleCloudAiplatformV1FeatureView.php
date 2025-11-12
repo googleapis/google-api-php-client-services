@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
 {
   protected $bigQuerySourceType = GoogleCloudAiplatformV1FeatureViewBigQuerySource::class;
   protected $bigQuerySourceDataType = '';
+  protected $bigtableMetadataType = GoogleCloudAiplatformV1FeatureViewBigtableMetadata::class;
+  protected $bigtableMetadataDataType = '';
   /**
    * @var string
    */
@@ -81,6 +83,20 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
   public function getBigQuerySource()
   {
     return $this->bigQuerySource;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1FeatureViewBigtableMetadata
+   */
+  public function setBigtableMetadata(GoogleCloudAiplatformV1FeatureViewBigtableMetadata $bigtableMetadata)
+  {
+    $this->bigtableMetadata = $bigtableMetadata;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1FeatureViewBigtableMetadata
+   */
+  public function getBigtableMetadata()
+  {
+    return $this->bigtableMetadata;
   }
   /**
    * @param string

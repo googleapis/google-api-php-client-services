@@ -72,6 +72,10 @@ class Campaign extends \Google\Collection
    * @var string
    */
   public $endDate;
+  /**
+   * @var string
+   */
+  public $euPoliticalAdsDeclaration;
   protected $eventTagOverridesType = EventTagOverride::class;
   protected $eventTagOverridesDataType = 'array';
   /**
@@ -342,6 +346,20 @@ class Campaign extends \Google\Collection
   public function getEndDate()
   {
     return $this->endDate;
+  }
+  /**
+   * @param string
+   */
+  public function setEuPoliticalAdsDeclaration($euPoliticalAdsDeclaration)
+  {
+    $this->euPoliticalAdsDeclaration = $euPoliticalAdsDeclaration;
+  }
+  /**
+   * @return string
+   */
+  public function getEuPoliticalAdsDeclaration()
+  {
+    return $this->euPoliticalAdsDeclaration;
   }
   /**
    * @param EventTagOverride[]

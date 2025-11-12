@@ -19,6 +19,10 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataProfileSpec extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $catalogPublishingEnabled;
   protected $excludeFieldsType = GoogleCloudDataplexV1DataProfileSpecSelectedFields::class;
   protected $excludeFieldsDataType = '';
   protected $includeFieldsType = GoogleCloudDataplexV1DataProfileSpecSelectedFields::class;
@@ -34,6 +38,20 @@ class GoogleCloudDataplexV1DataProfileSpec extends \Google\Model
    */
   public $samplingPercent;
 
+  /**
+   * @param bool
+   */
+  public function setCatalogPublishingEnabled($catalogPublishingEnabled)
+  {
+    $this->catalogPublishingEnabled = $catalogPublishingEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getCatalogPublishingEnabled()
+  {
+    return $this->catalogPublishingEnabled;
+  }
   /**
    * @param GoogleCloudDataplexV1DataProfileSpecSelectedFields
    */

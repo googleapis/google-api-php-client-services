@@ -30,6 +30,10 @@ class Scope extends \Google\Model
   /**
    * @var string
    */
+  public $traceScope;
+  /**
+   * @var string
+   */
   public $updateTime;
 
   /**
@@ -59,6 +63,20 @@ class Scope extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setTraceScope($traceScope)
+  {
+    $this->traceScope = $traceScope;
+  }
+  /**
+   * @return string
+   */
+  public function getTraceScope()
+  {
+    return $this->traceScope;
   }
   /**
    * @param string

@@ -17,9 +17,11 @@
 
 namespace Google\Service\MigrationCenterAPI\Resource;
 
+use Google\Service\MigrationCenterAPI\GenerateReportArtifactLinkRequest;
 use Google\Service\MigrationCenterAPI\ListReportsResponse;
 use Google\Service\MigrationCenterAPI\Operation;
 use Google\Service\MigrationCenterAPI\Report;
+use Google\Service\MigrationCenterAPI\ReportArtifactLink;
 
 /**
  * The "reports" collection of methods.
@@ -31,6 +33,22 @@ use Google\Service\MigrationCenterAPI\Report;
  */
 class ProjectsLocationsReportConfigsReports extends \Google\Service\Resource
 {
+  /**
+   * Gets the link to the generated artifact of a given type for a Report.
+   * (reports.artifactLink)
+   *
+   * @param string $name Required. Name of the resource.
+   * @param GenerateReportArtifactLinkRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ReportArtifactLink
+   * @throws \Google\Service\Exception
+   */
+  public function artifactLink($name, GenerateReportArtifactLinkRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('artifactLink', [$params], ReportArtifactLink::class);
+  }
   /**
    * Creates a report. (reports.create)
    *

@@ -42,6 +42,8 @@ class GoogleAppsDriveLabelsV2Label extends \Google\Collection
   protected $disablerDataType = '';
   protected $displayHintsType = GoogleAppsDriveLabelsV2LabelDisplayHints::class;
   protected $displayHintsDataType = '';
+  protected $enabledAppSettingsType = GoogleAppsDriveLabelsV2LabelEnabledAppSettings::class;
+  protected $enabledAppSettingsDataType = '';
   protected $fieldsType = GoogleAppsDriveLabelsV2Field::class;
   protected $fieldsDataType = 'array';
   /**
@@ -196,6 +198,20 @@ class GoogleAppsDriveLabelsV2Label extends \Google\Collection
   public function getDisplayHints()
   {
     return $this->displayHints;
+  }
+  /**
+   * @param GoogleAppsDriveLabelsV2LabelEnabledAppSettings
+   */
+  public function setEnabledAppSettings(GoogleAppsDriveLabelsV2LabelEnabledAppSettings $enabledAppSettings)
+  {
+    $this->enabledAppSettings = $enabledAppSettings;
+  }
+  /**
+   * @return GoogleAppsDriveLabelsV2LabelEnabledAppSettings
+   */
+  public function getEnabledAppSettings()
+  {
+    return $this->enabledAppSettings;
   }
   /**
    * @param GoogleAppsDriveLabelsV2Field[]

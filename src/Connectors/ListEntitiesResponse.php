@@ -23,6 +23,10 @@ class ListEntitiesResponse extends \Google\Collection
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
   /**
+   * @var array[]
+   */
+  public $metadata;
+  /**
    * @var string
    */
   public $nextPageToken;
@@ -40,6 +44,20 @@ class ListEntitiesResponse extends \Google\Collection
   public function getEntities()
   {
     return $this->entities;
+  }
+  /**
+   * @param array[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string

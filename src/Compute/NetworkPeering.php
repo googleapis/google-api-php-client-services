@@ -23,6 +23,8 @@ class NetworkPeering extends \Google\Model
    * @var bool
    */
   public $autoCreateRoutes;
+  protected $connectionStatusType = NetworkPeeringConnectionStatus::class;
+  protected $connectionStatusDataType = '';
   /**
    * @var bool
    */
@@ -67,6 +69,10 @@ class NetworkPeering extends \Google\Model
    * @var string
    */
   public $stateDetails;
+  /**
+   * @var string
+   */
+  public $updateStrategy;
 
   /**
    * @param bool
@@ -81,6 +87,20 @@ class NetworkPeering extends \Google\Model
   public function getAutoCreateRoutes()
   {
     return $this->autoCreateRoutes;
+  }
+  /**
+   * @param NetworkPeeringConnectionStatus
+   */
+  public function setConnectionStatus(NetworkPeeringConnectionStatus $connectionStatus)
+  {
+    $this->connectionStatus = $connectionStatus;
+  }
+  /**
+   * @return NetworkPeeringConnectionStatus
+   */
+  public function getConnectionStatus()
+  {
+    return $this->connectionStatus;
   }
   /**
    * @param bool
@@ -235,6 +255,20 @@ class NetworkPeering extends \Google\Model
   public function getStateDetails()
   {
     return $this->stateDetails;
+  }
+  /**
+   * @param string
+   */
+  public function setUpdateStrategy($updateStrategy)
+  {
+    $this->updateStrategy = $updateStrategy;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateStrategy()
+  {
+    return $this->updateStrategy;
   }
 }
 

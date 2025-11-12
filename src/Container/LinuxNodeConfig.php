@@ -25,10 +25,20 @@ class LinuxNodeConfig extends \Google\Model
   public $cgroupMode;
   protected $hugepagesType = HugepagesConfig::class;
   protected $hugepagesDataType = '';
+  protected $nodeKernelModuleLoadingType = NodeKernelModuleLoading::class;
+  protected $nodeKernelModuleLoadingDataType = '';
   /**
    * @var string[]
    */
   public $sysctls;
+  /**
+   * @var string
+   */
+  public $transparentHugepageDefrag;
+  /**
+   * @var string
+   */
+  public $transparentHugepageEnabled;
 
   /**
    * @param string
@@ -59,6 +69,20 @@ class LinuxNodeConfig extends \Google\Model
     return $this->hugepages;
   }
   /**
+   * @param NodeKernelModuleLoading
+   */
+  public function setNodeKernelModuleLoading(NodeKernelModuleLoading $nodeKernelModuleLoading)
+  {
+    $this->nodeKernelModuleLoading = $nodeKernelModuleLoading;
+  }
+  /**
+   * @return NodeKernelModuleLoading
+   */
+  public function getNodeKernelModuleLoading()
+  {
+    return $this->nodeKernelModuleLoading;
+  }
+  /**
    * @param string[]
    */
   public function setSysctls($sysctls)
@@ -71,6 +95,34 @@ class LinuxNodeConfig extends \Google\Model
   public function getSysctls()
   {
     return $this->sysctls;
+  }
+  /**
+   * @param string
+   */
+  public function setTransparentHugepageDefrag($transparentHugepageDefrag)
+  {
+    $this->transparentHugepageDefrag = $transparentHugepageDefrag;
+  }
+  /**
+   * @return string
+   */
+  public function getTransparentHugepageDefrag()
+  {
+    return $this->transparentHugepageDefrag;
+  }
+  /**
+   * @param string
+   */
+  public function setTransparentHugepageEnabled($transparentHugepageEnabled)
+  {
+    $this->transparentHugepageEnabled = $transparentHugepageEnabled;
+  }
+  /**
+   * @return string
+   */
+  public function getTransparentHugepageEnabled()
+  {
+    return $this->transparentHugepageEnabled;
   }
 }
 

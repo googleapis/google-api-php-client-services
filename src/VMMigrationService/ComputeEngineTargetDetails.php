@@ -20,6 +20,8 @@ namespace Google\Service\VMMigrationService;
 class ComputeEngineTargetDetails extends \Google\Collection
 {
   protected $collection_key = 'networkTags';
+  protected $adaptationModifiersType = AdaptationModifier::class;
+  protected $adaptationModifiersDataType = 'array';
   /**
    * @var string[]
    */
@@ -36,6 +38,10 @@ class ComputeEngineTargetDetails extends \Google\Collection
   public $bootOption;
   protected $computeSchedulingType = ComputeScheduling::class;
   protected $computeSchedulingDataType = '';
+  /**
+   * @var string[]
+   */
+  public $diskReplicaZones;
   /**
    * @var string
    */
@@ -95,12 +101,30 @@ class ComputeEngineTargetDetails extends \Google\Collection
   /**
    * @var string
    */
+  public $storagePool;
+  /**
+   * @var string
+   */
   public $vmName;
   /**
    * @var string
    */
   public $zone;
 
+  /**
+   * @param AdaptationModifier[]
+   */
+  public function setAdaptationModifiers($adaptationModifiers)
+  {
+    $this->adaptationModifiers = $adaptationModifiers;
+  }
+  /**
+   * @return AdaptationModifier[]
+   */
+  public function getAdaptationModifiers()
+  {
+    return $this->adaptationModifiers;
+  }
   /**
    * @param string[]
    */
@@ -170,6 +194,20 @@ class ComputeEngineTargetDetails extends \Google\Collection
   public function getComputeScheduling()
   {
     return $this->computeScheduling;
+  }
+  /**
+   * @param string[]
+   */
+  public function setDiskReplicaZones($diskReplicaZones)
+  {
+    $this->diskReplicaZones = $diskReplicaZones;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDiskReplicaZones()
+  {
+    return $this->diskReplicaZones;
   }
   /**
    * @param string
@@ -380,6 +418,20 @@ class ComputeEngineTargetDetails extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param string
+   */
+  public function setStoragePool($storagePool)
+  {
+    $this->storagePool = $storagePool;
+  }
+  /**
+   * @return string
+   */
+  public function getStoragePool()
+  {
+    return $this->storagePool;
   }
   /**
    * @param string

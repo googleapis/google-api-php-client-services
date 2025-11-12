@@ -19,11 +19,27 @@ namespace Google\Service\Networkconnectivity;
 
 class ProducerPscConfig extends \Google\Model
 {
+  protected $automatedDnsCreationSpecType = AutomatedDnsCreationSpec::class;
+  protected $automatedDnsCreationSpecDataType = '';
   /**
    * @var string
    */
   public $serviceAttachmentUri;
 
+  /**
+   * @param AutomatedDnsCreationSpec
+   */
+  public function setAutomatedDnsCreationSpec(AutomatedDnsCreationSpec $automatedDnsCreationSpec)
+  {
+    $this->automatedDnsCreationSpec = $automatedDnsCreationSpec;
+  }
+  /**
+   * @return AutomatedDnsCreationSpec
+   */
+  public function getAutomatedDnsCreationSpec()
+  {
+    return $this->automatedDnsCreationSpec;
+  }
   /**
    * @param string
    */

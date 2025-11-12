@@ -84,6 +84,13 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * than or equal to 0, the default page size is 100. .
    * @opt_param string pageToken Token identifying which result to start with,
    * which is returned by a previous list call.
+   * @opt_param bool returnPartialSuccess When set to `true`, operations that are
+   * reachable are returned as normal, and those that are unreachable are returned
+   * in the [ListOperationsResponse.unreachable] field. This can only be `true`
+   * when reading across collections e.g. when `parent` is set to
+   * `"projects/example/locations/-"`. This field is not by default supported and
+   * will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+   * otherwise in service or product specific documentation.
    * @return GoogleLongrunningListOperationsResponse
    * @throws \Google\Service\Exception
    */

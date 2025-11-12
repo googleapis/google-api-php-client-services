@@ -19,11 +19,27 @@ namespace Google\Service\FirebaseAppHosting;
 
 class BuildSource extends \Google\Model
 {
+  protected $archiveType = ArchiveSource::class;
+  protected $archiveDataType = '';
   protected $codebaseType = CodebaseSource::class;
   protected $codebaseDataType = '';
   protected $containerType = ContainerSource::class;
   protected $containerDataType = '';
 
+  /**
+   * @param ArchiveSource
+   */
+  public function setArchive(ArchiveSource $archive)
+  {
+    $this->archive = $archive;
+  }
+  /**
+   * @return ArchiveSource
+   */
+  public function getArchive()
+  {
+    return $this->archive;
+  }
   /**
    * @param CodebaseSource
    */

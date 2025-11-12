@@ -34,6 +34,8 @@ class GooglePrivacyDlpV2InfoTypeDescription extends \Google\Collection
    * @var string
    */
   public $example;
+  protected $locationSupportType = GooglePrivacyDlpV2LocationSupport::class;
+  protected $locationSupportDataType = '';
   /**
    * @var string
    */
@@ -106,6 +108,20 @@ class GooglePrivacyDlpV2InfoTypeDescription extends \Google\Collection
   public function getExample()
   {
     return $this->example;
+  }
+  /**
+   * @param GooglePrivacyDlpV2LocationSupport
+   */
+  public function setLocationSupport(GooglePrivacyDlpV2LocationSupport $locationSupport)
+  {
+    $this->locationSupport = $locationSupport;
+  }
+  /**
+   * @return GooglePrivacyDlpV2LocationSupport
+   */
+  public function getLocationSupport()
+  {
+    return $this->locationSupport;
   }
   /**
    * @param string

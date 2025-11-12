@@ -23,10 +23,18 @@ class OneTimePurchaseDetails extends \Google\Model
    * @var string
    */
   public $offerId;
+  protected $preorderDetailsType = PreorderDetails::class;
+  protected $preorderDetailsDataType = '';
+  /**
+   * @var string
+   */
+  public $purchaseOptionId;
   /**
    * @var int
    */
   public $quantity;
+  protected $rentalDetailsType = RentalDetails::class;
+  protected $rentalDetailsDataType = '';
 
   /**
    * @param string
@@ -43,6 +51,34 @@ class OneTimePurchaseDetails extends \Google\Model
     return $this->offerId;
   }
   /**
+   * @param PreorderDetails
+   */
+  public function setPreorderDetails(PreorderDetails $preorderDetails)
+  {
+    $this->preorderDetails = $preorderDetails;
+  }
+  /**
+   * @return PreorderDetails
+   */
+  public function getPreorderDetails()
+  {
+    return $this->preorderDetails;
+  }
+  /**
+   * @param string
+   */
+  public function setPurchaseOptionId($purchaseOptionId)
+  {
+    $this->purchaseOptionId = $purchaseOptionId;
+  }
+  /**
+   * @return string
+   */
+  public function getPurchaseOptionId()
+  {
+    return $this->purchaseOptionId;
+  }
+  /**
    * @param int
    */
   public function setQuantity($quantity)
@@ -55,6 +91,20 @@ class OneTimePurchaseDetails extends \Google\Model
   public function getQuantity()
   {
     return $this->quantity;
+  }
+  /**
+   * @param RentalDetails
+   */
+  public function setRentalDetails(RentalDetails $rentalDetails)
+  {
+    $this->rentalDetails = $rentalDetails;
+  }
+  /**
+   * @return RentalDetails
+   */
+  public function getRentalDetails()
+  {
+    return $this->rentalDetails;
   }
 }
 

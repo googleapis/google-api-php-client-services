@@ -28,6 +28,10 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
    */
   public $displayName;
   /**
+   * @var string
+   */
+  public $edidVersion;
+  /**
    * @var bool
    */
   public $isInternal;
@@ -43,6 +47,10 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
    * @var int
    */
   public $resolutionWidth;
+  /**
+   * @var int
+   */
+  public $serialNumber;
 
   /**
    * @param string
@@ -71,6 +79,20 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param string
+   */
+  public function setEdidVersion($edidVersion)
+  {
+    $this->edidVersion = $edidVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getEdidVersion()
+  {
+    return $this->edidVersion;
   }
   /**
    * @param bool
@@ -127,6 +149,20 @@ class GoogleChromeManagementV1DisplayInfo extends \Google\Model
   public function getResolutionWidth()
   {
     return $this->resolutionWidth;
+  }
+  /**
+   * @param int
+   */
+  public function setSerialNumber($serialNumber)
+  {
+    $this->serialNumber = $serialNumber;
+  }
+  /**
+   * @return int
+   */
+  public function getSerialNumber()
+  {
+    return $this->serialNumber;
   }
 }
 

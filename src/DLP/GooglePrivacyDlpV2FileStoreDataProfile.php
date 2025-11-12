@@ -34,6 +34,8 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
    * @var string[]
    */
   public $dataStorageLocations;
+  protected $domainsType = GooglePrivacyDlpV2Domain::class;
+  protected $domainsDataType = 'array';
   protected $fileClusterSummariesType = GooglePrivacyDlpV2FileClusterSummary::class;
   protected $fileClusterSummariesDataType = 'array';
   protected $fileStoreInfoTypeSummariesType = GooglePrivacyDlpV2FileStoreInfoTypeSummary::class;
@@ -172,6 +174,20 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
   public function getDataStorageLocations()
   {
     return $this->dataStorageLocations;
+  }
+  /**
+   * @param GooglePrivacyDlpV2Domain[]
+   */
+  public function setDomains($domains)
+  {
+    $this->domains = $domains;
+  }
+  /**
+   * @return GooglePrivacyDlpV2Domain[]
+   */
+  public function getDomains()
+  {
+    return $this->domains;
   }
   /**
    * @param GooglePrivacyDlpV2FileClusterSummary[]

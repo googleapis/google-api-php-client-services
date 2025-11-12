@@ -52,6 +52,8 @@ class GoogleCloudDialogflowCxV3beta1WebhookGenericWebService extends \Google\Col
   public $secretVersionForUsernamePassword;
   protected $secretVersionsForRequestHeadersType = GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceSecretVersionHeaderValue::class;
   protected $secretVersionsForRequestHeadersDataType = 'map';
+  protected $serviceAccountAuthConfigType = GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig::class;
+  protected $serviceAccountAuthConfigDataType = '';
   /**
    * @var string
    */
@@ -194,6 +196,20 @@ class GoogleCloudDialogflowCxV3beta1WebhookGenericWebService extends \Google\Col
   public function getSecretVersionsForRequestHeaders()
   {
     return $this->secretVersionsForRequestHeaders;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig
+   */
+  public function setServiceAccountAuthConfig(GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig $serviceAccountAuthConfig)
+  {
+    $this->serviceAccountAuthConfig = $serviceAccountAuthConfig;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3beta1WebhookGenericWebServiceServiceAccountAuthConfig
+   */
+  public function getServiceAccountAuthConfig()
+  {
+    return $this->serviceAccountAuthConfig;
   }
   /**
    * @param string

@@ -97,7 +97,9 @@ class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
     return $this->call('delete', [$params], CloudtasksEmpty::class);
   }
   /**
-   * Gets a task. (tasks.get)
+   * Gets a task. After a task is successfully executed or has exhausted its retry
+   * attempts, the task is deleted. A `GetTask` request for a deleted task returns
+   * a `NOT_FOUND` error. (tasks.get)
    *
    * @param string $name Required. The task name. For example:
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`

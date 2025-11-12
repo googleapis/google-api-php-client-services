@@ -28,6 +28,12 @@ class VoiceSelectionParams extends \Google\Model
   /**
    * @var string
    */
+  public $modelName;
+  protected $multiSpeakerVoiceConfigType = MultiSpeakerVoiceConfig::class;
+  protected $multiSpeakerVoiceConfigDataType = '';
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -63,6 +69,34 @@ class VoiceSelectionParams extends \Google\Model
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  /**
+   * @param string
+   */
+  public function setModelName($modelName)
+  {
+    $this->modelName = $modelName;
+  }
+  /**
+   * @return string
+   */
+  public function getModelName()
+  {
+    return $this->modelName;
+  }
+  /**
+   * @param MultiSpeakerVoiceConfig
+   */
+  public function setMultiSpeakerVoiceConfig(MultiSpeakerVoiceConfig $multiSpeakerVoiceConfig)
+  {
+    $this->multiSpeakerVoiceConfig = $multiSpeakerVoiceConfig;
+  }
+  /**
+   * @return MultiSpeakerVoiceConfig
+   */
+  public function getMultiSpeakerVoiceConfig()
+  {
+    return $this->multiSpeakerVoiceConfig;
   }
   /**
    * @param string

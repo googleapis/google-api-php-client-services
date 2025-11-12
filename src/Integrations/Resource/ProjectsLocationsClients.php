@@ -17,6 +17,8 @@
 
 namespace Google\Service\Integrations\Resource;
 
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaChangeCustomerConfigResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaDeprovisionClientRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorResponse;
@@ -37,6 +39,23 @@ use Google\Service\Integrations\GoogleProtobufEmpty;
  */
 class ProjectsLocationsClients extends \Google\Service\Resource
 {
+  /**
+   * Updates the client customer configuration for the given project and location
+   * resource name (clients.changeConfig)
+   *
+   * @param string $parent Required. Required: Format -
+   * projects/{project}/locations/{location}
+   * @param GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudIntegrationsV1alphaChangeCustomerConfigResponse
+   * @throws \Google\Service\Exception
+   */
+  public function changeConfig($parent, GoogleCloudIntegrationsV1alphaChangeCustomerConfigRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('changeConfig', [$params], GoogleCloudIntegrationsV1alphaChangeCustomerConfigResponse::class);
+  }
   /**
    * Perform the deprovisioning steps to disable a user GCP project to use IP and
    * purge all related data in a wipeout-compliant way. (clients.deprovision)

@@ -21,6 +21,8 @@ use Google\Service\BeyondCorp\GoogleCloudBeyondcorpSecuritygatewaysV1Application
 use Google\Service\BeyondCorp\GoogleCloudBeyondcorpSecuritygatewaysV1ListApplicationsResponse;
 use Google\Service\BeyondCorp\GoogleIamV1Policy;
 use Google\Service\BeyondCorp\GoogleIamV1SetIamPolicyRequest;
+use Google\Service\BeyondCorp\GoogleIamV1TestIamPermissionsRequest;
+use Google\Service\BeyondCorp\GoogleIamV1TestIamPermissionsResponse;
 use Google\Service\BeyondCorp\GoogleLongrunningOperation;
 
 /**
@@ -34,7 +36,33 @@ use Google\Service\BeyondCorp\GoogleLongrunningOperation;
 class ProjectsLocationsSecurityGatewaysApplications extends \Google\Service\Resource
 {
   /**
-   * Deletes a single Application. (applications.delete)
+   * Creates a new Application in a given project and location.
+   * (applications.create)
+   *
+   * @param string $parent Required. The resource name of the parent
+   * SecurityGateway using the form: `projects/{project_id}/locations/global/secur
+   * ityGateways/{security_gateway_id}`
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1Application $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string applicationId Optional. User-settable Application resource
+   * ID. * Must start with a letter. * Must contain between 4-63 characters from
+   * `/a-z-/`. * Must end with a number or letter.
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore request if it has already been completed. The
+   * server will guarantee that for at least 60 minutes since the first request.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, GoogleCloudBeyondcorpSecuritygatewaysV1Application $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Deletes a single application. (applications.delete)
    *
    * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
@@ -143,6 +171,34 @@ class ProjectsLocationsSecurityGatewaysApplications extends \Google\Service\Reso
     return $this->call('list', [$params], GoogleCloudBeyondcorpSecuritygatewaysV1ListApplicationsResponse::class);
   }
   /**
+   * Updates the parameters of a single Application. (applications.patch)
+   *
+   * @param string $name Identifier. Name of the resource.
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1Application $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes after the first
+   * request. For example, consider a situation where you make an initial request
+   * and the request timed out. If you make the request again with the same
+   * request ID, the server can check if original operation with the same request
+   * ID was received, and if so, will ignore the second request. This prevents
+   * clients from accidentally creating duplicate commitments. The request ID must
+   * be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Optional. Mutable fields include: display_name.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudBeyondcorpSecuritygatewaysV1Application $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
    * Sets the access control policy on the specified resource. Replaces any
    * existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and
    * `PERMISSION_DENIED` errors. (applications.setIamPolicy)
@@ -161,6 +217,29 @@ class ProjectsLocationsSecurityGatewaysApplications extends \Google\Service\Reso
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setIamPolicy', [$params], GoogleIamV1Policy::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource. If the
+   * resource does not exist, this will return an empty set of permissions, not a
+   * `NOT_FOUND` error. Note: This operation is designed to be used for building
+   * permission-aware UIs and command-line tools, not for authorization checking.
+   * This operation may "fail open" without warning.
+   * (applications.testIamPermissions)
+   *
+   * @param string $resource REQUIRED: The resource for which the policy detail is
+   * being requested. See [Resource
+   * names](https://cloud.google.com/apis/design/resource_names) for the
+   * appropriate value for this field.
+   * @param GoogleIamV1TestIamPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleIamV1TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($resource, GoogleIamV1TestIamPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], GoogleIamV1TestIamPermissionsResponse::class);
   }
 }
 

@@ -24,6 +24,8 @@ class Finding extends \Google\Collection
   protected $accessDataType = '';
   protected $affectedResourcesType = AffectedResources::class;
   protected $affectedResourcesDataType = '';
+  protected $aiModelType = AiModel::class;
+  protected $aiModelDataType = '';
   protected $applicationType = Application::class;
   protected $applicationDataType = '';
   protected $attackExposureType = AttackExposure::class;
@@ -46,6 +48,8 @@ class Finding extends \Google\Collection
   protected $cloudDlpDataProfileDataType = '';
   protected $cloudDlpInspectionType = CloudDlpInspection::class;
   protected $cloudDlpInspectionDataType = '';
+  protected $complianceDetailsType = ComplianceDetails::class;
+  protected $complianceDetailsDataType = '';
   protected $compliancesType = Compliance::class;
   protected $compliancesDataType = 'array';
   protected $connectionsType = Connection::class;
@@ -174,6 +178,8 @@ class Finding extends \Google\Collection
   public $state;
   protected $toxicCombinationType = ToxicCombination::class;
   protected $toxicCombinationDataType = '';
+  protected $vertexAiType = VertexAi::class;
+  protected $vertexAiDataType = '';
   protected $vulnerabilityType = Vulnerability::class;
   protected $vulnerabilityDataType = '';
 
@@ -204,6 +210,20 @@ class Finding extends \Google\Collection
   public function getAffectedResources()
   {
     return $this->affectedResources;
+  }
+  /**
+   * @param AiModel
+   */
+  public function setAiModel(AiModel $aiModel)
+  {
+    $this->aiModel = $aiModel;
+  }
+  /**
+   * @return AiModel
+   */
+  public function getAiModel()
+  {
+    return $this->aiModel;
   }
   /**
    * @param Application
@@ -330,6 +350,20 @@ class Finding extends \Google\Collection
   public function getCloudDlpInspection()
   {
     return $this->cloudDlpInspection;
+  }
+  /**
+   * @param ComplianceDetails
+   */
+  public function setComplianceDetails(ComplianceDetails $complianceDetails)
+  {
+    $this->complianceDetails = $complianceDetails;
+  }
+  /**
+   * @return ComplianceDetails
+   */
+  public function getComplianceDetails()
+  {
+    return $this->complianceDetails;
   }
   /**
    * @param Compliance[]
@@ -988,6 +1022,20 @@ class Finding extends \Google\Collection
   public function getToxicCombination()
   {
     return $this->toxicCombination;
+  }
+  /**
+   * @param VertexAi
+   */
+  public function setVertexAi(VertexAi $vertexAi)
+  {
+    $this->vertexAi = $vertexAi;
+  }
+  /**
+   * @return VertexAi
+   */
+  public function getVertexAi()
+  {
+    return $this->vertexAi;
   }
   /**
    * @param Vulnerability

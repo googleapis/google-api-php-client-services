@@ -27,6 +27,10 @@ class GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata extends \G
    * @var string
    */
   public $createTime;
+  /**
+   * @var string
+   */
+  public $doneTime;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata extends \G
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDoneTime($doneTime)
+  {
+    $this->doneTime = $doneTime;
+  }
+  /**
+   * @return string
+   */
+  public function getDoneTime()
+  {
+    return $this->doneTime;
   }
 }
 

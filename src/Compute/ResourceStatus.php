@@ -19,17 +19,35 @@ namespace Google\Service\Compute;
 
 class ResourceStatus extends \Google\Model
 {
+  protected $effectiveInstanceMetadataType = ResourceStatusEffectiveInstanceMetadata::class;
+  protected $effectiveInstanceMetadataDataType = '';
   /**
    * @var string
    */
   public $physicalHost;
   protected $physicalHostTopologyType = ResourceStatusPhysicalHostTopology::class;
   protected $physicalHostTopologyDataType = '';
+  protected $reservationConsumptionInfoType = ResourceStatusReservationConsumptionInfo::class;
+  protected $reservationConsumptionInfoDataType = '';
   protected $schedulingType = ResourceStatusScheduling::class;
   protected $schedulingDataType = '';
   protected $upcomingMaintenanceType = UpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
 
+  /**
+   * @param ResourceStatusEffectiveInstanceMetadata
+   */
+  public function setEffectiveInstanceMetadata(ResourceStatusEffectiveInstanceMetadata $effectiveInstanceMetadata)
+  {
+    $this->effectiveInstanceMetadata = $effectiveInstanceMetadata;
+  }
+  /**
+   * @return ResourceStatusEffectiveInstanceMetadata
+   */
+  public function getEffectiveInstanceMetadata()
+  {
+    return $this->effectiveInstanceMetadata;
+  }
   /**
    * @param string
    */
@@ -57,6 +75,20 @@ class ResourceStatus extends \Google\Model
   public function getPhysicalHostTopology()
   {
     return $this->physicalHostTopology;
+  }
+  /**
+   * @param ResourceStatusReservationConsumptionInfo
+   */
+  public function setReservationConsumptionInfo(ResourceStatusReservationConsumptionInfo $reservationConsumptionInfo)
+  {
+    $this->reservationConsumptionInfo = $reservationConsumptionInfo;
+  }
+  /**
+   * @return ResourceStatusReservationConsumptionInfo
+   */
+  public function getReservationConsumptionInfo()
+  {
+    return $this->reservationConsumptionInfo;
   }
   /**
    * @param ResourceStatusScheduling

@@ -26,7 +26,15 @@ class UpdateTableMetadata extends \Google\Model
   /**
    * @var string
    */
+  public $finishTime;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
+  public $requestTime;
   /**
    * @var string
    */
@@ -49,6 +57,20 @@ class UpdateTableMetadata extends \Google\Model
   /**
    * @param string
    */
+  public function setFinishTime($finishTime)
+  {
+    $this->finishTime = $finishTime;
+  }
+  /**
+   * @return string
+   */
+  public function getFinishTime()
+  {
+    return $this->finishTime;
+  }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
@@ -59,6 +81,20 @@ class UpdateTableMetadata extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setRequestTime($requestTime)
+  {
+    $this->requestTime = $requestTime;
+  }
+  /**
+   * @return string
+   */
+  public function getRequestTime()
+  {
+    return $this->requestTime;
   }
   /**
    * @param string

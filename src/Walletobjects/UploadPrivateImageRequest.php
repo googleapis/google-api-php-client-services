@@ -19,39 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class UploadPrivateImageRequest extends \Google\Model
 {
-  protected $blobType = Media::class;
-  protected $blobDataType = '';
-  protected $mediaRequestInfoType = MediaRequestInfo::class;
-  protected $mediaRequestInfoDataType = '';
-
-  /**
-   * @param Media
-   */
-  public function setBlob(Media $blob)
-  {
-    $this->blob = $blob;
-  }
-  /**
-   * @return Media
-   */
-  public function getBlob()
-  {
-    return $this->blob;
-  }
-  /**
-   * @param MediaRequestInfo
-   */
-  public function setMediaRequestInfo(MediaRequestInfo $mediaRequestInfo)
-  {
-    $this->mediaRequestInfo = $mediaRequestInfo;
-  }
-  /**
-   * @return MediaRequestInfo
-   */
-  public function getMediaRequestInfo()
-  {
-    return $this->mediaRequestInfo;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

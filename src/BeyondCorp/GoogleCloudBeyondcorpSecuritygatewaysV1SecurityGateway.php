@@ -27,6 +27,10 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extends \Google\Col
   /**
    * @var string
    */
+  public $delegatingServiceAccount;
+  /**
+   * @var string
+   */
   public $displayName;
   /**
    * @var string[]
@@ -38,6 +42,10 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extends \Google\Col
    * @var string
    */
   public $name;
+  protected $proxyProtocolConfigType = GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig::class;
+  protected $proxyProtocolConfigDataType = '';
+  protected $serviceDiscoveryType = GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery::class;
+  protected $serviceDiscoveryDataType = '';
   /**
    * @var string
    */
@@ -60,6 +68,20 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extends \Google\Col
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDelegatingServiceAccount($delegatingServiceAccount)
+  {
+    $this->delegatingServiceAccount = $delegatingServiceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getDelegatingServiceAccount()
+  {
+    return $this->delegatingServiceAccount;
   }
   /**
    * @param string
@@ -116,6 +138,34 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway extends \Google\Col
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig
+   */
+  public function setProxyProtocolConfig(GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig $proxyProtocolConfig)
+  {
+    $this->proxyProtocolConfig = $proxyProtocolConfig;
+  }
+  /**
+   * @return GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig
+   */
+  public function getProxyProtocolConfig()
+  {
+    return $this->proxyProtocolConfig;
+  }
+  /**
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery
+   */
+  public function setServiceDiscovery(GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery $serviceDiscovery)
+  {
+    $this->serviceDiscovery = $serviceDiscovery;
+  }
+  /**
+   * @return GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery
+   */
+  public function getServiceDiscovery()
+  {
+    return $this->serviceDiscovery;
   }
   /**
    * @param string

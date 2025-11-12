@@ -17,8 +17,10 @@
 
 namespace Google\Service\CloudScheduler\Resource;
 
+use Google\Service\CloudScheduler\CmekConfig;
 use Google\Service\CloudScheduler\ListLocationsResponse;
 use Google\Service\CloudScheduler\Location;
+use Google\Service\CloudScheduler\Operation;
 
 /**
  * The "locations" collection of methods.
@@ -45,6 +47,21 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('get', [$params], Location::class);
   }
   /**
+   * Gets the Scheduler config in the project/region. (locations.getCmekConfig)
+   *
+   * @param string $name Required. The config name. For example:
+   * projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig
+   * @param array $optParams Optional parameters.
+   * @return CmekConfig
+   * @throws \Google\Service\Exception
+   */
+  public function getCmekConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getCmekConfig', [$params], CmekConfig::class);
+  }
+  /**
    * Lists information about the supported locations for this service.
    * (locations.listProjectsLocations)
    *
@@ -52,9 +69,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string extraLocationTypes Optional. A list of extra location types
-   * that should be used as conditions for controlling the visibility of the
-   * locations.
+   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
+   * unsupported and is ignored unless explicitly documented otherwise. This is
+   * primarily for internal usage.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like `"displayName=tokyo"`,
    * and is documented in more detail in [AIP-160](https://google.aip.dev/160).
@@ -70,6 +87,26 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListLocationsResponse::class);
+  }
+  /**
+   * Initializes or Updates the a scheduler config. (locations.updateCmekConfig)
+   *
+   * @param string $name Identifier. The config resource name which includes the
+   * project and location and must end in 'cmekConfig', in the format
+   * projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+   * @param CmekConfig $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. List of fields to be updated in this
+   * request.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function updateCmekConfig($name, CmekConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateCmekConfig', [$params], Operation::class);
   }
 }
 

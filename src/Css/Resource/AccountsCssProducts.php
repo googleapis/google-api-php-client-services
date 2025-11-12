@@ -36,6 +36,7 @@ class AccountsCssProducts extends \Google\Service\Resource
    * before the updated final product can be retrieved. (cssProducts.get)
    *
    * @param string $name Required. The name of the CSS product to retrieve.
+   * Format: `accounts/{account}/cssProducts/{css_product}`
    * @param array $optParams Optional parameters.
    * @return CssProduct
    * @throws \Google\Service\Exception

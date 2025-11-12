@@ -49,6 +49,10 @@ class Cluster extends \Google\Model
    * @var string
    */
   public $state;
+  protected $tlsConfigType = TlsConfig::class;
+  protected $tlsConfigDataType = '';
+  protected $updateOptionsType = UpdateOptions::class;
+  protected $updateOptionsDataType = '';
   /**
    * @var string
    */
@@ -179,6 +183,34 @@ class Cluster extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param TlsConfig
+   */
+  public function setTlsConfig(TlsConfig $tlsConfig)
+  {
+    $this->tlsConfig = $tlsConfig;
+  }
+  /**
+   * @return TlsConfig
+   */
+  public function getTlsConfig()
+  {
+    return $this->tlsConfig;
+  }
+  /**
+   * @param UpdateOptions
+   */
+  public function setUpdateOptions(UpdateOptions $updateOptions)
+  {
+    $this->updateOptions = $updateOptions;
+  }
+  /**
+   * @return UpdateOptions
+   */
+  public function getUpdateOptions()
+  {
+    return $this->updateOptions;
   }
   /**
    * @param string

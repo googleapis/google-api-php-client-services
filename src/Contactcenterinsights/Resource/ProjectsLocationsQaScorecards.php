@@ -98,6 +98,10 @@ class ProjectsLocationsQaScorecards extends \Google\Service\Resource
    * `ListQaScorecardsResponse`. This value indicates that this is a continuation
    * of a prior `ListQaScorecards` call and that the system should return the next
    * page of data.
+   * @opt_param string qaScorecardSources Optional. The source of scorecards are
+   * based on how those Scorecards were created, e.g., a customer-defined
+   * scorecard, a predefined scorecard, etc. This field is used to retrieve
+   * Scorecards of one or more sources.
    * @return GoogleCloudContactcenterinsightsV1ListQaScorecardsResponse
    * @throws \Google\Service\Exception
    */

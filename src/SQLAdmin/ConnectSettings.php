@@ -45,6 +45,10 @@ class ConnectSettings extends \Google\Collection
    */
   public $kind;
   /**
+   * @var string[]
+   */
+  public $mdxProtocolSupport;
+  /**
    * @var int
    */
   public $nodeCount;
@@ -162,6 +166,20 @@ class ConnectSettings extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param string[]
+   */
+  public function setMdxProtocolSupport($mdxProtocolSupport)
+  {
+    $this->mdxProtocolSupport = $mdxProtocolSupport;
+  }
+  /**
+   * @return string[]
+   */
+  public function getMdxProtocolSupport()
+  {
+    return $this->mdxProtocolSupport;
   }
   /**
    * @param int

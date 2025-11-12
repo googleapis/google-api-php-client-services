@@ -19,6 +19,8 @@ namespace Google\Service\BigtableAdmin;
 
 class MaterializedView extends \Google\Model
 {
+  protected $clusterStatesType = GoogleBigtableAdminV2MaterializedViewClusterState::class;
+  protected $clusterStatesDataType = 'map';
   /**
    * @var bool
    */
@@ -36,6 +38,20 @@ class MaterializedView extends \Google\Model
    */
   public $query;
 
+  /**
+   * @param GoogleBigtableAdminV2MaterializedViewClusterState[]
+   */
+  public function setClusterStates($clusterStates)
+  {
+    $this->clusterStates = $clusterStates;
+  }
+  /**
+   * @return GoogleBigtableAdminV2MaterializedViewClusterState[]
+   */
+  public function getClusterStates()
+  {
+    return $this->clusterStates;
+  }
   /**
    * @param bool
    */

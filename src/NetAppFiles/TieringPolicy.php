@@ -24,6 +24,10 @@ class TieringPolicy extends \Google\Model
    */
   public $coolingThresholdDays;
   /**
+   * @var bool
+   */
+  public $hotTierBypassModeEnabled;
+  /**
    * @var string
    */
   public $tierAction;
@@ -41,6 +45,20 @@ class TieringPolicy extends \Google\Model
   public function getCoolingThresholdDays()
   {
     return $this->coolingThresholdDays;
+  }
+  /**
+   * @param bool
+   */
+  public function setHotTierBypassModeEnabled($hotTierBypassModeEnabled)
+  {
+    $this->hotTierBypassModeEnabled = $hotTierBypassModeEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getHotTierBypassModeEnabled()
+  {
+    return $this->hotTierBypassModeEnabled;
   }
   /**
    * @param string

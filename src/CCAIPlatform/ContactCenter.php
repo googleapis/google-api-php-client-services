@@ -46,6 +46,8 @@ class ContactCenter extends \Google\Collection
   public $displayName;
   protected $earlyType = Early::class;
   protected $earlyDataType = '';
+  protected $featureConfigType = FeatureConfig::class;
+  protected $featureConfigDataType = '';
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
   /**
@@ -68,6 +70,10 @@ class ContactCenter extends \Google\Collection
    * @var string[]
    */
   public $privateComponents;
+  /**
+   * @var string
+   */
+  public $releaseVersion;
   protected $samlParamsType = SAMLParams::class;
   protected $samlParamsDataType = '';
   /**
@@ -198,6 +204,20 @@ class ContactCenter extends \Google\Collection
     return $this->early;
   }
   /**
+   * @param FeatureConfig
+   */
+  public function setFeatureConfig(FeatureConfig $featureConfig)
+  {
+    $this->featureConfig = $featureConfig;
+  }
+  /**
+   * @return FeatureConfig
+   */
+  public function getFeatureConfig()
+  {
+    return $this->featureConfig;
+  }
+  /**
    * @param InstanceConfig
    */
   public function setInstanceConfig(InstanceConfig $instanceConfig)
@@ -294,6 +314,20 @@ class ContactCenter extends \Google\Collection
   public function getPrivateComponents()
   {
     return $this->privateComponents;
+  }
+  /**
+   * @param string
+   */
+  public function setReleaseVersion($releaseVersion)
+  {
+    $this->releaseVersion = $releaseVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getReleaseVersion()
+  {
+    return $this->releaseVersion;
   }
   /**
    * @param SAMLParams

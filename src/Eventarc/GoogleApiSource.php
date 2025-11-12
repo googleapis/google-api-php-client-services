@@ -53,6 +53,10 @@ class GoogleApiSource extends \Google\Model
    * @var string
    */
   public $name;
+  protected $organizationSubscriptionType = OrganizationSubscription::class;
+  protected $organizationSubscriptionDataType = '';
+  protected $projectSubscriptionsType = ProjectSubscriptions::class;
+  protected $projectSubscriptionsDataType = '';
   /**
    * @var string
    */
@@ -187,6 +191,34 @@ class GoogleApiSource extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param OrganizationSubscription
+   */
+  public function setOrganizationSubscription(OrganizationSubscription $organizationSubscription)
+  {
+    $this->organizationSubscription = $organizationSubscription;
+  }
+  /**
+   * @return OrganizationSubscription
+   */
+  public function getOrganizationSubscription()
+  {
+    return $this->organizationSubscription;
+  }
+  /**
+   * @param ProjectSubscriptions
+   */
+  public function setProjectSubscriptions(ProjectSubscriptions $projectSubscriptions)
+  {
+    $this->projectSubscriptions = $projectSubscriptions;
+  }
+  /**
+   * @return ProjectSubscriptions
+   */
+  public function getProjectSubscriptions()
+  {
+    return $this->projectSubscriptions;
   }
   /**
    * @param string

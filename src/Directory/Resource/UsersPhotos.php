@@ -59,8 +59,9 @@ class UsersPhotos extends \Google\Service\Resource
     return $this->call('get', [$params], UserPhoto::class);
   }
   /**
-   * Adds a photo for the user. This method supports [patch semantics](/admin-
-   * sdk/directory/v1/guides/performance#patch). (photos.patch)
+   * Adds a photo for the user. This method supports [patch semantics](https://dev
+   * elopers.google.com/workspace/admin/directory/v1/guides/performance#patch).
+   * (photos.patch)
    *
    * @param string $userKey Identifies the user in the API request. The value can
    * be the user's primary email address, alias email address, or unique user ID.

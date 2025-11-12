@@ -17,10 +17,15 @@
 
 namespace Google\Service\Container;
 
-class ContainerdConfig extends \Google\Model
+class ContainerdConfig extends \Google\Collection
 {
+  protected $collection_key = 'registryHosts';
   protected $privateRegistryAccessConfigType = PrivateRegistryAccessConfig::class;
   protected $privateRegistryAccessConfigDataType = '';
+  protected $registryHostsType = RegistryHostConfig::class;
+  protected $registryHostsDataType = 'array';
+  protected $writableCgroupsType = WritableCgroups::class;
+  protected $writableCgroupsDataType = '';
 
   /**
    * @param PrivateRegistryAccessConfig
@@ -35,6 +40,34 @@ class ContainerdConfig extends \Google\Model
   public function getPrivateRegistryAccessConfig()
   {
     return $this->privateRegistryAccessConfig;
+  }
+  /**
+   * @param RegistryHostConfig[]
+   */
+  public function setRegistryHosts($registryHosts)
+  {
+    $this->registryHosts = $registryHosts;
+  }
+  /**
+   * @return RegistryHostConfig[]
+   */
+  public function getRegistryHosts()
+  {
+    return $this->registryHosts;
+  }
+  /**
+   * @param WritableCgroups
+   */
+  public function setWritableCgroups(WritableCgroups $writableCgroups)
+  {
+    $this->writableCgroups = $writableCgroups;
+  }
+  /**
+   * @return WritableCgroups
+   */
+  public function getWritableCgroups()
+  {
+    return $this->writableCgroups;
   }
 }
 

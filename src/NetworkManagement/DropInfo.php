@@ -26,6 +26,10 @@ class DropInfo extends \Google\Model
   /**
    * @var string
    */
+  public $destinationGeolocationCode;
+  /**
+   * @var string
+   */
   public $destinationIp;
   /**
    * @var string
@@ -35,6 +39,10 @@ class DropInfo extends \Google\Model
    * @var string
    */
   public $resourceUri;
+  /**
+   * @var string
+   */
+  public $sourceGeolocationCode;
   /**
    * @var string
    */
@@ -53,6 +61,20 @@ class DropInfo extends \Google\Model
   public function getCause()
   {
     return $this->cause;
+  }
+  /**
+   * @param string
+   */
+  public function setDestinationGeolocationCode($destinationGeolocationCode)
+  {
+    $this->destinationGeolocationCode = $destinationGeolocationCode;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationGeolocationCode()
+  {
+    return $this->destinationGeolocationCode;
   }
   /**
    * @param string
@@ -95,6 +117,20 @@ class DropInfo extends \Google\Model
   public function getResourceUri()
   {
     return $this->resourceUri;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceGeolocationCode($sourceGeolocationCode)
+  {
+    $this->sourceGeolocationCode = $sourceGeolocationCode;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceGeolocationCode()
+  {
+    return $this->sourceGeolocationCode;
   }
   /**
    * @param string

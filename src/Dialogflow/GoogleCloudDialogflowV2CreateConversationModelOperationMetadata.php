@@ -30,6 +30,10 @@ class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \G
   /**
    * @var string
    */
+  public $doneTime;
+  /**
+   * @var string
+   */
   public $state;
 
   /**
@@ -59,6 +63,20 @@ class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \G
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDoneTime($doneTime)
+  {
+    $this->doneTime = $doneTime;
+  }
+  /**
+   * @return string
+   */
+  public function getDoneTime()
+  {
+    return $this->doneTime;
   }
   /**
    * @param string

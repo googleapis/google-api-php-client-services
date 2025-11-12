@@ -17,13 +17,30 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PscInterfaceConfig extends \Google\Model
+class GoogleCloudAiplatformV1PscInterfaceConfig extends \Google\Collection
 {
+  protected $collection_key = 'dnsPeeringConfigs';
+  protected $dnsPeeringConfigsType = GoogleCloudAiplatformV1DnsPeeringConfig::class;
+  protected $dnsPeeringConfigsDataType = 'array';
   /**
    * @var string
    */
   public $networkAttachment;
 
+  /**
+   * @param GoogleCloudAiplatformV1DnsPeeringConfig[]
+   */
+  public function setDnsPeeringConfigs($dnsPeeringConfigs)
+  {
+    $this->dnsPeeringConfigs = $dnsPeeringConfigs;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1DnsPeeringConfig[]
+   */
+  public function getDnsPeeringConfigs()
+  {
+    return $this->dnsPeeringConfigs;
+  }
   /**
    * @param string
    */

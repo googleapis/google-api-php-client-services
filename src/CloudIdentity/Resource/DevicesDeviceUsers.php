@@ -190,11 +190,10 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * properties are provided, only DeviceUsers having all of these properties are
    * considered as matches - i.e. the query behaves like an AND. Different
    * platforms require different amounts of information from the caller to ensure
-   * that the DeviceUser is uniquely identified. - iOS: No properties need to be
-   * passed, the caller's credentials are sufficient to identify the corresponding
-   * DeviceUser. - Android: Specifying the 'android_id' field is required. -
-   * Desktop: Specifying the 'raw_resource_id' field is required.
-   * (deviceUsers.lookup)
+   * that the DeviceUser is uniquely identified. - iOS: Specifying the 'partner'
+   * and 'ios_device_id' fields is required. - Android: Specifying the
+   * 'android_id' field is required. - Desktop: Specifying the 'raw_resource_id'
+   * field is required. (deviceUsers.lookup)
    *
    * @param string $parent Must be set to "devices/-/deviceUsers" to search across
    * all DeviceUser belonging to the user.
@@ -203,6 +202,10 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * @opt_param string androidId Android Id returned by [Settings.Secure#ANDROID_I
    * D](https://developer.android.com/reference/android/provider/Settings.Secure.h
    * tml#ANDROID_ID).
+   * @opt_param string iosDeviceId Optional. The partner-specified device
+   * identifier assigned to the iOS device that initiated the Lookup API call.
+   * This string must match the value of the iosDeviceId key in the app config
+   * dictionary provided to Google Workspace apps.
    * @opt_param int pageSize The maximum number of DeviceUsers to return. If
    * unspecified, at most 20 DeviceUsers will be returned. The maximum value is
    * 20; values above 20 will be coerced to 20.
@@ -210,12 +213,14 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * `LookupDeviceUsers` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `LookupDeviceUsers` must match
    * the call that provided the page token.
+   * @opt_param string partner Optional. The partner ID of the calling iOS app.
+   * This string must match the value of the partner key within the app
+   * configuration dictionary provided to Google Workspace apps.
    * @opt_param string rawResourceId Raw Resource Id used by Google Endpoint
    * Verification. If the user is enrolled into Google Endpoint Verification, this
    * id will be saved as the 'device_resource_id' field in the following platform
-   * dependent files. * macOS: ~/.secureConnect/context_aware_config.json *
-   * Windows: %USERPROFILE%\AppData\Local\Google\Endpoint
-   * Verification\accounts.json * Linux:
+   * dependent files. Mac: ~/.secureConnect/context_aware_config.json Windows:
+   * C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
    * ~/.secureConnect/context_aware_config.json
    * @opt_param string userId The user whose DeviceUser's resource name will be
    * fetched. Must be set to 'me' to fetch the DeviceUser's resource name for the

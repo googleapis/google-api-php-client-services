@@ -114,6 +114,10 @@ class ProjectsLocationsCloudExadataInfrastructures extends \Google\Service\Resou
    * projects/{project}/locations/{location}.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. An expression for filtering the results of
+   * the request.
+   * @opt_param string orderBy Optional. An expression for ordering the results of
+   * the request.
    * @opt_param int pageSize Optional. The maximum number of items to return. If
    * unspecified, at most 50 Exadata infrastructures will be returned. The maximum
    * value is 1000; values above 1000 will be coerced to 1000.

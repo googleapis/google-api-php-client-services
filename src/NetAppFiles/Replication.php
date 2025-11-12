@@ -47,6 +47,8 @@ class Replication extends \Google\Model
    * @var string
    */
   public $hybridReplicationType;
+  protected $hybridReplicationUserCommandsType = UserCommands::class;
+  protected $hybridReplicationUserCommandsDataType = '';
   /**
    * @var string[]
    */
@@ -193,6 +195,20 @@ class Replication extends \Google\Model
   public function getHybridReplicationType()
   {
     return $this->hybridReplicationType;
+  }
+  /**
+   * @param UserCommands
+   */
+  public function setHybridReplicationUserCommands(UserCommands $hybridReplicationUserCommands)
+  {
+    $this->hybridReplicationUserCommands = $hybridReplicationUserCommands;
+  }
+  /**
+   * @return UserCommands
+   */
+  public function getHybridReplicationUserCommands()
+  {
+    return $this->hybridReplicationUserCommands;
   }
   /**
    * @param string[]

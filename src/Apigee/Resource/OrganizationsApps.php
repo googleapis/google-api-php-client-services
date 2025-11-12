@@ -71,13 +71,14 @@ class OrganizationsApps extends \Google\Service\Resource
    * @opt_param string keyStatus Optional. Key status of the app. Valid values
    * include `approved` or `revoked`. Defaults to `approved`.
    * @opt_param int pageSize Optional. Count of apps a single page can have in the
-   * response. If unspecified, at most 100 apps will be returned. The maximum
-   * value is 100; values above 100 will be coerced to 100. "page_size" is
+   * response. If unspecified, at most 1000 apps will be returned. The maximum
+   * value is 1000; values above 1000 will be coerced to 1000. "page_size" is
    * supported from ver 1.10.0 and above.
    * @opt_param string pageToken Optional. The starting index record for listing
    * the developers. "page_token" is supported from ver 1.10.0 and above.
    * @opt_param string rows Optional. Maximum number of app IDs to return.
-   * Defaults to 10000.
+   * Defaults to 1000, which is also the upper limit. To get more than 1000, use
+   * pagination with 'pageSize' and 'pageToken' parameters.
    * @opt_param string startKey Returns the list of apps starting from the
    * specified app ID.
    * @opt_param string status Optional. Filter by the status of the app. Valid

@@ -85,6 +85,9 @@ class ProjectsInstancesMaterializedViews extends \Google\Service\Resource
    * view. Values are of the form `projects/{project}/instances/{instance}/materia
    * lizedViews/{materialized_view}`.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. Describes which of the materialized view's
+   * fields should be populated in the response. Defaults to SCHEMA_VIEW.
    * @return MaterializedView
    * @throws \Google\Service\Exception
    */
@@ -129,6 +132,9 @@ class ProjectsInstancesMaterializedViews extends \Google\Service\Resource
    * `ListMaterializedViews` call. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to `ListMaterializedViews`
    * must match the call that provided the page token.
+   * @opt_param string view Optional. Describes which of the materialized view's
+   * fields should be populated in the response. For now, only the default value
+   * SCHEMA_VIEW is supported.
    * @return ListMaterializedViewsResponse
    * @throws \Google\Service\Exception
    */
@@ -143,7 +149,7 @@ class ProjectsInstancesMaterializedViews extends \Google\Service\Resource
    *
    * @param string $name Identifier. The unique name of the materialized view.
    * Format: `projects/{project}/instances/{instance}/materializedViews/{materiali
-   * zed_view}`
+   * zed_view}` Views: `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
    * @param MaterializedView $postBody
    * @param array $optParams Optional parameters.
    *

@@ -23,6 +23,8 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
    * @var string
    */
   public $languageCode;
+  protected $multiSpeakerVoiceConfigType = GoogleCloudAiplatformV1MultiSpeakerVoiceConfig::class;
+  protected $multiSpeakerVoiceConfigDataType = '';
   protected $voiceConfigType = GoogleCloudAiplatformV1VoiceConfig::class;
   protected $voiceConfigDataType = '';
 
@@ -39,6 +41,20 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1MultiSpeakerVoiceConfig
+   */
+  public function setMultiSpeakerVoiceConfig(GoogleCloudAiplatformV1MultiSpeakerVoiceConfig $multiSpeakerVoiceConfig)
+  {
+    $this->multiSpeakerVoiceConfig = $multiSpeakerVoiceConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1MultiSpeakerVoiceConfig
+   */
+  public function getMultiSpeakerVoiceConfig()
+  {
+    return $this->multiSpeakerVoiceConfig;
   }
   /**
    * @param GoogleCloudAiplatformV1VoiceConfig

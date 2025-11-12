@@ -76,7 +76,11 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleCloudDataplexV1Entry::class);
   }
   /**
-   * Gets an Entry. (entries.get)
+   * Gets an Entry. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform,
+   * and Dataproc Metastore metadata that is stored in Dataplex Universal Catalog
+   * is changing. For more information, see Changes to metadata stored in Dataplex
+   * Universal Catalog (https://cloud.google.com/dataplex/docs/metadata-changes).
+   * (entries.get)
    *
    * @param string $name Required. The resource name of the Entry: projects/{proje
    * ct}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
@@ -99,7 +103,11 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudDataplexV1Entry::class);
   }
   /**
-   * Lists Entries within an EntryGroup.
+   * Lists Entries within an EntryGroup. Caution: The Vertex AI, Bigtable,
+   * Spanner, Pub/Sub, Dataform, and Dataproc Metastore metadata that is stored in
+   * Dataplex Universal Catalog is changing. For more information, see Changes to
+   * metadata stored in Dataplex Universal Catalog
+   * (https://cloud.google.com/dataplex/docs/metadata-changes).
    * (entries.listProjectsLocationsEntryGroupsEntries)
    *
    * @param string $parent Required. The resource name of the parent Entry Group:
@@ -108,15 +116,19 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
    *
    * @opt_param string filter Optional. A filter on the entries to return. Filters
    * are case-sensitive. You can filter the request by the following fields:
-   * entry_type entry_source.display_nameThe comparison operators are =, !=, <, >,
-   * <=, >=. The service compares strings according to lexical order.You can use
-   * the logical operators AND, OR, NOT in the filter.You can use Wildcard "*",
-   * but for entry_type you need to provide the full project id or number.Example
-   * filter expressions: "entry_source.display_name=AnExampleDisplayName"
+   * entry_type entry_source.display_name parent_entryThe comparison operators are
+   * =, !=, <, >, <=, >=. The service compares strings according to lexical
+   * order.You can use the logical operators AND, OR, NOT in the filter.You can
+   * use Wildcard "*", but for entry_type and parent_entry you need to provide the
+   * full project id or number.You cannot use parent_entry in conjunction with
+   * other fields.Example filter expressions:
+   * "entry_source.display_name=AnExampleDisplayName"
    * "entry_type=projects/example-project/locations/global/entryTypes/example-
    * entry_type" "entry_type=projects/example-project/locations/us/entryTypes/a*
    * OR entry_type=projects/another-project/locations" "NOT
    * entry_source.display_name=AnotherExampleDisplayName"
+   * "parent_entry=projects/example-project/locations/us/entryGroups/example-
+   * entry-group/entries/example-entry"
    * @opt_param int pageSize Optional. Number of items to return per page. If
    * there are remaining results, the service returns a next_page_token. If
    * unspecified, the service returns at most 10 Entries. The maximum value is

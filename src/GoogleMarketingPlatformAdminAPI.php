@@ -73,11 +73,44 @@ class GoogleMarketingPlatformAdminAPI extends \Google\Service
         'organizations',
         [
           'methods' => [
-            'get' => [
+            'findSalesPartnerManagedClients' => [
+              'path' => 'v1alpha/{+organization}:findSalesPartnerManagedClients',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'organization' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1alpha/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1alpha/organizations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'reportPropertyUsage' => [
+              'path' => 'v1alpha/{+organization}:reportPropertyUsage',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'organization' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

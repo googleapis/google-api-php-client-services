@@ -21,6 +21,10 @@ class SourceHierarchyDatasets extends \Google\Model
 {
   protected $datasetTemplateType = DatasetTemplate::class;
   protected $datasetTemplateDataType = '';
+  /**
+   * @var string
+   */
+  public $projectId;
 
   /**
    * @param DatasetTemplate
@@ -35,6 +39,20 @@ class SourceHierarchyDatasets extends \Google\Model
   public function getDatasetTemplate()
   {
     return $this->datasetTemplate;
+  }
+  /**
+   * @param string
+   */
+  public function setProjectId($projectId)
+  {
+    $this->projectId = $projectId;
+  }
+  /**
+   * @return string
+   */
+  public function getProjectId()
+  {
+    return $this->projectId;
   }
 }
 

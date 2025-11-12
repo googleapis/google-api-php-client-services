@@ -39,6 +39,10 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
    */
   public $encryptionKeyShutdownDuration;
   /**
+   * @var bool
+   */
+  public $gpuZonalRedundancyDisabled;
+  /**
    * @var string[]
    */
   public $labels;
@@ -54,10 +58,6 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
   public $serviceAccount;
   protected $serviceMeshType = GoogleCloudRunV2ServiceMesh::class;
   protected $serviceMeshDataType = '';
-  /**
-   * @var bool
-   */
-  public $sessionAffinity;
   protected $volumesType = GoogleCloudRunV2Volume::class;
   protected $volumesDataType = 'array';
   protected $vpcAccessType = GoogleCloudRunV2VpcAccess::class;
@@ -134,6 +134,20 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->encryptionKeyShutdownDuration;
   }
   /**
+   * @param bool
+   */
+  public function setGpuZonalRedundancyDisabled($gpuZonalRedundancyDisabled)
+  {
+    $this->gpuZonalRedundancyDisabled = $gpuZonalRedundancyDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getGpuZonalRedundancyDisabled()
+  {
+    return $this->gpuZonalRedundancyDisabled;
+  }
+  /**
    * @param string[]
    */
   public function setLabels($labels)
@@ -202,20 +216,6 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
   public function getServiceMesh()
   {
     return $this->serviceMesh;
-  }
-  /**
-   * @param bool
-   */
-  public function setSessionAffinity($sessionAffinity)
-  {
-    $this->sessionAffinity = $sessionAffinity;
-  }
-  /**
-   * @return bool
-   */
-  public function getSessionAffinity()
-  {
-    return $this->sessionAffinity;
   }
   /**
    * @param GoogleCloudRunV2Volume[]

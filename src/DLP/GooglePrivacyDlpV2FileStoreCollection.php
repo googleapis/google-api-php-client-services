@@ -21,6 +21,8 @@ class GooglePrivacyDlpV2FileStoreCollection extends \Google\Model
 {
   protected $includeRegexesType = GooglePrivacyDlpV2FileStoreRegexes::class;
   protected $includeRegexesDataType = '';
+  protected $includeTagsType = GooglePrivacyDlpV2TagFilters::class;
+  protected $includeTagsDataType = '';
 
   /**
    * @param GooglePrivacyDlpV2FileStoreRegexes
@@ -35,6 +37,20 @@ class GooglePrivacyDlpV2FileStoreCollection extends \Google\Model
   public function getIncludeRegexes()
   {
     return $this->includeRegexes;
+  }
+  /**
+   * @param GooglePrivacyDlpV2TagFilters
+   */
+  public function setIncludeTags(GooglePrivacyDlpV2TagFilters $includeTags)
+  {
+    $this->includeTags = $includeTags;
+  }
+  /**
+   * @return GooglePrivacyDlpV2TagFilters
+   */
+  public function getIncludeTags()
+  {
+    return $this->includeTags;
   }
 }
 

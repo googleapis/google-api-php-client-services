@@ -93,7 +93,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Supported field/value: `state` -
-   * MISSING|AVAILABLE|ERROR
+   * MISSING|AVAILABLE|ERROR The syntax is based on https://google.aip.dev/160.
    * @opt_param int pageSize Optional. Number of results per page, max 1000.
    * @opt_param string pageToken Optional. Page token from a previous page to
    * return the next set of results. If set, all other request fields must match
@@ -132,7 +132,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Supported field/value: - `state` -
-   * MISSING|AVAILABLE|ERROR
+   * MISSING|AVAILABLE|ERROR The syntax is based on https://google.aip.dev/160.
    * @opt_param int pageSize Optional. Number of results per page, max 1000.
    * @opt_param string pageToken Optional. Page token from a previous page to
    * return the next set of results. If set, all other request fields must match

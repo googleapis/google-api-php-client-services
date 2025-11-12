@@ -18,6 +18,7 @@
 namespace Google\Service\OracleDatabase\Resource;
 
 use Google\Service\OracleDatabase\AutonomousDatabase;
+use Google\Service\OracleDatabase\FailoverAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\GenerateAutonomousDatabaseWalletRequest;
 use Google\Service\OracleDatabase\GenerateAutonomousDatabaseWalletResponse;
 use Google\Service\OracleDatabase\ListAutonomousDatabasesResponse;
@@ -92,6 +93,24 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
+   * Initiates a failover to target autonomous database from the associated
+   * primary database. (autonomousDatabases.failover)
+   *
+   * @param string $name Required. The name of the Autonomous Database in the
+   * following format: projects/{project}/locations/{location}/autonomousDatabases
+   * /{autonomous_database}.
+   * @param FailoverAutonomousDatabaseRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function failover($name, FailoverAutonomousDatabaseRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('failover', [$params], Operation::class);
+  }
+  /**
    * Generates a wallet for an Autonomous Database.
    * (autonomousDatabases.generateWallet)
    *
@@ -150,6 +169,37 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListAutonomousDatabasesResponse::class);
+  }
+  /**
+   * Updates the parameters of a single Autonomous Database.
+   * (autonomousDatabases.patch)
+   *
+   * @param string $name Identifier. The name of the Autonomous Database resource
+   * in the following format: projects/{project}/locations/{region}/autonomousData
+   * bases/{autonomous_database}
+   * @param AutonomousDatabase $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Optional. An optional ID to identify the request.
+   * This value is used to identify duplicate requests. If you make a request with
+   * the same request ID and the original request is still in progress or
+   * completed, the server ignores the second request. This prevents clients from
+   * accidentally creating duplicate commitments. The request ID must be a valid
+   * UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Optional. Field mask is used to specify the
+   * fields to be overwritten in the Exadata resource by the update. The fields
+   * specified in the update_mask are relative to the resource, not the full
+   * request. A field will be overwritten if it is in the mask. If the user does
+   * not provide a mask then all fields will be overwritten.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, AutonomousDatabase $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
   }
   /**
    * Restarts an Autonomous Database. (autonomousDatabases.restart)

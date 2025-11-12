@@ -17,6 +17,8 @@
 
 namespace Google\Service\CloudRetail\Resource;
 
+use Google\Service\CloudRetail\GoogleCloudRetailV2ConversationalSearchRequest;
+use Google\Service\CloudRetail\GoogleCloudRetailV2ConversationalSearchResponse;
 use Google\Service\CloudRetail\GoogleCloudRetailV2PredictRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2PredictResponse;
 use Google\Service\CloudRetail\GoogleCloudRetailV2SearchRequest;
@@ -32,6 +34,27 @@ use Google\Service\CloudRetail\GoogleCloudRetailV2SearchResponse;
  */
 class ProjectsLocationsCatalogsPlacements extends \Google\Service\Resource
 {
+  /**
+   * Performs a conversational search. This feature is only available for users
+   * who have Conversational Search enabled. (placements.conversationalSearch)
+   *
+   * @param string $placement Required. The resource name of the search engine
+   * placement, such as `projects/locations/global/catalogs/default_catalog/placem
+   * ents/default_search` or `projects/locations/global/catalogs/default_catalog/s
+   * ervingConfigs/default_serving_config` This field is used to identify the
+   * serving config name and the set of models that will be used to make the
+   * search.
+   * @param GoogleCloudRetailV2ConversationalSearchRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudRetailV2ConversationalSearchResponse
+   * @throws \Google\Service\Exception
+   */
+  public function conversationalSearch($placement, GoogleCloudRetailV2ConversationalSearchRequest $postBody, $optParams = [])
+  {
+    $params = ['placement' => $placement, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('conversationalSearch', [$params], GoogleCloudRetailV2ConversationalSearchResponse::class);
+  }
   /**
    * Makes a recommendation prediction. (placements.predict)
    *

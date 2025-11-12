@@ -33,6 +33,10 @@ class Action extends \Google\Collection
   protected $inputParametersType = InputParameter::class;
   protected $inputParametersDataType = 'array';
   /**
+   * @var array[]
+   */
+  public $metadata;
+  /**
    * @var string
    */
   public $name;
@@ -96,6 +100,20 @@ class Action extends \Google\Collection
   public function getInputParameters()
   {
     return $this->inputParameters;
+  }
+  /**
+   * @param array[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string

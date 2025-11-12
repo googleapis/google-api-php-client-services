@@ -19,11 +19,27 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfig extends \Google\Model
 {
+  protected $includeType = GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray::class;
+  protected $includeDataType = '';
   /**
    * @var string
    */
   public $weight;
 
+  /**
+   * @param GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray
+   */
+  public function setInclude(GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray $include)
+  {
+    $this->include = $include;
+  }
+  /**
+   * @return GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray
+   */
+  public function getInclude()
+  {
+    return $this->include;
+  }
   /**
    * @param string
    */

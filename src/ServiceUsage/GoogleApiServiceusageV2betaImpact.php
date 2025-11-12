@@ -27,6 +27,10 @@ class GoogleApiServiceusageV2betaImpact extends \Google\Model
    * @var string
    */
   public $impactType;
+  /**
+   * @var string
+   */
+  public $missingDependency;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class GoogleApiServiceusageV2betaImpact extends \Google\Model
   public function getImpactType()
   {
     return $this->impactType;
+  }
+  /**
+   * @param string
+   */
+  public function setMissingDependency($missingDependency)
+  {
+    $this->missingDependency = $missingDependency;
+  }
+  /**
+   * @return string
+   */
+  public function getMissingDependency()
+  {
+    return $this->missingDependency;
   }
 }
 

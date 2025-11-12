@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class ShieldedInstanceIdentity extends \Google\Model
 {
+  protected $eccP256EncryptionKeyType = ShieldedInstanceIdentityEntry::class;
+  protected $eccP256EncryptionKeyDataType = '';
+  protected $eccP256SigningKeyType = ShieldedInstanceIdentityEntry::class;
+  protected $eccP256SigningKeyDataType = '';
   protected $encryptionKeyType = ShieldedInstanceIdentityEntry::class;
   protected $encryptionKeyDataType = '';
   /**
@@ -28,6 +32,34 @@ class ShieldedInstanceIdentity extends \Google\Model
   protected $signingKeyType = ShieldedInstanceIdentityEntry::class;
   protected $signingKeyDataType = '';
 
+  /**
+   * @param ShieldedInstanceIdentityEntry
+   */
+  public function setEccP256EncryptionKey(ShieldedInstanceIdentityEntry $eccP256EncryptionKey)
+  {
+    $this->eccP256EncryptionKey = $eccP256EncryptionKey;
+  }
+  /**
+   * @return ShieldedInstanceIdentityEntry
+   */
+  public function getEccP256EncryptionKey()
+  {
+    return $this->eccP256EncryptionKey;
+  }
+  /**
+   * @param ShieldedInstanceIdentityEntry
+   */
+  public function setEccP256SigningKey(ShieldedInstanceIdentityEntry $eccP256SigningKey)
+  {
+    $this->eccP256SigningKey = $eccP256SigningKey;
+  }
+  /**
+   * @return ShieldedInstanceIdentityEntry
+   */
+  public function getEccP256SigningKey()
+  {
+    return $this->eccP256SigningKey;
+  }
   /**
    * @param ShieldedInstanceIdentityEntry
    */

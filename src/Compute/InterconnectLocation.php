@@ -19,7 +19,7 @@ namespace Google\Service\Compute;
 
 class InterconnectLocation extends \Google\Collection
 {
-  protected $collection_key = 'regionInfos';
+  protected $collection_key = 'singleRegionProductionCriticalPeerLocations';
   /**
    * @var string
    */
@@ -48,6 +48,8 @@ class InterconnectLocation extends \Google\Collection
    * @var string
    */
   public $creationTimestamp;
+  protected $crossSiteInterconnectInfosType = InterconnectLocationCrossSiteInterconnectInfo::class;
+  protected $crossSiteInterconnectInfosDataType = 'array';
   /**
    * @var string
    */
@@ -82,6 +84,10 @@ class InterconnectLocation extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var string[]
+   */
+  public $singleRegionProductionCriticalPeerLocations;
   /**
    * @var string
    */
@@ -188,6 +194,20 @@ class InterconnectLocation extends \Google\Collection
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  /**
+   * @param InterconnectLocationCrossSiteInterconnectInfo[]
+   */
+  public function setCrossSiteInterconnectInfos($crossSiteInterconnectInfos)
+  {
+    $this->crossSiteInterconnectInfos = $crossSiteInterconnectInfos;
+  }
+  /**
+   * @return InterconnectLocationCrossSiteInterconnectInfo[]
+   */
+  public function getCrossSiteInterconnectInfos()
+  {
+    return $this->crossSiteInterconnectInfos;
   }
   /**
    * @param string
@@ -314,6 +334,20 @@ class InterconnectLocation extends \Google\Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSingleRegionProductionCriticalPeerLocations($singleRegionProductionCriticalPeerLocations)
+  {
+    $this->singleRegionProductionCriticalPeerLocations = $singleRegionProductionCriticalPeerLocations;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSingleRegionProductionCriticalPeerLocations()
+  {
+    return $this->singleRegionProductionCriticalPeerLocations;
   }
   /**
    * @param string

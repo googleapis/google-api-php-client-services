@@ -71,6 +71,7 @@ class CloudIdentity extends \Google\Service
   public $devices_deviceUsers_clientStates;
   public $groups;
   public $groups_memberships;
+  public $inboundOidcSsoProfiles;
   public $inboundSamlSsoProfiles;
   public $inboundSamlSsoProfiles_idpCredentials;
   public $inboundSsoAssignments;
@@ -373,11 +374,19 @@ class CloudIdentity extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'iosDeviceId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'partner' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -784,6 +793,71 @@ class CloudIdentity extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->inboundOidcSsoProfiles = new CloudIdentity\Resource\InboundOidcSsoProfiles(
+        $this,
+        $this->serviceName,
+        'inboundOidcSsoProfiles',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/inboundOidcSsoProfiles',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/inboundOidcSsoProfiles',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

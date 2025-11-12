@@ -23,7 +23,8 @@ use Google\Client;
  * Service definition for ShoppingContent (v2.1).
  *
  * <p>
- * Manage your product listings and accounts for Google Shopping</p>
+ * This API is deprecated. Please use Merchant API instead:
+ * https://developers.google.com/merchant/api.</p>
  *
  * <p>
  * For more information about this service, see the API

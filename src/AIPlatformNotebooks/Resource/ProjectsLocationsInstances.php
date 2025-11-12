@@ -17,9 +17,13 @@
 
 namespace Google\Service\AIPlatformNotebooks\Resource;
 
+use Google\Service\AIPlatformNotebooks\CheckAuthorizationRequest;
+use Google\Service\AIPlatformNotebooks\CheckAuthorizationResponse;
 use Google\Service\AIPlatformNotebooks\CheckInstanceUpgradabilityResponse;
 use Google\Service\AIPlatformNotebooks\Config;
 use Google\Service\AIPlatformNotebooks\DiagnoseInstanceRequest;
+use Google\Service\AIPlatformNotebooks\GenerateAccessTokenRequest;
+use Google\Service\AIPlatformNotebooks\GenerateAccessTokenResponse;
 use Google\Service\AIPlatformNotebooks\Instance;
 use Google\Service\AIPlatformNotebooks\ListInstancesResponse;
 use Google\Service\AIPlatformNotebooks\Operation;
@@ -47,6 +51,24 @@ use Google\Service\AIPlatformNotebooks\UpgradeInstanceSystemRequest;
  */
 class ProjectsLocationsInstances extends \Google\Service\Resource
 {
+  /**
+   * Initiated by Cloud Console for Oauth consent flow for Workbench Instances. Do
+   * not use this method directly. Design doc: go/wbi-euc:auth-dd
+   * (instances.checkAuthorization)
+   *
+   * @param string $name Required. The name of the Notebook Instance resource.
+   * Format: `projects/{project}/locations/{location}/instances/{instance}`
+   * @param CheckAuthorizationRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CheckAuthorizationResponse
+   * @throws \Google\Service\Exception
+   */
+  public function checkAuthorization($name, CheckAuthorizationRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkAuthorization', [$params], CheckAuthorizationResponse::class);
+  }
   /**
    * Checks whether a notebook instance is upgradable.
    * (instances.checkUpgradability)
@@ -118,6 +140,23 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     return $this->call('diagnose', [$params], Operation::class);
   }
   /**
+   * Called by VM to return an EUC for the instance owner. Do not use this method
+   * directly. Design doc: go/wbi-euc:dd (instances.generateAccessToken)
+   *
+   * @param string $name Required. Format:
+   * `projects/{project}/locations/{location}/instances/{instance_id}`
+   * @param GenerateAccessTokenRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GenerateAccessTokenResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateAccessToken($name, GenerateAccessTokenRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateAccessToken', [$params], GenerateAccessTokenResponse::class);
+  }
+  /**
    * Gets details of a single Instance. (instances.get)
    *
    * @param string $name Required. Format:
@@ -133,11 +172,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     return $this->call('get', [$params], Instance::class);
   }
   /**
-   * Gets general backend configurations that might also affect the frontend.
-   * Location is required by CCFE. Although we could bypass it to send location-
-   * less request directly to the backend job, we would need CPE (go/cloud-cpe).
-   * Having the location might also be useful depending on the query.
-   * (instances.getConfig)
+   * Returns various configuration parameters. (instances.getConfig)
    *
    * @param string $name Required. Format:
    * `projects/{project_id}/locations/{location}`
@@ -208,13 +243,31 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
   /**
    * UpdateInstance updates an Instance. (instances.patch)
    *
-   * @param string $name Output only. The name of this notebook instance. Format:
+   * @param string $name Output only. Identifier. The name of this notebook
+   * instance. Format:
    * `projects/{project_id}/locations/{location}/instances/{instance_id}`
    * @param Instance $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. Idempotent request UUID.
-   * @opt_param string updateMask Required. Mask used to update an instance
+   * @opt_param string updateMask Required. Mask used to update an instance.
+   * Updatable fields: * `labels` * `gce_setup.min_cpu_platform` *
+   * `gce_setup.metadata` * `gce_setup.machine_type` *
+   * `gce_setup.accelerator_configs` * `gce_setup.accelerator_configs.type` *
+   * `gce_setup.accelerator_configs.core_count` * `gce_setup.gpu_driver_config` *
+   * `gce_setup.gpu_driver_config.enable_gpu_driver` *
+   * `gce_setup.gpu_driver_config.custom_gpu_driver_path` *
+   * `gce_setup.shielded_instance_config` *
+   * `gce_setup.shielded_instance_config.enable_secure_boot` *
+   * `gce_setup.shielded_instance_config.enable_vtpm` *
+   * `gce_setup.shielded_instance_config.enable_integrity_monitoring` *
+   * `gce_setup.reservation_affinity` *
+   * `gce_setup.reservation_affinity.consume_reservation_type` *
+   * `gce_setup.reservation_affinity.key` *
+   * `gce_setup.reservation_affinity.values` * `gce_setup.tags` *
+   * `gce_setup.container_image` * `gce_setup.container_image.repository` *
+   * `gce_setup.container_image.tag` * `gce_setup.disable_public_ip` *
+   * `disable_proxy_access`
    * @return Operation
    * @throws \Google\Service\Exception
    */

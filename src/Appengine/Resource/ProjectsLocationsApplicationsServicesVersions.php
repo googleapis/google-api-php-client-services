@@ -33,8 +33,8 @@ class ProjectsLocationsApplicationsServicesVersions extends \Google\Service\Reso
   /**
    * Deletes an existing Version resource. (versions.delete)
    *
-   * @param string $projectsId Part of `name`. Name of the resource requested.
-   * Example: apps/myapp/services/default/versions/v1.
+   * @param string $projectsId Part of `name`. Required. Name of the resource
+   * requested. Example: apps/myapp/services/default/versions/v1.
    * @param string $locationsId Part of `name`. See documentation of `projectsId`.
    * @param string $applicationsId Part of `name`. See documentation of
    * `projectsId`.
@@ -98,8 +98,8 @@ class ProjectsLocationsApplicationsServicesVersions extends \Google\Service\Reso
    * (https://cloud.google.com/appengine/docs/admin-
    * api/reference/rest/v1/apps.services.versions#manualscaling) (versions.patch)
    *
-   * @param string $projectsId Part of `name`. Name of the resource to update.
-   * Example: apps/myapp/services/default/versions/1.
+   * @param string $projectsId Part of `name`. Required. Name of the resource to
+   * update. Example: apps/myapp/services/default/versions/1.
    * @param string $locationsId Part of `name`. See documentation of `projectsId`.
    * @param string $applicationsId Part of `name`. See documentation of
    * `projectsId`.

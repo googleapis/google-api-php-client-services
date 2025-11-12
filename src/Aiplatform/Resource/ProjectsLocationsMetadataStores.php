@@ -102,8 +102,7 @@ class ProjectsLocationsMetadataStores extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of Metadata Stores to return. The
-   * service may return fewer. Must be in range 1-1000, inclusive. Defaults to
-   * 100.
+   * service may return fewer. Must be in range 1-100, inclusive. Defaults to 100.
    * @opt_param string pageToken A page token, received from a previous
    * MetadataService.ListMetadataStores call. Provide this to retrieve the
    * subsequent page. When paginating, all other provided parameters must match

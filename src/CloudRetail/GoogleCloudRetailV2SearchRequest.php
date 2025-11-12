@@ -96,6 +96,8 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   protected $spellCorrectionSpecDataType = '';
   protected $tileNavigationSpecType = GoogleCloudRetailV2SearchRequestTileNavigationSpec::class;
   protected $tileNavigationSpecDataType = '';
+  protected $userAttributesType = GoogleCloudRetailV2StringList::class;
+  protected $userAttributesDataType = 'map';
   protected $userInfoType = GoogleCloudRetailV2UserInfo::class;
   protected $userInfoDataType = '';
   /**
@@ -428,6 +430,20 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   public function getTileNavigationSpec()
   {
     return $this->tileNavigationSpec;
+  }
+  /**
+   * @param GoogleCloudRetailV2StringList[]
+   */
+  public function setUserAttributes($userAttributes)
+  {
+    $this->userAttributes = $userAttributes;
+  }
+  /**
+   * @return GoogleCloudRetailV2StringList[]
+   */
+  public function getUserAttributes()
+  {
+    return $this->userAttributes;
   }
   /**
    * @param GoogleCloudRetailV2UserInfo

@@ -19,9 +19,25 @@ namespace Google\Service\Testing;
 
 class AppBundle extends \Google\Model
 {
+  protected $apksType = ApkSplits::class;
+  protected $apksDataType = '';
   protected $bundleLocationType = FileReference::class;
   protected $bundleLocationDataType = '';
 
+  /**
+   * @param ApkSplits
+   */
+  public function setApks(ApkSplits $apks)
+  {
+    $this->apks = $apks;
+  }
+  /**
+   * @return ApkSplits
+   */
+  public function getApks()
+  {
+    return $this->apks;
+  }
   /**
    * @param FileReference
    */

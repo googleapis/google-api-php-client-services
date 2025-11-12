@@ -248,6 +248,10 @@ class Spanner extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
@@ -309,6 +313,10 @@ class Spanner extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -656,6 +664,10 @@ class Spanner extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -1069,6 +1081,10 @@ class Spanner extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
@@ -1445,6 +1461,10 @@ class Spanner extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
@@ -1506,6 +1526,10 @@ class Spanner extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],

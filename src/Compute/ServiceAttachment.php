@@ -61,6 +61,10 @@ class ServiceAttachment extends \Google\Collection
    */
   public $kind;
   /**
+   * @var string[]
+   */
+  public $metadata;
+  /**
    * @var string
    */
   public $name;
@@ -248,6 +252,20 @@ class ServiceAttachment extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param string[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return string[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string

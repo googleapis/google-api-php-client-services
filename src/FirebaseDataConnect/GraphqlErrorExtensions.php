@@ -17,13 +17,56 @@
 
 namespace Google\Service\FirebaseDataConnect;
 
-class GraphqlErrorExtensions extends \Google\Model
+class GraphqlErrorExtensions extends \Google\Collection
 {
+  protected $collection_key = 'workarounds';
+  /**
+   * @var string
+   */
+  public $code;
+  /**
+   * @var string
+   */
+  public $debugDetails;
   /**
    * @var string
    */
   public $file;
+  /**
+   * @var string
+   */
+  public $warningLevel;
+  protected $workaroundsType = Workaround::class;
+  protected $workaroundsDataType = 'array';
 
+  /**
+   * @param string
+   */
+  public function setCode($code)
+  {
+    $this->code = $code;
+  }
+  /**
+   * @return string
+   */
+  public function getCode()
+  {
+    return $this->code;
+  }
+  /**
+   * @param string
+   */
+  public function setDebugDetails($debugDetails)
+  {
+    $this->debugDetails = $debugDetails;
+  }
+  /**
+   * @return string
+   */
+  public function getDebugDetails()
+  {
+    return $this->debugDetails;
+  }
   /**
    * @param string
    */
@@ -37,6 +80,34 @@ class GraphqlErrorExtensions extends \Google\Model
   public function getFile()
   {
     return $this->file;
+  }
+  /**
+   * @param string
+   */
+  public function setWarningLevel($warningLevel)
+  {
+    $this->warningLevel = $warningLevel;
+  }
+  /**
+   * @return string
+   */
+  public function getWarningLevel()
+  {
+    return $this->warningLevel;
+  }
+  /**
+   * @param Workaround[]
+   */
+  public function setWorkarounds($workarounds)
+  {
+    $this->workarounds = $workarounds;
+  }
+  /**
+   * @return Workaround[]
+   */
+  public function getWorkarounds()
+  {
+    return $this->workarounds;
   }
 }
 

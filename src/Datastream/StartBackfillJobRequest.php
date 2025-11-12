@@ -19,6 +19,23 @@ namespace Google\Service\Datastream;
 
 class StartBackfillJobRequest extends \Google\Model
 {
+  protected $eventFilterType = EventFilter::class;
+  protected $eventFilterDataType = '';
+
+  /**
+   * @param EventFilter
+   */
+  public function setEventFilter(EventFilter $eventFilter)
+  {
+    $this->eventFilter = $eventFilter;
+  }
+  /**
+   * @return EventFilter
+   */
+  public function getEventFilter()
+  {
+    return $this->eventFilter;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

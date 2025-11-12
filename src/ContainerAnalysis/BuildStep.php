@@ -62,6 +62,10 @@ class BuildStep extends \Google\Collection
   public $name;
   protected $pullTimingType = TimeSpan::class;
   protected $pullTimingDataType = '';
+  /**
+   * @var string
+   */
+  public $remoteConfig;
   protected $resultsType = StepResult::class;
   protected $resultsDataType = 'array';
   /**
@@ -242,6 +246,20 @@ class BuildStep extends \Google\Collection
   public function getPullTiming()
   {
     return $this->pullTiming;
+  }
+  /**
+   * @param string
+   */
+  public function setRemoteConfig($remoteConfig)
+  {
+    $this->remoteConfig = $remoteConfig;
+  }
+  /**
+   * @return string
+   */
+  public function getRemoteConfig()
+  {
+    return $this->remoteConfig;
   }
   /**
    * @param StepResult[]

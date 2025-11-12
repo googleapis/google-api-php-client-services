@@ -61,6 +61,14 @@ class AutonomousDatabase extends \Google\Collection
    */
   public $network;
   /**
+   * @var string
+   */
+  public $odbNetwork;
+  /**
+   * @var string
+   */
+  public $odbSubnet;
+  /**
    * @var string[]
    */
   public $peerAutonomousDatabases;
@@ -208,6 +216,34 @@ class AutonomousDatabase extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param string
+   */
+  public function setOdbNetwork($odbNetwork)
+  {
+    $this->odbNetwork = $odbNetwork;
+  }
+  /**
+   * @return string
+   */
+  public function getOdbNetwork()
+  {
+    return $this->odbNetwork;
+  }
+  /**
+   * @param string
+   */
+  public function setOdbSubnet($odbSubnet)
+  {
+    $this->odbSubnet = $odbSubnet;
+  }
+  /**
+   * @return string
+   */
+  public function getOdbSubnet()
+  {
+    return $this->odbSubnet;
   }
   /**
    * @param string[]

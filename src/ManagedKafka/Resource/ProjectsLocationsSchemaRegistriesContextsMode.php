@@ -31,6 +31,23 @@ use Google\Service\ManagedKafka\UpdateSchemaModeRequest;
 class ProjectsLocationsSchemaRegistriesContextsMode extends \Google\Service\Resource
 {
   /**
+   * Delete schema mode for a subject. (mode.delete)
+   *
+   * @param string $name Required. The resource name of subject to delete the mode
+   * for. The format is * projects/{project}/locations/{location}/schemaRegistries
+   * /{schema_registry}/mode/{subject} * projects/{project}/locations/{location}/s
+   * chemaRegistries/{schema_registry}/contexts/{context}/mode/{subject}
+   * @param array $optParams Optional parameters.
+   * @return SchemaMode
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], SchemaMode::class);
+  }
+  /**
    * Get mode at global level or for a subject. (mode.get)
    *
    * @param string $name Required. The resource name of the mode. The format is *

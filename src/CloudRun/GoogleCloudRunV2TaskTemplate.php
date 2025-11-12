@@ -31,6 +31,10 @@ class GoogleCloudRunV2TaskTemplate extends \Google\Collection
    */
   public $executionEnvironment;
   /**
+   * @var bool
+   */
+  public $gpuZonalRedundancyDisabled;
+  /**
    * @var int
    */
   public $maxRetries;
@@ -90,6 +94,20 @@ class GoogleCloudRunV2TaskTemplate extends \Google\Collection
   public function getExecutionEnvironment()
   {
     return $this->executionEnvironment;
+  }
+  /**
+   * @param bool
+   */
+  public function setGpuZonalRedundancyDisabled($gpuZonalRedundancyDisabled)
+  {
+    $this->gpuZonalRedundancyDisabled = $gpuZonalRedundancyDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getGpuZonalRedundancyDisabled()
+  {
+    return $this->gpuZonalRedundancyDisabled;
   }
   /**
    * @param int

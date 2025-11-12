@@ -43,7 +43,7 @@ class ProjectsLocationsAuthorizedViewSets extends \Google\Service\Resource
    * AuthorizedViewSet's resource name. If no ID is specified, a server-generated
    * ID will be used. This value should be 4-64 characters and must match the
    * regular expression `^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$`. See
-   * go/aip/122#resource-id-segments
+   * https://google.aip.dev/122#resource-id-segments
    * @return GoogleCloudContactcenterinsightsV1AuthorizedViewSet
    * @throws \Google\Service\Exception
    */

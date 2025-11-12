@@ -25,6 +25,8 @@ class GoogleCloudDialogflowCxV3ToolAuthentication extends \Google\Model
   protected $bearerTokenConfigDataType = '';
   protected $oauthConfigType = GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig::class;
   protected $oauthConfigDataType = '';
+  protected $serviceAccountAuthConfigType = GoogleCloudDialogflowCxV3ToolAuthenticationServiceAccountAuthConfig::class;
+  protected $serviceAccountAuthConfigDataType = '';
   protected $serviceAgentAuthConfigType = GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig::class;
   protected $serviceAgentAuthConfigDataType = '';
 
@@ -69,6 +71,20 @@ class GoogleCloudDialogflowCxV3ToolAuthentication extends \Google\Model
   public function getOauthConfig()
   {
     return $this->oauthConfig;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3ToolAuthenticationServiceAccountAuthConfig
+   */
+  public function setServiceAccountAuthConfig(GoogleCloudDialogflowCxV3ToolAuthenticationServiceAccountAuthConfig $serviceAccountAuthConfig)
+  {
+    $this->serviceAccountAuthConfig = $serviceAccountAuthConfig;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3ToolAuthenticationServiceAccountAuthConfig
+   */
+  public function getServiceAccountAuthConfig()
+  {
+    return $this->serviceAccountAuthConfig;
   }
   /**
    * @param GoogleCloudDialogflowCxV3ToolAuthenticationServiceAgentAuthConfig

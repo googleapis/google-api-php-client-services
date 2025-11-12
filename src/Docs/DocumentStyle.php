@@ -29,6 +29,8 @@ class DocumentStyle extends \Google\Model
    * @var string
    */
   public $defaultHeaderId;
+  protected $documentFormatType = DocumentFormat::class;
+  protected $documentFormatDataType = '';
   /**
    * @var string
    */
@@ -121,6 +123,20 @@ class DocumentStyle extends \Google\Model
   public function getDefaultHeaderId()
   {
     return $this->defaultHeaderId;
+  }
+  /**
+   * @param DocumentFormat
+   */
+  public function setDocumentFormat(DocumentFormat $documentFormat)
+  {
+    $this->documentFormat = $documentFormat;
+  }
+  /**
+   * @return DocumentFormat
+   */
+  public function getDocumentFormat()
+  {
+    return $this->documentFormat;
   }
   /**
    * @param string

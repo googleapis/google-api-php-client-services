@@ -59,6 +59,10 @@ class FirewallPolicy extends \Google\Collection
   /**
    * @var string
    */
+  public $policyType;
+  /**
+   * @var string
+   */
   public $region;
   /**
    * @var int
@@ -218,6 +222,20 @@ class FirewallPolicy extends \Google\Collection
   public function getParent()
   {
     return $this->parent;
+  }
+  /**
+   * @param string
+   */
+  public function setPolicyType($policyType)
+  {
+    $this->policyType = $policyType;
+  }
+  /**
+   * @return string
+   */
+  public function getPolicyType()
+  {
+    return $this->policyType;
   }
   /**
    * @param string

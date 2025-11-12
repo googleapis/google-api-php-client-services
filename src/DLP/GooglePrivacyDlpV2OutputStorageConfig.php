@@ -23,6 +23,8 @@ class GooglePrivacyDlpV2OutputStorageConfig extends \Google\Model
    * @var string
    */
   public $outputSchema;
+  protected $storagePathType = GooglePrivacyDlpV2CloudStoragePath::class;
+  protected $storagePathDataType = '';
   protected $tableType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $tableDataType = '';
 
@@ -39,6 +41,20 @@ class GooglePrivacyDlpV2OutputStorageConfig extends \Google\Model
   public function getOutputSchema()
   {
     return $this->outputSchema;
+  }
+  /**
+   * @param GooglePrivacyDlpV2CloudStoragePath
+   */
+  public function setStoragePath(GooglePrivacyDlpV2CloudStoragePath $storagePath)
+  {
+    $this->storagePath = $storagePath;
+  }
+  /**
+   * @return GooglePrivacyDlpV2CloudStoragePath
+   */
+  public function getStoragePath()
+  {
+    return $this->storagePath;
   }
   /**
    * @param GooglePrivacyDlpV2BigQueryTable

@@ -33,6 +33,14 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   /**
    * @var string
    */
+  public $configurableBillingApproach;
+  /**
+   * @var string
+   */
+  public $configurableBillingApproachUpdateTime;
+  /**
+   * @var string
+   */
   public $contentConfig;
   /**
    * @var string
@@ -140,6 +148,34 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public function getCmekConfig()
   {
     return $this->cmekConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setConfigurableBillingApproach($configurableBillingApproach)
+  {
+    $this->configurableBillingApproach = $configurableBillingApproach;
+  }
+  /**
+   * @return string
+   */
+  public function getConfigurableBillingApproach()
+  {
+    return $this->configurableBillingApproach;
+  }
+  /**
+   * @param string
+   */
+  public function setConfigurableBillingApproachUpdateTime($configurableBillingApproachUpdateTime)
+  {
+    $this->configurableBillingApproachUpdateTime = $configurableBillingApproachUpdateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getConfigurableBillingApproachUpdateTime()
+  {
+    return $this->configurableBillingApproachUpdateTime;
   }
   /**
    * @param string

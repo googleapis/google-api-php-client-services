@@ -34,7 +34,7 @@ class ProjectsApps extends \Google\Service\Resource
    * (apps.getAabInfo)
    *
    * @param string $name Required. The name of the `AabInfo` resource to retrieve.
-   * Format: `projects/{project_number}/apps/{app_id}/aabInfo`
+   * Format: `projects/{project_number}/apps/{app}/aabInfo`
    * @param array $optParams Optional parameters.
    * @return GoogleFirebaseAppdistroV1AabInfo
    * @throws \Google\Service\Exception

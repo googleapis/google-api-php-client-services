@@ -19,12 +19,6 @@ namespace Google\Service\WorkloadManager;
 
 class WorkloadProfile extends \Google\Model
 {
-  protected $applicationType = Layer::class;
-  protected $applicationDataType = '';
-  protected $ascsType = Layer::class;
-  protected $ascsDataType = '';
-  protected $databaseType = Layer::class;
-  protected $databaseDataType = '';
   /**
    * @var string[]
    */
@@ -42,54 +36,8 @@ class WorkloadProfile extends \Google\Model
   /**
    * @var string
    */
-  public $state;
-  /**
-   * @var string
-   */
   public $workloadType;
 
-  /**
-   * @param Layer
-   */
-  public function setApplication(Layer $application)
-  {
-    $this->application = $application;
-  }
-  /**
-   * @return Layer
-   */
-  public function getApplication()
-  {
-    return $this->application;
-  }
-  /**
-   * @param Layer
-   */
-  public function setAscs(Layer $ascs)
-  {
-    $this->ascs = $ascs;
-  }
-  /**
-   * @return Layer
-   */
-  public function getAscs()
-  {
-    return $this->ascs;
-  }
-  /**
-   * @param Layer
-   */
-  public function setDatabase(Layer $database)
-  {
-    $this->database = $database;
-  }
-  /**
-   * @return Layer
-   */
-  public function getDatabase()
-  {
-    return $this->database;
-  }
   /**
    * @param string[]
    */
@@ -145,20 +93,6 @@ class WorkloadProfile extends \Google\Model
   public function getSapWorkload()
   {
     return $this->sapWorkload;
-  }
-  /**
-   * @param string
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return string
-   */
-  public function getState()
-  {
-    return $this->state;
   }
   /**
    * @param string

@@ -42,6 +42,8 @@ class DriveFile extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $downloadRestrictionsType = DownloadRestrictionsMetadata::class;
+  protected $downloadRestrictionsDataType = '';
   /**
    * @var string
    */
@@ -344,6 +346,20 @@ class DriveFile extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param DownloadRestrictionsMetadata
+   */
+  public function setDownloadRestrictions(DownloadRestrictionsMetadata $downloadRestrictions)
+  {
+    $this->downloadRestrictions = $downloadRestrictions;
+  }
+  /**
+   * @return DownloadRestrictionsMetadata
+   */
+  public function getDownloadRestrictions()
+  {
+    return $this->downloadRestrictions;
   }
   /**
    * @param string

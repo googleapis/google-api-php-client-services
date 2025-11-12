@@ -33,10 +33,6 @@ class BackupConfigInfo extends \Google\Model
    * @var string
    */
   public $lastSuccessfulBackupConsistencyTime;
-  /**
-   * @var string
-   */
-  public $lastSuccessfulLogBackupConsistencyTime;
 
   /**
    * @param BackupApplianceBackupConfig
@@ -107,20 +103,6 @@ class BackupConfigInfo extends \Google\Model
   public function getLastSuccessfulBackupConsistencyTime()
   {
     return $this->lastSuccessfulBackupConsistencyTime;
-  }
-  /**
-   * @param string
-   */
-  public function setLastSuccessfulLogBackupConsistencyTime($lastSuccessfulLogBackupConsistencyTime)
-  {
-    $this->lastSuccessfulLogBackupConsistencyTime = $lastSuccessfulLogBackupConsistencyTime;
-  }
-  /**
-   * @return string
-   */
-  public function getLastSuccessfulLogBackupConsistencyTime()
-  {
-    return $this->lastSuccessfulLogBackupConsistencyTime;
   }
 }
 

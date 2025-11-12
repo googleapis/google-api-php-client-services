@@ -33,8 +33,8 @@ class AppsAuthorizedDomains extends \Google\Service\Resource
    * Lists all domains the user is authorized to administer.
    * (authorizedDomains.listAppsAuthorizedDomains)
    *
-   * @param string $appsId Part of `parent`. Name of the parent Application
-   * resource. Example: apps/myapp.
+   * @param string $appsId Part of `parent`. Required. Name of the parent
+   * Application resource. Example: apps/myapp.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum results to return per page.

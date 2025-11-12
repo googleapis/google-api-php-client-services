@@ -177,7 +177,7 @@ class ProjectsLocationsMetadataStoresContexts extends \Google\Service\Resource
    * character, such as foo.bar. see https://google.aip.dev/132#ordering for more
    * details.
    * @opt_param int pageSize The maximum number of Contexts to return. The service
-   * may return fewer. Must be in range 1-1000, inclusive. Defaults to 100.
+   * may return fewer. Must be in range 1-100, inclusive. Defaults to 100.
    * @opt_param string pageToken A page token, received from a previous
    * MetadataService.ListContexts call. Provide this to retrieve the subsequent
    * page. When paginating, all other provided parameters must match the call that

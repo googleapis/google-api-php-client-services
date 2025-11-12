@@ -154,9 +154,9 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @opt_param string _type Optional. String of comma-delimited FHIR resource
    * types. If provided, only resources of the specified resource type(s) are
    * exported.
-   * @opt_param string organizeOutputBy Optional. Required. The FHIR resource type
-   * used to organize exported resources. Only supports "Patient". When organized
-   * by Patient resource, output files are grouped as follows: * Patient file(s)
+   * @opt_param string organizeOutputBy Required. The FHIR resource type used to
+   * organize exported resources. Only supports "Patient". When organized by
+   * Patient resource, output files are grouped as follows: * Patient file(s)
    * containing the Patient resources. Each Patient is sequentially followed by
    * all resources the Patient references, and all resources that reference the
    * Patient (equivalent to a GetPatientEverything request). * Individual files
@@ -258,9 +258,15 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
   /**
    * Export resources from the FHIR store to the specified destination. This
    * method returns an Operation that can be used to track the status of the
-   * export by calling GetOperation. Immediate fatal errors appear in the error
-   * field, errors are also logged to Cloud Logging (see [Viewing error logs in
-   * Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
+   * export by calling GetOperation. To improve performance, it is recommended to
+   * make the `type` filter as specific as possible, including only the resource
+   * types that are absolutely needed. This minimizes the size of the initial
+   * dataset to be processed and is the most effective way to improve performance.
+   * While post-filters like `_since` are useful for refining results, they do not
+   * speed up the initial data retrieval phase, which is primarily governed by the
+   * `type` filter. Immediate fatal errors appear in the error field, errors are
+   * also logged to Cloud Logging (see [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
    * Otherwise, when the operation finishes, a detailed response of type
    * ExportResourcesResponse is returned in the response field. The metadata field
    * type for this operation is OperationMetadata. (fhirStores.export)

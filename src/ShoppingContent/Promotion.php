@@ -39,6 +39,10 @@ class Promotion extends \Google\Collection
   /**
    * @var string
    */
+  public $customRedemptionRestriction;
+  /**
+   * @var string
+   */
   public $freeGiftDescription;
   /**
    * @var string
@@ -84,6 +88,8 @@ class Promotion extends \Google\Collection
    * @var string
    */
   public $longTitle;
+  protected $maxDiscountAmountType = PriceAmount::class;
+  protected $maxDiscountAmountDataType = '';
   protected $minimumPurchaseAmountType = PriceAmount::class;
   protected $minimumPurchaseAmountDataType = '';
   /**
@@ -148,6 +154,10 @@ class Promotion extends \Google\Collection
    * @var string[]
    */
   public $redemptionChannel;
+  /**
+   * @var string
+   */
+  public $redemptionRestriction;
   /**
    * @var string[]
    */
@@ -224,6 +234,20 @@ class Promotion extends \Google\Collection
   public function getCouponValueType()
   {
     return $this->couponValueType;
+  }
+  /**
+   * @param string
+   */
+  public function setCustomRedemptionRestriction($customRedemptionRestriction)
+  {
+    $this->customRedemptionRestriction = $customRedemptionRestriction;
+  }
+  /**
+   * @return string
+   */
+  public function getCustomRedemptionRestriction()
+  {
+    return $this->customRedemptionRestriction;
   }
   /**
    * @param string
@@ -406,6 +430,20 @@ class Promotion extends \Google\Collection
   public function getLongTitle()
   {
     return $this->longTitle;
+  }
+  /**
+   * @param PriceAmount
+   */
+  public function setMaxDiscountAmount(PriceAmount $maxDiscountAmount)
+  {
+    $this->maxDiscountAmount = $maxDiscountAmount;
+  }
+  /**
+   * @return PriceAmount
+   */
+  public function getMaxDiscountAmount()
+  {
+    return $this->maxDiscountAmount;
   }
   /**
    * @param PriceAmount
@@ -672,6 +710,20 @@ class Promotion extends \Google\Collection
   public function getRedemptionChannel()
   {
     return $this->redemptionChannel;
+  }
+  /**
+   * @param string
+   */
+  public function setRedemptionRestriction($redemptionRestriction)
+  {
+    $this->redemptionRestriction = $redemptionRestriction;
+  }
+  /**
+   * @return string
+   */
+  public function getRedemptionRestriction()
+  {
+    return $this->redemptionRestriction;
   }
   /**
    * @param string[]

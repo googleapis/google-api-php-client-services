@@ -30,6 +30,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity extends \Google
   protected $healthcareFhirConfigType = GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig::class;
   protected $healthcareFhirConfigDataType = '';
   /**
+   * @var string
+   */
+  public $jsonParams;
+  /**
    * @var string[]
    */
   public $keyPropertyMappings;
@@ -81,6 +85,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity extends \Google
   public function getHealthcareFhirConfig()
   {
     return $this->healthcareFhirConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setJsonParams($jsonParams)
+  {
+    $this->jsonParams = $jsonParams;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonParams()
+  {
+    return $this->jsonParams;
   }
   /**
    * @param string[]

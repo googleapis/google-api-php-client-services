@@ -73,6 +73,7 @@ class BigtableAdmin extends \Google\Service
   public $projects_instances_materializedViews;
   public $projects_instances_tables;
   public $projects_instances_tables_authorizedViews;
+  public $projects_instances_tables_schemaBundles;
   public $projects_locations;
   public $rootUrlTemplate;
 
@@ -99,27 +100,7 @@ class BigtableAdmin extends \Google\Service
         'operations',
         [
           'methods' => [
-            'cancel' => [
-              'path' => 'v2/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v2/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
+            'get' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -159,6 +140,10 @@ class BigtableAdmin extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -756,6 +741,10 @@ class BigtableAdmin extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'v2/{+resource}:getIamPolicy',
@@ -781,6 +770,10 @@ class BigtableAdmin extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -1119,13 +1112,41 @@ class BigtableAdmin extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations = new BigtableAdmin\Resource\ProjectsLocations(
+    $this->projects_instances_tables_schemaBundles = new BigtableAdmin\Resource\ProjectsInstancesTablesSchemaBundles(
         $this,
         $this->serviceName,
-        'locations',
+        'schemaBundles',
         [
           'methods' => [
-            'get' => [
+            'create' => [
+              'path' => 'v2/{+parent}/schemaBundles',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'schemaBundleId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1135,7 +1156,87 @@ class BigtableAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getIamPolicy' => [
+              'path' => 'v2/{+resource}:getIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
+              'path' => 'v2/{+parent}/schemaBundles',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'ignoreWarnings' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v2/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v2/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations = new BigtableAdmin\Resource\ProjectsLocations(
+        $this,
+        $this->serviceName,
+        'locations',
+        [
+          'methods' => [
+            'list' => [
               'path' => 'v2/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => [

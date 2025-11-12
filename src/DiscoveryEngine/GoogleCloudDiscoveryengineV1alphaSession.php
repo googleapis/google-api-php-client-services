@@ -33,6 +33,10 @@ class GoogleCloudDiscoveryengineV1alphaSession extends \Google\Collection
    */
   public $isPinned;
   /**
+   * @var string[]
+   */
+  public $labels;
+  /**
    * @var string
    */
   public $name;
@@ -92,6 +96,20 @@ class GoogleCloudDiscoveryengineV1alphaSession extends \Google\Collection
   public function getIsPinned()
   {
     return $this->isPinned;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
   }
   /**
    * @param string

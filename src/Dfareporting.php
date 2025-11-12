@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for Dfareporting (v4).
+ * Service definition for Dfareporting (v5).
  *
  * <p>
  * Build applications to efficiently manage large or complex trafficking,
@@ -74,26 +74,25 @@ class Dfareporting extends \Google\Service
   public $creatives;
   public $dimensionValues;
   public $directorySites;
+  public $dynamicFeeds;
+  public $dynamicProfiles;
   public $dynamicTargetingKeys;
   public $eventTags;
   public $files;
   public $floodlightActivities;
   public $floodlightActivityGroups;
   public $floodlightConfigurations;
-  public $inventoryItems;
   public $languages;
   public $metros;
   public $mobileApps;
   public $mobileCarriers;
   public $operatingSystemVersions;
   public $operatingSystems;
-  public $orders;
   public $placementGroups;
   public $placementStrategies;
   public $placements;
   public $platformTypes;
   public $postalCodes;
-  public $projects;
   public $regions;
   public $remarketingListShares;
   public $remarketingLists;
@@ -102,6 +101,8 @@ class Dfareporting extends \Google\Service
   public $reports_files;
   public $sites;
   public $sizes;
+  public $studioCreativeAssets;
+  public $studioCreatives;
   public $subaccounts;
   public $targetableRemarketingLists;
   public $targetingTemplates;
@@ -126,9 +127,9 @@ class Dfareporting extends \Google\Service
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://dfareporting.googleapis.com/';
     $this->rootUrlTemplate = $rootUrl ?: 'https://dfareporting.UNIVERSE_DOMAIN/';
-    $this->servicePath = 'dfareporting/v4/';
+    $this->servicePath = 'dfareporting/v5/';
     $this->batchPath = 'batch';
-    $this->version = 'v4';
+    $this->version = 'v5';
     $this->serviceName = 'dfareporting';
 
     $this->accountActiveAdSummaries = new Dfareporting\Resource\AccountActiveAdSummaries(
@@ -2295,6 +2296,92 @@ class Dfareporting extends \Google\Service
           ]
         ]
     );
+    $this->dynamicFeeds = new Dfareporting\Resource\DynamicFeeds(
+        $this,
+        $this->serviceName,
+        'dynamicFeeds',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'studio/dynamicFeeds/{+dynamicFeedId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'dynamicFeedId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'studio/dynamicFeeds',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'retransform' => [
+              'path' => 'studio/dynamicFeeds/{+dynamicFeedId}/retransform',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'dynamicFeedId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'update' => [
+              'path' => 'studio/dynamicFeeds',
+              'httpMethod' => 'PUT',
+              'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->dynamicProfiles = new Dfareporting\Resource\DynamicProfiles(
+        $this,
+        $this->serviceName,
+        'dynamicProfiles',
+        [
+          'methods' => [
+            'generateCode' => [
+              'path' => 'studio/dynamicProfiles/{+dynamicProfileId}/generateCode',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'dynamicProfileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'studio/dynamicProfiles/{+dynamicProfileId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'dynamicProfileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'studio/dynamicProfiles',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'publish' => [
+              'path' => 'studio/dynamicProfiles/{+dynamicProfileId}/publish',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'dynamicProfileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'update' => [
+              'path' => 'studio/dynamicProfiles',
+              'httpMethod' => 'PUT',
+              'parameters' => [],
+            ],
+          ]
+        ]
+    );
     $this->dynamicTargetingKeys = new Dfareporting\Resource\DynamicTargetingKeys(
         $this,
         $this->serviceName,
@@ -2874,90 +2961,6 @@ class Dfareporting extends \Google\Service
           ]
         ]
     );
-    $this->inventoryItems = new Dfareporting\Resource\InventoryItems(
-        $this,
-        $this->serviceName,
-        'inventoryItems',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'userprofiles/{+profileId}/projects/{projectId}/inventoryItems/{+id}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'profileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'projectId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'id' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'userprofiles/{+profileId}/projects/{projectId}/inventoryItems',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'profileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'projectId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'ids' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'inPlan' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
-                'maxResults' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'orderId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'siteId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'sortField' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'sortOrder' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'type' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->languages = new Dfareporting\Resource\Languages(
         $this,
         $this->serviceName,
@@ -3154,81 +3157,6 @@ class Dfareporting extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->orders = new Dfareporting\Resource\Orders(
-        $this,
-        $this->serviceName,
-        'orders',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'userprofiles/{+profileId}/projects/{projectId}/orders/{+id}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'profileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'projectId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'id' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'userprofiles/{+profileId}/projects/{projectId}/orders',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'profileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'projectId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'ids' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'maxResults' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'searchString' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'siteId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'sortField' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'sortOrder' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
@@ -3764,71 +3692,6 @@ class Dfareporting extends \Google\Service
           ]
         ]
     );
-    $this->projects = new Dfareporting\Resource\Projects(
-        $this,
-        $this->serviceName,
-        'projects',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'userprofiles/{+profileId}/projects/{+id}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'profileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'id' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'userprofiles/{+profileId}/projects',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'profileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'advertiserIds' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'ids' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'maxResults' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'searchString' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'sortField' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'sortOrder' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->regions = new Dfareporting\Resource\Regions(
         $this,
         $this->serviceName,
@@ -4076,21 +3939,6 @@ class Dfareporting extends \Google\Service
                 'sortOrder' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'userprofiles/{profileId}/reports/{reportId}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'profileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'reportId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'run' => [
@@ -4401,6 +4249,54 @@ class Dfareporting extends \Google\Service
                 'width' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->studioCreativeAssets = new Dfareporting\Resource\StudioCreativeAssets(
+        $this,
+        $this->serviceName,
+        'studioCreativeAssets',
+        [
+          'methods' => [
+            'insert' => [
+              'path' => 'studio/creativeAssets',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->studioCreatives = new Dfareporting\Resource\StudioCreatives(
+        $this,
+        $this->serviceName,
+        'studioCreatives',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'studio/creatives/{+studioCreativeId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'studioCreativeId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'insert' => [
+              'path' => 'studio/creatives',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'publish' => [
+              'path' => 'studio/creatives/{+studioCreativeId}/publish',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'studioCreativeId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

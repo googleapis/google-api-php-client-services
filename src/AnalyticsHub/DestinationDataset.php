@@ -17,8 +17,9 @@
 
 namespace Google\Service\AnalyticsHub;
 
-class DestinationDataset extends \Google\Model
+class DestinationDataset extends \Google\Collection
 {
+  protected $collection_key = 'replicaLocations';
   protected $datasetReferenceType = DestinationDatasetReference::class;
   protected $datasetReferenceDataType = '';
   /**
@@ -37,6 +38,10 @@ class DestinationDataset extends \Google\Model
    * @var string
    */
   public $location;
+  /**
+   * @var string[]
+   */
+  public $replicaLocations;
 
   /**
    * @param DestinationDatasetReference
@@ -107,6 +112,20 @@ class DestinationDataset extends \Google\Model
   public function getLocation()
   {
     return $this->location;
+  }
+  /**
+   * @param string[]
+   */
+  public function setReplicaLocations($replicaLocations)
+  {
+    $this->replicaLocations = $replicaLocations;
+  }
+  /**
+   * @return string[]
+   */
+  public function getReplicaLocations()
+  {
+    return $this->replicaLocations;
   }
 }
 

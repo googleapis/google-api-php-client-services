@@ -27,6 +27,10 @@ class CreateSnapshotRequest extends \Google\Model
    * @var string
    */
   public $subscription;
+  /**
+   * @var string[]
+   */
+  public $tags;
 
   /**
    * @param string[]
@@ -55,6 +59,20 @@ class CreateSnapshotRequest extends \Google\Model
   public function getSubscription()
   {
     return $this->subscription;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
 }
 

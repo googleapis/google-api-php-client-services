@@ -19,11 +19,27 @@ namespace Google\Service\Compute;
 
 class InstanceParams extends \Google\Model
 {
+  protected $requestValidForDurationType = Duration::class;
+  protected $requestValidForDurationDataType = '';
   /**
    * @var string[]
    */
   public $resourceManagerTags;
 
+  /**
+   * @param Duration
+   */
+  public function setRequestValidForDuration(Duration $requestValidForDuration)
+  {
+    $this->requestValidForDuration = $requestValidForDuration;
+  }
+  /**
+   * @return Duration
+   */
+  public function getRequestValidForDuration()
+  {
+    return $this->requestValidForDuration;
+  }
   /**
    * @param string[]
    */

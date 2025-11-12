@@ -20,11 +20,43 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\Collection
 {
   protected $collection_key = 'secretEnv';
+  /**
+   * @var int
+   */
+  public $containerConcurrency;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
+  /**
+   * @var int
+   */
+  public $maxInstances;
+  /**
+   * @var int
+   */
+  public $minInstances;
+  protected $pscInterfaceConfigType = GoogleCloudAiplatformV1PscInterfaceConfig::class;
+  protected $pscInterfaceConfigDataType = '';
+  /**
+   * @var string[]
+   */
+  public $resourceLimits;
   protected $secretEnvType = GoogleCloudAiplatformV1SecretEnvVar::class;
   protected $secretEnvDataType = 'array';
 
+  /**
+   * @param int
+   */
+  public function setContainerConcurrency($containerConcurrency)
+  {
+    $this->containerConcurrency = $containerConcurrency;
+  }
+  /**
+   * @return int
+   */
+  public function getContainerConcurrency()
+  {
+    return $this->containerConcurrency;
+  }
   /**
    * @param GoogleCloudAiplatformV1EnvVar[]
    */
@@ -38,6 +70,62 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
   public function getEnv()
   {
     return $this->env;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxInstances($maxInstances)
+  {
+    $this->maxInstances = $maxInstances;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxInstances()
+  {
+    return $this->maxInstances;
+  }
+  /**
+   * @param int
+   */
+  public function setMinInstances($minInstances)
+  {
+    $this->minInstances = $minInstances;
+  }
+  /**
+   * @return int
+   */
+  public function getMinInstances()
+  {
+    return $this->minInstances;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PscInterfaceConfig
+   */
+  public function setPscInterfaceConfig(GoogleCloudAiplatformV1PscInterfaceConfig $pscInterfaceConfig)
+  {
+    $this->pscInterfaceConfig = $pscInterfaceConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PscInterfaceConfig
+   */
+  public function getPscInterfaceConfig()
+  {
+    return $this->pscInterfaceConfig;
+  }
+  /**
+   * @param string[]
+   */
+  public function setResourceLimits($resourceLimits)
+  {
+    $this->resourceLimits = $resourceLimits;
+  }
+  /**
+   * @return string[]
+   */
+  public function getResourceLimits()
+  {
+    return $this->resourceLimits;
   }
   /**
    * @param GoogleCloudAiplatformV1SecretEnvVar[]

@@ -32,6 +32,10 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
    */
   public $conversationModel;
   /**
+   * @var string
+   */
+  public $generatorId;
+  /**
    * @var string[]
    */
   public $metadata;
@@ -85,6 +89,20 @@ class GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData 
   public function getConversationModel()
   {
     return $this->conversationModel;
+  }
+  /**
+   * @param string
+   */
+  public function setGeneratorId($generatorId)
+  {
+    $this->generatorId = $generatorId;
+  }
+  /**
+   * @return string
+   */
+  public function getGeneratorId()
+  {
+    return $this->generatorId;
   }
   /**
    * @param string[]

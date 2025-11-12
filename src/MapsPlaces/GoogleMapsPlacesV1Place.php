@@ -40,6 +40,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var string
    */
   public $businessStatus;
+  protected $consumerAlertType = GoogleMapsPlacesV1PlaceConsumerAlert::class;
+  protected $consumerAlertDataType = '';
   protected $containingPlacesType = GoogleMapsPlacesV1PlaceContainingPlace::class;
   protected $containingPlacesDataType = 'array';
   /**
@@ -118,6 +120,14 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $menuForChildren;
+  /**
+   * @var string
+   */
+  public $movedPlace;
+  /**
+   * @var string
+   */
+  public $movedPlaceId;
   /**
    * @var string
    */
@@ -343,6 +353,20 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getBusinessStatus()
   {
     return $this->businessStatus;
+  }
+  /**
+   * @param GoogleMapsPlacesV1PlaceConsumerAlert
+   */
+  public function setConsumerAlert(GoogleMapsPlacesV1PlaceConsumerAlert $consumerAlert)
+  {
+    $this->consumerAlert = $consumerAlert;
+  }
+  /**
+   * @return GoogleMapsPlacesV1PlaceConsumerAlert
+   */
+  public function getConsumerAlert()
+  {
+    return $this->consumerAlert;
   }
   /**
    * @param GoogleMapsPlacesV1PlaceContainingPlace[]
@@ -693,6 +717,34 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getMenuForChildren()
   {
     return $this->menuForChildren;
+  }
+  /**
+   * @param string
+   */
+  public function setMovedPlace($movedPlace)
+  {
+    $this->movedPlace = $movedPlace;
+  }
+  /**
+   * @return string
+   */
+  public function getMovedPlace()
+  {
+    return $this->movedPlace;
+  }
+  /**
+   * @param string
+   */
+  public function setMovedPlaceId($movedPlaceId)
+  {
+    $this->movedPlaceId = $movedPlaceId;
+  }
+  /**
+   * @return string
+   */
+  public function getMovedPlaceId()
+  {
+    return $this->movedPlaceId;
   }
   /**
    * @param string

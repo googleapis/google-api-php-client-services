@@ -42,5 +42,6 @@ setup(
                       'httplib2',
                       'absl-py',
                       'six',
-                      'python-gflags'],
+                      'python-gflags',
+                      'setuptools'],
     zip_safe=False)

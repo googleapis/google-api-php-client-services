@@ -67,9 +67,10 @@ class Services extends \Google\Service\Resource
    * Disables VPC service controls for a connection.
    * (services.disableVpcServiceControls)
    *
-   * @param string $parent The service that is managing peering connectivity for a
-   * service producer's organization. For Google services that support this
-   * functionality, this value is `services/servicenetworking.googleapis.com`.
+   * @param string $parent Required. The service that is managing peering
+   * connectivity for a service producer's organization. For Google services that
+   * support this functionality, this value is
+   * `services/servicenetworking.googleapis.com`.
    * @param DisableVpcServiceControlsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
@@ -85,9 +86,10 @@ class Services extends \Google\Service\Resource
    * Enables VPC service controls for a connection.
    * (services.enableVpcServiceControls)
    *
-   * @param string $parent The service that is managing peering connectivity for a
-   * service producer's organization. For Google services that support this
-   * functionality, this value is `services/servicenetworking.googleapis.com`.
+   * @param string $parent Required. The service that is managing peering
+   * connectivity for a service producer's organization. For Google services that
+   * support this functionality, this value is
+   * `services/servicenetworking.googleapis.com`.
    * @param EnableVpcServiceControlsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

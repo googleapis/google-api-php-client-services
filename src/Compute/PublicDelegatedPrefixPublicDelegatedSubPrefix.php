@@ -36,6 +36,10 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
    */
   public $ipCidrRange;
   /**
+   * @var string
+   */
+  public $ipv6AccessType;
+  /**
    * @var bool
    */
   public $isAddress;
@@ -111,6 +115,20 @@ class PublicDelegatedPrefixPublicDelegatedSubPrefix extends \Google\Model
   public function getIpCidrRange()
   {
     return $this->ipCidrRange;
+  }
+  /**
+   * @param string
+   */
+  public function setIpv6AccessType($ipv6AccessType)
+  {
+    $this->ipv6AccessType = $ipv6AccessType;
+  }
+  /**
+   * @return string
+   */
+  public function getIpv6AccessType()
+  {
+    return $this->ipv6AccessType;
   }
   /**
    * @param bool

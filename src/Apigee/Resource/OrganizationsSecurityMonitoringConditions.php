@@ -118,8 +118,7 @@ class OrganizationsSecurityMonitoringConditions extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Optional. The list of fields to update. Valid
-   * fields to update are `profile`, `scope`, `include_all_resources`, `include`,
-   * and `exclude`.
+   * fields to update are `include_all_resources` and `include`.
    * @return GoogleCloudApigeeV1SecurityMonitoringCondition
    * @throws \Google\Service\Exception
    */

@@ -70,6 +70,8 @@ class Command extends \Google\Collection
    * @var string
    */
   public $userName;
+  protected $wipeParamsType = WipeParams::class;
+  protected $wipeParamsDataType = '';
 
   /**
    * @param AddEsimParams
@@ -322,6 +324,20 @@ class Command extends \Google\Collection
   public function getUserName()
   {
     return $this->userName;
+  }
+  /**
+   * @param WipeParams
+   */
+  public function setWipeParams(WipeParams $wipeParams)
+  {
+    $this->wipeParams = $wipeParams;
+  }
+  /**
+   * @return WipeParams
+   */
+  public function getWipeParams()
+  {
+    return $this->wipeParams;
   }
 }
 

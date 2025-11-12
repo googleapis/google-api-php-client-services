@@ -121,6 +121,10 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string
    */
+  public $endpointIdleTtl;
+  /**
+   * @var string
+   */
   public $feedbackType;
   /**
    * @var bool
@@ -148,6 +152,10 @@ class TrainingOptions extends \Google\Collection
    * @var string[]
    */
   public $hparamTuningObjectives;
+  /**
+   * @var string
+   */
+  public $huggingFaceModelId;
   /**
    * @var bool
    */
@@ -197,11 +205,19 @@ class TrainingOptions extends \Google\Collection
   /**
    * @var string
    */
+  public $machineType;
+  /**
+   * @var string
+   */
   public $maxIterations;
   /**
    * @var string
    */
   public $maxParallelTrials;
+  /**
+   * @var string
+   */
+  public $maxReplicaCount;
   /**
    * @var string
    */
@@ -212,6 +228,10 @@ class TrainingOptions extends \Google\Collection
   public $maxTreeDepth;
   public $minAprioriSupport;
   public $minRelativeProgress;
+  /**
+   * @var string
+   */
+  public $minReplicaCount;
   public $minSplitLoss;
   /**
    * @var string
@@ -221,6 +241,10 @@ class TrainingOptions extends \Google\Collection
    * @var string
    */
   public $minTreeChildWeight;
+  /**
+   * @var string
+   */
+  public $modelGardenModelName;
   /**
    * @var string
    */
@@ -264,6 +288,18 @@ class TrainingOptions extends \Google\Collection
    * @var string
    */
   public $pcaSolver;
+  /**
+   * @var string
+   */
+  public $reservationAffinityKey;
+  /**
+   * @var string
+   */
+  public $reservationAffinityType;
+  /**
+   * @var string[]
+   */
+  public $reservationAffinityValues;
   /**
    * @var string
    */
@@ -697,6 +733,20 @@ class TrainingOptions extends \Google\Collection
   /**
    * @param string
    */
+  public function setEndpointIdleTtl($endpointIdleTtl)
+  {
+    $this->endpointIdleTtl = $endpointIdleTtl;
+  }
+  /**
+   * @return string
+   */
+  public function getEndpointIdleTtl()
+  {
+    return $this->endpointIdleTtl;
+  }
+  /**
+   * @param string
+   */
   public function setFeedbackType($feedbackType)
   {
     $this->feedbackType = $feedbackType;
@@ -807,6 +857,20 @@ class TrainingOptions extends \Google\Collection
   public function getHparamTuningObjectives()
   {
     return $this->hparamTuningObjectives;
+  }
+  /**
+   * @param string
+   */
+  public function setHuggingFaceModelId($huggingFaceModelId)
+  {
+    $this->huggingFaceModelId = $huggingFaceModelId;
+  }
+  /**
+   * @return string
+   */
+  public function getHuggingFaceModelId()
+  {
+    return $this->huggingFaceModelId;
   }
   /**
    * @param bool
@@ -999,6 +1063,20 @@ class TrainingOptions extends \Google\Collection
   /**
    * @param string
    */
+  public function setMachineType($machineType)
+  {
+    $this->machineType = $machineType;
+  }
+  /**
+   * @return string
+   */
+  public function getMachineType()
+  {
+    return $this->machineType;
+  }
+  /**
+   * @param string
+   */
   public function setMaxIterations($maxIterations)
   {
     $this->maxIterations = $maxIterations;
@@ -1023,6 +1101,20 @@ class TrainingOptions extends \Google\Collection
   public function getMaxParallelTrials()
   {
     return $this->maxParallelTrials;
+  }
+  /**
+   * @param string
+   */
+  public function setMaxReplicaCount($maxReplicaCount)
+  {
+    $this->maxReplicaCount = $maxReplicaCount;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxReplicaCount()
+  {
+    return $this->maxReplicaCount;
   }
   /**
    * @param string
@@ -1068,6 +1160,20 @@ class TrainingOptions extends \Google\Collection
   {
     return $this->minRelativeProgress;
   }
+  /**
+   * @param string
+   */
+  public function setMinReplicaCount($minReplicaCount)
+  {
+    $this->minReplicaCount = $minReplicaCount;
+  }
+  /**
+   * @return string
+   */
+  public function getMinReplicaCount()
+  {
+    return $this->minReplicaCount;
+  }
   public function setMinSplitLoss($minSplitLoss)
   {
     $this->minSplitLoss = $minSplitLoss;
@@ -1103,6 +1209,20 @@ class TrainingOptions extends \Google\Collection
   public function getMinTreeChildWeight()
   {
     return $this->minTreeChildWeight;
+  }
+  /**
+   * @param string
+   */
+  public function setModelGardenModelName($modelGardenModelName)
+  {
+    $this->modelGardenModelName = $modelGardenModelName;
+  }
+  /**
+   * @return string
+   */
+  public function getModelGardenModelName()
+  {
+    return $this->modelGardenModelName;
   }
   /**
    * @param string
@@ -1265,6 +1385,48 @@ class TrainingOptions extends \Google\Collection
   public function getPcaSolver()
   {
     return $this->pcaSolver;
+  }
+  /**
+   * @param string
+   */
+  public function setReservationAffinityKey($reservationAffinityKey)
+  {
+    $this->reservationAffinityKey = $reservationAffinityKey;
+  }
+  /**
+   * @return string
+   */
+  public function getReservationAffinityKey()
+  {
+    return $this->reservationAffinityKey;
+  }
+  /**
+   * @param string
+   */
+  public function setReservationAffinityType($reservationAffinityType)
+  {
+    $this->reservationAffinityType = $reservationAffinityType;
+  }
+  /**
+   * @return string
+   */
+  public function getReservationAffinityType()
+  {
+    return $this->reservationAffinityType;
+  }
+  /**
+   * @param string[]
+   */
+  public function setReservationAffinityValues($reservationAffinityValues)
+  {
+    $this->reservationAffinityValues = $reservationAffinityValues;
+  }
+  /**
+   * @return string[]
+   */
+  public function getReservationAffinityValues()
+  {
+    return $this->reservationAffinityValues;
   }
   /**
    * @param string

@@ -33,8 +33,8 @@ use Google\Service\CloudKMS\ShowEffectiveKeyAccessJustificationsPolicyConfigResp
 class Projects extends \Google\Service\Resource
 {
   /**
-   * Gets the KeyAccessJustificationsPolicyConfig for a given
-   * organization/folder/projects. (projects.getKajPolicyConfig)
+   * Gets the KeyAccessJustificationsPolicyConfig for a given organization,
+   * folder, or project. (projects.getKajPolicyConfig)
    *
    * @param string $name Required. The name of the
    * KeyAccessJustificationsPolicyConfig to get.
@@ -102,8 +102,8 @@ class Projects extends \Google\Service\Resource
     return $this->call('showEffectiveKeyAccessJustificationsPolicyConfig', [$params], ShowEffectiveKeyAccessJustificationsPolicyConfigResponse::class);
   }
   /**
-   * Updates the KeyAccessJustificationsPolicyConfig for a given
-   * organization/folder/projects. (projects.updateKajPolicyConfig)
+   * Updates the KeyAccessJustificationsPolicyConfig for a given organization,
+   * folder, or project. (projects.updateKajPolicyConfig)
    *
    * @param string $name Identifier. The resource name for this
    * KeyAccessJustificationsPolicyConfig in the format of

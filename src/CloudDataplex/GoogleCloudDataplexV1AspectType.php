@@ -28,6 +28,10 @@ class GoogleCloudDataplexV1AspectType extends \Google\Model
   /**
    * @var string
    */
+  public $dataClassification;
+  /**
+   * @var string
+   */
   public $description;
   /**
    * @var string
@@ -87,6 +91,20 @@ class GoogleCloudDataplexV1AspectType extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDataClassification($dataClassification)
+  {
+    $this->dataClassification = $dataClassification;
+  }
+  /**
+   * @return string
+   */
+  public function getDataClassification()
+  {
+    return $this->dataClassification;
   }
   /**
    * @param string

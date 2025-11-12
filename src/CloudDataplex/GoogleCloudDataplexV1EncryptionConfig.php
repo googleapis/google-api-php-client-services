@@ -24,6 +24,10 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
    */
   public $createTime;
   /**
+   * @var bool
+   */
+  public $enableMetastoreEncryption;
+  /**
    * @var string
    */
   public $encryptionState;
@@ -59,6 +63,20 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableMetastoreEncryption($enableMetastoreEncryption)
+  {
+    $this->enableMetastoreEncryption = $enableMetastoreEncryption;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableMetastoreEncryption()
+  {
+    return $this->enableMetastoreEncryption;
   }
   /**
    * @param string

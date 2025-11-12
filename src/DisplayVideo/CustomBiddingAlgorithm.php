@@ -54,6 +54,10 @@ class CustomBiddingAlgorithm extends \Google\Collection
    * @var string[]
    */
   public $sharedAdvertiserIds;
+  /**
+   * @var string
+   */
+  public $thirdPartyOptimizationPartner;
 
   /**
    * @param string
@@ -180,6 +184,20 @@ class CustomBiddingAlgorithm extends \Google\Collection
   public function getSharedAdvertiserIds()
   {
     return $this->sharedAdvertiserIds;
+  }
+  /**
+   * @param string
+   */
+  public function setThirdPartyOptimizationPartner($thirdPartyOptimizationPartner)
+  {
+    $this->thirdPartyOptimizationPartner = $thirdPartyOptimizationPartner;
+  }
+  /**
+   * @return string
+   */
+  public function getThirdPartyOptimizationPartner()
+  {
+    return $this->thirdPartyOptimizationPartner;
   }
 }
 

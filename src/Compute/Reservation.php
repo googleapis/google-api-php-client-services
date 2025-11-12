@@ -20,6 +20,8 @@ namespace Google\Service\Compute;
 class Reservation extends \Google\Collection
 {
   protected $collection_key = 'linkedCommitments';
+  protected $advancedDeploymentControlType = ReservationAdvancedDeploymentControl::class;
+  protected $advancedDeploymentControlDataType = '';
   protected $aggregateReservationType = AllocationAggregateReservation::class;
   protected $aggregateReservationDataType = '';
   /**
@@ -64,6 +66,10 @@ class Reservation extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $protectionTier;
   protected $reservationSharingPolicyType = AllocationReservationSharingPolicy::class;
   protected $reservationSharingPolicyDataType = '';
   /**
@@ -76,6 +82,10 @@ class Reservation extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * @var string
+   */
+  public $schedulingType;
   /**
    * @var string
    */
@@ -97,6 +107,20 @@ class Reservation extends \Google\Collection
    */
   public $zone;
 
+  /**
+   * @param ReservationAdvancedDeploymentControl
+   */
+  public function setAdvancedDeploymentControl(ReservationAdvancedDeploymentControl $advancedDeploymentControl)
+  {
+    $this->advancedDeploymentControl = $advancedDeploymentControl;
+  }
+  /**
+   * @return ReservationAdvancedDeploymentControl
+   */
+  public function getAdvancedDeploymentControl()
+  {
+    return $this->advancedDeploymentControl;
+  }
   /**
    * @param AllocationAggregateReservation
    */
@@ -266,6 +290,20 @@ class Reservation extends \Google\Collection
     return $this->name;
   }
   /**
+   * @param string
+   */
+  public function setProtectionTier($protectionTier)
+  {
+    $this->protectionTier = $protectionTier;
+  }
+  /**
+   * @return string
+   */
+  public function getProtectionTier()
+  {
+    return $this->protectionTier;
+  }
+  /**
    * @param AllocationReservationSharingPolicy
    */
   public function setReservationSharingPolicy(AllocationReservationSharingPolicy $reservationSharingPolicy)
@@ -320,6 +358,20 @@ class Reservation extends \Google\Collection
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * @param string
+   */
+  public function setSchedulingType($schedulingType)
+  {
+    $this->schedulingType = $schedulingType;
+  }
+  /**
+   * @return string
+   */
+  public function getSchedulingType()
+  {
+    return $this->schedulingType;
   }
   /**
    * @param string

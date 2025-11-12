@@ -31,6 +31,10 @@ class GoogleAppsCardV1Section extends \Google\Collection
    */
   public $header;
   /**
+   * @var string
+   */
+  public $id;
+  /**
    * @var int
    */
   public $uncollapsibleWidgetsCount;
@@ -78,6 +82,20 @@ class GoogleAppsCardV1Section extends \Google\Collection
   public function getHeader()
   {
     return $this->header;
+  }
+  /**
+   * @param string
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
   }
   /**
    * @param int

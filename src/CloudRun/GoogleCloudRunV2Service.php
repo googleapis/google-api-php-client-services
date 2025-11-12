@@ -106,6 +106,8 @@ class GoogleCloudRunV2Service extends \Google\Collection
    * @var string
    */
   public $launchStage;
+  protected $multiRegionSettingsType = GoogleCloudRunV2MultiRegionSettings::class;
+  protected $multiRegionSettingsDataType = '';
   /**
    * @var string
    */
@@ -474,6 +476,20 @@ class GoogleCloudRunV2Service extends \Google\Collection
   public function getLaunchStage()
   {
     return $this->launchStage;
+  }
+  /**
+   * @param GoogleCloudRunV2MultiRegionSettings
+   */
+  public function setMultiRegionSettings(GoogleCloudRunV2MultiRegionSettings $multiRegionSettings)
+  {
+    $this->multiRegionSettings = $multiRegionSettings;
+  }
+  /**
+   * @return GoogleCloudRunV2MultiRegionSettings
+   */
+  public function getMultiRegionSettings()
+  {
+    return $this->multiRegionSettings;
   }
   /**
    * @param string

@@ -20,6 +20,8 @@ namespace Google\Service\Spanner;
 class InstancePartition extends \Google\Collection
 {
   protected $collection_key = 'referencingDatabases';
+  protected $autoscalingConfigType = AutoscalingConfig::class;
+  protected $autoscalingConfigDataType = '';
   /**
    * @var string
    */
@@ -65,6 +67,20 @@ class InstancePartition extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param AutoscalingConfig
+   */
+  public function setAutoscalingConfig(AutoscalingConfig $autoscalingConfig)
+  {
+    $this->autoscalingConfig = $autoscalingConfig;
+  }
+  /**
+   * @return AutoscalingConfig
+   */
+  public function getAutoscalingConfig()
+  {
+    return $this->autoscalingConfig;
+  }
   /**
    * @param string
    */

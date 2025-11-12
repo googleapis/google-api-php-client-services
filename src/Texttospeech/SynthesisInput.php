@@ -30,6 +30,10 @@ class SynthesisInput extends \Google\Model
   /**
    * @var string
    */
+  public $prompt;
+  /**
+   * @var string
+   */
   public $ssml;
   /**
    * @var string
@@ -77,6 +81,20 @@ class SynthesisInput extends \Google\Model
   public function getMultiSpeakerMarkup()
   {
     return $this->multiSpeakerMarkup;
+  }
+  /**
+   * @param string
+   */
+  public function setPrompt($prompt)
+  {
+    $this->prompt = $prompt;
+  }
+  /**
+   * @return string
+   */
+  public function getPrompt()
+  {
+    return $this->prompt;
   }
   /**
    * @param string

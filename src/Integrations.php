@@ -47,7 +47,6 @@ class Integrations extends \Google\Service
   public $projects_locations_certificates;
   public $projects_locations_clients;
   public $projects_locations_cloudFunctions;
-  public $projects_locations_collections_engines_assistants_agentFlows;
   public $projects_locations_connections;
   public $projects_locations_connections_runtimeActionSchemas;
   public $projects_locations_connections_runtimeEntitySchemas;
@@ -406,7 +405,17 @@ class Integrations extends \Google\Service
         'clients',
         [
           'methods' => [
-            'deprovision' => [
+            'changeConfig' => [
+              'path' => 'v1/{+parent}/clients:changeConfig',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'deprovision' => [
               'path' => 'v1/{+parent}/clients:deprovision',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -494,110 +503,6 @@ class Integrations extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_collections_engines_assistants_agentFlows = new Integrations\Resource\ProjectsLocationsCollectionsEnginesAssistantsAgentFlows(
-        $this,
-        $this->serviceName,
-        'agentFlows',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/agentFlows',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generate' => [
-              'path' => 'v1/{+parent}/agentFlows:generate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'generateAndUpdate' => [
-              'path' => 'v1/{+name}:generateAndUpdate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/agentFlows',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'orderBy' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'readMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
@@ -1156,6 +1061,16 @@ class Integrations extends \Google\Service
               ],
             ],'publish' => [
               'path' => 'v1/{+name}:publish',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'test' => [
+              'path' => 'v1/{+name}:test',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -2362,6 +2277,10 @@ class Integrations extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'enableNaturalLanguageQueryUnderstanding' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -2375,6 +2294,10 @@ class Integrations extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'query' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

@@ -48,6 +48,10 @@ class AndroidConfig extends \Google\Model
    */
   public $restrictedPackageName;
   /**
+   * @var bool
+   */
+  public $restrictedSatelliteOk;
+  /**
    * @var string
    */
   public $ttl;
@@ -163,6 +167,20 @@ class AndroidConfig extends \Google\Model
   public function getRestrictedPackageName()
   {
     return $this->restrictedPackageName;
+  }
+  /**
+   * @param bool
+   */
+  public function setRestrictedSatelliteOk($restrictedSatelliteOk)
+  {
+    $this->restrictedSatelliteOk = $restrictedSatelliteOk;
+  }
+  /**
+   * @return bool
+   */
+  public function getRestrictedSatelliteOk()
+  {
+    return $this->restrictedSatelliteOk;
   }
   /**
    * @param string

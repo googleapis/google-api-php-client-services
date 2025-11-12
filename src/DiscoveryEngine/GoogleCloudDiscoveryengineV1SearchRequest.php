@@ -48,6 +48,8 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
    * @var string
    */
   public $languageCode;
+  protected $naturalLanguageQueryUnderstandingSpecType = GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec::class;
+  protected $naturalLanguageQueryUnderstandingSpecDataType = '';
   /**
    * @var int
    */
@@ -78,6 +80,14 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public $query;
   protected $queryExpansionSpecType = GoogleCloudDiscoveryengineV1SearchRequestQueryExpansionSpec::class;
   protected $queryExpansionSpecDataType = '';
+  /**
+   * @var string
+   */
+  public $rankingExpression;
+  /**
+   * @var string
+   */
+  public $rankingExpressionBackend;
   protected $relevanceScoreSpecType = GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec::class;
   protected $relevanceScoreSpecDataType = '';
   /**
@@ -250,6 +260,20 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
     return $this->languageCode;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec
+   */
+  public function setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec $naturalLanguageQueryUnderstandingSpec)
+  {
+    $this->naturalLanguageQueryUnderstandingSpec = $naturalLanguageQueryUnderstandingSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec
+   */
+  public function getNaturalLanguageQueryUnderstandingSpec()
+  {
+    return $this->naturalLanguageQueryUnderstandingSpec;
+  }
+  /**
    * @param int
    */
   public function setOffset($offset)
@@ -360,6 +384,34 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public function getQueryExpansionSpec()
   {
     return $this->queryExpansionSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setRankingExpression($rankingExpression)
+  {
+    $this->rankingExpression = $rankingExpression;
+  }
+  /**
+   * @return string
+   */
+  public function getRankingExpression()
+  {
+    return $this->rankingExpression;
+  }
+  /**
+   * @param string
+   */
+  public function setRankingExpressionBackend($rankingExpressionBackend)
+  {
+    $this->rankingExpressionBackend = $rankingExpressionBackend;
+  }
+  /**
+   * @return string
+   */
+  public function getRankingExpressionBackend()
+  {
+    return $this->rankingExpressionBackend;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec

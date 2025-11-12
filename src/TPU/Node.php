@@ -30,6 +30,8 @@ class Node extends \Google\Collection
    * @var string
    */
   public $apiVersion;
+  protected $bootDiskConfigType = BootDiskConfig::class;
+  protected $bootDiskConfigDataType = '';
   /**
    * @var string
    */
@@ -146,6 +148,20 @@ class Node extends \Google\Collection
   public function getApiVersion()
   {
     return $this->apiVersion;
+  }
+  /**
+   * @param BootDiskConfig
+   */
+  public function setBootDiskConfig(BootDiskConfig $bootDiskConfig)
+  {
+    $this->bootDiskConfig = $bootDiskConfig;
+  }
+  /**
+   * @return BootDiskConfig
+   */
+  public function getBootDiskConfig()
+  {
+    return $this->bootDiskConfig;
   }
   /**
    * @param string

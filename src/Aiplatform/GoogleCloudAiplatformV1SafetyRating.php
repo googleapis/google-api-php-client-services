@@ -30,6 +30,10 @@ class GoogleCloudAiplatformV1SafetyRating extends \Google\Model
   /**
    * @var string
    */
+  public $overwrittenThreshold;
+  /**
+   * @var string
+   */
   public $probability;
   /**
    * @var float
@@ -71,6 +75,20 @@ class GoogleCloudAiplatformV1SafetyRating extends \Google\Model
   public function getCategory()
   {
     return $this->category;
+  }
+  /**
+   * @param string
+   */
+  public function setOverwrittenThreshold($overwrittenThreshold)
+  {
+    $this->overwrittenThreshold = $overwrittenThreshold;
+  }
+  /**
+   * @return string
+   */
+  public function getOverwrittenThreshold()
+  {
+    return $this->overwrittenThreshold;
   }
   /**
    * @param string

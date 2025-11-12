@@ -27,6 +27,16 @@ class BackupPlanAssociation extends \Google\Collection
   /**
    * @var string
    */
+  public $backupPlanRevisionId;
+  /**
+   * @var string
+   */
+  public $backupPlanRevisionName;
+  protected $cloudSqlInstanceBackupPlanAssociationPropertiesType = CloudSqlInstanceBackupPlanAssociationProperties::class;
+  protected $cloudSqlInstanceBackupPlanAssociationPropertiesDataType = '';
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var string
@@ -68,6 +78,48 @@ class BackupPlanAssociation extends \Google\Collection
   public function getBackupPlan()
   {
     return $this->backupPlan;
+  }
+  /**
+   * @param string
+   */
+  public function setBackupPlanRevisionId($backupPlanRevisionId)
+  {
+    $this->backupPlanRevisionId = $backupPlanRevisionId;
+  }
+  /**
+   * @return string
+   */
+  public function getBackupPlanRevisionId()
+  {
+    return $this->backupPlanRevisionId;
+  }
+  /**
+   * @param string
+   */
+  public function setBackupPlanRevisionName($backupPlanRevisionName)
+  {
+    $this->backupPlanRevisionName = $backupPlanRevisionName;
+  }
+  /**
+   * @return string
+   */
+  public function getBackupPlanRevisionName()
+  {
+    return $this->backupPlanRevisionName;
+  }
+  /**
+   * @param CloudSqlInstanceBackupPlanAssociationProperties
+   */
+  public function setCloudSqlInstanceBackupPlanAssociationProperties(CloudSqlInstanceBackupPlanAssociationProperties $cloudSqlInstanceBackupPlanAssociationProperties)
+  {
+    $this->cloudSqlInstanceBackupPlanAssociationProperties = $cloudSqlInstanceBackupPlanAssociationProperties;
+  }
+  /**
+   * @return CloudSqlInstanceBackupPlanAssociationProperties
+   */
+  public function getCloudSqlInstanceBackupPlanAssociationProperties()
+  {
+    return $this->cloudSqlInstanceBackupPlanAssociationProperties;
   }
   /**
    * @param string

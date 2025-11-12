@@ -85,6 +85,8 @@ class VmwareAdminCluster extends \Google\Model
   protected $preparedSecretsDataType = '';
   protected $privateRegistryConfigType = VmwareAdminPrivateRegistryConfig::class;
   protected $privateRegistryConfigDataType = '';
+  protected $proxyType = VmwareAdminProxy::class;
+  protected $proxyDataType = '';
   /**
    * @var bool
    */
@@ -415,6 +417,20 @@ class VmwareAdminCluster extends \Google\Model
   public function getPrivateRegistryConfig()
   {
     return $this->privateRegistryConfig;
+  }
+  /**
+   * @param VmwareAdminProxy
+   */
+  public function setProxy(VmwareAdminProxy $proxy)
+  {
+    $this->proxy = $proxy;
+  }
+  /**
+   * @return VmwareAdminProxy
+   */
+  public function getProxy()
+  {
+    return $this->proxy;
   }
   /**
    * @param bool

@@ -37,6 +37,9 @@ class ProjectsLocationsDbSystemShapes extends \Google\Service\Resource
    * in the following format: projects/{project}/locations/{location}.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. An expression for filtering the results of
+   * the request. Only the gcp_oracle_zone_id field is supported in this format:
+   * `gcp_oracle_zone_id="{gcp_oracle_zone_id}"`.
    * @opt_param int pageSize Optional. The maximum number of items to return. If
    * unspecified, at most 50 database system shapes will be returned. The maximum
    * value is 1000; values above 1000 will be coerced to 1000.

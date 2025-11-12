@@ -21,6 +21,10 @@ class RestoreClusterRequest extends \Google\Model
 {
   protected $backupSourceType = BackupSource::class;
   protected $backupSourceDataType = '';
+  protected $backupdrBackupSourceType = BackupDrBackupSource::class;
+  protected $backupdrBackupSourceDataType = '';
+  protected $backupdrPitrSourceType = BackupDrPitrSource::class;
+  protected $backupdrPitrSourceDataType = '';
   protected $clusterType = Cluster::class;
   protected $clusterDataType = '';
   /**
@@ -51,6 +55,34 @@ class RestoreClusterRequest extends \Google\Model
   public function getBackupSource()
   {
     return $this->backupSource;
+  }
+  /**
+   * @param BackupDrBackupSource
+   */
+  public function setBackupdrBackupSource(BackupDrBackupSource $backupdrBackupSource)
+  {
+    $this->backupdrBackupSource = $backupdrBackupSource;
+  }
+  /**
+   * @return BackupDrBackupSource
+   */
+  public function getBackupdrBackupSource()
+  {
+    return $this->backupdrBackupSource;
+  }
+  /**
+   * @param BackupDrPitrSource
+   */
+  public function setBackupdrPitrSource(BackupDrPitrSource $backupdrPitrSource)
+  {
+    $this->backupdrPitrSource = $backupdrPitrSource;
+  }
+  /**
+   * @return BackupDrPitrSource
+   */
+  public function getBackupdrPitrSource()
+  {
+    return $this->backupdrPitrSource;
   }
   /**
    * @param Cluster

@@ -60,11 +60,15 @@ class AndroidPublisher extends \Google\Service
   public $inappproducts;
   public $internalappsharingartifacts;
   public $monetization;
+  public $monetization_onetimeproducts;
+  public $monetization_onetimeproducts_purchaseOptions;
+  public $monetization_onetimeproducts_purchaseOptions_offers;
   public $monetization_subscriptions;
   public $monetization_subscriptions_basePlans;
   public $monetization_subscriptions_basePlans_offers;
   public $orders;
   public $purchases_products;
+  public $purchases_productsv2;
   public $purchases_subscriptions;
   public $purchases_subscriptionsv2;
   public $purchases_voidedpurchases;
@@ -1416,6 +1420,367 @@ class AndroidPublisher extends \Google\Service
           ]
         ]
     );
+    $this->monetization_onetimeproducts = new AndroidPublisher\Resource\MonetizationOnetimeproducts(
+        $this,
+        $this->serviceName,
+        'onetimeproducts',
+        [
+          'methods' => [
+            'batchDelete' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchGet' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts:batchGet',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productIds' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
+            ],'batchUpdate' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts:batchUpdate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'latencyTolerance' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/onetimeproducts/{productId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'allowMissing' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'latencyTolerance' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'regionsVersion.version' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->monetization_onetimeproducts_purchaseOptions = new AndroidPublisher\Resource\MonetizationOnetimeproductsPurchaseOptions(
+        $this,
+        $this->serviceName,
+        'purchaseOptions',
+        [
+          'methods' => [
+            'batchDelete' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchUpdateStates' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions:batchUpdateStates',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->monetization_onetimeproducts_purchaseOptions_offers = new AndroidPublisher\Resource\MonetizationOnetimeproductsPurchaseOptionsOffers(
+        $this,
+        $this->serviceName,
+        'offers',
+        [
+          'methods' => [
+            'activate' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers/{offerId}:activate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'offerId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchDelete' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchGet' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchGet',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchUpdate' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchUpdate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchUpdateStates' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers:batchUpdateStates',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'cancel' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers/{offerId}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'offerId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'deactivate' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers/{offerId}:deactivate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'offerId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/oneTimeProducts/{productId}/purchaseOptions/{purchaseOptionId}/offers',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'productId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'purchaseOptionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->monetization_subscriptions = new AndroidPublisher\Resource\MonetizationSubscriptions(
         $this,
         $this->serviceName,
@@ -2083,6 +2448,31 @@ class AndroidPublisher extends \Google\Service
           ]
         ]
     );
+    $this->purchases_productsv2 = new AndroidPublisher\Resource\PurchasesProductsv2(
+        $this,
+        $this->serviceName,
+        'productsv2',
+        [
+          'methods' => [
+            'getproductpurchasev2' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/productsv2/tokens/{token}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'token' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->purchases_subscriptions = new AndroidPublisher\Resource\PurchasesSubscriptions(
         $this,
         $this->serviceName,
@@ -2219,7 +2609,22 @@ class AndroidPublisher extends \Google\Service
         'subscriptionsv2',
         [
           'methods' => [
-            'get' => [
+            'cancel' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'token' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}',
               'httpMethod' => 'GET',
               'parameters' => [

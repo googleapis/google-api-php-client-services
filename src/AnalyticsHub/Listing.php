@@ -84,6 +84,8 @@ class Listing extends \Google\Collection
    * @var string
    */
   public $state;
+  protected $storedProcedureConfigType = StoredProcedureConfig::class;
+  protected $storedProcedureConfigDataType = '';
 
   /**
    * @param bool
@@ -350,6 +352,20 @@ class Listing extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param StoredProcedureConfig
+   */
+  public function setStoredProcedureConfig(StoredProcedureConfig $storedProcedureConfig)
+  {
+    $this->storedProcedureConfig = $storedProcedureConfig;
+  }
+  /**
+   * @return StoredProcedureConfig
+   */
+  public function getStoredProcedureConfig()
+  {
+    return $this->storedProcedureConfig;
   }
 }
 

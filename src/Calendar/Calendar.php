@@ -24,6 +24,10 @@ class Calendar extends \Google\Model
   /**
    * @var string
    */
+  public $dataOwner;
+  /**
+   * @var string
+   */
   public $description;
   /**
    * @var string
@@ -63,6 +67,20 @@ class Calendar extends \Google\Model
   public function getConferenceProperties()
   {
     return $this->conferenceProperties;
+  }
+  /**
+   * @param string
+   */
+  public function setDataOwner($dataOwner)
+  {
+    $this->dataOwner = $dataOwner;
+  }
+  /**
+   * @return string
+   */
+  public function getDataOwner()
+  {
+    return $this->dataOwner;
   }
   /**
    * @param string

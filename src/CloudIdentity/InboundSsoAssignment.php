@@ -27,6 +27,8 @@ class InboundSsoAssignment extends \Google\Model
    * @var string
    */
   public $name;
+  protected $oidcSsoInfoType = OidcSsoInfo::class;
+  protected $oidcSsoInfoDataType = '';
   /**
    * @var int
    */
@@ -75,6 +77,20 @@ class InboundSsoAssignment extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param OidcSsoInfo
+   */
+  public function setOidcSsoInfo(OidcSsoInfo $oidcSsoInfo)
+  {
+    $this->oidcSsoInfo = $oidcSsoInfo;
+  }
+  /**
+   * @return OidcSsoInfo
+   */
+  public function getOidcSsoInfo()
+  {
+    return $this->oidcSsoInfo;
   }
   /**
    * @param int

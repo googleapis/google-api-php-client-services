@@ -38,9 +38,9 @@ class CloudScheduler extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $operations;
   public $projects_locations;
   public $projects_locations_jobs;
+  public $projects_locations_operations;
   public $rootUrlTemplate;
 
   /**
@@ -60,68 +60,6 @@ class CloudScheduler extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'cloudscheduler';
 
-    $this->operations = new CloudScheduler\Resource\Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        [
-          'methods' => [
-            'cancel' => [
-              'path' => 'v1/{+name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects_locations = new CloudScheduler\Resource\ProjectsLocations(
         $this,
         $this->serviceName,
@@ -129,6 +67,16 @@ class CloudScheduler extends \Google\Service
         [
           'methods' => [
             'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getCmekConfig' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -161,6 +109,20 @@ class CloudScheduler extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'updateCmekConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -265,6 +227,72 @@ class CloudScheduler extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_operations = new CloudScheduler\Resource\ProjectsLocationsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+name}/operations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],

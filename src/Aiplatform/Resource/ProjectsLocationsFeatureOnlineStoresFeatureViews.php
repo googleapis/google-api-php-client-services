@@ -18,8 +18,12 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureView;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureViewDirectWriteRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureViewDirectWriteResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FetchFeatureValuesRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FetchFeatureValuesResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateFetchAccessTokenRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListFeatureViewsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1SearchNearestEntitiesRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1SearchNearestEntitiesResponse;
@@ -84,6 +88,25 @@ class ProjectsLocationsFeatureOnlineStoresFeatureViews extends \Google\Service\R
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
+   * Bidirectional streaming RPC to directly write to feature values in a feature
+   * view. Requests may not have a one-to-one mapping to responses and responses
+   * may be returned out-of-order to reduce latency. (featureViews.directWrite)
+   *
+   * @param string $featureView FeatureView resource format `projects/{project}/lo
+   * cations/{location}/featureOnlineStores/{featureOnlineStore}/featureViews/{fea
+   * tureView}`
+   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1FeatureViewDirectWriteResponse
+   * @throws \Google\Service\Exception
+   */
+  public function directWrite($featureView, GoogleCloudAiplatformV1FeatureViewDirectWriteRequest $postBody, $optParams = [])
+  {
+    $params = ['featureView' => $featureView, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('directWrite', [$params], GoogleCloudAiplatformV1FeatureViewDirectWriteResponse::class);
+  }
+  /**
    * Fetch feature values under a FeatureView. (featureViews.fetchFeatureValues)
    *
    * @param string $featureView Required. FeatureView resource format `projects/{p
@@ -99,6 +122,25 @@ class ProjectsLocationsFeatureOnlineStoresFeatureViews extends \Google\Service\R
     $params = ['featureView' => $featureView, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('fetchFeatureValues', [$params], GoogleCloudAiplatformV1FetchFeatureValuesResponse::class);
+  }
+  /**
+   * RPC to generate an access token for the given feature view. FeatureViews
+   * under the same FeatureOnlineStore share the same access token.
+   * (featureViews.generateFetchAccessToken)
+   *
+   * @param string $featureView FeatureView resource format `projects/{project}/lo
+   * cations/{location}/featureOnlineStores/{featureOnlineStore}/featureViews/{fea
+   * tureView}`
+   * @param GoogleCloudAiplatformV1GenerateFetchAccessTokenRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateFetchAccessToken($featureView, GoogleCloudAiplatformV1GenerateFetchAccessTokenRequest $postBody, $optParams = [])
+  {
+    $params = ['featureView' => $featureView, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateFetchAccessToken', [$params], GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse::class);
   }
   /**
    * Gets details of a single FeatureView. (featureViews.get)

@@ -27,6 +27,10 @@ class RepairClusterRequest extends \Google\Collection
    */
   public $clusterUuid;
   /**
+   * @var bool
+   */
+  public $dataprocSuperUser;
+  /**
    * @var string
    */
   public $gracefulDecommissionTimeout;
@@ -68,6 +72,20 @@ class RepairClusterRequest extends \Google\Collection
   public function getClusterUuid()
   {
     return $this->clusterUuid;
+  }
+  /**
+   * @param bool
+   */
+  public function setDataprocSuperUser($dataprocSuperUser)
+  {
+    $this->dataprocSuperUser = $dataprocSuperUser;
+  }
+  /**
+   * @return bool
+   */
+  public function getDataprocSuperUser()
+  {
+    return $this->dataprocSuperUser;
   }
   /**
    * @param string

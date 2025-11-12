@@ -51,6 +51,10 @@ class GoogleCloudApigeeV1Instance extends \Google\Collection
    */
   public $ipRange;
   /**
+   * @var bool
+   */
+  public $isVersionLocked;
+  /**
    * @var string
    */
   public $lastModifiedAt;
@@ -58,6 +62,8 @@ class GoogleCloudApigeeV1Instance extends \Google\Collection
    * @var string
    */
   public $location;
+  protected $maintenanceUpdatePolicyType = GoogleCloudApigeeV1MaintenanceUpdatePolicy::class;
+  protected $maintenanceUpdatePolicyDataType = '';
   /**
    * @var string
    */
@@ -74,6 +80,8 @@ class GoogleCloudApigeeV1Instance extends \Google\Collection
    * @var string
    */
   public $runtimeVersion;
+  protected $scheduledMaintenanceType = GoogleCloudApigeeV1ScheduledMaintenance::class;
+  protected $scheduledMaintenanceDataType = '';
   /**
    * @var string
    */
@@ -196,6 +204,20 @@ class GoogleCloudApigeeV1Instance extends \Google\Collection
     return $this->ipRange;
   }
   /**
+   * @param bool
+   */
+  public function setIsVersionLocked($isVersionLocked)
+  {
+    $this->isVersionLocked = $isVersionLocked;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsVersionLocked()
+  {
+    return $this->isVersionLocked;
+  }
+  /**
    * @param string
    */
   public function setLastModifiedAt($lastModifiedAt)
@@ -222,6 +244,20 @@ class GoogleCloudApigeeV1Instance extends \Google\Collection
   public function getLocation()
   {
     return $this->location;
+  }
+  /**
+   * @param GoogleCloudApigeeV1MaintenanceUpdatePolicy
+   */
+  public function setMaintenanceUpdatePolicy(GoogleCloudApigeeV1MaintenanceUpdatePolicy $maintenanceUpdatePolicy)
+  {
+    $this->maintenanceUpdatePolicy = $maintenanceUpdatePolicy;
+  }
+  /**
+   * @return GoogleCloudApigeeV1MaintenanceUpdatePolicy
+   */
+  public function getMaintenanceUpdatePolicy()
+  {
+    return $this->maintenanceUpdatePolicy;
   }
   /**
    * @param string
@@ -278,6 +314,20 @@ class GoogleCloudApigeeV1Instance extends \Google\Collection
   public function getRuntimeVersion()
   {
     return $this->runtimeVersion;
+  }
+  /**
+   * @param GoogleCloudApigeeV1ScheduledMaintenance
+   */
+  public function setScheduledMaintenance(GoogleCloudApigeeV1ScheduledMaintenance $scheduledMaintenance)
+  {
+    $this->scheduledMaintenance = $scheduledMaintenance;
+  }
+  /**
+   * @return GoogleCloudApigeeV1ScheduledMaintenance
+   */
+  public function getScheduledMaintenance()
+  {
+    return $this->scheduledMaintenance;
   }
   /**
    * @param string

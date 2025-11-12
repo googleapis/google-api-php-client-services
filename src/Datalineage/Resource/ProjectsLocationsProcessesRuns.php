@@ -39,9 +39,9 @@ class ProjectsLocationsProcessesRuns extends \Google\Service\Resource
    * @param GoogleCloudDatacatalogLineageV1Run $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId A unique identifier for this request. Restricted
-   * to 36 ASCII characters. A random UUID is recommended. This request is
-   * idempotent only if a `request_id` is provided.
+   * @opt_param string requestId Optional. A unique identifier for this request.
+   * Restricted to 36 ASCII characters. A random UUID is recommended. This request
+   * is idempotent only if a `request_id` is provided.
    * @return GoogleCloudDatacatalogLineageV1Run
    * @throws \Google\Service\Exception
    */

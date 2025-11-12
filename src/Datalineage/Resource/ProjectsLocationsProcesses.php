@@ -39,9 +39,9 @@ class ProjectsLocationsProcesses extends \Google\Service\Resource
    * @param GoogleCloudDatacatalogLineageV1Process $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId A unique identifier for this request. Restricted
-   * to 36 ASCII characters. A random UUID is recommended. This request is
-   * idempotent only if a `request_id` is provided.
+   * @opt_param string requestId Optional. A unique identifier for this request.
+   * Restricted to 36 ASCII characters. A random UUID is recommended. This request
+   * is idempotent only if a `request_id` is provided.
    * @return GoogleCloudDatacatalogLineageV1Process
    * @throws \Google\Service\Exception
    */
@@ -119,6 +119,9 @@ class ProjectsLocationsProcesses extends \Google\Service\Resource
    *
    * @opt_param bool allowMissing If set to true and the process is not found, the
    * request inserts it.
+   * @opt_param string requestId Optional. A unique identifier for this request.
+   * Restricted to 36 ASCII characters. A random UUID is recommended. This request
+   * is idempotent only if a `request_id` is provided.
    * @opt_param string updateMask The list of fields to update. Currently not
    * used. The whole message is updated.
    * @return GoogleCloudDatacatalogLineageV1Process

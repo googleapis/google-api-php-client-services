@@ -17,11 +17,9 @@
 
 namespace Google\Service\Contactcenterinsights\Resource;
 
-use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CalculateStatsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1Conversation;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListConversationsResponse;
-use Google\Service\Contactcenterinsights\GoogleLongrunningOperation;
 use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
 
 /**
@@ -34,22 +32,6 @@ use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
  */
 class ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations extends \Google\Service\Resource
 {
-  /**
-   * Analyzes multiple conversations in a single request.
-   * (conversations.bulkAnalyze)
-   *
-   * @param string $parent Required. The parent resource to create analyses in.
-   * @param GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleLongrunningOperation
-   * @throws \Google\Service\Exception
-   */
-  public function bulkAnalyze($parent, GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('bulkAnalyze', [$params], GoogleLongrunningOperation::class);
-  }
   /**
    * Gets conversation statistics. (conversations.calculateStats)
    *

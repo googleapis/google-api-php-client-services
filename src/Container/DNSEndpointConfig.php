@@ -24,6 +24,14 @@ class DNSEndpointConfig extends \Google\Model
    */
   public $allowExternalTraffic;
   /**
+   * @var bool
+   */
+  public $enableK8sCertsViaDns;
+  /**
+   * @var bool
+   */
+  public $enableK8sTokensViaDns;
+  /**
    * @var string
    */
   public $endpoint;
@@ -41,6 +49,34 @@ class DNSEndpointConfig extends \Google\Model
   public function getAllowExternalTraffic()
   {
     return $this->allowExternalTraffic;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableK8sCertsViaDns($enableK8sCertsViaDns)
+  {
+    $this->enableK8sCertsViaDns = $enableK8sCertsViaDns;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableK8sCertsViaDns()
+  {
+    return $this->enableK8sCertsViaDns;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableK8sTokensViaDns($enableK8sTokensViaDns)
+  {
+    $this->enableK8sTokensViaDns = $enableK8sTokensViaDns;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableK8sTokensViaDns()
+  {
+    return $this->enableK8sTokensViaDns;
   }
   /**
    * @param string

@@ -32,6 +32,8 @@ class Auth extends \Google\Collection
    * @var array[]
    */
   public $claims;
+  protected $oauthType = Oauth::class;
+  protected $oauthDataType = '';
   /**
    * @var string
    */
@@ -82,6 +84,20 @@ class Auth extends \Google\Collection
   public function getClaims()
   {
     return $this->claims;
+  }
+  /**
+   * @param Oauth
+   */
+  public function setOauth(Oauth $oauth)
+  {
+    $this->oauth = $oauth;
+  }
+  /**
+   * @return Oauth
+   */
+  public function getOauth()
+  {
+    return $this->oauth;
   }
   /**
    * @param string

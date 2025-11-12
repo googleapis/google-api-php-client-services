@@ -34,8 +34,16 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   protected $documentLayoutDataType = '';
   protected $entitiesType = GoogleCloudDocumentaiV1DocumentEntity::class;
   protected $entitiesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $entitiesRevisionId;
+  protected $entitiesRevisionsType = GoogleCloudDocumentaiV1DocumentEntitiesRevision::class;
+  protected $entitiesRevisionsDataType = 'array';
   protected $entityRelationsType = GoogleCloudDocumentaiV1DocumentEntityRelation::class;
   protected $entityRelationsDataType = 'array';
+  protected $entityValidationOutputType = GoogleCloudDocumentaiV1DocumentEntityValidationOutput::class;
+  protected $entityValidationOutputDataType = '';
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
@@ -132,6 +140,34 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->entities;
   }
   /**
+   * @param string
+   */
+  public function setEntitiesRevisionId($entitiesRevisionId)
+  {
+    $this->entitiesRevisionId = $entitiesRevisionId;
+  }
+  /**
+   * @return string
+   */
+  public function getEntitiesRevisionId()
+  {
+    return $this->entitiesRevisionId;
+  }
+  /**
+   * @param GoogleCloudDocumentaiV1DocumentEntitiesRevision[]
+   */
+  public function setEntitiesRevisions($entitiesRevisions)
+  {
+    $this->entitiesRevisions = $entitiesRevisions;
+  }
+  /**
+   * @return GoogleCloudDocumentaiV1DocumentEntitiesRevision[]
+   */
+  public function getEntitiesRevisions()
+  {
+    return $this->entitiesRevisions;
+  }
+  /**
    * @param GoogleCloudDocumentaiV1DocumentEntityRelation[]
    */
   public function setEntityRelations($entityRelations)
@@ -144,6 +180,20 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   public function getEntityRelations()
   {
     return $this->entityRelations;
+  }
+  /**
+   * @param GoogleCloudDocumentaiV1DocumentEntityValidationOutput
+   */
+  public function setEntityValidationOutput(GoogleCloudDocumentaiV1DocumentEntityValidationOutput $entityValidationOutput)
+  {
+    $this->entityValidationOutput = $entityValidationOutput;
+  }
+  /**
+   * @return GoogleCloudDocumentaiV1DocumentEntityValidationOutput
+   */
+  public function getEntityValidationOutput()
+  {
+    return $this->entityValidationOutput;
   }
   /**
    * @param GoogleRpcStatus

@@ -23,17 +23,41 @@ class DiskBackupProperties extends \Google\Collection
   /**
    * @var string
    */
+  public $accessMode;
+  /**
+   * @var string
+   */
   public $architecture;
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var bool
+   */
+  public $enableConfidentialCompute;
   protected $guestOsFeatureType = GuestOsFeature::class;
   protected $guestOsFeatureDataType = 'array';
   /**
    * @var string[]
    */
+  public $labels;
+  /**
+   * @var string[]
+   */
   public $licenses;
+  /**
+   * @var string
+   */
+  public $physicalBlockSizeBytes;
+  /**
+   * @var string
+   */
+  public $provisionedIops;
+  /**
+   * @var string
+   */
+  public $provisionedThroughput;
   /**
    * @var string
    */
@@ -53,12 +77,30 @@ class DiskBackupProperties extends \Google\Collection
   /**
    * @var string
    */
+  public $storagePool;
+  /**
+   * @var string
+   */
   public $type;
   /**
    * @var string
    */
   public $zone;
 
+  /**
+   * @param string
+   */
+  public function setAccessMode($accessMode)
+  {
+    $this->accessMode = $accessMode;
+  }
+  /**
+   * @return string
+   */
+  public function getAccessMode()
+  {
+    return $this->accessMode;
+  }
   /**
    * @param string
    */
@@ -88,6 +130,20 @@ class DiskBackupProperties extends \Google\Collection
     return $this->description;
   }
   /**
+   * @param bool
+   */
+  public function setEnableConfidentialCompute($enableConfidentialCompute)
+  {
+    $this->enableConfidentialCompute = $enableConfidentialCompute;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableConfidentialCompute()
+  {
+    return $this->enableConfidentialCompute;
+  }
+  /**
    * @param GuestOsFeature[]
    */
   public function setGuestOsFeature($guestOsFeature)
@@ -104,6 +160,20 @@ class DiskBackupProperties extends \Google\Collection
   /**
    * @param string[]
    */
+  public function setLabels($labels)
+  {
+    $this->labels = $labels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLabels()
+  {
+    return $this->labels;
+  }
+  /**
+   * @param string[]
+   */
   public function setLicenses($licenses)
   {
     $this->licenses = $licenses;
@@ -114,6 +184,48 @@ class DiskBackupProperties extends \Google\Collection
   public function getLicenses()
   {
     return $this->licenses;
+  }
+  /**
+   * @param string
+   */
+  public function setPhysicalBlockSizeBytes($physicalBlockSizeBytes)
+  {
+    $this->physicalBlockSizeBytes = $physicalBlockSizeBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getPhysicalBlockSizeBytes()
+  {
+    return $this->physicalBlockSizeBytes;
+  }
+  /**
+   * @param string
+   */
+  public function setProvisionedIops($provisionedIops)
+  {
+    $this->provisionedIops = $provisionedIops;
+  }
+  /**
+   * @return string
+   */
+  public function getProvisionedIops()
+  {
+    return $this->provisionedIops;
+  }
+  /**
+   * @param string
+   */
+  public function setProvisionedThroughput($provisionedThroughput)
+  {
+    $this->provisionedThroughput = $provisionedThroughput;
+  }
+  /**
+   * @return string
+   */
+  public function getProvisionedThroughput()
+  {
+    return $this->provisionedThroughput;
   }
   /**
    * @param string
@@ -170,6 +282,20 @@ class DiskBackupProperties extends \Google\Collection
   public function getSourceDisk()
   {
     return $this->sourceDisk;
+  }
+  /**
+   * @param string
+   */
+  public function setStoragePool($storagePool)
+  {
+    $this->storagePool = $storagePool;
+  }
+  /**
+   * @return string
+   */
+  public function getStoragePool()
+  {
+    return $this->storagePool;
   }
   /**
    * @param string

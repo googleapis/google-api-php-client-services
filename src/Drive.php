@@ -964,27 +964,7 @@ class Drive extends \Google\Service
         'operations',
         [
           'methods' => [
-            'cancel' => [
-              'path' => 'operations/{name}:cancel',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'operations/{name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
+            'get' => [
               'path' => 'operations/{name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -992,27 +972,6 @@ class Drive extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'operations',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'name' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],

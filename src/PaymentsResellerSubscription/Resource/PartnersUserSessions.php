@@ -17,8 +17,8 @@
 
 namespace Google\Service\PaymentsResellerSubscription\Resource;
 
-use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest;
-use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse;
+use Google\Service\PaymentsResellerSubscription\GenerateUserSessionRequest;
+use Google\Service\PaymentsResellerSubscription\GenerateUserSessionResponse;
 
 /**
  * The "userSessions" collection of methods.
@@ -40,16 +40,16 @@ class PartnersUserSessions extends \Google\Service\Resource
    *
    * @param string $parent Required. The parent, the partner that can resell.
    * Format: partners/{partner}
-   * @param GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest $postBody
+   * @param GenerateUserSessionRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse
+   * @return GenerateUserSessionResponse
    * @throws \Google\Service\Exception
    */
-  public function generate($parent, GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionRequest $postBody, $optParams = [])
+  public function generate($parent, GenerateUserSessionRequest $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('generate', [$params], GoogleCloudPaymentsResellerSubscriptionV1GenerateUserSessionResponse::class);
+    return $this->call('generate', [$params], GenerateUserSessionResponse::class);
   }
 }
 

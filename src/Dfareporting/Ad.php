@@ -60,6 +60,8 @@ class Ad extends \Google\Collection
    * @var string
    */
   public $compatibility;
+  protected $contextualKeywordTargetingType = ContextualKeywordTargeting::class;
+  protected $contextualKeywordTargetingDataType = '';
   protected $createInfoType = LastModifiedInfo::class;
   protected $createInfoDataType = '';
   protected $creativeGroupAssignmentsType = CreativeGroupAssignment::class;
@@ -304,6 +306,20 @@ class Ad extends \Google\Collection
   public function getCompatibility()
   {
     return $this->compatibility;
+  }
+  /**
+   * @param ContextualKeywordTargeting
+   */
+  public function setContextualKeywordTargeting(ContextualKeywordTargeting $contextualKeywordTargeting)
+  {
+    $this->contextualKeywordTargeting = $contextualKeywordTargeting;
+  }
+  /**
+   * @return ContextualKeywordTargeting
+   */
+  public function getContextualKeywordTargeting()
+  {
+    return $this->contextualKeywordTargeting;
   }
   /**
    * @param LastModifiedInfo

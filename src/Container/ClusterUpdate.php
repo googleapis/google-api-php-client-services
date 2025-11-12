@@ -22,12 +22,16 @@ class ClusterUpdate extends \Google\Collection
   protected $collection_key = 'desiredLocations';
   protected $additionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $additionalPodRangesConfigDataType = '';
+  protected $desiredAdditionalIpRangesConfigType = DesiredAdditionalIPRangesConfig::class;
+  protected $desiredAdditionalIpRangesConfigDataType = '';
   protected $desiredAddonsConfigType = AddonsConfig::class;
   protected $desiredAddonsConfigDataType = '';
   protected $desiredAnonymousAuthenticationConfigType = AnonymousAuthenticationConfig::class;
   protected $desiredAnonymousAuthenticationConfigDataType = '';
   protected $desiredAuthenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
   protected $desiredAuthenticatorGroupsConfigDataType = '';
+  protected $desiredAutoIpamConfigType = AutoIpamConfig::class;
+  protected $desiredAutoIpamConfigDataType = '';
   protected $desiredAutopilotWorkloadPolicyConfigType = WorkloadPolicyConfig::class;
   protected $desiredAutopilotWorkloadPolicyConfigDataType = '';
   protected $desiredBinaryAuthorizationType = BinaryAuthorization::class;
@@ -126,6 +130,8 @@ class ClusterUpdate extends \Google\Collection
   public $desiredMonitoringService;
   protected $desiredNetworkPerformanceConfigType = ClusterNetworkPerformanceConfig::class;
   protected $desiredNetworkPerformanceConfigDataType = '';
+  protected $desiredNetworkTierConfigType = NetworkTierConfig::class;
+  protected $desiredNetworkTierConfigDataType = '';
   protected $desiredNodeKubeletConfigType = NodeKubeletConfig::class;
   protected $desiredNodeKubeletConfigDataType = '';
   protected $desiredNodePoolAutoConfigKubeletConfigType = NodeKubeletConfig::class;
@@ -178,6 +184,8 @@ class ClusterUpdate extends \Google\Collection
    * @var string
    */
   public $desiredStackType;
+  protected $desiredUserManagedKeysConfigType = UserManagedKeysConfig::class;
+  protected $desiredUserManagedKeysConfigDataType = '';
   protected $desiredVerticalPodAutoscalingType = VerticalPodAutoscaling::class;
   protected $desiredVerticalPodAutoscalingDataType = '';
   protected $desiredWorkloadIdentityConfigType = WorkloadIdentityConfig::class;
@@ -188,6 +196,8 @@ class ClusterUpdate extends \Google\Collection
    * @var string
    */
   public $etag;
+  protected $gkeAutoUpgradeConfigType = GkeAutoUpgradeConfig::class;
+  protected $gkeAutoUpgradeConfigDataType = '';
   protected $removedAdditionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $removedAdditionalPodRangesConfigDataType = '';
   protected $userManagedKeysConfigType = UserManagedKeysConfig::class;
@@ -206,6 +216,20 @@ class ClusterUpdate extends \Google\Collection
   public function getAdditionalPodRangesConfig()
   {
     return $this->additionalPodRangesConfig;
+  }
+  /**
+   * @param DesiredAdditionalIPRangesConfig
+   */
+  public function setDesiredAdditionalIpRangesConfig(DesiredAdditionalIPRangesConfig $desiredAdditionalIpRangesConfig)
+  {
+    $this->desiredAdditionalIpRangesConfig = $desiredAdditionalIpRangesConfig;
+  }
+  /**
+   * @return DesiredAdditionalIPRangesConfig
+   */
+  public function getDesiredAdditionalIpRangesConfig()
+  {
+    return $this->desiredAdditionalIpRangesConfig;
   }
   /**
    * @param AddonsConfig
@@ -248,6 +272,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredAuthenticatorGroupsConfig()
   {
     return $this->desiredAuthenticatorGroupsConfig;
+  }
+  /**
+   * @param AutoIpamConfig
+   */
+  public function setDesiredAutoIpamConfig(AutoIpamConfig $desiredAutoIpamConfig)
+  {
+    $this->desiredAutoIpamConfig = $desiredAutoIpamConfig;
+  }
+  /**
+   * @return AutoIpamConfig
+   */
+  public function getDesiredAutoIpamConfig()
+  {
+    return $this->desiredAutoIpamConfig;
   }
   /**
    * @param WorkloadPolicyConfig
@@ -754,6 +792,20 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredNetworkPerformanceConfig;
   }
   /**
+   * @param NetworkTierConfig
+   */
+  public function setDesiredNetworkTierConfig(NetworkTierConfig $desiredNetworkTierConfig)
+  {
+    $this->desiredNetworkTierConfig = $desiredNetworkTierConfig;
+  }
+  /**
+   * @return NetworkTierConfig
+   */
+  public function getDesiredNetworkTierConfig()
+  {
+    return $this->desiredNetworkTierConfig;
+  }
+  /**
    * @param NodeKubeletConfig
    */
   public function setDesiredNodeKubeletConfig(NodeKubeletConfig $desiredNodeKubeletConfig)
@@ -1062,6 +1114,20 @@ class ClusterUpdate extends \Google\Collection
     return $this->desiredStackType;
   }
   /**
+   * @param UserManagedKeysConfig
+   */
+  public function setDesiredUserManagedKeysConfig(UserManagedKeysConfig $desiredUserManagedKeysConfig)
+  {
+    $this->desiredUserManagedKeysConfig = $desiredUserManagedKeysConfig;
+  }
+  /**
+   * @return UserManagedKeysConfig
+   */
+  public function getDesiredUserManagedKeysConfig()
+  {
+    return $this->desiredUserManagedKeysConfig;
+  }
+  /**
    * @param VerticalPodAutoscaling
    */
   public function setDesiredVerticalPodAutoscaling(VerticalPodAutoscaling $desiredVerticalPodAutoscaling)
@@ -1116,6 +1182,20 @@ class ClusterUpdate extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param GkeAutoUpgradeConfig
+   */
+  public function setGkeAutoUpgradeConfig(GkeAutoUpgradeConfig $gkeAutoUpgradeConfig)
+  {
+    $this->gkeAutoUpgradeConfig = $gkeAutoUpgradeConfig;
+  }
+  /**
+   * @return GkeAutoUpgradeConfig
+   */
+  public function getGkeAutoUpgradeConfig()
+  {
+    return $this->gkeAutoUpgradeConfig;
   }
   /**
    * @param AdditionalPodRangesConfig

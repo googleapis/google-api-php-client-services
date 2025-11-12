@@ -44,6 +44,17 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * @param ServiceConnectionPolicy $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string autoSubnetworkConfig.allocRangeSpace Optional. The space
+   * where we search for a free range to create a subnetwork. It can be narrow
+   * down or pick a different space. This is in standard CIDR format. If not
+   * specified, “10.0.0.0/8” is used. Only eligible for IPV4_ONLY and IPV4_IPV6
+   * subnetwork.
+   * @opt_param string autoSubnetworkConfig.ipStack Optional. The requested IP
+   * stack for the subnetwork. If not specified, IPv4 is used.
+   * @opt_param int autoSubnetworkConfig.prefixLength Optional. The desired prefix
+   * length for the subnet's IP address range. E.g., 24 for a /24. The actual
+   * range is allocated from available space. If not specified, 24 is used. Only
+   * eligible for IPV4_ONLY and IPV4_IPV6 subnetwork.
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -58,6 +69,8 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * @opt_param string serviceConnectionPolicyId Optional. Resource ID (i.e. 'foo'
    * in '[...]/projects/p/locations/l/serviceConnectionPolicies/foo') See
    * https://google.aip.dev/122#resource-id-segments Unique per location.
+   * @opt_param string subnetworkMode Optional. If this field is not set,
+   * USER_PROVIDED is the inferred value to use.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

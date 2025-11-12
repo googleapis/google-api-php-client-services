@@ -22,6 +22,10 @@ class GoogleCloudAiplatformV1PSCAutomationConfig extends \Google\Model
   /**
    * @var string
    */
+  public $errorMessage;
+  /**
+   * @var string
+   */
   public $forwardingRule;
   /**
    * @var string
@@ -35,7 +39,25 @@ class GoogleCloudAiplatformV1PSCAutomationConfig extends \Google\Model
    * @var string
    */
   public $projectId;
+  /**
+   * @var string
+   */
+  public $state;
 
+  /**
+   * @param string
+   */
+  public function setErrorMessage($errorMessage)
+  {
+    $this->errorMessage = $errorMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getErrorMessage()
+  {
+    return $this->errorMessage;
+  }
   /**
    * @param string
    */
@@ -91,6 +113,20 @@ class GoogleCloudAiplatformV1PSCAutomationConfig extends \Google\Model
   public function getProjectId()
   {
     return $this->projectId;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 

@@ -40,9 +40,6 @@ class DataPortability extends \Google\Service
   /** Move a copy of the Google Alerts subscriptions you created. */
   const DATAPORTABILITY_ALERTS_SUBSCRIPTIONS =
       "https://www.googleapis.com/auth/dataportability.alerts.subscriptions";
-  /** Move a copy of messages between you and the businesses you have conversations with across Google services. */
-  const DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS =
-      "https://www.googleapis.com/auth/dataportability.businessmessaging.conversations";
   /** Move a copy of the information you entered into online forms in Chrome. */
   const DATAPORTABILITY_CHROME_AUTOFILL =
       "https://www.googleapis.com/auth/dataportability.chrome.autofill";
@@ -103,6 +100,9 @@ class DataPortability extends \Google\Service
   /** Move a copy of your Starred places list on Maps. */
   const DATAPORTABILITY_MAPS_STARRED_PLACES =
       "https://www.googleapis.com/auth/dataportability.maps.starred_places";
+  /** Move a copy of your vehicle profile on Maps. */
+  const DATAPORTABILITY_MAPS_VEHICLE_PROFILE =
+      "https://www.googleapis.com/auth/dataportability.maps.vehicle_profile";
   /** Move a copy of your Maps activity. */
   const DATAPORTABILITY_MYACTIVITY_MAPS =
       "https://www.googleapis.com/auth/dataportability.myactivity.maps";

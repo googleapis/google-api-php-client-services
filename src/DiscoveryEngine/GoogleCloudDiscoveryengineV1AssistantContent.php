@@ -1,0 +1,144 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\DiscoveryEngine;
+
+class GoogleCloudDiscoveryengineV1AssistantContent extends \Google\Model
+{
+  protected $codeExecutionResultType = GoogleCloudDiscoveryengineV1AssistantContentCodeExecutionResult::class;
+  protected $codeExecutionResultDataType = '';
+  protected $executableCodeType = GoogleCloudDiscoveryengineV1AssistantContentExecutableCode::class;
+  protected $executableCodeDataType = '';
+  protected $fileType = GoogleCloudDiscoveryengineV1AssistantContentFile::class;
+  protected $fileDataType = '';
+  protected $inlineDataType = GoogleCloudDiscoveryengineV1AssistantContentBlob::class;
+  protected $inlineDataDataType = '';
+  /**
+   * @var string
+   */
+  public $role;
+  /**
+   * @var string
+   */
+  public $text;
+  /**
+   * @var bool
+   */
+  public $thought;
+
+  /**
+   * @param GoogleCloudDiscoveryengineV1AssistantContentCodeExecutionResult
+   */
+  public function setCodeExecutionResult(GoogleCloudDiscoveryengineV1AssistantContentCodeExecutionResult $codeExecutionResult)
+  {
+    $this->codeExecutionResult = $codeExecutionResult;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1AssistantContentCodeExecutionResult
+   */
+  public function getCodeExecutionResult()
+  {
+    return $this->codeExecutionResult;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1AssistantContentExecutableCode
+   */
+  public function setExecutableCode(GoogleCloudDiscoveryengineV1AssistantContentExecutableCode $executableCode)
+  {
+    $this->executableCode = $executableCode;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1AssistantContentExecutableCode
+   */
+  public function getExecutableCode()
+  {
+    return $this->executableCode;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1AssistantContentFile
+   */
+  public function setFile(GoogleCloudDiscoveryengineV1AssistantContentFile $file)
+  {
+    $this->file = $file;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1AssistantContentFile
+   */
+  public function getFile()
+  {
+    return $this->file;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1AssistantContentBlob
+   */
+  public function setInlineData(GoogleCloudDiscoveryengineV1AssistantContentBlob $inlineData)
+  {
+    $this->inlineData = $inlineData;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1AssistantContentBlob
+   */
+  public function getInlineData()
+  {
+    return $this->inlineData;
+  }
+  /**
+   * @param string
+   */
+  public function setRole($role)
+  {
+    $this->role = $role;
+  }
+  /**
+   * @return string
+   */
+  public function getRole()
+  {
+    return $this->role;
+  }
+  /**
+   * @param string
+   */
+  public function setText($text)
+  {
+    $this->text = $text;
+  }
+  /**
+   * @return string
+   */
+  public function getText()
+  {
+    return $this->text;
+  }
+  /**
+   * @param bool
+   */
+  public function setThought($thought)
+  {
+    $this->thought = $thought;
+  }
+  /**
+   * @return bool
+   */
+  public function getThought()
+  {
+    return $this->thought;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudDiscoveryengineV1AssistantContent::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1AssistantContent');

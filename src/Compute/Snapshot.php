@@ -94,6 +94,8 @@ class Snapshot extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = SnapshotParams::class;
+  protected $paramsDataType = '';
   /**
    * @var bool
    */
@@ -426,6 +428,20 @@ class Snapshot extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param SnapshotParams
+   */
+  public function setParams(SnapshotParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return SnapshotParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * @param bool

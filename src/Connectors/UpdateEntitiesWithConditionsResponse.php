@@ -22,8 +22,26 @@ class UpdateEntitiesWithConditionsResponse extends \Google\Model
   /**
    * @var array[]
    */
+  public $metadata;
+  /**
+   * @var array[]
+   */
   public $response;
 
+  /**
+   * @param array[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
+  }
   /**
    * @param array[]
    */

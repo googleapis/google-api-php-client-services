@@ -53,6 +53,8 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * (_), and hyphens (-). The maximum length is 40 characters.
    * @opt_param bool skipValidation Optional. If set to true, will skip
    * validations.
+   * @opt_param bool validateOnly Optional. For PSC Interface only - get the
+   * tenant project before creating the resource.
    * @return Operation
    * @throws \Google\Service\Exception
    */

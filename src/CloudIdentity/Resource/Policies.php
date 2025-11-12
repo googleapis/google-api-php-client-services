@@ -31,7 +31,7 @@ use Google\Service\CloudIdentity\Policy;
 class Policies extends \Google\Service\Resource
 {
   /**
-   * Get a Policy (policies.get)
+   * Get a policy. (policies.get)
    *
    * @param string $name Required. The name of the policy to retrieve. Format:
    * "policies/{policy}".
@@ -46,7 +46,7 @@ class Policies extends \Google\Service\Resource
     return $this->call('get', [$params], Policy::class);
   }
   /**
-   * List Policies (policies.listPolicies)
+   * List policies. (policies.listPolicies)
    *
    * @param array $optParams Optional parameters.
    *

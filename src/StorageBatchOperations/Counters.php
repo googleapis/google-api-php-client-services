@@ -30,6 +30,10 @@ class Counters extends \Google\Model
   /**
    * @var string
    */
+  public $totalBytesFound;
+  /**
+   * @var string
+   */
   public $totalObjectCount;
 
   /**
@@ -59,6 +63,20 @@ class Counters extends \Google\Model
   public function getSucceededObjectCount()
   {
     return $this->succeededObjectCount;
+  }
+  /**
+   * @param string
+   */
+  public function setTotalBytesFound($totalBytesFound)
+  {
+    $this->totalBytesFound = $totalBytesFound;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalBytesFound()
+  {
+    return $this->totalBytesFound;
   }
   /**
    * @param string

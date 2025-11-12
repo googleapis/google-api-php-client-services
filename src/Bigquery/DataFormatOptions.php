@@ -20,10 +20,28 @@ namespace Google\Service\Bigquery;
 class DataFormatOptions extends \Google\Model
 {
   /**
+   * @var string
+   */
+  public $timestampOutputFormat;
+  /**
    * @var bool
    */
   public $useInt64Timestamp;
 
+  /**
+   * @param string
+   */
+  public function setTimestampOutputFormat($timestampOutputFormat)
+  {
+    $this->timestampOutputFormat = $timestampOutputFormat;
+  }
+  /**
+   * @return string
+   */
+  public function getTimestampOutputFormat()
+  {
+    return $this->timestampOutputFormat;
+  }
   /**
    * @param bool
    */

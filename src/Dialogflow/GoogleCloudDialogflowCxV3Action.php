@@ -23,8 +23,12 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
   protected $agentUtteranceDataType = '';
   protected $flowInvocationType = GoogleCloudDialogflowCxV3FlowInvocation::class;
   protected $flowInvocationDataType = '';
+  protected $flowTransitionType = GoogleCloudDialogflowCxV3FlowTransition::class;
+  protected $flowTransitionDataType = '';
   protected $playbookInvocationType = GoogleCloudDialogflowCxV3PlaybookInvocation::class;
   protected $playbookInvocationDataType = '';
+  protected $playbookTransitionType = GoogleCloudDialogflowCxV3PlaybookTransition::class;
+  protected $playbookTransitionDataType = '';
   protected $toolUseType = GoogleCloudDialogflowCxV3ToolUse::class;
   protected $toolUseDataType = '';
   protected $userUtteranceType = GoogleCloudDialogflowCxV3UserUtterance::class;
@@ -59,6 +63,20 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
     return $this->flowInvocation;
   }
   /**
+   * @param GoogleCloudDialogflowCxV3FlowTransition
+   */
+  public function setFlowTransition(GoogleCloudDialogflowCxV3FlowTransition $flowTransition)
+  {
+    $this->flowTransition = $flowTransition;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3FlowTransition
+   */
+  public function getFlowTransition()
+  {
+    return $this->flowTransition;
+  }
+  /**
    * @param GoogleCloudDialogflowCxV3PlaybookInvocation
    */
   public function setPlaybookInvocation(GoogleCloudDialogflowCxV3PlaybookInvocation $playbookInvocation)
@@ -71,6 +89,20 @@ class GoogleCloudDialogflowCxV3Action extends \Google\Model
   public function getPlaybookInvocation()
   {
     return $this->playbookInvocation;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3PlaybookTransition
+   */
+  public function setPlaybookTransition(GoogleCloudDialogflowCxV3PlaybookTransition $playbookTransition)
+  {
+    $this->playbookTransition = $playbookTransition;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3PlaybookTransition
+   */
+  public function getPlaybookTransition()
+  {
+    return $this->playbookTransition;
   }
   /**
    * @param GoogleCloudDialogflowCxV3ToolUse

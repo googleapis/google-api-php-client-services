@@ -19,6 +19,25 @@ namespace Google\Service\Container;
 
 class AnonymousAuthenticationConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $mode;
+
+  /**
+   * @param string
+   */
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  /**
+   * @return string
+   */
+  public function getMode()
+  {
+    return $this->mode;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

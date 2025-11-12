@@ -82,6 +82,8 @@ class Image extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = ImageParams::class;
+  protected $paramsDataType = '';
   protected $rawDiskType = ImageRawDisk::class;
   protected $rawDiskDataType = '';
   /**
@@ -378,6 +380,20 @@ class Image extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param ImageParams
+   */
+  public function setParams(ImageParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return ImageParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * @param ImageRawDisk

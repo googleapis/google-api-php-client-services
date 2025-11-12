@@ -26,6 +26,10 @@ class Config extends \Google\Model
   /**
    * @var string
    */
+  public $internalMetadata;
+  /**
+   * @var string
+   */
   public $name;
 
   /**
@@ -41,6 +45,20 @@ class Config extends \Google\Model
   public function getDefaultKmsKeyName()
   {
     return $this->defaultKmsKeyName;
+  }
+  /**
+   * @param string
+   */
+  public function setInternalMetadata($internalMetadata)
+  {
+    $this->internalMetadata = $internalMetadata;
+  }
+  /**
+   * @return string
+   */
+  public function getInternalMetadata()
+  {
+    return $this->internalMetadata;
   }
   /**
    * @param string

@@ -19,6 +19,7 @@ namespace Google\Service\DiscoveryEngine\Resource;
 
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1AnswerQueryRequest;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1AnswerQueryResponse;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1ListServingConfigsResponse;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1RecommendRequest;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1RecommendResponse;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1SearchRequest;
@@ -54,6 +55,46 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
     $params = ['servingConfig' => $servingConfig, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('answer', [$params], GoogleCloudDiscoveryengineV1AnswerQueryResponse::class);
+  }
+  /**
+   * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not
+   * exist. (servingConfigs.get)
+   *
+   * @param string $name Required. The resource name of the ServingConfig to get.
+   * Format: `projects/{project}/locations/{location}/collections/{collection}/eng
+   * ines/{engine}/servingConfigs/{serving_config_id}`
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1ServingConfig
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudDiscoveryengineV1ServingConfig::class);
+  }
+  /**
+   * Lists all ServingConfigs linked to this dataStore.
+   * (servingConfigs.listProjectsLocationsDataStoresServingConfigs)
+   *
+   * @param string $parent Required. Full resource name of the parent resource.
+   * Format: `projects/{project}/locations/{location}/collections/{collection}/eng
+   * ines/{engine}`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. Maximum number of results to return. If
+   * unspecified, defaults to 100. If a value greater than 100 is provided, at
+   * most 100 results are returned.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `ListServingConfigs` call. Provide this to retrieve the subsequent page.
+   * @return GoogleCloudDiscoveryengineV1ListServingConfigsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsDataStoresServingConfigs($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudDiscoveryengineV1ListServingConfigsResponse::class);
   }
   /**
    * Updates a ServingConfig. Returns a NOT_FOUND error if the ServingConfig does

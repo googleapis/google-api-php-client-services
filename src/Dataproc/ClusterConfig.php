@@ -27,6 +27,10 @@ class ClusterConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $clusterTier;
+  /**
+   * @var string
+   */
   public $clusterType;
   /**
    * @var string
@@ -34,6 +38,10 @@ class ClusterConfig extends \Google\Collection
   public $configBucket;
   protected $dataprocMetricConfigType = DataprocMetricConfig::class;
   protected $dataprocMetricConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $diagnosticBucket;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   protected $endpointConfigType = EndpointConfig::class;
@@ -94,6 +102,20 @@ class ClusterConfig extends \Google\Collection
   /**
    * @param string
    */
+  public function setClusterTier($clusterTier)
+  {
+    $this->clusterTier = $clusterTier;
+  }
+  /**
+   * @return string
+   */
+  public function getClusterTier()
+  {
+    return $this->clusterTier;
+  }
+  /**
+   * @param string
+   */
   public function setClusterType($clusterType)
   {
     $this->clusterType = $clusterType;
@@ -132,6 +154,20 @@ class ClusterConfig extends \Google\Collection
   public function getDataprocMetricConfig()
   {
     return $this->dataprocMetricConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setDiagnosticBucket($diagnosticBucket)
+  {
+    $this->diagnosticBucket = $diagnosticBucket;
+  }
+  /**
+   * @return string
+   */
+  public function getDiagnosticBucket()
+  {
+    return $this->diagnosticBucket;
   }
   /**
    * @param EncryptionConfig

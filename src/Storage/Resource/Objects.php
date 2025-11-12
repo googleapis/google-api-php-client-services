@@ -316,6 +316,9 @@ class Objects extends \Google\Service\Resource
    * lexicographically before endOffset. If startOffset is also set, the objects
    * listed will have names between startOffset (inclusive) and endOffset
    * (exclusive).
+   * @opt_param string filter Filter the returned objects. Currently only
+   * supported for the contexts field. If delimiter is set, the returned prefixes
+   * are exempt from this filter.
    * @opt_param bool includeFoldersAsPrefixes Only applicable if delimiter is set
    * to '/'. If true, will also include folders and managed folders (besides
    * objects) in the returned prefixes.

@@ -19,11 +19,49 @@ namespace Google\Service\TravelImpactModel;
 
 class FlightWithEmissions extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $contrailsImpactBucket;
+  protected $easaLabelMetadataType = EasaLabelMetadata::class;
+  protected $easaLabelMetadataDataType = '';
   protected $emissionsGramsPerPaxType = EmissionsGramsPerPax::class;
   protected $emissionsGramsPerPaxDataType = '';
   protected $flightType = Flight::class;
   protected $flightDataType = '';
+  /**
+   * @var string
+   */
+  public $source;
 
+  /**
+   * @param string
+   */
+  public function setContrailsImpactBucket($contrailsImpactBucket)
+  {
+    $this->contrailsImpactBucket = $contrailsImpactBucket;
+  }
+  /**
+   * @return string
+   */
+  public function getContrailsImpactBucket()
+  {
+    return $this->contrailsImpactBucket;
+  }
+  /**
+   * @param EasaLabelMetadata
+   */
+  public function setEasaLabelMetadata(EasaLabelMetadata $easaLabelMetadata)
+  {
+    $this->easaLabelMetadata = $easaLabelMetadata;
+  }
+  /**
+   * @return EasaLabelMetadata
+   */
+  public function getEasaLabelMetadata()
+  {
+    return $this->easaLabelMetadata;
+  }
   /**
    * @param EmissionsGramsPerPax
    */
@@ -51,6 +89,20 @@ class FlightWithEmissions extends \Google\Model
   public function getFlight()
   {
     return $this->flight;
+  }
+  /**
+   * @param string
+   */
+  public function setSource($source)
+  {
+    $this->source = $source;
+  }
+  /**
+   * @return string
+   */
+  public function getSource()
+  {
+    return $this->source;
   }
 }
 

@@ -27,6 +27,8 @@ class GoogleCloudAiplatformV1AutoraterConfig extends \Google\Model
    * @var bool
    */
   public $flipEnabled;
+  protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
+  protected $generationConfigDataType = '';
   /**
    * @var int
    */
@@ -59,6 +61,20 @@ class GoogleCloudAiplatformV1AutoraterConfig extends \Google\Model
   public function getFlipEnabled()
   {
     return $this->flipEnabled;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1GenerationConfig
+   */
+  public function setGenerationConfig(GoogleCloudAiplatformV1GenerationConfig $generationConfig)
+  {
+    $this->generationConfig = $generationConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GenerationConfig
+   */
+  public function getGenerationConfig()
+  {
+    return $this->generationConfig;
   }
   /**
    * @param int

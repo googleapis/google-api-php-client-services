@@ -19,6 +19,8 @@ namespace Google\Service\Container;
 
 class BlueGreenSettings extends \Google\Model
 {
+  protected $autoscaledRolloutPolicyType = AutoscaledRolloutPolicy::class;
+  protected $autoscaledRolloutPolicyDataType = '';
   /**
    * @var string
    */
@@ -26,6 +28,20 @@ class BlueGreenSettings extends \Google\Model
   protected $standardRolloutPolicyType = StandardRolloutPolicy::class;
   protected $standardRolloutPolicyDataType = '';
 
+  /**
+   * @param AutoscaledRolloutPolicy
+   */
+  public function setAutoscaledRolloutPolicy(AutoscaledRolloutPolicy $autoscaledRolloutPolicy)
+  {
+    $this->autoscaledRolloutPolicy = $autoscaledRolloutPolicy;
+  }
+  /**
+   * @return AutoscaledRolloutPolicy
+   */
+  public function getAutoscaledRolloutPolicy()
+  {
+    return $this->autoscaledRolloutPolicy;
+  }
   /**
    * @param string
    */

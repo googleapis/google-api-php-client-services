@@ -19,6 +19,10 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \Google\Model
 {
+  protected $apiHubApisType = GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray::class;
+  protected $apiHubApisDataType = '';
+  protected $apiHubGatewaysType = GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray::class;
+  protected $apiHubGatewaysDataType = '';
   protected $includeType = GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestResourceArray::class;
   protected $includeDataType = '';
   protected $includeAllResourcesType = GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestIncludeAll::class;
@@ -40,6 +44,34 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
    */
   public $scope;
 
+  /**
+   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray
+   */
+  public function setApiHubApis(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray $apiHubApis)
+  {
+    $this->apiHubApis = $apiHubApis;
+  }
+  /**
+   * @return GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray
+   */
+  public function getApiHubApis()
+  {
+    return $this->apiHubApis;
+  }
+  /**
+   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray
+   */
+  public function setApiHubGateways(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray $apiHubGateways)
+  {
+    $this->apiHubGateways = $apiHubGateways;
+  }
+  /**
+   * @return GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray
+   */
+  public function getApiHubGateways()
+  {
+    return $this->apiHubGateways;
+  }
   /**
    * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestResourceArray
    */

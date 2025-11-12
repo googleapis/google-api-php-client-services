@@ -32,6 +32,8 @@ class GoogleCloudAiplatformV1GenerateContentRequest extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  protected $modelArmorConfigType = GoogleCloudAiplatformV1ModelArmorConfig::class;
+  protected $modelArmorConfigDataType = '';
   protected $safetySettingsType = GoogleCloudAiplatformV1SafetySetting::class;
   protected $safetySettingsDataType = 'array';
   protected $systemInstructionType = GoogleCloudAiplatformV1Content::class;
@@ -96,6 +98,20 @@ class GoogleCloudAiplatformV1GenerateContentRequest extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ModelArmorConfig
+   */
+  public function setModelArmorConfig(GoogleCloudAiplatformV1ModelArmorConfig $modelArmorConfig)
+  {
+    $this->modelArmorConfig = $modelArmorConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ModelArmorConfig
+   */
+  public function getModelArmorConfig()
+  {
+    return $this->modelArmorConfig;
   }
   /**
    * @param GoogleCloudAiplatformV1SafetySetting[]

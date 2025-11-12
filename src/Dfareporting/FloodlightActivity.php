@@ -41,6 +41,10 @@ class FloodlightActivity extends \Google\Collection
   /**
    * @var string
    */
+  public $conversionCategory;
+  /**
+   * @var string
+   */
   public $countingMethod;
   protected $defaultTagsType = FloodlightActivityDynamicTag::class;
   protected $defaultTagsDataType = 'array';
@@ -196,6 +200,20 @@ class FloodlightActivity extends \Google\Collection
   public function getCacheBustingType()
   {
     return $this->cacheBustingType;
+  }
+  /**
+   * @param string
+   */
+  public function setConversionCategory($conversionCategory)
+  {
+    $this->conversionCategory = $conversionCategory;
+  }
+  /**
+   * @return string
+   */
+  public function getConversionCategory()
+  {
+    return $this->conversionCategory;
   }
   /**
    * @param string

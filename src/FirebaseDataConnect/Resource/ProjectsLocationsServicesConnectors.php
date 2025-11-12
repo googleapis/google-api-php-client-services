@@ -22,6 +22,8 @@ use Google\Service\FirebaseDataConnect\ExecuteMutationRequest;
 use Google\Service\FirebaseDataConnect\ExecuteMutationResponse;
 use Google\Service\FirebaseDataConnect\ExecuteQueryRequest;
 use Google\Service\FirebaseDataConnect\ExecuteQueryResponse;
+use Google\Service\FirebaseDataConnect\GraphqlResponse;
+use Google\Service\FirebaseDataConnect\ImpersonateRequest;
 use Google\Service\FirebaseDataConnect\ListConnectorsResponse;
 use Google\Service\FirebaseDataConnect\Operation;
 
@@ -155,6 +157,46 @@ class ProjectsLocationsServicesConnectors extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], Connector::class);
+  }
+  /**
+   * Impersonate a mutation defined on a Firebase Data Connect connector. It
+   * grants the admin SDK access to mutations defined in the given connector. The
+   * caller can choose to impersonate a particular Firebase Auth user, or skip
+   * @auth completely. (connectors.impersonateMutation)
+   *
+   * @param string $name Required. The resource name of the connector to find the
+   * predefined query/mutation, in the format: ``` projects/{project}/locations/{l
+   * ocation}/services/{service}/connectors/{connector} ```
+   * @param ImpersonateRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GraphqlResponse
+   * @throws \Google\Service\Exception
+   */
+  public function impersonateMutation($name, ImpersonateRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('impersonateMutation', [$params], GraphqlResponse::class);
+  }
+  /**
+   * Impersonate a query defined on a Firebase Data Connect connector. It grants
+   * the admin SDK access to queries defined in the given connector. The caller
+   * can choose to impersonate a particular Firebase Auth user, or skip @auth
+   * completely. (connectors.impersonateQuery)
+   *
+   * @param string $name Required. The resource name of the connector to find the
+   * predefined query/mutation, in the format: ``` projects/{project}/locations/{l
+   * ocation}/services/{service}/connectors/{connector} ```
+   * @param ImpersonateRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GraphqlResponse
+   * @throws \Google\Service\Exception
+   */
+  public function impersonateQuery($name, ImpersonateRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('impersonateQuery', [$params], GraphqlResponse::class);
   }
   /**
    * Lists Connectors in a given project and location.

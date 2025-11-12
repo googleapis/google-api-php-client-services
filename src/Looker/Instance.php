@@ -24,7 +24,17 @@ class Instance extends \Google\Model
   /**
    * @var string
    */
+  public $classType;
+  /**
+   * @var string
+   */
   public $consumerNetwork;
+  protected $controlledEgressConfigType = ControlledEgressConfig::class;
+  protected $controlledEgressConfigDataType = '';
+  /**
+   * @var bool
+   */
+  public $controlledEgressEnabled;
   /**
    * @var string
    */
@@ -137,6 +147,20 @@ class Instance extends \Google\Model
   /**
    * @param string
    */
+  public function setClassType($classType)
+  {
+    $this->classType = $classType;
+  }
+  /**
+   * @return string
+   */
+  public function getClassType()
+  {
+    return $this->classType;
+  }
+  /**
+   * @param string
+   */
   public function setConsumerNetwork($consumerNetwork)
   {
     $this->consumerNetwork = $consumerNetwork;
@@ -147,6 +171,34 @@ class Instance extends \Google\Model
   public function getConsumerNetwork()
   {
     return $this->consumerNetwork;
+  }
+  /**
+   * @param ControlledEgressConfig
+   */
+  public function setControlledEgressConfig(ControlledEgressConfig $controlledEgressConfig)
+  {
+    $this->controlledEgressConfig = $controlledEgressConfig;
+  }
+  /**
+   * @return ControlledEgressConfig
+   */
+  public function getControlledEgressConfig()
+  {
+    return $this->controlledEgressConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setControlledEgressEnabled($controlledEgressEnabled)
+  {
+    $this->controlledEgressEnabled = $controlledEgressEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getControlledEgressEnabled()
+  {
+    return $this->controlledEgressEnabled;
   }
   /**
    * @param string

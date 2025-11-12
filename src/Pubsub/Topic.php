@@ -52,6 +52,10 @@ class Topic extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var string[]
+   */
+  public $tags;
 
   /**
    * @param IngestionDataSourceSettings
@@ -192,6 +196,20 @@ class Topic extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
 }
 

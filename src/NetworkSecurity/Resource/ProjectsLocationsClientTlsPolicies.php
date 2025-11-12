@@ -147,8 +147,8 @@ class ProjectsLocationsClientTlsPolicies extends \Google\Service\Resource
    * Updates the parameters of a single ClientTlsPolicy. (clientTlsPolicies.patch)
    *
    * @param string $name Required. Name of the ClientTlsPolicy resource. It
-   * matches the pattern
-   * `projects/locations/{location}/clientTlsPolicies/{client_tls_policy}`
+   * matches the pattern `projects/{project}/locations/{location}/clientTlsPolicie
+   * s/{client_tls_policy}`
    * @param ClientTlsPolicy $postBody
    * @param array $optParams Optional parameters.
    *

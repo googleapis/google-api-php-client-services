@@ -42,6 +42,8 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
    * @var string
    */
   public $datasetProjectId;
+  protected $domainsType = GooglePrivacyDlpV2Domain::class;
+  protected $domainsDataType = 'array';
   /**
    * @var string
    */
@@ -214,6 +216,20 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   public function getDatasetProjectId()
   {
     return $this->datasetProjectId;
+  }
+  /**
+   * @param GooglePrivacyDlpV2Domain[]
+   */
+  public function setDomains($domains)
+  {
+    $this->domains = $domains;
+  }
+  /**
+   * @return GooglePrivacyDlpV2Domain[]
+   */
+  public function getDomains()
+  {
+    return $this->domains;
   }
   /**
    * @param string

@@ -22,6 +22,10 @@ class GooglePrivacyDlpV2RedactImageRequest extends \Google\Collection
   protected $collection_key = 'imageRedactionConfigs';
   protected $byteItemType = GooglePrivacyDlpV2ByteContentItem::class;
   protected $byteItemDataType = '';
+  /**
+   * @var string
+   */
+  public $deidentifyTemplate;
   protected $imageRedactionConfigsType = GooglePrivacyDlpV2ImageRedactionConfig::class;
   protected $imageRedactionConfigsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class GooglePrivacyDlpV2RedactImageRequest extends \Google\Collection
   public $includeFindings;
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $inspectTemplate;
   /**
    * @var string
    */
@@ -48,6 +56,20 @@ class GooglePrivacyDlpV2RedactImageRequest extends \Google\Collection
   public function getByteItem()
   {
     return $this->byteItem;
+  }
+  /**
+   * @param string
+   */
+  public function setDeidentifyTemplate($deidentifyTemplate)
+  {
+    $this->deidentifyTemplate = $deidentifyTemplate;
+  }
+  /**
+   * @return string
+   */
+  public function getDeidentifyTemplate()
+  {
+    return $this->deidentifyTemplate;
   }
   /**
    * @param GooglePrivacyDlpV2ImageRedactionConfig[]
@@ -90,6 +112,20 @@ class GooglePrivacyDlpV2RedactImageRequest extends \Google\Collection
   public function getInspectConfig()
   {
     return $this->inspectConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setInspectTemplate($inspectTemplate)
+  {
+    $this->inspectTemplate = $inspectTemplate;
+  }
+  /**
+   * @return string
+   */
+  public function getInspectTemplate()
+  {
+    return $this->inspectTemplate;
   }
   /**
    * @param string

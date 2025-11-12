@@ -27,6 +27,10 @@ class Execution extends \Google\Collection
   /**
    * @var string
    */
+  public $engine;
+  /**
+   * @var string
+   */
   public $evaluationId;
   protected $externalDataSourcesType = ExternalDataSources::class;
   protected $externalDataSourcesDataType = 'array';
@@ -74,6 +78,20 @@ class Execution extends \Google\Collection
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * @param string
+   */
+  public function setEngine($engine)
+  {
+    $this->engine = $engine;
+  }
+  /**
+   * @return string
+   */
+  public function getEngine()
+  {
+    return $this->engine;
   }
   /**
    * @param string

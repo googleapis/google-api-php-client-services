@@ -17,25 +17,24 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataDocumentationResult extends \Google\Collection
+class GoogleCloudDataplexV1DataDocumentationResult extends \Google\Model
 {
-  protected $collection_key = 'queries';
-  protected $queriesType = GoogleCloudDataplexV1DataDocumentationResultQuery::class;
-  protected $queriesDataType = 'array';
+  protected $tableResultType = GoogleCloudDataplexV1DataDocumentationResultTableResult::class;
+  protected $tableResultDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1DataDocumentationResultQuery[]
+   * @param GoogleCloudDataplexV1DataDocumentationResultTableResult
    */
-  public function setQueries($queries)
+  public function setTableResult(GoogleCloudDataplexV1DataDocumentationResultTableResult $tableResult)
   {
-    $this->queries = $queries;
+    $this->tableResult = $tableResult;
   }
   /**
-   * @return GoogleCloudDataplexV1DataDocumentationResultQuery[]
+   * @return GoogleCloudDataplexV1DataDocumentationResultTableResult
    */
-  public function getQueries()
+  public function getTableResult()
   {
-    return $this->queries;
+    return $this->tableResult;
   }
 }
 

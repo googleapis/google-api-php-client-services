@@ -66,6 +66,7 @@ class Dialogflow extends \Google\Service
   public $projects_locations_agents_testCases;
   public $projects_locations_agents_testCases_results;
   public $projects_locations_agents_tools;
+  public $projects_locations_agents_tools_versions;
   public $projects_locations_agents_transitionRouteGroups;
   public $projects_locations_agents_webhooks;
   public $projects_locations_operations;
@@ -2067,6 +2068,78 @@ class Dialogflow extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_agents_tools_versions = new Dialogflow\Resource\ProjectsLocationsAgentsToolsVersions(
+        $this,
+        $this->serviceName,
+        'versions',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v3/{+parent}/versions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'force' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v3/{+parent}/versions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'restore' => [
+              'path' => 'v3/{+name}:restore',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_agents_transitionRouteGroups = new Dialogflow\Resource\ProjectsLocationsAgentsTransitionRouteGroups(
         $this,
         $this->serviceName,
@@ -2282,6 +2355,10 @@ class Dialogflow extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
@@ -2405,6 +2482,10 @@ class Dialogflow extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],

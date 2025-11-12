@@ -19,7 +19,7 @@ namespace Google\Service\Bigquery;
 
 class ExternalDataConfiguration extends \Google\Collection
 {
-  protected $collection_key = 'sourceUris';
+  protected $collection_key = 'timestampTargetPrecision';
   /**
    * @var bool
    */
@@ -108,6 +108,10 @@ class ExternalDataConfiguration extends \Google\Collection
    * @var string
    */
   public $timestampFormat;
+  /**
+   * @var int[]
+   */
+  public $timestampTargetPrecision;
 
   /**
    * @param bool
@@ -472,6 +476,20 @@ class ExternalDataConfiguration extends \Google\Collection
   public function getTimestampFormat()
   {
     return $this->timestampFormat;
+  }
+  /**
+   * @param int[]
+   */
+  public function setTimestampTargetPrecision($timestampTargetPrecision)
+  {
+    $this->timestampTargetPrecision = $timestampTargetPrecision;
+  }
+  /**
+   * @return int[]
+   */
+  public function getTimestampTargetPrecision()
+  {
+    return $this->timestampTargetPrecision;
   }
 }
 

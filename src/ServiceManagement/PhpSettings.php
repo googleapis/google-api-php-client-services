@@ -21,6 +21,10 @@ class PhpSettings extends \Google\Model
 {
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
+  /**
+   * @var string
+   */
+  public $libraryPackage;
 
   /**
    * @param CommonLanguageSettings
@@ -35,6 +39,20 @@ class PhpSettings extends \Google\Model
   public function getCommon()
   {
     return $this->common;
+  }
+  /**
+   * @param string
+   */
+  public function setLibraryPackage($libraryPackage)
+  {
+    $this->libraryPackage = $libraryPackage;
+  }
+  /**
+   * @return string
+   */
+  public function getLibraryPackage()
+  {
+    return $this->libraryPackage;
   }
 }
 

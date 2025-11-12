@@ -33,8 +33,9 @@ class OrganizationsLocations extends \Google\Service\Resource
 {
   /**
    * Retrieves the configuration related to the migration from Data Catalog to
-   * Dataplex for a specific organization, including all the projects under it
-   * which have a separate configuration set. (locations.retrieveConfig)
+   * Dataplex Universal Catalog for a specific organization, including all the
+   * projects under it which have a separate configuration set.
+   * (locations.retrieveConfig)
    *
    * @param string $name Required. The organization whose config is being
    * retrieved.
@@ -50,10 +51,10 @@ class OrganizationsLocations extends \Google\Service\Resource
   }
   /**
    * Retrieves the effective configuration related to the migration from Data
-   * Catalog to Dataplex for a specific organization or project. If there is no
-   * specific configuration set for the resource, the setting is checked
-   * hierarchicahlly through the ancestors of the resource, starting from the
-   * resource itself. (locations.retrieveEffectiveConfig)
+   * Catalog to Dataplex Universal Catalog for a specific organization or project.
+   * If there is no specific configuration set for the resource, the setting is
+   * checked hierarchicahlly through the ancestors of the resource, starting from
+   * the resource itself. (locations.retrieveEffectiveConfig)
    *
    * @param string $name Required. The resource whose effective config is being
    * retrieved.
@@ -68,8 +69,8 @@ class OrganizationsLocations extends \Google\Service\Resource
     return $this->call('retrieveEffectiveConfig', [$params], GoogleCloudDatacatalogV1MigrationConfig::class);
   }
   /**
-   * Sets the configuration related to the migration to Dataplex for an
-   * organization or project. (locations.setConfig)
+   * Sets the configuration related to the migration to Dataplex Universal Catalog
+   * for an organization or project. (locations.setConfig)
    *
    * @param string $name Required. The organization or project whose config is
    * being specified.

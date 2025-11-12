@@ -27,6 +27,8 @@ class GoogleCloudApihubV1PluginInstanceAction extends \Google\Model
   protected $curationConfigDataType = '';
   protected $hubInstanceActionType = GoogleCloudApihubV1ExecutionStatus::class;
   protected $hubInstanceActionDataType = '';
+  protected $resourceConfigType = GoogleCloudApihubV1ResourceConfig::class;
+  protected $resourceConfigDataType = '';
   /**
    * @var string
    */
@@ -35,6 +37,10 @@ class GoogleCloudApihubV1PluginInstanceAction extends \Google\Model
    * @var string
    */
   public $scheduleTimeZone;
+  /**
+   * @var string
+   */
+  public $serviceAccount;
   /**
    * @var string
    */
@@ -83,6 +89,20 @@ class GoogleCloudApihubV1PluginInstanceAction extends \Google\Model
     return $this->hubInstanceAction;
   }
   /**
+   * @param GoogleCloudApihubV1ResourceConfig
+   */
+  public function setResourceConfig(GoogleCloudApihubV1ResourceConfig $resourceConfig)
+  {
+    $this->resourceConfig = $resourceConfig;
+  }
+  /**
+   * @return GoogleCloudApihubV1ResourceConfig
+   */
+  public function getResourceConfig()
+  {
+    return $this->resourceConfig;
+  }
+  /**
    * @param string
    */
   public function setScheduleCronExpression($scheduleCronExpression)
@@ -109,6 +129,20 @@ class GoogleCloudApihubV1PluginInstanceAction extends \Google\Model
   public function getScheduleTimeZone()
   {
     return $this->scheduleTimeZone;
+  }
+  /**
+   * @param string
+   */
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
   /**
    * @param string

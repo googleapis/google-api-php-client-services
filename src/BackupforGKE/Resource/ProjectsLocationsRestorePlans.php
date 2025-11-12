@@ -158,8 +158,8 @@ class ProjectsLocationsRestorePlans extends \Google\Service\Resource
   /**
    * Update a RestorePlan. (restorePlans.patch)
    *
-   * @param string $name Output only. The full name of the RestorePlan resource.
-   * Format: `projects/locations/restorePlans`.
+   * @param string $name Output only. Identifier. The full name of the RestorePlan
+   * resource. Format: `projects/locations/restorePlans`.
    * @param RestorePlan $postBody
    * @param array $optParams Optional parameters.
    *

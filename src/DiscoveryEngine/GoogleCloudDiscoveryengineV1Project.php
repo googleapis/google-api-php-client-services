@@ -19,10 +19,14 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1Project extends \Google\Model
 {
+  protected $configurableBillingStatusType = GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus::class;
+  protected $configurableBillingStatusDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  protected $customerProvidedConfigType = GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfig::class;
+  protected $customerProvidedConfigDataType = '';
   /**
    * @var string
    */
@@ -34,6 +38,20 @@ class GoogleCloudDiscoveryengineV1Project extends \Google\Model
   protected $serviceTermsMapType = GoogleCloudDiscoveryengineV1ProjectServiceTerms::class;
   protected $serviceTermsMapDataType = 'map';
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus
+   */
+  public function setConfigurableBillingStatus(GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus $configurableBillingStatus)
+  {
+    $this->configurableBillingStatus = $configurableBillingStatus;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1ProjectConfigurableBillingStatus
+   */
+  public function getConfigurableBillingStatus()
+  {
+    return $this->configurableBillingStatus;
+  }
   /**
    * @param string
    */
@@ -47,6 +65,20 @@ class GoogleCloudDiscoveryengineV1Project extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfig
+   */
+  public function setCustomerProvidedConfig(GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfig $customerProvidedConfig)
+  {
+    $this->customerProvidedConfig = $customerProvidedConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfig
+   */
+  public function getCustomerProvidedConfig()
+  {
+    return $this->customerProvidedConfig;
   }
   /**
    * @param string

@@ -42,6 +42,10 @@ class DriveFileCapabilities extends \Google\Model
   /**
    * @var bool
    */
+  public $canChangeItemDownloadRestriction;
+  /**
+   * @var bool
+   */
   public $canChangeSecurityUpdateEnabled;
   /**
    * @var bool
@@ -261,6 +265,20 @@ class DriveFileCapabilities extends \Google\Model
   public function getCanChangeCopyRequiresWriterPermission()
   {
     return $this->canChangeCopyRequiresWriterPermission;
+  }
+  /**
+   * @param bool
+   */
+  public function setCanChangeItemDownloadRestriction($canChangeItemDownloadRestriction)
+  {
+    $this->canChangeItemDownloadRestriction = $canChangeItemDownloadRestriction;
+  }
+  /**
+   * @return bool
+   */
+  public function getCanChangeItemDownloadRestriction()
+  {
+    return $this->canChangeItemDownloadRestriction;
   }
   /**
    * @param bool

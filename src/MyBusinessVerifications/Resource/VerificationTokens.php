@@ -17,8 +17,8 @@
 
 namespace Google\Service\MyBusinessVerifications\Resource;
 
-use Google\Service\MyBusinessVerifications\GenerateVerificationTokenRequest;
-use Google\Service\MyBusinessVerifications\GenerateVerificationTokenResponse;
+use Google\Service\MyBusinessVerifications\GenerateInstantVerificationTokenRequest;
+use Google\Service\MyBusinessVerifications\GenerateInstantVerificationTokenResponse;
 
 /**
  * The "verificationTokens" collection of methods.
@@ -31,21 +31,19 @@ use Google\Service\MyBusinessVerifications\GenerateVerificationTokenResponse;
 class VerificationTokens extends \Google\Service\Resource
 {
   /**
-   * Generates a token for the provided location data as a vetted
-   * [partner](https://support.google.com/business/answer/7674102). Throws
-   * PERMISSION_DENIED if the caller is not a vetted partner account. Throws
-   * FAILED_PRECONDITION if the caller's VettedStatus is INVALID.
+   * Generate a token for the provided location data to verify the location.
    * (verificationTokens.generate)
    *
-   * @param GenerateVerificationTokenRequest $postBody
+   * @param GenerateInstantVerificationTokenRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GenerateVerificationTokenResponse
+   * @return GenerateInstantVerificationTokenResponse
+   * @throws \Google\Service\Exception
    */
-  public function generate(GenerateVerificationTokenRequest $postBody, $optParams = [])
+  public function generate(GenerateInstantVerificationTokenRequest $postBody, $optParams = [])
   {
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('generate', [$params], GenerateVerificationTokenResponse::class);
+    return $this->call('generate', [$params], GenerateInstantVerificationTokenResponse::class);
   }
 }
 

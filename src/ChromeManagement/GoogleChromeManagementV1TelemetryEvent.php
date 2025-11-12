@@ -33,6 +33,8 @@ class GoogleChromeManagementV1TelemetryEvent extends \Google\Model
    * @var string
    */
   public $eventType;
+  protected $externalDisplaysEventType = GoogleChromeManagementV1TelemetryExternalDisplayEvent::class;
+  protected $externalDisplaysEventDataType = '';
   protected $httpsLatencyChangeEventType = GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent::class;
   protected $httpsLatencyChangeEventDataType = '';
   /**
@@ -139,6 +141,20 @@ class GoogleChromeManagementV1TelemetryEvent extends \Google\Model
   public function getEventType()
   {
     return $this->eventType;
+  }
+  /**
+   * @param GoogleChromeManagementV1TelemetryExternalDisplayEvent
+   */
+  public function setExternalDisplaysEvent(GoogleChromeManagementV1TelemetryExternalDisplayEvent $externalDisplaysEvent)
+  {
+    $this->externalDisplaysEvent = $externalDisplaysEvent;
+  }
+  /**
+   * @return GoogleChromeManagementV1TelemetryExternalDisplayEvent
+   */
+  public function getExternalDisplaysEvent()
+  {
+    return $this->externalDisplaysEvent;
   }
   /**
    * @param GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent

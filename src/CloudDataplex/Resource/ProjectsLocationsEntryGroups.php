@@ -40,7 +40,7 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource name of the entryGroup, of the
    * form: projects/{project_number}/locations/{location_id} where location_id
-   * refers to a GCP region.
+   * refers to a Google Cloud region.
    * @param GoogleCloudDataplexV1EntryGroup $postBody
    * @param array $optParams Optional parameters.
    *

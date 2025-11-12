@@ -17,12 +17,15 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class CloudDlpDataProfile extends \Google\Model
+class CloudDlpDataProfile extends \Google\Collection
 {
+  protected $collection_key = 'infoTypes';
   /**
    * @var string
    */
   public $dataProfile;
+  protected $infoTypesType = InfoType::class;
+  protected $infoTypesDataType = 'array';
   /**
    * @var string
    */
@@ -41,6 +44,20 @@ class CloudDlpDataProfile extends \Google\Model
   public function getDataProfile()
   {
     return $this->dataProfile;
+  }
+  /**
+   * @param InfoType[]
+   */
+  public function setInfoTypes($infoTypes)
+  {
+    $this->infoTypes = $infoTypes;
+  }
+  /**
+   * @return InfoType[]
+   */
+  public function getInfoTypes()
+  {
+    return $this->infoTypes;
   }
   /**
    * @param string

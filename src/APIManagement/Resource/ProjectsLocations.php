@@ -17,6 +17,7 @@
 
 namespace Google\Service\APIManagement\Resource;
 
+use Google\Service\APIManagement\Entitlement;
 use Google\Service\APIManagement\ListApiObservationTagsResponse;
 use Google\Service\APIManagement\ListLocationsResponse;
 use Google\Service\APIManagement\Location;
@@ -46,6 +47,22 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('get', [$params], Location::class);
   }
   /**
+   * GetEntitlement returns the entitlement for the provided project.
+   * (locations.getEntitlement)
+   *
+   * @param string $name Required. The entitlement resource name Format:
+   * projects/{project}/locations/{location}/entitlement
+   * @param array $optParams Optional parameters.
+   * @return Entitlement
+   * @throws \Google\Service\Exception
+   */
+  public function getEntitlement($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getEntitlement', [$params], Entitlement::class);
+  }
+  /**
    * Lists information about the supported locations for this service.
    * (locations.listProjectsLocations)
    *
@@ -53,9 +70,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string extraLocationTypes Optional. A list of extra location types
-   * that should be used as conditions for controlling the visibility of the
-   * locations.
+   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
+   * unsupported and is ignored unless explicitly documented otherwise. This is
+   * primarily for internal usage.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like `"displayName=tokyo"`,
    * and is documented in more detail in [AIP-160](https://google.aip.dev/160).

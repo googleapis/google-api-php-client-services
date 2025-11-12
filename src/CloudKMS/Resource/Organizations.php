@@ -30,8 +30,8 @@ use Google\Service\CloudKMS\KeyAccessJustificationsPolicyConfig;
 class Organizations extends \Google\Service\Resource
 {
   /**
-   * Gets the KeyAccessJustificationsPolicyConfig for a given
-   * organization/folder/projects. (organizations.getKajPolicyConfig)
+   * Gets the KeyAccessJustificationsPolicyConfig for a given organization,
+   * folder, or project. (organizations.getKajPolicyConfig)
    *
    * @param string $name Required. The name of the
    * KeyAccessJustificationsPolicyConfig to get.
@@ -46,8 +46,8 @@ class Organizations extends \Google\Service\Resource
     return $this->call('getKajPolicyConfig', [$params], KeyAccessJustificationsPolicyConfig::class);
   }
   /**
-   * Updates the KeyAccessJustificationsPolicyConfig for a given
-   * organization/folder/projects. (organizations.updateKajPolicyConfig)
+   * Updates the KeyAccessJustificationsPolicyConfig for a given organization,
+   * folder, or project. (organizations.updateKajPolicyConfig)
    *
    * @param string $name Identifier. The resource name for this
    * KeyAccessJustificationsPolicyConfig in the format of

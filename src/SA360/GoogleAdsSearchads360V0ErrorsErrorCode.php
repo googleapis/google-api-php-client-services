@@ -30,6 +30,10 @@ class GoogleAdsSearchads360V0ErrorsErrorCode extends \Google\Model
   /**
    * @var string
    */
+  public $conversionCustomVariableError;
+  /**
+   * @var string
+   */
   public $customColumnError;
   /**
    * @var string
@@ -99,6 +103,20 @@ class GoogleAdsSearchads360V0ErrorsErrorCode extends \Google\Model
   public function getAuthorizationError()
   {
     return $this->authorizationError;
+  }
+  /**
+   * @param string
+   */
+  public function setConversionCustomVariableError($conversionCustomVariableError)
+  {
+    $this->conversionCustomVariableError = $conversionCustomVariableError;
+  }
+  /**
+   * @return string
+   */
+  public function getConversionCustomVariableError()
+  {
+    return $this->conversionCustomVariableError;
   }
   /**
    * @param string

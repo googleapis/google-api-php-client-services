@@ -37,7 +37,7 @@ class Users extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string customer The customer to scope this request to. For
-   * example: "customers/abcd1234". If unset, will return settings within the
+   * example: `customers/abcd1234`. If unset, it will return settings within the
    * current customer.
    * @return GoogleAppsDriveLabelsV2UserCapabilities
    * @throws \Google\Service\Exception

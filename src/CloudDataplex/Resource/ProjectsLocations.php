@@ -54,9 +54,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string extraLocationTypes Optional. A list of extra location types
-   * that should be used as conditions for controlling the visibility of the
-   * locations.
+   * @opt_param string extraLocationTypes Optional. Do not use this field. It is
+   * unsupported and is ignored unless explicitly documented otherwise. This is
+   * primarily for internal usage.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like "displayName=tokyo", and
    * is documented in more detail in AIP-160 (https://google.aip.dev/160).
@@ -74,7 +74,11 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudLocationListLocationsResponse::class);
   }
   /**
-   * Looks up an entry by name using the permission on the source system.
+   * Looks up an entry by name using the permission on the source system. Caution:
+   * The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform, and Dataproc Metastore
+   * metadata that is stored in Dataplex Universal Catalog is changing. For more
+   * information, see Changes to metadata stored in Dataplex Universal Catalog
+   * (https://cloud.google.com/dataplex/docs/metadata-changes).
    * (locations.lookupEntry)
    *
    * @param string $name Required. The project to which the request should be
@@ -108,7 +112,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Optional. Specifies the ordering of results.
-   * Supported values are: relevance (default) last_modified_timestamp
+   * Supported values are: relevance last_modified_timestamp
    * last_modified_timestamp asc
    * @opt_param int pageSize Optional. Number of results in the search page. If
    * <=0, then defaults to 10. Max limit for page_size is 1000. Throws an invalid
@@ -117,12 +121,14 @@ class ProjectsLocations extends \Google\Service\Resource
    * SearchEntries call. Provide this to retrieve the subsequent page.
    * @opt_param string query Required. The query against which entries in scope
    * should be matched. The query syntax is defined in Search syntax for Dataplex
-   * Catalog (https://cloud.google.com/dataplex/docs/search-syntax).
+   * Universal Catalog (https://cloud.google.com/dataplex/docs/search-syntax).
    * @opt_param string scope Optional. The scope under which the search should be
    * operating. It must either be organizations/ or projects/. If it is
    * unspecified, it defaults to the organization where the project provided in
    * name is located.
-   * @opt_param bool semanticSearch Optional. Internal only.
+   * @opt_param bool semanticSearch Optional. Specifies whether the search should
+   * understand the meaning and intent behind the query, rather than just matching
+   * keywords.
    * @return GoogleCloudDataplexV1SearchEntriesResponse
    * @throws \Google\Service\Exception
    */

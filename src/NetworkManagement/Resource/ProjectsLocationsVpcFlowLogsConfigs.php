@@ -19,6 +19,8 @@ namespace Google\Service\NetworkManagement\Resource;
 
 use Google\Service\NetworkManagement\ListVpcFlowLogsConfigsResponse;
 use Google\Service\NetworkManagement\Operation;
+use Google\Service\NetworkManagement\QueryOrgVpcFlowLogsConfigsResponse;
+use Google\Service\NetworkManagement\ShowEffectiveFlowLogsConfigsResponse;
 use Google\Service\NetworkManagement\VpcFlowLogsConfig;
 
 /**
@@ -34,15 +36,16 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
   /**
    * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same
    * settings already exists (even if the ID is different), the creation fails.
-   * Notes: 1. Creating a configuration with state=DISABLED will fail 2. The
-   * following fields are not considered as `settings` for the purpose of the
-   * check mentioned above, therefore - creating another configuration with the
-   * same fields but different values for the following fields will fail as well:
-   * * name * create_time * update_time * labels * description
+   * Notes: 1. Creating a configuration with `state=DISABLED` will fail 2. The
+   * following fields are not considered as settings for the purpose of the check
+   * mentioned above, therefore - creating another configuration with the same
+   * fields but different values for the following fields will fail as well: *
+   * name * create_time * update_time * labels * description
    * (vpcFlowLogsConfigs.create)
    *
-   * @param string $parent Required. The parent resource of the VPC Flow Logs
-   * configuration to create: `projects/{project_id}/locations/global`
+   * @param string $parent Required. The parent resource of the VpcFlowLogsConfig
+   * to create, in one of the following formats: - For project-level resources:
+   * `projects/{project_id}/locations/global` - For organization-level resources:
    * `organizations/{organization_id}/locations/global`
    * @param VpcFlowLogsConfig $postBody
    * @param array $optParams Optional parameters.
@@ -61,10 +64,11 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
   /**
    * Deletes a specific `VpcFlowLogsConfig`. (vpcFlowLogsConfigs.delete)
    *
-   * @param string $name Required. `VpcFlowLogsConfig` resource name using one of
-   * the form: `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flo
-   * w_logs_config} `organizations/{organization_id}/locations/global/vpcFlowLogsC
-   * onfigs/{vpc_flow_logs_config}`
+   * @param string $name Required. The resource name of the VpcFlowLogsConfig, in
+   * one of the following formats: - For a project-level resource: `projects/{proj
+   * ect_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+   * an organization-level resource: `organizations/{organization_id}/locations/gl
+   * obal/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * @param array $optParams Optional parameters.
    * @return Operation
    * @throws \Google\Service\Exception
@@ -78,10 +82,11 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
   /**
    * Gets the details of a specific `VpcFlowLogsConfig`. (vpcFlowLogsConfigs.get)
    *
-   * @param string $name Required. `VpcFlowLogsConfig` resource name using the
-   * form: `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_lo
-   * gs_config}` `organizations/{organization_id}/locations/global/vpcFlowLogsConf
-   * igs/{vpc_flow_logs_config}`
+   * @param string $name Required. The resource name of the VpcFlowLogsConfig, in
+   * one of the following formats: - For project-level resources: `projects/{proje
+   * ct_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}` - For
+   * organization-level resources: `organizations/{organization_id}/locations/glob
+   * al/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * @param array $optParams Optional parameters.
    * @return VpcFlowLogsConfig
    * @throws \Google\Service\Exception
@@ -96,8 +101,9 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
    * Lists all `VpcFlowLogsConfigs` in a given project.
    * (vpcFlowLogsConfigs.listProjectsLocationsVpcFlowLogsConfigs)
    *
-   * @param string $parent Required. The parent resource of the VpcFlowLogsConfig:
-   * `projects/{project_id}/locations/global`
+   * @param string $parent Required. The parent resource of the VpcFlowLogsConfig,
+   * in one of the following formats: - For project-level resourcs:
+   * `projects/{project_id}/locations/global` - For organization-level resources:
    * `organizations/{organization_id}/locations/global`
    * @param array $optParams Optional parameters.
    *
@@ -121,22 +127,27 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
   /**
    * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact
    * same settings already exists (even if the ID is different), the creation
-   * fails. Notes: 1. Updating a configuration with state=DISABLED will fail. 2.
-   * The following fields are not considered as `settings` for the purpose of the
+   * fails. Notes: 1. Updating a configuration with `state=DISABLED` will fail. 2.
+   * The following fields are not considered as settings for the purpose of the
    * check mentioned above, therefore - updating another configuration with the
    * same fields but different values for the following fields will fail as well:
    * * name * create_time * update_time * labels * description
    * (vpcFlowLogsConfigs.patch)
    *
-   * @param string $name Identifier. Unique name of the configuration using one of
-   * the forms: `projects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_fl
-   * ow_logs_config_id}` `organizations/{organization_number}/locations/global/vpc
-   * FlowLogsConfigs/{vpc_flow_logs_config_id}`
+   * @param string $name Identifier. Unique name of the configuration. The name
+   * can have one of the following forms: - For project-level configurations: `pro
+   * jects/{project_id}/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_
+   * id}` - For organization-level configurations: `organizations/{organization_id
+   * }/locations/global/vpcFlowLogsConfigs/{vpc_flow_logs_config_id}`
    * @param VpcFlowLogsConfig $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. Mask of fields to update. At least one
-   * path must be supplied in this field.
+   * path must be supplied in this field. For example, to change the state of the
+   * configuration to ENABLED, specify `update_mask` = `"state"`, and the
+   * `vpc_flow_logs_config` would be: `vpc_flow_logs_config = { name =
+   * "projects/my-project/locations/global/vpcFlowLogsConfigs/my-config" state =
+   * "ENABLED" }`
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -145,6 +156,61 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC Flow
+   * Logs configurations applicable to the specified project.
+   * (vpcFlowLogsConfigs.queryOrgVpcFlowLogsConfigs)
+   *
+   * @param string $parent Required. The parent resource of the VpcFlowLogsConfig,
+   * specified in the following format: `projects/{project_id}/locations/global`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Lists the `VpcFlowLogsConfigs` that match
+   * the filter expression. A filter expression must use the supported [CEL logic
+   * operators] (https://cloud.google.com/vpc/docs/about-flow-logs-
+   * records#supported_cel_logic_operators).
+   * @opt_param int pageSize Optional. Number of `VpcFlowLogsConfigs` to return.
+   * @opt_param string pageToken Optional. Page token from an earlier query, as
+   * returned in `next_page_token`.
+   * @return QueryOrgVpcFlowLogsConfigsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function queryOrgVpcFlowLogsConfigs($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('queryOrgVpcFlowLogsConfigs', [$params], QueryOrgVpcFlowLogsConfigsResponse::class);
+  }
+  /**
+   * ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
+   * configurations applicable to a specified resource.
+   * (vpcFlowLogsConfigs.showEffectiveFlowLogsConfigs)
+   *
+   * @param string $parent Required. The parent resource of the VpcFlowLogsConfig,
+   * specified in the following format: `projects/{project_id}/locations/global`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Lists the `EffectiveVpcFlowLogsConfigs`
+   * that match the filter expression. A filter expression must use the supported
+   * [CEL logic operators] (https://cloud.google.com/vpc/docs/about-flow-logs-
+   * records#supported_cel_logic_operators).
+   * @opt_param int pageSize Optional. Number of `EffectiveVpcFlowLogsConfigs` to
+   * return. Default is 30.
+   * @opt_param string pageToken Optional. Page token from an earlier query, as
+   * returned in `next_page_token`.
+   * @opt_param string resource Required. The resource to get the effective VPC
+   * Flow Logs configuration for. The resource must belong to the same project as
+   * the parent. The resource must be a network, subnetwork, interconnect
+   * attachment, VPN tunnel, or a project.
+   * @return ShowEffectiveFlowLogsConfigsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function showEffectiveFlowLogsConfigs($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('showEffectiveFlowLogsConfigs', [$params], ShowEffectiveFlowLogsConfigsResponse::class);
   }
 }
 

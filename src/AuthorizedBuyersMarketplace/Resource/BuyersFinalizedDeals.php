@@ -162,11 +162,15 @@ class BuyersFinalizedDeals extends \Google\Service\Resource
    * use this method, finalized deals belonging to the bidder and its child seats
    * don't start serving until after you call `setReadyToServe`, and after the
    * deals become active. For example, you can use this method to delay receiving
-   * bid requests until your creative is ready. This method only applies to
-   * programmatic guaranteed deals. (finalizedDeals.setReadyToServe)
+   * bid requests until your creative is ready. In addition, bidders can use the
+   * URL path "/v1/bidders/{accountId}/finalizedDeals/{dealId}" to set ready to
+   * serve for the finalized deals belong to itself, its child seats and all their
+   * clients. This method only applies to programmatic guaranteed deals.
+   * (finalizedDeals.setReadyToServe)
    *
    * @param string $deal Required. Format:
-   * `buyers/{accountId}/finalizedDeals/{dealId}`
+   * `buyers/{accountId}/finalizedDeals/{dealId}` or
+   * `bidders/{accountId}/finalizedDeals/{dealId}`
    * @param SetReadyToServeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return FinalizedDeal

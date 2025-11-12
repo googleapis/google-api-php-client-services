@@ -23,6 +23,8 @@ class TableMetadataCacheUsage extends \Google\Model
    * @var string
    */
   public $explanation;
+  protected $pruningStatsType = PruningStats::class;
+  protected $pruningStatsDataType = '';
   /**
    * @var string
    */
@@ -51,6 +53,20 @@ class TableMetadataCacheUsage extends \Google\Model
   public function getExplanation()
   {
     return $this->explanation;
+  }
+  /**
+   * @param PruningStats
+   */
+  public function setPruningStats(PruningStats $pruningStats)
+  {
+    $this->pruningStats = $pruningStats;
+  }
+  /**
+   * @return PruningStats
+   */
+  public function getPruningStats()
+  {
+    return $this->pruningStats;
   }
   /**
    * @param string

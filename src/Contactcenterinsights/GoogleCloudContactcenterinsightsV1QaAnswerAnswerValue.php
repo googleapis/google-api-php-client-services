@@ -36,6 +36,10 @@ class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends \Google\Mode
   public $potentialScore;
   public $score;
   /**
+   * @var bool
+   */
+  public $skipValue;
+  /**
    * @var string
    */
   public $strValue;
@@ -113,6 +117,20 @@ class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends \Google\Mode
   public function getScore()
   {
     return $this->score;
+  }
+  /**
+   * @param bool
+   */
+  public function setSkipValue($skipValue)
+  {
+    $this->skipValue = $skipValue;
+  }
+  /**
+   * @return bool
+   */
+  public function getSkipValue()
+  {
+    return $this->skipValue;
   }
   /**
    * @param string

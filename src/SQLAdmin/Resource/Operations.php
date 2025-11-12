@@ -51,8 +51,9 @@ class Operations extends \Google\Service\Resource
    * Retrieves an instance operation that has been performed on an instance.
    * (operations.get)
    *
-   * @param string $project Project ID of the project that contains the instance.
-   * @param string $operation Instance operation ID.
+   * @param string $project Required. Project ID of the project that contains the
+   * instance.
+   * @param string $operation Required. Instance operation ID.
    * @param array $optParams Optional parameters.
    * @return Operation
    * @throws \Google\Service\Exception

@@ -31,9 +31,11 @@ use Google\Service\Drive\PermissionList;
 class Permissions extends \Google\Service\Resource
 {
   /**
-   * Creates a permission for a file or shared drive. **Warning:** Concurrent
-   * permissions operations on the same file are not supported; only the last
-   * update is applied. (permissions.create)
+   * Creates a permission for a file or shared drive. For more information, see
+   * [Share files, folders, and
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing). **Warning:** Concurrent permissions operations on the same file
+   * aren't supported; only the last update is applied. (permissions.create)
    *
    * @param string $fileId The ID of the file or shared drive.
    * @param Permission $postBody
@@ -45,26 +47,32 @@ class Permissions extends \Google\Service\Resource
    * expansive access rules.
    * @opt_param bool enforceSingleParent Deprecated: See `moveToNewOwnersRoot` for
    * details.
-   * @opt_param bool moveToNewOwnersRoot This parameter will only take effect if
-   * the item is not in a shared drive and the request is attempting to transfer
-   * the ownership of the item. If set to `true`, the item will be moved to the
-   * new owner's My Drive root folder and all prior parents removed. If set to
-   * `false`, parents are not changed.
+   * @opt_param bool moveToNewOwnersRoot This parameter only takes effect if the
+   * item isn't in a shared drive and the request is attempting to transfer the
+   * ownership of the item. If set to `true`, the item is moved to the new owner's
+   * My Drive root folder and all prior parents removed. If set to `false`,
+   * parents aren't changed.
    * @opt_param bool sendNotificationEmail Whether to send a notification email
-   * when sharing to users or groups. This defaults to true for users and groups,
-   * and is not allowed for other requests. It must not be disabled for ownership
-   * transfers.
+   * when sharing to users or groups. This defaults to `true` for users and
+   * groups, and is not allowed for other requests. It must not be disabled for
+   * ownership transfers.
    * @opt_param bool supportsAllDrives Whether the requesting application supports
    * both My Drives and shared drives.
    * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
    * instead.
    * @opt_param bool transferOwnership Whether to transfer ownership to the
    * specified user and downgrade the current owner to a writer. This parameter is
-   * required as an acknowledgement of the side effect.
+   * required as an acknowledgement of the side effect. For more information, see
+   * [Transfer file
+   * ownership](https://developers.google.com/workspace/drive/api/guides/transfer-
+   * file).
    * @opt_param bool useDomainAdminAccess Issue the request as a domain
-   * administrator; if set to true, then the requester will be granted access if
-   * the file ID parameter refers to a shared drive and the requester is an
-   * administrator of the domain to which the shared drive belongs.
+   * administrator. If set to `true`, and if the following additional conditions
+   * are met, the requester is granted access: 1. The file ID parameter refers to
+   * a shared drive. 2. The requester is an administrator of the domain to which
+   * the shared drive belongs. For more information, see [Manage shared drives as
+   * domain administrators](https://developers.google.com/workspace/drive/api/guid
+   * es/manage-shareddrives#manage-administrators).
    * @return Permission
    * @throws \Google\Service\Exception
    */
@@ -75,9 +83,10 @@ class Permissions extends \Google\Service\Resource
     return $this->call('create', [$params], Permission::class);
   }
   /**
-   * Deletes a permission. **Warning:** Concurrent permissions operations on the
-   * same file are not supported; only the last update is applied.
-   * (permissions.delete)
+   * Deletes a permission. For more information, see [Share files, folders, and
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing). **Warning:** Concurrent permissions operations on the same file
+   * aren't supported; only the last update is applied. (permissions.delete)
    *
    * @param string $fileId The ID of the file or shared drive.
    * @param string $permissionId The ID of the permission.
@@ -90,9 +99,12 @@ class Permissions extends \Google\Service\Resource
    * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
    * instead.
    * @opt_param bool useDomainAdminAccess Issue the request as a domain
-   * administrator; if set to true, then the requester will be granted access if
-   * the file ID parameter refers to a shared drive and the requester is an
-   * administrator of the domain to which the shared drive belongs.
+   * administrator. If set to `true`, and if the following additional conditions
+   * are met, the requester is granted access: 1. The file ID parameter refers to
+   * a shared drive. 2. The requester is an administrator of the domain to which
+   * the shared drive belongs. For more information, see [Manage shared drives as
+   * domain administrators](https://developers.google.com/workspace/drive/api/guid
+   * es/manage-shareddrives#manage-administrators).
    * @throws \Google\Service\Exception
    */
   public function delete($fileId, $permissionId, $optParams = [])
@@ -102,7 +114,9 @@ class Permissions extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Gets a permission by ID. (permissions.get)
+   * Gets a permission by ID. For more information, see [Share files, folders, and
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing). (permissions.get)
    *
    * @param string $fileId The ID of the file.
    * @param string $permissionId The ID of the permission.
@@ -113,9 +127,12 @@ class Permissions extends \Google\Service\Resource
    * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
    * instead.
    * @opt_param bool useDomainAdminAccess Issue the request as a domain
-   * administrator; if set to true, then the requester will be granted access if
-   * the file ID parameter refers to a shared drive and the requester is an
-   * administrator of the domain to which the shared drive belongs.
+   * administrator. If set to `true`, and if the following additional conditions
+   * are met, the requester is granted access: 1. The file ID parameter refers to
+   * a shared drive. 2. The requester is an administrator of the domain to which
+   * the shared drive belongs. For more information, see [Manage shared drives as
+   * domain administrators](https://developers.google.com/workspace/drive/api/guid
+   * es/manage-shareddrives#manage-administrators).
    * @return Permission
    * @throws \Google\Service\Exception
    */
@@ -126,28 +143,34 @@ class Permissions extends \Google\Service\Resource
     return $this->call('get', [$params], Permission::class);
   }
   /**
-   * Lists a file's or shared drive's permissions. (permissions.listPermissions)
+   * Lists a file's or shared drive's permissions. For more information, see
+   * [Share files, folders, and
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing). (permissions.listPermissions)
    *
    * @param string $fileId The ID of the file or shared drive.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string includePermissionsForView Specifies which additional view's
-   * permissions to include in the response. Only 'published' is supported.
+   * permissions to include in the response. Only `published` is supported.
    * @opt_param int pageSize The maximum number of permissions to return per page.
    * When not set for files in a shared drive, at most 100 results will be
    * returned. When not set for files that are not in a shared drive, the entire
    * list will be returned.
    * @opt_param string pageToken The token for continuing a previous list request
-   * on the next page. This should be set to the value of 'nextPageToken' from the
+   * on the next page. This should be set to the value of `nextPageToken` from the
    * previous response.
    * @opt_param bool supportsAllDrives Whether the requesting application supports
    * both My Drives and shared drives.
    * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
    * instead.
    * @opt_param bool useDomainAdminAccess Issue the request as a domain
-   * administrator; if set to true, then the requester will be granted access if
-   * the file ID parameter refers to a shared drive and the requester is an
-   * administrator of the domain to which the shared drive belongs.
+   * administrator. If set to `true`, and if the following additional conditions
+   * are met, the requester is granted access: 1. The file ID parameter refers to
+   * a shared drive. 2. The requester is an administrator of the domain to which
+   * the shared drive belongs. For more information, see [Manage shared drives as
+   * domain administrators](https://developers.google.com/workspace/drive/api/guid
+   * es/manage-shareddrives#manage-administrators).
    * @return PermissionList
    * @throws \Google\Service\Exception
    */
@@ -158,9 +181,11 @@ class Permissions extends \Google\Service\Resource
     return $this->call('list', [$params], PermissionList::class);
   }
   /**
-   * Updates a permission with patch semantics. **Warning:** Concurrent
-   * permissions operations on the same file are not supported; only the last
-   * update is applied. (permissions.update)
+   * Updates a permission with patch semantics. For more information, see [Share
+   * files, folders, and
+   * drives](https://developers.google.com/workspace/drive/api/guides/manage-
+   * sharing). **Warning:** Concurrent permissions operations on the same file
+   * aren't supported; only the last update is applied. (permissions.update)
    *
    * @param string $fileId The ID of the file or shared drive.
    * @param string $permissionId The ID of the permission.
@@ -176,11 +201,16 @@ class Permissions extends \Google\Service\Resource
    * instead.
    * @opt_param bool transferOwnership Whether to transfer ownership to the
    * specified user and downgrade the current owner to a writer. This parameter is
-   * required as an acknowledgement of the side effect.
+   * required as an acknowledgement of the side effect. For more information, see
+   * [Transfer file ownership](https://developers.google.com//workspace/drive/api/
+   * guides/transfer-file).
    * @opt_param bool useDomainAdminAccess Issue the request as a domain
-   * administrator; if set to true, then the requester will be granted access if
-   * the file ID parameter refers to a shared drive and the requester is an
-   * administrator of the domain to which the shared drive belongs.
+   * administrator. If set to `true`, and if the following additional conditions
+   * are met, the requester is granted access: 1. The file ID parameter refers to
+   * a shared drive. 2. The requester is an administrator of the domain to which
+   * the shared drive belongs. For more information, see [Manage shared drives as
+   * domain administrators](https://developers.google.com/workspace/drive/api/guid
+   * es/manage-shareddrives#manage-administrators).
    * @return Permission
    * @throws \Google\Service\Exception
    */

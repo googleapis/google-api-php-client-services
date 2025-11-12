@@ -99,8 +99,9 @@ class EnterprisesDevices extends \Google\Service\Resource
    * enterprises/{enterpriseId}.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize The requested page size. The actual page size may be
-   * fixed to a min or max value.
+   * @opt_param int pageSize The requested page size. If unspecified, at most 10
+   * devices will be returned. The maximum value is 100; values above 100 will be
+   * coerced to 100. The limits can change over time.
    * @opt_param string pageToken A token identifying a page of results returned by
    * the server.
    * @return ListDevicesResponse

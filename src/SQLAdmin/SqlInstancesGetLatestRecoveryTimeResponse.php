@@ -22,12 +22,30 @@ class SqlInstancesGetLatestRecoveryTimeResponse extends \Google\Model
   /**
    * @var string
    */
+  public $earliestRecoveryTime;
+  /**
+   * @var string
+   */
   public $kind;
   /**
    * @var string
    */
   public $latestRecoveryTime;
 
+  /**
+   * @param string
+   */
+  public function setEarliestRecoveryTime($earliestRecoveryTime)
+  {
+    $this->earliestRecoveryTime = $earliestRecoveryTime;
+  }
+  /**
+   * @return string
+   */
+  public function getEarliestRecoveryTime()
+  {
+    return $this->earliestRecoveryTime;
+  }
   /**
    * @param string
    */
