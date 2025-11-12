@@ -21,24 +21,39 @@ class DnsRecordSet extends \Google\Collection
 {
   protected $collection_key = 'data';
   /**
+   * Required. As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * for examples see https://cloud.google.com/dns/records/json-record.
+   *
    * @var string[]
    */
   public $data;
   /**
+   * Required. The DNS or domain name of the record set, e.g.
+   * `test.example.com`. Cloud DNS requires that a DNS suffix ends with a
+   * trailing dot.
+   *
    * @var string
    */
   public $domain;
   /**
+   * Required. The period of time for which this RecordSet can be cached by
+   * resolvers.
+   *
    * @var string
    */
   public $ttl;
   /**
+   * Required. The identifier of a supported record type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string[]
+   * Required. As defined in RFC 1035 (section 5) and RFC 1034 (section 3.6.1)
+   * for examples see https://cloud.google.com/dns/records/json-record.
+   *
+   * @param string[] $data
    */
   public function setData($data)
   {
@@ -52,7 +67,11 @@ class DnsRecordSet extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param string
+   * Required. The DNS or domain name of the record set, e.g.
+   * `test.example.com`. Cloud DNS requires that a DNS suffix ends with a
+   * trailing dot.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -66,7 +85,10 @@ class DnsRecordSet extends \Google\Collection
     return $this->domain;
   }
   /**
-   * @param string
+   * Required. The period of time for which this RecordSet can be cached by
+   * resolvers.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {
@@ -80,7 +102,9 @@ class DnsRecordSet extends \Google\Collection
     return $this->ttl;
   }
   /**
-   * @param string
+   * Required. The identifier of a supported record type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

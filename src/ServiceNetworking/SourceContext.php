@@ -20,12 +20,18 @@ namespace Google\Service\ServiceNetworking;
 class SourceContext extends \Google\Model
 {
   /**
+   * The path-qualified name of the .proto file that contained the associated
+   * protobuf element. For example: `"google/protobuf/source_context.proto"`.
+   *
    * @var string
    */
   public $fileName;
 
   /**
-   * @param string
+   * The path-qualified name of the .proto file that contained the associated
+   * protobuf element. For example: `"google/protobuf/source_context.proto"`.
+   *
+   * @param string $fileName
    */
   public function setFileName($fileName)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\ServiceNetworking;
 class SecondaryIpRange extends \Google\Model
 {
   /**
+   * Secondary IP CIDR range in `x.x.x.x/y` format.
+   *
    * @var string
    */
   public $ipCidrRange;
   /**
+   * Name of the secondary IP range.
+   *
    * @var string
    */
   public $rangeName;
 
   /**
-   * @param string
+   * Secondary IP CIDR range in `x.x.x.x/y` format.
+   *
+   * @param string $ipCidrRange
    */
   public function setIpCidrRange($ipCidrRange)
   {
@@ -43,7 +49,9 @@ class SecondaryIpRange extends \Google\Model
     return $this->ipCidrRange;
   }
   /**
-   * @param string
+   * Name of the secondary IP range.
+   *
+   * @param string $rangeName
    */
   public function setRangeName($rangeName)
   {

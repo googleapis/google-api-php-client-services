@@ -20,24 +20,38 @@ namespace Google\Service\ServiceNetworking;
 class LongRunning extends \Google\Model
 {
   /**
+   * Initial delay after which the first poll request will be made. Default
+   * value: 5 seconds.
+   *
    * @var string
    */
   public $initialPollDelay;
   /**
+   * Maximum time between two subsequent poll requests. Default value: 45
+   * seconds.
+   *
    * @var string
    */
   public $maxPollDelay;
   /**
+   * Multiplier to gradually increase delay between subsequent polls until it
+   * reaches max_poll_delay. Default value: 1.5.
+   *
    * @var float
    */
   public $pollDelayMultiplier;
   /**
+   * Total polling timeout. Default value: 5 minutes.
+   *
    * @var string
    */
   public $totalPollTimeout;
 
   /**
-   * @param string
+   * Initial delay after which the first poll request will be made. Default
+   * value: 5 seconds.
+   *
+   * @param string $initialPollDelay
    */
   public function setInitialPollDelay($initialPollDelay)
   {
@@ -51,7 +65,10 @@ class LongRunning extends \Google\Model
     return $this->initialPollDelay;
   }
   /**
-   * @param string
+   * Maximum time between two subsequent poll requests. Default value: 45
+   * seconds.
+   *
+   * @param string $maxPollDelay
    */
   public function setMaxPollDelay($maxPollDelay)
   {
@@ -65,7 +82,10 @@ class LongRunning extends \Google\Model
     return $this->maxPollDelay;
   }
   /**
-   * @param float
+   * Multiplier to gradually increase delay between subsequent polls until it
+   * reaches max_poll_delay. Default value: 1.5.
+   *
+   * @param float $pollDelayMultiplier
    */
   public function setPollDelayMultiplier($pollDelayMultiplier)
   {
@@ -79,7 +99,9 @@ class LongRunning extends \Google\Model
     return $this->pollDelayMultiplier;
   }
   /**
-   * @param string
+   * Total polling timeout. Default value: 5 minutes.
+   *
+   * @param string $totalPollTimeout
    */
   public function setTotalPollTimeout($totalPollTimeout)
   {

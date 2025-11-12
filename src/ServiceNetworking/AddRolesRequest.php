@@ -21,6 +21,10 @@ class AddRolesRequest extends \Google\Collection
 {
   protected $collection_key = 'policyBinding';
   /**
+   * Required. The network that the consumer is using to connect with services.
+   * Must be in the form of projects/{project}/global/networks/{network}
+   * {project} is a project number, as in '12345' {network} is a network name.
+   *
    * @var string
    */
   public $consumerNetwork;
@@ -28,7 +32,11 @@ class AddRolesRequest extends \Google\Collection
   protected $policyBindingDataType = 'array';
 
   /**
-   * @param string
+   * Required. The network that the consumer is using to connect with services.
+   * Must be in the form of projects/{project}/global/networks/{network}
+   * {project} is a project number, as in '12345' {network} is a network name.
+   *
+   * @param string $consumerNetwork
    */
   public function setConsumerNetwork($consumerNetwork)
   {
@@ -42,7 +50,9 @@ class AddRolesRequest extends \Google\Collection
     return $this->consumerNetwork;
   }
   /**
-   * @param PolicyBinding[]
+   * Required. List of policy bindings to add to shared VPC host project.
+   *
+   * @param PolicyBinding[] $policyBinding
    */
   public function setPolicyBinding($policyBinding)
   {

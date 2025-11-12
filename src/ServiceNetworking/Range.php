@@ -20,16 +20,26 @@ namespace Google\Service\ServiceNetworking;
 class Range extends \Google\Model
 {
   /**
+   * CIDR range in "10.x.x.x/y" format that is within the allocated ranges and
+   * currently unused.
+   *
    * @var string
    */
   public $ipCidrRange;
   /**
+   * In the Shared VPC host project, the VPC network that's peered with the
+   * consumer network. For example: `projects/1234321/global/networks/host-
+   * network`
+   *
    * @var string
    */
   public $network;
 
   /**
-   * @param string
+   * CIDR range in "10.x.x.x/y" format that is within the allocated ranges and
+   * currently unused.
+   *
+   * @param string $ipCidrRange
    */
   public function setIpCidrRange($ipCidrRange)
   {
@@ -43,7 +53,11 @@ class Range extends \Google\Model
     return $this->ipCidrRange;
   }
   /**
-   * @param string
+   * In the Shared VPC host project, the VPC network that's peered with the
+   * consumer network. For example: `projects/1234321/global/networks/host-
+   * network`
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {

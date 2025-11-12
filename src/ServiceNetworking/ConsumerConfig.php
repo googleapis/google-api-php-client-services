@@ -23,54 +23,86 @@ class ConsumerConfig extends \Google\Collection
   protected $cloudsqlConfigsType = CloudSQLConfig::class;
   protected $cloudsqlConfigsDataType = 'array';
   /**
+   * Export custom routes flag value for peering from consumer to producer.
+   *
    * @var bool
    */
   public $consumerExportCustomRoutes;
   /**
+   * Export subnet routes with public ip flag value for peering from consumer to
+   * producer.
+   *
    * @var bool
    */
   public $consumerExportSubnetRoutesWithPublicIp;
   /**
+   * Import custom routes flag value for peering from consumer to producer.
+   *
    * @var bool
    */
   public $consumerImportCustomRoutes;
   /**
+   * Import subnet routes with public ip flag value for peering from consumer to
+   * producer.
+   *
    * @var bool
    */
   public $consumerImportSubnetRoutesWithPublicIp;
   /**
+   * Export custom routes flag value for peering from producer to consumer.
+   *
    * @var bool
    */
   public $producerExportCustomRoutes;
   /**
+   * Export subnet routes with public ip flag value for peering from producer to
+   * consumer.
+   *
    * @var bool
    */
   public $producerExportSubnetRoutesWithPublicIp;
   /**
+   * Import custom routes flag value for peering from producer to consumer.
+   *
    * @var bool
    */
   public $producerImportCustomRoutes;
   /**
+   * Import subnet routes with public ip flag value for peering from producer to
+   * consumer.
+   *
    * @var bool
    */
   public $producerImportSubnetRoutesWithPublicIp;
   /**
+   * Output only. The VPC host network that is used to host managed service
+   * instances. In the format, projects/{project}/global/networks/{network}
+   * where {project} is the project number e.g. '12345' and {network} is the
+   * network name.
+   *
    * @var string
    */
   public $producerNetwork;
   protected $reservedRangesType = GoogleCloudServicenetworkingV1ConsumerConfigReservedRange::class;
   protected $reservedRangesDataType = 'array';
   /**
+   * Output only. The IP ranges already in use by consumer or producer
+   *
    * @var string[]
    */
   public $usedIpRanges;
   /**
+   * Output only. Indicates whether the VPC Service Controls reference
+   * architecture is configured for the producer VPC host network.
+   *
    * @var bool
    */
   public $vpcScReferenceArchitectureEnabled;
 
   /**
-   * @param CloudSQLConfig[]
+   * Represents one or multiple Cloud SQL configurations.
+   *
+   * @param CloudSQLConfig[] $cloudsqlConfigs
    */
   public function setCloudsqlConfigs($cloudsqlConfigs)
   {
@@ -84,7 +116,9 @@ class ConsumerConfig extends \Google\Collection
     return $this->cloudsqlConfigs;
   }
   /**
-   * @param bool
+   * Export custom routes flag value for peering from consumer to producer.
+   *
+   * @param bool $consumerExportCustomRoutes
    */
   public function setConsumerExportCustomRoutes($consumerExportCustomRoutes)
   {
@@ -98,7 +132,10 @@ class ConsumerConfig extends \Google\Collection
     return $this->consumerExportCustomRoutes;
   }
   /**
-   * @param bool
+   * Export subnet routes with public ip flag value for peering from consumer to
+   * producer.
+   *
+   * @param bool $consumerExportSubnetRoutesWithPublicIp
    */
   public function setConsumerExportSubnetRoutesWithPublicIp($consumerExportSubnetRoutesWithPublicIp)
   {
@@ -112,7 +149,9 @@ class ConsumerConfig extends \Google\Collection
     return $this->consumerExportSubnetRoutesWithPublicIp;
   }
   /**
-   * @param bool
+   * Import custom routes flag value for peering from consumer to producer.
+   *
+   * @param bool $consumerImportCustomRoutes
    */
   public function setConsumerImportCustomRoutes($consumerImportCustomRoutes)
   {
@@ -126,7 +165,10 @@ class ConsumerConfig extends \Google\Collection
     return $this->consumerImportCustomRoutes;
   }
   /**
-   * @param bool
+   * Import subnet routes with public ip flag value for peering from consumer to
+   * producer.
+   *
+   * @param bool $consumerImportSubnetRoutesWithPublicIp
    */
   public function setConsumerImportSubnetRoutesWithPublicIp($consumerImportSubnetRoutesWithPublicIp)
   {
@@ -140,7 +182,9 @@ class ConsumerConfig extends \Google\Collection
     return $this->consumerImportSubnetRoutesWithPublicIp;
   }
   /**
-   * @param bool
+   * Export custom routes flag value for peering from producer to consumer.
+   *
+   * @param bool $producerExportCustomRoutes
    */
   public function setProducerExportCustomRoutes($producerExportCustomRoutes)
   {
@@ -154,7 +198,10 @@ class ConsumerConfig extends \Google\Collection
     return $this->producerExportCustomRoutes;
   }
   /**
-   * @param bool
+   * Export subnet routes with public ip flag value for peering from producer to
+   * consumer.
+   *
+   * @param bool $producerExportSubnetRoutesWithPublicIp
    */
   public function setProducerExportSubnetRoutesWithPublicIp($producerExportSubnetRoutesWithPublicIp)
   {
@@ -168,7 +215,9 @@ class ConsumerConfig extends \Google\Collection
     return $this->producerExportSubnetRoutesWithPublicIp;
   }
   /**
-   * @param bool
+   * Import custom routes flag value for peering from producer to consumer.
+   *
+   * @param bool $producerImportCustomRoutes
    */
   public function setProducerImportCustomRoutes($producerImportCustomRoutes)
   {
@@ -182,7 +231,10 @@ class ConsumerConfig extends \Google\Collection
     return $this->producerImportCustomRoutes;
   }
   /**
-   * @param bool
+   * Import subnet routes with public ip flag value for peering from producer to
+   * consumer.
+   *
+   * @param bool $producerImportSubnetRoutesWithPublicIp
    */
   public function setProducerImportSubnetRoutesWithPublicIp($producerImportSubnetRoutesWithPublicIp)
   {
@@ -196,7 +248,12 @@ class ConsumerConfig extends \Google\Collection
     return $this->producerImportSubnetRoutesWithPublicIp;
   }
   /**
-   * @param string
+   * Output only. The VPC host network that is used to host managed service
+   * instances. In the format, projects/{project}/global/networks/{network}
+   * where {project} is the project number e.g. '12345' and {network} is the
+   * network name.
+   *
+   * @param string $producerNetwork
    */
   public function setProducerNetwork($producerNetwork)
   {
@@ -210,7 +267,10 @@ class ConsumerConfig extends \Google\Collection
     return $this->producerNetwork;
   }
   /**
-   * @param GoogleCloudServicenetworkingV1ConsumerConfigReservedRange[]
+   * Output only. The reserved ranges associated with this private service
+   * access connection.
+   *
+   * @param GoogleCloudServicenetworkingV1ConsumerConfigReservedRange[] $reservedRanges
    */
   public function setReservedRanges($reservedRanges)
   {
@@ -224,7 +284,9 @@ class ConsumerConfig extends \Google\Collection
     return $this->reservedRanges;
   }
   /**
-   * @param string[]
+   * Output only. The IP ranges already in use by consumer or producer
+   *
+   * @param string[] $usedIpRanges
    */
   public function setUsedIpRanges($usedIpRanges)
   {
@@ -238,7 +300,10 @@ class ConsumerConfig extends \Google\Collection
     return $this->usedIpRanges;
   }
   /**
-   * @param bool
+   * Output only. Indicates whether the VPC Service Controls reference
+   * architecture is configured for the producer VPC host network.
+   *
+   * @param bool $vpcScReferenceArchitectureEnabled
    */
   public function setVpcScReferenceArchitectureEnabled($vpcScReferenceArchitectureEnabled)
   {

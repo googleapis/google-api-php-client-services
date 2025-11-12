@@ -21,24 +21,50 @@ class Connection extends \Google\Collection
 {
   protected $collection_key = 'reservedPeeringRanges';
   /**
+   * Required. The name of service consumer's VPC network that's connected with
+   * service producer network, in the following format:
+   * `projects/{project}/global/networks/{network}`. `{project}` is a project
+   * number, such as in `12345` that includes the VPC service consumer's VPC
+   * network. `{network}` is the name of the service consumer's VPC network.
+   *
    * @var string
    */
   public $network;
   /**
+   * Output only. The name of the VPC Network Peering connection that was
+   * created by the service producer.
+   *
    * @var string
    */
   public $peering;
   /**
+   * The name of one or more allocated IP address ranges for this service
+   * producer of type `PEERING`. Note that invoking CreateConnection method with
+   * a different range when connection is already established will not modify
+   * already provisioned service producer subnetworks. If CreateConnection
+   * method is invoked repeatedly to reconnect when peering connection had been
+   * disconnected on the consumer side, leaving this field empty will restore
+   * previously allocated IP ranges.
+   *
    * @var string[]
    */
   public $reservedPeeringRanges;
   /**
+   * Output only. The name of the peering service that's associated with this
+   * connection, in the following format: `services/{service name}`.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * Required. The name of service consumer's VPC network that's connected with
+   * service producer network, in the following format:
+   * `projects/{project}/global/networks/{network}`. `{project}` is a project
+   * number, such as in `12345` that includes the VPC service consumer's VPC
+   * network. `{network}` is the name of the service consumer's VPC network.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -52,7 +78,10 @@ class Connection extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param string
+   * Output only. The name of the VPC Network Peering connection that was
+   * created by the service producer.
+   *
+   * @param string $peering
    */
   public function setPeering($peering)
   {
@@ -66,7 +95,15 @@ class Connection extends \Google\Collection
     return $this->peering;
   }
   /**
-   * @param string[]
+   * The name of one or more allocated IP address ranges for this service
+   * producer of type `PEERING`. Note that invoking CreateConnection method with
+   * a different range when connection is already established will not modify
+   * already provisioned service producer subnetworks. If CreateConnection
+   * method is invoked repeatedly to reconnect when peering connection had been
+   * disconnected on the consumer side, leaving this field empty will restore
+   * previously allocated IP ranges.
+   *
+   * @param string[] $reservedPeeringRanges
    */
   public function setReservedPeeringRanges($reservedPeeringRanges)
   {
@@ -80,7 +117,10 @@ class Connection extends \Google\Collection
     return $this->reservedPeeringRanges;
   }
   /**
-   * @param string
+   * Output only. The name of the peering service that's associated with this
+   * connection, in the following format: `services/{service name}`.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

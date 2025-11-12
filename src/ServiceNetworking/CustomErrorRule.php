@@ -20,16 +20,25 @@ namespace Google\Service\ServiceNetworking;
 class CustomErrorRule extends \Google\Model
 {
   /**
+   * Mark this message as possible payload in error response. Otherwise, objects
+   * of this type will be filtered when they appear in error payload.
+   *
    * @var bool
    */
   public $isErrorType;
   /**
+   * Selects messages to which this rule applies. Refer to selector for syntax
+   * details.
+   *
    * @var string
    */
   public $selector;
 
   /**
-   * @param bool
+   * Mark this message as possible payload in error response. Otherwise, objects
+   * of this type will be filtered when they appear in error payload.
+   *
+   * @param bool $isErrorType
    */
   public function setIsErrorType($isErrorType)
   {
@@ -43,7 +52,10 @@ class CustomErrorRule extends \Google\Model
     return $this->isErrorType;
   }
   /**
-   * @param string
+   * Selects messages to which this rule applies. Refer to selector for syntax
+   * details.
+   *
+   * @param string $selector
    */
   public function setSelector($selector)
   {

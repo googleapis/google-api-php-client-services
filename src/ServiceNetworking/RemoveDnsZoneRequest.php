@@ -20,16 +20,29 @@ namespace Google\Service\ServiceNetworking;
 class RemoveDnsZoneRequest extends \Google\Model
 {
   /**
+   * Required. The network that the consumer is using to connect with services.
+   * Must be in the form of projects/{project}/global/networks/{network}
+   * {project} is the project number, as in '12345' {network} is the network
+   * name.
+   *
    * @var string
    */
   public $consumerNetwork;
   /**
+   * Required. The name for both the private zone in the shared producer host
+   * project and the peering zone in the consumer project.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The network that the consumer is using to connect with services.
+   * Must be in the form of projects/{project}/global/networks/{network}
+   * {project} is the project number, as in '12345' {network} is the network
+   * name.
+   *
+   * @param string $consumerNetwork
    */
   public function setConsumerNetwork($consumerNetwork)
   {
@@ -43,7 +56,10 @@ class RemoveDnsZoneRequest extends \Google\Model
     return $this->consumerNetwork;
   }
   /**
-   * @param string
+   * Required. The name for both the private zone in the shared producer host
+   * project and the peering zone in the consumer project.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

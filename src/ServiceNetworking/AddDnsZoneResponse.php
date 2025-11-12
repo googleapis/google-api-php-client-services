@@ -25,7 +25,9 @@ class AddDnsZoneResponse extends \Google\Model
   protected $producerPrivateZoneDataType = '';
 
   /**
-   * @param DnsZone
+   * The DNS peering zone created in the consumer project.
+   *
+   * @param DnsZone $consumerPeeringZone
    */
   public function setConsumerPeeringZone(DnsZone $consumerPeeringZone)
   {
@@ -39,7 +41,9 @@ class AddDnsZoneResponse extends \Google\Model
     return $this->consumerPeeringZone;
   }
   /**
-   * @param DnsZone
+   * The private DNS zone created in the shared producer host project.
+   *
+   * @param DnsZone $producerPrivateZone
    */
   public function setProducerPrivateZone(DnsZone $producerPrivateZone)
   {

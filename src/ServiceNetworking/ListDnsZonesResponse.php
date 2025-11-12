@@ -24,7 +24,10 @@ class ListDnsZonesResponse extends \Google\Collection
   protected $dnsZonePairsDataType = 'array';
 
   /**
-   * @param DnsZonePair[]
+   * All pairs of private DNS zones in the shared producer host project and the
+   * matching peering zones in the consumer project..
+   *
+   * @param DnsZonePair[] $dnsZonePairs
    */
   public function setDnsZonePairs($dnsZonePairs)
   {

@@ -20,20 +20,29 @@ namespace Google\Service\ServiceNetworking;
 class CloudSQLConfig extends \Google\Model
 {
   /**
+   * Required. Peering service used for peering with the Cloud SQL project.
+   *
    * @var string
    */
   public $service;
   /**
+   * Required. The name of the umbrella network in the Cloud SQL umbrella
+   * project.
+   *
    * @var string
    */
   public $umbrellaNetwork;
   /**
+   * Required. The project number of the Cloud SQL umbrella project.
+   *
    * @var string
    */
   public $umbrellaProject;
 
   /**
-   * @param string
+   * Required. Peering service used for peering with the Cloud SQL project.
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -47,7 +56,10 @@ class CloudSQLConfig extends \Google\Model
     return $this->service;
   }
   /**
-   * @param string
+   * Required. The name of the umbrella network in the Cloud SQL umbrella
+   * project.
+   *
+   * @param string $umbrellaNetwork
    */
   public function setUmbrellaNetwork($umbrellaNetwork)
   {
@@ -61,7 +73,9 @@ class CloudSQLConfig extends \Google\Model
     return $this->umbrellaNetwork;
   }
   /**
-   * @param string
+   * Required. The project number of the Cloud SQL umbrella project.
+   *
+   * @param string $umbrellaProject
    */
   public function setUmbrellaProject($umbrellaProject)
   {

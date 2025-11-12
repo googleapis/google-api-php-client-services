@@ -21,16 +21,33 @@ class SelectiveGapicGeneration extends \Google\Collection
 {
   protected $collection_key = 'methods';
   /**
+   * Setting this to true indicates to the client generators that methods that
+   * would be excluded from the generation should instead be generated in a way
+   * that indicates these methods should not be consumed by end users. How this
+   * is expressed is up to individual language implementations to decide. Some
+   * examples may be: added annotations, obfuscated identifiers, or other
+   * language idiomatic patterns.
+   *
    * @var bool
    */
   public $generateOmittedAsInternal;
   /**
+   * An allowlist of the fully qualified names of RPCs that should be included
+   * on public client surfaces.
+   *
    * @var string[]
    */
   public $methods;
 
   /**
-   * @param bool
+   * Setting this to true indicates to the client generators that methods that
+   * would be excluded from the generation should instead be generated in a way
+   * that indicates these methods should not be consumed by end users. How this
+   * is expressed is up to individual language implementations to decide. Some
+   * examples may be: added annotations, obfuscated identifiers, or other
+   * language idiomatic patterns.
+   *
+   * @param bool $generateOmittedAsInternal
    */
   public function setGenerateOmittedAsInternal($generateOmittedAsInternal)
   {
@@ -44,7 +61,10 @@ class SelectiveGapicGeneration extends \Google\Collection
     return $this->generateOmittedAsInternal;
   }
   /**
-   * @param string[]
+   * An allowlist of the fully qualified names of RPCs that should be included
+   * on public client surfaces.
+   *
+   * @param string[] $methods
    */
   public function setMethods($methods)
   {

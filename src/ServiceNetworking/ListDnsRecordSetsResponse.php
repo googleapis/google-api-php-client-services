@@ -24,7 +24,9 @@ class ListDnsRecordSetsResponse extends \Google\Collection
   protected $dnsRecordSetsDataType = 'array';
 
   /**
-   * @param DnsRecordSet[]
+   * DNS record Set Resource
+   *
+   * @param DnsRecordSet[] $dnsRecordSets
    */
   public function setDnsRecordSets($dnsRecordSets)
   {
