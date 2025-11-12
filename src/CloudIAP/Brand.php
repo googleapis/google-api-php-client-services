@@ -20,24 +20,37 @@ namespace Google\Service\CloudIAP;
 class Brand extends \Google\Model
 {
   /**
+   * Application name displayed on OAuth consent screen.
+   *
    * @var string
    */
   public $applicationTitle;
   /**
+   * Output only. Identifier of the brand. NOTE: GCP project number achieves the
+   * same brand identification purpose as only one brand per project can be
+   * created.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Whether the brand is only intended for usage inside the G
+   * Suite organization only.
+   *
    * @var bool
    */
   public $orgInternalOnly;
   /**
+   * Support email displayed on the OAuth consent screen.
+   *
    * @var string
    */
   public $supportEmail;
 
   /**
-   * @param string
+   * Application name displayed on OAuth consent screen.
+   *
+   * @param string $applicationTitle
    */
   public function setApplicationTitle($applicationTitle)
   {
@@ -51,7 +64,11 @@ class Brand extends \Google\Model
     return $this->applicationTitle;
   }
   /**
-   * @param string
+   * Output only. Identifier of the brand. NOTE: GCP project number achieves the
+   * same brand identification purpose as only one brand per project can be
+   * created.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +82,10 @@ class Brand extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Whether the brand is only intended for usage inside the G
+   * Suite organization only.
+   *
+   * @param bool $orgInternalOnly
    */
   public function setOrgInternalOnly($orgInternalOnly)
   {
@@ -79,7 +99,9 @@ class Brand extends \Google\Model
     return $this->orgInternalOnly;
   }
   /**
-   * @param string
+   * Support email displayed on the OAuth consent screen.
+   *
+   * @param string $supportEmail
    */
   public function setSupportEmail($supportEmail)
   {

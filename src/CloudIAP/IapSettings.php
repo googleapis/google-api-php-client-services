@@ -24,12 +24,16 @@ class IapSettings extends \Google\Model
   protected $applicationSettingsType = ApplicationSettings::class;
   protected $applicationSettingsDataType = '';
   /**
+   * Required. The resource name of the IAP protected resource.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param AccessSettings
+   * Optional. Top level wrapper for all access related setting in IAP
+   *
+   * @param AccessSettings $accessSettings
    */
   public function setAccessSettings(AccessSettings $accessSettings)
   {
@@ -43,7 +47,9 @@ class IapSettings extends \Google\Model
     return $this->accessSettings;
   }
   /**
-   * @param ApplicationSettings
+   * Optional. Top level wrapper for all application related settings in IAP
+   *
+   * @param ApplicationSettings $applicationSettings
    */
   public function setApplicationSettings(ApplicationSettings $applicationSettings)
   {
@@ -57,7 +63,9 @@ class IapSettings extends \Google\Model
     return $this->applicationSettings;
   }
   /**
-   * @param string
+   * Required. The resource name of the IAP protected resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

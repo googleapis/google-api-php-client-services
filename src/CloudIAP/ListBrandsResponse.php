@@ -24,7 +24,9 @@ class ListBrandsResponse extends \Google\Collection
   protected $brandsDataType = 'array';
 
   /**
-   * @param Brand[]
+   * Brands existing in the project.
+   *
+   * @param Brand[] $brands
    */
   public function setBrands($brands)
   {

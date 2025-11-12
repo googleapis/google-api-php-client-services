@@ -23,12 +23,17 @@ class WorkforceIdentitySettings extends \Google\Collection
   protected $oauth2Type = OAuth2::class;
   protected $oauth2DataType = '';
   /**
+   * The workforce pool resources. Only one workforce pool is accepted.
+   *
    * @var string[]
    */
   public $workforcePools;
 
   /**
-   * @param OAuth2
+   * OAuth 2.0 settings for IAP to perform OIDC flow with workforce identity
+   * federation services.
+   *
+   * @param OAuth2 $oauth2
    */
   public function setOauth2(OAuth2 $oauth2)
   {
@@ -42,7 +47,9 @@ class WorkforceIdentitySettings extends \Google\Collection
     return $this->oauth2;
   }
   /**
-   * @param string[]
+   * The workforce pool resources. Only one workforce pool is accepted.
+   *
+   * @param string[] $workforcePools
    */
   public function setWorkforcePools($workforcePools)
   {

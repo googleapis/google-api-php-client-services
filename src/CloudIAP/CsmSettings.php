@@ -20,12 +20,18 @@ namespace Google\Service\CloudIAP;
 class CsmSettings extends \Google\Model
 {
   /**
+   * Audience claim set in the generated RCToken. This value is not validated by
+   * IAP.
+   *
    * @var string
    */
   public $rctokenAud;
 
   /**
-   * @param string
+   * Audience claim set in the generated RCToken. This value is not validated by
+   * IAP.
+   *
+   * @param string $rctokenAud
    */
   public function setRctokenAud($rctokenAud)
   {

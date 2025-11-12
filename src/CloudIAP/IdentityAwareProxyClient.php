@@ -20,20 +20,28 @@ namespace Google\Service\CloudIAP;
 class IdentityAwareProxyClient extends \Google\Model
 {
   /**
+   * Human-friendly name given to the OAuth client.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Unique identifier of the OAuth client.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Client secret of the OAuth client.
+   *
    * @var string
    */
   public $secret;
 
   /**
-   * @param string
+   * Human-friendly name given to the OAuth client.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +55,9 @@ class IdentityAwareProxyClient extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Unique identifier of the OAuth client.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +71,9 @@ class IdentityAwareProxyClient extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Client secret of the OAuth client.
+   *
+   * @param string $secret
    */
   public function setSecret($secret)
   {
