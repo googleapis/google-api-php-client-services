@@ -20,16 +20,24 @@ namespace Google\Service\AccessApproval;
 class AccessApprovalServiceAccount extends \Google\Model
 {
   /**
+   * Email address of the service account.
+   *
    * @var string
    */
   public $accountEmail;
   /**
+   * The resource name of the Access Approval service account. Format is one of:
+   * * "projects/{project}/serviceAccount" * "folders/{folder}/serviceAccount" *
+   * "organizations/{organization}/serviceAccount"
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Email address of the service account.
+   *
+   * @param string $accountEmail
    */
   public function setAccountEmail($accountEmail)
   {
@@ -43,7 +51,11 @@ class AccessApprovalServiceAccount extends \Google\Model
     return $this->accountEmail;
   }
   /**
-   * @param string
+   * The resource name of the Access Approval service account. Format is one of:
+   * * "projects/{project}/serviceAccount" * "folders/{folder}/serviceAccount" *
+   * "organizations/{organization}/serviceAccount"
+   *
+   * @param string $name
    */
   public function setName($name)
   {

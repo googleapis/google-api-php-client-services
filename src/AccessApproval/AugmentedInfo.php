@@ -20,12 +20,18 @@ namespace Google\Service\AccessApproval;
 class AugmentedInfo extends \Google\Model
 {
   /**
+   * For command-line tools, the full command-line exactly as entered by the
+   * actor without adding any additional characters (such as quotation marks).
+   *
    * @var string
    */
   public $command;
 
   /**
-   * @param string
+   * For command-line tools, the full command-line exactly as entered by the
+   * actor without adding any additional characters (such as quotation marks).
+   *
+   * @param string $command
    */
   public function setCommand($command)
   {

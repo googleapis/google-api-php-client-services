@@ -20,16 +20,37 @@ namespace Google\Service\AccessApproval;
 class AccessLocations extends \Google\Model
 {
   /**
+   * The "home office" location of the Google administrator. A two-letter
+   * country code (ISO 3166-1 alpha-2), such as "US", "DE" or "GB" or a region
+   * code. In some limited situations Google systems may refer refer to a region
+   * code instead of a country code. Possible Region Codes: * ASI: Asia * EUR:
+   * Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South
+   * America * ANT: Antarctica * ANY: Any location
+   *
    * @var string
    */
   public $principalOfficeCountry;
   /**
+   * Physical location of the Google administrator at the time of the access. A
+   * two-letter country code (ISO 3166-1 alpha-2), such as "US", "DE" or "GB" or
+   * a region code. In some limited situations Google systems may refer refer to
+   * a region code instead of a country code. Possible Region Codes: * ASI: Asia
+   * * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM:
+   * South America * ANT: Antarctica * ANY: Any location
+   *
    * @var string
    */
   public $principalPhysicalLocationCountry;
 
   /**
-   * @param string
+   * The "home office" location of the Google administrator. A two-letter
+   * country code (ISO 3166-1 alpha-2), such as "US", "DE" or "GB" or a region
+   * code. In some limited situations Google systems may refer refer to a region
+   * code instead of a country code. Possible Region Codes: * ASI: Asia * EUR:
+   * Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM: South
+   * America * ANT: Antarctica * ANY: Any location
+   *
+   * @param string $principalOfficeCountry
    */
   public function setPrincipalOfficeCountry($principalOfficeCountry)
   {
@@ -43,7 +64,14 @@ class AccessLocations extends \Google\Model
     return $this->principalOfficeCountry;
   }
   /**
-   * @param string
+   * Physical location of the Google administrator at the time of the access. A
+   * two-letter country code (ISO 3166-1 alpha-2), such as "US", "DE" or "GB" or
+   * a region code. In some limited situations Google systems may refer refer to
+   * a region code instead of a country code. Possible Region Codes: * ASI: Asia
+   * * EUR: Europe * OCE: Oceania * AFR: Africa * NAM: North America * SAM:
+   * South America * ANT: Antarctica * ANY: Any location
+   *
+   * @param string $principalPhysicalLocationCountry
    */
   public function setPrincipalPhysicalLocationCountry($principalPhysicalLocationCountry)
   {

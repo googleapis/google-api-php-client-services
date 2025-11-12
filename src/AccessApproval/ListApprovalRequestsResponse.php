@@ -23,12 +23,16 @@ class ListApprovalRequestsResponse extends \Google\Collection
   protected $approvalRequestsType = ApprovalRequest::class;
   protected $approvalRequestsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ApprovalRequest[]
+   * Approval request details.
+   *
+   * @param ApprovalRequest[] $approvalRequests
    */
   public function setApprovalRequests($approvalRequests)
   {
@@ -42,7 +46,9 @@ class ListApprovalRequestsResponse extends \Google\Collection
     return $this->approvalRequests;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

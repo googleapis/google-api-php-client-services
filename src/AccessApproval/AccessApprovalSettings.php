@@ -19,12 +19,43 @@ namespace Google\Service\AccessApproval;
 
 class AccessApprovalSettings extends \Google\Collection
 {
+  /**
+   * Default value, defaults to ORGANIZATION if not set. This value is not able
+   * to be configured by the user, do not use.
+   */
+  public const REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_UNSPECIFIED = 'REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_UNSPECIFIED';
+  /**
+   * This is the widest scope possible. It means the customer has no scope
+   * restriction when it comes to Access Approval requests.
+   */
+  public const REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_ORGANIZATION = 'ORGANIZATION';
+  /**
+   * Customer allows the scope of Access Approval requests as broad as the
+   * Folder level.
+   */
+  public const REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_FOLDER = 'FOLDER';
+  /**
+   * Customer allows the scope of Access Approval requests as broad as the
+   * Project level.
+   */
+  public const REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_PROJECT = 'PROJECT';
   protected $collection_key = 'notificationEmails';
   /**
+   * The asymmetric crypto key version to use for signing approval requests.
+   * Empty active_key_version indicates that a Google-managed key should be used
+   * for signing. This property will be ignored if set by an ancestor of this
+   * resource, and new non-empty values may not be set.
+   *
    * @var string
    */
   public $activeKeyVersion;
   /**
+   * Output only. This field is read only (not settable via
+   * UpdateAccessApprovalSettings method). If the field is true, that indicates
+   * that an ancestor of this Project or Folder has set active_key_version (this
+   * field will always be unset for the organization since organizations do not
+   * have ancestors).
+   *
    * @var bool
    */
   public $ancestorHasActiveKeyVersion;
@@ -33,46 +64,95 @@ class AccessApprovalSettings extends \Google\Collection
   protected $effectiveApprovalPolicyType = CustomerApprovalApprovalPolicy::class;
   protected $effectiveApprovalPolicyDataType = '';
   /**
+   * Output only. This field is read only (not settable via
+   * UpdateAccessApprovalSettings method). If the field is true, that indicates
+   * that at least one service is enrolled for Access Approval in one or more
+   * ancestors of the Project or Folder (this field will always be unset for the
+   * organization since organizations do not have ancestors).
+   *
    * @var bool
    */
   public $enrolledAncestor;
   protected $enrolledServicesType = EnrolledService::class;
   protected $enrolledServicesDataType = 'array';
   /**
+   * Output only. This field is read only (not settable via
+   * UpdateAccessApprovalSettings method). If the field is true, that indicates
+   * that there is some configuration issue with the active_key_version
+   * configured at this level in the resource hierarchy (e.g. it doesn't exist
+   * or the Access Approval service account doesn't have the correct permissions
+   * on it, etc.) This key version is not necessarily the effective key version
+   * at this level, as key versions are inherited top-down.
+   *
    * @var bool
    */
   public $invalidKeyVersion;
   /**
+   * The resource name of the settings. Format is one of: *
+   * "projects/{project}/accessApprovalSettings" *
+   * "folders/{folder}/accessApprovalSettings" *
+   * "organizations/{organization}/accessApprovalSettings"
+   *
    * @var string
    */
   public $name;
   /**
+   * A list of email addresses to which notifications relating to approval
+   * requests should be sent. Notifications relating to a resource will be sent
+   * to all emails in the settings of ancestor resources of that resource. A
+   * maximum of 50 email addresses are allowed.
+   *
    * @var string[]
    */
   public $notificationEmails;
   /**
+   * Optional. A pubsub topic that notifications relating to access approval are
+   * published to. Notifications include pre-approved accesses.
+   *
    * @var string
    */
   public $notificationPubsubTopic;
   /**
+   * This field is used to set a preference for granularity of an access
+   * approval request. If true, Google personnel will be asked to send resource-
+   * level requests when possible. If false, Google personnel will be asked to
+   * send requests at the project level.
+   *
    * @var bool
    */
   public $preferNoBroadApprovalRequests;
   /**
+   * Set the default access approval request expiration time. This value is able
+   * to be set directly by the customer at the time of approval, overriding this
+   * suggested value. We recommend setting this value to 30 days.
+   *
    * @var int
    */
   public $preferredRequestExpirationDays;
   /**
+   * Optional. A setting that indicates the maximum scope of an Access Approval
+   * request: either organization, folder, or project. Google administrators
+   * will be asked to send requests no broader than the configured scope.
+   *
    * @var string
    */
   public $requestScopeMaxWidthPreference;
   /**
+   * Optional. When enabled, Google will only be able to send approval requests
+   * for access reasons with a customer accessible case ID in the reason detail.
+   * Also known as "Require customer initiated support case justification"
+   *
    * @var bool
    */
   public $requireCustomerVisibleJustification;
 
   /**
-   * @param string
+   * The asymmetric crypto key version to use for signing approval requests.
+   * Empty active_key_version indicates that a Google-managed key should be used
+   * for signing. This property will be ignored if set by an ancestor of this
+   * resource, and new non-empty values may not be set.
+   *
+   * @param string $activeKeyVersion
    */
   public function setActiveKeyVersion($activeKeyVersion)
   {
@@ -86,7 +166,13 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->activeKeyVersion;
   }
   /**
-   * @param bool
+   * Output only. This field is read only (not settable via
+   * UpdateAccessApprovalSettings method). If the field is true, that indicates
+   * that an ancestor of this Project or Folder has set active_key_version (this
+   * field will always be unset for the organization since organizations do not
+   * have ancestors).
+   *
+   * @param bool $ancestorHasActiveKeyVersion
    */
   public function setAncestorHasActiveKeyVersion($ancestorHasActiveKeyVersion)
   {
@@ -100,7 +186,11 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->ancestorHasActiveKeyVersion;
   }
   /**
-   * @param CustomerApprovalApprovalPolicy
+   * Optional. Policy configuration for Access Approval that sets the operating
+   * mode. The available policies are Transparency, Streamlined Support, and
+   * Approval Required.
+   *
+   * @param CustomerApprovalApprovalPolicy $approvalPolicy
    */
   public function setApprovalPolicy(CustomerApprovalApprovalPolicy $approvalPolicy)
   {
@@ -114,7 +204,10 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->approvalPolicy;
   }
   /**
-   * @param CustomerApprovalApprovalPolicy
+   * Output only. Effective policy applied for Access Approval, inclusive of
+   * inheritance.
+   *
+   * @param CustomerApprovalApprovalPolicy $effectiveApprovalPolicy
    */
   public function setEffectiveApprovalPolicy(CustomerApprovalApprovalPolicy $effectiveApprovalPolicy)
   {
@@ -128,7 +221,13 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->effectiveApprovalPolicy;
   }
   /**
-   * @param bool
+   * Output only. This field is read only (not settable via
+   * UpdateAccessApprovalSettings method). If the field is true, that indicates
+   * that at least one service is enrolled for Access Approval in one or more
+   * ancestors of the Project or Folder (this field will always be unset for the
+   * organization since organizations do not have ancestors).
+   *
+   * @param bool $enrolledAncestor
    */
   public function setEnrolledAncestor($enrolledAncestor)
   {
@@ -142,7 +241,16 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->enrolledAncestor;
   }
   /**
-   * @param EnrolledService[]
+   * A list of Google Cloud Services for which the given resource has Access
+   * Approval enrolled. Access requests for the resource given by name against
+   * any of these services contained here will be required to have explicit
+   * approval. If name refers to an organization, enrollment can be done for
+   * individual services. If name refers to a folder or project, enrollment can
+   * only be done on an all or nothing basis. If a cloud_product is repeated in
+   * this list, the first entry will be honored and all following entries will
+   * be discarded.
+   *
+   * @param EnrolledService[] $enrolledServices
    */
   public function setEnrolledServices($enrolledServices)
   {
@@ -156,7 +264,15 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->enrolledServices;
   }
   /**
-   * @param bool
+   * Output only. This field is read only (not settable via
+   * UpdateAccessApprovalSettings method). If the field is true, that indicates
+   * that there is some configuration issue with the active_key_version
+   * configured at this level in the resource hierarchy (e.g. it doesn't exist
+   * or the Access Approval service account doesn't have the correct permissions
+   * on it, etc.) This key version is not necessarily the effective key version
+   * at this level, as key versions are inherited top-down.
+   *
+   * @param bool $invalidKeyVersion
    */
   public function setInvalidKeyVersion($invalidKeyVersion)
   {
@@ -170,7 +286,12 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->invalidKeyVersion;
   }
   /**
-   * @param string
+   * The resource name of the settings. Format is one of: *
+   * "projects/{project}/accessApprovalSettings" *
+   * "folders/{folder}/accessApprovalSettings" *
+   * "organizations/{organization}/accessApprovalSettings"
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -184,7 +305,12 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * A list of email addresses to which notifications relating to approval
+   * requests should be sent. Notifications relating to a resource will be sent
+   * to all emails in the settings of ancestor resources of that resource. A
+   * maximum of 50 email addresses are allowed.
+   *
+   * @param string[] $notificationEmails
    */
   public function setNotificationEmails($notificationEmails)
   {
@@ -198,7 +324,10 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->notificationEmails;
   }
   /**
-   * @param string
+   * Optional. A pubsub topic that notifications relating to access approval are
+   * published to. Notifications include pre-approved accesses.
+   *
+   * @param string $notificationPubsubTopic
    */
   public function setNotificationPubsubTopic($notificationPubsubTopic)
   {
@@ -212,7 +341,12 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->notificationPubsubTopic;
   }
   /**
-   * @param bool
+   * This field is used to set a preference for granularity of an access
+   * approval request. If true, Google personnel will be asked to send resource-
+   * level requests when possible. If false, Google personnel will be asked to
+   * send requests at the project level.
+   *
+   * @param bool $preferNoBroadApprovalRequests
    */
   public function setPreferNoBroadApprovalRequests($preferNoBroadApprovalRequests)
   {
@@ -226,7 +360,11 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->preferNoBroadApprovalRequests;
   }
   /**
-   * @param int
+   * Set the default access approval request expiration time. This value is able
+   * to be set directly by the customer at the time of approval, overriding this
+   * suggested value. We recommend setting this value to 30 days.
+   *
+   * @param int $preferredRequestExpirationDays
    */
   public function setPreferredRequestExpirationDays($preferredRequestExpirationDays)
   {
@@ -240,21 +378,32 @@ class AccessApprovalSettings extends \Google\Collection
     return $this->preferredRequestExpirationDays;
   }
   /**
-   * @param string
+   * Optional. A setting that indicates the maximum scope of an Access Approval
+   * request: either organization, folder, or project. Google administrators
+   * will be asked to send requests no broader than the configured scope.
+   *
+   * Accepted values: REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_UNSPECIFIED,
+   * ORGANIZATION, FOLDER, PROJECT
+   *
+   * @param self::REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_* $requestScopeMaxWidthPreference
    */
   public function setRequestScopeMaxWidthPreference($requestScopeMaxWidthPreference)
   {
     $this->requestScopeMaxWidthPreference = $requestScopeMaxWidthPreference;
   }
   /**
-   * @return string
+   * @return self::REQUEST_SCOPE_MAX_WIDTH_PREFERENCE_*
    */
   public function getRequestScopeMaxWidthPreference()
   {
     return $this->requestScopeMaxWidthPreference;
   }
   /**
-   * @param bool
+   * Optional. When enabled, Google will only be able to send approval requests
+   * for access reasons with a customer accessible case ID in the reason detail.
+   * Also known as "Require customer initiated support case justification"
+   *
+   * @param bool $requireCustomerVisibleJustification
    */
   public function setRequireCustomerVisibleJustification($requireCustomerVisibleJustification)
   {
