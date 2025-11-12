@@ -20,20 +20,48 @@ namespace Google\Service\PostmasterTools;
 class Domain extends \Google\Model
 {
   /**
+   * The default value and should never be used explicitly.
+   */
+  public const PERMISSION_PERMISSION_UNSPECIFIED = 'PERMISSION_UNSPECIFIED';
+  /**
+   * User has read access to the domain and can share access with others.
+   */
+  public const PERMISSION_OWNER = 'OWNER';
+  /**
+   * User has read access to the domain.
+   */
+  public const PERMISSION_READER = 'READER';
+  /**
+   * User doesn't have permission to access information about the domain. User
+   * did not verify ownership of domain nor was access granted by other domain
+   * owners.
+   */
+  public const PERMISSION_NONE = 'NONE';
+  /**
+   * Timestamp when the user registered this domain. Assigned by the server.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The resource name of the Domain. Domain names have the form
+   * `domains/{domain_name}`, where domain_name is the fully qualified domain
+   * name (i.e., mymail.mydomain.com).
+   *
    * @var string
    */
   public $name;
   /**
+   * User’s permission for this domain. Assigned by the server.
+   *
    * @var string
    */
   public $permission;
 
   /**
-   * @param string
+   * Timestamp when the user registered this domain. Assigned by the server.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,7 +75,11 @@ class Domain extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The resource name of the Domain. Domain names have the form
+   * `domains/{domain_name}`, where domain_name is the fully qualified domain
+   * name (i.e., mymail.mydomain.com).
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,14 +93,18 @@ class Domain extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * User’s permission for this domain. Assigned by the server.
+   *
+   * Accepted values: PERMISSION_UNSPECIFIED, OWNER, READER, NONE
+   *
+   * @param self::PERMISSION_* $permission
    */
   public function setPermission($permission)
   {
     $this->permission = $permission;
   }
   /**
-   * @return string
+   * @return self::PERMISSION_*
    */
   public function getPermission()
   {

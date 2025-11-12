@@ -20,13 +20,23 @@ namespace Google\Service\PostmasterTools;
 class FeedbackLoop extends \Google\Model
 {
   /**
+   * Feedback loop identifier that uniquely identifies individual campaigns.
+   *
    * @var string
    */
   public $id;
+  /**
+   * The ratio of user marked spam messages with the identifier vs the total
+   * number of inboxed messages with that identifier.
+   *
+   * @var 
+   */
   public $spamRatio;
 
   /**
-   * @param string
+   * Feedback loop identifier that uniquely identifies individual campaigns.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

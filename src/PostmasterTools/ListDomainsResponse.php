@@ -23,12 +23,17 @@ class ListDomainsResponse extends \Google\Collection
   protected $domainsType = Domain::class;
   protected $domainsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Domain[]
+   * The list of domains.
+   *
+   * @param Domain[] $domains
    */
   public function setDomains($domains)
   {
@@ -42,7 +47,10 @@ class ListDomainsResponse extends \Google\Collection
     return $this->domains;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
