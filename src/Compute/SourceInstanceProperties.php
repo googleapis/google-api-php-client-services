@@ -19,16 +19,41 @@ namespace Google\Service\Compute;
 
 class SourceInstanceProperties extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const KEY_REVOCATION_ACTION_TYPE_KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED = 'KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED';
+  /**
+   * Indicates user chose no operation.
+   */
+  public const KEY_REVOCATION_ACTION_TYPE_NONE = 'NONE';
+  /**
+   * Indicates user chose to opt for VM shutdown on key revocation.
+   */
+  public const KEY_REVOCATION_ACTION_TYPE_STOP = 'STOP';
   protected $collection_key = 'serviceAccounts';
   /**
+   * Enables instances created based on this machine image to send packets with
+   * source IP addresses other than their own and receive packets with
+   * destination IP addresses other than their own. If these instances will be
+   * used as an IP gateway or it will be set as the next-hop in a Route
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP
+   * forwarding documentation for more information.
+   *
    * @var bool
    */
   public $canIpForward;
   /**
+   * Whether the instance created from this machine image should be protected
+   * against deletion.
+   *
    * @var bool
    */
   public $deletionProtection;
   /**
+   * An optional text description for the instances that are created from this
+   * machine image.
+   *
    * @var string
    */
   public $description;
@@ -37,20 +62,34 @@ class SourceInstanceProperties extends \Google\Collection
   protected $guestAcceleratorsType = AcceleratorConfig::class;
   protected $guestAcceleratorsDataType = 'array';
   /**
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and
+   * "NONE". The default value is "NONE" if it is not specified.
+   *
    * @var string
    */
   public $keyRevocationActionType;
   /**
+   * Labels to apply to instances that are created from this machine image.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The machine type to use for instances that are created from this machine
+   * image.
+   *
    * @var string
    */
   public $machineType;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
   /**
+   * Minimum cpu/platform to be used by instances created from this machine
+   * image. The instance may be scheduled on the specified or newer
+   * cpu/platform. Applicable values are the friendly names of CPU platforms,
+   * such as minCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy
+   * Bridge". For more information, read Specifying a Minimum CPU Platform.
+   *
    * @var string
    */
   public $minCpuPlatform;
@@ -64,7 +103,14 @@ class SourceInstanceProperties extends \Google\Collection
   protected $tagsDataType = '';
 
   /**
-   * @param bool
+   * Enables instances created based on this machine image to send packets with
+   * source IP addresses other than their own and receive packets with
+   * destination IP addresses other than their own. If these instances will be
+   * used as an IP gateway or it will be set as the next-hop in a Route
+   * resource, specify true. If unsure, leave this set tofalse. See theEnable IP
+   * forwarding documentation for more information.
+   *
+   * @param bool $canIpForward
    */
   public function setCanIpForward($canIpForward)
   {
@@ -78,7 +124,10 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->canIpForward;
   }
   /**
-   * @param bool
+   * Whether the instance created from this machine image should be protected
+   * against deletion.
+   *
+   * @param bool $deletionProtection
    */
   public function setDeletionProtection($deletionProtection)
   {
@@ -92,7 +141,10 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->deletionProtection;
   }
   /**
-   * @param string
+   * An optional text description for the instances that are created from this
+   * machine image.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -106,7 +158,10 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param SavedAttachedDisk[]
+   * An array of disks that are associated with the instances that are created
+   * from this machine image.
+   *
+   * @param SavedAttachedDisk[] $disks
    */
   public function setDisks($disks)
   {
@@ -120,7 +175,10 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->disks;
   }
   /**
-   * @param AcceleratorConfig[]
+   * A list of guest accelerator cards' type and count to use for instances
+   * created from this machine image.
+   *
+   * @param AcceleratorConfig[] $guestAccelerators
    */
   public function setGuestAccelerators($guestAccelerators)
   {
@@ -134,21 +192,28 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->guestAccelerators;
   }
   /**
-   * @param string
+   * KeyRevocationActionType of the instance. Supported options are "STOP" and
+   * "NONE". The default value is "NONE" if it is not specified.
+   *
+   * Accepted values: KEY_REVOCATION_ACTION_TYPE_UNSPECIFIED, NONE, STOP
+   *
+   * @param self::KEY_REVOCATION_ACTION_TYPE_* $keyRevocationActionType
    */
   public function setKeyRevocationActionType($keyRevocationActionType)
   {
     $this->keyRevocationActionType = $keyRevocationActionType;
   }
   /**
-   * @return string
+   * @return self::KEY_REVOCATION_ACTION_TYPE_*
    */
   public function getKeyRevocationActionType()
   {
     return $this->keyRevocationActionType;
   }
   /**
-   * @param string[]
+   * Labels to apply to instances that are created from this machine image.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -162,7 +227,10 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * The machine type to use for instances that are created from this machine
+   * image.
+   *
+   * @param string $machineType
    */
   public function setMachineType($machineType)
   {
@@ -176,7 +244,11 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->machineType;
   }
   /**
-   * @param Metadata
+   * The metadata key/value pairs to assign to instances that are created from
+   * this machine image. These pairs can consist of custom metadata or
+   * predefined keys. SeeProject and instance metadata for more information.
+   *
+   * @param Metadata $metadata
    */
   public function setMetadata(Metadata $metadata)
   {
@@ -190,7 +262,13 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Minimum cpu/platform to be used by instances created from this machine
+   * image. The instance may be scheduled on the specified or newer
+   * cpu/platform. Applicable values are the friendly names of CPU platforms,
+   * such as minCpuPlatform: "Intel Haswell" orminCpuPlatform: "Intel Sandy
+   * Bridge". For more information, read Specifying a Minimum CPU Platform.
+   *
+   * @param string $minCpuPlatform
    */
   public function setMinCpuPlatform($minCpuPlatform)
   {
@@ -204,7 +282,9 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->minCpuPlatform;
   }
   /**
-   * @param NetworkInterface[]
+   * An array of network access configurations for this interface.
+   *
+   * @param NetworkInterface[] $networkInterfaces
    */
   public function setNetworkInterfaces($networkInterfaces)
   {
@@ -218,7 +298,10 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->networkInterfaces;
   }
   /**
-   * @param Scheduling
+   * Specifies the scheduling options for the instances that are created from
+   * this machine image.
+   *
+   * @param Scheduling $scheduling
    */
   public function setScheduling(Scheduling $scheduling)
   {
@@ -232,7 +315,12 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->scheduling;
   }
   /**
-   * @param ServiceAccount[]
+   * A list of service accounts with specified scopes. Access tokens for these
+   * service accounts are available to the instances that are created from this
+   * machine image. Use metadata queries to obtain the access tokens for these
+   * instances.
+   *
+   * @param ServiceAccount[] $serviceAccounts
    */
   public function setServiceAccounts($serviceAccounts)
   {
@@ -246,7 +334,12 @@ class SourceInstanceProperties extends \Google\Collection
     return $this->serviceAccounts;
   }
   /**
-   * @param Tags
+   * A list of tags to apply to the instances that are created from this machine
+   * image. The tags identify valid sources or targets for network firewalls.
+   * The setTags method can modify this list of tags. Each tag within the list
+   * must comply withRFC1035.
+   *
+   * @param Tags $tags
    */
   public function setTags(Tags $tags)
   {

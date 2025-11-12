@@ -20,16 +20,33 @@ namespace Google\Service\Compute;
 class SignedUrlKey extends \Google\Model
 {
   /**
+   * Name of the key. The name must be 1-63 characters long, and comply
+   * withRFC1035. Specifically, the name must be 1-63 characters long and match
+   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
+   * character must be a lowercase letter, and all following characters must be
+   * a dash, lowercase letter, or digit, except the last character, which cannot
+   * be a dash.
+   *
    * @var string
    */
   public $keyName;
   /**
+   * 128-bit key value used for signing the URL. The key value must be a
+   * validRFC 4648 Section 5 base64url encoded string.
+   *
    * @var string
    */
   public $keyValue;
 
   /**
-   * @param string
+   * Name of the key. The name must be 1-63 characters long, and comply
+   * withRFC1035. Specifically, the name must be 1-63 characters long and match
+   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
+   * character must be a lowercase letter, and all following characters must be
+   * a dash, lowercase letter, or digit, except the last character, which cannot
+   * be a dash.
+   *
+   * @param string $keyName
    */
   public function setKeyName($keyName)
   {
@@ -43,7 +60,10 @@ class SignedUrlKey extends \Google\Model
     return $this->keyName;
   }
   /**
-   * @param string
+   * 128-bit key value used for signing the URL. The key value must be a
+   * validRFC 4648 Section 5 base64url encoded string.
+   *
+   * @param string $keyValue
    */
   public function setKeyValue($keyValue)
   {

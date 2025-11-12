@@ -25,7 +25,7 @@ class SubnetworkUtilizationDetailsIPV6Utilization extends \Google\Model
   protected $totalFreeIpDataType = '';
 
   /**
-   * @param Uint128
+   * @param Uint128 $totalAllocatedIp
    */
   public function setTotalAllocatedIp(Uint128 $totalAllocatedIp)
   {
@@ -39,7 +39,7 @@ class SubnetworkUtilizationDetailsIPV6Utilization extends \Google\Model
     return $this->totalAllocatedIp;
   }
   /**
-   * @param Uint128
+   * @param Uint128 $totalFreeIp
    */
   public function setTotalFreeIp(Uint128 $totalFreeIp)
   {

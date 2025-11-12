@@ -19,20 +19,36 @@ namespace Google\Service\Compute;
 
 class StatefulPolicyPreservedStateDiskDevice extends \Google\Model
 {
+  public const AUTO_DELETE_NEVER = 'NEVER';
+  public const AUTO_DELETE_ON_PERMANENT_INSTANCE_DELETION = 'ON_PERMANENT_INSTANCE_DELETION';
   /**
+   * These stateful disks will never be deleted during autohealing, update or VM
+   * instance recreate operations. This flag is used to configure if the disk
+   * should be deleted after it is no longer used by the group, e.g. when the
+   * given instance or the whole group is deleted. Note: disks attached
+   * inREAD_ONLY mode cannot be auto-deleted.
+   *
    * @var string
    */
   public $autoDelete;
 
   /**
-   * @param string
+   * These stateful disks will never be deleted during autohealing, update or VM
+   * instance recreate operations. This flag is used to configure if the disk
+   * should be deleted after it is no longer used by the group, e.g. when the
+   * given instance or the whole group is deleted. Note: disks attached
+   * inREAD_ONLY mode cannot be auto-deleted.
+   *
+   * Accepted values: NEVER, ON_PERMANENT_INSTANCE_DELETION
+   *
+   * @param self::AUTO_DELETE_* $autoDelete
    */
   public function setAutoDelete($autoDelete)
   {
     $this->autoDelete = $autoDelete;
   }
   /**
-   * @return string
+   * @return self::AUTO_DELETE_*
    */
   public function getAutoDelete()
   {

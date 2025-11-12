@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class SnapshotSettingsStorageLocationSettingsStorageLocationPreference extends \Google\Model
 {
   /**
+   * Name of the location. It should be one of the Cloud Storage buckets. Only
+   * one location can be specified.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Name of the location. It should be one of the Cloud Storage buckets. Only
+   * one location can be specified.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

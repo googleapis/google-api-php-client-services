@@ -23,7 +23,10 @@ class SnapshotSettings extends \Google\Model
   protected $storageLocationDataType = '';
 
   /**
-   * @param SnapshotSettingsStorageLocationSettings
+   * Policy of which storage location is going to be resolved, and additional
+   * data that particularizes how the policy is going to be carried out.
+   *
+   * @param SnapshotSettingsStorageLocationSettings $storageLocation
    */
   public function setStorageLocation(SnapshotSettingsStorageLocationSettings $storageLocation)
   {

@@ -19,15 +19,36 @@ namespace Google\Service\Compute;
 
 class ShareSettings extends \Google\Model
 {
+  /**
+   * Default value.
+   */
+  public const SHARE_TYPE_LOCAL = 'LOCAL';
+  /**
+   * Shared-reservation is open to entire Organization
+   */
+  public const SHARE_TYPE_ORGANIZATION = 'ORGANIZATION';
+  /**
+   * Default value. This value is unused.
+   */
+  public const SHARE_TYPE_SHARE_TYPE_UNSPECIFIED = 'SHARE_TYPE_UNSPECIFIED';
+  /**
+   * Shared-reservation is open to specific projects
+   */
+  public const SHARE_TYPE_SPECIFIC_PROJECTS = 'SPECIFIC_PROJECTS';
   protected $projectMapType = ShareSettingsProjectConfig::class;
   protected $projectMapDataType = 'map';
   /**
+   * Type of sharing for this shared-reservation
+   *
    * @var string
    */
   public $shareType;
 
   /**
-   * @param ShareSettingsProjectConfig[]
+   * A map of project id and project config. This is only valid when
+   * share_type's value is SPECIFIC_PROJECTS.
+   *
+   * @param ShareSettingsProjectConfig[] $projectMap
    */
   public function setProjectMap($projectMap)
   {
@@ -41,14 +62,19 @@ class ShareSettings extends \Google\Model
     return $this->projectMap;
   }
   /**
-   * @param string
+   * Type of sharing for this shared-reservation
+   *
+   * Accepted values: LOCAL, ORGANIZATION, SHARE_TYPE_UNSPECIFIED,
+   * SPECIFIC_PROJECTS
+   *
+   * @param self::SHARE_TYPE_* $shareType
    */
   public function setShareType($shareType)
   {
     $this->shareType = $shareType;
   }
   /**
-   * @return string
+   * @return self::SHARE_TYPE_*
    */
   public function getShareType()
   {

@@ -25,7 +25,7 @@ class SubnetworksSetPrivateIpGoogleAccessRequest extends \Google\Model
   public $privateIpGoogleAccess;
 
   /**
-   * @param bool
+   * @param bool $privateIpGoogleAccess
    */
   public function setPrivateIpGoogleAccess($privateIpGoogleAccess)
   {

@@ -26,7 +26,9 @@ class SslPoliciesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param SslPolicy[]
+   * A list of SslPolicies contained in this scope.
+   *
+   * @param SslPolicy[] $sslPolicies
    */
   public function setSslPolicies($sslPolicies)
   {
@@ -40,7 +42,10 @@ class SslPoliciesScopedList extends \Google\Collection
     return $this->sslPolicies;
   }
   /**
-   * @param SslPoliciesScopedListWarning
+   * Informational warning which replaces the list of SSL policies when the list
+   * is empty.
+   *
+   * @param SslPoliciesScopedListWarning $warning
    */
   public function setWarning(SslPoliciesScopedListWarning $warning)
   {

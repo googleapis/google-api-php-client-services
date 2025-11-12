@@ -20,20 +20,33 @@ namespace Google\Service\Compute;
 class StoragePoolTypeAggregatedList extends \Google\Model
 {
   /**
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   *
    * @var string
    */
   public $id;
   protected $itemsType = StoragePoolTypesScopedList::class;
   protected $itemsDataType = 'map';
   /**
+   * [Output Only] Type of resource.
+   * Alwayscompute#storagePoolTypeAggregatedList.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * [Output Only] Server-defined URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
@@ -41,7 +54,9 @@ class StoragePoolTypeAggregatedList extends \Google\Model
   protected $warningDataType = '';
 
   /**
-   * @param string
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -55,7 +70,9 @@ class StoragePoolTypeAggregatedList extends \Google\Model
     return $this->id;
   }
   /**
-   * @param StoragePoolTypesScopedList[]
+   * A list of StoragePoolTypesScopedList resources.
+   *
+   * @param StoragePoolTypesScopedList[] $items
    */
   public function setItems($items)
   {
@@ -69,7 +86,10 @@ class StoragePoolTypeAggregatedList extends \Google\Model
     return $this->items;
   }
   /**
-   * @param string
+   * [Output Only] Type of resource.
+   * Alwayscompute#storagePoolTypeAggregatedList.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -83,7 +103,13 @@ class StoragePoolTypeAggregatedList extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -97,7 +123,9 @@ class StoragePoolTypeAggregatedList extends \Google\Model
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -111,7 +139,9 @@ class StoragePoolTypeAggregatedList extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param StoragePoolTypeAggregatedListWarning
+   * [Output Only] Informational warning message.
+   *
+   * @param StoragePoolTypeAggregatedListWarning $warning
    */
   public function setWarning(StoragePoolTypeAggregatedListWarning $warning)
   {

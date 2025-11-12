@@ -19,20 +19,34 @@ namespace Google\Service\Compute;
 
 class StatefulPolicyPreservedStateNetworkIp extends \Google\Model
 {
+  public const AUTO_DELETE_NEVER = 'NEVER';
+  public const AUTO_DELETE_ON_PERMANENT_INSTANCE_DELETION = 'ON_PERMANENT_INSTANCE_DELETION';
   /**
+   * These stateful IPs will never be released during autohealing, update or VM
+   * instance recreate operations. This flag is used to configure if the IP
+   * reservation should be deleted after it is no longer used by the group, e.g.
+   * when the given instance or the whole group is deleted.
+   *
    * @var string
    */
   public $autoDelete;
 
   /**
-   * @param string
+   * These stateful IPs will never be released during autohealing, update or VM
+   * instance recreate operations. This flag is used to configure if the IP
+   * reservation should be deleted after it is no longer used by the group, e.g.
+   * when the given instance or the whole group is deleted.
+   *
+   * Accepted values: NEVER, ON_PERMANENT_INSTANCE_DELETION
+   *
+   * @param self::AUTO_DELETE_* $autoDelete
    */
   public function setAutoDelete($autoDelete)
   {
     $this->autoDelete = $autoDelete;
   }
   /**
-   * @return string
+   * @return self::AUTO_DELETE_*
    */
   public function getAutoDelete()
   {

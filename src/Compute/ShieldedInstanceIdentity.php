@@ -26,6 +26,9 @@ class ShieldedInstanceIdentity extends \Google\Model
   protected $encryptionKeyType = ShieldedInstanceIdentityEntry::class;
   protected $encryptionKeyDataType = '';
   /**
+   * [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity
+   * for shielded Instance identity entry.
+   *
    * @var string
    */
   public $kind;
@@ -33,7 +36,10 @@ class ShieldedInstanceIdentity extends \Google\Model
   protected $signingKeyDataType = '';
 
   /**
-   * @param ShieldedInstanceIdentityEntry
+   * An Endorsement Key (EK) made by the ECC P256 algorithm issued to the
+   * Shielded Instance's vTPM.
+   *
+   * @param ShieldedInstanceIdentityEntry $eccP256EncryptionKey
    */
   public function setEccP256EncryptionKey(ShieldedInstanceIdentityEntry $eccP256EncryptionKey)
   {
@@ -47,7 +53,10 @@ class ShieldedInstanceIdentity extends \Google\Model
     return $this->eccP256EncryptionKey;
   }
   /**
-   * @param ShieldedInstanceIdentityEntry
+   * An Attestation Key (AK) made by the ECC P256 algorithm issued to the
+   * Shielded Instance's vTPM.
+   *
+   * @param ShieldedInstanceIdentityEntry $eccP256SigningKey
    */
   public function setEccP256SigningKey(ShieldedInstanceIdentityEntry $eccP256SigningKey)
   {
@@ -61,7 +70,10 @@ class ShieldedInstanceIdentity extends \Google\Model
     return $this->eccP256SigningKey;
   }
   /**
-   * @param ShieldedInstanceIdentityEntry
+   * An Endorsement Key (EK) made by the RSA 2048 algorithm issued to the
+   * Shielded Instance's vTPM.
+   *
+   * @param ShieldedInstanceIdentityEntry $encryptionKey
    */
   public function setEncryptionKey(ShieldedInstanceIdentityEntry $encryptionKey)
   {
@@ -75,7 +87,10 @@ class ShieldedInstanceIdentity extends \Google\Model
     return $this->encryptionKey;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#shieldedInstanceIdentity
+   * for shielded Instance identity entry.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -89,7 +104,10 @@ class ShieldedInstanceIdentity extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param ShieldedInstanceIdentityEntry
+   * An Attestation Key (AK) made by the RSA 2048 algorithm issued to the
+   * Shielded Instance's vTPM.
+   *
+   * @param ShieldedInstanceIdentityEntry $signingKey
    */
   public function setSigningKey(ShieldedInstanceIdentityEntry $signingKey)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class ShieldedInstanceIdentityEntry extends \Google\Model
 {
   /**
+   * A PEM-encoded X.509 certificate. This field can be empty.
+   *
    * @var string
    */
   public $ekCert;
   /**
+   * A PEM-encoded public key.
+   *
    * @var string
    */
   public $ekPub;
 
   /**
-   * @param string
+   * A PEM-encoded X.509 certificate. This field can be empty.
+   *
+   * @param string $ekCert
    */
   public function setEkCert($ekCert)
   {
@@ -43,7 +49,9 @@ class ShieldedInstanceIdentityEntry extends \Google\Model
     return $this->ekCert;
   }
   /**
-   * @param string
+   * A PEM-encoded public key.
+   *
+   * @param string $ekPub
    */
   public function setEkPub($ekPub)
   {

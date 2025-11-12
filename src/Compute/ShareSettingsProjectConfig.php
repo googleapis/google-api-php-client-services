@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class ShareSettingsProjectConfig extends \Google\Model
 {
   /**
+   * The project ID, should be same as the key of this project config in the
+   * parent map.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * The project ID, should be same as the key of this project config in the
+   * parent map.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

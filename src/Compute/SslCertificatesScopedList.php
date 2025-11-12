@@ -26,7 +26,9 @@ class SslCertificatesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param SslCertificate[]
+   * List of SslCertificates contained in this scope.
+   *
+   * @param SslCertificate[] $sslCertificates
    */
   public function setSslCertificates($sslCertificates)
   {
@@ -40,7 +42,10 @@ class SslCertificatesScopedList extends \Google\Collection
     return $this->sslCertificates;
   }
   /**
-   * @param SslCertificatesScopedListWarning
+   * Informational warning which replaces the list of backend services when the
+   * list is empty.
+   *
+   * @param SslCertificatesScopedListWarning $warning
    */
   public function setWarning(SslCertificatesScopedListWarning $warning)
   {

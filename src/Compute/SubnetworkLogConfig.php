@@ -19,48 +19,100 @@ namespace Google\Service\Compute;
 
 class SubnetworkLogConfig extends \Google\Collection
 {
+  public const AGGREGATION_INTERVAL_INTERVAL_10_MIN = 'INTERVAL_10_MIN';
+  public const AGGREGATION_INTERVAL_INTERVAL_15_MIN = 'INTERVAL_15_MIN';
+  public const AGGREGATION_INTERVAL_INTERVAL_1_MIN = 'INTERVAL_1_MIN';
+  public const AGGREGATION_INTERVAL_INTERVAL_30_SEC = 'INTERVAL_30_SEC';
+  public const AGGREGATION_INTERVAL_INTERVAL_5_MIN = 'INTERVAL_5_MIN';
+  public const AGGREGATION_INTERVAL_INTERVAL_5_SEC = 'INTERVAL_5_SEC';
+  public const METADATA_CUSTOM_METADATA = 'CUSTOM_METADATA';
+  public const METADATA_EXCLUDE_ALL_METADATA = 'EXCLUDE_ALL_METADATA';
+  public const METADATA_INCLUDE_ALL_METADATA = 'INCLUDE_ALL_METADATA';
   protected $collection_key = 'metadataFields';
   /**
+   * Can only be specified if VPC flow logging for this subnetwork is enabled.
+   * Toggles the aggregation interval for collecting flow logs. Increasing the
+   * interval time will reduce the amount of generated flow logs for long
+   * lasting connections. Default is an interval of 5 seconds per connection.
+   *
    * @var string
    */
   public $aggregationInterval;
   /**
+   * Whether to enable flow logging for this subnetwork. If this field is not
+   * explicitly set, it will not appear in get listings. If not set the default
+   * behavior is determined by the org policy, if there is no org policy
+   * specified, then it will default to disabled. Flow logging isn't supported
+   * if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.
+   *
    * @var bool
    */
   public $enable;
   /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. The
+   * filter expression is used to define which VPC flow logs should be exported
+   * to Cloud Logging.
+   *
    * @var string
    */
   public $filterExpr;
   /**
+   * Can only be specified if VPC flow logging for this subnetwork is enabled.
+   * The value of the field must be in [0, 1]. Set the sampling rate of VPC flow
+   * logs within the subnetwork where 1.0 means all collected logs are reported
+   * and 0.0 means no logs are reported. Default is 0.5 unless otherwise
+   * specified by the org policy, which means half of all collected logs are
+   * reported.
+   *
    * @var float
    */
   public $flowSampling;
   /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled.
+   * Configures whether all, none or a subset of metadata fields should be added
+   * to the reported VPC flow logs. Default isEXCLUDE_ALL_METADATA.
+   *
    * @var string
    */
   public $metadata;
   /**
+   * Can only be specified if VPC flow logs for this subnetwork is enabled and
+   * "metadata" was set to CUSTOM_METADATA.
+   *
    * @var string[]
    */
   public $metadataFields;
 
   /**
-   * @param string
+   * Can only be specified if VPC flow logging for this subnetwork is enabled.
+   * Toggles the aggregation interval for collecting flow logs. Increasing the
+   * interval time will reduce the amount of generated flow logs for long
+   * lasting connections. Default is an interval of 5 seconds per connection.
+   *
+   * Accepted values: INTERVAL_10_MIN, INTERVAL_15_MIN, INTERVAL_1_MIN,
+   * INTERVAL_30_SEC, INTERVAL_5_MIN, INTERVAL_5_SEC
+   *
+   * @param self::AGGREGATION_INTERVAL_* $aggregationInterval
    */
   public function setAggregationInterval($aggregationInterval)
   {
     $this->aggregationInterval = $aggregationInterval;
   }
   /**
-   * @return string
+   * @return self::AGGREGATION_INTERVAL_*
    */
   public function getAggregationInterval()
   {
     return $this->aggregationInterval;
   }
   /**
-   * @param bool
+   * Whether to enable flow logging for this subnetwork. If this field is not
+   * explicitly set, it will not appear in get listings. If not set the default
+   * behavior is determined by the org policy, if there is no org policy
+   * specified, then it will default to disabled. Flow logging isn't supported
+   * if the subnet purpose field is set to REGIONAL_MANAGED_PROXY.
+   *
+   * @param bool $enable
    */
   public function setEnable($enable)
   {
@@ -74,7 +126,11 @@ class SubnetworkLogConfig extends \Google\Collection
     return $this->enable;
   }
   /**
-   * @param string
+   * Can only be specified if VPC flow logs for this subnetwork is enabled. The
+   * filter expression is used to define which VPC flow logs should be exported
+   * to Cloud Logging.
+   *
+   * @param string $filterExpr
    */
   public function setFilterExpr($filterExpr)
   {
@@ -88,7 +144,14 @@ class SubnetworkLogConfig extends \Google\Collection
     return $this->filterExpr;
   }
   /**
-   * @param float
+   * Can only be specified if VPC flow logging for this subnetwork is enabled.
+   * The value of the field must be in [0, 1]. Set the sampling rate of VPC flow
+   * logs within the subnetwork where 1.0 means all collected logs are reported
+   * and 0.0 means no logs are reported. Default is 0.5 unless otherwise
+   * specified by the org policy, which means half of all collected logs are
+   * reported.
+   *
+   * @param float $flowSampling
    */
   public function setFlowSampling($flowSampling)
   {
@@ -102,21 +165,31 @@ class SubnetworkLogConfig extends \Google\Collection
     return $this->flowSampling;
   }
   /**
-   * @param string
+   * Can only be specified if VPC flow logs for this subnetwork is enabled.
+   * Configures whether all, none or a subset of metadata fields should be added
+   * to the reported VPC flow logs. Default isEXCLUDE_ALL_METADATA.
+   *
+   * Accepted values: CUSTOM_METADATA, EXCLUDE_ALL_METADATA,
+   * INCLUDE_ALL_METADATA
+   *
+   * @param self::METADATA_* $metadata
    */
   public function setMetadata($metadata)
   {
     $this->metadata = $metadata;
   }
   /**
-   * @return string
+   * @return self::METADATA_*
    */
   public function getMetadata()
   {
     return $this->metadata;
   }
   /**
-   * @param string[]
+   * Can only be specified if VPC flow logs for this subnetwork is enabled and
+   * "metadata" was set to CUSTOM_METADATA.
+   *
+   * @param string[] $metadataFields
    */
   public function setMetadataFields($metadataFields)
   {

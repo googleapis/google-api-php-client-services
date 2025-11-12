@@ -19,54 +19,103 @@ namespace Google\Service\Compute;
 
 class StoragePoolDisk extends \Google\Collection
 {
+  /**
+   * Disk is provisioning
+   */
+  public const STATUS_CREATING = 'CREATING';
+  /**
+   * Disk is deleting.
+   */
+  public const STATUS_DELETING = 'DELETING';
+  /**
+   * Disk creation failed.
+   */
+  public const STATUS_FAILED = 'FAILED';
+  /**
+   * Disk is ready for use.
+   */
+  public const STATUS_READY = 'READY';
+  /**
+   * Source data is being copied into the disk.
+   */
+  public const STATUS_RESTORING = 'RESTORING';
+  /**
+   * Disk is currently unavailable and cannot be accessed, attached or detached.
+   */
+  public const STATUS_UNAVAILABLE = 'UNAVAILABLE';
   protected $collection_key = 'resourcePolicies';
   /**
+   * [Output Only] Instances this disk is attached to.
+   *
    * @var string[]
    */
   public $attachedInstances;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * [Output Only] The URL of the disk.
+   *
    * @var string
    */
   public $disk;
   /**
+   * [Output Only] The name of the disk.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] The number of IOPS provisioned for the disk.
+   *
    * @var string
    */
   public $provisionedIops;
   /**
+   * [Output Only] The throughput provisioned for the disk.
+   *
    * @var string
    */
   public $provisionedThroughput;
   /**
+   * [Output Only] Resource policies applied to disk for automatic snapshot
+   * creations.
+   *
    * @var string[]
    */
   public $resourcePolicies;
   /**
+   * [Output Only] The disk size, in GB.
+   *
    * @var string
    */
   public $sizeGb;
   /**
+   * [Output Only] The disk status.
+   *
    * @var string
    */
   public $status;
   /**
+   * [Output Only] The disk type.
+   *
    * @var string
    */
   public $type;
   /**
+   * [Output Only] Amount of disk space used.
+   *
    * @var string
    */
   public $usedBytes;
 
   /**
-   * @param string[]
+   * [Output Only] Instances this disk is attached to.
+   *
+   * @param string[] $attachedInstances
    */
   public function setAttachedInstances($attachedInstances)
   {
@@ -80,7 +129,9 @@ class StoragePoolDisk extends \Google\Collection
     return $this->attachedInstances;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -94,7 +145,9 @@ class StoragePoolDisk extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * [Output Only] The URL of the disk.
+   *
+   * @param string $disk
    */
   public function setDisk($disk)
   {
@@ -108,7 +161,9 @@ class StoragePoolDisk extends \Google\Collection
     return $this->disk;
   }
   /**
-   * @param string
+   * [Output Only] The name of the disk.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -122,7 +177,9 @@ class StoragePoolDisk extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] The number of IOPS provisioned for the disk.
+   *
+   * @param string $provisionedIops
    */
   public function setProvisionedIops($provisionedIops)
   {
@@ -136,7 +193,9 @@ class StoragePoolDisk extends \Google\Collection
     return $this->provisionedIops;
   }
   /**
-   * @param string
+   * [Output Only] The throughput provisioned for the disk.
+   *
+   * @param string $provisionedThroughput
    */
   public function setProvisionedThroughput($provisionedThroughput)
   {
@@ -150,7 +209,10 @@ class StoragePoolDisk extends \Google\Collection
     return $this->provisionedThroughput;
   }
   /**
-   * @param string[]
+   * [Output Only] Resource policies applied to disk for automatic snapshot
+   * creations.
+   *
+   * @param string[] $resourcePolicies
    */
   public function setResourcePolicies($resourcePolicies)
   {
@@ -164,7 +226,9 @@ class StoragePoolDisk extends \Google\Collection
     return $this->resourcePolicies;
   }
   /**
-   * @param string
+   * [Output Only] The disk size, in GB.
+   *
+   * @param string $sizeGb
    */
   public function setSizeGb($sizeGb)
   {
@@ -178,21 +242,27 @@ class StoragePoolDisk extends \Google\Collection
     return $this->sizeGb;
   }
   /**
-   * @param string
+   * [Output Only] The disk status.
+   *
+   * Accepted values: CREATING, DELETING, FAILED, READY, RESTORING, UNAVAILABLE
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * [Output Only] The disk type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -206,7 +276,9 @@ class StoragePoolDisk extends \Google\Collection
     return $this->type;
   }
   /**
-   * @param string
+   * [Output Only] Amount of disk space used.
+   *
+   * @param string $usedBytes
    */
   public function setUsedBytes($usedBytes)
   {

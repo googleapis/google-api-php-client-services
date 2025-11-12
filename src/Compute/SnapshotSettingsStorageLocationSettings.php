@@ -19,15 +19,37 @@ namespace Google\Service\Compute;
 
 class SnapshotSettingsStorageLocationSettings extends \Google\Model
 {
+  /**
+   * Store snapshot in the same region as with the originating disk. No
+   * additional parameters are needed.
+   */
+  public const POLICY_LOCAL_REGION = 'LOCAL_REGION';
+  /**
+   * Store snapshot in the nearest multi region Cloud Storage bucket, relative
+   * to the originating disk. No additional parameters are needed.
+   */
+  public const POLICY_NEAREST_MULTI_REGION = 'NEAREST_MULTI_REGION';
+  /**
+   * Store snapshot in the specific locations, as specified by the user. The
+   * list of regions to store must be defined under the `locations` field.
+   */
+  public const POLICY_SPECIFIC_LOCATIONS = 'SPECIFIC_LOCATIONS';
+  public const POLICY_STORAGE_LOCATION_POLICY_UNSPECIFIED = 'STORAGE_LOCATION_POLICY_UNSPECIFIED';
   protected $locationsType = SnapshotSettingsStorageLocationSettingsStorageLocationPreference::class;
   protected $locationsDataType = 'map';
   /**
+   * The chosen location policy.
+   *
    * @var string
    */
   public $policy;
 
   /**
-   * @param SnapshotSettingsStorageLocationSettingsStorageLocationPreference[]
+   * When the policy is SPECIFIC_LOCATIONS, snapshots will be stored in the
+   * locations listed in this field. Keys are Cloud Storage bucket locations.
+   * Only one location can be specified.
+   *
+   * @param SnapshotSettingsStorageLocationSettingsStorageLocationPreference[] $locations
    */
   public function setLocations($locations)
   {
@@ -41,14 +63,19 @@ class SnapshotSettingsStorageLocationSettings extends \Google\Model
     return $this->locations;
   }
   /**
-   * @param string
+   * The chosen location policy.
+   *
+   * Accepted values: LOCAL_REGION, NEAREST_MULTI_REGION, SPECIFIC_LOCATIONS,
+   * STORAGE_LOCATION_POLICY_UNSPECIFIED
+   *
+   * @param self::POLICY_* $policy
    */
   public function setPolicy($policy)
   {
     $this->policy = $policy;
   }
   /**
-   * @return string
+   * @return self::POLICY_*
    */
   public function getPolicy()
   {

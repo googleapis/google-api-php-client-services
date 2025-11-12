@@ -20,6 +20,8 @@ namespace Google\Service\Compute;
 class SubnetworkUtilizationDetailsIPV4Utilization extends \Google\Model
 {
   /**
+   * Will be set for secondary range. Empty for primary IPv4 range.
+   *
    * @var string
    */
   public $rangeName;
@@ -33,7 +35,9 @@ class SubnetworkUtilizationDetailsIPV4Utilization extends \Google\Model
   public $totalFreeIp;
 
   /**
-   * @param string
+   * Will be set for secondary range. Empty for primary IPv4 range.
+   *
+   * @param string $rangeName
    */
   public function setRangeName($rangeName)
   {
@@ -47,7 +51,7 @@ class SubnetworkUtilizationDetailsIPV4Utilization extends \Google\Model
     return $this->rangeName;
   }
   /**
-   * @param string
+   * @param string $totalAllocatedIp
    */
   public function setTotalAllocatedIp($totalAllocatedIp)
   {
@@ -61,7 +65,7 @@ class SubnetworkUtilizationDetailsIPV4Utilization extends \Google\Model
     return $this->totalAllocatedIp;
   }
   /**
-   * @param string
+   * @param string $totalFreeIp
    */
   public function setTotalFreeIp($totalFreeIp)
   {
