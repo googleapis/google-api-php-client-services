@@ -24,22 +24,33 @@ class GoogleCloudAiplatformV1ResourcePool extends \Google\Model
   protected $diskSpecType = GoogleCloudAiplatformV1DiskSpec::class;
   protected $diskSpecDataType = '';
   /**
+   * Immutable. The unique ID in a PersistentResource for referring to this
+   * resource pool. User can specify it if necessary. Otherwise, it's generated
+   * automatically.
+   *
    * @var string
    */
   public $id;
   protected $machineSpecType = GoogleCloudAiplatformV1MachineSpec::class;
   protected $machineSpecDataType = '';
   /**
+   * Optional. The total number of machines to use for this resource pool.
+   *
    * @var string
    */
   public $replicaCount;
   /**
+   * Output only. The number of machines currently in use by training jobs for
+   * this resource pool. Will replace idle_replica_count.
+   *
    * @var string
    */
   public $usedReplicaCount;
 
   /**
-   * @param GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec
+   * Optional. Optional spec to configure GKE or Ray-on-Vertex autoscaling
+   *
+   * @param GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec $autoscalingSpec
    */
   public function setAutoscalingSpec(GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec $autoscalingSpec)
   {
@@ -53,7 +64,9 @@ class GoogleCloudAiplatformV1ResourcePool extends \Google\Model
     return $this->autoscalingSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1DiskSpec
+   * Optional. Disk spec for the machine in this node pool.
+   *
+   * @param GoogleCloudAiplatformV1DiskSpec $diskSpec
    */
   public function setDiskSpec(GoogleCloudAiplatformV1DiskSpec $diskSpec)
   {
@@ -67,7 +80,11 @@ class GoogleCloudAiplatformV1ResourcePool extends \Google\Model
     return $this->diskSpec;
   }
   /**
-   * @param string
+   * Immutable. The unique ID in a PersistentResource for referring to this
+   * resource pool. User can specify it if necessary. Otherwise, it's generated
+   * automatically.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -81,7 +98,9 @@ class GoogleCloudAiplatformV1ResourcePool extends \Google\Model
     return $this->id;
   }
   /**
-   * @param GoogleCloudAiplatformV1MachineSpec
+   * Required. Immutable. The specification of a single machine.
+   *
+   * @param GoogleCloudAiplatformV1MachineSpec $machineSpec
    */
   public function setMachineSpec(GoogleCloudAiplatformV1MachineSpec $machineSpec)
   {
@@ -95,7 +114,9 @@ class GoogleCloudAiplatformV1ResourcePool extends \Google\Model
     return $this->machineSpec;
   }
   /**
-   * @param string
+   * Optional. The total number of machines to use for this resource pool.
+   *
+   * @param string $replicaCount
    */
   public function setReplicaCount($replicaCount)
   {
@@ -109,7 +130,10 @@ class GoogleCloudAiplatformV1ResourcePool extends \Google\Model
     return $this->replicaCount;
   }
   /**
-   * @param string
+   * Output only. The number of machines currently in use by training jobs for
+   * this resource pool. Will replace idle_replica_count.
+   *
+   * @param string $usedReplicaCount
    */
   public function setUsedReplicaCount($usedReplicaCount)
   {

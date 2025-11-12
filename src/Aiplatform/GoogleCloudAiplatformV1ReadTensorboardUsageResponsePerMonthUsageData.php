@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerMonthUsageData exten
   protected $userUsageDataDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerUserUsageData[]
+   * Usage data for each user in the given month.
+   *
+   * @param GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerUserUsageData[] $userUsageData
    */
   public function setUserUsageData($userUsageData)
   {

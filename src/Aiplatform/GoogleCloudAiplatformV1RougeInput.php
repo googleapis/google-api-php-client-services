@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1RougeInput extends \Google\Collection
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RougeInstance[]
+   * Required. Repeated rouge instances.
+   *
+   * @param GoogleCloudAiplatformV1RougeInstance[] $instances
    */
   public function setInstances($instances)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1RougeInput extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param GoogleCloudAiplatformV1RougeSpec
+   * Required. Spec for rouge score metric.
+   *
+   * @param GoogleCloudAiplatformV1RougeSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1RougeSpec $metricSpec)
   {

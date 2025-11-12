@@ -25,7 +25,10 @@ class GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb extends \Google\Model
   protected $knnDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN
+   * Performs an ANN search on RagCorpus. Use this if you have a lot of files (>
+   * 10K) in your RagCorpus and want to reduce the search latency.
+   *
+   * @param GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN $ann
    */
   public function setAnn(GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN $ann)
   {
@@ -39,7 +42,9 @@ class GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb extends \Google\Model
     return $this->ann;
   }
   /**
-   * @param GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbKNN
+   * Performs a KNN search on RagCorpus. Default choice if not specified.
+   *
+   * @param GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbKNN $knn
    */
   public function setKnn(GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbKNN $knn)
   {

@@ -20,16 +20,31 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec extends \Google\Model
 {
   /**
+   * Optional. max replicas in the node pool, must be ≥ replica_count and >
+   * min_replica_count or will throw error
+   *
    * @var string
    */
   public $maxReplicaCount;
   /**
+   * Optional. min replicas in the node pool, must be ≤ replica_count and <
+   * max_replica_count or will throw error. For autoscaling enabled Ray-on-
+   * Vertex, we allow min_replica_count of a resource_pool to be 0 to match the
+   * OSS Ray behavior(https://docs.ray.io/en/latest/cluster/vms/user-
+   * guides/configuring-autoscaling.html#cluster-config-parameters). As for
+   * Persistent Resource, the min_replica_count must be > 0, we added a
+   * corresponding validation inside
+   * CreatePersistentResourceRequestValidator.java.
+   *
    * @var string
    */
   public $minReplicaCount;
 
   /**
-   * @param string
+   * Optional. max replicas in the node pool, must be ≥ replica_count and >
+   * min_replica_count or will throw error
+   *
+   * @param string $maxReplicaCount
    */
   public function setMaxReplicaCount($maxReplicaCount)
   {
@@ -43,7 +58,16 @@ class GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec extends \Google\Model
     return $this->maxReplicaCount;
   }
   /**
-   * @param string
+   * Optional. min replicas in the node pool, must be ≤ replica_count and <
+   * max_replica_count or will throw error. For autoscaling enabled Ray-on-
+   * Vertex, we allow min_replica_count of a resource_pool to be 0 to match the
+   * OSS Ray behavior(https://docs.ray.io/en/latest/cluster/vms/user-
+   * guides/configuring-autoscaling.html#cluster-config-parameters). As for
+   * Persistent Resource, the min_replica_count must be > 0, we added a
+   * corresponding validation inside
+   * CreatePersistentResourceRequestValidator.java.
+   *
+   * @param string $minReplicaCount
    */
   public function setMinReplicaCount($minReplicaCount)
   {

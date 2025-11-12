@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1ReadTensorboardTimeSeriesDataResponse extends \Goog
   protected $timeSeriesDataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1TimeSeriesData
+   * The returned time series data.
+   *
+   * @param GoogleCloudAiplatformV1TimeSeriesData $timeSeriesData
    */
   public function setTimeSeriesData(GoogleCloudAiplatformV1TimeSeriesData $timeSeriesData)
   {

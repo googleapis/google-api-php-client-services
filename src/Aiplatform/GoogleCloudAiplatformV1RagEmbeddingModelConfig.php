@@ -23,7 +23,12 @@ class GoogleCloudAiplatformV1RagEmbeddingModelConfig extends \Google\Model
   protected $vertexPredictionEndpointDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagEmbeddingModelConfigVertexPredictionEndpoint
+   * The Vertex AI Prediction Endpoint that either refers to a publisher model
+   * or an endpoint that is hosting a 1P fine-tuned text embedding model.
+   * Endpoints hosting non-1P fine-tuned text embedding models are currently not
+   * supported. This is used for dense vector search.
+   *
+   * @param GoogleCloudAiplatformV1RagEmbeddingModelConfigVertexPredictionEndpoint $vertexPredictionEndpoint
    */
   public function setVertexPredictionEndpoint(GoogleCloudAiplatformV1RagEmbeddingModelConfigVertexPredictionEndpoint $vertexPredictionEndpoint)
   {

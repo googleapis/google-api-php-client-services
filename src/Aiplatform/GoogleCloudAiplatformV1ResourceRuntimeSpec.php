@@ -25,7 +25,10 @@ class GoogleCloudAiplatformV1ResourceRuntimeSpec extends \Google\Model
   protected $serviceAccountSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RaySpec
+   * Optional. Ray cluster configuration. Required when creating a dedicated
+   * RayCluster on the PersistentResource.
+   *
+   * @param GoogleCloudAiplatformV1RaySpec $raySpec
    */
   public function setRaySpec(GoogleCloudAiplatformV1RaySpec $raySpec)
   {
@@ -39,7 +42,9 @@ class GoogleCloudAiplatformV1ResourceRuntimeSpec extends \Google\Model
     return $this->raySpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1ServiceAccountSpec
+   * Optional. Configure the use of workload identity on the PersistentResource
+   *
+   * @param GoogleCloudAiplatformV1ServiceAccountSpec $serviceAccountSpec
    */
   public function setServiceAccountSpec(GoogleCloudAiplatformV1ServiceAccountSpec $serviceAccountSpec)
   {

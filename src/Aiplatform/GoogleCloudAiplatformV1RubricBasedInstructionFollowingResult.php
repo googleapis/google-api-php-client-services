@@ -23,12 +23,16 @@ class GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult extends \Goog
   protected $rubricCritiqueResultsType = GoogleCloudAiplatformV1RubricCritiqueResult::class;
   protected $rubricCritiqueResultsDataType = 'array';
   /**
+   * Output only. Overall score for the instruction following.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param GoogleCloudAiplatformV1RubricCritiqueResult[]
+   * Output only. List of per rubric critique results.
+   *
+   * @param GoogleCloudAiplatformV1RubricCritiqueResult[] $rubricCritiqueResults
    */
   public function setRubricCritiqueResults($rubricCritiqueResults)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult extends \Goog
     return $this->rubricCritiqueResults;
   }
   /**
-   * @param float
+   * Output only. Overall score for the instruction following.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

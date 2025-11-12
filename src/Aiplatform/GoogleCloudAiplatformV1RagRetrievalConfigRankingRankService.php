@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RagRetrievalConfigRankingRankService extends \Google\Model
 {
   /**
+   * Optional. The model name of the rank service. Format: `semantic-
+   * ranker-512@latest`
+   *
    * @var string
    */
   public $modelName;
 
   /**
-   * @param string
+   * Optional. The model name of the rank service. Format: `semantic-
+   * ranker-512@latest`
+   *
+   * @param string $modelName
    */
   public function setModelName($modelName)
   {

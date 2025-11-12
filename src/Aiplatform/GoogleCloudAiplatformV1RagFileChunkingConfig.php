@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1RagFileChunkingConfig extends \Google\Model
   protected $fixedLengthChunkingDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagFileChunkingConfigFixedLengthChunking
+   * Specifies the fixed length chunking config.
+   *
+   * @param GoogleCloudAiplatformV1RagFileChunkingConfigFixedLengthChunking $fixedLengthChunking
    */
   public function setFixedLengthChunking(GoogleCloudAiplatformV1RagFileChunkingConfigFixedLengthChunking $fixedLengthChunking)
   {

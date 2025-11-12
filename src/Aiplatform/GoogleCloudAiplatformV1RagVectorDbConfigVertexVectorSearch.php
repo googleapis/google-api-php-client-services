@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RagVectorDbConfigVertexVectorSearch extends \Google\Model
 {
   /**
+   * The resource name of the Index. Format:
+   * `projects/{project}/locations/{location}/indexes/{index}`
+   *
    * @var string
    */
   public $index;
   /**
+   * The resource name of the Index Endpoint. Format:
+   * `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+   *
    * @var string
    */
   public $indexEndpoint;
 
   /**
-   * @param string
+   * The resource name of the Index. Format:
+   * `projects/{project}/locations/{location}/indexes/{index}`
+   *
+   * @param string $index
    */
   public function setIndex($index)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1RagVectorDbConfigVertexVectorSearch extends \Google
     return $this->index;
   }
   /**
-   * @param string
+   * The resource name of the Index Endpoint. Format:
+   * `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+   *
+   * @param string $indexEndpoint
    */
   public function setIndexEndpoint($indexEndpoint)
   {

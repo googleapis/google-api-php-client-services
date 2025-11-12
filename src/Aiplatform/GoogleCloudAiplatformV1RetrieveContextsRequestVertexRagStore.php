@@ -22,10 +22,22 @@ class GoogleCloudAiplatformV1RetrieveContextsRequestVertexRagStore extends \Goog
   protected $collection_key = 'ragResources';
   protected $ragResourcesType = GoogleCloudAiplatformV1RetrieveContextsRequestVertexRagStoreRagResource::class;
   protected $ragResourcesDataType = 'array';
+  /**
+   * Optional. Only return contexts with vector distance smaller than the
+   * threshold.
+   *
+   * @deprecated
+   * @var 
+   */
   public $vectorDistanceThreshold;
 
   /**
-   * @param GoogleCloudAiplatformV1RetrieveContextsRequestVertexRagStoreRagResource[]
+   * Optional. The representation of the rag source. It can be used to specify
+   * corpus only or ragfiles. Currently only support one corpus or multiple
+   * files from one corpus. In the future we may open up multiple corpora
+   * support.
+   *
+   * @param GoogleCloudAiplatformV1RetrieveContextsRequestVertexRagStoreRagResource[] $ragResources
    */
   public function setRagResources($ragResources)
   {

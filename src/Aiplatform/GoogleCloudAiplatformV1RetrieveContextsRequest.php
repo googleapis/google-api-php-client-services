@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1RetrieveContextsRequest extends \Google\Model
   protected $vertexRagStoreDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagQuery
+   * Required. Single RAG retrieve query.
+   *
+   * @param GoogleCloudAiplatformV1RagQuery $query
    */
   public function setQuery(GoogleCloudAiplatformV1RagQuery $query)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1RetrieveContextsRequest extends \Google\Model
     return $this->query;
   }
   /**
-   * @param GoogleCloudAiplatformV1RetrieveContextsRequestVertexRagStore
+   * The data source for Vertex RagStore.
+   *
+   * @param GoogleCloudAiplatformV1RetrieveContextsRequestVertexRagStore $vertexRagStore
    */
   public function setVertexRagStore(GoogleCloudAiplatformV1RetrieveContextsRequestVertexRagStore $vertexRagStore)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1QuestionAnsweringRelevanceResult extends \Google\Model
 {
   /**
+   * Output only. Confidence for question answering relevance score.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Output only. Explanation for question answering relevance score.
+   *
    * @var string
    */
   public $explanation;
   /**
+   * Output only. Question Answering Relevance score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Confidence for question answering relevance score.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringRelevanceResult extends \Google\Mo
     return $this->confidence;
   }
   /**
-   * @param string
+   * Output only. Explanation for question answering relevance score.
+   *
+   * @param string $explanation
    */
   public function setExplanation($explanation)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringRelevanceResult extends \Google\Mo
     return $this->explanation;
   }
   /**
-   * @param float
+   * Output only. Question Answering Relevance score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

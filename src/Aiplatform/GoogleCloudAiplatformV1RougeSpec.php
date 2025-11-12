@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RougeSpec extends \Google\Model
 {
   /**
+   * Optional. Supported rouge types are rougen[1-9], rougeL, and rougeLsum.
+   *
    * @var string
    */
   public $rougeType;
   /**
+   * Optional. Whether to split summaries while using rougeLsum.
+   *
    * @var bool
    */
   public $splitSummaries;
   /**
+   * Optional. Whether to use stemmer to compute rouge score.
+   *
    * @var bool
    */
   public $useStemmer;
 
   /**
-   * @param string
+   * Optional. Supported rouge types are rougen[1-9], rougeL, and rougeLsum.
+   *
+   * @param string $rougeType
    */
   public function setRougeType($rougeType)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1RougeSpec extends \Google\Model
     return $this->rougeType;
   }
   /**
-   * @param bool
+   * Optional. Whether to split summaries while using rougeLsum.
+   *
+   * @param bool $splitSummaries
    */
   public function setSplitSummaries($splitSummaries)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1RougeSpec extends \Google\Model
     return $this->splitSummaries;
   }
   /**
-   * @param bool
+   * Optional. Whether to use stemmer to compute rouge score.
+   *
+   * @param bool $useStemmer
    */
   public function setUseStemmer($useStemmer)
   {

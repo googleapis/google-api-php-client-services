@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1RagFileParsingConfig extends \Google\Model
   protected $llmParserDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagFileParsingConfigLayoutParser
+   * The Layout Parser to use for RagFiles.
+   *
+   * @param GoogleCloudAiplatformV1RagFileParsingConfigLayoutParser $layoutParser
    */
   public function setLayoutParser(GoogleCloudAiplatformV1RagFileParsingConfigLayoutParser $layoutParser)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1RagFileParsingConfig extends \Google\Model
     return $this->layoutParser;
   }
   /**
-   * @param GoogleCloudAiplatformV1RagFileParsingConfigLlmParser
+   * The LLM Parser to use for RagFiles.
+   *
+   * @param GoogleCloudAiplatformV1RagFileParsingConfigLlmParser $llmParser
    */
   public function setLlmParser(GoogleCloudAiplatformV1RagFileParsingConfigLlmParser $llmParser)
   {

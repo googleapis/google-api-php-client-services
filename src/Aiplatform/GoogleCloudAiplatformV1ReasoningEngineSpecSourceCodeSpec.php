@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\M
   protected $pythonSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource
+   * Source code is provided directly in the request.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource $inlineSource)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec extends \Google\M
     return $this->inlineSource;
   }
   /**
-   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecPythonSpec
+   * Configuration for a Python application.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecPythonSpec $pythonSpec
    */
   public function setPythonSpec(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecPythonSpec $pythonSpec)
   {

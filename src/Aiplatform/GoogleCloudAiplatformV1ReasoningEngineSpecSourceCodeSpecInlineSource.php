@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpecInlineSource extends \Google\Model
 {
   /**
+   * Required. Input only. The application source code archive, provided as a
+   * compressed tarball (.tar.gz) file.
+   *
    * @var string
    */
   public $sourceArchive;
 
   /**
-   * @param string
+   * Required. Input only. The application source code archive, provided as a
+   * compressed tarball (.tar.gz) file.
+   *
+   * @param string $sourceArchive
    */
   public function setSourceArchive($sourceArchive)
   {

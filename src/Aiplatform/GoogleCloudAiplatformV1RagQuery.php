@@ -22,12 +22,16 @@ class GoogleCloudAiplatformV1RagQuery extends \Google\Model
   protected $ragRetrievalConfigType = GoogleCloudAiplatformV1RagRetrievalConfig::class;
   protected $ragRetrievalConfigDataType = '';
   /**
+   * Optional. The query in text format to get relevant contexts.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param GoogleCloudAiplatformV1RagRetrievalConfig
+   * Optional. The retrieval config for the query.
+   *
+   * @param GoogleCloudAiplatformV1RagRetrievalConfig $ragRetrievalConfig
    */
   public function setRagRetrievalConfig(GoogleCloudAiplatformV1RagRetrievalConfig $ragRetrievalConfig)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1RagQuery extends \Google\Model
     return $this->ragRetrievalConfig;
   }
   /**
-   * @param string
+   * Optional. The query in text format to get relevant contexts.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

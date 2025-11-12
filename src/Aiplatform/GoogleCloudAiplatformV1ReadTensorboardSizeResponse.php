@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ReadTensorboardSizeResponse extends \Google\Model
 {
   /**
+   * Payload storage size for the TensorBoard
+   *
    * @var string
    */
   public $storageSizeByte;
 
   /**
-   * @param string
+   * Payload storage size for the TensorBoard
+   *
+   * @param string $storageSizeByte
    */
   public function setStorageSizeByte($storageSizeByte)
   {

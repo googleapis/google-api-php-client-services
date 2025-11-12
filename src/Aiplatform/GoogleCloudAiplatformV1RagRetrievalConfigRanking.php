@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1RagRetrievalConfigRanking extends \Google\Model
   protected $rankServiceDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagRetrievalConfigRankingLlmRanker
+   * Optional. Config for LlmRanker.
+   *
+   * @param GoogleCloudAiplatformV1RagRetrievalConfigRankingLlmRanker $llmRanker
    */
   public function setLlmRanker(GoogleCloudAiplatformV1RagRetrievalConfigRankingLlmRanker $llmRanker)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1RagRetrievalConfigRanking extends \Google\Model
     return $this->llmRanker;
   }
   /**
-   * @param GoogleCloudAiplatformV1RagRetrievalConfigRankingRankService
+   * Optional. Config for Rank Service.
+   *
+   * @param GoogleCloudAiplatformV1RagRetrievalConfigRankingRankService $rankService
    */
   public function setRankService(GoogleCloudAiplatformV1RagRetrievalConfigRankingRankService $rankService)
   {

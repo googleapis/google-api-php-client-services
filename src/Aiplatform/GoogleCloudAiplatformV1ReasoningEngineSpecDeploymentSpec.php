@@ -21,22 +21,40 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
 {
   protected $collection_key = 'secretEnv';
   /**
+   * Optional. Concurrency for each container and agent server. Recommended
+   * value: 2 * cpu + 1. Defaults to 9.
+   *
    * @var int
    */
   public $containerConcurrency;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
   /**
+   * Optional. The maximum number of application instances that can be launched
+   * to handle increased traffic. Defaults to 100. Range: [1, 1000]. If VPC-SC
+   * or PSC-I is enabled, the acceptable range is [1, 100].
+   *
    * @var int
    */
   public $maxInstances;
   /**
+   * Optional. The minimum number of application instances that will be kept
+   * running at all times. Defaults to 1. Range: [0, 10].
+   *
    * @var int
    */
   public $minInstances;
   protected $pscInterfaceConfigType = GoogleCloudAiplatformV1PscInterfaceConfig::class;
   protected $pscInterfaceConfigDataType = '';
   /**
+   * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys
+   * are supported. Defaults to {"cpu": "4", "memory": "4Gi"}. * The only
+   * supported values for CPU are '1', '2', '4', '6' and '8'. For more
+   * information, go to https://cloud.google.com/run/docs/configuring/cpu. * The
+   * only supported values for memory are '1Gi', '2Gi', ... '32 Gi'. * For
+   * required cpu on different memory values, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits
+   *
    * @var string[]
    */
   public $resourceLimits;
@@ -44,7 +62,10 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
   protected $secretEnvDataType = 'array';
 
   /**
-   * @param int
+   * Optional. Concurrency for each container and agent server. Recommended
+   * value: 2 * cpu + 1. Defaults to 9.
+   *
+   * @param int $containerConcurrency
    */
   public function setContainerConcurrency($containerConcurrency)
   {
@@ -58,7 +79,11 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
     return $this->containerConcurrency;
   }
   /**
-   * @param GoogleCloudAiplatformV1EnvVar[]
+   * Optional. Environment variables to be set with the Reasoning Engine
+   * deployment. The environment variables can be updated through the
+   * UpdateReasoningEngine API.
+   *
+   * @param GoogleCloudAiplatformV1EnvVar[] $env
    */
   public function setEnv($env)
   {
@@ -72,7 +97,11 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
     return $this->env;
   }
   /**
-   * @param int
+   * Optional. The maximum number of application instances that can be launched
+   * to handle increased traffic. Defaults to 100. Range: [1, 1000]. If VPC-SC
+   * or PSC-I is enabled, the acceptable range is [1, 100].
+   *
+   * @param int $maxInstances
    */
   public function setMaxInstances($maxInstances)
   {
@@ -86,7 +115,10 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
     return $this->maxInstances;
   }
   /**
-   * @param int
+   * Optional. The minimum number of application instances that will be kept
+   * running at all times. Defaults to 1. Range: [0, 10].
+   *
+   * @param int $minInstances
    */
   public function setMinInstances($minInstances)
   {
@@ -100,7 +132,9 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
     return $this->minInstances;
   }
   /**
-   * @param GoogleCloudAiplatformV1PscInterfaceConfig
+   * Optional. Configuration for PSC-I.
+   *
+   * @param GoogleCloudAiplatformV1PscInterfaceConfig $pscInterfaceConfig
    */
   public function setPscInterfaceConfig(GoogleCloudAiplatformV1PscInterfaceConfig $pscInterfaceConfig)
   {
@@ -114,7 +148,15 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
     return $this->pscInterfaceConfig;
   }
   /**
-   * @param string[]
+   * Optional. Resource limits for each container. Only 'cpu' and 'memory' keys
+   * are supported. Defaults to {"cpu": "4", "memory": "4Gi"}. * The only
+   * supported values for CPU are '1', '2', '4', '6' and '8'. For more
+   * information, go to https://cloud.google.com/run/docs/configuring/cpu. * The
+   * only supported values for memory are '1Gi', '2Gi', ... '32 Gi'. * For
+   * required cpu on different memory values, go to
+   * https://cloud.google.com/run/docs/configuring/memory-limits
+   *
+   * @param string[] $resourceLimits
    */
   public function setResourceLimits($resourceLimits)
   {
@@ -128,7 +170,12 @@ class GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec extends \Google\C
     return $this->resourceLimits;
   }
   /**
-   * @param GoogleCloudAiplatformV1SecretEnvVar[]
+   * Optional. Environment variables where the value is a secret in Cloud Secret
+   * Manager. To use this feature, add 'Secret Manager Secret Accessor' role
+   * (roles/secretmanager.secretAccessor) to AI Platform Reasoning Engine
+   * Service Agent.
+   *
+   * @param GoogleCloudAiplatformV1SecretEnvVar[] $secretEnv
    */
   public function setSecretEnv($secretEnv)
   {

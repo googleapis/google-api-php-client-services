@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1RestoreDatasetVersionOperationMetadata extends \Goo
   protected $genericMetadataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * The common part of the operation metadata.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {

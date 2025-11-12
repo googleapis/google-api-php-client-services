@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1ReadTensorboardBlobDataResponse extends \Google\Col
   protected $blobsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TensorboardBlob[]
+   * Blob messages containing blob bytes.
+   *
+   * @param GoogleCloudAiplatformV1TensorboardBlob[] $blobs
    */
   public function setBlobs($blobs)
   {

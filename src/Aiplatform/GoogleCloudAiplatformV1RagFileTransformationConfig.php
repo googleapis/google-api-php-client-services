@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1RagFileTransformationConfig extends \Google\Model
   protected $ragFileChunkingConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagFileChunkingConfig
+   * Specifies the chunking config for RagFiles.
+   *
+   * @param GoogleCloudAiplatformV1RagFileChunkingConfig $ragFileChunkingConfig
    */
   public function setRagFileChunkingConfig(GoogleCloudAiplatformV1RagFileChunkingConfig $ragFileChunkingConfig)
   {

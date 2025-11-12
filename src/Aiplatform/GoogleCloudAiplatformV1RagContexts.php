@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1RagContexts extends \Google\Collection
   protected $contextsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1RagContextsContext[]
+   * All its contexts.
+   *
+   * @param GoogleCloudAiplatformV1RagContextsContext[] $contexts
    */
   public function setContexts($contexts)
   {

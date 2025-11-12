@@ -22,16 +22,27 @@ class GoogleCloudAiplatformV1RubricVerdict extends \Google\Model
   protected $evaluatedRubricType = GoogleCloudAiplatformV1Rubric::class;
   protected $evaluatedRubricDataType = '';
   /**
+   * Optional. Human-readable reasoning or explanation for the verdict. This can
+   * include specific examples or details from the evaluated content that
+   * justify the given verdict.
+   *
    * @var string
    */
   public $reasoning;
   /**
+   * Required. Outcome of the evaluation against the rubric, represented as a
+   * boolean. `true` indicates a "Pass", `false` indicates a "Fail".
+   *
    * @var bool
    */
   public $verdict;
 
   /**
-   * @param GoogleCloudAiplatformV1Rubric
+   * Required. The full rubric definition that was evaluated. Storing this
+   * ensures the verdict is self-contained and understandable, especially if the
+   * original rubric definition changes or was dynamically generated.
+   *
+   * @param GoogleCloudAiplatformV1Rubric $evaluatedRubric
    */
   public function setEvaluatedRubric(GoogleCloudAiplatformV1Rubric $evaluatedRubric)
   {
@@ -45,7 +56,11 @@ class GoogleCloudAiplatformV1RubricVerdict extends \Google\Model
     return $this->evaluatedRubric;
   }
   /**
-   * @param string
+   * Optional. Human-readable reasoning or explanation for the verdict. This can
+   * include specific examples or details from the evaluated content that
+   * justify the given verdict.
+   *
+   * @param string $reasoning
    */
   public function setReasoning($reasoning)
   {
@@ -59,7 +74,10 @@ class GoogleCloudAiplatformV1RubricVerdict extends \Google\Model
     return $this->reasoning;
   }
   /**
-   * @param bool
+   * Required. Outcome of the evaluation against the rubric, represented as a
+   * boolean. `true` indicates a "Pass", `false` indicates a "Fail".
+   *
+   * @param bool $verdict
    */
   public function setVerdict($verdict)
   {

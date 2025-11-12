@@ -20,20 +20,39 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SampleConfig extends \Google\Model
 {
   /**
+   * Default will be treated as UNCERTAINTY.
+   */
+  public const SAMPLE_STRATEGY_SAMPLE_STRATEGY_UNSPECIFIED = 'SAMPLE_STRATEGY_UNSPECIFIED';
+  /**
+   * Sample the most uncertain data to label.
+   */
+  public const SAMPLE_STRATEGY_UNCERTAINTY = 'UNCERTAINTY';
+  /**
+   * The percentage of data needed to be labeled in each following batch (except
+   * the first batch).
+   *
    * @var int
    */
   public $followingBatchSamplePercentage;
   /**
+   * The percentage of data needed to be labeled in the first batch.
+   *
    * @var int
    */
   public $initialBatchSamplePercentage;
   /**
+   * Field to choose sampling strategy. Sampling strategy will decide which data
+   * should be selected for human labeling in every batch.
+   *
    * @var string
    */
   public $sampleStrategy;
 
   /**
-   * @param int
+   * The percentage of data needed to be labeled in each following batch (except
+   * the first batch).
+   *
+   * @param int $followingBatchSamplePercentage
    */
   public function setFollowingBatchSamplePercentage($followingBatchSamplePercentage)
   {
@@ -47,7 +66,9 @@ class GoogleCloudAiplatformV1SampleConfig extends \Google\Model
     return $this->followingBatchSamplePercentage;
   }
   /**
-   * @param int
+   * The percentage of data needed to be labeled in the first batch.
+   *
+   * @param int $initialBatchSamplePercentage
    */
   public function setInitialBatchSamplePercentage($initialBatchSamplePercentage)
   {
@@ -61,14 +82,19 @@ class GoogleCloudAiplatformV1SampleConfig extends \Google\Model
     return $this->initialBatchSamplePercentage;
   }
   /**
-   * @param string
+   * Field to choose sampling strategy. Sampling strategy will decide which data
+   * should be selected for human labeling in every batch.
+   *
+   * Accepted values: SAMPLE_STRATEGY_UNSPECIFIED, UNCERTAINTY
+   *
+   * @param self::SAMPLE_STRATEGY_* $sampleStrategy
    */
   public function setSampleStrategy($sampleStrategy)
   {
     $this->sampleStrategy = $sampleStrategy;
   }
   /**
-   * @return string
+   * @return self::SAMPLE_STRATEGY_*
    */
   public function getSampleStrategy()
   {

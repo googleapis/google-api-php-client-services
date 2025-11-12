@@ -20,14 +20,30 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RagRetrievalConfigFilter extends \Google\Model
 {
   /**
+   * Optional. String for metadata filtering.
+   *
    * @var string
    */
   public $metadataFilter;
+  /**
+   * Optional. Only returns contexts with vector distance smaller than the
+   * threshold.
+   *
+   * @var 
+   */
   public $vectorDistanceThreshold;
+  /**
+   * Optional. Only returns contexts with vector similarity larger than the
+   * threshold.
+   *
+   * @var 
+   */
   public $vectorSimilarityThreshold;
 
   /**
-   * @param string
+   * Optional. String for metadata filtering.
+   *
+   * @param string $metadataFilter
    */
   public function setMetadataFilter($metadataFilter)
   {

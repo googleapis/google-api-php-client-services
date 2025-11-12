@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1RougeResults extends \Google\Collection
   protected $rougeMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1RougeMetricValue[]
+   * Output only. Rouge metric values.
+   *
+   * @param GoogleCloudAiplatformV1RougeMetricValue[] $rougeMetricValues
    */
   public function setRougeMetricValues($rougeMetricValues)
   {

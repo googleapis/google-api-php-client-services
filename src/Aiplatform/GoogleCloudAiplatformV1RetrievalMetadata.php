@@ -20,12 +20,26 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RetrievalMetadata extends \Google\Model
 {
   /**
+   * Optional. A score indicating how likely it is that a Google Search query
+   * could help answer the prompt. The score is in the range of `[0, 1]`. A
+   * score of 1 means the model is confident that a search will be helpful, and
+   * 0 means it is not. This score is populated only when Google Search
+   * grounding and dynamic retrieval are enabled. The score is used to determine
+   * whether to trigger a search.
+   *
    * @var float
    */
   public $googleSearchDynamicRetrievalScore;
 
   /**
-   * @param float
+   * Optional. A score indicating how likely it is that a Google Search query
+   * could help answer the prompt. The score is in the range of `[0, 1]`. A
+   * score of 1 means the model is confident that a search will be helpful, and
+   * 0 means it is not. This score is populated only when Google Search
+   * grounding and dynamic retrieval are enabled. The score is used to determine
+   * whether to trigger a search.
+   *
+   * @param float $googleSearchDynamicRetrievalScore
    */
   public function setGoogleSearchDynamicRetrievalScore($googleSearchDynamicRetrievalScore)
   {

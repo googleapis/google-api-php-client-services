@@ -23,12 +23,19 @@ class GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityView extends \Google
   protected $dataType = GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityViewData::class;
   protected $dataDataType = 'array';
   /**
+   * ID of the requested entity.
+   *
    * @var string
    */
   public $entityId;
 
   /**
-   * @param GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityViewData[]
+   * Each piece of data holds the k requested values for one requested Feature.
+   * If no values for the requested Feature exist, the corresponding cell will
+   * be empty. This has the same size and is in the same order as the features
+   * from the header ReadFeatureValuesResponse.header.
+   *
+   * @param GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityViewData[] $data
    */
   public function setData($data)
   {
@@ -42,7 +49,9 @@ class GoogleCloudAiplatformV1ReadFeatureValuesResponseEntityView extends \Google
     return $this->data;
   }
   /**
-   * @param string
+   * ID of the requested entity.
+   *
+   * @param string $entityId
    */
   public function setEntityId($entityId)
   {

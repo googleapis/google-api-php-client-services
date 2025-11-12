@@ -21,16 +21,22 @@ class GoogleCloudAiplatformV1ReadIndexDatapointsRequest extends \Google\Collecti
 {
   protected $collection_key = 'ids';
   /**
+   * The ID of the DeployedIndex that will serve the request.
+   *
    * @var string
    */
   public $deployedIndexId;
   /**
+   * IDs of the datapoints to be searched for.
+   *
    * @var string[]
    */
   public $ids;
 
   /**
-   * @param string
+   * The ID of the DeployedIndex that will serve the request.
+   *
+   * @param string $deployedIndexId
    */
   public function setDeployedIndexId($deployedIndexId)
   {
@@ -44,7 +50,9 @@ class GoogleCloudAiplatformV1ReadIndexDatapointsRequest extends \Google\Collecti
     return $this->deployedIndexId;
   }
   /**
-   * @param string[]
+   * IDs of the datapoints to be searched for.
+   *
+   * @param string[] $ids
    */
   public function setIds($ids)
   {

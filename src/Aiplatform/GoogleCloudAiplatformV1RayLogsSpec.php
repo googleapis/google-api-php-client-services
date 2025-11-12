@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RayLogsSpec extends \Google\Model
 {
   /**
+   * Optional. Flag to disable the export of Ray OSS logs to Cloud Logging.
+   *
    * @var bool
    */
   public $disabled;
 
   /**
-   * @param bool
+   * Optional. Flag to disable the export of Ray OSS logs to Cloud Logging.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {

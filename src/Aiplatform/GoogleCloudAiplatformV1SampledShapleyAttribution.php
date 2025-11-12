@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SampledShapleyAttribution extends \Google\Model
 {
   /**
+   * Required. The number of feature permutations to consider when approximating
+   * the Shapley values. Valid range of its value is [1, 50], inclusively.
+   *
    * @var int
    */
   public $pathCount;
 
   /**
-   * @param int
+   * Required. The number of feature permutations to consider when approximating
+   * the Shapley values. Valid range of its value is [1, 50], inclusively.
+   *
+   * @param int $pathCount
    */
   public function setPathCount($pathCount)
   {

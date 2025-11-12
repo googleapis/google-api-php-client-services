@@ -21,6 +21,10 @@ class GoogleCloudAiplatformV1ReadFeatureValuesResponseHeader extends \Google\Col
 {
   protected $collection_key = 'featureDescriptors';
   /**
+   * The resource name of the EntityType from the ReadFeatureValuesRequest.
+   * Value format: `projects/{project}/locations/{location}/featurestores/{featu
+   * restore}/entityTypes/{entityType}`.
+   *
    * @var string
    */
   public $entityType;
@@ -28,7 +32,11 @@ class GoogleCloudAiplatformV1ReadFeatureValuesResponseHeader extends \Google\Col
   protected $featureDescriptorsDataType = 'array';
 
   /**
-   * @param string
+   * The resource name of the EntityType from the ReadFeatureValuesRequest.
+   * Value format: `projects/{project}/locations/{location}/featurestores/{featu
+   * restore}/entityTypes/{entityType}`.
+   *
+   * @param string $entityType
    */
   public function setEntityType($entityType)
   {
@@ -42,7 +50,10 @@ class GoogleCloudAiplatformV1ReadFeatureValuesResponseHeader extends \Google\Col
     return $this->entityType;
   }
   /**
-   * @param GoogleCloudAiplatformV1ReadFeatureValuesResponseFeatureDescriptor[]
+   * List of Feature metadata corresponding to each piece of
+   * ReadFeatureValuesResponse.EntityView.data.
+   *
+   * @param GoogleCloudAiplatformV1ReadFeatureValuesResponseFeatureDescriptor[] $featureDescriptors
    */
   public function setFeatureDescriptors($featureDescriptors)
   {

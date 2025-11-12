@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1RubricBasedInstructionFollowingInstance extends \Google\Model
 {
   /**
+   * Required. Instance specified as a json string. String key-value pairs are
+   * expected in the json_instance to render RubricBasedInstructionFollowing
+   * prompt templates.
+   *
    * @var string
    */
   public $jsonInstance;
 
   /**
-   * @param string
+   * Required. Instance specified as a json string. String key-value pairs are
+   * expected in the json_instance to render RubricBasedInstructionFollowing
+   * prompt templates.
+   *
+   * @param string $jsonInstance
    */
   public function setJsonInstance($jsonInstance)
   {

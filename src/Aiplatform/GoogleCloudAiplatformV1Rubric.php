@@ -19,23 +19,51 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Rubric extends \Google\Model
 {
+  /**
+   * Importance is not specified.
+   */
+  public const IMPORTANCE_IMPORTANCE_UNSPECIFIED = 'IMPORTANCE_UNSPECIFIED';
+  /**
+   * High importance.
+   */
+  public const IMPORTANCE_HIGH = 'HIGH';
+  /**
+   * Medium importance.
+   */
+  public const IMPORTANCE_MEDIUM = 'MEDIUM';
+  /**
+   * Low importance.
+   */
+  public const IMPORTANCE_LOW = 'LOW';
   protected $contentType = GoogleCloudAiplatformV1RubricContent::class;
   protected $contentDataType = '';
   /**
+   * Optional. The relative importance of this rubric.
+   *
    * @var string
    */
   public $importance;
   /**
+   * Unique identifier for the rubric. This ID is used to refer to this rubric,
+   * e.g., in RubricVerdict.
+   *
    * @var string
    */
   public $rubricId;
   /**
+   * Optional. A type designator for the rubric, which can inform how it's
+   * evaluated or interpreted by systems or users. It's recommended to use
+   * consistent, well-defined, upper snake_case strings. Examples:
+   * "SUMMARIZATION_QUALITY", "SAFETY_HARMFUL_CONTENT", "INSTRUCTION_ADHERENCE".
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GoogleCloudAiplatformV1RubricContent
+   * Required. The actual testable criteria for the rubric.
+   *
+   * @param GoogleCloudAiplatformV1RubricContent $content
    */
   public function setContent(GoogleCloudAiplatformV1RubricContent $content)
   {
@@ -49,21 +77,28 @@ class GoogleCloudAiplatformV1Rubric extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Optional. The relative importance of this rubric.
+   *
+   * Accepted values: IMPORTANCE_UNSPECIFIED, HIGH, MEDIUM, LOW
+   *
+   * @param self::IMPORTANCE_* $importance
    */
   public function setImportance($importance)
   {
     $this->importance = $importance;
   }
   /**
-   * @return string
+   * @return self::IMPORTANCE_*
    */
   public function getImportance()
   {
     return $this->importance;
   }
   /**
-   * @param string
+   * Unique identifier for the rubric. This ID is used to refer to this rubric,
+   * e.g., in RubricVerdict.
+   *
+   * @param string $rubricId
    */
   public function setRubricId($rubricId)
   {
@@ -77,7 +112,12 @@ class GoogleCloudAiplatformV1Rubric extends \Google\Model
     return $this->rubricId;
   }
   /**
-   * @param string
+   * Optional. A type designator for the rubric, which can inform how it's
+   * evaluated or interpreted by systems or users. It's recommended to use
+   * consistent, well-defined, upper snake_case strings. Examples:
+   * "SUMMARIZATION_QUALITY", "SAFETY_HARMFUL_CONTENT", "INSTRUCTION_ADHERENCE".
+   *
+   * @param string $type
    */
   public function setType($type)
   {

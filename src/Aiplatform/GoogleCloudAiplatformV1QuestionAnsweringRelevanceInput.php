@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringRelevanceInput extends \Google\Mod
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1QuestionAnsweringRelevanceInstance
+   * Required. Question answering relevance instance.
+   *
+   * @param GoogleCloudAiplatformV1QuestionAnsweringRelevanceInstance $instance
    */
   public function setInstance(GoogleCloudAiplatformV1QuestionAnsweringRelevanceInstance $instance)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringRelevanceInput extends \Google\Mod
     return $this->instance;
   }
   /**
-   * @param GoogleCloudAiplatformV1QuestionAnsweringRelevanceSpec
+   * Required. Spec for question answering relevance score metric.
+   *
+   * @param GoogleCloudAiplatformV1QuestionAnsweringRelevanceSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1QuestionAnsweringRelevanceSpec $metricSpec)
   {

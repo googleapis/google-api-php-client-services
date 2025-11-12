@@ -27,7 +27,9 @@ class GoogleCloudAiplatformV1RagManagedDbConfig extends \Google\Model
   protected $unprovisionedDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagManagedDbConfigBasic
+   * Sets the RagManagedDb to the Basic tier.
+   *
+   * @param GoogleCloudAiplatformV1RagManagedDbConfigBasic $basic
    */
   public function setBasic(GoogleCloudAiplatformV1RagManagedDbConfigBasic $basic)
   {
@@ -41,7 +43,10 @@ class GoogleCloudAiplatformV1RagManagedDbConfig extends \Google\Model
     return $this->basic;
   }
   /**
-   * @param GoogleCloudAiplatformV1RagManagedDbConfigScaled
+   * Sets the RagManagedDb to the Scaled tier. This is the default tier if not
+   * explicitly chosen.
+   *
+   * @param GoogleCloudAiplatformV1RagManagedDbConfigScaled $scaled
    */
   public function setScaled(GoogleCloudAiplatformV1RagManagedDbConfigScaled $scaled)
   {
@@ -55,7 +60,9 @@ class GoogleCloudAiplatformV1RagManagedDbConfig extends \Google\Model
     return $this->scaled;
   }
   /**
-   * @param GoogleCloudAiplatformV1RagManagedDbConfigUnprovisioned
+   * Sets the RagManagedDb to the Unprovisioned tier.
+   *
+   * @param GoogleCloudAiplatformV1RagManagedDbConfigUnprovisioned $unprovisioned
    */
   public function setUnprovisioned(GoogleCloudAiplatformV1RagManagedDbConfigUnprovisioned $unprovisioned)
   {

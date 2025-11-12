@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1ReadIndexDatapointsResponse extends \Google\Collect
   protected $datapointsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1IndexDatapoint[]
+   * The result list of datapoints.
+   *
+   * @param GoogleCloudAiplatformV1IndexDatapoint[] $datapoints
    */
   public function setDatapoints($datapoints)
   {
