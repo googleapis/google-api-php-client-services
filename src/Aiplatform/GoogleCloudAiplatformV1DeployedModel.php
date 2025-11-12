@@ -22,28 +22,51 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   protected $automaticResourcesType = GoogleCloudAiplatformV1AutomaticResources::class;
   protected $automaticResourcesDataType = '';
   /**
+   * The checkpoint id of the model.
+   *
    * @var string
    */
   public $checkpointId;
   /**
+   * Output only. Timestamp when the DeployedModel was created.
+   *
    * @var string
    */
   public $createTime;
   protected $dedicatedResourcesType = GoogleCloudAiplatformV1DedicatedResources::class;
   protected $dedicatedResourcesDataType = '';
   /**
+   * For custom-trained Models and AutoML Tabular Models, the container of the
+   * DeployedModel instances will send `stderr` and `stdout` streams to Cloud
+   * Logging by default. Please note that the logs incur cost, which are subject
+   * to [Cloud Logging pricing](https://cloud.google.com/logging/pricing). User
+   * can disable container logging by setting this flag to true.
+   *
    * @var bool
    */
   public $disableContainerLogging;
   /**
+   * If true, deploy the model without explainable feature, regardless the
+   * existence of Model.explanation_spec or explanation_spec.
+   *
    * @var bool
    */
   public $disableExplanations;
   /**
+   * The display name of the DeployedModel. If not provided upon creation, the
+   * Model's display_name is used.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * If true, online prediction access logs are sent to Cloud Logging. These
+   * logs are like standard server access logs, containing information like
+   * timestamp and latency for each prediction request. Note that logs may incur
+   * a cost, especially if your project receives prediction requests at a high
+   * queries per second rate (QPS). Estimate your costs before enabling this
+   * option.
+   *
    * @var bool
    */
   public $enableAccessLogging;
@@ -52,28 +75,55 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   protected $fasterDeploymentConfigType = GoogleCloudAiplatformV1FasterDeploymentConfig::class;
   protected $fasterDeploymentConfigDataType = '';
   /**
+   * GDC pretrained / Gemini model name. The model name is a plain model name,
+   * e.g. gemini-1.5-flash-002.
+   *
    * @var string
    */
   public $gdcConnectedModel;
   /**
+   * Immutable. The ID of the DeployedModel. If not provided upon deployment,
+   * Vertex AI will generate a value for this ID. This value should be 1-10
+   * characters, and valid characters are `/[0-9]/`.
+   *
    * @var string
    */
   public $id;
   /**
+   * The resource name of the Model that this is the deployment of. Note that
+   * the Model may be in a different location than the DeployedModel's Endpoint.
+   * The resource name may contain version id or version alias to specify the
+   * version. Example:
+   * `projects/{project}/locations/{location}/models/{model}@2` or
+   * `projects/{project}/locations/{location}/models/{model}@golden` if no
+   * version is specified, the default version will be deployed.
+   *
    * @var string
    */
   public $model;
   /**
+   * Output only. The version ID of the model that is deployed.
+   *
    * @var string
    */
   public $modelVersionId;
   protected $privateEndpointsType = GoogleCloudAiplatformV1PrivateEndpoints::class;
   protected $privateEndpointsDataType = '';
   /**
+   * The service account that the DeployedModel's container runs as. Specify the
+   * email address of the service account. If this service account is not
+   * specified, the container runs as a service account that doesn't have access
+   * to the resource project. Users deploying the Model must have the
+   * `iam.serviceAccounts.actAs` permission on this service account.
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * The resource name of the shared DeploymentResourcePool to deploy on.
+   * Format: `projects/{project}/locations/{location}/deploymentResourcePools/{d
+   * eployment_resource_pool}`
+   *
    * @var string
    */
   public $sharedResources;
@@ -82,12 +132,18 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   protected $statusType = GoogleCloudAiplatformV1DeployedModelStatus::class;
   protected $statusDataType = '';
   /**
+   * System labels to apply to Model Garden deployments. System labels are
+   * managed by Google for internal use only.
+   *
    * @var string[]
    */
   public $systemLabels;
 
   /**
-   * @param GoogleCloudAiplatformV1AutomaticResources
+   * A description of resources that to large degree are decided by Vertex AI,
+   * and require only a modest additional configuration.
+   *
+   * @param GoogleCloudAiplatformV1AutomaticResources $automaticResources
    */
   public function setAutomaticResources(GoogleCloudAiplatformV1AutomaticResources $automaticResources)
   {
@@ -101,7 +157,9 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->automaticResources;
   }
   /**
-   * @param string
+   * The checkpoint id of the model.
+   *
+   * @param string $checkpointId
    */
   public function setCheckpointId($checkpointId)
   {
@@ -115,7 +173,9 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->checkpointId;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the DeployedModel was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -129,7 +189,10 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1DedicatedResources
+   * A description of resources that are dedicated to the DeployedModel, and
+   * that need a higher degree of manual configuration.
+   *
+   * @param GoogleCloudAiplatformV1DedicatedResources $dedicatedResources
    */
   public function setDedicatedResources(GoogleCloudAiplatformV1DedicatedResources $dedicatedResources)
   {
@@ -143,7 +206,13 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->dedicatedResources;
   }
   /**
-   * @param bool
+   * For custom-trained Models and AutoML Tabular Models, the container of the
+   * DeployedModel instances will send `stderr` and `stdout` streams to Cloud
+   * Logging by default. Please note that the logs incur cost, which are subject
+   * to [Cloud Logging pricing](https://cloud.google.com/logging/pricing). User
+   * can disable container logging by setting this flag to true.
+   *
+   * @param bool $disableContainerLogging
    */
   public function setDisableContainerLogging($disableContainerLogging)
   {
@@ -157,7 +226,10 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->disableContainerLogging;
   }
   /**
-   * @param bool
+   * If true, deploy the model without explainable feature, regardless the
+   * existence of Model.explanation_spec or explanation_spec.
+   *
+   * @param bool $disableExplanations
    */
   public function setDisableExplanations($disableExplanations)
   {
@@ -171,7 +243,10 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->disableExplanations;
   }
   /**
-   * @param string
+   * The display name of the DeployedModel. If not provided upon creation, the
+   * Model's display_name is used.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -185,7 +260,14 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * If true, online prediction access logs are sent to Cloud Logging. These
+   * logs are like standard server access logs, containing information like
+   * timestamp and latency for each prediction request. Note that logs may incur
+   * a cost, especially if your project receives prediction requests at a high
+   * queries per second rate (QPS). Estimate your costs before enabling this
+   * option.
+   *
+   * @param bool $enableAccessLogging
    */
   public function setEnableAccessLogging($enableAccessLogging)
   {
@@ -199,7 +281,15 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->enableAccessLogging;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExplanationSpec
+   * Explanation configuration for this DeployedModel. When deploying a Model
+   * using EndpointService.DeployModel, this value overrides the value of
+   * Model.explanation_spec. All fields of explanation_spec are optional in the
+   * request. If a field of explanation_spec is not populated, the value of the
+   * same field of Model.explanation_spec is inherited. If the corresponding
+   * Model.explanation_spec is not populated, all fields of the explanation_spec
+   * will be used for the explanation configuration.
+   *
+   * @param GoogleCloudAiplatformV1ExplanationSpec $explanationSpec
    */
   public function setExplanationSpec(GoogleCloudAiplatformV1ExplanationSpec $explanationSpec)
   {
@@ -213,7 +303,9 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->explanationSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1FasterDeploymentConfig
+   * Configuration for faster model deployment.
+   *
+   * @param GoogleCloudAiplatformV1FasterDeploymentConfig $fasterDeploymentConfig
    */
   public function setFasterDeploymentConfig(GoogleCloudAiplatformV1FasterDeploymentConfig $fasterDeploymentConfig)
   {
@@ -227,7 +319,10 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->fasterDeploymentConfig;
   }
   /**
-   * @param string
+   * GDC pretrained / Gemini model name. The model name is a plain model name,
+   * e.g. gemini-1.5-flash-002.
+   *
+   * @param string $gdcConnectedModel
    */
   public function setGdcConnectedModel($gdcConnectedModel)
   {
@@ -241,7 +336,11 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->gdcConnectedModel;
   }
   /**
-   * @param string
+   * Immutable. The ID of the DeployedModel. If not provided upon deployment,
+   * Vertex AI will generate a value for this ID. This value should be 1-10
+   * characters, and valid characters are `/[0-9]/`.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -255,7 +354,15 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The resource name of the Model that this is the deployment of. Note that
+   * the Model may be in a different location than the DeployedModel's Endpoint.
+   * The resource name may contain version id or version alias to specify the
+   * version. Example:
+   * `projects/{project}/locations/{location}/models/{model}@2` or
+   * `projects/{project}/locations/{location}/models/{model}@golden` if no
+   * version is specified, the default version will be deployed.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -269,7 +376,9 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->model;
   }
   /**
-   * @param string
+   * Output only. The version ID of the model that is deployed.
+   *
+   * @param string $modelVersionId
    */
   public function setModelVersionId($modelVersionId)
   {
@@ -283,7 +392,11 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->modelVersionId;
   }
   /**
-   * @param GoogleCloudAiplatformV1PrivateEndpoints
+   * Output only. Provide paths for users to send predict/explain/health
+   * requests directly to the deployed model services running on Cloud via
+   * private services access. This field is populated if network is configured.
+   *
+   * @param GoogleCloudAiplatformV1PrivateEndpoints $privateEndpoints
    */
   public function setPrivateEndpoints(GoogleCloudAiplatformV1PrivateEndpoints $privateEndpoints)
   {
@@ -297,7 +410,13 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->privateEndpoints;
   }
   /**
-   * @param string
+   * The service account that the DeployedModel's container runs as. Specify the
+   * email address of the service account. If this service account is not
+   * specified, the container runs as a service account that doesn't have access
+   * to the resource project. Users deploying the Model must have the
+   * `iam.serviceAccounts.actAs` permission on this service account.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -311,7 +430,11 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * The resource name of the shared DeploymentResourcePool to deploy on.
+   * Format: `projects/{project}/locations/{location}/deploymentResourcePools/{d
+   * eployment_resource_pool}`
+   *
+   * @param string $sharedResources
    */
   public function setSharedResources($sharedResources)
   {
@@ -325,7 +448,9 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->sharedResources;
   }
   /**
-   * @param GoogleCloudAiplatformV1SpeculativeDecodingSpec
+   * Optional. Spec for configuring speculative decoding.
+   *
+   * @param GoogleCloudAiplatformV1SpeculativeDecodingSpec $speculativeDecodingSpec
    */
   public function setSpeculativeDecodingSpec(GoogleCloudAiplatformV1SpeculativeDecodingSpec $speculativeDecodingSpec)
   {
@@ -339,7 +464,9 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->speculativeDecodingSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1DeployedModelStatus
+   * Output only. Runtime status of the deployed model.
+   *
+   * @param GoogleCloudAiplatformV1DeployedModelStatus $status
    */
   public function setStatus(GoogleCloudAiplatformV1DeployedModelStatus $status)
   {
@@ -353,7 +480,10 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string[]
+   * System labels to apply to Model Garden deployments. System labels are
+   * managed by Google for internal use only.
+   *
+   * @param string[] $systemLabels
    */
   public function setSystemLabels($systemLabels)
   {

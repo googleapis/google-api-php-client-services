@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DirectRawPredictRequest extends \Google\Model
 {
   /**
+   * The prediction input.
+   *
    * @var string
    */
   public $input;
   /**
+   * Fully qualified name of the API method being invoked to perform
+   * predictions. Format: `/namespace.Service/Method/` Example:
+   * `/tensorflow.serving.PredictionService/Predict`
+   *
    * @var string
    */
   public $methodName;
 
   /**
-   * @param string
+   * The prediction input.
+   *
+   * @param string $input
    */
   public function setInput($input)
   {
@@ -43,7 +51,11 @@ class GoogleCloudAiplatformV1DirectRawPredictRequest extends \Google\Model
     return $this->input;
   }
   /**
-   * @param string
+   * Fully qualified name of the API method being invoked to perform
+   * predictions. Format: `/namespace.Service/Method/` Example:
+   * `/tensorflow.serving.PredictionService/Predict`
+   *
+   * @param string $methodName
    */
   public function setMethodName($methodName)
   {

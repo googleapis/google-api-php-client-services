@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DirectRawPredictResponse extends \Google\Model
 {
   /**
+   * The prediction output.
+   *
    * @var string
    */
   public $output;
 
   /**
-   * @param string
+   * The prediction output.
+   *
+   * @param string $output
    */
   public function setOutput($output)
   {

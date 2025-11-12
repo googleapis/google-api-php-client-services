@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DiskSpec extends \Google\Model
 {
   /**
+   * Size in GB of the boot disk (default is 100GB).
+   *
    * @var int
    */
   public $bootDiskSizeGb;
   /**
+   * Type of the boot disk. For non-A3U machines, the default value is "pd-ssd",
+   * for A3U machines, the default value is "hyperdisk-balanced". Valid values:
+   * "pd-ssd" (Persistent Disk Solid State Drive), "pd-standard" (Persistent
+   * Disk Hard Disk Drive) or "hyperdisk-balanced".
+   *
    * @var string
    */
   public $bootDiskType;
 
   /**
-   * @param int
+   * Size in GB of the boot disk (default is 100GB).
+   *
+   * @param int $bootDiskSizeGb
    */
   public function setBootDiskSizeGb($bootDiskSizeGb)
   {
@@ -43,7 +52,12 @@ class GoogleCloudAiplatformV1DiskSpec extends \Google\Model
     return $this->bootDiskSizeGb;
   }
   /**
-   * @param string
+   * Type of the boot disk. For non-A3U machines, the default value is "pd-ssd",
+   * for A3U machines, the default value is "hyperdisk-balanced". Valid values:
+   * "pd-ssd" (Persistent Disk Solid State Drive), "pd-standard" (Persistent
+   * Disk Hard Disk Drive) or "hyperdisk-balanced".
+   *
+   * @param string $bootDiskType
    */
   public function setBootDiskType($bootDiskType)
   {

@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1DeployModelResponse extends \Google\Model
   protected $deployedModelDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1DeployedModel
+   * The DeployedModel that had been deployed in the Endpoint.
+   *
+   * @param GoogleCloudAiplatformV1DeployedModel $deployedModel
    */
   public function setDeployedModel(GoogleCloudAiplatformV1DeployedModel $deployedModel)
   {

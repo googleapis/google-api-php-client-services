@@ -20,16 +20,39 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1CorpusStatus extends \Google\Model
 {
   /**
+   * This state is not supposed to happen.
+   */
+  public const STATE_UNKNOWN = 'UNKNOWN';
+  /**
+   * RagCorpus resource entry is initialized, but hasn't done validation.
+   */
+  public const STATE_INITIALIZED = 'INITIALIZED';
+  /**
+   * RagCorpus is provisioned successfully and is ready to serve.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * RagCorpus is in a problematic situation. See `error_message` field for
+   * details.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * Output only. Only when the `state` field is ERROR.
+   *
    * @var string
    */
   public $errorStatus;
   /**
+   * Output only. RagCorpus life state.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. Only when the `state` field is ERROR.
+   *
+   * @param string $errorStatus
    */
   public function setErrorStatus($errorStatus)
   {
@@ -43,14 +66,18 @@ class GoogleCloudAiplatformV1CorpusStatus extends \Google\Model
     return $this->errorStatus;
   }
   /**
-   * @param string
+   * Output only. RagCorpus life state.
+   *
+   * Accepted values: UNKNOWN, INITIALIZED, ACTIVE, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

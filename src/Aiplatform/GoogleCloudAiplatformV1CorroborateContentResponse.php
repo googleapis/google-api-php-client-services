@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1CorroborateContentResponse extends \Google\Collecti
   protected $claimsType = GoogleCloudAiplatformV1Claim::class;
   protected $claimsDataType = 'array';
   /**
+   * Confidence score of corroborating content. Value is [0,1] with 1 is the
+   * most confidence.
+   *
    * @var float
    */
   public $corroborationScore;
 
   /**
-   * @param GoogleCloudAiplatformV1Claim[]
+   * Claims that are extracted from the input content and facts that support the
+   * claims.
+   *
+   * @param GoogleCloudAiplatformV1Claim[] $claims
    */
   public function setClaims($claims)
   {
@@ -42,7 +48,10 @@ class GoogleCloudAiplatformV1CorroborateContentResponse extends \Google\Collecti
     return $this->claims;
   }
   /**
-   * @param float
+   * Confidence score of corroborating content. Value is [0,1] with 1 is the
+   * most confidence.
+   *
+   * @param float $corroborationScore
    */
   public function setCorroborationScore($corroborationScore)
   {

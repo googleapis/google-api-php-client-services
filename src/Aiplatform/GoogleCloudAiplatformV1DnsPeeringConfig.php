@@ -20,20 +20,33 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DnsPeeringConfig extends \Google\Model
 {
   /**
+   * Required. The DNS name suffix of the zone being peered to, e.g., "my-
+   * internal-domain.corp.". Must end with a dot.
+   *
    * @var string
    */
   public $domain;
   /**
+   * Required. The VPC network name in the target_project where the DNS zone
+   * specified by 'domain' is visible.
+   *
    * @var string
    */
   public $targetNetwork;
   /**
+   * Required. The project ID hosting the Cloud DNS managed zone that contains
+   * the 'domain'. The Vertex AI Service Agent requires the dns.peer role on
+   * this project.
+   *
    * @var string
    */
   public $targetProject;
 
   /**
-   * @param string
+   * Required. The DNS name suffix of the zone being peered to, e.g., "my-
+   * internal-domain.corp.". Must end with a dot.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -47,7 +60,10 @@ class GoogleCloudAiplatformV1DnsPeeringConfig extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * Required. The VPC network name in the target_project where the DNS zone
+   * specified by 'domain' is visible.
+   *
+   * @param string $targetNetwork
    */
   public function setTargetNetwork($targetNetwork)
   {
@@ -61,7 +77,11 @@ class GoogleCloudAiplatformV1DnsPeeringConfig extends \Google\Model
     return $this->targetNetwork;
   }
   /**
-   * @param string
+   * Required. The project ID hosting the Cloud DNS managed zone that contains
+   * the 'domain'. The Vertex AI Service Agent requires the dns.peer role on
+   * this project.
+   *
+   * @param string $targetProject
    */
   public function setTargetProject($targetProject)
   {

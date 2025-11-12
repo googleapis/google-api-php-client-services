@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DeployedModelStatus extends \Google\Model
 {
   /**
+   * Output only. The number of available replicas of the deployed model.
+   *
    * @var int
    */
   public $availableReplicaCount;
   /**
+   * Output only. The time at which the status was last updated.
+   *
    * @var string
    */
   public $lastUpdateTime;
   /**
+   * Output only. The latest deployed model's status message (if any).
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param int
+   * Output only. The number of available replicas of the deployed model.
+   *
+   * @param int $availableReplicaCount
    */
   public function setAvailableReplicaCount($availableReplicaCount)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1DeployedModelStatus extends \Google\Model
     return $this->availableReplicaCount;
   }
   /**
-   * @param string
+   * Output only. The time at which the status was last updated.
+   *
+   * @param string $lastUpdateTime
    */
   public function setLastUpdateTime($lastUpdateTime)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1DeployedModelStatus extends \Google\Model
     return $this->lastUpdateTime;
   }
   /**
-   * @param string
+   * Output only. The latest deployed model's status message (if any).
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

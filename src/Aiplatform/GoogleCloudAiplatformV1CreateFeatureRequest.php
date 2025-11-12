@@ -22,16 +22,30 @@ class GoogleCloudAiplatformV1CreateFeatureRequest extends \Google\Model
   protected $featureType = GoogleCloudAiplatformV1Feature::class;
   protected $featureDataType = '';
   /**
+   * Required. The ID to use for the Feature, which will become the final
+   * component of the Feature's resource name. This value may be up to 128
+   * characters, and valid characters are `[a-z0-9_]`. The first character
+   * cannot be a number. The value must be unique within an
+   * EntityType/FeatureGroup.
+   *
    * @var string
    */
   public $featureId;
   /**
+   * Required. The resource name of the EntityType or FeatureGroup to create a
+   * Feature. Format for entity_type as parent: `projects/{project}/locations/{l
+   * ocation}/featurestores/{featurestore}/entityTypes/{entity_type}` Format for
+   * feature_group as parent:
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param GoogleCloudAiplatformV1Feature
+   * Required. The Feature to create.
+   *
+   * @param GoogleCloudAiplatformV1Feature $feature
    */
   public function setFeature(GoogleCloudAiplatformV1Feature $feature)
   {
@@ -45,7 +59,13 @@ class GoogleCloudAiplatformV1CreateFeatureRequest extends \Google\Model
     return $this->feature;
   }
   /**
-   * @param string
+   * Required. The ID to use for the Feature, which will become the final
+   * component of the Feature's resource name. This value may be up to 128
+   * characters, and valid characters are `[a-z0-9_]`. The first character
+   * cannot be a number. The value must be unique within an
+   * EntityType/FeatureGroup.
+   *
+   * @param string $featureId
    */
   public function setFeatureId($featureId)
   {
@@ -59,7 +79,13 @@ class GoogleCloudAiplatformV1CreateFeatureRequest extends \Google\Model
     return $this->featureId;
   }
   /**
-   * @param string
+   * Required. The resource name of the EntityType or FeatureGroup to create a
+   * Feature. Format for entity_type as parent: `projects/{project}/locations/{l
+   * ocation}/featurestores/{featurestore}/entityTypes/{entity_type}` Format for
+   * feature_group as parent:
+   * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {

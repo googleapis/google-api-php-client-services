@@ -20,18 +20,29 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1CreatePipelineJobRequest extends \Google\Model
 {
   /**
+   * Required. The resource name of the Location to create the PipelineJob in.
+   * Format: `projects/{project}/locations/{location}`
+   *
    * @var string
    */
   public $parent;
   protected $pipelineJobType = GoogleCloudAiplatformV1PipelineJob::class;
   protected $pipelineJobDataType = '';
   /**
+   * The ID to use for the PipelineJob, which will become the final component of
+   * the PipelineJob name. If not provided, an ID will be automatically
+   * generated. This value should be less than 128 characters, and valid
+   * characters are `/a-z-/`.
+   *
    * @var string
    */
   public $pipelineJobId;
 
   /**
-   * @param string
+   * Required. The resource name of the Location to create the PipelineJob in.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -45,7 +56,9 @@ class GoogleCloudAiplatformV1CreatePipelineJobRequest extends \Google\Model
     return $this->parent;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineJob
+   * Required. The PipelineJob to create.
+   *
+   * @param GoogleCloudAiplatformV1PipelineJob $pipelineJob
    */
   public function setPipelineJob(GoogleCloudAiplatformV1PipelineJob $pipelineJob)
   {
@@ -59,7 +72,12 @@ class GoogleCloudAiplatformV1CreatePipelineJobRequest extends \Google\Model
     return $this->pipelineJob;
   }
   /**
-   * @param string
+   * The ID to use for the PipelineJob, which will become the final component of
+   * the PipelineJob name. If not provided, an ID will be automatically
+   * generated. This value should be less than 128 characters, and valid
+   * characters are `/a-z-/`.
+   *
+   * @param string $pipelineJobId
    */
   public function setPipelineJobId($pipelineJobId)
   {

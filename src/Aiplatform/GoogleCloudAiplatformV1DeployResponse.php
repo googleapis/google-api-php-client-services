@@ -20,20 +20,33 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DeployResponse extends \Google\Model
 {
   /**
+   * Output only. The name of the Endpoint created. Format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   *
    * @var string
    */
   public $endpoint;
   /**
+   * Output only. The name of the Model created. Format:
+   * `projects/{project}/locations/{location}/models/{model}`
+   *
    * @var string
    */
   public $model;
   /**
+   * Output only. The name of the PublisherModel resource. Format:
+   * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or
+   * `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}@001`
+   *
    * @var string
    */
   public $publisherModel;
 
   /**
-   * @param string
+   * Output only. The name of the Endpoint created. Format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   *
+   * @param string $endpoint
    */
   public function setEndpoint($endpoint)
   {
@@ -47,7 +60,10 @@ class GoogleCloudAiplatformV1DeployResponse extends \Google\Model
     return $this->endpoint;
   }
   /**
-   * @param string
+   * Output only. The name of the Model created. Format:
+   * `projects/{project}/locations/{location}/models/{model}`
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -61,7 +77,11 @@ class GoogleCloudAiplatformV1DeployResponse extends \Google\Model
     return $this->model;
   }
   /**
-   * @param string
+   * Output only. The name of the PublisherModel resource. Format:
+   * `publishers/{publisher}/models/{publisher_model}@{version_id}`, or
+   * `publishers/hf-{hugging-face-author}/models/{hugging-face-model-name}@001`
+   *
+   * @param string $publisherModel
    */
   public function setPublisherModel($publisherModel)
   {

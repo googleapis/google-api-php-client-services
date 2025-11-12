@@ -20,26 +20,38 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DeployOperationMetadata extends \Google\Model
 {
   /**
+   * Output only. The resource name of the Location to deploy the model in.
+   * Format: `projects/{project}/locations/{location}`
+   *
    * @var string
    */
   public $destination;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
   /**
+   * Output only. The model id to be used at query time.
+   *
    * @var string
    */
   public $modelId;
   /**
+   * Output only. The project number where the deploy model request is sent.
+   *
    * @var string
    */
   public $projectNumber;
   /**
+   * Output only. The name of the model resource.
+   *
    * @var string
    */
   public $publisherModel;
 
   /**
-   * @param string
+   * Output only. The resource name of the Location to deploy the model in.
+   * Format: `projects/{project}/locations/{location}`
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -53,7 +65,9 @@ class GoogleCloudAiplatformV1DeployOperationMetadata extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * The operation generic information.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {
@@ -67,7 +81,9 @@ class GoogleCloudAiplatformV1DeployOperationMetadata extends \Google\Model
     return $this->genericMetadata;
   }
   /**
-   * @param string
+   * Output only. The model id to be used at query time.
+   *
+   * @param string $modelId
    */
   public function setModelId($modelId)
   {
@@ -81,7 +97,9 @@ class GoogleCloudAiplatformV1DeployOperationMetadata extends \Google\Model
     return $this->modelId;
   }
   /**
-   * @param string
+   * Output only. The project number where the deploy model request is sent.
+   *
+   * @param string $projectNumber
    */
   public function setProjectNumber($projectNumber)
   {
@@ -95,7 +113,9 @@ class GoogleCloudAiplatformV1DeployOperationMetadata extends \Google\Model
     return $this->projectNumber;
   }
   /**
-   * @param string
+   * Output only. The name of the model resource.
+   *
+   * @param string $publisherModel
    */
   public function setPublisherModel($publisherModel)
   {

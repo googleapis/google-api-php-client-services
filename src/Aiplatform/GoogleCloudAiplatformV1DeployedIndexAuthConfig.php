@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1DeployedIndexAuthConfig extends \Google\Model
   protected $authProviderDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1DeployedIndexAuthConfigAuthProvider
+   * Defines the authentication provider that the DeployedIndex uses.
+   *
+   * @param GoogleCloudAiplatformV1DeployedIndexAuthConfigAuthProvider $authProvider
    */
   public function setAuthProvider(GoogleCloudAiplatformV1DeployedIndexAuthConfigAuthProvider $authProvider)
   {

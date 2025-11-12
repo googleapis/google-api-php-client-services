@@ -20,48 +20,75 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
 {
   /**
+   * Output only. Name of the associated BigQuery dataset.
+   *
    * @var string
    */
   public $bigQueryDatasetName;
   /**
+   * Output only. Timestamp when this DatasetVersion was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The user-defined name of the DatasetVersion. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Used to perform consistent read-modify-write updates. If not set, a blind
+   * "overwrite" update happens.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Required. Output only. Additional information about the DatasetVersion.
+   *
    * @var array
    */
   public $metadata;
   /**
+   * Output only. Reference to the public base model last used by the dataset
+   * version. Only set for prompt dataset versions.
+   *
    * @var string
    */
   public $modelReference;
   /**
+   * Output only. Identifier. The resource name of the DatasetVersion. Format: `
+   * projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/
+   * {dataset_version}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Output only. Timestamp when this DatasetVersion was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Name of the associated BigQuery dataset.
+   *
+   * @param string $bigQueryDatasetName
    */
   public function setBigQueryDatasetName($bigQueryDatasetName)
   {
@@ -75,7 +102,9 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->bigQueryDatasetName;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this DatasetVersion was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -89,7 +118,10 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The user-defined name of the DatasetVersion. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -103,7 +135,10 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Used to perform consistent read-modify-write updates. If not set, a blind
+   * "overwrite" update happens.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -117,7 +152,9 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param array
+   * Required. Output only. Additional information about the DatasetVersion.
+   *
+   * @param array $metadata
    */
   public function setMetadata($metadata)
   {
@@ -131,7 +168,10 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * Output only. Reference to the public base model last used by the dataset
+   * version. Only set for prompt dataset versions.
+   *
+   * @param string $modelReference
    */
   public function setModelReference($modelReference)
   {
@@ -145,7 +185,11 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->modelReference;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of the DatasetVersion. Format: `
+   * projects/{project}/locations/{location}/datasets/{dataset}/datasetVersions/
+   * {dataset_version}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -159,7 +203,9 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -173,7 +219,9 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -187,7 +235,9 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this DatasetVersion was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

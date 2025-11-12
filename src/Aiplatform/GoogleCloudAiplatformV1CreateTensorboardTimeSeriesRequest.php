@@ -20,18 +20,31 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest extends \Google\Model
 {
   /**
+   * Required. The resource name of the TensorboardRun to create the
+   * TensorboardTimeSeries in. Format: `projects/{project}/locations/{location}/
+   * tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
+   *
    * @var string
    */
   public $parent;
   protected $tensorboardTimeSeriesType = GoogleCloudAiplatformV1TensorboardTimeSeries::class;
   protected $tensorboardTimeSeriesDataType = '';
   /**
+   * Optional. The user specified unique ID to use for the
+   * TensorboardTimeSeries, which becomes the final component of the
+   * TensorboardTimeSeries's resource name. This value should match "a-z0-9{0,
+   * 127}"
+   *
    * @var string
    */
   public $tensorboardTimeSeriesId;
 
   /**
-   * @param string
+   * Required. The resource name of the TensorboardRun to create the
+   * TensorboardTimeSeries in. Format: `projects/{project}/locations/{location}/
+   * tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}`
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -45,7 +58,9 @@ class GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest extends \Google\
     return $this->parent;
   }
   /**
-   * @param GoogleCloudAiplatformV1TensorboardTimeSeries
+   * Required. The TensorboardTimeSeries to create.
+   *
+   * @param GoogleCloudAiplatformV1TensorboardTimeSeries $tensorboardTimeSeries
    */
   public function setTensorboardTimeSeries(GoogleCloudAiplatformV1TensorboardTimeSeries $tensorboardTimeSeries)
   {
@@ -59,7 +74,12 @@ class GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest extends \Google\
     return $this->tensorboardTimeSeries;
   }
   /**
-   * @param string
+   * Optional. The user specified unique ID to use for the
+   * TensorboardTimeSeries, which becomes the final component of the
+   * TensorboardTimeSeries's resource name. This value should match "a-z0-9{0,
+   * 127}"
+   *
+   * @param string $tensorboardTimeSeriesId
    */
   public function setTensorboardTimeSeriesId($tensorboardTimeSeriesId)
   {

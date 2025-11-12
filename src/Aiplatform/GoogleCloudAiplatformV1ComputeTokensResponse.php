@@ -24,7 +24,11 @@ class GoogleCloudAiplatformV1ComputeTokensResponse extends \Google\Collection
   protected $tokensInfoDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TokensInfo[]
+   * Lists of tokens info from the input. A ComputeTokensRequest could have
+   * multiple instances with a prompt in each instance. We also need to return
+   * lists of tokens info for the request with multiple instances.
+   *
+   * @param GoogleCloudAiplatformV1TokensInfo[] $tokensInfo
    */
   public function setTokensInfo($tokensInfo)
   {

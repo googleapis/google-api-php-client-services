@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1DeployIndexRequest extends \Google\Model
   protected $deployedIndexDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1DeployedIndex
+   * Required. The DeployedIndex to be created within the IndexEndpoint.
+   *
+   * @param GoogleCloudAiplatformV1DeployedIndex $deployedIndex
    */
   public function setDeployedIndex(GoogleCloudAiplatformV1DeployedIndex $deployedIndex)
   {

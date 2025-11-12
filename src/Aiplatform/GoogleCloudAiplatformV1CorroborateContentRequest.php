@@ -28,7 +28,10 @@ class GoogleCloudAiplatformV1CorroborateContentRequest extends \Google\Collectio
   protected $parametersDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1Content
+   * Optional. Input content to corroborate, only text format is supported for
+   * now.
+   *
+   * @param GoogleCloudAiplatformV1Content $content
    */
   public function setContent(GoogleCloudAiplatformV1Content $content)
   {
@@ -42,7 +45,10 @@ class GoogleCloudAiplatformV1CorroborateContentRequest extends \Google\Collectio
     return $this->content;
   }
   /**
-   * @param GoogleCloudAiplatformV1Fact[]
+   * Optional. Facts used to generate the text can also be used to corroborate
+   * the text.
+   *
+   * @param GoogleCloudAiplatformV1Fact[] $facts
    */
   public function setFacts($facts)
   {
@@ -56,7 +62,10 @@ class GoogleCloudAiplatformV1CorroborateContentRequest extends \Google\Collectio
     return $this->facts;
   }
   /**
-   * @param GoogleCloudAiplatformV1CorroborateContentRequestParameters
+   * Optional. Parameters that can be set to override default settings per
+   * request.
+   *
+   * @param GoogleCloudAiplatformV1CorroborateContentRequestParameters $parameters
    */
   public function setParameters(GoogleCloudAiplatformV1CorroborateContentRequestParameters $parameters)
   {

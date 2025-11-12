@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1ContentMapContents extends \Google\Collection
   protected $contentsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1Content[]
+   * Optional. Repeated contents.
+   *
+   * @param GoogleCloudAiplatformV1Content[] $contents
    */
   public function setContents($contents)
   {

@@ -19,10 +19,20 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
 {
+  /**
+   * Default deployment tier.
+   */
+  public const DEPLOYMENT_TIER_DEPLOYMENT_TIER_UNSPECIFIED = 'DEPLOYMENT_TIER_UNSPECIFIED';
+  /**
+   * Optimized for costs.
+   */
+  public const DEPLOYMENT_TIER_STORAGE = 'STORAGE';
   protected $collection_key = 'reservedIpRanges';
   protected $automaticResourcesType = GoogleCloudAiplatformV1AutomaticResources::class;
   protected $automaticResourcesDataType = '';
   /**
+   * Output only. Timestamp when the DeployedIndex was created.
+   *
    * @var string
    */
   public $createTime;
@@ -31,34 +41,86 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
   protected $deployedIndexAuthConfigType = GoogleCloudAiplatformV1DeployedIndexAuthConfig::class;
   protected $deployedIndexAuthConfigDataType = '';
   /**
+   * Optional. The deployment group can be no longer than 64 characters (eg:
+   * 'test', 'prod'). If not set, we will use the 'default' deployment group.
+   * Creating `deployment_groups` with `reserved_ip_ranges` is a recommended
+   * practice when the peered network has multiple peering ranges. This creates
+   * your deployments from predictable IP spaces for easier traffic
+   * administration. Also, one deployment_group (except 'default') can only be
+   * used with the same reserved_ip_ranges which means if the deployment_group
+   * has been used with reserved_ip_ranges: [a, b, c], using it with [a, b] or
+   * [d, e] is disallowed. Note: we only support up to 5 deployment groups(not
+   * including 'default').
+   *
    * @var string
    */
   public $deploymentGroup;
   /**
+   * Optional. The deployment tier that the index is deployed to.
+   * DEPLOYMENT_TIER_UNSPECIFIED will use a system-chosen default tier.
+   *
    * @var string
    */
   public $deploymentTier;
   /**
+   * The display name of the DeployedIndex. If not provided upon creation, the
+   * Index's display_name is used.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. If true, private endpoint's access logs are sent to Cloud
+   * Logging. These logs are like standard server access logs, containing
+   * information like timestamp and latency for each MatchRequest. Note that
+   * logs may incur a cost, especially if the deployed index receives a high
+   * queries per second rate (QPS). Estimate your costs before enabling this
+   * option.
+   *
    * @var bool
    */
   public $enableAccessLogging;
   /**
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint
+   * upserts. Under normal operation conditions, these log entries should be
+   * very rare. However, if incompatible datapoint updates are being uploaded to
+   * an index, a high volume of log entries may be generated in a short period
+   * of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before
+   * enabling this option.
+   *
    * @var bool
    */
   public $enableDatapointUpsertLogging;
   /**
+   * Required. The user specified ID of the DeployedIndex. The ID can be up to
+   * 128 characters long and must start with a letter and only contain letters,
+   * numbers, and underscores. The ID must be unique within the project it is
+   * created in.
+   *
    * @var string
    */
   public $id;
   /**
+   * Required. The name of the Index this is the deployment of. We may refer to
+   * this Index as the DeployedIndex's "original" Index.
+   *
    * @var string
    */
   public $index;
   /**
+   * Output only. The DeployedIndex may depend on various data on its original
+   * Index. Additionally when certain changes to the original Index are being
+   * done (e.g. when what the Index contains is being changed) the DeployedIndex
+   * may be asynchronously updated in the background to reflect these changes.
+   * If this timestamp's value is at least the Index.update_time of the original
+   * Index, it means that this DeployedIndex and the original Index are in sync.
+   * If this timestamp is older, then to see which updates this DeployedIndex
+   * already contains (and which it does not), one must list the operations that
+   * are running on the original Index. Only the successfully completed
+   * Operations with update_time equal or before this sync time are contained in
+   * this DeployedIndex.
+   *
    * @var string
    */
   public $indexSyncTime;
@@ -67,12 +129,28 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
   protected $pscAutomationConfigsType = GoogleCloudAiplatformV1PSCAutomationConfig::class;
   protected $pscAutomationConfigsDataType = 'array';
   /**
+   * Optional. A list of reserved ip ranges under the VPC network that can be
+   * used for this DeployedIndex. If set, we will deploy the index within the
+   * provided ip ranges. Otherwise, the index might be deployed to any ip ranges
+   * under the provided VPC network. The value should be the name of the address
+   * (https://cloud.google.com/compute/docs/reference/rest/v1/addresses)
+   * Example: ['vertex-ai-ip-range']. For more information about subnets and
+   * network IP ranges, please see https://cloud.google.com/vpc/docs/subnets#man
+   * ually_created_subnet_ip_ranges.
+   *
    * @var string[]
    */
   public $reservedIpRanges;
 
   /**
-   * @param GoogleCloudAiplatformV1AutomaticResources
+   * Optional. A description of resources that the DeployedIndex uses, which to
+   * large degree are decided by Vertex AI, and optionally allows only a modest
+   * additional configuration. If min_replica_count is not set, the default
+   * value is 2 (we don't provide SLA when min_replica_count=1). If
+   * max_replica_count is not set, the default value is min_replica_count. The
+   * max allowed replica count is 1000.
+   *
+   * @param GoogleCloudAiplatformV1AutomaticResources $automaticResources
    */
   public function setAutomaticResources(GoogleCloudAiplatformV1AutomaticResources $automaticResources)
   {
@@ -86,7 +164,9 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->automaticResources;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the DeployedIndex was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -100,7 +180,20 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1DedicatedResources
+   * Optional. A description of resources that are dedicated to the
+   * DeployedIndex, and that need a higher degree of manual configuration. The
+   * field min_replica_count must be set to a value strictly greater than 0, or
+   * else validation will fail. We don't provide SLA when min_replica_count=1.
+   * If max_replica_count is not set, the default value is min_replica_count.
+   * The max allowed replica count is 1000. Available machine types for SMALL
+   * shard: e2-standard-2 and all machine types available for MEDIUM and LARGE
+   * shard. Available machine types for MEDIUM shard: e2-standard-16 and all
+   * machine types available for LARGE shard. Available machine types for LARGE
+   * shard: e2-highmem-16, n2d-standard-32. n1-standard-16 and n1-standard-32
+   * are still available, but we recommend e2-standard-16 and e2-highmem-16 for
+   * cost efficiency.
+   *
+   * @param GoogleCloudAiplatformV1DedicatedResources $dedicatedResources
    */
   public function setDedicatedResources(GoogleCloudAiplatformV1DedicatedResources $dedicatedResources)
   {
@@ -114,7 +207,9 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->dedicatedResources;
   }
   /**
-   * @param GoogleCloudAiplatformV1DeployedIndexAuthConfig
+   * Optional. If set, the authentication is enabled for the private endpoint.
+   *
+   * @param GoogleCloudAiplatformV1DeployedIndexAuthConfig $deployedIndexAuthConfig
    */
   public function setDeployedIndexAuthConfig(GoogleCloudAiplatformV1DeployedIndexAuthConfig $deployedIndexAuthConfig)
   {
@@ -128,7 +223,18 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->deployedIndexAuthConfig;
   }
   /**
-   * @param string
+   * Optional. The deployment group can be no longer than 64 characters (eg:
+   * 'test', 'prod'). If not set, we will use the 'default' deployment group.
+   * Creating `deployment_groups` with `reserved_ip_ranges` is a recommended
+   * practice when the peered network has multiple peering ranges. This creates
+   * your deployments from predictable IP spaces for easier traffic
+   * administration. Also, one deployment_group (except 'default') can only be
+   * used with the same reserved_ip_ranges which means if the deployment_group
+   * has been used with reserved_ip_ranges: [a, b, c], using it with [a, b] or
+   * [d, e] is disallowed. Note: we only support up to 5 deployment groups(not
+   * including 'default').
+   *
+   * @param string $deploymentGroup
    */
   public function setDeploymentGroup($deploymentGroup)
   {
@@ -142,21 +248,29 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->deploymentGroup;
   }
   /**
-   * @param string
+   * Optional. The deployment tier that the index is deployed to.
+   * DEPLOYMENT_TIER_UNSPECIFIED will use a system-chosen default tier.
+   *
+   * Accepted values: DEPLOYMENT_TIER_UNSPECIFIED, STORAGE
+   *
+   * @param self::DEPLOYMENT_TIER_* $deploymentTier
    */
   public function setDeploymentTier($deploymentTier)
   {
     $this->deploymentTier = $deploymentTier;
   }
   /**
-   * @return string
+   * @return self::DEPLOYMENT_TIER_*
    */
   public function getDeploymentTier()
   {
     return $this->deploymentTier;
   }
   /**
-   * @param string
+   * The display name of the DeployedIndex. If not provided upon creation, the
+   * Index's display_name is used.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -170,7 +284,14 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Optional. If true, private endpoint's access logs are sent to Cloud
+   * Logging. These logs are like standard server access logs, containing
+   * information like timestamp and latency for each MatchRequest. Note that
+   * logs may incur a cost, especially if the deployed index receives a high
+   * queries per second rate (QPS). Estimate your costs before enabling this
+   * option.
+   *
+   * @param bool $enableAccessLogging
    */
   public function setEnableAccessLogging($enableAccessLogging)
   {
@@ -184,7 +305,15 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->enableAccessLogging;
   }
   /**
-   * @param bool
+   * Optional. If true, logs to Cloud Logging errors relating to datapoint
+   * upserts. Under normal operation conditions, these log entries should be
+   * very rare. However, if incompatible datapoint updates are being uploaded to
+   * an index, a high volume of log entries may be generated in a short period
+   * of time. Note that logs may incur a cost, especially if the deployed index
+   * receives a high volume of datapoint upserts. Estimate your costs before
+   * enabling this option.
+   *
+   * @param bool $enableDatapointUpsertLogging
    */
   public function setEnableDatapointUpsertLogging($enableDatapointUpsertLogging)
   {
@@ -198,7 +327,12 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->enableDatapointUpsertLogging;
   }
   /**
-   * @param string
+   * Required. The user specified ID of the DeployedIndex. The ID can be up to
+   * 128 characters long and must start with a letter and only contain letters,
+   * numbers, and underscores. The ID must be unique within the project it is
+   * created in.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -212,7 +346,10 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Required. The name of the Index this is the deployment of. We may refer to
+   * this Index as the DeployedIndex's "original" Index.
+   *
+   * @param string $index
    */
   public function setIndex($index)
   {
@@ -226,7 +363,19 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->index;
   }
   /**
-   * @param string
+   * Output only. The DeployedIndex may depend on various data on its original
+   * Index. Additionally when certain changes to the original Index are being
+   * done (e.g. when what the Index contains is being changed) the DeployedIndex
+   * may be asynchronously updated in the background to reflect these changes.
+   * If this timestamp's value is at least the Index.update_time of the original
+   * Index, it means that this DeployedIndex and the original Index are in sync.
+   * If this timestamp is older, then to see which updates this DeployedIndex
+   * already contains (and which it does not), one must list the operations that
+   * are running on the original Index. Only the successfully completed
+   * Operations with update_time equal or before this sync time are contained in
+   * this DeployedIndex.
+   *
+   * @param string $indexSyncTime
    */
   public function setIndexSyncTime($indexSyncTime)
   {
@@ -240,7 +389,11 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->indexSyncTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1IndexPrivateEndpoints
+   * Output only. Provides paths for users to send requests directly to the
+   * deployed index services running on Cloud via private services access. This
+   * field is populated if network is configured.
+   *
+   * @param GoogleCloudAiplatformV1IndexPrivateEndpoints $privateEndpoints
    */
   public function setPrivateEndpoints(GoogleCloudAiplatformV1IndexPrivateEndpoints $privateEndpoints)
   {
@@ -254,7 +407,11 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->privateEndpoints;
   }
   /**
-   * @param GoogleCloudAiplatformV1PSCAutomationConfig[]
+   * Optional. If set for PSC deployed index, PSC connection will be
+   * automatically created after deployment is done and the endpoint information
+   * is populated in private_endpoints.psc_automated_endpoints.
+   *
+   * @param GoogleCloudAiplatformV1PSCAutomationConfig[] $pscAutomationConfigs
    */
   public function setPscAutomationConfigs($pscAutomationConfigs)
   {
@@ -268,7 +425,16 @@ class GoogleCloudAiplatformV1DeployedIndex extends \Google\Collection
     return $this->pscAutomationConfigs;
   }
   /**
-   * @param string[]
+   * Optional. A list of reserved ip ranges under the VPC network that can be
+   * used for this DeployedIndex. If set, we will deploy the index within the
+   * provided ip ranges. Otherwise, the index might be deployed to any ip ranges
+   * under the provided VPC network. The value should be the name of the address
+   * (https://cloud.google.com/compute/docs/reference/rest/v1/addresses)
+   * Example: ['vertex-ai-ip-range']. For more information about subnets and
+   * network IP ranges, please see https://cloud.google.com/vpc/docs/subnets#man
+   * ually_created_subnet_ip_ranges.
+   *
+   * @param string[] $reservedIpRanges
    */
   public function setReservedIpRanges($reservedIpRanges)
   {

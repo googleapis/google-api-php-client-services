@@ -21,22 +21,32 @@ class GoogleCloudAiplatformV1ContainerSpec extends \Google\Collection
 {
   protected $collection_key = 'env';
   /**
+   * The arguments to be passed when starting the container.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * The command to be invoked when the container is started. It overrides the
+   * entrypoint instruction in Dockerfile when provided.
+   *
    * @var string[]
    */
   public $command;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
   /**
+   * Required. The URI of a container image in the Container Registry that is to
+   * be run on each worker replica.
+   *
    * @var string
    */
   public $imageUri;
 
   /**
-   * @param string[]
+   * The arguments to be passed when starting the container.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -50,7 +60,10 @@ class GoogleCloudAiplatformV1ContainerSpec extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param string[]
+   * The command to be invoked when the container is started. It overrides the
+   * entrypoint instruction in Dockerfile when provided.
+   *
+   * @param string[] $command
    */
   public function setCommand($command)
   {
@@ -64,7 +77,9 @@ class GoogleCloudAiplatformV1ContainerSpec extends \Google\Collection
     return $this->command;
   }
   /**
-   * @param GoogleCloudAiplatformV1EnvVar[]
+   * Environment variables to be passed to the container. Maximum limit is 100.
+   *
+   * @param GoogleCloudAiplatformV1EnvVar[] $env
    */
   public function setEnv($env)
   {
@@ -78,7 +93,10 @@ class GoogleCloudAiplatformV1ContainerSpec extends \Google\Collection
     return $this->env;
   }
   /**
-   * @param string
+   * Required. The URI of a container image in the Container Registry that is to
+   * be run on each worker replica.
+   *
+   * @param string $imageUri
    */
   public function setImageUri($imageUri)
   {

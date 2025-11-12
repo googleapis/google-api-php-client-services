@@ -20,14 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DatasetDistributionDistributionBucket extends \Google\Model
 {
   /**
+   * Output only. Number of values in the bucket.
+   *
    * @var string
    */
   public $count;
+  /**
+   * Output only. Left bound of the bucket.
+   *
+   * @var 
+   */
   public $left;
+  /**
+   * Output only. Right bound of the bucket.
+   *
+   * @var 
+   */
   public $right;
 
   /**
-   * @param string
+   * Output only. Number of values in the bucket.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {

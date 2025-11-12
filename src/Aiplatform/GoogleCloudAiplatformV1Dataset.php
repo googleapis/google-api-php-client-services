@@ -21,68 +21,118 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
 {
   protected $collection_key = 'savedQueries';
   /**
+   * Output only. Timestamp when this Dataset was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The number of DataItems in this Dataset. Only apply for non-
+   * structured Dataset.
+   *
    * @var string
    */
   public $dataItemCount;
   /**
+   * The description of the Dataset.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The user-defined name of the Dataset. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
    * @var string
    */
   public $displayName;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
+   * Used to perform consistent read-modify-write updates. If not set, a blind
+   * "overwrite" update happens.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The labels with user-defined metadata to organize your Datasets. Label keys
+   * and values can be no longer than 64 characters (Unicode codepoints), can
+   * only contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. No more than 64 user labels can be
+   * associated with one Dataset (System labels are excluded). See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System
+   * reserved label keys are prefixed with "aiplatform.googleapis.com/" and are
+   * immutable. Following system labels exist for each Dataset: *
+   * "aiplatform.googleapis.com/dataset_metadata_schema": output only, its value
+   * is the metadata_schema's title.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. Additional information about the Dataset.
+   *
    * @var array
    */
   public $metadata;
   /**
+   * Output only. The resource name of the Artifact that was created in
+   * MetadataStore when creating the Dataset. The Artifact resource name pattern
+   * is `projects/{project}/locations/{location}/metadataStores/{metadata_store}
+   * /artifacts/{artifact}`.
+   *
    * @var string
    */
   public $metadataArtifact;
   /**
+   * Required. Points to a YAML file stored on Google Cloud Storage describing
+   * additional information about the Dataset. The schema is defined as an
+   * OpenAPI 3.0.2 Schema Object. The schema files that can be used here are
+   * found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+   *
    * @var string
    */
   public $metadataSchemaUri;
   /**
+   * Optional. Reference to the public base model last used by the dataset. Only
+   * set for prompt datasets.
+   *
    * @var string
    */
   public $modelReference;
   /**
+   * Output only. Identifier. The resource name of the Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   protected $savedQueriesType = GoogleCloudAiplatformV1SavedQuery::class;
   protected $savedQueriesDataType = 'array';
   /**
+   * Output only. Timestamp when this Dataset was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Timestamp when this Dataset was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -96,7 +146,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The number of DataItems in this Dataset. Only apply for non-
+   * structured Dataset.
+   *
+   * @param string $dataItemCount
    */
   public function setDataItemCount($dataItemCount)
   {
@@ -110,7 +163,9 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->dataItemCount;
   }
   /**
-   * @param string
+   * The description of the Dataset.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -124,7 +179,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The user-defined name of the Dataset. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -138,7 +196,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Customer-managed encryption key spec for a Dataset. If set, this Dataset
+   * and all sub-resources of this Dataset will be secured by this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -152,7 +213,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->encryptionSpec;
   }
   /**
-   * @param string
+   * Used to perform consistent read-modify-write updates. If not set, a blind
+   * "overwrite" update happens.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -166,7 +230,18 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string[]
+   * The labels with user-defined metadata to organize your Datasets. Label keys
+   * and values can be no longer than 64 characters (Unicode codepoints), can
+   * only contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. No more than 64 user labels can be
+   * associated with one Dataset (System labels are excluded). See
+   * https://goo.gl/xmQnxf for more information and examples of labels. System
+   * reserved label keys are prefixed with "aiplatform.googleapis.com/" and are
+   * immutable. Following system labels exist for each Dataset: *
+   * "aiplatform.googleapis.com/dataset_metadata_schema": output only, its value
+   * is the metadata_schema's title.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -180,7 +255,9 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param array
+   * Required. Additional information about the Dataset.
+   *
+   * @param array $metadata
    */
   public function setMetadata($metadata)
   {
@@ -194,7 +271,12 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Output only. The resource name of the Artifact that was created in
+   * MetadataStore when creating the Dataset. The Artifact resource name pattern
+   * is `projects/{project}/locations/{location}/metadataStores/{metadata_store}
+   * /artifacts/{artifact}`.
+   *
+   * @param string $metadataArtifact
    */
   public function setMetadataArtifact($metadataArtifact)
   {
@@ -208,7 +290,12 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->metadataArtifact;
   }
   /**
-   * @param string
+   * Required. Points to a YAML file stored on Google Cloud Storage describing
+   * additional information about the Dataset. The schema is defined as an
+   * OpenAPI 3.0.2 Schema Object. The schema files that can be used here are
+   * found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+   *
+   * @param string $metadataSchemaUri
    */
   public function setMetadataSchemaUri($metadataSchemaUri)
   {
@@ -222,7 +309,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->metadataSchemaUri;
   }
   /**
-   * @param string
+   * Optional. Reference to the public base model last used by the dataset. Only
+   * set for prompt datasets.
+   *
+   * @param string $modelReference
    */
   public function setModelReference($modelReference)
   {
@@ -236,7 +326,10 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->modelReference;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of the Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -250,7 +343,9 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -264,7 +359,9 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -278,7 +375,14 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param GoogleCloudAiplatformV1SavedQuery[]
+   * All SavedQueries belong to the Dataset will be returned in List/Get Dataset
+   * response. The annotation_specs field will not be populated except for UI
+   * cases which will only use annotation_spec_count. In CreateDataset request,
+   * a SavedQuery is created together if this field is set, up to one SavedQuery
+   * can be set in CreateDatasetRequest. The SavedQuery should not contain any
+   * AnnotationSpec.
+   *
+   * @param GoogleCloudAiplatformV1SavedQuery[] $savedQueries
    */
   public function setSavedQueries($savedQueries)
   {
@@ -292,7 +396,9 @@ class GoogleCloudAiplatformV1Dataset extends \Google\Collection
     return $this->savedQueries;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Dataset was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
