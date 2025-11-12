@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet extends \Google\Model
 {
   /**
+   * A link to show the review on Google Maps.
+   *
    * @var string
    */
   public $googleMapsUri;
   /**
+   * The ID of the review that is being referenced.
+   *
    * @var string
    */
   public $reviewId;
   /**
+   * The title of the review.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * A link to show the review on Google Maps.
+   *
+   * @param string $googleMapsUri
    */
   public function setGoogleMapsUri($googleMapsUri)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet e
     return $this->googleMapsUri;
   }
   /**
-   * @param string
+   * The ID of the review that is being referenced.
+   *
+   * @param string $reviewId
    */
   public function setReviewId($reviewId)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet e
     return $this->reviewId;
   }
   /**
-   * @param string
+   * The title of the review.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

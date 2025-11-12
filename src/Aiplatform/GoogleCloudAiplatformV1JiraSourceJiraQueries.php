@@ -23,24 +23,40 @@ class GoogleCloudAiplatformV1JiraSourceJiraQueries extends \Google\Collection
   protected $apiKeyConfigType = GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class;
   protected $apiKeyConfigDataType = '';
   /**
+   * A list of custom Jira queries to import. For information about JQL (Jira
+   * Query Language), see https://support.atlassian.com/jira-service-management-
+   * cloud/docs/use-advanced-search-with-jira-query-language-jql/
+   *
    * @var string[]
    */
   public $customQueries;
   /**
+   * Required. The Jira email address.
+   *
    * @var string
    */
   public $email;
   /**
+   * A list of Jira projects to import in their entirety.
+   *
    * @var string[]
    */
   public $projects;
   /**
+   * Required. The Jira server URI.
+   *
    * @var string
    */
   public $serverUri;
 
   /**
-   * @param GoogleCloudAiplatformV1ApiAuthApiKeyConfig
+   * Required. The SecretManager secret version resource name (e.g.
+   * projects/{project}/secrets/{secret}/versions/{version}) storing the Jira
+   * API key. See [Manage API tokens for your Atlassian
+   * account](https://support.atlassian.com/atlassian-account/docs/manage-api-
+   * tokens-for-your-atlassian-account/).
+   *
+   * @param GoogleCloudAiplatformV1ApiAuthApiKeyConfig $apiKeyConfig
    */
   public function setApiKeyConfig(GoogleCloudAiplatformV1ApiAuthApiKeyConfig $apiKeyConfig)
   {
@@ -54,7 +70,11 @@ class GoogleCloudAiplatformV1JiraSourceJiraQueries extends \Google\Collection
     return $this->apiKeyConfig;
   }
   /**
-   * @param string[]
+   * A list of custom Jira queries to import. For information about JQL (Jira
+   * Query Language), see https://support.atlassian.com/jira-service-management-
+   * cloud/docs/use-advanced-search-with-jira-query-language-jql/
+   *
+   * @param string[] $customQueries
    */
   public function setCustomQueries($customQueries)
   {
@@ -68,7 +88,9 @@ class GoogleCloudAiplatformV1JiraSourceJiraQueries extends \Google\Collection
     return $this->customQueries;
   }
   /**
-   * @param string
+   * Required. The Jira email address.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -82,7 +104,9 @@ class GoogleCloudAiplatformV1JiraSourceJiraQueries extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param string[]
+   * A list of Jira projects to import in their entirety.
+   *
+   * @param string[] $projects
    */
   public function setProjects($projects)
   {
@@ -96,7 +120,9 @@ class GoogleCloudAiplatformV1JiraSourceJiraQueries extends \Google\Collection
     return $this->projects;
   }
   /**
-   * @param string
+   * Required. The Jira server URI.
+   *
+   * @param string $serverUri
    */
   public function setServerUri($serverUri)
   {

@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListModelVersionCheckpointsResponse extends \Google
   protected $checkpointsType = GoogleCloudAiplatformV1ModelVersionCheckpoint::class;
   protected $checkpointsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListModelVersionCheckpointsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1ModelVersionCheckpoint[]
+   * List of Model Version checkpoints.
+   *
+   * @param GoogleCloudAiplatformV1ModelVersionCheckpoint[] $checkpoints
    */
   public function setCheckpoints($checkpoints)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListModelVersionCheckpointsResponse extends \Google
     return $this->checkpoints;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListModelVersionCheckpointsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

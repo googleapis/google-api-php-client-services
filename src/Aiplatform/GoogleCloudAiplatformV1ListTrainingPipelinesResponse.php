@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListTrainingPipelinesResponse extends \Google\Colle
 {
   protected $collection_key = 'trainingPipelines';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListTrainingPipelinesRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListTrainingPipelinesResponse extends \Google\Colle
   protected $trainingPipelinesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListTrainingPipelinesRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListTrainingPipelinesResponse extends \Google\Colle
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1TrainingPipeline[]
+   * List of TrainingPipelines in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1TrainingPipeline[] $trainingPipelines
    */
   public function setTrainingPipelines($trainingPipelines)
   {

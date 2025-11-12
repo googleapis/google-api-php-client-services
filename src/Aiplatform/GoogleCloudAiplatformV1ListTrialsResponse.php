@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListTrialsResponse extends \Google\Collection
 {
   protected $collection_key = 'trials';
   /**
+   * Pass this token as the `page_token` field of the request for a subsequent
+   * call. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListTrialsResponse extends \Google\Collection
   protected $trialsDataType = 'array';
 
   /**
-   * @param string
+   * Pass this token as the `page_token` field of the request for a subsequent
+   * call. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListTrialsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1Trial[]
+   * The Trials associated with the Study.
+   *
+   * @param GoogleCloudAiplatformV1Trial[] $trials
    */
   public function setTrials($trials)
   {

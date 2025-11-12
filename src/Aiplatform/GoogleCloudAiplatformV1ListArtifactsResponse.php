@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListArtifactsResponse extends \Google\Collection
   protected $artifactsType = GoogleCloudAiplatformV1Artifact::class;
   protected $artifactsDataType = 'array';
   /**
+   * A token, which can be sent as ListArtifactsRequest.page_token to retrieve
+   * the next page. If this field is not populated, there are no subsequent
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1Artifact[]
+   * The Artifacts retrieved from the MetadataStore.
+   *
+   * @param GoogleCloudAiplatformV1Artifact[] $artifacts
    */
   public function setArtifacts($artifacts)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListArtifactsResponse extends \Google\Collection
     return $this->artifacts;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListArtifactsRequest.page_token to retrieve
+   * the next page. If this field is not populated, there are no subsequent
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

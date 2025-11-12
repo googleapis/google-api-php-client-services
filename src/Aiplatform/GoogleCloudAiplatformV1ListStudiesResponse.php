@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListStudiesResponse extends \Google\Collection
 {
   protected $collection_key = 'studies';
   /**
+   * Passes this token as the `page_token` field of the request for a subsequent
+   * call. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListStudiesResponse extends \Google\Collection
   protected $studiesDataType = 'array';
 
   /**
-   * @param string
+   * Passes this token as the `page_token` field of the request for a subsequent
+   * call. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListStudiesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1Study[]
+   * The studies associated with the project.
+   *
+   * @param GoogleCloudAiplatformV1Study[] $studies
    */
   public function setStudies($studies)
   {

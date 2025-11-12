@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListIndexesResponse extends \Google\Collection
   protected $indexesType = GoogleCloudAiplatformV1Index::class;
   protected $indexesDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass to
+   * ListIndexesRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1Index[]
+   * List of indexes in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1Index[] $indexes
    */
   public function setIndexes($indexes)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListIndexesResponse extends \Google\Collection
     return $this->indexes;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass to
+   * ListIndexesRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

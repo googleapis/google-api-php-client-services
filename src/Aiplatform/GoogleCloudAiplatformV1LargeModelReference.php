@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1LargeModelReference extends \Google\Model
 {
   /**
+   * Required. The unique name of the large Foundation or pre-built model. Like
+   * "chat-bison", "text-bison". Or model name with version ID, like "chat-
+   * bison@001", "text-bison@005", etc.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The unique name of the large Foundation or pre-built model. Like
+   * "chat-bison", "text-bison". Or model name with version ID, like "chat-
+   * bison@001", "text-bison@005", etc.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

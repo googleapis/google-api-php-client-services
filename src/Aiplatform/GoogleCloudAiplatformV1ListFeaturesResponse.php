@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListFeaturesResponse extends \Google\Collection
   protected $featuresType = GoogleCloudAiplatformV1Feature::class;
   protected $featuresDataType = 'array';
   /**
+   * A token, which can be sent as ListFeaturesRequest.page_token to retrieve
+   * the next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1Feature[]
+   * The Features matching the request.
+   *
+   * @param GoogleCloudAiplatformV1Feature[] $features
    */
   public function setFeatures($features)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListFeaturesResponse extends \Google\Collection
     return $this->features;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListFeaturesRequest.page_token to retrieve
+   * the next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

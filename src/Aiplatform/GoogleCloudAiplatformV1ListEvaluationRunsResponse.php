@@ -23,12 +23,16 @@ class GoogleCloudAiplatformV1ListEvaluationRunsResponse extends \Google\Collecti
   protected $evaluationRunsType = GoogleCloudAiplatformV1EvaluationRun::class;
   protected $evaluationRunsDataType = 'array';
   /**
+   * A token to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationRun[]
+   * List of EvaluationRuns in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationRun[] $evaluationRuns
    */
   public function setEvaluationRuns($evaluationRuns)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAiplatformV1ListEvaluationRunsResponse extends \Google\Collecti
     return $this->evaluationRuns;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

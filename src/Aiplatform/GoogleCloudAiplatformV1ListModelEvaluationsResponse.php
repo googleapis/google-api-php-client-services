@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListModelEvaluationsResponse extends \Google\Collec
   protected $modelEvaluationsType = GoogleCloudAiplatformV1ModelEvaluation::class;
   protected $modelEvaluationsDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass to
+   * ListModelEvaluationsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1ModelEvaluation[]
+   * List of ModelEvaluations in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1ModelEvaluation[] $modelEvaluations
    */
   public function setModelEvaluations($modelEvaluations)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListModelEvaluationsResponse extends \Google\Collec
     return $this->modelEvaluations;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass to
+   * ListModelEvaluationsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

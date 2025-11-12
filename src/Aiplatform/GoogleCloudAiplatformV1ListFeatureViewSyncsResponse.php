@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListFeatureViewSyncsResponse extends \Google\Collec
   protected $featureViewSyncsType = GoogleCloudAiplatformV1FeatureViewSync::class;
   protected $featureViewSyncsDataType = 'array';
   /**
+   * A token, which can be sent as ListFeatureViewSyncsRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewSync[]
+   * The FeatureViewSyncs matching the request.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewSync[] $featureViewSyncs
    */
   public function setFeatureViewSyncs($featureViewSyncs)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListFeatureViewSyncsResponse extends \Google\Collec
     return $this->featureViewSyncs;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListFeatureViewSyncsRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

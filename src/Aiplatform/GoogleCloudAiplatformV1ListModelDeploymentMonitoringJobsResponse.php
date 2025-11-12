@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListModelDeploymentMonitoringJobsResponse extends \
   protected $modelDeploymentMonitoringJobsType = GoogleCloudAiplatformV1ModelDeploymentMonitoringJob::class;
   protected $modelDeploymentMonitoringJobsDataType = 'array';
   /**
+   * The standard List next-page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1ModelDeploymentMonitoringJob[]
+   * A list of ModelDeploymentMonitoringJobs that matches the specified filter
+   * in the request.
+   *
+   * @param GoogleCloudAiplatformV1ModelDeploymentMonitoringJob[] $modelDeploymentMonitoringJobs
    */
   public function setModelDeploymentMonitoringJobs($modelDeploymentMonitoringJobs)
   {
@@ -42,7 +47,9 @@ class GoogleCloudAiplatformV1ListModelDeploymentMonitoringJobsResponse extends \
     return $this->modelDeploymentMonitoringJobs;
   }
   /**
-   * @param string
+   * The standard List next-page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

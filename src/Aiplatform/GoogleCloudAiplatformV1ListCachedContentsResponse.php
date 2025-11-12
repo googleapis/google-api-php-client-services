@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListCachedContentsResponse extends \Google\Collecti
   protected $cachedContentsType = GoogleCloudAiplatformV1CachedContent::class;
   protected $cachedContentsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1CachedContent[]
+   * List of cached contents.
+   *
+   * @param GoogleCloudAiplatformV1CachedContent[] $cachedContents
    */
   public function setCachedContents($cachedContents)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListCachedContentsResponse extends \Google\Collecti
     return $this->cachedContents;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListNotebookExecutionJobsResponse extends \Google\C
 {
   protected $collection_key = 'notebookExecutionJobs';
   /**
+   * A token to retrieve next page of results. Pass to
+   * ListNotebookExecutionJobsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListNotebookExecutionJobsResponse extends \Google\C
   protected $notebookExecutionJobsDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass to
+   * ListNotebookExecutionJobsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListNotebookExecutionJobsResponse extends \Google\C
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1NotebookExecutionJob[]
+   * List of NotebookExecutionJobs in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1NotebookExecutionJob[] $notebookExecutionJobs
    */
   public function setNotebookExecutionJobs($notebookExecutionJobs)
   {

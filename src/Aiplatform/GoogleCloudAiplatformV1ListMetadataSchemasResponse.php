@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListMetadataSchemasResponse extends \Google\Collect
   protected $metadataSchemasType = GoogleCloudAiplatformV1MetadataSchema::class;
   protected $metadataSchemasDataType = 'array';
   /**
+   * A token, which can be sent as ListMetadataSchemasRequest.page_token to
+   * retrieve the next page. If this field is not populated, there are no
+   * subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1MetadataSchema[]
+   * The MetadataSchemas found for the MetadataStore.
+   *
+   * @param GoogleCloudAiplatformV1MetadataSchema[] $metadataSchemas
    */
   public function setMetadataSchemas($metadataSchemas)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListMetadataSchemasResponse extends \Google\Collect
     return $this->metadataSchemas;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListMetadataSchemasRequest.page_token to
+   * retrieve the next page. If this field is not populated, there are no
+   * subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

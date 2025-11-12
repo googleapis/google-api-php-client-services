@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListFeatureGroupsResponse extends \Google\Collectio
   protected $featureGroupsType = GoogleCloudAiplatformV1FeatureGroup::class;
   protected $featureGroupsDataType = 'array';
   /**
+   * A token, which can be sent as ListFeatureGroupsRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureGroup[]
+   * The FeatureGroups matching the request.
+   *
+   * @param GoogleCloudAiplatformV1FeatureGroup[] $featureGroups
    */
   public function setFeatureGroups($featureGroups)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListFeatureGroupsResponse extends \Google\Collectio
     return $this->featureGroups;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListFeatureGroupsRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

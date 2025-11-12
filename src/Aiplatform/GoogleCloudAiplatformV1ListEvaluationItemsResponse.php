@@ -23,12 +23,16 @@ class GoogleCloudAiplatformV1ListEvaluationItemsResponse extends \Google\Collect
   protected $evaluationItemsType = GoogleCloudAiplatformV1EvaluationItem::class;
   protected $evaluationItemsDataType = 'array';
   /**
+   * A token to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationItem[]
+   * List of EvaluationItems in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationItem[] $evaluationItems
    */
   public function setEvaluationItems($evaluationItems)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAiplatformV1ListEvaluationItemsResponse extends \Google\Collect
     return $this->evaluationItems;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

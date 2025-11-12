@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListContextsResponse extends \Google\Collection
   protected $contextsType = GoogleCloudAiplatformV1Context::class;
   protected $contextsDataType = 'array';
   /**
+   * A token, which can be sent as ListContextsRequest.page_token to retrieve
+   * the next page. If this field is not populated, there are no subsequent
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1Context[]
+   * The Contexts retrieved from the MetadataStore.
+   *
+   * @param GoogleCloudAiplatformV1Context[] $contexts
    */
   public function setContexts($contexts)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListContextsResponse extends \Google\Collection
     return $this->contexts;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListContextsRequest.page_token to retrieve
+   * the next page. If this field is not populated, there are no subsequent
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

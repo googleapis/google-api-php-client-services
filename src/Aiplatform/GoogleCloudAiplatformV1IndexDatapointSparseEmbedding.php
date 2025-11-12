@@ -21,16 +21,24 @@ class GoogleCloudAiplatformV1IndexDatapointSparseEmbedding extends \Google\Colle
 {
   protected $collection_key = 'values';
   /**
+   * Required. The list of indexes for the embedding values of the sparse
+   * vector.
+   *
    * @var string[]
    */
   public $dimensions;
   /**
+   * Required. The list of embedding values of the sparse vector.
+   *
    * @var float[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Required. The list of indexes for the embedding values of the sparse
+   * vector.
+   *
+   * @param string[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -44,7 +52,9 @@ class GoogleCloudAiplatformV1IndexDatapointSparseEmbedding extends \Google\Colle
     return $this->dimensions;
   }
   /**
-   * @param float[]
+   * Required. The list of embedding values of the sparse vector.
+   *
+   * @param float[] $values
    */
   public function setValues($values)
   {

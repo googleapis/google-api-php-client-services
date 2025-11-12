@@ -21,34 +21,53 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
 {
   protected $collection_key = 'sourceUris';
   /**
+   * List of ImportFeatureValues operations running under a single EntityType
+   * that are blocking this operation.
+   *
    * @var string[]
    */
   public $blockingOperationIds;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
   /**
+   * Number of entities that have been imported by the operation.
+   *
    * @var string
    */
   public $importedEntityCount;
   /**
+   * Number of Feature values that have been imported by the operation.
+   *
    * @var string
    */
   public $importedFeatureValueCount;
   /**
+   * The number of rows in input source that weren't imported due to either *
+   * Not having any featureValues. * Having a null entityId. * Having a null
+   * timestamp. * Not being parsable (applicable for CSV sources).
+   *
    * @var string
    */
   public $invalidRowCount;
   /**
+   * The source URI from where Feature values are imported.
+   *
    * @var string[]
    */
   public $sourceUris;
   /**
+   * The number rows that weren't ingested due to having timestamps outside the
+   * retention boundary.
+   *
    * @var string
    */
   public $timestampOutsideRetentionRowsCount;
 
   /**
-   * @param string[]
+   * List of ImportFeatureValues operations running under a single EntityType
+   * that are blocking this operation.
+   *
+   * @param string[] $blockingOperationIds
    */
   public function setBlockingOperationIds($blockingOperationIds)
   {
@@ -62,7 +81,9 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
     return $this->blockingOperationIds;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * Operation metadata for Featurestore import Feature values.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {
@@ -76,7 +97,9 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
     return $this->genericMetadata;
   }
   /**
-   * @param string
+   * Number of entities that have been imported by the operation.
+   *
+   * @param string $importedEntityCount
    */
   public function setImportedEntityCount($importedEntityCount)
   {
@@ -90,7 +113,9 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
     return $this->importedEntityCount;
   }
   /**
-   * @param string
+   * Number of Feature values that have been imported by the operation.
+   *
+   * @param string $importedFeatureValueCount
    */
   public function setImportedFeatureValueCount($importedFeatureValueCount)
   {
@@ -104,7 +129,11 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
     return $this->importedFeatureValueCount;
   }
   /**
-   * @param string
+   * The number of rows in input source that weren't imported due to either *
+   * Not having any featureValues. * Having a null entityId. * Having a null
+   * timestamp. * Not being parsable (applicable for CSV sources).
+   *
+   * @param string $invalidRowCount
    */
   public function setInvalidRowCount($invalidRowCount)
   {
@@ -118,7 +147,9 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
     return $this->invalidRowCount;
   }
   /**
-   * @param string[]
+   * The source URI from where Feature values are imported.
+   *
+   * @param string[] $sourceUris
    */
   public function setSourceUris($sourceUris)
   {
@@ -132,7 +163,10 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
     return $this->sourceUris;
   }
   /**
-   * @param string
+   * The number rows that weren't ingested due to having timestamps outside the
+   * retention boundary.
+   *
+   * @param string $timestampOutsideRetentionRowsCount
    */
   public function setTimestampOutsideRetentionRowsCount($timestampOutsideRetentionRowsCount)
   {

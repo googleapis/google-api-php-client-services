@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1InvokeRequest extends \Google\Model
 {
   /**
+   * ID of the DeployedModel that serves the invoke request.
+   *
    * @var string
    */
   public $deployedModelId;
@@ -27,7 +29,9 @@ class GoogleCloudAiplatformV1InvokeRequest extends \Google\Model
   protected $httpBodyDataType = '';
 
   /**
-   * @param string
+   * ID of the DeployedModel that serves the invoke request.
+   *
+   * @param string $deployedModelId
    */
   public function setDeployedModelId($deployedModelId)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1InvokeRequest extends \Google\Model
     return $this->deployedModelId;
   }
   /**
-   * @param GoogleApiHttpBody
+   * The invoke method input. Supports HTTP headers and arbitrary data payload.
+   *
+   * @param GoogleApiHttpBody $httpBody
    */
   public function setHttpBody(GoogleApiHttpBody $httpBody)
   {

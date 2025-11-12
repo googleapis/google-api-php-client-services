@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1LookupStudyRequest extends \Google\Model
 {
   /**
+   * Required. The user-defined display name of the Study
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * Required. The user-defined display name of the Study
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

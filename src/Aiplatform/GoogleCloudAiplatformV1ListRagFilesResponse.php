@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListRagFilesResponse extends \Google\Collection
 {
   protected $collection_key = 'ragFiles';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListRagFilesRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListRagFilesResponse extends \Google\Collection
   protected $ragFilesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListRagFilesRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListRagFilesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1RagFile[]
+   * List of RagFiles in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1RagFile[] $ragFiles
    */
   public function setRagFiles($ragFiles)
   {

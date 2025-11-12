@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1ListSpecialistPoolsResponse extends \Google\Collect
 {
   protected $collection_key = 'specialistPools';
   /**
+   * The standard List next-page token.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudAiplatformV1ListSpecialistPoolsResponse extends \Google\Collect
   protected $specialistPoolsDataType = 'array';
 
   /**
-   * @param string
+   * The standard List next-page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAiplatformV1ListSpecialistPoolsResponse extends \Google\Collect
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1SpecialistPool[]
+   * A list of SpecialistPools that matches the specified filter in the request.
+   *
+   * @param GoogleCloudAiplatformV1SpecialistPool[] $specialistPools
    */
   public function setSpecialistPools($specialistPools)
   {

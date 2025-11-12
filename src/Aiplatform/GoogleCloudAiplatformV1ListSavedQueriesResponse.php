@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1ListSavedQueriesResponse extends \Google\Collection
 {
   protected $collection_key = 'savedQueries';
   /**
+   * The standard List next-page token.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudAiplatformV1ListSavedQueriesResponse extends \Google\Collection
   protected $savedQueriesDataType = 'array';
 
   /**
-   * @param string
+   * The standard List next-page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAiplatformV1ListSavedQueriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1SavedQuery[]
+   * A list of SavedQueries that match the specified filter in the request.
+   *
+   * @param GoogleCloudAiplatformV1SavedQuery[] $savedQueries
    */
   public function setSavedQueries($savedQueries)
   {

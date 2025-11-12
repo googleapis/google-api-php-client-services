@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListEndpointsResponse extends \Google\Collection
   protected $endpointsType = GoogleCloudAiplatformV1Endpoint::class;
   protected $endpointsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListEndpointsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1Endpoint[]
+   * List of Endpoints in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1Endpoint[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListEndpointsResponse extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListEndpointsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

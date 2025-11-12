@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListModelsResponse extends \Google\Collection
   protected $modelsType = GoogleCloudAiplatformV1Model::class;
   protected $modelsDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass to
+   * ListModelsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1Model[]
+   * List of Models in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1Model[] $models
    */
   public function setModels($models)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListModelsResponse extends \Google\Collection
     return $this->models;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass to
+   * ListModelsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

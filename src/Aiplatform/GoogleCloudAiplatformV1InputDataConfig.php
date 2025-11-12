@@ -20,16 +20,45 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
 {
   /**
+   * Applicable only to custom training with Datasets that have DataItems and
+   * Annotations. Cloud Storage URI that points to a YAML file describing the
+   * annotation schema. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). The schema files
+   * that can be used here are found in gs://google-cloud-
+   * aiplatform/schema/dataset/annotation/ , note that the chosen schema must be
+   * consistent with metadata of the Dataset specified by dataset_id. Only
+   * Annotations that both match this schema and belong to DataItems not ignored
+   * by the split method are used in respectively training, validation or test
+   * role, depending on the role of the DataItem they are on. When used in
+   * conjunction with annotations_filter, the Annotations used for training are
+   * filtered by both annotations_filter and annotation_schema_uri.
+   *
    * @var string
    */
   public $annotationSchemaUri;
   /**
+   * Applicable only to Datasets that have DataItems and Annotations. A filter
+   * on Annotations of the Dataset. Only Annotations that both match this filter
+   * and belong to DataItems not ignored by the split method are used in
+   * respectively training, validation or test role, depending on the role of
+   * the DataItem they are on (for the auto-assigned that role is decided by
+   * Vertex AI). A filter with same syntax as the one used in ListAnnotations
+   * may be used, but note here it filters across all Annotations of the
+   * Dataset, and not just within a single DataItem.
+   *
    * @var string
    */
   public $annotationsFilter;
   protected $bigqueryDestinationType = GoogleCloudAiplatformV1BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
   /**
+   * Required. The ID of the Dataset in the same Project and Location which data
+   * will be used to train the Model. The Dataset must use schema compatible
+   * with Model being trained, and what is compatible should be described in the
+   * used TrainingPipeline's training_task_definition. For tabular Datasets, all
+   * their data is exported to training, to pick and choose from.
+   *
    * @var string
    */
   public $datasetId;
@@ -40,12 +69,23 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
   /**
+   * Whether to persist the ML use assignment to data item system labels.
+   *
    * @var bool
    */
   public $persistMlUseAssignment;
   protected $predefinedSplitType = GoogleCloudAiplatformV1PredefinedSplit::class;
   protected $predefinedSplitDataType = '';
   /**
+   * Only applicable to Datasets that have SavedQueries. The ID of a SavedQuery
+   * (annotation set) under the Dataset specified by dataset_id used for
+   * filtering Annotations for training. Only Annotations that are associated
+   * with this SavedQuery are used in respectively training. When used in
+   * conjunction with annotations_filter, the Annotations used for training are
+   * filtered by both saved_query_id and annotations_filter. Only one of
+   * saved_query_id and annotation_schema_uri should be specified as both of
+   * them represent the same thing: problem type.
+   *
    * @var string
    */
   public $savedQueryId;
@@ -55,7 +95,21 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
   protected $timestampSplitDataType = '';
 
   /**
-   * @param string
+   * Applicable only to custom training with Datasets that have DataItems and
+   * Annotations. Cloud Storage URI that points to a YAML file describing the
+   * annotation schema. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). The schema files
+   * that can be used here are found in gs://google-cloud-
+   * aiplatform/schema/dataset/annotation/ , note that the chosen schema must be
+   * consistent with metadata of the Dataset specified by dataset_id. Only
+   * Annotations that both match this schema and belong to DataItems not ignored
+   * by the split method are used in respectively training, validation or test
+   * role, depending on the role of the DataItem they are on. When used in
+   * conjunction with annotations_filter, the Annotations used for training are
+   * filtered by both annotations_filter and annotation_schema_uri.
+   *
+   * @param string $annotationSchemaUri
    */
   public function setAnnotationSchemaUri($annotationSchemaUri)
   {
@@ -69,7 +123,16 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->annotationSchemaUri;
   }
   /**
-   * @param string
+   * Applicable only to Datasets that have DataItems and Annotations. A filter
+   * on Annotations of the Dataset. Only Annotations that both match this filter
+   * and belong to DataItems not ignored by the split method are used in
+   * respectively training, validation or test role, depending on the role of
+   * the DataItem they are on (for the auto-assigned that role is decided by
+   * Vertex AI). A filter with same syntax as the one used in ListAnnotations
+   * may be used, but note here it filters across all Annotations of the
+   * Dataset, and not just within a single DataItem.
+   *
+   * @param string $annotationsFilter
    */
   public function setAnnotationsFilter($annotationsFilter)
   {
@@ -83,7 +146,18 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->annotationsFilter;
   }
   /**
-   * @param GoogleCloudAiplatformV1BigQueryDestination
+   * Only applicable to custom training with tabular Dataset with BigQuery
+   * source. The BigQuery project location where the training data is to be
+   * written to. In the given project a new dataset is created with name
+   * `dataset___` where timestamp is in YYYY_MM_DDThh_mm_ss_sssZ format. All
+   * training input data is written into that dataset. In the dataset three
+   * tables are created, `training`, `validation` and `test`. * AIP_DATA_FORMAT
+   * = "bigquery". * AIP_TRAINING_DATA_URI =
+   * "bigquery_destination.dataset___.training" * AIP_VALIDATION_DATA_URI =
+   * "bigquery_destination.dataset___.validation" * AIP_TEST_DATA_URI =
+   * "bigquery_destination.dataset___.test"
+   *
+   * @param GoogleCloudAiplatformV1BigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(GoogleCloudAiplatformV1BigQueryDestination $bigqueryDestination)
   {
@@ -97,7 +171,13 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->bigqueryDestination;
   }
   /**
-   * @param string
+   * Required. The ID of the Dataset in the same Project and Location which data
+   * will be used to train the Model. The Dataset must use schema compatible
+   * with Model being trained, and what is compatible should be described in the
+   * used TrainingPipeline's training_task_definition. For tabular Datasets, all
+   * their data is exported to training, to pick and choose from.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -111,7 +191,9 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param GoogleCloudAiplatformV1FilterSplit
+   * Split based on the provided filters for each set.
+   *
+   * @param GoogleCloudAiplatformV1FilterSplit $filterSplit
    */
   public function setFilterSplit(GoogleCloudAiplatformV1FilterSplit $filterSplit)
   {
@@ -125,7 +207,9 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->filterSplit;
   }
   /**
-   * @param GoogleCloudAiplatformV1FractionSplit
+   * Split based on fractions defining the size of each set.
+   *
+   * @param GoogleCloudAiplatformV1FractionSplit $fractionSplit
    */
   public function setFractionSplit(GoogleCloudAiplatformV1FractionSplit $fractionSplit)
   {
@@ -139,7 +223,20 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->fractionSplit;
   }
   /**
-   * @param GoogleCloudAiplatformV1GcsDestination
+   * The Cloud Storage location where the training data is to be written to. In
+   * the given directory a new directory is created with name: `dataset---`
+   * where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format. All
+   * training input data is written into that directory. The Vertex AI
+   * environment variables representing Cloud Storage data URIs are represented
+   * in the Cloud Storage wildcard format to support sharded data. e.g.:
+   * "gs://.../training-*.jsonl" * AIP_DATA_FORMAT = "jsonl" for non-tabular
+   * data, "csv" for tabular data * AIP_TRAINING_DATA_URI =
+   * "gcs_destination/dataset---/training-*.${AIP_DATA_FORMAT}" *
+   * AIP_VALIDATION_DATA_URI =
+   * "gcs_destination/dataset---/validation-*.${AIP_DATA_FORMAT}" *
+   * AIP_TEST_DATA_URI = "gcs_destination/dataset---/test-*.${AIP_DATA_FORMAT}"
+   *
+   * @param GoogleCloudAiplatformV1GcsDestination $gcsDestination
    */
   public function setGcsDestination(GoogleCloudAiplatformV1GcsDestination $gcsDestination)
   {
@@ -153,7 +250,9 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->gcsDestination;
   }
   /**
-   * @param bool
+   * Whether to persist the ML use assignment to data item system labels.
+   *
+   * @param bool $persistMlUseAssignment
    */
   public function setPersistMlUseAssignment($persistMlUseAssignment)
   {
@@ -167,7 +266,9 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->persistMlUseAssignment;
   }
   /**
-   * @param GoogleCloudAiplatformV1PredefinedSplit
+   * Supported only for tabular Datasets. Split based on a predefined key.
+   *
+   * @param GoogleCloudAiplatformV1PredefinedSplit $predefinedSplit
    */
   public function setPredefinedSplit(GoogleCloudAiplatformV1PredefinedSplit $predefinedSplit)
   {
@@ -181,7 +282,16 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->predefinedSplit;
   }
   /**
-   * @param string
+   * Only applicable to Datasets that have SavedQueries. The ID of a SavedQuery
+   * (annotation set) under the Dataset specified by dataset_id used for
+   * filtering Annotations for training. Only Annotations that are associated
+   * with this SavedQuery are used in respectively training. When used in
+   * conjunction with annotations_filter, the Annotations used for training are
+   * filtered by both saved_query_id and annotations_filter. Only one of
+   * saved_query_id and annotation_schema_uri should be specified as both of
+   * them represent the same thing: problem type.
+   *
+   * @param string $savedQueryId
    */
   public function setSavedQueryId($savedQueryId)
   {
@@ -195,7 +305,10 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->savedQueryId;
   }
   /**
-   * @param GoogleCloudAiplatformV1StratifiedSplit
+   * Supported only for tabular Datasets. Split based on the distribution of the
+   * specified column.
+   *
+   * @param GoogleCloudAiplatformV1StratifiedSplit $stratifiedSplit
    */
   public function setStratifiedSplit(GoogleCloudAiplatformV1StratifiedSplit $stratifiedSplit)
   {
@@ -209,7 +322,10 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
     return $this->stratifiedSplit;
   }
   /**
-   * @param GoogleCloudAiplatformV1TimestampSplit
+   * Supported only for tabular Datasets. Split based on the timestamp of the
+   * input data pieces.
+   *
+   * @param GoogleCloudAiplatformV1TimestampSplit $timestampSplit
    */
   public function setTimestampSplit(GoogleCloudAiplatformV1TimestampSplit $timestampSplit)
   {

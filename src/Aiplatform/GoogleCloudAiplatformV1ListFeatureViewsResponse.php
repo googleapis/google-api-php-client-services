@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListFeatureViewsResponse extends \Google\Collection
   protected $featureViewsType = GoogleCloudAiplatformV1FeatureView::class;
   protected $featureViewsDataType = 'array';
   /**
+   * A token, which can be sent as ListFeatureViewsRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureView[]
+   * The FeatureViews matching the request.
+   *
+   * @param GoogleCloudAiplatformV1FeatureView[] $featureViews
    */
   public function setFeatureViews($featureViews)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListFeatureViewsResponse extends \Google\Collection
     return $this->featureViews;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListFeatureViewsRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

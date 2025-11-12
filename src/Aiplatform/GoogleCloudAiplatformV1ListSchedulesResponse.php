@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListSchedulesResponse extends \Google\Collection
 {
   protected $collection_key = 'schedules';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListSchedulesRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListSchedulesResponse extends \Google\Collection
   protected $schedulesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListSchedulesRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListSchedulesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1Schedule[]
+   * List of Schedules in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1Schedule[] $schedules
    */
   public function setSchedules($schedules)
   {

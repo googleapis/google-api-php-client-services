@@ -19,56 +19,140 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
 {
+  /**
+   * The job state is unspecified.
+   */
+  public const STATE_JOB_STATE_UNSPECIFIED = 'JOB_STATE_UNSPECIFIED';
+  /**
+   * The job has been just created or resumed and processing has not yet begun.
+   */
+  public const STATE_JOB_STATE_QUEUED = 'JOB_STATE_QUEUED';
+  /**
+   * The service is preparing to run the job.
+   */
+  public const STATE_JOB_STATE_PENDING = 'JOB_STATE_PENDING';
+  /**
+   * The job is in progress.
+   */
+  public const STATE_JOB_STATE_RUNNING = 'JOB_STATE_RUNNING';
+  /**
+   * The job completed successfully.
+   */
+  public const STATE_JOB_STATE_SUCCEEDED = 'JOB_STATE_SUCCEEDED';
+  /**
+   * The job failed.
+   */
+  public const STATE_JOB_STATE_FAILED = 'JOB_STATE_FAILED';
+  /**
+   * The job is being cancelled. From this state the job may only go to either
+   * `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED` or `JOB_STATE_CANCELLED`.
+   */
+  public const STATE_JOB_STATE_CANCELLING = 'JOB_STATE_CANCELLING';
+  /**
+   * The job has been cancelled.
+   */
+  public const STATE_JOB_STATE_CANCELLED = 'JOB_STATE_CANCELLED';
+  /**
+   * The job has been stopped, and can be resumed.
+   */
+  public const STATE_JOB_STATE_PAUSED = 'JOB_STATE_PAUSED';
+  /**
+   * The job has expired.
+   */
+  public const STATE_JOB_STATE_EXPIRED = 'JOB_STATE_EXPIRED';
+  /**
+   * The job is being updated. Only jobs in the `RUNNING` state can be updated.
+   * After updating, the job goes back to the `RUNNING` state.
+   */
+  public const STATE_JOB_STATE_UPDATING = 'JOB_STATE_UPDATING';
+  /**
+   * The job is partially succeeded, some results may be missing due to errors.
+   */
+  public const STATE_JOB_STATE_PARTIALLY_SUCCEEDED = 'JOB_STATE_PARTIALLY_SUCCEEDED';
   protected $collection_key = 'trials';
   /**
+   * Output only. Time when the HyperparameterTuningJob was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The display name of the HyperparameterTuningJob. The name can be
+   * up to 128 characters long and can consist of any UTF-8 characters.
+   *
    * @var string
    */
   public $displayName;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
+   * Output only. Time when the HyperparameterTuningJob entered any of the
+   * following states: `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`,
+   * `JOB_STATE_CANCELLED`.
+   *
    * @var string
    */
   public $endTime;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
+   * The labels with user-defined metadata to organize HyperparameterTuningJobs.
+   * Label keys and values can be no longer than 64 characters (Unicode
+   * codepoints), can only contain lowercase letters, numeric characters,
+   * underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The number of failed Trials that need to be seen before failing the
+   * HyperparameterTuningJob. If set to 0, Vertex AI decides how many Trials
+   * must fail before the whole job fails.
+   *
    * @var int
    */
   public $maxFailedTrialCount;
   /**
+   * Required. The desired total number of Trials.
+   *
    * @var int
    */
   public $maxTrialCount;
   /**
+   * Output only. Resource name of the HyperparameterTuningJob.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The desired number of Trials to run in parallel.
+   *
    * @var int
    */
   public $parallelTrialCount;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Output only. Time when the HyperparameterTuningJob for the first time
+   * entered the `JOB_STATE_RUNNING` state.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The detailed state of the job.
+   *
    * @var string
    */
   public $state;
@@ -79,12 +163,17 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
   protected $trialsType = GoogleCloudAiplatformV1Trial::class;
   protected $trialsDataType = 'array';
   /**
+   * Output only. Time when the HyperparameterTuningJob was most recently
+   * updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Time when the HyperparameterTuningJob was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -98,7 +187,10 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The display name of the HyperparameterTuningJob. The name can be
+   * up to 128 characters long and can consist of any UTF-8 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -112,7 +204,11 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Customer-managed encryption key options for a HyperparameterTuningJob. If
+   * this is set, then all resources created by the HyperparameterTuningJob will
+   * be encrypted with the provided encryption key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -126,7 +222,11 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->encryptionSpec;
   }
   /**
-   * @param string
+   * Output only. Time when the HyperparameterTuningJob entered any of the
+   * following states: `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`,
+   * `JOB_STATE_CANCELLED`.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -140,7 +240,10 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param GoogleRpcStatus
+   * Output only. Only populated when job's state is JOB_STATE_FAILED or
+   * JOB_STATE_CANCELLED.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -154,7 +257,13 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param string[]
+   * The labels with user-defined metadata to organize HyperparameterTuningJobs.
+   * Label keys and values can be no longer than 64 characters (Unicode
+   * codepoints), can only contain lowercase letters, numeric characters,
+   * underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -168,7 +277,11 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param int
+   * The number of failed Trials that need to be seen before failing the
+   * HyperparameterTuningJob. If set to 0, Vertex AI decides how many Trials
+   * must fail before the whole job fails.
+   *
+   * @param int $maxFailedTrialCount
    */
   public function setMaxFailedTrialCount($maxFailedTrialCount)
   {
@@ -182,7 +295,9 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->maxFailedTrialCount;
   }
   /**
-   * @param int
+   * Required. The desired total number of Trials.
+   *
+   * @param int $maxTrialCount
    */
   public function setMaxTrialCount($maxTrialCount)
   {
@@ -196,7 +311,9 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->maxTrialCount;
   }
   /**
-   * @param string
+   * Output only. Resource name of the HyperparameterTuningJob.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -210,7 +327,9 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * Required. The desired number of Trials to run in parallel.
+   *
+   * @param int $parallelTrialCount
    */
   public function setParallelTrialCount($parallelTrialCount)
   {
@@ -224,7 +343,9 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->parallelTrialCount;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -238,7 +359,9 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -252,7 +375,10 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Output only. Time when the HyperparameterTuningJob for the first time
+   * entered the `JOB_STATE_RUNNING` state.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -266,21 +392,31 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The detailed state of the job.
+   *
+   * Accepted values: JOB_STATE_UNSPECIFIED, JOB_STATE_QUEUED,
+   * JOB_STATE_PENDING, JOB_STATE_RUNNING, JOB_STATE_SUCCEEDED,
+   * JOB_STATE_FAILED, JOB_STATE_CANCELLING, JOB_STATE_CANCELLED,
+   * JOB_STATE_PAUSED, JOB_STATE_EXPIRED, JOB_STATE_UPDATING,
+   * JOB_STATE_PARTIALLY_SUCCEEDED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param GoogleCloudAiplatformV1StudySpec
+   * Required. Study configuration of the HyperparameterTuningJob.
+   *
+   * @param GoogleCloudAiplatformV1StudySpec $studySpec
    */
   public function setStudySpec(GoogleCloudAiplatformV1StudySpec $studySpec)
   {
@@ -294,7 +430,10 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->studySpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1CustomJobSpec
+   * Required. The spec of a trial job. The same spec applies to the CustomJobs
+   * created in all the trials.
+   *
+   * @param GoogleCloudAiplatformV1CustomJobSpec $trialJobSpec
    */
   public function setTrialJobSpec(GoogleCloudAiplatformV1CustomJobSpec $trialJobSpec)
   {
@@ -308,7 +447,9 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->trialJobSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1Trial[]
+   * Output only. Trials of the HyperparameterTuningJob.
+   *
+   * @param GoogleCloudAiplatformV1Trial[] $trials
    */
   public function setTrials($trials)
   {
@@ -322,7 +463,10 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
     return $this->trials;
   }
   /**
-   * @param string
+   * Output only. Time when the HyperparameterTuningJob was most recently
+   * updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

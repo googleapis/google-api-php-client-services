@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListNotebookRuntimesResponse extends \Google\Collec
 {
   protected $collection_key = 'notebookRuntimes';
   /**
+   * A token to retrieve next page of results. Pass to
+   * ListNotebookRuntimesRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListNotebookRuntimesResponse extends \Google\Collec
   protected $notebookRuntimesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass to
+   * ListNotebookRuntimesRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListNotebookRuntimesResponse extends \Google\Collec
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1NotebookRuntime[]
+   * List of NotebookRuntimes in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1NotebookRuntime[] $notebookRuntimes
    */
   public function setNotebookRuntimes($notebookRuntimes)
   {

@@ -21,12 +21,22 @@ class GoogleCloudAiplatformV1IdMatcher extends \Google\Collection
 {
   protected $collection_key = 'ids';
   /**
+   * Required. The following are accepted as `ids`: * A single-element list
+   * containing only `*`, which selects all Features in the target EntityType,
+   * or * A list containing only Feature IDs, which selects only Features with
+   * those IDs in the target EntityType.
+   *
    * @var string[]
    */
   public $ids;
 
   /**
-   * @param string[]
+   * Required. The following are accepted as `ids`: * A single-element list
+   * containing only `*`, which selects all Features in the target EntityType,
+   * or * A list containing only Feature IDs, which selects only Features with
+   * those IDs in the target EntityType.
+   *
+   * @param string[] $ids
    */
   public function setIds($ids)
   {

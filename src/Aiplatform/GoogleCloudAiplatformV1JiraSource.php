@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1JiraSource extends \Google\Collection
   protected $jiraQueriesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1JiraSourceJiraQueries[]
+   * Required. The Jira queries.
+   *
+   * @param GoogleCloudAiplatformV1JiraSourceJiraQueries[] $jiraQueries
    */
   public function setJiraQueries($jiraQueries)
   {

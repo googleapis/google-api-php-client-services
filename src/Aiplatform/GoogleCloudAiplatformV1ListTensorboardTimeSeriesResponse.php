@@ -21,6 +21,10 @@ class GoogleCloudAiplatformV1ListTensorboardTimeSeriesResponse extends \Google\C
 {
   protected $collection_key = 'tensorboardTimeSeries';
   /**
+   * A token, which can be sent as ListTensorboardTimeSeriesRequest.page_token
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class GoogleCloudAiplatformV1ListTensorboardTimeSeriesResponse extends \Google\C
   protected $tensorboardTimeSeriesDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as ListTensorboardTimeSeriesRequest.page_token
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class GoogleCloudAiplatformV1ListTensorboardTimeSeriesResponse extends \Google\C
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1TensorboardTimeSeries[]
+   * The TensorboardTimeSeries mathching the request.
+   *
+   * @param GoogleCloudAiplatformV1TensorboardTimeSeries[] $tensorboardTimeSeries
    */
   public function setTensorboardTimeSeries($tensorboardTimeSeries)
   {

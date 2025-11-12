@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListPipelineJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'pipelineJobs';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListPipelineJobsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListPipelineJobsResponse extends \Google\Collection
   protected $pipelineJobsDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListPipelineJobsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListPipelineJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineJob[]
+   * List of PipelineJobs in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1PipelineJob[] $pipelineJobs
    */
   public function setPipelineJobs($pipelineJobs)
   {

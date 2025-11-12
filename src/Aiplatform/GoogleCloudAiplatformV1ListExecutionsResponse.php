@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListExecutionsResponse extends \Google\Collection
   protected $executionsType = GoogleCloudAiplatformV1Execution::class;
   protected $executionsDataType = 'array';
   /**
+   * A token, which can be sent as ListExecutionsRequest.page_token to retrieve
+   * the next page. If this field is not populated, there are no subsequent
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1Execution[]
+   * The Executions retrieved from the MetadataStore.
+   *
+   * @param GoogleCloudAiplatformV1Execution[] $executions
    */
   public function setExecutions($executions)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListExecutionsResponse extends \Google\Collection
     return $this->executions;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListExecutionsRequest.page_token to retrieve
+   * the next page. If this field is not populated, there are no subsequent
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

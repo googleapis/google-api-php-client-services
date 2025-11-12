@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListCustomJobsResponse extends \Google\Collection
   protected $customJobsType = GoogleCloudAiplatformV1CustomJob::class;
   protected $customJobsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListCustomJobsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1CustomJob[]
+   * List of CustomJobs in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1CustomJob[] $customJobs
    */
   public function setCustomJobs($customJobs)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListCustomJobsResponse extends \Google\Collection
     return $this->customJobs;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListCustomJobsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

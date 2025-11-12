@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListDataLabelingJobsResponse extends \Google\Collec
   protected $dataLabelingJobsType = GoogleCloudAiplatformV1DataLabelingJob::class;
   protected $dataLabelingJobsDataType = 'array';
   /**
+   * The standard List next-page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1DataLabelingJob[]
+   * A list of DataLabelingJobs that matches the specified filter in the
+   * request.
+   *
+   * @param GoogleCloudAiplatformV1DataLabelingJob[] $dataLabelingJobs
    */
   public function setDataLabelingJobs($dataLabelingJobs)
   {
@@ -42,7 +47,9 @@ class GoogleCloudAiplatformV1ListDataLabelingJobsResponse extends \Google\Collec
     return $this->dataLabelingJobs;
   }
   /**
-   * @param string
+   * The standard List next-page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

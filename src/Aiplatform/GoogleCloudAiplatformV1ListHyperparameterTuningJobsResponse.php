@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListHyperparameterTuningJobsResponse extends \Googl
   protected $hyperparameterTuningJobsType = GoogleCloudAiplatformV1HyperparameterTuningJob::class;
   protected $hyperparameterTuningJobsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListHyperparameterTuningJobsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1HyperparameterTuningJob[]
+   * List of HyperparameterTuningJobs in the requested page.
+   * HyperparameterTuningJob.trials of the jobs will be not be returned.
+   *
+   * @param GoogleCloudAiplatformV1HyperparameterTuningJob[] $hyperparameterTuningJobs
    */
   public function setHyperparameterTuningJobs($hyperparameterTuningJobs)
   {
@@ -42,7 +48,10 @@ class GoogleCloudAiplatformV1ListHyperparameterTuningJobsResponse extends \Googl
     return $this->hyperparameterTuningJobs;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListHyperparameterTuningJobsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

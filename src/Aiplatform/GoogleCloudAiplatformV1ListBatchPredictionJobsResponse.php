@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1ListBatchPredictionJobsResponse extends \Google\Col
   protected $batchPredictionJobsType = GoogleCloudAiplatformV1BatchPredictionJob::class;
   protected $batchPredictionJobsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListBatchPredictionJobsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1BatchPredictionJob[]
+   * List of BatchPredictionJobs in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1BatchPredictionJob[] $batchPredictionJobs
    */
   public function setBatchPredictionJobs($batchPredictionJobs)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1ListBatchPredictionJobsResponse extends \Google\Col
     return $this->batchPredictionJobs;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListBatchPredictionJobsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

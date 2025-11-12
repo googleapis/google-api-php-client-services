@@ -20,16 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ImageConfigImageOutputOptions extends \Google\Model
 {
   /**
+   * Optional. The compression quality of the output image.
+   *
    * @var int
    */
   public $compressionQuality;
   /**
+   * Optional. The image format that the output should be saved as.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param int
+   * Optional. The compression quality of the output image.
+   *
+   * @param int $compressionQuality
    */
   public function setCompressionQuality($compressionQuality)
   {
@@ -43,7 +49,9 @@ class GoogleCloudAiplatformV1ImageConfigImageOutputOptions extends \Google\Model
     return $this->compressionQuality;
   }
   /**
-   * @param string
+   * Optional. The image format that the output should be saved as.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

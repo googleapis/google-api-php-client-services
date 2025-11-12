@@ -21,6 +21,10 @@ class GoogleCloudAiplatformV1ListTensorboardExperimentsResponse extends \Google\
 {
   protected $collection_key = 'tensorboardExperiments';
   /**
+   * A token, which can be sent as ListTensorboardExperimentsRequest.page_token
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class GoogleCloudAiplatformV1ListTensorboardExperimentsResponse extends \Google\
   protected $tensorboardExperimentsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as ListTensorboardExperimentsRequest.page_token
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class GoogleCloudAiplatformV1ListTensorboardExperimentsResponse extends \Google\
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1TensorboardExperiment[]
+   * The TensorboardExperiments mathching the request.
+   *
+   * @param GoogleCloudAiplatformV1TensorboardExperiment[] $tensorboardExperiments
    */
   public function setTensorboardExperiments($tensorboardExperiments)
   {

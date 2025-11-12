@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListFeatureOnlineStoresResponse extends \Google\Col
   protected $featureOnlineStoresType = GoogleCloudAiplatformV1FeatureOnlineStore::class;
   protected $featureOnlineStoresDataType = 'array';
   /**
+   * A token, which can be sent as ListFeatureOnlineStoresRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureOnlineStore[]
+   * The FeatureOnlineStores matching the request.
+   *
+   * @param GoogleCloudAiplatformV1FeatureOnlineStore[] $featureOnlineStores
    */
   public function setFeatureOnlineStores($featureOnlineStores)
   {
@@ -42,7 +48,11 @@ class GoogleCloudAiplatformV1ListFeatureOnlineStoresResponse extends \Google\Col
     return $this->featureOnlineStores;
   }
   /**
-   * @param string
+   * A token, which can be sent as ListFeatureOnlineStoresRequest.page_token to
+   * retrieve the next page. If this field is omitted, there are no subsequent
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

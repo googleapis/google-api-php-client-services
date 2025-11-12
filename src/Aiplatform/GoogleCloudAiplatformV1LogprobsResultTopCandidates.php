@@ -24,7 +24,10 @@ class GoogleCloudAiplatformV1LogprobsResultTopCandidates extends \Google\Collect
   protected $candidatesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1LogprobsResultCandidate[]
+   * The list of candidate tokens, sorted by log probability in descending
+   * order.
+   *
+   * @param GoogleCloudAiplatformV1LogprobsResultCandidate[] $candidates
    */
   public function setCandidates($candidates)
   {

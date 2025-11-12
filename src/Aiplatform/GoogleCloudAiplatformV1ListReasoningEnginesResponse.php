@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1ListReasoningEnginesResponse extends \Google\Collec
 {
   protected $collection_key = 'reasoningEngines';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListReasoningEnginesRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1ListReasoningEnginesResponse extends \Google\Collec
   protected $reasoningEnginesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListReasoningEnginesRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudAiplatformV1ListReasoningEnginesResponse extends \Google\Collec
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAiplatformV1ReasoningEngine[]
+   * List of ReasoningEngines in the requested page.
+   *
+   * @param GoogleCloudAiplatformV1ReasoningEngine[] $reasoningEngines
    */
   public function setReasoningEngines($reasoningEngines)
   {

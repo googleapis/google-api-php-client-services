@@ -23,12 +23,18 @@ class GoogleCloudAiplatformV1ListNasJobsResponse extends \Google\Collection
   protected $nasJobsType = GoogleCloudAiplatformV1NasJob::class;
   protected $nasJobsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListNasJobsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1NasJob[]
+   * List of NasJobs in the requested page. NasJob.nas_job_output of the jobs
+   * will not be returned.
+   *
+   * @param GoogleCloudAiplatformV1NasJob[] $nasJobs
    */
   public function setNasJobs($nasJobs)
   {
@@ -42,7 +48,10 @@ class GoogleCloudAiplatformV1ListNasJobsResponse extends \Google\Collection
     return $this->nasJobs;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListNasJobsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
