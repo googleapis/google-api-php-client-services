@@ -20,16 +20,22 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2betaBigQueryOutputResult extends \Google\Model
 {
   /**
+   * The ID of a BigQuery Dataset.
+   *
    * @var string
    */
   public $datasetId;
   /**
+   * The ID of a BigQuery Table.
+   *
    * @var string
    */
   public $tableId;
 
   /**
-   * @param string
+   * The ID of a BigQuery Dataset.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -43,7 +49,9 @@ class GoogleCloudRetailV2betaBigQueryOutputResult extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param string
+   * The ID of a BigQuery Table.
+   *
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {

@@ -28,7 +28,9 @@ class GoogleCloudRetailV2betaImportUserEventsResponse extends \Google\Collection
   protected $importSummaryDataType = '';
 
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {
@@ -42,7 +44,10 @@ class GoogleCloudRetailV2betaImportUserEventsResponse extends \Google\Collection
     return $this->errorSamples;
   }
   /**
-   * @param GoogleCloudRetailV2betaImportErrorsConfig
+   * Echoes the destination for the complete errors if this field was set in the
+   * request.
+   *
+   * @param GoogleCloudRetailV2betaImportErrorsConfig $errorsConfig
    */
   public function setErrorsConfig(GoogleCloudRetailV2betaImportErrorsConfig $errorsConfig)
   {
@@ -56,7 +61,9 @@ class GoogleCloudRetailV2betaImportUserEventsResponse extends \Google\Collection
     return $this->errorsConfig;
   }
   /**
-   * @param GoogleCloudRetailV2betaUserEventImportSummary
+   * Aggregated statistics of user event import status.
+   *
+   * @param GoogleCloudRetailV2betaUserEventImportSummary $importSummary
    */
   public function setImportSummary(GoogleCloudRetailV2betaUserEventImportSummary $importSummary)
   {

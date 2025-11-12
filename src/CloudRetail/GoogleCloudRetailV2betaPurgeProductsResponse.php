@@ -21,16 +21,24 @@ class GoogleCloudRetailV2betaPurgeProductsResponse extends \Google\Collection
 {
   protected $collection_key = 'purgeSample';
   /**
+   * The total count of products purged as a result of the operation.
+   *
    * @var string
    */
   public $purgeCount;
   /**
+   * A sample of the product names that will be deleted. Only populated if
+   * `force` is set to false. A max of 100 names will be returned and the names
+   * are chosen at random.
+   *
    * @var string[]
    */
   public $purgeSample;
 
   /**
-   * @param string
+   * The total count of products purged as a result of the operation.
+   *
+   * @param string $purgeCount
    */
   public function setPurgeCount($purgeCount)
   {
@@ -44,7 +52,11 @@ class GoogleCloudRetailV2betaPurgeProductsResponse extends \Google\Collection
     return $this->purgeCount;
   }
   /**
-   * @param string[]
+   * A sample of the product names that will be deleted. Only populated if
+   * `force` is set to false. A max of 100 names will be returned and the names
+   * are chosen at random.
+   *
+   * @param string[] $purgeSample
    */
   public function setPurgeSample($purgeSample)
   {

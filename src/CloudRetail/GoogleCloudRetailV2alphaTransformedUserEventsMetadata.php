@@ -20,16 +20,23 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2alphaTransformedUserEventsMetadata extends \Google\Model
 {
   /**
+   * Count of entries in the source user events BigQuery table.
+   *
    * @var string
    */
   public $sourceEventsCount;
   /**
+   * Count of entries in the transformed user events BigQuery table, which could
+   * be different from the actually imported number of user events.
+   *
    * @var string
    */
   public $transformedEventsCount;
 
   /**
-   * @param string
+   * Count of entries in the source user events BigQuery table.
+   *
+   * @param string $sourceEventsCount
    */
   public function setSourceEventsCount($sourceEventsCount)
   {
@@ -43,7 +50,10 @@ class GoogleCloudRetailV2alphaTransformedUserEventsMetadata extends \Google\Mode
     return $this->sourceEventsCount;
   }
   /**
-   * @param string
+   * Count of entries in the transformed user events BigQuery table, which could
+   * be different from the actually imported number of user events.
+   *
+   * @param string $transformedEventsCount
    */
   public function setTransformedEventsCount($transformedEventsCount)
   {
