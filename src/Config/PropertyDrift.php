@@ -21,28 +21,42 @@ class PropertyDrift extends \Google\Collection
 {
   protected $collection_key = 'beforeSensitivePaths';
   /**
+   * Output only. Representations of the object value after the actions.
+   *
    * @var array
    */
   public $after;
   /**
+   * Output only. The paths of sensitive fields in `after`. Paths are relative
+   * to `path`.
+   *
    * @var string[]
    */
   public $afterSensitivePaths;
   /**
+   * Output only. Representations of the object value before the actions.
+   *
    * @var array
    */
   public $before;
   /**
+   * Output only. The paths of sensitive fields in `before`. Paths are relative
+   * to `path`.
+   *
    * @var string[]
    */
   public $beforeSensitivePaths;
   /**
+   * Output only. The path of the property drift.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param array
+   * Output only. Representations of the object value after the actions.
+   *
+   * @param array $after
    */
   public function setAfter($after)
   {
@@ -56,7 +70,10 @@ class PropertyDrift extends \Google\Collection
     return $this->after;
   }
   /**
-   * @param string[]
+   * Output only. The paths of sensitive fields in `after`. Paths are relative
+   * to `path`.
+   *
+   * @param string[] $afterSensitivePaths
    */
   public function setAfterSensitivePaths($afterSensitivePaths)
   {
@@ -70,7 +87,9 @@ class PropertyDrift extends \Google\Collection
     return $this->afterSensitivePaths;
   }
   /**
-   * @param array
+   * Output only. Representations of the object value before the actions.
+   *
+   * @param array $before
    */
   public function setBefore($before)
   {
@@ -84,7 +103,10 @@ class PropertyDrift extends \Google\Collection
     return $this->before;
   }
   /**
-   * @param string[]
+   * Output only. The paths of sensitive fields in `before`. Paths are relative
+   * to `path`.
+   *
+   * @param string[] $beforeSensitivePaths
    */
   public function setBeforeSensitivePaths($beforeSensitivePaths)
   {
@@ -98,7 +120,9 @@ class PropertyDrift extends \Google\Collection
     return $this->beforeSensitivePaths;
   }
   /**
-   * @param string
+   * Output only. The path of the property drift.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

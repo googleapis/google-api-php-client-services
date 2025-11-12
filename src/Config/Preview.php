@@ -19,62 +19,180 @@ namespace Google\Service\Config;
 
 class Preview extends \Google\Collection
 {
+  /**
+   * No error code was specified.
+   */
+  public const ERROR_CODE_ERROR_CODE_UNSPECIFIED = 'ERROR_CODE_UNSPECIFIED';
+  /**
+   * Cloud Build failed due to a permissions issue.
+   */
+  public const ERROR_CODE_CLOUD_BUILD_PERMISSION_DENIED = 'CLOUD_BUILD_PERMISSION_DENIED';
+  /**
+   * Cloud Storage bucket failed to create due to a permissions issue.
+   */
+  public const ERROR_CODE_BUCKET_CREATION_PERMISSION_DENIED = 'BUCKET_CREATION_PERMISSION_DENIED';
+  /**
+   * Cloud Storage bucket failed for a non-permissions-related issue.
+   */
+  public const ERROR_CODE_BUCKET_CREATION_FAILED = 'BUCKET_CREATION_FAILED';
+  /**
+   * Acquiring lock on provided deployment reference failed.
+   */
+  public const ERROR_CODE_DEPLOYMENT_LOCK_ACQUIRE_FAILED = 'DEPLOYMENT_LOCK_ACQUIRE_FAILED';
+  /**
+   * Preview encountered an error when trying to access Cloud Build API.
+   */
+  public const ERROR_CODE_PREVIEW_BUILD_API_FAILED = 'PREVIEW_BUILD_API_FAILED';
+  /**
+   * Preview created a build but build failed and logs were generated.
+   */
+  public const ERROR_CODE_PREVIEW_BUILD_RUN_FAILED = 'PREVIEW_BUILD_RUN_FAILED';
+  /**
+   * Unspecified policy, default mode will be used.
+   */
+  public const PREVIEW_MODE_PREVIEW_MODE_UNSPECIFIED = 'PREVIEW_MODE_UNSPECIFIED';
+  /**
+   * DEFAULT mode generates an execution plan for reconciling current resource
+   * state into expected resource state.
+   */
+  public const PREVIEW_MODE_DEFAULT = 'DEFAULT';
+  /**
+   * DELETE mode generates as execution plan for destroying current resources.
+   */
+  public const PREVIEW_MODE_DELETE = 'DELETE';
+  /**
+   * The default value. This value is used if the state is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The preview is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The preview has succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The preview is being applied.
+   */
+  public const STATE_APPLYING = 'APPLYING';
+  /**
+   * The preview is stale. A preview can become stale if a revision has been
+   * applied after this preview was created.
+   */
+  public const STATE_STALE = 'STALE';
+  /**
+   * The preview is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The preview has encountered an unexpected error.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The preview has been deleted.
+   */
+  public const STATE_DELETED = 'DELETED';
   protected $collection_key = 'tfErrors';
   /**
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools
+   * identify preview during automation. See
+   * https://google.aip.dev/148#annotations for details on format and size
+   * limitations.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Optional. User-defined location of Cloud Build logs, artifacts, and in
+   * Google Cloud Storage. Format: `gs://{bucket}/{folder}` A default bucket
+   * will be bootstrapped if the field is not set or empty Default Bucket
+   * Format: `gs://--blueprint-config` Constraints: - The bucket needs to be in
+   * the same project as the deployment - The path cannot be within the path of
+   * `gcs_source` If omitted and deployment resource ref provided has
+   * artifacts_gcs_bucket defined, that artifact bucket is used.
+   *
    * @var string
    */
   public $artifactsGcsBucket;
   /**
+   * Output only. Cloud Build instance UUID associated with this preview.
+   *
    * @var string
    */
   public $build;
   /**
+   * Output only. Time the preview was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Optional deployment reference. If specified, the preview will be
+   * performed using the provided deployment's current state and use any
+   * relevant fields from the deployment unless explicitly specified in the
+   * preview create request.
+   *
    * @var string
    */
   public $deployment;
   /**
+   * Output only. Code describing any errors that may have occurred.
+   *
    * @var string
    */
   public $errorCode;
   /**
+   * Output only. Link to tf-error.ndjson file, which contains the full list of
+   * the errors encountered during a Terraform preview. Format:
+   * `gs://{bucket}/{object}`.
+   *
    * @var string
    */
   public $errorLogs;
   protected $errorStatusType = Status::class;
   protected $errorStatusDataType = '';
   /**
+   * Optional. User-defined labels for the preview.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. Location of preview logs in `gs://{bucket}/{object}` format.
+   *
    * @var string
    */
   public $logs;
   /**
+   * Identifier. Resource name of the preview. Resource name can be user
+   * provided or server generated ID if unspecified. Format:
+   * `projects/{project}/locations/{location}/previews/{preview}`
+   *
    * @var string
    */
   public $name;
   protected $previewArtifactsType = PreviewArtifacts::class;
   protected $previewArtifactsDataType = '';
   /**
+   * Optional. Current mode of preview.
+   *
    * @var string
    */
   public $previewMode;
   protected $providerConfigType = ProviderConfig::class;
   protected $providerConfigDataType = '';
   /**
+   * Required. User-specified Service Account (SA) credentials to be used when
+   * previewing resources. Format:
+   * `projects/{projectID}/serviceAccounts/{serviceAccount}`
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * Output only. Current state of the preview.
+   *
    * @var string
    */
   public $state;
@@ -83,20 +201,38 @@ class Preview extends \Google\Collection
   protected $tfErrorsType = TerraformError::class;
   protected $tfErrorsDataType = 'array';
   /**
+   * Output only. The current Terraform version set on the preview. It is in the
+   * format of "Major.Minor.Patch", for example, "1.3.10".
+   *
    * @var string
    */
   public $tfVersion;
   /**
+   * Optional. The user-specified Terraform version constraint. Example:
+   * "=1.3.10".
+   *
    * @var string
    */
   public $tfVersionConstraint;
   /**
+   * Optional. The user-specified Worker Pool resource in which the Cloud Build
+   * job will execute. Format
+   * projects/{project}/locations/{location}/workerPools/{workerPoolId} If this
+   * field is unspecified, the default Cloud Build worker pool will be used. If
+   * omitted and deployment resource ref provided has worker_pool defined, that
+   * worker pool is used.
+   *
    * @var string
    */
   public $workerPool;
 
   /**
-   * @param string[]
+   * Optional. Arbitrary key-value metadata storage e.g. to help client tools
+   * identify preview during automation. See
+   * https://google.aip.dev/148#annotations for details on format and size
+   * limitations.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -110,7 +246,15 @@ class Preview extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param string
+   * Optional. User-defined location of Cloud Build logs, artifacts, and in
+   * Google Cloud Storage. Format: `gs://{bucket}/{folder}` A default bucket
+   * will be bootstrapped if the field is not set or empty Default Bucket
+   * Format: `gs://--blueprint-config` Constraints: - The bucket needs to be in
+   * the same project as the deployment - The path cannot be within the path of
+   * `gcs_source` If omitted and deployment resource ref provided has
+   * artifacts_gcs_bucket defined, that artifact bucket is used.
+   *
+   * @param string $artifactsGcsBucket
    */
   public function setArtifactsGcsBucket($artifactsGcsBucket)
   {
@@ -124,7 +268,9 @@ class Preview extends \Google\Collection
     return $this->artifactsGcsBucket;
   }
   /**
-   * @param string
+   * Output only. Cloud Build instance UUID associated with this preview.
+   *
+   * @param string $build
    */
   public function setBuild($build)
   {
@@ -138,7 +284,9 @@ class Preview extends \Google\Collection
     return $this->build;
   }
   /**
-   * @param string
+   * Output only. Time the preview was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -152,7 +300,12 @@ class Preview extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Optional deployment reference. If specified, the preview will be
+   * performed using the provided deployment's current state and use any
+   * relevant fields from the deployment unless explicitly specified in the
+   * preview create request.
+   *
+   * @param string $deployment
    */
   public function setDeployment($deployment)
   {
@@ -166,21 +319,32 @@ class Preview extends \Google\Collection
     return $this->deployment;
   }
   /**
-   * @param string
+   * Output only. Code describing any errors that may have occurred.
+   *
+   * Accepted values: ERROR_CODE_UNSPECIFIED, CLOUD_BUILD_PERMISSION_DENIED,
+   * BUCKET_CREATION_PERMISSION_DENIED, BUCKET_CREATION_FAILED,
+   * DEPLOYMENT_LOCK_ACQUIRE_FAILED, PREVIEW_BUILD_API_FAILED,
+   * PREVIEW_BUILD_RUN_FAILED
+   *
+   * @param self::ERROR_CODE_* $errorCode
    */
   public function setErrorCode($errorCode)
   {
     $this->errorCode = $errorCode;
   }
   /**
-   * @return string
+   * @return self::ERROR_CODE_*
    */
   public function getErrorCode()
   {
     return $this->errorCode;
   }
   /**
-   * @param string
+   * Output only. Link to tf-error.ndjson file, which contains the full list of
+   * the errors encountered during a Terraform preview. Format:
+   * `gs://{bucket}/{object}`.
+   *
+   * @param string $errorLogs
    */
   public function setErrorLogs($errorLogs)
   {
@@ -194,7 +358,9 @@ class Preview extends \Google\Collection
     return $this->errorLogs;
   }
   /**
-   * @param Status
+   * Output only. Additional information regarding the current state.
+   *
+   * @param Status $errorStatus
    */
   public function setErrorStatus(Status $errorStatus)
   {
@@ -208,7 +374,9 @@ class Preview extends \Google\Collection
     return $this->errorStatus;
   }
   /**
-   * @param string[]
+   * Optional. User-defined labels for the preview.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -222,7 +390,9 @@ class Preview extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. Location of preview logs in `gs://{bucket}/{object}` format.
+   *
+   * @param string $logs
    */
   public function setLogs($logs)
   {
@@ -236,7 +406,11 @@ class Preview extends \Google\Collection
     return $this->logs;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the preview. Resource name can be user
+   * provided or server generated ID if unspecified. Format:
+   * `projects/{project}/locations/{location}/previews/{preview}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -250,7 +424,9 @@ class Preview extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PreviewArtifacts
+   * Output only. Artifacts from preview.
+   *
+   * @param PreviewArtifacts $previewArtifacts
    */
   public function setPreviewArtifacts(PreviewArtifacts $previewArtifacts)
   {
@@ -264,21 +440,27 @@ class Preview extends \Google\Collection
     return $this->previewArtifacts;
   }
   /**
-   * @param string
+   * Optional. Current mode of preview.
+   *
+   * Accepted values: PREVIEW_MODE_UNSPECIFIED, DEFAULT, DELETE
+   *
+   * @param self::PREVIEW_MODE_* $previewMode
    */
   public function setPreviewMode($previewMode)
   {
     $this->previewMode = $previewMode;
   }
   /**
-   * @return string
+   * @return self::PREVIEW_MODE_*
    */
   public function getPreviewMode()
   {
     return $this->previewMode;
   }
   /**
-   * @param ProviderConfig
+   * Optional. This field specifies the provider configurations.
+   *
+   * @param ProviderConfig $providerConfig
    */
   public function setProviderConfig(ProviderConfig $providerConfig)
   {
@@ -292,7 +474,11 @@ class Preview extends \Google\Collection
     return $this->providerConfig;
   }
   /**
-   * @param string
+   * Required. User-specified Service Account (SA) credentials to be used when
+   * previewing resources. Format:
+   * `projects/{projectID}/serviceAccounts/{serviceAccount}`
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -306,21 +492,28 @@ class Preview extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * Output only. Current state of the preview.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, SUCCEEDED, APPLYING, STALE,
+   * DELETING, FAILED, DELETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param TerraformBlueprint
+   * The terraform blueprint to preview.
+   *
+   * @param TerraformBlueprint $terraformBlueprint
    */
   public function setTerraformBlueprint(TerraformBlueprint $terraformBlueprint)
   {
@@ -334,7 +527,10 @@ class Preview extends \Google\Collection
     return $this->terraformBlueprint;
   }
   /**
-   * @param TerraformError[]
+   * Output only. Summary of errors encountered during Terraform preview. It has
+   * a size limit of 10, i.e. only top 10 errors will be summarized here.
+   *
+   * @param TerraformError[] $tfErrors
    */
   public function setTfErrors($tfErrors)
   {
@@ -348,7 +544,10 @@ class Preview extends \Google\Collection
     return $this->tfErrors;
   }
   /**
-   * @param string
+   * Output only. The current Terraform version set on the preview. It is in the
+   * format of "Major.Minor.Patch", for example, "1.3.10".
+   *
+   * @param string $tfVersion
    */
   public function setTfVersion($tfVersion)
   {
@@ -362,7 +561,10 @@ class Preview extends \Google\Collection
     return $this->tfVersion;
   }
   /**
-   * @param string
+   * Optional. The user-specified Terraform version constraint. Example:
+   * "=1.3.10".
+   *
+   * @param string $tfVersionConstraint
    */
   public function setTfVersionConstraint($tfVersionConstraint)
   {
@@ -376,7 +578,14 @@ class Preview extends \Google\Collection
     return $this->tfVersionConstraint;
   }
   /**
-   * @param string
+   * Optional. The user-specified Worker Pool resource in which the Cloud Build
+   * job will execute. Format
+   * projects/{project}/locations/{location}/workerPools/{workerPoolId} If this
+   * field is unspecified, the default Cloud Build worker pool will be used. If
+   * omitted and deployment resource ref provided has worker_pool defined, that
+   * worker pool is used.
+   *
+   * @param string $workerPool
    */
   public function setWorkerPool($workerPool)
   {

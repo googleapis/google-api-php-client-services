@@ -20,19 +20,33 @@ namespace Google\Service\Config;
 class ProviderConfig extends \Google\Model
 {
   /**
+   * Unspecified source type, default to public sources.
+   */
+  public const SOURCE_TYPE_PROVIDER_SOURCE_UNSPECIFIED = 'PROVIDER_SOURCE_UNSPECIFIED';
+  /**
+   * Service maintained provider source type.
+   */
+  public const SOURCE_TYPE_SERVICE_MAINTAINED = 'SERVICE_MAINTAINED';
+  /**
+   * Optional. ProviderSource specifies the source type of the provider.
+   *
    * @var string
    */
   public $sourceType;
 
   /**
-   * @param string
+   * Optional. ProviderSource specifies the source type of the provider.
+   *
+   * Accepted values: PROVIDER_SOURCE_UNSPECIFIED, SERVICE_MAINTAINED
+   *
+   * @param self::SOURCE_TYPE_* $sourceType
    */
   public function setSourceType($sourceType)
   {
     $this->sourceType = $sourceType;
   }
   /**
-   * @return string
+   * @return self::SOURCE_TYPE_*
    */
   public function getSourceType()
   {

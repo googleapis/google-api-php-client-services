@@ -23,16 +23,23 @@ class ListDeploymentsResponse extends \Google\Collection
   protected $deploymentsType = Deployment::class;
   protected $deploymentsDataType = 'array';
   /**
+   * Token to be supplied to the next ListDeployments request via `page_token`
+   * to obtain the next set of results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Deployment[]
+   * List of Deployments.
+   *
+   * @param Deployment[] $deployments
    */
   public function setDeployments($deployments)
   {
@@ -46,7 +53,10 @@ class ListDeploymentsResponse extends \Google\Collection
     return $this->deployments;
   }
   /**
-   * @param string
+   * Token to be supplied to the next ListDeployments request via `page_token`
+   * to obtain the next set of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListDeploymentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

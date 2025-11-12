@@ -20,12 +20,18 @@ namespace Google\Service\Config;
 class Statefile extends \Google\Model
 {
   /**
+   * Output only. Cloud Storage signed URI used for downloading or uploading the
+   * state file.
+   *
    * @var string
    */
   public $signedUri;
 
   /**
-   * @param string
+   * Output only. Cloud Storage signed URI used for downloading or uploading the
+   * state file.
+   *
+   * @param string $signedUri
    */
   public function setSignedUri($signedUri)
   {

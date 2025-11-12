@@ -20,12 +20,18 @@ namespace Google\Service\Config;
 class ResourceCAIInfo extends \Google\Model
 {
   /**
+   * CAI resource name in the format following
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   *
    * @var string
    */
   public $fullResourceName;
 
   /**
-   * @param string
+   * CAI resource name in the format following
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   *
+   * @param string $fullResourceName
    */
   public function setFullResourceName($fullResourceName)
   {

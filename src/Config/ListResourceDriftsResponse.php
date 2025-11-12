@@ -21,18 +21,28 @@ class ListResourceDriftsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token to request the next page of resources from the 'ListResourceDrifts'
+   * method. The value of an empty string means that there are no more resources
+   * to return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $resourceDriftsType = ResourceDrift::class;
   protected $resourceDriftsDataType = 'array';
   /**
+   * Unreachable resources, if any.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token to request the next page of resources from the 'ListResourceDrifts'
+   * method. The value of an empty string means that there are no more resources
+   * to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,9 @@ class ListResourceDriftsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ResourceDrift[]
+   * List of ResourceDrifts.
+   *
+   * @param ResourceDrift[] $resourceDrifts
    */
   public function setResourceDrifts($resourceDrifts)
   {
@@ -60,7 +72,9 @@ class ListResourceDriftsResponse extends \Google\Collection
     return $this->resourceDrifts;
   }
   /**
-   * @param string[]
+   * Unreachable resources, if any.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -21,18 +21,26 @@ class ListTerraformVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * Token to be supplied to the next ListTerraformVersions request via
+   * `page_token` to obtain the next set of results.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $terraformVersionsType = TerraformVersion::class;
   protected $terraformVersionsDataType = 'array';
   /**
+   * Unreachable resources, if any.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * Token to be supplied to the next ListTerraformVersions request via
+   * `page_token` to obtain the next set of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListTerraformVersionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TerraformVersion[]
+   * List of TerraformVersions.
+   *
+   * @param TerraformVersion[] $terraformVersions
    */
   public function setTerraformVersions($terraformVersions)
   {
@@ -60,7 +70,9 @@ class ListTerraformVersionsResponse extends \Google\Collection
     return $this->terraformVersions;
   }
   /**
-   * @param string[]
+   * Unreachable resources, if any.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

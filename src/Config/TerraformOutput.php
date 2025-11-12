@@ -20,16 +20,24 @@ namespace Google\Service\Config;
 class TerraformOutput extends \Google\Model
 {
   /**
+   * Identifies whether Terraform has set this output as a potential sensitive
+   * value.
+   *
    * @var bool
    */
   public $sensitive;
   /**
+   * Value of output.
+   *
    * @var array
    */
   public $value;
 
   /**
-   * @param bool
+   * Identifies whether Terraform has set this output as a potential sensitive
+   * value.
+   *
+   * @param bool $sensitive
    */
   public function setSensitive($sensitive)
   {
@@ -43,7 +51,9 @@ class TerraformOutput extends \Google\Model
     return $this->sensitive;
   }
   /**
-   * @param array
+   * Value of output.
+   *
+   * @param array $value
    */
   public function setValue($value)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\Config;
 class ExportDeploymentStatefileRequest extends \Google\Model
 {
   /**
+   * Optional. If this flag is set to true, the exported deployment state file
+   * will be the draft state. This will enable the draft file to be validated
+   * before copying it over to the working state on unlock.
+   *
    * @var bool
    */
   public $draft;
 
   /**
-   * @param bool
+   * Optional. If this flag is set to true, the exported deployment state file
+   * will be the draft state. This will enable the draft file to be validated
+   * before copying it over to the working state on unlock.
+   *
+   * @param bool $draft
    */
   public function setDraft($draft)
   {

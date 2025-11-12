@@ -23,7 +23,9 @@ class ExportPreviewResultResponse extends \Google\Model
   protected $resultDataType = '';
 
   /**
-   * @param PreviewResult
+   * Output only. Signed URLs for accessing the plan files.
+   *
+   * @param PreviewResult $result
    */
   public function setResult(PreviewResult $result)
   {

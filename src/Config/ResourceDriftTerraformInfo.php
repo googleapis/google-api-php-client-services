@@ -20,24 +20,34 @@ namespace Google\Service\Config;
 class ResourceDriftTerraformInfo extends \Google\Model
 {
   /**
+   * Output only. The address of the drifted resource.
+   *
    * @var string
    */
   public $address;
   /**
+   * Output only. The provider of the drifted resource.
+   *
    * @var string
    */
   public $provider;
   /**
+   * Output only. TF resource name.
+   *
    * @var string
    */
   public $resourceName;
   /**
+   * Output only. The type of the drifted resource.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The address of the drifted resource.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -51,7 +61,9 @@ class ResourceDriftTerraformInfo extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * Output only. The provider of the drifted resource.
+   *
+   * @param string $provider
    */
   public function setProvider($provider)
   {
@@ -65,7 +77,9 @@ class ResourceDriftTerraformInfo extends \Google\Model
     return $this->provider;
   }
   /**
-   * @param string
+   * Output only. TF resource name.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -79,7 +93,9 @@ class ResourceDriftTerraformInfo extends \Google\Model
     return $this->resourceName;
   }
   /**
-   * @param string
+   * Output only. The type of the drifted resource.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

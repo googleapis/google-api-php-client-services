@@ -22,20 +22,32 @@ class TerraformError extends \Google\Model
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * A human-readable error description.
+   *
    * @var string
    */
   public $errorDescription;
   /**
+   * HTTP response code returned from Google Cloud Platform APIs when Terraform
+   * fails to provision the resource. If unset or 0, no HTTP response code was
+   * returned by Terraform.
+   *
    * @var int
    */
   public $httpResponseCode;
   /**
+   * Address of the resource associated with the error, e.g.
+   * `google_compute_network.vpc_network`.
+   *
    * @var string
    */
   public $resourceAddress;
 
   /**
-   * @param Status
+   * Output only. Original error response from underlying Google API, if
+   * available.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -49,7 +61,9 @@ class TerraformError extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * A human-readable error description.
+   *
+   * @param string $errorDescription
    */
   public function setErrorDescription($errorDescription)
   {
@@ -63,7 +77,11 @@ class TerraformError extends \Google\Model
     return $this->errorDescription;
   }
   /**
-   * @param int
+   * HTTP response code returned from Google Cloud Platform APIs when Terraform
+   * fails to provision the resource. If unset or 0, no HTTP response code was
+   * returned by Terraform.
+   *
+   * @param int $httpResponseCode
    */
   public function setHttpResponseCode($httpResponseCode)
   {
@@ -77,7 +95,10 @@ class TerraformError extends \Google\Model
     return $this->httpResponseCode;
   }
   /**
-   * @param string
+   * Address of the resource associated with the error, e.g.
+   * `google_compute_network.vpc_network`.
+   *
+   * @param string $resourceAddress
    */
   public function setResourceAddress($resourceAddress)
   {

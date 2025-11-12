@@ -20,10 +20,16 @@ namespace Google\Service\Config;
 class ApplyResults extends \Google\Model
 {
   /**
+   * Location of artifacts (e.g. logs) in Google Cloud Storage. Format:
+   * `gs://{bucket}/{object}`
+   *
    * @var string
    */
   public $artifacts;
   /**
+   * Location of a blueprint copy and other manifests in Google Cloud Storage.
+   * Format: `gs://{bucket}/{object}`
+   *
    * @var string
    */
   public $content;
@@ -31,7 +37,10 @@ class ApplyResults extends \Google\Model
   protected $outputsDataType = 'map';
 
   /**
-   * @param string
+   * Location of artifacts (e.g. logs) in Google Cloud Storage. Format:
+   * `gs://{bucket}/{object}`
+   *
+   * @param string $artifacts
    */
   public function setArtifacts($artifacts)
   {
@@ -45,7 +54,10 @@ class ApplyResults extends \Google\Model
     return $this->artifacts;
   }
   /**
-   * @param string
+   * Location of a blueprint copy and other manifests in Google Cloud Storage.
+   * Format: `gs://{bucket}/{object}`
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -59,7 +71,9 @@ class ApplyResults extends \Google\Model
     return $this->content;
   }
   /**
-   * @param TerraformOutput[]
+   * Map of output name to output info.
+   *
+   * @param TerraformOutput[] $outputs
    */
   public function setOutputs($outputs)
   {

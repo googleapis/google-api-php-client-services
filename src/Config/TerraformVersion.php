@@ -20,28 +20,57 @@ namespace Google\Service\Config;
 class TerraformVersion extends \Google\Model
 {
   /**
+   * The default value. This value is used if the state is omitted.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The version is actively supported.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The version is deprecated.
+   */
+  public const STATE_DEPRECATED = 'DEPRECATED';
+  /**
+   * The version is obsolete.
+   */
+  public const STATE_OBSOLETE = 'OBSOLETE';
+  /**
+   * Output only. When the version is deprecated.
+   *
    * @var string
    */
   public $deprecateTime;
   /**
+   * Identifier. The version name is in the format: 'projects/{project_id}/locat
+   * ions/{location}/terraformVersions/{terraform_version}'.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. When the version is obsolete.
+   *
    * @var string
    */
   public $obsoleteTime;
   /**
+   * Output only. The state of the version, ACTIVE, DEPRECATED or OBSOLETE.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. When the version is supported.
+   *
    * @var string
    */
   public $supportTime;
 
   /**
-   * @param string
+   * Output only. When the version is deprecated.
+   *
+   * @param string $deprecateTime
    */
   public function setDeprecateTime($deprecateTime)
   {
@@ -55,7 +84,10 @@ class TerraformVersion extends \Google\Model
     return $this->deprecateTime;
   }
   /**
-   * @param string
+   * Identifier. The version name is in the format: 'projects/{project_id}/locat
+   * ions/{location}/terraformVersions/{terraform_version}'.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -69,7 +101,9 @@ class TerraformVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. When the version is obsolete.
+   *
+   * @param string $obsoleteTime
    */
   public function setObsoleteTime($obsoleteTime)
   {
@@ -83,21 +117,27 @@ class TerraformVersion extends \Google\Model
     return $this->obsoleteTime;
   }
   /**
-   * @param string
+   * Output only. The state of the version, ACTIVE, DEPRECATED or OBSOLETE.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, DEPRECATED, OBSOLETE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. When the version is supported.
+   *
+   * @param string $supportTime
    */
   public function setSupportTime($supportTime)
   {

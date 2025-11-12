@@ -21,6 +21,9 @@ class ResourceDrift extends \Google\Collection
 {
   protected $collection_key = 'propertyDrifts';
   /**
+   * Identifier. The name of the resource drift. Format: 'projects/{project_id}/
+   * locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+   *
    * @var string
    */
   public $name;
@@ -30,7 +33,10 @@ class ResourceDrift extends \Google\Collection
   protected $terraformInfoDataType = '';
 
   /**
-   * @param string
+   * Identifier. The name of the resource drift. Format: 'projects/{project_id}/
+   * locations/{location}/previews/{preview}/resourceDrifts/{resource_drift}'.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -44,7 +50,9 @@ class ResourceDrift extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PropertyDrift[]
+   * Output only. The property drifts of the resource drift.
+   *
+   * @param PropertyDrift[] $propertyDrifts
    */
   public function setPropertyDrifts($propertyDrifts)
   {
@@ -58,7 +66,9 @@ class ResourceDrift extends \Google\Collection
     return $this->propertyDrifts;
   }
   /**
-   * @param ResourceDriftTerraformInfo
+   * Output only. Terraform info of the resource drift.
+   *
+   * @param ResourceDriftTerraformInfo $terraformInfo
    */
   public function setTerraformInfo(ResourceDriftTerraformInfo $terraformInfo)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\Config;
 class PreviewArtifacts extends \Google\Model
 {
   /**
+   * Output only. Location of artifacts in Google Cloud Storage. Format:
+   * `gs://{bucket}/{object}`
+   *
    * @var string
    */
   public $artifacts;
   /**
+   * Output only. Location of a blueprint copy and other content in Google Cloud
+   * Storage. Format: `gs://{bucket}/{object}`
+   *
    * @var string
    */
   public $content;
 
   /**
-   * @param string
+   * Output only. Location of artifacts in Google Cloud Storage. Format:
+   * `gs://{bucket}/{object}`
+   *
+   * @param string $artifacts
    */
   public function setArtifacts($artifacts)
   {
@@ -43,7 +52,10 @@ class PreviewArtifacts extends \Google\Model
     return $this->artifacts;
   }
   /**
-   * @param string
+   * Output only. Location of a blueprint copy and other content in Google Cloud
+   * Storage. Format: `gs://{bucket}/{object}`
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
