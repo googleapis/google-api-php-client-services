@@ -20,26 +20,55 @@ namespace Google\Service\CloudRedis;
 class Operation extends \Google\Model
 {
   /**
+   * If the value is `false`, it means the operation is still in progress. If
+   * `true`, the operation is completed, and either `error` or `response` is
+   * available.
+   *
    * @var bool
    */
   public $done;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * { `createTime`: The time the operation was created. `endTime`: The time the
+   * operation finished running. `target`: Server-defined resource path for the
+   * target of the operation. `verb`: Name of the verb executed by the
+   * operation. `statusDetail`: Human-readable status of the operation, if any.
+   * `cancelRequested`: Identifies whether the user has requested cancellation
+   * of the operation. Operations that have successfully been cancelled have
+   * Operation.error value with a google.rpc.Status.code of 1, corresponding to
+   * `Code.CANCELLED`. `apiVersion`: API version used to start the operation. }
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * The server-assigned name, which is only unique within the same service that
+   * originally returns it. If you use the default HTTP mapping, the `name`
+   * should be a resource name ending with `operations/{unique_id}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * The normal, successful response of the operation. If the original method
+   * returns no data on success, such as `Delete`, the response is
+   * `google.protobuf.Empty`. If the original method is standard
+   * `Get`/`Create`/`Update`, the response should be the resource. For other
+   * methods, the response should have the type `XxxResponse`, where `Xxx` is
+   * the original method name. For example, if the original method name is
+   * `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.
+   *
    * @var array[]
    */
   public $response;
 
   /**
-   * @param bool
+   * If the value is `false`, it means the operation is still in progress. If
+   * `true`, the operation is completed, and either `error` or `response` is
+   * available.
+   *
+   * @param bool $done
    */
   public function setDone($done)
   {
@@ -53,7 +82,9 @@ class Operation extends \Google\Model
     return $this->done;
   }
   /**
-   * @param Status
+   * The error result of the operation in case of failure or cancellation.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -67,7 +98,16 @@ class Operation extends \Google\Model
     return $this->error;
   }
   /**
-   * @param array[]
+   * { `createTime`: The time the operation was created. `endTime`: The time the
+   * operation finished running. `target`: Server-defined resource path for the
+   * target of the operation. `verb`: Name of the verb executed by the
+   * operation. `statusDetail`: Human-readable status of the operation, if any.
+   * `cancelRequested`: Identifies whether the user has requested cancellation
+   * of the operation. Operations that have successfully been cancelled have
+   * Operation.error value with a google.rpc.Status.code of 1, corresponding to
+   * `Code.CANCELLED`. `apiVersion`: API version used to start the operation. }
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -81,7 +121,11 @@ class Operation extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The server-assigned name, which is only unique within the same service that
+   * originally returns it. If you use the default HTTP mapping, the `name`
+   * should be a resource name ending with `operations/{unique_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,7 +139,15 @@ class Operation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param array[]
+   * The normal, successful response of the operation. If the original method
+   * returns no data on success, such as `Delete`, the response is
+   * `google.protobuf.Empty`. If the original method is standard
+   * `Get`/`Create`/`Update`, the response should be the resource. For other
+   * methods, the response should have the type `XxxResponse`, where `Xxx` is
+   * the original method name. For example, if the original method name is
+   * `TakeSnapshot()`, the inferred response type is `TakeSnapshotResponse`.
+   *
+   * @param array[] $response
    */
   public function setResponse($response)
   {

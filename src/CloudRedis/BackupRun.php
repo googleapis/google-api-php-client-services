@@ -19,23 +19,40 @@ namespace Google\Service\CloudRedis;
 
 class BackupRun extends \Google\Model
 {
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
   /**
+   * The backup was successful.
+   */
+  public const STATUS_SUCCESSFUL = 'SUCCESSFUL';
+  /**
+   * The backup was unsuccessful.
+   */
+  public const STATUS_FAILED = 'FAILED';
+  /**
+   * The time the backup operation completed. REQUIRED
+   *
    * @var string
    */
   public $endTime;
   protected $errorType = OperationError::class;
   protected $errorDataType = '';
   /**
+   * The time the backup operation started. REQUIRED
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The status of this run. REQUIRED
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * The time the backup operation completed. REQUIRED
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -49,7 +66,10 @@ class BackupRun extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param OperationError
+   * Information about why the backup operation failed. This is only present if
+   * the run has the FAILED status. OPTIONAL
+   *
+   * @param OperationError $error
    */
   public function setError(OperationError $error)
   {
@@ -63,7 +83,9 @@ class BackupRun extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * The time the backup operation started. REQUIRED
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -77,14 +99,18 @@ class BackupRun extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The status of this run. REQUIRED
+   *
+   * Accepted values: STATUS_UNSPECIFIED, SUCCESSFUL, FAILED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

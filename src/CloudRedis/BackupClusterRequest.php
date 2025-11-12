@@ -20,16 +20,25 @@ namespace Google\Service\CloudRedis;
 class BackupClusterRequest extends \Google\Model
 {
   /**
+   * Optional. The id of the backup to be created. If not specified, the default
+   * value ([YYYYMMDDHHMMSS]_[Shortened Cluster UID] is used.
+   *
    * @var string
    */
   public $backupId;
   /**
+   * Optional. TTL for the backup to expire. Value range is 1 day to 100 years.
+   * If not specified, the default value is 100 years.
+   *
    * @var string
    */
   public $ttl;
 
   /**
-   * @param string
+   * Optional. The id of the backup to be created. If not specified, the default
+   * value ([YYYYMMDDHHMMSS]_[Shortened Cluster UID] is used.
+   *
+   * @param string $backupId
    */
   public function setBackupId($backupId)
   {
@@ -43,7 +52,10 @@ class BackupClusterRequest extends \Google\Model
     return $this->backupId;
   }
   /**
-   * @param string
+   * Optional. TTL for the backup to expire. Value range is 1 day to 100 years.
+   * If not specified, the default value is 100 years.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {

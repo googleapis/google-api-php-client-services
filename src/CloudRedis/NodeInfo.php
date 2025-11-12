@@ -20,16 +20,22 @@ namespace Google\Service\CloudRedis;
 class NodeInfo extends \Google\Model
 {
   /**
+   * Output only. Node identifying string. e.g. 'node-0', 'node-1'
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. Location of the node.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * Output only. Node identifying string. e.g. 'node-0', 'node-1'
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class NodeInfo extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Output only. Location of the node.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

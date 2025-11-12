@@ -20,12 +20,18 @@ namespace Google\Service\CloudRedis;
 class GcsDestination extends \Google\Model
 {
   /**
+   * Required. Data destination URI (e.g. 'gs://my_bucket/my_object'). Existing
+   * files will be overwritten.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Required. Data destination URI (e.g. 'gs://my_bucket/my_object'). Existing
+   * files will be overwritten.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

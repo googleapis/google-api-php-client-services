@@ -20,20 +20,28 @@ namespace Google\Service\CloudRedis;
 class BackupFile extends \Google\Model
 {
   /**
+   * Output only. The time when the backup file was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. e.g: .rdb
+   *
    * @var string
    */
   public $fileName;
   /**
+   * Output only. Size of the backup file in bytes.
+   *
    * @var string
    */
   public $sizeBytes;
 
   /**
-   * @param string
+   * Output only. The time when the backup file was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,7 +55,9 @@ class BackupFile extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. e.g: .rdb
+   *
+   * @param string $fileName
    */
   public function setFileName($fileName)
   {
@@ -61,7 +71,9 @@ class BackupFile extends \Google\Model
     return $this->fileName;
   }
   /**
-   * @param string
+   * Output only. Size of the backup file in bytes.
+   *
+   * @param string $sizeBytes
    */
   public function setSizeBytes($sizeBytes)
   {

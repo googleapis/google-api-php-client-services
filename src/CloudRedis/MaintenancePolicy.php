@@ -21,14 +21,21 @@ class MaintenancePolicy extends \Google\Collection
 {
   protected $collection_key = 'weeklyMaintenanceWindow';
   /**
+   * Output only. The time when the policy was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Description of what this policy is for. Create/Update methods
+   * return INVALID_ARGUMENT if the length is greater than 512.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The time when the policy was last updated.
+   *
    * @var string
    */
   public $updateTime;
@@ -36,7 +43,9 @@ class MaintenancePolicy extends \Google\Collection
   protected $weeklyMaintenanceWindowDataType = 'array';
 
   /**
-   * @param string
+   * Output only. The time when the policy was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -50,7 +59,10 @@ class MaintenancePolicy extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Description of what this policy is for. Create/Update methods
+   * return INVALID_ARGUMENT if the length is greater than 512.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -64,7 +76,9 @@ class MaintenancePolicy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The time when the policy was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -78,7 +92,11 @@ class MaintenancePolicy extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param WeeklyMaintenanceWindow[]
+   * Optional. Maintenance window that is applied to resources covered by this
+   * policy. Minimum 1. For the current version, the maximum number of
+   * weekly_window is expected to be one.
+   *
+   * @param WeeklyMaintenanceWindow[] $weeklyMaintenanceWindow
    */
   public function setWeeklyMaintenanceWindow($weeklyMaintenanceWindow)
   {

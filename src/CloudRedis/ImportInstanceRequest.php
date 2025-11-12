@@ -23,7 +23,9 @@ class ImportInstanceRequest extends \Google\Model
   protected $inputConfigDataType = '';
 
   /**
-   * @param InputConfig
+   * Required. Specify data to be imported.
+   *
+   * @param InputConfig $inputConfig
    */
   public function setInputConfig(InputConfig $inputConfig)
   {

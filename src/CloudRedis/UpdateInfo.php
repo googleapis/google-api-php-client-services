@@ -20,34 +20,67 @@ namespace Google\Service\CloudRedis;
 class UpdateInfo extends \Google\Model
 {
   /**
+   * Node type unspecified
+   */
+  public const TARGET_NODE_TYPE_NODE_TYPE_UNSPECIFIED = 'NODE_TYPE_UNSPECIFIED';
+  /**
+   * Redis shared core nano node_type.
+   */
+  public const TARGET_NODE_TYPE_REDIS_SHARED_CORE_NANO = 'REDIS_SHARED_CORE_NANO';
+  /**
+   * Redis highmem medium node_type.
+   */
+  public const TARGET_NODE_TYPE_REDIS_HIGHMEM_MEDIUM = 'REDIS_HIGHMEM_MEDIUM';
+  /**
+   * Redis highmem xlarge node_type.
+   */
+  public const TARGET_NODE_TYPE_REDIS_HIGHMEM_XLARGE = 'REDIS_HIGHMEM_XLARGE';
+  /**
+   * Redis standard small node_type.
+   */
+  public const TARGET_NODE_TYPE_REDIS_STANDARD_SMALL = 'REDIS_STANDARD_SMALL';
+  /**
+   * Target node type for redis cluster.
+   *
    * @var string
    */
   public $targetNodeType;
   /**
+   * Target number of replica nodes per shard.
+   *
    * @var int
    */
   public $targetReplicaCount;
   /**
+   * Target number of shards for redis cluster
+   *
    * @var int
    */
   public $targetShardCount;
 
   /**
-   * @param string
+   * Target node type for redis cluster.
+   *
+   * Accepted values: NODE_TYPE_UNSPECIFIED, REDIS_SHARED_CORE_NANO,
+   * REDIS_HIGHMEM_MEDIUM, REDIS_HIGHMEM_XLARGE, REDIS_STANDARD_SMALL
+   *
+   * @param self::TARGET_NODE_TYPE_* $targetNodeType
    */
   public function setTargetNodeType($targetNodeType)
   {
     $this->targetNodeType = $targetNodeType;
   }
   /**
-   * @return string
+   * @return self::TARGET_NODE_TYPE_*
    */
   public function getTargetNodeType()
   {
     return $this->targetNodeType;
   }
   /**
-   * @param int
+   * Target number of replica nodes per shard.
+   *
+   * @param int $targetReplicaCount
    */
   public function setTargetReplicaCount($targetReplicaCount)
   {
@@ -61,7 +94,9 @@ class UpdateInfo extends \Google\Model
     return $this->targetReplicaCount;
   }
   /**
-   * @param int
+   * Target number of shards for redis cluster
+   *
+   * @param int $targetShardCount
    */
   public function setTargetShardCount($targetShardCount)
   {

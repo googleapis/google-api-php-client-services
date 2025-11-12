@@ -27,7 +27,9 @@ class ResourceMaintenanceDenySchedule extends \Google\Model
   protected $timeDataType = '';
 
   /**
-   * @param Date
+   * Optional. Deny period end date.
+   *
+   * @param Date $endDate
    */
   public function setEndDate(Date $endDate)
   {
@@ -41,7 +43,9 @@ class ResourceMaintenanceDenySchedule extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param Date
+   * Optional. The start date of the deny maintenance period.
+   *
+   * @param Date $startDate
    */
   public function setStartDate(Date $startDate)
   {
@@ -55,7 +59,10 @@ class ResourceMaintenanceDenySchedule extends \Google\Model
     return $this->startDate;
   }
   /**
-   * @param TimeOfDay
+   * Optional. Time in UTC when the deny period starts on start_date and ends on
+   * end_date.
+   *
+   * @param TimeOfDay $time
    */
   public function setTime(TimeOfDay $time)
   {

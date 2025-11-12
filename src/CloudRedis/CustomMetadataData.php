@@ -24,7 +24,10 @@ class CustomMetadataData extends \Google\Collection
   protected $internalResourceMetadataDataType = 'array';
 
   /**
-   * @param InternalResourceMetadata[]
+   * Metadata for individual internal resources in an instance. e.g. spanner
+   * instance can have multiple databases with unique configuration.
+   *
+   * @param InternalResourceMetadata[] $internalResourceMetadata
    */
   public function setInternalResourceMetadata($internalResourceMetadata)
   {

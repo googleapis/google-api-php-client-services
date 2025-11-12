@@ -20,12 +20,24 @@ namespace Google\Service\CloudRedis;
 class ManagedBackupSource extends \Google\Model
 {
   /**
+   * Optional. Example: //redis.googleapis.com/projects/{project}/locations/{loc
+   * ation}/backupCollections/{collection}/backups/{backup} A shorter version
+   * (without the prefix) of the backup name is also supported, like projects/{p
+   * roject}/locations/{location}/backupCollections/{collection}/backups/{backup
+   * _id} In this case, it assumes the backup is under redis.googleapis.com.
+   *
    * @var string
    */
   public $backup;
 
   /**
-   * @param string
+   * Optional. Example: //redis.googleapis.com/projects/{project}/locations/{loc
+   * ation}/backupCollections/{collection}/backups/{backup} A shorter version
+   * (without the prefix) of the backup name is also supported, like projects/{p
+   * roject}/locations/{location}/backupCollections/{collection}/backups/{backup
+   * _id} In this case, it assumes the backup is under redis.googleapis.com.
+   *
+   * @param string $backup
    */
   public function setBackup($backup)
   {

@@ -20,30 +20,46 @@ namespace Google\Service\CloudRedis;
 class MaintenanceSchedule extends \Google\Model
 {
   /**
+   * If the scheduled maintenance can be rescheduled, default is true.
+   *
+   * @deprecated
    * @var bool
    */
   public $canReschedule;
   /**
+   * Output only. The end time of any upcoming scheduled maintenance for this
+   * instance.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. The deadline that the maintenance schedule start time can not
+   * go beyond, including reschedule.
+   *
    * @var string
    */
   public $scheduleDeadlineTime;
   /**
+   * Output only. The start time of any upcoming scheduled maintenance for this
+   * instance.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param bool
+   * If the scheduled maintenance can be rescheduled, default is true.
+   *
+   * @deprecated
+   * @param bool $canReschedule
    */
   public function setCanReschedule($canReschedule)
   {
     $this->canReschedule = $canReschedule;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getCanReschedule()
@@ -51,7 +67,10 @@ class MaintenanceSchedule extends \Google\Model
     return $this->canReschedule;
   }
   /**
-   * @param string
+   * Output only. The end time of any upcoming scheduled maintenance for this
+   * instance.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -65,7 +84,10 @@ class MaintenanceSchedule extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. The deadline that the maintenance schedule start time can not
+   * go beyond, including reschedule.
+   *
+   * @param string $scheduleDeadlineTime
    */
   public function setScheduleDeadlineTime($scheduleDeadlineTime)
   {
@@ -79,7 +101,10 @@ class MaintenanceSchedule extends \Google\Model
     return $this->scheduleDeadlineTime;
   }
   /**
-   * @param string
+   * Output only. The start time of any upcoming scheduled maintenance for this
+   * instance.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

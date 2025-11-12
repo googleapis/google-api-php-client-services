@@ -25,7 +25,10 @@ class ConnectionDetail extends \Google\Model
   protected $pscConnectionDataType = '';
 
   /**
-   * @param PscAutoConnection
+   * Detailed information of a PSC connection that is created through service
+   * connectivity automation.
+   *
+   * @param PscAutoConnection $pscAutoConnection
    */
   public function setPscAutoConnection(PscAutoConnection $pscAutoConnection)
   {
@@ -39,7 +42,10 @@ class ConnectionDetail extends \Google\Model
     return $this->pscAutoConnection;
   }
   /**
-   * @param PscConnection
+   * Detailed information of a PSC connection that is created by the customer
+   * who owns the cluster.
+   *
+   * @param PscConnection $pscConnection
    */
   public function setPscConnection(PscConnection $pscConnection)
   {

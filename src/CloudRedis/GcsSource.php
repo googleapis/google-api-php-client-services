@@ -20,12 +20,16 @@ namespace Google\Service\CloudRedis;
 class GcsSource extends \Google\Model
 {
   /**
+   * Required. Source data URI. (e.g. 'gs://my_bucket/my_object').
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Required. Source data URI. (e.g. 'gs://my_bucket/my_object').
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

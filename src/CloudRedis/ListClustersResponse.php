@@ -23,16 +23,31 @@ class ListClustersResponse extends \Google\Collection
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Cluster[]
+   * A list of Redis clusters in the project in the specified location, or
+   * across all locations. If the `location_id` in the parent field of the
+   * request is "-", all regions available to the project are queried, and the
+   * results aggregated. If in such an aggregated query a location is
+   * unavailable, a placeholder Redis entry is included in the response with the
+   * `name` field set to a value of the form
+   * `projects/{project_id}/locations/{location_id}/clusters/`- and the `status`
+   * field set to ERROR and `status_message` field set to "location not
+   * available for ListClusters".
+   *
+   * @param Cluster[] $clusters
    */
   public function setClusters($clusters)
   {
@@ -46,7 +61,10 @@ class ListClustersResponse extends \Google\Collection
     return $this->clusters;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +78,9 @@ class ListClustersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -25,7 +25,7 @@ class UserLabels extends \Google\Model
   public $labels;
 
   /**
-   * @param string[]
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {

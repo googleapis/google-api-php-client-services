@@ -23,7 +23,9 @@ class ExportInstanceRequest extends \Google\Model
   protected $outputConfigDataType = '';
 
   /**
-   * @param OutputConfig
+   * Required. Specify data to be exported.
+   *
+   * @param OutputConfig $outputConfig
    */
   public function setOutputConfig(OutputConfig $outputConfig)
   {

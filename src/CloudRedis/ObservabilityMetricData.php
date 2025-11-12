@@ -20,18 +20,89 @@ namespace Google\Service\CloudRedis;
 class ObservabilityMetricData extends \Google\Model
 {
   /**
+   * Unspecified aggregation type.
+   */
+  public const AGGREGATION_TYPE_AGGREGATION_TYPE_UNSPECIFIED = 'AGGREGATION_TYPE_UNSPECIFIED';
+  /**
+   * PEAK aggregation type.
+   */
+  public const AGGREGATION_TYPE_PEAK = 'PEAK';
+  /**
+   * P99 aggregation type.
+   */
+  public const AGGREGATION_TYPE_P99 = 'P99';
+  /**
+   * P95 aggregation type.
+   */
+  public const AGGREGATION_TYPE_P95 = 'P95';
+  /**
+   * current aggregation type.
+   */
+  public const AGGREGATION_TYPE_CURRENT = 'CURRENT';
+  /**
+   * Unspecified metric type.
+   */
+  public const METRIC_TYPE_METRIC_TYPE_UNSPECIFIED = 'METRIC_TYPE_UNSPECIFIED';
+  /**
+   * CPU utilization for a resource. The value is a fraction between 0.0 and 1.0
+   * (may momentarily exceed 1.0 in some cases).
+   */
+  public const METRIC_TYPE_CPU_UTILIZATION = 'CPU_UTILIZATION';
+  /**
+   * Memory utilization for a resource. The value is a fraction between 0.0 and
+   * 1.0 (may momentarily exceed 1.0 in some cases).
+   */
+  public const METRIC_TYPE_MEMORY_UTILIZATION = 'MEMORY_UTILIZATION';
+  /**
+   * Number of network connections for a resource.
+   */
+  public const METRIC_TYPE_NETWORK_CONNECTIONS = 'NETWORK_CONNECTIONS';
+  /**
+   * Storage utilization for a resource. The value is a fraction between 0.0 and
+   * 1.0 (may momentarily exceed 1.0 in some cases).
+   */
+  public const METRIC_TYPE_STORAGE_UTILIZATION = 'STORAGE_UTILIZATION';
+  /**
+   * Sotrage used by a resource.
+   */
+  public const METRIC_TYPE_STORAGE_USED_BYTES = 'STORAGE_USED_BYTES';
+  /**
+   * Node count for a resource. It represents the number of node units in a
+   * bigtable/spanner instance.
+   */
+  public const METRIC_TYPE_NODE_COUNT = 'NODE_COUNT';
+  /**
+   * Memory used by a resource (in bytes).
+   */
+  public const METRIC_TYPE_MEMORY_USED_BYTES = 'MEMORY_USED_BYTES';
+  /**
+   * Processing units used by a resource. It represents the number of processing
+   * units in a spanner instance.
+   */
+  public const METRIC_TYPE_PROCESSING_UNIT_COUNT = 'PROCESSING_UNIT_COUNT';
+  /**
+   * Required. Type of aggregation performed on the metric.
+   *
    * @var string
    */
   public $aggregationType;
   /**
+   * Required. Type of metric like CPU, Memory, etc.
+   *
    * @var string
    */
   public $metricType;
   /**
+   * Required. The time the metric value was observed.
+   *
    * @var string
    */
   public $observationTime;
   /**
+   * Required. Database resource name associated with the signal. Resource name
+   * to follow CAIS resource_name format as noted here go/condor-common-
+   * datamodel
+   *
    * @var string
    */
   public $resourceName;
@@ -39,35 +110,47 @@ class ObservabilityMetricData extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param string
+   * Required. Type of aggregation performed on the metric.
+   *
+   * Accepted values: AGGREGATION_TYPE_UNSPECIFIED, PEAK, P99, P95, CURRENT
+   *
+   * @param self::AGGREGATION_TYPE_* $aggregationType
    */
   public function setAggregationType($aggregationType)
   {
     $this->aggregationType = $aggregationType;
   }
   /**
-   * @return string
+   * @return self::AGGREGATION_TYPE_*
    */
   public function getAggregationType()
   {
     return $this->aggregationType;
   }
   /**
-   * @param string
+   * Required. Type of metric like CPU, Memory, etc.
+   *
+   * Accepted values: METRIC_TYPE_UNSPECIFIED, CPU_UTILIZATION,
+   * MEMORY_UTILIZATION, NETWORK_CONNECTIONS, STORAGE_UTILIZATION,
+   * STORAGE_USED_BYTES, NODE_COUNT, MEMORY_USED_BYTES, PROCESSING_UNIT_COUNT
+   *
+   * @param self::METRIC_TYPE_* $metricType
    */
   public function setMetricType($metricType)
   {
     $this->metricType = $metricType;
   }
   /**
-   * @return string
+   * @return self::METRIC_TYPE_*
    */
   public function getMetricType()
   {
     return $this->metricType;
   }
   /**
-   * @param string
+   * Required. The time the metric value was observed.
+   *
+   * @param string $observationTime
    */
   public function setObservationTime($observationTime)
   {
@@ -81,7 +164,11 @@ class ObservabilityMetricData extends \Google\Model
     return $this->observationTime;
   }
   /**
-   * @param string
+   * Required. Database resource name associated with the signal. Resource name
+   * to follow CAIS resource_name format as noted here go/condor-common-
+   * datamodel
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -95,7 +182,9 @@ class ObservabilityMetricData extends \Google\Model
     return $this->resourceName;
   }
   /**
-   * @param TypedValue
+   * Required. Value of the metric type.
+   *
+   * @param TypedValue $value
    */
   public function setValue(TypedValue $value)
   {

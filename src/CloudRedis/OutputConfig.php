@@ -23,7 +23,9 @@ class OutputConfig extends \Google\Model
   protected $gcsDestinationDataType = '';
 
   /**
-   * @param GcsDestination
+   * Google Cloud Storage destination for output content.
+   *
+   * @param GcsDestination $gcsDestination
    */
   public function setGcsDestination(GcsDestination $gcsDestination)
   {

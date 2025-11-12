@@ -19,9 +19,27 @@ namespace Google\Service\CloudRedis;
 
 class ClusterPersistenceConfig extends \Google\Model
 {
+  /**
+   * Not set.
+   */
+  public const MODE_PERSISTENCE_MODE_UNSPECIFIED = 'PERSISTENCE_MODE_UNSPECIFIED';
+  /**
+   * Persistence is disabled, and any snapshot data is deleted.
+   */
+  public const MODE_DISABLED = 'DISABLED';
+  /**
+   * RDB based persistence is enabled.
+   */
+  public const MODE_RDB = 'RDB';
+  /**
+   * AOF based persistence is enabled.
+   */
+  public const MODE_AOF = 'AOF';
   protected $aofConfigType = AOFConfig::class;
   protected $aofConfigDataType = '';
   /**
+   * Optional. The mode of persistence.
+   *
    * @var string
    */
   public $mode;
@@ -29,7 +47,9 @@ class ClusterPersistenceConfig extends \Google\Model
   protected $rdbConfigDataType = '';
 
   /**
-   * @param AOFConfig
+   * Optional. AOF configuration. This field will be ignored if mode is not AOF.
+   *
+   * @param AOFConfig $aofConfig
    */
   public function setAofConfig(AOFConfig $aofConfig)
   {
@@ -43,21 +63,27 @@ class ClusterPersistenceConfig extends \Google\Model
     return $this->aofConfig;
   }
   /**
-   * @param string
+   * Optional. The mode of persistence.
+   *
+   * Accepted values: PERSISTENCE_MODE_UNSPECIFIED, DISABLED, RDB, AOF
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {
     return $this->mode;
   }
   /**
-   * @param RDBConfig
+   * Optional. RDB configuration. This field will be ignored if mode is not RDB.
+   *
+   * @param RDBConfig $rdbConfig
    */
   public function setRdbConfig(RDBConfig $rdbConfig)
   {

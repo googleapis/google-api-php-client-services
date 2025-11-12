@@ -20,10 +20,15 @@ namespace Google\Service\CloudRedis;
 class DiscoveryEndpoint extends \Google\Model
 {
   /**
+   * Output only. Address of the exposed Redis endpoint used by clients to
+   * connect to the service. The address could be either IP or hostname.
+   *
    * @var string
    */
   public $address;
   /**
+   * Output only. The port number of the exposed Redis endpoint.
+   *
    * @var int
    */
   public $port;
@@ -31,7 +36,10 @@ class DiscoveryEndpoint extends \Google\Model
   protected $pscConfigDataType = '';
 
   /**
-   * @param string
+   * Output only. Address of the exposed Redis endpoint used by clients to
+   * connect to the service. The address could be either IP or hostname.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -45,7 +53,9 @@ class DiscoveryEndpoint extends \Google\Model
     return $this->address;
   }
   /**
-   * @param int
+   * Output only. The port number of the exposed Redis endpoint.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -59,7 +69,10 @@ class DiscoveryEndpoint extends \Google\Model
     return $this->port;
   }
   /**
-   * @param PscConfig
+   * Output only. Customer configuration for where the endpoint is created and
+   * accessed from.
+   *
+   * @param PscConfig $pscConfig
    */
   public function setPscConfig(PscConfig $pscConfig)
   {

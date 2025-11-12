@@ -24,7 +24,10 @@ class ClusterEndpoint extends \Google\Collection
   protected $connectionsDataType = 'array';
 
   /**
-   * @param ConnectionDetail[]
+   * Required. A group of PSC connections. They are created in the same VPC
+   * network, one for each service attachment in the cluster.
+   *
+   * @param ConnectionDetail[] $connections
    */
   public function setConnections($connections)
   {

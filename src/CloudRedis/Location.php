@@ -20,28 +20,47 @@ namespace Google\Service\CloudRedis;
 class Location extends \Google\Model
 {
   /**
+   * The friendly name for this location, typically a nearby city name. For
+   * example, "Tokyo".
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Cross-service attributes for the location. For example
+   * {"cloud.googleapis.com/region": "us-east1"}
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Resource ID for the region. For example: "us-east1".
+   *
    * @var string
    */
   public $locationId;
   /**
+   * Output only. The set of available zones in the location. The map is keyed
+   * by the lowercase ID of each zone, as defined by Compute Engine. These keys
+   * can be specified in `location_id` or `alternative_location_id` fields when
+   * creating a Redis instance.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Full resource name for the region. For example: "projects/example-
+   * project/locations/us-east1".
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The friendly name for this location, typically a nearby city name. For
+   * example, "Tokyo".
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -55,7 +74,10 @@ class Location extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Cross-service attributes for the location. For example
+   * {"cloud.googleapis.com/region": "us-east1"}
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -69,7 +91,9 @@ class Location extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Resource ID for the region. For example: "us-east1".
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -83,7 +107,12 @@ class Location extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param array[]
+   * Output only. The set of available zones in the location. The map is keyed
+   * by the lowercase ID of each zone, as defined by Compute Engine. These keys
+   * can be specified in `location_id` or `alternative_location_id` fields when
+   * creating a Redis instance.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -97,7 +126,10 @@ class Location extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * Full resource name for the region. For example: "projects/example-
+   * project/locations/us-east1".
+   *
+   * @param string $name
    */
   public function setName($name)
   {

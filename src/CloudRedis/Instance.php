@@ -19,52 +19,184 @@ namespace Google\Service\CloudRedis;
 
 class Instance extends \Google\Collection
 {
+  /**
+   * Not set.
+   */
+  public const CONNECT_MODE_CONNECT_MODE_UNSPECIFIED = 'CONNECT_MODE_UNSPECIFIED';
+  /**
+   * Connect via direct peering to the Memorystore for Redis hosted service.
+   */
+  public const CONNECT_MODE_DIRECT_PEERING = 'DIRECT_PEERING';
+  /**
+   * Connect your Memorystore for Redis instance using Private Service Access.
+   * Private services access provides an IP address range for multiple Google
+   * Cloud services, including Memorystore.
+   */
+  public const CONNECT_MODE_PRIVATE_SERVICE_ACCESS = 'PRIVATE_SERVICE_ACCESS';
+  /**
+   * If not set, Memorystore Redis backend will default to
+   * READ_REPLICAS_DISABLED.
+   */
+  public const READ_REPLICAS_MODE_READ_REPLICAS_MODE_UNSPECIFIED = 'READ_REPLICAS_MODE_UNSPECIFIED';
+  /**
+   * If disabled, read endpoint will not be provided and the instance cannot
+   * scale up or down the number of replicas.
+   */
+  public const READ_REPLICAS_MODE_READ_REPLICAS_DISABLED = 'READ_REPLICAS_DISABLED';
+  /**
+   * If enabled, read endpoint will be provided and the instance can scale up
+   * and down the number of replicas. Not valid for basic tier.
+   */
+  public const READ_REPLICAS_MODE_READ_REPLICAS_ENABLED = 'READ_REPLICAS_ENABLED';
+  /**
+   * Not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Redis instance is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Redis instance has been created and is fully usable.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Redis instance configuration is being updated. Certain kinds of updates may
+   * cause the instance to become unusable while the update is in progress.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Redis instance is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Redis instance is being repaired and may be unusable.
+   */
+  public const STATE_REPAIRING = 'REPAIRING';
+  /**
+   * Maintenance is being performed on this Redis instance.
+   */
+  public const STATE_MAINTENANCE = 'MAINTENANCE';
+  /**
+   * Redis instance is importing data (availability may be affected).
+   */
+  public const STATE_IMPORTING = 'IMPORTING';
+  /**
+   * Redis instance is failing over (availability may be affected).
+   */
+  public const STATE_FAILING_OVER = 'FAILING_OVER';
+  /**
+   * Not set.
+   */
+  public const TIER_TIER_UNSPECIFIED = 'TIER_UNSPECIFIED';
+  /**
+   * BASIC tier: standalone instance
+   */
+  public const TIER_BASIC = 'BASIC';
+  /**
+   * STANDARD_HA tier: highly available primary/replica instances
+   */
+  public const TIER_STANDARD_HA = 'STANDARD_HA';
+  /**
+   * Not set.
+   */
+  public const TRANSIT_ENCRYPTION_MODE_TRANSIT_ENCRYPTION_MODE_UNSPECIFIED = 'TRANSIT_ENCRYPTION_MODE_UNSPECIFIED';
+  /**
+   * Client to Server traffic encryption enabled with server authentication.
+   */
+  public const TRANSIT_ENCRYPTION_MODE_SERVER_AUTHENTICATION = 'SERVER_AUTHENTICATION';
+  /**
+   * TLS is disabled for the instance.
+   */
+  public const TRANSIT_ENCRYPTION_MODE_DISABLED = 'DISABLED';
   protected $collection_key = 'suspensionReasons';
   /**
+   * Optional. If specified, at least one node will be provisioned in this zone
+   * in addition to the zone specified in location_id. Only applicable to
+   * standard tier. If provided, it must be a different zone from the one
+   * provided in [location_id]. Additional nodes beyond the first 2 will be
+   * placed in zones selected by the service.
+   *
    * @var string
    */
   public $alternativeLocationId;
   /**
+   * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If
+   * set to "true" AUTH is enabled on the instance. Default value is "false"
+   * meaning AUTH is disabled.
+   *
    * @var bool
    */
   public $authEnabled;
   /**
+   * Optional. The full name of the Google Compute Engine
+   * [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is
+   * connected. If left unspecified, the `default` network will be used.
+   *
    * @var string
    */
   public $authorizedNetwork;
   /**
+   * Optional. The available maintenance versions that an instance could update
+   * to.
+   *
    * @var string[]
    */
   public $availableMaintenanceVersions;
   /**
+   * Optional. The network connect mode of the Redis instance. If not provided,
+   * the connect mode defaults to DIRECT_PEERING.
+   *
    * @var string
    */
   public $connectMode;
   /**
+   * Output only. The time the instance was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The current zone where the Redis primary node is located. In
+   * basic tier, this will always be the same as [location_id]. In standard
+   * tier, this can be the zone of any node in the instance.
+   *
    * @var string
    */
   public $currentLocationId;
   /**
+   * Optional. The KMS key reference that the customer provides when trying to
+   * create the instance.
+   *
    * @var string
    */
   public $customerManagedKey;
   /**
+   * An arbitrary and optional user-provided name for the instance.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Hostname or IP address of the exposed Redis endpoint used by
+   * clients to connect to the service.
+   *
    * @var string
    */
   public $host;
   /**
+   * Resource labels to represent user provided metadata
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. The zone where the instance will be provisioned. If not provided,
+   * the service will choose a zone from the specified region for the instance.
+   * For standard tier, additional nodes will be added across multiple zones for
+   * protection against zonal failures. If specified, at least one node will be
+   * provisioned in this zone.
+   *
    * @var string
    */
   public $locationId;
@@ -73,14 +205,28 @@ class Instance extends \Google\Collection
   protected $maintenanceScheduleType = MaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
   /**
+   * Optional. The self service update maintenance version. The version is date
+   * based such as "20210712_00_00".
+   *
    * @var string
    */
   public $maintenanceVersion;
   /**
+   * Required. Redis memory size in GiB.
+   *
    * @var int
    */
   public $memorySizeGb;
   /**
+   * Required. Unique name of the resource in this scope including project and
+   * location using the form:
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+   * Note: Redis instances are managed and addressed at regional level so
+   * location_id here refers to a GCP region; however, users may choose which
+   * specific zone (or collection of zones for cross-zone instances) an instance
+   * should be provisioned in. Refer to location_id and alternative_location_id
+   * fields for more details.
+   *
    * @var string
    */
   public $name;
@@ -89,82 +235,160 @@ class Instance extends \Google\Collection
   protected $persistenceConfigType = PersistenceConfig::class;
   protected $persistenceConfigDataType = '';
   /**
+   * Output only. Cloud IAM identity used by import / export operations to
+   * transfer data to/from Cloud Storage. Format is "serviceAccount:". The value
+   * may change over time for a given instance so should be checked before each
+   * import/export operation.
+   *
    * @var string
    */
   public $persistenceIamIdentity;
   /**
+   * Output only. The port number of the exposed Redis endpoint.
+   *
    * @var int
    */
   public $port;
   /**
+   * Output only. Hostname or IP address of the exposed readonly Redis endpoint.
+   * Standard tier only. Targets all healthy replica nodes in instance.
+   * Replication is asynchronous and replica nodes will exhibit some lag behind
+   * the primary. Write requests must target 'host'.
+   *
    * @var string
    */
   public $readEndpoint;
   /**
+   * Output only. The port number of the exposed readonly redis endpoint.
+   * Standard tier only. Write requests should target 'port'.
+   *
    * @var int
    */
   public $readEndpointPort;
   /**
+   * Optional. Read replicas mode for the instance. Defaults to
+   * READ_REPLICAS_DISABLED.
+   *
    * @var string
    */
   public $readReplicasMode;
   /**
+   * Optional. Redis configuration parameters, according to
+   * http://redis.io/topics/config. Currently, the only supported parameters
+   * are: Redis version 3.2 and newer: * maxmemory-policy * notify-keyspace-
+   * events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-
+   * log-factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-
+   * bytes * stream-node-max-entries
+   *
    * @var string[]
    */
   public $redisConfigs;
   /**
+   * Optional. The version of Redis software. If not provided, the default
+   * version will be used. Currently, the supported values are: * `REDIS_3_2`
+   * for Redis 3.2 compatibility * `REDIS_4_0` for Redis 4.0 compatibility *
+   * `REDIS_5_0` for Redis 5.0 compatibility * `REDIS_6_X` for Redis 6.x
+   * compatibility * `REDIS_7_0` for Redis 7.0 compatibility (default) *
+   * `REDIS_7_2` for Redis 7.2 compatibility
+   *
    * @var string
    */
   public $redisVersion;
   /**
+   * Optional. The number of replica nodes. The valid range for the Standard
+   * Tier with read replicas enabled is [1-5] and defaults to 2. If read
+   * replicas are not enabled for a Standard Tier instance, the only valid value
+   * is 1 and the default is 1. The valid value for basic tier is 0 and the
+   * default is also 0.
+   *
    * @var int
    */
   public $replicaCount;
   /**
+   * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses
+   * that are reserved for this instance. Range must be unique and non-
+   * overlapping with existing subnets in an authorized network. For
+   * PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
+   * associated with this private service access connection. If not provided,
+   * the service will choose an unused /29 block, for example, 10.0.0.0/29 or
+   * 192.168.0.0/29. For READ_REPLICAS_ENABLED the default block size is /28.
+   *
    * @var string
    */
   public $reservedIpRange;
   /**
+   * Optional. Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Optional. Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Optional. Additional IP range for node placement. Required when enabling
+   * read replicas on an existing instance. For DIRECT_PEERING mode value must
+   * be a CIDR range of size /28, or "auto". For PRIVATE_SERVICE_ACCESS mode
+   * value must be the name of an allocated address range associated with the
+   * private service access connection, or "auto".
+   *
    * @var string
    */
   public $secondaryIpRange;
   protected $serverCaCertsType = TlsCertificate::class;
   protected $serverCaCertsDataType = 'array';
   /**
+   * Output only. The current state of this instance.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Additional information about the current status of this
+   * instance, if available.
+   *
    * @var string
    */
   public $statusMessage;
   /**
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   *
    * @var string[]
    */
   public $suspensionReasons;
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * resource. For example: "123/environment": "production", "123/costCenter":
+   * "marketing"
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * Required. The service tier of the instance.
+   *
    * @var string
    */
   public $tier;
   /**
+   * Optional. The TLS mode of the Redis instance. If not provided, TLS is
+   * disabled for the instance.
+   *
    * @var string
    */
   public $transitEncryptionMode;
 
   /**
-   * @param string
+   * Optional. If specified, at least one node will be provisioned in this zone
+   * in addition to the zone specified in location_id. Only applicable to
+   * standard tier. If provided, it must be a different zone from the one
+   * provided in [location_id]. Additional nodes beyond the first 2 will be
+   * placed in zones selected by the service.
+   *
+   * @param string $alternativeLocationId
    */
   public function setAlternativeLocationId($alternativeLocationId)
   {
@@ -178,7 +402,11 @@ class Instance extends \Google\Collection
     return $this->alternativeLocationId;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether OSS Redis AUTH is enabled for the instance. If
+   * set to "true" AUTH is enabled on the instance. Default value is "false"
+   * meaning AUTH is disabled.
+   *
+   * @param bool $authEnabled
    */
   public function setAuthEnabled($authEnabled)
   {
@@ -192,7 +420,11 @@ class Instance extends \Google\Collection
     return $this->authEnabled;
   }
   /**
-   * @param string
+   * Optional. The full name of the Google Compute Engine
+   * [network](https://cloud.google.com/vpc/docs/vpc) to which the instance is
+   * connected. If left unspecified, the `default` network will be used.
+   *
+   * @param string $authorizedNetwork
    */
   public function setAuthorizedNetwork($authorizedNetwork)
   {
@@ -206,7 +438,10 @@ class Instance extends \Google\Collection
     return $this->authorizedNetwork;
   }
   /**
-   * @param string[]
+   * Optional. The available maintenance versions that an instance could update
+   * to.
+   *
+   * @param string[] $availableMaintenanceVersions
    */
   public function setAvailableMaintenanceVersions($availableMaintenanceVersions)
   {
@@ -220,21 +455,29 @@ class Instance extends \Google\Collection
     return $this->availableMaintenanceVersions;
   }
   /**
-   * @param string
+   * Optional. The network connect mode of the Redis instance. If not provided,
+   * the connect mode defaults to DIRECT_PEERING.
+   *
+   * Accepted values: CONNECT_MODE_UNSPECIFIED, DIRECT_PEERING,
+   * PRIVATE_SERVICE_ACCESS
+   *
+   * @param self::CONNECT_MODE_* $connectMode
    */
   public function setConnectMode($connectMode)
   {
     $this->connectMode = $connectMode;
   }
   /**
-   * @return string
+   * @return self::CONNECT_MODE_*
    */
   public function getConnectMode()
   {
     return $this->connectMode;
   }
   /**
-   * @param string
+   * Output only. The time the instance was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -248,7 +491,11 @@ class Instance extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The current zone where the Redis primary node is located. In
+   * basic tier, this will always be the same as [location_id]. In standard
+   * tier, this can be the zone of any node in the instance.
+   *
+   * @param string $currentLocationId
    */
   public function setCurrentLocationId($currentLocationId)
   {
@@ -262,7 +509,10 @@ class Instance extends \Google\Collection
     return $this->currentLocationId;
   }
   /**
-   * @param string
+   * Optional. The KMS key reference that the customer provides when trying to
+   * create the instance.
+   *
+   * @param string $customerManagedKey
    */
   public function setCustomerManagedKey($customerManagedKey)
   {
@@ -276,7 +526,9 @@ class Instance extends \Google\Collection
     return $this->customerManagedKey;
   }
   /**
-   * @param string
+   * An arbitrary and optional user-provided name for the instance.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -290,7 +542,10 @@ class Instance extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Hostname or IP address of the exposed Redis endpoint used by
+   * clients to connect to the service.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -304,7 +559,9 @@ class Instance extends \Google\Collection
     return $this->host;
   }
   /**
-   * @param string[]
+   * Resource labels to represent user provided metadata
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -318,7 +575,13 @@ class Instance extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Optional. The zone where the instance will be provisioned. If not provided,
+   * the service will choose a zone from the specified region for the instance.
+   * For standard tier, additional nodes will be added across multiple zones for
+   * protection against zonal failures. If specified, at least one node will be
+   * provisioned in this zone.
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -332,7 +595,10 @@ class Instance extends \Google\Collection
     return $this->locationId;
   }
   /**
-   * @param MaintenancePolicy
+   * Optional. The maintenance policy for the instance. If not provided,
+   * maintenance events can be performed at any time.
+   *
+   * @param MaintenancePolicy $maintenancePolicy
    */
   public function setMaintenancePolicy(MaintenancePolicy $maintenancePolicy)
   {
@@ -346,7 +612,10 @@ class Instance extends \Google\Collection
     return $this->maintenancePolicy;
   }
   /**
-   * @param MaintenanceSchedule
+   * Output only. Date and time of upcoming maintenance events which have been
+   * scheduled.
+   *
+   * @param MaintenanceSchedule $maintenanceSchedule
    */
   public function setMaintenanceSchedule(MaintenanceSchedule $maintenanceSchedule)
   {
@@ -360,7 +629,10 @@ class Instance extends \Google\Collection
     return $this->maintenanceSchedule;
   }
   /**
-   * @param string
+   * Optional. The self service update maintenance version. The version is date
+   * based such as "20210712_00_00".
+   *
+   * @param string $maintenanceVersion
    */
   public function setMaintenanceVersion($maintenanceVersion)
   {
@@ -374,7 +646,9 @@ class Instance extends \Google\Collection
     return $this->maintenanceVersion;
   }
   /**
-   * @param int
+   * Required. Redis memory size in GiB.
+   *
+   * @param int $memorySizeGb
    */
   public function setMemorySizeGb($memorySizeGb)
   {
@@ -388,7 +662,16 @@ class Instance extends \Google\Collection
     return $this->memorySizeGb;
   }
   /**
-   * @param string
+   * Required. Unique name of the resource in this scope including project and
+   * location using the form:
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+   * Note: Redis instances are managed and addressed at regional level so
+   * location_id here refers to a GCP region; however, users may choose which
+   * specific zone (or collection of zones for cross-zone instances) an instance
+   * should be provisioned in. Refer to location_id and alternative_location_id
+   * fields for more details.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -402,7 +685,9 @@ class Instance extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param NodeInfo[]
+   * Output only. Info per node.
+   *
+   * @param NodeInfo[] $nodes
    */
   public function setNodes($nodes)
   {
@@ -416,7 +701,9 @@ class Instance extends \Google\Collection
     return $this->nodes;
   }
   /**
-   * @param PersistenceConfig
+   * Optional. Persistence configuration parameters
+   *
+   * @param PersistenceConfig $persistenceConfig
    */
   public function setPersistenceConfig(PersistenceConfig $persistenceConfig)
   {
@@ -430,7 +717,12 @@ class Instance extends \Google\Collection
     return $this->persistenceConfig;
   }
   /**
-   * @param string
+   * Output only. Cloud IAM identity used by import / export operations to
+   * transfer data to/from Cloud Storage. Format is "serviceAccount:". The value
+   * may change over time for a given instance so should be checked before each
+   * import/export operation.
+   *
+   * @param string $persistenceIamIdentity
    */
   public function setPersistenceIamIdentity($persistenceIamIdentity)
   {
@@ -444,7 +736,9 @@ class Instance extends \Google\Collection
     return $this->persistenceIamIdentity;
   }
   /**
-   * @param int
+   * Output only. The port number of the exposed Redis endpoint.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -458,7 +752,12 @@ class Instance extends \Google\Collection
     return $this->port;
   }
   /**
-   * @param string
+   * Output only. Hostname or IP address of the exposed readonly Redis endpoint.
+   * Standard tier only. Targets all healthy replica nodes in instance.
+   * Replication is asynchronous and replica nodes will exhibit some lag behind
+   * the primary. Write requests must target 'host'.
+   *
+   * @param string $readEndpoint
    */
   public function setReadEndpoint($readEndpoint)
   {
@@ -472,7 +771,10 @@ class Instance extends \Google\Collection
     return $this->readEndpoint;
   }
   /**
-   * @param int
+   * Output only. The port number of the exposed readonly redis endpoint.
+   * Standard tier only. Write requests should target 'port'.
+   *
+   * @param int $readEndpointPort
    */
   public function setReadEndpointPort($readEndpointPort)
   {
@@ -486,21 +788,34 @@ class Instance extends \Google\Collection
     return $this->readEndpointPort;
   }
   /**
-   * @param string
+   * Optional. Read replicas mode for the instance. Defaults to
+   * READ_REPLICAS_DISABLED.
+   *
+   * Accepted values: READ_REPLICAS_MODE_UNSPECIFIED, READ_REPLICAS_DISABLED,
+   * READ_REPLICAS_ENABLED
+   *
+   * @param self::READ_REPLICAS_MODE_* $readReplicasMode
    */
   public function setReadReplicasMode($readReplicasMode)
   {
     $this->readReplicasMode = $readReplicasMode;
   }
   /**
-   * @return string
+   * @return self::READ_REPLICAS_MODE_*
    */
   public function getReadReplicasMode()
   {
     return $this->readReplicasMode;
   }
   /**
-   * @param string[]
+   * Optional. Redis configuration parameters, according to
+   * http://redis.io/topics/config. Currently, the only supported parameters
+   * are: Redis version 3.2 and newer: * maxmemory-policy * notify-keyspace-
+   * events Redis version 4.0 and newer: * activedefrag * lfu-decay-time * lfu-
+   * log-factor * maxmemory-gb Redis version 5.0 and newer: * stream-node-max-
+   * bytes * stream-node-max-entries
+   *
+   * @param string[] $redisConfigs
    */
   public function setRedisConfigs($redisConfigs)
   {
@@ -514,7 +829,14 @@ class Instance extends \Google\Collection
     return $this->redisConfigs;
   }
   /**
-   * @param string
+   * Optional. The version of Redis software. If not provided, the default
+   * version will be used. Currently, the supported values are: * `REDIS_3_2`
+   * for Redis 3.2 compatibility * `REDIS_4_0` for Redis 4.0 compatibility *
+   * `REDIS_5_0` for Redis 5.0 compatibility * `REDIS_6_X` for Redis 6.x
+   * compatibility * `REDIS_7_0` for Redis 7.0 compatibility (default) *
+   * `REDIS_7_2` for Redis 7.2 compatibility
+   *
+   * @param string $redisVersion
    */
   public function setRedisVersion($redisVersion)
   {
@@ -528,7 +850,13 @@ class Instance extends \Google\Collection
     return $this->redisVersion;
   }
   /**
-   * @param int
+   * Optional. The number of replica nodes. The valid range for the Standard
+   * Tier with read replicas enabled is [1-5] and defaults to 2. If read
+   * replicas are not enabled for a Standard Tier instance, the only valid value
+   * is 1 and the default is 1. The valid value for basic tier is 0 and the
+   * default is also 0.
+   *
+   * @param int $replicaCount
    */
   public function setReplicaCount($replicaCount)
   {
@@ -542,7 +870,15 @@ class Instance extends \Google\Collection
     return $this->replicaCount;
   }
   /**
-   * @param string
+   * Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses
+   * that are reserved for this instance. Range must be unique and non-
+   * overlapping with existing subnets in an authorized network. For
+   * PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP address ranges
+   * associated with this private service access connection. If not provided,
+   * the service will choose an unused /29 block, for example, 10.0.0.0/29 or
+   * 192.168.0.0/29. For READ_REPLICAS_ENABLED the default block size is /28.
+   *
+   * @param string $reservedIpRange
    */
   public function setReservedIpRange($reservedIpRange)
   {
@@ -556,7 +892,9 @@ class Instance extends \Google\Collection
     return $this->reservedIpRange;
   }
   /**
-   * @param bool
+   * Optional. Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -570,7 +908,9 @@ class Instance extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Optional. Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -584,7 +924,13 @@ class Instance extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Optional. Additional IP range for node placement. Required when enabling
+   * read replicas on an existing instance. For DIRECT_PEERING mode value must
+   * be a CIDR range of size /28, or "auto". For PRIVATE_SERVICE_ACCESS mode
+   * value must be the name of an allocated address range associated with the
+   * private service access connection, or "auto".
+   *
+   * @param string $secondaryIpRange
    */
   public function setSecondaryIpRange($secondaryIpRange)
   {
@@ -598,7 +944,9 @@ class Instance extends \Google\Collection
     return $this->secondaryIpRange;
   }
   /**
-   * @param TlsCertificate[]
+   * Output only. List of server CA certificates for the instance.
+   *
+   * @param TlsCertificate[] $serverCaCerts
    */
   public function setServerCaCerts($serverCaCerts)
   {
@@ -612,21 +960,29 @@ class Instance extends \Google\Collection
     return $this->serverCaCerts;
   }
   /**
-   * @param string
+   * Output only. The current state of this instance.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, READY, UPDATING, DELETING,
+   * REPAIRING, MAINTENANCE, IMPORTING, FAILING_OVER
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Additional information about the current status of this
+   * instance, if available.
+   *
+   * @param string $statusMessage
    */
   public function setStatusMessage($statusMessage)
   {
@@ -640,7 +996,9 @@ class Instance extends \Google\Collection
     return $this->statusMessage;
   }
   /**
-   * @param string[]
+   * Optional. reasons that causes instance in "SUSPENDED" state.
+   *
+   * @param string[] $suspensionReasons
    */
   public function setSuspensionReasons($suspensionReasons)
   {
@@ -654,7 +1012,11 @@ class Instance extends \Google\Collection
     return $this->suspensionReasons;
   }
   /**
-   * @param string[]
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * resource. For example: "123/environment": "production", "123/costCenter":
+   * "marketing"
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -668,28 +1030,38 @@ class Instance extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param string
+   * Required. The service tier of the instance.
+   *
+   * Accepted values: TIER_UNSPECIFIED, BASIC, STANDARD_HA
+   *
+   * @param self::TIER_* $tier
    */
   public function setTier($tier)
   {
     $this->tier = $tier;
   }
   /**
-   * @return string
+   * @return self::TIER_*
    */
   public function getTier()
   {
     return $this->tier;
   }
   /**
-   * @param string
+   * Optional. The TLS mode of the Redis instance. If not provided, TLS is
+   * disabled for the instance.
+   *
+   * Accepted values: TRANSIT_ENCRYPTION_MODE_UNSPECIFIED,
+   * SERVER_AUTHENTICATION, DISABLED
+   *
+   * @param self::TRANSIT_ENCRYPTION_MODE_* $transitEncryptionMode
    */
   public function setTransitEncryptionMode($transitEncryptionMode)
   {
     $this->transitEncryptionMode = $transitEncryptionMode;
   }
   /**
-   * @return string
+   * @return self::TRANSIT_ENCRYPTION_MODE_*
    */
   public function getTransitEncryptionMode()
   {

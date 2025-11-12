@@ -20,28 +20,44 @@ namespace Google\Service\CloudRedis;
 class TlsCertificate extends \Google\Model
 {
   /**
+   * PEM representation.
+   *
    * @var string
    */
   public $cert;
   /**
+   * Output only. The time when the certificate was created in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example
+   * `2020-05-18T00:00:00.094Z`.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time when the certificate expires in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example
+   * `2020-05-18T00:00:00.094Z`.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Serial number, as extracted from the certificate.
+   *
    * @var string
    */
   public $serialNumber;
   /**
+   * Sha1 Fingerprint of the certificate.
+   *
    * @var string
    */
   public $sha1Fingerprint;
 
   /**
-   * @param string
+   * PEM representation.
+   *
+   * @param string $cert
    */
   public function setCert($cert)
   {
@@ -55,7 +71,11 @@ class TlsCertificate extends \Google\Model
     return $this->cert;
   }
   /**
-   * @param string
+   * Output only. The time when the certificate was created in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example
+   * `2020-05-18T00:00:00.094Z`.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -69,7 +89,11 @@ class TlsCertificate extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time when the certificate expires in [RFC
+   * 3339](https://tools.ietf.org/html/rfc3339) format, for example
+   * `2020-05-18T00:00:00.094Z`.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -83,7 +107,9 @@ class TlsCertificate extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param string
+   * Serial number, as extracted from the certificate.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {
@@ -97,7 +123,9 @@ class TlsCertificate extends \Google\Model
     return $this->serialNumber;
   }
   /**
-   * @param string
+   * Sha1 Fingerprint of the certificate.
+   *
+   * @param string $sha1Fingerprint
    */
   public function setSha1Fingerprint($sha1Fingerprint)
   {

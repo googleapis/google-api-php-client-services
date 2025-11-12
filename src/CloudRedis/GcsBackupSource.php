@@ -21,12 +21,18 @@ class GcsBackupSource extends \Google\Collection
 {
   protected $collection_key = 'uris';
   /**
+   * Optional. URIs of the Cloud Storage objects to import. Example:
+   * gs://bucket1/object1, gs://bucket2/folder2/object2
+   *
    * @var string[]
    */
   public $uris;
 
   /**
-   * @param string[]
+   * Optional. URIs of the Cloud Storage objects to import. Example:
+   * gs://bucket1/object1, gs://bucket2/folder2/object2
+   *
+   * @param string[] $uris
    */
   public function setUris($uris)
   {
