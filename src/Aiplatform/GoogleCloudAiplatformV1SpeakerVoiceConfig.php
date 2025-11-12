@@ -20,6 +20,9 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SpeakerVoiceConfig extends \Google\Model
 {
   /**
+   * Required. The name of the speaker. This should be the same as the speaker
+   * name used in the prompt.
+   *
    * @var string
    */
   public $speaker;
@@ -27,7 +30,10 @@ class GoogleCloudAiplatformV1SpeakerVoiceConfig extends \Google\Model
   protected $voiceConfigDataType = '';
 
   /**
-   * @param string
+   * Required. The name of the speaker. This should be the same as the speaker
+   * name used in the prompt.
+   *
+   * @param string $speaker
    */
   public function setSpeaker($speaker)
   {
@@ -41,7 +47,9 @@ class GoogleCloudAiplatformV1SpeakerVoiceConfig extends \Google\Model
     return $this->speaker;
   }
   /**
-   * @param GoogleCloudAiplatformV1VoiceConfig
+   * Required. The configuration for the voice of this speaker.
+   *
+   * @param GoogleCloudAiplatformV1VoiceConfig $voiceConfig
    */
   public function setVoiceConfig(GoogleCloudAiplatformV1VoiceConfig $voiceConfig)
   {

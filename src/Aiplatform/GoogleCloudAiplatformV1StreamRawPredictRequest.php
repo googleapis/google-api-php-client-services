@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1StreamRawPredictRequest extends \Google\Model
   protected $httpBodyDataType = '';
 
   /**
-   * @param GoogleApiHttpBody
+   * The prediction input. Supports HTTP headers and arbitrary data payload.
+   *
+   * @param GoogleApiHttpBody $httpBody
    */
   public function setHttpBody(GoogleApiHttpBody $httpBody)
   {

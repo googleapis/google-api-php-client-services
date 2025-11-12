@@ -21,12 +21,16 @@ class GoogleCloudAiplatformV1StringArray extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * A list of string values.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * A list of string values.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

@@ -20,20 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StudySpecParameterSpecIntegerValueSpec extends \Google\Model
 {
   /**
+   * A default value for an `INTEGER` parameter that is assumed to be a
+   * relatively good starting point. Unset value signals that there is no
+   * offered starting point. Currently only supported by the Vertex AI Vizier
+   * service. Not supported by HyperparameterTuningJob or TrainingPipeline.
+   *
    * @var string
    */
   public $defaultValue;
   /**
+   * Required. Inclusive maximum value of the parameter.
+   *
    * @var string
    */
   public $maxValue;
   /**
+   * Required. Inclusive minimum value of the parameter.
+   *
    * @var string
    */
   public $minValue;
 
   /**
-   * @param string
+   * A default value for an `INTEGER` parameter that is assumed to be a
+   * relatively good starting point. Unset value signals that there is no
+   * offered starting point. Currently only supported by the Vertex AI Vizier
+   * service. Not supported by HyperparameterTuningJob or TrainingPipeline.
+   *
+   * @param string $defaultValue
    */
   public function setDefaultValue($defaultValue)
   {
@@ -47,7 +61,9 @@ class GoogleCloudAiplatformV1StudySpecParameterSpecIntegerValueSpec extends \Goo
     return $this->defaultValue;
   }
   /**
-   * @param string
+   * Required. Inclusive maximum value of the parameter.
+   *
+   * @param string $maxValue
    */
   public function setMaxValue($maxValue)
   {
@@ -61,7 +77,9 @@ class GoogleCloudAiplatformV1StudySpecParameterSpecIntegerValueSpec extends \Goo
     return $this->maxValue;
   }
   /**
-   * @param string
+   * Required. Inclusive minimum value of the parameter.
+   *
+   * @param string $minValue
    */
   public function setMinValue($minValue)
   {

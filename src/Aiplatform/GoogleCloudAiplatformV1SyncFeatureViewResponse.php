@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SyncFeatureViewResponse extends \Google\Model
 {
   /**
+   * Format: `projects/{project}/locations/{location}/featureOnlineStores/{featu
+   * re_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_view
+   * _sync}`
+   *
    * @var string
    */
   public $featureViewSync;
 
   /**
-   * @param string
+   * Format: `projects/{project}/locations/{location}/featureOnlineStores/{featu
+   * re_online_store}/featureViews/{feature_view}/featureViewSyncs/{feature_view
+   * _sync}`
+   *
+   * @param string $featureViewSync
    */
   public function setFeatureViewSync($featureViewSync)
   {

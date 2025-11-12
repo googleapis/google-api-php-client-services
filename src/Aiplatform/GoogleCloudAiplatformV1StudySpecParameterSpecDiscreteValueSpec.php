@@ -20,7 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StudySpecParameterSpecDiscreteValueSpec extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * A default value for a `DISCRETE` parameter that is assumed to be a
+   * relatively good starting point. Unset value signals that there is no
+   * offered starting point. It automatically rounds to the nearest feasible
+   * discrete point. Currently only supported by the Vertex AI Vizier service.
+   * Not supported by HyperparameterTuningJob or TrainingPipeline.
+   *
+   * @var 
+   */
   public $defaultValue;
+  /**
+   * Required. A list of possible values. The list should be in increasing order
+   * and at least 1e-10 apart. For instance, this parameter might have possible
+   * settings of 1.5, 2.5, and 4.0. This list should not contain more than 1,000
+   * values.
+   *
+   * @var []
+   */
   public $values;
 
   public function setDefaultValue($defaultValue)

@@ -19,8 +19,23 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SupervisedTuningDatasetDistributionDatasetBucket extends \Google\Model
 {
+  /**
+   * Output only. Number of values in the bucket.
+   *
+   * @var 
+   */
   public $count;
+  /**
+   * Output only. Left bound of the bucket.
+   *
+   * @var 
+   */
   public $left;
+  /**
+   * Output only. Right bound of the bucket.
+   *
+   * @var 
+   */
   public $right;
 
   public function setCount($count)

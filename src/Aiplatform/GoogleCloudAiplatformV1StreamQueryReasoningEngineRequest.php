@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StreamQueryReasoningEngineRequest extends \Google\Model
 {
   /**
+   * Optional. Class method to be used for the stream query. It is optional and
+   * defaults to "stream_query" if unspecified.
+   *
    * @var string
    */
   public $classMethod;
   /**
+   * Optional. Input content provided by users in JSON object format. Examples
+   * include text query, function calling parameters, media bytes, etc.
+   *
    * @var array[]
    */
   public $input;
 
   /**
-   * @param string
+   * Optional. Class method to be used for the stream query. It is optional and
+   * defaults to "stream_query" if unspecified.
+   *
+   * @param string $classMethod
    */
   public function setClassMethod($classMethod)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1StreamQueryReasoningEngineRequest extends \Google\M
     return $this->classMethod;
   }
   /**
-   * @param array[]
+   * Optional. Input content provided by users in JSON object format. Examples
+   * include text query, function calling parameters, media bytes, etc.
+   *
+   * @param array[] $input
    */
   public function setInput($input)
   {

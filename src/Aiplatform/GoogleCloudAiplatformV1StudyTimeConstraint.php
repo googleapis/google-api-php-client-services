@@ -20,16 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StudyTimeConstraint extends \Google\Model
 {
   /**
+   * Compares the wallclock time to this time. Must use UTC timezone.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Counts the wallclock time passed since the creation of this Study.
+   *
    * @var string
    */
   public $maxDuration;
 
   /**
-   * @param string
+   * Compares the wallclock time to this time. Must use UTC timezone.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +49,9 @@ class GoogleCloudAiplatformV1StudyTimeConstraint extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Counts the wallclock time passed since the creation of this Study.
+   *
+   * @param string $maxDuration
    */
   public function setMaxDuration($maxDuration)
   {

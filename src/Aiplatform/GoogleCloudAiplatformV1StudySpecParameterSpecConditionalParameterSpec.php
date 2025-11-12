@@ -29,7 +29,9 @@ class GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpec exte
   protected $parentIntValuesDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1StudySpecParameterSpec
+   * Required. The spec for a conditional parameter.
+   *
+   * @param GoogleCloudAiplatformV1StudySpecParameterSpec $parameterSpec
    */
   public function setParameterSpec(GoogleCloudAiplatformV1StudySpecParameterSpec $parameterSpec)
   {
@@ -43,7 +45,9 @@ class GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpec exte
     return $this->parameterSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecCategoricalValueCondition
+   * The spec for matching values from a parent parameter of `CATEGORICAL` type.
+   *
+   * @param GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecCategoricalValueCondition $parentCategoricalValues
    */
   public function setParentCategoricalValues(GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecCategoricalValueCondition $parentCategoricalValues)
   {
@@ -57,7 +61,9 @@ class GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpec exte
     return $this->parentCategoricalValues;
   }
   /**
-   * @param GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecDiscreteValueCondition
+   * The spec for matching values from a parent parameter of `DISCRETE` type.
+   *
+   * @param GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecDiscreteValueCondition $parentDiscreteValues
    */
   public function setParentDiscreteValues(GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecDiscreteValueCondition $parentDiscreteValues)
   {
@@ -71,7 +77,9 @@ class GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpec exte
     return $this->parentDiscreteValues;
   }
   /**
-   * @param GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecIntValueCondition
+   * The spec for matching values from a parent parameter of `INTEGER` type.
+   *
+   * @param GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecIntValueCondition $parentIntValues
    */
   public function setParentIntValues(GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecIntValueCondition $parentIntValues)
   {

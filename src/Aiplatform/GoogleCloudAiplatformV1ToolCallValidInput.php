@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1ToolCallValidInput extends \Google\Collection
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ToolCallValidInstance[]
+   * Required. Repeated tool call valid instances.
+   *
+   * @param GoogleCloudAiplatformV1ToolCallValidInstance[] $instances
    */
   public function setInstances($instances)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1ToolCallValidInput extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param GoogleCloudAiplatformV1ToolCallValidSpec
+   * Required. Spec for tool call valid metric.
+   *
+   * @param GoogleCloudAiplatformV1ToolCallValidSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1ToolCallValidSpec $metricSpec)
   {

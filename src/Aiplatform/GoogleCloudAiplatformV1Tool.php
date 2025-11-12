@@ -40,7 +40,10 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   protected $urlContextDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ToolCodeExecution
+   * Optional. CodeExecution tool type. Enables the model to execute code as
+   * part of generation.
+   *
+   * @param GoogleCloudAiplatformV1ToolCodeExecution $codeExecution
    */
   public function setCodeExecution(GoogleCloudAiplatformV1ToolCodeExecution $codeExecution)
   {
@@ -54,7 +57,11 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->codeExecution;
   }
   /**
-   * @param GoogleCloudAiplatformV1ToolComputerUse
+   * Optional. Tool to support the model interacting directly with the computer.
+   * If enabled, it automatically populates computer-use specific Function
+   * Declarations.
+   *
+   * @param GoogleCloudAiplatformV1ToolComputerUse $computerUse
    */
   public function setComputerUse(GoogleCloudAiplatformV1ToolComputerUse $computerUse)
   {
@@ -68,7 +75,10 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->computerUse;
   }
   /**
-   * @param GoogleCloudAiplatformV1EnterpriseWebSearch
+   * Optional. Tool to support searching public web data, powered by Vertex AI
+   * Search and Sec4 compliance.
+   *
+   * @param GoogleCloudAiplatformV1EnterpriseWebSearch $enterpriseWebSearch
    */
   public function setEnterpriseWebSearch(GoogleCloudAiplatformV1EnterpriseWebSearch $enterpriseWebSearch)
   {
@@ -82,7 +92,15 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->enterpriseWebSearch;
   }
   /**
-   * @param GoogleCloudAiplatformV1FunctionDeclaration[]
+   * Optional. Function tool type. One or more function declarations to be
+   * passed to the model along with the current user query. Model may decide to
+   * call a subset of these functions by populating FunctionCall in the
+   * response. User should provide a FunctionResponse for each function call in
+   * the next turn. Based on the function responses, Model will generate the
+   * final response back to the user. Maximum 512 function declarations can be
+   * provided.
+   *
+   * @param GoogleCloudAiplatformV1FunctionDeclaration[] $functionDeclarations
    */
   public function setFunctionDeclarations($functionDeclarations)
   {
@@ -96,7 +114,9 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->functionDeclarations;
   }
   /**
-   * @param GoogleCloudAiplatformV1GoogleMaps
+   * Optional. GoogleMaps tool type. Tool to support Google Maps in Model.
+   *
+   * @param GoogleCloudAiplatformV1GoogleMaps $googleMaps
    */
   public function setGoogleMaps(GoogleCloudAiplatformV1GoogleMaps $googleMaps)
   {
@@ -110,7 +130,10 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->googleMaps;
   }
   /**
-   * @param GoogleCloudAiplatformV1ToolGoogleSearch
+   * Optional. GoogleSearch tool type. Tool to support Google Search in Model.
+   * Powered by Google.
+   *
+   * @param GoogleCloudAiplatformV1ToolGoogleSearch $googleSearch
    */
   public function setGoogleSearch(GoogleCloudAiplatformV1ToolGoogleSearch $googleSearch)
   {
@@ -124,13 +147,17 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->googleSearch;
   }
   /**
-   * @param GoogleCloudAiplatformV1GoogleSearchRetrieval
+   * Optional. Specialized retrieval tool that is powered by Google Search.
+   *
+   * @deprecated
+   * @param GoogleCloudAiplatformV1GoogleSearchRetrieval $googleSearchRetrieval
    */
   public function setGoogleSearchRetrieval(GoogleCloudAiplatformV1GoogleSearchRetrieval $googleSearchRetrieval)
   {
     $this->googleSearchRetrieval = $googleSearchRetrieval;
   }
   /**
+   * @deprecated
    * @return GoogleCloudAiplatformV1GoogleSearchRetrieval
    */
   public function getGoogleSearchRetrieval()
@@ -138,7 +165,11 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->googleSearchRetrieval;
   }
   /**
-   * @param GoogleCloudAiplatformV1Retrieval
+   * Optional. Retrieval tool type. System will always execute the provided
+   * retrieval tool(s) to get external knowledge to answer the prompt. Retrieval
+   * results are presented to the model for generation.
+   *
+   * @param GoogleCloudAiplatformV1Retrieval $retrieval
    */
   public function setRetrieval(GoogleCloudAiplatformV1Retrieval $retrieval)
   {
@@ -152,7 +183,9 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
     return $this->retrieval;
   }
   /**
-   * @param GoogleCloudAiplatformV1UrlContext
+   * Optional. Tool to support URL context retrieval.
+   *
+   * @param GoogleCloudAiplatformV1UrlContext $urlContext
    */
   public function setUrlContext(GoogleCloudAiplatformV1UrlContext $urlContext)
   {

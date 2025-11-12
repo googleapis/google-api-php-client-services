@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SummaryMetrics extends \Google\Model
 {
   /**
+   * Optional. The number of items that failed to be evaluated.
+   *
    * @var int
    */
   public $failedItems;
   /**
+   * Optional. Map of metric name to metric value.
+   *
    * @var array[]
    */
   public $metrics;
   /**
+   * Optional. The total number of items that were evaluated.
+   *
    * @var int
    */
   public $totalItems;
 
   /**
-   * @param int
+   * Optional. The number of items that failed to be evaluated.
+   *
+   * @param int $failedItems
    */
   public function setFailedItems($failedItems)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1SummaryMetrics extends \Google\Model
     return $this->failedItems;
   }
   /**
-   * @param array[]
+   * Optional. Map of metric name to metric value.
+   *
+   * @param array[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1SummaryMetrics extends \Google\Model
     return $this->metrics;
   }
   /**
-   * @param int
+   * Optional. The total number of items that were evaluated.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {

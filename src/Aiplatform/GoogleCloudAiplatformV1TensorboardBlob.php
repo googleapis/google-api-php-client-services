@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1TensorboardBlob extends \Google\Model
 {
   /**
+   * Optional. The bytes of the blob is not present unless it's returned by the
+   * ReadTensorboardBlobData endpoint.
+   *
    * @var string
    */
   public $data;
   /**
+   * Output only. A URI safe key uniquely identifying a blob. Can be used to
+   * locate the blob stored in the Cloud Storage bucket of the consumer project.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Optional. The bytes of the blob is not present unless it's returned by the
+   * ReadTensorboardBlobData endpoint.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1TensorboardBlob extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Output only. A URI safe key uniquely identifying a blob. Can be used to
+   * locate the blob stored in the Cloud Storage bucket of the consumer project.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

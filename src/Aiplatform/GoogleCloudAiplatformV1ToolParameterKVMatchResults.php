@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1ToolParameterKVMatchResults extends \Google\Collect
   protected $toolParameterKvMatchMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1ToolParameterKVMatchMetricValue[]
+   * Output only. Tool parameter key value match metric values.
+   *
+   * @param GoogleCloudAiplatformV1ToolParameterKVMatchMetricValue[] $toolParameterKvMatchMetricValues
    */
   public function setToolParameterKvMatchMetricValues($toolParameterKvMatchMetricValues)
   {

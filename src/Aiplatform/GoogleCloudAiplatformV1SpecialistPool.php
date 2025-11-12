@@ -21,32 +21,50 @@ class GoogleCloudAiplatformV1SpecialistPool extends \Google\Collection
 {
   protected $collection_key = 'specialistWorkerEmails';
   /**
+   * Required. The user-defined name of the SpecialistPool. The name can be up
+   * to 128 characters long and can consist of any UTF-8 characters. This field
+   * should be unique on project-level.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. The resource name of the SpecialistPool.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The resource name of the pending data labeling jobs.
+   *
    * @var string[]
    */
   public $pendingDataLabelingJobs;
   /**
+   * The email addresses of the managers in the SpecialistPool.
+   *
    * @var string[]
    */
   public $specialistManagerEmails;
   /**
+   * Output only. The number of managers in this SpecialistPool.
+   *
    * @var int
    */
   public $specialistManagersCount;
   /**
+   * The email addresses of workers in the SpecialistPool.
+   *
    * @var string[]
    */
   public $specialistWorkerEmails;
 
   /**
-   * @param string
+   * Required. The user-defined name of the SpecialistPool. The name can be up
+   * to 128 characters long and can consist of any UTF-8 characters. This field
+   * should be unique on project-level.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -60,7 +78,9 @@ class GoogleCloudAiplatformV1SpecialistPool extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. The resource name of the SpecialistPool.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -74,7 +94,9 @@ class GoogleCloudAiplatformV1SpecialistPool extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Output only. The resource name of the pending data labeling jobs.
+   *
+   * @param string[] $pendingDataLabelingJobs
    */
   public function setPendingDataLabelingJobs($pendingDataLabelingJobs)
   {
@@ -88,7 +110,9 @@ class GoogleCloudAiplatformV1SpecialistPool extends \Google\Collection
     return $this->pendingDataLabelingJobs;
   }
   /**
-   * @param string[]
+   * The email addresses of the managers in the SpecialistPool.
+   *
+   * @param string[] $specialistManagerEmails
    */
   public function setSpecialistManagerEmails($specialistManagerEmails)
   {
@@ -102,7 +126,9 @@ class GoogleCloudAiplatformV1SpecialistPool extends \Google\Collection
     return $this->specialistManagerEmails;
   }
   /**
-   * @param int
+   * Output only. The number of managers in this SpecialistPool.
+   *
+   * @param int $specialistManagersCount
    */
   public function setSpecialistManagersCount($specialistManagersCount)
   {
@@ -116,7 +142,9 @@ class GoogleCloudAiplatformV1SpecialistPool extends \Google\Collection
     return $this->specialistManagersCount;
   }
   /**
-   * @param string[]
+   * The email addresses of workers in the SpecialistPool.
+   *
+   * @param string[] $specialistWorkerEmails
    */
   public function setSpecialistWorkerEmails($specialistWorkerEmails)
   {

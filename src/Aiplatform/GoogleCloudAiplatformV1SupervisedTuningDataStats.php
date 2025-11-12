@@ -21,34 +21,55 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
 {
   protected $collection_key = 'userDatasetExamples';
   /**
+   * Output only. For each index in `truncated_example_indices`, the user-facing
+   * reason why the example was dropped.
+   *
    * @var string[]
    */
   public $droppedExampleReasons;
   /**
+   * Output only. Number of billable characters in the tuning dataset.
+   *
+   * @deprecated
    * @var string
    */
   public $totalBillableCharacterCount;
   /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   *
    * @var string
    */
   public $totalBillableTokenCount;
   /**
+   * Output only. The number of examples in the dataset that have been dropped.
+   * An example can be dropped for reasons including: too many tokens, contains
+   * an invalid image, contains too many images, etc.
+   *
    * @var string
    */
   public $totalTruncatedExampleCount;
   /**
+   * Output only. Number of tuning characters in the tuning dataset.
+   *
    * @var string
    */
   public $totalTuningCharacterCount;
   /**
+   * Output only. A partial sample of the indices (starting from 1) of the
+   * dropped examples.
+   *
    * @var string[]
    */
   public $truncatedExampleIndices;
   /**
+   * Output only. Number of examples in the tuning dataset.
+   *
    * @var string
    */
   public $tuningDatasetExampleCount;
   /**
+   * Output only. Number of tuning steps for this Tuning Job.
+   *
    * @var string
    */
   public $tuningStepCount;
@@ -62,7 +83,10 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
   protected $userOutputTokenDistributionDataType = '';
 
   /**
-   * @param string[]
+   * Output only. For each index in `truncated_example_indices`, the user-facing
+   * reason why the example was dropped.
+   *
+   * @param string[] $droppedExampleReasons
    */
   public function setDroppedExampleReasons($droppedExampleReasons)
   {
@@ -76,13 +100,17 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->droppedExampleReasons;
   }
   /**
-   * @param string
+   * Output only. Number of billable characters in the tuning dataset.
+   *
+   * @deprecated
+   * @param string $totalBillableCharacterCount
    */
   public function setTotalBillableCharacterCount($totalBillableCharacterCount)
   {
     $this->totalBillableCharacterCount = $totalBillableCharacterCount;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTotalBillableCharacterCount()
@@ -90,7 +118,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->totalBillableCharacterCount;
   }
   /**
-   * @param string
+   * Output only. Number of billable tokens in the tuning dataset.
+   *
+   * @param string $totalBillableTokenCount
    */
   public function setTotalBillableTokenCount($totalBillableTokenCount)
   {
@@ -104,7 +134,11 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->totalBillableTokenCount;
   }
   /**
-   * @param string
+   * Output only. The number of examples in the dataset that have been dropped.
+   * An example can be dropped for reasons including: too many tokens, contains
+   * an invalid image, contains too many images, etc.
+   *
+   * @param string $totalTruncatedExampleCount
    */
   public function setTotalTruncatedExampleCount($totalTruncatedExampleCount)
   {
@@ -118,7 +152,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->totalTruncatedExampleCount;
   }
   /**
-   * @param string
+   * Output only. Number of tuning characters in the tuning dataset.
+   *
+   * @param string $totalTuningCharacterCount
    */
   public function setTotalTuningCharacterCount($totalTuningCharacterCount)
   {
@@ -132,7 +168,10 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->totalTuningCharacterCount;
   }
   /**
-   * @param string[]
+   * Output only. A partial sample of the indices (starting from 1) of the
+   * dropped examples.
+   *
+   * @param string[] $truncatedExampleIndices
    */
   public function setTruncatedExampleIndices($truncatedExampleIndices)
   {
@@ -146,7 +185,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->truncatedExampleIndices;
   }
   /**
-   * @param string
+   * Output only. Number of examples in the tuning dataset.
+   *
+   * @param string $tuningDatasetExampleCount
    */
   public function setTuningDatasetExampleCount($tuningDatasetExampleCount)
   {
@@ -160,7 +201,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->tuningDatasetExampleCount;
   }
   /**
-   * @param string
+   * Output only. Number of tuning steps for this Tuning Job.
+   *
+   * @param string $tuningStepCount
    */
   public function setTuningStepCount($tuningStepCount)
   {
@@ -174,7 +217,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->tuningStepCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1Content[]
+   * Output only. Sample user messages in the training dataset uri.
+   *
+   * @param GoogleCloudAiplatformV1Content[] $userDatasetExamples
    */
   public function setUserDatasetExamples($userDatasetExamples)
   {
@@ -188,7 +233,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->userDatasetExamples;
   }
   /**
-   * @param GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution
+   * Output only. Dataset distributions for the user input tokens.
+   *
+   * @param GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution $userInputTokenDistribution
    */
   public function setUserInputTokenDistribution(GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution $userInputTokenDistribution)
   {
@@ -202,7 +249,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->userInputTokenDistribution;
   }
   /**
-   * @param GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution
+   * Output only. Dataset distributions for the messages per example.
+   *
+   * @param GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution $userMessagePerExampleDistribution
    */
   public function setUserMessagePerExampleDistribution(GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution $userMessagePerExampleDistribution)
   {
@@ -216,7 +265,9 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
     return $this->userMessagePerExampleDistribution;
   }
   /**
-   * @param GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution
+   * Output only. Dataset distributions for the user output tokens.
+   *
+   * @param GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution $userOutputTokenDistribution
    */
   public function setUserOutputTokenDistribution(GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution $userOutputTokenDistribution)
   {

@@ -20,12 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StudySpecMedianAutomatedStoppingSpec extends \Google\Model
 {
   /**
+   * True if median automated stopping rule applies on
+   * Measurement.elapsed_duration. It means that elapsed_duration field of
+   * latest measurement of current Trial is used to compute median objective
+   * value for each completed Trials.
+   *
    * @var bool
    */
   public $useElapsedDuration;
 
   /**
-   * @param bool
+   * True if median automated stopping rule applies on
+   * Measurement.elapsed_duration. It means that elapsed_duration field of
+   * latest measurement of current Trial is used to compute median objective
+   * value for each completed Trials.
+   *
+   * @param bool $useElapsedDuration
    */
   public function setUseElapsedDuration($useElapsedDuration)
   {

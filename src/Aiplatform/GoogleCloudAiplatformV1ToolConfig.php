@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1ToolConfig extends \Google\Model
   protected $retrievalConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1FunctionCallingConfig
+   * Optional. Function calling config.
+   *
+   * @param GoogleCloudAiplatformV1FunctionCallingConfig $functionCallingConfig
    */
   public function setFunctionCallingConfig(GoogleCloudAiplatformV1FunctionCallingConfig $functionCallingConfig)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1ToolConfig extends \Google\Model
     return $this->functionCallingConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1RetrievalConfig
+   * Optional. Retrieval config.
+   *
+   * @param GoogleCloudAiplatformV1RetrievalConfig $retrievalConfig
    */
   public function setRetrievalConfig(GoogleCloudAiplatformV1RetrievalConfig $retrievalConfig)
   {

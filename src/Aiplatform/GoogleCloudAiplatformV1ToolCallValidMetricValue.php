@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ToolCallValidMetricValue extends \Google\Model
 {
   /**
+   * Output only. Tool call valid score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Tool call valid score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

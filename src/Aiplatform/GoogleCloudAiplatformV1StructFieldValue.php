@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StructFieldValue extends \Google\Model
 {
   /**
+   * Name of the field in the struct feature.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +29,9 @@ class GoogleCloudAiplatformV1StructFieldValue extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param string
+   * Name of the field in the struct feature.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1StructFieldValue extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureValue
+   * The value for this field.
+   *
+   * @param GoogleCloudAiplatformV1FeatureValue $value
    */
   public function setValue(GoogleCloudAiplatformV1FeatureValue $value)
   {

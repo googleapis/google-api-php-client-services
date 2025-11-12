@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1TaskDescriptionStrategy extends \Google\Model
 {
   /**
+   * Required. A high-level description of the synthetic data to be generated.
+   *
    * @var string
    */
   public $taskDescription;
 
   /**
-   * @param string
+   * Required. A high-level description of the synthetic data to be generated.
+   *
+   * @param string $taskDescription
    */
   public function setTaskDescription($taskDescription)
   {

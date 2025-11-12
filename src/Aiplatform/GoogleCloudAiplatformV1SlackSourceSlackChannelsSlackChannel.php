@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SlackSourceSlackChannelsSlackChannel extends \Google\Model
 {
   /**
+   * Required. The Slack channel ID.
+   *
    * @var string
    */
   public $channelId;
   /**
+   * Optional. The ending timestamp for messages to import.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Optional. The starting timestamp for messages to import.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Required. The Slack channel ID.
+   *
+   * @param string $channelId
    */
   public function setChannelId($channelId)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1SlackSourceSlackChannelsSlackChannel extends \Googl
     return $this->channelId;
   }
   /**
-   * @param string
+   * Optional. The ending timestamp for messages to import.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1SlackSourceSlackChannelsSlackChannel extends \Googl
     return $this->endTime;
   }
   /**
-   * @param string
+   * Optional. The starting timestamp for messages to import.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

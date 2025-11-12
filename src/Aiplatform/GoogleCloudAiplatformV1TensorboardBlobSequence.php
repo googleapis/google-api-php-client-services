@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1TensorboardBlobSequence extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TensorboardBlob[]
+   * List of blobs contained within the sequence.
+   *
+   * @param GoogleCloudAiplatformV1TensorboardBlob[] $values
    */
   public function setValues($values)
   {

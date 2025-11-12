@@ -21,20 +21,28 @@ class GoogleCloudAiplatformV1TokensInfo extends \Google\Collection
 {
   protected $collection_key = 'tokens';
   /**
+   * Optional. Optional fields for the role from the corresponding Content.
+   *
    * @var string
    */
   public $role;
   /**
+   * A list of token ids from the input.
+   *
    * @var string[]
    */
   public $tokenIds;
   /**
+   * A list of tokens from the input.
+   *
    * @var string[]
    */
   public $tokens;
 
   /**
-   * @param string
+   * Optional. Optional fields for the role from the corresponding Content.
+   *
+   * @param string $role
    */
   public function setRole($role)
   {
@@ -48,7 +56,9 @@ class GoogleCloudAiplatformV1TokensInfo extends \Google\Collection
     return $this->role;
   }
   /**
-   * @param string[]
+   * A list of token ids from the input.
+   *
+   * @param string[] $tokenIds
    */
   public function setTokenIds($tokenIds)
   {
@@ -62,7 +72,9 @@ class GoogleCloudAiplatformV1TokensInfo extends \Google\Collection
     return $this->tokenIds;
   }
   /**
-   * @param string[]
+   * A list of tokens from the input.
+   *
+   * @param string[] $tokens
    */
   public function setTokens($tokens)
   {

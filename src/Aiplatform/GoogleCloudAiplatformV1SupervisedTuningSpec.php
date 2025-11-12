@@ -20,22 +20,38 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SupervisedTuningSpec extends \Google\Model
 {
   /**
+   * Optional. If set to true, disable intermediate checkpoints for SFT and only
+   * the last checkpoint will be exported. Otherwise, enable intermediate
+   * checkpoints for SFT. Default is false.
+   *
    * @var bool
    */
   public $exportLastCheckpointOnly;
   protected $hyperParametersType = GoogleCloudAiplatformV1SupervisedHyperParameters::class;
   protected $hyperParametersDataType = '';
   /**
+   * Required. Training dataset used for tuning. The dataset can be specified as
+   * either a Cloud Storage path to a JSONL file or as the resource name of a
+   * Vertex Multimodal Dataset.
+   *
    * @var string
    */
   public $trainingDatasetUri;
   /**
+   * Optional. Validation dataset used for tuning. The dataset can be specified
+   * as either a Cloud Storage path to a JSONL file or as the resource name of a
+   * Vertex Multimodal Dataset.
+   *
    * @var string
    */
   public $validationDatasetUri;
 
   /**
-   * @param bool
+   * Optional. If set to true, disable intermediate checkpoints for SFT and only
+   * the last checkpoint will be exported. Otherwise, enable intermediate
+   * checkpoints for SFT. Default is false.
+   *
+   * @param bool $exportLastCheckpointOnly
    */
   public function setExportLastCheckpointOnly($exportLastCheckpointOnly)
   {
@@ -49,7 +65,9 @@ class GoogleCloudAiplatformV1SupervisedTuningSpec extends \Google\Model
     return $this->exportLastCheckpointOnly;
   }
   /**
-   * @param GoogleCloudAiplatformV1SupervisedHyperParameters
+   * Optional. Hyperparameters for SFT.
+   *
+   * @param GoogleCloudAiplatformV1SupervisedHyperParameters $hyperParameters
    */
   public function setHyperParameters(GoogleCloudAiplatformV1SupervisedHyperParameters $hyperParameters)
   {
@@ -63,7 +81,11 @@ class GoogleCloudAiplatformV1SupervisedTuningSpec extends \Google\Model
     return $this->hyperParameters;
   }
   /**
-   * @param string
+   * Required. Training dataset used for tuning. The dataset can be specified as
+   * either a Cloud Storage path to a JSONL file or as the resource name of a
+   * Vertex Multimodal Dataset.
+   *
+   * @param string $trainingDatasetUri
    */
   public function setTrainingDatasetUri($trainingDatasetUri)
   {
@@ -77,7 +99,11 @@ class GoogleCloudAiplatformV1SupervisedTuningSpec extends \Google\Model
     return $this->trainingDatasetUri;
   }
   /**
-   * @param string
+   * Optional. Validation dataset used for tuning. The dataset can be specified
+   * as either a Cloud Storage path to a JSONL file or as the resource name of a
+   * Vertex Multimodal Dataset.
+   *
+   * @param string $validationDatasetUri
    */
   public function setValidationDatasetUri($validationDatasetUri)
   {

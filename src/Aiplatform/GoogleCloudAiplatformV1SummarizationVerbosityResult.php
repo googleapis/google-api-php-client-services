@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SummarizationVerbosityResult extends \Google\Model
 {
   /**
+   * Output only. Confidence for summarization verbosity score.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Output only. Explanation for summarization verbosity score.
+   *
    * @var string
    */
   public $explanation;
   /**
+   * Output only. Summarization Verbosity score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Confidence for summarization verbosity score.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1SummarizationVerbosityResult extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * Output only. Explanation for summarization verbosity score.
+   *
+   * @param string $explanation
    */
   public function setExplanation($explanation)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1SummarizationVerbosityResult extends \Google\Model
     return $this->explanation;
   }
   /**
-   * @param float
+   * Output only. Summarization Verbosity score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

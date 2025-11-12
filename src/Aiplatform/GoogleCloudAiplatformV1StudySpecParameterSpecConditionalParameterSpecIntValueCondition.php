@@ -21,12 +21,18 @@ class GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecIntVa
 {
   protected $collection_key = 'values';
   /**
+   * Required. Matches values of the parent parameter of 'INTEGER' type. All
+   * values must lie in `integer_value_spec` of parent parameter.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Required. Matches values of the parent parameter of 'INTEGER' type. All
+   * values must lie in `integer_value_spec` of parent parameter.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

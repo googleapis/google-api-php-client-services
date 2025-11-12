@@ -19,32 +19,60 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ToolComputerUse extends \Google\Collection
 {
+  /**
+   * Defaults to browser.
+   */
+  public const ENVIRONMENT_ENVIRONMENT_UNSPECIFIED = 'ENVIRONMENT_UNSPECIFIED';
+  /**
+   * Operates in a web browser.
+   */
+  public const ENVIRONMENT_ENVIRONMENT_BROWSER = 'ENVIRONMENT_BROWSER';
   protected $collection_key = 'excludedPredefinedFunctions';
   /**
+   * Required. The environment being operated.
+   *
    * @var string
    */
   public $environment;
   /**
+   * Optional. By default, [predefined
+   * functions](https://cloud.google.com/vertex-ai/generative-ai/docs/computer-
+   * use#supported-actions) are included in the final model call. Some of them
+   * can be explicitly excluded from being automatically included. This can
+   * serve two purposes: 1. Using a more restricted / different action space. 2.
+   * Improving the definitions / instructions of predefined functions.
+   *
    * @var string[]
    */
   public $excludedPredefinedFunctions;
 
   /**
-   * @param string
+   * Required. The environment being operated.
+   *
+   * Accepted values: ENVIRONMENT_UNSPECIFIED, ENVIRONMENT_BROWSER
+   *
+   * @param self::ENVIRONMENT_* $environment
    */
   public function setEnvironment($environment)
   {
     $this->environment = $environment;
   }
   /**
-   * @return string
+   * @return self::ENVIRONMENT_*
    */
   public function getEnvironment()
   {
     return $this->environment;
   }
   /**
-   * @param string[]
+   * Optional. By default, [predefined
+   * functions](https://cloud.google.com/vertex-ai/generative-ai/docs/computer-
+   * use#supported-actions) are included in the final model call. Some of them
+   * can be explicitly excluded from being automatically included. This can
+   * serve two purposes: 1. Using a more restricted / different action space. 2.
+   * Improving the definitions / instructions of predefined functions.
+   *
+   * @param string[] $excludedPredefinedFunctions
    */
   public function setExcludedPredefinedFunctions($excludedPredefinedFunctions)
   {

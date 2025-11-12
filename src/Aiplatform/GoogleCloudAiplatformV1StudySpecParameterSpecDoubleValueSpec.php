@@ -19,8 +19,26 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1StudySpecParameterSpecDoubleValueSpec extends \Google\Model
 {
+  /**
+   * A default value for a `DOUBLE` parameter that is assumed to be a relatively
+   * good starting point. Unset value signals that there is no offered starting
+   * point. Currently only supported by the Vertex AI Vizier service. Not
+   * supported by HyperparameterTuningJob or TrainingPipeline.
+   *
+   * @var 
+   */
   public $defaultValue;
+  /**
+   * Required. Inclusive maximum value of the parameter.
+   *
+   * @var 
+   */
   public $maxValue;
+  /**
+   * Required. Inclusive minimum value of the parameter.
+   *
+   * @var 
+   */
   public $minValue;
 
   public function setDefaultValue($defaultValue)

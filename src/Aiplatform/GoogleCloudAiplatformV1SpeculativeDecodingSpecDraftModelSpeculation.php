@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SpeculativeDecodingSpecDraftModelSpeculation extends \Google\Model
 {
   /**
+   * Required. The resource name of the draft model.
+   *
    * @var string
    */
   public $draftModel;
 
   /**
-   * @param string
+   * Required. The resource name of the draft model.
+   *
+   * @param string $draftModel
    */
   public function setDraftModel($draftModel)
   {

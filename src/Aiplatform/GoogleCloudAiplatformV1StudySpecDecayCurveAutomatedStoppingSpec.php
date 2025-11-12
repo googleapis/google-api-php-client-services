@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StudySpecDecayCurveAutomatedStoppingSpec extends \Google\Model
 {
   /**
+   * True if Measurement.elapsed_duration is used as the x-axis of each Trials
+   * Decay Curve. Otherwise, Measurement.step_count will be used as the x-axis.
+   *
    * @var bool
    */
   public $useElapsedDuration;
 
   /**
-   * @param bool
+   * True if Measurement.elapsed_duration is used as the x-axis of each Trials
+   * Decay Curve. Otherwise, Measurement.step_count will be used as the x-axis.
+   *
+   * @param bool $useElapsedDuration
    */
   public function setUseElapsedDuration($useElapsedDuration)
   {

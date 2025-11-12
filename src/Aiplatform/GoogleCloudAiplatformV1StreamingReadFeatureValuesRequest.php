@@ -21,6 +21,10 @@ class GoogleCloudAiplatformV1StreamingReadFeatureValuesRequest extends \Google\C
 {
   protected $collection_key = 'entityIds';
   /**
+   * Required. IDs of entities to read Feature values of. The maximum number of
+   * IDs is 100. For example, for a machine learning model predicting user
+   * clicks on a website, an entity ID could be `user_123`.
+   *
    * @var string[]
    */
   public $entityIds;
@@ -28,7 +32,11 @@ class GoogleCloudAiplatformV1StreamingReadFeatureValuesRequest extends \Google\C
   protected $featureSelectorDataType = '';
 
   /**
-   * @param string[]
+   * Required. IDs of entities to read Feature values of. The maximum number of
+   * IDs is 100. For example, for a machine learning model predicting user
+   * clicks on a website, an entity ID could be `user_123`.
+   *
+   * @param string[] $entityIds
    */
   public function setEntityIds($entityIds)
   {
@@ -42,7 +50,10 @@ class GoogleCloudAiplatformV1StreamingReadFeatureValuesRequest extends \Google\C
     return $this->entityIds;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureSelector
+   * Required. Selector choosing Features of the target EntityType. Feature IDs
+   * will be deduplicated.
+   *
+   * @param GoogleCloudAiplatformV1FeatureSelector $featureSelector
    */
   public function setFeatureSelector(GoogleCloudAiplatformV1FeatureSelector $featureSelector)
   {

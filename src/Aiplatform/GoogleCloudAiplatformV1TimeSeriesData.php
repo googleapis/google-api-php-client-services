@@ -19,12 +19,37 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1TimeSeriesData extends \Google\Collection
 {
+  /**
+   * The value type is unspecified.
+   */
+  public const VALUE_TYPE_VALUE_TYPE_UNSPECIFIED = 'VALUE_TYPE_UNSPECIFIED';
+  /**
+   * Used for TensorboardTimeSeries that is a list of scalars. E.g. accuracy of
+   * a model over epochs/time.
+   */
+  public const VALUE_TYPE_SCALAR = 'SCALAR';
+  /**
+   * Used for TensorboardTimeSeries that is a list of tensors. E.g. histograms
+   * of weights of layer in a model over epoch/time.
+   */
+  public const VALUE_TYPE_TENSOR = 'TENSOR';
+  /**
+   * Used for TensorboardTimeSeries that is a list of blob sequences. E.g. set
+   * of sample images with labels over epochs/time.
+   */
+  public const VALUE_TYPE_BLOB_SEQUENCE = 'BLOB_SEQUENCE';
   protected $collection_key = 'values';
   /**
+   * Required. The ID of the TensorboardTimeSeries, which will become the final
+   * component of the TensorboardTimeSeries' resource name
+   *
    * @var string
    */
   public $tensorboardTimeSeriesId;
   /**
+   * Required. Immutable. The value type of this time series. All the values in
+   * this time series data must match this value type.
+   *
    * @var string
    */
   public $valueType;
@@ -32,7 +57,10 @@ class GoogleCloudAiplatformV1TimeSeriesData extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param string
+   * Required. The ID of the TensorboardTimeSeries, which will become the final
+   * component of the TensorboardTimeSeries' resource name
+   *
+   * @param string $tensorboardTimeSeriesId
    */
   public function setTensorboardTimeSeriesId($tensorboardTimeSeriesId)
   {
@@ -46,21 +74,28 @@ class GoogleCloudAiplatformV1TimeSeriesData extends \Google\Collection
     return $this->tensorboardTimeSeriesId;
   }
   /**
-   * @param string
+   * Required. Immutable. The value type of this time series. All the values in
+   * this time series data must match this value type.
+   *
+   * Accepted values: VALUE_TYPE_UNSPECIFIED, SCALAR, TENSOR, BLOB_SEQUENCE
+   *
+   * @param self::VALUE_TYPE_* $valueType
    */
   public function setValueType($valueType)
   {
     $this->valueType = $valueType;
   }
   /**
-   * @return string
+   * @return self::VALUE_TYPE_*
    */
   public function getValueType()
   {
     return $this->valueType;
   }
   /**
-   * @param GoogleCloudAiplatformV1TimeSeriesDataPoint[]
+   * Required. Data points in this time series.
+   *
+   * @param GoogleCloudAiplatformV1TimeSeriesDataPoint[] $values
    */
   public function setValues($values)
   {

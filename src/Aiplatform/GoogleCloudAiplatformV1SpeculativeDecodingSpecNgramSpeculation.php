@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SpeculativeDecodingSpecNgramSpeculation extends \Google\Model
 {
   /**
+   * The number of last N input tokens used as ngram to search/match against the
+   * previous prompt sequence. This is equal to the N in N-Gram. The default
+   * value is 3 if not specified.
+   *
    * @var int
    */
   public $ngramSize;
 
   /**
-   * @param int
+   * The number of last N input tokens used as ngram to search/match against the
+   * previous prompt sequence. This is equal to the N in N-Gram. The default
+   * value is 3 if not specified.
+   *
+   * @param int $ngramSize
    */
   public function setNgramSize($ngramSize)
   {

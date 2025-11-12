@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1ToolNameMatchInput extends \Google\Collection
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ToolNameMatchInstance[]
+   * Required. Repeated tool name match instances.
+   *
+   * @param GoogleCloudAiplatformV1ToolNameMatchInstance[] $instances
    */
   public function setInstances($instances)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1ToolNameMatchInput extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param GoogleCloudAiplatformV1ToolNameMatchSpec
+   * Required. Spec for tool name match metric.
+   *
+   * @param GoogleCloudAiplatformV1ToolNameMatchSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1ToolNameMatchSpec $metricSpec)
   {

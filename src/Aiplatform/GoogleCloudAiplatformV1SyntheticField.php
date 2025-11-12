@@ -22,12 +22,16 @@ class GoogleCloudAiplatformV1SyntheticField extends \Google\Model
   protected $contentType = GoogleCloudAiplatformV1Content::class;
   protected $contentDataType = '';
   /**
+   * Optional. The name of the field.
+   *
    * @var string
    */
   public $fieldName;
 
   /**
-   * @param GoogleCloudAiplatformV1Content
+   * Required. The content of the field.
+   *
+   * @param GoogleCloudAiplatformV1Content $content
    */
   public function setContent(GoogleCloudAiplatformV1Content $content)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1SyntheticField extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Optional. The name of the field.
+   *
+   * @param string $fieldName
    */
   public function setFieldName($fieldName)
   {

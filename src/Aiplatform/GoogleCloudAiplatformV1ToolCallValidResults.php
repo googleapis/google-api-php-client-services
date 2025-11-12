@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1ToolCallValidResults extends \Google\Collection
   protected $toolCallValidMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1ToolCallValidMetricValue[]
+   * Output only. Tool call valid metric values.
+   *
+   * @param GoogleCloudAiplatformV1ToolCallValidMetricValue[] $toolCallValidMetricValues
    */
   public function setToolCallValidMetricValues($toolCallValidMetricValues)
   {
