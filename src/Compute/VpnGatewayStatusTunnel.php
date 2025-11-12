@@ -20,20 +20,30 @@ namespace Google\Service\Compute;
 class VpnGatewayStatusTunnel extends \Google\Model
 {
   /**
+   * The VPN gateway interface this VPN tunnel is associated with.
+   *
    * @var string
    */
   public $localGatewayInterface;
   /**
+   * The peer gateway interface this VPN tunnel is connected to, the peer
+   * gateway could either be an external VPN gateway or a Google Cloud VPN
+   * gateway.
+   *
    * @var string
    */
   public $peerGatewayInterface;
   /**
+   * URL reference to the VPN tunnel.
+   *
    * @var string
    */
   public $tunnelUrl;
 
   /**
-   * @param string
+   * The VPN gateway interface this VPN tunnel is associated with.
+   *
+   * @param string $localGatewayInterface
    */
   public function setLocalGatewayInterface($localGatewayInterface)
   {
@@ -47,7 +57,11 @@ class VpnGatewayStatusTunnel extends \Google\Model
     return $this->localGatewayInterface;
   }
   /**
-   * @param string
+   * The peer gateway interface this VPN tunnel is connected to, the peer
+   * gateway could either be an external VPN gateway or a Google Cloud VPN
+   * gateway.
+   *
+   * @param string $peerGatewayInterface
    */
   public function setPeerGatewayInterface($peerGatewayInterface)
   {
@@ -61,7 +75,9 @@ class VpnGatewayStatusTunnel extends \Google\Model
     return $this->peerGatewayInterface;
   }
   /**
-   * @param string
+   * URL reference to the VPN tunnel.
+   *
+   * @param string $tunnelUrl
    */
   public function setTunnelUrl($tunnelUrl)
   {

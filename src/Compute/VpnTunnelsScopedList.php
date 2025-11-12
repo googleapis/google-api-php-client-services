@@ -26,7 +26,9 @@ class VpnTunnelsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param VpnTunnel[]
+   * A list of VPN tunnels contained in this scope.
+   *
+   * @param VpnTunnel[] $vpnTunnels
    */
   public function setVpnTunnels($vpnTunnels)
   {
@@ -40,7 +42,10 @@ class VpnTunnelsScopedList extends \Google\Collection
     return $this->vpnTunnels;
   }
   /**
-   * @param VpnTunnelsScopedListWarning
+   * Informational warning which replaces the list of addresses when the list is
+   * empty.
+   *
+   * @param VpnTunnelsScopedListWarning $warning
    */
   public function setWarning(VpnTunnelsScopedListWarning $warning)
   {

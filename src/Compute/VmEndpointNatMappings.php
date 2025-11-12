@@ -21,6 +21,8 @@ class VmEndpointNatMappings extends \Google\Collection
 {
   protected $collection_key = 'interfaceNatMappings';
   /**
+   * Name of the VM instance which the endpoint belongs to
+   *
    * @var string
    */
   public $instanceName;
@@ -28,7 +30,9 @@ class VmEndpointNatMappings extends \Google\Collection
   protected $interfaceNatMappingsDataType = 'array';
 
   /**
-   * @param string
+   * Name of the VM instance which the endpoint belongs to
+   *
+   * @param string $instanceName
    */
   public function setInstanceName($instanceName)
   {
@@ -42,7 +46,7 @@ class VmEndpointNatMappings extends \Google\Collection
     return $this->instanceName;
   }
   /**
-   * @param VmEndpointNatMappingsInterfaceNatMappings[]
+   * @param VmEndpointNatMappingsInterfaceNatMappings[] $interfaceNatMappings
    */
   public function setInterfaceNatMappings($interfaceNatMappings)
   {

@@ -20,24 +20,50 @@ namespace Google\Service\Compute;
 class VpnGatewayVpnGatewayInterface extends \Google\Model
 {
   /**
+   * [Output Only] Numeric identifier for this VPN interface associated with the
+   * VPN gateway.
+   *
    * @var string
    */
   public $id;
   /**
+   * URL of the VLAN attachment (interconnectAttachment) resource for this VPN
+   * gateway interface. When the value of this field is present, the VPN gateway
+   * is used for HA VPN over Cloud Interconnect; all egress or ingress traffic
+   * for this VPN gateway interface goes through the specified VLAN attachment
+   * resource.
+   *
    * @var string
    */
   public $interconnectAttachment;
   /**
+   * [Output Only] IP address for this VPN interface associated with the VPN
+   * gateway. The IP address could be either a regional external IP address or a
+   * regional internal IP address. The two IP addresses for a VPN gateway must
+   * be all regional external or regional internal IP addresses. There cannot be
+   * a mix of regional external IP addresses and regional internal IP addresses.
+   * For HA VPN over Cloud Interconnect, the IP addresses for both interfaces
+   * could either be regional internal IP addresses or regional external IP
+   * addresses. For regular (non HA VPN over Cloud Interconnect) HA VPN tunnels,
+   * the IP address must be a regional external IP address.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * [Output Only] IPv6 address for this VPN interface associated with the VPN
+   * gateway. The IPv6 address must be a regional external IPv6 address. The
+   * format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+   *
    * @var string
    */
   public $ipv6Address;
 
   /**
-   * @param string
+   * [Output Only] Numeric identifier for this VPN interface associated with the
+   * VPN gateway.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -51,7 +77,13 @@ class VpnGatewayVpnGatewayInterface extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * URL of the VLAN attachment (interconnectAttachment) resource for this VPN
+   * gateway interface. When the value of this field is present, the VPN gateway
+   * is used for HA VPN over Cloud Interconnect; all egress or ingress traffic
+   * for this VPN gateway interface goes through the specified VLAN attachment
+   * resource.
+   *
+   * @param string $interconnectAttachment
    */
   public function setInterconnectAttachment($interconnectAttachment)
   {
@@ -65,7 +97,17 @@ class VpnGatewayVpnGatewayInterface extends \Google\Model
     return $this->interconnectAttachment;
   }
   /**
-   * @param string
+   * [Output Only] IP address for this VPN interface associated with the VPN
+   * gateway. The IP address could be either a regional external IP address or a
+   * regional internal IP address. The two IP addresses for a VPN gateway must
+   * be all regional external or regional internal IP addresses. There cannot be
+   * a mix of regional external IP addresses and regional internal IP addresses.
+   * For HA VPN over Cloud Interconnect, the IP addresses for both interfaces
+   * could either be regional internal IP addresses or regional external IP
+   * addresses. For regular (non HA VPN over Cloud Interconnect) HA VPN tunnels,
+   * the IP address must be a regional external IP address.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -79,7 +121,11 @@ class VpnGatewayVpnGatewayInterface extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * [Output Only] IPv6 address for this VPN interface associated with the VPN
+   * gateway. The IPv6 address must be a regional external IPv6 address. The
+   * format is RFC 5952 format (e.g. 2001:db8::2d9:51:0:0).
+   *
+   * @param string $ipv6Address
    */
   public function setIpv6Address($ipv6Address)
   {

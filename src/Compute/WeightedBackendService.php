@@ -20,18 +20,38 @@ namespace Google\Service\Compute;
 class WeightedBackendService extends \Google\Model
 {
   /**
+   * The full or partial URL to the default BackendService resource. Before
+   * forwarding the request to backendService, the load balancer applies any
+   * relevant headerActions specified as part of thisbackendServiceWeight.
+   *
    * @var string
    */
   public $backendService;
   protected $headerActionType = HttpHeaderAction::class;
   protected $headerActionDataType = '';
   /**
+   * Specifies the fraction of traffic sent to a backend service, computed
+   * asweight / (sum of all weightedBackendService weights in routeAction).
+   *
+   * The selection of a backend service is determined only for new traffic. Once
+   * a user's request has been directed to a backend service, subsequent
+   * requests are sent to the same backend service as determined by the backend
+   * service's session affinity policy. Don't configure session affinity if
+   * you're using weighted traffic splitting. If you do, the weighted traffic
+   * splitting configuration takes precedence.
+   *
+   * The value must be from 0 to 1000.
+   *
    * @var string
    */
   public $weight;
 
   /**
-   * @param string
+   * The full or partial URL to the default BackendService resource. Before
+   * forwarding the request to backendService, the load balancer applies any
+   * relevant headerActions specified as part of thisbackendServiceWeight.
+   *
+   * @param string $backendService
    */
   public function setBackendService($backendService)
   {
@@ -45,7 +65,19 @@ class WeightedBackendService extends \Google\Model
     return $this->backendService;
   }
   /**
-   * @param HttpHeaderAction
+   * Specifies changes to request and response headers that need to take effect
+   * for the selected backendService.
+   *
+   * headerAction specified here take effect beforeheaderAction in the enclosing
+   * HttpRouteRule,PathMatcher and UrlMap.
+   *
+   * headerAction is not supported for load balancers that have their
+   * loadBalancingScheme set to EXTERNAL.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy that has
+   * validateForProxyless field set to true.
+   *
+   * @param HttpHeaderAction $headerAction
    */
   public function setHeaderAction(HttpHeaderAction $headerAction)
   {
@@ -59,7 +91,19 @@ class WeightedBackendService extends \Google\Model
     return $this->headerAction;
   }
   /**
-   * @param string
+   * Specifies the fraction of traffic sent to a backend service, computed
+   * asweight / (sum of all weightedBackendService weights in routeAction).
+   *
+   * The selection of a backend service is determined only for new traffic. Once
+   * a user's request has been directed to a backend service, subsequent
+   * requests are sent to the same backend service as determined by the backend
+   * service's session affinity policy. Don't configure session affinity if
+   * you're using weighted traffic splitting. If you do, the weighted traffic
+   * splitting configuration takes precedence.
+   *
+   * The value must be from 0 to 1000.
+   *
+   * @param string $weight
    */
   public function setWeight($weight)
   {

@@ -25,7 +25,7 @@ class VpnTunnelCipherSuite extends \Google\Model
   protected $phase2DataType = '';
 
   /**
-   * @param VpnTunnelPhase1Algorithms
+   * @param VpnTunnelPhase1Algorithms $phase1
    */
   public function setPhase1(VpnTunnelPhase1Algorithms $phase1)
   {
@@ -39,7 +39,7 @@ class VpnTunnelCipherSuite extends \Google\Model
     return $this->phase1;
   }
   /**
-   * @param VpnTunnelPhase2Algorithms
+   * @param VpnTunnelPhase2Algorithms $phase2
    */
   public function setPhase2(VpnTunnelPhase2Algorithms $phase2)
   {

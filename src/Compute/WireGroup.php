@@ -21,36 +21,63 @@ class WireGroup extends \Google\Collection
 {
   protected $collection_key = 'wires';
   /**
+   * Indicates whether the wires in the wire group are enabled. When false, the
+   * wires in the wire group are disabled. When true and when there is
+   * simultaneously no wire-specific override of `adminEnabled` to false, a
+   * given wire is enabled. Defaults to true.
+   *
    * @var bool
    */
   public $adminEnabled;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of the wire group.
+   *
    * @var string
    */
   public $description;
   protected $endpointsType = WireGroupEndpoint::class;
   protected $endpointsDataType = 'map';
   /**
+   * [Output Only] The unique identifier for the resource type. The server
+   * generates this identifier.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire
+   * groups.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
@@ -62,7 +89,12 @@ class WireGroup extends \Google\Collection
   protected $wiresDataType = 'array';
 
   /**
-   * @param bool
+   * Indicates whether the wires in the wire group are enabled. When false, the
+   * wires in the wire group are disabled. When true and when there is
+   * simultaneously no wire-specific override of `adminEnabled` to false, a
+   * given wire is enabled. Defaults to true.
+   *
+   * @param bool $adminEnabled
    */
   public function setAdminEnabled($adminEnabled)
   {
@@ -76,7 +108,9 @@ class WireGroup extends \Google\Collection
     return $this->adminEnabled;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -90,7 +124,9 @@ class WireGroup extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of the wire group.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -104,7 +140,11 @@ class WireGroup extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param WireGroupEndpoint[]
+   * A map that contains the logical endpoints of the wire group. Specify key-
+   * value pairs for the map as follows:        - Key: an RFC1035 user-specified
+   * label.    - Value: an Endpoint object.
+   *
+   * @param WireGroupEndpoint[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -118,7 +158,10 @@ class WireGroup extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource type. The server
+   * generates this identifier.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -132,7 +175,10 @@ class WireGroup extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#wireGroups for wire
+   * groups.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -146,7 +192,15 @@ class WireGroup extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -160,7 +214,9 @@ class WireGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * [Output Only] Indicates whether there are wire changes yet to be processed.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -174,7 +230,9 @@ class WireGroup extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -188,7 +246,9 @@ class WireGroup extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param WireGroupTopology
+   * Topology details for the wire group configuration.
+   *
+   * @param WireGroupTopology $topology
    */
   public function setTopology(WireGroupTopology $topology)
   {
@@ -202,7 +262,9 @@ class WireGroup extends \Google\Collection
     return $this->topology;
   }
   /**
-   * @param WireProperties
+   * Properties for all wires in the wire group.
+   *
+   * @param WireProperties $wireProperties
    */
   public function setWireProperties(WireProperties $wireProperties)
   {
@@ -216,7 +278,9 @@ class WireGroup extends \Google\Collection
     return $this->wireProperties;
   }
   /**
-   * @param Wire[]
+   * The single/redundant wire(s) managed by the wire group.
+   *
+   * @param Wire[] $wires
    */
   public function setWires($wires)
   {

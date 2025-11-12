@@ -21,10 +21,18 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
 {
   protected $collection_key = 'tunnels';
   /**
+   * URL reference to the peer external VPN gateways to which the VPN tunnels in
+   * this VPN connection are connected. This field is mutually exclusive with
+   * peer_gcp_gateway.
+   *
    * @var string
    */
   public $peerExternalGateway;
   /**
+   * URL reference to the peer side VPN gateways to which the VPN tunnels in
+   * this VPN connection are connected. This field is mutually exclusive with
+   * peer_gcp_gateway.
+   *
    * @var string
    */
   public $peerGcpGateway;
@@ -34,7 +42,11 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
   protected $tunnelsDataType = 'array';
 
   /**
-   * @param string
+   * URL reference to the peer external VPN gateways to which the VPN tunnels in
+   * this VPN connection are connected. This field is mutually exclusive with
+   * peer_gcp_gateway.
+   *
+   * @param string $peerExternalGateway
    */
   public function setPeerExternalGateway($peerExternalGateway)
   {
@@ -48,7 +60,11 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
     return $this->peerExternalGateway;
   }
   /**
-   * @param string
+   * URL reference to the peer side VPN gateways to which the VPN tunnels in
+   * this VPN connection are connected. This field is mutually exclusive with
+   * peer_gcp_gateway.
+   *
+   * @param string $peerGcpGateway
    */
   public function setPeerGcpGateway($peerGcpGateway)
   {
@@ -62,7 +78,9 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
     return $this->peerGcpGateway;
   }
   /**
-   * @param VpnGatewayStatusHighAvailabilityRequirementState
+   * HighAvailabilityRequirementState for the VPN connection.
+   *
+   * @param VpnGatewayStatusHighAvailabilityRequirementState $state
    */
   public function setState(VpnGatewayStatusHighAvailabilityRequirementState $state)
   {
@@ -76,7 +94,9 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
     return $this->state;
   }
   /**
-   * @param VpnGatewayStatusTunnel[]
+   * List of VPN tunnels that are in this VPN connection.
+   *
+   * @param VpnGatewayStatusTunnel[] $tunnels
    */
   public function setTunnels($tunnels)
   {

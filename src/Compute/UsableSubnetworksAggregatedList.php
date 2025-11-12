@@ -21,26 +21,45 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
 {
   protected $collection_key = 'unreachables';
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   protected $itemsType = UsableSubnetwork::class;
   protected $itemsDataType = 'array';
   /**
+   * [Output Only] Type of resource.
+   * Alwayscompute#usableSubnetworksAggregatedList for aggregated lists of
+   * usable subnetworks.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results. In special cases listUsable may return
+   * 0 subnetworks andnextPageToken which still should be used to get the next
+   * page of results.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $scopedWarningsType = SubnetworksScopedWarning::class;
   protected $scopedWarningsDataType = 'array';
   /**
+   * [Output Only] Server-defined URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] Unreachable resources.
+   *
    * @var string[]
    */
   public $unreachables;
@@ -48,7 +67,10 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -62,7 +84,9 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param UsableSubnetwork[]
+   * [Output] A list of usable subnetwork URLs.
+   *
+   * @param UsableSubnetwork[] $items
    */
   public function setItems($items)
   {
@@ -76,7 +100,11 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * [Output Only] Type of resource.
+   * Alwayscompute#usableSubnetworksAggregatedList for aggregated lists of
+   * usable subnetworks.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -90,7 +118,15 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results. In special cases listUsable may return
+   * 0 subnetworks andnextPageToken which still should be used to get the next
+   * page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -104,7 +140,10 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SubnetworksScopedWarning[]
+   * [Output Only] Informational warning messages for failures encountered from
+   * scopes.
+   *
+   * @param SubnetworksScopedWarning[] $scopedWarnings
    */
   public function setScopedWarnings($scopedWarnings)
   {
@@ -118,7 +157,9 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->scopedWarnings;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -132,7 +173,9 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string[]
+   * [Output Only] Unreachable resources.
+   *
+   * @param string[] $unreachables
    */
   public function setUnreachables($unreachables)
   {
@@ -146,7 +189,9 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
     return $this->unreachables;
   }
   /**
-   * @param UsableSubnetworksAggregatedListWarning
+   * [Output Only] Informational warning message.
+   *
+   * @param UsableSubnetworksAggregatedListWarning $warning
    */
   public function setWarning(UsableSubnetworksAggregatedListWarning $warning)
   {

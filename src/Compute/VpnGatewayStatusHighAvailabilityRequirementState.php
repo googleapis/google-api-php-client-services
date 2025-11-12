@@ -20,37 +20,70 @@ namespace Google\Service\Compute;
 class VpnGatewayStatusHighAvailabilityRequirementState extends \Google\Model
 {
   /**
+   * VPN tunnels are configured with adequate redundancy from Cloud VPN gateway
+   * to the peer VPN gateway. For both GCP-to-non-GCP and GCP-to-GCP
+   * connections, the adequate redundancy is a pre-requirement for users to get
+   * 99.99% availability on GCP side; please note that for any connection, end-
+   * to-end 99.99% availability is subject to proper configuration on the peer
+   * VPN gateway.
+   */
+  public const STATE_CONNECTION_REDUNDANCY_MET = 'CONNECTION_REDUNDANCY_MET';
+  /**
+   * VPN tunnels are not configured with adequate redundancy from the Cloud VPN
+   * gateway to the peer gateway
+   */
+  public const STATE_CONNECTION_REDUNDANCY_NOT_MET = 'CONNECTION_REDUNDANCY_NOT_MET';
+  public const UNSATISFIED_REASON_INCOMPLETE_TUNNELS_COVERAGE = 'INCOMPLETE_TUNNELS_COVERAGE';
+  /**
+   * Indicates the high availability requirement state for the VPN connection.
+   * Valid values are CONNECTION_REDUNDANCY_MET,CONNECTION_REDUNDANCY_NOT_MET.
+   *
    * @var string
    */
   public $state;
   /**
+   * Indicates the reason why the VPN connection does not meet the high
+   * availability redundancy criteria/requirement. Valid values is
+   * INCOMPLETE_TUNNELS_COVERAGE.
+   *
    * @var string
    */
   public $unsatisfiedReason;
 
   /**
-   * @param string
+   * Indicates the high availability requirement state for the VPN connection.
+   * Valid values are CONNECTION_REDUNDANCY_MET,CONNECTION_REDUNDANCY_NOT_MET.
+   *
+   * Accepted values: CONNECTION_REDUNDANCY_MET, CONNECTION_REDUNDANCY_NOT_MET
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Indicates the reason why the VPN connection does not meet the high
+   * availability redundancy criteria/requirement. Valid values is
+   * INCOMPLETE_TUNNELS_COVERAGE.
+   *
+   * Accepted values: INCOMPLETE_TUNNELS_COVERAGE
+   *
+   * @param self::UNSATISFIED_REASON_* $unsatisfiedReason
    */
   public function setUnsatisfiedReason($unsatisfiedReason)
   {
     $this->unsatisfiedReason = $unsatisfiedReason;
   }
   /**
-   * @return string
+   * @return self::UNSATISFIED_REASON_*
    */
   public function getUnsatisfiedReason()
   {

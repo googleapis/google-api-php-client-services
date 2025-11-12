@@ -20,16 +20,34 @@ namespace Google\Service\Compute;
 class UsageExportLocation extends \Google\Model
 {
   /**
+   * The name of an existing bucket in Cloud Storage where the usage report
+   * object is stored. The Google Service Account is granted write access to
+   * this bucket. This can either be the bucket name by itself, such asexample-
+   * bucket, or the bucket name with gs:// or https://storage.googleapis.com/ in
+   * front of it, such as gs://example-bucket.
+   *
    * @var string
    */
   public $bucketName;
   /**
+   * An optional prefix for the name of the usage report object stored
+   * inbucketName. If not supplied, defaults tousage_gce. The report is stored
+   * as a CSV file namedreport_name_prefix_gce_YYYYMMDD.csv whereYYYYMMDD is the
+   * day of the usage according to Pacific Time. If you supply a prefix, it
+   * should conform to Cloud Storageobject naming conventions.
+   *
    * @var string
    */
   public $reportNamePrefix;
 
   /**
-   * @param string
+   * The name of an existing bucket in Cloud Storage where the usage report
+   * object is stored. The Google Service Account is granted write access to
+   * this bucket. This can either be the bucket name by itself, such asexample-
+   * bucket, or the bucket name with gs:// or https://storage.googleapis.com/ in
+   * front of it, such as gs://example-bucket.
+   *
+   * @param string $bucketName
    */
   public function setBucketName($bucketName)
   {
@@ -43,7 +61,13 @@ class UsageExportLocation extends \Google\Model
     return $this->bucketName;
   }
   /**
-   * @param string
+   * An optional prefix for the name of the usage report object stored
+   * inbucketName. If not supplied, defaults tousage_gce. The report is stored
+   * as a CSV file namedreport_name_prefix_gce_YYYYMMDD.csv whereYYYYMMDD is the
+   * day of the usage according to Pacific Time. If you supply a prefix, it
+   * should conform to Cloud Storageobject naming conventions.
+   *
+   * @param string $reportNamePrefix
    */
   public function setReportNamePrefix($reportNamePrefix)
   {

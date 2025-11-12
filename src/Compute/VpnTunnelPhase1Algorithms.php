@@ -38,7 +38,7 @@ class VpnTunnelPhase1Algorithms extends \Google\Collection
   public $prf;
 
   /**
-   * @param string[]
+   * @param string[] $dh
    */
   public function setDh($dh)
   {
@@ -52,7 +52,7 @@ class VpnTunnelPhase1Algorithms extends \Google\Collection
     return $this->dh;
   }
   /**
-   * @param string[]
+   * @param string[] $encryption
    */
   public function setEncryption($encryption)
   {
@@ -66,7 +66,7 @@ class VpnTunnelPhase1Algorithms extends \Google\Collection
     return $this->encryption;
   }
   /**
-   * @param string[]
+   * @param string[] $integrity
    */
   public function setIntegrity($integrity)
   {
@@ -80,7 +80,7 @@ class VpnTunnelPhase1Algorithms extends \Google\Collection
     return $this->integrity;
   }
   /**
-   * @param string[]
+   * @param string[] $prf
    */
   public function setPrf($prf)
   {
