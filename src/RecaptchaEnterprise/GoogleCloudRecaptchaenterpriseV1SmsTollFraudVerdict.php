@@ -21,16 +21,23 @@ class GoogleCloudRecaptchaenterpriseV1SmsTollFraudVerdict extends \Google\Collec
 {
   protected $collection_key = 'reasons';
   /**
+   * Output only. Reasons contributing to the SMS toll fraud verdict.
+   *
    * @var string[]
    */
   public $reasons;
   /**
+   * Output only. Probability of an SMS event being fraudulent. Values are from
+   * 0.0 (lowest) to 1.0 (highest).
+   *
    * @var float
    */
   public $risk;
 
   /**
-   * @param string[]
+   * Output only. Reasons contributing to the SMS toll fraud verdict.
+   *
+   * @param string[] $reasons
    */
   public function setReasons($reasons)
   {
@@ -44,7 +51,10 @@ class GoogleCloudRecaptchaenterpriseV1SmsTollFraudVerdict extends \Google\Collec
     return $this->reasons;
   }
   /**
-   * @param float
+   * Output only. Probability of an SMS event being fraudulent. Values are from
+   * 0.0 (lowest) to 1.0 (highest).
+   *
+   * @param float $risk
    */
   public function setRisk($risk)
   {

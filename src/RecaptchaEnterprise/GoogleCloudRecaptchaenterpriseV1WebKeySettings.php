@@ -19,32 +19,91 @@ namespace Google\Service\RecaptchaEnterprise;
 
 class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
 {
+  /**
+   * Default type that indicates this enum hasn't been specified.
+   */
+  public const CHALLENGE_SECURITY_PREFERENCE_CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED = 'CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED';
+  /**
+   * Key tends to show fewer and easier challenges.
+   */
+  public const CHALLENGE_SECURITY_PREFERENCE_USABILITY = 'USABILITY';
+  /**
+   * Key tends to show balanced (in amount and difficulty) challenges.
+   */
+  public const CHALLENGE_SECURITY_PREFERENCE_BALANCE = 'BALANCE';
+  /**
+   * Key tends to show more and harder challenges.
+   */
+  public const CHALLENGE_SECURITY_PREFERENCE_SECURITY = 'SECURITY';
+  /**
+   * Default type that indicates this enum hasn't been specified. This is not a
+   * valid IntegrationType, one of the other types must be specified instead.
+   */
+  public const INTEGRATION_TYPE_INTEGRATION_TYPE_UNSPECIFIED = 'INTEGRATION_TYPE_UNSPECIFIED';
+  /**
+   * Only used to produce scores. It doesn't display the "I'm not a robot"
+   * checkbox and never shows captcha challenges.
+   */
+  public const INTEGRATION_TYPE_SCORE = 'SCORE';
+  /**
+   * Displays the "I'm not a robot" checkbox and may show captcha challenges
+   * after it is checked.
+   */
+  public const INTEGRATION_TYPE_CHECKBOX = 'CHECKBOX';
+  /**
+   * Doesn't display the "I'm not a robot" checkbox, but may show captcha
+   * challenges after risk analysis.
+   */
+  public const INTEGRATION_TYPE_INVISIBLE = 'INVISIBLE';
+  /**
+   * Displays a visual challenge or not depending on the user risk analysis
+   * score.
+   */
+  public const INTEGRATION_TYPE_POLICY_BASED_CHALLENGE = 'POLICY_BASED_CHALLENGE';
   protected $collection_key = 'allowedDomains';
   /**
+   * Optional. If set to true, it means allowed_domains are not enforced.
+   *
    * @var bool
    */
   public $allowAllDomains;
   /**
+   * Optional. If set to true, the key can be used on AMP (Accelerated Mobile
+   * Pages) websites. This is supported only for the SCORE integration type.
+   *
    * @var bool
    */
   public $allowAmpTraffic;
   /**
+   * Optional. Domains or subdomains of websites allowed to use the key. All
+   * subdomains of an allowed domain are automatically allowed. A valid domain
+   * requires a host and must not include any path, port, query or fragment.
+   * Examples: 'example.com' or 'subdomain.example.com'
+   *
    * @var string[]
    */
   public $allowedDomains;
   /**
+   * Optional. Settings for the frequency and difficulty at which this key
+   * triggers captcha challenges. This should only be specified for
+   * `IntegrationType` CHECKBOX, INVISIBLE or POLICY_BASED_CHALLENGE.
+   *
    * @var string
    */
   public $challengeSecurityPreference;
   protected $challengeSettingsType = GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings::class;
   protected $challengeSettingsDataType = '';
   /**
+   * Required. Describes how this key is integrated with the website.
+   *
    * @var string
    */
   public $integrationType;
 
   /**
-   * @param bool
+   * Optional. If set to true, it means allowed_domains are not enforced.
+   *
+   * @param bool $allowAllDomains
    */
   public function setAllowAllDomains($allowAllDomains)
   {
@@ -58,7 +117,10 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
     return $this->allowAllDomains;
   }
   /**
-   * @param bool
+   * Optional. If set to true, the key can be used on AMP (Accelerated Mobile
+   * Pages) websites. This is supported only for the SCORE integration type.
+   *
+   * @param bool $allowAmpTraffic
    */
   public function setAllowAmpTraffic($allowAmpTraffic)
   {
@@ -72,7 +134,12 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
     return $this->allowAmpTraffic;
   }
   /**
-   * @param string[]
+   * Optional. Domains or subdomains of websites allowed to use the key. All
+   * subdomains of an allowed domain are automatically allowed. A valid domain
+   * requires a host and must not include any path, port, query or fragment.
+   * Examples: 'example.com' or 'subdomain.example.com'
+   *
+   * @param string[] $allowedDomains
    */
   public function setAllowedDomains($allowedDomains)
   {
@@ -86,21 +153,30 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
     return $this->allowedDomains;
   }
   /**
-   * @param string
+   * Optional. Settings for the frequency and difficulty at which this key
+   * triggers captcha challenges. This should only be specified for
+   * `IntegrationType` CHECKBOX, INVISIBLE or POLICY_BASED_CHALLENGE.
+   *
+   * Accepted values: CHALLENGE_SECURITY_PREFERENCE_UNSPECIFIED, USABILITY,
+   * BALANCE, SECURITY
+   *
+   * @param self::CHALLENGE_SECURITY_PREFERENCE_* $challengeSecurityPreference
    */
   public function setChallengeSecurityPreference($challengeSecurityPreference)
   {
     $this->challengeSecurityPreference = $challengeSecurityPreference;
   }
   /**
-   * @return string
+   * @return self::CHALLENGE_SECURITY_PREFERENCE_*
    */
   public function getChallengeSecurityPreference()
   {
     return $this->challengeSecurityPreference;
   }
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings
+   * Optional. Challenge settings.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings $challengeSettings
    */
   public function setChallengeSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings $challengeSettings)
   {
@@ -114,14 +190,19 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends \Google\Collection
     return $this->challengeSettings;
   }
   /**
-   * @param string
+   * Required. Describes how this key is integrated with the website.
+   *
+   * Accepted values: INTEGRATION_TYPE_UNSPECIFIED, SCORE, CHECKBOX, INVISIBLE,
+   * POLICY_BASED_CHALLENGE
+   *
+   * @param self::INTEGRATION_TYPE_* $integrationType
    */
   public function setIntegrationType($integrationType)
   {
     $this->integrationType = $integrationType;
   }
   /**
-   * @return string
+   * @return self::INTEGRATION_TYPE_*
    */
   public function getIntegrationType()
   {

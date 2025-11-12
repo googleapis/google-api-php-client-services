@@ -20,12 +20,20 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup extends \Google\Model
 {
   /**
+   * Required. Identifier. The resource name for the related account group in
+   * the format
+   * `projects/{project}/relatedaccountgroups/{related_account_group}`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. Identifier. The resource name for the related account group in
+   * the format
+   * `projects/{project}/relatedaccountgroups/{related_account_group}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

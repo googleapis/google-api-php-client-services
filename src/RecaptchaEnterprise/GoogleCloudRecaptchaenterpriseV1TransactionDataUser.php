@@ -20,32 +20,52 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
 {
   /**
+   * Optional. Unique account identifier for this user. If using account
+   * defender, this should match the hashed_account_id field. Otherwise, a
+   * unique and persistent identifier for this account.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * Optional. The epoch milliseconds of the user's account creation.
+   *
    * @var string
    */
   public $creationMs;
   /**
+   * Optional. The email address of the user.
+   *
    * @var string
    */
   public $email;
   /**
+   * Optional. Whether the email has been verified to be accessible by the user
+   * (OTP or similar).
+   *
    * @var bool
    */
   public $emailVerified;
   /**
+   * Optional. The phone number of the user, with country code.
+   *
    * @var string
    */
   public $phoneNumber;
   /**
+   * Optional. Whether the phone number has been verified to be accessible by
+   * the user (OTP or similar).
+   *
    * @var bool
    */
   public $phoneVerified;
 
   /**
-   * @param string
+   * Optional. Unique account identifier for this user. If using account
+   * defender, this should match the hashed_account_id field. Otherwise, a
+   * unique and persistent identifier for this account.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -59,7 +79,9 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * Optional. The epoch milliseconds of the user's account creation.
+   *
+   * @param string $creationMs
    */
   public function setCreationMs($creationMs)
   {
@@ -73,7 +95,9 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
     return $this->creationMs;
   }
   /**
-   * @param string
+   * Optional. The email address of the user.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -87,7 +111,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
     return $this->email;
   }
   /**
-   * @param bool
+   * Optional. Whether the email has been verified to be accessible by the user
+   * (OTP or similar).
+   *
+   * @param bool $emailVerified
    */
   public function setEmailVerified($emailVerified)
   {
@@ -101,7 +128,9 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
     return $this->emailVerified;
   }
   /**
-   * @param string
+   * Optional. The phone number of the user, with country code.
+   *
+   * @param string $phoneNumber
    */
   public function setPhoneNumber($phoneNumber)
   {
@@ -115,7 +144,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends \Google\Model
     return $this->phoneNumber;
   }
   /**
-   * @param bool
+   * Optional. Whether the phone number has been verified to be accessible by
+   * the user (OTP or similar).
+   *
+   * @param bool $phoneVerified
    */
   public function setPhoneVerified($phoneVerified)
   {

@@ -23,7 +23,9 @@ class GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment extends \Google\Model
   protected $smsTollFraudVerdictDataType = '';
 
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1SmsTollFraudVerdict
+   * Output only. Assessment of this phone event for risk of SMS toll fraud.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1SmsTollFraudVerdict $smsTollFraudVerdict
    */
   public function setSmsTollFraudVerdict(GoogleCloudRecaptchaenterpriseV1SmsTollFraudVerdict $smsTollFraudVerdict)
   {

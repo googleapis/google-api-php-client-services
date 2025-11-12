@@ -23,12 +23,17 @@ class GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse extends \Goog
   protected $firewallPoliciesType = GoogleCloudRecaptchaenterpriseV1FirewallPolicy::class;
   protected $firewallPoliciesDataType = 'array';
   /**
+   * Token to retrieve the next page of results. It is set to empty if no
+   * policies remain in results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1FirewallPolicy[]
+   * Policy details.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1FirewallPolicy[] $firewallPolicies
    */
   public function setFirewallPolicies($firewallPolicies)
   {
@@ -42,7 +47,10 @@ class GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse extends \Goog
     return $this->firewallPolicies;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results. It is set to empty if no
+   * policies remain in results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

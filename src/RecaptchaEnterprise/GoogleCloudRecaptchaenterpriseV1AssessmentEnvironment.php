@@ -20,16 +20,28 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment extends \Google\Model
 {
   /**
+   * Optional. Identifies the client module initiating the CreateAssessment
+   * request. This can be the link to the client module's project. Examples
+   * include: - "github.com/GoogleCloudPlatform/recaptcha-enterprise-google-tag-
+   * manager" - "wordpress.org/plugins/recaptcha-something"
+   *
    * @var string
    */
   public $client;
   /**
+   * Optional. The version of the client module. For example, "1.0.0".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Optional. Identifies the client module initiating the CreateAssessment
+   * request. This can be the link to the client module's project. Examples
+   * include: - "github.com/GoogleCloudPlatform/recaptcha-enterprise-google-tag-
+   * manager" - "wordpress.org/plugins/recaptcha-something"
+   *
+   * @param string $client
    */
   public function setClient($client)
   {
@@ -43,7 +55,9 @@ class GoogleCloudRecaptchaenterpriseV1AssessmentEnvironment extends \Google\Mode
     return $this->client;
   }
   /**
-   * @param string
+   * Optional. The version of the client module. For example, "1.0.0".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

@@ -20,19 +20,56 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1FraudPreventionAssessmentRiskReason extends \Google\Model
 {
   /**
+   * Default unspecified type.
+   */
+  public const REASON_REASON_UNSPECIFIED = 'REASON_UNSPECIFIED';
+  /**
+   * A suspiciously high number of recent transactions have used identifiers
+   * present in this transaction.
+   */
+  public const REASON_HIGH_TRANSACTION_VELOCITY = 'HIGH_TRANSACTION_VELOCITY';
+  /**
+   * User is cycling through a suspiciously large number of identifiers,
+   * suggesting enumeration or validation attacks within a potential fraud
+   * network.
+   */
+  public const REASON_EXCESSIVE_ENUMERATION_PATTERN = 'EXCESSIVE_ENUMERATION_PATTERN';
+  /**
+   * User has a short history or no history in the reCAPTCHA network, suggesting
+   * the possibility of synthetic identity generation.
+   */
+  public const REASON_SHORT_IDENTITY_HISTORY = 'SHORT_IDENTITY_HISTORY';
+  /**
+   * Identifiers used in this transaction originate from an unusual or
+   * conflicting set of geolocations.
+   */
+  public const REASON_GEOLOCATION_DISCREPANCY = 'GEOLOCATION_DISCREPANCY';
+  /**
+   * This transaction is linked to a cluster of known fraudulent activity.
+   */
+  public const REASON_ASSOCIATED_WITH_FRAUD_CLUSTER = 'ASSOCIATED_WITH_FRAUD_CLUSTER';
+  /**
+   * Output only. Risk reasons applicable to the Fraud Prevention assessment.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * Output only. Risk reasons applicable to the Fraud Prevention assessment.
+   *
+   * Accepted values: REASON_UNSPECIFIED, HIGH_TRANSACTION_VELOCITY,
+   * EXCESSIVE_ENUMERATION_PATTERN, SHORT_IDENTITY_HISTORY,
+   * GEOLOCATION_DISCREPANCY, ASSOCIATED_WITH_FRAUD_CLUSTER
+   *
+   * @param self::REASON_* $reason
    */
   public function setReason($reason)
   {
     $this->reason = $reason;
   }
   /**
-   * @return string
+   * @return self::REASON_*
    */
   public function getReason()
   {

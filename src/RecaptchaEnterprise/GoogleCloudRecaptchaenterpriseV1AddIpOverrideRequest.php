@@ -23,7 +23,9 @@ class GoogleCloudRecaptchaenterpriseV1AddIpOverrideRequest extends \Google\Model
   protected $ipOverrideDataDataType = '';
 
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1IpOverrideData
+   * Required. IP override added to the key.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1IpOverrideData $ipOverrideData
    */
   public function setIpOverrideData(GoogleCloudRecaptchaenterpriseV1IpOverrideData $ipOverrideData)
   {

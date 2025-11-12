@@ -25,7 +25,10 @@ class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment extends \Google\M
   protected $firewallPolicyDataType = '';
 
   /**
-   * @param GoogleRpcStatus
+   * Output only. If the processing of a policy config fails, an error is
+   * populated and the firewall_policy is left empty.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -39,7 +42,11 @@ class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment extends \Google\M
     return $this->error;
   }
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1FirewallPolicy
+   * Output only. The policy that matched the request. If more than one policy
+   * may match, this is the first match. If no policy matches the incoming
+   * request, the policy field is left empty.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1FirewallPolicy $firewallPolicy
    */
   public function setFirewallPolicy(GoogleCloudRecaptchaenterpriseV1FirewallPolicy $firewallPolicy)
   {

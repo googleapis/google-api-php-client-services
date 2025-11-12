@@ -23,24 +23,52 @@ class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends \Google\Collection
   protected $actionsType = GoogleCloudRecaptchaenterpriseV1FirewallAction::class;
   protected $actionsDataType = 'array';
   /**
+   * Optional. A CEL (Common Expression Language) conditional expression that
+   * specifies if this policy applies to an incoming user request. If this
+   * condition evaluates to true and the requested path matched the path
+   * pattern, the associated actions should be executed by the caller. The
+   * condition string is checked for CEL syntax correctness on creation. For
+   * more information, see the [CEL spec](https://github.com/google/cel-spec)
+   * and its [language definition](https://github.com/google/cel-
+   * spec/blob/master/doc/langdef.md). A condition has a max length of 500
+   * characters.
+   *
    * @var string
    */
   public $condition;
   /**
+   * Optional. A description of what this policy aims to achieve, for
+   * convenience purposes. The description can at most include 256 UTF-8
+   * characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Identifier. The resource name for the FirewallPolicy in the format
+   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The path for which this policy applies, specified as a glob
+   * pattern. For more information on glob, see the [manual
+   * page](https://man7.org/linux/man-pages/man7/glob.7.html). A path has a max
+   * length of 200 characters.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1FirewallAction[]
+   * Optional. The actions that the caller should take regarding user access.
+   * There should be at most one terminal action. A terminal action is any
+   * action that forces a response, such as `AllowAction`, `BlockAction` or
+   * `SubstituteAction`. Zero or more non-terminal actions such as `SetHeader`
+   * might be specified. A single policy can contain up to 16 actions.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1FirewallAction[] $actions
    */
   public function setActions($actions)
   {
@@ -54,7 +82,17 @@ class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends \Google\Collection
     return $this->actions;
   }
   /**
-   * @param string
+   * Optional. A CEL (Common Expression Language) conditional expression that
+   * specifies if this policy applies to an incoming user request. If this
+   * condition evaluates to true and the requested path matched the path
+   * pattern, the associated actions should be executed by the caller. The
+   * condition string is checked for CEL syntax correctness on creation. For
+   * more information, see the [CEL spec](https://github.com/google/cel-spec)
+   * and its [language definition](https://github.com/google/cel-
+   * spec/blob/master/doc/langdef.md). A condition has a max length of 500
+   * characters.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -68,7 +106,11 @@ class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends \Google\Collection
     return $this->condition;
   }
   /**
-   * @param string
+   * Optional. A description of what this policy aims to achieve, for
+   * convenience purposes. The description can at most include 256 UTF-8
+   * characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -82,7 +124,10 @@ class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Identifier. The resource name for the FirewallPolicy in the format
+   * `projects/{project}/firewallpolicies/{firewallpolicy}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -96,7 +141,12 @@ class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The path for which this policy applies, specified as a glob
+   * pattern. For more information on glob, see the [manual
+   * page](https://man7.org/linux/man-pages/man7/glob.7.html). A path has a max
+   * length of 200 characters.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

@@ -21,32 +21,52 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends \Google\Col
 {
   protected $collection_key = 'address';
   /**
+   * Optional. The first lines of the address. The first line generally contains
+   * the street name and number, and further lines may include information such
+   * as an apartment number.
+   *
    * @var string[]
    */
   public $address;
   /**
+   * Optional. The state, province, or otherwise administrative area of the
+   * address.
+   *
    * @var string
    */
   public $administrativeArea;
   /**
+   * Optional. The town/city of the address.
+   *
    * @var string
    */
   public $locality;
   /**
+   * Optional. The postal or ZIP code of the address.
+   *
    * @var string
    */
   public $postalCode;
   /**
+   * Optional. The recipient name, potentially including information such as
+   * "care of".
+   *
    * @var string
    */
   public $recipient;
   /**
+   * Optional. The CLDR country/region of the address.
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param string[]
+   * Optional. The first lines of the address. The first line generally contains
+   * the street name and number, and further lines may include information such
+   * as an apartment number.
+   *
+   * @param string[] $address
    */
   public function setAddress($address)
   {
@@ -60,7 +80,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends \Google\Col
     return $this->address;
   }
   /**
-   * @param string
+   * Optional. The state, province, or otherwise administrative area of the
+   * address.
+   *
+   * @param string $administrativeArea
    */
   public function setAdministrativeArea($administrativeArea)
   {
@@ -74,7 +97,9 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends \Google\Col
     return $this->administrativeArea;
   }
   /**
-   * @param string
+   * Optional. The town/city of the address.
+   *
+   * @param string $locality
    */
   public function setLocality($locality)
   {
@@ -88,7 +113,9 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends \Google\Col
     return $this->locality;
   }
   /**
-   * @param string
+   * Optional. The postal or ZIP code of the address.
+   *
+   * @param string $postalCode
    */
   public function setPostalCode($postalCode)
   {
@@ -102,7 +129,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends \Google\Col
     return $this->postalCode;
   }
   /**
-   * @param string
+   * Optional. The recipient name, potentially including information such as
+   * "care of".
+   *
+   * @param string $recipient
    */
   public function setRecipient($recipient)
   {
@@ -116,7 +146,9 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataAddress extends \Google\Col
     return $this->recipient;
   }
   /**
-   * @param string
+   * Optional. The CLDR country/region of the address.
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

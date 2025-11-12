@@ -25,7 +25,13 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings extends \G
   protected $defaultSettingsDataType = '';
 
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1WebKeySettingsActionSettings[]
+   * Optional. The action to score threshold map. The action name should be the
+   * same as the action name passed in the `data-action` attribute (see
+   * https://cloud.google.com/recaptcha/docs/actions-website). Action names are
+   * case-insensitive. There is a maximum of 100 action settings. An action name
+   * has a maximum length of 100.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1WebKeySettingsActionSettings[] $actionSettings
    */
   public function setActionSettings($actionSettings)
   {
@@ -39,7 +45,10 @@ class GoogleCloudRecaptchaenterpriseV1WebKeySettingsChallengeSettings extends \G
     return $this->actionSettings;
   }
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1WebKeySettingsActionSettings
+   * Required. Defines when a challenge is triggered (unless the default
+   * threshold is overridden for the given action, see `action_settings`).
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1WebKeySettingsActionSettings $defaultSettings
    */
   public function setDefaultSettings(GoogleCloudRecaptchaenterpriseV1WebKeySettingsActionSettings $defaultSettings)
   {

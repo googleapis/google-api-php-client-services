@@ -20,12 +20,18 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction extends \Google\Model
 {
   /**
+   * Optional. The address to redirect to. The target is a relative path in the
+   * current host. Example: "/blog/404.html".
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Optional. The address to redirect to. The target is a relative path in the
+   * current host. Example: "/blog/404.html".
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

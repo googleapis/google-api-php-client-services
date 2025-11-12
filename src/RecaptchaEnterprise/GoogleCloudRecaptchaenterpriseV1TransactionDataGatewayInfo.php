@@ -20,24 +20,38 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo extends \Google\Model
 {
   /**
+   * Optional. AVS response code from the gateway (available only when reCAPTCHA
+   * Enterprise is called after authorization).
+   *
    * @var string
    */
   public $avsResponseCode;
   /**
+   * Optional. CVV response code from the gateway (available only when reCAPTCHA
+   * Enterprise is called after authorization).
+   *
    * @var string
    */
   public $cvvResponseCode;
   /**
+   * Optional. Gateway response code describing the state of the transaction.
+   *
    * @var string
    */
   public $gatewayResponseCode;
   /**
+   * Optional. Name of the gateway service (for example, stripe, square,
+   * paypal).
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Optional. AVS response code from the gateway (available only when reCAPTCHA
+   * Enterprise is called after authorization).
+   *
+   * @param string $avsResponseCode
    */
   public function setAvsResponseCode($avsResponseCode)
   {
@@ -51,7 +65,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo extends \Google
     return $this->avsResponseCode;
   }
   /**
-   * @param string
+   * Optional. CVV response code from the gateway (available only when reCAPTCHA
+   * Enterprise is called after authorization).
+   *
+   * @param string $cvvResponseCode
    */
   public function setCvvResponseCode($cvvResponseCode)
   {
@@ -65,7 +82,9 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo extends \Google
     return $this->cvvResponseCode;
   }
   /**
-   * @param string
+   * Optional. Gateway response code describing the state of the transaction.
+   *
+   * @param string $gatewayResponseCode
    */
   public function setGatewayResponseCode($gatewayResponseCode)
   {
@@ -79,7 +98,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo extends \Google
     return $this->gatewayResponseCode;
   }
   /**
-   * @param string
+   * Optional. Name of the gateway service (for example, stripe, square,
+   * paypal).
+   *
+   * @param string $name
    */
   public function setName($name)
   {

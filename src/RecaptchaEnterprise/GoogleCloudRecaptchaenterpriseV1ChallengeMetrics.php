@@ -20,24 +20,39 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics extends \Google\Model
 {
   /**
+   * Count of submitted challenge solutions that were incorrect or otherwise
+   * deemed suspicious such that a subsequent challenge was triggered.
+   *
    * @var string
    */
   public $failedCount;
   /**
+   * Count of nocaptchas (successful verification without a challenge) issued.
+   *
    * @var string
    */
   public $nocaptchaCount;
   /**
+   * Count of reCAPTCHA checkboxes or badges rendered. This is mostly equivalent
+   * to a count of pageloads for pages that include reCAPTCHA.
+   *
    * @var string
    */
   public $pageloadCount;
   /**
+   * Count of nocaptchas (successful verification without a challenge) plus
+   * submitted challenge solutions that were correct and resulted in
+   * verification.
+   *
    * @var string
    */
   public $passedCount;
 
   /**
-   * @param string
+   * Count of submitted challenge solutions that were incorrect or otherwise
+   * deemed suspicious such that a subsequent challenge was triggered.
+   *
+   * @param string $failedCount
    */
   public function setFailedCount($failedCount)
   {
@@ -51,7 +66,9 @@ class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics extends \Google\Model
     return $this->failedCount;
   }
   /**
-   * @param string
+   * Count of nocaptchas (successful verification without a challenge) issued.
+   *
+   * @param string $nocaptchaCount
    */
   public function setNocaptchaCount($nocaptchaCount)
   {
@@ -65,7 +82,10 @@ class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics extends \Google\Model
     return $this->nocaptchaCount;
   }
   /**
-   * @param string
+   * Count of reCAPTCHA checkboxes or badges rendered. This is mostly equivalent
+   * to a count of pageloads for pages that include reCAPTCHA.
+   *
+   * @param string $pageloadCount
    */
   public function setPageloadCount($pageloadCount)
   {
@@ -79,7 +99,11 @@ class GoogleCloudRecaptchaenterpriseV1ChallengeMetrics extends \Google\Model
     return $this->pageloadCount;
   }
   /**
-   * @param string
+   * Count of nocaptchas (successful verification without a challenge) plus
+   * submitted challenge solutions that were correct and resulted in
+   * verification.
+   *
+   * @param string $passedCount
    */
   public function setPassedCount($passedCount)
   {

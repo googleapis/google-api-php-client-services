@@ -21,24 +21,44 @@ class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification extends \G
 {
   protected $collection_key = 'encryptedLeakMatchPrefixes';
   /**
+   * Output only. List of prefixes of the encrypted potential password leaks
+   * that matched the given parameters. They must be compared with the client-
+   * side decryption prefix of `reencrypted_user_credentials_hash`
+   *
    * @var string[]
    */
   public $encryptedLeakMatchPrefixes;
   /**
+   * Optional. Encrypted Scrypt hash of the canonicalized username+password. It
+   * is re-encrypted by the server and returned through
+   * `reencrypted_user_credentials_hash`.
+   *
    * @var string
    */
   public $encryptedUserCredentialsHash;
   /**
+   * Required. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized
+   * username. It is used to look up password leaks associated with that hash
+   * prefix.
+   *
    * @var string
    */
   public $lookupHashPrefix;
   /**
+   * Output only. Corresponds to the re-encryption of the
+   * `encrypted_user_credentials_hash` field. It is used to match potential
+   * password leaks within `encrypted_leak_match_prefixes`.
+   *
    * @var string
    */
   public $reencryptedUserCredentialsHash;
 
   /**
-   * @param string[]
+   * Output only. List of prefixes of the encrypted potential password leaks
+   * that matched the given parameters. They must be compared with the client-
+   * side decryption prefix of `reencrypted_user_credentials_hash`
+   *
+   * @param string[] $encryptedLeakMatchPrefixes
    */
   public function setEncryptedLeakMatchPrefixes($encryptedLeakMatchPrefixes)
   {
@@ -52,7 +72,11 @@ class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification extends \G
     return $this->encryptedLeakMatchPrefixes;
   }
   /**
-   * @param string
+   * Optional. Encrypted Scrypt hash of the canonicalized username+password. It
+   * is re-encrypted by the server and returned through
+   * `reencrypted_user_credentials_hash`.
+   *
+   * @param string $encryptedUserCredentialsHash
    */
   public function setEncryptedUserCredentialsHash($encryptedUserCredentialsHash)
   {
@@ -66,7 +90,11 @@ class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification extends \G
     return $this->encryptedUserCredentialsHash;
   }
   /**
-   * @param string
+   * Required. Exactly 26-bit prefix of the SHA-256 hash of the canonicalized
+   * username. It is used to look up password leaks associated with that hash
+   * prefix.
+   *
+   * @param string $lookupHashPrefix
    */
   public function setLookupHashPrefix($lookupHashPrefix)
   {
@@ -80,7 +108,11 @@ class GoogleCloudRecaptchaenterpriseV1PrivatePasswordLeakVerification extends \G
     return $this->lookupHashPrefix;
   }
   /**
-   * @param string
+   * Output only. Corresponds to the re-encryption of the
+   * `encrypted_user_credentials_hash` field. It is used to match potential
+   * password leaks within `encrypted_leak_match_prefixes`.
+   *
+   * @param string $reencryptedUserCredentialsHash
    */
   public function setReencryptedUserCredentialsHash($reencryptedUserCredentialsHash)
   {

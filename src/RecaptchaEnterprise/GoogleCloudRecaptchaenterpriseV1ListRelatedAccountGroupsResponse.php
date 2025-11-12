@@ -21,6 +21,9 @@ class GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse extends \
 {
   protected $collection_key = 'relatedAccountGroups';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse extends \
   protected $relatedAccountGroupsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse extends \
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup[]
+   * The groups of related accounts listed by the query.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup[] $relatedAccountGroups
    */
   public function setRelatedAccountGroups($relatedAccountGroups)
   {

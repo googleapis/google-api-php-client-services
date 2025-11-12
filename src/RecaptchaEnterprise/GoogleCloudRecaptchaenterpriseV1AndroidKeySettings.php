@@ -21,20 +21,31 @@ class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends \Google\Collect
 {
   protected $collection_key = 'allowedPackageNames';
   /**
+   * Optional. If set to true, allowed_package_names are not enforced.
+   *
    * @var bool
    */
   public $allowAllPackageNames;
   /**
+   * Optional. Android package names of apps allowed to use the key. Example:
+   * 'com.companyname.appname'
+   *
    * @var string[]
    */
   public $allowedPackageNames;
   /**
+   * Optional. Set to true for keys that are used in an Android application that
+   * is available for download in app stores in addition to the Google Play
+   * Store.
+   *
    * @var bool
    */
   public $supportNonGoogleAppStoreDistribution;
 
   /**
-   * @param bool
+   * Optional. If set to true, allowed_package_names are not enforced.
+   *
+   * @param bool $allowAllPackageNames
    */
   public function setAllowAllPackageNames($allowAllPackageNames)
   {
@@ -48,7 +59,10 @@ class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends \Google\Collect
     return $this->allowAllPackageNames;
   }
   /**
-   * @param string[]
+   * Optional. Android package names of apps allowed to use the key. Example:
+   * 'com.companyname.appname'
+   *
+   * @param string[] $allowedPackageNames
    */
   public function setAllowedPackageNames($allowedPackageNames)
   {
@@ -62,7 +76,11 @@ class GoogleCloudRecaptchaenterpriseV1AndroidKeySettings extends \Google\Collect
     return $this->allowedPackageNames;
   }
   /**
-   * @param bool
+   * Optional. Set to true for keys that are used in an Android application that
+   * is available for download in app stores in addition to the Google Play
+   * Store.
+   *
+   * @param bool $supportNonGoogleAppStoreDistribution
    */
   public function setSupportNonGoogleAppStoreDistribution($supportNonGoogleAppStoreDistribution)
   {

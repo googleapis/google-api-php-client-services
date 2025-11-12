@@ -23,12 +23,17 @@ class GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse extends \Google\Co
   protected $ipOverridesType = GoogleCloudRecaptchaenterpriseV1IpOverrideData::class;
   protected $ipOverridesDataType = 'array';
   /**
+   * Token to retrieve the next page of results. If this field is empty, no keys
+   * remain in the results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1IpOverrideData[]
+   * IP Overrides details.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1IpOverrideData[] $ipOverrides
    */
   public function setIpOverrides($ipOverrides)
   {
@@ -42,7 +47,10 @@ class GoogleCloudRecaptchaenterpriseV1ListIpOverridesResponse extends \Google\Co
     return $this->ipOverrides;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results. If this field is empty, no keys
+   * remain in the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

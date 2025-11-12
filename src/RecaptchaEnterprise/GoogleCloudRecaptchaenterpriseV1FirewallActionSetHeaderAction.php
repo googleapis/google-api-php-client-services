@@ -20,16 +20,22 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction extends \Google\Model
 {
   /**
+   * Optional. The header key to set in the request to the backend server.
+   *
    * @var string
    */
   public $key;
   /**
+   * Optional. The header value to set in the request to the backend server.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Optional. The header key to set in the request to the backend server.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -43,7 +49,9 @@ class GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction extends \Goo
     return $this->key;
   }
   /**
-   * @param string
+   * Optional. The header value to set in the request to the backend server.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

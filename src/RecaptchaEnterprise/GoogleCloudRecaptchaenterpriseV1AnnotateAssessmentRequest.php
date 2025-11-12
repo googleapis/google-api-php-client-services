@@ -19,8 +19,40 @@ namespace Google\Service\RecaptchaEnterprise;
 
 class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\Collection
 {
+  /**
+   * Default unspecified type.
+   */
+  public const ANNOTATION_ANNOTATION_UNSPECIFIED = 'ANNOTATION_UNSPECIFIED';
+  /**
+   * Provides information that the event turned out to be legitimate.
+   */
+  public const ANNOTATION_LEGITIMATE = 'LEGITIMATE';
+  /**
+   * Provides information that the event turned out to be fraudulent.
+   */
+  public const ANNOTATION_FRAUDULENT = 'FRAUDULENT';
+  /**
+   * Provides information that the event was related to a login event in which
+   * the user typed the correct password. Deprecated, prefer indicating
+   * CORRECT_PASSWORD through the reasons field instead.
+   *
+   * @deprecated
+   */
+  public const ANNOTATION_PASSWORD_CORRECT = 'PASSWORD_CORRECT';
+  /**
+   * Provides information that the event was related to a login event in which
+   * the user typed the incorrect password. Deprecated, prefer indicating
+   * INCORRECT_PASSWORD through the reasons field instead.
+   *
+   * @deprecated
+   */
+  public const ANNOTATION_PASSWORD_INCORRECT = 'PASSWORD_INCORRECT';
   protected $collection_key = 'reasons';
   /**
+   * Optional. A stable account identifier to apply to the assessment. This is
+   * an alternative to setting `account_id` in `CreateAssessment`, for example
+   * when a stable account identifier is not yet known in the initial request.
+   *
    * @var string
    */
   public $accountId;
@@ -29,6 +61,11 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
    */
   public $annotation;
   /**
+   * Optional. A stable hashed account identifier to apply to the assessment.
+   * This is an alternative to setting `hashed_account_id` in
+   * `CreateAssessment`, for example when a stable account identifier is not yet
+   * known in the initial request.
+   *
    * @var string
    */
   public $hashedAccountId;
@@ -42,7 +79,11 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
   protected $transactionEventDataType = '';
 
   /**
-   * @param string
+   * Optional. A stable account identifier to apply to the assessment. This is
+   * an alternative to setting `account_id` in `CreateAssessment`, for example
+   * when a stable account identifier is not yet known in the initial request.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -56,21 +97,26 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
     return $this->accountId;
   }
   /**
-   * @param string
+   * @param self::ANNOTATION_* $annotation
    */
   public function setAnnotation($annotation)
   {
     $this->annotation = $annotation;
   }
   /**
-   * @return string
+   * @return self::ANNOTATION_*
    */
   public function getAnnotation()
   {
     return $this->annotation;
   }
   /**
-   * @param string
+   * Optional. A stable hashed account identifier to apply to the assessment.
+   * This is an alternative to setting `hashed_account_id` in
+   * `CreateAssessment`, for example when a stable account identifier is not yet
+   * known in the initial request.
+   *
+   * @param string $hashedAccountId
    */
   public function setHashedAccountId($hashedAccountId)
   {
@@ -84,7 +130,10 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
     return $this->hashedAccountId;
   }
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent
+   * Optional. If using an external multi-factor authentication provider,
+   * provide phone authentication details for fraud detection purposes.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent $phoneAuthenticationEvent
    */
   public function setPhoneAuthenticationEvent(GoogleCloudRecaptchaenterpriseV1PhoneAuthenticationEvent $phoneAuthenticationEvent)
   {
@@ -98,7 +147,7 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
     return $this->phoneAuthenticationEvent;
   }
   /**
-   * @param string[]
+   * @param string[] $reasons
    */
   public function setReasons($reasons)
   {
@@ -112,7 +161,10 @@ class GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest extends \Google\
     return $this->reasons;
   }
   /**
-   * @param GoogleCloudRecaptchaenterpriseV1TransactionEvent
+   * Optional. If the assessment is part of a payment transaction, provide
+   * details on payment lifecycle events that occur in the transaction.
+   *
+   * @param GoogleCloudRecaptchaenterpriseV1TransactionEvent $transactionEvent
    */
   public function setTransactionEvent(GoogleCloudRecaptchaenterpriseV1TransactionEvent $transactionEvent)
   {
