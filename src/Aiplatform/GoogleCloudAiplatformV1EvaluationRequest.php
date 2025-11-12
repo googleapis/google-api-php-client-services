@@ -30,7 +30,10 @@ class GoogleCloudAiplatformV1EvaluationRequest extends \Google\Collection
   protected $rubricsDataType = 'map';
 
   /**
-   * @param GoogleCloudAiplatformV1CandidateResponse[]
+   * Optional. Responses from model under test and other baseline models for
+   * comparison.
+   *
+   * @param GoogleCloudAiplatformV1CandidateResponse[] $candidateResponses
    */
   public function setCandidateResponses($candidateResponses)
   {
@@ -44,7 +47,9 @@ class GoogleCloudAiplatformV1EvaluationRequest extends \Google\Collection
     return $this->candidateResponses;
   }
   /**
-   * @param GoogleCloudAiplatformV1CandidateResponse
+   * Optional. The Ideal response or ground truth.
+   *
+   * @param GoogleCloudAiplatformV1CandidateResponse $goldenResponse
    */
   public function setGoldenResponse(GoogleCloudAiplatformV1CandidateResponse $goldenResponse)
   {
@@ -58,7 +63,9 @@ class GoogleCloudAiplatformV1EvaluationRequest extends \Google\Collection
     return $this->goldenResponse;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationPrompt
+   * Required. The request/prompt to evaluate.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationPrompt $prompt
    */
   public function setPrompt(GoogleCloudAiplatformV1EvaluationPrompt $prompt)
   {
@@ -72,7 +79,10 @@ class GoogleCloudAiplatformV1EvaluationRequest extends \Google\Collection
     return $this->prompt;
   }
   /**
-   * @param GoogleCloudAiplatformV1RubricGroup[]
+   * Optional. Named groups of rubrics associated with this prompt. The key is a
+   * user-defined name for the rubric group.
+   *
+   * @param GoogleCloudAiplatformV1RubricGroup[] $rubrics
    */
   public function setRubrics($rubrics)
   {

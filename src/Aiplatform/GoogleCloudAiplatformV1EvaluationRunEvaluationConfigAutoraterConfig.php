@@ -20,18 +20,33 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig extends \Google\Model
 {
   /**
+   * Optional. The fully qualified name of the publisher model or tuned
+   * autorater endpoint to use. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Tuned model
+   * endpoint format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   *
    * @var string
    */
   public $autoraterModel;
   protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
+   * Optional. Number of samples for each instance in the dataset. If not
+   * specified, the default is 4. Minimum value is 1, maximum value is 32.
+   *
    * @var int
    */
   public $sampleCount;
 
   /**
-   * @param string
+   * Optional. The fully qualified name of the publisher model or tuned
+   * autorater endpoint to use. Publisher model format:
+   * `projects/{project}/locations/{location}/publishers/models` Tuned model
+   * endpoint format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   *
+   * @param string $autoraterModel
    */
   public function setAutoraterModel($autoraterModel)
   {
@@ -45,7 +60,9 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig extend
     return $this->autoraterModel;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenerationConfig
+   * Optional. Configuration options for model generation and outputs.
+   *
+   * @param GoogleCloudAiplatformV1GenerationConfig $generationConfig
    */
   public function setGenerationConfig(GoogleCloudAiplatformV1GenerationConfig $generationConfig)
   {
@@ -59,7 +76,10 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigAutoraterConfig extend
     return $this->generationConfig;
   }
   /**
-   * @param int
+   * Optional. Number of samples for each instance in the dataset. If not
+   * specified, the default is 4. Minimum value is 1, maximum value is 32.
+   *
+   * @param int $sampleCount
    */
   public function setSampleCount($sampleCount)
   {

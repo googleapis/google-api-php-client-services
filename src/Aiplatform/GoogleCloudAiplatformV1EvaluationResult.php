@@ -23,18 +23,28 @@ class GoogleCloudAiplatformV1EvaluationResult extends \Google\Collection
   protected $candidateResultsType = GoogleCloudAiplatformV1CandidateResult::class;
   protected $candidateResultsDataType = 'array';
   /**
+   * Required. The request item that was evaluated. Format:
+   * projects/{project}/locations/{location}/evaluationItems/{evaluation_item}
+   *
    * @var string
    */
   public $evaluationRequest;
   /**
+   * Required. The evaluation run that was used to generate the result. Format:
+   * projects/{project}/locations/{location}/evaluationRuns/{evaluation_run}
+   *
    * @var string
    */
   public $evaluationRun;
   /**
+   * Optional. Metadata about the evaluation result.
+   *
    * @var array
    */
   public $metadata;
   /**
+   * Required. The metric that was evaluated.
+   *
    * @var string
    */
   public $metric;
@@ -42,7 +52,9 @@ class GoogleCloudAiplatformV1EvaluationResult extends \Google\Collection
   protected $requestDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1CandidateResult[]
+   * Optional. The results for the metric.
+   *
+   * @param GoogleCloudAiplatformV1CandidateResult[] $candidateResults
    */
   public function setCandidateResults($candidateResults)
   {
@@ -56,7 +68,10 @@ class GoogleCloudAiplatformV1EvaluationResult extends \Google\Collection
     return $this->candidateResults;
   }
   /**
-   * @param string
+   * Required. The request item that was evaluated. Format:
+   * projects/{project}/locations/{location}/evaluationItems/{evaluation_item}
+   *
+   * @param string $evaluationRequest
    */
   public function setEvaluationRequest($evaluationRequest)
   {
@@ -70,7 +85,10 @@ class GoogleCloudAiplatformV1EvaluationResult extends \Google\Collection
     return $this->evaluationRequest;
   }
   /**
-   * @param string
+   * Required. The evaluation run that was used to generate the result. Format:
+   * projects/{project}/locations/{location}/evaluationRuns/{evaluation_run}
+   *
+   * @param string $evaluationRun
    */
   public function setEvaluationRun($evaluationRun)
   {
@@ -84,7 +102,9 @@ class GoogleCloudAiplatformV1EvaluationResult extends \Google\Collection
     return $this->evaluationRun;
   }
   /**
-   * @param array
+   * Optional. Metadata about the evaluation result.
+   *
+   * @param array $metadata
    */
   public function setMetadata($metadata)
   {
@@ -98,7 +118,9 @@ class GoogleCloudAiplatformV1EvaluationResult extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Required. The metric that was evaluated.
+   *
+   * @param string $metric
    */
   public function setMetric($metric)
   {
@@ -112,7 +134,9 @@ class GoogleCloudAiplatformV1EvaluationResult extends \Google\Collection
     return $this->metric;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationRequest
+   * Required. The request that was evaluated.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationRequest $request
    */
   public function setRequest(GoogleCloudAiplatformV1EvaluationRequest $request)
   {

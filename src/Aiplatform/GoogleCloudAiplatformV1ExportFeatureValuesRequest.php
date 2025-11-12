@@ -32,7 +32,9 @@ class GoogleCloudAiplatformV1ExportFeatureValuesRequest extends \Google\Collecti
   protected $snapshotExportDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureValueDestination
+   * Required. Specifies destination location and format.
+   *
+   * @param GoogleCloudAiplatformV1FeatureValueDestination $destination
    */
   public function setDestination(GoogleCloudAiplatformV1FeatureValueDestination $destination)
   {
@@ -46,7 +48,9 @@ class GoogleCloudAiplatformV1ExportFeatureValuesRequest extends \Google\Collecti
     return $this->destination;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureSelector
+   * Required. Selects Features to export values of.
+   *
+   * @param GoogleCloudAiplatformV1FeatureSelector $featureSelector
    */
   public function setFeatureSelector(GoogleCloudAiplatformV1FeatureSelector $featureSelector)
   {
@@ -60,7 +64,10 @@ class GoogleCloudAiplatformV1ExportFeatureValuesRequest extends \Google\Collecti
     return $this->featureSelector;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExportFeatureValuesRequestFullExport
+   * Exports all historical values of all entities of the EntityType within a
+   * time range
+   *
+   * @param GoogleCloudAiplatformV1ExportFeatureValuesRequestFullExport $fullExport
    */
   public function setFullExport(GoogleCloudAiplatformV1ExportFeatureValuesRequestFullExport $fullExport)
   {
@@ -74,7 +81,9 @@ class GoogleCloudAiplatformV1ExportFeatureValuesRequest extends \Google\Collecti
     return $this->fullExport;
   }
   /**
-   * @param GoogleCloudAiplatformV1DestinationFeatureSetting[]
+   * Per-Feature export settings.
+   *
+   * @param GoogleCloudAiplatformV1DestinationFeatureSetting[] $settings
    */
   public function setSettings($settings)
   {
@@ -88,7 +97,10 @@ class GoogleCloudAiplatformV1ExportFeatureValuesRequest extends \Google\Collecti
     return $this->settings;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExportFeatureValuesRequestSnapshotExport
+   * Exports the latest Feature values of all entities of the EntityType within
+   * a time range.
+   *
+   * @param GoogleCloudAiplatformV1ExportFeatureValuesRequestSnapshotExport $snapshotExport
    */
   public function setSnapshotExport(GoogleCloudAiplatformV1ExportFeatureValuesRequestSnapshotExport $snapshotExport)
   {

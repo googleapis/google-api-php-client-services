@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EvaluationResults extends \Google\Model
 {
   /**
+   * The evaluation set where item level results are stored.
+   *
    * @var string
    */
   public $evaluationSet;
@@ -27,7 +29,9 @@ class GoogleCloudAiplatformV1EvaluationResults extends \Google\Model
   protected $summaryMetricsDataType = '';
 
   /**
-   * @param string
+   * The evaluation set where item level results are stored.
+   *
+   * @param string $evaluationSet
    */
   public function setEvaluationSet($evaluationSet)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1EvaluationResults extends \Google\Model
     return $this->evaluationSet;
   }
   /**
-   * @param GoogleCloudAiplatformV1SummaryMetrics
+   * Optional. The summary metrics for the evaluation run.
+   *
+   * @param GoogleCloudAiplatformV1SummaryMetrics $summaryMetrics
    */
   public function setSummaryMetrics(GoogleCloudAiplatformV1SummaryMetrics $summaryMetrics)
   {

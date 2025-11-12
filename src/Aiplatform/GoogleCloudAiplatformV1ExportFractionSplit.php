@@ -19,8 +19,23 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ExportFractionSplit extends \Google\Model
 {
+  /**
+   * The fraction of the input data that is to be used to evaluate the Model.
+   *
+   * @var 
+   */
   public $testFraction;
+  /**
+   * The fraction of the input data that is to be used to train the Model.
+   *
+   * @var 
+   */
   public $trainingFraction;
+  /**
+   * The fraction of the input data that is to be used to validate the Model.
+   *
+   * @var 
+   */
   public $validationFraction;
 
   public function setTestFraction($testFraction)

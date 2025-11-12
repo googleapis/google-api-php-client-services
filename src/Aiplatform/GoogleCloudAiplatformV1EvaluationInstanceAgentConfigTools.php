@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools extends \Google\
   protected $toolDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1Tool[]
+   * Optional. List of tools: each tool can have multiple function declarations.
+   *
+   * @param GoogleCloudAiplatformV1Tool[] $tool
    */
   public function setTool($tool)
   {

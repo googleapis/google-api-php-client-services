@@ -20,6 +20,9 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExportDataOperationMetadata extends \Google\Model
 {
   /**
+   * A Google Cloud Storage directory which path ends with '/'. The exported
+   * data is stored in the directory.
+   *
    * @var string
    */
   public $gcsOutputDirectory;
@@ -27,7 +30,10 @@ class GoogleCloudAiplatformV1ExportDataOperationMetadata extends \Google\Model
   protected $genericMetadataDataType = '';
 
   /**
-   * @param string
+   * A Google Cloud Storage directory which path ends with '/'. The exported
+   * data is stored in the directory.
+   *
+   * @param string $gcsOutputDirectory
    */
   public function setGcsOutputDirectory($gcsOutputDirectory)
   {
@@ -41,7 +47,9 @@ class GoogleCloudAiplatformV1ExportDataOperationMetadata extends \Google\Model
     return $this->gcsOutputDirectory;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * The common part of the operation metadata.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {

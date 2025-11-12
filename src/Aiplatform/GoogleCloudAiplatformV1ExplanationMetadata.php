@@ -20,12 +20,23 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExplanationMetadata extends \Google\Model
 {
   /**
+   * Points to a YAML file stored on Google Cloud Storage describing the format
+   * of the feature attributions. The schema is defined as an OpenAPI 3.0.2
+   * [Schema Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). AutoML tabular
+   * Models always have this field populated by Vertex AI. Note: The URI given
+   * on output may be different, including the URI scheme, than the one given on
+   * input. The output URI will point to a location where the user only has a
+   * read access.
+   *
    * @var string
    */
   public $featureAttributionsSchemaUri;
   protected $inputsType = GoogleCloudAiplatformV1ExplanationMetadataInputMetadata::class;
   protected $inputsDataType = 'map';
   /**
+   * Name of the source to generate embeddings for example based explanations.
+   *
    * @var string
    */
   public $latentSpaceSource;
@@ -33,7 +44,16 @@ class GoogleCloudAiplatformV1ExplanationMetadata extends \Google\Model
   protected $outputsDataType = 'map';
 
   /**
-   * @param string
+   * Points to a YAML file stored on Google Cloud Storage describing the format
+   * of the feature attributions. The schema is defined as an OpenAPI 3.0.2
+   * [Schema Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). AutoML tabular
+   * Models always have this field populated by Vertex AI. Note: The URI given
+   * on output may be different, including the URI scheme, than the one given on
+   * input. The output URI will point to a location where the user only has a
+   * read access.
+   *
+   * @param string $featureAttributionsSchemaUri
    */
   public function setFeatureAttributionsSchemaUri($featureAttributionsSchemaUri)
   {
@@ -47,7 +67,16 @@ class GoogleCloudAiplatformV1ExplanationMetadata extends \Google\Model
     return $this->featureAttributionsSchemaUri;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExplanationMetadataInputMetadata[]
+   * Required. Map from feature names to feature input metadata. Keys are the
+   * name of the features. Values are the specification of the feature. An empty
+   * InputMetadata is valid. It describes a text feature which has the name
+   * specified as the key in ExplanationMetadata.inputs. The baseline of the
+   * empty feature is chosen by Vertex AI. For Vertex AI-provided Tensorflow
+   * images, the key can be any friendly name of the feature. Once specified,
+   * featureAttributions are keyed by this key (if not grouped with another
+   * feature). For custom images, the key must match with the key in instance.
+   *
+   * @param GoogleCloudAiplatformV1ExplanationMetadataInputMetadata[] $inputs
    */
   public function setInputs($inputs)
   {
@@ -61,7 +90,9 @@ class GoogleCloudAiplatformV1ExplanationMetadata extends \Google\Model
     return $this->inputs;
   }
   /**
-   * @param string
+   * Name of the source to generate embeddings for example based explanations.
+   *
+   * @param string $latentSpaceSource
    */
   public function setLatentSpaceSource($latentSpaceSource)
   {
@@ -75,7 +106,12 @@ class GoogleCloudAiplatformV1ExplanationMetadata extends \Google\Model
     return $this->latentSpaceSource;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExplanationMetadataOutputMetadata[]
+   * Required. Map from output names to output metadata. For Vertex AI-provided
+   * Tensorflow images, keys can be any user defined string that consists of any
+   * UTF-8 characters. For custom images, keys are the name of the output field
+   * in the prediction to be explained. Currently only one key is allowed.
+   *
+   * @param GoogleCloudAiplatformV1ExplanationMetadataOutputMetadata[] $outputs
    */
   public function setOutputs($outputs)
   {

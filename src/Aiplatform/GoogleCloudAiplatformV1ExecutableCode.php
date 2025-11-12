@@ -20,16 +20,30 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExecutableCode extends \Google\Model
 {
   /**
+   * Unspecified language. This value should not be used.
+   */
+  public const LANGUAGE_LANGUAGE_UNSPECIFIED = 'LANGUAGE_UNSPECIFIED';
+  /**
+   * Python >= 3.10, with numpy and simpy available.
+   */
+  public const LANGUAGE_PYTHON = 'PYTHON';
+  /**
+   * Required. The code to be executed.
+   *
    * @var string
    */
   public $code;
   /**
+   * Required. Programming language of the `code`.
+   *
    * @var string
    */
   public $language;
 
   /**
-   * @param string
+   * Required. The code to be executed.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -43,14 +57,18 @@ class GoogleCloudAiplatformV1ExecutableCode extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * Required. Programming language of the `code`.
+   *
+   * Accepted values: LANGUAGE_UNSPECIFIED, PYTHON
+   *
+   * @param self::LANGUAGE_* $language
    */
   public function setLanguage($language)
   {
     $this->language = $language;
   }
   /**
-   * @return string
+   * @return self::LANGUAGE_*
    */
   public function getLanguage()
   {

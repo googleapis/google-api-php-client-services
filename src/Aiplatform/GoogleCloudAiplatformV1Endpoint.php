@@ -23,34 +23,61 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
   protected $clientConnectionConfigType = GoogleCloudAiplatformV1ClientConnectionConfig::class;
   protected $clientConnectionConfigDataType = '';
   /**
+   * Output only. Timestamp when this Endpoint was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. DNS of the dedicated endpoint. Will only be populated if
+   * dedicated_endpoint_enabled is true. Depending on the features enabled, uid
+   * might be a random number or a string. For example, if fast_tryout is
+   * enabled, uid will be fasttryout. Format:
+   * `https://{endpoint_id}.{region}-{uid}.prediction.vertexai.goog`.
+   *
    * @var string
    */
   public $dedicatedEndpointDns;
   /**
+   * If true, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will
+   * be isolated from other users' traffic and will have better performance and
+   * reliability. Note: Once you enabled dedicated endpoint, you won't be able
+   * to send request to the shared DNS {region}-aiplatform.googleapis.com. The
+   * limitation will be removed soon.
+   *
    * @var bool
    */
   public $dedicatedEndpointEnabled;
   protected $deployedModelsType = GoogleCloudAiplatformV1DeployedModel::class;
   protected $deployedModelsDataType = 'array';
   /**
+   * The description of the Endpoint.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display name of the Endpoint. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Deprecated: If true, expose the Endpoint via private service connect. Only
+   * one of the fields, network or enable_private_service_connect, can be set.
+   *
+   * @deprecated
    * @var bool
    */
   public $enablePrivateServiceConnect;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
+   * Used to perform consistent read-modify-write updates. If not set, a blind
+   * "overwrite" update happens.
+   *
    * @var string
    */
   public $etag;
@@ -59,18 +86,42 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
   protected $genAiAdvancedFeaturesConfigType = GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig::class;
   protected $genAiAdvancedFeaturesConfigDataType = '';
   /**
+   * The labels with user-defined metadata to organize your Endpoints. Label
+   * keys and values can be no longer than 64 characters (Unicode codepoints),
+   * can only contain lowercase letters, numeric characters, underscores and
+   * dashes. International characters are allowed. See https://goo.gl/xmQnxf for
+   * more information and examples of labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. Resource name of the Model Monitoring job associated with this
+   * Endpoint if monitoring is enabled by
+   * JobService.CreateModelDeploymentMonitoringJob. Format: `projects/{project}/
+   * locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monito
+   * ring_job}`
+   *
    * @var string
    */
   public $modelDeploymentMonitoringJob;
   /**
+   * Output only. The resource name of the Endpoint.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The full name of the Google Compute Engine
+   * [network](https://cloud.google.com//compute/docs/networks-and-
+   * firewalls#networks) to which the Endpoint should be peered. Private
+   * services access must already be configured for the network. If left
+   * unspecified, the Endpoint is not peered with any network. Only one of the
+   * fields, network or enable_private_service_connect, can be set. [Format](htt
+   * ps://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
+   * `projects/{project}/global/networks/{network}`. Where `{project}` is a
+   * project number, as in `12345`, and `{network}` is network name.
+   *
    * @var string
    */
   public $network;
@@ -79,24 +130,38 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
   protected $privateServiceConnectConfigType = GoogleCloudAiplatformV1PrivateServiceConnectConfig::class;
   protected $privateServiceConnectConfigDataType = '';
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * A map from a DeployedModel's ID to the percentage of this Endpoint's
+   * traffic that should be forwarded to that DeployedModel. If a
+   * DeployedModel's ID is not listed in this map, then it receives no traffic.
+   * The traffic percentage values must add up to 100, or map must be empty if
+   * the Endpoint is to not accept any traffic at a moment.
+   *
    * @var int[]
    */
   public $trafficSplit;
   /**
+   * Output only. Timestamp when this Endpoint was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudAiplatformV1ClientConnectionConfig
+   * Configurations that are applied to the endpoint for online prediction.
+   *
+   * @param GoogleCloudAiplatformV1ClientConnectionConfig $clientConnectionConfig
    */
   public function setClientConnectionConfig(GoogleCloudAiplatformV1ClientConnectionConfig $clientConnectionConfig)
   {
@@ -110,7 +175,9 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->clientConnectionConfig;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Endpoint was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -124,7 +191,13 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. DNS of the dedicated endpoint. Will only be populated if
+   * dedicated_endpoint_enabled is true. Depending on the features enabled, uid
+   * might be a random number or a string. For example, if fast_tryout is
+   * enabled, uid will be fasttryout. Format:
+   * `https://{endpoint_id}.{region}-{uid}.prediction.vertexai.goog`.
+   *
+   * @param string $dedicatedEndpointDns
    */
   public function setDedicatedEndpointDns($dedicatedEndpointDns)
   {
@@ -138,7 +211,14 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->dedicatedEndpointDns;
   }
   /**
-   * @param bool
+   * If true, the endpoint will be exposed through a dedicated DNS
+   * [Endpoint.dedicated_endpoint_dns]. Your request to the dedicated DNS will
+   * be isolated from other users' traffic and will have better performance and
+   * reliability. Note: Once you enabled dedicated endpoint, you won't be able
+   * to send request to the shared DNS {region}-aiplatform.googleapis.com. The
+   * limitation will be removed soon.
+   *
+   * @param bool $dedicatedEndpointEnabled
    */
   public function setDedicatedEndpointEnabled($dedicatedEndpointEnabled)
   {
@@ -152,7 +232,11 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->dedicatedEndpointEnabled;
   }
   /**
-   * @param GoogleCloudAiplatformV1DeployedModel[]
+   * Output only. The models deployed in this Endpoint. To add or remove
+   * DeployedModels use EndpointService.DeployModel and
+   * EndpointService.UndeployModel respectively.
+   *
+   * @param GoogleCloudAiplatformV1DeployedModel[] $deployedModels
    */
   public function setDeployedModels($deployedModels)
   {
@@ -166,7 +250,9 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->deployedModels;
   }
   /**
-   * @param string
+   * The description of the Endpoint.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -180,7 +266,10 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display name of the Endpoint. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -194,13 +283,18 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Deprecated: If true, expose the Endpoint via private service connect. Only
+   * one of the fields, network or enable_private_service_connect, can be set.
+   *
+   * @deprecated
+   * @param bool $enablePrivateServiceConnect
    */
   public function setEnablePrivateServiceConnect($enablePrivateServiceConnect)
   {
     $this->enablePrivateServiceConnect = $enablePrivateServiceConnect;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnablePrivateServiceConnect()
@@ -208,7 +302,10 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->enablePrivateServiceConnect;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Customer-managed encryption key spec for an Endpoint. If set, this Endpoint
+   * and all sub-resources of this Endpoint will be secured by this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -222,7 +319,10 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->encryptionSpec;
   }
   /**
-   * @param string
+   * Used to perform consistent read-modify-write updates. If not set, a blind
+   * "overwrite" update happens.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -236,7 +336,11 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param GoogleCloudAiplatformV1GdcConfig
+   * Configures the Google Distributed Cloud (GDC) environment for online
+   * prediction. Only set this field when the Endpoint is to be deployed in a
+   * GDC environment.
+   *
+   * @param GoogleCloudAiplatformV1GdcConfig $gdcConfig
    */
   public function setGdcConfig(GoogleCloudAiplatformV1GdcConfig $gdcConfig)
   {
@@ -250,7 +354,11 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->gdcConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig
+   * Optional. Configuration for GenAiAdvancedFeatures. If the endpoint is
+   * serving GenAI models, advanced features like native RAG integration can be
+   * configured. Currently, only Model Garden models are supported.
+   *
+   * @param GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig $genAiAdvancedFeaturesConfig
    */
   public function setGenAiAdvancedFeaturesConfig(GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig $genAiAdvancedFeaturesConfig)
   {
@@ -264,7 +372,13 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->genAiAdvancedFeaturesConfig;
   }
   /**
-   * @param string[]
+   * The labels with user-defined metadata to organize your Endpoints. Label
+   * keys and values can be no longer than 64 characters (Unicode codepoints),
+   * can only contain lowercase letters, numeric characters, underscores and
+   * dashes. International characters are allowed. See https://goo.gl/xmQnxf for
+   * more information and examples of labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -278,7 +392,13 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. Resource name of the Model Monitoring job associated with this
+   * Endpoint if monitoring is enabled by
+   * JobService.CreateModelDeploymentMonitoringJob. Format: `projects/{project}/
+   * locations/{location}/modelDeploymentMonitoringJobs/{model_deployment_monito
+   * ring_job}`
+   *
+   * @param string $modelDeploymentMonitoringJob
    */
   public function setModelDeploymentMonitoringJob($modelDeploymentMonitoringJob)
   {
@@ -292,7 +412,9 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->modelDeploymentMonitoringJob;
   }
   /**
-   * @param string
+   * Output only. The resource name of the Endpoint.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -306,7 +428,17 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The full name of the Google Compute Engine
+   * [network](https://cloud.google.com//compute/docs/networks-and-
+   * firewalls#networks) to which the Endpoint should be peered. Private
+   * services access must already be configured for the network. If left
+   * unspecified, the Endpoint is not peered with any network. Only one of the
+   * fields, network or enable_private_service_connect, can be set. [Format](htt
+   * ps://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
+   * `projects/{project}/global/networks/{network}`. Where `{project}` is a
+   * project number, as in `12345`, and `{network}` is network name.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -320,7 +452,9 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig
+   * Configures the request-response logging for online prediction.
+   *
+   * @param GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig $predictRequestResponseLoggingConfig
    */
   public function setPredictRequestResponseLoggingConfig(GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig $predictRequestResponseLoggingConfig)
   {
@@ -334,7 +468,10 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->predictRequestResponseLoggingConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   * Optional. Configuration for private service connect. network and
+   * private_service_connect_config are mutually exclusive.
+   *
+   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig $privateServiceConnectConfig
    */
   public function setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig $privateServiceConnectConfig)
   {
@@ -348,7 +485,9 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->privateServiceConnectConfig;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -362,7 +501,9 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -376,7 +517,13 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param int[]
+   * A map from a DeployedModel's ID to the percentage of this Endpoint's
+   * traffic that should be forwarded to that DeployedModel. If a
+   * DeployedModel's ID is not listed in this map, then it receives no traffic.
+   * The traffic percentage values must add up to 100, or map must be empty if
+   * the Endpoint is to not accept any traffic at a moment.
+   *
+   * @param int[] $trafficSplit
    */
   public function setTrafficSplit($trafficSplit)
   {
@@ -390,7 +537,9 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
     return $this->trafficSplit;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Endpoint was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

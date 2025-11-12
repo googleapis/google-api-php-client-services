@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1ExportFeatureValuesOperationMetadata extends \Googl
   protected $genericMetadataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * Operation metadata for Featurestore export Feature values.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {

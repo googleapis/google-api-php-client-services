@@ -20,13 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ErrorAnalysisAnnotationAttributedItem extends \Google\Model
 {
   /**
+   * The unique ID for each annotation. Used by FE to allocate the annotation in
+   * DB.
+   *
    * @var string
    */
   public $annotationResourceName;
+  /**
+   * The distance of this item to the annotation.
+   *
+   * @var 
+   */
   public $distance;
 
   /**
-   * @param string
+   * The unique ID for each annotation. Used by FE to allocate the annotation in
+   * DB.
+   *
+   * @param string $annotationResourceName
    */
   public function setAnnotationResourceName($annotationResourceName)
   {

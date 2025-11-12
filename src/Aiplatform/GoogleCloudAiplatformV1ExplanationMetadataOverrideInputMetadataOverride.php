@@ -21,12 +21,22 @@ class GoogleCloudAiplatformV1ExplanationMetadataOverrideInputMetadataOverride ex
 {
   protected $collection_key = 'inputBaselines';
   /**
+   * Baseline inputs for this feature. This overrides the `input_baseline` field
+   * of the ExplanationMetadata.InputMetadata object of the corresponding
+   * feature's input metadata. If it's not specified, the original baselines are
+   * not overridden.
+   *
    * @var array[]
    */
   public $inputBaselines;
 
   /**
-   * @param array[]
+   * Baseline inputs for this feature. This overrides the `input_baseline` field
+   * of the ExplanationMetadata.InputMetadata object of the corresponding
+   * feature's input metadata. If it's not specified, the original baselines are
+   * not overridden.
+   *
+   * @param array[] $inputBaselines
    */
   public function setInputBaselines($inputBaselines)
   {

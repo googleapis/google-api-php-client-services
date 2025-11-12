@@ -22,6 +22,10 @@ class GoogleCloudAiplatformV1ExportModelRequestOutputConfig extends \Google\Mode
   protected $artifactDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $artifactDestinationDataType = '';
   /**
+   * The ID of the format in which the Model must be exported. Each Model lists
+   * the export formats it supports. If no value is provided here, then the
+   * first from the list of the Model's supported formats is used by default.
+   *
    * @var string
    */
   public $exportFormatId;
@@ -29,7 +33,14 @@ class GoogleCloudAiplatformV1ExportModelRequestOutputConfig extends \Google\Mode
   protected $imageDestinationDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GcsDestination
+   * The Cloud Storage location where the Model artifact is to be written to.
+   * Under the directory given as the destination a new one with name "`model-
+   * export--`", where timestamp is in YYYY-MM-DDThh:mm:ss.sssZ ISO-8601 format,
+   * will be created. Inside, the Model and any of its supporting files will be
+   * written. This field should only be set when the `exportableContent` field
+   * of the [Model.supported_export_formats] object contains `ARTIFACT`.
+   *
+   * @param GoogleCloudAiplatformV1GcsDestination $artifactDestination
    */
   public function setArtifactDestination(GoogleCloudAiplatformV1GcsDestination $artifactDestination)
   {
@@ -43,7 +54,11 @@ class GoogleCloudAiplatformV1ExportModelRequestOutputConfig extends \Google\Mode
     return $this->artifactDestination;
   }
   /**
-   * @param string
+   * The ID of the format in which the Model must be exported. Each Model lists
+   * the export formats it supports. If no value is provided here, then the
+   * first from the list of the Model's supported formats is used by default.
+   *
+   * @param string $exportFormatId
    */
   public function setExportFormatId($exportFormatId)
   {
@@ -57,7 +72,12 @@ class GoogleCloudAiplatformV1ExportModelRequestOutputConfig extends \Google\Mode
     return $this->exportFormatId;
   }
   /**
-   * @param GoogleCloudAiplatformV1ContainerRegistryDestination
+   * The Google Container Registry or Artifact Registry uri where the Model
+   * container image will be copied to. This field should only be set when the
+   * `exportableContent` field of the [Model.supported_export_formats] object
+   * contains `IMAGE`.
+   *
+   * @param GoogleCloudAiplatformV1ContainerRegistryDestination $imageDestination
    */
   public function setImageDestination(GoogleCloudAiplatformV1ContainerRegistryDestination $imageDestination)
   {

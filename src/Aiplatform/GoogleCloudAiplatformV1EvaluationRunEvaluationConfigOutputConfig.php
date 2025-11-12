@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigOutputConfig extends \
   protected $gcsDestinationDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1BigQueryDestination
+   * BigQuery destination for evaluation output.
+   *
+   * @param GoogleCloudAiplatformV1BigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(GoogleCloudAiplatformV1BigQueryDestination $bigqueryDestination)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigOutputConfig extends \
     return $this->bigqueryDestination;
   }
   /**
-   * @param GoogleCloudAiplatformV1GcsDestination
+   * Cloud Storage destination for evaluation output.
+   *
+   * @param GoogleCloudAiplatformV1GcsDestination $gcsDestination
    */
   public function setGcsDestination(GoogleCloudAiplatformV1GcsDestination $gcsDestination)
   {

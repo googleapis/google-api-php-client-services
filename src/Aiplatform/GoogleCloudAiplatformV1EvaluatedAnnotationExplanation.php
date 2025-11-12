@@ -21,12 +21,17 @@ class GoogleCloudAiplatformV1EvaluatedAnnotationExplanation extends \Google\Mode
 {
   protected $explanationDataType = '';
   /**
+   * Explanation type. For AutoML Image Classification models, possible values
+   * are: * `image-integrated-gradients` * `image-xrai`
+   *
    * @var string
    */
   public $explanationType;
 
   /**
-   * @param GoogleCloudAiplatformV1Explanation
+   * Explanation attribution response details.
+   *
+   * @param GoogleCloudAiplatformV1Explanation $explanation
    */
   public function setExplanation(GoogleCloudAiplatformV1Explanation $explanation)
   {
@@ -40,7 +45,10 @@ class GoogleCloudAiplatformV1EvaluatedAnnotationExplanation extends \Google\Mode
     return $this->explanation;
   }
   /**
-   * @param string
+   * Explanation type. For AutoML Image Classification models, possible values
+   * are: * `image-integrated-gradients` * `image-xrai`
+   *
+   * @param string $explanationType
    */
   public function setExplanationType($explanationType)
   {

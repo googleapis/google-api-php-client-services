@@ -20,16 +20,27 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EnvVar extends \Google\Model
 {
   /**
+   * Required. Name of the environment variable. Must be a valid C identifier.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Variables that reference a $(VAR_NAME) are expanded using the
+   * previous defined environment variables in the container and any service
+   * environment variables. If a variable cannot be resolved, the reference in
+   * the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
+   * with a double $$, ie: $$(VAR_NAME). Escaped references will never be
+   * expanded, regardless of whether the variable exists or not.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. Name of the environment variable. Must be a valid C identifier.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +54,14 @@ class GoogleCloudAiplatformV1EnvVar extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Variables that reference a $(VAR_NAME) are expanded using the
+   * previous defined environment variables in the container and any service
+   * environment variables. If a variable cannot be resolved, the reference in
+   * the input string will be unchanged. The $(VAR_NAME) syntax can be escaped
+   * with a double $$, ie: $$(VAR_NAME). Escaped references will never be
+   * expanded, regardless of whether the variable exists or not.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

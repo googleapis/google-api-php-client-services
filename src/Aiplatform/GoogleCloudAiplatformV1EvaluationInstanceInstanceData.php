@@ -22,12 +22,16 @@ class GoogleCloudAiplatformV1EvaluationInstanceInstanceData extends \Google\Mode
   protected $contentsType = GoogleCloudAiplatformV1EvaluationInstanceInstanceDataContents::class;
   protected $contentsDataType = '';
   /**
+   * Text data.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceDataContents
+   * List of Gemini content data.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceDataContents $contents
    */
   public function setContents(GoogleCloudAiplatformV1EvaluationInstanceInstanceDataContents $contents)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1EvaluationInstanceInstanceData extends \Google\Mode
     return $this->contents;
   }
   /**
-   * @param string
+   * Text data.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

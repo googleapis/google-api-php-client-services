@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents extends \Google\C
   protected $eventDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1Content[]
+   * Optional. A list of events.
+   *
+   * @param GoogleCloudAiplatformV1Content[] $event
    */
   public function setEvent($event)
   {

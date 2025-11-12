@@ -20,12 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureGroupBigQueryTimeSeries extends \Google\Model
 {
   /**
+   * Optional. Column hosting timestamp values for a time-series source. Will be
+   * used to determine the latest `feature_values` for each entity. Optional. If
+   * not provided, column named `feature_timestamp` of type `TIMESTAMP` will be
+   * used.
+   *
    * @var string
    */
   public $timestampColumn;
 
   /**
-   * @param string
+   * Optional. Column hosting timestamp values for a time-series source. Will be
+   * used to determine the latest `feature_values` for each entity. Optional. If
+   * not provided, column named `feature_timestamp` of type `TIMESTAMP` will be
+   * used.
+   *
+   * @param string $timestampColumn
    */
   public function setTimestampColumn($timestampColumn)
   {

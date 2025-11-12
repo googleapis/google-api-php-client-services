@@ -20,24 +20,38 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExplanationMetadataInputMetadataFeatureValueDomain extends \Google\Model
 {
   /**
+   * The maximum permissible value for this feature.
+   *
    * @var float
    */
   public $maxValue;
   /**
+   * The minimum permissible value for this feature.
+   *
    * @var float
    */
   public $minValue;
   /**
+   * If this input feature has been normalized to a mean value of 0, the
+   * original_mean specifies the mean value of the domain prior to
+   * normalization.
+   *
    * @var float
    */
   public $originalMean;
   /**
+   * If this input feature has been normalized to a standard deviation of 1.0,
+   * the original_stddev specifies the standard deviation of the domain prior to
+   * normalization.
+   *
    * @var float
    */
   public $originalStddev;
 
   /**
-   * @param float
+   * The maximum permissible value for this feature.
+   *
+   * @param float $maxValue
    */
   public function setMaxValue($maxValue)
   {
@@ -51,7 +65,9 @@ class GoogleCloudAiplatformV1ExplanationMetadataInputMetadataFeatureValueDomain 
     return $this->maxValue;
   }
   /**
-   * @param float
+   * The minimum permissible value for this feature.
+   *
+   * @param float $minValue
    */
   public function setMinValue($minValue)
   {
@@ -65,7 +81,11 @@ class GoogleCloudAiplatformV1ExplanationMetadataInputMetadataFeatureValueDomain 
     return $this->minValue;
   }
   /**
-   * @param float
+   * If this input feature has been normalized to a mean value of 0, the
+   * original_mean specifies the mean value of the domain prior to
+   * normalization.
+   *
+   * @param float $originalMean
    */
   public function setOriginalMean($originalMean)
   {
@@ -79,7 +99,11 @@ class GoogleCloudAiplatformV1ExplanationMetadataInputMetadataFeatureValueDomain 
     return $this->originalMean;
   }
   /**
-   * @param float
+   * If this input feature has been normalized to a standard deviation of 1.0,
+   * the original_stddev specifies the standard deviation of the domain prior to
+   * normalization.
+   *
+   * @param float $originalStddev
    */
   public function setOriginalStddev($originalStddev)
   {

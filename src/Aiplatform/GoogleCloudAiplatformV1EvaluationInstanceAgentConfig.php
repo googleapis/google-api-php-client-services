@@ -24,12 +24,17 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentConfig extends \Google\Model
   protected $toolsType = GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools::class;
   protected $toolsDataType = '';
   /**
+   * A JSON string containing a list of tools available to an agent with info
+   * such as name, description, parameters and required parameters.
+   *
    * @var string
    */
   public $toolsText;
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData
+   * Optional. A field containing instructions from the developer for the agent.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData $developerInstruction
    */
   public function setDeveloperInstruction(GoogleCloudAiplatformV1EvaluationInstanceInstanceData $developerInstruction)
   {
@@ -43,7 +48,9 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentConfig extends \Google\Model
     return $this->developerInstruction;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools
+   * List of tools.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools $tools
    */
   public function setTools(GoogleCloudAiplatformV1EvaluationInstanceAgentConfigTools $tools)
   {
@@ -57,7 +64,10 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentConfig extends \Google\Model
     return $this->tools;
   }
   /**
-   * @param string
+   * A JSON string containing a list of tools available to an agent with info
+   * such as name, description, parameters and required parameters.
+   *
+   * @param string $toolsText
    */
   public function setToolsText($toolsText)
   {

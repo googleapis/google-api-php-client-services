@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1ExactMatchResults extends \Google\Collection
   protected $exactMatchMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1ExactMatchMetricValue[]
+   * Output only. Exact match metric values.
+   *
+   * @param GoogleCloudAiplatformV1ExactMatchMetricValue[] $exactMatchMetricValues
    */
   public function setExactMatchMetricValues($exactMatchMetricValues)
   {

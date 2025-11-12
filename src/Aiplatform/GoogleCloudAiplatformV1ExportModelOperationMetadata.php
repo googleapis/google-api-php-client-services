@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1ExportModelOperationMetadata extends \Google\Model
   protected $outputInfoDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * The common part of the operation metadata.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {
@@ -39,7 +41,10 @@ class GoogleCloudAiplatformV1ExportModelOperationMetadata extends \Google\Model
     return $this->genericMetadata;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExportModelOperationMetadataOutputInfo
+   * Output only. Information further describing the output of this Model
+   * export.
+   *
+   * @param GoogleCloudAiplatformV1ExportModelOperationMetadataOutputInfo $outputInfo
    */
   public function setOutputInfo(GoogleCloudAiplatformV1ExportModelOperationMetadataOutputInfo $outputInfo)
   {

@@ -21,20 +21,28 @@ class GoogleCloudAiplatformV1ExamplesRestrictionsNamespace extends \Google\Colle
 {
   protected $collection_key = 'deny';
   /**
+   * The list of allowed tags.
+   *
    * @var string[]
    */
   public $allow;
   /**
+   * The list of deny tags.
+   *
    * @var string[]
    */
   public $deny;
   /**
+   * The namespace name.
+   *
    * @var string
    */
   public $namespaceName;
 
   /**
-   * @param string[]
+   * The list of allowed tags.
+   *
+   * @param string[] $allow
    */
   public function setAllow($allow)
   {
@@ -48,7 +56,9 @@ class GoogleCloudAiplatformV1ExamplesRestrictionsNamespace extends \Google\Colle
     return $this->allow;
   }
   /**
-   * @param string[]
+   * The list of deny tags.
+   *
+   * @param string[] $deny
    */
   public function setDeny($deny)
   {
@@ -62,7 +72,9 @@ class GoogleCloudAiplatformV1ExamplesRestrictionsNamespace extends \Google\Colle
     return $this->deny;
   }
   /**
-   * @param string
+   * The namespace name.
+   *
+   * @param string $namespaceName
    */
   public function setNamespaceName($namespaceName)
   {

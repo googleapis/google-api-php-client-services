@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExactMatchMetricValue extends \Google\Model
 {
   /**
+   * Output only. Exact match score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Exact match score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

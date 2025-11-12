@@ -28,12 +28,23 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
   protected $toolsType = GoogleCloudAiplatformV1EvaluationInstanceAgentDataTools::class;
   protected $toolsDataType = '';
   /**
+   * A JSON string containing a list of tools available to an agent with info
+   * such as name, description, parameters and required parameters. Example: [ {
+   * "name": "search_actors", "description": "Search for actors in a movie.
+   * Returns a list of actors, their roles, their birthdate, and their place of
+   * birth.", "parameters": [ { "name": "movie_name", "description": "The name
+   * of the movie." }, { "name": "character_name", "description": "The name of
+   * the character." } ], "required": ["movie_name", "character_name"] } ]
+   *
+   * @deprecated
    * @var string
    */
   public $toolsText;
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfig
+   * Optional. Agent configuration.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfig $agentConfig
    */
   public function setAgentConfig(GoogleCloudAiplatformV1EvaluationInstanceAgentConfig $agentConfig)
   {
@@ -47,13 +58,17 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
     return $this->agentConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData
+   * Optional. A field containing instructions from the developer for the agent.
+   *
+   * @deprecated
+   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData $developerInstruction
    */
   public function setDeveloperInstruction(GoogleCloudAiplatformV1EvaluationInstanceInstanceData $developerInstruction)
   {
     $this->developerInstruction = $developerInstruction;
   }
   /**
+   * @deprecated
    * @return GoogleCloudAiplatformV1EvaluationInstanceInstanceData
    */
   public function getDeveloperInstruction()
@@ -61,7 +76,9 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
     return $this->developerInstruction;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents
+   * A list of events.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents $events
    */
   public function setEvents(GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents $events)
   {
@@ -75,13 +92,17 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
     return $this->events;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentDataTools
+   * List of tools.
+   *
+   * @deprecated
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentDataTools $tools
    */
   public function setTools(GoogleCloudAiplatformV1EvaluationInstanceAgentDataTools $tools)
   {
     $this->tools = $tools;
   }
   /**
+   * @deprecated
    * @return GoogleCloudAiplatformV1EvaluationInstanceAgentDataTools
    */
   public function getTools()
@@ -89,13 +110,23 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
     return $this->tools;
   }
   /**
-   * @param string
+   * A JSON string containing a list of tools available to an agent with info
+   * such as name, description, parameters and required parameters. Example: [ {
+   * "name": "search_actors", "description": "Search for actors in a movie.
+   * Returns a list of actors, their roles, their birthdate, and their place of
+   * birth.", "parameters": [ { "name": "movie_name", "description": "The name
+   * of the movie." }, { "name": "character_name", "description": "The name of
+   * the character." } ], "required": ["movie_name", "character_name"] } ]
+   *
+   * @deprecated
+   * @param string $toolsText
    */
   public function setToolsText($toolsText)
   {
     $this->toolsText = $toolsText;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getToolsText()

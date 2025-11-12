@@ -22,12 +22,17 @@ class GoogleCloudAiplatformV1EvaluationRunDataSource extends \Google\Model
   protected $bigqueryRequestSetType = GoogleCloudAiplatformV1BigQueryRequestSet::class;
   protected $bigqueryRequestSetDataType = '';
   /**
+   * The EvaluationSet resource name. Format:
+   * `projects/{project}/locations/{location}/evaluationSets/{evaluation_set}`
+   *
    * @var string
    */
   public $evaluationSet;
 
   /**
-   * @param GoogleCloudAiplatformV1BigQueryRequestSet
+   * Evaluation data in bigquery.
+   *
+   * @param GoogleCloudAiplatformV1BigQueryRequestSet $bigqueryRequestSet
    */
   public function setBigqueryRequestSet(GoogleCloudAiplatformV1BigQueryRequestSet $bigqueryRequestSet)
   {
@@ -41,7 +46,10 @@ class GoogleCloudAiplatformV1EvaluationRunDataSource extends \Google\Model
     return $this->bigqueryRequestSet;
   }
   /**
-   * @param string
+   * The EvaluationSet resource name. Format:
+   * `projects/{project}/locations/{location}/evaluationSets/{evaluation_set}`
+   *
+   * @param string $evaluationSet
    */
   public function setEvaluationSet($evaluationSet)
   {

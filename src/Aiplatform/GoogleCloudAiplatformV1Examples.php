@@ -22,10 +22,18 @@ class GoogleCloudAiplatformV1Examples extends \Google\Model
   protected $exampleGcsSourceType = GoogleCloudAiplatformV1ExamplesExampleGcsSource::class;
   protected $exampleGcsSourceDataType = '';
   /**
+   * The full configuration for the generated index, the semantics are the same
+   * as metadata and should match
+   * [NearestNeighborSearchConfig](https://cloud.google.com/vertex-
+   * ai/docs/explainable-ai/configuring-explanations-example-based#nearest-
+   * neighbor-search-config).
+   *
    * @var array
    */
   public $nearestNeighborSearchConfig;
   /**
+   * The number of neighbors to return when querying for examples.
+   *
    * @var int
    */
   public $neighborCount;
@@ -33,7 +41,9 @@ class GoogleCloudAiplatformV1Examples extends \Google\Model
   protected $presetsDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ExamplesExampleGcsSource
+   * The Cloud Storage input instances.
+   *
+   * @param GoogleCloudAiplatformV1ExamplesExampleGcsSource $exampleGcsSource
    */
   public function setExampleGcsSource(GoogleCloudAiplatformV1ExamplesExampleGcsSource $exampleGcsSource)
   {
@@ -47,7 +57,13 @@ class GoogleCloudAiplatformV1Examples extends \Google\Model
     return $this->exampleGcsSource;
   }
   /**
-   * @param array
+   * The full configuration for the generated index, the semantics are the same
+   * as metadata and should match
+   * [NearestNeighborSearchConfig](https://cloud.google.com/vertex-
+   * ai/docs/explainable-ai/configuring-explanations-example-based#nearest-
+   * neighbor-search-config).
+   *
+   * @param array $nearestNeighborSearchConfig
    */
   public function setNearestNeighborSearchConfig($nearestNeighborSearchConfig)
   {
@@ -61,7 +77,9 @@ class GoogleCloudAiplatformV1Examples extends \Google\Model
     return $this->nearestNeighborSearchConfig;
   }
   /**
-   * @param int
+   * The number of neighbors to return when querying for examples.
+   *
+   * @param int $neighborCount
    */
   public function setNeighborCount($neighborCount)
   {
@@ -75,7 +93,10 @@ class GoogleCloudAiplatformV1Examples extends \Google\Model
     return $this->neighborCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1Presets
+   * Simplified preset configuration, which automatically sets configuration
+   * values based on the desired query speed-precision trade-off and modality.
+   *
+   * @param GoogleCloudAiplatformV1Presets $presets
    */
   public function setPresets(GoogleCloudAiplatformV1Presets $presets)
   {

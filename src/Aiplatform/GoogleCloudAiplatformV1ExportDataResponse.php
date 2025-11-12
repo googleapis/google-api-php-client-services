@@ -23,12 +23,21 @@ class GoogleCloudAiplatformV1ExportDataResponse extends \Google\Collection
   protected $dataStatsType = GoogleCloudAiplatformV1ModelDataStats::class;
   protected $dataStatsDataType = '';
   /**
+   * All of the files that are exported in this export operation. For custom
+   * code training export, only three (training, validation and test) Cloud
+   * Storage paths in wildcard format are populated (for example,
+   * gs://.../training-*).
+   *
    * @var string[]
    */
   public $exportedFiles;
 
   /**
-   * @param GoogleCloudAiplatformV1ModelDataStats
+   * Only present for custom code training export use case. Records data stats,
+   * i.e., train/validation/test item/annotation counts calculated during the
+   * export operation.
+   *
+   * @param GoogleCloudAiplatformV1ModelDataStats $dataStats
    */
   public function setDataStats(GoogleCloudAiplatformV1ModelDataStats $dataStats)
   {
@@ -42,7 +51,12 @@ class GoogleCloudAiplatformV1ExportDataResponse extends \Google\Collection
     return $this->dataStats;
   }
   /**
-   * @param string[]
+   * All of the files that are exported in this export operation. For custom
+   * code training export, only three (training, validation and test) Cloud
+   * Storage paths in wildcard format are populated (for example,
+   * gs://.../training-*).
+   *
+   * @param string[] $exportedFiles
    */
   public function setExportedFiles($exportedFiles)
   {

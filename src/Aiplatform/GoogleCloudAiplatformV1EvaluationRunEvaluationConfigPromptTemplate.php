@@ -20,16 +20,26 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate extends \Google\Model
 {
   /**
+   * Prompt template stored in Cloud Storage. Format: "gs://my-bucket/file-
+   * name.txt".
+   *
    * @var string
    */
   public $gcsUri;
   /**
+   * Inline prompt template. Template variables should be in the format
+   * "{var_name}". Example: "Translate the following from {source_lang} to
+   * {target_lang}: {text}"
+   *
    * @var string
    */
   public $promptTemplate;
 
   /**
-   * @param string
+   * Prompt template stored in Cloud Storage. Format: "gs://my-bucket/file-
+   * name.txt".
+   *
+   * @param string $gcsUri
    */
   public function setGcsUri($gcsUri)
   {
@@ -43,7 +53,11 @@ class GoogleCloudAiplatformV1EvaluationRunEvaluationConfigPromptTemplate extends
     return $this->gcsUri;
   }
   /**
-   * @param string
+   * Inline prompt template. Template variables should be in the format
+   * "{var_name}". Example: "Translate the following from {source_lang} to
+   * {target_lang}: {text}"
+   *
+   * @param string $promptTemplate
    */
   public function setPromptTemplate($promptTemplate)
   {

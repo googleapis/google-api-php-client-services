@@ -19,18 +19,50 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ErrorAnalysisAnnotation extends \Google\Collection
 {
+  /**
+   * Unspecified query type for model error analysis.
+   */
+  public const QUERY_TYPE_QUERY_TYPE_UNSPECIFIED = 'QUERY_TYPE_UNSPECIFIED';
+  /**
+   * Query similar samples across all classes in the dataset.
+   */
+  public const QUERY_TYPE_ALL_SIMILAR = 'ALL_SIMILAR';
+  /**
+   * Query similar samples from the same class of the input sample.
+   */
+  public const QUERY_TYPE_SAME_CLASS_SIMILAR = 'SAME_CLASS_SIMILAR';
+  /**
+   * Query dissimilar samples from the same class of the input sample.
+   */
+  public const QUERY_TYPE_SAME_CLASS_DISSIMILAR = 'SAME_CLASS_DISSIMILAR';
   protected $collection_key = 'attributedItems';
   protected $attributedItemsType = GoogleCloudAiplatformV1ErrorAnalysisAnnotationAttributedItem::class;
   protected $attributedItemsDataType = 'array';
+  /**
+   * The outlier score of this annotated item. Usually defined as the min of all
+   * distances from attributed items.
+   *
+   * @var 
+   */
   public $outlierScore;
+  /**
+   * The threshold used to determine if this annotation is an outlier or not.
+   *
+   * @var 
+   */
   public $outlierThreshold;
   /**
+   * The query type used for finding the attributed items.
+   *
    * @var string
    */
   public $queryType;
 
   /**
-   * @param GoogleCloudAiplatformV1ErrorAnalysisAnnotationAttributedItem[]
+   * Attributed items for a given annotation, typically representing neighbors
+   * from the training sets constrained by the query type.
+   *
+   * @param GoogleCloudAiplatformV1ErrorAnalysisAnnotationAttributedItem[] $attributedItems
    */
   public function setAttributedItems($attributedItems)
   {
@@ -60,14 +92,19 @@ class GoogleCloudAiplatformV1ErrorAnalysisAnnotation extends \Google\Collection
     return $this->outlierThreshold;
   }
   /**
-   * @param string
+   * The query type used for finding the attributed items.
+   *
+   * Accepted values: QUERY_TYPE_UNSPECIFIED, ALL_SIMILAR, SAME_CLASS_SIMILAR,
+   * SAME_CLASS_DISSIMILAR
+   *
+   * @param self::QUERY_TYPE_* $queryType
    */
   public function setQueryType($queryType)
   {
     $this->queryType = $queryType;
   }
   /**
-   * @return string
+   * @return self::QUERY_TYPE_*
    */
   public function getQueryType()
   {

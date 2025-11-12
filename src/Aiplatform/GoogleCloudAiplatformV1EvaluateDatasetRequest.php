@@ -30,7 +30,11 @@ class GoogleCloudAiplatformV1EvaluateDatasetRequest extends \Google\Collection
   protected $outputConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1AutoraterConfig
+   * Optional. Autorater config used for evaluation. Currently only publisher
+   * Gemini models are supported. Format:
+   * `projects/{PROJECT}/locations/{LOCATION}/publishers/google/models/{MODEL}.`
+   *
+   * @param GoogleCloudAiplatformV1AutoraterConfig $autoraterConfig
    */
   public function setAutoraterConfig(GoogleCloudAiplatformV1AutoraterConfig $autoraterConfig)
   {
@@ -44,7 +48,9 @@ class GoogleCloudAiplatformV1EvaluateDatasetRequest extends \Google\Collection
     return $this->autoraterConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationDataset
+   * Required. The dataset used for evaluation.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationDataset $dataset
    */
   public function setDataset(GoogleCloudAiplatformV1EvaluationDataset $dataset)
   {
@@ -58,7 +64,9 @@ class GoogleCloudAiplatformV1EvaluateDatasetRequest extends \Google\Collection
     return $this->dataset;
   }
   /**
-   * @param GoogleCloudAiplatformV1Metric[]
+   * Required. The metrics used for evaluation.
+   *
+   * @param GoogleCloudAiplatformV1Metric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -72,7 +80,9 @@ class GoogleCloudAiplatformV1EvaluateDatasetRequest extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param GoogleCloudAiplatformV1OutputConfig
+   * Required. Config for evaluation output.
+   *
+   * @param GoogleCloudAiplatformV1OutputConfig $outputConfig
    */
   public function setOutputConfig(GoogleCloudAiplatformV1OutputConfig $outputConfig)
   {

@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1ExportDataRequest extends \Google\Model
   protected $exportConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ExportDataConfig
+   * Required. The desired output location.
+   *
+   * @param GoogleCloudAiplatformV1ExportDataConfig $exportConfig
    */
   public function setExportConfig(GoogleCloudAiplatformV1ExportDataConfig $exportConfig)
   {

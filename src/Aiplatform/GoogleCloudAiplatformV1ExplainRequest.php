@@ -21,22 +21,40 @@ class GoogleCloudAiplatformV1ExplainRequest extends \Google\Collection
 {
   protected $collection_key = 'instances';
   /**
+   * If specified, this ExplainRequest will be served by the chosen
+   * DeployedModel, overriding Endpoint.traffic_split.
+   *
    * @var string
    */
   public $deployedModelId;
   protected $explanationSpecOverrideType = GoogleCloudAiplatformV1ExplanationSpecOverride::class;
   protected $explanationSpecOverrideDataType = '';
   /**
+   * Required. The instances that are the input to the explanation call. A
+   * DeployedModel may have an upper limit on the number of instances it
+   * supports per request, and when it is exceeded the explanation call errors
+   * in case of AutoML Models, or, in case of customer created Models, the
+   * behaviour is as documented by that Model. The schema of any single instance
+   * may be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * instance_schema_uri.
+   *
    * @var array[]
    */
   public $instances;
   /**
+   * The parameters that govern the prediction. The schema of the parameters may
+   * be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * parameters_schema_uri.
+   *
    * @var array
    */
   public $parameters;
 
   /**
-   * @param string
+   * If specified, this ExplainRequest will be served by the chosen
+   * DeployedModel, overriding Endpoint.traffic_split.
+   *
+   * @param string $deployedModelId
    */
   public function setDeployedModelId($deployedModelId)
   {
@@ -50,7 +68,14 @@ class GoogleCloudAiplatformV1ExplainRequest extends \Google\Collection
     return $this->deployedModelId;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExplanationSpecOverride
+   * If specified, overrides the explanation_spec of the DeployedModel. Can be
+   * used for explaining prediction results with different configurations, such
+   * as: - Explaining top-5 predictions results as opposed to top-1; -
+   * Increasing path count or step count of the attribution methods to reduce
+   * approximate errors; - Using different baselines for explaining the
+   * prediction results.
+   *
+   * @param GoogleCloudAiplatformV1ExplanationSpecOverride $explanationSpecOverride
    */
   public function setExplanationSpecOverride(GoogleCloudAiplatformV1ExplanationSpecOverride $explanationSpecOverride)
   {
@@ -64,7 +89,15 @@ class GoogleCloudAiplatformV1ExplainRequest extends \Google\Collection
     return $this->explanationSpecOverride;
   }
   /**
-   * @param array[]
+   * Required. The instances that are the input to the explanation call. A
+   * DeployedModel may have an upper limit on the number of instances it
+   * supports per request, and when it is exceeded the explanation call errors
+   * in case of AutoML Models, or, in case of customer created Models, the
+   * behaviour is as documented by that Model. The schema of any single instance
+   * may be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * instance_schema_uri.
+   *
+   * @param array[] $instances
    */
   public function setInstances($instances)
   {
@@ -78,7 +111,11 @@ class GoogleCloudAiplatformV1ExplainRequest extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param array
+   * The parameters that govern the prediction. The schema of the parameters may
+   * be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * parameters_schema_uri.
+   *
+   * @param array $parameters
    */
   public function setParameters($parameters)
   {

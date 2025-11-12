@@ -19,9 +19,28 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * State when the featureOnlineStore configuration is not being updated and
+   * the fields reflect the current configuration of the featureOnlineStore. The
+   * featureOnlineStore is usable in this state.
+   */
+  public const STATE_STABLE = 'STABLE';
+  /**
+   * The state of the featureOnlineStore configuration when it is being updated.
+   * During an update, the fields reflect either the original configuration or
+   * the updated configuration of the featureOnlineStore. The featureOnlineStore
+   * is still usable in this state.
+   */
+  public const STATE_UPDATING = 'UPDATING';
   protected $bigtableType = GoogleCloudAiplatformV1FeatureOnlineStoreBigtable::class;
   protected $bigtableDataType = '';
   /**
+   * Output only. Timestamp when this FeatureOnlineStore was created.
+   *
    * @var string
    */
   public $createTime;
@@ -30,38 +49,64 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
+   * Optional. Used to perform consistent read-modify-write updates. If not set,
+   * a blind "overwrite" update happens.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. The labels with user-defined metadata to organize your
+   * FeatureOnlineStore. Label keys and values can be no longer than 64
+   * characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are
+   * allowed. See https://goo.gl/xmQnxf for more information on and examples of
+   * labels. No more than 64 user labels can be associated with one
+   * FeatureOnlineStore(System labels are excluded)." System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. Name of the FeatureOnlineStore. Format: `projects/{project}/loc
+   * ations/{location}/featureOnlineStores/{featureOnlineStore}`
+   *
    * @var string
    */
   public $name;
   protected $optimizedType = GoogleCloudAiplatformV1FeatureOnlineStoreOptimized::class;
   protected $optimizedDataType = '';
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Output only. State of the featureOnlineStore.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Timestamp when this FeatureOnlineStore was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureOnlineStoreBigtable
+   * Contains settings for the Cloud Bigtable instance that will be created to
+   * serve featureValues for all FeatureViews under this FeatureOnlineStore.
+   *
+   * @param GoogleCloudAiplatformV1FeatureOnlineStoreBigtable $bigtable
    */
   public function setBigtable(GoogleCloudAiplatformV1FeatureOnlineStoreBigtable $bigtable)
   {
@@ -75,7 +120,9 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->bigtable;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this FeatureOnlineStore was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -89,7 +136,10 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint
+   * Optional. The dedicated serving endpoint for this FeatureOnlineStore, which
+   * is different from common Vertex service endpoint.
+   *
+   * @param GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint $dedicatedServingEndpoint
    */
   public function setDedicatedServingEndpoint(GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint $dedicatedServingEndpoint)
   {
@@ -103,7 +153,10 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->dedicatedServingEndpoint;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Optional. Customer-managed encryption key spec for data storage. If set,
+   * online store will be secured by this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -117,7 +170,10 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->encryptionSpec;
   }
   /**
-   * @param string
+   * Optional. Used to perform consistent read-modify-write updates. If not set,
+   * a blind "overwrite" update happens.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -131,7 +187,16 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. The labels with user-defined metadata to organize your
+   * FeatureOnlineStore. Label keys and values can be no longer than 64
+   * characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are
+   * allowed. See https://goo.gl/xmQnxf for more information on and examples of
+   * labels. No more than 64 user labels can be associated with one
+   * FeatureOnlineStore(System labels are excluded)." System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -145,7 +210,10 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. Name of the FeatureOnlineStore. Format: `projects/{project}/loc
+   * ations/{location}/featureOnlineStores/{featureOnlineStore}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -159,7 +227,13 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureOnlineStoreOptimized
+   * Contains settings for the Optimized store that will be created to serve
+   * featureValues for all FeatureViews under this FeatureOnlineStore. When
+   * choose Optimized storage type, need to set
+   * PrivateServiceConnectConfig.enable_private_service_connect to use private
+   * endpoint. Otherwise will use public endpoint by default.
+   *
+   * @param GoogleCloudAiplatformV1FeatureOnlineStoreOptimized $optimized
    */
   public function setOptimized(GoogleCloudAiplatformV1FeatureOnlineStoreOptimized $optimized)
   {
@@ -173,7 +247,9 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->optimized;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -187,7 +263,9 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -201,21 +279,27 @@ class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Output only. State of the featureOnlineStore.
+   *
+   * Accepted values: STATE_UNSPECIFIED, STABLE, UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this FeatureOnlineStore was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

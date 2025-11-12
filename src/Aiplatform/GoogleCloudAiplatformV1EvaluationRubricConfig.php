@@ -24,12 +24,21 @@ class GoogleCloudAiplatformV1EvaluationRubricConfig extends \Google\Model
   protected $rubricGenerationSpecType = GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec::class;
   protected $rubricGenerationSpecDataType = '';
   /**
+   * Required. The key used to save the generated rubrics. If a generation spec
+   * is provided, this key will be used for the name of the generated rubric
+   * group. Otherwise, this key will be used to look up the existing rubric
+   * group on the evaluation item. Note that if a rubric group key is specified
+   * on both a rubric config and an evaluation metric, the key from the metric
+   * will be used to select the rubrics for evaluation.
+   *
    * @var string
    */
   public $rubricGroupKey;
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec
+   * Dynamically generate rubrics using a predefined spec.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec $predefinedRubricGenerationSpec
    */
   public function setPredefinedRubricGenerationSpec(GoogleCloudAiplatformV1EvaluationRunMetricPredefinedMetricSpec $predefinedRubricGenerationSpec)
   {
@@ -43,7 +52,9 @@ class GoogleCloudAiplatformV1EvaluationRubricConfig extends \Google\Model
     return $this->predefinedRubricGenerationSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec
+   * Dynamically generate rubrics using this specification.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec $rubricGenerationSpec
    */
   public function setRubricGenerationSpec(GoogleCloudAiplatformV1EvaluationRunMetricRubricGenerationSpec $rubricGenerationSpec)
   {
@@ -57,7 +68,14 @@ class GoogleCloudAiplatformV1EvaluationRubricConfig extends \Google\Model
     return $this->rubricGenerationSpec;
   }
   /**
-   * @param string
+   * Required. The key used to save the generated rubrics. If a generation spec
+   * is provided, this key will be used for the name of the generated rubric
+   * group. Otherwise, this key will be used to look up the existing rubric
+   * group on the evaluation item. Note that if a rubric group key is specified
+   * on both a rubric config and an evaluation metric, the key from the metric
+   * will be used to select the rubrics for evaluation.
+   *
+   * @param string $rubricGroupKey
    */
   public function setRubricGroupKey($rubricGroupKey)
   {

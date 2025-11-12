@@ -21,12 +21,16 @@ class GoogleCloudAiplatformV1EmbedContentResponseEmbedding extends \Google\Colle
 {
   protected $collection_key = 'values';
   /**
+   * Embedding vector values.
+   *
    * @var float[]
    */
   public $values;
 
   /**
-   * @param float[]
+   * Embedding vector values.
+   *
+   * @param float[] $values
    */
   public function setValues($values)
   {

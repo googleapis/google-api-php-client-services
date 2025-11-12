@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1EvaluationInstanceMapInstance extends \Google\Model
   protected $mapInstanceDataType = 'map';
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData[]
+   * Optional. Map of instance data.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceInstanceData[] $mapInstance
    */
   public function setMapInstance($mapInstance)
   {

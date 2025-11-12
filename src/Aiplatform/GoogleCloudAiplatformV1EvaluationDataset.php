@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1EvaluationDataset extends \Google\Model
   protected $gcsSourceDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1BigQuerySource
+   * BigQuery source holds the dataset.
+   *
+   * @param GoogleCloudAiplatformV1BigQuerySource $bigquerySource
    */
   public function setBigquerySource(GoogleCloudAiplatformV1BigQuerySource $bigquerySource)
   {
@@ -39,7 +41,10 @@ class GoogleCloudAiplatformV1EvaluationDataset extends \Google\Model
     return $this->bigquerySource;
   }
   /**
-   * @param GoogleCloudAiplatformV1GcsSource
+   * Cloud storage source holds the dataset. Currently only one Cloud Storage
+   * file path is supported.
+   *
+   * @param GoogleCloudAiplatformV1GcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudAiplatformV1GcsSource $gcsSource)
   {
