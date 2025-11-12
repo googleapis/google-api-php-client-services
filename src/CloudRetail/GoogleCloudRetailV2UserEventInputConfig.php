@@ -27,7 +27,9 @@ class GoogleCloudRetailV2UserEventInputConfig extends \Google\Model
   protected $userEventInlineSourceDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2BigQuerySource
+   * Required. BigQuery input source.
+   *
+   * @param GoogleCloudRetailV2BigQuerySource $bigQuerySource
    */
   public function setBigQuerySource(GoogleCloudRetailV2BigQuerySource $bigQuerySource)
   {
@@ -41,7 +43,9 @@ class GoogleCloudRetailV2UserEventInputConfig extends \Google\Model
     return $this->bigQuerySource;
   }
   /**
-   * @param GoogleCloudRetailV2GcsSource
+   * Required. Google Cloud Storage location for the input content.
+   *
+   * @param GoogleCloudRetailV2GcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudRetailV2GcsSource $gcsSource)
   {
@@ -55,7 +59,9 @@ class GoogleCloudRetailV2UserEventInputConfig extends \Google\Model
     return $this->gcsSource;
   }
   /**
-   * @param GoogleCloudRetailV2UserEventInlineSource
+   * Required. The Inline source for the input content for UserEvents.
+   *
+   * @param GoogleCloudRetailV2UserEventInlineSource $userEventInlineSource
    */
   public function setUserEventInlineSource(GoogleCloudRetailV2UserEventInlineSource $userEventInlineSource)
   {

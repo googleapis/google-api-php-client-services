@@ -20,12 +20,22 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2alphaImportErrorsConfig extends \Google\Model
 {
   /**
+   * Google Cloud Storage prefix for import errors. This must be an empty,
+   * existing Cloud Storage directory. Import errors are written to sharded
+   * files in this directory, one per line, as a JSON-encoded
+   * `google.rpc.Status` message.
+   *
    * @var string
    */
   public $gcsPrefix;
 
   /**
-   * @param string
+   * Google Cloud Storage prefix for import errors. This must be an empty,
+   * existing Cloud Storage directory. Import errors are written to sharded
+   * files in this directory, one per line, as a JSON-encoded
+   * `google.rpc.Status` message.
+   *
+   * @param string $gcsPrefix
    */
   public function setGcsPrefix($gcsPrefix)
   {

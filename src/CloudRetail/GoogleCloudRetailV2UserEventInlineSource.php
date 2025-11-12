@@ -24,7 +24,9 @@ class GoogleCloudRetailV2UserEventInlineSource extends \Google\Collection
   protected $userEventsDataType = 'array';
 
   /**
-   * @param GoogleCloudRetailV2UserEvent[]
+   * Required. A list of user events to import. Recommended max of 10k items.
+   *
+   * @param GoogleCloudRetailV2UserEvent[] $userEvents
    */
   public function setUserEvents($userEvents)
   {

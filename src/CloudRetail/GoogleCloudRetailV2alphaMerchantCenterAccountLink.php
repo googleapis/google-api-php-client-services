@@ -19,48 +19,107 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collection
 {
+  /**
+   * Default value.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Link is created and LRO is not complete.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * Link is active.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Link creation failed.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'feedFilters';
   /**
+   * Required. The branch ID (e.g. 0/1/2) within the catalog that products from
+   * merchant_center_account_id are streamed to. When updating this field, an
+   * empty value will use the currently configured default branch. However,
+   * changing the default branch later on won't change the linked branch here. A
+   * single branch ID can only have one linked Merchant Center account ID.
+   *
    * @var string
    */
   public $branchId;
   protected $feedFiltersType = GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter::class;
   protected $feedFiltersDataType = 'array';
   /**
+   * The FeedLabel used to perform filtering. Note: this replaces
+   * [region_id](https://developers.google.com/shopping-
+   * content/reference/rest/v2.1/products#Product.FIELDS.feed_label). Example
+   * value: `US`. Example value: `FeedLabel1`.
+   *
    * @var string
    */
   public $feedLabel;
   /**
+   * Output only. Immutable. MerchantCenterAccountLink identifier, which is the
+   * final component of name. This field is auto generated and follows the
+   * convention: `BranchId_MerchantCenterAccountId`. `projects/locations/global/
+   * catalogs/default_catalog/merchantCenterAccountLinks/id_1`.
+   *
    * @var string
    */
   public $id;
   /**
+   * Language of the title/description and other string attributes. Use language
+   * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO
+   * 639-1. This specifies the language of offers in Merchant Center that will
+   * be accepted. If empty, no language filtering will be performed. Example
+   * value: `en`.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Required. The linked [Merchant center account
+   * id](https://developers.google.com/shopping-content/guides/accountstatuses).
+   * The account must be a standalone account or a sub-account of a MCA.
+   *
    * @var string
    */
   public $merchantCenterAccountId;
   /**
+   * Output only. Immutable. Full resource name of the Merchant Center Account
+   * Link, such as `projects/locations/global/catalogs/default_catalog/merchantC
+   * enterAccountLinks/merchant_center_account_link`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Google Cloud project ID.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Optional. An optional arbitrary string that could be used as a tag for
+   * tracking link source.
+   *
    * @var string
    */
   public $source;
   /**
+   * Output only. Represents the state of the link.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Required. The branch ID (e.g. 0/1/2) within the catalog that products from
+   * merchant_center_account_id are streamed to. When updating this field, an
+   * empty value will use the currently configured default branch. However,
+   * changing the default branch later on won't change the linked branch here. A
+   * single branch ID can only have one linked Merchant Center account ID.
+   *
+   * @param string $branchId
    */
   public function setBranchId($branchId)
   {
@@ -74,7 +133,11 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->branchId;
   }
   /**
-   * @param GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter[]
+   * Criteria for the Merchant Center feeds to be ingested via the link. All
+   * offers will be ingested if the list is empty. Otherwise the offers will be
+   * ingested from selected feeds.
+   *
+   * @param GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter[] $feedFilters
    */
   public function setFeedFilters($feedFilters)
   {
@@ -88,7 +151,12 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->feedFilters;
   }
   /**
-   * @param string
+   * The FeedLabel used to perform filtering. Note: this replaces
+   * [region_id](https://developers.google.com/shopping-
+   * content/reference/rest/v2.1/products#Product.FIELDS.feed_label). Example
+   * value: `US`. Example value: `FeedLabel1`.
+   *
+   * @param string $feedLabel
    */
   public function setFeedLabel($feedLabel)
   {
@@ -102,7 +170,12 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->feedLabel;
   }
   /**
-   * @param string
+   * Output only. Immutable. MerchantCenterAccountLink identifier, which is the
+   * final component of name. This field is auto generated and follows the
+   * convention: `BranchId_MerchantCenterAccountId`. `projects/locations/global/
+   * catalogs/default_catalog/merchantCenterAccountLinks/id_1`.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -116,7 +189,13 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->id;
   }
   /**
-   * @param string
+   * Language of the title/description and other string attributes. Use language
+   * tags defined by [BCP 47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). ISO
+   * 639-1. This specifies the language of offers in Merchant Center that will
+   * be accepted. If empty, no language filtering will be performed. Example
+   * value: `en`.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -130,7 +209,11 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Required. The linked [Merchant center account
+   * id](https://developers.google.com/shopping-content/guides/accountstatuses).
+   * The account must be a standalone account or a sub-account of a MCA.
+   *
+   * @param string $merchantCenterAccountId
    */
   public function setMerchantCenterAccountId($merchantCenterAccountId)
   {
@@ -144,7 +227,11 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->merchantCenterAccountId;
   }
   /**
-   * @param string
+   * Output only. Immutable. Full resource name of the Merchant Center Account
+   * Link, such as `projects/locations/global/catalogs/default_catalog/merchantC
+   * enterAccountLinks/merchant_center_account_link`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -158,7 +245,9 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Google Cloud project ID.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -172,7 +261,10 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->projectId;
   }
   /**
-   * @param string
+   * Optional. An optional arbitrary string that could be used as a tag for
+   * tracking link source.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -186,14 +278,18 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
     return $this->source;
   }
   /**
-   * @param string
+   * Output only. Represents the state of the link.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, ACTIVE, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

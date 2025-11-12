@@ -20,28 +20,47 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2PurchaseTransaction extends \Google\Model
 {
   /**
+   * All the costs associated with the products. These can be manufacturing
+   * costs, shipping expenses not borne by the end user, or any other costs,
+   * such that: * Profit = revenue - tax - cost
+   *
    * @var float
    */
   public $cost;
   /**
+   * Required. Currency code. Use three-character ISO-4217 code.
+   *
    * @var string
    */
   public $currencyCode;
   /**
+   * The transaction ID with a length limit of 128 characters.
+   *
    * @var string
    */
   public $id;
   /**
+   * Required. Total non-zero revenue or grand total associated with the
+   * transaction. This value include shipping, tax, or other adjustments to
+   * total revenue that you want to include as part of your revenue
+   * calculations.
+   *
    * @var float
    */
   public $revenue;
   /**
+   * All the taxes associated with the transaction.
+   *
    * @var float
    */
   public $tax;
 
   /**
-   * @param float
+   * All the costs associated with the products. These can be manufacturing
+   * costs, shipping expenses not borne by the end user, or any other costs,
+   * such that: * Profit = revenue - tax - cost
+   *
+   * @param float $cost
    */
   public function setCost($cost)
   {
@@ -55,7 +74,9 @@ class GoogleCloudRetailV2PurchaseTransaction extends \Google\Model
     return $this->cost;
   }
   /**
-   * @param string
+   * Required. Currency code. Use three-character ISO-4217 code.
+   *
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {
@@ -69,7 +90,9 @@ class GoogleCloudRetailV2PurchaseTransaction extends \Google\Model
     return $this->currencyCode;
   }
   /**
-   * @param string
+   * The transaction ID with a length limit of 128 characters.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -83,7 +106,12 @@ class GoogleCloudRetailV2PurchaseTransaction extends \Google\Model
     return $this->id;
   }
   /**
-   * @param float
+   * Required. Total non-zero revenue or grand total associated with the
+   * transaction. This value include shipping, tax, or other adjustments to
+   * total revenue that you want to include as part of your revenue
+   * calculations.
+   *
+   * @param float $revenue
    */
   public function setRevenue($revenue)
   {
@@ -97,7 +125,9 @@ class GoogleCloudRetailV2PurchaseTransaction extends \Google\Model
     return $this->revenue;
   }
   /**
-   * @param float
+   * All the taxes associated with the transaction.
+   *
+   * @param float $tax
    */
   public function setTax($tax)
   {

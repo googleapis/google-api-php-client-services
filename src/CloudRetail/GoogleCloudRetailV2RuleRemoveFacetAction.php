@@ -21,12 +21,22 @@ class GoogleCloudRetailV2RuleRemoveFacetAction extends \Google\Collection
 {
   protected $collection_key = 'attributeNames';
   /**
+   * The attribute names (i.e. facet keys) to remove from the dynamic facets (if
+   * present in the request). There can't be more 3 attribute names. Each
+   * attribute name should be a valid attribute name, be non-empty and contain
+   * at most 80 characters.
+   *
    * @var string[]
    */
   public $attributeNames;
 
   /**
-   * @param string[]
+   * The attribute names (i.e. facet keys) to remove from the dynamic facets (if
+   * present in the request). There can't be more 3 attribute names. Each
+   * attribute name should be a valid attribute name, be non-empty and contain
+   * at most 80 characters.
+   *
+   * @param string[] $attributeNames
    */
   public function setAttributeNames($attributeNames)
   {

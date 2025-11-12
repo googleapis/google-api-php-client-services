@@ -20,12 +20,18 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2RemoveControlRequest extends \Google\Model
 {
   /**
+   * Required. The id of the control to apply. Assumed to be in the same catalog
+   * as the serving config.
+   *
    * @var string
    */
   public $controlId;
 
   /**
-   * @param string
+   * Required. The id of the control to apply. Assumed to be in the same catalog
+   * as the serving config.
+   *
+   * @param string $controlId
    */
   public function setControlId($controlId)
   {

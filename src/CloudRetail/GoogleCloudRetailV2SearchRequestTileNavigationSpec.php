@@ -23,12 +23,22 @@ class GoogleCloudRetailV2SearchRequestTileNavigationSpec extends \Google\Collect
   protected $appliedTilesType = GoogleCloudRetailV2Tile::class;
   protected $appliedTilesDataType = 'array';
   /**
+   * This field specifies whether the customer would like to request tile
+   * navigation.
+   *
    * @var bool
    */
   public $tileNavigationRequested;
 
   /**
-   * @param GoogleCloudRetailV2Tile[]
+   * This optional field specifies the tiles which are already clicked in client
+   * side. While the feature works without this field set, particularly for an
+   * initial query, it is highly recommended to set this field because it can
+   * improve the quality of the search response and removes possible duplicate
+   * tiles. NOTE: This field is not being used for filtering search products.
+   * Client side should also put all the applied tiles in SearchRequest.filter.
+   *
+   * @param GoogleCloudRetailV2Tile[] $appliedTiles
    */
   public function setAppliedTiles($appliedTiles)
   {
@@ -42,7 +52,10 @@ class GoogleCloudRetailV2SearchRequestTileNavigationSpec extends \Google\Collect
     return $this->appliedTiles;
   }
   /**
-   * @param bool
+   * This field specifies whether the customer would like to request tile
+   * navigation.
+   *
+   * @param bool $tileNavigationRequested
    */
   public function setTileNavigationRequested($tileNavigationRequested)
   {

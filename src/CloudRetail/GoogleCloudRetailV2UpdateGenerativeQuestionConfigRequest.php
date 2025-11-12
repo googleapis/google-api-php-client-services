@@ -22,12 +22,19 @@ class GoogleCloudRetailV2UpdateGenerativeQuestionConfigRequest extends \Google\M
   protected $generativeQuestionConfigType = GoogleCloudRetailV2GenerativeQuestionConfig::class;
   protected $generativeQuestionConfigDataType = '';
   /**
+   * Optional. Indicates which fields in the provided GenerativeQuestionConfig
+   * to update. The following are NOT supported: *
+   * GenerativeQuestionConfig.frequency If not set or empty, all supported
+   * fields are updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GoogleCloudRetailV2GenerativeQuestionConfig
+   * Required. The question to update.
+   *
+   * @param GoogleCloudRetailV2GenerativeQuestionConfig $generativeQuestionConfig
    */
   public function setGenerativeQuestionConfig(GoogleCloudRetailV2GenerativeQuestionConfig $generativeQuestionConfig)
   {
@@ -41,7 +48,12 @@ class GoogleCloudRetailV2UpdateGenerativeQuestionConfigRequest extends \Google\M
     return $this->generativeQuestionConfig;
   }
   /**
-   * @param string
+   * Optional. Indicates which fields in the provided GenerativeQuestionConfig
+   * to update. The following are NOT supported: *
+   * GenerativeQuestionConfig.frequency If not set or empty, all supported
+   * fields are updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

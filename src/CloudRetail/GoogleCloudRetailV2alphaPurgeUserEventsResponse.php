@@ -20,12 +20,16 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2alphaPurgeUserEventsResponse extends \Google\Model
 {
   /**
+   * The total count of events purged as a result of the operation.
+   *
    * @var string
    */
   public $purgedEventsCount;
 
   /**
-   * @param string
+   * The total count of events purged as a result of the operation.
+   *
+   * @param string $purgedEventsCount
    */
   public function setPurgedEventsCount($purgedEventsCount)
   {

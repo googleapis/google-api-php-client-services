@@ -20,19 +20,38 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2alphaEnrollSolutionResponse extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const ENROLLED_SOLUTION_SOLUTION_TYPE_UNSPECIFIED = 'SOLUTION_TYPE_UNSPECIFIED';
+  /**
+   * Used for Recommendations AI.
+   */
+  public const ENROLLED_SOLUTION_SOLUTION_TYPE_RECOMMENDATION = 'SOLUTION_TYPE_RECOMMENDATION';
+  /**
+   * Used for Retail Search.
+   */
+  public const ENROLLED_SOLUTION_SOLUTION_TYPE_SEARCH = 'SOLUTION_TYPE_SEARCH';
+  /**
+   * Retail API solution that the project has enrolled.
+   *
    * @var string
    */
   public $enrolledSolution;
 
   /**
-   * @param string
+   * Retail API solution that the project has enrolled.
+   *
+   * Accepted values: SOLUTION_TYPE_UNSPECIFIED, SOLUTION_TYPE_RECOMMENDATION,
+   * SOLUTION_TYPE_SEARCH
+   *
+   * @param self::ENROLLED_SOLUTION_* $enrolledSolution
    */
   public function setEnrolledSolution($enrolledSolution)
   {
     $this->enrolledSolution = $enrolledSolution;
   }
   /**
-   * @return string
+   * @return self::ENROLLED_SOLUTION_*
    */
   public function getEnrolledSolution()
   {

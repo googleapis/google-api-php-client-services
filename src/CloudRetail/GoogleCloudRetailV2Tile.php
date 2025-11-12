@@ -24,12 +24,16 @@ class GoogleCloudRetailV2Tile extends \Google\Model
   protected $productAttributeValueType = GoogleCloudRetailV2ProductAttributeValue::class;
   protected $productAttributeValueDataType = '';
   /**
+   * The representative product id for this tile.
+   *
    * @var string
    */
   public $representativeProductId;
 
   /**
-   * @param GoogleCloudRetailV2ProductAttributeInterval
+   * The product attribute key-numeric interval.
+   *
+   * @param GoogleCloudRetailV2ProductAttributeInterval $productAttributeInterval
    */
   public function setProductAttributeInterval(GoogleCloudRetailV2ProductAttributeInterval $productAttributeInterval)
   {
@@ -43,7 +47,9 @@ class GoogleCloudRetailV2Tile extends \Google\Model
     return $this->productAttributeInterval;
   }
   /**
-   * @param GoogleCloudRetailV2ProductAttributeValue
+   * The product attribute key-value.
+   *
+   * @param GoogleCloudRetailV2ProductAttributeValue $productAttributeValue
    */
   public function setProductAttributeValue(GoogleCloudRetailV2ProductAttributeValue $productAttributeValue)
   {
@@ -57,7 +63,9 @@ class GoogleCloudRetailV2Tile extends \Google\Model
     return $this->productAttributeValue;
   }
   /**
-   * @param string
+   * The representative product id for this tile.
+   *
+   * @param string $representativeProductId
    */
   public function setRepresentativeProductId($representativeProductId)
   {

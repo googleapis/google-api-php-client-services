@@ -20,12 +20,16 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2RuleRedirectAction extends \Google\Model
 {
   /**
+   * URL must have length equal or less than 2000 characters.
+   *
    * @var string
    */
   public $redirectUri;
 
   /**
-   * @param string
+   * URL must have length equal or less than 2000 characters.
+   *
+   * @param string $redirectUri
    */
   public function setRedirectUri($redirectUri)
   {

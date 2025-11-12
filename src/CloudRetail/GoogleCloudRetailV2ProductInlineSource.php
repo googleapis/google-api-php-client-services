@@ -24,7 +24,10 @@ class GoogleCloudRetailV2ProductInlineSource extends \Google\Collection
   protected $productsDataType = 'array';
 
   /**
-   * @param GoogleCloudRetailV2Product[]
+   * Required. A list of products to update/create. Each product must have a
+   * valid Product.id. Recommended max of 100 items.
+   *
+   * @param GoogleCloudRetailV2Product[] $products
    */
   public function setProducts($products)
   {

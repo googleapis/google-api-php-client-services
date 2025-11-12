@@ -21,12 +21,16 @@ class GoogleCloudRetailV2StringList extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * String values.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * String values.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

@@ -24,7 +24,10 @@ class GoogleCloudRetailV2RuleForceReturnFacetAction extends \Google\Collection
   protected $facetPositionAdjustmentsDataType = 'array';
 
   /**
-   * @param GoogleCloudRetailV2RuleForceReturnFacetActionFacetPositionAdjustment[]
+   * Each instance corresponds to a force return attribute for the given
+   * condition. There can't be more 15 instances here.
+   *
+   * @param GoogleCloudRetailV2RuleForceReturnFacetActionFacetPositionAdjustment[] $facetPositionAdjustments
    */
   public function setFacetPositionAdjustments($facetPositionAdjustments)
   {

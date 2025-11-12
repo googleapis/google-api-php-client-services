@@ -24,7 +24,9 @@ class GoogleCloudRetailV2SearchResponseTileNavigationResult extends \Google\Coll
   protected $tilesDataType = 'array';
 
   /**
-   * @param GoogleCloudRetailV2Tile[]
+   * The current tiles that are used for tile navigation, sorted by engagement.
+   *
+   * @param GoogleCloudRetailV2Tile[] $tiles
    */
   public function setTiles($tiles)
   {

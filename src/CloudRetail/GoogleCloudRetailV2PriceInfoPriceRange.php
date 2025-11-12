@@ -25,7 +25,10 @@ class GoogleCloudRetailV2PriceInfoPriceRange extends \Google\Model
   protected $priceDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2Interval
+   * The inclusive Product.pricing_info.original_price internal of all variant
+   * Product having the same Product.primary_product_id.
+   *
+   * @param GoogleCloudRetailV2Interval $originalPrice
    */
   public function setOriginalPrice(GoogleCloudRetailV2Interval $originalPrice)
   {
@@ -39,7 +42,10 @@ class GoogleCloudRetailV2PriceInfoPriceRange extends \Google\Model
     return $this->originalPrice;
   }
   /**
-   * @param GoogleCloudRetailV2Interval
+   * The inclusive Product.pricing_info.price interval of all variant Product
+   * having the same Product.primary_product_id.
+   *
+   * @param GoogleCloudRetailV2Interval $price
    */
   public function setPrice(GoogleCloudRetailV2Interval $price)
   {

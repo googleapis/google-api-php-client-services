@@ -20,12 +20,32 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2RulePinAction extends \Google\Model
 {
   /**
+   * Required. A map of positions to product_ids. Partial matches per action are
+   * allowed, if a certain position in the map is already filled that
+   * `[position, product_id]` pair will be ignored but the rest may still be
+   * applied. This case will only occur if multiple pin actions are matched to a
+   * single request, as the map guarantees that pin positions are unique within
+   * the same action. Duplicate product_ids are not permitted within a single
+   * pin map. The max size of this map is 120, equivalent to the max [request
+   * page size](https://cloud.google.com/retail/docs/reference/rest/v2/projects.
+   * locations.catalogs.placements/search#request-body).
+   *
    * @var string[]
    */
   public $pinMap;
 
   /**
-   * @param string[]
+   * Required. A map of positions to product_ids. Partial matches per action are
+   * allowed, if a certain position in the map is already filled that
+   * `[position, product_id]` pair will be ignored but the rest may still be
+   * applied. This case will only occur if multiple pin actions are matched to a
+   * single request, as the map guarantees that pin positions are unique within
+   * the same action. Duplicate product_ids are not permitted within a single
+   * pin map. The max size of this map is 120, equivalent to the max [request
+   * page size](https://cloud.google.com/retail/docs/reference/rest/v2/projects.
+   * locations.catalogs.placements/search#request-body).
+   *
+   * @param string[] $pinMap
    */
   public function setPinMap($pinMap)
   {

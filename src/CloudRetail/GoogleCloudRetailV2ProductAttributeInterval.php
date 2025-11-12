@@ -22,12 +22,16 @@ class GoogleCloudRetailV2ProductAttributeInterval extends \Google\Model
   protected $intervalType = GoogleCloudRetailV2Interval::class;
   protected $intervalDataType = '';
   /**
+   * The attribute name (e.g. "length")
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GoogleCloudRetailV2Interval
+   * The numeric interval (e.g. [10, 20))
+   *
+   * @param GoogleCloudRetailV2Interval $interval
    */
   public function setInterval(GoogleCloudRetailV2Interval $interval)
   {
@@ -41,7 +45,9 @@ class GoogleCloudRetailV2ProductAttributeInterval extends \Google\Model
     return $this->interval;
   }
   /**
-   * @param string
+   * The attribute name (e.g. "length")
+   *
+   * @param string $name
    */
   public function setName($name)
   {

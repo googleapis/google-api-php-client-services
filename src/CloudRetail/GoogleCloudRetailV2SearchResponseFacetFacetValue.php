@@ -20,20 +20,40 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchResponseFacetFacetValue extends \Google\Model
 {
   /**
+   * Number of items that have this facet value.
+   *
    * @var string
    */
   public $count;
   protected $intervalType = GoogleCloudRetailV2Interval::class;
   protected $intervalDataType = '';
+  /**
+   * The maximum value in the FacetValue.interval. Only supported on numerical
+   * facets and returned if SearchRequest.FacetSpec.FacetKey.return_min_max is
+   * true.
+   *
+   * @var 
+   */
   public $maxValue;
+  /**
+   * The minimum value in the FacetValue.interval. Only supported on numerical
+   * facets and returned if SearchRequest.FacetSpec.FacetKey.return_min_max is
+   * true.
+   *
+   * @var 
+   */
   public $minValue;
   /**
+   * Text value of a facet, such as "Black" for facet "colorFamilies".
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Number of items that have this facet value.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -47,7 +67,9 @@ class GoogleCloudRetailV2SearchResponseFacetFacetValue extends \Google\Model
     return $this->count;
   }
   /**
-   * @param GoogleCloudRetailV2Interval
+   * Interval value for a facet, such as [10, 20) for facet "price".
+   *
+   * @param GoogleCloudRetailV2Interval $interval
    */
   public function setInterval(GoogleCloudRetailV2Interval $interval)
   {
@@ -77,7 +99,9 @@ class GoogleCloudRetailV2SearchResponseFacetFacetValue extends \Google\Model
     return $this->minValue;
   }
   /**
-   * @param string
+   * Text value of a facet, such as "Black" for facet "colorFamilies".
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

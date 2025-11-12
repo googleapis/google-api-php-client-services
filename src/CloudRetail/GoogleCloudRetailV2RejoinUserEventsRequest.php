@@ -20,19 +20,45 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2RejoinUserEventsRequest extends \Google\Model
 {
   /**
+   * Rejoin all events with the latest product catalog, including both joined
+   * events and unjoined events.
+   */
+  public const USER_EVENT_REJOIN_SCOPE_USER_EVENT_REJOIN_SCOPE_UNSPECIFIED = 'USER_EVENT_REJOIN_SCOPE_UNSPECIFIED';
+  /**
+   * Only rejoin joined events with the latest product catalog.
+   */
+  public const USER_EVENT_REJOIN_SCOPE_JOINED_EVENTS = 'JOINED_EVENTS';
+  /**
+   * Only rejoin unjoined events with the latest product catalog.
+   */
+  public const USER_EVENT_REJOIN_SCOPE_UNJOINED_EVENTS = 'UNJOINED_EVENTS';
+  /**
+   * The type of the user event rejoin to define the scope and range of the user
+   * events to be rejoined with the latest product catalog. Defaults to
+   * `USER_EVENT_REJOIN_SCOPE_UNSPECIFIED` if this field is not set, or set to
+   * an invalid integer value.
+   *
    * @var string
    */
   public $userEventRejoinScope;
 
   /**
-   * @param string
+   * The type of the user event rejoin to define the scope and range of the user
+   * events to be rejoined with the latest product catalog. Defaults to
+   * `USER_EVENT_REJOIN_SCOPE_UNSPECIFIED` if this field is not set, or set to
+   * an invalid integer value.
+   *
+   * Accepted values: USER_EVENT_REJOIN_SCOPE_UNSPECIFIED, JOINED_EVENTS,
+   * UNJOINED_EVENTS
+   *
+   * @param self::USER_EVENT_REJOIN_SCOPE_* $userEventRejoinScope
    */
   public function setUserEventRejoinScope($userEventRejoinScope)
   {
     $this->userEventRejoinScope = $userEventRejoinScope;
   }
   /**
-   * @return string
+   * @return self::USER_EVENT_REJOIN_SCOPE_*
    */
   public function getUserEventRejoinScope()
   {

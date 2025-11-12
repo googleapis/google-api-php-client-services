@@ -21,20 +21,30 @@ class GoogleCloudRetailV2RuleReplacementAction extends \Google\Collection
 {
   protected $collection_key = 'queryTerms';
   /**
+   * Terms from the search query. Will be replaced by replacement term. Can
+   * specify up to 100 terms.
+   *
    * @var string[]
    */
   public $queryTerms;
   /**
+   * Term that will be used for replacement.
+   *
    * @var string
    */
   public $replacementTerm;
   /**
+   * Will be [deprecated = true] post migration;
+   *
    * @var string
    */
   public $term;
 
   /**
-   * @param string[]
+   * Terms from the search query. Will be replaced by replacement term. Can
+   * specify up to 100 terms.
+   *
+   * @param string[] $queryTerms
    */
   public function setQueryTerms($queryTerms)
   {
@@ -48,7 +58,9 @@ class GoogleCloudRetailV2RuleReplacementAction extends \Google\Collection
     return $this->queryTerms;
   }
   /**
-   * @param string
+   * Term that will be used for replacement.
+   *
+   * @param string $replacementTerm
    */
   public function setReplacementTerm($replacementTerm)
   {
@@ -62,7 +74,9 @@ class GoogleCloudRetailV2RuleReplacementAction extends \Google\Collection
     return $this->replacementTerm;
   }
   /**
-   * @param string
+   * Will be [deprecated = true] post migration;
+   *
+   * @param string $term
    */
   public function setTerm($term)
   {

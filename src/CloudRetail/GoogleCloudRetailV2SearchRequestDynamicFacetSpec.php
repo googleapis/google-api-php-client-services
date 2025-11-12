@@ -20,19 +20,37 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchRequestDynamicFacetSpec extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * Disable Dynamic Facet.
+   */
+  public const MODE_DISABLED = 'DISABLED';
+  /**
+   * Automatic mode built by Google Retail Search.
+   */
+  public const MODE_ENABLED = 'ENABLED';
+  /**
+   * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param string
+   * Mode of the DynamicFacet feature. Defaults to Mode.DISABLED if it's unset.
+   *
+   * Accepted values: MODE_UNSPECIFIED, DISABLED, ENABLED
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {

@@ -21,20 +21,30 @@ class GoogleCloudRetailV2RuleOnewaySynonymsAction extends \Google\Collection
 {
   protected $collection_key = 'synonyms';
   /**
+   * Will be [deprecated = true] post migration;
+   *
    * @var string[]
    */
   public $onewayTerms;
   /**
+   * Terms from the search query. Will treat synonyms as their synonyms. Not
+   * themselves synonyms of the synonyms. Can specify up to 100 terms.
+   *
    * @var string[]
    */
   public $queryTerms;
   /**
+   * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100
+   * synonyms.
+   *
    * @var string[]
    */
   public $synonyms;
 
   /**
-   * @param string[]
+   * Will be [deprecated = true] post migration;
+   *
+   * @param string[] $onewayTerms
    */
   public function setOnewayTerms($onewayTerms)
   {
@@ -48,7 +58,10 @@ class GoogleCloudRetailV2RuleOnewaySynonymsAction extends \Google\Collection
     return $this->onewayTerms;
   }
   /**
-   * @param string[]
+   * Terms from the search query. Will treat synonyms as their synonyms. Not
+   * themselves synonyms of the synonyms. Can specify up to 100 terms.
+   *
+   * @param string[] $queryTerms
    */
   public function setQueryTerms($queryTerms)
   {
@@ -62,7 +75,10 @@ class GoogleCloudRetailV2RuleOnewaySynonymsAction extends \Google\Collection
     return $this->queryTerms;
   }
   /**
-   * @param string[]
+   * Defines a set of synonyms. Cannot contain duplicates. Can specify up to 100
+   * synonyms.
+   *
+   * @param string[] $synonyms
    */
   public function setSynonyms($synonyms)
   {
