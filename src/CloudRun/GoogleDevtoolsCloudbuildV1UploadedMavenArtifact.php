@@ -20,6 +20,8 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
 {
   /**
+   * Output only. Path to the artifact in Artifact Registry.
+   *
    * @var string
    */
   public $artifactRegistryPackage;
@@ -28,12 +30,16 @@ class GoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
   protected $pushTimingType = GoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $pushTimingDataType = '';
   /**
+   * URI of the uploaded artifact.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Output only. Path to the artifact in Artifact Registry.
+   *
+   * @param string $artifactRegistryPackage
    */
   public function setArtifactRegistryPackage($artifactRegistryPackage)
   {
@@ -47,7 +53,9 @@ class GoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
     return $this->artifactRegistryPackage;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1FileHashes
+   * Hash types and values of the Maven Artifact.
+   *
+   * @param GoogleDevtoolsCloudbuildV1FileHashes $fileHashes
    */
   public function setFileHashes(GoogleDevtoolsCloudbuildV1FileHashes $fileHashes)
   {
@@ -61,7 +69,9 @@ class GoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
     return $this->fileHashes;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1TimeSpan
+   * Output only. Stores timing information for pushing the specified artifact.
+   *
+   * @param GoogleDevtoolsCloudbuildV1TimeSpan $pushTiming
    */
   public function setPushTiming(GoogleDevtoolsCloudbuildV1TimeSpan $pushTiming)
   {
@@ -75,7 +85,9 @@ class GoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
     return $this->pushTiming;
   }
   /**
-   * @param string
+   * URI of the uploaded artifact.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

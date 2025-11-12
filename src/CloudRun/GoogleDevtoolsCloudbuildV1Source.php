@@ -33,7 +33,10 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
   protected $storageSourceManifestDataType = '';
 
   /**
-   * @param GoogleDevtoolsCloudbuildV1ConnectedRepository
+   * Optional. If provided, get the source from this 2nd-gen Google Cloud Build
+   * repository resource.
+   *
+   * @param GoogleDevtoolsCloudbuildV1ConnectedRepository $connectedRepository
    */
   public function setConnectedRepository(GoogleDevtoolsCloudbuildV1ConnectedRepository $connectedRepository)
   {
@@ -47,7 +50,9 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
     return $this->connectedRepository;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1DeveloperConnectConfig
+   * If provided, get the source from this Developer Connect config.
+   *
+   * @param GoogleDevtoolsCloudbuildV1DeveloperConnectConfig $developerConnectConfig
    */
   public function setDeveloperConnectConfig(GoogleDevtoolsCloudbuildV1DeveloperConnectConfig $developerConnectConfig)
   {
@@ -61,7 +66,9 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
     return $this->developerConnectConfig;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1GitSource
+   * If provided, get the source from this Git repository.
+   *
+   * @param GoogleDevtoolsCloudbuildV1GitSource $gitSource
    */
   public function setGitSource(GoogleDevtoolsCloudbuildV1GitSource $gitSource)
   {
@@ -75,7 +82,10 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
     return $this->gitSource;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1RepoSource
+   * If provided, get the source from this location in a Cloud Source
+   * Repository.
+   *
+   * @param GoogleDevtoolsCloudbuildV1RepoSource $repoSource
    */
   public function setRepoSource(GoogleDevtoolsCloudbuildV1RepoSource $repoSource)
   {
@@ -89,7 +99,9 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
     return $this->repoSource;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1StorageSource
+   * If provided, get the source from this location in Cloud Storage.
+   *
+   * @param GoogleDevtoolsCloudbuildV1StorageSource $storageSource
    */
   public function setStorageSource(GoogleDevtoolsCloudbuildV1StorageSource $storageSource)
   {
@@ -103,7 +115,12 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
     return $this->storageSource;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1StorageSourceManifest
+   * If provided, get the source from this manifest in Cloud Storage. This
+   * feature is in Preview; see description
+   * [here](https://github.com/GoogleCloudPlatform/cloud-
+   * builders/tree/master/gcs-fetcher).
+   *
+   * @param GoogleDevtoolsCloudbuildV1StorageSourceManifest $storageSourceManifest
    */
   public function setStorageSourceManifest(GoogleDevtoolsCloudbuildV1StorageSourceManifest $storageSourceManifest)
   {

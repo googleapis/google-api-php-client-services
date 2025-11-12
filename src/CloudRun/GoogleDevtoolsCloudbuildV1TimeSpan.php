@@ -20,16 +20,22 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1TimeSpan extends \Google\Model
 {
   /**
+   * End of time span.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Start of time span.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * End of time span.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +49,9 @@ class GoogleDevtoolsCloudbuildV1TimeSpan extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Start of time span.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
