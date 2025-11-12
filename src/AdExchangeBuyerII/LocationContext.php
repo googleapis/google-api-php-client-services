@@ -21,12 +21,20 @@ class LocationContext extends \Google\Collection
 {
   protected $collection_key = 'geoCriteriaIds';
   /**
+   * IDs representing the geo location for this context. Refer to the [geo-
+   * table.csv](https://storage.googleapis.com/adx-rtb-dictionaries/geo-
+   * table.csv) file for different geo criteria IDs.
+   *
    * @var int[]
    */
   public $geoCriteriaIds;
 
   /**
-   * @param int[]
+   * IDs representing the geo location for this context. Refer to the [geo-
+   * table.csv](https://storage.googleapis.com/adx-rtb-dictionaries/geo-
+   * table.csv) file for different geo criteria IDs.
+   *
+   * @param int[] $geoCriteriaIds
    */
   public function setGeoCriteriaIds($geoCriteriaIds)
   {

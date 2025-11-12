@@ -22,6 +22,10 @@ class CreativeStatusRow extends \Google\Model
   protected $bidCountType = MetricValue::class;
   protected $bidCountDataType = '';
   /**
+   * The ID of the creative status. See [creative-status-
+   * codes](https://developers.google.com/authorized-
+   * buyers/rtb/downloads/creative-status-codes).
+   *
    * @var int
    */
   public $creativeStatusId;
@@ -29,7 +33,9 @@ class CreativeStatusRow extends \Google\Model
   protected $rowDimensionsDataType = '';
 
   /**
-   * @param MetricValue
+   * The number of bids with the specified status.
+   *
+   * @param MetricValue $bidCount
    */
   public function setBidCount(MetricValue $bidCount)
   {
@@ -43,7 +49,11 @@ class CreativeStatusRow extends \Google\Model
     return $this->bidCount;
   }
   /**
-   * @param int
+   * The ID of the creative status. See [creative-status-
+   * codes](https://developers.google.com/authorized-
+   * buyers/rtb/downloads/creative-status-codes).
+   *
+   * @param int $creativeStatusId
    */
   public function setCreativeStatusId($creativeStatusId)
   {
@@ -57,7 +67,9 @@ class CreativeStatusRow extends \Google\Model
     return $this->creativeStatusId;
   }
   /**
-   * @param RowDimensions
+   * The values of all dimensions associated with metric values in this row.
+   *
+   * @param RowDimensions $rowDimensions
    */
   public function setRowDimensions(RowDimensions $rowDimensions)
   {

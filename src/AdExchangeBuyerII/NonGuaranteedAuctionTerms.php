@@ -21,6 +21,9 @@ class NonGuaranteedAuctionTerms extends \Google\Collection
 {
   protected $collection_key = 'reservePricesPerBuyer';
   /**
+   * True if open auction buyers are allowed to compete with invited buyers in
+   * this private auction.
+   *
    * @var bool
    */
   public $autoOptimizePrivateAuction;
@@ -28,7 +31,10 @@ class NonGuaranteedAuctionTerms extends \Google\Collection
   protected $reservePricesPerBuyerDataType = 'array';
 
   /**
-   * @param bool
+   * True if open auction buyers are allowed to compete with invited buyers in
+   * this private auction.
+   *
+   * @param bool $autoOptimizePrivateAuction
    */
   public function setAutoOptimizePrivateAuction($autoOptimizePrivateAuction)
   {
@@ -42,7 +48,9 @@ class NonGuaranteedAuctionTerms extends \Google\Collection
     return $this->autoOptimizePrivateAuction;
   }
   /**
-   * @param PricePerBuyer[]
+   * Reserve price for the specified buyer.
+   *
+   * @param PricePerBuyer[] $reservePricesPerBuyer
    */
   public function setReservePricesPerBuyer($reservePricesPerBuyer)
   {

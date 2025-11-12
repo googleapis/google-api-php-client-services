@@ -19,94 +19,213 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class Creative extends \Google\Collection
 {
+  /**
+   * The status is unknown.
+   */
+  public const DEALS_STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The creative has not been checked.
+   */
+  public const DEALS_STATUS_NOT_CHECKED = 'NOT_CHECKED';
+  /**
+   * The creative has been conditionally approved. See serving_restrictions for
+   * details.
+   */
+  public const DEALS_STATUS_CONDITIONALLY_APPROVED = 'CONDITIONALLY_APPROVED';
+  /**
+   * The creative has been approved.
+   */
+  public const DEALS_STATUS_APPROVED = 'APPROVED';
+  /**
+   * The creative has been disapproved.
+   */
+  public const DEALS_STATUS_DISAPPROVED = 'DISAPPROVED';
+  /**
+   * Placeholder for transition to v1beta1. Currently not used.
+   */
+  public const DEALS_STATUS_PENDING_REVIEW = 'PENDING_REVIEW';
+  /**
+   * Placeholder for transition to v1beta1. Currently not used.
+   */
+  public const DEALS_STATUS_STATUS_TYPE_UNSPECIFIED = 'STATUS_TYPE_UNSPECIFIED';
+  /**
+   * The status is unknown.
+   */
+  public const OPEN_AUCTION_STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The creative has not been checked.
+   */
+  public const OPEN_AUCTION_STATUS_NOT_CHECKED = 'NOT_CHECKED';
+  /**
+   * The creative has been conditionally approved. See serving_restrictions for
+   * details.
+   */
+  public const OPEN_AUCTION_STATUS_CONDITIONALLY_APPROVED = 'CONDITIONALLY_APPROVED';
+  /**
+   * The creative has been approved.
+   */
+  public const OPEN_AUCTION_STATUS_APPROVED = 'APPROVED';
+  /**
+   * The creative has been disapproved.
+   */
+  public const OPEN_AUCTION_STATUS_DISAPPROVED = 'DISAPPROVED';
+  /**
+   * Placeholder for transition to v1beta1. Currently not used.
+   */
+  public const OPEN_AUCTION_STATUS_PENDING_REVIEW = 'PENDING_REVIEW';
+  /**
+   * Placeholder for transition to v1beta1. Currently not used.
+   */
+  public const OPEN_AUCTION_STATUS_STATUS_TYPE_UNSPECIFIED = 'STATUS_TYPE_UNSPECIFIED';
   protected $collection_key = 'vendorIds';
   /**
+   * The account that this creative belongs to. Can be used to filter the
+   * response of the creatives.list method.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * The link to AdChoices destination page.
+   *
    * @var string
    */
   public $adChoicesDestinationUrl;
   protected $adTechnologyProvidersType = AdTechnologyProviders::class;
   protected $adTechnologyProvidersDataType = '';
   /**
+   * The name of the company being advertised in the creative.
+   *
    * @var string
    */
   public $advertiserName;
   /**
+   * The agency ID for this creative.
+   *
    * @var string
    */
   public $agencyId;
   /**
+   * Output only. The last update timestamp of the creative through the API.
+   *
    * @var string
    */
   public $apiUpdateTime;
   /**
+   * All attributes for the ads that may be shown from this creative. Can be
+   * used to filter the response of the creatives.list method.
+   *
    * @var string[]
    */
   public $attributes;
   /**
+   * The set of destination URLs for the creative.
+   *
    * @var string[]
    */
   public $clickThroughUrls;
   protected $correctionsType = Correction::class;
   protected $correctionsDataType = 'array';
   /**
+   * The buyer-defined creative ID of this creative. Can be used to filter the
+   * response of the creatives.list method.
+   *
    * @var string
    */
   public $creativeId;
   /**
+   * Output only. The top-level deals status of this creative. If disapproved,
+   * an entry for 'auctionType=DIRECT_DEALS' (or 'ALL') in serving_restrictions
+   * will also exist. Note that this may be nuanced with other contextual
+   * restrictions, in which case, it may be preferable to read from
+   * serving_restrictions directly. Can be used to filter the response of the
+   * creatives.list method.
+   *
    * @var string
    */
   public $dealsStatus;
   /**
+   * The set of declared destination URLs for the creative.
+   *
    * @var string[]
    */
   public $declaredClickThroughUrls;
   /**
+   * Output only. Detected advertiser IDs, if any.
+   *
    * @var string[]
    */
   public $detectedAdvertiserIds;
   /**
+   * Output only. The detected domains for this creative.
+   *
    * @var string[]
    */
   public $detectedDomains;
   /**
+   * Output only. The detected languages for this creative. The order is
+   * arbitrary. The codes are 2 or 5 characters and are documented at
+   * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
+   *
    * @var string[]
    */
   public $detectedLanguages;
   /**
+   * Output only. Detected product categories, if any. See the ad-product-
+   * categories.txt file in the technical documentation for a list of IDs.
+   *
    * @var int[]
    */
   public $detectedProductCategories;
   /**
+   * Output only. Detected sensitive categories, if any. See the ad-sensitive-
+   * categories.txt file in the technical documentation for a list of IDs. You
+   * should use these IDs along with the excluded-sensitive-category field in
+   * the bid request to filter your bids.
+   *
    * @var int[]
    */
   public $detectedSensitiveCategories;
   protected $htmlType = HtmlContent::class;
   protected $htmlDataType = '';
   /**
+   * The set of URLs to be called to record an impression.
+   *
    * @var string[]
    */
   public $impressionTrackingUrls;
   protected $nativeType = NativeContent::class;
   protected $nativeDataType = '';
   /**
+   * Output only. The top-level open auction status of this creative. If
+   * disapproved, an entry for 'auctionType = OPEN_AUCTION' (or 'ALL') in
+   * serving_restrictions will also exist. Note that this may be nuanced with
+   * other contextual restrictions, in which case, it may be preferable to read
+   * from serving_restrictions directly. Can be used to filter the response of
+   * the creatives.list method.
+   *
    * @var string
    */
   public $openAuctionStatus;
   /**
+   * All restricted categories for the ads that may be shown from this creative.
+   *
    * @var string[]
    */
   public $restrictedCategories;
   protected $servingRestrictionsType = ServingRestriction::class;
   protected $servingRestrictionsDataType = 'array';
   /**
+   * All vendor IDs for the ads that may be shown from this creative. See
+   * https://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for
+   * possible values.
+   *
    * @var int[]
    */
   public $vendorIds;
   /**
+   * Output only. The version of this creative.
+   *
    * @var int
    */
   public $version;
@@ -114,7 +233,10 @@ class Creative extends \Google\Collection
   protected $videoDataType = '';
 
   /**
-   * @param string
+   * The account that this creative belongs to. Can be used to filter the
+   * response of the creatives.list method.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -128,7 +250,9 @@ class Creative extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param string
+   * The link to AdChoices destination page.
+   *
+   * @param string $adChoicesDestinationUrl
    */
   public function setAdChoicesDestinationUrl($adChoicesDestinationUrl)
   {
@@ -142,7 +266,9 @@ class Creative extends \Google\Collection
     return $this->adChoicesDestinationUrl;
   }
   /**
-   * @param AdTechnologyProviders
+   * Output only. The detected ad technology providers.
+   *
+   * @param AdTechnologyProviders $adTechnologyProviders
    */
   public function setAdTechnologyProviders(AdTechnologyProviders $adTechnologyProviders)
   {
@@ -156,7 +282,9 @@ class Creative extends \Google\Collection
     return $this->adTechnologyProviders;
   }
   /**
-   * @param string
+   * The name of the company being advertised in the creative.
+   *
+   * @param string $advertiserName
    */
   public function setAdvertiserName($advertiserName)
   {
@@ -170,7 +298,9 @@ class Creative extends \Google\Collection
     return $this->advertiserName;
   }
   /**
-   * @param string
+   * The agency ID for this creative.
+   *
+   * @param string $agencyId
    */
   public function setAgencyId($agencyId)
   {
@@ -184,7 +314,9 @@ class Creative extends \Google\Collection
     return $this->agencyId;
   }
   /**
-   * @param string
+   * Output only. The last update timestamp of the creative through the API.
+   *
+   * @param string $apiUpdateTime
    */
   public function setApiUpdateTime($apiUpdateTime)
   {
@@ -198,7 +330,10 @@ class Creative extends \Google\Collection
     return $this->apiUpdateTime;
   }
   /**
-   * @param string[]
+   * All attributes for the ads that may be shown from this creative. Can be
+   * used to filter the response of the creatives.list method.
+   *
+   * @param string[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -212,7 +347,9 @@ class Creative extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string[]
+   * The set of destination URLs for the creative.
+   *
+   * @param string[] $clickThroughUrls
    */
   public function setClickThroughUrls($clickThroughUrls)
   {
@@ -226,13 +363,17 @@ class Creative extends \Google\Collection
     return $this->clickThroughUrls;
   }
   /**
-   * @param Correction[]
+   * Output only. Shows any corrections that were applied to this creative.
+   *
+   * @deprecated
+   * @param Correction[] $corrections
    */
   public function setCorrections($corrections)
   {
     $this->corrections = $corrections;
   }
   /**
+   * @deprecated
    * @return Correction[]
    */
   public function getCorrections()
@@ -240,7 +381,10 @@ class Creative extends \Google\Collection
     return $this->corrections;
   }
   /**
-   * @param string
+   * The buyer-defined creative ID of this creative. Can be used to filter the
+   * response of the creatives.list method.
+   *
+   * @param string $creativeId
    */
   public function setCreativeId($creativeId)
   {
@@ -254,21 +398,33 @@ class Creative extends \Google\Collection
     return $this->creativeId;
   }
   /**
-   * @param string
+   * Output only. The top-level deals status of this creative. If disapproved,
+   * an entry for 'auctionType=DIRECT_DEALS' (or 'ALL') in serving_restrictions
+   * will also exist. Note that this may be nuanced with other contextual
+   * restrictions, in which case, it may be preferable to read from
+   * serving_restrictions directly. Can be used to filter the response of the
+   * creatives.list method.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, NOT_CHECKED, CONDITIONALLY_APPROVED,
+   * APPROVED, DISAPPROVED, PENDING_REVIEW, STATUS_TYPE_UNSPECIFIED
+   *
+   * @param self::DEALS_STATUS_* $dealsStatus
    */
   public function setDealsStatus($dealsStatus)
   {
     $this->dealsStatus = $dealsStatus;
   }
   /**
-   * @return string
+   * @return self::DEALS_STATUS_*
    */
   public function getDealsStatus()
   {
     return $this->dealsStatus;
   }
   /**
-   * @param string[]
+   * The set of declared destination URLs for the creative.
+   *
+   * @param string[] $declaredClickThroughUrls
    */
   public function setDeclaredClickThroughUrls($declaredClickThroughUrls)
   {
@@ -282,7 +438,9 @@ class Creative extends \Google\Collection
     return $this->declaredClickThroughUrls;
   }
   /**
-   * @param string[]
+   * Output only. Detected advertiser IDs, if any.
+   *
+   * @param string[] $detectedAdvertiserIds
    */
   public function setDetectedAdvertiserIds($detectedAdvertiserIds)
   {
@@ -296,7 +454,9 @@ class Creative extends \Google\Collection
     return $this->detectedAdvertiserIds;
   }
   /**
-   * @param string[]
+   * Output only. The detected domains for this creative.
+   *
+   * @param string[] $detectedDomains
    */
   public function setDetectedDomains($detectedDomains)
   {
@@ -310,7 +470,11 @@ class Creative extends \Google\Collection
     return $this->detectedDomains;
   }
   /**
-   * @param string[]
+   * Output only. The detected languages for this creative. The order is
+   * arbitrary. The codes are 2 or 5 characters and are documented at
+   * https://developers.google.com/adwords/api/docs/appendix/languagecodes.
+   *
+   * @param string[] $detectedLanguages
    */
   public function setDetectedLanguages($detectedLanguages)
   {
@@ -324,7 +488,10 @@ class Creative extends \Google\Collection
     return $this->detectedLanguages;
   }
   /**
-   * @param int[]
+   * Output only. Detected product categories, if any. See the ad-product-
+   * categories.txt file in the technical documentation for a list of IDs.
+   *
+   * @param int[] $detectedProductCategories
    */
   public function setDetectedProductCategories($detectedProductCategories)
   {
@@ -338,7 +505,12 @@ class Creative extends \Google\Collection
     return $this->detectedProductCategories;
   }
   /**
-   * @param int[]
+   * Output only. Detected sensitive categories, if any. See the ad-sensitive-
+   * categories.txt file in the technical documentation for a list of IDs. You
+   * should use these IDs along with the excluded-sensitive-category field in
+   * the bid request to filter your bids.
+   *
+   * @param int[] $detectedSensitiveCategories
    */
   public function setDetectedSensitiveCategories($detectedSensitiveCategories)
   {
@@ -352,7 +524,9 @@ class Creative extends \Google\Collection
     return $this->detectedSensitiveCategories;
   }
   /**
-   * @param HtmlContent
+   * An HTML creative.
+   *
+   * @param HtmlContent $html
    */
   public function setHtml(HtmlContent $html)
   {
@@ -366,7 +540,9 @@ class Creative extends \Google\Collection
     return $this->html;
   }
   /**
-   * @param string[]
+   * The set of URLs to be called to record an impression.
+   *
+   * @param string[] $impressionTrackingUrls
    */
   public function setImpressionTrackingUrls($impressionTrackingUrls)
   {
@@ -380,7 +556,9 @@ class Creative extends \Google\Collection
     return $this->impressionTrackingUrls;
   }
   /**
-   * @param NativeContent
+   * A native creative.
+   *
+   * @param NativeContent $native
    */
   public function setNative(NativeContent $native)
   {
@@ -394,21 +572,33 @@ class Creative extends \Google\Collection
     return $this->native;
   }
   /**
-   * @param string
+   * Output only. The top-level open auction status of this creative. If
+   * disapproved, an entry for 'auctionType = OPEN_AUCTION' (or 'ALL') in
+   * serving_restrictions will also exist. Note that this may be nuanced with
+   * other contextual restrictions, in which case, it may be preferable to read
+   * from serving_restrictions directly. Can be used to filter the response of
+   * the creatives.list method.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, NOT_CHECKED, CONDITIONALLY_APPROVED,
+   * APPROVED, DISAPPROVED, PENDING_REVIEW, STATUS_TYPE_UNSPECIFIED
+   *
+   * @param self::OPEN_AUCTION_STATUS_* $openAuctionStatus
    */
   public function setOpenAuctionStatus($openAuctionStatus)
   {
     $this->openAuctionStatus = $openAuctionStatus;
   }
   /**
-   * @return string
+   * @return self::OPEN_AUCTION_STATUS_*
    */
   public function getOpenAuctionStatus()
   {
     return $this->openAuctionStatus;
   }
   /**
-   * @param string[]
+   * All restricted categories for the ads that may be shown from this creative.
+   *
+   * @param string[] $restrictedCategories
    */
   public function setRestrictedCategories($restrictedCategories)
   {
@@ -422,7 +612,12 @@ class Creative extends \Google\Collection
     return $this->restrictedCategories;
   }
   /**
-   * @param ServingRestriction[]
+   * Output only. The granular status of this ad in specific contexts. A context
+   * here relates to where something ultimately serves (for example, a physical
+   * location, a platform, an HTTPS versus HTTP request, or the type of
+   * auction).
+   *
+   * @param ServingRestriction[] $servingRestrictions
    */
   public function setServingRestrictions($servingRestrictions)
   {
@@ -436,7 +631,11 @@ class Creative extends \Google\Collection
     return $this->servingRestrictions;
   }
   /**
-   * @param int[]
+   * All vendor IDs for the ads that may be shown from this creative. See
+   * https://storage.googleapis.com/adx-rtb-dictionaries/vendors.txt for
+   * possible values.
+   *
+   * @param int[] $vendorIds
    */
   public function setVendorIds($vendorIds)
   {
@@ -450,7 +649,9 @@ class Creative extends \Google\Collection
     return $this->vendorIds;
   }
   /**
-   * @param int
+   * Output only. The version of this creative.
+   *
+   * @param int $version
    */
   public function setVersion($version)
   {
@@ -464,7 +665,9 @@ class Creative extends \Google\Collection
     return $this->version;
   }
   /**
-   * @param VideoContent
+   * A video creative.
+   *
+   * @param VideoContent $video
    */
   public function setVideo(VideoContent $video)
   {

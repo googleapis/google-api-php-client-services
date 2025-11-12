@@ -20,16 +20,25 @@ namespace Google\Service\AdExchangeBuyerII;
 class RelativeDateRange extends \Google\Model
 {
   /**
+   * The number of days in the requested date range, for example, for a range
+   * spanning today: 1. For a range spanning the last 7 days: 7.
+   *
    * @var int
    */
   public $durationDays;
   /**
+   * The end date of the filter set, specified as the number of days before
+   * today, for example, for a range where the last date is today: 0.
+   *
    * @var int
    */
   public $offsetDays;
 
   /**
-   * @param int
+   * The number of days in the requested date range, for example, for a range
+   * spanning today: 1. For a range spanning the last 7 days: 7.
+   *
+   * @param int $durationDays
    */
   public function setDurationDays($durationDays)
   {
@@ -43,7 +52,10 @@ class RelativeDateRange extends \Google\Model
     return $this->durationDays;
   }
   /**
-   * @param int
+   * The end date of the filter set, specified as the number of days before
+   * today, for example, for a range where the last date is today: 0.
+   *
+   * @param int $offsetDays
    */
   public function setOffsetDays($offsetDays)
   {

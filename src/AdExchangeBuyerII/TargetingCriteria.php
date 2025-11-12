@@ -25,12 +25,19 @@ class TargetingCriteria extends \Google\Collection
   protected $inclusionsType = TargetingValue::class;
   protected $inclusionsDataType = 'array';
   /**
+   * The key representing the shared targeting criterion. Targeting criteria
+   * defined by Google ad servers will begin with GOOG_. Third parties may
+   * define their own keys. A list of permissible keys along with the acceptable
+   * values will be provided as part of the external documentation.
+   *
    * @var string
    */
   public $key;
 
   /**
-   * @param TargetingValue[]
+   * The list of values to exclude from targeting. Each value is AND'd together.
+   *
+   * @param TargetingValue[] $exclusions
    */
   public function setExclusions($exclusions)
   {
@@ -44,7 +51,10 @@ class TargetingCriteria extends \Google\Collection
     return $this->exclusions;
   }
   /**
-   * @param TargetingValue[]
+   * The list of value to include as part of the targeting. Each value is OR'd
+   * together.
+   *
+   * @param TargetingValue[] $inclusions
    */
   public function setInclusions($inclusions)
   {
@@ -58,7 +68,12 @@ class TargetingCriteria extends \Google\Collection
     return $this->inclusions;
   }
   /**
-   * @param string
+   * The key representing the shared targeting criterion. Targeting criteria
+   * defined by Google ad servers will begin with GOOG_. Third parties may
+   * define their own keys. A list of permissible keys along with the acceptable
+   * values will be provided as part of the external documentation.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {

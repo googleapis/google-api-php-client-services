@@ -23,12 +23,18 @@ class ListBidMetricsResponse extends \Google\Collection
   protected $bidMetricsRowsType = BidMetricsRow::class;
   protected $bidMetricsRowsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListBidMetricsRequest.pageToken field in the subsequent call to the
+   * bidMetrics.list method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param BidMetricsRow[]
+   * List of rows, each containing a set of bid metrics.
+   *
+   * @param BidMetricsRow[] $bidMetricsRows
    */
   public function setBidMetricsRows($bidMetricsRows)
   {
@@ -42,7 +48,11 @@ class ListBidMetricsResponse extends \Google\Collection
     return $this->bidMetricsRows;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListBidMetricsRequest.pageToken field in the subsequent call to the
+   * bidMetrics.list method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

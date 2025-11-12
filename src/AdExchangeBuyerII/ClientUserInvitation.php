@@ -20,20 +20,32 @@ namespace Google\Service\AdExchangeBuyerII;
 class ClientUserInvitation extends \Google\Model
 {
   /**
+   * Numerical account ID of the client buyer that the invited user is
+   * associated with. The value of this field is ignored in create operations.
+   *
    * @var string
    */
   public $clientAccountId;
   /**
+   * The email address to which the invitation is sent. Email addresses should
+   * be unique among all client users under each sponsor buyer.
+   *
    * @var string
    */
   public $email;
   /**
+   * The unique numerical ID of the invitation that is sent to the user. The
+   * value of this field is ignored in create operations.
+   *
    * @var string
    */
   public $invitationId;
 
   /**
-   * @param string
+   * Numerical account ID of the client buyer that the invited user is
+   * associated with. The value of this field is ignored in create operations.
+   *
+   * @param string $clientAccountId
    */
   public function setClientAccountId($clientAccountId)
   {
@@ -47,7 +59,10 @@ class ClientUserInvitation extends \Google\Model
     return $this->clientAccountId;
   }
   /**
-   * @param string
+   * The email address to which the invitation is sent. Email addresses should
+   * be unique among all client users under each sponsor buyer.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -61,7 +76,10 @@ class ClientUserInvitation extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The unique numerical ID of the invitation that is sent to the user. The
+   * value of this field is ignored in create operations.
+   *
+   * @param string $invitationId
    */
   public function setInvitationId($invitationId)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\AdExchangeBuyerII;
 class TimeInterval extends \Google\Model
 {
   /**
+   * The timestamp marking the end of the range (exclusive) for which data is
+   * included.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The timestamp marking the start of the range (inclusive) for which data is
+   * included.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The timestamp marking the end of the range (exclusive) for which data is
+   * included.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +52,10 @@ class TimeInterval extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The timestamp marking the start of the range (inclusive) for which data is
+   * included.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

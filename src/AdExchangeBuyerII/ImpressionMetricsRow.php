@@ -33,7 +33,10 @@ class ImpressionMetricsRow extends \Google\Model
   protected $successfulResponsesDataType = '';
 
   /**
-   * @param MetricValue
+   * The number of impressions available to the buyer on Ad Exchange. In some
+   * cases this value may be unavailable.
+   *
+   * @param MetricValue $availableImpressions
    */
   public function setAvailableImpressions(MetricValue $availableImpressions)
   {
@@ -47,7 +50,10 @@ class ImpressionMetricsRow extends \Google\Model
     return $this->availableImpressions;
   }
   /**
-   * @param MetricValue
+   * The number of impressions for which Ad Exchange sent the buyer a bid
+   * request.
+   *
+   * @param MetricValue $bidRequests
    */
   public function setBidRequests(MetricValue $bidRequests)
   {
@@ -61,7 +67,9 @@ class ImpressionMetricsRow extends \Google\Model
     return $this->bidRequests;
   }
   /**
-   * @param MetricValue
+   * The number of impressions that match the buyer's inventory pretargeting.
+   *
+   * @param MetricValue $inventoryMatches
    */
   public function setInventoryMatches(MetricValue $inventoryMatches)
   {
@@ -75,7 +83,10 @@ class ImpressionMetricsRow extends \Google\Model
     return $this->inventoryMatches;
   }
   /**
-   * @param MetricValue
+   * The number of impressions for which Ad Exchange received a response from
+   * the buyer that contained at least one applicable bid.
+   *
+   * @param MetricValue $responsesWithBids
    */
   public function setResponsesWithBids(MetricValue $responsesWithBids)
   {
@@ -89,7 +100,9 @@ class ImpressionMetricsRow extends \Google\Model
     return $this->responsesWithBids;
   }
   /**
-   * @param RowDimensions
+   * The values of all dimensions associated with metric values in this row.
+   *
+   * @param RowDimensions $rowDimensions
    */
   public function setRowDimensions(RowDimensions $rowDimensions)
   {
@@ -103,7 +116,10 @@ class ImpressionMetricsRow extends \Google\Model
     return $this->rowDimensions;
   }
   /**
-   * @param MetricValue
+   * The number of impressions for which the buyer successfully sent a response
+   * to Ad Exchange.
+   *
+   * @param MetricValue $successfulResponses
    */
   public function setSuccessfulResponses(MetricValue $successfulResponses)
   {

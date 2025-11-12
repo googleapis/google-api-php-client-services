@@ -23,12 +23,19 @@ class ListLosingBidsResponse extends \Google\Collection
   protected $creativeStatusRowsType = CreativeStatusRow::class;
   protected $creativeStatusRowsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListLosingBidsRequest.pageToken field in the subsequent call to the
+   * losingBids.list method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CreativeStatusRow[]
+   * List of rows, with counts of losing bids aggregated by loss reason (for
+   * example, creative status).
+   *
+   * @param CreativeStatusRow[] $creativeStatusRows
    */
   public function setCreativeStatusRows($creativeStatusRows)
   {
@@ -42,7 +49,11 @@ class ListLosingBidsResponse extends \Google\Collection
     return $this->creativeStatusRows;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListLosingBidsRequest.pageToken field in the subsequent call to the
+   * losingBids.list method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

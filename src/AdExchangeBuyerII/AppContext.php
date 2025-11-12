@@ -21,12 +21,16 @@ class AppContext extends \Google\Collection
 {
   protected $collection_key = 'appTypes';
   /**
+   * The app types this restriction applies to.
+   *
    * @var string[]
    */
   public $appTypes;
 
   /**
-   * @param string[]
+   * The app types this restriction applies to.
+   *
+   * @param string[] $appTypes
    */
   public function setAppTypes($appTypes)
   {

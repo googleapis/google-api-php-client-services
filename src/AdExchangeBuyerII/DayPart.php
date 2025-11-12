@@ -20,6 +20,40 @@ namespace Google\Service\AdExchangeBuyerII;
 class DayPart extends \Google\Model
 {
   /**
+   * A placeholder for when the day of the week is not specified.
+   */
+  public const DAY_OF_WEEK_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_OF_WEEK_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_OF_WEEK_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_OF_WEEK_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_OF_WEEK_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_OF_WEEK_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_OF_WEEK_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_OF_WEEK_SUNDAY = 'SUNDAY';
+  /**
+   * The day of the week to target. If unspecified, applicable to all days.
+   *
    * @var string
    */
   public $dayOfWeek;
@@ -29,21 +63,30 @@ class DayPart extends \Google\Model
   protected $startTimeDataType = '';
 
   /**
-   * @param string
+   * The day of the week to target. If unspecified, applicable to all days.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_OF_WEEK_* $dayOfWeek
    */
   public function setDayOfWeek($dayOfWeek)
   {
     $this->dayOfWeek = $dayOfWeek;
   }
   /**
-   * @return string
+   * @return self::DAY_OF_WEEK_*
    */
   public function getDayOfWeek()
   {
     return $this->dayOfWeek;
   }
   /**
-   * @param TimeOfDay
+   * The ending time of the day for the ad to show (minute level granularity).
+   * The end time is exclusive. This field is not available for filtering in PQL
+   * queries.
+   *
+   * @param TimeOfDay $endTime
    */
   public function setEndTime(TimeOfDay $endTime)
   {
@@ -57,7 +100,11 @@ class DayPart extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param TimeOfDay
+   * The starting time of day for the ad to show (minute level granularity). The
+   * start time is inclusive. This field is not available for filtering in PQL
+   * queries.
+   *
+   * @param TimeOfDay $startTime
    */
   public function setStartTime(TimeOfDay $startTime)
   {

@@ -19,6 +19,18 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class ServingRestriction extends \Google\Collection
 {
+  /**
+   * The status is not known.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The ad was disapproved in this context.
+   */
+  public const STATUS_DISAPPROVAL = 'DISAPPROVAL';
+  /**
+   * The ad is pending review in this context.
+   */
+  public const STATUS_PENDING_REVIEW = 'PENDING_REVIEW';
   protected $collection_key = 'disapprovalReasons';
   protected $contextsType = ServingContext::class;
   protected $contextsDataType = 'array';
@@ -27,12 +39,17 @@ class ServingRestriction extends \Google\Collection
   protected $disapprovalReasonsType = Disapproval::class;
   protected $disapprovalReasonsDataType = 'array';
   /**
+   * The status of the creative in this context (for example, it has been
+   * explicitly disapproved or is pending review).
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param ServingContext[]
+   * The contexts for the restriction.
+   *
+   * @param ServingContext[] $contexts
    */
   public function setContexts($contexts)
   {
@@ -46,7 +63,10 @@ class ServingRestriction extends \Google\Collection
     return $this->contexts;
   }
   /**
-   * @param Disapproval
+   * Disapproval bound to this restriction. Only present if status=DISAPPROVED.
+   * Can be used to filter the response of the creatives.list method.
+   *
+   * @param Disapproval $disapproval
    */
   public function setDisapproval(Disapproval $disapproval)
   {
@@ -60,13 +80,19 @@ class ServingRestriction extends \Google\Collection
     return $this->disapproval;
   }
   /**
-   * @param Disapproval[]
+   * Any disapprovals bound to this restriction. Only present if
+   * status=DISAPPROVED. Can be used to filter the response of the
+   * creatives.list method. Deprecated; use disapproval field instead.
+   *
+   * @deprecated
+   * @param Disapproval[] $disapprovalReasons
    */
   public function setDisapprovalReasons($disapprovalReasons)
   {
     $this->disapprovalReasons = $disapprovalReasons;
   }
   /**
+   * @deprecated
    * @return Disapproval[]
    */
   public function getDisapprovalReasons()
@@ -74,14 +100,19 @@ class ServingRestriction extends \Google\Collection
     return $this->disapprovalReasons;
   }
   /**
-   * @param string
+   * The status of the creative in this context (for example, it has been
+   * explicitly disapproved or is pending review).
+   *
+   * Accepted values: STATUS_UNSPECIFIED, DISAPPROVAL, PENDING_REVIEW
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

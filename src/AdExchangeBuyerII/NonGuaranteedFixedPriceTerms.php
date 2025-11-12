@@ -24,7 +24,9 @@ class NonGuaranteedFixedPriceTerms extends \Google\Collection
   protected $fixedPricesDataType = 'array';
 
   /**
-   * @param PricePerBuyer[]
+   * Fixed price for the specified buyer.
+   *
+   * @param PricePerBuyer[] $fixedPrices
    */
   public function setFixedPrices($fixedPrices)
   {

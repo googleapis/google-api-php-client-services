@@ -20,20 +20,28 @@ namespace Google\Service\AdExchangeBuyerII;
 class Image extends \Google\Model
 {
   /**
+   * Image height in pixels.
+   *
    * @var int
    */
   public $height;
   /**
+   * The URL of the image.
+   *
    * @var string
    */
   public $url;
   /**
+   * Image width in pixels.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * Image height in pixels.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -47,7 +55,9 @@ class Image extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * The URL of the image.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {
@@ -61,7 +71,9 @@ class Image extends \Google\Model
     return $this->url;
   }
   /**
-   * @param int
+   * Image width in pixels.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

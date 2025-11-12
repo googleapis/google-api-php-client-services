@@ -23,12 +23,18 @@ class ListImpressionMetricsResponse extends \Google\Collection
   protected $impressionMetricsRowsType = ImpressionMetricsRow::class;
   protected $impressionMetricsRowsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListImpressionMetricsRequest.pageToken field in the subsequent call to the
+   * impressionMetrics.list method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ImpressionMetricsRow[]
+   * List of rows, each containing a set of impression metrics.
+   *
+   * @param ImpressionMetricsRow[] $impressionMetricsRows
    */
   public function setImpressionMetricsRows($impressionMetricsRows)
   {
@@ -42,7 +48,11 @@ class ListImpressionMetricsResponse extends \Google\Collection
     return $this->impressionMetricsRows;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListImpressionMetricsRequest.pageToken field in the subsequent call to the
+   * impressionMetrics.list method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

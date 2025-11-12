@@ -22,10 +22,21 @@ class FilteredBidDetailRow extends \Google\Model
   protected $bidCountType = MetricValue::class;
   protected $bidCountDataType = '';
   /**
+   * The ID of the detail, can be numeric or text. The associated value can be
+   * looked up in the dictionary file corresponding to the DetailType in the
+   * response message.
+   *
    * @var string
    */
   public $detail;
   /**
+   * Note: this field will be deprecated, use "detail" field instead. When
+   * "detail" field represents an integer value, this field is populated as the
+   * same integer value "detail" field represents, otherwise this field will be
+   * 0. The ID of the detail. The associated value can be looked up in the
+   * dictionary file corresponding to the DetailType in the response message.
+   *
+   * @deprecated
    * @var int
    */
   public $detailId;
@@ -33,7 +44,9 @@ class FilteredBidDetailRow extends \Google\Model
   protected $rowDimensionsDataType = '';
 
   /**
-   * @param MetricValue
+   * The number of bids with the specified detail.
+   *
+   * @param MetricValue $bidCount
    */
   public function setBidCount(MetricValue $bidCount)
   {
@@ -47,7 +60,11 @@ class FilteredBidDetailRow extends \Google\Model
     return $this->bidCount;
   }
   /**
-   * @param string
+   * The ID of the detail, can be numeric or text. The associated value can be
+   * looked up in the dictionary file corresponding to the DetailType in the
+   * response message.
+   *
+   * @param string $detail
    */
   public function setDetail($detail)
   {
@@ -61,13 +78,21 @@ class FilteredBidDetailRow extends \Google\Model
     return $this->detail;
   }
   /**
-   * @param int
+   * Note: this field will be deprecated, use "detail" field instead. When
+   * "detail" field represents an integer value, this field is populated as the
+   * same integer value "detail" field represents, otherwise this field will be
+   * 0. The ID of the detail. The associated value can be looked up in the
+   * dictionary file corresponding to the DetailType in the response message.
+   *
+   * @deprecated
+   * @param int $detailId
    */
   public function setDetailId($detailId)
   {
     $this->detailId = $detailId;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getDetailId()
@@ -75,7 +100,9 @@ class FilteredBidDetailRow extends \Google\Model
     return $this->detailId;
   }
   /**
-   * @param RowDimensions
+   * The values of all dimensions associated with metric values in this row.
+   *
+   * @param RowDimensions $rowDimensions
    */
   public function setRowDimensions(RowDimensions $rowDimensions)
   {

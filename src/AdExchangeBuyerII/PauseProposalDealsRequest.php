@@ -21,16 +21,25 @@ class PauseProposalDealsRequest extends \Google\Collection
 {
   protected $collection_key = 'externalDealIds';
   /**
+   * The external_deal_id's of the deals to be paused. If empty, all the deals
+   * in the proposal will be paused.
+   *
    * @var string[]
    */
   public $externalDealIds;
   /**
+   * The reason why the deals are being paused. This human readable message will
+   * be displayed in the seller's UI. (Max length: 1000 unicode code units.)
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string[]
+   * The external_deal_id's of the deals to be paused. If empty, all the deals
+   * in the proposal will be paused.
+   *
+   * @param string[] $externalDealIds
    */
   public function setExternalDealIds($externalDealIds)
   {
@@ -44,7 +53,10 @@ class PauseProposalDealsRequest extends \Google\Collection
     return $this->externalDealIds;
   }
   /**
-   * @param string
+   * The reason why the deals are being paused. This human readable message will
+   * be displayed in the seller's UI. (Max length: 1000 unicode code units.)
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

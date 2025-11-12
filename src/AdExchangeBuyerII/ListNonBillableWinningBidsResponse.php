@@ -21,6 +21,11 @@ class ListNonBillableWinningBidsResponse extends \Google\Collection
 {
   protected $collection_key = 'nonBillableWinningBidStatusRows';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListNonBillableWinningBidsRequest.pageToken field in the subsequent call to
+   * the nonBillableWinningBids.list method to retrieve the next page of
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +33,12 @@ class ListNonBillableWinningBidsResponse extends \Google\Collection
   protected $nonBillableWinningBidStatusRowsDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListNonBillableWinningBidsRequest.pageToken field in the subsequent call to
+   * the nonBillableWinningBids.list method to retrieve the next page of
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +52,9 @@ class ListNonBillableWinningBidsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param NonBillableWinningBidStatusRow[]
+   * List of rows, with counts of bids not billed aggregated by reason.
+   *
+   * @param NonBillableWinningBidStatusRow[] $nonBillableWinningBidStatusRows
    */
   public function setNonBillableWinningBidStatusRows($nonBillableWinningBidStatusRows)
   {

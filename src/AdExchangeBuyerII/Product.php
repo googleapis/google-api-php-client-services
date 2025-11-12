@@ -19,44 +19,89 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class Product extends \Google\Collection
 {
+  /**
+   * A placeholder for an undefined syndication product.
+   */
+  public const SYNDICATION_PRODUCT_SYNDICATION_PRODUCT_UNSPECIFIED = 'SYNDICATION_PRODUCT_UNSPECIFIED';
+  /**
+   * This typically represents a web page.
+   */
+  public const SYNDICATION_PRODUCT_CONTENT = 'CONTENT';
+  /**
+   * This represents a mobile property.
+   */
+  public const SYNDICATION_PRODUCT_MOBILE = 'MOBILE';
+  /**
+   * This represents video ad formats.
+   */
+  public const SYNDICATION_PRODUCT_VIDEO = 'VIDEO';
+  /**
+   * This represents ads shown within games.
+   */
+  public const SYNDICATION_PRODUCT_GAMES = 'GAMES';
   protected $collection_key = 'targetingCriterion';
   /**
+   * The proposed end time for the deal. The field will be truncated to the
+   * order of seconds during serving.
+   *
    * @var string
    */
   public $availableEndTime;
   /**
+   * Inventory availability dates. The start time will be truncated to seconds
+   * during serving. Thus, a field specified as 3:23:34.456 (HH:mm:ss.SSS) will
+   * be truncated to 3:23:34 when serving.
+   *
    * @var string
    */
   public $availableStartTime;
   /**
+   * Creation time.
+   *
    * @var string
    */
   public $createTime;
   protected $creatorContactsType = ContactInformation::class;
   protected $creatorContactsDataType = 'array';
   /**
+   * The display name for this product as set by the seller.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * If the creator has already signed off on the product, then the buyer can
+   * finalize the deal by accepting the product as is. When copying to a
+   * proposal, if any of the terms are changed, then auto_finalize is
+   * automatically set to false.
+   *
    * @var bool
    */
   public $hasCreatorSignedOff;
   /**
+   * The unique ID for the product.
+   *
    * @var string
    */
   public $productId;
   /**
+   * The revision number of the product (auto-assigned by Marketplace).
+   *
    * @var string
    */
   public $productRevision;
   /**
+   * An ID which can be used by the Publisher Profile API to get more
+   * information about the seller that created this product.
+   *
    * @var string
    */
   public $publisherProfileId;
   protected $sellerType = Seller::class;
   protected $sellerDataType = '';
   /**
+   * The syndication product associated with the deal.
+   *
    * @var string
    */
   public $syndicationProduct;
@@ -65,16 +110,24 @@ class Product extends \Google\Collection
   protected $termsType = DealTerms::class;
   protected $termsDataType = '';
   /**
+   * Time of last update.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * The web-property code for the seller. This needs to be copied as is when
+   * adding a new deal to a proposal.
+   *
    * @var string
    */
   public $webPropertyCode;
 
   /**
-   * @param string
+   * The proposed end time for the deal. The field will be truncated to the
+   * order of seconds during serving.
+   *
+   * @param string $availableEndTime
    */
   public function setAvailableEndTime($availableEndTime)
   {
@@ -88,7 +141,11 @@ class Product extends \Google\Collection
     return $this->availableEndTime;
   }
   /**
-   * @param string
+   * Inventory availability dates. The start time will be truncated to seconds
+   * during serving. Thus, a field specified as 3:23:34.456 (HH:mm:ss.SSS) will
+   * be truncated to 3:23:34 when serving.
+   *
+   * @param string $availableStartTime
    */
   public function setAvailableStartTime($availableStartTime)
   {
@@ -102,7 +159,9 @@ class Product extends \Google\Collection
     return $this->availableStartTime;
   }
   /**
-   * @param string
+   * Creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -116,7 +175,9 @@ class Product extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param ContactInformation[]
+   * Optional contact information for the creator of this product.
+   *
+   * @param ContactInformation[] $creatorContacts
    */
   public function setCreatorContacts($creatorContacts)
   {
@@ -130,7 +191,9 @@ class Product extends \Google\Collection
     return $this->creatorContacts;
   }
   /**
-   * @param string
+   * The display name for this product as set by the seller.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -144,7 +207,12 @@ class Product extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * If the creator has already signed off on the product, then the buyer can
+   * finalize the deal by accepting the product as is. When copying to a
+   * proposal, if any of the terms are changed, then auto_finalize is
+   * automatically set to false.
+   *
+   * @param bool $hasCreatorSignedOff
    */
   public function setHasCreatorSignedOff($hasCreatorSignedOff)
   {
@@ -158,7 +226,9 @@ class Product extends \Google\Collection
     return $this->hasCreatorSignedOff;
   }
   /**
-   * @param string
+   * The unique ID for the product.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -172,7 +242,9 @@ class Product extends \Google\Collection
     return $this->productId;
   }
   /**
-   * @param string
+   * The revision number of the product (auto-assigned by Marketplace).
+   *
+   * @param string $productRevision
    */
   public function setProductRevision($productRevision)
   {
@@ -186,7 +258,10 @@ class Product extends \Google\Collection
     return $this->productRevision;
   }
   /**
-   * @param string
+   * An ID which can be used by the Publisher Profile API to get more
+   * information about the seller that created this product.
+   *
+   * @param string $publisherProfileId
    */
   public function setPublisherProfileId($publisherProfileId)
   {
@@ -200,7 +275,9 @@ class Product extends \Google\Collection
     return $this->publisherProfileId;
   }
   /**
-   * @param Seller
+   * Information about the seller that created this product.
+   *
+   * @param Seller $seller
    */
   public function setSeller(Seller $seller)
   {
@@ -214,21 +291,30 @@ class Product extends \Google\Collection
     return $this->seller;
   }
   /**
-   * @param string
+   * The syndication product associated with the deal.
+   *
+   * Accepted values: SYNDICATION_PRODUCT_UNSPECIFIED, CONTENT, MOBILE, VIDEO,
+   * GAMES
+   *
+   * @param self::SYNDICATION_PRODUCT_* $syndicationProduct
    */
   public function setSyndicationProduct($syndicationProduct)
   {
     $this->syndicationProduct = $syndicationProduct;
   }
   /**
-   * @return string
+   * @return self::SYNDICATION_PRODUCT_*
    */
   public function getSyndicationProduct()
   {
     return $this->syndicationProduct;
   }
   /**
-   * @param TargetingCriteria[]
+   * Targeting that is shared between the buyer and the seller. Each targeting
+   * criterion has a specified key and for each key there is a list of inclusion
+   * value or exclusion values.
+   *
+   * @param TargetingCriteria[] $targetingCriterion
    */
   public function setTargetingCriterion($targetingCriterion)
   {
@@ -242,7 +328,9 @@ class Product extends \Google\Collection
     return $this->targetingCriterion;
   }
   /**
-   * @param DealTerms
+   * The negotiable terms of the deal.
+   *
+   * @param DealTerms $terms
    */
   public function setTerms(DealTerms $terms)
   {
@@ -256,7 +344,9 @@ class Product extends \Google\Collection
     return $this->terms;
   }
   /**
-   * @param string
+   * Time of last update.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -270,7 +360,10 @@ class Product extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param string
+   * The web-property code for the seller. This needs to be copied as is when
+   * adding a new deal to a proposal.
+   *
+   * @param string $webPropertyCode
    */
   public function setWebPropertyCode($webPropertyCode)
   {

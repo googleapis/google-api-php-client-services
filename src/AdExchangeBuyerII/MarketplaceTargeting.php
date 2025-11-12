@@ -31,7 +31,9 @@ class MarketplaceTargeting extends \Google\Model
   protected $videoTargetingDataType = '';
 
   /**
-   * @param CriteriaTargeting
+   * Geo criteria IDs to be included/excluded.
+   *
+   * @param CriteriaTargeting $geoTargeting
    */
   public function setGeoTargeting(CriteriaTargeting $geoTargeting)
   {
@@ -45,7 +47,9 @@ class MarketplaceTargeting extends \Google\Model
     return $this->geoTargeting;
   }
   /**
-   * @param InventorySizeTargeting
+   * Inventory sizes to be included/excluded.
+   *
+   * @param InventorySizeTargeting $inventorySizeTargeting
    */
   public function setInventorySizeTargeting(InventorySizeTargeting $inventorySizeTargeting)
   {
@@ -59,7 +63,9 @@ class MarketplaceTargeting extends \Google\Model
     return $this->inventorySizeTargeting;
   }
   /**
-   * @param PlacementTargeting
+   * Placement targeting information, for example, URL, mobile applications.
+   *
+   * @param PlacementTargeting $placementTargeting
    */
   public function setPlacementTargeting(PlacementTargeting $placementTargeting)
   {
@@ -73,7 +79,10 @@ class MarketplaceTargeting extends \Google\Model
     return $this->placementTargeting;
   }
   /**
-   * @param TechnologyTargeting
+   * Technology targeting information, for example, operating system, device
+   * category.
+   *
+   * @param TechnologyTargeting $technologyTargeting
    */
   public function setTechnologyTargeting(TechnologyTargeting $technologyTargeting)
   {
@@ -87,7 +96,9 @@ class MarketplaceTargeting extends \Google\Model
     return $this->technologyTargeting;
   }
   /**
-   * @param VideoTargeting
+   * Video targeting information.
+   *
+   * @param VideoTargeting $videoTargeting
    */
   public function setVideoTargeting(VideoTargeting $videoTargeting)
   {

@@ -21,16 +21,22 @@ class FirstPartyMobileApplicationTargeting extends \Google\Collection
 {
   protected $collection_key = 'targetedAppIds';
   /**
+   * A list of application IDs to be excluded.
+   *
    * @var string[]
    */
   public $excludedAppIds;
   /**
+   * A list of application IDs to be included.
+   *
    * @var string[]
    */
   public $targetedAppIds;
 
   /**
-   * @param string[]
+   * A list of application IDs to be excluded.
+   *
+   * @param string[] $excludedAppIds
    */
   public function setExcludedAppIds($excludedAppIds)
   {
@@ -44,7 +50,9 @@ class FirstPartyMobileApplicationTargeting extends \Google\Collection
     return $this->excludedAppIds;
   }
   /**
-   * @param string[]
+   * A list of application IDs to be included.
+   *
+   * @param string[] $targetedAppIds
    */
   public function setTargetedAppIds($targetedAppIds)
   {

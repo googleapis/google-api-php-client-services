@@ -20,12 +20,20 @@ namespace Google\Service\AdExchangeBuyerII;
 class PauseProposalRequest extends \Google\Model
 {
   /**
+   * The reason why the proposal is being paused. This human readable message
+   * will be displayed in the seller's UI. (Max length: 1000 unicode code
+   * units.)
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * The reason why the proposal is being paused. This human readable message
+   * will be displayed in the seller's UI. (Max length: 1000 unicode code
+   * units.)
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

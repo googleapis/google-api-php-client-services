@@ -26,7 +26,9 @@ class CreativeSpecification extends \Google\Collection
   protected $creativeSizeDataType = '';
 
   /**
-   * @param AdSize[]
+   * Companion sizes may be filled in only when this is a video creative.
+   *
+   * @param AdSize[] $creativeCompanionSizes
    */
   public function setCreativeCompanionSizes($creativeCompanionSizes)
   {
@@ -40,7 +42,9 @@ class CreativeSpecification extends \Google\Collection
     return $this->creativeCompanionSizes;
   }
   /**
-   * @param AdSize
+   * The size of the creative.
+   *
+   * @param AdSize $creativeSize
    */
   public function setCreativeSize(AdSize $creativeSize)
   {

@@ -25,7 +25,10 @@ class AbsoluteDateRange extends \Google\Model
   protected $startDateDataType = '';
 
   /**
-   * @param Date
+   * The end date of the range (inclusive). Must be within the 30 days leading
+   * up to current date, and must be equal to or after start_date.
+   *
+   * @param Date $endDate
    */
   public function setEndDate(Date $endDate)
   {
@@ -39,7 +42,10 @@ class AbsoluteDateRange extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param Date
+   * The start date of the range (inclusive). Must be within the 30 days leading
+   * up to current date, and must be equal to or before end_date.
+   *
+   * @param Date $startDate
    */
   public function setStartDate(Date $startDate)
   {

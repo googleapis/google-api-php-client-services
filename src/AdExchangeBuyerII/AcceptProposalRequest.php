@@ -20,12 +20,16 @@ namespace Google\Service\AdExchangeBuyerII;
 class AcceptProposalRequest extends \Google\Model
 {
   /**
+   * The last known client revision number of the proposal.
+   *
    * @var string
    */
   public $proposalRevision;
 
   /**
-   * @param string
+   * The last known client revision number of the proposal.
+   *
+   * @param string $proposalRevision
    */
   public function setProposalRevision($proposalRevision)
   {

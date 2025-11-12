@@ -23,12 +23,19 @@ class ListFilteredBidRequestsResponse extends \Google\Collection
   protected $calloutStatusRowsType = CalloutStatusRow::class;
   protected $calloutStatusRowsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListFilteredBidRequestsRequest.pageToken field in the subsequent call to
+   * the filteredBidRequests.list method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CalloutStatusRow[]
+   * List of rows, with counts of filtered bid requests aggregated by callout
+   * status.
+   *
+   * @param CalloutStatusRow[] $calloutStatusRows
    */
   public function setCalloutStatusRows($calloutStatusRows)
   {
@@ -42,7 +49,11 @@ class ListFilteredBidRequestsResponse extends \Google\Collection
     return $this->calloutStatusRows;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListFilteredBidRequestsRequest.pageToken field in the subsequent call to
+   * the filteredBidRequests.list method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

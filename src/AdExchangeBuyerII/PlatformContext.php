@@ -21,12 +21,16 @@ class PlatformContext extends \Google\Collection
 {
   protected $collection_key = 'platforms';
   /**
+   * The platforms this restriction applies to.
+   *
    * @var string[]
    */
   public $platforms;
 
   /**
-   * @param string[]
+   * The platforms this restriction applies to.
+   *
+   * @param string[] $platforms
    */
   public function setPlatforms($platforms)
   {

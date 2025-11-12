@@ -20,28 +20,52 @@ namespace Google\Service\AdExchangeBuyerII;
 class DealPauseStatus extends \Google\Model
 {
   /**
+   * A placeholder for an undefined buyer/seller role.
+   */
+  public const FIRST_PAUSED_BY_BUYER_SELLER_ROLE_UNSPECIFIED = 'BUYER_SELLER_ROLE_UNSPECIFIED';
+  /**
+   * Specifies the role as buyer.
+   */
+  public const FIRST_PAUSED_BY_BUYER = 'BUYER';
+  /**
+   * Specifies the role as seller.
+   */
+  public const FIRST_PAUSED_BY_SELLER = 'SELLER';
+  /**
+   * The buyer's reason for pausing, if the buyer paused the deal.
+   *
    * @var string
    */
   public $buyerPauseReason;
   /**
+   * The role of the person who first paused this deal.
+   *
    * @var string
    */
   public $firstPausedBy;
   /**
+   * True, if the buyer has paused the deal unilaterally.
+   *
    * @var bool
    */
   public $hasBuyerPaused;
   /**
+   * True, if the seller has paused the deal unilaterally.
+   *
    * @var bool
    */
   public $hasSellerPaused;
   /**
+   * The seller's reason for pausing, if the seller paused the deal.
+   *
    * @var string
    */
   public $sellerPauseReason;
 
   /**
-   * @param string
+   * The buyer's reason for pausing, if the buyer paused the deal.
+   *
+   * @param string $buyerPauseReason
    */
   public function setBuyerPauseReason($buyerPauseReason)
   {
@@ -55,21 +79,27 @@ class DealPauseStatus extends \Google\Model
     return $this->buyerPauseReason;
   }
   /**
-   * @param string
+   * The role of the person who first paused this deal.
+   *
+   * Accepted values: BUYER_SELLER_ROLE_UNSPECIFIED, BUYER, SELLER
+   *
+   * @param self::FIRST_PAUSED_BY_* $firstPausedBy
    */
   public function setFirstPausedBy($firstPausedBy)
   {
     $this->firstPausedBy = $firstPausedBy;
   }
   /**
-   * @return string
+   * @return self::FIRST_PAUSED_BY_*
    */
   public function getFirstPausedBy()
   {
     return $this->firstPausedBy;
   }
   /**
-   * @param bool
+   * True, if the buyer has paused the deal unilaterally.
+   *
+   * @param bool $hasBuyerPaused
    */
   public function setHasBuyerPaused($hasBuyerPaused)
   {
@@ -83,7 +113,9 @@ class DealPauseStatus extends \Google\Model
     return $this->hasBuyerPaused;
   }
   /**
-   * @param bool
+   * True, if the seller has paused the deal unilaterally.
+   *
+   * @param bool $hasSellerPaused
    */
   public function setHasSellerPaused($hasSellerPaused)
   {
@@ -97,7 +129,9 @@ class DealPauseStatus extends \Google\Model
     return $this->hasSellerPaused;
   }
   /**
-   * @param string
+   * The seller's reason for pausing, if the seller paused the deal.
+   *
+   * @param string $sellerPauseReason
    */
   public function setSellerPauseReason($sellerPauseReason)
   {

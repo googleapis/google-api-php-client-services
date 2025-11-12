@@ -23,12 +23,18 @@ class ListFilterSetsResponse extends \Google\Collection
   protected $filterSetsType = FilterSet::class;
   protected $filterSetsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListFilterSetsRequest.pageToken field in the subsequent call to the
+   * accounts.filterSets.list method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param FilterSet[]
+   * The filter sets belonging to the buyer.
+   *
+   * @param FilterSet[] $filterSets
    */
   public function setFilterSets($filterSets)
   {
@@ -42,7 +48,11 @@ class ListFilterSetsResponse extends \Google\Collection
     return $this->filterSets;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListFilterSetsRequest.pageToken field in the subsequent call to the
+   * accounts.filterSets.list method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

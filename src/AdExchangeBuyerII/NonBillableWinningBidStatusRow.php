@@ -19,17 +19,50 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class NonBillableWinningBidStatusRow extends \Google\Model
 {
+  /**
+   * A placeholder for an undefined status. This value will never be returned in
+   * responses.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The buyer was not billed because the ad was not rendered by the publisher.
+   */
+  public const STATUS_AD_NOT_RENDERED = 'AD_NOT_RENDERED';
+  /**
+   * The buyer was not billed because the impression won by the bid was
+   * determined to be invalid.
+   */
+  public const STATUS_INVALID_IMPRESSION = 'INVALID_IMPRESSION';
+  /**
+   * A video impression was served but a fatal error was reported from the
+   * client during playback.
+   */
+  public const STATUS_FATAL_VAST_ERROR = 'FATAL_VAST_ERROR';
+  /**
+   * The buyer was not billed because the ad was outplaced in the mediation
+   * waterfall.
+   */
+  public const STATUS_LOST_IN_MEDIATION = 'LOST_IN_MEDIATION';
+  /**
+   * The impression was not billed because it exceeded a guaranteed deal
+   * delivery goal.
+   */
+  public const STATUS_OVERDELIVERED_IMPRESSION = 'OVERDELIVERED_IMPRESSION';
   protected $bidCountType = MetricValue::class;
   protected $bidCountDataType = '';
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
   /**
+   * The status specifying why the winning bids were not billed.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param MetricValue
+   * The number of bids with the specified status.
+   *
+   * @param MetricValue $bidCount
    */
   public function setBidCount(MetricValue $bidCount)
   {
@@ -43,7 +76,9 @@ class NonBillableWinningBidStatusRow extends \Google\Model
     return $this->bidCount;
   }
   /**
-   * @param RowDimensions
+   * The values of all dimensions associated with metric values in this row.
+   *
+   * @param RowDimensions $rowDimensions
    */
   public function setRowDimensions(RowDimensions $rowDimensions)
   {
@@ -57,14 +92,19 @@ class NonBillableWinningBidStatusRow extends \Google\Model
     return $this->rowDimensions;
   }
   /**
-   * @param string
+   * The status specifying why the winning bids were not billed.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, AD_NOT_RENDERED, INVALID_IMPRESSION,
+   * FATAL_VAST_ERROR, LOST_IN_MEDIATION, OVERDELIVERED_IMPRESSION
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

@@ -20,34 +20,104 @@ namespace Google\Service\AdExchangeBuyerII;
 class PublisherProfileMobileApplication extends \Google\Model
 {
   /**
+   * A placeholder for an unknown app store.
+   */
+  public const APP_STORE_APP_STORE_TYPE_UNSPECIFIED = 'APP_STORE_TYPE_UNSPECIFIED';
+  /**
+   * Apple iTunes
+   */
+  public const APP_STORE_APPLE_ITUNES = 'APPLE_ITUNES';
+  /**
+   * Google Play
+   */
+  public const APP_STORE_GOOGLE_PLAY = 'GOOGLE_PLAY';
+  /**
+   * Roku
+   */
+  public const APP_STORE_ROKU = 'ROKU';
+  /**
+   * Amazon Fire TV
+   */
+  public const APP_STORE_AMAZON_FIRETV = 'AMAZON_FIRETV';
+  /**
+   * Playstation
+   */
+  public const APP_STORE_PLAYSTATION = 'PLAYSTATION';
+  /**
+   * Xbox
+   */
+  public const APP_STORE_XBOX = 'XBOX';
+  /**
+   * Samsung TV
+   */
+  public const APP_STORE_SAMSUNG_TV = 'SAMSUNG_TV';
+  /**
+   * Amazon Appstore
+   */
+  public const APP_STORE_AMAZON = 'AMAZON';
+  /**
+   * OPPO App Market
+   */
+  public const APP_STORE_OPPO = 'OPPO';
+  /**
+   * Samsung Galaxy Store
+   */
+  public const APP_STORE_SAMSUNG = 'SAMSUNG';
+  /**
+   * VIVO App Store
+   */
+  public const APP_STORE_VIVO = 'VIVO';
+  /**
+   * Xiaomi GetApps
+   */
+  public const APP_STORE_XIAOMI = 'XIAOMI';
+  /**
+   * LG TV
+   */
+  public const APP_STORE_LG_TV = 'LG_TV';
+  /**
+   * The app store the app belongs to.
+   *
    * @var string
    */
   public $appStore;
   /**
+   * The external ID for the app from its app store.
+   *
    * @var string
    */
   public $externalAppId;
   /**
+   * The name of the app.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The app store the app belongs to.
+   *
+   * Accepted values: APP_STORE_TYPE_UNSPECIFIED, APPLE_ITUNES, GOOGLE_PLAY,
+   * ROKU, AMAZON_FIRETV, PLAYSTATION, XBOX, SAMSUNG_TV, AMAZON, OPPO, SAMSUNG,
+   * VIVO, XIAOMI, LG_TV
+   *
+   * @param self::APP_STORE_* $appStore
    */
   public function setAppStore($appStore)
   {
     $this->appStore = $appStore;
   }
   /**
-   * @return string
+   * @return self::APP_STORE_*
    */
   public function getAppStore()
   {
     return $this->appStore;
   }
   /**
-   * @param string
+   * The external ID for the app from its app store.
+   *
+   * @param string $externalAppId
    */
   public function setExternalAppId($externalAppId)
   {
@@ -61,7 +131,9 @@ class PublisherProfileMobileApplication extends \Google\Model
     return $this->externalAppId;
   }
   /**
-   * @param string
+   * The name of the app.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

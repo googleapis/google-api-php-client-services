@@ -23,12 +23,20 @@ class ListCreativeStatusBreakdownByCreativeResponse extends \Google\Collection
   protected $filteredBidCreativeRowsType = FilteredBidCreativeRow::class;
   protected $filteredBidCreativeRowsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListCreativeStatusBreakdownByCreativeRequest.pageToken field in the
+   * subsequent call to the filteredBids.creatives.list method to retrieve the
+   * next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param FilteredBidCreativeRow[]
+   * List of rows, with counts of bids with a given creative status aggregated
+   * by creative.
+   *
+   * @param FilteredBidCreativeRow[] $filteredBidCreativeRows
    */
   public function setFilteredBidCreativeRows($filteredBidCreativeRows)
   {
@@ -42,7 +50,12 @@ class ListCreativeStatusBreakdownByCreativeResponse extends \Google\Collection
     return $this->filteredBidCreativeRows;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListCreativeStatusBreakdownByCreativeRequest.pageToken field in the
+   * subsequent call to the filteredBids.creatives.list method to retrieve the
+   * next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

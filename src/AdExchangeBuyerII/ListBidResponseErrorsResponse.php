@@ -23,12 +23,18 @@ class ListBidResponseErrorsResponse extends \Google\Collection
   protected $calloutStatusRowsType = CalloutStatusRow::class;
   protected $calloutStatusRowsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListBidResponseErrorsRequest.pageToken field in the subsequent call to the
+   * bidResponseErrors.list method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CalloutStatusRow[]
+   * List of rows, with counts of bid responses aggregated by callout status.
+   *
+   * @param CalloutStatusRow[] $calloutStatusRows
    */
   public function setCalloutStatusRows($calloutStatusRows)
   {
@@ -42,7 +48,11 @@ class ListBidResponseErrorsResponse extends \Google\Collection
     return $this->calloutStatusRows;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListBidResponseErrorsRequest.pageToken field in the subsequent call to the
+   * bidResponseErrors.list method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

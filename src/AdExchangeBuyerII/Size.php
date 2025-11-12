@@ -20,16 +20,22 @@ namespace Google\Service\AdExchangeBuyerII;
 class Size extends \Google\Model
 {
   /**
+   * The height of the creative.
+   *
    * @var int
    */
   public $height;
   /**
+   * The width of the creative
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * The height of the creative.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -43,7 +49,9 @@ class Size extends \Google\Model
     return $this->height;
   }
   /**
-   * @param int
+   * The width of the creative
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

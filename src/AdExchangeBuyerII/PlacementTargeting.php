@@ -25,7 +25,10 @@ class PlacementTargeting extends \Google\Model
   protected $urlTargetingDataType = '';
 
   /**
-   * @param MobileApplicationTargeting
+   * Mobile application targeting information in a deal. This doesn't apply to
+   * Auction Packages.
+   *
+   * @param MobileApplicationTargeting $mobileApplicationTargeting
    */
   public function setMobileApplicationTargeting(MobileApplicationTargeting $mobileApplicationTargeting)
   {
@@ -39,7 +42,9 @@ class PlacementTargeting extends \Google\Model
     return $this->mobileApplicationTargeting;
   }
   /**
-   * @param UrlTargeting
+   * URLs to be included/excluded.
+   *
+   * @param UrlTargeting $urlTargeting
    */
   public function setUrlTargeting(UrlTargeting $urlTargeting)
   {

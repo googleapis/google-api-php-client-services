@@ -20,16 +20,27 @@ namespace Google\Service\AdExchangeBuyerII;
 class MetricValue extends \Google\Model
 {
   /**
+   * The expected value of the metric.
+   *
    * @var string
    */
   public $value;
   /**
+   * The variance (for example, square of the standard deviation) of the metric
+   * value. If value is exact, variance is 0. Can be used to calculate margin of
+   * error as a percentage of value, using the following formula, where Z is the
+   * standard constant that depends on the preferred size of the confidence
+   * interval (for example, for 90% confidence interval, use Z = 1.645):
+   * marginOfError = 100 * Z * sqrt(variance) / value
+   *
    * @var string
    */
   public $variance;
 
   /**
-   * @param string
+   * The expected value of the metric.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {
@@ -43,7 +54,14 @@ class MetricValue extends \Google\Model
     return $this->value;
   }
   /**
-   * @param string
+   * The variance (for example, square of the standard deviation) of the metric
+   * value. If value is exact, variance is 0. Can be used to calculate margin of
+   * error as a percentage of value, using the following formula, where Z is the
+   * standard constant that depends on the preferred size of the confidence
+   * interval (for example, for 90% confidence interval, use Z = 1.645):
+   * marginOfError = 100 * Z * sqrt(variance) / value
+   *
+   * @param string $variance
    */
   public function setVariance($variance)
   {

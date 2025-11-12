@@ -21,12 +21,16 @@ class AuctionContext extends \Google\Collection
 {
   protected $collection_key = 'auctionTypes';
   /**
+   * The auction types this restriction applies to.
+   *
    * @var string[]
    */
   public $auctionTypes;
 
   /**
-   * @param string[]
+   * The auction types this restriction applies to.
+   *
+   * @param string[] $auctionTypes
    */
   public function setAuctionTypes($auctionTypes)
   {

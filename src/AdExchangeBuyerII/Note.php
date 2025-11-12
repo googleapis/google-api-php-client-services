@@ -20,28 +20,54 @@ namespace Google\Service\AdExchangeBuyerII;
 class Note extends \Google\Model
 {
   /**
+   * A placeholder for an undefined buyer/seller role.
+   */
+  public const CREATOR_ROLE_BUYER_SELLER_ROLE_UNSPECIFIED = 'BUYER_SELLER_ROLE_UNSPECIFIED';
+  /**
+   * Specifies the role as buyer.
+   */
+  public const CREATOR_ROLE_BUYER = 'BUYER';
+  /**
+   * Specifies the role as seller.
+   */
+  public const CREATOR_ROLE_SELLER = 'SELLER';
+  /**
+   * Output only. The timestamp for when this note was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The role of the person (buyer/seller) creating the note.
+   *
    * @var string
    */
   public $creatorRole;
   /**
+   * The actual note to attach. (max-length: 1024 unicode code units) Note: This
+   * field may be set only when creating the resource. Modifying this field
+   * while updating the resource will result in an error.
+   *
    * @var string
    */
   public $note;
   /**
+   * Output only. The unique ID for the note.
+   *
    * @var string
    */
   public $noteId;
   /**
+   * Output only. The revision number of the proposal when the note is created.
+   *
    * @var string
    */
   public $proposalRevision;
 
   /**
-   * @param string
+   * Output only. The timestamp for when this note was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,21 +81,29 @@ class Note extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The role of the person (buyer/seller) creating the note.
+   *
+   * Accepted values: BUYER_SELLER_ROLE_UNSPECIFIED, BUYER, SELLER
+   *
+   * @param self::CREATOR_ROLE_* $creatorRole
    */
   public function setCreatorRole($creatorRole)
   {
     $this->creatorRole = $creatorRole;
   }
   /**
-   * @return string
+   * @return self::CREATOR_ROLE_*
    */
   public function getCreatorRole()
   {
     return $this->creatorRole;
   }
   /**
-   * @param string
+   * The actual note to attach. (max-length: 1024 unicode code units) Note: This
+   * field may be set only when creating the resource. Modifying this field
+   * while updating the resource will result in an error.
+   *
+   * @param string $note
    */
   public function setNote($note)
   {
@@ -83,7 +117,9 @@ class Note extends \Google\Model
     return $this->note;
   }
   /**
-   * @param string
+   * Output only. The unique ID for the note.
+   *
+   * @param string $noteId
    */
   public function setNoteId($noteId)
   {
@@ -97,7 +133,9 @@ class Note extends \Google\Model
     return $this->noteId;
   }
   /**
-   * @param string
+   * Output only. The revision number of the proposal when the note is created.
+   *
+   * @param string $proposalRevision
    */
   public function setProposalRevision($proposalRevision)
   {

@@ -21,6 +21,8 @@ class ListPublisherProfilesResponse extends \Google\Collection
 {
   protected $collection_key = 'publisherProfiles';
   /**
+   * List pagination support
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListPublisherProfilesResponse extends \Google\Collection
   protected $publisherProfilesDataType = 'array';
 
   /**
-   * @param string
+   * List pagination support
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListPublisherProfilesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PublisherProfile[]
+   * The list of matching publisher profiles.
+   *
+   * @param PublisherProfile[] $publisherProfiles
    */
   public function setPublisherProfiles($publisherProfiles)
   {

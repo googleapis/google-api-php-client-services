@@ -19,17 +19,47 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class BidResponseWithoutBidsStatusRow extends \Google\Model
 {
+  /**
+   * A placeholder for an undefined status. This value will never be returned in
+   * responses.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The response had no bids.
+   */
+  public const STATUS_RESPONSES_WITHOUT_BIDS = 'RESPONSES_WITHOUT_BIDS';
+  /**
+   * The response had no bids for the specified account, though it may have
+   * included bids on behalf of other accounts. Applies if: 1. Request is on
+   * behalf of a bidder and an account filter is present. 2. Request is on
+   * behalf of a child seat.
+   */
+  public const STATUS_RESPONSES_WITHOUT_BIDS_FOR_ACCOUNT = 'RESPONSES_WITHOUT_BIDS_FOR_ACCOUNT';
+  /**
+   * The response had no bids for the specified deal, though it may have
+   * included bids on other deals on behalf of the account to which the deal
+   * belongs. If request is on behalf of a bidder and an account filter is not
+   * present, this also includes responses that have bids on behalf of accounts
+   * other than the account to which the deal belongs.
+   */
+  public const STATUS_RESPONSES_WITHOUT_BIDS_FOR_DEAL = 'RESPONSES_WITHOUT_BIDS_FOR_DEAL';
   protected $impressionCountType = MetricValue::class;
   protected $impressionCountDataType = '';
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
   /**
+   * The status specifying why the bid responses were considered to have no
+   * applicable bids.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param MetricValue
+   * The number of impressions for which there was a bid response with the
+   * specified status.
+   *
+   * @param MetricValue $impressionCount
    */
   public function setImpressionCount(MetricValue $impressionCount)
   {
@@ -43,7 +73,9 @@ class BidResponseWithoutBidsStatusRow extends \Google\Model
     return $this->impressionCount;
   }
   /**
-   * @param RowDimensions
+   * The values of all dimensions associated with metric values in this row.
+   *
+   * @param RowDimensions $rowDimensions
    */
   public function setRowDimensions(RowDimensions $rowDimensions)
   {
@@ -57,14 +89,20 @@ class BidResponseWithoutBidsStatusRow extends \Google\Model
     return $this->rowDimensions;
   }
   /**
-   * @param string
+   * The status specifying why the bid responses were considered to have no
+   * applicable bids.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, RESPONSES_WITHOUT_BIDS,
+   * RESPONSES_WITHOUT_BIDS_FOR_ACCOUNT, RESPONSES_WITHOUT_BIDS_FOR_DEAL
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

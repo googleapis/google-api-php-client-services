@@ -20,20 +20,52 @@ namespace Google\Service\AdExchangeBuyerII;
 class AdSize extends \Google\Model
 {
   /**
+   * A placeholder for an undefined size type.
+   */
+  public const SIZE_TYPE_SIZE_TYPE_UNSPECIFIED = 'SIZE_TYPE_UNSPECIFIED';
+  /**
+   * Ad slot with size specified by height and width in pixels.
+   */
+  public const SIZE_TYPE_PIXEL = 'PIXEL';
+  /**
+   * Special size to describe an interstitial ad slot.
+   */
+  public const SIZE_TYPE_INTERSTITIAL = 'INTERSTITIAL';
+  /**
+   * Native (mobile) ads rendered by the publisher.
+   */
+  public const SIZE_TYPE_NATIVE = 'NATIVE';
+  /**
+   * Fluid size (for example, responsive size) can be resized automatically with
+   * the change of outside environment.
+   */
+  public const SIZE_TYPE_FLUID = 'FLUID';
+  /**
+   * The height of the ad slot in pixels. This field will be present only when
+   * size type is `PIXEL`.
+   *
    * @var string
    */
   public $height;
   /**
+   * The size type of the ad slot.
+   *
    * @var string
    */
   public $sizeType;
   /**
+   * The width of the ad slot in pixels. This field will be present only when
+   * size type is `PIXEL`.
+   *
    * @var string
    */
   public $width;
 
   /**
-   * @param string
+   * The height of the ad slot in pixels. This field will be present only when
+   * size type is `PIXEL`.
+   *
+   * @param string $height
    */
   public function setHeight($height)
   {
@@ -47,21 +79,28 @@ class AdSize extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * The size type of the ad slot.
+   *
+   * Accepted values: SIZE_TYPE_UNSPECIFIED, PIXEL, INTERSTITIAL, NATIVE, FLUID
+   *
+   * @param self::SIZE_TYPE_* $sizeType
    */
   public function setSizeType($sizeType)
   {
     $this->sizeType = $sizeType;
   }
   /**
-   * @return string
+   * @return self::SIZE_TYPE_*
    */
   public function getSizeType()
   {
     return $this->sizeType;
   }
   /**
-   * @param string
+   * The width of the ad slot in pixels. This field will be present only when
+   * size type is `PIXEL`.
+   *
+   * @param string $width
    */
   public function setWidth($width)
   {
