@@ -20,19 +20,42 @@ namespace Google\Service\GKEHub;
 class Origin extends \Google\Model
 {
   /**
+   * Type is unknown or not set.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Per-Feature spec was inherited from the fleet-level default.
+   */
+  public const TYPE_FLEET = 'FLEET';
+  /**
+   * Per-Feature spec was inherited from the fleet-level default but is now out
+   * of sync with the current default.
+   */
+  public const TYPE_FLEET_OUT_OF_SYNC = 'FLEET_OUT_OF_SYNC';
+  /**
+   * Per-Feature spec was inherited from a user specification.
+   */
+  public const TYPE_USER = 'USER';
+  /**
+   * Type specifies which type of origin is set.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Type specifies which type of origin is set.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, FLEET, FLEET_OUT_OF_SYNC, USER
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

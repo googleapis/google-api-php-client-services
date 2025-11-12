@@ -21,40 +21,72 @@ class IdentityServiceSamlConfig extends \Google\Collection
 {
   protected $collection_key = 'identityProviderCertificates';
   /**
+   * Optional. The mapping of additional user attributes like nickname, birthday
+   * and address etc.. `key` is the name of this additional attribute. `value`
+   * is a string presenting as CEL(common expression language, go/cel) used for
+   * getting the value from the resources. Take nickname as an example, in this
+   * case, `key` is "attribute.nickname" and `value` is "assertion.nickname".
+   *
    * @var string[]
    */
   public $attributeMapping;
   /**
+   * Optional. Prefix to prepend to group name.
+   *
    * @var string
    */
   public $groupPrefix;
   /**
+   * Optional. The SAML attribute to read groups from. This value is expected to
+   * be a string and will be passed along as-is (with the option of being
+   * prefixed by the `group_prefix`).
+   *
    * @var string
    */
   public $groupsAttribute;
   /**
+   * Required. The list of IdP certificates to validate the SAML response
+   * against.
+   *
    * @var string[]
    */
   public $identityProviderCertificates;
   /**
+   * Required. The entity ID of the SAML IdP.
+   *
    * @var string
    */
   public $identityProviderId;
   /**
+   * Required. The URI where the SAML IdP exposes the SSO service.
+   *
    * @var string
    */
   public $identityProviderSsoUri;
   /**
+   * Optional. The SAML attribute to read username from. If unspecified, the
+   * username will be read from the NameID element of the assertion in SAML
+   * response. This value is expected to be a string and will be passed along
+   * as-is (with the option of being prefixed by the `user_prefix`).
+   *
    * @var string
    */
   public $userAttribute;
   /**
+   * Optional. Prefix to prepend to user name.
+   *
    * @var string
    */
   public $userPrefix;
 
   /**
-   * @param string[]
+   * Optional. The mapping of additional user attributes like nickname, birthday
+   * and address etc.. `key` is the name of this additional attribute. `value`
+   * is a string presenting as CEL(common expression language, go/cel) used for
+   * getting the value from the resources. Take nickname as an example, in this
+   * case, `key` is "attribute.nickname" and `value` is "assertion.nickname".
+   *
+   * @param string[] $attributeMapping
    */
   public function setAttributeMapping($attributeMapping)
   {
@@ -68,7 +100,9 @@ class IdentityServiceSamlConfig extends \Google\Collection
     return $this->attributeMapping;
   }
   /**
-   * @param string
+   * Optional. Prefix to prepend to group name.
+   *
+   * @param string $groupPrefix
    */
   public function setGroupPrefix($groupPrefix)
   {
@@ -82,7 +116,11 @@ class IdentityServiceSamlConfig extends \Google\Collection
     return $this->groupPrefix;
   }
   /**
-   * @param string
+   * Optional. The SAML attribute to read groups from. This value is expected to
+   * be a string and will be passed along as-is (with the option of being
+   * prefixed by the `group_prefix`).
+   *
+   * @param string $groupsAttribute
    */
   public function setGroupsAttribute($groupsAttribute)
   {
@@ -96,7 +134,10 @@ class IdentityServiceSamlConfig extends \Google\Collection
     return $this->groupsAttribute;
   }
   /**
-   * @param string[]
+   * Required. The list of IdP certificates to validate the SAML response
+   * against.
+   *
+   * @param string[] $identityProviderCertificates
    */
   public function setIdentityProviderCertificates($identityProviderCertificates)
   {
@@ -110,7 +151,9 @@ class IdentityServiceSamlConfig extends \Google\Collection
     return $this->identityProviderCertificates;
   }
   /**
-   * @param string
+   * Required. The entity ID of the SAML IdP.
+   *
+   * @param string $identityProviderId
    */
   public function setIdentityProviderId($identityProviderId)
   {
@@ -124,7 +167,9 @@ class IdentityServiceSamlConfig extends \Google\Collection
     return $this->identityProviderId;
   }
   /**
-   * @param string
+   * Required. The URI where the SAML IdP exposes the SSO service.
+   *
+   * @param string $identityProviderSsoUri
    */
   public function setIdentityProviderSsoUri($identityProviderSsoUri)
   {
@@ -138,7 +183,12 @@ class IdentityServiceSamlConfig extends \Google\Collection
     return $this->identityProviderSsoUri;
   }
   /**
-   * @param string
+   * Optional. The SAML attribute to read username from. If unspecified, the
+   * username will be read from the NameID element of the assertion in SAML
+   * response. This value is expected to be a string and will be passed along
+   * as-is (with the option of being prefixed by the `user_prefix`).
+   *
+   * @param string $userAttribute
    */
   public function setUserAttribute($userAttribute)
   {
@@ -152,7 +202,9 @@ class IdentityServiceSamlConfig extends \Google\Collection
     return $this->userAttribute;
   }
   /**
-   * @param string
+   * Optional. Prefix to prepend to user name.
+   *
+   * @param string $userPrefix
    */
   public function setUserPrefix($userPrefix)
   {

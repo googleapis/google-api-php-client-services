@@ -23,7 +23,9 @@ class IdentityServiceServiceAccountConfig extends \Google\Model
   protected $simpleBindCredentialsDataType = '';
 
   /**
-   * @param IdentityServiceSimpleBindCredentials
+   * Credentials for basic auth.
+   *
+   * @param IdentityServiceSimpleBindCredentials $simpleBindCredentials
    */
   public function setSimpleBindCredentials(IdentityServiceSimpleBindCredentials $simpleBindCredentials)
   {

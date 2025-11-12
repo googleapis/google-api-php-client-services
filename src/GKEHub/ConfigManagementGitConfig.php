@@ -20,40 +20,64 @@ namespace Google\Service\GKEHub;
 class ConfigManagementGitConfig extends \Google\Model
 {
   /**
+   * Optional. The Google Cloud Service Account Email used for auth when
+   * secret_type is gcpServiceAccount.
+   *
    * @var string
    */
   public $gcpServiceAccountEmail;
   /**
+   * Optional. URL for the HTTPS proxy to be used when communicating with the
+   * Git repo.
+   *
    * @var string
    */
   public $httpsProxy;
   /**
+   * Optional. The path within the Git repository that represents the top level
+   * of the repo to sync. Default: the root directory of the repository.
+   *
    * @var string
    */
   public $policyDir;
   /**
+   * Required. Type of secret configured for access to the Git repo. Must be one
+   * of ssh, cookiefile, gcenode, token, gcpserviceaccount, githubapp or none.
+   * The validation of this is case-sensitive.
+   *
    * @var string
    */
   public $secretType;
   /**
+   * Optional. The branch of the repository to sync from. Default: master.
+   *
    * @var string
    */
   public $syncBranch;
   /**
+   * Required. The URL of the Git repository to use as the source of truth.
+   *
    * @var string
    */
   public $syncRepo;
   /**
+   * Optional. Git revision (tag or hash) to check out. Default HEAD.
+   *
    * @var string
    */
   public $syncRev;
   /**
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
+   *
    * @var string
    */
   public $syncWaitSecs;
 
   /**
-   * @param string
+   * Optional. The Google Cloud Service Account Email used for auth when
+   * secret_type is gcpServiceAccount.
+   *
+   * @param string $gcpServiceAccountEmail
    */
   public function setGcpServiceAccountEmail($gcpServiceAccountEmail)
   {
@@ -67,7 +91,10 @@ class ConfigManagementGitConfig extends \Google\Model
     return $this->gcpServiceAccountEmail;
   }
   /**
-   * @param string
+   * Optional. URL for the HTTPS proxy to be used when communicating with the
+   * Git repo.
+   *
+   * @param string $httpsProxy
    */
   public function setHttpsProxy($httpsProxy)
   {
@@ -81,7 +108,10 @@ class ConfigManagementGitConfig extends \Google\Model
     return $this->httpsProxy;
   }
   /**
-   * @param string
+   * Optional. The path within the Git repository that represents the top level
+   * of the repo to sync. Default: the root directory of the repository.
+   *
+   * @param string $policyDir
    */
   public function setPolicyDir($policyDir)
   {
@@ -95,7 +125,11 @@ class ConfigManagementGitConfig extends \Google\Model
     return $this->policyDir;
   }
   /**
-   * @param string
+   * Required. Type of secret configured for access to the Git repo. Must be one
+   * of ssh, cookiefile, gcenode, token, gcpserviceaccount, githubapp or none.
+   * The validation of this is case-sensitive.
+   *
+   * @param string $secretType
    */
   public function setSecretType($secretType)
   {
@@ -109,7 +143,9 @@ class ConfigManagementGitConfig extends \Google\Model
     return $this->secretType;
   }
   /**
-   * @param string
+   * Optional. The branch of the repository to sync from. Default: master.
+   *
+   * @param string $syncBranch
    */
   public function setSyncBranch($syncBranch)
   {
@@ -123,7 +159,9 @@ class ConfigManagementGitConfig extends \Google\Model
     return $this->syncBranch;
   }
   /**
-   * @param string
+   * Required. The URL of the Git repository to use as the source of truth.
+   *
+   * @param string $syncRepo
    */
   public function setSyncRepo($syncRepo)
   {
@@ -137,7 +175,9 @@ class ConfigManagementGitConfig extends \Google\Model
     return $this->syncRepo;
   }
   /**
-   * @param string
+   * Optional. Git revision (tag or hash) to check out. Default HEAD.
+   *
+   * @param string $syncRev
    */
   public function setSyncRev($syncRev)
   {
@@ -151,7 +191,9 @@ class ConfigManagementGitConfig extends \Google\Model
     return $this->syncRev;
   }
   /**
-   * @param string
+   * Optional. Period in seconds between consecutive syncs. Default: 15.
+   *
+   * @param string $syncWaitSecs
    */
   public function setSyncWaitSecs($syncWaitSecs)
   {

@@ -27,7 +27,9 @@ class PolicyControllerPolicyContentState extends \Google\Model
   protected $templateLibraryStateDataType = '';
 
   /**
-   * @param PolicyControllerOnClusterState[]
+   * The state of the any bundles included in the chosen version of the manifest
+   *
+   * @param PolicyControllerOnClusterState[] $bundleStates
    */
   public function setBundleStates($bundleStates)
   {
@@ -41,7 +43,11 @@ class PolicyControllerPolicyContentState extends \Google\Model
     return $this->bundleStates;
   }
   /**
-   * @param PolicyControllerOnClusterState
+   * The state of the referential data sync configuration. This could represent
+   * the state of either the syncSet object(s) or the config object, depending
+   * on the version of PoCo configured by the user.
+   *
+   * @param PolicyControllerOnClusterState $referentialSyncConfigState
    */
   public function setReferentialSyncConfigState(PolicyControllerOnClusterState $referentialSyncConfigState)
   {
@@ -55,7 +61,9 @@ class PolicyControllerPolicyContentState extends \Google\Model
     return $this->referentialSyncConfigState;
   }
   /**
-   * @param PolicyControllerOnClusterState
+   * The state of the template library
+   *
+   * @param PolicyControllerOnClusterState $templateLibraryState
    */
   public function setTemplateLibraryState(PolicyControllerOnClusterState $templateLibraryState)
   {

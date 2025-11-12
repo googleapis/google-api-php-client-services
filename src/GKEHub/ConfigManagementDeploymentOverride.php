@@ -23,16 +23,22 @@ class ConfigManagementDeploymentOverride extends \Google\Collection
   protected $containersType = ConfigManagementContainerOverride::class;
   protected $containersDataType = 'array';
   /**
+   * Required. The name of the deployment resource to be overridden.
+   *
    * @var string
    */
   public $deploymentName;
   /**
+   * Required. The namespace of the deployment resource to be overridden.
+   *
    * @var string
    */
   public $deploymentNamespace;
 
   /**
-   * @param ConfigManagementContainerOverride[]
+   * Optional. The containers of the deployment resource to be overridden.
+   *
+   * @param ConfigManagementContainerOverride[] $containers
    */
   public function setContainers($containers)
   {
@@ -46,7 +52,9 @@ class ConfigManagementDeploymentOverride extends \Google\Collection
     return $this->containers;
   }
   /**
-   * @param string
+   * Required. The name of the deployment resource to be overridden.
+   *
+   * @param string $deploymentName
    */
   public function setDeploymentName($deploymentName)
   {
@@ -60,7 +68,9 @@ class ConfigManagementDeploymentOverride extends \Google\Collection
     return $this->deploymentName;
   }
   /**
-   * @param string
+   * Required. The namespace of the deployment resource to be overridden.
+   *
+   * @param string $deploymentNamespace
    */
   public function setDeploymentNamespace($deploymentNamespace)
   {

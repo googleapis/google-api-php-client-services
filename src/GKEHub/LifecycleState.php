@@ -20,19 +20,54 @@ namespace Google\Service\GKEHub;
 class LifecycleState extends \Google\Model
 {
   /**
+   * State is unknown or not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The MembershipFeature is being enabled, and the MembershipFeature resource
+   * is being created. Once complete, the corresponding MembershipFeature will
+   * be enabled in this Hub.
+   */
+  public const STATE_ENABLING = 'ENABLING';
+  /**
+   * The MembershipFeature is enabled in this Hub, and the MembershipFeature
+   * resource is fully available.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The MembershipFeature is being disabled in this Hub, and the
+   * MembershipFeature resource is being deleted.
+   */
+  public const STATE_DISABLING = 'DISABLING';
+  /**
+   * The MembershipFeature resource is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The MembershipFeature resource is being updated by the Hub Service.
+   */
+  public const STATE_SERVICE_UPDATING = 'SERVICE_UPDATING';
+  /**
+   * Output only. The current state of the Feature resource in the Hub API.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The current state of the Feature resource in the Hub API.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ENABLING, ACTIVE, DISABLING, UPDATING,
+   * SERVICE_UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

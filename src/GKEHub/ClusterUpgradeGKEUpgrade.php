@@ -20,16 +20,22 @@ namespace Google\Service\GKEHub;
 class ClusterUpgradeGKEUpgrade extends \Google\Model
 {
   /**
+   * Name of the upgrade, e.g., "k8s_control_plane".
+   *
    * @var string
    */
   public $name;
   /**
+   * Version of the upgrade, e.g., "1.22.1-gke.100".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Name of the upgrade, e.g., "k8s_control_plane".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class ClusterUpgradeGKEUpgrade extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Version of the upgrade, e.g., "1.22.1-gke.100".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

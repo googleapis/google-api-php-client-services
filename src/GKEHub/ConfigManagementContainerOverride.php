@@ -20,28 +20,40 @@ namespace Google\Service\GKEHub;
 class ConfigManagementContainerOverride extends \Google\Model
 {
   /**
+   * Required. The name of the container.
+   *
    * @var string
    */
   public $containerName;
   /**
+   * Optional. The cpu limit of the container.
+   *
    * @var string
    */
   public $cpuLimit;
   /**
+   * Optional. The cpu request of the container.
+   *
    * @var string
    */
   public $cpuRequest;
   /**
+   * Optional. The memory limit of the container.
+   *
    * @var string
    */
   public $memoryLimit;
   /**
+   * Optional. The memory request of the container.
+   *
    * @var string
    */
   public $memoryRequest;
 
   /**
-   * @param string
+   * Required. The name of the container.
+   *
+   * @param string $containerName
    */
   public function setContainerName($containerName)
   {
@@ -55,7 +67,9 @@ class ConfigManagementContainerOverride extends \Google\Model
     return $this->containerName;
   }
   /**
-   * @param string
+   * Optional. The cpu limit of the container.
+   *
+   * @param string $cpuLimit
    */
   public function setCpuLimit($cpuLimit)
   {
@@ -69,7 +83,9 @@ class ConfigManagementContainerOverride extends \Google\Model
     return $this->cpuLimit;
   }
   /**
-   * @param string
+   * Optional. The cpu request of the container.
+   *
+   * @param string $cpuRequest
    */
   public function setCpuRequest($cpuRequest)
   {
@@ -83,7 +99,9 @@ class ConfigManagementContainerOverride extends \Google\Model
     return $this->cpuRequest;
   }
   /**
-   * @param string
+   * Optional. The memory limit of the container.
+   *
+   * @param string $memoryLimit
    */
   public function setMemoryLimit($memoryLimit)
   {
@@ -97,7 +115,9 @@ class ConfigManagementContainerOverride extends \Google\Model
     return $this->memoryLimit;
   }
   /**
-   * @param string
+   * Optional. The memory request of the container.
+   *
+   * @param string $memoryRequest
    */
   public function setMemoryRequest($memoryRequest)
   {

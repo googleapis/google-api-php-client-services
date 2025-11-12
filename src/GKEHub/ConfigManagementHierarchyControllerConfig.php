@@ -20,20 +20,28 @@ namespace Google\Service\GKEHub;
 class ConfigManagementHierarchyControllerConfig extends \Google\Model
 {
   /**
+   * Whether hierarchical resource quota is enabled in this cluster.
+   *
    * @var bool
    */
   public $enableHierarchicalResourceQuota;
   /**
+   * Whether pod tree labels are enabled in this cluster.
+   *
    * @var bool
    */
   public $enablePodTreeLabels;
   /**
+   * Whether Hierarchy Controller is enabled in this cluster.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether hierarchical resource quota is enabled in this cluster.
+   *
+   * @param bool $enableHierarchicalResourceQuota
    */
   public function setEnableHierarchicalResourceQuota($enableHierarchicalResourceQuota)
   {
@@ -47,7 +55,9 @@ class ConfigManagementHierarchyControllerConfig extends \Google\Model
     return $this->enableHierarchicalResourceQuota;
   }
   /**
-   * @param bool
+   * Whether pod tree labels are enabled in this cluster.
+   *
+   * @param bool $enablePodTreeLabels
    */
   public function setEnablePodTreeLabels($enablePodTreeLabels)
   {
@@ -61,7 +71,9 @@ class ConfigManagementHierarchyControllerConfig extends \Google\Model
     return $this->enablePodTreeLabels;
   }
   /**
-   * @param bool
+   * Whether Hierarchy Controller is enabled in this cluster.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

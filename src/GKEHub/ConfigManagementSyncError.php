@@ -21,10 +21,14 @@ class ConfigManagementSyncError extends \Google\Collection
 {
   protected $collection_key = 'errorResources';
   /**
+   * An ACM defined error code
+   *
    * @var string
    */
   public $code;
   /**
+   * A description of the error
+   *
    * @var string
    */
   public $errorMessage;
@@ -32,7 +36,9 @@ class ConfigManagementSyncError extends \Google\Collection
   protected $errorResourcesDataType = 'array';
 
   /**
-   * @param string
+   * An ACM defined error code
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -46,7 +52,9 @@ class ConfigManagementSyncError extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param string
+   * A description of the error
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -60,7 +68,9 @@ class ConfigManagementSyncError extends \Google\Collection
     return $this->errorMessage;
   }
   /**
-   * @param ConfigManagementErrorResource[]
+   * A list of config(s) associated with the error, if any
+   *
+   * @param ConfigManagementErrorResource[] $errorResources
    */
   public function setErrorResources($errorResources)
   {

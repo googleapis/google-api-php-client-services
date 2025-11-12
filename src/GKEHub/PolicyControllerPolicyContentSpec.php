@@ -25,7 +25,11 @@ class PolicyControllerPolicyContentSpec extends \Google\Model
   protected $templateLibraryDataType = '';
 
   /**
-   * @param PolicyControllerBundleInstallSpec[]
+   * map of bundle name to BundleInstallSpec. The bundle name maps to the
+   * `bundleName` key in the `policycontroller.gke.io/constraintData` annotation
+   * on a constraint.
+   *
+   * @param PolicyControllerBundleInstallSpec[] $bundles
    */
   public function setBundles($bundles)
   {
@@ -39,7 +43,9 @@ class PolicyControllerPolicyContentSpec extends \Google\Model
     return $this->bundles;
   }
   /**
-   * @param PolicyControllerTemplateLibraryConfig
+   * Configures the installation of the Template Library.
+   *
+   * @param PolicyControllerTemplateLibraryConfig $templateLibrary
    */
   public function setTemplateLibrary(PolicyControllerTemplateLibraryConfig $templateLibrary)
   {

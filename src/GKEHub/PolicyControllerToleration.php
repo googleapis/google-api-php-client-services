@@ -20,24 +20,34 @@ namespace Google\Service\GKEHub;
 class PolicyControllerToleration extends \Google\Model
 {
   /**
+   * Matches a taint effect.
+   *
    * @var string
    */
   public $effect;
   /**
+   * Matches a taint key (not necessarily unique).
+   *
    * @var string
    */
   public $key;
   /**
+   * Matches a taint operator.
+   *
    * @var string
    */
   public $operator;
   /**
+   * Matches a taint value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Matches a taint effect.
+   *
+   * @param string $effect
    */
   public function setEffect($effect)
   {
@@ -51,7 +61,9 @@ class PolicyControllerToleration extends \Google\Model
     return $this->effect;
   }
   /**
-   * @param string
+   * Matches a taint key (not necessarily unique).
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -65,7 +77,9 @@ class PolicyControllerToleration extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Matches a taint operator.
+   *
+   * @param string $operator
    */
   public function setOperator($operator)
   {
@@ -79,7 +93,9 @@ class PolicyControllerToleration extends \Google\Model
     return $this->operator;
   }
   /**
-   * @param string
+   * Matches a taint value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

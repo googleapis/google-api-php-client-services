@@ -22,20 +22,28 @@ class ConfigManagementErrorResource extends \Google\Model
   protected $resourceGvkType = ConfigManagementGroupVersionKind::class;
   protected $resourceGvkDataType = '';
   /**
+   * Metadata name of the resource that is causing an error
+   *
    * @var string
    */
   public $resourceName;
   /**
+   * Namespace of the resource that is causing an error
+   *
    * @var string
    */
   public $resourceNamespace;
   /**
+   * Path in the git repo of the erroneous config
+   *
    * @var string
    */
   public $sourcePath;
 
   /**
-   * @param ConfigManagementGroupVersionKind
+   * Group/version/kind of the resource that is causing an error
+   *
+   * @param ConfigManagementGroupVersionKind $resourceGvk
    */
   public function setResourceGvk(ConfigManagementGroupVersionKind $resourceGvk)
   {
@@ -49,7 +57,9 @@ class ConfigManagementErrorResource extends \Google\Model
     return $this->resourceGvk;
   }
   /**
-   * @param string
+   * Metadata name of the resource that is causing an error
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -63,7 +73,9 @@ class ConfigManagementErrorResource extends \Google\Model
     return $this->resourceName;
   }
   /**
-   * @param string
+   * Namespace of the resource that is causing an error
+   *
+   * @param string $resourceNamespace
    */
   public function setResourceNamespace($resourceNamespace)
   {
@@ -77,7 +89,9 @@ class ConfigManagementErrorResource extends \Google\Model
     return $this->resourceNamespace;
   }
   /**
-   * @param string
+   * Path in the git repo of the erroneous config
+   *
+   * @param string $sourcePath
    */
   public function setSourcePath($sourcePath)
   {

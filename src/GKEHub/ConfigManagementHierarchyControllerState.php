@@ -25,7 +25,9 @@ class ConfigManagementHierarchyControllerState extends \Google\Model
   protected $versionDataType = '';
 
   /**
-   * @param ConfigManagementHierarchyControllerDeploymentState
+   * The deployment state for Hierarchy Controller.
+   *
+   * @param ConfigManagementHierarchyControllerDeploymentState $state
    */
   public function setState(ConfigManagementHierarchyControllerDeploymentState $state)
   {
@@ -39,7 +41,9 @@ class ConfigManagementHierarchyControllerState extends \Google\Model
     return $this->state;
   }
   /**
-   * @param ConfigManagementHierarchyControllerVersion
+   * The version for Hierarchy Controller.
+   *
+   * @param ConfigManagementHierarchyControllerVersion $version
    */
   public function setVersion(ConfigManagementHierarchyControllerVersion $version)
   {

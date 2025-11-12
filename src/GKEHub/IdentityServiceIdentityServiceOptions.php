@@ -22,12 +22,16 @@ class IdentityServiceIdentityServiceOptions extends \Google\Model
   protected $diagnosticInterfaceType = IdentityServiceDiagnosticInterface::class;
   protected $diagnosticInterfaceDataType = '';
   /**
+   * Determines the lifespan of STS tokens issued by Anthos Identity Service.
+   *
    * @var string
    */
   public $sessionDuration;
 
   /**
-   * @param IdentityServiceDiagnosticInterface
+   * Configuration options for the AIS diagnostic interface.
+   *
+   * @param IdentityServiceDiagnosticInterface $diagnosticInterface
    */
   public function setDiagnosticInterface(IdentityServiceDiagnosticInterface $diagnosticInterface)
   {
@@ -41,7 +45,9 @@ class IdentityServiceIdentityServiceOptions extends \Google\Model
     return $this->diagnosticInterface;
   }
   /**
-   * @param string
+   * Determines the lifespan of STS tokens issued by Anthos Identity Service.
+   *
+   * @param string $sessionDuration
    */
   public function setSessionDuration($sessionDuration)
   {

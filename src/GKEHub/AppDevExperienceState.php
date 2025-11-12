@@ -23,7 +23,9 @@ class AppDevExperienceState extends \Google\Model
   protected $networkingInstallSucceededDataType = '';
 
   /**
-   * @param AppDevExperienceStatus
+   * Status of subcomponent that detects configured Service Mesh resources.
+   *
+   * @param AppDevExperienceStatus $networkingInstallSucceeded
    */
   public function setNetworkingInstallSucceeded(AppDevExperienceStatus $networkingInstallSucceeded)
   {

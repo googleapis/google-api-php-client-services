@@ -20,34 +20,82 @@ namespace Google\Service\GKEHub;
 class ClusterUpgradeUpgradeStatus extends \Google\Model
 {
   /**
+   * Required by https://linter.aip.dev/126/unspecified.
+   */
+  public const CODE_CODE_UNSPECIFIED = 'CODE_UNSPECIFIED';
+  /**
+   * The upgrade is ineligible. At the scope level, this means the upgrade is
+   * ineligible for all the clusters in the scope.
+   */
+  public const CODE_INELIGIBLE = 'INELIGIBLE';
+  /**
+   * The upgrade is pending. At the scope level, this means the upgrade is
+   * pending for all the clusters in the scope.
+   */
+  public const CODE_PENDING = 'PENDING';
+  /**
+   * The upgrade is in progress. At the scope level, this means the upgrade is
+   * in progress for at least one cluster in the scope.
+   */
+  public const CODE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * The upgrade has finished and is soaking until the soaking time is up. At
+   * the scope level, this means at least one cluster is in soaking while the
+   * rest are either soaking or complete.
+   */
+  public const CODE_SOAKING = 'SOAKING';
+  /**
+   * A cluster will be forced to enter soaking if an upgrade doesn't finish
+   * within a certain limit, despite it's actual status.
+   */
+  public const CODE_FORCED_SOAKING = 'FORCED_SOAKING';
+  /**
+   * The upgrade has passed all post conditions (soaking). At the scope level,
+   * this means all eligible clusters are in COMPLETE status.
+   */
+  public const CODE_COMPLETE = 'COMPLETE';
+  /**
+   * Status code of the upgrade.
+   *
    * @var string
    */
   public $code;
   /**
+   * Reason for this status.
+   *
    * @var string
    */
   public $reason;
   /**
+   * Last timestamp the status was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Status code of the upgrade.
+   *
+   * Accepted values: CODE_UNSPECIFIED, INELIGIBLE, PENDING, IN_PROGRESS,
+   * SOAKING, FORCED_SOAKING, COMPLETE
+   *
+   * @param self::CODE_* $code
    */
   public function setCode($code)
   {
     $this->code = $code;
   }
   /**
-   * @return string
+   * @return self::CODE_*
    */
   public function getCode()
   {
     return $this->code;
   }
   /**
-   * @param string
+   * Reason for this status.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {
@@ -61,7 +109,9 @@ class ClusterUpgradeUpgradeStatus extends \Google\Model
     return $this->reason;
   }
   /**
-   * @param string
+   * Last timestamp the status was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

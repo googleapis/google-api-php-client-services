@@ -20,20 +20,36 @@ namespace Google\Service\GKEHub;
 class IdentityServiceGroupConfig extends \Google\Model
 {
   /**
+   * Required. The location of the subtree in the LDAP directory to search for
+   * group entries.
+   *
    * @var string
    */
   public $baseDn;
   /**
+   * Optional. Optional filter to be used when searching for groups a user
+   * belongs to. This can be used to explicitly match only certain groups in
+   * order to reduce the amount of groups returned for each user. This defaults
+   * to "(objectClass=Group)".
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. The identifying name of each group a user belongs to. For
+   * example, if this is set to "distinguishedName" then RBACs and other group
+   * expectations should be written as full DNs. This defaults to
+   * "distinguishedName".
+   *
    * @var string
    */
   public $idAttribute;
 
   /**
-   * @param string
+   * Required. The location of the subtree in the LDAP directory to search for
+   * group entries.
+   *
+   * @param string $baseDn
    */
   public function setBaseDn($baseDn)
   {
@@ -47,7 +63,12 @@ class IdentityServiceGroupConfig extends \Google\Model
     return $this->baseDn;
   }
   /**
-   * @param string
+   * Optional. Optional filter to be used when searching for groups a user
+   * belongs to. This can be used to explicitly match only certain groups in
+   * order to reduce the amount of groups returned for each user. This defaults
+   * to "(objectClass=Group)".
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -61,7 +82,12 @@ class IdentityServiceGroupConfig extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param string
+   * Optional. The identifying name of each group a user belongs to. For
+   * example, if this is set to "distinguishedName" then RBACs and other group
+   * expectations should be written as full DNs. This defaults to
+   * "distinguishedName".
+   *
+   * @param string $idAttribute
    */
   public function setIdAttribute($idAttribute)
   {

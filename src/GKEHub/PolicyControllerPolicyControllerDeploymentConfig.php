@@ -19,26 +19,48 @@ namespace Google\Service\GKEHub;
 
 class PolicyControllerPolicyControllerDeploymentConfig extends \Google\Collection
 {
+  /**
+   * No affinity configuration has been specified.
+   */
+  public const POD_AFFINITY_AFFINITY_UNSPECIFIED = 'AFFINITY_UNSPECIFIED';
+  /**
+   * Affinity configurations will be removed from the deployment.
+   */
+  public const POD_AFFINITY_NO_AFFINITY = 'NO_AFFINITY';
+  /**
+   * Anti-affinity configuration will be applied to this deployment. Default for
+   * admissions deployment.
+   */
+  public const POD_AFFINITY_ANTI_AFFINITY = 'ANTI_AFFINITY';
   protected $collection_key = 'podTolerations';
   protected $containerResourcesType = PolicyControllerResourceRequirements::class;
   protected $containerResourcesDataType = '';
   /**
+   * Pod affinity configuration.
+   *
    * @var string
    */
   public $podAffinity;
   /**
+   * Pod anti-affinity enablement. Deprecated: use `pod_affinity` instead.
+   *
+   * @deprecated
    * @var bool
    */
   public $podAntiAffinity;
   protected $podTolerationsType = PolicyControllerToleration::class;
   protected $podTolerationsDataType = 'array';
   /**
+   * Pod replica count.
+   *
    * @var string
    */
   public $replicaCount;
 
   /**
-   * @param PolicyControllerResourceRequirements
+   * Container resource requirements.
+   *
+   * @param PolicyControllerResourceRequirements $containerResources
    */
   public function setContainerResources(PolicyControllerResourceRequirements $containerResources)
   {
@@ -52,27 +74,35 @@ class PolicyControllerPolicyControllerDeploymentConfig extends \Google\Collectio
     return $this->containerResources;
   }
   /**
-   * @param string
+   * Pod affinity configuration.
+   *
+   * Accepted values: AFFINITY_UNSPECIFIED, NO_AFFINITY, ANTI_AFFINITY
+   *
+   * @param self::POD_AFFINITY_* $podAffinity
    */
   public function setPodAffinity($podAffinity)
   {
     $this->podAffinity = $podAffinity;
   }
   /**
-   * @return string
+   * @return self::POD_AFFINITY_*
    */
   public function getPodAffinity()
   {
     return $this->podAffinity;
   }
   /**
-   * @param bool
+   * Pod anti-affinity enablement. Deprecated: use `pod_affinity` instead.
+   *
+   * @deprecated
+   * @param bool $podAntiAffinity
    */
   public function setPodAntiAffinity($podAntiAffinity)
   {
     $this->podAntiAffinity = $podAntiAffinity;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getPodAntiAffinity()
@@ -80,7 +110,9 @@ class PolicyControllerPolicyControllerDeploymentConfig extends \Google\Collectio
     return $this->podAntiAffinity;
   }
   /**
-   * @param PolicyControllerToleration[]
+   * Pod tolerations of node taints.
+   *
+   * @param PolicyControllerToleration[] $podTolerations
    */
   public function setPodTolerations($podTolerations)
   {
@@ -94,7 +126,9 @@ class PolicyControllerPolicyControllerDeploymentConfig extends \Google\Collectio
     return $this->podTolerations;
   }
   /**
-   * @param string
+   * Pod replica count.
+   *
+   * @param string $replicaCount
    */
   public function setReplicaCount($replicaCount)
   {

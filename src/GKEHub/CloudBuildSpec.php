@@ -20,30 +20,52 @@ namespace Google\Service\GKEHub;
 class CloudBuildSpec extends \Google\Model
 {
   /**
+   * Unspecified policy
+   */
+  public const SECURITY_POLICY_SECURITY_POLICY_UNSPECIFIED = 'SECURITY_POLICY_UNSPECIFIED';
+  /**
+   * Privileged build pods are disallowed
+   */
+  public const SECURITY_POLICY_NON_PRIVILEGED = 'NON_PRIVILEGED';
+  /**
+   * Privileged build pods are allowed
+   */
+  public const SECURITY_POLICY_PRIVILEGED = 'PRIVILEGED';
+  /**
+   * Whether it is allowed to run the privileged builds on the cluster or not.
+   *
    * @var string
    */
   public $securityPolicy;
   /**
+   * Version of the cloud build software on the cluster.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Whether it is allowed to run the privileged builds on the cluster or not.
+   *
+   * Accepted values: SECURITY_POLICY_UNSPECIFIED, NON_PRIVILEGED, PRIVILEGED
+   *
+   * @param self::SECURITY_POLICY_* $securityPolicy
    */
   public function setSecurityPolicy($securityPolicy)
   {
     $this->securityPolicy = $securityPolicy;
   }
   /**
-   * @return string
+   * @return self::SECURITY_POLICY_*
    */
   public function getSecurityPolicy()
   {
     return $this->securityPolicy;
   }
   /**
-   * @param string
+   * Version of the cloud build software on the cluster.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

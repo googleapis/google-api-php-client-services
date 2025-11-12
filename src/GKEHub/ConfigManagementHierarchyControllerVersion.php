@@ -20,16 +20,22 @@ namespace Google\Service\GKEHub;
 class ConfigManagementHierarchyControllerVersion extends \Google\Model
 {
   /**
+   * Version for Hierarchy Controller extension.
+   *
    * @var string
    */
   public $extension;
   /**
+   * Version for open source HNC.
+   *
    * @var string
    */
   public $hnc;
 
   /**
-   * @param string
+   * Version for Hierarchy Controller extension.
+   *
+   * @param string $extension
    */
   public function setExtension($extension)
   {
@@ -43,7 +49,9 @@ class ConfigManagementHierarchyControllerVersion extends \Google\Model
     return $this->extension;
   }
   /**
-   * @param string
+   * Version for open source HNC.
+   *
+   * @param string $hnc
    */
   public function setHnc($hnc)
   {

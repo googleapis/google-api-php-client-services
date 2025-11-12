@@ -37,7 +37,9 @@ class FeatureSpec extends \Google\Model
   protected $workloadcertificateDataType = '';
 
   /**
-   * @param CloudBuildSpec
+   * Cloudbuild-specific FeatureSpec.
+   *
+   * @param CloudBuildSpec $cloudbuild
    */
   public function setCloudbuild(CloudBuildSpec $cloudbuild)
   {
@@ -51,7 +53,9 @@ class FeatureSpec extends \Google\Model
     return $this->cloudbuild;
   }
   /**
-   * @param ConfigManagementSpec
+   * Config Management FeatureSpec.
+   *
+   * @param ConfigManagementSpec $configmanagement
    */
   public function setConfigmanagement(ConfigManagementSpec $configmanagement)
   {
@@ -65,7 +69,9 @@ class FeatureSpec extends \Google\Model
     return $this->configmanagement;
   }
   /**
-   * @param IdentityServiceSpec
+   * IdentityService FeatureSpec.
+   *
+   * @param IdentityServiceSpec $identityservice
    */
   public function setIdentityservice(IdentityServiceSpec $identityservice)
   {
@@ -79,7 +85,11 @@ class FeatureSpec extends \Google\Model
     return $this->identityservice;
   }
   /**
-   * @param Origin
+   * Whether this per-Feature spec was inherited from a fleet-level default.
+   * This field can be updated by users by either overriding a Feature config
+   * (updated to USER implicitly) or setting to FLEET explicitly.
+   *
+   * @param Origin $origin
    */
   public function setOrigin(Origin $origin)
   {
@@ -93,7 +103,9 @@ class FeatureSpec extends \Google\Model
     return $this->origin;
   }
   /**
-   * @param PolicyControllerSpec
+   * Policycontroller-specific FeatureSpec.
+   *
+   * @param PolicyControllerSpec $policycontroller
    */
   public function setPolicycontroller(PolicyControllerSpec $policycontroller)
   {
@@ -107,7 +119,9 @@ class FeatureSpec extends \Google\Model
     return $this->policycontroller;
   }
   /**
-   * @param RBACRoleBindingActuationSpec
+   * Rbacrolebindingactuation-specific FeatureSpec.
+   *
+   * @param RBACRoleBindingActuationSpec $rbacrolebindingactuation
    */
   public function setRbacrolebindingactuation(RBACRoleBindingActuationSpec $rbacrolebindingactuation)
   {
@@ -121,7 +135,9 @@ class FeatureSpec extends \Google\Model
     return $this->rbacrolebindingactuation;
   }
   /**
-   * @param ServiceMeshSpec
+   * ServiceMesh Feature Spec.
+   *
+   * @param ServiceMeshSpec $servicemesh
    */
   public function setServicemesh(ServiceMeshSpec $servicemesh)
   {
@@ -135,7 +151,9 @@ class FeatureSpec extends \Google\Model
     return $this->servicemesh;
   }
   /**
-   * @param WorkloadCertificateSpec
+   * Workloadcertificate-specific FeatureSpec.
+   *
+   * @param WorkloadCertificateSpec $workloadcertificate
    */
   public function setWorkloadcertificate(WorkloadCertificateSpec $workloadcertificate)
   {

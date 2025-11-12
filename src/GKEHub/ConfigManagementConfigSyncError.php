@@ -20,12 +20,16 @@ namespace Google\Service\GKEHub;
 class ConfigManagementConfigSyncError extends \Google\Model
 {
   /**
+   * A string representing the user facing error message
+   *
    * @var string
    */
   public $errorMessage;
 
   /**
-   * @param string
+   * A string representing the user facing error message
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {

@@ -20,22 +20,43 @@ namespace Google\Service\GKEHub;
 class IdentityServiceState extends \Google\Model
 {
   /**
+   * Unspecified state
+   */
+  public const STATE_DEPLOYMENT_STATE_UNSPECIFIED = 'DEPLOYMENT_STATE_UNSPECIFIED';
+  /**
+   * deployment succeeds
+   */
+  public const STATE_OK = 'OK';
+  /**
+   * Failure with error.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * The reason of the failure.
+   *
    * @var string
    */
   public $failureReason;
   /**
+   * Installed AIS version. This is the AIS version installed on this member.
+   * The values makes sense iff state is OK.
+   *
    * @var string
    */
   public $installedVersion;
   protected $memberConfigType = IdentityServiceSpec::class;
   protected $memberConfigDataType = '';
   /**
+   * Deployment state on this member
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The reason of the failure.
+   *
+   * @param string $failureReason
    */
   public function setFailureReason($failureReason)
   {
@@ -49,7 +70,10 @@ class IdentityServiceState extends \Google\Model
     return $this->failureReason;
   }
   /**
-   * @param string
+   * Installed AIS version. This is the AIS version installed on this member.
+   * The values makes sense iff state is OK.
+   *
+   * @param string $installedVersion
    */
   public function setInstalledVersion($installedVersion)
   {
@@ -63,7 +87,9 @@ class IdentityServiceState extends \Google\Model
     return $this->installedVersion;
   }
   /**
-   * @param IdentityServiceSpec
+   * Last reconciled membership configuration
+   *
+   * @param IdentityServiceSpec $memberConfig
    */
   public function setMemberConfig(IdentityServiceSpec $memberConfig)
   {
@@ -77,14 +103,18 @@ class IdentityServiceState extends \Google\Model
     return $this->memberConfig;
   }
   /**
-   * @param string
+   * Deployment state on this member
+   *
+   * Accepted values: DEPLOYMENT_STATE_UNSPECIFIED, OK, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

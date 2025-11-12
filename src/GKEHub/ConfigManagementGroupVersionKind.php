@@ -20,20 +20,28 @@ namespace Google\Service\GKEHub;
 class ConfigManagementGroupVersionKind extends \Google\Model
 {
   /**
+   * Kubernetes Group
+   *
    * @var string
    */
   public $group;
   /**
+   * Kubernetes Kind
+   *
    * @var string
    */
   public $kind;
   /**
+   * Kubernetes Version
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Kubernetes Group
+   *
+   * @param string $group
    */
   public function setGroup($group)
   {
@@ -47,7 +55,9 @@ class ConfigManagementGroupVersionKind extends \Google\Model
     return $this->group;
   }
   /**
-   * @param string
+   * Kubernetes Kind
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +71,9 @@ class ConfigManagementGroupVersionKind extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Kubernetes Version
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

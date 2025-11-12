@@ -19,15 +19,39 @@ namespace Google\Service\GKEHub;
 
 class ConfigManagementBinauthzState extends \Google\Model
 {
+  /**
+   * Deployment's state cannot be determined.
+   */
+  public const WEBHOOK_DEPLOYMENT_STATE_UNSPECIFIED = 'DEPLOYMENT_STATE_UNSPECIFIED';
+  /**
+   * Deployment is not installed.
+   */
+  public const WEBHOOK_NOT_INSTALLED = 'NOT_INSTALLED';
+  /**
+   * Deployment is installed.
+   */
+  public const WEBHOOK_INSTALLED = 'INSTALLED';
+  /**
+   * Deployment was attempted to be installed, but has errors.
+   */
+  public const WEBHOOK_ERROR = 'ERROR';
+  /**
+   * Deployment is installing or terminating
+   */
+  public const WEBHOOK_PENDING = 'PENDING';
   protected $versionType = ConfigManagementBinauthzVersion::class;
   protected $versionDataType = '';
   /**
+   * The state of the binauthz webhook.
+   *
    * @var string
    */
   public $webhook;
 
   /**
-   * @param ConfigManagementBinauthzVersion
+   * The version of binauthz that is installed.
+   *
+   * @param ConfigManagementBinauthzVersion $version
    */
   public function setVersion(ConfigManagementBinauthzVersion $version)
   {
@@ -41,14 +65,19 @@ class ConfigManagementBinauthzState extends \Google\Model
     return $this->version;
   }
   /**
-   * @param string
+   * The state of the binauthz webhook.
+   *
+   * Accepted values: DEPLOYMENT_STATE_UNSPECIFIED, NOT_INSTALLED, INSTALLED,
+   * ERROR, PENDING
+   *
+   * @param self::WEBHOOK_* $webhook
    */
   public function setWebhook($webhook)
   {
     $this->webhook = $webhook;
   }
   /**
-   * @return string
+   * @return self::WEBHOOK_*
    */
   public function getWebhook()
   {

@@ -25,6 +25,9 @@ class ServiceMeshState extends \Google\Collection
   protected $conditionsType = ServiceMeshCondition::class;
   protected $conditionsDataType = 'array';
   /**
+   * The API version (i.e. Istio CRD version) for configuring service mesh in
+   * this cluster. This version is influenced by the `default_channel` field.
+   *
    * @var string
    */
   public $configApiVersion;
@@ -34,7 +37,9 @@ class ServiceMeshState extends \Google\Collection
   protected $dataPlaneManagementDataType = '';
 
   /**
-   * @param ServiceMeshAnalysisMessage[]
+   * Output only. Results of running Service Mesh analyzers.
+   *
+   * @param ServiceMeshAnalysisMessage[] $analysisMessages
    */
   public function setAnalysisMessages($analysisMessages)
   {
@@ -48,7 +53,9 @@ class ServiceMeshState extends \Google\Collection
     return $this->analysisMessages;
   }
   /**
-   * @param ServiceMeshCondition[]
+   * Output only. List of conditions reported for this membership.
+   *
+   * @param ServiceMeshCondition[] $conditions
    */
   public function setConditions($conditions)
   {
@@ -62,7 +69,10 @@ class ServiceMeshState extends \Google\Collection
     return $this->conditions;
   }
   /**
-   * @param string
+   * The API version (i.e. Istio CRD version) for configuring service mesh in
+   * this cluster. This version is influenced by the `default_channel` field.
+   *
+   * @param string $configApiVersion
    */
   public function setConfigApiVersion($configApiVersion)
   {
@@ -76,7 +86,9 @@ class ServiceMeshState extends \Google\Collection
     return $this->configApiVersion;
   }
   /**
-   * @param ServiceMeshControlPlaneManagement
+   * Output only. Status of control plane management
+   *
+   * @param ServiceMeshControlPlaneManagement $controlPlaneManagement
    */
   public function setControlPlaneManagement(ServiceMeshControlPlaneManagement $controlPlaneManagement)
   {
@@ -90,7 +102,9 @@ class ServiceMeshState extends \Google\Collection
     return $this->controlPlaneManagement;
   }
   /**
-   * @param ServiceMeshDataPlaneManagement
+   * Output only. Status of data plane management.
+   *
+   * @param ServiceMeshDataPlaneManagement $dataPlaneManagement
    */
   public function setDataPlaneManagement(ServiceMeshDataPlaneManagement $dataPlaneManagement)
   {

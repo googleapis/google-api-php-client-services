@@ -21,12 +21,18 @@ class ConfigManagementPolicyControllerMonitoring extends \Google\Collection
 {
   protected $collection_key = 'backends';
   /**
+   * Specifies the list of backends Policy Controller will export to. An empty
+   * list would effectively disable metrics export.
+   *
    * @var string[]
    */
   public $backends;
 
   /**
-   * @param string[]
+   * Specifies the list of backends Policy Controller will export to. An empty
+   * list would effectively disable metrics export.
+   *
+   * @param string[] $backends
    */
   public function setBackends($backends)
   {
