@@ -28,6 +28,8 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   protected $chatEngineConfigDataType = '';
   protected $chatEngineMetadataType = GoogleCloudDiscoveryengineV1EngineChatEngineMetadata::class;
   protected $chatEngineMetadataDataType = '';
+  protected $cmekConfigType = GoogleCloudDiscoveryengineV1CmekConfig::class;
+  protected $cmekConfigDataType = '';
   protected $commonConfigType = GoogleCloudDiscoveryengineV1EngineCommonConfig::class;
   protected $commonConfigDataType = '';
   /**
@@ -60,6 +62,10 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public $industryVertical;
   protected $mediaRecommendationEngineConfigType = GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfig::class;
   protected $mediaRecommendationEngineConfigDataType = '';
+  /**
+   * @var string[]
+   */
+  public $modelConfigs;
   /**
    * @var string
    */
@@ -116,6 +122,20 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public function getChatEngineMetadata()
   {
     return $this->chatEngineMetadata;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1CmekConfig
+   */
+  public function setCmekConfig(GoogleCloudDiscoveryengineV1CmekConfig $cmekConfig)
+  {
+    $this->cmekConfig = $cmekConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1CmekConfig
+   */
+  public function getCmekConfig()
+  {
+    return $this->cmekConfig;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1EngineCommonConfig
@@ -242,6 +262,20 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public function getMediaRecommendationEngineConfig()
   {
     return $this->mediaRecommendationEngineConfig;
+  }
+  /**
+   * @param string[]
+   */
+  public function setModelConfigs($modelConfigs)
+  {
+    $this->modelConfigs = $modelConfigs;
+  }
+  /**
+   * @return string[]
+   */
+  public function getModelConfigs()
+  {
+    return $this->modelConfigs;
   }
   /**
    * @param string

@@ -76,6 +76,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_dataStores_siteSearchEngine_targetSites_operations;
   public $projects_locations_collections_dataStores_suggestionDenyListEntries;
   public $projects_locations_collections_dataStores_userEvents;
+  public $projects_locations_collections_dataStores_widgetConfigs;
   public $projects_locations_collections_engines;
   public $projects_locations_collections_engines_assistants;
   public $projects_locations_collections_engines_completionConfig;
@@ -85,6 +86,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_engines_servingConfigs;
   public $projects_locations_collections_engines_sessions;
   public $projects_locations_collections_engines_sessions_answers;
+  public $projects_locations_collections_engines_widgetConfigs;
   public $projects_locations_collections_operations;
   public $projects_locations_dataStores;
   public $projects_locations_dataStores_branches;
@@ -105,6 +107,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_siteSearchEngine_targetSites;
   public $projects_locations_dataStores_suggestionDenyListEntries;
   public $projects_locations_dataStores_userEvents;
+  public $projects_locations_dataStores_widgetConfigs;
   public $projects_locations_groundingConfigs;
   public $projects_locations_identityMappingStores;
   public $projects_locations_identityMappingStores_operations;
@@ -114,6 +117,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_rankingConfigs;
   public $projects_locations_userEvents;
   public $projects_locations_userStores;
+  public $projects_locations_userStores_licenseConfigsUsageStats;
   public $projects_locations_userStores_userLicenses;
   public $projects_operations;
   public $rootUrlTemplate;
@@ -1776,6 +1780,48 @@ class DiscoveryEngine extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_collections_dataStores_widgetConfigs = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresWidgetConfigs(
+        $this,
+        $this->serviceName,
+        'widgetConfigs',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'acceptCache' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'getWidgetConfigRequestOption.turnOffCollectionComponents' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_collections_engines = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEngines(
         $this,
         $this->serviceName,
@@ -2346,6 +2392,48 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_engines_widgetConfigs = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsEnginesWidgetConfigs(
+        $this,
+        $this->serviceName,
+        'widgetConfigs',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'acceptCache' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'getWidgetConfigRequestOption.turnOffCollectionComponents' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -3569,6 +3657,48 @@ class DiscoveryEngine extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_dataStores_widgetConfigs = new DiscoveryEngine\Resource\ProjectsLocationsDataStoresWidgetConfigs(
+        $this,
+        $this->serviceName,
+        'widgetConfigs',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'acceptCache' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'getWidgetConfigRequestOption.turnOffCollectionComponents' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_groundingConfigs = new DiscoveryEngine\Resource\ProjectsLocationsGroundingConfigs(
         $this,
         $this->serviceName,
@@ -3995,6 +4125,26 @@ class DiscoveryEngine extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_userStores_licenseConfigsUsageStats = new DiscoveryEngine\Resource\ProjectsLocationsUserStoresLicenseConfigsUsageStats(
+        $this,
+        $this->serviceName,
+        'licenseConfigsUsageStats',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/licenseConfigsUsageStats',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

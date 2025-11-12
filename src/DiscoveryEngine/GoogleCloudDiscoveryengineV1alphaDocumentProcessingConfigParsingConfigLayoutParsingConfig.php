@@ -31,6 +31,10 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayo
   /**
    * @var bool
    */
+  public $enableLlmLayoutParsing;
+  /**
+   * @var bool
+   */
   public $enableTableAnnotation;
   /**
    * @var string[]
@@ -76,6 +80,20 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayo
   public function getEnableImageAnnotation()
   {
     return $this->enableImageAnnotation;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableLlmLayoutParsing($enableLlmLayoutParsing)
+  {
+    $this->enableLlmLayoutParsing = $enableLlmLayoutParsing;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableLlmLayoutParsing()
+  {
+    return $this->enableLlmLayoutParsing;
   }
   /**
    * @param bool

@@ -28,6 +28,8 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
   protected $chatEngineConfigDataType = '';
   protected $chatEngineMetadataType = GoogleCloudDiscoveryengineV1alphaEngineChatEngineMetadata::class;
   protected $chatEngineMetadataDataType = '';
+  protected $cmekConfigType = GoogleCloudDiscoveryengineV1alphaCmekConfig::class;
+  protected $cmekConfigDataType = '';
   protected $commonConfigType = GoogleCloudDiscoveryengineV1alphaEngineCommonConfig::class;
   protected $commonConfigDataType = '';
   /**
@@ -60,6 +62,10 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
   public $industryVertical;
   protected $mediaRecommendationEngineConfigType = GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig::class;
   protected $mediaRecommendationEngineConfigDataType = '';
+  /**
+   * @var string[]
+   */
+  public $modelConfigs;
   /**
    * @var string
    */
@@ -120,6 +126,20 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
   public function getChatEngineMetadata()
   {
     return $this->chatEngineMetadata;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaCmekConfig
+   */
+  public function setCmekConfig(GoogleCloudDiscoveryengineV1alphaCmekConfig $cmekConfig)
+  {
+    $this->cmekConfig = $cmekConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaCmekConfig
+   */
+  public function getCmekConfig()
+  {
+    return $this->cmekConfig;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaEngineCommonConfig
@@ -246,6 +266,20 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
   public function getMediaRecommendationEngineConfig()
   {
     return $this->mediaRecommendationEngineConfig;
+  }
+  /**
+   * @param string[]
+   */
+  public function setModelConfigs($modelConfigs)
+  {
+    $this->modelConfigs = $modelConfigs;
+  }
+  /**
+   * @return string[]
+   */
+  public function getModelConfigs()
+  {
+    return $this->modelConfigs;
   }
   /**
    * @param string
