@@ -26,7 +26,9 @@ class ForwardingRulesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param ForwardingRule[]
+   * A list of forwarding rules contained in this scope.
+   *
+   * @param ForwardingRule[] $forwardingRules
    */
   public function setForwardingRules($forwardingRules)
   {
@@ -40,7 +42,10 @@ class ForwardingRulesScopedList extends \Google\Collection
     return $this->forwardingRules;
   }
   /**
-   * @param ForwardingRulesScopedListWarning
+   * Informational warning which replaces the list of forwarding rules when the
+   * list is empty.
+   *
+   * @param ForwardingRulesScopedListWarning $warning
    */
   public function setWarning(ForwardingRulesScopedListWarning $warning)
   {

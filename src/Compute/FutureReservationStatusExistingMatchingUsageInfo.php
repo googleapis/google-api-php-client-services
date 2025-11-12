@@ -20,16 +20,24 @@ namespace Google\Service\Compute;
 class FutureReservationStatusExistingMatchingUsageInfo extends \Google\Model
 {
   /**
+   * Count to represent min(FR total_count,
+   * matching_reserved_capacity+matching_unreserved_instances)
+   *
    * @var string
    */
   public $count;
   /**
+   * Timestamp when the matching usage was calculated
+   *
    * @var string
    */
   public $timestamp;
 
   /**
-   * @param string
+   * Count to represent min(FR total_count,
+   * matching_reserved_capacity+matching_unreserved_instances)
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -43,7 +51,9 @@ class FutureReservationStatusExistingMatchingUsageInfo extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * Timestamp when the matching usage was calculated
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {

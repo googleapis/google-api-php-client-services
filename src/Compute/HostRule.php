@@ -21,20 +21,37 @@ class HostRule extends \Google\Collection
 {
   protected $collection_key = 'hosts';
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * The list of host patterns to match. They must be valid hostnames with
+   * optional port numbers in the format host:port.* matches any string of
+   * ([a-z0-9-.]*). In that case, * must be the first character, and if followed
+   * by anything, the immediate following character must be either - or ..
+   *
+   * * based matching is not supported when the URL map is bound to a target
+   * gRPC proxy that has the validateForProxyless field set to true.
+   *
    * @var string[]
    */
   public $hosts;
   /**
+   * The name of the PathMatcher to use to match the path portion of the URL if
+   * the hostRule matches the URL's host portion.
+   *
    * @var string
    */
   public $pathMatcher;
 
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -48,7 +65,15 @@ class HostRule extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * The list of host patterns to match. They must be valid hostnames with
+   * optional port numbers in the format host:port.* matches any string of
+   * ([a-z0-9-.]*). In that case, * must be the first character, and if followed
+   * by anything, the immediate following character must be either - or ..
+   *
+   * * based matching is not supported when the URL map is bound to a target
+   * gRPC proxy that has the validateForProxyless field set to true.
+   *
+   * @param string[] $hosts
    */
   public function setHosts($hosts)
   {
@@ -62,7 +87,10 @@ class HostRule extends \Google\Collection
     return $this->hosts;
   }
   /**
-   * @param string
+   * The name of the PathMatcher to use to match the path portion of the URL if
+   * the hostRule matches the URL's host portion.
+   *
+   * @param string $pathMatcher
    */
   public function setPathMatcher($pathMatcher)
   {

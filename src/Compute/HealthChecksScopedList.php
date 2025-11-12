@@ -26,7 +26,9 @@ class HealthChecksScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param HealthCheck[]
+   * A list of HealthChecks contained in this scope.
+   *
+   * @param HealthCheck[] $healthChecks
    */
   public function setHealthChecks($healthChecks)
   {
@@ -40,7 +42,10 @@ class HealthChecksScopedList extends \Google\Collection
     return $this->healthChecks;
   }
   /**
-   * @param HealthChecksScopedListWarning
+   * Informational warning which replaces the list of backend services when the
+   * list is empty.
+   *
+   * @param HealthChecksScopedListWarning $warning
    */
   public function setWarning(HealthChecksScopedListWarning $warning)
   {

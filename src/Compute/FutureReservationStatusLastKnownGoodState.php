@@ -20,6 +20,66 @@ namespace Google\Service\Compute;
 class FutureReservationStatusLastKnownGoodState extends \Google\Model
 {
   /**
+   * Future reservation is approved by GCP.
+   */
+  public const PROCUREMENT_STATUS_APPROVED = 'APPROVED';
+  /**
+   * Future reservation is cancelled by the customer.
+   */
+  public const PROCUREMENT_STATUS_CANCELLED = 'CANCELLED';
+  /**
+   * Future reservation is committed by the customer.
+   */
+  public const PROCUREMENT_STATUS_COMMITTED = 'COMMITTED';
+  /**
+   * Future reservation is rejected by GCP.
+   */
+  public const PROCUREMENT_STATUS_DECLINED = 'DECLINED';
+  /**
+   * Related status for PlanningStatus.Draft. Transitions to PENDING_APPROVAL
+   * upon user submitting FR.
+   */
+  public const PROCUREMENT_STATUS_DRAFTING = 'DRAFTING';
+  /**
+   * Future reservation failed. No additional reservations were provided.
+   */
+  public const PROCUREMENT_STATUS_FAILED = 'FAILED';
+  /**
+   * Future reservation is partially fulfilled. Additional reservations were
+   * provided but did not reach total_count reserved instance slots.
+   */
+  public const PROCUREMENT_STATUS_FAILED_PARTIALLY_FULFILLED = 'FAILED_PARTIALLY_FULFILLED';
+  /**
+   * Future reservation is fulfilled completely.
+   */
+  public const PROCUREMENT_STATUS_FULFILLED = 'FULFILLED';
+  /**
+   * An Amendment to the Future Reservation has been requested. If the Amendment
+   * is declined, the Future Reservation will be restored to the last known good
+   * state.
+   */
+  public const PROCUREMENT_STATUS_PENDING_AMENDMENT_APPROVAL = 'PENDING_AMENDMENT_APPROVAL';
+  /**
+   * Future reservation is pending approval by GCP.
+   */
+  public const PROCUREMENT_STATUS_PENDING_APPROVAL = 'PENDING_APPROVAL';
+  public const PROCUREMENT_STATUS_PROCUREMENT_STATUS_UNSPECIFIED = 'PROCUREMENT_STATUS_UNSPECIFIED';
+  /**
+   * Future reservation is being procured by GCP. Beyond this point, Future
+   * reservation is locked and no further modifications are allowed.
+   */
+  public const PROCUREMENT_STATUS_PROCURING = 'PROCURING';
+  /**
+   * Future reservation capacity is being provisioned. This state will be
+   * entered after start_time, while reservations are being created to provide
+   * total_count reserved instance slots. This state will not persist past
+   * start_time + 24h.
+   */
+  public const PROCUREMENT_STATUS_PROVISIONING = 'PROVISIONING';
+  /**
+   * [Output Only] The description of the FutureReservation before an amendment
+   * was requested.
+   *
    * @var string
    */
   public $description;
@@ -28,20 +88,32 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
   protected $futureReservationSpecsType = FutureReservationStatusLastKnownGoodStateFutureReservationSpecs::class;
   protected $futureReservationSpecsDataType = '';
   /**
+   * [Output Only] The lock time of the FutureReservation before an amendment
+   * was requested.
+   *
    * @var string
    */
   public $lockTime;
   /**
+   * [Output Only] The name prefix of the Future Reservation before an amendment
+   * was requested.
+   *
    * @var string
    */
   public $namePrefix;
   /**
+   * [Output Only] The status of the last known good state for the Future
+   * Reservation.
+   *
    * @var string
    */
   public $procurementStatus;
 
   /**
-   * @param string
+   * [Output Only] The description of the FutureReservation before an amendment
+   * was requested.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -55,7 +127,10 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->description;
   }
   /**
-   * @param FutureReservationStatusExistingMatchingUsageInfo
+   * [Output Only] Represents the matching usage for the future reservation
+   * before an amendment was requested.
+   *
+   * @param FutureReservationStatusExistingMatchingUsageInfo $existingMatchingUsageInfo
    */
   public function setExistingMatchingUsageInfo(FutureReservationStatusExistingMatchingUsageInfo $existingMatchingUsageInfo)
   {
@@ -69,7 +144,7 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->existingMatchingUsageInfo;
   }
   /**
-   * @param FutureReservationStatusLastKnownGoodStateFutureReservationSpecs
+   * @param FutureReservationStatusLastKnownGoodStateFutureReservationSpecs $futureReservationSpecs
    */
   public function setFutureReservationSpecs(FutureReservationStatusLastKnownGoodStateFutureReservationSpecs $futureReservationSpecs)
   {
@@ -83,7 +158,10 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->futureReservationSpecs;
   }
   /**
-   * @param string
+   * [Output Only] The lock time of the FutureReservation before an amendment
+   * was requested.
+   *
+   * @param string $lockTime
    */
   public function setLockTime($lockTime)
   {
@@ -97,7 +175,10 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->lockTime;
   }
   /**
-   * @param string
+   * [Output Only] The name prefix of the Future Reservation before an amendment
+   * was requested.
+   *
+   * @param string $namePrefix
    */
   public function setNamePrefix($namePrefix)
   {
@@ -111,14 +192,21 @@ class FutureReservationStatusLastKnownGoodState extends \Google\Model
     return $this->namePrefix;
   }
   /**
-   * @param string
+   * [Output Only] The status of the last known good state for the Future
+   * Reservation.
+   *
+   * Accepted values: APPROVED, CANCELLED, COMMITTED, DECLINED, DRAFTING,
+   * FAILED, FAILED_PARTIALLY_FULFILLED, FULFILLED, PENDING_AMENDMENT_APPROVAL,
+   * PENDING_APPROVAL, PROCUREMENT_STATUS_UNSPECIFIED, PROCURING, PROVISIONING
+   *
+   * @param self::PROCUREMENT_STATUS_* $procurementStatus
    */
   public function setProcurementStatus($procurementStatus)
   {
     $this->procurementStatus = $procurementStatus;
   }
   /**
-   * @return string
+   * @return self::PROCUREMENT_STATUS_*
    */
   public function getProcurementStatus()
   {

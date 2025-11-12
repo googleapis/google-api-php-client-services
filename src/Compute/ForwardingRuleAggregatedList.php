@@ -21,24 +21,39 @@ class ForwardingRuleAggregatedList extends \Google\Collection
 {
   protected $collection_key = 'unreachables';
   /**
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   *
    * @var string
    */
   public $id;
   protected $itemsType = ForwardingRulesScopedList::class;
   protected $itemsDataType = 'map';
   /**
+   * [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList
+   * for lists of forwarding rules.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * [Output Only] Server-defined URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] Unreachable resources.
+   *
    * @var string[]
    */
   public $unreachables;
@@ -46,7 +61,9 @@ class ForwardingRuleAggregatedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param string
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -60,7 +77,9 @@ class ForwardingRuleAggregatedList extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param ForwardingRulesScopedList[]
+   * A list of ForwardingRulesScopedList resources.
+   *
+   * @param ForwardingRulesScopedList[] $items
    */
   public function setItems($items)
   {
@@ -74,7 +93,10 @@ class ForwardingRuleAggregatedList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * [Output Only] Type of resource. Alwayscompute#forwardingRuleAggregatedList
+   * for lists of forwarding rules.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -88,7 +110,13 @@ class ForwardingRuleAggregatedList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -102,7 +130,9 @@ class ForwardingRuleAggregatedList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -116,7 +146,9 @@ class ForwardingRuleAggregatedList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string[]
+   * [Output Only] Unreachable resources.
+   *
+   * @param string[] $unreachables
    */
   public function setUnreachables($unreachables)
   {
@@ -130,7 +162,9 @@ class ForwardingRuleAggregatedList extends \Google\Collection
     return $this->unreachables;
   }
   /**
-   * @param ForwardingRuleAggregatedListWarning
+   * [Output Only] Informational warning message.
+   *
+   * @param ForwardingRuleAggregatedListWarning $warning
    */
   public function setWarning(ForwardingRuleAggregatedListWarning $warning)
   {

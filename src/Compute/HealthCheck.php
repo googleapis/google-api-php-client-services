@@ -19,16 +19,32 @@ namespace Google\Service\Compute;
 
 class HealthCheck extends \Google\Collection
 {
+  public const TYPE_GRPC = 'GRPC';
+  public const TYPE_GRPC_WITH_TLS = 'GRPC_WITH_TLS';
+  public const TYPE_HTTP = 'HTTP';
+  public const TYPE_HTTP2 = 'HTTP2';
+  public const TYPE_HTTPS = 'HTTPS';
+  public const TYPE_INVALID = 'INVALID';
+  public const TYPE_SSL = 'SSL';
+  public const TYPE_TCP = 'TCP';
   protected $collection_key = 'sourceRegions';
   /**
+   * How often (in seconds) to send a health check. The default value is 5
+   * seconds.
+   *
    * @var int
    */
   public $checkIntervalSec;
   /**
+   * [Output Only] Creation timestamp in3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
@@ -37,6 +53,9 @@ class HealthCheck extends \Google\Collection
   protected $grpcTlsHealthCheckType = GRPCTLSHealthCheck::class;
   protected $grpcTlsHealthCheckDataType = '';
   /**
+   * A so-far unhealthy instance will be marked healthy after this many
+   * consecutive successes. The default value is 2.
+   *
    * @var int
    */
   public $healthyThreshold;
@@ -47,28 +66,58 @@ class HealthCheck extends \Google\Collection
   protected $httpsHealthCheckType = HTTPSHealthCheck::class;
   protected $httpsHealthCheckDataType = '';
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * Type of the resource.
+   *
    * @var string
    */
   public $kind;
   protected $logConfigType = HealthCheckLogConfig::class;
   protected $logConfigDataType = '';
   /**
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035. For example,
+   * a name that is 1-63 characters long, matches the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This
+   * regular expression describes a name where the first character is a
+   * lowercase letter, and all following characters are a dash, lowercase
+   * letter, or digit, except the last character, which isn't a dash.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] Region where the health check resides.  Not applicable to
+   * global health checks.
+   *
    * @var string
    */
   public $region;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The list of cloud regions from which health checks are performed. If any
+   * regions are specified, then exactly 3 regions should be specified. The
+   * region names must be valid names of Google Cloud regions. This can only be
+   * set for global health check. If this list is non-empty, then there are
+   * restrictions on what other health check fields are supported and what other
+   * resources can use this health check:        - SSL, HTTP2, and GRPC
+   * protocols are not supported.    - The TCP request field is not supported.
+   * - The proxyHeader field for HTTP, HTTPS, and TCP is not    supported.    -
+   * The checkIntervalSec field must be at least 30.    - The health check
+   * cannot be used with BackendService nor with managed    instance group auto-
+   * healing.
+   *
    * @var string[]
    */
   public $sourceRegions;
@@ -77,20 +126,34 @@ class HealthCheck extends \Google\Collection
   protected $tcpHealthCheckType = TCPHealthCheck::class;
   protected $tcpHealthCheckDataType = '';
   /**
+   * How long (in seconds) to wait before claiming failure. The default value is
+   * 5 seconds. It is invalid for timeoutSec to have greater value than
+   * checkIntervalSec.
+   *
    * @var int
    */
   public $timeoutSec;
   /**
+   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or
+   * GRPC. Exactly one of the protocol-specific health check fields must be
+   * specified, which must matchtype field.
+   *
    * @var string
    */
   public $type;
   /**
+   * A so-far healthy instance will be marked unhealthy after this many
+   * consecutive failures. The default value is 2.
+   *
    * @var int
    */
   public $unhealthyThreshold;
 
   /**
-   * @param int
+   * How often (in seconds) to send a health check. The default value is 5
+   * seconds.
+   *
+   * @param int $checkIntervalSec
    */
   public function setCheckIntervalSec($checkIntervalSec)
   {
@@ -104,7 +167,9 @@ class HealthCheck extends \Google\Collection
     return $this->checkIntervalSec;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp in3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -118,7 +183,10 @@ class HealthCheck extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -132,7 +200,7 @@ class HealthCheck extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param GRPCHealthCheck
+   * @param GRPCHealthCheck $grpcHealthCheck
    */
   public function setGrpcHealthCheck(GRPCHealthCheck $grpcHealthCheck)
   {
@@ -146,7 +214,7 @@ class HealthCheck extends \Google\Collection
     return $this->grpcHealthCheck;
   }
   /**
-   * @param GRPCTLSHealthCheck
+   * @param GRPCTLSHealthCheck $grpcTlsHealthCheck
    */
   public function setGrpcTlsHealthCheck(GRPCTLSHealthCheck $grpcTlsHealthCheck)
   {
@@ -160,7 +228,10 @@ class HealthCheck extends \Google\Collection
     return $this->grpcTlsHealthCheck;
   }
   /**
-   * @param int
+   * A so-far unhealthy instance will be marked healthy after this many
+   * consecutive successes. The default value is 2.
+   *
+   * @param int $healthyThreshold
    */
   public function setHealthyThreshold($healthyThreshold)
   {
@@ -174,7 +245,7 @@ class HealthCheck extends \Google\Collection
     return $this->healthyThreshold;
   }
   /**
-   * @param HTTP2HealthCheck
+   * @param HTTP2HealthCheck $http2HealthCheck
    */
   public function setHttp2HealthCheck(HTTP2HealthCheck $http2HealthCheck)
   {
@@ -188,7 +259,7 @@ class HealthCheck extends \Google\Collection
     return $this->http2HealthCheck;
   }
   /**
-   * @param HTTPHealthCheck
+   * @param HTTPHealthCheck $httpHealthCheck
    */
   public function setHttpHealthCheck(HTTPHealthCheck $httpHealthCheck)
   {
@@ -202,7 +273,7 @@ class HealthCheck extends \Google\Collection
     return $this->httpHealthCheck;
   }
   /**
-   * @param HTTPSHealthCheck
+   * @param HTTPSHealthCheck $httpsHealthCheck
    */
   public function setHttpsHealthCheck(HTTPSHealthCheck $httpsHealthCheck)
   {
@@ -216,7 +287,10 @@ class HealthCheck extends \Google\Collection
     return $this->httpsHealthCheck;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -230,7 +304,9 @@ class HealthCheck extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Type of the resource.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -244,7 +320,9 @@ class HealthCheck extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param HealthCheckLogConfig
+   * Configure logging on this health check.
+   *
+   * @param HealthCheckLogConfig $logConfig
    */
   public function setLogConfig(HealthCheckLogConfig $logConfig)
   {
@@ -258,7 +336,15 @@ class HealthCheck extends \Google\Collection
     return $this->logConfig;
   }
   /**
-   * @param string
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035. For example,
+   * a name that is 1-63 characters long, matches the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?`, and otherwise complies with RFC1035. This
+   * regular expression describes a name where the first character is a
+   * lowercase letter, and all following characters are a dash, lowercase
+   * letter, or digit, except the last character, which isn't a dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -272,7 +358,10 @@ class HealthCheck extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] Region where the health check resides.  Not applicable to
+   * global health checks.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -286,7 +375,9 @@ class HealthCheck extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -300,7 +391,19 @@ class HealthCheck extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string[]
+   * The list of cloud regions from which health checks are performed. If any
+   * regions are specified, then exactly 3 regions should be specified. The
+   * region names must be valid names of Google Cloud regions. This can only be
+   * set for global health check. If this list is non-empty, then there are
+   * restrictions on what other health check fields are supported and what other
+   * resources can use this health check:        - SSL, HTTP2, and GRPC
+   * protocols are not supported.    - The TCP request field is not supported.
+   * - The proxyHeader field for HTTP, HTTPS, and TCP is not    supported.    -
+   * The checkIntervalSec field must be at least 30.    - The health check
+   * cannot be used with BackendService nor with managed    instance group auto-
+   * healing.
+   *
+   * @param string[] $sourceRegions
    */
   public function setSourceRegions($sourceRegions)
   {
@@ -314,7 +417,7 @@ class HealthCheck extends \Google\Collection
     return $this->sourceRegions;
   }
   /**
-   * @param SSLHealthCheck
+   * @param SSLHealthCheck $sslHealthCheck
    */
   public function setSslHealthCheck(SSLHealthCheck $sslHealthCheck)
   {
@@ -328,7 +431,7 @@ class HealthCheck extends \Google\Collection
     return $this->sslHealthCheck;
   }
   /**
-   * @param TCPHealthCheck
+   * @param TCPHealthCheck $tcpHealthCheck
    */
   public function setTcpHealthCheck(TCPHealthCheck $tcpHealthCheck)
   {
@@ -342,7 +445,11 @@ class HealthCheck extends \Google\Collection
     return $this->tcpHealthCheck;
   }
   /**
-   * @param int
+   * How long (in seconds) to wait before claiming failure. The default value is
+   * 5 seconds. It is invalid for timeoutSec to have greater value than
+   * checkIntervalSec.
+   *
+   * @param int $timeoutSec
    */
   public function setTimeoutSec($timeoutSec)
   {
@@ -356,21 +463,30 @@ class HealthCheck extends \Google\Collection
     return $this->timeoutSec;
   }
   /**
-   * @param string
+   * Specifies the type of the healthCheck, either TCP,SSL, HTTP, HTTPS,HTTP2 or
+   * GRPC. Exactly one of the protocol-specific health check fields must be
+   * specified, which must matchtype field.
+   *
+   * Accepted values: GRPC, GRPC_WITH_TLS, HTTP, HTTP2, HTTPS, INVALID, SSL, TCP
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param int
+   * A so-far healthy instance will be marked unhealthy after this many
+   * consecutive failures. The default value is 2.
+   *
+   * @param int $unhealthyThreshold
    */
   public function setUnhealthyThreshold($unhealthyThreshold)
   {

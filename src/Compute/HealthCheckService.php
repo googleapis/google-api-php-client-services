@@ -19,58 +19,138 @@ namespace Google\Service\Compute;
 
 class HealthCheckService extends \Google\Collection
 {
+  /**
+   * If any backend's health check reports UNHEALTHY, then UNHEALTHY is the
+   * HealthState of the entire health check service. If all backend's are
+   * healthy, the HealthState of the health check service isHEALTHY.
+   */
+  public const HEALTH_STATUS_AGGREGATION_POLICY_AND = 'AND';
+  /**
+   * An EndpointHealth message is returned for each backend in the health check
+   * service.
+   */
+  public const HEALTH_STATUS_AGGREGATION_POLICY_NO_AGGREGATION = 'NO_AGGREGATION';
   protected $collection_key = 'notificationEndpoints';
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Fingerprint of this resource. A hash of the contents stored in this object.
+   * This field is used in optimistic locking. This field will be ignored when
+   * inserting a HealthCheckService. An up-to-date fingerprint must be provided
+   * in order to patch/update the HealthCheckService; Otherwise, the request
+   * will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve the HealthCheckService.
+   *
    * @var string
    */
   public $fingerprint;
   /**
+   * A list of URLs to the HealthCheck resources. Must have at least one
+   * HealthCheck, and not more than 10 for regionalHealthCheckService, and not
+   * more than 1 for globalHealthCheckService.HealthCheck resources must
+   * haveportSpecification=USE_SERVING_PORT orportSpecification=USE_FIXED_PORT.
+   * For regional HealthCheckService, theHealthCheck must be regional and in the
+   * same region. For global HealthCheckService,HealthCheck must be global. Mix
+   * of regional and globalHealthChecks is not supported. Multiple
+   * regionalHealthChecks must belong to the same region. RegionalHealthChecks
+   * must belong to the same region as zones ofNetworkEndpointGroups. For
+   * globalHealthCheckService using globalINTERNET_IP_PORT
+   * NetworkEndpointGroups, the global HealthChecks must specify sourceRegions,
+   * and HealthChecks that specify sourceRegions can only be used with global
+   * INTERNET_IP_PORTNetworkEndpointGroups.
+   *
    * @var string[]
    */
   public $healthChecks;
   /**
+   * Optional. Policy for how the results from multiple health checks for the
+   * same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified.
+   * - NO_AGGREGATION. An EndpointHealth message is    returned for each  pair
+   * in the health check    service.    - AND. If any health check of an
+   * endpoint reportsUNHEALTHY, then UNHEALTHY is theHealthState of the
+   * endpoint. If all health checks reportHEALTHY, the HealthState of the
+   * endpoint isHEALTHY.
+   *
+   * . This is only allowed with regional HealthCheckService.
+   *
    * @var string
    */
   public $healthStatusAggregationPolicy;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output only] Type of the resource. Alwayscompute#healthCheckServicefor
+   * health check services.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource. The name must be 1-63 characters long, and comply
+   * with RFC1035. Specifically, the name must be 1-63 characters long and match
+   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
+   * character must be a lowercase letter, and all following characters must be
+   * a dash, lowercase letter, or digit, except the last character, which cannot
+   * be a dash.
+   *
    * @var string
    */
   public $name;
   /**
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more
+   * than 100.  For regionalHealthCheckService, NEGs must be in zones in the
+   * region of the HealthCheckService. For globalHealthCheckServices, the
+   * NetworkEndpointGroups must be global INTERNET_IP_PORT.
+   *
    * @var string[]
    */
   public $networkEndpointGroups;
   /**
+   * A list of URLs to the NotificationEndpoint resources. Must not have more
+   * than 10.  A list of endpoints for receiving notifications of change in
+   * health status. For regionalHealthCheckService,NotificationEndpoint must be
+   * regional and in the same region. For global
+   * HealthCheckService,NotificationEndpoint must be global.
+   *
    * @var string[]
    */
   public $notificationEndpoints;
   /**
+   * [Output Only] URL of the region where the health check service resides.
+   * This field is not applicable to global health check services. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
+   *
    * @var string
    */
   public $region;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
 
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -84,7 +164,10 @@ class HealthCheckService extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -98,7 +181,14 @@ class HealthCheckService extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Fingerprint of this resource. A hash of the contents stored in this object.
+   * This field is used in optimistic locking. This field will be ignored when
+   * inserting a HealthCheckService. An up-to-date fingerprint must be provided
+   * in order to patch/update the HealthCheckService; Otherwise, the request
+   * will fail with error 412 conditionNotMet. To see the latest fingerprint,
+   * make a get() request to retrieve the HealthCheckService.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -112,7 +202,21 @@ class HealthCheckService extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * @param string[]
+   * A list of URLs to the HealthCheck resources. Must have at least one
+   * HealthCheck, and not more than 10 for regionalHealthCheckService, and not
+   * more than 1 for globalHealthCheckService.HealthCheck resources must
+   * haveportSpecification=USE_SERVING_PORT orportSpecification=USE_FIXED_PORT.
+   * For regional HealthCheckService, theHealthCheck must be regional and in the
+   * same region. For global HealthCheckService,HealthCheck must be global. Mix
+   * of regional and globalHealthChecks is not supported. Multiple
+   * regionalHealthChecks must belong to the same region. RegionalHealthChecks
+   * must belong to the same region as zones ofNetworkEndpointGroups. For
+   * globalHealthCheckService using globalINTERNET_IP_PORT
+   * NetworkEndpointGroups, the global HealthChecks must specify sourceRegions,
+   * and HealthChecks that specify sourceRegions can only be used with global
+   * INTERNET_IP_PORTNetworkEndpointGroups.
+   *
+   * @param string[] $healthChecks
    */
   public function setHealthChecks($healthChecks)
   {
@@ -126,21 +230,36 @@ class HealthCheckService extends \Google\Collection
     return $this->healthChecks;
   }
   /**
-   * @param string
+   * Optional. Policy for how the results from multiple health checks for the
+   * same endpoint are aggregated. Defaults to NO_AGGREGATION if unspecified.
+   * - NO_AGGREGATION. An EndpointHealth message is    returned for each  pair
+   * in the health check    service.    - AND. If any health check of an
+   * endpoint reportsUNHEALTHY, then UNHEALTHY is theHealthState of the
+   * endpoint. If all health checks reportHEALTHY, the HealthState of the
+   * endpoint isHEALTHY.
+   *
+   * . This is only allowed with regional HealthCheckService.
+   *
+   * Accepted values: AND, NO_AGGREGATION
+   *
+   * @param self::HEALTH_STATUS_AGGREGATION_POLICY_* $healthStatusAggregationPolicy
    */
   public function setHealthStatusAggregationPolicy($healthStatusAggregationPolicy)
   {
     $this->healthStatusAggregationPolicy = $healthStatusAggregationPolicy;
   }
   /**
-   * @return string
+   * @return self::HEALTH_STATUS_AGGREGATION_POLICY_*
    */
   public function getHealthStatusAggregationPolicy()
   {
     return $this->healthStatusAggregationPolicy;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -154,7 +273,10 @@ class HealthCheckService extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * [Output only] Type of the resource. Alwayscompute#healthCheckServicefor
+   * health check services.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -168,7 +290,14 @@ class HealthCheckService extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource. The name must be 1-63 characters long, and comply
+   * with RFC1035. Specifically, the name must be 1-63 characters long and match
+   * the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
+   * character must be a lowercase letter, and all following characters must be
+   * a dash, lowercase letter, or digit, except the last character, which cannot
+   * be a dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -182,7 +311,12 @@ class HealthCheckService extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * A list of URLs to the NetworkEndpointGroup resources. Must not have more
+   * than 100.  For regionalHealthCheckService, NEGs must be in zones in the
+   * region of the HealthCheckService. For globalHealthCheckServices, the
+   * NetworkEndpointGroups must be global INTERNET_IP_PORT.
+   *
+   * @param string[] $networkEndpointGroups
    */
   public function setNetworkEndpointGroups($networkEndpointGroups)
   {
@@ -196,7 +330,13 @@ class HealthCheckService extends \Google\Collection
     return $this->networkEndpointGroups;
   }
   /**
-   * @param string[]
+   * A list of URLs to the NotificationEndpoint resources. Must not have more
+   * than 10.  A list of endpoints for receiving notifications of change in
+   * health status. For regionalHealthCheckService,NotificationEndpoint must be
+   * regional and in the same region. For global
+   * HealthCheckService,NotificationEndpoint must be global.
+   *
+   * @param string[] $notificationEndpoints
    */
   public function setNotificationEndpoints($notificationEndpoints)
   {
@@ -210,7 +350,12 @@ class HealthCheckService extends \Google\Collection
     return $this->notificationEndpoints;
   }
   /**
-   * @param string
+   * [Output Only] URL of the region where the health check service resides.
+   * This field is not applicable to global health check services. You must
+   * specify this field as part of the HTTP request URL. It is not settable as a
+   * field in the request body.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -224,7 +369,9 @@ class HealthCheckService extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {

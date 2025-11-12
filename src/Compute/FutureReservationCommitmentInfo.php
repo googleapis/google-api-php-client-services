@@ -19,21 +19,45 @@ namespace Google\Service\Compute;
 
 class FutureReservationCommitmentInfo extends \Google\Model
 {
+  public const COMMITMENT_PLAN_INVALID = 'INVALID';
+  public const COMMITMENT_PLAN_THIRTY_SIX_MONTH = 'THIRTY_SIX_MONTH';
+  public const COMMITMENT_PLAN_TWELVE_MONTH = 'TWELVE_MONTH';
   /**
+   * All associated parent Committed Used Discount(s) end-date/term will be
+   * extended to the end-time of this future reservation. Default is to extend
+   * previous commitment(s) time to the end_time of the reservation.
+   */
+  public const PREVIOUS_COMMITMENT_TERMS_EXTEND = 'EXTEND';
+  /**
+   * No changes to associated parents Committed Used Discount(s) terms.
+   */
+  public const PREVIOUS_COMMITMENT_TERMS_PREVIOUSCOMMITMENTTERM_UNSPECIFIED = 'PREVIOUSCOMMITMENTTERM_UNSPECIFIED';
+  /**
+   * name of the commitment where capacity is being delivered to.
+   *
    * @var string
    */
   public $commitmentName;
   /**
+   * Indicates if a Commitment needs to be created as part of FR delivery. If
+   * this field is not present, then no commitment needs to be created.
+   *
    * @var string
    */
   public $commitmentPlan;
   /**
+   * Only applicable if FR is delivering to the same reservation. If set, all
+   * parent commitments will be extended to match the end date of the plan for
+   * this commitment.
+   *
    * @var string
    */
   public $previousCommitmentTerms;
 
   /**
-   * @param string
+   * name of the commitment where capacity is being delivered to.
+   *
+   * @param string $commitmentName
    */
   public function setCommitmentName($commitmentName)
   {
@@ -47,28 +71,39 @@ class FutureReservationCommitmentInfo extends \Google\Model
     return $this->commitmentName;
   }
   /**
-   * @param string
+   * Indicates if a Commitment needs to be created as part of FR delivery. If
+   * this field is not present, then no commitment needs to be created.
+   *
+   * Accepted values: INVALID, THIRTY_SIX_MONTH, TWELVE_MONTH
+   *
+   * @param self::COMMITMENT_PLAN_* $commitmentPlan
    */
   public function setCommitmentPlan($commitmentPlan)
   {
     $this->commitmentPlan = $commitmentPlan;
   }
   /**
-   * @return string
+   * @return self::COMMITMENT_PLAN_*
    */
   public function getCommitmentPlan()
   {
     return $this->commitmentPlan;
   }
   /**
-   * @param string
+   * Only applicable if FR is delivering to the same reservation. If set, all
+   * parent commitments will be extended to match the end date of the plan for
+   * this commitment.
+   *
+   * Accepted values: EXTEND, PREVIOUSCOMMITMENTTERM_UNSPECIFIED
+   *
+   * @param self::PREVIOUS_COMMITMENT_TERMS_* $previousCommitmentTerms
    */
   public function setPreviousCommitmentTerms($previousCommitmentTerms)
   {
     $this->previousCommitmentTerms = $previousCommitmentTerms;
   }
   /**
-   * @return string
+   * @return self::PREVIOUS_COMMITMENT_TERMS_*
    */
   public function getPreviousCommitmentTerms()
   {

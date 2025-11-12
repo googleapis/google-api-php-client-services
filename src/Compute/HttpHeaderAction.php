@@ -23,18 +23,27 @@ class HttpHeaderAction extends \Google\Collection
   protected $requestHeadersToAddType = HttpHeaderOption::class;
   protected $requestHeadersToAddDataType = 'array';
   /**
+   * A list of header names for headers that need to be removed from the request
+   * before forwarding the request to the backendService.
+   *
    * @var string[]
    */
   public $requestHeadersToRemove;
   protected $responseHeadersToAddType = HttpHeaderOption::class;
   protected $responseHeadersToAddDataType = 'array';
   /**
+   * A list of header names for headers that need to be removed from the
+   * response before sending the response back to the client.
+   *
    * @var string[]
    */
   public $responseHeadersToRemove;
 
   /**
-   * @param HttpHeaderOption[]
+   * Headers to add to a matching request before forwarding the request to
+   * thebackendService.
+   *
+   * @param HttpHeaderOption[] $requestHeadersToAdd
    */
   public function setRequestHeadersToAdd($requestHeadersToAdd)
   {
@@ -48,7 +57,10 @@ class HttpHeaderAction extends \Google\Collection
     return $this->requestHeadersToAdd;
   }
   /**
-   * @param string[]
+   * A list of header names for headers that need to be removed from the request
+   * before forwarding the request to the backendService.
+   *
+   * @param string[] $requestHeadersToRemove
    */
   public function setRequestHeadersToRemove($requestHeadersToRemove)
   {
@@ -62,7 +74,9 @@ class HttpHeaderAction extends \Google\Collection
     return $this->requestHeadersToRemove;
   }
   /**
-   * @param HttpHeaderOption[]
+   * Headers to add the response before sending the response back to the client.
+   *
+   * @param HttpHeaderOption[] $responseHeadersToAdd
    */
   public function setResponseHeadersToAdd($responseHeadersToAdd)
   {
@@ -76,7 +90,10 @@ class HttpHeaderAction extends \Google\Collection
     return $this->responseHeadersToAdd;
   }
   /**
-   * @param string[]
+   * A list of header names for headers that need to be removed from the
+   * response before sending the response back to the client.
+   *
+   * @param string[] $responseHeadersToRemove
    */
   public function setResponseHeadersToRemove($responseHeadersToRemove)
   {

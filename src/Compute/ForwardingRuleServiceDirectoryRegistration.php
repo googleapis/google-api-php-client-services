@@ -20,20 +20,31 @@ namespace Google\Service\Compute;
 class ForwardingRuleServiceDirectoryRegistration extends \Google\Model
 {
   /**
+   * Service Directory namespace to register the forwarding rule under.
+   *
    * @var string
    */
   public $namespace;
   /**
+   * Service Directory service to register the forwarding rule under.
+   *
    * @var string
    */
   public $service;
   /**
+   * [Optional] Service Directory region to register this global forwarding rule
+   * under. Default to "us-central1". Only used for PSC for Google APIs. All PSC
+   * for Google APIs forwarding rules on the same network should use the same
+   * Service Directory region.
+   *
    * @var string
    */
   public $serviceDirectoryRegion;
 
   /**
-   * @param string
+   * Service Directory namespace to register the forwarding rule under.
+   *
+   * @param string $namespace
    */
   public function setNamespace($namespace)
   {
@@ -47,7 +58,9 @@ class ForwardingRuleServiceDirectoryRegistration extends \Google\Model
     return $this->namespace;
   }
   /**
-   * @param string
+   * Service Directory service to register the forwarding rule under.
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -61,7 +74,12 @@ class ForwardingRuleServiceDirectoryRegistration extends \Google\Model
     return $this->service;
   }
   /**
-   * @param string
+   * [Optional] Service Directory region to register this global forwarding rule
+   * under. Default to "us-central1". Only used for PSC for Google APIs. All PSC
+   * for Google APIs forwarding rules on the same network should use the same
+   * Service Directory region.
+   *
+   * @param string $serviceDirectoryRegion
    */
   public function setServiceDirectoryRegion($serviceDirectoryRegion)
   {

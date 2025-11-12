@@ -19,17 +19,29 @@ namespace Google\Service\Compute;
 
 class FirewallLogConfig extends \Google\Model
 {
+  public const METADATA_EXCLUDE_ALL_METADATA = 'EXCLUDE_ALL_METADATA';
+  public const METADATA_INCLUDE_ALL_METADATA = 'INCLUDE_ALL_METADATA';
   /**
+   * This field denotes whether to enable logging for a particular firewall
+   * rule.
+   *
    * @var bool
    */
   public $enable;
   /**
+   * This field can only be specified for a particular firewall rule if logging
+   * is enabled for that rule. This field denotes whether to include or exclude
+   * metadata for firewall logs.
+   *
    * @var string
    */
   public $metadata;
 
   /**
-   * @param bool
+   * This field denotes whether to enable logging for a particular firewall
+   * rule.
+   *
+   * @param bool $enable
    */
   public function setEnable($enable)
   {
@@ -43,14 +55,20 @@ class FirewallLogConfig extends \Google\Model
     return $this->enable;
   }
   /**
-   * @param string
+   * This field can only be specified for a particular firewall rule if logging
+   * is enabled for that rule. This field denotes whether to include or exclude
+   * metadata for firewall logs.
+   *
+   * Accepted values: EXCLUDE_ALL_METADATA, INCLUDE_ALL_METADATA
+   *
+   * @param self::METADATA_* $metadata
    */
   public function setMetadata($metadata)
   {
     $this->metadata = $metadata;
   }
   /**
-   * @return string
+   * @return self::METADATA_*
    */
   public function getMetadata()
   {

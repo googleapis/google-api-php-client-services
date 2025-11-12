@@ -19,17 +19,26 @@ namespace Google\Service\Compute;
 
 class FirewallPolicyRuleSecureTag extends \Google\Model
 {
+  public const STATE_EFFECTIVE = 'EFFECTIVE';
+  public const STATE_INEFFECTIVE = 'INEFFECTIVE';
   /**
+   * Name of the secure tag, created with TagManager's TagValue API.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`.
+   * A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Name of the secure tag, created with TagManager's TagValue API.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,14 +52,19 @@ class FirewallPolicyRuleSecureTag extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] State of the secure tag, either `EFFECTIVE` or `INEFFECTIVE`.
+   * A secure tag is `INEFFECTIVE` when it is deleted or its network is deleted.
+   *
+   * Accepted values: EFFECTIVE, INEFFECTIVE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -25,7 +25,10 @@ class HttpFaultInjection extends \Google\Model
   protected $delayDataType = '';
 
   /**
-   * @param HttpFaultAbort
+   * The specification for how client requests are aborted as part of fault
+   * injection.
+   *
+   * @param HttpFaultAbort $abort
    */
   public function setAbort(HttpFaultAbort $abort)
   {
@@ -39,7 +42,10 @@ class HttpFaultInjection extends \Google\Model
     return $this->abort;
   }
   /**
-   * @param HttpFaultDelay
+   * The specification for how client requests are delayed as part of fault
+   * injection, before being sent to a backend service.
+   *
+   * @param HttpFaultDelay $delay
    */
   public function setDelay(HttpFaultDelay $delay)
   {

@@ -20,60 +20,106 @@ namespace Google\Service\Compute;
 class HttpsHealthCheck extends \Google\Model
 {
   /**
+   * How often (in seconds) to send a health check. The default value is 5
+   * seconds.
+   *
    * @var int
    */
   public $checkIntervalSec;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * A so-far unhealthy instance will be marked healthy after this many
+   * consecutive successes. The default value is 2.
+   *
    * @var int
    */
   public $healthyThreshold;
   /**
+   * The value of the host header in the HTTPS health check request. If left
+   * empty (default value), the public IP on behalf of which this health check
+   * is performed will be used.
+   *
    * @var string
    */
   public $host;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * Type of the resource.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
    * @var string
    */
   public $name;
   /**
+   * The TCP port number for the HTTPS health check request. The default value
+   * is 443.
+   *
    * @var int
    */
   public $port;
   /**
+   * The request path of the HTTPS health check request. The default value is
+   * "/". Must comply withRFC3986.
+   *
    * @var string
    */
   public $requestPath;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * How long (in seconds) to wait before claiming failure. The default value is
+   * 5 seconds. It is invalid for timeoutSec to have a greater value than
+   * checkIntervalSec.
+   *
    * @var int
    */
   public $timeoutSec;
   /**
+   * A so-far healthy instance will be marked unhealthy after this many
+   * consecutive failures. The default value is 2.
+   *
    * @var int
    */
   public $unhealthyThreshold;
 
   /**
-   * @param int
+   * How often (in seconds) to send a health check. The default value is 5
+   * seconds.
+   *
+   * @param int $checkIntervalSec
    */
   public function setCheckIntervalSec($checkIntervalSec)
   {
@@ -87,7 +133,9 @@ class HttpsHealthCheck extends \Google\Model
     return $this->checkIntervalSec;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -101,7 +149,10 @@ class HttpsHealthCheck extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -115,7 +166,10 @@ class HttpsHealthCheck extends \Google\Model
     return $this->description;
   }
   /**
-   * @param int
+   * A so-far unhealthy instance will be marked healthy after this many
+   * consecutive successes. The default value is 2.
+   *
+   * @param int $healthyThreshold
    */
   public function setHealthyThreshold($healthyThreshold)
   {
@@ -129,7 +183,11 @@ class HttpsHealthCheck extends \Google\Model
     return $this->healthyThreshold;
   }
   /**
-   * @param string
+   * The value of the host header in the HTTPS health check request. If left
+   * empty (default value), the public IP on behalf of which this health check
+   * is performed will be used.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -143,7 +201,10 @@ class HttpsHealthCheck extends \Google\Model
     return $this->host;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -157,7 +218,9 @@ class HttpsHealthCheck extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Type of the resource.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -171,7 +234,15 @@ class HttpsHealthCheck extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -185,7 +256,10 @@ class HttpsHealthCheck extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * The TCP port number for the HTTPS health check request. The default value
+   * is 443.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -199,7 +273,10 @@ class HttpsHealthCheck extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * The request path of the HTTPS health check request. The default value is
+   * "/". Must comply withRFC3986.
+   *
+   * @param string $requestPath
    */
   public function setRequestPath($requestPath)
   {
@@ -213,7 +290,9 @@ class HttpsHealthCheck extends \Google\Model
     return $this->requestPath;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -227,7 +306,11 @@ class HttpsHealthCheck extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param int
+   * How long (in seconds) to wait before claiming failure. The default value is
+   * 5 seconds. It is invalid for timeoutSec to have a greater value than
+   * checkIntervalSec.
+   *
+   * @param int $timeoutSec
    */
   public function setTimeoutSec($timeoutSec)
   {
@@ -241,7 +324,10 @@ class HttpsHealthCheck extends \Google\Model
     return $this->timeoutSec;
   }
   /**
-   * @param int
+   * A so-far healthy instance will be marked unhealthy after this many
+   * consecutive failures. The default value is 2.
+   *
+   * @param int $unhealthyThreshold
    */
   public function setUnhealthyThreshold($unhealthyThreshold)
   {

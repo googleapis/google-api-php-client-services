@@ -27,7 +27,9 @@ class FutureReservationStatusLastKnownGoodStateFutureReservationSpecs extends \G
   protected $timeWindowDataType = '';
 
   /**
-   * @param ShareSettings
+   * [Output Only] The previous share settings of the Future Reservation.
+   *
+   * @param ShareSettings $shareSettings
    */
   public function setShareSettings(ShareSettings $shareSettings)
   {
@@ -41,7 +43,10 @@ class FutureReservationStatusLastKnownGoodStateFutureReservationSpecs extends \G
     return $this->shareSettings;
   }
   /**
-   * @param FutureReservationSpecificSKUProperties
+   * [Output Only] The previous instance related properties of the Future
+   * Reservation.
+   *
+   * @param FutureReservationSpecificSKUProperties $specificSkuProperties
    */
   public function setSpecificSkuProperties(FutureReservationSpecificSKUProperties $specificSkuProperties)
   {
@@ -55,7 +60,9 @@ class FutureReservationStatusLastKnownGoodStateFutureReservationSpecs extends \G
     return $this->specificSkuProperties;
   }
   /**
-   * @param FutureReservationTimeWindow
+   * [Output Only] The previous time window of the Future Reservation.
+   *
+   * @param FutureReservationTimeWindow $timeWindow
    */
   public function setTimeWindow(FutureReservationTimeWindow $timeWindow)
   {

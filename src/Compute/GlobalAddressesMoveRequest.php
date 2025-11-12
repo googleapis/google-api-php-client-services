@@ -20,16 +20,30 @@ namespace Google\Service\Compute;
 class GlobalAddressesMoveRequest extends \Google\Model
 {
   /**
+   * An optional destination address description if intended to be different
+   * from the source.
+   *
    * @var string
    */
   public $description;
   /**
+   * The URL of the destination address to move to. This can be a full or
+   * partial URL. For example, the following are all valid URLs to a address:
+   * - https://www.googleapis.com/compute/v1/projects/project/global/addresses/a
+   * ddress     - projects/project/global/addresses/address
+   *
+   * Note that destination project must be different from the source project.
+   * So/global/addresses/address is not valid partial url.
+   *
    * @var string
    */
   public $destinationAddress;
 
   /**
-   * @param string
+   * An optional destination address description if intended to be different
+   * from the source.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +57,15 @@ class GlobalAddressesMoveRequest extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The URL of the destination address to move to. This can be a full or
+   * partial URL. For example, the following are all valid URLs to a address:
+   * - https://www.googleapis.com/compute/v1/projects/project/global/addresses/a
+   * ddress     - projects/project/global/addresses/address
+   *
+   * Note that destination project must be different from the source project.
+   * So/global/addresses/address is not valid partial url.
+   *
+   * @param string $destinationAddress
    */
   public function setDestinationAddress($destinationAddress)
   {

@@ -20,20 +20,82 @@ namespace Google\Service\Compute;
 class GRPCTLSHealthCheck extends \Google\Model
 {
   /**
+   * The port number in the health check's port is used for health checking.
+   * Applies to network endpoint group and instance group backends.
+   */
+  public const PORT_SPECIFICATION_USE_FIXED_PORT = 'USE_FIXED_PORT';
+  /**
+   * Not supported.
+   */
+  public const PORT_SPECIFICATION_USE_NAMED_PORT = 'USE_NAMED_PORT';
+  /**
+   * For network endpoint group backends, the health check uses the port number
+   * specified on each endpoint in the network endpoint group. For instance
+   * group backends, the health check uses the port number specified for the
+   * backend service's named port defined in the instance group's named ports.
+   */
+  public const PORT_SPECIFICATION_USE_SERVING_PORT = 'USE_SERVING_PORT';
+  /**
+   * The gRPC service name for the health check. This field is optional. The
+   * value of grpc_service_name has the following meanings by convention:
+   *
+   * - Empty service_name means the overall status of all services at the
+   * backend.
+   *
+   * - Non-empty service_name means the health of that gRPC service, as defined
+   * by the owner of the service.
+   *
+   * The grpc_service_name can only be ASCII.
+   *
    * @var string
    */
   public $grpcServiceName;
   /**
+   * The TCP port number to which the health check prober sends packets. Valid
+   * values are 1 through 65535.
+   *
    * @var int
    */
   public $port;
   /**
+   * Specifies how a port is selected for health checking. Can be one of the
+   * following values:  USE_FIXED_PORT: Specifies a port number explicitly using
+   * theport field  in the health check. Supported by backend services for
+   * passthrough load balancers and backend services for proxy load balancers.
+   * Not supported by target pools. The health check supports all backends
+   * supported by the backend service provided the backend can be health
+   * checked. For example, GCE_VM_IP network endpoint groups, GCE_VM_IP_PORT
+   * network endpoint groups, and instance group backends.   USE_NAMED_PORT: Not
+   * supported.  USE_SERVING_PORT: Provides an indirect method of specifying the
+   * health check port by referring to the backend service. Only supported by
+   * backend services for proxy load balancers. Not supported by target pools.
+   * Not supported by backend services for passthrough load balancers. Supports
+   * all backends that can be health checked; for example,GCE_VM_IP_PORT network
+   * endpoint groups and instance group backends.
+   *
+   * For GCE_VM_IP_PORT network endpoint group backends, the health check uses
+   * the port number specified for each endpoint in the network endpoint group.
+   * For instance group backends, the health check uses the port number
+   * determined by looking up the backend service's named port in the instance
+   * group's list of named ports.
+   *
    * @var string
    */
   public $portSpecification;
 
   /**
-   * @param string
+   * The gRPC service name for the health check. This field is optional. The
+   * value of grpc_service_name has the following meanings by convention:
+   *
+   * - Empty service_name means the overall status of all services at the
+   * backend.
+   *
+   * - Non-empty service_name means the health of that gRPC service, as defined
+   * by the owner of the service.
+   *
+   * The grpc_service_name can only be ASCII.
+   *
+   * @param string $grpcServiceName
    */
   public function setGrpcServiceName($grpcServiceName)
   {
@@ -47,7 +109,10 @@ class GRPCTLSHealthCheck extends \Google\Model
     return $this->grpcServiceName;
   }
   /**
-   * @param int
+   * The TCP port number to which the health check prober sends packets. Valid
+   * values are 1 through 65535.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -61,14 +126,37 @@ class GRPCTLSHealthCheck extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * Specifies how a port is selected for health checking. Can be one of the
+   * following values:  USE_FIXED_PORT: Specifies a port number explicitly using
+   * theport field  in the health check. Supported by backend services for
+   * passthrough load balancers and backend services for proxy load balancers.
+   * Not supported by target pools. The health check supports all backends
+   * supported by the backend service provided the backend can be health
+   * checked. For example, GCE_VM_IP network endpoint groups, GCE_VM_IP_PORT
+   * network endpoint groups, and instance group backends.   USE_NAMED_PORT: Not
+   * supported.  USE_SERVING_PORT: Provides an indirect method of specifying the
+   * health check port by referring to the backend service. Only supported by
+   * backend services for proxy load balancers. Not supported by target pools.
+   * Not supported by backend services for passthrough load balancers. Supports
+   * all backends that can be health checked; for example,GCE_VM_IP_PORT network
+   * endpoint groups and instance group backends.
+   *
+   * For GCE_VM_IP_PORT network endpoint group backends, the health check uses
+   * the port number specified for each endpoint in the network endpoint group.
+   * For instance group backends, the health check uses the port number
+   * determined by looking up the backend service's named port in the instance
+   * group's list of named ports.
+   *
+   * Accepted values: USE_FIXED_PORT, USE_NAMED_PORT, USE_SERVING_PORT
+   *
+   * @param self::PORT_SPECIFICATION_* $portSpecification
    */
   public function setPortSpecification($portSpecification)
   {
     $this->portSpecification = $portSpecification;
   }
   /**
-   * @return string
+   * @return self::PORT_SPECIFICATION_*
    */
   public function getPortSpecification()
   {

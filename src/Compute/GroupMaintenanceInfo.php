@@ -20,30 +20,65 @@ namespace Google\Service\Compute;
 class GroupMaintenanceInfo extends \Google\Model
 {
   /**
+   * Maintenance on all reserved instances in the reservation is synchronized.
+   */
+  public const SCHEDULING_TYPE_GROUPED = 'GROUPED';
+  /**
+   * Unknown maintenance type.
+   */
+  public const SCHEDULING_TYPE_GROUP_MAINTENANCE_TYPE_UNSPECIFIED = 'GROUP_MAINTENANCE_TYPE_UNSPECIFIED';
+  /**
+   * Maintenance is not synchronized for this reservation. Instead, each
+   * instance has its own maintenance window.
+   */
+  public const SCHEDULING_TYPE_INDEPENDENT = 'INDEPENDENT';
+  /**
+   * Describes number of instances that have ongoing maintenance.
+   *
    * @var int
    */
   public $instanceMaintenanceOngoingCount;
   /**
+   * Describes number of instances that have pending maintenance.
+   *
    * @var int
    */
   public $instanceMaintenancePendingCount;
   /**
+   * Progress for ongoing maintenance for this group of VMs/hosts. Describes
+   * number of hosts in the block that have ongoing maintenance.
+   *
    * @var int
    */
   public $maintenanceOngoingCount;
   /**
+   * Progress for ongoing maintenance for this group of VMs/hosts. Describes
+   * number of hosts in the block that have pending maintenance.
+   *
    * @var int
    */
   public $maintenancePendingCount;
   /**
+   * The type of maintenance for the reservation.
+   *
    * @var string
    */
   public $schedulingType;
   /**
+   * Describes number of subblock Infrastructure that has ongoing maintenance.
+   * Here, Subblock Infrastructure Maintenance pertains to upstream hardware
+   * contained in the Subblock that is necessary for a VM Family(e.g. NVLink
+   * Domains). Not all VM Families will support this field.
+   *
    * @var int
    */
   public $subblockInfraMaintenanceOngoingCount;
   /**
+   * Describes number of subblock Infrastructure that has pending maintenance.
+   * Here, Subblock Infrastructure Maintenance pertains to upstream hardware
+   * contained in the Subblock that is necessary for a VM Family (e.g. NVLink
+   * Domains). Not all VM Families will support this field.
+   *
    * @var int
    */
   public $subblockInfraMaintenancePendingCount;
@@ -51,7 +86,9 @@ class GroupMaintenanceInfo extends \Google\Model
   protected $upcomingGroupMaintenanceDataType = '';
 
   /**
-   * @param int
+   * Describes number of instances that have ongoing maintenance.
+   *
+   * @param int $instanceMaintenanceOngoingCount
    */
   public function setInstanceMaintenanceOngoingCount($instanceMaintenanceOngoingCount)
   {
@@ -65,7 +102,9 @@ class GroupMaintenanceInfo extends \Google\Model
     return $this->instanceMaintenanceOngoingCount;
   }
   /**
-   * @param int
+   * Describes number of instances that have pending maintenance.
+   *
+   * @param int $instanceMaintenancePendingCount
    */
   public function setInstanceMaintenancePendingCount($instanceMaintenancePendingCount)
   {
@@ -79,7 +118,10 @@ class GroupMaintenanceInfo extends \Google\Model
     return $this->instanceMaintenancePendingCount;
   }
   /**
-   * @param int
+   * Progress for ongoing maintenance for this group of VMs/hosts. Describes
+   * number of hosts in the block that have ongoing maintenance.
+   *
+   * @param int $maintenanceOngoingCount
    */
   public function setMaintenanceOngoingCount($maintenanceOngoingCount)
   {
@@ -93,7 +135,10 @@ class GroupMaintenanceInfo extends \Google\Model
     return $this->maintenanceOngoingCount;
   }
   /**
-   * @param int
+   * Progress for ongoing maintenance for this group of VMs/hosts. Describes
+   * number of hosts in the block that have pending maintenance.
+   *
+   * @param int $maintenancePendingCount
    */
   public function setMaintenancePendingCount($maintenancePendingCount)
   {
@@ -107,21 +152,30 @@ class GroupMaintenanceInfo extends \Google\Model
     return $this->maintenancePendingCount;
   }
   /**
-   * @param string
+   * The type of maintenance for the reservation.
+   *
+   * Accepted values: GROUPED, GROUP_MAINTENANCE_TYPE_UNSPECIFIED, INDEPENDENT
+   *
+   * @param self::SCHEDULING_TYPE_* $schedulingType
    */
   public function setSchedulingType($schedulingType)
   {
     $this->schedulingType = $schedulingType;
   }
   /**
-   * @return string
+   * @return self::SCHEDULING_TYPE_*
    */
   public function getSchedulingType()
   {
     return $this->schedulingType;
   }
   /**
-   * @param int
+   * Describes number of subblock Infrastructure that has ongoing maintenance.
+   * Here, Subblock Infrastructure Maintenance pertains to upstream hardware
+   * contained in the Subblock that is necessary for a VM Family(e.g. NVLink
+   * Domains). Not all VM Families will support this field.
+   *
+   * @param int $subblockInfraMaintenanceOngoingCount
    */
   public function setSubblockInfraMaintenanceOngoingCount($subblockInfraMaintenanceOngoingCount)
   {
@@ -135,7 +189,12 @@ class GroupMaintenanceInfo extends \Google\Model
     return $this->subblockInfraMaintenanceOngoingCount;
   }
   /**
-   * @param int
+   * Describes number of subblock Infrastructure that has pending maintenance.
+   * Here, Subblock Infrastructure Maintenance pertains to upstream hardware
+   * contained in the Subblock that is necessary for a VM Family (e.g. NVLink
+   * Domains). Not all VM Families will support this field.
+   *
+   * @param int $subblockInfraMaintenancePendingCount
    */
   public function setSubblockInfraMaintenancePendingCount($subblockInfraMaintenancePendingCount)
   {
@@ -149,7 +208,9 @@ class GroupMaintenanceInfo extends \Google\Model
     return $this->subblockInfraMaintenancePendingCount;
   }
   /**
-   * @param UpcomingMaintenance
+   * Maintenance information on this group of VMs.
+   *
+   * @param UpcomingMaintenance $upcomingGroupMaintenance
    */
   public function setUpcomingGroupMaintenance(UpcomingMaintenance $upcomingGroupMaintenance)
   {

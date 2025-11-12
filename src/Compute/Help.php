@@ -24,7 +24,9 @@ class Help extends \Google\Collection
   protected $linksDataType = 'array';
 
   /**
-   * @param HelpLink[]
+   * URL(s) pointing to additional information on handling the current error.
+   *
+   * @param HelpLink[] $links
    */
   public function setLinks($links)
   {

@@ -23,12 +23,18 @@ class FirewallPoliciesListAssociationsResponse extends \Google\Collection
   protected $associationsType = FirewallPolicyAssociation::class;
   protected $associationsDataType = 'array';
   /**
+   * [Output Only] Type of firewallPolicy associations.
+   * Alwayscompute#FirewallPoliciesListAssociations for lists of firewallPolicy
+   * associations.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param FirewallPolicyAssociation[]
+   * A list of associations.
+   *
+   * @param FirewallPolicyAssociation[] $associations
    */
   public function setAssociations($associations)
   {
@@ -42,7 +48,11 @@ class FirewallPoliciesListAssociationsResponse extends \Google\Collection
     return $this->associations;
   }
   /**
-   * @param string
+   * [Output Only] Type of firewallPolicy associations.
+   * Alwayscompute#FirewallPoliciesListAssociations for lists of firewallPolicy
+   * associations.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class FutureReservationStatusSpecificSKUProperties extends \Google\Model
 {
   /**
+   * ID of the instance template used to populate the Future Reservation
+   * properties.
+   *
    * @var string
    */
   public $sourceInstanceTemplateId;
 
   /**
-   * @param string
+   * ID of the instance template used to populate the Future Reservation
+   * properties.
+   *
+   * @param string $sourceInstanceTemplateId
    */
   public function setSourceInstanceTemplateId($sourceInstanceTemplateId)
   {
