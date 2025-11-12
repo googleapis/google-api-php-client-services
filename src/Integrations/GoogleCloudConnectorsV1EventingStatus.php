@@ -20,16 +20,38 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1EventingStatus extends \Google\Model
 {
   /**
+   * Default state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Eventing is enabled and ready to receive events.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Eventing is not active due to an error.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * Ingress endpoint required.
+   */
+  public const STATE_INGRESS_ENDPOINT_REQUIRED = 'INGRESS_ENDPOINT_REQUIRED';
+  /**
+   * Output only. Description of error if State is set to "ERROR".
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. State.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. Description of error if State is set to "ERROR".
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,14 +65,19 @@ class GoogleCloudConnectorsV1EventingStatus extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. State.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, ERROR,
+   * INGRESS_ENDPOINT_REQUIRED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

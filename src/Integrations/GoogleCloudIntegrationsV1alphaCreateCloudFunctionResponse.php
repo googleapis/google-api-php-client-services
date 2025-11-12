@@ -20,12 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaCreateCloudFunctionResponse extends \Google\Model
 {
   /**
+   * The trigger url that will be returned
+   *
    * @var string
    */
   public $triggerUrl;
 
   /**
-   * @param string
+   * The trigger url that will be returned
+   *
+   * @param string $triggerUrl
    */
   public function setTriggerUrl($triggerUrl)
   {

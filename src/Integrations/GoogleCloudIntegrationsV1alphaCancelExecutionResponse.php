@@ -20,12 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaCancelExecutionResponse extends \Google\Model
 {
   /**
+   * True if cancellation performed successfully.
+   *
    * @var bool
    */
   public $isCanceled;
 
   /**
-   * @param bool
+   * True if cancellation performed successfully.
+   *
+   * @param bool $isCanceled
    */
   public function setIsCanceled($isCanceled)
   {

@@ -20,56 +20,90 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
 {
   /**
+   * Unspecified certificate status
+   */
+  public const CERTIFICATE_STATUS_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Certificate in active state will be able to use
+   */
+  public const CERTIFICATE_STATUS_ACTIVE = 'ACTIVE';
+  /**
+   * Certificate in expired state needs to be updated
+   */
+  public const CERTIFICATE_STATUS_EXPIRED = 'EXPIRED';
+  /**
+   * Status of the certificate
+   *
    * @var string
    */
   public $certificateStatus;
   /**
+   * Immutable. Credential id that will be used to register with trawler
+   *
    * @var string
    */
   public $credentialId;
   /**
+   * Description of the certificate
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Name of the certificate
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Auto generated primary key
+   *
    * @var string
    */
   public $name;
   protected $rawCertificateType = GoogleCloudIntegrationsV1alphaClientCertificate::class;
   protected $rawCertificateDataType = '';
   /**
+   * Immutable. Requestor ID to be used to register certificate with trawler
+   *
    * @var string
    */
   public $requestorId;
   /**
+   * Output only. The timestamp after which certificate will expire
+   *
    * @var string
    */
   public $validEndTime;
   /**
+   * Output only. The timestamp after which certificate will be valid
+   *
    * @var string
    */
   public $validStartTime;
 
   /**
-   * @param string
+   * Status of the certificate
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, EXPIRED
+   *
+   * @param self::CERTIFICATE_STATUS_* $certificateStatus
    */
   public function setCertificateStatus($certificateStatus)
   {
     $this->certificateStatus = $certificateStatus;
   }
   /**
-   * @return string
+   * @return self::CERTIFICATE_STATUS_*
    */
   public function getCertificateStatus()
   {
     return $this->certificateStatus;
   }
   /**
-   * @param string
+   * Immutable. Credential id that will be used to register with trawler
+   *
+   * @param string $credentialId
    */
   public function setCredentialId($credentialId)
   {
@@ -83,7 +117,9 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
     return $this->credentialId;
   }
   /**
-   * @param string
+   * Description of the certificate
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -97,7 +133,9 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Name of the certificate
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -111,7 +149,9 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Auto generated primary key
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -125,7 +165,9 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaClientCertificate
+   * Input only. Raw client certificate which would be registered with trawler
+   *
+   * @param GoogleCloudIntegrationsV1alphaClientCertificate $rawCertificate
    */
   public function setRawCertificate(GoogleCloudIntegrationsV1alphaClientCertificate $rawCertificate)
   {
@@ -139,7 +181,9 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
     return $this->rawCertificate;
   }
   /**
-   * @param string
+   * Immutable. Requestor ID to be used to register certificate with trawler
+   *
+   * @param string $requestorId
    */
   public function setRequestorId($requestorId)
   {
@@ -153,7 +197,9 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
     return $this->requestorId;
   }
   /**
-   * @param string
+   * Output only. The timestamp after which certificate will expire
+   *
+   * @param string $validEndTime
    */
   public function setValidEndTime($validEndTime)
   {
@@ -167,7 +213,9 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
     return $this->validEndTime;
   }
   /**
-   * @param string
+   * Output only. The timestamp after which certificate will be valid
+   *
+   * @param string $validStartTime
    */
   public function setValidStartTime($validStartTime)
   {

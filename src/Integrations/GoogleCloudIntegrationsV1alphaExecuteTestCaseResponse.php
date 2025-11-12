@@ -19,24 +19,46 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse extends \Google\Collection
 {
+  /**
+   * Unspecified state
+   */
+  public const TEST_EXECUTION_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Test case execution passed
+   */
+  public const TEST_EXECUTION_STATE_PASSED = 'PASSED';
+  /**
+   * Test case execution failed
+   */
+  public const TEST_EXECUTION_STATE_FAILED = 'FAILED';
   protected $collection_key = 'assertionResults';
   protected $assertionResultsType = GoogleCloudIntegrationsV1alphaAssertionResult::class;
   protected $assertionResultsDataType = 'array';
   /**
+   * The id of the execution corresponding to this run of integration.
+   *
    * @var string
    */
   public $executionId;
   /**
+   * OUTPUT parameters in format of Map. Where Key is the name of the parameter.
+   * Note: Name of the system generated parameters are wrapped by backtick(`) to
+   * distinguish them from the user defined parameters.
+   *
    * @var array[]
    */
   public $outputParameters;
   /**
+   * State of the test case execution
+   *
    * @var string
    */
   public $testExecutionState;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaAssertionResult[]
+   * Results of each assertions ran during execution of test case.
+   *
+   * @param GoogleCloudIntegrationsV1alphaAssertionResult[] $assertionResults
    */
   public function setAssertionResults($assertionResults)
   {
@@ -50,7 +72,9 @@ class GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse extends \Google\Coll
     return $this->assertionResults;
   }
   /**
-   * @param string
+   * The id of the execution corresponding to this run of integration.
+   *
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -64,7 +88,11 @@ class GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse extends \Google\Coll
     return $this->executionId;
   }
   /**
-   * @param array[]
+   * OUTPUT parameters in format of Map. Where Key is the name of the parameter.
+   * Note: Name of the system generated parameters are wrapped by backtick(`) to
+   * distinguish them from the user defined parameters.
+   *
+   * @param array[] $outputParameters
    */
   public function setOutputParameters($outputParameters)
   {
@@ -78,14 +106,18 @@ class GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse extends \Google\Coll
     return $this->outputParameters;
   }
   /**
-   * @param string
+   * State of the test case execution
+   *
+   * Accepted values: STATE_UNSPECIFIED, PASSED, FAILED
+   *
+   * @param self::TEST_EXECUTION_STATE_* $testExecutionState
    */
   public function setTestExecutionState($testExecutionState)
   {
     $this->testExecutionState = $testExecutionState;
   }
   /**
-   * @return string
+   * @return self::TEST_EXECUTION_STATE_*
    */
   public function getTestExecutionState()
   {

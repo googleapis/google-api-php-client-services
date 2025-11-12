@@ -22,12 +22,16 @@ class EnterpriseCrmFrontendsEventbusProtoParameterMapField extends \Google\Model
   protected $literalValueType = EnterpriseCrmFrontendsEventbusProtoParameterValueType::class;
   protected $literalValueDataType = '';
   /**
+   * Referencing one of the WF variables.
+   *
    * @var string
    */
   public $referenceKey;
 
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoParameterValueType
+   * Passing a literal value.
+   *
+   * @param EnterpriseCrmFrontendsEventbusProtoParameterValueType $literalValue
    */
   public function setLiteralValue(EnterpriseCrmFrontendsEventbusProtoParameterValueType $literalValue)
   {
@@ -41,7 +45,9 @@ class EnterpriseCrmFrontendsEventbusProtoParameterMapField extends \Google\Model
     return $this->literalValue;
   }
   /**
-   * @param string
+   * Referencing one of the WF variables.
+   *
+   * @param string $referenceKey
    */
   public function setReferenceKey($referenceKey)
   {

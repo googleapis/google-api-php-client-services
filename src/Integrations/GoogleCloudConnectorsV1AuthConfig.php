@@ -19,14 +19,51 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
 {
+  /**
+   * Authentication type not specified.
+   */
+  public const AUTH_TYPE_AUTH_TYPE_UNSPECIFIED = 'AUTH_TYPE_UNSPECIFIED';
+  /**
+   * Username and Password Authentication.
+   */
+  public const AUTH_TYPE_USER_PASSWORD = 'USER_PASSWORD';
+  /**
+   * JSON Web Token (JWT) Profile for Oauth 2.0 Authorization Grant based
+   * authentication
+   */
+  public const AUTH_TYPE_OAUTH2_JWT_BEARER = 'OAUTH2_JWT_BEARER';
+  /**
+   * Oauth 2.0 Client Credentials Grant Authentication
+   */
+  public const AUTH_TYPE_OAUTH2_CLIENT_CREDENTIALS = 'OAUTH2_CLIENT_CREDENTIALS';
+  /**
+   * SSH Public Key Authentication
+   */
+  public const AUTH_TYPE_SSH_PUBLIC_KEY = 'SSH_PUBLIC_KEY';
+  /**
+   * Oauth 2.0 Authorization Code Flow
+   */
+  public const AUTH_TYPE_OAUTH2_AUTH_CODE_FLOW = 'OAUTH2_AUTH_CODE_FLOW';
+  /**
+   * Google authentication
+   */
+  public const AUTH_TYPE_GOOGLE_AUTHENTICATION = 'GOOGLE_AUTHENTICATION';
+  /**
+   * Oauth 2.0 Authorization Code Flow with Google Provided OAuth Client
+   */
+  public const AUTH_TYPE_OAUTH2_AUTH_CODE_FLOW_GOOGLE_MANAGED = 'OAUTH2_AUTH_CODE_FLOW_GOOGLE_MANAGED';
   protected $collection_key = 'additionalVariables';
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   /**
+   * Optional. Identifier key for auth config
+   *
    * @var string
    */
   public $authKey;
   /**
+   * Optional. The type of authentication configured.
+   *
    * @var string
    */
   public $authType;
@@ -44,7 +81,9 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
   protected $userPasswordDataType = '';
 
   /**
-   * @param GoogleCloudConnectorsV1ConfigVariable[]
+   * Optional. List containing additional auth configs.
+   *
+   * @param GoogleCloudConnectorsV1ConfigVariable[] $additionalVariables
    */
   public function setAdditionalVariables($additionalVariables)
   {
@@ -58,7 +97,9 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
     return $this->additionalVariables;
   }
   /**
-   * @param string
+   * Optional. Identifier key for auth config
+   *
+   * @param string $authKey
    */
   public function setAuthKey($authKey)
   {
@@ -72,21 +113,29 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
     return $this->authKey;
   }
   /**
-   * @param string
+   * Optional. The type of authentication configured.
+   *
+   * Accepted values: AUTH_TYPE_UNSPECIFIED, USER_PASSWORD, OAUTH2_JWT_BEARER,
+   * OAUTH2_CLIENT_CREDENTIALS, SSH_PUBLIC_KEY, OAUTH2_AUTH_CODE_FLOW,
+   * GOOGLE_AUTHENTICATION, OAUTH2_AUTH_CODE_FLOW_GOOGLE_MANAGED
+   *
+   * @param self::AUTH_TYPE_* $authType
    */
   public function setAuthType($authType)
   {
     $this->authType = $authType;
   }
   /**
-   * @return string
+   * @return self::AUTH_TYPE_*
    */
   public function getAuthType()
   {
     return $this->authType;
   }
   /**
-   * @param GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow
+   * Oauth2AuthCodeFlow.
+   *
+   * @param GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow $oauth2AuthCodeFlow
    */
   public function setOauth2AuthCodeFlow(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow $oauth2AuthCodeFlow)
   {
@@ -100,7 +149,9 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
     return $this->oauth2AuthCodeFlow;
   }
   /**
-   * @param GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged
+   * Oauth2AuthCodeFlowGoogleManaged.
+   *
+   * @param GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged $oauth2AuthCodeFlowGoogleManaged
    */
   public function setOauth2AuthCodeFlowGoogleManaged(GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlowGoogleManaged $oauth2AuthCodeFlowGoogleManaged)
   {
@@ -114,7 +165,9 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
     return $this->oauth2AuthCodeFlowGoogleManaged;
   }
   /**
-   * @param GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials
+   * Oauth2ClientCredentials.
+   *
+   * @param GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials $oauth2ClientCredentials
    */
   public function setOauth2ClientCredentials(GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials $oauth2ClientCredentials)
   {
@@ -128,7 +181,9 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
     return $this->oauth2ClientCredentials;
   }
   /**
-   * @param GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer
+   * Oauth2JwtBearer.
+   *
+   * @param GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer $oauth2JwtBearer
    */
   public function setOauth2JwtBearer(GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer $oauth2JwtBearer)
   {
@@ -142,7 +197,9 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
     return $this->oauth2JwtBearer;
   }
   /**
-   * @param GoogleCloudConnectorsV1AuthConfigSshPublicKey
+   * SSH Public Key.
+   *
+   * @param GoogleCloudConnectorsV1AuthConfigSshPublicKey $sshPublicKey
    */
   public function setSshPublicKey(GoogleCloudConnectorsV1AuthConfigSshPublicKey $sshPublicKey)
   {
@@ -156,7 +213,9 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
     return $this->sshPublicKey;
   }
   /**
-   * @param GoogleCloudConnectorsV1AuthConfigUserPassword
+   * UserPassword.
+   *
+   * @param GoogleCloudConnectorsV1AuthConfigUserPassword $userPassword
    */
   public function setUserPassword(GoogleCloudConnectorsV1AuthConfigUserPassword $userPassword)
   {

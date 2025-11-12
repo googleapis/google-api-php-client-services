@@ -20,12 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaDownloadExecutionResponse extends \Google\Model
 {
   /**
+   * The content of downloaded execution.
+   *
    * @var string
    */
   public $content;
 
   /**
-   * @param string
+   * The content of downloaded execution.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {

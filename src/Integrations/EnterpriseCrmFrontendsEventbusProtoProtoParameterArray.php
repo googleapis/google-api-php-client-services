@@ -26,7 +26,7 @@ class EnterpriseCrmFrontendsEventbusProtoProtoParameterArray extends \Google\Col
   public $protoValues;
 
   /**
-   * @param array[]
+   * @param array[] $protoValues
    */
   public function setProtoValues($protoValues)
   {

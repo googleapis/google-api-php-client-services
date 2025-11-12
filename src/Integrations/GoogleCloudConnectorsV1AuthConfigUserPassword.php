@@ -22,12 +22,16 @@ class GoogleCloudConnectorsV1AuthConfigUserPassword extends \Google\Model
   protected $passwordType = GoogleCloudConnectorsV1Secret::class;
   protected $passwordDataType = '';
   /**
+   * Optional. Username.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param GoogleCloudConnectorsV1Secret
+   * Optional. Secret version reference containing the password.
+   *
+   * @param GoogleCloudConnectorsV1Secret $password
    */
   public function setPassword(GoogleCloudConnectorsV1Secret $password)
   {
@@ -41,7 +45,9 @@ class GoogleCloudConnectorsV1AuthConfigUserPassword extends \Google\Model
     return $this->password;
   }
   /**
-   * @param string
+   * Optional. Username.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

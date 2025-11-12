@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1ResourceLimits extends \Google\Model
 {
   /**
+   * Output only. CPU limit.
+   *
    * @var string
    */
   public $cpu;
   /**
+   * Output only. Memory limit.
+   *
    * @var string
    */
   public $memory;
 
   /**
-   * @param string
+   * Output only. CPU limit.
+   *
+   * @param string $cpu
    */
   public function setCpu($cpu)
   {
@@ -43,7 +49,9 @@ class GoogleCloudConnectorsV1ResourceLimits extends \Google\Model
     return $this->cpu;
   }
   /**
-   * @param string
+   * Output only. Memory limit.
+   *
+   * @param string $memory
    */
   public function setMemory($memory)
   {

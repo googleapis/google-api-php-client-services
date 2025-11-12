@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1LockConfig extends \Google\Model
 {
   /**
+   * Optional. Indicates whether or not the connection is locked.
+   *
    * @var bool
    */
   public $locked;
   /**
+   * Optional. Describes why a connection is locked.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param bool
+   * Optional. Indicates whether or not the connection is locked.
+   *
+   * @param bool $locked
    */
   public function setLocked($locked)
   {
@@ -43,7 +49,9 @@ class GoogleCloudConnectorsV1LockConfig extends \Google\Model
     return $this->locked;
   }
   /**
-   * @param string
+   * Optional. Describes why a connection is locked.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

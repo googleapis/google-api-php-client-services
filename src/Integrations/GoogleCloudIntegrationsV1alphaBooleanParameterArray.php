@@ -21,12 +21,16 @@ class GoogleCloudIntegrationsV1alphaBooleanParameterArray extends \Google\Collec
 {
   protected $collection_key = 'booleanValues';
   /**
+   * Boolean array.
+   *
    * @var bool[]
    */
   public $booleanValues;
 
   /**
-   * @param bool[]
+   * Boolean array.
+   *
+   * @param bool[] $booleanValues
    */
   public function setBooleanValues($booleanValues)
   {

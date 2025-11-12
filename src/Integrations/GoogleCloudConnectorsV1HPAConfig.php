@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1HPAConfig extends \Google\Model
 {
   /**
+   * Output only. Percent CPU utilization where HPA triggers autoscaling.
+   *
    * @var string
    */
   public $cpuUtilizationThreshold;
   /**
+   * Output only. Percent Memory utilization where HPA triggers autoscaling.
+   *
    * @var string
    */
   public $memoryUtilizationThreshold;
 
   /**
-   * @param string
+   * Output only. Percent CPU utilization where HPA triggers autoscaling.
+   *
+   * @param string $cpuUtilizationThreshold
    */
   public function setCpuUtilizationThreshold($cpuUtilizationThreshold)
   {
@@ -43,7 +49,9 @@ class GoogleCloudConnectorsV1HPAConfig extends \Google\Model
     return $this->cpuUtilizationThreshold;
   }
   /**
-   * @param string
+   * Output only. Percent Memory utilization where HPA triggers autoscaling.
+   *
+   * @param string $memoryUtilizationThreshold
    */
   public function setMemoryUtilizationThreshold($memoryUtilizationThreshold)
   {

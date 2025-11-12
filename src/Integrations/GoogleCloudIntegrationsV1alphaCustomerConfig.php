@@ -22,24 +22,39 @@ class GoogleCloudIntegrationsV1alphaCustomerConfig extends \Google\Model
   protected $cloudKmsConfigType = GoogleCloudIntegrationsV1alphaCloudKmsConfig::class;
   protected $cloudKmsConfigDataType = '';
   /**
+   * Optional. Indicates if the client should be allowed to make HTTP calls.
+   * True if http call feature should be turned on for this region.
+   *
    * @var bool
    */
   public $enableHttpCall;
   /**
+   * Optional. Indicates if the client should be allowed to use managed AI
+   * features, i.e. using Cloud Companion APIs of the tenant project. This will
+   * allow the customers to use features like Troubleshooting, OpenAPI spec
+   * enrichment, etc. for free.
+   *
    * @var bool
    */
   public $enableManagedAiFeatures;
   /**
+   * Optional. True if variable masking feature should be turned on for this
+   * region.
+   *
    * @var bool
    */
   public $enableVariableMasking;
   /**
+   * Optional. Run-as service account to be updated for the provisioned client.
+   *
    * @var string
    */
   public $runAsServiceAccount;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaCloudKmsConfig
+   * Optional. Cloud KMS config for Auth Module to encrypt/decrypt credentials.
+   *
+   * @param GoogleCloudIntegrationsV1alphaCloudKmsConfig $cloudKmsConfig
    */
   public function setCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig $cloudKmsConfig)
   {
@@ -53,7 +68,10 @@ class GoogleCloudIntegrationsV1alphaCustomerConfig extends \Google\Model
     return $this->cloudKmsConfig;
   }
   /**
-   * @param bool
+   * Optional. Indicates if the client should be allowed to make HTTP calls.
+   * True if http call feature should be turned on for this region.
+   *
+   * @param bool $enableHttpCall
    */
   public function setEnableHttpCall($enableHttpCall)
   {
@@ -67,7 +85,12 @@ class GoogleCloudIntegrationsV1alphaCustomerConfig extends \Google\Model
     return $this->enableHttpCall;
   }
   /**
-   * @param bool
+   * Optional. Indicates if the client should be allowed to use managed AI
+   * features, i.e. using Cloud Companion APIs of the tenant project. This will
+   * allow the customers to use features like Troubleshooting, OpenAPI spec
+   * enrichment, etc. for free.
+   *
+   * @param bool $enableManagedAiFeatures
    */
   public function setEnableManagedAiFeatures($enableManagedAiFeatures)
   {
@@ -81,7 +104,10 @@ class GoogleCloudIntegrationsV1alphaCustomerConfig extends \Google\Model
     return $this->enableManagedAiFeatures;
   }
   /**
-   * @param bool
+   * Optional. True if variable masking feature should be turned on for this
+   * region.
+   *
+   * @param bool $enableVariableMasking
    */
   public function setEnableVariableMasking($enableVariableMasking)
   {
@@ -95,7 +121,9 @@ class GoogleCloudIntegrationsV1alphaCustomerConfig extends \Google\Model
     return $this->enableVariableMasking;
   }
   /**
-   * @param string
+   * Optional. Run-as service account to be updated for the provisioned client.
+   *
+   * @param string $runAsServiceAccount
    */
   public function setRunAsServiceAccount($runAsServiceAccount)
   {

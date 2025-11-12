@@ -54,7 +54,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
   public $stringValue;
 
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray
+   * @param EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray $booleanArray
    */
   public function setBooleanArray(EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray $booleanArray)
   {
@@ -68,7 +68,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->booleanArray;
   }
   /**
-   * @param bool
+   * @param bool $booleanValue
    */
   public function setBooleanValue($booleanValue)
   {
@@ -82,7 +82,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->booleanValue;
   }
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray
+   * @param EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray $doubleArray
    */
   public function setDoubleArray(EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray $doubleArray)
   {
@@ -104,7 +104,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->doubleValue;
   }
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoIntParameterArray
+   * @param EnterpriseCrmFrontendsEventbusProtoIntParameterArray $intArray
    */
   public function setIntArray(EnterpriseCrmFrontendsEventbusProtoIntParameterArray $intArray)
   {
@@ -118,7 +118,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->intArray;
   }
   /**
-   * @param string
+   * @param string $intValue
    */
   public function setIntValue($intValue)
   {
@@ -132,7 +132,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->intValue;
   }
   /**
-   * @param string
+   * @param string $jsonValue
    */
   public function setJsonValue($jsonValue)
   {
@@ -146,7 +146,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->jsonValue;
   }
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoProtoParameterArray
+   * @param EnterpriseCrmFrontendsEventbusProtoProtoParameterArray $protoArray
    */
   public function setProtoArray(EnterpriseCrmFrontendsEventbusProtoProtoParameterArray $protoArray)
   {
@@ -160,7 +160,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->protoArray;
   }
   /**
-   * @param array[]
+   * @param array[] $protoValue
    */
   public function setProtoValue($protoValue)
   {
@@ -174,7 +174,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->protoValue;
   }
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter
+   * @param EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter $serializedObjectValue
    */
   public function setSerializedObjectValue(EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter $serializedObjectValue)
   {
@@ -188,7 +188,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->serializedObjectValue;
   }
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoStringParameterArray
+   * @param EnterpriseCrmFrontendsEventbusProtoStringParameterArray $stringArray
    */
   public function setStringArray(EnterpriseCrmFrontendsEventbusProtoStringParameterArray $stringArray)
   {
@@ -202,7 +202,7 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
     return $this->stringArray;
   }
   /**
-   * @param string
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

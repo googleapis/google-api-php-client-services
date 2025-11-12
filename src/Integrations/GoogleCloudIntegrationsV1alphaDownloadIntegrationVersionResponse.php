@@ -21,6 +21,8 @@ class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends \
 {
   protected $collection_key = 'files';
   /**
+   * String representation of the requested file.
+   *
    * @var string
    */
   public $content;
@@ -28,7 +30,9 @@ class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends \
   protected $filesDataType = 'array';
 
   /**
-   * @param string
+   * String representation of the requested file.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -42,7 +46,9 @@ class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends \
     return $this->content;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaSerializedFile[]
+   * List containing String represendation for multiple file with type.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSerializedFile[] $files
    */
   public function setFiles($files)
   {

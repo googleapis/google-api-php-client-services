@@ -19,10 +19,52 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
 {
+  /**
+   * Cert type unspecified.
+   */
+  public const CLIENT_CERT_TYPE_CERT_TYPE_UNSPECIFIED = 'CERT_TYPE_UNSPECIFIED';
+  /**
+   * Privacy Enhanced Mail (PEM) Type
+   */
+  public const CLIENT_CERT_TYPE_PEM = 'PEM';
+  /**
+   * Cert type unspecified.
+   */
+  public const SERVER_CERT_TYPE_CERT_TYPE_UNSPECIFIED = 'CERT_TYPE_UNSPECIFIED';
+  /**
+   * Privacy Enhanced Mail (PEM) Type
+   */
+  public const SERVER_CERT_TYPE_PEM = 'PEM';
+  /**
+   * Public Trust Model. Takes the Default Java trust store.
+   */
+  public const TRUST_MODEL_PUBLIC = 'PUBLIC';
+  /**
+   * Private Trust Model. Takes custom/private trust store.
+   */
+  public const TRUST_MODEL_PRIVATE = 'PRIVATE';
+  /**
+   * Insecure Trust Model. Accept all certificates.
+   */
+  public const TRUST_MODEL_INSECURE = 'INSECURE';
+  /**
+   * No SSL configuration required.
+   */
+  public const TYPE_SSL_TYPE_UNSPECIFIED = 'SSL_TYPE_UNSPECIFIED';
+  /**
+   * TLS Handshake
+   */
+  public const TYPE_TLS = 'TLS';
+  /**
+   * mutual TLS (MTLS) Handshake
+   */
+  public const TYPE_MTLS = 'MTLS';
   protected $collection_key = 'additionalVariables';
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   /**
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
+   *
    * @var string
    */
   public $clientCertType;
@@ -35,24 +77,34 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
   protected $privateServerCertificateType = GoogleCloudConnectorsV1Secret::class;
   protected $privateServerCertificateDataType = '';
   /**
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
+   *
    * @var string
    */
   public $serverCertType;
   /**
+   * Optional. Trust Model of the SSL connection
+   *
    * @var string
    */
   public $trustModel;
   /**
+   * Optional. Controls the ssl type for the given connector version.
+   *
    * @var string
    */
   public $type;
   /**
+   * Optional. Bool for enabling SSL
+   *
    * @var bool
    */
   public $useSsl;
 
   /**
-   * @param GoogleCloudConnectorsV1ConfigVariable[]
+   * Optional. Additional SSL related field values
+   *
+   * @param GoogleCloudConnectorsV1ConfigVariable[] $additionalVariables
    */
   public function setAdditionalVariables($additionalVariables)
   {
@@ -66,21 +118,27 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
     return $this->additionalVariables;
   }
   /**
-   * @param string
+   * Optional. Type of Client Cert (PEM/JKS/.. etc.)
+   *
+   * Accepted values: CERT_TYPE_UNSPECIFIED, PEM
+   *
+   * @param self::CLIENT_CERT_TYPE_* $clientCertType
    */
   public function setClientCertType($clientCertType)
   {
     $this->clientCertType = $clientCertType;
   }
   /**
-   * @return string
+   * @return self::CLIENT_CERT_TYPE_*
    */
   public function getClientCertType()
   {
     return $this->clientCertType;
   }
   /**
-   * @param GoogleCloudConnectorsV1Secret
+   * Optional. Client Certificate
+   *
+   * @param GoogleCloudConnectorsV1Secret $clientCertificate
    */
   public function setClientCertificate(GoogleCloudConnectorsV1Secret $clientCertificate)
   {
@@ -94,7 +152,9 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
     return $this->clientCertificate;
   }
   /**
-   * @param GoogleCloudConnectorsV1Secret
+   * Optional. Client Private Key
+   *
+   * @param GoogleCloudConnectorsV1Secret $clientPrivateKey
    */
   public function setClientPrivateKey(GoogleCloudConnectorsV1Secret $clientPrivateKey)
   {
@@ -108,7 +168,10 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
     return $this->clientPrivateKey;
   }
   /**
-   * @param GoogleCloudConnectorsV1Secret
+   * Optional. Secret containing the passphrase protecting the Client Private
+   * Key
+   *
+   * @param GoogleCloudConnectorsV1Secret $clientPrivateKeyPass
    */
   public function setClientPrivateKeyPass(GoogleCloudConnectorsV1Secret $clientPrivateKeyPass)
   {
@@ -122,7 +185,10 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
     return $this->clientPrivateKeyPass;
   }
   /**
-   * @param GoogleCloudConnectorsV1Secret
+   * Optional. Private Server Certificate. Needs to be specified if trust model
+   * is `PRIVATE`.
+   *
+   * @param GoogleCloudConnectorsV1Secret $privateServerCertificate
    */
   public function setPrivateServerCertificate(GoogleCloudConnectorsV1Secret $privateServerCertificate)
   {
@@ -136,49 +202,63 @@ class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
     return $this->privateServerCertificate;
   }
   /**
-   * @param string
+   * Optional. Type of Server Cert (PEM/JKS/.. etc.)
+   *
+   * Accepted values: CERT_TYPE_UNSPECIFIED, PEM
+   *
+   * @param self::SERVER_CERT_TYPE_* $serverCertType
    */
   public function setServerCertType($serverCertType)
   {
     $this->serverCertType = $serverCertType;
   }
   /**
-   * @return string
+   * @return self::SERVER_CERT_TYPE_*
    */
   public function getServerCertType()
   {
     return $this->serverCertType;
   }
   /**
-   * @param string
+   * Optional. Trust Model of the SSL connection
+   *
+   * Accepted values: PUBLIC, PRIVATE, INSECURE
+   *
+   * @param self::TRUST_MODEL_* $trustModel
    */
   public function setTrustModel($trustModel)
   {
     $this->trustModel = $trustModel;
   }
   /**
-   * @return string
+   * @return self::TRUST_MODEL_*
    */
   public function getTrustModel()
   {
     return $this->trustModel;
   }
   /**
-   * @param string
+   * Optional. Controls the ssl type for the given connector version.
+   *
+   * Accepted values: SSL_TYPE_UNSPECIFIED, TLS, MTLS
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param bool
+   * Optional. Bool for enabling SSL
+   *
+   * @param bool $useSsl
    */
   public function setUseSsl($useSsl)
   {

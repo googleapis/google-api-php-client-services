@@ -20,28 +20,53 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaCloudKmsConfig extends \Google\Model
 {
   /**
+   * Required. A Cloud KMS key is a named object containing one or more key
+   * versions, along with metadata for the key. A key exists on exactly one key
+   * ring tied to a specific location.
+   *
    * @var string
    */
   public $key;
   /**
+   * Optional. Each version of a key contains key material used for encryption
+   * or signing. A key's version is represented by an integer, starting at 1. To
+   * decrypt data or verify a signature, you must use the same key version that
+   * was used to encrypt or sign the data.
+   *
    * @var string
    */
   public $keyVersion;
   /**
+   * Required. Location name of the key ring, e.g. "us-west1".
+   *
    * @var string
    */
   public $kmsLocation;
   /**
+   * Optional. The gcp project id of the project where the kms key stored. If
+   * empty, the kms key is stored at the same project as customer's project and
+   * ecrypted with CMEK, otherwise, the kms key is stored in the tenant project
+   * and encrypted with GMEK
+   *
    * @var string
    */
   public $kmsProjectId;
   /**
+   * Required. A key ring organizes keys in a specific Google Cloud location and
+   * allows you to manage access control on groups of keys. A key ring's name
+   * does not need to be unique across a Google Cloud project, but must be
+   * unique within a given location.
+   *
    * @var string
    */
   public $kmsRing;
 
   /**
-   * @param string
+   * Required. A Cloud KMS key is a named object containing one or more key
+   * versions, along with metadata for the key. A key exists on exactly one key
+   * ring tied to a specific location.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -55,7 +80,12 @@ class GoogleCloudIntegrationsV1alphaCloudKmsConfig extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Optional. Each version of a key contains key material used for encryption
+   * or signing. A key's version is represented by an integer, starting at 1. To
+   * decrypt data or verify a signature, you must use the same key version that
+   * was used to encrypt or sign the data.
+   *
+   * @param string $keyVersion
    */
   public function setKeyVersion($keyVersion)
   {
@@ -69,7 +99,9 @@ class GoogleCloudIntegrationsV1alphaCloudKmsConfig extends \Google\Model
     return $this->keyVersion;
   }
   /**
-   * @param string
+   * Required. Location name of the key ring, e.g. "us-west1".
+   *
+   * @param string $kmsLocation
    */
   public function setKmsLocation($kmsLocation)
   {
@@ -83,7 +115,12 @@ class GoogleCloudIntegrationsV1alphaCloudKmsConfig extends \Google\Model
     return $this->kmsLocation;
   }
   /**
-   * @param string
+   * Optional. The gcp project id of the project where the kms key stored. If
+   * empty, the kms key is stored at the same project as customer's project and
+   * ecrypted with CMEK, otherwise, the kms key is stored in the tenant project
+   * and encrypted with GMEK
+   *
+   * @param string $kmsProjectId
    */
   public function setKmsProjectId($kmsProjectId)
   {
@@ -97,7 +134,12 @@ class GoogleCloudIntegrationsV1alphaCloudKmsConfig extends \Google\Model
     return $this->kmsProjectId;
   }
   /**
-   * @param string
+   * Required. A key ring organizes keys in a specific Google Cloud location and
+   * allows you to manage access control on groups of keys. A key ring's name
+   * does not need to be unique across a Google Cloud project, but must be
+   * unique within a given location.
+   *
+   * @param string $kmsRing
    */
   public function setKmsRing($kmsRing)
   {

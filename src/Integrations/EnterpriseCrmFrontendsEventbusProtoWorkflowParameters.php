@@ -24,7 +24,10 @@ class EnterpriseCrmFrontendsEventbusProtoWorkflowParameters extends \Google\Coll
   protected $parametersDataType = 'array';
 
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry[]
+   * Parameters are a part of Event and can be used to communiticate between
+   * different tasks that are part of the same workflow execution.
+   *
+   * @param EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry[] $parameters
    */
   public function setParameters($parameters)
   {

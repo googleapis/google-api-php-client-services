@@ -23,28 +23,41 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   /**
+   * Output only. Timestamp when the webhook was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. ID to uniquely identify webhook.
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. Name of the Webhook
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Next webhook refresh time. Will be null if refresh is not
+   * supported.
+   *
    * @var string
    */
   public $nextRefreshTime;
   /**
+   * Output only. Timestamp when the webhook was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudConnectorsV1ConfigVariable[]
+   * Output only. Additional webhook related field values.
+   *
+   * @param GoogleCloudConnectorsV1ConfigVariable[] $additionalVariables
    */
   public function setAdditionalVariables($additionalVariables)
   {
@@ -58,7 +71,9 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
     return $this->additionalVariables;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the webhook was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -72,7 +87,9 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. ID to uniquely identify webhook.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -86,7 +103,9 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
     return $this->id;
   }
   /**
-   * @param string
+   * Output only. Name of the Webhook
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -100,7 +119,10 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Next webhook refresh time. Will be null if refresh is not
+   * supported.
+   *
+   * @param string $nextRefreshTime
    */
   public function setNextRefreshTime($nextRefreshTime)
   {
@@ -114,7 +136,9 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends \Google\Coll
     return $this->nextRefreshTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the webhook was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

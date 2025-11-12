@@ -20,24 +20,46 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const GCF_API_VERSION_GCF_API_VERSION_UNSPECIFIED = 'GCF_API_VERSION_UNSPECIFIED';
+  /**
+   * V1 API version.
+   */
+  public const GCF_API_VERSION_API_VERSION_V1 = 'API_VERSION_V1';
+  /**
+   * V2 API version.
+   */
+  public const GCF_API_VERSION_API_VERSION_V2 = 'API_VERSION_V2';
+  /**
+   * The function name of CF to be created
+   *
    * @var string
    */
   public $functionName;
   /**
+   * The function region of CF to be created
+   *
    * @var string
    */
   public $functionRegion;
   /**
+   * Optional. The api version of CF to be created
+   *
    * @var string
    */
   public $gcfApiVersion;
   /**
+   * Indicates the id of the GCP project that the function will be created in.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * The function name of CF to be created
+   *
+   * @param string $functionName
    */
   public function setFunctionName($functionName)
   {
@@ -51,7 +73,9 @@ class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest extends \Google\M
     return $this->functionName;
   }
   /**
-   * @param string
+   * The function region of CF to be created
+   *
+   * @param string $functionRegion
    */
   public function setFunctionRegion($functionRegion)
   {
@@ -65,21 +89,28 @@ class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest extends \Google\M
     return $this->functionRegion;
   }
   /**
-   * @param string
+   * Optional. The api version of CF to be created
+   *
+   * Accepted values: GCF_API_VERSION_UNSPECIFIED, API_VERSION_V1,
+   * API_VERSION_V2
+   *
+   * @param self::GCF_API_VERSION_* $gcfApiVersion
    */
   public function setGcfApiVersion($gcfApiVersion)
   {
     $this->gcfApiVersion = $gcfApiVersion;
   }
   /**
-   * @return string
+   * @return self::GCF_API_VERSION_*
    */
   public function getGcfApiVersion()
   {
     return $this->gcfApiVersion;
   }
   /**
-   * @param string
+   * Indicates the id of the GCP project that the function will be created in.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

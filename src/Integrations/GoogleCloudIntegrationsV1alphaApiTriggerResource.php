@@ -21,16 +21,22 @@ class GoogleCloudIntegrationsV1alphaApiTriggerResource extends \Google\Collectio
 {
   protected $collection_key = 'triggerId';
   /**
+   * Required. Integration where the API is published
+   *
    * @var string
    */
   public $integrationResource;
   /**
+   * Required. Trigger Id of the API trigger(s) in the integration
+   *
    * @var string[]
    */
   public $triggerId;
 
   /**
-   * @param string
+   * Required. Integration where the API is published
+   *
+   * @param string $integrationResource
    */
   public function setIntegrationResource($integrationResource)
   {
@@ -44,7 +50,9 @@ class GoogleCloudIntegrationsV1alphaApiTriggerResource extends \Google\Collectio
     return $this->integrationResource;
   }
   /**
-   * @param string[]
+   * Required. Trigger Id of the API trigger(s) in the integration
+   *
+   * @param string[] $triggerId
    */
   public function setTriggerId($triggerId)
   {

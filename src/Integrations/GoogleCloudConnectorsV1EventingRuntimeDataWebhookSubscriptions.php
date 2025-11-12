@@ -24,7 +24,9 @@ class GoogleCloudConnectorsV1EventingRuntimeDataWebhookSubscriptions extends \Go
   protected $webhookDataDataType = 'array';
 
   /**
-   * @param GoogleCloudConnectorsV1EventingRuntimeDataWebhookData[]
+   * Output only. Webhook data.
+   *
+   * @param GoogleCloudConnectorsV1EventingRuntimeDataWebhookData[] $webhookData
    */
   public function setWebhookData($webhookData)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaCoordinate extends \Google\Model
 {
   /**
+   * Required. X axis of the coordinate
+   *
    * @var int
    */
   public $x;
   /**
+   * Required. Y axis of the coordinate
+   *
    * @var int
    */
   public $y;
 
   /**
-   * @param int
+   * Required. X axis of the coordinate
+   *
+   * @param int $x
    */
   public function setX($x)
   {
@@ -43,7 +49,9 @@ class GoogleCloudIntegrationsV1alphaCoordinate extends \Google\Model
     return $this->x;
   }
   /**
-   * @param int
+   * Required. Y axis of the coordinate
+   *
+   * @param int $y
    */
   public function setY($y)
   {

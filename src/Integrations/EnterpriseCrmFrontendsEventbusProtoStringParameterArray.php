@@ -26,7 +26,7 @@ class EnterpriseCrmFrontendsEventbusProtoStringParameterArray extends \Google\Co
   public $stringValues;
 
   /**
-   * @param string[]
+   * @param string[] $stringValues
    */
   public function setStringValues($stringValues)
   {

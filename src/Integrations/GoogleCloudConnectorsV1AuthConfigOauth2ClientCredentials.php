@@ -20,6 +20,8 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials extends \Google\Model
 {
   /**
+   * Optional. The client identifier.
+   *
    * @var string
    */
   public $clientId;
@@ -27,7 +29,9 @@ class GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials extends \Google\M
   protected $clientSecretDataType = '';
 
   /**
-   * @param string
+   * Optional. The client identifier.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -41,7 +45,9 @@ class GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials extends \Google\M
     return $this->clientId;
   }
   /**
-   * @param GoogleCloudConnectorsV1Secret
+   * Optional. Secret version reference containing the client secret.
+   *
+   * @param GoogleCloudConnectorsV1Secret $clientSecret
    */
   public function setClientSecret(GoogleCloudConnectorsV1Secret $clientSecret)
   {

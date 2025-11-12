@@ -20,16 +20,23 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaAttemptStats extends \Google\Model
 {
   /**
+   * The end time of the integration execution for current attempt.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The start time of the integration execution for current attempt. This could
+   * be in the future if it's been scheduled.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The end time of the integration execution for current attempt.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +50,10 @@ class GoogleCloudIntegrationsV1alphaAttemptStats extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The start time of the integration execution for current attempt. This could
+   * be in the future if it's been scheduled.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

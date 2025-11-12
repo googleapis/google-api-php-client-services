@@ -25,7 +25,7 @@ class EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter extends \Goog
   public $objectValue;
 
   /**
-   * @param string
+   * @param string $objectValue
    */
   public function setObjectValue($objectValue)
   {
