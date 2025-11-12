@@ -20,16 +20,34 @@ namespace Google\Service\Compute;
 class BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy extends \Google\Model
 {
   /**
+   * An optional, arbitrary JSON object with configuration data, understood by a
+   * locally installed custom policy implementation.
+   *
    * @var string
    */
   public $data;
   /**
+   * Identifies the custom policy.
+   *
+   * The value should match the name of a custom implementation registered on
+   * the gRPC clients. It should follow protocol buffer message naming
+   * conventions and include the full path (for example, myorg.CustomLbPolicy).
+   * The maximum length is 256 characters.
+   *
+   * Do not specify the same custom policy more than once for a backend. If you
+   * do, the configuration is rejected.
+   *
+   * For an example of how to use this field, seeUse a custom policy.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * An optional, arbitrary JSON object with configuration data, understood by a
+   * locally installed custom policy implementation.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -43,7 +61,19 @@ class BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy extends \Googl
     return $this->data;
   }
   /**
-   * @param string
+   * Identifies the custom policy.
+   *
+   * The value should match the name of a custom implementation registered on
+   * the gRPC clients. It should follow protocol buffer message naming
+   * conventions and include the full path (for example, myorg.CustomLbPolicy).
+   * The maximum length is 256 characters.
+   *
+   * Do not specify the same custom policy more than once for a backend. If you
+   * do, the configuration is rejected.
+   *
+   * For an example of how to use this field, seeUse a custom policy.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

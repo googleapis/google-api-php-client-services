@@ -20,26 +20,44 @@ namespace Google\Service\Compute;
 class AllocationSpecificSKUReservation extends \Google\Model
 {
   /**
+   * [Output Only] Indicates how many instances are actually usable currently.
+   *
    * @var string
    */
   public $assuredCount;
   /**
+   * Specifies the number of resources that are allocated.
+   *
    * @var string
    */
   public $count;
   /**
+   * [Output Only] Indicates how many instances are in use.
+   *
    * @var string
    */
   public $inUseCount;
   protected $instancePropertiesType = AllocationSpecificSKUAllocationReservedInstanceProperties::class;
   protected $instancePropertiesDataType = '';
   /**
+   * Specifies the instance template to create the reservation. If you use this
+   * field, you must exclude the instanceProperties field.
+   *
+   * This field is optional, and it can be a full or partial URL. For example,
+   * the following are all valid URLs to an instance template:                - 
+   * https://www.googleapis.com/compute/v1/projects/project/global/instanceTempl
+   * ates/instanceTemplate       -
+   * projects/project/global/instanceTemplates/instanceTemplate       -
+   * global/instanceTemplates/instanceTemplate
+   *
    * @var string
    */
   public $sourceInstanceTemplate;
 
   /**
-   * @param string
+   * [Output Only] Indicates how many instances are actually usable currently.
+   *
+   * @param string $assuredCount
    */
   public function setAssuredCount($assuredCount)
   {
@@ -53,7 +71,9 @@ class AllocationSpecificSKUReservation extends \Google\Model
     return $this->assuredCount;
   }
   /**
-   * @param string
+   * Specifies the number of resources that are allocated.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -67,7 +87,9 @@ class AllocationSpecificSKUReservation extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * [Output Only] Indicates how many instances are in use.
+   *
+   * @param string $inUseCount
    */
   public function setInUseCount($inUseCount)
   {
@@ -81,7 +103,9 @@ class AllocationSpecificSKUReservation extends \Google\Model
     return $this->inUseCount;
   }
   /**
-   * @param AllocationSpecificSKUAllocationReservedInstanceProperties
+   * The instance properties for the reservation.
+   *
+   * @param AllocationSpecificSKUAllocationReservedInstanceProperties $instanceProperties
    */
   public function setInstanceProperties(AllocationSpecificSKUAllocationReservedInstanceProperties $instanceProperties)
   {
@@ -95,7 +119,17 @@ class AllocationSpecificSKUReservation extends \Google\Model
     return $this->instanceProperties;
   }
   /**
-   * @param string
+   * Specifies the instance template to create the reservation. If you use this
+   * field, you must exclude the instanceProperties field.
+   *
+   * This field is optional, and it can be a full or partial URL. For example,
+   * the following are all valid URLs to an instance template:                - 
+   * https://www.googleapis.com/compute/v1/projects/project/global/instanceTempl
+   * ates/instanceTemplate       -
+   * projects/project/global/instanceTemplates/instanceTemplate       -
+   * global/instanceTemplates/instanceTemplate
+   *
+   * @param string $sourceInstanceTemplate
    */
   public function setSourceInstanceTemplate($sourceInstanceTemplate)
   {

@@ -19,6 +19,13 @@ namespace Google\Service\Compute;
 
 class AutoscalingPolicyLoadBalancingUtilization extends \Google\Model
 {
+  /**
+   * Fraction of backend capacity utilization (set in HTTP(S) load balancing
+   * configuration) that the autoscaler maintains. Must be a positive float
+   * value. If not defined, the default is 0.8.
+   *
+   * @var 
+   */
   public $utilizationTarget;
 
   public function setUtilizationTarget($utilizationTarget)

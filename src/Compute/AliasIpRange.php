@@ -20,16 +20,31 @@ namespace Google\Service\Compute;
 class AliasIpRange extends \Google\Model
 {
   /**
+   * The IP alias ranges to allocate for this interface. This IP CIDR range must
+   * belong to the specified subnetwork and cannot contain IP addresses reserved
+   * by system or used by other network interfaces. This range may be a single
+   * IP address (such as 10.2.3.4), a netmask (such as/24) or a CIDR-formatted
+   * string (such as10.1.2.0/24).
+   *
    * @var string
    */
   public $ipCidrRange;
   /**
+   * The name of a subnetwork secondary IP range from which to allocate an IP
+   * alias range. If not specified, the primary range of the subnetwork is used.
+   *
    * @var string
    */
   public $subnetworkRangeName;
 
   /**
-   * @param string
+   * The IP alias ranges to allocate for this interface. This IP CIDR range must
+   * belong to the specified subnetwork and cannot contain IP addresses reserved
+   * by system or used by other network interfaces. This range may be a single
+   * IP address (such as 10.2.3.4), a netmask (such as/24) or a CIDR-formatted
+   * string (such as10.1.2.0/24).
+   *
+   * @param string $ipCidrRange
    */
   public function setIpCidrRange($ipCidrRange)
   {
@@ -43,7 +58,10 @@ class AliasIpRange extends \Google\Model
     return $this->ipCidrRange;
   }
   /**
-   * @param string
+   * The name of a subnetwork secondary IP range from which to allocate an IP
+   * alias range. If not specified, the primary range of the subnetwork is used.
+   *
+   * @param string $subnetworkRangeName
    */
   public function setSubnetworkRangeName($subnetworkRangeName)
   {

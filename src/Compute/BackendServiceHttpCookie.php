@@ -20,10 +20,14 @@ namespace Google\Service\Compute;
 class BackendServiceHttpCookie extends \Google\Model
 {
   /**
+   * Name of the cookie.
+   *
    * @var string
    */
   public $name;
   /**
+   * Path to set for the cookie.
+   *
    * @var string
    */
   public $path;
@@ -31,7 +35,9 @@ class BackendServiceHttpCookie extends \Google\Model
   protected $ttlDataType = '';
 
   /**
-   * @param string
+   * Name of the cookie.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +51,9 @@ class BackendServiceHttpCookie extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Path to set for the cookie.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -59,7 +67,9 @@ class BackendServiceHttpCookie extends \Google\Model
     return $this->path;
   }
   /**
-   * @param Duration
+   * Lifetime of the cookie.
+   *
+   * @param Duration $ttl
    */
   public function setTtl(Duration $ttl)
   {

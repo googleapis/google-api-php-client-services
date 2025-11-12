@@ -20,19 +20,34 @@ namespace Google\Service\Compute;
 class AllocationReservationSharingPolicy extends \Google\Model
 {
   /**
+   * Allow all Google Cloud managed services to share reservations.
+   */
+  public const SERVICE_SHARE_TYPE_ALLOW_ALL = 'ALLOW_ALL';
+  /**
+   * [Default] Disallow sharing with all Google Cloud services.
+   */
+  public const SERVICE_SHARE_TYPE_DISALLOW_ALL = 'DISALLOW_ALL';
+  public const SERVICE_SHARE_TYPE_SERVICE_SHARE_TYPE_UNSPECIFIED = 'SERVICE_SHARE_TYPE_UNSPECIFIED';
+  /**
+   * Sharing config for all Google Cloud services.
+   *
    * @var string
    */
   public $serviceShareType;
 
   /**
-   * @param string
+   * Sharing config for all Google Cloud services.
+   *
+   * Accepted values: ALLOW_ALL, DISALLOW_ALL, SERVICE_SHARE_TYPE_UNSPECIFIED
+   *
+   * @param self::SERVICE_SHARE_TYPE_* $serviceShareType
    */
   public function setServiceShareType($serviceShareType)
   {
     $this->serviceShareType = $serviceShareType;
   }
   /**
-   * @return string
+   * @return self::SERVICE_SHARE_TYPE_*
    */
   public function getServiceShareType()
   {

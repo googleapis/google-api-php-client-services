@@ -20,16 +20,38 @@ namespace Google\Service\Compute;
 class AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState extends \Google\Model
 {
   /**
+   * The accelerator topology is available.
+   */
+  public const STATE_AVAILABLE = 'AVAILABLE';
+  /**
+   * The accelerator topology is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The state of the topology is unspecified.
+   */
+  public const STATE_TOPOLOGY_STATE_UNSPECIFIED = 'TOPOLOGY_STATE_UNSPECIFIED';
+  /**
+   * The accelerator topology is unhealthy.
+   */
+  public const STATE_UNHEALTHY = 'UNHEALTHY';
+  /**
+   * The number of accelerator topologies in this state.
+   *
    * @var int
    */
   public $count;
   /**
+   * The state of the accelerator topology.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param int
+   * The number of accelerator topologies in this state.
+   *
+   * @param int $count
    */
   public function setCount($count)
   {
@@ -43,14 +65,18 @@ class AcceleratorTopologiesInfoAcceleratorTopologyInfoInfoPerTopologyState exten
     return $this->count;
   }
   /**
-   * @param string
+   * The state of the accelerator topology.
+   *
+   * Accepted values: AVAILABLE, RUNNING, TOPOLOGY_STATE_UNSPECIFIED, UNHEALTHY
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

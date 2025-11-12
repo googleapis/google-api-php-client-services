@@ -26,7 +26,9 @@ class AutoscalersScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param Autoscaler[]
+   * [Output Only] A list of autoscalers contained in this scope.
+   *
+   * @param Autoscaler[] $autoscalers
    */
   public function setAutoscalers($autoscalers)
   {
@@ -40,7 +42,10 @@ class AutoscalersScopedList extends \Google\Collection
     return $this->autoscalers;
   }
   /**
-   * @param AutoscalersScopedListWarning
+   * [Output Only] Informational warning which replaces the list of autoscalers
+   * when the list is empty.
+   *
+   * @param AutoscalersScopedListWarning $warning
    */
   public function setWarning(AutoscalersScopedListWarning $warning)
   {

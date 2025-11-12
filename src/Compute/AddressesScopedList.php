@@ -26,7 +26,9 @@ class AddressesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param Address[]
+   * [Output Only] A list of addresses contained in this scope.
+   *
+   * @param Address[] $addresses
    */
   public function setAddresses($addresses)
   {
@@ -40,7 +42,10 @@ class AddressesScopedList extends \Google\Collection
     return $this->addresses;
   }
   /**
-   * @param AddressesScopedListWarning
+   * [Output Only] Informational warning which replaces the list of addresses
+   * when the list is empty.
+   *
+   * @param AddressesScopedListWarning $warning
    */
   public function setWarning(AddressesScopedListWarning $warning)
   {

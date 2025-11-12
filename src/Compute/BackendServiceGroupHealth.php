@@ -21,18 +21,25 @@ class BackendServiceGroupHealth extends \Google\Collection
 {
   protected $collection_key = 'healthStatus';
   /**
+   * Metadata defined as annotations on the network endpoint group.
+   *
    * @var string[]
    */
   public $annotations;
   protected $healthStatusType = HealthStatus::class;
   protected $healthStatusDataType = 'array';
   /**
+   * [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for
+   * the health of backend services.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string[]
+   * Metadata defined as annotations on the network endpoint group.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -46,7 +53,10 @@ class BackendServiceGroupHealth extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param HealthStatus[]
+   * Health state of the backend instances or endpoints in requested instance or
+   * network endpoint group, determined based on configured health checks.
+   *
+   * @param HealthStatus[] $healthStatus
    */
   public function setHealthStatus($healthStatus)
   {
@@ -60,7 +70,10 @@ class BackendServiceGroupHealth extends \Google\Collection
     return $this->healthStatus;
   }
   /**
-   * @param string
+   * [Output Only] Type of resource. Alwayscompute#backendServiceGroupHealth for
+   * the health of backend services.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

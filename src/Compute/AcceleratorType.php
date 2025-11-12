@@ -20,42 +20,64 @@ namespace Google\Service\Compute;
 class AcceleratorType extends \Google\Model
 {
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
   /**
+   * [Output Only] An optional textual description of the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for
+   * accelerator types.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] Maximum number of accelerator cards allowed per instance.
+   *
    * @var int
    */
   public $maximumCardsPerInstance;
   /**
+   * [Output Only] Name of the resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] Server-defined, fully qualified URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] The name of the zone where the accelerator type resides, such
+   * as us-central1-a. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -69,7 +91,9 @@ class AcceleratorType extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param DeprecationStatus
+   * [Output Only] The deprecation status associated with this accelerator type.
+   *
+   * @param DeprecationStatus $deprecated
    */
   public function setDeprecated(DeprecationStatus $deprecated)
   {
@@ -83,7 +107,9 @@ class AcceleratorType extends \Google\Model
     return $this->deprecated;
   }
   /**
-   * @param string
+   * [Output Only] An optional textual description of the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -97,7 +123,10 @@ class AcceleratorType extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -111,7 +140,10 @@ class AcceleratorType extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] The type of the resource. Alwayscompute#acceleratorType for
+   * accelerator types.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -125,7 +157,9 @@ class AcceleratorType extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param int
+   * [Output Only] Maximum number of accelerator cards allowed per instance.
+   *
+   * @param int $maximumCardsPerInstance
    */
   public function setMaximumCardsPerInstance($maximumCardsPerInstance)
   {
@@ -139,7 +173,9 @@ class AcceleratorType extends \Google\Model
     return $this->maximumCardsPerInstance;
   }
   /**
-   * @param string
+   * [Output Only] Name of the resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -153,7 +189,9 @@ class AcceleratorType extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined, fully qualified URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -167,7 +205,11 @@ class AcceleratorType extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * [Output Only] The name of the zone where the accelerator type resides, such
+   * as us-central1-a. You must specify this field as part of the HTTP request
+   * URL. It is not settable as a field in the request body.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

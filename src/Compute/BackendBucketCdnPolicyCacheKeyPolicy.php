@@ -21,16 +21,24 @@ class BackendBucketCdnPolicyCacheKeyPolicy extends \Google\Collection
 {
   protected $collection_key = 'queryStringWhitelist';
   /**
+   * Allows HTTP request headers (by name) to be used in the cache key.
+   *
    * @var string[]
    */
   public $includeHttpHeaders;
   /**
+   * Names of query string parameters to include in cache keys. Default
+   * parameters are always included. '&' and '=' will be percent encoded and not
+   * treated as delimiters.
+   *
    * @var string[]
    */
   public $queryStringWhitelist;
 
   /**
-   * @param string[]
+   * Allows HTTP request headers (by name) to be used in the cache key.
+   *
+   * @param string[] $includeHttpHeaders
    */
   public function setIncludeHttpHeaders($includeHttpHeaders)
   {
@@ -44,7 +52,11 @@ class BackendBucketCdnPolicyCacheKeyPolicy extends \Google\Collection
     return $this->includeHttpHeaders;
   }
   /**
-   * @param string[]
+   * Names of query string parameters to include in cache keys. Default
+   * parameters are always included. '&' and '=' will be percent encoded and not
+   * treated as delimiters.
+   *
+   * @param string[] $queryStringWhitelist
    */
   public function setQueryStringWhitelist($queryStringWhitelist)
   {
