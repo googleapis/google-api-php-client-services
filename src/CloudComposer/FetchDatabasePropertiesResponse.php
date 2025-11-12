@@ -20,20 +20,33 @@ namespace Google\Service\CloudComposer;
 class FetchDatabasePropertiesResponse extends \Google\Model
 {
   /**
+   * The availability status of the failover replica. A false status indicates
+   * that the failover replica is out of sync. The primary instance can only
+   * fail over to the failover replica when the status is true.
+   *
    * @var bool
    */
   public $isFailoverReplicaAvailable;
   /**
+   * The Compute Engine zone that the instance is currently serving from.
+   *
    * @var string
    */
   public $primaryGceZone;
   /**
+   * The Compute Engine zone that the failover instance is currently serving
+   * from for a regional Cloud SQL instance.
+   *
    * @var string
    */
   public $secondaryGceZone;
 
   /**
-   * @param bool
+   * The availability status of the failover replica. A false status indicates
+   * that the failover replica is out of sync. The primary instance can only
+   * fail over to the failover replica when the status is true.
+   *
+   * @param bool $isFailoverReplicaAvailable
    */
   public function setIsFailoverReplicaAvailable($isFailoverReplicaAvailable)
   {
@@ -47,7 +60,9 @@ class FetchDatabasePropertiesResponse extends \Google\Model
     return $this->isFailoverReplicaAvailable;
   }
   /**
-   * @param string
+   * The Compute Engine zone that the instance is currently serving from.
+   *
+   * @param string $primaryGceZone
    */
   public function setPrimaryGceZone($primaryGceZone)
   {
@@ -61,7 +76,10 @@ class FetchDatabasePropertiesResponse extends \Google\Model
     return $this->primaryGceZone;
   }
   /**
-   * @param string
+   * The Compute Engine zone that the failover instance is currently serving
+   * from for a regional Cloud SQL instance.
+   *
+   * @param string $secondaryGceZone
    */
   public function setSecondaryGceZone($secondaryGceZone)
   {

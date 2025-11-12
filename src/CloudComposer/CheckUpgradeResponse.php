@@ -19,32 +19,58 @@ namespace Google\Service\CloudComposer;
 
 class CheckUpgradeResponse extends \Google\Collection
 {
+  /**
+   * It is unknown whether build had conflicts or not.
+   */
+  public const CONTAINS_PYPI_MODULES_CONFLICT_CONFLICT_RESULT_UNSPECIFIED = 'CONFLICT_RESULT_UNSPECIFIED';
+  /**
+   * There were python packages conflicts.
+   */
+  public const CONTAINS_PYPI_MODULES_CONFLICT_CONFLICT = 'CONFLICT';
+  /**
+   * There were no python packages conflicts.
+   */
+  public const CONTAINS_PYPI_MODULES_CONFLICT_NO_CONFLICT = 'NO_CONFLICT';
   protected $collection_key = 'configConflicts';
   /**
+   * Output only. Url for a docker build log of an upgraded image.
+   *
    * @var string
    */
   public $buildLogUri;
   protected $configConflictsType = ConfigConflict::class;
   protected $configConflictsDataType = 'array';
   /**
+   * Output only. Whether build has succeeded or failed on modules conflicts.
+   *
    * @var string
    */
   public $containsPypiModulesConflict;
   /**
+   * Composer image for which the build was happening.
+   *
    * @var string
    */
   public $imageVersion;
   /**
+   * Output only. Extract from a docker image build log containing information
+   * about pypi modules conflicts.
+   *
    * @var string
    */
   public $pypiConflictBuildLogExtract;
   /**
+   * Pypi dependencies specified in the environment configuration, at the time
+   * when the build was triggered.
+   *
    * @var string[]
    */
   public $pypiDependencies;
 
   /**
-   * @param string
+   * Output only. Url for a docker build log of an upgraded image.
+   *
+   * @param string $buildLogUri
    */
   public function setBuildLogUri($buildLogUri)
   {
@@ -58,7 +84,10 @@ class CheckUpgradeResponse extends \Google\Collection
     return $this->buildLogUri;
   }
   /**
-   * @param ConfigConflict[]
+   * Output only. Contains information about environment configuration that is
+   * incompatible with the new image version, except for pypi modules conflicts.
+   *
+   * @param ConfigConflict[] $configConflicts
    */
   public function setConfigConflicts($configConflicts)
   {
@@ -72,21 +101,27 @@ class CheckUpgradeResponse extends \Google\Collection
     return $this->configConflicts;
   }
   /**
-   * @param string
+   * Output only. Whether build has succeeded or failed on modules conflicts.
+   *
+   * Accepted values: CONFLICT_RESULT_UNSPECIFIED, CONFLICT, NO_CONFLICT
+   *
+   * @param self::CONTAINS_PYPI_MODULES_CONFLICT_* $containsPypiModulesConflict
    */
   public function setContainsPypiModulesConflict($containsPypiModulesConflict)
   {
     $this->containsPypiModulesConflict = $containsPypiModulesConflict;
   }
   /**
-   * @return string
+   * @return self::CONTAINS_PYPI_MODULES_CONFLICT_*
    */
   public function getContainsPypiModulesConflict()
   {
     return $this->containsPypiModulesConflict;
   }
   /**
-   * @param string
+   * Composer image for which the build was happening.
+   *
+   * @param string $imageVersion
    */
   public function setImageVersion($imageVersion)
   {
@@ -100,7 +135,10 @@ class CheckUpgradeResponse extends \Google\Collection
     return $this->imageVersion;
   }
   /**
-   * @param string
+   * Output only. Extract from a docker image build log containing information
+   * about pypi modules conflicts.
+   *
+   * @param string $pypiConflictBuildLogExtract
    */
   public function setPypiConflictBuildLogExtract($pypiConflictBuildLogExtract)
   {
@@ -114,7 +152,10 @@ class CheckUpgradeResponse extends \Google\Collection
     return $this->pypiConflictBuildLogExtract;
   }
   /**
-   * @param string[]
+   * Pypi dependencies specified in the environment configuration, at the time
+   * when the build was triggered.
+   *
+   * @param string[] $pypiDependencies
    */
   public function setPypiDependencies($pypiDependencies)
   {

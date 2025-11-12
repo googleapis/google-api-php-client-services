@@ -20,24 +20,35 @@ namespace Google\Service\CloudComposer;
 class StopAirflowCommandRequest extends \Google\Model
 {
   /**
+   * The unique ID of the command execution.
+   *
    * @var string
    */
   public $executionId;
   /**
+   * If true, the execution is terminated forcefully (SIGKILL). If false, the
+   * execution is stopped gracefully, giving it time for cleanup.
+   *
    * @var bool
    */
   public $force;
   /**
+   * The name of the pod where the command is executed.
+   *
    * @var string
    */
   public $pod;
   /**
+   * The namespace of the pod where the command is executed.
+   *
    * @var string
    */
   public $podNamespace;
 
   /**
-   * @param string
+   * The unique ID of the command execution.
+   *
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -51,7 +62,10 @@ class StopAirflowCommandRequest extends \Google\Model
     return $this->executionId;
   }
   /**
-   * @param bool
+   * If true, the execution is terminated forcefully (SIGKILL). If false, the
+   * execution is stopped gracefully, giving it time for cleanup.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -65,7 +79,9 @@ class StopAirflowCommandRequest extends \Google\Model
     return $this->force;
   }
   /**
-   * @param string
+   * The name of the pod where the command is executed.
+   *
+   * @param string $pod
    */
   public function setPod($pod)
   {
@@ -79,7 +95,9 @@ class StopAirflowCommandRequest extends \Google\Model
     return $this->pod;
   }
   /**
-   * @param string
+   * The namespace of the pod where the command is executed.
+   *
+   * @param string $podNamespace
    */
   public function setPodNamespace($podNamespace)
   {

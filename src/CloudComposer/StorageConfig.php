@@ -20,12 +20,18 @@ namespace Google\Service\CloudComposer;
 class StorageConfig extends \Google\Model
 {
   /**
+   * Optional. The name of the Cloud Storage bucket used by the environment. No
+   * `gs://` prefix.
+   *
    * @var string
    */
   public $bucket;
 
   /**
-   * @param string
+   * Optional. The name of the Cloud Storage bucket used by the environment. No
+   * `gs://` prefix.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {

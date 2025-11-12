@@ -21,6 +21,8 @@ class ListWorkloadsResponse extends \Google\Collection
 {
   protected $collection_key = 'workloads';
   /**
+   * The page token used to query for the next page if one exists.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListWorkloadsResponse extends \Google\Collection
   protected $workloadsDataType = 'array';
 
   /**
-   * @param string
+   * The page token used to query for the next page if one exists.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListWorkloadsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ComposerWorkload[]
+   * The list of environment workloads.
+   *
+   * @param ComposerWorkload[] $workloads
    */
   public function setWorkloads($workloads)
   {

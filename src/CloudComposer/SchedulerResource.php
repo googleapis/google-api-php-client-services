@@ -20,24 +20,36 @@ namespace Google\Service\CloudComposer;
 class SchedulerResource extends \Google\Model
 {
   /**
+   * Optional. The number of schedulers.
+   *
    * @var int
    */
   public $count;
   /**
+   * Optional. CPU request and limit for a single Airflow scheduler replica.
+   *
    * @var float
    */
   public $cpu;
   /**
+   * Optional. Memory (GB) request and limit for a single Airflow scheduler
+   * replica.
+   *
    * @var float
    */
   public $memoryGb;
   /**
+   * Optional. Storage (GB) request and limit for a single Airflow scheduler
+   * replica.
+   *
    * @var float
    */
   public $storageGb;
 
   /**
-   * @param int
+   * Optional. The number of schedulers.
+   *
+   * @param int $count
    */
   public function setCount($count)
   {
@@ -51,7 +63,9 @@ class SchedulerResource extends \Google\Model
     return $this->count;
   }
   /**
-   * @param float
+   * Optional. CPU request and limit for a single Airflow scheduler replica.
+   *
+   * @param float $cpu
    */
   public function setCpu($cpu)
   {
@@ -65,7 +79,10 @@ class SchedulerResource extends \Google\Model
     return $this->cpu;
   }
   /**
-   * @param float
+   * Optional. Memory (GB) request and limit for a single Airflow scheduler
+   * replica.
+   *
+   * @param float $memoryGb
    */
   public function setMemoryGb($memoryGb)
   {
@@ -79,7 +96,10 @@ class SchedulerResource extends \Google\Model
     return $this->memoryGb;
   }
   /**
-   * @param float
+   * Optional. Storage (GB) request and limit for a single Airflow scheduler
+   * replica.
+   *
+   * @param float $storageGb
    */
   public function setStorageGb($storageGb)
   {

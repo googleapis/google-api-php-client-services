@@ -20,12 +20,18 @@ namespace Google\Service\CloudComposer;
 class SaveSnapshotRequest extends \Google\Model
 {
   /**
+   * Location in a Cloud Storage where the snapshot is going to be stored, e.g.:
+   * "gs://my-bucket/snapshots".
+   *
    * @var string
    */
   public $snapshotLocation;
 
   /**
-   * @param string
+   * Location in a Cloud Storage where the snapshot is going to be stored, e.g.:
+   * "gs://my-bucket/snapshots".
+   *
+   * @param string $snapshotLocation
    */
   public function setSnapshotLocation($snapshotLocation)
   {

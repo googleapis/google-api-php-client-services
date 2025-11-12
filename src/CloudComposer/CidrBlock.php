@@ -20,16 +20,22 @@ namespace Google\Service\CloudComposer;
 class CidrBlock extends \Google\Model
 {
   /**
+   * CIDR block that must be specified in CIDR notation.
+   *
    * @var string
    */
   public $cidrBlock;
   /**
+   * User-defined name that identifies the CIDR block.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * CIDR block that must be specified in CIDR notation.
+   *
+   * @param string $cidrBlock
    */
   public function setCidrBlock($cidrBlock)
   {
@@ -43,7 +49,9 @@ class CidrBlock extends \Google\Model
     return $this->cidrBlock;
   }
   /**
-   * @param string
+   * User-defined name that identifies the CIDR block.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

@@ -20,16 +20,30 @@ namespace Google\Service\CloudComposer;
 class UserWorkloadsConfigMap extends \Google\Model
 {
   /**
+   * Optional. The "data" field of Kubernetes ConfigMap, organized in key-value
+   * pairs. For details see:
+   * https://kubernetes.io/docs/concepts/configuration/configmap/ Example: {
+   * "example_key": "example_value", "another_key": "another_value" }
+   *
    * @var string[]
    */
   public $data;
   /**
+   * Identifier. The resource name of the ConfigMap, in the form: "projects/{pro
+   * jectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsCo
+   * nfigMaps/{userWorkloadsConfigMapId}"
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string[]
+   * Optional. The "data" field of Kubernetes ConfigMap, organized in key-value
+   * pairs. For details see:
+   * https://kubernetes.io/docs/concepts/configuration/configmap/ Example: {
+   * "example_key": "example_value", "another_key": "another_value" }
+   *
+   * @param string[] $data
    */
   public function setData($data)
   {
@@ -43,7 +57,11 @@ class UserWorkloadsConfigMap extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the ConfigMap, in the form: "projects/{pro
+   * jectId}/locations/{locationId}/environments/{environmentId}/userWorkloadsCo
+   * nfigMaps/{userWorkloadsConfigMapId}"
+   *
+   * @param string $name
    */
   public function setName($name)
   {

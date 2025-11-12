@@ -21,6 +21,8 @@ class ListUserWorkloadsSecretsResponse extends \Google\Collection
 {
   protected $collection_key = 'userWorkloadsSecrets';
   /**
+   * The page token used to query for the next page if one exists.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListUserWorkloadsSecretsResponse extends \Google\Collection
   protected $userWorkloadsSecretsDataType = 'array';
 
   /**
-   * @param string
+   * The page token used to query for the next page if one exists.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListUserWorkloadsSecretsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param UserWorkloadsSecret[]
+   * The list of Secrets returned by a ListUserWorkloadsSecretsRequest.
+   *
+   * @param UserWorkloadsSecret[] $userWorkloadsSecrets
    */
   public function setUserWorkloadsSecrets($userWorkloadsSecrets)
   {

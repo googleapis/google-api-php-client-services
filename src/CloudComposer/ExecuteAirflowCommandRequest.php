@@ -21,20 +21,30 @@ class ExecuteAirflowCommandRequest extends \Google\Collection
 {
   protected $collection_key = 'parameters';
   /**
+   * Airflow command.
+   *
    * @var string
    */
   public $command;
   /**
+   * Parameters for the Airflow command/subcommand as an array of arguments. It
+   * may contain positional arguments like `["my-dag-id"]`, key-value parameters
+   * like `["--foo=bar"]` or `["--foo","bar"]`, or other flags like `["-f"]`.
+   *
    * @var string[]
    */
   public $parameters;
   /**
+   * Airflow subcommand.
+   *
    * @var string
    */
   public $subcommand;
 
   /**
-   * @param string
+   * Airflow command.
+   *
+   * @param string $command
    */
   public function setCommand($command)
   {
@@ -48,7 +58,11 @@ class ExecuteAirflowCommandRequest extends \Google\Collection
     return $this->command;
   }
   /**
-   * @param string[]
+   * Parameters for the Airflow command/subcommand as an array of arguments. It
+   * may contain positional arguments like `["my-dag-id"]`, key-value parameters
+   * like `["--foo=bar"]` or `["--foo","bar"]`, or other flags like `["-f"]`.
+   *
+   * @param string[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -62,7 +76,9 @@ class ExecuteAirflowCommandRequest extends \Google\Collection
     return $this->parameters;
   }
   /**
-   * @param string
+   * Airflow subcommand.
+   *
+   * @param string $subcommand
    */
   public function setSubcommand($subcommand)
   {

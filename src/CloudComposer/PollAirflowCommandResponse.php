@@ -25,12 +25,16 @@ class PollAirflowCommandResponse extends \Google\Collection
   protected $outputType = Line::class;
   protected $outputDataType = 'array';
   /**
+   * Whether the command execution has finished and there is no more output.
+   *
    * @var bool
    */
   public $outputEnd;
 
   /**
-   * @param ExitInfo
+   * The result exit status of the command.
+   *
+   * @param ExitInfo $exitInfo
    */
   public function setExitInfo(ExitInfo $exitInfo)
   {
@@ -44,7 +48,10 @@ class PollAirflowCommandResponse extends \Google\Collection
     return $this->exitInfo;
   }
   /**
-   * @param Line[]
+   * Output from the command execution. It may not contain the full output and
+   * the caller may need to poll for more lines.
+   *
+   * @param Line[] $output
    */
   public function setOutput($output)
   {
@@ -58,7 +65,9 @@ class PollAirflowCommandResponse extends \Google\Collection
     return $this->output;
   }
   /**
-   * @param bool
+   * Whether the command execution has finished and there is no more output.
+   *
+   * @param bool $outputEnd
    */
   public function setOutputEnd($outputEnd)
   {

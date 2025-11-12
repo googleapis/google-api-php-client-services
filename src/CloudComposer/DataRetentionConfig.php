@@ -25,7 +25,9 @@ class DataRetentionConfig extends \Google\Model
   protected $taskLogsRetentionConfigDataType = '';
 
   /**
-   * @param AirflowMetadataRetentionPolicyConfig
+   * Optional. The retention policy for airflow metadata database.
+   *
+   * @param AirflowMetadataRetentionPolicyConfig $airflowMetadataRetentionConfig
    */
   public function setAirflowMetadataRetentionConfig(AirflowMetadataRetentionPolicyConfig $airflowMetadataRetentionConfig)
   {
@@ -39,7 +41,9 @@ class DataRetentionConfig extends \Google\Model
     return $this->airflowMetadataRetentionConfig;
   }
   /**
-   * @param TaskLogsRetentionConfig
+   * Optional. The configuration settings for task logs retention
+   *
+   * @param TaskLogsRetentionConfig $taskLogsRetentionConfig
    */
   public function setTaskLogsRetentionConfig(TaskLogsRetentionConfig $taskLogsRetentionConfig)
   {

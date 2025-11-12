@@ -23,12 +23,16 @@ class ListEnvironmentsResponse extends \Google\Collection
   protected $environmentsType = Environment::class;
   protected $environmentsDataType = 'array';
   /**
+   * The page token used to query for the next page if one exists.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Environment[]
+   * The list of environments returned by a ListEnvironmentsRequest.
+   *
+   * @param Environment[] $environments
    */
   public function setEnvironments($environments)
   {
@@ -42,7 +46,9 @@ class ListEnvironmentsResponse extends \Google\Collection
     return $this->environments;
   }
   /**
-   * @param string
+   * The page token used to query for the next page if one exists.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

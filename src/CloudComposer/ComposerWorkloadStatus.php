@@ -20,20 +20,56 @@ namespace Google\Service\CloudComposer;
 class ComposerWorkloadStatus extends \Google\Model
 {
   /**
+   * Not able to determine the status of the workload.
+   */
+  public const STATE_COMPOSER_WORKLOAD_STATE_UNSPECIFIED = 'COMPOSER_WORKLOAD_STATE_UNSPECIFIED';
+  /**
+   * Workload is in pending state and has not yet started.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * Workload is running fine.
+   */
+  public const STATE_OK = 'OK';
+  /**
+   * Workload is running but there are some non-critical problems.
+   */
+  public const STATE_WARNING = 'WARNING';
+  /**
+   * Workload is not running due to an error.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * Workload has finished execution with success.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Workload has finished execution with failure.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Output only. Detailed message of the status.
+   *
    * @var string
    */
   public $detailedStatusMessage;
   /**
+   * Output only. Workload state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Text to provide more descriptive status.
+   *
    * @var string
    */
   public $statusMessage;
 
   /**
-   * @param string
+   * Output only. Detailed message of the status.
+   *
+   * @param string $detailedStatusMessage
    */
   public function setDetailedStatusMessage($detailedStatusMessage)
   {
@@ -47,21 +83,28 @@ class ComposerWorkloadStatus extends \Google\Model
     return $this->detailedStatusMessage;
   }
   /**
-   * @param string
+   * Output only. Workload state.
+   *
+   * Accepted values: COMPOSER_WORKLOAD_STATE_UNSPECIFIED, PENDING, OK, WARNING,
+   * ERROR, SUCCEEDED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Text to provide more descriptive status.
+   *
+   * @param string $statusMessage
    */
   public function setStatusMessage($statusMessage)
   {

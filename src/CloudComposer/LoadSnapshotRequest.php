@@ -20,28 +20,46 @@ namespace Google\Service\CloudComposer;
 class LoadSnapshotRequest extends \Google\Model
 {
   /**
+   * Whether or not to skip setting Airflow overrides when loading the
+   * environment's state.
+   *
    * @var bool
    */
   public $skipAirflowOverridesSetting;
   /**
+   * Whether or not to skip setting environment variables when loading the
+   * environment's state.
+   *
    * @var bool
    */
   public $skipEnvironmentVariablesSetting;
   /**
+   * Whether or not to skip copying Cloud Storage data when loading the
+   * environment's state.
+   *
    * @var bool
    */
   public $skipGcsDataCopying;
   /**
+   * Whether or not to skip installing Pypi packages when loading the
+   * environment's state.
+   *
    * @var bool
    */
   public $skipPypiPackagesInstallation;
   /**
+   * A Cloud Storage path to a snapshot to load, e.g.: "gs://my-
+   * bucket/snapshots/project_location_environment_timestamp".
+   *
    * @var string
    */
   public $snapshotPath;
 
   /**
-   * @param bool
+   * Whether or not to skip setting Airflow overrides when loading the
+   * environment's state.
+   *
+   * @param bool $skipAirflowOverridesSetting
    */
   public function setSkipAirflowOverridesSetting($skipAirflowOverridesSetting)
   {
@@ -55,7 +73,10 @@ class LoadSnapshotRequest extends \Google\Model
     return $this->skipAirflowOverridesSetting;
   }
   /**
-   * @param bool
+   * Whether or not to skip setting environment variables when loading the
+   * environment's state.
+   *
+   * @param bool $skipEnvironmentVariablesSetting
    */
   public function setSkipEnvironmentVariablesSetting($skipEnvironmentVariablesSetting)
   {
@@ -69,7 +90,10 @@ class LoadSnapshotRequest extends \Google\Model
     return $this->skipEnvironmentVariablesSetting;
   }
   /**
-   * @param bool
+   * Whether or not to skip copying Cloud Storage data when loading the
+   * environment's state.
+   *
+   * @param bool $skipGcsDataCopying
    */
   public function setSkipGcsDataCopying($skipGcsDataCopying)
   {
@@ -83,7 +107,10 @@ class LoadSnapshotRequest extends \Google\Model
     return $this->skipGcsDataCopying;
   }
   /**
-   * @param bool
+   * Whether or not to skip installing Pypi packages when loading the
+   * environment's state.
+   *
+   * @param bool $skipPypiPackagesInstallation
    */
   public function setSkipPypiPackagesInstallation($skipPypiPackagesInstallation)
   {
@@ -97,7 +124,10 @@ class LoadSnapshotRequest extends \Google\Model
     return $this->skipPypiPackagesInstallation;
   }
   /**
-   * @param string
+   * A Cloud Storage path to a snapshot to load, e.g.: "gs://my-
+   * bucket/snapshots/project_location_environment_timestamp".
+   *
+   * @param string $snapshotPath
    */
   public function setSnapshotPath($snapshotPath)
   {

@@ -31,7 +31,11 @@ class WorkloadsConfig extends \Google\Model
   protected $workerDataType = '';
 
   /**
-   * @param DagProcessorResource
+   * Optional. Resources used by Airflow DAG processors. This field is supported
+   * for Cloud Composer environments in versions
+   * composer-3-airflow-*.*.*-build.* and newer.
+   *
+   * @param DagProcessorResource $dagProcessor
    */
   public function setDagProcessor(DagProcessorResource $dagProcessor)
   {
@@ -45,7 +49,9 @@ class WorkloadsConfig extends \Google\Model
     return $this->dagProcessor;
   }
   /**
-   * @param SchedulerResource
+   * Optional. Resources used by Airflow schedulers.
+   *
+   * @param SchedulerResource $scheduler
    */
   public function setScheduler(SchedulerResource $scheduler)
   {
@@ -59,7 +65,9 @@ class WorkloadsConfig extends \Google\Model
     return $this->scheduler;
   }
   /**
-   * @param TriggererResource
+   * Optional. Resources used by Airflow triggerers.
+   *
+   * @param TriggererResource $triggerer
    */
   public function setTriggerer(TriggererResource $triggerer)
   {
@@ -73,7 +81,9 @@ class WorkloadsConfig extends \Google\Model
     return $this->triggerer;
   }
   /**
-   * @param WebServerResource
+   * Optional. Resources used by Airflow web server.
+   *
+   * @param WebServerResource $webServer
    */
   public function setWebServer(WebServerResource $webServer)
   {
@@ -87,7 +97,9 @@ class WorkloadsConfig extends \Google\Model
     return $this->webServer;
   }
   /**
-   * @param WorkerResource
+   * Optional. Resources used by Airflow workers.
+   *
+   * @param WorkerResource $worker
    */
   public function setWorker(WorkerResource $worker)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\CloudComposer;
 class SaveSnapshotResponse extends \Google\Model
 {
   /**
+   * The fully-resolved Cloud Storage path of the created snapshot, e.g.:
+   * "gs://my-bucket/snapshots/project_location_environment_timestamp". This
+   * field is populated only if the snapshot creation was successful.
+   *
    * @var string
    */
   public $snapshotPath;
 
   /**
-   * @param string
+   * The fully-resolved Cloud Storage path of the created snapshot, e.g.:
+   * "gs://my-bucket/snapshots/project_location_environment_timestamp". This
+   * field is populated only if the snapshot creation was successful.
+   *
+   * @param string $snapshotPath
    */
   public function setSnapshotPath($snapshotPath)
   {

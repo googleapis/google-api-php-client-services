@@ -20,16 +20,35 @@ namespace Google\Service\CloudComposer;
 class ConfigConflict extends \Google\Model
 {
   /**
+   * Conflict type is unknown.
+   */
+  public const TYPE_CONFLICT_TYPE_UNSPECIFIED = 'CONFLICT_TYPE_UNSPECIFIED';
+  /**
+   * Conflict is blocking, the upgrade would fail.
+   */
+  public const TYPE_BLOCKING = 'BLOCKING';
+  /**
+   * Conflict is non-blocking. The upgrade would succeed, but the environment
+   * configuration would be changed.
+   */
+  public const TYPE_NON_BLOCKING = 'NON_BLOCKING';
+  /**
+   * Conflict message.
+   *
    * @var string
    */
   public $message;
   /**
+   * Conflict type. It can be blocking or non-blocking.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Conflict message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -43,14 +62,18 @@ class ConfigConflict extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Conflict type. It can be blocking or non-blocking.
+   *
+   * Accepted values: CONFLICT_TYPE_UNSPECIFIED, BLOCKING, NON_BLOCKING
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

@@ -19,45 +19,97 @@ namespace Google\Service\CloudComposer;
 
 class Environment extends \Google\Model
 {
+  /**
+   * The state of the environment is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The environment is in the process of being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The environment is currently running and healthy. It is ready for use.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The environment is being updated. It remains usable but cannot receive
+   * additional update requests or be deleted at this time.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The environment is undergoing deletion. It cannot be used.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The environment has encountered an error and cannot be used.
+   */
+  public const STATE_ERROR = 'ERROR';
   protected $configType = EnvironmentConfig::class;
   protected $configDataType = '';
   /**
+   * Output only. The time at which this environment was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. User-defined labels for this environment. The labels map can
+   * contain no more than 64 entries. Entries of the labels map are UTF8 strings
+   * that comply with the following restrictions: * Keys must conform to regexp:
+   * \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
+   * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally
+   * constrained to be <= 128 bytes in size.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the environment, in the form:
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   * EnvironmentId must start with a lowercase letter followed by up to 63
+   * lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * The current state of the environment.
+   *
    * @var string
    */
   public $state;
   protected $storageConfigType = StorageConfig::class;
   protected $storageConfigDataType = '';
   /**
+   * Output only. The time at which this environment was last modified.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. The UUID (Universally Unique IDentifier) associated with this
+   * environment. This value is generated when the environment is created.
+   *
    * @var string
    */
   public $uuid;
 
   /**
-   * @param EnvironmentConfig
+   * Optional. Configuration parameters for this environment.
+   *
+   * @param EnvironmentConfig $config
    */
   public function setConfig(EnvironmentConfig $config)
   {
@@ -71,7 +123,9 @@ class Environment extends \Google\Model
     return $this->config;
   }
   /**
-   * @param string
+   * Output only. The time at which this environment was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -85,7 +139,14 @@ class Environment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string[]
+   * Optional. User-defined labels for this environment. The labels map can
+   * contain no more than 64 entries. Entries of the labels map are UTF8 strings
+   * that comply with the following restrictions: * Keys must conform to regexp:
+   * \p{Ll}\p{Lo}{0,62} * Values must conform to regexp:
+   * [\p{Ll}\p{Lo}\p{N}_-]{0,63} * Both keys and values are additionally
+   * constrained to be <= 128 bytes in size.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -99,7 +160,12 @@ class Environment extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the environment, in the form:
+   * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
+   * EnvironmentId must start with a lowercase letter followed by up to 63
+   * lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -113,7 +179,9 @@ class Environment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -127,7 +195,9 @@ class Environment extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -141,21 +211,28 @@ class Environment extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * The current state of the environment.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, RUNNING, UPDATING, DELETING,
+   * ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param StorageConfig
+   * Optional. Storage configuration for this environment.
+   *
+   * @param StorageConfig $storageConfig
    */
   public function setStorageConfig(StorageConfig $storageConfig)
   {
@@ -169,7 +246,9 @@ class Environment extends \Google\Model
     return $this->storageConfig;
   }
   /**
-   * @param string
+   * Output only. The time at which this environment was last modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -183,7 +262,10 @@ class Environment extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Output only. The UUID (Universally Unique IDentifier) associated with this
+   * environment. This value is generated when the environment is created.
+   *
+   * @param string $uuid
    */
   public function setUuid($uuid)
   {

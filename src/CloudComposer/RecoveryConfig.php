@@ -23,7 +23,9 @@ class RecoveryConfig extends \Google\Model
   protected $scheduledSnapshotsConfigDataType = '';
 
   /**
-   * @param ScheduledSnapshotsConfig
+   * Optional. The configuration for scheduled snapshot creation mechanism.
+   *
+   * @param ScheduledSnapshotsConfig $scheduledSnapshotsConfig
    */
   public function setScheduledSnapshotsConfig(ScheduledSnapshotsConfig $scheduledSnapshotsConfig)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\CloudComposer;
 class EncryptionConfig extends \Google\Model
 {
   /**
+   * Optional. Customer-managed Encryption Key available through Google's Key
+   * Management Service. Cannot be updated. If not specified, Google-managed key
+   * will be used.
+   *
    * @var string
    */
   public $kmsKeyName;
 
   /**
-   * @param string
+   * Optional. Customer-managed Encryption Key available through Google's Key
+   * Management Service. Cannot be updated. If not specified, Google-managed key
+   * will be used.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {

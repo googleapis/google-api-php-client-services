@@ -20,16 +20,22 @@ namespace Google\Service\CloudComposer;
 class Line extends \Google\Model
 {
   /**
+   * Text content of the log line.
+   *
    * @var string
    */
   public $content;
   /**
+   * Number of the line.
+   *
    * @var int
    */
   public $lineNumber;
 
   /**
-   * @param string
+   * Text content of the log line.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -43,7 +49,9 @@ class Line extends \Google\Model
     return $this->content;
   }
   /**
-   * @param int
+   * Number of the line.
+   *
+   * @param int $lineNumber
    */
   public function setLineNumber($lineNumber)
   {

@@ -23,12 +23,16 @@ class ListImageVersionsResponse extends \Google\Collection
   protected $imageVersionsType = ImageVersion::class;
   protected $imageVersionsDataType = 'array';
   /**
+   * The page token used to query for the next page if one exists.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ImageVersion[]
+   * The list of supported ImageVersions in a location.
+   *
+   * @param ImageVersion[] $imageVersions
    */
   public function setImageVersions($imageVersions)
   {
@@ -42,7 +46,9 @@ class ListImageVersionsResponse extends \Google\Collection
     return $this->imageVersions;
   }
   /**
-   * @param string
+   * The page token used to query for the next page if one exists.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

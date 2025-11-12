@@ -20,20 +20,35 @@ namespace Google\Service\CloudComposer;
 class PrivateClusterConfig extends \Google\Model
 {
   /**
+   * Optional. If `true`, access to the public endpoint of the GKE cluster is
+   * denied.
+   *
    * @var bool
    */
   public $enablePrivateEndpoint;
   /**
+   * Optional. The CIDR block from which IPv4 range for GKE master will be
+   * reserved. If left blank, the default value of '172.16.0.0/23' is used.
+   *
    * @var string
    */
   public $masterIpv4CidrBlock;
   /**
+   * Output only. The IP range in CIDR notation to use for the hosted master
+   * network. This range is used for assigning internal IP addresses to the GKE
+   * cluster master or set of masters and to the internal load balancer virtual
+   * IP. This range must not overlap with any other ranges in use within the
+   * cluster's network.
+   *
    * @var string
    */
   public $masterIpv4ReservedRange;
 
   /**
-   * @param bool
+   * Optional. If `true`, access to the public endpoint of the GKE cluster is
+   * denied.
+   *
+   * @param bool $enablePrivateEndpoint
    */
   public function setEnablePrivateEndpoint($enablePrivateEndpoint)
   {
@@ -47,7 +62,10 @@ class PrivateClusterConfig extends \Google\Model
     return $this->enablePrivateEndpoint;
   }
   /**
-   * @param string
+   * Optional. The CIDR block from which IPv4 range for GKE master will be
+   * reserved. If left blank, the default value of '172.16.0.0/23' is used.
+   *
+   * @param string $masterIpv4CidrBlock
    */
   public function setMasterIpv4CidrBlock($masterIpv4CidrBlock)
   {
@@ -61,7 +79,13 @@ class PrivateClusterConfig extends \Google\Model
     return $this->masterIpv4CidrBlock;
   }
   /**
-   * @param string
+   * Output only. The IP range in CIDR notation to use for the hosted master
+   * network. This range is used for assigning internal IP addresses to the GKE
+   * cluster master or set of masters and to the internal load balancer virtual
+   * IP. This range must not overlap with any other ranges in use within the
+   * cluster's network.
+   *
+   * @param string $masterIpv4ReservedRange
    */
   public function setMasterIpv4ReservedRange($masterIpv4ReservedRange)
   {
