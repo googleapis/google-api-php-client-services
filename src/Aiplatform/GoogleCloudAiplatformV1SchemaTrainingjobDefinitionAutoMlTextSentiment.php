@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextSentiment exte
   protected $inputsDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextSentimentInputs
+   * The input parameters of this TrainingJob.
+   *
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextSentimentInputs $inputs
    */
   public function setInputs(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextSentimentInputs $inputs)
   {

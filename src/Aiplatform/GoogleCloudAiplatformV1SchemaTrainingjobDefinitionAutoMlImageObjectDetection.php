@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetecti
   protected $metadataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionInputs
+   * The input parameters of this TrainingJob.
+   *
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionInputs $inputs
    */
   public function setInputs(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionInputs $inputs)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetecti
     return $this->inputs;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionMetadata
+   * The metadata information
+   *
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionMetadata $metadata
    */
   public function setMetadata(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionMetadata $metadata)
   {

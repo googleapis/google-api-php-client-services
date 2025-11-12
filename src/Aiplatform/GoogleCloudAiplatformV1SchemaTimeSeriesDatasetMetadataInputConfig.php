@@ -25,7 +25,7 @@ class GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataInputConfig extends 
   protected $gcsSourceDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataBigQuerySource
+   * @param GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataBigQuerySource $bigquerySource
    */
   public function setBigquerySource(GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataBigQuerySource $bigquerySource)
   {
@@ -39,7 +39,7 @@ class GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataInputConfig extends 
     return $this->bigquerySource;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataGcsSource
+   * @param GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataGcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataGcsSource $gcsSource)
   {

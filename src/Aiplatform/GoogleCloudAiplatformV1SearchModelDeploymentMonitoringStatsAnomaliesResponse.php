@@ -23,12 +23,19 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRespon
   protected $monitoringStatsType = GoogleCloudAiplatformV1ModelMonitoringStatsAnomalies::class;
   protected $monitoringStatsDataType = 'array';
   /**
+   * The page token that can be used by the next
+   * JobService.SearchModelDeploymentMonitoringStatsAnomalies call.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1ModelMonitoringStatsAnomalies[]
+   * Stats retrieved for requested objectives. There are at most 1000 ModelMonit
+   * oringStatsAnomalies.FeatureHistoricStatsAnomalies.prediction_stats in the
+   * response.
+   *
+   * @param GoogleCloudAiplatformV1ModelMonitoringStatsAnomalies[] $monitoringStats
    */
   public function setMonitoringStats($monitoringStats)
   {
@@ -42,7 +49,10 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRespon
     return $this->monitoringStats;
   }
   /**
-   * @param string
+   * The page token that can be used by the next
+   * JobService.SearchModelDeploymentMonitoringStatsAnomalies call.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

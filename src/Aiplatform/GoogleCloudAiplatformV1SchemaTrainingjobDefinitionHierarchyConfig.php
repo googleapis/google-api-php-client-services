@@ -21,15 +21,49 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHierarchyConfig extends 
 {
   protected $collection_key = 'groupColumns';
   /**
+   * A list of time series attribute column names that define the time series
+   * hierarchy. Only one level of hierarchy is supported, ex. 'region' for a
+   * hierarchy of stores or 'department' for a hierarchy of products. If
+   * multiple columns are specified, time series will be grouped by their
+   * combined values, ex. ('blue', 'large') for 'color' and 'size', up to 5
+   * columns are accepted. If no group columns are specified, all time series
+   * are considered to be part of the same group.
+   *
    * @var string[]
    */
   public $groupColumns;
+  /**
+   * The weight of the loss for predictions aggregated over both the horizon and
+   * time series in the same hierarchy group.
+   *
+   * @var 
+   */
   public $groupTemporalTotalWeight;
+  /**
+   * The weight of the loss for predictions aggregated over time series in the
+   * same group.
+   *
+   * @var 
+   */
   public $groupTotalWeight;
+  /**
+   * The weight of the loss for predictions aggregated over the horizon for a
+   * single time series.
+   *
+   * @var 
+   */
   public $temporalTotalWeight;
 
   /**
-   * @param string[]
+   * A list of time series attribute column names that define the time series
+   * hierarchy. Only one level of hierarchy is supported, ex. 'region' for a
+   * hierarchy of stores or 'department' for a hierarchy of products. If
+   * multiple columns are specified, time series will be grouped by their
+   * combined values, ex. ('blue', 'large') for 'color' and 'size', up to 5
+   * columns are accepted. If no group columns are specified, all time series
+   * are considered to be part of the same group.
+   *
+   * @param string[] $groupColumns
    */
   public function setGroupColumns($groupColumns)
   {

@@ -23,12 +23,17 @@ class GoogleCloudAiplatformV1SearchDataItemsResponse extends \Google\Collection
   protected $dataItemViewsType = GoogleCloudAiplatformV1DataItemView::class;
   protected $dataItemViewsDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass to
+   * SearchDataItemsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1DataItemView[]
+   * The DataItemViews read.
+   *
+   * @param GoogleCloudAiplatformV1DataItemView[] $dataItemViews
    */
   public function setDataItemViews($dataItemViews)
   {
@@ -42,7 +47,10 @@ class GoogleCloudAiplatformV1SearchDataItemsResponse extends \Google\Collection
     return $this->dataItemViews;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass to
+   * SearchDataItemsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

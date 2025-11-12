@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextExtraction ext
   protected $inputsDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextExtractionInputs
+   * The input parameters of this TrainingJob.
+   *
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextExtractionInputs $inputs
    */
   public function setInputs(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextExtractionInputs $inputs)
   {

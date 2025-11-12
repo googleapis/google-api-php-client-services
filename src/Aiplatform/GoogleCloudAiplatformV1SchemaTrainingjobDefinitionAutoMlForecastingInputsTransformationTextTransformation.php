@@ -25,7 +25,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputsT
   public $columnName;
 
   /**
-   * @param string
+   * @param string $columnName
    */
   public function setColumnName($columnName)
   {

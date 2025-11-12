@@ -20,14 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobSpec extends \Google\Model
 {
   /**
+   * The number of failed Trials that need to be seen before failing the
+   * HyperparameterTuningJob. If set to 0, Vertex AI decides how many Trials
+   * must fail before the whole job fails.
+   *
    * @var int
    */
   public $maxFailedTrialCount;
   /**
+   * The desired total number of Trials.
+   *
    * @var int
    */
   public $maxTrialCount;
   /**
+   * The desired number of Trials to run in parallel.
+   *
    * @var int
    */
   public $parallelTrialCount;
@@ -37,7 +45,11 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobS
   protected $trialJobSpecDataType = '';
 
   /**
-   * @param int
+   * The number of failed Trials that need to be seen before failing the
+   * HyperparameterTuningJob. If set to 0, Vertex AI decides how many Trials
+   * must fail before the whole job fails.
+   *
+   * @param int $maxFailedTrialCount
    */
   public function setMaxFailedTrialCount($maxFailedTrialCount)
   {
@@ -51,7 +63,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobS
     return $this->maxFailedTrialCount;
   }
   /**
-   * @param int
+   * The desired total number of Trials.
+   *
+   * @param int $maxTrialCount
    */
   public function setMaxTrialCount($maxTrialCount)
   {
@@ -65,7 +79,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobS
     return $this->maxTrialCount;
   }
   /**
-   * @param int
+   * The desired number of Trials to run in parallel.
+   *
+   * @param int $parallelTrialCount
    */
   public function setParallelTrialCount($parallelTrialCount)
   {
@@ -79,7 +95,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobS
     return $this->parallelTrialCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1StudySpec
+   * Study configuration of the HyperparameterTuningJob.
+   *
+   * @param GoogleCloudAiplatformV1StudySpec $studySpec
    */
   public function setStudySpec(GoogleCloudAiplatformV1StudySpec $studySpec)
   {
@@ -93,7 +111,10 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobS
     return $this->studySpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1CustomJobSpec
+   * The spec of a trial job. The same spec applies to the CustomJobs created in
+   * all the trials.
+   *
+   * @param GoogleCloudAiplatformV1CustomJobSpec $trialJobSpec
    */
   public function setTrialJobSpec(GoogleCloudAiplatformV1CustomJobSpec $trialJobSpec)
   {

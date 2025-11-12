@@ -37,7 +37,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
   protected $timestampDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationAutoTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationAutoTransformation $auto
    */
   public function setAuto(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationAutoTransformation $auto)
   {
@@ -51,7 +51,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->auto;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationCategoricalTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationCategoricalTransformation $categorical
    */
   public function setCategorical(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationCategoricalTransformation $categorical)
   {
@@ -65,7 +65,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->categorical;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationNumericTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationNumericTransformation $numeric
    */
   public function setNumeric(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationNumericTransformation $numeric)
   {
@@ -79,7 +79,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->numeric;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationCategoricalArrayTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationCategoricalArrayTransformation $repeatedCategorical
    */
   public function setRepeatedCategorical(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationCategoricalArrayTransformation $repeatedCategorical)
   {
@@ -93,7 +93,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->repeatedCategorical;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationNumericArrayTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationNumericArrayTransformation $repeatedNumeric
    */
   public function setRepeatedNumeric(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationNumericArrayTransformation $repeatedNumeric)
   {
@@ -107,7 +107,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->repeatedNumeric;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTextArrayTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTextArrayTransformation $repeatedText
    */
   public function setRepeatedText(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTextArrayTransformation $repeatedText)
   {
@@ -121,7 +121,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->repeatedText;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTextTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTextTransformation $text
    */
   public function setText(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTextTransformation $text)
   {
@@ -135,7 +135,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->text;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTimestampTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTimestampTransformation $timestamp
    */
   public function setTimestamp(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformationTimestampTransformation $timestamp)
   {

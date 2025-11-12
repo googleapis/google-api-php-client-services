@@ -20,16 +20,40 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionMetadata extends \Google\Model
 {
   /**
+   * Should not be set.
+   */
+  public const SUCCESSFUL_STOP_REASON_SUCCESSFUL_STOP_REASON_UNSPECIFIED = 'SUCCESSFUL_STOP_REASON_UNSPECIFIED';
+  /**
+   * The inputs.budgetMilliNodeHours had been reached.
+   */
+  public const SUCCESSFUL_STOP_REASON_BUDGET_REACHED = 'BUDGET_REACHED';
+  /**
+   * Further training of the Model ceased to increase its quality, since it
+   * already has converged.
+   */
+  public const SUCCESSFUL_STOP_REASON_MODEL_CONVERGED = 'MODEL_CONVERGED';
+  /**
+   * The actual training cost of creating this model, expressed in milli node
+   * hours, i.e. 1,000 value in this field means 1 node hour. Guaranteed to not
+   * exceed inputs.budgetMilliNodeHours.
+   *
    * @var string
    */
   public $costMilliNodeHours;
   /**
+   * For successful job completions, this is the reason why the job has
+   * finished.
+   *
    * @var string
    */
   public $successfulStopReason;
 
   /**
-   * @param string
+   * The actual training cost of creating this model, expressed in milli node
+   * hours, i.e. 1,000 value in this field means 1 node hour. Guaranteed to not
+   * exceed inputs.budgetMilliNodeHours.
+   *
+   * @param string $costMilliNodeHours
    */
   public function setCostMilliNodeHours($costMilliNodeHours)
   {
@@ -43,14 +67,20 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetecti
     return $this->costMilliNodeHours;
   }
   /**
-   * @param string
+   * For successful job completions, this is the reason why the job has
+   * finished.
+   *
+   * Accepted values: SUCCESSFUL_STOP_REASON_UNSPECIFIED, BUDGET_REACHED,
+   * MODEL_CONVERGED
+   *
+   * @param self::SUCCESSFUL_STOP_REASON_* $successfulStopReason
    */
   public function setSuccessfulStopReason($successfulStopReason)
   {
     $this->successfulStopReason = $successfulStopReason;
   }
   /**
-   * @return string
+   * @return self::SUCCESSFUL_STOP_REASON_*
    */
   public function getSuccessfulStopReason()
   {

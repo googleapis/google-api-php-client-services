@@ -25,7 +25,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
   public $columnName;
 
   /**
-   * @param string
+   * @param string $columnName
    */
   public function setColumnName($columnName)
   {

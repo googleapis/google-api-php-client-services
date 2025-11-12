@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextClassification
   protected $inputsDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextClassificationInputs
+   * The input parameters of this TrainingJob.
+   *
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextClassificationInputs $inputs
    */
   public function setInputs(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextClassificationInputs $inputs)
   {

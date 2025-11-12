@@ -23,12 +23,19 @@ class GoogleCloudAiplatformV1SearchMigratableResourcesResponse extends \Google\C
   protected $migratableResourcesType = GoogleCloudAiplatformV1MigratableResource::class;
   protected $migratableResourcesDataType = 'array';
   /**
+   * The standard next-page token. The migratable_resources may not fill
+   * page_size in SearchMigratableResourcesRequest even when there are
+   * subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudAiplatformV1MigratableResource[]
+   * All migratable resources that can be migrated to the location specified in
+   * the request.
+   *
+   * @param GoogleCloudAiplatformV1MigratableResource[] $migratableResources
    */
   public function setMigratableResources($migratableResources)
   {
@@ -42,7 +49,11 @@ class GoogleCloudAiplatformV1SearchMigratableResourcesResponse extends \Google\C
     return $this->migratableResources;
   }
   /**
-   * @param string
+   * The standard next-page token. The migratable_resources may not fill
+   * page_size in SearchMigratableResourcesRequest even when there are
+   * subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

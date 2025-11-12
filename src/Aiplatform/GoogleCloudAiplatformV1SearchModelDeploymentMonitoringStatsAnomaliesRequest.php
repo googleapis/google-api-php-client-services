@@ -21,34 +21,55 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
 {
   protected $collection_key = 'objectives';
   /**
+   * Required. The DeployedModel ID of the
+   * [ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+   *
    * @var string
    */
   public $deployedModelId;
   /**
+   * The latest timestamp of stats being generated. If not set, indicates
+   * feching stats till the latest possible one.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The feature display name. If specified, only return the stats belonging to
+   * this feature. Format: ModelMonitoringStatsAnomalies.FeatureHistoricStatsAno
+   * malies.feature_display_name, example: "user_destination".
+   *
    * @var string
    */
   public $featureDisplayName;
   protected $objectivesType = GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRequestStatsAnomaliesObjective::class;
   protected $objectivesDataType = 'array';
   /**
+   * The standard list page size.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * A page token received from a previous
+   * JobService.SearchModelDeploymentMonitoringStatsAnomalies call.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * The earliest timestamp of stats being generated. If not set, indicates
+   * fetching stats till the earliest possible one.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Required. The DeployedModel ID of the
+   * [ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+   *
+   * @param string $deployedModelId
    */
   public function setDeployedModelId($deployedModelId)
   {
@@ -62,7 +83,10 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
     return $this->deployedModelId;
   }
   /**
-   * @param string
+   * The latest timestamp of stats being generated. If not set, indicates
+   * feching stats till the latest possible one.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -76,7 +100,11 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
     return $this->endTime;
   }
   /**
-   * @param string
+   * The feature display name. If specified, only return the stats belonging to
+   * this feature. Format: ModelMonitoringStatsAnomalies.FeatureHistoricStatsAno
+   * malies.feature_display_name, example: "user_destination".
+   *
+   * @param string $featureDisplayName
    */
   public function setFeatureDisplayName($featureDisplayName)
   {
@@ -90,7 +118,9 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
     return $this->featureDisplayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRequestStatsAnomaliesObjective[]
+   * Required. Objectives of the stats to retrieve.
+   *
+   * @param GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRequestStatsAnomaliesObjective[] $objectives
    */
   public function setObjectives($objectives)
   {
@@ -104,7 +134,9 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
     return $this->objectives;
   }
   /**
-   * @param int
+   * The standard list page size.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -118,7 +150,10 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
     return $this->pageSize;
   }
   /**
-   * @param string
+   * A page token received from a previous
+   * JobService.SearchModelDeploymentMonitoringStatsAnomalies call.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -132,7 +167,10 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
     return $this->pageToken;
   }
   /**
-   * @param string
+   * The earliest timestamp of stats being generated. If not set, indicates
+   * fetching stats till the earliest possible one.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

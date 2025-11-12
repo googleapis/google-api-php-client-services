@@ -24,12 +24,16 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
    */
   public $columnName;
   /**
+   * If invalid values is allowed, the training pipeline will create a boolean
+   * feature that indicated whether the value is valid. Otherwise, the training
+   * pipeline will discard the input row from trainining data.
+   *
    * @var bool
    */
   public $invalidValuesAllowed;
 
   /**
-   * @param string
+   * @param string $columnName
    */
   public function setColumnName($columnName)
   {
@@ -43,7 +47,11 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->columnName;
   }
   /**
-   * @param bool
+   * If invalid values is allowed, the training pipeline will create a boolean
+   * feature that indicated whether the value is valid. Otherwise, the training
+   * pipeline will discard the input row from trainining data.
+   *
+   * @param bool $invalidValuesAllowed
    */
   public function setInvalidValuesAllowed($invalidValuesAllowed)
   {

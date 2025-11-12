@@ -20,6 +20,37 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRequestStatsAnomaliesObjective extends \Google\Model
 {
   /**
+   * Default value, should not be set.
+   */
+  public const TYPE_MODEL_DEPLOYMENT_MONITORING_OBJECTIVE_TYPE_UNSPECIFIED = 'MODEL_DEPLOYMENT_MONITORING_OBJECTIVE_TYPE_UNSPECIFIED';
+  /**
+   * Raw feature values' stats to detect skew between Training-Prediction
+   * datasets.
+   */
+  public const TYPE_RAW_FEATURE_SKEW = 'RAW_FEATURE_SKEW';
+  /**
+   * Raw feature values' stats to detect drift between Serving-Prediction
+   * datasets.
+   */
+  public const TYPE_RAW_FEATURE_DRIFT = 'RAW_FEATURE_DRIFT';
+  /**
+   * Feature attribution scores to detect skew between Training-Prediction
+   * datasets.
+   */
+  public const TYPE_FEATURE_ATTRIBUTION_SKEW = 'FEATURE_ATTRIBUTION_SKEW';
+  /**
+   * Feature attribution scores to detect skew between Prediction datasets
+   * collected within different time windows.
+   */
+  public const TYPE_FEATURE_ATTRIBUTION_DRIFT = 'FEATURE_ATTRIBUTION_DRIFT';
+  /**
+   * If set, all attribution scores between
+   * SearchModelDeploymentMonitoringStatsAnomaliesRequest.start_time and
+   * SearchModelDeploymentMonitoringStatsAnomaliesRequest.end_time are fetched,
+   * and page token doesn't take effect in this case. Only used to retrieve
+   * attribution score for the top Features which has the highest attribution
+   * score in the latest monitoring run.
+   *
    * @var int
    */
   public $topFeatureCount;
@@ -29,7 +60,14 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
   public $type;
 
   /**
-   * @param int
+   * If set, all attribution scores between
+   * SearchModelDeploymentMonitoringStatsAnomaliesRequest.start_time and
+   * SearchModelDeploymentMonitoringStatsAnomaliesRequest.end_time are fetched,
+   * and page token doesn't take effect in this case. Only used to retrieve
+   * attribution score for the top Features which has the highest attribution
+   * score in the latest monitoring run.
+   *
+   * @param int $topFeatureCount
    */
   public function setTopFeatureCount($topFeatureCount)
   {
@@ -43,14 +81,14 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
     return $this->topFeatureCount;
   }
   /**
-   * @param string
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

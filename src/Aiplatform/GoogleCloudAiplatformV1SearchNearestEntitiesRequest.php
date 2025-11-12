@@ -22,12 +22,19 @@ class GoogleCloudAiplatformV1SearchNearestEntitiesRequest extends \Google\Model
   protected $queryType = GoogleCloudAiplatformV1NearestNeighborQuery::class;
   protected $queryDataType = '';
   /**
+   * Optional. If set to true, the full entities (including all vector values
+   * and metadata) of the nearest neighbors are returned; otherwise only entity
+   * id of the nearest neighbors will be returned. Note that returning full
+   * entities will significantly increase the latency and cost of the query.
+   *
    * @var bool
    */
   public $returnFullEntity;
 
   /**
-   * @param GoogleCloudAiplatformV1NearestNeighborQuery
+   * Required. The query.
+   *
+   * @param GoogleCloudAiplatformV1NearestNeighborQuery $query
    */
   public function setQuery(GoogleCloudAiplatformV1NearestNeighborQuery $query)
   {
@@ -41,7 +48,12 @@ class GoogleCloudAiplatformV1SearchNearestEntitiesRequest extends \Google\Model
     return $this->query;
   }
   /**
-   * @param bool
+   * Optional. If set to true, the full entities (including all vector values
+   * and metadata) of the nearest neighbors are returned; otherwise only entity
+   * id of the nearest neighbors will be returned. Note that returning full
+   * entities will significantly increase the latency and cost of the query.
+   *
+   * @param bool $returnFullEntity
    */
   public function setReturnFullEntity($returnFullEntity)
   {

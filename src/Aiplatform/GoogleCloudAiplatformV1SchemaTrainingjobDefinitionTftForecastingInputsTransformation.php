@@ -31,7 +31,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTran
   protected $timestampDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationAutoTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationAutoTransformation $auto
    */
   public function setAuto(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationAutoTransformation $auto)
   {
@@ -45,7 +45,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTran
     return $this->auto;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationCategoricalTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationCategoricalTransformation $categorical
    */
   public function setCategorical(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationCategoricalTransformation $categorical)
   {
@@ -59,7 +59,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTran
     return $this->categorical;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationNumericTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationNumericTransformation $numeric
    */
   public function setNumeric(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationNumericTransformation $numeric)
   {
@@ -73,7 +73,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTran
     return $this->numeric;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTextTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTextTransformation $text
    */
   public function setText(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTextTransformation $text)
   {
@@ -87,7 +87,7 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTran
     return $this->text;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTimestampTransformation
+   * @param GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTimestampTransformation $timestamp
    */
   public function setTimestamp(GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTimestampTransformation $timestamp)
   {

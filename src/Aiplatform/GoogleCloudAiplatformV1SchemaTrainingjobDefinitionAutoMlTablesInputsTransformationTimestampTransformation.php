@@ -24,16 +24,28 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
    */
   public $columnName;
   /**
+   * If invalid values is allowed, the training pipeline will create a boolean
+   * feature that indicated whether the value is valid. Otherwise, the training
+   * pipeline will discard the input row from trainining data.
+   *
    * @var bool
    */
   public $invalidValuesAllowed;
   /**
+   * The format in which that time field is expressed. The time_format must
+   * either be one of: * `unix-seconds` * `unix-milliseconds` * `unix-
+   * microseconds` * `unix-nanoseconds` (for respectively number of seconds,
+   * milliseconds, microseconds and nanoseconds since start of the Unix epoch);
+   * or be written in `strftime` syntax. If time_format is not set, then the
+   * default format is RFC 3339 `date-time` format, where `time-offset` = `"Z"`
+   * (e.g. 1985-04-12T23:20:50.52Z)
+   *
    * @var string
    */
   public $timeFormat;
 
   /**
-   * @param string
+   * @param string $columnName
    */
   public function setColumnName($columnName)
   {
@@ -47,7 +59,11 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->columnName;
   }
   /**
-   * @param bool
+   * If invalid values is allowed, the training pipeline will create a boolean
+   * feature that indicated whether the value is valid. Otherwise, the training
+   * pipeline will discard the input row from trainining data.
+   *
+   * @param bool $invalidValuesAllowed
    */
   public function setInvalidValuesAllowed($invalidValuesAllowed)
   {
@@ -61,7 +77,15 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransf
     return $this->invalidValuesAllowed;
   }
   /**
-   * @param string
+   * The format in which that time field is expressed. The time_format must
+   * either be one of: * `unix-seconds` * `unix-milliseconds` * `unix-
+   * microseconds` * `unix-nanoseconds` (for respectively number of seconds,
+   * milliseconds, microseconds and nanoseconds since start of the Unix epoch);
+   * or be written in `strftime` syntax. If time_format is not set, then the
+   * default format is RFC 3339 `date-time` format, where `time-offset` = `"Z"`
+   * (e.g. 1985-04-12T23:20:50.52Z)
+   *
+   * @param string $timeFormat
    */
   public function setTimeFormat($timeFormat)
   {

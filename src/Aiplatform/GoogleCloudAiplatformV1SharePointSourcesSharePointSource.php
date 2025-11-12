@@ -20,42 +20,65 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\Model
 {
   /**
+   * The Application ID for the app registered in Microsoft Azure Portal. The
+   * application must also be configured with MS Graph permissions
+   * "Files.ReadAll", "Sites.ReadAll" and BrowserSiteLists.Read.All.
+   *
    * @var string
    */
   public $clientId;
   protected $clientSecretType = GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class;
   protected $clientSecretDataType = '';
   /**
+   * The ID of the drive to download from.
+   *
    * @var string
    */
   public $driveId;
   /**
+   * The name of the drive to download from.
+   *
    * @var string
    */
   public $driveName;
   /**
+   * Output only. The SharePoint file id. Output only.
+   *
    * @var string
    */
   public $fileId;
   /**
+   * The ID of the SharePoint folder to download from.
+   *
    * @var string
    */
   public $sharepointFolderId;
   /**
+   * The path of the SharePoint folder to download from.
+   *
    * @var string
    */
   public $sharepointFolderPath;
   /**
+   * The name of the SharePoint site to download from. This can be the site name
+   * or the site id.
+   *
    * @var string
    */
   public $sharepointSiteName;
   /**
+   * Unique identifier of the Azure Active Directory Instance.
+   *
    * @var string
    */
   public $tenantId;
 
   /**
-   * @param string
+   * The Application ID for the app registered in Microsoft Azure Portal. The
+   * application must also be configured with MS Graph permissions
+   * "Files.ReadAll", "Sites.ReadAll" and BrowserSiteLists.Read.All.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -69,7 +92,9 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->clientId;
   }
   /**
-   * @param GoogleCloudAiplatformV1ApiAuthApiKeyConfig
+   * The application secret for the app registered in Azure.
+   *
+   * @param GoogleCloudAiplatformV1ApiAuthApiKeyConfig $clientSecret
    */
   public function setClientSecret(GoogleCloudAiplatformV1ApiAuthApiKeyConfig $clientSecret)
   {
@@ -83,7 +108,9 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->clientSecret;
   }
   /**
-   * @param string
+   * The ID of the drive to download from.
+   *
+   * @param string $driveId
    */
   public function setDriveId($driveId)
   {
@@ -97,7 +124,9 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->driveId;
   }
   /**
-   * @param string
+   * The name of the drive to download from.
+   *
+   * @param string $driveName
    */
   public function setDriveName($driveName)
   {
@@ -111,7 +140,9 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->driveName;
   }
   /**
-   * @param string
+   * Output only. The SharePoint file id. Output only.
+   *
+   * @param string $fileId
    */
   public function setFileId($fileId)
   {
@@ -125,7 +156,9 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->fileId;
   }
   /**
-   * @param string
+   * The ID of the SharePoint folder to download from.
+   *
+   * @param string $sharepointFolderId
    */
   public function setSharepointFolderId($sharepointFolderId)
   {
@@ -139,7 +172,9 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->sharepointFolderId;
   }
   /**
-   * @param string
+   * The path of the SharePoint folder to download from.
+   *
+   * @param string $sharepointFolderPath
    */
   public function setSharepointFolderPath($sharepointFolderPath)
   {
@@ -153,7 +188,10 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->sharepointFolderPath;
   }
   /**
-   * @param string
+   * The name of the SharePoint site to download from. This can be the site name
+   * or the site id.
+   *
+   * @param string $sharepointSiteName
    */
   public function setSharepointSiteName($sharepointSiteName)
   {
@@ -167,7 +205,9 @@ class GoogleCloudAiplatformV1SharePointSourcesSharePointSource extends \Google\M
     return $this->sharepointSiteName;
   }
   /**
-   * @param string
+   * Unique identifier of the Azure Active Directory Instance.
+   *
+   * @param string $tenantId
    */
   public function setTenantId($tenantId)
   {

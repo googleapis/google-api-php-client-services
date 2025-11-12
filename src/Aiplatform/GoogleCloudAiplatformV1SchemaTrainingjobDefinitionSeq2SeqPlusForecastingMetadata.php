@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingMetadata extends \Google\Model
 {
   /**
+   * BigQuery destination uri for exported evaluated examples.
+   *
    * @var string
    */
   public $evaluatedDataItemsBigqueryUri;
   /**
+   * Output only. The actual training cost of the model, expressed in milli node
+   * hours, i.e. 1,000 value in this field means 1 node hour. Guaranteed to not
+   * exceed the train budget.
+   *
    * @var string
    */
   public $trainCostMilliNodeHours;
 
   /**
-   * @param string
+   * BigQuery destination uri for exported evaluated examples.
+   *
+   * @param string $evaluatedDataItemsBigqueryUri
    */
   public function setEvaluatedDataItemsBigqueryUri($evaluatedDataItemsBigqueryUri)
   {
@@ -43,7 +51,11 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingMe
     return $this->evaluatedDataItemsBigqueryUri;
   }
   /**
-   * @param string
+   * Output only. The actual training cost of the model, expressed in milli node
+   * hours, i.e. 1,000 value in this field means 1 node hour. Guaranteed to not
+   * exceed the train budget.
+   *
+   * @param string $trainCostMilliNodeHours
    */
   public function setTrainCostMilliNodeHours($trainCostMilliNodeHours)
   {

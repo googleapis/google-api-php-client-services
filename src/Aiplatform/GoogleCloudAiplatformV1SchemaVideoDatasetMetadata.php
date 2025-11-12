@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaVideoDatasetMetadata extends \Google\Model
 {
   /**
+   * Points to a YAML file stored on Google Cloud Storage describing payload of
+   * the Video DataItems that belong to this Dataset.
+   *
    * @var string
    */
   public $dataItemSchemaUri;
   /**
+   * Google Cloud Storage Bucket name that contains the blob data of this
+   * Dataset.
+   *
    * @var string
    */
   public $gcsBucket;
 
   /**
-   * @param string
+   * Points to a YAML file stored on Google Cloud Storage describing payload of
+   * the Video DataItems that belong to this Dataset.
+   *
+   * @param string $dataItemSchemaUri
    */
   public function setDataItemSchemaUri($dataItemSchemaUri)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1SchemaVideoDatasetMetadata extends \Google\Model
     return $this->dataItemSchemaUri;
   }
   /**
-   * @param string
+   * Google Cloud Storage Bucket name that contains the blob data of this
+   * Dataset.
+   *
+   * @param string $gcsBucket
    */
   public function setGcsBucket($gcsBucket)
   {

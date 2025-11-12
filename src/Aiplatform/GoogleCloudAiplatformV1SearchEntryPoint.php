@@ -20,16 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SearchEntryPoint extends \Google\Model
 {
   /**
+   * Optional. An HTML snippet that can be embedded in a web page or an
+   * application's webview. This snippet displays a search result, including the
+   * title, URL, and a brief description of the search result.
+   *
    * @var string
    */
   public $renderedContent;
   /**
+   * Optional. A base64-encoded JSON object that contains a list of search
+   * queries and their corresponding search URLs. This information can be used
+   * to build a custom search UI.
+   *
    * @var string
    */
   public $sdkBlob;
 
   /**
-   * @param string
+   * Optional. An HTML snippet that can be embedded in a web page or an
+   * application's webview. This snippet displays a search result, including the
+   * title, URL, and a brief description of the search result.
+   *
+   * @param string $renderedContent
    */
   public function setRenderedContent($renderedContent)
   {
@@ -43,7 +55,11 @@ class GoogleCloudAiplatformV1SearchEntryPoint extends \Google\Model
     return $this->renderedContent;
   }
   /**
-   * @param string
+   * Optional. A base64-encoded JSON object that contains a list of search
+   * queries and their corresponding search URLs. This information can be used
+   * to build a custom search UI.
+   *
+   * @param string $sdkBlob
    */
   public function setSdkBlob($sdkBlob)
   {

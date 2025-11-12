@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTimeSegment extends \Google\Model
 {
   /**
+   * End of the time segment (exclusive), represented as the duration since the
+   * start of the DataItem.
+   *
    * @var string
    */
   public $endTimeOffset;
   /**
+   * Start of the time segment (inclusive), represented as the duration since
+   * the start of the DataItem.
+   *
    * @var string
    */
   public $startTimeOffset;
 
   /**
-   * @param string
+   * End of the time segment (exclusive), represented as the duration since the
+   * start of the DataItem.
+   *
+   * @param string $endTimeOffset
    */
   public function setEndTimeOffset($endTimeOffset)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1SchemaTimeSegment extends \Google\Model
     return $this->endTimeOffset;
   }
   /**
-   * @param string
+   * Start of the time segment (inclusive), represented as the duration since
+   * the start of the DataItem.
+   *
+   * @param string $startTimeOffset
    */
   public function setStartTimeOffset($startTimeOffset)
   {

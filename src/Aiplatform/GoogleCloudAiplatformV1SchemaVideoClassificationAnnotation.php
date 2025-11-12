@@ -20,10 +20,14 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaVideoClassificationAnnotation extends \Google\Model
 {
   /**
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $annotationSpecId;
   /**
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $displayName;
@@ -31,7 +35,9 @@ class GoogleCloudAiplatformV1SchemaVideoClassificationAnnotation extends \Google
   protected $timeSegmentDataType = '';
 
   /**
-   * @param string
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $annotationSpecId
    */
   public function setAnnotationSpecId($annotationSpecId)
   {
@@ -45,7 +51,9 @@ class GoogleCloudAiplatformV1SchemaVideoClassificationAnnotation extends \Google
     return $this->annotationSpecId;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -59,7 +67,10 @@ class GoogleCloudAiplatformV1SchemaVideoClassificationAnnotation extends \Google
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTimeSegment
+   * This Annotation applies to the time period represented by the TimeSegment.
+   * If it's not set, the Annotation applies to the whole video.
+   *
+   * @param GoogleCloudAiplatformV1SchemaTimeSegment $timeSegment
    */
   public function setTimeSegment(GoogleCloudAiplatformV1SchemaTimeSegment $timeSegment)
   {

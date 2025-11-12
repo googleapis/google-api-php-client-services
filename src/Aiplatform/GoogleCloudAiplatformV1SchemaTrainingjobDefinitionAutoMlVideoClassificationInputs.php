@@ -20,19 +20,39 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlVideoClassificationInputs extends \Google\Model
 {
   /**
+   * Should not be set.
+   */
+  public const MODEL_TYPE_MODEL_TYPE_UNSPECIFIED = 'MODEL_TYPE_UNSPECIFIED';
+  /**
+   * A model best tailored to be used within Google Cloud, and which cannot be
+   * exported. Default.
+   */
+  public const MODEL_TYPE_CLOUD = 'CLOUD';
+  /**
+   * A model that, in addition to being available within Google Cloud, can also
+   * be exported (see ModelService.ExportModel) as a TensorFlow or TensorFlow
+   * Lite model and used on a mobile or edge device afterwards.
+   */
+  public const MODEL_TYPE_MOBILE_VERSATILE_1 = 'MOBILE_VERSATILE_1';
+  /**
+   * A model that, in addition to being available within Google Cloud, can also
+   * be exported (see ModelService.ExportModel) to a Jetson device afterwards.
+   */
+  public const MODEL_TYPE_MOBILE_JETSON_VERSATILE_1 = 'MOBILE_JETSON_VERSATILE_1';
+  /**
    * @var string
    */
   public $modelType;
 
   /**
-   * @param string
+   * @param self::MODEL_TYPE_* $modelType
    */
   public function setModelType($modelType)
   {
     $this->modelType = $modelType;
   }
   /**
-   * @return string
+   * @return self::MODEL_TYPE_*
    */
   public function getModelType()
   {
