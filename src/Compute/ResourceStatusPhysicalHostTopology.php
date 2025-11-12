@@ -20,24 +20,40 @@ namespace Google\Service\Compute;
 class ResourceStatusPhysicalHostTopology extends \Google\Model
 {
   /**
+   * [Output Only] The ID of the block in which the running instance is located.
+   * Instances within the same block experience low network latency.
+   *
    * @var string
    */
   public $block;
   /**
+   * [Output Only] The global name of the Compute Engine cluster where the
+   * running instance is located.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * [Output Only] The ID of the host on which the running instance is located.
+   * Instances on the same host experience the lowest possible network latency.
+   *
    * @var string
    */
   public $host;
   /**
+   * [Output Only] The ID of the sub-block in which the running instance is
+   * located. Instances in the same sub-block experience lower network latency
+   * than instances in the same block.
+   *
    * @var string
    */
   public $subblock;
 
   /**
-   * @param string
+   * [Output Only] The ID of the block in which the running instance is located.
+   * Instances within the same block experience low network latency.
+   *
+   * @param string $block
    */
   public function setBlock($block)
   {
@@ -51,7 +67,10 @@ class ResourceStatusPhysicalHostTopology extends \Google\Model
     return $this->block;
   }
   /**
-   * @param string
+   * [Output Only] The global name of the Compute Engine cluster where the
+   * running instance is located.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -65,7 +84,10 @@ class ResourceStatusPhysicalHostTopology extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * [Output Only] The ID of the host on which the running instance is located.
+   * Instances on the same host experience the lowest possible network latency.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -79,7 +101,11 @@ class ResourceStatusPhysicalHostTopology extends \Google\Model
     return $this->host;
   }
   /**
-   * @param string
+   * [Output Only] The ID of the sub-block in which the running instance is
+   * located. Instances in the same sub-block experience lower network latency
+   * than instances in the same block.
+   *
+   * @param string $subblock
    */
   public function setSubblock($subblock)
   {

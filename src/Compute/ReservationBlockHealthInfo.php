@@ -20,20 +20,40 @@ namespace Google\Service\Compute;
 class ReservationBlockHealthInfo extends \Google\Model
 {
   /**
+   * The reservation block is degraded.
+   */
+  public const HEALTH_STATUS_DEGRADED = 'DEGRADED';
+  /**
+   * The reservation block is healthy.
+   */
+  public const HEALTH_STATUS_HEALTHY = 'HEALTHY';
+  /**
+   * The health status of the reservation block is unspecified.
+   */
+  public const HEALTH_STATUS_HEALTH_STATUS_UNSPECIFIED = 'HEALTH_STATUS_UNSPECIFIED';
+  /**
+   * The number of subBlocks that are degraded.
+   *
    * @var int
    */
   public $degradedSubBlockCount;
   /**
+   * The health status of the reservation block.
+   *
    * @var string
    */
   public $healthStatus;
   /**
+   * The number of subBlocks that are healthy.
+   *
    * @var int
    */
   public $healthySubBlockCount;
 
   /**
-   * @param int
+   * The number of subBlocks that are degraded.
+   *
+   * @param int $degradedSubBlockCount
    */
   public function setDegradedSubBlockCount($degradedSubBlockCount)
   {
@@ -47,21 +67,27 @@ class ReservationBlockHealthInfo extends \Google\Model
     return $this->degradedSubBlockCount;
   }
   /**
-   * @param string
+   * The health status of the reservation block.
+   *
+   * Accepted values: DEGRADED, HEALTHY, HEALTH_STATUS_UNSPECIFIED
+   *
+   * @param self::HEALTH_STATUS_* $healthStatus
    */
   public function setHealthStatus($healthStatus)
   {
     $this->healthStatus = $healthStatus;
   }
   /**
-   * @return string
+   * @return self::HEALTH_STATUS_*
    */
   public function getHealthStatus()
   {
     return $this->healthStatus;
   }
   /**
-   * @param int
+   * The number of subBlocks that are healthy.
+   *
+   * @param int $healthySubBlockCount
    */
   public function setHealthySubBlockCount($healthySubBlockCount)
   {

@@ -21,20 +21,33 @@ class ReservationBlocksListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Unique identifier for the resource; defined by the server.
+   *
    * @var string
    */
   public $id;
   protected $itemsType = ReservationBlock::class;
   protected $itemsDataType = 'array';
   /**
+   * Type of the resource. Alwayscompute#reservationBlock for a list of
+   * reservation blocks.
+   *
    * @var string
    */
   public $kind;
   /**
+   * This token allows you to get the next page of results for list requests. If
+   * the number of results is larger thanmaxResults, use the nextPageToken as a
+   * value for the query parameter pageToken in the next list request.
+   * Subsequent list requests will have their own nextPageToken to continue
+   * paging through the results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Server-defined URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
@@ -42,7 +55,9 @@ class ReservationBlocksListResponse extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param string
+   * Unique identifier for the resource; defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -56,7 +71,9 @@ class ReservationBlocksListResponse extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param ReservationBlock[]
+   * A list of reservation block resources.
+   *
+   * @param ReservationBlock[] $items
    */
   public function setItems($items)
   {
@@ -70,7 +87,10 @@ class ReservationBlocksListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Type of the resource. Alwayscompute#reservationBlock for a list of
+   * reservation blocks.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -84,7 +104,13 @@ class ReservationBlocksListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * This token allows you to get the next page of results for list requests. If
+   * the number of results is larger thanmaxResults, use the nextPageToken as a
+   * value for the query parameter pageToken in the next list request.
+   * Subsequent list requests will have their own nextPageToken to continue
+   * paging through the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -98,7 +124,9 @@ class ReservationBlocksListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * Server-defined URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -112,7 +140,9 @@ class ReservationBlocksListResponse extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param ReservationBlocksListResponseWarning
+   * Informational warning message.
+   *
+   * @param ReservationBlocksListResponseWarning $warning
    */
   public function setWarning(ReservationBlocksListResponseWarning $warning)
   {

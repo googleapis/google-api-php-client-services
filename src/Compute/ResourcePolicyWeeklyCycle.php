@@ -24,7 +24,9 @@ class ResourcePolicyWeeklyCycle extends \Google\Collection
   protected $dayOfWeeksDataType = 'array';
 
   /**
-   * @param ResourcePolicyWeeklyCycleDayOfWeek[]
+   * Up to 7 intervals/windows, one for each day of the week.
+   *
+   * @param ResourcePolicyWeeklyCycleDayOfWeek[] $dayOfWeeks
    */
   public function setDayOfWeeks($dayOfWeeks)
   {

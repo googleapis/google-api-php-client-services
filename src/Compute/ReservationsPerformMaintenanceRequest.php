@@ -20,19 +20,45 @@ namespace Google\Service\Compute;
 class ReservationsPerformMaintenanceRequest extends \Google\Model
 {
   /**
+   * Trigger maintenance for all hosts belonging to this reservation
+   * irrespective of whether VMs are running on them or not.
+   */
+  public const MAINTENANCE_SCOPE_ALL = 'ALL';
+  /**
+   * Internal only
+   */
+  public const MAINTENANCE_SCOPE_MAINTENANCE_SCOPE_UNSPECIFIED = 'MAINTENANCE_SCOPE_UNSPECIFIED';
+  /**
+   * Trigger maintenance only on the hosts belonging to this reservation which
+   * have VMs running on them.
+   */
+  public const MAINTENANCE_SCOPE_RUNNING_VMS = 'RUNNING_VMS';
+  /**
+   * Trigger maintenance only on the hosts belonging to this reservation which
+   * do not have any VMs running on them. This is not allowed for Standard ExR
+   */
+  public const MAINTENANCE_SCOPE_UNUSED_CAPACITY = 'UNUSED_CAPACITY';
+  /**
+   * Specifies if all, running or unused hosts are in scope for this request.
+   *
    * @var string
    */
   public $maintenanceScope;
 
   /**
-   * @param string
+   * Specifies if all, running or unused hosts are in scope for this request.
+   *
+   * Accepted values: ALL, MAINTENANCE_SCOPE_UNSPECIFIED, RUNNING_VMS,
+   * UNUSED_CAPACITY
+   *
+   * @param self::MAINTENANCE_SCOPE_* $maintenanceScope
    */
   public function setMaintenanceScope($maintenanceScope)
   {
     $this->maintenanceScope = $maintenanceScope;
   }
   /**
-   * @return string
+   * @return self::MAINTENANCE_SCOPE_*
    */
   public function getMaintenanceScope()
   {

@@ -21,12 +21,18 @@ class RegionTargetHttpsProxiesSetSslCertificatesRequest extends \Google\Collecti
 {
   protected $collection_key = 'sslCertificates';
   /**
+   * New set of SslCertificate resources to associate with this TargetHttpsProxy
+   * resource.
+   *
    * @var string[]
    */
   public $sslCertificates;
 
   /**
-   * @param string[]
+   * New set of SslCertificate resources to associate with this TargetHttpsProxy
+   * resource.
+   *
+   * @param string[] $sslCertificates
    */
   public function setSslCertificates($sslCertificates)
   {

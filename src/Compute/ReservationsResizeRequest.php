@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class ReservationsResizeRequest extends \Google\Model
 {
   /**
+   * Number of allocated resources can be resized with minimum = 1 and maximum =
+   * 1000.
+   *
    * @var string
    */
   public $specificSkuCount;
 
   /**
-   * @param string
+   * Number of allocated resources can be resized with minimum = 1 and maximum =
+   * 1000.
+   *
+   * @param string $specificSkuCount
    */
   public function setSpecificSkuCount($specificSkuCount)
   {

@@ -19,100 +19,221 @@ namespace Google\Service\Compute;
 
 class Route extends \Google\Collection
 {
+  public const NEXT_HOP_ORIGIN_EGP = 'EGP';
+  public const NEXT_HOP_ORIGIN_IGP = 'IGP';
+  public const NEXT_HOP_ORIGIN_INCOMPLETE = 'INCOMPLETE';
+  /**
+   * This route is processed and active.
+   */
+  public const ROUTE_STATUS_ACTIVE = 'ACTIVE';
+  /**
+   * The route is dropped due to the VPC exceeding the dynamic route limit.  For
+   * dynamic route limit, please refer to the Learned route example
+   */
+  public const ROUTE_STATUS_DROPPED = 'DROPPED';
+  /**
+   * This route is processed but inactive due to failure from the backend. The
+   * backend may have rejected the route
+   */
+  public const ROUTE_STATUS_INACTIVE = 'INACTIVE';
+  /**
+   * This route is being processed internally. The status will change once
+   * processed.
+   */
+  public const ROUTE_STATUS_PENDING = 'PENDING';
+  public const ROUTE_TYPE_BGP = 'BGP';
+  public const ROUTE_TYPE_STATIC = 'STATIC';
+  public const ROUTE_TYPE_SUBNET = 'SUBNET';
+  public const ROUTE_TYPE_TRANSIT = 'TRANSIT';
   protected $collection_key = 'warnings';
   protected $asPathsType = RouteAsPath::class;
   protected $asPathsDataType = 'array';
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of this resource. Provide this field when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * The destination range of outgoing packets that this route applies to. Both
+   * IPv4 and IPv6 are supported. Must specify an IPv4 range (e.g. 192.0.2.0/24)
+   * or an IPv6 range in RFC 4291 format (e.g. 2001:db8::/32). IPv6 range will
+   * be displayed using RFC 5952 compressed format.
+   *
    * @var string
    */
   public $destRange;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of this resource. Always compute#routes for Route
+   * resources.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a
+   * lowercase letter, and all following characters (except for the last
+   * character) must be a dash, lowercase letter, or digit. The last character
+   * must be a lowercase letter or digit.
+   *
    * @var string
    */
   public $name;
   /**
+   * Fully-qualified URL of the network that this route applies to.
+   *
    * @var string
    */
   public $network;
   /**
+   * The URL to a gateway that should handle matching packets. You can only
+   * specify the internet gateway using a full or partial valid URL:
+   * projects/project/global/gateways/default-internet-gateway
+   *
    * @var string
    */
   public $nextHopGateway;
   /**
+   * [Output Only] The full resource name of the Network Connectivity Center hub
+   * that will handle matching packets.
+   *
    * @var string
    */
   public $nextHopHub;
   /**
+   * The URL to a forwarding rule of typeloadBalancingScheme=INTERNAL that
+   * should handle matching packets or the IP address of the forwarding Rule.
+   * For example, the following are all valid URLs:               - https://www.
+   * googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/f
+   * orwardingRule     - regions/region/forwardingRules/forwardingRule
+   *
+   * If an IP address is provided, must specify an IPv4 address in dot-decimal
+   * notation or an IPv6 address in RFC 4291 format. For example, the following
+   * are all valid IP addresses:               - 10.128.0.56       -
+   * 2001:db8::2d9:51:0:0       - 2001:db8:0:0:2d9:51:0:0
+   *
+   * IPv6 addresses will be displayed using RFC 5952 compressed format (e.g.
+   * 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+   *
    * @var string
    */
   public $nextHopIlb;
   /**
+   * The URL to an instance that should handle matching packets. You can specify
+   * this as a full or partial URL. For example:  https://www.googleapis.com/com
+   * pute/v1/projects/project/zones/zone/instances/
+   *
    * @var string
    */
   public $nextHopInstance;
   /**
+   * [Output only] Internal fixed region-to-region cost that Google Cloud
+   * calculates based on factors such as network performance, distance, and
+   * available bandwidth between regions.
+   *
    * @var string
    */
   public $nextHopInterRegionCost;
   /**
+   * The network IP address of an instance that should handle matching packets.
+   * Both IPv6 address and IPv4 addresses are supported. Must specify an IPv4
+   * address in dot-decimal notation (e.g. 192.0.2.99) or an IPv6 address in RFC
+   * 4291 format (e.g. 2001:db8::2d9:51:0:0 or 2001:db8:0:0:2d9:51:0:0). IPv6
+   * addresses will be displayed using RFC 5952 compressed format (e.g.
+   * 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+   *
    * @var string
    */
   public $nextHopIp;
   /**
+   * [Output Only] Multi-Exit Discriminator, a BGP route metric that indicates
+   * the desirability of a particular route in a network.
+   *
    * @var string
    */
   public $nextHopMed;
   /**
+   * The URL of the local network if it should handle matching packets.
+   *
    * @var string
    */
   public $nextHopNetwork;
   /**
+   * [Output Only] Indicates the origin of the route. Can be IGP (Interior
+   * Gateway Protocol), EGP (Exterior Gateway Protocol), or INCOMPLETE.
+   *
    * @var string
    */
   public $nextHopOrigin;
   /**
+   * [Output Only] The network peering name that should handle matching packets,
+   * which should conform to RFC1035.
+   *
    * @var string
    */
   public $nextHopPeering;
   /**
+   * The URL to a VpnTunnel that should handle matching packets.
+   *
    * @var string
    */
   public $nextHopVpnTunnel;
   protected $paramsType = RouteParams::class;
   protected $paramsDataType = '';
   /**
+   * The priority of this route. Priority is used to break ties in cases where
+   * there is more than one matching route of equal prefix length. In cases
+   * where multiple routes have equal prefix length, the one with the lowest-
+   * numbered priority value wins. The default value is `1000`. The priority
+   * value must be from `0` to `65535`, inclusive.
+   *
    * @var string
    */
   public $priority;
   /**
+   * [Output only] The status of the route. This status only applies to dynamic
+   * routes learned by Cloud Routers. This status is not applicable to static
+   * routes.
+   *
    * @var string
    */
   public $routeStatus;
   /**
+   * [Output Only] The type of this route, which can be one of the following
+   * values: - 'TRANSIT' for a transit route that this router learned from
+   * another Cloud Router and will readvertise to one of its BGP peers  -
+   * 'SUBNET' for a route from a subnet of the VPC  - 'BGP' for a route learned
+   * from a BGP peer of this router  - 'STATIC' for a static route
+   *
    * @var string
    */
   public $routeType;
   /**
+   * [Output Only] Server-defined fully-qualified URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * A list of instance tags to which this route applies.
+   *
    * @var string[]
    */
   public $tags;
@@ -120,7 +241,9 @@ class Route extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * @param RouteAsPath[]
+   * [Output Only] AS path.
+   *
+   * @param RouteAsPath[] $asPaths
    */
   public function setAsPaths($asPaths)
   {
@@ -134,7 +257,9 @@ class Route extends \Google\Collection
     return $this->asPaths;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -148,7 +273,10 @@ class Route extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this field when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -162,7 +290,12 @@ class Route extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The destination range of outgoing packets that this route applies to. Both
+   * IPv4 and IPv6 are supported. Must specify an IPv4 range (e.g. 192.0.2.0/24)
+   * or an IPv6 range in RFC 4291 format (e.g. 2001:db8::/32). IPv6 range will
+   * be displayed using RFC 5952 compressed format.
+   *
+   * @param string $destRange
    */
   public function setDestRange($destRange)
   {
@@ -176,7 +309,10 @@ class Route extends \Google\Collection
     return $this->destRange;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -190,7 +326,10 @@ class Route extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of this resource. Always compute#routes for Route
+   * resources.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -204,7 +343,15 @@ class Route extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first character must be a
+   * lowercase letter, and all following characters (except for the last
+   * character) must be a dash, lowercase letter, or digit. The last character
+   * must be a lowercase letter or digit.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -218,7 +365,9 @@ class Route extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Fully-qualified URL of the network that this route applies to.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -232,7 +381,11 @@ class Route extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param string
+   * The URL to a gateway that should handle matching packets. You can only
+   * specify the internet gateway using a full or partial valid URL:
+   * projects/project/global/gateways/default-internet-gateway
+   *
+   * @param string $nextHopGateway
    */
   public function setNextHopGateway($nextHopGateway)
   {
@@ -246,7 +399,10 @@ class Route extends \Google\Collection
     return $this->nextHopGateway;
   }
   /**
-   * @param string
+   * [Output Only] The full resource name of the Network Connectivity Center hub
+   * that will handle matching packets.
+   *
+   * @param string $nextHopHub
    */
   public function setNextHopHub($nextHopHub)
   {
@@ -260,7 +416,21 @@ class Route extends \Google\Collection
     return $this->nextHopHub;
   }
   /**
-   * @param string
+   * The URL to a forwarding rule of typeloadBalancingScheme=INTERNAL that
+   * should handle matching packets or the IP address of the forwarding Rule.
+   * For example, the following are all valid URLs:               - https://www.
+   * googleapis.com/compute/v1/projects/project/regions/region/forwardingRules/f
+   * orwardingRule     - regions/region/forwardingRules/forwardingRule
+   *
+   * If an IP address is provided, must specify an IPv4 address in dot-decimal
+   * notation or an IPv6 address in RFC 4291 format. For example, the following
+   * are all valid IP addresses:               - 10.128.0.56       -
+   * 2001:db8::2d9:51:0:0       - 2001:db8:0:0:2d9:51:0:0
+   *
+   * IPv6 addresses will be displayed using RFC 5952 compressed format (e.g.
+   * 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+   *
+   * @param string $nextHopIlb
    */
   public function setNextHopIlb($nextHopIlb)
   {
@@ -274,7 +444,11 @@ class Route extends \Google\Collection
     return $this->nextHopIlb;
   }
   /**
-   * @param string
+   * The URL to an instance that should handle matching packets. You can specify
+   * this as a full or partial URL. For example:  https://www.googleapis.com/com
+   * pute/v1/projects/project/zones/zone/instances/
+   *
+   * @param string $nextHopInstance
    */
   public function setNextHopInstance($nextHopInstance)
   {
@@ -288,7 +462,11 @@ class Route extends \Google\Collection
     return $this->nextHopInstance;
   }
   /**
-   * @param string
+   * [Output only] Internal fixed region-to-region cost that Google Cloud
+   * calculates based on factors such as network performance, distance, and
+   * available bandwidth between regions.
+   *
+   * @param string $nextHopInterRegionCost
    */
   public function setNextHopInterRegionCost($nextHopInterRegionCost)
   {
@@ -302,7 +480,14 @@ class Route extends \Google\Collection
     return $this->nextHopInterRegionCost;
   }
   /**
-   * @param string
+   * The network IP address of an instance that should handle matching packets.
+   * Both IPv6 address and IPv4 addresses are supported. Must specify an IPv4
+   * address in dot-decimal notation (e.g. 192.0.2.99) or an IPv6 address in RFC
+   * 4291 format (e.g. 2001:db8::2d9:51:0:0 or 2001:db8:0:0:2d9:51:0:0). IPv6
+   * addresses will be displayed using RFC 5952 compressed format (e.g.
+   * 2001:db8::2d9:51:0:0). Should never be an IPv4-mapped IPv6 address.
+   *
+   * @param string $nextHopIp
    */
   public function setNextHopIp($nextHopIp)
   {
@@ -316,7 +501,10 @@ class Route extends \Google\Collection
     return $this->nextHopIp;
   }
   /**
-   * @param string
+   * [Output Only] Multi-Exit Discriminator, a BGP route metric that indicates
+   * the desirability of a particular route in a network.
+   *
+   * @param string $nextHopMed
    */
   public function setNextHopMed($nextHopMed)
   {
@@ -330,7 +518,9 @@ class Route extends \Google\Collection
     return $this->nextHopMed;
   }
   /**
-   * @param string
+   * The URL of the local network if it should handle matching packets.
+   *
+   * @param string $nextHopNetwork
    */
   public function setNextHopNetwork($nextHopNetwork)
   {
@@ -344,21 +534,29 @@ class Route extends \Google\Collection
     return $this->nextHopNetwork;
   }
   /**
-   * @param string
+   * [Output Only] Indicates the origin of the route. Can be IGP (Interior
+   * Gateway Protocol), EGP (Exterior Gateway Protocol), or INCOMPLETE.
+   *
+   * Accepted values: EGP, IGP, INCOMPLETE
+   *
+   * @param self::NEXT_HOP_ORIGIN_* $nextHopOrigin
    */
   public function setNextHopOrigin($nextHopOrigin)
   {
     $this->nextHopOrigin = $nextHopOrigin;
   }
   /**
-   * @return string
+   * @return self::NEXT_HOP_ORIGIN_*
    */
   public function getNextHopOrigin()
   {
     return $this->nextHopOrigin;
   }
   /**
-   * @param string
+   * [Output Only] The network peering name that should handle matching packets,
+   * which should conform to RFC1035.
+   *
+   * @param string $nextHopPeering
    */
   public function setNextHopPeering($nextHopPeering)
   {
@@ -372,7 +570,9 @@ class Route extends \Google\Collection
     return $this->nextHopPeering;
   }
   /**
-   * @param string
+   * The URL to a VpnTunnel that should handle matching packets.
+   *
+   * @param string $nextHopVpnTunnel
    */
   public function setNextHopVpnTunnel($nextHopVpnTunnel)
   {
@@ -386,7 +586,10 @@ class Route extends \Google\Collection
     return $this->nextHopVpnTunnel;
   }
   /**
-   * @param RouteParams
+   * Input only. [Input Only] Additional params passed with the request, but not
+   * persisted as part of resource payload.
+   *
+   * @param RouteParams $params
    */
   public function setParams(RouteParams $params)
   {
@@ -400,7 +603,13 @@ class Route extends \Google\Collection
     return $this->params;
   }
   /**
-   * @param string
+   * The priority of this route. Priority is used to break ties in cases where
+   * there is more than one matching route of equal prefix length. In cases
+   * where multiple routes have equal prefix length, the one with the lowest-
+   * numbered priority value wins. The default value is `1000`. The priority
+   * value must be from `0` to `65535`, inclusive.
+   *
+   * @param string $priority
    */
   public function setPriority($priority)
   {
@@ -414,35 +623,51 @@ class Route extends \Google\Collection
     return $this->priority;
   }
   /**
-   * @param string
+   * [Output only] The status of the route. This status only applies to dynamic
+   * routes learned by Cloud Routers. This status is not applicable to static
+   * routes.
+   *
+   * Accepted values: ACTIVE, DROPPED, INACTIVE, PENDING
+   *
+   * @param self::ROUTE_STATUS_* $routeStatus
    */
   public function setRouteStatus($routeStatus)
   {
     $this->routeStatus = $routeStatus;
   }
   /**
-   * @return string
+   * @return self::ROUTE_STATUS_*
    */
   public function getRouteStatus()
   {
     return $this->routeStatus;
   }
   /**
-   * @param string
+   * [Output Only] The type of this route, which can be one of the following
+   * values: - 'TRANSIT' for a transit route that this router learned from
+   * another Cloud Router and will readvertise to one of its BGP peers  -
+   * 'SUBNET' for a route from a subnet of the VPC  - 'BGP' for a route learned
+   * from a BGP peer of this router  - 'STATIC' for a static route
+   *
+   * Accepted values: BGP, STATIC, SUBNET, TRANSIT
+   *
+   * @param self::ROUTE_TYPE_* $routeType
    */
   public function setRouteType($routeType)
   {
     $this->routeType = $routeType;
   }
   /**
-   * @return string
+   * @return self::ROUTE_TYPE_*
    */
   public function getRouteType()
   {
     return $this->routeType;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined fully-qualified URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -456,7 +681,9 @@ class Route extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string[]
+   * A list of instance tags to which this route applies.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -470,7 +697,10 @@ class Route extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param RouteWarnings[]
+   * [Output Only] If potential misconfigurations are detected for this route,
+   * this field will be populated with warning messages.
+   *
+   * @param RouteWarnings[] $warnings
    */
   public function setWarnings($warnings)
   {

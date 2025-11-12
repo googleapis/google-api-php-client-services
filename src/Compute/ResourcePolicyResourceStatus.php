@@ -23,7 +23,11 @@ class ResourcePolicyResourceStatus extends \Google\Model
   protected $instanceSchedulePolicyDataType = '';
 
   /**
-   * @param ResourcePolicyResourceStatusInstanceSchedulePolicyStatus
+   * [Output Only] Specifies a set of output values reffering to the
+   * instance_schedule_policy system status. This field should have the same
+   * name as corresponding policy field.
+   *
+   * @param ResourcePolicyResourceStatusInstanceSchedulePolicyStatus $instanceSchedulePolicy
    */
   public function setInstanceSchedulePolicy(ResourcePolicyResourceStatusInstanceSchedulePolicyStatus $instanceSchedulePolicy)
   {

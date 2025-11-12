@@ -19,31 +19,59 @@ namespace Google\Service\Compute;
 
 class ReservationSubBlocksReportFaultyRequestFaultReason extends \Google\Model
 {
+  public const BEHAVIOR_FAULT_BEHAVIOR_UNSPECIFIED = 'FAULT_BEHAVIOR_UNSPECIFIED';
   /**
+   * The subBlock experienced a GPU error.
+   */
+  public const BEHAVIOR_GPU_ERROR = 'GPU_ERROR';
+  /**
+   * The subBlock experienced performance issues.
+   */
+  public const BEHAVIOR_PERFORMANCE = 'PERFORMANCE';
+  /**
+   * The subBlock experienced silent data corruption.
+   */
+  public const BEHAVIOR_SILENT_DATA_CORRUPTION = 'SILENT_DATA_CORRUPTION';
+  /**
+   * The subBlock experienced a switch failure.
+   */
+  public const BEHAVIOR_SWITCH_FAILURE = 'SWITCH_FAILURE';
+  /**
+   * The behavior of the fault experienced with the subBlock.
+   *
    * @var string
    */
   public $behavior;
   /**
+   * The description of the fault experienced with the subBlock.
+   *
    * @var string
    */
   public $description;
 
   /**
-   * @param string
+   * The behavior of the fault experienced with the subBlock.
+   *
+   * Accepted values: FAULT_BEHAVIOR_UNSPECIFIED, GPU_ERROR, PERFORMANCE,
+   * SILENT_DATA_CORRUPTION, SWITCH_FAILURE
+   *
+   * @param self::BEHAVIOR_* $behavior
    */
   public function setBehavior($behavior)
   {
     $this->behavior = $behavior;
   }
   /**
-   * @return string
+   * @return self::BEHAVIOR_*
    */
   public function getBehavior()
   {
     return $this->behavior;
   }
   /**
-   * @param string
+   * The description of the fault experienced with the subBlock.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {

@@ -20,20 +20,33 @@ namespace Google\Service\Compute;
 class ResourcePolicyDailyCycle extends \Google\Model
 {
   /**
+   * Defines a schedule with units measured in days. The value determines how
+   * many days pass between the start of each cycle.
+   *
    * @var int
    */
   public $daysInCycle;
   /**
+   * [Output only] A predetermined duration for the window, automatically chosen
+   * to be the smallest possible in the given scenario.
+   *
    * @var string
    */
   public $duration;
   /**
+   * Start time of the window. This must be in UTC format that resolves to one
+   * of 00:00, 04:00, 08:00,12:00, 16:00, or 20:00. For example, both 13:00-5
+   * and 08:00 are valid.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param int
+   * Defines a schedule with units measured in days. The value determines how
+   * many days pass between the start of each cycle.
+   *
+   * @param int $daysInCycle
    */
   public function setDaysInCycle($daysInCycle)
   {
@@ -47,7 +60,10 @@ class ResourcePolicyDailyCycle extends \Google\Model
     return $this->daysInCycle;
   }
   /**
-   * @param string
+   * [Output only] A predetermined duration for the window, automatically chosen
+   * to be the smallest possible in the given scenario.
+   *
+   * @param string $duration
    */
   public function setDuration($duration)
   {
@@ -61,7 +77,11 @@ class ResourcePolicyDailyCycle extends \Google\Model
     return $this->duration;
   }
   /**
-   * @param string
+   * Start time of the window. This must be in UTC format that resolves to one
+   * of 00:00, 04:00, 08:00,12:00, 16:00, or 20:00. For example, both 13:00-5
+   * and 08:00 are valid.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

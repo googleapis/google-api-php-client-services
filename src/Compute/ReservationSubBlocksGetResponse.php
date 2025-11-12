@@ -23,7 +23,7 @@ class ReservationSubBlocksGetResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param ReservationSubBlock
+   * @param ReservationSubBlock $resource
    */
   public function setResource(ReservationSubBlock $resource)
   {

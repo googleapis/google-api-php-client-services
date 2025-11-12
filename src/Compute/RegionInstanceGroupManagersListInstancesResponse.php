@@ -23,12 +23,20 @@ class RegionInstanceGroupManagersListInstancesResponse extends \Google\Collectio
   protected $managedInstancesType = ManagedInstance::class;
   protected $managedInstancesDataType = 'array';
   /**
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ManagedInstance[]
+   * A list of managed instances.
+   *
+   * @param ManagedInstance[] $managedInstances
    */
   public function setManagedInstances($managedInstances)
   {
@@ -42,7 +50,13 @@ class RegionInstanceGroupManagersListInstancesResponse extends \Google\Collectio
     return $this->managedInstances;
   }
   /**
-   * @param string
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

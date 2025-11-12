@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class ResourceGroupReference extends \Google\Model
 {
   /**
+   * A URI referencing one of the instance groups or network endpoint groups
+   * listed in the backend service.
+   *
    * @var string
    */
   public $group;
 
   /**
-   * @param string
+   * A URI referencing one of the instance groups or network endpoint groups
+   * listed in the backend service.
+   *
+   * @param string $group
    */
   public function setGroup($group)
   {

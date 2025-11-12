@@ -20,20 +20,28 @@ namespace Google\Service\Compute;
 class ReservationSubBlockPhysicalTopology extends \Google\Model
 {
   /**
+   * The hash of the capacity block within the cluster.
+   *
    * @var string
    */
   public $block;
   /**
+   * The cluster name of the reservation subBlock.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * The hash of the capacity sub-block within the capacity block.
+   *
    * @var string
    */
   public $subBlock;
 
   /**
-   * @param string
+   * The hash of the capacity block within the cluster.
+   *
+   * @param string $block
    */
   public function setBlock($block)
   {
@@ -47,7 +55,9 @@ class ReservationSubBlockPhysicalTopology extends \Google\Model
     return $this->block;
   }
   /**
-   * @param string
+   * The cluster name of the reservation subBlock.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -61,7 +71,9 @@ class ReservationSubBlockPhysicalTopology extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * The hash of the capacity sub-block within the capacity block.
+   *
+   * @param string $subBlock
    */
   public function setSubBlock($subBlock)
   {

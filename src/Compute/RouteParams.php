@@ -20,12 +20,30 @@ namespace Google\Service\Compute;
 class RouteParams extends \Google\Model
 {
   /**
+   * Tag keys/values directly bound to this resource. Tag keys and values have
+   * the same definition as resource manager tags. The field is allowed for
+   * INSERT only. The keys/values to set on the resource should be specified in
+   * either ID { : } or Namespaced format { : }. For example the following are
+   * valid inputs: * {"tagKeys/333" : "tagValues/444", "tagKeys/123" :
+   * "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"}
+   * Note: * Invalid combinations of ID & namespaced format is not supported.
+   * For   instance: {"123/environment" : "tagValues/444"} is invalid.
+   *
    * @var string[]
    */
   public $resourceManagerTags;
 
   /**
-   * @param string[]
+   * Tag keys/values directly bound to this resource. Tag keys and values have
+   * the same definition as resource manager tags. The field is allowed for
+   * INSERT only. The keys/values to set on the resource should be specified in
+   * either ID { : } or Namespaced format { : }. For example the following are
+   * valid inputs: * {"tagKeys/333" : "tagValues/444", "tagKeys/123" :
+   * "tagValues/456"} * {"123/environment" : "production", "345/abc" : "xyz"}
+   * Note: * Invalid combinations of ID & namespaced format is not supported.
+   * For   instance: {"123/environment" : "tagValues/444"} is invalid.
+   *
+   * @param string[] $resourceManagerTags
    */
   public function setResourceManagerTags($resourceManagerTags)
   {

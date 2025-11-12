@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class RegionInstanceGroupManagersSetTemplateRequest extends \Google\Model
 {
   /**
+   * URL of the InstanceTemplate resource from which all new instances will be
+   * created.
+   *
    * @var string
    */
   public $instanceTemplate;
 
   /**
-   * @param string
+   * URL of the InstanceTemplate resource from which all new instances will be
+   * created.
+   *
+   * @param string $instanceTemplate
    */
   public function setInstanceTemplate($instanceTemplate)
   {

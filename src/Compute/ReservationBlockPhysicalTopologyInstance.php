@@ -20,18 +20,24 @@ namespace Google\Service\Compute;
 class ReservationBlockPhysicalTopologyInstance extends \Google\Model
 {
   /**
+   * The InstanceId of the instance
+   *
    * @var string
    */
   public $instanceId;
   protected $physicalHostTopologyType = ReservationBlockPhysicalTopologyInstancePhysicalHostTopology::class;
   protected $physicalHostTopologyDataType = '';
   /**
+   * Project where the instance lives
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * The InstanceId of the instance
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -45,7 +51,9 @@ class ReservationBlockPhysicalTopologyInstance extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * @param ReservationBlockPhysicalTopologyInstancePhysicalHostTopology
+   * The PhysicalHostTopology of instances within a Block resource.
+   *
+   * @param ReservationBlockPhysicalTopologyInstancePhysicalHostTopology $physicalHostTopology
    */
   public function setPhysicalHostTopology(ReservationBlockPhysicalTopologyInstancePhysicalHostTopology $physicalHostTopology)
   {
@@ -59,7 +67,9 @@ class ReservationBlockPhysicalTopologyInstance extends \Google\Model
     return $this->physicalHostTopology;
   }
   /**
-   * @param string
+   * Project where the instance lives
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

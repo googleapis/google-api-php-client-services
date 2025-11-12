@@ -20,40 +20,58 @@ namespace Google\Service\Compute;
 class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
 {
   /**
+   * Effective block-project-ssh-keys value at Instance level.
+   *
    * @var bool
    */
   public $blockProjectSshKeysMetadataValue;
   /**
+   * Effective enable-guest-attributes value at Instance level.
+   *
    * @var bool
    */
   public $enableGuestAttributesMetadataValue;
   /**
+   * Effective enable-os-inventory value at Instance level.
+   *
    * @var bool
    */
   public $enableOsInventoryMetadataValue;
   /**
+   * Effective enable-osconfig value at Instance level.
+   *
    * @var bool
    */
   public $enableOsconfigMetadataValue;
   /**
+   * Effective enable-oslogin value at Instance level.
+   *
    * @var bool
    */
   public $enableOsloginMetadataValue;
   /**
+   * Effective serial-port-enable value at Instance level.
+   *
    * @var bool
    */
   public $serialPortEnableMetadataValue;
   /**
+   * Effective serial-port-logging-enable value at Instance level.
+   *
    * @var bool
    */
   public $serialPortLoggingEnableMetadataValue;
   /**
+   * Effective VM DNS setting at Instance level.
+   *
    * @var string
    */
   public $vmDnsSettingMetadataValue;
 
   /**
-   * @param bool
+   * Effective block-project-ssh-keys value at Instance level.
+   *
+   * @param bool $blockProjectSshKeysMetadataValue
    */
   public function setBlockProjectSshKeysMetadataValue($blockProjectSshKeysMetadataValue)
   {
@@ -67,7 +85,9 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
     return $this->blockProjectSshKeysMetadataValue;
   }
   /**
-   * @param bool
+   * Effective enable-guest-attributes value at Instance level.
+   *
+   * @param bool $enableGuestAttributesMetadataValue
    */
   public function setEnableGuestAttributesMetadataValue($enableGuestAttributesMetadataValue)
   {
@@ -81,7 +101,9 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
     return $this->enableGuestAttributesMetadataValue;
   }
   /**
-   * @param bool
+   * Effective enable-os-inventory value at Instance level.
+   *
+   * @param bool $enableOsInventoryMetadataValue
    */
   public function setEnableOsInventoryMetadataValue($enableOsInventoryMetadataValue)
   {
@@ -95,7 +117,9 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
     return $this->enableOsInventoryMetadataValue;
   }
   /**
-   * @param bool
+   * Effective enable-osconfig value at Instance level.
+   *
+   * @param bool $enableOsconfigMetadataValue
    */
   public function setEnableOsconfigMetadataValue($enableOsconfigMetadataValue)
   {
@@ -109,7 +133,9 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
     return $this->enableOsconfigMetadataValue;
   }
   /**
-   * @param bool
+   * Effective enable-oslogin value at Instance level.
+   *
+   * @param bool $enableOsloginMetadataValue
    */
   public function setEnableOsloginMetadataValue($enableOsloginMetadataValue)
   {
@@ -123,7 +149,9 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
     return $this->enableOsloginMetadataValue;
   }
   /**
-   * @param bool
+   * Effective serial-port-enable value at Instance level.
+   *
+   * @param bool $serialPortEnableMetadataValue
    */
   public function setSerialPortEnableMetadataValue($serialPortEnableMetadataValue)
   {
@@ -137,7 +165,9 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
     return $this->serialPortEnableMetadataValue;
   }
   /**
-   * @param bool
+   * Effective serial-port-logging-enable value at Instance level.
+   *
+   * @param bool $serialPortLoggingEnableMetadataValue
    */
   public function setSerialPortLoggingEnableMetadataValue($serialPortLoggingEnableMetadataValue)
   {
@@ -151,7 +181,9 @@ class ResourceStatusEffectiveInstanceMetadata extends \Google\Model
     return $this->serialPortLoggingEnableMetadataValue;
   }
   /**
-   * @param string
+   * Effective VM DNS setting at Instance level.
+   *
+   * @param string $vmDnsSettingMetadataValue
    */
   public function setVmDnsSettingMetadataValue($vmDnsSettingMetadataValue)
   {

@@ -19,12 +19,30 @@ namespace Google\Service\Compute;
 
 class ReservationSubBlocksReportFaultyRequest extends \Google\Collection
 {
+  public const DISRUPTION_SCHEDULE_DISRUPTION_SCHEDULE_UNSPECIFIED = 'DISRUPTION_SCHEDULE_UNSPECIFIED';
+  /**
+   * All VMs will be disrupted immediately.
+   */
+  public const DISRUPTION_SCHEDULE_IMMEDIATE = 'IMMEDIATE';
+  public const FAILURE_COMPONENT_FAILURE_COMPONENT_UNSPECIFIED = 'FAILURE_COMPONENT_UNSPECIFIED';
+  /**
+   * Multiple hosts experienced the fault.
+   */
+  public const FAILURE_COMPONENT_MULTIPLE_FAULTY_HOSTS = 'MULTIPLE_FAULTY_HOSTS';
+  /**
+   * The NVLink switch experienced the fault.
+   */
+  public const FAILURE_COMPONENT_NVLINK_SWITCH = 'NVLINK_SWITCH';
   protected $collection_key = 'faultReasons';
   /**
+   * The disruption schedule for the subBlock.
+   *
    * @var string
    */
   public $disruptionSchedule;
   /**
+   * The component that experienced the fault.
+   *
    * @var string
    */
   public $failureComponent;
@@ -32,35 +50,46 @@ class ReservationSubBlocksReportFaultyRequest extends \Google\Collection
   protected $faultReasonsDataType = 'array';
 
   /**
-   * @param string
+   * The disruption schedule for the subBlock.
+   *
+   * Accepted values: DISRUPTION_SCHEDULE_UNSPECIFIED, IMMEDIATE
+   *
+   * @param self::DISRUPTION_SCHEDULE_* $disruptionSchedule
    */
   public function setDisruptionSchedule($disruptionSchedule)
   {
     $this->disruptionSchedule = $disruptionSchedule;
   }
   /**
-   * @return string
+   * @return self::DISRUPTION_SCHEDULE_*
    */
   public function getDisruptionSchedule()
   {
     return $this->disruptionSchedule;
   }
   /**
-   * @param string
+   * The component that experienced the fault.
+   *
+   * Accepted values: FAILURE_COMPONENT_UNSPECIFIED, MULTIPLE_FAULTY_HOSTS,
+   * NVLINK_SWITCH
+   *
+   * @param self::FAILURE_COMPONENT_* $failureComponent
    */
   public function setFailureComponent($failureComponent)
   {
     $this->failureComponent = $failureComponent;
   }
   /**
-   * @return string
+   * @return self::FAILURE_COMPONENT_*
    */
   public function getFailureComponent()
   {
     return $this->failureComponent;
   }
   /**
-   * @param ReservationSubBlocksReportFaultyRequestFaultReason[]
+   * The reasons for the fault experienced with the subBlock.
+   *
+   * @param ReservationSubBlocksReportFaultyRequestFaultReason[] $faultReasons
    */
   public function setFaultReasons($faultReasons)
   {
