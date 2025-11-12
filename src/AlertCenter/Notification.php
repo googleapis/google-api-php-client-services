@@ -23,7 +23,9 @@ class Notification extends \Google\Model
   protected $cloudPubsubTopicDataType = '';
 
   /**
-   * @param CloudPubsubTopic
+   * A Google Cloud Pub/sub topic destination.
+   *
+   * @param CloudPubsubTopic $cloudPubsubTopic
    */
   public function setCloudPubsubTopic(CloudPubsubTopic $cloudPubsubTopic)
   {

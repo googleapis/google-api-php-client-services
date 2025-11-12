@@ -21,6 +21,8 @@ class DeviceCompromised extends \Google\Collection
 {
   protected $collection_key = 'events';
   /**
+   * The email of the user this alert was created for.
+   *
    * @var string
    */
   public $email;
@@ -28,7 +30,9 @@ class DeviceCompromised extends \Google\Collection
   protected $eventsDataType = 'array';
 
   /**
-   * @param string
+   * The email of the user this alert was created for.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -42,7 +46,9 @@ class DeviceCompromised extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param DeviceCompromisedSecurityDetail[]
+   * Required. The list of security events.
+   *
+   * @param DeviceCompromisedSecurityDetail[] $events
    */
   public function setEvents($events)
   {

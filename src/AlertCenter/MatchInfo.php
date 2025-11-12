@@ -25,7 +25,9 @@ class MatchInfo extends \Google\Model
   protected $userDefinedDetectorDataType = '';
 
   /**
-   * @param PredefinedDetectorInfo
+   * For matched detector predefined by Google.
+   *
+   * @param PredefinedDetectorInfo $predefinedDetector
    */
   public function setPredefinedDetector(PredefinedDetectorInfo $predefinedDetector)
   {
@@ -39,7 +41,9 @@ class MatchInfo extends \Google\Model
     return $this->predefinedDetector;
   }
   /**
-   * @param UserDefinedDetectorInfo
+   * For matched detector defined by administrators.
+   *
+   * @param UserDefinedDetectorInfo $userDefinedDetector
    */
   public function setUserDefinedDetector(UserDefinedDetectorInfo $userDefinedDetector)
   {

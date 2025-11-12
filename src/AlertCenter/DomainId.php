@@ -20,12 +20,16 @@ namespace Google\Service\AlertCenter;
 class DomainId extends \Google\Model
 {
   /**
+   * The primary domain for the customer.
+   *
    * @var string
    */
   public $customerPrimaryDomain;
 
   /**
-   * @param string
+   * The primary domain for the customer.
+   *
+   * @param string $customerPrimaryDomain
    */
   public function setCustomerPrimaryDomain($customerPrimaryDomain)
   {

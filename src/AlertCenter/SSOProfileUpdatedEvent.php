@@ -20,16 +20,22 @@ namespace Google\Service\AlertCenter;
 class SSOProfileUpdatedEvent extends \Google\Model
 {
   /**
+   * changes made to sso profile
+   *
    * @var string
    */
   public $inboundSsoProfileChanges;
   /**
+   * sso profile name which got updated
+   *
    * @var string
    */
   public $inboundSsoProfileName;
 
   /**
-   * @param string
+   * changes made to sso profile
+   *
+   * @param string $inboundSsoProfileChanges
    */
   public function setInboundSsoProfileChanges($inboundSsoProfileChanges)
   {
@@ -43,7 +49,9 @@ class SSOProfileUpdatedEvent extends \Google\Model
     return $this->inboundSsoProfileChanges;
   }
   /**
-   * @param string
+   * sso profile name which got updated
+   *
+   * @param string $inboundSsoProfileName
    */
   public function setInboundSsoProfileName($inboundSsoProfileName)
   {

@@ -27,12 +27,16 @@ class BadWhitelist extends \Google\Collection
   protected $messagesType = GmailMessageInfo::class;
   protected $messagesDataType = 'array';
   /**
+   * The source IP address of the malicious email, for example, `127.0.0.1`.
+   *
    * @var string
    */
   public $sourceIp;
 
   /**
-   * @param DomainId
+   * The domain ID.
+   *
+   * @param DomainId $domainId
    */
   public function setDomainId(DomainId $domainId)
   {
@@ -46,7 +50,9 @@ class BadWhitelist extends \Google\Collection
     return $this->domainId;
   }
   /**
-   * @param MaliciousEntity
+   * The entity whose actions triggered a Gmail phishing alert.
+   *
+   * @param MaliciousEntity $maliciousEntity
    */
   public function setMaliciousEntity(MaliciousEntity $maliciousEntity)
   {
@@ -60,7 +66,9 @@ class BadWhitelist extends \Google\Collection
     return $this->maliciousEntity;
   }
   /**
-   * @param GmailMessageInfo[]
+   * The list of messages contained by this alert.
+   *
+   * @param GmailMessageInfo[] $messages
    */
   public function setMessages($messages)
   {
@@ -74,7 +82,9 @@ class BadWhitelist extends \Google\Collection
     return $this->messages;
   }
   /**
-   * @param string
+   * The source IP address of the malicious email, for example, `127.0.0.1`.
+   *
+   * @param string $sourceIp
    */
   public function setSourceIp($sourceIp)
   {

@@ -23,12 +23,17 @@ class Csv extends \Google\Collection
   protected $dataRowsType = CsvRow::class;
   protected $dataRowsDataType = 'array';
   /**
+   * The list of headers for data columns in a CSV file.
+   *
    * @var string[]
    */
   public $headers;
 
   /**
-   * @param CsvRow[]
+   * The list of data rows in a CSV file, as string arrays rather than as a
+   * single comma-separated string.
+   *
+   * @param CsvRow[] $dataRows
    */
   public function setDataRows($dataRows)
   {
@@ -42,7 +47,9 @@ class Csv extends \Google\Collection
     return $this->dataRows;
   }
   /**
-   * @param string[]
+   * The list of headers for data columns in a CSV file.
+   *
+   * @param string[] $headers
    */
   public function setHeaders($headers)
   {

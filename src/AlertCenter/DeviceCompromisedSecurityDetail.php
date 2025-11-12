@@ -20,36 +20,54 @@ namespace Google\Service\AlertCenter;
 class DeviceCompromisedSecurityDetail extends \Google\Model
 {
   /**
+   * The device compromised state. Possible values are "`Compromised`" or "`Not
+   * Compromised`".
+   *
    * @var string
    */
   public $deviceCompromisedState;
   /**
+   * Required. The device ID.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * The model of the device.
+   *
    * @var string
    */
   public $deviceModel;
   /**
+   * The type of the device.
+   *
    * @var string
    */
   public $deviceType;
   /**
+   * Required for iOS, empty for others.
+   *
    * @var string
    */
   public $iosVendorId;
   /**
+   * The device resource ID.
+   *
    * @var string
    */
   public $resourceId;
   /**
+   * The serial number of the device.
+   *
    * @var string
    */
   public $serialNumber;
 
   /**
-   * @param string
+   * The device compromised state. Possible values are "`Compromised`" or "`Not
+   * Compromised`".
+   *
+   * @param string $deviceCompromisedState
    */
   public function setDeviceCompromisedState($deviceCompromisedState)
   {
@@ -63,7 +81,9 @@ class DeviceCompromisedSecurityDetail extends \Google\Model
     return $this->deviceCompromisedState;
   }
   /**
-   * @param string
+   * Required. The device ID.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -77,7 +97,9 @@ class DeviceCompromisedSecurityDetail extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * The model of the device.
+   *
+   * @param string $deviceModel
    */
   public function setDeviceModel($deviceModel)
   {
@@ -91,7 +113,9 @@ class DeviceCompromisedSecurityDetail extends \Google\Model
     return $this->deviceModel;
   }
   /**
-   * @param string
+   * The type of the device.
+   *
+   * @param string $deviceType
    */
   public function setDeviceType($deviceType)
   {
@@ -105,7 +129,9 @@ class DeviceCompromisedSecurityDetail extends \Google\Model
     return $this->deviceType;
   }
   /**
-   * @param string
+   * Required for iOS, empty for others.
+   *
+   * @param string $iosVendorId
    */
   public function setIosVendorId($iosVendorId)
   {
@@ -119,7 +145,9 @@ class DeviceCompromisedSecurityDetail extends \Google\Model
     return $this->iosVendorId;
   }
   /**
-   * @param string
+   * The device resource ID.
+   *
+   * @param string $resourceId
    */
   public function setResourceId($resourceId)
   {
@@ -133,7 +161,9 @@ class DeviceCompromisedSecurityDetail extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param string
+   * The serial number of the device.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {

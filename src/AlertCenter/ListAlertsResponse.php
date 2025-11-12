@@ -23,12 +23,19 @@ class ListAlertsResponse extends \Google\Collection
   protected $alertsType = Alert::class;
   protected $alertsDataType = 'array';
   /**
+   * The token for the next page. If not empty, indicates that there may be more
+   * alerts that match the listing request; this value can be used in a
+   * subsequent ListAlertsRequest to get alerts continuing from last result of
+   * the current list call.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Alert[]
+   * The list of alerts.
+   *
+   * @param Alert[] $alerts
    */
   public function setAlerts($alerts)
   {
@@ -42,7 +49,12 @@ class ListAlertsResponse extends \Google\Collection
     return $this->alerts;
   }
   /**
-   * @param string
+   * The token for the next page. If not empty, indicates that there may be more
+   * alerts that match the listing request; this value can be used in a
+   * subsequent ListAlertsRequest to get alerts continuing from last result of
+   * the current list call.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\AlertCenter;
 class UserChanges extends \Google\Model
 {
   /**
+   * Rule name
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Rule name
+   *
+   * @param string $name
    */
   public function setName($name)
   {

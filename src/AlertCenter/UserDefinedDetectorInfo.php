@@ -20,16 +20,22 @@ namespace Google\Service\AlertCenter;
 class UserDefinedDetectorInfo extends \Google\Model
 {
   /**
+   * Display name of the detector.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Resource name that uniquely identifies the detector.
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Display name of the detector.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +49,9 @@ class UserDefinedDetectorInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Resource name that uniquely identifies the detector.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

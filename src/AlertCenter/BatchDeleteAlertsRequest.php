@@ -21,16 +21,26 @@ class BatchDeleteAlertsRequest extends \Google\Collection
 {
   protected $collection_key = 'alertId';
   /**
+   * Required. The list of alert IDs to delete.
+   *
    * @var string[]
    */
   public $alertId;
   /**
+   * Optional. The unique identifier of the Google Workspace account of the
+   * customer the alerts are associated with. The `customer_id` must have the
+   * initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+   * identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
+   *
    * @var string
    */
   public $customerId;
 
   /**
-   * @param string[]
+   * Required. The list of alert IDs to delete.
+   *
+   * @param string[] $alertId
    */
   public function setAlertId($alertId)
   {
@@ -44,7 +54,13 @@ class BatchDeleteAlertsRequest extends \Google\Collection
     return $this->alertId;
   }
   /**
-   * @param string
+   * Optional. The unique identifier of the Google Workspace account of the
+   * customer the alerts are associated with. The `customer_id` must have the
+   * initial "C" stripped (for example, `046psxkn`). Inferred from the caller
+   * identity if not provided. [Find your customer
+   * ID](https://support.google.com/cloudidentity/answer/10070793).
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {

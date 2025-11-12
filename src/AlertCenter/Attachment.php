@@ -23,7 +23,9 @@ class Attachment extends \Google\Model
   protected $csvDataType = '';
 
   /**
-   * @param Csv
+   * A CSV file attachment.
+   *
+   * @param Csv $csv
    */
   public function setCsv(Csv $csv)
   {

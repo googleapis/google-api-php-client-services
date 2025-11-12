@@ -20,30 +20,88 @@ namespace Google\Service\AlertCenter;
 class AccountSuspensionDetails extends \Google\Model
 {
   /**
+   * Abuse reason is unspecified.
+   */
+  public const ABUSE_REASON_ACCOUNT_SUSPENSION_ABUSE_REASON_UNSPECIFIED = 'ACCOUNT_SUSPENSION_ABUSE_REASON_UNSPECIFIED';
+  /**
+   * This account is being suspended for a Terms of Service violation.
+   */
+  public const ABUSE_REASON_TOS_VIOLATION = 'TOS_VIOLATION';
+  /**
+   * This account is being suspended for spam.
+   */
+  public const ABUSE_REASON_SPAM = 'SPAM';
+  /**
+   * This account is being suspended for phishing.
+   */
+  public const ABUSE_REASON_PHISHING = 'PHISHING';
+  /**
+   * This account is being suspended for artificially boosting traffic to a
+   * website.
+   */
+  public const ABUSE_REASON_TRAFFIC_PUMPING = 'TRAFFIC_PUMPING';
+  /**
+   * This account is being suspended for fraud.
+   */
+  public const ABUSE_REASON_FRAUD = 'FRAUD';
+  /**
+   * This account is being suspended for number harvesting.
+   */
+  public const ABUSE_REASON_NUMBER_HARVESTING = 'NUMBER_HARVESTING';
+  /**
+   * This account is being suspended for payments fraud.
+   */
+  public const ABUSE_REASON_PAYMENTS_FRAUD = 'PAYMENTS_FRAUD';
+  /**
+   * This account is being suspended for unwanted content.
+   */
+  public const ABUSE_REASON_UNWANTED_CONTENT = 'UNWANTED_CONTENT';
+  /**
+   * This account is being suspended for being an unqualified educational
+   * institution.
+   */
+  public const ABUSE_REASON_UNQUALIFIED_EDU = 'UNQUALIFIED_EDU';
+  /**
+   * The reason why this account is receiving an account suspension warning.
+   *
    * @var string
    */
   public $abuseReason;
   /**
+   * The name of the product being abused. This is restricted to only the
+   * following values: "Gmail" "Google Workspace" "Payments" "Voice" "YouTube"
+   * "Other"
+   *
    * @var string
    */
   public $productName;
 
   /**
-   * @param string
+   * The reason why this account is receiving an account suspension warning.
+   *
+   * Accepted values: ACCOUNT_SUSPENSION_ABUSE_REASON_UNSPECIFIED,
+   * TOS_VIOLATION, SPAM, PHISHING, TRAFFIC_PUMPING, FRAUD, NUMBER_HARVESTING,
+   * PAYMENTS_FRAUD, UNWANTED_CONTENT, UNQUALIFIED_EDU
+   *
+   * @param self::ABUSE_REASON_* $abuseReason
    */
   public function setAbuseReason($abuseReason)
   {
     $this->abuseReason = $abuseReason;
   }
   /**
-   * @return string
+   * @return self::ABUSE_REASON_*
    */
   public function getAbuseReason()
   {
     return $this->abuseReason;
   }
   /**
-   * @param string
+   * The name of the product being abused. This is restricted to only the
+   * following values: "Gmail" "Google Workspace" "Payments" "Voice" "YouTube"
+   * "Other"
+   *
+   * @param string $productName
    */
   public function setProductName($productName)
   {

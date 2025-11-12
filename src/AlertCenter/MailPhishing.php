@@ -19,10 +19,24 @@ namespace Google\Service\AlertCenter;
 
 class MailPhishing extends \Google\Collection
 {
+  /**
+   * System action is unspecified.
+   */
+  public const SYSTEM_ACTION_TYPE_SYSTEM_ACTION_TYPE_UNSPECIFIED = 'SYSTEM_ACTION_TYPE_UNSPECIFIED';
+  /**
+   * No operation.
+   */
+  public const SYSTEM_ACTION_TYPE_NO_OPERATION = 'NO_OPERATION';
+  /**
+   * Messages were removed from the inbox.
+   */
+  public const SYSTEM_ACTION_TYPE_REMOVED_FROM_INBOX = 'REMOVED_FROM_INBOX';
   protected $collection_key = 'messages';
   protected $domainIdType = DomainId::class;
   protected $domainIdDataType = '';
   /**
+   * If `true`, the email originated from within the organization.
+   *
    * @var bool
    */
   public $isInternal;
@@ -31,12 +45,16 @@ class MailPhishing extends \Google\Collection
   protected $messagesType = GmailMessageInfo::class;
   protected $messagesDataType = 'array';
   /**
+   * System actions on the messages.
+   *
    * @var string
    */
   public $systemActionType;
 
   /**
-   * @param DomainId
+   * The domain ID.
+   *
+   * @param DomainId $domainId
    */
   public function setDomainId(DomainId $domainId)
   {
@@ -50,7 +68,9 @@ class MailPhishing extends \Google\Collection
     return $this->domainId;
   }
   /**
-   * @param bool
+   * If `true`, the email originated from within the organization.
+   *
+   * @param bool $isInternal
    */
   public function setIsInternal($isInternal)
   {
@@ -64,7 +84,9 @@ class MailPhishing extends \Google\Collection
     return $this->isInternal;
   }
   /**
-   * @param MaliciousEntity
+   * The entity whose actions triggered a Gmail phishing alert.
+   *
+   * @param MaliciousEntity $maliciousEntity
    */
   public function setMaliciousEntity(MaliciousEntity $maliciousEntity)
   {
@@ -78,7 +100,9 @@ class MailPhishing extends \Google\Collection
     return $this->maliciousEntity;
   }
   /**
-   * @param GmailMessageInfo[]
+   * The list of messages contained by this alert.
+   *
+   * @param GmailMessageInfo[] $messages
    */
   public function setMessages($messages)
   {
@@ -92,14 +116,19 @@ class MailPhishing extends \Google\Collection
     return $this->messages;
   }
   /**
-   * @param string
+   * System actions on the messages.
+   *
+   * Accepted values: SYSTEM_ACTION_TYPE_UNSPECIFIED, NO_OPERATION,
+   * REMOVED_FROM_INBOX
+   *
+   * @param self::SYSTEM_ACTION_TYPE_* $systemActionType
    */
   public function setSystemActionType($systemActionType)
   {
     $this->systemActionType = $systemActionType;
   }
   /**
-   * @return string
+   * @return self::SYSTEM_ACTION_TYPE_*
    */
   public function getSystemActionType()
   {

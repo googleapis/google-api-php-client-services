@@ -20,12 +20,16 @@ namespace Google\Service\AlertCenter;
 class SSOProfileCreatedEvent extends \Google\Model
 {
   /**
+   * sso profile name which got created
+   *
    * @var string
    */
   public $inboundSsoProfileName;
 
   /**
-   * @param string
+   * sso profile name which got created
+   *
+   * @param string $inboundSsoProfileName
    */
   public function setInboundSsoProfileName($inboundSsoProfileName)
   {

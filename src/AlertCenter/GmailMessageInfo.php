@@ -21,44 +21,64 @@ class GmailMessageInfo extends \Google\Collection
 {
   protected $collection_key = 'attachmentsSha256Hash';
   /**
+   * The `SHA256` hash of email's attachment and all MIME parts.
+   *
    * @var string[]
    */
   public $attachmentsSha256Hash;
   /**
+   * The date of the event related to this email.
+   *
    * @var string
    */
   public $date;
   /**
+   * The hash of the message body text.
+   *
    * @var string
    */
   public $md5HashMessageBody;
   /**
+   * The MD5 Hash of email's subject (only available for reported emails).
+   *
    * @var string
    */
   public $md5HashSubject;
   /**
+   * The snippet of the message body text (only available for reported emails).
+   *
    * @var string
    */
   public $messageBodySnippet;
   /**
+   * The message ID.
+   *
    * @var string
    */
   public $messageId;
   /**
+   * The recipient of this email.
+   *
    * @var string
    */
   public $recipient;
   /**
+   * The sent time of the email.
+   *
    * @var string
    */
   public $sentTime;
   /**
+   * The email subject text (only available for reported emails).
+   *
    * @var string
    */
   public $subjectText;
 
   /**
-   * @param string[]
+   * The `SHA256` hash of email's attachment and all MIME parts.
+   *
+   * @param string[] $attachmentsSha256Hash
    */
   public function setAttachmentsSha256Hash($attachmentsSha256Hash)
   {
@@ -72,7 +92,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->attachmentsSha256Hash;
   }
   /**
-   * @param string
+   * The date of the event related to this email.
+   *
+   * @param string $date
    */
   public function setDate($date)
   {
@@ -86,7 +108,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->date;
   }
   /**
-   * @param string
+   * The hash of the message body text.
+   *
+   * @param string $md5HashMessageBody
    */
   public function setMd5HashMessageBody($md5HashMessageBody)
   {
@@ -100,7 +124,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->md5HashMessageBody;
   }
   /**
-   * @param string
+   * The MD5 Hash of email's subject (only available for reported emails).
+   *
+   * @param string $md5HashSubject
    */
   public function setMd5HashSubject($md5HashSubject)
   {
@@ -114,7 +140,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->md5HashSubject;
   }
   /**
-   * @param string
+   * The snippet of the message body text (only available for reported emails).
+   *
+   * @param string $messageBodySnippet
    */
   public function setMessageBodySnippet($messageBodySnippet)
   {
@@ -128,7 +156,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->messageBodySnippet;
   }
   /**
-   * @param string
+   * The message ID.
+   *
+   * @param string $messageId
    */
   public function setMessageId($messageId)
   {
@@ -142,7 +172,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->messageId;
   }
   /**
-   * @param string
+   * The recipient of this email.
+   *
+   * @param string $recipient
    */
   public function setRecipient($recipient)
   {
@@ -156,7 +188,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->recipient;
   }
   /**
-   * @param string
+   * The sent time of the email.
+   *
+   * @param string $sentTime
    */
   public function setSentTime($sentTime)
   {
@@ -170,7 +204,9 @@ class GmailMessageInfo extends \Google\Collection
     return $this->sentTime;
   }
   /**
-   * @param string
+   * The email subject text (only available for reported emails).
+   *
+   * @param string $subjectText
    */
   public function setSubjectText($subjectText)
   {

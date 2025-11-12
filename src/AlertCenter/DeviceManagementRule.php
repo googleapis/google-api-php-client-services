@@ -20,48 +20,70 @@ namespace Google\Service\AlertCenter;
 class DeviceManagementRule extends \Google\Model
 {
   /**
+   * Required. The device ID.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * The model of the device.
+   *
    * @var string
    */
   public $deviceModel;
   /**
+   * The type of the device.
+   *
    * @var string
    */
   public $deviceType;
   /**
+   * The email of the user this alert was created for.
+   *
    * @var string
    */
   public $email;
   /**
+   * ID of the rule that triggered the alert
+   *
    * @var string
    */
   public $id;
   /**
+   * Required for iOS, empty for others.
+   *
    * @var string
    */
   public $iosVendorId;
   /**
+   * Obfuscated ID of the owner of the device
+   *
    * @var string
    */
   public $ownerId;
   /**
+   * The device resource ID.
+   *
    * @var string
    */
   public $resourceId;
   /**
+   * Action taken as result of the rule
+   *
    * @var string
    */
   public $ruleAction;
   /**
+   * The serial number of the device.
+   *
    * @var string
    */
   public $serialNumber;
 
   /**
-   * @param string
+   * Required. The device ID.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -75,7 +97,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * The model of the device.
+   *
+   * @param string $deviceModel
    */
   public function setDeviceModel($deviceModel)
   {
@@ -89,7 +113,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->deviceModel;
   }
   /**
-   * @param string
+   * The type of the device.
+   *
+   * @param string $deviceType
    */
   public function setDeviceType($deviceType)
   {
@@ -103,7 +129,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->deviceType;
   }
   /**
-   * @param string
+   * The email of the user this alert was created for.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -117,7 +145,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * ID of the rule that triggered the alert
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -131,7 +161,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Required for iOS, empty for others.
+   *
+   * @param string $iosVendorId
    */
   public function setIosVendorId($iosVendorId)
   {
@@ -145,7 +177,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->iosVendorId;
   }
   /**
-   * @param string
+   * Obfuscated ID of the owner of the device
+   *
+   * @param string $ownerId
    */
   public function setOwnerId($ownerId)
   {
@@ -159,7 +193,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->ownerId;
   }
   /**
-   * @param string
+   * The device resource ID.
+   *
+   * @param string $resourceId
    */
   public function setResourceId($resourceId)
   {
@@ -173,7 +209,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param string
+   * Action taken as result of the rule
+   *
+   * @param string $ruleAction
    */
   public function setRuleAction($ruleAction)
   {
@@ -187,7 +225,9 @@ class DeviceManagementRule extends \Google\Model
     return $this->ruleAction;
   }
   /**
-   * @param string
+   * The serial number of the device.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {

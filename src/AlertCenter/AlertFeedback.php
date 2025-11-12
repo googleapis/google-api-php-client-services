@@ -20,32 +20,63 @@ namespace Google\Service\AlertCenter;
 class AlertFeedback extends \Google\Model
 {
   /**
+   * The feedback type is not specified.
+   */
+  public const TYPE_ALERT_FEEDBACK_TYPE_UNSPECIFIED = 'ALERT_FEEDBACK_TYPE_UNSPECIFIED';
+  /**
+   * The alert report is not useful.
+   */
+  public const TYPE_NOT_USEFUL = 'NOT_USEFUL';
+  /**
+   * The alert report is somewhat useful.
+   */
+  public const TYPE_SOMEWHAT_USEFUL = 'SOMEWHAT_USEFUL';
+  /**
+   * The alert report is very useful.
+   */
+  public const TYPE_VERY_USEFUL = 'VERY_USEFUL';
+  /**
+   * Output only. The alert identifier.
+   *
    * @var string
    */
   public $alertId;
   /**
+   * Output only. The time this feedback was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The unique identifier of the Google Workspace account of the
+   * customer.
+   *
    * @var string
    */
   public $customerId;
   /**
+   * Output only. The email of the user that provided the feedback.
+   *
    * @var string
    */
   public $email;
   /**
+   * Output only. The unique identifier for the feedback.
+   *
    * @var string
    */
   public $feedbackId;
   /**
+   * Required. The type of the feedback.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The alert identifier.
+   *
+   * @param string $alertId
    */
   public function setAlertId($alertId)
   {
@@ -59,7 +90,9 @@ class AlertFeedback extends \Google\Model
     return $this->alertId;
   }
   /**
-   * @param string
+   * Output only. The time this feedback was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -73,7 +106,10 @@ class AlertFeedback extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The unique identifier of the Google Workspace account of the
+   * customer.
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {
@@ -87,7 +123,9 @@ class AlertFeedback extends \Google\Model
     return $this->customerId;
   }
   /**
-   * @param string
+   * Output only. The email of the user that provided the feedback.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -101,7 +139,9 @@ class AlertFeedback extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Output only. The unique identifier for the feedback.
+   *
+   * @param string $feedbackId
    */
   public function setFeedbackId($feedbackId)
   {
@@ -115,14 +155,19 @@ class AlertFeedback extends \Google\Model
     return $this->feedbackId;
   }
   /**
-   * @param string
+   * Required. The type of the feedback.
+   *
+   * Accepted values: ALERT_FEEDBACK_TYPE_UNSPECIFIED, NOT_USEFUL,
+   * SOMEWHAT_USEFUL, VERY_USEFUL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

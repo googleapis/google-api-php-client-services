@@ -21,30 +21,45 @@ class GoogleOperations extends \Google\Collection
 {
   protected $collection_key = 'affectedUserEmails';
   /**
+   * The list of emails which correspond to the users directly affected by the
+   * incident.
+   *
    * @var string[]
    */
   public $affectedUserEmails;
   protected $attachmentDataType = Attachment::class;
   protected $attachmentDataDataType = '';
   /**
+   * A detailed, freeform incident description.
+   *
    * @var string
    */
   public $description;
   /**
+   * Customer domain for email template personalization.
+   *
    * @var string
    */
   public $domain;
   /**
+   * A header to display above the incident message. Typically used to attach a
+   * localized notice on the timeline for followup comms translations.
+   *
    * @var string
    */
   public $header;
   /**
+   * A one-line incident description.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string[]
+   * The list of emails which correspond to the users directly affected by the
+   * incident.
+   *
+   * @param string[] $affectedUserEmails
    */
   public function setAffectedUserEmails($affectedUserEmails)
   {
@@ -58,7 +73,11 @@ class GoogleOperations extends \Google\Collection
     return $this->affectedUserEmails;
   }
   /**
-   * @param Attachment
+   * Optional. Application-specific data for an incident, provided when the
+   * Google Workspace application which reported the incident cannot be
+   * completely restored to a valid state.
+   *
+   * @param Attachment $attachmentData
    */
   public function setAttachmentData(Attachment $attachmentData)
   {
@@ -72,7 +91,9 @@ class GoogleOperations extends \Google\Collection
     return $this->attachmentData;
   }
   /**
-   * @param string
+   * A detailed, freeform incident description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -86,7 +107,9 @@ class GoogleOperations extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Customer domain for email template personalization.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -100,7 +123,10 @@ class GoogleOperations extends \Google\Collection
     return $this->domain;
   }
   /**
-   * @param string
+   * A header to display above the incident message. Typically used to attach a
+   * localized notice on the timeline for followup comms translations.
+   *
+   * @param string $header
    */
   public function setHeader($header)
   {
@@ -114,7 +140,9 @@ class GoogleOperations extends \Google\Collection
     return $this->header;
   }
   /**
-   * @param string
+   * A one-line incident description.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

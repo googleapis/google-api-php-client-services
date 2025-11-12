@@ -20,16 +20,25 @@ namespace Google\Service\AlertCenter;
 class LoginDetails extends \Google\Model
 {
   /**
+   * Optional. The human-readable IP address (for example, `11.22.33.44`) that
+   * is associated with the warning event.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * Optional. The successful login time that is associated with the warning
+   * event. This isn't present for blocked login attempts.
+   *
    * @var string
    */
   public $loginTime;
 
   /**
-   * @param string
+   * Optional. The human-readable IP address (for example, `11.22.33.44`) that
+   * is associated with the warning event.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -43,7 +52,10 @@ class LoginDetails extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * Optional. The successful login time that is associated with the warning
+   * event. This isn't present for blocked login attempts.
+   *
+   * @param string $loginTime
    */
   public function setLoginTime($loginTime)
   {

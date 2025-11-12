@@ -20,44 +20,64 @@ namespace Google\Service\AlertCenter;
 class SuspiciousActivitySecurityDetail extends \Google\Model
 {
   /**
+   * Required. The device ID.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * The model of the device.
+   *
    * @var string
    */
   public $deviceModel;
   /**
+   * The device property which was changed.
+   *
    * @var string
    */
   public $deviceProperty;
   /**
+   * The type of the device.
+   *
    * @var string
    */
   public $deviceType;
   /**
+   * Required for iOS, empty for others.
+   *
    * @var string
    */
   public $iosVendorId;
   /**
+   * The new value of the device property after the change.
+   *
    * @var string
    */
   public $newValue;
   /**
+   * The old value of the device property before the change.
+   *
    * @var string
    */
   public $oldValue;
   /**
+   * The device resource ID.
+   *
    * @var string
    */
   public $resourceId;
   /**
+   * The serial number of the device.
+   *
    * @var string
    */
   public $serialNumber;
 
   /**
-   * @param string
+   * Required. The device ID.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -71,7 +91,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * The model of the device.
+   *
+   * @param string $deviceModel
    */
   public function setDeviceModel($deviceModel)
   {
@@ -85,7 +107,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->deviceModel;
   }
   /**
-   * @param string
+   * The device property which was changed.
+   *
+   * @param string $deviceProperty
    */
   public function setDeviceProperty($deviceProperty)
   {
@@ -99,7 +123,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->deviceProperty;
   }
   /**
-   * @param string
+   * The type of the device.
+   *
+   * @param string $deviceType
    */
   public function setDeviceType($deviceType)
   {
@@ -113,7 +139,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->deviceType;
   }
   /**
-   * @param string
+   * Required for iOS, empty for others.
+   *
+   * @param string $iosVendorId
    */
   public function setIosVendorId($iosVendorId)
   {
@@ -127,7 +155,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->iosVendorId;
   }
   /**
-   * @param string
+   * The new value of the device property after the change.
+   *
+   * @param string $newValue
    */
   public function setNewValue($newValue)
   {
@@ -141,7 +171,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->newValue;
   }
   /**
-   * @param string
+   * The old value of the device property before the change.
+   *
+   * @param string $oldValue
    */
   public function setOldValue($oldValue)
   {
@@ -155,7 +187,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->oldValue;
   }
   /**
-   * @param string
+   * The device resource ID.
+   *
+   * @param string $resourceId
    */
   public function setResourceId($resourceId)
   {
@@ -169,7 +203,9 @@ class SuspiciousActivitySecurityDetail extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param string
+   * The serial number of the device.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {

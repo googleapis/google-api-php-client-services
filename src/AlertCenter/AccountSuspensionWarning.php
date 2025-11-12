@@ -19,12 +19,38 @@ namespace Google\Service\AlertCenter;
 
 class AccountSuspensionWarning extends \Google\Collection
 {
+  /**
+   * State is unspecified.
+   */
+  public const STATE_ACCOUNT_SUSPENSION_WARNING_STATE_UNSPECIFIED = 'ACCOUNT_SUSPENSION_WARNING_STATE_UNSPECIFIED';
+  /**
+   * Customer is receiving a warning about imminent suspension.
+   */
+  public const STATE_WARNING = 'WARNING';
+  /**
+   * Customer is being notified that their account has been suspended.
+   */
+  public const STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * Customer is being notified that their suspension appeal was approved.
+   */
+  public const STATE_APPEAL_APPROVED = 'APPEAL_APPROVED';
+  /**
+   * Customer has submitted their appeal, which is pending review.
+   */
+  public const STATE_APPEAL_SUBMITTED = 'APPEAL_SUBMITTED';
   protected $collection_key = 'suspensionDetails';
   /**
+   * The amount of time remaining to appeal an imminent suspension. After this
+   * window has elapsed, the account will be suspended. Only populated if the
+   * account suspension is in WARNING state.
+   *
    * @var string
    */
   public $appealWindow;
   /**
+   * Account suspension warning state.
+   *
    * @var string
    */
   public $state;
@@ -32,7 +58,11 @@ class AccountSuspensionWarning extends \Google\Collection
   protected $suspensionDetailsDataType = 'array';
 
   /**
-   * @param string
+   * The amount of time remaining to appeal an imminent suspension. After this
+   * window has elapsed, the account will be suspended. Only populated if the
+   * account suspension is in WARNING state.
+   *
+   * @param string $appealWindow
    */
   public function setAppealWindow($appealWindow)
   {
@@ -46,21 +76,28 @@ class AccountSuspensionWarning extends \Google\Collection
     return $this->appealWindow;
   }
   /**
-   * @param string
+   * Account suspension warning state.
+   *
+   * Accepted values: ACCOUNT_SUSPENSION_WARNING_STATE_UNSPECIFIED, WARNING,
+   * SUSPENDED, APPEAL_APPROVED, APPEAL_SUBMITTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param AccountSuspensionDetails[]
+   * Details about why an account is being suspended.
+   *
+   * @param AccountSuspensionDetails[] $suspensionDetails
    */
   public function setSuspensionDetails($suspensionDetails)
   {

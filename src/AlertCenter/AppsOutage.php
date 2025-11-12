@@ -19,36 +19,83 @@ namespace Google\Service\AlertCenter;
 
 class AppsOutage extends \Google\Collection
 {
+  /**
+   * Status is unspecified.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The incident has just been reported.
+   */
+  public const STATUS_NEW = 'NEW';
+  /**
+   * The incident is ongoing.
+   */
+  public const STATUS_ONGOING = 'ONGOING';
+  /**
+   * The incident has been resolved.
+   */
+  public const STATUS_RESOLVED = 'RESOLVED';
+  /**
+   * Further assessment indicated no customer impact.
+   */
+  public const STATUS_FALSE_POSITIVE = 'FALSE_POSITIVE';
+  /**
+   * The incident has been partially resolved.
+   */
+  public const STATUS_PARTIALLY_RESOLVED = 'PARTIALLY_RESOLVED';
+  /**
+   * The incident was merged into a parent.
+   */
+  public const STATUS_MERGED = 'MERGED';
+  /**
+   * The incident has lower impact than initially anticipated.
+   */
+  public const STATUS_DOWNGRADED = 'DOWNGRADED';
   protected $collection_key = 'products';
   /**
+   * Link to the outage event in Google Workspace Status Dashboard
+   *
    * @var string
    */
   public $dashboardUri;
   /**
+   * Incident tracking ID.
+   *
    * @var string
    */
   public $incidentTrackingId;
   protected $mergeInfoType = MergeInfo::class;
   protected $mergeInfoDataType = '';
   /**
+   * Timestamp by which the next update is expected to arrive.
+   *
    * @var string
    */
   public $nextUpdateTime;
   /**
+   * List of products impacted by the outage.
+   *
    * @var string[]
    */
   public $products;
   /**
+   * Timestamp when the outage is expected to be resolved, or has confirmed
+   * resolution. Provided only when known.
+   *
    * @var string
    */
   public $resolutionTime;
   /**
+   * Current outage status.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * Link to the outage event in Google Workspace Status Dashboard
+   *
+   * @param string $dashboardUri
    */
   public function setDashboardUri($dashboardUri)
   {
@@ -62,7 +109,9 @@ class AppsOutage extends \Google\Collection
     return $this->dashboardUri;
   }
   /**
-   * @param string
+   * Incident tracking ID.
+   *
+   * @param string $incidentTrackingId
    */
   public function setIncidentTrackingId($incidentTrackingId)
   {
@@ -76,7 +125,10 @@ class AppsOutage extends \Google\Collection
     return $this->incidentTrackingId;
   }
   /**
-   * @param MergeInfo
+   * Indicates new alert details under which the outage is communicated. Only
+   * populated when Status is MERGED.
+   *
+   * @param MergeInfo $mergeInfo
    */
   public function setMergeInfo(MergeInfo $mergeInfo)
   {
@@ -90,7 +142,9 @@ class AppsOutage extends \Google\Collection
     return $this->mergeInfo;
   }
   /**
-   * @param string
+   * Timestamp by which the next update is expected to arrive.
+   *
+   * @param string $nextUpdateTime
    */
   public function setNextUpdateTime($nextUpdateTime)
   {
@@ -104,7 +158,9 @@ class AppsOutage extends \Google\Collection
     return $this->nextUpdateTime;
   }
   /**
-   * @param string[]
+   * List of products impacted by the outage.
+   *
+   * @param string[] $products
    */
   public function setProducts($products)
   {
@@ -118,7 +174,10 @@ class AppsOutage extends \Google\Collection
     return $this->products;
   }
   /**
-   * @param string
+   * Timestamp when the outage is expected to be resolved, or has confirmed
+   * resolution. Provided only when known.
+   *
+   * @param string $resolutionTime
    */
   public function setResolutionTime($resolutionTime)
   {
@@ -132,14 +191,19 @@ class AppsOutage extends \Google\Collection
     return $this->resolutionTime;
   }
   /**
-   * @param string
+   * Current outage status.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, NEW, ONGOING, RESOLVED,
+   * FALSE_POSITIVE, PARTIALLY_RESOLVED, MERGED, DOWNGRADED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

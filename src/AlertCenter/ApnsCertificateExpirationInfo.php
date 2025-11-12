@@ -20,20 +20,30 @@ namespace Google\Service\AlertCenter;
 class ApnsCertificateExpirationInfo extends \Google\Model
 {
   /**
+   * The Apple ID used to create the certificate. It may be blank if admins
+   * didn't enter it.
+   *
    * @var string
    */
   public $appleId;
   /**
+   * The expiration date of the APNS certificate.
+   *
    * @var string
    */
   public $expirationTime;
   /**
+   * The UID of the certificate.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string
+   * The Apple ID used to create the certificate. It may be blank if admins
+   * didn't enter it.
+   *
+   * @param string $appleId
    */
   public function setAppleId($appleId)
   {
@@ -47,7 +57,9 @@ class ApnsCertificateExpirationInfo extends \Google\Model
     return $this->appleId;
   }
   /**
-   * @param string
+   * The expiration date of the APNS certificate.
+   *
+   * @param string $expirationTime
    */
   public function setExpirationTime($expirationTime)
   {
@@ -61,7 +73,9 @@ class ApnsCertificateExpirationInfo extends \Google\Model
     return $this->expirationTime;
   }
   /**
-   * @param string
+   * The UID of the certificate.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

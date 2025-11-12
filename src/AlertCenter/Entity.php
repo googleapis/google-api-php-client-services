@@ -21,20 +21,32 @@ class Entity extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Link to a Security Investigation Tool search based on this entity, if
+   * available.
+   *
    * @var string
    */
   public $link;
   /**
+   * Human-readable name of this entity, such as an email address, file ID, or
+   * device name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Extra values beyond name. The order of values should align with headers in
+   * EntityList.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * Link to a Security Investigation Tool search based on this entity, if
+   * available.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {
@@ -48,7 +60,10 @@ class Entity extends \Google\Collection
     return $this->link;
   }
   /**
-   * @param string
+   * Human-readable name of this entity, such as an email address, file ID, or
+   * device name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -62,7 +77,10 @@ class Entity extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Extra values beyond name. The order of values should align with headers in
+   * EntityList.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

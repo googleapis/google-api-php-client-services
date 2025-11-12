@@ -21,12 +21,18 @@ class CsvRow extends \Google\Collection
 {
   protected $collection_key = 'entries';
   /**
+   * The data entries in a CSV file row, as a string array rather than a single
+   * comma-separated string.
+   *
    * @var string[]
    */
   public $entries;
 
   /**
-   * @param string[]
+   * The data entries in a CSV file row, as a string array rather than a single
+   * comma-separated string.
+   *
+   * @param string[] $entries
    */
   public function setEntries($entries)
   {

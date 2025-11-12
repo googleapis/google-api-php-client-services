@@ -20,16 +20,22 @@ namespace Google\Service\AlertCenter;
 class SupportTicket extends \Google\Model
 {
   /**
+   * Support ticket ID
+   *
    * @var string
    */
   public $ticketId;
   /**
+   * Link to support ticket
+   *
    * @var string
    */
   public $ticketUrl;
 
   /**
-   * @param string
+   * Support ticket ID
+   *
+   * @param string $ticketId
    */
   public function setTicketId($ticketId)
   {
@@ -43,7 +49,9 @@ class SupportTicket extends \Google\Model
     return $this->ticketId;
   }
   /**
-   * @param string
+   * Link to support ticket
+   *
+   * @param string $ticketUrl
    */
   public function setTicketUrl($ticketUrl)
   {

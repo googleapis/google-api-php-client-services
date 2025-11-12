@@ -24,7 +24,10 @@ class ListAlertFeedbackResponse extends \Google\Collection
   protected $feedbackDataType = 'array';
 
   /**
-   * @param AlertFeedback[]
+   * The list of alert feedback. Feedback entries for each alert are ordered by
+   * creation time descending.
+   *
+   * @param AlertFeedback[] $feedback
    */
   public function setFeedback($feedback)
   {

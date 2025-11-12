@@ -23,16 +23,23 @@ class EntityList extends \Google\Collection
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
   /**
+   * Headers of the values in entities. If no value is defined in Entity, this
+   * field should be empty.
+   *
    * @var string[]
    */
   public $headers;
   /**
+   * Name of the key detail used to display this entity list.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param Entity[]
+   * List of entities affected by the alert.
+   *
+   * @param Entity[] $entities
    */
   public function setEntities($entities)
   {
@@ -46,7 +53,10 @@ class EntityList extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param string[]
+   * Headers of the values in entities. If no value is defined in Entity, this
+   * field should be empty.
+   *
+   * @param string[] $headers
    */
   public function setHeaders($headers)
   {
@@ -60,7 +70,9 @@ class EntityList extends \Google\Collection
     return $this->headers;
   }
   /**
-   * @param string
+   * Name of the key detail used to display this entity list.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

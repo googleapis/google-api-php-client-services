@@ -23,12 +23,16 @@ class BatchDeleteAlertsResponse extends \Google\Collection
   protected $failedAlertStatusType = Status::class;
   protected $failedAlertStatusDataType = 'map';
   /**
+   * The successful list of alert IDs.
+   *
    * @var string[]
    */
   public $successAlertIds;
 
   /**
-   * @param Status[]
+   * The status details for each failed `alert_id`.
+   *
+   * @param Status[] $failedAlertStatus
    */
   public function setFailedAlertStatus($failedAlertStatus)
   {
@@ -42,7 +46,9 @@ class BatchDeleteAlertsResponse extends \Google\Collection
     return $this->failedAlertStatus;
   }
   /**
-   * @param string[]
+   * The successful list of alert IDs.
+   *
+   * @param string[] $successAlertIds
    */
   public function setSuccessAlertIds($successAlertIds)
   {

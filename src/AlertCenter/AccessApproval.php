@@ -21,22 +21,34 @@ class AccessApproval extends \Google\Collection
 {
   protected $collection_key = 'tickets';
   /**
+   * Justification for data access based on justification enums.
+   *
    * @var string[]
    */
   public $justificationReason;
   /**
+   * Office location of Google staff requesting access such as "US".
+   *
    * @var string
    */
   public $officeLocation;
   /**
+   * Products within scope of the Access Approvals request.
+   *
    * @var string[]
    */
   public $products;
   /**
+   * ID of the Access Approvals request. This is a helpful field when requesting
+   * support from Google.
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Scope of access, also known as a resource. This is further narrowed down by
+   * the product field.
+   *
    * @var string
    */
   public $scope;
@@ -44,7 +56,9 @@ class AccessApproval extends \Google\Collection
   protected $ticketsDataType = 'array';
 
   /**
-   * @param string[]
+   * Justification for data access based on justification enums.
+   *
+   * @param string[] $justificationReason
    */
   public function setJustificationReason($justificationReason)
   {
@@ -58,7 +72,9 @@ class AccessApproval extends \Google\Collection
     return $this->justificationReason;
   }
   /**
-   * @param string
+   * Office location of Google staff requesting access such as "US".
+   *
+   * @param string $officeLocation
    */
   public function setOfficeLocation($officeLocation)
   {
@@ -72,7 +88,9 @@ class AccessApproval extends \Google\Collection
     return $this->officeLocation;
   }
   /**
-   * @param string[]
+   * Products within scope of the Access Approvals request.
+   *
+   * @param string[] $products
    */
   public function setProducts($products)
   {
@@ -86,7 +104,10 @@ class AccessApproval extends \Google\Collection
     return $this->products;
   }
   /**
-   * @param string
+   * ID of the Access Approvals request. This is a helpful field when requesting
+   * support from Google.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -100,7 +121,10 @@ class AccessApproval extends \Google\Collection
     return $this->requestId;
   }
   /**
-   * @param string
+   * Scope of access, also known as a resource. This is further narrowed down by
+   * the product field.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {
@@ -114,7 +138,10 @@ class AccessApproval extends \Google\Collection
     return $this->scope;
   }
   /**
-   * @param SupportTicket[]
+   * Support tickets related to this Access Approvals request. Populated if
+   * there is an associated case number.
+   *
+   * @param SupportTicket[] $tickets
    */
   public function setTickets($tickets)
   {

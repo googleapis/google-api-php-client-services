@@ -24,7 +24,9 @@ class Settings extends \Google\Collection
   protected $notificationsDataType = 'array';
 
   /**
-   * @param Notification[]
+   * The list of notifications.
+   *
+   * @param Notification[] $notifications
    */
   public function setNotifications($notifications)
   {

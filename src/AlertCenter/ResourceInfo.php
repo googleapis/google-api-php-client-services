@@ -20,28 +20,42 @@ namespace Google\Service\AlertCenter;
 class ResourceInfo extends \Google\Model
 {
   /**
+   * Chat attachment ID.
+   *
    * @var string
    */
   public $chatAttachmentId;
   /**
+   * Chat message ID.
+   *
    * @var string
    */
   public $chatMessageId;
   /**
+   * Id to identify a device. For example, for Android devices, this is the
+   * "Android Device Id" and for Chrome OS devices, it's the "Device Virtual
+   * Id".
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * Drive file ID.
+   *
    * @var string
    */
   public $documentId;
   /**
+   * Title of the resource, for example email subject, or document title.
+   *
    * @var string
    */
   public $resourceTitle;
 
   /**
-   * @param string
+   * Chat attachment ID.
+   *
+   * @param string $chatAttachmentId
    */
   public function setChatAttachmentId($chatAttachmentId)
   {
@@ -55,7 +69,9 @@ class ResourceInfo extends \Google\Model
     return $this->chatAttachmentId;
   }
   /**
-   * @param string
+   * Chat message ID.
+   *
+   * @param string $chatMessageId
    */
   public function setChatMessageId($chatMessageId)
   {
@@ -69,7 +85,11 @@ class ResourceInfo extends \Google\Model
     return $this->chatMessageId;
   }
   /**
-   * @param string
+   * Id to identify a device. For example, for Android devices, this is the
+   * "Android Device Id" and for Chrome OS devices, it's the "Device Virtual
+   * Id".
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -83,7 +103,9 @@ class ResourceInfo extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * Drive file ID.
+   *
+   * @param string $documentId
    */
   public function setDocumentId($documentId)
   {
@@ -97,7 +119,9 @@ class ResourceInfo extends \Google\Model
     return $this->documentId;
   }
   /**
-   * @param string
+   * Title of the resource, for example email subject, or document title.
+   *
+   * @param string $resourceTitle
    */
   public function setResourceTitle($resourceTitle)
   {

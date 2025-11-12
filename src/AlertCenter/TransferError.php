@@ -20,28 +20,79 @@ namespace Google\Service\AlertCenter;
 class TransferError extends \Google\Model
 {
   /**
+   * Entity type wasn't set.
+   */
+  public const ENTITY_TYPE_TRANSFER_ENTITY_TYPE_UNSPECIFIED = 'TRANSFER_ENTITY_TYPE_UNSPECIFIED';
+  /**
+   * Transfer to auto attendant.
+   */
+  public const ENTITY_TYPE_TRANSFER_AUTO_ATTENDANT = 'TRANSFER_AUTO_ATTENDANT';
+  /**
+   * Transfer to ring group.
+   */
+  public const ENTITY_TYPE_TRANSFER_RING_GROUP = 'TRANSFER_RING_GROUP';
+  /**
+   * Transfer to user.
+   */
+  public const ENTITY_TYPE_TRANSFER_USER = 'TRANSFER_USER';
+  /**
+   * Reason wasn't specified.
+   */
+  public const INVALID_REASON_TRANSFER_INVALID_REASON_UNSPECIFIED = 'TRANSFER_INVALID_REASON_UNSPECIFIED';
+  /**
+   * The transfer target can't be found—most likely it was deleted.
+   */
+  public const INVALID_REASON_TRANSFER_TARGET_DELETED = 'TRANSFER_TARGET_DELETED';
+  /**
+   * The user's Google Voice license was removed.
+   */
+  public const INVALID_REASON_UNLICENSED = 'UNLICENSED';
+  /**
+   * The user's Google Workspace account was suspended.
+   */
+  public const INVALID_REASON_SUSPENDED = 'SUSPENDED';
+  /**
+   * The transfer target no longer has a phone number. This reason should become
+   * deprecated once we support numberless transfer.
+   */
+  public const INVALID_REASON_NO_PHONE_NUMBER = 'NO_PHONE_NUMBER';
+  /**
+   * User's email address. This may be unavailable if the entity was deleted.
+   *
    * @var string
    */
   public $email;
   /**
+   * Type of entity being transferred to. For ring group members, this should
+   * always be USER.
+   *
    * @var string
    */
   public $entityType;
   /**
+   * Ring group or auto attendant ID. Not set for users.
+   *
    * @var string
    */
   public $id;
   /**
+   * Reason for the error.
+   *
    * @var string
    */
   public $invalidReason;
   /**
+   * User's full name, or the ring group / auto attendant name. This may be
+   * unavailable if the entity was deleted.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * User's email address. This may be unavailable if the entity was deleted.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -55,21 +106,29 @@ class TransferError extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Type of entity being transferred to. For ring group members, this should
+   * always be USER.
+   *
+   * Accepted values: TRANSFER_ENTITY_TYPE_UNSPECIFIED, TRANSFER_AUTO_ATTENDANT,
+   * TRANSFER_RING_GROUP, TRANSFER_USER
+   *
+   * @param self::ENTITY_TYPE_* $entityType
    */
   public function setEntityType($entityType)
   {
     $this->entityType = $entityType;
   }
   /**
-   * @return string
+   * @return self::ENTITY_TYPE_*
    */
   public function getEntityType()
   {
     return $this->entityType;
   }
   /**
-   * @param string
+   * Ring group or auto attendant ID. Not set for users.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -83,21 +142,29 @@ class TransferError extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Reason for the error.
+   *
+   * Accepted values: TRANSFER_INVALID_REASON_UNSPECIFIED,
+   * TRANSFER_TARGET_DELETED, UNLICENSED, SUSPENDED, NO_PHONE_NUMBER
+   *
+   * @param self::INVALID_REASON_* $invalidReason
    */
   public function setInvalidReason($invalidReason)
   {
     $this->invalidReason = $invalidReason;
   }
   /**
-   * @return string
+   * @return self::INVALID_REASON_*
    */
   public function getInvalidReason()
   {
     return $this->invalidReason;
   }
   /**
-   * @param string
+   * User's full name, or the ring group / auto attendant name. This may be
+   * unavailable if the entity was deleted.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

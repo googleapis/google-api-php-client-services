@@ -20,16 +20,36 @@ namespace Google\Service\AlertCenter;
 class VoicemailRecipientError extends \Google\Model
 {
   /**
+   * Reason wasn't specified.
+   */
+  public const INVALID_REASON_EMAIL_INVALID_REASON_UNSPECIFIED = 'EMAIL_INVALID_REASON_UNSPECIFIED';
+  /**
+   * User can't receive emails due to insufficient quota.
+   */
+  public const INVALID_REASON_OUT_OF_QUOTA = 'OUT_OF_QUOTA';
+  /**
+   * All recipients were deleted.
+   */
+  public const INVALID_REASON_RECIPIENT_DELETED = 'RECIPIENT_DELETED';
+  /**
+   * Email address of the invalid recipient. This may be unavailable if the
+   * recipient was deleted.
+   *
    * @var string
    */
   public $email;
   /**
+   * Reason for the error.
+   *
    * @var string
    */
   public $invalidReason;
 
   /**
-   * @param string
+   * Email address of the invalid recipient. This may be unavailable if the
+   * recipient was deleted.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -43,14 +63,19 @@ class VoicemailRecipientError extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Reason for the error.
+   *
+   * Accepted values: EMAIL_INVALID_REASON_UNSPECIFIED, OUT_OF_QUOTA,
+   * RECIPIENT_DELETED
+   *
+   * @param self::INVALID_REASON_* $invalidReason
    */
   public function setInvalidReason($invalidReason)
   {
     $this->invalidReason = $invalidReason;
   }
   /**
-   * @return string
+   * @return self::INVALID_REASON_*
    */
   public function getInvalidReason()
   {
