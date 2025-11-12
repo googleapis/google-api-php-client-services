@@ -23,16 +23,24 @@ class ListBackupPlansResponse extends \Google\Collection
   protected $backupPlansType = BackupPlan::class;
   protected $backupPlansDataType = 'array';
   /**
+   * A token which may be sent as page_token in a subsequent `ListBackupPlans`
+   * call to retrieve the next page of results. If this field is omitted or
+   * empty, then there are no more results to return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param BackupPlan[]
+   * The list of BackupPlans matching the given criteria.
+   *
+   * @param BackupPlan[] $backupPlans
    */
   public function setBackupPlans($backupPlans)
   {
@@ -46,7 +54,11 @@ class ListBackupPlansResponse extends \Google\Collection
     return $this->backupPlans;
   }
   /**
-   * @param string
+   * A token which may be sent as page_token in a subsequent `ListBackupPlans`
+   * call to retrieve the next page of results. If this field is omitted or
+   * empty, then there are no more results to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListBackupPlansResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -21,18 +21,28 @@ class ListRestorePlansResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token which may be sent as page_token in a subsequent `ListRestorePlans`
+   * call to retrieve the next page of results. If this field is omitted or
+   * empty, then there are no more results to return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $restorePlansType = RestorePlan::class;
   protected $restorePlansDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token which may be sent as page_token in a subsequent `ListRestorePlans`
+   * call to retrieve the next page of results. If this field is omitted or
+   * empty, then there are no more results to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,9 @@ class ListRestorePlansResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param RestorePlan[]
+   * The list of RestorePlans matching the given criteria.
+   *
+   * @param RestorePlan[] $restorePlans
    */
   public function setRestorePlans($restorePlans)
   {
@@ -60,7 +72,9 @@ class ListRestorePlansResponse extends \Google\Collection
     return $this->restorePlans;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -23,16 +23,24 @@ class ListBackupChannelsResponse extends \Google\Collection
   protected $backupChannelsType = BackupChannel::class;
   protected $backupChannelsDataType = 'array';
   /**
+   * A token which may be sent as page_token in a subsequent
+   * `ListBackupChannels` call to retrieve the next page of results. If this
+   * field is omitted or empty, then there are no more results to return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param BackupChannel[]
+   * The list of BackupChannels matching the given criteria.
+   *
+   * @param BackupChannel[] $backupChannels
    */
   public function setBackupChannels($backupChannels)
   {
@@ -46,7 +54,11 @@ class ListBackupChannelsResponse extends \Google\Collection
     return $this->backupChannels;
   }
   /**
-   * @param string
+   * A token which may be sent as page_token in a subsequent
+   * `ListBackupChannels` call to retrieve the next page of results. If this
+   * field is omitted or empty, then there are no more results to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListBackupChannelsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

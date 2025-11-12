@@ -20,28 +20,43 @@ namespace Google\Service\BackupforGKE;
 class ClusterMetadata extends \Google\Model
 {
   /**
+   * Output only. Anthos version
+   *
    * @var string
    */
   public $anthosVersion;
   /**
+   * Output only. A list of the Backup for GKE CRD versions found in the
+   * cluster.
+   *
    * @var string[]
    */
   public $backupCrdVersions;
   /**
+   * Output only. The source cluster from which this Backup was created. Valid
+   * formats: - `projects/locations/clusters` - `projects/zones/clusters` This
+   * is inherited from the parent BackupPlan's cluster field.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * Output only. GKE version
+   *
    * @var string
    */
   public $gkeVersion;
   /**
+   * Output only. The Kubernetes server version of the source cluster.
+   *
    * @var string
    */
   public $k8sVersion;
 
   /**
-   * @param string
+   * Output only. Anthos version
+   *
+   * @param string $anthosVersion
    */
   public function setAnthosVersion($anthosVersion)
   {
@@ -55,7 +70,10 @@ class ClusterMetadata extends \Google\Model
     return $this->anthosVersion;
   }
   /**
-   * @param string[]
+   * Output only. A list of the Backup for GKE CRD versions found in the
+   * cluster.
+   *
+   * @param string[] $backupCrdVersions
    */
   public function setBackupCrdVersions($backupCrdVersions)
   {
@@ -69,7 +87,11 @@ class ClusterMetadata extends \Google\Model
     return $this->backupCrdVersions;
   }
   /**
-   * @param string
+   * Output only. The source cluster from which this Backup was created. Valid
+   * formats: - `projects/locations/clusters` - `projects/zones/clusters` This
+   * is inherited from the parent BackupPlan's cluster field.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -83,7 +105,9 @@ class ClusterMetadata extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * Output only. GKE version
+   *
+   * @param string $gkeVersion
    */
   public function setGkeVersion($gkeVersion)
   {
@@ -97,7 +121,9 @@ class ClusterMetadata extends \Google\Model
     return $this->gkeVersion;
   }
   /**
-   * @param string
+   * Output only. The Kubernetes server version of the source cluster.
+   *
+   * @param string $k8sVersion
    */
   public function setK8sVersion($k8sVersion)
   {

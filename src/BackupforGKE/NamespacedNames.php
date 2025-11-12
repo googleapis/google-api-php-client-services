@@ -24,7 +24,9 @@ class NamespacedNames extends \Google\Collection
   protected $namespacedNamesDataType = 'array';
 
   /**
-   * @param NamespacedName[]
+   * Optional. A list of namespaced Kubernetes resources.
+   *
+   * @param NamespacedName[] $namespacedNames
    */
   public function setNamespacedNames($namespacedNames)
   {

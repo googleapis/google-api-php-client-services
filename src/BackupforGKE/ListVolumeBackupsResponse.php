@@ -21,6 +21,10 @@ class ListVolumeBackupsResponse extends \Google\Collection
 {
   protected $collection_key = 'volumeBackups';
   /**
+   * A token which may be sent as page_token in a subsequent `ListVolumeBackups`
+   * call to retrieve the next page of results. If this field is omitted or
+   * empty, then there are no more results to return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListVolumeBackupsResponse extends \Google\Collection
   protected $volumeBackupsDataType = 'array';
 
   /**
-   * @param string
+   * A token which may be sent as page_token in a subsequent `ListVolumeBackups`
+   * call to retrieve the next page of results. If this field is omitted or
+   * empty, then there are no more results to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListVolumeBackupsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param VolumeBackup[]
+   * The list of VolumeBackups matching the given criteria.
+   *
+   * @param VolumeBackup[] $volumeBackups
    */
   public function setVolumeBackups($volumeBackups)
   {

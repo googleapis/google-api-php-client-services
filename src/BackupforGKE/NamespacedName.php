@@ -20,16 +20,22 @@ namespace Google\Service\BackupforGKE;
 class NamespacedName extends \Google\Model
 {
   /**
+   * Optional. The name of the Kubernetes resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The Namespace of the Kubernetes resource.
+   *
    * @var string
    */
   public $namespace;
 
   /**
-   * @param string
+   * Optional. The name of the Kubernetes resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class NamespacedName extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The Namespace of the Kubernetes resource.
+   *
+   * @param string $namespace
    */
   public function setNamespace($namespace)
   {

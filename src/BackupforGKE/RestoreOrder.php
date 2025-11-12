@@ -24,7 +24,11 @@ class RestoreOrder extends \Google\Collection
   protected $groupKindDependenciesDataType = 'array';
 
   /**
-   * @param GroupKindDependency[]
+   * Optional. Contains a list of group kind dependency pairs provided by the
+   * customer, that is used by Backup for GKE to generate a group kind restore
+   * order.
+   *
+   * @param GroupKindDependency[] $groupKindDependencies
    */
   public function setGroupKindDependencies($groupKindDependencies)
   {

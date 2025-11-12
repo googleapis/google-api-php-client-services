@@ -23,16 +23,24 @@ class ListBackupPlanBindingsResponse extends \Google\Collection
   protected $backupPlanBindingsType = BackupPlanBinding::class;
   protected $backupPlanBindingsDataType = 'array';
   /**
+   * A token which may be sent as page_token in a subsequent
+   * `ListBackupPlanBindingss` call to retrieve the next page of results. If
+   * this field is omitted or empty, then there are no more results to return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param BackupPlanBinding[]
+   * The list of BackupPlanBindings matching the given criteria.
+   *
+   * @param BackupPlanBinding[] $backupPlanBindings
    */
   public function setBackupPlanBindings($backupPlanBindings)
   {
@@ -46,7 +54,11 @@ class ListBackupPlanBindingsResponse extends \Google\Collection
     return $this->backupPlanBindings;
   }
   /**
-   * @param string
+   * A token which may be sent as page_token in a subsequent
+   * `ListBackupPlanBindingss` call to retrieve the next page of results. If
+   * this field is omitted or empty, then there are no more results to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListBackupPlanBindingsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

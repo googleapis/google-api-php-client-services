@@ -20,44 +20,76 @@ namespace Google\Service\BackupforGKE;
 class RestoreChannel extends \Google\Model
 {
   /**
+   * Output only. The timestamp when this RestoreChannel was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. User specified descriptive string for this RestoreChannel.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Immutable. The project into which the backups will be restored.
+   * The format is `projects/{projectId}` or `projects/{projectNumber}`.
+   *
    * @var string
    */
   public $destinationProject;
   /**
+   * Output only. The project_id where backups will be restored. Example Project
+   * ID: "my-project-id". This will be an OUTPUT_ONLY field to return the
+   * project_id of the destination project.
+   *
    * @var string
    */
   public $destinationProjectId;
   /**
+   * Output only. `etag` is used for optimistic concurrency control as a way to
+   * help prevent simultaneous updates of a RestoreChannel from overwriting each
+   * other. It is strongly suggested that systems make use of the 'etag' in the
+   * read-modify-write cycle to perform RestoreChannel updates in order to avoid
+   * race conditions: An `etag` is returned in the response to
+   * `GetRestoreChannel`, and systems are expected to put that etag in the
+   * request to `UpdateRestoreChannel` or `DeleteRestoreChannel` to ensure that
+   * their change will be applied to the same version of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. A set of custom labels supplied by user.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The fully qualified name of the RestoreChannel.
+   * `projects/locations/restoreChannels`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Server generated global unique identifier of
+   * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The timestamp when this RestoreChannel was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The timestamp when this RestoreChannel was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +103,9 @@ class RestoreChannel extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. User specified descriptive string for this RestoreChannel.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -85,7 +119,10 @@ class RestoreChannel extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Immutable. The project into which the backups will be restored.
+   * The format is `projects/{projectId}` or `projects/{projectNumber}`.
+   *
+   * @param string $destinationProject
    */
   public function setDestinationProject($destinationProject)
   {
@@ -99,7 +136,11 @@ class RestoreChannel extends \Google\Model
     return $this->destinationProject;
   }
   /**
-   * @param string
+   * Output only. The project_id where backups will be restored. Example Project
+   * ID: "my-project-id". This will be an OUTPUT_ONLY field to return the
+   * project_id of the destination project.
+   *
+   * @param string $destinationProjectId
    */
   public function setDestinationProjectId($destinationProjectId)
   {
@@ -113,7 +154,16 @@ class RestoreChannel extends \Google\Model
     return $this->destinationProjectId;
   }
   /**
-   * @param string
+   * Output only. `etag` is used for optimistic concurrency control as a way to
+   * help prevent simultaneous updates of a RestoreChannel from overwriting each
+   * other. It is strongly suggested that systems make use of the 'etag' in the
+   * read-modify-write cycle to perform RestoreChannel updates in order to avoid
+   * race conditions: An `etag` is returned in the response to
+   * `GetRestoreChannel`, and systems are expected to put that etag in the
+   * request to `UpdateRestoreChannel` or `DeleteRestoreChannel` to ensure that
+   * their change will be applied to the same version of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -127,7 +177,9 @@ class RestoreChannel extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. A set of custom labels supplied by user.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -141,7 +193,10 @@ class RestoreChannel extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The fully qualified name of the RestoreChannel.
+   * `projects/locations/restoreChannels`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -155,7 +210,10 @@ class RestoreChannel extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Server generated global unique identifier of
+   * [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) format.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -169,7 +227,9 @@ class RestoreChannel extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The timestamp when this RestoreChannel was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -21,12 +21,16 @@ class Namespaces extends \Google\Collection
 {
   protected $collection_key = 'namespaces';
   /**
+   * Optional. A list of Kubernetes Namespaces.
+   *
    * @var string[]
    */
   public $namespaces;
 
   /**
-   * @param string[]
+   * Optional. A list of Kubernetes Namespaces.
+   *
+   * @param string[] $namespaces
    */
   public function setNamespaces($namespaces)
   {

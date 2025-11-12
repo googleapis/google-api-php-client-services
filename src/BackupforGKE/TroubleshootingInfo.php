@@ -20,16 +20,25 @@ namespace Google\Service\BackupforGKE;
 class TroubleshootingInfo extends \Google\Model
 {
   /**
+   * Output only. Unique code for each backup/restore operation failure message
+   * which helps user identify the failure.
+   *
    * @var string
    */
   public $stateReasonCode;
   /**
+   * Output only. URL for the troubleshooting doc which will help the user fix
+   * the failing backup/restore operation.
+   *
    * @var string
    */
   public $stateReasonUri;
 
   /**
-   * @param string
+   * Output only. Unique code for each backup/restore operation failure message
+   * which helps user identify the failure.
+   *
+   * @param string $stateReasonCode
    */
   public function setStateReasonCode($stateReasonCode)
   {
@@ -43,7 +52,10 @@ class TroubleshootingInfo extends \Google\Model
     return $this->stateReasonCode;
   }
   /**
-   * @param string
+   * Output only. URL for the troubleshooting doc which will help the user fix
+   * the failing backup/restore operation.
+   *
+   * @param string $stateReasonUri
    */
   public function setStateReasonUri($stateReasonUri)
   {

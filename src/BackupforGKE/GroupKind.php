@@ -20,16 +20,28 @@ namespace Google\Service\BackupforGKE;
 class GroupKind extends \Google\Model
 {
   /**
+   * Optional. API group string of a Kubernetes resource, e.g.
+   * "apiextensions.k8s.io", "storage.k8s.io", etc. Note: use empty string for
+   * core API group.
+   *
    * @var string
    */
   public $resourceGroup;
   /**
+   * Optional. Kind of a Kubernetes resource, must be in UpperCamelCase
+   * (PascalCase) and singular form. E.g. "CustomResourceDefinition",
+   * "StorageClass", etc.
+   *
    * @var string
    */
   public $resourceKind;
 
   /**
-   * @param string
+   * Optional. API group string of a Kubernetes resource, e.g.
+   * "apiextensions.k8s.io", "storage.k8s.io", etc. Note: use empty string for
+   * core API group.
+   *
+   * @param string $resourceGroup
    */
   public function setResourceGroup($resourceGroup)
   {
@@ -43,7 +55,11 @@ class GroupKind extends \Google\Model
     return $this->resourceGroup;
   }
   /**
-   * @param string
+   * Optional. Kind of a Kubernetes resource, must be in UpperCamelCase
+   * (PascalCase) and singular form. E.g. "CustomResourceDefinition",
+   * "StorageClass", etc.
+   *
+   * @param string $resourceKind
    */
   public function setResourceKind($resourceKind)
   {

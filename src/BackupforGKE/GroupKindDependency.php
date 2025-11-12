@@ -25,7 +25,10 @@ class GroupKindDependency extends \Google\Model
   protected $satisfyingDataType = '';
 
   /**
-   * @param GroupKind
+   * Required. The requiring group kind requires that the other group kind be
+   * restored first.
+   *
+   * @param GroupKind $requiring
    */
   public function setRequiring(GroupKind $requiring)
   {
@@ -39,7 +42,10 @@ class GroupKindDependency extends \Google\Model
     return $this->requiring;
   }
   /**
-   * @param GroupKind
+   * Required. The satisfying group kind must be restored first in order to
+   * satisfy the dependency.
+   *
+   * @param GroupKind $satisfying
    */
   public function setSatisfying(GroupKind $satisfying)
   {

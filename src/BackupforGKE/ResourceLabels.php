@@ -24,7 +24,9 @@ class ResourceLabels extends \Google\Collection
   protected $resourceLabelsDataType = 'array';
 
   /**
-   * @param Label[]
+   * Optional. A list of Kubernetes label-value pairs.
+   *
+   * @param Label[] $resourceLabels
    */
   public function setResourceLabels($resourceLabels)
   {
