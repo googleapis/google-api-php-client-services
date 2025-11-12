@@ -20,24 +20,50 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2TrafficTarget extends \Google\Model
 {
   /**
+   * Unspecified instance allocation type.
+   */
+  public const TYPE_TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED = 'TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED';
+  /**
+   * Allocates instances to the Service's latest ready Revision.
+   */
+  public const TYPE_TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST = 'TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST';
+  /**
+   * Allocates instances to a Revision by name.
+   */
+  public const TYPE_TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION = 'TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION';
+  /**
+   * Specifies percent of the traffic to this Revision. This defaults to zero if
+   * unspecified.
+   *
    * @var int
    */
   public $percent;
   /**
+   * Revision to which to send this portion of traffic, if traffic allocation is
+   * by revision.
+   *
    * @var string
    */
   public $revision;
   /**
+   * Indicates a string to be part of the URI to exclusively reference this
+   * target.
+   *
    * @var string
    */
   public $tag;
   /**
+   * The allocation type for this traffic target.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param int
+   * Specifies percent of the traffic to this Revision. This defaults to zero if
+   * unspecified.
+   *
+   * @param int $percent
    */
   public function setPercent($percent)
   {
@@ -51,7 +77,10 @@ class GoogleCloudRunV2TrafficTarget extends \Google\Model
     return $this->percent;
   }
   /**
-   * @param string
+   * Revision to which to send this portion of traffic, if traffic allocation is
+   * by revision.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {
@@ -65,7 +94,10 @@ class GoogleCloudRunV2TrafficTarget extends \Google\Model
     return $this->revision;
   }
   /**
-   * @param string
+   * Indicates a string to be part of the URI to exclusively reference this
+   * target.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {
@@ -79,14 +111,20 @@ class GoogleCloudRunV2TrafficTarget extends \Google\Model
     return $this->tag;
   }
   /**
-   * @param string
+   * The allocation type for this traffic target.
+   *
+   * Accepted values: TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED,
+   * TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST,
+   * TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

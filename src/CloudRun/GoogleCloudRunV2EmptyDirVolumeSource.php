@@ -20,30 +20,67 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2EmptyDirVolumeSource extends \Google\Model
 {
   /**
+   * When not specified, falls back to the default implementation which is
+   * currently in memory (this may change over time).
+   */
+  public const MEDIUM_MEDIUM_UNSPECIFIED = 'MEDIUM_UNSPECIFIED';
+  /**
+   * Explicitly set the EmptyDir to be in memory. Uses tmpfs.
+   */
+  public const MEDIUM_MEMORY = 'MEMORY';
+  /**
+   * The medium on which the data is stored. Acceptable values today is only
+   * MEMORY or none. When none, the default will currently be backed by memory
+   * but could change over time. +optional
+   *
    * @var string
    */
   public $medium;
   /**
+   * Limit on the storage usable by this EmptyDir volume. The size limit is also
+   * applicable for memory medium. The maximum usage on memory medium EmptyDir
+   * would be the minimum value between the SizeLimit specified here and the sum
+   * of memory limits of all containers. The default is nil which means that the
+   * limit is undefined. More info:
+   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-
+   * volume. Info in Kubernetes:
+   * https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   *
    * @var string
    */
   public $sizeLimit;
 
   /**
-   * @param string
+   * The medium on which the data is stored. Acceptable values today is only
+   * MEMORY or none. When none, the default will currently be backed by memory
+   * but could change over time. +optional
+   *
+   * Accepted values: MEDIUM_UNSPECIFIED, MEMORY
+   *
+   * @param self::MEDIUM_* $medium
    */
   public function setMedium($medium)
   {
     $this->medium = $medium;
   }
   /**
-   * @return string
+   * @return self::MEDIUM_*
    */
   public function getMedium()
   {
     return $this->medium;
   }
   /**
-   * @param string
+   * Limit on the storage usable by this EmptyDir volume. The size limit is also
+   * applicable for memory medium. The maximum usage on memory medium EmptyDir
+   * would be the minimum value between the SizeLimit specified here and the sum
+   * of memory limits of all containers. The default is nil which means that the
+   * limit is undefined. More info:
+   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-
+   * volume. Info in Kubernetes:
+   * https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   *
+   * @param string $sizeLimit
    */
   public function setSizeLimit($sizeLimit)
   {

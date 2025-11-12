@@ -20,16 +20,29 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2GRPCAction extends \Google\Model
 {
   /**
+   * Optional. Port number of the gRPC service. Number must be in the range 1 to
+   * 65535. If not specified, defaults to the exposed port of the container,
+   * which is the value of container.ports[0].containerPort.
+   *
    * @var int
    */
   public $port;
   /**
+   * Optional. Service is the name of the service to place in the gRPC
+   * HealthCheckRequest (see
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this
+   * is not specified, the default behavior is defined by gRPC.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param int
+   * Optional. Port number of the gRPC service. Number must be in the range 1 to
+   * 65535. If not specified, defaults to the exposed port of the container,
+   * which is the value of container.ports[0].containerPort.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -43,7 +56,12 @@ class GoogleCloudRunV2GRPCAction extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * Optional. Service is the name of the service to place in the gRPC
+   * HealthCheckRequest (see
+   * https://github.com/grpc/grpc/blob/master/doc/health-checking.md ). If this
+   * is not specified, the default behavior is defined by gRPC.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

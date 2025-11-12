@@ -20,44 +20,76 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2BuildConfig extends \Google\Model
 {
   /**
+   * Optional. The base image used to build the function.
+   *
    * @var string
    */
   public $baseImage;
   /**
+   * Optional. Sets whether the function will receive automatic base image
+   * updates.
+   *
    * @var bool
    */
   public $enableAutomaticUpdates;
   /**
+   * Optional. User-provided build-time environment variables for the function
+   *
    * @var string[]
    */
   public $environmentVariables;
   /**
+   * Optional. The name of the function (as defined in source code) that will be
+   * executed. Defaults to the resource name suffix, if not specified. For
+   * backward compatibility, if function with given name is not found, then the
+   * system will try to use function named "function".
+   *
    * @var string
    */
   public $functionTarget;
   /**
+   * Optional. Artifact Registry URI to store the built image.
+   *
    * @var string
    */
   public $imageUri;
   /**
+   * Output only. The Cloud Build name of the latest successful deployment of
+   * the function.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Service account to be used for building the container. The format
+   * of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * The Cloud Storage bucket URI where the function source code is located.
+   *
    * @var string
    */
   public $sourceLocation;
   /**
+   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to
+   * build the Cloud Run function. The format of this field is
+   * `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * `{project}` and `{region}` are the project id and region respectively where
+   * the worker pool is defined and `{workerPool}` is the short name of the
+   * worker pool.
+   *
    * @var string
    */
   public $workerPool;
 
   /**
-   * @param string
+   * Optional. The base image used to build the function.
+   *
+   * @param string $baseImage
    */
   public function setBaseImage($baseImage)
   {
@@ -71,7 +103,10 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->baseImage;
   }
   /**
-   * @param bool
+   * Optional. Sets whether the function will receive automatic base image
+   * updates.
+   *
+   * @param bool $enableAutomaticUpdates
    */
   public function setEnableAutomaticUpdates($enableAutomaticUpdates)
   {
@@ -85,7 +120,9 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->enableAutomaticUpdates;
   }
   /**
-   * @param string[]
+   * Optional. User-provided build-time environment variables for the function
+   *
+   * @param string[] $environmentVariables
    */
   public function setEnvironmentVariables($environmentVariables)
   {
@@ -99,7 +136,12 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->environmentVariables;
   }
   /**
-   * @param string
+   * Optional. The name of the function (as defined in source code) that will be
+   * executed. Defaults to the resource name suffix, if not specified. For
+   * backward compatibility, if function with given name is not found, then the
+   * system will try to use function named "function".
+   *
+   * @param string $functionTarget
    */
   public function setFunctionTarget($functionTarget)
   {
@@ -113,7 +155,9 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->functionTarget;
   }
   /**
-   * @param string
+   * Optional. Artifact Registry URI to store the built image.
+   *
+   * @param string $imageUri
    */
   public function setImageUri($imageUri)
   {
@@ -127,7 +171,10 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->imageUri;
   }
   /**
-   * @param string
+   * Output only. The Cloud Build name of the latest successful deployment of
+   * the function.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -141,7 +188,11 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Service account to be used for building the container. The format
+   * of this field is
+   * `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -155,7 +206,9 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * The Cloud Storage bucket URI where the function source code is located.
+   *
+   * @param string $sourceLocation
    */
   public function setSourceLocation($sourceLocation)
   {
@@ -169,7 +222,14 @@ class GoogleCloudRunV2BuildConfig extends \Google\Model
     return $this->sourceLocation;
   }
   /**
-   * @param string
+   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to
+   * build the Cloud Run function. The format of this field is
+   * `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * `{project}` and `{region}` are the project id and region respectively where
+   * the worker pool is defined and `{workerPool}` is the short name of the
+   * worker pool.
+   *
+   * @param string $workerPool
    */
   public function setWorkerPool($workerPool)
   {

@@ -20,6 +20,9 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2Probe extends \Google\Model
 {
   /**
+   * Optional. Minimum consecutive failures for the probe to be considered
+   * failed after having succeeded. Defaults to 3. Minimum value is 1.
+   *
    * @var int
    */
   public $failureThreshold;
@@ -28,22 +31,38 @@ class GoogleCloudRunV2Probe extends \Google\Model
   protected $httpGetType = GoogleCloudRunV2HTTPGetAction::class;
   protected $httpGetDataType = '';
   /**
+   * Optional. Number of seconds after the container has started before the
+   * probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum
+   * value for liveness probe is 3600. Maximum value for startup probe is 240.
+   *
    * @var int
    */
   public $initialDelaySeconds;
   /**
+   * Optional. How often (in seconds) to perform the probe. Default to 10
+   * seconds. Minimum value is 1. Maximum value for liveness probe is 3600.
+   * Maximum value for startup probe is 240. Must be greater or equal than
+   * timeout_seconds.
+   *
    * @var int
    */
   public $periodSeconds;
   protected $tcpSocketType = GoogleCloudRunV2TCPSocketAction::class;
   protected $tcpSocketDataType = '';
   /**
+   * Optional. Number of seconds after which the probe times out. Defaults to 1
+   * second. Minimum value is 1. Maximum value is 3600. Must be smaller than
+   * period_seconds.
+   *
    * @var int
    */
   public $timeoutSeconds;
 
   /**
-   * @param int
+   * Optional. Minimum consecutive failures for the probe to be considered
+   * failed after having succeeded. Defaults to 3. Minimum value is 1.
+   *
+   * @param int $failureThreshold
    */
   public function setFailureThreshold($failureThreshold)
   {
@@ -57,7 +76,10 @@ class GoogleCloudRunV2Probe extends \Google\Model
     return $this->failureThreshold;
   }
   /**
-   * @param GoogleCloudRunV2GRPCAction
+   * Optional. GRPC specifies an action involving a gRPC port. Exactly one of
+   * httpGet, tcpSocket, or grpc must be specified.
+   *
+   * @param GoogleCloudRunV2GRPCAction $grpc
    */
   public function setGrpc(GoogleCloudRunV2GRPCAction $grpc)
   {
@@ -71,7 +93,10 @@ class GoogleCloudRunV2Probe extends \Google\Model
     return $this->grpc;
   }
   /**
-   * @param GoogleCloudRunV2HTTPGetAction
+   * Optional. HTTPGet specifies the http request to perform. Exactly one of
+   * httpGet, tcpSocket, or grpc must be specified.
+   *
+   * @param GoogleCloudRunV2HTTPGetAction $httpGet
    */
   public function setHttpGet(GoogleCloudRunV2HTTPGetAction $httpGet)
   {
@@ -85,7 +110,11 @@ class GoogleCloudRunV2Probe extends \Google\Model
     return $this->httpGet;
   }
   /**
-   * @param int
+   * Optional. Number of seconds after the container has started before the
+   * probe is initiated. Defaults to 0 seconds. Minimum value is 0. Maximum
+   * value for liveness probe is 3600. Maximum value for startup probe is 240.
+   *
+   * @param int $initialDelaySeconds
    */
   public function setInitialDelaySeconds($initialDelaySeconds)
   {
@@ -99,7 +128,12 @@ class GoogleCloudRunV2Probe extends \Google\Model
     return $this->initialDelaySeconds;
   }
   /**
-   * @param int
+   * Optional. How often (in seconds) to perform the probe. Default to 10
+   * seconds. Minimum value is 1. Maximum value for liveness probe is 3600.
+   * Maximum value for startup probe is 240. Must be greater or equal than
+   * timeout_seconds.
+   *
+   * @param int $periodSeconds
    */
   public function setPeriodSeconds($periodSeconds)
   {
@@ -113,7 +147,10 @@ class GoogleCloudRunV2Probe extends \Google\Model
     return $this->periodSeconds;
   }
   /**
-   * @param GoogleCloudRunV2TCPSocketAction
+   * Optional. TCPSocket specifies an action involving a TCP port. Exactly one
+   * of httpGet, tcpSocket, or grpc must be specified.
+   *
+   * @param GoogleCloudRunV2TCPSocketAction $tcpSocket
    */
   public function setTcpSocket(GoogleCloudRunV2TCPSocketAction $tcpSocket)
   {
@@ -127,7 +164,11 @@ class GoogleCloudRunV2Probe extends \Google\Model
     return $this->tcpSocket;
   }
   /**
-   * @param int
+   * Optional. Number of seconds after which the probe times out. Defaults to 1
+   * second. Minimum value is 1. Maximum value is 3600. Must be smaller than
+   * period_seconds.
+   *
+   * @param int $timeoutSeconds
    */
   public function setTimeoutSeconds($timeoutSeconds)
   {

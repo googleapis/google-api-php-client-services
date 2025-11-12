@@ -19,17 +19,41 @@ namespace Google\Service\CloudRun;
 
 class GoogleDevtoolsCloudbuildV1BuildApproval extends \Google\Model
 {
+  /**
+   * Default enum type. This should not be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Build approval is pending.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * Build approval has been approved.
+   */
+  public const STATE_APPROVED = 'APPROVED';
+  /**
+   * Build approval has been rejected.
+   */
+  public const STATE_REJECTED = 'REJECTED';
+  /**
+   * Build was cancelled while it was still pending approval.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
   protected $configType = GoogleDevtoolsCloudbuildV1ApprovalConfig::class;
   protected $configDataType = '';
   protected $resultType = GoogleDevtoolsCloudbuildV1ApprovalResult::class;
   protected $resultDataType = '';
   /**
+   * Output only. The state of this build's approval.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param GoogleDevtoolsCloudbuildV1ApprovalConfig
+   * Output only. Configuration for manual approval of this build.
+   *
+   * @param GoogleDevtoolsCloudbuildV1ApprovalConfig $config
    */
   public function setConfig(GoogleDevtoolsCloudbuildV1ApprovalConfig $config)
   {
@@ -43,7 +67,9 @@ class GoogleDevtoolsCloudbuildV1BuildApproval extends \Google\Model
     return $this->config;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1ApprovalResult
+   * Output only. Result of manual approval for this Build.
+   *
+   * @param GoogleDevtoolsCloudbuildV1ApprovalResult $result
    */
   public function setResult(GoogleDevtoolsCloudbuildV1ApprovalResult $result)
   {
@@ -57,14 +83,18 @@ class GoogleDevtoolsCloudbuildV1BuildApproval extends \Google\Model
     return $this->result;
   }
   /**
-   * @param string
+   * Output only. The state of this build's approval.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -19,40 +19,91 @@ namespace Google\Service\CloudRun;
 
 class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
 {
+  /**
+   * Unspecified
+   */
+  public const ENCRYPTION_KEY_REVOCATION_ACTION_ENCRYPTION_KEY_REVOCATION_ACTION_UNSPECIFIED = 'ENCRYPTION_KEY_REVOCATION_ACTION_UNSPECIFIED';
+  /**
+   * Prevents the creation of new instances.
+   */
+  public const ENCRYPTION_KEY_REVOCATION_ACTION_PREVENT_NEW = 'PREVENT_NEW';
+  /**
+   * Shuts down existing instances, and prevents creation of new ones.
+   */
+  public const ENCRYPTION_KEY_REVOCATION_ACTION_SHUTDOWN = 'SHUTDOWN';
   protected $collection_key = 'volumes';
   /**
+   * Optional. Unstructured key value map that may be set by external tools to
+   * store and arbitrary metadata. They are not queryable and should be
+   * preserved when modifying objects. Cloud Run API v2 does not support
+   * annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they
+   * will be rejected. All system annotations in v1 now have a corresponding
+   * field in v2 WorkerPoolRevisionTemplate. This field follows Kubernetes
+   * annotations' namespacing, limits, and rules.
+   *
    * @var string[]
    */
   public $annotations;
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
   /**
+   * A reference to a customer managed encryption key (CMEK) to use to encrypt
+   * this container image. For more information, go to
+   * https://cloud.google.com/run/docs/securing/using-cmek
+   *
    * @var string
    */
   public $encryptionKey;
   /**
+   * Optional. The action to take if the encryption key is revoked.
+   *
    * @var string
    */
   public $encryptionKeyRevocationAction;
   /**
+   * Optional. If encryption_key_revocation_action is SHUTDOWN, the duration
+   * before shutting down all instances. The minimum increment is 1 hour.
+   *
    * @var string
    */
   public $encryptionKeyShutdownDuration;
   /**
+   * Optional. True if GPU zonal redundancy is disabled on this worker pool.
+   *
    * @var bool
    */
   public $gpuZonalRedundancyDisabled;
   /**
+   * Optional. Unstructured key value map that can be used to organize and
+   * categorize objects. User-provided labels are shared with Google's billing
+   * system, so they can be used to filter, or break down billing charges by
+   * team, component, environment, state, etc. For more information, visit
+   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does
+   * not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they
+   * will be rejected. All system labels in v1 now have a corresponding field in
+   * v2 WorkerPoolRevisionTemplate.
+   *
    * @var string[]
    */
   public $labels;
   protected $nodeSelectorType = GoogleCloudRunV2NodeSelector::class;
   protected $nodeSelectorDataType = '';
   /**
+   * Optional. The unique name for the revision. If this field is omitted, it
+   * will be automatically generated based on the WorkerPool name.
+   *
    * @var string
    */
   public $revision;
   /**
+   * Optional. Email address of the IAM service account associated with the
+   * revision of the service. The service account represents the identity of the
+   * running revision, and determines what permissions the revision has. If not
+   * provided, the revision will use the project's default service account.
+   *
    * @var string
    */
   public $serviceAccount;
@@ -64,7 +115,16 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
   protected $vpcAccessDataType = '';
 
   /**
-   * @param string[]
+   * Optional. Unstructured key value map that may be set by external tools to
+   * store and arbitrary metadata. They are not queryable and should be
+   * preserved when modifying objects. Cloud Run API v2 does not support
+   * annotations with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they
+   * will be rejected. All system annotations in v1 now have a corresponding
+   * field in v2 WorkerPoolRevisionTemplate. This field follows Kubernetes
+   * annotations' namespacing, limits, and rules.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -78,7 +138,10 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param GoogleCloudRunV2Container[]
+   * Holds list of the containers that defines the unit of execution for this
+   * Revision.
+   *
+   * @param GoogleCloudRunV2Container[] $containers
    */
   public function setContainers($containers)
   {
@@ -92,7 +155,11 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->containers;
   }
   /**
-   * @param string
+   * A reference to a customer managed encryption key (CMEK) to use to encrypt
+   * this container image. For more information, go to
+   * https://cloud.google.com/run/docs/securing/using-cmek
+   *
+   * @param string $encryptionKey
    */
   public function setEncryptionKey($encryptionKey)
   {
@@ -106,21 +173,29 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->encryptionKey;
   }
   /**
-   * @param string
+   * Optional. The action to take if the encryption key is revoked.
+   *
+   * Accepted values: ENCRYPTION_KEY_REVOCATION_ACTION_UNSPECIFIED, PREVENT_NEW,
+   * SHUTDOWN
+   *
+   * @param self::ENCRYPTION_KEY_REVOCATION_ACTION_* $encryptionKeyRevocationAction
    */
   public function setEncryptionKeyRevocationAction($encryptionKeyRevocationAction)
   {
     $this->encryptionKeyRevocationAction = $encryptionKeyRevocationAction;
   }
   /**
-   * @return string
+   * @return self::ENCRYPTION_KEY_REVOCATION_ACTION_*
    */
   public function getEncryptionKeyRevocationAction()
   {
     return $this->encryptionKeyRevocationAction;
   }
   /**
-   * @param string
+   * Optional. If encryption_key_revocation_action is SHUTDOWN, the duration
+   * before shutting down all instances. The minimum increment is 1 hour.
+   *
+   * @param string $encryptionKeyShutdownDuration
    */
   public function setEncryptionKeyShutdownDuration($encryptionKeyShutdownDuration)
   {
@@ -134,7 +209,9 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->encryptionKeyShutdownDuration;
   }
   /**
-   * @param bool
+   * Optional. True if GPU zonal redundancy is disabled on this worker pool.
+   *
+   * @param bool $gpuZonalRedundancyDisabled
    */
   public function setGpuZonalRedundancyDisabled($gpuZonalRedundancyDisabled)
   {
@@ -148,7 +225,18 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->gpuZonalRedundancyDisabled;
   }
   /**
-   * @param string[]
+   * Optional. Unstructured key value map that can be used to organize and
+   * categorize objects. User-provided labels are shared with Google's billing
+   * system, so they can be used to filter, or break down billing charges by
+   * team, component, environment, state, etc. For more information, visit
+   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does
+   * not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they
+   * will be rejected. All system labels in v1 now have a corresponding field in
+   * v2 WorkerPoolRevisionTemplate.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -162,7 +250,9 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param GoogleCloudRunV2NodeSelector
+   * Optional. The node selector for the revision template.
+   *
+   * @param GoogleCloudRunV2NodeSelector $nodeSelector
    */
   public function setNodeSelector(GoogleCloudRunV2NodeSelector $nodeSelector)
   {
@@ -176,7 +266,10 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->nodeSelector;
   }
   /**
-   * @param string
+   * Optional. The unique name for the revision. If this field is omitted, it
+   * will be automatically generated based on the WorkerPool name.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {
@@ -190,7 +283,12 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->revision;
   }
   /**
-   * @param string
+   * Optional. Email address of the IAM service account associated with the
+   * revision of the service. The service account represents the identity of the
+   * running revision, and determines what permissions the revision has. If not
+   * provided, the revision will use the project's default service account.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -204,7 +302,9 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param GoogleCloudRunV2ServiceMesh
+   * Optional. Enables service mesh connectivity.
+   *
+   * @param GoogleCloudRunV2ServiceMesh $serviceMesh
    */
   public function setServiceMesh(GoogleCloudRunV2ServiceMesh $serviceMesh)
   {
@@ -218,7 +318,9 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->serviceMesh;
   }
   /**
-   * @param GoogleCloudRunV2Volume[]
+   * Optional. A list of Volumes to make available to containers.
+   *
+   * @param GoogleCloudRunV2Volume[] $volumes
    */
   public function setVolumes($volumes)
   {
@@ -232,7 +334,11 @@ class GoogleCloudRunV2WorkerPoolRevisionTemplate extends \Google\Collection
     return $this->volumes;
   }
   /**
-   * @param GoogleCloudRunV2VpcAccess
+   * Optional. VPC Access configuration to use for this Revision. For more
+   * information, visit
+   * https://cloud.google.com/run/docs/configuring/connecting-vpc.
+   *
+   * @param GoogleCloudRunV2VpcAccess $vpcAccess
    */
   public function setVpcAccess(GoogleCloudRunV2VpcAccess $vpcAccess)
   {

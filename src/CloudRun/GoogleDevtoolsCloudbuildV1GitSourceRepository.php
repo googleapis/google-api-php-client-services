@@ -20,16 +20,24 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1GitSourceRepository extends \Google\Model
 {
   /**
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
+   *
    * @var string
    */
   public $developerConnect;
   /**
+   * Location of the Git repository.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The Developer Connect Git repository link formatted as
+   * `projects/locations/connections/gitRepositoryLink`
+   *
+   * @param string $developerConnect
    */
   public function setDeveloperConnect($developerConnect)
   {
@@ -43,7 +51,9 @@ class GoogleDevtoolsCloudbuildV1GitSourceRepository extends \Google\Model
     return $this->developerConnect;
   }
   /**
-   * @param string
+   * Location of the Git repository.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

@@ -20,20 +20,32 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1DeveloperConnectConfig extends \Google\Model
 {
   /**
+   * Required. Directory, relative to the source root, in which to run the
+   * build.
+   *
    * @var string
    */
   public $dir;
   /**
+   * Required. The Developer Connect Git repository link, formatted as
+   * `projects/locations/connections/gitRepositoryLink`.
+   *
    * @var string
    */
   public $gitRepositoryLink;
   /**
+   * Required. The revision to fetch from the Git repository such as a branch, a
+   * tag, a commit SHA, or any Git ref.
+   *
    * @var string
    */
   public $revision;
 
   /**
-   * @param string
+   * Required. Directory, relative to the source root, in which to run the
+   * build.
+   *
+   * @param string $dir
    */
   public function setDir($dir)
   {
@@ -47,7 +59,10 @@ class GoogleDevtoolsCloudbuildV1DeveloperConnectConfig extends \Google\Model
     return $this->dir;
   }
   /**
-   * @param string
+   * Required. The Developer Connect Git repository link, formatted as
+   * `projects/locations/connections/gitRepositoryLink`.
+   *
+   * @param string $gitRepositoryLink
    */
   public function setGitRepositoryLink($gitRepositoryLink)
   {
@@ -61,7 +76,10 @@ class GoogleDevtoolsCloudbuildV1DeveloperConnectConfig extends \Google\Model
     return $this->gitRepositoryLink;
   }
   /**
-   * @param string
+   * Required. The revision to fetch from the Git repository such as a branch, a
+   * tag, a commit SHA, or any Git ref.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {

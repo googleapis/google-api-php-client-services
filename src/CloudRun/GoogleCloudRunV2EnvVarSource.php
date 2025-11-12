@@ -23,7 +23,9 @@ class GoogleCloudRunV2EnvVarSource extends \Google\Model
   protected $secretKeyRefDataType = '';
 
   /**
-   * @param GoogleCloudRunV2SecretKeySelector
+   * Selects a secret and a specific version from Cloud Secret Manager.
+   *
+   * @param GoogleCloudRunV2SecretKeySelector $secretKeyRef
    */
   public function setSecretKeyRef(GoogleCloudRunV2SecretKeySelector $secretKeyRef)
   {

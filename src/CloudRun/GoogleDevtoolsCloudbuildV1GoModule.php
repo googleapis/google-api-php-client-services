@@ -20,32 +20,55 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1GoModule extends \Google\Model
 {
   /**
+   * Optional. The Go module's "module path". e.g. example.com/foo/v2
+   *
    * @var string
    */
   public $modulePath;
   /**
+   * Optional. The Go module's semantic version in the form vX.Y.Z. e.g. v0.1.1
+   * Pre-release identifiers can also be added by appending a dash and dot
+   * separated ASCII alphanumeric characters and hyphens. e.g.
+   * v0.2.3-alpha.x.12m.5
+   *
    * @var string
    */
   public $moduleVersion;
   /**
+   * Optional. Location of the Artifact Registry repository. i.e. us-east1
+   * Defaults to the build’s location.
+   *
    * @var string
    */
   public $repositoryLocation;
   /**
+   * Optional. Artifact Registry repository name. Specified Go modules will be
+   * zipped and uploaded to Artifact Registry with this location as a prefix.
+   * e.g. my-go-repo
+   *
    * @var string
    */
   public $repositoryName;
   /**
+   * Optional. Project ID of the Artifact Registry repository. Defaults to the
+   * build project.
+   *
    * @var string
    */
   public $repositoryProjectId;
   /**
+   * Optional. Source path of the go.mod file in the build's workspace. If not
+   * specified, this will default to the current directory. e.g.
+   * ~/code/go/mypackage
+   *
    * @var string
    */
   public $sourcePath;
 
   /**
-   * @param string
+   * Optional. The Go module's "module path". e.g. example.com/foo/v2
+   *
+   * @param string $modulePath
    */
   public function setModulePath($modulePath)
   {
@@ -59,7 +82,12 @@ class GoogleDevtoolsCloudbuildV1GoModule extends \Google\Model
     return $this->modulePath;
   }
   /**
-   * @param string
+   * Optional. The Go module's semantic version in the form vX.Y.Z. e.g. v0.1.1
+   * Pre-release identifiers can also be added by appending a dash and dot
+   * separated ASCII alphanumeric characters and hyphens. e.g.
+   * v0.2.3-alpha.x.12m.5
+   *
+   * @param string $moduleVersion
    */
   public function setModuleVersion($moduleVersion)
   {
@@ -73,7 +101,10 @@ class GoogleDevtoolsCloudbuildV1GoModule extends \Google\Model
     return $this->moduleVersion;
   }
   /**
-   * @param string
+   * Optional. Location of the Artifact Registry repository. i.e. us-east1
+   * Defaults to the build’s location.
+   *
+   * @param string $repositoryLocation
    */
   public function setRepositoryLocation($repositoryLocation)
   {
@@ -87,7 +118,11 @@ class GoogleDevtoolsCloudbuildV1GoModule extends \Google\Model
     return $this->repositoryLocation;
   }
   /**
-   * @param string
+   * Optional. Artifact Registry repository name. Specified Go modules will be
+   * zipped and uploaded to Artifact Registry with this location as a prefix.
+   * e.g. my-go-repo
+   *
+   * @param string $repositoryName
    */
   public function setRepositoryName($repositoryName)
   {
@@ -101,7 +136,10 @@ class GoogleDevtoolsCloudbuildV1GoModule extends \Google\Model
     return $this->repositoryName;
   }
   /**
-   * @param string
+   * Optional. Project ID of the Artifact Registry repository. Defaults to the
+   * build project.
+   *
+   * @param string $repositoryProjectId
    */
   public function setRepositoryProjectId($repositoryProjectId)
   {
@@ -115,7 +153,11 @@ class GoogleDevtoolsCloudbuildV1GoModule extends \Google\Model
     return $this->repositoryProjectId;
   }
   /**
-   * @param string
+   * Optional. Source path of the go.mod file in the build's workspace. If not
+   * specified, this will default to the current directory. e.g.
+   * ~/code/go/mypackage
+   *
+   * @param string $sourcePath
    */
   public function setSourcePath($sourcePath)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1PoolOption extends \Google\Model
 {
   /**
+   * The `WorkerPool` resource to execute the build on. You must have
+   * `cloudbuild.workerpools.use` on the project hosting the WorkerPool. Format
+   * projects/{project}/locations/{location}/workerPools/{workerPoolId}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The `WorkerPool` resource to execute the build on. You must have
+   * `cloudbuild.workerpools.use` on the project hosting the WorkerPool. Format
+   * projects/{project}/locations/{location}/workerPools/{workerPoolId}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -20,20 +20,43 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2InstanceSplit extends \Google\Model
 {
   /**
+   * Unspecified instance allocation type.
+   */
+  public const TYPE_INSTANCE_SPLIT_ALLOCATION_TYPE_UNSPECIFIED = 'INSTANCE_SPLIT_ALLOCATION_TYPE_UNSPECIFIED';
+  /**
+   * Allocates instances to the Service's latest ready Revision.
+   */
+  public const TYPE_INSTANCE_SPLIT_ALLOCATION_TYPE_LATEST = 'INSTANCE_SPLIT_ALLOCATION_TYPE_LATEST';
+  /**
+   * Allocates instances to a Revision by name.
+   */
+  public const TYPE_INSTANCE_SPLIT_ALLOCATION_TYPE_REVISION = 'INSTANCE_SPLIT_ALLOCATION_TYPE_REVISION';
+  /**
+   * Specifies percent of the instance split to this Revision. This defaults to
+   * zero if unspecified.
+   *
    * @var int
    */
   public $percent;
   /**
+   * Revision to which to assign this portion of instances, if split allocation
+   * is by revision.
+   *
    * @var string
    */
   public $revision;
   /**
+   * The allocation type for this instance split.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param int
+   * Specifies percent of the instance split to this Revision. This defaults to
+   * zero if unspecified.
+   *
+   * @param int $percent
    */
   public function setPercent($percent)
   {
@@ -47,7 +70,10 @@ class GoogleCloudRunV2InstanceSplit extends \Google\Model
     return $this->percent;
   }
   /**
-   * @param string
+   * Revision to which to assign this portion of instances, if split allocation
+   * is by revision.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {
@@ -61,14 +87,20 @@ class GoogleCloudRunV2InstanceSplit extends \Google\Model
     return $this->revision;
   }
   /**
-   * @param string
+   * The allocation type for this instance split.
+   *
+   * Accepted values: INSTANCE_SPLIT_ALLOCATION_TYPE_UNSPECIFIED,
+   * INSTANCE_SPLIT_ALLOCATION_TYPE_LATEST,
+   * INSTANCE_SPLIT_ALLOCATION_TYPE_REVISION
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

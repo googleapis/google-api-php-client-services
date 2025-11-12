@@ -20,42 +20,84 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2ExecutionReference extends \Google\Model
 {
   /**
+   * The default value. This value is used if the state is omitted.
+   */
+  public const COMPLETION_STATUS_COMPLETION_STATUS_UNSPECIFIED = 'COMPLETION_STATUS_UNSPECIFIED';
+  /**
+   * Job execution has succeeded.
+   */
+  public const COMPLETION_STATUS_EXECUTION_SUCCEEDED = 'EXECUTION_SUCCEEDED';
+  /**
+   * Job execution has failed.
+   */
+  public const COMPLETION_STATUS_EXECUTION_FAILED = 'EXECUTION_FAILED';
+  /**
+   * Job execution is running normally.
+   */
+  public const COMPLETION_STATUS_EXECUTION_RUNNING = 'EXECUTION_RUNNING';
+  /**
+   * Waiting for backing resources to be provisioned.
+   */
+  public const COMPLETION_STATUS_EXECUTION_PENDING = 'EXECUTION_PENDING';
+  /**
+   * Job execution has been cancelled by the user.
+   */
+  public const COMPLETION_STATUS_EXECUTION_CANCELLED = 'EXECUTION_CANCELLED';
+  /**
+   * Status for the execution completion.
+   *
    * @var string
    */
   public $completionStatus;
   /**
+   * Creation timestamp of the execution.
+   *
    * @var string
    */
   public $completionTime;
   /**
+   * Creation timestamp of the execution.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The deletion time of the execution. It is only populated as a response to a
+   * Delete request.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * Name of the execution.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Status for the execution completion.
+   *
+   * Accepted values: COMPLETION_STATUS_UNSPECIFIED, EXECUTION_SUCCEEDED,
+   * EXECUTION_FAILED, EXECUTION_RUNNING, EXECUTION_PENDING, EXECUTION_CANCELLED
+   *
+   * @param self::COMPLETION_STATUS_* $completionStatus
    */
   public function setCompletionStatus($completionStatus)
   {
     $this->completionStatus = $completionStatus;
   }
   /**
-   * @return string
+   * @return self::COMPLETION_STATUS_*
    */
   public function getCompletionStatus()
   {
     return $this->completionStatus;
   }
   /**
-   * @param string
+   * Creation timestamp of the execution.
+   *
+   * @param string $completionTime
    */
   public function setCompletionTime($completionTime)
   {
@@ -69,7 +111,9 @@ class GoogleCloudRunV2ExecutionReference extends \Google\Model
     return $this->completionTime;
   }
   /**
-   * @param string
+   * Creation timestamp of the execution.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -83,7 +127,10 @@ class GoogleCloudRunV2ExecutionReference extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The deletion time of the execution. It is only populated as a response to a
+   * Delete request.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -97,7 +144,9 @@ class GoogleCloudRunV2ExecutionReference extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * Name of the execution.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

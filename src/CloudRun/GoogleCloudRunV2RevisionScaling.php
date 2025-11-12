@@ -20,16 +20,29 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2RevisionScaling extends \Google\Model
 {
   /**
+   * Optional. Maximum number of serving instances that this resource should
+   * have. When unspecified, the field is set to the server default value of
+   * 100. For more information see
+   * https://cloud.google.com/run/docs/configuring/max-instances
+   *
    * @var int
    */
   public $maxInstanceCount;
   /**
+   * Optional. Minimum number of serving instances that this resource should
+   * have.
+   *
    * @var int
    */
   public $minInstanceCount;
 
   /**
-   * @param int
+   * Optional. Maximum number of serving instances that this resource should
+   * have. When unspecified, the field is set to the server default value of
+   * 100. For more information see
+   * https://cloud.google.com/run/docs/configuring/max-instances
+   *
+   * @param int $maxInstanceCount
    */
   public function setMaxInstanceCount($maxInstanceCount)
   {
@@ -43,7 +56,10 @@ class GoogleCloudRunV2RevisionScaling extends \Google\Model
     return $this->maxInstanceCount;
   }
   /**
-   * @param int
+   * Optional. Minimum number of serving instances that this resource should
+   * have.
+   *
+   * @param int $minInstanceCount
    */
   public function setMinInstanceCount($minInstanceCount)
   {

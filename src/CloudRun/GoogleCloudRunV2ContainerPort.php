@@ -20,16 +20,25 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2ContainerPort extends \Google\Model
 {
   /**
+   * Port number the container listens on. This must be a valid TCP port number,
+   * 0 < container_port < 65536.
+   *
    * @var int
    */
   public $containerPort;
   /**
+   * If specified, used to specify which protocol to use. Allowed values are
+   * "http1" and "h2c".
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param int
+   * Port number the container listens on. This must be a valid TCP port number,
+   * 0 < container_port < 65536.
+   *
+   * @param int $containerPort
    */
   public function setContainerPort($containerPort)
   {
@@ -43,7 +52,10 @@ class GoogleCloudRunV2ContainerPort extends \Google\Model
     return $this->containerPort;
   }
   /**
-   * @param string
+   * If specified, used to specify which protocol to use. Allowed values are
+   * "http1" and "h2c".
+   *
+   * @param string $name
    */
   public function setName($name)
   {

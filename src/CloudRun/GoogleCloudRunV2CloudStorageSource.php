@@ -20,20 +20,28 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2CloudStorageSource extends \Google\Model
 {
   /**
+   * Required. The Cloud Storage bucket name.
+   *
    * @var string
    */
   public $bucket;
   /**
+   * Optional. The Cloud Storage object generation.
+   *
    * @var string
    */
   public $generation;
   /**
+   * Required. The Cloud Storage object name.
+   *
    * @var string
    */
   public $object;
 
   /**
-   * @param string
+   * Required. The Cloud Storage bucket name.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -47,7 +55,9 @@ class GoogleCloudRunV2CloudStorageSource extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * Optional. The Cloud Storage object generation.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -61,7 +71,9 @@ class GoogleCloudRunV2CloudStorageSource extends \Google\Model
     return $this->generation;
   }
   /**
-   * @param string
+   * Required. The Cloud Storage object name.
+   *
+   * @param string $object
    */
   public function setObject($object)
   {

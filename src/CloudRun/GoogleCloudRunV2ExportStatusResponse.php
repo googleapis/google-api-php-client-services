@@ -19,20 +19,38 @@ namespace Google\Service\CloudRun;
 
 class GoogleCloudRunV2ExportStatusResponse extends \Google\Collection
 {
+  /**
+   * State unspecified.
+   */
+  public const OPERATION_STATE_OPERATION_STATE_UNSPECIFIED = 'OPERATION_STATE_UNSPECIFIED';
+  /**
+   * Operation still in progress.
+   */
+  public const OPERATION_STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * Operation finished.
+   */
+  public const OPERATION_STATE_FINISHED = 'FINISHED';
   protected $collection_key = 'imageExportStatuses';
   protected $imageExportStatusesType = GoogleCloudRunV2ImageExportStatus::class;
   protected $imageExportStatusesDataType = 'array';
   /**
+   * The operation id.
+   *
    * @var string
    */
   public $operationId;
   /**
+   * Output only. The state of the overall export operation.
+   *
    * @var string
    */
   public $operationState;
 
   /**
-   * @param GoogleCloudRunV2ImageExportStatus[]
+   * The status of each image export job.
+   *
+   * @param GoogleCloudRunV2ImageExportStatus[] $imageExportStatuses
    */
   public function setImageExportStatuses($imageExportStatuses)
   {
@@ -46,7 +64,9 @@ class GoogleCloudRunV2ExportStatusResponse extends \Google\Collection
     return $this->imageExportStatuses;
   }
   /**
-   * @param string
+   * The operation id.
+   *
+   * @param string $operationId
    */
   public function setOperationId($operationId)
   {
@@ -60,14 +80,18 @@ class GoogleCloudRunV2ExportStatusResponse extends \Google\Collection
     return $this->operationId;
   }
   /**
-   * @param string
+   * Output only. The state of the overall export operation.
+   *
+   * Accepted values: OPERATION_STATE_UNSPECIFIED, IN_PROGRESS, FINISHED
+   *
+   * @param self::OPERATION_STATE_* $operationState
    */
   public function setOperationState($operationState)
   {
     $this->operationState = $operationState;
   }
   /**
-   * @return string
+   * @return self::OPERATION_STATE_*
    */
   public function getOperationState()
   {

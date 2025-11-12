@@ -21,22 +21,32 @@ class GoogleCloudRunV2ContainerOverride extends \Google\Collection
 {
   protected $collection_key = 'env';
   /**
+   * Optional. Arguments to the entrypoint. Will replace existing args for
+   * override.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * Optional. True if the intention is to clear out existing args list.
+   *
    * @var bool
    */
   public $clearArgs;
   protected $envType = GoogleCloudRunV2EnvVar::class;
   protected $envDataType = 'array';
   /**
+   * The name of the container specified as a DNS_LABEL.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string[]
+   * Optional. Arguments to the entrypoint. Will replace existing args for
+   * override.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -50,7 +60,9 @@ class GoogleCloudRunV2ContainerOverride extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param bool
+   * Optional. True if the intention is to clear out existing args list.
+   *
+   * @param bool $clearArgs
    */
   public function setClearArgs($clearArgs)
   {
@@ -64,7 +76,10 @@ class GoogleCloudRunV2ContainerOverride extends \Google\Collection
     return $this->clearArgs;
   }
   /**
-   * @param GoogleCloudRunV2EnvVar[]
+   * List of environment variables to set in the container. Will be merged with
+   * existing env for override.
+   *
+   * @param GoogleCloudRunV2EnvVar[] $env
    */
   public function setEnv($env)
   {
@@ -78,7 +93,9 @@ class GoogleCloudRunV2ContainerOverride extends \Google\Collection
     return $this->env;
   }
   /**
-   * @param string
+   * The name of the container specified as a DNS_LABEL.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

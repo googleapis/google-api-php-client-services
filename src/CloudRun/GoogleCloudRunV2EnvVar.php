@@ -20,10 +20,16 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2EnvVar extends \Google\Model
 {
   /**
+   * Required. Name of the environment variable. Must not exceed 32768
+   * characters.
+   *
    * @var string
    */
   public $name;
   /**
+   * Literal value of the environment variable. Defaults to "", and the maximum
+   * length is 32768 bytes. Variable references are not supported in Cloud Run.
+   *
    * @var string
    */
   public $value;
@@ -31,7 +37,10 @@ class GoogleCloudRunV2EnvVar extends \Google\Model
   protected $valueSourceDataType = '';
 
   /**
-   * @param string
+   * Required. Name of the environment variable. Must not exceed 32768
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +54,10 @@ class GoogleCloudRunV2EnvVar extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Literal value of the environment variable. Defaults to "", and the maximum
+   * length is 32768 bytes. Variable references are not supported in Cloud Run.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {
@@ -59,7 +71,9 @@ class GoogleCloudRunV2EnvVar extends \Google\Model
     return $this->value;
   }
   /**
-   * @param GoogleCloudRunV2EnvVarSource
+   * Source for the environment variable's value.
+   *
+   * @param GoogleCloudRunV2EnvVarSource $valueSource
    */
   public function setValueSource(GoogleCloudRunV2EnvVarSource $valueSource)
   {

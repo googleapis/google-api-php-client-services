@@ -21,6 +21,9 @@ class GoogleCloudRunV2ListRevisionsResponse extends \Google\Collection
 {
   protected $collection_key = 'revisions';
   /**
+   * A token indicating there are more items than page_size. Use it in the next
+   * ListRevisions request to continue.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudRunV2ListRevisionsResponse extends \Google\Collection
   protected $revisionsDataType = 'array';
 
   /**
-   * @param string
+   * A token indicating there are more items than page_size. Use it in the next
+   * ListRevisions request to continue.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudRunV2ListRevisionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudRunV2Revision[]
+   * The resulting list of Revisions.
+   *
+   * @param GoogleCloudRunV2Revision[] $revisions
    */
   public function setRevisions($revisions)
   {

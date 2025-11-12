@@ -20,18 +20,48 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
 {
   /**
+   * Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when
+   * modifying objects. Cloud Run API v2 does not support annotations with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system
+   * annotations in v1 now have a corresponding field in v2 ExecutionTemplate.
+   * This field follows Kubernetes annotations' namespacing, limits, and rules.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Unstructured key value map that can be used to organize and categorize
+   * objects. User-provided labels are shared with Google's billing system, so
+   * they can be used to filter, or break down billing charges by team,
+   * component, environment, state, etc. For more information, visit
+   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does
+   * not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they
+   * will be rejected. All system labels in v1 now have a corresponding field in
+   * v2 ExecutionTemplate.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. Specifies the maximum desired number of tasks the execution
+   * should run at given time. When the job is run, if this field is 0 or unset,
+   * the maximum possible value will be used for that execution. The actual
+   * number of tasks running in steady state will be less than this number when
+   * there are fewer tasks waiting to be completed remaining, i.e. when the work
+   * left to do is less than max parallelism.
+   *
    * @var int
    */
   public $parallelism;
   /**
+   * Specifies the desired number of tasks the execution should run. Setting to
+   * 1 means that parallelism is limited to 1 and the success of that task
+   * signals the success of the execution. Defaults to 1.
+   *
    * @var int
    */
   public $taskCount;
@@ -39,7 +69,15 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
   protected $templateDataType = '';
 
   /**
-   * @param string[]
+   * Unstructured key value map that may be set by external tools to store and
+   * arbitrary metadata. They are not queryable and should be preserved when
+   * modifying objects. Cloud Run API v2 does not support annotations with
+   * `run.googleapis.com`, `cloud.googleapis.com`, `serving.knative.dev`, or
+   * `autoscaling.knative.dev` namespaces, and they will be rejected. All system
+   * annotations in v1 now have a corresponding field in v2 ExecutionTemplate.
+   * This field follows Kubernetes annotations' namespacing, limits, and rules.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -53,7 +91,18 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string[]
+   * Unstructured key value map that can be used to organize and categorize
+   * objects. User-provided labels are shared with Google's billing system, so
+   * they can be used to filter, or break down billing charges by team,
+   * component, environment, state, etc. For more information, visit
+   * https://cloud.google.com/resource-manager/docs/creating-managing-labels or
+   * https://cloud.google.com/run/docs/configuring/labels. Cloud Run API v2 does
+   * not support labels with `run.googleapis.com`, `cloud.googleapis.com`,
+   * `serving.knative.dev`, or `autoscaling.knative.dev` namespaces, and they
+   * will be rejected. All system labels in v1 now have a corresponding field in
+   * v2 ExecutionTemplate.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -67,7 +116,14 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param int
+   * Optional. Specifies the maximum desired number of tasks the execution
+   * should run at given time. When the job is run, if this field is 0 or unset,
+   * the maximum possible value will be used for that execution. The actual
+   * number of tasks running in steady state will be less than this number when
+   * there are fewer tasks waiting to be completed remaining, i.e. when the work
+   * left to do is less than max parallelism.
+   *
+   * @param int $parallelism
    */
   public function setParallelism($parallelism)
   {
@@ -81,7 +137,11 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
     return $this->parallelism;
   }
   /**
-   * @param int
+   * Specifies the desired number of tasks the execution should run. Setting to
+   * 1 means that parallelism is limited to 1 and the success of that task
+   * signals the success of the execution. Defaults to 1.
+   *
+   * @param int $taskCount
    */
   public function setTaskCount($taskCount)
   {
@@ -95,7 +155,10 @@ class GoogleCloudRunV2ExecutionTemplate extends \Google\Model
     return $this->taskCount;
   }
   /**
-   * @param GoogleCloudRunV2TaskTemplate
+   * Required. Describes the task(s) that will be created when executing an
+   * execution.
+   *
+   * @param GoogleCloudRunV2TaskTemplate $template
    */
   public function setTemplate(GoogleCloudRunV2TaskTemplate $template)
   {

@@ -21,6 +21,9 @@ class GoogleCloudRunV2ListWorkerPoolsResponse extends \Google\Collection
 {
   protected $collection_key = 'workerPools';
   /**
+   * A token indicating there are more items than page_size. Use it in the next
+   * ListWorkerPools request to continue.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudRunV2ListWorkerPoolsResponse extends \Google\Collection
   protected $workerPoolsDataType = 'array';
 
   /**
-   * @param string
+   * A token indicating there are more items than page_size. Use it in the next
+   * ListWorkerPools request to continue.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudRunV2ListWorkerPoolsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudRunV2WorkerPool[]
+   * The resulting list of WorkerPools.
+   *
+   * @param GoogleCloudRunV2WorkerPool[] $workerPools
    */
   public function setWorkerPools($workerPools)
   {

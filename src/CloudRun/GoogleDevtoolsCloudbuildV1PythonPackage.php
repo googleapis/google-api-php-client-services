@@ -21,16 +21,27 @@ class GoogleDevtoolsCloudbuildV1PythonPackage extends \Google\Collection
 {
   protected $collection_key = 'paths';
   /**
+   * Path globs used to match files in the build's workspace. For Python/ Twine,
+   * this is usually `dist`, and sometimes additionally an `.asc` file.
+   *
    * @var string[]
    */
   public $paths;
   /**
+   * Artifact Registry repository, in the form "https://$REGION-
+   * python.pkg.dev/$PROJECT/$REPOSITORY" Files in the workspace matching any
+   * path pattern will be uploaded to Artifact Registry with this location as a
+   * prefix.
+   *
    * @var string
    */
   public $repository;
 
   /**
-   * @param string[]
+   * Path globs used to match files in the build's workspace. For Python/ Twine,
+   * this is usually `dist`, and sometimes additionally an `.asc` file.
+   *
+   * @param string[] $paths
    */
   public function setPaths($paths)
   {
@@ -44,7 +55,12 @@ class GoogleDevtoolsCloudbuildV1PythonPackage extends \Google\Collection
     return $this->paths;
   }
   /**
-   * @param string
+   * Artifact Registry repository, in the form "https://$REGION-
+   * python.pkg.dev/$PROJECT/$REPOSITORY" Files in the workspace matching any
+   * path pattern will be uploaded to Artifact Registry with this location as a
+   * prefix.
+   *
+   * @param string $repository
    */
   public function setRepository($repository)
   {

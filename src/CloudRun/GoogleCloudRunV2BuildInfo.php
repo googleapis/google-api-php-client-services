@@ -20,16 +20,24 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2BuildInfo extends \Google\Model
 {
   /**
+   * Output only. Entry point of the function when the image is a Cloud Run
+   * function.
+   *
    * @var string
    */
   public $functionTarget;
   /**
+   * Output only. Source code location of the image.
+   *
    * @var string
    */
   public $sourceLocation;
 
   /**
-   * @param string
+   * Output only. Entry point of the function when the image is a Cloud Run
+   * function.
+   *
+   * @param string $functionTarget
    */
   public function setFunctionTarget($functionTarget)
   {
@@ -43,7 +51,9 @@ class GoogleCloudRunV2BuildInfo extends \Google\Model
     return $this->functionTarget;
   }
   /**
-   * @param string
+   * Output only. Source code location of the image.
+   *
+   * @param string $sourceLocation
    */
   public function setSourceLocation($sourceLocation)
   {

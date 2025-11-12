@@ -20,12 +20,20 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2TCPSocketAction extends \Google\Model
 {
   /**
+   * Optional. Port number to access on the container. Must be in the range 1 to
+   * 65535. If not specified, defaults to the exposed port of the container,
+   * which is the value of container.ports[0].containerPort.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param int
+   * Optional. Port number to access on the container. Must be in the range 1 to
+   * 65535. If not specified, defaults to the exposed port of the container,
+   * which is the value of container.ports[0].containerPort.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {

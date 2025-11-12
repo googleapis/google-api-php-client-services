@@ -23,16 +23,25 @@ class GoogleCloudRunV2Overrides extends \Google\Collection
   protected $containerOverridesType = GoogleCloudRunV2ContainerOverride::class;
   protected $containerOverridesDataType = 'array';
   /**
+   * Optional. The desired number of tasks the execution should run. Will
+   * replace existing task_count value.
+   *
    * @var int
    */
   public $taskCount;
   /**
+   * Duration in seconds the task may be active before the system will actively
+   * try to mark it failed and kill associated containers. Will replace existing
+   * timeout_seconds value.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param GoogleCloudRunV2ContainerOverride[]
+   * Per container override specification.
+   *
+   * @param GoogleCloudRunV2ContainerOverride[] $containerOverrides
    */
   public function setContainerOverrides($containerOverrides)
   {
@@ -46,7 +55,10 @@ class GoogleCloudRunV2Overrides extends \Google\Collection
     return $this->containerOverrides;
   }
   /**
-   * @param int
+   * Optional. The desired number of tasks the execution should run. Will
+   * replace existing task_count value.
+   *
+   * @param int $taskCount
    */
   public function setTaskCount($taskCount)
   {
@@ -60,7 +72,11 @@ class GoogleCloudRunV2Overrides extends \Google\Collection
     return $this->taskCount;
   }
   /**
-   * @param string
+   * Duration in seconds the task may be active before the system will actively
+   * try to mark it failed and kill associated containers. Will replace existing
+   * timeout_seconds value.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {

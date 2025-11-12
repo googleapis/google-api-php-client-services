@@ -20,6 +20,9 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1Dependency extends \Google\Model
 {
   /**
+   * If set to true disable all dependency fetching (ignoring the default source
+   * as well).
+   *
    * @var bool
    */
   public $empty;
@@ -27,7 +30,10 @@ class GoogleDevtoolsCloudbuildV1Dependency extends \Google\Model
   protected $gitSourceDataType = '';
 
   /**
-   * @param bool
+   * If set to true disable all dependency fetching (ignoring the default source
+   * as well).
+   *
+   * @param bool $empty
    */
   public function setEmpty($empty)
   {
@@ -41,7 +47,9 @@ class GoogleDevtoolsCloudbuildV1Dependency extends \Google\Model
     return $this->empty;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1GitSourceDependency
+   * Represents a git repository as a build dependency.
+   *
+   * @param GoogleDevtoolsCloudbuildV1GitSourceDependency $gitSource
    */
   public function setGitSource(GoogleDevtoolsCloudbuildV1GitSourceDependency $gitSource)
   {

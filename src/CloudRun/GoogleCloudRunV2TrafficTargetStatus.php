@@ -20,28 +20,52 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2TrafficTargetStatus extends \Google\Model
 {
   /**
+   * Unspecified instance allocation type.
+   */
+  public const TYPE_TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED = 'TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED';
+  /**
+   * Allocates instances to the Service's latest ready Revision.
+   */
+  public const TYPE_TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST = 'TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST';
+  /**
+   * Allocates instances to a Revision by name.
+   */
+  public const TYPE_TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION = 'TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION';
+  /**
+   * Specifies percent of the traffic to this Revision.
+   *
    * @var int
    */
   public $percent;
   /**
+   * Revision to which this traffic is sent.
+   *
    * @var string
    */
   public $revision;
   /**
+   * Indicates the string used in the URI to exclusively reference this target.
+   *
    * @var string
    */
   public $tag;
   /**
+   * The allocation type for this traffic target.
+   *
    * @var string
    */
   public $type;
   /**
+   * Displays the target URI.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param int
+   * Specifies percent of the traffic to this Revision.
+   *
+   * @param int $percent
    */
   public function setPercent($percent)
   {
@@ -55,7 +79,9 @@ class GoogleCloudRunV2TrafficTargetStatus extends \Google\Model
     return $this->percent;
   }
   /**
-   * @param string
+   * Revision to which this traffic is sent.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {
@@ -69,7 +95,9 @@ class GoogleCloudRunV2TrafficTargetStatus extends \Google\Model
     return $this->revision;
   }
   /**
-   * @param string
+   * Indicates the string used in the URI to exclusively reference this target.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {
@@ -83,21 +111,29 @@ class GoogleCloudRunV2TrafficTargetStatus extends \Google\Model
     return $this->tag;
   }
   /**
-   * @param string
+   * The allocation type for this traffic target.
+   *
+   * Accepted values: TRAFFIC_TARGET_ALLOCATION_TYPE_UNSPECIFIED,
+   * TRAFFIC_TARGET_ALLOCATION_TYPE_LATEST,
+   * TRAFFIC_TARGET_ALLOCATION_TYPE_REVISION
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Displays the target URI.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

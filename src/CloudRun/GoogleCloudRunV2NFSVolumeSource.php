@@ -20,20 +20,28 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2NFSVolumeSource extends \Google\Model
 {
   /**
+   * Path that is exported by the NFS server.
+   *
    * @var string
    */
   public $path;
   /**
+   * If true, the volume will be mounted as read only for all mounts.
+   *
    * @var bool
    */
   public $readOnly;
   /**
+   * Hostname or IP address of the NFS server
+   *
    * @var string
    */
   public $server;
 
   /**
-   * @param string
+   * Path that is exported by the NFS server.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -47,7 +55,9 @@ class GoogleCloudRunV2NFSVolumeSource extends \Google\Model
     return $this->path;
   }
   /**
-   * @param bool
+   * If true, the volume will be mounted as read only for all mounts.
+   *
+   * @param bool $readOnly
    */
   public function setReadOnly($readOnly)
   {
@@ -61,7 +71,9 @@ class GoogleCloudRunV2NFSVolumeSource extends \Google\Model
     return $this->readOnly;
   }
   /**
-   * @param string
+   * Hostname or IP address of the NFS server
+   *
+   * @param string $server
    */
   public function setServer($server)
   {

@@ -21,6 +21,9 @@ class GoogleCloudRunV2ListTasksResponse extends \Google\Collection
 {
   protected $collection_key = 'tasks';
   /**
+   * A token indicating there are more items than page_size. Use it in the next
+   * ListTasks request to continue.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudRunV2ListTasksResponse extends \Google\Collection
   protected $tasksDataType = 'array';
 
   /**
-   * @param string
+   * A token indicating there are more items than page_size. Use it in the next
+   * ListTasks request to continue.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudRunV2ListTasksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudRunV2Task[]
+   * The resulting list of Tasks.
+   *
+   * @param GoogleCloudRunV2Task[] $tasks
    */
   public function setTasks($tasks)
   {

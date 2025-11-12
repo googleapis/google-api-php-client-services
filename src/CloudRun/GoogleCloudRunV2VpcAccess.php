@@ -19,12 +19,33 @@ namespace Google\Service\CloudRun;
 
 class GoogleCloudRunV2VpcAccess extends \Google\Collection
 {
+  /**
+   * Unspecified
+   */
+  public const EGRESS_VPC_EGRESS_UNSPECIFIED = 'VPC_EGRESS_UNSPECIFIED';
+  /**
+   * All outbound traffic is routed through the VPC connector.
+   */
+  public const EGRESS_ALL_TRAFFIC = 'ALL_TRAFFIC';
+  /**
+   * Only private IP ranges are routed through the VPC connector.
+   */
+  public const EGRESS_PRIVATE_RANGES_ONLY = 'PRIVATE_RANGES_ONLY';
   protected $collection_key = 'networkInterfaces';
   /**
+   * VPC Access connector name. Format:
+   * `projects/{project}/locations/{location}/connectors/{connector}`, where
+   * `{project}` can be project id or number. For more information on sending
+   * traffic to a VPC network via a connector, visit
+   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
+   *
    * @var string
    */
   public $connector;
   /**
+   * Optional. Traffic VPC egress settings. If not provided, it defaults to
+   * PRIVATE_RANGES_ONLY.
+   *
    * @var string
    */
   public $egress;
@@ -32,7 +53,13 @@ class GoogleCloudRunV2VpcAccess extends \Google\Collection
   protected $networkInterfacesDataType = 'array';
 
   /**
-   * @param string
+   * VPC Access connector name. Format:
+   * `projects/{project}/locations/{location}/connectors/{connector}`, where
+   * `{project}` can be project id or number. For more information on sending
+   * traffic to a VPC network via a connector, visit
+   * https://cloud.google.com/run/docs/configuring/vpc-connectors.
+   *
+   * @param string $connector
    */
   public function setConnector($connector)
   {
@@ -46,21 +73,29 @@ class GoogleCloudRunV2VpcAccess extends \Google\Collection
     return $this->connector;
   }
   /**
-   * @param string
+   * Optional. Traffic VPC egress settings. If not provided, it defaults to
+   * PRIVATE_RANGES_ONLY.
+   *
+   * Accepted values: VPC_EGRESS_UNSPECIFIED, ALL_TRAFFIC, PRIVATE_RANGES_ONLY
+   *
+   * @param self::EGRESS_* $egress
    */
   public function setEgress($egress)
   {
     $this->egress = $egress;
   }
   /**
-   * @return string
+   * @return self::EGRESS_*
    */
   public function getEgress()
   {
     return $this->egress;
   }
   /**
-   * @param GoogleCloudRunV2NetworkInterface[]
+   * Optional. Direct VPC egress settings. Currently only single network
+   * interface is supported.
+   *
+   * @param GoogleCloudRunV2NetworkInterface[] $networkInterfaces
    */
   public function setNetworkInterfaces($networkInterfaces)
   {

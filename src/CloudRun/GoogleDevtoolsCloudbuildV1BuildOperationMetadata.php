@@ -23,7 +23,9 @@ class GoogleDevtoolsCloudbuildV1BuildOperationMetadata extends \Google\Model
   protected $buildDataType = '';
 
   /**
-   * @param GoogleDevtoolsCloudbuildV1Build
+   * The build that the operation is tracking.
+   *
+   * @param GoogleDevtoolsCloudbuildV1Build $build
    */
   public function setBuild(GoogleDevtoolsCloudbuildV1Build $build)
   {

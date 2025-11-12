@@ -21,16 +21,22 @@ class GoogleCloudRunV2MultiRegionSettings extends \Google\Collection
 {
   protected $collection_key = 'regions';
   /**
+   * Optional. System-generated unique id for the multi-region Service.
+   *
    * @var string
    */
   public $multiRegionId;
   /**
+   * Required. List of regions to deploy to, including primary region.
+   *
    * @var string[]
    */
   public $regions;
 
   /**
-   * @param string
+   * Optional. System-generated unique id for the multi-region Service.
+   *
+   * @param string $multiRegionId
    */
   public function setMultiRegionId($multiRegionId)
   {
@@ -44,7 +50,9 @@ class GoogleCloudRunV2MultiRegionSettings extends \Google\Collection
     return $this->multiRegionId;
   }
   /**
-   * @param string[]
+   * Required. List of regions to deploy to, including primary region.
+   *
+   * @param string[] $regions
    */
   public function setRegions($regions)
   {

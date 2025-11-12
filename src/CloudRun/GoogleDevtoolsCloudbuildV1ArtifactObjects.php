@@ -21,10 +21,18 @@ class GoogleDevtoolsCloudbuildV1ArtifactObjects extends \Google\Collection
 {
   protected $collection_key = 'paths';
   /**
+   * Cloud Storage bucket and optional object path, in the form
+   * "gs://bucket/path/to/somewhere/". (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/bucket-
+   * naming#requirements)). Files in the workspace matching any path pattern
+   * will be uploaded to Cloud Storage with this location as a prefix.
+   *
    * @var string
    */
   public $location;
   /**
+   * Path globs used to match files in the build's workspace.
+   *
    * @var string[]
    */
   public $paths;
@@ -32,7 +40,13 @@ class GoogleDevtoolsCloudbuildV1ArtifactObjects extends \Google\Collection
   protected $timingDataType = '';
 
   /**
-   * @param string
+   * Cloud Storage bucket and optional object path, in the form
+   * "gs://bucket/path/to/somewhere/". (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/bucket-
+   * naming#requirements)). Files in the workspace matching any path pattern
+   * will be uploaded to Cloud Storage with this location as a prefix.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -46,7 +60,9 @@ class GoogleDevtoolsCloudbuildV1ArtifactObjects extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string[]
+   * Path globs used to match files in the build's workspace.
+   *
+   * @param string[] $paths
    */
   public function setPaths($paths)
   {
@@ -60,7 +76,9 @@ class GoogleDevtoolsCloudbuildV1ArtifactObjects extends \Google\Collection
     return $this->paths;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1TimeSpan
+   * Output only. Stores timing information for pushing all artifact objects.
+   *
+   * @param GoogleDevtoolsCloudbuildV1TimeSpan $timing
    */
   public function setTiming(GoogleDevtoolsCloudbuildV1TimeSpan $timing)
   {

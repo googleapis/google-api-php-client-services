@@ -20,12 +20,22 @@ namespace Google\Service\CloudRun;
 class GoogleDevtoolsCloudbuildV1HttpConfig extends \Google\Model
 {
   /**
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in
+   * the build (either the default Service Account or user-specified Service
+   * Account) should have `secretmanager.versions.access` permissions on this
+   * secret. The proxy URL should be in format `protocol://@]proxyhost[:port]`.
+   *
    * @var string
    */
   public $proxySecretVersionName;
 
   /**
-   * @param string
+   * SecretVersion resource of the HTTP proxy URL. The Service Account used in
+   * the build (either the default Service Account or user-specified Service
+   * Account) should have `secretmanager.versions.access` permissions on this
+   * secret. The proxy URL should be in format `protocol://@]proxyhost[:port]`.
+   *
+   * @param string $proxySecretVersionName
    */
   public function setProxySecretVersionName($proxySecretVersionName)
   {

@@ -23,16 +23,25 @@ class GoogleCloudRunV2HTTPGetAction extends \Google\Collection
   protected $httpHeadersType = GoogleCloudRunV2HTTPHeader::class;
   protected $httpHeadersDataType = 'array';
   /**
+   * Optional. Path to access on the HTTP server. Defaults to '/'.
+   *
    * @var string
    */
   public $path;
   /**
+   * Optional. Port number to access on the container. Must be in the range 1 to
+   * 65535. If not specified, defaults to the exposed port of the container,
+   * which is the value of container.ports[0].containerPort.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param GoogleCloudRunV2HTTPHeader[]
+   * Optional. Custom headers to set in the request. HTTP allows repeated
+   * headers.
+   *
+   * @param GoogleCloudRunV2HTTPHeader[] $httpHeaders
    */
   public function setHttpHeaders($httpHeaders)
   {
@@ -46,7 +55,9 @@ class GoogleCloudRunV2HTTPGetAction extends \Google\Collection
     return $this->httpHeaders;
   }
   /**
-   * @param string
+   * Optional. Path to access on the HTTP server. Defaults to '/'.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -60,7 +71,11 @@ class GoogleCloudRunV2HTTPGetAction extends \Google\Collection
     return $this->path;
   }
   /**
-   * @param int
+   * Optional. Port number to access on the container. Must be in the range 1 to
+   * 65535. If not specified, defaults to the exposed port of the container,
+   * which is the value of container.ports[0].containerPort.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {

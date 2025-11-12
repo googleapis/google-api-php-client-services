@@ -24,7 +24,9 @@ class GoogleDevtoolsCloudbuildV1FileHashes extends \Google\Collection
   protected $fileHashDataType = 'array';
 
   /**
-   * @param GoogleDevtoolsCloudbuildV1Hash[]
+   * Collection of file hashes.
+   *
+   * @param GoogleDevtoolsCloudbuildV1Hash[] $fileHash
    */
   public function setFileHash($fileHash)
   {

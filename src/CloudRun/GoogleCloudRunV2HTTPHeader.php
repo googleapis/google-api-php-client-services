@@ -20,16 +20,22 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2HTTPHeader extends \Google\Model
 {
   /**
+   * Required. The header field name
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The header field value
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The header field name
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class GoogleCloudRunV2HTTPHeader extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The header field value
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

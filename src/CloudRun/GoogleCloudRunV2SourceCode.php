@@ -23,7 +23,9 @@ class GoogleCloudRunV2SourceCode extends \Google\Model
   protected $cloudStorageSourceDataType = '';
 
   /**
-   * @param GoogleCloudRunV2CloudStorageSource
+   * The source is a Cloud Storage bucket.
+   *
+   * @param GoogleCloudRunV2CloudStorageSource $cloudStorageSource
    */
   public function setCloudStorageSource(GoogleCloudRunV2CloudStorageSource $cloudStorageSource)
   {
