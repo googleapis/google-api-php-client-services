@@ -20,26 +20,66 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google\Model
 {
   /**
+   * Unspecified signal type.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_UNSPECIFIED = 'SIGNAL_TYPE_UNSPECIFIED';
+  /**
+   * Outdated Minor Version
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_OUTDATED_MINOR_VERSION = 'SIGNAL_TYPE_OUTDATED_MINOR_VERSION';
+  /**
+   * Represents database auditing is disabled.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_DATABASE_AUDITING_DISABLED = 'SIGNAL_TYPE_DATABASE_AUDITING_DISABLED';
+  /**
+   * Represents if a database has a password configured for the root account or
+   * not.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_NO_ROOT_PASSWORD = 'SIGNAL_TYPE_NO_ROOT_PASSWORD';
+  /**
+   * Represents if a resource is exposed to public access.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS = 'SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS';
+  /**
+   * Represents if a resources requires all incoming connections to use SSL or
+   * not.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS = 'SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS';
+  /**
+   * Represents if a resource version is in extended support.
+   */
+  public const SIGNAL_TYPE_SIGNAL_TYPE_EXTENDED_SUPPORT = 'SIGNAL_TYPE_EXTENDED_SUPPORT';
+  /**
+   * Required. Full Resource name of the source resource.
+   *
    * @var string
    */
   public $fullResourceName;
   /**
+   * Required. Last time signal was refreshed
+   *
    * @var string
    */
   public $lastRefreshTime;
   protected $resourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $resourceIdDataType = '';
   /**
+   * Signal data for boolean signals.
+   *
    * @var bool
    */
   public $signalBoolValue;
   /**
+   * Required. Signal type of the signal
+   *
    * @var string
    */
   public $signalType;
 
   /**
-   * @param string
+   * Required. Full Resource name of the source resource.
+   *
+   * @param string $fullResourceName
    */
   public function setFullResourceName($fullResourceName)
   {
@@ -53,7 +93,9 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->fullResourceName;
   }
   /**
-   * @param string
+   * Required. Last time signal was refreshed
+   *
+   * @param string $lastRefreshTime
    */
   public function setLastRefreshTime($lastRefreshTime)
   {
@@ -67,7 +109,9 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->lastRefreshTime;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
+   * Database resource id.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $resourceId
    */
   public function setResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $resourceId)
   {
@@ -81,7 +125,9 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->resourceId;
   }
   /**
-   * @param bool
+   * Signal data for boolean signals.
+   *
+   * @param bool $signalBoolValue
    */
   public function setSignalBoolValue($signalBoolValue)
   {
@@ -95,14 +141,21 @@ class StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData extends \Google
     return $this->signalBoolValue;
   }
   /**
-   * @param string
+   * Required. Signal type of the signal
+   *
+   * Accepted values: SIGNAL_TYPE_UNSPECIFIED,
+   * SIGNAL_TYPE_OUTDATED_MINOR_VERSION, SIGNAL_TYPE_DATABASE_AUDITING_DISABLED,
+   * SIGNAL_TYPE_NO_ROOT_PASSWORD, SIGNAL_TYPE_EXPOSED_TO_PUBLIC_ACCESS,
+   * SIGNAL_TYPE_UNENCRYPTED_CONNECTIONS, SIGNAL_TYPE_EXTENDED_SUPPORT
+   *
+   * @param self::SIGNAL_TYPE_* $signalType
    */
   public function setSignalType($signalType)
   {
     $this->signalType = $signalType;
   }
   /**
-   * @return string
+   * @return self::SIGNAL_TYPE_*
    */
   public function getSignalType()
   {

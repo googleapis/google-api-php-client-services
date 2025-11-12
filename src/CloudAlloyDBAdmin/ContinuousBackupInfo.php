@@ -21,22 +21,49 @@ class ContinuousBackupInfo extends \Google\Collection
 {
   protected $collection_key = 'schedule';
   /**
+   * Output only. The earliest restorable time that can be restored to. If
+   * continuous backups and recovery was recently enabled, the earliest
+   * restorable time is the creation time of the earliest eligible backup within
+   * this cluster's continuous backup recovery window. After a cluster has had
+   * continuous backups enabled for the duration of its recovery window, the
+   * earliest restorable time becomes "now minus the recovery window". For
+   * example, assuming a point in time recovery is attempted at 04/16/2025
+   * 3:23:00PM with a 14d recovery window, the earliest restorable time would be
+   * 04/02/2025 3:23:00PM. This field is only visible if the
+   * CLUSTER_VIEW_CONTINUOUS_BACKUP cluster view is provided.
+   *
    * @var string
    */
   public $earliestRestorableTime;
   /**
+   * Output only. When ContinuousBackup was most recently enabled. Set to null
+   * if ContinuousBackup is not enabled.
+   *
    * @var string
    */
   public $enabledTime;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   /**
+   * Output only. Days of the week on which a continuous backup is taken.
+   *
    * @var string[]
    */
   public $schedule;
 
   /**
-   * @param string
+   * Output only. The earliest restorable time that can be restored to. If
+   * continuous backups and recovery was recently enabled, the earliest
+   * restorable time is the creation time of the earliest eligible backup within
+   * this cluster's continuous backup recovery window. After a cluster has had
+   * continuous backups enabled for the duration of its recovery window, the
+   * earliest restorable time becomes "now minus the recovery window". For
+   * example, assuming a point in time recovery is attempted at 04/16/2025
+   * 3:23:00PM with a 14d recovery window, the earliest restorable time would be
+   * 04/02/2025 3:23:00PM. This field is only visible if the
+   * CLUSTER_VIEW_CONTINUOUS_BACKUP cluster view is provided.
+   *
+   * @param string $earliestRestorableTime
    */
   public function setEarliestRestorableTime($earliestRestorableTime)
   {
@@ -50,7 +77,10 @@ class ContinuousBackupInfo extends \Google\Collection
     return $this->earliestRestorableTime;
   }
   /**
-   * @param string
+   * Output only. When ContinuousBackup was most recently enabled. Set to null
+   * if ContinuousBackup is not enabled.
+   *
+   * @param string $enabledTime
    */
   public function setEnabledTime($enabledTime)
   {
@@ -64,7 +94,10 @@ class ContinuousBackupInfo extends \Google\Collection
     return $this->enabledTime;
   }
   /**
-   * @param EncryptionInfo
+   * Output only. The encryption information for the WALs and backups required
+   * for ContinuousBackup.
+   *
+   * @param EncryptionInfo $encryptionInfo
    */
   public function setEncryptionInfo(EncryptionInfo $encryptionInfo)
   {
@@ -78,7 +111,9 @@ class ContinuousBackupInfo extends \Google\Collection
     return $this->encryptionInfo;
   }
   /**
-   * @param string[]
+   * Output only. Days of the week on which a continuous backup is taken.
+   *
+   * @param string[] $schedule
    */
   public function setSchedule($schedule)
   {

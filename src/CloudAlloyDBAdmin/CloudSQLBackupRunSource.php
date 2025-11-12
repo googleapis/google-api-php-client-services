@@ -20,20 +20,29 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class CloudSQLBackupRunSource extends \Google\Model
 {
   /**
+   * Required. The CloudSQL backup run ID.
+   *
    * @var string
    */
   public $backupRunId;
   /**
+   * Required. The CloudSQL instance ID.
+   *
    * @var string
    */
   public $instanceId;
   /**
+   * The project ID of the source CloudSQL instance. This should be the same as
+   * the AlloyDB cluster's project.
+   *
    * @var string
    */
   public $project;
 
   /**
-   * @param string
+   * Required. The CloudSQL backup run ID.
+   *
+   * @param string $backupRunId
    */
   public function setBackupRunId($backupRunId)
   {
@@ -47,7 +56,9 @@ class CloudSQLBackupRunSource extends \Google\Model
     return $this->backupRunId;
   }
   /**
-   * @param string
+   * Required. The CloudSQL instance ID.
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -61,7 +72,10 @@ class CloudSQLBackupRunSource extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * @param string
+   * The project ID of the source CloudSQL instance. This should be the same as
+   * the AlloyDB cluster's project.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {

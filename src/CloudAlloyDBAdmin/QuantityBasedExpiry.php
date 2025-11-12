@@ -20,16 +20,27 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class QuantityBasedExpiry extends \Google\Model
 {
   /**
+   * Output only. The backup's position among its backups with the same source
+   * cluster and type, by descending chronological order create time(i.e. newest
+   * first).
+   *
    * @var int
    */
   public $retentionCount;
   /**
+   * Output only. The length of the quantity-based queue, specified by the
+   * backup's retention policy.
+   *
    * @var int
    */
   public $totalRetentionCount;
 
   /**
-   * @param int
+   * Output only. The backup's position among its backups with the same source
+   * cluster and type, by descending chronological order create time(i.e. newest
+   * first).
+   *
+   * @param int $retentionCount
    */
   public function setRetentionCount($retentionCount)
   {
@@ -43,7 +54,10 @@ class QuantityBasedExpiry extends \Google\Model
     return $this->retentionCount;
   }
   /**
-   * @param int
+   * Output only. The length of the quantity-based queue, specified by the
+   * backup's retention policy.
+   *
+   * @param int $totalRetentionCount
    */
   public function setTotalRetentionCount($totalRetentionCount)
   {

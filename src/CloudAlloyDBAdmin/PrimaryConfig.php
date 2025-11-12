@@ -21,12 +21,16 @@ class PrimaryConfig extends \Google\Collection
 {
   protected $collection_key = 'secondaryClusterNames';
   /**
+   * Output only. Names of the clusters that are replicating from this cluster.
+   *
    * @var string[]
    */
   public $secondaryClusterNames;
 
   /**
-   * @param string[]
+   * Output only. Names of the clusters that are replicating from this cluster.
+   *
+   * @param string[] $secondaryClusterNames
    */
   public function setSecondaryClusterNames($secondaryClusterNames)
   {

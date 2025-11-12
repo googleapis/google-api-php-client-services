@@ -19,6 +19,146 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Google\Collection
 {
+  public const CURRENT_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The instance is running.
+   */
+  public const CURRENT_STATE_HEALTHY = 'HEALTHY';
+  /**
+   * Instance being created, updated, deleted or under maintenance
+   */
+  public const CURRENT_STATE_UNHEALTHY = 'UNHEALTHY';
+  /**
+   * When instance is suspended
+   */
+  public const CURRENT_STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * Instance is deleted.
+   */
+  public const CURRENT_STATE_DELETED = 'DELETED';
+  /**
+   * For rest of the other category
+   */
+  public const CURRENT_STATE_STATE_OTHER = 'STATE_OTHER';
+  /**
+   * Default, to make it consistent with instance edition enum.
+   */
+  public const EDITION_EDITION_UNSPECIFIED = 'EDITION_UNSPECIFIED';
+  /**
+   * Represents the enterprise edition.
+   */
+  public const EDITION_EDITION_ENTERPRISE = 'EDITION_ENTERPRISE';
+  /**
+   * Represents the enterprise plus edition.
+   */
+  public const EDITION_EDITION_ENTERPRISE_PLUS = 'EDITION_ENTERPRISE_PLUS';
+  /**
+   * Represents the standard edition.
+   */
+  public const EDITION_EDITION_STANDARD = 'EDITION_STANDARD';
+  public const EXPECTED_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The instance is running.
+   */
+  public const EXPECTED_STATE_HEALTHY = 'HEALTHY';
+  /**
+   * Instance being created, updated, deleted or under maintenance
+   */
+  public const EXPECTED_STATE_UNHEALTHY = 'UNHEALTHY';
+  /**
+   * When instance is suspended
+   */
+  public const EXPECTED_STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * Instance is deleted.
+   */
+  public const EXPECTED_STATE_DELETED = 'DELETED';
+  /**
+   * For rest of the other category
+   */
+  public const EXPECTED_STATE_STATE_OTHER = 'STATE_OTHER';
+  /**
+   * Unspecified.
+   *
+   * @deprecated
+   */
+  public const INSTANCE_TYPE_INSTANCE_TYPE_UNSPECIFIED = 'INSTANCE_TYPE_UNSPECIFIED';
+  /**
+   * For rest of the other categories.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_UNSPECIFIED = 'SUB_RESOURCE_TYPE_UNSPECIFIED';
+  /**
+   * A regular primary database instance.
+   *
+   * @deprecated
+   */
+  public const INSTANCE_TYPE_PRIMARY = 'PRIMARY';
+  /**
+   * A cluster or an instance acting as a secondary.
+   *
+   * @deprecated
+   */
+  public const INSTANCE_TYPE_SECONDARY = 'SECONDARY';
+  /**
+   * An instance acting as a read-replica.
+   *
+   * @deprecated
+   */
+  public const INSTANCE_TYPE_READ_REPLICA = 'READ_REPLICA';
+  /**
+   * For rest of the other categories.
+   *
+   * @deprecated
+   */
+  public const INSTANCE_TYPE_OTHER = 'OTHER';
+  /**
+   * A regular primary database instance.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_PRIMARY = 'SUB_RESOURCE_TYPE_PRIMARY';
+  /**
+   * A cluster or an instance acting as a secondary.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_SECONDARY = 'SUB_RESOURCE_TYPE_SECONDARY';
+  /**
+   * An instance acting as a read-replica.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_READ_REPLICA = 'SUB_RESOURCE_TYPE_READ_REPLICA';
+  /**
+   * An instance acting as an external primary.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_EXTERNAL_PRIMARY = 'SUB_RESOURCE_TYPE_EXTERNAL_PRIMARY';
+  /**
+   * For rest of the other categories.
+   */
+  public const INSTANCE_TYPE_SUB_RESOURCE_TYPE_OTHER = 'SUB_RESOURCE_TYPE_OTHER';
+  /**
+   * Suspension reason is unspecified.
+   */
+  public const SUSPENSION_REASON_SUSPENSION_REASON_UNSPECIFIED = 'SUSPENSION_REASON_UNSPECIFIED';
+  /**
+   * Wipeout hide event.
+   */
+  public const SUSPENSION_REASON_WIPEOUT_HIDE_EVENT = 'WIPEOUT_HIDE_EVENT';
+  /**
+   * Wipeout purge event.
+   */
+  public const SUSPENSION_REASON_WIPEOUT_PURGE_EVENT = 'WIPEOUT_PURGE_EVENT';
+  /**
+   * Billing disabled for project
+   */
+  public const SUSPENSION_REASON_BILLING_DISABLED = 'BILLING_DISABLED';
+  /**
+   * Abuse detected for resource
+   */
+  public const SUSPENSION_REASON_ABUSER_DETECTED = 'ABUSER_DETECTED';
+  /**
+   * Encryption key inaccessible.
+   */
+  public const SUSPENSION_REASON_ENCRYPTION_KEY_INACCESSIBLE = 'ENCRYPTION_KEY_INACCESSIBLE';
+  /**
+   * Replicated cluster encryption key inaccessible.
+   */
+  public const SUSPENSION_REASON_REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE = 'REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE';
   protected $collection_key = 'entitlements';
   protected $availabilityConfigurationType = StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration::class;
   protected $availabilityConfigurationDataType = '';
@@ -29,22 +169,35 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $backupdrConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration::class;
   protected $backupdrConfigurationDataType = '';
   /**
+   * The creation time of the resource, i.e. the time when resource is created
+   * and recorded in partner service.
+   *
    * @var string
    */
   public $creationTime;
   /**
+   * Current state of the instance.
+   *
    * @var string
    */
   public $currentState;
   protected $customMetadataType = StorageDatabasecenterPartnerapiV1mainCustomMetadataData::class;
   protected $customMetadataDataType = '';
   /**
+   * Optional. Edition represents whether the instance is ENTERPRISE or
+   * ENTERPRISE_PLUS. This information is core to Cloud SQL only and is used to
+   * identify the edition of the instance.
+   *
    * @var string
    */
   public $edition;
   protected $entitlementsType = StorageDatabasecenterPartnerapiV1mainEntitlement::class;
   protected $entitlementsDataType = 'array';
   /**
+   * The state that the instance is expected to be in. For example, an instance
+   * state can transition to UNHEALTHY due to wrong patch update, while the
+   * expected state will remain at the HEALTHY.
+   *
    * @var string
    */
   public $expectedState;
@@ -53,10 +206,14 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $idType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $idDataType = '';
   /**
+   * The type of the instance. Specified at creation time.
+   *
    * @var string
    */
   public $instanceType;
   /**
+   * The resource location. REQUIRED
+   *
    * @var string
    */
   public $location;
@@ -67,38 +224,61 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $primaryResourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
   /**
+   * Primary resource location. REQUIRED if the immediate parent exists when
+   * first time resource is getting ingested, otherwise optional.
+   *
    * @var string
    */
   public $primaryResourceLocation;
   protected $productType = StorageDatabasecenterProtoCommonProduct::class;
   protected $productDataType = '';
   /**
+   * Closest parent Cloud Resource Manager container of this resource. It must
+   * be resource name of a Cloud Resource Manager project with the format of
+   * "/", such as "projects/123". For GCP provided resources, number should be
+   * project number.
+   *
    * @var string
    */
   public $resourceContainer;
   /**
+   * Required. Different from DatabaseResourceId.unique_id, a resource name can
+   * be reused over time. That is, after a resource named "ABC" is deleted, the
+   * name "ABC" can be used to to create a new resource within the same source.
+   * Resource name to follow CAIS resource_name format as noted here go/condor-
+   * common-datamodel
+   *
    * @var string
    */
   public $resourceName;
   /**
+   * Optional. Suspension reason for the resource.
+   *
    * @var string
    */
   public $suspensionReason;
   protected $tagsSetType = StorageDatabasecenterPartnerapiV1mainTags::class;
   protected $tagsSetDataType = '';
   /**
+   * The time at which the resource was updated and recorded at partner service.
+   *
    * @var string
    */
   public $updationTime;
   protected $userLabelSetType = StorageDatabasecenterPartnerapiV1mainUserLabels::class;
   protected $userLabelSetDataType = '';
   /**
+   * The resource zone. This is only applicable for zonal resources and will be
+   * empty for regional and multi-regional resources.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration
+   * Availability configuration for this instance
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration $availabilityConfiguration
    */
   public function setAvailabilityConfiguration(StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration $availabilityConfiguration)
   {
@@ -112,7 +292,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->availabilityConfiguration;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainBackupConfiguration
+   * Backup configuration for this instance
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainBackupConfiguration $backupConfiguration
    */
   public function setBackupConfiguration(StorageDatabasecenterPartnerapiV1mainBackupConfiguration $backupConfiguration)
   {
@@ -126,7 +308,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->backupConfiguration;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainBackupRun
+   * Latest backup run information for this instance
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun
    */
   public function setBackupRun(StorageDatabasecenterPartnerapiV1mainBackupRun $backupRun)
   {
@@ -140,7 +324,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->backupRun;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration
+   * Optional. BackupDR Configuration for the resource.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration $backupdrConfiguration
    */
   public function setBackupdrConfiguration(StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration $backupdrConfiguration)
   {
@@ -154,7 +340,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->backupdrConfiguration;
   }
   /**
-   * @param string
+   * The creation time of the resource, i.e. the time when resource is created
+   * and recorded in partner service.
+   *
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
@@ -168,21 +357,28 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->creationTime;
   }
   /**
-   * @param string
+   * Current state of the instance.
+   *
+   * Accepted values: STATE_UNSPECIFIED, HEALTHY, UNHEALTHY, SUSPENDED, DELETED,
+   * STATE_OTHER
+   *
+   * @param self::CURRENT_STATE_* $currentState
    */
   public function setCurrentState($currentState)
   {
     $this->currentState = $currentState;
   }
   /**
-   * @return string
+   * @return self::CURRENT_STATE_*
    */
   public function getCurrentState()
   {
     return $this->currentState;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainCustomMetadataData
+   * Any custom metadata associated with the resource
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainCustomMetadataData $customMetadata
    */
   public function setCustomMetadata(StorageDatabasecenterPartnerapiV1mainCustomMetadataData $customMetadata)
   {
@@ -196,21 +392,30 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->customMetadata;
   }
   /**
-   * @param string
+   * Optional. Edition represents whether the instance is ENTERPRISE or
+   * ENTERPRISE_PLUS. This information is core to Cloud SQL only and is used to
+   * identify the edition of the instance.
+   *
+   * Accepted values: EDITION_UNSPECIFIED, EDITION_ENTERPRISE,
+   * EDITION_ENTERPRISE_PLUS, EDITION_STANDARD
+   *
+   * @param self::EDITION_* $edition
    */
   public function setEdition($edition)
   {
     $this->edition = $edition;
   }
   /**
-   * @return string
+   * @return self::EDITION_*
    */
   public function getEdition()
   {
     return $this->edition;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainEntitlement[]
+   * Entitlements associated with the resource
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainEntitlement[] $entitlements
    */
   public function setEntitlements($entitlements)
   {
@@ -224,27 +429,38 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->entitlements;
   }
   /**
-   * @param string
+   * The state that the instance is expected to be in. For example, an instance
+   * state can transition to UNHEALTHY due to wrong patch update, while the
+   * expected state will remain at the HEALTHY.
+   *
+   * Accepted values: STATE_UNSPECIFIED, HEALTHY, UNHEALTHY, SUSPENDED, DELETED,
+   * STATE_OTHER
+   *
+   * @param self::EXPECTED_STATE_* $expectedState
    */
   public function setExpectedState($expectedState)
   {
     $this->expectedState = $expectedState;
   }
   /**
-   * @return string
+   * @return self::EXPECTED_STATE_*
    */
   public function getExpectedState()
   {
     return $this->expectedState;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration
+   * GCBDR configuration for the resource.
+   *
+   * @deprecated
+   * @param StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration $gcbdrConfiguration
    */
   public function setGcbdrConfiguration(StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration $gcbdrConfiguration)
   {
     $this->gcbdrConfiguration = $gcbdrConfiguration;
   }
   /**
+   * @deprecated
    * @return StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration
    */
   public function getGcbdrConfiguration()
@@ -252,7 +468,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->gcbdrConfiguration;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
+   * Required. Unique identifier for a Database resource
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $id
    */
   public function setId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $id)
   {
@@ -266,21 +484,30 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->id;
   }
   /**
-   * @param string
+   * The type of the instance. Specified at creation time.
+   *
+   * Accepted values: INSTANCE_TYPE_UNSPECIFIED, SUB_RESOURCE_TYPE_UNSPECIFIED,
+   * PRIMARY, SECONDARY, READ_REPLICA, OTHER, SUB_RESOURCE_TYPE_PRIMARY,
+   * SUB_RESOURCE_TYPE_SECONDARY, SUB_RESOURCE_TYPE_READ_REPLICA,
+   * SUB_RESOURCE_TYPE_EXTERNAL_PRIMARY, SUB_RESOURCE_TYPE_OTHER
+   *
+   * @param self::INSTANCE_TYPE_* $instanceType
    */
   public function setInstanceType($instanceType)
   {
     $this->instanceType = $instanceType;
   }
   /**
-   * @return string
+   * @return self::INSTANCE_TYPE_*
    */
   public function getInstanceType()
   {
     return $this->instanceType;
   }
   /**
-   * @param string
+   * The resource location. REQUIRED
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -294,7 +521,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->location;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainMachineConfiguration
+   * Machine configuration for this resource.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainMachineConfiguration $machineConfiguration
    */
   public function setMachineConfiguration(StorageDatabasecenterPartnerapiV1mainMachineConfiguration $machineConfiguration)
   {
@@ -308,7 +537,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->machineConfiguration;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo
+   * Optional. Maintenance info for the resource.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo $maintenanceInfo
    */
   public function setMaintenanceInfo(StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo $maintenanceInfo)
   {
@@ -322,7 +553,12 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->maintenanceInfo;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
+   * Identifier for this resource's immediate parent/primary resource if the
+   * current resource is a replica or derived form of another Database resource.
+   * Else it would be NULL. REQUIRED if the immediate parent exists when first
+   * time resource is getting ingested, otherwise optional.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $primaryResourceId
    */
   public function setPrimaryResourceId(StorageDatabasecenterPartnerapiV1mainDatabaseResourceId $primaryResourceId)
   {
@@ -336,7 +572,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->primaryResourceId;
   }
   /**
-   * @param string
+   * Primary resource location. REQUIRED if the immediate parent exists when
+   * first time resource is getting ingested, otherwise optional.
+   *
+   * @param string $primaryResourceLocation
    */
   public function setPrimaryResourceLocation($primaryResourceLocation)
   {
@@ -350,7 +589,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->primaryResourceLocation;
   }
   /**
-   * @param StorageDatabasecenterProtoCommonProduct
+   * The product this resource represents.
+   *
+   * @param StorageDatabasecenterProtoCommonProduct $product
    */
   public function setProduct(StorageDatabasecenterProtoCommonProduct $product)
   {
@@ -364,7 +605,12 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->product;
   }
   /**
-   * @param string
+   * Closest parent Cloud Resource Manager container of this resource. It must
+   * be resource name of a Cloud Resource Manager project with the format of
+   * "/", such as "projects/123". For GCP provided resources, number should be
+   * project number.
+   *
+   * @param string $resourceContainer
    */
   public function setResourceContainer($resourceContainer)
   {
@@ -378,7 +624,13 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->resourceContainer;
   }
   /**
-   * @param string
+   * Required. Different from DatabaseResourceId.unique_id, a resource name can
+   * be reused over time. That is, after a resource named "ABC" is deleted, the
+   * name "ABC" can be used to to create a new resource within the same source.
+   * Resource name to follow CAIS resource_name format as noted here go/condor-
+   * common-datamodel
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -392,21 +644,29 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->resourceName;
   }
   /**
-   * @param string
+   * Optional. Suspension reason for the resource.
+   *
+   * Accepted values: SUSPENSION_REASON_UNSPECIFIED, WIPEOUT_HIDE_EVENT,
+   * WIPEOUT_PURGE_EVENT, BILLING_DISABLED, ABUSER_DETECTED,
+   * ENCRYPTION_KEY_INACCESSIBLE, REPLICATED_CLUSTER_ENCRYPTION_KEY_INACCESSIBLE
+   *
+   * @param self::SUSPENSION_REASON_* $suspensionReason
    */
   public function setSuspensionReason($suspensionReason)
   {
     $this->suspensionReason = $suspensionReason;
   }
   /**
-   * @return string
+   * @return self::SUSPENSION_REASON_*
    */
   public function getSuspensionReason()
   {
     return $this->suspensionReason;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainTags
+   * Optional. Tags associated with this resources.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainTags $tagsSet
    */
   public function setTagsSet(StorageDatabasecenterPartnerapiV1mainTags $tagsSet)
   {
@@ -420,7 +680,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->tagsSet;
   }
   /**
-   * @param string
+   * The time at which the resource was updated and recorded at partner service.
+   *
+   * @param string $updationTime
    */
   public function setUpdationTime($updationTime)
   {
@@ -434,7 +696,9 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->updationTime;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainUserLabels
+   * User-provided labels associated with the resource
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainUserLabels $userLabelSet
    */
   public function setUserLabelSet(StorageDatabasecenterPartnerapiV1mainUserLabels $userLabelSet)
   {
@@ -448,7 +712,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->userLabelSet;
   }
   /**
-   * @param string
+   * The resource zone. This is only applicable for zonal resources and will be
+   * empty for regional and multi-regional resources.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

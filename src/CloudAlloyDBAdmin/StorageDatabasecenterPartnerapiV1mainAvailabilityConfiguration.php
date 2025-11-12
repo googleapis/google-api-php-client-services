@@ -19,15 +19,44 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Google\Model
 {
+  public const AVAILABILITY_TYPE_AVAILABILITY_TYPE_UNSPECIFIED = 'AVAILABILITY_TYPE_UNSPECIFIED';
   /**
+   * Zonal available instance.
+   */
+  public const AVAILABILITY_TYPE_ZONAL = 'ZONAL';
+  /**
+   * Regional available instance.
+   */
+  public const AVAILABILITY_TYPE_REGIONAL = 'REGIONAL';
+  /**
+   * Multi regional instance
+   */
+  public const AVAILABILITY_TYPE_MULTI_REGIONAL = 'MULTI_REGIONAL';
+  /**
+   * For rest of the other category
+   */
+  public const AVAILABILITY_TYPE_AVAILABILITY_TYPE_OTHER = 'AVAILABILITY_TYPE_OTHER';
+  /**
+   * Checks for existence of (multi-cluster) routing configuration that allows
+   * automatic failover to a different zone/region in case of an outage.
+   * Applicable to Bigtable resources.
+   *
    * @var bool
    */
   public $automaticFailoverRoutingConfigured;
   /**
+   * Availability type. Potential values: * `ZONAL`: The instance serves data
+   * from only one zone. Outages in that zone affect data accessibility. *
+   * `REGIONAL`: The instance can serve data from more than one zone in a region
+   * (it is highly available).
+   *
    * @var string
    */
   public $availabilityType;
   /**
+   * Checks for resources that are configured to have redundancy, and ongoing
+   * replication across regions
+   *
    * @var bool
    */
   public $crossRegionReplicaConfigured;
@@ -41,7 +70,11 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
   public $promotableReplicaConfigured;
 
   /**
-   * @param bool
+   * Checks for existence of (multi-cluster) routing configuration that allows
+   * automatic failover to a different zone/region in case of an outage.
+   * Applicable to Bigtable resources.
+   *
+   * @param bool $automaticFailoverRoutingConfigured
    */
   public function setAutomaticFailoverRoutingConfigured($automaticFailoverRoutingConfigured)
   {
@@ -55,21 +88,32 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
     return $this->automaticFailoverRoutingConfigured;
   }
   /**
-   * @param string
+   * Availability type. Potential values: * `ZONAL`: The instance serves data
+   * from only one zone. Outages in that zone affect data accessibility. *
+   * `REGIONAL`: The instance can serve data from more than one zone in a region
+   * (it is highly available).
+   *
+   * Accepted values: AVAILABILITY_TYPE_UNSPECIFIED, ZONAL, REGIONAL,
+   * MULTI_REGIONAL, AVAILABILITY_TYPE_OTHER
+   *
+   * @param self::AVAILABILITY_TYPE_* $availabilityType
    */
   public function setAvailabilityType($availabilityType)
   {
     $this->availabilityType = $availabilityType;
   }
   /**
-   * @return string
+   * @return self::AVAILABILITY_TYPE_*
    */
   public function getAvailabilityType()
   {
     return $this->availabilityType;
   }
   /**
-   * @param bool
+   * Checks for resources that are configured to have redundancy, and ongoing
+   * replication across regions
+   *
+   * @param bool $crossRegionReplicaConfigured
    */
   public function setCrossRegionReplicaConfigured($crossRegionReplicaConfigured)
   {
@@ -83,7 +127,7 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
     return $this->crossRegionReplicaConfigured;
   }
   /**
-   * @param bool
+   * @param bool $externalReplicaConfigured
    */
   public function setExternalReplicaConfigured($externalReplicaConfigured)
   {
@@ -97,7 +141,7 @@ class StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration extends \Go
     return $this->externalReplicaConfigured;
   }
   /**
-   * @param bool
+   * @param bool $promotableReplicaConfigured
    */
   public function setPromotableReplicaConfigured($promotableReplicaConfigured)
   {

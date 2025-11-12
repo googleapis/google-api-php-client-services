@@ -20,12 +20,16 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class AuthorizedNetwork extends \Google\Model
 {
   /**
+   * CIDR range for one authorzied network of the instance.
+   *
    * @var string
    */
   public $cidrRange;
 
   /**
-   * @param string
+   * CIDR range for one authorzied network of the instance.
+   *
+   * @param string $cidrRange
    */
   public function setCidrRange($cidrRange)
   {

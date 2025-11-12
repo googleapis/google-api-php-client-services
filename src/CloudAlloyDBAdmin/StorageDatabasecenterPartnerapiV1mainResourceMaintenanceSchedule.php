@@ -20,10 +20,72 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const DAY_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_SUNDAY = 'SUNDAY';
+  /**
+   * Phase is unspecified.
+   */
+  public const PHASE_PHASE_UNSPECIFIED = 'PHASE_UNSPECIFIED';
+  /**
+   * Any phase.
+   */
+  public const PHASE_ANY = 'ANY';
+  /**
+   * Week 1.
+   */
+  public const PHASE_WEEK1 = 'WEEK1';
+  /**
+   * Week 2.
+   */
+  public const PHASE_WEEK2 = 'WEEK2';
+  /**
+   * Week 5.
+   */
+  public const PHASE_WEEK5 = 'WEEK5';
+  /**
+   * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY,
+   * etc.
+   *
    * @var string
    */
   public $day;
   /**
+   * Optional. Phase of the maintenance window. This is to capture order of
+   * maintenance. For example, for Cloud SQL resources, this can be used to
+   * capture if the maintenance window is in Week1, Week2, Week5, etc. Non
+   * production resources are usually part of early phase. For more details,
+   * refer to Cloud SQL resources -
+   * https://cloud.google.com/sql/docs/mysql/maintenance
+   *
    * @var string
    */
   public $phase;
@@ -31,35 +93,53 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule extends \
   protected $timeDataType = '';
 
   /**
-   * @param string
+   * Optional. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY,
+   * etc.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_* $day
    */
   public function setDay($day)
   {
     $this->day = $day;
   }
   /**
-   * @return string
+   * @return self::DAY_*
    */
   public function getDay()
   {
     return $this->day;
   }
   /**
-   * @param string
+   * Optional. Phase of the maintenance window. This is to capture order of
+   * maintenance. For example, for Cloud SQL resources, this can be used to
+   * capture if the maintenance window is in Week1, Week2, Week5, etc. Non
+   * production resources are usually part of early phase. For more details,
+   * refer to Cloud SQL resources -
+   * https://cloud.google.com/sql/docs/mysql/maintenance
+   *
+   * Accepted values: PHASE_UNSPECIFIED, ANY, WEEK1, WEEK2, WEEK5
+   *
+   * @param self::PHASE_* $phase
    */
   public function setPhase($phase)
   {
     $this->phase = $phase;
   }
   /**
-   * @return string
+   * @return self::PHASE_*
    */
   public function getPhase()
   {
     return $this->phase;
   }
   /**
-   * @param GoogleTypeTimeOfDay
+   * Optional. Preferred time to start the maintenance operation on the
+   * specified day.
+   *
+   * @param GoogleTypeTimeOfDay $time
    */
   public function setTime(GoogleTypeTimeOfDay $time)
   {

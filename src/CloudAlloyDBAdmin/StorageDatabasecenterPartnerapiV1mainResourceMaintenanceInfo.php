@@ -25,12 +25,17 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
   protected $maintenanceScheduleType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
   /**
+   * Optional. Current Maintenance version of the database resource. Example:
+   * "MYSQL_8_0_41.R20250531.01_15"
+   *
    * @var string
    */
   public $maintenanceVersion;
 
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule[]
+   * Optional. List of Deny maintenance period for the database resource.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceDenySchedule[] $denyMaintenanceSchedules
    */
   public function setDenyMaintenanceSchedules($denyMaintenanceSchedules)
   {
@@ -44,7 +49,9 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->denyMaintenanceSchedules;
   }
   /**
-   * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule
+   * Optional. Maintenance window for the database resource.
+   *
+   * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule $maintenanceSchedule
    */
   public function setMaintenanceSchedule(StorageDatabasecenterPartnerapiV1mainResourceMaintenanceSchedule $maintenanceSchedule)
   {
@@ -58,7 +65,10 @@ class StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo extends \Goog
     return $this->maintenanceSchedule;
   }
   /**
-   * @param string
+   * Optional. Current Maintenance version of the database resource. Example:
+   * "MYSQL_8_0_41.R20250531.01_15"
+   *
+   * @param string $maintenanceVersion
    */
   public function setMaintenanceVersion($maintenanceVersion)
   {

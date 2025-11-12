@@ -20,16 +20,26 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class BackupSource extends \Google\Model
 {
   /**
+   * Required. The name of the backup resource with the format: *
+   * projects/{project}/locations/{region}/backups/{backup_id}
+   *
    * @var string
    */
   public $backupName;
   /**
+   * Output only. The system-generated UID of the backup which was used to
+   * create this resource. The UID is generated when the backup is created, and
+   * it is retained until the backup is deleted.
+   *
    * @var string
    */
   public $backupUid;
 
   /**
-   * @param string
+   * Required. The name of the backup resource with the format: *
+   * projects/{project}/locations/{region}/backups/{backup_id}
+   *
+   * @param string $backupName
    */
   public function setBackupName($backupName)
   {
@@ -43,7 +53,11 @@ class BackupSource extends \Google\Model
     return $this->backupName;
   }
   /**
-   * @param string
+   * Output only. The system-generated UID of the backup which was used to
+   * create this resource. The UID is generated when the backup is created, and
+   * it is retained until the backup is deleted.
+   *
+   * @param string $backupUid
    */
   public function setBackupUid($backupUid)
   {

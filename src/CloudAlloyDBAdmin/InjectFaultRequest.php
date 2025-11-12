@@ -20,34 +20,76 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class InjectFaultRequest extends \Google\Model
 {
   /**
+   * The fault type is unknown.
+   */
+  public const FAULT_TYPE_FAULT_TYPE_UNSPECIFIED = 'FAULT_TYPE_UNSPECIFIED';
+  /**
+   * Stop the VM
+   */
+  public const FAULT_TYPE_STOP_VM = 'STOP_VM';
+  /**
+   * Required. The type of fault to be injected in an instance.
+   *
    * @var string
    */
   public $faultType;
   /**
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server ignores the
+   * request if it has already been completed. The server guarantees that for at
+   * least 60 minutes since the first request. For example, consider a situation
+   * where you make an initial request and the request times out. If you make
+   * the request again with the same request ID, the server can check if the
+   * original operation with the same request ID was received, and if so,
+   * ignores the second request. This prevents clients from accidentally
+   * creating duplicate commitments. The request ID must be a valid UUID with
+   * the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Optional. If set, performs request validation, for example, permission
+   * checks and any other type of validation, but does not actually execute the
+   * create request.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string
+   * Required. The type of fault to be injected in an instance.
+   *
+   * Accepted values: FAULT_TYPE_UNSPECIFIED, STOP_VM
+   *
+   * @param self::FAULT_TYPE_* $faultType
    */
   public function setFaultType($faultType)
   {
     $this->faultType = $faultType;
   }
   /**
-   * @return string
+   * @return self::FAULT_TYPE_*
    */
   public function getFaultType()
   {
     return $this->faultType;
   }
   /**
-   * @param string
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server ignores the
+   * request if it has already been completed. The server guarantees that for at
+   * least 60 minutes since the first request. For example, consider a situation
+   * where you make an initial request and the request times out. If you make
+   * the request again with the same request ID, the server can check if the
+   * original operation with the same request ID was received, and if so,
+   * ignores the second request. This prevents clients from accidentally
+   * creating duplicate commitments. The request ID must be a valid UUID with
+   * the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -61,7 +103,11 @@ class InjectFaultRequest extends \Google\Model
     return $this->requestId;
   }
   /**
-   * @param bool
+   * Optional. If set, performs request validation, for example, permission
+   * checks and any other type of validation, but does not actually execute the
+   * create request.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

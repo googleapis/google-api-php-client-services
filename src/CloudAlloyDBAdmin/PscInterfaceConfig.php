@@ -20,12 +20,22 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class PscInterfaceConfig extends \Google\Model
 {
   /**
+   * The network attachment resource created in the consumer network to which
+   * the PSC interface will be linked. This is of the format: "projects/${CONSUM
+   * ER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}
+   * ". The network attachment must be in the same region as the instance.
+   *
    * @var string
    */
   public $networkAttachmentResource;
 
   /**
-   * @param string
+   * The network attachment resource created in the consumer network to which
+   * the PSC interface will be linked. This is of the format: "projects/${CONSUM
+   * ER_PROJECT}/regions/${REGION}/networkAttachments/${NETWORK_ATTACHMENT_NAME}
+   * ". The network attachment must be in the same region as the instance.
+   *
+   * @param string $networkAttachmentResource
    */
   public function setNetworkAttachmentResource($networkAttachmentResource)
   {

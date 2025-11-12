@@ -20,12 +20,16 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class QuantityBasedRetention extends \Google\Model
 {
   /**
+   * The number of backups to retain.
+   *
    * @var int
    */
   public $count;
 
   /**
-   * @param int
+   * The number of backups to retain.
+   *
+   * @param int $count
    */
   public function setCount($count)
   {

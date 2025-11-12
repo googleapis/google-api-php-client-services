@@ -28,22 +28,42 @@ class RestoreClusterRequest extends \Google\Model
   protected $clusterType = Cluster::class;
   protected $clusterDataType = '';
   /**
+   * Required. ID of the requesting object.
+   *
    * @var string
    */
   public $clusterId;
   protected $continuousBackupSourceType = ContinuousBackupSource::class;
   protected $continuousBackupSourceDataType = '';
   /**
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server ignores the
+   * request if it has already been completed. The server guarantees that for at
+   * least 60 minutes since the first request. For example, consider a situation
+   * where you make an initial request and the request times out. If you make
+   * the request again with the same request ID, the server can check if the
+   * original operation with the same request ID was received, and if so,
+   * ignores the second request. This prevents clients from accidentally
+   * creating duplicate commitments. The request ID must be a valid UUID with
+   * the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Optional. If set, performs request validation, for example, permission
+   * checks and any other type of validation, but does not actually execute the
+   * create request.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param BackupSource
+   * Backup source.
+   *
+   * @param BackupSource $backupSource
    */
   public function setBackupSource(BackupSource $backupSource)
   {
@@ -57,7 +77,9 @@ class RestoreClusterRequest extends \Google\Model
     return $this->backupSource;
   }
   /**
-   * @param BackupDrBackupSource
+   * BackupDR backup source.
+   *
+   * @param BackupDrBackupSource $backupdrBackupSource
    */
   public function setBackupdrBackupSource(BackupDrBackupSource $backupdrBackupSource)
   {
@@ -71,7 +93,9 @@ class RestoreClusterRequest extends \Google\Model
     return $this->backupdrBackupSource;
   }
   /**
-   * @param BackupDrPitrSource
+   * BackupDR source used for point in time recovery.
+   *
+   * @param BackupDrPitrSource $backupdrPitrSource
    */
   public function setBackupdrPitrSource(BackupDrPitrSource $backupdrPitrSource)
   {
@@ -85,7 +109,9 @@ class RestoreClusterRequest extends \Google\Model
     return $this->backupdrPitrSource;
   }
   /**
-   * @param Cluster
+   * Required. The resource being created
+   *
+   * @param Cluster $cluster
    */
   public function setCluster(Cluster $cluster)
   {
@@ -99,7 +125,9 @@ class RestoreClusterRequest extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * Required. ID of the requesting object.
+   *
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {
@@ -113,7 +141,10 @@ class RestoreClusterRequest extends \Google\Model
     return $this->clusterId;
   }
   /**
-   * @param ContinuousBackupSource
+   * ContinuousBackup source. Continuous backup needs to be enabled in the
+   * source cluster for this operation to succeed.
+   *
+   * @param ContinuousBackupSource $continuousBackupSource
    */
   public function setContinuousBackupSource(ContinuousBackupSource $continuousBackupSource)
   {
@@ -127,7 +158,19 @@ class RestoreClusterRequest extends \Google\Model
     return $this->continuousBackupSource;
   }
   /**
-   * @param string
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server ignores the
+   * request if it has already been completed. The server guarantees that for at
+   * least 60 minutes since the first request. For example, consider a situation
+   * where you make an initial request and the request times out. If you make
+   * the request again with the same request ID, the server can check if the
+   * original operation with the same request ID was received, and if so,
+   * ignores the second request. This prevents clients from accidentally
+   * creating duplicate commitments. The request ID must be a valid UUID with
+   * the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -141,7 +184,11 @@ class RestoreClusterRequest extends \Google\Model
     return $this->requestId;
   }
   /**
-   * @param bool
+   * Optional. If set, performs request validation, for example, permission
+   * checks and any other type of validation, but does not actually execute the
+   * create request.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

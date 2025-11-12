@@ -20,16 +20,22 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class IntegerRestrictions extends \Google\Model
 {
   /**
+   * The maximum value that can be specified, if applicable.
+   *
    * @var string
    */
   public $maxValue;
   /**
+   * The minimum value that can be specified, if applicable.
+   *
    * @var string
    */
   public $minValue;
 
   /**
-   * @param string
+   * The maximum value that can be specified, if applicable.
+   *
+   * @param string $maxValue
    */
   public function setMaxValue($maxValue)
   {
@@ -43,7 +49,9 @@ class IntegerRestrictions extends \Google\Model
     return $this->maxValue;
   }
   /**
-   * @param string
+   * The minimum value that can be specified, if applicable.
+   *
+   * @param string $minValue
    */
   public function setMinValue($minValue)
   {

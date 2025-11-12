@@ -22,22 +22,37 @@ class ImportClusterRequest extends \Google\Model
   protected $csvImportOptionsType = CsvImportOptions::class;
   protected $csvImportOptionsDataType = '';
   /**
+   * Optional. Name of the database to which the import will be done. For import
+   * from SQL file, this is required only if the file does not specify a
+   * database. Note - Value provided should be the same as expected from `SELECT
+   * current_database();` and NOT as a resource reference.
+   *
    * @var string
    */
   public $database;
   /**
+   * Required. The path to the file in Google Cloud Storage where the source
+   * file for import will be stored. The URI is in the form
+   * `gs://bucketName/fileName`.
+   *
    * @var string
    */
   public $gcsUri;
   protected $sqlImportOptionsType = SqlImportOptions::class;
   protected $sqlImportOptionsDataType = '';
   /**
+   * Optional. Database user to be used for importing the data. Note - Value
+   * provided should be the same as expected from `SELECT current_user;` and NOT
+   * as a resource reference.
+   *
    * @var string
    */
   public $user;
 
   /**
-   * @param CsvImportOptions
+   * Options for importing data in CSV format.
+   *
+   * @param CsvImportOptions $csvImportOptions
    */
   public function setCsvImportOptions(CsvImportOptions $csvImportOptions)
   {
@@ -51,7 +66,12 @@ class ImportClusterRequest extends \Google\Model
     return $this->csvImportOptions;
   }
   /**
-   * @param string
+   * Optional. Name of the database to which the import will be done. For import
+   * from SQL file, this is required only if the file does not specify a
+   * database. Note - Value provided should be the same as expected from `SELECT
+   * current_database();` and NOT as a resource reference.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -65,7 +85,11 @@ class ImportClusterRequest extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Required. The path to the file in Google Cloud Storage where the source
+   * file for import will be stored. The URI is in the form
+   * `gs://bucketName/fileName`.
+   *
+   * @param string $gcsUri
    */
   public function setGcsUri($gcsUri)
   {
@@ -79,7 +103,9 @@ class ImportClusterRequest extends \Google\Model
     return $this->gcsUri;
   }
   /**
-   * @param SqlImportOptions
+   * Options for importing data in SQL format.
+   *
+   * @param SqlImportOptions $sqlImportOptions
    */
   public function setSqlImportOptions(SqlImportOptions $sqlImportOptions)
   {
@@ -93,7 +119,11 @@ class ImportClusterRequest extends \Google\Model
     return $this->sqlImportOptions;
   }
   /**
-   * @param string
+   * Optional. Database user to be used for importing the data. Note - Value
+   * provided should be the same as expected from `SELECT current_user;` and NOT
+   * as a resource reference.
+   *
+   * @param string $user
    */
   public function setUser($user)
   {

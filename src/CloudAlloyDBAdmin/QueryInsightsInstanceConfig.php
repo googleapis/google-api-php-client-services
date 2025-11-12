@@ -20,24 +20,41 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class QueryInsightsInstanceConfig extends \Google\Model
 {
   /**
+   * Number of query execution plans captured by Insights per minute for all
+   * queries combined. The default value is 5. Any integer between 0 and 20 is
+   * considered valid.
+   *
    * @var string
    */
   public $queryPlansPerMinute;
   /**
+   * Query string length. The default value is 1024. Any integer between 256 and
+   * 4500 is considered valid.
+   *
    * @var string
    */
   public $queryStringLength;
   /**
+   * Record application tags for an instance. This flag is turned "on" by
+   * default.
+   *
    * @var bool
    */
   public $recordApplicationTags;
   /**
+   * Record client address for an instance. Client address is PII information.
+   * This flag is turned "on" by default.
+   *
    * @var bool
    */
   public $recordClientAddress;
 
   /**
-   * @param string
+   * Number of query execution plans captured by Insights per minute for all
+   * queries combined. The default value is 5. Any integer between 0 and 20 is
+   * considered valid.
+   *
+   * @param string $queryPlansPerMinute
    */
   public function setQueryPlansPerMinute($queryPlansPerMinute)
   {
@@ -51,7 +68,10 @@ class QueryInsightsInstanceConfig extends \Google\Model
     return $this->queryPlansPerMinute;
   }
   /**
-   * @param string
+   * Query string length. The default value is 1024. Any integer between 256 and
+   * 4500 is considered valid.
+   *
+   * @param string $queryStringLength
    */
   public function setQueryStringLength($queryStringLength)
   {
@@ -65,7 +85,10 @@ class QueryInsightsInstanceConfig extends \Google\Model
     return $this->queryStringLength;
   }
   /**
-   * @param bool
+   * Record application tags for an instance. This flag is turned "on" by
+   * default.
+   *
+   * @param bool $recordApplicationTags
    */
   public function setRecordApplicationTags($recordApplicationTags)
   {
@@ -79,7 +102,10 @@ class QueryInsightsInstanceConfig extends \Google\Model
     return $this->recordApplicationTags;
   }
   /**
-   * @param bool
+   * Record client address for an instance. Client address is PII information.
+   * This flag is turned "on" by default.
+   *
+   * @param bool $recordClientAddress
    */
   public function setRecordClientAddress($recordClientAddress)
   {

@@ -20,6 +20,37 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
 {
   /**
+   * UNSPECIFIED means product type is not known or available.
+   */
+  public const ERROR_TYPE_OPERATION_ERROR_TYPE_UNSPECIFIED = 'OPERATION_ERROR_TYPE_UNSPECIFIED';
+  /**
+   * key destroyed, expired, not found, unreachable or permission denied.
+   */
+  public const ERROR_TYPE_KMS_KEY_ERROR = 'KMS_KEY_ERROR';
+  /**
+   * Database is not accessible
+   */
+  public const ERROR_TYPE_DATABASE_ERROR = 'DATABASE_ERROR';
+  /**
+   * The zone or region does not have sufficient resources to handle the request
+   * at the moment
+   */
+  public const ERROR_TYPE_STOCKOUT_ERROR = 'STOCKOUT_ERROR';
+  /**
+   * User initiated cancellation
+   */
+  public const ERROR_TYPE_CANCELLATION_ERROR = 'CANCELLATION_ERROR';
+  /**
+   * SQL server specific error
+   */
+  public const ERROR_TYPE_SQLSERVER_ERROR = 'SQLSERVER_ERROR';
+  /**
+   * Any other internal error.
+   */
+  public const ERROR_TYPE_INTERNAL_ERROR = 'INTERNAL_ERROR';
+  /**
+   * Identifies the specific error that occurred. REQUIRED
+   *
    * @var string
    */
   public $code;
@@ -28,12 +59,16 @@ class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
    */
   public $errorType;
   /**
+   * Additional information about the error encountered. REQUIRED
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * Identifies the specific error that occurred. REQUIRED
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -47,21 +82,23 @@ class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * @param self::ERROR_TYPE_* $errorType
    */
   public function setErrorType($errorType)
   {
     $this->errorType = $errorType;
   }
   /**
-   * @return string
+   * @return self::ERROR_TYPE_*
    */
   public function getErrorType()
   {
     return $this->errorType;
   }
   /**
-   * @param string
+   * Additional information about the error encountered. REQUIRED
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

@@ -21,6 +21,8 @@ class ListSupportedDatabaseFlagsResponse extends \Google\Collection
 {
   protected $collection_key = 'supportedDatabaseFlags';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListSupportedDatabaseFlagsResponse extends \Google\Collection
   protected $supportedDatabaseFlagsDataType = 'array';
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListSupportedDatabaseFlagsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SupportedDatabaseFlag[]
+   * The list of SupportedDatabaseFlags.
+   *
+   * @param SupportedDatabaseFlag[] $supportedDatabaseFlags
    */
   public function setSupportedDatabaseFlags($supportedDatabaseFlags)
   {

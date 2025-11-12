@@ -20,24 +20,37 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class Node extends \Google\Model
 {
   /**
+   * Output only. The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. The private IP address of the VM e.g. "10.57.0.34".
+   *
    * @var string
    */
   public $ip;
   /**
+   * Output only. Determined by state of the compute VM and postgres-service
+   * health. Compute VM state can have values listed in
+   * https://cloud.google.com/compute/docs/instances/instance-life-cycle and
+   * postgres-service health can have values: HEALTHY and UNHEALTHY.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The Compute Engine zone of the VM e.g. "us-central1-b".
+   *
    * @var string
    */
   public $zoneId;
 
   /**
-   * @param string
+   * Output only. The identifier of the VM e.g. "test-read-0601-407e52be-ms3l".
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -51,7 +64,9 @@ class Node extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Output only. The private IP address of the VM e.g. "10.57.0.34".
+   *
+   * @param string $ip
    */
   public function setIp($ip)
   {
@@ -65,7 +80,12 @@ class Node extends \Google\Model
     return $this->ip;
   }
   /**
-   * @param string
+   * Output only. Determined by state of the compute VM and postgres-service
+   * health. Compute VM state can have values listed in
+   * https://cloud.google.com/compute/docs/instances/instance-life-cycle and
+   * postgres-service health can have values: HEALTHY and UNHEALTHY.
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -79,7 +99,9 @@ class Node extends \Google\Model
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The Compute Engine zone of the VM e.g. "us-central1-b".
+   *
+   * @param string $zoneId
    */
   public function setZoneId($zoneId)
   {

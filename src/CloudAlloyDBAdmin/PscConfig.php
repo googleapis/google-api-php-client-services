@@ -20,16 +20,25 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class PscConfig extends \Google\Model
 {
   /**
+   * Optional. Create an instance that allows connections from Private Service
+   * Connect endpoints to the instance.
+   *
    * @var bool
    */
   public $pscEnabled;
   /**
+   * Output only. The project number that needs to be allowlisted on the network
+   * attachment to enable outbound connectivity.
+   *
    * @var string
    */
   public $serviceOwnedProjectNumber;
 
   /**
-   * @param bool
+   * Optional. Create an instance that allows connections from Private Service
+   * Connect endpoints to the instance.
+   *
+   * @param bool $pscEnabled
    */
   public function setPscEnabled($pscEnabled)
   {
@@ -43,7 +52,10 @@ class PscConfig extends \Google\Model
     return $this->pscEnabled;
   }
   /**
-   * @param string
+   * Output only. The project number that needs to be allowlisted on the network
+   * attachment to enable outbound connectivity.
+   *
+   * @param string $serviceOwnedProjectNumber
    */
   public function setServiceOwnedProjectNumber($serviceOwnedProjectNumber)
   {

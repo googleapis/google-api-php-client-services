@@ -20,24 +20,40 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class ConnectionInfo extends \Google\Model
 {
   /**
+   * Output only. The unique ID of the Instance.
+   *
    * @var string
    */
   public $instanceUid;
   /**
+   * Output only. The private network IP address for the Instance. This is the
+   * default IP for the instance and is always created (even if enable_public_ip
+   * is set). This is the connection endpoint for an end-user application.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * The name of the ConnectionInfo singleton resource, e.g.:
+   * projects/{project}/locations/{location}/clusters/instances/connectionInfo
+   * This field currently has no semantic meaning.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The public IP addresses for the Instance. This is available
+   * ONLY when enable_public_ip is set. This is the connection endpoint for an
+   * end-user application.
+   *
    * @var string
    */
   public $publicIpAddress;
 
   /**
-   * @param string
+   * Output only. The unique ID of the Instance.
+   *
+   * @param string $instanceUid
    */
   public function setInstanceUid($instanceUid)
   {
@@ -51,7 +67,11 @@ class ConnectionInfo extends \Google\Model
     return $this->instanceUid;
   }
   /**
-   * @param string
+   * Output only. The private network IP address for the Instance. This is the
+   * default IP for the instance and is always created (even if enable_public_ip
+   * is set). This is the connection endpoint for an end-user application.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -65,7 +85,11 @@ class ConnectionInfo extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * The name of the ConnectionInfo singleton resource, e.g.:
+   * projects/{project}/locations/{location}/clusters/instances/connectionInfo
+   * This field currently has no semantic meaning.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +103,11 @@ class ConnectionInfo extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The public IP addresses for the Instance. This is available
+   * ONLY when enable_public_ip is set. This is the connection endpoint for an
+   * end-user application.
+   *
+   * @param string $publicIpAddress
    */
   public function setPublicIpAddress($publicIpAddress)
   {

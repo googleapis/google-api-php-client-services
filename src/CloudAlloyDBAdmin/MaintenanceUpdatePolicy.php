@@ -26,7 +26,9 @@ class MaintenanceUpdatePolicy extends \Google\Collection
   protected $maintenanceWindowsDataType = 'array';
 
   /**
-   * @param DenyMaintenancePeriod[]
+   * Periods to deny maintenance. Currently limited to 1.
+   *
+   * @param DenyMaintenancePeriod[] $denyMaintenancePeriods
    */
   public function setDenyMaintenancePeriods($denyMaintenancePeriods)
   {
@@ -40,7 +42,9 @@ class MaintenanceUpdatePolicy extends \Google\Collection
     return $this->denyMaintenancePeriods;
   }
   /**
-   * @param MaintenanceWindow[]
+   * Preferred windows to perform maintenance. Currently limited to 1.
+   *
+   * @param MaintenanceWindow[] $maintenanceWindows
    */
   public function setMaintenanceWindows($maintenanceWindows)
   {

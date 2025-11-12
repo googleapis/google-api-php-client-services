@@ -20,6 +20,9 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class ClientConnectionConfig extends \Google\Model
 {
   /**
+   * Optional. Configuration to enforce connectors only (ex: AuthProxy)
+   * connections to the database.
+   *
    * @var bool
    */
   public $requireConnectors;
@@ -27,7 +30,10 @@ class ClientConnectionConfig extends \Google\Model
   protected $sslConfigDataType = '';
 
   /**
-   * @param bool
+   * Optional. Configuration to enforce connectors only (ex: AuthProxy)
+   * connections to the database.
+   *
+   * @param bool $requireConnectors
    */
   public function setRequireConnectors($requireConnectors)
   {
@@ -41,7 +47,9 @@ class ClientConnectionConfig extends \Google\Model
     return $this->requireConnectors;
   }
   /**
-   * @param SslConfig
+   * Optional. SSL configuration option for this instance.
+   *
+   * @param SslConfig $sslConfig
    */
   public function setSslConfig(SslConfig $sslConfig)
   {

@@ -20,6 +20,40 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class MaintenanceWindow extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const DAY_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_SUNDAY = 'SUNDAY';
+  /**
+   * Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
+   *
    * @var string
    */
   public $day;
@@ -27,21 +61,29 @@ class MaintenanceWindow extends \Google\Model
   protected $startTimeDataType = '';
 
   /**
-   * @param string
+   * Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY, etc.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_* $day
    */
   public function setDay($day)
   {
     $this->day = $day;
   }
   /**
-   * @return string
+   * @return self::DAY_*
    */
   public function getDay()
   {
     return $this->day;
   }
   /**
-   * @param GoogleTypeTimeOfDay
+   * Preferred time to start the maintenance operation on the specified day.
+   * Maintenance will start within 1 hour of this time.
+   *
+   * @param GoogleTypeTimeOfDay $startTime
    */
   public function setStartTime(GoogleTypeTimeOfDay $startTime)
   {

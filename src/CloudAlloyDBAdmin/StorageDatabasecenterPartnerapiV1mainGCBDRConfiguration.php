@@ -20,12 +20,16 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainGCBDRConfiguration extends \Google\Model
 {
   /**
+   * Whether the resource is managed by GCBDR.
+   *
    * @var bool
    */
   public $gcbdrManaged;
 
   /**
-   * @param bool
+   * Whether the resource is managed by GCBDR.
+   *
+   * @param bool $gcbdrManaged
    */
   public function setGcbdrManaged($gcbdrManaged)
   {
