@@ -32,7 +32,17 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
   protected $rerankConfigDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2Interval[]
+   * If you don't set the facet SearchRequest.FacetSpec.FacetKey.intervals in
+   * the request to a numerical attribute, then we use the computed intervals
+   * with rounded bounds obtained from all its product numerical attribute
+   * values. The computed intervals might not be ideal for some attributes.
+   * Therefore, we give you the option to overwrite them with the
+   * facet_intervals field. The maximum of facet intervals per CatalogAttribute
+   * is 40. Each interval must have a lower bound or an upper bound. If both
+   * bounds are provided, then the lower bound must be smaller or equal than the
+   * upper bound.
+   *
+   * @param GoogleCloudRetailV2Interval[] $facetIntervals
    */
   public function setFacetIntervals($facetIntervals)
   {
@@ -46,7 +56,11 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
     return $this->facetIntervals;
   }
   /**
-   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues[]
+   * Each instance represents a list of attribute values to ignore as facet
+   * values for a specific time range. The maximum number of instances per
+   * CatalogAttribute is 25.
+   *
+   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues[] $ignoredFacetValues
    */
   public function setIgnoredFacetValues($ignoredFacetValues)
   {
@@ -60,7 +74,10 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
     return $this->ignoredFacetValues;
   }
   /**
-   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacet
+   * Use this field only if you want to merge a facet key into another facet
+   * key.
+   *
+   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacet $mergedFacet
    */
   public function setMergedFacet(GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacet $mergedFacet)
   {
@@ -74,7 +91,15 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
     return $this->mergedFacet;
   }
   /**
-   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue[]
+   * Each instance replaces a list of facet values by a merged facet value. If a
+   * facet value is not in any list, then it will stay the same. To avoid
+   * conflicts, only paths of length 1 are accepted. In other words, if
+   * "dark_blue" merged into "BLUE", then the latter can't merge into "blues"
+   * because this would create a path of length 2. The maximum number of
+   * instances of MergedFacetValue per CatalogAttribute is 100. This feature is
+   * available only for textual custom attributes.
+   *
+   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue[] $mergedFacetValues
    */
   public function setMergedFacetValues($mergedFacetValues)
   {
@@ -88,7 +113,11 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
     return $this->mergedFacetValues;
   }
   /**
-   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig
+   * Set this field only if you want to rerank based on facet values engaged by
+   * the user for the current key. This option is only possible for custom
+   * facetable textual keys.
+   *
+   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig $rerankConfig
    */
   public function setRerankConfig(GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig $rerankConfig)
   {

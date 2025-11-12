@@ -20,20 +20,30 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2OutputConfigBigQueryDestination extends \Google\Model
 {
   /**
+   * Required. The ID of a BigQuery Dataset.
+   *
    * @var string
    */
   public $datasetId;
   /**
+   * Required. The prefix of exported BigQuery tables.
+   *
    * @var string
    */
   public $tableIdPrefix;
   /**
+   * Required. Describes the table type. The following values are supported: *
+   * `table`: A BigQuery native table. * `view`: A virtual table defined by a
+   * SQL query.
+   *
    * @var string
    */
   public $tableType;
 
   /**
-   * @param string
+   * Required. The ID of a BigQuery Dataset.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -47,7 +57,9 @@ class GoogleCloudRetailV2OutputConfigBigQueryDestination extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param string
+   * Required. The prefix of exported BigQuery tables.
+   *
+   * @param string $tableIdPrefix
    */
   public function setTableIdPrefix($tableIdPrefix)
   {
@@ -61,7 +73,11 @@ class GoogleCloudRetailV2OutputConfigBigQueryDestination extends \Google\Model
     return $this->tableIdPrefix;
   }
   /**
-   * @param string
+   * Required. Describes the table type. The following values are supported: *
+   * `table`: A BigQuery native table. * `view`: A virtual table defined by a
+   * SQL query.
+   *
+   * @param string $tableType
    */
   public function setTableType($tableType)
   {

@@ -21,12 +21,16 @@ class GoogleCloudRetailV2PinControlMetadataProductPins extends \Google\Collectio
 {
   protected $collection_key = 'productId';
   /**
+   * List of product ids which have associated pins.
+   *
    * @var string[]
    */
   public $productId;
 
   /**
-   * @param string[]
+   * List of product ids which have associated pins.
+   *
+   * @param string[] $productId
    */
   public function setProductId($productId)
   {

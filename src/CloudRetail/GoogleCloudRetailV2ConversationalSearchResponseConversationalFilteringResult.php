@@ -25,7 +25,12 @@ class GoogleCloudRetailV2ConversationalSearchResponseConversationalFilteringResu
   protected $followupQuestionDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2ConversationalSearchResponseConversationalFilteringResultAdditionalFilter
+   * This is the incremental additional filters implied from the current user
+   * answer. User should add the suggested addition filters to the previous
+   * ConversationalSearchRequest.search_params.filter and SearchRequest.filter,
+   * and use the merged filter in the follow up requests.
+   *
+   * @param GoogleCloudRetailV2ConversationalSearchResponseConversationalFilteringResultAdditionalFilter $additionalFilter
    */
   public function setAdditionalFilter(GoogleCloudRetailV2ConversationalSearchResponseConversationalFilteringResultAdditionalFilter $additionalFilter)
   {
@@ -39,7 +44,9 @@ class GoogleCloudRetailV2ConversationalSearchResponseConversationalFilteringResu
     return $this->additionalFilter;
   }
   /**
-   * @param GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestion
+   * The conversational filtering question.
+   *
+   * @param GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestion $followupQuestion
    */
   public function setFollowupQuestion(GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestion $followupQuestion)
   {

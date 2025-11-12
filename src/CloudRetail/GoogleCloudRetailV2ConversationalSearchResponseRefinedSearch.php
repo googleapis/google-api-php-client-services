@@ -20,12 +20,16 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ConversationalSearchResponseRefinedSearch extends \Google\Model
 {
   /**
+   * The query to be used for search.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param string
+   * The query to be used for search.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

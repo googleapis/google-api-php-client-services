@@ -21,16 +21,25 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig extends \Google
 {
   protected $collection_key = 'facetValues';
   /**
+   * If empty, rerank on all facet values for the current key. Otherwise, will
+   * rerank on the facet values from this list only.
+   *
    * @var string[]
    */
   public $facetValues;
   /**
+   * If set to true, then we also rerank the dynamic facets based on the facet
+   * values engaged by the user for the current attribute key during serving.
+   *
    * @var bool
    */
   public $rerankFacet;
 
   /**
-   * @param string[]
+   * If empty, rerank on all facet values for the current key. Otherwise, will
+   * rerank on the facet values from this list only.
+   *
+   * @param string[] $facetValues
    */
   public function setFacetValues($facetValues)
   {
@@ -44,7 +53,10 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig extends \Google
     return $this->facetValues;
   }
   /**
-   * @param bool
+   * If set to true, then we also rerank the dynamic facets based on the facet
+   * values engaged by the user for the current attribute key during serving.
+   *
+   * @param bool $rerankFacet
    */
   public function setRerankFacet($rerankFacet)
   {

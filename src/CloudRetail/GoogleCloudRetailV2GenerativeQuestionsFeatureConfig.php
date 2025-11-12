@@ -20,20 +20,33 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2GenerativeQuestionsFeatureConfig extends \Google\Model
 {
   /**
+   * Required. Resource name of the affected catalog. Format:
+   * projects/{project}/locations/{location}/catalogs/{catalog}
+   *
    * @var string
    */
   public $catalog;
   /**
+   * Optional. Determines whether questions will be used at serving time. Note:
+   * This feature cannot be enabled until initial data requirements are
+   * satisfied.
+   *
    * @var bool
    */
   public $featureEnabled;
   /**
+   * Optional. Minimum number of products in the response to trigger follow-up
+   * questions. Value must be 0 or positive.
+   *
    * @var int
    */
   public $minimumProducts;
 
   /**
-   * @param string
+   * Required. Resource name of the affected catalog. Format:
+   * projects/{project}/locations/{location}/catalogs/{catalog}
+   *
+   * @param string $catalog
    */
   public function setCatalog($catalog)
   {
@@ -47,7 +60,11 @@ class GoogleCloudRetailV2GenerativeQuestionsFeatureConfig extends \Google\Model
     return $this->catalog;
   }
   /**
-   * @param bool
+   * Optional. Determines whether questions will be used at serving time. Note:
+   * This feature cannot be enabled until initial data requirements are
+   * satisfied.
+   *
+   * @param bool $featureEnabled
    */
   public function setFeatureEnabled($featureEnabled)
   {
@@ -61,7 +78,10 @@ class GoogleCloudRetailV2GenerativeQuestionsFeatureConfig extends \Google\Model
     return $this->featureEnabled;
   }
   /**
-   * @param int
+   * Optional. Minimum number of products in the response to trigger follow-up
+   * questions. Value must be 0 or positive.
+   *
+   * @param int $minimumProducts
    */
   public function setMinimumProducts($minimumProducts)
   {

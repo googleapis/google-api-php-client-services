@@ -23,7 +23,10 @@ class GoogleCloudRetailV2ConversationalSearchRequestUserAnswerSelectedAnswer ext
   protected $productAttributeValueDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2ProductAttributeValue
+   * Optional. This field specifies the selected answer which is a attribute
+   * key-value.
+   *
+   * @param GoogleCloudRetailV2ProductAttributeValue $productAttributeValue
    */
   public function setProductAttributeValue(GoogleCloudRetailV2ProductAttributeValue $productAttributeValue)
   {

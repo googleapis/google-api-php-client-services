@@ -20,16 +20,22 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ConditionTimeRange extends \Google\Model
 {
   /**
+   * End of time range. Range is inclusive.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Start of time range. Range is inclusive.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * End of time range. Range is inclusive.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +49,9 @@ class GoogleCloudRetailV2ConditionTimeRange extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Start of time range. Range is inclusive.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

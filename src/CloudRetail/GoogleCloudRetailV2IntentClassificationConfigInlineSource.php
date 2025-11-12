@@ -24,7 +24,9 @@ class GoogleCloudRetailV2IntentClassificationConfigInlineSource extends \Google\
   protected $inlineForceIntentsDataType = 'array';
 
   /**
-   * @param GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent[]
+   * Optional. A list of inline force intent classifications.
+   *
+   * @param GoogleCloudRetailV2IntentClassificationConfigInlineForceIntent[] $inlineForceIntents
    */
   public function setInlineForceIntents($inlineForceIntents)
   {

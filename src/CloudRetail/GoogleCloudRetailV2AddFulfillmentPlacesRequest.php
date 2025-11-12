@@ -21,24 +21,54 @@ class GoogleCloudRetailV2AddFulfillmentPlacesRequest extends \Google\Collection
 {
   protected $collection_key = 'placeIds';
   /**
+   * The time when the fulfillment updates are issued, used to prevent out-of-
+   * order updates on fulfillment information. If not provided, the internal
+   * system time will be used.
+   *
    * @var string
    */
   public $addTime;
   /**
+   * If set to true, and the Product is not found, the fulfillment information
+   * will still be processed and retained for at most 1 day and processed once
+   * the Product is created. If set to false, a NOT_FOUND error is returned if
+   * the Product is not found.
+   *
    * @var bool
    */
   public $allowMissing;
   /**
+   * Required. The IDs for this type, such as the store IDs for "pickup-in-
+   * store" or the region IDs for "same-day-delivery" to be added for this type.
+   * Duplicate IDs will be automatically ignored. At least 1 value is required,
+   * and a maximum of 2000 values are allowed. Each value must be a string with
+   * a length limit of 10 characters, matching the pattern `[a-zA-Z0-9_-]+`,
+   * such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is
+   * returned. If the total number of place IDs exceeds 2000 for this type after
+   * adding, then the update will be rejected.
+   *
    * @var string[]
    */
   public $placeIds;
   /**
+   * Required. The fulfillment type, including commonly used types (such as
+   * pickup in store and same day delivery), and custom types. Supported values:
+   * * "pickup-in-store" * "ship-to-store" * "same-day-delivery" * "next-day-
+   * delivery" * "custom-type-1" * "custom-type-2" * "custom-type-3" * "custom-
+   * type-4" * "custom-type-5" If this field is set to an invalid value other
+   * than these, an INVALID_ARGUMENT error is returned. This field directly
+   * corresponds to Product.fulfillment_info.type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The time when the fulfillment updates are issued, used to prevent out-of-
+   * order updates on fulfillment information. If not provided, the internal
+   * system time will be used.
+   *
+   * @param string $addTime
    */
   public function setAddTime($addTime)
   {
@@ -52,7 +82,12 @@ class GoogleCloudRetailV2AddFulfillmentPlacesRequest extends \Google\Collection
     return $this->addTime;
   }
   /**
-   * @param bool
+   * If set to true, and the Product is not found, the fulfillment information
+   * will still be processed and retained for at most 1 day and processed once
+   * the Product is created. If set to false, a NOT_FOUND error is returned if
+   * the Product is not found.
+   *
+   * @param bool $allowMissing
    */
   public function setAllowMissing($allowMissing)
   {
@@ -66,7 +101,16 @@ class GoogleCloudRetailV2AddFulfillmentPlacesRequest extends \Google\Collection
     return $this->allowMissing;
   }
   /**
-   * @param string[]
+   * Required. The IDs for this type, such as the store IDs for "pickup-in-
+   * store" or the region IDs for "same-day-delivery" to be added for this type.
+   * Duplicate IDs will be automatically ignored. At least 1 value is required,
+   * and a maximum of 2000 values are allowed. Each value must be a string with
+   * a length limit of 10 characters, matching the pattern `[a-zA-Z0-9_-]+`,
+   * such as "store1" or "REGION-2". Otherwise, an INVALID_ARGUMENT error is
+   * returned. If the total number of place IDs exceeds 2000 for this type after
+   * adding, then the update will be rejected.
+   *
+   * @param string[] $placeIds
    */
   public function setPlaceIds($placeIds)
   {
@@ -80,7 +124,15 @@ class GoogleCloudRetailV2AddFulfillmentPlacesRequest extends \Google\Collection
     return $this->placeIds;
   }
   /**
-   * @param string
+   * Required. The fulfillment type, including commonly used types (such as
+   * pickup in store and same day delivery), and custom types. Supported values:
+   * * "pickup-in-store" * "ship-to-store" * "same-day-delivery" * "next-day-
+   * delivery" * "custom-type-1" * "custom-type-2" * "custom-type-3" * "custom-
+   * type-4" * "custom-type-5" If this field is set to an invalid value other
+   * than these, an INVALID_ARGUMENT error is returned. This field directly
+   * corresponds to Product.fulfillment_info.type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

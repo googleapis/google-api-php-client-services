@@ -24,7 +24,9 @@ class GoogleCloudRetailV2ListGenerativeQuestionConfigsResponse extends \Google\C
   protected $generativeQuestionConfigsDataType = 'array';
 
   /**
-   * @param GoogleCloudRetailV2GenerativeQuestionConfig[]
+   * All the questions for a given catalog.
+   *
+   * @param GoogleCloudRetailV2GenerativeQuestionConfig[] $generativeQuestionConfigs
    */
   public function setGenerativeQuestionConfigs($generativeQuestionConfigs)
   {

@@ -21,12 +21,16 @@ class GoogleCloudRetailV2CompleteQueryResponseAttributeResult extends \Google\Co
 {
   protected $collection_key = 'suggestions';
   /**
+   * The list of suggestions for the attribute.
+   *
    * @var string[]
    */
   public $suggestions;
 
   /**
-   * @param string[]
+   * The list of suggestions for the attribute.
+   *
+   * @param string[] $suggestions
    */
   public function setSuggestions($suggestions)
   {

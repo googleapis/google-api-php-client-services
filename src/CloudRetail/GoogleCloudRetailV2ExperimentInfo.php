@@ -20,6 +20,11 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ExperimentInfo extends \Google\Model
 {
   /**
+   * The fully qualified resource name of the experiment that provides the
+   * serving config under test, should an active experiment exist. For example: 
+   * `projects/locations/global/catalogs/default_catalog/experiments/experiment_
+   * id`
+   *
    * @var string
    */
   public $experiment;
@@ -27,7 +32,12 @@ class GoogleCloudRetailV2ExperimentInfo extends \Google\Model
   protected $servingConfigExperimentDataType = '';
 
   /**
-   * @param string
+   * The fully qualified resource name of the experiment that provides the
+   * serving config under test, should an active experiment exist. For example: 
+   * `projects/locations/global/catalogs/default_catalog/experiments/experiment_
+   * id`
+   *
+   * @param string $experiment
    */
   public function setExperiment($experiment)
   {
@@ -41,7 +51,9 @@ class GoogleCloudRetailV2ExperimentInfo extends \Google\Model
     return $this->experiment;
   }
   /**
-   * @param GoogleCloudRetailV2ExperimentInfoServingConfigExperiment
+   * A/B test between existing Cloud Retail Search ServingConfigs.
+   *
+   * @param GoogleCloudRetailV2ExperimentInfoServingConfigExperiment $servingConfigExperiment
    */
   public function setServingConfigExperiment(GoogleCloudRetailV2ExperimentInfoServingConfigExperiment $servingConfigExperiment)
   {

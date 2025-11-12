@@ -21,10 +21,18 @@ class GoogleCloudRetailV2IntentClassificationConfig extends \Google\Collection
 {
   protected $collection_key = 'example';
   /**
+   * Optional. A list of keywords that will be used to classify the query to the
+   * "BLOCKLISTED" intent type. The keywords are case insensitive.
+   *
    * @var string[]
    */
   public $blocklistKeywords;
   /**
+   * Optional. A list of intent types that will be disabled for this customer.
+   * The intent types must match one of the predefined intent types defined at h
+   * ttps://cloud.google.com/retail/docs/reference/rpc/google.cloud.retail.v2alp
+   * ha#querytype
+   *
    * @var string[]
    */
   public $disabledIntentTypes;
@@ -33,12 +41,19 @@ class GoogleCloudRetailV2IntentClassificationConfig extends \Google\Collection
   protected $inlineSourceType = GoogleCloudRetailV2IntentClassificationConfigInlineSource::class;
   protected $inlineSourceDataType = '';
   /**
+   * Optional. Customers can use the preamble to specify any requirements for
+   * blocklisting intent classification. This preamble will be added to the
+   * blocklisting intent classification model prompt.
+   *
    * @var string
    */
   public $modelPreamble;
 
   /**
-   * @param string[]
+   * Optional. A list of keywords that will be used to classify the query to the
+   * "BLOCKLISTED" intent type. The keywords are case insensitive.
+   *
+   * @param string[] $blocklistKeywords
    */
   public function setBlocklistKeywords($blocklistKeywords)
   {
@@ -52,7 +67,12 @@ class GoogleCloudRetailV2IntentClassificationConfig extends \Google\Collection
     return $this->blocklistKeywords;
   }
   /**
-   * @param string[]
+   * Optional. A list of intent types that will be disabled for this customer.
+   * The intent types must match one of the predefined intent types defined at h
+   * ttps://cloud.google.com/retail/docs/reference/rpc/google.cloud.retail.v2alp
+   * ha#querytype
+   *
+   * @param string[] $disabledIntentTypes
    */
   public function setDisabledIntentTypes($disabledIntentTypes)
   {
@@ -66,7 +86,9 @@ class GoogleCloudRetailV2IntentClassificationConfig extends \Google\Collection
     return $this->disabledIntentTypes;
   }
   /**
-   * @param GoogleCloudRetailV2IntentClassificationConfigExample[]
+   * Optional. A list of examples for intent classification.
+   *
+   * @param GoogleCloudRetailV2IntentClassificationConfigExample[] $example
    */
   public function setExample($example)
   {
@@ -80,7 +102,9 @@ class GoogleCloudRetailV2IntentClassificationConfig extends \Google\Collection
     return $this->example;
   }
   /**
-   * @param GoogleCloudRetailV2IntentClassificationConfigInlineSource
+   * Optional. Inline source for intent classifications.
+   *
+   * @param GoogleCloudRetailV2IntentClassificationConfigInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudRetailV2IntentClassificationConfigInlineSource $inlineSource)
   {
@@ -94,7 +118,11 @@ class GoogleCloudRetailV2IntentClassificationConfig extends \Google\Collection
     return $this->inlineSource;
   }
   /**
-   * @param string
+   * Optional. Customers can use the preamble to specify any requirements for
+   * blocklisting intent classification. This preamble will be added to the
+   * blocklisting intent classification model prompt.
+   *
+   * @param string $modelPreamble
    */
   public function setModelPreamble($modelPreamble)
   {

@@ -20,20 +20,29 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2GetDefaultBranchResponse extends \Google\Model
 {
   /**
+   * Full resource name of the branch id currently set as default branch.
+   *
    * @var string
    */
   public $branch;
   /**
+   * This corresponds to SetDefaultBranchRequest.note field, when this branch
+   * was set as default.
+   *
    * @var string
    */
   public $note;
   /**
+   * The time when this branch is set to default.
+   *
    * @var string
    */
   public $setTime;
 
   /**
-   * @param string
+   * Full resource name of the branch id currently set as default branch.
+   *
+   * @param string $branch
    */
   public function setBranch($branch)
   {
@@ -47,7 +56,10 @@ class GoogleCloudRetailV2GetDefaultBranchResponse extends \Google\Model
     return $this->branch;
   }
   /**
-   * @param string
+   * This corresponds to SetDefaultBranchRequest.note field, when this branch
+   * was set as default.
+   *
+   * @param string $note
    */
   public function setNote($note)
   {
@@ -61,7 +73,9 @@ class GoogleCloudRetailV2GetDefaultBranchResponse extends \Google\Model
     return $this->note;
   }
   /**
-   * @param string
+   * The time when this branch is set to default.
+   *
+   * @param string $setTime
    */
   public function setSetTime($setTime)
   {

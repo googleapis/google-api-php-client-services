@@ -20,16 +20,25 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ConditionQueryTerm extends \Google\Model
 {
   /**
+   * Whether this is supposed to be a full or partial match.
+   *
    * @var bool
    */
   public $fullMatch;
   /**
+   * The value of the term to match on. Value cannot be empty. Value can have at
+   * most 3 terms if specified as a partial match. Each space separated string
+   * is considered as one term. For example, "a b c" is 3 terms and allowed, but
+   * " a b c d" is 4 terms and not allowed for a partial match.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param bool
+   * Whether this is supposed to be a full or partial match.
+   *
+   * @param bool $fullMatch
    */
   public function setFullMatch($fullMatch)
   {
@@ -43,7 +52,12 @@ class GoogleCloudRetailV2ConditionQueryTerm extends \Google\Model
     return $this->fullMatch;
   }
   /**
-   * @param string
+   * The value of the term to match on. Value cannot be empty. Value can have at
+   * most 3 terms if specified as a partial match. Each space separated string
+   * is considered as one term. For example, "a b c" is 3 terms and allowed, but
+   * " a b c d" is 4 terms and not allowed for a partial match.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

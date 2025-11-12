@@ -21,20 +21,38 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues extends \
 {
   protected $collection_key = 'values';
   /**
+   * If start time is empty and end time is not empty, then ignore these facet
+   * values before end time.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Time range for the current list of facet values to ignore. If multiple time
+   * ranges are specified for an facet value for the current attribute, consider
+   * all of them. If both are empty, ignore always. If start time and end time
+   * are set, then start time must be before end time. If start time is not
+   * empty and end time is empty, then will ignore these facet values after the
+   * start time.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * List of facet values to ignore for the following time range. The facet
+   * values are the same as the attribute values. There is a limit of 10 values
+   * per instance of IgnoredFacetValues. Each value can have at most 128
+   * characters.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * If start time is empty and end time is not empty, then ignore these facet
+   * values before end time.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -48,7 +66,14 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues extends \
     return $this->endTime;
   }
   /**
-   * @param string
+   * Time range for the current list of facet values to ignore. If multiple time
+   * ranges are specified for an facet value for the current attribute, consider
+   * all of them. If both are empty, ignore always. If start time and end time
+   * are set, then start time must be before end time. If start time is not
+   * empty and end time is empty, then will ignore these facet values after the
+   * start time.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -62,7 +87,12 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues extends \
     return $this->startTime;
   }
   /**
-   * @param string[]
+   * List of facet values to ignore for the following time range. The facet
+   * values are the same as the attribute values. There is a limit of 10 values
+   * per instance of IgnoredFacetValues. Each value can have at most 128
+   * characters.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

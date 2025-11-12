@@ -22,20 +22,33 @@ class GoogleCloudRetailV2ConversationalSearchRequestSearchParams extends \Google
   protected $boostSpecType = GoogleCloudRetailV2SearchRequestBoostSpec::class;
   protected $boostSpecDataType = '';
   /**
+   * Optional. The canonical filter string to restrict search results. The
+   * syntax of the canonical filter string is the same as
+   * SearchRequest.canonical_filter.
+   *
    * @var string
    */
   public $canonicalFilter;
   /**
+   * Optional. The filter string to restrict search results. The syntax of the
+   * filter string is the same as SearchRequest.filter.
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. The sort string to specify the sorting of search results. The
+   * syntax of the sort string is the same as SearchRequest.sort.
+   *
    * @var string
    */
   public $sortBy;
 
   /**
-   * @param GoogleCloudRetailV2SearchRequestBoostSpec
+   * Optional. The boost spec to specify the boosting of search results. The
+   * syntax of the boost spec is the same as SearchRequest.boost_spec.
+   *
+   * @param GoogleCloudRetailV2SearchRequestBoostSpec $boostSpec
    */
   public function setBoostSpec(GoogleCloudRetailV2SearchRequestBoostSpec $boostSpec)
   {
@@ -49,7 +62,11 @@ class GoogleCloudRetailV2ConversationalSearchRequestSearchParams extends \Google
     return $this->boostSpec;
   }
   /**
-   * @param string
+   * Optional. The canonical filter string to restrict search results. The
+   * syntax of the canonical filter string is the same as
+   * SearchRequest.canonical_filter.
+   *
+   * @param string $canonicalFilter
    */
   public function setCanonicalFilter($canonicalFilter)
   {
@@ -63,7 +80,10 @@ class GoogleCloudRetailV2ConversationalSearchRequestSearchParams extends \Google
     return $this->canonicalFilter;
   }
   /**
-   * @param string
+   * Optional. The filter string to restrict search results. The syntax of the
+   * filter string is the same as SearchRequest.filter.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -77,7 +97,10 @@ class GoogleCloudRetailV2ConversationalSearchRequestSearchParams extends \Google
     return $this->filter;
   }
   /**
-   * @param string
+   * Optional. The sort string to specify the sorting of search results. The
+   * syntax of the sort string is the same as SearchRequest.sort.
+   *
+   * @param string $sortBy
    */
   public function setSortBy($sortBy)
   {

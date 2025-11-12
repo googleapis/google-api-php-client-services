@@ -22,12 +22,19 @@ class GoogleCloudRetailV2ConversationalSearchRequestUserAnswer extends \Google\M
   protected $selectedAnswerType = GoogleCloudRetailV2ConversationalSearchRequestUserAnswerSelectedAnswer::class;
   protected $selectedAnswerDataType = '';
   /**
+   * This field specifies the incremental input text from the user during the
+   * conversational search.
+   *
    * @var string
    */
   public $textAnswer;
 
   /**
-   * @param GoogleCloudRetailV2ConversationalSearchRequestUserAnswerSelectedAnswer
+   * Optional. This field specifies the selected answer during the
+   * conversational search. This should be a subset of
+   * ConversationalSearchResponse.followup_question.suggested_answers.
+   *
+   * @param GoogleCloudRetailV2ConversationalSearchRequestUserAnswerSelectedAnswer $selectedAnswer
    */
   public function setSelectedAnswer(GoogleCloudRetailV2ConversationalSearchRequestUserAnswerSelectedAnswer $selectedAnswer)
   {
@@ -41,7 +48,10 @@ class GoogleCloudRetailV2ConversationalSearchRequestUserAnswer extends \Google\M
     return $this->selectedAnswer;
   }
   /**
-   * @param string
+   * This field specifies the incremental input text from the user during the
+   * conversational search.
+   *
+   * @param string $textAnswer
    */
   public function setTextAnswer($textAnswer)
   {

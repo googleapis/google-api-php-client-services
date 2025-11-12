@@ -21,6 +21,9 @@ class GoogleCloudRetailV2ListProductsResponse extends \Google\Collection
 {
   protected $collection_key = 'products';
   /**
+   * A token that can be sent as ListProductsRequest.page_token to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudRetailV2ListProductsResponse extends \Google\Collection
   protected $productsDataType = 'array';
 
   /**
-   * @param string
+   * A token that can be sent as ListProductsRequest.page_token to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudRetailV2ListProductsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudRetailV2Product[]
+   * The Products.
+   *
+   * @param GoogleCloudRetailV2Product[] $products
    */
   public function setProducts($products)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2AddControlRequest extends \Google\Model
 {
   /**
+   * Required. The id of the control to apply. Assumed to be in the same catalog
+   * as the serving config - if id is not found a NOT_FOUND error is returned.
+   *
    * @var string
    */
   public $controlId;
 
   /**
-   * @param string
+   * Required. The id of the control to apply. Assumed to be in the same catalog
+   * as the serving config - if id is not found a NOT_FOUND error is returned.
+   *
+   * @param string $controlId
    */
   public function setControlId($controlId)
   {

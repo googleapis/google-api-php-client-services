@@ -20,30 +20,72 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2BigQuerySource extends \Google\Model
 {
   /**
+   * The schema to use when parsing the data from the source. Supported values
+   * for product imports: * `product` (default): One JSON Product per line. Each
+   * product must have a valid Product.id. * `product_merchant_center`: See
+   * [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-
+   * catalog#mc). Supported values for user events imports: * `user_event`
+   * (default): One JSON UserEvent per line. * `user_event_ga360`: The schema is
+   * available here: https://support.google.com/analytics/answer/3437719. *
+   * `user_event_ga4`: The schema is available here:
+   * https://support.google.com/analytics/answer/7029846. Supported values for
+   * autocomplete imports: * `suggestions` (default): One JSON completion
+   * suggestion per line. * `denylist`: One JSON deny suggestion per line. *
+   * `allowlist`: One JSON allow suggestion per line.
+   *
    * @var string
    */
   public $dataSchema;
   /**
+   * Required. The BigQuery data set to copy the data from with a length limit
+   * of 1,024 characters.
+   *
    * @var string
    */
   public $datasetId;
   /**
+   * Intermediate Cloud Storage directory used for the import with a length
+   * limit of 2,000 characters. Can be specified if one wants to have the
+   * BigQuery export to a specific Cloud Storage directory.
+   *
    * @var string
    */
   public $gcsStagingDir;
   protected $partitionDateType = GoogleTypeDate::class;
   protected $partitionDateDataType = '';
   /**
+   * The project ID (can be project # or ID) that the BigQuery source is in with
+   * a length limit of 128 characters. If not specified, inherits the project ID
+   * from the parent request.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Required. The BigQuery table to copy the data from with a length limit of
+   * 1,024 characters.
+   *
    * @var string
    */
   public $tableId;
 
   /**
-   * @param string
+   * The schema to use when parsing the data from the source. Supported values
+   * for product imports: * `product` (default): One JSON Product per line. Each
+   * product must have a valid Product.id. * `product_merchant_center`: See
+   * [Importing catalog data from Merchant
+   * Center](https://cloud.google.com/retail/recommendations-ai/docs/upload-
+   * catalog#mc). Supported values for user events imports: * `user_event`
+   * (default): One JSON UserEvent per line. * `user_event_ga360`: The schema is
+   * available here: https://support.google.com/analytics/answer/3437719. *
+   * `user_event_ga4`: The schema is available here:
+   * https://support.google.com/analytics/answer/7029846. Supported values for
+   * autocomplete imports: * `suggestions` (default): One JSON completion
+   * suggestion per line. * `denylist`: One JSON deny suggestion per line. *
+   * `allowlist`: One JSON allow suggestion per line.
+   *
+   * @param string $dataSchema
    */
   public function setDataSchema($dataSchema)
   {
@@ -57,7 +99,10 @@ class GoogleCloudRetailV2BigQuerySource extends \Google\Model
     return $this->dataSchema;
   }
   /**
-   * @param string
+   * Required. The BigQuery data set to copy the data from with a length limit
+   * of 1,024 characters.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -71,7 +116,11 @@ class GoogleCloudRetailV2BigQuerySource extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param string
+   * Intermediate Cloud Storage directory used for the import with a length
+   * limit of 2,000 characters. Can be specified if one wants to have the
+   * BigQuery export to a specific Cloud Storage directory.
+   *
+   * @param string $gcsStagingDir
    */
   public function setGcsStagingDir($gcsStagingDir)
   {
@@ -85,7 +134,9 @@ class GoogleCloudRetailV2BigQuerySource extends \Google\Model
     return $this->gcsStagingDir;
   }
   /**
-   * @param GoogleTypeDate
+   * BigQuery time partitioned table's _PARTITIONDATE in YYYY-MM-DD format.
+   *
+   * @param GoogleTypeDate $partitionDate
    */
   public function setPartitionDate(GoogleTypeDate $partitionDate)
   {
@@ -99,7 +150,11 @@ class GoogleCloudRetailV2BigQuerySource extends \Google\Model
     return $this->partitionDate;
   }
   /**
-   * @param string
+   * The project ID (can be project # or ID) that the BigQuery source is in with
+   * a length limit of 128 characters. If not specified, inherits the project ID
+   * from the parent request.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -113,7 +168,10 @@ class GoogleCloudRetailV2BigQuerySource extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Required. The BigQuery table to copy the data from with a length limit of
+   * 1,024 characters.
+   *
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {

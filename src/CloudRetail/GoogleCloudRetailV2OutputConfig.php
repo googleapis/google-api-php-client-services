@@ -25,7 +25,9 @@ class GoogleCloudRetailV2OutputConfig extends \Google\Model
   protected $gcsDestinationDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2OutputConfigBigQueryDestination
+   * The BigQuery location where the output is to be written to.
+   *
+   * @param GoogleCloudRetailV2OutputConfigBigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(GoogleCloudRetailV2OutputConfigBigQueryDestination $bigqueryDestination)
   {
@@ -39,7 +41,9 @@ class GoogleCloudRetailV2OutputConfig extends \Google\Model
     return $this->bigqueryDestination;
   }
   /**
-   * @param GoogleCloudRetailV2OutputConfigGcsDestination
+   * The Google Cloud Storage location where the output is to be written to.
+   *
+   * @param GoogleCloudRetailV2OutputConfigGcsDestination $gcsDestination
    */
   public function setGcsDestination(GoogleCloudRetailV2OutputConfigGcsDestination $gcsDestination)
   {

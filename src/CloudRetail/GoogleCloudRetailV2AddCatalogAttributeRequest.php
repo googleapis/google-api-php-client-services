@@ -23,7 +23,9 @@ class GoogleCloudRetailV2AddCatalogAttributeRequest extends \Google\Model
   protected $catalogAttributeDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2CatalogAttribute
+   * Required. The CatalogAttribute to add.
+   *
+   * @param GoogleCloudRetailV2CatalogAttribute $catalogAttribute
    */
   public function setCatalogAttribute(GoogleCloudRetailV2CatalogAttribute $catalogAttribute)
   {

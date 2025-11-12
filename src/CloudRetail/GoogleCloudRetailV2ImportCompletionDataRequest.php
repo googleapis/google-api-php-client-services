@@ -22,12 +22,19 @@ class GoogleCloudRetailV2ImportCompletionDataRequest extends \Google\Model
   protected $inputConfigType = GoogleCloudRetailV2CompletionDataInputConfig::class;
   protected $inputConfigDataType = '';
   /**
+   * Pub/Sub topic for receiving notification. If this field is set, when the
+   * import is finished, a notification is sent to specified Pub/Sub topic. The
+   * message data is JSON string of a Operation. Format of the Pub/Sub topic is
+   * `projects/{project}/topics/{topic}`.
+   *
    * @var string
    */
   public $notificationPubsubTopic;
 
   /**
-   * @param GoogleCloudRetailV2CompletionDataInputConfig
+   * Required. The desired input location of the data.
+   *
+   * @param GoogleCloudRetailV2CompletionDataInputConfig $inputConfig
    */
   public function setInputConfig(GoogleCloudRetailV2CompletionDataInputConfig $inputConfig)
   {
@@ -41,7 +48,12 @@ class GoogleCloudRetailV2ImportCompletionDataRequest extends \Google\Model
     return $this->inputConfig;
   }
   /**
-   * @param string
+   * Pub/Sub topic for receiving notification. If this field is set, when the
+   * import is finished, a notification is sent to specified Pub/Sub topic. The
+   * message data is JSON string of a Operation. Format of the Pub/Sub topic is
+   * `projects/{project}/topics/{topic}`.
+   *
+   * @param string $notificationPubsubTopic
    */
   public function setNotificationPubsubTopic($notificationPubsubTopic)
   {

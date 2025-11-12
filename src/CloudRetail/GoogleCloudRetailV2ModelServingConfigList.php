@@ -21,12 +21,18 @@ class GoogleCloudRetailV2ModelServingConfigList extends \Google\Collection
 {
   protected $collection_key = 'servingConfigIds';
   /**
+   * Optional. A set of valid serving configs that may be used for
+   * `PAGE_OPTIMIZATION`.
+   *
    * @var string[]
    */
   public $servingConfigIds;
 
   /**
-   * @param string[]
+   * Optional. A set of valid serving configs that may be used for
+   * `PAGE_OPTIMIZATION`.
+   *
+   * @param string[] $servingConfigIds
    */
   public function setServingConfigIds($servingConfigIds)
   {

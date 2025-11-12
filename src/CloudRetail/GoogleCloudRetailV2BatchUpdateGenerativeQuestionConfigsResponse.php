@@ -24,7 +24,9 @@ class GoogleCloudRetailV2BatchUpdateGenerativeQuestionConfigsResponse extends \G
   protected $generativeQuestionConfigsDataType = 'array';
 
   /**
-   * @param GoogleCloudRetailV2GenerativeQuestionConfig[]
+   * Optional. The updates question configs.
+   *
+   * @param GoogleCloudRetailV2GenerativeQuestionConfig[] $generativeQuestionConfigs
    */
   public function setGenerativeQuestionConfigs($generativeQuestionConfigs)
   {

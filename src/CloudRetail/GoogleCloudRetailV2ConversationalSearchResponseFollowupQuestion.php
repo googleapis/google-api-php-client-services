@@ -21,6 +21,8 @@ class GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestion extends \G
 {
   protected $collection_key = 'suggestedAnswers';
   /**
+   * The conversational followup question generated for Intent refinement.
+   *
    * @var string
    */
   public $followupQuestion;
@@ -28,7 +30,9 @@ class GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestion extends \G
   protected $suggestedAnswersDataType = 'array';
 
   /**
-   * @param string
+   * The conversational followup question generated for Intent refinement.
+   *
+   * @param string $followupQuestion
    */
   public function setFollowupQuestion($followupQuestion)
   {
@@ -42,7 +46,9 @@ class GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestion extends \G
     return $this->followupQuestion;
   }
   /**
-   * @param GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestionSuggestedAnswer[]
+   * The answer options provided to client for the follow-up question.
+   *
+   * @param GoogleCloudRetailV2ConversationalSearchResponseFollowupQuestionSuggestedAnswer[] $suggestedAnswers
    */
   public function setSuggestedAnswers($suggestedAnswers)
   {

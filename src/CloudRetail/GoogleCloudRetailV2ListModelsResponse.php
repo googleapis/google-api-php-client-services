@@ -23,12 +23,16 @@ class GoogleCloudRetailV2ListModelsResponse extends \Google\Collection
   protected $modelsType = GoogleCloudRetailV2Model::class;
   protected $modelsDataType = 'array';
   /**
+   * Pagination token, if not returned indicates the last page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudRetailV2Model[]
+   * List of Models.
+   *
+   * @param GoogleCloudRetailV2Model[] $models
    */
   public function setModels($models)
   {
@@ -42,7 +46,9 @@ class GoogleCloudRetailV2ListModelsResponse extends \Google\Collection
     return $this->models;
   }
   /**
-   * @param string
+   * Pagination token, if not returned indicates the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

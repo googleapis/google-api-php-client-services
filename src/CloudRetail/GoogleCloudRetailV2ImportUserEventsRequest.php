@@ -25,7 +25,10 @@ class GoogleCloudRetailV2ImportUserEventsRequest extends \Google\Model
   protected $inputConfigDataType = '';
 
   /**
-   * @param GoogleCloudRetailV2ImportErrorsConfig
+   * The desired location of errors incurred during the Import. Cannot be set
+   * for inline user event imports.
+   *
+   * @param GoogleCloudRetailV2ImportErrorsConfig $errorsConfig
    */
   public function setErrorsConfig(GoogleCloudRetailV2ImportErrorsConfig $errorsConfig)
   {
@@ -39,7 +42,9 @@ class GoogleCloudRetailV2ImportUserEventsRequest extends \Google\Model
     return $this->errorsConfig;
   }
   /**
-   * @param GoogleCloudRetailV2UserEventInputConfig
+   * Required. The desired input location of the data.
+   *
+   * @param GoogleCloudRetailV2UserEventInputConfig $inputConfig
    */
   public function setInputConfig(GoogleCloudRetailV2UserEventInputConfig $inputConfig)
   {

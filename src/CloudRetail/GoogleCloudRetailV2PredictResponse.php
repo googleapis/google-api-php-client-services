@@ -21,22 +21,34 @@ class GoogleCloudRetailV2PredictResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * A unique attribution token. This should be included in the UserEvent logs
+   * resulting from this recommendation, which enables accurate attribution of
+   * recommendation model performance.
+   *
    * @var string
    */
   public $attributionToken;
   /**
+   * IDs of products in the request that were missing from the inventory.
+   *
    * @var string[]
    */
   public $missingIds;
   protected $resultsType = GoogleCloudRetailV2PredictResponsePredictionResult::class;
   protected $resultsDataType = 'array';
   /**
+   * True if the validateOnly property was set in the request.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string
+   * A unique attribution token. This should be included in the UserEvent logs
+   * resulting from this recommendation, which enables accurate attribution of
+   * recommendation model performance.
+   *
+   * @param string $attributionToken
    */
   public function setAttributionToken($attributionToken)
   {
@@ -50,7 +62,9 @@ class GoogleCloudRetailV2PredictResponse extends \Google\Collection
     return $this->attributionToken;
   }
   /**
-   * @param string[]
+   * IDs of products in the request that were missing from the inventory.
+   *
+   * @param string[] $missingIds
    */
   public function setMissingIds($missingIds)
   {
@@ -64,7 +78,10 @@ class GoogleCloudRetailV2PredictResponse extends \Google\Collection
     return $this->missingIds;
   }
   /**
-   * @param GoogleCloudRetailV2PredictResponsePredictionResult[]
+   * A list of recommended products. The order represents the ranking (from the
+   * most relevant product to the least).
+   *
+   * @param GoogleCloudRetailV2PredictResponsePredictionResult[] $results
    */
   public function setResults($results)
   {
@@ -78,7 +95,9 @@ class GoogleCloudRetailV2PredictResponse extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param bool
+   * True if the validateOnly property was set in the request.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

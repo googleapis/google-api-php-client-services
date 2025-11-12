@@ -23,12 +23,17 @@ class GoogleCloudRetailV2ListCatalogsResponse extends \Google\Collection
   protected $catalogsType = GoogleCloudRetailV2Catalog::class;
   protected $catalogsDataType = 'array';
   /**
+   * A token that can be sent as ListCatalogsRequest.page_token to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudRetailV2Catalog[]
+   * All the customer's Catalogs.
+   *
+   * @param GoogleCloudRetailV2Catalog[] $catalogs
    */
   public function setCatalogs($catalogs)
   {
@@ -42,7 +47,10 @@ class GoogleCloudRetailV2ListCatalogsResponse extends \Google\Collection
     return $this->catalogs;
   }
   /**
-   * @param string
+   * A token that can be sent as ListCatalogsRequest.page_token to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

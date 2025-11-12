@@ -21,6 +21,8 @@ class GoogleCloudRetailV2ListServingConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'servingConfigs';
   /**
+   * Pagination token, if not returned indicates the last page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudRetailV2ListServingConfigsResponse extends \Google\Collection
   protected $servingConfigsDataType = 'array';
 
   /**
-   * @param string
+   * Pagination token, if not returned indicates the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudRetailV2ListServingConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudRetailV2ServingConfig[]
+   * All the ServingConfigs for a given catalog.
+   *
+   * @param GoogleCloudRetailV2ServingConfig[] $servingConfigs
    */
   public function setServingConfigs($servingConfigs)
   {

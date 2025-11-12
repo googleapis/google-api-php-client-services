@@ -21,16 +21,26 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue extends \Go
 {
   protected $collection_key = 'values';
   /**
+   * All the previous values are replaced by this merged facet value. This
+   * merged_value must be non-empty and can have up to 128 characters.
+   *
    * @var string
    */
   public $mergedValue;
   /**
+   * All the facet values that are replaces by the same merged_value that
+   * follows. The maximum number of values per MergedFacetValue is 25. Each
+   * value can have up to 128 characters.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * All the previous values are replaced by this merged facet value. This
+   * merged_value must be non-empty and can have up to 128 characters.
+   *
+   * @param string $mergedValue
    */
   public function setMergedValue($mergedValue)
   {
@@ -44,7 +54,11 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue extends \Go
     return $this->mergedValue;
   }
   /**
-   * @param string[]
+   * All the facet values that are replaces by the same merged_value that
+   * follows. The maximum number of values per MergedFacetValue is 25. Each
+   * value can have up to 128 characters.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

@@ -20,16 +20,28 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ExperimentInfoServingConfigExperiment extends \Google\Model
 {
   /**
+   * The fully qualified resource name of the serving config
+   * `Experiment.VariantArm.serving_config_id` responsible for generating the
+   * search response. For example: `projects/locations/catalogs/servingConfigs`.
+   *
    * @var string
    */
   public $experimentServingConfig;
   /**
+   * The fully qualified resource name of the original SearchRequest.placement
+   * in the search request prior to reassignment by experiment API. For example:
+   * `projects/locations/catalogs/servingConfigs`.
+   *
    * @var string
    */
   public $originalServingConfig;
 
   /**
-   * @param string
+   * The fully qualified resource name of the serving config
+   * `Experiment.VariantArm.serving_config_id` responsible for generating the
+   * search response. For example: `projects/locations/catalogs/servingConfigs`.
+   *
+   * @param string $experimentServingConfig
    */
   public function setExperimentServingConfig($experimentServingConfig)
   {
@@ -43,7 +55,11 @@ class GoogleCloudRetailV2ExperimentInfoServingConfigExperiment extends \Google\M
     return $this->experimentServingConfig;
   }
   /**
-   * @param string
+   * The fully qualified resource name of the original SearchRequest.placement
+   * in the search request prior to reassignment by experiment API. For example:
+   * `projects/locations/catalogs/servingConfigs`.
+   *
+   * @param string $originalServingConfig
    */
   public function setOriginalServingConfig($originalServingConfig)
   {
