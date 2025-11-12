@@ -24,7 +24,9 @@ class BatchGetServicesResponse extends \Google\Collection
   protected $servicesDataType = 'array';
 
   /**
-   * @param GoogleApiServiceusageV1Service[]
+   * The requested Service states.
+   *
+   * @param GoogleApiServiceusageV1Service[] $services
    */
   public function setServices($services)
   {

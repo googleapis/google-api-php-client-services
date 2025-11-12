@@ -23,7 +23,9 @@ class DisableServiceResponse extends \Google\Model
   protected $serviceDataType = '';
 
   /**
-   * @param GoogleApiServiceusageV1Service
+   * The new state of the service after disabling.
+   *
+   * @param GoogleApiServiceusageV1Service $service
    */
   public function setService(GoogleApiServiceusageV1Service $service)
   {

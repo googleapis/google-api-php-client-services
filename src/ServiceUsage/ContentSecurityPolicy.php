@@ -22,12 +22,21 @@ class ContentSecurityPolicy extends \Google\Model
   protected $mcpContentSecurityType = ContentSecurity::class;
   protected $mcpContentSecurityDataType = '';
   /**
+   * Output only. The resource name of the policy. Only the `default` policy is
+   * supported. We allow the following formats:
+   * `projects/{PROJECT_NUMBER}/contentSecurityPolicies/default`,
+   * `projects/{PROJECT_ID}/contentSecurityPolicies/default`, We only support
+   * project level content security policy for now.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param ContentSecurity
+   * mcp_content_security contains the content security related settings at
+   * resource level for MCP traffic.
+   *
+   * @param ContentSecurity $mcpContentSecurity
    */
   public function setMcpContentSecurity(ContentSecurity $mcpContentSecurity)
   {
@@ -41,7 +50,13 @@ class ContentSecurityPolicy extends \Google\Model
     return $this->mcpContentSecurity;
   }
   /**
-   * @param string
+   * Output only. The resource name of the policy. Only the `default` policy is
+   * supported. We allow the following formats:
+   * `projects/{PROJECT_NUMBER}/contentSecurityPolicies/default`,
+   * `projects/{PROJECT_ID}/contentSecurityPolicies/default`, We only support
+   * project level content security policy for now.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

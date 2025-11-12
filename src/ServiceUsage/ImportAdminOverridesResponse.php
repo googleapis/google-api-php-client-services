@@ -24,7 +24,9 @@ class ImportAdminOverridesResponse extends \Google\Collection
   protected $overridesDataType = 'array';
 
   /**
-   * @param QuotaOverride[]
+   * The overrides that were created from the imported data.
+   *
+   * @param QuotaOverride[] $overrides
    */
   public function setOverrides($overrides)
   {

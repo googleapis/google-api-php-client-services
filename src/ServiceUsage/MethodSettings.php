@@ -21,6 +21,13 @@ class MethodSettings extends \Google\Collection
 {
   protected $collection_key = 'autoPopulatedFields';
   /**
+   * List of top-level fields of the request message, that should be
+   * automatically populated by the client libraries based on their
+   * (google.api.field_info).format. Currently supported format: UUID4. Example
+   * of a YAML configuration: publishing: method_settings: - selector:
+   * google.example.v1.ExampleService.CreateExample auto_populated_fields: -
+   * request_id
+   *
    * @var string[]
    */
   public $autoPopulatedFields;
@@ -29,12 +36,25 @@ class MethodSettings extends \Google\Collection
   protected $longRunningType = LongRunning::class;
   protected $longRunningDataType = '';
   /**
+   * The fully qualified name of the method, for which the options below apply.
+   * This is used to find the method to apply the options. Example: publishing:
+   * method_settings: - selector:
+   * google.storage.control.v2.StorageControl.CreateFolder # method settings for
+   * CreateFolder...
+   *
    * @var string
    */
   public $selector;
 
   /**
-   * @param string[]
+   * List of top-level fields of the request message, that should be
+   * automatically populated by the client libraries based on their
+   * (google.api.field_info).format. Currently supported format: UUID4. Example
+   * of a YAML configuration: publishing: method_settings: - selector:
+   * google.example.v1.ExampleService.CreateExample auto_populated_fields: -
+   * request_id
+   *
+   * @param string[] $autoPopulatedFields
    */
   public function setAutoPopulatedFields($autoPopulatedFields)
   {
@@ -48,7 +68,13 @@ class MethodSettings extends \Google\Collection
     return $this->autoPopulatedFields;
   }
   /**
-   * @param BatchingConfigProto
+   * Batching configuration for an API method in client libraries. Example of a
+   * YAML configuration: publishing: method_settings: - selector:
+   * google.example.v1.ExampleService.BatchCreateExample batching:
+   * element_count_threshold: 1000 request_byte_threshold: 100000000
+   * delay_threshold_millis: 10
+   *
+   * @param BatchingConfigProto $batching
    */
   public function setBatching(BatchingConfigProto $batching)
   {
@@ -62,7 +88,15 @@ class MethodSettings extends \Google\Collection
     return $this->batching;
   }
   /**
-   * @param LongRunning
+   * Describes settings to use for long-running operations when generating API
+   * methods for RPCs. Complements RPCs that use the annotations in
+   * google/longrunning/operations.proto. Example of a YAML configuration::
+   * publishing: method_settings: - selector:
+   * google.cloud.speech.v2.Speech.BatchRecognize long_running:
+   * initial_poll_delay: 60s # 1 minute poll_delay_multiplier: 1.5
+   * max_poll_delay: 360s # 6 minutes total_poll_timeout: 54000s # 90 minutes
+   *
+   * @param LongRunning $longRunning
    */
   public function setLongRunning(LongRunning $longRunning)
   {
@@ -76,7 +110,13 @@ class MethodSettings extends \Google\Collection
     return $this->longRunning;
   }
   /**
-   * @param string
+   * The fully qualified name of the method, for which the options below apply.
+   * This is used to find the method to apply the options. Example: publishing:
+   * method_settings: - selector:
+   * google.storage.control.v2.StorageControl.CreateFolder # method settings for
+   * CreateFolder...
+   *
+   * @param string $selector
    */
   public function setSelector($selector)
   {

@@ -26,7 +26,9 @@ class Authentication extends \Google\Collection
   protected $rulesDataType = 'array';
 
   /**
-   * @param AuthProvider[]
+   * Defines a set of authentication providers that a service supports.
+   *
+   * @param AuthProvider[] $providers
    */
   public function setProviders($providers)
   {
@@ -40,7 +42,10 @@ class Authentication extends \Google\Collection
     return $this->providers;
   }
   /**
-   * @param AuthenticationRule[]
+   * A list of authentication rules that apply to individual API methods.
+   * **NOTE:** All service configuration rules follow "last one wins" order.
+   *
+   * @param AuthenticationRule[] $rules
    */
   public function setRules($rules)
   {

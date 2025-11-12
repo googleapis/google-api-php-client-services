@@ -19,22 +19,48 @@ namespace Google\Service\ServiceUsage;
 
 class Analysis extends \Google\Model
 {
+  /**
+   * Unspecified analysis type. Do not use.
+   */
+  public const ANALYSIS_TYPE_ANALYSIS_TYPE_UNSPECIFIED = 'ANALYSIS_TYPE_UNSPECIFIED';
+  /**
+   * The analysis of service dependencies.
+   */
+  public const ANALYSIS_TYPE_ANALYSIS_TYPE_DEPENDENCY = 'ANALYSIS_TYPE_DEPENDENCY';
+  /**
+   * The analysis of service resource usage.
+   */
+  public const ANALYSIS_TYPE_ANALYSIS_TYPE_RESOURCE_USAGE = 'ANALYSIS_TYPE_RESOURCE_USAGE';
+  /**
+   * The analysis of service resource existence.
+   */
+  public const ANALYSIS_TYPE_ANALYSIS_TYPE_RESOURCE_EXISTENCE = 'ANALYSIS_TYPE_RESOURCE_EXISTENCE';
   protected $analysisDataType = '';
   /**
+   * Output only. The type of analysis.
+   *
    * @var string
    */
   public $analysisType;
   /**
+   * Output only. The user friendly display name of the analysis type. E.g.
+   * service dependency analysis, service resource usage analysis, etc.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The names of the service that has analysis result of warnings or blockers.
+   * Example: `services/storage.googleapis.com`.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param AnalysisResult
+   * Output only. Analysis result of updating a policy.
+   *
+   * @param AnalysisResult $analysis
    */
   public function setAnalysis(AnalysisResult $analysis)
   {
@@ -48,21 +74,29 @@ class Analysis extends \Google\Model
     return $this->analysis;
   }
   /**
-   * @param string
+   * Output only. The type of analysis.
+   *
+   * Accepted values: ANALYSIS_TYPE_UNSPECIFIED, ANALYSIS_TYPE_DEPENDENCY,
+   * ANALYSIS_TYPE_RESOURCE_USAGE, ANALYSIS_TYPE_RESOURCE_EXISTENCE
+   *
+   * @param self::ANALYSIS_TYPE_* $analysisType
    */
   public function setAnalysisType($analysisType)
   {
     $this->analysisType = $analysisType;
   }
   /**
-   * @return string
+   * @return self::ANALYSIS_TYPE_*
    */
   public function getAnalysisType()
   {
     return $this->analysisType;
   }
   /**
-   * @param string
+   * Output only. The user friendly display name of the analysis type. E.g.
+   * service dependency analysis, service resource usage analysis, etc.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -76,7 +110,10 @@ class Analysis extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The names of the service that has analysis result of warnings or blockers.
+   * Example: `services/storage.googleapis.com`.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

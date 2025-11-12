@@ -20,12 +20,24 @@ namespace Google\Service\ServiceUsage;
 class ContentSecurityProvider extends \Google\Model
 {
   /**
+   * Name of security service for content scanning, such as Google Cloud Model
+   * Armor or supported third-party ISV solutions. If it is Google 1P service,
+   * the name should be prefixed with `services/`. If it is a 3P service, the
+   * format needs to be documented. The currently supported values are: -
+   * `services/modelarmor.googleapis.com` for Google Cloud Model Armor.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Name of security service for content scanning, such as Google Cloud Model
+   * Armor or supported third-party ISV solutions. If it is Google 1P service,
+   * the name should be prefixed with `services/`. If it is a 3P service, the
+   * format needs to be documented. The currently supported values are: -
+   * `services/modelarmor.googleapis.com` for Google Cloud Model Armor.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

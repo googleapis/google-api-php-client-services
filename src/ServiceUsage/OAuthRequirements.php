@@ -20,12 +20,22 @@ namespace Google\Service\ServiceUsage;
 class OAuthRequirements extends \Google\Model
 {
   /**
+   * The list of publicly documented OAuth scopes that are allowed access. An
+   * OAuth token containing any of these scopes will be accepted. Example:
+   * canonical_scopes: https://www.googleapis.com/auth/calendar,
+   * https://www.googleapis.com/auth/calendar.read
+   *
    * @var string
    */
   public $canonicalScopes;
 
   /**
-   * @param string
+   * The list of publicly documented OAuth scopes that are allowed access. An
+   * OAuth token containing any of these scopes will be accepted. Example:
+   * canonical_scopes: https://www.googleapis.com/auth/calendar,
+   * https://www.googleapis.com/auth/calendar.read
+   *
+   * @param string $canonicalScopes
    */
   public function setCanonicalScopes($canonicalScopes)
   {

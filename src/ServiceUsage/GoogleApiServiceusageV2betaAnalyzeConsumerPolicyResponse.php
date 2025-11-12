@@ -24,7 +24,12 @@ class GoogleApiServiceusageV2betaAnalyzeConsumerPolicyResponse extends \Google\C
   protected $analysisDataType = 'array';
 
   /**
-   * @param GoogleApiServiceusageV2betaAnalysis[]
+   * The list of analyses returned from performing the intended policy update
+   * analysis. The analysis is grouped by service name and different analysis
+   * types. The empty analysis list means that the consumer policy can be
+   * updated without any warnings or blockers.
+   *
+   * @param GoogleApiServiceusageV2betaAnalysis[] $analysis
    */
   public function setAnalysis($analysis)
   {

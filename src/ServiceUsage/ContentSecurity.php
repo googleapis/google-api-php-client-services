@@ -24,7 +24,9 @@ class ContentSecurity extends \Google\Collection
   protected $contentSecurityProvidersDataType = 'array';
 
   /**
-   * @param ContentSecurityProvider[]
+   * List of content security providers that are enabled for content scanning.
+   *
+   * @param ContentSecurityProvider[] $contentSecurityProviders
    */
   public function setContentSecurityProviders($contentSecurityProviders)
   {

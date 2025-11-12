@@ -21,26 +21,46 @@ class ConsumerPolicy extends \Google\Collection
 {
   protected $collection_key = 'enableRules';
   /**
+   * Optional. Annotations is an unstructured key-value map stored with a policy
+   * that may be set by external tools to store and retrieve arbitrary metadata.
+   * They are not queryable and should be preserved when modifying objects.
+   * [AIP-128](https://google.aip.dev/128#annotations)
+   *
    * @var string[]
    */
   public $annotations;
   protected $enableRulesType = EnableRule::class;
   protected $enableRulesDataType = 'array';
   /**
+   * An opaque tag indicating the current version of the policy, used for
+   * concurrency control.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. The resource name of the policy. We only allow consumer policy
+   * name as `default` for now: `projects/12345/consumerPolicies/default`,
+   * `folders/12345/consumerPolicies/default`,
+   * `organizations/12345/consumerPolicies/default`.
+   *
    * @var string
    */
   public $name;
   /**
+   * The last-modified time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. Annotations is an unstructured key-value map stored with a policy
+   * that may be set by external tools to store and retrieve arbitrary metadata.
+   * They are not queryable and should be preserved when modifying objects.
+   * [AIP-128](https://google.aip.dev/128#annotations)
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -54,7 +74,9 @@ class ConsumerPolicy extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param EnableRule[]
+   * Enable rules define usable services and service groups.
+   *
+   * @param EnableRule[] $enableRules
    */
   public function setEnableRules($enableRules)
   {
@@ -68,7 +90,10 @@ class ConsumerPolicy extends \Google\Collection
     return $this->enableRules;
   }
   /**
-   * @param string
+   * An opaque tag indicating the current version of the policy, used for
+   * concurrency control.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -82,7 +107,12 @@ class ConsumerPolicy extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. The resource name of the policy. We only allow consumer policy
+   * name as `default` for now: `projects/12345/consumerPolicies/default`,
+   * `folders/12345/consumerPolicies/default`,
+   * `organizations/12345/consumerPolicies/default`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -96,7 +126,9 @@ class ConsumerPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The last-modified time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

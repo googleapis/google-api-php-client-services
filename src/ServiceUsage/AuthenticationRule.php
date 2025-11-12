@@ -21,6 +21,9 @@ class AuthenticationRule extends \Google\Collection
 {
   protected $collection_key = 'requirements';
   /**
+   * If true, the service accepts API keys without any other credential. This
+   * flag only applies to HTTP and gRPC requests.
+   *
    * @var bool
    */
   public $allowWithoutCredential;
@@ -29,12 +32,18 @@ class AuthenticationRule extends \Google\Collection
   protected $requirementsType = AuthRequirement::class;
   protected $requirementsDataType = 'array';
   /**
+   * Selects the methods to which this rule applies. Refer to selector for
+   * syntax details.
+   *
    * @var string
    */
   public $selector;
 
   /**
-   * @param bool
+   * If true, the service accepts API keys without any other credential. This
+   * flag only applies to HTTP and gRPC requests.
+   *
+   * @param bool $allowWithoutCredential
    */
   public function setAllowWithoutCredential($allowWithoutCredential)
   {
@@ -48,7 +57,9 @@ class AuthenticationRule extends \Google\Collection
     return $this->allowWithoutCredential;
   }
   /**
-   * @param OAuthRequirements
+   * The requirements for OAuth credentials.
+   *
+   * @param OAuthRequirements $oauth
    */
   public function setOauth(OAuthRequirements $oauth)
   {
@@ -62,7 +73,9 @@ class AuthenticationRule extends \Google\Collection
     return $this->oauth;
   }
   /**
-   * @param AuthRequirement[]
+   * Requirements for additional authentication providers.
+   *
+   * @param AuthRequirement[] $requirements
    */
   public function setRequirements($requirements)
   {
@@ -76,7 +89,10 @@ class AuthenticationRule extends \Google\Collection
     return $this->requirements;
   }
   /**
-   * @param string
+   * Selects the methods to which this rule applies. Refer to selector for
+   * syntax details.
+   *
+   * @param string $selector
    */
   public function setSelector($selector)
   {

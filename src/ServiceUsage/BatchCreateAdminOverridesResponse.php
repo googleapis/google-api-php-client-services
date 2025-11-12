@@ -24,7 +24,9 @@ class BatchCreateAdminOverridesResponse extends \Google\Collection
   protected $overridesDataType = 'array';
 
   /**
-   * @param QuotaOverride[]
+   * The overrides that were created.
+   *
+   * @param QuotaOverride[] $overrides
    */
   public function setOverrides($overrides)
   {

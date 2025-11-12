@@ -21,6 +21,8 @@ class ListServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'services';
   /**
+   * Token that can be passed to `ListServices` to resume a paginated query.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListServicesResponse extends \Google\Collection
   protected $servicesDataType = 'array';
 
   /**
-   * @param string
+   * Token that can be passed to `ListServices` to resume a paginated query.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListServicesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleApiServiceusageV1Service[]
+   * The available services for the requested project.
+   *
+   * @param GoogleApiServiceusageV1Service[] $services
    */
   public function setServices($services)
   {

@@ -21,12 +21,18 @@ class GoogleApiServiceusageV1OperationMetadata extends \Google\Collection
 {
   protected $collection_key = 'resourceNames';
   /**
+   * The full name of the resources that this operation is directly associated
+   * with.
+   *
    * @var string[]
    */
   public $resourceNames;
 
   /**
-   * @param string[]
+   * The full name of the resources that this operation is directly associated
+   * with.
+   *
+   * @param string[] $resourceNames
    */
   public function setResourceNames($resourceNames)
   {

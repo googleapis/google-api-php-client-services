@@ -24,7 +24,9 @@ class ImportAdminQuotaPoliciesResponse extends \Google\Collection
   protected $policiesDataType = 'array';
 
   /**
-   * @param AdminQuotaPolicy[]
+   * The policies that were created from the imported data.
+   *
+   * @param AdminQuotaPolicy[] $policies
    */
   public function setPolicies($policies)
   {

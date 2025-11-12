@@ -26,7 +26,10 @@ class BatchEnableServicesResponse extends \Google\Collection
   protected $servicesDataType = 'array';
 
   /**
-   * @param EnableFailure[]
+   * If allow_partial_success is true, and one or more services could not be
+   * enabled, this field contains the details about each failure.
+   *
+   * @param EnableFailure[] $failures
    */
   public function setFailures($failures)
   {
@@ -40,7 +43,9 @@ class BatchEnableServicesResponse extends \Google\Collection
     return $this->failures;
   }
   /**
-   * @param GoogleApiServiceusageV1Service[]
+   * The new state of the services after enabling.
+   *
+   * @param GoogleApiServiceusageV1Service[] $services
    */
   public function setServices($services)
   {

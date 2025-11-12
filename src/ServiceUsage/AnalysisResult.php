@@ -26,7 +26,9 @@ class AnalysisResult extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * @param Impact[]
+   * Blocking information that would prevent the policy changes at runtime.
+   *
+   * @param Impact[] $blockers
    */
   public function setBlockers($blockers)
   {
@@ -40,7 +42,10 @@ class AnalysisResult extends \Google\Collection
     return $this->blockers;
   }
   /**
-   * @param Impact[]
+   * Warning information indicating that the policy changes might be unsafe, but
+   * will not block the changes at runtime.
+   *
+   * @param Impact[] $warnings
    */
   public function setWarnings($warnings)
   {

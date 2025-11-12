@@ -21,16 +21,27 @@ class LoggingDestination extends \Google\Collection
 {
   protected $collection_key = 'logs';
   /**
+   * Names of the logs to be sent to this destination. Each name must be defined
+   * in the Service.logs section. If the log name is not a domain scoped name,
+   * it will be automatically prefixed with the service name followed by "/".
+   *
    * @var string[]
    */
   public $logs;
   /**
+   * The monitored resource type. The type must be defined in the
+   * Service.monitored_resources section.
+   *
    * @var string
    */
   public $monitoredResource;
 
   /**
-   * @param string[]
+   * Names of the logs to be sent to this destination. Each name must be defined
+   * in the Service.logs section. If the log name is not a domain scoped name,
+   * it will be automatically prefixed with the service name followed by "/".
+   *
+   * @param string[] $logs
    */
   public function setLogs($logs)
   {
@@ -44,7 +55,10 @@ class LoggingDestination extends \Google\Collection
     return $this->logs;
   }
   /**
-   * @param string
+   * The monitored resource type. The type must be defined in the
+   * Service.monitored_resources section.
+   *
+   * @param string $monitoredResource
    */
   public function setMonitoredResource($monitoredResource)
   {
