@@ -23,12 +23,18 @@ class GoogleCloudRecommenderV1RecommendationContent extends \Google\Collection
   protected $operationGroupsType = GoogleCloudRecommenderV1OperationGroup::class;
   protected $operationGroupsDataType = 'array';
   /**
+   * Condensed overview information about the recommendation.
+   *
    * @var array[]
    */
   public $overview;
 
   /**
-   * @param GoogleCloudRecommenderV1OperationGroup[]
+   * Operations to one or more Google Cloud resources grouped in such a way
+   * that, all operations within one group are expected to be performed
+   * atomically and in an order.
+   *
+   * @param GoogleCloudRecommenderV1OperationGroup[] $operationGroups
    */
   public function setOperationGroups($operationGroups)
   {
@@ -42,7 +48,9 @@ class GoogleCloudRecommenderV1RecommendationContent extends \Google\Collection
     return $this->operationGroups;
   }
   /**
-   * @param array[]
+   * Condensed overview information about the recommendation.
+   *
+   * @param array[] $overview
    */
   public function setOverview($overview)
   {

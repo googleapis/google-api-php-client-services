@@ -20,13 +20,23 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1SustainabilityProjection extends \Google\Model
 {
   /**
+   * Duration for which this sustainability applies.
+   *
    * @var string
    */
   public $duration;
+  /**
+   * Carbon Footprint generated in kg of CO2 equivalent. Chose kg_c_o2e so that
+   * the name renders correctly in camelCase (kgCO2e).
+   *
+   * @var 
+   */
   public $kgCO2e;
 
   /**
-   * @param string
+   * Duration for which this sustainability applies.
+   *
+   * @param string $duration
    */
   public function setDuration($duration)
   {

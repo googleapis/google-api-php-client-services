@@ -20,16 +20,23 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1MarkInsightAcceptedRequest extends \Google\Model
 {
   /**
+   * Required. Fingerprint of the Insight. Provides optimistic locking.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. State properties user wish to include with this state. Full
+   * replace of the current state_metadata.
+   *
    * @var string[]
    */
   public $stateMetadata;
 
   /**
-   * @param string
+   * Required. Fingerprint of the Insight. Provides optimistic locking.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -43,7 +50,10 @@ class GoogleCloudRecommenderV1MarkInsightAcceptedRequest extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. State properties user wish to include with this state. Full
+   * replace of the current state_metadata.
+   *
+   * @param string[] $stateMetadata
    */
   public function setStateMetadata($stateMetadata)
   {

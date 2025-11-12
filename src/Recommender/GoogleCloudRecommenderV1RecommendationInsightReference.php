@@ -20,12 +20,18 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1RecommendationInsightReference extends \Google\Model
 {
   /**
+   * Insight resource name, e.g. projects/[PROJECT_NUMBER]/locations/[LOCATION]/
+   * insightTypes/[INSIGHT_TYPE_ID]/insights/[INSIGHT_ID]
+   *
    * @var string
    */
   public $insight;
 
   /**
-   * @param string
+   * Insight resource name, e.g. projects/[PROJECT_NUMBER]/locations/[LOCATION]/
+   * insightTypes/[INSIGHT_TYPE_ID]/insights/[INSIGHT_ID]
+   *
+   * @param string $insight
    */
   public function setInsight($insight)
   {

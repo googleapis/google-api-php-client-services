@@ -20,30 +20,62 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1InsightStateInfo extends \Google\Model
 {
   /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Insight is active. Content for ACTIVE insights can be updated by Google.
+   * ACTIVE insights can be marked DISMISSED OR ACCEPTED.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Some action has been taken based on this insight. Insights become accepted
+   * when a recommendation derived from the insight has been marked CLAIMED,
+   * SUCCEEDED, or FAILED. ACTIVE insights can also be marked ACCEPTED
+   * explicitly. Content for ACCEPTED insights is immutable. ACCEPTED insights
+   * can only be marked ACCEPTED (which may update state metadata).
+   */
+  public const STATE_ACCEPTED = 'ACCEPTED';
+  /**
+   * Insight is dismissed. Content for DISMISSED insights can be updated by
+   * Google. DISMISSED insights can be marked as ACTIVE.
+   */
+  public const STATE_DISMISSED = 'DISMISSED';
+  /**
+   * Insight state.
+   *
    * @var string
    */
   public $state;
   /**
+   * A map of metadata for the state, provided by user or automations systems.
+   *
    * @var string[]
    */
   public $stateMetadata;
 
   /**
-   * @param string
+   * Insight state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, ACCEPTED, DISMISSED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string[]
+   * A map of metadata for the state, provided by user or automations systems.
+   *
+   * @param string[] $stateMetadata
    */
   public function setStateMetadata($stateMetadata)
   {

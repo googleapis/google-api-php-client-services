@@ -20,34 +20,63 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
 {
   /**
+   * Allows clients to store small amounts of arbitrary data. Annotations must
+   * follow the Kubernetes syntax. The total size of all keys and values
+   * combined is limited to 256k. Key can have 2 segments: prefix (optional) and
+   * name (required), separated by a slash (/). Prefix must be a DNS subdomain.
+   * Name must be 63 characters or less, begin and end with alphanumerics, with
+   * dashes (-), underscores (_), dots (.), and alphanumerics between.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * A user-settable field to provide a human-readable name to be used in user
+   * interfaces.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Fingerprint of the InsightTypeConfig. Provides optimistic locking when
+   * updating.
+   *
    * @var string
    */
   public $etag;
   protected $insightTypeGenerationConfigType = GoogleCloudRecommenderV1InsightTypeGenerationConfig::class;
   protected $insightTypeGenerationConfigDataType = '';
   /**
+   * Identifier. Name of insight type config. Eg, projects/[PROJECT_NUMBER]/loca
+   * tions/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Immutable. The revision ID of the config. A new revision is
+   * committed whenever the config is changed in any way. The format is an
+   * 8-character hexadecimal string.
+   *
    * @var string
    */
   public $revisionId;
   /**
+   * Last time when the config was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Allows clients to store small amounts of arbitrary data. Annotations must
+   * follow the Kubernetes syntax. The total size of all keys and values
+   * combined is limited to 256k. Key can have 2 segments: prefix (optional) and
+   * name (required), separated by a slash (/). Prefix must be a DNS subdomain.
+   * Name must be 63 characters or less, begin and end with alphanumerics, with
+   * dashes (-), underscores (_), dots (.), and alphanumerics between.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -61,7 +90,10 @@ class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * A user-settable field to provide a human-readable name to be used in user
+   * interfaces.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -75,7 +107,10 @@ class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Fingerprint of the InsightTypeConfig. Provides optimistic locking when
+   * updating.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -89,7 +124,10 @@ class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param GoogleCloudRecommenderV1InsightTypeGenerationConfig
+   * InsightTypeGenerationConfig which configures the generation of insights for
+   * this insight type.
+   *
+   * @param GoogleCloudRecommenderV1InsightTypeGenerationConfig $insightTypeGenerationConfig
    */
   public function setInsightTypeGenerationConfig(GoogleCloudRecommenderV1InsightTypeGenerationConfig $insightTypeGenerationConfig)
   {
@@ -103,7 +141,10 @@ class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
     return $this->insightTypeGenerationConfig;
   }
   /**
-   * @param string
+   * Identifier. Name of insight type config. Eg, projects/[PROJECT_NUMBER]/loca
+   * tions/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]/config
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -117,7 +158,11 @@ class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Immutable. The revision ID of the config. A new revision is
+   * committed whenever the config is changed in any way. The format is an
+   * 8-character hexadecimal string.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -131,7 +176,9 @@ class GoogleCloudRecommenderV1InsightTypeConfig extends \Google\Model
     return $this->revisionId;
   }
   /**
-   * @param string
+   * Last time when the config was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

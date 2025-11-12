@@ -20,16 +20,24 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1MarkRecommendationFailedRequest extends \Google\Model
 {
   /**
+   * Required. Fingerprint of the Recommendation. Provides optimistic locking.
+   *
    * @var string
    */
   public $etag;
   /**
+   * State properties to include with this state. Overwrites any existing
+   * `state_metadata`. Keys must match the regex `/^a-z0-9{0,62}$/`. Values must
+   * match the regex `/^[a-zA-Z0-9_./-]{0,255}$/`.
+   *
    * @var string[]
    */
   public $stateMetadata;
 
   /**
-   * @param string
+   * Required. Fingerprint of the Recommendation. Provides optimistic locking.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -43,7 +51,11 @@ class GoogleCloudRecommenderV1MarkRecommendationFailedRequest extends \Google\Mo
     return $this->etag;
   }
   /**
-   * @param string[]
+   * State properties to include with this state. Overwrites any existing
+   * `state_metadata`. Keys must match the regex `/^a-z0-9{0,62}$/`. Values must
+   * match the regex `/^[a-zA-Z0-9_./-]{0,255}$/`.
+   *
+   * @param string[] $stateMetadata
    */
   public function setStateMetadata($stateMetadata)
   {

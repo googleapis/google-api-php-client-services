@@ -19,6 +19,26 @@ namespace Google\Service\Recommender;
 
 class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
 {
+  /**
+   * Recommendation has unspecified priority.
+   */
+  public const PRIORITY_PRIORITY_UNSPECIFIED = 'PRIORITY_UNSPECIFIED';
+  /**
+   * Recommendation has P4 priority (lowest priority).
+   */
+  public const PRIORITY_P4 = 'P4';
+  /**
+   * Recommendation has P3 priority (second lowest priority).
+   */
+  public const PRIORITY_P3 = 'P3';
+  /**
+   * Recommendation has P2 priority (second highest priority).
+   */
+  public const PRIORITY_P2 = 'P2';
+  /**
+   * Recommendation has P1 priority (highest priority).
+   */
+  public const PRIORITY_P1 = 'P1';
   protected $collection_key = 'targetResources';
   protected $additionalImpactType = GoogleCloudRecommenderV1Impact::class;
   protected $additionalImpactDataType = 'array';
@@ -27,44 +47,76 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
   protected $contentType = GoogleCloudRecommenderV1RecommendationContent::class;
   protected $contentDataType = '';
   /**
+   * Free-form human readable summary in English. The maximum length is 500
+   * characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Fingerprint of the Recommendation. Provides optimistic locking when
+   * updating states.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Last time this recommendation was refreshed by the system that created it
+   * in the first place.
+   *
    * @var string
    */
   public $lastRefreshTime;
   /**
+   * Identifier. Name of recommendation.
+   *
    * @var string
    */
   public $name;
   protected $primaryImpactType = GoogleCloudRecommenderV1Impact::class;
   protected $primaryImpactDataType = '';
   /**
+   * Recommendation's priority.
+   *
    * @var string
    */
   public $priority;
   /**
+   * Contains an identifier for a subtype of recommendations produced for the
+   * same recommender. Subtype is a function of content and impact, meaning a
+   * new subtype might be added when significant changes to `content` or
+   * `primary_impact.category` are introduced. See the Recommenders section to
+   * see a list of subtypes for a given Recommender. Examples: For recommender =
+   * "google.iam.policy.Recommender", recommender_subtype can be one of
+   * "REMOVE_ROLE"/"REPLACE_ROLE"
+   *
    * @var string
    */
   public $recommenderSubtype;
   protected $stateInfoType = GoogleCloudRecommenderV1RecommendationStateInfo::class;
   protected $stateInfoDataType = '';
   /**
+   * Fully qualified resource names that this recommendation is targeting.
+   *
    * @var string[]
    */
   public $targetResources;
   /**
+   * Corresponds to a mutually exclusive group ID within a recommender. A non-
+   * empty ID indicates that the recommendation belongs to a mutually exclusive
+   * group. This means that only one recommendation within the group is
+   * suggested to be applied.
+   *
    * @var string
    */
   public $xorGroupId;
 
   /**
-   * @param GoogleCloudRecommenderV1Impact[]
+   * Optional set of additional impact that this recommendation may have when
+   * trying to optimize for the primary category. These may be positive or
+   * negative.
+   *
+   * @param GoogleCloudRecommenderV1Impact[] $additionalImpact
    */
   public function setAdditionalImpact($additionalImpact)
   {
@@ -78,7 +130,9 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->additionalImpact;
   }
   /**
-   * @param GoogleCloudRecommenderV1RecommendationInsightReference[]
+   * Insights that led to this recommendation.
+   *
+   * @param GoogleCloudRecommenderV1RecommendationInsightReference[] $associatedInsights
    */
   public function setAssociatedInsights($associatedInsights)
   {
@@ -92,7 +146,9 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->associatedInsights;
   }
   /**
-   * @param GoogleCloudRecommenderV1RecommendationContent
+   * Content of the recommendation describing recommended changes to resources.
+   *
+   * @param GoogleCloudRecommenderV1RecommendationContent $content
    */
   public function setContent(GoogleCloudRecommenderV1RecommendationContent $content)
   {
@@ -106,7 +162,10 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->content;
   }
   /**
-   * @param string
+   * Free-form human readable summary in English. The maximum length is 500
+   * characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -120,7 +179,10 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Fingerprint of the Recommendation. Provides optimistic locking when
+   * updating states.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -134,7 +196,10 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Last time this recommendation was refreshed by the system that created it
+   * in the first place.
+   *
+   * @param string $lastRefreshTime
    */
   public function setLastRefreshTime($lastRefreshTime)
   {
@@ -148,7 +213,9 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->lastRefreshTime;
   }
   /**
-   * @param string
+   * Identifier. Name of recommendation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -162,7 +229,10 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudRecommenderV1Impact
+   * The primary impact that this recommendation can have while trying to
+   * optimize for one category.
+   *
+   * @param GoogleCloudRecommenderV1Impact $primaryImpact
    */
   public function setPrimaryImpact(GoogleCloudRecommenderV1Impact $primaryImpact)
   {
@@ -176,21 +246,33 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->primaryImpact;
   }
   /**
-   * @param string
+   * Recommendation's priority.
+   *
+   * Accepted values: PRIORITY_UNSPECIFIED, P4, P3, P2, P1
+   *
+   * @param self::PRIORITY_* $priority
    */
   public function setPriority($priority)
   {
     $this->priority = $priority;
   }
   /**
-   * @return string
+   * @return self::PRIORITY_*
    */
   public function getPriority()
   {
     return $this->priority;
   }
   /**
-   * @param string
+   * Contains an identifier for a subtype of recommendations produced for the
+   * same recommender. Subtype is a function of content and impact, meaning a
+   * new subtype might be added when significant changes to `content` or
+   * `primary_impact.category` are introduced. See the Recommenders section to
+   * see a list of subtypes for a given Recommender. Examples: For recommender =
+   * "google.iam.policy.Recommender", recommender_subtype can be one of
+   * "REMOVE_ROLE"/"REPLACE_ROLE"
+   *
+   * @param string $recommenderSubtype
    */
   public function setRecommenderSubtype($recommenderSubtype)
   {
@@ -204,7 +286,9 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->recommenderSubtype;
   }
   /**
-   * @param GoogleCloudRecommenderV1RecommendationStateInfo
+   * Information for state. Contains state and metadata.
+   *
+   * @param GoogleCloudRecommenderV1RecommendationStateInfo $stateInfo
    */
   public function setStateInfo(GoogleCloudRecommenderV1RecommendationStateInfo $stateInfo)
   {
@@ -218,7 +302,9 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->stateInfo;
   }
   /**
-   * @param string[]
+   * Fully qualified resource names that this recommendation is targeting.
+   *
+   * @param string[] $targetResources
    */
   public function setTargetResources($targetResources)
   {
@@ -232,7 +318,12 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
     return $this->targetResources;
   }
   /**
-   * @param string
+   * Corresponds to a mutually exclusive group ID within a recommender. A non-
+   * empty ID indicates that the recommendation belongs to a mutually exclusive
+   * group. This means that only one recommendation within the group is
+   * suggested to be applied.
+   *
+   * @param string $xorGroupId
    */
   public function setXorGroupId($xorGroupId)
   {

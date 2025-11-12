@@ -20,12 +20,18 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1InsightTypeGenerationConfig extends \Google\Model
 {
   /**
+   * Parameters for this InsightTypeGenerationConfig. These configs can be used
+   * by or are applied to all subtypes.
+   *
    * @var array[]
    */
   public $params;
 
   /**
-   * @param array[]
+   * Parameters for this InsightTypeGenerationConfig. These configs can be used
+   * by or are applied to all subtypes.
+   *
+   * @param array[] $params
    */
   public function setParams($params)
   {

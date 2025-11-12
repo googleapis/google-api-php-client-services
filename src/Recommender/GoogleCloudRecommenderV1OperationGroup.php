@@ -24,7 +24,10 @@ class GoogleCloudRecommenderV1OperationGroup extends \Google\Collection
   protected $operationsDataType = 'array';
 
   /**
-   * @param GoogleCloudRecommenderV1Operation[]
+   * List of operations across one or more resources that belong to this group.
+   * Loosely based on RFC6902 and should be performed in the order they appear.
+   *
+   * @param GoogleCloudRecommenderV1Operation[] $operations
    */
   public function setOperations($operations)
   {

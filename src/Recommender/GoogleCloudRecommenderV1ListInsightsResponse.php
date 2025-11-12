@@ -23,12 +23,17 @@ class GoogleCloudRecommenderV1ListInsightsResponse extends \Google\Collection
   protected $insightsType = GoogleCloudRecommenderV1Insight::class;
   protected $insightsDataType = 'array';
   /**
+   * A token that can be used to request the next page of results. This field is
+   * empty if there are no additional results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudRecommenderV1Insight[]
+   * The set of insights for the `parent` resource.
+   *
+   * @param GoogleCloudRecommenderV1Insight[] $insights
    */
   public function setInsights($insights)
   {
@@ -42,7 +47,10 @@ class GoogleCloudRecommenderV1ListInsightsResponse extends \Google\Collection
     return $this->insights;
   }
   /**
-   * @param string
+   * A token that can be used to request the next page of results. This field is
+   * empty if there are no additional results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
