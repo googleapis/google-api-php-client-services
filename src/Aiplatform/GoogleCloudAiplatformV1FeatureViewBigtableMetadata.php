@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureViewBigtableMetadata extends \Google\Model
 {
   /**
+   * Output only. The Bigtable App Profile to use for reading from Bigtable.
+   *
    * @var string
    */
   public $readAppProfile;
 
   /**
-   * @param string
+   * Output only. The Bigtable App Profile to use for reading from Bigtable.
+   *
+   * @param string $readAppProfile
    */
   public function setReadAppProfile($readAppProfile)
   {

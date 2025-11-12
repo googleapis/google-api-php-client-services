@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FulfillmentResult extends \Google\Model
 {
   /**
+   * Output only. Confidence for fulfillment score.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Output only. Explanation for fulfillment score.
+   *
    * @var string
    */
   public $explanation;
   /**
+   * Output only. Fulfillment score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Confidence for fulfillment score.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1FulfillmentResult extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * Output only. Explanation for fulfillment score.
+   *
+   * @param string $explanation
    */
   public function setExplanation($explanation)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1FulfillmentResult extends \Google\Model
     return $this->explanation;
   }
   /**
-   * @param float
+   * Output only. Fulfillment score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

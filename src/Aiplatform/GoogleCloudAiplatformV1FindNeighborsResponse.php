@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1FindNeighborsResponse extends \Google\Collection
   protected $nearestNeighborsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1FindNeighborsResponseNearestNeighbors[]
+   * The nearest neighbors of the query datapoints.
+   *
+   * @param GoogleCloudAiplatformV1FindNeighborsResponseNearestNeighbors[] $nearestNeighbors
    */
   public function setNearestNeighbors($nearestNeighbors)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FindNeighborsRequestQueryRRF extends \Google\Model
 {
   /**
+   * Required. Users can provide an alpha value to give more weight to dense vs
+   * sparse results. For example, if the alpha is 0, we only return sparse and
+   * if the alpha is 1, we only return dense.
+   *
    * @var float
    */
   public $alpha;
 
   /**
-   * @param float
+   * Required. Users can provide an alpha value to give more weight to dense vs
+   * sparse results. For example, if the alpha is 0, we only return sparse and
+   * if the alpha is 1, we only return dense.
+   *
+   * @param float $alpha
    */
   public function setAlpha($alpha)
   {

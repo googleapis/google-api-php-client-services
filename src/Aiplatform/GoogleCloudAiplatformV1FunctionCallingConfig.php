@@ -19,18 +19,49 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FunctionCallingConfig extends \Google\Collection
 {
+  /**
+   * Unspecified function calling mode. This value should not be used.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * Default model behavior, model decides to predict either function calls or
+   * natural language response.
+   */
+  public const MODE_AUTO = 'AUTO';
+  /**
+   * Model is constrained to always predicting function calls only. If
+   * "allowed_function_names" are set, the predicted function calls will be
+   * limited to any one of "allowed_function_names", else the predicted function
+   * calls will be any one of the provided "function_declarations".
+   */
+  public const MODE_ANY = 'ANY';
+  /**
+   * Model will not predict any function calls. Model behavior is same as when
+   * not passing any function declarations.
+   */
+  public const MODE_NONE = 'NONE';
   protected $collection_key = 'allowedFunctionNames';
   /**
+   * Optional. Function names to call. Only set when the Mode is ANY. Function
+   * names should match [FunctionDeclaration.name]. With mode set to ANY, model
+   * will predict a function call from the set of function names provided.
+   *
    * @var string[]
    */
   public $allowedFunctionNames;
   /**
+   * Optional. Function calling mode.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param string[]
+   * Optional. Function names to call. Only set when the Mode is ANY. Function
+   * names should match [FunctionDeclaration.name]. With mode set to ANY, model
+   * will predict a function call from the set of function names provided.
+   *
+   * @param string[] $allowedFunctionNames
    */
   public function setAllowedFunctionNames($allowedFunctionNames)
   {
@@ -44,14 +75,18 @@ class GoogleCloudAiplatformV1FunctionCallingConfig extends \Google\Collection
     return $this->allowedFunctionNames;
   }
   /**
-   * @param string
+   * Optional. Function calling mode.
+   *
+   * Accepted values: MODE_UNSPECIFIED, AUTO, ANY, NONE
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GroundednessResult extends \Google\Model
 {
   /**
+   * Output only. Confidence for groundedness score.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Output only. Explanation for groundedness score.
+   *
    * @var string
    */
   public $explanation;
   /**
+   * Output only. Groundedness score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Confidence for groundedness score.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1GroundednessResult extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * Output only. Explanation for groundedness score.
+   *
+   * @param string $explanation
    */
   public function setExplanation($explanation)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1GroundednessResult extends \Google\Model
     return $this->explanation;
   }
   /**
-   * @param float
+   * Output only. Groundedness score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

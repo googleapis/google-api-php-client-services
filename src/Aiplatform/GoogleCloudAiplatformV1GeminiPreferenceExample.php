@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1GeminiPreferenceExample extends \Google\Collection
   protected $contentsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1GeminiPreferenceExampleCompletion[]
+   * List of completions for a given prompt.
+   *
+   * @param GoogleCloudAiplatformV1GeminiPreferenceExampleCompletion[] $completions
    */
   public function setCompletions($completions)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1GeminiPreferenceExample extends \Google\Collection
     return $this->completions;
   }
   /**
-   * @param GoogleCloudAiplatformV1Content[]
+   * Multi-turn contents that represents the Prompt.
+   *
+   * @param GoogleCloudAiplatformV1Content[] $contents
    */
   public function setContents($contents)
   {

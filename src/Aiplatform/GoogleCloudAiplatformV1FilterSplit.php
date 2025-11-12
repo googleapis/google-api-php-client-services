@@ -20,20 +20,44 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FilterSplit extends \Google\Model
 {
   /**
+   * Required. A filter on DataItems of the Dataset. DataItems that match this
+   * filter are used to test the Model. A filter with same syntax as the one
+   * used in DatasetService.ListDataItems may be used. If a single DataItem is
+   * matched by more than one of the FilterSplit filters, then it is assigned to
+   * the first set that applies to it in the training, validation, test order.
+   *
    * @var string
    */
   public $testFilter;
   /**
+   * Required. A filter on DataItems of the Dataset. DataItems that match this
+   * filter are used to train the Model. A filter with same syntax as the one
+   * used in DatasetService.ListDataItems may be used. If a single DataItem is
+   * matched by more than one of the FilterSplit filters, then it is assigned to
+   * the first set that applies to it in the training, validation, test order.
+   *
    * @var string
    */
   public $trainingFilter;
   /**
+   * Required. A filter on DataItems of the Dataset. DataItems that match this
+   * filter are used to validate the Model. A filter with same syntax as the one
+   * used in DatasetService.ListDataItems may be used. If a single DataItem is
+   * matched by more than one of the FilterSplit filters, then it is assigned to
+   * the first set that applies to it in the training, validation, test order.
+   *
    * @var string
    */
   public $validationFilter;
 
   /**
-   * @param string
+   * Required. A filter on DataItems of the Dataset. DataItems that match this
+   * filter are used to test the Model. A filter with same syntax as the one
+   * used in DatasetService.ListDataItems may be used. If a single DataItem is
+   * matched by more than one of the FilterSplit filters, then it is assigned to
+   * the first set that applies to it in the training, validation, test order.
+   *
+   * @param string $testFilter
    */
   public function setTestFilter($testFilter)
   {
@@ -47,7 +71,13 @@ class GoogleCloudAiplatformV1FilterSplit extends \Google\Model
     return $this->testFilter;
   }
   /**
-   * @param string
+   * Required. A filter on DataItems of the Dataset. DataItems that match this
+   * filter are used to train the Model. A filter with same syntax as the one
+   * used in DatasetService.ListDataItems may be used. If a single DataItem is
+   * matched by more than one of the FilterSplit filters, then it is assigned to
+   * the first set that applies to it in the training, validation, test order.
+   *
+   * @param string $trainingFilter
    */
   public function setTrainingFilter($trainingFilter)
   {
@@ -61,7 +91,13 @@ class GoogleCloudAiplatformV1FilterSplit extends \Google\Model
     return $this->trainingFilter;
   }
   /**
-   * @param string
+   * Required. A filter on DataItems of the Dataset. DataItems that match this
+   * filter are used to validate the Model. A filter with same syntax as the one
+   * used in DatasetService.ListDataItems may be used. If a single DataItem is
+   * matched by more than one of the FilterSplit filters, then it is assigned to
+   * the first set that applies to it in the training, validation, test order.
+   *
+   * @param string $validationFilter
    */
   public function setValidationFilter($validationFilter)
   {

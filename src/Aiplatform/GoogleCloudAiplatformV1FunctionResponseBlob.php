@@ -20,20 +20,32 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FunctionResponseBlob extends \Google\Model
 {
   /**
+   * Required. Raw bytes.
+   *
    * @var string
    */
   public $data;
   /**
+   * Optional. Display name of the blob. Used to provide a label or filename to
+   * distinguish blobs. This field is only returned in PromptMessage for prompt
+   * management. It is currently used in the Gemini GenerateContent calls only
+   * when server side tools (code_execution, google_search, and url_context) are
+   * enabled.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. The IANA standard MIME type of the source data.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * Required. Raw bytes.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -47,7 +59,13 @@ class GoogleCloudAiplatformV1FunctionResponseBlob extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Optional. Display name of the blob. Used to provide a label or filename to
+   * distinguish blobs. This field is only returned in PromptMessage for prompt
+   * management. It is currently used in the Gemini GenerateContent calls only
+   * when server side tools (code_execution, google_search, and url_context) are
+   * enabled.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +79,9 @@ class GoogleCloudAiplatformV1FunctionResponseBlob extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. The IANA standard MIME type of the source data.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

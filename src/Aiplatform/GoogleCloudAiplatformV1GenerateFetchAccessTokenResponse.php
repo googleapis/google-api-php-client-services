@@ -20,16 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse extends \Google\Model
 {
   /**
+   * The OAuth 2.0 access token.
+   *
    * @var string
    */
   public $accessToken;
   /**
+   * Token expiration time. This is always set
+   *
    * @var string
    */
   public $expireTime;
 
   /**
-   * @param string
+   * The OAuth 2.0 access token.
+   *
+   * @param string $accessToken
    */
   public function setAccessToken($accessToken)
   {
@@ -43,7 +49,9 @@ class GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse extends \Google\Mo
     return $this->accessToken;
   }
   /**
-   * @param string
+   * Token expiration time. This is always set
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {

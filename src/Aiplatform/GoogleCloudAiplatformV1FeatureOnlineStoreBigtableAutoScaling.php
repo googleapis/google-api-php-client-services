@@ -20,20 +20,39 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling extends \Google\Model
 {
   /**
+   * Optional. A percentage of the cluster's CPU capacity. Can be from 10% to
+   * 80%. When a cluster's CPU utilization exceeds the target that you have set,
+   * Bigtable immediately adds nodes to the cluster. When CPU utilization is
+   * substantially lower than the target, Bigtable removes nodes. If not set
+   * will default to 50%.
+   *
    * @var int
    */
   public $cpuUtilizationTarget;
   /**
+   * Required. The maximum number of nodes to scale up to. Must be greater than
+   * or equal to min_node_count, and less than or equal to 10 times of
+   * 'min_node_count'.
+   *
    * @var int
    */
   public $maxNodeCount;
   /**
+   * Required. The minimum number of nodes to scale down to. Must be greater
+   * than or equal to 1.
+   *
    * @var int
    */
   public $minNodeCount;
 
   /**
-   * @param int
+   * Optional. A percentage of the cluster's CPU capacity. Can be from 10% to
+   * 80%. When a cluster's CPU utilization exceeds the target that you have set,
+   * Bigtable immediately adds nodes to the cluster. When CPU utilization is
+   * substantially lower than the target, Bigtable removes nodes. If not set
+   * will default to 50%.
+   *
+   * @param int $cpuUtilizationTarget
    */
   public function setCpuUtilizationTarget($cpuUtilizationTarget)
   {
@@ -47,7 +66,11 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling extends \Goog
     return $this->cpuUtilizationTarget;
   }
   /**
-   * @param int
+   * Required. The maximum number of nodes to scale up to. Must be greater than
+   * or equal to min_node_count, and less than or equal to 10 times of
+   * 'min_node_count'.
+   *
+   * @param int $maxNodeCount
    */
   public function setMaxNodeCount($maxNodeCount)
   {
@@ -61,7 +84,10 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling extends \Goog
     return $this->maxNodeCount;
   }
   /**
-   * @param int
+   * Required. The minimum number of nodes to scale down to. Must be greater
+   * than or equal to 1.
+   *
+   * @param int $minNodeCount
    */
   public function setMinNodeCount($minNodeCount)
   {

@@ -21,18 +21,25 @@ class GoogleCloudAiplatformV1GenericOperationMetadata extends \Google\Collection
 {
   protected $collection_key = 'partialFailures';
   /**
+   * Output only. Time when the operation was created.
+   *
    * @var string
    */
   public $createTime;
   protected $partialFailuresType = GoogleRpcStatus::class;
   protected $partialFailuresDataType = 'array';
   /**
+   * Output only. Time when the operation was updated for the last time. If the
+   * operation has finished (successfully or not), this is the finish time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Time when the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -46,7 +53,11 @@ class GoogleCloudAiplatformV1GenericOperationMetadata extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Output only. Partial failures encountered. E.g. single files that couldn't
+   * be read. This field should never exceed 20 entries. Status details field
+   * will contain standard Google Cloud error details.
+   *
+   * @param GoogleRpcStatus[] $partialFailures
    */
   public function setPartialFailures($partialFailures)
   {
@@ -60,7 +71,10 @@ class GoogleCloudAiplatformV1GenericOperationMetadata extends \Google\Collection
     return $this->partialFailures;
   }
   /**
-   * @param string
+   * Output only. Time when the operation was updated for the last time. If the
+   * operation has finished (successfully or not), this is the finish time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

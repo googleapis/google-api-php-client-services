@@ -20,19 +20,41 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GenerationConfigRoutingConfigAutoRoutingMode extends \Google\Model
 {
   /**
+   * Unspecified model routing preference.
+   */
+  public const MODEL_ROUTING_PREFERENCE_UNKNOWN = 'UNKNOWN';
+  /**
+   * The model will be selected to prioritize the quality of the response.
+   */
+  public const MODEL_ROUTING_PREFERENCE_PRIORITIZE_QUALITY = 'PRIORITIZE_QUALITY';
+  /**
+   * The model will be selected to balance quality and cost.
+   */
+  public const MODEL_ROUTING_PREFERENCE_BALANCED = 'BALANCED';
+  /**
+   * The model will be selected to prioritize the cost of the request.
+   */
+  public const MODEL_ROUTING_PREFERENCE_PRIORITIZE_COST = 'PRIORITIZE_COST';
+  /**
+   * The model routing preference.
+   *
    * @var string
    */
   public $modelRoutingPreference;
 
   /**
-   * @param string
+   * The model routing preference.
+   *
+   * Accepted values: UNKNOWN, PRIORITIZE_QUALITY, BALANCED, PRIORITIZE_COST
+   *
+   * @param self::MODEL_ROUTING_PREFERENCE_* $modelRoutingPreference
    */
   public function setModelRoutingPreference($modelRoutingPreference)
   {
     $this->modelRoutingPreference = $modelRoutingPreference;
   }
   /**
-   * @return string
+   * @return self::MODEL_ROUTING_PREFERENCE_*
    */
   public function getModelRoutingPreference()
   {

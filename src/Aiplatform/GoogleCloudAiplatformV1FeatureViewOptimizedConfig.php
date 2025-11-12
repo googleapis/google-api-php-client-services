@@ -23,7 +23,13 @@ class GoogleCloudAiplatformV1FeatureViewOptimizedConfig extends \Google\Model
   protected $automaticResourcesDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1AutomaticResources
+   * Optional. A description of resources that the FeatureView uses, which to
+   * large degree are decided by Vertex AI, and optionally allows only a modest
+   * additional configuration. If min_replica_count is not set, the default
+   * value is 2. If max_replica_count is not set, the default value is 6. The
+   * max allowed replica count is 1000.
+   *
+   * @param GoogleCloudAiplatformV1AutomaticResources $automaticResources
    */
   public function setAutomaticResources(GoogleCloudAiplatformV1AutomaticResources $automaticResources)
   {

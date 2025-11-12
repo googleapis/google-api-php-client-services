@@ -22,12 +22,17 @@ class GoogleCloudAiplatformV1FeatureViewDataKey extends \Google\Model
   protected $compositeKeyType = GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey::class;
   protected $compositeKeyDataType = '';
   /**
+   * String key to use for lookup.
+   *
    * @var string
    */
   public $key;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey
+   * The actual Entity ID will be composed from this struct. This should match
+   * with the way ID is defined in the FeatureView spec.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey $compositeKey
    */
   public function setCompositeKey(GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey $compositeKey)
   {
@@ -41,7 +46,9 @@ class GoogleCloudAiplatformV1FeatureViewDataKey extends \Google\Model
     return $this->compositeKey;
   }
   /**
-   * @param string
+   * String key to use for lookup.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {

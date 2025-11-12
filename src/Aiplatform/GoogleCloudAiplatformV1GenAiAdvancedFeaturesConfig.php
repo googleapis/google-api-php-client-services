@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfig extends \Google\Model
   protected $ragConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfigRagConfig
+   * Configuration for Retrieval Augmented Generation feature.
+   *
+   * @param GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfigRagConfig $ragConfig
    */
   public function setRagConfig(GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfigRagConfig $ragConfig)
   {

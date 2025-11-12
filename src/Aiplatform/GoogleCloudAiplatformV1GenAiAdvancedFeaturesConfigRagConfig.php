@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GenAiAdvancedFeaturesConfigRagConfig extends \Google\Model
 {
   /**
+   * If true, enable Retrieval Augmented Generation in ChatCompletion request.
+   * Once enabled, the endpoint will be identified as GenAI endpoint and
+   * Arthedain router will be used.
+   *
    * @var bool
    */
   public $enableRag;
 
   /**
-   * @param bool
+   * If true, enable Retrieval Augmented Generation in ChatCompletion request.
+   * Once enabled, the endpoint will be identified as GenAI endpoint and
+   * Arthedain router will be used.
+   *
+   * @param bool $enableRag
    */
   public function setEnableRag($enableRag)
   {

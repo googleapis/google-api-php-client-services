@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GenieSource extends \Google\Model
 {
   /**
+   * Required. The public base model URI.
+   *
    * @var string
    */
   public $baseModelUri;
 
   /**
-   * @param string
+   * Required. The public base model URI.
+   *
+   * @param string $baseModelUri
    */
   public function setBaseModelUri($baseModelUri)
   {

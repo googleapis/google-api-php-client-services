@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1GoogleSearchRetrieval extends \Google\Model
   protected $dynamicRetrievalConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1DynamicRetrievalConfig
+   * Specifies the dynamic retrieval configuration for the given source.
+   *
+   * @param GoogleCloudAiplatformV1DynamicRetrievalConfig $dynamicRetrievalConfig
    */
   public function setDynamicRetrievalConfig(GoogleCloudAiplatformV1DynamicRetrievalConfig $dynamicRetrievalConfig)
   {

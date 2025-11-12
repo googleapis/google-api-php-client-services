@@ -19,15 +19,36 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureView extends \Google\Model
 {
+  /**
+   * By default, the project-level Vertex AI Service Agent is enabled.
+   */
+  public const SERVICE_AGENT_TYPE_SERVICE_AGENT_TYPE_UNSPECIFIED = 'SERVICE_AGENT_TYPE_UNSPECIFIED';
+  /**
+   * Indicates the project-level Vertex AI Service Agent
+   * (https://cloud.google.com/vertex-ai/docs/general/access-control#service-
+   * agents) will be used during sync jobs.
+   */
+  public const SERVICE_AGENT_TYPE_SERVICE_AGENT_TYPE_PROJECT = 'SERVICE_AGENT_TYPE_PROJECT';
+  /**
+   * Enable a FeatureView service account to be created by Vertex AI and output
+   * in the field `service_account_email`. This service account will be used to
+   * read from the source BigQuery table during sync.
+   */
+  public const SERVICE_AGENT_TYPE_SERVICE_AGENT_TYPE_FEATURE_VIEW = 'SERVICE_AGENT_TYPE_FEATURE_VIEW';
   protected $bigQuerySourceType = GoogleCloudAiplatformV1FeatureViewBigQuerySource::class;
   protected $bigQuerySourceDataType = '';
   protected $bigtableMetadataType = GoogleCloudAiplatformV1FeatureViewBigtableMetadata::class;
   protected $bigtableMetadataDataType = '';
   /**
+   * Output only. Timestamp when this FeatureView was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Used to perform consistent read-modify-write updates. If not set,
+   * a blind "overwrite" update happens.
+   *
    * @var string
    */
   public $etag;
@@ -36,34 +57,64 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
   protected $indexConfigType = GoogleCloudAiplatformV1FeatureViewIndexConfig::class;
   protected $indexConfigDataType = '';
   /**
+   * Optional. The labels with user-defined metadata to organize your
+   * FeatureViews. Label keys and values can be no longer than 64 characters
+   * (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed.
+   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * No more than 64 user labels can be associated with one
+   * FeatureOnlineStore(System labels are excluded)." System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. Name of the FeatureView. Format: `projects/{project}/locations/
+   * {location}/featureOnlineStores/{feature_online_store}/featureViews/{feature
+   * _view}`
+   *
    * @var string
    */
   public $name;
   protected $optimizedConfigType = GoogleCloudAiplatformV1FeatureViewOptimizedConfig::class;
   protected $optimizedConfigDataType = '';
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Output only. A Service Account unique to this FeatureView. The role
+   * bigquery.dataViewer should be granted to this service account to allow
+   * Vertex AI Feature Store to sync data to the online store.
+   *
    * @var string
    */
   public $serviceAccountEmail;
   /**
+   * Optional. Service agent type used during data sync. By default, the Vertex
+   * AI Service Agent is used. When using an IAM Policy to isolate this
+   * FeatureView within a project, a separate service account should be
+   * provisioned by setting this field to `SERVICE_AGENT_TYPE_FEATURE_VIEW`.
+   * This will generate a separate service account to access the BigQuery source
+   * table.
+   *
    * @var string
    */
   public $serviceAgentType;
   protected $syncConfigType = GoogleCloudAiplatformV1FeatureViewSyncConfig::class;
   protected $syncConfigDataType = '';
   /**
+   * Output only. Timestamp when this FeatureView was last updated.
+   *
    * @var string
    */
   public $updateTime;
@@ -71,7 +122,10 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
   protected $vertexRagSourceDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewBigQuerySource
+   * Optional. Configures how data is supposed to be extracted from a BigQuery
+   * source to be loaded onto the FeatureOnlineStore.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewBigQuerySource $bigQuerySource
    */
   public function setBigQuerySource(GoogleCloudAiplatformV1FeatureViewBigQuerySource $bigQuerySource)
   {
@@ -85,7 +139,9 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->bigQuerySource;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewBigtableMetadata
+   * Output only. Metadata containing information about the Cloud Bigtable.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewBigtableMetadata $bigtableMetadata
    */
   public function setBigtableMetadata(GoogleCloudAiplatformV1FeatureViewBigtableMetadata $bigtableMetadata)
   {
@@ -99,7 +155,9 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->bigtableMetadata;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this FeatureView was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -113,7 +171,10 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Used to perform consistent read-modify-write updates. If not set,
+   * a blind "overwrite" update happens.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -127,7 +188,10 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource
+   * Optional. Configures the features from a Feature Registry source that need
+   * to be loaded onto the FeatureOnlineStore.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource $featureRegistrySource
    */
   public function setFeatureRegistrySource(GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource $featureRegistrySource)
   {
@@ -141,7 +205,12 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->featureRegistrySource;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewIndexConfig
+   * Optional. Configuration for index preparation for vector search. It
+   * contains the required configurations to create an index from source data,
+   * so that approximate nearest neighbor (a.k.a ANN) algorithms search can be
+   * performed during online serving.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewIndexConfig $indexConfig
    */
   public function setIndexConfig(GoogleCloudAiplatformV1FeatureViewIndexConfig $indexConfig)
   {
@@ -155,7 +224,16 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->indexConfig;
   }
   /**
-   * @param string[]
+   * Optional. The labels with user-defined metadata to organize your
+   * FeatureViews. Label keys and values can be no longer than 64 characters
+   * (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed.
+   * See https://goo.gl/xmQnxf for more information on and examples of labels.
+   * No more than 64 user labels can be associated with one
+   * FeatureOnlineStore(System labels are excluded)." System reserved label keys
+   * are prefixed with "aiplatform.googleapis.com/" and are immutable.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -169,7 +247,11 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. Name of the FeatureView. Format: `projects/{project}/locations/
+   * {location}/featureOnlineStores/{feature_online_store}/featureViews/{feature
+   * _view}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -183,7 +265,10 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewOptimizedConfig
+   * Optional. Configuration for FeatureView created under Optimized
+   * FeatureOnlineStore.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewOptimizedConfig $optimizedConfig
    */
   public function setOptimizedConfig(GoogleCloudAiplatformV1FeatureViewOptimizedConfig $optimizedConfig)
   {
@@ -197,7 +282,9 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->optimizedConfig;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -211,7 +298,9 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -225,7 +314,11 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Output only. A Service Account unique to this FeatureView. The role
+   * bigquery.dataViewer should be granted to this service account to allow
+   * Vertex AI Feature Store to sync data to the online store.
+   *
+   * @param string $serviceAccountEmail
    */
   public function setServiceAccountEmail($serviceAccountEmail)
   {
@@ -239,21 +332,35 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->serviceAccountEmail;
   }
   /**
-   * @param string
+   * Optional. Service agent type used during data sync. By default, the Vertex
+   * AI Service Agent is used. When using an IAM Policy to isolate this
+   * FeatureView within a project, a separate service account should be
+   * provisioned by setting this field to `SERVICE_AGENT_TYPE_FEATURE_VIEW`.
+   * This will generate a separate service account to access the BigQuery source
+   * table.
+   *
+   * Accepted values: SERVICE_AGENT_TYPE_UNSPECIFIED,
+   * SERVICE_AGENT_TYPE_PROJECT, SERVICE_AGENT_TYPE_FEATURE_VIEW
+   *
+   * @param self::SERVICE_AGENT_TYPE_* $serviceAgentType
    */
   public function setServiceAgentType($serviceAgentType)
   {
     $this->serviceAgentType = $serviceAgentType;
   }
   /**
-   * @return string
+   * @return self::SERVICE_AGENT_TYPE_*
    */
   public function getServiceAgentType()
   {
     return $this->serviceAgentType;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewSyncConfig
+   * Configures when data is to be synced/updated for this FeatureView. At the
+   * end of the sync the latest featureValues for each entityId of this
+   * FeatureView are made ready for online serving.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewSyncConfig $syncConfig
    */
   public function setSyncConfig(GoogleCloudAiplatformV1FeatureViewSyncConfig $syncConfig)
   {
@@ -267,7 +374,9 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->syncConfig;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this FeatureView was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -281,7 +390,9 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewVertexRagSource
+   * Optional. The Vertex RAG Source that the FeatureView is linked to.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewVertexRagSource $vertexRagSource
    */
   public function setVertexRagSource(GoogleCloudAiplatformV1FeatureViewVertexRagSource $vertexRagSource)
   {

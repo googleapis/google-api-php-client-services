@@ -20,16 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureViewVertexRagSource extends \Google\Model
 {
   /**
+   * Optional. The RAG corpus id corresponding to this FeatureView.
+   *
    * @var string
    */
   public $ragCorpusId;
   /**
+   * Required. The BigQuery view/table URI that will be materialized on each
+   * manual sync trigger. The table/view is expected to have the following
+   * columns and types at least: - `corpus_id` (STRING, NULLABLE/REQUIRED) -
+   * `file_id` (STRING, NULLABLE/REQUIRED) - `chunk_id` (STRING,
+   * NULLABLE/REQUIRED) - `chunk_data_type` (STRING, NULLABLE/REQUIRED) -
+   * `chunk_data` (STRING, NULLABLE/REQUIRED) - `embeddings` (FLOAT, REPEATED) -
+   * `file_original_uri` (STRING, NULLABLE/REQUIRED)
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Optional. The RAG corpus id corresponding to this FeatureView.
+   *
+   * @param string $ragCorpusId
    */
   public function setRagCorpusId($ragCorpusId)
   {
@@ -43,7 +55,15 @@ class GoogleCloudAiplatformV1FeatureViewVertexRagSource extends \Google\Model
     return $this->ragCorpusId;
   }
   /**
-   * @param string
+   * Required. The BigQuery view/table URI that will be materialized on each
+   * manual sync trigger. The table/view is expected to have the following
+   * columns and types at least: - `corpus_id` (STRING, NULLABLE/REQUIRED) -
+   * `file_id` (STRING, NULLABLE/REQUIRED) - `chunk_id` (STRING,
+   * NULLABLE/REQUIRED) - `chunk_data_type` (STRING, NULLABLE/REQUIRED) -
+   * `chunk_data` (STRING, NULLABLE/REQUIRED) - `embeddings` (FLOAT, REPEATED) -
+   * `file_original_uri` (STRING, NULLABLE/REQUIRED)
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

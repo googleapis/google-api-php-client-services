@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1FeatureSelector extends \Google\Model
   protected $idMatcherDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1IdMatcher
+   * Required. Matches Features based on ID.
+   *
+   * @param GoogleCloudAiplatformV1IdMatcher $idMatcher
    */
   public function setIdMatcher(GoogleCloudAiplatformV1IdMatcher $idMatcher)
   {

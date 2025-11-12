@@ -20,12 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureValueMetadata extends \Google\Model
 {
   /**
+   * Feature generation timestamp. Typically, it is provided by user at feature
+   * ingestion time. If not, feature store will use the system timestamp when
+   * the data is ingested into feature store. Legacy Feature Store: For
+   * streaming ingestion, the time, aligned by days, must be no older than five
+   * years (1825 days) and no later than one year (366 days) in the future.
+   *
    * @var string
    */
   public $generateTime;
 
   /**
-   * @param string
+   * Feature generation timestamp. Typically, it is provided by user at feature
+   * ingestion time. If not, feature store will use the system timestamp when
+   * the data is ingested into feature store. Legacy Feature Store: For
+   * streaming ingestion, the time, aligned by days, must be no older than five
+   * years (1825 days) and no later than one year (366 days) in the future.
+   *
+   * @param string $generateTime
    */
   public function setGenerateTime($generateTime)
   {

@@ -23,16 +23,23 @@ class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
   protected $candidatesType = GoogleCloudAiplatformV1Candidate::class;
   protected $candidatesDataType = 'array';
   /**
+   * Output only. Timestamp when the request is made to the server.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The model version used to generate the response.
+   *
    * @var string
    */
   public $modelVersion;
   protected $promptFeedbackType = GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback::class;
   protected $promptFeedbackDataType = '';
   /**
+   * Output only. response_id is used to identify each response. It is the
+   * encoding of the event_id.
+   *
    * @var string
    */
   public $responseId;
@@ -40,7 +47,9 @@ class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
   protected $usageMetadataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1Candidate[]
+   * Output only. Generated candidates.
+   *
+   * @param GoogleCloudAiplatformV1Candidate[] $candidates
    */
   public function setCandidates($candidates)
   {
@@ -54,7 +63,9 @@ class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
     return $this->candidates;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the request is made to the server.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -68,7 +79,9 @@ class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The model version used to generate the response.
+   *
+   * @param string $modelVersion
    */
   public function setModelVersion($modelVersion)
   {
@@ -82,7 +95,11 @@ class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
     return $this->modelVersion;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback
+   * Output only. Content filter results for a prompt sent in the request. Note:
+   * Sent only in the first stream chunk. Only happens when no candidates were
+   * generated due to content violations.
+   *
+   * @param GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback $promptFeedback
    */
   public function setPromptFeedback(GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback $promptFeedback)
   {
@@ -96,7 +113,10 @@ class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
     return $this->promptFeedback;
   }
   /**
-   * @param string
+   * Output only. response_id is used to identify each response. It is the
+   * encoding of the event_id.
+   *
+   * @param string $responseId
    */
   public function setResponseId($responseId)
   {
@@ -110,7 +130,9 @@ class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
     return $this->responseId;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata
+   * Usage metadata about the response(s).
+   *
+   * @param GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata $usageMetadata
    */
   public function setUsageMetadata(GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata $usageMetadata)
   {

@@ -22,16 +22,28 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends 
   protected $privateServiceConnectConfigType = GoogleCloudAiplatformV1PrivateServiceConnectConfig::class;
   protected $privateServiceConnectConfigDataType = '';
   /**
+   * Output only. This field will be populated with the domain name to use for
+   * this FeatureOnlineStore
+   *
    * @var string
    */
   public $publicEndpointDomainName;
   /**
+   * Output only. The name of the service attachment resource. Populated if
+   * private service connect is enabled and after FeatureViewSync is created.
+   *
    * @var string
    */
   public $serviceAttachment;
 
   /**
-   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   * Optional. Private service connect config. The private service connection is
+   * available only for Optimized storage type, not for embedding management
+   * now. If PrivateServiceConnectConfig.enable_private_service_connect set to
+   * true, customers will use private service connection to send request.
+   * Otherwise, the connection will set to public endpoint.
+   *
+   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig $privateServiceConnectConfig
    */
   public function setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig $privateServiceConnectConfig)
   {
@@ -45,7 +57,10 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends 
     return $this->privateServiceConnectConfig;
   }
   /**
-   * @param string
+   * Output only. This field will be populated with the domain name to use for
+   * this FeatureOnlineStore
+   *
+   * @param string $publicEndpointDomainName
    */
   public function setPublicEndpointDomainName($publicEndpointDomainName)
   {
@@ -59,7 +74,10 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends 
     return $this->publicEndpointDomainName;
   }
   /**
-   * @param string
+   * Output only. The name of the service attachment resource. Populated if
+   * private service connect is enabled and after FeatureViewSync is created.
+   *
+   * @param string $serviceAttachment
    */
   public function setServiceAttachment($serviceAttachment)
   {

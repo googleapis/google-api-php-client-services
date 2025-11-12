@@ -20,6 +20,21 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FetchFeatureValuesRequest extends \Google\Model
 {
   /**
+   * Not set. Will be treated as the KeyValue format.
+   */
+  public const DATA_FORMAT_FEATURE_VIEW_DATA_FORMAT_UNSPECIFIED = 'FEATURE_VIEW_DATA_FORMAT_UNSPECIFIED';
+  /**
+   * Return response data in key-value format.
+   */
+  public const DATA_FORMAT_KEY_VALUE = 'KEY_VALUE';
+  /**
+   * Return response data in proto Struct format.
+   */
+  public const DATA_FORMAT_PROTO_STRUCT = 'PROTO_STRUCT';
+  /**
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE
+   * will be used.
+   *
    * @var string
    */
   public $dataFormat;
@@ -27,21 +42,29 @@ class GoogleCloudAiplatformV1FetchFeatureValuesRequest extends \Google\Model
   protected $dataKeyDataType = '';
 
   /**
-   * @param string
+   * Optional. Response data format. If not set, FeatureViewDataFormat.KEY_VALUE
+   * will be used.
+   *
+   * Accepted values: FEATURE_VIEW_DATA_FORMAT_UNSPECIFIED, KEY_VALUE,
+   * PROTO_STRUCT
+   *
+   * @param self::DATA_FORMAT_* $dataFormat
    */
   public function setDataFormat($dataFormat)
   {
     $this->dataFormat = $dataFormat;
   }
   /**
-   * @return string
+   * @return self::DATA_FORMAT_*
    */
   public function getDataFormat()
   {
     return $this->dataFormat;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewDataKey
+   * Optional. The request key to fetch feature values for.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewDataKey $dataKey
    */
   public function setDataKey(GoogleCloudAiplatformV1FeatureViewDataKey $dataKey)
   {

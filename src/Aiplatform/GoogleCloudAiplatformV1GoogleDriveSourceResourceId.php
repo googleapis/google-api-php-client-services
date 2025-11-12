@@ -20,16 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GoogleDriveSourceResourceId extends \Google\Model
 {
   /**
+   * Unspecified resource type.
+   */
+  public const RESOURCE_TYPE_RESOURCE_TYPE_UNSPECIFIED = 'RESOURCE_TYPE_UNSPECIFIED';
+  /**
+   * File resource type.
+   */
+  public const RESOURCE_TYPE_RESOURCE_TYPE_FILE = 'RESOURCE_TYPE_FILE';
+  /**
+   * Folder resource type.
+   */
+  public const RESOURCE_TYPE_RESOURCE_TYPE_FOLDER = 'RESOURCE_TYPE_FOLDER';
+  /**
+   * Required. The ID of the Google Drive resource.
+   *
    * @var string
    */
   public $resourceId;
   /**
+   * Required. The type of the Google Drive resource.
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param string
+   * Required. The ID of the Google Drive resource.
+   *
+   * @param string $resourceId
    */
   public function setResourceId($resourceId)
   {
@@ -43,14 +61,19 @@ class GoogleCloudAiplatformV1GoogleDriveSourceResourceId extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param string
+   * Required. The type of the Google Drive resource.
+   *
+   * Accepted values: RESOURCE_TYPE_UNSPECIFIED, RESOURCE_TYPE_FILE,
+   * RESOURCE_TYPE_FOLDER
+   *
+   * @param self::RESOURCE_TYPE_* $resourceType
    */
   public function setResourceType($resourceType)
   {
     $this->resourceType = $resourceType;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_TYPE_*
    */
   public function getResourceType()
   {

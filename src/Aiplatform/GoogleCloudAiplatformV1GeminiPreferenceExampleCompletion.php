@@ -22,12 +22,16 @@ class GoogleCloudAiplatformV1GeminiPreferenceExampleCompletion extends \Google\M
   protected $completionType = GoogleCloudAiplatformV1Content::class;
   protected $completionDataType = '';
   /**
+   * The score for the given completion.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param GoogleCloudAiplatformV1Content
+   * Single turn completion for the given prompt.
+   *
+   * @param GoogleCloudAiplatformV1Content $completion
    */
   public function setCompletion(GoogleCloudAiplatformV1Content $completion)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1GeminiPreferenceExampleCompletion extends \Google\M
     return $this->completion;
   }
   /**
-   * @param float
+   * The score for the given completion.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

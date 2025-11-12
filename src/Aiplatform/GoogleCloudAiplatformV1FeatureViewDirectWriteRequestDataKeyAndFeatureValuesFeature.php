@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValuesFeature extends \Google\Model
 {
   /**
+   * Feature short name.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +29,9 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValue
   protected $valueDataType = '';
 
   /**
-   * @param string
+   * Feature short name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +45,10 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteRequestDataKeyAndFeatureValue
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureValue
+   * Feature value. A user provided timestamp may be set in the
+   * `FeatureValue.metadata.generate_time` field.
+   *
+   * @param GoogleCloudAiplatformV1FeatureValue $value
    */
   public function setValue(GoogleCloudAiplatformV1FeatureValue $value)
   {

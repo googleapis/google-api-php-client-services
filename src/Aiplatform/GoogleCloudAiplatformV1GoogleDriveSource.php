@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1GoogleDriveSource extends \Google\Collection
   protected $resourceIdsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1GoogleDriveSourceResourceId[]
+   * Required. Google Drive resource IDs.
+   *
+   * @param GoogleCloudAiplatformV1GoogleDriveSourceResourceId[] $resourceIds
    */
   public function setResourceIds($resourceIds)
   {

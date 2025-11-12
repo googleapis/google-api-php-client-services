@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GroundednessInstance extends \Google\Model
 {
   /**
+   * Required. Background information provided in context used to compare
+   * against the prediction.
+   *
    * @var string
    */
   public $context;
   /**
+   * Required. Output of the evaluated model.
+   *
    * @var string
    */
   public $prediction;
 
   /**
-   * @param string
+   * Required. Background information provided in context used to compare
+   * against the prediction.
+   *
+   * @param string $context
    */
   public function setContext($context)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1GroundednessInstance extends \Google\Model
     return $this->context;
   }
   /**
-   * @param string
+   * Required. Output of the evaluated model.
+   *
+   * @param string $prediction
    */
   public function setPrediction($prediction)
   {

@@ -27,7 +27,10 @@ class GoogleCloudAiplatformV1FeatureValueDestination extends \Google\Model
   protected $tfrecordDestinationDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1BigQueryDestination
+   * Output in BigQuery format. BigQueryDestination.output_uri in
+   * FeatureValueDestination.bigquery_destination must refer to a table.
+   *
+   * @param GoogleCloudAiplatformV1BigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(GoogleCloudAiplatformV1BigQueryDestination $bigqueryDestination)
   {
@@ -41,7 +44,10 @@ class GoogleCloudAiplatformV1FeatureValueDestination extends \Google\Model
     return $this->bigqueryDestination;
   }
   /**
-   * @param GoogleCloudAiplatformV1CsvDestination
+   * Output in CSV format. Array Feature value types are not allowed in CSV
+   * format.
+   *
+   * @param GoogleCloudAiplatformV1CsvDestination $csvDestination
    */
   public function setCsvDestination(GoogleCloudAiplatformV1CsvDestination $csvDestination)
   {
@@ -55,7 +61,14 @@ class GoogleCloudAiplatformV1FeatureValueDestination extends \Google\Model
     return $this->csvDestination;
   }
   /**
-   * @param GoogleCloudAiplatformV1TFRecordDestination
+   * Output in TFRecord format. Below are the mapping from Feature value type in
+   * Featurestore to Feature value type in TFRecord: Value type in Featurestore
+   * | Value type in TFRecord DOUBLE, DOUBLE_ARRAY | FLOAT_LIST INT64,
+   * INT64_ARRAY | INT64_LIST STRING, STRING_ARRAY, BYTES | BYTES_LIST true ->
+   * byte_string("true"), false -> byte_string("false") BOOL, BOOL_ARRAY (true,
+   * false) | BYTES_LIST
+   *
+   * @param GoogleCloudAiplatformV1TFRecordDestination $tfrecordDestination
    */
   public function setTfrecordDestination(GoogleCloudAiplatformV1TFRecordDestination $tfrecordDestination)
   {

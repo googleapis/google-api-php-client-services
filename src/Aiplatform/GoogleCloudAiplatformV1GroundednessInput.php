@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1GroundednessInput extends \Google\Model
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GroundednessInstance
+   * Required. Groundedness instance.
+   *
+   * @param GoogleCloudAiplatformV1GroundednessInstance $instance
    */
   public function setInstance(GoogleCloudAiplatformV1GroundednessInstance $instance)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1GroundednessInput extends \Google\Model
     return $this->instance;
   }
   /**
-   * @param GoogleCloudAiplatformV1GroundednessSpec
+   * Required. Spec for groundedness metric.
+   *
+   * @param GoogleCloudAiplatformV1GroundednessSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1GroundednessSpec $metricSpec)
   {

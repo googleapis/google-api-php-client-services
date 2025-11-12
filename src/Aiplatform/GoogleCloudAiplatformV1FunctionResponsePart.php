@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1FunctionResponsePart extends \Google\Model
   protected $inlineDataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1FunctionResponseFileData
+   * URI based data.
+   *
+   * @param GoogleCloudAiplatformV1FunctionResponseFileData $fileData
    */
   public function setFileData(GoogleCloudAiplatformV1FunctionResponseFileData $fileData)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1FunctionResponsePart extends \Google\Model
     return $this->fileData;
   }
   /**
-   * @param GoogleCloudAiplatformV1FunctionResponseBlob
+   * Inline media bytes.
+   *
+   * @param GoogleCloudAiplatformV1FunctionResponseBlob $inlineData
    */
   public function setInlineData(GoogleCloudAiplatformV1FunctionResponseBlob $inlineData)
   {

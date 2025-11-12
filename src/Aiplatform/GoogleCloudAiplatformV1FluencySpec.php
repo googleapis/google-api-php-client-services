@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FluencySpec extends \Google\Model
 {
   /**
+   * Optional. Which version to use for evaluation.
+   *
    * @var int
    */
   public $version;
 
   /**
-   * @param int
+   * Optional. Which version to use for evaluation.
+   *
+   * @param int $version
    */
   public function setVersion($version)
   {

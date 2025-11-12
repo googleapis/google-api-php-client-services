@@ -19,12 +19,52 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback extends \Google\Collection
 {
+  /**
+   * The blocked reason is unspecified.
+   */
+  public const BLOCK_REASON_BLOCKED_REASON_UNSPECIFIED = 'BLOCKED_REASON_UNSPECIFIED';
+  /**
+   * The prompt was blocked for safety reasons.
+   */
+  public const BLOCK_REASON_SAFETY = 'SAFETY';
+  /**
+   * The prompt was blocked for other reasons. For example, it may be due to the
+   * prompt's language, or because it contains other harmful content.
+   */
+  public const BLOCK_REASON_OTHER = 'OTHER';
+  /**
+   * The prompt was blocked because it contains a term from the terminology
+   * blocklist.
+   */
+  public const BLOCK_REASON_BLOCKLIST = 'BLOCKLIST';
+  /**
+   * The prompt was blocked because it contains prohibited content.
+   */
+  public const BLOCK_REASON_PROHIBITED_CONTENT = 'PROHIBITED_CONTENT';
+  /**
+   * The prompt was blocked by Model Armor.
+   */
+  public const BLOCK_REASON_MODEL_ARMOR = 'MODEL_ARMOR';
+  /**
+   * The prompt was blocked because it contains content that is unsafe for image
+   * generation.
+   */
+  public const BLOCK_REASON_IMAGE_SAFETY = 'IMAGE_SAFETY';
+  /**
+   * The prompt was blocked as a jailbreak attempt.
+   */
+  public const BLOCK_REASON_JAILBREAK = 'JAILBREAK';
   protected $collection_key = 'safetyRatings';
   /**
+   * Output only. The reason why the prompt was blocked.
+   *
    * @var string
    */
   public $blockReason;
   /**
+   * Output only. A readable message that explains the reason why the prompt was
+   * blocked.
+   *
    * @var string
    */
   public $blockReasonMessage;
@@ -32,21 +72,29 @@ class GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback extends \Goog
   protected $safetyRatingsDataType = 'array';
 
   /**
-   * @param string
+   * Output only. The reason why the prompt was blocked.
+   *
+   * Accepted values: BLOCKED_REASON_UNSPECIFIED, SAFETY, OTHER, BLOCKLIST,
+   * PROHIBITED_CONTENT, MODEL_ARMOR, IMAGE_SAFETY, JAILBREAK
+   *
+   * @param self::BLOCK_REASON_* $blockReason
    */
   public function setBlockReason($blockReason)
   {
     $this->blockReason = $blockReason;
   }
   /**
-   * @return string
+   * @return self::BLOCK_REASON_*
    */
   public function getBlockReason()
   {
     return $this->blockReason;
   }
   /**
-   * @param string
+   * Output only. A readable message that explains the reason why the prompt was
+   * blocked.
+   *
+   * @param string $blockReasonMessage
    */
   public function setBlockReasonMessage($blockReasonMessage)
   {
@@ -60,7 +108,10 @@ class GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback extends \Goog
     return $this->blockReasonMessage;
   }
   /**
-   * @param GoogleCloudAiplatformV1SafetyRating[]
+   * Output only. A list of safety ratings for the prompt. There is one rating
+   * per category.
+   *
+   * @param GoogleCloudAiplatformV1SafetyRating[] $safetyRatings
    */
   public function setSafetyRatings($safetyRatings)
   {

@@ -21,16 +21,23 @@ class GoogleCloudAiplatformV1FeatureViewBigQuerySource extends \Google\Collectio
 {
   protected $collection_key = 'entityIdColumns';
   /**
+   * Required. Columns to construct entity_id / row keys.
+   *
    * @var string[]
    */
   public $entityIdColumns;
   /**
+   * Required. The BigQuery view URI that will be materialized on each sync
+   * trigger based on FeatureView.SyncConfig.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string[]
+   * Required. Columns to construct entity_id / row keys.
+   *
+   * @param string[] $entityIdColumns
    */
   public function setEntityIdColumns($entityIdColumns)
   {
@@ -44,7 +51,10 @@ class GoogleCloudAiplatformV1FeatureViewBigQuerySource extends \Google\Collectio
     return $this->entityIdColumns;
   }
   /**
-   * @param string
+   * Required. The BigQuery view URI that will be materialized on each sync
+   * trigger based on FeatureView.SyncConfig.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

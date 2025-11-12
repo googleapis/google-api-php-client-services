@@ -30,7 +30,9 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Coll
   protected $rubricGenerationSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfig
+   * Optional. Agent configuration, required for agent-based rubric generation.
+   *
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentConfig $agentConfig
    */
   public function setAgentConfig(GoogleCloudAiplatformV1EvaluationInstanceAgentConfig $agentConfig)
   {
@@ -44,7 +46,11 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Coll
     return $this->agentConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1Content[]
+   * Required. The prompt to generate rubrics from. For single-turn queries,
+   * this is a single instance. For multi-turn queries, this is a repeated field
+   * that contains conversation history + latest request.
+   *
+   * @param GoogleCloudAiplatformV1Content[] $contents
    */
   public function setContents($contents)
   {
@@ -58,7 +64,13 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Coll
     return $this->contents;
   }
   /**
-   * @param GoogleCloudAiplatformV1PredefinedMetricSpec
+   * Optional. Specification for using the rubric generation configs of a pre-
+   * defined metric, e.g. "generic_quality_v1" and "instruction_following_v1".
+   * Some of the configs may be only used in rubric generation and not
+   * supporting evaluation, e.g. "fully_customized_generic_quality_v1". If this
+   * field is set, the `rubric_generation_spec` field will be ignored.
+   *
+   * @param GoogleCloudAiplatformV1PredefinedMetricSpec $predefinedRubricGenerationSpec
    */
   public function setPredefinedRubricGenerationSpec(GoogleCloudAiplatformV1PredefinedMetricSpec $predefinedRubricGenerationSpec)
   {
@@ -72,7 +84,9 @@ class GoogleCloudAiplatformV1GenerateInstanceRubricsRequest extends \Google\Coll
     return $this->predefinedRubricGenerationSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1RubricGenerationSpec
+   * Optional. Specification for how the rubrics should be generated.
+   *
+   * @param GoogleCloudAiplatformV1RubricGenerationSpec $rubricGenerationSpec
    */
   public function setRubricGenerationSpec(GoogleCloudAiplatformV1RubricGenerationSpec $rubricGenerationSpec)
   {

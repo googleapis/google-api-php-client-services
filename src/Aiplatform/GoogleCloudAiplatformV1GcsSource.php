@@ -21,12 +21,20 @@ class GoogleCloudAiplatformV1GcsSource extends \Google\Collection
 {
   protected $collection_key = 'uris';
   /**
+   * Required. Google Cloud Storage URI(-s) to the input file(s). May contain
+   * wildcards. For more information on wildcards, see
+   * https://cloud.google.com/storage/docs/wildcards.
+   *
    * @var string[]
    */
   public $uris;
 
   /**
-   * @param string[]
+   * Required. Google Cloud Storage URI(-s) to the input file(s). May contain
+   * wildcards. For more information on wildcards, see
+   * https://cloud.google.com/storage/docs/wildcards.
+   *
+   * @param string[] $uris
    */
   public function setUris($uris)
   {

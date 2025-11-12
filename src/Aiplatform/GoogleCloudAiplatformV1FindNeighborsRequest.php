@@ -21,18 +21,36 @@ class GoogleCloudAiplatformV1FindNeighborsRequest extends \Google\Collection
 {
   protected $collection_key = 'queries';
   /**
+   * The ID of the DeployedIndex that will serve the request. This request is
+   * sent to a specific IndexEndpoint, as per the IndexEndpoint.network. That
+   * IndexEndpoint also has IndexEndpoint.deployed_indexes, and each such index
+   * has a DeployedIndex.id field. The value of the field below must equal one
+   * of the DeployedIndex.id fields of the IndexEndpoint that is being called
+   * for this request.
+   *
    * @var string
    */
   public $deployedIndexId;
   protected $queriesType = GoogleCloudAiplatformV1FindNeighborsRequestQuery::class;
   protected $queriesDataType = 'array';
   /**
+   * If set to true, the full datapoints (including all vector values and
+   * restricts) of the nearest neighbors are returned. Note that returning full
+   * datapoint will significantly increase the latency and cost of the query.
+   *
    * @var bool
    */
   public $returnFullDatapoint;
 
   /**
-   * @param string
+   * The ID of the DeployedIndex that will serve the request. This request is
+   * sent to a specific IndexEndpoint, as per the IndexEndpoint.network. That
+   * IndexEndpoint also has IndexEndpoint.deployed_indexes, and each such index
+   * has a DeployedIndex.id field. The value of the field below must equal one
+   * of the DeployedIndex.id fields of the IndexEndpoint that is being called
+   * for this request.
+   *
+   * @param string $deployedIndexId
    */
   public function setDeployedIndexId($deployedIndexId)
   {
@@ -46,7 +64,9 @@ class GoogleCloudAiplatformV1FindNeighborsRequest extends \Google\Collection
     return $this->deployedIndexId;
   }
   /**
-   * @param GoogleCloudAiplatformV1FindNeighborsRequestQuery[]
+   * The list of queries.
+   *
+   * @param GoogleCloudAiplatformV1FindNeighborsRequestQuery[] $queries
    */
   public function setQueries($queries)
   {
@@ -60,7 +80,11 @@ class GoogleCloudAiplatformV1FindNeighborsRequest extends \Google\Collection
     return $this->queries;
   }
   /**
-   * @param bool
+   * If set to true, the full datapoints (including all vector values and
+   * restricts) of the nearest neighbors are returned. Note that returning full
+   * datapoint will significantly increase the latency and cost of the query.
+   *
+   * @param bool $returnFullDatapoint
    */
   public function setReturnFullDatapoint($returnFullDatapoint)
   {

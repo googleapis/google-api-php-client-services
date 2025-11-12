@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FluencyResult extends \Google\Model
 {
   /**
+   * Output only. Confidence for fluency score.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Output only. Explanation for fluency score.
+   *
    * @var string
    */
   public $explanation;
   /**
+   * Output only. Fluency score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Confidence for fluency score.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1FluencyResult extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * Output only. Explanation for fluency score.
+   *
+   * @param string $explanation
    */
   public function setExplanation($explanation)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1FluencyResult extends \Google\Model
     return $this->explanation;
   }
   /**
-   * @param float
+   * Output only. Fluency score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

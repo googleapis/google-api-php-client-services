@@ -22,12 +22,18 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteResponseWriteResponse extends
   protected $dataKeyType = GoogleCloudAiplatformV1FeatureViewDataKey::class;
   protected $dataKeyDataType = '';
   /**
+   * When the feature values were written to the online store. If
+   * FeatureViewDirectWriteResponse.status is not OK, this field is not
+   * populated.
+   *
    * @var string
    */
   public $onlineStoreWriteTime;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewDataKey
+   * What key is this write response associated with.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewDataKey $dataKey
    */
   public function setDataKey(GoogleCloudAiplatformV1FeatureViewDataKey $dataKey)
   {
@@ -41,7 +47,11 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteResponseWriteResponse extends
     return $this->dataKey;
   }
   /**
-   * @param string
+   * When the feature values were written to the online store. If
+   * FeatureViewDirectWriteResponse.status is not OK, this field is not
+   * populated.
+   *
+   * @param string $onlineStoreWriteTime
    */
   public function setOnlineStoreWriteTime($onlineStoreWriteTime)
   {

@@ -26,7 +26,16 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteResponse extends \Google\Coll
   protected $writeResponsesDataType = 'array';
 
   /**
-   * @param GoogleRpcStatus
+   * Response status for the keys listed in
+   * FeatureViewDirectWriteResponse.write_responses. The error only applies to
+   * the listed data keys - the stream will remain open for further
+   * FeatureOnlineStoreService.FeatureViewDirectWriteRequest requests. Partial
+   * failures (e.g. if the first 10 keys of a request fail, but the rest
+   * succeed) from a single request may result in multiple responses - there
+   * will be one response for the successful request keys and one response for
+   * the failing request keys.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {
@@ -40,7 +49,11 @@ class GoogleCloudAiplatformV1FeatureViewDirectWriteResponse extends \Google\Coll
     return $this->status;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteResponseWriteResponse[]
+   * Details about write for each key. If status is not OK,
+   * WriteResponse.data_key will have the key with error, but
+   * WriteResponse.online_store_write_time will not be present.
+   *
+   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteResponseWriteResponse[] $writeResponses
    */
   public function setWriteResponses($writeResponses)
   {

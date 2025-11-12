@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FunctionCall extends \Google\Model
 {
   /**
+   * Optional. The function parameters and values in JSON object format. See
+   * [FunctionDeclaration.parameters] for parameter details.
+   *
    * @var array[]
    */
   public $args;
   /**
+   * Optional. The name of the function to call. Matches
+   * [FunctionDeclaration.name].
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param array[]
+   * Optional. The function parameters and values in JSON object format. See
+   * [FunctionDeclaration.parameters] for parameter details.
+   *
+   * @param array[] $args
    */
   public function setArgs($args)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1FunctionCall extends \Google\Model
     return $this->args;
   }
   /**
-   * @param string
+   * Optional. The name of the function to call. Matches
+   * [FunctionDeclaration.name].
+   *
+   * @param string $name
    */
   public function setName($name)
   {

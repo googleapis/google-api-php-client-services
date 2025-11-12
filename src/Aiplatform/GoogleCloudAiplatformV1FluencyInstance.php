@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FluencyInstance extends \Google\Model
 {
   /**
+   * Required. Output of the evaluated model.
+   *
    * @var string
    */
   public $prediction;
 
   /**
-   * @param string
+   * Required. Output of the evaluated model.
+   *
+   * @param string $prediction
    */
   public function setPrediction($prediction)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureViewIndexConfigTreeAHConfig extends \Google\Model
 {
   /**
+   * Optional. Number of embeddings on each leaf node. The default value is 1000
+   * if not set.
+   *
    * @var string
    */
   public $leafNodeEmbeddingCount;
 
   /**
-   * @param string
+   * Optional. Number of embeddings on each leaf node. The default value is 1000
+   * if not set.
+   *
+   * @param string $leafNodeEmbeddingCount
    */
   public function setLeafNodeEmbeddingCount($leafNodeEmbeddingCount)
   {

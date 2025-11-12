@@ -21,11 +21,25 @@ class GoogleCloudAiplatformV1FindNeighborsResponseNeighbor extends \Google\Model
 {
   protected $datapointType = GoogleCloudAiplatformV1IndexDatapoint::class;
   protected $datapointDataType = '';
+  /**
+   * The distance between the neighbor and the dense embedding query.
+   *
+   * @var 
+   */
   public $distance;
+  /**
+   * The distance between the neighbor and the query sparse_embedding.
+   *
+   * @var 
+   */
   public $sparseDistance;
 
   /**
-   * @param GoogleCloudAiplatformV1IndexDatapoint
+   * The datapoint of the neighbor. Note that full datapoints are returned only
+   * when "return_full_datapoint" is set to true. Otherwise, only the
+   * "datapoint_id" and "crowding_tag" fields are populated.
+   *
+   * @param GoogleCloudAiplatformV1IndexDatapoint $datapoint
    */
   public function setDatapoint(GoogleCloudAiplatformV1IndexDatapoint $datapoint)
   {

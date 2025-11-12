@@ -20,20 +20,36 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FunctionResponseFileData extends \Google\Model
 {
   /**
+   * Optional. Display name of the file data. Used to provide a label or
+   * filename to distinguish file datas. This field is only returned in
+   * PromptMessage for prompt management. It is currently used in the Gemini
+   * GenerateContent calls only when server side tools (code_execution,
+   * google_search, and url_context) are enabled.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. URI.
+   *
    * @var string
    */
   public $fileUri;
   /**
+   * Required. The IANA standard MIME type of the source data.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * Optional. Display name of the file data. Used to provide a label or
+   * filename to distinguish file datas. This field is only returned in
+   * PromptMessage for prompt management. It is currently used in the Gemini
+   * GenerateContent calls only when server side tools (code_execution,
+   * google_search, and url_context) are enabled.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +63,9 @@ class GoogleCloudAiplatformV1FunctionResponseFileData extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. URI.
+   *
+   * @param string $fileUri
    */
   public function setFileUri($fileUri)
   {
@@ -61,7 +79,9 @@ class GoogleCloudAiplatformV1FunctionResponseFileData extends \Google\Model
     return $this->fileUri;
   }
   /**
-   * @param string
+   * Required. The IANA standard MIME type of the source data.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

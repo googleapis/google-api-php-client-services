@@ -20,16 +20,29 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureViewSyncConfig extends \Google\Model
 {
   /**
+   * Optional. If true, syncs the FeatureView in a continuous manner to Online
+   * Store.
+   *
    * @var bool
    */
   public $continuous;
   /**
+   * Cron schedule (https://en.wikipedia.org/wiki/Cron) to launch scheduled
+   * runs. To explicitly set a timezone to the cron tab, apply a prefix in the
+   * cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The
+   * ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database.
+   * For example, "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York
+   * 1 * * * *".
+   *
    * @var string
    */
   public $cron;
 
   /**
-   * @param bool
+   * Optional. If true, syncs the FeatureView in a continuous manner to Online
+   * Store.
+   *
+   * @param bool $continuous
    */
   public function setContinuous($continuous)
   {
@@ -43,7 +56,14 @@ class GoogleCloudAiplatformV1FeatureViewSyncConfig extends \Google\Model
     return $this->continuous;
   }
   /**
-   * @param string
+   * Cron schedule (https://en.wikipedia.org/wiki/Cron) to launch scheduled
+   * runs. To explicitly set a timezone to the cron tab, apply a prefix in the
+   * cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The
+   * ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database.
+   * For example, "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York
+   * 1 * * * *".
+   *
+   * @param string $cron
    */
   public function setCron($cron)
   {
