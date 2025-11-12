@@ -20,28 +20,44 @@ namespace Google\Service\CloudHealthcare;
 class Field extends \Google\Model
 {
   /**
+   * The maximum number of times this field can be repeated. 0 or -1 means
+   * unbounded.
+   *
    * @var int
    */
   public $maxOccurs;
   /**
+   * The minimum number of times this field must be present/repeated.
+   *
    * @var int
    */
   public $minOccurs;
   /**
+   * The name of the field. For example, "PID-1" or just "1".
+   *
    * @var string
    */
   public $name;
   /**
+   * The HL7v2 table this field refers to. For example, PID-15 (Patient's
+   * Primary Language) usually refers to table "0296".
+   *
    * @var string
    */
   public $table;
   /**
+   * The type of this field. A Type with this name must be defined in an
+   * Hl7TypesConfig.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param int
+   * The maximum number of times this field can be repeated. 0 or -1 means
+   * unbounded.
+   *
+   * @param int $maxOccurs
    */
   public function setMaxOccurs($maxOccurs)
   {
@@ -55,7 +71,9 @@ class Field extends \Google\Model
     return $this->maxOccurs;
   }
   /**
-   * @param int
+   * The minimum number of times this field must be present/repeated.
+   *
+   * @param int $minOccurs
    */
   public function setMinOccurs($minOccurs)
   {
@@ -69,7 +87,9 @@ class Field extends \Google\Model
     return $this->minOccurs;
   }
   /**
-   * @param string
+   * The name of the field. For example, "PID-1" or just "1".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +103,10 @@ class Field extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The HL7v2 table this field refers to. For example, PID-15 (Patient's
+   * Primary Language) usually refers to table "0296".
+   *
+   * @param string $table
    */
   public function setTable($table)
   {
@@ -97,7 +120,10 @@ class Field extends \Google\Model
     return $this->table;
   }
   /**
-   * @param string
+   * The type of this field. A Type with this name must be defined in an
+   * Hl7TypesConfig.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

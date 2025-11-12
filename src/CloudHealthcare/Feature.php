@@ -19,8 +19,17 @@ namespace Google\Service\CloudHealthcare;
 
 class Feature extends \Google\Model
 {
+  /**
+   * The model's confidence in this feature annotation. A number between 0 and
+   * 1.
+   *
+   * @var 
+   */
   public $confidence;
   /**
+   * The value of this feature annotation. Its range depends on the type of the
+   * feature.
+   *
    * @var string
    */
   public $value;
@@ -34,7 +43,10 @@ class Feature extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * The value of this feature annotation. Its range depends on the type of the
+   * feature.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

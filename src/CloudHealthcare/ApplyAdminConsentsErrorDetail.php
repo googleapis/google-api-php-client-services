@@ -23,12 +23,18 @@ class ApplyAdminConsentsErrorDetail extends \Google\Collection
   protected $consentErrorsType = ConsentErrors::class;
   protected $consentErrorsDataType = 'array';
   /**
+   * The currently in progress non-validate-only ApplyAdminConsents operation ID
+   * if exist.
+   *
    * @var string
    */
   public $existingOperationId;
 
   /**
-   * @param ConsentErrors[]
+   * The list of Consent resources that are unsupported or cannot be applied and
+   * the error associated with each of them.
+   *
+   * @param ConsentErrors[] $consentErrors
    */
   public function setConsentErrors($consentErrors)
   {
@@ -42,7 +48,10 @@ class ApplyAdminConsentsErrorDetail extends \Google\Collection
     return $this->consentErrors;
   }
   /**
-   * @param string
+   * The currently in progress non-validate-only ApplyAdminConsents operation ID
+   * if exist.
+   *
+   * @param string $existingOperationId
    */
   public function setExistingOperationId($existingOperationId)
   {

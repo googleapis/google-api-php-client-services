@@ -20,20 +20,34 @@ namespace Google\Service\CloudHealthcare;
 class ConsentAccessorScope extends \Google\Model
 {
   /**
+   * An individual, group, or access role that identifies the accessor or a
+   * characteristic of the accessor. This can be a resource ID (such as
+   * `{resourceType}/{id}`) or an external URI. This value must be present.
+   *
    * @var string
    */
   public $actor;
   /**
+   * An abstract identifier that describes the environment or conditions under
+   * which the accessor is acting. If it's not specified, it applies to all
+   * environments.
+   *
    * @var string
    */
   public $environment;
   /**
+   * The intent of data use. If it's not specified, it applies to all purposes.
+   *
    * @var string
    */
   public $purpose;
 
   /**
-   * @param string
+   * An individual, group, or access role that identifies the accessor or a
+   * characteristic of the accessor. This can be a resource ID (such as
+   * `{resourceType}/{id}`) or an external URI. This value must be present.
+   *
+   * @param string $actor
    */
   public function setActor($actor)
   {
@@ -47,7 +61,11 @@ class ConsentAccessorScope extends \Google\Model
     return $this->actor;
   }
   /**
-   * @param string
+   * An abstract identifier that describes the environment or conditions under
+   * which the accessor is acting. If it's not specified, it applies to all
+   * environments.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {
@@ -61,7 +79,9 @@ class ConsentAccessorScope extends \Google\Model
     return $this->environment;
   }
   /**
-   * @param string
+   * The intent of data use. If it's not specified, it applies to all purposes.
+   *
+   * @param string $purpose
    */
   public function setPurpose($purpose)
   {

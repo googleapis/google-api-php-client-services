@@ -19,12 +19,21 @@ namespace Google\Service\CloudHealthcare;
 
 class EntityMentionRelationship extends \Google\Model
 {
+  /**
+   * The model's confidence in this annotation. A number between 0 and 1.
+   *
+   * @var 
+   */
   public $confidence;
   /**
+   * object_id is the id of the object entity mention.
+   *
    * @var string
    */
   public $objectId;
   /**
+   * subject_id is the id of the subject entity mention.
+   *
    * @var string
    */
   public $subjectId;
@@ -38,7 +47,9 @@ class EntityMentionRelationship extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * object_id is the id of the object entity mention.
+   *
+   * @param string $objectId
    */
   public function setObjectId($objectId)
   {
@@ -52,7 +63,9 @@ class EntityMentionRelationship extends \Google\Model
     return $this->objectId;
   }
   /**
-   * @param string
+   * subject_id is the id of the subject entity mention.
+   *
+   * @param string $subjectId
    */
   public function setSubjectId($subjectId)
   {

@@ -28,12 +28,21 @@ class DeidentifyConfig extends \Google\Model
   protected $textType = TextConfig::class;
   protected $textDataType = '';
   /**
+   * Optional. Ensures in-flight data remains in the region of origin during de-
+   * identification. The default value is false. Using this option results in a
+   * significant reduction of throughput, and is not compatible with `LOCATION`
+   * or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
+   * TextConfig, and must also be excluded within ImageConfig if image redaction
+   * is required.
+   *
    * @var bool
    */
   public $useRegionalDataProcessing;
 
   /**
-   * @param DicomConfig
+   * Optional. Configures de-id of application/DICOM content.
+   *
+   * @param DicomConfig $dicom
    */
   public function setDicom(DicomConfig $dicom)
   {
@@ -47,7 +56,9 @@ class DeidentifyConfig extends \Google\Model
     return $this->dicom;
   }
   /**
-   * @param FhirConfig
+   * Optional. Configures de-id of application/FHIR content.
+   *
+   * @param FhirConfig $fhir
    */
   public function setFhir(FhirConfig $fhir)
   {
@@ -61,7 +72,10 @@ class DeidentifyConfig extends \Google\Model
     return $this->fhir;
   }
   /**
-   * @param ImageConfig
+   * Optional. Configures de-identification of image pixels wherever they are
+   * found in the source_dataset.
+   *
+   * @param ImageConfig $image
    */
   public function setImage(ImageConfig $image)
   {
@@ -75,7 +89,10 @@ class DeidentifyConfig extends \Google\Model
     return $this->image;
   }
   /**
-   * @param TextConfig
+   * Optional. Configures de-identification of text wherever it is found in the
+   * source_dataset.
+   *
+   * @param TextConfig $text
    */
   public function setText(TextConfig $text)
   {
@@ -89,7 +106,14 @@ class DeidentifyConfig extends \Google\Model
     return $this->text;
   }
   /**
-   * @param bool
+   * Optional. Ensures in-flight data remains in the region of origin during de-
+   * identification. The default value is false. Using this option results in a
+   * significant reduction of throughput, and is not compatible with `LOCATION`
+   * or `ORGANIZATION_NAME` infoTypes. `LOCATION` must be excluded within
+   * TextConfig, and must also be excluded within ImageConfig if image redaction
+   * is required.
+   *
+   * @param bool $useRegionalDataProcessing
    */
   public function setUseRegionalDataProcessing($useRegionalDataProcessing)
   {

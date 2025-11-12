@@ -23,7 +23,9 @@ class IngestMessageRequest extends \Google\Model
   protected $messageDataType = '';
 
   /**
-   * @param Message
+   * Required. HL7v2 message to ingest.
+   *
+   * @param Message $message
    */
   public function setMessage(Message $message)
   {

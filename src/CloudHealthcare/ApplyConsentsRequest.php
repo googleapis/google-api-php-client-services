@@ -24,12 +24,23 @@ class ApplyConsentsRequest extends \Google\Model
   protected $timeRangeType = TimeRange::class;
   protected $timeRangeDataType = '';
   /**
+   * Optional. If true, the method only validates Consent resources to make sure
+   * they are supported. When the operation completes, ApplyConsentsResponse is
+   * returned where `consent_apply_success` and `consent_apply_failure` indicate
+   * supported and unsupported (or invalid) Consent resources, respectively.
+   * Otherwise, the method propagates the aggregate consensual information to
+   * the patient's resources. Upon success, `affected_resources` in the
+   * ApplyConsentsResponse indicates the number of resources that may have
+   * consensual access changed.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param PatientScope
+   * Optional. Scope down to a list of patients.
+   *
+   * @param PatientScope $patientScope
    */
   public function setPatientScope(PatientScope $patientScope)
   {
@@ -43,7 +54,11 @@ class ApplyConsentsRequest extends \Google\Model
     return $this->patientScope;
   }
   /**
-   * @param TimeRange
+   * Optional. Scope down to patients whose most recent consent changes are in
+   * the time range. Can only be used with a versioning store (i.e. when
+   * disable_resource_versioning is set to false).
+   *
+   * @param TimeRange $timeRange
    */
   public function setTimeRange(TimeRange $timeRange)
   {
@@ -57,7 +72,16 @@ class ApplyConsentsRequest extends \Google\Model
     return $this->timeRange;
   }
   /**
-   * @param bool
+   * Optional. If true, the method only validates Consent resources to make sure
+   * they are supported. When the operation completes, ApplyConsentsResponse is
+   * returned where `consent_apply_success` and `consent_apply_failure` indicate
+   * supported and unsupported (or invalid) Consent resources, respectively.
+   * Otherwise, the method propagates the aggregate consensual information to
+   * the patient's resources. Upon success, `affected_resources` in the
+   * ApplyConsentsResponse indicates the number of resources that may have
+   * consensual access changed.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

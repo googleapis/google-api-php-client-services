@@ -21,6 +21,9 @@ class EvaluateUserConsentsResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list. This token is valid for 72 hours after it is created.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class EvaluateUserConsentsResponse extends \Google\Collection
   protected $resultsDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list. This token is valid for 72 hours after it is created.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class EvaluateUserConsentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Result[]
+   * The consent evaluation result for each `data_id`.
+   *
+   * @param Result[] $results
    */
   public function setResults($results)
   {

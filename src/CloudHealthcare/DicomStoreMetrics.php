@@ -20,32 +20,47 @@ namespace Google\Service\CloudHealthcare;
 class DicomStoreMetrics extends \Google\Model
 {
   /**
+   * Total blob storage bytes for all instances in the store.
+   *
    * @var string
    */
   public $blobStorageSizeBytes;
   /**
+   * Number of instances in the store.
+   *
    * @var string
    */
   public $instanceCount;
   /**
+   * Resource name of the DICOM store, of the form `projects/{project_id}/locati
+   * ons/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Number of series in the store.
+   *
    * @var string
    */
   public $seriesCount;
   /**
+   * Total structured storage bytes for all instances in the store.
+   *
    * @var string
    */
   public $structuredStorageSizeBytes;
   /**
+   * Number of studies in the store.
+   *
    * @var string
    */
   public $studyCount;
 
   /**
-   * @param string
+   * Total blob storage bytes for all instances in the store.
+   *
+   * @param string $blobStorageSizeBytes
    */
   public function setBlobStorageSizeBytes($blobStorageSizeBytes)
   {
@@ -59,7 +74,9 @@ class DicomStoreMetrics extends \Google\Model
     return $this->blobStorageSizeBytes;
   }
   /**
-   * @param string
+   * Number of instances in the store.
+   *
+   * @param string $instanceCount
    */
   public function setInstanceCount($instanceCount)
   {
@@ -73,7 +90,10 @@ class DicomStoreMetrics extends \Google\Model
     return $this->instanceCount;
   }
   /**
-   * @param string
+   * Resource name of the DICOM store, of the form `projects/{project_id}/locati
+   * ons/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -87,7 +107,9 @@ class DicomStoreMetrics extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Number of series in the store.
+   *
+   * @param string $seriesCount
    */
   public function setSeriesCount($seriesCount)
   {
@@ -101,7 +123,9 @@ class DicomStoreMetrics extends \Google\Model
     return $this->seriesCount;
   }
   /**
-   * @param string
+   * Total structured storage bytes for all instances in the store.
+   *
+   * @param string $structuredStorageSizeBytes
    */
   public function setStructuredStorageSizeBytes($structuredStorageSizeBytes)
   {
@@ -115,7 +139,9 @@ class DicomStoreMetrics extends \Google\Model
     return $this->structuredStorageSizeBytes;
   }
   /**
-   * @param string
+   * Number of studies in the store.
+   *
+   * @param string $studyCount
    */
   public function setStudyCount($studyCount)
   {

@@ -21,16 +21,26 @@ class Attribute extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Indicates the name of an attribute defined in the consent store.
+   *
    * @var string
    */
   public $attributeDefinitionId;
   /**
+   * Required. The value of the attribute. Must be an acceptable value as
+   * defined in the consent store. For example, if the consent store defines
+   * "data type" with acceptable values "questionnaire" and "step-count", when
+   * the attribute name is data type, this field must contain one of those
+   * values.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * Indicates the name of an attribute defined in the consent store.
+   *
+   * @param string $attributeDefinitionId
    */
   public function setAttributeDefinitionId($attributeDefinitionId)
   {
@@ -44,7 +54,13 @@ class Attribute extends \Google\Collection
     return $this->attributeDefinitionId;
   }
   /**
-   * @param string[]
+   * Required. The value of the attribute. Must be an acceptable value as
+   * defined in the consent store. For example, if the consent store defines
+   * "data type" with acceptable values "questionnaire" and "step-count", when
+   * the attribute name is data type, this field must contain one of those
+   * values.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

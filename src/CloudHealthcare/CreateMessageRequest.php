@@ -23,7 +23,9 @@ class CreateMessageRequest extends \Google\Model
   protected $messageDataType = '';
 
   /**
-   * @param Message
+   * Required. HL7v2 message.
+   *
+   * @param Message $message
    */
   public function setMessage(Message $message)
   {

@@ -22,10 +22,18 @@ class EntityMention extends \Google\Collection
   protected $collection_key = 'linkedEntities';
   protected $certaintyAssessmentType = Feature::class;
   protected $certaintyAssessmentDataType = '';
+  /**
+   * The model's confidence in this entity mention annotation. A number between
+   * 0 and 1.
+   *
+   * @var 
+   */
   public $confidence;
   protected $linkedEntitiesType = LinkedEntity::class;
   protected $linkedEntitiesDataType = 'array';
   /**
+   * mention_id uniquely identifies each entity mention in a single response.
+   *
    * @var string
    */
   public $mentionId;
@@ -36,12 +44,26 @@ class EntityMention extends \Google\Collection
   protected $textType = TextSpan::class;
   protected $textDataType = '';
   /**
+   * The semantic type of the entity: UNKNOWN_ENTITY_TYPE, ALONE,
+   * ANATOMICAL_STRUCTURE, ASSISTED_LIVING, BF_RESULT, BM_RESULT, BM_UNIT,
+   * BM_VALUE, BODY_FUNCTION, BODY_MEASUREMENT, COMPLIANT, DOESNOT_FOLLOWUP,
+   * FAMILY, FOLLOWSUP, LABORATORY_DATA, LAB_RESULT, LAB_UNIT, LAB_VALUE,
+   * MEDICAL_DEVICE, MEDICINE, MED_DOSE, MED_DURATION, MED_FORM, MED_FREQUENCY,
+   * MED_ROUTE, MED_STATUS, MED_STRENGTH, MED_TOTALDOSE, MED_UNIT,
+   * NON_COMPLIANT, OTHER_LIVINGSTATUS, PROBLEM, PROCEDURE, PROCEDURE_RESULT,
+   * PROC_METHOD, REASON_FOR_NONCOMPLIANCE, SEVERITY, SUBSTANCE_ABUSE,
+   * UNCLEAR_FOLLOWUP.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param Feature
+   * The certainty assessment of the entity mention. Its value is one of:
+   * LIKELY, SOMEWHAT_LIKELY, UNCERTAIN, SOMEWHAT_UNLIKELY, UNLIKELY,
+   * CONDITIONAL
+   *
+   * @param Feature $certaintyAssessment
    */
   public function setCertaintyAssessment(Feature $certaintyAssessment)
   {
@@ -63,7 +85,10 @@ class EntityMention extends \Google\Collection
     return $this->confidence;
   }
   /**
-   * @param LinkedEntity[]
+   * linked_entities are candidate ontological concepts that this entity mention
+   * may refer to. They are sorted by decreasing confidence.
+   *
+   * @param LinkedEntity[] $linkedEntities
    */
   public function setLinkedEntities($linkedEntities)
   {
@@ -77,7 +102,9 @@ class EntityMention extends \Google\Collection
     return $this->linkedEntities;
   }
   /**
-   * @param string
+   * mention_id uniquely identifies each entity mention in a single response.
+   *
+   * @param string $mentionId
    */
   public function setMentionId($mentionId)
   {
@@ -91,7 +118,10 @@ class EntityMention extends \Google\Collection
     return $this->mentionId;
   }
   /**
-   * @param Feature
+   * The subject this entity mention relates to. Its value is one of: PATIENT,
+   * FAMILY_MEMBER, OTHER
+   *
+   * @param Feature $subject
    */
   public function setSubject(Feature $subject)
   {
@@ -105,7 +135,10 @@ class EntityMention extends \Google\Collection
     return $this->subject;
   }
   /**
-   * @param Feature
+   * How this entity mention relates to the subject temporally. Its value is one
+   * of: CURRENT, CLINICAL_HISTORY, FAMILY_HISTORY, UPCOMING, ALLERGY
+   *
+   * @param Feature $temporalAssessment
    */
   public function setTemporalAssessment(Feature $temporalAssessment)
   {
@@ -119,7 +152,9 @@ class EntityMention extends \Google\Collection
     return $this->temporalAssessment;
   }
   /**
-   * @param TextSpan
+   * text is the location of the entity mention in the document.
+   *
+   * @param TextSpan $text
    */
   public function setText(TextSpan $text)
   {
@@ -133,7 +168,17 @@ class EntityMention extends \Google\Collection
     return $this->text;
   }
   /**
-   * @param string
+   * The semantic type of the entity: UNKNOWN_ENTITY_TYPE, ALONE,
+   * ANATOMICAL_STRUCTURE, ASSISTED_LIVING, BF_RESULT, BM_RESULT, BM_UNIT,
+   * BM_VALUE, BODY_FUNCTION, BODY_MEASUREMENT, COMPLIANT, DOESNOT_FOLLOWUP,
+   * FAMILY, FOLLOWSUP, LABORATORY_DATA, LAB_RESULT, LAB_UNIT, LAB_VALUE,
+   * MEDICAL_DEVICE, MEDICINE, MED_DOSE, MED_DURATION, MED_FORM, MED_FREQUENCY,
+   * MED_ROUTE, MED_STATUS, MED_STRENGTH, MED_TOTALDOSE, MED_UNIT,
+   * NON_COMPLIANT, OTHER_LIVINGSTATUS, PROBLEM, PROCEDURE, PROCEDURE_RESULT,
+   * PROC_METHOD, REASON_FOR_NONCOMPLIANCE, SEVERITY, SUBSTANCE_ABUSE,
+   * UNCLEAR_FOLLOWUP.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

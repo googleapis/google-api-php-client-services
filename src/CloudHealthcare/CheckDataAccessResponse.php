@@ -22,12 +22,16 @@ class CheckDataAccessResponse extends \Google\Model
   protected $consentDetailsType = ConsentEvaluation::class;
   protected $consentDetailsDataType = 'map';
   /**
+   * Whether the requested resource is consented for the given use.
+   *
    * @var bool
    */
   public $consented;
 
   /**
-   * @param ConsentEvaluation[]
+   * The resource names of all evaluated Consents mapped to their evaluation.
+   *
+   * @param ConsentEvaluation[] $consentDetails
    */
   public function setConsentDetails($consentDetails)
   {
@@ -41,7 +45,9 @@ class CheckDataAccessResponse extends \Google\Model
     return $this->consentDetails;
   }
   /**
-   * @param bool
+   * Whether the requested resource is consented for the given use.
+   *
+   * @param bool $consented
    */
   public function setConsented($consented)
   {

@@ -21,6 +21,11 @@ class FhirConfig extends \Google\Collection
 {
   protected $collection_key = 'fieldMetadataList';
   /**
+   * Optional. The behaviour for handling FHIR extensions that aren't otherwise
+   * specified for de-identification. If true, all extensions are preserved
+   * during de-identification by default. If false or unspecified, all
+   * extensions are removed during de-identification by default.
+   *
    * @var bool
    */
   public $defaultKeepExtensions;
@@ -28,7 +33,12 @@ class FhirConfig extends \Google\Collection
   protected $fieldMetadataListDataType = 'array';
 
   /**
-   * @param bool
+   * Optional. The behaviour for handling FHIR extensions that aren't otherwise
+   * specified for de-identification. If true, all extensions are preserved
+   * during de-identification by default. If false or unspecified, all
+   * extensions are removed during de-identification by default.
+   *
+   * @param bool $defaultKeepExtensions
    */
   public function setDefaultKeepExtensions($defaultKeepExtensions)
   {
@@ -42,7 +52,12 @@ class FhirConfig extends \Google\Collection
     return $this->defaultKeepExtensions;
   }
   /**
-   * @param FieldMetadata[]
+   * Optional. Specifies FHIR paths to match and how to transform them. Any
+   * field that is not matched by a FieldMetadata is passed through to the
+   * output dataset unmodified. All extensions will be processed according to
+   * `default_keep_extensions`.
+   *
+   * @param FieldMetadata[] $fieldMetadataList
    */
   public function setFieldMetadataList($fieldMetadataList)
   {

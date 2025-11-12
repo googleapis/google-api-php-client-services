@@ -20,12 +20,24 @@ namespace Google\Service\CloudHealthcare;
 class EncryptionSpec extends \Google\Model
 {
   /**
+   * Required. The resource name of customer-managed encryption key that is used
+   * to secure a resource and its sub-resources. Only the key in the same
+   * location as this Dataset is allowed to be used for encryption. Format is: `
+   * projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{key}
+   * `
+   *
    * @var string
    */
   public $kmsKeyName;
 
   /**
-   * @param string
+   * Required. The resource name of customer-managed encryption key that is used
+   * to secure a resource and its sub-resources. Only the key in the same
+   * location as this Dataset is allowed to be used for encryption. Format is: `
+   * projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{key}
+   * `
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {

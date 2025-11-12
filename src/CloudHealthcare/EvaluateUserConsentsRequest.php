@@ -19,35 +19,74 @@ namespace Google\Service\CloudHealthcare;
 
 class EvaluateUserConsentsRequest extends \Google\Model
 {
+  /**
+   * No response view specified. The API will default to the BASIC view.
+   */
+  public const RESPONSE_VIEW_RESPONSE_VIEW_UNSPECIFIED = 'RESPONSE_VIEW_UNSPECIFIED';
+  /**
+   * Only the `data_id` and `consented` fields are populated in the response.
+   */
+  public const RESPONSE_VIEW_BASIC = 'BASIC';
+  /**
+   * All fields within the response are populated. When set to `FULL`, all
+   * `ACTIVE` Consents are evaluated even if a matching policy is found during
+   * evaluation.
+   */
+  public const RESPONSE_VIEW_FULL = 'FULL';
   protected $consentListType = ConsentList::class;
   protected $consentListDataType = '';
   /**
+   * Optional. Limit on the number of User data mappings to return in a single
+   * response. If not specified, 100 is used. May not be larger than 1000.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * Optional. Token to retrieve the next page of results, or empty to get the
+   * first page.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Required. The values of request attributes associated with this access
+   * request.
+   *
    * @var string[]
    */
   public $requestAttributes;
   /**
+   * Optional. The values of resource attributes associated with the resources
+   * being requested. If no values are specified, then all resources are
+   * queried.
+   *
    * @var string[]
    */
   public $resourceAttributes;
   /**
+   * Optional. The view for EvaluateUserConsentsResponse. If unspecified,
+   * defaults to `BASIC` and returns `consented` as `TRUE` or `FALSE`.
+   *
    * @var string
    */
   public $responseView;
   /**
+   * Required. User ID to evaluate consents for.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param ConsentList
+   * Optional. Specific Consents to evaluate the access request against. These
+   * Consents must have the same `user_id` as the User data mappings being
+   * evalauted, must exist in the current `consent_store`, and must have a
+   * `state` of either `ACTIVE` or `DRAFT`. A maximum of 100 Consents can be
+   * provided here. If unspecified, all `ACTIVE` unexpired Consents in the
+   * current `consent_store` will be evaluated.
+   *
+   * @param ConsentList $consentList
    */
   public function setConsentList(ConsentList $consentList)
   {
@@ -61,7 +100,10 @@ class EvaluateUserConsentsRequest extends \Google\Model
     return $this->consentList;
   }
   /**
-   * @param int
+   * Optional. Limit on the number of User data mappings to return in a single
+   * response. If not specified, 100 is used. May not be larger than 1000.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -75,7 +117,10 @@ class EvaluateUserConsentsRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * Optional. Token to retrieve the next page of results, or empty to get the
+   * first page.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -89,7 +134,10 @@ class EvaluateUserConsentsRequest extends \Google\Model
     return $this->pageToken;
   }
   /**
-   * @param string[]
+   * Required. The values of request attributes associated with this access
+   * request.
+   *
+   * @param string[] $requestAttributes
    */
   public function setRequestAttributes($requestAttributes)
   {
@@ -103,7 +151,11 @@ class EvaluateUserConsentsRequest extends \Google\Model
     return $this->requestAttributes;
   }
   /**
-   * @param string[]
+   * Optional. The values of resource attributes associated with the resources
+   * being requested. If no values are specified, then all resources are
+   * queried.
+   *
+   * @param string[] $resourceAttributes
    */
   public function setResourceAttributes($resourceAttributes)
   {
@@ -117,21 +169,28 @@ class EvaluateUserConsentsRequest extends \Google\Model
     return $this->resourceAttributes;
   }
   /**
-   * @param string
+   * Optional. The view for EvaluateUserConsentsResponse. If unspecified,
+   * defaults to `BASIC` and returns `consented` as `TRUE` or `FALSE`.
+   *
+   * Accepted values: RESPONSE_VIEW_UNSPECIFIED, BASIC, FULL
+   *
+   * @param self::RESPONSE_VIEW_* $responseView
    */
   public function setResponseView($responseView)
   {
     $this->responseView = $responseView;
   }
   /**
-   * @return string
+   * @return self::RESPONSE_VIEW_*
    */
   public function getResponseView()
   {
     return $this->responseView;
   }
   /**
-   * @param string
+   * Required. User ID to evaluate consents for.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

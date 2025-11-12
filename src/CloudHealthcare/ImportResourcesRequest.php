@@ -20,6 +20,32 @@ namespace Google\Service\CloudHealthcare;
 class ImportResourcesRequest extends \Google\Model
 {
   /**
+   * If the content structure is not specified, the default value `BUNDLE` is
+   * used.
+   */
+  public const CONTENT_STRUCTURE_CONTENT_STRUCTURE_UNSPECIFIED = 'CONTENT_STRUCTURE_UNSPECIFIED';
+  /**
+   * The source file contains one or more lines of newline-delimited JSON
+   * (ndjson). Each line is a bundle that contains one or more resources.
+   */
+  public const CONTENT_STRUCTURE_BUNDLE = 'BUNDLE';
+  /**
+   * The source file contains one or more lines of newline-delimited JSON
+   * (ndjson). Each line is a single resource.
+   */
+  public const CONTENT_STRUCTURE_RESOURCE = 'RESOURCE';
+  /**
+   * The entire file is one JSON bundle. The JSON can span multiple lines.
+   */
+  public const CONTENT_STRUCTURE_BUNDLE_PRETTY = 'BUNDLE_PRETTY';
+  /**
+   * The entire file is one JSON resource. The JSON can span multiple lines.
+   */
+  public const CONTENT_STRUCTURE_RESOURCE_PRETTY = 'RESOURCE_PRETTY';
+  /**
+   * The content structure in the source location. If not specified, the server
+   * treats the input source files as BUNDLE.
+   *
    * @var string
    */
   public $contentStructure;
@@ -27,21 +53,32 @@ class ImportResourcesRequest extends \Google\Model
   protected $gcsSourceDataType = '';
 
   /**
-   * @param string
+   * The content structure in the source location. If not specified, the server
+   * treats the input source files as BUNDLE.
+   *
+   * Accepted values: CONTENT_STRUCTURE_UNSPECIFIED, BUNDLE, RESOURCE,
+   * BUNDLE_PRETTY, RESOURCE_PRETTY
+   *
+   * @param self::CONTENT_STRUCTURE_* $contentStructure
    */
   public function setContentStructure($contentStructure)
   {
     $this->contentStructure = $contentStructure;
   }
   /**
-   * @return string
+   * @return self::CONTENT_STRUCTURE_*
    */
   public function getContentStructure()
   {
     return $this->contentStructure;
   }
   /**
-   * @param GoogleCloudHealthcareV1FhirGcsSource
+   * Cloud Storage source data location and import configuration. The Healthcare
+   * Service Agent account requires the `roles/storage.objectAdmin` role on the
+   * Cloud Storage location. Each Cloud Storage object should be a text file
+   * that contains the format specified in ContentStructure.
+   *
+   * @param GoogleCloudHealthcareV1FhirGcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudHealthcareV1FhirGcsSource $gcsSource)
   {

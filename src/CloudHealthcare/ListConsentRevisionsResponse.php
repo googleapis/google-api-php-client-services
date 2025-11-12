@@ -23,12 +23,18 @@ class ListConsentRevisionsResponse extends \Google\Collection
   protected $consentsType = Consent::class;
   protected $consentsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Consent[]
+   * The returned Consent revisions. The maximum number of revisions returned is
+   * determined by the value of `page_size` in the ListConsentRevisionsRequest.
+   *
+   * @param Consent[] $consents
    */
   public function setConsents($consents)
   {
@@ -42,7 +48,10 @@ class ListConsentRevisionsResponse extends \Google\Collection
     return $this->consents;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

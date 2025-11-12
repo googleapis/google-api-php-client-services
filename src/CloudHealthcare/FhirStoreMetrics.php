@@ -23,12 +23,17 @@ class FhirStoreMetrics extends \Google\Collection
   protected $metricsType = FhirStoreMetric::class;
   protected $metricsDataType = 'array';
   /**
+   * The resource name of the FHIR store to get metrics for, in the format
+   * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param FhirStoreMetric[]
+   * List of FhirStoreMetric by resource type.
+   *
+   * @param FhirStoreMetric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -42,7 +47,10 @@ class FhirStoreMetrics extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * The resource name of the FHIR store to get metrics for, in the format
+   * `projects/{project_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -20,12 +20,24 @@ namespace Google\Service\CloudHealthcare;
 class GoogleCloudHealthcareV1ConsentGcsDestination extends \Google\Model
 {
   /**
+   * URI for a Cloud Storage directory where the server writes result files, in
+   * the format `gs://{bucket-id}/{path/to/destination/dir}`. If there is no
+   * trailing slash, the service appends one when composing the object path. The
+   * user is responsible for creating the Cloud Storage bucket and directory
+   * referenced in `uri_prefix`.
+   *
    * @var string
    */
   public $uriPrefix;
 
   /**
-   * @param string
+   * URI for a Cloud Storage directory where the server writes result files, in
+   * the format `gs://{bucket-id}/{path/to/destination/dir}`. If there is no
+   * trailing slash, the service appends one when composing the object path. The
+   * user is responsible for creating the Cloud Storage bucket and directory
+   * referenced in `uri_prefix`.
+   *
+   * @param string $uriPrefix
    */
   public function setUriPrefix($uriPrefix)
   {

@@ -21,12 +21,26 @@ class AdminConsents extends \Google\Collection
 {
   protected $collection_key = 'names';
   /**
+   * Optional. The versioned names of the admin Consent resource(s), in the
+   * format `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fh
+   * irStores/{fhir_store_id}/fhir/Consent/{resource_id}/_history/{version_id}`.
+   * For FHIR stores with `disable_resource_versioning=true`, the format is `pro
+   * jects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{f
+   * hir_store_id}/fhir/Consent/{resource_id}`.
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param string[]
+   * Optional. The versioned names of the admin Consent resource(s), in the
+   * format `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fh
+   * irStores/{fhir_store_id}/fhir/Consent/{resource_id}/_history/{version_id}`.
+   * For FHIR stores with `disable_resource_versioning=true`, the format is `pro
+   * jects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirStores/{f
+   * hir_store_id}/fhir/Consent/{resource_id}`.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {

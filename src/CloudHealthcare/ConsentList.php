@@ -21,12 +21,20 @@ class ConsentList extends \Google\Collection
 {
   protected $collection_key = 'consents';
   /**
+   * The resource names of the Consents to evaluate against, of the form `projec
+   * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores
+   * /{consent_store_id}/consents/{consent_id}`.
+   *
    * @var string[]
    */
   public $consents;
 
   /**
-   * @param string[]
+   * The resource names of the Consents to evaluate against, of the form `projec
+   * ts/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores
+   * /{consent_store_id}/consents/{consent_id}`.
+   *
+   * @param string[] $consents
    */
   public function setConsents($consents)
   {

@@ -23,12 +23,19 @@ class ListAttributeDefinitionsResponse extends \Google\Collection
   protected $attributeDefinitionsType = AttributeDefinition::class;
   protected $attributeDefinitionsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AttributeDefinition[]
+   * The returned Attribute definitions. The maximum number of attributes
+   * returned is determined by the value of page_size in the
+   * ListAttributeDefinitionsRequest.
+   *
+   * @param AttributeDefinition[] $attributeDefinitions
    */
   public function setAttributeDefinitions($attributeDefinitions)
   {
@@ -42,7 +49,10 @@ class ListAttributeDefinitionsResponse extends \Google\Collection
     return $this->attributeDefinitions;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

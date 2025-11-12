@@ -19,23 +19,54 @@ namespace Google\Service\CloudHealthcare;
 
 class CheckDataAccessRequest extends \Google\Model
 {
+  /**
+   * No response view specified. The API will default to the BASIC view.
+   */
+  public const RESPONSE_VIEW_RESPONSE_VIEW_UNSPECIFIED = 'RESPONSE_VIEW_UNSPECIFIED';
+  /**
+   * Only the `consented` field is populated in CheckDataAccessResponse.
+   */
+  public const RESPONSE_VIEW_BASIC = 'BASIC';
+  /**
+   * All fields within CheckDataAccessResponse are populated. When set to
+   * `FULL`, all `ACTIVE` Consents are evaluated even if a matching policy is
+   * found during evaluation.
+   */
+  public const RESPONSE_VIEW_FULL = 'FULL';
   protected $consentListType = ConsentList::class;
   protected $consentListDataType = '';
   /**
+   * Required. The unique identifier of the resource to check access for. This
+   * identifier must correspond to a User data mapping in the given consent
+   * store.
+   *
    * @var string
    */
   public $dataId;
   /**
+   * The values of request attributes associated with this access request.
+   *
    * @var string[]
    */
   public $requestAttributes;
   /**
+   * Optional. The view for CheckDataAccessResponse. If unspecified, defaults to
+   * `BASIC` and returns `consented` as `TRUE` or `FALSE`.
+   *
    * @var string
    */
   public $responseView;
 
   /**
-   * @param ConsentList
+   * Optional. Specific Consents to evaluate the access request against. These
+   * Consents must have the same `user_id` as the evaluated User data mapping,
+   * must exist in the current `consent_store`, and have a `state` of either
+   * `ACTIVE` or `DRAFT`. A maximum of 100 Consents can be provided here. If no
+   * selection is specified, the access request is evaluated against all
+   * `ACTIVE` unexpired Consents with the same `user_id` as the evaluated User
+   * data mapping.
+   *
+   * @param ConsentList $consentList
    */
   public function setConsentList(ConsentList $consentList)
   {
@@ -49,7 +80,11 @@ class CheckDataAccessRequest extends \Google\Model
     return $this->consentList;
   }
   /**
-   * @param string
+   * Required. The unique identifier of the resource to check access for. This
+   * identifier must correspond to a User data mapping in the given consent
+   * store.
+   *
+   * @param string $dataId
    */
   public function setDataId($dataId)
   {
@@ -63,7 +98,9 @@ class CheckDataAccessRequest extends \Google\Model
     return $this->dataId;
   }
   /**
-   * @param string[]
+   * The values of request attributes associated with this access request.
+   *
+   * @param string[] $requestAttributes
    */
   public function setRequestAttributes($requestAttributes)
   {
@@ -77,14 +114,19 @@ class CheckDataAccessRequest extends \Google\Model
     return $this->requestAttributes;
   }
   /**
-   * @param string
+   * Optional. The view for CheckDataAccessResponse. If unspecified, defaults to
+   * `BASIC` and returns `consented` as `TRUE` or `FALSE`.
+   *
+   * Accepted values: RESPONSE_VIEW_UNSPECIFIED, BASIC, FULL
+   *
+   * @param self::RESPONSE_VIEW_* $responseView
    */
   public function setResponseView($responseView)
   {
     $this->responseView = $responseView;
   }
   /**
-   * @return string
+   * @return self::RESPONSE_VIEW_*
    */
   public function getResponseView()
   {

@@ -23,12 +23,18 @@ class ListConsentStoresResponse extends \Google\Collection
   protected $consentStoresType = ConsentStore::class;
   protected $consentStoresDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ConsentStore[]
+   * The returned consent stores. The maximum number of stores returned is
+   * determined by the value of page_size in the ListConsentStoresRequest.
+   *
+   * @param ConsentStore[] $consentStores
    */
   public function setConsentStores($consentStores)
   {
@@ -42,7 +48,10 @@ class ListConsentStoresResponse extends \Google\Collection
     return $this->consentStores;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

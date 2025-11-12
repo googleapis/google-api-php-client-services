@@ -20,24 +20,41 @@ namespace Google\Service\CloudHealthcare;
 class ApplyConsentsResponse extends \Google\Model
 {
   /**
+   * The number of resources (including the Consent resources) that may have
+   * consensual access change.
+   *
    * @var string
    */
   public $affectedResources;
   /**
+   * If `validate_only = false` in ApplyConsentsRequest, this counter is the
+   * number of Consent resources that were failed to apply. Otherwise, it is the
+   * number of Consent resources that are not supported or invalid.
+   *
    * @var string
    */
   public $consentApplyFailure;
   /**
+   * If `validate_only = false` in ApplyConsentsRequest, this counter is the
+   * number of Consent resources that were successfully applied. Otherwise, it
+   * is the number of Consent resources that are supported.
+   *
    * @var string
    */
   public $consentApplySuccess;
   /**
+   * The number of resources (including the Consent resources) that
+   * ApplyConsents failed to re-index.
+   *
    * @var string
    */
   public $failedResources;
 
   /**
-   * @param string
+   * The number of resources (including the Consent resources) that may have
+   * consensual access change.
+   *
+   * @param string $affectedResources
    */
   public function setAffectedResources($affectedResources)
   {
@@ -51,7 +68,11 @@ class ApplyConsentsResponse extends \Google\Model
     return $this->affectedResources;
   }
   /**
-   * @param string
+   * If `validate_only = false` in ApplyConsentsRequest, this counter is the
+   * number of Consent resources that were failed to apply. Otherwise, it is the
+   * number of Consent resources that are not supported or invalid.
+   *
+   * @param string $consentApplyFailure
    */
   public function setConsentApplyFailure($consentApplyFailure)
   {
@@ -65,7 +86,11 @@ class ApplyConsentsResponse extends \Google\Model
     return $this->consentApplyFailure;
   }
   /**
-   * @param string
+   * If `validate_only = false` in ApplyConsentsRequest, this counter is the
+   * number of Consent resources that were successfully applied. Otherwise, it
+   * is the number of Consent resources that are supported.
+   *
+   * @param string $consentApplySuccess
    */
   public function setConsentApplySuccess($consentApplySuccess)
   {
@@ -79,7 +104,10 @@ class ApplyConsentsResponse extends \Google\Model
     return $this->consentApplySuccess;
   }
   /**
-   * @param string
+   * The number of resources (including the Consent resources) that
+   * ApplyConsents failed to re-index.
+   *
+   * @param string $failedResources
    */
   public function setFailedResources($failedResources)
   {

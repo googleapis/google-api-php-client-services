@@ -19,26 +19,58 @@ namespace Google\Service\CloudHealthcare;
 
 class ConsentConfig extends \Google\Collection
 {
+  /**
+   * Users must specify an enforcement version or an error is returned.
+   */
+  public const VERSION_CONSENT_ENFORCEMENT_VERSION_UNSPECIFIED = 'CONSENT_ENFORCEMENT_VERSION_UNSPECIFIED';
+  /**
+   * Enforcement version 1. See the [FHIR Consent resources in the Cloud
+   * Healthcare API](https://cloud.google.com/healthcare-api/docs/fhir-consent)
+   * guide for more details.
+   */
+  public const VERSION_V1 = 'V1';
   protected $collection_key = 'enforcedAdminConsents';
   protected $accessDeterminationLogConfigType = AccessDeterminationLogConfig::class;
   protected $accessDeterminationLogConfigDataType = '';
   /**
+   * Optional. The default value is false. If set to true, when accessing FHIR
+   * resources, the consent headers will be verified against consents given by
+   * patients. See the ConsentEnforcementVersion for the supported consent
+   * headers.
+   *
    * @var bool
    */
   public $accessEnforced;
   protected $consentHeaderHandlingType = ConsentHeaderHandling::class;
   protected $consentHeaderHandlingDataType = '';
   /**
+   * Output only. The versioned names of the enforced admin Consent resource(s),
+   * in the format `projects/{project_id}/locations/{location}/datasets/{dataset
+   * _id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}/_history/{versio
+   * n_id}`. For FHIR stores with `disable_resource_versioning=true`, the format
+   * is `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirSt
+   * ores/{fhir_store_id}/fhir/Consent/{resource_id}`. This field can only be
+   * updated using ApplyAdminConsents.
+   *
    * @var string[]
    */
   public $enforcedAdminConsents;
   /**
+   * Required. Specifies which consent enforcement version is being used for
+   * this FHIR store. This field can only be set once by either CreateFhirStore
+   * or UpdateFhirStore. After that, you must call ApplyConsents to change the
+   * version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param AccessDeterminationLogConfig
+   * Optional. Specifies how the server logs the consent-aware requests. If not
+   * specified, the `AccessDeterminationLogConfig.LogLevel.MINIMUM` option is
+   * used.
+   *
+   * @param AccessDeterminationLogConfig $accessDeterminationLogConfig
    */
   public function setAccessDeterminationLogConfig(AccessDeterminationLogConfig $accessDeterminationLogConfig)
   {
@@ -52,7 +84,12 @@ class ConsentConfig extends \Google\Collection
     return $this->accessDeterminationLogConfig;
   }
   /**
-   * @param bool
+   * Optional. The default value is false. If set to true, when accessing FHIR
+   * resources, the consent headers will be verified against consents given by
+   * patients. See the ConsentEnforcementVersion for the supported consent
+   * headers.
+   *
+   * @param bool $accessEnforced
    */
   public function setAccessEnforced($accessEnforced)
   {
@@ -66,7 +103,10 @@ class ConsentConfig extends \Google\Collection
     return $this->accessEnforced;
   }
   /**
-   * @param ConsentHeaderHandling
+   * Optional. Different options to configure the behaviour of the server when
+   * handling the `X-Consent-Scope` header.
+   *
+   * @param ConsentHeaderHandling $consentHeaderHandling
    */
   public function setConsentHeaderHandling(ConsentHeaderHandling $consentHeaderHandling)
   {
@@ -80,7 +120,15 @@ class ConsentConfig extends \Google\Collection
     return $this->consentHeaderHandling;
   }
   /**
-   * @param string[]
+   * Output only. The versioned names of the enforced admin Consent resource(s),
+   * in the format `projects/{project_id}/locations/{location}/datasets/{dataset
+   * _id}/fhirStores/{fhir_store_id}/fhir/Consent/{resource_id}/_history/{versio
+   * n_id}`. For FHIR stores with `disable_resource_versioning=true`, the format
+   * is `projects/{project_id}/locations/{location}/datasets/{dataset_id}/fhirSt
+   * ores/{fhir_store_id}/fhir/Consent/{resource_id}`. This field can only be
+   * updated using ApplyAdminConsents.
+   *
+   * @param string[] $enforcedAdminConsents
    */
   public function setEnforcedAdminConsents($enforcedAdminConsents)
   {
@@ -94,14 +142,21 @@ class ConsentConfig extends \Google\Collection
     return $this->enforcedAdminConsents;
   }
   /**
-   * @param string
+   * Required. Specifies which consent enforcement version is being used for
+   * this FHIR store. This field can only be set once by either CreateFhirStore
+   * or UpdateFhirStore. After that, you must call ApplyConsents to change the
+   * version.
+   *
+   * Accepted values: CONSENT_ENFORCEMENT_VERSION_UNSPECIFIED, V1
+   *
+   * @param self::VERSION_* $version
    */
   public function setVersion($version)
   {
     $this->version = $version;
   }
   /**
-   * @return string
+   * @return self::VERSION_*
    */
   public function getVersion()
   {

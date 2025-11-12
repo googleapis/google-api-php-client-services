@@ -19,34 +19,73 @@ namespace Google\Service\CloudHealthcare;
 
 class AttributeDefinition extends \Google\Collection
 {
+  /**
+   * No category specified. This option is invalid.
+   */
+  public const CATEGORY_CATEGORY_UNSPECIFIED = 'CATEGORY_UNSPECIFIED';
+  /**
+   * Specify this category when this attribute describes the properties of
+   * resources. For example, data anonymity or data type.
+   */
+  public const CATEGORY_RESOURCE = 'RESOURCE';
+  /**
+   * Specify this category when this attribute describes the properties of
+   * requests. For example, requester's role or requester's organization.
+   */
+  public const CATEGORY_REQUEST = 'REQUEST';
   protected $collection_key = 'consentDefaultValues';
   /**
+   * Required. Possible values for the attribute. The number of allowed values
+   * must not exceed 500. An empty list is invalid. The list can only be
+   * expanded after creation.
+   *
    * @var string[]
    */
   public $allowedValues;
   /**
+   * Required. The category of the attribute. The value of this field cannot be
+   * changed after creation.
+   *
    * @var string
    */
   public $category;
   /**
+   * Optional. Default values of the attribute in Consents. If no default values
+   * are specified, it defaults to an empty value.
+   *
    * @var string[]
    */
   public $consentDefaultValues;
   /**
+   * Optional. Default value of the attribute in User data mappings. If no
+   * default value is specified, it defaults to an empty value. This field is
+   * only applicable to attributes of the category `RESOURCE`.
+   *
    * @var string
    */
   public $dataMappingDefaultValue;
   /**
+   * Optional. A description of the attribute.
+   *
    * @var string
    */
   public $description;
   /**
+   * Identifier. Resource name of the Attribute definition, of the form `project
+   * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/
+   * {consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot
+   * be changed after creation.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string[]
+   * Required. Possible values for the attribute. The number of allowed values
+   * must not exceed 500. An empty list is invalid. The list can only be
+   * expanded after creation.
+   *
+   * @param string[] $allowedValues
    */
   public function setAllowedValues($allowedValues)
   {
@@ -60,21 +99,29 @@ class AttributeDefinition extends \Google\Collection
     return $this->allowedValues;
   }
   /**
-   * @param string
+   * Required. The category of the attribute. The value of this field cannot be
+   * changed after creation.
+   *
+   * Accepted values: CATEGORY_UNSPECIFIED, RESOURCE, REQUEST
+   *
+   * @param self::CATEGORY_* $category
    */
   public function setCategory($category)
   {
     $this->category = $category;
   }
   /**
-   * @return string
+   * @return self::CATEGORY_*
    */
   public function getCategory()
   {
     return $this->category;
   }
   /**
-   * @param string[]
+   * Optional. Default values of the attribute in Consents. If no default values
+   * are specified, it defaults to an empty value.
+   *
+   * @param string[] $consentDefaultValues
    */
   public function setConsentDefaultValues($consentDefaultValues)
   {
@@ -88,7 +135,11 @@ class AttributeDefinition extends \Google\Collection
     return $this->consentDefaultValues;
   }
   /**
-   * @param string
+   * Optional. Default value of the attribute in User data mappings. If no
+   * default value is specified, it defaults to an empty value. This field is
+   * only applicable to attributes of the category `RESOURCE`.
+   *
+   * @param string $dataMappingDefaultValue
    */
   public function setDataMappingDefaultValue($dataMappingDefaultValue)
   {
@@ -102,7 +153,9 @@ class AttributeDefinition extends \Google\Collection
     return $this->dataMappingDefaultValue;
   }
   /**
-   * @param string
+   * Optional. A description of the attribute.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -116,7 +169,12 @@ class AttributeDefinition extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the Attribute definition, of the form `project
+   * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/
+   * {consent_store_id}/attributeDefinitions/{attribute_definition_id}`. Cannot
+   * be changed after creation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

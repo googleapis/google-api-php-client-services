@@ -23,20 +23,33 @@ class ConsentArtifact extends \Google\Collection
   protected $consentContentScreenshotsType = Image::class;
   protected $consentContentScreenshotsDataType = 'array';
   /**
+   * Optional. An string indicating the version of the consent information shown
+   * to the user.
+   *
    * @var string
    */
   public $consentContentVersion;
   protected $guardianSignatureType = Signature::class;
   protected $guardianSignatureDataType = '';
   /**
+   * Optional. Metadata associated with the Consent artifact. For example, the
+   * consent locale or user agent version.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * Identifier. Resource name of the Consent artifact, of the form `projects/{p
+   * roject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{con
+   * sent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed
+   * after creation.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. User's UUID provided by the client.
+   *
    * @var string
    */
   public $userId;
@@ -46,7 +59,10 @@ class ConsentArtifact extends \Google\Collection
   protected $witnessSignatureDataType = '';
 
   /**
-   * @param Image[]
+   * Optional. Screenshots, PDFs, or other binary information documenting the
+   * user's consent.
+   *
+   * @param Image[] $consentContentScreenshots
    */
   public function setConsentContentScreenshots($consentContentScreenshots)
   {
@@ -60,7 +76,10 @@ class ConsentArtifact extends \Google\Collection
     return $this->consentContentScreenshots;
   }
   /**
-   * @param string
+   * Optional. An string indicating the version of the consent information shown
+   * to the user.
+   *
+   * @param string $consentContentVersion
    */
   public function setConsentContentVersion($consentContentVersion)
   {
@@ -74,7 +93,9 @@ class ConsentArtifact extends \Google\Collection
     return $this->consentContentVersion;
   }
   /**
-   * @param Signature
+   * Optional. A signature from a guardian.
+   *
+   * @param Signature $guardianSignature
    */
   public function setGuardianSignature(Signature $guardianSignature)
   {
@@ -88,7 +109,10 @@ class ConsentArtifact extends \Google\Collection
     return $this->guardianSignature;
   }
   /**
-   * @param string[]
+   * Optional. Metadata associated with the Consent artifact. For example, the
+   * consent locale or user agent version.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -102,7 +126,12 @@ class ConsentArtifact extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the Consent artifact, of the form `projects/{p
+   * roject_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{con
+   * sent_store_id}/consentArtifacts/{consent_artifact_id}`. Cannot be changed
+   * after creation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -116,7 +145,9 @@ class ConsentArtifact extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. User's UUID provided by the client.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {
@@ -130,7 +161,9 @@ class ConsentArtifact extends \Google\Collection
     return $this->userId;
   }
   /**
-   * @param Signature
+   * Optional. User's signature.
+   *
+   * @param Signature $userSignature
    */
   public function setUserSignature(Signature $userSignature)
   {
@@ -144,7 +177,9 @@ class ConsentArtifact extends \Google\Collection
     return $this->userSignature;
   }
   /**
-   * @param Signature
+   * Optional. A signature from a witness.
+   *
+   * @param Signature $witnessSignature
    */
   public function setWitnessSignature(Signature $witnessSignature)
   {

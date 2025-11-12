@@ -25,7 +25,12 @@ class ExportDicomDataRequest extends \Google\Model
   protected $gcsDestinationDataType = '';
 
   /**
-   * @param GoogleCloudHealthcareV1DicomBigQueryDestination
+   * The BigQuery output destination. You can only export to a BigQuery dataset
+   * that's in the same project as the DICOM store you're exporting from. The
+   * Cloud Healthcare Service Agent requires two IAM roles on the BigQuery
+   * location: `roles/bigquery.dataEditor` and `roles/bigquery.jobUser`.
+   *
+   * @param GoogleCloudHealthcareV1DicomBigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(GoogleCloudHealthcareV1DicomBigQueryDestination $bigqueryDestination)
   {
@@ -39,7 +44,11 @@ class ExportDicomDataRequest extends \Google\Model
     return $this->bigqueryDestination;
   }
   /**
-   * @param GoogleCloudHealthcareV1DicomGcsDestination
+   * The Cloud Storage output destination. The Cloud Healthcare Service Agent
+   * requires the `roles/storage.objectAdmin` Cloud IAM roles on the Cloud
+   * Storage location.
+   *
+   * @param GoogleCloudHealthcareV1DicomGcsDestination $gcsDestination
    */
   public function setGcsDestination(GoogleCloudHealthcareV1DicomGcsDestination $gcsDestination)
   {

@@ -20,20 +20,33 @@ namespace Google\Service\CloudHealthcare;
 class ApplyAdminConsentsResponse extends \Google\Model
 {
   /**
+   * The number of resources (including the Consent resources) that may have
+   * consent access change.
+   *
    * @var string
    */
   public $affectedResources;
   /**
+   * If `validate_only=false` in ApplyAdminConsentsRequest, this counter
+   * contains the number of Consent resources that were successfully applied.
+   * Otherwise, it is the number of Consent resources that are supported.
+   *
    * @var string
    */
   public $consentApplySuccess;
   /**
+   * The number of resources (including the Consent resources) that
+   * ApplyAdminConsents failed to re-index.
+   *
    * @var string
    */
   public $failedResources;
 
   /**
-   * @param string
+   * The number of resources (including the Consent resources) that may have
+   * consent access change.
+   *
+   * @param string $affectedResources
    */
   public function setAffectedResources($affectedResources)
   {
@@ -47,7 +60,11 @@ class ApplyAdminConsentsResponse extends \Google\Model
     return $this->affectedResources;
   }
   /**
-   * @param string
+   * If `validate_only=false` in ApplyAdminConsentsRequest, this counter
+   * contains the number of Consent resources that were successfully applied.
+   * Otherwise, it is the number of Consent resources that are supported.
+   *
+   * @param string $consentApplySuccess
    */
   public function setConsentApplySuccess($consentApplySuccess)
   {
@@ -61,7 +78,10 @@ class ApplyAdminConsentsResponse extends \Google\Model
     return $this->consentApplySuccess;
   }
   /**
-   * @param string
+   * The number of resources (including the Consent resources) that
+   * ApplyAdminConsents failed to re-index.
+   *
+   * @param string $failedResources
    */
   public function setFailedResources($failedResources)
   {

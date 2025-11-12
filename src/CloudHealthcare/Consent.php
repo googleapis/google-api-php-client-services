@@ -19,48 +19,115 @@ namespace Google\Service\CloudHealthcare;
 
 class Consent extends \Google\Collection
 {
+  /**
+   * No state specified. Treated as ACTIVE only at the time of resource
+   * creation.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Consent is active and is considered when evaluating a user's consent on
+   * resources.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The archived state is currently not being used.
+   */
+  public const STATE_ARCHIVED = 'ARCHIVED';
+  /**
+   * A revoked Consent is not considered when evaluating a user's consent on
+   * resources.
+   */
+  public const STATE_REVOKED = 'REVOKED';
+  /**
+   * A draft Consent is not considered when evaluating a user's consent on
+   * resources unless explicitly specified.
+   */
+  public const STATE_DRAFT = 'DRAFT';
+  /**
+   * When a draft Consent is rejected by a user, it is set to a rejected state.
+   * A rejected Consent is not considered when evaluating a user's consent on
+   * resources.
+   */
+  public const STATE_REJECTED = 'REJECTED';
   protected $collection_key = 'policies';
   /**
+   * Required. The resource name of the Consent artifact that contains proof of
+   * the end user's consent, of the form `projects/{project_id}/locations/{locat
+   * ion_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtif
+   * acts/{consent_artifact_id}`.
+   *
    * @var string
    */
   public $consentArtifact;
   /**
+   * Timestamp in UTC of when this Consent is considered expired.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Optional. User-supplied key-value pairs used to organize Consent resources.
+   * Metadata keys must: - be between 1 and 63 characters long - have a UTF-8
+   * encoding of maximum 128 bytes - begin with a letter - consist of up to 63
+   * characters including lowercase letters, numeric characters, underscores,
+   * and dashes Metadata values must be: - be between 1 and 63 characters long -
+   * have a UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters
+   * including lowercase letters, numeric characters, underscores, and dashes No
+   * more than 64 metadata entries can be associated with a given consent.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * Identifier. Resource name of the Consent, of the form `projects/{project_id
+   * }/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_stor
+   * e_id}/consents/{consent_id}`. Cannot be changed after creation.
+   *
    * @var string
    */
   public $name;
   protected $policiesType = GoogleCloudHealthcareV1ConsentPolicy::class;
   protected $policiesDataType = 'array';
   /**
+   * Output only. The timestamp that the revision was created.
+   *
    * @var string
    */
   public $revisionCreateTime;
   /**
+   * Output only. The revision ID of the Consent. The format is an 8-character
+   * hexadecimal string. Refer to a specific revision of a Consent by appending
+   * `@{revision_id}` to the Consent's resource name.
+   *
    * @var string
    */
   public $revisionId;
   /**
+   * Required. Indicates the current state of this Consent.
+   *
    * @var string
    */
   public $state;
   /**
+   * Input only. The time to live for this Consent from when it is created.
+   *
    * @var string
    */
   public $ttl;
   /**
+   * Required. User's UUID provided by the client.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param string
+   * Required. The resource name of the Consent artifact that contains proof of
+   * the end user's consent, of the form `projects/{project_id}/locations/{locat
+   * ion_id}/datasets/{dataset_id}/consentStores/{consent_store_id}/consentArtif
+   * acts/{consent_artifact_id}`.
+   *
+   * @param string $consentArtifact
    */
   public function setConsentArtifact($consentArtifact)
   {
@@ -74,7 +141,9 @@ class Consent extends \Google\Collection
     return $this->consentArtifact;
   }
   /**
-   * @param string
+   * Timestamp in UTC of when this Consent is considered expired.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -88,7 +157,16 @@ class Consent extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param string[]
+   * Optional. User-supplied key-value pairs used to organize Consent resources.
+   * Metadata keys must: - be between 1 and 63 characters long - have a UTF-8
+   * encoding of maximum 128 bytes - begin with a letter - consist of up to 63
+   * characters including lowercase letters, numeric characters, underscores,
+   * and dashes Metadata values must be: - be between 1 and 63 characters long -
+   * have a UTF-8 encoding of maximum 128 bytes - consist of up to 63 characters
+   * including lowercase letters, numeric characters, underscores, and dashes No
+   * more than 64 metadata entries can be associated with a given consent.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -102,7 +180,11 @@ class Consent extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the Consent, of the form `projects/{project_id
+   * }/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_stor
+   * e_id}/consents/{consent_id}`. Cannot be changed after creation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -116,7 +198,10 @@ class Consent extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudHealthcareV1ConsentPolicy[]
+   * Optional. Represents a user's consent in terms of the resources that can be
+   * accessed and under what conditions.
+   *
+   * @param GoogleCloudHealthcareV1ConsentPolicy[] $policies
    */
   public function setPolicies($policies)
   {
@@ -130,7 +215,9 @@ class Consent extends \Google\Collection
     return $this->policies;
   }
   /**
-   * @param string
+   * Output only. The timestamp that the revision was created.
+   *
+   * @param string $revisionCreateTime
    */
   public function setRevisionCreateTime($revisionCreateTime)
   {
@@ -144,7 +231,11 @@ class Consent extends \Google\Collection
     return $this->revisionCreateTime;
   }
   /**
-   * @param string
+   * Output only. The revision ID of the Consent. The format is an 8-character
+   * hexadecimal string. Refer to a specific revision of a Consent by appending
+   * `@{revision_id}` to the Consent's resource name.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -158,21 +249,28 @@ class Consent extends \Google\Collection
     return $this->revisionId;
   }
   /**
-   * @param string
+   * Required. Indicates the current state of this Consent.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, ARCHIVED, REVOKED, DRAFT,
+   * REJECTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Input only. The time to live for this Consent from when it is created.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {
@@ -186,7 +284,9 @@ class Consent extends \Google\Collection
     return $this->ttl;
   }
   /**
-   * @param string
+   * Required. User's UUID provided by the client.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

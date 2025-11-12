@@ -20,12 +20,18 @@ namespace Google\Service\CloudHealthcare;
 class CharacterMaskConfig extends \Google\Model
 {
   /**
+   * Optional. Character to mask the sensitive values. If not supplied, defaults
+   * to "*".
+   *
    * @var string
    */
   public $maskingCharacter;
 
   /**
-   * @param string
+   * Optional. Character to mask the sensitive values. If not supplied, defaults
+   * to "*".
+   *
+   * @param string $maskingCharacter
    */
   public function setMaskingCharacter($maskingCharacter)
   {
