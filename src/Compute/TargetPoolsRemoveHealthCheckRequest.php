@@ -24,7 +24,13 @@ class TargetPoolsRemoveHealthCheckRequest extends \Google\Collection
   protected $healthChecksDataType = 'array';
 
   /**
-   * @param HealthCheckReference[]
+   * Health check URL to be removed. This can be a full or valid partial URL.
+   * For example, the following are valid URLs:        - https://www.googleapis.
+   * com/compute/beta/projects/project/global/httpHealthChecks/health-check
+   * - projects/project/global/httpHealthChecks/health-check    -
+   * global/httpHealthChecks/health-check
+   *
+   * @param HealthCheckReference[] $healthChecks
    */
   public function setHealthChecks($healthChecks)
   {

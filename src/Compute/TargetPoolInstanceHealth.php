@@ -23,12 +23,15 @@ class TargetPoolInstanceHealth extends \Google\Collection
   protected $healthStatusType = HealthStatus::class;
   protected $healthStatusDataType = 'array';
   /**
+   * [Output Only] Type of resource. Alwayscompute#targetPoolInstanceHealth when
+   * checking the health of an instance.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param HealthStatus[]
+   * @param HealthStatus[] $healthStatus
    */
   public function setHealthStatus($healthStatus)
   {
@@ -42,7 +45,10 @@ class TargetPoolInstanceHealth extends \Google\Collection
     return $this->healthStatus;
   }
   /**
-   * @param string
+   * [Output Only] Type of resource. Alwayscompute#targetPoolInstanceHealth when
+   * checking the health of an instance.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

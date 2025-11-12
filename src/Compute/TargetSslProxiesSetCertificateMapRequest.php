@@ -20,12 +20,22 @@ namespace Google\Service\Compute;
 class TargetSslProxiesSetCertificateMapRequest extends \Google\Model
 {
   /**
+   * URL of the Certificate Map to associate with this TargetSslProxy.
+   *
+   *  Accepted format is//certificatemanager.googleapis.com/projects/{project}/l
+   * ocations/{location}/certificateMaps/{resourceName}.
+   *
    * @var string
    */
   public $certificateMap;
 
   /**
-   * @param string
+   * URL of the Certificate Map to associate with this TargetSslProxy.
+   *
+   *  Accepted format is//certificatemanager.googleapis.com/projects/{project}/l
+   * ocations/{location}/certificateMaps/{resourceName}.
+   *
+   * @param string $certificateMap
    */
   public function setCertificateMap($certificateMap)
   {

@@ -21,6 +21,8 @@ class UrlMap extends \Google\Collection
 {
   protected $collection_key = 'tests';
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
@@ -29,16 +31,38 @@ class UrlMap extends \Google\Collection
   protected $defaultRouteActionType = HttpRouteAction::class;
   protected $defaultRouteActionDataType = '';
   /**
+   * The full or partial URL of the defaultService resource to which traffic is
+   * directed if none of the hostRules match. If defaultRouteAction is also
+   * specified, advanced routing actions, such as URL rewrites, take effect
+   * before sending the request to the backend.
+   *
+   * Only one of defaultUrlRedirect, defaultService or
+   * defaultRouteAction.weightedBackendService can be set.
+   *
+   * defaultService has no effect when the URL map is bound to a target gRPC
+   * proxy that has the validateForProxyless field set to true.
+   *
    * @var string
    */
   public $defaultService;
   protected $defaultUrlRedirectType = HttpRedirectAction::class;
   protected $defaultUrlRedirectDataType = '';
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Fingerprint of this resource. A hash of the contents stored in this object.
+   * This field is used in optimistic locking. This field is ignored when
+   * inserting a UrlMap. An up-to-date fingerprint must be provided in order to
+   * update the UrlMap, otherwise the request will fail with error 412
+   * conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
+   *
    * @var string
    */
   public $fingerprint;
@@ -47,24 +71,44 @@ class UrlMap extends \Google\Collection
   protected $hostRulesType = HostRule::class;
   protected $hostRulesDataType = 'array';
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource. Always compute#urlMaps for url maps.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
    * @var string
    */
   public $name;
   protected $pathMatchersType = PathMatcher::class;
   protected $pathMatchersDataType = 'array';
   /**
+   * [Output Only] URL of the region where the regional URL map resides. This
+   * field is not applicable to global URL maps. You must specify this field as
+   * part of the HTTP request URL. It is not settable as a field in the request
+   * body.
+   *
    * @var string
    */
   public $region;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
@@ -72,7 +116,9 @@ class UrlMap extends \Google\Collection
   protected $testsDataType = 'array';
 
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -86,7 +132,37 @@ class UrlMap extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param CustomErrorResponsePolicy
+   * defaultCustomErrorResponsePolicy specifies how the Load Balancer returns
+   * error responses when BackendServiceorBackendBucket responds with an error.
+   *
+   * This policy takes effect at the load balancer level and applies only when
+   * no policy has been defined for the error code at lower levels like
+   * PathMatcher, RouteRule and PathRule within this UrlMap.
+   *
+   * For example, consider a UrlMap with the following configuration:
+   * - defaultCustomErrorResponsePolicy containing policies for      responding
+   * to 5xx and 4xx errors      - A PathMatcher configured for *.example.com has
+   * defaultCustomErrorResponsePolicy for 4xx.
+   *
+   * If a request for http://www.example.com/ encounters a404, the policy
+   * inpathMatcher.defaultCustomErrorResponsePolicy will be enforced. When the
+   * request for http://www.example.com/ encounters a502, the policy
+   * inUrlMap.defaultCustomErrorResponsePolicy will be enforced. When a request
+   * that does not match any host in *.example.com such as
+   * http://www.myotherexample.com/, encounters a404,
+   * UrlMap.defaultCustomErrorResponsePolicy takes effect.
+   *
+   * When used in conjunction withdefaultRouteAction.retryPolicy, retries take
+   * precedence. Only once all retries are exhausted,
+   * thedefaultCustomErrorResponsePolicy is applied. While attempting a retry,
+   * if load balancer is successful in reaching the service, the
+   * defaultCustomErrorResponsePolicy is ignored and the response from the
+   * service is returned to the client.
+   *
+   * defaultCustomErrorResponsePolicy is supported only for global external
+   * Application Load Balancers.
+   *
+   * @param CustomErrorResponsePolicy $defaultCustomErrorResponsePolicy
    */
   public function setDefaultCustomErrorResponsePolicy(CustomErrorResponsePolicy $defaultCustomErrorResponsePolicy)
   {
@@ -100,7 +176,20 @@ class UrlMap extends \Google\Collection
     return $this->defaultCustomErrorResponsePolicy;
   }
   /**
-   * @param HttpRouteAction
+   * defaultRouteAction takes effect when none of the hostRules match. The load
+   * balancer performs advanced routing actions, such as URL rewrites and header
+   * transformations, before forwarding the request to the selected backend.
+   *
+   * Only one of defaultUrlRedirect, defaultService or
+   * defaultRouteAction.weightedBackendService can be set.
+   *
+   *  URL maps for classic Application Load Balancers only support the
+   * urlRewrite action within defaultRouteAction.
+   *
+   * defaultRouteAction has no effect when the URL map is bound to a target gRPC
+   * proxy that has the validateForProxyless field set to true.
+   *
+   * @param HttpRouteAction $defaultRouteAction
    */
   public function setDefaultRouteAction(HttpRouteAction $defaultRouteAction)
   {
@@ -114,7 +203,18 @@ class UrlMap extends \Google\Collection
     return $this->defaultRouteAction;
   }
   /**
-   * @param string
+   * The full or partial URL of the defaultService resource to which traffic is
+   * directed if none of the hostRules match. If defaultRouteAction is also
+   * specified, advanced routing actions, such as URL rewrites, take effect
+   * before sending the request to the backend.
+   *
+   * Only one of defaultUrlRedirect, defaultService or
+   * defaultRouteAction.weightedBackendService can be set.
+   *
+   * defaultService has no effect when the URL map is bound to a target gRPC
+   * proxy that has the validateForProxyless field set to true.
+   *
+   * @param string $defaultService
    */
   public function setDefaultService($defaultService)
   {
@@ -128,7 +228,15 @@ class UrlMap extends \Google\Collection
     return $this->defaultService;
   }
   /**
-   * @param HttpRedirectAction
+   * When none of the specified hostRules match, the request is redirected to a
+   * URL specified by defaultUrlRedirect.
+   *
+   * Only one of defaultUrlRedirect, defaultService or
+   * defaultRouteAction.weightedBackendService can be set.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy.
+   *
+   * @param HttpRedirectAction $defaultUrlRedirect
    */
   public function setDefaultUrlRedirect(HttpRedirectAction $defaultUrlRedirect)
   {
@@ -142,7 +250,10 @@ class UrlMap extends \Google\Collection
     return $this->defaultUrlRedirect;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -156,7 +267,15 @@ class UrlMap extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Fingerprint of this resource. A hash of the contents stored in this object.
+   * This field is used in optimistic locking. This field is ignored when
+   * inserting a UrlMap. An up-to-date fingerprint must be provided in order to
+   * update the UrlMap, otherwise the request will fail with error 412
+   * conditionNotMet.
+   *
+   * To see the latest fingerprint, make a get() request to retrieve a UrlMap.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -170,7 +289,19 @@ class UrlMap extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * @param HttpHeaderAction
+   * Specifies changes to request and response headers that need to take effect
+   * for the selected backendService.
+   *
+   * The headerAction specified here take effect afterheaderAction specified
+   * under pathMatcher.
+   *
+   * headerAction is not supported for load balancers that have their
+   * loadBalancingScheme set to EXTERNAL.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy that has
+   * validateForProxyless field set to true.
+   *
+   * @param HttpHeaderAction $headerAction
    */
   public function setHeaderAction(HttpHeaderAction $headerAction)
   {
@@ -184,7 +315,9 @@ class UrlMap extends \Google\Collection
     return $this->headerAction;
   }
   /**
-   * @param HostRule[]
+   * The list of host rules to use against the URL.
+   *
+   * @param HostRule[] $hostRules
    */
   public function setHostRules($hostRules)
   {
@@ -198,7 +331,10 @@ class UrlMap extends \Google\Collection
     return $this->hostRules;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -212,7 +348,9 @@ class UrlMap extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Always compute#urlMaps for url maps.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -226,7 +364,15 @@ class UrlMap extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -240,7 +386,9 @@ class UrlMap extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PathMatcher[]
+   * The list of named PathMatchers to use against the URL.
+   *
+   * @param PathMatcher[] $pathMatchers
    */
   public function setPathMatchers($pathMatchers)
   {
@@ -254,7 +402,12 @@ class UrlMap extends \Google\Collection
     return $this->pathMatchers;
   }
   /**
-   * @param string
+   * [Output Only] URL of the region where the regional URL map resides. This
+   * field is not applicable to global URL maps. You must specify this field as
+   * part of the HTTP request URL. It is not settable as a field in the request
+   * body.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -268,7 +421,9 @@ class UrlMap extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -282,7 +437,14 @@ class UrlMap extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param UrlMapTest[]
+   * The list of expected URL mapping tests. Request to update theUrlMap
+   * succeeds only if all test cases pass. You can specify a maximum of 100
+   * tests per UrlMap.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy that has
+   * validateForProxyless field set to true.
+   *
+   * @param UrlMapTest[] $tests
    */
   public function setTests($tests)
   {

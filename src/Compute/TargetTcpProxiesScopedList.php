@@ -26,7 +26,9 @@ class TargetTcpProxiesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param TargetTcpProxy[]
+   * A list of TargetTcpProxies contained in this scope.
+   *
+   * @param TargetTcpProxy[] $targetTcpProxies
    */
   public function setTargetTcpProxies($targetTcpProxies)
   {
@@ -40,7 +42,10 @@ class TargetTcpProxiesScopedList extends \Google\Collection
     return $this->targetTcpProxies;
   }
   /**
-   * @param TargetTcpProxiesScopedListWarning
+   * Informational warning which replaces the list of backend services when the
+   * list is empty.
+   *
+   * @param TargetTcpProxiesScopedListWarning $warning
    */
   public function setWarning(TargetTcpProxiesScopedListWarning $warning)
   {

@@ -24,7 +24,9 @@ class TargetPoolsRemoveInstanceRequest extends \Google\Collection
   protected $instancesDataType = 'array';
 
   /**
-   * @param InstanceReference[]
+   * URLs of the instances to be removed from target pool.
+   *
+   * @param InstanceReference[] $instances
    */
   public function setInstances($instances)
   {

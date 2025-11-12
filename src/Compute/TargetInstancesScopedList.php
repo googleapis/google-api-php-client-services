@@ -26,7 +26,9 @@ class TargetInstancesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param TargetInstance[]
+   * A list of target instances contained in this scope.
+   *
+   * @param TargetInstance[] $targetInstances
    */
   public function setTargetInstances($targetInstances)
   {
@@ -40,7 +42,10 @@ class TargetInstancesScopedList extends \Google\Collection
     return $this->targetInstances;
   }
   /**
-   * @param TargetInstancesScopedListWarning
+   * Informational warning which replaces the list of addresses when the list is
+   * empty.
+   *
+   * @param TargetInstancesScopedListWarning $warning
    */
   public function setWarning(TargetInstancesScopedListWarning $warning)
   {

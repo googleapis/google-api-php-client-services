@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class UrlMapTestHeader extends \Google\Model
 {
   /**
+   * Header name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Header value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Header name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class UrlMapTestHeader extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Header value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

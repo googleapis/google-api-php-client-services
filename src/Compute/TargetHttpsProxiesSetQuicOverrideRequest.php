@@ -20,19 +20,38 @@ namespace Google\Service\Compute;
 class TargetHttpsProxiesSetQuicOverrideRequest extends \Google\Model
 {
   /**
+   * The load balancer will not attempt to negotiate QUIC with clients.
+   */
+  public const QUIC_OVERRIDE_DISABLE = 'DISABLE';
+  /**
+   * The load balancer will attempt to negotiate QUIC with clients.
+   */
+  public const QUIC_OVERRIDE_ENABLE = 'ENABLE';
+  /**
+   * No overrides to the default QUIC policy. This option is implicit if no QUIC
+   * override has been specified in the request.
+   */
+  public const QUIC_OVERRIDE_NONE = 'NONE';
+  /**
+   * QUIC policy for the TargetHttpsProxy resource.
+   *
    * @var string
    */
   public $quicOverride;
 
   /**
-   * @param string
+   * QUIC policy for the TargetHttpsProxy resource.
+   *
+   * Accepted values: DISABLE, ENABLE, NONE
+   *
+   * @param self::QUIC_OVERRIDE_* $quicOverride
    */
   public function setQuicOverride($quicOverride)
   {
     $this->quicOverride = $quicOverride;
   }
   /**
-   * @return string
+   * @return self::QUIC_OVERRIDE_*
    */
   public function getQuicOverride()
   {

@@ -25,7 +25,7 @@ class TargetReference extends \Google\Model
   public $target;
 
   /**
-   * @param string
+   * @param string $target
    */
   public function setTarget($target)
   {

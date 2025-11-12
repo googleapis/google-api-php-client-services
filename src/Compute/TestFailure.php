@@ -21,42 +21,66 @@ class TestFailure extends \Google\Collection
 {
   protected $collection_key = 'headers';
   /**
+   * The actual output URL evaluated by a load balancer containing the scheme,
+   * host, path and query parameters.
+   *
    * @var string
    */
   public $actualOutputUrl;
   /**
+   * Actual HTTP status code for rule with `urlRedirect` calculated by load
+   * balancer
+   *
    * @var int
    */
   public $actualRedirectResponseCode;
   /**
+   * BackendService or BackendBucket returned by load balancer.
+   *
    * @var string
    */
   public $actualService;
   /**
+   * The expected output URL evaluated by a load balancer containing the scheme,
+   * host, path and query parameters.
+   *
    * @var string
    */
   public $expectedOutputUrl;
   /**
+   * Expected HTTP status code for rule with `urlRedirect` calculated by load
+   * balancer
+   *
    * @var int
    */
   public $expectedRedirectResponseCode;
   /**
+   * Expected BackendService or BackendBucket resource the given URL should be
+   * mapped to.
+   *
    * @var string
    */
   public $expectedService;
   protected $headersType = UrlMapTestHeader::class;
   protected $headersDataType = 'array';
   /**
+   * Host portion of the URL.
+   *
    * @var string
    */
   public $host;
   /**
+   * Path portion including query parameters in the URL.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * The actual output URL evaluated by a load balancer containing the scheme,
+   * host, path and query parameters.
+   *
+   * @param string $actualOutputUrl
    */
   public function setActualOutputUrl($actualOutputUrl)
   {
@@ -70,7 +94,10 @@ class TestFailure extends \Google\Collection
     return $this->actualOutputUrl;
   }
   /**
-   * @param int
+   * Actual HTTP status code for rule with `urlRedirect` calculated by load
+   * balancer
+   *
+   * @param int $actualRedirectResponseCode
    */
   public function setActualRedirectResponseCode($actualRedirectResponseCode)
   {
@@ -84,7 +111,9 @@ class TestFailure extends \Google\Collection
     return $this->actualRedirectResponseCode;
   }
   /**
-   * @param string
+   * BackendService or BackendBucket returned by load balancer.
+   *
+   * @param string $actualService
    */
   public function setActualService($actualService)
   {
@@ -98,7 +127,10 @@ class TestFailure extends \Google\Collection
     return $this->actualService;
   }
   /**
-   * @param string
+   * The expected output URL evaluated by a load balancer containing the scheme,
+   * host, path and query parameters.
+   *
+   * @param string $expectedOutputUrl
    */
   public function setExpectedOutputUrl($expectedOutputUrl)
   {
@@ -112,7 +144,10 @@ class TestFailure extends \Google\Collection
     return $this->expectedOutputUrl;
   }
   /**
-   * @param int
+   * Expected HTTP status code for rule with `urlRedirect` calculated by load
+   * balancer
+   *
+   * @param int $expectedRedirectResponseCode
    */
   public function setExpectedRedirectResponseCode($expectedRedirectResponseCode)
   {
@@ -126,7 +161,10 @@ class TestFailure extends \Google\Collection
     return $this->expectedRedirectResponseCode;
   }
   /**
-   * @param string
+   * Expected BackendService or BackendBucket resource the given URL should be
+   * mapped to.
+   *
+   * @param string $expectedService
    */
   public function setExpectedService($expectedService)
   {
@@ -140,7 +178,9 @@ class TestFailure extends \Google\Collection
     return $this->expectedService;
   }
   /**
-   * @param UrlMapTestHeader[]
+   * HTTP headers of the request.
+   *
+   * @param UrlMapTestHeader[] $headers
    */
   public function setHeaders($headers)
   {
@@ -154,7 +194,9 @@ class TestFailure extends \Google\Collection
     return $this->headers;
   }
   /**
-   * @param string
+   * Host portion of the URL.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -168,7 +210,9 @@ class TestFailure extends \Google\Collection
     return $this->host;
   }
   /**
-   * @param string
+   * Path portion including query parameters in the URL.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

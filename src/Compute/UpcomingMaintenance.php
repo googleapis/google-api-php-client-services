@@ -19,20 +19,60 @@ namespace Google\Service\Compute;
 
 class UpcomingMaintenance extends \Google\Collection
 {
+  /**
+   * There is ongoing maintenance on this VM.
+   */
+  public const MAINTENANCE_STATUS_ONGOING = 'ONGOING';
+  /**
+   * There is pending maintenance.
+   */
+  public const MAINTENANCE_STATUS_PENDING = 'PENDING';
+  /**
+   * Unknown maintenance status. Do not use this value.
+   */
+  public const MAINTENANCE_STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * Multiple maintenance types in one window. This is only intended to be used
+   * for groups.
+   */
+  public const TYPE_MULTIPLE = 'MULTIPLE';
+  /**
+   * Scheduled maintenance (e.g. maintenance after uptime guarantee is
+   * complete).
+   */
+  public const TYPE_SCHEDULED = 'SCHEDULED';
+  /**
+   * No type specified. Do not use this value.
+   */
+  public const TYPE_UNKNOWN_TYPE = 'UNKNOWN_TYPE';
+  /**
+   * Unscheduled maintenance (e.g. emergency maintenance during uptime
+   * guarantee).
+   */
+  public const TYPE_UNSCHEDULED = 'UNSCHEDULED';
   protected $collection_key = 'maintenanceReasons';
   /**
+   * Indicates if the maintenance can be customer triggered.
+   *
    * @var bool
    */
   public $canReschedule;
   /**
+   * The latest time for the planned maintenance window to start. This timestamp
+   * value is in RFC3339 text format.
+   *
    * @var string
    */
   public $latestWindowStartTime;
   /**
+   * Indicates whether the UpcomingMaintenance will be triggered on VM shutdown.
+   *
    * @var bool
    */
   public $maintenanceOnShutdown;
   /**
+   * The reasons for the maintenance. Only valid for vms.
+   *
    * @var string[]
    */
   public $maintenanceReasons;
@@ -41,20 +81,30 @@ class UpcomingMaintenance extends \Google\Collection
    */
   public $maintenanceStatus;
   /**
+   * Defines the type of maintenance.
+   *
    * @var string
    */
   public $type;
   /**
+   * The time by which the maintenance disruption will be completed. This
+   * timestamp value is in RFC3339 text format.
+   *
    * @var string
    */
   public $windowEndTime;
   /**
+   * The current start time of the maintenance window. This timestamp value is
+   * in RFC3339 text format.
+   *
    * @var string
    */
   public $windowStartTime;
 
   /**
-   * @param bool
+   * Indicates if the maintenance can be customer triggered.
+   *
+   * @param bool $canReschedule
    */
   public function setCanReschedule($canReschedule)
   {
@@ -68,7 +118,10 @@ class UpcomingMaintenance extends \Google\Collection
     return $this->canReschedule;
   }
   /**
-   * @param string
+   * The latest time for the planned maintenance window to start. This timestamp
+   * value is in RFC3339 text format.
+   *
+   * @param string $latestWindowStartTime
    */
   public function setLatestWindowStartTime($latestWindowStartTime)
   {
@@ -82,7 +135,9 @@ class UpcomingMaintenance extends \Google\Collection
     return $this->latestWindowStartTime;
   }
   /**
-   * @param bool
+   * Indicates whether the UpcomingMaintenance will be triggered on VM shutdown.
+   *
+   * @param bool $maintenanceOnShutdown
    */
   public function setMaintenanceOnShutdown($maintenanceOnShutdown)
   {
@@ -96,7 +151,9 @@ class UpcomingMaintenance extends \Google\Collection
     return $this->maintenanceOnShutdown;
   }
   /**
-   * @param string[]
+   * The reasons for the maintenance. Only valid for vms.
+   *
+   * @param string[] $maintenanceReasons
    */
   public function setMaintenanceReasons($maintenanceReasons)
   {
@@ -110,35 +167,42 @@ class UpcomingMaintenance extends \Google\Collection
     return $this->maintenanceReasons;
   }
   /**
-   * @param string
+   * @param self::MAINTENANCE_STATUS_* $maintenanceStatus
    */
   public function setMaintenanceStatus($maintenanceStatus)
   {
     $this->maintenanceStatus = $maintenanceStatus;
   }
   /**
-   * @return string
+   * @return self::MAINTENANCE_STATUS_*
    */
   public function getMaintenanceStatus()
   {
     return $this->maintenanceStatus;
   }
   /**
-   * @param string
+   * Defines the type of maintenance.
+   *
+   * Accepted values: MULTIPLE, SCHEDULED, UNKNOWN_TYPE, UNSCHEDULED
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * The time by which the maintenance disruption will be completed. This
+   * timestamp value is in RFC3339 text format.
+   *
+   * @param string $windowEndTime
    */
   public function setWindowEndTime($windowEndTime)
   {
@@ -152,7 +216,10 @@ class UpcomingMaintenance extends \Google\Collection
     return $this->windowEndTime;
   }
   /**
-   * @param string
+   * The current start time of the maintenance window. This timestamp value is
+   * in RFC3339 text format.
+   *
+   * @param string $windowStartTime
    */
   public function setWindowStartTime($windowStartTime)
   {

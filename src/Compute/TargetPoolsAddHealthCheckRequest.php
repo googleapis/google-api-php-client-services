@@ -24,7 +24,9 @@ class TargetPoolsAddHealthCheckRequest extends \Google\Collection
   protected $healthChecksDataType = 'array';
 
   /**
-   * @param HealthCheckReference[]
+   * The HttpHealthCheck to add to the target pool.
+   *
+   * @param HealthCheckReference[] $healthChecks
    */
   public function setHealthChecks($healthChecks)
   {
