@@ -29,7 +29,9 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfig extends \Google\Mode
   protected $trainingPredictionSkewDetectionConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfig
+   * The config for integrating with Vertex Explainable AI.
+   *
+   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfig $explanationConfig
    */
   public function setExplanationConfig(GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfig $explanationConfig)
   {
@@ -43,7 +45,9 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfig extends \Google\Mode
     return $this->explanationConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetectionConfig
+   * The config for drift of prediction data.
+   *
+   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetectionConfig $predictionDriftDetectionConfig
    */
   public function setPredictionDriftDetectionConfig(GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetectionConfig $predictionDriftDetectionConfig)
   {
@@ -57,7 +61,10 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfig extends \Google\Mode
     return $this->predictionDriftDetectionConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingDataset
+   * Training dataset for models. This field has to be set only if
+   * TrainingPredictionSkewDetectionConfig is specified.
+   *
+   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingDataset $trainingDataset
    */
   public function setTrainingDataset(GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingDataset $trainingDataset)
   {
@@ -71,7 +78,9 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfig extends \Google\Mode
     return $this->trainingDataset;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingPredictionSkewDetectionConfig
+   * The config for skew between training data and prediction data.
+   *
+   * @param GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingPredictionSkewDetectionConfig $trainingPredictionSkewDetectionConfig
    */
   public function setTrainingPredictionSkewDetectionConfig(GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingPredictionSkewDetectionConfig $trainingPredictionSkewDetectionConfig)
   {

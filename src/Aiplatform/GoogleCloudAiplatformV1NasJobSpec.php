@@ -22,16 +22,25 @@ class GoogleCloudAiplatformV1NasJobSpec extends \Google\Model
   protected $multiTrialAlgorithmSpecType = GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpec::class;
   protected $multiTrialAlgorithmSpecDataType = '';
   /**
+   * The ID of the existing NasJob in the same Project and Location which will
+   * be used to resume search. search_space_spec and nas_algorithm_spec are
+   * obtained from previous NasJob hence should not provide them again for this
+   * NasJob.
+   *
    * @var string
    */
   public $resumeNasJobId;
   /**
+   * It defines the search space for Neural Architecture Search (NAS).
+   *
    * @var string
    */
   public $searchSpaceSpec;
 
   /**
-   * @param GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpec
+   * The spec of multi-trial algorithms.
+   *
+   * @param GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpec $multiTrialAlgorithmSpec
    */
   public function setMultiTrialAlgorithmSpec(GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpec $multiTrialAlgorithmSpec)
   {
@@ -45,7 +54,12 @@ class GoogleCloudAiplatformV1NasJobSpec extends \Google\Model
     return $this->multiTrialAlgorithmSpec;
   }
   /**
-   * @param string
+   * The ID of the existing NasJob in the same Project and Location which will
+   * be used to resume search. search_space_spec and nas_algorithm_spec are
+   * obtained from previous NasJob hence should not provide them again for this
+   * NasJob.
+   *
+   * @param string $resumeNasJobId
    */
   public function setResumeNasJobId($resumeNasJobId)
   {
@@ -59,7 +73,9 @@ class GoogleCloudAiplatformV1NasJobSpec extends \Google\Model
     return $this->resumeNasJobId;
   }
   /**
-   * @param string
+   * It defines the search space for Neural Architecture Search (NAS).
+   *
+   * @param string $searchSpaceSpec
    */
   public function setSearchSpaceSpec($searchSpaceSpec)
   {

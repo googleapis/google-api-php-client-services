@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MetricxInstance extends \Google\Model
 {
   /**
+   * Required. Output of the evaluated model.
+   *
    * @var string
    */
   public $prediction;
   /**
+   * Optional. Ground truth used to compare against the prediction.
+   *
    * @var string
    */
   public $reference;
   /**
+   * Optional. Source text in original language.
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param string
+   * Required. Output of the evaluated model.
+   *
+   * @param string $prediction
    */
   public function setPrediction($prediction)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1MetricxInstance extends \Google\Model
     return $this->prediction;
   }
   /**
-   * @param string
+   * Optional. Ground truth used to compare against the prediction.
+   *
+   * @param string $reference
    */
   public function setReference($reference)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1MetricxInstance extends \Google\Model
     return $this->reference;
   }
   /**
-   * @param string
+   * Optional. Source text in original language.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {

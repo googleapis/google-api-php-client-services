@@ -19,17 +19,33 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfigExplanationBaseline extends \Google\Model
 {
+  /**
+   * Should not be set.
+   */
+  public const PREDICTION_FORMAT_PREDICTION_FORMAT_UNSPECIFIED = 'PREDICTION_FORMAT_UNSPECIFIED';
+  /**
+   * Predictions are in JSONL files.
+   */
+  public const PREDICTION_FORMAT_JSONL = 'JSONL';
+  /**
+   * Predictions are in BigQuery.
+   */
+  public const PREDICTION_FORMAT_BIGQUERY = 'BIGQUERY';
   protected $bigqueryType = GoogleCloudAiplatformV1BigQueryDestination::class;
   protected $bigqueryDataType = '';
   protected $gcsType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDataType = '';
   /**
+   * The storage format of the predictions generated BatchPrediction job.
+   *
    * @var string
    */
   public $predictionFormat;
 
   /**
-   * @param GoogleCloudAiplatformV1BigQueryDestination
+   * BigQuery location for BatchExplain output.
+   *
+   * @param GoogleCloudAiplatformV1BigQueryDestination $bigquery
    */
   public function setBigquery(GoogleCloudAiplatformV1BigQueryDestination $bigquery)
   {
@@ -43,7 +59,9 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfigExpl
     return $this->bigquery;
   }
   /**
-   * @param GoogleCloudAiplatformV1GcsDestination
+   * Cloud Storage location for BatchExplain output.
+   *
+   * @param GoogleCloudAiplatformV1GcsDestination $gcs
    */
   public function setGcs(GoogleCloudAiplatformV1GcsDestination $gcs)
   {
@@ -57,14 +75,18 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfigExpl
     return $this->gcs;
   }
   /**
-   * @param string
+   * The storage format of the predictions generated BatchPrediction job.
+   *
+   * Accepted values: PREDICTION_FORMAT_UNSPECIFIED, JSONL, BIGQUERY
+   *
+   * @param self::PREDICTION_FORMAT_* $predictionFormat
    */
   public function setPredictionFormat($predictionFormat)
   {
     $this->predictionFormat = $predictionFormat;
   }
   /**
-   * @return string
+   * @return self::PREDICTION_FORMAT_*
    */
   public function getPredictionFormat()
   {

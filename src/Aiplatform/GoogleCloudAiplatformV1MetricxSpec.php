@@ -20,20 +20,46 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MetricxSpec extends \Google\Model
 {
   /**
+   * MetricX version unspecified.
+   */
+  public const VERSION_METRICX_VERSION_UNSPECIFIED = 'METRICX_VERSION_UNSPECIFIED';
+  /**
+   * MetricX 2024 (2.6) for translation + reference (reference-based).
+   */
+  public const VERSION_METRICX_24_REF = 'METRICX_24_REF';
+  /**
+   * MetricX 2024 (2.6) for translation + source (QE).
+   */
+  public const VERSION_METRICX_24_SRC = 'METRICX_24_SRC';
+  /**
+   * MetricX 2024 (2.6) for translation + source + reference (source-reference-
+   * combined).
+   */
+  public const VERSION_METRICX_24_SRC_REF = 'METRICX_24_SRC_REF';
+  /**
+   * Optional. Source language in BCP-47 format.
+   *
    * @var string
    */
   public $sourceLanguage;
   /**
+   * Optional. Target language in BCP-47 format. Covers both prediction and
+   * reference.
+   *
    * @var string
    */
   public $targetLanguage;
   /**
+   * Required. Which version to use for evaluation.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Optional. Source language in BCP-47 format.
+   *
+   * @param string $sourceLanguage
    */
   public function setSourceLanguage($sourceLanguage)
   {
@@ -47,7 +73,10 @@ class GoogleCloudAiplatformV1MetricxSpec extends \Google\Model
     return $this->sourceLanguage;
   }
   /**
-   * @param string
+   * Optional. Target language in BCP-47 format. Covers both prediction and
+   * reference.
+   *
+   * @param string $targetLanguage
    */
   public function setTargetLanguage($targetLanguage)
   {
@@ -61,14 +90,19 @@ class GoogleCloudAiplatformV1MetricxSpec extends \Google\Model
     return $this->targetLanguage;
   }
   /**
-   * @param string
+   * Required. Which version to use for evaluation.
+   *
+   * Accepted values: METRICX_VERSION_UNSPECIFIED, METRICX_24_REF,
+   * METRICX_24_SRC, METRICX_24_SRC_REF
+   *
+   * @param self::VERSION_* $version
    */
   public function setVersion($version)
   {
     $this->version = $version;
   }
   /**
-   * @return string
+   * @return self::VERSION_*
    */
   public function getVersion()
   {

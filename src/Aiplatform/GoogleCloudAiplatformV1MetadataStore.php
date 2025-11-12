@@ -20,30 +20,40 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MetadataStore extends \Google\Model
 {
   /**
+   * Output only. Timestamp when this MetadataStore was created.
+   *
    * @var string
    */
   public $createTime;
   protected $dataplexConfigType = GoogleCloudAiplatformV1MetadataStoreDataplexConfig::class;
   protected $dataplexConfigDataType = '';
   /**
+   * Description of the MetadataStore.
+   *
    * @var string
    */
   public $description;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
+   * Output only. The resource name of the MetadataStore instance.
+   *
    * @var string
    */
   public $name;
   protected $stateType = GoogleCloudAiplatformV1MetadataStoreMetadataStoreState::class;
   protected $stateDataType = '';
   /**
+   * Output only. Timestamp when this MetadataStore was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Timestamp when this MetadataStore was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -57,7 +67,9 @@ class GoogleCloudAiplatformV1MetadataStore extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1MetadataStoreDataplexConfig
+   * Optional. Dataplex integration settings.
+   *
+   * @param GoogleCloudAiplatformV1MetadataStoreDataplexConfig $dataplexConfig
    */
   public function setDataplexConfig(GoogleCloudAiplatformV1MetadataStoreDataplexConfig $dataplexConfig)
   {
@@ -71,7 +83,9 @@ class GoogleCloudAiplatformV1MetadataStore extends \Google\Model
     return $this->dataplexConfig;
   }
   /**
-   * @param string
+   * Description of the MetadataStore.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -85,7 +99,11 @@ class GoogleCloudAiplatformV1MetadataStore extends \Google\Model
     return $this->description;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Customer-managed encryption key spec for a Metadata Store. If set, this
+   * Metadata Store and all sub-resources of this Metadata Store are secured
+   * using this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -99,7 +117,9 @@ class GoogleCloudAiplatformV1MetadataStore extends \Google\Model
     return $this->encryptionSpec;
   }
   /**
-   * @param string
+   * Output only. The resource name of the MetadataStore instance.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -113,7 +133,9 @@ class GoogleCloudAiplatformV1MetadataStore extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1MetadataStoreMetadataStoreState
+   * Output only. State information of the MetadataStore.
+   *
+   * @param GoogleCloudAiplatformV1MetadataStoreMetadataStoreState $state
    */
   public function setState(GoogleCloudAiplatformV1MetadataStoreMetadataStoreState $state)
   {
@@ -127,7 +149,9 @@ class GoogleCloudAiplatformV1MetadataStore extends \Google\Model
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this MetadataStore was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

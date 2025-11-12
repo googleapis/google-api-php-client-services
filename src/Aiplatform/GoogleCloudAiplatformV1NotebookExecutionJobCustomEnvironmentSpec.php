@@ -27,7 +27,9 @@ class GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpec extends \
   protected $persistentDiskSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1MachineSpec
+   * The specification of a single machine for the execution job.
+   *
+   * @param GoogleCloudAiplatformV1MachineSpec $machineSpec
    */
   public function setMachineSpec(GoogleCloudAiplatformV1MachineSpec $machineSpec)
   {
@@ -41,7 +43,9 @@ class GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpec extends \
     return $this->machineSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1NetworkSpec
+   * The network configuration to use for the execution job.
+   *
+   * @param GoogleCloudAiplatformV1NetworkSpec $networkSpec
    */
   public function setNetworkSpec(GoogleCloudAiplatformV1NetworkSpec $networkSpec)
   {
@@ -55,7 +59,9 @@ class GoogleCloudAiplatformV1NotebookExecutionJobCustomEnvironmentSpec extends \
     return $this->networkSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1PersistentDiskSpec
+   * The specification of a persistent disk to attach for the execution job.
+   *
+   * @param GoogleCloudAiplatformV1PersistentDiskSpec $persistentDiskSpec
    */
   public function setPersistentDiskSpec(GoogleCloudAiplatformV1PersistentDiskSpec $persistentDiskSpec)
   {

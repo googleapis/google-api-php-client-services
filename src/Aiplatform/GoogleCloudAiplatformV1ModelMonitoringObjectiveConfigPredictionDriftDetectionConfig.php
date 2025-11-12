@@ -27,7 +27,10 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetect
   protected $driftThresholdsDataType = 'map';
 
   /**
-   * @param GoogleCloudAiplatformV1ThresholdConfig[]
+   * Key is the feature name and value is the threshold. The threshold here is
+   * against attribution score distance between different time windows.
+   *
+   * @param GoogleCloudAiplatformV1ThresholdConfig[] $attributionScoreDriftThresholds
    */
   public function setAttributionScoreDriftThresholds($attributionScoreDriftThresholds)
   {
@@ -41,7 +44,11 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetect
     return $this->attributionScoreDriftThresholds;
   }
   /**
-   * @param GoogleCloudAiplatformV1ThresholdConfig
+   * Drift anomaly detection threshold used by all features. When the per-
+   * feature thresholds are not set, this field can be used to specify a
+   * threshold for all features.
+   *
+   * @param GoogleCloudAiplatformV1ThresholdConfig $defaultDriftThreshold
    */
   public function setDefaultDriftThreshold(GoogleCloudAiplatformV1ThresholdConfig $defaultDriftThreshold)
   {
@@ -55,7 +62,12 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetect
     return $this->defaultDriftThreshold;
   }
   /**
-   * @param GoogleCloudAiplatformV1ThresholdConfig[]
+   * Key is the feature name and value is the threshold. If a feature needs to
+   * be monitored for drift, a value threshold must be configured for that
+   * feature. The threshold here is against feature distribution distance
+   * between different time windws.
+   *
+   * @param GoogleCloudAiplatformV1ThresholdConfig[] $driftThresholds
    */
   public function setDriftThresholds($driftThresholds)
   {

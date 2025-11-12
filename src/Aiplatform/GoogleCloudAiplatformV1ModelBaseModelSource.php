@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1ModelBaseModelSource extends \Google\Model
   protected $modelGardenSourceDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenieSource
+   * Information about the base model of Genie models.
+   *
+   * @param GoogleCloudAiplatformV1GenieSource $genieSource
    */
   public function setGenieSource(GoogleCloudAiplatformV1GenieSource $genieSource)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1ModelBaseModelSource extends \Google\Model
     return $this->genieSource;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelGardenSource
+   * Source information of Model Garden models.
+   *
+   * @param GoogleCloudAiplatformV1ModelGardenSource $modelGardenSource
    */
   public function setModelGardenSource(GoogleCloudAiplatformV1ModelGardenSource $modelGardenSource)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecValue extends \Google\Model
 {
   /**
+   * Float type.
+   *
    * @var float
    */
   public $floatValue;
   /**
+   * String type.
+   *
    * @var string
    */
   public $stringValue;
 
   /**
-   * @param float
+   * Float type.
+   *
+   * @param float $floatValue
    */
   public function setFloatValue($floatValue)
   {
@@ -43,7 +49,9 @@ class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecValue extends \Go
     return $this->floatValue;
   }
   /**
-   * @param string
+   * String type.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

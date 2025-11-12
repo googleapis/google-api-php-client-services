@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MigratableResourceDataLabelingDatasetDataLabelingAnnotatedDataset extends \Google\Model
 {
   /**
+   * Full resource name of data labeling AnnotatedDataset. Format: `projects/{pr
+   * oject}/datasets/{dataset}/annotatedDatasets/{annotated_dataset}`.
+   *
    * @var string
    */
   public $annotatedDataset;
   /**
+   * The AnnotatedDataset's display name in datalabeling.googleapis.com.
+   *
    * @var string
    */
   public $annotatedDatasetDisplayName;
 
   /**
-   * @param string
+   * Full resource name of data labeling AnnotatedDataset. Format: `projects/{pr
+   * oject}/datasets/{dataset}/annotatedDatasets/{annotated_dataset}`.
+   *
+   * @param string $annotatedDataset
    */
   public function setAnnotatedDataset($annotatedDataset)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1MigratableResourceDataLabelingDatasetDataLabelingAn
     return $this->annotatedDataset;
   }
   /**
-   * @param string
+   * The AnnotatedDataset's display name in datalabeling.googleapis.com.
+   *
+   * @param string $annotatedDatasetDisplayName
    */
   public function setAnnotatedDatasetDisplayName($annotatedDatasetDisplayName)
   {

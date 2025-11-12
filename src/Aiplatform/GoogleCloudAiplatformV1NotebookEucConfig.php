@@ -20,16 +20,36 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NotebookEucConfig extends \Google\Model
 {
   /**
+   * Output only. Whether ActAs check is bypassed for service account attached
+   * to the VM. If false, we need ActAs check for the default Compute Engine
+   * Service account. When a Runtime is created, a VM is allocated using Default
+   * Compute Engine Service Account. Any user requesting to use this Runtime
+   * requires Service Account User (ActAs) permission over this SA. If true,
+   * Runtime owner is using EUC and does not require the above permission as VM
+   * no longer use default Compute Engine SA, but a P4SA.
+   *
    * @var bool
    */
   public $bypassActasCheck;
   /**
+   * Input only. Whether EUC is disabled in this NotebookRuntimeTemplate. In
+   * proto3, the default value of a boolean is false. In this way, by default
+   * EUC will be enabled for NotebookRuntimeTemplate.
+   *
    * @var bool
    */
   public $eucDisabled;
 
   /**
-   * @param bool
+   * Output only. Whether ActAs check is bypassed for service account attached
+   * to the VM. If false, we need ActAs check for the default Compute Engine
+   * Service account. When a Runtime is created, a VM is allocated using Default
+   * Compute Engine Service Account. Any user requesting to use this Runtime
+   * requires Service Account User (ActAs) permission over this SA. If true,
+   * Runtime owner is using EUC and does not require the above permission as VM
+   * no longer use default Compute Engine SA, but a P4SA.
+   *
+   * @param bool $bypassActasCheck
    */
   public function setBypassActasCheck($bypassActasCheck)
   {
@@ -43,7 +63,11 @@ class GoogleCloudAiplatformV1NotebookEucConfig extends \Google\Model
     return $this->bypassActasCheck;
   }
   /**
-   * @param bool
+   * Input only. Whether EUC is disabled in this NotebookRuntimeTemplate. In
+   * proto3, the default value of a boolean is false. In this way, by default
+   * EUC will be enabled for NotebookRuntimeTemplate.
+   *
+   * @param bool $eucDisabled
    */
   public function setEucDisabled($eucDisabled)
   {

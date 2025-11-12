@@ -22,12 +22,17 @@ class GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec exten
   protected $explanationSpecType = GoogleCloudAiplatformV1ExplanationSpec::class;
   protected $explanationSpecDataType = '';
   /**
+   * Explanation type. For AutoML Image Classification models, possible values
+   * are: * `image-integrated-gradients` * `image-xrai`
+   *
    * @var string
    */
   public $explanationType;
 
   /**
-   * @param GoogleCloudAiplatformV1ExplanationSpec
+   * Explanation spec details.
+   *
+   * @param GoogleCloudAiplatformV1ExplanationSpec $explanationSpec
    */
   public function setExplanationSpec(GoogleCloudAiplatformV1ExplanationSpec $explanationSpec)
   {
@@ -41,7 +46,10 @@ class GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec exten
     return $this->explanationSpec;
   }
   /**
-   * @param string
+   * Explanation type. For AutoML Image Classification models, possible values
+   * are: * `image-integrated-gradients` * `image-xrai`
+   *
+   * @param string $explanationType
    */
   public function setExplanationType($explanationType)
   {

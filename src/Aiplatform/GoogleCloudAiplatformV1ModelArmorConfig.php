@@ -20,16 +20,37 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelArmorConfig extends \Google\Model
 {
   /**
+   * Optional. The resource name of the Model Armor template to use for prompt
+   * screening. A Model Armor template is a set of customized filters and
+   * thresholds that define how Model Armor screens content. If specified, Model
+   * Armor will use this template to check the user's prompt for safety and
+   * security risks before it is sent to the model. The name must be in the
+   * format `projects/{project}/locations/{location}/templates/{template}`.
+   *
    * @var string
    */
   public $promptTemplateName;
   /**
+   * Optional. The resource name of the Model Armor template to use for response
+   * screening. A Model Armor template is a set of customized filters and
+   * thresholds that define how Model Armor screens content. If specified, Model
+   * Armor will use this template to check the model's response for safety and
+   * security risks before it is returned to the user. The name must be in the
+   * format `projects/{project}/locations/{location}/templates/{template}`.
+   *
    * @var string
    */
   public $responseTemplateName;
 
   /**
-   * @param string
+   * Optional. The resource name of the Model Armor template to use for prompt
+   * screening. A Model Armor template is a set of customized filters and
+   * thresholds that define how Model Armor screens content. If specified, Model
+   * Armor will use this template to check the user's prompt for safety and
+   * security risks before it is sent to the model. The name must be in the
+   * format `projects/{project}/locations/{location}/templates/{template}`.
+   *
+   * @param string $promptTemplateName
    */
   public function setPromptTemplateName($promptTemplateName)
   {
@@ -43,7 +64,14 @@ class GoogleCloudAiplatformV1ModelArmorConfig extends \Google\Model
     return $this->promptTemplateName;
   }
   /**
-   * @param string
+   * Optional. The resource name of the Model Armor template to use for response
+   * screening. A Model Armor template is a set of customized filters and
+   * thresholds that define how Model Armor screens content. If specified, Model
+   * Armor will use this template to check the model's response for safety and
+   * security risks before it is returned to the user. The name must be in the
+   * format `projects/{project}/locations/{location}/templates/{template}`.
+   *
+   * @param string $responseTemplateName
    */
   public function setResponseTemplateName($responseTemplateName)
   {

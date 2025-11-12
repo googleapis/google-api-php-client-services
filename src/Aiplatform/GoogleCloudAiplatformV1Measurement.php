@@ -21,18 +21,27 @@ class GoogleCloudAiplatformV1Measurement extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
+   * Output only. Time that the Trial has been running at the point of this
+   * Measurement.
+   *
    * @var string
    */
   public $elapsedDuration;
   protected $metricsType = GoogleCloudAiplatformV1MeasurementMetric::class;
   protected $metricsDataType = 'array';
   /**
+   * Output only. The number of steps the machine learning model has been
+   * trained for. Must be non-negative.
+   *
    * @var string
    */
   public $stepCount;
 
   /**
-   * @param string
+   * Output only. Time that the Trial has been running at the point of this
+   * Measurement.
+   *
+   * @param string $elapsedDuration
    */
   public function setElapsedDuration($elapsedDuration)
   {
@@ -46,7 +55,10 @@ class GoogleCloudAiplatformV1Measurement extends \Google\Collection
     return $this->elapsedDuration;
   }
   /**
-   * @param GoogleCloudAiplatformV1MeasurementMetric[]
+   * Output only. A list of metrics got by evaluating the objective functions
+   * using suggested Parameter values.
+   *
+   * @param GoogleCloudAiplatformV1MeasurementMetric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -60,7 +72,10 @@ class GoogleCloudAiplatformV1Measurement extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * Output only. The number of steps the machine learning model has been
+   * trained for. Must be non-negative.
+   *
+   * @param string $stepCount
    */
   public function setStepCount($stepCount)
   {

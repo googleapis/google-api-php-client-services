@@ -20,16 +20,33 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelDeploymentMonitoringScheduleConfig extends \Google\Model
 {
   /**
+   * Required. The model monitoring job scheduling interval. It will be rounded
+   * up to next full hour. This defines how often the monitoring jobs are
+   * triggered.
+   *
    * @var string
    */
   public $monitorInterval;
   /**
+   * The time window of the prediction data being included in each prediction
+   * dataset. This window specifies how long the data should be collected from
+   * historical model results for each run. If not set,
+   * ModelDeploymentMonitoringScheduleConfig.monitor_interval will be used. e.g.
+   * If currently the cutoff time is 2022-01-08 14:30:00 and the monitor_window
+   * is set to be 3600, then data from 2022-01-08 13:30:00 to 2022-01-08
+   * 14:30:00 will be retrieved and aggregated to calculate the monitoring
+   * statistics.
+   *
    * @var string
    */
   public $monitorWindow;
 
   /**
-   * @param string
+   * Required. The model monitoring job scheduling interval. It will be rounded
+   * up to next full hour. This defines how often the monitoring jobs are
+   * triggered.
+   *
+   * @param string $monitorInterval
    */
   public function setMonitorInterval($monitorInterval)
   {
@@ -43,7 +60,16 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringScheduleConfig extends \Go
     return $this->monitorInterval;
   }
   /**
-   * @param string
+   * The time window of the prediction data being included in each prediction
+   * dataset. This window specifies how long the data should be collected from
+   * historical model results for each run. If not set,
+   * ModelDeploymentMonitoringScheduleConfig.monitor_interval will be used. e.g.
+   * If currently the cutoff time is 2022-01-08 14:30:00 and the monitor_window
+   * is set to be 3600, then data from 2022-01-08 13:30:00 to 2022-01-08
+   * 14:30:00 will be retrieved and aggregated to calculate the monitoring
+   * statistics.
+   *
+   * @param string $monitorWindow
    */
   public function setMonitorWindow($monitorWindow)
   {

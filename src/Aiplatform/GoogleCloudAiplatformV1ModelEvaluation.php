@@ -21,48 +21,97 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
 {
   protected $collection_key = 'sliceDimensions';
   /**
+   * Points to a YAML file stored on Google Cloud Storage describing
+   * EvaluatedDataItemView.predictions, EvaluatedDataItemView.ground_truths,
+   * EvaluatedAnnotation.predictions, and EvaluatedAnnotation.ground_truths. The
+   * schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). This field is not
+   * populated if there are neither EvaluatedDataItemViews nor
+   * EvaluatedAnnotations under this ModelEvaluation.
+   *
    * @var string
    */
   public $annotationSchemaUri;
   /**
+   * Output only. Timestamp when this ModelEvaluation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Points to a YAML file stored on Google Cloud Storage describing
+   * EvaluatedDataItemView.data_item_payload and
+   * EvaluatedAnnotation.data_item_payload. The schema is defined as an OpenAPI
+   * 3.0.2 [Schema Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). This field is not
+   * populated if there are neither EvaluatedDataItemViews nor
+   * EvaluatedAnnotations under this ModelEvaluation.
+   *
    * @var string
    */
   public $dataItemSchemaUri;
   /**
+   * The display name of the ModelEvaluation.
+   *
    * @var string
    */
   public $displayName;
   protected $explanationSpecsType = GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec::class;
   protected $explanationSpecsDataType = 'array';
   /**
+   * The metadata of the ModelEvaluation. For the ModelEvaluation uploaded from
+   * Managed Pipeline, metadata contains a structured value with keys of
+   * "pipeline_job_id", "evaluation_dataset_type", "evaluation_dataset_path",
+   * "row_based_metrics_path".
+   *
    * @var array
    */
   public $metadata;
   /**
+   * Evaluation metrics of the Model. The schema of the metrics is stored in
+   * metrics_schema_uri
+   *
    * @var array
    */
   public $metrics;
   /**
+   * Points to a YAML file stored on Google Cloud Storage describing the metrics
+   * of this ModelEvaluation. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject).
+   *
    * @var string
    */
   public $metricsSchemaUri;
   protected $modelExplanationType = GoogleCloudAiplatformV1ModelExplanation::class;
   protected $modelExplanationDataType = '';
   /**
+   * Output only. The resource name of the ModelEvaluation.
+   *
    * @var string
    */
   public $name;
   /**
+   * All possible dimensions of ModelEvaluationSlices. The dimensions can be
+   * used as the filter of the ModelService.ListModelEvaluationSlices request,
+   * in the form of `slice.dimension = `.
+   *
    * @var string[]
    */
   public $sliceDimensions;
 
   /**
-   * @param string
+   * Points to a YAML file stored on Google Cloud Storage describing
+   * EvaluatedDataItemView.predictions, EvaluatedDataItemView.ground_truths,
+   * EvaluatedAnnotation.predictions, and EvaluatedAnnotation.ground_truths. The
+   * schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). This field is not
+   * populated if there are neither EvaluatedDataItemViews nor
+   * EvaluatedAnnotations under this ModelEvaluation.
+   *
+   * @param string $annotationSchemaUri
    */
   public function setAnnotationSchemaUri($annotationSchemaUri)
   {
@@ -76,7 +125,9 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->annotationSchemaUri;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this ModelEvaluation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -90,7 +141,15 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Points to a YAML file stored on Google Cloud Storage describing
+   * EvaluatedDataItemView.data_item_payload and
+   * EvaluatedAnnotation.data_item_payload. The schema is defined as an OpenAPI
+   * 3.0.2 [Schema Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). This field is not
+   * populated if there are neither EvaluatedDataItemViews nor
+   * EvaluatedAnnotations under this ModelEvaluation.
+   *
+   * @param string $dataItemSchemaUri
    */
   public function setDataItemSchemaUri($dataItemSchemaUri)
   {
@@ -104,7 +163,9 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->dataItemSchemaUri;
   }
   /**
-   * @param string
+   * The display name of the ModelEvaluation.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -118,7 +179,10 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec[]
+   * Describes the values of ExplanationSpec that are used for explaining the
+   * predicted values on the evaluated data.
+   *
+   * @param GoogleCloudAiplatformV1ModelEvaluationModelEvaluationExplanationSpec[] $explanationSpecs
    */
   public function setExplanationSpecs($explanationSpecs)
   {
@@ -132,7 +196,12 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->explanationSpecs;
   }
   /**
-   * @param array
+   * The metadata of the ModelEvaluation. For the ModelEvaluation uploaded from
+   * Managed Pipeline, metadata contains a structured value with keys of
+   * "pipeline_job_id", "evaluation_dataset_type", "evaluation_dataset_path",
+   * "row_based_metrics_path".
+   *
+   * @param array $metadata
    */
   public function setMetadata($metadata)
   {
@@ -146,7 +215,10 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param array
+   * Evaluation metrics of the Model. The schema of the metrics is stored in
+   * metrics_schema_uri
+   *
+   * @param array $metrics
    */
   public function setMetrics($metrics)
   {
@@ -160,7 +232,12 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * Points to a YAML file stored on Google Cloud Storage describing the metrics
+   * of this ModelEvaluation. The schema is defined as an OpenAPI 3.0.2 [Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject).
+   *
+   * @param string $metricsSchemaUri
    */
   public function setMetricsSchemaUri($metricsSchemaUri)
   {
@@ -174,7 +251,11 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->metricsSchemaUri;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelExplanation
+   * Aggregated explanation metrics for the Model's prediction output over the
+   * data this ModelEvaluation uses. This field is populated only if the Model
+   * is evaluated with explanations, and only for AutoML tabular Models.
+   *
+   * @param GoogleCloudAiplatformV1ModelExplanation $modelExplanation
    */
   public function setModelExplanation(GoogleCloudAiplatformV1ModelExplanation $modelExplanation)
   {
@@ -188,7 +269,9 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->modelExplanation;
   }
   /**
-   * @param string
+   * Output only. The resource name of the ModelEvaluation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -202,7 +285,11 @@ class GoogleCloudAiplatformV1ModelEvaluation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * All possible dimensions of ModelEvaluationSlices. The dimensions can be
+   * used as the filter of the ModelService.ListModelEvaluationSlices request,
+   * in the form of `slice.dimension = `.
+   *
+   * @param string[] $sliceDimensions
    */
   public function setSliceDimensions($sliceDimensions)
   {

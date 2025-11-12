@@ -20,13 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MeasurementMetric extends \Google\Model
 {
   /**
+   * Output only. The ID of the Metric. The Metric should be defined in
+   * StudySpec's Metrics.
+   *
    * @var string
    */
   public $metricId;
+  /**
+   * Output only. The value for this metric.
+   *
+   * @var 
+   */
   public $value;
 
   /**
-   * @param string
+   * Output only. The ID of the Metric. The Metric should be defined in
+   * StudySpec's Metrics.
+   *
+   * @param string $metricId
    */
   public function setMetricId($metricId)
   {

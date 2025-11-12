@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1NearestNeighbors extends \Google\Collection
   protected $neighborsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1NearestNeighborsNeighbor[]
+   * All its neighbors.
+   *
+   * @param GoogleCloudAiplatformV1NearestNeighborsNeighbor[] $neighbors
    */
   public function setNeighbors($neighbors)
   {

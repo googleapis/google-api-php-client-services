@@ -23,12 +23,20 @@ class GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadata extends \Goo
   protected $contentValidationStatsType = GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataContentValidationStats::class;
   protected $contentValidationStatsDataType = 'array';
   /**
+   * The ingested data size in bytes.
+   *
    * @var string
    */
   public $dataBytesCount;
 
   /**
-   * @param GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataContentValidationStats[]
+   * The validation stats of the content (per file) to be inserted or updated on
+   * the Matching Engine Index resource. Populated if contentsDeltaUri is
+   * provided as part of Index.metadata. Please note that, currently for those
+   * files that are broken or has unsupported file format, we will not have the
+   * stats for those files.
+   *
+   * @param GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadataContentValidationStats[] $contentValidationStats
    */
   public function setContentValidationStats($contentValidationStats)
   {
@@ -42,7 +50,9 @@ class GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadata extends \Goo
     return $this->contentValidationStats;
   }
   /**
-   * @param string
+   * The ingested data size in bytes.
+   *
+   * @param string $dataBytesCount
    */
   public function setDataBytesCount($dataBytesCount)
   {

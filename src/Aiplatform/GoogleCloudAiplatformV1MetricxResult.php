@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MetricxResult extends \Google\Model
 {
   /**
+   * Output only. MetricX score. Range depends on version.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. MetricX score. Range depends on version.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

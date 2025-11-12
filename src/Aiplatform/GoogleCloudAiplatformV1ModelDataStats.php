@@ -20,32 +20,56 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelDataStats extends \Google\Model
 {
   /**
+   * Number of Annotations that are used for evaluating this Model. If the Model
+   * is evaluated multiple times, this will be the number of test Annotations
+   * used by the first evaluation. If the Model is not evaluated, the number is
+   * 0.
+   *
    * @var string
    */
   public $testAnnotationsCount;
   /**
+   * Number of DataItems that were used for evaluating this Model. If the Model
+   * is evaluated multiple times, this will be the number of test DataItems used
+   * by the first evaluation. If the Model is not evaluated, the number is 0.
+   *
    * @var string
    */
   public $testDataItemsCount;
   /**
+   * Number of Annotations that are used for training this Model.
+   *
    * @var string
    */
   public $trainingAnnotationsCount;
   /**
+   * Number of DataItems that were used for training this Model.
+   *
    * @var string
    */
   public $trainingDataItemsCount;
   /**
+   * Number of Annotations that are used for validating this Model during
+   * training.
+   *
    * @var string
    */
   public $validationAnnotationsCount;
   /**
+   * Number of DataItems that were used for validating this Model during
+   * training.
+   *
    * @var string
    */
   public $validationDataItemsCount;
 
   /**
-   * @param string
+   * Number of Annotations that are used for evaluating this Model. If the Model
+   * is evaluated multiple times, this will be the number of test Annotations
+   * used by the first evaluation. If the Model is not evaluated, the number is
+   * 0.
+   *
+   * @param string $testAnnotationsCount
    */
   public function setTestAnnotationsCount($testAnnotationsCount)
   {
@@ -59,7 +83,11 @@ class GoogleCloudAiplatformV1ModelDataStats extends \Google\Model
     return $this->testAnnotationsCount;
   }
   /**
-   * @param string
+   * Number of DataItems that were used for evaluating this Model. If the Model
+   * is evaluated multiple times, this will be the number of test DataItems used
+   * by the first evaluation. If the Model is not evaluated, the number is 0.
+   *
+   * @param string $testDataItemsCount
    */
   public function setTestDataItemsCount($testDataItemsCount)
   {
@@ -73,7 +101,9 @@ class GoogleCloudAiplatformV1ModelDataStats extends \Google\Model
     return $this->testDataItemsCount;
   }
   /**
-   * @param string
+   * Number of Annotations that are used for training this Model.
+   *
+   * @param string $trainingAnnotationsCount
    */
   public function setTrainingAnnotationsCount($trainingAnnotationsCount)
   {
@@ -87,7 +117,9 @@ class GoogleCloudAiplatformV1ModelDataStats extends \Google\Model
     return $this->trainingAnnotationsCount;
   }
   /**
-   * @param string
+   * Number of DataItems that were used for training this Model.
+   *
+   * @param string $trainingDataItemsCount
    */
   public function setTrainingDataItemsCount($trainingDataItemsCount)
   {
@@ -101,7 +133,10 @@ class GoogleCloudAiplatformV1ModelDataStats extends \Google\Model
     return $this->trainingDataItemsCount;
   }
   /**
-   * @param string
+   * Number of Annotations that are used for validating this Model during
+   * training.
+   *
+   * @param string $validationAnnotationsCount
    */
   public function setValidationAnnotationsCount($validationAnnotationsCount)
   {
@@ -115,7 +150,10 @@ class GoogleCloudAiplatformV1ModelDataStats extends \Google\Model
     return $this->validationAnnotationsCount;
   }
   /**
-   * @param string
+   * Number of DataItems that were used for validating this Model during
+   * training.
+   *
+   * @param string $validationDataItemsCount
    */
   public function setValidationDataItemsCount($validationDataItemsCount)
   {

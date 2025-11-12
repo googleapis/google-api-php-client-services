@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MetadataStoreDataplexConfig extends \Google\Model
 {
   /**
+   * Optional. Whether or not Data Lineage synchronization is enabled for Vertex
+   * Pipelines.
+   *
    * @var bool
    */
   public $enabledPipelinesLineage;
 
   /**
-   * @param bool
+   * Optional. Whether or not Data Lineage synchronization is enabled for Vertex
+   * Pipelines.
+   *
+   * @param bool $enabledPipelinesLineage
    */
   public function setEnabledPipelinesLineage($enabledPipelinesLineage)
   {

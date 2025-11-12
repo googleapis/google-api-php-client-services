@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlDatasetConfig extends \Google\Model
 {
   /**
+   * Required. Full resource name of automl Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`.
+   *
    * @var string
    */
   public $dataset;
   /**
+   * Required. Display name of the Dataset in Vertex AI. System will pick a
+   * display name if unspecified.
+   *
    * @var string
    */
   public $datasetDisplayName;
 
   /**
-   * @param string
+   * Required. Full resource name of automl Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`.
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlDatasetConfig ex
     return $this->dataset;
   }
   /**
-   * @param string
+   * Required. Display name of the Dataset in Vertex AI. System will pick a
+   * display name if unspecified.
+   *
+   * @param string $datasetDisplayName
    */
   public function setDatasetDisplayName($datasetDisplayName)
   {

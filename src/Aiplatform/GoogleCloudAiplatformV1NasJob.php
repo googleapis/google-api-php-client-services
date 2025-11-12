@@ -20,30 +20,100 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NasJob extends \Google\Model
 {
   /**
+   * The job state is unspecified.
+   */
+  public const STATE_JOB_STATE_UNSPECIFIED = 'JOB_STATE_UNSPECIFIED';
+  /**
+   * The job has been just created or resumed and processing has not yet begun.
+   */
+  public const STATE_JOB_STATE_QUEUED = 'JOB_STATE_QUEUED';
+  /**
+   * The service is preparing to run the job.
+   */
+  public const STATE_JOB_STATE_PENDING = 'JOB_STATE_PENDING';
+  /**
+   * The job is in progress.
+   */
+  public const STATE_JOB_STATE_RUNNING = 'JOB_STATE_RUNNING';
+  /**
+   * The job completed successfully.
+   */
+  public const STATE_JOB_STATE_SUCCEEDED = 'JOB_STATE_SUCCEEDED';
+  /**
+   * The job failed.
+   */
+  public const STATE_JOB_STATE_FAILED = 'JOB_STATE_FAILED';
+  /**
+   * The job is being cancelled. From this state the job may only go to either
+   * `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED` or `JOB_STATE_CANCELLED`.
+   */
+  public const STATE_JOB_STATE_CANCELLING = 'JOB_STATE_CANCELLING';
+  /**
+   * The job has been cancelled.
+   */
+  public const STATE_JOB_STATE_CANCELLED = 'JOB_STATE_CANCELLED';
+  /**
+   * The job has been stopped, and can be resumed.
+   */
+  public const STATE_JOB_STATE_PAUSED = 'JOB_STATE_PAUSED';
+  /**
+   * The job has expired.
+   */
+  public const STATE_JOB_STATE_EXPIRED = 'JOB_STATE_EXPIRED';
+  /**
+   * The job is being updated. Only jobs in the `RUNNING` state can be updated.
+   * After updating, the job goes back to the `RUNNING` state.
+   */
+  public const STATE_JOB_STATE_UPDATING = 'JOB_STATE_UPDATING';
+  /**
+   * The job is partially succeeded, some results may be missing due to errors.
+   */
+  public const STATE_JOB_STATE_PARTIALLY_SUCCEEDED = 'JOB_STATE_PARTIALLY_SUCCEEDED';
+  /**
+   * Output only. Time when the NasJob was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The display name of the NasJob. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Enable a separation of Custom model training and restricted image
+   * training for tenant project.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableRestrictedImageTraining;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
+   * Output only. Time when the NasJob entered any of the following states:
+   * `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`, `JOB_STATE_CANCELLED`.
+   *
    * @var string
    */
   public $endTime;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
+   * The labels with user-defined metadata to organize NasJobs. Label keys and
+   * values can be no longer than 64 characters (Unicode codepoints), can only
+   * contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. See https://goo.gl/xmQnxf for more
+   * information and examples of labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. Resource name of the NasJob.
+   *
    * @var string
    */
   public $name;
@@ -52,28 +122,41 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
   protected $nasJobSpecType = GoogleCloudAiplatformV1NasJobSpec::class;
   protected $nasJobSpecDataType = '';
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Output only. Time when the NasJob for the first time entered the
+   * `JOB_STATE_RUNNING` state.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The detailed state of the job.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Time when the NasJob was most recently updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Time when the NasJob was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -87,7 +170,10 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The display name of the NasJob. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -101,13 +187,18 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Optional. Enable a separation of Custom model training and restricted image
+   * training for tenant project.
+   *
+   * @deprecated
+   * @param bool $enableRestrictedImageTraining
    */
   public function setEnableRestrictedImageTraining($enableRestrictedImageTraining)
   {
     $this->enableRestrictedImageTraining = $enableRestrictedImageTraining;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableRestrictedImageTraining()
@@ -115,7 +206,11 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->enableRestrictedImageTraining;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Customer-managed encryption key options for a NasJob. If this is set, then
+   * all resources created by the NasJob will be encrypted with the provided
+   * encryption key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -129,7 +224,10 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->encryptionSpec;
   }
   /**
-   * @param string
+   * Output only. Time when the NasJob entered any of the following states:
+   * `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`, `JOB_STATE_CANCELLED`.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -143,7 +241,10 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param GoogleRpcStatus
+   * Output only. Only populated when job's state is JOB_STATE_FAILED or
+   * JOB_STATE_CANCELLED.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -157,7 +258,13 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string[]
+   * The labels with user-defined metadata to organize NasJobs. Label keys and
+   * values can be no longer than 64 characters (Unicode codepoints), can only
+   * contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. See https://goo.gl/xmQnxf for more
+   * information and examples of labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -171,7 +278,9 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. Resource name of the NasJob.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -185,7 +294,9 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1NasJobOutput
+   * Output only. Output of the NasJob.
+   *
+   * @param GoogleCloudAiplatformV1NasJobOutput $nasJobOutput
    */
   public function setNasJobOutput(GoogleCloudAiplatformV1NasJobOutput $nasJobOutput)
   {
@@ -199,7 +310,9 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->nasJobOutput;
   }
   /**
-   * @param GoogleCloudAiplatformV1NasJobSpec
+   * Required. The specification of a NasJob.
+   *
+   * @param GoogleCloudAiplatformV1NasJobSpec $nasJobSpec
    */
   public function setNasJobSpec(GoogleCloudAiplatformV1NasJobSpec $nasJobSpec)
   {
@@ -213,7 +326,9 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->nasJobSpec;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -227,7 +342,9 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -241,7 +358,10 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Output only. Time when the NasJob for the first time entered the
+   * `JOB_STATE_RUNNING` state.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -255,21 +375,31 @@ class GoogleCloudAiplatformV1NasJob extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The detailed state of the job.
+   *
+   * Accepted values: JOB_STATE_UNSPECIFIED, JOB_STATE_QUEUED,
+   * JOB_STATE_PENDING, JOB_STATE_RUNNING, JOB_STATE_SUCCEEDED,
+   * JOB_STATE_FAILED, JOB_STATE_CANCELLING, JOB_STATE_CANCELLED,
+   * JOB_STATE_PAUSED, JOB_STATE_EXPIRED, JOB_STATE_UPDATING,
+   * JOB_STATE_PARTIALLY_SUCCEEDED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Time when the NasJob was most recently updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

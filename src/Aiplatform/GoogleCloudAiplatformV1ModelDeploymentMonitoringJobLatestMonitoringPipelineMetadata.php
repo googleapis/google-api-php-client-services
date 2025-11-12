@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelDeploymentMonitoringJobLatestMonitoringPipelineMetadata extends \Google\Model
 {
   /**
+   * The time that most recent monitoring pipelines that is related to this run.
+   *
    * @var string
    */
   public $runTime;
@@ -27,7 +29,9 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringJobLatestMonitoringPipelin
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * The time that most recent monitoring pipelines that is related to this run.
+   *
+   * @param string $runTime
    */
   public function setRunTime($runTime)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringJobLatestMonitoringPipelin
     return $this->runTime;
   }
   /**
-   * @param GoogleRpcStatus
+   * The status of the most recent monitoring pipeline.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {

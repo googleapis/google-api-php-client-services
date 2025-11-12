@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MetadataStoreMetadataStoreState extends \Google\Model
 {
   /**
+   * The disk utilization of the MetadataStore in bytes.
+   *
    * @var string
    */
   public $diskUtilizationBytes;
 
   /**
-   * @param string
+   * The disk utilization of the MetadataStore in bytes.
+   *
+   * @param string $diskUtilizationBytes
    */
   public function setDiskUtilizationBytes($diskUtilizationBytes)
   {

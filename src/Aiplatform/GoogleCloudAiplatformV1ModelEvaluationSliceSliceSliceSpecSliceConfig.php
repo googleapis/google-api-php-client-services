@@ -20,6 +20,9 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecSliceConfig extends \Google\Model
 {
   /**
+   * If all_values is set to true, then all possible labels of the keyed feature
+   * will have another slice computed. Example: `{"all_values":{"value":true}}`
+   *
    * @var bool
    */
   public $allValues;
@@ -29,7 +32,10 @@ class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecSliceConfig exten
   protected $valueDataType = '';
 
   /**
-   * @param bool
+   * If all_values is set to true, then all possible labels of the keyed feature
+   * will have another slice computed. Example: `{"all_values":{"value":true}}`
+   *
+   * @param bool $allValues
    */
   public function setAllValues($allValues)
   {
@@ -43,7 +49,11 @@ class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecSliceConfig exten
     return $this->allValues;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecRange
+   * A range of values for a numerical feature. Example:
+   * `{"range":{"low":10000.0,"high":50000.0}}` will capture 12345 and 23334 in
+   * the slice.
+   *
+   * @param GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecRange $range
    */
   public function setRange(GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecRange $range)
   {
@@ -57,7 +67,10 @@ class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecSliceConfig exten
     return $this->range;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecValue
+   * A unique specific value for a given feature. Example: `{ "value": {
+   * "string_value": "12345" } }`
+   *
+   * @param GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecValue $value
    */
   public function setValue(GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecValue $value)
   {

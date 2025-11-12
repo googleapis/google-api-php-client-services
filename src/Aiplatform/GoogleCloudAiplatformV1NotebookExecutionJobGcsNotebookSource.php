@@ -20,16 +20,27 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NotebookExecutionJobGcsNotebookSource extends \Google\Model
 {
   /**
+   * The version of the Cloud Storage object to read. If unset, the current
+   * version of the object is read. See
+   * https://cloud.google.com/storage/docs/metadata#generation-number.
+   *
    * @var string
    */
   public $generation;
   /**
+   * The Cloud Storage uri pointing to the ipynb file. Format:
+   * `gs://bucket/notebook_file.ipynb`
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The version of the Cloud Storage object to read. If unset, the current
+   * version of the object is read. See
+   * https://cloud.google.com/storage/docs/metadata#generation-number.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -43,7 +54,10 @@ class GoogleCloudAiplatformV1NotebookExecutionJobGcsNotebookSource extends \Goog
     return $this->generation;
   }
   /**
-   * @param string
+   * The Cloud Storage uri pointing to the ipynb file. Format:
+   * `gs://bucket/notebook_file.ipynb`
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

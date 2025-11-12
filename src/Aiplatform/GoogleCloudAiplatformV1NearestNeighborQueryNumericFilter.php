@@ -20,25 +20,69 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter extends \Google\Model
 {
   /**
+   * Unspecified operator.
+   */
+  public const OP_OPERATOR_UNSPECIFIED = 'OPERATOR_UNSPECIFIED';
+  /**
+   * Entities are eligible if their value is < the query's.
+   */
+  public const OP_LESS = 'LESS';
+  /**
+   * Entities are eligible if their value is <= the query's.
+   */
+  public const OP_LESS_EQUAL = 'LESS_EQUAL';
+  /**
+   * Entities are eligible if their value is == the query's.
+   */
+  public const OP_EQUAL = 'EQUAL';
+  /**
+   * Entities are eligible if their value is >= the query's.
+   */
+  public const OP_GREATER_EQUAL = 'GREATER_EQUAL';
+  /**
+   * Entities are eligible if their value is > the query's.
+   */
+  public const OP_GREATER = 'GREATER';
+  /**
+   * Entities are eligible if their value is != the query's.
+   */
+  public const OP_NOT_EQUAL = 'NOT_EQUAL';
+  /**
+   * Required. Column name in BigQuery that used as filters.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. This MUST be specified for queries and must NOT be specified for
+   * database points.
+   *
    * @var string
    */
   public $op;
+  /**
+   * double value type.
+   *
+   * @var 
+   */
   public $valueDouble;
   /**
+   * float value type.
+   *
    * @var float
    */
   public $valueFloat;
   /**
+   * int value type.
+   *
    * @var string
    */
   public $valueInt;
 
   /**
-   * @param string
+   * Required. Column name in BigQuery that used as filters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -52,14 +96,20 @@ class GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter extends \Google\M
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. This MUST be specified for queries and must NOT be specified for
+   * database points.
+   *
+   * Accepted values: OPERATOR_UNSPECIFIED, LESS, LESS_EQUAL, EQUAL,
+   * GREATER_EQUAL, GREATER, NOT_EQUAL
+   *
+   * @param self::OP_* $op
    */
   public function setOp($op)
   {
     $this->op = $op;
   }
   /**
-   * @return string
+   * @return self::OP_*
    */
   public function getOp()
   {
@@ -74,7 +124,9 @@ class GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter extends \Google\M
     return $this->valueDouble;
   }
   /**
-   * @param float
+   * float value type.
+   *
+   * @param float $valueFloat
    */
   public function setValueFloat($valueFloat)
   {
@@ -88,7 +140,9 @@ class GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter extends \Google\M
     return $this->valueFloat;
   }
   /**
-   * @param string
+   * int value type.
+   *
+   * @param string $valueInt
    */
   public function setValueInt($valueInt)
   {

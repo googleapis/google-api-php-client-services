@@ -22,12 +22,24 @@ class GoogleCloudAiplatformV1MutateDeployedModelRequest extends \Google\Model
   protected $deployedModelType = GoogleCloudAiplatformV1DeployedModel::class;
   protected $deployedModelDataType = '';
   /**
+   * Required. The update mask applies to the resource. See
+   * google.protobuf.FieldMask.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GoogleCloudAiplatformV1DeployedModel
+   * Required. The DeployedModel to be mutated within the Endpoint. Only the
+   * following fields can be mutated: * `min_replica_count` in either
+   * DedicatedResources or AutomaticResources * `max_replica_count` in either
+   * DedicatedResources or AutomaticResources * `required_replica_count` in
+   * DedicatedResources * autoscaling_metric_specs * `disable_container_logging`
+   * (v1 only) * `enable_container_logging` (v1beta1 only) *
+   * `scale_to_zero_spec` in DedicatedResources (v1beta1 only) *
+   * `initial_replica_count` in DedicatedResources (v1beta1 only)
+   *
+   * @param GoogleCloudAiplatformV1DeployedModel $deployedModel
    */
   public function setDeployedModel(GoogleCloudAiplatformV1DeployedModel $deployedModel)
   {
@@ -41,7 +53,10 @@ class GoogleCloudAiplatformV1MutateDeployedModelRequest extends \Google\Model
     return $this->deployedModel;
   }
   /**
-   * @param string
+   * Required. The update mask applies to the resource. See
+   * google.protobuf.FieldMask.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

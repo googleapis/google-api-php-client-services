@@ -20,20 +20,36 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MigrateResourceRequestMigrateMlEngineModelVersionConfig extends \Google\Model
 {
   /**
+   * Required. The ml.googleapis.com endpoint that this model version should be
+   * migrated from. Example values: * ml.googleapis.com * us-centrall-
+   * ml.googleapis.com * europe-west4-ml.googleapis.com * asia-
+   * east1-ml.googleapis.com
+   *
    * @var string
    */
   public $endpoint;
   /**
+   * Required. Display name of the model in Vertex AI. System will pick a
+   * display name if unspecified.
+   *
    * @var string
    */
   public $modelDisplayName;
   /**
+   * Required. Full resource name of ml engine model version. Format:
+   * `projects/{project}/models/{model}/versions/{version}`.
+   *
    * @var string
    */
   public $modelVersion;
 
   /**
-   * @param string
+   * Required. The ml.googleapis.com endpoint that this model version should be
+   * migrated from. Example values: * ml.googleapis.com * us-centrall-
+   * ml.googleapis.com * europe-west4-ml.googleapis.com * asia-
+   * east1-ml.googleapis.com
+   *
+   * @param string $endpoint
    */
   public function setEndpoint($endpoint)
   {
@@ -47,7 +63,10 @@ class GoogleCloudAiplatformV1MigrateResourceRequestMigrateMlEngineModelVersionCo
     return $this->endpoint;
   }
   /**
-   * @param string
+   * Required. Display name of the model in Vertex AI. System will pick a
+   * display name if unspecified.
+   *
+   * @param string $modelDisplayName
    */
   public function setModelDisplayName($modelDisplayName)
   {
@@ -61,7 +80,10 @@ class GoogleCloudAiplatformV1MigrateResourceRequestMigrateMlEngineModelVersionCo
     return $this->modelDisplayName;
   }
   /**
-   * @param string
+   * Required. Full resource name of ml engine model version. Format:
+   * `projects/{project}/models/{model}/versions/{version}`.
+   *
+   * @param string $modelVersion
    */
   public function setModelVersion($modelVersion)
   {

@@ -21,20 +21,28 @@ class GoogleCloudAiplatformV1NearestNeighborQueryStringFilter extends \Google\Co
 {
   protected $collection_key = 'denyTokens';
   /**
+   * Optional. The allowed tokens.
+   *
    * @var string[]
    */
   public $allowTokens;
   /**
+   * Optional. The denied tokens.
+   *
    * @var string[]
    */
   public $denyTokens;
   /**
+   * Required. Column names in BigQuery that used as filters.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string[]
+   * Optional. The allowed tokens.
+   *
+   * @param string[] $allowTokens
    */
   public function setAllowTokens($allowTokens)
   {
@@ -48,7 +56,9 @@ class GoogleCloudAiplatformV1NearestNeighborQueryStringFilter extends \Google\Co
     return $this->allowTokens;
   }
   /**
-   * @param string[]
+   * Optional. The denied tokens.
+   *
+   * @param string[] $denyTokens
    */
   public function setDenyTokens($denyTokens)
   {
@@ -62,7 +72,9 @@ class GoogleCloudAiplatformV1NearestNeighborQueryStringFilter extends \Google\Co
     return $this->denyTokens;
   }
   /**
-   * @param string
+   * Required. Column names in BigQuery that used as filters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

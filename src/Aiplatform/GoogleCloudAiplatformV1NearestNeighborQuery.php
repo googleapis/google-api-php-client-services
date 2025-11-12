@@ -23,10 +23,16 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
   protected $embeddingType = GoogleCloudAiplatformV1NearestNeighborQueryEmbedding::class;
   protected $embeddingDataType = '';
   /**
+   * Optional. The entity id whose similar entities should be searched for. If
+   * embedding is set, search will use embedding instead of entity_id.
+   *
    * @var string
    */
   public $entityId;
   /**
+   * Optional. The number of similar entities to be retrieved from feature view
+   * for each query.
+   *
    * @var int
    */
   public $neighborCount;
@@ -35,6 +41,11 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
   protected $parametersType = GoogleCloudAiplatformV1NearestNeighborQueryParameters::class;
   protected $parametersDataType = '';
   /**
+   * Optional. Crowding is a constraint on a neighbor list produced by nearest
+   * neighbor search requiring that no more than
+   * sper_crowding_attribute_neighbor_count of the k neighbors returned have the
+   * same value of crowding_attribute. It's used for improving result diversity.
+   *
    * @var int
    */
   public $perCrowdingAttributeNeighborCount;
@@ -42,7 +53,9 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
   protected $stringFiltersDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1NearestNeighborQueryEmbedding
+   * Optional. The embedding vector that be used for similar search.
+   *
+   * @param GoogleCloudAiplatformV1NearestNeighborQueryEmbedding $embedding
    */
   public function setEmbedding(GoogleCloudAiplatformV1NearestNeighborQueryEmbedding $embedding)
   {
@@ -56,7 +69,10 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
     return $this->embedding;
   }
   /**
-   * @param string
+   * Optional. The entity id whose similar entities should be searched for. If
+   * embedding is set, search will use embedding instead of entity_id.
+   *
+   * @param string $entityId
    */
   public function setEntityId($entityId)
   {
@@ -70,7 +86,10 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
     return $this->entityId;
   }
   /**
-   * @param int
+   * Optional. The number of similar entities to be retrieved from feature view
+   * for each query.
+   *
+   * @param int $neighborCount
    */
   public function setNeighborCount($neighborCount)
   {
@@ -84,7 +103,9 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
     return $this->neighborCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter[]
+   * Optional. The list of numeric filters.
+   *
+   * @param GoogleCloudAiplatformV1NearestNeighborQueryNumericFilter[] $numericFilters
    */
   public function setNumericFilters($numericFilters)
   {
@@ -98,7 +119,9 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
     return $this->numericFilters;
   }
   /**
-   * @param GoogleCloudAiplatformV1NearestNeighborQueryParameters
+   * Optional. Parameters that can be set to tune query on the fly.
+   *
+   * @param GoogleCloudAiplatformV1NearestNeighborQueryParameters $parameters
    */
   public function setParameters(GoogleCloudAiplatformV1NearestNeighborQueryParameters $parameters)
   {
@@ -112,7 +135,12 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
     return $this->parameters;
   }
   /**
-   * @param int
+   * Optional. Crowding is a constraint on a neighbor list produced by nearest
+   * neighbor search requiring that no more than
+   * sper_crowding_attribute_neighbor_count of the k neighbors returned have the
+   * same value of crowding_attribute. It's used for improving result diversity.
+   *
+   * @param int $perCrowdingAttributeNeighborCount
    */
   public function setPerCrowdingAttributeNeighborCount($perCrowdingAttributeNeighborCount)
   {
@@ -126,7 +154,9 @@ class GoogleCloudAiplatformV1NearestNeighborQuery extends \Google\Collection
     return $this->perCrowdingAttributeNeighborCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1NearestNeighborQueryStringFilter[]
+   * Optional. The list of string filters.
+   *
+   * @param GoogleCloudAiplatformV1NearestNeighborQueryStringFilter[] $stringFilters
    */
   public function setStringFilters($stringFilters)
   {

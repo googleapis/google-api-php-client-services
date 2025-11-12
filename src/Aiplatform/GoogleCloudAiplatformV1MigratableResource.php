@@ -26,10 +26,16 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
   protected $dataLabelingDatasetType = GoogleCloudAiplatformV1MigratableResourceDataLabelingDataset::class;
   protected $dataLabelingDatasetDataType = '';
   /**
+   * Output only. Timestamp when the last migration attempt on this
+   * MigratableResource started. Will not be set if there's no migration attempt
+   * on this MigratableResource.
+   *
    * @var string
    */
   public $lastMigrateTime;
   /**
+   * Output only. Timestamp when this MigratableResource was last updated.
+   *
    * @var string
    */
   public $lastUpdateTime;
@@ -37,7 +43,9 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
   protected $mlEngineModelVersionDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1MigratableResourceAutomlDataset
+   * Output only. Represents one Dataset in automl.googleapis.com.
+   *
+   * @param GoogleCloudAiplatformV1MigratableResourceAutomlDataset $automlDataset
    */
   public function setAutomlDataset(GoogleCloudAiplatformV1MigratableResourceAutomlDataset $automlDataset)
   {
@@ -51,7 +59,9 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
     return $this->automlDataset;
   }
   /**
-   * @param GoogleCloudAiplatformV1MigratableResourceAutomlModel
+   * Output only. Represents one Model in automl.googleapis.com.
+   *
+   * @param GoogleCloudAiplatformV1MigratableResourceAutomlModel $automlModel
    */
   public function setAutomlModel(GoogleCloudAiplatformV1MigratableResourceAutomlModel $automlModel)
   {
@@ -65,7 +75,9 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
     return $this->automlModel;
   }
   /**
-   * @param GoogleCloudAiplatformV1MigratableResourceDataLabelingDataset
+   * Output only. Represents one Dataset in datalabeling.googleapis.com.
+   *
+   * @param GoogleCloudAiplatformV1MigratableResourceDataLabelingDataset $dataLabelingDataset
    */
   public function setDataLabelingDataset(GoogleCloudAiplatformV1MigratableResourceDataLabelingDataset $dataLabelingDataset)
   {
@@ -79,7 +91,11 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
     return $this->dataLabelingDataset;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the last migration attempt on this
+   * MigratableResource started. Will not be set if there's no migration attempt
+   * on this MigratableResource.
+   *
+   * @param string $lastMigrateTime
    */
   public function setLastMigrateTime($lastMigrateTime)
   {
@@ -93,7 +109,9 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
     return $this->lastMigrateTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this MigratableResource was last updated.
+   *
+   * @param string $lastUpdateTime
    */
   public function setLastUpdateTime($lastUpdateTime)
   {
@@ -107,7 +125,9 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
     return $this->lastUpdateTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1MigratableResourceMlEngineModelVersion
+   * Output only. Represents one Version in ml.googleapis.com.
+   *
+   * @param GoogleCloudAiplatformV1MigratableResourceMlEngineModelVersion $mlEngineModelVersion
    */
   public function setMlEngineModelVersion(GoogleCloudAiplatformV1MigratableResourceMlEngineModelVersion $mlEngineModelVersion)
   {

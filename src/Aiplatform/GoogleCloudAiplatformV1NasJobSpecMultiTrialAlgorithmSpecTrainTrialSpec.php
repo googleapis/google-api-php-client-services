@@ -20,10 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecTrainTrialSpec extends \Google\Model
 {
   /**
+   * Required. Frequency of search trials to start train stage. Top N
+   * [TrainTrialSpec.max_parallel_trial_count] search trials will be trained for
+   * every M [TrainTrialSpec.frequency] trials searched.
+   *
    * @var int
    */
   public $frequency;
   /**
+   * Required. The maximum number of trials to run in parallel.
+   *
    * @var int
    */
   public $maxParallelTrialCount;
@@ -31,7 +37,11 @@ class GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecTrainTrialSpec ext
   protected $trainTrialJobSpecDataType = '';
 
   /**
-   * @param int
+   * Required. Frequency of search trials to start train stage. Top N
+   * [TrainTrialSpec.max_parallel_trial_count] search trials will be trained for
+   * every M [TrainTrialSpec.frequency] trials searched.
+   *
+   * @param int $frequency
    */
   public function setFrequency($frequency)
   {
@@ -45,7 +55,9 @@ class GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecTrainTrialSpec ext
     return $this->frequency;
   }
   /**
-   * @param int
+   * Required. The maximum number of trials to run in parallel.
+   *
+   * @param int $maxParallelTrialCount
    */
   public function setMaxParallelTrialCount($maxParallelTrialCount)
   {
@@ -59,7 +71,10 @@ class GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecTrainTrialSpec ext
     return $this->maxParallelTrialCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1CustomJobSpec
+   * Required. The spec of a train trial job. The same spec applies to all train
+   * trials.
+   *
+   * @param GoogleCloudAiplatformV1CustomJobSpec $trainTrialJobSpec
    */
   public function setTrainTrialJobSpec(GoogleCloudAiplatformV1CustomJobSpec $trainTrialJobSpec)
   {

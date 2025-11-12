@@ -19,8 +19,15 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Neighbor extends \Google\Model
 {
+  /**
+   * Output only. The neighbor distance.
+   *
+   * @var 
+   */
   public $neighborDistance;
   /**
+   * Output only. The neighbor id.
+   *
    * @var string
    */
   public $neighborId;
@@ -34,7 +41,9 @@ class GoogleCloudAiplatformV1Neighbor extends \Google\Model
     return $this->neighborDistance;
   }
   /**
-   * @param string
+   * Output only. The neighbor id.
+   *
+   * @param string $neighborId
    */
   public function setNeighborId($neighborId)
   {

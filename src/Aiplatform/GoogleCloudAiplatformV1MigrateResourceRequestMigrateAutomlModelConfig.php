@@ -20,16 +20,25 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlModelConfig extends \Google\Model
 {
   /**
+   * Required. Full resource name of automl Model. Format:
+   * `projects/{project}/locations/{location}/models/{model}`.
+   *
    * @var string
    */
   public $model;
   /**
+   * Optional. Display name of the model in Vertex AI. System will pick a
+   * display name if unspecified.
+   *
    * @var string
    */
   public $modelDisplayName;
 
   /**
-   * @param string
+   * Required. Full resource name of automl Model. Format:
+   * `projects/{project}/locations/{location}/models/{model}`.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -43,7 +52,10 @@ class GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlModelConfig exte
     return $this->model;
   }
   /**
-   * @param string
+   * Optional. Display name of the model in Vertex AI. System will pick a
+   * display name if unspecified.
+   *
+   * @param string $modelDisplayName
    */
   public function setModelDisplayName($modelDisplayName)
   {

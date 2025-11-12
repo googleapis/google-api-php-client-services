@@ -20,20 +20,31 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NetworkSpec extends \Google\Model
 {
   /**
+   * Whether to enable public internet access. Default false.
+   *
    * @var bool
    */
   public $enableInternetAccess;
   /**
+   * The full name of the Google Compute Engine
+   * [network](https://cloud.google.com//compute/docs/networks-and-
+   * firewalls#networks)
+   *
    * @var string
    */
   public $network;
   /**
+   * The name of the subnet that this instance is in. Format: `projects/{project
+   * _id_or_number}/regions/{region}/subnetworks/{subnetwork_id}`
+   *
    * @var string
    */
   public $subnetwork;
 
   /**
-   * @param bool
+   * Whether to enable public internet access. Default false.
+   *
+   * @param bool $enableInternetAccess
    */
   public function setEnableInternetAccess($enableInternetAccess)
   {
@@ -47,7 +58,11 @@ class GoogleCloudAiplatformV1NetworkSpec extends \Google\Model
     return $this->enableInternetAccess;
   }
   /**
-   * @param string
+   * The full name of the Google Compute Engine
+   * [network](https://cloud.google.com//compute/docs/networks-and-
+   * firewalls#networks)
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -61,7 +76,10 @@ class GoogleCloudAiplatformV1NetworkSpec extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * The name of the subnet that this instance is in. Format: `projects/{project
+   * _id_or_number}/regions/{region}/subnetworks/{subnetwork_id}`
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {

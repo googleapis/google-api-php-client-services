@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
 {
   protected $collection_key = 'aggregationMetrics';
   /**
+   * Optional. The aggregation metrics to use.
+   *
    * @var string[]
    */
   public $aggregationMetrics;
@@ -42,7 +44,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   protected $rougeSpecDataType = '';
 
   /**
-   * @param string[]
+   * Optional. The aggregation metrics to use.
+   *
+   * @param string[] $aggregationMetrics
    */
   public function setAggregationMetrics($aggregationMetrics)
   {
@@ -56,7 +60,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->aggregationMetrics;
   }
   /**
-   * @param GoogleCloudAiplatformV1BleuSpec
+   * Spec for bleu metric.
+   *
+   * @param GoogleCloudAiplatformV1BleuSpec $bleuSpec
    */
   public function setBleuSpec(GoogleCloudAiplatformV1BleuSpec $bleuSpec)
   {
@@ -70,7 +76,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->bleuSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1CustomCodeExecutionSpec
+   * Spec for Custom Code Execution metric.
+   *
+   * @param GoogleCloudAiplatformV1CustomCodeExecutionSpec $customCodeExecutionSpec
    */
   public function setCustomCodeExecutionSpec(GoogleCloudAiplatformV1CustomCodeExecutionSpec $customCodeExecutionSpec)
   {
@@ -84,7 +92,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->customCodeExecutionSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExactMatchSpec
+   * Spec for exact match metric.
+   *
+   * @param GoogleCloudAiplatformV1ExactMatchSpec $exactMatchSpec
    */
   public function setExactMatchSpec(GoogleCloudAiplatformV1ExactMatchSpec $exactMatchSpec)
   {
@@ -98,7 +108,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->exactMatchSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1LLMBasedMetricSpec
+   * Spec for an LLM based metric.
+   *
+   * @param GoogleCloudAiplatformV1LLMBasedMetricSpec $llmBasedMetricSpec
    */
   public function setLlmBasedMetricSpec(GoogleCloudAiplatformV1LLMBasedMetricSpec $llmBasedMetricSpec)
   {
@@ -112,7 +124,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->llmBasedMetricSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1PairwiseMetricSpec
+   * Spec for pairwise metric.
+   *
+   * @param GoogleCloudAiplatformV1PairwiseMetricSpec $pairwiseMetricSpec
    */
   public function setPairwiseMetricSpec(GoogleCloudAiplatformV1PairwiseMetricSpec $pairwiseMetricSpec)
   {
@@ -126,7 +140,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->pairwiseMetricSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1PointwiseMetricSpec
+   * Spec for pointwise metric.
+   *
+   * @param GoogleCloudAiplatformV1PointwiseMetricSpec $pointwiseMetricSpec
    */
   public function setPointwiseMetricSpec(GoogleCloudAiplatformV1PointwiseMetricSpec $pointwiseMetricSpec)
   {
@@ -140,7 +156,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->pointwiseMetricSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1PredefinedMetricSpec
+   * The spec for a pre-defined metric.
+   *
+   * @param GoogleCloudAiplatformV1PredefinedMetricSpec $predefinedMetricSpec
    */
   public function setPredefinedMetricSpec(GoogleCloudAiplatformV1PredefinedMetricSpec $predefinedMetricSpec)
   {
@@ -154,7 +172,9 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
     return $this->predefinedMetricSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1RougeSpec
+   * Spec for rouge metric.
+   *
+   * @param GoogleCloudAiplatformV1RougeSpec $rougeSpec
    */
   public function setRougeSpec(GoogleCloudAiplatformV1RougeSpec $rougeSpec)
   {

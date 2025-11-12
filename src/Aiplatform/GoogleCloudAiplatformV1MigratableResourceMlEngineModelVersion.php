@@ -20,16 +20,27 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MigratableResourceMlEngineModelVersion extends \Google\Model
 {
   /**
+   * The ml.googleapis.com endpoint that this model Version currently lives in.
+   * Example values: * ml.googleapis.com * us-centrall-ml.googleapis.com *
+   * europe-west4-ml.googleapis.com * asia-east1-ml.googleapis.com
+   *
    * @var string
    */
   public $endpoint;
   /**
+   * Full resource name of ml engine model Version. Format:
+   * `projects/{project}/models/{model}/versions/{version}`.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The ml.googleapis.com endpoint that this model Version currently lives in.
+   * Example values: * ml.googleapis.com * us-centrall-ml.googleapis.com *
+   * europe-west4-ml.googleapis.com * asia-east1-ml.googleapis.com
+   *
+   * @param string $endpoint
    */
   public function setEndpoint($endpoint)
   {
@@ -43,7 +54,10 @@ class GoogleCloudAiplatformV1MigratableResourceMlEngineModelVersion extends \Goo
     return $this->endpoint;
   }
   /**
-   * @param string
+   * Full resource name of ml engine model Version. Format:
+   * `projects/{project}/models/{model}/versions/{version}`.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

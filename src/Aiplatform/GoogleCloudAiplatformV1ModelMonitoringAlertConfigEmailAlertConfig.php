@@ -21,12 +21,16 @@ class GoogleCloudAiplatformV1ModelMonitoringAlertConfigEmailAlertConfig extends 
 {
   protected $collection_key = 'userEmails';
   /**
+   * The email addresses to send the alert.
+   *
    * @var string[]
    */
   public $userEmails;
 
   /**
-   * @param string[]
+   * The email addresses to send the alert.
+   *
+   * @param string[] $userEmails
    */
   public function setUserEmails($userEmails)
   {

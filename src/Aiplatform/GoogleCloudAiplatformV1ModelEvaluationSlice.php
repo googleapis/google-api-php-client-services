@@ -20,20 +20,32 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
 {
   /**
+   * Output only. Timestamp when this ModelEvaluationSlice was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Sliced evaluation metrics of the Model. The schema of the
+   * metrics is stored in metrics_schema_uri
+   *
    * @var array
    */
   public $metrics;
   /**
+   * Output only. Points to a YAML file stored on Google Cloud Storage
+   * describing the metrics of this ModelEvaluationSlice. The schema is defined
+   * as an OpenAPI 3.0.2 [Schema Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject).
+   *
    * @var string
    */
   public $metricsSchemaUri;
   protected $modelExplanationType = GoogleCloudAiplatformV1ModelExplanation::class;
   protected $modelExplanationDataType = '';
   /**
+   * Output only. The resource name of the ModelEvaluationSlice.
+   *
    * @var string
    */
   public $name;
@@ -41,7 +53,9 @@ class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
   protected $sliceDataType = '';
 
   /**
-   * @param string
+   * Output only. Timestamp when this ModelEvaluationSlice was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +69,10 @@ class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param array
+   * Output only. Sliced evaluation metrics of the Model. The schema of the
+   * metrics is stored in metrics_schema_uri
+   *
+   * @param array $metrics
    */
   public function setMetrics($metrics)
   {
@@ -69,7 +86,12 @@ class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
     return $this->metrics;
   }
   /**
-   * @param string
+   * Output only. Points to a YAML file stored on Google Cloud Storage
+   * describing the metrics of this ModelEvaluationSlice. The schema is defined
+   * as an OpenAPI 3.0.2 [Schema Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject).
+   *
+   * @param string $metricsSchemaUri
    */
   public function setMetricsSchemaUri($metricsSchemaUri)
   {
@@ -83,7 +105,12 @@ class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
     return $this->metricsSchemaUri;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelExplanation
+   * Output only. Aggregated explanation metrics for the Model's prediction
+   * output over the data this ModelEvaluation uses. This field is populated
+   * only if the Model is evaluated with explanations, and only for tabular
+   * Models.
+   *
+   * @param GoogleCloudAiplatformV1ModelExplanation $modelExplanation
    */
   public function setModelExplanation(GoogleCloudAiplatformV1ModelExplanation $modelExplanation)
   {
@@ -97,7 +124,9 @@ class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
     return $this->modelExplanation;
   }
   /**
-   * @param string
+   * Output only. The resource name of the ModelEvaluationSlice.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -111,7 +140,9 @@ class GoogleCloudAiplatformV1ModelEvaluationSlice extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelEvaluationSliceSlice
+   * Output only. The slice of the test data that is used to evaluate the Model.
+   *
+   * @param GoogleCloudAiplatformV1ModelEvaluationSliceSlice $slice
    */
   public function setSlice(GoogleCloudAiplatformV1ModelEvaluationSliceSlice $slice)
   {

@@ -20,16 +20,56 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelSourceInfo extends \Google\Model
 {
   /**
+   * Should not be used.
+   */
+  public const SOURCE_TYPE_MODEL_SOURCE_TYPE_UNSPECIFIED = 'MODEL_SOURCE_TYPE_UNSPECIFIED';
+  /**
+   * The Model is uploaded by automl training pipeline.
+   */
+  public const SOURCE_TYPE_AUTOML = 'AUTOML';
+  /**
+   * The Model is uploaded by user or custom training pipeline.
+   */
+  public const SOURCE_TYPE_CUSTOM = 'CUSTOM';
+  /**
+   * The Model is registered and sync'ed from BigQuery ML.
+   */
+  public const SOURCE_TYPE_BQML = 'BQML';
+  /**
+   * The Model is saved or tuned from Model Garden.
+   */
+  public const SOURCE_TYPE_MODEL_GARDEN = 'MODEL_GARDEN';
+  /**
+   * The Model is saved or tuned from Genie.
+   */
+  public const SOURCE_TYPE_GENIE = 'GENIE';
+  /**
+   * The Model is uploaded by text embedding finetuning pipeline.
+   */
+  public const SOURCE_TYPE_CUSTOM_TEXT_EMBEDDING = 'CUSTOM_TEXT_EMBEDDING';
+  /**
+   * The Model is saved or tuned from Marketplace.
+   */
+  public const SOURCE_TYPE_MARKETPLACE = 'MARKETPLACE';
+  /**
+   * If this Model is copy of another Model. If true then source_type pertains
+   * to the original.
+   *
    * @var bool
    */
   public $copy;
   /**
+   * Type of the model source.
+   *
    * @var string
    */
   public $sourceType;
 
   /**
-   * @param bool
+   * If this Model is copy of another Model. If true then source_type pertains
+   * to the original.
+   *
+   * @param bool $copy
    */
   public function setCopy($copy)
   {
@@ -43,14 +83,19 @@ class GoogleCloudAiplatformV1ModelSourceInfo extends \Google\Model
     return $this->copy;
   }
   /**
-   * @param string
+   * Type of the model source.
+   *
+   * Accepted values: MODEL_SOURCE_TYPE_UNSPECIFIED, AUTOML, CUSTOM, BQML,
+   * MODEL_GARDEN, GENIE, CUSTOM_TEXT_EMBEDDING, MARKETPLACE
+   *
+   * @param self::SOURCE_TYPE_* $sourceType
    */
   public function setSourceType($sourceType)
   {
     $this->sourceType = $sourceType;
   }
   /**
-   * @return string
+   * @return self::SOURCE_TYPE_*
    */
   public function getSourceType()
   {

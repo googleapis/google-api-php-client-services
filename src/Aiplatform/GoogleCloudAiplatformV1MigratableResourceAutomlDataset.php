@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MigratableResourceAutomlDataset extends \Google\Model
 {
   /**
+   * Full resource name of automl Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`.
+   *
    * @var string
    */
   public $dataset;
   /**
+   * The Dataset's display name in automl.googleapis.com.
+   *
    * @var string
    */
   public $datasetDisplayName;
 
   /**
-   * @param string
+   * Full resource name of automl Dataset. Format:
+   * `projects/{project}/locations/{location}/datasets/{dataset}`.
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1MigratableResourceAutomlDataset extends \Google\Mod
     return $this->dataset;
   }
   /**
-   * @param string
+   * The Dataset's display name in automl.googleapis.com.
+   *
+   * @param string $datasetDisplayName
    */
   public function setDatasetDisplayName($datasetDisplayName)
   {
