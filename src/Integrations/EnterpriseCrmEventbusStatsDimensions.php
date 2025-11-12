@@ -19,11 +19,28 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
 {
+  public const ENUM_FILTER_TYPE_DEFAULT_INCLUSIVE = 'DEFAULT_INCLUSIVE';
+  public const ENUM_FILTER_TYPE_EXCLUSIVE = 'EXCLUSIVE';
+  public const RETRY_ATTEMPT_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Task has completed successfully or has depleted all retry attempts.
+   */
+  public const RETRY_ATTEMPT_FINAL = 'FINAL';
+  /**
+   * Task has failed but may be retried.
+   */
+  public const RETRY_ATTEMPT_RETRYABLE = 'RETRYABLE';
+  /**
+   * Task has been deliberately canceled.
+   */
+  public const RETRY_ATTEMPT_CANCELED = 'CANCELED';
   /**
    * @var string
    */
   public $clientId;
   /**
+   * Whether to include or exclude the enums matching the regex.
+   *
    * @var string
    */
   public $enumFilterType;
@@ -44,6 +61,9 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
    */
   public $taskNumber;
   /**
+   * Stats have been or will be aggregated on set fields for any semantically-
+   * meaningful combination.
+   *
    * @var string
    */
   public $triggerId;
@@ -61,7 +81,7 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
   public $workflowName;
 
   /**
-   * @param string
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -75,21 +95,25 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param string
+   * Whether to include or exclude the enums matching the regex.
+   *
+   * Accepted values: DEFAULT_INCLUSIVE, EXCLUSIVE
+   *
+   * @param self::ENUM_FILTER_TYPE_* $enumFilterType
    */
   public function setEnumFilterType($enumFilterType)
   {
     $this->enumFilterType = $enumFilterType;
   }
   /**
-   * @return string
+   * @return self::ENUM_FILTER_TYPE_*
    */
   public function getEnumFilterType()
   {
     return $this->enumFilterType;
   }
   /**
-   * @param string
+   * @param string $errorEnumString
    */
   public function setErrorEnumString($errorEnumString)
   {
@@ -103,21 +127,21 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
     return $this->errorEnumString;
   }
   /**
-   * @param string
+   * @param self::RETRY_ATTEMPT_* $retryAttempt
    */
   public function setRetryAttempt($retryAttempt)
   {
     $this->retryAttempt = $retryAttempt;
   }
   /**
-   * @return string
+   * @return self::RETRY_ATTEMPT_*
    */
   public function getRetryAttempt()
   {
     return $this->retryAttempt;
   }
   /**
-   * @param string
+   * @param string $taskName
    */
   public function setTaskName($taskName)
   {
@@ -131,7 +155,7 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
     return $this->taskName;
   }
   /**
-   * @param string
+   * @param string $taskNumber
    */
   public function setTaskNumber($taskNumber)
   {
@@ -145,7 +169,10 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
     return $this->taskNumber;
   }
   /**
-   * @param string
+   * Stats have been or will be aggregated on set fields for any semantically-
+   * meaningful combination.
+   *
+   * @param string $triggerId
    */
   public function setTriggerId($triggerId)
   {
@@ -159,7 +186,7 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
     return $this->triggerId;
   }
   /**
-   * @param string
+   * @param string $warningEnumString
    */
   public function setWarningEnumString($warningEnumString)
   {
@@ -173,7 +200,7 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
     return $this->warningEnumString;
   }
   /**
-   * @param string
+   * @param string $workflowId
    */
   public function setWorkflowId($workflowId)
   {
@@ -187,7 +214,7 @@ class EnterpriseCrmEventbusStatsDimensions extends \Google\Model
     return $this->workflowId;
   }
   /**
-   * @param string
+   * @param string $workflowName
    */
   public function setWorkflowName($workflowName)
   {

@@ -24,7 +24,9 @@ class EnterpriseCrmEventbusProtoEventBusProperties extends \Google\Collection
   protected $propertiesDataType = 'array';
 
   /**
-   * @param EnterpriseCrmEventbusProtoPropertyEntry[]
+   * An unordered list of property entries.
+   *
+   * @param EnterpriseCrmEventbusProtoPropertyEntry[] $properties
    */
   public function setProperties($properties)
   {

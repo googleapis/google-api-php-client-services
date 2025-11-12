@@ -33,7 +33,7 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit extends \Google\Mo
   public $timestamp;
 
   /**
-   * @param string
+   * @param string $resolvedBy
    */
   public function setResolvedBy($resolvedBy)
   {
@@ -47,7 +47,7 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit extends \Google\Mo
     return $this->resolvedBy;
   }
   /**
-   * @param string
+   * @param string $resolvedByCpi
    */
   public function setResolvedByCpi($resolvedByCpi)
   {
@@ -61,7 +61,7 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit extends \Google\Mo
     return $this->resolvedByCpi;
   }
   /**
-   * @param string
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {

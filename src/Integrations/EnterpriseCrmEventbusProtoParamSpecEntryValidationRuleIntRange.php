@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange extends \Google\Model
 {
   /**
+   * The inclusive maximum of the acceptable range.
+   *
    * @var string
    */
   public $max;
   /**
+   * The inclusive minimum of the acceptable range.
+   *
    * @var string
    */
   public $min;
 
   /**
-   * @param string
+   * The inclusive maximum of the acceptable range.
+   *
+   * @param string $max
    */
   public function setMax($max)
   {
@@ -43,7 +49,9 @@ class EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange extends \Go
     return $this->max;
   }
   /**
-   * @param string
+   * The inclusive minimum of the acceptable range.
+   *
+   * @param string $min
    */
   public function setMin($min)
   {

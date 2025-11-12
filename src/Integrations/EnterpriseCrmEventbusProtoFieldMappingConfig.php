@@ -24,7 +24,7 @@ class EnterpriseCrmEventbusProtoFieldMappingConfig extends \Google\Collection
   protected $mappedFieldsDataType = 'array';
 
   /**
-   * @param EnterpriseCrmEventbusProtoMappedField[]
+   * @param EnterpriseCrmEventbusProtoMappedField[] $mappedFields
    */
   public function setMappedFields($mappedFields)
   {

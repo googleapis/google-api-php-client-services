@@ -20,24 +20,70 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoLoopMetadata extends \Google\Model
 {
   /**
+   * No error or Unknown.
+   */
+  public const FAILURE_LOCATION_UNKNOWN = 'UNKNOWN';
+  /**
+   * Subworkflow failed while firing/running.
+   */
+  public const FAILURE_LOCATION_SUBWORKFLOW = 'SUBWORKFLOW';
+  /**
+   * Param overrides failed.
+   */
+  public const FAILURE_LOCATION_PARAM_OVERRIDING = 'PARAM_OVERRIDING';
+  /**
+   * Param aggregation failed.
+   */
+  public const FAILURE_LOCATION_PARAM_AGGREGATING = 'PARAM_AGGREGATING';
+  /**
+   * Setting for loop current element failed.
+   */
+  public const FAILURE_LOCATION_SETTING_ITERATION_ELEMENT = 'SETTING_ITERATION_ELEMENT';
+  /**
+   * Getting the list to iterate.
+   */
+  public const FAILURE_LOCATION_GETTING_LIST_TO_ITERATE = 'GETTING_LIST_TO_ITERATE';
+  /**
+   * Evaluating the while loop condition.
+   */
+  public const FAILURE_LOCATION_CONDITION_EVALUATION = 'CONDITION_EVALUATION';
+  /**
+   * Building the iteration request
+   */
+  public const FAILURE_LOCATION_BUILDING_REQUEST = 'BUILDING_REQUEST';
+  /**
+   * Starting from 1, not 0.
+   *
    * @var string
    */
   public $currentIterationCount;
   /**
+   * Needs to be set by the loop impl class before each iteration. The abstract
+   * loop class will append the request and response to it. Eg. The foreach Loop
+   * will clean up and set it as the current iteration element at the start of
+   * each loop. The post request and response will be appended to the value once
+   * they are available.
+   *
    * @var string
    */
   public $currentIterationDetail;
   /**
+   * Add the error message when loops fail.
+   *
    * @var string
    */
   public $errorMsg;
   /**
+   * Indicates where in the loop logic did it error out.
+   *
    * @var string
    */
   public $failureLocation;
 
   /**
-   * @param string
+   * Starting from 1, not 0.
+   *
+   * @param string $currentIterationCount
    */
   public function setCurrentIterationCount($currentIterationCount)
   {
@@ -51,7 +97,13 @@ class EnterpriseCrmEventbusProtoLoopMetadata extends \Google\Model
     return $this->currentIterationCount;
   }
   /**
-   * @param string
+   * Needs to be set by the loop impl class before each iteration. The abstract
+   * loop class will append the request and response to it. Eg. The foreach Loop
+   * will clean up and set it as the current iteration element at the start of
+   * each loop. The post request and response will be appended to the value once
+   * they are available.
+   *
+   * @param string $currentIterationDetail
    */
   public function setCurrentIterationDetail($currentIterationDetail)
   {
@@ -65,7 +117,9 @@ class EnterpriseCrmEventbusProtoLoopMetadata extends \Google\Model
     return $this->currentIterationDetail;
   }
   /**
-   * @param string
+   * Add the error message when loops fail.
+   *
+   * @param string $errorMsg
    */
   public function setErrorMsg($errorMsg)
   {
@@ -79,14 +133,20 @@ class EnterpriseCrmEventbusProtoLoopMetadata extends \Google\Model
     return $this->errorMsg;
   }
   /**
-   * @param string
+   * Indicates where in the loop logic did it error out.
+   *
+   * Accepted values: UNKNOWN, SUBWORKFLOW, PARAM_OVERRIDING, PARAM_AGGREGATING,
+   * SETTING_ITERATION_ELEMENT, GETTING_LIST_TO_ITERATE, CONDITION_EVALUATION,
+   * BUILDING_REQUEST
+   *
+   * @param self::FAILURE_LOCATION_* $failureLocation
    */
   public function setFailureLocation($failureLocation)
   {
     $this->failureLocation = $failureLocation;
   }
   /**
-   * @return string
+   * @return self::FAILURE_LOCATION_*
    */
   public function getFailureLocation()
   {

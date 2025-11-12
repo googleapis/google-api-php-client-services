@@ -24,7 +24,9 @@ class EnterpriseCrmEventbusProtoTaskUiConfig extends \Google\Collection
   protected $taskUiModuleConfigsDataType = 'array';
 
   /**
-   * @param EnterpriseCrmEventbusProtoTaskUiModuleConfig[]
+   * Configurations of included config modules.
+   *
+   * @param EnterpriseCrmEventbusProtoTaskUiModuleConfig[] $taskUiModuleConfigs
    */
   public function setTaskUiModuleConfigs($taskUiModuleConfigs)
   {

@@ -25,7 +25,7 @@ class EnterpriseCrmEventbusProtoParameterMapEntry extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param EnterpriseCrmEventbusProtoParameterMapField
+   * @param EnterpriseCrmEventbusProtoParameterMapField $key
    */
   public function setKey(EnterpriseCrmEventbusProtoParameterMapField $key)
   {
@@ -39,7 +39,7 @@ class EnterpriseCrmEventbusProtoParameterMapEntry extends \Google\Model
     return $this->key;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoParameterMapField
+   * @param EnterpriseCrmEventbusProtoParameterMapField $value
    */
   public function setValue(EnterpriseCrmEventbusProtoParameterMapField $value)
   {

@@ -20,10 +20,15 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoTeardownTaskConfig extends \Google\Model
 {
   /**
+   * The creator's email address.
+   *
    * @var string
    */
   public $creatorEmail;
   /**
+   * Required. Unique identifier of the teardown task within this Config. We use
+   * this field as the identifier to find next teardown tasks.
+   *
    * @var string
    */
   public $name;
@@ -34,12 +39,16 @@ class EnterpriseCrmEventbusProtoTeardownTaskConfig extends \Google\Model
   protected $propertiesType = EnterpriseCrmEventbusProtoEventBusProperties::class;
   protected $propertiesDataType = '';
   /**
+   * Required. Implementation class name.
+   *
    * @var string
    */
   public $teardownTaskImplementationClassName;
 
   /**
-   * @param string
+   * The creator's email address.
+   *
+   * @param string $creatorEmail
    */
   public function setCreatorEmail($creatorEmail)
   {
@@ -53,7 +62,10 @@ class EnterpriseCrmEventbusProtoTeardownTaskConfig extends \Google\Model
     return $this->creatorEmail;
   }
   /**
-   * @param string
+   * Required. Unique identifier of the teardown task within this Config. We use
+   * this field as the identifier to find next teardown tasks.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -67,7 +79,7 @@ class EnterpriseCrmEventbusProtoTeardownTaskConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoNextTeardownTask
+   * @param EnterpriseCrmEventbusProtoNextTeardownTask $nextTeardownTask
    */
   public function setNextTeardownTask(EnterpriseCrmEventbusProtoNextTeardownTask $nextTeardownTask)
   {
@@ -81,7 +93,9 @@ class EnterpriseCrmEventbusProtoTeardownTaskConfig extends \Google\Model
     return $this->nextTeardownTask;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoEventParameters
+   * The parameters the user can pass to this task.
+   *
+   * @param EnterpriseCrmEventbusProtoEventParameters $parameters
    */
   public function setParameters(EnterpriseCrmEventbusProtoEventParameters $parameters)
   {
@@ -95,7 +109,7 @@ class EnterpriseCrmEventbusProtoTeardownTaskConfig extends \Google\Model
     return $this->parameters;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoEventBusProperties
+   * @param EnterpriseCrmEventbusProtoEventBusProperties $properties
    */
   public function setProperties(EnterpriseCrmEventbusProtoEventBusProperties $properties)
   {
@@ -109,7 +123,9 @@ class EnterpriseCrmEventbusProtoTeardownTaskConfig extends \Google\Model
     return $this->properties;
   }
   /**
-   * @param string
+   * Required. Implementation class name.
+   *
+   * @param string $teardownTaskImplementationClassName
    */
   public function setTeardownTaskImplementationClassName($teardownTaskImplementationClassName)
   {

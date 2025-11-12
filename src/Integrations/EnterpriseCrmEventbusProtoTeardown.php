@@ -24,7 +24,9 @@ class EnterpriseCrmEventbusProtoTeardown extends \Google\Collection
   protected $teardownTaskConfigsDataType = 'array';
 
   /**
-   * @param EnterpriseCrmEventbusProtoTeardownTaskConfig[]
+   * Required.
+   *
+   * @param EnterpriseCrmEventbusProtoTeardownTaskConfig[] $teardownTaskConfigs
    */
   public function setTeardownTaskConfigs($teardownTaskConfigs)
   {

@@ -26,7 +26,9 @@ class EnterpriseCrmEventbusProtoFunction extends \Google\Collection
   protected $parametersDataType = 'array';
 
   /**
-   * @param EnterpriseCrmEventbusProtoFunctionType
+   * The name of the function to perform.
+   *
+   * @param EnterpriseCrmEventbusProtoFunctionType $functionType
    */
   public function setFunctionType(EnterpriseCrmEventbusProtoFunctionType $functionType)
   {
@@ -40,7 +42,9 @@ class EnterpriseCrmEventbusProtoFunction extends \Google\Collection
     return $this->functionType;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoTransformExpression[]
+   * List of parameters required for the transformation.
+   *
+   * @param EnterpriseCrmEventbusProtoTransformExpression[] $parameters
    */
   public function setParameters($parameters)
   {

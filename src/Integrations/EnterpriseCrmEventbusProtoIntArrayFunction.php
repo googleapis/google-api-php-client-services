@@ -19,20 +19,37 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoIntArrayFunction extends \Google\Model
 {
+  public const FUNCTION_NAME_UNSPECIFIED = 'UNSPECIFIED';
+  public const FUNCTION_NAME_GET = 'GET';
+  public const FUNCTION_NAME_APPEND = 'APPEND';
+  public const FUNCTION_NAME_SIZE = 'SIZE';
+  public const FUNCTION_NAME_SUM = 'SUM';
+  public const FUNCTION_NAME_AVG = 'AVG';
+  public const FUNCTION_NAME_MAX = 'MAX';
+  public const FUNCTION_NAME_MIN = 'MIN';
+  public const FUNCTION_NAME_TO_SET = 'TO_SET';
+  public const FUNCTION_NAME_APPEND_ALL = 'APPEND_ALL';
+  public const FUNCTION_NAME_TO_JSON = 'TO_JSON';
+  public const FUNCTION_NAME_SET = 'SET';
+  public const FUNCTION_NAME_REMOVE = 'REMOVE';
+  public const FUNCTION_NAME_REMOVE_AT = 'REMOVE_AT';
+  public const FUNCTION_NAME_CONTAINS = 'CONTAINS';
+  public const FUNCTION_NAME_FOR_EACH = 'FOR_EACH';
+  public const FUNCTION_NAME_FILTER = 'FILTER';
   /**
    * @var string
    */
   public $functionName;
 
   /**
-   * @param string
+   * @param self::FUNCTION_NAME_* $functionName
    */
   public function setFunctionName($functionName)
   {
     $this->functionName = $functionName;
   }
   /**
-   * @return string
+   * @return self::FUNCTION_NAME_*
    */
   public function getFunctionName()
   {

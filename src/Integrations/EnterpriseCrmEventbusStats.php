@@ -21,13 +21,35 @@ class EnterpriseCrmEventbusStats extends \Google\Model
 {
   protected $dimensionsType = EnterpriseCrmEventbusStatsDimensions::class;
   protected $dimensionsDataType = '';
+  /**
+   * Average duration in seconds.
+   *
+   * @var 
+   */
   public $durationInSeconds;
+  /**
+   * Average error rate.
+   *
+   * @var 
+   */
   public $errorRate;
+  /**
+   * Queries per second.
+   *
+   * @var 
+   */
   public $qps;
+  /**
+   * Average warning rate.
+   *
+   * @var 
+   */
   public $warningRate;
 
   /**
-   * @param EnterpriseCrmEventbusStatsDimensions
+   * Dimensions that these stats have been aggregated on.
+   *
+   * @param EnterpriseCrmEventbusStatsDimensions $dimensions
    */
   public function setDimensions(EnterpriseCrmEventbusStatsDimensions $dimensions)
   {

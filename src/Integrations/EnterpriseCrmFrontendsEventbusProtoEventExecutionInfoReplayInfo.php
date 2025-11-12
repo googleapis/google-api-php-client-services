@@ -19,26 +19,48 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoReplayInfo extends \Google\Collection
 {
+  public const REPLAY_MODE_REPLAY_MODE_UNSPECIFIED = 'REPLAY_MODE_UNSPECIFIED';
+  /**
+   * Replay the original execution from the beginning.
+   */
+  public const REPLAY_MODE_REPLAY_MODE_FROM_BEGINNING = 'REPLAY_MODE_FROM_BEGINNING';
+  /**
+   * Replay the execution from the first failed task.
+   */
+  public const REPLAY_MODE_REPLAY_MODE_POINT_OF_FAILURE = 'REPLAY_MODE_POINT_OF_FAILURE';
   protected $collection_key = 'replayedExecutionInfoIds';
   /**
+   * If this execution is a replay of another execution, then this field
+   * contains the original execution id.
+   *
    * @var string
    */
   public $originalExecutionInfoId;
   /**
+   * Replay mode for the execution
+   *
    * @var string
    */
   public $replayMode;
   /**
+   * reason for replay
+   *
    * @var string
    */
   public $replayReason;
   /**
+   * If this execution has been replayed, then this field contains the execution
+   * ids of the replayed executions.
+   *
    * @var string[]
    */
   public $replayedExecutionInfoIds;
 
   /**
-   * @param string
+   * If this execution is a replay of another execution, then this field
+   * contains the original execution id.
+   *
+   * @param string $originalExecutionInfoId
    */
   public function setOriginalExecutionInfoId($originalExecutionInfoId)
   {
@@ -52,21 +74,28 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoReplayInfo extends \G
     return $this->originalExecutionInfoId;
   }
   /**
-   * @param string
+   * Replay mode for the execution
+   *
+   * Accepted values: REPLAY_MODE_UNSPECIFIED, REPLAY_MODE_FROM_BEGINNING,
+   * REPLAY_MODE_POINT_OF_FAILURE
+   *
+   * @param self::REPLAY_MODE_* $replayMode
    */
   public function setReplayMode($replayMode)
   {
     $this->replayMode = $replayMode;
   }
   /**
-   * @return string
+   * @return self::REPLAY_MODE_*
    */
   public function getReplayMode()
   {
     return $this->replayMode;
   }
   /**
-   * @param string
+   * reason for replay
+   *
+   * @param string $replayReason
    */
   public function setReplayReason($replayReason)
   {
@@ -80,7 +109,10 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfoReplayInfo extends \G
     return $this->replayReason;
   }
   /**
-   * @param string[]
+   * If this execution has been replayed, then this field contains the execution
+   * ids of the replayed executions.
+   *
+   * @param string[] $replayedExecutionInfoIds
    */
   public function setReplayedExecutionInfoIds($replayedExecutionInfoIds)
   {

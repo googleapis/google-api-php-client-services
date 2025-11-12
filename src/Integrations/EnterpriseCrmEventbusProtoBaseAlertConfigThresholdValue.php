@@ -29,7 +29,7 @@ class EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue extends \Google\Mo
   public $percentage;
 
   /**
-   * @param string
+   * @param string $absolute
    */
   public function setAbsolute($absolute)
   {
@@ -43,7 +43,7 @@ class EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue extends \Google\Mo
     return $this->absolute;
   }
   /**
-   * @param int
+   * @param int $percentage
    */
   public function setPercentage($percentage)
   {

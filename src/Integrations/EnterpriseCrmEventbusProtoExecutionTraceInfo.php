@@ -20,16 +20,24 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoExecutionTraceInfo extends \Google\Model
 {
   /**
+   * Parent event execution info id that triggers the current execution through
+   * SubWorkflowExecutorTask.
+   *
    * @var string
    */
   public $parentEventExecutionInfoId;
   /**
+   * Used to aggregate ExecutionTraceInfo.
+   *
    * @var string
    */
   public $traceId;
 
   /**
-   * @param string
+   * Parent event execution info id that triggers the current execution through
+   * SubWorkflowExecutorTask.
+   *
+   * @param string $parentEventExecutionInfoId
    */
   public function setParentEventExecutionInfoId($parentEventExecutionInfoId)
   {
@@ -43,7 +51,9 @@ class EnterpriseCrmEventbusProtoExecutionTraceInfo extends \Google\Model
     return $this->parentEventExecutionInfoId;
   }
   /**
-   * @param string
+   * Used to aggregate ExecutionTraceInfo.
+   *
+   * @param string $traceId
    */
   public function setTraceId($traceId)
   {

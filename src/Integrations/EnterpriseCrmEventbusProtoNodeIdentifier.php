@@ -19,17 +19,26 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoNodeIdentifier extends \Google\Model
 {
+  public const ELEMENT_TYPE_UNKNOWN_TYPE = 'UNKNOWN_TYPE';
+  public const ELEMENT_TYPE_TASK_CONFIG = 'TASK_CONFIG';
+  public const ELEMENT_TYPE_TRIGGER_CONFIG = 'TRIGGER_CONFIG';
   /**
+   * Configuration of the edge.
+   *
    * @var string
    */
   public $elementIdentifier;
   /**
+   * Destination node where the edge ends. It can only be a task config.
+   *
    * @var string
    */
   public $elementType;
 
   /**
-   * @param string
+   * Configuration of the edge.
+   *
+   * @param string $elementIdentifier
    */
   public function setElementIdentifier($elementIdentifier)
   {
@@ -43,14 +52,18 @@ class EnterpriseCrmEventbusProtoNodeIdentifier extends \Google\Model
     return $this->elementIdentifier;
   }
   /**
-   * @param string
+   * Destination node where the edge ends. It can only be a task config.
+   *
+   * Accepted values: UNKNOWN_TYPE, TASK_CONFIG, TRIGGER_CONFIG
+   *
+   * @param self::ELEMENT_TYPE_* $elementType
    */
   public function setElementType($elementType)
   {
     $this->elementType = $elementType;
   }
   /**
-   * @return string
+   * @return self::ELEMENT_TYPE_*
    */
   public function getElementType()
   {

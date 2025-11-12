@@ -19,23 +19,37 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoErrorDetail extends \Google\Model
 {
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  public const SEVERITY_ERROR = 'ERROR';
+  public const SEVERITY_WARN = 'WARN';
+  public const SEVERITY_INFO = 'INFO';
   protected $errorCodeType = CrmlogErrorCode::class;
   protected $errorCodeDataType = '';
   /**
+   * The full text of the error message, including any parameters that were
+   * thrown along with the exception.
+   *
    * @var string
    */
   public $errorMessage;
   /**
+   * The severity of the error: ERROR|WARN|INFO.
+   *
    * @var string
    */
   public $severity;
   /**
+   * The task try-number, in which, the error occurred. If zero, the error
+   * happened at the event level.
+   *
    * @var int
    */
   public $taskNumber;
 
   /**
-   * @param CrmlogErrorCode
+   * The associated error-code, which can be a common or internal code.
+   *
+   * @param CrmlogErrorCode $errorCode
    */
   public function setErrorCode(CrmlogErrorCode $errorCode)
   {
@@ -49,7 +63,10 @@ class EnterpriseCrmEventbusProtoErrorDetail extends \Google\Model
     return $this->errorCode;
   }
   /**
-   * @param string
+   * The full text of the error message, including any parameters that were
+   * thrown along with the exception.
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -63,21 +80,28 @@ class EnterpriseCrmEventbusProtoErrorDetail extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * @param string
+   * The severity of the error: ERROR|WARN|INFO.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, ERROR, WARN, INFO
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
     return $this->severity;
   }
   /**
-   * @param int
+   * The task try-number, in which, the error occurred. If zero, the error
+   * happened at the event level.
+   *
+   * @param int $taskNumber
    */
   public function setTaskNumber($taskNumber)
   {

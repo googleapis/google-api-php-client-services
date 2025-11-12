@@ -19,20 +19,31 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoBooleanFunction extends \Google\Model
 {
+  public const FUNCTION_NAME_UNSPECIFIED = 'UNSPECIFIED';
+  public const FUNCTION_NAME_TO_JSON = 'TO_JSON';
+  public const FUNCTION_NAME_NOT = 'NOT';
+  public const FUNCTION_NAME_AND = 'AND';
+  public const FUNCTION_NAME_NAND = 'NAND';
+  public const FUNCTION_NAME_OR = 'OR';
+  public const FUNCTION_NAME_XOR = 'XOR';
+  public const FUNCTION_NAME_NOR = 'NOR';
+  public const FUNCTION_NAME_XNOR = 'XNOR';
+  public const FUNCTION_NAME_TO_STRING = 'TO_STRING';
+  public const FUNCTION_NAME_EQUALS = 'EQUALS';
   /**
    * @var string
    */
   public $functionName;
 
   /**
-   * @param string
+   * @param self::FUNCTION_NAME_* $functionName
    */
   public function setFunctionName($functionName)
   {
     $this->functionName = $functionName;
   }
   /**
-   * @return string
+   * @return self::FUNCTION_NAME_*
    */
   public function getFunctionName()
   {

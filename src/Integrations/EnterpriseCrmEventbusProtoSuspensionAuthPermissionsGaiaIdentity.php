@@ -29,7 +29,7 @@ class EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity extends \G
   public $gaiaId;
 
   /**
-   * @param string
+   * @param string $emailAddress
    */
   public function setEmailAddress($emailAddress)
   {
@@ -43,7 +43,7 @@ class EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity extends \G
     return $this->emailAddress;
   }
   /**
-   * @param string
+   * @param string $gaiaId
    */
   public function setGaiaId($gaiaId)
   {

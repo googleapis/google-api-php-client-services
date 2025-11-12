@@ -45,7 +45,9 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
   protected $stringFunctionDataType = '';
 
   /**
-   * @param EnterpriseCrmEventbusProtoBaseFunction
+   * LINT.IfChange
+   *
+   * @param EnterpriseCrmEventbusProtoBaseFunction $baseFunction
    */
   public function setBaseFunction(EnterpriseCrmEventbusProtoBaseFunction $baseFunction)
   {
@@ -59,7 +61,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->baseFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoBooleanArrayFunction
+   * @param EnterpriseCrmEventbusProtoBooleanArrayFunction $booleanArrayFunction
    */
   public function setBooleanArrayFunction(EnterpriseCrmEventbusProtoBooleanArrayFunction $booleanArrayFunction)
   {
@@ -73,7 +75,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->booleanArrayFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoBooleanFunction
+   * @param EnterpriseCrmEventbusProtoBooleanFunction $booleanFunction
    */
   public function setBooleanFunction(EnterpriseCrmEventbusProtoBooleanFunction $booleanFunction)
   {
@@ -87,7 +89,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->booleanFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoDoubleArrayFunction
+   * @param EnterpriseCrmEventbusProtoDoubleArrayFunction $doubleArrayFunction
    */
   public function setDoubleArrayFunction(EnterpriseCrmEventbusProtoDoubleArrayFunction $doubleArrayFunction)
   {
@@ -101,7 +103,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->doubleArrayFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoDoubleFunction
+   * @param EnterpriseCrmEventbusProtoDoubleFunction $doubleFunction
    */
   public function setDoubleFunction(EnterpriseCrmEventbusProtoDoubleFunction $doubleFunction)
   {
@@ -115,7 +117,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->doubleFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoIntArrayFunction
+   * @param EnterpriseCrmEventbusProtoIntArrayFunction $intArrayFunction
    */
   public function setIntArrayFunction(EnterpriseCrmEventbusProtoIntArrayFunction $intArrayFunction)
   {
@@ -129,7 +131,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->intArrayFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoIntFunction
+   * @param EnterpriseCrmEventbusProtoIntFunction $intFunction
    */
   public function setIntFunction(EnterpriseCrmEventbusProtoIntFunction $intFunction)
   {
@@ -143,7 +145,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->intFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoJsonFunction
+   * @param EnterpriseCrmEventbusProtoJsonFunction $jsonFunction
    */
   public function setJsonFunction(EnterpriseCrmEventbusProtoJsonFunction $jsonFunction)
   {
@@ -157,7 +159,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->jsonFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoProtoArrayFunction
+   * @param EnterpriseCrmEventbusProtoProtoArrayFunction $protoArrayFunction
    */
   public function setProtoArrayFunction(EnterpriseCrmEventbusProtoProtoArrayFunction $protoArrayFunction)
   {
@@ -171,7 +173,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->protoArrayFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoProtoFunction
+   * @param EnterpriseCrmEventbusProtoProtoFunction $protoFunction
    */
   public function setProtoFunction(EnterpriseCrmEventbusProtoProtoFunction $protoFunction)
   {
@@ -185,7 +187,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->protoFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoStringArrayFunction
+   * @param EnterpriseCrmEventbusProtoStringArrayFunction $stringArrayFunction
    */
   public function setStringArrayFunction(EnterpriseCrmEventbusProtoStringArrayFunction $stringArrayFunction)
   {
@@ -199,7 +201,7 @@ class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
     return $this->stringArrayFunction;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoStringFunction
+   * @param EnterpriseCrmEventbusProtoStringFunction $stringFunction
    */
   public function setStringFunction(EnterpriseCrmEventbusProtoStringFunction $stringFunction)
   {

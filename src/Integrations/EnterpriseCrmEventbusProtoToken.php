@@ -29,7 +29,7 @@ class EnterpriseCrmEventbusProtoToken extends \Google\Model
   public $value;
 
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +43,7 @@ class EnterpriseCrmEventbusProtoToken extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * @param string $value
    */
   public function setValue($value)
   {

@@ -20,20 +20,29 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoConditionResult extends \Google\Model
 {
   /**
+   * the current task number.
+   *
    * @var string
    */
   public $currentTaskNumber;
   /**
+   * the next task number.
+   *
    * @var string
    */
   public $nextTaskNumber;
   /**
+   * the result comes out after evaluate the combined condition. True if there's
+   * no combined condition specified.
+   *
    * @var bool
    */
   public $result;
 
   /**
-   * @param string
+   * the current task number.
+   *
+   * @param string $currentTaskNumber
    */
   public function setCurrentTaskNumber($currentTaskNumber)
   {
@@ -47,7 +56,9 @@ class EnterpriseCrmEventbusProtoConditionResult extends \Google\Model
     return $this->currentTaskNumber;
   }
   /**
-   * @param string
+   * the next task number.
+   *
+   * @param string $nextTaskNumber
    */
   public function setNextTaskNumber($nextTaskNumber)
   {
@@ -61,7 +72,10 @@ class EnterpriseCrmEventbusProtoConditionResult extends \Google\Model
     return $this->nextTaskNumber;
   }
   /**
-   * @param bool
+   * the result comes out after evaluate the combined condition. True if there's
+   * no combined condition specified.
+   *
+   * @param bool $result
    */
   public function setResult($result)
   {

@@ -20,24 +20,38 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoConnectorsConnection extends \Google\Model
 {
   /**
+   * Connection name Format:
+   * projects/{project}/locations/{location}/connections/{connection}
+   *
    * @var string
    */
   public $connectionName;
   /**
+   * Connector version Format: projects/{project}/locations/{location}/providers
+   * /{provider}/connectors/{connector}/versions/{version}
+   *
    * @var string
    */
   public $connectorVersion;
   /**
+   * The name of the Hostname of the Service Directory service with TLS if used.
+   *
    * @var string
    */
   public $host;
   /**
+   * Service name Format: projects/{project}/locations/{location}/namespaces/{na
+   * mespace}/services/{service}
+   *
    * @var string
    */
   public $serviceName;
 
   /**
-   * @param string
+   * Connection name Format:
+   * projects/{project}/locations/{location}/connections/{connection}
+   *
+   * @param string $connectionName
    */
   public function setConnectionName($connectionName)
   {
@@ -51,7 +65,10 @@ class EnterpriseCrmEventbusProtoConnectorsConnection extends \Google\Model
     return $this->connectionName;
   }
   /**
-   * @param string
+   * Connector version Format: projects/{project}/locations/{location}/providers
+   * /{provider}/connectors/{connector}/versions/{version}
+   *
+   * @param string $connectorVersion
    */
   public function setConnectorVersion($connectorVersion)
   {
@@ -65,7 +82,9 @@ class EnterpriseCrmEventbusProtoConnectorsConnection extends \Google\Model
     return $this->connectorVersion;
   }
   /**
-   * @param string
+   * The name of the Hostname of the Service Directory service with TLS if used.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -79,7 +98,10 @@ class EnterpriseCrmEventbusProtoConnectorsConnection extends \Google\Model
     return $this->host;
   }
   /**
-   * @param string
+   * Service name Format: projects/{project}/locations/{location}/namespaces/{na
+   * mespace}/services/{service}
+   *
+   * @param string $serviceName
    */
   public function setServiceName($serviceName)
   {

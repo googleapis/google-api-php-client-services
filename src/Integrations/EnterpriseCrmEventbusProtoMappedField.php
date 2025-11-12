@@ -25,7 +25,9 @@ class EnterpriseCrmEventbusProtoMappedField extends \Google\Model
   protected $outputFieldDataType = '';
 
   /**
-   * @param EnterpriseCrmEventbusProtoField
+   * The input field being mapped from.
+   *
+   * @param EnterpriseCrmEventbusProtoField $inputField
    */
   public function setInputField(EnterpriseCrmEventbusProtoField $inputField)
   {
@@ -39,7 +41,9 @@ class EnterpriseCrmEventbusProtoMappedField extends \Google\Model
     return $this->inputField;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoField
+   * The output field being mapped to.
+   *
+   * @param EnterpriseCrmEventbusProtoField $outputField
    */
   public function setOutputField(EnterpriseCrmEventbusProtoField $outputField)
   {

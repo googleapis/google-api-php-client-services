@@ -21,6 +21,10 @@ class EnterpriseCrmEventbusProtoSuspensionConfig extends \Google\Collection
 {
   protected $collection_key = 'whoMayResolve';
   /**
+   * Optional information to provide recipients of the suspension in addition to
+   * the resolution URL, typically containing relevant parameter values from the
+   * originating workflow.
+   *
    * @var string
    */
   public $customMessage;
@@ -32,7 +36,11 @@ class EnterpriseCrmEventbusProtoSuspensionConfig extends \Google\Collection
   protected $whoMayResolveDataType = 'array';
 
   /**
-   * @param string
+   * Optional information to provide recipients of the suspension in addition to
+   * the resolution URL, typically containing relevant parameter values from the
+   * originating workflow.
+   *
+   * @param string $customMessage
    */
   public function setCustomMessage($customMessage)
   {
@@ -46,7 +54,7 @@ class EnterpriseCrmEventbusProtoSuspensionConfig extends \Google\Collection
     return $this->customMessage;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoNotification[]
+   * @param EnterpriseCrmEventbusProtoNotification[] $notifications
    */
   public function setNotifications($notifications)
   {
@@ -60,7 +68,9 @@ class EnterpriseCrmEventbusProtoSuspensionConfig extends \Google\Collection
     return $this->notifications;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoSuspensionExpiration
+   * Indicates the next steps when no external actions happen on the suspension.
+   *
+   * @param EnterpriseCrmEventbusProtoSuspensionExpiration $suspensionExpiration
    */
   public function setSuspensionExpiration(EnterpriseCrmEventbusProtoSuspensionExpiration $suspensionExpiration)
   {
@@ -74,7 +84,9 @@ class EnterpriseCrmEventbusProtoSuspensionConfig extends \Google\Collection
     return $this->suspensionExpiration;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoSuspensionAuthPermissions[]
+   * Identities able to resolve this suspension.
+   *
+   * @param EnterpriseCrmEventbusProtoSuspensionAuthPermissions[] $whoMayResolve
    */
   public function setWhoMayResolve($whoMayResolve)
   {

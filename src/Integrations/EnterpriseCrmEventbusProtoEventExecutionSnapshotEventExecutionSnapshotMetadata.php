@@ -21,40 +21,61 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
 {
   protected $collection_key = 'ancestorTaskNumbers';
   /**
+   * Ancestor iteration number for the task(it will only be non-empty if the
+   * task is under 'private workflow')
+   *
    * @var string[]
    */
   public $ancestorIterationNumbers;
   /**
+   * Ancestor task number for the task(it will only be non-empty if the task is
+   * under 'private workflow')
+   *
    * @var string[]
    */
   public $ancestorTaskNumbers;
   /**
+   * the event attempt number this snapshot belongs to.
+   *
    * @var int
    */
   public $eventAttemptNum;
   /**
+   * The direct integration which the event execution snapshots belongs to
+   *
    * @var string
    */
   public $integrationName;
   /**
+   * the task attempt number this snapshot belongs to. Could be empty.
+   *
    * @var int
    */
   public $taskAttemptNum;
   /**
+   * the task label associated with this snapshot. Could be empty.
+   *
    * @var string
    */
   public $taskLabel;
   /**
+   * the task name associated with this snapshot. Could be empty.
+   *
    * @var string
    */
   public $taskName;
   /**
+   * The task number associated with this snapshot. Could be empty.
+   *
    * @var string
    */
   public $taskNumber;
 
   /**
-   * @param string[]
+   * Ancestor iteration number for the task(it will only be non-empty if the
+   * task is under 'private workflow')
+   *
+   * @param string[] $ancestorIterationNumbers
    */
   public function setAncestorIterationNumbers($ancestorIterationNumbers)
   {
@@ -68,7 +89,10 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     return $this->ancestorIterationNumbers;
   }
   /**
-   * @param string[]
+   * Ancestor task number for the task(it will only be non-empty if the task is
+   * under 'private workflow')
+   *
+   * @param string[] $ancestorTaskNumbers
    */
   public function setAncestorTaskNumbers($ancestorTaskNumbers)
   {
@@ -82,7 +106,9 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     return $this->ancestorTaskNumbers;
   }
   /**
-   * @param int
+   * the event attempt number this snapshot belongs to.
+   *
+   * @param int $eventAttemptNum
    */
   public function setEventAttemptNum($eventAttemptNum)
   {
@@ -96,7 +122,9 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     return $this->eventAttemptNum;
   }
   /**
-   * @param string
+   * The direct integration which the event execution snapshots belongs to
+   *
+   * @param string $integrationName
    */
   public function setIntegrationName($integrationName)
   {
@@ -110,7 +138,9 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     return $this->integrationName;
   }
   /**
-   * @param int
+   * the task attempt number this snapshot belongs to. Could be empty.
+   *
+   * @param int $taskAttemptNum
    */
   public function setTaskAttemptNum($taskAttemptNum)
   {
@@ -124,7 +154,9 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     return $this->taskAttemptNum;
   }
   /**
-   * @param string
+   * the task label associated with this snapshot. Could be empty.
+   *
+   * @param string $taskLabel
    */
   public function setTaskLabel($taskLabel)
   {
@@ -138,7 +170,9 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     return $this->taskLabel;
   }
   /**
-   * @param string
+   * the task name associated with this snapshot. Could be empty.
+   *
+   * @param string $taskName
    */
   public function setTaskName($taskName)
   {
@@ -152,7 +186,9 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
     return $this->taskName;
   }
   /**
-   * @param string
+   * The task number associated with this snapshot. Could be empty.
+   *
+   * @param string $taskNumber
    */
   public function setTaskNumber($taskNumber)
   {

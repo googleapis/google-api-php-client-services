@@ -19,6 +19,8 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList extends \Google\Collection
 {
+  public const FILTER_TYPE_DEFAULT_INCLUSIVE = 'DEFAULT_INCLUSIVE';
+  public const FILTER_TYPE_EXCLUSIVE = 'EXCLUSIVE';
   protected $collection_key = 'enumStrings';
   /**
    * @var string[]
@@ -30,7 +32,7 @@ class EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList extends \Google\Col
   public $filterType;
 
   /**
-   * @param string[]
+   * @param string[] $enumStrings
    */
   public function setEnumStrings($enumStrings)
   {
@@ -44,14 +46,14 @@ class EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList extends \Google\Col
     return $this->enumStrings;
   }
   /**
-   * @param string
+   * @param self::FILTER_TYPE_* $filterType
    */
   public function setFilterType($filterType)
   {
     $this->filterType = $filterType;
   }
   /**
-   * @return string
+   * @return self::FILTER_TYPE_*
    */
   public function getFilterType()
   {

@@ -29,7 +29,7 @@ class EnterpriseCrmEventbusProtoTaskMetadataAdmin extends \Google\Model
   public $userEmail;
 
   /**
-   * @param string
+   * @param string $googleGroupEmail
    */
   public function setGoogleGroupEmail($googleGroupEmail)
   {
@@ -43,7 +43,7 @@ class EnterpriseCrmEventbusProtoTaskMetadataAdmin extends \Google\Model
     return $this->googleGroupEmail;
   }
   /**
-   * @param string
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {

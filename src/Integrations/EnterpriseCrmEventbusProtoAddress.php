@@ -21,6 +21,8 @@ class EnterpriseCrmEventbusProtoAddress extends \Google\Collection
 {
   protected $collection_key = 'tokens';
   /**
+   * Required.
+   *
    * @var string
    */
   public $email;
@@ -32,7 +34,9 @@ class EnterpriseCrmEventbusProtoAddress extends \Google\Collection
   protected $tokensDataType = 'array';
 
   /**
-   * @param string
+   * Required.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -46,7 +50,7 @@ class EnterpriseCrmEventbusProtoAddress extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -60,7 +64,7 @@ class EnterpriseCrmEventbusProtoAddress extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoToken[]
+   * @param EnterpriseCrmEventbusProtoToken[] $tokens
    */
   public function setTokens($tokens)
   {

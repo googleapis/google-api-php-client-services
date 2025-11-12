@@ -29,7 +29,7 @@ class EnterpriseCrmEventbusProtoCoordinate extends \Google\Model
   public $y;
 
   /**
-   * @param int
+   * @param int $x
    */
   public function setX($x)
   {
@@ -43,7 +43,7 @@ class EnterpriseCrmEventbusProtoCoordinate extends \Google\Model
     return $this->x;
   }
   /**
-   * @param int
+   * @param int $y
    */
   public function setY($y)
   {

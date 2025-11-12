@@ -21,6 +21,9 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
 {
   protected $collection_key = 'allowedCredentialTypes';
   /**
+   * Defines the credential types to be supported as Task may restrict specific
+   * types to use, e.g. Cloud SQL Task will use username/password type only.
+   *
    * @var string[]
    */
   public $allowedCredentialTypes;
@@ -29,10 +32,14 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
    */
   public $allowedServiceAccountInContext;
   /**
+   * UUID of the AuthConfig.
+   *
    * @var string
    */
   public $authConfigId;
   /**
+   * A space-delimited list of requested scope permissions.
+   *
    * @var string
    */
   public $scope;
@@ -42,7 +49,10 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
   public $useServiceAccountInContext;
 
   /**
-   * @param string[]
+   * Defines the credential types to be supported as Task may restrict specific
+   * types to use, e.g. Cloud SQL Task will use username/password type only.
+   *
+   * @param string[] $allowedCredentialTypes
    */
   public function setAllowedCredentialTypes($allowedCredentialTypes)
   {
@@ -56,7 +66,7 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
     return $this->allowedCredentialTypes;
   }
   /**
-   * @param bool
+   * @param bool $allowedServiceAccountInContext
    */
   public function setAllowedServiceAccountInContext($allowedServiceAccountInContext)
   {
@@ -70,7 +80,9 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
     return $this->allowedServiceAccountInContext;
   }
   /**
-   * @param string
+   * UUID of the AuthConfig.
+   *
+   * @param string $authConfigId
    */
   public function setAuthConfigId($authConfigId)
   {
@@ -84,7 +96,9 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
     return $this->authConfigId;
   }
   /**
-   * @param string
+   * A space-delimited list of requested scope permissions.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {
@@ -98,7 +112,7 @@ class EnterpriseCrmEventbusAuthconfigAuthConfigTaskParam extends \Google\Collect
     return $this->scope;
   }
   /**
-   * @param bool
+   * @param bool $useServiceAccountInContext
    */
   public function setUseServiceAccountInContext($useServiceAccountInContext)
   {

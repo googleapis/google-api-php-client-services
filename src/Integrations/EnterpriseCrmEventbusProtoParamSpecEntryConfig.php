@@ -20,14 +20,61 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
 {
   /**
+   * A single-line input for strings, a numeric input box for numbers, or a
+   * checkbox for booleans.
+   */
+  public const INPUT_DISPLAY_OPTION_DEFAULT = 'DEFAULT';
+  /**
+   * A multi-line input box for longer strings/string templates.
+   */
+  public const INPUT_DISPLAY_OPTION_STRING_MULTI_LINE = 'STRING_MULTI_LINE';
+  /**
+   * A slider to select a numerical value. The default range is [0, 100].
+   */
+  public const INPUT_DISPLAY_OPTION_NUMBER_SLIDER = 'NUMBER_SLIDER';
+  /**
+   * A toggle button for boolean parameters.
+   */
+  public const INPUT_DISPLAY_OPTION_BOOLEAN_TOGGLE = 'BOOLEAN_TOGGLE';
+  /**
+   * This field is not a parameter name.
+   */
+  public const PARAMETER_NAME_OPTION_DEFAULT_NOT_PARAMETER_NAME = 'DEFAULT_NOT_PARAMETER_NAME';
+  /**
+   * If this field is a string and this option is selected, the field will be
+   * interpreted as a parameter name. Users will be able to choose a variable
+   * using the autocomplete, but the name will be stored as a literal string.
+   */
+  public const PARAMETER_NAME_OPTION_IS_PARAMETER_NAME = 'IS_PARAMETER_NAME';
+  /**
+   * If this field is a ParameterMap and this option is selected, the map's keys
+   * will be interpreted as parameter names. Ignored if this field is not a
+   * ParameterMap.
+   */
+  public const PARAMETER_NAME_OPTION_KEY_IS_PARAMETER_NAME = 'KEY_IS_PARAMETER_NAME';
+  /**
+   * If this field is a ParameterMap and this option is selected, the map's
+   * values will be interpreted as parameter names. Ignored if this field is not
+   * a ParameterMap.
+   */
+  public const PARAMETER_NAME_OPTION_VALUE_IS_PARAMETER_NAME = 'VALUE_IS_PARAMETER_NAME';
+  /**
+   * A short phrase to describe what this parameter contains.
+   *
    * @var string
    */
   public $descriptivePhrase;
   /**
+   * Detailed help text for this parameter containing information not provided
+   * elsewhere. For example, instructions on how to migrate from a deprecated
+   * parameter.
+   *
    * @var string
    */
   public $helpText;
   /**
+   * Whether the default value is hidden in the UI.
+   *
    * @var bool
    */
   public $hideDefaultValue;
@@ -36,10 +83,14 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
    */
   public $inputDisplayOption;
   /**
+   * Whether this field is hidden in the UI.
+   *
    * @var bool
    */
   public $isHidden;
   /**
+   * A user-friendly label for the parameter.
+   *
    * @var string
    */
   public $label;
@@ -48,16 +99,23 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
    */
   public $parameterNameOption;
   /**
+   * A user-friendly label for subSection under which the parameter will be
+   * displayed.
+   *
    * @var string
    */
   public $subSectionLabel;
   /**
+   * Placeholder text which will appear in the UI input form for this parameter.
+   *
    * @var string
    */
   public $uiPlaceholderText;
 
   /**
-   * @param string
+   * A short phrase to describe what this parameter contains.
+   *
+   * @param string $descriptivePhrase
    */
   public function setDescriptivePhrase($descriptivePhrase)
   {
@@ -71,7 +129,11 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
     return $this->descriptivePhrase;
   }
   /**
-   * @param string
+   * Detailed help text for this parameter containing information not provided
+   * elsewhere. For example, instructions on how to migrate from a deprecated
+   * parameter.
+   *
+   * @param string $helpText
    */
   public function setHelpText($helpText)
   {
@@ -85,7 +147,9 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
     return $this->helpText;
   }
   /**
-   * @param bool
+   * Whether the default value is hidden in the UI.
+   *
+   * @param bool $hideDefaultValue
    */
   public function setHideDefaultValue($hideDefaultValue)
   {
@@ -99,21 +163,23 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
     return $this->hideDefaultValue;
   }
   /**
-   * @param string
+   * @param self::INPUT_DISPLAY_OPTION_* $inputDisplayOption
    */
   public function setInputDisplayOption($inputDisplayOption)
   {
     $this->inputDisplayOption = $inputDisplayOption;
   }
   /**
-   * @return string
+   * @return self::INPUT_DISPLAY_OPTION_*
    */
   public function getInputDisplayOption()
   {
     return $this->inputDisplayOption;
   }
   /**
-   * @param bool
+   * Whether this field is hidden in the UI.
+   *
+   * @param bool $isHidden
    */
   public function setIsHidden($isHidden)
   {
@@ -127,7 +193,9 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
     return $this->isHidden;
   }
   /**
-   * @param string
+   * A user-friendly label for the parameter.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -141,21 +209,24 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
     return $this->label;
   }
   /**
-   * @param string
+   * @param self::PARAMETER_NAME_OPTION_* $parameterNameOption
    */
   public function setParameterNameOption($parameterNameOption)
   {
     $this->parameterNameOption = $parameterNameOption;
   }
   /**
-   * @return string
+   * @return self::PARAMETER_NAME_OPTION_*
    */
   public function getParameterNameOption()
   {
     return $this->parameterNameOption;
   }
   /**
-   * @param string
+   * A user-friendly label for subSection under which the parameter will be
+   * displayed.
+   *
+   * @param string $subSectionLabel
    */
   public function setSubSectionLabel($subSectionLabel)
   {
@@ -169,7 +240,9 @@ class EnterpriseCrmEventbusProtoParamSpecEntryConfig extends \Google\Model
     return $this->subSectionLabel;
   }
   /**
-   * @param string
+   * Placeholder text which will appear in the UI input form for this parameter.
+   *
+   * @param string $uiPlaceholderText
    */
   public function setUiPlaceholderText($uiPlaceholderText)
   {

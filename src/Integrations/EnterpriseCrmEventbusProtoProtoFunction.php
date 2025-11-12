@@ -19,20 +19,35 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoProtoFunction extends \Google\Model
 {
+  public const FUNCTION_NAME_UNSPECIFIED = 'UNSPECIFIED';
+  public const FUNCTION_NAME_GET_STRING_SUBFIELD = 'GET_STRING_SUBFIELD';
+  public const FUNCTION_NAME_GET_INT_SUBFIELD = 'GET_INT_SUBFIELD';
+  public const FUNCTION_NAME_GET_DOUBLE_SUBFIELD = 'GET_DOUBLE_SUBFIELD';
+  public const FUNCTION_NAME_GET_BOOLEAN_SUBFIELD = 'GET_BOOLEAN_SUBFIELD';
+  public const FUNCTION_NAME_GET_STRING_ARRAY_SUBFIELD = 'GET_STRING_ARRAY_SUBFIELD';
+  public const FUNCTION_NAME_GET_INT_ARRAY_SUBFIELD = 'GET_INT_ARRAY_SUBFIELD';
+  public const FUNCTION_NAME_GET_DOUBLE_ARRAY_SUBFIELD = 'GET_DOUBLE_ARRAY_SUBFIELD';
+  public const FUNCTION_NAME_GET_BOOLEAN_ARRAY_SUBFIELD = 'GET_BOOLEAN_ARRAY_SUBFIELD';
+  public const FUNCTION_NAME_GET_PROTO_ARRAY_SUBFIELD = 'GET_PROTO_ARRAY_SUBFIELD';
+  public const FUNCTION_NAME_GET_PROTO_SUBFIELD = 'GET_PROTO_SUBFIELD';
+  public const FUNCTION_NAME_TO_JSON = 'TO_JSON';
+  public const FUNCTION_NAME_GET_BYTES_SUBFIELD_AS_UTF_8_STRING = 'GET_BYTES_SUBFIELD_AS_UTF_8_STRING';
+  public const FUNCTION_NAME_GET_BYTES_SUBFIELD_AS_PROTO = 'GET_BYTES_SUBFIELD_AS_PROTO';
+  public const FUNCTION_NAME_EQUALS = 'EQUALS';
   /**
    * @var string
    */
   public $functionName;
 
   /**
-   * @param string
+   * @param self::FUNCTION_NAME_* $functionName
    */
   public function setFunctionName($functionName)
   {
     $this->functionName = $functionName;
   }
   /**
-   * @return string
+   * @return self::FUNCTION_NAME_*
    */
   public function getFunctionName()
   {
