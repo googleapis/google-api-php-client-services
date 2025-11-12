@@ -20,12 +20,16 @@ namespace Google\Service\CloudHealthcare;
 class StructuredStorageInfo extends \Google\Model
 {
   /**
+   * Size in bytes of data stored in structured storage.
+   *
    * @var string
    */
   public $sizeBytes;
 
   /**
-   * @param string
+   * Size in bytes of data stored in structured storage.
+   *
+   * @param string $sizeBytes
    */
   public function setSizeBytes($sizeBytes)
   {

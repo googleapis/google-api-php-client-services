@@ -24,7 +24,7 @@ class ParsedData extends \Google\Collection
   protected $segmentsDataType = 'array';
 
   /**
-   * @param Segment[]
+   * @param Segment[] $segments
    */
   public function setSegments($segments)
   {

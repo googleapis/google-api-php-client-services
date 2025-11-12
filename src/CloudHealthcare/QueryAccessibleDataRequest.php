@@ -22,16 +22,26 @@ class QueryAccessibleDataRequest extends \Google\Model
   protected $gcsDestinationType = GoogleCloudHealthcareV1ConsentGcsDestination::class;
   protected $gcsDestinationDataType = '';
   /**
+   * The values of request attributes associated with this access request.
+   *
    * @var string[]
    */
   public $requestAttributes;
   /**
+   * Optional. The values of resource attributes associated with the type of
+   * resources being requested. If no values are specified, then all resource
+   * types are included in the output.
+   *
    * @var string[]
    */
   public $resourceAttributes;
 
   /**
-   * @param GoogleCloudHealthcareV1ConsentGcsDestination
+   * The Cloud Storage destination. The Cloud Healthcare API service account
+   * must have the `roles/storage.objectAdmin` Cloud IAM role for this Cloud
+   * Storage location.
+   *
+   * @param GoogleCloudHealthcareV1ConsentGcsDestination $gcsDestination
    */
   public function setGcsDestination(GoogleCloudHealthcareV1ConsentGcsDestination $gcsDestination)
   {
@@ -45,7 +55,9 @@ class QueryAccessibleDataRequest extends \Google\Model
     return $this->gcsDestination;
   }
   /**
-   * @param string[]
+   * The values of request attributes associated with this access request.
+   *
+   * @param string[] $requestAttributes
    */
   public function setRequestAttributes($requestAttributes)
   {
@@ -59,7 +71,11 @@ class QueryAccessibleDataRequest extends \Google\Model
     return $this->requestAttributes;
   }
   /**
-   * @param string[]
+   * Optional. The values of resource attributes associated with the type of
+   * resources being requested. If no values are specified, then all resource
+   * types are included in the output.
+   *
+   * @param string[] $resourceAttributes
    */
   public function setResourceAttributes($resourceAttributes)
   {

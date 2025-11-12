@@ -20,16 +20,23 @@ namespace Google\Service\CloudHealthcare;
 class VersionSource extends \Google\Model
 {
   /**
+   * The field to extract from the MSH segment. For example, "3.1" or "18[1].1".
+   *
    * @var string
    */
   public $mshField;
   /**
+   * The value to match with the field. For example, "My Application Name" or
+   * "2.3".
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The field to extract from the MSH segment. For example, "3.1" or "18[1].1".
+   *
+   * @param string $mshField
    */
   public function setMshField($mshField)
   {
@@ -43,7 +50,10 @@ class VersionSource extends \Google\Model
     return $this->mshField;
   }
   /**
-   * @param string
+   * The value to match with the field. For example, "My Application Name" or
+   * "2.3".
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

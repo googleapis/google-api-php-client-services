@@ -20,12 +20,20 @@ namespace Google\Service\CloudHealthcare;
 class RollbackFhirResourcesResponse extends \Google\Model
 {
   /**
+   * The name of the FHIR store to rollback, in the format of
+   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+   * /fhirStores/{fhir_store_id}".
+   *
    * @var string
    */
   public $fhirStore;
 
   /**
-   * @param string
+   * The name of the FHIR store to rollback, in the format of
+   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+   * /fhirStores/{fhir_store_id}".
+   *
+   * @param string $fhirStore
    */
   public function setFhirStore($fhirStore)
   {

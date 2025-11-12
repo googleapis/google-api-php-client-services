@@ -20,20 +20,28 @@ namespace Google\Service\CloudHealthcare;
 class ProgressCounter extends \Google\Model
 {
   /**
+   * The number of units that failed in the operation.
+   *
    * @var string
    */
   public $failure;
   /**
+   * The number of units that are pending in the operation.
+   *
    * @var string
    */
   public $pending;
   /**
+   * The number of units that succeeded in the operation.
+   *
    * @var string
    */
   public $success;
 
   /**
-   * @param string
+   * The number of units that failed in the operation.
+   *
+   * @param string $failure
    */
   public function setFailure($failure)
   {
@@ -47,7 +55,9 @@ class ProgressCounter extends \Google\Model
     return $this->failure;
   }
   /**
-   * @param string
+   * The number of units that are pending in the operation.
+   *
+   * @param string $pending
    */
   public function setPending($pending)
   {
@@ -61,7 +71,9 @@ class ProgressCounter extends \Google\Model
     return $this->pending;
   }
   /**
-   * @param string
+   * The number of units that succeeded in the operation.
+   *
+   * @param string $success
    */
   public function setSuccess($success)
   {

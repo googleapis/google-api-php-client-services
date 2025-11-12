@@ -21,26 +21,39 @@ class SchemaGroup extends \Google\Collection
 {
   protected $collection_key = 'members';
   /**
+   * True indicates that this is a choice group, meaning that only one of its
+   * segments can exist in a given message.
+   *
    * @var bool
    */
   public $choice;
   /**
+   * The maximum number of times this group can be repeated. 0 or -1 means
+   * unbounded.
+   *
    * @var int
    */
   public $maxOccurs;
   protected $membersType = GroupOrSegment::class;
   protected $membersDataType = 'array';
   /**
+   * The minimum number of times this group must be present/repeated.
+   *
    * @var int
    */
   public $minOccurs;
   /**
+   * The name of this group. For example, "ORDER_DETAIL".
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param bool
+   * True indicates that this is a choice group, meaning that only one of its
+   * segments can exist in a given message.
+   *
+   * @param bool $choice
    */
   public function setChoice($choice)
   {
@@ -54,7 +67,10 @@ class SchemaGroup extends \Google\Collection
     return $this->choice;
   }
   /**
-   * @param int
+   * The maximum number of times this group can be repeated. 0 or -1 means
+   * unbounded.
+   *
+   * @param int $maxOccurs
    */
   public function setMaxOccurs($maxOccurs)
   {
@@ -68,7 +84,9 @@ class SchemaGroup extends \Google\Collection
     return $this->maxOccurs;
   }
   /**
-   * @param GroupOrSegment[]
+   * Nested groups and/or segments.
+   *
+   * @param GroupOrSegment[] $members
    */
   public function setMembers($members)
   {
@@ -82,7 +100,9 @@ class SchemaGroup extends \Google\Collection
     return $this->members;
   }
   /**
-   * @param int
+   * The minimum number of times this group must be present/repeated.
+   *
+   * @param int $minOccurs
    */
   public function setMinOccurs($minOccurs)
   {
@@ -96,7 +116,9 @@ class SchemaGroup extends \Google\Collection
     return $this->minOccurs;
   }
   /**
-   * @param string
+   * The name of this group. For example, "ORDER_DETAIL".
+   *
+   * @param string $name
    */
   public function setName($name)
   {

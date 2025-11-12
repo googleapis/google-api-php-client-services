@@ -25,7 +25,10 @@ class SetBlobStorageSettingsRequest extends \Google\Model
   protected $filterConfigDataType = '';
 
   /**
-   * @param BlobStorageSettings
+   * The blob storage settings to update for the specified resources. Only
+   * fields listed in `update_mask` are applied.
+   *
+   * @param BlobStorageSettings $blobStorageSettings
    */
   public function setBlobStorageSettings(BlobStorageSettings $blobStorageSettings)
   {
@@ -39,7 +42,12 @@ class SetBlobStorageSettingsRequest extends \Google\Model
     return $this->blobStorageSettings;
   }
   /**
-   * @param DicomFilterConfig
+   * Optional. A filter configuration. If `filter_config` is specified, set the
+   * value of `resource` to the resource name of a DICOM store in the format `pr
+   * ojects/{projectID}/locations/{locationID}/datasets/{datasetID}/dicomStores/
+   * {dicomStoreID}`.
+   *
+   * @param DicomFilterConfig $filterConfig
    */
   public function setFilterConfig(DicomFilterConfig $filterConfig)
   {

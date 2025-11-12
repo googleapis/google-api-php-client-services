@@ -21,12 +21,18 @@ class QueryAccessibleDataResponse extends \Google\Collection
 {
   protected $collection_key = 'gcsUris';
   /**
+   * List of files, each of which contains a list of data_id(s) that are
+   * consented for a specified use in the request.
+   *
    * @var string[]
    */
   public $gcsUris;
 
   /**
-   * @param string[]
+   * List of files, each of which contains a list of data_id(s) that are
+   * consented for a specified use in the request.
+   *
+   * @param string[] $gcsUris
    */
   public function setGcsUris($gcsUris)
   {

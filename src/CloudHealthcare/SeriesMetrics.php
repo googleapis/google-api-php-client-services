@@ -20,24 +20,36 @@ namespace Google\Service\CloudHealthcare;
 class SeriesMetrics extends \Google\Model
 {
   /**
+   * Total blob storage bytes for all instances in the series.
+   *
    * @var string
    */
   public $blobStorageSizeBytes;
   /**
+   * Number of instances in the series.
+   *
    * @var string
    */
   public $instanceCount;
   /**
+   * The series resource path. For example, `projects/{project_id}/locations/{lo
+   * cation_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/stud
+   * ies/{study_uid}/series/{series_uid}`.
+   *
    * @var string
    */
   public $series;
   /**
+   * Total structured storage bytes for all instances in the series.
+   *
    * @var string
    */
   public $structuredStorageSizeBytes;
 
   /**
-   * @param string
+   * Total blob storage bytes for all instances in the series.
+   *
+   * @param string $blobStorageSizeBytes
    */
   public function setBlobStorageSizeBytes($blobStorageSizeBytes)
   {
@@ -51,7 +63,9 @@ class SeriesMetrics extends \Google\Model
     return $this->blobStorageSizeBytes;
   }
   /**
-   * @param string
+   * Number of instances in the series.
+   *
+   * @param string $instanceCount
    */
   public function setInstanceCount($instanceCount)
   {
@@ -65,7 +79,11 @@ class SeriesMetrics extends \Google\Model
     return $this->instanceCount;
   }
   /**
-   * @param string
+   * The series resource path. For example, `projects/{project_id}/locations/{lo
+   * cation_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/stud
+   * ies/{study_uid}/series/{series_uid}`.
+   *
+   * @param string $series
    */
   public function setSeries($series)
   {
@@ -79,7 +97,9 @@ class SeriesMetrics extends \Google\Model
     return $this->series;
   }
   /**
-   * @param string
+   * Total structured storage bytes for all instances in the series.
+   *
+   * @param string $structuredStorageSizeBytes
    */
   public function setStructuredStorageSizeBytes($structuredStorageSizeBytes)
   {

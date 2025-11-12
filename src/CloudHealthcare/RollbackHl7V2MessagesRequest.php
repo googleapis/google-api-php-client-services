@@ -20,48 +20,90 @@ namespace Google\Service\CloudHealthcare;
 class RollbackHl7V2MessagesRequest extends \Google\Model
 {
   /**
+   * When unspecified, revert all transactions
+   */
+  public const CHANGE_TYPE_CHANGE_TYPE_UNSPECIFIED = 'CHANGE_TYPE_UNSPECIFIED';
+  /**
+   * All transactions
+   */
+  public const CHANGE_TYPE_ALL = 'ALL';
+  /**
+   * Revert only CREATE transactions
+   */
+  public const CHANGE_TYPE_CREATE = 'CREATE';
+  /**
+   * Revert only Update transactions
+   */
+  public const CHANGE_TYPE_UPDATE = 'UPDATE';
+  /**
+   * Revert only Delete transactions
+   */
+  public const CHANGE_TYPE_DELETE = 'DELETE';
+  /**
+   * Optional. CREATE/UPDATE/DELETE/ALL for reverting all txns of a certain
+   * type.
+   *
    * @var string
    */
   public $changeType;
   /**
+   * Optional. Specifies whether to exclude earlier rollbacks.
+   *
    * @var bool
    */
   public $excludeRollbacks;
   protected $filteringFieldsType = RollbackHL7MessagesFilteringFields::class;
   protected $filteringFieldsDataType = '';
   /**
+   * Optional. When enabled, changes will be reverted without explicit
+   * confirmation.
+   *
    * @var bool
    */
   public $force;
   /**
+   * Optional. Cloud storage object containing list of {resourceId} lines,
+   * identifying resources to be reverted
+   *
    * @var string
    */
   public $inputGcsObject;
   /**
+   * Required. Bucket to deposit result
+   *
    * @var string
    */
   public $resultGcsBucket;
   /**
+   * Required. Times point to rollback to.
+   *
    * @var string
    */
   public $rollbackTime;
 
   /**
-   * @param string
+   * Optional. CREATE/UPDATE/DELETE/ALL for reverting all txns of a certain
+   * type.
+   *
+   * Accepted values: CHANGE_TYPE_UNSPECIFIED, ALL, CREATE, UPDATE, DELETE
+   *
+   * @param self::CHANGE_TYPE_* $changeType
    */
   public function setChangeType($changeType)
   {
     $this->changeType = $changeType;
   }
   /**
-   * @return string
+   * @return self::CHANGE_TYPE_*
    */
   public function getChangeType()
   {
     return $this->changeType;
   }
   /**
-   * @param bool
+   * Optional. Specifies whether to exclude earlier rollbacks.
+   *
+   * @param bool $excludeRollbacks
    */
   public function setExcludeRollbacks($excludeRollbacks)
   {
@@ -75,7 +117,9 @@ class RollbackHl7V2MessagesRequest extends \Google\Model
     return $this->excludeRollbacks;
   }
   /**
-   * @param RollbackHL7MessagesFilteringFields
+   * Optional. Parameters for filtering.
+   *
+   * @param RollbackHL7MessagesFilteringFields $filteringFields
    */
   public function setFilteringFields(RollbackHL7MessagesFilteringFields $filteringFields)
   {
@@ -89,7 +133,10 @@ class RollbackHl7V2MessagesRequest extends \Google\Model
     return $this->filteringFields;
   }
   /**
-   * @param bool
+   * Optional. When enabled, changes will be reverted without explicit
+   * confirmation.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -103,7 +150,10 @@ class RollbackHl7V2MessagesRequest extends \Google\Model
     return $this->force;
   }
   /**
-   * @param string
+   * Optional. Cloud storage object containing list of {resourceId} lines,
+   * identifying resources to be reverted
+   *
+   * @param string $inputGcsObject
    */
   public function setInputGcsObject($inputGcsObject)
   {
@@ -117,7 +167,9 @@ class RollbackHl7V2MessagesRequest extends \Google\Model
     return $this->inputGcsObject;
   }
   /**
-   * @param string
+   * Required. Bucket to deposit result
+   *
+   * @param string $resultGcsBucket
    */
   public function setResultGcsBucket($resultGcsBucket)
   {
@@ -131,7 +183,9 @@ class RollbackHl7V2MessagesRequest extends \Google\Model
     return $this->resultGcsBucket;
   }
   /**
-   * @param string
+   * Required. Times point to rollback to.
+   *
+   * @param string $rollbackTime
    */
   public function setRollbackTime($rollbackTime)
   {

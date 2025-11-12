@@ -21,16 +21,32 @@ class RollbackFhirResourceFilteringFields extends \Google\Collection
 {
   protected $collection_key = 'operationIds';
   /**
+   * Optional. A filter expression that matches data in the `Resource.meta`
+   * element. Supports all filters in [AIP-160](https://google.aip.dev/160)
+   * except the "has" (`:`) operator. Supports the following custom functions: *
+   * `tag("") = ""` for tag filtering. * `extension_value_ts("") = ` for
+   * filtering extensions with a timestamp, where `` is a Unix timestamp.
+   * Supports the `>`, `<`, `<=`, `>=`, and `!=` comparison operators.
+   *
    * @var string
    */
   public $metadataFilter;
   /**
+   * Optional. A list of operation IDs to roll back.
+   *
    * @var string[]
    */
   public $operationIds;
 
   /**
-   * @param string
+   * Optional. A filter expression that matches data in the `Resource.meta`
+   * element. Supports all filters in [AIP-160](https://google.aip.dev/160)
+   * except the "has" (`:`) operator. Supports the following custom functions: *
+   * `tag("") = ""` for tag filtering. * `extension_value_ts("") = ` for
+   * filtering extensions with a timestamp, where `` is a Unix timestamp.
+   * Supports the `>`, `<`, `<=`, `>=`, and `!=` comparison operators.
+   *
+   * @param string $metadataFilter
    */
   public function setMetadataFilter($metadataFilter)
   {
@@ -44,7 +60,9 @@ class RollbackFhirResourceFilteringFields extends \Google\Collection
     return $this->metadataFilter;
   }
   /**
-   * @param string[]
+   * Optional. A list of operation IDs to roll back.
+   *
+   * @param string[] $operationIds
    */
   public function setOperationIds($operationIds)
   {

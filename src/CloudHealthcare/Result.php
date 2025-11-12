@@ -22,16 +22,22 @@ class Result extends \Google\Model
   protected $consentDetailsType = ConsentEvaluation::class;
   protected $consentDetailsDataType = 'map';
   /**
+   * Whether the resource is consented for the given use.
+   *
    * @var bool
    */
   public $consented;
   /**
+   * The unique identifier of the evaluated resource.
+   *
    * @var string
    */
   public $dataId;
 
   /**
-   * @param ConsentEvaluation[]
+   * The resource names of all evaluated Consents mapped to their evaluation.
+   *
+   * @param ConsentEvaluation[] $consentDetails
    */
   public function setConsentDetails($consentDetails)
   {
@@ -45,7 +51,9 @@ class Result extends \Google\Model
     return $this->consentDetails;
   }
   /**
-   * @param bool
+   * Whether the resource is consented for the given use.
+   *
+   * @param bool $consented
    */
   public function setConsented($consented)
   {
@@ -59,7 +67,9 @@ class Result extends \Google\Model
     return $this->consented;
   }
   /**
-   * @param string
+   * The unique identifier of the evaluated resource.
+   *
+   * @param string $dataId
    */
   public function setDataId($dataId)
   {

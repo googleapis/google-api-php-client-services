@@ -23,12 +23,18 @@ class ListHl7V2StoresResponse extends \Google\Collection
   protected $hl7V2StoresType = Hl7V2Store::class;
   protected $hl7V2StoresDataType = 'array';
   /**
+   * Token to retrieve the next page of results or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Hl7V2Store[]
+   * The returned HL7v2 stores. Won't be more HL7v2 stores than the value of
+   * page_size in the request.
+   *
+   * @param Hl7V2Store[] $hl7V2Stores
    */
   public function setHl7V2Stores($hl7V2Stores)
   {
@@ -42,7 +48,10 @@ class ListHl7V2StoresResponse extends \Google\Collection
     return $this->hl7V2Stores;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

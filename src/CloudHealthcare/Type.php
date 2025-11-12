@@ -19,20 +19,44 @@ namespace Google\Service\CloudHealthcare;
 
 class Type extends \Google\Collection
 {
+  /**
+   * Not a primitive.
+   */
+  public const PRIMITIVE_PRIMITIVE_UNSPECIFIED = 'PRIMITIVE_UNSPECIFIED';
+  /**
+   * String primitive.
+   */
+  public const PRIMITIVE_STRING = 'STRING';
+  /**
+   * Element that can have unschematized children.
+   */
+  public const PRIMITIVE_VARIES = 'VARIES';
+  /**
+   * Like STRING, but all delimiters below this element are ignored.
+   */
+  public const PRIMITIVE_UNESCAPED_STRING = 'UNESCAPED_STRING';
   protected $collection_key = 'fields';
   protected $fieldsType = Field::class;
   protected $fieldsDataType = 'array';
   /**
+   * The name of this type. This would be the segment or datatype name. For
+   * example, "PID" or "XPN".
+   *
    * @var string
    */
   public $name;
   /**
+   * If this is a primitive type then this field is the type of the primitive
+   * For example, STRING. Leave unspecified for composite types.
+   *
    * @var string
    */
   public $primitive;
 
   /**
-   * @param Field[]
+   * The (sub) fields this type has (if not primitive).
+   *
+   * @param Field[] $fields
    */
   public function setFields($fields)
   {
@@ -46,7 +70,10 @@ class Type extends \Google\Collection
     return $this->fields;
   }
   /**
-   * @param string
+   * The name of this type. This would be the segment or datatype name. For
+   * example, "PID" or "XPN".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -60,14 +87,19 @@ class Type extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * If this is a primitive type then this field is the type of the primitive
+   * For example, STRING. Leave unspecified for composite types.
+   *
+   * Accepted values: PRIMITIVE_UNSPECIFIED, STRING, VARIES, UNESCAPED_STRING
+   *
+   * @param self::PRIMITIVE_* $primitive
    */
   public function setPrimitive($primitive)
   {
     $this->primitive = $primitive;
   }
   /**
-   * @return string
+   * @return self::PRIMITIVE_*
    */
   public function getPrimitive()
   {

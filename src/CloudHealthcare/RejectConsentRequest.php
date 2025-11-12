@@ -20,12 +20,24 @@ namespace Google\Service\CloudHealthcare;
 class RejectConsentRequest extends \Google\Model
 {
   /**
+   * Optional. The resource name of the Consent artifact that contains
+   * documentation of the user's rejection of the draft Consent, of the form `pr
+   * ojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentSt
+   * ores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the
+   * draft Consent had a Consent artifact, this Consent artifact overwrites it.
+   *
    * @var string
    */
   public $consentArtifact;
 
   /**
-   * @param string
+   * Optional. The resource name of the Consent artifact that contains
+   * documentation of the user's rejection of the draft Consent, of the form `pr
+   * ojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentSt
+   * ores/{consent_store_id}/consentArtifacts/{consent_artifact_id}`. If the
+   * draft Consent had a Consent artifact, this Consent artifact overwrites it.
+   *
+   * @param string $consentArtifact
    */
   public function setConsentArtifact($consentArtifact)
   {

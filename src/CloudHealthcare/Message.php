@@ -21,22 +21,41 @@ class Message extends \Google\Collection
 {
   protected $collection_key = 'patientIds';
   /**
+   * Output only. The datetime when the message was created. Set by the server.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Raw message bytes.
+   *
    * @var string
    */
   public $data;
   /**
+   * User-supplied key-value pairs used to organize HL7v2 stores. Label keys
+   * must be between 1 and 63 characters long, have a UTF-8 encoding of maximum
+   * 128 bytes, and must conform to the following PCRE regular expression:
+   * \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+   * conform to the following PCRE regular expression:
+   * [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a
+   * given store.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The message type for this message. MSH-9.1.
+   *
    * @var string
    */
   public $messageType;
   /**
+   * Output only. Resource name of the Message, of the form `projects/{project_i
+   * d}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_
+   * id}/messages/{message_id}`.
+   *
    * @var string
    */
   public $name;
@@ -47,16 +66,22 @@ class Message extends \Google\Collection
   protected $schematizedDataType = SchematizedData::class;
   protected $schematizedDataDataType = '';
   /**
+   * Output only. The hospital that this message came from. MSH-4.
+   *
    * @var string
    */
   public $sendFacility;
   /**
+   * Output only. The datetime the sending application sent this message. MSH-7.
+   *
    * @var string
    */
   public $sendTime;
 
   /**
-   * @param string
+   * Output only. The datetime when the message was created. Set by the server.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -70,7 +95,9 @@ class Message extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Raw message bytes.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -84,7 +111,16 @@ class Message extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param string[]
+   * User-supplied key-value pairs used to organize HL7v2 stores. Label keys
+   * must be between 1 and 63 characters long, have a UTF-8 encoding of maximum
+   * 128 bytes, and must conform to the following PCRE regular expression:
+   * \p{Ll}\p{Lo}{0,62} Label values are optional, must be between 1 and 63
+   * characters long, have a UTF-8 encoding of maximum 128 bytes, and must
+   * conform to the following PCRE regular expression:
+   * [\p{Ll}\p{Lo}\p{N}_-]{0,63} No more than 64 labels can be associated with a
+   * given store.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -98,7 +134,9 @@ class Message extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The message type for this message. MSH-9.1.
+   *
+   * @param string $messageType
    */
   public function setMessageType($messageType)
   {
@@ -112,7 +150,11 @@ class Message extends \Google\Collection
     return $this->messageType;
   }
   /**
-   * @param string
+   * Output only. Resource name of the Message, of the form `projects/{project_i
+   * d}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_store_
+   * id}/messages/{message_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -126,7 +168,9 @@ class Message extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ParsedData
+   * Output only. The parsed version of the raw message data.
+   *
+   * @param ParsedData $parsedData
    */
   public function setParsedData(ParsedData $parsedData)
   {
@@ -140,7 +184,10 @@ class Message extends \Google\Collection
     return $this->parsedData;
   }
   /**
-   * @param PatientId[]
+   * Output only. All patient IDs listed in the PID-2, PID-3, and PID-4 segments
+   * of this message.
+   *
+   * @param PatientId[] $patientIds
    */
   public function setPatientIds($patientIds)
   {
@@ -154,7 +201,10 @@ class Message extends \Google\Collection
     return $this->patientIds;
   }
   /**
-   * @param SchematizedData
+   * Output only. The parsed version of the raw message data schematized
+   * according to this store's schemas and type definitions.
+   *
+   * @param SchematizedData $schematizedData
    */
   public function setSchematizedData(SchematizedData $schematizedData)
   {
@@ -168,7 +218,9 @@ class Message extends \Google\Collection
     return $this->schematizedData;
   }
   /**
-   * @param string
+   * Output only. The hospital that this message came from. MSH-4.
+   *
+   * @param string $sendFacility
    */
   public function setSendFacility($sendFacility)
   {
@@ -182,7 +234,9 @@ class Message extends \Google\Collection
     return $this->sendFacility;
   }
   /**
-   * @param string
+   * Output only. The datetime the sending application sent this message. MSH-7.
+   *
+   * @param string $sendTime
    */
   public function setSendTime($sendTime)
   {

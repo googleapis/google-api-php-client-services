@@ -21,28 +21,75 @@ class ValidationConfig extends \Google\Collection
 {
   protected $collection_key = 'enabledImplementationGuides';
   /**
+   * Optional. Whether to disable FHIRPath validation for incoming resources.
+   * The default value is false. Set this to true to disable checking incoming
+   * resources for conformance against FHIRPath requirement defined in the FHIR
+   * specification. This property only affects resource types that do not have
+   * profiles configured for them, any rules in enabled implementation guides
+   * will still be enforced.
+   *
    * @var bool
    */
   public $disableFhirpathValidation;
   /**
+   * Optional. Whether to disable profile validation for this FHIR store. The
+   * default value is false. Set this to true to disable checking incoming
+   * resources for conformance against structure definitions in this FHIR store.
+   *
    * @var bool
    */
   public $disableProfileValidation;
   /**
+   * Optional. Whether to disable reference type validation for incoming
+   * resources. The default value is false. Set this to true to disable checking
+   * incoming resources for conformance against reference type requirement
+   * defined in the FHIR specification. This property only affects resource
+   * types that do not have profiles configured for them, any rules in enabled
+   * implementation guides will still be enforced.
+   *
    * @var bool
    */
   public $disableReferenceTypeValidation;
   /**
+   * Optional. Whether to disable required fields validation for incoming
+   * resources. The default value is false. Set this to true to disable checking
+   * incoming resources for conformance against required fields requirement
+   * defined in the FHIR specification. This property only affects resource
+   * types that do not have profiles configured for them, any rules in enabled
+   * implementation guides will still be enforced.
+   *
    * @var bool
    */
   public $disableRequiredFieldValidation;
   /**
+   * Optional. A list of implementation guide URLs in this FHIR store that are
+   * used to configure the profiles to use for validation. For example, to use
+   * the US Core profiles for validation, set `enabled_implementation_guides` to
+   * `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
+   * `enabled_implementation_guides` is empty or omitted, then incoming
+   * resources are only required to conform to the base FHIR profiles.
+   * Otherwise, a resource must conform to at least one profile listed in the
+   * `global` property of one of the enabled ImplementationGuides. The Cloud
+   * Healthcare API does not currently enforce all of the rules in a
+   * StructureDefinition. The following rules are supported: - min/max -
+   * minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple
+   * types - slicing, when using "value" as the discriminator type When a URL
+   * cannot be resolved (for example, in a type assertion), the server does not
+   * return an error.
+   *
    * @var string[]
    */
   public $enabledImplementationGuides;
 
   /**
-   * @param bool
+   * Optional. Whether to disable FHIRPath validation for incoming resources.
+   * The default value is false. Set this to true to disable checking incoming
+   * resources for conformance against FHIRPath requirement defined in the FHIR
+   * specification. This property only affects resource types that do not have
+   * profiles configured for them, any rules in enabled implementation guides
+   * will still be enforced.
+   *
+   * @param bool $disableFhirpathValidation
    */
   public function setDisableFhirpathValidation($disableFhirpathValidation)
   {
@@ -56,7 +103,11 @@ class ValidationConfig extends \Google\Collection
     return $this->disableFhirpathValidation;
   }
   /**
-   * @param bool
+   * Optional. Whether to disable profile validation for this FHIR store. The
+   * default value is false. Set this to true to disable checking incoming
+   * resources for conformance against structure definitions in this FHIR store.
+   *
+   * @param bool $disableProfileValidation
    */
   public function setDisableProfileValidation($disableProfileValidation)
   {
@@ -70,7 +121,14 @@ class ValidationConfig extends \Google\Collection
     return $this->disableProfileValidation;
   }
   /**
-   * @param bool
+   * Optional. Whether to disable reference type validation for incoming
+   * resources. The default value is false. Set this to true to disable checking
+   * incoming resources for conformance against reference type requirement
+   * defined in the FHIR specification. This property only affects resource
+   * types that do not have profiles configured for them, any rules in enabled
+   * implementation guides will still be enforced.
+   *
+   * @param bool $disableReferenceTypeValidation
    */
   public function setDisableReferenceTypeValidation($disableReferenceTypeValidation)
   {
@@ -84,7 +142,14 @@ class ValidationConfig extends \Google\Collection
     return $this->disableReferenceTypeValidation;
   }
   /**
-   * @param bool
+   * Optional. Whether to disable required fields validation for incoming
+   * resources. The default value is false. Set this to true to disable checking
+   * incoming resources for conformance against required fields requirement
+   * defined in the FHIR specification. This property only affects resource
+   * types that do not have profiles configured for them, any rules in enabled
+   * implementation guides will still be enforced.
+   *
+   * @param bool $disableRequiredFieldValidation
    */
   public function setDisableRequiredFieldValidation($disableRequiredFieldValidation)
   {
@@ -98,7 +163,22 @@ class ValidationConfig extends \Google\Collection
     return $this->disableRequiredFieldValidation;
   }
   /**
-   * @param string[]
+   * Optional. A list of implementation guide URLs in this FHIR store that are
+   * used to configure the profiles to use for validation. For example, to use
+   * the US Core profiles for validation, set `enabled_implementation_guides` to
+   * `["http://hl7.org/fhir/us/core/ImplementationGuide/ig"]`. If
+   * `enabled_implementation_guides` is empty or omitted, then incoming
+   * resources are only required to conform to the base FHIR profiles.
+   * Otherwise, a resource must conform to at least one profile listed in the
+   * `global` property of one of the enabled ImplementationGuides. The Cloud
+   * Healthcare API does not currently enforce all of the rules in a
+   * StructureDefinition. The following rules are supported: - min/max -
+   * minValue/maxValue - maxLength - type - fixed[x] - pattern[x] on simple
+   * types - slicing, when using "value" as the discriminator type When a URL
+   * cannot be resolved (for example, in a type assertion), the server does not
+   * return an error.
+   *
+   * @param string[] $enabledImplementationGuides
    */
   public function setEnabledImplementationGuides($enabledImplementationGuides)
   {

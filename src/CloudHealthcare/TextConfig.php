@@ -23,6 +23,9 @@ class TextConfig extends \Google\Collection
   protected $additionalTransformationsType = InfoTypeTransformation::class;
   protected $additionalTransformationsDataType = 'array';
   /**
+   * Optional. InfoTypes to skip transforming, overriding
+   * `additional_transformations`.
+   *
    * @var string[]
    */
   public $excludeInfoTypes;
@@ -30,7 +33,10 @@ class TextConfig extends \Google\Collection
   protected $transformationsDataType = 'array';
 
   /**
-   * @param InfoTypeTransformation[]
+   * Optional. Transformations to apply to the detected data, overridden by
+   * `exclude_info_types`.
+   *
+   * @param InfoTypeTransformation[] $additionalTransformations
    */
   public function setAdditionalTransformations($additionalTransformations)
   {
@@ -44,7 +50,10 @@ class TextConfig extends \Google\Collection
     return $this->additionalTransformations;
   }
   /**
-   * @param string[]
+   * Optional. InfoTypes to skip transforming, overriding
+   * `additional_transformations`.
+   *
+   * @param string[] $excludeInfoTypes
    */
   public function setExcludeInfoTypes($excludeInfoTypes)
   {
@@ -58,7 +67,10 @@ class TextConfig extends \Google\Collection
     return $this->excludeInfoTypes;
   }
   /**
-   * @param InfoTypeTransformation[]
+   * Optional. The transformations to apply to the detected data. Deprecated.
+   * Use `additional_transformations` instead.
+   *
+   * @param InfoTypeTransformation[] $transformations
    */
   public function setTransformations($transformations)
   {

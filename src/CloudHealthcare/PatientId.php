@@ -20,16 +20,22 @@ namespace Google\Service\CloudHealthcare;
 class PatientId extends \Google\Model
 {
   /**
+   * ID type. For example, MRN or NHS.
+   *
    * @var string
    */
   public $type;
   /**
+   * The patient's unique identifier.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * ID type. For example, MRN or NHS.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -43,7 +49,9 @@ class PatientId extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The patient's unique identifier.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

@@ -19,54 +19,98 @@ namespace Google\Service\CloudHealthcare;
 
 class RollbackFhirResourcesRequest extends \Google\Collection
 {
+  /**
+   * When unspecified, revert all transactions
+   */
+  public const CHANGE_TYPE_CHANGE_TYPE_UNSPECIFIED = 'CHANGE_TYPE_UNSPECIFIED';
+  /**
+   * All transactions
+   */
+  public const CHANGE_TYPE_ALL = 'ALL';
+  /**
+   * Revert only CREATE transactions
+   */
+  public const CHANGE_TYPE_CREATE = 'CREATE';
+  /**
+   * Revert only Update transactions
+   */
+  public const CHANGE_TYPE_UPDATE = 'UPDATE';
+  /**
+   * Revert only Delete transactions
+   */
+  public const CHANGE_TYPE_DELETE = 'DELETE';
   protected $collection_key = 'type';
   /**
+   * Optional. CREATE/UPDATE/DELETE/ALL for reverting all txns of a certain
+   * type.
+   *
    * @var string
    */
   public $changeType;
   /**
+   * Optional. Specifies whether to exclude earlier rollbacks.
+   *
    * @var bool
    */
   public $excludeRollbacks;
   protected $filteringFieldsType = RollbackFhirResourceFilteringFields::class;
   protected $filteringFieldsDataType = '';
   /**
+   * Optional. When enabled, changes will be reverted without explicit
+   * confirmation
+   *
    * @var bool
    */
   public $force;
   /**
+   * Optional. Cloud Storage object containing list of
+   * {resourceType}/{resourceId} lines, identifying resources to be reverted
+   *
    * @var string
    */
   public $inputGcsObject;
   /**
+   * Required. Bucket to deposit result
+   *
    * @var string
    */
   public $resultGcsBucket;
   /**
+   * Required. Time point to rollback to.
+   *
    * @var string
    */
   public $rollbackTime;
   /**
+   * Optional. If specified, revert only resources of these types
+   *
    * @var string[]
    */
   public $type;
 
   /**
-   * @param string
+   * Optional. CREATE/UPDATE/DELETE/ALL for reverting all txns of a certain
+   * type.
+   *
+   * Accepted values: CHANGE_TYPE_UNSPECIFIED, ALL, CREATE, UPDATE, DELETE
+   *
+   * @param self::CHANGE_TYPE_* $changeType
    */
   public function setChangeType($changeType)
   {
     $this->changeType = $changeType;
   }
   /**
-   * @return string
+   * @return self::CHANGE_TYPE_*
    */
   public function getChangeType()
   {
     return $this->changeType;
   }
   /**
-   * @param bool
+   * Optional. Specifies whether to exclude earlier rollbacks.
+   *
+   * @param bool $excludeRollbacks
    */
   public function setExcludeRollbacks($excludeRollbacks)
   {
@@ -80,7 +124,9 @@ class RollbackFhirResourcesRequest extends \Google\Collection
     return $this->excludeRollbacks;
   }
   /**
-   * @param RollbackFhirResourceFilteringFields
+   * Optional. Parameters for filtering resources
+   *
+   * @param RollbackFhirResourceFilteringFields $filteringFields
    */
   public function setFilteringFields(RollbackFhirResourceFilteringFields $filteringFields)
   {
@@ -94,7 +140,10 @@ class RollbackFhirResourcesRequest extends \Google\Collection
     return $this->filteringFields;
   }
   /**
-   * @param bool
+   * Optional. When enabled, changes will be reverted without explicit
+   * confirmation
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -108,7 +157,10 @@ class RollbackFhirResourcesRequest extends \Google\Collection
     return $this->force;
   }
   /**
-   * @param string
+   * Optional. Cloud Storage object containing list of
+   * {resourceType}/{resourceId} lines, identifying resources to be reverted
+   *
+   * @param string $inputGcsObject
    */
   public function setInputGcsObject($inputGcsObject)
   {
@@ -122,7 +174,9 @@ class RollbackFhirResourcesRequest extends \Google\Collection
     return $this->inputGcsObject;
   }
   /**
-   * @param string
+   * Required. Bucket to deposit result
+   *
+   * @param string $resultGcsBucket
    */
   public function setResultGcsBucket($resultGcsBucket)
   {
@@ -136,7 +190,9 @@ class RollbackFhirResourcesRequest extends \Google\Collection
     return $this->resultGcsBucket;
   }
   /**
-   * @param string
+   * Required. Time point to rollback to.
+   *
+   * @param string $rollbackTime
    */
   public function setRollbackTime($rollbackTime)
   {
@@ -150,7 +206,9 @@ class RollbackFhirResourcesRequest extends \Google\Collection
     return $this->rollbackTime;
   }
   /**
-   * @param string[]
+   * Optional. If specified, revert only resources of these types
+   *
+   * @param string[] $type
    */
   public function setType($type)
   {

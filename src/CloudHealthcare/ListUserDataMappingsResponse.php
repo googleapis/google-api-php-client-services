@@ -21,6 +21,9 @@ class ListUserDataMappingsResponse extends \Google\Collection
 {
   protected $collection_key = 'userDataMappings';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListUserDataMappingsResponse extends \Google\Collection
   protected $userDataMappingsDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,11 @@ class ListUserDataMappingsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param UserDataMapping[]
+   * The returned User data mappings. The maximum number of User data mappings
+   * returned is determined by the value of page_size in the
+   * ListUserDataMappingsRequest.
+   *
+   * @param UserDataMapping[] $userDataMappings
    */
   public function setUserDataMappings($userDataMappings)
   {

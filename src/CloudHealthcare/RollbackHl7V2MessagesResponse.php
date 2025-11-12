@@ -20,12 +20,20 @@ namespace Google\Service\CloudHealthcare;
 class RollbackHl7V2MessagesResponse extends \Google\Model
 {
   /**
+   * The name of the HL7v2 store to rollback, in the format of
+   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+   * /hl7v2Stores/{hl7v2_store_id}".
+   *
    * @var string
    */
   public $hl7v2Store;
 
   /**
-   * @param string
+   * The name of the HL7v2 store to rollback, in the format of
+   * "projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+   * /hl7v2Stores/{hl7v2_store_id}".
+   *
+   * @param string $hl7v2Store
    */
   public function setHl7v2Store($hl7v2Store)
   {

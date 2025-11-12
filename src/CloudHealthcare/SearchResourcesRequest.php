@@ -20,12 +20,26 @@ namespace Google\Service\CloudHealthcare;
 class SearchResourcesRequest extends \Google\Model
 {
   /**
+   * Optional. The FHIR resource type to search, such as Patient or Observation.
+   * For a complete list, see the FHIR Resource Index
+   * ([DSTU2](https://hl7.org/fhir/DSTU2/resourcelist.html),
+   * [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
+   * [R4](https://hl7.org/fhir/R4/resourcelist.html)),
+   * [R5](https://hl7.org/fhir/R5/resourcelist.html)).
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param string
+   * Optional. The FHIR resource type to search, such as Patient or Observation.
+   * For a complete list, see the FHIR Resource Index
+   * ([DSTU2](https://hl7.org/fhir/DSTU2/resourcelist.html),
+   * [STU3](https://hl7.org/fhir/STU3/resourcelist.html),
+   * [R4](https://hl7.org/fhir/R4/resourcelist.html)),
+   * [R5](https://hl7.org/fhir/R5/resourcelist.html)).
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {

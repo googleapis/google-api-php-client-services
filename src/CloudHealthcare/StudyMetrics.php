@@ -20,28 +20,42 @@ namespace Google\Service\CloudHealthcare;
 class StudyMetrics extends \Google\Model
 {
   /**
+   * Total blob storage bytes for all instances in the study.
+   *
    * @var string
    */
   public $blobStorageSizeBytes;
   /**
+   * Number of instances in the study.
+   *
    * @var string
    */
   public $instanceCount;
   /**
+   * Number of series in the study.
+   *
    * @var string
    */
   public $seriesCount;
   /**
+   * Total structured storage bytes for all instances in the study.
+   *
    * @var string
    */
   public $structuredStorageSizeBytes;
   /**
+   * The study resource path. For example, `projects/{project_id}/locations/{loc
+   * ation_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studi
+   * es/{study_uid}`.
+   *
    * @var string
    */
   public $study;
 
   /**
-   * @param string
+   * Total blob storage bytes for all instances in the study.
+   *
+   * @param string $blobStorageSizeBytes
    */
   public function setBlobStorageSizeBytes($blobStorageSizeBytes)
   {
@@ -55,7 +69,9 @@ class StudyMetrics extends \Google\Model
     return $this->blobStorageSizeBytes;
   }
   /**
-   * @param string
+   * Number of instances in the study.
+   *
+   * @param string $instanceCount
    */
   public function setInstanceCount($instanceCount)
   {
@@ -69,7 +85,9 @@ class StudyMetrics extends \Google\Model
     return $this->instanceCount;
   }
   /**
-   * @param string
+   * Number of series in the study.
+   *
+   * @param string $seriesCount
    */
   public function setSeriesCount($seriesCount)
   {
@@ -83,7 +101,9 @@ class StudyMetrics extends \Google\Model
     return $this->seriesCount;
   }
   /**
-   * @param string
+   * Total structured storage bytes for all instances in the study.
+   *
+   * @param string $structuredStorageSizeBytes
    */
   public function setStructuredStorageSizeBytes($structuredStorageSizeBytes)
   {
@@ -97,7 +117,11 @@ class StudyMetrics extends \Google\Model
     return $this->structuredStorageSizeBytes;
   }
   /**
-   * @param string
+   * The study resource path. For example, `projects/{project_id}/locations/{loc
+   * ation_id}/datasets/{dataset_id}/dicomStores/{dicom_store_id}/dicomWeb/studi
+   * es/{study_uid}`.
+   *
+   * @param string $study
    */
   public function setStudy($study)
   {

@@ -22,6 +22,10 @@ class StorageInfo extends \Google\Model
   protected $blobStorageInfoType = BlobStorageInfo::class;
   protected $blobStorageInfoDataType = '';
   /**
+   * The resource whose storage info is returned. For example: `projects/{projec
+   * tID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}
+   * /dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`
+   *
    * @var string
    */
   public $referencedResource;
@@ -29,7 +33,9 @@ class StorageInfo extends \Google\Model
   protected $structuredStorageInfoDataType = '';
 
   /**
-   * @param BlobStorageInfo
+   * Info about the data stored in blob storage for the resource.
+   *
+   * @param BlobStorageInfo $blobStorageInfo
    */
   public function setBlobStorageInfo(BlobStorageInfo $blobStorageInfo)
   {
@@ -43,7 +49,11 @@ class StorageInfo extends \Google\Model
     return $this->blobStorageInfo;
   }
   /**
-   * @param string
+   * The resource whose storage info is returned. For example: `projects/{projec
+   * tID}/locations/{locationID}/datasets/{datasetID}/dicomStores/{dicomStoreID}
+   * /dicomWeb/studies/{studyUID}/series/{seriesUID}/instances/{instanceUID}`
+   *
+   * @param string $referencedResource
    */
   public function setReferencedResource($referencedResource)
   {
@@ -57,7 +67,9 @@ class StorageInfo extends \Google\Model
     return $this->referencedResource;
   }
   /**
-   * @param StructuredStorageInfo
+   * Info about the data stored in structured storage for the resource.
+   *
+   * @param StructuredStorageInfo $structuredStorageInfo
    */
   public function setStructuredStorageInfo(StructuredStorageInfo $structuredStorageInfo)
   {

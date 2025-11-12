@@ -23,12 +23,18 @@ class ListMessagesResponse extends \Google\Collection
   protected $hl7V2MessagesType = Message::class;
   protected $hl7V2MessagesDataType = 'array';
   /**
+   * Token to retrieve the next page of results or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Message[]
+   * The returned Messages. Won't be more Messages than the value of page_size
+   * in the request. See view for populated fields.
+   *
+   * @param Message[] $hl7V2Messages
    */
   public function setHl7V2Messages($hl7V2Messages)
   {
@@ -42,7 +48,10 @@ class ListMessagesResponse extends \Google\Collection
     return $this->hl7V2Messages;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

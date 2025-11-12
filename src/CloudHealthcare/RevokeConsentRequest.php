@@ -20,12 +20,22 @@ namespace Google\Service\CloudHealthcare;
 class RevokeConsentRequest extends \Google\Model
 {
   /**
+   * Optional. The resource name of the Consent artifact that contains proof of
+   * the user's revocation of the Consent, of the form `projects/{project_id}/lo
+   * cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+   * }/consentArtifacts/{consent_artifact_id}`.
+   *
    * @var string
    */
   public $consentArtifact;
 
   /**
-   * @param string
+   * Optional. The resource name of the Consent artifact that contains proof of
+   * the user's revocation of the Consent, of the form `projects/{project_id}/lo
+   * cations/{location_id}/datasets/{dataset_id}/consentStores/{consent_store_id
+   * }/consentArtifacts/{consent_artifact_id}`.
+   *
+   * @param string $consentArtifact
    */
   public function setConsentArtifact($consentArtifact)
   {
