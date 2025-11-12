@@ -19,66 +19,141 @@ namespace Google\Service\IDS;
 
 class Endpoint extends \Google\Collection
 {
+  /**
+   * Not set.
+   */
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * Informational alerts.
+   */
+  public const SEVERITY_INFORMATIONAL = 'INFORMATIONAL';
+  /**
+   * Low severity alerts.
+   */
+  public const SEVERITY_LOW = 'LOW';
+  /**
+   * Medium severity alerts.
+   */
+  public const SEVERITY_MEDIUM = 'MEDIUM';
+  /**
+   * High severity alerts.
+   */
+  public const SEVERITY_HIGH = 'HIGH';
+  /**
+   * Critical severity alerts.
+   */
+  public const SEVERITY_CRITICAL = 'CRITICAL';
+  /**
+   * Not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Active and ready for traffic.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
   protected $collection_key = 'threatExceptions';
   /**
+   * Output only. The create time timestamp.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * User-provided description of the endpoint
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The fully qualified URL of the endpoint's ILB Forwarding Rule.
+   *
    * @var string
    */
   public $endpointForwardingRule;
   /**
+   * Output only. The IP address of the IDS Endpoint's ILB.
+   *
    * @var string
    */
   public $endpointIp;
   /**
+   * The labels of the endpoint.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The name of the endpoint.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The fully qualified URL of the network to which the IDS Endpoint
+   * is attached.
+   *
    * @var string
    */
   public $network;
   /**
+   * Output only. [Output Only] Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. [Output Only] Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Required. Lowest threat severity that this endpoint will alert on.
+   *
    * @var string
    */
   public $severity;
   /**
+   * Output only. Current state of the endpoint.
+   *
    * @var string
    */
   public $state;
   /**
+   * List of threat IDs to be excepted from generating alerts.
+   *
    * @var string[]
    */
   public $threatExceptions;
   /**
+   * Whether the endpoint should report traffic logs in addition to threat logs.
+   *
    * @var bool
    */
   public $trafficLogs;
   /**
+   * Output only. The update time timestamp.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The create time timestamp.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -92,7 +167,9 @@ class Endpoint extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * User-provided description of the endpoint
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -106,7 +183,9 @@ class Endpoint extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The fully qualified URL of the endpoint's ILB Forwarding Rule.
+   *
+   * @param string $endpointForwardingRule
    */
   public function setEndpointForwardingRule($endpointForwardingRule)
   {
@@ -120,7 +199,9 @@ class Endpoint extends \Google\Collection
     return $this->endpointForwardingRule;
   }
   /**
-   * @param string
+   * Output only. The IP address of the IDS Endpoint's ILB.
+   *
+   * @param string $endpointIp
    */
   public function setEndpointIp($endpointIp)
   {
@@ -134,7 +215,9 @@ class Endpoint extends \Google\Collection
     return $this->endpointIp;
   }
   /**
-   * @param string[]
+   * The labels of the endpoint.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -148,7 +231,9 @@ class Endpoint extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The name of the endpoint.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -162,7 +247,10 @@ class Endpoint extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The fully qualified URL of the network to which the IDS Endpoint
+   * is attached.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -176,7 +264,9 @@ class Endpoint extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param bool
+   * Output only. [Output Only] Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -190,7 +280,9 @@ class Endpoint extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. [Output Only] Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -204,35 +296,46 @@ class Endpoint extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Required. Lowest threat severity that this endpoint will alert on.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, INFORMATIONAL, LOW, MEDIUM, HIGH,
+   * CRITICAL
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
     return $this->severity;
   }
   /**
-   * @param string
+   * Output only. Current state of the endpoint.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, READY, DELETING, UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string[]
+   * List of threat IDs to be excepted from generating alerts.
+   *
+   * @param string[] $threatExceptions
    */
   public function setThreatExceptions($threatExceptions)
   {
@@ -246,7 +349,9 @@ class Endpoint extends \Google\Collection
     return $this->threatExceptions;
   }
   /**
-   * @param bool
+   * Whether the endpoint should report traffic logs in addition to threat logs.
+   *
+   * @param bool $trafficLogs
    */
   public function setTrafficLogs($trafficLogs)
   {
@@ -260,7 +365,9 @@ class Endpoint extends \Google\Collection
     return $this->trafficLogs;
   }
   /**
-   * @param string
+   * Output only. The update time timestamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
