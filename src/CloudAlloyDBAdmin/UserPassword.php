@@ -20,16 +20,22 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class UserPassword extends \Google\Model
 {
   /**
+   * The initial password for the user.
+   *
    * @var string
    */
   public $password;
   /**
+   * The database username.
+   *
    * @var string
    */
   public $user;
 
   /**
-   * @param string
+   * The initial password for the user.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -43,7 +49,9 @@ class UserPassword extends \Google\Model
     return $this->password;
   }
   /**
-   * @param string
+   * The database username.
+   *
+   * @param string $user
    */
   public function setUser($user)
   {

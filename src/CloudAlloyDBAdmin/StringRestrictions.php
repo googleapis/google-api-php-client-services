@@ -21,12 +21,18 @@ class StringRestrictions extends \Google\Collection
 {
   protected $collection_key = 'allowedValues';
   /**
+   * The list of allowed values, if bounded. This field will be empty if there
+   * is a unbounded number of allowed values.
+   *
    * @var string[]
    */
   public $allowedValues;
 
   /**
-   * @param string[]
+   * The list of allowed values, if bounded. This field will be empty if there
+   * is a unbounded number of allowed values.
+   *
+   * @param string[] $allowedValues
    */
   public function setAllowedValues($allowedValues)
   {

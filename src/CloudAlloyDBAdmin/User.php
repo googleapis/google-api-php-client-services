@@ -19,30 +19,58 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class User extends \Google\Collection
 {
+  /**
+   * Unspecified user type.
+   */
+  public const USER_TYPE_USER_TYPE_UNSPECIFIED = 'USER_TYPE_UNSPECIFIED';
+  /**
+   * The default user type that authenticates via password-based authentication.
+   */
+  public const USER_TYPE_ALLOYDB_BUILT_IN = 'ALLOYDB_BUILT_IN';
+  /**
+   * Database user that can authenticate via IAM-Based authentication.
+   */
+  public const USER_TYPE_ALLOYDB_IAM_USER = 'ALLOYDB_IAM_USER';
   protected $collection_key = 'databaseRoles';
   /**
+   * Optional. List of database roles this user has. The database role strings
+   * are subject to the PostgreSQL naming conventions.
+   *
    * @var string[]
    */
   public $databaseRoles;
   /**
+   * Input only. If the user already exists and it has additional roles, keep
+   * them granted.
+   *
    * @var bool
    */
   public $keepExtraRoles;
   /**
+   * Output only. Name of the resource in the form of
+   * projects/{project}/locations/{location}/cluster/{cluster}/users/{user}.
+   *
    * @var string
    */
   public $name;
   /**
+   * Input only. Password for the user.
+   *
    * @var string
    */
   public $password;
   /**
+   * Optional. Type of this user.
+   *
    * @var string
    */
   public $userType;
 
   /**
-   * @param string[]
+   * Optional. List of database roles this user has. The database role strings
+   * are subject to the PostgreSQL naming conventions.
+   *
+   * @param string[] $databaseRoles
    */
   public function setDatabaseRoles($databaseRoles)
   {
@@ -56,7 +84,10 @@ class User extends \Google\Collection
     return $this->databaseRoles;
   }
   /**
-   * @param bool
+   * Input only. If the user already exists and it has additional roles, keep
+   * them granted.
+   *
+   * @param bool $keepExtraRoles
    */
   public function setKeepExtraRoles($keepExtraRoles)
   {
@@ -70,7 +101,10 @@ class User extends \Google\Collection
     return $this->keepExtraRoles;
   }
   /**
-   * @param string
+   * Output only. Name of the resource in the form of
+   * projects/{project}/locations/{location}/cluster/{cluster}/users/{user}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -84,7 +118,9 @@ class User extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Input only. Password for the user.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -98,14 +134,18 @@ class User extends \Google\Collection
     return $this->password;
   }
   /**
-   * @param string
+   * Optional. Type of this user.
+   *
+   * Accepted values: USER_TYPE_UNSPECIFIED, ALLOYDB_BUILT_IN, ALLOYDB_IAM_USER
+   *
+   * @param self::USER_TYPE_* $userType
    */
   public function setUserType($userType)
   {
     $this->userType = $userType;
   }
   /**
-   * @return string
+   * @return self::USER_TYPE_*
    */
   public function getUserType()
   {

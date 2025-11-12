@@ -19,40 +19,95 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class SupportedDatabaseFlag extends \Google\Collection
 {
+  /**
+   * The scope of the flag is not specified. Default is DATABASE.
+   */
+  public const SCOPE_SCOPE_UNSPECIFIED = 'SCOPE_UNSPECIFIED';
+  /**
+   * The flag is a database flag.
+   */
+  public const SCOPE_DATABASE = 'DATABASE';
+  /**
+   * The flag is a connection pool flag.
+   */
+  public const SCOPE_CONNECTION_POOL = 'CONNECTION_POOL';
+  /**
+   * This is an unknown flag type.
+   */
+  public const VALUE_TYPE_VALUE_TYPE_UNSPECIFIED = 'VALUE_TYPE_UNSPECIFIED';
+  /**
+   * String type flag.
+   */
+  public const VALUE_TYPE_STRING = 'STRING';
+  /**
+   * Integer type flag.
+   */
+  public const VALUE_TYPE_INTEGER = 'INTEGER';
+  /**
+   * Float type flag.
+   */
+  public const VALUE_TYPE_FLOAT = 'FLOAT';
+  /**
+   * Denotes that the flag does not accept any values.
+   */
+  public const VALUE_TYPE_NONE = 'NONE';
   protected $collection_key = 'supportedDbVersions';
   /**
+   * Whether the database flag accepts multiple values. If true, a comma-
+   * separated list of stringified values may be specified.
+   *
    * @var bool
    */
   public $acceptsMultipleValues;
   /**
+   * The name of the database flag, e.g. "max_allowed_packets". The is a
+   * possibly key for the Instance.database_flags map field.
+   *
    * @var string
    */
   public $flagName;
   protected $integerRestrictionsType = IntegerRestrictions::class;
   protected $integerRestrictionsDataType = '';
   /**
+   * The name of the flag resource, following Google Cloud conventions, e.g.: *
+   * projects/{project}/locations/{location}/flags/{flag} This field currently
+   * has no semantic meaning.
+   *
    * @var string
    */
   public $name;
   /**
+   * The recommended value for an INTEGER flag.
+   *
    * @var string
    */
   public $recommendedIntegerValue;
   /**
+   * The recommended value for a STRING flag.
+   *
    * @var string
    */
   public $recommendedStringValue;
   /**
+   * Whether setting or updating this flag on an Instance requires a database
+   * restart. If a flag that requires database restart is set, the backend will
+   * automatically restart the database (making sure to satisfy any availability
+   * SLO's).
+   *
    * @var bool
    */
   public $requiresDbRestart;
   /**
+   * The scope of the flag.
+   *
    * @var string
    */
   public $scope;
   protected $stringRestrictionsType = StringRestrictions::class;
   protected $stringRestrictionsDataType = '';
   /**
+   * Major database engine versions for which this flag is supported.
+   *
    * @var string[]
    */
   public $supportedDbVersions;
@@ -62,7 +117,10 @@ class SupportedDatabaseFlag extends \Google\Collection
   public $valueType;
 
   /**
-   * @param bool
+   * Whether the database flag accepts multiple values. If true, a comma-
+   * separated list of stringified values may be specified.
+   *
+   * @param bool $acceptsMultipleValues
    */
   public function setAcceptsMultipleValues($acceptsMultipleValues)
   {
@@ -76,7 +134,10 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->acceptsMultipleValues;
   }
   /**
-   * @param string
+   * The name of the database flag, e.g. "max_allowed_packets". The is a
+   * possibly key for the Instance.database_flags map field.
+   *
+   * @param string $flagName
    */
   public function setFlagName($flagName)
   {
@@ -90,7 +151,9 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->flagName;
   }
   /**
-   * @param IntegerRestrictions
+   * Restriction on INTEGER type value.
+   *
+   * @param IntegerRestrictions $integerRestrictions
    */
   public function setIntegerRestrictions(IntegerRestrictions $integerRestrictions)
   {
@@ -104,7 +167,11 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->integerRestrictions;
   }
   /**
-   * @param string
+   * The name of the flag resource, following Google Cloud conventions, e.g.: *
+   * projects/{project}/locations/{location}/flags/{flag} This field currently
+   * has no semantic meaning.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -118,7 +185,9 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The recommended value for an INTEGER flag.
+   *
+   * @param string $recommendedIntegerValue
    */
   public function setRecommendedIntegerValue($recommendedIntegerValue)
   {
@@ -132,7 +201,9 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->recommendedIntegerValue;
   }
   /**
-   * @param string
+   * The recommended value for a STRING flag.
+   *
+   * @param string $recommendedStringValue
    */
   public function setRecommendedStringValue($recommendedStringValue)
   {
@@ -146,7 +217,12 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->recommendedStringValue;
   }
   /**
-   * @param bool
+   * Whether setting or updating this flag on an Instance requires a database
+   * restart. If a flag that requires database restart is set, the backend will
+   * automatically restart the database (making sure to satisfy any availability
+   * SLO's).
+   *
+   * @param bool $requiresDbRestart
    */
   public function setRequiresDbRestart($requiresDbRestart)
   {
@@ -160,21 +236,27 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->requiresDbRestart;
   }
   /**
-   * @param string
+   * The scope of the flag.
+   *
+   * Accepted values: SCOPE_UNSPECIFIED, DATABASE, CONNECTION_POOL
+   *
+   * @param self::SCOPE_* $scope
    */
   public function setScope($scope)
   {
     $this->scope = $scope;
   }
   /**
-   * @return string
+   * @return self::SCOPE_*
    */
   public function getScope()
   {
     return $this->scope;
   }
   /**
-   * @param StringRestrictions
+   * Restriction on STRING type value.
+   *
+   * @param StringRestrictions $stringRestrictions
    */
   public function setStringRestrictions(StringRestrictions $stringRestrictions)
   {
@@ -188,7 +270,9 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->stringRestrictions;
   }
   /**
-   * @param string[]
+   * Major database engine versions for which this flag is supported.
+   *
+   * @param string[] $supportedDbVersions
    */
   public function setSupportedDbVersions($supportedDbVersions)
   {
@@ -202,14 +286,14 @@ class SupportedDatabaseFlag extends \Google\Collection
     return $this->supportedDbVersions;
   }
   /**
-   * @param string
+   * @param self::VALUE_TYPE_* $valueType
    */
   public function setValueType($valueType)
   {
     $this->valueType = $valueType;
   }
   /**
-   * @return string
+   * @return self::VALUE_TYPE_*
    */
   public function getValueType()
   {
