@@ -21,10 +21,14 @@ class ListResourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Next page token if more resources available.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +36,9 @@ class ListResourcesResponse extends \Google\Collection
   protected $resourcesDataType = 'array';
 
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -46,7 +52,9 @@ class ListResourcesResponse extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Next page token if more resources available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListResourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ConnectorsResource[]
+   * List of available resources.
+   *
+   * @param ConnectorsResource[] $resources
    */
   public function setResources($resources)
   {

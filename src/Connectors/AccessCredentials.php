@@ -20,20 +20,28 @@ namespace Google\Service\Connectors;
 class AccessCredentials extends \Google\Model
 {
   /**
+   * OAuth access token.
+   *
    * @var string
    */
   public $accessToken;
   /**
+   * Duration till the access token expires.
+   *
    * @var string
    */
   public $expiresIn;
   /**
+   * OAuth refresh token.
+   *
    * @var string
    */
   public $refreshToken;
 
   /**
-   * @param string
+   * OAuth access token.
+   *
+   * @param string $accessToken
    */
   public function setAccessToken($accessToken)
   {
@@ -47,7 +55,9 @@ class AccessCredentials extends \Google\Model
     return $this->accessToken;
   }
   /**
-   * @param string
+   * Duration till the access token expires.
+   *
+   * @param string $expiresIn
    */
   public function setExpiresIn($expiresIn)
   {
@@ -61,7 +71,9 @@ class AccessCredentials extends \Google\Model
     return $this->expiresIn;
   }
   /**
-   * @param string
+   * OAuth refresh token.
+   *
+   * @param string $refreshToken
    */
   public function setRefreshToken($refreshToken)
   {

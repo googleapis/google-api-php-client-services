@@ -23,16 +23,22 @@ class ListEntitiesResponse extends \Google\Collection
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Next page token if more records are available.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Entity[]
+   * List containing entity rows.
+   *
+   * @param Entity[] $entities
    */
   public function setEntities($entities)
   {
@@ -46,7 +52,9 @@ class ListEntitiesResponse extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -60,7 +68,9 @@ class ListEntitiesResponse extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Next page token if more records are available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,20 +20,31 @@ namespace Google\Service\Connectors;
 class Entity extends \Google\Model
 {
   /**
+   * Fields of the entity. The key is name of the field and the value contains
+   * the applicable `google.protobuf.Value` entry for this field.
+   *
    * @var array[]
    */
   public $fields;
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Output only. Resource name of the Entity. Format: projects/{project}/locati
+   * ons/{location}/connections/{connection}/entityTypes/{type}/entities/{id}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param array[]
+   * Fields of the entity. The key is name of the field and the value contains
+   * the applicable `google.protobuf.Value` entry for this field.
+   *
+   * @param array[] $fields
    */
   public function setFields($fields)
   {
@@ -47,7 +58,9 @@ class Entity extends \Google\Model
     return $this->fields;
   }
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -61,7 +74,10 @@ class Entity extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * Output only. Resource name of the Entity. Format: projects/{project}/locati
+   * ons/{location}/connections/{connection}/entityTypes/{type}/entities/{id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

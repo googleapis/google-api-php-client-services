@@ -20,16 +20,33 @@ namespace Google\Service\Connectors;
 class ProvisionedResource extends \Google\Model
 {
   /**
+   * Type of the resource. This can be either a GCP resource or a custom one
+   * (e.g. another cloud provider's VM). For GCP compute resources use singular
+   * form of the names listed in GCP compute API documentation
+   * (https://cloud.google.com/compute/docs/reference/rest/v1/), prefixed with
+   * 'compute-', for example: 'compute-instance', 'compute-disk', 'compute-
+   * autoscaler'.
+   *
    * @var string
    */
   public $resourceType;
   /**
+   * URL identifying the resource, e.g.
+   * "https://www.googleapis.com/compute/v1/projects/...)".
+   *
    * @var string
    */
   public $resourceUrl;
 
   /**
-   * @param string
+   * Type of the resource. This can be either a GCP resource or a custom one
+   * (e.g. another cloud provider's VM). For GCP compute resources use singular
+   * form of the names listed in GCP compute API documentation
+   * (https://cloud.google.com/compute/docs/reference/rest/v1/), prefixed with
+   * 'compute-', for example: 'compute-instance', 'compute-disk', 'compute-
+   * autoscaler'.
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {
@@ -43,7 +60,10 @@ class ProvisionedResource extends \Google\Model
     return $this->resourceType;
   }
   /**
-   * @param string
+   * URL identifying the resource, e.g.
+   * "https://www.googleapis.com/compute/v1/projects/...)".
+   *
+   * @param string $resourceUrl
    */
   public function setResourceUrl($resourceUrl)
   {

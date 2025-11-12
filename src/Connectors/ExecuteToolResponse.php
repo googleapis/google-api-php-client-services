@@ -20,16 +20,22 @@ namespace Google\Service\Connectors;
 class ExecuteToolResponse extends \Google\Model
 {
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Output from the tool execution.
+   *
    * @var array[]
    */
   public $result;
 
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -43,7 +49,9 @@ class ExecuteToolResponse extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param array[]
+   * Output from the tool execution.
+   *
+   * @param array[] $result
    */
   public function setResult($result)
   {

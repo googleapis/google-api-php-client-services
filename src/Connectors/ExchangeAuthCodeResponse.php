@@ -22,12 +22,14 @@ class ExchangeAuthCodeResponse extends \Google\Model
   protected $accessCredentialsType = AccessCredentials::class;
   protected $accessCredentialsDataType = '';
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
 
   /**
-   * @param AccessCredentials
+   * @param AccessCredentials $accessCredentials
    */
   public function setAccessCredentials(AccessCredentials $accessCredentials)
   {
@@ -41,7 +43,9 @@ class ExchangeAuthCodeResponse extends \Google\Model
     return $this->accessCredentials;
   }
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {

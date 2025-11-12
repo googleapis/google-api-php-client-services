@@ -19,28 +19,91 @@ namespace Google\Service\Connectors;
 
 class Instance extends \Google\Collection
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Instance is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Instance has been created and is ready to use.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Instance is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Instance is unheathy and under repair.
+   */
+  public const STATE_REPAIRING = 'REPAIRING';
+  /**
+   * Instance is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Instance encountered an error and is in indeterministic state.
+   */
+  public const STATE_ERROR = 'ERROR';
   protected $collection_key = 'provisionedResources';
   /**
+   * consumer_defined_name is the name of the instance set by the service
+   * consumers. Generally this is different from the `name` field which
+   * reperesents the system-assigned id of the instance which the service
+   * consumers do not recognize. This is a required field for tenants onboarding
+   * to Maintenance Window notifications (go/slm-rollout-maintenance-
+   * policies#prerequisites).
+   *
    * @var string
    */
   public $consumerDefinedName;
   /**
+   * Optional. The consumer_project_number associated with this Apigee instance.
+   * This field is added specifically to support Apigee integration with SLM
+   * Rollout and UMM. It represents the numerical project ID of the GCP project
+   * that consumes this Apigee instance. It is used for SLM rollout
+   * notifications and UMM integration, enabling proper mapping to customer
+   * projects and log delivery for Apigee instances. This field complements
+   * consumer_project_id and may be used for specific Apigee scenarios where the
+   * numerical ID is required.
+   *
    * @var string
    */
   public $consumerProjectNumber;
   /**
+   * Output only. Timestamp when the resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The instance_type of this instance of format: projects/{project_n
+   * umber}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance
+   * Type represents a high-level tier or SKU of the service that this instance
+   * belong to. When enabled(eg: Maintenance Rollout), Rollout uses
+   * 'instance_type' along with 'software_versions' to determine whether
+   * instance needs an update or not.
+   *
    * @var string
    */
   public $instanceType;
   /**
+   * Optional. Resource labels to represent user provided metadata. Each label
+   * is a key-value pair, where both the key and the value are arbitrary strings
+   * provided by the user.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. The MaintenancePolicies that have been attached to the instance.
+   * The key must be of the type name of the oneof policy name defined in
+   * MaintenancePolicy, and the referenced policy must define the same policy
+   * type. For details, please refer to go/mr-user-guide. Should not be set if
+   * maintenance_settings.maintenance_policies is set.
+   *
    * @var string[]
    */
   public $maintenancePolicyNames;
@@ -49,42 +112,76 @@ class Instance extends \Google\Collection
   protected $maintenanceSettingsType = MaintenanceSettings::class;
   protected $maintenanceSettingsDataType = '';
   /**
+   * Unique name of the resource. It uses the form:
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}`
+   * Note: This name is passed, stored and logged across the rollout system. So
+   * use of consumer project_id or any other consumer PII in the name is
+   * strongly discouraged for wipeout (go/wipeout) compliance. See
+   * go/elysium/project_ids#storage-guidance for more details.
+   *
    * @var string
    */
   public $name;
   protected $notificationParametersType = NotificationParameter::class;
   protected $notificationParametersDataType = 'map';
   /**
+   * Output only. Custom string attributes used primarily to expose producer-
+   * specific information in monitoring dashboards. See go/get-instance-
+   * metadata.
+   *
    * @var string[]
    */
   public $producerMetadata;
   protected $provisionedResourcesType = ProvisionedResource::class;
   protected $provisionedResourcesDataType = 'array';
   /**
+   * Link to the SLM instance template. Only populated when updating SLM
+   * instances via SSA's Actuation service adaptor. Service producers with
+   * custom control plane (e.g. Cloud SQL) doesn't need to populate this field.
+   * Instead they should use software_versions.
+   *
    * @var string
    */
   public $slmInstanceTemplate;
   protected $sloMetadataType = SloMetadata::class;
   protected $sloMetadataDataType = '';
   /**
+   * Software versions that are used to deploy this instance. This can be
+   * mutated by rollout services.
+   *
    * @var string[]
    */
   public $softwareVersions;
   /**
+   * Output only. Current lifecycle state of the resource (e.g. if it's being
+   * created or ready to use).
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. ID of the associated GCP tenant project. See go/get-instance-
+   * metadata.
+   *
    * @var string
    */
   public $tenantProjectId;
   /**
+   * Output only. Timestamp when the resource was last modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * consumer_defined_name is the name of the instance set by the service
+   * consumers. Generally this is different from the `name` field which
+   * reperesents the system-assigned id of the instance which the service
+   * consumers do not recognize. This is a required field for tenants onboarding
+   * to Maintenance Window notifications (go/slm-rollout-maintenance-
+   * policies#prerequisites).
+   *
+   * @param string $consumerDefinedName
    */
   public function setConsumerDefinedName($consumerDefinedName)
   {
@@ -98,7 +195,16 @@ class Instance extends \Google\Collection
     return $this->consumerDefinedName;
   }
   /**
-   * @param string
+   * Optional. The consumer_project_number associated with this Apigee instance.
+   * This field is added specifically to support Apigee integration with SLM
+   * Rollout and UMM. It represents the numerical project ID of the GCP project
+   * that consumes this Apigee instance. It is used for SLM rollout
+   * notifications and UMM integration, enabling proper mapping to customer
+   * projects and log delivery for Apigee instances. This field complements
+   * consumer_project_id and may be used for specific Apigee scenarios where the
+   * numerical ID is required.
+   *
+   * @param string $consumerProjectNumber
    */
   public function setConsumerProjectNumber($consumerProjectNumber)
   {
@@ -112,7 +218,9 @@ class Instance extends \Google\Collection
     return $this->consumerProjectNumber;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -126,7 +234,14 @@ class Instance extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The instance_type of this instance of format: projects/{project_n
+   * umber}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance
+   * Type represents a high-level tier or SKU of the service that this instance
+   * belong to. When enabled(eg: Maintenance Rollout), Rollout uses
+   * 'instance_type' along with 'software_versions' to determine whether
+   * instance needs an update or not.
+   *
+   * @param string $instanceType
    */
   public function setInstanceType($instanceType)
   {
@@ -140,7 +255,11 @@ class Instance extends \Google\Collection
     return $this->instanceType;
   }
   /**
-   * @param string[]
+   * Optional. Resource labels to represent user provided metadata. Each label
+   * is a key-value pair, where both the key and the value are arbitrary strings
+   * provided by the user.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -154,7 +273,13 @@ class Instance extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string[]
+   * Optional. The MaintenancePolicies that have been attached to the instance.
+   * The key must be of the type name of the oneof policy name defined in
+   * MaintenancePolicy, and the referenced policy must define the same policy
+   * type. For details, please refer to go/mr-user-guide. Should not be set if
+   * maintenance_settings.maintenance_policies is set.
+   *
+   * @param string[] $maintenancePolicyNames
    */
   public function setMaintenancePolicyNames($maintenancePolicyNames)
   {
@@ -168,7 +293,10 @@ class Instance extends \Google\Collection
     return $this->maintenancePolicyNames;
   }
   /**
-   * @param MaintenanceSchedule[]
+   * The MaintenanceSchedule contains the scheduling information of published
+   * maintenance schedule with same key as software_versions.
+   *
+   * @param MaintenanceSchedule[] $maintenanceSchedules
    */
   public function setMaintenanceSchedules($maintenanceSchedules)
   {
@@ -182,7 +310,9 @@ class Instance extends \Google\Collection
     return $this->maintenanceSchedules;
   }
   /**
-   * @param MaintenanceSettings
+   * Optional. The MaintenanceSettings associated with instance.
+   *
+   * @param MaintenanceSettings $maintenanceSettings
    */
   public function setMaintenanceSettings(MaintenanceSettings $maintenanceSettings)
   {
@@ -196,7 +326,14 @@ class Instance extends \Google\Collection
     return $this->maintenanceSettings;
   }
   /**
-   * @param string
+   * Unique name of the resource. It uses the form:
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}`
+   * Note: This name is passed, stored and logged across the rollout system. So
+   * use of consumer project_id or any other consumer PII in the name is
+   * strongly discouraged for wipeout (go/wipeout) compliance. See
+   * go/elysium/project_ids#storage-guidance for more details.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -210,7 +347,11 @@ class Instance extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param NotificationParameter[]
+   * Optional. notification_parameter are information that service producers may
+   * like to include that is not relevant to Rollout. This parameter will only
+   * be passed to Gamma and Cloud Logging for notification/logging purpose.
+   *
+   * @param NotificationParameter[] $notificationParameters
    */
   public function setNotificationParameters($notificationParameters)
   {
@@ -224,7 +365,11 @@ class Instance extends \Google\Collection
     return $this->notificationParameters;
   }
   /**
-   * @param string[]
+   * Output only. Custom string attributes used primarily to expose producer-
+   * specific information in monitoring dashboards. See go/get-instance-
+   * metadata.
+   *
+   * @param string[] $producerMetadata
    */
   public function setProducerMetadata($producerMetadata)
   {
@@ -238,7 +383,10 @@ class Instance extends \Google\Collection
     return $this->producerMetadata;
   }
   /**
-   * @param ProvisionedResource[]
+   * Output only. The list of data plane resources provisioned for this
+   * instance, e.g. compute VMs. See go/get-instance-metadata.
+   *
+   * @param ProvisionedResource[] $provisionedResources
    */
   public function setProvisionedResources($provisionedResources)
   {
@@ -252,7 +400,12 @@ class Instance extends \Google\Collection
     return $this->provisionedResources;
   }
   /**
-   * @param string
+   * Link to the SLM instance template. Only populated when updating SLM
+   * instances via SSA's Actuation service adaptor. Service producers with
+   * custom control plane (e.g. Cloud SQL) doesn't need to populate this field.
+   * Instead they should use software_versions.
+   *
+   * @param string $slmInstanceTemplate
    */
   public function setSlmInstanceTemplate($slmInstanceTemplate)
   {
@@ -266,7 +419,11 @@ class Instance extends \Google\Collection
     return $this->slmInstanceTemplate;
   }
   /**
-   * @param SloMetadata
+   * Output only. SLO metadata for instance classification in the Standardized
+   * dataplane SLO platform. See go/cloud-ssa-standard-slo for feature
+   * description.
+   *
+   * @param SloMetadata $sloMetadata
    */
   public function setSloMetadata(SloMetadata $sloMetadata)
   {
@@ -280,7 +437,10 @@ class Instance extends \Google\Collection
     return $this->sloMetadata;
   }
   /**
-   * @param string[]
+   * Software versions that are used to deploy this instance. This can be
+   * mutated by rollout services.
+   *
+   * @param string[] $softwareVersions
    */
   public function setSoftwareVersions($softwareVersions)
   {
@@ -294,21 +454,30 @@ class Instance extends \Google\Collection
     return $this->softwareVersions;
   }
   /**
-   * @param string
+   * Output only. Current lifecycle state of the resource (e.g. if it's being
+   * created or ready to use).
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, READY, UPDATING, REPAIRING,
+   * DELETING, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. ID of the associated GCP tenant project. See go/get-instance-
+   * metadata.
+   *
+   * @param string $tenantProjectId
    */
   public function setTenantProjectId($tenantProjectId)
   {
@@ -322,7 +491,9 @@ class Instance extends \Google\Collection
     return $this->tenantProjectId;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the resource was last modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -21,16 +21,27 @@ class ExecuteActionResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * In the case of successful invocation of the specified action, the results
+   * Struct contains values based on the response of the action invoked. 1. If
+   * the action execution produces any entities as a result, they are returned
+   * as an array of Structs with the 'key' being the field name and the 'value'
+   * being the value of that field in each result row. { 'results': [{'key':
+   * 'value'}, ...] }
+   *
    * @var array[]
    */
   public $results;
 
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -44,7 +55,14 @@ class ExecuteActionResponse extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param array[]
+   * In the case of successful invocation of the specified action, the results
+   * Struct contains values based on the response of the action invoked. 1. If
+   * the action execution produces any entities as a result, they are returned
+   * as an array of Structs with the 'key' being the field name and the 'value'
+   * being the value of that field in each result row. { 'results': [{'key':
+   * 'value'}, ...] }
+   *
+   * @param array[] $results
    */
   public function setResults($results)
   {

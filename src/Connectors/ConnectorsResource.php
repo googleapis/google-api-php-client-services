@@ -20,28 +20,40 @@ namespace Google\Service\Connectors;
 class ConnectorsResource extends \Google\Model
 {
   /**
+   * A description of what this resource represents.
+   *
    * @var string
    */
   public $description;
   /**
+   * The MIME type of this resource, if known.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * A human-readable name for this resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * The size of the raw resource content, in bytes, if known.
+   *
    * @var string
    */
   public $size;
   /**
+   * The URI of this resource.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * A description of what this resource represents.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -55,7 +67,9 @@ class ConnectorsResource extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The MIME type of this resource, if known.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -69,7 +83,9 @@ class ConnectorsResource extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * A human-readable name for this resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +99,9 @@ class ConnectorsResource extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The size of the raw resource content, in bytes, if known.
+   *
+   * @param string $size
    */
   public function setSize($size)
   {
@@ -97,7 +115,9 @@ class ConnectorsResource extends \Google\Model
     return $this->size;
   }
   /**
-   * @param string
+   * The URI of this resource.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

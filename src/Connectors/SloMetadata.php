@@ -25,12 +25,21 @@ class SloMetadata extends \Google\Collection
   protected $perSliEligibilityType = PerSliSloEligibility::class;
   protected $perSliEligibilityDataType = '';
   /**
+   * Name of the SLO tier the Instance belongs to. This name will be expected to
+   * match the tiers specified in the service SLO configuration. Field is
+   * mandatory and must not be empty.
+   *
    * @var string
    */
   public $tier;
 
   /**
-   * @param NodeSloMetadata[]
+   * Optional. List of nodes. Some producers need to use per-node metadata to
+   * calculate SLO. This field allows such producers to publish per-node SLO
+   * meta data, which will be consumed by SSA Eligibility Exporter and published
+   * in the form of per node metric to Monarch.
+   *
+   * @param NodeSloMetadata[] $nodes
    */
   public function setNodes($nodes)
   {
@@ -44,7 +53,10 @@ class SloMetadata extends \Google\Collection
     return $this->nodes;
   }
   /**
-   * @param PerSliSloEligibility
+   * Optional. Multiple per-instance SLI eligibilities which apply for
+   * individual SLIs.
+   *
+   * @param PerSliSloEligibility $perSliEligibility
    */
   public function setPerSliEligibility(PerSliSloEligibility $perSliEligibility)
   {
@@ -58,7 +70,11 @@ class SloMetadata extends \Google\Collection
     return $this->perSliEligibility;
   }
   /**
-   * @param string
+   * Name of the SLO tier the Instance belongs to. This name will be expected to
+   * match the tiers specified in the service SLO configuration. Field is
+   * mandatory and must not be empty.
+   *
+   * @param string $tier
    */
   public function setTier($tier)
   {

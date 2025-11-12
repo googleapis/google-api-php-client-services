@@ -20,16 +20,24 @@ namespace Google\Service\Connectors;
 class SloEligibility extends \Google\Model
 {
   /**
+   * Whether an instance is eligible or ineligible.
+   *
    * @var bool
    */
   public $eligible;
   /**
+   * User-defined reason for the current value of instance eligibility. Usually,
+   * this can be directly mapped to the internal state. An empty reason is
+   * allowed.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param bool
+   * Whether an instance is eligible or ineligible.
+   *
+   * @param bool $eligible
    */
   public function setEligible($eligible)
   {
@@ -43,7 +51,11 @@ class SloEligibility extends \Google\Model
     return $this->eligible;
   }
   /**
-   * @param string
+   * User-defined reason for the current value of instance eligibility. Usually,
+   * this can be directly mapped to the internal state. An empty reason is
+   * allowed.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

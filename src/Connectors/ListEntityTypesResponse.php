@@ -21,22 +21,31 @@ class ListEntityTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'unsupportedTypeNames';
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Next page token if more entity types available.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $typesType = EntityType::class;
   protected $typesDataType = 'array';
   /**
+   * List of entity type names which contain unsupported Datatypes. Check
+   * datatype.proto for more information.
+   *
    * @var string[]
    */
   public $unsupportedTypeNames;
 
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -50,7 +59,9 @@ class ListEntityTypesResponse extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Next page token if more entity types available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -64,7 +75,9 @@ class ListEntityTypesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param EntityType[]
+   * List of metadata related to all entity types.
+   *
+   * @param EntityType[] $types
    */
   public function setTypes($types)
   {
@@ -78,7 +91,10 @@ class ListEntityTypesResponse extends \Google\Collection
     return $this->types;
   }
   /**
-   * @param string[]
+   * List of entity type names which contain unsupported Datatypes. Check
+   * datatype.proto for more information.
+   *
+   * @param string[] $unsupportedTypeNames
    */
   public function setUnsupportedTypeNames($unsupportedTypeNames)
   {

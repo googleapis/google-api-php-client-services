@@ -20,10 +20,14 @@ namespace Google\Service\Connectors;
 class NodeSloMetadata extends \Google\Model
 {
   /**
+   * The location of the node, if different from instance location.
+   *
    * @var string
    */
   public $location;
   /**
+   * The id of the node. This should be equal to SaasInstanceNode.node_id.
+   *
    * @var string
    */
   public $nodeId;
@@ -31,7 +35,9 @@ class NodeSloMetadata extends \Google\Model
   protected $perSliEligibilityDataType = '';
 
   /**
-   * @param string
+   * The location of the node, if different from instance location.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -45,7 +51,9 @@ class NodeSloMetadata extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The id of the node. This should be equal to SaasInstanceNode.node_id.
+   *
+   * @param string $nodeId
    */
   public function setNodeId($nodeId)
   {
@@ -59,7 +67,10 @@ class NodeSloMetadata extends \Google\Model
     return $this->nodeId;
   }
   /**
-   * @param PerSliSloEligibility
+   * If present, this will override eligibility for the node coming from
+   * instance or exclusions for specified SLIs.
+   *
+   * @param PerSliSloEligibility $perSliEligibility
    */
   public function setPerSliEligibility(PerSliSloEligibility $perSliEligibility)
   {

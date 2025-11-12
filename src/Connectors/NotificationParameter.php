@@ -21,12 +21,16 @@ class NotificationParameter extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Optional. Array of string values. e.g. instance's replica information.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Optional. Array of string values. e.g. instance's replica information.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

@@ -21,22 +21,32 @@ class Query extends \Google\Collection
 {
   protected $collection_key = 'queryParameters';
   /**
+   * Sets the limit for the maximum number of rows returned after the query
+   * execution.
+   *
    * @var string
    */
   public $maxRows;
   /**
+   * Required. Sql query to execute.
+   *
    * @var string
    */
   public $query;
   protected $queryParametersType = QueryParameter::class;
   protected $queryParametersDataType = 'array';
   /**
+   * Sets the number of seconds the driver will wait for a query to execute.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param string
+   * Sets the limit for the maximum number of rows returned after the query
+   * execution.
+   *
+   * @param string $maxRows
    */
   public function setMaxRows($maxRows)
   {
@@ -50,7 +60,9 @@ class Query extends \Google\Collection
     return $this->maxRows;
   }
   /**
-   * @param string
+   * Required. Sql query to execute.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -64,7 +76,10 @@ class Query extends \Google\Collection
     return $this->query;
   }
   /**
-   * @param QueryParameter[]
+   * In the struct, the value corresponds to the value of query parameter and
+   * date type corresponds to the date type of the query parameter.
+   *
+   * @param QueryParameter[] $queryParameters
    */
   public function setQueryParameters($queryParameters)
   {
@@ -78,7 +93,9 @@ class Query extends \Google\Collection
     return $this->queryParameters;
   }
   /**
-   * @param string
+   * Sets the number of seconds the driver will wait for a query to execute.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {

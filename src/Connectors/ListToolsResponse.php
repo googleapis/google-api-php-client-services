@@ -21,10 +21,14 @@ class ListToolsResponse extends \Google\Collection
 {
   protected $collection_key = 'tools';
   /**
+   * Metadata like service latency, etc.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +36,9 @@ class ListToolsResponse extends \Google\Collection
   protected $toolsDataType = 'array';
 
   /**
-   * @param array[]
+   * Metadata like service latency, etc.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -46,7 +52,9 @@ class ListToolsResponse extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListToolsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Tool[]
+   * List of available tools.
+   *
+   * @param Tool[] $tools
    */
   public function setTools($tools)
   {

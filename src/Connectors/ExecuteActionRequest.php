@@ -20,12 +20,18 @@ namespace Google\Service\Connectors;
 class ExecuteActionRequest extends \Google\Model
 {
   /**
+   * Parameters for executing the action. The parameters can be key/value pairs
+   * or nested structs.
+   *
    * @var array[]
    */
   public $parameters;
 
   /**
-   * @param array[]
+   * Parameters for executing the action. The parameters can be key/value pairs
+   * or nested structs.
+   *
+   * @param array[] $parameters
    */
   public function setParameters($parameters)
   {

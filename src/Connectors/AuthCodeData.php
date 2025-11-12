@@ -21,24 +21,37 @@ class AuthCodeData extends \Google\Collection
 {
   protected $collection_key = 'scopes';
   /**
+   * OAuth authorization code.
+   *
    * @var string
    */
   public $authCode;
   /**
+   * OAuth PKCE verifier, needed if PKCE is enabled for this particular
+   * connection.
+   *
    * @var string
    */
   public $pkceVerifier;
   /**
+   * OAuth redirect URI passed in during the auth code flow, required by some
+   * OAuth backends.
+   *
    * @var string
    */
   public $redirectUri;
   /**
+   * Scopes the connection will request when the user performs the auth code
+   * flow.
+   *
    * @var string[]
    */
   public $scopes;
 
   /**
-   * @param string
+   * OAuth authorization code.
+   *
+   * @param string $authCode
    */
   public function setAuthCode($authCode)
   {
@@ -52,7 +65,10 @@ class AuthCodeData extends \Google\Collection
     return $this->authCode;
   }
   /**
-   * @param string
+   * OAuth PKCE verifier, needed if PKCE is enabled for this particular
+   * connection.
+   *
+   * @param string $pkceVerifier
    */
   public function setPkceVerifier($pkceVerifier)
   {
@@ -66,7 +82,10 @@ class AuthCodeData extends \Google\Collection
     return $this->pkceVerifier;
   }
   /**
-   * @param string
+   * OAuth redirect URI passed in during the auth code flow, required by some
+   * OAuth backends.
+   *
+   * @param string $redirectUri
    */
   public function setRedirectUri($redirectUri)
   {
@@ -80,7 +99,10 @@ class AuthCodeData extends \Google\Collection
     return $this->redirectUri;
   }
   /**
-   * @param string[]
+   * Scopes the connection will request when the user performs the auth code
+   * flow.
+   *
+   * @param string[] $scopes
    */
   public function setScopes($scopes)
   {
