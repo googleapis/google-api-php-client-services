@@ -23,7 +23,7 @@ class RoutersGetRoutePolicyResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param RoutePolicy
+   * @param RoutePolicy $resource
    */
   public function setResource(RoutePolicy $resource)
   {

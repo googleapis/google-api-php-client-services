@@ -20,6 +20,8 @@ namespace Google\Service\Compute;
 class RouterStatusResponse extends \Google\Model
 {
   /**
+   * Type of resource.
+   *
    * @var string
    */
   public $kind;
@@ -27,7 +29,9 @@ class RouterStatusResponse extends \Google\Model
   protected $resultDataType = '';
 
   /**
-   * @param string
+   * Type of resource.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -41,7 +45,7 @@ class RouterStatusResponse extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param RouterStatus
+   * @param RouterStatus $result
    */
   public function setResult(RouterStatus $result)
   {

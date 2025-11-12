@@ -21,42 +21,66 @@ class RouterStatusNatStatus extends \Google\Collection
 {
   protected $collection_key = 'userAllocatedNatIps';
   /**
+   * A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
+   *
    * @var string[]
    */
   public $autoAllocatedNatIps;
   /**
+   * A list of IPs auto-allocated for NAT that are in drain mode. Example:
+   * ["1.1.1.1", "179.12.26.133"].
+   *
    * @var string[]
    */
   public $drainAutoAllocatedNatIps;
   /**
+   * A list of IPs user-allocated for NAT that are in drain mode. Example:
+   * ["1.1.1.1", "179.12.26.133"].
+   *
    * @var string[]
    */
   public $drainUserAllocatedNatIps;
   /**
+   * The number of extra IPs to allocate. This will be greater than 0 only if
+   * user-specified IPs are NOT enough to allow all configured VMs to use NAT.
+   * This value is meaningful only when auto-allocation of NAT IPs is *not*
+   * used.
+   *
    * @var int
    */
   public $minExtraNatIpsNeeded;
   /**
+   * Unique name of this NAT.
+   *
    * @var string
    */
   public $name;
   /**
+   * Number of VM endpoints (i.e., Nics) that can use NAT.
+   *
    * @var int
    */
   public $numVmEndpointsWithNatMappings;
   protected $ruleStatusType = RouterStatusNatStatusNatRuleStatus::class;
   protected $ruleStatusDataType = 'array';
   /**
+   * A list of fully qualified URLs of reserved IP address resources.
+   *
    * @var string[]
    */
   public $userAllocatedNatIpResources;
   /**
+   * A list of IPs user-allocated for NAT. They will be raw IP strings like
+   * "179.12.26.133".
+   *
    * @var string[]
    */
   public $userAllocatedNatIps;
 
   /**
-   * @param string[]
+   * A list of IPs auto-allocated for NAT. Example: ["1.1.1.1", "129.2.16.89"]
+   *
+   * @param string[] $autoAllocatedNatIps
    */
   public function setAutoAllocatedNatIps($autoAllocatedNatIps)
   {
@@ -70,7 +94,10 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->autoAllocatedNatIps;
   }
   /**
-   * @param string[]
+   * A list of IPs auto-allocated for NAT that are in drain mode. Example:
+   * ["1.1.1.1", "179.12.26.133"].
+   *
+   * @param string[] $drainAutoAllocatedNatIps
    */
   public function setDrainAutoAllocatedNatIps($drainAutoAllocatedNatIps)
   {
@@ -84,7 +111,10 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->drainAutoAllocatedNatIps;
   }
   /**
-   * @param string[]
+   * A list of IPs user-allocated for NAT that are in drain mode. Example:
+   * ["1.1.1.1", "179.12.26.133"].
+   *
+   * @param string[] $drainUserAllocatedNatIps
    */
   public function setDrainUserAllocatedNatIps($drainUserAllocatedNatIps)
   {
@@ -98,7 +128,12 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->drainUserAllocatedNatIps;
   }
   /**
-   * @param int
+   * The number of extra IPs to allocate. This will be greater than 0 only if
+   * user-specified IPs are NOT enough to allow all configured VMs to use NAT.
+   * This value is meaningful only when auto-allocation of NAT IPs is *not*
+   * used.
+   *
+   * @param int $minExtraNatIpsNeeded
    */
   public function setMinExtraNatIpsNeeded($minExtraNatIpsNeeded)
   {
@@ -112,7 +147,9 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->minExtraNatIpsNeeded;
   }
   /**
-   * @param string
+   * Unique name of this NAT.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -126,7 +163,9 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * Number of VM endpoints (i.e., Nics) that can use NAT.
+   *
+   * @param int $numVmEndpointsWithNatMappings
    */
   public function setNumVmEndpointsWithNatMappings($numVmEndpointsWithNatMappings)
   {
@@ -140,7 +179,9 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->numVmEndpointsWithNatMappings;
   }
   /**
-   * @param RouterStatusNatStatusNatRuleStatus[]
+   * Status of rules in this NAT.
+   *
+   * @param RouterStatusNatStatusNatRuleStatus[] $ruleStatus
    */
   public function setRuleStatus($ruleStatus)
   {
@@ -154,7 +195,9 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->ruleStatus;
   }
   /**
-   * @param string[]
+   * A list of fully qualified URLs of reserved IP address resources.
+   *
+   * @param string[] $userAllocatedNatIpResources
    */
   public function setUserAllocatedNatIpResources($userAllocatedNatIpResources)
   {
@@ -168,7 +211,10 @@ class RouterStatusNatStatus extends \Google\Collection
     return $this->userAllocatedNatIpResources;
   }
   /**
-   * @param string[]
+   * A list of IPs user-allocated for NAT. They will be raw IP strings like
+   * "179.12.26.133".
+   *
+   * @param string[] $userAllocatedNatIps
    */
   public function setUserAllocatedNatIps($userAllocatedNatIps)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class SecurityPolicyRuleRateLimitOptionsThreshold extends \Google\Model
 {
   /**
+   * Number of HTTP(S) requests for calculating the threshold.
+   *
    * @var int
    */
   public $count;
   /**
+   * Interval over which the threshold is computed.
+   *
    * @var int
    */
   public $intervalSec;
 
   /**
-   * @param int
+   * Number of HTTP(S) requests for calculating the threshold.
+   *
+   * @param int $count
    */
   public function setCount($count)
   {
@@ -43,7 +49,9 @@ class SecurityPolicyRuleRateLimitOptionsThreshold extends \Google\Model
     return $this->count;
   }
   /**
-   * @param int
+   * Interval over which the threshold is computed.
+   *
+   * @param int $intervalSec
    */
   public function setIntervalSec($intervalSec)
   {

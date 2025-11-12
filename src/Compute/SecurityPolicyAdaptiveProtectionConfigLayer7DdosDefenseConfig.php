@@ -19,12 +19,21 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig extends \Google\Collection
 {
+  public const RULE_VISIBILITY_PREMIUM = 'PREMIUM';
+  public const RULE_VISIBILITY_STANDARD = 'STANDARD';
   protected $collection_key = 'thresholdConfigs';
   /**
+   * If set to true, enables CAAP for L7 DDoS detection. This field is only
+   * supported in Global Security Policies of type CLOUD_ARMOR.
+   *
    * @var bool
    */
   public $enable;
   /**
+   * Rule visibility can be one of the following: STANDARD - opaque rules.
+   * (default) PREMIUM - transparent rules. This field is only supported in
+   * Global Security Policies of type CLOUD_ARMOR.
+   *
    * @var string
    */
   public $ruleVisibility;
@@ -32,7 +41,10 @@ class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig extends \Goo
   protected $thresholdConfigsDataType = 'array';
 
   /**
-   * @param bool
+   * If set to true, enables CAAP for L7 DDoS detection. This field is only
+   * supported in Global Security Policies of type CLOUD_ARMOR.
+   *
+   * @param bool $enable
    */
   public function setEnable($enable)
   {
@@ -46,21 +58,30 @@ class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig extends \Goo
     return $this->enable;
   }
   /**
-   * @param string
+   * Rule visibility can be one of the following: STANDARD - opaque rules.
+   * (default) PREMIUM - transparent rules. This field is only supported in
+   * Global Security Policies of type CLOUD_ARMOR.
+   *
+   * Accepted values: PREMIUM, STANDARD
+   *
+   * @param self::RULE_VISIBILITY_* $ruleVisibility
    */
   public function setRuleVisibility($ruleVisibility)
   {
     $this->ruleVisibility = $ruleVisibility;
   }
   /**
-   * @return string
+   * @return self::RULE_VISIBILITY_*
    */
   public function getRuleVisibility()
   {
     return $this->ruleVisibility;
   }
   /**
-   * @param SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig[]
+   * Configuration options for layer7 adaptive protection for various
+   * customizable thresholds.
+   *
+   * @param SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig[] $thresholdConfigs
    */
   public function setThresholdConfigs($thresholdConfigs)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Compute;
 class RouterNatSubnetworkToNat64 extends \Google\Model
 {
   /**
+   * URL for the subnetwork resource that will use NAT64.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * URL for the subnetwork resource that will use NAT64.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

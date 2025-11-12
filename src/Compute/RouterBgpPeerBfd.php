@@ -19,25 +19,69 @@ namespace Google\Service\Compute;
 
 class RouterBgpPeerBfd extends \Google\Model
 {
+  public const SESSION_INITIALIZATION_MODE_ACTIVE = 'ACTIVE';
+  public const SESSION_INITIALIZATION_MODE_DISABLED = 'DISABLED';
+  public const SESSION_INITIALIZATION_MODE_PASSIVE = 'PASSIVE';
   /**
+   * The minimum interval, in milliseconds, between BFD control packets received
+   * from the peer router. The actual value is negotiated between the two
+   * routers and is equal to the greater of this value and the transmit interval
+   * of the other router.
+   *
+   * If set, this value must be between 1000 and 30000.
+   *
+   * The default is 1000.
+   *
    * @var string
    */
   public $minReceiveInterval;
   /**
+   * The minimum interval, in milliseconds, between BFD control packets
+   * transmitted to the peer router. The actual value is negotiated between the
+   * two routers and is equal to the greater of this value and the corresponding
+   * receive interval of the other router.
+   *
+   * If set, this value must be between 1000 and 30000.
+   *
+   * The default is 1000.
+   *
    * @var string
    */
   public $minTransmitInterval;
   /**
+   * The number of consecutive BFD packets that must be missed before BFD
+   * declares that a peer is unavailable.
+   *
+   * If set, the value must be a value between 5 and 16.
+   *
+   * The default is 5.
+   *
    * @var string
    */
   public $multiplier;
   /**
+   * The BFD session initialization mode for this BGP peer.
+   *
+   * If set to ACTIVE, the Cloud Router will initiate the BFD session for this
+   * BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router
+   * to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
+   * disabled for this BGP peer. The default is DISABLED.
+   *
    * @var string
    */
   public $sessionInitializationMode;
 
   /**
-   * @param string
+   * The minimum interval, in milliseconds, between BFD control packets received
+   * from the peer router. The actual value is negotiated between the two
+   * routers and is equal to the greater of this value and the transmit interval
+   * of the other router.
+   *
+   * If set, this value must be between 1000 and 30000.
+   *
+   * The default is 1000.
+   *
+   * @param string $minReceiveInterval
    */
   public function setMinReceiveInterval($minReceiveInterval)
   {
@@ -51,7 +95,16 @@ class RouterBgpPeerBfd extends \Google\Model
     return $this->minReceiveInterval;
   }
   /**
-   * @param string
+   * The minimum interval, in milliseconds, between BFD control packets
+   * transmitted to the peer router. The actual value is negotiated between the
+   * two routers and is equal to the greater of this value and the corresponding
+   * receive interval of the other router.
+   *
+   * If set, this value must be between 1000 and 30000.
+   *
+   * The default is 1000.
+   *
+   * @param string $minTransmitInterval
    */
   public function setMinTransmitInterval($minTransmitInterval)
   {
@@ -65,7 +118,14 @@ class RouterBgpPeerBfd extends \Google\Model
     return $this->minTransmitInterval;
   }
   /**
-   * @param string
+   * The number of consecutive BFD packets that must be missed before BFD
+   * declares that a peer is unavailable.
+   *
+   * If set, the value must be a value between 5 and 16.
+   *
+   * The default is 5.
+   *
+   * @param string $multiplier
    */
   public function setMultiplier($multiplier)
   {
@@ -79,14 +139,23 @@ class RouterBgpPeerBfd extends \Google\Model
     return $this->multiplier;
   }
   /**
-   * @param string
+   * The BFD session initialization mode for this BGP peer.
+   *
+   * If set to ACTIVE, the Cloud Router will initiate the BFD session for this
+   * BGP peer. If set to PASSIVE, the Cloud Router will wait for the peer router
+   * to initiate the BFD session for this BGP peer. If set to DISABLED, BFD is
+   * disabled for this BGP peer. The default is DISABLED.
+   *
+   * Accepted values: ACTIVE, DISABLED, PASSIVE
+   *
+   * @param self::SESSION_INITIALIZATION_MODE_* $sessionInitializationMode
    */
   public function setSessionInitializationMode($sessionInitializationMode)
   {
     $this->sessionInitializationMode = $sessionInitializationMode;
   }
   /**
-   * @return string
+   * @return self::SESSION_INITIALIZATION_MODE_*
    */
   public function getSessionInitializationMode()
   {

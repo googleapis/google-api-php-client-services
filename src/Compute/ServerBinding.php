@@ -20,19 +20,28 @@ namespace Google\Service\Compute;
 class ServerBinding extends \Google\Model
 {
   /**
+   * Node may associate with any physical server over its lifetime.
+   */
+  public const TYPE_RESTART_NODE_ON_ANY_SERVER = 'RESTART_NODE_ON_ANY_SERVER';
+  /**
+   * Node may associate with minimal physical servers over its lifetime.
+   */
+  public const TYPE_RESTART_NODE_ON_MINIMAL_SERVERS = 'RESTART_NODE_ON_MINIMAL_SERVERS';
+  public const TYPE_SERVER_BINDING_TYPE_UNSPECIFIED = 'SERVER_BINDING_TYPE_UNSPECIFIED';
+  /**
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

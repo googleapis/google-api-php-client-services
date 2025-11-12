@@ -23,7 +23,10 @@ class SecurityPolicyRuleMatcherExprOptions extends \Google\Model
   protected $recaptchaOptionsDataType = '';
 
   /**
-   * @param SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions
+   * reCAPTCHA configuration options to be applied for the rule. If the rule
+   * does not evaluate reCAPTCHA tokens, this field has no effect.
+   *
+   * @param SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions $recaptchaOptions
    */
   public function setRecaptchaOptions(SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions $recaptchaOptions)
   {

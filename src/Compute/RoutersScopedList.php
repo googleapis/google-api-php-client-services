@@ -26,7 +26,9 @@ class RoutersScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param Router[]
+   * A list of routers contained in this scope.
+   *
+   * @param Router[] $routers
    */
   public function setRouters($routers)
   {
@@ -40,7 +42,10 @@ class RoutersScopedList extends \Google\Collection
     return $this->routers;
   }
   /**
-   * @param RoutersScopedListWarning
+   * Informational warning which replaces the list of routers when the list is
+   * empty.
+   *
+   * @param RoutersScopedListWarning $warning
    */
   public function setWarning(RoutersScopedListWarning $warning)
   {

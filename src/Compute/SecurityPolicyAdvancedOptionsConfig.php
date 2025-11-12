@@ -19,6 +19,11 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyAdvancedOptionsConfig extends \Google\Collection
 {
+  public const JSON_PARSING_DISABLED = 'DISABLED';
+  public const JSON_PARSING_STANDARD = 'STANDARD';
+  public const JSON_PARSING_STANDARD_WITH_GRAPHQL = 'STANDARD_WITH_GRAPHQL';
+  public const LOG_LEVEL_NORMAL = 'NORMAL';
+  public const LOG_LEVEL_VERBOSE = 'VERBOSE';
   protected $collection_key = 'userIpRequestHeaders';
   protected $jsonCustomConfigType = SecurityPolicyAdvancedOptionsConfigJsonCustomConfig::class;
   protected $jsonCustomConfigDataType = '';
@@ -31,12 +36,18 @@ class SecurityPolicyAdvancedOptionsConfig extends \Google\Collection
    */
   public $logLevel;
   /**
+   * An optional list of case-insensitive request header names to use for
+   * resolving the callers client IP address.
+   *
    * @var string[]
    */
   public $userIpRequestHeaders;
 
   /**
-   * @param SecurityPolicyAdvancedOptionsConfigJsonCustomConfig
+   * Custom configuration to apply the JSON parsing. Only applicable when
+   * json_parsing is set to STANDARD.
+   *
+   * @param SecurityPolicyAdvancedOptionsConfigJsonCustomConfig $jsonCustomConfig
    */
   public function setJsonCustomConfig(SecurityPolicyAdvancedOptionsConfigJsonCustomConfig $jsonCustomConfig)
   {
@@ -50,35 +61,38 @@ class SecurityPolicyAdvancedOptionsConfig extends \Google\Collection
     return $this->jsonCustomConfig;
   }
   /**
-   * @param string
+   * @param self::JSON_PARSING_* $jsonParsing
    */
   public function setJsonParsing($jsonParsing)
   {
     $this->jsonParsing = $jsonParsing;
   }
   /**
-   * @return string
+   * @return self::JSON_PARSING_*
    */
   public function getJsonParsing()
   {
     return $this->jsonParsing;
   }
   /**
-   * @param string
+   * @param self::LOG_LEVEL_* $logLevel
    */
   public function setLogLevel($logLevel)
   {
     $this->logLevel = $logLevel;
   }
   /**
-   * @return string
+   * @return self::LOG_LEVEL_*
    */
   public function getLogLevel()
   {
     return $this->logLevel;
   }
   /**
-   * @param string[]
+   * An optional list of case-insensitive request header names to use for
+   * resolving the callers client IP address.
+   *
+   * @param string[] $userIpRequestHeaders
    */
   public function setUserIpRequestHeaders($userIpRequestHeaders)
   {

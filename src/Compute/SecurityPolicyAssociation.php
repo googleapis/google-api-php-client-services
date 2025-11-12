@@ -21,36 +21,53 @@ class SecurityPolicyAssociation extends \Google\Collection
 {
   protected $collection_key = 'excludedProjects';
   /**
+   * The resource that the security policy is attached to.
+   *
    * @var string
    */
   public $attachmentId;
   /**
+   * [Output Only] The display name of the security policy of the association.
+   *
+   * @deprecated
    * @var string
    */
   public $displayName;
   /**
+   * A list of folders to exclude from the security policy.
+   *
    * @var string[]
    */
   public $excludedFolders;
   /**
+   * A list of projects to exclude from the security policy.
+   *
    * @var string[]
    */
   public $excludedProjects;
   /**
+   * The name for an association.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] The security policy ID of the association.
+   *
    * @var string
    */
   public $securityPolicyId;
   /**
+   * [Output Only] The short name of the security policy of the association.
+   *
    * @var string
    */
   public $shortName;
 
   /**
-   * @param string
+   * The resource that the security policy is attached to.
+   *
+   * @param string $attachmentId
    */
   public function setAttachmentId($attachmentId)
   {
@@ -64,13 +81,17 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->attachmentId;
   }
   /**
-   * @param string
+   * [Output Only] The display name of the security policy of the association.
+   *
+   * @deprecated
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getDisplayName()
@@ -78,7 +99,9 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * A list of folders to exclude from the security policy.
+   *
+   * @param string[] $excludedFolders
    */
   public function setExcludedFolders($excludedFolders)
   {
@@ -92,7 +115,9 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->excludedFolders;
   }
   /**
-   * @param string[]
+   * A list of projects to exclude from the security policy.
+   *
+   * @param string[] $excludedProjects
    */
   public function setExcludedProjects($excludedProjects)
   {
@@ -106,7 +131,9 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->excludedProjects;
   }
   /**
-   * @param string
+   * The name for an association.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -120,7 +147,9 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] The security policy ID of the association.
+   *
+   * @param string $securityPolicyId
    */
   public function setSecurityPolicyId($securityPolicyId)
   {
@@ -134,7 +163,9 @@ class SecurityPolicyAssociation extends \Google\Collection
     return $this->securityPolicyId;
   }
   /**
-   * @param string
+   * [Output Only] The short name of the security policy of the association.
+   *
+   * @param string $shortName
    */
   public function setShortName($shortName)
   {

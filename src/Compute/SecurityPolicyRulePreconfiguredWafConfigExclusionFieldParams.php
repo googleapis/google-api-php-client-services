@@ -20,30 +20,60 @@ namespace Google\Service\Compute;
 class SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams extends \Google\Model
 {
   /**
+   * The operator matches if the field value contains the specified value.
+   */
+  public const OP_CONTAINS = 'CONTAINS';
+  /**
+   * The operator matches if the field value ends with the specified value.
+   */
+  public const OP_ENDS_WITH = 'ENDS_WITH';
+  /**
+   * The operator matches if the field value equals the specified value.
+   */
+  public const OP_EQUALS = 'EQUALS';
+  /**
+   * The operator matches if the field value is any value.
+   */
+  public const OP_EQUALS_ANY = 'EQUALS_ANY';
+  /**
+   * The operator matches if the field value starts with the specified value.
+   */
+  public const OP_STARTS_WITH = 'STARTS_WITH';
+  /**
+   * The match operator for the field.
+   *
    * @var string
    */
   public $op;
   /**
+   * The value of the field.
+   *
    * @var string
    */
   public $val;
 
   /**
-   * @param string
+   * The match operator for the field.
+   *
+   * Accepted values: CONTAINS, ENDS_WITH, EQUALS, EQUALS_ANY, STARTS_WITH
+   *
+   * @param self::OP_* $op
    */
   public function setOp($op)
   {
     $this->op = $op;
   }
   /**
-   * @return string
+   * @return self::OP_*
    */
   public function getOp()
   {
     return $this->op;
   }
   /**
-   * @param string
+   * The value of the field.
+   *
+   * @param string $val
    */
   public function setVal($val)
   {

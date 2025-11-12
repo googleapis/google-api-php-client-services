@@ -20,12 +20,20 @@ namespace Google\Service\Compute;
 class SchedulingOnInstanceStopAction extends \Google\Model
 {
   /**
+   * If true, the contents of any attached Local SSD disks will be discarded
+   * else, the Local SSD data will be preserved when the instance is stopped at
+   * the end of the run duration/termination time.
+   *
    * @var bool
    */
   public $discardLocalSsd;
 
   /**
-   * @param bool
+   * If true, the contents of any attached Local SSD disks will be discarded
+   * else, the Local SSD data will be preserved when the instance is stopped at
+   * the end of the run duration/termination time.
+   *
+   * @param bool $discardLocalSsd
    */
   public function setDiscardLocalSsd($discardLocalSsd)
   {

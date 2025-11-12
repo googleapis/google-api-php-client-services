@@ -21,24 +21,46 @@ class RouterNatRuleAction extends \Google\Collection
 {
   protected $collection_key = 'sourceNatDrainRanges';
   /**
+   * A list of URLs of the IP resources used for this NAT rule. These IP
+   * addresses must be valid static external IP addresses assigned to the
+   * project. This field is used for public NAT.
+   *
    * @var string[]
    */
   public $sourceNatActiveIps;
   /**
+   * A list of URLs of the subnetworks used as source ranges for this NAT Rule.
+   * These subnetworks must have purpose set to PRIVATE_NAT. This field is used
+   * for private NAT.
+   *
    * @var string[]
    */
   public $sourceNatActiveRanges;
   /**
+   * A list of URLs of the IP resources to be drained. These IPs must be valid
+   * static external IPs that have been assigned to the NAT. These IPs should be
+   * used for updating/patching a NAT rule only. This field is used for public
+   * NAT.
+   *
    * @var string[]
    */
   public $sourceNatDrainIps;
   /**
+   * A list of URLs of subnetworks representing source ranges to be drained.
+   * This is only supported on patch/update, and these subnetworks must have
+   * previously been used as active ranges in this NAT Rule. This field is used
+   * for private NAT.
+   *
    * @var string[]
    */
   public $sourceNatDrainRanges;
 
   /**
-   * @param string[]
+   * A list of URLs of the IP resources used for this NAT rule. These IP
+   * addresses must be valid static external IP addresses assigned to the
+   * project. This field is used for public NAT.
+   *
+   * @param string[] $sourceNatActiveIps
    */
   public function setSourceNatActiveIps($sourceNatActiveIps)
   {
@@ -52,7 +74,11 @@ class RouterNatRuleAction extends \Google\Collection
     return $this->sourceNatActiveIps;
   }
   /**
-   * @param string[]
+   * A list of URLs of the subnetworks used as source ranges for this NAT Rule.
+   * These subnetworks must have purpose set to PRIVATE_NAT. This field is used
+   * for private NAT.
+   *
+   * @param string[] $sourceNatActiveRanges
    */
   public function setSourceNatActiveRanges($sourceNatActiveRanges)
   {
@@ -66,7 +92,12 @@ class RouterNatRuleAction extends \Google\Collection
     return $this->sourceNatActiveRanges;
   }
   /**
-   * @param string[]
+   * A list of URLs of the IP resources to be drained. These IPs must be valid
+   * static external IPs that have been assigned to the NAT. These IPs should be
+   * used for updating/patching a NAT rule only. This field is used for public
+   * NAT.
+   *
+   * @param string[] $sourceNatDrainIps
    */
   public function setSourceNatDrainIps($sourceNatDrainIps)
   {
@@ -80,7 +111,12 @@ class RouterNatRuleAction extends \Google\Collection
     return $this->sourceNatDrainIps;
   }
   /**
-   * @param string[]
+   * A list of URLs of subnetworks representing source ranges to be drained.
+   * This is only supported on patch/update, and these subnetworks must have
+   * previously been used as active ranges in this NAT Rule. This field is used
+   * for private NAT.
+   *
+   * @param string[] $sourceNatDrainRanges
    */
   public function setSourceNatDrainRanges($sourceNatDrainRanges)
   {

@@ -23,7 +23,9 @@ class SecurityPolicyAdaptiveProtectionConfig extends \Google\Model
   protected $layer7DdosDefenseConfigDataType = '';
 
   /**
-   * @param SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
+   * If set to true, enables Cloud Armor Machine Learning.
+   *
+   * @param SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig $layer7DdosDefenseConfig
    */
   public function setLayer7DdosDefenseConfig(SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig $layer7DdosDefenseConfig)
   {

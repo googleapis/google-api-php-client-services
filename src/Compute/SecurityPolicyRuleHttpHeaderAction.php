@@ -24,7 +24,9 @@ class SecurityPolicyRuleHttpHeaderAction extends \Google\Collection
   protected $requestHeadersToAddsDataType = 'array';
 
   /**
-   * @param SecurityPolicyRuleHttpHeaderActionHttpHeaderOption[]
+   * The list of request headers to add or overwrite if they're already present.
+   *
+   * @param SecurityPolicyRuleHttpHeaderActionHttpHeaderOption[] $requestHeadersToAdds
    */
   public function setRequestHeadersToAdds($requestHeadersToAdds)
   {

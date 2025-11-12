@@ -20,28 +20,48 @@ namespace Google\Service\Compute;
 class SerialPortOutput extends \Google\Model
 {
   /**
+   * [Output Only] The contents of the console output.
+   *
    * @var string
    */
   public $contents;
   /**
+   * [Output Only] Type of the resource. Alwayscompute#serialPortOutput for
+   * serial port output.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] The position of the next byte of content, regardless of
+   * whether the content exists, following the output returned in the `contents`
+   * property. Use this value in the next request as the start parameter.
+   *
    * @var string
    */
   public $next;
   /**
+   * [Output Only] Server-defined URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The starting byte position of the output that was returned. This should
+   * match the start parameter sent with the request. If the serial console
+   * output exceeds the size of the buffer (1 MB), older output is overwritten
+   * by newer content. The output start value will indicate the byte position of
+   * the output that was returned, which might be different than the `start`
+   * value that was specified in the request.
+   *
    * @var string
    */
   public $start;
 
   /**
-   * @param string
+   * [Output Only] The contents of the console output.
+   *
+   * @param string $contents
    */
   public function setContents($contents)
   {
@@ -55,7 +75,10 @@ class SerialPortOutput extends \Google\Model
     return $this->contents;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#serialPortOutput for
+   * serial port output.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -69,7 +92,11 @@ class SerialPortOutput extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] The position of the next byte of content, regardless of
+   * whether the content exists, following the output returned in the `contents`
+   * property. Use this value in the next request as the start parameter.
+   *
+   * @param string $next
    */
   public function setNext($next)
   {
@@ -83,7 +110,9 @@ class SerialPortOutput extends \Google\Model
     return $this->next;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -97,7 +126,14 @@ class SerialPortOutput extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The starting byte position of the output that was returned. This should
+   * match the start parameter sent with the request. If the serial console
+   * output exceeds the size of the buffer (1 MB), older output is overwritten
+   * by newer content. The output start value will indicate the byte position of
+   * the output that was returned, which might be different than the `start`
+   * value that was specified in the request.
+   *
+   * @param string $start
    */
   public function setStart($start)
   {

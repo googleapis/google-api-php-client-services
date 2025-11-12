@@ -26,7 +26,9 @@ class SecurityPoliciesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param SecurityPolicy[]
+   * A list of SecurityPolicies contained in this scope.
+   *
+   * @param SecurityPolicy[] $securityPolicies
    */
   public function setSecurityPolicies($securityPolicies)
   {
@@ -40,7 +42,10 @@ class SecurityPoliciesScopedList extends \Google\Collection
     return $this->securityPolicies;
   }
   /**
-   * @param SecurityPoliciesScopedListWarning
+   * Informational warning which replaces the list of security policies when the
+   * list is empty.
+   *
+   * @param SecurityPoliciesScopedListWarning $warning
    */
   public function setWarning(SecurityPoliciesScopedListWarning $warning)
   {

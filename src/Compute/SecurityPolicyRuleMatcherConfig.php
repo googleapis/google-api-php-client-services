@@ -21,12 +21,16 @@ class SecurityPolicyRuleMatcherConfig extends \Google\Collection
 {
   protected $collection_key = 'srcIpRanges';
   /**
+   * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+   *
    * @var string[]
    */
   public $srcIpRanges;
 
   /**
-   * @param string[]
+   * CIDR IP address range. Maximum number of src_ip_ranges allowed is 10.
+   *
+   * @param string[] $srcIpRanges
    */
   public function setSrcIpRanges($srcIpRanges)
   {

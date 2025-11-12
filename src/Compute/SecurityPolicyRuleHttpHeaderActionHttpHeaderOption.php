@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class SecurityPolicyRuleHttpHeaderActionHttpHeaderOption extends \Google\Model
 {
   /**
+   * The name of the header to set.
+   *
    * @var string
    */
   public $headerName;
   /**
+   * The value to set the named header to.
+   *
    * @var string
    */
   public $headerValue;
 
   /**
-   * @param string
+   * The name of the header to set.
+   *
+   * @param string $headerName
    */
   public function setHeaderName($headerName)
   {
@@ -43,7 +49,9 @@ class SecurityPolicyRuleHttpHeaderActionHttpHeaderOption extends \Google\Model
     return $this->headerName;
   }
   /**
-   * @param string
+   * The value to set the named header to.
+   *
+   * @param string $headerValue
    */
   public function setHeaderValue($headerValue)
   {

@@ -21,20 +21,33 @@ class RouterNatSubnetworkToNat extends \Google\Collection
 {
   protected $collection_key = 'sourceIpRangesToNat';
   /**
+   * URL for the subnetwork resource that will use NAT.
+   *
    * @var string
    */
   public $name;
   /**
+   * A list of the secondary ranges of the Subnetwork that are allowed to use
+   * NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of
+   * the values in source_ip_ranges_to_nat.
+   *
    * @var string[]
    */
   public $secondaryIpRangeNames;
   /**
+   * Specify the options for NAT ranges in the Subnetwork. All options of a
+   * single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only
+   * valid option with multiple values is: ["PRIMARY_IP_RANGE",
+   * "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
+   *
    * @var string[]
    */
   public $sourceIpRangesToNat;
 
   /**
-   * @param string
+   * URL for the subnetwork resource that will use NAT.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -48,7 +61,11 @@ class RouterNatSubnetworkToNat extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * A list of the secondary ranges of the Subnetwork that are allowed to use
+   * NAT. This can be populated only if "LIST_OF_SECONDARY_IP_RANGES" is one of
+   * the values in source_ip_ranges_to_nat.
+   *
+   * @param string[] $secondaryIpRangeNames
    */
   public function setSecondaryIpRangeNames($secondaryIpRangeNames)
   {
@@ -62,7 +79,12 @@ class RouterNatSubnetworkToNat extends \Google\Collection
     return $this->secondaryIpRangeNames;
   }
   /**
-   * @param string[]
+   * Specify the options for NAT ranges in the Subnetwork. All options of a
+   * single value are valid except NAT_IP_RANGE_OPTION_UNSPECIFIED. The only
+   * valid option with multiple values is: ["PRIMARY_IP_RANGE",
+   * "LIST_OF_SECONDARY_IP_RANGES"] Default: [ALL_IP_RANGES]
+   *
+   * @param string[] $sourceIpRangesToNat
    */
   public function setSourceIpRangesToNat($sourceIpRangesToNat)
   {

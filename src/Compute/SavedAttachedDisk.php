@@ -19,70 +19,128 @@ namespace Google\Service\Compute;
 
 class SavedAttachedDisk extends \Google\Collection
 {
+  public const INTERFACE_NVME = 'NVME';
+  public const INTERFACE_SCSI = 'SCSI';
+  /**
+   * Attaches this disk in read-only mode. Multiple virtual machines can use a
+   * disk in read-only mode at a time.
+   */
+  public const MODE_READ_ONLY = 'READ_ONLY';
+  /**
+   * *[Default]* Attaches this disk in read-write mode. Only one virtual machine
+   * at a time can be attached to a disk in read-write mode.
+   */
+  public const MODE_READ_WRITE = 'READ_WRITE';
+  public const STORAGE_BYTES_STATUS_UPDATING = 'UPDATING';
+  public const STORAGE_BYTES_STATUS_UP_TO_DATE = 'UP_TO_DATE';
+  public const TYPE_PERSISTENT = 'PERSISTENT';
+  public const TYPE_SCRATCH = 'SCRATCH';
   protected $collection_key = 'licenses';
   /**
+   * Specifies whether the disk will be auto-deleted when the instance is
+   * deleted (but not when the disk is detached from the instance).
+   *
    * @var bool
    */
   public $autoDelete;
   /**
+   * Indicates that this is a boot disk. The virtual machine will use the first
+   * partition of the disk for its root filesystem.
+   *
    * @var bool
    */
   public $boot;
   /**
+   * Specifies the name of the disk attached to the source instance.
+   *
    * @var string
    */
   public $deviceName;
   protected $diskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $diskEncryptionKeyDataType = '';
   /**
+   * The size of the disk in base-2 GB.
+   *
    * @var string
    */
   public $diskSizeGb;
   /**
+   * [Output Only] URL of the disk type resource. For
+   * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
+   *
    * @var string
    */
   public $diskType;
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
+   * Specifies zero-based index of the disk that is attached to the source
+   * instance.
+   *
    * @var int
    */
   public $index;
   /**
+   * Specifies the disk interface to use for attaching this disk, which is
+   * either SCSI or NVME.
+   *
    * @var string
    */
   public $interface;
   /**
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached
+   * disks.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] Any valid publicly visible licenses.
+   *
    * @var string[]
    */
   public $licenses;
   /**
+   * The mode in which this disk is attached to the source instance,
+   * eitherREAD_WRITE or READ_ONLY.
+   *
    * @var string
    */
   public $mode;
   /**
+   * Specifies a URL of the disk attached to the source instance.
+   *
    * @var string
    */
   public $source;
   /**
+   * [Output Only] A size of the storage used by the disk's snapshot by this
+   * machine image.
+   *
    * @var string
    */
   public $storageBytes;
   /**
+   * [Output Only] An indicator whether storageBytes is in a stable state or it
+   * is being adjusted as a result of shared storage reallocation. This status
+   * can either be UPDATING, meaning the size of the snapshot is being updated,
+   * or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+   *
    * @var string
    */
   public $storageBytesStatus;
   /**
+   * Specifies the type of the attached disk, either SCRATCH orPERSISTENT.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param bool
+   * Specifies whether the disk will be auto-deleted when the instance is
+   * deleted (but not when the disk is detached from the instance).
+   *
+   * @param bool $autoDelete
    */
   public function setAutoDelete($autoDelete)
   {
@@ -96,7 +154,10 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->autoDelete;
   }
   /**
-   * @param bool
+   * Indicates that this is a boot disk. The virtual machine will use the first
+   * partition of the disk for its root filesystem.
+   *
+   * @param bool $boot
    */
   public function setBoot($boot)
   {
@@ -110,7 +171,9 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->boot;
   }
   /**
-   * @param string
+   * Specifies the name of the disk attached to the source instance.
+   *
+   * @param string $deviceName
    */
   public function setDeviceName($deviceName)
   {
@@ -124,7 +187,9 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->deviceName;
   }
   /**
-   * @param CustomerEncryptionKey
+   * The encryption key for the disk.
+   *
+   * @param CustomerEncryptionKey $diskEncryptionKey
    */
   public function setDiskEncryptionKey(CustomerEncryptionKey $diskEncryptionKey)
   {
@@ -138,7 +203,9 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->diskEncryptionKey;
   }
   /**
-   * @param string
+   * The size of the disk in base-2 GB.
+   *
+   * @param string $diskSizeGb
    */
   public function setDiskSizeGb($diskSizeGb)
   {
@@ -152,7 +219,10 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * @param string
+   * [Output Only] URL of the disk type resource. For
+   * example:projects/project/zones/zone/diskTypes/pd-standard or pd-ssd
+   *
+   * @param string $diskType
    */
   public function setDiskType($diskType)
   {
@@ -166,7 +236,11 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->diskType;
   }
   /**
-   * @param GuestOsFeature[]
+   * A list of features to enable on the guest operating system. Applicable only
+   * for bootable images. Read Enabling guest operating system features to see a
+   * list of available options.
+   *
+   * @param GuestOsFeature[] $guestOsFeatures
    */
   public function setGuestOsFeatures($guestOsFeatures)
   {
@@ -180,7 +254,10 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->guestOsFeatures;
   }
   /**
-   * @param int
+   * Specifies zero-based index of the disk that is attached to the source
+   * instance.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -194,21 +271,29 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->index;
   }
   /**
-   * @param string
+   * Specifies the disk interface to use for attaching this disk, which is
+   * either SCSI or NVME.
+   *
+   * Accepted values: NVME, SCSI
+   *
+   * @param self::INTERFACE_* $interface
    */
   public function setInterface($interface)
   {
     $this->interface = $interface;
   }
   /**
-   * @return string
+   * @return self::INTERFACE_*
    */
   public function getInterface()
   {
     return $this->interface;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#attachedDisk for attached
+   * disks.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -222,7 +307,9 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * [Output Only] Any valid publicly visible licenses.
+   *
+   * @param string[] $licenses
    */
   public function setLicenses($licenses)
   {
@@ -236,21 +323,28 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->licenses;
   }
   /**
-   * @param string
+   * The mode in which this disk is attached to the source instance,
+   * eitherREAD_WRITE or READ_ONLY.
+   *
+   * Accepted values: READ_ONLY, READ_WRITE
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {
     return $this->mode;
   }
   /**
-   * @param string
+   * Specifies a URL of the disk attached to the source instance.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -264,7 +358,10 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param string
+   * [Output Only] A size of the storage used by the disk's snapshot by this
+   * machine image.
+   *
+   * @param string $storageBytes
    */
   public function setStorageBytes($storageBytes)
   {
@@ -278,28 +375,39 @@ class SavedAttachedDisk extends \Google\Collection
     return $this->storageBytes;
   }
   /**
-   * @param string
+   * [Output Only] An indicator whether storageBytes is in a stable state or it
+   * is being adjusted as a result of shared storage reallocation. This status
+   * can either be UPDATING, meaning the size of the snapshot is being updated,
+   * or UP_TO_DATE, meaning the size of the snapshot is up-to-date.
+   *
+   * Accepted values: UPDATING, UP_TO_DATE
+   *
+   * @param self::STORAGE_BYTES_STATUS_* $storageBytesStatus
    */
   public function setStorageBytesStatus($storageBytesStatus)
   {
     $this->storageBytesStatus = $storageBytesStatus;
   }
   /**
-   * @return string
+   * @return self::STORAGE_BYTES_STATUS_*
    */
   public function getStorageBytesStatus()
   {
     return $this->storageBytesStatus;
   }
   /**
-   * @param string
+   * Specifies the type of the attached disk, either SCRATCH orPERSISTENT.
+   *
+   * Accepted values: PERSISTENT, SCRATCH
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

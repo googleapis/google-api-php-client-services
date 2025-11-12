@@ -25,7 +25,7 @@ class SecurityPolicyReference extends \Google\Model
   public $securityPolicy;
 
   /**
-   * @param string
+   * @param string $securityPolicy
    */
   public function setSecurityPolicy($securityPolicy)
   {

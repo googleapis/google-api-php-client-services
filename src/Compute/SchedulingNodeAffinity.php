@@ -19,22 +19,40 @@ namespace Google\Service\Compute;
 
 class SchedulingNodeAffinity extends \Google\Collection
 {
+  /**
+   * Requires Compute Engine to seek for matched nodes.
+   */
+  public const OPERATOR_IN = 'IN';
+  /**
+   * Requires Compute Engine to avoid certain nodes.
+   */
+  public const OPERATOR_NOT_IN = 'NOT_IN';
+  public const OPERATOR_OPERATOR_UNSPECIFIED = 'OPERATOR_UNSPECIFIED';
   protected $collection_key = 'values';
   /**
+   * Corresponds to the label key of Node resource.
+   *
    * @var string
    */
   public $key;
   /**
+   * Defines the operation of node selection. Valid operators areIN for affinity
+   * and NOT_IN for anti-affinity.
+   *
    * @var string
    */
   public $operator;
   /**
+   * Corresponds to the label values of Node resource.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * Corresponds to the label key of Node resource.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -48,21 +66,28 @@ class SchedulingNodeAffinity extends \Google\Collection
     return $this->key;
   }
   /**
-   * @param string
+   * Defines the operation of node selection. Valid operators areIN for affinity
+   * and NOT_IN for anti-affinity.
+   *
+   * Accepted values: IN, NOT_IN, OPERATOR_UNSPECIFIED
+   *
+   * @param self::OPERATOR_* $operator
    */
   public function setOperator($operator)
   {
     $this->operator = $operator;
   }
   /**
-   * @return string
+   * @return self::OPERATOR_*
    */
   public function getOperator()
   {
     return $this->operator;
   }
   /**
-   * @param string[]
+   * Corresponds to the label values of Node resource.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

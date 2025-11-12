@@ -21,12 +21,30 @@ class SecurityPolicyAdvancedOptionsConfigJsonCustomConfig extends \Google\Collec
 {
   protected $collection_key = 'contentTypes';
   /**
+   * A list of custom Content-Type header values to apply the JSON parsing.
+   *
+   * As per RFC 1341, a Content-Type header value has the following format:
+   *
+   * Content-Type := type "/" subtype *[";" parameter]
+   *
+   * When configuring a custom Content-Type header value, only the type/subtype
+   * needs to be specified, and the parameters should be excluded.
+   *
    * @var string[]
    */
   public $contentTypes;
 
   /**
-   * @param string[]
+   * A list of custom Content-Type header values to apply the JSON parsing.
+   *
+   * As per RFC 1341, a Content-Type header value has the following format:
+   *
+   * Content-Type := type "/" subtype *[";" parameter]
+   *
+   * When configuring a custom Content-Type header value, only the type/subtype
+   * needs to be specified, and the parameters should be excluded.
+   *
+   * @param string[] $contentTypes
    */
   public function setContentTypes($contentTypes)
   {

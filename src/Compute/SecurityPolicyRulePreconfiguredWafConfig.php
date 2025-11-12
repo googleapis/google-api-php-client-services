@@ -24,7 +24,9 @@ class SecurityPolicyRulePreconfiguredWafConfig extends \Google\Collection
   protected $exclusionsDataType = 'array';
 
   /**
-   * @param SecurityPolicyRulePreconfiguredWafConfigExclusion[]
+   * A list of exclusions to apply during preconfigured WAF evaluation.
+   *
+   * @param SecurityPolicyRulePreconfiguredWafConfigExclusion[] $exclusions
    */
   public function setExclusions($exclusions)
   {

@@ -25,12 +25,17 @@ class RoutePolicyPolicyTerm extends \Google\Collection
   protected $matchType = Expr::class;
   protected $matchDataType = '';
   /**
+   * The evaluation priority for this term, which must be between 0 (inclusive)
+   * and 2^31 (exclusive), and unique within the list.
+   *
    * @var int
    */
   public $priority;
 
   /**
-   * @param Expr[]
+   * CEL expressions to evaluate to modify a route when this term matches.
+   *
+   * @param Expr[] $actions
    */
   public function setActions($actions)
   {
@@ -44,7 +49,10 @@ class RoutePolicyPolicyTerm extends \Google\Collection
     return $this->actions;
   }
   /**
-   * @param Expr
+   * CEL expression evaluated against a route to determine if this term applies.
+   * When not set, the term applies to all routes.
+   *
+   * @param Expr $match
    */
   public function setMatch(Expr $match)
   {
@@ -58,7 +66,10 @@ class RoutePolicyPolicyTerm extends \Google\Collection
     return $this->match;
   }
   /**
-   * @param int
+   * The evaluation priority for this term, which must be between 0 (inclusive)
+   * and 2^31 (exclusive), and unique within the list.
+   *
+   * @param int $priority
    */
   public function setPriority($priority)
   {
