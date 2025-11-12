@@ -20,20 +20,32 @@ namespace Google\Service\Adsense;
 class UrlChannel extends \Google\Model
 {
   /**
+   * Output only. Resource name of the URL channel. Format:
+   * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Unique ID of the custom channel as used in the
+   * `URL_CHANNEL_ID` reporting dimension.
+   *
    * @var string
    */
   public $reportingDimensionId;
   /**
+   * URI pattern of the channel. Does not include "http://" or "https://".
+   * Example: www.example.com/home
+   *
    * @var string
    */
   public $uriPattern;
 
   /**
-   * @param string
+   * Output only. Resource name of the URL channel. Format:
+   * accounts/{account}/adclients/{adclient}/urlchannels/{urlchannel}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +59,10 @@ class UrlChannel extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Unique ID of the custom channel as used in the
+   * `URL_CHANNEL_ID` reporting dimension.
+   *
+   * @param string $reportingDimensionId
    */
   public function setReportingDimensionId($reportingDimensionId)
   {
@@ -61,7 +76,10 @@ class UrlChannel extends \Google\Model
     return $this->reportingDimensionId;
   }
   /**
-   * @param string
+   * URI pattern of the channel. Does not include "http://" or "https://".
+   * Example: www.example.com/home
+   *
+   * @param string $uriPattern
    */
   public function setUriPattern($uriPattern)
   {

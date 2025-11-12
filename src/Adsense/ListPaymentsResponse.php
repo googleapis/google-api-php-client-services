@@ -24,7 +24,9 @@ class ListPaymentsResponse extends \Google\Collection
   protected $paymentsDataType = 'array';
 
   /**
-   * @param Payment[]
+   * The payments returned in this list response.
+   *
+   * @param Payment[] $payments
    */
   public function setPayments($payments)
   {

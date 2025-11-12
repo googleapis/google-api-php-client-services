@@ -20,12 +20,16 @@ namespace Google\Service\Adsense;
 class AdUnitAdCode extends \Google\Model
 {
   /**
+   * Output only. The code snippet to add to the body of an HTML page.
+   *
    * @var string
    */
   public $adCode;
 
   /**
-   * @param string
+   * Output only. The code snippet to add to the body of an HTML page.
+   *
+   * @param string $adCode
    */
   public function setAdCode($adCode)
   {

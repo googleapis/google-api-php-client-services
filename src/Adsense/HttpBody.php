@@ -21,20 +21,29 @@ class HttpBody extends \Google\Collection
 {
   protected $collection_key = 'extensions';
   /**
+   * The HTTP Content-Type header value specifying the content type of the body.
+   *
    * @var string
    */
   public $contentType;
   /**
+   * The HTTP request/response body as raw binary.
+   *
    * @var string
    */
   public $data;
   /**
+   * Application specific response metadata. Must be set in the first response
+   * for streaming APIs.
+   *
    * @var array[]
    */
   public $extensions;
 
   /**
-   * @param string
+   * The HTTP Content-Type header value specifying the content type of the body.
+   *
+   * @param string $contentType
    */
   public function setContentType($contentType)
   {
@@ -48,7 +57,9 @@ class HttpBody extends \Google\Collection
     return $this->contentType;
   }
   /**
-   * @param string
+   * The HTTP request/response body as raw binary.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -62,7 +73,10 @@ class HttpBody extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param array[]
+   * Application specific response metadata. Must be set in the first response
+   * for streaming APIs.
+   *
+   * @param array[] $extensions
    */
   public function setExtensions($extensions)
   {

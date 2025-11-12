@@ -31,18 +31,26 @@ class ReportResult extends \Google\Collection
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
   /**
+   * The total number of rows matched by the report request.
+   *
    * @var string
    */
   public $totalMatchedRows;
   protected $totalsType = Row::class;
   protected $totalsDataType = '';
   /**
+   * Any warnings associated with generation of the report. These warnings are
+   * always returned in English.
+   *
    * @var string[]
    */
   public $warnings;
 
   /**
-   * @param Row
+   * The averages of the report. This is the same length as any other row in the
+   * report; cells corresponding to dimension columns are empty.
+   *
+   * @param Row $averages
    */
   public function setAverages(Row $averages)
   {
@@ -56,7 +64,9 @@ class ReportResult extends \Google\Collection
     return $this->averages;
   }
   /**
-   * @param Date
+   * Required. End date of the range (inclusive).
+   *
+   * @param Date $endDate
    */
   public function setEndDate(Date $endDate)
   {
@@ -70,7 +80,10 @@ class ReportResult extends \Google\Collection
     return $this->endDate;
   }
   /**
-   * @param Header[]
+   * The header information; one for each dimension in the request, followed by
+   * one for each metric in the request.
+   *
+   * @param Header[] $headers
    */
   public function setHeaders($headers)
   {
@@ -84,7 +97,10 @@ class ReportResult extends \Google\Collection
     return $this->headers;
   }
   /**
-   * @param Row[]
+   * The output rows of the report. Each row is a list of cells; one for each
+   * dimension in the request, followed by one for each metric in the request.
+   *
+   * @param Row[] $rows
    */
   public function setRows($rows)
   {
@@ -98,7 +114,9 @@ class ReportResult extends \Google\Collection
     return $this->rows;
   }
   /**
-   * @param Date
+   * Required. Start date of the range (inclusive).
+   *
+   * @param Date $startDate
    */
   public function setStartDate(Date $startDate)
   {
@@ -112,7 +130,9 @@ class ReportResult extends \Google\Collection
     return $this->startDate;
   }
   /**
-   * @param string
+   * The total number of rows matched by the report request.
+   *
+   * @param string $totalMatchedRows
    */
   public function setTotalMatchedRows($totalMatchedRows)
   {
@@ -126,7 +146,10 @@ class ReportResult extends \Google\Collection
     return $this->totalMatchedRows;
   }
   /**
-   * @param Row
+   * The totals of the report. This is the same length as any other row in the
+   * report; cells corresponding to dimension columns are empty.
+   *
+   * @param Row $totals
    */
   public function setTotals(Row $totals)
   {
@@ -140,7 +163,10 @@ class ReportResult extends \Google\Collection
     return $this->totals;
   }
   /**
-   * @param string[]
+   * Any warnings associated with generation of the report. These warnings are
+   * always returned in English.
+   *
+   * @param string[] $warnings
    */
   public function setWarnings($warnings)
   {

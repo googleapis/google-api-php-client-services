@@ -23,12 +23,17 @@ class ListAdClientsResponse extends \Google\Collection
   protected $adClientsType = AdClient::class;
   protected $adClientsDataType = 'array';
   /**
+   * Continuation token used to page through ad clients. To retrieve the next
+   * page of the results, set the next request's "page_token" value to this.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AdClient[]
+   * The ad clients returned in this list response.
+   *
+   * @param AdClient[] $adClients
    */
   public function setAdClients($adClients)
   {
@@ -42,7 +47,10 @@ class ListAdClientsResponse extends \Google\Collection
     return $this->adClients;
   }
   /**
-   * @param string
+   * Continuation token used to page through ad clients. To retrieve the next
+   * page of the results, set the next request's "page_token" value to this.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

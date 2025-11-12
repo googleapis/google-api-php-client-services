@@ -21,6 +21,9 @@ class ListPolicyIssuesResponse extends \Google\Collection
 {
   protected $collection_key = 'policyIssues';
   /**
+   * Continuation token used to page through policy issues. To retrieve the next
+   * page of the results, set the next request's "page_token" value to this.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListPolicyIssuesResponse extends \Google\Collection
   protected $policyIssuesDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token used to page through policy issues. To retrieve the next
+   * page of the results, set the next request's "page_token" value to this.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListPolicyIssuesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PolicyIssue[]
+   * The policy issues returned in the list response.
+   *
+   * @param PolicyIssue[] $policyIssues
    */
   public function setPolicyIssues($policyIssues)
   {

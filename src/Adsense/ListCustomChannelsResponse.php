@@ -23,12 +23,17 @@ class ListCustomChannelsResponse extends \Google\Collection
   protected $customChannelsType = CustomChannel::class;
   protected $customChannelsDataType = 'array';
   /**
+   * Continuation token used to page through alerts. To retrieve the next page
+   * of the results, set the next request's "page_token" value to this.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CustomChannel[]
+   * The custom channels returned in this list response.
+   *
+   * @param CustomChannel[] $customChannels
    */
   public function setCustomChannels($customChannels)
   {
@@ -42,7 +47,10 @@ class ListCustomChannelsResponse extends \Google\Collection
     return $this->customChannels;
   }
   /**
-   * @param string
+   * Continuation token used to page through alerts. To retrieve the next page
+   * of the results, set the next request's "page_token" value to this.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

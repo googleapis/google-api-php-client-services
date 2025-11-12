@@ -20,12 +20,18 @@ namespace Google\Service\Adsense;
 class Cell extends \Google\Model
 {
   /**
+   * Value in the cell. The dimension cells contain strings, and the metric
+   * cells contain numbers.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Value in the cell. The dimension cells contain strings, and the metric
+   * cells contain numbers.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

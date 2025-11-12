@@ -20,24 +20,56 @@ namespace Google\Service\Adsense;
 class AdClient extends \Google\Model
 {
   /**
+   * State unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The ad client is ready to show ads.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Running some checks on the ad client before it is ready to serve ads.
+   */
+  public const STATE_GETTING_READY = 'GETTING_READY';
+  /**
+   * The ad client hasn't been checked yet. There are tasks pending before
+   * AdSense will start the review.
+   */
+  public const STATE_REQUIRES_REVIEW = 'REQUIRES_REVIEW';
+  /**
+   * Output only. Resource name of the ad client. Format:
+   * accounts/{account}/adclients/{adclient}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Reporting product code of the ad client. For example, "AFC"
+   * for AdSense for Content. Corresponds to the `PRODUCT_CODE` dimension, and
+   * present only if the ad client supports reporting.
+   *
    * @var string
    */
   public $productCode;
   /**
+   * Output only. Unique ID of the ad client as used in the `AD_CLIENT_ID`
+   * reporting dimension. Present only if the ad client supports reporting.
+   *
    * @var string
    */
   public $reportingDimensionId;
   /**
+   * Output only. State of the ad client.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. Resource name of the ad client. Format:
+   * accounts/{account}/adclients/{adclient}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -51,7 +83,11 @@ class AdClient extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Reporting product code of the ad client. For example, "AFC"
+   * for AdSense for Content. Corresponds to the `PRODUCT_CODE` dimension, and
+   * present only if the ad client supports reporting.
+   *
+   * @param string $productCode
    */
   public function setProductCode($productCode)
   {
@@ -65,7 +101,10 @@ class AdClient extends \Google\Model
     return $this->productCode;
   }
   /**
-   * @param string
+   * Output only. Unique ID of the ad client as used in the `AD_CLIENT_ID`
+   * reporting dimension. Present only if the ad client supports reporting.
+   *
+   * @param string $reportingDimensionId
    */
   public function setReportingDimensionId($reportingDimensionId)
   {
@@ -79,14 +118,18 @@ class AdClient extends \Google\Model
     return $this->reportingDimensionId;
   }
   /**
-   * @param string
+   * Output only. State of the ad client.
+   *
+   * Accepted values: STATE_UNSPECIFIED, READY, GETTING_READY, REQUIRES_REVIEW
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -20,20 +20,58 @@ namespace Google\Service\Adsense;
 class Header extends \Google\Model
 {
   /**
+   * Unspecified header.
+   */
+  public const TYPE_HEADER_TYPE_UNSPECIFIED = 'HEADER_TYPE_UNSPECIFIED';
+  /**
+   * Dimension header type.
+   */
+  public const TYPE_DIMENSION = 'DIMENSION';
+  /**
+   * Tally header type.
+   */
+  public const TYPE_METRIC_TALLY = 'METRIC_TALLY';
+  /**
+   * Ratio header type.
+   */
+  public const TYPE_METRIC_RATIO = 'METRIC_RATIO';
+  /**
+   * Currency header type.
+   */
+  public const TYPE_METRIC_CURRENCY = 'METRIC_CURRENCY';
+  /**
+   * Milliseconds header type.
+   */
+  public const TYPE_METRIC_MILLISECONDS = 'METRIC_MILLISECONDS';
+  /**
+   * Decimal header type.
+   */
+  public const TYPE_METRIC_DECIMAL = 'METRIC_DECIMAL';
+  /**
+   * The [ISO-4217 currency code](https://en.wikipedia.org/wiki/ISO_4217) of
+   * this column. Only present if the header type is METRIC_CURRENCY.
+   *
    * @var string
    */
   public $currencyCode;
   /**
+   * Required. Name of the header.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Type of the header.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The [ISO-4217 currency code](https://en.wikipedia.org/wiki/ISO_4217) of
+   * this column. Only present if the header type is METRIC_CURRENCY.
+   *
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {
@@ -47,7 +85,9 @@ class Header extends \Google\Model
     return $this->currencyCode;
   }
   /**
-   * @param string
+   * Required. Name of the header.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,14 +101,19 @@ class Header extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Type of the header.
+   *
+   * Accepted values: HEADER_TYPE_UNSPECIFIED, DIMENSION, METRIC_TALLY,
+   * METRIC_RATIO, METRIC_CURRENCY, METRIC_MILLISECONDS, METRIC_DECIMAL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

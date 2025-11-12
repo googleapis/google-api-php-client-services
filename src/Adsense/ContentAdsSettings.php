@@ -20,16 +20,51 @@ namespace Google\Service\Adsense;
 class ContentAdsSettings extends \Google\Model
 {
   /**
+   * Unspecified ad unit type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Display ad unit.
+   */
+  public const TYPE_DISPLAY = 'DISPLAY';
+  /**
+   * In-feed ad unit.
+   */
+  public const TYPE_FEED = 'FEED';
+  /**
+   * In-article ad unit.
+   */
+  public const TYPE_ARTICLE = 'ARTICLE';
+  /**
+   * Matched content unit.
+   */
+  public const TYPE_MATCHED_CONTENT = 'MATCHED_CONTENT';
+  /**
+   * Link ad unit. Note that link ad units have now been retired, see
+   * https://support.google.com/adsense/answer/9987221.
+   *
+   * @deprecated
+   */
+  public const TYPE_LINK = 'LINK';
+  /**
+   * Required. Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad
+   * units).
+   *
    * @var string
    */
   public $size;
   /**
+   * Required. Type of the ad unit.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Required. Size of the ad unit. e.g. "728x90", "1x3" (for responsive ad
+   * units).
+   *
+   * @param string $size
    */
   public function setSize($size)
   {
@@ -43,14 +78,19 @@ class ContentAdsSettings extends \Google\Model
     return $this->size;
   }
   /**
-   * @param string
+   * Required. Type of the ad unit.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, DISPLAY, FEED, ARTICLE, MATCHED_CONTENT,
+   * LINK
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

@@ -24,7 +24,9 @@ class ListAlertsResponse extends \Google\Collection
   protected $alertsDataType = 'array';
 
   /**
-   * @param Alert[]
+   * The alerts returned in this list response.
+   *
+   * @param Alert[] $alerts
    */
   public function setAlerts($alerts)
   {

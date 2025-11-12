@@ -21,6 +21,9 @@ class ListSavedReportsResponse extends \Google\Collection
 {
   protected $collection_key = 'savedReports';
   /**
+   * Continuation token used to page through reports. To retrieve the next page
+   * of the results, set the next request's "page_token" value to this.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListSavedReportsResponse extends \Google\Collection
   protected $savedReportsDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token used to page through reports. To retrieve the next page
+   * of the results, set the next request's "page_token" value to this.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListSavedReportsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SavedReport[]
+   * The reports returned in this list response.
+   *
+   * @param SavedReport[] $savedReports
    */
   public function setSavedReports($savedReports)
   {
