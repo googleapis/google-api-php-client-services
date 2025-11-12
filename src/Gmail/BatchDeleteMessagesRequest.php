@@ -21,12 +21,16 @@ class BatchDeleteMessagesRequest extends \Google\Collection
 {
   protected $collection_key = 'ids';
   /**
+   * The IDs of the messages to delete.
+   *
    * @var string[]
    */
   public $ids;
 
   /**
-   * @param string[]
+   * The IDs of the messages to delete.
+   *
+   * @param string[] $ids
    */
   public function setIds($ids)
   {

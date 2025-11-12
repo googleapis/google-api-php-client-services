@@ -21,16 +21,25 @@ class ModifyThreadRequest extends \Google\Collection
 {
   protected $collection_key = 'removeLabelIds';
   /**
+   * A list of IDs of labels to add to this thread. You can add up to 100 labels
+   * with each update.
+   *
    * @var string[]
    */
   public $addLabelIds;
   /**
+   * A list of IDs of labels to remove from this thread. You can remove up to
+   * 100 labels with each update.
+   *
    * @var string[]
    */
   public $removeLabelIds;
 
   /**
-   * @param string[]
+   * A list of IDs of labels to add to this thread. You can add up to 100 labels
+   * with each update.
+   *
+   * @param string[] $addLabelIds
    */
   public function setAddLabelIds($addLabelIds)
   {
@@ -44,7 +53,10 @@ class ModifyThreadRequest extends \Google\Collection
     return $this->addLabelIds;
   }
   /**
-   * @param string[]
+   * A list of IDs of labels to remove from this thread. You can remove up to
+   * 100 labels with each update.
+   *
+   * @param string[] $removeLabelIds
    */
   public function setRemoveLabelIds($removeLabelIds)
   {

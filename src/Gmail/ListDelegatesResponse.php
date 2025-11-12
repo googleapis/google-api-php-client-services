@@ -24,7 +24,10 @@ class ListDelegatesResponse extends \Google\Collection
   protected $delegatesDataType = 'array';
 
   /**
-   * @param Delegate[]
+   * List of the user's delegates (with any verification status). If an account
+   * doesn't have delegates, this field doesn't appear.
+   *
+   * @param Delegate[] $delegates
    */
   public function setDelegates($delegates)
   {

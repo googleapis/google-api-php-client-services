@@ -20,16 +20,24 @@ namespace Google\Service\Gmail;
 class WatchResponse extends \Google\Model
 {
   /**
+   * When Gmail will stop sending notifications for mailbox updates (epoch
+   * millis). Call `watch` again before this time to renew the watch.
+   *
    * @var string
    */
   public $expiration;
   /**
+   * The ID of the mailbox's current history record.
+   *
    * @var string
    */
   public $historyId;
 
   /**
-   * @param string
+   * When Gmail will stop sending notifications for mailbox updates (epoch
+   * millis). Call `watch` again before this time to renew the watch.
+   *
+   * @param string $expiration
    */
   public function setExpiration($expiration)
   {
@@ -43,7 +51,9 @@ class WatchResponse extends \Google\Model
     return $this->expiration;
   }
   /**
-   * @param string
+   * The ID of the mailbox's current history record.
+   *
+   * @param string $historyId
    */
   public function setHistoryId($historyId)
   {

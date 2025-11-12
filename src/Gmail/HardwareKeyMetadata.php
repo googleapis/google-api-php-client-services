@@ -20,12 +20,16 @@ namespace Google\Service\Gmail;
 class HardwareKeyMetadata extends \Google\Model
 {
   /**
+   * Description about the hardware key.
+   *
    * @var string
    */
   public $description;
 
   /**
-   * @param string
+   * Description about the hardware key.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {

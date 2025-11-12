@@ -23,16 +23,24 @@ class ListMessagesResponse extends \Google\Collection
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**
+   * Token to retrieve the next page of results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Estimated total number of results.
+   *
    * @var string
    */
   public $resultSizeEstimate;
 
   /**
-   * @param Message[]
+   * List of messages. Note that each message resource contains only an `id` and
+   * a `threadId`. Additional message details can be fetched using the
+   * messages.get method.
+   *
+   * @param Message[] $messages
    */
   public function setMessages($messages)
   {
@@ -46,7 +54,9 @@ class ListMessagesResponse extends \Google\Collection
     return $this->messages;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListMessagesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * Estimated total number of results.
+   *
+   * @param string $resultSizeEstimate
    */
   public function setResultSizeEstimate($resultSizeEstimate)
   {

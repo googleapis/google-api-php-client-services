@@ -20,16 +20,35 @@ namespace Google\Service\Gmail;
 class ForwardingAddress extends \Google\Model
 {
   /**
+   * Unspecified verification status.
+   */
+  public const VERIFICATION_STATUS_verificationStatusUnspecified = 'verificationStatusUnspecified';
+  /**
+   * The address is ready to use for forwarding.
+   */
+  public const VERIFICATION_STATUS_accepted = 'accepted';
+  /**
+   * The address is awaiting verification by the owner.
+   */
+  public const VERIFICATION_STATUS_pending = 'pending';
+  /**
+   * An email address to which messages can be forwarded.
+   *
    * @var string
    */
   public $forwardingEmail;
   /**
+   * Indicates whether this address has been verified and is usable for
+   * forwarding. Read-only.
+   *
    * @var string
    */
   public $verificationStatus;
 
   /**
-   * @param string
+   * An email address to which messages can be forwarded.
+   *
+   * @param string $forwardingEmail
    */
   public function setForwardingEmail($forwardingEmail)
   {
@@ -43,14 +62,19 @@ class ForwardingAddress extends \Google\Model
     return $this->forwardingEmail;
   }
   /**
-   * @param string
+   * Indicates whether this address has been verified and is usable for
+   * forwarding. Read-only.
+   *
+   * Accepted values: verificationStatusUnspecified, accepted, pending
+   *
+   * @param self::VERIFICATION_STATUS_* $verificationStatus
    */
   public function setVerificationStatus($verificationStatus)
   {
     $this->verificationStatus = $verificationStatus;
   }
   /**
-   * @return string
+   * @return self::VERIFICATION_STATUS_*
    */
   public function getVerificationStatus()
   {

@@ -19,45 +19,83 @@ namespace Google\Service\Gmail;
 
 class FilterCriteria extends \Google\Model
 {
+  public const SIZE_COMPARISON_unspecified = 'unspecified';
   /**
+   * Find messages smaller than the given size.
+   */
+  public const SIZE_COMPARISON_smaller = 'smaller';
+  /**
+   * Find messages larger than the given size.
+   */
+  public const SIZE_COMPARISON_larger = 'larger';
+  /**
+   * Whether the response should exclude chats.
+   *
    * @var bool
    */
   public $excludeChats;
   /**
+   * The sender's display name or email address.
+   *
    * @var string
    */
   public $from;
   /**
+   * Whether the message has any attachment.
+   *
    * @var bool
    */
   public $hasAttachment;
   /**
+   * Only return messages not matching the specified query. Supports the same
+   * query format as the Gmail search box. For example,
+   * `"from:someuser@example.com rfc822msgid: is:unread"`.
+   *
    * @var string
    */
   public $negatedQuery;
   /**
+   * Only return messages matching the specified query. Supports the same query
+   * format as the Gmail search box. For example, `"from:someuser@example.com
+   * rfc822msgid: is:unread"`.
+   *
    * @var string
    */
   public $query;
   /**
+   * The size of the entire RFC822 message in bytes, including all headers and
+   * attachments.
+   *
    * @var int
    */
   public $size;
   /**
+   * How the message size in bytes should be in relation to the size field.
+   *
    * @var string
    */
   public $sizeComparison;
   /**
+   * Case-insensitive phrase found in the message's subject. Trailing and
+   * leading whitespace are be trimmed and adjacent spaces are collapsed.
+   *
    * @var string
    */
   public $subject;
   /**
+   * The recipient's display name or email address. Includes recipients in the
+   * "to", "cc", and "bcc" header fields. You can use simply the local part of
+   * the email address. For example, "example" and "example@" both match
+   * "example@gmail.com". This field is case-insensitive.
+   *
    * @var string
    */
   public $to;
 
   /**
-   * @param bool
+   * Whether the response should exclude chats.
+   *
+   * @param bool $excludeChats
    */
   public function setExcludeChats($excludeChats)
   {
@@ -71,7 +109,9 @@ class FilterCriteria extends \Google\Model
     return $this->excludeChats;
   }
   /**
-   * @param string
+   * The sender's display name or email address.
+   *
+   * @param string $from
    */
   public function setFrom($from)
   {
@@ -85,7 +125,9 @@ class FilterCriteria extends \Google\Model
     return $this->from;
   }
   /**
-   * @param bool
+   * Whether the message has any attachment.
+   *
+   * @param bool $hasAttachment
    */
   public function setHasAttachment($hasAttachment)
   {
@@ -99,7 +141,11 @@ class FilterCriteria extends \Google\Model
     return $this->hasAttachment;
   }
   /**
-   * @param string
+   * Only return messages not matching the specified query. Supports the same
+   * query format as the Gmail search box. For example,
+   * `"from:someuser@example.com rfc822msgid: is:unread"`.
+   *
+   * @param string $negatedQuery
    */
   public function setNegatedQuery($negatedQuery)
   {
@@ -113,7 +159,11 @@ class FilterCriteria extends \Google\Model
     return $this->negatedQuery;
   }
   /**
-   * @param string
+   * Only return messages matching the specified query. Supports the same query
+   * format as the Gmail search box. For example, `"from:someuser@example.com
+   * rfc822msgid: is:unread"`.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -127,7 +177,10 @@ class FilterCriteria extends \Google\Model
     return $this->query;
   }
   /**
-   * @param int
+   * The size of the entire RFC822 message in bytes, including all headers and
+   * attachments.
+   *
+   * @param int $size
    */
   public function setSize($size)
   {
@@ -141,21 +194,28 @@ class FilterCriteria extends \Google\Model
     return $this->size;
   }
   /**
-   * @param string
+   * How the message size in bytes should be in relation to the size field.
+   *
+   * Accepted values: unspecified, smaller, larger
+   *
+   * @param self::SIZE_COMPARISON_* $sizeComparison
    */
   public function setSizeComparison($sizeComparison)
   {
     $this->sizeComparison = $sizeComparison;
   }
   /**
-   * @return string
+   * @return self::SIZE_COMPARISON_*
    */
   public function getSizeComparison()
   {
     return $this->sizeComparison;
   }
   /**
-   * @param string
+   * Case-insensitive phrase found in the message's subject. Trailing and
+   * leading whitespace are be trimmed and adjacent spaces are collapsed.
+   *
+   * @param string $subject
    */
   public function setSubject($subject)
   {
@@ -169,7 +229,12 @@ class FilterCriteria extends \Google\Model
     return $this->subject;
   }
   /**
-   * @param string
+   * The recipient's display name or email address. Includes recipients in the
+   * "to", "cc", and "bcc" header fields. You can use simply the local part of
+   * the email address. For example, "example" and "example@" both match
+   * "example@gmail.com". This field is case-insensitive.
+   *
+   * @param string $to
    */
   public function setTo($to)
   {

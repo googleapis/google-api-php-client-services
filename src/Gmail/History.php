@@ -21,6 +21,8 @@ class History extends \Google\Collection
 {
   protected $collection_key = 'messagesDeleted';
   /**
+   * The mailbox sequence ID.
+   *
    * @var string
    */
   public $id;
@@ -36,7 +38,9 @@ class History extends \Google\Collection
   protected $messagesDeletedDataType = 'array';
 
   /**
-   * @param string
+   * The mailbox sequence ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -50,7 +54,9 @@ class History extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param HistoryLabelAdded[]
+   * Labels added to messages in this history record.
+   *
+   * @param HistoryLabelAdded[] $labelsAdded
    */
   public function setLabelsAdded($labelsAdded)
   {
@@ -64,7 +70,9 @@ class History extends \Google\Collection
     return $this->labelsAdded;
   }
   /**
-   * @param HistoryLabelRemoved[]
+   * Labels removed from messages in this history record.
+   *
+   * @param HistoryLabelRemoved[] $labelsRemoved
    */
   public function setLabelsRemoved($labelsRemoved)
   {
@@ -78,7 +86,11 @@ class History extends \Google\Collection
     return $this->labelsRemoved;
   }
   /**
-   * @param Message[]
+   * List of messages changed in this history record. The fields for specific
+   * change types, such as `messagesAdded` may duplicate messages in this field.
+   * We recommend using the specific change-type fields instead of this.
+   *
+   * @param Message[] $messages
    */
   public function setMessages($messages)
   {
@@ -92,7 +104,9 @@ class History extends \Google\Collection
     return $this->messages;
   }
   /**
-   * @param HistoryMessageAdded[]
+   * Messages added to the mailbox in this history record.
+   *
+   * @param HistoryMessageAdded[] $messagesAdded
    */
   public function setMessagesAdded($messagesAdded)
   {
@@ -106,7 +120,9 @@ class History extends \Google\Collection
     return $this->messagesAdded;
   }
   /**
-   * @param HistoryMessageDeleted[]
+   * Messages deleted (not Trashed) from the mailbox in this history record.
+   *
+   * @param HistoryMessageDeleted[] $messagesDeleted
    */
   public function setMessagesDeleted($messagesDeleted)
   {

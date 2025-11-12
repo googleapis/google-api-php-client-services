@@ -21,22 +21,30 @@ class Thread extends \Google\Collection
 {
   protected $collection_key = 'messages';
   /**
+   * The ID of the last history record that modified this thread.
+   *
    * @var string
    */
   public $historyId;
   /**
+   * The unique ID of the thread.
+   *
    * @var string
    */
   public $id;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**
+   * A short part of the message text.
+   *
    * @var string
    */
   public $snippet;
 
   /**
-   * @param string
+   * The ID of the last history record that modified this thread.
+   *
+   * @param string $historyId
    */
   public function setHistoryId($historyId)
   {
@@ -50,7 +58,9 @@ class Thread extends \Google\Collection
     return $this->historyId;
   }
   /**
-   * @param string
+   * The unique ID of the thread.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -64,7 +74,9 @@ class Thread extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param Message[]
+   * The list of messages in the thread.
+   *
+   * @param Message[] $messages
    */
   public function setMessages($messages)
   {
@@ -78,7 +90,9 @@ class Thread extends \Google\Collection
     return $this->messages;
   }
   /**
-   * @param string
+   * A short part of the message text.
+   *
+   * @param string $snippet
    */
   public function setSnippet($snippet)
   {

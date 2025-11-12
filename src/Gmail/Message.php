@@ -21,42 +21,71 @@ class Message extends \Google\Collection
 {
   protected $collection_key = 'labelIds';
   /**
+   * The ID of the last history record that modified this message.
+   *
    * @var string
    */
   public $historyId;
   /**
+   * The immutable ID of the message.
+   *
    * @var string
    */
   public $id;
   /**
+   * The internal message creation timestamp (epoch ms), which determines
+   * ordering in the inbox. For normal SMTP-received email, this represents the
+   * time the message was originally accepted by Google, which is more reliable
+   * than the `Date` header. However, for API-migrated mail, it can be
+   * configured by client to be based on the `Date` header.
+   *
    * @var string
    */
   public $internalDate;
   /**
+   * List of IDs of labels applied to this message.
+   *
    * @var string[]
    */
   public $labelIds;
   protected $payloadType = MessagePart::class;
   protected $payloadDataType = '';
   /**
+   * The entire email message in an RFC 2822 formatted and base64url encoded
+   * string. Returned in `messages.get` and `drafts.get` responses when the
+   * `format=RAW` parameter is supplied.
+   *
    * @var string
    */
   public $raw;
   /**
+   * Estimated size in bytes of the message.
+   *
    * @var int
    */
   public $sizeEstimate;
   /**
+   * A short part of the message text.
+   *
    * @var string
    */
   public $snippet;
   /**
+   * The ID of the thread the message belongs to. To add a message or draft to a
+   * thread, the following criteria must be met: 1. The requested `threadId`
+   * must be specified on the `Message` or `Draft.Message` you supply with your
+   * request. 2. The `References` and `In-Reply-To` headers must be set in
+   * compliance with the [RFC 2822](https://tools.ietf.org/html/rfc2822)
+   * standard. 3. The `Subject` headers must match.
+   *
    * @var string
    */
   public $threadId;
 
   /**
-   * @param string
+   * The ID of the last history record that modified this message.
+   *
+   * @param string $historyId
    */
   public function setHistoryId($historyId)
   {
@@ -70,7 +99,9 @@ class Message extends \Google\Collection
     return $this->historyId;
   }
   /**
-   * @param string
+   * The immutable ID of the message.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -84,7 +115,13 @@ class Message extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * The internal message creation timestamp (epoch ms), which determines
+   * ordering in the inbox. For normal SMTP-received email, this represents the
+   * time the message was originally accepted by Google, which is more reliable
+   * than the `Date` header. However, for API-migrated mail, it can be
+   * configured by client to be based on the `Date` header.
+   *
+   * @param string $internalDate
    */
   public function setInternalDate($internalDate)
   {
@@ -98,7 +135,9 @@ class Message extends \Google\Collection
     return $this->internalDate;
   }
   /**
-   * @param string[]
+   * List of IDs of labels applied to this message.
+   *
+   * @param string[] $labelIds
    */
   public function setLabelIds($labelIds)
   {
@@ -112,7 +151,9 @@ class Message extends \Google\Collection
     return $this->labelIds;
   }
   /**
-   * @param MessagePart
+   * The parsed email structure in the message parts.
+   *
+   * @param MessagePart $payload
    */
   public function setPayload(MessagePart $payload)
   {
@@ -126,7 +167,11 @@ class Message extends \Google\Collection
     return $this->payload;
   }
   /**
-   * @param string
+   * The entire email message in an RFC 2822 formatted and base64url encoded
+   * string. Returned in `messages.get` and `drafts.get` responses when the
+   * `format=RAW` parameter is supplied.
+   *
+   * @param string $raw
    */
   public function setRaw($raw)
   {
@@ -140,7 +185,9 @@ class Message extends \Google\Collection
     return $this->raw;
   }
   /**
-   * @param int
+   * Estimated size in bytes of the message.
+   *
+   * @param int $sizeEstimate
    */
   public function setSizeEstimate($sizeEstimate)
   {
@@ -154,7 +201,9 @@ class Message extends \Google\Collection
     return $this->sizeEstimate;
   }
   /**
-   * @param string
+   * A short part of the message text.
+   *
+   * @param string $snippet
    */
   public function setSnippet($snippet)
   {
@@ -168,7 +217,14 @@ class Message extends \Google\Collection
     return $this->snippet;
   }
   /**
-   * @param string
+   * The ID of the thread the message belongs to. To add a message or draft to a
+   * thread, the following criteria must be met: 1. The requested `threadId`
+   * must be specified on the `Message` or `Draft.Message` you supply with your
+   * request. 2. The `References` and `In-Reply-To` headers must be set in
+   * compliance with the [RFC 2822](https://tools.ietf.org/html/rfc2822)
+   * standard. 3. The `Subject` headers must match.
+   *
+   * @param string $threadId
    */
   public function setThreadId($threadId)
   {

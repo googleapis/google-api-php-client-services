@@ -20,24 +20,34 @@ namespace Google\Service\Gmail;
 class Profile extends \Google\Model
 {
   /**
+   * The user's email address.
+   *
    * @var string
    */
   public $emailAddress;
   /**
+   * The ID of the mailbox's current history record.
+   *
    * @var string
    */
   public $historyId;
   /**
+   * The total number of messages in the mailbox.
+   *
    * @var int
    */
   public $messagesTotal;
   /**
+   * The total number of threads in the mailbox.
+   *
    * @var int
    */
   public $threadsTotal;
 
   /**
-   * @param string
+   * The user's email address.
+   *
+   * @param string $emailAddress
    */
   public function setEmailAddress($emailAddress)
   {
@@ -51,7 +61,9 @@ class Profile extends \Google\Model
     return $this->emailAddress;
   }
   /**
-   * @param string
+   * The ID of the mailbox's current history record.
+   *
+   * @param string $historyId
    */
   public function setHistoryId($historyId)
   {
@@ -65,7 +77,9 @@ class Profile extends \Google\Model
     return $this->historyId;
   }
   /**
-   * @param int
+   * The total number of messages in the mailbox.
+   *
+   * @param int $messagesTotal
    */
   public function setMessagesTotal($messagesTotal)
   {
@@ -79,7 +93,9 @@ class Profile extends \Google\Model
     return $this->messagesTotal;
   }
   /**
-   * @param int
+   * The total number of threads in the mailbox.
+   *
+   * @param int $threadsTotal
    */
   public function setThreadsTotal($threadsTotal)
   {

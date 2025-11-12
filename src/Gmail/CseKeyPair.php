@@ -19,36 +19,77 @@ namespace Google\Service\Gmail;
 
 class CseKeyPair extends \Google\Collection
 {
+  /**
+   * The current state of the key pair is not set. The key pair is neither
+   * turned on nor turned off.
+   */
+  public const ENABLEMENT_STATE_stateUnspecified = 'stateUnspecified';
+  /**
+   * The key pair is turned on. For any email messages that this key pair
+   * encrypts, Gmail decrypts the messages and signs any outgoing mail with the
+   * private key. To turn on a key pair, use the EnableCseKeyPair method.
+   */
+  public const ENABLEMENT_STATE_enabled = 'enabled';
+  /**
+   * The key pair is turned off. Authenticated users cannot decrypt email
+   * messages nor sign outgoing messages. If a key pair is turned off for more
+   * than 30 days, you can permanently delete it. To turn off a key pair, use
+   * the DisableCseKeyPair method.
+   */
+  public const ENABLEMENT_STATE_disabled = 'disabled';
   protected $collection_key = 'subjectEmailAddresses';
   /**
+   * Output only. If a key pair is set to `DISABLED`, the time that the key
+   * pair's state changed from `ENABLED` to `DISABLED`. This field is present
+   * only when the key pair is in state `DISABLED`.
+   *
    * @var string
    */
   public $disableTime;
   /**
+   * Output only. The current state of the key pair.
+   *
    * @var string
    */
   public $enablementState;
   /**
+   * Output only. The immutable ID for the client-side encryption S/MIME key
+   * pair.
+   *
    * @var string
    */
   public $keyPairId;
   /**
+   * Output only. The public key and its certificate chain, in
+   * [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
+   *
    * @var string
    */
   public $pem;
   /**
+   * Input only. The public key and its certificate chain. The chain must be in
+   * [PKCS#7](https://en.wikipedia.org/wiki/PKCS_7) format and use PEM encoding
+   * and ASCII armor.
+   *
    * @var string
    */
   public $pkcs7;
   protected $privateKeyMetadataType = CsePrivateKeyMetadata::class;
   protected $privateKeyMetadataDataType = 'array';
   /**
+   * Output only. The email address identities that are specified on the leaf
+   * certificate.
+   *
    * @var string[]
    */
   public $subjectEmailAddresses;
 
   /**
-   * @param string
+   * Output only. If a key pair is set to `DISABLED`, the time that the key
+   * pair's state changed from `ENABLED` to `DISABLED`. This field is present
+   * only when the key pair is in state `DISABLED`.
+   *
+   * @param string $disableTime
    */
   public function setDisableTime($disableTime)
   {
@@ -62,21 +103,28 @@ class CseKeyPair extends \Google\Collection
     return $this->disableTime;
   }
   /**
-   * @param string
+   * Output only. The current state of the key pair.
+   *
+   * Accepted values: stateUnspecified, enabled, disabled
+   *
+   * @param self::ENABLEMENT_STATE_* $enablementState
    */
   public function setEnablementState($enablementState)
   {
     $this->enablementState = $enablementState;
   }
   /**
-   * @return string
+   * @return self::ENABLEMENT_STATE_*
    */
   public function getEnablementState()
   {
     return $this->enablementState;
   }
   /**
-   * @param string
+   * Output only. The immutable ID for the client-side encryption S/MIME key
+   * pair.
+   *
+   * @param string $keyPairId
    */
   public function setKeyPairId($keyPairId)
   {
@@ -90,7 +138,10 @@ class CseKeyPair extends \Google\Collection
     return $this->keyPairId;
   }
   /**
-   * @param string
+   * Output only. The public key and its certificate chain, in
+   * [PEM](https://en.wikipedia.org/wiki/Privacy-Enhanced_Mail) format.
+   *
+   * @param string $pem
    */
   public function setPem($pem)
   {
@@ -104,7 +155,11 @@ class CseKeyPair extends \Google\Collection
     return $this->pem;
   }
   /**
-   * @param string
+   * Input only. The public key and its certificate chain. The chain must be in
+   * [PKCS#7](https://en.wikipedia.org/wiki/PKCS_7) format and use PEM encoding
+   * and ASCII armor.
+   *
+   * @param string $pkcs7
    */
   public function setPkcs7($pkcs7)
   {
@@ -118,7 +173,9 @@ class CseKeyPair extends \Google\Collection
     return $this->pkcs7;
   }
   /**
-   * @param CsePrivateKeyMetadata[]
+   * Metadata for instances of this key pair's private key.
+   *
+   * @param CsePrivateKeyMetadata[] $privateKeyMetadata
    */
   public function setPrivateKeyMetadata($privateKeyMetadata)
   {
@@ -132,7 +189,10 @@ class CseKeyPair extends \Google\Collection
     return $this->privateKeyMetadata;
   }
   /**
-   * @param string[]
+   * Output only. The email address identities that are specified on the leaf
+   * certificate.
+   *
+   * @param string[] $subjectEmailAddresses
    */
   public function setSubjectEmailAddresses($subjectEmailAddresses)
   {

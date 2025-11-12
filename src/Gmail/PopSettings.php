@@ -20,37 +20,89 @@ namespace Google\Service\Gmail;
 class PopSettings extends \Google\Model
 {
   /**
+   * Unspecified range.
+   */
+  public const ACCESS_WINDOW_accessWindowUnspecified = 'accessWindowUnspecified';
+  /**
+   * Indicates that no messages are accessible via POP.
+   */
+  public const ACCESS_WINDOW_disabled = 'disabled';
+  /**
+   * Indicates that unfetched messages received after some past point in time
+   * are accessible via POP.
+   */
+  public const ACCESS_WINDOW_fromNowOn = 'fromNowOn';
+  /**
+   * Indicates that all unfetched messages are accessible via POP.
+   */
+  public const ACCESS_WINDOW_allMail = 'allMail';
+  /**
+   * Unspecified disposition.
+   */
+  public const DISPOSITION_dispositionUnspecified = 'dispositionUnspecified';
+  /**
+   * Leave the message in the `INBOX`.
+   */
+  public const DISPOSITION_leaveInInbox = 'leaveInInbox';
+  /**
+   * Archive the message.
+   */
+  public const DISPOSITION_archive = 'archive';
+  /**
+   * Move the message to the `TRASH`.
+   */
+  public const DISPOSITION_trash = 'trash';
+  /**
+   * Leave the message in the `INBOX` and mark it as read.
+   */
+  public const DISPOSITION_markRead = 'markRead';
+  /**
+   * The range of messages which are accessible via POP.
+   *
    * @var string
    */
   public $accessWindow;
   /**
+   * The action that will be executed on a message after it has been fetched via
+   * POP.
+   *
    * @var string
    */
   public $disposition;
 
   /**
-   * @param string
+   * The range of messages which are accessible via POP.
+   *
+   * Accepted values: accessWindowUnspecified, disabled, fromNowOn, allMail
+   *
+   * @param self::ACCESS_WINDOW_* $accessWindow
    */
   public function setAccessWindow($accessWindow)
   {
     $this->accessWindow = $accessWindow;
   }
   /**
-   * @return string
+   * @return self::ACCESS_WINDOW_*
    */
   public function getAccessWindow()
   {
     return $this->accessWindow;
   }
   /**
-   * @param string
+   * The action that will be executed on a message after it has been fetched via
+   * POP.
+   *
+   * Accepted values: dispositionUnspecified, leaveInInbox, archive, trash,
+   * markRead
+   *
+   * @param self::DISPOSITION_* $disposition
    */
   public function setDisposition($disposition)
   {
     $this->disposition = $disposition;
   }
   /**
-   * @return string
+   * @return self::DISPOSITION_*
    */
   public function getDisposition()
   {

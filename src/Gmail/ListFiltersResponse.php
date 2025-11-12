@@ -24,7 +24,9 @@ class ListFiltersResponse extends \Google\Collection
   protected $filterDataType = 'array';
 
   /**
-   * @param Filter[]
+   * List of a user's filters.
+   *
+   * @param Filter[] $filter
    */
   public function setFilter($filter)
   {

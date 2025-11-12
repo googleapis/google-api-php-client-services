@@ -24,7 +24,12 @@ class ListLabelsResponse extends \Google\Collection
   protected $labelsDataType = 'array';
 
   /**
-   * @param Label[]
+   * List of labels. Note that each label resource only contains an `id`,
+   * `name`, `messageListVisibility`, `labelListVisibility`, and `type`. The [`l
+   * abels.get`](https://developers.google.com/workspace/gmail/api/v1/reference/
+   * users/labels/get) method can fetch additional label details.
+   *
+   * @param Label[] $labels
    */
   public function setLabels($labels)
   {

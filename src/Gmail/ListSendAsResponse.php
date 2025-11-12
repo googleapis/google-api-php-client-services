@@ -24,7 +24,9 @@ class ListSendAsResponse extends \Google\Collection
   protected $sendAsDataType = 'array';
 
   /**
-   * @param SendAs[]
+   * List of send-as aliases.
+   *
+   * @param SendAs[] $sendAs
    */
   public function setSendAs($sendAs)
   {

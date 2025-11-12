@@ -21,6 +21,8 @@ class HistoryLabelRemoved extends \Google\Collection
 {
   protected $collection_key = 'labelIds';
   /**
+   * Label IDs removed from the message.
+   *
    * @var string[]
    */
   public $labelIds;
@@ -28,7 +30,9 @@ class HistoryLabelRemoved extends \Google\Collection
   protected $messageDataType = '';
 
   /**
-   * @param string[]
+   * Label IDs removed from the message.
+   *
+   * @param string[] $labelIds
    */
   public function setLabelIds($labelIds)
   {
@@ -42,7 +46,7 @@ class HistoryLabelRemoved extends \Google\Collection
     return $this->labelIds;
   }
   /**
-   * @param Message
+   * @param Message $message
    */
   public function setMessage(Message $message)
   {

@@ -21,20 +21,29 @@ class BatchModifyMessagesRequest extends \Google\Collection
 {
   protected $collection_key = 'removeLabelIds';
   /**
+   * A list of label IDs to add to messages.
+   *
    * @var string[]
    */
   public $addLabelIds;
   /**
+   * The IDs of the messages to modify. There is a limit of 1000 ids per
+   * request.
+   *
    * @var string[]
    */
   public $ids;
   /**
+   * A list of label IDs to remove from messages.
+   *
    * @var string[]
    */
   public $removeLabelIds;
 
   /**
-   * @param string[]
+   * A list of label IDs to add to messages.
+   *
+   * @param string[] $addLabelIds
    */
   public function setAddLabelIds($addLabelIds)
   {
@@ -48,7 +57,10 @@ class BatchModifyMessagesRequest extends \Google\Collection
     return $this->addLabelIds;
   }
   /**
-   * @param string[]
+   * The IDs of the messages to modify. There is a limit of 1000 ids per
+   * request.
+   *
+   * @param string[] $ids
    */
   public function setIds($ids)
   {
@@ -62,7 +74,9 @@ class BatchModifyMessagesRequest extends \Google\Collection
     return $this->ids;
   }
   /**
-   * @param string[]
+   * A list of label IDs to remove from messages.
+   *
+   * @param string[] $removeLabelIds
    */
   public function setRemoveLabelIds($removeLabelIds)
   {

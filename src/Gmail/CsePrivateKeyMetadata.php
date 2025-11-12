@@ -24,12 +24,16 @@ class CsePrivateKeyMetadata extends \Google\Model
   protected $kaclsKeyMetadataType = KaclsKeyMetadata::class;
   protected $kaclsKeyMetadataDataType = '';
   /**
+   * Output only. The immutable ID for the private key metadata instance.
+   *
    * @var string
    */
   public $privateKeyMetadataId;
 
   /**
-   * @param HardwareKeyMetadata
+   * Metadata for hardware keys.
+   *
+   * @param HardwareKeyMetadata $hardwareKeyMetadata
    */
   public function setHardwareKeyMetadata(HardwareKeyMetadata $hardwareKeyMetadata)
   {
@@ -43,7 +47,10 @@ class CsePrivateKeyMetadata extends \Google\Model
     return $this->hardwareKeyMetadata;
   }
   /**
-   * @param KaclsKeyMetadata
+   * Metadata for a private key instance managed by an external key access
+   * control list service.
+   *
+   * @param KaclsKeyMetadata $kaclsKeyMetadata
    */
   public function setKaclsKeyMetadata(KaclsKeyMetadata $kaclsKeyMetadata)
   {
@@ -57,7 +64,9 @@ class CsePrivateKeyMetadata extends \Google\Model
     return $this->kaclsKeyMetadata;
   }
   /**
-   * @param string
+   * Output only. The immutable ID for the private key metadata instance.
+   *
+   * @param string $privateKeyMetadataId
    */
   public function setPrivateKeyMetadataId($privateKeyMetadataId)
   {

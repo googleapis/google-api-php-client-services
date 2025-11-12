@@ -24,12 +24,16 @@ class Filter extends \Google\Model
   protected $criteriaType = FilterCriteria::class;
   protected $criteriaDataType = '';
   /**
+   * The server assigned ID of the filter.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param FilterAction
+   * Action that the filter performs.
+   *
+   * @param FilterAction $action
    */
   public function setAction(FilterAction $action)
   {
@@ -43,7 +47,9 @@ class Filter extends \Google\Model
     return $this->action;
   }
   /**
-   * @param FilterCriteria
+   * Matching criteria for the filter.
+   *
+   * @param FilterCriteria $criteria
    */
   public function setCriteria(FilterCriteria $criteria)
   {
@@ -57,7 +63,9 @@ class Filter extends \Google\Model
     return $this->criteria;
   }
   /**
-   * @param string
+   * The server assigned ID of the filter.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

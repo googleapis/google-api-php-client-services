@@ -20,16 +20,22 @@ namespace Google\Service\Gmail;
 class SignAndEncryptKeyPairs extends \Google\Model
 {
   /**
+   * The ID of the CseKeyPair that encrypts signed outgoing mail.
+   *
    * @var string
    */
   public $encryptionKeyPairId;
   /**
+   * The ID of the CseKeyPair that signs outgoing mail.
+   *
    * @var string
    */
   public $signingKeyPairId;
 
   /**
-   * @param string
+   * The ID of the CseKeyPair that encrypts signed outgoing mail.
+   *
+   * @param string $encryptionKeyPairId
    */
   public function setEncryptionKeyPairId($encryptionKeyPairId)
   {
@@ -43,7 +49,9 @@ class SignAndEncryptKeyPairs extends \Google\Model
     return $this->encryptionKeyPairId;
   }
   /**
-   * @param string
+   * The ID of the CseKeyPair that signs outgoing mail.
+   *
+   * @param string $signingKeyPairId
    */
   public function setSigningKeyPairId($signingKeyPairId)
   {
