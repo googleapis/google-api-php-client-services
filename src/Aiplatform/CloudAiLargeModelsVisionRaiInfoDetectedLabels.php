@@ -23,12 +23,16 @@ class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends \Google\Collection
   protected $entitiesType = CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity::class;
   protected $entitiesDataType = 'array';
   /**
+   * The RAI category for the deteceted labels.
+   *
    * @var string
    */
   public $raiCategory;
 
   /**
-   * @param CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity[]
+   * The list of detected entities for the rai signal.
+   *
+   * @param CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity[] $entities
    */
   public function setEntities($entities)
   {
@@ -42,7 +46,9 @@ class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param string
+   * The RAI category for the deteceted labels.
+   *
+   * @param string $raiCategory
    */
   public function setRaiCategory($raiCategory)
   {

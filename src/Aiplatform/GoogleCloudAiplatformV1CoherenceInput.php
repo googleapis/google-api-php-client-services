@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1CoherenceInput extends \Google\Model
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1CoherenceInstance
+   * Required. Coherence instance.
+   *
+   * @param GoogleCloudAiplatformV1CoherenceInstance $instance
    */
   public function setInstance(GoogleCloudAiplatformV1CoherenceInstance $instance)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1CoherenceInput extends \Google\Model
     return $this->instance;
   }
   /**
-   * @param GoogleCloudAiplatformV1CoherenceSpec
+   * Required. Spec for coherence score metric.
+   *
+   * @param GoogleCloudAiplatformV1CoherenceSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1CoherenceSpec $metricSpec)
   {

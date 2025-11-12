@@ -19,26 +19,89 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
 {
+  /**
+   * The job state is unspecified.
+   */
+  public const STATE_JOB_STATE_UNSPECIFIED = 'JOB_STATE_UNSPECIFIED';
+  /**
+   * The job has been just created or resumed and processing has not yet begun.
+   */
+  public const STATE_JOB_STATE_QUEUED = 'JOB_STATE_QUEUED';
+  /**
+   * The service is preparing to run the job.
+   */
+  public const STATE_JOB_STATE_PENDING = 'JOB_STATE_PENDING';
+  /**
+   * The job is in progress.
+   */
+  public const STATE_JOB_STATE_RUNNING = 'JOB_STATE_RUNNING';
+  /**
+   * The job completed successfully.
+   */
+  public const STATE_JOB_STATE_SUCCEEDED = 'JOB_STATE_SUCCEEDED';
+  /**
+   * The job failed.
+   */
+  public const STATE_JOB_STATE_FAILED = 'JOB_STATE_FAILED';
+  /**
+   * The job is being cancelled. From this state the job may only go to either
+   * `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED` or `JOB_STATE_CANCELLED`.
+   */
+  public const STATE_JOB_STATE_CANCELLING = 'JOB_STATE_CANCELLING';
+  /**
+   * The job has been cancelled.
+   */
+  public const STATE_JOB_STATE_CANCELLED = 'JOB_STATE_CANCELLED';
+  /**
+   * The job has been stopped, and can be resumed.
+   */
+  public const STATE_JOB_STATE_PAUSED = 'JOB_STATE_PAUSED';
+  /**
+   * The job has expired.
+   */
+  public const STATE_JOB_STATE_EXPIRED = 'JOB_STATE_EXPIRED';
+  /**
+   * The job is being updated. Only jobs in the `RUNNING` state can be updated.
+   * After updating, the job goes back to the `RUNNING` state.
+   */
+  public const STATE_JOB_STATE_UPDATING = 'JOB_STATE_UPDATING';
+  /**
+   * The job is partially succeeded, some results may be missing due to errors.
+   */
+  public const STATE_JOB_STATE_PARTIALLY_SUCCEEDED = 'JOB_STATE_PARTIALLY_SUCCEEDED';
   protected $collection_key = 'partialFailures';
   protected $completionStatsType = GoogleCloudAiplatformV1CompletionStats::class;
   protected $completionStatsDataType = '';
   /**
+   * Output only. Time when the BatchPredictionJob was created.
+   *
    * @var string
    */
   public $createTime;
   protected $dedicatedResourcesType = GoogleCloudAiplatformV1BatchDedicatedResources::class;
   protected $dedicatedResourcesDataType = '';
   /**
+   * For custom-trained Models and AutoML Tabular Models, the container of the
+   * DeployedModel instances will send `stderr` and `stdout` streams to Cloud
+   * Logging by default. Please note that the logs incur cost, which are subject
+   * to [Cloud Logging pricing](https://cloud.google.com/logging/pricing). User
+   * can disable container logging by setting this flag to true.
+   *
    * @var bool
    */
   public $disableContainerLogging;
   /**
+   * Required. The user-defined name of this BatchPredictionJob.
+   *
    * @var string
    */
   public $displayName;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
+   * Output only. Time when the BatchPredictionJob entered any of the following
+   * states: `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`, `JOB_STATE_CANCELLED`.
+   *
    * @var string
    */
   public $endTime;
@@ -47,6 +110,16 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
   protected $explanationSpecType = GoogleCloudAiplatformV1ExplanationSpec::class;
   protected $explanationSpecDataType = '';
   /**
+   * Generate explanation with the batch prediction results. When set to `true`,
+   * the batch prediction output changes based on the `predictions_format` field
+   * of the BatchPredictionJob.output_config object: * `bigquery`: output
+   * includes a column named `explanation`. The value is a struct that conforms
+   * to the Explanation object. * `jsonl`: The JSON objects on each line include
+   * an additional entry keyed `explanation`. The value of the entry is a JSON
+   * object that conforms to the Explanation object. * `csv`: Generating
+   * explanations for CSV format is not supported. If this field is set to true,
+   * either the Model.explanation_spec or explanation_spec must be populated.
+   *
    * @var bool
    */
   public $generateExplanation;
@@ -55,24 +128,50 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
   protected $instanceConfigType = GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig::class;
   protected $instanceConfigDataType = '';
   /**
+   * The labels with user-defined metadata to organize BatchPredictionJobs.
+   * Label keys and values can be no longer than 64 characters (Unicode
+   * codepoints), can only contain lowercase letters, numeric characters,
+   * underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   *
    * @var string[]
    */
   public $labels;
   protected $manualBatchTuningParametersType = GoogleCloudAiplatformV1ManualBatchTuningParameters::class;
   protected $manualBatchTuningParametersDataType = '';
   /**
+   * The name of the Model resource that produces the predictions via this job,
+   * must share the same ancestor Location. Starting this job has no impact on
+   * any existing deployments of the Model and their resources. Exactly one of
+   * model and unmanaged_container_model must be set. The model resource name
+   * may contain version id or version alias to specify the version. Example:
+   * `projects/{project}/locations/{location}/models/{model}@2` or
+   * `projects/{project}/locations/{location}/models/{model}@golden` if no
+   * version is specified, the default version will be deployed. The model
+   * resource could also be a publisher model. Example:
+   * `publishers/{publisher}/models/{model}` or `projects/{project}/locations/{l
+   * ocation}/publishers/{publisher}/models/{model}`
+   *
    * @var string
    */
   public $model;
   /**
+   * The parameters that govern the predictions. The schema of the parameters
+   * may be specified via the Model's PredictSchemata's parameters_schema_uri.
+   *
    * @var array
    */
   public $modelParameters;
   /**
+   * Output only. The version ID of the Model that produces the predictions via
+   * this job.
+   *
    * @var string
    */
   public $modelVersionId;
   /**
+   * Output only. Resource name of the BatchPredictionJob.
+   *
    * @var string
    */
   public $name;
@@ -85,34 +184,54 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
   protected $resourcesConsumedType = GoogleCloudAiplatformV1ResourcesConsumed::class;
   protected $resourcesConsumedDataType = '';
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * The service account that the DeployedModel's container runs as. If not
+   * specified, a system generated one will be used, which has minimal
+   * permissions and the custom container, if used, may not have enough
+   * permission to access other Google Cloud resources. Users deploying the
+   * Model must have the `iam.serviceAccounts.actAs` permission on this service
+   * account.
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * Output only. Time when the BatchPredictionJob for the first time entered
+   * the `JOB_STATE_RUNNING` state.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The detailed state of the job.
+   *
    * @var string
    */
   public $state;
   protected $unmanagedContainerModelType = GoogleCloudAiplatformV1UnmanagedContainerModel::class;
   protected $unmanagedContainerModelDataType = '';
   /**
+   * Output only. Time when the BatchPredictionJob was most recently updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudAiplatformV1CompletionStats
+   * Output only. Statistics on completed and failed prediction instances.
+   *
+   * @param GoogleCloudAiplatformV1CompletionStats $completionStats
    */
   public function setCompletionStats(GoogleCloudAiplatformV1CompletionStats $completionStats)
   {
@@ -126,7 +245,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->completionStats;
   }
   /**
-   * @param string
+   * Output only. Time when the BatchPredictionJob was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -140,7 +261,12 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1BatchDedicatedResources
+   * The config of resources used by the Model during the batch prediction. If
+   * the Model supports DEDICATED_RESOURCES this config may be provided (and the
+   * job will use these resources), if the Model doesn't support
+   * AUTOMATIC_RESOURCES, this config must be provided.
+   *
+   * @param GoogleCloudAiplatformV1BatchDedicatedResources $dedicatedResources
    */
   public function setDedicatedResources(GoogleCloudAiplatformV1BatchDedicatedResources $dedicatedResources)
   {
@@ -154,7 +280,13 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->dedicatedResources;
   }
   /**
-   * @param bool
+   * For custom-trained Models and AutoML Tabular Models, the container of the
+   * DeployedModel instances will send `stderr` and `stdout` streams to Cloud
+   * Logging by default. Please note that the logs incur cost, which are subject
+   * to [Cloud Logging pricing](https://cloud.google.com/logging/pricing). User
+   * can disable container logging by setting this flag to true.
+   *
+   * @param bool $disableContainerLogging
    */
   public function setDisableContainerLogging($disableContainerLogging)
   {
@@ -168,7 +300,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->disableContainerLogging;
   }
   /**
-   * @param string
+   * Required. The user-defined name of this BatchPredictionJob.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -182,7 +316,11 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Customer-managed encryption key options for a BatchPredictionJob. If this
+   * is set, then all resources created by the BatchPredictionJob will be
+   * encrypted with the provided encryption key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -196,7 +334,10 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->encryptionSpec;
   }
   /**
-   * @param string
+   * Output only. Time when the BatchPredictionJob entered any of the following
+   * states: `JOB_STATE_SUCCEEDED`, `JOB_STATE_FAILED`, `JOB_STATE_CANCELLED`.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -210,7 +351,10 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param GoogleRpcStatus
+   * Output only. Only populated when the job's state is JOB_STATE_FAILED or
+   * JOB_STATE_CANCELLED.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -224,7 +368,14 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param GoogleCloudAiplatformV1ExplanationSpec
+   * Explanation configuration for this BatchPredictionJob. Can be specified
+   * only if generate_explanation is set to `true`. This value overrides the
+   * value of Model.explanation_spec. All fields of explanation_spec are
+   * optional in the request. If a field of the explanation_spec object is not
+   * populated, the corresponding field of the Model.explanation_spec object is
+   * inherited.
+   *
+   * @param GoogleCloudAiplatformV1ExplanationSpec $explanationSpec
    */
   public function setExplanationSpec(GoogleCloudAiplatformV1ExplanationSpec $explanationSpec)
   {
@@ -238,7 +389,17 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->explanationSpec;
   }
   /**
-   * @param bool
+   * Generate explanation with the batch prediction results. When set to `true`,
+   * the batch prediction output changes based on the `predictions_format` field
+   * of the BatchPredictionJob.output_config object: * `bigquery`: output
+   * includes a column named `explanation`. The value is a struct that conforms
+   * to the Explanation object. * `jsonl`: The JSON objects on each line include
+   * an additional entry keyed `explanation`. The value of the entry is a JSON
+   * object that conforms to the Explanation object. * `csv`: Generating
+   * explanations for CSV format is not supported. If this field is set to true,
+   * either the Model.explanation_spec or explanation_spec must be populated.
+   *
+   * @param bool $generateExplanation
    */
   public function setGenerateExplanation($generateExplanation)
   {
@@ -252,7 +413,11 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->generateExplanation;
   }
   /**
-   * @param GoogleCloudAiplatformV1BatchPredictionJobInputConfig
+   * Required. Input configuration of the instances on which predictions are
+   * performed. The schema of any single instance may be specified via the
+   * Model's PredictSchemata's instance_schema_uri.
+   *
+   * @param GoogleCloudAiplatformV1BatchPredictionJobInputConfig $inputConfig
    */
   public function setInputConfig(GoogleCloudAiplatformV1BatchPredictionJobInputConfig $inputConfig)
   {
@@ -266,7 +431,10 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->inputConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig
+   * Configuration for how to convert batch prediction input instances to the
+   * prediction instances that are sent to the Model.
+   *
+   * @param GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig $instanceConfig
    */
   public function setInstanceConfig(GoogleCloudAiplatformV1BatchPredictionJobInstanceConfig $instanceConfig)
   {
@@ -280,7 +448,13 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->instanceConfig;
   }
   /**
-   * @param string[]
+   * The labels with user-defined metadata to organize BatchPredictionJobs.
+   * Label keys and values can be no longer than 64 characters (Unicode
+   * codepoints), can only contain lowercase letters, numeric characters,
+   * underscores and dashes. International characters are allowed. See
+   * https://goo.gl/xmQnxf for more information and examples of labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -294,7 +468,11 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param GoogleCloudAiplatformV1ManualBatchTuningParameters
+   * Immutable. Parameters configuring the batch behavior. Currently only
+   * applicable when dedicated_resources are used (in other cases Vertex AI does
+   * the tuning itself).
+   *
+   * @param GoogleCloudAiplatformV1ManualBatchTuningParameters $manualBatchTuningParameters
    */
   public function setManualBatchTuningParameters(GoogleCloudAiplatformV1ManualBatchTuningParameters $manualBatchTuningParameters)
   {
@@ -308,7 +486,19 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->manualBatchTuningParameters;
   }
   /**
-   * @param string
+   * The name of the Model resource that produces the predictions via this job,
+   * must share the same ancestor Location. Starting this job has no impact on
+   * any existing deployments of the Model and their resources. Exactly one of
+   * model and unmanaged_container_model must be set. The model resource name
+   * may contain version id or version alias to specify the version. Example:
+   * `projects/{project}/locations/{location}/models/{model}@2` or
+   * `projects/{project}/locations/{location}/models/{model}@golden` if no
+   * version is specified, the default version will be deployed. The model
+   * resource could also be a publisher model. Example:
+   * `publishers/{publisher}/models/{model}` or `projects/{project}/locations/{l
+   * ocation}/publishers/{publisher}/models/{model}`
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -322,7 +512,10 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->model;
   }
   /**
-   * @param array
+   * The parameters that govern the predictions. The schema of the parameters
+   * may be specified via the Model's PredictSchemata's parameters_schema_uri.
+   *
+   * @param array $modelParameters
    */
   public function setModelParameters($modelParameters)
   {
@@ -336,7 +529,10 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->modelParameters;
   }
   /**
-   * @param string
+   * Output only. The version ID of the Model that produces the predictions via
+   * this job.
+   *
+   * @param string $modelVersionId
    */
   public function setModelVersionId($modelVersionId)
   {
@@ -350,7 +546,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->modelVersionId;
   }
   /**
-   * @param string
+   * Output only. Resource name of the BatchPredictionJob.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -364,7 +562,12 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudAiplatformV1BatchPredictionJobOutputConfig
+   * Required. The Configuration specifying where output predictions should be
+   * written. The schema of any single prediction may be specified as a
+   * concatenation of Model's PredictSchemata's instance_schema_uri and
+   * prediction_schema_uri.
+   *
+   * @param GoogleCloudAiplatformV1BatchPredictionJobOutputConfig $outputConfig
    */
   public function setOutputConfig(GoogleCloudAiplatformV1BatchPredictionJobOutputConfig $outputConfig)
   {
@@ -378,7 +581,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->outputConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1BatchPredictionJobOutputInfo
+   * Output only. Information further describing the output of this job.
+   *
+   * @param GoogleCloudAiplatformV1BatchPredictionJobOutputInfo $outputInfo
    */
   public function setOutputInfo(GoogleCloudAiplatformV1BatchPredictionJobOutputInfo $outputInfo)
   {
@@ -392,7 +597,11 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->outputInfo;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Output only. Partial failures encountered. For example, single files that
+   * can't be read. This field never exceeds 20 entries. Status details fields
+   * contain standard Google Cloud error details.
+   *
+   * @param GoogleRpcStatus[] $partialFailures
    */
   public function setPartialFailures($partialFailures)
   {
@@ -406,7 +615,12 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->partialFailures;
   }
   /**
-   * @param GoogleCloudAiplatformV1ResourcesConsumed
+   * Output only. Information about resources that had been consumed by this
+   * job. Provided in real time at best effort basis, as well as a final value
+   * once the job completes. Note: This field currently may be not populated for
+   * batch predictions that use AutoML Models.
+   *
+   * @param GoogleCloudAiplatformV1ResourcesConsumed $resourcesConsumed
    */
   public function setResourcesConsumed(GoogleCloudAiplatformV1ResourcesConsumed $resourcesConsumed)
   {
@@ -420,7 +634,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->resourcesConsumed;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -434,7 +650,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -448,7 +666,14 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * The service account that the DeployedModel's container runs as. If not
+   * specified, a system generated one will be used, which has minimal
+   * permissions and the custom container, if used, may not have enough
+   * permission to access other Google Cloud resources. Users deploying the
+   * Model must have the `iam.serviceAccounts.actAs` permission on this service
+   * account.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -462,7 +687,10 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * Output only. Time when the BatchPredictionJob for the first time entered
+   * the `JOB_STATE_RUNNING` state.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -476,21 +704,33 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The detailed state of the job.
+   *
+   * Accepted values: JOB_STATE_UNSPECIFIED, JOB_STATE_QUEUED,
+   * JOB_STATE_PENDING, JOB_STATE_RUNNING, JOB_STATE_SUCCEEDED,
+   * JOB_STATE_FAILED, JOB_STATE_CANCELLING, JOB_STATE_CANCELLED,
+   * JOB_STATE_PAUSED, JOB_STATE_EXPIRED, JOB_STATE_UPDATING,
+   * JOB_STATE_PARTIALLY_SUCCEEDED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param GoogleCloudAiplatformV1UnmanagedContainerModel
+   * Contains model information necessary to perform batch prediction without
+   * requiring uploading to model registry. Exactly one of model and
+   * unmanaged_container_model must be set.
+   *
+   * @param GoogleCloudAiplatformV1UnmanagedContainerModel $unmanagedContainerModel
    */
   public function setUnmanagedContainerModel(GoogleCloudAiplatformV1UnmanagedContainerModel $unmanagedContainerModel)
   {
@@ -504,7 +744,9 @@ class GoogleCloudAiplatformV1BatchPredictionJob extends \Google\Collection
     return $this->unmanagedContainerModel;
   }
   /**
-   * @param string
+   * Output only. Time when the BatchPredictionJob was most recently updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

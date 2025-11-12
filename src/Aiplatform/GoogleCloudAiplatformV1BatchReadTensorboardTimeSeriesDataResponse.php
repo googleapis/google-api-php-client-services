@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse extends 
   protected $timeSeriesDataDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TimeSeriesData[]
+   * The returned time series data.
+   *
+   * @param GoogleCloudAiplatformV1TimeSeriesData[] $timeSeriesData
    */
   public function setTimeSeriesData($timeSeriesData)
   {

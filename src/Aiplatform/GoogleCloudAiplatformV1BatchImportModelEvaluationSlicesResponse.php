@@ -21,12 +21,16 @@ class GoogleCloudAiplatformV1BatchImportModelEvaluationSlicesResponse extends \G
 {
   protected $collection_key = 'importedModelEvaluationSlices';
   /**
+   * Output only. List of imported ModelEvaluationSlice.name.
+   *
    * @var string[]
    */
   public $importedModelEvaluationSlices;
 
   /**
-   * @param string[]
+   * Output only. List of imported ModelEvaluationSlice.name.
+   *
+   * @param string[] $importedModelEvaluationSlices
    */
   public function setImportedModelEvaluationSlices($importedModelEvaluationSlices)
   {

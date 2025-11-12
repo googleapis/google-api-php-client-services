@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1BatchCreateTensorboardRunsResponse extends \Google\
   protected $tensorboardRunsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TensorboardRun[]
+   * The created TensorboardRuns.
+   *
+   * @param GoogleCloudAiplatformV1TensorboardRun[] $tensorboardRuns
    */
   public function setTensorboardRuns($tensorboardRuns)
   {

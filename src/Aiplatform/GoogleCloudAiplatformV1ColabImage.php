@@ -20,16 +20,27 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ColabImage extends \Google\Model
 {
   /**
+   * Output only. A human-readable description of the specified colab image
+   * release, populated by the system. Example: "Python 3.10", "Latest - current
+   * Python 3.11"
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. The release name of the NotebookRuntime Colab image, e.g.
+   * "py310". If not specified, detault to the latest release.
+   *
    * @var string
    */
   public $releaseName;
 
   /**
-   * @param string
+   * Output only. A human-readable description of the specified colab image
+   * release, populated by the system. Example: "Python 3.10", "Latest - current
+   * Python 3.11"
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +54,10 @@ class GoogleCloudAiplatformV1ColabImage extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. The release name of the NotebookRuntime Colab image, e.g.
+   * "py310". If not specified, detault to the latest release.
+   *
+   * @param string $releaseName
    */
   public function setReleaseName($releaseName)
   {

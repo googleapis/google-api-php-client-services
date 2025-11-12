@@ -23,12 +23,20 @@ class CloudAiLargeModelsVisionSemanticFilterResponse extends \Google\Collection
   protected $namedBoundingBoxesType = CloudAiLargeModelsVisionNamedBoundingBox::class;
   protected $namedBoundingBoxesDataType = 'array';
   /**
+   * This response is added when semantic filter config is turned on in
+   * EditConfig. It reports if this image is passed semantic filter response. If
+   * passed_semantic_filter is false, the bounding box information will be
+   * populated for user to check what caused the semantic filter to fail.
+   *
    * @var bool
    */
   public $passedSemanticFilter;
 
   /**
-   * @param CloudAiLargeModelsVisionNamedBoundingBox[]
+   * Class labels of the bounding boxes that failed the semantic filtering.
+   * Bounding box coordinates.
+   *
+   * @param CloudAiLargeModelsVisionNamedBoundingBox[] $namedBoundingBoxes
    */
   public function setNamedBoundingBoxes($namedBoundingBoxes)
   {
@@ -42,7 +50,12 @@ class CloudAiLargeModelsVisionSemanticFilterResponse extends \Google\Collection
     return $this->namedBoundingBoxes;
   }
   /**
-   * @param bool
+   * This response is added when semantic filter config is turned on in
+   * EditConfig. It reports if this image is passed semantic filter response. If
+   * passed_semantic_filter is false, the bounding box information will be
+   * populated for user to check what caused the semantic filter to fail.
+   *
+   * @param bool $passedSemanticFilter
    */
   public function setPassedSemanticFilter($passedSemanticFilter)
   {

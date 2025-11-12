@@ -21,12 +21,20 @@ class GoogleCloudAiplatformV1BatchCancelPipelineJobsRequest extends \Google\Coll
 {
   protected $collection_key = 'names';
   /**
+   * Required. The names of the PipelineJobs to cancel. A maximum of 32
+   * PipelineJobs can be cancelled in a batch. Format:
+   * `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param string[]
+   * Required. The names of the PipelineJobs to cancel. A maximum of 32
+   * PipelineJobs can be cancelled in a batch. Format:
+   * `projects/{project}/locations/{location}/pipelineJobs/{pipelineJob}`
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {

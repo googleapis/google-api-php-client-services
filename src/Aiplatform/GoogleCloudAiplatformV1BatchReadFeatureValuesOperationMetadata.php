@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1BatchReadFeatureValuesOperationMetadata extends \Go
   protected $genericMetadataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * Operation metadata for Featurestore batch read Features values.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {

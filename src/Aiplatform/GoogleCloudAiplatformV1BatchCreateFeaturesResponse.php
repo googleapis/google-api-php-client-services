@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1BatchCreateFeaturesResponse extends \Google\Collect
   protected $featuresDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1Feature[]
+   * The Features created.
+   *
+   * @param GoogleCloudAiplatformV1Feature[] $features
    */
   public function setFeatures($features)
   {

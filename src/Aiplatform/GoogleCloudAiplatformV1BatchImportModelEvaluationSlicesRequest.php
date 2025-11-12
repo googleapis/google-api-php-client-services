@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1BatchImportModelEvaluationSlicesRequest extends \Go
   protected $modelEvaluationSlicesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1ModelEvaluationSlice[]
+   * Required. Model evaluation slice resource to be imported.
+   *
+   * @param GoogleCloudAiplatformV1ModelEvaluationSlice[] $modelEvaluationSlices
    */
   public function setModelEvaluationSlices($modelEvaluationSlices)
   {

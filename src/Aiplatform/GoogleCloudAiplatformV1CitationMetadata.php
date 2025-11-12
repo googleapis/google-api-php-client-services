@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1CitationMetadata extends \Google\Collection
   protected $citationsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1Citation[]
+   * Output only. A list of citations for the content.
+   *
+   * @param GoogleCloudAiplatformV1Citation[] $citations
    */
   public function setCitations($citations)
   {

@@ -20,24 +20,34 @@ namespace Google\Service\Aiplatform;
 class CloudAiLargeModelsVisionRaiInfoDetectedLabelsBoundingBox extends \Google\Model
 {
   /**
+   * The X coordinate of the top-left corner, in pixels.
+   *
    * @var int
    */
   public $x1;
   /**
+   * The X coordinate of the bottom-right corner, in pixels.
+   *
    * @var int
    */
   public $x2;
   /**
+   * The Y coordinate of the top-left corner, in pixels.
+   *
    * @var int
    */
   public $y1;
   /**
+   * The Y coordinate of the bottom-right corner, in pixels.
+   *
    * @var int
    */
   public $y2;
 
   /**
-   * @param int
+   * The X coordinate of the top-left corner, in pixels.
+   *
+   * @param int $x1
    */
   public function setX1($x1)
   {
@@ -51,7 +61,9 @@ class CloudAiLargeModelsVisionRaiInfoDetectedLabelsBoundingBox extends \Google\M
     return $this->x1;
   }
   /**
-   * @param int
+   * The X coordinate of the bottom-right corner, in pixels.
+   *
+   * @param int $x2
    */
   public function setX2($x2)
   {
@@ -65,7 +77,9 @@ class CloudAiLargeModelsVisionRaiInfoDetectedLabelsBoundingBox extends \Google\M
     return $this->x2;
   }
   /**
-   * @param int
+   * The Y coordinate of the top-left corner, in pixels.
+   *
+   * @param int $y1
    */
   public function setY1($y1)
   {
@@ -79,7 +93,9 @@ class CloudAiLargeModelsVisionRaiInfoDetectedLabelsBoundingBox extends \Google\M
     return $this->y1;
   }
   /**
-   * @param int
+   * The Y coordinate of the bottom-right corner, in pixels.
+   *
+   * @param int $y2
    */
   public function setY2($y2)
   {

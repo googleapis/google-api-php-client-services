@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1BleuResults extends \Google\Collection
   protected $bleuMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1BleuMetricValue[]
+   * Output only. Bleu metric values.
+   *
+   * @param GoogleCloudAiplatformV1BleuMetricValue[] $bleuMetricValues
    */
   public function setBleuMetricValues($bleuMetricValues)
   {

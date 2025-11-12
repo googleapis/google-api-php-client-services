@@ -21,16 +21,28 @@ class GoogleCloudAiplatformV1AddContextArtifactsAndExecutionsRequest extends \Go
 {
   protected $collection_key = 'executions';
   /**
+   * The resource names of the Artifacts to attribute to the Context. Format: `p
+   * rojects/{project}/locations/{location}/metadataStores/{metadatastore}/artif
+   * acts/{artifact}`
+   *
    * @var string[]
    */
   public $artifacts;
   /**
+   * The resource names of the Executions to associate with the Context. Format:
+   * `projects/{project}/locations/{location}/metadataStores/{metadatastore}/exe
+   * cutions/{execution}`
+   *
    * @var string[]
    */
   public $executions;
 
   /**
-   * @param string[]
+   * The resource names of the Artifacts to attribute to the Context. Format: `p
+   * rojects/{project}/locations/{location}/metadataStores/{metadatastore}/artif
+   * acts/{artifact}`
+   *
+   * @param string[] $artifacts
    */
   public function setArtifacts($artifacts)
   {
@@ -44,7 +56,11 @@ class GoogleCloudAiplatformV1AddContextArtifactsAndExecutionsRequest extends \Go
     return $this->artifacts;
   }
   /**
-   * @param string[]
+   * The resource names of the Executions to associate with the Context. Format:
+   * `projects/{project}/locations/{location}/metadataStores/{metadatastore}/exe
+   * cutions/{execution}`
+   *
+   * @param string[] $executions
    */
   public function setExecutions($executions)
   {

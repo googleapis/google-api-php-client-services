@@ -24,7 +24,10 @@ class GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest extends \Go
   protected $requestsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest[]
+   * Required. The request message specifying the TensorboardTimeSeries to
+   * create. A maximum of 1000 TensorboardTimeSeries can be created in a batch.
+   *
+   * @param GoogleCloudAiplatformV1CreateTensorboardTimeSeriesRequest[] $requests
    */
   public function setRequests($requests)
   {

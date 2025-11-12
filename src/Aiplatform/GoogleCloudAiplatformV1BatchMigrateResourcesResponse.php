@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1BatchMigrateResourcesResponse extends \Google\Colle
   protected $migrateResourceResponsesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1MigrateResourceResponse[]
+   * Successfully migrated resources.
+   *
+   * @param GoogleCloudAiplatformV1MigrateResourceResponse[] $migrateResourceResponses
    */
   public function setMigrateResourceResponses($migrateResourceResponses)
   {

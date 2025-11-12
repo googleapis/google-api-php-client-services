@@ -50,7 +50,7 @@ class CloudAiLargeModelsVisionNamedBoundingBox extends \Google\Collection
   public $y2;
 
   /**
-   * @param string[]
+   * @param string[] $classes
    */
   public function setClasses($classes)
   {
@@ -64,7 +64,7 @@ class CloudAiLargeModelsVisionNamedBoundingBox extends \Google\Collection
     return $this->classes;
   }
   /**
-   * @param string[]
+   * @param string[] $entities
    */
   public function setEntities($entities)
   {
@@ -78,7 +78,7 @@ class CloudAiLargeModelsVisionNamedBoundingBox extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param float[]
+   * @param float[] $scores
    */
   public function setScores($scores)
   {
@@ -92,7 +92,7 @@ class CloudAiLargeModelsVisionNamedBoundingBox extends \Google\Collection
     return $this->scores;
   }
   /**
-   * @param float
+   * @param float $x1
    */
   public function setX1($x1)
   {
@@ -106,7 +106,7 @@ class CloudAiLargeModelsVisionNamedBoundingBox extends \Google\Collection
     return $this->x1;
   }
   /**
-   * @param float
+   * @param float $x2
    */
   public function setX2($x2)
   {
@@ -120,7 +120,7 @@ class CloudAiLargeModelsVisionNamedBoundingBox extends \Google\Collection
     return $this->x2;
   }
   /**
-   * @param float
+   * @param float $y1
    */
   public function setY1($y1)
   {
@@ -134,7 +134,7 @@ class CloudAiLargeModelsVisionNamedBoundingBox extends \Google\Collection
     return $this->y1;
   }
   /**
-   * @param float
+   * @param float $y2
    */
   public function setY2($y2)
   {

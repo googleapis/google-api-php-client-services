@@ -22,36 +22,71 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
   protected $annotationSourceType = GoogleCloudAiplatformV1UserActionReference::class;
   protected $annotationSourceDataType = '';
   /**
+   * Output only. Timestamp when this Annotation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Used to perform consistent read-modify-write updates. If not set,
+   * a blind "overwrite" update happens.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. The labels with user-defined metadata to organize your
+   * Annotations. Label keys and values can be no longer than 64 characters
+   * (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed.
+   * No more than 64 user labels can be associated with one Annotation(System
+   * labels are excluded). See https://goo.gl/xmQnxf for more information and
+   * examples of labels. System reserved label keys are prefixed with
+   * "aiplatform.googleapis.com/" and are immutable. Following system labels
+   * exist for each Annotation: *
+   * "aiplatform.googleapis.com/annotation_set_name": optional, name of the UI's
+   * annotation set this Annotation belongs to. If not set, the Annotation is
+   * not visible in the UI. * "aiplatform.googleapis.com/payload_schema": output
+   * only, its value is the payload_schema's title.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. Resource name of the Annotation.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The schema of the payload can be found in payload_schema.
+   *
    * @var array
    */
   public $payload;
   /**
+   * Required. Google Cloud Storage URI points to a YAML file describing
+   * payload. The schema is defined as an [OpenAPI 3.0.2 Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). The schema files
+   * that can be used here are found in gs://google-cloud-
+   * aiplatform/schema/dataset/annotation/, note that the chosen schema must be
+   * consistent with the parent Dataset's metadata.
+   *
    * @var string
    */
   public $payloadSchemaUri;
   /**
+   * Output only. Timestamp when this Annotation was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudAiplatformV1UserActionReference
+   * Output only. The source of the Annotation.
+   *
+   * @param GoogleCloudAiplatformV1UserActionReference $annotationSource
    */
   public function setAnnotationSource(GoogleCloudAiplatformV1UserActionReference $annotationSource)
   {
@@ -65,7 +100,9 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
     return $this->annotationSource;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Annotation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -79,7 +116,10 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Used to perform consistent read-modify-write updates. If not set,
+   * a blind "overwrite" update happens.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -93,7 +133,21 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. The labels with user-defined metadata to organize your
+   * Annotations. Label keys and values can be no longer than 64 characters
+   * (Unicode codepoints), can only contain lowercase letters, numeric
+   * characters, underscores and dashes. International characters are allowed.
+   * No more than 64 user labels can be associated with one Annotation(System
+   * labels are excluded). See https://goo.gl/xmQnxf for more information and
+   * examples of labels. System reserved label keys are prefixed with
+   * "aiplatform.googleapis.com/" and are immutable. Following system labels
+   * exist for each Annotation: *
+   * "aiplatform.googleapis.com/annotation_set_name": optional, name of the UI's
+   * annotation set this Annotation belongs to. If not set, the Annotation is
+   * not visible in the UI. * "aiplatform.googleapis.com/payload_schema": output
+   * only, its value is the payload_schema's title.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -107,7 +161,9 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. Resource name of the Annotation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -121,7 +177,9 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param array
+   * Required. The schema of the payload can be found in payload_schema.
+   *
+   * @param array $payload
    */
   public function setPayload($payload)
   {
@@ -135,7 +193,15 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
     return $this->payload;
   }
   /**
-   * @param string
+   * Required. Google Cloud Storage URI points to a YAML file describing
+   * payload. The schema is defined as an [OpenAPI 3.0.2 Schema
+   * Object](https://github.com/OAI/OpenAPI-
+   * Specification/blob/main/versions/3.0.2.md#schemaObject). The schema files
+   * that can be used here are found in gs://google-cloud-
+   * aiplatform/schema/dataset/annotation/, note that the chosen schema must be
+   * consistent with the parent Dataset's metadata.
+   *
+   * @param string $payloadSchemaUri
    */
   public function setPayloadSchemaUri($payloadSchemaUri)
   {
@@ -149,7 +215,9 @@ class GoogleCloudAiplatformV1Annotation extends \Google\Model
     return $this->payloadSchemaUri;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Annotation was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -21,24 +21,34 @@ class GoogleCloudAiplatformV1Claim extends \Google\Collection
 {
   protected $collection_key = 'factIndexes';
   /**
+   * Index in the input text where the claim ends (exclusive).
+   *
    * @var int
    */
   public $endIndex;
   /**
+   * Indexes of the facts supporting this claim.
+   *
    * @var int[]
    */
   public $factIndexes;
   /**
+   * Confidence score of this corroboration.
+   *
    * @var float
    */
   public $score;
   /**
+   * Index in the input text where the claim starts (inclusive).
+   *
    * @var int
    */
   public $startIndex;
 
   /**
-   * @param int
+   * Index in the input text where the claim ends (exclusive).
+   *
+   * @param int $endIndex
    */
   public function setEndIndex($endIndex)
   {
@@ -52,7 +62,9 @@ class GoogleCloudAiplatformV1Claim extends \Google\Collection
     return $this->endIndex;
   }
   /**
-   * @param int[]
+   * Indexes of the facts supporting this claim.
+   *
+   * @param int[] $factIndexes
    */
   public function setFactIndexes($factIndexes)
   {
@@ -66,7 +78,9 @@ class GoogleCloudAiplatformV1Claim extends \Google\Collection
     return $this->factIndexes;
   }
   /**
-   * @param float
+   * Confidence score of this corroboration.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {
@@ -80,7 +94,9 @@ class GoogleCloudAiplatformV1Claim extends \Google\Collection
     return $this->score;
   }
   /**
-   * @param int
+   * Index in the input text where the claim starts (inclusive).
+   *
+   * @param int $startIndex
    */
   public function setStartIndex($startIndex)
   {

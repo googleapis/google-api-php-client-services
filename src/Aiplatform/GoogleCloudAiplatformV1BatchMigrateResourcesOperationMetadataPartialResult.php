@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult extends \Google\Model
 {
   /**
+   * Migrated dataset resource name.
+   *
    * @var string
    */
   public $dataset;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
+   * Migrated model resource name.
+   *
    * @var string
    */
   public $model;
@@ -33,7 +37,9 @@ class GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult
   protected $requestDataType = '';
 
   /**
-   * @param string
+   * Migrated dataset resource name.
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -47,7 +53,9 @@ class GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult
     return $this->dataset;
   }
   /**
-   * @param GoogleRpcStatus
+   * The error result of the migration request in case of failure.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -61,7 +69,9 @@ class GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult
     return $this->error;
   }
   /**
-   * @param string
+   * Migrated model resource name.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -75,7 +85,10 @@ class GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult
     return $this->model;
   }
   /**
-   * @param GoogleCloudAiplatformV1MigrateResourceRequest
+   * It's the same as the value in
+   * BatchMigrateResourcesRequest.migrate_resource_requests.
+   *
+   * @param GoogleCloudAiplatformV1MigrateResourceRequest $request
    */
   public function setRequest(GoogleCloudAiplatformV1MigrateResourceRequest $request)
   {

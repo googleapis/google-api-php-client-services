@@ -19,9 +19,36 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1AuthConfig extends \Google\Model
 {
+  public const AUTH_TYPE_AUTH_TYPE_UNSPECIFIED = 'AUTH_TYPE_UNSPECIFIED';
+  /**
+   * No Auth.
+   */
+  public const AUTH_TYPE_NO_AUTH = 'NO_AUTH';
+  /**
+   * API Key Auth.
+   */
+  public const AUTH_TYPE_API_KEY_AUTH = 'API_KEY_AUTH';
+  /**
+   * HTTP Basic Auth.
+   */
+  public const AUTH_TYPE_HTTP_BASIC_AUTH = 'HTTP_BASIC_AUTH';
+  /**
+   * Google Service Account Auth.
+   */
+  public const AUTH_TYPE_GOOGLE_SERVICE_ACCOUNT_AUTH = 'GOOGLE_SERVICE_ACCOUNT_AUTH';
+  /**
+   * OAuth auth.
+   */
+  public const AUTH_TYPE_OAUTH = 'OAUTH';
+  /**
+   * OpenID Connect (OIDC) Auth.
+   */
+  public const AUTH_TYPE_OIDC_AUTH = 'OIDC_AUTH';
   protected $apiKeyConfigType = GoogleCloudAiplatformV1AuthConfigApiKeyConfig::class;
   protected $apiKeyConfigDataType = '';
   /**
+   * Type of auth scheme.
+   *
    * @var string
    */
   public $authType;
@@ -35,7 +62,9 @@ class GoogleCloudAiplatformV1AuthConfig extends \Google\Model
   protected $oidcConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1AuthConfigApiKeyConfig
+   * Config for API key auth.
+   *
+   * @param GoogleCloudAiplatformV1AuthConfigApiKeyConfig $apiKeyConfig
    */
   public function setApiKeyConfig(GoogleCloudAiplatformV1AuthConfigApiKeyConfig $apiKeyConfig)
   {
@@ -49,21 +78,28 @@ class GoogleCloudAiplatformV1AuthConfig extends \Google\Model
     return $this->apiKeyConfig;
   }
   /**
-   * @param string
+   * Type of auth scheme.
+   *
+   * Accepted values: AUTH_TYPE_UNSPECIFIED, NO_AUTH, API_KEY_AUTH,
+   * HTTP_BASIC_AUTH, GOOGLE_SERVICE_ACCOUNT_AUTH, OAUTH, OIDC_AUTH
+   *
+   * @param self::AUTH_TYPE_* $authType
    */
   public function setAuthType($authType)
   {
     $this->authType = $authType;
   }
   /**
-   * @return string
+   * @return self::AUTH_TYPE_*
    */
   public function getAuthType()
   {
     return $this->authType;
   }
   /**
-   * @param GoogleCloudAiplatformV1AuthConfigGoogleServiceAccountConfig
+   * Config for Google Service Account auth.
+   *
+   * @param GoogleCloudAiplatformV1AuthConfigGoogleServiceAccountConfig $googleServiceAccountConfig
    */
   public function setGoogleServiceAccountConfig(GoogleCloudAiplatformV1AuthConfigGoogleServiceAccountConfig $googleServiceAccountConfig)
   {
@@ -77,7 +113,9 @@ class GoogleCloudAiplatformV1AuthConfig extends \Google\Model
     return $this->googleServiceAccountConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1AuthConfigHttpBasicAuthConfig
+   * Config for HTTP Basic auth.
+   *
+   * @param GoogleCloudAiplatformV1AuthConfigHttpBasicAuthConfig $httpBasicAuthConfig
    */
   public function setHttpBasicAuthConfig(GoogleCloudAiplatformV1AuthConfigHttpBasicAuthConfig $httpBasicAuthConfig)
   {
@@ -91,7 +129,9 @@ class GoogleCloudAiplatformV1AuthConfig extends \Google\Model
     return $this->httpBasicAuthConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1AuthConfigOauthConfig
+   * Config for user oauth.
+   *
+   * @param GoogleCloudAiplatformV1AuthConfigOauthConfig $oauthConfig
    */
   public function setOauthConfig(GoogleCloudAiplatformV1AuthConfigOauthConfig $oauthConfig)
   {
@@ -105,7 +145,9 @@ class GoogleCloudAiplatformV1AuthConfig extends \Google\Model
     return $this->oauthConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1AuthConfigOidcConfig
+   * Config for user OIDC auth.
+   *
+   * @param GoogleCloudAiplatformV1AuthConfigOidcConfig $oidcConfig
    */
   public function setOidcConfig(GoogleCloudAiplatformV1AuthConfigOidcConfig $oidcConfig)
   {

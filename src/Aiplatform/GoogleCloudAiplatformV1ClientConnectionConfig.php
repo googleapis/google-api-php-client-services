@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ClientConnectionConfig extends \Google\Model
 {
   /**
+   * Customizable online prediction request timeout.
+   *
    * @var string
    */
   public $inferenceTimeout;
 
   /**
-   * @param string
+   * Customizable online prediction request timeout.
+   *
+   * @param string $inferenceTimeout
    */
   public function setInferenceTimeout($inferenceTimeout)
   {

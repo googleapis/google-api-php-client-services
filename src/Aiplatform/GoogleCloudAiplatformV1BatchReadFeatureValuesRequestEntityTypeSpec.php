@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1BatchReadFeatureValuesRequestEntityTypeSpec extends
 {
   protected $collection_key = 'settings';
   /**
+   * Required. ID of the EntityType to select Features. The EntityType id is the
+   * entity_type_id specified during EntityType creation.
+   *
    * @var string
    */
   public $entityTypeId;
@@ -30,7 +33,10 @@ class GoogleCloudAiplatformV1BatchReadFeatureValuesRequestEntityTypeSpec extends
   protected $settingsDataType = 'array';
 
   /**
-   * @param string
+   * Required. ID of the EntityType to select Features. The EntityType id is the
+   * entity_type_id specified during EntityType creation.
+   *
+   * @param string $entityTypeId
    */
   public function setEntityTypeId($entityTypeId)
   {
@@ -44,7 +50,10 @@ class GoogleCloudAiplatformV1BatchReadFeatureValuesRequestEntityTypeSpec extends
     return $this->entityTypeId;
   }
   /**
-   * @param GoogleCloudAiplatformV1FeatureSelector
+   * Required. Selectors choosing which Feature values to read from the
+   * EntityType.
+   *
+   * @param GoogleCloudAiplatformV1FeatureSelector $featureSelector
    */
   public function setFeatureSelector(GoogleCloudAiplatformV1FeatureSelector $featureSelector)
   {
@@ -58,7 +67,9 @@ class GoogleCloudAiplatformV1BatchReadFeatureValuesRequestEntityTypeSpec extends
     return $this->featureSelector;
   }
   /**
-   * @param GoogleCloudAiplatformV1DestinationFeatureSetting[]
+   * Per-Feature settings for the batch read.
+   *
+   * @param GoogleCloudAiplatformV1DestinationFeatureSetting[] $settings
    */
   public function setSettings($settings)
   {

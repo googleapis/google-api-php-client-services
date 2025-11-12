@@ -28,7 +28,9 @@ class GoogleCloudAiplatformV1AugmentPromptRequest extends \Google\Collection
   protected $vertexRagStoreDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1Content[]
+   * Optional. Input content to augment, only text format is supported for now.
+   *
+   * @param GoogleCloudAiplatformV1Content[] $contents
    */
   public function setContents($contents)
   {
@@ -42,7 +44,9 @@ class GoogleCloudAiplatformV1AugmentPromptRequest extends \Google\Collection
     return $this->contents;
   }
   /**
-   * @param GoogleCloudAiplatformV1AugmentPromptRequestModel
+   * Optional. Metadata of the backend deployed model.
+   *
+   * @param GoogleCloudAiplatformV1AugmentPromptRequestModel $model
    */
   public function setModel(GoogleCloudAiplatformV1AugmentPromptRequestModel $model)
   {
@@ -56,7 +60,9 @@ class GoogleCloudAiplatformV1AugmentPromptRequest extends \Google\Collection
     return $this->model;
   }
   /**
-   * @param GoogleCloudAiplatformV1VertexRagStore
+   * Optional. Retrieves contexts from the Vertex RagStore.
+   *
+   * @param GoogleCloudAiplatformV1VertexRagStore $vertexRagStore
    */
   public function setVertexRagStore(GoogleCloudAiplatformV1VertexRagStore $vertexRagStore)
   {

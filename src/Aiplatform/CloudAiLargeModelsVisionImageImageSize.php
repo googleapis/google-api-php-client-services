@@ -33,7 +33,7 @@ class CloudAiLargeModelsVisionImageImageSize extends \Google\Model
   public $width;
 
   /**
-   * @param int
+   * @param int $channels
    */
   public function setChannels($channels)
   {
@@ -47,7 +47,7 @@ class CloudAiLargeModelsVisionImageImageSize extends \Google\Model
     return $this->channels;
   }
   /**
-   * @param int
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -61,7 +61,7 @@ class CloudAiLargeModelsVisionImageImageSize extends \Google\Model
     return $this->height;
   }
   /**
-   * @param int
+   * @param int $width
    */
   public function setWidth($width)
   {

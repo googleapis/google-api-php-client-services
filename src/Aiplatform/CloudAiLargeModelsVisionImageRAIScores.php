@@ -19,6 +19,11 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiLargeModelsVisionImageRAIScores extends \Google\Model
 {
+  /**
+   * Agile watermark score for image.
+   *
+   * @var 
+   */
   public $agileWatermarkDetectionScore;
 
   public function setAgileWatermarkDetectionScore($agileWatermarkDetectionScore)
