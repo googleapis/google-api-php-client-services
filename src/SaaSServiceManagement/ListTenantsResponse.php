@@ -21,18 +21,26 @@ class ListTenantsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * If present, the next page token can be provided to a subsequent ListTenants
+   * call to list the next page. If empty, there are no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $tenantsType = Tenant::class;
   protected $tenantsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * If present, the next page token can be provided to a subsequent ListTenants
+   * call to list the next page. If empty, there are no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListTenantsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Tenant[]
+   * The resulting tenants.
+   *
+   * @param Tenant[] $tenants
    */
   public function setTenants($tenants)
   {
@@ -60,7 +70,9 @@ class ListTenantsResponse extends \Google\Collection
     return $this->tenants;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

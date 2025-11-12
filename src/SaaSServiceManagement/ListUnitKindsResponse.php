@@ -21,18 +21,28 @@ class ListUnitKindsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * If present, the next page token can be provided to a subsequent
+   * ListUnitKinds call to list the next page. If empty, there are no more
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $unitKindsType = UnitKind::class;
   protected $unitKindsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * If present, the next page token can be provided to a subsequent
+   * ListUnitKinds call to list the next page. If empty, there are no more
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,9 @@ class ListUnitKindsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param UnitKind[]
+   * The resulting unit kinds.
+   *
+   * @param UnitKind[] $unitKinds
    */
   public function setUnitKinds($unitKinds)
   {
@@ -60,7 +72,9 @@ class ListUnitKindsResponse extends \Google\Collection
     return $this->unitKinds;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\SaaSServiceManagement;
 class Schedule extends \Google\Model
 {
   /**
+   * Optional. Start of operation. If not set, will be set to the start of the
+   * next window. (optional)
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Optional. Start of operation. If not set, will be set to the start of the
+   * next window. (optional)
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

@@ -23,12 +23,16 @@ class Upgrade extends \Google\Collection
   protected $inputVariablesType = UnitVariable::class;
   protected $inputVariablesDataType = 'array';
   /**
+   * Optional. Reference to the Release object to use for the Unit. (optional).
+   *
    * @var string
    */
   public $release;
 
   /**
-   * @param UnitVariable[]
+   * Optional. Set of input variables. Maximum 100. (optional)
+   *
+   * @param UnitVariable[] $inputVariables
    */
   public function setInputVariables($inputVariables)
   {
@@ -42,7 +46,9 @@ class Upgrade extends \Google\Collection
     return $this->inputVariables;
   }
   /**
-   * @param string
+   * Optional. Reference to the Release object to use for the Unit. (optional).
+   *
+   * @param string $release
    */
   public function setRelease($release)
   {

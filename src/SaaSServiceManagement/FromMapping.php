@@ -20,16 +20,24 @@ namespace Google\Service\SaaSServiceManagement;
 class FromMapping extends \Google\Model
 {
   /**
+   * Required. Alias of the dependency that the outputVariable will pass its
+   * value to
+   *
    * @var string
    */
   public $dependency;
   /**
+   * Required. Name of the outputVariable on the dependency
+   *
    * @var string
    */
   public $outputVariable;
 
   /**
-   * @param string
+   * Required. Alias of the dependency that the outputVariable will pass its
+   * value to
+   *
+   * @param string $dependency
    */
   public function setDependency($dependency)
   {
@@ -43,7 +51,9 @@ class FromMapping extends \Google\Model
     return $this->dependency;
   }
   /**
-   * @param string
+   * Required. Name of the outputVariable on the dependency
+   *
+   * @param string $outputVariable
    */
   public function setOutputVariable($outputVariable)
   {

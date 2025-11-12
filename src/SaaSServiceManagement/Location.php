@@ -20,12 +20,16 @@ namespace Google\Service\SaaSServiceManagement;
 class Location extends \Google\Model
 {
   /**
+   * Optional. Name of location.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Optional. Name of location.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

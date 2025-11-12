@@ -24,7 +24,14 @@ class RolloutStats extends \Google\Collection
   protected $operationsByStateDataType = 'array';
 
   /**
-   * @param Aggregate[]
+   * Output only. A breakdown of the progress of operations triggered by the
+   * rollout. Provides a count of Operations by their state. This can be used to
+   * determine the number of units which have been updated, or are scheduled to
+   * be updated. There will be at most one entry per group. Possible values for
+   * operation groups are: - "SCHEDULED" - "PENDING" - "RUNNING" - "SUCCEEDED" -
+   * "FAILED" - "CANCELLED"
+   *
+   * @param Aggregate[] $operationsByState
    */
   public function setOperationsByState($operationsByState)
   {

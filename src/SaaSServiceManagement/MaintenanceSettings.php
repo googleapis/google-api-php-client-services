@@ -20,12 +20,20 @@ namespace Google\Service\SaaSServiceManagement;
 class MaintenanceSettings extends \Google\Model
 {
   /**
+   * Optional. If present, it fixes the release on the unit until the given
+   * time; i.e. changes to the release field will be rejected. Rollouts should
+   * and will also respect this by not requesting an upgrade in the first place.
+   *
    * @var string
    */
   public $pinnedUntilTime;
 
   /**
-   * @param string
+   * Optional. If present, it fixes the release on the unit until the given
+   * time; i.e. changes to the release field will be rejected. Rollouts should
+   * and will also respect this by not requesting an upgrade in the first place.
+   *
+   * @param string $pinnedUntilTime
    */
   public function setPinnedUntilTime($pinnedUntilTime)
   {

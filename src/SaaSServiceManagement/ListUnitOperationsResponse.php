@@ -21,18 +21,28 @@ class ListUnitOperationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * If present, the next page token can be provided to a subsequent
+   * ListUnitOperations call to list the next page. If empty, there are no more
+   * pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $unitOperationsType = UnitOperation::class;
   protected $unitOperationsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * If present, the next page token can be provided to a subsequent
+   * ListUnitOperations call to list the next page. If empty, there are no more
+   * pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,9 @@ class ListUnitOperationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param UnitOperation[]
+   * The resulting unit operations.
+   *
+   * @param UnitOperation[] $unitOperations
    */
   public function setUnitOperations($unitOperations)
   {
@@ -60,7 +72,9 @@ class ListUnitOperationsResponse extends \Google\Collection
     return $this->unitOperations;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

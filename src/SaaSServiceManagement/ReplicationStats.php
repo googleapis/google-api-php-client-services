@@ -23,24 +23,35 @@ class ReplicationStats extends \Google\Collection
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
   /**
+   * The resources that are failed replication.
+   *
    * @var string[]
    */
   public $failedResources;
   /**
+   * The resources that are finished replication.
+   *
    * @var string[]
    */
   public $finishedResources;
   /**
+   * The resources that are pending replication.
+   *
    * @var string[]
    */
   public $pendingResources;
   /**
+   * The number of retries for the failed resources.
+   *
    * @var int[]
    */
   public $retryCount;
 
   /**
-   * @param Status[]
+   * The errors that occurred during replication, one error for each failed
+   * resource.
+   *
+   * @param Status[] $errors
    */
   public function setErrors($errors)
   {
@@ -54,7 +65,9 @@ class ReplicationStats extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string[]
+   * The resources that are failed replication.
+   *
+   * @param string[] $failedResources
    */
   public function setFailedResources($failedResources)
   {
@@ -68,7 +81,9 @@ class ReplicationStats extends \Google\Collection
     return $this->failedResources;
   }
   /**
-   * @param string[]
+   * The resources that are finished replication.
+   *
+   * @param string[] $finishedResources
    */
   public function setFinishedResources($finishedResources)
   {
@@ -82,7 +97,9 @@ class ReplicationStats extends \Google\Collection
     return $this->finishedResources;
   }
   /**
-   * @param string[]
+   * The resources that are pending replication.
+   *
+   * @param string[] $pendingResources
    */
   public function setPendingResources($pendingResources)
   {
@@ -96,7 +113,9 @@ class ReplicationStats extends \Google\Collection
     return $this->pendingResources;
   }
   /**
-   * @param int[]
+   * The number of retries for the failed resources.
+   *
+   * @param int[] $retryCount
    */
   public function setRetryCount($retryCount)
   {

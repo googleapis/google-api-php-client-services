@@ -21,12 +21,22 @@ class ReleaseRequirements extends \Google\Collection
 {
   protected $collection_key = 'upgradeableFromReleases';
   /**
+   * Optional. A list of releases from which a unit can be upgraded to this one
+   * (optional). If left empty no constraints will be applied. When provided,
+   * unit upgrade requests to this release will check and enforce this
+   * constraint.
+   *
    * @var string[]
    */
   public $upgradeableFromReleases;
 
   /**
-   * @param string[]
+   * Optional. A list of releases from which a unit can be upgraded to this one
+   * (optional). If left empty no constraints will be applied. When provided,
+   * unit upgrade requests to this release will check and enforce this
+   * constraint.
+   *
+   * @param string[] $upgradeableFromReleases
    */
   public function setUpgradeableFromReleases($upgradeableFromReleases)
   {

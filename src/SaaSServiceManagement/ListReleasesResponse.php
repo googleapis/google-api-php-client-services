@@ -21,18 +21,26 @@ class ListReleasesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * If present, the next page token can be provided to a subsequent
+   * ListReleases call to list the next page. If empty, there are no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $releasesType = Release::class;
   protected $releasesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * If present, the next page token can be provided to a subsequent
+   * ListReleases call to list the next page. If empty, there are no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListReleasesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Release[]
+   * The resulting releases.
+   *
+   * @param Release[] $releases
    */
   public function setReleases($releases)
   {
@@ -60,7 +70,9 @@ class ListReleasesResponse extends \Google\Collection
     return $this->releases;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

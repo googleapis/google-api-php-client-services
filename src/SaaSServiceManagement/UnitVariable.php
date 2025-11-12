@@ -20,34 +20,64 @@ namespace Google\Service\SaaSServiceManagement;
 class UnitVariable extends \Google\Model
 {
   /**
+   * Variable type is unspecified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Variable type is string.
+   */
+  public const TYPE_STRING = 'STRING';
+  /**
+   * Variable type is int.
+   */
+  public const TYPE_INT = 'INT';
+  /**
+   * Variable type is bool.
+   */
+  public const TYPE_BOOL = 'BOOL';
+  /**
+   * Optional. Immutable. Name of a supported variable type. Supported types are
+   * string, int, bool.
+   *
    * @var string
    */
   public $type;
   /**
+   * Optional. String encoded value for the variable.
+   *
    * @var string
    */
   public $value;
   /**
+   * Required. Immutable. Name of the variable from actuation configs.
+   *
    * @var string
    */
   public $variable;
 
   /**
-   * @param string
+   * Optional. Immutable. Name of a supported variable type. Supported types are
+   * string, int, bool.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, STRING, INT, BOOL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Optional. String encoded value for the variable.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {
@@ -61,7 +91,9 @@ class UnitVariable extends \Google\Model
     return $this->value;
   }
   /**
-   * @param string
+   * Required. Immutable. Name of the variable from actuation configs.
+   *
+   * @param string $variable
    */
   public function setVariable($variable)
   {
