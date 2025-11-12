@@ -21,6 +21,10 @@ class ResumeSubscriptionRequest extends \Google\Model
 {
   protected $cycleOptionsType = CycleOptions::class;
   protected $cycleOptionsDataType = '';
+  /**
+   * @var string
+   */
+  public $resumeMode;
 
   /**
    * @param CycleOptions
@@ -35,6 +39,20 @@ class ResumeSubscriptionRequest extends \Google\Model
   public function getCycleOptions()
   {
     return $this->cycleOptions;
+  }
+  /**
+   * @param string
+   */
+  public function setResumeMode($resumeMode)
+  {
+    $this->resumeMode = $resumeMode;
+  }
+  /**
+   * @return string
+   */
+  public function getResumeMode()
+  {
+    return $this->resumeMode;
   }
 }
 
