@@ -26,7 +26,9 @@ class NodeGroupsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param NodeGroup[]
+   * [Output Only] A list of node groups contained in this scope.
+   *
+   * @param NodeGroup[] $nodeGroups
    */
   public function setNodeGroups($nodeGroups)
   {
@@ -40,7 +42,10 @@ class NodeGroupsScopedList extends \Google\Collection
     return $this->nodeGroups;
   }
   /**
-   * @param NodeGroupsScopedListWarning
+   * [Output Only] An informational warning that appears when the nodeGroup list
+   * is empty.
+   *
+   * @param NodeGroupsScopedListWarning $warning
    */
   public function setWarning(NodeGroupsScopedListWarning $warning)
   {

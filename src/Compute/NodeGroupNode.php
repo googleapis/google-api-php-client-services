@@ -19,12 +19,22 @@ namespace Google\Service\Compute;
 
 class NodeGroupNode extends \Google\Collection
 {
+  public const CPU_OVERCOMMIT_TYPE_CPU_OVERCOMMIT_TYPE_UNSPECIFIED = 'CPU_OVERCOMMIT_TYPE_UNSPECIFIED';
+  public const CPU_OVERCOMMIT_TYPE_ENABLED = 'ENABLED';
+  public const CPU_OVERCOMMIT_TYPE_NONE = 'NONE';
+  public const STATUS_CREATING = 'CREATING';
+  public const STATUS_DELETING = 'DELETING';
+  public const STATUS_INVALID = 'INVALID';
+  public const STATUS_READY = 'READY';
+  public const STATUS_REPAIRING = 'REPAIRING';
   protected $collection_key = 'instances';
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
   protected $consumedResourcesType = InstanceConsumptionInfo::class;
   protected $consumedResourcesDataType = '';
   /**
+   * CPU overcommit.
+   *
    * @var string
    */
   public $cpuOvercommitType;
@@ -33,24 +43,34 @@ class NodeGroupNode extends \Google\Collection
   protected $instanceConsumptionDataType = InstanceConsumptionData::class;
   protected $instanceConsumptionDataDataType = 'array';
   /**
+   * Instances scheduled on this node.
+   *
    * @var string[]
    */
   public $instances;
   /**
+   * The name of the node.
+   *
    * @var string
    */
   public $name;
   /**
+   * The type of this node.
+   *
    * @var string
    */
   public $nodeType;
   /**
+   * [Output Only] Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   protected $serverBindingType = ServerBinding::class;
   protected $serverBindingDataType = '';
   /**
+   * Server ID associated with this node.
+   *
    * @var string
    */
   public $serverId;
@@ -64,7 +84,9 @@ class NodeGroupNode extends \Google\Collection
   protected $upcomingMaintenanceDataType = '';
 
   /**
-   * @param AcceleratorConfig[]
+   * Accelerators for this node.
+   *
+   * @param AcceleratorConfig[] $accelerators
    */
   public function setAccelerators($accelerators)
   {
@@ -78,7 +100,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->accelerators;
   }
   /**
-   * @param InstanceConsumptionInfo
+   * Node resources that are reserved by all instances.
+   *
+   * @param InstanceConsumptionInfo $consumedResources
    */
   public function setConsumedResources(InstanceConsumptionInfo $consumedResources)
   {
@@ -92,21 +116,27 @@ class NodeGroupNode extends \Google\Collection
     return $this->consumedResources;
   }
   /**
-   * @param string
+   * CPU overcommit.
+   *
+   * Accepted values: CPU_OVERCOMMIT_TYPE_UNSPECIFIED, ENABLED, NONE
+   *
+   * @param self::CPU_OVERCOMMIT_TYPE_* $cpuOvercommitType
    */
   public function setCpuOvercommitType($cpuOvercommitType)
   {
     $this->cpuOvercommitType = $cpuOvercommitType;
   }
   /**
-   * @return string
+   * @return self::CPU_OVERCOMMIT_TYPE_*
    */
   public function getCpuOvercommitType()
   {
     return $this->cpuOvercommitType;
   }
   /**
-   * @param LocalDisk[]
+   * Local disk configurations.
+   *
+   * @param LocalDisk[] $disks
    */
   public function setDisks($disks)
   {
@@ -120,7 +150,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->disks;
   }
   /**
-   * @param InstanceConsumptionData[]
+   * Instance data that shows consumed resources on the node.
+   *
+   * @param InstanceConsumptionData[] $instanceConsumptionData
    */
   public function setInstanceConsumptionData($instanceConsumptionData)
   {
@@ -134,7 +166,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->instanceConsumptionData;
   }
   /**
-   * @param string[]
+   * Instances scheduled on this node.
+   *
+   * @param string[] $instances
    */
   public function setInstances($instances)
   {
@@ -148,7 +182,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string
+   * The name of the node.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -162,7 +198,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The type of this node.
+   *
+   * @param string $nodeType
    */
   public function setNodeType($nodeType)
   {
@@ -176,7 +214,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->nodeType;
   }
   /**
-   * @param bool
+   * [Output Only] Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -190,7 +230,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param ServerBinding
+   * Binding properties for the physical server.
+   *
+   * @param ServerBinding $serverBinding
    */
   public function setServerBinding(ServerBinding $serverBinding)
   {
@@ -204,7 +246,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->serverBinding;
   }
   /**
-   * @param string
+   * Server ID associated with this node.
+   *
+   * @param string $serverId
    */
   public function setServerId($serverId)
   {
@@ -218,21 +262,23 @@ class NodeGroupNode extends \Google\Collection
     return $this->serverId;
   }
   /**
-   * @param string
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param InstanceConsumptionInfo
+   * Total amount of available resources on the node.
+   *
+   * @param InstanceConsumptionInfo $totalResources
    */
   public function setTotalResources(InstanceConsumptionInfo $totalResources)
   {
@@ -246,7 +292,9 @@ class NodeGroupNode extends \Google\Collection
     return $this->totalResources;
   }
   /**
-   * @param UpcomingMaintenance
+   * [Output Only] The information about an upcoming maintenance event.
+   *
+   * @param UpcomingMaintenance $upcomingMaintenance
    */
   public function setUpcomingMaintenance(UpcomingMaintenance $upcomingMaintenance)
   {

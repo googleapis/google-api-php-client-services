@@ -20,12 +20,16 @@ namespace Google\Service\Compute;
 class NetworksRemovePeeringRequest extends \Google\Model
 {
   /**
+   * Name of the peering, which should conform to RFC1035.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Name of the peering, which should conform to RFC1035.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

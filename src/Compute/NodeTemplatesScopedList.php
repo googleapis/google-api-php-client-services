@@ -26,7 +26,9 @@ class NodeTemplatesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param NodeTemplate[]
+   * [Output Only] A list of node templates contained in this scope.
+   *
+   * @param NodeTemplate[] $nodeTemplates
    */
   public function setNodeTemplates($nodeTemplates)
   {
@@ -40,7 +42,10 @@ class NodeTemplatesScopedList extends \Google\Collection
     return $this->nodeTemplates;
   }
   /**
-   * @param NodeTemplatesScopedListWarning
+   * [Output Only] An informational warning that appears when the node templates
+   * list is empty.
+   *
+   * @param NodeTemplatesScopedListWarning $warning
    */
   public function setWarning(NodeTemplatesScopedListWarning $warning)
   {

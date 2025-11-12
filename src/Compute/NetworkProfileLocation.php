@@ -19,6 +19,8 @@ namespace Google\Service\Compute;
 
 class NetworkProfileLocation extends \Google\Model
 {
+  public const SCOPE_REGION = 'REGION';
+  public const SCOPE_ZONE = 'ZONE';
   /**
    * @var string
    */
@@ -29,7 +31,7 @@ class NetworkProfileLocation extends \Google\Model
   public $scope;
 
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,14 +45,14 @@ class NetworkProfileLocation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * @param self::SCOPE_* $scope
    */
   public function setScope($scope)
   {
     $this->scope = $scope;
   }
   /**
-   * @return string
+   * @return self::SCOPE_*
    */
   public function getScope()
   {

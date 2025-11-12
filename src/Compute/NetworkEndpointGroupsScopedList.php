@@ -26,7 +26,10 @@ class NetworkEndpointGroupsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param NetworkEndpointGroup[]
+   * [Output Only] The list ofnetwork endpoint groups that are contained in this
+   * scope.
+   *
+   * @param NetworkEndpointGroup[] $networkEndpointGroups
    */
   public function setNetworkEndpointGroups($networkEndpointGroups)
   {
@@ -40,7 +43,10 @@ class NetworkEndpointGroupsScopedList extends \Google\Collection
     return $this->networkEndpointGroups;
   }
   /**
-   * @param NetworkEndpointGroupsScopedListWarning
+   * [Output Only] An informational warning that replaces the list of network
+   * endpoint groups when the list is empty.
+   *
+   * @param NetworkEndpointGroupsScopedListWarning $warning
    */
   public function setWarning(NetworkEndpointGroupsScopedListWarning $warning)
   {

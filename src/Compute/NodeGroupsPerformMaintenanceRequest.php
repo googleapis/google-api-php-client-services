@@ -21,16 +21,22 @@ class NodeGroupsPerformMaintenanceRequest extends \Google\Collection
 {
   protected $collection_key = 'nodes';
   /**
+   * [Required] List of nodes affected by the call.
+   *
    * @var string[]
    */
   public $nodes;
   /**
+   * The start time of the schedule. The timestamp is an RFC3339 string.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string[]
+   * [Required] List of nodes affected by the call.
+   *
+   * @param string[] $nodes
    */
   public function setNodes($nodes)
   {
@@ -44,7 +50,9 @@ class NodeGroupsPerformMaintenanceRequest extends \Google\Collection
     return $this->nodes;
   }
   /**
-   * @param string
+   * The start time of the schedule. The timestamp is an RFC3339 string.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

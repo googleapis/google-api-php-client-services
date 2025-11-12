@@ -20,22 +20,43 @@ namespace Google\Service\Compute;
 class NetworksAddPeeringRequest extends \Google\Model
 {
   /**
+   * This field will be deprecated soon. Useexchange_subnet_routes in
+   * network_peering instead. Indicates whether full mesh connectivity is
+   * created and managed automatically between peered networks. Currently this
+   * field should always be true since Google Compute Engine will automatically
+   * create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
+   *
    * @var bool
    */
   public $autoCreateRoutes;
   /**
+   * Name of the peering, which should conform to RFC1035.
+   *
    * @var string
    */
   public $name;
   protected $networkPeeringType = NetworkPeering::class;
   protected $networkPeeringDataType = '';
   /**
+   * URL of the peer network.  It can be either full URL or partial URL. The
+   * peer network may belong to a different project. If the partial URL does not
+   * contain project, it is assumed that the peer network is in the same project
+   * as the current network.
+   *
    * @var string
    */
   public $peerNetwork;
 
   /**
-   * @param bool
+   * This field will be deprecated soon. Useexchange_subnet_routes in
+   * network_peering instead. Indicates whether full mesh connectivity is
+   * created and managed automatically between peered networks. Currently this
+   * field should always be true since Google Compute Engine will automatically
+   * create and manage subnetwork routes between two networks when peering state
+   * isACTIVE.
+   *
+   * @param bool $autoCreateRoutes
    */
   public function setAutoCreateRoutes($autoCreateRoutes)
   {
@@ -49,7 +70,9 @@ class NetworksAddPeeringRequest extends \Google\Model
     return $this->autoCreateRoutes;
   }
   /**
-   * @param string
+   * Name of the peering, which should conform to RFC1035.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -63,7 +86,13 @@ class NetworksAddPeeringRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param NetworkPeering
+   * Network peering parameters. In order to specify route policies for peering
+   * using import and export custom routes, you must specify all peering related
+   * parameters (name, peer network,exchange_subnet_routes) in the
+   * network_peering field. The corresponding fields in
+   * NetworksAddPeeringRequest will be deprecated soon.
+   *
+   * @param NetworkPeering $networkPeering
    */
   public function setNetworkPeering(NetworkPeering $networkPeering)
   {
@@ -77,7 +106,12 @@ class NetworksAddPeeringRequest extends \Google\Model
     return $this->networkPeering;
   }
   /**
-   * @param string
+   * URL of the peer network.  It can be either full URL or partial URL. The
+   * peer network may belong to a different project. If the partial URL does not
+   * contain project, it is assumed that the peer network is in the same project
+   * as the current network.
+   *
+   * @param string $peerNetwork
    */
   public function setPeerNetwork($peerNetwork)
   {

@@ -22,12 +22,19 @@ class NodeGroupMaintenanceWindow extends \Google\Model
   protected $maintenanceDurationType = Duration::class;
   protected $maintenanceDurationDataType = '';
   /**
+   * Start time of the window. This must be in UTC format that resolves to one
+   * of 00:00, 04:00, 08:00,12:00, 16:00, or 20:00. For example, both 13:00-5
+   * and 08:00 are valid.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param Duration
+   * [Output only] A predetermined duration for the window, automatically chosen
+   * to be the smallest possible in the given scenario.
+   *
+   * @param Duration $maintenanceDuration
    */
   public function setMaintenanceDuration(Duration $maintenanceDuration)
   {
@@ -41,7 +48,11 @@ class NodeGroupMaintenanceWindow extends \Google\Model
     return $this->maintenanceDuration;
   }
   /**
-   * @param string
+   * Start time of the window. This must be in UTC format that resolves to one
+   * of 00:00, 04:00, 08:00,12:00, 16:00, or 20:00. For example, both 13:00-5
+   * and 08:00 are valid.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

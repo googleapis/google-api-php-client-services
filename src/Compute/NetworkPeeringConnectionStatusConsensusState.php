@@ -20,37 +20,80 @@ namespace Google\Service\Compute;
 class NetworkPeeringConnectionStatusConsensusState extends \Google\Model
 {
   /**
+   * Both network admins have agreed this consensus peering connection can be
+   * deleted.
+   */
+  public const DELETE_STATUS_DELETE_ACKNOWLEDGED = 'DELETE_ACKNOWLEDGED';
+  public const DELETE_STATUS_DELETE_STATUS_UNSPECIFIED = 'DELETE_STATUS_UNSPECIFIED';
+  /**
+   * Network admin has requested deletion of this peering connection.
+   */
+  public const DELETE_STATUS_LOCAL_DELETE_REQUESTED = 'LOCAL_DELETE_REQUESTED';
+  /**
+   * The peer network admin has requested deletion of this peering connection.
+   */
+  public const DELETE_STATUS_PEER_DELETE_REQUESTED = 'PEER_DELETE_REQUESTED';
+  /**
+   * No pending configuration update proposals to the  peering connection.
+   */
+  public const UPDATE_STATUS_IN_SYNC = 'IN_SYNC';
+  /**
+   * The peer network admin has made an updatePeering call. The change is
+   * awaiting acknowledgment from this peering's network admin.
+   */
+  public const UPDATE_STATUS_PENDING_LOCAL_ACKNOWLEDMENT = 'PENDING_LOCAL_ACKNOWLEDMENT';
+  /**
+   * The local network admin has made an updatePeering call. The change is
+   * awaiting acknowledgment from the peer network admin.
+   */
+  public const UPDATE_STATUS_PENDING_PEER_ACKNOWLEDGEMENT = 'PENDING_PEER_ACKNOWLEDGEMENT';
+  public const UPDATE_STATUS_UPDATE_STATUS_UNSPECIFIED = 'UPDATE_STATUS_UNSPECIFIED';
+  /**
+   * The status of the delete request.
+   *
    * @var string
    */
   public $deleteStatus;
   /**
+   * The status of the update request.
+   *
    * @var string
    */
   public $updateStatus;
 
   /**
-   * @param string
+   * The status of the delete request.
+   *
+   * Accepted values: DELETE_ACKNOWLEDGED, DELETE_STATUS_UNSPECIFIED,
+   * LOCAL_DELETE_REQUESTED, PEER_DELETE_REQUESTED
+   *
+   * @param self::DELETE_STATUS_* $deleteStatus
    */
   public function setDeleteStatus($deleteStatus)
   {
     $this->deleteStatus = $deleteStatus;
   }
   /**
-   * @return string
+   * @return self::DELETE_STATUS_*
    */
   public function getDeleteStatus()
   {
     return $this->deleteStatus;
   }
   /**
-   * @param string
+   * The status of the update request.
+   *
+   * Accepted values: IN_SYNC, PENDING_LOCAL_ACKNOWLEDMENT,
+   * PENDING_PEER_ACKNOWLEDGEMENT, UPDATE_STATUS_UNSPECIFIED
+   *
+   * @param self::UPDATE_STATUS_* $updateStatus
    */
   public function setUpdateStatus($updateStatus)
   {
     $this->updateStatus = $updateStatus;
   }
   /**
-   * @return string
+   * @return self::UPDATE_STATUS_*
    */
   public function getUpdateStatus()
   {

@@ -26,7 +26,9 @@ class NodeTypesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param NodeType[]
+   * [Output Only] A list of node types contained in this scope.
+   *
+   * @param NodeType[] $nodeTypes
    */
   public function setNodeTypes($nodeTypes)
   {
@@ -40,7 +42,10 @@ class NodeTypesScopedList extends \Google\Collection
     return $this->nodeTypes;
   }
   /**
-   * @param NodeTypesScopedListWarning
+   * [Output Only] An informational warning that appears when the node types
+   * list is empty.
+   *
+   * @param NodeTypesScopedListWarning $warning
    */
   public function setWarning(NodeTypesScopedListWarning $warning)
   {

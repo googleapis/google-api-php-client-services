@@ -20,42 +20,60 @@ namespace Google\Service\Compute;
 class NetworkProfile extends \Google\Model
 {
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * [Output Only] An optional description of this resource.
+   *
    * @var string
    */
   public $description;
   protected $featuresType = NetworkProfileNetworkFeatures::class;
   protected $featuresDataType = '';
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource. Alwayscompute#networkProfile for
+   * network profiles.
+   *
    * @var string
    */
   public $kind;
   protected $locationType = NetworkProfileLocation::class;
   protected $locationDataType = '';
   /**
+   * [Output Only] Name of the resource.
+   *
    * @var string
    */
   public $name;
   protected $profileTypeType = NetworkProfileProfileType::class;
   protected $profileTypeDataType = '';
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   *
    * @var string
    */
   public $selfLinkWithId;
 
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -69,7 +87,9 @@ class NetworkProfile extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * [Output Only] An optional description of this resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -83,7 +103,9 @@ class NetworkProfile extends \Google\Model
     return $this->description;
   }
   /**
-   * @param NetworkProfileNetworkFeatures
+   * [Output Only] Features supported by the network.
+   *
+   * @param NetworkProfileNetworkFeatures $features
    */
   public function setFeatures(NetworkProfileNetworkFeatures $features)
   {
@@ -97,7 +119,10 @@ class NetworkProfile extends \Google\Model
     return $this->features;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -111,7 +136,10 @@ class NetworkProfile extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#networkProfile for
+   * network profiles.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -125,7 +153,9 @@ class NetworkProfile extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param NetworkProfileLocation
+   * [Output Only] Location to which the network is restricted.
+   *
+   * @param NetworkProfileLocation $location
    */
   public function setLocation(NetworkProfileLocation $location)
   {
@@ -139,7 +169,9 @@ class NetworkProfile extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * [Output Only] Name of the resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -153,7 +185,9 @@ class NetworkProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * @param NetworkProfileProfileType
+   * [Output Only] Type of the network profile.
+   *
+   * @param NetworkProfileProfileType $profileType
    */
   public function setProfileType(NetworkProfileProfileType $profileType)
   {
@@ -167,7 +201,9 @@ class NetworkProfile extends \Google\Model
     return $this->profileType;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -181,7 +217,9 @@ class NetworkProfile extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   *
+   * @param string $selfLinkWithId
    */
   public function setSelfLinkWithId($selfLinkWithId)
   {

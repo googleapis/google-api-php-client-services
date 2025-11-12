@@ -24,7 +24,9 @@ class NetworkEndpointGroupsDetachEndpointsRequest extends \Google\Collection
   protected $networkEndpointsDataType = 'array';
 
   /**
-   * @param NetworkEndpoint[]
+   * The list of network endpoints to be detached.
+   *
+   * @param NetworkEndpoint[] $networkEndpoints
    */
   public function setNetworkEndpoints($networkEndpoints)
   {

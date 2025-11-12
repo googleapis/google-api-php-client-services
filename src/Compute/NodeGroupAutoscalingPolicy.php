@@ -19,21 +19,45 @@ namespace Google\Service\Compute;
 
 class NodeGroupAutoscalingPolicy extends \Google\Model
 {
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
   /**
+   * Autoscaling is disabled.
+   */
+  public const MODE_OFF = 'OFF';
+  /**
+   * Autocaling is fully enabled.
+   */
+  public const MODE_ON = 'ON';
+  /**
+   * Autoscaling will only scale out and will not remove nodes.
+   */
+  public const MODE_ONLY_SCALE_OUT = 'ONLY_SCALE_OUT';
+  /**
+   * The maximum number of nodes that the group should have. Must be set if
+   * autoscaling is enabled. Maximum value allowed is 100.
+   *
    * @var int
    */
   public $maxNodes;
   /**
+   * The minimum number of nodes that the group should have.
+   *
    * @var int
    */
   public $minNodes;
   /**
+   * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more
+   * information, see  Autoscaler modes.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param int
+   * The maximum number of nodes that the group should have. Must be set if
+   * autoscaling is enabled. Maximum value allowed is 100.
+   *
+   * @param int $maxNodes
    */
   public function setMaxNodes($maxNodes)
   {
@@ -47,7 +71,9 @@ class NodeGroupAutoscalingPolicy extends \Google\Model
     return $this->maxNodes;
   }
   /**
-   * @param int
+   * The minimum number of nodes that the group should have.
+   *
+   * @param int $minNodes
    */
   public function setMinNodes($minNodes)
   {
@@ -61,14 +87,19 @@ class NodeGroupAutoscalingPolicy extends \Google\Model
     return $this->minNodes;
   }
   /**
-   * @param string
+   * The autoscaling mode. Set to one of: ON, OFF, or ONLY_SCALE_OUT. For more
+   * information, see  Autoscaler modes.
+   *
+   * Accepted values: MODE_UNSPECIFIED, OFF, ON, ONLY_SCALE_OUT
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {
