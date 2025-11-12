@@ -22,12 +22,16 @@ class VmwareBundleConfig extends \Google\Model
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
   /**
+   * The version of the bundle.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param ResourceStatus
+   * Output only. Resource status for the bundle.
+   *
+   * @param ResourceStatus $status
    */
   public function setStatus(ResourceStatus $status)
   {
@@ -41,7 +45,9 @@ class VmwareBundleConfig extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * The version of the bundle.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

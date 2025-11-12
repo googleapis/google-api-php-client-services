@@ -20,44 +20,64 @@ namespace Google\Service\GKEOnPrem;
 class VmwareAdminVCenterConfig extends \Google\Model
 {
   /**
+   * The vCenter IP address.
+   *
    * @var string
    */
   public $address;
   /**
+   * Contains the vCenter CA certificate public key for SSL verification.
+   *
    * @var string
    */
   public $caCertData;
   /**
+   * The name of the vCenter cluster for the admin cluster.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * The name of the virtual machine disk (VMDK) for the admin cluster.
+   *
    * @var string
    */
   public $dataDisk;
   /**
+   * The name of the vCenter datacenter for the admin cluster.
+   *
    * @var string
    */
   public $datacenter;
   /**
+   * The name of the vCenter datastore for the admin cluster.
+   *
    * @var string
    */
   public $datastore;
   /**
+   * The name of the vCenter folder for the admin cluster.
+   *
    * @var string
    */
   public $folder;
   /**
+   * The name of the vCenter resource pool for the admin cluster.
+   *
    * @var string
    */
   public $resourcePool;
   /**
+   * The name of the vCenter storage policy for the user cluster.
+   *
    * @var string
    */
   public $storagePolicyName;
 
   /**
-   * @param string
+   * The vCenter IP address.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -71,7 +91,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * Contains the vCenter CA certificate public key for SSL verification.
+   *
+   * @param string $caCertData
    */
   public function setCaCertData($caCertData)
   {
@@ -85,7 +107,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->caCertData;
   }
   /**
-   * @param string
+   * The name of the vCenter cluster for the admin cluster.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -99,7 +123,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * The name of the virtual machine disk (VMDK) for the admin cluster.
+   *
+   * @param string $dataDisk
    */
   public function setDataDisk($dataDisk)
   {
@@ -113,7 +139,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->dataDisk;
   }
   /**
-   * @param string
+   * The name of the vCenter datacenter for the admin cluster.
+   *
+   * @param string $datacenter
    */
   public function setDatacenter($datacenter)
   {
@@ -127,7 +155,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->datacenter;
   }
   /**
-   * @param string
+   * The name of the vCenter datastore for the admin cluster.
+   *
+   * @param string $datastore
    */
   public function setDatastore($datastore)
   {
@@ -141,7 +171,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->datastore;
   }
   /**
-   * @param string
+   * The name of the vCenter folder for the admin cluster.
+   *
+   * @param string $folder
    */
   public function setFolder($folder)
   {
@@ -155,7 +187,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->folder;
   }
   /**
-   * @param string
+   * The name of the vCenter resource pool for the admin cluster.
+   *
+   * @param string $resourcePool
    */
   public function setResourcePool($resourcePool)
   {
@@ -169,7 +203,9 @@ class VmwareAdminVCenterConfig extends \Google\Model
     return $this->resourcePool;
   }
   /**
-   * @param string
+   * The name of the vCenter storage policy for the user cluster.
+   *
+   * @param string $storagePolicyName
    */
   public function setStoragePolicyName($storagePolicyName)
   {

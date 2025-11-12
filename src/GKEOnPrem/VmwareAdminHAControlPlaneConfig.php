@@ -23,7 +23,9 @@ class VmwareAdminHAControlPlaneConfig extends \Google\Model
   protected $controlPlaneIpBlockDataType = '';
 
   /**
-   * @param VmwareIpBlock
+   * Static IP addresses for the admin control plane nodes.
+   *
+   * @param VmwareIpBlock $controlPlaneIpBlock
    */
   public function setControlPlaneIpBlock(VmwareIpBlock $controlPlaneIpBlock)
   {

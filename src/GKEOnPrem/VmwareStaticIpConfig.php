@@ -24,7 +24,9 @@ class VmwareStaticIpConfig extends \Google\Collection
   protected $ipBlocksDataType = 'array';
 
   /**
-   * @param VmwareIpBlock[]
+   * Represents the configuration values for static IP allocation to nodes.
+   *
+   * @param VmwareIpBlock[] $ipBlocks
    */
   public function setIpBlocks($ipBlocks)
   {

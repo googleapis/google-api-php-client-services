@@ -23,7 +23,9 @@ class VmwareAdminAddonNodeConfig extends \Google\Model
   protected $autoResizeConfigDataType = '';
 
   /**
-   * @param VmwareAutoResizeConfig
+   * VmwareAutoResizeConfig config specifies auto resize config.
+   *
+   * @param VmwareAutoResizeConfig $autoResizeConfig
    */
   public function setAutoResizeConfig(VmwareAutoResizeConfig $autoResizeConfig)
   {

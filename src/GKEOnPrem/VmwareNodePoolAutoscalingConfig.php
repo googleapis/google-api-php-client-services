@@ -20,16 +20,22 @@ namespace Google\Service\GKEOnPrem;
 class VmwareNodePoolAutoscalingConfig extends \Google\Model
 {
   /**
+   * Maximum number of replicas in the NodePool.
+   *
    * @var int
    */
   public $maxReplicas;
   /**
+   * Minimum number of replicas in the NodePool.
+   *
    * @var int
    */
   public $minReplicas;
 
   /**
-   * @param int
+   * Maximum number of replicas in the NodePool.
+   *
+   * @param int $maxReplicas
    */
   public function setMaxReplicas($maxReplicas)
   {
@@ -43,7 +49,9 @@ class VmwareNodePoolAutoscalingConfig extends \Google\Model
     return $this->maxReplicas;
   }
   /**
-   * @param int
+   * Minimum number of replicas in the NodePool.
+   *
+   * @param int $minReplicas
    */
   public function setMinReplicas($minReplicas)
   {

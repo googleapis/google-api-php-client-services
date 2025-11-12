@@ -24,7 +24,9 @@ class ValidationCheckStatus extends \Google\Collection
   protected $resultDataType = 'array';
 
   /**
-   * @param ValidationCheckResult[]
+   * Individual checks which failed as part of the Preflight check execution.
+   *
+   * @param ValidationCheckResult[] $result
    */
   public function setResult($result)
   {

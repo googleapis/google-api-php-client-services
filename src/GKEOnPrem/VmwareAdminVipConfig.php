@@ -20,16 +20,23 @@ namespace Google\Service\GKEOnPrem;
 class VmwareAdminVipConfig extends \Google\Model
 {
   /**
+   * The VIP to configure the load balancer for add-ons.
+   *
    * @var string
    */
   public $addonsVip;
   /**
+   * The VIP which you previously set aside for the Kubernetes API of the admin
+   * cluster.
+   *
    * @var string
    */
   public $controlPlaneVip;
 
   /**
-   * @param string
+   * The VIP to configure the load balancer for add-ons.
+   *
+   * @param string $addonsVip
    */
   public function setAddonsVip($addonsVip)
   {
@@ -43,7 +50,10 @@ class VmwareAdminVipConfig extends \Google\Model
     return $this->addonsVip;
   }
   /**
-   * @param string
+   * The VIP which you previously set aside for the Kubernetes API of the admin
+   * cluster.
+   *
+   * @param string $controlPlaneVip
    */
   public function setControlPlaneVip($controlPlaneVip)
   {

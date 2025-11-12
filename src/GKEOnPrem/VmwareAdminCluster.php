@@ -19,9 +19,48 @@ namespace Google\Service\GKEOnPrem;
 
 class VmwareAdminCluster extends \Google\Model
 {
+  /**
+   * Not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The PROVISIONING state indicates the cluster is being created.
+   */
+  public const STATE_PROVISIONING = 'PROVISIONING';
+  /**
+   * The RUNNING state indicates the cluster has been created and is fully
+   * usable.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The RECONCILING state indicates that the cluster is being updated. It
+   * remains available, but potentially with degraded performance.
+   */
+  public const STATE_RECONCILING = 'RECONCILING';
+  /**
+   * The STOPPING state indicates the cluster is being deleted.
+   */
+  public const STATE_STOPPING = 'STOPPING';
+  /**
+   * The ERROR state indicates the cluster is in a broken unrecoverable state.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * The DEGRADED state indicates the cluster requires user action to restore
+   * full functionality.
+   */
+  public const STATE_DEGRADED = 'DEGRADED';
   protected $addonNodeType = VmwareAdminAddonNodeConfig::class;
   protected $addonNodeDataType = '';
   /**
+   * Annotations on the VMware admin cluster. This field has the same
+   * restrictions as Kubernetes annotations. The total size of all keys and
+   * values combined is limited to 256k. Key can have 2 segments: prefix
+   * (optional) and name (required), separated by a slash (/). Prefix must be a
+   * DNS subdomain. Name must be 63 characters or less, begin and end with
+   * alphanumerics, with dashes (-), underscores (_), dots (.), and
+   * alphanumerics between.
+   *
    * @var string[]
    */
   public $annotations;
@@ -32,50 +71,80 @@ class VmwareAdminCluster extends \Google\Model
   protected $autoRepairConfigType = VmwareAutoRepairConfig::class;
   protected $autoRepairConfigDataType = '';
   /**
+   * The bootstrap cluster this VMware admin cluster belongs to.
+   *
    * @var string
    */
   public $bootstrapClusterMembership;
   protected $controlPlaneNodeType = VmwareAdminControlPlaneNodeConfig::class;
   protected $controlPlaneNodeDataType = '';
   /**
+   * Output only. The time at which VMware admin cluster was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * A human readable description of this VMware admin cluster.
+   *
    * @var string
    */
   public $description;
   /**
+   * Enable advanced cluster.
+   *
    * @var bool
    */
   public $enableAdvancedCluster;
   /**
+   * Output only. The DNS name of VMware admin cluster's API server.
+   *
    * @var string
    */
   public $endpoint;
   /**
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding. Allows clients to perform consistent
+   * read-modify-writes through optimistic concurrency control.
+   *
    * @var string
    */
   public $etag;
   protected $fleetType = Fleet::class;
   protected $fleetDataType = '';
   /**
+   * The OS image type for the VMware admin cluster.
+   *
    * @var string
    */
   public $imageType;
   protected $loadBalancerType = VmwareAdminLoadBalancerConfig::class;
   protected $loadBalancerDataType = '';
   /**
+   * Output only. The object name of the VMware OnPremAdminCluster custom
+   * resource. This field is used to support conflicting names when enrolling
+   * existing clusters to the API. When used as a part of cluster enrollment,
+   * this field will differ from the ID in the resource name. For new clusters,
+   * this field will match the user provided cluster name and be visible in the
+   * last component of the resource name. It is not modifiable. All users should
+   * use this name to access their cluster using gkectl or kubectl and should
+   * expect to see the local name when viewing admin cluster controller logs.
+   *
    * @var string
    */
   public $localName;
   /**
+   * Immutable. The VMware admin cluster resource name.
+   *
    * @var string
    */
   public $name;
   protected $networkConfigType = VmwareAdminNetworkConfig::class;
   protected $networkConfigDataType = '';
   /**
+   * The Anthos clusters on the VMware version for the admin cluster.
+   *
    * @var string
    */
   public $onPremVersion;
@@ -88,20 +157,29 @@ class VmwareAdminCluster extends \Google\Model
   protected $proxyType = VmwareAdminProxy::class;
   protected $proxyDataType = '';
   /**
+   * Output only. If set, there are currently changes in flight to the VMware
+   * admin cluster.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. The current state of VMware admin cluster.
+   *
    * @var string
    */
   public $state;
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
   /**
+   * Output only. The unique identifier of the VMware admin cluster.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The time at which VMware admin cluster was last updated.
+   *
    * @var string
    */
   public $updateTime;
@@ -111,7 +189,9 @@ class VmwareAdminCluster extends \Google\Model
   protected $vcenterDataType = '';
 
   /**
-   * @param VmwareAdminAddonNodeConfig
+   * The VMware admin cluster addon node configuration.
+   *
+   * @param VmwareAdminAddonNodeConfig $addonNode
    */
   public function setAddonNode(VmwareAdminAddonNodeConfig $addonNode)
   {
@@ -125,7 +205,15 @@ class VmwareAdminCluster extends \Google\Model
     return $this->addonNode;
   }
   /**
-   * @param string[]
+   * Annotations on the VMware admin cluster. This field has the same
+   * restrictions as Kubernetes annotations. The total size of all keys and
+   * values combined is limited to 256k. Key can have 2 segments: prefix
+   * (optional) and name (required), separated by a slash (/). Prefix must be a
+   * DNS subdomain. Name must be 63 characters or less, begin and end with
+   * alphanumerics, with dashes (-), underscores (_), dots (.), and
+   * alphanumerics between.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -139,7 +227,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param VmwareAAGConfig
+   * The VMware admin cluster anti affinity group configuration.
+   *
+   * @param VmwareAAGConfig $antiAffinityGroups
    */
   public function setAntiAffinityGroups(VmwareAAGConfig $antiAffinityGroups)
   {
@@ -153,7 +243,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->antiAffinityGroups;
   }
   /**
-   * @param VmwareAdminAuthorizationConfig
+   * The VMware admin cluster authorization configuration.
+   *
+   * @param VmwareAdminAuthorizationConfig $authorization
    */
   public function setAuthorization(VmwareAdminAuthorizationConfig $authorization)
   {
@@ -167,7 +259,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->authorization;
   }
   /**
-   * @param VmwareAutoRepairConfig
+   * The VMware admin cluster auto repair configuration.
+   *
+   * @param VmwareAutoRepairConfig $autoRepairConfig
    */
   public function setAutoRepairConfig(VmwareAutoRepairConfig $autoRepairConfig)
   {
@@ -181,7 +275,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->autoRepairConfig;
   }
   /**
-   * @param string
+   * The bootstrap cluster this VMware admin cluster belongs to.
+   *
+   * @param string $bootstrapClusterMembership
    */
   public function setBootstrapClusterMembership($bootstrapClusterMembership)
   {
@@ -195,7 +291,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->bootstrapClusterMembership;
   }
   /**
-   * @param VmwareAdminControlPlaneNodeConfig
+   * The VMware admin cluster control plane node configuration.
+   *
+   * @param VmwareAdminControlPlaneNodeConfig $controlPlaneNode
    */
   public function setControlPlaneNode(VmwareAdminControlPlaneNodeConfig $controlPlaneNode)
   {
@@ -209,7 +307,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->controlPlaneNode;
   }
   /**
-   * @param string
+   * Output only. The time at which VMware admin cluster was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -223,7 +323,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * A human readable description of this VMware admin cluster.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -237,7 +339,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->description;
   }
   /**
-   * @param bool
+   * Enable advanced cluster.
+   *
+   * @param bool $enableAdvancedCluster
    */
   public function setEnableAdvancedCluster($enableAdvancedCluster)
   {
@@ -251,7 +355,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->enableAdvancedCluster;
   }
   /**
-   * @param string
+   * Output only. The DNS name of VMware admin cluster's API server.
+   *
+   * @param string $endpoint
    */
   public function setEndpoint($endpoint)
   {
@@ -265,7 +371,12 @@ class VmwareAdminCluster extends \Google\Model
     return $this->endpoint;
   }
   /**
-   * @param string
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding. Allows clients to perform consistent
+   * read-modify-writes through optimistic concurrency control.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -279,7 +390,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param Fleet
+   * Output only. Fleet configuration for the cluster.
+   *
+   * @param Fleet $fleet
    */
   public function setFleet(Fleet $fleet)
   {
@@ -293,7 +406,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->fleet;
   }
   /**
-   * @param string
+   * The OS image type for the VMware admin cluster.
+   *
+   * @param string $imageType
    */
   public function setImageType($imageType)
   {
@@ -307,7 +422,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->imageType;
   }
   /**
-   * @param VmwareAdminLoadBalancerConfig
+   * The VMware admin cluster load balancer configuration.
+   *
+   * @param VmwareAdminLoadBalancerConfig $loadBalancer
    */
   public function setLoadBalancer(VmwareAdminLoadBalancerConfig $loadBalancer)
   {
@@ -321,7 +438,16 @@ class VmwareAdminCluster extends \Google\Model
     return $this->loadBalancer;
   }
   /**
-   * @param string
+   * Output only. The object name of the VMware OnPremAdminCluster custom
+   * resource. This field is used to support conflicting names when enrolling
+   * existing clusters to the API. When used as a part of cluster enrollment,
+   * this field will differ from the ID in the resource name. For new clusters,
+   * this field will match the user provided cluster name and be visible in the
+   * last component of the resource name. It is not modifiable. All users should
+   * use this name to access their cluster using gkectl or kubectl and should
+   * expect to see the local name when viewing admin cluster controller logs.
+   *
+   * @param string $localName
    */
   public function setLocalName($localName)
   {
@@ -335,7 +461,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->localName;
   }
   /**
-   * @param string
+   * Immutable. The VMware admin cluster resource name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -349,7 +477,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->name;
   }
   /**
-   * @param VmwareAdminNetworkConfig
+   * The VMware admin cluster network configuration.
+   *
+   * @param VmwareAdminNetworkConfig $networkConfig
    */
   public function setNetworkConfig(VmwareAdminNetworkConfig $networkConfig)
   {
@@ -363,7 +493,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->networkConfig;
   }
   /**
-   * @param string
+   * The Anthos clusters on the VMware version for the admin cluster.
+   *
+   * @param string $onPremVersion
    */
   public function setOnPremVersion($onPremVersion)
   {
@@ -377,7 +509,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->onPremVersion;
   }
   /**
-   * @param VmwarePlatformConfig
+   * The VMware platform configuration.
+   *
+   * @param VmwarePlatformConfig $platformConfig
    */
   public function setPlatformConfig(VmwarePlatformConfig $platformConfig)
   {
@@ -391,7 +525,11 @@ class VmwareAdminCluster extends \Google\Model
     return $this->platformConfig;
   }
   /**
-   * @param VmwareAdminPreparedSecretsConfig
+   * Output only. The VMware admin cluster prepared secrets configuration. It
+   * should always be enabled by the Central API, instead of letting users set
+   * it.
+   *
+   * @param VmwareAdminPreparedSecretsConfig $preparedSecrets
    */
   public function setPreparedSecrets(VmwareAdminPreparedSecretsConfig $preparedSecrets)
   {
@@ -405,7 +543,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->preparedSecrets;
   }
   /**
-   * @param VmwareAdminPrivateRegistryConfig
+   * Configuration for registry.
+   *
+   * @param VmwareAdminPrivateRegistryConfig $privateRegistryConfig
    */
   public function setPrivateRegistryConfig(VmwareAdminPrivateRegistryConfig $privateRegistryConfig)
   {
@@ -419,7 +559,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->privateRegistryConfig;
   }
   /**
-   * @param VmwareAdminProxy
+   * Configuration for proxy.
+   *
+   * @param VmwareAdminProxy $proxy
    */
   public function setProxy(VmwareAdminProxy $proxy)
   {
@@ -433,7 +575,10 @@ class VmwareAdminCluster extends \Google\Model
     return $this->proxy;
   }
   /**
-   * @param bool
+   * Output only. If set, there are currently changes in flight to the VMware
+   * admin cluster.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -447,21 +592,28 @@ class VmwareAdminCluster extends \Google\Model
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. The current state of VMware admin cluster.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, RECONCILING,
+   * STOPPING, ERROR, DEGRADED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param ResourceStatus
+   * Output only. ResourceStatus representing detailed cluster state.
+   *
+   * @param ResourceStatus $status
    */
   public function setStatus(ResourceStatus $status)
   {
@@ -475,7 +627,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * Output only. The unique identifier of the VMware admin cluster.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -489,7 +643,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The time at which VMware admin cluster was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -503,7 +659,10 @@ class VmwareAdminCluster extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param ValidationCheck
+   * Output only. ValidationCheck represents the result of the preflight check
+   * job.
+   *
+   * @param ValidationCheck $validationCheck
    */
   public function setValidationCheck(ValidationCheck $validationCheck)
   {
@@ -517,7 +676,9 @@ class VmwareAdminCluster extends \Google\Model
     return $this->validationCheck;
   }
   /**
-   * @param VmwareAdminVCenterConfig
+   * The VMware admin cluster VCenter configuration.
+   *
+   * @param VmwareAdminVCenterConfig $vcenter
    */
   public function setVcenter(VmwareAdminVCenterConfig $vcenter)
   {

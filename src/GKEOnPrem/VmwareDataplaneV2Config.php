@@ -20,24 +20,36 @@ namespace Google\Service\GKEOnPrem;
 class VmwareDataplaneV2Config extends \Google\Model
 {
   /**
+   * Enable advanced networking which requires dataplane_v2_enabled to be set
+   * true.
+   *
    * @var bool
    */
   public $advancedNetworking;
   /**
+   * Enables Dataplane V2.
+   *
    * @var bool
    */
   public $dataplaneV2Enabled;
   /**
+   * Configure ForwardMode for Dataplane v2.
+   *
    * @var string
    */
   public $forwardMode;
   /**
+   * Enable Dataplane V2 for clusters with Windows nodes.
+   *
    * @var bool
    */
   public $windowsDataplaneV2Enabled;
 
   /**
-   * @param bool
+   * Enable advanced networking which requires dataplane_v2_enabled to be set
+   * true.
+   *
+   * @param bool $advancedNetworking
    */
   public function setAdvancedNetworking($advancedNetworking)
   {
@@ -51,7 +63,9 @@ class VmwareDataplaneV2Config extends \Google\Model
     return $this->advancedNetworking;
   }
   /**
-   * @param bool
+   * Enables Dataplane V2.
+   *
+   * @param bool $dataplaneV2Enabled
    */
   public function setDataplaneV2Enabled($dataplaneV2Enabled)
   {
@@ -65,7 +79,9 @@ class VmwareDataplaneV2Config extends \Google\Model
     return $this->dataplaneV2Enabled;
   }
   /**
-   * @param string
+   * Configure ForwardMode for Dataplane v2.
+   *
+   * @param string $forwardMode
    */
   public function setForwardMode($forwardMode)
   {
@@ -79,7 +95,9 @@ class VmwareDataplaneV2Config extends \Google\Model
     return $this->forwardMode;
   }
   /**
-   * @param bool
+   * Enable Dataplane V2 for clusters with Windows nodes.
+   *
+   * @param bool $windowsDataplaneV2Enabled
    */
   public function setWindowsDataplaneV2Enabled($windowsDataplaneV2Enabled)
   {

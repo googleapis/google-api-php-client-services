@@ -21,10 +21,14 @@ class VmwareVsphereConfig extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * The name of the vCenter datastore. Inherited from the user cluster.
+   *
    * @var string
    */
   public $datastore;
   /**
+   * Vsphere host groups to apply to all VMs in the node pool
+   *
    * @var string[]
    */
   public $hostGroups;
@@ -32,7 +36,9 @@ class VmwareVsphereConfig extends \Google\Collection
   protected $tagsDataType = 'array';
 
   /**
-   * @param string
+   * The name of the vCenter datastore. Inherited from the user cluster.
+   *
+   * @param string $datastore
    */
   public function setDatastore($datastore)
   {
@@ -46,7 +52,9 @@ class VmwareVsphereConfig extends \Google\Collection
     return $this->datastore;
   }
   /**
-   * @param string[]
+   * Vsphere host groups to apply to all VMs in the node pool
+   *
+   * @param string[] $hostGroups
    */
   public function setHostGroups($hostGroups)
   {
@@ -60,7 +68,9 @@ class VmwareVsphereConfig extends \Google\Collection
     return $this->hostGroups;
   }
   /**
-   * @param VmwareVsphereTag[]
+   * Tags to apply to VMs.
+   *
+   * @param VmwareVsphereTag[] $tags
    */
   public function setTags($tags)
   {

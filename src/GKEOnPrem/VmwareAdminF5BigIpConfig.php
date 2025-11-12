@@ -20,20 +20,30 @@ namespace Google\Service\GKEOnPrem;
 class VmwareAdminF5BigIpConfig extends \Google\Model
 {
   /**
+   * The load balancer's IP address.
+   *
    * @var string
    */
   public $address;
   /**
+   * The preexisting partition to be used by the load balancer. This partition
+   * is usually created for the admin cluster for example: 'my-f5-admin-
+   * partition'.
+   *
    * @var string
    */
   public $partition;
   /**
+   * The pool name. Only necessary, if using SNAT.
+   *
    * @var string
    */
   public $snatPool;
 
   /**
-   * @param string
+   * The load balancer's IP address.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -47,7 +57,11 @@ class VmwareAdminF5BigIpConfig extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * The preexisting partition to be used by the load balancer. This partition
+   * is usually created for the admin cluster for example: 'my-f5-admin-
+   * partition'.
+   *
+   * @param string $partition
    */
   public function setPartition($partition)
   {
@@ -61,7 +75,9 @@ class VmwareAdminF5BigIpConfig extends \Google\Model
     return $this->partition;
   }
   /**
-   * @param string
+   * The pool name. Only necessary, if using SNAT.
+   *
+   * @param string $snatPool
    */
   public function setSnatPool($snatPool)
   {

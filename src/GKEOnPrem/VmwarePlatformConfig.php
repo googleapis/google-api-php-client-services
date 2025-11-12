@@ -23,10 +23,18 @@ class VmwarePlatformConfig extends \Google\Collection
   protected $bundlesType = VmwareBundleConfig::class;
   protected $bundlesDataType = 'array';
   /**
+   * Output only. The platform version e.g. 1.13.2.
+   *
    * @var string
    */
   public $platformVersion;
   /**
+   * Input only. The required platform version e.g. 1.13.1. If the current
+   * platform version is lower than the target version, the platform version
+   * will be updated to the target version. If the target version is not
+   * installed in the platform (bundle versions), download the target version
+   * bundle.
+   *
    * @var string
    */
   public $requiredPlatformVersion;
@@ -34,7 +42,9 @@ class VmwarePlatformConfig extends \Google\Collection
   protected $statusDataType = '';
 
   /**
-   * @param VmwareBundleConfig[]
+   * Output only. The list of bundles installed in the admin cluster.
+   *
+   * @param VmwareBundleConfig[] $bundles
    */
   public function setBundles($bundles)
   {
@@ -48,7 +58,9 @@ class VmwarePlatformConfig extends \Google\Collection
     return $this->bundles;
   }
   /**
-   * @param string
+   * Output only. The platform version e.g. 1.13.2.
+   *
+   * @param string $platformVersion
    */
   public function setPlatformVersion($platformVersion)
   {
@@ -62,7 +74,13 @@ class VmwarePlatformConfig extends \Google\Collection
     return $this->platformVersion;
   }
   /**
-   * @param string
+   * Input only. The required platform version e.g. 1.13.1. If the current
+   * platform version is lower than the target version, the platform version
+   * will be updated to the target version. If the target version is not
+   * installed in the platform (bundle versions), download the target version
+   * bundle.
+   *
+   * @param string $requiredPlatformVersion
    */
   public function setRequiredPlatformVersion($requiredPlatformVersion)
   {
@@ -76,7 +94,9 @@ class VmwarePlatformConfig extends \Google\Collection
     return $this->requiredPlatformVersion;
   }
   /**
-   * @param ResourceStatus
+   * Output only. Resource status for the platform.
+   *
+   * @param ResourceStatus $status
    */
   public function setStatus(ResourceStatus $status)
   {

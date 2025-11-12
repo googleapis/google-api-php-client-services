@@ -20,16 +20,22 @@ namespace Google\Service\GKEOnPrem;
 class VmwareVsphereTag extends \Google\Model
 {
   /**
+   * The Vsphere tag category.
+   *
    * @var string
    */
   public $category;
   /**
+   * The Vsphere tag name.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * The Vsphere tag category.
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -43,7 +49,9 @@ class VmwareVsphereTag extends \Google\Model
     return $this->category;
   }
   /**
-   * @param string
+   * The Vsphere tag name.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

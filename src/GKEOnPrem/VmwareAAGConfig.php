@@ -20,12 +20,18 @@ namespace Google\Service\GKEOnPrem;
 class VmwareAAGConfig extends \Google\Model
 {
   /**
+   * Spread nodes across at least three physical hosts (requires at least three
+   * hosts). Enabled by default.
+   *
    * @var bool
    */
   public $aagConfigDisabled;
 
   /**
-   * @param bool
+   * Spread nodes across at least three physical hosts (requires at least three
+   * hosts). Enabled by default.
+   *
+   * @param bool $aagConfigDisabled
    */
   public function setAagConfigDisabled($aagConfigDisabled)
   {

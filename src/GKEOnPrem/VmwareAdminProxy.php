@@ -20,16 +20,28 @@ namespace Google\Service\GKEOnPrem;
 class VmwareAdminProxy extends \Google\Model
 {
   /**
+   * A comma-separated list of IP addresses, IP address ranges, host names, and
+   * domain names that should not go through the proxy server. When Google
+   * Distributed Cloud sends a request to one of these addresses, hosts, or
+   * domains, the request is sent directly.
+   *
    * @var string
    */
   public $noProxy;
   /**
+   * The HTTP address of proxy server.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * A comma-separated list of IP addresses, IP address ranges, host names, and
+   * domain names that should not go through the proxy server. When Google
+   * Distributed Cloud sends a request to one of these addresses, hosts, or
+   * domains, the request is sent directly.
+   *
+   * @param string $noProxy
    */
   public function setNoProxy($noProxy)
   {
@@ -43,7 +55,9 @@ class VmwareAdminProxy extends \Google\Model
     return $this->noProxy;
   }
   /**
-   * @param string
+   * The HTTP address of proxy server.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

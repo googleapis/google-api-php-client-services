@@ -20,12 +20,18 @@ namespace Google\Service\GKEOnPrem;
 class VmwareDhcpIpConfig extends \Google\Model
 {
   /**
+   * enabled is a flag to mark if DHCP IP allocation is used for VMware user
+   * clusters.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * enabled is a flag to mark if DHCP IP allocation is used for VMware user
+   * clusters.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

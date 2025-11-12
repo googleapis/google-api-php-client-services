@@ -21,34 +21,59 @@ class VmwareNodeConfig extends \Google\Collection
 {
   protected $collection_key = 'taints';
   /**
+   * VMware disk size to be used during creation.
+   *
    * @var string
    */
   public $bootDiskSizeGb;
   /**
+   * The number of CPUs for each node in the node pool.
+   *
    * @var string
    */
   public $cpus;
   /**
+   * Allow node pool traffic to be load balanced. Only works for clusters with
+   * MetalLB load balancers.
+   *
    * @var bool
    */
   public $enableLoadBalancer;
   /**
+   * The OS image name in vCenter, only valid when using Windows.
+   *
    * @var string
    */
   public $image;
   /**
+   * Required. The OS image to be used for each node in a node pool. Currently
+   * `cos`, `cos_cgv2`, `ubuntu`, `ubuntu_cgv2`, `ubuntu_containerd` and
+   * `windows` are supported.
+   *
    * @var string
    */
   public $imageType;
   /**
+   * The map of Kubernetes labels (key/value pairs) to be applied to each node.
+   * These will added in addition to any default label(s) that Kubernetes may
+   * apply to the node. In case of conflict in label keys, the applied set may
+   * differ depending on the Kubernetes version -- it's best to assume the
+   * behavior is undefined and conflicts should be avoided. For more
+   * information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The megabytes of memory for each node in the node pool.
+   *
    * @var string
    */
   public $memoryMb;
   /**
+   * The number of nodes in the node pool.
+   *
    * @var string
    */
   public $replicas;
@@ -58,7 +83,9 @@ class VmwareNodeConfig extends \Google\Collection
   protected $vsphereConfigDataType = '';
 
   /**
-   * @param string
+   * VMware disk size to be used during creation.
+   *
+   * @param string $bootDiskSizeGb
    */
   public function setBootDiskSizeGb($bootDiskSizeGb)
   {
@@ -72,7 +99,9 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->bootDiskSizeGb;
   }
   /**
-   * @param string
+   * The number of CPUs for each node in the node pool.
+   *
+   * @param string $cpus
    */
   public function setCpus($cpus)
   {
@@ -86,7 +115,10 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->cpus;
   }
   /**
-   * @param bool
+   * Allow node pool traffic to be load balanced. Only works for clusters with
+   * MetalLB load balancers.
+   *
+   * @param bool $enableLoadBalancer
    */
   public function setEnableLoadBalancer($enableLoadBalancer)
   {
@@ -100,7 +132,9 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->enableLoadBalancer;
   }
   /**
-   * @param string
+   * The OS image name in vCenter, only valid when using Windows.
+   *
+   * @param string $image
    */
   public function setImage($image)
   {
@@ -114,7 +148,11 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param string
+   * Required. The OS image to be used for each node in a node pool. Currently
+   * `cos`, `cos_cgv2`, `ubuntu`, `ubuntu_cgv2`, `ubuntu_containerd` and
+   * `windows` are supported.
+   *
+   * @param string $imageType
    */
   public function setImageType($imageType)
   {
@@ -128,7 +166,15 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->imageType;
   }
   /**
-   * @param string[]
+   * The map of Kubernetes labels (key/value pairs) to be applied to each node.
+   * These will added in addition to any default label(s) that Kubernetes may
+   * apply to the node. In case of conflict in label keys, the applied set may
+   * differ depending on the Kubernetes version -- it's best to assume the
+   * behavior is undefined and conflicts should be avoided. For more
+   * information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -142,7 +188,9 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * The megabytes of memory for each node in the node pool.
+   *
+   * @param string $memoryMb
    */
   public function setMemoryMb($memoryMb)
   {
@@ -156,7 +204,9 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->memoryMb;
   }
   /**
-   * @param string
+   * The number of nodes in the node pool.
+   *
+   * @param string $replicas
    */
   public function setReplicas($replicas)
   {
@@ -170,7 +220,9 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->replicas;
   }
   /**
-   * @param NodeTaint[]
+   * The initial taints assigned to nodes of this node pool.
+   *
+   * @param NodeTaint[] $taints
    */
   public function setTaints($taints)
   {
@@ -184,7 +236,9 @@ class VmwareNodeConfig extends \Google\Collection
     return $this->taints;
   }
   /**
-   * @param VmwareVsphereConfig
+   * Specifies the vSphere config for node pool.
+   *
+   * @param VmwareVsphereConfig $vsphereConfig
    */
   public function setVsphereConfig(VmwareVsphereConfig $vsphereConfig)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\GKEOnPrem;
 class VmwareAdminPreparedSecretsConfig extends \Google\Model
 {
   /**
+   * Whether prepared secrets is enabled.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether prepared secrets is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

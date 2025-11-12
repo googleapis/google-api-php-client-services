@@ -23,20 +23,32 @@ class VmwareVersionInfo extends \Google\Collection
   protected $dependenciesType = UpgradeDependency::class;
   protected $dependenciesDataType = 'array';
   /**
+   * If set, the cluster dependencies (e.g. the admin cluster, other user
+   * clusters managed by the same admin cluster) must be upgraded before this
+   * version can be installed or upgraded to.
+   *
    * @var bool
    */
   public $hasDependencies;
   /**
+   * If set, the version is installed in the admin cluster. Otherwise, the
+   * version bundle must be downloaded and installed before a user cluster can
+   * be created at or upgraded to this version.
+   *
    * @var bool
    */
   public $isInstalled;
   /**
+   * Version number e.g. 1.13.1-gke.1000.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param UpgradeDependency[]
+   * The list of upgrade dependencies for this version.
+   *
+   * @param UpgradeDependency[] $dependencies
    */
   public function setDependencies($dependencies)
   {
@@ -50,7 +62,11 @@ class VmwareVersionInfo extends \Google\Collection
     return $this->dependencies;
   }
   /**
-   * @param bool
+   * If set, the cluster dependencies (e.g. the admin cluster, other user
+   * clusters managed by the same admin cluster) must be upgraded before this
+   * version can be installed or upgraded to.
+   *
+   * @param bool $hasDependencies
    */
   public function setHasDependencies($hasDependencies)
   {
@@ -64,7 +80,11 @@ class VmwareVersionInfo extends \Google\Collection
     return $this->hasDependencies;
   }
   /**
-   * @param bool
+   * If set, the version is installed in the admin cluster. Otherwise, the
+   * version bundle must be downloaded and installed before a user cluster can
+   * be created at or upgraded to this version.
+   *
+   * @param bool $isInstalled
    */
   public function setIsInstalled($isInstalled)
   {
@@ -78,7 +98,9 @@ class VmwareVersionInfo extends \Google\Collection
     return $this->isInstalled;
   }
   /**
-   * @param string
+   * Version number e.g. 1.13.1-gke.1000.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

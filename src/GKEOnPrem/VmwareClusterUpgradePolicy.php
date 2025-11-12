@@ -20,12 +20,16 @@ namespace Google\Service\GKEOnPrem;
 class VmwareClusterUpgradePolicy extends \Google\Model
 {
   /**
+   * Controls whether the upgrade applies to the control plane only.
+   *
    * @var bool
    */
   public $controlPlaneOnly;
 
   /**
-   * @param bool
+   * Controls whether the upgrade applies to the control plane only.
+   *
+   * @param bool $controlPlaneOnly
    */
   public function setControlPlaneOnly($controlPlaneOnly)
   {

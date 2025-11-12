@@ -20,16 +20,22 @@ namespace Google\Service\GKEOnPrem;
 class VmwareHostIp extends \Google\Model
 {
   /**
+   * Hostname of the machine. VM's name will be used if this field is empty.
+   *
    * @var string
    */
   public $hostname;
   /**
+   * IP could be an IP address (like 1.2.3.4) or a CIDR (like 1.2.3.0/24).
+   *
    * @var string
    */
   public $ip;
 
   /**
-   * @param string
+   * Hostname of the machine. VM's name will be used if this field is empty.
+   *
+   * @param string $hostname
    */
   public function setHostname($hostname)
   {
@@ -43,7 +49,9 @@ class VmwareHostIp extends \Google\Model
     return $this->hostname;
   }
   /**
-   * @param string
+   * IP could be an IP address (like 1.2.3.4) or a CIDR (like 1.2.3.0/24).
+   *
+   * @param string $ip
    */
   public function setIp($ip)
   {

@@ -27,22 +27,35 @@ class VmwareNetworkConfig extends \Google\Collection
   protected $hostConfigType = VmwareHostConfig::class;
   protected $hostConfigDataType = '';
   /**
+   * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from
+   * these ranges. Only a single range is supported. This field cannot be
+   * changed after creation.
+   *
    * @var string[]
    */
   public $podAddressCidrBlocks;
   /**
+   * Required. All services in the cluster are assigned an RFC1918 IPv4 address
+   * from these ranges. Only a single range is supported. This field cannot be
+   * changed after creation.
+   *
    * @var string[]
    */
   public $serviceAddressCidrBlocks;
   protected $staticIpConfigType = VmwareStaticIpConfig::class;
   protected $staticIpConfigDataType = '';
   /**
+   * vcenter_network specifies vCenter network name. Inherited from the admin
+   * cluster.
+   *
    * @var string
    */
   public $vcenterNetwork;
 
   /**
-   * @param VmwareControlPlaneV2Config
+   * Configuration for control plane V2 mode.
+   *
+   * @param VmwareControlPlaneV2Config $controlPlaneV2Config
    */
   public function setControlPlaneV2Config(VmwareControlPlaneV2Config $controlPlaneV2Config)
   {
@@ -56,7 +69,9 @@ class VmwareNetworkConfig extends \Google\Collection
     return $this->controlPlaneV2Config;
   }
   /**
-   * @param VmwareDhcpIpConfig
+   * Configuration settings for a DHCP IP configuration.
+   *
+   * @param VmwareDhcpIpConfig $dhcpIpConfig
    */
   public function setDhcpIpConfig(VmwareDhcpIpConfig $dhcpIpConfig)
   {
@@ -70,7 +85,9 @@ class VmwareNetworkConfig extends \Google\Collection
     return $this->dhcpIpConfig;
   }
   /**
-   * @param VmwareHostConfig
+   * Represents common network settings irrespective of the host's IP address.
+   *
+   * @param VmwareHostConfig $hostConfig
    */
   public function setHostConfig(VmwareHostConfig $hostConfig)
   {
@@ -84,7 +101,11 @@ class VmwareNetworkConfig extends \Google\Collection
     return $this->hostConfig;
   }
   /**
-   * @param string[]
+   * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from
+   * these ranges. Only a single range is supported. This field cannot be
+   * changed after creation.
+   *
+   * @param string[] $podAddressCidrBlocks
    */
   public function setPodAddressCidrBlocks($podAddressCidrBlocks)
   {
@@ -98,7 +119,11 @@ class VmwareNetworkConfig extends \Google\Collection
     return $this->podAddressCidrBlocks;
   }
   /**
-   * @param string[]
+   * Required. All services in the cluster are assigned an RFC1918 IPv4 address
+   * from these ranges. Only a single range is supported. This field cannot be
+   * changed after creation.
+   *
+   * @param string[] $serviceAddressCidrBlocks
    */
   public function setServiceAddressCidrBlocks($serviceAddressCidrBlocks)
   {
@@ -112,7 +137,9 @@ class VmwareNetworkConfig extends \Google\Collection
     return $this->serviceAddressCidrBlocks;
   }
   /**
-   * @param VmwareStaticIpConfig
+   * Configuration settings for a static IP configuration.
+   *
+   * @param VmwareStaticIpConfig $staticIpConfig
    */
   public function setStaticIpConfig(VmwareStaticIpConfig $staticIpConfig)
   {
@@ -126,7 +153,10 @@ class VmwareNetworkConfig extends \Google\Collection
     return $this->staticIpConfig;
   }
   /**
-   * @param string
+   * vcenter_network specifies vCenter network name. Inherited from the admin
+   * cluster.
+   *
+   * @param string $vcenterNetwork
    */
   public function setVcenterNetwork($vcenterNetwork)
   {
