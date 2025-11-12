@@ -20,12 +20,22 @@ namespace Google\Service\AdExchangeBuyerII;
 class WatchCreativeRequest extends \Google\Model
 {
   /**
+   * The Pub/Sub topic to publish notifications to. This topic must already
+   * exist and must give permission to ad-exchange-buyside-reports@google.com to
+   * write to the topic. This should be the full resource name in
+   * "projects/{project_id}/topics/{topic_id}" format.
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param string
+   * The Pub/Sub topic to publish notifications to. This topic must already
+   * exist and must give permission to ad-exchange-buyside-reports@google.com to
+   * write to the topic. This should be the full resource name in
+   * "projects/{project_id}/topics/{topic_id}" format.
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {
