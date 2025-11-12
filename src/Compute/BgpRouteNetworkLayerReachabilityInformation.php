@@ -20,16 +20,24 @@ namespace Google\Service\Compute;
 class BgpRouteNetworkLayerReachabilityInformation extends \Google\Model
 {
   /**
+   * If the BGP session supports multiple paths (RFC 7911), the path identifier
+   * for this route.
+   *
    * @var string
    */
   public $pathId;
   /**
+   * Human readable CIDR notation for a prefix. E.g. 10.42.0.0/16.
+   *
    * @var string
    */
   public $prefix;
 
   /**
-   * @param string
+   * If the BGP session supports multiple paths (RFC 7911), the path identifier
+   * for this route.
+   *
+   * @param string $pathId
    */
   public function setPathId($pathId)
   {
@@ -43,7 +51,9 @@ class BgpRouteNetworkLayerReachabilityInformation extends \Google\Model
     return $this->pathId;
   }
   /**
-   * @param string
+   * Human readable CIDR notation for a prefix. E.g. 10.42.0.0/16.
+   *
+   * @param string $prefix
    */
   public function setPrefix($prefix)
   {

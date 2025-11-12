@@ -20,24 +20,37 @@ namespace Google\Service\Compute;
 class BfdStatusPacketCounts extends \Google\Model
 {
   /**
+   * Number of packets received since the beginning of the current BFD session.
+   *
    * @var string
    */
   public $numRx;
   /**
+   * Number of packets received that were rejected because of errors since the
+   * beginning of the current BFD session.
+   *
    * @var string
    */
   public $numRxRejected;
   /**
+   * Number of packets received that were successfully processed since the
+   * beginning of the current BFD session.
+   *
    * @var string
    */
   public $numRxSuccessful;
   /**
+   * Number of packets transmitted since the beginning of the current BFD
+   * session.
+   *
    * @var string
    */
   public $numTx;
 
   /**
-   * @param string
+   * Number of packets received since the beginning of the current BFD session.
+   *
+   * @param string $numRx
    */
   public function setNumRx($numRx)
   {
@@ -51,7 +64,10 @@ class BfdStatusPacketCounts extends \Google\Model
     return $this->numRx;
   }
   /**
-   * @param string
+   * Number of packets received that were rejected because of errors since the
+   * beginning of the current BFD session.
+   *
+   * @param string $numRxRejected
    */
   public function setNumRxRejected($numRxRejected)
   {
@@ -65,7 +81,10 @@ class BfdStatusPacketCounts extends \Google\Model
     return $this->numRxRejected;
   }
   /**
-   * @param string
+   * Number of packets received that were successfully processed since the
+   * beginning of the current BFD session.
+   *
+   * @param string $numRxSuccessful
    */
   public function setNumRxSuccessful($numRxSuccessful)
   {
@@ -79,7 +98,10 @@ class BfdStatusPacketCounts extends \Google\Model
     return $this->numRxSuccessful;
   }
   /**
-   * @param string
+   * Number of packets transmitted since the beginning of the current BFD
+   * session.
+   *
+   * @param string $numTx
    */
   public function setNumTx($numTx)
   {

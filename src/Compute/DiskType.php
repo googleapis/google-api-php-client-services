@@ -20,50 +20,78 @@ namespace Google\Service\Compute;
 class DiskType extends \Google\Model
 {
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * [Output Only] Server-defined default disk size in GB.
+   *
    * @var string
    */
   public $defaultDiskSizeGb;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
   /**
+   * [Output Only] An optional description of this resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource. Always compute#diskType for disk types.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] Name of the resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] URL of the region where the disk type resides. Only
+   * applicable for regional resources. You must specify this field as part of
+   * the HTTP request URL. It is not settable as a field in the request body.
+   *
    * @var string
    */
   public $region;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] An optional textual description of the valid disk size, such
+   * as "10GB-10TB".
+   *
    * @var string
    */
   public $validDiskSize;
   /**
+   * [Output Only] URL of the zone where the disk type resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -77,7 +105,9 @@ class DiskType extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined default disk size in GB.
+   *
+   * @param string $defaultDiskSizeGb
    */
   public function setDefaultDiskSizeGb($defaultDiskSizeGb)
   {
@@ -91,7 +121,9 @@ class DiskType extends \Google\Model
     return $this->defaultDiskSizeGb;
   }
   /**
-   * @param DeprecationStatus
+   * [Output Only] The deprecation status associated with this disk type.
+   *
+   * @param DeprecationStatus $deprecated
    */
   public function setDeprecated(DeprecationStatus $deprecated)
   {
@@ -105,7 +137,9 @@ class DiskType extends \Google\Model
     return $this->deprecated;
   }
   /**
-   * @param string
+   * [Output Only] An optional description of this resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -119,7 +153,10 @@ class DiskType extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -133,7 +170,9 @@ class DiskType extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Always compute#diskType for disk types.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -147,7 +186,9 @@ class DiskType extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] Name of the resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -161,7 +202,11 @@ class DiskType extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] URL of the region where the disk type resides. Only
+   * applicable for regional resources. You must specify this field as part of
+   * the HTTP request URL. It is not settable as a field in the request body.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -175,7 +220,9 @@ class DiskType extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -189,7 +236,10 @@ class DiskType extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * [Output Only] An optional textual description of the valid disk size, such
+   * as "10GB-10TB".
+   *
+   * @param string $validDiskSize
    */
   public function setValidDiskSize($validDiskSize)
   {
@@ -203,7 +253,11 @@ class DiskType extends \Google\Model
     return $this->validDiskSize;
   }
   /**
-   * @param string
+   * [Output Only] URL of the zone where the disk type resides. You must specify
+   * this field as part of the HTTP request URL. It is not settable as a field
+   * in the request body.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

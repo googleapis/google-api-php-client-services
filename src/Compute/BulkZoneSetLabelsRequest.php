@@ -24,7 +24,7 @@ class BulkZoneSetLabelsRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param BulkSetLabelsRequest[]
+   * @param BulkSetLabelsRequest[] $requests
    */
   public function setRequests($requests)
   {

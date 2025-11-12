@@ -20,32 +20,54 @@ namespace Google\Service\Compute;
 class CrossSiteNetwork extends \Google\Model
 {
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of the cross-site network.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] The unique identifier for the resource type. The server
+   * generates this identifier.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for
+   * cross-site networks.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
 
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -59,7 +81,9 @@ class CrossSiteNetwork extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of the cross-site network.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -73,7 +97,10 @@ class CrossSiteNetwork extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource type. The server
+   * generates this identifier.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -87,7 +114,10 @@ class CrossSiteNetwork extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#crossSiteNetwork for
+   * cross-site networks.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -101,7 +131,15 @@ class CrossSiteNetwork extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -115,7 +153,9 @@ class CrossSiteNetwork extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class DistributionPolicyZoneConfiguration extends \Google\Model
 {
   /**
+   * The URL of thezone. The zone must exist in the region where the managed
+   * instance group is located.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * The URL of thezone. The zone must exist in the region where the managed
+   * instance group is located.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

@@ -26,7 +26,9 @@ class CommitmentsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param Commitment[]
+   * [Output Only] The list of commitments contained in this scope.
+   *
+   * @param Commitment[] $commitments
    */
   public function setCommitments($commitments)
   {
@@ -40,7 +42,10 @@ class CommitmentsScopedList extends \Google\Collection
     return $this->commitments;
   }
   /**
-   * @param CommitmentsScopedListWarning
+   * [Output Only] Informational warning which replaces the list of commitments
+   * when the list is empty.
+   *
+   * @param CommitmentsScopedListWarning $warning
    */
   public function setWarning(CommitmentsScopedListWarning $warning)
   {

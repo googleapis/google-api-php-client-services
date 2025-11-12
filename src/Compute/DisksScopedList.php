@@ -26,7 +26,9 @@ class DisksScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param Disk[]
+   * [Output Only] A list of disks contained in this scope.
+   *
+   * @param Disk[] $disks
    */
   public function setDisks($disks)
   {
@@ -40,7 +42,10 @@ class DisksScopedList extends \Google\Collection
     return $this->disks;
   }
   /**
-   * @param DisksScopedListWarning
+   * [Output Only] Informational warning which replaces the list of disks when
+   * the list is empty.
+   *
+   * @param DisksScopedListWarning $warning
    */
   public function setWarning(DisksScopedListWarning $warning)
   {

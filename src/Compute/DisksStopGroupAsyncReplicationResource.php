@@ -20,12 +20,26 @@ namespace Google\Service\Compute;
 class DisksStopGroupAsyncReplicationResource extends \Google\Model
 {
   /**
+   * The URL of the DiskConsistencyGroupPolicy for the group of disks to stop.
+   * This may be a full or partial URL, such as:              -         https://
+   * www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolic
+   * ies/resourcePolicy            -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy
+   * -         regions/region/resourcePolicies/resourcePolicy
+   *
    * @var string
    */
   public $resourcePolicy;
 
   /**
-   * @param string
+   * The URL of the DiskConsistencyGroupPolicy for the group of disks to stop.
+   * This may be a full or partial URL, such as:              -         https://
+   * www.googleapis.com/compute/v1/projects/project/regions/region/resourcePolic
+   * ies/resourcePolicy            -
+   * projects/project/regions/region/resourcePolicies/resourcePolicy
+   * -         regions/region/resourcePolicies/resourcePolicy
+   *
+   * @param string $resourcePolicy
    */
   public function setResourcePolicy($resourcePolicy)
   {

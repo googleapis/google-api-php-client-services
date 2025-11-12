@@ -20,12 +20,16 @@ namespace Google\Service\Compute;
 class DisplayDevice extends \Google\Model
 {
   /**
+   * Defines whether the instance has Display enabled.
+   *
    * @var bool
    */
   public $enableDisplay;
 
   /**
-   * @param bool
+   * Defines whether the instance has Display enabled.
+   *
+   * @param bool $enableDisplay
    */
   public function setEnableDisplay($enableDisplay)
   {

@@ -22,12 +22,20 @@ class CustomerEncryptionKeyProtectedDisk extends \Google\Model
   protected $diskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $diskEncryptionKeyDataType = '';
   /**
+   * Specifies a valid partial or full URL to an existing Persistent Disk
+   * resource. This field is only applicable for persistent disks. For example:
+   *
+   * "source": "/compute/v1/projects/project_id/zones/zone/disks/ disk_name
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param CustomerEncryptionKey
+   * Decrypts data associated with the disk with acustomer-supplied encryption
+   * key.
+   *
+   * @param CustomerEncryptionKey $diskEncryptionKey
    */
   public function setDiskEncryptionKey(CustomerEncryptionKey $diskEncryptionKey)
   {
@@ -41,7 +49,12 @@ class CustomerEncryptionKeyProtectedDisk extends \Google\Model
     return $this->diskEncryptionKey;
   }
   /**
-   * @param string
+   * Specifies a valid partial or full URL to an existing Persistent Disk
+   * resource. This field is only applicable for persistent disks. For example:
+   *
+   * "source": "/compute/v1/projects/project_id/zones/zone/disks/ disk_name
+   *
+   * @param string $source
    */
   public function setSource($source)
   {

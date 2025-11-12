@@ -20,12 +20,20 @@ namespace Google\Service\Compute;
 class CommitmentResourceStatus extends \Google\Model
 {
   /**
+   * [Output Only] Indicates the end time of customer's eligibility to send
+   * custom term requests in RFC3339 text format. Term extension requests that
+   * (not the end time in the request) after this time will be rejected.
+   *
    * @var string
    */
   public $customTermEligibilityEndTimestamp;
 
   /**
-   * @param string
+   * [Output Only] Indicates the end time of customer's eligibility to send
+   * custom term requests in RFC3339 text format. Term extension requests that
+   * (not the end time in the request) after this time will be rejected.
+   *
+   * @param string $customTermEligibilityEndTimestamp
    */
   public function setCustomTermEligibilityEndTimestamp($customTermEligibilityEndTimestamp)
   {

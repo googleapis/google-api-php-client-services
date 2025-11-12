@@ -21,36 +21,62 @@ class CacheKeyPolicy extends \Google\Collection
 {
   protected $collection_key = 'queryStringWhitelist';
   /**
+   * If true, requests to different hosts will be cached separately.
+   *
    * @var bool
    */
   public $includeHost;
   /**
+   * Allows HTTP request headers (by name) to be used in the cache key.
+   *
    * @var string[]
    */
   public $includeHttpHeaders;
   /**
+   * Allows HTTP cookies (by name) to be used in the cache key. The name=value
+   * pair will be used in the cache key Cloud CDN generates.
+   *
    * @var string[]
    */
   public $includeNamedCookies;
   /**
+   * If true, http and https requests will be cached separately.
+   *
    * @var bool
    */
   public $includeProtocol;
   /**
+   * If true, include query string parameters in the cache key according to
+   * query_string_whitelist and query_string_blacklist. If neither is set, the
+   * entire query string will be included. If false, the query string will be
+   * excluded from the cache key entirely.
+   *
    * @var bool
    */
   public $includeQueryString;
   /**
+   * Names of query string parameters to exclude in cache keys. All other
+   * parameters will be included. Either specify query_string_whitelist or
+   * query_string_blacklist, not both. '&' and '=' will be percent encoded and
+   * not treated as delimiters.
+   *
    * @var string[]
    */
   public $queryStringBlacklist;
   /**
+   * Names of query string parameters to include in cache keys. All other
+   * parameters will be excluded. Either specify query_string_whitelist or
+   * query_string_blacklist, not both. '&' and '=' will be percent encoded and
+   * not treated as delimiters.
+   *
    * @var string[]
    */
   public $queryStringWhitelist;
 
   /**
-   * @param bool
+   * If true, requests to different hosts will be cached separately.
+   *
+   * @param bool $includeHost
    */
   public function setIncludeHost($includeHost)
   {
@@ -64,7 +90,9 @@ class CacheKeyPolicy extends \Google\Collection
     return $this->includeHost;
   }
   /**
-   * @param string[]
+   * Allows HTTP request headers (by name) to be used in the cache key.
+   *
+   * @param string[] $includeHttpHeaders
    */
   public function setIncludeHttpHeaders($includeHttpHeaders)
   {
@@ -78,7 +106,10 @@ class CacheKeyPolicy extends \Google\Collection
     return $this->includeHttpHeaders;
   }
   /**
-   * @param string[]
+   * Allows HTTP cookies (by name) to be used in the cache key. The name=value
+   * pair will be used in the cache key Cloud CDN generates.
+   *
+   * @param string[] $includeNamedCookies
    */
   public function setIncludeNamedCookies($includeNamedCookies)
   {
@@ -92,7 +123,9 @@ class CacheKeyPolicy extends \Google\Collection
     return $this->includeNamedCookies;
   }
   /**
-   * @param bool
+   * If true, http and https requests will be cached separately.
+   *
+   * @param bool $includeProtocol
    */
   public function setIncludeProtocol($includeProtocol)
   {
@@ -106,7 +139,12 @@ class CacheKeyPolicy extends \Google\Collection
     return $this->includeProtocol;
   }
   /**
-   * @param bool
+   * If true, include query string parameters in the cache key according to
+   * query_string_whitelist and query_string_blacklist. If neither is set, the
+   * entire query string will be included. If false, the query string will be
+   * excluded from the cache key entirely.
+   *
+   * @param bool $includeQueryString
    */
   public function setIncludeQueryString($includeQueryString)
   {
@@ -120,7 +158,12 @@ class CacheKeyPolicy extends \Google\Collection
     return $this->includeQueryString;
   }
   /**
-   * @param string[]
+   * Names of query string parameters to exclude in cache keys. All other
+   * parameters will be included. Either specify query_string_whitelist or
+   * query_string_blacklist, not both. '&' and '=' will be percent encoded and
+   * not treated as delimiters.
+   *
+   * @param string[] $queryStringBlacklist
    */
   public function setQueryStringBlacklist($queryStringBlacklist)
   {
@@ -134,7 +177,12 @@ class CacheKeyPolicy extends \Google\Collection
     return $this->queryStringBlacklist;
   }
   /**
-   * @param string[]
+   * Names of query string parameters to include in cache keys. All other
+   * parameters will be excluded. Either specify query_string_whitelist or
+   * query_string_blacklist, not both. '&' and '=' will be percent encoded and
+   * not treated as delimiters.
+   *
+   * @param string[] $queryStringWhitelist
    */
   public function setQueryStringWhitelist($queryStringWhitelist)
   {

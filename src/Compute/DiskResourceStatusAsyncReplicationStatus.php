@@ -20,19 +20,40 @@ namespace Google\Service\Compute;
 class DiskResourceStatusAsyncReplicationStatus extends \Google\Model
 {
   /**
+   * Replication is active.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Secondary disk is created and is waiting for replication to start.
+   */
+  public const STATE_CREATED = 'CREATED';
+  /**
+   * Replication is starting.
+   */
+  public const STATE_STARTING = 'STARTING';
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Replication is stopped.
+   */
+  public const STATE_STOPPED = 'STOPPED';
+  /**
+   * Replication is stopping.
+   */
+  public const STATE_STOPPING = 'STOPPING';
+  /**
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

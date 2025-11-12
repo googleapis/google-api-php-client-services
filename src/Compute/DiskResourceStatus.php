@@ -25,7 +25,7 @@ class DiskResourceStatus extends \Google\Model
   protected $asyncSecondaryDisksDataType = 'map';
 
   /**
-   * @param DiskResourceStatusAsyncReplicationStatus
+   * @param DiskResourceStatusAsyncReplicationStatus $asyncPrimaryDisk
    */
   public function setAsyncPrimaryDisk(DiskResourceStatusAsyncReplicationStatus $asyncPrimaryDisk)
   {
@@ -39,7 +39,9 @@ class DiskResourceStatus extends \Google\Model
     return $this->asyncPrimaryDisk;
   }
   /**
-   * @param DiskResourceStatusAsyncReplicationStatus[]
+   * Key: disk, value: AsyncReplicationStatus message
+   *
+   * @param DiskResourceStatusAsyncReplicationStatus[] $asyncSecondaryDisks
    */
   public function setAsyncSecondaryDisks($asyncSecondaryDisks)
   {
