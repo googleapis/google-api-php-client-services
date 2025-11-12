@@ -20,20 +20,33 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaReplayExecutionResponse extends \Google\Model
 {
   /**
+   * Next ID: 4 The id of the execution corresponding to this run of the
+   * integration.
+   *
    * @var string
    */
   public $executionId;
   /**
+   * OUTPUT parameters in format of Map. Where Key is the name of the parameter.
+   * The parameters would only be present in case of synchrounous execution.
+   * Note: Name of the system generated parameters are wrapped by backtick(`) to
+   * distinguish them from the user defined parameters.
+   *
    * @var array[]
    */
   public $outputParameters;
   /**
+   * The execution id which is replayed.
+   *
    * @var string
    */
   public $replayedExecutionId;
 
   /**
-   * @param string
+   * Next ID: 4 The id of the execution corresponding to this run of the
+   * integration.
+   *
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -47,7 +60,12 @@ class GoogleCloudIntegrationsV1alphaReplayExecutionResponse extends \Google\Mode
     return $this->executionId;
   }
   /**
-   * @param array[]
+   * OUTPUT parameters in format of Map. Where Key is the name of the parameter.
+   * The parameters would only be present in case of synchrounous execution.
+   * Note: Name of the system generated parameters are wrapped by backtick(`) to
+   * distinguish them from the user defined parameters.
+   *
+   * @param array[] $outputParameters
    */
   public function setOutputParameters($outputParameters)
   {
@@ -61,7 +79,9 @@ class GoogleCloudIntegrationsV1alphaReplayExecutionResponse extends \Google\Mode
     return $this->outputParameters;
   }
   /**
-   * @param string
+   * The execution id which is replayed.
+   *
+   * @param string $replayedExecutionId
    */
   public function setReplayedExecutionId($replayedExecutionId)
   {

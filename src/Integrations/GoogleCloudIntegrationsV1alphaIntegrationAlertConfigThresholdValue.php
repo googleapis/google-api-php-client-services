@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue extends \Google\Model
 {
   /**
+   * Absolute value threshold.
+   *
    * @var string
    */
   public $absolute;
   /**
+   * Percentage threshold.
+   *
    * @var int
    */
   public $percentage;
 
   /**
-   * @param string
+   * Absolute value threshold.
+   *
+   * @param string $absolute
    */
   public function setAbsolute($absolute)
   {
@@ -43,7 +49,9 @@ class GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue extends
     return $this->absolute;
   }
   /**
-   * @param int
+   * Percentage threshold.
+   *
+   * @param int $percentage
    */
   public function setPercentage($percentage)
   {

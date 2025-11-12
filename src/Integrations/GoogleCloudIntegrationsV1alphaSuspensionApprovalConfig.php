@@ -21,10 +21,14 @@ class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig extends \Google\Col
 {
   protected $collection_key = 'emailAddresses';
   /**
+   * Information to provide for recipients.
+   *
    * @var string
    */
   public $customMessage;
   /**
+   * Email addresses to send approval request to.
+   *
    * @var string[]
    */
   public $emailAddresses;
@@ -32,7 +36,9 @@ class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig extends \Google\Col
   protected $expirationDataType = '';
 
   /**
-   * @param string
+   * Information to provide for recipients.
+   *
+   * @param string $customMessage
    */
   public function setCustomMessage($customMessage)
   {
@@ -46,7 +52,9 @@ class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig extends \Google\Col
     return $this->customMessage;
   }
   /**
-   * @param string[]
+   * Email addresses to send approval request to.
+   *
+   * @param string[] $emailAddresses
    */
   public function setEmailAddresses($emailAddresses)
   {
@@ -60,7 +68,9 @@ class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig extends \Google\Col
     return $this->emailAddresses;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaSuspensionApprovalExpiration
+   * Indicates the next steps when no external actions happen on the suspension.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSuspensionApprovalExpiration $expiration
    */
   public function setExpiration(GoogleCloudIntegrationsV1alphaSuspensionApprovalExpiration $expiration)
   {

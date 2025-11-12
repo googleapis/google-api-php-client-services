@@ -23,7 +23,10 @@ class GoogleCloudIntegrationsV1alphaResolveSuspensionRequest extends \Google\Mod
   protected $suspensionDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaSuspension
+   * Suspension, containing the event_execution_info_id, task_id, and state to
+   * set on the corresponding suspension record.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSuspension $suspension
    */
   public function setSuspension(GoogleCloudIntegrationsV1alphaSuspension $suspension)
   {

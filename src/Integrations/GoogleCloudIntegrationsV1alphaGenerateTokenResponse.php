@@ -20,12 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaGenerateTokenResponse extends \Google\Model
 {
   /**
+   * The message that notifies the user if the request succeeded or not.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * The message that notifies the user if the request succeeded or not.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

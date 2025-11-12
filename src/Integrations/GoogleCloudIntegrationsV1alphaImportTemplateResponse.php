@@ -26,7 +26,9 @@ class GoogleCloudIntegrationsV1alphaImportTemplateResponse extends \Google\Colle
   protected $subIntegrationVersionsDataType = 'array';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationVersion
+   * IntegrationVersion after the import.
+   *
+   * @param GoogleCloudIntegrationsV1alphaIntegrationVersion $integrationVersion
    */
   public function setIntegrationVersion(GoogleCloudIntegrationsV1alphaIntegrationVersion $integrationVersion)
   {
@@ -40,7 +42,9 @@ class GoogleCloudIntegrationsV1alphaImportTemplateResponse extends \Google\Colle
     return $this->integrationVersion;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationVersion[]
+   * Sub integration versions which are imported.
+   *
+   * @param GoogleCloudIntegrationsV1alphaIntegrationVersion[] $subIntegrationVersions
    */
   public function setSubIntegrationVersions($subIntegrationVersions)
   {

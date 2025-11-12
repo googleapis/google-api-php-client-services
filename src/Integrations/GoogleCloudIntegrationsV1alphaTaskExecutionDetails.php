@@ -19,20 +19,87 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaTaskExecutionDetails extends \Google\Collection
 {
+  /**
+   * Default value.
+   */
+  public const TASK_EXECUTION_STATE_TASK_EXECUTION_STATE_UNSPECIFIED = 'TASK_EXECUTION_STATE_UNSPECIFIED';
+  /**
+   * Task is waiting for its precondition tasks to finish to start the
+   * execution.
+   */
+  public const TASK_EXECUTION_STATE_PENDING_EXECUTION = 'PENDING_EXECUTION';
+  /**
+   * Task is under processing.
+   */
+  public const TASK_EXECUTION_STATE_IN_PROCESS = 'IN_PROCESS';
+  /**
+   * Task execution successfully finished. There's no more change after this
+   * state.
+   */
+  public const TASK_EXECUTION_STATE_SUCCEED = 'SUCCEED';
+  /**
+   * Task execution failed. There's no more change after this state.
+   */
+  public const TASK_EXECUTION_STATE_FAILED = 'FAILED';
+  /**
+   * Task execution failed and cause the whole integration execution to fail
+   * immediately. There's no more change after this state.
+   */
+  public const TASK_EXECUTION_STATE_FATAL = 'FATAL';
+  /**
+   * Task execution failed and waiting for retry.
+   */
+  public const TASK_EXECUTION_STATE_RETRY_ON_HOLD = 'RETRY_ON_HOLD';
+  /**
+   * Task execution skipped. This happens when its precondition wasn't met, or
+   * the integration execution been canceled before reach to the task. There's
+   * no more changes after this state.
+   */
+  public const TASK_EXECUTION_STATE_SKIPPED = 'SKIPPED';
+  /**
+   * Task execution canceled when in progress. This happens when integration
+   * execution been canceled or any other task fall in fatal state.
+   */
+  public const TASK_EXECUTION_STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Task is waiting for its dependency tasks' rollback to finish to start its
+   * rollback.
+   */
+  public const TASK_EXECUTION_STATE_PENDING_ROLLBACK = 'PENDING_ROLLBACK';
+  /**
+   * Task is rolling back.
+   */
+  public const TASK_EXECUTION_STATE_ROLLBACK_IN_PROCESS = 'ROLLBACK_IN_PROCESS';
+  /**
+   * Task is rolled back. This is the state we will set regardless of rollback
+   * succeeding or failing.
+   */
+  public const TASK_EXECUTION_STATE_ROLLEDBACK = 'ROLLEDBACK';
+  /**
+   * Task is a SuspensionTask which has executed once, creating a pending
+   * suspension.
+   */
+  public const TASK_EXECUTION_STATE_SUSPENDED = 'SUSPENDED';
   protected $collection_key = 'taskAttemptStats';
   protected $taskAttemptStatsType = GoogleCloudIntegrationsV1alphaAttemptStats::class;
   protected $taskAttemptStatsDataType = 'array';
   /**
+   * The execution state of this task.
+   *
    * @var string
    */
   public $taskExecutionState;
   /**
+   * Pointer to the task config it used for execution.
+   *
    * @var string
    */
   public $taskNumber;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaAttemptStats[]
+   * Status for the current task execution attempt.
+   *
+   * @param GoogleCloudIntegrationsV1alphaAttemptStats[] $taskAttemptStats
    */
   public function setTaskAttemptStats($taskAttemptStats)
   {
@@ -46,21 +113,29 @@ class GoogleCloudIntegrationsV1alphaTaskExecutionDetails extends \Google\Collect
     return $this->taskAttemptStats;
   }
   /**
-   * @param string
+   * The execution state of this task.
+   *
+   * Accepted values: TASK_EXECUTION_STATE_UNSPECIFIED, PENDING_EXECUTION,
+   * IN_PROCESS, SUCCEED, FAILED, FATAL, RETRY_ON_HOLD, SKIPPED, CANCELLED,
+   * PENDING_ROLLBACK, ROLLBACK_IN_PROCESS, ROLLEDBACK, SUSPENDED
+   *
+   * @param self::TASK_EXECUTION_STATE_* $taskExecutionState
    */
   public function setTaskExecutionState($taskExecutionState)
   {
     $this->taskExecutionState = $taskExecutionState;
   }
   /**
-   * @return string
+   * @return self::TASK_EXECUTION_STATE_*
    */
   public function getTaskExecutionState()
   {
     return $this->taskExecutionState;
   }
   /**
-   * @param string
+   * Pointer to the task config it used for execution.
+   *
+   * @param string $taskNumber
    */
   public function setTaskNumber($taskNumber)
   {

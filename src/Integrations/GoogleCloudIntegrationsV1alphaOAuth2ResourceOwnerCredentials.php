@@ -19,41 +19,75 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Google\Model
 {
+  /**
+   * Unspecified request type
+   */
+  public const REQUEST_TYPE_REQUEST_TYPE_UNSPECIFIED = 'REQUEST_TYPE_UNSPECIFIED';
+  /**
+   * To pass all the parameters in post body.
+   */
+  public const REQUEST_TYPE_REQUEST_BODY = 'REQUEST_BODY';
+  /**
+   * To pass all the parameters as a part of query parameter.
+   */
+  public const REQUEST_TYPE_QUERY_PARAMETERS = 'QUERY_PARAMETERS';
+  /**
+   * To pass client id and client secret as base 64 encoding of
+   * client_id:client_password and rest parameters in post body.
+   */
+  public const REQUEST_TYPE_ENCODED_HEADER = 'ENCODED_HEADER';
   protected $accessTokenType = GoogleCloudIntegrationsV1alphaAccessToken::class;
   protected $accessTokenDataType = '';
   /**
+   * The client's ID.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * The client's secret.
+   *
    * @var string
    */
   public $clientSecret;
   /**
+   * The user's password.
+   *
    * @var string
    */
   public $password;
   /**
+   * Represent how to pass parameters to fetch access token
+   *
    * @var string
    */
   public $requestType;
   /**
+   * A space-delimited list of requested scope permissions.
+   *
    * @var string
    */
   public $scope;
   /**
+   * The token endpoint is used by the client to obtain an access token by
+   * presenting its authorization grant or refresh token.
+   *
    * @var string
    */
   public $tokenEndpoint;
   protected $tokenParamsType = GoogleCloudIntegrationsV1alphaParameterMap::class;
   protected $tokenParamsDataType = '';
   /**
+   * The user's username.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaAccessToken
+   * Access token fetched from the authorization server.
+   *
+   * @param GoogleCloudIntegrationsV1alphaAccessToken $accessToken
    */
   public function setAccessToken(GoogleCloudIntegrationsV1alphaAccessToken $accessToken)
   {
@@ -67,7 +101,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
     return $this->accessToken;
   }
   /**
-   * @param string
+   * The client's ID.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -81,7 +117,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
     return $this->clientId;
   }
   /**
-   * @param string
+   * The client's secret.
+   *
+   * @param string $clientSecret
    */
   public function setClientSecret($clientSecret)
   {
@@ -95,7 +133,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
     return $this->clientSecret;
   }
   /**
-   * @param string
+   * The user's password.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -109,21 +149,28 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
     return $this->password;
   }
   /**
-   * @param string
+   * Represent how to pass parameters to fetch access token
+   *
+   * Accepted values: REQUEST_TYPE_UNSPECIFIED, REQUEST_BODY, QUERY_PARAMETERS,
+   * ENCODED_HEADER
+   *
+   * @param self::REQUEST_TYPE_* $requestType
    */
   public function setRequestType($requestType)
   {
     $this->requestType = $requestType;
   }
   /**
-   * @return string
+   * @return self::REQUEST_TYPE_*
    */
   public function getRequestType()
   {
     return $this->requestType;
   }
   /**
-   * @param string
+   * A space-delimited list of requested scope permissions.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {
@@ -137,7 +184,10 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
     return $this->scope;
   }
   /**
-   * @param string
+   * The token endpoint is used by the client to obtain an access token by
+   * presenting its authorization grant or refresh token.
+   *
+   * @param string $tokenEndpoint
    */
   public function setTokenEndpoint($tokenEndpoint)
   {
@@ -151,7 +201,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
     return $this->tokenEndpoint;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaParameterMap
+   * Token parameters for the auth request.
+   *
+   * @param GoogleCloudIntegrationsV1alphaParameterMap $tokenParams
    */
   public function setTokenParams(GoogleCloudIntegrationsV1alphaParameterMap $tokenParams)
   {
@@ -165,7 +217,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
     return $this->tokenParams;
   }
   /**
-   * @param string
+   * The user's username.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

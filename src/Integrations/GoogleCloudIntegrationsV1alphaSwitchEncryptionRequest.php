@@ -23,7 +23,10 @@ class GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest extends \Google\Mode
   protected $cloudKmsConfigDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaCloudKmsConfig
+   * Required. REQUIRED: Cloud KMS config for AuthModule to encrypt/decrypt
+   * credentials.
+   *
+   * @param GoogleCloudIntegrationsV1alphaCloudKmsConfig $cloudKmsConfig
    */
   public function setCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig $cloudKmsConfig)
   {

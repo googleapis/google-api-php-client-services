@@ -21,6 +21,8 @@ class GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse extends \Google\Co
 {
   protected $collection_key = 'sfdcInstances';
   /**
+   * The token used to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse extends \Google\Co
   protected $sfdcInstancesDataType = 'array';
 
   /**
-   * @param string
+   * The token used to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse extends \Google\Co
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaSfdcInstance[]
+   * The list of SfdcInstances retrieved.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSfdcInstance[] $sfdcInstances
    */
   public function setSfdcInstances($sfdcInstances)
   {

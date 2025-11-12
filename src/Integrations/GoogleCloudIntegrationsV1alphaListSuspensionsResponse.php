@@ -21,6 +21,8 @@ class GoogleCloudIntegrationsV1alphaListSuspensionsResponse extends \Google\Coll
 {
   protected $collection_key = 'suspensions';
   /**
+   * Token to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudIntegrationsV1alphaListSuspensionsResponse extends \Google\Coll
   protected $suspensionsDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,10 @@ class GoogleCloudIntegrationsV1alphaListSuspensionsResponse extends \Google\Coll
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaSuspension[]
+   * The suspensions for the relevant execution which the caller has permissions
+   * to view and resolve.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSuspension[] $suspensions
    */
   public function setSuspensions($suspensions)
   {

@@ -23,7 +23,9 @@ class GoogleCloudIntegrationsV1alphaUploadTemplateResponse extends \Google\Model
   protected $templateDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaTemplate
+   * The uploaded Template
+   *
+   * @param GoogleCloudIntegrationsV1alphaTemplate $template
    */
   public function setTemplate(GoogleCloudIntegrationsV1alphaTemplate $template)
   {

@@ -23,10 +23,14 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extends \Google\Col
   protected $eventParametersType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $eventParametersDataType = '';
   /**
+   * Is true if any execution in the integration failed. False otherwise.
+   *
    * @var bool
    */
   public $executionFailed;
   /**
+   * The id of the execution corresponding to this run of integration.
+   *
    * @var string
    */
   public $executionId;
@@ -36,13 +40,17 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extends \Google\Col
   protected $parametersDataType = 'map';
 
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoEventParameters
+   * Details for the integration that were executed.
+   *
+   * @deprecated
+   * @param EnterpriseCrmFrontendsEventbusProtoEventParameters $eventParameters
    */
   public function setEventParameters(EnterpriseCrmFrontendsEventbusProtoEventParameters $eventParameters)
   {
     $this->eventParameters = $eventParameters;
   }
   /**
+   * @deprecated
    * @return EnterpriseCrmFrontendsEventbusProtoEventParameters
    */
   public function getEventParameters()
@@ -50,7 +58,9 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extends \Google\Col
     return $this->eventParameters;
   }
   /**
-   * @param bool
+   * Is true if any execution in the integration failed. False otherwise.
+   *
+   * @param bool $executionFailed
    */
   public function setExecutionFailed($executionFailed)
   {
@@ -64,7 +74,9 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extends \Google\Col
     return $this->executionFailed;
   }
   /**
-   * @param string
+   * The id of the execution corresponding to this run of integration.
+   *
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -78,13 +90,18 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extends \Google\Col
     return $this->executionId;
   }
   /**
-   * @param EnterpriseCrmFrontendsEventbusProtoParameterEntry[]
+   * Parameters are a part of Event and can be used to communicate between
+   * different tasks that are part of the same integration execution.
+   *
+   * @deprecated
+   * @param EnterpriseCrmFrontendsEventbusProtoParameterEntry[] $parameterEntries
    */
   public function setParameterEntries($parameterEntries)
   {
     $this->parameterEntries = $parameterEntries;
   }
   /**
+   * @deprecated
    * @return EnterpriseCrmFrontendsEventbusProtoParameterEntry[]
    */
   public function getParameterEntries()
@@ -92,7 +109,10 @@ class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extends \Google\Col
     return $this->parameterEntries;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaValueType[]
+   * Optional. Parameters are a part of Event and can be used to communicate
+   * between different tasks that are part of the same integration execution.
+   *
+   * @param GoogleCloudIntegrationsV1alphaValueType[] $parameters
    */
   public function setParameters($parameters)
   {

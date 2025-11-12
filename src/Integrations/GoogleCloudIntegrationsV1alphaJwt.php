@@ -20,24 +20,37 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaJwt extends \Google\Model
 {
   /**
+   * The token calculated by the header, payload and signature.
+   *
    * @var string
    */
   public $jwt;
   /**
+   * Identifies which algorithm is used to generate the signature.
+   *
    * @var string
    */
   public $jwtHeader;
   /**
+   * Contains a set of claims. The JWT specification defines seven Registered
+   * Claim Names which are the standard fields commonly included in tokens.
+   * Custom claims are usually also included, depending on the purpose of the
+   * token.
+   *
    * @var string
    */
   public $jwtPayload;
   /**
+   * User's pre-shared secret to sign the token.
+   *
    * @var string
    */
   public $secret;
 
   /**
-   * @param string
+   * The token calculated by the header, payload and signature.
+   *
+   * @param string $jwt
    */
   public function setJwt($jwt)
   {
@@ -51,7 +64,9 @@ class GoogleCloudIntegrationsV1alphaJwt extends \Google\Model
     return $this->jwt;
   }
   /**
-   * @param string
+   * Identifies which algorithm is used to generate the signature.
+   *
+   * @param string $jwtHeader
    */
   public function setJwtHeader($jwtHeader)
   {
@@ -65,7 +80,12 @@ class GoogleCloudIntegrationsV1alphaJwt extends \Google\Model
     return $this->jwtHeader;
   }
   /**
-   * @param string
+   * Contains a set of claims. The JWT specification defines seven Registered
+   * Claim Names which are the standard fields commonly included in tokens.
+   * Custom claims are usually also included, depending on the purpose of the
+   * token.
+   *
+   * @param string $jwtPayload
    */
   public function setJwtPayload($jwtPayload)
   {
@@ -79,7 +99,9 @@ class GoogleCloudIntegrationsV1alphaJwt extends \Google\Model
     return $this->jwtPayload;
   }
   /**
-   * @param string
+   * User's pre-shared secret to sign the token.
+   *
+   * @param string $secret
    */
   public function setSecret($secret)
   {

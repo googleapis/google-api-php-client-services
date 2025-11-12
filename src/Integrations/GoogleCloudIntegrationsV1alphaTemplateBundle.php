@@ -26,7 +26,9 @@ class GoogleCloudIntegrationsV1alphaTemplateBundle extends \Google\Collection
   protected $subIntegrationVersionTemplatesDataType = 'array';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate
+   * Required. Main integration templates of the template bundle.
+   *
+   * @param GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate $integrationVersionTemplate
    */
   public function setIntegrationVersionTemplate(GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate $integrationVersionTemplate)
   {
@@ -40,7 +42,10 @@ class GoogleCloudIntegrationsV1alphaTemplateBundle extends \Google\Collection
     return $this->integrationVersionTemplate;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate[]
+   * Optional. Sub integration templates which would be added along with main
+   * integration.
+   *
+   * @param GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate[] $subIntegrationVersionTemplates
    */
   public function setSubIntegrationVersionTemplates($subIntegrationVersionTemplates)
   {

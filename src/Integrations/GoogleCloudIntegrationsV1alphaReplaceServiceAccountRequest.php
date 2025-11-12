@@ -20,12 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest extends \Google\Model
 {
   /**
+   * Required. REQUIRED: Run-as service account to be updated
+   *
    * @var string
    */
   public $runAsServiceAccount;
 
   /**
-   * @param string
+   * Required. REQUIRED: Run-as service account to be updated
+   *
+   * @param string $runAsServiceAccount
    */
   public function setRunAsServiceAccount($runAsServiceAccount)
   {

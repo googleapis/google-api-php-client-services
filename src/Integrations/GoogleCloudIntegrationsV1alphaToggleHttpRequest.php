@@ -20,12 +20,18 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaToggleHttpRequest extends \Google\Model
 {
   /**
+   * Required. REQUIRED: True if http call feature should be turned on for this
+   * region
+   *
    * @var bool
    */
   public $enableHttpCall;
 
   /**
-   * @param bool
+   * Required. REQUIRED: True if http call feature should be turned on for this
+   * region
+   *
+   * @param bool $enableHttpCall
    */
   public function setEnableHttpCall($enableHttpCall)
   {

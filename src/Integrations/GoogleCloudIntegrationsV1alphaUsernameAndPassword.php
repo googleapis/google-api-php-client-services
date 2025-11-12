@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaUsernameAndPassword extends \Google\Model
 {
   /**
+   * Password to be used
+   *
    * @var string
    */
   public $password;
   /**
+   * Username to be used
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * Password to be used
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -43,7 +49,9 @@ class GoogleCloudIntegrationsV1alphaUsernameAndPassword extends \Google\Model
     return $this->password;
   }
   /**
-   * @param string
+   * Username to be used
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

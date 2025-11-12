@@ -22,12 +22,16 @@ class GoogleCloudIntegrationsV1alphaParameterMapField extends \Google\Model
   protected $literalValueType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $literalValueDataType = '';
   /**
+   * Referencing one of the Integration variables.
+   *
    * @var string
    */
   public $referenceKey;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaValueType
+   * Passing a literal value.
+   *
+   * @param GoogleCloudIntegrationsV1alphaValueType $literalValue
    */
   public function setLiteralValue(GoogleCloudIntegrationsV1alphaValueType $literalValue)
   {
@@ -41,7 +45,9 @@ class GoogleCloudIntegrationsV1alphaParameterMapField extends \Google\Model
     return $this->literalValue;
   }
   /**
-   * @param string
+   * Referencing one of the Integration variables.
+   *
+   * @param string $referenceKey
    */
   public function setReferenceKey($referenceKey)
   {

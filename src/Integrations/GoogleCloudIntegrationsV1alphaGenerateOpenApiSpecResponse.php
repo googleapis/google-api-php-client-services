@@ -20,12 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaGenerateOpenApiSpecResponse extends \Google\Model
 {
   /**
+   * Open API spec as per the required format
+   *
    * @var string
    */
   public $openApiSpec;
 
   /**
-   * @param string
+   * Open API spec as per the required format
+   *
+   * @param string $openApiSpec
    */
   public function setOpenApiSpec($openApiSpec)
   {

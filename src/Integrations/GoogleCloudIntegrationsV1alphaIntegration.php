@@ -20,36 +20,53 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
 {
   /**
+   * Required. If any integration version is published.
+   *
    * @var bool
    */
   public $active;
   /**
+   * Required. Output only. Auto-generated.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The creator's email address. Generated based on the End User
+   * Credentials/LOAS role of the user making the call.
+   *
    * @var string
    */
   public $creatorEmail;
   /**
+   * Optional.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The last modifier of this integration
+   *
    * @var string
    */
   public $lastModifierEmail;
   /**
+   * Required. The resource name of the integration.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Auto-generated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * Required. If any integration version is published.
+   *
+   * @param bool $active
    */
   public function setActive($active)
   {
@@ -63,7 +80,9 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
     return $this->active;
   }
   /**
-   * @param string
+   * Required. Output only. Auto-generated.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -77,7 +96,10 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The creator's email address. Generated based on the End User
+   * Credentials/LOAS role of the user making the call.
+   *
+   * @param string $creatorEmail
    */
   public function setCreatorEmail($creatorEmail)
   {
@@ -91,7 +113,9 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
     return $this->creatorEmail;
   }
   /**
-   * @param string
+   * Optional.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -105,7 +129,9 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The last modifier of this integration
+   *
+   * @param string $lastModifierEmail
    */
   public function setLastModifierEmail($lastModifierEmail)
   {
@@ -119,7 +145,9 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
     return $this->lastModifierEmail;
   }
   /**
-   * @param string
+   * Required. The resource name of the integration.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -133,7 +161,9 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Auto-generated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

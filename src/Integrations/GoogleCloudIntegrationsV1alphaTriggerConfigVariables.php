@@ -21,12 +21,16 @@ class GoogleCloudIntegrationsV1alphaTriggerConfigVariables extends \Google\Colle
 {
   protected $collection_key = 'names';
   /**
+   * Optional. List of variable names.
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param string[]
+   * Optional. List of variable names.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {

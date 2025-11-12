@@ -20,16 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaServiceAccountCredentials extends \Google\Model
 {
   /**
+   * A space-delimited list of requested scope permissions.
+   *
    * @var string
    */
   public $scope;
   /**
+   * Name of the service account that has the permission to make the request.
+   *
    * @var string
    */
   public $serviceAccount;
 
   /**
-   * @param string
+   * A space-delimited list of requested scope permissions.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {
@@ -43,7 +49,9 @@ class GoogleCloudIntegrationsV1alphaServiceAccountCredentials extends \Google\Mo
     return $this->scope;
   }
   /**
-   * @param string
+   * Name of the service account that has the permission to make the request.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {

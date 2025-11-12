@@ -20,16 +20,23 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails extends \Google\Model
 {
   /**
+   * Required. Name of the sub integration which would be created via templates.
+   *
    * @var string
    */
   public $integration;
   /**
+   * Optional. Description of the sub integration which would be created via
+   * templates.
+   *
    * @var string
    */
   public $integrationDescription;
 
   /**
-   * @param string
+   * Required. Name of the sub integration which would be created via templates.
+   *
+   * @param string $integration
    */
   public function setIntegration($integration)
   {
@@ -43,7 +50,10 @@ class GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails extends
     return $this->integration;
   }
   /**
-   * @param string
+   * Optional. Description of the sub integration which would be created via
+   * templates.
+   *
+   * @param string $integrationDescription
    */
   public function setIntegrationDescription($integrationDescription)
   {

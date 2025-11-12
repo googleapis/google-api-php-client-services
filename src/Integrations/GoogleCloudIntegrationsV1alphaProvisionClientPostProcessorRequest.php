@@ -21,12 +21,16 @@ class GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest extends 
 {
   protected $collection_key = 'workflows';
   /**
+   * Optional. Indicate which workflows to create
+   *
    * @var string[]
    */
   public $workflows;
 
   /**
-   * @param string[]
+   * Optional. Indicate which workflows to create
+   *
+   * @param string[] $workflows
    */
   public function setWorkflows($workflows)
   {

@@ -23,7 +23,9 @@ class GoogleCloudIntegrationsV1alphaUploadTestCaseResponse extends \Google\Model
   protected $testCaseDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaTestCase
+   * The uploaded TestCase
+   *
+   * @param GoogleCloudIntegrationsV1alphaTestCase $testCase
    */
   public function setTestCase(GoogleCloudIntegrationsV1alphaTestCase $testCase)
   {

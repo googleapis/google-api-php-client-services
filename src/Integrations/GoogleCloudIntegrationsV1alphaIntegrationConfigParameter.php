@@ -25,7 +25,10 @@ class GoogleCloudIntegrationsV1alphaIntegrationConfigParameter extends \Google\M
   protected $valueDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationParameter
+   * Optional. Integration Parameter to provide the default value, data type and
+   * attributes required for the Integration config variables.
+   *
+   * @param GoogleCloudIntegrationsV1alphaIntegrationParameter $parameter
    */
   public function setParameter(GoogleCloudIntegrationsV1alphaIntegrationParameter $parameter)
   {
@@ -39,7 +42,10 @@ class GoogleCloudIntegrationsV1alphaIntegrationConfigParameter extends \Google\M
     return $this->parameter;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaValueType
+   * Values for the defined keys. Each value can either be string, int, double
+   * or any proto message or a serialized object.
+   *
+   * @param GoogleCloudIntegrationsV1alphaValueType $value
    */
   public function setValue(GoogleCloudIntegrationsV1alphaValueType $value)
   {

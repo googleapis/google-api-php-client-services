@@ -21,6 +21,8 @@ class GoogleCloudIntegrationsV1alphaListSfdcChannelsResponse extends \Google\Col
 {
   protected $collection_key = 'sfdcChannels';
   /**
+   * The token used to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudIntegrationsV1alphaListSfdcChannelsResponse extends \Google\Col
   protected $sfdcChannelsDataType = 'array';
 
   /**
-   * @param string
+   * The token used to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudIntegrationsV1alphaListSfdcChannelsResponse extends \Google\Col
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaSfdcChannel[]
+   * The list of SfdcChannels retrieved.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSfdcChannel[] $sfdcChannels
    */
   public function setSfdcChannels($sfdcChannels)
   {

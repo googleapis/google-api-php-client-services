@@ -21,6 +21,8 @@ class GoogleCloudIntegrationsV1alphaSearchTemplatesResponse extends \Google\Coll
 {
   protected $collection_key = 'templates';
   /**
+   * The token used to retrieve the next page results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudIntegrationsV1alphaSearchTemplatesResponse extends \Google\Coll
   protected $templatesDataType = 'array';
 
   /**
-   * @param string
+   * The token used to retrieve the next page results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudIntegrationsV1alphaSearchTemplatesResponse extends \Google\Coll
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaTemplate[]
+   * List of templates retrieved.
+   *
+   * @param GoogleCloudIntegrationsV1alphaTemplate[] $templates
    */
   public function setTemplates($templates)
   {

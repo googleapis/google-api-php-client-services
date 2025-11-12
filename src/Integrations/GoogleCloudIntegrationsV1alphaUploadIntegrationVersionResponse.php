@@ -23,7 +23,9 @@ class GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse extends \Go
   protected $integrationVersionDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationVersion
+   * The uploaded integration.
+   *
+   * @param GoogleCloudIntegrationsV1alphaIntegrationVersion $integrationVersion
    */
   public function setIntegrationVersion(GoogleCloudIntegrationsV1alphaIntegrationVersion $integrationVersion)
   {

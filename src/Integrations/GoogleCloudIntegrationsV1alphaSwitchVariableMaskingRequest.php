@@ -20,12 +20,18 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest extends \Google\Model
 {
   /**
+   * Required. REQUIRED: True if variable masking feature should be turned on
+   * for this region
+   *
    * @var bool
    */
   public $enableVariableMasking;
 
   /**
-   * @param bool
+   * Required. REQUIRED: True if variable masking feature should be turned on
+   * for this region
+   *
+   * @param bool $enableVariableMasking
    */
   public function setEnableVariableMasking($enableVariableMasking)
   {

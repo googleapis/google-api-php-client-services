@@ -20,12 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaLiftSuspensionResponse extends \Google\Model
 {
   /**
+   * Execution Id that will be returned
+   *
    * @var string
    */
   public $eventExecutionInfoId;
 
   /**
-   * @param string
+   * Execution Id that will be returned
+   *
+   * @param string $eventExecutionInfoId
    */
   public function setEventExecutionInfoId($eventExecutionInfoId)
   {

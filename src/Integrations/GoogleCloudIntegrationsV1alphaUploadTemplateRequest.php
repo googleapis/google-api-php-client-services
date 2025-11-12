@@ -20,16 +20,34 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaUploadTemplateRequest extends \Google\Model
 {
   /**
+   * Unspecified file format
+   */
+  public const FILE_FORMAT_FILE_FORMAT_UNSPECIFIED = 'FILE_FORMAT_UNSPECIFIED';
+  /**
+   * JSON File Format
+   */
+  public const FILE_FORMAT_JSON = 'JSON';
+  /**
+   * YAML File Format
+   */
+  public const FILE_FORMAT_YAML = 'YAML';
+  /**
+   * Required. The textproto of the template.
+   *
    * @var string
    */
   public $content;
   /**
+   * Required. File format for upload request.
+   *
    * @var string
    */
   public $fileFormat;
 
   /**
-   * @param string
+   * Required. The textproto of the template.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -43,14 +61,18 @@ class GoogleCloudIntegrationsV1alphaUploadTemplateRequest extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Required. File format for upload request.
+   *
+   * Accepted values: FILE_FORMAT_UNSPECIFIED, JSON, YAML
+   *
+   * @param self::FILE_FORMAT_* $fileFormat
    */
   public function setFileFormat($fileFormat)
   {
     $this->fileFormat = $fileFormat;
   }
   /**
-   * @return string
+   * @return self::FILE_FORMAT_*
    */
   public function getFileFormat()
   {

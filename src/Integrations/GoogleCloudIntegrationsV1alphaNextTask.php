@@ -20,28 +20,41 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaNextTask extends \Google\Model
 {
   /**
+   * Standard filter expression for this task to become an eligible next task.
+   *
    * @var string
    */
   public $condition;
   /**
+   * User-provided description intended to give additional business context
+   * about the task.
+   *
    * @var string
    */
   public $description;
   /**
+   * User-provided label that is attached to this edge in the UI.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * ID of the next task.
+   *
    * @var string
    */
   public $taskConfigId;
   /**
+   * Task number of the next task.
+   *
    * @var string
    */
   public $taskId;
 
   /**
-   * @param string
+   * Standard filter expression for this task to become an eligible next task.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -55,7 +68,10 @@ class GoogleCloudIntegrationsV1alphaNextTask extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param string
+   * User-provided description intended to give additional business context
+   * about the task.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -69,7 +85,9 @@ class GoogleCloudIntegrationsV1alphaNextTask extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * User-provided label that is attached to this edge in the UI.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -83,7 +101,9 @@ class GoogleCloudIntegrationsV1alphaNextTask extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * ID of the next task.
+   *
+   * @param string $taskConfigId
    */
   public function setTaskConfigId($taskConfigId)
   {
@@ -97,7 +117,9 @@ class GoogleCloudIntegrationsV1alphaNextTask extends \Google\Model
     return $this->taskConfigId;
   }
   /**
-   * @param string
+   * Task number of the next task.
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {

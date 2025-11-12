@@ -20,20 +20,28 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaRuntimeEntitySchema extends \Google\Model
 {
   /**
+   * The above schema, but for an array of the associated entity.
+   *
    * @var string
    */
   public $arrayFieldSchema;
   /**
+   * Name of the entity.
+   *
    * @var string
    */
   public $entity;
   /**
+   * List of fields in the entity.
+   *
    * @var string
    */
   public $fieldSchema;
 
   /**
-   * @param string
+   * The above schema, but for an array of the associated entity.
+   *
+   * @param string $arrayFieldSchema
    */
   public function setArrayFieldSchema($arrayFieldSchema)
   {
@@ -47,7 +55,9 @@ class GoogleCloudIntegrationsV1alphaRuntimeEntitySchema extends \Google\Model
     return $this->arrayFieldSchema;
   }
   /**
-   * @param string
+   * Name of the entity.
+   *
+   * @param string $entity
    */
   public function setEntity($entity)
   {
@@ -61,7 +71,9 @@ class GoogleCloudIntegrationsV1alphaRuntimeEntitySchema extends \Google\Model
     return $this->entity;
   }
   /**
-   * @param string
+   * List of fields in the entity.
+   *
+   * @param string $fieldSchema
    */
   public function setFieldSchema($fieldSchema)
   {

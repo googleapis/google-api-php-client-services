@@ -19,43 +19,76 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
 {
+  /**
+   * Unset state.
+   */
+  public const STATE_RESOLUTION_STATE_UNSPECIFIED = 'RESOLUTION_STATE_UNSPECIFIED';
+  /**
+   * The suspension has not yet been resolved.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The resolver has rejected the suspension.
+   */
+  public const STATE_REJECTED = 'REJECTED';
+  /**
+   * The resolver has lifted the suspension.
+   */
+  public const STATE_LIFTED = 'LIFTED';
   protected $approvalConfigType = GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig::class;
   protected $approvalConfigDataType = '';
   protected $auditType = GoogleCloudIntegrationsV1alphaSuspensionAudit::class;
   protected $auditDataType = '';
   /**
+   * Output only. Auto-generated.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. ID of the associated execution.
+   *
    * @var string
    */
   public $eventExecutionInfoId;
   /**
+   * Required. The name of the originating integration.
+   *
    * @var string
    */
   public $integration;
   /**
+   * Output only. Auto-generated.
+   *
    * @var string
    */
   public $lastModifyTime;
   /**
+   * Resource name for suspensions suspension/{suspension_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. State of this suspension, indicating what action a resolver has
+   * taken.
+   *
    * @var string
    */
   public $state;
   protected $suspensionConfigType = EnterpriseCrmEventbusProtoSuspensionConfig::class;
   protected $suspensionConfigDataType = '';
   /**
+   * Required. Task id of the associated SuspensionTask.
+   *
    * @var string
    */
   public $taskId;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig
+   * Controls the notifications and approval permissions for this suspension.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig $approvalConfig
    */
   public function setApprovalConfig(GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig $approvalConfig)
   {
@@ -69,7 +102,9 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->approvalConfig;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaSuspensionAudit
+   * Metadata pertaining to the resolution of this suspension.
+   *
+   * @param GoogleCloudIntegrationsV1alphaSuspensionAudit $audit
    */
   public function setAudit(GoogleCloudIntegrationsV1alphaSuspensionAudit $audit)
   {
@@ -83,7 +118,9 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->audit;
   }
   /**
-   * @param string
+   * Output only. Auto-generated.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -97,7 +134,9 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. ID of the associated execution.
+   *
+   * @param string $eventExecutionInfoId
    */
   public function setEventExecutionInfoId($eventExecutionInfoId)
   {
@@ -111,7 +150,9 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->eventExecutionInfoId;
   }
   /**
-   * @param string
+   * Required. The name of the originating integration.
+   *
+   * @param string $integration
    */
   public function setIntegration($integration)
   {
@@ -125,7 +166,9 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->integration;
   }
   /**
-   * @param string
+   * Output only. Auto-generated.
+   *
+   * @param string $lastModifyTime
    */
   public function setLastModifyTime($lastModifyTime)
   {
@@ -139,7 +182,9 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->lastModifyTime;
   }
   /**
-   * @param string
+   * Resource name for suspensions suspension/{suspension_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -153,27 +198,36 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. State of this suspension, indicating what action a resolver has
+   * taken.
+   *
+   * Accepted values: RESOLUTION_STATE_UNSPECIFIED, PENDING, REJECTED, LIFTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param EnterpriseCrmEventbusProtoSuspensionConfig
+   * Controls the notifications and resolver permissions for this suspension.
+   *
+   * @deprecated
+   * @param EnterpriseCrmEventbusProtoSuspensionConfig $suspensionConfig
    */
   public function setSuspensionConfig(EnterpriseCrmEventbusProtoSuspensionConfig $suspensionConfig)
   {
     $this->suspensionConfig = $suspensionConfig;
   }
   /**
+   * @deprecated
    * @return EnterpriseCrmEventbusProtoSuspensionConfig
    */
   public function getSuspensionConfig()
@@ -181,7 +235,9 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
     return $this->suspensionConfig;
   }
   /**
-   * @param string
+   * Required. Task id of the associated SuspensionTask.
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {

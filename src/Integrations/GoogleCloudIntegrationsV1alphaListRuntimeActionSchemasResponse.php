@@ -21,6 +21,8 @@ class GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse extends \Go
 {
   protected $collection_key = 'runtimeActionSchemas';
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse extends \Go
   protected $runtimeActionSchemasDataType = 'array';
 
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudIntegrationsV1alphaListRuntimeActionSchemasResponse extends \Go
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaRuntimeActionSchema[]
+   * Runtime action schemas.
+   *
+   * @param GoogleCloudIntegrationsV1alphaRuntimeActionSchema[] $runtimeActionSchemas
    */
   public function setRuntimeActionSchemas($runtimeActionSchemas)
   {

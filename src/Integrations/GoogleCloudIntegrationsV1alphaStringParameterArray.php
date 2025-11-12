@@ -21,12 +21,16 @@ class GoogleCloudIntegrationsV1alphaStringParameterArray extends \Google\Collect
 {
   protected $collection_key = 'stringValues';
   /**
+   * String array.
+   *
    * @var string[]
    */
   public $stringValues;
 
   /**
-   * @param string[]
+   * String array.
+   *
+   * @param string[] $stringValues
    */
   public function setStringValues($stringValues)
   {

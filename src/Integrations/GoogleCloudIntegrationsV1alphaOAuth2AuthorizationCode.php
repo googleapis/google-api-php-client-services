@@ -19,39 +19,74 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Model
 {
+  /**
+   * Unspecified request type
+   */
+  public const REQUEST_TYPE_REQUEST_TYPE_UNSPECIFIED = 'REQUEST_TYPE_UNSPECIFIED';
+  /**
+   * To pass all the parameters in post body.
+   */
+  public const REQUEST_TYPE_REQUEST_BODY = 'REQUEST_BODY';
+  /**
+   * To pass all the parameters as a part of query parameter.
+   */
+  public const REQUEST_TYPE_QUERY_PARAMETERS = 'QUERY_PARAMETERS';
+  /**
+   * To pass client id and client secret as base 64 encoding of
+   * client_id:client_password and rest parameters in post body.
+   */
+  public const REQUEST_TYPE_ENCODED_HEADER = 'ENCODED_HEADER';
   protected $accessTokenType = GoogleCloudIntegrationsV1alphaAccessToken::class;
   protected $accessTokenDataType = '';
   /**
+   * Indicates if the user has opted in Google Reauth Policy. If opted in, the
+   * refresh token will be valid for 20 hours, after which time users must re-
+   * authenticate in order to obtain a new one.
+   *
    * @var bool
    */
   public $applyReauthPolicy;
   /**
+   * The Auth Code that is used to initially retrieve the access token.
+   *
    * @var string
    */
   public $authCode;
   /**
+   * The auth url endpoint to send the auth code request to.
+   *
    * @var string
    */
   public $authEndpoint;
   protected $authParamsType = GoogleCloudIntegrationsV1alphaParameterMap::class;
   protected $authParamsDataType = '';
   /**
+   * The client's id.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * The client's secret.
+   *
    * @var string
    */
   public $clientSecret;
   /**
+   * Represent how to pass parameters to fetch access token
+   *
    * @var string
    */
   public $requestType;
   /**
+   * A space-delimited list of requested scope permissions.
+   *
    * @var string
    */
   public $scope;
   /**
+   * The token url endpoint to send the token request to.
+   *
    * @var string
    */
   public $tokenEndpoint;
@@ -59,7 +94,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
   protected $tokenParamsDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaAccessToken
+   * The access token received from the token endpoint.
+   *
+   * @param GoogleCloudIntegrationsV1alphaAccessToken $accessToken
    */
   public function setAccessToken(GoogleCloudIntegrationsV1alphaAccessToken $accessToken)
   {
@@ -73,7 +110,11 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->accessToken;
   }
   /**
-   * @param bool
+   * Indicates if the user has opted in Google Reauth Policy. If opted in, the
+   * refresh token will be valid for 20 hours, after which time users must re-
+   * authenticate in order to obtain a new one.
+   *
+   * @param bool $applyReauthPolicy
    */
   public function setApplyReauthPolicy($applyReauthPolicy)
   {
@@ -87,7 +128,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->applyReauthPolicy;
   }
   /**
-   * @param string
+   * The Auth Code that is used to initially retrieve the access token.
+   *
+   * @param string $authCode
    */
   public function setAuthCode($authCode)
   {
@@ -101,7 +144,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->authCode;
   }
   /**
-   * @param string
+   * The auth url endpoint to send the auth code request to.
+   *
+   * @param string $authEndpoint
    */
   public function setAuthEndpoint($authEndpoint)
   {
@@ -115,7 +160,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->authEndpoint;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaParameterMap
+   * The auth parameters sent along with the auth code request.
+   *
+   * @param GoogleCloudIntegrationsV1alphaParameterMap $authParams
    */
   public function setAuthParams(GoogleCloudIntegrationsV1alphaParameterMap $authParams)
   {
@@ -129,7 +176,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->authParams;
   }
   /**
-   * @param string
+   * The client's id.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -143,7 +192,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->clientId;
   }
   /**
-   * @param string
+   * The client's secret.
+   *
+   * @param string $clientSecret
    */
   public function setClientSecret($clientSecret)
   {
@@ -157,21 +208,28 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->clientSecret;
   }
   /**
-   * @param string
+   * Represent how to pass parameters to fetch access token
+   *
+   * Accepted values: REQUEST_TYPE_UNSPECIFIED, REQUEST_BODY, QUERY_PARAMETERS,
+   * ENCODED_HEADER
+   *
+   * @param self::REQUEST_TYPE_* $requestType
    */
   public function setRequestType($requestType)
   {
     $this->requestType = $requestType;
   }
   /**
-   * @return string
+   * @return self::REQUEST_TYPE_*
    */
   public function getRequestType()
   {
     return $this->requestType;
   }
   /**
-   * @param string
+   * A space-delimited list of requested scope permissions.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {
@@ -185,7 +243,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->scope;
   }
   /**
-   * @param string
+   * The token url endpoint to send the token request to.
+   *
+   * @param string $tokenEndpoint
    */
   public function setTokenEndpoint($tokenEndpoint)
   {
@@ -199,7 +259,9 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
     return $this->tokenEndpoint;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaParameterMap
+   * The token parameters sent along with the token request.
+   *
+   * @param GoogleCloudIntegrationsV1alphaParameterMap $tokenParams
    */
   public function setTokenParams(GoogleCloudIntegrationsV1alphaParameterMap $tokenParams)
   {
