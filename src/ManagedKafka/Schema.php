@@ -19,20 +19,42 @@ namespace Google\Service\ManagedKafka;
 
 class Schema extends \Google\Collection
 {
+  /**
+   * No schema type. The default will be AVRO.
+   */
+  public const SCHEMA_TYPE_SCHEMA_TYPE_UNSPECIFIED = 'SCHEMA_TYPE_UNSPECIFIED';
+  /**
+   * Avro schema type.
+   */
+  public const SCHEMA_TYPE_AVRO = 'AVRO';
+  /**
+   * JSON schema type.
+   */
+  public const SCHEMA_TYPE_JSON = 'JSON';
+  /**
+   * Protobuf schema type.
+   */
+  public const SCHEMA_TYPE_PROTOBUF = 'PROTOBUF';
   protected $collection_key = 'references';
   protected $referencesType = SchemaReference::class;
   protected $referencesDataType = 'array';
   /**
+   * The schema payload.
+   *
    * @var string
    */
   public $schema;
   /**
+   * Optional. The schema type of the schema.
+   *
    * @var string
    */
   public $schemaType;
 
   /**
-   * @param SchemaReference[]
+   * Optional. The schema references used by the schema.
+   *
+   * @param SchemaReference[] $references
    */
   public function setReferences($references)
   {
@@ -46,7 +68,9 @@ class Schema extends \Google\Collection
     return $this->references;
   }
   /**
-   * @param string
+   * The schema payload.
+   *
+   * @param string $schema
    */
   public function setSchema($schema)
   {
@@ -60,14 +84,18 @@ class Schema extends \Google\Collection
     return $this->schema;
   }
   /**
-   * @param string
+   * Optional. The schema type of the schema.
+   *
+   * Accepted values: SCHEMA_TYPE_UNSPECIFIED, AVRO, JSON, PROTOBUF
+   *
+   * @param self::SCHEMA_TYPE_* $schemaType
    */
   public function setSchemaType($schemaType)
   {
     $this->schemaType = $schemaType;
   }
   /**
-   * @return string
+   * @return self::SCHEMA_TYPE_*
    */
   public function getSchemaType()
   {

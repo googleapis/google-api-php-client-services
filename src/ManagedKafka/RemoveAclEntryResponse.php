@@ -22,12 +22,18 @@ class RemoveAclEntryResponse extends \Google\Model
   protected $aclType = Acl::class;
   protected $aclDataType = '';
   /**
+   * Returned with value true if the removed acl entry was the last entry in the
+   * acl, resulting in acl deletion.
+   *
    * @var bool
    */
   public $aclDeleted;
 
   /**
-   * @param Acl
+   * The updated acl. Returned if the removed acl entry was not the last entry
+   * in the acl.
+   *
+   * @param Acl $acl
    */
   public function setAcl(Acl $acl)
   {
@@ -41,7 +47,10 @@ class RemoveAclEntryResponse extends \Google\Model
     return $this->acl;
   }
   /**
-   * @param bool
+   * Returned with value true if the removed acl entry was the last entry in the
+   * acl, resulting in acl deletion.
+   *
+   * @param bool $aclDeleted
    */
   public function setAclDeleted($aclDeleted)
   {

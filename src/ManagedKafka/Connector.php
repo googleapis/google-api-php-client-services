@@ -20,14 +20,52 @@ namespace Google\Service\ManagedKafka;
 class Connector extends \Google\Model
 {
   /**
+   * A state was not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The connector is not assigned to any tasks, usually transient.
+   */
+  public const STATE_UNASSIGNED = 'UNASSIGNED';
+  /**
+   * The connector is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The connector has been paused.
+   */
+  public const STATE_PAUSED = 'PAUSED';
+  /**
+   * The connector has failed. See logs for why.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The connector is restarting.
+   */
+  public const STATE_RESTARTING = 'RESTARTING';
+  /**
+   * The connector has been stopped.
+   */
+  public const STATE_STOPPED = 'STOPPED';
+  /**
+   * Optional. Connector config as keys/values. The keys of the map are
+   * connector property names, for example: `connector.class`, `tasks.max`,
+   * `key.converter`.
+   *
    * @var string[]
    */
   public $configs;
   /**
+   * Identifier. The name of the connector. Structured like: projects/{project}/
+   * locations/{location}/connectClusters/{connect_cluster}/connectors/{connecto
+   * r}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The current state of the connector.
+   *
    * @var string
    */
   public $state;
@@ -35,7 +73,11 @@ class Connector extends \Google\Model
   protected $taskRestartPolicyDataType = '';
 
   /**
-   * @param string[]
+   * Optional. Connector config as keys/values. The keys of the map are
+   * connector property names, for example: `connector.class`, `tasks.max`,
+   * `key.converter`.
+   *
+   * @param string[] $configs
    */
   public function setConfigs($configs)
   {
@@ -49,7 +91,11 @@ class Connector extends \Google\Model
     return $this->configs;
   }
   /**
-   * @param string
+   * Identifier. The name of the connector. Structured like: projects/{project}/
+   * locations/{location}/connectClusters/{connect_cluster}/connectors/{connecto
+   * r}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -63,21 +109,28 @@ class Connector extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The current state of the connector.
+   *
+   * Accepted values: STATE_UNSPECIFIED, UNASSIGNED, RUNNING, PAUSED, FAILED,
+   * RESTARTING, STOPPED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param TaskRetryPolicy
+   * Optional. Restarts the individual tasks of a Connector.
+   *
+   * @param TaskRetryPolicy $taskRestartPolicy
    */
   public function setTaskRestartPolicy(TaskRetryPolicy $taskRestartPolicy)
   {

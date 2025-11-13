@@ -23,12 +23,17 @@ class ListConnectorsResponse extends \Google\Collection
   protected $connectorsType = Connector::class;
   protected $connectorsDataType = 'array';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page of
+   * results. If this field is omitted, there are no more results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Connector[]
+   * The list of connectors in the requested parent.
+   *
+   * @param Connector[] $connectors
    */
   public function setConnectors($connectors)
   {
@@ -42,7 +47,10 @@ class ListConnectorsResponse extends \Google\Collection
     return $this->connectors;
   }
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page of
+   * results. If this field is omitted, there are no more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

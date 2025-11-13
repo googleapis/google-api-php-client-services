@@ -22,12 +22,19 @@ class GcpConfig extends \Google\Model
   protected $accessConfigType = AccessConfig::class;
   protected $accessConfigDataType = '';
   /**
+   * Optional. Immutable. The Cloud KMS Key name to use for encryption. The key
+   * must be located in the same region as the cluster and cannot be changed.
+   * Structured like: projects/{project}/locations/{location}/keyRings/{key_ring
+   * }/cryptoKeys/{crypto_key}.
+   *
    * @var string
    */
   public $kmsKey;
 
   /**
-   * @param AccessConfig
+   * Required. Access configuration for the Kafka cluster.
+   *
+   * @param AccessConfig $accessConfig
    */
   public function setAccessConfig(AccessConfig $accessConfig)
   {
@@ -41,7 +48,12 @@ class GcpConfig extends \Google\Model
     return $this->accessConfig;
   }
   /**
-   * @param string
+   * Optional. Immutable. The Cloud KMS Key name to use for encryption. The key
+   * must be located in the same region as the cluster and cannot be changed.
+   * Structured like: projects/{project}/locations/{location}/keyRings/{key_ring
+   * }/cryptoKeys/{crypto_key}.
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {

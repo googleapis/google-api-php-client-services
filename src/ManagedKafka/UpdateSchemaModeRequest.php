@@ -20,19 +20,43 @@ namespace Google\Service\ManagedKafka;
 class UpdateSchemaModeRequest extends \Google\Model
 {
   /**
+   * The default / unset value. The subject mode is NONE/unset by default, which
+   * means use the global schema registry mode. This should not be used for
+   * setting the mode.
+   */
+  public const MODE_NONE = 'NONE';
+  /**
+   * READONLY mode.
+   */
+  public const MODE_READONLY = 'READONLY';
+  /**
+   * READWRITE mode.
+   */
+  public const MODE_READWRITE = 'READWRITE';
+  /**
+   * IMPORT mode.
+   */
+  public const MODE_IMPORT = 'IMPORT';
+  /**
+   * Required. The mode type.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param string
+   * Required. The mode type.
+   *
+   * Accepted values: NONE, READONLY, READWRITE, IMPORT
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {

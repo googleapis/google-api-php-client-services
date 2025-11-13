@@ -20,12 +20,26 @@ namespace Google\Service\ManagedKafka;
 class UpdateOptions extends \Google\Model
 {
   /**
+   * Optional. If true, allows an update operation that increases the total vCPU
+   * and/or memory allocation of the cluster to significantly decrease the per-
+   * broker vCPU and/or memory allocation. This can result in reduced
+   * performance and availability. By default, the update operation will fail if
+   * an upscale request results in a vCPU or memory allocation for the brokers
+   * that is smaller than 90% of the current broker size.
+   *
    * @var bool
    */
   public $allowBrokerDownscaleOnClusterUpscale;
 
   /**
-   * @param bool
+   * Optional. If true, allows an update operation that increases the total vCPU
+   * and/or memory allocation of the cluster to significantly decrease the per-
+   * broker vCPU and/or memory allocation. This can result in reduced
+   * performance and availability. By default, the update operation will fail if
+   * an upscale request results in a vCPU or memory allocation for the brokers
+   * that is smaller than 90% of the current broker size.
+   *
+   * @param bool $allowBrokerDownscaleOnClusterUpscale
    */
   public function setAllowBrokerDownscaleOnClusterUpscale($allowBrokerDownscaleOnClusterUpscale)
   {

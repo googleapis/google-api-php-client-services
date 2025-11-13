@@ -24,7 +24,11 @@ class ConnectAccessConfig extends \Google\Collection
   protected $networkConfigsDataType = 'array';
 
   /**
-   * @param ConnectNetworkConfig[]
+   * Required. Virtual Private Cloud (VPC) networks that must be granted direct
+   * access to the Kafka Connect cluster. Minimum of 1 network is required.
+   * Maximum 10 networks can be specified.
+   *
+   * @param ConnectNetworkConfig[] $networkConfigs
    */
   public function setNetworkConfigs($networkConfigs)
   {

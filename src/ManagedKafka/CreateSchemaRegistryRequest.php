@@ -22,12 +22,20 @@ class CreateSchemaRegistryRequest extends \Google\Model
   protected $schemaRegistryType = SchemaRegistry::class;
   protected $schemaRegistryDataType = '';
   /**
+   * Required. The schema registry instance ID to use for this schema registry.
+   * The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores
+   * (-). The maximum length is 63 characters. The ID must not start with a
+   * number.
+   *
    * @var string
    */
   public $schemaRegistryId;
 
   /**
-   * @param SchemaRegistry
+   * Required. The schema registry instance to create. The name field is
+   * ignored.
+   *
+   * @param SchemaRegistry $schemaRegistry
    */
   public function setSchemaRegistry(SchemaRegistry $schemaRegistry)
   {
@@ -41,7 +49,12 @@ class CreateSchemaRegistryRequest extends \Google\Model
     return $this->schemaRegistry;
   }
   /**
-   * @param string
+   * Required. The schema registry instance ID to use for this schema registry.
+   * The ID must contain only letters (a-z, A-Z), numbers (0-9), and underscores
+   * (-). The maximum length is 63 characters. The ID must not start with a
+   * number.
+   *
+   * @param string $schemaRegistryId
    */
   public function setSchemaRegistryId($schemaRegistryId)
   {

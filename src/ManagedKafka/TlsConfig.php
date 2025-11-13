@@ -20,6 +20,15 @@ namespace Google\Service\ManagedKafka;
 class TlsConfig extends \Google\Model
 {
   /**
+   * Optional. A list of rules for mapping from SSL principal names to short
+   * names. These are applied in order by Kafka. Refer to the Apache Kafka
+   * documentation for `ssl.principal.mapping.rules` for the precise formatting
+   * details and syntax. Example:
+   * "RULE:^CN=(.*?),OU=ServiceUsers.*$/$1@example.com/,DEFAULT" This is a
+   * static Kafka broker configuration. Setting or modifying this field will
+   * trigger a rolling restart of the Kafka brokers to apply the change. An
+   * empty string means no rules are applied (Kafka default).
+   *
    * @var string
    */
   public $sslPrincipalMappingRules;
@@ -27,7 +36,16 @@ class TlsConfig extends \Google\Model
   protected $trustConfigDataType = '';
 
   /**
-   * @param string
+   * Optional. A list of rules for mapping from SSL principal names to short
+   * names. These are applied in order by Kafka. Refer to the Apache Kafka
+   * documentation for `ssl.principal.mapping.rules` for the precise formatting
+   * details and syntax. Example:
+   * "RULE:^CN=(.*?),OU=ServiceUsers.*$/$1@example.com/,DEFAULT" This is a
+   * static Kafka broker configuration. Setting or modifying this field will
+   * trigger a rolling restart of the Kafka brokers to apply the change. An
+   * empty string means no rules are applied (Kafka default).
+   *
+   * @param string $sslPrincipalMappingRules
    */
   public function setSslPrincipalMappingRules($sslPrincipalMappingRules)
   {
@@ -41,7 +59,10 @@ class TlsConfig extends \Google\Model
     return $this->sslPrincipalMappingRules;
   }
   /**
-   * @param TrustConfig
+   * Optional. The configuration of the broker truststore. If specified, clients
+   * can use mTLS for authentication.
+   *
+   * @param TrustConfig $trustConfig
    */
   public function setTrustConfig(TrustConfig $trustConfig)
   {

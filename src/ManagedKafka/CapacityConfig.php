@@ -20,16 +20,24 @@ namespace Google\Service\ManagedKafka;
 class CapacityConfig extends \Google\Model
 {
   /**
+   * Required. The memory to provision for the cluster in bytes. The CPU:memory
+   * ratio (vCPU:GiB) must be between 1:1 and 1:8. Minimum: 3221225472 (3 GiB).
+   *
    * @var string
    */
   public $memoryBytes;
   /**
+   * Required. The number of vCPUs to provision for the cluster. Minimum: 3.
+   *
    * @var string
    */
   public $vcpuCount;
 
   /**
-   * @param string
+   * Required. The memory to provision for the cluster in bytes. The CPU:memory
+   * ratio (vCPU:GiB) must be between 1:1 and 1:8. Minimum: 3221225472 (3 GiB).
+   *
+   * @param string $memoryBytes
    */
   public function setMemoryBytes($memoryBytes)
   {
@@ -43,7 +51,9 @@ class CapacityConfig extends \Google\Model
     return $this->memoryBytes;
   }
   /**
-   * @param string
+   * Required. The number of vCPUs to provision for the cluster. Minimum: 3.
+   *
+   * @param string $vcpuCount
    */
   public function setVcpuCount($vcpuCount)
   {

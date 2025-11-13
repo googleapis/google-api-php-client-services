@@ -20,12 +20,26 @@ namespace Google\Service\ManagedKafka;
 class NetworkConfig extends \Google\Model
 {
   /**
+   * Required. Name of the VPC subnet in which to create Private Service Connect
+   * (PSC) endpoints for the Kafka brokers and bootstrap address. Structured
+   * like: projects/{project}/regions/{region}/subnetworks/{subnet_id} The
+   * subnet must be located in the same region as the Kafka cluster. The project
+   * may differ. Multiple subnets from the same parent network must not be
+   * specified.
+   *
    * @var string
    */
   public $subnet;
 
   /**
-   * @param string
+   * Required. Name of the VPC subnet in which to create Private Service Connect
+   * (PSC) endpoints for the Kafka brokers and bootstrap address. Structured
+   * like: projects/{project}/regions/{region}/subnetworks/{subnet_id} The
+   * subnet must be located in the same region as the Kafka cluster. The project
+   * may differ. Multiple subnets from the same parent network must not be
+   * specified.
+   *
+   * @param string $subnet
    */
   public function setSubnet($subnet)
   {

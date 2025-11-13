@@ -21,20 +21,45 @@ class ConnectNetworkConfig extends \Google\Collection
 {
   protected $collection_key = 'dnsDomainNames';
   /**
+   * Optional. Additional subnets may be specified. They may be in another
+   * region, but must be in the same VPC network. The Connect workers can
+   * communicate with network endpoints in either the primary or additional
+   * subnets.
+   *
    * @var string[]
    */
   public $additionalSubnets;
   /**
+   * Optional. Additional DNS domain names from the subnet's network to be made
+   * visible to the Connect Cluster. When using MirrorMaker2, it's necessary to
+   * add the bootstrap address's dns domain name of the target cluster to make
+   * it visible to the connector. For example: my-kafka-cluster.us-
+   * central1.managedkafka.my-project.cloud.goog
+   *
    * @var string[]
    */
   public $dnsDomainNames;
   /**
+   * Required. VPC subnet to make available to the Kafka Connect cluster.
+   * Structured like:
+   * projects/{project}/regions/{region}/subnetworks/{subnet_id} It is used to
+   * create a Private Service Connect (PSC) interface for the Kafka Connect
+   * workers. It must be located in the same region as the Kafka Connect
+   * cluster. The CIDR range of the subnet must be within the IPv4 address
+   * ranges for private networks, as specified in RFC 1918. The primary subnet
+   * CIDR range must have a minimum size of /22 (1024 addresses).
+   *
    * @var string
    */
   public $primarySubnet;
 
   /**
-   * @param string[]
+   * Optional. Additional subnets may be specified. They may be in another
+   * region, but must be in the same VPC network. The Connect workers can
+   * communicate with network endpoints in either the primary or additional
+   * subnets.
+   *
+   * @param string[] $additionalSubnets
    */
   public function setAdditionalSubnets($additionalSubnets)
   {
@@ -48,7 +73,13 @@ class ConnectNetworkConfig extends \Google\Collection
     return $this->additionalSubnets;
   }
   /**
-   * @param string[]
+   * Optional. Additional DNS domain names from the subnet's network to be made
+   * visible to the Connect Cluster. When using MirrorMaker2, it's necessary to
+   * add the bootstrap address's dns domain name of the target cluster to make
+   * it visible to the connector. For example: my-kafka-cluster.us-
+   * central1.managedkafka.my-project.cloud.goog
+   *
+   * @param string[] $dnsDomainNames
    */
   public function setDnsDomainNames($dnsDomainNames)
   {
@@ -62,7 +93,16 @@ class ConnectNetworkConfig extends \Google\Collection
     return $this->dnsDomainNames;
   }
   /**
-   * @param string
+   * Required. VPC subnet to make available to the Kafka Connect cluster.
+   * Structured like:
+   * projects/{project}/regions/{region}/subnetworks/{subnet_id} It is used to
+   * create a Private Service Connect (PSC) interface for the Kafka Connect
+   * workers. It must be located in the same region as the Kafka Connect
+   * cluster. The CIDR range of the subnet must be within the IPv4 address
+   * ranges for private networks, as specified in RFC 1918. The primary subnet
+   * CIDR range must have a minimum size of /22 (1024 addresses).
+   *
+   * @param string $primarySubnet
    */
   public function setPrimarySubnet($primarySubnet)
   {

@@ -24,7 +24,10 @@ class TrustConfig extends \Google\Collection
   protected $casConfigsDataType = 'array';
 
   /**
-   * @param CertificateAuthorityServiceConfig[]
+   * Optional. Configuration for the Google Certificate Authority Service.
+   * Maximum 10.
+   *
+   * @param CertificateAuthorityServiceConfig[] $casConfigs
    */
   public function setCasConfigs($casConfigs)
   {

@@ -22,12 +22,16 @@ class AddAclEntryResponse extends \Google\Model
   protected $aclType = Acl::class;
   protected $aclDataType = '';
   /**
+   * Whether the acl was created as a result of adding the acl entry.
+   *
    * @var bool
    */
   public $aclCreated;
 
   /**
-   * @param Acl
+   * The updated acl.
+   *
+   * @param Acl $acl
    */
   public function setAcl(Acl $acl)
   {
@@ -41,7 +45,9 @@ class AddAclEntryResponse extends \Google\Model
     return $this->acl;
   }
   /**
-   * @param bool
+   * Whether the acl was created as a result of adding the acl entry.
+   *
+   * @param bool $aclCreated
    */
   public function setAclCreated($aclCreated)
   {

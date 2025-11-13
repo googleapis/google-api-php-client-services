@@ -23,12 +23,18 @@ class ConnectGcpConfig extends \Google\Collection
   protected $accessConfigType = ConnectAccessConfig::class;
   protected $accessConfigDataType = '';
   /**
+   * Optional. Secrets to load into workers. Exact SecretVersions from Secret
+   * Manager must be provided -- aliases are not supported. Up to 32 secrets may
+   * be loaded into one cluster. Format: projects//secrets//versions/
+   *
    * @var string[]
    */
   public $secretPaths;
 
   /**
-   * @param ConnectAccessConfig
+   * Required. Access configuration for the Kafka Connect cluster.
+   *
+   * @param ConnectAccessConfig $accessConfig
    */
   public function setAccessConfig(ConnectAccessConfig $accessConfig)
   {
@@ -42,7 +48,11 @@ class ConnectGcpConfig extends \Google\Collection
     return $this->accessConfig;
   }
   /**
-   * @param string[]
+   * Optional. Secrets to load into workers. Exact SecretVersions from Secret
+   * Manager must be provided -- aliases are not supported. Up to 32 secrets may
+   * be loaded into one cluster. Format: projects//secrets//versions/
+   *
+   * @param string[] $secretPaths
    */
   public function setSecretPaths($secretPaths)
   {
