@@ -23,12 +23,17 @@ class GoogleCloudKmsInventoryV1ListCryptoKeysResponse extends \Google\Collection
   protected $cryptoKeysType = GoogleCloudKmsV1CryptoKey::class;
   protected $cryptoKeysDataType = 'array';
   /**
+   * The page token returned from the previous response if the next page is
+   * desired.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudKmsV1CryptoKey[]
+   * The list of CryptoKeys.
+   *
+   * @param GoogleCloudKmsV1CryptoKey[] $cryptoKeys
    */
   public function setCryptoKeys($cryptoKeys)
   {
@@ -42,7 +47,10 @@ class GoogleCloudKmsInventoryV1ListCryptoKeysResponse extends \Google\Collection
     return $this->cryptoKeys;
   }
   /**
-   * @param string
+   * The page token returned from the previous response if the next page is
+   * desired.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

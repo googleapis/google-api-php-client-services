@@ -20,16 +20,26 @@ namespace Google\Service\Kmsinventory;
 class GoogleCloudKmsV1ExternalProtectionLevelOptions extends \Google\Model
 {
   /**
+   * The path to the external key material on the EKM when using EkmConnection
+   * e.g., "v0/my/key". Set this field instead of external_key_uri when using an
+   * EkmConnection.
+   *
    * @var string
    */
   public $ekmConnectionKeyPath;
   /**
+   * The URI for an external resource that this CryptoKeyVersion represents.
+   *
    * @var string
    */
   public $externalKeyUri;
 
   /**
-   * @param string
+   * The path to the external key material on the EKM when using EkmConnection
+   * e.g., "v0/my/key". Set this field instead of external_key_uri when using an
+   * EkmConnection.
+   *
+   * @param string $ekmConnectionKeyPath
    */
   public function setEkmConnectionKeyPath($ekmConnectionKeyPath)
   {
@@ -43,7 +53,9 @@ class GoogleCloudKmsV1ExternalProtectionLevelOptions extends \Google\Model
     return $this->ekmConnectionKeyPath;
   }
   /**
-   * @param string
+   * The URI for an external resource that this CryptoKeyVersion represents.
+   *
+   * @param string $externalKeyUri
    */
   public function setExternalKeyUri($externalKeyUri)
   {

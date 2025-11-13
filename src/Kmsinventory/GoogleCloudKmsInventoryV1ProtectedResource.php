@@ -21,48 +21,84 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
 {
   protected $collection_key = 'cryptoKeyVersions';
   /**
+   * The Cloud product that owns the resource. Example: `compute`
+   *
    * @var string
    */
   public $cloudProduct;
   /**
+   * Output only. The time at which this resource was created. The granularity
+   * is in seconds. Timestamp.nanos will always be 0.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The name of the Cloud KMS [CryptoKeyVersion](https://cloud.google.com/kms/d
+   * ocs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersi
+   * ons?hl=en) used to protect this resource via CMEK. This field is empty if
+   * the Google Cloud product owning the resource does not provide key version
+   * data to Asset Inventory. If there are multiple key versions protecting the
+   * resource, then this is same value as the first element of
+   * crypto_key_versions.
+   *
    * @var string
    */
   public $cryptoKeyVersion;
   /**
+   * The names of the Cloud KMS [CryptoKeyVersion](https://cloud.google.com/kms/
+   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVers
+   * ions?hl=en) used to protect this resource via CMEK. This field is empty if
+   * the Google Cloud product owning the resource does not provide key versions
+   * data to Asset Inventory. The first element of this field is stored in
+   * crypto_key_version.
+   *
    * @var string[]
    */
   public $cryptoKeyVersions;
   /**
+   * A key-value pair of the resource's labels (v1) to their values.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-
+   * west1-b`.
+   *
    * @var string
    */
   public $location;
   /**
+   * The full resource name of the resource. Example: `//compute.googleapis.com/
+   * projects/my_project_123/zones/zone1/instances/instance1`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Format: `projects/{PROJECT_NUMBER}`.
+   *
    * @var string
    */
   public $project;
   /**
+   * The ID of the project that owns the resource.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Example: `compute.googleapis.com/Disk`
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param string
+   * The Cloud product that owns the resource. Example: `compute`
+   *
+   * @param string $cloudProduct
    */
   public function setCloudProduct($cloudProduct)
   {
@@ -76,7 +112,10 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->cloudProduct;
   }
   /**
-   * @param string
+   * Output only. The time at which this resource was created. The granularity
+   * is in seconds. Timestamp.nanos will always be 0.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -90,7 +129,15 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * The name of the Cloud KMS [CryptoKeyVersion](https://cloud.google.com/kms/d
+   * ocs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVersi
+   * ons?hl=en) used to protect this resource via CMEK. This field is empty if
+   * the Google Cloud product owning the resource does not provide key version
+   * data to Asset Inventory. If there are multiple key versions protecting the
+   * resource, then this is same value as the first element of
+   * crypto_key_versions.
+   *
+   * @param string $cryptoKeyVersion
    */
   public function setCryptoKeyVersion($cryptoKeyVersion)
   {
@@ -104,7 +151,14 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->cryptoKeyVersion;
   }
   /**
-   * @param string[]
+   * The names of the Cloud KMS [CryptoKeyVersion](https://cloud.google.com/kms/
+   * docs/reference/rest/v1/projects.locations.keyRings.cryptoKeys.cryptoKeyVers
+   * ions?hl=en) used to protect this resource via CMEK. This field is empty if
+   * the Google Cloud product owning the resource does not provide key versions
+   * data to Asset Inventory. The first element of this field is stored in
+   * crypto_key_version.
+   *
+   * @param string[] $cryptoKeyVersions
    */
   public function setCryptoKeyVersions($cryptoKeyVersions)
   {
@@ -118,7 +172,9 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->cryptoKeyVersions;
   }
   /**
-   * @param string[]
+   * A key-value pair of the resource's labels (v1) to their values.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -132,7 +188,10 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Location can be `global`, regional like `us-east1`, or zonal like `us-
+   * west1-b`.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -146,7 +205,10 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string
+   * The full resource name of the resource. Example: `//compute.googleapis.com/
+   * projects/my_project_123/zones/zone1/instances/instance1`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -160,7 +222,9 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Format: `projects/{PROJECT_NUMBER}`.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {
@@ -174,7 +238,9 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->project;
   }
   /**
-   * @param string
+   * The ID of the project that owns the resource.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -188,7 +254,9 @@ class GoogleCloudKmsInventoryV1ProtectedResource extends \Google\Collection
     return $this->projectId;
   }
   /**
-   * @param string
+   * Example: `compute.googleapis.com/Disk`
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {
