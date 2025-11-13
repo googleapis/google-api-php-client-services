@@ -19,6 +19,39 @@ namespace Google\Service\FirebaseHosting;
 
 class LiveMigrationStep extends \Google\Collection
 {
+  /**
+   * The step's state is unspecified. The message is invalid if this is
+   * unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Hosting doesn't have enough information to construct the step yet. Complete
+   * any prior steps and/or resolve this step's issue to proceed.
+   */
+  public const STATE_PREPARING = 'PREPARING';
+  /**
+   * The step's state is pending. Complete prior steps before working on a
+   * `PENDING` step.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The step is incomplete. You should complete any `certVerification` or
+   * `dnsUpdates` changes to complete it.
+   */
+  public const STATE_INCOMPLETE = 'INCOMPLETE';
+  /**
+   * You've done your part to update records and present challenges as
+   * necessary. Hosting is now completing background processes to complete the
+   * step, e.g. minting an SSL cert for your domain name.
+   */
+  public const STATE_PROCESSING = 'PROCESSING';
+  /**
+   * The step is complete. You've already made the necessary changes to your
+   * domain and/or prior hosting service to advance to the next step. Once all
+   * steps are complete, Hosting is ready to serve secure content on your
+   * domain.
+   */
+  public const STATE_COMPLETE = 'COMPLETE';
   protected $collection_key = 'issues';
   protected $certVerificationType = CertVerification::class;
   protected $certVerificationDataType = '';
@@ -27,12 +60,20 @@ class LiveMigrationStep extends \Google\Collection
   protected $issuesType = Status::class;
   protected $issuesDataType = 'array';
   /**
+   * Output only. The state of the live migration step, indicates whether you
+   * should work to complete the step now, in the future, or have already
+   * completed it.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param CertVerification
+   * Output only. A pair of ACME challenges that Hosting's Certificate Authority
+   * (CA) can use to create an SSL cert for your domain name. Use either the DNS
+   * or HTTP challenge; it's not necessary to provide both.
+   *
+   * @param CertVerification $certVerification
    */
   public function setCertVerification(CertVerification $certVerification)
   {
@@ -46,7 +87,10 @@ class LiveMigrationStep extends \Google\Collection
     return $this->certVerification;
   }
   /**
-   * @param DnsUpdates
+   * Output only. DNS updates to facilitate your domain's zero-downtime
+   * migration to Hosting.
+   *
+   * @param DnsUpdates $dnsUpdates
    */
   public function setDnsUpdates(DnsUpdates $dnsUpdates)
   {
@@ -60,7 +104,9 @@ class LiveMigrationStep extends \Google\Collection
     return $this->dnsUpdates;
   }
   /**
-   * @param Status[]
+   * Output only. Issues that prevent the current step from completing.
+   *
+   * @param Status[] $issues
    */
   public function setIssues($issues)
   {
@@ -74,14 +120,21 @@ class LiveMigrationStep extends \Google\Collection
     return $this->issues;
   }
   /**
-   * @param string
+   * Output only. The state of the live migration step, indicates whether you
+   * should work to complete the step now, in the future, or have already
+   * completed it.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PREPARING, PENDING, INCOMPLETE,
+   * PROCESSING, COMPLETE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
