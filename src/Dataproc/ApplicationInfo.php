@@ -19,6 +19,11 @@ namespace Google\Service\Dataproc;
 
 class ApplicationInfo extends \Google\Collection
 {
+  public const APPLICATION_CONTEXT_INGESTION_STATUS_APPLICATION_CONTEXT_INGESTION_STATUS_UNSPECIFIED = 'APPLICATION_CONTEXT_INGESTION_STATUS_UNSPECIFIED';
+  public const APPLICATION_CONTEXT_INGESTION_STATUS_APPLICATION_CONTEXT_INGESTION_STATUS_COMPLETED = 'APPLICATION_CONTEXT_INGESTION_STATUS_COMPLETED';
+  public const QUANTILE_DATA_STATUS_QUANTILE_DATA_STATUS_UNSPECIFIED = 'QUANTILE_DATA_STATUS_UNSPECIFIED';
+  public const QUANTILE_DATA_STATUS_QUANTILE_DATA_STATUS_COMPLETED = 'QUANTILE_DATA_STATUS_COMPLETED';
+  public const QUANTILE_DATA_STATUS_QUANTILE_DATA_STATUS_FAILED = 'QUANTILE_DATA_STATUS_FAILED';
   protected $collection_key = 'attempts';
   /**
    * @var string
@@ -56,21 +61,21 @@ class ApplicationInfo extends \Google\Collection
   public $quantileDataStatus;
 
   /**
-   * @param string
+   * @param self::APPLICATION_CONTEXT_INGESTION_STATUS_* $applicationContextIngestionStatus
    */
   public function setApplicationContextIngestionStatus($applicationContextIngestionStatus)
   {
     $this->applicationContextIngestionStatus = $applicationContextIngestionStatus;
   }
   /**
-   * @return string
+   * @return self::APPLICATION_CONTEXT_INGESTION_STATUS_*
    */
   public function getApplicationContextIngestionStatus()
   {
     return $this->applicationContextIngestionStatus;
   }
   /**
-   * @param string
+   * @param string $applicationId
    */
   public function setApplicationId($applicationId)
   {
@@ -84,7 +89,7 @@ class ApplicationInfo extends \Google\Collection
     return $this->applicationId;
   }
   /**
-   * @param ApplicationAttemptInfo[]
+   * @param ApplicationAttemptInfo[] $attempts
    */
   public function setAttempts($attempts)
   {
@@ -98,7 +103,7 @@ class ApplicationInfo extends \Google\Collection
     return $this->attempts;
   }
   /**
-   * @param int
+   * @param int $coresGranted
    */
   public function setCoresGranted($coresGranted)
   {
@@ -112,7 +117,7 @@ class ApplicationInfo extends \Google\Collection
     return $this->coresGranted;
   }
   /**
-   * @param int
+   * @param int $coresPerExecutor
    */
   public function setCoresPerExecutor($coresPerExecutor)
   {
@@ -126,7 +131,7 @@ class ApplicationInfo extends \Google\Collection
     return $this->coresPerExecutor;
   }
   /**
-   * @param int
+   * @param int $maxCores
    */
   public function setMaxCores($maxCores)
   {
@@ -140,7 +145,7 @@ class ApplicationInfo extends \Google\Collection
     return $this->maxCores;
   }
   /**
-   * @param int
+   * @param int $memoryPerExecutorMb
    */
   public function setMemoryPerExecutorMb($memoryPerExecutorMb)
   {
@@ -154,7 +159,7 @@ class ApplicationInfo extends \Google\Collection
     return $this->memoryPerExecutorMb;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -168,14 +173,14 @@ class ApplicationInfo extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * @param self::QUANTILE_DATA_STATUS_* $quantileDataStatus
    */
   public function setQuantileDataStatus($quantileDataStatus)
   {
     $this->quantileDataStatus = $quantileDataStatus;
   }
   /**
-   * @return string
+   * @return self::QUANTILE_DATA_STATUS_*
    */
   public function getQuantileDataStatus()
   {

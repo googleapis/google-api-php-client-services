@@ -20,12 +20,26 @@ namespace Google\Service\Dataproc;
 class AutoscalingConfig extends \Google\Model
 {
   /**
+   * Optional. The autoscaling policy used by the cluster.Only resource names
+   * including projectid and location (region) are valid. Examples: https://www.
+   * googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]
+   * /autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_
+   * region]/autoscalingPolicies/[policy_id]Note that the policy must be in the
+   * same project and Dataproc region.
+   *
    * @var string
    */
   public $policyUri;
 
   /**
-   * @param string
+   * Optional. The autoscaling policy used by the cluster.Only resource names
+   * including projectid and location (region) are valid. Examples: https://www.
+   * googleapis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]
+   * /autoscalingPolicies/[policy_id] projects/[project_id]/locations/[dataproc_
+   * region]/autoscalingPolicies/[policy_id]Note that the policy must be in the
+   * same project and Dataproc region.
+   *
+   * @param string $policyUri
    */
   public function setPolicyUri($policyUri)
   {

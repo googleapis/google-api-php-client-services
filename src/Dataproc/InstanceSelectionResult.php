@@ -20,16 +20,22 @@ namespace Google\Service\Dataproc;
 class InstanceSelectionResult extends \Google\Model
 {
   /**
+   * Output only. Full machine-type names, e.g. "n1-standard-16".
+   *
    * @var string
    */
   public $machineType;
   /**
+   * Output only. Number of VM provisioned with the machine_type.
+   *
    * @var int
    */
   public $vmCount;
 
   /**
-   * @param string
+   * Output only. Full machine-type names, e.g. "n1-standard-16".
+   *
+   * @param string $machineType
    */
   public function setMachineType($machineType)
   {
@@ -43,7 +49,9 @@ class InstanceSelectionResult extends \Google\Model
     return $this->machineType;
   }
   /**
-   * @param int
+   * Output only. Number of VM provisioned with the machine_type.
+   *
+   * @param int $vmCount
    */
   public function setVmCount($vmCount)
   {

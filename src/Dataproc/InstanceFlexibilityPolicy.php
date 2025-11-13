@@ -28,7 +28,10 @@ class InstanceFlexibilityPolicy extends \Google\Collection
   protected $provisioningModelMixDataType = '';
 
   /**
-   * @param InstanceSelection[]
+   * Optional. List of instance selection options that the group will use when
+   * creating new VMs.
+   *
+   * @param InstanceSelection[] $instanceSelectionList
    */
   public function setInstanceSelectionList($instanceSelectionList)
   {
@@ -42,7 +45,9 @@ class InstanceFlexibilityPolicy extends \Google\Collection
     return $this->instanceSelectionList;
   }
   /**
-   * @param InstanceSelectionResult[]
+   * Output only. A list of instance selection results in the group.
+   *
+   * @param InstanceSelectionResult[] $instanceSelectionResults
    */
   public function setInstanceSelectionResults($instanceSelectionResults)
   {
@@ -56,7 +61,10 @@ class InstanceFlexibilityPolicy extends \Google\Collection
     return $this->instanceSelectionResults;
   }
   /**
-   * @param ProvisioningModelMix
+   * Optional. Defines how the Group selects the provisioning model to ensure
+   * required reliability.
+   *
+   * @param ProvisioningModelMix $provisioningModelMix
    */
   public function setProvisioningModelMix(ProvisioningModelMix $provisioningModelMix)
   {

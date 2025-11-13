@@ -21,18 +21,26 @@ class GkeNodePoolTarget extends \Google\Collection
 {
   protected $collection_key = 'roles';
   /**
+   * Required. The target GKE node pool. Format: 'projects/{project}/locations/{
+   * location}/clusters/{cluster}/nodePools/{node_pool}'
+   *
    * @var string
    */
   public $nodePool;
   protected $nodePoolConfigType = GkeNodePoolConfig::class;
   protected $nodePoolConfigDataType = '';
   /**
+   * Required. The roles associated with the GKE node pool.
+   *
    * @var string[]
    */
   public $roles;
 
   /**
-   * @param string
+   * Required. The target GKE node pool. Format: 'projects/{project}/locations/{
+   * location}/clusters/{cluster}/nodePools/{node_pool}'
+   *
+   * @param string $nodePool
    */
   public function setNodePool($nodePool)
   {
@@ -46,7 +54,15 @@ class GkeNodePoolTarget extends \Google\Collection
     return $this->nodePool;
   }
   /**
-   * @param GkeNodePoolConfig
+   * Input only. The configuration for the GKE node pool.If specified, Dataproc
+   * attempts to create a node pool with the specified shape. If one with the
+   * same name already exists, it is verified against all specified fields. If a
+   * field differs, the virtual cluster creation will fail.If omitted, any node
+   * pool with the specified name is used. If a node pool with the specified
+   * name does not exist, Dataproc create a node pool with default values.This
+   * is an input only field. It will not be returned by the API.
+   *
+   * @param GkeNodePoolConfig $nodePoolConfig
    */
   public function setNodePoolConfig(GkeNodePoolConfig $nodePoolConfig)
   {
@@ -60,7 +76,9 @@ class GkeNodePoolTarget extends \Google\Collection
     return $this->nodePoolConfig;
   }
   /**
-   * @param string[]
+   * Required. The roles associated with the GKE node pool.
+   *
+   * @param string[] $roles
    */
   public function setRoles($roles)
   {

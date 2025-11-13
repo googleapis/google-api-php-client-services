@@ -29,7 +29,7 @@ class AppSummary extends \Google\Model
   public $numCompletedStages;
 
   /**
-   * @param int
+   * @param int $numCompletedJobs
    */
   public function setNumCompletedJobs($numCompletedJobs)
   {
@@ -43,7 +43,7 @@ class AppSummary extends \Google\Model
     return $this->numCompletedJobs;
   }
   /**
-   * @param int
+   * @param int $numCompletedStages
    */
   public function setNumCompletedStages($numCompletedStages)
   {

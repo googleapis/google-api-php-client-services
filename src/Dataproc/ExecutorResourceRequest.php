@@ -37,7 +37,7 @@ class ExecutorResourceRequest extends \Google\Model
   public $vendor;
 
   /**
-   * @param string
+   * @param string $amount
    */
   public function setAmount($amount)
   {
@@ -51,7 +51,7 @@ class ExecutorResourceRequest extends \Google\Model
     return $this->amount;
   }
   /**
-   * @param string
+   * @param string $discoveryScript
    */
   public function setDiscoveryScript($discoveryScript)
   {
@@ -65,7 +65,7 @@ class ExecutorResourceRequest extends \Google\Model
     return $this->discoveryScript;
   }
   /**
-   * @param string
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -79,7 +79,7 @@ class ExecutorResourceRequest extends \Google\Model
     return $this->resourceName;
   }
   /**
-   * @param string
+   * @param string $vendor
    */
   public function setVendor($vendor)
   {

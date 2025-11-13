@@ -23,32 +23,68 @@ class GkeNodeConfig extends \Google\Collection
   protected $acceleratorsType = GkeNodePoolAcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
   /**
+   * Optional. The Customer Managed Encryption Key (CMEK)
+   * (https://cloud.google.com/kubernetes-engine/docs/how-to/using-cmek) used to
+   * encrypt the boot disk attached to each node in the node pool. Specify the
+   * key using the following format: projects/{project}/locations/{location}/key
+   * Rings/{key_ring}/cryptoKeys/{crypto_key}
+   *
    * @var string
    */
   public $bootDiskKmsKey;
   /**
+   * Optional. The number of local SSD disks to attach to the node, which is
+   * limited by the maximum number of disks allowable per zone (see Adding Local
+   * SSDs (https://cloud.google.com/compute/docs/disks/local-ssd)).
+   *
    * @var int
    */
   public $localSsdCount;
   /**
+   * Optional. The name of a Compute Engine machine type
+   * (https://cloud.google.com/compute/docs/machine-types).
+   *
    * @var string
    */
   public $machineType;
   /**
+   * Optional. Minimum CPU platform
+   * (https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * to be used by this instance. The instance may be scheduled on the specified
+   * or a newer CPU platform. Specify the friendly names of CPU platforms, such
+   * as "Intel Haswell"` or Intel Sandy Bridge".
+   *
    * @var string
    */
   public $minCpuPlatform;
   /**
+   * Optional. Whether the nodes are created as legacy preemptible VM instances
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Also see
+   * Spot VMs, preemptible VM instances without a maximum lifetime. Legacy and
+   * Spot preemptible nodes cannot be used in a node pool with the CONTROLLER
+   * role or in the DEFAULT node pool if the CONTROLLER role is not assigned
+   * (the DEFAULT node pool will assume the CONTROLLER role).
+   *
    * @var bool
    */
   public $preemptible;
   /**
+   * Optional. Whether the nodes are created as Spot VM instances
+   * (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the
+   * latest update to legacy preemptible VMs. Spot VMs do not have a maximum
+   * lifetime. Legacy and Spot preemptible nodes cannot be used in a node pool
+   * with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role
+   * is not assigned (the DEFAULT node pool will assume the CONTROLLER role).
+   *
    * @var bool
    */
   public $spot;
 
   /**
-   * @param GkeNodePoolAcceleratorConfig[]
+   * Optional. A list of hardware accelerators
+   * (https://cloud.google.com/compute/docs/gpus) to attach to each node.
+   *
+   * @param GkeNodePoolAcceleratorConfig[] $accelerators
    */
   public function setAccelerators($accelerators)
   {
@@ -62,7 +98,13 @@ class GkeNodeConfig extends \Google\Collection
     return $this->accelerators;
   }
   /**
-   * @param string
+   * Optional. The Customer Managed Encryption Key (CMEK)
+   * (https://cloud.google.com/kubernetes-engine/docs/how-to/using-cmek) used to
+   * encrypt the boot disk attached to each node in the node pool. Specify the
+   * key using the following format: projects/{project}/locations/{location}/key
+   * Rings/{key_ring}/cryptoKeys/{crypto_key}
+   *
+   * @param string $bootDiskKmsKey
    */
   public function setBootDiskKmsKey($bootDiskKmsKey)
   {
@@ -76,7 +118,11 @@ class GkeNodeConfig extends \Google\Collection
     return $this->bootDiskKmsKey;
   }
   /**
-   * @param int
+   * Optional. The number of local SSD disks to attach to the node, which is
+   * limited by the maximum number of disks allowable per zone (see Adding Local
+   * SSDs (https://cloud.google.com/compute/docs/disks/local-ssd)).
+   *
+   * @param int $localSsdCount
    */
   public function setLocalSsdCount($localSsdCount)
   {
@@ -90,7 +136,10 @@ class GkeNodeConfig extends \Google\Collection
     return $this->localSsdCount;
   }
   /**
-   * @param string
+   * Optional. The name of a Compute Engine machine type
+   * (https://cloud.google.com/compute/docs/machine-types).
+   *
+   * @param string $machineType
    */
   public function setMachineType($machineType)
   {
@@ -104,7 +153,13 @@ class GkeNodeConfig extends \Google\Collection
     return $this->machineType;
   }
   /**
-   * @param string
+   * Optional. Minimum CPU platform
+   * (https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform)
+   * to be used by this instance. The instance may be scheduled on the specified
+   * or a newer CPU platform. Specify the friendly names of CPU platforms, such
+   * as "Intel Haswell"` or Intel Sandy Bridge".
+   *
+   * @param string $minCpuPlatform
    */
   public function setMinCpuPlatform($minCpuPlatform)
   {
@@ -118,7 +173,14 @@ class GkeNodeConfig extends \Google\Collection
     return $this->minCpuPlatform;
   }
   /**
-   * @param bool
+   * Optional. Whether the nodes are created as legacy preemptible VM instances
+   * (https://cloud.google.com/compute/docs/instances/preemptible). Also see
+   * Spot VMs, preemptible VM instances without a maximum lifetime. Legacy and
+   * Spot preemptible nodes cannot be used in a node pool with the CONTROLLER
+   * role or in the DEFAULT node pool if the CONTROLLER role is not assigned
+   * (the DEFAULT node pool will assume the CONTROLLER role).
+   *
+   * @param bool $preemptible
    */
   public function setPreemptible($preemptible)
   {
@@ -132,7 +194,14 @@ class GkeNodeConfig extends \Google\Collection
     return $this->preemptible;
   }
   /**
-   * @param bool
+   * Optional. Whether the nodes are created as Spot VM instances
+   * (https://cloud.google.com/compute/docs/instances/spot). Spot VMs are the
+   * latest update to legacy preemptible VMs. Spot VMs do not have a maximum
+   * lifetime. Legacy and Spot preemptible nodes cannot be used in a node pool
+   * with the CONTROLLER role or in the DEFAULT node pool if the CONTROLLER role
+   * is not assigned (the DEFAULT node pool will assume the CONTROLLER role).
+   *
+   * @param bool $spot
    */
   public function setSpot($spot)
   {

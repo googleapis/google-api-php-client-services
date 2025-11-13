@@ -25,7 +25,7 @@ class ExecutorPeakMetricsDistributions extends \Google\Collection
   public $quantiles;
 
   /**
-   * @param ExecutorMetrics[]
+   * @param ExecutorMetrics[] $executorMetrics
    */
   public function setExecutorMetrics($executorMetrics)
   {

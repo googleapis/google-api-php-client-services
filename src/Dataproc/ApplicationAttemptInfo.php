@@ -53,7 +53,7 @@ class ApplicationAttemptInfo extends \Google\Model
   public $startTime;
 
   /**
-   * @param string
+   * @param string $appSparkVersion
    */
   public function setAppSparkVersion($appSparkVersion)
   {
@@ -67,7 +67,7 @@ class ApplicationAttemptInfo extends \Google\Model
     return $this->appSparkVersion;
   }
   /**
-   * @param string
+   * @param string $attemptId
    */
   public function setAttemptId($attemptId)
   {
@@ -81,7 +81,7 @@ class ApplicationAttemptInfo extends \Google\Model
     return $this->attemptId;
   }
   /**
-   * @param bool
+   * @param bool $completed
    */
   public function setCompleted($completed)
   {
@@ -95,7 +95,7 @@ class ApplicationAttemptInfo extends \Google\Model
     return $this->completed;
   }
   /**
-   * @param string
+   * @param string $durationMillis
    */
   public function setDurationMillis($durationMillis)
   {
@@ -109,7 +109,7 @@ class ApplicationAttemptInfo extends \Google\Model
     return $this->durationMillis;
   }
   /**
-   * @param string
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -123,7 +123,7 @@ class ApplicationAttemptInfo extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * @param string $lastUpdated
    */
   public function setLastUpdated($lastUpdated)
   {
@@ -137,7 +137,7 @@ class ApplicationAttemptInfo extends \Google\Model
     return $this->lastUpdated;
   }
   /**
-   * @param string
+   * @param string $sparkUser
    */
   public function setSparkUser($sparkUser)
   {
@@ -151,7 +151,7 @@ class ApplicationAttemptInfo extends \Google\Model
     return $this->sparkUser;
   }
   /**
-   * @param string
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

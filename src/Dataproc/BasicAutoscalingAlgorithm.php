@@ -20,6 +20,10 @@ namespace Google\Service\Dataproc;
 class BasicAutoscalingAlgorithm extends \Google\Model
 {
   /**
+   * Optional. Duration between scaling events. A scaling period starts after
+   * the update operation from the previous event has completed.Bounds: 2m, 1d.
+   * Default: 2m.
+   *
    * @var string
    */
   public $cooldownPeriod;
@@ -29,7 +33,11 @@ class BasicAutoscalingAlgorithm extends \Google\Model
   protected $yarnConfigDataType = '';
 
   /**
-   * @param string
+   * Optional. Duration between scaling events. A scaling period starts after
+   * the update operation from the previous event has completed.Bounds: 2m, 1d.
+   * Default: 2m.
+   *
+   * @param string $cooldownPeriod
    */
   public function setCooldownPeriod($cooldownPeriod)
   {
@@ -43,7 +51,9 @@ class BasicAutoscalingAlgorithm extends \Google\Model
     return $this->cooldownPeriod;
   }
   /**
-   * @param SparkStandaloneAutoscalingConfig
+   * Optional. Spark Standalone autoscaling configuration
+   *
+   * @param SparkStandaloneAutoscalingConfig $sparkStandaloneConfig
    */
   public function setSparkStandaloneConfig(SparkStandaloneAutoscalingConfig $sparkStandaloneConfig)
   {
@@ -57,7 +67,9 @@ class BasicAutoscalingAlgorithm extends \Google\Model
     return $this->sparkStandaloneConfig;
   }
   /**
-   * @param BasicYarnAutoscalingConfig
+   * Optional. YARN autoscaling configuration.
+   *
+   * @param BasicYarnAutoscalingConfig $yarnConfig
    */
   public function setYarnConfig(BasicYarnAutoscalingConfig $yarnConfig)
   {

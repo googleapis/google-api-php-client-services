@@ -19,26 +19,77 @@ namespace Google\Service\Dataproc;
 
 class ClusterConfig extends \Google\Collection
 {
+  /**
+   * Not set. Works the same as CLUSTER_TIER_STANDARD.
+   */
+  public const CLUSTER_TIER_CLUSTER_TIER_UNSPECIFIED = 'CLUSTER_TIER_UNSPECIFIED';
+  /**
+   * Standard Dataproc cluster.
+   */
+  public const CLUSTER_TIER_CLUSTER_TIER_STANDARD = 'CLUSTER_TIER_STANDARD';
+  /**
+   * Premium Dataproc cluster.
+   */
+  public const CLUSTER_TIER_CLUSTER_TIER_PREMIUM = 'CLUSTER_TIER_PREMIUM';
+  /**
+   * Not set.
+   */
+  public const CLUSTER_TYPE_CLUSTER_TYPE_UNSPECIFIED = 'CLUSTER_TYPE_UNSPECIFIED';
+  /**
+   * Standard dataproc cluster with a minimum of two primary workers.
+   */
+  public const CLUSTER_TYPE_STANDARD = 'STANDARD';
+  /**
+   * https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/single-node-clusters
+   */
+  public const CLUSTER_TYPE_SINGLE_NODE = 'SINGLE_NODE';
+  /**
+   * Clusters that can use only secondary workers and be scaled down to zero
+   * secondary worker nodes.
+   */
+  public const CLUSTER_TYPE_ZERO_SCALE = 'ZERO_SCALE';
   protected $collection_key = 'initializationActions';
   protected $autoscalingConfigType = AutoscalingConfig::class;
   protected $autoscalingConfigDataType = '';
   protected $auxiliaryNodeGroupsType = AuxiliaryNodeGroup::class;
   protected $auxiliaryNodeGroupsDataType = 'array';
   /**
+   * Optional. The cluster tier.
+   *
    * @var string
    */
   public $clusterTier;
   /**
+   * Optional. The type of the cluster.
+   *
    * @var string
    */
   public $clusterType;
   /**
+   * Optional. A Cloud Storage bucket used to stage job dependencies, config
+   * files, and job driver console output. If you do not specify a staging
+   * bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA,
+   * or EU) for your cluster's staging bucket according to the Compute Engine
+   * zone where your cluster is deployed, and then create and manage this
+   * project-level, per-location bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
+   * not a gs://... URI to a Cloud Storage bucket.
+   *
    * @var string
    */
   public $configBucket;
   protected $dataprocMetricConfigType = DataprocMetricConfig::class;
   protected $dataprocMetricConfigDataType = '';
   /**
+   * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
+   * (https://cloud.google.com/dataproc/docs/support/diagnose-
+   * clusters#checkpoint_diagnostic_data). If you do not specify a diagnostic
+   * bucket, Cloud Dataproc will use the Dataproc temp bucket to collect the
+   * checkpoint diagnostic data. This field requires a Cloud Storage bucket
+   * name, not a gs://... URI to a Cloud Storage bucket.
+   *
    * @var string
    */
   public $diagnosticBucket;
@@ -65,6 +116,18 @@ class ClusterConfig extends \Google\Collection
   protected $softwareConfigType = SoftwareConfig::class;
   protected $softwareConfigDataType = '';
   /**
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs
+   * data, such as Spark and MapReduce history files. If you do not specify a
+   * temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or
+   * EU) for your cluster's temp bucket according to the Compute Engine zone
+   * where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but
+   * you can use any TTL (or none) if you specify a bucket (see Dataproc staging
+   * and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
+   * not a gs://... URI to a Cloud Storage bucket.
+   *
    * @var string
    */
   public $tempBucket;
@@ -72,7 +135,10 @@ class ClusterConfig extends \Google\Collection
   protected $workerConfigDataType = '';
 
   /**
-   * @param AutoscalingConfig
+   * Optional. Autoscaling config for the policy associated with the cluster.
+   * Cluster does not autoscale if this field is unset.
+   *
+   * @param AutoscalingConfig $autoscalingConfig
    */
   public function setAutoscalingConfig(AutoscalingConfig $autoscalingConfig)
   {
@@ -86,7 +152,9 @@ class ClusterConfig extends \Google\Collection
     return $this->autoscalingConfig;
   }
   /**
-   * @param AuxiliaryNodeGroup[]
+   * Optional. The node group settings.
+   *
+   * @param AuxiliaryNodeGroup[] $auxiliaryNodeGroups
    */
   public function setAuxiliaryNodeGroups($auxiliaryNodeGroups)
   {
@@ -100,35 +168,55 @@ class ClusterConfig extends \Google\Collection
     return $this->auxiliaryNodeGroups;
   }
   /**
-   * @param string
+   * Optional. The cluster tier.
+   *
+   * Accepted values: CLUSTER_TIER_UNSPECIFIED, CLUSTER_TIER_STANDARD,
+   * CLUSTER_TIER_PREMIUM
+   *
+   * @param self::CLUSTER_TIER_* $clusterTier
    */
   public function setClusterTier($clusterTier)
   {
     $this->clusterTier = $clusterTier;
   }
   /**
-   * @return string
+   * @return self::CLUSTER_TIER_*
    */
   public function getClusterTier()
   {
     return $this->clusterTier;
   }
   /**
-   * @param string
+   * Optional. The type of the cluster.
+   *
+   * Accepted values: CLUSTER_TYPE_UNSPECIFIED, STANDARD, SINGLE_NODE,
+   * ZERO_SCALE
+   *
+   * @param self::CLUSTER_TYPE_* $clusterType
    */
   public function setClusterType($clusterType)
   {
     $this->clusterType = $clusterType;
   }
   /**
-   * @return string
+   * @return self::CLUSTER_TYPE_*
    */
   public function getClusterType()
   {
     return $this->clusterType;
   }
   /**
-   * @param string
+   * Optional. A Cloud Storage bucket used to stage job dependencies, config
+   * files, and job driver console output. If you do not specify a staging
+   * bucket, Cloud Dataproc will determine a Cloud Storage location (US, ASIA,
+   * or EU) for your cluster's staging bucket according to the Compute Engine
+   * zone where your cluster is deployed, and then create and manage this
+   * project-level, per-location bucket (see Dataproc staging and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
+   * not a gs://... URI to a Cloud Storage bucket.
+   *
+   * @param string $configBucket
    */
   public function setConfigBucket($configBucket)
   {
@@ -142,7 +230,9 @@ class ClusterConfig extends \Google\Collection
     return $this->configBucket;
   }
   /**
-   * @param DataprocMetricConfig
+   * Optional. The config for Dataproc metrics.
+   *
+   * @param DataprocMetricConfig $dataprocMetricConfig
    */
   public function setDataprocMetricConfig(DataprocMetricConfig $dataprocMetricConfig)
   {
@@ -156,7 +246,14 @@ class ClusterConfig extends \Google\Collection
     return $this->dataprocMetricConfig;
   }
   /**
-   * @param string
+   * Optional. A Cloud Storage bucket used to collect checkpoint diagnostic data
+   * (https://cloud.google.com/dataproc/docs/support/diagnose-
+   * clusters#checkpoint_diagnostic_data). If you do not specify a diagnostic
+   * bucket, Cloud Dataproc will use the Dataproc temp bucket to collect the
+   * checkpoint diagnostic data. This field requires a Cloud Storage bucket
+   * name, not a gs://... URI to a Cloud Storage bucket.
+   *
+   * @param string $diagnosticBucket
    */
   public function setDiagnosticBucket($diagnosticBucket)
   {
@@ -170,7 +267,9 @@ class ClusterConfig extends \Google\Collection
     return $this->diagnosticBucket;
   }
   /**
-   * @param EncryptionConfig
+   * Optional. Encryption settings for the cluster.
+   *
+   * @param EncryptionConfig $encryptionConfig
    */
   public function setEncryptionConfig(EncryptionConfig $encryptionConfig)
   {
@@ -184,7 +283,9 @@ class ClusterConfig extends \Google\Collection
     return $this->encryptionConfig;
   }
   /**
-   * @param EndpointConfig
+   * Optional. Port/endpoint configuration for this cluster
+   *
+   * @param EndpointConfig $endpointConfig
    */
   public function setEndpointConfig(EndpointConfig $endpointConfig)
   {
@@ -198,7 +299,10 @@ class ClusterConfig extends \Google\Collection
     return $this->endpointConfig;
   }
   /**
-   * @param GceClusterConfig
+   * Optional. The shared Compute Engine config settings for all instances in a
+   * cluster.
+   *
+   * @param GceClusterConfig $gceClusterConfig
    */
   public function setGceClusterConfig(GceClusterConfig $gceClusterConfig)
   {
@@ -212,13 +316,21 @@ class ClusterConfig extends \Google\Collection
     return $this->gceClusterConfig;
   }
   /**
-   * @param GkeClusterConfig
+   * Optional. BETA. The Kubernetes Engine config for Dataproc clusters deployed
+   * to The Kubernetes Engine config for Dataproc clusters deployed to
+   * Kubernetes. These config settings are mutually exclusive with Compute
+   * Engine-based options, such as gce_cluster_config, master_config,
+   * worker_config, secondary_worker_config, and autoscaling_config.
+   *
+   * @deprecated
+   * @param GkeClusterConfig $gkeClusterConfig
    */
   public function setGkeClusterConfig(GkeClusterConfig $gkeClusterConfig)
   {
     $this->gkeClusterConfig = $gkeClusterConfig;
   }
   /**
+   * @deprecated
    * @return GkeClusterConfig
    */
   public function getGkeClusterConfig()
@@ -226,7 +338,16 @@ class ClusterConfig extends \Google\Collection
     return $this->gkeClusterConfig;
   }
   /**
-   * @param NodeInitializationAction[]
+   * Optional. Commands to execute on each node after config is completed. By
+   * default, executables are run on master and all worker nodes. You can test a
+   * node's role metadata to run an executable on a master or worker node, as
+   * shown below using curl (you can also use wget): ROLE=$(curl -H Metadata-
+   * Flavor:Google
+   * http://metadata/computeMetadata/v1/instance/attributes/dataproc-role) if [[
+   * "${ROLE}" == 'Master' ]]; then ... master specific actions ... else ...
+   * worker specific actions ... fi
+   *
+   * @param NodeInitializationAction[] $initializationActions
    */
   public function setInitializationActions($initializationActions)
   {
@@ -240,7 +361,9 @@ class ClusterConfig extends \Google\Collection
     return $this->initializationActions;
   }
   /**
-   * @param LifecycleConfig
+   * Optional. Lifecycle setting for the cluster.
+   *
+   * @param LifecycleConfig $lifecycleConfig
    */
   public function setLifecycleConfig(LifecycleConfig $lifecycleConfig)
   {
@@ -254,7 +377,10 @@ class ClusterConfig extends \Google\Collection
     return $this->lifecycleConfig;
   }
   /**
-   * @param InstanceGroupConfig
+   * Optional. The Compute Engine config settings for the cluster's master
+   * instance.
+   *
+   * @param InstanceGroupConfig $masterConfig
    */
   public function setMasterConfig(InstanceGroupConfig $masterConfig)
   {
@@ -268,7 +394,9 @@ class ClusterConfig extends \Google\Collection
     return $this->masterConfig;
   }
   /**
-   * @param MetastoreConfig
+   * Optional. Metastore configuration.
+   *
+   * @param MetastoreConfig $metastoreConfig
    */
   public function setMetastoreConfig(MetastoreConfig $metastoreConfig)
   {
@@ -282,7 +410,10 @@ class ClusterConfig extends \Google\Collection
     return $this->metastoreConfig;
   }
   /**
-   * @param InstanceGroupConfig
+   * Optional. The Compute Engine config settings for a cluster's secondary
+   * worker instances
+   *
+   * @param InstanceGroupConfig $secondaryWorkerConfig
    */
   public function setSecondaryWorkerConfig(InstanceGroupConfig $secondaryWorkerConfig)
   {
@@ -296,7 +427,9 @@ class ClusterConfig extends \Google\Collection
     return $this->secondaryWorkerConfig;
   }
   /**
-   * @param SecurityConfig
+   * Optional. Security settings for the cluster.
+   *
+   * @param SecurityConfig $securityConfig
    */
   public function setSecurityConfig(SecurityConfig $securityConfig)
   {
@@ -310,7 +443,9 @@ class ClusterConfig extends \Google\Collection
     return $this->securityConfig;
   }
   /**
-   * @param SoftwareConfig
+   * Optional. The config settings for cluster software.
+   *
+   * @param SoftwareConfig $softwareConfig
    */
   public function setSoftwareConfig(SoftwareConfig $softwareConfig)
   {
@@ -324,7 +459,19 @@ class ClusterConfig extends \Google\Collection
     return $this->softwareConfig;
   }
   /**
-   * @param string
+   * Optional. A Cloud Storage bucket used to store ephemeral cluster and jobs
+   * data, such as Spark and MapReduce history files. If you do not specify a
+   * temp bucket, Dataproc will determine a Cloud Storage location (US, ASIA, or
+   * EU) for your cluster's temp bucket according to the Compute Engine zone
+   * where your cluster is deployed, and then create and manage this project-
+   * level, per-location bucket. The default bucket has a TTL of 90 days, but
+   * you can use any TTL (or none) if you specify a bucket (see Dataproc staging
+   * and temp buckets
+   * (https://cloud.google.com/dataproc/docs/concepts/configuring-
+   * clusters/staging-bucket)). This field requires a Cloud Storage bucket name,
+   * not a gs://... URI to a Cloud Storage bucket.
+   *
+   * @param string $tempBucket
    */
   public function setTempBucket($tempBucket)
   {
@@ -338,7 +485,10 @@ class ClusterConfig extends \Google\Collection
     return $this->tempBucket;
   }
   /**
-   * @param InstanceGroupConfig
+   * Optional. The Compute Engine config settings for the cluster's worker
+   * instances.
+   *
+   * @param InstanceGroupConfig $workerConfig
    */
   public function setWorkerConfig(InstanceGroupConfig $workerConfig)
   {

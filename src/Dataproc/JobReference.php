@@ -20,16 +20,29 @@ namespace Google\Service\Dataproc;
 class JobReference extends \Google\Model
 {
   /**
+   * Optional. The job ID, which must be unique within the project.The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens
+   * (-). The maximum length is 100 characters.If not specified by the caller,
+   * the job ID will be provided by the server.
+   *
    * @var string
    */
   public $jobId;
   /**
+   * Optional. The ID of the Google Cloud Platform project that the job belongs
+   * to. If specified, must match the request project ID.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * Optional. The job ID, which must be unique within the project.The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or hyphens
+   * (-). The maximum length is 100 characters.If not specified by the caller,
+   * the job ID will be provided by the server.
+   *
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {
@@ -43,7 +56,10 @@ class JobReference extends \Google\Model
     return $this->jobId;
   }
   /**
-   * @param string
+   * Optional. The ID of the Google Cloud Platform project that the job belongs
+   * to. If specified, must match the request project ID.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

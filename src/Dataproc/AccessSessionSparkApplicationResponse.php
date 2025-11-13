@@ -23,7 +23,9 @@ class AccessSessionSparkApplicationResponse extends \Google\Model
   protected $applicationDataType = '';
 
   /**
-   * @param ApplicationInfo
+   * Output only. High level information corresponding to an application.
+   *
+   * @param ApplicationInfo $application
    */
   public function setApplication(ApplicationInfo $application)
   {

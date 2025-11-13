@@ -21,30 +21,42 @@ class JobsSummary extends \Google\Collection
 {
   protected $collection_key = 'attempts';
   /**
+   * Number of active jobs
+   *
    * @var int
    */
   public $activeJobs;
   /**
+   * Spark Application Id
+   *
    * @var string
    */
   public $applicationId;
   protected $attemptsType = ApplicationAttemptInfo::class;
   protected $attemptsDataType = 'array';
   /**
+   * Number of completed jobs
+   *
    * @var int
    */
   public $completedJobs;
   /**
+   * Number of failed jobs
+   *
    * @var int
    */
   public $failedJobs;
   /**
+   * Spark Scheduling mode
+   *
    * @var string
    */
   public $schedulingMode;
 
   /**
-   * @param int
+   * Number of active jobs
+   *
+   * @param int $activeJobs
    */
   public function setActiveJobs($activeJobs)
   {
@@ -58,7 +70,9 @@ class JobsSummary extends \Google\Collection
     return $this->activeJobs;
   }
   /**
-   * @param string
+   * Spark Application Id
+   *
+   * @param string $applicationId
    */
   public function setApplicationId($applicationId)
   {
@@ -72,7 +86,9 @@ class JobsSummary extends \Google\Collection
     return $this->applicationId;
   }
   /**
-   * @param ApplicationAttemptInfo[]
+   * Attempts info
+   *
+   * @param ApplicationAttemptInfo[] $attempts
    */
   public function setAttempts($attempts)
   {
@@ -86,7 +102,9 @@ class JobsSummary extends \Google\Collection
     return $this->attempts;
   }
   /**
-   * @param int
+   * Number of completed jobs
+   *
+   * @param int $completedJobs
    */
   public function setCompletedJobs($completedJobs)
   {
@@ -100,7 +118,9 @@ class JobsSummary extends \Google\Collection
     return $this->completedJobs;
   }
   /**
-   * @param int
+   * Number of failed jobs
+   *
+   * @param int $failedJobs
    */
   public function setFailedJobs($failedJobs)
   {
@@ -114,7 +134,9 @@ class JobsSummary extends \Google\Collection
     return $this->failedJobs;
   }
   /**
-   * @param string
+   * Spark Scheduling mode
+   *
+   * @param string $schedulingMode
    */
   public function setSchedulingMode($schedulingMode)
   {

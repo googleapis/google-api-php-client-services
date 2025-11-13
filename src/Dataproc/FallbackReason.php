@@ -20,16 +20,22 @@ namespace Google\Service\Dataproc;
 class FallbackReason extends \Google\Model
 {
   /**
+   * Optional. Fallback node information.
+   *
    * @var string
    */
   public $fallbackNode;
   /**
+   * Optional. Fallback to Spark reason.
+   *
    * @var string
    */
   public $fallbackReason;
 
   /**
-   * @param string
+   * Optional. Fallback node information.
+   *
+   * @param string $fallbackNode
    */
   public function setFallbackNode($fallbackNode)
   {
@@ -43,7 +49,9 @@ class FallbackReason extends \Google\Model
     return $this->fallbackNode;
   }
   /**
-   * @param string
+   * Optional. Fallback to Spark reason.
+   *
+   * @param string $fallbackReason
    */
   public function setFallbackReason($fallbackReason)
   {

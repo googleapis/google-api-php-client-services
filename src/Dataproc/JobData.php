@@ -19,6 +19,11 @@ namespace Google\Service\Dataproc;
 
 class JobData extends \Google\Collection
 {
+  public const STATUS_JOB_EXECUTION_STATUS_UNSPECIFIED = 'JOB_EXECUTION_STATUS_UNSPECIFIED';
+  public const STATUS_JOB_EXECUTION_STATUS_RUNNING = 'JOB_EXECUTION_STATUS_RUNNING';
+  public const STATUS_JOB_EXECUTION_STATUS_SUCCEEDED = 'JOB_EXECUTION_STATUS_SUCCEEDED';
+  public const STATUS_JOB_EXECUTION_STATUS_FAILED = 'JOB_EXECUTION_STATUS_FAILED';
+  public const STATUS_JOB_EXECUTION_STATUS_UNKNOWN = 'JOB_EXECUTION_STATUS_UNKNOWN';
   protected $collection_key = 'stageIds';
   /**
    * @var string
@@ -110,7 +115,7 @@ class JobData extends \Google\Collection
   public $submissionTime;
 
   /**
-   * @param string
+   * @param string $completionTime
    */
   public function setCompletionTime($completionTime)
   {
@@ -124,7 +129,7 @@ class JobData extends \Google\Collection
     return $this->completionTime;
   }
   /**
-   * @param string
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -138,7 +143,7 @@ class JobData extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * @param string $jobGroup
    */
   public function setJobGroup($jobGroup)
   {
@@ -152,7 +157,7 @@ class JobData extends \Google\Collection
     return $this->jobGroup;
   }
   /**
-   * @param string
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {
@@ -166,7 +171,7 @@ class JobData extends \Google\Collection
     return $this->jobId;
   }
   /**
-   * @param int[]
+   * @param int[] $killTasksSummary
    */
   public function setKillTasksSummary($killTasksSummary)
   {
@@ -180,7 +185,7 @@ class JobData extends \Google\Collection
     return $this->killTasksSummary;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -194,7 +199,7 @@ class JobData extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * @param int $numActiveStages
    */
   public function setNumActiveStages($numActiveStages)
   {
@@ -208,7 +213,7 @@ class JobData extends \Google\Collection
     return $this->numActiveStages;
   }
   /**
-   * @param int
+   * @param int $numActiveTasks
    */
   public function setNumActiveTasks($numActiveTasks)
   {
@@ -222,7 +227,7 @@ class JobData extends \Google\Collection
     return $this->numActiveTasks;
   }
   /**
-   * @param int
+   * @param int $numCompletedIndices
    */
   public function setNumCompletedIndices($numCompletedIndices)
   {
@@ -236,7 +241,7 @@ class JobData extends \Google\Collection
     return $this->numCompletedIndices;
   }
   /**
-   * @param int
+   * @param int $numCompletedStages
    */
   public function setNumCompletedStages($numCompletedStages)
   {
@@ -250,7 +255,7 @@ class JobData extends \Google\Collection
     return $this->numCompletedStages;
   }
   /**
-   * @param int
+   * @param int $numCompletedTasks
    */
   public function setNumCompletedTasks($numCompletedTasks)
   {
@@ -264,7 +269,7 @@ class JobData extends \Google\Collection
     return $this->numCompletedTasks;
   }
   /**
-   * @param int
+   * @param int $numFailedStages
    */
   public function setNumFailedStages($numFailedStages)
   {
@@ -278,7 +283,7 @@ class JobData extends \Google\Collection
     return $this->numFailedStages;
   }
   /**
-   * @param int
+   * @param int $numFailedTasks
    */
   public function setNumFailedTasks($numFailedTasks)
   {
@@ -292,7 +297,7 @@ class JobData extends \Google\Collection
     return $this->numFailedTasks;
   }
   /**
-   * @param int
+   * @param int $numKilledTasks
    */
   public function setNumKilledTasks($numKilledTasks)
   {
@@ -306,7 +311,7 @@ class JobData extends \Google\Collection
     return $this->numKilledTasks;
   }
   /**
-   * @param int
+   * @param int $numSkippedStages
    */
   public function setNumSkippedStages($numSkippedStages)
   {
@@ -320,7 +325,7 @@ class JobData extends \Google\Collection
     return $this->numSkippedStages;
   }
   /**
-   * @param int
+   * @param int $numSkippedTasks
    */
   public function setNumSkippedTasks($numSkippedTasks)
   {
@@ -334,7 +339,7 @@ class JobData extends \Google\Collection
     return $this->numSkippedTasks;
   }
   /**
-   * @param int
+   * @param int $numTasks
    */
   public function setNumTasks($numTasks)
   {
@@ -348,7 +353,7 @@ class JobData extends \Google\Collection
     return $this->numTasks;
   }
   /**
-   * @param int[]
+   * @param int[] $skippedStages
    */
   public function setSkippedStages($skippedStages)
   {
@@ -362,7 +367,7 @@ class JobData extends \Google\Collection
     return $this->skippedStages;
   }
   /**
-   * @param string
+   * @param string $sqlExecutionId
    */
   public function setSqlExecutionId($sqlExecutionId)
   {
@@ -376,7 +381,7 @@ class JobData extends \Google\Collection
     return $this->sqlExecutionId;
   }
   /**
-   * @param string[]
+   * @param string[] $stageIds
    */
   public function setStageIds($stageIds)
   {
@@ -390,21 +395,21 @@ class JobData extends \Google\Collection
     return $this->stageIds;
   }
   /**
-   * @param string
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * @param string $submissionTime
    */
   public function setSubmissionTime($submissionTime)
   {

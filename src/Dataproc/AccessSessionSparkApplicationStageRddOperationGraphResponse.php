@@ -23,7 +23,9 @@ class AccessSessionSparkApplicationStageRddOperationGraphResponse extends \Googl
   protected $rddOperationGraphDataType = '';
 
   /**
-   * @param RddOperationGraph
+   * RDD operation graph for a Spark Application Stage.
+   *
+   * @param RddOperationGraph $rddOperationGraph
    */
   public function setRddOperationGraph(RddOperationGraph $rddOperationGraph)
   {

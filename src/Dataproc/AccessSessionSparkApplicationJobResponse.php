@@ -23,7 +23,9 @@ class AccessSessionSparkApplicationJobResponse extends \Google\Model
   protected $jobDataDataType = '';
 
   /**
-   * @param JobData
+   * Output only. Data corresponding to a spark job.
+   *
+   * @param JobData $jobData
    */
   public function setJobData(JobData $jobData)
   {

@@ -25,12 +25,23 @@ class GkeNodePoolConfig extends \Google\Collection
   protected $configType = GkeNodeConfig::class;
   protected $configDataType = '';
   /**
+   * Optional. The list of Compute Engine zones
+   * (https://cloud.google.com/compute/docs/zones#available) where node pool
+   * nodes associated with a Dataproc on GKE virtual cluster will be
+   * located.Note: All node pools associated with a virtual cluster must be
+   * located in the same region as the virtual cluster, and they must be located
+   * in the same zone within that region.If a location is not specified during
+   * node pool creation, Dataproc on GKE will choose the zone.
+   *
    * @var string[]
    */
   public $locations;
 
   /**
-   * @param GkeNodePoolAutoscalingConfig
+   * Optional. The autoscaler configuration for this node pool. The autoscaler
+   * is enabled only when a valid configuration is present.
+   *
+   * @param GkeNodePoolAutoscalingConfig $autoscaling
    */
   public function setAutoscaling(GkeNodePoolAutoscalingConfig $autoscaling)
   {
@@ -44,7 +55,9 @@ class GkeNodePoolConfig extends \Google\Collection
     return $this->autoscaling;
   }
   /**
-   * @param GkeNodeConfig
+   * Optional. The node pool configuration.
+   *
+   * @param GkeNodeConfig $config
    */
   public function setConfig(GkeNodeConfig $config)
   {
@@ -58,7 +71,15 @@ class GkeNodePoolConfig extends \Google\Collection
     return $this->config;
   }
   /**
-   * @param string[]
+   * Optional. The list of Compute Engine zones
+   * (https://cloud.google.com/compute/docs/zones#available) where node pool
+   * nodes associated with a Dataproc on GKE virtual cluster will be
+   * located.Note: All node pools associated with a virtual cluster must be
+   * located in the same region as the virtual cluster, and they must be located
+   * in the same zone within that region.If a location is not specified during
+   * node pool creation, Dataproc on GKE will choose the zone.
+   *
+   * @param string[] $locations
    */
   public function setLocations($locations)
   {

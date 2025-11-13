@@ -20,14 +20,20 @@ namespace Google\Service\Dataproc;
 class JobMetadata extends \Google\Model
 {
   /**
+   * Output only. The job id.
+   *
    * @var string
    */
   public $jobId;
   /**
+   * Output only. Operation type.
+   *
    * @var string
    */
   public $operationType;
   /**
+   * Output only. Job submission time.
+   *
    * @var string
    */
   public $startTime;
@@ -35,7 +41,9 @@ class JobMetadata extends \Google\Model
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * Output only. The job id.
+   *
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {
@@ -49,7 +57,9 @@ class JobMetadata extends \Google\Model
     return $this->jobId;
   }
   /**
-   * @param string
+   * Output only. Operation type.
+   *
+   * @param string $operationType
    */
   public function setOperationType($operationType)
   {
@@ -63,7 +73,9 @@ class JobMetadata extends \Google\Model
     return $this->operationType;
   }
   /**
-   * @param string
+   * Output only. Job submission time.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -77,7 +89,9 @@ class JobMetadata extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param JobStatus
+   * Output only. Most recent job status.
+   *
+   * @param JobStatus $status
    */
   public function setStatus(JobStatus $status)
   {

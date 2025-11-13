@@ -103,7 +103,7 @@ class ExecutorMetricsDistributions extends \Google\Collection
     return $this->outputRecords;
   }
   /**
-   * @param ExecutorPeakMetricsDistributions
+   * @param ExecutorPeakMetricsDistributions $peakMemoryMetrics
    */
   public function setPeakMemoryMetrics(ExecutorPeakMetricsDistributions $peakMemoryMetrics)
   {

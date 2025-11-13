@@ -21,12 +21,16 @@ class AutotuningConfig extends \Google\Collection
 {
   protected $collection_key = 'scenarios';
   /**
+   * Optional. Scenarios for which tunings are applied.
+   *
    * @var string[]
    */
   public $scenarios;
 
   /**
-   * @param string[]
+   * Optional. Scenarios for which tunings are applied.
+   *
+   * @param string[] $scenarios
    */
   public function setScenarios($scenarios)
   {

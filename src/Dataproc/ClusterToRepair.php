@@ -20,19 +20,34 @@ namespace Google\Service\Dataproc;
 class ClusterToRepair extends \Google\Model
 {
   /**
+   * No action will be taken by default.
+   */
+  public const CLUSTER_REPAIR_ACTION_CLUSTER_REPAIR_ACTION_UNSPECIFIED = 'CLUSTER_REPAIR_ACTION_UNSPECIFIED';
+  /**
+   * Repair cluster in ERROR_DUE_TO_UPDATE states.
+   */
+  public const CLUSTER_REPAIR_ACTION_REPAIR_ERROR_DUE_TO_UPDATE_CLUSTER = 'REPAIR_ERROR_DUE_TO_UPDATE_CLUSTER';
+  /**
+   * Required. Repair action to take on the cluster resource.
+   *
    * @var string
    */
   public $clusterRepairAction;
 
   /**
-   * @param string
+   * Required. Repair action to take on the cluster resource.
+   *
+   * Accepted values: CLUSTER_REPAIR_ACTION_UNSPECIFIED,
+   * REPAIR_ERROR_DUE_TO_UPDATE_CLUSTER
+   *
+   * @param self::CLUSTER_REPAIR_ACTION_* $clusterRepairAction
    */
   public function setClusterRepairAction($clusterRepairAction)
   {
     $this->clusterRepairAction = $clusterRepairAction;
   }
   /**
-   * @return string
+   * @return self::CLUSTER_REPAIR_ACTION_*
    */
   public function getClusterRepairAction()
   {

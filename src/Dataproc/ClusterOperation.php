@@ -20,20 +20,28 @@ namespace Google\Service\Dataproc;
 class ClusterOperation extends \Google\Model
 {
   /**
+   * Output only. Indicates the operation is done.
+   *
    * @var bool
    */
   public $done;
   /**
+   * Output only. Error, if operation failed.
+   *
    * @var string
    */
   public $error;
   /**
+   * Output only. The id of the cluster operation.
+   *
    * @var string
    */
   public $operationId;
 
   /**
-   * @param bool
+   * Output only. Indicates the operation is done.
+   *
+   * @param bool $done
    */
   public function setDone($done)
   {
@@ -47,7 +55,9 @@ class ClusterOperation extends \Google\Model
     return $this->done;
   }
   /**
-   * @param string
+   * Output only. Error, if operation failed.
+   *
+   * @param string $error
    */
   public function setError($error)
   {
@@ -61,7 +71,9 @@ class ClusterOperation extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * Output only. The id of the cluster operation.
+   *
+   * @param string $operationId
    */
   public function setOperationId($operationId)
   {

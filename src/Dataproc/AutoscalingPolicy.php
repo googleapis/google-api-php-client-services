@@ -19,21 +19,57 @@ namespace Google\Service\Dataproc;
 
 class AutoscalingPolicy extends \Google\Model
 {
+  /**
+   * Not set.
+   */
+  public const CLUSTER_TYPE_CLUSTER_TYPE_UNSPECIFIED = 'CLUSTER_TYPE_UNSPECIFIED';
+  /**
+   * Standard dataproc cluster with a minimum of two primary workers.
+   */
+  public const CLUSTER_TYPE_STANDARD = 'STANDARD';
+  /**
+   * Clusters that can use only secondary workers and be scaled down to zero
+   * secondary worker nodes.
+   */
+  public const CLUSTER_TYPE_ZERO_SCALE = 'ZERO_SCALE';
   protected $basicAlgorithmType = BasicAutoscalingAlgorithm::class;
   protected $basicAlgorithmDataType = '';
   /**
+   * Optional. The type of the clusters for which this autoscaling policy is to
+   * be configured.
+   *
    * @var string
    */
   public $clusterType;
   /**
+   * Required. The policy id.The id must contain only letters (a-z, A-Z),
+   * numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with
+   * underscore or hyphen. Must consist of between 3 and 50 characters.
+   *
    * @var string
    */
   public $id;
   /**
+   * Optional. The labels to associate with this autoscaling policy. Label keys
+   * must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if
+   * present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with an autoscaling policy.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The "resource name" of the autoscaling policy, as described in
+   * https://cloud.google.com/apis/design/resource_names. For
+   * projects.regions.autoscalingPolicies, the resource name of the policy has
+   * the following format:
+   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+   * projects.locations.autoscalingPolicies, the resource name of the policy has
+   * the following format:
+   * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+   *
    * @var string
    */
   public $name;
@@ -43,7 +79,7 @@ class AutoscalingPolicy extends \Google\Model
   protected $workerConfigDataType = '';
 
   /**
-   * @param BasicAutoscalingAlgorithm
+   * @param BasicAutoscalingAlgorithm $basicAlgorithm
    */
   public function setBasicAlgorithm(BasicAutoscalingAlgorithm $basicAlgorithm)
   {
@@ -57,21 +93,30 @@ class AutoscalingPolicy extends \Google\Model
     return $this->basicAlgorithm;
   }
   /**
-   * @param string
+   * Optional. The type of the clusters for which this autoscaling policy is to
+   * be configured.
+   *
+   * Accepted values: CLUSTER_TYPE_UNSPECIFIED, STANDARD, ZERO_SCALE
+   *
+   * @param self::CLUSTER_TYPE_* $clusterType
    */
   public function setClusterType($clusterType)
   {
     $this->clusterType = $clusterType;
   }
   /**
-   * @return string
+   * @return self::CLUSTER_TYPE_*
    */
   public function getClusterType()
   {
     return $this->clusterType;
   }
   /**
-   * @param string
+   * Required. The policy id.The id must contain only letters (a-z, A-Z),
+   * numbers (0-9), underscores (_), and hyphens (-). Cannot begin or end with
+   * underscore or hyphen. Must consist of between 3 and 50 characters.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -85,7 +130,14 @@ class AutoscalingPolicy extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string[]
+   * Optional. The labels to associate with this autoscaling policy. Label keys
+   * must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if
+   * present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with an autoscaling policy.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -99,7 +151,16 @@ class AutoscalingPolicy extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The "resource name" of the autoscaling policy, as described in
+   * https://cloud.google.com/apis/design/resource_names. For
+   * projects.regions.autoscalingPolicies, the resource name of the policy has
+   * the following format:
+   * projects/{project_id}/regions/{region}/autoscalingPolicies/{policy_id} For
+   * projects.locations.autoscalingPolicies, the resource name of the policy has
+   * the following format:
+   * projects/{project_id}/locations/{location}/autoscalingPolicies/{policy_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -113,7 +174,9 @@ class AutoscalingPolicy extends \Google\Model
     return $this->name;
   }
   /**
-   * @param InstanceGroupAutoscalingPolicyConfig
+   * Optional. Describes how the autoscaler will operate for secondary workers.
+   *
+   * @param InstanceGroupAutoscalingPolicyConfig $secondaryWorkerConfig
    */
   public function setSecondaryWorkerConfig(InstanceGroupAutoscalingPolicyConfig $secondaryWorkerConfig)
   {
@@ -127,7 +190,9 @@ class AutoscalingPolicy extends \Google\Model
     return $this->secondaryWorkerConfig;
   }
   /**
-   * @param InstanceGroupAutoscalingPolicyConfig
+   * Required. Describes how the autoscaler will operate for primary workers.
+   *
+   * @param InstanceGroupAutoscalingPolicyConfig $workerConfig
    */
   public function setWorkerConfig(InstanceGroupAutoscalingPolicyConfig $workerConfig)
   {

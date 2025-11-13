@@ -22,12 +22,19 @@ class AuxiliaryNodeGroup extends \Google\Model
   protected $nodeGroupType = NodeGroup::class;
   protected $nodeGroupDataType = '';
   /**
+   * Optional. A node group ID. Generated if not specified.The ID must contain
+   * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+   * Cannot begin or end with underscore or hyphen. Must consist of from 3 to 33
+   * characters.
+   *
    * @var string
    */
   public $nodeGroupId;
 
   /**
-   * @param NodeGroup
+   * Required. Node group configuration.
+   *
+   * @param NodeGroup $nodeGroup
    */
   public function setNodeGroup(NodeGroup $nodeGroup)
   {
@@ -41,7 +48,12 @@ class AuxiliaryNodeGroup extends \Google\Model
     return $this->nodeGroup;
   }
   /**
-   * @param string
+   * Optional. A node group ID. Generated if not specified.The ID must contain
+   * only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens (-).
+   * Cannot begin or end with underscore or hyphen. Must consist of from 3 to 33
+   * characters.
+   *
+   * @param string $nodeGroupId
    */
   public function setNodeGroupId($nodeGroupId)
   {

@@ -21,14 +21,26 @@ class Job extends \Google\Collection
 {
   protected $collection_key = 'yarnApplications';
   /**
+   * Output only. Indicates whether the job is completed. If the value is false,
+   * the job is still in progress. If true, the job is completed, and
+   * status.state field will indicate if it was successful, failed, or
+   * cancelled.
+   *
    * @var bool
    */
   public $done;
   /**
+   * Output only. If present, the location of miscellaneous control files which
+   * can be used as part of job setup and handling. If not present, control
+   * files might be placed in the same location as driver_output_uri.
+   *
    * @var string
    */
   public $driverControlFilesUri;
   /**
+   * Output only. A URI pointing to the location of the stdout of the job's
+   * driver program.
+   *
    * @var string
    */
   public $driverOutputResourceUri;
@@ -41,10 +53,21 @@ class Job extends \Google\Collection
   protected $hiveJobType = HiveJob::class;
   protected $hiveJobDataType = '';
   /**
+   * Output only. A UUID that uniquely identifies a job within the project over
+   * time. This is in contrast to a user-settable reference.job_id that might be
+   * reused over time.
+   *
    * @var string
    */
   public $jobUuid;
   /**
+   * Optional. The labels to associate with this job. Label keys must contain 1
+   * to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty, but, if
+   * present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with a job.
+   *
    * @var string[]
    */
   public $labels;
@@ -76,7 +99,12 @@ class Job extends \Google\Collection
   protected $yarnApplicationsDataType = 'array';
 
   /**
-   * @param bool
+   * Output only. Indicates whether the job is completed. If the value is false,
+   * the job is still in progress. If true, the job is completed, and
+   * status.state field will indicate if it was successful, failed, or
+   * cancelled.
+   *
+   * @param bool $done
    */
   public function setDone($done)
   {
@@ -90,7 +118,11 @@ class Job extends \Google\Collection
     return $this->done;
   }
   /**
-   * @param string
+   * Output only. If present, the location of miscellaneous control files which
+   * can be used as part of job setup and handling. If not present, control
+   * files might be placed in the same location as driver_output_uri.
+   *
+   * @param string $driverControlFilesUri
    */
   public function setDriverControlFilesUri($driverControlFilesUri)
   {
@@ -104,7 +136,10 @@ class Job extends \Google\Collection
     return $this->driverControlFilesUri;
   }
   /**
-   * @param string
+   * Output only. A URI pointing to the location of the stdout of the job's
+   * driver program.
+   *
+   * @param string $driverOutputResourceUri
    */
   public function setDriverOutputResourceUri($driverOutputResourceUri)
   {
@@ -118,7 +153,9 @@ class Job extends \Google\Collection
     return $this->driverOutputResourceUri;
   }
   /**
-   * @param DriverSchedulingConfig
+   * Optional. Driver scheduling configuration.
+   *
+   * @param DriverSchedulingConfig $driverSchedulingConfig
    */
   public function setDriverSchedulingConfig(DriverSchedulingConfig $driverSchedulingConfig)
   {
@@ -132,7 +169,9 @@ class Job extends \Google\Collection
     return $this->driverSchedulingConfig;
   }
   /**
-   * @param FlinkJob
+   * Optional. Job is a Flink job.
+   *
+   * @param FlinkJob $flinkJob
    */
   public function setFlinkJob(FlinkJob $flinkJob)
   {
@@ -146,7 +185,9 @@ class Job extends \Google\Collection
     return $this->flinkJob;
   }
   /**
-   * @param HadoopJob
+   * Optional. Job is a Hadoop job.
+   *
+   * @param HadoopJob $hadoopJob
    */
   public function setHadoopJob(HadoopJob $hadoopJob)
   {
@@ -160,7 +201,9 @@ class Job extends \Google\Collection
     return $this->hadoopJob;
   }
   /**
-   * @param HiveJob
+   * Optional. Job is a Hive job.
+   *
+   * @param HiveJob $hiveJob
    */
   public function setHiveJob(HiveJob $hiveJob)
   {
@@ -174,7 +217,11 @@ class Job extends \Google\Collection
     return $this->hiveJob;
   }
   /**
-   * @param string
+   * Output only. A UUID that uniquely identifies a job within the project over
+   * time. This is in contrast to a user-settable reference.job_id that might be
+   * reused over time.
+   *
+   * @param string $jobUuid
    */
   public function setJobUuid($jobUuid)
   {
@@ -188,7 +235,14 @@ class Job extends \Google\Collection
     return $this->jobUuid;
   }
   /**
-   * @param string[]
+   * Optional. The labels to associate with this job. Label keys must contain 1
+   * to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty, but, if
+   * present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with a job.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -202,7 +256,9 @@ class Job extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param PigJob
+   * Optional. Job is a Pig job.
+   *
+   * @param PigJob $pigJob
    */
   public function setPigJob(PigJob $pigJob)
   {
@@ -216,7 +272,9 @@ class Job extends \Google\Collection
     return $this->pigJob;
   }
   /**
-   * @param JobPlacement
+   * Required. Job information, including how, when, and where to run the job.
+   *
+   * @param JobPlacement $placement
    */
   public function setPlacement(JobPlacement $placement)
   {
@@ -230,7 +288,9 @@ class Job extends \Google\Collection
     return $this->placement;
   }
   /**
-   * @param PrestoJob
+   * Optional. Job is a Presto job.
+   *
+   * @param PrestoJob $prestoJob
    */
   public function setPrestoJob(PrestoJob $prestoJob)
   {
@@ -244,7 +304,9 @@ class Job extends \Google\Collection
     return $this->prestoJob;
   }
   /**
-   * @param PySparkJob
+   * Optional. Job is a PySpark job.
+   *
+   * @param PySparkJob $pysparkJob
    */
   public function setPysparkJob(PySparkJob $pysparkJob)
   {
@@ -258,7 +320,11 @@ class Job extends \Google\Collection
     return $this->pysparkJob;
   }
   /**
-   * @param JobReference
+   * Optional. The fully qualified reference to the job, which can be used to
+   * obtain the equivalent REST path of the job resource. If this property is
+   * not specified when a job is created, the server generates a job_id.
+   *
+   * @param JobReference $reference
    */
   public function setReference(JobReference $reference)
   {
@@ -272,7 +338,9 @@ class Job extends \Google\Collection
     return $this->reference;
   }
   /**
-   * @param JobScheduling
+   * Optional. Job scheduling configuration.
+   *
+   * @param JobScheduling $scheduling
    */
   public function setScheduling(JobScheduling $scheduling)
   {
@@ -286,7 +354,9 @@ class Job extends \Google\Collection
     return $this->scheduling;
   }
   /**
-   * @param SparkJob
+   * Optional. Job is a Spark job.
+   *
+   * @param SparkJob $sparkJob
    */
   public function setSparkJob(SparkJob $sparkJob)
   {
@@ -300,7 +370,9 @@ class Job extends \Google\Collection
     return $this->sparkJob;
   }
   /**
-   * @param SparkRJob
+   * Optional. Job is a SparkR job.
+   *
+   * @param SparkRJob $sparkRJob
    */
   public function setSparkRJob(SparkRJob $sparkRJob)
   {
@@ -314,7 +386,9 @@ class Job extends \Google\Collection
     return $this->sparkRJob;
   }
   /**
-   * @param SparkSqlJob
+   * Optional. Job is a SparkSql job.
+   *
+   * @param SparkSqlJob $sparkSqlJob
    */
   public function setSparkSqlJob(SparkSqlJob $sparkSqlJob)
   {
@@ -328,7 +402,11 @@ class Job extends \Google\Collection
     return $this->sparkSqlJob;
   }
   /**
-   * @param JobStatus
+   * Output only. The job status. Additional application-specific status
+   * information might be contained in the type_job and yarn_applications
+   * fields.
+   *
+   * @param JobStatus $status
    */
   public function setStatus(JobStatus $status)
   {
@@ -342,7 +420,9 @@ class Job extends \Google\Collection
     return $this->status;
   }
   /**
-   * @param JobStatus[]
+   * Output only. The previous job status.
+   *
+   * @param JobStatus[] $statusHistory
    */
   public function setStatusHistory($statusHistory)
   {
@@ -356,7 +436,9 @@ class Job extends \Google\Collection
     return $this->statusHistory;
   }
   /**
-   * @param TrinoJob
+   * Optional. Job is a Trino job.
+   *
+   * @param TrinoJob $trinoJob
    */
   public function setTrinoJob(TrinoJob $trinoJob)
   {
@@ -370,7 +452,11 @@ class Job extends \Google\Collection
     return $this->trinoJob;
   }
   /**
-   * @param YarnApplication[]
+   * Output only. The collection of YARN applications spun up by this job.Beta
+   * Feature: This report is available for testing purposes only. It might be
+   * changed before final release.
+   *
+   * @param YarnApplication[] $yarnApplications
    */
   public function setYarnApplications($yarnApplications)
   {

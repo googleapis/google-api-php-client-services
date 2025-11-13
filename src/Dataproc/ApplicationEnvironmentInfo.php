@@ -46,7 +46,7 @@ class ApplicationEnvironmentInfo extends \Google\Collection
   public $systemProperties;
 
   /**
-   * @param string[]
+   * @param string[] $classpathEntries
    */
   public function setClasspathEntries($classpathEntries)
   {
@@ -60,7 +60,7 @@ class ApplicationEnvironmentInfo extends \Google\Collection
     return $this->classpathEntries;
   }
   /**
-   * @param string[]
+   * @param string[] $hadoopProperties
    */
   public function setHadoopProperties($hadoopProperties)
   {
@@ -74,7 +74,7 @@ class ApplicationEnvironmentInfo extends \Google\Collection
     return $this->hadoopProperties;
   }
   /**
-   * @param string[]
+   * @param string[] $metricsProperties
    */
   public function setMetricsProperties($metricsProperties)
   {
@@ -88,7 +88,7 @@ class ApplicationEnvironmentInfo extends \Google\Collection
     return $this->metricsProperties;
   }
   /**
-   * @param ResourceProfileInfo[]
+   * @param ResourceProfileInfo[] $resourceProfiles
    */
   public function setResourceProfiles($resourceProfiles)
   {
@@ -102,7 +102,7 @@ class ApplicationEnvironmentInfo extends \Google\Collection
     return $this->resourceProfiles;
   }
   /**
-   * @param SparkRuntimeInfo
+   * @param SparkRuntimeInfo $runtime
    */
   public function setRuntime(SparkRuntimeInfo $runtime)
   {
@@ -116,7 +116,7 @@ class ApplicationEnvironmentInfo extends \Google\Collection
     return $this->runtime;
   }
   /**
-   * @param string[]
+   * @param string[] $sparkProperties
    */
   public function setSparkProperties($sparkProperties)
   {
@@ -130,7 +130,7 @@ class ApplicationEnvironmentInfo extends \Google\Collection
     return $this->sparkProperties;
   }
   /**
-   * @param string[]
+   * @param string[] $systemProperties
    */
   public function setSystemProperties($systemProperties)
   {
