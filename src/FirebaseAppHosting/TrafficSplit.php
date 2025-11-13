@@ -20,16 +20,23 @@ namespace Google\Service\FirebaseAppHosting;
 class TrafficSplit extends \Google\Model
 {
   /**
+   * Required. The build that traffic is being routed to.
+   *
    * @var string
    */
   public $build;
   /**
+   * Required. The percentage of traffic to send to the build. Currently must be
+   * 100% or 0%.
+   *
    * @var int
    */
   public $percent;
 
   /**
-   * @param string
+   * Required. The build that traffic is being routed to.
+   *
+   * @param string $build
    */
   public function setBuild($build)
   {
@@ -43,7 +50,10 @@ class TrafficSplit extends \Google\Model
     return $this->build;
   }
   /**
-   * @param int
+   * Required. The percentage of traffic to send to the build. Currently must be
+   * 100% or 0%.
+   *
+   * @param int $percent
    */
   public function setPercent($percent)
   {

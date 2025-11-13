@@ -20,16 +20,35 @@ namespace Google\Service\FirebaseAppHosting;
 class Codebase extends \Google\Model
 {
   /**
+   * Required. The resource name for the Developer Connect
+   * [`gitRepositoryLink`](https://cloud.google.com/developer-connect/docs/api/r
+   * eference/rest/v1/projects.locations.connections.gitRepositoryLinks)
+   * connected to this backend, in the format: `projects/{project}/locations/{lo
+   * cation}/connections/{connection}/gitRepositoryLinks/{repositoryLink}` The
+   * connection for the `gitRepositoryLink` must made be using the Firebase App
+   * Hosting GitHub App via the Firebase Console.
+   *
    * @var string
    */
   public $repository;
   /**
+   * Optional. If `repository` is provided, the directory relative to the root
+   * of the repository to use as the root for the deployed web app.
+   *
    * @var string
    */
   public $rootDirectory;
 
   /**
-   * @param string
+   * Required. The resource name for the Developer Connect
+   * [`gitRepositoryLink`](https://cloud.google.com/developer-connect/docs/api/r
+   * eference/rest/v1/projects.locations.connections.gitRepositoryLinks)
+   * connected to this backend, in the format: `projects/{project}/locations/{lo
+   * cation}/connections/{connection}/gitRepositoryLinks/{repositoryLink}` The
+   * connection for the `gitRepositoryLink` must made be using the Firebase App
+   * Hosting GitHub App via the Firebase Console.
+   *
+   * @param string $repository
    */
   public function setRepository($repository)
   {
@@ -43,7 +62,10 @@ class Codebase extends \Google\Model
     return $this->repository;
   }
   /**
-   * @param string
+   * Optional. If `repository` is provided, the directory relative to the root
+   * of the repository to use as the root for the deployed web app.
+   *
+   * @param string $rootDirectory
    */
   public function setRootDirectory($rootDirectory)
   {

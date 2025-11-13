@@ -24,7 +24,9 @@ class TrafficSet extends \Google\Collection
   protected $splitsDataType = 'array';
 
   /**
-   * @param TrafficSplit[]
+   * Required. The list of traffic splits.
+   *
+   * @param TrafficSplit[] $splits
    */
   public function setSplits($splits)
   {

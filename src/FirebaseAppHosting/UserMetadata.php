@@ -20,20 +20,29 @@ namespace Google\Service\FirebaseAppHosting;
 class UserMetadata extends \Google\Model
 {
   /**
+   * Output only. The 'name' field in a Git user's git.config. Required by Git.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The 'email' field in a Git user's git.config, if available.
+   *
    * @var string
    */
   public $email;
   /**
+   * Output only. The URI of an image file associated with the user's account in
+   * an external source control provider, if available.
+   *
    * @var string
    */
   public $imageUri;
 
   /**
-   * @param string
+   * Output only. The 'name' field in a Git user's git.config. Required by Git.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +56,9 @@ class UserMetadata extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The 'email' field in a Git user's git.config, if available.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -61,7 +72,10 @@ class UserMetadata extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Output only. The URI of an image file associated with the user's account in
+   * an external source control provider, if available.
+   *
+   * @param string $imageUri
    */
   public function setImageUri($imageUri)
   {

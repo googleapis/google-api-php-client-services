@@ -23,7 +23,10 @@ class ManagedResource extends \Google\Model
   protected $runServiceDataType = '';
 
   /**
-   * @param RunService
+   * A Cloud Run [`service`](https://cloud.google.com/run/docs/reference/rest/v2
+   * /projects.locations.services#resource:-service), managed by App Hosting.
+   *
+   * @param RunService $runService
    */
   public function setRunService(RunService $runService)
   {

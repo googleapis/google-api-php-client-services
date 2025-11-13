@@ -20,20 +20,30 @@ namespace Google\Service\FirebaseAppHosting;
 class SourceUserMetadata extends \Google\Model
 {
   /**
+   * Output only. The user-chosen displayname. May be empty.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The account email linked to the EUC that created the build.
+   * May be a service account or other robot account.
+   *
    * @var string
    */
   public $email;
   /**
+   * Output only. The URI of a profile photo associated with the user who
+   * created the build.
+   *
    * @var string
    */
   public $imageUri;
 
   /**
-   * @param string
+   * Output only. The user-chosen displayname. May be empty.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +57,10 @@ class SourceUserMetadata extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The account email linked to the EUC that created the build.
+   * May be a service account or other robot account.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -61,7 +74,10 @@ class SourceUserMetadata extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Output only. The URI of a profile photo associated with the user who
+   * created the build.
+   *
+   * @param string $imageUri
    */
   public function setImageUri($imageUri)
   {

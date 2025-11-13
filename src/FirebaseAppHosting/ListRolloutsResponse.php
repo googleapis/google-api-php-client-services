@@ -21,18 +21,24 @@ class ListRolloutsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying the next page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $rolloutsType = Rollout::class;
   protected $rolloutsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying the next page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListRolloutsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Rollout[]
+   * The list of rollouts.
+   *
+   * @param Rollout[] $rollouts
    */
   public function setRollouts($rollouts)
   {
@@ -60,7 +68,9 @@ class ListRolloutsResponse extends \Google\Collection
     return $this->rollouts;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

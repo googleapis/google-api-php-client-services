@@ -20,28 +20,46 @@ namespace Google\Service\FirebaseAppHosting;
 class Traffic extends \Google\Model
 {
   /**
+   * Optional. Unstructured key value map that may be set by external tools to
+   * store and arbitrary metadata. They are not queryable and should be
+   * preserved when modifying objects.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. Time at which the backend was created.
+   *
    * @var string
    */
   public $createTime;
   protected $currentType = TrafficSet::class;
   protected $currentDataType = '';
   /**
+   * Output only. Server-computed checksum based on other values; may be sent on
+   * update or delete to ensure operation is done on expected resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. Unstructured key value map that can be used to organize and
+   * categorize objects.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the backend's traffic. Format:
+   * `projects/{project}/locations/{locationId}/backends/{backendId}/traffic`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. A field that, if true, indicates that the system is working to
+   * make the backend's `current` match the requested `target` list.
+   *
    * @var bool
    */
   public $reconciling;
@@ -50,16 +68,24 @@ class Traffic extends \Google\Model
   protected $targetType = TrafficSet::class;
   protected $targetDataType = '';
   /**
+   * Output only. System-assigned, unique identifier.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Time at which the backend was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. Unstructured key value map that may be set by external tools to
+   * store and arbitrary metadata. They are not queryable and should be
+   * preserved when modifying objects.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -73,7 +99,9 @@ class Traffic extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * Output only. Time at which the backend was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -87,7 +115,11 @@ class Traffic extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param TrafficSet
+   * Output only. Current state of traffic allocation for the backend. When
+   * setting `target`, this field may differ for some time until the desired
+   * state is reached.
+   *
+   * @param TrafficSet $current
    */
   public function setCurrent(TrafficSet $current)
   {
@@ -101,7 +133,10 @@ class Traffic extends \Google\Model
     return $this->current;
   }
   /**
-   * @param string
+   * Output only. Server-computed checksum based on other values; may be sent on
+   * update or delete to ensure operation is done on expected resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -115,7 +150,10 @@ class Traffic extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. Unstructured key value map that can be used to organize and
+   * categorize objects.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -129,7 +167,10 @@ class Traffic extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the backend's traffic. Format:
+   * `projects/{project}/locations/{locationId}/backends/{backendId}/traffic`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -143,7 +184,10 @@ class Traffic extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. A field that, if true, indicates that the system is working to
+   * make the backend's `current` match the requested `target` list.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -157,7 +201,10 @@ class Traffic extends \Google\Model
     return $this->reconciling;
   }
   /**
-   * @param RolloutPolicy
+   * A rollout policy specifies how new builds and automatic deployments are
+   * created.
+   *
+   * @param RolloutPolicy $rolloutPolicy
    */
   public function setRolloutPolicy(RolloutPolicy $rolloutPolicy)
   {
@@ -171,7 +218,11 @@ class Traffic extends \Google\Model
     return $this->rolloutPolicy;
   }
   /**
-   * @param TrafficSet
+   * Set to manually control the desired traffic for the backend. This will
+   * cause `current` to eventually match this value. The percentages must add up
+   * to 100%.
+   *
+   * @param TrafficSet $target
    */
   public function setTarget(TrafficSet $target)
   {
@@ -185,7 +236,9 @@ class Traffic extends \Google\Model
     return $this->target;
   }
   /**
-   * @param string
+   * Output only. System-assigned, unique identifier.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -199,7 +252,9 @@ class Traffic extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Time at which the backend was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

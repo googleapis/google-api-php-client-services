@@ -27,7 +27,9 @@ class BuildSource extends \Google\Model
   protected $containerDataType = '';
 
   /**
-   * @param ArchiveSource
+   * An archive source.
+   *
+   * @param ArchiveSource $archive
    */
   public function setArchive(ArchiveSource $archive)
   {
@@ -41,7 +43,9 @@ class BuildSource extends \Google\Model
     return $this->archive;
   }
   /**
-   * @param CodebaseSource
+   * A codebase source.
+   *
+   * @param CodebaseSource $codebase
    */
   public function setCodebase(CodebaseSource $codebase)
   {
@@ -55,7 +59,9 @@ class BuildSource extends \Google\Model
     return $this->codebase;
   }
   /**
-   * @param ContainerSource
+   * An Artifact Registry container image source.
+   *
+   * @param ContainerSource $container
    */
   public function setContainer(ContainerSource $container)
   {

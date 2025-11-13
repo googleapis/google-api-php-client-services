@@ -19,22 +19,67 @@ namespace Google\Service\FirebaseAppHosting;
 
 class LiveMigrationStep extends \Google\Collection
 {
+  /**
+   * The step's state is unspecified. The message is invalid if this is
+   * unspecified.
+   */
+  public const STEP_STATE_STEP_STATE_UNSPECIFIED = 'STEP_STATE_UNSPECIFIED';
+  /**
+   * App Hosting doesn't have enough information to construct the step yet.
+   * Complete any prior steps and/or resolve this step's issue to proceed.
+   */
+  public const STEP_STATE_PREPARING = 'PREPARING';
+  /**
+   * The step's state is pending. Complete prior steps before working on a
+   * `PENDING` step.
+   */
+  public const STEP_STATE_PENDING = 'PENDING';
+  /**
+   * The step is incomplete. You should complete any `dnsUpdates` changes to
+   * complete it.
+   */
+  public const STEP_STATE_INCOMPLETE = 'INCOMPLETE';
+  /**
+   * You've done your part to update records and present challenges as
+   * necessary. App Hosting is now completing background processes to complete
+   * the step, e.g. minting an SSL cert for your domain.
+   */
+  public const STEP_STATE_PROCESSING = 'PROCESSING';
+  /**
+   * The step is complete. You've already made the necessary changes to your
+   * domain and/or prior hosting service to advance to the next step. Once all
+   * steps are complete, App Hosting is ready to serve secure content on your
+   * domain.
+   */
+  public const STEP_STATE_COMPLETE = 'COMPLETE';
   protected $collection_key = 'relevantDomainStates';
   protected $dnsUpdatesType = DnsUpdates::class;
   protected $dnsUpdatesDataType = 'array';
   protected $issuesType = Status::class;
   protected $issuesDataType = 'array';
   /**
+   * Output only. One or more states from the `CustomDomainStatus` of the
+   * migrating domain that this step is attempting to make ACTIVE. For example,
+   * if the step is attempting to mint an SSL certificate, this field will
+   * include `CERT_STATE`.
+   *
    * @var string[]
    */
   public $relevantDomainStates;
   /**
+   * Output only. The state of the live migration step, indicates whether you
+   * should work to complete the step now, in the future, or have already
+   * completed it.
+   *
    * @var string
    */
   public $stepState;
 
   /**
-   * @param DnsUpdates[]
+   * Output only. DNS updates to facilitate your domain's zero-downtime
+   * migration to App Hosting.
+   *
+   * @param DnsUpdates[] $dnsUpdates
    */
   public function setDnsUpdates($dnsUpdates)
   {
@@ -48,7 +93,9 @@ class LiveMigrationStep extends \Google\Collection
     return $this->dnsUpdates;
   }
   /**
-   * @param Status[]
+   * Output only. Issues that prevent the current step from completing.
+   *
+   * @param Status[] $issues
    */
   public function setIssues($issues)
   {
@@ -62,7 +109,12 @@ class LiveMigrationStep extends \Google\Collection
     return $this->issues;
   }
   /**
-   * @param string[]
+   * Output only. One or more states from the `CustomDomainStatus` of the
+   * migrating domain that this step is attempting to make ACTIVE. For example,
+   * if the step is attempting to mint an SSL certificate, this field will
+   * include `CERT_STATE`.
+   *
+   * @param string[] $relevantDomainStates
    */
   public function setRelevantDomainStates($relevantDomainStates)
   {
@@ -76,14 +128,21 @@ class LiveMigrationStep extends \Google\Collection
     return $this->relevantDomainStates;
   }
   /**
-   * @param string
+   * Output only. The state of the live migration step, indicates whether you
+   * should work to complete the step now, in the future, or have already
+   * completed it.
+   *
+   * Accepted values: STEP_STATE_UNSPECIFIED, PREPARING, PENDING, INCOMPLETE,
+   * PROCESSING, COMPLETE
+   *
+   * @param self::STEP_STATE_* $stepState
    */
   public function setStepState($stepState)
   {
     $this->stepState = $stepState;
   }
   /**
-   * @return string
+   * @return self::STEP_STATE_*
    */
   public function getStepState()
   {
