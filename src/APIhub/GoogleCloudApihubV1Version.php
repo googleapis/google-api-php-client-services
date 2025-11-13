@@ -23,6 +23,11 @@ class GoogleCloudApihubV1Version extends \Google\Collection
   protected $accreditationType = GoogleCloudApihubV1AttributeValues::class;
   protected $accreditationDataType = '';
   /**
+   * Output only. The operations contained in the API version. These operations
+   * will be added to the version when a new spec is added or when an existing
+   * spec is updated. Format is `projects/{project}/locations/{location}/apis/{a
+   * pi}/versions/{version}/operations/{operation}`
+   *
    * @var string[]
    */
   public $apiOperations;
@@ -31,22 +36,38 @@ class GoogleCloudApihubV1Version extends \Google\Collection
   protected $complianceType = GoogleCloudApihubV1AttributeValues::class;
   protected $complianceDataType = '';
   /**
+   * Output only. The time at which the version was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The definitions contained in the API version. These
+   * definitions will be added to the version when a new spec is added or when
+   * an existing spec is updated. Format is `projects/{project}/locations/{locat
+   * ion}/apis/{api}/versions/{version}/definitions/{definition}`
+   *
    * @var string[]
    */
   public $definitions;
   /**
+   * Optional. The deployments linked to this API version. Note: A particular
+   * API version could be deployed to multiple deployments (for dev deployment,
+   * UAT deployment, etc) Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   *
    * @var string[]
    */
   public $deployments;
   /**
+   * Optional. The description of the version.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display name of the version.
+   *
    * @var string
    */
   public $displayName;
@@ -55,26 +76,48 @@ class GoogleCloudApihubV1Version extends \Google\Collection
   protected $lifecycleType = GoogleCloudApihubV1AttributeValues::class;
   protected $lifecycleDataType = '';
   /**
+   * Identifier. The name of the version. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The selected deployment for a Version resource. This can be used
+   * when special handling is needed on client side for a particular deployment
+   * linked to the version. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   *
    * @var string
    */
   public $selectedDeployment;
   protected $sourceMetadataType = GoogleCloudApihubV1SourceMetadata::class;
   protected $sourceMetadataDataType = 'array';
   /**
+   * Output only. The specs associated with this version. Note that an API
+   * version can be associated with multiple specs. Format is `projects/{project
+   * }/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+   *
    * @var string[]
    */
   public $specs;
   /**
+   * Output only. The time at which the version was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The accreditations associated with the API version. This maps to
+   * the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-accreditation`
+   * attribute. The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. All values should be from the list of allowed values defined for the
+   * attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $accreditation
    */
   public function setAccreditation(GoogleCloudApihubV1AttributeValues $accreditation)
   {
@@ -88,7 +131,12 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->accreditation;
   }
   /**
-   * @param string[]
+   * Output only. The operations contained in the API version. These operations
+   * will be added to the version when a new spec is added or when an existing
+   * spec is updated. Format is `projects/{project}/locations/{location}/apis/{a
+   * pi}/versions/{version}/operations/{operation}`
+   *
+   * @param string[] $apiOperations
    */
   public function setApiOperations($apiOperations)
   {
@@ -102,7 +150,12 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->apiOperations;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues[]
+   * Optional. The list of user defined attributes associated with the Version
+   * resource. The key is the attribute name. It will be of the format:
+   * `projects/{project}/locations/{location}/attributes/{attribute}`. The value
+   * is the attribute values associated with the resource.
+   *
+   * @param GoogleCloudApihubV1AttributeValues[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -116,7 +169,15 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The compliance associated with the API version. This maps to the
+   * following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-compliance`
+   * attribute. The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. All values should be from the list of allowed values defined for the
+   * attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $compliance
    */
   public function setCompliance(GoogleCloudApihubV1AttributeValues $compliance)
   {
@@ -130,7 +191,9 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->compliance;
   }
   /**
-   * @param string
+   * Output only. The time at which the version was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -144,7 +207,12 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string[]
+   * Output only. The definitions contained in the API version. These
+   * definitions will be added to the version when a new spec is added or when
+   * an existing spec is updated. Format is `projects/{project}/locations/{locat
+   * ion}/apis/{api}/versions/{version}/definitions/{definition}`
+   *
+   * @param string[] $definitions
    */
   public function setDefinitions($definitions)
   {
@@ -158,7 +226,12 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->definitions;
   }
   /**
-   * @param string[]
+   * Optional. The deployments linked to this API version. Note: A particular
+   * API version could be deployed to multiple deployments (for dev deployment,
+   * UAT deployment, etc) Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   *
+   * @param string[] $deployments
    */
   public function setDeployments($deployments)
   {
@@ -172,7 +245,9 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->deployments;
   }
   /**
-   * @param string
+   * Optional. The description of the version.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -186,7 +261,9 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display name of the version.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -200,7 +277,9 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudApihubV1Documentation
+   * Optional. The documentation of the version.
+   *
+   * @param GoogleCloudApihubV1Documentation $documentation
    */
   public function setDocumentation(GoogleCloudApihubV1Documentation $documentation)
   {
@@ -214,7 +293,15 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->documentation;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The lifecycle of the API version. This maps to the following
+   * system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-lifecycle`
+   * attribute. The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. All values should be from the list of allowed values defined for the
+   * attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $lifecycle
    */
   public function setLifecycle(GoogleCloudApihubV1AttributeValues $lifecycle)
   {
@@ -228,7 +315,10 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->lifecycle;
   }
   /**
-   * @param string
+   * Identifier. The name of the version. Format:
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -242,7 +332,12 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The selected deployment for a Version resource. This can be used
+   * when special handling is needed on client side for a particular deployment
+   * linked to the version. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   *
+   * @param string $selectedDeployment
    */
   public function setSelectedDeployment($selectedDeployment)
   {
@@ -256,7 +351,10 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->selectedDeployment;
   }
   /**
-   * @param GoogleCloudApihubV1SourceMetadata[]
+   * Output only. The list of sources and metadata from the sources of the
+   * version.
+   *
+   * @param GoogleCloudApihubV1SourceMetadata[] $sourceMetadata
    */
   public function setSourceMetadata($sourceMetadata)
   {
@@ -270,7 +368,11 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->sourceMetadata;
   }
   /**
-   * @param string[]
+   * Output only. The specs associated with this version. Note that an API
+   * version can be associated with multiple specs. Format is `projects/{project
+   * }/locations/{location}/apis/{api}/versions/{version}/specs/{spec}`
+   *
+   * @param string[] $specs
    */
   public function setSpecs($specs)
   {
@@ -284,7 +386,9 @@ class GoogleCloudApihubV1Version extends \Google\Collection
     return $this->specs;
   }
   /**
-   * @param string
+   * Output only. The time at which the version was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

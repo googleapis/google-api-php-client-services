@@ -21,12 +21,18 @@ class GoogleCloudApihubV1StringAttributeValues extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Required. The attribute values in case attribute data type is string or
+   * JSON.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Required. The attribute values in case attribute data type is string or
+   * JSON.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

@@ -23,7 +23,10 @@ class GoogleCloudApihubV1SearchResult extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param GoogleCloudApihubV1ApiHubResource
+   * This represents the ApiHubResource. Note: Only selected fields of the
+   * resources are populated in response.
+   *
+   * @param GoogleCloudApihubV1ApiHubResource $resource
    */
   public function setResource(GoogleCloudApihubV1ApiHubResource $resource)
   {

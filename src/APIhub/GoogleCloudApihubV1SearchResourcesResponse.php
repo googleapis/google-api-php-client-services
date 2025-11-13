@@ -21,6 +21,10 @@ class GoogleCloudApihubV1SearchResourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'searchResults';
   /**
+   * Pass this token in the SearchResourcesRequest to continue to list results.
+   * If all results have been returned, this field is an empty string or not
+   * present in the response.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class GoogleCloudApihubV1SearchResourcesResponse extends \Google\Collection
   protected $searchResultsDataType = 'array';
 
   /**
-   * @param string
+   * Pass this token in the SearchResourcesRequest to continue to list results.
+   * If all results have been returned, this field is an empty string or not
+   * present in the response.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,10 @@ class GoogleCloudApihubV1SearchResourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApihubV1SearchResult[]
+   * List of search results according to the filter and search query specified.
+   * The order of search results represents the ranking.
+   *
+   * @param GoogleCloudApihubV1SearchResult[] $searchResults
    */
   public function setSearchResults($searchResults)
   {

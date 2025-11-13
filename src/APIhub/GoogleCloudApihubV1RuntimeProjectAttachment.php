@@ -20,20 +20,33 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1RuntimeProjectAttachment extends \Google\Model
 {
   /**
+   * Output only. Create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Identifier. The resource name of a runtime project attachment. Format: "pro
+   * jects/{project}/locations/{location}/runtimeProjectAttachments/{runtime_pro
+   * ject_attachment}".
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Immutable. Google cloud project name in the format:
+   * "projects/abc" or "projects/123". As input, project name with either
+   * project id or number are accepted. As output, this field will contain
+   * project number.
+   *
    * @var string
    */
   public $runtimeProject;
 
   /**
-   * @param string
+   * Output only. Create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,7 +60,11 @@ class GoogleCloudApihubV1RuntimeProjectAttachment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Identifier. The resource name of a runtime project attachment. Format: "pro
+   * jects/{project}/locations/{location}/runtimeProjectAttachments/{runtime_pro
+   * ject_attachment}".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +78,12 @@ class GoogleCloudApihubV1RuntimeProjectAttachment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Immutable. Google cloud project name in the format:
+   * "projects/abc" or "projects/123". As input, project name with either
+   * project id or number are accepted. As output, this field will contain
+   * project number.
+   *
+   * @param string $runtimeProject
    */
   public function setRuntimeProject($runtimeProject)
   {

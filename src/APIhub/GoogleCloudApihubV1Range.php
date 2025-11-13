@@ -25,7 +25,9 @@ class GoogleCloudApihubV1Range extends \Google\Model
   protected $startDataType = '';
 
   /**
-   * @param GoogleCloudApihubV1Point
+   * Required. End of the issue.
+   *
+   * @param GoogleCloudApihubV1Point $end
    */
   public function setEnd(GoogleCloudApihubV1Point $end)
   {
@@ -39,7 +41,9 @@ class GoogleCloudApihubV1Range extends \Google\Model
     return $this->end;
   }
   /**
-   * @param GoogleCloudApihubV1Point
+   * Required. Start of the issue.
+   *
+   * @param GoogleCloudApihubV1Point $start
    */
   public function setStart(GoogleCloudApihubV1Point $start)
   {
