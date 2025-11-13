@@ -23,12 +23,16 @@ class ListEnterprisesResponse extends \Google\Collection
   protected $enterprisesType = Enterprise::class;
   protected $enterprisesDataType = 'array';
   /**
+   * If there are more results, a token to retrieve next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Enterprise[]
+   * The list of enterprises.
+   *
+   * @param Enterprise[] $enterprises
    */
   public function setEnterprises($enterprises)
   {
@@ -42,7 +46,9 @@ class ListEnterprisesResponse extends \Google\Collection
     return $this->enterprises;
   }
   /**
-   * @param string
+   * If there are more results, a token to retrieve next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

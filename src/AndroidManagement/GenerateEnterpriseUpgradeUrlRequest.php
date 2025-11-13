@@ -21,16 +21,36 @@ class GenerateEnterpriseUpgradeUrlRequest extends \Google\Collection
 {
   protected $collection_key = 'allowedDomains';
   /**
+   * Optional. Email address used to prefill the admin field of the enterprise
+   * signup form as part of the upgrade process. This value is a hint only and
+   * can be altered by the user. Personal email addresses are not allowed. If
+   * allowedDomains is non-empty then this must belong to one of the
+   * allowedDomains.
+   *
    * @var string
    */
   public $adminEmail;
   /**
+   * Optional. A list of domains that are permitted for the admin email. The IT
+   * admin cannot enter an email address with a domain name that is not in this
+   * list. Subdomains of domains in this list are not allowed but can be allowed
+   * by adding a second entry which has *. prefixed to the domain name (e.g.
+   * *.example.com). If the field is not present or is an empty list then the IT
+   * admin is free to use any valid domain name. Personal email domains are not
+   * allowed.
+   *
    * @var string[]
    */
   public $allowedDomains;
 
   /**
-   * @param string
+   * Optional. Email address used to prefill the admin field of the enterprise
+   * signup form as part of the upgrade process. This value is a hint only and
+   * can be altered by the user. Personal email addresses are not allowed. If
+   * allowedDomains is non-empty then this must belong to one of the
+   * allowedDomains.
+   *
+   * @param string $adminEmail
    */
   public function setAdminEmail($adminEmail)
   {
@@ -44,7 +64,15 @@ class GenerateEnterpriseUpgradeUrlRequest extends \Google\Collection
     return $this->adminEmail;
   }
   /**
-   * @param string[]
+   * Optional. A list of domains that are permitted for the admin email. The IT
+   * admin cannot enter an email address with a domain name that is not in this
+   * list. Subdomains of domains in this list are not allowed but can be allowed
+   * by adding a second entry which has *. prefixed to the domain name (e.g.
+   * *.example.com). If the field is not present or is an empty list then the IT
+   * admin is free to use any valid domain name. Personal email domains are not
+   * allowed.
+   *
+   * @param string[] $allowedDomains
    */
   public function setAllowedDomains($allowedDomains)
   {

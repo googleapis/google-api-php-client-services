@@ -20,12 +20,18 @@ namespace Google\Service\AndroidManagement;
 class GenerateEnterpriseUpgradeUrlResponse extends \Google\Model
 {
   /**
+   * A URL for an enterprise admin to upgrade their enterprise. The page can't
+   * be rendered in an iframe.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * A URL for an enterprise admin to upgrade their enterprise. The page can't
+   * be rendered in an iframe.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

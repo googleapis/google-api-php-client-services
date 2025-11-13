@@ -23,12 +23,16 @@ class ListEnrollmentTokensResponse extends \Google\Collection
   protected $enrollmentTokensType = EnrollmentToken::class;
   protected $enrollmentTokensDataType = 'array';
   /**
+   * If there are more results, a token to retrieve next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param EnrollmentToken[]
+   * The list of enrollment tokens.
+   *
+   * @param EnrollmentToken[] $enrollmentTokens
    */
   public function setEnrollmentTokens($enrollmentTokens)
   {
@@ -42,7 +46,9 @@ class ListEnrollmentTokensResponse extends \Google\Collection
     return $this->enrollmentTokens;
   }
   /**
-   * @param string
+   * If there are more results, a token to retrieve next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

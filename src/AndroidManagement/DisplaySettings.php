@@ -25,7 +25,9 @@ class DisplaySettings extends \Google\Model
   protected $screenTimeoutSettingsDataType = '';
 
   /**
-   * @param ScreenBrightnessSettings
+   * Optional. Controls the screen brightness settings.
+   *
+   * @param ScreenBrightnessSettings $screenBrightnessSettings
    */
   public function setScreenBrightnessSettings(ScreenBrightnessSettings $screenBrightnessSettings)
   {
@@ -39,7 +41,9 @@ class DisplaySettings extends \Google\Model
     return $this->screenBrightnessSettings;
   }
   /**
-   * @param ScreenTimeoutSettings
+   * Optional. Controls the screen timeout settings.
+   *
+   * @param ScreenTimeoutSettings $screenTimeoutSettings
    */
   public function setScreenTimeoutSettings(ScreenTimeoutSettings $screenTimeoutSettings)
   {

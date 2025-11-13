@@ -20,20 +20,28 @@ namespace Google\Service\AndroidManagement;
 class KeyImportEvent extends \Google\Model
 {
   /**
+   * UID of the application which imported the key
+   *
    * @var int
    */
   public $applicationUid;
   /**
+   * Alias of the key.
+   *
    * @var string
    */
   public $keyAlias;
   /**
+   * Whether the operation was successful.
+   *
    * @var bool
    */
   public $success;
 
   /**
-   * @param int
+   * UID of the application which imported the key
+   *
+   * @param int $applicationUid
    */
   public function setApplicationUid($applicationUid)
   {
@@ -47,7 +55,9 @@ class KeyImportEvent extends \Google\Model
     return $this->applicationUid;
   }
   /**
-   * @param string
+   * Alias of the key.
+   *
+   * @param string $keyAlias
    */
   public function setKeyAlias($keyAlias)
   {
@@ -61,7 +71,9 @@ class KeyImportEvent extends \Google\Model
     return $this->keyAlias;
   }
   /**
-   * @param bool
+   * Whether the operation was successful.
+   *
+   * @param bool $success
    */
   public function setSuccess($success)
   {

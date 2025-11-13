@@ -20,12 +20,16 @@ namespace Google\Service\AndroidManagement;
 class CertValidationFailureEvent extends \Google\Model
 {
   /**
+   * The reason why certification validation failed.
+   *
    * @var string
    */
   public $failureReason;
 
   /**
-   * @param string
+   * The reason why certification validation failed.
+   *
+   * @param string $failureReason
    */
   public function setFailureReason($failureReason)
   {

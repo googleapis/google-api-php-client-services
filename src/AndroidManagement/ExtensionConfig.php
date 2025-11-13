@@ -21,22 +21,57 @@ class ExtensionConfig extends \Google\Collection
 {
   protected $collection_key = 'signingKeyFingerprintsSha256';
   /**
+   * Fully qualified class name of the receiver service class for Android Device
+   * Policy to notify the extension app of any local command status updates. The
+   * service must be exported in the extension app's AndroidManifest.xml and
+   * extend NotificationReceiverService (https://developers.google.com/android/m
+   * anagement/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide
+   * for more details).
+   *
+   * @deprecated
    * @var string
    */
   public $notificationReceiver;
   /**
+   * Hex-encoded SHA-256 hashes of the signing key certificates of the extension
+   * app. Only hexadecimal string representations of 64 characters are valid.The
+   * signing key certificate fingerprints are always obtained from the Play
+   * Store and this field is used to provide additional signing key certificate
+   * fingerprints. However, if the application is not available on the Play
+   * Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE
+   * is reported if this field is not set when the application is not available
+   * on the Play Store.The signing key certificate fingerprint of the extension
+   * app on the device must match one of the signing key certificate
+   * fingerprints obtained from the Play Store or the ones provided in this
+   * field for the app to be able to communicate with Android Device Policy.In
+   * production use cases, it is recommended to leave this empty.
+   *
+   * @deprecated
    * @var string[]
    */
   public $signingKeyFingerprintsSha256;
 
   /**
-   * @param string
+   * Fully qualified class name of the receiver service class for Android Device
+   * Policy to notify the extension app of any local command status updates. The
+   * service must be exported in the extension app's AndroidManifest.xml and
+   * extend NotificationReceiverService (https://developers.google.com/android/m
+   * anagement/reference/amapi/com/google/android/managementapi/notification/Not
+   * ificationReceiverService) (see Integrate with the AMAPI SDK
+   * (https://developers.google.com/android/management/sdk-integration) guide
+   * for more details).
+   *
+   * @deprecated
+   * @param string $notificationReceiver
    */
   public function setNotificationReceiver($notificationReceiver)
   {
     $this->notificationReceiver = $notificationReceiver;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getNotificationReceiver()
@@ -44,13 +79,28 @@ class ExtensionConfig extends \Google\Collection
     return $this->notificationReceiver;
   }
   /**
-   * @param string[]
+   * Hex-encoded SHA-256 hashes of the signing key certificates of the extension
+   * app. Only hexadecimal string representations of 64 characters are valid.The
+   * signing key certificate fingerprints are always obtained from the Play
+   * Store and this field is used to provide additional signing key certificate
+   * fingerprints. However, if the application is not available on the Play
+   * Store, this field needs to be set. A NonComplianceDetail with INVALID_VALUE
+   * is reported if this field is not set when the application is not available
+   * on the Play Store.The signing key certificate fingerprint of the extension
+   * app on the device must match one of the signing key certificate
+   * fingerprints obtained from the Play Store or the ones provided in this
+   * field for the app to be able to communicate with Android Device Policy.In
+   * production use cases, it is recommended to leave this empty.
+   *
+   * @deprecated
+   * @param string[] $signingKeyFingerprintsSha256
    */
   public function setSigningKeyFingerprintsSha256($signingKeyFingerprintsSha256)
   {
     $this->signingKeyFingerprintsSha256 = $signingKeyFingerprintsSha256;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getSigningKeyFingerprintsSha256()

@@ -21,22 +21,34 @@ class BatchUsageLogEvents extends \Google\Collection
 {
   protected $collection_key = 'usageLogEvents';
   /**
+   * If present, the name of the device in the form
+   * ‘enterprises/{enterpriseId}/devices/{deviceId}’
+   *
    * @var string
    */
   public $device;
   /**
+   * The device timestamp when the batch of events were collected from the
+   * device.
+   *
    * @var string
    */
   public $retrievalTime;
   protected $usageLogEventsType = UsageLogEvent::class;
   protected $usageLogEventsDataType = 'array';
   /**
+   * If present, the resource name of the user that owns this device in the form
+   * ‘enterprises/{enterpriseId}/users/{userId}’.
+   *
    * @var string
    */
   public $user;
 
   /**
-   * @param string
+   * If present, the name of the device in the form
+   * ‘enterprises/{enterpriseId}/devices/{deviceId}’
+   *
+   * @param string $device
    */
   public function setDevice($device)
   {
@@ -50,7 +62,10 @@ class BatchUsageLogEvents extends \Google\Collection
     return $this->device;
   }
   /**
-   * @param string
+   * The device timestamp when the batch of events were collected from the
+   * device.
+   *
+   * @param string $retrievalTime
    */
   public function setRetrievalTime($retrievalTime)
   {
@@ -64,7 +79,10 @@ class BatchUsageLogEvents extends \Google\Collection
     return $this->retrievalTime;
   }
   /**
-   * @param UsageLogEvent[]
+   * The list of UsageLogEvent that were reported by the device, sorted
+   * chronologically by the event time.
+   *
+   * @param UsageLogEvent[] $usageLogEvents
    */
   public function setUsageLogEvents($usageLogEvents)
   {
@@ -78,7 +96,10 @@ class BatchUsageLogEvents extends \Google\Collection
     return $this->usageLogEvents;
   }
   /**
-   * @param string
+   * If present, the resource name of the user that owns this device in the form
+   * ‘enterprises/{enterpriseId}/users/{userId}’.
+   *
+   * @param string $user
    */
   public function setUser($user)
   {

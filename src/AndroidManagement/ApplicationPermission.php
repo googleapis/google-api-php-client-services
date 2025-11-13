@@ -20,20 +20,30 @@ namespace Google\Service\AndroidManagement;
 class ApplicationPermission extends \Google\Model
 {
   /**
+   * A longer description of the permission, providing more detail on what it
+   * affects. Localized.
+   *
    * @var string
    */
   public $description;
   /**
+   * The name of the permission. Localized.
+   *
    * @var string
    */
   public $name;
   /**
+   * An opaque string uniquely identifying the permission. Not localized.
+   *
    * @var string
    */
   public $permissionId;
 
   /**
-   * @param string
+   * A longer description of the permission, providing more detail on what it
+   * affects. Localized.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +57,9 @@ class ApplicationPermission extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The name of the permission. Localized.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +73,9 @@ class ApplicationPermission extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * An opaque string uniquely identifying the permission. Not localized.
+   *
+   * @param string $permissionId
    */
   public function setPermissionId($permissionId)
   {

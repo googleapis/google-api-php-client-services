@@ -20,20 +20,28 @@ namespace Google\Service\AndroidManagement;
 class ConnectEvent extends \Google\Model
 {
   /**
+   * The destination IP address of the connect call.
+   *
    * @var string
    */
   public $destinationIpAddress;
   /**
+   * The destination port of the connect call.
+   *
    * @var int
    */
   public $destinationPort;
   /**
+   * The package name of the UID that performed the connect call.
+   *
    * @var string
    */
   public $packageName;
 
   /**
-   * @param string
+   * The destination IP address of the connect call.
+   *
+   * @param string $destinationIpAddress
    */
   public function setDestinationIpAddress($destinationIpAddress)
   {
@@ -47,7 +55,9 @@ class ConnectEvent extends \Google\Model
     return $this->destinationIpAddress;
   }
   /**
-   * @param int
+   * The destination port of the connect call.
+   *
+   * @param int $destinationPort
    */
   public function setDestinationPort($destinationPort)
   {
@@ -61,7 +71,9 @@ class ConnectEvent extends \Google\Model
     return $this->destinationPort;
   }
   /**
-   * @param string
+   * The package name of the UID that performed the connect call.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {

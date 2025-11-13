@@ -20,16 +20,25 @@ namespace Google\Service\AndroidManagement;
 class DpcMigrationInfo extends \Google\Model
 {
   /**
+   * Output only. If this device was migrated from another DPC, the
+   * additionalData field of the migration token is populated here.
+   *
    * @var string
    */
   public $additionalData;
   /**
+   * Output only. If this device was migrated from another DPC, this is its
+   * package name. Not populated otherwise.
+   *
    * @var string
    */
   public $previousDpc;
 
   /**
-   * @param string
+   * Output only. If this device was migrated from another DPC, the
+   * additionalData field of the migration token is populated here.
+   *
+   * @param string $additionalData
    */
   public function setAdditionalData($additionalData)
   {
@@ -43,7 +52,10 @@ class DpcMigrationInfo extends \Google\Model
     return $this->additionalData;
   }
   /**
-   * @param string
+   * Output only. If this device was migrated from another DPC, this is its
+   * package name. Not populated otherwise.
+   *
+   * @param string $previousDpc
    */
   public function setPreviousDpc($previousDpc)
   {

@@ -20,16 +20,30 @@ namespace Google\Service\AndroidManagement;
 class EnterpriseUpgradeEvent extends \Google\Model
 {
   /**
+   * Unspecified. This value is not used.
+   */
+  public const UPGRADE_STATE_UPGRADE_STATE_UNSPECIFIED = 'UPGRADE_STATE_UNSPECIFIED';
+  /**
+   * The upgrade has succeeded.
+   */
+  public const UPGRADE_STATE_UPGRADE_STATE_SUCCEEDED = 'UPGRADE_STATE_SUCCEEDED';
+  /**
+   * The name of upgraded enterprise in the format "enterprises/{enterprise}"
+   *
    * @var string
    */
   public $enterprise;
   /**
+   * Output only. The upgrade state of the enterprise.
+   *
    * @var string
    */
   public $upgradeState;
 
   /**
-   * @param string
+   * The name of upgraded enterprise in the format "enterprises/{enterprise}"
+   *
+   * @param string $enterprise
    */
   public function setEnterprise($enterprise)
   {
@@ -43,14 +57,18 @@ class EnterpriseUpgradeEvent extends \Google\Model
     return $this->enterprise;
   }
   /**
-   * @param string
+   * Output only. The upgrade state of the enterprise.
+   *
+   * Accepted values: UPGRADE_STATE_UNSPECIFIED, UPGRADE_STATE_SUCCEEDED
+   *
+   * @param self::UPGRADE_STATE_* $upgradeState
    */
   public function setUpgradeState($upgradeState)
   {
     $this->upgradeState = $upgradeState;
   }
   /**
-   * @return string
+   * @return self::UPGRADE_STATE_*
    */
   public function getUpgradeState()
   {

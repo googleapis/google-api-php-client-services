@@ -20,12 +20,20 @@ namespace Google\Service\AndroidManagement;
 class EuiccChipInfo extends \Google\Model
 {
   /**
+   * Output only. The Embedded Identity Document (EID) that identifies the eUICC
+   * chip for each eUICC chip on the device. This is available on company owned
+   * devices running Android 13 and above.
+   *
    * @var string
    */
   public $eid;
 
   /**
-   * @param string
+   * Output only. The Embedded Identity Document (EID) that identifies the eUICC
+   * chip for each eUICC chip on the device. This is available on company owned
+   * devices running Android 13 and above.
+   *
+   * @param string $eid
    */
   public function setEid($eid)
   {

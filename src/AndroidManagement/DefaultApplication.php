@@ -20,12 +20,18 @@ namespace Google\Service\AndroidManagement;
 class DefaultApplication extends \Google\Model
 {
   /**
+   * Required. The package name that should be set as the default application.
+   * The policy is rejected if the package name is invalid.
+   *
    * @var string
    */
   public $packageName;
 
   /**
-   * @param string
+   * Required. The package name that should be set as the default application.
+   * The policy is rejected if the package name is invalid.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {

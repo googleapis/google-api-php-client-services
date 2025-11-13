@@ -20,19 +20,47 @@ namespace Google\Service\AndroidManagement;
 class DefaultApplicationContext extends \Google\Model
 {
   /**
+   * Unspecified. This value must not be used.
+   */
+  public const DEFAULT_APPLICATION_SCOPE_DEFAULT_APPLICATION_SCOPE_UNSPECIFIED = 'DEFAULT_APPLICATION_SCOPE_UNSPECIFIED';
+  /**
+   * Sets the application as the default on fully managed devices.
+   */
+  public const DEFAULT_APPLICATION_SCOPE_SCOPE_FULLY_MANAGED = 'SCOPE_FULLY_MANAGED';
+  /**
+   * Sets the application as the work profile default.Only supported for
+   * DEFAULT_BROWSER, DEFAULT_CALL_REDIRECTION, DEFAULT_CALL_SCREENING,
+   * DEFAULT_DIALER and DEFAULT_WALLET.
+   */
+  public const DEFAULT_APPLICATION_SCOPE_SCOPE_WORK_PROFILE = 'SCOPE_WORK_PROFILE';
+  /**
+   * Sets the application as the personal profile default on company-owned
+   * devices with a work profile. Only pre-installed system apps can be set as
+   * the default.Only supported for DEFAULT_BROWSER, DEFAULT_DIALER, DEFAULT_SMS
+   * and DEFAULT_WALLET.
+   */
+  public const DEFAULT_APPLICATION_SCOPE_SCOPE_PERSONAL_PROFILE = 'SCOPE_PERSONAL_PROFILE';
+  /**
+   * Output only. The scope of non-compliant default application setting.
+   *
    * @var string
    */
   public $defaultApplicationScope;
 
   /**
-   * @param string
+   * Output only. The scope of non-compliant default application setting.
+   *
+   * Accepted values: DEFAULT_APPLICATION_SCOPE_UNSPECIFIED,
+   * SCOPE_FULLY_MANAGED, SCOPE_WORK_PROFILE, SCOPE_PERSONAL_PROFILE
+   *
+   * @param self::DEFAULT_APPLICATION_SCOPE_* $defaultApplicationScope
    */
   public function setDefaultApplicationScope($defaultApplicationScope)
   {
     $this->defaultApplicationScope = $defaultApplicationScope;
   }
   /**
-   * @return string
+   * @return self::DEFAULT_APPLICATION_SCOPE_*
    */
   public function getDefaultApplicationScope()
   {

@@ -21,6 +21,8 @@ class ListWebAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'webApps';
   /**
+   * If there are more results, a token to retrieve next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListWebAppsResponse extends \Google\Collection
   protected $webAppsDataType = 'array';
 
   /**
-   * @param string
+   * If there are more results, a token to retrieve next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListWebAppsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param WebApp[]
+   * The list of web apps.
+   *
+   * @param WebApp[] $webApps
    */
   public function setWebApps($webApps)
   {

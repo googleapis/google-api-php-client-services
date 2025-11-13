@@ -20,16 +20,28 @@ namespace Google\Service\AndroidManagement;
 class ExternalData extends \Google\Model
 {
   /**
+   * The base-64 encoded SHA-256 hash of the content hosted at url. If the
+   * content doesn't match this hash, Android Device Policy won't use the data.
+   *
    * @var string
    */
   public $sha256Hash;
   /**
+   * The absolute URL to the data, which must use either the http or https
+   * scheme. Android Device Policy doesn't provide any credentials in the GET
+   * request, so the URL must be publicly accessible. Including a long, random
+   * component in the URL may be used to prevent attackers from discovering the
+   * URL.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The base-64 encoded SHA-256 hash of the content hosted at url. If the
+   * content doesn't match this hash, Android Device Policy won't use the data.
+   *
+   * @param string $sha256Hash
    */
   public function setSha256Hash($sha256Hash)
   {
@@ -43,7 +55,13 @@ class ExternalData extends \Google\Model
     return $this->sha256Hash;
   }
   /**
-   * @param string
+   * The absolute URL to the data, which must use either the http or https
+   * scheme. Android Device Policy doesn't provide any credentials in the GET
+   * request, so the URL must be publicly accessible. Including a long, random
+   * component in the URL may be used to prevent attackers from discovering the
+   * URL.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\AndroidManagement;
 class FilePushedEvent extends \Google\Model
 {
   /**
+   * The path of the file being pushed.
+   *
    * @var string
    */
   public $filePath;
 
   /**
-   * @param string
+   * The path of the file being pushed.
+   *
+   * @param string $filePath
    */
   public function setFilePath($filePath)
   {

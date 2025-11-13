@@ -20,12 +20,16 @@ namespace Google\Service\AndroidManagement;
 class CryptoSelfTestCompletedEvent extends \Google\Model
 {
   /**
+   * Whether the test succeeded.
+   *
    * @var bool
    */
   public $success;
 
   /**
-   * @param bool
+   * Whether the test succeeded.
+   *
+   * @param bool $success
    */
   public function setSuccess($success)
   {

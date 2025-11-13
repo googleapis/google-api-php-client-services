@@ -20,16 +20,23 @@ namespace Google\Service\AndroidManagement;
 class ManagedPropertyEntry extends \Google\Model
 {
   /**
+   * The human-readable name of the value. Localized.
+   *
    * @var string
    */
   public $name;
   /**
+   * The machine-readable value of the entry, which should be used in the
+   * configuration. Not localized.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The human-readable name of the value. Localized.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +50,10 @@ class ManagedPropertyEntry extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The machine-readable value of the entry, which should be used in the
+   * configuration. Not localized.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

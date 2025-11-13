@@ -20,16 +20,58 @@ namespace Google\Service\AndroidManagement;
 class ApplicationEvent extends \Google\Model
 {
   /**
+   * This value is disallowed.
+   */
+  public const EVENT_TYPE_APPLICATION_EVENT_TYPE_UNSPECIFIED = 'APPLICATION_EVENT_TYPE_UNSPECIFIED';
+  /**
+   * The app was installed.
+   */
+  public const EVENT_TYPE_INSTALLED = 'INSTALLED';
+  /**
+   * The app was changed, for example, a component was enabled or disabled.
+   */
+  public const EVENT_TYPE_CHANGED = 'CHANGED';
+  /**
+   * The app data was cleared.
+   */
+  public const EVENT_TYPE_DATA_CLEARED = 'DATA_CLEARED';
+  /**
+   * The app was removed.
+   */
+  public const EVENT_TYPE_REMOVED = 'REMOVED';
+  /**
+   * A new version of the app has been installed, replacing the old version.
+   */
+  public const EVENT_TYPE_REPLACED = 'REPLACED';
+  /**
+   * The app was restarted.
+   */
+  public const EVENT_TYPE_RESTARTED = 'RESTARTED';
+  /**
+   * The app was pinned to the foreground.
+   */
+  public const EVENT_TYPE_PINNED = 'PINNED';
+  /**
+   * The app was unpinned.
+   */
+  public const EVENT_TYPE_UNPINNED = 'UNPINNED';
+  /**
+   * The creation time of the event.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * App event type.
+   *
    * @var string
    */
   public $eventType;
 
   /**
-   * @param string
+   * The creation time of the event.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -43,14 +85,19 @@ class ApplicationEvent extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * App event type.
+   *
+   * Accepted values: APPLICATION_EVENT_TYPE_UNSPECIFIED, INSTALLED, CHANGED,
+   * DATA_CLEARED, REMOVED, REPLACED, RESTARTED, PINNED, UNPINNED
+   *
+   * @param self::EVENT_TYPE_* $eventType
    */
   public function setEventType($eventType)
   {
     $this->eventType = $eventType;
   }
   /**
-   * @return string
+   * @return self::EVENT_TYPE_*
    */
   public function getEventType()
   {

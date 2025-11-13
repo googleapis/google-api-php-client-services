@@ -19,7 +19,17 @@ namespace Google\Service\AndroidManagement;
 
 class Location extends \Google\Model
 {
+  /**
+   * The latitude position of the location
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * The longitude position of the location
+   *
+   * @var 
+   */
   public $longitude;
 
   public function setLatitude($latitude)

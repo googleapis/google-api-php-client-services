@@ -23,7 +23,9 @@ class AppProcessStartEvent extends \Google\Model
   protected $processInfoDataType = '';
 
   /**
-   * @param AppProcessInfo
+   * Information about a process.
+   *
+   * @param AppProcessInfo $processInfo
    */
   public function setProcessInfo(AppProcessInfo $processInfo)
   {

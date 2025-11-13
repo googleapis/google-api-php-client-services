@@ -20,20 +20,28 @@ namespace Google\Service\AndroidManagement;
 class KeyGeneratedEvent extends \Google\Model
 {
   /**
+   * UID of the application which generated the key.
+   *
    * @var int
    */
   public $applicationUid;
   /**
+   * Alias of the key.
+   *
    * @var string
    */
   public $keyAlias;
   /**
+   * Whether the operation was successful.
+   *
    * @var bool
    */
   public $success;
 
   /**
-   * @param int
+   * UID of the application which generated the key.
+   *
+   * @param int $applicationUid
    */
   public function setApplicationUid($applicationUid)
   {
@@ -47,7 +55,9 @@ class KeyGeneratedEvent extends \Google\Model
     return $this->applicationUid;
   }
   /**
-   * @param string
+   * Alias of the key.
+   *
+   * @param string $keyAlias
    */
   public function setKeyAlias($keyAlias)
   {
@@ -61,7 +71,9 @@ class KeyGeneratedEvent extends \Google\Model
     return $this->keyAlias;
   }
   /**
-   * @param bool
+   * Whether the operation was successful.
+   *
+   * @param bool $success
    */
   public function setSuccess($success)
   {

@@ -20,36 +20,58 @@ namespace Google\Service\AndroidManagement;
 class ContactInfo extends \Google\Model
 {
   /**
+   * Email address for a point of contact, which will be used to send important
+   * announcements related to managed Google Play.
+   *
    * @var string
    */
   public $contactEmail;
   /**
+   * The email of the data protection officer. The email is validated but not
+   * verified.
+   *
    * @var string
    */
   public $dataProtectionOfficerEmail;
   /**
+   * The name of the data protection officer.
+   *
    * @var string
    */
   public $dataProtectionOfficerName;
   /**
+   * The phone number of the data protection officer The phone number is
+   * validated but not verified.
+   *
    * @var string
    */
   public $dataProtectionOfficerPhone;
   /**
+   * The email of the EU representative. The email is validated but not
+   * verified.
+   *
    * @var string
    */
   public $euRepresentativeEmail;
   /**
+   * The name of the EU representative.
+   *
    * @var string
    */
   public $euRepresentativeName;
   /**
+   * The phone number of the EU representative. The phone number is validated
+   * but not verified.
+   *
    * @var string
    */
   public $euRepresentativePhone;
 
   /**
-   * @param string
+   * Email address for a point of contact, which will be used to send important
+   * announcements related to managed Google Play.
+   *
+   * @param string $contactEmail
    */
   public function setContactEmail($contactEmail)
   {
@@ -63,7 +85,10 @@ class ContactInfo extends \Google\Model
     return $this->contactEmail;
   }
   /**
-   * @param string
+   * The email of the data protection officer. The email is validated but not
+   * verified.
+   *
+   * @param string $dataProtectionOfficerEmail
    */
   public function setDataProtectionOfficerEmail($dataProtectionOfficerEmail)
   {
@@ -77,7 +102,9 @@ class ContactInfo extends \Google\Model
     return $this->dataProtectionOfficerEmail;
   }
   /**
-   * @param string
+   * The name of the data protection officer.
+   *
+   * @param string $dataProtectionOfficerName
    */
   public function setDataProtectionOfficerName($dataProtectionOfficerName)
   {
@@ -91,7 +118,10 @@ class ContactInfo extends \Google\Model
     return $this->dataProtectionOfficerName;
   }
   /**
-   * @param string
+   * The phone number of the data protection officer The phone number is
+   * validated but not verified.
+   *
+   * @param string $dataProtectionOfficerPhone
    */
   public function setDataProtectionOfficerPhone($dataProtectionOfficerPhone)
   {
@@ -105,7 +135,10 @@ class ContactInfo extends \Google\Model
     return $this->dataProtectionOfficerPhone;
   }
   /**
-   * @param string
+   * The email of the EU representative. The email is validated but not
+   * verified.
+   *
+   * @param string $euRepresentativeEmail
    */
   public function setEuRepresentativeEmail($euRepresentativeEmail)
   {
@@ -119,7 +152,9 @@ class ContactInfo extends \Google\Model
     return $this->euRepresentativeEmail;
   }
   /**
-   * @param string
+   * The name of the EU representative.
+   *
+   * @param string $euRepresentativeName
    */
   public function setEuRepresentativeName($euRepresentativeName)
   {
@@ -133,7 +168,10 @@ class ContactInfo extends \Google\Model
     return $this->euRepresentativeName;
   }
   /**
-   * @param string
+   * The phone number of the EU representative. The phone number is validated
+   * but not verified.
+   *
+   * @param string $euRepresentativePhone
    */
   public function setEuRepresentativePhone($euRepresentativePhone)
   {

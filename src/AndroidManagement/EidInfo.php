@@ -24,7 +24,9 @@ class EidInfo extends \Google\Collection
   protected $eidsDataType = 'array';
 
   /**
-   * @param Eid[]
+   * Output only. EID information for each eUICC chip.
+   *
+   * @param Eid[] $eids
    */
   public function setEids($eids)
   {

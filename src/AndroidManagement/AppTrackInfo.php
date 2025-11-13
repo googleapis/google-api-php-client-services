@@ -20,16 +20,25 @@ namespace Google\Service\AndroidManagement;
 class AppTrackInfo extends \Google\Model
 {
   /**
+   * The track name associated with the trackId, set in the Play Console. The
+   * name is modifiable from Play Console.
+   *
    * @var string
    */
   public $trackAlias;
   /**
+   * The unmodifiable unique track identifier, taken from the releaseTrackId in
+   * the URL of the Play Console page that displays the app’s track information.
+   *
    * @var string
    */
   public $trackId;
 
   /**
-   * @param string
+   * The track name associated with the trackId, set in the Play Console. The
+   * name is modifiable from Play Console.
+   *
+   * @param string $trackAlias
    */
   public function setTrackAlias($trackAlias)
   {
@@ -43,7 +52,10 @@ class AppTrackInfo extends \Google\Model
     return $this->trackAlias;
   }
   /**
-   * @param string
+   * The unmodifiable unique track identifier, taken from the releaseTrackId in
+   * the URL of the Play Console page that displays the app’s track information.
+   *
+   * @param string $trackId
    */
   public function setTrackId($trackId)
   {

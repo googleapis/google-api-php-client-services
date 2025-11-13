@@ -20,12 +20,20 @@ namespace Google\Service\AndroidManagement;
 class ApiLevelCondition extends \Google\Model
 {
   /**
+   * The minimum desired Android Framework API level. If the device doesn't meet
+   * the minimum requirement, this condition is satisfied. Must be greater than
+   * zero.
+   *
    * @var int
    */
   public $minApiLevel;
 
   /**
-   * @param int
+   * The minimum desired Android Framework API level. If the device doesn't meet
+   * the minimum requirement, this condition is satisfied. Must be greater than
+   * zero.
+   *
+   * @param int $minApiLevel
    */
   public function setMinApiLevel($minApiLevel)
   {
