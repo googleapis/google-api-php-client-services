@@ -20,38 +20,68 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DeploymentGroupConfig extends \Google\Model
 {
   /**
+   * Unspecified type
+   */
+  public const DEPLOYMENT_GROUP_TYPE_DEPLOYMENT_GROUP_TYPE_UNSPECIFIED = 'DEPLOYMENT_GROUP_TYPE_UNSPECIFIED';
+  /**
+   * Standard type
+   */
+  public const DEPLOYMENT_GROUP_TYPE_STANDARD = 'STANDARD';
+  /**
+   * Extensible Type
+   */
+  public const DEPLOYMENT_GROUP_TYPE_EXTENSIBLE = 'EXTENSIBLE';
+  /**
+   * Type of the deployment group, which will be either Standard or Extensible.
+   *
    * @var string
    */
   public $deploymentGroupType;
   /**
+   * Name of the deployment group in the following format:
+   * `organizations/{org}/environments/{env}/deploymentGroups/{group}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Revision number which can be used by the runtime to detect if the
+   * deployment group has changed between two versions.
+   *
    * @var string
    */
   public $revisionId;
   /**
+   * Unique ID. The ID will only change if the deployment group is deleted and
+   * recreated.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string
+   * Type of the deployment group, which will be either Standard or Extensible.
+   *
+   * Accepted values: DEPLOYMENT_GROUP_TYPE_UNSPECIFIED, STANDARD, EXTENSIBLE
+   *
+   * @param self::DEPLOYMENT_GROUP_TYPE_* $deploymentGroupType
    */
   public function setDeploymentGroupType($deploymentGroupType)
   {
     $this->deploymentGroupType = $deploymentGroupType;
   }
   /**
-   * @return string
+   * @return self::DEPLOYMENT_GROUP_TYPE_*
    */
   public function getDeploymentGroupType()
   {
     return $this->deploymentGroupType;
   }
   /**
-   * @param string
+   * Name of the deployment group in the following format:
+   * `organizations/{org}/environments/{env}/deploymentGroups/{group}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +95,10 @@ class GoogleCloudApigeeV1DeploymentGroupConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Revision number which can be used by the runtime to detect if the
+   * deployment group has changed between two versions.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -79,7 +112,10 @@ class GoogleCloudApigeeV1DeploymentGroupConfig extends \Google\Model
     return $this->revisionId;
   }
   /**
-   * @param string
+   * Unique ID. The ID will only change if the deployment group is deleted and
+   * recreated.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

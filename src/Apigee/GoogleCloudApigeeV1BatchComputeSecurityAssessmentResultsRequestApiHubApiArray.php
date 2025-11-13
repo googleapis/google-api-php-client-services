@@ -21,12 +21,18 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiAr
 {
   protected $collection_key = 'apis';
   /**
+   * Required. The array of API Hub API IDs. Format:
+   * `projects/{project}/locations/{location}/apis/{api}`
+   *
    * @var string[]
    */
   public $apis;
 
   /**
-   * @param string[]
+   * Required. The array of API Hub API IDs. Format:
+   * `projects/{project}/locations/{location}/apis/{api}`
+   *
+   * @param string[] $apis
    */
   public function setApis($apis)
   {

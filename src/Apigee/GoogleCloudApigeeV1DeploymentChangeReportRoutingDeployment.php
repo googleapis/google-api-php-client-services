@@ -20,24 +20,34 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment extends \Google\Model
 {
   /**
+   * Name of the deployed API proxy revision containing the base path.
+   *
    * @var string
    */
   public $apiProxy;
   /**
+   * Base path receiving traffic.
+   *
    * @var string
    */
   public $basepath;
   /**
+   * Name of the environment in which the proxy is deployed.
+   *
    * @var string
    */
   public $environment;
   /**
+   * Name of the deployed API proxy revision containing the base path.
+   *
    * @var string
    */
   public $revision;
 
   /**
-   * @param string
+   * Name of the deployed API proxy revision containing the base path.
+   *
+   * @param string $apiProxy
    */
   public function setApiProxy($apiProxy)
   {
@@ -51,7 +61,9 @@ class GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment extends \Google
     return $this->apiProxy;
   }
   /**
-   * @param string
+   * Base path receiving traffic.
+   *
+   * @param string $basepath
    */
   public function setBasepath($basepath)
   {
@@ -65,7 +77,9 @@ class GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment extends \Google
     return $this->basepath;
   }
   /**
-   * @param string
+   * Name of the environment in which the proxy is deployed.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {
@@ -79,7 +93,9 @@ class GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment extends \Google
     return $this->environment;
   }
   /**
-   * @param string
+   * Name of the deployed API proxy revision containing the base path.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {

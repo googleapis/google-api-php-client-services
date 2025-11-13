@@ -21,10 +21,15 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsResponse extends \
 {
   protected $collection_key = 'securityAssessmentResults';
   /**
+   * The time of the assessment api call.
+   *
    * @var string
    */
   public $assessmentTime;
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is blank, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +37,9 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsResponse extends \
   protected $securityAssessmentResultsDataType = 'array';
 
   /**
-   * @param string
+   * The time of the assessment api call.
+   *
+   * @param string $assessmentTime
    */
   public function setAssessmentTime($assessmentTime)
   {
@@ -46,7 +53,10 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsResponse extends \
     return $this->assessmentTime;
   }
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is blank, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsResponse extends \
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityAssessmentResult[]
+   * Default sort order is by resource name in alphabetic order.
+   *
+   * @param GoogleCloudApigeeV1SecurityAssessmentResult[] $securityAssessmentResults
    */
   public function setSecurityAssessmentResults($securityAssessmentResults)
   {

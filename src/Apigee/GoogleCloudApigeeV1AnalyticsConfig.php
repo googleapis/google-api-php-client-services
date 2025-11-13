@@ -20,24 +20,55 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1AnalyticsConfig extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const STATE_ADDON_STATE_UNSPECIFIED = 'ADDON_STATE_UNSPECIFIED';
+  /**
+   * Add-on is in progress of enabling.
+   */
+  public const STATE_ENABLING = 'ENABLING';
+  /**
+   * Add-on is fully enabled and ready to use.
+   */
+  public const STATE_ENABLED = 'ENABLED';
+  /**
+   * Add-on is in progress of disabling.
+   */
+  public const STATE_DISABLING = 'DISABLING';
+  /**
+   * Add-on is fully disabled.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * Whether the Analytics add-on is enabled.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Output only. Time at which the Analytics add-on expires in milliseconds
+   * since epoch. If unspecified, the add-on will never expire.
+   *
    * @var string
    */
   public $expireTimeMillis;
   /**
+   * Output only. The state of the Analytics add-on.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The latest update time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * Whether the Analytics add-on is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -51,7 +82,10 @@ class GoogleCloudApigeeV1AnalyticsConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Output only. Time at which the Analytics add-on expires in milliseconds
+   * since epoch. If unspecified, the add-on will never expire.
+   *
+   * @param string $expireTimeMillis
    */
   public function setExpireTimeMillis($expireTimeMillis)
   {
@@ -65,21 +99,28 @@ class GoogleCloudApigeeV1AnalyticsConfig extends \Google\Model
     return $this->expireTimeMillis;
   }
   /**
-   * @param string
+   * Output only. The state of the Analytics add-on.
+   *
+   * Accepted values: ADDON_STATE_UNSPECIFIED, ENABLING, ENABLED, DISABLING,
+   * DISABLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The latest update time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -33,7 +33,7 @@ class GoogleCloudApigeeV1AccessSet extends \Google\Model
   public $value;
 
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +47,7 @@ class GoogleCloudApigeeV1AccessSet extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * @param bool $success
    */
   public function setSuccess($success)
   {
@@ -61,7 +61,7 @@ class GoogleCloudApigeeV1AccessSet extends \Google\Model
     return $this->success;
   }
   /**
-   * @param string
+   * @param string $value
    */
   public function setValue($value)
   {

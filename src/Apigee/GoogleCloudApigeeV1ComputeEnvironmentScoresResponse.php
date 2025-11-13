@@ -21,6 +21,9 @@ class GoogleCloudApigeeV1ComputeEnvironmentScoresResponse extends \Google\Collec
 {
   protected $collection_key = 'scores';
   /**
+   * A page token, received from a previous `ComputeScore` call. Provide this to
+   * retrieve the subsequent page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudApigeeV1ComputeEnvironmentScoresResponse extends \Google\Collec
   protected $scoresDataType = 'array';
 
   /**
-   * @param string
+   * A page token, received from a previous `ComputeScore` call. Provide this to
+   * retrieve the subsequent page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudApigeeV1ComputeEnvironmentScoresResponse extends \Google\Collec
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1Score[]
+   * List of scores. One score per day.
+   *
+   * @param GoogleCloudApigeeV1Score[] $scores
    */
   public function setScores($scores)
   {

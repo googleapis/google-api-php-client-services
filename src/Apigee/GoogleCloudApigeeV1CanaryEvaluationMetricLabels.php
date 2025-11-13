@@ -23,20 +23,29 @@ class GoogleCloudApigeeV1CanaryEvaluationMetricLabels extends \Google\Model
         "instanceId" => "instance_id",
   ];
   /**
+   * The environment ID associated with the metrics.
+   *
    * @var string
    */
   public $env;
   /**
+   * Required. The instance ID associated with the metrics. In Apigee Hybrid,
+   * the value is configured during installation.
+   *
    * @var string
    */
   public $instanceId;
   /**
+   * Required. The location associated with the metrics.
+   *
    * @var string
    */
   public $location;
 
   /**
-   * @param string
+   * The environment ID associated with the metrics.
+   *
+   * @param string $env
    */
   public function setEnv($env)
   {
@@ -50,7 +59,10 @@ class GoogleCloudApigeeV1CanaryEvaluationMetricLabels extends \Google\Model
     return $this->env;
   }
   /**
-   * @param string
+   * Required. The instance ID associated with the metrics. In Apigee Hybrid,
+   * the value is configured during installation.
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -64,7 +76,9 @@ class GoogleCloudApigeeV1CanaryEvaluationMetricLabels extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * @param string
+   * Required. The location associated with the metrics.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {

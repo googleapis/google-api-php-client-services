@@ -29,7 +29,7 @@ class GoogleCloudApigeeV1AccessRemove extends \Google\Model
   public $success;
 
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +43,7 @@ class GoogleCloudApigeeV1AccessRemove extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * @param bool $success
    */
   public function setSuccess($success)
   {

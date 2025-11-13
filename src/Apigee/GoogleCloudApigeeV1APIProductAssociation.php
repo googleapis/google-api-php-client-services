@@ -20,16 +20,23 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1APIProductAssociation extends \Google\Model
 {
   /**
+   * API product to be associated with the credential.
+   *
    * @var string
    */
   public $apiproduct;
   /**
+   * The API product credential associated status. Valid values are `approved`
+   * or `revoked`.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * API product to be associated with the credential.
+   *
+   * @param string $apiproduct
    */
   public function setApiproduct($apiproduct)
   {
@@ -43,7 +50,10 @@ class GoogleCloudApigeeV1APIProductAssociation extends \Google\Model
     return $this->apiproduct;
   }
   /**
-   * @param string
+   * The API product credential associated status. Valid values are `approved`
+   * or `revoked`.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1Attributes extends \Google\Collection
   protected $attributeDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1Attribute[]
+   * List of attributes.
+   *
+   * @param GoogleCloudApigeeV1Attribute[] $attribute
    */
   public function setAttribute($attribute)
   {

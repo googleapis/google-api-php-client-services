@@ -22,24 +22,34 @@ class GoogleCloudApigeeV1ApiDocDocumentationResponse extends \Google\Model
   protected $dataType = GoogleCloudApigeeV1ApiDocDocumentation::class;
   protected $dataDataType = '';
   /**
+   * Output only. Unique error code for the request, if any.
+   *
    * @var string
    */
   public $errorCode;
   /**
+   * Output only. Description of the operation.
+   *
    * @var string
    */
   public $message;
   /**
+   * Output only. Unique ID of the request.
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Output only. Status of the operation.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param GoogleCloudApigeeV1ApiDocDocumentation
+   * Output only. The documentation resource.
+   *
+   * @param GoogleCloudApigeeV1ApiDocDocumentation $data
    */
   public function setData(GoogleCloudApigeeV1ApiDocDocumentation $data)
   {
@@ -53,7 +63,9 @@ class GoogleCloudApigeeV1ApiDocDocumentationResponse extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Output only. Unique error code for the request, if any.
+   *
+   * @param string $errorCode
    */
   public function setErrorCode($errorCode)
   {
@@ -67,7 +79,9 @@ class GoogleCloudApigeeV1ApiDocDocumentationResponse extends \Google\Model
     return $this->errorCode;
   }
   /**
-   * @param string
+   * Output only. Description of the operation.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -81,7 +95,9 @@ class GoogleCloudApigeeV1ApiDocDocumentationResponse extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Output only. Unique ID of the request.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -95,7 +111,9 @@ class GoogleCloudApigeeV1ApiDocDocumentationResponse extends \Google\Model
     return $this->requestId;
   }
   /**
-   * @param string
+   * Output only. Status of the operation.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

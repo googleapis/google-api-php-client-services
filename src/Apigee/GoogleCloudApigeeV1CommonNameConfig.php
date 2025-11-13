@@ -29,7 +29,7 @@ class GoogleCloudApigeeV1CommonNameConfig extends \Google\Model
   public $name;
 
   /**
-   * @param bool
+   * @param bool $matchWildCards
    */
   public function setMatchWildCards($matchWildCards)
   {
@@ -43,7 +43,7 @@ class GoogleCloudApigeeV1CommonNameConfig extends \Google\Model
     return $this->matchWildCards;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {

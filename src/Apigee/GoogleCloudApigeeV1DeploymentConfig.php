@@ -21,44 +21,71 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
 {
   protected $collection_key = 'deploymentGroups';
   /**
+   * Additional key-value metadata for the deployment.
+   *
    * @var string[]
    */
   public $attributes;
   /**
+   * Base path where the application will be hosted. Defaults to "/".
+   *
    * @var string
    */
   public $basePath;
   /**
+   * The list of deployment groups in which this proxy should be deployed. Not
+   * currently populated for shared flows.
+   *
    * @var string[]
    */
   public $deploymentGroups;
   /**
+   * A mapping from basepaths to proxy endpoint names in this proxy. Not
+   * populated for shared flows.
+   *
    * @var string[]
    */
   public $endpoints;
   /**
+   * Location of the API proxy bundle as a URI.
+   *
    * @var string
    */
   public $location;
   /**
+   * Name of the API or shared flow revision to be deployed in the following
+   * format: `organizations/{org}/apis/{api}/revisions/{rev}` or
+   * `organizations/{org}/sharedflows/{sharedflow}/revisions/{rev}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Unique ID of the API proxy revision.
+   *
    * @var string
    */
   public $proxyUid;
   /**
+   * The service account identity associated with this deployment. If non-empty,
+   * will be in the following format:
+   * `projects/-/serviceAccounts/{account_email}`
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * Unique ID. The ID will only change if the deployment is deleted and
+   * recreated.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string[]
+   * Additional key-value metadata for the deployment.
+   *
+   * @param string[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -72,7 +99,9 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Base path where the application will be hosted. Defaults to "/".
+   *
+   * @param string $basePath
    */
   public function setBasePath($basePath)
   {
@@ -86,7 +115,10 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->basePath;
   }
   /**
-   * @param string[]
+   * The list of deployment groups in which this proxy should be deployed. Not
+   * currently populated for shared flows.
+   *
+   * @param string[] $deploymentGroups
    */
   public function setDeploymentGroups($deploymentGroups)
   {
@@ -100,7 +132,10 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->deploymentGroups;
   }
   /**
-   * @param string[]
+   * A mapping from basepaths to proxy endpoint names in this proxy. Not
+   * populated for shared flows.
+   *
+   * @param string[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -114,7 +149,9 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param string
+   * Location of the API proxy bundle as a URI.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -128,7 +165,11 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string
+   * Name of the API or shared flow revision to be deployed in the following
+   * format: `organizations/{org}/apis/{api}/revisions/{rev}` or
+   * `organizations/{org}/sharedflows/{sharedflow}/revisions/{rev}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -142,7 +183,9 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Unique ID of the API proxy revision.
+   *
+   * @param string $proxyUid
    */
   public function setProxyUid($proxyUid)
   {
@@ -156,7 +199,11 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->proxyUid;
   }
   /**
-   * @param string
+   * The service account identity associated with this deployment. If non-empty,
+   * will be in the following format:
+   * `projects/-/serviceAccounts/{account_email}`
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -170,7 +217,10 @@ class GoogleCloudApigeeV1DeploymentConfig extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * Unique ID. The ID will only change if the deployment is deleted and
+   * recreated.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

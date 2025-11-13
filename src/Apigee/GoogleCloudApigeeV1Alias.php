@@ -20,18 +20,38 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Alias extends \Google\Model
 {
   /**
+   * Alias type is not specified.
+   */
+  public const TYPE_ALIAS_TYPE_UNSPECIFIED = 'ALIAS_TYPE_UNSPECIFIED';
+  /**
+   * Certificate.
+   */
+  public const TYPE_CERT = 'CERT';
+  /**
+   * Key/certificate pair.
+   */
+  public const TYPE_KEY_CERT = 'KEY_CERT';
+  /**
+   * Resource ID for this alias. Values must match the regular expression
+   * `[^/]{1,255}`.
+   *
    * @var string
    */
   public $alias;
   protected $certsInfoType = GoogleCloudApigeeV1Certificate::class;
   protected $certsInfoDataType = '';
   /**
+   * Type of alias.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Resource ID for this alias. Values must match the regular expression
+   * `[^/]{1,255}`.
+   *
+   * @param string $alias
    */
   public function setAlias($alias)
   {
@@ -45,7 +65,9 @@ class GoogleCloudApigeeV1Alias extends \Google\Model
     return $this->alias;
   }
   /**
-   * @param GoogleCloudApigeeV1Certificate
+   * Chain of certificates under this alias.
+   *
+   * @param GoogleCloudApigeeV1Certificate $certsInfo
    */
   public function setCertsInfo(GoogleCloudApigeeV1Certificate $certsInfo)
   {
@@ -59,14 +81,18 @@ class GoogleCloudApigeeV1Alias extends \Google\Model
     return $this->certsInfo;
   }
   /**
-   * @param string
+   * Type of alias.
+   *
+   * Accepted values: ALIAS_TYPE_UNSPECIFIED, CERT, KEY_CERT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

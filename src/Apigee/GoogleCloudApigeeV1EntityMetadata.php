@@ -20,20 +20,29 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1EntityMetadata extends \Google\Model
 {
   /**
+   * Time at which the API proxy was created, in milliseconds since epoch.
+   *
    * @var string
    */
   public $createdAt;
   /**
+   * Time at which the API proxy was most recently modified, in milliseconds
+   * since epoch.
+   *
    * @var string
    */
   public $lastModifiedAt;
   /**
+   * The type of entity described
+   *
    * @var string
    */
   public $subType;
 
   /**
-   * @param string
+   * Time at which the API proxy was created, in milliseconds since epoch.
+   *
+   * @param string $createdAt
    */
   public function setCreatedAt($createdAt)
   {
@@ -47,7 +56,10 @@ class GoogleCloudApigeeV1EntityMetadata extends \Google\Model
     return $this->createdAt;
   }
   /**
-   * @param string
+   * Time at which the API proxy was most recently modified, in milliseconds
+   * since epoch.
+   *
+   * @param string $lastModifiedAt
    */
   public function setLastModifiedAt($lastModifiedAt)
   {
@@ -61,7 +73,9 @@ class GoogleCloudApigeeV1EntityMetadata extends \Google\Model
     return $this->lastModifiedAt;
   }
   /**
-   * @param string
+   * The type of entity described
+   *
+   * @param string $subType
    */
   public function setSubType($subType)
   {

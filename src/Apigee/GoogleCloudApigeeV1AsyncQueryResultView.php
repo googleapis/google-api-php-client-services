@@ -21,26 +21,37 @@ class GoogleCloudApigeeV1AsyncQueryResultView extends \Google\Collection
 {
   protected $collection_key = 'rows';
   /**
+   * Error code when there is a failure.
+   *
    * @var int
    */
   public $code;
   /**
+   * Error message when there is a failure.
+   *
    * @var string
    */
   public $error;
   protected $metadataType = GoogleCloudApigeeV1QueryMetadata::class;
   protected $metadataDataType = '';
   /**
+   * Rows of query result. Each row is a JSON object. Example:
+   * {sum(message_count): 1, developer_app: "(not set)",…}
+   *
    * @var array[]
    */
   public $rows;
   /**
+   * State of retrieving ResultView.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param int
+   * Error code when there is a failure.
+   *
+   * @param int $code
    */
   public function setCode($code)
   {
@@ -54,7 +65,9 @@ class GoogleCloudApigeeV1AsyncQueryResultView extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param string
+   * Error message when there is a failure.
+   *
+   * @param string $error
    */
   public function setError($error)
   {
@@ -68,7 +81,10 @@ class GoogleCloudApigeeV1AsyncQueryResultView extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param GoogleCloudApigeeV1QueryMetadata
+   * Metadata contains information like metrics, dimenstions etc of the
+   * AsyncQuery.
+   *
+   * @param GoogleCloudApigeeV1QueryMetadata $metadata
    */
   public function setMetadata(GoogleCloudApigeeV1QueryMetadata $metadata)
   {
@@ -82,7 +98,10 @@ class GoogleCloudApigeeV1AsyncQueryResultView extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param array[]
+   * Rows of query result. Each row is a JSON object. Example:
+   * {sum(message_count): 1, developer_app: "(not set)",…}
+   *
+   * @param array[] $rows
    */
   public function setRows($rows)
   {
@@ -96,7 +115,9 @@ class GoogleCloudApigeeV1AsyncQueryResultView extends \Google\Collection
     return $this->rows;
   }
   /**
-   * @param string
+   * State of retrieving ResultView.
+   *
+   * @param string $state
    */
   public function setState($state)
   {

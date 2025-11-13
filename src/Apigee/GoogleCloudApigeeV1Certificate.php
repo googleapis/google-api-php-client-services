@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1Certificate extends \Google\Collection
   protected $certInfoDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1CertInfo[]
+   * Chain of certificates under this name.
+   *
+   * @param GoogleCloudApigeeV1CertInfo[] $certInfo
    */
   public function setCertInfo($certInfo)
   {

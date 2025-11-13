@@ -28,7 +28,9 @@ class GoogleCloudApigeeV1DeploymentChangeReport extends \Google\Collection
   protected $validationErrorsDataType = '';
 
   /**
-   * @param GoogleCloudApigeeV1DeploymentChangeReportRoutingChange[]
+   * All routing changes that may result from a deployment request.
+   *
+   * @param GoogleCloudApigeeV1DeploymentChangeReportRoutingChange[] $routingChanges
    */
   public function setRoutingChanges($routingChanges)
   {
@@ -42,7 +44,9 @@ class GoogleCloudApigeeV1DeploymentChangeReport extends \Google\Collection
     return $this->routingChanges;
   }
   /**
-   * @param GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict[]
+   * All base path conflicts detected for a deployment request.
+   *
+   * @param GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict[] $routingConflicts
    */
   public function setRoutingConflicts($routingConflicts)
   {
@@ -56,7 +60,10 @@ class GoogleCloudApigeeV1DeploymentChangeReport extends \Google\Collection
     return $this->routingConflicts;
   }
   /**
-   * @param GoogleRpcPreconditionFailure
+   * Validation errors that would cause the deployment change request to be
+   * rejected.
+   *
+   * @param GoogleRpcPreconditionFailure $validationErrors
    */
   public function setValidationErrors(GoogleRpcPreconditionFailure $validationErrors)
   {

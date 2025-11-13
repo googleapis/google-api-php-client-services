@@ -20,24 +20,36 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1EnvironmentGroupAttachment extends \Google\Model
 {
   /**
+   * Output only. The time at which the environment group attachment was created
+   * as milliseconds since epoch.
+   *
    * @var string
    */
   public $createdAt;
   /**
+   * Required. ID of the attached environment.
+   *
    * @var string
    */
   public $environment;
   /**
+   * Output only. ID of the environment group.
+   *
    * @var string
    */
   public $environmentGroupId;
   /**
+   * ID of the environment group attachment.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The time at which the environment group attachment was created
+   * as milliseconds since epoch.
+   *
+   * @param string $createdAt
    */
   public function setCreatedAt($createdAt)
   {
@@ -51,7 +63,9 @@ class GoogleCloudApigeeV1EnvironmentGroupAttachment extends \Google\Model
     return $this->createdAt;
   }
   /**
-   * @param string
+   * Required. ID of the attached environment.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {
@@ -65,7 +79,9 @@ class GoogleCloudApigeeV1EnvironmentGroupAttachment extends \Google\Model
     return $this->environment;
   }
   /**
-   * @param string
+   * Output only. ID of the environment group.
+   *
+   * @param string $environmentGroupId
    */
   public function setEnvironmentGroupId($environmentGroupId)
   {
@@ -79,7 +95,9 @@ class GoogleCloudApigeeV1EnvironmentGroupAttachment extends \Google\Model
     return $this->environmentGroupId;
   }
   /**
-   * @param string
+   * ID of the environment group attachment.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

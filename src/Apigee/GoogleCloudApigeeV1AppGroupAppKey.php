@@ -25,36 +25,57 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
+   * Immutable. Consumer key.
+   *
    * @var string
    */
   public $consumerKey;
   /**
+   * Secret key.
+   *
    * @var string
    */
   public $consumerSecret;
   /**
+   * Output only. Time the AppGroup app expires in milliseconds since epoch.
+   *
    * @var string
    */
   public $expiresAt;
   /**
+   * Immutable. Expiration time, in seconds, for the consumer key. If not set or
+   * left to the default value of `-1`, the API key never expires. The
+   * expiration time can't be updated after it is set.
+   *
    * @var string
    */
   public $expiresInSeconds;
   /**
+   * Output only. Time the AppGroup app was created in milliseconds since epoch.
+   *
    * @var string
    */
   public $issuedAt;
   /**
+   * Scopes to apply to the app. The specified scope names must already be
+   * defined for the API product that you associate with the app.
+   *
    * @var string[]
    */
   public $scopes;
   /**
+   * Status of the credential. Valid values include `approved` or `revoked`.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param GoogleCloudApigeeV1APIProductAssociation[]
+   * Output only. List of API products and its status for which the credential
+   * can be used. **Note**: Use UpdateAppGroupAppKeyApiProductRequest API to
+   * make the association after the consumer key and secret are created.
+   *
+   * @param GoogleCloudApigeeV1APIProductAssociation[] $apiProducts
    */
   public function setApiProducts($apiProducts)
   {
@@ -68,7 +89,9 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->apiProducts;
   }
   /**
-   * @param GoogleCloudApigeeV1Attribute[]
+   * List of attributes associated with the credential.
+   *
+   * @param GoogleCloudApigeeV1Attribute[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -82,7 +105,9 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Immutable. Consumer key.
+   *
+   * @param string $consumerKey
    */
   public function setConsumerKey($consumerKey)
   {
@@ -96,7 +121,9 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->consumerKey;
   }
   /**
-   * @param string
+   * Secret key.
+   *
+   * @param string $consumerSecret
    */
   public function setConsumerSecret($consumerSecret)
   {
@@ -110,7 +137,9 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->consumerSecret;
   }
   /**
-   * @param string
+   * Output only. Time the AppGroup app expires in milliseconds since epoch.
+   *
+   * @param string $expiresAt
    */
   public function setExpiresAt($expiresAt)
   {
@@ -124,7 +153,11 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->expiresAt;
   }
   /**
-   * @param string
+   * Immutable. Expiration time, in seconds, for the consumer key. If not set or
+   * left to the default value of `-1`, the API key never expires. The
+   * expiration time can't be updated after it is set.
+   *
+   * @param string $expiresInSeconds
    */
   public function setExpiresInSeconds($expiresInSeconds)
   {
@@ -138,7 +171,9 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->expiresInSeconds;
   }
   /**
-   * @param string
+   * Output only. Time the AppGroup app was created in milliseconds since epoch.
+   *
+   * @param string $issuedAt
    */
   public function setIssuedAt($issuedAt)
   {
@@ -152,7 +187,10 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->issuedAt;
   }
   /**
-   * @param string[]
+   * Scopes to apply to the app. The specified scope names must already be
+   * defined for the API product that you associate with the app.
+   *
+   * @param string[] $scopes
    */
   public function setScopes($scopes)
   {
@@ -166,7 +204,9 @@ class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
     return $this->scopes;
   }
   /**
-   * @param string
+   * Status of the credential. Valid values include `approved` or `revoked`.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

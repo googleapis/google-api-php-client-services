@@ -20,16 +20,22 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1EnvironmentConfigClientIPResolutionConfigHeaderIndexAlgorithm extends \Google\Model
 {
   /**
+   * The index of the ip in the header. (By default, value is 0 if missing)
+   *
    * @var int
    */
   public $ipHeaderIndex;
   /**
+   * The name of the header to extract the client ip from.
+   *
    * @var string
    */
   public $ipHeaderName;
 
   /**
-   * @param int
+   * The index of the ip in the header. (By default, value is 0 if missing)
+   *
+   * @param int $ipHeaderIndex
    */
   public function setIpHeaderIndex($ipHeaderIndex)
   {
@@ -43,7 +49,9 @@ class GoogleCloudApigeeV1EnvironmentConfigClientIPResolutionConfigHeaderIndexAlg
     return $this->ipHeaderIndex;
   }
   /**
-   * @param string
+   * The name of the header to extract the client ip from.
+   *
+   * @param string $ipHeaderName
    */
   public function setIpHeaderName($ipHeaderName)
   {

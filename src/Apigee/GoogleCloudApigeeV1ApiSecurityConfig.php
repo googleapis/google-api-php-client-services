@@ -20,16 +20,23 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ApiSecurityConfig extends \Google\Model
 {
   /**
+   * Flag that specifies whether the API security add-on is enabled.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Output only. Time at which the API Security add-on expires in milliseconds
+   * since epoch. If unspecified, the add-on will never expire.
+   *
    * @var string
    */
   public $expiresAt;
 
   /**
-   * @param bool
+   * Flag that specifies whether the API security add-on is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -43,7 +50,10 @@ class GoogleCloudApigeeV1ApiSecurityConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Output only. Time at which the API Security add-on expires in milliseconds
+   * since epoch. If unspecified, the add-on will never expire.
+   *
+   * @param string $expiresAt
    */
   public function setExpiresAt($expiresAt)
   {

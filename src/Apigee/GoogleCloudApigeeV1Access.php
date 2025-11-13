@@ -32,7 +32,7 @@ class GoogleCloudApigeeV1Access extends \Google\Model
   protected $setDataType = '';
 
   /**
-   * @param GoogleCloudApigeeV1AccessGet
+   * @param GoogleCloudApigeeV1AccessGet $get
    */
   public function setGet(GoogleCloudApigeeV1AccessGet $get)
   {
@@ -46,7 +46,7 @@ class GoogleCloudApigeeV1Access extends \Google\Model
     return $this->get;
   }
   /**
-   * @param GoogleCloudApigeeV1AccessRemove
+   * @param GoogleCloudApigeeV1AccessRemove $remove
    */
   public function setRemove(GoogleCloudApigeeV1AccessRemove $remove)
   {
@@ -60,7 +60,7 @@ class GoogleCloudApigeeV1Access extends \Google\Model
     return $this->remove;
   }
   /**
-   * @param GoogleCloudApigeeV1AccessSet
+   * @param GoogleCloudApigeeV1AccessSet $set
    */
   public function setSet(GoogleCloudApigeeV1AccessSet $set)
   {

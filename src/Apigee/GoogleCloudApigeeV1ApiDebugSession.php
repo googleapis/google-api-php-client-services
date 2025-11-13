@@ -20,24 +20,34 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ApiDebugSession extends \Google\Model
 {
   /**
+   * The revision ID of the deployed API proxy.
+   *
    * @var string
    */
   public $apiProxyRevisionId;
   /**
+   * The first transaction creation timestamp in millisecond, recorded by UAP.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The environment ID of the deployed API proxy.
+   *
    * @var string
    */
   public $environmentId;
   /**
+   * The debug session ID.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * The revision ID of the deployed API proxy.
+   *
+   * @param string $apiProxyRevisionId
    */
   public function setApiProxyRevisionId($apiProxyRevisionId)
   {
@@ -51,7 +61,9 @@ class GoogleCloudApigeeV1ApiDebugSession extends \Google\Model
     return $this->apiProxyRevisionId;
   }
   /**
-   * @param string
+   * The first transaction creation timestamp in millisecond, recorded by UAP.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -65,7 +77,9 @@ class GoogleCloudApigeeV1ApiDebugSession extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The environment ID of the deployed API proxy.
+   *
+   * @param string $environmentId
    */
   public function setEnvironmentId($environmentId)
   {
@@ -79,7 +93,9 @@ class GoogleCloudApigeeV1ApiDebugSession extends \Google\Model
     return $this->environmentId;
   }
   /**
-   * @param string
+   * The debug session ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

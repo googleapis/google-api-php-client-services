@@ -20,28 +20,40 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DatastoreConfig extends \Google\Model
 {
   /**
+   * Name of the Cloud Storage bucket. Required for `gcs` target_type.
+   *
    * @var string
    */
   public $bucketName;
   /**
+   * BigQuery dataset name Required for `bigquery` target_type.
+   *
    * @var string
    */
   public $datasetName;
   /**
+   * Path of Cloud Storage bucket Required for `gcs` target_type.
+   *
    * @var string
    */
   public $path;
   /**
+   * Required. Google Cloud project in which the datastore exists
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Prefix of BigQuery table Required for `bigquery` target_type.
+   *
    * @var string
    */
   public $tablePrefix;
 
   /**
-   * @param string
+   * Name of the Cloud Storage bucket. Required for `gcs` target_type.
+   *
+   * @param string $bucketName
    */
   public function setBucketName($bucketName)
   {
@@ -55,7 +67,9 @@ class GoogleCloudApigeeV1DatastoreConfig extends \Google\Model
     return $this->bucketName;
   }
   /**
-   * @param string
+   * BigQuery dataset name Required for `bigquery` target_type.
+   *
+   * @param string $datasetName
    */
   public function setDatasetName($datasetName)
   {
@@ -69,7 +83,9 @@ class GoogleCloudApigeeV1DatastoreConfig extends \Google\Model
     return $this->datasetName;
   }
   /**
-   * @param string
+   * Path of Cloud Storage bucket Required for `gcs` target_type.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -83,7 +99,9 @@ class GoogleCloudApigeeV1DatastoreConfig extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Required. Google Cloud project in which the datastore exists
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -97,7 +115,9 @@ class GoogleCloudApigeeV1DatastoreConfig extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Prefix of BigQuery table Required for `bigquery` target_type.
+   *
+   * @param string $tablePrefix
    */
   public function setTablePrefix($tablePrefix)
   {

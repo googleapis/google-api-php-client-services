@@ -20,28 +20,40 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DeleteResponse extends \Google\Model
 {
   /**
+   * Unique error code for the request, if any.
+   *
    * @var string
    */
   public $errorCode;
   /**
+   * Google Cloud name of deleted resource.
+   *
    * @var string
    */
   public $gcpResource;
   /**
+   * Description of the operation.
+   *
    * @var string
    */
   public $message;
   /**
+   * Unique ID of the request.
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Status of the operation.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * Unique error code for the request, if any.
+   *
+   * @param string $errorCode
    */
   public function setErrorCode($errorCode)
   {
@@ -55,7 +67,9 @@ class GoogleCloudApigeeV1DeleteResponse extends \Google\Model
     return $this->errorCode;
   }
   /**
-   * @param string
+   * Google Cloud name of deleted resource.
+   *
+   * @param string $gcpResource
    */
   public function setGcpResource($gcpResource)
   {
@@ -69,7 +83,9 @@ class GoogleCloudApigeeV1DeleteResponse extends \Google\Model
     return $this->gcpResource;
   }
   /**
-   * @param string
+   * Description of the operation.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -83,7 +99,9 @@ class GoogleCloudApigeeV1DeleteResponse extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Unique ID of the request.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -97,7 +115,9 @@ class GoogleCloudApigeeV1DeleteResponse extends \Google\Model
     return $this->requestId;
   }
   /**
-   * @param string
+   * Status of the operation.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

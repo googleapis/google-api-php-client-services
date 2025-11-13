@@ -20,34 +20,72 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DnsZone extends \Google\Model
 {
   /**
+   * Resource is in an unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Resource is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Resource is provisioned and ready to use.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The resource is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The resource is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Output only. The time that this resource was created on the server.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Description of the resource. String of at most 1024 characters
+   * associated with this resource for the user's convenience.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The domain name for hosts in this private zone, for instance
+   * "example.com.".
+   *
    * @var string
    */
   public $domain;
   /**
+   * Identifier. Unique name for the resource. Defined by the server Format:
+   * "organizations/{organization}/dnsZones/{dns_zone}".
+   *
    * @var string
    */
   public $name;
   protected $peeringConfigType = GoogleCloudApigeeV1DnsZonePeeringConfig::class;
   protected $peeringConfigDataType = '';
   /**
+   * Output only. State of the DNS Peering. Values other than `ACTIVE` mean the
+   * resource is not ready to use.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time that this resource was updated on the server.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time that this resource was created on the server.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -61,7 +99,10 @@ class GoogleCloudApigeeV1DnsZone extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Description of the resource. String of at most 1024 characters
+   * associated with this resource for the user's convenience.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -75,7 +116,10 @@ class GoogleCloudApigeeV1DnsZone extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The domain name for hosts in this private zone, for instance
+   * "example.com.".
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -89,7 +133,10 @@ class GoogleCloudApigeeV1DnsZone extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * Identifier. Unique name for the resource. Defined by the server Format:
+   * "organizations/{organization}/dnsZones/{dns_zone}".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -103,7 +150,9 @@ class GoogleCloudApigeeV1DnsZone extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudApigeeV1DnsZonePeeringConfig
+   * DNS PEERING zone configuration.
+   *
+   * @param GoogleCloudApigeeV1DnsZonePeeringConfig $peeringConfig
    */
   public function setPeeringConfig(GoogleCloudApigeeV1DnsZonePeeringConfig $peeringConfig)
   {
@@ -117,21 +166,28 @@ class GoogleCloudApigeeV1DnsZone extends \Google\Model
     return $this->peeringConfig;
   }
   /**
-   * @param string
+   * Output only. State of the DNS Peering. Values other than `ACTIVE` mean the
+   * resource is not ready to use.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING, UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time that this resource was updated on the server.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

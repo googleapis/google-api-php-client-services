@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1BatchUpdateSecurityIncidentsResponse extends \Google\Co
   protected $securityIncidentsDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1SecurityIncident[]
+   * Output only. Updated security incidents
+   *
+   * @param GoogleCloudApigeeV1SecurityIncident[] $securityIncidents
    */
   public function setSecurityIncidents($securityIncidents)
   {

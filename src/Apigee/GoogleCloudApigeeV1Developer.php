@@ -21,62 +21,97 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
 {
   protected $collection_key = 'companies';
   /**
+   * Access type.
+   *
    * @var string
    */
   public $accessType;
   /**
+   * Developer app family.
+   *
    * @var string
    */
   public $appFamily;
   /**
+   * List of apps associated with the developer.
+   *
    * @var string[]
    */
   public $apps;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
+   * List of companies associated with the developer.
+   *
    * @var string[]
    */
   public $companies;
   /**
+   * Output only. Time at which the developer was created in milliseconds since
+   * epoch.
+   *
    * @var string
    */
   public $createdAt;
   /**
+   * ID of the developer. **Note**: IDs are generated internally by Apigee and
+   * are not guaranteed to stay the same over time.
+   *
    * @var string
    */
   public $developerId;
   /**
+   * Required. Email address of the developer. This value is used to uniquely
+   * identify the developer in Apigee hybrid. Note that the email address has to
+   * be in lowercase only.
+   *
    * @var string
    */
   public $email;
   /**
+   * Required. First name of the developer.
+   *
    * @var string
    */
   public $firstName;
   /**
+   * Output only. Time at which the developer was last modified in milliseconds
+   * since epoch.
+   *
    * @var string
    */
   public $lastModifiedAt;
   /**
+   * Required. Last name of the developer.
+   *
    * @var string
    */
   public $lastName;
   /**
+   * Output only. Name of the Apigee organization in which the developer
+   * resides.
+   *
    * @var string
    */
   public $organizationName;
   /**
+   * Output only. Status of the developer. Valid values are `active` and
+   * `inactive`.
+   *
    * @var string
    */
   public $status;
   /**
+   * Required. User name of the developer. Not used by Apigee hybrid.
+   *
    * @var string
    */
   public $userName;
 
   /**
-   * @param string
+   * Access type.
+   *
+   * @param string $accessType
    */
   public function setAccessType($accessType)
   {
@@ -90,7 +125,9 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->accessType;
   }
   /**
-   * @param string
+   * Developer app family.
+   *
+   * @param string $appFamily
    */
   public function setAppFamily($appFamily)
   {
@@ -104,7 +141,9 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->appFamily;
   }
   /**
-   * @param string[]
+   * List of apps associated with the developer.
+   *
+   * @param string[] $apps
    */
   public function setApps($apps)
   {
@@ -118,7 +157,10 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->apps;
   }
   /**
-   * @param GoogleCloudApigeeV1Attribute[]
+   * Optional. Developer attributes (name/value pairs). The custom attribute
+   * limit is 18.
+   *
+   * @param GoogleCloudApigeeV1Attribute[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -132,7 +174,9 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string[]
+   * List of companies associated with the developer.
+   *
+   * @param string[] $companies
    */
   public function setCompanies($companies)
   {
@@ -146,7 +190,10 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->companies;
   }
   /**
-   * @param string
+   * Output only. Time at which the developer was created in milliseconds since
+   * epoch.
+   *
+   * @param string $createdAt
    */
   public function setCreatedAt($createdAt)
   {
@@ -160,7 +207,10 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->createdAt;
   }
   /**
-   * @param string
+   * ID of the developer. **Note**: IDs are generated internally by Apigee and
+   * are not guaranteed to stay the same over time.
+   *
+   * @param string $developerId
    */
   public function setDeveloperId($developerId)
   {
@@ -174,7 +224,11 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->developerId;
   }
   /**
-   * @param string
+   * Required. Email address of the developer. This value is used to uniquely
+   * identify the developer in Apigee hybrid. Note that the email address has to
+   * be in lowercase only.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -188,7 +242,9 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param string
+   * Required. First name of the developer.
+   *
+   * @param string $firstName
    */
   public function setFirstName($firstName)
   {
@@ -202,7 +258,10 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->firstName;
   }
   /**
-   * @param string
+   * Output only. Time at which the developer was last modified in milliseconds
+   * since epoch.
+   *
+   * @param string $lastModifiedAt
    */
   public function setLastModifiedAt($lastModifiedAt)
   {
@@ -216,7 +275,9 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->lastModifiedAt;
   }
   /**
-   * @param string
+   * Required. Last name of the developer.
+   *
+   * @param string $lastName
    */
   public function setLastName($lastName)
   {
@@ -230,7 +291,10 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->lastName;
   }
   /**
-   * @param string
+   * Output only. Name of the Apigee organization in which the developer
+   * resides.
+   *
+   * @param string $organizationName
    */
   public function setOrganizationName($organizationName)
   {
@@ -244,7 +308,10 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->organizationName;
   }
   /**
-   * @param string
+   * Output only. Status of the developer. Valid values are `active` and
+   * `inactive`.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {
@@ -258,7 +325,9 @@ class GoogleCloudApigeeV1Developer extends \Google\Collection
     return $this->status;
   }
   /**
-   * @param string
+   * Required. User name of the developer. Not used by Apigee hybrid.
+   *
+   * @param string $userName
    */
   public function setUserName($userName)
   {

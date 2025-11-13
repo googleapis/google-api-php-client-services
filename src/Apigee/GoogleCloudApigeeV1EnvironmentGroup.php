@@ -19,30 +19,66 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1EnvironmentGroup extends \Google\Collection
 {
+  /**
+   * Resource is in an unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Resource is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Resource is provisioned and ready to use.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The resource is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The resource is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
   protected $collection_key = 'hostnames';
   /**
+   * Output only. The time at which the environment group was created as
+   * milliseconds since epoch.
+   *
    * @var string
    */
   public $createdAt;
   /**
+   * Required. Host names for this environment group.
+   *
    * @var string[]
    */
   public $hostnames;
   /**
+   * Output only. The time at which the environment group was last updated as
+   * milliseconds since epoch.
+   *
    * @var string
    */
   public $lastModifiedAt;
   /**
+   * ID of the environment group.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. State of the environment group. Values other than ACTIVE means
+   * the resource is not ready to use.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The time at which the environment group was created as
+   * milliseconds since epoch.
+   *
+   * @param string $createdAt
    */
   public function setCreatedAt($createdAt)
   {
@@ -56,7 +92,9 @@ class GoogleCloudApigeeV1EnvironmentGroup extends \Google\Collection
     return $this->createdAt;
   }
   /**
-   * @param string[]
+   * Required. Host names for this environment group.
+   *
+   * @param string[] $hostnames
    */
   public function setHostnames($hostnames)
   {
@@ -70,7 +108,10 @@ class GoogleCloudApigeeV1EnvironmentGroup extends \Google\Collection
     return $this->hostnames;
   }
   /**
-   * @param string
+   * Output only. The time at which the environment group was last updated as
+   * milliseconds since epoch.
+   *
+   * @param string $lastModifiedAt
    */
   public function setLastModifiedAt($lastModifiedAt)
   {
@@ -84,7 +125,9 @@ class GoogleCloudApigeeV1EnvironmentGroup extends \Google\Collection
     return $this->lastModifiedAt;
   }
   /**
-   * @param string
+   * ID of the environment group.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -98,14 +141,19 @@ class GoogleCloudApigeeV1EnvironmentGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. State of the environment group. Values other than ACTIVE means
+   * the resource is not ready to use.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING, UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

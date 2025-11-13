@@ -23,60 +23,90 @@ class GoogleCloudApigeeV1App extends \Google\Collection
   protected $apiProductsType = GoogleCloudApigeeV1ApiProductRef::class;
   protected $apiProductsDataType = 'array';
   /**
+   * Name of the AppGroup
+   *
    * @var string
    */
   public $appGroup;
   /**
+   * ID of the app.
+   *
    * @var string
    */
   public $appId;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
+   * Callback URL used by OAuth 2.0 authorization servers to communicate
+   * authorization codes back to apps.
+   *
    * @var string
    */
   public $callbackUrl;
   /**
+   * Name of the company that owns the app.
+   *
    * @var string
    */
   public $companyName;
   /**
+   * Output only. Unix time when the app was created.
+   *
    * @var string
    */
   public $createdAt;
   protected $credentialsType = GoogleCloudApigeeV1Credential::class;
   protected $credentialsDataType = 'array';
   /**
+   * Email of the developer.
+   *
    * @var string
    */
   public $developerEmail;
   /**
+   * ID of the developer.
+   *
    * @var string
    */
   public $developerId;
   /**
+   * Duration, in milliseconds, of the consumer key that will be generated for
+   * the app. The default value, -1, indicates an infinite validity period. Once
+   * set, the expiration can't be updated. json key: keyExpiresIn
+   *
    * @var string
    */
   public $keyExpiresIn;
   /**
+   * Output only. Last modified time as milliseconds since epoch.
+   *
    * @var string
    */
   public $lastModifiedAt;
   /**
+   * Name of the app.
+   *
    * @var string
    */
   public $name;
   /**
+   * Scopes to apply to the app. The specified scope names must already exist on
+   * the API product that you associate with the app.
+   *
    * @var string[]
    */
   public $scopes;
   /**
+   * Status of the credential.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param GoogleCloudApigeeV1ApiProductRef[]
+   * List of API products associated with the app.
+   *
+   * @param GoogleCloudApigeeV1ApiProductRef[] $apiProducts
    */
   public function setApiProducts($apiProducts)
   {
@@ -90,7 +120,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->apiProducts;
   }
   /**
-   * @param string
+   * Name of the AppGroup
+   *
+   * @param string $appGroup
    */
   public function setAppGroup($appGroup)
   {
@@ -104,7 +136,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->appGroup;
   }
   /**
-   * @param string
+   * ID of the app.
+   *
+   * @param string $appId
    */
   public function setAppId($appId)
   {
@@ -118,7 +152,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->appId;
   }
   /**
-   * @param GoogleCloudApigeeV1Attribute[]
+   * List of attributes.
+   *
+   * @param GoogleCloudApigeeV1Attribute[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -132,7 +168,10 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Callback URL used by OAuth 2.0 authorization servers to communicate
+   * authorization codes back to apps.
+   *
+   * @param string $callbackUrl
    */
   public function setCallbackUrl($callbackUrl)
   {
@@ -146,7 +185,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->callbackUrl;
   }
   /**
-   * @param string
+   * Name of the company that owns the app.
+   *
+   * @param string $companyName
    */
   public function setCompanyName($companyName)
   {
@@ -160,7 +201,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->companyName;
   }
   /**
-   * @param string
+   * Output only. Unix time when the app was created.
+   *
+   * @param string $createdAt
    */
   public function setCreatedAt($createdAt)
   {
@@ -174,7 +217,10 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->createdAt;
   }
   /**
-   * @param GoogleCloudApigeeV1Credential[]
+   * Output only. Set of credentials for the app. Credentials are API key/secret
+   * pairs associated with API products.
+   *
+   * @param GoogleCloudApigeeV1Credential[] $credentials
    */
   public function setCredentials($credentials)
   {
@@ -188,7 +234,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->credentials;
   }
   /**
-   * @param string
+   * Email of the developer.
+   *
+   * @param string $developerEmail
    */
   public function setDeveloperEmail($developerEmail)
   {
@@ -202,7 +250,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->developerEmail;
   }
   /**
-   * @param string
+   * ID of the developer.
+   *
+   * @param string $developerId
    */
   public function setDeveloperId($developerId)
   {
@@ -216,7 +266,11 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->developerId;
   }
   /**
-   * @param string
+   * Duration, in milliseconds, of the consumer key that will be generated for
+   * the app. The default value, -1, indicates an infinite validity period. Once
+   * set, the expiration can't be updated. json key: keyExpiresIn
+   *
+   * @param string $keyExpiresIn
    */
   public function setKeyExpiresIn($keyExpiresIn)
   {
@@ -230,7 +284,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->keyExpiresIn;
   }
   /**
-   * @param string
+   * Output only. Last modified time as milliseconds since epoch.
+   *
+   * @param string $lastModifiedAt
    */
   public function setLastModifiedAt($lastModifiedAt)
   {
@@ -244,7 +300,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->lastModifiedAt;
   }
   /**
-   * @param string
+   * Name of the app.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -258,7 +316,10 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Scopes to apply to the app. The specified scope names must already exist on
+   * the API product that you associate with the app.
+   *
+   * @param string[] $scopes
    */
   public function setScopes($scopes)
   {
@@ -272,7 +333,9 @@ class GoogleCloudApigeeV1App extends \Google\Collection
     return $this->scopes;
   }
   /**
-   * @param string
+   * Status of the credential.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

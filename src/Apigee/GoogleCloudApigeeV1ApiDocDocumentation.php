@@ -25,7 +25,9 @@ class GoogleCloudApigeeV1ApiDocDocumentation extends \Google\Model
   protected $oasDocumentationDataType = '';
 
   /**
-   * @param GoogleCloudApigeeV1GraphqlDocumentation
+   * Optional. GraphQL documentation.
+   *
+   * @param GoogleCloudApigeeV1GraphqlDocumentation $graphqlDocumentation
    */
   public function setGraphqlDocumentation(GoogleCloudApigeeV1GraphqlDocumentation $graphqlDocumentation)
   {
@@ -39,7 +41,9 @@ class GoogleCloudApigeeV1ApiDocDocumentation extends \Google\Model
     return $this->graphqlDocumentation;
   }
   /**
-   * @param GoogleCloudApigeeV1OASDocumentation
+   * Optional. OpenAPI Specification documentation.
+   *
+   * @param GoogleCloudApigeeV1OASDocumentation $oasDocumentation
    */
   public function setOasDocumentation(GoogleCloudApigeeV1OASDocumentation $oasDocumentation)
   {

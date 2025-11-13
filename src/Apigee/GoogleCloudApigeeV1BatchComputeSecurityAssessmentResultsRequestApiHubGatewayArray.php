@@ -21,12 +21,18 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatew
 {
   protected $collection_key = 'gateways';
   /**
+   * Required. The array of API Hub Gateway IDs. Format: `projects/{project}/loc
+   * ations/{location}/plugins/{plugin}/instances/{instance}`
+   *
    * @var string[]
    */
   public $gateways;
 
   /**
-   * @param string[]
+   * Required. The array of API Hub Gateway IDs. Format: `projects/{project}/loc
+   * ations/{location}/plugins/{plugin}/instances/{instance}`
+   *
+   * @param string[] $gateways
    */
   public function setGateways($gateways)
   {

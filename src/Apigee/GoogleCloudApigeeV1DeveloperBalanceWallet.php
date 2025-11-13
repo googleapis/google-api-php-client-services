@@ -22,12 +22,17 @@ class GoogleCloudApigeeV1DeveloperBalanceWallet extends \Google\Model
   protected $balanceType = GoogleTypeMoney::class;
   protected $balanceDataType = '';
   /**
+   * Output only. Time at which the developer last added credit to the account
+   * in milliseconds since epoch.
+   *
    * @var string
    */
   public $lastCreditTime;
 
   /**
-   * @param GoogleTypeMoney
+   * Current remaining balance of the developer for a particular currency.
+   *
+   * @param GoogleTypeMoney $balance
    */
   public function setBalance(GoogleTypeMoney $balance)
   {
@@ -41,7 +46,10 @@ class GoogleCloudApigeeV1DeveloperBalanceWallet extends \Google\Model
     return $this->balance;
   }
   /**
-   * @param string
+   * Output only. Time at which the developer last added credit to the account
+   * in milliseconds since epoch.
+   *
+   * @param string $lastCreditTime
    */
   public function setLastCreditTime($lastCreditTime)
   {

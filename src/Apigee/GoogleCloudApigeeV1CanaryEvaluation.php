@@ -20,42 +20,89 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
 {
   /**
+   * No state has been specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The canary evaluation is still in progress.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The canary evaluation has finished.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Verdict is not available yet.
+   */
+  public const VERDICT_VERDICT_UNSPECIFIED = 'VERDICT_UNSPECIFIED';
+  /**
+   * No verdict reached.
+   */
+  public const VERDICT_NONE = 'NONE';
+  /**
+   * Evaluation is not good.
+   */
+  public const VERDICT_FAIL = 'FAIL';
+  /**
+   * Evaluation is good.
+   */
+  public const VERDICT_PASS = 'PASS';
+  /**
+   * Required. The stable version that is serving requests.
+   *
    * @var string
    */
   public $control;
   /**
+   * Output only. Create time of the canary evaluation.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. End time for the evaluation's analysis.
+   *
    * @var string
    */
   public $endTime;
   protected $metricLabelsType = GoogleCloudApigeeV1CanaryEvaluationMetricLabels::class;
   protected $metricLabelsDataType = '';
   /**
+   * Output only. Name of the canary evalution.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Start time for the canary evaluation's analysis.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The current state of the canary evaluation.
+   *
    * @var string
    */
   public $state;
   /**
+   * Required. The newer version that is serving requests.
+   *
    * @var string
    */
   public $treatment;
   /**
+   * Output only. The resulting verdict of the canary evaluations: NONE, PASS,
+   * or FAIL.
+   *
    * @var string
    */
   public $verdict;
 
   /**
-   * @param string
+   * Required. The stable version that is serving requests.
+   *
+   * @param string $control
    */
   public function setControl($control)
   {
@@ -69,7 +116,9 @@ class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
     return $this->control;
   }
   /**
-   * @param string
+   * Output only. Create time of the canary evaluation.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -83,7 +132,9 @@ class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. End time for the evaluation's analysis.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -97,7 +148,9 @@ class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudApigeeV1CanaryEvaluationMetricLabels
+   * Required. Labels used to filter the metrics used for a canary evaluation.
+   *
+   * @param GoogleCloudApigeeV1CanaryEvaluationMetricLabels $metricLabels
    */
   public function setMetricLabels(GoogleCloudApigeeV1CanaryEvaluationMetricLabels $metricLabels)
   {
@@ -111,7 +164,9 @@ class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
     return $this->metricLabels;
   }
   /**
-   * @param string
+   * Output only. Name of the canary evalution.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -125,7 +180,9 @@ class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Start time for the canary evaluation's analysis.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -139,21 +196,27 @@ class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The current state of the canary evaluation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, SUCCEEDED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Required. The newer version that is serving requests.
+   *
+   * @param string $treatment
    */
   public function setTreatment($treatment)
   {
@@ -167,14 +230,19 @@ class GoogleCloudApigeeV1CanaryEvaluation extends \Google\Model
     return $this->treatment;
   }
   /**
-   * @param string
+   * Output only. The resulting verdict of the canary evaluations: NONE, PASS,
+   * or FAIL.
+   *
+   * Accepted values: VERDICT_UNSPECIFIED, NONE, FAIL, PASS
+   *
+   * @param self::VERDICT_* $verdict
    */
   public function setVerdict($verdict)
   {
     $this->verdict = $verdict;
   }
   /**
-   * @return string
+   * @return self::VERDICT_*
    */
   public function getVerdict()
   {

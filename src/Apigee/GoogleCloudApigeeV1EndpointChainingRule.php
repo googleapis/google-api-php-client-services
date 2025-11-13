@@ -21,16 +21,24 @@ class GoogleCloudApigeeV1EndpointChainingRule extends \Google\Collection
 {
   protected $collection_key = 'proxyIds';
   /**
+   * The deployment group to target for cross-shard chaining calls to these
+   * proxies.
+   *
    * @var string
    */
   public $deploymentGroup;
   /**
+   * List of proxy ids which may be found in the given deployment group.
+   *
    * @var string[]
    */
   public $proxyIds;
 
   /**
-   * @param string
+   * The deployment group to target for cross-shard chaining calls to these
+   * proxies.
+   *
+   * @param string $deploymentGroup
    */
   public function setDeploymentGroup($deploymentGroup)
   {
@@ -44,7 +52,9 @@ class GoogleCloudApigeeV1EndpointChainingRule extends \Google\Collection
     return $this->deploymentGroup;
   }
   /**
-   * @param string[]
+   * List of proxy ids which may be found in the given deployment group.
+   *
+   * @param string[] $proxyIds
    */
   public function setProxyIds($proxyIds)
   {

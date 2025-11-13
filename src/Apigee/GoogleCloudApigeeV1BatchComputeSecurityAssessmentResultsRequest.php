@@ -28,24 +28,40 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
   protected $includeAllResourcesType = GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestIncludeAll::class;
   protected $includeAllResourcesDataType = '';
   /**
+   * Optional. The maximum number of results to return. The service may return
+   * fewer than this value. If unspecified, at most 50 results will be returned.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * Optional. A page token, received from a previous
+   * `BatchComputeSecurityAssessmentResults` call. Provide this to retrieve the
+   * subsequent page.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Required. Name of the profile that is used for computation.
+   *
    * @var string
    */
   public $profile;
   /**
+   * Optional. Scope of the resources for the computation. When computing scores
+   * for Apigee proxies, the scope should be set to the environment of the
+   * resources. When computing scores for API Hub deployments, api_hub_scope
+   * should be set instead.
+   *
    * @var string
    */
   public $scope;
 
   /**
-   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray
+   * An array of API Hub APIs to assess. A maximum of 1 API can be assessed.
+   *
+   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray $apiHubApis
    */
   public function setApiHubApis(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubApiArray $apiHubApis)
   {
@@ -59,7 +75,10 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
     return $this->apiHubApis;
   }
   /**
-   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray
+   * An array of API Hub Gateways to assess. A maximum of 3 gateways can be
+   * assessed.
+   *
+   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray $apiHubGateways
    */
   public function setApiHubGateways(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestApiHubGatewayArray $apiHubGateways)
   {
@@ -73,7 +92,9 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
     return $this->apiHubGateways;
   }
   /**
-   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestResourceArray
+   * Include only these resources.
+   *
+   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestResourceArray $include
    */
   public function setInclude(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestResourceArray $include)
   {
@@ -87,7 +108,9 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
     return $this->include;
   }
   /**
-   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestIncludeAll
+   * Include all resources under the scope.
+   *
+   * @param GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestIncludeAll $includeAllResources
    */
   public function setIncludeAllResources(GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequestIncludeAll $includeAllResources)
   {
@@ -101,7 +124,10 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
     return $this->includeAllResources;
   }
   /**
-   * @param int
+   * Optional. The maximum number of results to return. The service may return
+   * fewer than this value. If unspecified, at most 50 results will be returned.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -115,7 +141,11 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
     return $this->pageSize;
   }
   /**
-   * @param string
+   * Optional. A page token, received from a previous
+   * `BatchComputeSecurityAssessmentResults` call. Provide this to retrieve the
+   * subsequent page.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -129,7 +159,9 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
     return $this->pageToken;
   }
   /**
-   * @param string
+   * Required. Name of the profile that is used for computation.
+   *
+   * @param string $profile
    */
   public function setProfile($profile)
   {
@@ -143,7 +175,12 @@ class GoogleCloudApigeeV1BatchComputeSecurityAssessmentResultsRequest extends \G
     return $this->profile;
   }
   /**
-   * @param string
+   * Optional. Scope of the resources for the computation. When computing scores
+   * for Apigee proxies, the scope should be set to the environment of the
+   * resources. When computing scores for API Hub deployments, api_hub_scope
+   * should be set instead.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {

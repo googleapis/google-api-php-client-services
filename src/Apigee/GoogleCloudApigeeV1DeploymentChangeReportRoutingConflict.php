@@ -22,16 +22,22 @@ class GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict extends \Google\M
   protected $conflictingDeploymentType = GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment::class;
   protected $conflictingDeploymentDataType = '';
   /**
+   * Human-readable description of this conflict.
+   *
    * @var string
    */
   public $description;
   /**
+   * Name of the environment group in which this conflict exists.
+   *
    * @var string
    */
   public $environmentGroup;
 
   /**
-   * @param GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment
+   * Existing base path/deployment causing the conflict.
+   *
+   * @param GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment $conflictingDeployment
    */
   public function setConflictingDeployment(GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment $conflictingDeployment)
   {
@@ -45,7 +51,9 @@ class GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict extends \Google\M
     return $this->conflictingDeployment;
   }
   /**
-   * @param string
+   * Human-readable description of this conflict.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -59,7 +67,9 @@ class GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict extends \Google\M
     return $this->description;
   }
   /**
-   * @param string
+   * Name of the environment group in which this conflict exists.
+   *
+   * @param string $environmentGroup
    */
   public function setEnvironmentGroup($environmentGroup)
   {

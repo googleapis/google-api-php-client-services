@@ -20,24 +20,34 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ApiCategory extends \Google\Model
 {
   /**
+   * ID of the category (a UUID).
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of the category.
+   *
    * @var string
    */
   public $name;
   /**
+   * Name of the portal.
+   *
    * @var string
    */
   public $siteId;
   /**
+   * Time the category was last modified in milliseconds since epoch.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * ID of the category (a UUID).
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -51,7 +61,9 @@ class GoogleCloudApigeeV1ApiCategory extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Name of the category.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +77,9 @@ class GoogleCloudApigeeV1ApiCategory extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Name of the portal.
+   *
+   * @param string $siteId
    */
   public function setSiteId($siteId)
   {
@@ -79,7 +93,9 @@ class GoogleCloudApigeeV1ApiCategory extends \Google\Model
     return $this->siteId;
   }
   /**
-   * @param string
+   * Time the category was last modified in milliseconds since epoch.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

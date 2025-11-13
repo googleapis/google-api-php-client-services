@@ -20,16 +20,48 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DataCollectorConfig extends \Google\Model
 {
   /**
+   * For future compatibility.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * For integer values.
+   */
+  public const TYPE_INTEGER = 'INTEGER';
+  /**
+   * For float values.
+   */
+  public const TYPE_FLOAT = 'FLOAT';
+  /**
+   * For string values.
+   */
+  public const TYPE_STRING = 'STRING';
+  /**
+   * For boolean values.
+   */
+  public const TYPE_BOOLEAN = 'BOOLEAN';
+  /**
+   * For datetime values.
+   */
+  public const TYPE_DATETIME = 'DATETIME';
+  /**
+   * Name of the data collector in the following format:
+   * `organizations/{org}/datacollectors/{datacollector}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Data type accepted by the data collector.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Name of the data collector in the following format:
+   * `organizations/{org}/datacollectors/{datacollector}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,14 +75,19 @@ class GoogleCloudApigeeV1DataCollectorConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Data type accepted by the data collector.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, INTEGER, FLOAT, STRING, BOOLEAN,
+   * DATETIME
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

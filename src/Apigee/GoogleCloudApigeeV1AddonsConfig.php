@@ -33,7 +33,9 @@ class GoogleCloudApigeeV1AddonsConfig extends \Google\Model
   protected $monetizationConfigDataType = '';
 
   /**
-   * @param GoogleCloudApigeeV1AdvancedApiOpsConfig
+   * Configuration for the Advanced API Ops add-on.
+   *
+   * @param GoogleCloudApigeeV1AdvancedApiOpsConfig $advancedApiOpsConfig
    */
   public function setAdvancedApiOpsConfig(GoogleCloudApigeeV1AdvancedApiOpsConfig $advancedApiOpsConfig)
   {
@@ -47,7 +49,10 @@ class GoogleCloudApigeeV1AddonsConfig extends \Google\Model
     return $this->advancedApiOpsConfig;
   }
   /**
-   * @param GoogleCloudApigeeV1AnalyticsConfig
+   * Configuration for the Analytics add-on. Only used in
+   * organizations.environments.addonsConfig.
+   *
+   * @param GoogleCloudApigeeV1AnalyticsConfig $analyticsConfig
    */
   public function setAnalyticsConfig(GoogleCloudApigeeV1AnalyticsConfig $analyticsConfig)
   {
@@ -61,7 +66,9 @@ class GoogleCloudApigeeV1AddonsConfig extends \Google\Model
     return $this->analyticsConfig;
   }
   /**
-   * @param GoogleCloudApigeeV1ApiSecurityConfig
+   * Configuration for the API Security add-on.
+   *
+   * @param GoogleCloudApigeeV1ApiSecurityConfig $apiSecurityConfig
    */
   public function setApiSecurityConfig(GoogleCloudApigeeV1ApiSecurityConfig $apiSecurityConfig)
   {
@@ -75,7 +82,9 @@ class GoogleCloudApigeeV1AddonsConfig extends \Google\Model
     return $this->apiSecurityConfig;
   }
   /**
-   * @param GoogleCloudApigeeV1ConnectorsPlatformConfig
+   * Configuration for the Connectors Platform add-on.
+   *
+   * @param GoogleCloudApigeeV1ConnectorsPlatformConfig $connectorsPlatformConfig
    */
   public function setConnectorsPlatformConfig(GoogleCloudApigeeV1ConnectorsPlatformConfig $connectorsPlatformConfig)
   {
@@ -89,7 +98,9 @@ class GoogleCloudApigeeV1AddonsConfig extends \Google\Model
     return $this->connectorsPlatformConfig;
   }
   /**
-   * @param GoogleCloudApigeeV1IntegrationConfig
+   * Configuration for the Integration add-on.
+   *
+   * @param GoogleCloudApigeeV1IntegrationConfig $integrationConfig
    */
   public function setIntegrationConfig(GoogleCloudApigeeV1IntegrationConfig $integrationConfig)
   {
@@ -103,7 +114,9 @@ class GoogleCloudApigeeV1AddonsConfig extends \Google\Model
     return $this->integrationConfig;
   }
   /**
-   * @param GoogleCloudApigeeV1MonetizationConfig
+   * Configuration for the Monetization add-on.
+   *
+   * @param GoogleCloudApigeeV1MonetizationConfig $monetizationConfig
    */
   public function setMonetizationConfig(GoogleCloudApigeeV1MonetizationConfig $monetizationConfig)
   {
