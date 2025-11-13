@@ -19,30 +19,73 @@ namespace Google\Service\DataPortability;
 
 class PortabilityArchiveState extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The job is in progress.
+   */
+  public const STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * The job is complete.
+   */
+  public const STATE_COMPLETE = 'COMPLETE';
+  /**
+   * The job failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The job is cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
   protected $collection_key = 'urls';
   /**
+   * The timestamp that represents the end point for the data you are exporting.
+   * If the end_time value is set in the InitiatePortabilityArchiveRequest, this
+   * field is set to that value. If end_time is not set, this value is set to
+   * the time the export was requested.
+   *
    * @var string
    */
   public $exportTime;
   /**
+   * The resource name of ArchiveJob's PortabilityArchiveState singleton. The
+   * format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job
+   * is the job ID provided in the request.
+   *
    * @var string
    */
   public $name;
   /**
+   * The timestamp that represents the starting point for the data you are
+   * exporting. This field is set only if the start_time field is specified in
+   * the InitiatePortabilityArchiveRequest.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Resource that represents the state of the Archive job.
+   *
    * @var string
    */
   public $state;
   /**
+   * If the state is complete, this method returns the signed URLs of the
+   * objects in the Cloud Storage bucket.
+   *
    * @var string[]
    */
   public $urls;
 
   /**
-   * @param string
+   * The timestamp that represents the end point for the data you are exporting.
+   * If the end_time value is set in the InitiatePortabilityArchiveRequest, this
+   * field is set to that value. If end_time is not set, this value is set to
+   * the time the export was requested.
+   *
+   * @param string $exportTime
    */
   public function setExportTime($exportTime)
   {
@@ -56,7 +99,11 @@ class PortabilityArchiveState extends \Google\Collection
     return $this->exportTime;
   }
   /**
-   * @param string
+   * The resource name of ArchiveJob's PortabilityArchiveState singleton. The
+   * format is: archiveJobs/{archive_job}/portabilityArchiveState. archive_job
+   * is the job ID provided in the request.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -70,7 +117,11 @@ class PortabilityArchiveState extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The timestamp that represents the starting point for the data you are
+   * exporting. This field is set only if the start_time field is specified in
+   * the InitiatePortabilityArchiveRequest.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -84,21 +135,29 @@ class PortabilityArchiveState extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Resource that represents the state of the Archive job.
+   *
+   * Accepted values: STATE_UNSPECIFIED, IN_PROGRESS, COMPLETE, FAILED,
+   * CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string[]
+   * If the state is complete, this method returns the signed URLs of the
+   * objects in the Cloud Storage bucket.
+   *
+   * @param string[] $urls
    */
   public function setUrls($urls)
   {

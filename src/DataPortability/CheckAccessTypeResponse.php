@@ -21,16 +21,25 @@ class CheckAccessTypeResponse extends \Google\Collection
 {
   protected $collection_key = 'timeBasedResources';
   /**
+   * Jobs initiated with this token will be one-time if any requested resources
+   * have one-time access.
+   *
    * @var string[]
    */
   public $oneTimeResources;
   /**
+   * Jobs initiated with this token will be time-based if all requested
+   * resources have time-based access.
+   *
    * @var string[]
    */
   public $timeBasedResources;
 
   /**
-   * @param string[]
+   * Jobs initiated with this token will be one-time if any requested resources
+   * have one-time access.
+   *
+   * @param string[] $oneTimeResources
    */
   public function setOneTimeResources($oneTimeResources)
   {
@@ -44,7 +53,10 @@ class CheckAccessTypeResponse extends \Google\Collection
     return $this->oneTimeResources;
   }
   /**
-   * @param string[]
+   * Jobs initiated with this token will be time-based if all requested
+   * resources have time-based access.
+   *
+   * @param string[] $timeBasedResources
    */
   public function setTimeBasedResources($timeBasedResources)
   {

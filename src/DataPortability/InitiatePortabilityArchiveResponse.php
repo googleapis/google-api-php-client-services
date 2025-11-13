@@ -20,30 +20,56 @@ namespace Google\Service\DataPortability;
 class InitiatePortabilityArchiveResponse extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const ACCESS_TYPE_ACCESS_TYPE_UNSPECIFIED = 'ACCESS_TYPE_UNSPECIFIED';
+  /**
+   * One-time access to the requested scopes.
+   */
+  public const ACCESS_TYPE_ACCESS_TYPE_ONE_TIME = 'ACCESS_TYPE_ONE_TIME';
+  /**
+   * Multiple exports allowed over 30 days. Enum value subject to change before
+   * launch.
+   */
+  public const ACCESS_TYPE_ACCESS_TYPE_TIME_BASED = 'ACCESS_TYPE_TIME_BASED';
+  /**
+   * The access type of the Archive job initiated by the API.
+   *
    * @var string
    */
   public $accessType;
   /**
+   * The archive job ID that is initiated in the API. This can be used to get
+   * the state of the job.
+   *
    * @var string
    */
   public $archiveJobId;
 
   /**
-   * @param string
+   * The access type of the Archive job initiated by the API.
+   *
+   * Accepted values: ACCESS_TYPE_UNSPECIFIED, ACCESS_TYPE_ONE_TIME,
+   * ACCESS_TYPE_TIME_BASED
+   *
+   * @param self::ACCESS_TYPE_* $accessType
    */
   public function setAccessType($accessType)
   {
     $this->accessType = $accessType;
   }
   /**
-   * @return string
+   * @return self::ACCESS_TYPE_*
    */
   public function getAccessType()
   {
     return $this->accessType;
   }
   /**
-   * @param string
+   * The archive job ID that is initiated in the API. This can be used to get
+   * the state of the job.
+   *
+   * @param string $archiveJobId
    */
   public function setArchiveJobId($archiveJobId)
   {
