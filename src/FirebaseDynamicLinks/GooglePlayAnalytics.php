@@ -20,38 +20,58 @@ namespace Google\Service\FirebaseDynamicLinks;
 class GooglePlayAnalytics extends \Google\Model
 {
   /**
+   * Deprecated; FDL SDK does not process nor log it.
+   *
+   * @deprecated
    * @var string
    */
   public $gclid;
   /**
+   * Campaign name; used for keyword analysis to identify a specific product
+   * promotion or strategic campaign.
+   *
    * @var string
    */
   public $utmCampaign;
   /**
+   * Campaign content; used for A/B testing and content-targeted ads to
+   * differentiate ads or links that point to the same URL.
+   *
    * @var string
    */
   public $utmContent;
   /**
+   * Campaign medium; used to identify a medium such as email or cost-per-click.
+   *
    * @var string
    */
   public $utmMedium;
   /**
+   * Campaign source; used to identify a search engine, newsletter, or other
+   * source.
+   *
    * @var string
    */
   public $utmSource;
   /**
+   * Campaign term; used with paid search to supply the keywords for ads.
+   *
    * @var string
    */
   public $utmTerm;
 
   /**
-   * @param string
+   * Deprecated; FDL SDK does not process nor log it.
+   *
+   * @deprecated
+   * @param string $gclid
    */
   public function setGclid($gclid)
   {
     $this->gclid = $gclid;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getGclid()
@@ -59,7 +79,10 @@ class GooglePlayAnalytics extends \Google\Model
     return $this->gclid;
   }
   /**
-   * @param string
+   * Campaign name; used for keyword analysis to identify a specific product
+   * promotion or strategic campaign.
+   *
+   * @param string $utmCampaign
    */
   public function setUtmCampaign($utmCampaign)
   {
@@ -73,7 +96,10 @@ class GooglePlayAnalytics extends \Google\Model
     return $this->utmCampaign;
   }
   /**
-   * @param string
+   * Campaign content; used for A/B testing and content-targeted ads to
+   * differentiate ads or links that point to the same URL.
+   *
+   * @param string $utmContent
    */
   public function setUtmContent($utmContent)
   {
@@ -87,7 +113,9 @@ class GooglePlayAnalytics extends \Google\Model
     return $this->utmContent;
   }
   /**
-   * @param string
+   * Campaign medium; used to identify a medium such as email or cost-per-click.
+   *
+   * @param string $utmMedium
    */
   public function setUtmMedium($utmMedium)
   {
@@ -101,7 +129,10 @@ class GooglePlayAnalytics extends \Google\Model
     return $this->utmMedium;
   }
   /**
-   * @param string
+   * Campaign source; used to identify a search engine, newsletter, or other
+   * source.
+   *
+   * @param string $utmSource
    */
   public function setUtmSource($utmSource)
   {
@@ -115,7 +146,9 @@ class GooglePlayAnalytics extends \Google\Model
     return $this->utmSource;
   }
   /**
-   * @param string
+   * Campaign term; used with paid search to supply the keywords for ads.
+   *
+   * @param string $utmTerm
    */
   public function setUtmTerm($utmTerm)
   {

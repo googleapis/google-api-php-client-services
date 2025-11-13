@@ -20,36 +20,54 @@ namespace Google\Service\FirebaseDynamicLinks;
 class IosInfo extends \Google\Model
 {
   /**
+   * iOS App Store ID.
+   *
    * @var string
    */
   public $iosAppStoreId;
   /**
+   * iOS bundle ID of the app.
+   *
    * @var string
    */
   public $iosBundleId;
   /**
+   * Custom (destination) scheme to use for iOS. By default, we’ll use the
+   * bundle ID as the custom scheme. Developer can override this behavior using
+   * this param.
+   *
    * @var string
    */
   public $iosCustomScheme;
   /**
+   * Link to open on iOS if the app is not installed.
+   *
    * @var string
    */
   public $iosFallbackLink;
   /**
+   * iPad bundle ID of the app.
+   *
    * @var string
    */
   public $iosIpadBundleId;
   /**
+   * If specified, this overrides the ios_fallback_link value on iPads.
+   *
    * @var string
    */
   public $iosIpadFallbackLink;
   /**
+   * iOS minimum version.
+   *
    * @var string
    */
   public $iosMinimumVersion;
 
   /**
-   * @param string
+   * iOS App Store ID.
+   *
+   * @param string $iosAppStoreId
    */
   public function setIosAppStoreId($iosAppStoreId)
   {
@@ -63,7 +81,9 @@ class IosInfo extends \Google\Model
     return $this->iosAppStoreId;
   }
   /**
-   * @param string
+   * iOS bundle ID of the app.
+   *
+   * @param string $iosBundleId
    */
   public function setIosBundleId($iosBundleId)
   {
@@ -77,7 +97,11 @@ class IosInfo extends \Google\Model
     return $this->iosBundleId;
   }
   /**
-   * @param string
+   * Custom (destination) scheme to use for iOS. By default, we’ll use the
+   * bundle ID as the custom scheme. Developer can override this behavior using
+   * this param.
+   *
+   * @param string $iosCustomScheme
    */
   public function setIosCustomScheme($iosCustomScheme)
   {
@@ -91,7 +115,9 @@ class IosInfo extends \Google\Model
     return $this->iosCustomScheme;
   }
   /**
-   * @param string
+   * Link to open on iOS if the app is not installed.
+   *
+   * @param string $iosFallbackLink
    */
   public function setIosFallbackLink($iosFallbackLink)
   {
@@ -105,7 +131,9 @@ class IosInfo extends \Google\Model
     return $this->iosFallbackLink;
   }
   /**
-   * @param string
+   * iPad bundle ID of the app.
+   *
+   * @param string $iosIpadBundleId
    */
   public function setIosIpadBundleId($iosIpadBundleId)
   {
@@ -119,7 +147,9 @@ class IosInfo extends \Google\Model
     return $this->iosIpadBundleId;
   }
   /**
-   * @param string
+   * If specified, this overrides the ios_fallback_link value on iPads.
+   *
+   * @param string $iosIpadFallbackLink
    */
   public function setIosIpadFallbackLink($iosIpadFallbackLink)
   {
@@ -133,7 +163,9 @@ class IosInfo extends \Google\Model
     return $this->iosIpadFallbackLink;
   }
   /**
-   * @param string
+   * iOS minimum version.
+   *
+   * @param string $iosMinimumVersion
    */
   public function setIosMinimumVersion($iosMinimumVersion)
   {

@@ -22,14 +22,26 @@ class CreateManagedShortLinkRequest extends \Google\Model
   protected $dynamicLinkInfoType = DynamicLinkInfo::class;
   protected $dynamicLinkInfoDataType = '';
   /**
+   * Full long Dynamic Link URL with desired query parameters specified. For
+   * example,
+   * "https://sample.app.goo.gl/?link=http://www.google.com&apn=com.sample",
+   * [Learn more](https://firebase.google.com/docs/reference/dynamic-links/link-
+   * shortener).
+   *
    * @var string
    */
   public $longDynamicLink;
   /**
+   * Link name to associate with the link. It's used for marketer to identify
+   * manually-created links in the Firebase console
+   * (https://console.firebase.google.com/). Links must be named to be tracked.
+   *
    * @var string
    */
   public $name;
   /**
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   *
    * @var string
    */
   public $sdkVersion;
@@ -37,7 +49,11 @@ class CreateManagedShortLinkRequest extends \Google\Model
   protected $suffixDataType = '';
 
   /**
-   * @param DynamicLinkInfo
+   * Information about the Dynamic Link to be shortened. [Learn
+   * more](https://firebase.google.com/docs/reference/dynamic-links/link-
+   * shortener).
+   *
+   * @param DynamicLinkInfo $dynamicLinkInfo
    */
   public function setDynamicLinkInfo(DynamicLinkInfo $dynamicLinkInfo)
   {
@@ -51,7 +67,13 @@ class CreateManagedShortLinkRequest extends \Google\Model
     return $this->dynamicLinkInfo;
   }
   /**
-   * @param string
+   * Full long Dynamic Link URL with desired query parameters specified. For
+   * example,
+   * "https://sample.app.goo.gl/?link=http://www.google.com&apn=com.sample",
+   * [Learn more](https://firebase.google.com/docs/reference/dynamic-links/link-
+   * shortener).
+   *
+   * @param string $longDynamicLink
    */
   public function setLongDynamicLink($longDynamicLink)
   {
@@ -65,7 +87,11 @@ class CreateManagedShortLinkRequest extends \Google\Model
     return $this->longDynamicLink;
   }
   /**
-   * @param string
+   * Link name to associate with the link. It's used for marketer to identify
+   * manually-created links in the Firebase console
+   * (https://console.firebase.google.com/). Links must be named to be tracked.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +105,9 @@ class CreateManagedShortLinkRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Google SDK version. Version takes the form "$major.$minor.$patch"
+   *
+   * @param string $sdkVersion
    */
   public function setSdkVersion($sdkVersion)
   {
@@ -93,7 +121,9 @@ class CreateManagedShortLinkRequest extends \Google\Model
     return $this->sdkVersion;
   }
   /**
-   * @param Suffix
+   * Short Dynamic Link suffix. Optional.
+   *
+   * @param Suffix $suffix
    */
   public function setSuffix(Suffix $suffix)
   {

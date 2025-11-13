@@ -20,24 +20,35 @@ namespace Google\Service\FirebaseDynamicLinks;
 class AndroidInfo extends \Google\Model
 {
   /**
+   * Link to open on Android if the app is not installed.
+   *
    * @var string
    */
   public $androidFallbackLink;
   /**
+   * If specified, this overrides the ‘link’ parameter on Android.
+   *
    * @var string
    */
   public $androidLink;
   /**
+   * Minimum version code for the Android app. If the installed app’s version
+   * code is lower, then the user is taken to the Play Store.
+   *
    * @var string
    */
   public $androidMinPackageVersionCode;
   /**
+   * Android package name of the app.
+   *
    * @var string
    */
   public $androidPackageName;
 
   /**
-   * @param string
+   * Link to open on Android if the app is not installed.
+   *
+   * @param string $androidFallbackLink
    */
   public function setAndroidFallbackLink($androidFallbackLink)
   {
@@ -51,7 +62,9 @@ class AndroidInfo extends \Google\Model
     return $this->androidFallbackLink;
   }
   /**
-   * @param string
+   * If specified, this overrides the ‘link’ parameter on Android.
+   *
+   * @param string $androidLink
    */
   public function setAndroidLink($androidLink)
   {
@@ -65,7 +78,10 @@ class AndroidInfo extends \Google\Model
     return $this->androidLink;
   }
   /**
-   * @param string
+   * Minimum version code for the Android app. If the installed app’s version
+   * code is lower, then the user is taken to the Play Store.
+   *
+   * @param string $androidMinPackageVersionCode
    */
   public function setAndroidMinPackageVersionCode($androidMinPackageVersionCode)
   {
@@ -79,7 +95,9 @@ class AndroidInfo extends \Google\Model
     return $this->androidMinPackageVersionCode;
   }
   /**
-   * @param string
+   * Android package name of the app.
+   *
+   * @param string $androidPackageName
    */
   public function setAndroidPackageName($androidPackageName)
   {

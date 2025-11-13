@@ -23,6 +23,8 @@ class CreateManagedShortLinkResponse extends \Google\Collection
   protected $managedShortLinkType = ManagedShortLink::class;
   protected $managedShortLinkDataType = '';
   /**
+   * Preview link to show the link flow chart. (debug info.)
+   *
    * @var string
    */
   public $previewLink;
@@ -30,7 +32,9 @@ class CreateManagedShortLinkResponse extends \Google\Collection
   protected $warningDataType = 'array';
 
   /**
-   * @param ManagedShortLink
+   * Short Dynamic Link value. e.g. https://abcd.app.goo.gl/wxyz
+   *
+   * @param ManagedShortLink $managedShortLink
    */
   public function setManagedShortLink(ManagedShortLink $managedShortLink)
   {
@@ -44,7 +48,9 @@ class CreateManagedShortLinkResponse extends \Google\Collection
     return $this->managedShortLink;
   }
   /**
-   * @param string
+   * Preview link to show the link flow chart. (debug info.)
+   *
+   * @param string $previewLink
    */
   public function setPreviewLink($previewLink)
   {
@@ -58,7 +64,9 @@ class CreateManagedShortLinkResponse extends \Google\Collection
     return $this->previewLink;
   }
   /**
-   * @param DynamicLinkWarning[]
+   * Information about potential warnings on link creation.
+   *
+   * @param DynamicLinkWarning[] $warning
    */
   public function setWarning($warning)
   {

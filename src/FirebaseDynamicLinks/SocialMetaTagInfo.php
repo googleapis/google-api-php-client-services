@@ -20,20 +20,28 @@ namespace Google\Service\FirebaseDynamicLinks;
 class SocialMetaTagInfo extends \Google\Model
 {
   /**
+   * A short description of the link. Optional.
+   *
    * @var string
    */
   public $socialDescription;
   /**
+   * An image url string. Optional.
+   *
    * @var string
    */
   public $socialImageLink;
   /**
+   * Title to be displayed. Optional.
+   *
    * @var string
    */
   public $socialTitle;
 
   /**
-   * @param string
+   * A short description of the link. Optional.
+   *
+   * @param string $socialDescription
    */
   public function setSocialDescription($socialDescription)
   {
@@ -47,7 +55,9 @@ class SocialMetaTagInfo extends \Google\Model
     return $this->socialDescription;
   }
   /**
-   * @param string
+   * An image url string. Optional.
+   *
+   * @param string $socialImageLink
    */
   public function setSocialImageLink($socialImageLink)
   {
@@ -61,7 +71,9 @@ class SocialMetaTagInfo extends \Google\Model
     return $this->socialImageLink;
   }
   /**
-   * @param string
+   * Title to be displayed. Optional.
+   *
+   * @param string $socialTitle
    */
   public function setSocialTitle($socialTitle)
   {

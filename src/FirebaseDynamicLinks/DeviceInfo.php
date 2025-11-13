@@ -20,36 +20,57 @@ namespace Google\Service\FirebaseDynamicLinks;
 class DeviceInfo extends \Google\Model
 {
   /**
+   * Device model name.
+   *
    * @var string
    */
   public $deviceModelName;
   /**
+   * Device language code setting.
+   *
+   * @deprecated
    * @var string
    */
   public $languageCode;
   /**
+   * Device language code setting obtained by executing JavaScript code in
+   * WebView.
+   *
    * @var string
    */
   public $languageCodeFromWebview;
   /**
+   * Device language code raw setting. iOS does returns language code in
+   * different format than iOS WebView. For example WebView returns en_US, but
+   * iOS returns en-US. Field below will return raw value returned by iOS.
+   *
+   * @deprecated
    * @var string
    */
   public $languageCodeRaw;
   /**
+   * Device display resolution height.
+   *
    * @var string
    */
   public $screenResolutionHeight;
   /**
+   * Device display resolution width.
+   *
    * @var string
    */
   public $screenResolutionWidth;
   /**
+   * Device timezone setting.
+   *
    * @var string
    */
   public $timezone;
 
   /**
-   * @param string
+   * Device model name.
+   *
+   * @param string $deviceModelName
    */
   public function setDeviceModelName($deviceModelName)
   {
@@ -63,13 +84,17 @@ class DeviceInfo extends \Google\Model
     return $this->deviceModelName;
   }
   /**
-   * @param string
+   * Device language code setting.
+   *
+   * @deprecated
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
     $this->languageCode = $languageCode;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getLanguageCode()
@@ -77,7 +102,10 @@ class DeviceInfo extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Device language code setting obtained by executing JavaScript code in
+   * WebView.
+   *
+   * @param string $languageCodeFromWebview
    */
   public function setLanguageCodeFromWebview($languageCodeFromWebview)
   {
@@ -91,13 +119,19 @@ class DeviceInfo extends \Google\Model
     return $this->languageCodeFromWebview;
   }
   /**
-   * @param string
+   * Device language code raw setting. iOS does returns language code in
+   * different format than iOS WebView. For example WebView returns en_US, but
+   * iOS returns en-US. Field below will return raw value returned by iOS.
+   *
+   * @deprecated
+   * @param string $languageCodeRaw
    */
   public function setLanguageCodeRaw($languageCodeRaw)
   {
     $this->languageCodeRaw = $languageCodeRaw;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getLanguageCodeRaw()
@@ -105,7 +139,9 @@ class DeviceInfo extends \Google\Model
     return $this->languageCodeRaw;
   }
   /**
-   * @param string
+   * Device display resolution height.
+   *
+   * @param string $screenResolutionHeight
    */
   public function setScreenResolutionHeight($screenResolutionHeight)
   {
@@ -119,7 +155,9 @@ class DeviceInfo extends \Google\Model
     return $this->screenResolutionHeight;
   }
   /**
-   * @param string
+   * Device display resolution width.
+   *
+   * @param string $screenResolutionWidth
    */
   public function setScreenResolutionWidth($screenResolutionWidth)
   {
@@ -133,7 +171,9 @@ class DeviceInfo extends \Google\Model
     return $this->screenResolutionWidth;
   }
   /**
-   * @param string
+   * Device timezone setting.
+   *
+   * @param string $timezone
    */
   public function setTimezone($timezone)
   {

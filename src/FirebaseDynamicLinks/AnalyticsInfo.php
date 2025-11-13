@@ -25,7 +25,9 @@ class AnalyticsInfo extends \Google\Model
   protected $itunesConnectAnalyticsDataType = '';
 
   /**
-   * @param GooglePlayAnalytics
+   * Google Play Campaign Measurements.
+   *
+   * @param GooglePlayAnalytics $googlePlayAnalytics
    */
   public function setGooglePlayAnalytics(GooglePlayAnalytics $googlePlayAnalytics)
   {
@@ -39,7 +41,9 @@ class AnalyticsInfo extends \Google\Model
     return $this->googlePlayAnalytics;
   }
   /**
-   * @param ITunesConnectAnalytics
+   * iTunes Connect App Analytics.
+   *
+   * @param ITunesConnectAnalytics $itunesConnectAnalytics
    */
   public function setItunesConnectAnalytics(ITunesConnectAnalytics $itunesConnectAnalytics)
   {
