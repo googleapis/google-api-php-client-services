@@ -21,6 +21,8 @@ class Form extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Output only. The form ID.
+   *
    * @var string
    */
   public $formId;
@@ -29,16 +31,35 @@ class Form extends \Google\Collection
   protected $itemsType = Item::class;
   protected $itemsDataType = 'array';
   /**
+   * Output only. The ID of the linked Google Sheet which is accumulating
+   * responses from this Form (if such a Sheet exists).
+   *
    * @var string
    */
   public $linkedSheetId;
   protected $publishSettingsType = PublishSettings::class;
   protected $publishSettingsDataType = '';
   /**
+   * Output only. The form URI to share with responders. This opens a page that
+   * allows the user to submit responses but not edit the questions. For forms
+   * that have publish_settings value set, this is the published form URI.
+   *
    * @var string
    */
   public $responderUri;
   /**
+   * Output only. The revision ID of the form. Used in the WriteControl in
+   * update requests to identify the revision on which the changes are based.
+   * The format of the revision ID may change over time, so it should be treated
+   * opaquely. A returned revision ID is only guaranteed to be valid for 24
+   * hours after it has been returned and cannot be shared across users. If the
+   * revision ID is unchanged between calls, then the form *content* has not
+   * changed. Conversely, a changed ID (for the same form and user) usually
+   * means the form *content* has been updated; however, a changed ID can also
+   * be due to internal factors such as ID format changes. Form content excludes
+   * form metadata, including: * sharing settings (who has access to the form) *
+   * publish_settings (if the form supports publishing and if it is published)
+   *
    * @var string
    */
   public $revisionId;
@@ -46,7 +67,9 @@ class Form extends \Google\Collection
   protected $settingsDataType = '';
 
   /**
-   * @param string
+   * Output only. The form ID.
+   *
+   * @param string $formId
    */
   public function setFormId($formId)
   {
@@ -60,7 +83,9 @@ class Form extends \Google\Collection
     return $this->formId;
   }
   /**
-   * @param Info
+   * Required. The title and description of the form.
+   *
+   * @param Info $info
    */
   public function setInfo(Info $info)
   {
@@ -74,7 +99,10 @@ class Form extends \Google\Collection
     return $this->info;
   }
   /**
-   * @param Item[]
+   * Required. A list of the form's items, which can include section headers,
+   * questions, embedded media, etc.
+   *
+   * @param Item[] $items
    */
   public function setItems($items)
   {
@@ -88,7 +116,10 @@ class Form extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Output only. The ID of the linked Google Sheet which is accumulating
+   * responses from this Form (if such a Sheet exists).
+   *
+   * @param string $linkedSheetId
    */
   public function setLinkedSheetId($linkedSheetId)
   {
@@ -102,7 +133,12 @@ class Form extends \Google\Collection
     return $this->linkedSheetId;
   }
   /**
-   * @param PublishSettings
+   * Output only. The publishing settings for a form. This field isn't set for
+   * legacy forms because they don't have the publish_settings field. All newly
+   * created forms support publish settings. Forms with publish_settings value
+   * set can call SetPublishSettings API to publish or unpublish the form.
+   *
+   * @param PublishSettings $publishSettings
    */
   public function setPublishSettings(PublishSettings $publishSettings)
   {
@@ -116,7 +152,11 @@ class Form extends \Google\Collection
     return $this->publishSettings;
   }
   /**
-   * @param string
+   * Output only. The form URI to share with responders. This opens a page that
+   * allows the user to submit responses but not edit the questions. For forms
+   * that have publish_settings value set, this is the published form URI.
+   *
+   * @param string $responderUri
    */
   public function setResponderUri($responderUri)
   {
@@ -130,7 +170,19 @@ class Form extends \Google\Collection
     return $this->responderUri;
   }
   /**
-   * @param string
+   * Output only. The revision ID of the form. Used in the WriteControl in
+   * update requests to identify the revision on which the changes are based.
+   * The format of the revision ID may change over time, so it should be treated
+   * opaquely. A returned revision ID is only guaranteed to be valid for 24
+   * hours after it has been returned and cannot be shared across users. If the
+   * revision ID is unchanged between calls, then the form *content* has not
+   * changed. Conversely, a changed ID (for the same form and user) usually
+   * means the form *content* has been updated; however, a changed ID can also
+   * be due to internal factors such as ID format changes. Form content excludes
+   * form metadata, including: * sharing settings (who has access to the form) *
+   * publish_settings (if the form supports publishing and if it is published)
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -144,7 +196,10 @@ class Form extends \Google\Collection
     return $this->revisionId;
   }
   /**
-   * @param FormSettings
+   * The form's settings. This must be updated with UpdateSettingsRequest; it is
+   * ignored during CreateForm and UpdateFormInfoRequest.
+   *
+   * @param FormSettings $settings
    */
   public function setSettings(FormSettings $settings)
   {

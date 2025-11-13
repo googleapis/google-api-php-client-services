@@ -24,7 +24,9 @@ class ListWatchesResponse extends \Google\Collection
   protected $watchesDataType = 'array';
 
   /**
-   * @param Watch[]
+   * The returned watches.
+   *
+   * @param Watch[] $watches
    */
   public function setWatches($watches)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\Forms;
 class CloudPubsubTopic extends \Google\Model
 {
   /**
+   * Required. A fully qualified Pub/Sub topic name to publish the events to.
+   * This topic must be owned by the calling project and already exist in
+   * Pub/Sub.
+   *
    * @var string
    */
   public $topicName;
 
   /**
-   * @param string
+   * Required. A fully qualified Pub/Sub topic name to publish the events to.
+   * This topic must be owned by the calling project and already exist in
+   * Pub/Sub.
+   *
+   * @param string $topicName
    */
   public function setTopicName($topicName)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Forms;
 class TextQuestion extends \Google\Model
 {
   /**
+   * Whether the question is a paragraph question or not. If not, the question
+   * is a short text question.
+   *
    * @var bool
    */
   public $paragraph;
 
   /**
-   * @param bool
+   * Whether the question is a paragraph question or not. If not, the question
+   * is a short text question.
+   *
+   * @param bool $paragraph
    */
   public function setParagraph($paragraph)
   {

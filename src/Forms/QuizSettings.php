@@ -20,12 +20,20 @@ namespace Google\Service\Forms;
 class QuizSettings extends \Google\Model
 {
   /**
+   * Whether this form is a quiz or not. When true, responses are graded based
+   * on question Grading. Upon setting to false, all question Grading is
+   * deleted.
+   *
    * @var bool
    */
   public $isQuiz;
 
   /**
-   * @param bool
+   * Whether this form is a quiz or not. When true, responses are graded based
+   * on question Grading. Upon setting to false, all question Grading is
+   * deleted.
+   *
+   * @param bool $isQuiz
    */
   public function setIsQuiz($isQuiz)
   {

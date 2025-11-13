@@ -25,7 +25,9 @@ class CreateItemRequest extends \Google\Model
   protected $locationDataType = '';
 
   /**
-   * @param Item
+   * Required. The item to create.
+   *
+   * @param Item $item
    */
   public function setItem(Item $item)
   {
@@ -39,7 +41,9 @@ class CreateItemRequest extends \Google\Model
     return $this->item;
   }
   /**
-   * @param Location
+   * Required. Where to place the new item.
+   *
+   * @param Location $location
    */
   public function setLocation(Location $location)
   {

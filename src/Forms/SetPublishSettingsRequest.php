@@ -22,12 +22,19 @@ class SetPublishSettingsRequest extends \Google\Model
   protected $publishSettingsType = PublishSettings::class;
   protected $publishSettingsDataType = '';
   /**
+   * Optional. The `publish_settings` fields to update. This field mask accepts
+   * the following values: * `publish_state`: Updates or replaces all
+   * `publish_state` settings. * `"*"`: Updates or replaces all
+   * `publish_settings` fields.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param PublishSettings
+   * Required. The desired publish settings to apply to the form.
+   *
+   * @param PublishSettings $publishSettings
    */
   public function setPublishSettings(PublishSettings $publishSettings)
   {
@@ -41,7 +48,12 @@ class SetPublishSettingsRequest extends \Google\Model
     return $this->publishSettings;
   }
   /**
-   * @param string
+   * Optional. The `publish_settings` fields to update. This field mask accepts
+   * the following values: * `publish_state`: Updates or replaces all
+   * `publish_state` settings. * `"*"`: Updates or replaces all
+   * `publish_settings` fields.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

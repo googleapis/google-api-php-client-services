@@ -20,20 +20,29 @@ namespace Google\Service\Forms;
 class FileUploadAnswer extends \Google\Model
 {
   /**
+   * Output only. The ID of the Google Drive file.
+   *
    * @var string
    */
   public $fileId;
   /**
+   * Output only. The file name, as stored in Google Drive on upload.
+   *
    * @var string
    */
   public $fileName;
   /**
+   * Output only. The MIME type of the file, as stored in Google Drive on
+   * upload.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * Output only. The ID of the Google Drive file.
+   *
+   * @param string $fileId
    */
   public function setFileId($fileId)
   {
@@ -47,7 +56,9 @@ class FileUploadAnswer extends \Google\Model
     return $this->fileId;
   }
   /**
-   * @param string
+   * Output only. The file name, as stored in Google Drive on upload.
+   *
+   * @param string $fileName
    */
   public function setFileName($fileName)
   {
@@ -61,7 +72,10 @@ class FileUploadAnswer extends \Google\Model
     return $this->fileName;
   }
   /**
-   * @param string
+   * Output only. The MIME type of the file, as stored in Google Drive on
+   * upload.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

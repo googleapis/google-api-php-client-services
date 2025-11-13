@@ -20,6 +20,8 @@ namespace Google\Service\Forms;
 class SetPublishSettingsResponse extends \Google\Model
 {
   /**
+   * Required. The ID of the Form. This is same as the Form.form_id field.
+   *
    * @var string
    */
   public $formId;
@@ -27,7 +29,9 @@ class SetPublishSettingsResponse extends \Google\Model
   protected $publishSettingsDataType = '';
 
   /**
-   * @param string
+   * Required. The ID of the Form. This is same as the Form.form_id field.
+   *
+   * @param string $formId
    */
   public function setFormId($formId)
   {
@@ -41,7 +45,9 @@ class SetPublishSettingsResponse extends \Google\Model
     return $this->formId;
   }
   /**
-   * @param PublishSettings
+   * The publish settings of the form.
+   *
+   * @param PublishSettings $publishSettings
    */
   public function setPublishSettings(PublishSettings $publishSettings)
   {

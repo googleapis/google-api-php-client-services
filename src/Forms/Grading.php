@@ -24,6 +24,9 @@ class Grading extends \Google\Model
   protected $generalFeedbackType = Feedback::class;
   protected $generalFeedbackDataType = '';
   /**
+   * Required. The maximum number of points a respondent can automatically get
+   * for a correct answer. This must not be negative.
+   *
    * @var int
    */
   public $pointValue;
@@ -33,7 +36,10 @@ class Grading extends \Google\Model
   protected $whenWrongDataType = '';
 
   /**
-   * @param CorrectAnswers
+   * Required. The answer key for the question. Responses are automatically
+   * graded based on this field.
+   *
+   * @param CorrectAnswers $correctAnswers
    */
   public function setCorrectAnswers(CorrectAnswers $correctAnswers)
   {
@@ -47,7 +53,13 @@ class Grading extends \Google\Model
     return $this->correctAnswers;
   }
   /**
-   * @param Feedback
+   * The feedback displayed for all answers. This is commonly used for short
+   * answer questions when a quiz owner wants to quickly give respondents some
+   * sense of whether they answered the question correctly before they've had a
+   * chance to officially grade the response. General feedback cannot be set for
+   * automatically graded multiple choice questions.
+   *
+   * @param Feedback $generalFeedback
    */
   public function setGeneralFeedback(Feedback $generalFeedback)
   {
@@ -61,7 +73,10 @@ class Grading extends \Google\Model
     return $this->generalFeedback;
   }
   /**
-   * @param int
+   * Required. The maximum number of points a respondent can automatically get
+   * for a correct answer. This must not be negative.
+   *
+   * @param int $pointValue
    */
   public function setPointValue($pointValue)
   {
@@ -75,7 +90,10 @@ class Grading extends \Google\Model
     return $this->pointValue;
   }
   /**
-   * @param Feedback
+   * The feedback displayed for correct responses. This feedback can only be set
+   * for multiple choice questions that have correct answers provided.
+   *
+   * @param Feedback $whenRight
    */
   public function setWhenRight(Feedback $whenRight)
   {
@@ -89,7 +107,10 @@ class Grading extends \Google\Model
     return $this->whenRight;
   }
   /**
-   * @param Feedback
+   * The feedback displayed for incorrect responses. This feedback can only be
+   * set for multiple choice questions that have correct answers provided.
+   *
+   * @param Feedback $whenWrong
    */
   public function setWhenWrong(Feedback $whenWrong)
   {

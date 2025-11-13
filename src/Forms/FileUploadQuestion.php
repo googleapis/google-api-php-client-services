@@ -21,24 +21,36 @@ class FileUploadQuestion extends \Google\Collection
 {
   protected $collection_key = 'types';
   /**
+   * Required. The ID of the Drive folder where uploaded files are stored.
+   *
    * @var string
    */
   public $folderId;
   /**
+   * Maximum number of bytes allowed for any single file uploaded to this
+   * question.
+   *
    * @var string
    */
   public $maxFileSize;
   /**
+   * Maximum number of files that can be uploaded for this question in a single
+   * response.
+   *
    * @var int
    */
   public $maxFiles;
   /**
+   * File types accepted by this question.
+   *
    * @var string[]
    */
   public $types;
 
   /**
-   * @param string
+   * Required. The ID of the Drive folder where uploaded files are stored.
+   *
+   * @param string $folderId
    */
   public function setFolderId($folderId)
   {
@@ -52,7 +64,10 @@ class FileUploadQuestion extends \Google\Collection
     return $this->folderId;
   }
   /**
-   * @param string
+   * Maximum number of bytes allowed for any single file uploaded to this
+   * question.
+   *
+   * @param string $maxFileSize
    */
   public function setMaxFileSize($maxFileSize)
   {
@@ -66,7 +81,10 @@ class FileUploadQuestion extends \Google\Collection
     return $this->maxFileSize;
   }
   /**
-   * @param int
+   * Maximum number of files that can be uploaded for this question in a single
+   * response.
+   *
+   * @param int $maxFiles
    */
   public function setMaxFiles($maxFiles)
   {
@@ -80,7 +98,9 @@ class FileUploadQuestion extends \Google\Collection
     return $this->maxFiles;
   }
   /**
-   * @param string[]
+   * File types accepted by this question.
+   *
+   * @param string[] $types
    */
   public function setTypes($types)
   {

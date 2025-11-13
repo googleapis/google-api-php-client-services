@@ -20,12 +20,18 @@ namespace Google\Service\Forms;
 class TimeQuestion extends \Google\Model
 {
   /**
+   * `true` if the question is about an elapsed time. Otherwise it is about a
+   * time of day.
+   *
    * @var bool
    */
   public $duration;
 
   /**
-   * @param bool
+   * `true` if the question is about an elapsed time. Otherwise it is about a
+   * time of day.
+   *
+   * @param bool $duration
    */
   public function setDuration($duration)
   {

@@ -20,30 +20,66 @@ namespace Google\Service\Forms;
 class MediaProperties extends \Google\Model
 {
   /**
+   * Default value. Unused.
+   */
+  public const ALIGNMENT_ALIGNMENT_UNSPECIFIED = 'ALIGNMENT_UNSPECIFIED';
+  /**
+   * Left align.
+   */
+  public const ALIGNMENT_LEFT = 'LEFT';
+  /**
+   * Right align.
+   */
+  public const ALIGNMENT_RIGHT = 'RIGHT';
+  /**
+   * Center.
+   */
+  public const ALIGNMENT_CENTER = 'CENTER';
+  /**
+   * Position of the media.
+   *
    * @var string
    */
   public $alignment;
   /**
+   * The width of the media in pixels. When the media is displayed, it is scaled
+   * to the smaller of this value or the width of the displayed form. The
+   * original aspect ratio of the media is preserved. If a width is not
+   * specified when the media is added to the form, it is set to the width of
+   * the media source. Width must be between 0 and 740, inclusive. Setting width
+   * to 0 or unspecified is only permitted when updating the media source.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param string
+   * Position of the media.
+   *
+   * Accepted values: ALIGNMENT_UNSPECIFIED, LEFT, RIGHT, CENTER
+   *
+   * @param self::ALIGNMENT_* $alignment
    */
   public function setAlignment($alignment)
   {
     $this->alignment = $alignment;
   }
   /**
-   * @return string
+   * @return self::ALIGNMENT_*
    */
   public function getAlignment()
   {
     return $this->alignment;
   }
   /**
-   * @param int
+   * The width of the media in pixels. When the media is displayed, it is scaled
+   * to the smaller of this value or the width of the displayed form. The
+   * original aspect ratio of the media is preserved. If a width is not
+   * specified when the media is added to the form, it is set to the width of
+   * the media source. Width must be between 0 and 740, inclusive. Setting width
+   * to 0 or unspecified is only permitted when updating the media source.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

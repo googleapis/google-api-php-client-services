@@ -25,7 +25,9 @@ class MoveItemRequest extends \Google\Model
   protected $originalLocationDataType = '';
 
   /**
-   * @param Location
+   * Required. The new location for the item.
+   *
+   * @param Location $newLocation
    */
   public function setNewLocation(Location $newLocation)
   {
@@ -39,7 +41,9 @@ class MoveItemRequest extends \Google\Model
     return $this->newLocation;
   }
   /**
-   * @param Location
+   * Required. The location of the item to move.
+   *
+   * @param Location $originalLocation
    */
   public function setOriginalLocation(Location $originalLocation)
   {

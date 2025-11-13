@@ -20,24 +20,34 @@ namespace Google\Service\Forms;
 class ScaleQuestion extends \Google\Model
 {
   /**
+   * Required. The highest possible value for the scale.
+   *
    * @var int
    */
   public $high;
   /**
+   * The label to display describing the highest point on the scale.
+   *
    * @var string
    */
   public $highLabel;
   /**
+   * Required. The lowest possible value for the scale.
+   *
    * @var int
    */
   public $low;
   /**
+   * The label to display describing the lowest point on the scale.
+   *
    * @var string
    */
   public $lowLabel;
 
   /**
-   * @param int
+   * Required. The highest possible value for the scale.
+   *
+   * @param int $high
    */
   public function setHigh($high)
   {
@@ -51,7 +61,9 @@ class ScaleQuestion extends \Google\Model
     return $this->high;
   }
   /**
-   * @param string
+   * The label to display describing the highest point on the scale.
+   *
+   * @param string $highLabel
    */
   public function setHighLabel($highLabel)
   {
@@ -65,7 +77,9 @@ class ScaleQuestion extends \Google\Model
     return $this->highLabel;
   }
   /**
-   * @param int
+   * Required. The lowest possible value for the scale.
+   *
+   * @param int $low
    */
   public function setLow($low)
   {
@@ -79,7 +93,9 @@ class ScaleQuestion extends \Google\Model
     return $this->low;
   }
   /**
-   * @param string
+   * The label to display describing the lowest point on the scale.
+   *
+   * @param string $lowLabel
    */
   public function setLowLabel($lowLabel)
   {

@@ -22,12 +22,16 @@ class Video extends \Google\Model
   protected $propertiesType = MediaProperties::class;
   protected $propertiesDataType = '';
   /**
+   * Required. A YouTube URI.
+   *
    * @var string
    */
   public $youtubeUri;
 
   /**
-   * @param MediaProperties
+   * Properties of a video.
+   *
+   * @param MediaProperties $properties
    */
   public function setProperties(MediaProperties $properties)
   {
@@ -41,7 +45,9 @@ class Video extends \Google\Model
     return $this->properties;
   }
   /**
-   * @param string
+   * Required. A YouTube URI.
+   *
+   * @param string $youtubeUri
    */
   public function setYoutubeUri($youtubeUri)
   {

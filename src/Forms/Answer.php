@@ -24,6 +24,8 @@ class Answer extends \Google\Model
   protected $gradeType = Grade::class;
   protected $gradeDataType = '';
   /**
+   * Output only. The question's ID. See also Question.question_id.
+   *
    * @var string
    */
   public $questionId;
@@ -31,7 +33,9 @@ class Answer extends \Google\Model
   protected $textAnswersDataType = '';
 
   /**
-   * @param FileUploadAnswers
+   * Output only. The answers to a file upload question.
+   *
+   * @param FileUploadAnswers $fileUploadAnswers
    */
   public function setFileUploadAnswers(FileUploadAnswers $fileUploadAnswers)
   {
@@ -45,7 +49,9 @@ class Answer extends \Google\Model
     return $this->fileUploadAnswers;
   }
   /**
-   * @param Grade
+   * Output only. The grade for the answer if the form was a quiz.
+   *
+   * @param Grade $grade
    */
   public function setGrade(Grade $grade)
   {
@@ -59,7 +65,9 @@ class Answer extends \Google\Model
     return $this->grade;
   }
   /**
-   * @param string
+   * Output only. The question's ID. See also Question.question_id.
+   *
+   * @param string $questionId
    */
   public function setQuestionId($questionId)
   {
@@ -73,7 +81,9 @@ class Answer extends \Google\Model
     return $this->questionId;
   }
   /**
-   * @param TextAnswers
+   * Output only. The specific answers as text.
+   *
+   * @param TextAnswers $textAnswers
    */
   public function setTextAnswers(TextAnswers $textAnswers)
   {

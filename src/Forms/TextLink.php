@@ -20,16 +20,22 @@ namespace Google\Service\Forms;
 class TextLink extends \Google\Model
 {
   /**
+   * Required. Display text for the URI.
+   *
    * @var string
    */
   public $displayText;
   /**
+   * Required. The URI.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Required. Display text for the URI.
+   *
+   * @param string $displayText
    */
   public function setDisplayText($displayText)
   {
@@ -43,7 +49,9 @@ class TextLink extends \Google\Model
     return $this->displayText;
   }
   /**
-   * @param string
+   * Required. The URI.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

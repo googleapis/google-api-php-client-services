@@ -20,16 +20,24 @@ namespace Google\Service\Forms;
 class PublishState extends \Google\Model
 {
   /**
+   * Required. Whether the form accepts responses. If `is_published` is set to
+   * `false`, this field is forced to `false`.
+   *
    * @var bool
    */
   public $isAcceptingResponses;
   /**
+   * Required. Whether the form is published and visible to others.
+   *
    * @var bool
    */
   public $isPublished;
 
   /**
-   * @param bool
+   * Required. Whether the form accepts responses. If `is_published` is set to
+   * `false`, this field is forced to `false`.
+   *
+   * @param bool $isAcceptingResponses
    */
   public function setIsAcceptingResponses($isAcceptingResponses)
   {
@@ -43,7 +51,9 @@ class PublishState extends \Google\Model
     return $this->isAcceptingResponses;
   }
   /**
-   * @param bool
+   * Required. Whether the form is published and visible to others.
+   *
+   * @param bool $isPublished
    */
   public function setIsPublished($isPublished)
   {

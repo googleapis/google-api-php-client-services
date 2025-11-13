@@ -20,20 +20,34 @@ namespace Google\Service\Forms;
 class Info extends \Google\Model
 {
   /**
+   * The description of the form.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The title of the document which is visible in Drive. If
+   * Info.title is empty, `document_title` may appear in its place in the Google
+   * Forms UI and be visible to responders. `document_title` can be set on
+   * create, but cannot be modified by a batchUpdate request. Please use the
+   * [Google Drive
+   * API](https://developers.google.com/drive/api/v3/reference/files/update) if
+   * you need to programmatically update `document_title`.
+   *
    * @var string
    */
   public $documentTitle;
   /**
+   * Required. The title of the form which is visible to responders.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The description of the form.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +61,15 @@ class Info extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The title of the document which is visible in Drive. If
+   * Info.title is empty, `document_title` may appear in its place in the Google
+   * Forms UI and be visible to responders. `document_title` can be set on
+   * create, but cannot be modified by a batchUpdate request. Please use the
+   * [Google Drive
+   * API](https://developers.google.com/drive/api/v3/reference/files/update) if
+   * you need to programmatically update `document_title`.
+   *
+   * @param string $documentTitle
    */
   public function setDocumentTitle($documentTitle)
   {
@@ -61,7 +83,9 @@ class Info extends \Google\Model
     return $this->documentTitle;
   }
   /**
-   * @param string
+   * Required. The title of the form which is visible to responders.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

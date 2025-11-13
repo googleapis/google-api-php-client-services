@@ -20,6 +20,29 @@ namespace Google\Service\Forms;
 class FormSettings extends \Google\Model
 {
   /**
+   * Unspecified. This value is unused.
+   */
+  public const EMAIL_COLLECTION_TYPE_EMAIL_COLLECTION_TYPE_UNSPECIFIED = 'EMAIL_COLLECTION_TYPE_UNSPECIFIED';
+  /**
+   * The form doesn't collect email addresses. Default value if the form owner
+   * uses a Google account.
+   */
+  public const EMAIL_COLLECTION_TYPE_DO_NOT_COLLECT = 'DO_NOT_COLLECT';
+  /**
+   * The form collects email addresses automatically based on the account of the
+   * signed-in user. Default value if the form owner uses a Google Workspace
+   * account.
+   */
+  public const EMAIL_COLLECTION_TYPE_VERIFIED = 'VERIFIED';
+  /**
+   * The form collects email addresses using a field that the respondent
+   * completes on the form.
+   */
+  public const EMAIL_COLLECTION_TYPE_RESPONDER_INPUT = 'RESPONDER_INPUT';
+  /**
+   * Optional. The setting that determines whether the form collects email
+   * addresses from respondents.
+   *
    * @var string
    */
   public $emailCollectionType;
@@ -27,21 +50,29 @@ class FormSettings extends \Google\Model
   protected $quizSettingsDataType = '';
 
   /**
-   * @param string
+   * Optional. The setting that determines whether the form collects email
+   * addresses from respondents.
+   *
+   * Accepted values: EMAIL_COLLECTION_TYPE_UNSPECIFIED, DO_NOT_COLLECT,
+   * VERIFIED, RESPONDER_INPUT
+   *
+   * @param self::EMAIL_COLLECTION_TYPE_* $emailCollectionType
    */
   public function setEmailCollectionType($emailCollectionType)
   {
     $this->emailCollectionType = $emailCollectionType;
   }
   /**
-   * @return string
+   * @return self::EMAIL_COLLECTION_TYPE_*
    */
   public function getEmailCollectionType()
   {
     return $this->emailCollectionType;
   }
   /**
-   * @param QuizSettings
+   * Settings related to quiz forms and grading.
+   *
+   * @param QuizSettings $quizSettings
    */
   public function setQuizSettings(QuizSettings $quizSettings)
   {

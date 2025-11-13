@@ -22,29 +22,50 @@ class FormResponse extends \Google\Model
   protected $answersType = Answer::class;
   protected $answersDataType = 'map';
   /**
+   * Output only. Timestamp for the first time the response was submitted.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The form ID.
+   *
    * @var string
    */
   public $formId;
   /**
+   * Output only. Timestamp for the most recent time the response was submitted.
+   * Does not track changes to grades.
+   *
    * @var string
    */
   public $lastSubmittedTime;
   /**
+   * Output only. The email address (if collected) for the respondent.
+   *
    * @var string
    */
   public $respondentEmail;
   /**
+   * Output only. The response ID.
+   *
    * @var string
    */
   public $responseId;
+  /**
+   * Output only. The total number of points the respondent received for their
+   * submission Only set if the form was a quiz and the response was graded.
+   * This includes points automatically awarded via autograding adjusted by any
+   * manual corrections entered by the form owner.
+   *
+   * @var 
+   */
   public $totalScore;
 
   /**
-   * @param Answer[]
+   * Output only. The actual answers to the questions, keyed by question_id.
+   *
+   * @param Answer[] $answers
    */
   public function setAnswers($answers)
   {
@@ -58,7 +79,9 @@ class FormResponse extends \Google\Model
     return $this->answers;
   }
   /**
-   * @param string
+   * Output only. Timestamp for the first time the response was submitted.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -72,7 +95,9 @@ class FormResponse extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The form ID.
+   *
+   * @param string $formId
    */
   public function setFormId($formId)
   {
@@ -86,7 +111,10 @@ class FormResponse extends \Google\Model
     return $this->formId;
   }
   /**
-   * @param string
+   * Output only. Timestamp for the most recent time the response was submitted.
+   * Does not track changes to grades.
+   *
+   * @param string $lastSubmittedTime
    */
   public function setLastSubmittedTime($lastSubmittedTime)
   {
@@ -100,7 +128,9 @@ class FormResponse extends \Google\Model
     return $this->lastSubmittedTime;
   }
   /**
-   * @param string
+   * Output only. The email address (if collected) for the respondent.
+   *
+   * @param string $respondentEmail
    */
   public function setRespondentEmail($respondentEmail)
   {
@@ -114,7 +144,9 @@ class FormResponse extends \Google\Model
     return $this->respondentEmail;
   }
   /**
-   * @param string
+   * Output only. The response ID.
+   *
+   * @param string $responseId
    */
   public function setResponseId($responseId)
   {

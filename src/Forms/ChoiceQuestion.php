@@ -19,20 +19,49 @@ namespace Google\Service\Forms;
 
 class ChoiceQuestion extends \Google\Collection
 {
+  /**
+   * Default value. Unused.
+   */
+  public const TYPE_CHOICE_TYPE_UNSPECIFIED = 'CHOICE_TYPE_UNSPECIFIED';
+  /**
+   * Radio buttons: All choices are shown to the user, who can only pick one of
+   * them.
+   */
+  public const TYPE_RADIO = 'RADIO';
+  /**
+   * Checkboxes: All choices are shown to the user, who can pick any number of
+   * them.
+   */
+  public const TYPE_CHECKBOX = 'CHECKBOX';
+  /**
+   * Drop-down menu: The choices are only shown to the user on demand, otherwise
+   * only the current choice is shown. Only one option can be chosen.
+   */
+  public const TYPE_DROP_DOWN = 'DROP_DOWN';
   protected $collection_key = 'options';
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
   /**
+   * Whether the options should be displayed in random order for different
+   * instances of the quiz. This is often used to prevent cheating by
+   * respondents who might be looking at another respondent's screen, or to
+   * address bias in a survey that might be introduced by always putting the
+   * same options first or last.
+   *
    * @var bool
    */
   public $shuffle;
   /**
+   * Required. The type of choice question.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param Option[]
+   * Required. List of options that a respondent must choose from.
+   *
+   * @param Option[] $options
    */
   public function setOptions($options)
   {
@@ -46,7 +75,13 @@ class ChoiceQuestion extends \Google\Collection
     return $this->options;
   }
   /**
-   * @param bool
+   * Whether the options should be displayed in random order for different
+   * instances of the quiz. This is often used to prevent cheating by
+   * respondents who might be looking at another respondent's screen, or to
+   * address bias in a survey that might be introduced by always putting the
+   * same options first or last.
+   *
+   * @param bool $shuffle
    */
   public function setShuffle($shuffle)
   {
@@ -60,14 +95,18 @@ class ChoiceQuestion extends \Google\Collection
     return $this->shuffle;
   }
   /**
-   * @param string
+   * Required. The type of choice question.
+   *
+   * Accepted values: CHOICE_TYPE_UNSPECIFIED, RADIO, CHECKBOX, DROP_DOWN
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

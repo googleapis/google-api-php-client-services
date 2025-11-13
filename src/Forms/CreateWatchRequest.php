@@ -22,12 +22,19 @@ class CreateWatchRequest extends \Google\Model
   protected $watchType = Watch::class;
   protected $watchDataType = '';
   /**
+   * The ID to use for the watch. If specified, the ID must not already be in
+   * use. If not specified, an ID is generated. This value should be 4-63
+   * characters, and valid characters are /a-z-/.
+   *
    * @var string
    */
   public $watchId;
 
   /**
-   * @param Watch
+   * Required. The watch object. No ID should be set on this object; use
+   * `watch_id` instead.
+   *
+   * @param Watch $watch
    */
   public function setWatch(Watch $watch)
   {
@@ -41,7 +48,11 @@ class CreateWatchRequest extends \Google\Model
     return $this->watch;
   }
   /**
-   * @param string
+   * The ID to use for the watch. If specified, the ID must not already be in
+   * use. If not specified, an ID is generated. This value should be 4-63
+   * characters, and valid characters are /a-z-/.
+   *
+   * @param string $watchId
    */
   public function setWatchId($watchId)
   {

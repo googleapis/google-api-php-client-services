@@ -21,6 +21,8 @@ class BatchUpdateFormRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
   /**
+   * Whether to return an updated version of the model in the response.
+   *
    * @var bool
    */
   public $includeFormInResponse;
@@ -30,7 +32,9 @@ class BatchUpdateFormRequest extends \Google\Collection
   protected $writeControlDataType = '';
 
   /**
-   * @param bool
+   * Whether to return an updated version of the model in the response.
+   *
+   * @param bool $includeFormInResponse
    */
   public function setIncludeFormInResponse($includeFormInResponse)
   {
@@ -44,7 +48,9 @@ class BatchUpdateFormRequest extends \Google\Collection
     return $this->includeFormInResponse;
   }
   /**
-   * @param Request[]
+   * Required. The update requests of this batch.
+   *
+   * @param Request[] $requests
    */
   public function setRequests($requests)
   {
@@ -58,7 +64,9 @@ class BatchUpdateFormRequest extends \Google\Collection
     return $this->requests;
   }
   /**
-   * @param WriteControl
+   * Provides control over how write requests are executed.
+   *
+   * @param WriteControl $writeControl
    */
   public function setWriteControl(WriteControl $writeControl)
   {

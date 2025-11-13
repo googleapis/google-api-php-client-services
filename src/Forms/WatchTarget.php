@@ -23,7 +23,13 @@ class WatchTarget extends \Google\Model
   protected $topicDataType = '';
 
   /**
-   * @param CloudPubsubTopic
+   * A Pub/Sub topic. To receive notifications, the topic must grant publish
+   * privileges to the Forms service account `serviceAccount:forms-
+   * notifications@system.gserviceaccount.com`. Only the project that owns a
+   * topic may create a watch with it. Pub/Sub delivery guarantees should be
+   * considered.
+   *
+   * @param CloudPubsubTopic $topic
    */
   public function setTopic(CloudPubsubTopic $topic)
   {
