@@ -21,12 +21,18 @@ class V2ServerKeyRestrictions extends \Google\Collection
 {
   protected $collection_key = 'allowedIps';
   /**
+   * A list of the caller IP addresses that are allowed to make API calls with
+   * this key.
+   *
    * @var string[]
    */
   public $allowedIps;
 
   /**
-   * @param string[]
+   * A list of the caller IP addresses that are allowed to make API calls with
+   * this key.
+   *
+   * @param string[] $allowedIps
    */
   public function setAllowedIps($allowedIps)
   {

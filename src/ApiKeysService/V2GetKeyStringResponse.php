@@ -20,12 +20,16 @@ namespace Google\Service\ApiKeysService;
 class V2GetKeyStringResponse extends \Google\Model
 {
   /**
+   * An encrypted and signed value of the key.
+   *
    * @var string
    */
   public $keyString;
 
   /**
-   * @param string
+   * An encrypted and signed value of the key.
+   *
+   * @param string $keyString
    */
   public function setKeyString($keyString)
   {

@@ -21,12 +21,16 @@ class V2IosKeyRestrictions extends \Google\Collection
 {
   protected $collection_key = 'allowedBundleIds';
   /**
+   * A list of bundle IDs that are allowed when making API calls with this key.
+   *
    * @var string[]
    */
   public $allowedBundleIds;
 
   /**
-   * @param string[]
+   * A list of bundle IDs that are allowed when making API calls with this key.
+   *
+   * @param string[] $allowedBundleIds
    */
   public function setAllowedBundleIds($allowedBundleIds)
   {

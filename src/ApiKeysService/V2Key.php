@@ -20,50 +20,88 @@ namespace Google\Service\ApiKeysService;
 class V2Key extends \Google\Model
 {
   /**
+   * Annotations is an unstructured key-value map stored with a policy that may
+   * be set by external tools to store and retrieve arbitrary metadata. They are
+   * not queryable and should be preserved when modifying objects.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. A timestamp identifying the time this key was originally
+   * created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. A timestamp when this key was deleted. If the resource is not
+   * deleted, this must be empty.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * Human-readable display name of this key that you can modify. The maximum
+   * length is 63 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. A checksum computed by the server based on the current value
+   * of the Key resource. This may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding. See
+   * https://google.aip.dev/154.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. An encrypted and signed value held by this key. This field can
+   * be accessed only through the `GetKeyString` method.
+   *
    * @var string
    */
   public $keyString;
   /**
+   * Output only. The resource name of the key. The `name` has the form:
+   * `projects//locations/global/keys/`. For example: `projects/123456867718/loc
+   * ations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE: Key is a
+   * global resource; hence the only supported value for location is `global`.
+   *
    * @var string
    */
   public $name;
   protected $restrictionsType = V2Restrictions::class;
   protected $restrictionsDataType = '';
   /**
+   * Optional. The email address of [the service
+   * account](https://cloud.google.com/iam/docs/service-accounts) the key is
+   * bound to.
+   *
    * @var string
    */
   public $serviceAccountEmail;
   /**
+   * Output only. Unique id in UUID4 format.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. A timestamp identifying the time this key was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Annotations is an unstructured key-value map stored with a policy that may
+   * be set by external tools to store and retrieve arbitrary metadata. They are
+   * not queryable and should be preserved when modifying objects.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -77,7 +115,10 @@ class V2Key extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * Output only. A timestamp identifying the time this key was originally
+   * created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -91,7 +132,10 @@ class V2Key extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. A timestamp when this key was deleted. If the resource is not
+   * deleted, this must be empty.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -105,7 +149,10 @@ class V2Key extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * Human-readable display name of this key that you can modify. The maximum
+   * length is 63 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -119,7 +166,12 @@ class V2Key extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. A checksum computed by the server based on the current value
+   * of the Key resource. This may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding. See
+   * https://google.aip.dev/154.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -133,7 +185,10 @@ class V2Key extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. An encrypted and signed value held by this key. This field can
+   * be accessed only through the `GetKeyString` method.
+   *
+   * @param string $keyString
    */
   public function setKeyString($keyString)
   {
@@ -147,7 +202,12 @@ class V2Key extends \Google\Model
     return $this->keyString;
   }
   /**
-   * @param string
+   * Output only. The resource name of the key. The `name` has the form:
+   * `projects//locations/global/keys/`. For example: `projects/123456867718/loc
+   * ations/global/keys/b7ff1f9f-8275-410a-94dd-3855ee9b5dd2` NOTE: Key is a
+   * global resource; hence the only supported value for location is `global`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -161,7 +221,9 @@ class V2Key extends \Google\Model
     return $this->name;
   }
   /**
-   * @param V2Restrictions
+   * Key restrictions.
+   *
+   * @param V2Restrictions $restrictions
    */
   public function setRestrictions(V2Restrictions $restrictions)
   {
@@ -175,7 +237,11 @@ class V2Key extends \Google\Model
     return $this->restrictions;
   }
   /**
-   * @param string
+   * Optional. The email address of [the service
+   * account](https://cloud.google.com/iam/docs/service-accounts) the key is
+   * bound to.
+   *
+   * @param string $serviceAccountEmail
    */
   public function setServiceAccountEmail($serviceAccountEmail)
   {
@@ -189,7 +255,9 @@ class V2Key extends \Google\Model
     return $this->serviceAccountEmail;
   }
   /**
-   * @param string
+   * Output only. Unique id in UUID4 format.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -203,7 +271,9 @@ class V2Key extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. A timestamp identifying the time this key was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -21,12 +21,18 @@ class V2BrowserKeyRestrictions extends \Google\Collection
 {
   protected $collection_key = 'allowedReferrers';
   /**
+   * A list of regular expressions for the referrer URLs that are allowed to
+   * make API calls with this key.
+   *
    * @var string[]
    */
   public $allowedReferrers;
 
   /**
-   * @param string[]
+   * A list of regular expressions for the referrer URLs that are allowed to
+   * make API calls with this key.
+   *
+   * @param string[] $allowedReferrers
    */
   public function setAllowedReferrers($allowedReferrers)
   {

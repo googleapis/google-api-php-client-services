@@ -21,16 +21,33 @@ class V2ApiTarget extends \Google\Collection
 {
   protected $collection_key = 'methods';
   /**
+   * Optional. List of one or more methods that can be called. If empty, all
+   * methods for the service are allowed. A wildcard (*) can be used as the last
+   * symbol. Valid examples:
+   * `google.cloud.translate.v2.TranslateService.GetSupportedLanguage`
+   * `TranslateText` `Get*` `translate.googleapis.com.Get*`
+   *
    * @var string[]
    */
   public $methods;
   /**
+   * The service for this restriction. It should be the canonical service name,
+   * for example: `translate.googleapis.com`. You can use [`gcloud services
+   * list`](https://cloud.google.com/sdk/gcloud/reference/services/list) to get
+   * a list of services that are enabled in the project.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string[]
+   * Optional. List of one or more methods that can be called. If empty, all
+   * methods for the service are allowed. A wildcard (*) can be used as the last
+   * symbol. Valid examples:
+   * `google.cloud.translate.v2.TranslateService.GetSupportedLanguage`
+   * `TranslateText` `Get*` `translate.googleapis.com.Get*`
+   *
+   * @param string[] $methods
    */
   public function setMethods($methods)
   {
@@ -44,7 +61,12 @@ class V2ApiTarget extends \Google\Collection
     return $this->methods;
   }
   /**
-   * @param string
+   * The service for this restriction. It should be the canonical service name,
+   * for example: `translate.googleapis.com`. You can use [`gcloud services
+   * list`](https://cloud.google.com/sdk/gcloud/reference/services/list) to get
+   * a list of services that are enabled in the project.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

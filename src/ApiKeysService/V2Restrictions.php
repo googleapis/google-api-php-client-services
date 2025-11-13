@@ -32,7 +32,9 @@ class V2Restrictions extends \Google\Collection
   protected $serverKeyRestrictionsDataType = '';
 
   /**
-   * @param V2AndroidKeyRestrictions
+   * The Android apps that are allowed to use the key.
+   *
+   * @param V2AndroidKeyRestrictions $androidKeyRestrictions
    */
   public function setAndroidKeyRestrictions(V2AndroidKeyRestrictions $androidKeyRestrictions)
   {
@@ -46,7 +48,11 @@ class V2Restrictions extends \Google\Collection
     return $this->androidKeyRestrictions;
   }
   /**
-   * @param V2ApiTarget[]
+   * A restriction for a specific service and optionally one or more specific
+   * methods. Requests are allowed if they match any of these restrictions. If
+   * no restrictions are specified, all targets are allowed.
+   *
+   * @param V2ApiTarget[] $apiTargets
    */
   public function setApiTargets($apiTargets)
   {
@@ -60,7 +66,9 @@ class V2Restrictions extends \Google\Collection
     return $this->apiTargets;
   }
   /**
-   * @param V2BrowserKeyRestrictions
+   * The HTTP referrers (websites) that are allowed to use the key.
+   *
+   * @param V2BrowserKeyRestrictions $browserKeyRestrictions
    */
   public function setBrowserKeyRestrictions(V2BrowserKeyRestrictions $browserKeyRestrictions)
   {
@@ -74,7 +82,9 @@ class V2Restrictions extends \Google\Collection
     return $this->browserKeyRestrictions;
   }
   /**
-   * @param V2IosKeyRestrictions
+   * The iOS apps that are allowed to use the key.
+   *
+   * @param V2IosKeyRestrictions $iosKeyRestrictions
    */
   public function setIosKeyRestrictions(V2IosKeyRestrictions $iosKeyRestrictions)
   {
@@ -88,7 +98,9 @@ class V2Restrictions extends \Google\Collection
     return $this->iosKeyRestrictions;
   }
   /**
-   * @param V2ServerKeyRestrictions
+   * The IP addresses of callers that are allowed to use the key.
+   *
+   * @param V2ServerKeyRestrictions $serverKeyRestrictions
    */
   public function setServerKeyRestrictions(V2ServerKeyRestrictions $serverKeyRestrictions)
   {
