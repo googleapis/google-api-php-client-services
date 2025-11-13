@@ -21,20 +21,41 @@ class RotatingBarcodeValues extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Required. The amount of time each barcode is valid for.
+   *
    * @var string
    */
   public $periodMillis;
   /**
+   * Required. The date/time the first barcode is valid from. Barcodes will be
+   * rotated through using period_millis defined on the object's
+   * RotatingBarcodeValueInfo. This is an ISO 8601 extended format date/time,
+   * with an offset. Time may be specified up to nanosecond precision. Offsets
+   * may be specified with seconds precision (even though offset seconds is not
+   * part of ISO 8601). For example: `1985-04-12T23:20:50.52Z` would be 20
+   * minutes and 50.52 seconds after the 23rd hour of April 12th, 1985 in UTC.
+   * `1985-04-12T19:20:50.52-04:00` would be 20 minutes and 50.52 seconds after
+   * the 19th hour of April 12th, 1985, 4 hours before UTC (same instant in time
+   * as the above example). If the event were in New York, this would be the
+   * equivalent of Eastern Daylight Time (EDT). Remember that offset varies in
+   * regions that observe Daylight Saving Time (or Summer Time), depending on
+   * the time of the year.
+   *
    * @var string
    */
   public $startDateTime;
   /**
+   * Required. The values to encode in the barcode. At least one value is
+   * required.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * Required. The amount of time each barcode is valid for.
+   *
+   * @param string $periodMillis
    */
   public function setPeriodMillis($periodMillis)
   {
@@ -48,7 +69,21 @@ class RotatingBarcodeValues extends \Google\Collection
     return $this->periodMillis;
   }
   /**
-   * @param string
+   * Required. The date/time the first barcode is valid from. Barcodes will be
+   * rotated through using period_millis defined on the object's
+   * RotatingBarcodeValueInfo. This is an ISO 8601 extended format date/time,
+   * with an offset. Time may be specified up to nanosecond precision. Offsets
+   * may be specified with seconds precision (even though offset seconds is not
+   * part of ISO 8601). For example: `1985-04-12T23:20:50.52Z` would be 20
+   * minutes and 50.52 seconds after the 23rd hour of April 12th, 1985 in UTC.
+   * `1985-04-12T19:20:50.52-04:00` would be 20 minutes and 50.52 seconds after
+   * the 19th hour of April 12th, 1985, 4 hours before UTC (same instant in time
+   * as the above example). If the event were in New York, this would be the
+   * equivalent of Eastern Daylight Time (EDT). Remember that offset varies in
+   * regions that observe Daylight Saving Time (or Summer Time), depending on
+   * the time of the year.
+   *
+   * @param string $startDateTime
    */
   public function setStartDateTime($startDateTime)
   {
@@ -62,7 +97,10 @@ class RotatingBarcodeValues extends \Google\Collection
     return $this->startDateTime;
   }
   /**
-   * @param string[]
+   * Required. The values to encode in the barcode. At least one value is
+   * required.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

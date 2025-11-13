@@ -25,7 +25,7 @@ class Review extends \Google\Model
   public $comments;
 
   /**
-   * @param string
+   * @param string $comments
    */
   public function setComments($comments)
   {

@@ -19,18 +19,38 @@ namespace Google\Service\Walletobjects;
 
 class PassConstraints extends \Google\Collection
 {
+  /**
+   * Default value, same as ELIGIBLE.
+   */
+  public const SCREENSHOT_ELIGIBILITY_SCREENSHOT_ELIGIBILITY_UNSPECIFIED = 'SCREENSHOT_ELIGIBILITY_UNSPECIFIED';
+  /**
+   * Default behavior for all existing Passes if ScreenshotEligibility is not
+   * set. Allows screenshots to be taken on Android devices.
+   */
+  public const SCREENSHOT_ELIGIBILITY_ELIGIBLE = 'ELIGIBLE';
+  /**
+   * Disallows screenshots to be taken on Android devices. Note that older
+   * versions of Wallet may still allow screenshots to be taken.
+   */
+  public const SCREENSHOT_ELIGIBILITY_INELIGIBLE = 'INELIGIBLE';
   protected $collection_key = 'nfcConstraint';
   /**
+   * The NFC constraints for the pass.
+   *
    * @var string[]
    */
   public $nfcConstraint;
   /**
+   * The screenshot eligibility for the pass.
+   *
    * @var string
    */
   public $screenshotEligibility;
 
   /**
-   * @param string[]
+   * The NFC constraints for the pass.
+   *
+   * @param string[] $nfcConstraint
    */
   public function setNfcConstraint($nfcConstraint)
   {
@@ -44,14 +64,18 @@ class PassConstraints extends \Google\Collection
     return $this->nfcConstraint;
   }
   /**
-   * @param string
+   * The screenshot eligibility for the pass.
+   *
+   * Accepted values: SCREENSHOT_ELIGIBILITY_UNSPECIFIED, ELIGIBLE, INELIGIBLE
+   *
+   * @param self::SCREENSHOT_ELIGIBILITY_* $screenshotEligibility
    */
   public function setScreenshotEligibility($screenshotEligibility)
   {
     $this->screenshotEligibility = $screenshotEligibility;
   }
   /**
-   * @return string
+   * @return self::SCREENSHOT_ELIGIBILITY_*
    */
   public function getScreenshotEligibility()
   {

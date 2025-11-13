@@ -20,22 +20,36 @@ namespace Google\Service\Walletobjects;
 class ReservationInfo extends \Google\Model
 {
   /**
+   * Confirmation code needed to check into this flight. This is the number that
+   * the passenger would enter into a kiosk at the airport to look up the flight
+   * and print a boarding pass.
+   *
    * @var string
    */
   public $confirmationCode;
   /**
+   * E-ticket number.
+   *
    * @var string
    */
   public $eticketNumber;
   protected $frequentFlyerInfoType = FrequentFlyerInfo::class;
   protected $frequentFlyerInfoDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"walletobjects#reservationInfo"`.
+   *
+   * @deprecated
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * Confirmation code needed to check into this flight. This is the number that
+   * the passenger would enter into a kiosk at the airport to look up the flight
+   * and print a boarding pass.
+   *
+   * @param string $confirmationCode
    */
   public function setConfirmationCode($confirmationCode)
   {
@@ -49,7 +63,9 @@ class ReservationInfo extends \Google\Model
     return $this->confirmationCode;
   }
   /**
-   * @param string
+   * E-ticket number.
+   *
+   * @param string $eticketNumber
    */
   public function setEticketNumber($eticketNumber)
   {
@@ -63,7 +79,9 @@ class ReservationInfo extends \Google\Model
     return $this->eticketNumber;
   }
   /**
-   * @param FrequentFlyerInfo
+   * Frequent flyer membership information.
+   *
+   * @param FrequentFlyerInfo $frequentFlyerInfo
    */
   public function setFrequentFlyerInfo(FrequentFlyerInfo $frequentFlyerInfo)
   {
@@ -77,13 +95,18 @@ class ReservationInfo extends \Google\Model
     return $this->frequentFlyerInfo;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"walletobjects#reservationInfo"`.
+   *
+   * @deprecated
+   * @param string $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getKind()

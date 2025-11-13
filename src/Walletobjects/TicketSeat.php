@@ -19,17 +19,47 @@ namespace Google\Service\Walletobjects;
 
 class TicketSeat extends \Google\Model
 {
+  public const FARE_CLASS_FARE_CLASS_UNSPECIFIED = 'FARE_CLASS_UNSPECIFIED';
+  public const FARE_CLASS_ECONOMY = 'ECONOMY';
   /**
+   * Legacy alias for `ECONOMY`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const FARE_CLASS_economy = 'economy';
+  public const FARE_CLASS_FIRST = 'FIRST';
+  /**
+   * Legacy alias for `FIRST`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const FARE_CLASS_first = 'first';
+  public const FARE_CLASS_BUSINESS = 'BUSINESS';
+  /**
+   * Legacy alias for `BUSINESS`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const FARE_CLASS_business = 'business';
+  /**
+   * The identifier of the train car or coach in which the ticketed seat is
+   * located. Eg. "10"
+   *
    * @var string
    */
   public $coach;
   protected $customFareClassType = LocalizedString::class;
   protected $customFareClassDataType = '';
   /**
+   * The fare class of the ticketed seat.
+   *
    * @var string
    */
   public $fareClass;
   /**
+   * The identifier of where the ticketed seat is located. Eg. "42". If there is
+   * no specific identifier, use `seatAssigment` instead.
+   *
    * @var string
    */
   public $seat;
@@ -37,7 +67,10 @@ class TicketSeat extends \Google\Model
   protected $seatAssignmentDataType = '';
 
   /**
-   * @param string
+   * The identifier of the train car or coach in which the ticketed seat is
+   * located. Eg. "10"
+   *
+   * @param string $coach
    */
   public function setCoach($coach)
   {
@@ -51,7 +84,10 @@ class TicketSeat extends \Google\Model
     return $this->coach;
   }
   /**
-   * @param LocalizedString
+   * A custome fare class to be used if no `fareClass` applies. Both `fareClass`
+   * and `customFareClass` may not be set.
+   *
+   * @param LocalizedString $customFareClass
    */
   public function setCustomFareClass(LocalizedString $customFareClass)
   {
@@ -65,21 +101,29 @@ class TicketSeat extends \Google\Model
     return $this->customFareClass;
   }
   /**
-   * @param string
+   * The fare class of the ticketed seat.
+   *
+   * Accepted values: FARE_CLASS_UNSPECIFIED, ECONOMY, economy, FIRST, first,
+   * BUSINESS, business
+   *
+   * @param self::FARE_CLASS_* $fareClass
    */
   public function setFareClass($fareClass)
   {
     $this->fareClass = $fareClass;
   }
   /**
-   * @return string
+   * @return self::FARE_CLASS_*
    */
   public function getFareClass()
   {
     return $this->fareClass;
   }
   /**
-   * @param string
+   * The identifier of where the ticketed seat is located. Eg. "42". If there is
+   * no specific identifier, use `seatAssigment` instead.
+   *
+   * @param string $seat
    */
   public function setSeat($seat)
   {
@@ -93,7 +137,10 @@ class TicketSeat extends \Google\Model
     return $this->seat;
   }
   /**
-   * @param LocalizedString
+   * The passenger's seat assignment. Eg. "no specific seat". To be used when
+   * there is no specific identifier to use in `seat`.
+   *
+   * @param LocalizedString $seatAssignment
    */
   public function setSeatAssignment(LocalizedString $seatAssignment)
   {

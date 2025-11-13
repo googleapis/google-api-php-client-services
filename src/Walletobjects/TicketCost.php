@@ -27,7 +27,9 @@ class TicketCost extends \Google\Model
   protected $purchasePriceDataType = '';
 
   /**
-   * @param LocalizedString
+   * A message describing any kind of discount that was applied.
+   *
+   * @param LocalizedString $discountMessage
    */
   public function setDiscountMessage(LocalizedString $discountMessage)
   {
@@ -41,7 +43,9 @@ class TicketCost extends \Google\Model
     return $this->discountMessage;
   }
   /**
-   * @param Money
+   * The face value of the ticket.
+   *
+   * @param Money $faceValue
    */
   public function setFaceValue(Money $faceValue)
   {
@@ -55,7 +59,9 @@ class TicketCost extends \Google\Model
     return $this->faceValue;
   }
   /**
-   * @param Money
+   * The actual purchase price of the ticket, after tax and/or discounts.
+   *
+   * @param Money $purchasePrice
    */
   public function setPurchasePrice(Money $purchasePrice)
   {

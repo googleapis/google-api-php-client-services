@@ -20,12 +20,16 @@ namespace Google\Service\Walletobjects;
 class UpcomingNotification extends \Google\Model
 {
   /**
+   * Indicates if the object needs to have upcoming notification enabled.
+   *
    * @var bool
    */
   public $enableNotification;
 
   /**
-   * @param bool
+   * Indicates if the object needs to have upcoming notification enabled.
+   *
+   * @param bool $enableNotification
    */
   public function setEnableNotification($enableNotification)
   {

@@ -29,7 +29,9 @@ class TicketRestrictions extends \Google\Model
   protected $timeRestrictionsDataType = '';
 
   /**
-   * @param LocalizedString
+   * Extra restrictions that don't fall under the "route" or "time" categories.
+   *
+   * @param LocalizedString $otherRestrictions
    */
   public function setOtherRestrictions(LocalizedString $otherRestrictions)
   {
@@ -43,7 +45,10 @@ class TicketRestrictions extends \Google\Model
     return $this->otherRestrictions;
   }
   /**
-   * @param LocalizedString
+   * Restrictions about routes that may be taken. For example, this may be the
+   * string "Reserved CrossCountry trains only".
+   *
+   * @param LocalizedString $routeRestrictions
    */
   public function setRouteRestrictions(LocalizedString $routeRestrictions)
   {
@@ -57,7 +62,9 @@ class TicketRestrictions extends \Google\Model
     return $this->routeRestrictions;
   }
   /**
-   * @param LocalizedString
+   * More details about the above `routeRestrictions`.
+   *
+   * @param LocalizedString $routeRestrictionsDetails
    */
   public function setRouteRestrictionsDetails(LocalizedString $routeRestrictionsDetails)
   {
@@ -71,7 +78,9 @@ class TicketRestrictions extends \Google\Model
     return $this->routeRestrictionsDetails;
   }
   /**
-   * @param LocalizedString
+   * Restrictions about times this ticket may be used.
+   *
+   * @param LocalizedString $timeRestrictions
    */
   public function setTimeRestrictions(LocalizedString $timeRestrictions)
   {

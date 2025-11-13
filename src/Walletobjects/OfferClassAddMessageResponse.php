@@ -23,7 +23,9 @@ class OfferClassAddMessageResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param OfferClass
+   * The updated OfferClass resource.
+   *
+   * @param OfferClass $resource
    */
   public function setResource(OfferClass $resource)
   {

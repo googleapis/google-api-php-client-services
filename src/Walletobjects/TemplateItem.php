@@ -19,9 +19,27 @@ namespace Google\Service\Walletobjects;
 
 class TemplateItem extends \Google\Model
 {
+  public const PREDEFINED_ITEM_PREDEFINED_ITEM_UNSPECIFIED = 'PREDEFINED_ITEM_UNSPECIFIED';
+  public const PREDEFINED_ITEM_FREQUENT_FLYER_PROGRAM_NAME_AND_NUMBER = 'FREQUENT_FLYER_PROGRAM_NAME_AND_NUMBER';
+  /**
+   * Legacy alias for `FREQUENT_FLYER_PROGRAM_NAME_AND_NUMBER`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const PREDEFINED_ITEM_frequentFlyerProgramNameAndNumber = 'frequentFlyerProgramNameAndNumber';
+  public const PREDEFINED_ITEM_FLIGHT_NUMBER_AND_OPERATING_FLIGHT_NUMBER = 'FLIGHT_NUMBER_AND_OPERATING_FLIGHT_NUMBER';
+  /**
+   * Legacy alias for `FLIGHT_NUMBER_AND_OPERATING_FLIGHT_NUMBER`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const PREDEFINED_ITEM_flightNumberAndOperatingFlightNumber = 'flightNumberAndOperatingFlightNumber';
   protected $firstValueType = FieldSelector::class;
   protected $firstValueDataType = '';
   /**
+   * A predefined item to display. Only one of `firstValue` or `predefinedItem`
+   * may be set.
+   *
    * @var string
    */
   public $predefinedItem;
@@ -29,7 +47,11 @@ class TemplateItem extends \Google\Model
   protected $secondValueDataType = '';
 
   /**
-   * @param FieldSelector
+   * A reference to a field to display. If both `firstValue` and `secondValue`
+   * are populated, they will both appear as one item with a slash between them.
+   * For example, values A and B would be shown as "A / B".
+   *
+   * @param FieldSelector $firstValue
    */
   public function setFirstValue(FieldSelector $firstValue)
   {
@@ -43,21 +65,32 @@ class TemplateItem extends \Google\Model
     return $this->firstValue;
   }
   /**
-   * @param string
+   * A predefined item to display. Only one of `firstValue` or `predefinedItem`
+   * may be set.
+   *
+   * Accepted values: PREDEFINED_ITEM_UNSPECIFIED,
+   * FREQUENT_FLYER_PROGRAM_NAME_AND_NUMBER, frequentFlyerProgramNameAndNumber,
+   * FLIGHT_NUMBER_AND_OPERATING_FLIGHT_NUMBER,
+   * flightNumberAndOperatingFlightNumber
+   *
+   * @param self::PREDEFINED_ITEM_* $predefinedItem
    */
   public function setPredefinedItem($predefinedItem)
   {
     $this->predefinedItem = $predefinedItem;
   }
   /**
-   * @return string
+   * @return self::PREDEFINED_ITEM_*
    */
   public function getPredefinedItem()
   {
     return $this->predefinedItem;
   }
   /**
-   * @param FieldSelector
+   * A reference to a field to display. This may only be populated if the
+   * `firstValue` field is populated.
+   *
+   * @param FieldSelector $secondValue
    */
   public function setSecondValue(FieldSelector $secondValue)
   {
