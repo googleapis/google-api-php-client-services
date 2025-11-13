@@ -25,7 +25,12 @@ class DialogAction extends \Google\Model
   protected $dialogDataType = '';
 
   /**
-   * @param ActionStatus
+   * Input only. Status for a request to either invoke or submit a
+   * [dialog](https://developers.google.com/workspace/chat/dialogs). Displays a
+   * status and message to users, if necessary. For example, in case of an error
+   * or success.
+   *
+   * @param ActionStatus $actionStatus
    */
   public function setActionStatus(ActionStatus $actionStatus)
   {
@@ -39,7 +44,10 @@ class DialogAction extends \Google\Model
     return $this->actionStatus;
   }
   /**
-   * @param Dialog
+   * Input only. [Dialog](https://developers.google.com/workspace/chat/dialogs)
+   * for the request.
+   *
+   * @param Dialog $dialog
    */
   public function setDialog(Dialog $dialog)
   {

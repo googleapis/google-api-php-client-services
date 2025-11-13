@@ -20,28 +20,54 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1CardHeader extends \Google\Model
 {
   /**
+   * Default value. Applies a square mask to the image. For example, a 4x3 image
+   * becomes 3x3.
+   */
+  public const IMAGE_TYPE_SQUARE = 'SQUARE';
+  /**
+   * Applies a circular mask to the image. For example, a 4x3 image becomes a
+   * circle with a diameter of 3.
+   */
+  public const IMAGE_TYPE_CIRCLE = 'CIRCLE';
+  /**
+   * The alternative text of this image that's used for accessibility.
+   *
    * @var string
    */
   public $imageAltText;
   /**
+   * The shape used to crop the image. [Google Workspace add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
+   *
    * @var string
    */
   public $imageType;
   /**
+   * The HTTPS URL of the image in the card header.
+   *
    * @var string
    */
   public $imageUrl;
   /**
+   * The subtitle of the card header. If specified, appears on its own line
+   * below the `title`.
+   *
    * @var string
    */
   public $subtitle;
   /**
+   * Required. The title of the card header. The header has a fixed height: if
+   * both a title and subtitle are specified, each takes up one line. If only
+   * the title is specified, it takes up both lines.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The alternative text of this image that's used for accessibility.
+   *
+   * @param string $imageAltText
    */
   public function setImageAltText($imageAltText)
   {
@@ -55,21 +81,28 @@ class GoogleAppsCardV1CardHeader extends \Google\Model
     return $this->imageAltText;
   }
   /**
-   * @param string
+   * The shape used to crop the image. [Google Workspace add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
+   *
+   * Accepted values: SQUARE, CIRCLE
+   *
+   * @param self::IMAGE_TYPE_* $imageType
    */
   public function setImageType($imageType)
   {
     $this->imageType = $imageType;
   }
   /**
-   * @return string
+   * @return self::IMAGE_TYPE_*
    */
   public function getImageType()
   {
     return $this->imageType;
   }
   /**
-   * @param string
+   * The HTTPS URL of the image in the card header.
+   *
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -83,7 +116,10 @@ class GoogleAppsCardV1CardHeader extends \Google\Model
     return $this->imageUrl;
   }
   /**
-   * @param string
+   * The subtitle of the card header. If specified, appears on its own line
+   * below the `title`.
+   *
+   * @param string $subtitle
    */
   public function setSubtitle($subtitle)
   {
@@ -97,7 +133,11 @@ class GoogleAppsCardV1CardHeader extends \Google\Model
     return $this->subtitle;
   }
   /**
-   * @param string
+   * Required. The title of the card header. The header has a fixed height: if
+   * both a title and subtitle are specified, each takes up one line. If only
+   * the title is specified, it takes up both lines.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

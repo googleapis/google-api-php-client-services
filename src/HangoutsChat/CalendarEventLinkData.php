@@ -20,16 +20,25 @@ namespace Google\Service\HangoutsChat;
 class CalendarEventLinkData extends \Google\Model
 {
   /**
+   * The [Calendar identifier](https://developers.google.com/workspace/calendar/
+   * api/v3/reference/calendars) of the linked Calendar.
+   *
    * @var string
    */
   public $calendarId;
   /**
+   * The [Event identifier](https://developers.google.com/workspace/calendar/api
+   * /v3/reference/events) of the linked Calendar event.
+   *
    * @var string
    */
   public $eventId;
 
   /**
-   * @param string
+   * The [Calendar identifier](https://developers.google.com/workspace/calendar/
+   * api/v3/reference/calendars) of the linked Calendar.
+   *
+   * @param string $calendarId
    */
   public function setCalendarId($calendarId)
   {
@@ -43,7 +52,10 @@ class CalendarEventLinkData extends \Google\Model
     return $this->calendarId;
   }
   /**
-   * @param string
+   * The [Event identifier](https://developers.google.com/workspace/calendar/api
+   * /v3/reference/events) of the linked Calendar event.
+   *
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {

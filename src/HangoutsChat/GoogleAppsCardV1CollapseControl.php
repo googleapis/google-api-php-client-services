@@ -19,17 +19,44 @@ namespace Google\Service\HangoutsChat;
 
 class GoogleAppsCardV1CollapseControl extends \Google\Model
 {
+  /**
+   * Don't use. Unspecified.
+   */
+  public const HORIZONTAL_ALIGNMENT_HORIZONTAL_ALIGNMENT_UNSPECIFIED = 'HORIZONTAL_ALIGNMENT_UNSPECIFIED';
+  /**
+   * Default value. Aligns widgets to the start position of the column. For
+   * left-to-right layouts, aligns to the left. For right-to-left layouts,
+   * aligns to the right.
+   */
+  public const HORIZONTAL_ALIGNMENT_START = 'START';
+  /**
+   * Aligns widgets to the center of the column.
+   */
+  public const HORIZONTAL_ALIGNMENT_CENTER = 'CENTER';
+  /**
+   * Aligns widgets to the end position of the column. For left-to-right
+   * layouts, aligns widgets to the right. For right-to-left layouts, aligns
+   * widgets to the left.
+   */
+  public const HORIZONTAL_ALIGNMENT_END = 'END';
   protected $collapseButtonType = GoogleAppsCardV1Button::class;
   protected $collapseButtonDataType = '';
   protected $expandButtonType = GoogleAppsCardV1Button::class;
   protected $expandButtonDataType = '';
   /**
+   * The horizontal alignment of the expand and collapse button.
+   *
    * @var string
    */
   public $horizontalAlignment;
 
   /**
-   * @param GoogleAppsCardV1Button
+   * Optional. Define a customizable button to collapse the section. Both
+   * expand_button and collapse_button field must be set. Only one field set
+   * will not take into effect. If this field isn't set, the default button is
+   * used.
+   *
+   * @param GoogleAppsCardV1Button $collapseButton
    */
   public function setCollapseButton(GoogleAppsCardV1Button $collapseButton)
   {
@@ -43,7 +70,12 @@ class GoogleAppsCardV1CollapseControl extends \Google\Model
     return $this->collapseButton;
   }
   /**
-   * @param GoogleAppsCardV1Button
+   * Optional. Define a customizable button to expand the section. Both
+   * expand_button and collapse_button field must be set. Only one field set
+   * will not take into effect. If this field isn't set, the default button is
+   * used.
+   *
+   * @param GoogleAppsCardV1Button $expandButton
    */
   public function setExpandButton(GoogleAppsCardV1Button $expandButton)
   {
@@ -57,14 +89,18 @@ class GoogleAppsCardV1CollapseControl extends \Google\Model
     return $this->expandButton;
   }
   /**
-   * @param string
+   * The horizontal alignment of the expand and collapse button.
+   *
+   * Accepted values: HORIZONTAL_ALIGNMENT_UNSPECIFIED, START, CENTER, END
+   *
+   * @param self::HORIZONTAL_ALIGNMENT_* $horizontalAlignment
    */
   public function setHorizontalAlignment($horizontalAlignment)
   {
     $this->horizontalAlignment = $horizontalAlignment;
   }
   /**
-   * @return string
+   * @return self::HORIZONTAL_ALIGNMENT_*
    */
   public function getHorizontalAlignment()
   {

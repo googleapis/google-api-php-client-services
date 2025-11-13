@@ -20,12 +20,16 @@ namespace Google\Service\HangoutsChat;
 class DateInput extends \Google\Model
 {
   /**
+   * Time since epoch time, in milliseconds.
+   *
    * @var string
    */
   public $msSinceEpoch;
 
   /**
-   * @param string
+   * Time since epoch time, in milliseconds.
+   *
+   * @param string $msSinceEpoch
    */
   public function setMsSinceEpoch($msSinceEpoch)
   {

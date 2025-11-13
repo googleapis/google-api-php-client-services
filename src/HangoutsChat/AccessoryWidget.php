@@ -23,7 +23,9 @@ class AccessoryWidget extends \Google\Model
   protected $buttonListDataType = '';
 
   /**
-   * @param GoogleAppsCardV1ButtonList
+   * A list of buttons.
+   *
+   * @param GoogleAppsCardV1ButtonList $buttonList
    */
   public function setButtonList(GoogleAppsCardV1ButtonList $buttonList)
   {

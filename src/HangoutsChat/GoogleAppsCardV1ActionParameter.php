@@ -20,16 +20,22 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1ActionParameter extends \Google\Model
 {
   /**
+   * The name of the parameter for the action script.
+   *
    * @var string
    */
   public $key;
   /**
+   * The value of the parameter.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The name of the parameter for the action script.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -43,7 +49,9 @@ class GoogleAppsCardV1ActionParameter extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * The value of the parameter.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

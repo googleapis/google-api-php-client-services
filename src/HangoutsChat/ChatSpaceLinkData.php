@@ -20,20 +20,31 @@ namespace Google\Service\HangoutsChat;
 class ChatSpaceLinkData extends \Google\Model
 {
   /**
+   * The message of the linked Chat space resource. Format:
+   * `spaces/{space}/messages/{message}`
+   *
    * @var string
    */
   public $message;
   /**
+   * The space of the linked Chat space resource. Format: `spaces/{space}`
+   *
    * @var string
    */
   public $space;
   /**
+   * The thread of the linked Chat space resource. Format:
+   * `spaces/{space}/threads/{thread}`
+   *
    * @var string
    */
   public $thread;
 
   /**
-   * @param string
+   * The message of the linked Chat space resource. Format:
+   * `spaces/{space}/messages/{message}`
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -47,7 +58,9 @@ class ChatSpaceLinkData extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * The space of the linked Chat space resource. Format: `spaces/{space}`
+   *
+   * @param string $space
    */
   public function setSpace($space)
   {
@@ -61,7 +74,10 @@ class ChatSpaceLinkData extends \Google\Model
     return $this->space;
   }
   /**
-   * @param string
+   * The thread of the linked Chat space resource. Format:
+   * `spaces/{space}/threads/{thread}`
+   *
+   * @param string $thread
    */
   public function setThread($thread)
   {

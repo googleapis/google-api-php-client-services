@@ -23,7 +23,9 @@ class GoogleAppsCardV1CommonWidgetAction extends \Google\Model
   protected $updateVisibilityActionDataType = '';
 
   /**
-   * @param GoogleAppsCardV1UpdateVisibilityAction
+   * The action to update the visibility of a widget.
+   *
+   * @param GoogleAppsCardV1UpdateVisibilityAction $updateVisibilityAction
    */
   public function setUpdateVisibilityAction(GoogleAppsCardV1UpdateVisibilityAction $updateVisibilityAction)
   {

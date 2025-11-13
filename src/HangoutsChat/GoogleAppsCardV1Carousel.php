@@ -24,7 +24,9 @@ class GoogleAppsCardV1Carousel extends \Google\Collection
   protected $carouselCardsDataType = 'array';
 
   /**
-   * @param GoogleAppsCardV1CarouselCard[]
+   * A list of cards included in the carousel.
+   *
+   * @param GoogleAppsCardV1CarouselCard[] $carouselCards
    */
   public function setCarouselCards($carouselCards)
   {

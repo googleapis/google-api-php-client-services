@@ -20,16 +20,51 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Validation extends \Google\Model
 {
   /**
+   * Unspecified type. Do not use.
+   */
+  public const INPUT_TYPE_INPUT_TYPE_UNSPECIFIED = 'INPUT_TYPE_UNSPECIFIED';
+  /**
+   * Regular text that accepts all characters.
+   */
+  public const INPUT_TYPE_TEXT = 'TEXT';
+  /**
+   * An integer value.
+   */
+  public const INPUT_TYPE_INTEGER = 'INTEGER';
+  /**
+   * A float value.
+   */
+  public const INPUT_TYPE_FLOAT = 'FLOAT';
+  /**
+   * An email address.
+   */
+  public const INPUT_TYPE_EMAIL = 'EMAIL';
+  /**
+   * A emoji selected from system-provided emoji picker.
+   */
+  public const INPUT_TYPE_EMOJI_PICKER = 'EMOJI_PICKER';
+  /**
+   * Specify the character limit for text input widgets. Note that this is only
+   * used for text input and is ignored for other widgets. [Google Workspace
+   * add-ons and Chat apps](https://developers.google.com/workspace/extend):
+   *
    * @var int
    */
   public $characterLimit;
   /**
+   * Specify the type of the input widgets. [Google Workspace add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
+   *
    * @var string
    */
   public $inputType;
 
   /**
-   * @param int
+   * Specify the character limit for text input widgets. Note that this is only
+   * used for text input and is ignored for other widgets. [Google Workspace
+   * add-ons and Chat apps](https://developers.google.com/workspace/extend):
+   *
+   * @param int $characterLimit
    */
   public function setCharacterLimit($characterLimit)
   {
@@ -43,14 +78,20 @@ class GoogleAppsCardV1Validation extends \Google\Model
     return $this->characterLimit;
   }
   /**
-   * @param string
+   * Specify the type of the input widgets. [Google Workspace add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
+   *
+   * Accepted values: INPUT_TYPE_UNSPECIFIED, TEXT, INTEGER, FLOAT, EMAIL,
+   * EMOJI_PICKER
+   *
+   * @param self::INPUT_TYPE_* $inputType
    */
   public function setInputType($inputType)
   {
     $this->inputType = $inputType;
   }
   /**
-   * @return string
+   * @return self::INPUT_TYPE_*
    */
   public function getInputType()
   {

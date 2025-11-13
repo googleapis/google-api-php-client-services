@@ -20,16 +20,27 @@ namespace Google\Service\HangoutsChat;
 class AttachmentDataRef extends \Google\Model
 {
   /**
+   * Optional. Opaque token containing a reference to an uploaded attachment.
+   * Treated by clients as an opaque string and used to create or update Chat
+   * messages with attachments.
+   *
    * @var string
    */
   public $attachmentUploadToken;
   /**
+   * Optional. The resource name of the attachment data. This field is used with
+   * the media API to download the attachment data.
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Optional. Opaque token containing a reference to an uploaded attachment.
+   * Treated by clients as an opaque string and used to create or update Chat
+   * messages with attachments.
+   *
+   * @param string $attachmentUploadToken
    */
   public function setAttachmentUploadToken($attachmentUploadToken)
   {
@@ -43,7 +54,10 @@ class AttachmentDataRef extends \Google\Model
     return $this->attachmentUploadToken;
   }
   /**
-   * @param string
+   * Optional. The resource name of the attachment data. This field is used with
+   * the media API to download the attachment data.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

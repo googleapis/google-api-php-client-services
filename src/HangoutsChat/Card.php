@@ -25,6 +25,8 @@ class Card extends \Google\Collection
   protected $headerType = CardHeader::class;
   protected $headerDataType = '';
   /**
+   * Name of the card.
+   *
    * @var string
    */
   public $name;
@@ -32,7 +34,9 @@ class Card extends \Google\Collection
   protected $sectionsDataType = 'array';
 
   /**
-   * @param CardAction[]
+   * The actions of this card.
+   *
+   * @param CardAction[] $cardActions
    */
   public function setCardActions($cardActions)
   {
@@ -46,7 +50,9 @@ class Card extends \Google\Collection
     return $this->cardActions;
   }
   /**
-   * @param CardHeader
+   * The header of the card. A header usually contains a title and an image.
+   *
+   * @param CardHeader $header
    */
   public function setHeader(CardHeader $header)
   {
@@ -60,7 +66,9 @@ class Card extends \Google\Collection
     return $this->header;
   }
   /**
-   * @param string
+   * Name of the card.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -74,7 +82,9 @@ class Card extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Section[]
+   * Sections are separated by a line divider.
+   *
+   * @param Section[] $sections
    */
   public function setSections($sections)
   {

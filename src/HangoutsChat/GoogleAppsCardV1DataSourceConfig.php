@@ -25,7 +25,9 @@ class GoogleAppsCardV1DataSourceConfig extends \Google\Model
   protected $remoteDataSourceDataType = '';
 
   /**
-   * @param GoogleAppsCardV1PlatformDataSource
+   * The data is from a Google Workspace application.
+   *
+   * @param GoogleAppsCardV1PlatformDataSource $platformDataSource
    */
   public function setPlatformDataSource(GoogleAppsCardV1PlatformDataSource $platformDataSource)
   {
@@ -39,7 +41,9 @@ class GoogleAppsCardV1DataSourceConfig extends \Google\Model
     return $this->platformDataSource;
   }
   /**
-   * @param GoogleAppsCardV1Action
+   * The data is from a remote data provider.
+   *
+   * @param GoogleAppsCardV1Action $remoteDataSource
    */
   public function setRemoteDataSource(GoogleAppsCardV1Action $remoteDataSource)
   {

@@ -19,8 +19,38 @@ namespace Google\Service\HangoutsChat;
 
 class GoogleAppsCardV1ImageCropStyle extends \Google\Model
 {
+  /**
+   * Don't use. Unspecified.
+   */
+  public const TYPE_IMAGE_CROP_TYPE_UNSPECIFIED = 'IMAGE_CROP_TYPE_UNSPECIFIED';
+  /**
+   * Default value. Applies a square crop.
+   */
+  public const TYPE_SQUARE = 'SQUARE';
+  /**
+   * Applies a circular crop.
+   */
+  public const TYPE_CIRCLE = 'CIRCLE';
+  /**
+   * Applies a rectangular crop with a custom aspect ratio. Set the custom
+   * aspect ratio with `aspectRatio`.
+   */
+  public const TYPE_RECTANGLE_CUSTOM = 'RECTANGLE_CUSTOM';
+  /**
+   * Applies a rectangular crop with a 4:3 aspect ratio.
+   */
+  public const TYPE_RECTANGLE_4_3 = 'RECTANGLE_4_3';
+  /**
+   * The aspect ratio to use if the crop type is `RECTANGLE_CUSTOM`. For
+   * example, here's how to apply a 16:9 aspect ratio: ``` cropStyle { "type":
+   * "RECTANGLE_CUSTOM", "aspectRatio": 16/9 } ```
+   *
+   * @var 
+   */
   public $aspectRatio;
   /**
+   * The crop type.
+   *
    * @var string
    */
   public $type;
@@ -34,14 +64,19 @@ class GoogleAppsCardV1ImageCropStyle extends \Google\Model
     return $this->aspectRatio;
   }
   /**
-   * @param string
+   * The crop type.
+   *
+   * Accepted values: IMAGE_CROP_TYPE_UNSPECIFIED, SQUARE, CIRCLE,
+   * RECTANGLE_CUSTOM, RECTANGLE_4_3
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

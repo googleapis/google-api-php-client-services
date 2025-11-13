@@ -20,19 +20,37 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1UpdateVisibilityAction extends \Google\Model
 {
   /**
+   * Unspecified visibility. Do not use.
+   */
+  public const VISIBILITY_VISIBILITY_UNSPECIFIED = 'VISIBILITY_UNSPECIFIED';
+  /**
+   * The UI element is visible.
+   */
+  public const VISIBILITY_VISIBLE = 'VISIBLE';
+  /**
+   * The UI element is hidden.
+   */
+  public const VISIBILITY_HIDDEN = 'HIDDEN';
+  /**
+   * The new visibility.
+   *
    * @var string
    */
   public $visibility;
 
   /**
-   * @param string
+   * The new visibility.
+   *
+   * Accepted values: VISIBILITY_UNSPECIFIED, VISIBLE, HIDDEN
+   *
+   * @param self::VISIBILITY_* $visibility
    */
   public function setVisibility($visibility)
   {
     $this->visibility = $visibility;
   }
   /**
-   * @return string
+   * @return self::VISIBILITY_*
    */
   public function getVisibility()
   {

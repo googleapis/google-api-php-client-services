@@ -20,6 +20,8 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Condition extends \Google\Model
 {
   /**
+   * The unique identifier of the ActionRule.
+   *
    * @var string
    */
   public $actionRuleId;
@@ -27,7 +29,9 @@ class GoogleAppsCardV1Condition extends \Google\Model
   protected $expressionDataConditionDataType = '';
 
   /**
-   * @param string
+   * The unique identifier of the ActionRule.
+   *
+   * @param string $actionRuleId
    */
   public function setActionRuleId($actionRuleId)
   {
@@ -41,7 +45,9 @@ class GoogleAppsCardV1Condition extends \Google\Model
     return $this->actionRuleId;
   }
   /**
-   * @param GoogleAppsCardV1ExpressionDataCondition
+   * The condition that is determined by the expression data.
+   *
+   * @param GoogleAppsCardV1ExpressionDataCondition $expressionDataCondition
    */
   public function setExpressionDataCondition(GoogleAppsCardV1ExpressionDataCondition $expressionDataCondition)
   {

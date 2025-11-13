@@ -20,12 +20,16 @@ namespace Google\Service\HangoutsChat;
 class MatchedUrl extends \Google\Model
 {
   /**
+   * Output only. The URL that was matched.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Output only. The URL that was matched.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

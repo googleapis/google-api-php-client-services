@@ -20,19 +20,63 @@ namespace Google\Service\HangoutsChat;
 class DeletionMetadata extends \Google\Model
 {
   /**
+   * This value is unused.
+   */
+  public const DELETION_TYPE_DELETION_TYPE_UNSPECIFIED = 'DELETION_TYPE_UNSPECIFIED';
+  /**
+   * User deleted their own message.
+   */
+  public const DELETION_TYPE_CREATOR = 'CREATOR';
+  /**
+   * An owner or manager deleted the message.
+   */
+  public const DELETION_TYPE_SPACE_OWNER = 'SPACE_OWNER';
+  /**
+   * A Google Workspace administrator deleted the message. Administrators can
+   * delete any message in the space, including messages sent by any space
+   * member or Chat app.
+   */
+  public const DELETION_TYPE_ADMIN = 'ADMIN';
+  /**
+   * A Chat app deleted its own message when it expired.
+   */
+  public const DELETION_TYPE_APP_MESSAGE_EXPIRY = 'APP_MESSAGE_EXPIRY';
+  /**
+   * A Chat app deleted the message on behalf of the creator (using user
+   * authentication).
+   */
+  public const DELETION_TYPE_CREATOR_VIA_APP = 'CREATOR_VIA_APP';
+  /**
+   * A Chat app deleted the message on behalf of a space manager (using user
+   * authentication).
+   */
+  public const DELETION_TYPE_SPACE_OWNER_VIA_APP = 'SPACE_OWNER_VIA_APP';
+  /**
+   * A member of the space deleted the message. Users can delete messages sent
+   * by apps.
+   */
+  public const DELETION_TYPE_SPACE_MEMBER = 'SPACE_MEMBER';
+  /**
+   * Indicates who deleted the message.
+   *
    * @var string
    */
   public $deletionType;
 
   /**
-   * @param string
+   * Indicates who deleted the message.
+   *
+   * Accepted values: DELETION_TYPE_UNSPECIFIED, CREATOR, SPACE_OWNER, ADMIN,
+   * APP_MESSAGE_EXPIRY, CREATOR_VIA_APP, SPACE_OWNER_VIA_APP, SPACE_MEMBER
+   *
+   * @param self::DELETION_TYPE_* $deletionType
    */
   public function setDeletionType($deletionType)
   {
     $this->deletionType = $deletionType;
   }
   /**
-   * @return string
+   * @return self::DELETION_TYPE_*
    */
   public function getDeletionType()
   {

@@ -22,12 +22,16 @@ class EmojiReactionSummary extends \Google\Model
   protected $emojiType = Emoji::class;
   protected $emojiDataType = '';
   /**
+   * Output only. The total number of reactions using the associated emoji.
+   *
    * @var int
    */
   public $reactionCount;
 
   /**
-   * @param Emoji
+   * Output only. Emoji associated with the reactions.
+   *
+   * @param Emoji $emoji
    */
   public function setEmoji(Emoji $emoji)
   {
@@ -41,7 +45,9 @@ class EmojiReactionSummary extends \Google\Model
     return $this->emoji;
   }
   /**
-   * @param int
+   * Output only. The total number of reactions using the associated emoji.
+   *
+   * @param int $reactionCount
    */
   public function setReactionCount($reactionCount)
   {

@@ -25,7 +25,9 @@ class Button extends \Google\Model
   protected $textButtonDataType = '';
 
   /**
-   * @param ImageButton
+   * A button with image and `onclick` action.
+   *
+   * @param ImageButton $imageButton
    */
   public function setImageButton(ImageButton $imageButton)
   {
@@ -39,7 +41,9 @@ class Button extends \Google\Model
     return $this->imageButton;
   }
   /**
-   * @param TextButton
+   * A button with text and `onclick` action.
+   *
+   * @param TextButton $textButton
    */
   public function setTextButton(TextButton $textButton)
   {

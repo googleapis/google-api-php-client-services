@@ -24,7 +24,9 @@ class GoogleAppsCardV1OverflowMenu extends \Google\Collection
   protected $itemsDataType = 'array';
 
   /**
-   * @param GoogleAppsCardV1OverflowMenuItem[]
+   * Required. The list of menu options.
+   *
+   * @param GoogleAppsCardV1OverflowMenuItem[] $items
    */
   public function setItems($items)
   {

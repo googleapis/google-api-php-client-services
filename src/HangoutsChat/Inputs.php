@@ -29,7 +29,11 @@ class Inputs extends \Google\Model
   protected $timeInputDataType = '';
 
   /**
-   * @param DateInput
+   * Date input values from a [`DateTimePicker`](https://developers.google.com/c
+   * hat/api/reference/rest/v1/cards#DateTimePicker) widget that only accepts
+   * date values.
+   *
+   * @param DateInput $dateInput
    */
   public function setDateInput(DateInput $dateInput)
   {
@@ -43,7 +47,11 @@ class Inputs extends \Google\Model
     return $this->dateInput;
   }
   /**
-   * @param DateTimeInput
+   * Date and time input values from a [`DateTimePicker`](https://developers.goo
+   * gle.com/chat/api/reference/rest/v1/cards#DateTimePicker) widget that
+   * accepts both a date and time.
+   *
+   * @param DateTimeInput $dateTimeInput
    */
   public function setDateTimeInput(DateTimeInput $dateTimeInput)
   {
@@ -57,7 +65,15 @@ class Inputs extends \Google\Model
     return $this->dateTimeInput;
   }
   /**
-   * @param StringInputs
+   * A list of strings that represent the values that the user inputs in a
+   * widget. If the widget only accepts one value, such as a [`TextInput`](https
+   * ://developers.google.com/chat/api/reference/rest/v1/cards#TextInput)
+   * widget, the list contains one string object. If the widget accepts multiple
+   * values, such as a [`SelectionInput`](https://developers.google.com/chat/api
+   * /reference/rest/v1/cards#selectioninput) widget of checkboxes, the list
+   * contains a string object for each value that the user inputs or selects.
+   *
+   * @param StringInputs $stringInputs
    */
   public function setStringInputs(StringInputs $stringInputs)
   {
@@ -71,7 +87,11 @@ class Inputs extends \Google\Model
     return $this->stringInputs;
   }
   /**
-   * @param TimeInput
+   * Time input values from a [`DateTimePicker`](https://developers.google.com/c
+   * hat/api/reference/rest/v1/cards#DateTimePicker) widget that only accepts
+   * time values.
+   *
+   * @param TimeInput $timeInput
    */
   public function setTimeInput(TimeInput $timeInput)
   {

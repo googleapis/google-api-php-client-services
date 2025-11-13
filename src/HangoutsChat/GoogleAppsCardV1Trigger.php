@@ -20,12 +20,16 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Trigger extends \Google\Model
 {
   /**
+   * The unique identifier of the ActionRule.
+   *
    * @var string
    */
   public $actionRuleId;
 
   /**
-   * @param string
+   * The unique identifier of the ActionRule.
+   *
+   * @param string $actionRuleId
    */
   public function setActionRuleId($actionRuleId)
   {

@@ -23,7 +23,9 @@ class ChatClientDataSourceMarkup extends \Google\Model
   protected $spaceDataSourceDataType = '';
 
   /**
-   * @param SpaceDataSource
+   * Google Chat spaces that the user is a member of.
+   *
+   * @param SpaceDataSource $spaceDataSource
    */
   public function setSpaceDataSource(SpaceDataSource $spaceDataSource)
   {

@@ -19,8 +19,18 @@ namespace Google\Service\HangoutsChat;
 
 class Image extends \Google\Model
 {
+  /**
+   * The aspect ratio of this image (width and height). This field lets you
+   * reserve the right height for the image while waiting for it to load. It's
+   * not meant to override the built-in aspect ratio of the image. If unset, the
+   * server fills it by prefetching the image.
+   *
+   * @var 
+   */
   public $aspectRatio;
   /**
+   * The URL of the image.
+   *
    * @var string
    */
   public $imageUrl;
@@ -36,7 +46,9 @@ class Image extends \Google\Model
     return $this->aspectRatio;
   }
   /**
-   * @param string
+   * The URL of the image.
+   *
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -50,7 +62,9 @@ class Image extends \Google\Model
     return $this->imageUrl;
   }
   /**
-   * @param OnClick
+   * The `onclick` action.
+   *
+   * @param OnClick $onClick
    */
   public function setOnClick(OnClick $onClick)
   {

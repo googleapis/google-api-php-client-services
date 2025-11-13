@@ -20,12 +20,18 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1SuggestionItem extends \Google\Model
 {
   /**
+   * The value of a suggested input to a text input field. This is equivalent to
+   * what users enter themselves.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * The value of a suggested input to a text input field. This is equivalent to
+   * what users enter themselves.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

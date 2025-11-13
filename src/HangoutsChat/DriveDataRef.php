@@ -20,12 +20,16 @@ namespace Google\Service\HangoutsChat;
 class DriveDataRef extends \Google\Model
 {
   /**
+   * The ID for the drive file. Use with the Drive API.
+   *
    * @var string
    */
   public $driveFileId;
 
   /**
-   * @param string
+   * The ID for the drive file. Use with the Drive API.
+   *
+   * @param string $driveFileId
    */
   public function setDriveFileId($driveFileId)
   {

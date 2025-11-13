@@ -20,26 +20,49 @@ namespace Google\Service\HangoutsChat;
 class CustomEmoji extends \Google\Model
 {
   /**
+   * Optional. Immutable. User-provided name for the custom emoji, which is
+   * unique within the organization. Required when the custom emoji is created,
+   * output only otherwise. Emoji names must start and end with colons, must be
+   * lowercase and can only contain alphanumeric characters, hyphens, and
+   * underscores. Hyphens and underscores should be used to separate words and
+   * cannot be used consecutively. Example: `:valid-emoji-name:`
+   *
    * @var string
    */
   public $emojiName;
   /**
+   * Identifier. The resource name of the custom emoji, assigned by the server.
+   * Format: `customEmojis/{customEmoji}`
+   *
    * @var string
    */
   public $name;
   protected $payloadType = CustomEmojiPayload::class;
   protected $payloadDataType = '';
   /**
+   * Output only. A temporary image URL for the custom emoji, valid for at least
+   * 10 minutes. Note that this is not populated in the response when the custom
+   * emoji is created.
+   *
    * @var string
    */
   public $temporaryImageUri;
   /**
+   * Output only. Unique key for the custom emoji resource.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string
+   * Optional. Immutable. User-provided name for the custom emoji, which is
+   * unique within the organization. Required when the custom emoji is created,
+   * output only otherwise. Emoji names must start and end with colons, must be
+   * lowercase and can only contain alphanumeric characters, hyphens, and
+   * underscores. Hyphens and underscores should be used to separate words and
+   * cannot be used consecutively. Example: `:valid-emoji-name:`
+   *
+   * @param string $emojiName
    */
   public function setEmojiName($emojiName)
   {
@@ -53,7 +76,10 @@ class CustomEmoji extends \Google\Model
     return $this->emojiName;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the custom emoji, assigned by the server.
+   * Format: `customEmojis/{customEmoji}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -67,7 +93,10 @@ class CustomEmoji extends \Google\Model
     return $this->name;
   }
   /**
-   * @param CustomEmojiPayload
+   * Optional. Input only. Payload data. Required when the custom emoji is
+   * created.
+   *
+   * @param CustomEmojiPayload $payload
    */
   public function setPayload(CustomEmojiPayload $payload)
   {
@@ -81,7 +110,11 @@ class CustomEmoji extends \Google\Model
     return $this->payload;
   }
   /**
-   * @param string
+   * Output only. A temporary image URL for the custom emoji, valid for at least
+   * 10 minutes. Note that this is not populated in the response when the custom
+   * emoji is created.
+   *
+   * @param string $temporaryImageUri
    */
   public function setTemporaryImageUri($temporaryImageUri)
   {
@@ -95,7 +128,9 @@ class CustomEmoji extends \Google\Model
     return $this->temporaryImageUri;
   }
   /**
-   * @param string
+   * Output only. Unique key for the custom emoji resource.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

@@ -24,7 +24,9 @@ class GoogleAppsCardV1Columns extends \Google\Collection
   protected $columnItemsDataType = 'array';
 
   /**
-   * @param GoogleAppsCardV1Column[]
+   * An array of columns. You can include up to 2 columns in a card or dialog.
+   *
+   * @param GoogleAppsCardV1Column[] $columnItems
    */
   public function setColumnItems($columnItems)
   {

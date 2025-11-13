@@ -21,6 +21,8 @@ class GoogleAppsCardV1EventAction extends \Google\Collection
 {
   protected $collection_key = 'postEventTriggers';
   /**
+   * The unique identifier of the ActionRule.
+   *
    * @var string
    */
   public $actionRuleId;
@@ -30,7 +32,9 @@ class GoogleAppsCardV1EventAction extends \Google\Collection
   protected $postEventTriggersDataType = 'array';
 
   /**
-   * @param string
+   * The unique identifier of the ActionRule.
+   *
+   * @param string $actionRuleId
    */
   public function setActionRuleId($actionRuleId)
   {
@@ -44,7 +48,9 @@ class GoogleAppsCardV1EventAction extends \Google\Collection
     return $this->actionRuleId;
   }
   /**
-   * @param GoogleAppsCardV1CommonWidgetAction
+   * Common widget action.
+   *
+   * @param GoogleAppsCardV1CommonWidgetAction $commonWidgetAction
    */
   public function setCommonWidgetAction(GoogleAppsCardV1CommonWidgetAction $commonWidgetAction)
   {
@@ -58,7 +64,10 @@ class GoogleAppsCardV1EventAction extends \Google\Collection
     return $this->commonWidgetAction;
   }
   /**
-   * @param GoogleAppsCardV1Trigger[]
+   * The list of triggers that will be triggered after the EventAction is
+   * executed.
+   *
+   * @param GoogleAppsCardV1Trigger[] $postEventTriggers
    */
   public function setPostEventTriggers($postEventTriggers)
   {

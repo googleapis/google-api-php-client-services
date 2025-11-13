@@ -19,10 +19,43 @@ namespace Google\Service\HangoutsChat;
 
 class GoogleAppsCardV1Card extends \Google\Collection
 {
+  /**
+   * Don't use. Unspecified.
+   */
+  public const DISPLAY_STYLE_DISPLAY_STYLE_UNSPECIFIED = 'DISPLAY_STYLE_UNSPECIFIED';
+  /**
+   * The header of the card appears at the bottom of the sidebar, partially
+   * covering the current top card of the stack. Clicking the header pops the
+   * card into the card stack. If the card has no header, a generated header is
+   * used instead.
+   */
+  public const DISPLAY_STYLE_PEEK = 'PEEK';
+  /**
+   * Default value. The card is shown by replacing the view of the top card in
+   * the card stack.
+   */
+  public const DISPLAY_STYLE_REPLACE = 'REPLACE';
+  /**
+   * Don't use. Unspecified.
+   */
+  public const SECTION_DIVIDER_STYLE_DIVIDER_STYLE_UNSPECIFIED = 'DIVIDER_STYLE_UNSPECIFIED';
+  /**
+   * Default option. Render a solid divider.
+   */
+  public const SECTION_DIVIDER_STYLE_SOLID_DIVIDER = 'SOLID_DIVIDER';
+  /**
+   * If set, no divider is rendered. This style completely removes the divider
+   * from the layout. The result is equivalent to not adding a divider at all.
+   */
+  public const SECTION_DIVIDER_STYLE_NO_DIVIDER = 'NO_DIVIDER';
   protected $collection_key = 'sections';
   protected $cardActionsType = GoogleAppsCardV1CardAction::class;
   protected $cardActionsDataType = 'array';
   /**
+   * In Google Workspace add-ons, sets the display properties of the
+   * `peekCardHeader`. [Google Workspace add-
+   * ons](https://developers.google.com/workspace/add-ons):
+   *
    * @var string
    */
   public $displayStyle;
@@ -33,12 +66,17 @@ class GoogleAppsCardV1Card extends \Google\Collection
   protected $headerType = GoogleAppsCardV1CardHeader::class;
   protected $headerDataType = '';
   /**
+   * Name of the card. Used as a card identifier in card navigation. [Google
+   * Workspace add-ons](https://developers.google.com/workspace/add-ons):
+   *
    * @var string
    */
   public $name;
   protected $peekCardHeaderType = GoogleAppsCardV1CardHeader::class;
   protected $peekCardHeaderDataType = '';
   /**
+   * The divider style between the header, sections and footer.
+   *
    * @var string
    */
   public $sectionDividerStyle;
@@ -46,7 +84,17 @@ class GoogleAppsCardV1Card extends \Google\Collection
   protected $sectionsDataType = 'array';
 
   /**
-   * @param GoogleAppsCardV1CardAction[]
+   * The card's actions. Actions are added to the card's toolbar menu. [Google
+   * Workspace add-ons](https://developers.google.com/workspace/add-ons): For
+   * example, the following JSON constructs a card action menu with `Settings`
+   * and `Send Feedback` options: ``` "card_actions": [ { "actionLabel":
+   * "Settings", "onClick": { "action": { "functionName": "goToView",
+   * "parameters": [ { "key": "viewType", "value": "SETTING" } ],
+   * "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send
+   * Feedback", "onClick": { "openLink": { "url": "https://example.com/feedback"
+   * } } } ] ```
+   *
+   * @param GoogleAppsCardV1CardAction[] $cardActions
    */
   public function setCardActions($cardActions)
   {
@@ -60,21 +108,32 @@ class GoogleAppsCardV1Card extends \Google\Collection
     return $this->cardActions;
   }
   /**
-   * @param string
+   * In Google Workspace add-ons, sets the display properties of the
+   * `peekCardHeader`. [Google Workspace add-
+   * ons](https://developers.google.com/workspace/add-ons):
+   *
+   * Accepted values: DISPLAY_STYLE_UNSPECIFIED, PEEK, REPLACE
+   *
+   * @param self::DISPLAY_STYLE_* $displayStyle
    */
   public function setDisplayStyle($displayStyle)
   {
     $this->displayStyle = $displayStyle;
   }
   /**
-   * @return string
+   * @return self::DISPLAY_STYLE_*
    */
   public function getDisplayStyle()
   {
     return $this->displayStyle;
   }
   /**
-   * @param GoogleAppsCardV1ExpressionData[]
+   * The expression data for the card. Available for Google Workspace add-ons
+   * that extend Google Workspace flows, which is available as part of the
+   * [Gemini Alpha program](https://support.google.com/a/answer/14170809).
+   * Unavailable for Google Chat apps.
+   *
+   * @param GoogleAppsCardV1ExpressionData[] $expressionData
    */
   public function setExpressionData($expressionData)
   {
@@ -88,7 +147,15 @@ class GoogleAppsCardV1Card extends \Google\Collection
     return $this->expressionData;
   }
   /**
-   * @param GoogleAppsCardV1CardFixedFooter
+   * The fixed footer shown at the bottom of this card. Setting `fixedFooter`
+   * without specifying a `primaryButton` or a `secondaryButton` causes an
+   * error. For Chat apps, you can use fixed footers in
+   * [dialogs](https://developers.google.com/workspace/chat/dialogs), but not
+   * [card messages](https://developers.google.com/workspace/chat/create-
+   * messages#create). [Google Workspace add-ons and Chat
+   * apps](https://developers.google.com/workspace/extend):
+   *
+   * @param GoogleAppsCardV1CardFixedFooter $fixedFooter
    */
   public function setFixedFooter(GoogleAppsCardV1CardFixedFooter $fixedFooter)
   {
@@ -102,7 +169,10 @@ class GoogleAppsCardV1Card extends \Google\Collection
     return $this->fixedFooter;
   }
   /**
-   * @param GoogleAppsCardV1CardHeader
+   * The header of the card. A header usually contains a leading image and a
+   * title. Headers always appear at the top of a card.
+   *
+   * @param GoogleAppsCardV1CardHeader $header
    */
   public function setHeader(GoogleAppsCardV1CardHeader $header)
   {
@@ -116,7 +186,10 @@ class GoogleAppsCardV1Card extends \Google\Collection
     return $this->header;
   }
   /**
-   * @param string
+   * Name of the card. Used as a card identifier in card navigation. [Google
+   * Workspace add-ons](https://developers.google.com/workspace/add-ons):
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -130,7 +203,12 @@ class GoogleAppsCardV1Card extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleAppsCardV1CardHeader
+   * When displaying contextual content, the peek card header acts as a
+   * placeholder so that the user can navigate forward between the homepage
+   * cards and the contextual cards. [Google Workspace add-
+   * ons](https://developers.google.com/workspace/add-ons):
+   *
+   * @param GoogleAppsCardV1CardHeader $peekCardHeader
    */
   public function setPeekCardHeader(GoogleAppsCardV1CardHeader $peekCardHeader)
   {
@@ -144,21 +222,31 @@ class GoogleAppsCardV1Card extends \Google\Collection
     return $this->peekCardHeader;
   }
   /**
-   * @param string
+   * The divider style between the header, sections and footer.
+   *
+   * Accepted values: DIVIDER_STYLE_UNSPECIFIED, SOLID_DIVIDER, NO_DIVIDER
+   *
+   * @param self::SECTION_DIVIDER_STYLE_* $sectionDividerStyle
    */
   public function setSectionDividerStyle($sectionDividerStyle)
   {
     $this->sectionDividerStyle = $sectionDividerStyle;
   }
   /**
-   * @return string
+   * @return self::SECTION_DIVIDER_STYLE_*
    */
   public function getSectionDividerStyle()
   {
     return $this->sectionDividerStyle;
   }
   /**
-   * @param GoogleAppsCardV1Section[]
+   * Contains a collection of widgets. Each section has its own, optional
+   * header. Sections are visually separated by a line divider. For an example
+   * in Google Chat apps, see [Define a section of a
+   * card](https://developers.google.com/workspace/chat/design-components-card-
+   * dialog#define_a_section_of_a_card).
+   *
+   * @param GoogleAppsCardV1Section[] $sections
    */
   public function setSections($sections)
   {

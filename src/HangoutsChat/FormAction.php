@@ -21,6 +21,11 @@ class FormAction extends \Google\Collection
 {
   protected $collection_key = 'parameters';
   /**
+   * The method name is used to identify which part of the form triggered the
+   * form submission. This information is echoed back to the Chat app as part of
+   * the card click event. You can use the same method name for several elements
+   * that trigger a common behavior.
+   *
    * @var string
    */
   public $actionMethodName;
@@ -28,7 +33,12 @@ class FormAction extends \Google\Collection
   protected $parametersDataType = 'array';
 
   /**
-   * @param string
+   * The method name is used to identify which part of the form triggered the
+   * form submission. This information is echoed back to the Chat app as part of
+   * the card click event. You can use the same method name for several elements
+   * that trigger a common behavior.
+   *
+   * @param string $actionMethodName
    */
   public function setActionMethodName($actionMethodName)
   {
@@ -42,7 +52,9 @@ class FormAction extends \Google\Collection
     return $this->actionMethodName;
   }
   /**
-   * @param ActionParameter[]
+   * List of action parameters.
+   *
+   * @param ActionParameter[] $parameters
    */
   public function setParameters($parameters)
   {

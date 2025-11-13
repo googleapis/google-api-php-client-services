@@ -23,6 +23,10 @@ class GoogleAppsCardV1Grid extends \Google\Collection
   protected $borderStyleType = GoogleAppsCardV1BorderStyle::class;
   protected $borderStyleDataType = '';
   /**
+   * The number of columns to display in the grid. A default value is used if
+   * this field isn't specified, and that default value is different depending
+   * on where the grid is shown (dialog versus companion).
+   *
    * @var int
    */
   public $columnCount;
@@ -31,12 +35,16 @@ class GoogleAppsCardV1Grid extends \Google\Collection
   protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
   /**
+   * The text that displays in the grid header.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param GoogleAppsCardV1BorderStyle
+   * The border style to apply to each grid item.
+   *
+   * @param GoogleAppsCardV1BorderStyle $borderStyle
    */
   public function setBorderStyle(GoogleAppsCardV1BorderStyle $borderStyle)
   {
@@ -50,7 +58,11 @@ class GoogleAppsCardV1Grid extends \Google\Collection
     return $this->borderStyle;
   }
   /**
-   * @param int
+   * The number of columns to display in the grid. A default value is used if
+   * this field isn't specified, and that default value is different depending
+   * on where the grid is shown (dialog versus companion).
+   *
+   * @param int $columnCount
    */
   public function setColumnCount($columnCount)
   {
@@ -64,7 +76,9 @@ class GoogleAppsCardV1Grid extends \Google\Collection
     return $this->columnCount;
   }
   /**
-   * @param GoogleAppsCardV1GridItem[]
+   * The items to display in the grid.
+   *
+   * @param GoogleAppsCardV1GridItem[] $items
    */
   public function setItems($items)
   {
@@ -78,7 +92,10 @@ class GoogleAppsCardV1Grid extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param GoogleAppsCardV1OnClick
+   * This callback is reused by each individual grid item, but with the item's
+   * identifier and index in the items list added to the callback's parameters.
+   *
+   * @param GoogleAppsCardV1OnClick $onClick
    */
   public function setOnClick(GoogleAppsCardV1OnClick $onClick)
   {
@@ -92,7 +109,9 @@ class GoogleAppsCardV1Grid extends \Google\Collection
     return $this->onClick;
   }
   /**
-   * @param string
+   * The text that displays in the grid header.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

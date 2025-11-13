@@ -20,10 +20,16 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Image extends \Google\Model
 {
   /**
+   * The alternative text of this image that's used for accessibility.
+   *
    * @var string
    */
   public $altText;
   /**
+   * The HTTPS URL that hosts the image. For example: ```
+   * https://developers.google.com/workspace/chat/images/quickstart-app-
+   * avatar.png ```
+   *
    * @var string
    */
   public $imageUrl;
@@ -31,7 +37,9 @@ class GoogleAppsCardV1Image extends \Google\Model
   protected $onClickDataType = '';
 
   /**
-   * @param string
+   * The alternative text of this image that's used for accessibility.
+   *
+   * @param string $altText
    */
   public function setAltText($altText)
   {
@@ -45,7 +53,11 @@ class GoogleAppsCardV1Image extends \Google\Model
     return $this->altText;
   }
   /**
-   * @param string
+   * The HTTPS URL that hosts the image. For example: ```
+   * https://developers.google.com/workspace/chat/images/quickstart-app-
+   * avatar.png ```
+   *
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -59,7 +71,9 @@ class GoogleAppsCardV1Image extends \Google\Model
     return $this->imageUrl;
   }
   /**
-   * @param GoogleAppsCardV1OnClick
+   * When a user clicks the image, the click triggers this action.
+   *
+   * @param GoogleAppsCardV1OnClick $onClick
    */
   public function setOnClick(GoogleAppsCardV1OnClick $onClick)
   {

@@ -27,7 +27,9 @@ class GoogleAppsCardV1NestedWidget extends \Google\Model
   protected $textParagraphDataType = '';
 
   /**
-   * @param GoogleAppsCardV1ButtonList
+   * A button list widget.
+   *
+   * @param GoogleAppsCardV1ButtonList $buttonList
    */
   public function setButtonList(GoogleAppsCardV1ButtonList $buttonList)
   {
@@ -41,7 +43,9 @@ class GoogleAppsCardV1NestedWidget extends \Google\Model
     return $this->buttonList;
   }
   /**
-   * @param GoogleAppsCardV1Image
+   * An image widget.
+   *
+   * @param GoogleAppsCardV1Image $image
    */
   public function setImage(GoogleAppsCardV1Image $image)
   {
@@ -55,7 +59,9 @@ class GoogleAppsCardV1NestedWidget extends \Google\Model
     return $this->image;
   }
   /**
-   * @param GoogleAppsCardV1TextParagraph
+   * A text paragraph widget.
+   *
+   * @param GoogleAppsCardV1TextParagraph $textParagraph
    */
   public function setTextParagraph(GoogleAppsCardV1TextParagraph $textParagraph)
   {

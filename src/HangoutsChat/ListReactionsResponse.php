@@ -21,6 +21,9 @@ class ListReactionsResponse extends \Google\Collection
 {
   protected $collection_key = 'reactions';
   /**
+   * Continuation token to retrieve the next page of results. It's empty for the
+   * last page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListReactionsResponse extends \Google\Collection
   protected $reactionsDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token to retrieve the next page of results. It's empty for the
+   * last page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListReactionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Reaction[]
+   * List of reactions in the requested (or first) page.
+   *
+   * @param Reaction[] $reactions
    */
   public function setReactions($reactions)
   {

@@ -19,39 +19,64 @@ namespace Google\Service\HangoutsChat;
 
 class CardHeader extends \Google\Model
 {
+  public const IMAGE_STYLE_IMAGE_STYLE_UNSPECIFIED = 'IMAGE_STYLE_UNSPECIFIED';
   /**
+   * Square border.
+   */
+  public const IMAGE_STYLE_IMAGE = 'IMAGE';
+  /**
+   * Circular border.
+   */
+  public const IMAGE_STYLE_AVATAR = 'AVATAR';
+  /**
+   * The image's type (for example, square border or circular border).
+   *
    * @var string
    */
   public $imageStyle;
   /**
+   * The URL of the image in the card header.
+   *
    * @var string
    */
   public $imageUrl;
   /**
+   * The subtitle of the card header.
+   *
    * @var string
    */
   public $subtitle;
   /**
+   * The title must be specified. The header has a fixed height: if both a title
+   * and subtitle is specified, each takes up one line. If only the title is
+   * specified, it takes up both lines.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The image's type (for example, square border or circular border).
+   *
+   * Accepted values: IMAGE_STYLE_UNSPECIFIED, IMAGE, AVATAR
+   *
+   * @param self::IMAGE_STYLE_* $imageStyle
    */
   public function setImageStyle($imageStyle)
   {
     $this->imageStyle = $imageStyle;
   }
   /**
-   * @return string
+   * @return self::IMAGE_STYLE_*
    */
   public function getImageStyle()
   {
     return $this->imageStyle;
   }
   /**
-   * @param string
+   * The URL of the image in the card header.
+   *
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -65,7 +90,9 @@ class CardHeader extends \Google\Model
     return $this->imageUrl;
   }
   /**
-   * @param string
+   * The subtitle of the card header.
+   *
+   * @param string $subtitle
    */
   public function setSubtitle($subtitle)
   {
@@ -79,7 +106,11 @@ class CardHeader extends \Google\Model
     return $this->subtitle;
   }
   /**
-   * @param string
+   * The title must be specified. The header has a fixed height: if both a title
+   * and subtitle is specified, each takes up one line. If only the title is
+   * specified, it takes up both lines.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

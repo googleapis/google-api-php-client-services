@@ -23,7 +23,9 @@ class CompleteImportSpaceResponse extends \Google\Model
   protected $spaceDataType = '';
 
   /**
-   * @param Space
+   * The import mode space.
+   *
+   * @param Space $space
    */
   public function setSpace(Space $space)
   {
