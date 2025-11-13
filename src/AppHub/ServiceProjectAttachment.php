@@ -20,28 +20,62 @@ namespace Google\Service\AppHub;
 class ServiceProjectAttachment extends \Google\Model
 {
   /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The ServiceProjectAttachment is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The ServiceProjectAttachment is ready. This means Services and Workloads
+   * under the corresponding ServiceProjectAttachment is ready for registration.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The ServiceProjectAttachment is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Output only. Create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Identifier. The resource name of a ServiceProjectAttachment. Format:
+   * `"projects/{host-project-
+   * id}/locations/global/serviceProjectAttachments/{service-project-id}."`
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Immutable. Service project name in the format: `"projects/abc"`
+   * or `"projects/123"`. As input, project name with either project id or
+   * number are accepted. As output, this field will contain project number.
+   *
    * @var string
    */
   public $serviceProject;
   /**
+   * Output only. ServiceProjectAttachment state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. A globally unique identifier (in UUID4 format) for the
+   * `ServiceProjectAttachment`.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string
+   * Output only. Create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +89,11 @@ class ServiceProjectAttachment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Identifier. The resource name of a ServiceProjectAttachment. Format:
+   * `"projects/{host-project-
+   * id}/locations/global/serviceProjectAttachments/{service-project-id}."`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -69,7 +107,11 @@ class ServiceProjectAttachment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Immutable. Service project name in the format: `"projects/abc"`
+   * or `"projects/123"`. As input, project name with either project id or
+   * number are accepted. As output, this field will contain project number.
+   *
+   * @param string $serviceProject
    */
   public function setServiceProject($serviceProject)
   {
@@ -83,21 +125,28 @@ class ServiceProjectAttachment extends \Google\Model
     return $this->serviceProject;
   }
   /**
-   * @param string
+   * Output only. ServiceProjectAttachment state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. A globally unique identifier (in UUID4 format) for the
+   * `ServiceProjectAttachment`.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

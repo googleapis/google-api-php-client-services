@@ -23,7 +23,9 @@ class LookupDiscoveredWorkloadResponse extends \Google\Model
   protected $discoveredWorkloadDataType = '';
 
   /**
-   * @param DiscoveredWorkload
+   * Discovered Workload if exists, empty otherwise.
+   *
+   * @param DiscoveredWorkload $discoveredWorkload
    */
   public function setDiscoveredWorkload(DiscoveredWorkload $discoveredWorkload)
   {

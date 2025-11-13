@@ -23,7 +23,9 @@ class LookupDiscoveredServiceResponse extends \Google\Model
   protected $discoveredServiceDataType = '';
 
   /**
-   * @param DiscoveredService
+   * Discovered Service if exists, empty otherwise.
+   *
+   * @param DiscoveredService $discoveredService
    */
   public function setDiscoveredService(DiscoveredService $discoveredService)
   {

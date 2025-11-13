@@ -20,19 +20,37 @@ namespace Google\Service\AppHub;
 class FunctionalType extends \Google\Model
 {
   /**
+   * Unspecified type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Agent type.
+   */
+  public const TYPE_AGENT = 'AGENT';
+  /**
+   * MCP Server type.
+   */
+  public const TYPE_MCP_SERVER = 'MCP_SERVER';
+  /**
+   * Output only. The functional type of a service or workload.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The functional type of a service or workload.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, AGENT, MCP_SERVER
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

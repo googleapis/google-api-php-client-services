@@ -32,7 +32,10 @@ class Attributes extends \Google\Collection
   protected $operatorOwnersDataType = 'array';
 
   /**
-   * @param ContactInfo[]
+   * Optional. Business team that ensures user needs are met and value is
+   * delivered
+   *
+   * @param ContactInfo[] $businessOwners
    */
   public function setBusinessOwners($businessOwners)
   {
@@ -46,7 +49,9 @@ class Attributes extends \Google\Collection
     return $this->businessOwners;
   }
   /**
-   * @param Criticality
+   * Optional. User-defined criticality information.
+   *
+   * @param Criticality $criticality
    */
   public function setCriticality(Criticality $criticality)
   {
@@ -60,7 +65,9 @@ class Attributes extends \Google\Collection
     return $this->criticality;
   }
   /**
-   * @param ContactInfo[]
+   * Optional. Developer team that owns development and coding.
+   *
+   * @param ContactInfo[] $developerOwners
    */
   public function setDeveloperOwners($developerOwners)
   {
@@ -74,7 +81,9 @@ class Attributes extends \Google\Collection
     return $this->developerOwners;
   }
   /**
-   * @param Environment
+   * Optional. User-defined environment information.
+   *
+   * @param Environment $environment
    */
   public function setEnvironment(Environment $environment)
   {
@@ -88,7 +97,9 @@ class Attributes extends \Google\Collection
     return $this->environment;
   }
   /**
-   * @param ContactInfo[]
+   * Optional. Operator team that ensures runtime and operations.
+   *
+   * @param ContactInfo[] $operatorOwners
    */
   public function setOperatorOwners($operatorOwners)
   {

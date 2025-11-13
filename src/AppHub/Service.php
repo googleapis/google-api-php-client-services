@@ -19,25 +19,59 @@ namespace Google\Service\AppHub;
 
 class Service extends \Google\Model
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The service is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The service is ready.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The service is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The underlying networking resources have been deleted.
+   */
+  public const STATE_DETACHED = 'DETACHED';
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
   /**
+   * Output only. Create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. User-defined description of a Service. Can have a maximum length
+   * of 2048 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Immutable. The resource name of the original discovered service.
+   *
    * @var string
    */
   public $discoveredService;
   /**
+   * Optional. User-defined name for the Service. Can have a maximum length of
+   * 63 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. The resource name of a Service. Format: `"projects/{host-
+   * project-id}/locations/{location}/applications/{application-
+   * id}/services/{service-id}"`
+   *
    * @var string
    */
   public $name;
@@ -46,20 +80,29 @@ class Service extends \Google\Model
   protected $serviceReferenceType = ServiceReference::class;
   protected $serviceReferenceDataType = '';
   /**
+   * Output only. Service state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. A universally unique identifier (UUID) for the `Service` in
+   * the UUID4 format.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Update time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param Attributes
+   * Optional. Consumer provided attributes.
+   *
+   * @param Attributes $attributes
    */
   public function setAttributes(Attributes $attributes)
   {
@@ -73,7 +116,9 @@ class Service extends \Google\Model
     return $this->attributes;
   }
   /**
-   * @param string
+   * Output only. Create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -87,7 +132,10 @@ class Service extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. User-defined description of a Service. Can have a maximum length
+   * of 2048 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -101,7 +149,9 @@ class Service extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Immutable. The resource name of the original discovered service.
+   *
+   * @param string $discoveredService
    */
   public function setDiscoveredService($discoveredService)
   {
@@ -115,7 +165,10 @@ class Service extends \Google\Model
     return $this->discoveredService;
   }
   /**
-   * @param string
+   * Optional. User-defined name for the Service. Can have a maximum length of
+   * 63 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -129,7 +182,11 @@ class Service extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. The resource name of a Service. Format: `"projects/{host-
+   * project-id}/locations/{location}/applications/{application-
+   * id}/services/{service-id}"`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -143,7 +200,10 @@ class Service extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ServiceProperties
+   * Output only. Properties of an underlying compute resource that can comprise
+   * a Service. These are immutable.
+   *
+   * @param ServiceProperties $serviceProperties
    */
   public function setServiceProperties(ServiceProperties $serviceProperties)
   {
@@ -157,7 +217,10 @@ class Service extends \Google\Model
     return $this->serviceProperties;
   }
   /**
-   * @param ServiceReference
+   * Output only. Reference to an underlying networking resource that can
+   * comprise a Service. These are immutable.
+   *
+   * @param ServiceReference $serviceReference
    */
   public function setServiceReference(ServiceReference $serviceReference)
   {
@@ -171,21 +234,28 @@ class Service extends \Google\Model
     return $this->serviceReference;
   }
   /**
-   * @param string
+   * Output only. Service state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING, DETACHED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. A universally unique identifier (UUID) for the `Service` in
+   * the UUID4 format.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -199,7 +269,9 @@ class Service extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Update time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,19 +20,45 @@ namespace Google\Service\AppHub;
 class Criticality extends \Google\Model
 {
   /**
+   * Unspecified type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Mission critical service, application or workload.
+   */
+  public const TYPE_MISSION_CRITICAL = 'MISSION_CRITICAL';
+  /**
+   * High impact.
+   */
+  public const TYPE_HIGH = 'HIGH';
+  /**
+   * Medium impact.
+   */
+  public const TYPE_MEDIUM = 'MEDIUM';
+  /**
+   * Low impact.
+   */
+  public const TYPE_LOW = 'LOW';
+  /**
+   * Required. Criticality Type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Required. Criticality Type.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, MISSION_CRITICAL, HIGH, MEDIUM, LOW
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

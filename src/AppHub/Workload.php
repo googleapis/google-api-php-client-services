@@ -19,37 +19,78 @@ namespace Google\Service\AppHub;
 
 class Workload extends \Google\Model
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Workload is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The Workload is ready.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The Workload is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The underlying compute resources have been deleted.
+   */
+  public const STATE_DETACHED = 'DETACHED';
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
   /**
+   * Output only. Create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. User-defined description of a Workload. Can have a maximum length
+   * of 2048 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Immutable. The resource name of the original discovered workload.
+   *
    * @var string
    */
   public $discoveredWorkload;
   /**
+   * Optional. User-defined name for the Workload. Can have a maximum length of
+   * 63 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. The resource name of the Workload. Format: `"projects/{host-
+   * project-id}/locations/{location}/applications/{application-
+   * id}/workloads/{workload-id}"`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Workload state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. A universally unique identifier (UUID) for the `Workload` in
+   * the UUID4 format.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Update time.
+   *
    * @var string
    */
   public $updateTime;
@@ -59,7 +100,9 @@ class Workload extends \Google\Model
   protected $workloadReferenceDataType = '';
 
   /**
-   * @param Attributes
+   * Optional. Consumer provided attributes.
+   *
+   * @param Attributes $attributes
    */
   public function setAttributes(Attributes $attributes)
   {
@@ -73,7 +116,9 @@ class Workload extends \Google\Model
     return $this->attributes;
   }
   /**
-   * @param string
+   * Output only. Create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -87,7 +132,10 @@ class Workload extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. User-defined description of a Workload. Can have a maximum length
+   * of 2048 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -101,7 +149,9 @@ class Workload extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Immutable. The resource name of the original discovered workload.
+   *
+   * @param string $discoveredWorkload
    */
   public function setDiscoveredWorkload($discoveredWorkload)
   {
@@ -115,7 +165,10 @@ class Workload extends \Google\Model
     return $this->discoveredWorkload;
   }
   /**
-   * @param string
+   * Optional. User-defined name for the Workload. Can have a maximum length of
+   * 63 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -129,7 +182,11 @@ class Workload extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the Workload. Format: `"projects/{host-
+   * project-id}/locations/{location}/applications/{application-
+   * id}/workloads/{workload-id}"`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -143,21 +200,28 @@ class Workload extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Workload state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING, DETACHED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. A universally unique identifier (UUID) for the `Workload` in
+   * the UUID4 format.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -171,7 +235,9 @@ class Workload extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Update time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -185,7 +251,10 @@ class Workload extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param WorkloadProperties
+   * Output only. Properties of an underlying compute resource represented by
+   * the Workload. These are immutable.
+   *
+   * @param WorkloadProperties $workloadProperties
    */
   public function setWorkloadProperties(WorkloadProperties $workloadProperties)
   {
@@ -199,7 +268,10 @@ class Workload extends \Google\Model
     return $this->workloadProperties;
   }
   /**
-   * @param WorkloadReference
+   * Output only. Reference of an underlying compute resource represented by the
+   * Workload. These are immutable.
+   *
+   * @param WorkloadReference $workloadReference
    */
   public function setWorkloadReference(WorkloadReference $workloadReference)
   {

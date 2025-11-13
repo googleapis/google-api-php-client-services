@@ -21,18 +21,24 @@ class ListServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $servicesType = Service::class;
   protected $servicesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListServicesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Service[]
+   * List of Services.
+   *
+   * @param Service[] $services
    */
   public function setServices($services)
   {
@@ -60,7 +68,9 @@ class ListServicesResponse extends \Google\Collection
     return $this->services;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

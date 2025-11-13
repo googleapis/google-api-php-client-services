@@ -20,6 +20,10 @@ namespace Google\Service\AppHub;
 class DiscoveredService extends \Google\Model
 {
   /**
+   * Identifier. The resource name of the discovered service. Format:
+   * `"projects/{host-project-
+   * id}/locations/{location}/discoveredServices/{uuid}"`
+   *
    * @var string
    */
   public $name;
@@ -29,7 +33,11 @@ class DiscoveredService extends \Google\Model
   protected $serviceReferenceDataType = '';
 
   /**
-   * @param string
+   * Identifier. The resource name of the discovered service. Format:
+   * `"projects/{host-project-
+   * id}/locations/{location}/discoveredServices/{uuid}"`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,10 @@ class DiscoveredService extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ServiceProperties
+   * Output only. Properties of an underlying compute resource that can comprise
+   * a Service. These are immutable.
+   *
+   * @param ServiceProperties $serviceProperties
    */
   public function setServiceProperties(ServiceProperties $serviceProperties)
   {
@@ -57,7 +68,10 @@ class DiscoveredService extends \Google\Model
     return $this->serviceProperties;
   }
   /**
-   * @param ServiceReference
+   * Output only. Reference to an underlying networking resource that can
+   * comprise a Service. These are immutable.
+   *
+   * @param ServiceReference $serviceReference
    */
   public function setServiceReference(ServiceReference $serviceReference)
   {

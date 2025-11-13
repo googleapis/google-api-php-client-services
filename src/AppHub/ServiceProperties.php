@@ -22,20 +22,31 @@ class ServiceProperties extends \Google\Model
   protected $functionalTypeType = FunctionalType::class;
   protected $functionalTypeDataType = '';
   /**
+   * Output only. The service project identifier that the underlying cloud
+   * resource resides in.
+   *
    * @var string
    */
   public $gcpProject;
   /**
+   * Output only. The location that the underlying resource resides in, for
+   * example, us-west1.
+   *
    * @var string
    */
   public $location;
   /**
+   * Output only. The location that the underlying resource resides in if it is
+   * zonal, for example, us-west1-a).
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param FunctionalType
+   * Output only. The type of the service.
+   *
+   * @param FunctionalType $functionalType
    */
   public function setFunctionalType(FunctionalType $functionalType)
   {
@@ -49,7 +60,10 @@ class ServiceProperties extends \Google\Model
     return $this->functionalType;
   }
   /**
-   * @param string
+   * Output only. The service project identifier that the underlying cloud
+   * resource resides in.
+   *
+   * @param string $gcpProject
    */
   public function setGcpProject($gcpProject)
   {
@@ -63,7 +77,10 @@ class ServiceProperties extends \Google\Model
     return $this->gcpProject;
   }
   /**
-   * @param string
+   * Output only. The location that the underlying resource resides in, for
+   * example, us-west1.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -77,7 +94,10 @@ class ServiceProperties extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Output only. The location that the underlying resource resides in if it is
+   * zonal, for example, us-west1-a).
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

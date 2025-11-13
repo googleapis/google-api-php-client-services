@@ -23,16 +23,22 @@ class ListApplicationsResponse extends \Google\Collection
   protected $applicationsType = Application::class;
   protected $applicationsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Application[]
+   * List of Applications.
+   *
+   * @param Application[] $applications
    */
   public function setApplications($applications)
   {
@@ -46,7 +52,9 @@ class ListApplicationsResponse extends \Google\Collection
     return $this->applications;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListApplicationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

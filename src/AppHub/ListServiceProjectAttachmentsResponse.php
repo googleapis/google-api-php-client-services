@@ -21,18 +21,24 @@ class ListServiceProjectAttachmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $serviceProjectAttachmentsType = ServiceProjectAttachment::class;
   protected $serviceProjectAttachmentsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListServiceProjectAttachmentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ServiceProjectAttachment[]
+   * List of service project attachments.
+   *
+   * @param ServiceProjectAttachment[] $serviceProjectAttachments
    */
   public function setServiceProjectAttachments($serviceProjectAttachments)
   {
@@ -60,7 +68,9 @@ class ListServiceProjectAttachmentsResponse extends \Google\Collection
     return $this->serviceProjectAttachments;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

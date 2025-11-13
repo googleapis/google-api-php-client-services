@@ -23,16 +23,22 @@ class ListDiscoveredServicesResponse extends \Google\Collection
   protected $discoveredServicesType = DiscoveredService::class;
   protected $discoveredServicesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param DiscoveredService[]
+   * List of Discovered Services.
+   *
+   * @param DiscoveredService[] $discoveredServices
    */
   public function setDiscoveredServices($discoveredServices)
   {
@@ -46,7 +52,9 @@ class ListDiscoveredServicesResponse extends \Google\Collection
     return $this->discoveredServices;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListDiscoveredServicesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
