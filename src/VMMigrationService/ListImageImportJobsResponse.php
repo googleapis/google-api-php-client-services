@@ -23,16 +23,23 @@ class ListImageImportJobsResponse extends \Google\Collection
   protected $imageImportJobsType = ImageImportJob::class;
   protected $imageImportJobsDataType = 'array';
   /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Output only. Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ImageImportJob[]
+   * Output only. The list of target response.
+   *
+   * @param ImageImportJob[] $imageImportJobs
    */
   public function setImageImportJobs($imageImportJobs)
   {
@@ -46,7 +53,10 @@ class ListImageImportJobsResponse extends \Google\Collection
     return $this->imageImportJobs;
   }
   /**
-   * @param string
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListImageImportJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Output only. Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

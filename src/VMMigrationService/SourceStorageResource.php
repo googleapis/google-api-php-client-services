@@ -23,7 +23,9 @@ class SourceStorageResource extends \Google\Model
   protected $awsDiskDetailsDataType = '';
 
   /**
-   * @param AwsSourceDiskDetails
+   * Source AWS volume details.
+   *
+   * @param AwsSourceDiskDetails $awsDiskDetails
    */
   public function setAwsDiskDetails(AwsSourceDiskDetails $awsDiskDetails)
   {

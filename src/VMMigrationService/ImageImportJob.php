@@ -19,22 +19,61 @@ namespace Google\Service\VMMigrationService;
 
 class ImageImportJob extends \Google\Collection
 {
+  /**
+   * The state is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The image import has not yet started.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The image import is active and running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The image import has finished successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The image import has finished with errors.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The image import is being cancelled.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * The image import was cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
   protected $collection_key = 'warnings';
   /**
+   * Output only. The path to the Cloud Storage file from which the image should
+   * be imported.
+   *
    * @var string
    */
   public $cloudStorageUri;
   /**
+   * Output only. The time the image import was created (as an API call, not
+   * when it was actually created in the target).
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The resource paths of the resources created by the image
+   * import job.
+   *
    * @var string[]
    */
   public $createdResources;
   protected $diskImageTargetDetailsType = DiskImageTargetDetails::class;
   protected $diskImageTargetDetailsDataType = '';
   /**
+   * Output only. The time the image import was ended.
+   *
    * @var string
    */
   public $endTime;
@@ -43,10 +82,14 @@ class ImageImportJob extends \Google\Collection
   protected $machineImageTargetDetailsType = MachineImageTargetDetails::class;
   protected $machineImageTargetDetailsDataType = '';
   /**
+   * Output only. The resource path of the ImageImportJob.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The state of the image import.
+   *
    * @var string
    */
   public $state;
@@ -56,7 +99,10 @@ class ImageImportJob extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * @param string
+   * Output only. The path to the Cloud Storage file from which the image should
+   * be imported.
+   *
+   * @param string $cloudStorageUri
    */
   public function setCloudStorageUri($cloudStorageUri)
   {
@@ -70,7 +116,10 @@ class ImageImportJob extends \Google\Collection
     return $this->cloudStorageUri;
   }
   /**
-   * @param string
+   * Output only. The time the image import was created (as an API call, not
+   * when it was actually created in the target).
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -84,7 +133,10 @@ class ImageImportJob extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string[]
+   * Output only. The resource paths of the resources created by the image
+   * import job.
+   *
+   * @param string[] $createdResources
    */
   public function setCreatedResources($createdResources)
   {
@@ -98,7 +150,9 @@ class ImageImportJob extends \Google\Collection
     return $this->createdResources;
   }
   /**
-   * @param DiskImageTargetDetails
+   * Output only. Target details used to import a disk image.
+   *
+   * @param DiskImageTargetDetails $diskImageTargetDetails
    */
   public function setDiskImageTargetDetails(DiskImageTargetDetails $diskImageTargetDetails)
   {
@@ -112,7 +166,9 @@ class ImageImportJob extends \Google\Collection
     return $this->diskImageTargetDetails;
   }
   /**
-   * @param string
+   * Output only. The time the image import was ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -126,7 +182,10 @@ class ImageImportJob extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param Status[]
+   * Output only. Provides details on the error that led to the image import
+   * state in case of an error.
+   *
+   * @param Status[] $errors
    */
   public function setErrors($errors)
   {
@@ -140,7 +199,9 @@ class ImageImportJob extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param MachineImageTargetDetails
+   * Output only. Target details used to import a machine image.
+   *
+   * @param MachineImageTargetDetails $machineImageTargetDetails
    */
   public function setMachineImageTargetDetails(MachineImageTargetDetails $machineImageTargetDetails)
   {
@@ -154,7 +215,9 @@ class ImageImportJob extends \Google\Collection
     return $this->machineImageTargetDetails;
   }
   /**
-   * @param string
+   * Output only. The resource path of the ImageImportJob.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -168,21 +231,28 @@ class ImageImportJob extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The state of the image import.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, RUNNING, SUCCEEDED, FAILED,
+   * CANCELLING, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param ImageImportStep[]
+   * Output only. The image import steps list representing its progress.
+   *
+   * @param ImageImportStep[] $steps
    */
   public function setSteps($steps)
   {
@@ -196,7 +266,9 @@ class ImageImportJob extends \Google\Collection
     return $this->steps;
   }
   /**
-   * @param MigrationWarning[]
+   * Output only. Warnings that occurred during the image import.
+   *
+   * @param MigrationWarning[] $warnings
    */
   public function setWarnings($warnings)
   {

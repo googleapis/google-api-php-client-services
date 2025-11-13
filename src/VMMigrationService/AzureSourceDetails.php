@@ -20,6 +20,28 @@ namespace Google\Service\VMMigrationService;
 class AzureSourceDetails extends \Google\Model
 {
   /**
+   * The state is unknown. This is used for API compatibility only and is not
+   * used by the system.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The state was not sampled by the health checks yet.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The source is available but might not be usable yet due to invalid
+   * credentials or another reason. The error message will contain further
+   * details.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The source exists and its credentials were verified.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Immutable. The Azure location (region) that the source VMs will be migrated
+   * from.
+   *
    * @var string
    */
   public $azureLocation;
@@ -28,24 +50,39 @@ class AzureSourceDetails extends \Google\Model
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * User specified tags to add to every M2VM generated resource in Azure. These
+   * tags will be set in addition to the default tags that are set as part of
+   * the migration process. The tags must not begin with the reserved prefix
+   * `m4ce` or `m2vm`.
+   *
    * @var string[]
    */
   public $migrationResourcesUserTags;
   /**
+   * Output only. The ID of the Azure resource group that contains all resources
+   * related to the migration process of this source.
+   *
    * @var string
    */
   public $resourceGroupId;
   /**
+   * Output only. State of the source as determined by the health check.
+   *
    * @var string
    */
   public $state;
   /**
+   * Immutable. Azure subscription ID.
+   *
    * @var string
    */
   public $subscriptionId;
 
   /**
-   * @param string
+   * Immutable. The Azure location (region) that the source VMs will be migrated
+   * from.
+   *
+   * @param string $azureLocation
    */
   public function setAzureLocation($azureLocation)
   {
@@ -59,7 +96,9 @@ class AzureSourceDetails extends \Google\Model
     return $this->azureLocation;
   }
   /**
-   * @param ClientSecretCredentials
+   * Azure Credentials using tenant ID, client ID and secret.
+   *
+   * @param ClientSecretCredentials $clientSecretCreds
    */
   public function setClientSecretCreds(ClientSecretCredentials $clientSecretCreds)
   {
@@ -73,7 +112,10 @@ class AzureSourceDetails extends \Google\Model
     return $this->clientSecretCreds;
   }
   /**
-   * @param Status
+   * Output only. Provides details on the state of the Source in case of an
+   * error.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -87,7 +129,12 @@ class AzureSourceDetails extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string[]
+   * User specified tags to add to every M2VM generated resource in Azure. These
+   * tags will be set in addition to the default tags that are set as part of
+   * the migration process. The tags must not begin with the reserved prefix
+   * `m4ce` or `m2vm`.
+   *
+   * @param string[] $migrationResourcesUserTags
    */
   public function setMigrationResourcesUserTags($migrationResourcesUserTags)
   {
@@ -101,7 +148,10 @@ class AzureSourceDetails extends \Google\Model
     return $this->migrationResourcesUserTags;
   }
   /**
-   * @param string
+   * Output only. The ID of the Azure resource group that contains all resources
+   * related to the migration process of this source.
+   *
+   * @param string $resourceGroupId
    */
   public function setResourceGroupId($resourceGroupId)
   {
@@ -115,21 +165,27 @@ class AzureSourceDetails extends \Google\Model
     return $this->resourceGroupId;
   }
   /**
-   * @param string
+   * Output only. State of the source as determined by the health check.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, FAILED, ACTIVE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Immutable. Azure subscription ID.
+   *
+   * @param string $subscriptionId
    */
   public function setSubscriptionId($subscriptionId)
   {

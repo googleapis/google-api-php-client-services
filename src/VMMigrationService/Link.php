@@ -20,16 +20,22 @@ namespace Google\Service\VMMigrationService;
 class Link extends \Google\Model
 {
   /**
+   * Describes what the link offers.
+   *
    * @var string
    */
   public $description;
   /**
+   * The URL of the link.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Describes what the link offers.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +49,9 @@ class Link extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The URL of the link.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

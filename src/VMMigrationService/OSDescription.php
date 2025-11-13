@@ -20,24 +20,34 @@ namespace Google\Service\VMMigrationService;
 class OSDescription extends \Google\Model
 {
   /**
+   * OS offer.
+   *
    * @var string
    */
   public $offer;
   /**
+   * OS plan.
+   *
    * @var string
    */
   public $plan;
   /**
+   * OS publisher.
+   *
    * @var string
    */
   public $publisher;
   /**
+   * OS type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * OS offer.
+   *
+   * @param string $offer
    */
   public function setOffer($offer)
   {
@@ -51,7 +61,9 @@ class OSDescription extends \Google\Model
     return $this->offer;
   }
   /**
-   * @param string
+   * OS plan.
+   *
+   * @param string $plan
    */
   public function setPlan($plan)
   {
@@ -65,7 +77,9 @@ class OSDescription extends \Google\Model
     return $this->plan;
   }
   /**
-   * @param string
+   * OS publisher.
+   *
+   * @param string $publisher
    */
   public function setPublisher($publisher)
   {
@@ -79,7 +93,9 @@ class OSDescription extends \Google\Model
     return $this->publisher;
   }
   /**
-   * @param string
+   * OS type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

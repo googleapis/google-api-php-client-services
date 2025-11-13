@@ -19,24 +19,65 @@ namespace Google\Service\VMMigrationService;
 
 class ComputeScheduling extends \Google\Collection
 {
+  /**
+   * An unknown, unexpected behavior.
+   */
+  public const ON_HOST_MAINTENANCE_ON_HOST_MAINTENANCE_UNSPECIFIED = 'ON_HOST_MAINTENANCE_UNSPECIFIED';
+  /**
+   * Terminate the instance when the host machine undergoes maintenance.
+   */
+  public const ON_HOST_MAINTENANCE_TERMINATE = 'TERMINATE';
+  /**
+   * Migrate the instance when the host machine undergoes maintenance.
+   */
+  public const ON_HOST_MAINTENANCE_MIGRATE = 'MIGRATE';
+  /**
+   * Unspecified behavior. This will use the default.
+   */
+  public const RESTART_TYPE_RESTART_TYPE_UNSPECIFIED = 'RESTART_TYPE_UNSPECIFIED';
+  /**
+   * The Instance should be automatically restarted whenever it is terminated by
+   * Compute Engine.
+   */
+  public const RESTART_TYPE_AUTOMATIC_RESTART = 'AUTOMATIC_RESTART';
+  /**
+   * The Instance isn't automatically restarted whenever it is terminated by
+   * Compute Engine.
+   */
+  public const RESTART_TYPE_NO_AUTOMATIC_RESTART = 'NO_AUTOMATIC_RESTART';
   protected $collection_key = 'nodeAffinities';
   /**
+   * The minimum number of virtual CPUs this instance will consume when running
+   * on a sole-tenant node. Ignored if no node_affinites are configured.
+   *
    * @var int
    */
   public $minNodeCpus;
   protected $nodeAffinitiesType = SchedulingNodeAffinity::class;
   protected $nodeAffinitiesDataType = 'array';
   /**
+   * How the instance should behave when the host machine undergoes maintenance
+   * that may temporarily impact instance performance.
+   *
    * @var string
    */
   public $onHostMaintenance;
   /**
+   * Whether the Instance should be automatically restarted whenever it is
+   * terminated by Compute Engine (not terminated by user). This configuration
+   * is identical to `automaticRestart` field in Compute Engine create instance
+   * under scheduling. It was changed to an enum (instead of a boolean) to match
+   * the default value in Compute Engine which is automatic restart.
+   *
    * @var string
    */
   public $restartType;
 
   /**
-   * @param int
+   * The minimum number of virtual CPUs this instance will consume when running
+   * on a sole-tenant node. Ignored if no node_affinites are configured.
+   *
+   * @param int $minNodeCpus
    */
   public function setMinNodeCpus($minNodeCpus)
   {
@@ -50,7 +91,10 @@ class ComputeScheduling extends \Google\Collection
     return $this->minNodeCpus;
   }
   /**
-   * @param SchedulingNodeAffinity[]
+   * A set of node affinity and anti-affinity configurations for sole tenant
+   * nodes.
+   *
+   * @param SchedulingNodeAffinity[] $nodeAffinities
    */
   public function setNodeAffinities($nodeAffinities)
   {
@@ -64,28 +108,42 @@ class ComputeScheduling extends \Google\Collection
     return $this->nodeAffinities;
   }
   /**
-   * @param string
+   * How the instance should behave when the host machine undergoes maintenance
+   * that may temporarily impact instance performance.
+   *
+   * Accepted values: ON_HOST_MAINTENANCE_UNSPECIFIED, TERMINATE, MIGRATE
+   *
+   * @param self::ON_HOST_MAINTENANCE_* $onHostMaintenance
    */
   public function setOnHostMaintenance($onHostMaintenance)
   {
     $this->onHostMaintenance = $onHostMaintenance;
   }
   /**
-   * @return string
+   * @return self::ON_HOST_MAINTENANCE_*
    */
   public function getOnHostMaintenance()
   {
     return $this->onHostMaintenance;
   }
   /**
-   * @param string
+   * Whether the Instance should be automatically restarted whenever it is
+   * terminated by Compute Engine (not terminated by user). This configuration
+   * is identical to `automaticRestart` field in Compute Engine create instance
+   * under scheduling. It was changed to an enum (instead of a boolean) to match
+   * the default value in Compute Engine which is automatic restart.
+   *
+   * Accepted values: RESTART_TYPE_UNSPECIFIED, AUTOMATIC_RESTART,
+   * NO_AUTOMATIC_RESTART
+   *
+   * @param self::RESTART_TYPE_* $restartType
    */
   public function setRestartType($restartType)
   {
     $this->restartType = $restartType;
   }
   /**
-   * @return string
+   * @return self::RESTART_TYPE_*
    */
   public function getRestartType()
   {

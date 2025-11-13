@@ -19,10 +19,20 @@ namespace Google\Service\VMMigrationService;
 
 class MigrationWarning extends \Google\Collection
 {
+  /**
+   * Default value. This value is not used.
+   */
+  public const CODE_WARNING_CODE_UNSPECIFIED = 'WARNING_CODE_UNSPECIFIED';
+  /**
+   * A warning originated from OS Adaptation.
+   */
+  public const CODE_ADAPTATION_WARNING = 'ADAPTATION_WARNING';
   protected $collection_key = 'helpLinks';
   protected $actionItemType = LocalizedMessage::class;
   protected $actionItemDataType = '';
   /**
+   * The warning code.
+   *
    * @var string
    */
   public $code;
@@ -31,12 +41,16 @@ class MigrationWarning extends \Google\Collection
   protected $warningMessageType = LocalizedMessage::class;
   protected $warningMessageDataType = '';
   /**
+   * The time the warning occurred.
+   *
    * @var string
    */
   public $warningTime;
 
   /**
-   * @param LocalizedMessage
+   * Output only. Suggested action for solving the warning.
+   *
+   * @param LocalizedMessage $actionItem
    */
   public function setActionItem(LocalizedMessage $actionItem)
   {
@@ -50,21 +64,28 @@ class MigrationWarning extends \Google\Collection
     return $this->actionItem;
   }
   /**
-   * @param string
+   * The warning code.
+   *
+   * Accepted values: WARNING_CODE_UNSPECIFIED, ADAPTATION_WARNING
+   *
+   * @param self::CODE_* $code
    */
   public function setCode($code)
   {
     $this->code = $code;
   }
   /**
-   * @return string
+   * @return self::CODE_*
    */
   public function getCode()
   {
     return $this->code;
   }
   /**
-   * @param Link[]
+   * Output only. URL(s) pointing to additional information on handling the
+   * current warning.
+   *
+   * @param Link[] $helpLinks
    */
   public function setHelpLinks($helpLinks)
   {
@@ -78,7 +99,9 @@ class MigrationWarning extends \Google\Collection
     return $this->helpLinks;
   }
   /**
-   * @param LocalizedMessage
+   * Output only. The localized warning message.
+   *
+   * @param LocalizedMessage $warningMessage
    */
   public function setWarningMessage(LocalizedMessage $warningMessage)
   {
@@ -92,7 +115,9 @@ class MigrationWarning extends \Google\Collection
     return $this->warningMessage;
   }
   /**
-   * @param string
+   * The time the warning occurred.
+   *
+   * @param string $warningTime
    */
   public function setWarningTime($warningTime)
   {

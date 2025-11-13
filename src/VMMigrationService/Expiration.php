@@ -20,20 +20,28 @@ namespace Google\Service\VMMigrationService;
 class Expiration extends \Google\Model
 {
   /**
+   * Output only. Timestamp of when this resource is considered expired.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Output only. Describes whether the expiration can be extended.
+   *
    * @var bool
    */
   public $extendable;
   /**
+   * Output only. The number of times expiration was extended.
+   *
    * @var int
    */
   public $extensionCount;
 
   /**
-   * @param string
+   * Output only. Timestamp of when this resource is considered expired.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -47,7 +55,9 @@ class Expiration extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param bool
+   * Output only. Describes whether the expiration can be extended.
+   *
+   * @param bool $extendable
    */
   public function setExtendable($extendable)
   {
@@ -61,7 +71,9 @@ class Expiration extends \Google\Model
     return $this->extendable;
   }
   /**
-   * @param int
+   * Output only. The number of times expiration was extended.
+   *
+   * @param int $extensionCount
    */
   public function setExtensionCount($extensionCount)
   {

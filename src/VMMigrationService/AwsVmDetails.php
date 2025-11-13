@@ -19,112 +19,224 @@ namespace Google\Service\VMMigrationService;
 
 class AwsVmDetails extends \Google\Collection
 {
+  /**
+   * The architecture is unknown.
+   */
+  public const ARCHITECTURE_VM_ARCHITECTURE_UNSPECIFIED = 'VM_ARCHITECTURE_UNSPECIFIED';
+  /**
+   * The architecture is I386.
+   */
+  public const ARCHITECTURE_I386 = 'I386';
+  /**
+   * The architecture is X86_64.
+   */
+  public const ARCHITECTURE_X86_64 = 'X86_64';
+  /**
+   * The architecture is ARM64.
+   */
+  public const ARCHITECTURE_ARM64 = 'ARM64';
+  /**
+   * The architecture is X86_64_MAC.
+   */
+  public const ARCHITECTURE_X86_64_MAC = 'X86_64_MAC';
+  /**
+   * The boot option is unknown.
+   */
+  public const BOOT_OPTION_BOOT_OPTION_UNSPECIFIED = 'BOOT_OPTION_UNSPECIFIED';
+  /**
+   * The boot option is UEFI.
+   */
+  public const BOOT_OPTION_EFI = 'EFI';
+  /**
+   * The boot option is LEGACY-BIOS.
+   */
+  public const BOOT_OPTION_BIOS = 'BIOS';
+  /**
+   * Power state is not specified.
+   */
+  public const POWER_STATE_POWER_STATE_UNSPECIFIED = 'POWER_STATE_UNSPECIFIED';
+  /**
+   * The VM is turned on.
+   */
+  public const POWER_STATE_ON = 'ON';
+  /**
+   * The VM is turned off.
+   */
+  public const POWER_STATE_OFF = 'OFF';
+  /**
+   * The VM is suspended. This is similar to hibernation or sleep mode.
+   */
+  public const POWER_STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * The VM is starting.
+   */
+  public const POWER_STATE_PENDING = 'PENDING';
+  /**
+   * The virtualization type is unknown.
+   */
+  public const VIRTUALIZATION_TYPE_VM_VIRTUALIZATION_TYPE_UNSPECIFIED = 'VM_VIRTUALIZATION_TYPE_UNSPECIFIED';
+  /**
+   * The virtualziation type is HVM.
+   */
+  public const VIRTUALIZATION_TYPE_HVM = 'HVM';
+  /**
+   * The virtualziation type is PARAVIRTUAL.
+   */
+  public const VIRTUALIZATION_TYPE_PARAVIRTUAL = 'PARAVIRTUAL';
   protected $collection_key = 'securityGroups';
   /**
+   * The CPU architecture.
+   *
    * @var string
    */
   public $architecture;
   /**
+   * The VM Boot Option.
+   *
    * @var string
    */
   public $bootOption;
   /**
+   * The total size of the storage allocated to the VM in MB.
+   *
    * @var string
    */
   public $committedStorageMb;
   /**
+   * The number of CPU cores the VM has.
+   *
    * @var int
    */
   public $cpuCount;
   /**
+   * The number of disks the VM has.
+   *
    * @var int
    */
   public $diskCount;
   /**
+   * The display name of the VM. Note that this value is not necessarily unique.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The instance type of the VM.
+   *
    * @var string
    */
   public $instanceType;
   /**
+   * The memory size of the VM in MB.
+   *
    * @var int
    */
   public $memoryMb;
   /**
+   * The VM's OS.
+   *
    * @var string
    */
   public $osDescription;
   /**
+   * Output only. The power state of the VM at the moment list was taken.
+   *
    * @var string
    */
   public $powerState;
   protected $securityGroupsType = AwsSecurityGroup::class;
   protected $securityGroupsDataType = 'array';
   /**
+   * The descriptive name of the AWS's source this VM is connected to.
+   *
    * @var string
    */
   public $sourceDescription;
   /**
+   * The id of the AWS's source this VM is connected to.
+   *
    * @var string
    */
   public $sourceId;
   /**
+   * The tags of the VM.
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * The number of vCPUs the VM has. It is calculated as the number of CPU cores
+   * * threads per CPU the VM has.
+   *
    * @var int
    */
   public $vcpuCount;
   /**
+   * The virtualization type.
+   *
    * @var string
    */
   public $virtualizationType;
   /**
+   * The VM ID in AWS.
+   *
    * @var string
    */
   public $vmId;
   /**
+   * The VPC ID the VM belongs to.
+   *
    * @var string
    */
   public $vpcId;
   /**
+   * The AWS zone of the VM.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * The CPU architecture.
+   *
+   * Accepted values: VM_ARCHITECTURE_UNSPECIFIED, I386, X86_64, ARM64,
+   * X86_64_MAC
+   *
+   * @param self::ARCHITECTURE_* $architecture
    */
   public function setArchitecture($architecture)
   {
     $this->architecture = $architecture;
   }
   /**
-   * @return string
+   * @return self::ARCHITECTURE_*
    */
   public function getArchitecture()
   {
     return $this->architecture;
   }
   /**
-   * @param string
+   * The VM Boot Option.
+   *
+   * Accepted values: BOOT_OPTION_UNSPECIFIED, EFI, BIOS
+   *
+   * @param self::BOOT_OPTION_* $bootOption
    */
   public function setBootOption($bootOption)
   {
     $this->bootOption = $bootOption;
   }
   /**
-   * @return string
+   * @return self::BOOT_OPTION_*
    */
   public function getBootOption()
   {
     return $this->bootOption;
   }
   /**
-   * @param string
+   * The total size of the storage allocated to the VM in MB.
+   *
+   * @param string $committedStorageMb
    */
   public function setCommittedStorageMb($committedStorageMb)
   {
@@ -138,7 +250,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->committedStorageMb;
   }
   /**
-   * @param int
+   * The number of CPU cores the VM has.
+   *
+   * @param int $cpuCount
    */
   public function setCpuCount($cpuCount)
   {
@@ -152,7 +266,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->cpuCount;
   }
   /**
-   * @param int
+   * The number of disks the VM has.
+   *
+   * @param int $diskCount
    */
   public function setDiskCount($diskCount)
   {
@@ -166,7 +282,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->diskCount;
   }
   /**
-   * @param string
+   * The display name of the VM. Note that this value is not necessarily unique.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -180,7 +298,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * The instance type of the VM.
+   *
+   * @param string $instanceType
    */
   public function setInstanceType($instanceType)
   {
@@ -194,7 +314,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->instanceType;
   }
   /**
-   * @param int
+   * The memory size of the VM in MB.
+   *
+   * @param int $memoryMb
    */
   public function setMemoryMb($memoryMb)
   {
@@ -208,7 +330,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->memoryMb;
   }
   /**
-   * @param string
+   * The VM's OS.
+   *
+   * @param string $osDescription
    */
   public function setOsDescription($osDescription)
   {
@@ -222,21 +346,27 @@ class AwsVmDetails extends \Google\Collection
     return $this->osDescription;
   }
   /**
-   * @param string
+   * Output only. The power state of the VM at the moment list was taken.
+   *
+   * Accepted values: POWER_STATE_UNSPECIFIED, ON, OFF, SUSPENDED, PENDING
+   *
+   * @param self::POWER_STATE_* $powerState
    */
   public function setPowerState($powerState)
   {
     $this->powerState = $powerState;
   }
   /**
-   * @return string
+   * @return self::POWER_STATE_*
    */
   public function getPowerState()
   {
     return $this->powerState;
   }
   /**
-   * @param AwsSecurityGroup[]
+   * The security groups the VM belongs to.
+   *
+   * @param AwsSecurityGroup[] $securityGroups
    */
   public function setSecurityGroups($securityGroups)
   {
@@ -250,7 +380,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->securityGroups;
   }
   /**
-   * @param string
+   * The descriptive name of the AWS's source this VM is connected to.
+   *
+   * @param string $sourceDescription
    */
   public function setSourceDescription($sourceDescription)
   {
@@ -264,7 +396,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->sourceDescription;
   }
   /**
-   * @param string
+   * The id of the AWS's source this VM is connected to.
+   *
+   * @param string $sourceId
    */
   public function setSourceId($sourceId)
   {
@@ -278,7 +412,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->sourceId;
   }
   /**
-   * @param string[]
+   * The tags of the VM.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -292,7 +428,10 @@ class AwsVmDetails extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param int
+   * The number of vCPUs the VM has. It is calculated as the number of CPU cores
+   * * threads per CPU the VM has.
+   *
+   * @param int $vcpuCount
    */
   public function setVcpuCount($vcpuCount)
   {
@@ -306,21 +445,27 @@ class AwsVmDetails extends \Google\Collection
     return $this->vcpuCount;
   }
   /**
-   * @param string
+   * The virtualization type.
+   *
+   * Accepted values: VM_VIRTUALIZATION_TYPE_UNSPECIFIED, HVM, PARAVIRTUAL
+   *
+   * @param self::VIRTUALIZATION_TYPE_* $virtualizationType
    */
   public function setVirtualizationType($virtualizationType)
   {
     $this->virtualizationType = $virtualizationType;
   }
   /**
-   * @return string
+   * @return self::VIRTUALIZATION_TYPE_*
    */
   public function getVirtualizationType()
   {
     return $this->virtualizationType;
   }
   /**
-   * @param string
+   * The VM ID in AWS.
+   *
+   * @param string $vmId
    */
   public function setVmId($vmId)
   {
@@ -334,7 +479,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->vmId;
   }
   /**
-   * @param string
+   * The VPC ID the VM belongs to.
+   *
+   * @param string $vpcId
    */
   public function setVpcId($vpcId)
   {
@@ -348,7 +495,9 @@ class AwsVmDetails extends \Google\Collection
     return $this->vpcId;
   }
   /**
-   * @param string
+   * The AWS zone of the VM.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

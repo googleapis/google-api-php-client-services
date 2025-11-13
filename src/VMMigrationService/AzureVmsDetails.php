@@ -24,7 +24,9 @@ class AzureVmsDetails extends \Google\Collection
   protected $detailsDataType = 'array';
 
   /**
-   * @param AzureVmDetails[]
+   * The details of the Azure VMs.
+   *
+   * @param AzureVmDetails[] $details
    */
   public function setDetails($details)
   {

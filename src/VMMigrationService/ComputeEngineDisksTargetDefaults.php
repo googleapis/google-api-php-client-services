@@ -25,18 +25,25 @@ class ComputeEngineDisksTargetDefaults extends \Google\Collection
   protected $disksTargetDefaultsType = DisksMigrationDisksTargetDefaults::class;
   protected $disksTargetDefaultsDataType = '';
   /**
+   * The full path of the resource of type TargetProject which represents the
+   * Compute Engine project in which to create the Persistent Disks.
+   *
    * @var string
    */
   public $targetProject;
   protected $vmTargetDefaultsType = DisksMigrationVmTargetDefaults::class;
   protected $vmTargetDefaultsDataType = '';
   /**
+   * The zone in which to create the Persistent Disks.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param PersistentDiskDefaults[]
+   * The details of each Persistent Disk to create.
+   *
+   * @param PersistentDiskDefaults[] $disks
    */
   public function setDisks($disks)
   {
@@ -50,7 +57,9 @@ class ComputeEngineDisksTargetDefaults extends \Google\Collection
     return $this->disks;
   }
   /**
-   * @param DisksMigrationDisksTargetDefaults
+   * Details of the disk only migration target.
+   *
+   * @param DisksMigrationDisksTargetDefaults $disksTargetDefaults
    */
   public function setDisksTargetDefaults(DisksMigrationDisksTargetDefaults $disksTargetDefaults)
   {
@@ -64,7 +73,10 @@ class ComputeEngineDisksTargetDefaults extends \Google\Collection
     return $this->disksTargetDefaults;
   }
   /**
-   * @param string
+   * The full path of the resource of type TargetProject which represents the
+   * Compute Engine project in which to create the Persistent Disks.
+   *
+   * @param string $targetProject
    */
   public function setTargetProject($targetProject)
   {
@@ -78,7 +90,9 @@ class ComputeEngineDisksTargetDefaults extends \Google\Collection
     return $this->targetProject;
   }
   /**
-   * @param DisksMigrationVmTargetDefaults
+   * Details of the VM migration target.
+   *
+   * @param DisksMigrationVmTargetDefaults $vmTargetDefaults
    */
   public function setVmTargetDefaults(DisksMigrationVmTargetDefaults $vmTargetDefaults)
   {
@@ -92,7 +106,9 @@ class ComputeEngineDisksTargetDefaults extends \Google\Collection
     return $this->vmTargetDefaults;
   }
   /**
-   * @param string
+   * The zone in which to create the Persistent Disks.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

@@ -23,16 +23,23 @@ class ListImageImportsResponse extends \Google\Collection
   protected $imageImportsType = ImageImport::class;
   protected $imageImportsDataType = 'array';
   /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Output only. Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ImageImport[]
+   * Output only. The list of target response.
+   *
+   * @param ImageImport[] $imageImports
    */
   public function setImageImports($imageImports)
   {
@@ -46,7 +53,10 @@ class ListImageImportsResponse extends \Google\Collection
     return $this->imageImports;
   }
   /**
-   * @param string
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListImageImportsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Output only. Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

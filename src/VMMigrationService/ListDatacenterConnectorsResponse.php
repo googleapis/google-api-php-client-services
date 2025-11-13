@@ -23,16 +23,23 @@ class ListDatacenterConnectorsResponse extends \Google\Collection
   protected $datacenterConnectorsType = DatacenterConnector::class;
   protected $datacenterConnectorsDataType = 'array';
   /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Output only. Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param DatacenterConnector[]
+   * Output only. The list of sources response.
+   *
+   * @param DatacenterConnector[] $datacenterConnectors
    */
   public function setDatacenterConnectors($datacenterConnectors)
   {
@@ -46,7 +53,10 @@ class ListDatacenterConnectorsResponse extends \Google\Collection
     return $this->datacenterConnectors;
   }
   /**
-   * @param string
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListDatacenterConnectorsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Output only. Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

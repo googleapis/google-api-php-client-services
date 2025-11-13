@@ -21,42 +21,66 @@ class DiskImageTargetDetails extends \Google\Collection
 {
   protected $collection_key = 'additionalLicenses';
   /**
+   * Optional. Additional licenses to assign to the image. Format: https://www.g
+   * oogleapis.com/compute/v1/projects/PROJECT_ID/global/licenses/LICENSE_NAME
+   * Or https://www.googleapis.com/compute/beta/projects/PROJECT_ID/global/licen
+   * ses/LICENSE_NAME
+   *
    * @var string[]
    */
   public $additionalLicenses;
   protected $dataDiskImageImportType = DataDiskImageImport::class;
   protected $dataDiskImageImportDataType = '';
   /**
+   * Optional. An optional description of the image.
+   *
    * @var string
    */
   public $description;
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
   /**
+   * Optional. The name of the image family to which the new image belongs.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * Required. The name of the image to be created.
+   *
    * @var string
    */
   public $imageName;
   /**
+   * Optional. A map of labels to associate with the image.
+   *
    * @var string[]
    */
   public $labels;
   protected $osAdaptationParametersType = ImageImportOsAdaptationParameters::class;
   protected $osAdaptationParametersDataType = '';
   /**
+   * Optional. Set to true to set the image storageLocations to the single
+   * region of the import job. When false, the closest multi-region is selected.
+   *
    * @var bool
    */
   public $singleRegionStorage;
   /**
+   * Required. Reference to the TargetProject resource that represents the
+   * target project in which the imported image will be created.
+   *
    * @var string
    */
   public $targetProject;
 
   /**
-   * @param string[]
+   * Optional. Additional licenses to assign to the image. Format: https://www.g
+   * oogleapis.com/compute/v1/projects/PROJECT_ID/global/licenses/LICENSE_NAME
+   * Or https://www.googleapis.com/compute/beta/projects/PROJECT_ID/global/licen
+   * ses/LICENSE_NAME
+   *
+   * @param string[] $additionalLicenses
    */
   public function setAdditionalLicenses($additionalLicenses)
   {
@@ -70,7 +94,9 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->additionalLicenses;
   }
   /**
-   * @param DataDiskImageImport
+   * Optional. Use to skip OS adaptation process.
+   *
+   * @param DataDiskImageImport $dataDiskImageImport
    */
   public function setDataDiskImageImport(DataDiskImageImport $dataDiskImageImport)
   {
@@ -84,7 +110,9 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->dataDiskImageImport;
   }
   /**
-   * @param string
+   * Optional. An optional description of the image.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -98,7 +126,9 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param Encryption
+   * Immutable. The encryption to apply to the image.
+   *
+   * @param Encryption $encryption
    */
   public function setEncryption(Encryption $encryption)
   {
@@ -112,7 +142,9 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->encryption;
   }
   /**
-   * @param string
+   * Optional. The name of the image family to which the new image belongs.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -126,7 +158,9 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->familyName;
   }
   /**
-   * @param string
+   * Required. The name of the image to be created.
+   *
+   * @param string $imageName
    */
   public function setImageName($imageName)
   {
@@ -140,7 +174,9 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->imageName;
   }
   /**
-   * @param string[]
+   * Optional. A map of labels to associate with the image.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -154,7 +190,9 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param ImageImportOsAdaptationParameters
+   * Optional. Use to set the parameters relevant for the OS adaptation process.
+   *
+   * @param ImageImportOsAdaptationParameters $osAdaptationParameters
    */
   public function setOsAdaptationParameters(ImageImportOsAdaptationParameters $osAdaptationParameters)
   {
@@ -168,7 +206,10 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->osAdaptationParameters;
   }
   /**
-   * @param bool
+   * Optional. Set to true to set the image storageLocations to the single
+   * region of the import job. When false, the closest multi-region is selected.
+   *
+   * @param bool $singleRegionStorage
    */
   public function setSingleRegionStorage($singleRegionStorage)
   {
@@ -182,7 +223,10 @@ class DiskImageTargetDetails extends \Google\Collection
     return $this->singleRegionStorage;
   }
   /**
-   * @param string
+   * Required. Reference to the TargetProject resource that represents the
+   * target project in which the imported image will be created.
+   *
+   * @param string $targetProject
    */
   public function setTargetProject($targetProject)
   {

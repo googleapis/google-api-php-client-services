@@ -20,28 +20,55 @@ namespace Google\Service\VMMigrationService;
 class NetworkInterface extends \Google\Model
 {
   /**
+   * An unspecified network tier. Will be used as PREMIUM.
+   */
+  public const NETWORK_TIER_COMPUTE_ENGINE_NETWORK_TIER_UNSPECIFIED = 'COMPUTE_ENGINE_NETWORK_TIER_UNSPECIFIED';
+  /**
+   * A standard network tier.
+   */
+  public const NETWORK_TIER_NETWORK_TIER_STANDARD = 'NETWORK_TIER_STANDARD';
+  /**
+   * A premium network tier.
+   */
+  public const NETWORK_TIER_NETWORK_TIER_PREMIUM = 'NETWORK_TIER_PREMIUM';
+  /**
+   * Optional. The external IP to define in the NIC.
+   *
    * @var string
    */
   public $externalIp;
   /**
+   * Optional. The internal IP to define in the NIC. The formats accepted are:
+   * `ephemeral` \ ipv4 address \ a named address resource full path.
+   *
    * @var string
    */
   public $internalIp;
   /**
+   * Optional. The network to connect the NIC to.
+   *
    * @var string
    */
   public $network;
   /**
+   * Optional. The networking tier used for optimizing connectivity between
+   * instances and systems on the internet. Applies only for external ephemeral
+   * IP addresses. If left empty, will default to PREMIUM.
+   *
    * @var string
    */
   public $networkTier;
   /**
+   * Optional. The subnetwork to connect the NIC to.
+   *
    * @var string
    */
   public $subnetwork;
 
   /**
-   * @param string
+   * Optional. The external IP to define in the NIC.
+   *
+   * @param string $externalIp
    */
   public function setExternalIp($externalIp)
   {
@@ -55,7 +82,10 @@ class NetworkInterface extends \Google\Model
     return $this->externalIp;
   }
   /**
-   * @param string
+   * Optional. The internal IP to define in the NIC. The formats accepted are:
+   * `ephemeral` \ ipv4 address \ a named address resource full path.
+   *
+   * @param string $internalIp
    */
   public function setInternalIp($internalIp)
   {
@@ -69,7 +99,9 @@ class NetworkInterface extends \Google\Model
     return $this->internalIp;
   }
   /**
-   * @param string
+   * Optional. The network to connect the NIC to.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -83,21 +115,30 @@ class NetworkInterface extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * Optional. The networking tier used for optimizing connectivity between
+   * instances and systems on the internet. Applies only for external ephemeral
+   * IP addresses. If left empty, will default to PREMIUM.
+   *
+   * Accepted values: COMPUTE_ENGINE_NETWORK_TIER_UNSPECIFIED,
+   * NETWORK_TIER_STANDARD, NETWORK_TIER_PREMIUM
+   *
+   * @param self::NETWORK_TIER_* $networkTier
    */
   public function setNetworkTier($networkTier)
   {
     $this->networkTier = $networkTier;
   }
   /**
-   * @return string
+   * @return self::NETWORK_TIER_*
    */
   public function getNetworkTier()
   {
     return $this->networkTier;
   }
   /**
-   * @param string
+   * Optional. The subnetwork to connect the NIC to.
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {

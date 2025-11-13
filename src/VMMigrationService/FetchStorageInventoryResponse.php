@@ -21,18 +21,27 @@ class FetchStorageInventoryResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
   /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $resourcesType = SourceStorageResource::class;
   protected $resourcesDataType = 'array';
   /**
+   * Output only. The timestamp when the source was last queried (if the result
+   * is from the cache).
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +55,9 @@ class FetchStorageInventoryResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SourceStorageResource[]
+   * The list of storage resources in the source.
+   *
+   * @param SourceStorageResource[] $resources
    */
   public function setResources($resources)
   {
@@ -60,7 +71,10 @@ class FetchStorageInventoryResponse extends \Google\Collection
     return $this->resources;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the source was last queried (if the result
+   * is from the cache).
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

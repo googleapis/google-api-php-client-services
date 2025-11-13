@@ -20,40 +20,60 @@ namespace Google\Service\VMMigrationService;
 class VmUtilizationMetrics extends \Google\Model
 {
   /**
+   * Average CPU usage, percent.
+   *
    * @var int
    */
   public $cpuAveragePercent;
   /**
+   * Max CPU usage, percent.
+   *
    * @var int
    */
   public $cpuMaxPercent;
   /**
+   * Average disk IO rate, in kilobytes per second.
+   *
    * @var string
    */
   public $diskIoRateAverageKbps;
   /**
+   * Max disk IO rate, in kilobytes per second.
+   *
    * @var string
    */
   public $diskIoRateMaxKbps;
   /**
+   * Average memory usage, percent.
+   *
    * @var int
    */
   public $memoryAveragePercent;
   /**
+   * Max memory usage, percent.
+   *
    * @var int
    */
   public $memoryMaxPercent;
   /**
+   * Average network throughput (combined transmit-rates and receive-rates), in
+   * kilobytes per second.
+   *
    * @var string
    */
   public $networkThroughputAverageKbps;
   /**
+   * Max network throughput (combined transmit-rates and receive-rates), in
+   * kilobytes per second.
+   *
    * @var string
    */
   public $networkThroughputMaxKbps;
 
   /**
-   * @param int
+   * Average CPU usage, percent.
+   *
+   * @param int $cpuAveragePercent
    */
   public function setCpuAveragePercent($cpuAveragePercent)
   {
@@ -67,7 +87,9 @@ class VmUtilizationMetrics extends \Google\Model
     return $this->cpuAveragePercent;
   }
   /**
-   * @param int
+   * Max CPU usage, percent.
+   *
+   * @param int $cpuMaxPercent
    */
   public function setCpuMaxPercent($cpuMaxPercent)
   {
@@ -81,7 +103,9 @@ class VmUtilizationMetrics extends \Google\Model
     return $this->cpuMaxPercent;
   }
   /**
-   * @param string
+   * Average disk IO rate, in kilobytes per second.
+   *
+   * @param string $diskIoRateAverageKbps
    */
   public function setDiskIoRateAverageKbps($diskIoRateAverageKbps)
   {
@@ -95,7 +119,9 @@ class VmUtilizationMetrics extends \Google\Model
     return $this->diskIoRateAverageKbps;
   }
   /**
-   * @param string
+   * Max disk IO rate, in kilobytes per second.
+   *
+   * @param string $diskIoRateMaxKbps
    */
   public function setDiskIoRateMaxKbps($diskIoRateMaxKbps)
   {
@@ -109,7 +135,9 @@ class VmUtilizationMetrics extends \Google\Model
     return $this->diskIoRateMaxKbps;
   }
   /**
-   * @param int
+   * Average memory usage, percent.
+   *
+   * @param int $memoryAveragePercent
    */
   public function setMemoryAveragePercent($memoryAveragePercent)
   {
@@ -123,7 +151,9 @@ class VmUtilizationMetrics extends \Google\Model
     return $this->memoryAveragePercent;
   }
   /**
-   * @param int
+   * Max memory usage, percent.
+   *
+   * @param int $memoryMaxPercent
    */
   public function setMemoryMaxPercent($memoryMaxPercent)
   {
@@ -137,7 +167,10 @@ class VmUtilizationMetrics extends \Google\Model
     return $this->memoryMaxPercent;
   }
   /**
-   * @param string
+   * Average network throughput (combined transmit-rates and receive-rates), in
+   * kilobytes per second.
+   *
+   * @param string $networkThroughputAverageKbps
    */
   public function setNetworkThroughputAverageKbps($networkThroughputAverageKbps)
   {
@@ -151,7 +184,10 @@ class VmUtilizationMetrics extends \Google\Model
     return $this->networkThroughputAverageKbps;
   }
   /**
-   * @param string
+   * Max network throughput (combined transmit-rates and receive-rates), in
+   * kilobytes per second.
+   *
+   * @param string $networkThroughputMaxKbps
    */
   public function setNetworkThroughputMaxKbps($networkThroughputMaxKbps)
   {

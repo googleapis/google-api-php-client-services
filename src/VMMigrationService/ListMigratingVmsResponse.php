@@ -23,16 +23,23 @@ class ListMigratingVmsResponse extends \Google\Collection
   protected $migratingVmsType = MigratingVm::class;
   protected $migratingVmsDataType = 'array';
   /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Output only. Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param MigratingVm[]
+   * Output only. The list of Migrating VMs response.
+   *
+   * @param MigratingVm[] $migratingVms
    */
   public function setMigratingVms($migratingVms)
   {
@@ -46,7 +53,10 @@ class ListMigratingVmsResponse extends \Google\Collection
     return $this->migratingVms;
   }
   /**
-   * @param string
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListMigratingVmsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Output only. Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

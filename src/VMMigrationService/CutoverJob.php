@@ -19,38 +19,87 @@ namespace Google\Service\VMMigrationService;
 
 class CutoverJob extends \Google\Collection
 {
+  /**
+   * The state is unknown. This is used for API compatibility only and is not
+   * used by the system.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The cutover job has not yet started.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The cutover job finished with errors.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The cutover job finished successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The cutover job was cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The cutover job is being cancelled.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * The cutover job is active and running.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * OS adaptation is running as part of the cutover job to generate license.
+   */
+  public const STATE_ADAPTING_OS = 'ADAPTING_OS';
   protected $collection_key = 'steps';
   protected $computeEngineDisksTargetDetailsType = ComputeEngineDisksTargetDetails::class;
   protected $computeEngineDisksTargetDetailsDataType = '';
   protected $computeEngineTargetDetailsType = ComputeEngineTargetDetails::class;
   protected $computeEngineTargetDetailsDataType = '';
   /**
+   * Output only. The time the cutover job was created (as an API call, not when
+   * it was actually created in the target).
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the cutover job had finished.
+   *
    * @var string
    */
   public $endTime;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * Output only. The name of the cutover job.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The current progress in percentage of the cutover job.
+   *
    * @var int
    */
   public $progressPercent;
   /**
+   * Output only. State of the cutover job.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. A message providing possible extra details about the current
+   * state.
+   *
    * @var string
    */
   public $stateMessage;
   /**
+   * Output only. The time the state was last updated.
+   *
    * @var string
    */
   public $stateTime;
@@ -58,7 +107,9 @@ class CutoverJob extends \Google\Collection
   protected $stepsDataType = 'array';
 
   /**
-   * @param ComputeEngineDisksTargetDetails
+   * Output only. Details of the target Persistent Disks in Compute Engine.
+   *
+   * @param ComputeEngineDisksTargetDetails $computeEngineDisksTargetDetails
    */
   public function setComputeEngineDisksTargetDetails(ComputeEngineDisksTargetDetails $computeEngineDisksTargetDetails)
   {
@@ -72,7 +123,9 @@ class CutoverJob extends \Google\Collection
     return $this->computeEngineDisksTargetDetails;
   }
   /**
-   * @param ComputeEngineTargetDetails
+   * Output only. Details of the target VM in Compute Engine.
+   *
+   * @param ComputeEngineTargetDetails $computeEngineTargetDetails
    */
   public function setComputeEngineTargetDetails(ComputeEngineTargetDetails $computeEngineTargetDetails)
   {
@@ -86,7 +139,10 @@ class CutoverJob extends \Google\Collection
     return $this->computeEngineTargetDetails;
   }
   /**
-   * @param string
+   * Output only. The time the cutover job was created (as an API call, not when
+   * it was actually created in the target).
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -100,7 +156,9 @@ class CutoverJob extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the cutover job had finished.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -114,7 +172,10 @@ class CutoverJob extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param Status
+   * Output only. Provides details for the errors that led to the Cutover Job's
+   * state.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -128,7 +189,9 @@ class CutoverJob extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param string
+   * Output only. The name of the cutover job.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -142,7 +205,9 @@ class CutoverJob extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * Output only. The current progress in percentage of the cutover job.
+   *
+   * @param int $progressPercent
    */
   public function setProgressPercent($progressPercent)
   {
@@ -156,21 +221,29 @@ class CutoverJob extends \Google\Collection
     return $this->progressPercent;
   }
   /**
-   * @param string
+   * Output only. State of the cutover job.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, FAILED, SUCCEEDED, CANCELLED,
+   * CANCELLING, ACTIVE, ADAPTING_OS
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. A message providing possible extra details about the current
+   * state.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {
@@ -184,7 +257,9 @@ class CutoverJob extends \Google\Collection
     return $this->stateMessage;
   }
   /**
-   * @param string
+   * Output only. The time the state was last updated.
+   *
+   * @param string $stateTime
    */
   public function setStateTime($stateTime)
   {
@@ -198,7 +273,9 @@ class CutoverJob extends \Google\Collection
     return $this->stateTime;
   }
   /**
-   * @param CutoverStep[]
+   * Output only. The cutover steps list representing its progress.
+   *
+   * @param CutoverStep[] $steps
    */
   public function setSteps($steps)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\VMMigrationService;
 class CutoverForecast extends \Google\Model
 {
   /**
+   * Output only. Estimation of the CutoverJob duration.
+   *
    * @var string
    */
   public $estimatedCutoverJobDuration;
 
   /**
-   * @param string
+   * Output only. Estimation of the CutoverJob duration.
+   *
+   * @param string $estimatedCutoverJobDuration
    */
   public function setEstimatedCutoverJobDuration($estimatedCutoverJobDuration)
   {

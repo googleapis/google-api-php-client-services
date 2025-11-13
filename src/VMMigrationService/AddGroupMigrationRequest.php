@@ -20,12 +20,16 @@ namespace Google\Service\VMMigrationService;
 class AddGroupMigrationRequest extends \Google\Model
 {
   /**
+   * The full path name of the MigratingVm to add.
+   *
    * @var string
    */
   public $migratingVm;
 
   /**
-   * @param string
+   * The full path name of the MigratingVm to add.
+   *
+   * @param string $migratingVm
    */
   public function setMigratingVm($migratingVm)
   {

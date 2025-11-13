@@ -24,6 +24,8 @@ class ImageImportStep extends \Google\Model
   protected $creatingImageType = CreatingImageStep::class;
   protected $creatingImageDataType = '';
   /**
+   * Output only. The time the step has ended.
+   *
    * @var string
    */
   public $endTime;
@@ -32,12 +34,16 @@ class ImageImportStep extends \Google\Model
   protected $loadingSourceFilesType = LoadingImageSourceFilesStep::class;
   protected $loadingSourceFilesDataType = '';
   /**
+   * Output only. The time the step has started.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param AdaptingOSStep
+   * Adapting OS step.
+   *
+   * @param AdaptingOSStep $adaptingOs
    */
   public function setAdaptingOs(AdaptingOSStep $adaptingOs)
   {
@@ -51,7 +57,9 @@ class ImageImportStep extends \Google\Model
     return $this->adaptingOs;
   }
   /**
-   * @param CreatingImageStep
+   * Creating image step.
+   *
+   * @param CreatingImageStep $creatingImage
    */
   public function setCreatingImage(CreatingImageStep $creatingImage)
   {
@@ -65,7 +73,9 @@ class ImageImportStep extends \Google\Model
     return $this->creatingImage;
   }
   /**
-   * @param string
+   * Output only. The time the step has ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -79,7 +89,9 @@ class ImageImportStep extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param InitializingImageImportStep
+   * Initializing step.
+   *
+   * @param InitializingImageImportStep $initializing
    */
   public function setInitializing(InitializingImageImportStep $initializing)
   {
@@ -93,7 +105,9 @@ class ImageImportStep extends \Google\Model
     return $this->initializing;
   }
   /**
-   * @param LoadingImageSourceFilesStep
+   * Loading source files step.
+   *
+   * @param LoadingImageSourceFilesStep $loadingSourceFiles
    */
   public function setLoadingSourceFiles(LoadingImageSourceFilesStep $loadingSourceFiles)
   {
@@ -107,7 +121,9 @@ class ImageImportStep extends \Google\Model
     return $this->loadingSourceFiles;
   }
   /**
-   * @param string
+   * Output only. The time the step has started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

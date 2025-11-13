@@ -19,27 +19,54 @@ namespace Google\Service\VMMigrationService;
 
 class UpgradeStatus extends \Google\Model
 {
+  /**
+   * The state was not sampled by the health checks yet.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The upgrade has started.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The upgrade failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The upgrade finished successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * The version from which we upgraded.
+   *
    * @var string
    */
   public $previousVersion;
   /**
+   * The time the operation was started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The state of the upgradeAppliance operation.
+   *
    * @var string
    */
   public $state;
   /**
+   * The version to upgrade to.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param Status
+   * Output only. Provides details on the state of the upgrade operation in case
+   * of an error.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -53,7 +80,9 @@ class UpgradeStatus extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * The version from which we upgraded.
+   *
+   * @param string $previousVersion
    */
   public function setPreviousVersion($previousVersion)
   {
@@ -67,7 +96,9 @@ class UpgradeStatus extends \Google\Model
     return $this->previousVersion;
   }
   /**
-   * @param string
+   * The time the operation was started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -81,21 +112,27 @@ class UpgradeStatus extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The state of the upgradeAppliance operation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, FAILED, SUCCEEDED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The version to upgrade to.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

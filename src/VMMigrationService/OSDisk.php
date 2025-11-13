@@ -20,20 +20,28 @@ namespace Google\Service\VMMigrationService;
 class OSDisk extends \Google\Model
 {
   /**
+   * The disk's full name.
+   *
    * @var string
    */
   public $name;
   /**
+   * The disk's size in GB.
+   *
    * @var int
    */
   public $sizeGb;
   /**
+   * The disk's type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The disk's full name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +55,9 @@ class OSDisk extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * The disk's size in GB.
+   *
+   * @param int $sizeGb
    */
   public function setSizeGb($sizeGb)
   {
@@ -61,7 +71,9 @@ class OSDisk extends \Google\Model
     return $this->sizeGb;
   }
   /**
-   * @param string
+   * The disk's type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

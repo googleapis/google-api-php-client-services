@@ -19,20 +19,55 @@ namespace Google\Service\VMMigrationService;
 
 class DiskMigrationJob extends \Google\Collection
 {
+  /**
+   * The state is unspecified. This is not in use.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The initial state of the disk migration. In this state the customers can
+   * update the target details.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * The migration is active, and it's running or scheduled to run.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The migration completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Migration cancellation was initiated.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * The migration was cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The migration process encountered an unrecoverable error and was aborted.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'steps';
   protected $awsSourceDiskDetailsType = AwsSourceDiskDetails::class;
   protected $awsSourceDiskDetailsDataType = '';
   /**
+   * Output only. The time the DiskMigrationJob resource was created.
+   *
    * @var string
    */
   public $createTime;
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
   /**
+   * Output only. Identifier. The identifier of the DiskMigrationJob.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. State of the DiskMigrationJob.
+   *
    * @var string
    */
   public $state;
@@ -41,12 +76,16 @@ class DiskMigrationJob extends \Google\Collection
   protected $targetDetailsType = DiskMigrationJobTargetDetails::class;
   protected $targetDetailsDataType = '';
   /**
+   * Output only. The last time the DiskMigrationJob resource was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param AwsSourceDiskDetails
+   * Details of the unattached AWS source disk.
+   *
+   * @param AwsSourceDiskDetails $awsSourceDiskDetails
    */
   public function setAwsSourceDiskDetails(AwsSourceDiskDetails $awsSourceDiskDetails)
   {
@@ -60,7 +99,9 @@ class DiskMigrationJob extends \Google\Collection
     return $this->awsSourceDiskDetails;
   }
   /**
-   * @param string
+   * Output only. The time the DiskMigrationJob resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -74,7 +115,10 @@ class DiskMigrationJob extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param Status[]
+   * Output only. Provides details on the errors that led to the disk migration
+   * job's state in case of an error.
+   *
+   * @param Status[] $errors
    */
   public function setErrors($errors)
   {
@@ -88,7 +132,9 @@ class DiskMigrationJob extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * Output only. Identifier. The identifier of the DiskMigrationJob.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -102,21 +148,28 @@ class DiskMigrationJob extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. State of the DiskMigrationJob.
+   *
+   * Accepted values: STATE_UNSPECIFIED, READY, RUNNING, SUCCEEDED, CANCELLING,
+   * CANCELLED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param DiskMigrationStep[]
+   * Output only. The disk migration steps list representing its progress.
+   *
+   * @param DiskMigrationStep[] $steps
    */
   public function setSteps($steps)
   {
@@ -130,7 +183,9 @@ class DiskMigrationJob extends \Google\Collection
     return $this->steps;
   }
   /**
-   * @param DiskMigrationJobTargetDetails
+   * Required. Details of the target Disk in Compute Engine.
+   *
+   * @param DiskMigrationJobTargetDetails $targetDetails
    */
   public function setTargetDetails(DiskMigrationJobTargetDetails $targetDetails)
   {
@@ -144,7 +199,9 @@ class DiskMigrationJob extends \Google\Collection
     return $this->targetDetails;
   }
   /**
-   * @param string
+   * Output only. The last time the DiskMigrationJob resource was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

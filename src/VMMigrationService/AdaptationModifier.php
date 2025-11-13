@@ -20,16 +20,23 @@ namespace Google\Service\VMMigrationService;
 class AdaptationModifier extends \Google\Model
 {
   /**
+   * Optional. The modifier name.
+   *
    * @var string
    */
   public $modifier;
   /**
+   * Optional. The value of the modifier. The actual value depends on the
+   * modifier and can also be empty.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Optional. The modifier name.
+   *
+   * @param string $modifier
    */
   public function setModifier($modifier)
   {
@@ -43,7 +50,10 @@ class AdaptationModifier extends \Google\Model
     return $this->modifier;
   }
   /**
-   * @param string
+   * Optional. The value of the modifier. The actual value depends on the
+   * modifier and can also be empty.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

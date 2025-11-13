@@ -25,7 +25,10 @@ class AvailableUpdates extends \Google\Model
   protected $newDeployableApplianceDataType = '';
 
   /**
-   * @param ApplianceVersion
+   * The latest version for in place update. The current appliance can be
+   * updated to this version using the API or m4c CLI.
+   *
+   * @param ApplianceVersion $inPlaceUpdate
    */
   public function setInPlaceUpdate(ApplianceVersion $inPlaceUpdate)
   {
@@ -39,7 +42,11 @@ class AvailableUpdates extends \Google\Model
     return $this->inPlaceUpdate;
   }
   /**
-   * @param ApplianceVersion
+   * The newest deployable version of the appliance. The current appliance can't
+   * be updated into this version, and the owner must manually deploy this OVA
+   * to a new appliance.
+   *
+   * @param ApplianceVersion $newDeployableAppliance
    */
   public function setNewDeployableAppliance(ApplianceVersion $newDeployableAppliance)
   {

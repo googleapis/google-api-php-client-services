@@ -20,16 +20,38 @@ namespace Google\Service\VMMigrationService;
 class AppliedLicense extends \Google\Model
 {
   /**
+   * Unspecified license for the OS.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * No license available for the OS.
+   */
+  public const TYPE_NONE = 'NONE';
+  /**
+   * The license type is Pay As You Go license type.
+   */
+  public const TYPE_PAYG = 'PAYG';
+  /**
+   * The license type is Bring Your Own License type.
+   */
+  public const TYPE_BYOL = 'BYOL';
+  /**
+   * The OS license returned from the adaptation module's report.
+   *
    * @var string
    */
   public $osLicense;
   /**
+   * The license type that was used in OS adaptation.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The OS license returned from the adaptation module's report.
+   *
+   * @param string $osLicense
    */
   public function setOsLicense($osLicense)
   {
@@ -43,14 +65,18 @@ class AppliedLicense extends \Google\Model
     return $this->osLicense;
   }
   /**
-   * @param string
+   * The license type that was used in OS adaptation.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, NONE, PAYG, BYOL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

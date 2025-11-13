@@ -20,32 +20,58 @@ namespace Google\Service\VMMigrationService;
 class Group extends \Google\Model
 {
   /**
+   * Group type is not specified. This defaults to Compute Engine targets.
+   */
+  public const MIGRATION_TARGET_TYPE_MIGRATION_TARGET_TYPE_UNSPECIFIED = 'MIGRATION_TARGET_TYPE_UNSPECIFIED';
+  /**
+   * All MigratingVMs in the group must have Compute Engine targets.
+   */
+  public const MIGRATION_TARGET_TYPE_MIGRATION_TARGET_TYPE_GCE = 'MIGRATION_TARGET_TYPE_GCE';
+  /**
+   * All MigratingVMs in the group must have Compute Engine Disks targets.
+   */
+  public const MIGRATION_TARGET_TYPE_MIGRATION_TARGET_TYPE_DISKS = 'MIGRATION_TARGET_TYPE_DISKS';
+  /**
+   * Output only. The create time timestamp.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * User-provided description of the group.
+   *
    * @var string
    */
   public $description;
   /**
+   * Display name is a user defined name for this group which can be updated.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Immutable. The target type of this group.
+   *
    * @var string
    */
   public $migrationTargetType;
   /**
+   * Output only. The Group name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The update time timestamp.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The create time timestamp.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -59,7 +85,9 @@ class Group extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * User-provided description of the group.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -73,7 +101,9 @@ class Group extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Display name is a user defined name for this group which can be updated.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -87,21 +117,28 @@ class Group extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Immutable. The target type of this group.
+   *
+   * Accepted values: MIGRATION_TARGET_TYPE_UNSPECIFIED,
+   * MIGRATION_TARGET_TYPE_GCE, MIGRATION_TARGET_TYPE_DISKS
+   *
+   * @param self::MIGRATION_TARGET_TYPE_* $migrationTargetType
    */
   public function setMigrationTargetType($migrationTargetType)
   {
     $this->migrationTargetType = $migrationTargetType;
   }
   /**
-   * @return string
+   * @return self::MIGRATION_TARGET_TYPE_*
    */
   public function getMigrationTargetType()
   {
     return $this->migrationTargetType;
   }
   /**
-   * @param string
+   * Output only. The Group name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -115,7 +152,9 @@ class Group extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The update time timestamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -24,18 +24,24 @@ class DiskMigrationStep extends \Google\Model
   protected $creatingSourceDiskSnapshotType = CreatingSourceDiskSnapshotStep::class;
   protected $creatingSourceDiskSnapshotDataType = '';
   /**
+   * Output only. The time the step has ended.
+   *
    * @var string
    */
   public $endTime;
   protected $provisioningTargetDiskType = ProvisioningTargetDiskStep::class;
   protected $provisioningTargetDiskDataType = '';
   /**
+   * Output only. The time the step has started.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param CopyingSourceDiskSnapshotStep
+   * Copying source disk snapshot step.
+   *
+   * @param CopyingSourceDiskSnapshotStep $copyingSourceDiskSnapshot
    */
   public function setCopyingSourceDiskSnapshot(CopyingSourceDiskSnapshotStep $copyingSourceDiskSnapshot)
   {
@@ -49,7 +55,9 @@ class DiskMigrationStep extends \Google\Model
     return $this->copyingSourceDiskSnapshot;
   }
   /**
-   * @param CreatingSourceDiskSnapshotStep
+   * Creating source disk snapshot step.
+   *
+   * @param CreatingSourceDiskSnapshotStep $creatingSourceDiskSnapshot
    */
   public function setCreatingSourceDiskSnapshot(CreatingSourceDiskSnapshotStep $creatingSourceDiskSnapshot)
   {
@@ -63,7 +71,9 @@ class DiskMigrationStep extends \Google\Model
     return $this->creatingSourceDiskSnapshot;
   }
   /**
-   * @param string
+   * Output only. The time the step has ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -77,7 +87,9 @@ class DiskMigrationStep extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param ProvisioningTargetDiskStep
+   * Creating target disk step.
+   *
+   * @param ProvisioningTargetDiskStep $provisioningTargetDisk
    */
   public function setProvisioningTargetDisk(ProvisioningTargetDiskStep $provisioningTargetDisk)
   {
@@ -91,7 +103,9 @@ class DiskMigrationStep extends \Google\Model
     return $this->provisioningTargetDisk;
   }
   /**
-   * @param string
+   * Output only. The time the step has started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

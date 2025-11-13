@@ -21,18 +21,26 @@ class ListTargetProjectsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $targetProjectsType = TargetProject::class;
   protected $targetProjectsDataType = 'array';
   /**
+   * Output only. Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * Output only. A token, which can be sent as `page_token` to retrieve the
+   * next page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListTargetProjectsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TargetProject[]
+   * Output only. The list of target response.
+   *
+   * @param TargetProject[] $targetProjects
    */
   public function setTargetProjects($targetProjects)
   {
@@ -60,7 +70,9 @@ class ListTargetProjectsResponse extends \Google\Collection
     return $this->targetProjects;
   }
   /**
-   * @param string[]
+   * Output only. Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

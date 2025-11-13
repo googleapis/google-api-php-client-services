@@ -20,20 +20,28 @@ namespace Google\Service\VMMigrationService;
 class VmwareDiskDetails extends \Google\Model
 {
   /**
+   * Output only. The ordinal number of the disk.
+   *
    * @var int
    */
   public $diskNumber;
   /**
+   * Output only. The disk label.
+   *
    * @var string
    */
   public $label;
   /**
+   * Output only. Size in GB.
+   *
    * @var string
    */
   public $sizeGb;
 
   /**
-   * @param int
+   * Output only. The ordinal number of the disk.
+   *
+   * @param int $diskNumber
    */
   public function setDiskNumber($diskNumber)
   {
@@ -47,7 +55,9 @@ class VmwareDiskDetails extends \Google\Model
     return $this->diskNumber;
   }
   /**
-   * @param string
+   * Output only. The disk label.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -61,7 +71,9 @@ class VmwareDiskDetails extends \Google\Model
     return $this->label;
   }
   /**
-   * @param string
+   * Output only. Size in GB.
+   *
+   * @param string $sizeGb
    */
   public function setSizeGb($sizeGb)
   {

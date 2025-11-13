@@ -20,20 +20,28 @@ namespace Google\Service\VMMigrationService;
 class ClientSecretCredentials extends \Google\Model
 {
   /**
+   * Azure client ID.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * Input only. Azure client secret.
+   *
    * @var string
    */
   public $clientSecret;
   /**
+   * Azure tenant ID.
+   *
    * @var string
    */
   public $tenantId;
 
   /**
-   * @param string
+   * Azure client ID.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -47,7 +55,9 @@ class ClientSecretCredentials extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param string
+   * Input only. Azure client secret.
+   *
+   * @param string $clientSecret
    */
   public function setClientSecret($clientSecret)
   {
@@ -61,7 +71,9 @@ class ClientSecretCredentials extends \Google\Model
     return $this->clientSecret;
   }
   /**
-   * @param string
+   * Azure tenant ID.
+   *
+   * @param string $tenantId
    */
   public function setTenantId($tenantId)
   {
