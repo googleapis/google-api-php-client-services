@@ -20,19 +20,39 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ZoneResourceSpec extends \Google\Model
 {
   /**
+   * Unspecified location type.
+   */
+  public const LOCATION_TYPE_LOCATION_TYPE_UNSPECIFIED = 'LOCATION_TYPE_UNSPECIFIED';
+  /**
+   * Resources that are associated with a single region.
+   */
+  public const LOCATION_TYPE_SINGLE_REGION = 'SINGLE_REGION';
+  /**
+   * Resources that are associated with a multi-region location.
+   */
+  public const LOCATION_TYPE_MULTI_REGION = 'MULTI_REGION';
+  /**
+   * Required. Immutable. The location type of the resources that are allowed to
+   * be attached to the assets within this zone.
+   *
    * @var string
    */
   public $locationType;
 
   /**
-   * @param string
+   * Required. Immutable. The location type of the resources that are allowed to
+   * be attached to the assets within this zone.
+   *
+   * Accepted values: LOCATION_TYPE_UNSPECIFIED, SINGLE_REGION, MULTI_REGION
+   *
+   * @param self::LOCATION_TYPE_* $locationType
    */
   public function setLocationType($locationType)
   {
     $this->locationType = $locationType;
   }
   /**
-   * @return string
+   * @return self::LOCATION_TYPE_*
    */
   public function getLocationType()
   {

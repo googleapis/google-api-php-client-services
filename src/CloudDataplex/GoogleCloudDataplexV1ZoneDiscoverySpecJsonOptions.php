@@ -20,16 +20,26 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ZoneDiscoverySpecJsonOptions extends \Google\Model
 {
   /**
+   * Optional. Whether to disable the inference of data type for Json data. If
+   * true, all columns will be registered as their primitive types (strings,
+   * number or boolean).
+   *
    * @var bool
    */
   public $disableTypeInference;
   /**
+   * Optional. The character encoding of the data. The default is UTF-8.
+   *
    * @var string
    */
   public $encoding;
 
   /**
-   * @param bool
+   * Optional. Whether to disable the inference of data type for Json data. If
+   * true, all columns will be registered as their primitive types (strings,
+   * number or boolean).
+   *
+   * @param bool $disableTypeInference
    */
   public function setDisableTypeInference($disableTypeInference)
   {
@@ -43,7 +53,9 @@ class GoogleCloudDataplexV1ZoneDiscoverySpecJsonOptions extends \Google\Model
     return $this->disableTypeInference;
   }
   /**
-   * @param string
+   * Optional. The character encoding of the data. The default is UTF-8.
+   *
+   * @param string $encoding
    */
   public function setEncoding($encoding)
   {

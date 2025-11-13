@@ -20,24 +20,38 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions extends \Google\Model
 {
   /**
+   * Optional. The delimiter being used to separate values. This defaults to
+   * ','.
+   *
    * @var string
    */
   public $delimiter;
   /**
+   * Optional. Whether to disable the inference of data type for CSV data. If
+   * true, all columns will be registered as strings.
+   *
    * @var bool
    */
   public $disableTypeInference;
   /**
+   * Optional. The character encoding of the data. The default is UTF-8.
+   *
    * @var string
    */
   public $encoding;
   /**
+   * Optional. The number of rows to interpret as header rows that should be
+   * skipped when reading data rows.
+   *
    * @var int
    */
   public $headerRows;
 
   /**
-   * @param string
+   * Optional. The delimiter being used to separate values. This defaults to
+   * ','.
+   *
+   * @param string $delimiter
    */
   public function setDelimiter($delimiter)
   {
@@ -51,7 +65,10 @@ class GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions extends \Google\Model
     return $this->delimiter;
   }
   /**
-   * @param bool
+   * Optional. Whether to disable the inference of data type for CSV data. If
+   * true, all columns will be registered as strings.
+   *
+   * @param bool $disableTypeInference
    */
   public function setDisableTypeInference($disableTypeInference)
   {
@@ -65,7 +82,9 @@ class GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions extends \Google\Model
     return $this->disableTypeInference;
   }
   /**
-   * @param string
+   * Optional. The character encoding of the data. The default is UTF-8.
+   *
+   * @param string $encoding
    */
   public function setEncoding($encoding)
   {
@@ -79,7 +98,10 @@ class GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions extends \Google\Model
     return $this->encoding;
   }
   /**
-   * @param int
+   * Optional. The number of rows to interpret as header rows that should be
+   * skipped when reading data rows.
+   *
+   * @param int $headerRows
    */
   public function setHeaderRows($headerRows)
   {

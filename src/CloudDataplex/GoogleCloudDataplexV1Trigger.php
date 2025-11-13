@@ -25,7 +25,9 @@ class GoogleCloudDataplexV1Trigger extends \Google\Model
   protected $scheduleDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1TriggerOnDemand
+   * The scan runs once via RunDataScan API.
+   *
+   * @param GoogleCloudDataplexV1TriggerOnDemand $onDemand
    */
   public function setOnDemand(GoogleCloudDataplexV1TriggerOnDemand $onDemand)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDataplexV1Trigger extends \Google\Model
     return $this->onDemand;
   }
   /**
-   * @param GoogleCloudDataplexV1TriggerSchedule
+   * The scan is scheduled to run periodically.
+   *
+   * @param GoogleCloudDataplexV1TriggerSchedule $schedule
    */
   public function setSchedule(GoogleCloudDataplexV1TriggerSchedule $schedule)
   {
