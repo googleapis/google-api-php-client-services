@@ -21,18 +21,27 @@ class DeploymentUpdate extends \Google\Collection
 {
   protected $collection_key = 'labels';
   /**
+   * Output only. An optional user-provided description of the deployment after
+   * the current update has been applied.
+   *
    * @var string
    */
   public $description;
   protected $labelsType = DeploymentUpdateLabelEntry::class;
   protected $labelsDataType = 'array';
   /**
+   * Output only. URL of the manifest representing the update configuration of
+   * this deployment.
+   *
    * @var string
    */
   public $manifest;
 
   /**
-   * @param string
+   * Output only. An optional user-provided description of the deployment after
+   * the current update has been applied.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -46,7 +55,14 @@ class DeploymentUpdate extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param DeploymentUpdateLabelEntry[]
+   * Map of One Platform labels; provided by the client when the resource is
+   * created or updated. Specifically: Label keys must be between 1 and 63
+   * characters long and must conform to the following regular expression:
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` Label values must be between 0 and 63
+   * characters long and must conform to the regular expression
+   * `([a-z]([-a-z0-9]*[a-z0-9])?)?`.
+   *
+   * @param DeploymentUpdateLabelEntry[] $labels
    */
   public function setLabels($labels)
   {
@@ -60,7 +76,10 @@ class DeploymentUpdate extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. URL of the manifest representing the update configuration of
+   * this deployment.
+   *
+   * @param string $manifest
    */
   public function setManifest($manifest)
   {

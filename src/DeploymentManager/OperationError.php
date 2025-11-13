@@ -24,7 +24,10 @@ class OperationError extends \Google\Collection
   protected $errorsDataType = 'array';
 
   /**
-   * @param OperationErrorErrors[]
+   * [Output Only] The array of errors encountered while processing this
+   * operation.
+   *
+   * @param OperationErrorErrors[] $errors
    */
   public function setErrors($errors)
   {

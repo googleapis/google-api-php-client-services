@@ -23,12 +23,16 @@ class ManifestsListResponse extends \Google\Collection
   protected $manifestsType = Manifest::class;
   protected $manifestsDataType = 'array';
   /**
+   * Output only. A token used to continue a truncated list request.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Manifest[]
+   * Output only. Manifests contained in this list response.
+   *
+   * @param Manifest[] $manifests
    */
   public function setManifests($manifests)
   {
@@ -42,7 +46,9 @@ class ManifestsListResponse extends \Google\Collection
     return $this->manifests;
   }
   /**
-   * @param string
+   * Output only. A token used to continue a truncated list request.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

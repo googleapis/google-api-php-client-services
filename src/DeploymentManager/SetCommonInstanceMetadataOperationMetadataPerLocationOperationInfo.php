@@ -19,15 +19,41 @@ namespace Google\Service\DeploymentManager;
 
 class SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo extends \Google\Model
 {
+  public const STATE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Operation is not yet confirmed to have been created in the location.
+   */
+  public const STATE_PROPAGATING = 'PROPAGATING';
+  /**
+   * Operation is confirmed to be in the location.
+   */
+  public const STATE_PROPAGATED = 'PROPAGATED';
+  /**
+   * Operation not tracked in this location e.g. zone is marked as DOWN.
+   */
+  public const STATE_ABANDONED = 'ABANDONED';
+  /**
+   * Operation is in an error state.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Operation has completed successfully.
+   */
+  public const STATE_DONE = 'DONE';
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * [Output Only] Status of the action, which can be one of the following:
+   * `PROPAGATING`, `PROPAGATED`, `ABANDONED`, `FAILED`, or `DONE`.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param Status
+   * [Output Only] If state is `ABANDONED` or `FAILED`, this field is populated.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -41,14 +67,20 @@ class SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo extends
     return $this->error;
   }
   /**
-   * @param string
+   * [Output Only] Status of the action, which can be one of the following:
+   * `PROPAGATING`, `PROPAGATED`, `ABANDONED`, `FAILED`, or `DONE`.
+   *
+   * Accepted values: UNSPECIFIED, PROPAGATING, PROPAGATED, ABANDONED, FAILED,
+   * DONE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

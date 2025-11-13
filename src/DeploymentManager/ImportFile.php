@@ -20,16 +20,22 @@ namespace Google\Service\DeploymentManager;
 class ImportFile extends \Google\Model
 {
   /**
+   * The contents of the file.
+   *
    * @var string
    */
   public $content;
   /**
+   * The name of the file.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The contents of the file.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -43,7 +49,9 @@ class ImportFile extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * The name of the file.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

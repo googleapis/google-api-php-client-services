@@ -21,10 +21,17 @@ class OperationErrorErrors extends \Google\Collection
 {
   protected $collection_key = 'errorDetails';
   /**
+   * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is
+   * for internal use-only (like componentization) (thus the visibility "none")
+   * and in case of public exposure it is strongly recommended to follow pattern
+   * of: https://aip.dev/193 and expose as details field.
+   *
    * @var string[]
    */
   public $arguments;
   /**
+   * [Output Only] The error type identifier for this error.
+   *
    * @var string
    */
   public $code;
@@ -33,16 +40,26 @@ class OperationErrorErrors extends \Google\Collection
   protected $errorDetailsType = OperationErrorErrorsErrorDetails::class;
   protected $errorDetailsDataType = 'array';
   /**
+   * [Output Only] Indicates the field in the request that caused the error.
+   * This property is optional.
+   *
    * @var string
    */
   public $location;
   /**
+   * [Output Only] An optional, human-readable error message.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string[]
+   * [Output Only] Optional error details WARNING: DO NOT MAKE VISIBLE This is
+   * for internal use-only (like componentization) (thus the visibility "none")
+   * and in case of public exposure it is strongly recommended to follow pattern
+   * of: https://aip.dev/193 and expose as details field.
+   *
+   * @param string[] $arguments
    */
   public function setArguments($arguments)
   {
@@ -56,7 +73,9 @@ class OperationErrorErrors extends \Google\Collection
     return $this->arguments;
   }
   /**
-   * @param string
+   * [Output Only] The error type identifier for this error.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -70,7 +89,7 @@ class OperationErrorErrors extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param DebugInfo
+   * @param DebugInfo $debugInfo
    */
   public function setDebugInfo(DebugInfo $debugInfo)
   {
@@ -84,7 +103,12 @@ class OperationErrorErrors extends \Google\Collection
     return $this->debugInfo;
   }
   /**
-   * @param OperationErrorErrorsErrorDetails[]
+   * [Output Only] An optional list of messages that contain the error details.
+   * There is a set of defined message types to use for providing details.The
+   * syntax depends on the error code. For example, QuotaExceededInfo will have
+   * details when the error code is QUOTA_EXCEEDED.
+   *
+   * @param OperationErrorErrorsErrorDetails[] $errorDetails
    */
   public function setErrorDetails($errorDetails)
   {
@@ -98,7 +122,10 @@ class OperationErrorErrors extends \Google\Collection
     return $this->errorDetails;
   }
   /**
-   * @param string
+   * [Output Only] Indicates the field in the request that caused the error.
+   * This property is optional.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -112,7 +139,9 @@ class OperationErrorErrors extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string
+   * [Output Only] An optional, human-readable error message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

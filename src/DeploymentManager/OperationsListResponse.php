@@ -21,6 +21,8 @@ class OperationsListResponse extends \Google\Collection
 {
   protected $collection_key = 'operations';
   /**
+   * Output only. A token used to continue a truncated list request.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class OperationsListResponse extends \Google\Collection
   protected $operationsDataType = 'array';
 
   /**
-   * @param string
+   * Output only. A token used to continue a truncated list request.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class OperationsListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Operation[]
+   * Output only. Operations contained in this list response.
+   *
+   * @param Operation[] $operations
    */
   public function setOperations($operations)
   {

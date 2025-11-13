@@ -26,7 +26,9 @@ class TargetConfiguration extends \Google\Collection
   protected $importsDataType = 'array';
 
   /**
-   * @param ConfigFile
+   * The configuration to use for this deployment.
+   *
+   * @param ConfigFile $config
    */
   public function setConfig(ConfigFile $config)
   {
@@ -40,7 +42,11 @@ class TargetConfiguration extends \Google\Collection
     return $this->config;
   }
   /**
-   * @param ImportFile[]
+   * Specifies any files to import for this configuration. This can be used to
+   * import templates or other files. For example, you might import a text file
+   * in order to use the file in a template.
+   *
+   * @param ImportFile[] $imports
    */
   public function setImports($imports)
   {

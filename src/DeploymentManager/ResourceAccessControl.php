@@ -20,12 +20,16 @@ namespace Google\Service\DeploymentManager;
 class ResourceAccessControl extends \Google\Model
 {
   /**
+   * The GCP IAM Policy to set on the resource.
+   *
    * @var string
    */
   public $gcpIamPolicy;
 
   /**
-   * @param string
+   * The GCP IAM Policy to set on the resource.
+   *
+   * @param string $gcpIamPolicy
    */
   public function setGcpIamPolicy($gcpIamPolicy)
   {

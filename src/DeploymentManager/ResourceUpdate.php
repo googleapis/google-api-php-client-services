@@ -19,28 +19,85 @@ namespace Google\Service\DeploymentManager;
 
 class ResourceUpdate extends \Google\Collection
 {
+  /**
+   * The resource is scheduled to be created, or if it already exists, acquired.
+   */
+  public const INTENT_CREATE_OR_ACQUIRE = 'CREATE_OR_ACQUIRE';
+  /**
+   * The resource is scheduled to be deleted.
+   */
+  public const INTENT_DELETE = 'DELETE';
+  /**
+   * The resource is scheduled to be acquired.
+   */
+  public const INTENT_ACQUIRE = 'ACQUIRE';
+  /**
+   * The resource is scheduled to be updated via the UPDATE method.
+   */
+  public const INTENT_UPDATE = 'UPDATE';
+  /**
+   * The resource is scheduled to be abandoned.
+   */
+  public const INTENT_ABANDON = 'ABANDON';
+  /**
+   * The resource is scheduled to be created.
+   */
+  public const INTENT_CREATE = 'CREATE';
+  /**
+   * There are changes pending for this resource.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The service is executing changes on the resource.
+   */
+  public const STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * The service is previewing changes on the resource.
+   */
+  public const STATE_IN_PREVIEW = 'IN_PREVIEW';
+  /**
+   * The service has failed to change the resource.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The service has aborted trying to change the resource.
+   */
+  public const STATE_ABORTED = 'ABORTED';
   protected $collection_key = 'warnings';
   protected $accessControlType = ResourceAccessControl::class;
   protected $accessControlDataType = '';
   protected $errorType = ResourceUpdateError::class;
   protected $errorDataType = '';
   /**
+   * Output only. The expanded properties of the resource with reference values
+   * expanded. Returned as serialized YAML.
+   *
    * @var string
    */
   public $finalProperties;
   /**
+   * Output only. The intent of the resource: `PREVIEW`, `UPDATE`, or `CANCEL`.
+   *
    * @var string
    */
   public $intent;
   /**
+   * Output only. URL of the manifest representing the update configuration of
+   * this resource.
+   *
    * @var string
    */
   public $manifest;
   /**
+   * Output only. The set of updated properties for this resource, before
+   * references are expanded. Returned as serialized YAML.
+   *
    * @var string
    */
   public $properties;
   /**
+   * Output only. The state of the resource.
+   *
    * @var string
    */
   public $state;
@@ -48,7 +105,10 @@ class ResourceUpdate extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * @param ResourceAccessControl
+   * The Access Control Policy to set on this resource after updating the
+   * resource itself.
+   *
+   * @param ResourceAccessControl $accessControl
    */
   public function setAccessControl(ResourceAccessControl $accessControl)
   {
@@ -62,7 +122,10 @@ class ResourceUpdate extends \Google\Collection
     return $this->accessControl;
   }
   /**
-   * @param ResourceUpdateError
+   * Output only. If errors are generated during update of the resource, this
+   * field will be populated.
+   *
+   * @param ResourceUpdateError $error
    */
   public function setError(ResourceUpdateError $error)
   {
@@ -76,7 +139,10 @@ class ResourceUpdate extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param string
+   * Output only. The expanded properties of the resource with reference values
+   * expanded. Returned as serialized YAML.
+   *
+   * @param string $finalProperties
    */
   public function setFinalProperties($finalProperties)
   {
@@ -90,21 +156,29 @@ class ResourceUpdate extends \Google\Collection
     return $this->finalProperties;
   }
   /**
-   * @param string
+   * Output only. The intent of the resource: `PREVIEW`, `UPDATE`, or `CANCEL`.
+   *
+   * Accepted values: CREATE_OR_ACQUIRE, DELETE, ACQUIRE, UPDATE, ABANDON,
+   * CREATE
+   *
+   * @param self::INTENT_* $intent
    */
   public function setIntent($intent)
   {
     $this->intent = $intent;
   }
   /**
-   * @return string
+   * @return self::INTENT_*
    */
   public function getIntent()
   {
     return $this->intent;
   }
   /**
-   * @param string
+   * Output only. URL of the manifest representing the update configuration of
+   * this resource.
+   *
+   * @param string $manifest
    */
   public function setManifest($manifest)
   {
@@ -118,7 +192,10 @@ class ResourceUpdate extends \Google\Collection
     return $this->manifest;
   }
   /**
-   * @param string
+   * Output only. The set of updated properties for this resource, before
+   * references are expanded. Returned as serialized YAML.
+   *
+   * @param string $properties
    */
   public function setProperties($properties)
   {
@@ -132,21 +209,28 @@ class ResourceUpdate extends \Google\Collection
     return $this->properties;
   }
   /**
-   * @param string
+   * Output only. The state of the resource.
+   *
+   * Accepted values: PENDING, IN_PROGRESS, IN_PREVIEW, FAILED, ABORTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param ResourceUpdateWarnings[]
+   * Output only. If warning messages are generated during processing of this
+   * resource, this field will be populated.
+   *
+   * @param ResourceUpdateWarnings[] $warnings
    */
   public function setWarnings($warnings)
   {

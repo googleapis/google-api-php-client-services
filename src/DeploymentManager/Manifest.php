@@ -23,6 +23,9 @@ class Manifest extends \Google\Collection
   protected $configType = ConfigFile::class;
   protected $configDataType = '';
   /**
+   * Output only. The fully-expanded configuration file, including any templates
+   * and references.
+   *
    * @var string
    */
   public $expandedConfig;
@@ -33,32 +36,46 @@ class Manifest extends \Google\Collection
   protected $importsType = ImportFile::class;
   protected $importsDataType = 'array';
   /**
+   * Output only. Creation timestamp in RFC3339 text format.
+   *
    * @var string
    */
   public $insertTime;
   /**
+   * Output only. The YAML layout for this manifest.
+   *
    * @var string
    */
   public $layout;
   /**
+   * Output only. The computed size of the fully expanded manifest.
+   *
    * @var string
    */
   public $manifestSizeBytes;
   /**
+   * Output only. The size limit for expanded manifests in the project.
+   *
    * @var string
    */
   public $manifestSizeLimitBytes;
   /**
+   * Output only. The name of the manifest.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Self link for the manifest.
+   *
    * @var string
    */
   public $selfLink;
 
   /**
-   * @param ConfigFile
+   * Output only. The YAML configuration for this manifest.
+   *
+   * @param ConfigFile $config
    */
   public function setConfig(ConfigFile $config)
   {
@@ -72,7 +89,10 @@ class Manifest extends \Google\Collection
     return $this->config;
   }
   /**
-   * @param string
+   * Output only. The fully-expanded configuration file, including any templates
+   * and references.
+   *
+   * @param string $expandedConfig
    */
   public function setExpandedConfig($expandedConfig)
   {
@@ -86,7 +106,7 @@ class Manifest extends \Google\Collection
     return $this->expandedConfig;
   }
   /**
-   * @param string
+   * @param string $id
    */
   public function setId($id)
   {
@@ -100,7 +120,9 @@ class Manifest extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param ImportFile[]
+   * Output only. The imported files for this manifest.
+   *
+   * @param ImportFile[] $imports
    */
   public function setImports($imports)
   {
@@ -114,7 +136,9 @@ class Manifest extends \Google\Collection
     return $this->imports;
   }
   /**
-   * @param string
+   * Output only. Creation timestamp in RFC3339 text format.
+   *
+   * @param string $insertTime
    */
   public function setInsertTime($insertTime)
   {
@@ -128,7 +152,9 @@ class Manifest extends \Google\Collection
     return $this->insertTime;
   }
   /**
-   * @param string
+   * Output only. The YAML layout for this manifest.
+   *
+   * @param string $layout
    */
   public function setLayout($layout)
   {
@@ -142,7 +168,9 @@ class Manifest extends \Google\Collection
     return $this->layout;
   }
   /**
-   * @param string
+   * Output only. The computed size of the fully expanded manifest.
+   *
+   * @param string $manifestSizeBytes
    */
   public function setManifestSizeBytes($manifestSizeBytes)
   {
@@ -156,7 +184,9 @@ class Manifest extends \Google\Collection
     return $this->manifestSizeBytes;
   }
   /**
-   * @param string
+   * Output only. The size limit for expanded manifests in the project.
+   *
+   * @param string $manifestSizeLimitBytes
    */
   public function setManifestSizeLimitBytes($manifestSizeLimitBytes)
   {
@@ -170,7 +200,9 @@ class Manifest extends \Google\Collection
     return $this->manifestSizeLimitBytes;
   }
   /**
-   * @param string
+   * Output only. The name of the manifest.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -184,7 +216,9 @@ class Manifest extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Self link for the manifest.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {

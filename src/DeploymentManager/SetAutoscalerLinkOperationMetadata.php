@@ -21,16 +21,22 @@ class SetAutoscalerLinkOperationMetadata extends \Google\Collection
 {
   protected $collection_key = 'zonalIgmIds';
   /**
+   * List of zonal IGM IDs part of the RMIG.
+   *
    * @var string[]
    */
   public $zonalIgmIds;
   /**
+   * Map of zone to an ID of the zonal IGM belonging to the RMIG.
+   *
    * @var string[]
    */
   public $zoneToIgmIds;
 
   /**
-   * @param string[]
+   * List of zonal IGM IDs part of the RMIG.
+   *
+   * @param string[] $zonalIgmIds
    */
   public function setZonalIgmIds($zonalIgmIds)
   {
@@ -44,7 +50,9 @@ class SetAutoscalerLinkOperationMetadata extends \Google\Collection
     return $this->zonalIgmIds;
   }
   /**
-   * @param string[]
+   * Map of zone to an ID of the zonal IGM belonging to the RMIG.
+   *
+   * @param string[] $zoneToIgmIds
    */
   public function setZoneToIgmIds($zoneToIgmIds)
   {
