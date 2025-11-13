@@ -19,25 +19,52 @@ namespace Google\Service\YouTube;
 
 class CuepointSchedule extends \Google\Model
 {
+  public const SCHEDULE_STRATEGY_scheduleStrategyUnspecified = 'scheduleStrategyUnspecified';
   /**
+   * Strategy to schedule cuepoints at one time for all viewers.
+   */
+  public const SCHEDULE_STRATEGY_concurrent = 'concurrent';
+  /**
+   * Strategy to schedule cuepoints at an increased rate to allow viewers to
+   * receive cuepoints when eligible. See go/lcr-non-concurrent-ads for more
+   * details.
+   */
+  public const SCHEDULE_STRATEGY_nonConcurrent = 'nonConcurrent';
+  /**
+   * This field is semantically required. If it is set false or not set, other
+   * fields in this message will be ignored.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad
+   * Zone"). The value is specified in ISO 8601 format.
+   *
    * @var string
    */
   public $pauseAdsUntil;
   /**
+   * Interval frequency in seconds that api uses to insert cuepoints
+   * automatically.
+   *
+   * @deprecated
    * @var int
    */
   public $repeatIntervalSecs;
   /**
+   * The strategy to use when scheduling cuepoints.
+   *
+   * @deprecated
    * @var string
    */
   public $scheduleStrategy;
 
   /**
-   * @param bool
+   * This field is semantically required. If it is set false or not set, other
+   * fields in this message will be ignored.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -51,7 +78,10 @@ class CuepointSchedule extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * If set, automatic cuepoint insertion is paused until this timestamp ("No Ad
+   * Zone"). The value is specified in ISO 8601 format.
+   *
+   * @param string $pauseAdsUntil
    */
   public function setPauseAdsUntil($pauseAdsUntil)
   {
@@ -65,13 +95,18 @@ class CuepointSchedule extends \Google\Model
     return $this->pauseAdsUntil;
   }
   /**
-   * @param int
+   * Interval frequency in seconds that api uses to insert cuepoints
+   * automatically.
+   *
+   * @deprecated
+   * @param int $repeatIntervalSecs
    */
   public function setRepeatIntervalSecs($repeatIntervalSecs)
   {
     $this->repeatIntervalSecs = $repeatIntervalSecs;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getRepeatIntervalSecs()
@@ -79,14 +114,20 @@ class CuepointSchedule extends \Google\Model
     return $this->repeatIntervalSecs;
   }
   /**
-   * @param string
+   * The strategy to use when scheduling cuepoints.
+   *
+   * Accepted values: scheduleStrategyUnspecified, concurrent, nonConcurrent
+   *
+   * @deprecated
+   * @param self::SCHEDULE_STRATEGY_* $scheduleStrategy
    */
   public function setScheduleStrategy($scheduleStrategy)
   {
     $this->scheduleStrategy = $scheduleStrategy;
   }
   /**
-   * @return string
+   * @deprecated
+   * @return self::SCHEDULE_STRATEGY_*
    */
   public function getScheduleStrategy()
   {

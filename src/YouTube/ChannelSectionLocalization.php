@@ -20,18 +20,25 @@ namespace Google\Service\YouTube;
 class ChannelSectionLocalization extends \Google\Model
 {
   /**
+   * The localized strings for channel section's title.
+   *
+   * @deprecated
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The localized strings for channel section's title.
+   *
+   * @deprecated
+   * @param string $title
    */
   public function setTitle($title)
   {
     $this->title = $title;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTitle()

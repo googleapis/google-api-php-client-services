@@ -19,8 +19,23 @@ namespace Google\Service\YouTube;
 
 class GeoPoint extends \Google\Model
 {
+  /**
+   * Altitude above the reference ellipsoid, in meters.
+   *
+   * @var 
+   */
   public $altitude;
+  /**
+   * Latitude in degrees.
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * Longitude in degrees.
+   *
+   * @var 
+   */
   public $longitude;
 
   public function setAltitude($altitude)

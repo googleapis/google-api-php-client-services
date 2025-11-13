@@ -30,14 +30,21 @@ class Channel extends \Google\Model
   protected $conversionPingsType = ChannelConversionPings::class;
   protected $conversionPingsDataType = '';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID that YouTube uses to uniquely identify the channel.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#channel".
+   *
    * @var string
    */
   public $kind;
@@ -53,7 +60,10 @@ class Channel extends \Google\Model
   protected $topicDetailsDataType = '';
 
   /**
-   * @param ChannelAuditDetails
+   * The auditionDetails object encapsulates channel data that is relevant for
+   * YouTube Partners during the audition process.
+   *
+   * @param ChannelAuditDetails $auditDetails
    */
   public function setAuditDetails(ChannelAuditDetails $auditDetails)
   {
@@ -67,7 +77,10 @@ class Channel extends \Google\Model
     return $this->auditDetails;
   }
   /**
-   * @param ChannelBrandingSettings
+   * The brandingSettings object encapsulates information about the branding of
+   * the channel.
+   *
+   * @param ChannelBrandingSettings $brandingSettings
    */
   public function setBrandingSettings(ChannelBrandingSettings $brandingSettings)
   {
@@ -81,7 +94,10 @@ class Channel extends \Google\Model
     return $this->brandingSettings;
   }
   /**
-   * @param ChannelContentDetails
+   * The contentDetails object encapsulates information about the channel's
+   * content.
+   *
+   * @param ChannelContentDetails $contentDetails
    */
   public function setContentDetails(ChannelContentDetails $contentDetails)
   {
@@ -95,7 +111,10 @@ class Channel extends \Google\Model
     return $this->contentDetails;
   }
   /**
-   * @param ChannelContentOwnerDetails
+   * The contentOwnerDetails object encapsulates channel data that is relevant
+   * for YouTube Partners linked with the channel.
+   *
+   * @param ChannelContentOwnerDetails $contentOwnerDetails
    */
   public function setContentOwnerDetails(ChannelContentOwnerDetails $contentOwnerDetails)
   {
@@ -109,13 +128,18 @@ class Channel extends \Google\Model
     return $this->contentOwnerDetails;
   }
   /**
-   * @param ChannelConversionPings
+   * The conversionPings object encapsulates information about conversion pings
+   * that need to be respected by the channel.
+   *
+   * @deprecated
+   * @param ChannelConversionPings $conversionPings
    */
   public function setConversionPings(ChannelConversionPings $conversionPings)
   {
     $this->conversionPings = $conversionPings;
   }
   /**
+   * @deprecated
    * @return ChannelConversionPings
    */
   public function getConversionPings()
@@ -123,7 +147,9 @@ class Channel extends \Google\Model
     return $this->conversionPings;
   }
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -137,7 +163,9 @@ class Channel extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the channel.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -151,7 +179,10 @@ class Channel extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#channel".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -165,7 +196,9 @@ class Channel extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param ChannelLocalization[]
+   * Localizations for different languages
+   *
+   * @param ChannelLocalization[] $localizations
    */
   public function setLocalizations($localizations)
   {
@@ -179,7 +212,10 @@ class Channel extends \Google\Model
     return $this->localizations;
   }
   /**
-   * @param ChannelSnippet
+   * The snippet object contains basic details about the channel, such as its
+   * title, description, and thumbnail images.
+   *
+   * @param ChannelSnippet $snippet
    */
   public function setSnippet(ChannelSnippet $snippet)
   {
@@ -193,7 +229,9 @@ class Channel extends \Google\Model
     return $this->snippet;
   }
   /**
-   * @param ChannelStatistics
+   * The statistics object encapsulates statistics for the channel.
+   *
+   * @param ChannelStatistics $statistics
    */
   public function setStatistics(ChannelStatistics $statistics)
   {
@@ -207,7 +245,10 @@ class Channel extends \Google\Model
     return $this->statistics;
   }
   /**
-   * @param ChannelStatus
+   * The status object encapsulates information about the privacy status of the
+   * channel.
+   *
+   * @param ChannelStatus $status
    */
   public function setStatus(ChannelStatus $status)
   {
@@ -221,7 +262,10 @@ class Channel extends \Google\Model
     return $this->status;
   }
   /**
-   * @param ChannelTopicDetails
+   * The topicDetails object encapsulates information about Freebase topics
+   * associated with the channel.
+   *
+   * @param ChannelTopicDetails $topicDetails
    */
   public function setTopicDetails(ChannelTopicDetails $topicDetails)
   {

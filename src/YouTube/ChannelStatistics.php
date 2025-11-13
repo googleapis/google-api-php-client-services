@@ -20,28 +20,40 @@ namespace Google\Service\YouTube;
 class ChannelStatistics extends \Google\Model
 {
   /**
+   * The number of comments for the channel.
+   *
    * @var string
    */
   public $commentCount;
   /**
+   * Whether or not the number of subscribers is shown for this user.
+   *
    * @var bool
    */
   public $hiddenSubscriberCount;
   /**
+   * The number of subscribers that the channel has.
+   *
    * @var string
    */
   public $subscriberCount;
   /**
+   * The number of videos uploaded to the channel.
+   *
    * @var string
    */
   public $videoCount;
   /**
+   * The number of times the channel has been viewed.
+   *
    * @var string
    */
   public $viewCount;
 
   /**
-   * @param string
+   * The number of comments for the channel.
+   *
+   * @param string $commentCount
    */
   public function setCommentCount($commentCount)
   {
@@ -55,7 +67,9 @@ class ChannelStatistics extends \Google\Model
     return $this->commentCount;
   }
   /**
-   * @param bool
+   * Whether or not the number of subscribers is shown for this user.
+   *
+   * @param bool $hiddenSubscriberCount
    */
   public function setHiddenSubscriberCount($hiddenSubscriberCount)
   {
@@ -69,7 +83,9 @@ class ChannelStatistics extends \Google\Model
     return $this->hiddenSubscriberCount;
   }
   /**
-   * @param string
+   * The number of subscribers that the channel has.
+   *
+   * @param string $subscriberCount
    */
   public function setSubscriberCount($subscriberCount)
   {
@@ -83,7 +99,9 @@ class ChannelStatistics extends \Google\Model
     return $this->subscriberCount;
   }
   /**
-   * @param string
+   * The number of videos uploaded to the channel.
+   *
+   * @param string $videoCount
    */
   public function setVideoCount($videoCount)
   {
@@ -97,7 +115,9 @@ class ChannelStatistics extends \Google\Model
     return $this->videoCount;
   }
   /**
-   * @param string
+   * The number of times the channel has been viewed.
+   *
+   * @param string $viewCount
    */
   public function setViewCount($viewCount)
   {

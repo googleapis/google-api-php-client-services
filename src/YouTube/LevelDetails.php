@@ -20,12 +20,16 @@ namespace Google\Service\YouTube;
 class LevelDetails extends \Google\Model
 {
   /**
+   * The name that should be used when referring to this level.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * The name that should be used when referring to this level.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

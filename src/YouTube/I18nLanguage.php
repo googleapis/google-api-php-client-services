@@ -20,14 +20,21 @@ namespace Google\Service\YouTube;
 class I18nLanguage extends \Google\Model
 {
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID that YouTube uses to uniquely identify the i18n language.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#i18nLanguage".
+   *
    * @var string
    */
   public $kind;
@@ -35,7 +42,9 @@ class I18nLanguage extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -49,7 +58,9 @@ class I18nLanguage extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the i18n language.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +74,10 @@ class I18nLanguage extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#i18nLanguage".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -77,7 +91,10 @@ class I18nLanguage extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param I18nLanguageSnippet
+   * The snippet object contains basic details about the i18n language, such as
+   * language code and human-readable name.
+   *
+   * @param I18nLanguageSnippet $snippet
    */
   public function setSnippet(I18nLanguageSnippet $snippet)
   {

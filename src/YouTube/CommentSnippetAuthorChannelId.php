@@ -20,12 +20,16 @@ namespace Google\Service\YouTube;
 class CommentSnippetAuthorChannelId extends \Google\Model
 {
   /**
+   * The id of the author's YouTube channel.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The id of the author's YouTube channel.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

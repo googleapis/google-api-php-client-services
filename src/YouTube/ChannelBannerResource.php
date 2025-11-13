@@ -24,16 +24,21 @@ class ChannelBannerResource extends \Google\Model
    */
   public $etag;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#channelBannerResource".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The URL of this banner image.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -47,7 +52,10 @@ class ChannelBannerResource extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#channelBannerResource".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +69,9 @@ class ChannelBannerResource extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The URL of this banner image.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

@@ -19,20 +19,31 @@ namespace Google\Service\YouTube;
 
 class ChannelToStoreLinkDetailsBillingDetails extends \Google\Model
 {
+  public const BILLING_STATUS_billingStatusUnspecified = 'billingStatusUnspecified';
+  public const BILLING_STATUS_billingStatusPending = 'billingStatusPending';
+  public const BILLING_STATUS_billingStatusActive = 'billingStatusActive';
+  public const BILLING_STATUS_billingStatusInactive = 'billingStatusInactive';
   /**
+   * The current billing profile status.
+   *
    * @var string
    */
   public $billingStatus;
 
   /**
-   * @param string
+   * The current billing profile status.
+   *
+   * Accepted values: billingStatusUnspecified, billingStatusPending,
+   * billingStatusActive, billingStatusInactive
+   *
+   * @param self::BILLING_STATUS_* $billingStatus
    */
   public function setBillingStatus($billingStatus)
   {
     $this->billingStatus = $billingStatus;
   }
   /**
-   * @return string
+   * @return self::BILLING_STATUS_*
    */
   public function getBillingStatus()
   {

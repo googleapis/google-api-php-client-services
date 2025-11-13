@@ -21,6 +21,8 @@ class ChannelSettings extends \Google\Collection
 {
   protected $collection_key = 'featuredChannelsUrls';
   /**
+   * The country of the channel.
+   *
    * @var string
    */
   public $country;
@@ -29,56 +31,91 @@ class ChannelSettings extends \Google\Collection
    */
   public $defaultLanguage;
   /**
+   * Which content tab users should see when viewing the channel.
+   *
+   * @deprecated
    * @var string
    */
   public $defaultTab;
   /**
+   * Specifies the channel description.
+   *
    * @var string
    */
   public $description;
   /**
+   * Title for the featured channels tab.
+   *
+   * @deprecated
    * @var string
    */
   public $featuredChannelsTitle;
   /**
+   * The list of featured channels.
+   *
+   * @deprecated
    * @var string[]
    */
   public $featuredChannelsUrls;
   /**
+   * Lists keywords associated with the channel, comma-separated.
+   *
    * @var string
    */
   public $keywords;
   /**
+   * Whether user-submitted comments left on the channel page need to be
+   * approved by the channel owner to be publicly visible.
+   *
+   * @deprecated
    * @var bool
    */
   public $moderateComments;
   /**
+   * A prominent color that can be rendered on this channel page.
+   *
+   * @deprecated
    * @var string
    */
   public $profileColor;
   /**
+   * Whether the tab to browse the videos should be displayed.
+   *
+   * @deprecated
    * @var bool
    */
   public $showBrowseView;
   /**
+   * Whether related channels should be proposed.
+   *
+   * @deprecated
    * @var bool
    */
   public $showRelatedChannels;
   /**
+   * Specifies the channel title.
+   *
    * @var string
    */
   public $title;
   /**
+   * The ID for a Google Analytics account to track and measure traffic to the
+   * channels.
+   *
    * @var string
    */
   public $trackingAnalyticsAccountId;
   /**
+   * The trailer of the channel, for users that are not subscribers.
+   *
    * @var string
    */
   public $unsubscribedTrailer;
 
   /**
-   * @param string
+   * The country of the channel.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -92,7 +129,7 @@ class ChannelSettings extends \Google\Collection
     return $this->country;
   }
   /**
-   * @param string
+   * @param string $defaultLanguage
    */
   public function setDefaultLanguage($defaultLanguage)
   {
@@ -106,13 +143,17 @@ class ChannelSettings extends \Google\Collection
     return $this->defaultLanguage;
   }
   /**
-   * @param string
+   * Which content tab users should see when viewing the channel.
+   *
+   * @deprecated
+   * @param string $defaultTab
    */
   public function setDefaultTab($defaultTab)
   {
     $this->defaultTab = $defaultTab;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getDefaultTab()
@@ -120,7 +161,9 @@ class ChannelSettings extends \Google\Collection
     return $this->defaultTab;
   }
   /**
-   * @param string
+   * Specifies the channel description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -134,13 +177,17 @@ class ChannelSettings extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Title for the featured channels tab.
+   *
+   * @deprecated
+   * @param string $featuredChannelsTitle
    */
   public function setFeaturedChannelsTitle($featuredChannelsTitle)
   {
     $this->featuredChannelsTitle = $featuredChannelsTitle;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getFeaturedChannelsTitle()
@@ -148,13 +195,17 @@ class ChannelSettings extends \Google\Collection
     return $this->featuredChannelsTitle;
   }
   /**
-   * @param string[]
+   * The list of featured channels.
+   *
+   * @deprecated
+   * @param string[] $featuredChannelsUrls
    */
   public function setFeaturedChannelsUrls($featuredChannelsUrls)
   {
     $this->featuredChannelsUrls = $featuredChannelsUrls;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getFeaturedChannelsUrls()
@@ -162,7 +213,9 @@ class ChannelSettings extends \Google\Collection
     return $this->featuredChannelsUrls;
   }
   /**
-   * @param string
+   * Lists keywords associated with the channel, comma-separated.
+   *
+   * @param string $keywords
    */
   public function setKeywords($keywords)
   {
@@ -176,13 +229,18 @@ class ChannelSettings extends \Google\Collection
     return $this->keywords;
   }
   /**
-   * @param bool
+   * Whether user-submitted comments left on the channel page need to be
+   * approved by the channel owner to be publicly visible.
+   *
+   * @deprecated
+   * @param bool $moderateComments
    */
   public function setModerateComments($moderateComments)
   {
     $this->moderateComments = $moderateComments;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getModerateComments()
@@ -190,13 +248,17 @@ class ChannelSettings extends \Google\Collection
     return $this->moderateComments;
   }
   /**
-   * @param string
+   * A prominent color that can be rendered on this channel page.
+   *
+   * @deprecated
+   * @param string $profileColor
    */
   public function setProfileColor($profileColor)
   {
     $this->profileColor = $profileColor;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProfileColor()
@@ -204,13 +266,17 @@ class ChannelSettings extends \Google\Collection
     return $this->profileColor;
   }
   /**
-   * @param bool
+   * Whether the tab to browse the videos should be displayed.
+   *
+   * @deprecated
+   * @param bool $showBrowseView
    */
   public function setShowBrowseView($showBrowseView)
   {
     $this->showBrowseView = $showBrowseView;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getShowBrowseView()
@@ -218,13 +284,17 @@ class ChannelSettings extends \Google\Collection
     return $this->showBrowseView;
   }
   /**
-   * @param bool
+   * Whether related channels should be proposed.
+   *
+   * @deprecated
+   * @param bool $showRelatedChannels
    */
   public function setShowRelatedChannels($showRelatedChannels)
   {
     $this->showRelatedChannels = $showRelatedChannels;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getShowRelatedChannels()
@@ -232,7 +302,9 @@ class ChannelSettings extends \Google\Collection
     return $this->showRelatedChannels;
   }
   /**
-   * @param string
+   * Specifies the channel title.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -246,7 +318,10 @@ class ChannelSettings extends \Google\Collection
     return $this->title;
   }
   /**
-   * @param string
+   * The ID for a Google Analytics account to track and measure traffic to the
+   * channels.
+   *
+   * @param string $trackingAnalyticsAccountId
    */
   public function setTrackingAnalyticsAccountId($trackingAnalyticsAccountId)
   {
@@ -260,7 +335,9 @@ class ChannelSettings extends \Google\Collection
     return $this->trackingAnalyticsAccountId;
   }
   /**
-   * @param string
+   * The trailer of the channel, for users that are not subscribers.
+   *
+   * @param string $unsubscribedTrailer
    */
   public function setUnsubscribedTrailer($unsubscribedTrailer)
   {

@@ -23,7 +23,10 @@ class ActivityContentDetailsLike extends \Google\Model
   protected $resourceIdDataType = '';
 
   /**
-   * @param ResourceId
+   * The resourceId object contains information that identifies the rated
+   * resource.
+   *
+   * @param ResourceId $resourceId
    */
   public function setResourceId(ResourceId $resourceId)
   {

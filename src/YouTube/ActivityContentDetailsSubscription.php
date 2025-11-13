@@ -23,7 +23,10 @@ class ActivityContentDetailsSubscription extends \Google\Model
   protected $resourceIdDataType = '';
 
   /**
-   * @param ResourceId
+   * The resourceId object contains information that identifies the resource
+   * that the user subscribed to.
+   *
+   * @param ResourceId $resourceId
    */
   public function setResourceId(ResourceId $resourceId)
   {

@@ -23,7 +23,10 @@ class ActivityContentDetailsComment extends \Google\Model
   protected $resourceIdDataType = '';
 
   /**
-   * @param ResourceId
+   * The resourceId object contains information that identifies the resource
+   * associated with the comment.
+   *
+   * @param ResourceId $resourceId
    */
   public function setResourceId(ResourceId $resourceId)
   {

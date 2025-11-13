@@ -25,7 +25,7 @@ class AbuseType extends \Google\Model
   public $id;
 
   /**
-   * @param string
+   * @param string $id
    */
   public function setId($id)
   {

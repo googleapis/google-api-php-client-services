@@ -20,16 +20,22 @@ namespace Google\Service\YouTube;
 class I18nLanguageSnippet extends \Google\Model
 {
   /**
+   * A short BCP-47 code that uniquely identifies a language.
+   *
    * @var string
    */
   public $hl;
   /**
+   * The human-readable name of the language in the language itself.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * A short BCP-47 code that uniquely identifies a language.
+   *
+   * @param string $hl
    */
   public function setHl($hl)
   {
@@ -43,7 +49,9 @@ class I18nLanguageSnippet extends \Google\Model
     return $this->hl;
   }
   /**
-   * @param string
+   * The human-readable name of the language in the language itself.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -19,15 +19,31 @@ namespace Google\Service\YouTube;
 
 class ChannelStatus extends \Google\Model
 {
+  public const LONG_UPLOADS_STATUS_longUploadsUnspecified = 'longUploadsUnspecified';
+  public const LONG_UPLOADS_STATUS_allowed = 'allowed';
+  public const LONG_UPLOADS_STATUS_eligible = 'eligible';
+  public const LONG_UPLOADS_STATUS_disallowed = 'disallowed';
+  public const PRIVACY_STATUS_public = 'public';
+  public const PRIVACY_STATUS_unlisted = 'unlisted';
+  public const PRIVACY_STATUS_private = 'private';
   /**
+   * Whether the channel is considered ypp monetization enabled. See go/yppornot
+   * for more details.
+   *
    * @var bool
    */
   public $isChannelMonetizationEnabled;
   /**
+   * If true, then the user is linked to either a YouTube username or G+
+   * account. Otherwise, the user doesn't have a public YouTube identity.
+   *
    * @var bool
    */
   public $isLinked;
   /**
+   * The long uploads status of this channel. See
+   * https://support.google.com/youtube/answer/71673 for more information.
+   *
    * @var string
    */
   public $longUploadsStatus;
@@ -36,6 +52,8 @@ class ChannelStatus extends \Google\Model
    */
   public $madeForKids;
   /**
+   * Privacy status of the channel.
+   *
    * @var string
    */
   public $privacyStatus;
@@ -45,7 +63,10 @@ class ChannelStatus extends \Google\Model
   public $selfDeclaredMadeForKids;
 
   /**
-   * @param bool
+   * Whether the channel is considered ypp monetization enabled. See go/yppornot
+   * for more details.
+   *
+   * @param bool $isChannelMonetizationEnabled
    */
   public function setIsChannelMonetizationEnabled($isChannelMonetizationEnabled)
   {
@@ -59,7 +80,10 @@ class ChannelStatus extends \Google\Model
     return $this->isChannelMonetizationEnabled;
   }
   /**
-   * @param bool
+   * If true, then the user is linked to either a YouTube username or G+
+   * account. Otherwise, the user doesn't have a public YouTube identity.
+   *
+   * @param bool $isLinked
    */
   public function setIsLinked($isLinked)
   {
@@ -73,21 +97,26 @@ class ChannelStatus extends \Google\Model
     return $this->isLinked;
   }
   /**
-   * @param string
+   * The long uploads status of this channel. See
+   * https://support.google.com/youtube/answer/71673 for more information.
+   *
+   * Accepted values: longUploadsUnspecified, allowed, eligible, disallowed
+   *
+   * @param self::LONG_UPLOADS_STATUS_* $longUploadsStatus
    */
   public function setLongUploadsStatus($longUploadsStatus)
   {
     $this->longUploadsStatus = $longUploadsStatus;
   }
   /**
-   * @return string
+   * @return self::LONG_UPLOADS_STATUS_*
    */
   public function getLongUploadsStatus()
   {
     return $this->longUploadsStatus;
   }
   /**
-   * @param bool
+   * @param bool $madeForKids
    */
   public function setMadeForKids($madeForKids)
   {
@@ -101,21 +130,25 @@ class ChannelStatus extends \Google\Model
     return $this->madeForKids;
   }
   /**
-   * @param string
+   * Privacy status of the channel.
+   *
+   * Accepted values: public, unlisted, private
+   *
+   * @param self::PRIVACY_STATUS_* $privacyStatus
    */
   public function setPrivacyStatus($privacyStatus)
   {
     $this->privacyStatus = $privacyStatus;
   }
   /**
-   * @return string
+   * @return self::PRIVACY_STATUS_*
    */
   public function getPrivacyStatus()
   {
     return $this->privacyStatus;
   }
   /**
-   * @param bool
+   * @param bool $selfDeclaredMadeForKids
    */
   public function setSelfDeclaredMadeForKids($selfDeclaredMadeForKids)
   {

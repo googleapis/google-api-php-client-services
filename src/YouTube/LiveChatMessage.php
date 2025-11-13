@@ -22,14 +22,21 @@ class LiveChatMessage extends \Google\Model
   protected $authorDetailsType = LiveChatMessageAuthorDetails::class;
   protected $authorDetailsDataType = '';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID that YouTube assigns to uniquely identify the message.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#liveChatMessage".
+   *
    * @var string
    */
   public $kind;
@@ -37,7 +44,10 @@ class LiveChatMessage extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * @param LiveChatMessageAuthorDetails
+   * The authorDetails object contains basic details about the user that posted
+   * this message.
+   *
+   * @param LiveChatMessageAuthorDetails $authorDetails
    */
   public function setAuthorDetails(LiveChatMessageAuthorDetails $authorDetails)
   {
@@ -51,7 +61,9 @@ class LiveChatMessage extends \Google\Model
     return $this->authorDetails;
   }
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -65,7 +77,9 @@ class LiveChatMessage extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID that YouTube assigns to uniquely identify the message.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -79,7 +93,10 @@ class LiveChatMessage extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#liveChatMessage".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -93,7 +110,9 @@ class LiveChatMessage extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param LiveChatMessageSnippet
+   * The snippet object contains basic details about the message.
+   *
+   * @param LiveChatMessageSnippet $snippet
    */
   public function setSnippet(LiveChatMessageSnippet $snippet)
   {

@@ -20,37 +20,63 @@ namespace Google\Service\YouTube;
 class InvideoPosition extends \Google\Model
 {
   /**
+   * @deprecated
+   */
+  public const CORNER_POSITION_topLeft = 'topLeft';
+  public const CORNER_POSITION_topRight = 'topRight';
+  /**
+   * @deprecated
+   */
+  public const CORNER_POSITION_bottomLeft = 'bottomLeft';
+  /**
+   * @deprecated
+   */
+  public const CORNER_POSITION_bottomRight = 'bottomRight';
+  public const TYPE_corner = 'corner';
+  /**
+   * Describes in which corner of the video the visual widget will appear.
+   *
    * @var string
    */
   public $cornerPosition;
   /**
+   * Defines the position type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Describes in which corner of the video the visual widget will appear.
+   *
+   * Accepted values: topLeft, topRight, bottomLeft, bottomRight
+   *
+   * @param self::CORNER_POSITION_* $cornerPosition
    */
   public function setCornerPosition($cornerPosition)
   {
     $this->cornerPosition = $cornerPosition;
   }
   /**
-   * @return string
+   * @return self::CORNER_POSITION_*
    */
   public function getCornerPosition()
   {
     return $this->cornerPosition;
   }
   /**
-   * @param string
+   * Defines the position type.
+   *
+   * Accepted values: corner
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

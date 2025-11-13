@@ -21,26 +21,39 @@ class I18nRegionListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Serialized EventId of the request which produced this response.
+   *
+   * @deprecated
    * @var string
    */
   public $eventId;
   protected $itemsType = I18nRegion::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#i18nRegionListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The visitorId identifies the visitor.
+   *
+   * @deprecated
    * @var string
    */
   public $visitorId;
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -54,13 +67,17 @@ class I18nRegionListResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Serialized EventId of the request which produced this response.
+   *
+   * @deprecated
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {
     $this->eventId = $eventId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getEventId()
@@ -68,7 +85,10 @@ class I18nRegionListResponse extends \Google\Collection
     return $this->eventId;
   }
   /**
-   * @param I18nRegion[]
+   * A list of regions where YouTube is available. In this map, the i18n region
+   * ID is the map key, and its value is the corresponding i18nRegion resource.
+   *
+   * @param I18nRegion[] $items
    */
   public function setItems($items)
   {
@@ -82,7 +102,10 @@ class I18nRegionListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#i18nRegionListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -96,13 +119,17 @@ class I18nRegionListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The visitorId identifies the visitor.
+   *
+   * @deprecated
+   * @param string $visitorId
    */
   public function setVisitorId($visitorId)
   {
     $this->visitorId = $visitorId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getVisitorId()

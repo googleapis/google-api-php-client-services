@@ -19,6 +19,9 @@ namespace Google\Service\YouTube;
 
 class LiveChatPollDetails extends \Google\Model
 {
+  public const STATUS_unknown = 'unknown';
+  public const STATUS_active = 'active';
+  public const STATUS_closed = 'closed';
   protected $metadataType = LiveChatPollDetailsPollMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -27,7 +30,7 @@ class LiveChatPollDetails extends \Google\Model
   public $status;
 
   /**
-   * @param LiveChatPollDetailsPollMetadata
+   * @param LiveChatPollDetailsPollMetadata $metadata
    */
   public function setMetadata(LiveChatPollDetailsPollMetadata $metadata)
   {
@@ -41,14 +44,14 @@ class LiveChatPollDetails extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

@@ -33,7 +33,7 @@ class Entity extends \Google\Model
   public $url;
 
   /**
-   * @param string
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +47,7 @@ class Entity extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $typeId
    */
   public function setTypeId($typeId)
   {
@@ -61,7 +61,7 @@ class Entity extends \Google\Model
     return $this->typeId;
   }
   /**
-   * @param string
+   * @param string $url
    */
   public function setUrl($url)
   {

@@ -23,7 +23,7 @@ class ChannelContentDetails extends \Google\Model
   protected $relatedPlaylistsDataType = '';
 
   /**
-   * @param ChannelContentDetailsRelatedPlaylists
+   * @param ChannelContentDetailsRelatedPlaylists $relatedPlaylists
    */
   public function setRelatedPlaylists(ChannelContentDetailsRelatedPlaylists $relatedPlaylists)
   {

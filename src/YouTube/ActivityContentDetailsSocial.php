@@ -19,27 +19,41 @@ namespace Google\Service\YouTube;
 
 class ActivityContentDetailsSocial extends \Google\Model
 {
+  public const TYPE_unspecified = 'unspecified';
+  public const TYPE_googlePlus = 'googlePlus';
+  public const TYPE_facebook = 'facebook';
+  public const TYPE_twitter = 'twitter';
   /**
+   * The author of the social network post.
+   *
    * @var string
    */
   public $author;
   /**
+   * An image of the post's author.
+   *
    * @var string
    */
   public $imageUrl;
   /**
+   * The URL of the social network post.
+   *
    * @var string
    */
   public $referenceUrl;
   protected $resourceIdType = ResourceId::class;
   protected $resourceIdDataType = '';
   /**
+   * The name of the social network.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The author of the social network post.
+   *
+   * @param string $author
    */
   public function setAuthor($author)
   {
@@ -53,7 +67,9 @@ class ActivityContentDetailsSocial extends \Google\Model
     return $this->author;
   }
   /**
-   * @param string
+   * An image of the post's author.
+   *
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -67,7 +83,9 @@ class ActivityContentDetailsSocial extends \Google\Model
     return $this->imageUrl;
   }
   /**
-   * @param string
+   * The URL of the social network post.
+   *
+   * @param string $referenceUrl
    */
   public function setReferenceUrl($referenceUrl)
   {
@@ -81,7 +99,10 @@ class ActivityContentDetailsSocial extends \Google\Model
     return $this->referenceUrl;
   }
   /**
-   * @param ResourceId
+   * The resourceId object encapsulates information that identifies the resource
+   * associated with a social network post.
+   *
+   * @param ResourceId $resourceId
    */
   public function setResourceId(ResourceId $resourceId)
   {
@@ -95,14 +116,18 @@ class ActivityContentDetailsSocial extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param string
+   * The name of the social network.
+   *
+   * Accepted values: unspecified, googlePlus, facebook, twitter
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

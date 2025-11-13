@@ -19,11 +19,44 @@ namespace Google\Service\YouTube;
 
 class LiveChatMessageSnippet extends \Google\Model
 {
+  public const TYPE_invalidType = 'invalidType';
+  public const TYPE_textMessageEvent = 'textMessageEvent';
+  public const TYPE_tombstone = 'tombstone';
+  public const TYPE_fanFundingEvent = 'fanFundingEvent';
+  public const TYPE_chatEndedEvent = 'chatEndedEvent';
+  public const TYPE_sponsorOnlyModeStartedEvent = 'sponsorOnlyModeStartedEvent';
+  public const TYPE_sponsorOnlyModeEndedEvent = 'sponsorOnlyModeEndedEvent';
+  public const TYPE_newSponsorEvent = 'newSponsorEvent';
+  public const TYPE_memberMilestoneChatEvent = 'memberMilestoneChatEvent';
+  public const TYPE_membershipGiftingEvent = 'membershipGiftingEvent';
+  public const TYPE_giftMembershipReceivedEvent = 'giftMembershipReceivedEvent';
+  public const TYPE_messageDeletedEvent = 'messageDeletedEvent';
+  public const TYPE_messageRetractedEvent = 'messageRetractedEvent';
+  public const TYPE_userBannedEvent = 'userBannedEvent';
+  public const TYPE_superChatEvent = 'superChatEvent';
+  public const TYPE_superStickerEvent = 'superStickerEvent';
+  public const TYPE_pollEvent = 'pollEvent';
   /**
+   * The ID of the user that authored this message, this field is not always
+   * filled. textMessageEvent - the user that wrote the message fanFundingEvent
+   * - the user that funded the broadcast newSponsorEvent - the user that just
+   * became a sponsor memberMilestoneChatEvent - the member that sent the
+   * message membershipGiftingEvent - the user that made the purchase
+   * giftMembershipReceivedEvent - the user that received the gift membership
+   * messageDeletedEvent - the moderator that took the action
+   * messageRetractedEvent - the author that retracted their message
+   * userBannedEvent - the moderator that took the action superChatEvent - the
+   * user that made the purchase superStickerEvent - the user that made the
+   * purchase pollEvent - the user that created the poll
+   *
    * @var string
    */
   public $authorChannelId;
   /**
+   * Contains a string that can be displayed to the user. If this field is not
+   * present the message is silent, at the moment only messages of type
+   * TOMBSTONE and CHAT_ENDED_EVENT are silent.
+   *
    * @var string
    */
   public $displayMessage;
@@ -32,6 +65,8 @@ class LiveChatMessageSnippet extends \Google\Model
   protected $giftMembershipReceivedDetailsType = LiveChatGiftMembershipReceivedDetails::class;
   protected $giftMembershipReceivedDetailsDataType = '';
   /**
+   * Whether the message has display content that should be displayed to users.
+   *
    * @var bool
    */
   public $hasDisplayContent;
@@ -52,6 +87,8 @@ class LiveChatMessageSnippet extends \Google\Model
   protected $pollDetailsType = LiveChatPollDetails::class;
   protected $pollDetailsDataType = '';
   /**
+   * The date and time when the message was orignally published.
+   *
    * @var string
    */
   public $publishedAt;
@@ -62,6 +99,9 @@ class LiveChatMessageSnippet extends \Google\Model
   protected $textMessageDetailsType = LiveChatTextMessageDetails::class;
   protected $textMessageDetailsDataType = '';
   /**
+   * The type of message, this will always be present, it determines the
+   * contents of the message as well as which fields will be present.
+   *
    * @var string
    */
   public $type;
@@ -69,7 +109,19 @@ class LiveChatMessageSnippet extends \Google\Model
   protected $userBannedDetailsDataType = '';
 
   /**
-   * @param string
+   * The ID of the user that authored this message, this field is not always
+   * filled. textMessageEvent - the user that wrote the message fanFundingEvent
+   * - the user that funded the broadcast newSponsorEvent - the user that just
+   * became a sponsor memberMilestoneChatEvent - the member that sent the
+   * message membershipGiftingEvent - the user that made the purchase
+   * giftMembershipReceivedEvent - the user that received the gift membership
+   * messageDeletedEvent - the moderator that took the action
+   * messageRetractedEvent - the author that retracted their message
+   * userBannedEvent - the moderator that took the action superChatEvent - the
+   * user that made the purchase superStickerEvent - the user that made the
+   * purchase pollEvent - the user that created the poll
+   *
+   * @param string $authorChannelId
    */
   public function setAuthorChannelId($authorChannelId)
   {
@@ -83,7 +135,11 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->authorChannelId;
   }
   /**
-   * @param string
+   * Contains a string that can be displayed to the user. If this field is not
+   * present the message is silent, at the moment only messages of type
+   * TOMBSTONE and CHAT_ENDED_EVENT are silent.
+   *
+   * @param string $displayMessage
    */
   public function setDisplayMessage($displayMessage)
   {
@@ -97,13 +153,18 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->displayMessage;
   }
   /**
-   * @param LiveChatFanFundingEventDetails
+   * Details about the funding event, this is only set if the type is
+   * 'fanFundingEvent'.
+   *
+   * @deprecated
+   * @param LiveChatFanFundingEventDetails $fanFundingEventDetails
    */
   public function setFanFundingEventDetails(LiveChatFanFundingEventDetails $fanFundingEventDetails)
   {
     $this->fanFundingEventDetails = $fanFundingEventDetails;
   }
   /**
+   * @deprecated
    * @return LiveChatFanFundingEventDetails
    */
   public function getFanFundingEventDetails()
@@ -111,7 +172,10 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->fanFundingEventDetails;
   }
   /**
-   * @param LiveChatGiftMembershipReceivedDetails
+   * Details about the Gift Membership Received event, this is only set if the
+   * type is 'giftMembershipReceivedEvent'.
+   *
+   * @param LiveChatGiftMembershipReceivedDetails $giftMembershipReceivedDetails
    */
   public function setGiftMembershipReceivedDetails(LiveChatGiftMembershipReceivedDetails $giftMembershipReceivedDetails)
   {
@@ -125,7 +189,9 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->giftMembershipReceivedDetails;
   }
   /**
-   * @param bool
+   * Whether the message has display content that should be displayed to users.
+   *
+   * @param bool $hasDisplayContent
    */
   public function setHasDisplayContent($hasDisplayContent)
   {
@@ -139,7 +205,7 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->hasDisplayContent;
   }
   /**
-   * @param string
+   * @param string $liveChatId
    */
   public function setLiveChatId($liveChatId)
   {
@@ -153,7 +219,10 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->liveChatId;
   }
   /**
-   * @param LiveChatMemberMilestoneChatDetails
+   * Details about the Member Milestone Chat event, this is only set if the type
+   * is 'memberMilestoneChatEvent'.
+   *
+   * @param LiveChatMemberMilestoneChatDetails $memberMilestoneChatDetails
    */
   public function setMemberMilestoneChatDetails(LiveChatMemberMilestoneChatDetails $memberMilestoneChatDetails)
   {
@@ -167,7 +236,10 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->memberMilestoneChatDetails;
   }
   /**
-   * @param LiveChatMembershipGiftingDetails
+   * Details about the Membership Gifting event, this is only set if the type is
+   * 'membershipGiftingEvent'.
+   *
+   * @param LiveChatMembershipGiftingDetails $membershipGiftingDetails
    */
   public function setMembershipGiftingDetails(LiveChatMembershipGiftingDetails $membershipGiftingDetails)
   {
@@ -181,7 +253,7 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->membershipGiftingDetails;
   }
   /**
-   * @param LiveChatMessageDeletedDetails
+   * @param LiveChatMessageDeletedDetails $messageDeletedDetails
    */
   public function setMessageDeletedDetails(LiveChatMessageDeletedDetails $messageDeletedDetails)
   {
@@ -195,7 +267,7 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->messageDeletedDetails;
   }
   /**
-   * @param LiveChatMessageRetractedDetails
+   * @param LiveChatMessageRetractedDetails $messageRetractedDetails
    */
   public function setMessageRetractedDetails(LiveChatMessageRetractedDetails $messageRetractedDetails)
   {
@@ -209,7 +281,11 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->messageRetractedDetails;
   }
   /**
-   * @param LiveChatNewSponsorDetails
+   * Details about the New Member Announcement event, this is only set if the
+   * type is 'newSponsorEvent'. Please note that "member" is the new term for
+   * "sponsor".
+   *
+   * @param LiveChatNewSponsorDetails $newSponsorDetails
    */
   public function setNewSponsorDetails(LiveChatNewSponsorDetails $newSponsorDetails)
   {
@@ -223,7 +299,9 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->newSponsorDetails;
   }
   /**
-   * @param LiveChatPollDetails
+   * Details about the poll event, this is only set if the type is 'pollEvent'.
+   *
+   * @param LiveChatPollDetails $pollDetails
    */
   public function setPollDetails(LiveChatPollDetails $pollDetails)
   {
@@ -237,7 +315,9 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->pollDetails;
   }
   /**
-   * @param string
+   * The date and time when the message was orignally published.
+   *
+   * @param string $publishedAt
    */
   public function setPublishedAt($publishedAt)
   {
@@ -251,7 +331,10 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->publishedAt;
   }
   /**
-   * @param LiveChatSuperChatDetails
+   * Details about the Super Chat event, this is only set if the type is
+   * 'superChatEvent'.
+   *
+   * @param LiveChatSuperChatDetails $superChatDetails
    */
   public function setSuperChatDetails(LiveChatSuperChatDetails $superChatDetails)
   {
@@ -265,7 +348,10 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->superChatDetails;
   }
   /**
-   * @param LiveChatSuperStickerDetails
+   * Details about the Super Sticker event, this is only set if the type is
+   * 'superStickerEvent'.
+   *
+   * @param LiveChatSuperStickerDetails $superStickerDetails
    */
   public function setSuperStickerDetails(LiveChatSuperStickerDetails $superStickerDetails)
   {
@@ -279,7 +365,10 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->superStickerDetails;
   }
   /**
-   * @param LiveChatTextMessageDetails
+   * Details about the text message, this is only set if the type is
+   * 'textMessageEvent'.
+   *
+   * @param LiveChatTextMessageDetails $textMessageDetails
    */
   public function setTextMessageDetails(LiveChatTextMessageDetails $textMessageDetails)
   {
@@ -293,21 +382,30 @@ class LiveChatMessageSnippet extends \Google\Model
     return $this->textMessageDetails;
   }
   /**
-   * @param string
+   * The type of message, this will always be present, it determines the
+   * contents of the message as well as which fields will be present.
+   *
+   * Accepted values: invalidType, textMessageEvent, tombstone, fanFundingEvent,
+   * chatEndedEvent, sponsorOnlyModeStartedEvent, sponsorOnlyModeEndedEvent,
+   * newSponsorEvent, memberMilestoneChatEvent, membershipGiftingEvent,
+   * giftMembershipReceivedEvent, messageDeletedEvent, messageRetractedEvent,
+   * userBannedEvent, superChatEvent, superStickerEvent, pollEvent
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param LiveChatUserBannedMessageDetails
+   * @param LiveChatUserBannedMessageDetails $userBannedDetails
    */
   public function setUserBannedDetails(LiveChatUserBannedMessageDetails $userBannedDetails)
   {

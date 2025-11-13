@@ -20,12 +20,16 @@ namespace Google\Service\YouTube;
 class ActivityContentDetailsUpload extends \Google\Model
 {
   /**
+   * The ID that YouTube uses to uniquely identify the uploaded video.
+   *
    * @var string
    */
   public $videoId;
 
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the uploaded video.
+   *
+   * @param string $videoId
    */
   public function setVideoId($videoId)
   {

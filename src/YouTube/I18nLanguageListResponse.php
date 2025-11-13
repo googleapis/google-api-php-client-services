@@ -21,26 +21,37 @@ class I18nLanguageListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Serialized EventId of the request which produced this response.
+   *
    * @var string
    */
   public $eventId;
   protected $itemsType = I18nLanguage::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#i18nLanguageListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The visitorId identifies the visitor.
+   *
    * @var string
    */
   public $visitorId;
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -54,7 +65,9 @@ class I18nLanguageListResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Serialized EventId of the request which produced this response.
+   *
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {
@@ -68,7 +81,10 @@ class I18nLanguageListResponse extends \Google\Collection
     return $this->eventId;
   }
   /**
-   * @param I18nLanguage[]
+   * A list of supported i18n languages. In this map, the i18n language ID is
+   * the map key, and its value is the corresponding i18nLanguage resource.
+   *
+   * @param I18nLanguage[] $items
    */
   public function setItems($items)
   {
@@ -82,7 +98,10 @@ class I18nLanguageListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#i18nLanguageListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -96,7 +115,9 @@ class I18nLanguageListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The visitorId identifies the visitor.
+   *
+   * @param string $visitorId
    */
   public function setVisitorId($visitorId)
   {

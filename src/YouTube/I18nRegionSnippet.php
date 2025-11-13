@@ -20,16 +20,22 @@ namespace Google\Service\YouTube;
 class I18nRegionSnippet extends \Google\Model
 {
   /**
+   * The region code as a 2-letter ISO country code.
+   *
    * @var string
    */
   public $gl;
   /**
+   * The human-readable name of the region.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The region code as a 2-letter ISO country code.
+   *
+   * @param string $gl
    */
   public function setGl($gl)
   {
@@ -43,7 +49,9 @@ class I18nRegionSnippet extends \Google\Model
     return $this->gl;
   }
   /**
-   * @param string
+   * The human-readable name of the region.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

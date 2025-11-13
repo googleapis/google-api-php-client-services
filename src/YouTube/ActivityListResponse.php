@@ -21,38 +21,57 @@ class ActivityListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Serialized EventId of the request which produced this response.
+   *
+   * @deprecated
    * @var string
    */
   public $eventId;
   protected $itemsType = Activity::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#activityListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the next page in the result set.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the previous page in the result set.
+   *
    * @var string
    */
   public $prevPageToken;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**
+   * The visitorId identifies the visitor.
+   *
+   * @deprecated
    * @var string
    */
   public $visitorId;
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -66,13 +85,17 @@ class ActivityListResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Serialized EventId of the request which produced this response.
+   *
+   * @deprecated
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {
     $this->eventId = $eventId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getEventId()
@@ -80,7 +103,7 @@ class ActivityListResponse extends \Google\Collection
     return $this->eventId;
   }
   /**
-   * @param Activity[]
+   * @param Activity[] $items
    */
   public function setItems($items)
   {
@@ -94,7 +117,10 @@ class ActivityListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#activityListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -108,7 +134,10 @@ class ActivityListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the next page in the result set.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -122,7 +151,9 @@ class ActivityListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PageInfo
+   * General pagination information.
+   *
+   * @param PageInfo $pageInfo
    */
   public function setPageInfo(PageInfo $pageInfo)
   {
@@ -136,7 +167,10 @@ class ActivityListResponse extends \Google\Collection
     return $this->pageInfo;
   }
   /**
-   * @param string
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the previous page in the result set.
+   *
+   * @param string $prevPageToken
    */
   public function setPrevPageToken($prevPageToken)
   {
@@ -150,13 +184,15 @@ class ActivityListResponse extends \Google\Collection
     return $this->prevPageToken;
   }
   /**
-   * @param TokenPagination
+   * @deprecated
+   * @param TokenPagination $tokenPagination
    */
   public function setTokenPagination(TokenPagination $tokenPagination)
   {
     $this->tokenPagination = $tokenPagination;
   }
   /**
+   * @deprecated
    * @return TokenPagination
    */
   public function getTokenPagination()
@@ -164,13 +200,17 @@ class ActivityListResponse extends \Google\Collection
     return $this->tokenPagination;
   }
   /**
-   * @param string
+   * The visitorId identifies the visitor.
+   *
+   * @deprecated
+   * @param string $visitorId
    */
   public function setVisitorId($visitorId)
   {
     $this->visitorId = $visitorId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getVisitorId()

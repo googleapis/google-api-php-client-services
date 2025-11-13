@@ -24,7 +24,11 @@ class CommentThreadReplies extends \Google\Collection
   protected $commentsDataType = 'array';
 
   /**
-   * @param Comment[]
+   * A limited number of replies. Unless the number of replies returned equals
+   * total_reply_count in the snippet the returned replies are only a subset of
+   * the total number of replies.
+   *
+   * @param Comment[] $comments
    */
   public function setComments($comments)
   {

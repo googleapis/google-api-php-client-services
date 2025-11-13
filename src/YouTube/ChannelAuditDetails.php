@@ -20,20 +20,28 @@ namespace Google\Service\YouTube;
 class ChannelAuditDetails extends \Google\Model
 {
   /**
+   * Whether or not the channel respects the community guidelines.
+   *
    * @var bool
    */
   public $communityGuidelinesGoodStanding;
   /**
+   * Whether or not the channel has any unresolved claims.
+   *
    * @var bool
    */
   public $contentIdClaimsGoodStanding;
   /**
+   * Whether or not the channel has any copyright strikes.
+   *
    * @var bool
    */
   public $copyrightStrikesGoodStanding;
 
   /**
-   * @param bool
+   * Whether or not the channel respects the community guidelines.
+   *
+   * @param bool $communityGuidelinesGoodStanding
    */
   public function setCommunityGuidelinesGoodStanding($communityGuidelinesGoodStanding)
   {
@@ -47,7 +55,9 @@ class ChannelAuditDetails extends \Google\Model
     return $this->communityGuidelinesGoodStanding;
   }
   /**
-   * @param bool
+   * Whether or not the channel has any unresolved claims.
+   *
+   * @param bool $contentIdClaimsGoodStanding
    */
   public function setContentIdClaimsGoodStanding($contentIdClaimsGoodStanding)
   {
@@ -61,7 +71,9 @@ class ChannelAuditDetails extends \Google\Model
     return $this->contentIdClaimsGoodStanding;
   }
   /**
-   * @param bool
+   * Whether or not the channel has any copyright strikes.
+   *
+   * @param bool $copyrightStrikesGoodStanding
    */
   public function setCopyrightStrikesGoodStanding($copyrightStrikesGoodStanding)
   {

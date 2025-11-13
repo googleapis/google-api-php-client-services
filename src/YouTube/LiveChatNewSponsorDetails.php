@@ -20,16 +20,26 @@ namespace Google\Service\YouTube;
 class LiveChatNewSponsorDetails extends \Google\Model
 {
   /**
+   * If the viewer just had upgraded from a lower level. For viewers that were
+   * not members at the time of purchase, this field is false.
+   *
    * @var bool
    */
   public $isUpgrade;
   /**
+   * The name of the Level that the viewer just had joined. The Level names are
+   * defined by the YouTube channel offering the Membership. In some situations
+   * this field isn't filled.
+   *
    * @var string
    */
   public $memberLevelName;
 
   /**
-   * @param bool
+   * If the viewer just had upgraded from a lower level. For viewers that were
+   * not members at the time of purchase, this field is false.
+   *
+   * @param bool $isUpgrade
    */
   public function setIsUpgrade($isUpgrade)
   {
@@ -43,7 +53,11 @@ class LiveChatNewSponsorDetails extends \Google\Model
     return $this->isUpgrade;
   }
   /**
-   * @param string
+   * The name of the Level that the viewer just had joined. The Level names are
+   * defined by the YouTube channel offering the Membership. In some situations
+   * this field isn't filled.
+   *
+   * @param string $memberLevelName
    */
   public function setMemberLevelName($memberLevelName)
   {

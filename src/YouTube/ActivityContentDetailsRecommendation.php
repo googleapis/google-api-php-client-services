@@ -19,7 +19,13 @@ namespace Google\Service\YouTube;
 
 class ActivityContentDetailsRecommendation extends \Google\Model
 {
+  public const REASON_reasonUnspecified = 'reasonUnspecified';
+  public const REASON_videoFavorited = 'videoFavorited';
+  public const REASON_videoLiked = 'videoLiked';
+  public const REASON_videoWatched = 'videoWatched';
   /**
+   * The reason that the resource is recommended to the user.
+   *
    * @var string
    */
   public $reason;
@@ -29,21 +35,29 @@ class ActivityContentDetailsRecommendation extends \Google\Model
   protected $seedResourceIdDataType = '';
 
   /**
-   * @param string
+   * The reason that the resource is recommended to the user.
+   *
+   * Accepted values: reasonUnspecified, videoFavorited, videoLiked,
+   * videoWatched
+   *
+   * @param self::REASON_* $reason
    */
   public function setReason($reason)
   {
     $this->reason = $reason;
   }
   /**
-   * @return string
+   * @return self::REASON_*
    */
   public function getReason()
   {
     return $this->reason;
   }
   /**
-   * @param ResourceId
+   * The resourceId object contains information that identifies the recommended
+   * resource.
+   *
+   * @param ResourceId $resourceId
    */
   public function setResourceId(ResourceId $resourceId)
   {
@@ -57,7 +71,10 @@ class ActivityContentDetailsRecommendation extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param ResourceId
+   * The seedResourceId object contains information about the resource that
+   * caused the recommendation.
+   *
+   * @param ResourceId $seedResourceId
    */
   public function setSeedResourceId(ResourceId $seedResourceId)
   {

@@ -21,16 +21,25 @@ class AccessPolicy extends \Google\Collection
 {
   protected $collection_key = 'exception';
   /**
+   * The value of allowed indicates whether the access to the policy is allowed
+   * or denied by default.
+   *
    * @var bool
    */
   public $allowed;
   /**
+   * A list of region codes that identify countries where the default policy do
+   * not apply.
+   *
    * @var string[]
    */
   public $exception;
 
   /**
-   * @param bool
+   * The value of allowed indicates whether the access to the policy is allowed
+   * or denied by default.
+   *
+   * @param bool $allowed
    */
   public function setAllowed($allowed)
   {
@@ -44,7 +53,10 @@ class AccessPolicy extends \Google\Collection
     return $this->allowed;
   }
   /**
-   * @param string[]
+   * A list of region codes that identify countries where the default policy do
+   * not apply.
+   *
+   * @param string[] $exception
    */
   public function setException($exception)
   {

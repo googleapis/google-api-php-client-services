@@ -20,24 +20,34 @@ namespace Google\Service\YouTube;
 class LiveChatFanFundingEventDetails extends \Google\Model
 {
   /**
+   * A rendered string that displays the fund amount and currency to the user.
+   *
    * @var string
    */
   public $amountDisplayString;
   /**
+   * The amount of the fund.
+   *
    * @var string
    */
   public $amountMicros;
   /**
+   * The currency in which the fund was made.
+   *
    * @var string
    */
   public $currency;
   /**
+   * The comment added by the user to this fan funding event.
+   *
    * @var string
    */
   public $userComment;
 
   /**
-   * @param string
+   * A rendered string that displays the fund amount and currency to the user.
+   *
+   * @param string $amountDisplayString
    */
   public function setAmountDisplayString($amountDisplayString)
   {
@@ -51,7 +61,9 @@ class LiveChatFanFundingEventDetails extends \Google\Model
     return $this->amountDisplayString;
   }
   /**
-   * @param string
+   * The amount of the fund.
+   *
+   * @param string $amountMicros
    */
   public function setAmountMicros($amountMicros)
   {
@@ -65,7 +77,9 @@ class LiveChatFanFundingEventDetails extends \Google\Model
     return $this->amountMicros;
   }
   /**
-   * @param string
+   * The currency in which the fund was made.
+   *
+   * @param string $currency
    */
   public function setCurrency($currency)
   {
@@ -79,7 +93,9 @@ class LiveChatFanFundingEventDetails extends \Google\Model
     return $this->currency;
   }
   /**
-   * @param string
+   * The comment added by the user to this fan funding event.
+   *
+   * @param string $userComment
    */
   public function setUserComment($userComment)
   {

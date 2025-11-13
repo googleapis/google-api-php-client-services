@@ -19,50 +19,82 @@ namespace Google\Service\YouTube;
 
 class ActivityContentDetailsPromotedItem extends \Google\Collection
 {
+  public const CTA_TYPE_ctaTypeUnspecified = 'ctaTypeUnspecified';
+  public const CTA_TYPE_visitAdvertiserSite = 'visitAdvertiserSite';
   protected $collection_key = 'impressionUrl';
   /**
+   * The URL the client should fetch to request a promoted item.
+   *
    * @var string
    */
   public $adTag;
   /**
+   * The URL the client should ping to indicate that the user clicked through on
+   * this promoted item.
+   *
    * @var string
    */
   public $clickTrackingUrl;
   /**
+   * The URL the client should ping to indicate that the user was shown this
+   * promoted item.
+   *
    * @var string
    */
   public $creativeViewUrl;
   /**
+   * The type of call-to-action, a message to the user indicating action that
+   * can be taken.
+   *
    * @var string
    */
   public $ctaType;
   /**
+   * The custom call-to-action button text. If specified, it will override the
+   * default button text for the cta_type.
+   *
    * @var string
    */
   public $customCtaButtonText;
   /**
+   * The text description to accompany the promoted item.
+   *
    * @var string
    */
   public $descriptionText;
   /**
+   * The URL the client should direct the user to, if the user chooses to visit
+   * the advertiser's website.
+   *
    * @var string
    */
   public $destinationUrl;
   /**
+   * The list of forecasting URLs. The client should ping all of these URLs when
+   * a promoted item is not available, to indicate that a promoted item could
+   * have been shown.
+   *
    * @var string[]
    */
   public $forecastingUrl;
   /**
+   * The list of impression URLs. The client should ping all of these URLs to
+   * indicate that the user was shown this promoted item.
+   *
    * @var string[]
    */
   public $impressionUrl;
   /**
+   * The ID that YouTube uses to uniquely identify the promoted video.
+   *
    * @var string
    */
   public $videoId;
 
   /**
-   * @param string
+   * The URL the client should fetch to request a promoted item.
+   *
+   * @param string $adTag
    */
   public function setAdTag($adTag)
   {
@@ -76,7 +108,10 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->adTag;
   }
   /**
-   * @param string
+   * The URL the client should ping to indicate that the user clicked through on
+   * this promoted item.
+   *
+   * @param string $clickTrackingUrl
    */
   public function setClickTrackingUrl($clickTrackingUrl)
   {
@@ -90,7 +125,10 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->clickTrackingUrl;
   }
   /**
-   * @param string
+   * The URL the client should ping to indicate that the user was shown this
+   * promoted item.
+   *
+   * @param string $creativeViewUrl
    */
   public function setCreativeViewUrl($creativeViewUrl)
   {
@@ -104,21 +142,29 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->creativeViewUrl;
   }
   /**
-   * @param string
+   * The type of call-to-action, a message to the user indicating action that
+   * can be taken.
+   *
+   * Accepted values: ctaTypeUnspecified, visitAdvertiserSite
+   *
+   * @param self::CTA_TYPE_* $ctaType
    */
   public function setCtaType($ctaType)
   {
     $this->ctaType = $ctaType;
   }
   /**
-   * @return string
+   * @return self::CTA_TYPE_*
    */
   public function getCtaType()
   {
     return $this->ctaType;
   }
   /**
-   * @param string
+   * The custom call-to-action button text. If specified, it will override the
+   * default button text for the cta_type.
+   *
+   * @param string $customCtaButtonText
    */
   public function setCustomCtaButtonText($customCtaButtonText)
   {
@@ -132,7 +178,9 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->customCtaButtonText;
   }
   /**
-   * @param string
+   * The text description to accompany the promoted item.
+   *
+   * @param string $descriptionText
    */
   public function setDescriptionText($descriptionText)
   {
@@ -146,7 +194,10 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->descriptionText;
   }
   /**
-   * @param string
+   * The URL the client should direct the user to, if the user chooses to visit
+   * the advertiser's website.
+   *
+   * @param string $destinationUrl
    */
   public function setDestinationUrl($destinationUrl)
   {
@@ -160,7 +211,11 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->destinationUrl;
   }
   /**
-   * @param string[]
+   * The list of forecasting URLs. The client should ping all of these URLs when
+   * a promoted item is not available, to indicate that a promoted item could
+   * have been shown.
+   *
+   * @param string[] $forecastingUrl
    */
   public function setForecastingUrl($forecastingUrl)
   {
@@ -174,7 +229,10 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->forecastingUrl;
   }
   /**
-   * @param string[]
+   * The list of impression URLs. The client should ping all of these URLs to
+   * indicate that the user was shown this promoted item.
+   *
+   * @param string[] $impressionUrl
    */
   public function setImpressionUrl($impressionUrl)
   {
@@ -188,7 +246,9 @@ class ActivityContentDetailsPromotedItem extends \Google\Collection
     return $this->impressionUrl;
   }
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the promoted video.
+   *
+   * @param string $videoId
    */
   public function setVideoId($videoId)
   {

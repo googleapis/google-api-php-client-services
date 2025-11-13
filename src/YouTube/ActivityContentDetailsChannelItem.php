@@ -23,7 +23,10 @@ class ActivityContentDetailsChannelItem extends \Google\Model
   protected $resourceIdDataType = '';
 
   /**
-   * @param ResourceId
+   * The resourceId object contains information that identifies the resource
+   * that was added to the channel.
+   *
+   * @param ResourceId $resourceId
    */
   public function setResourceId(ResourceId $resourceId)
   {

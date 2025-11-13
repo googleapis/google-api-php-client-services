@@ -19,11 +19,15 @@ namespace Google\Service\YouTube;
 
 class Cuepoint extends \Google\Model
 {
+  public const CUE_TYPE_cueTypeUnspecified = 'cueTypeUnspecified';
+  public const CUE_TYPE_cueTypeAd = 'cueTypeAd';
   /**
    * @var string
    */
   public $cueType;
   /**
+   * The duration of this cuepoint.
+   *
    * @var string
    */
   public $durationSecs;
@@ -32,34 +36,44 @@ class Cuepoint extends \Google\Model
    */
   public $etag;
   /**
+   * The identifier for cuepoint resource.
+   *
    * @var string
    */
   public $id;
   /**
+   * The time when the cuepoint should be inserted by offset to the broadcast
+   * actual start time.
+   *
    * @var string
    */
   public $insertionOffsetTimeMs;
   /**
+   * The wall clock time at which the cuepoint should be inserted. Only one of
+   * insertion_offset_time_ms and walltime_ms may be set at a time.
+   *
    * @var string
    */
   public $walltimeMs;
 
   /**
-   * @param string
+   * @param self::CUE_TYPE_* $cueType
    */
   public function setCueType($cueType)
   {
     $this->cueType = $cueType;
   }
   /**
-   * @return string
+   * @return self::CUE_TYPE_*
    */
   public function getCueType()
   {
     return $this->cueType;
   }
   /**
-   * @param string
+   * The duration of this cuepoint.
+   *
+   * @param string $durationSecs
    */
   public function setDurationSecs($durationSecs)
   {
@@ -73,7 +87,7 @@ class Cuepoint extends \Google\Model
     return $this->durationSecs;
   }
   /**
-   * @param string
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -87,7 +101,9 @@ class Cuepoint extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The identifier for cuepoint resource.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -101,7 +117,10 @@ class Cuepoint extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The time when the cuepoint should be inserted by offset to the broadcast
+   * actual start time.
+   *
+   * @param string $insertionOffsetTimeMs
    */
   public function setInsertionOffsetTimeMs($insertionOffsetTimeMs)
   {
@@ -115,7 +134,10 @@ class Cuepoint extends \Google\Model
     return $this->insertionOffsetTimeMs;
   }
   /**
-   * @param string
+   * The wall clock time at which the cuepoint should be inserted. Only one of
+   * insertion_offset_time_ms and walltime_ms may be set at a time.
+   *
+   * @param string $walltimeMs
    */
   public function setWalltimeMs($walltimeMs)
   {
