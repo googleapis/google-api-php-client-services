@@ -24,7 +24,9 @@ class SpaceBatchUpdatedEventData extends \Google\Collection
   protected $spacesDataType = 'array';
 
   /**
-   * @param SpaceUpdatedEventData[]
+   * A list of updated spaces.
+   *
+   * @param SpaceUpdatedEventData[] $spaces
    */
   public function setSpaces($spaces)
   {

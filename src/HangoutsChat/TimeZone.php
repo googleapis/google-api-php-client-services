@@ -20,16 +20,25 @@ namespace Google\Service\HangoutsChat;
 class TimeZone extends \Google\Model
 {
   /**
+   * The [IANA TZ](https://www.iana.org/time-zones) time zone database code,
+   * such as "America/Toronto".
+   *
    * @var string
    */
   public $id;
   /**
+   * The user timezone offset, in milliseconds, from Coordinated Universal Time
+   * (UTC).
+   *
    * @var int
    */
   public $offset;
 
   /**
-   * @param string
+   * The [IANA TZ](https://www.iana.org/time-zones) time zone database code,
+   * such as "America/Toronto".
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +52,10 @@ class TimeZone extends \Google\Model
     return $this->id;
   }
   /**
-   * @param int
+   * The user timezone offset, in milliseconds, from Coordinated Universal Time
+   * (UTC).
+   *
+   * @param int $offset
    */
   public function setOffset($offset)
   {

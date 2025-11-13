@@ -30,7 +30,10 @@ class WidgetMarkup extends \Google\Collection
   protected $textParagraphDataType = '';
 
   /**
-   * @param Button[]
+   * A list of buttons. Buttons is also `oneof data` and only one of these
+   * fields should be set.
+   *
+   * @param Button[] $buttons
    */
   public function setButtons($buttons)
   {
@@ -44,7 +47,9 @@ class WidgetMarkup extends \Google\Collection
     return $this->buttons;
   }
   /**
-   * @param Image
+   * Display an image in this widget.
+   *
+   * @param Image $image
    */
   public function setImage(Image $image)
   {
@@ -58,7 +63,9 @@ class WidgetMarkup extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param KeyValue
+   * Display a key value item in this widget.
+   *
+   * @param KeyValue $keyValue
    */
   public function setKeyValue(KeyValue $keyValue)
   {
@@ -72,7 +79,9 @@ class WidgetMarkup extends \Google\Collection
     return $this->keyValue;
   }
   /**
-   * @param TextParagraph
+   * Display a text paragraph in this widget.
+   *
+   * @param TextParagraph $textParagraph
    */
   public function setTextParagraph(TextParagraph $textParagraph)
   {

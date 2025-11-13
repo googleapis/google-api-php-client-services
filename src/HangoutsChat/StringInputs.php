@@ -21,12 +21,16 @@ class StringInputs extends \Google\Collection
 {
   protected $collection_key = 'value';
   /**
+   * An list of strings entered by the user.
+   *
    * @var string[]
    */
   public $value;
 
   /**
-   * @param string[]
+   * An list of strings entered by the user.
+   *
+   * @param string[] $value
    */
   public function setValue($value)
   {

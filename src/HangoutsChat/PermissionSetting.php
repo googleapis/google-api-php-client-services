@@ -20,20 +20,30 @@ namespace Google\Service\HangoutsChat;
 class PermissionSetting extends \Google\Model
 {
   /**
+   * Optional. Whether space managers `ROLE_ASSISTANT_MANAGER`) have this
+   * permission.
+   *
    * @var bool
    */
   public $assistantManagersAllowed;
   /**
+   * Optional. Whether space owners (`ROLE_MANAGER`) have this permission.
+   *
    * @var bool
    */
   public $managersAllowed;
   /**
+   * Optional. Whether basic space members (`ROLE_MEMBER`) have this permission.
+   *
    * @var bool
    */
   public $membersAllowed;
 
   /**
-   * @param bool
+   * Optional. Whether space managers `ROLE_ASSISTANT_MANAGER`) have this
+   * permission.
+   *
+   * @param bool $assistantManagersAllowed
    */
   public function setAssistantManagersAllowed($assistantManagersAllowed)
   {
@@ -47,7 +57,9 @@ class PermissionSetting extends \Google\Model
     return $this->assistantManagersAllowed;
   }
   /**
-   * @param bool
+   * Optional. Whether space owners (`ROLE_MANAGER`) have this permission.
+   *
+   * @param bool $managersAllowed
    */
   public function setManagersAllowed($managersAllowed)
   {
@@ -61,7 +73,9 @@ class PermissionSetting extends \Google\Model
     return $this->managersAllowed;
   }
   /**
-   * @param bool
+   * Optional. Whether basic space members (`ROLE_MEMBER`) have this permission.
+   *
+   * @param bool $membersAllowed
    */
   public function setMembersAllowed($membersAllowed)
   {

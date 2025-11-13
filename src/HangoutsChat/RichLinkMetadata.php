@@ -19,6 +19,26 @@ namespace Google\Service\HangoutsChat;
 
 class RichLinkMetadata extends \Google\Model
 {
+  /**
+   * Default value for the enum. Don't use.
+   */
+  public const RICH_LINK_TYPE_RICH_LINK_TYPE_UNSPECIFIED = 'RICH_LINK_TYPE_UNSPECIFIED';
+  /**
+   * A Google Drive rich link type.
+   */
+  public const RICH_LINK_TYPE_DRIVE_FILE = 'DRIVE_FILE';
+  /**
+   * A Chat space rich link type. For example, a space smart chip.
+   */
+  public const RICH_LINK_TYPE_CHAT_SPACE = 'CHAT_SPACE';
+  /**
+   * A Meet message rich link type. For example, a Meet chip.
+   */
+  public const RICH_LINK_TYPE_MEET_SPACE = 'MEET_SPACE';
+  /**
+   * A Calendar message rich link type. For example, a Calendar chip.
+   */
+  public const RICH_LINK_TYPE_CALENDAR_EVENT = 'CALENDAR_EVENT';
   protected $calendarEventLinkDataType = CalendarEventLinkData::class;
   protected $calendarEventLinkDataDataType = '';
   protected $chatSpaceLinkDataType = ChatSpaceLinkData::class;
@@ -28,16 +48,22 @@ class RichLinkMetadata extends \Google\Model
   protected $meetSpaceLinkDataType = MeetSpaceLinkData::class;
   protected $meetSpaceLinkDataDataType = '';
   /**
+   * The rich link type.
+   *
    * @var string
    */
   public $richLinkType;
   /**
+   * The URI of this link.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param CalendarEventLinkData
+   * Data for a Calendar event link.
+   *
+   * @param CalendarEventLinkData $calendarEventLinkData
    */
   public function setCalendarEventLinkData(CalendarEventLinkData $calendarEventLinkData)
   {
@@ -51,7 +77,9 @@ class RichLinkMetadata extends \Google\Model
     return $this->calendarEventLinkData;
   }
   /**
-   * @param ChatSpaceLinkData
+   * Data for a chat space link.
+   *
+   * @param ChatSpaceLinkData $chatSpaceLinkData
    */
   public function setChatSpaceLinkData(ChatSpaceLinkData $chatSpaceLinkData)
   {
@@ -65,7 +93,9 @@ class RichLinkMetadata extends \Google\Model
     return $this->chatSpaceLinkData;
   }
   /**
-   * @param DriveLinkData
+   * Data for a drive link.
+   *
+   * @param DriveLinkData $driveLinkData
    */
   public function setDriveLinkData(DriveLinkData $driveLinkData)
   {
@@ -79,7 +109,9 @@ class RichLinkMetadata extends \Google\Model
     return $this->driveLinkData;
   }
   /**
-   * @param MeetSpaceLinkData
+   * Data for a Meet space link.
+   *
+   * @param MeetSpaceLinkData $meetSpaceLinkData
    */
   public function setMeetSpaceLinkData(MeetSpaceLinkData $meetSpaceLinkData)
   {
@@ -93,21 +125,28 @@ class RichLinkMetadata extends \Google\Model
     return $this->meetSpaceLinkData;
   }
   /**
-   * @param string
+   * The rich link type.
+   *
+   * Accepted values: RICH_LINK_TYPE_UNSPECIFIED, DRIVE_FILE, CHAT_SPACE,
+   * MEET_SPACE, CALENDAR_EVENT
+   *
+   * @param self::RICH_LINK_TYPE_* $richLinkType
    */
   public function setRichLinkType($richLinkType)
   {
     $this->richLinkType = $richLinkType;
   }
   /**
-   * @return string
+   * @return self::RICH_LINK_TYPE_*
    */
   public function getRichLinkType()
   {
     return $this->richLinkType;
   }
   /**
-   * @param string
+   * The URI of this link.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

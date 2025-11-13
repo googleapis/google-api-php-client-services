@@ -20,16 +20,22 @@ namespace Google\Service\HangoutsChat;
 class TimeInput extends \Google\Model
 {
   /**
+   * The hour on a 24-hour clock.
+   *
    * @var int
    */
   public $hours;
   /**
+   * The number of minutes past the hour. Valid values are 0 to 59.
+   *
    * @var int
    */
   public $minutes;
 
   /**
-   * @param int
+   * The hour on a 24-hour clock.
+   *
+   * @param int $hours
    */
   public function setHours($hours)
   {
@@ -43,7 +49,9 @@ class TimeInput extends \Google\Model
     return $this->hours;
   }
   /**
-   * @param int
+   * The number of minutes past the hour. Valid values are 0 to 59.
+   *
+   * @param int $minutes
    */
   public function setMinutes($minutes)
   {

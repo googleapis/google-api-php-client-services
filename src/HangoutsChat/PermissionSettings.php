@@ -37,7 +37,9 @@ class PermissionSettings extends \Google\Model
   protected $useAtMentionAllDataType = '';
 
   /**
-   * @param PermissionSetting
+   * Optional. Setting for managing apps in a space.
+   *
+   * @param PermissionSetting $manageApps
    */
   public function setManageApps(PermissionSetting $manageApps)
   {
@@ -51,7 +53,9 @@ class PermissionSettings extends \Google\Model
     return $this->manageApps;
   }
   /**
-   * @param PermissionSetting
+   * Optional. Setting for managing members and groups in a space.
+   *
+   * @param PermissionSetting $manageMembersAndGroups
    */
   public function setManageMembersAndGroups(PermissionSetting $manageMembersAndGroups)
   {
@@ -65,7 +69,9 @@ class PermissionSettings extends \Google\Model
     return $this->manageMembersAndGroups;
   }
   /**
-   * @param PermissionSetting
+   * Optional. Setting for managing webhooks in a space.
+   *
+   * @param PermissionSetting $manageWebhooks
    */
   public function setManageWebhooks(PermissionSetting $manageWebhooks)
   {
@@ -79,7 +85,10 @@ class PermissionSettings extends \Google\Model
     return $this->manageWebhooks;
   }
   /**
-   * @param PermissionSetting
+   * Optional. Setting for updating space name, avatar, description and
+   * guidelines.
+   *
+   * @param PermissionSetting $modifySpaceDetails
    */
   public function setModifySpaceDetails(PermissionSetting $modifySpaceDetails)
   {
@@ -93,7 +102,9 @@ class PermissionSettings extends \Google\Model
     return $this->modifySpaceDetails;
   }
   /**
-   * @param PermissionSetting
+   * Output only. Setting for posting messages in a space.
+   *
+   * @param PermissionSetting $postMessages
    */
   public function setPostMessages(PermissionSetting $postMessages)
   {
@@ -107,7 +118,9 @@ class PermissionSettings extends \Google\Model
     return $this->postMessages;
   }
   /**
-   * @param PermissionSetting
+   * Optional. Setting for replying to messages in a space.
+   *
+   * @param PermissionSetting $replyMessages
    */
   public function setReplyMessages(PermissionSetting $replyMessages)
   {
@@ -121,7 +134,9 @@ class PermissionSettings extends \Google\Model
     return $this->replyMessages;
   }
   /**
-   * @param PermissionSetting
+   * Optional. Setting for toggling space history on and off.
+   *
+   * @param PermissionSetting $toggleHistory
    */
   public function setToggleHistory(PermissionSetting $toggleHistory)
   {
@@ -135,7 +150,9 @@ class PermissionSettings extends \Google\Model
     return $this->toggleHistory;
   }
   /**
-   * @param PermissionSetting
+   * Optional. Setting for using @all in a space.
+   *
+   * @param PermissionSetting $useAtMentionAll
    */
   public function setUseAtMentionAll(PermissionSetting $useAtMentionAll)
   {

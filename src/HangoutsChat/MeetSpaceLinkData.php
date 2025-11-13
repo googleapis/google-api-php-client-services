@@ -20,34 +20,78 @@ namespace Google\Service\HangoutsChat;
 class MeetSpaceLinkData extends \Google\Model
 {
   /**
+   * Default value for the enum. Don't use.
+   */
+  public const HUDDLE_STATUS_HUDDLE_STATUS_UNSPECIFIED = 'HUDDLE_STATUS_UNSPECIFIED';
+  /**
+   * The huddle has started.
+   */
+  public const HUDDLE_STATUS_STARTED = 'STARTED';
+  /**
+   * The huddle has ended. In this case the Meet space URI and identifiers will
+   * no longer be valid.
+   */
+  public const HUDDLE_STATUS_ENDED = 'ENDED';
+  /**
+   * The huddle has been missed. In this case the Meet space URI and identifiers
+   * will no longer be valid.
+   */
+  public const HUDDLE_STATUS_MISSED = 'MISSED';
+  /**
+   * Default value for the enum. Don't use.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * The Meet space is a meeting.
+   */
+  public const TYPE_MEETING = 'MEETING';
+  /**
+   * The Meet space is a huddle.
+   */
+  public const TYPE_HUDDLE = 'HUDDLE';
+  /**
+   * Optional. Output only. If the Meet is a Huddle, indicates the status of the
+   * huddle. Otherwise, this is unset.
+   *
    * @var string
    */
   public $huddleStatus;
   /**
+   * Meeting code of the linked Meet space.
+   *
    * @var string
    */
   public $meetingCode;
   /**
+   * Indicates the type of the Meet space.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Optional. Output only. If the Meet is a Huddle, indicates the status of the
+   * huddle. Otherwise, this is unset.
+   *
+   * Accepted values: HUDDLE_STATUS_UNSPECIFIED, STARTED, ENDED, MISSED
+   *
+   * @param self::HUDDLE_STATUS_* $huddleStatus
    */
   public function setHuddleStatus($huddleStatus)
   {
     $this->huddleStatus = $huddleStatus;
   }
   /**
-   * @return string
+   * @return self::HUDDLE_STATUS_*
    */
   public function getHuddleStatus()
   {
     return $this->huddleStatus;
   }
   /**
-   * @param string
+   * Meeting code of the linked Meet space.
+   *
+   * @param string $meetingCode
    */
   public function setMeetingCode($meetingCode)
   {
@@ -61,14 +105,18 @@ class MeetSpaceLinkData extends \Google\Model
     return $this->meetingCode;
   }
   /**
-   * @param string
+   * Indicates the type of the Meet space.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, MEETING, HUDDLE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

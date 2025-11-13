@@ -20,16 +20,24 @@ namespace Google\Service\HangoutsChat;
 class MembershipCount extends \Google\Model
 {
   /**
+   * Output only. Count of human users that have directly joined the space, not
+   * counting users joined by having membership in a joined group.
+   *
    * @var int
    */
   public $joinedDirectHumanUserCount;
   /**
+   * Output only. Count of all groups that have directly joined the space.
+   *
    * @var int
    */
   public $joinedGroupCount;
 
   /**
-   * @param int
+   * Output only. Count of human users that have directly joined the space, not
+   * counting users joined by having membership in a joined group.
+   *
+   * @param int $joinedDirectHumanUserCount
    */
   public function setJoinedDirectHumanUserCount($joinedDirectHumanUserCount)
   {
@@ -43,7 +51,9 @@ class MembershipCount extends \Google\Model
     return $this->joinedDirectHumanUserCount;
   }
   /**
-   * @param int
+   * Output only. Count of all groups that have directly joined the space.
+   *
+   * @param int $joinedGroupCount
    */
   public function setJoinedGroupCount($joinedGroupCount)
   {

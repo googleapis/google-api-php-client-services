@@ -24,7 +24,9 @@ class ReactionBatchCreatedEventData extends \Google\Collection
   protected $reactionsDataType = 'array';
 
   /**
-   * @param ReactionCreatedEventData[]
+   * A list of new reactions.
+   *
+   * @param ReactionCreatedEventData[] $reactions
    */
   public function setReactions($reactions)
   {

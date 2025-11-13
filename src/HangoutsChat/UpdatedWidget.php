@@ -22,12 +22,17 @@ class UpdatedWidget extends \Google\Model
   protected $suggestionsType = SelectionItems::class;
   protected $suggestionsDataType = '';
   /**
+   * The ID of the updated widget. The ID must match the one for the widget that
+   * triggered the update request.
+   *
    * @var string
    */
   public $widget;
 
   /**
-   * @param SelectionItems
+   * List of widget autocomplete results
+   *
+   * @param SelectionItems $suggestions
    */
   public function setSuggestions(SelectionItems $suggestions)
   {
@@ -41,7 +46,10 @@ class UpdatedWidget extends \Google\Model
     return $this->suggestions;
   }
   /**
-   * @param string
+   * The ID of the updated widget. The ID must match the one for the widget that
+   * triggered the update request.
+   *
+   * @param string $widget
    */
   public function setWidget($widget)
   {

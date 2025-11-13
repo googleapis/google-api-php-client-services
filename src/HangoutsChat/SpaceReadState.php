@@ -20,16 +20,27 @@ namespace Google\Service\HangoutsChat;
 class SpaceReadState extends \Google\Model
 {
   /**
+   * Optional. The time when the user's space read state was updated. Usually
+   * this corresponds with either the timestamp of the last read message, or a
+   * timestamp specified by the user to mark the last read position in a space.
+   *
    * @var string
    */
   public $lastReadTime;
   /**
+   * Resource name of the space read state. Format:
+   * `users/{user}/spaces/{space}/spaceReadState`
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Optional. The time when the user's space read state was updated. Usually
+   * this corresponds with either the timestamp of the last read message, or a
+   * timestamp specified by the user to mark the last read position in a space.
+   *
+   * @param string $lastReadTime
    */
   public function setLastReadTime($lastReadTime)
   {
@@ -43,7 +54,10 @@ class SpaceReadState extends \Google\Model
     return $this->lastReadTime;
   }
   /**
-   * @param string
+   * Resource name of the space read state. Format:
+   * `users/{user}/spaces/{space}/spaceReadState`
+   *
+   * @param string $name
    */
   public function setName($name)
   {

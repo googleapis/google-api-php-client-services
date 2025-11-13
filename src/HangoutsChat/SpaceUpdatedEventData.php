@@ -23,7 +23,9 @@ class SpaceUpdatedEventData extends \Google\Model
   protected $spaceDataType = '';
 
   /**
-   * @param Space
+   * The updated space.
+   *
+   * @param Space $space
    */
   public function setSpace(Space $space)
   {

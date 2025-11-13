@@ -19,27 +19,49 @@ namespace Google\Service\HangoutsChat;
 
 class SlashCommandMetadata extends \Google\Model
 {
+  /**
+   * Default value for the enum. Don't use.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Add Chat app to space.
+   */
+  public const TYPE_ADD = 'ADD';
+  /**
+   * Invoke slash command in space.
+   */
+  public const TYPE_INVOKE = 'INVOKE';
   protected $botType = User::class;
   protected $botDataType = '';
   /**
+   * The command ID of the invoked slash command.
+   *
    * @var string
    */
   public $commandId;
   /**
+   * The name of the invoked slash command.
+   *
    * @var string
    */
   public $commandName;
   /**
+   * Indicates whether the slash command is for a dialog.
+   *
    * @var bool
    */
   public $triggersDialog;
   /**
+   * The type of slash command.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param User
+   * The Chat app whose command was invoked.
+   *
+   * @param User $bot
    */
   public function setBot(User $bot)
   {
@@ -53,7 +75,9 @@ class SlashCommandMetadata extends \Google\Model
     return $this->bot;
   }
   /**
-   * @param string
+   * The command ID of the invoked slash command.
+   *
+   * @param string $commandId
    */
   public function setCommandId($commandId)
   {
@@ -67,7 +91,9 @@ class SlashCommandMetadata extends \Google\Model
     return $this->commandId;
   }
   /**
-   * @param string
+   * The name of the invoked slash command.
+   *
+   * @param string $commandName
    */
   public function setCommandName($commandName)
   {
@@ -81,7 +107,9 @@ class SlashCommandMetadata extends \Google\Model
     return $this->commandName;
   }
   /**
-   * @param bool
+   * Indicates whether the slash command is for a dialog.
+   *
+   * @param bool $triggersDialog
    */
   public function setTriggersDialog($triggersDialog)
   {
@@ -95,14 +123,18 @@ class SlashCommandMetadata extends \Google\Model
     return $this->triggersDialog;
   }
   /**
-   * @param string
+   * The type of slash command.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, ADD, INVOKE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

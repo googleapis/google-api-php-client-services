@@ -20,10 +20,43 @@ namespace Google\Service\HangoutsChat;
 class SpaceEvent extends \Google\Model
 {
   /**
+   * Time when the event occurred.
+   *
    * @var string
    */
   public $eventTime;
   /**
+   * Type of space event. Each event type has a batch version, which represents
+   * multiple instances of the event type that occur in a short period of time.
+   * For `spaceEvents.list()` requests, omit batch event types in your query
+   * filter. By default, the server returns both event type and its batch
+   * version. Supported event types for [messages](https://developers.google.com
+   * /workspace/chat/api/reference/rest/v1/spaces.messages): * New message:
+   * `google.workspace.chat.message.v1.created` * Updated message:
+   * `google.workspace.chat.message.v1.updated` * Deleted message:
+   * `google.workspace.chat.message.v1.deleted` * Multiple new messages:
+   * `google.workspace.chat.message.v1.batchCreated` * Multiple updated
+   * messages: `google.workspace.chat.message.v1.batchUpdated` * Multiple
+   * deleted messages: `google.workspace.chat.message.v1.batchDeleted` Supported
+   * event types for [memberships](https://developers.google.com/workspace/chat/
+   * api/reference/rest/v1/spaces.members): * New membership:
+   * `google.workspace.chat.membership.v1.created` * Updated membership:
+   * `google.workspace.chat.membership.v1.updated` * Deleted membership:
+   * `google.workspace.chat.membership.v1.deleted` * Multiple new memberships:
+   * `google.workspace.chat.membership.v1.batchCreated` * Multiple updated
+   * memberships: `google.workspace.chat.membership.v1.batchUpdated` * Multiple
+   * deleted memberships: `google.workspace.chat.membership.v1.batchDeleted`
+   * Supported event types for [reactions](https://developers.google.com/workspa
+   * ce/chat/api/reference/rest/v1/spaces.messages.reactions): * New reaction:
+   * `google.workspace.chat.reaction.v1.created` * Deleted reaction:
+   * `google.workspace.chat.reaction.v1.deleted` * Multiple new reactions:
+   * `google.workspace.chat.reaction.v1.batchCreated` * Multiple deleted
+   * reactions: `google.workspace.chat.reaction.v1.batchDeleted` Supported event
+   * types about the [space](https://developers.google.com/workspace/chat/api/re
+   * ference/rest/v1/spaces): * Updated space:
+   * `google.workspace.chat.space.v1.updated` * Multiple space updates:
+   * `google.workspace.chat.space.v1.batchUpdated`
+   *
    * @var string
    */
   public $eventType;
@@ -52,6 +85,9 @@ class SpaceEvent extends \Google\Model
   protected $messageUpdatedEventDataType = MessageUpdatedEventData::class;
   protected $messageUpdatedEventDataDataType = '';
   /**
+   * Resource name of the space event. Format:
+   * `spaces/{space}/spaceEvents/{spaceEvent}`
+   *
    * @var string
    */
   public $name;
@@ -69,7 +105,9 @@ class SpaceEvent extends \Google\Model
   protected $spaceUpdatedEventDataDataType = '';
 
   /**
-   * @param string
+   * Time when the event occurred.
+   *
+   * @param string $eventTime
    */
   public function setEventTime($eventTime)
   {
@@ -83,7 +121,38 @@ class SpaceEvent extends \Google\Model
     return $this->eventTime;
   }
   /**
-   * @param string
+   * Type of space event. Each event type has a batch version, which represents
+   * multiple instances of the event type that occur in a short period of time.
+   * For `spaceEvents.list()` requests, omit batch event types in your query
+   * filter. By default, the server returns both event type and its batch
+   * version. Supported event types for [messages](https://developers.google.com
+   * /workspace/chat/api/reference/rest/v1/spaces.messages): * New message:
+   * `google.workspace.chat.message.v1.created` * Updated message:
+   * `google.workspace.chat.message.v1.updated` * Deleted message:
+   * `google.workspace.chat.message.v1.deleted` * Multiple new messages:
+   * `google.workspace.chat.message.v1.batchCreated` * Multiple updated
+   * messages: `google.workspace.chat.message.v1.batchUpdated` * Multiple
+   * deleted messages: `google.workspace.chat.message.v1.batchDeleted` Supported
+   * event types for [memberships](https://developers.google.com/workspace/chat/
+   * api/reference/rest/v1/spaces.members): * New membership:
+   * `google.workspace.chat.membership.v1.created` * Updated membership:
+   * `google.workspace.chat.membership.v1.updated` * Deleted membership:
+   * `google.workspace.chat.membership.v1.deleted` * Multiple new memberships:
+   * `google.workspace.chat.membership.v1.batchCreated` * Multiple updated
+   * memberships: `google.workspace.chat.membership.v1.batchUpdated` * Multiple
+   * deleted memberships: `google.workspace.chat.membership.v1.batchDeleted`
+   * Supported event types for [reactions](https://developers.google.com/workspa
+   * ce/chat/api/reference/rest/v1/spaces.messages.reactions): * New reaction:
+   * `google.workspace.chat.reaction.v1.created` * Deleted reaction:
+   * `google.workspace.chat.reaction.v1.deleted` * Multiple new reactions:
+   * `google.workspace.chat.reaction.v1.batchCreated` * Multiple deleted
+   * reactions: `google.workspace.chat.reaction.v1.batchDeleted` Supported event
+   * types about the [space](https://developers.google.com/workspace/chat/api/re
+   * ference/rest/v1/spaces): * Updated space:
+   * `google.workspace.chat.space.v1.updated` * Multiple space updates:
+   * `google.workspace.chat.space.v1.batchUpdated`
+   *
+   * @param string $eventType
    */
   public function setEventType($eventType)
   {
@@ -97,7 +166,10 @@ class SpaceEvent extends \Google\Model
     return $this->eventType;
   }
   /**
-   * @param MembershipBatchCreatedEventData
+   * Event payload for multiple new memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchCreated`
+   *
+   * @param MembershipBatchCreatedEventData $membershipBatchCreatedEventData
    */
   public function setMembershipBatchCreatedEventData(MembershipBatchCreatedEventData $membershipBatchCreatedEventData)
   {
@@ -111,7 +183,10 @@ class SpaceEvent extends \Google\Model
     return $this->membershipBatchCreatedEventData;
   }
   /**
-   * @param MembershipBatchDeletedEventData
+   * Event payload for multiple deleted memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchDeleted`
+   *
+   * @param MembershipBatchDeletedEventData $membershipBatchDeletedEventData
    */
   public function setMembershipBatchDeletedEventData(MembershipBatchDeletedEventData $membershipBatchDeletedEventData)
   {
@@ -125,7 +200,10 @@ class SpaceEvent extends \Google\Model
     return $this->membershipBatchDeletedEventData;
   }
   /**
-   * @param MembershipBatchUpdatedEventData
+   * Event payload for multiple updated memberships. Event type:
+   * `google.workspace.chat.membership.v1.batchUpdated`
+   *
+   * @param MembershipBatchUpdatedEventData $membershipBatchUpdatedEventData
    */
   public function setMembershipBatchUpdatedEventData(MembershipBatchUpdatedEventData $membershipBatchUpdatedEventData)
   {
@@ -139,7 +217,10 @@ class SpaceEvent extends \Google\Model
     return $this->membershipBatchUpdatedEventData;
   }
   /**
-   * @param MembershipCreatedEventData
+   * Event payload for a new membership. Event type:
+   * `google.workspace.chat.membership.v1.created`
+   *
+   * @param MembershipCreatedEventData $membershipCreatedEventData
    */
   public function setMembershipCreatedEventData(MembershipCreatedEventData $membershipCreatedEventData)
   {
@@ -153,7 +234,10 @@ class SpaceEvent extends \Google\Model
     return $this->membershipCreatedEventData;
   }
   /**
-   * @param MembershipDeletedEventData
+   * Event payload for a deleted membership. Event type:
+   * `google.workspace.chat.membership.v1.deleted`
+   *
+   * @param MembershipDeletedEventData $membershipDeletedEventData
    */
   public function setMembershipDeletedEventData(MembershipDeletedEventData $membershipDeletedEventData)
   {
@@ -167,7 +251,10 @@ class SpaceEvent extends \Google\Model
     return $this->membershipDeletedEventData;
   }
   /**
-   * @param MembershipUpdatedEventData
+   * Event payload for an updated membership. Event type:
+   * `google.workspace.chat.membership.v1.updated`
+   *
+   * @param MembershipUpdatedEventData $membershipUpdatedEventData
    */
   public function setMembershipUpdatedEventData(MembershipUpdatedEventData $membershipUpdatedEventData)
   {
@@ -181,7 +268,10 @@ class SpaceEvent extends \Google\Model
     return $this->membershipUpdatedEventData;
   }
   /**
-   * @param MessageBatchCreatedEventData
+   * Event payload for multiple new messages. Event type:
+   * `google.workspace.chat.message.v1.batchCreated`
+   *
+   * @param MessageBatchCreatedEventData $messageBatchCreatedEventData
    */
   public function setMessageBatchCreatedEventData(MessageBatchCreatedEventData $messageBatchCreatedEventData)
   {
@@ -195,7 +285,10 @@ class SpaceEvent extends \Google\Model
     return $this->messageBatchCreatedEventData;
   }
   /**
-   * @param MessageBatchDeletedEventData
+   * Event payload for multiple deleted messages. Event type:
+   * `google.workspace.chat.message.v1.batchDeleted`
+   *
+   * @param MessageBatchDeletedEventData $messageBatchDeletedEventData
    */
   public function setMessageBatchDeletedEventData(MessageBatchDeletedEventData $messageBatchDeletedEventData)
   {
@@ -209,7 +302,10 @@ class SpaceEvent extends \Google\Model
     return $this->messageBatchDeletedEventData;
   }
   /**
-   * @param MessageBatchUpdatedEventData
+   * Event payload for multiple updated messages. Event type:
+   * `google.workspace.chat.message.v1.batchUpdated`
+   *
+   * @param MessageBatchUpdatedEventData $messageBatchUpdatedEventData
    */
   public function setMessageBatchUpdatedEventData(MessageBatchUpdatedEventData $messageBatchUpdatedEventData)
   {
@@ -223,7 +319,10 @@ class SpaceEvent extends \Google\Model
     return $this->messageBatchUpdatedEventData;
   }
   /**
-   * @param MessageCreatedEventData
+   * Event payload for a new message. Event type:
+   * `google.workspace.chat.message.v1.created`
+   *
+   * @param MessageCreatedEventData $messageCreatedEventData
    */
   public function setMessageCreatedEventData(MessageCreatedEventData $messageCreatedEventData)
   {
@@ -237,7 +336,10 @@ class SpaceEvent extends \Google\Model
     return $this->messageCreatedEventData;
   }
   /**
-   * @param MessageDeletedEventData
+   * Event payload for a deleted message. Event type:
+   * `google.workspace.chat.message.v1.deleted`
+   *
+   * @param MessageDeletedEventData $messageDeletedEventData
    */
   public function setMessageDeletedEventData(MessageDeletedEventData $messageDeletedEventData)
   {
@@ -251,7 +353,10 @@ class SpaceEvent extends \Google\Model
     return $this->messageDeletedEventData;
   }
   /**
-   * @param MessageUpdatedEventData
+   * Event payload for an updated message. Event type:
+   * `google.workspace.chat.message.v1.updated`
+   *
+   * @param MessageUpdatedEventData $messageUpdatedEventData
    */
   public function setMessageUpdatedEventData(MessageUpdatedEventData $messageUpdatedEventData)
   {
@@ -265,7 +370,10 @@ class SpaceEvent extends \Google\Model
     return $this->messageUpdatedEventData;
   }
   /**
-   * @param string
+   * Resource name of the space event. Format:
+   * `spaces/{space}/spaceEvents/{spaceEvent}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -279,7 +387,10 @@ class SpaceEvent extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ReactionBatchCreatedEventData
+   * Event payload for multiple new reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchCreated`
+   *
+   * @param ReactionBatchCreatedEventData $reactionBatchCreatedEventData
    */
   public function setReactionBatchCreatedEventData(ReactionBatchCreatedEventData $reactionBatchCreatedEventData)
   {
@@ -293,7 +404,10 @@ class SpaceEvent extends \Google\Model
     return $this->reactionBatchCreatedEventData;
   }
   /**
-   * @param ReactionBatchDeletedEventData
+   * Event payload for multiple deleted reactions. Event type:
+   * `google.workspace.chat.reaction.v1.batchDeleted`
+   *
+   * @param ReactionBatchDeletedEventData $reactionBatchDeletedEventData
    */
   public function setReactionBatchDeletedEventData(ReactionBatchDeletedEventData $reactionBatchDeletedEventData)
   {
@@ -307,7 +421,10 @@ class SpaceEvent extends \Google\Model
     return $this->reactionBatchDeletedEventData;
   }
   /**
-   * @param ReactionCreatedEventData
+   * Event payload for a new reaction. Event type:
+   * `google.workspace.chat.reaction.v1.created`
+   *
+   * @param ReactionCreatedEventData $reactionCreatedEventData
    */
   public function setReactionCreatedEventData(ReactionCreatedEventData $reactionCreatedEventData)
   {
@@ -321,7 +438,10 @@ class SpaceEvent extends \Google\Model
     return $this->reactionCreatedEventData;
   }
   /**
-   * @param ReactionDeletedEventData
+   * Event payload for a deleted reaction. Event type:
+   * `google.workspace.chat.reaction.v1.deleted`
+   *
+   * @param ReactionDeletedEventData $reactionDeletedEventData
    */
   public function setReactionDeletedEventData(ReactionDeletedEventData $reactionDeletedEventData)
   {
@@ -335,7 +455,10 @@ class SpaceEvent extends \Google\Model
     return $this->reactionDeletedEventData;
   }
   /**
-   * @param SpaceBatchUpdatedEventData
+   * Event payload for multiple updates to a space. Event type:
+   * `google.workspace.chat.space.v1.batchUpdated`
+   *
+   * @param SpaceBatchUpdatedEventData $spaceBatchUpdatedEventData
    */
   public function setSpaceBatchUpdatedEventData(SpaceBatchUpdatedEventData $spaceBatchUpdatedEventData)
   {
@@ -349,7 +472,10 @@ class SpaceEvent extends \Google\Model
     return $this->spaceBatchUpdatedEventData;
   }
   /**
-   * @param SpaceUpdatedEventData
+   * Event payload for a space update. Event type:
+   * `google.workspace.chat.space.v1.updated`
+   *
+   * @param SpaceUpdatedEventData $spaceUpdatedEventData
    */
   public function setSpaceUpdatedEventData(SpaceUpdatedEventData $spaceUpdatedEventData)
   {
