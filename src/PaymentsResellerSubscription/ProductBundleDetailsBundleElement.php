@@ -20,12 +20,18 @@ namespace Google\Service\PaymentsResellerSubscription;
 class ProductBundleDetailsBundleElement extends \Google\Model
 {
   /**
+   * Required. Output only. Product resource name that identifies the bundle
+   * element. The format is 'partners/{partner_id}/products/{product_id}'.
+   *
    * @var string
    */
   public $product;
 
   /**
-   * @param string
+   * Required. Output only. Product resource name that identifies the bundle
+   * element. The format is 'partners/{partner_id}/products/{product_id}'.
+   *
+   * @param string $product
    */
   public function setProduct($product)
   {

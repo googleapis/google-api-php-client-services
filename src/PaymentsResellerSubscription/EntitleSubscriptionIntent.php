@@ -20,12 +20,20 @@ namespace Google\Service\PaymentsResellerSubscription;
 class EntitleSubscriptionIntent extends \Google\Model
 {
   /**
+   * Required. The name of the subscription resource that is entitled to the
+   * current end user. It is in the format of
+   * "partners/{partner_id}/subscriptions/{subscriptionId}".
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The name of the subscription resource that is entitled to the
+   * current end user. It is in the format of
+   * "partners/{partner_id}/subscriptions/{subscriptionId}".
+   *
+   * @param string $name
    */
   public function setName($name)
   {

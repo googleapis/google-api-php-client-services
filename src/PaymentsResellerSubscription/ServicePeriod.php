@@ -20,16 +20,22 @@ namespace Google\Service\PaymentsResellerSubscription;
 class ServicePeriod extends \Google\Model
 {
   /**
+   * Optional. The end time of the service period. Time is exclusive.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Required. The start time of the service period. Time is inclusive.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Optional. The end time of the service period. Time is exclusive.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +49,9 @@ class ServicePeriod extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Required. The start time of the service period. Time is inclusive.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

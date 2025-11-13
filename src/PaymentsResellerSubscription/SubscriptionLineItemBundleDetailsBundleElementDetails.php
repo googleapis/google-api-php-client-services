@@ -20,16 +20,24 @@ namespace Google\Service\PaymentsResellerSubscription;
 class SubscriptionLineItemBundleDetailsBundleElementDetails extends \Google\Model
 {
   /**
+   * Output only. Product resource name that identifies the bundle element. The
+   * format is 'partners/{partner_id}/products/{product_id}'.
+   *
    * @var string
    */
   public $product;
   /**
+   * Output only. The time when this product is linked to an end user.
+   *
    * @var string
    */
   public $userAccountLinkedTime;
 
   /**
-   * @param string
+   * Output only. Product resource name that identifies the bundle element. The
+   * format is 'partners/{partner_id}/products/{product_id}'.
+   *
+   * @param string $product
    */
   public function setProduct($product)
   {
@@ -43,7 +51,9 @@ class SubscriptionLineItemBundleDetailsBundleElementDetails extends \Google\Mode
     return $this->product;
   }
   /**
-   * @param string
+   * Output only. The time when this product is linked to an end user.
+   *
+   * @param string $userAccountLinkedTime
    */
   public function setUserAccountLinkedTime($userAccountLinkedTime)
   {

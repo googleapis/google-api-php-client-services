@@ -20,16 +20,83 @@ namespace Google\Service\PaymentsResellerSubscription;
 class CancelSubscriptionRequest extends \Google\Model
 {
   /**
+   * Reason is unspecified. Should not be used.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_UNSPECIFIED = 'CANCELLATION_REASON_UNSPECIFIED';
+  /**
+   * Fraudualant transaction.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_FRAUD = 'CANCELLATION_REASON_FRAUD';
+  /**
+   * Buyer's remorse.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_REMORSE = 'CANCELLATION_REASON_REMORSE';
+  /**
+   * Accidential purchase.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_ACCIDENTAL_PURCHASE = 'CANCELLATION_REASON_ACCIDENTAL_PURCHASE';
+  /**
+   * Payment is past due.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_PAST_DUE = 'CANCELLATION_REASON_PAST_DUE';
+  /**
+   * Used for notification only, do not use in Cancel API. User account closed.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_ACCOUNT_CLOSED = 'CANCELLATION_REASON_ACCOUNT_CLOSED';
+  /**
+   * Used for notification only, do not use in Cancel API. Cancellation due to
+   * upgrade or downgrade.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_UPGRADE_DOWNGRADE = 'CANCELLATION_REASON_UPGRADE_DOWNGRADE';
+  /**
+   * Cancellation due to user delinquency
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_USER_DELINQUENCY = 'CANCELLATION_REASON_USER_DELINQUENCY';
+  /**
+   * Used for notification only, do not use in Cancel API. Cancellation due to
+   * an unrecoverable system error.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_SYSTEM_ERROR = 'CANCELLATION_REASON_SYSTEM_ERROR';
+  /**
+   * Used for notification only, do not use in Cancel API. The subscription is
+   * cancelled by Google automatically since it is no longer valid.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_SYSTEM_CANCEL = 'CANCELLATION_REASON_SYSTEM_CANCEL';
+  /**
+   * Cancellation due to a billing system switch.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_BILLING_SYSTEM_SWITCH = 'CANCELLATION_REASON_BILLING_SYSTEM_SWITCH';
+  /**
+   * Other reason.
+   */
+  public const CANCELLATION_REASON_CANCELLATION_REASON_OTHER = 'CANCELLATION_REASON_OTHER';
+  /**
+   * Optional. If true, Google will cancel the subscription immediately, and may
+   * or may not (based on the contract) issue a prorated refund for the
+   * remainder of the billing cycle. Otherwise, Google defers the cancelation at
+   * renewal_time, and will not issue a refund. - YouTube subscriptions must use
+   * this option currently. However, the user will still have access to the
+   * subscription until the end of the billing cycle.
+   *
    * @var bool
    */
   public $cancelImmediately;
   /**
+   * Specifies the reason for the cancellation.
+   *
    * @var string
    */
   public $cancellationReason;
 
   /**
-   * @param bool
+   * Optional. If true, Google will cancel the subscription immediately, and may
+   * or may not (based on the contract) issue a prorated refund for the
+   * remainder of the billing cycle. Otherwise, Google defers the cancelation at
+   * renewal_time, and will not issue a refund. - YouTube subscriptions must use
+   * this option currently. However, the user will still have access to the
+   * subscription until the end of the billing cycle.
+   *
+   * @param bool $cancelImmediately
    */
   public function setCancelImmediately($cancelImmediately)
   {
@@ -43,14 +110,24 @@ class CancelSubscriptionRequest extends \Google\Model
     return $this->cancelImmediately;
   }
   /**
-   * @param string
+   * Specifies the reason for the cancellation.
+   *
+   * Accepted values: CANCELLATION_REASON_UNSPECIFIED,
+   * CANCELLATION_REASON_FRAUD, CANCELLATION_REASON_REMORSE,
+   * CANCELLATION_REASON_ACCIDENTAL_PURCHASE, CANCELLATION_REASON_PAST_DUE,
+   * CANCELLATION_REASON_ACCOUNT_CLOSED, CANCELLATION_REASON_UPGRADE_DOWNGRADE,
+   * CANCELLATION_REASON_USER_DELINQUENCY, CANCELLATION_REASON_SYSTEM_ERROR,
+   * CANCELLATION_REASON_SYSTEM_CANCEL,
+   * CANCELLATION_REASON_BILLING_SYSTEM_SWITCH, CANCELLATION_REASON_OTHER
+   *
+   * @param self::CANCELLATION_REASON_* $cancellationReason
    */
   public function setCancellationReason($cancellationReason)
   {
     $this->cancellationReason = $cancellationReason;
   }
   /**
-   * @return string
+   * @return self::CANCELLATION_REASON_*
    */
   public function getCancellationReason()
   {

@@ -22,12 +22,17 @@ class ProductPriceConfig extends \Google\Model
   protected $amountType = Amount::class;
   protected $amountDataType = '';
   /**
+   * Output only. 2-letter ISO region code where the product is available in.
+   * Ex. "US".
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param Amount
+   * Output only. The price in the region.
+   *
+   * @param Amount $amount
    */
   public function setAmount(Amount $amount)
   {
@@ -41,7 +46,10 @@ class ProductPriceConfig extends \Google\Model
     return $this->amount;
   }
   /**
-   * @param string
+   * Output only. 2-letter ISO region code where the product is available in.
+   * Ex. "US".
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

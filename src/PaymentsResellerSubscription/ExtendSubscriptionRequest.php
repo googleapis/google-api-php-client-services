@@ -22,12 +22,22 @@ class ExtendSubscriptionRequest extends \Google\Model
   protected $extensionType = Extension::class;
   protected $extensionDataType = '';
   /**
+   * Required. Restricted to 36 ASCII characters. A random UUID is recommended.
+   * The idempotency key for the request. The ID generation logic is controlled
+   * by the partner. request_id should be the same as on retries of the same
+   * request. A different request_id must be used for a extension of a different
+   * cycle.
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param Extension
+   * Required. Specifies details of the extension. Currently, the duration of
+   * the extension must be exactly one billing cycle of the original
+   * subscription.
+   *
+   * @param Extension $extension
    */
   public function setExtension(Extension $extension)
   {
@@ -41,7 +51,13 @@ class ExtendSubscriptionRequest extends \Google\Model
     return $this->extension;
   }
   /**
-   * @param string
+   * Required. Restricted to 36 ASCII characters. A random UUID is recommended.
+   * The idempotency key for the request. The ID generation logic is controlled
+   * by the partner. request_id should be the same as on retries of the same
+   * request. A different request_id must be used for a extension of a different
+   * cycle.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

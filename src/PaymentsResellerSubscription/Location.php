@@ -20,16 +20,23 @@ namespace Google\Service\PaymentsResellerSubscription;
 class Location extends \Google\Model
 {
   /**
+   * The postal code this location refers to. Ex. "94043"
+   *
    * @var string
    */
   public $postalCode;
   /**
+   * 2-letter ISO region code for current content region. Ex. “US” Please refers
+   * to: https://en.wikipedia.org/wiki/ISO_3166-1
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param string
+   * The postal code this location refers to. Ex. "94043"
+   *
+   * @param string $postalCode
    */
   public function setPostalCode($postalCode)
   {
@@ -43,7 +50,10 @@ class Location extends \Google\Model
     return $this->postalCode;
   }
   /**
-   * @param string
+   * 2-letter ISO region code for current content region. Ex. “US” Please refers
+   * to: https://en.wikipedia.org/wiki/ISO_3166-1
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

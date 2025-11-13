@@ -23,7 +23,9 @@ class CancelSubscriptionResponse extends \Google\Model
   protected $subscriptionDataType = '';
 
   /**
-   * @param Subscription
+   * The cancelled subscription resource.
+   *
+   * @param Subscription $subscription
    */
   public function setSubscription(Subscription $subscription)
   {

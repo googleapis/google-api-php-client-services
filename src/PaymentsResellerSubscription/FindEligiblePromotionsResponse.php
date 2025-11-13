@@ -21,6 +21,9 @@ class FindEligiblePromotionsResponse extends \Google\Collection
 {
   protected $collection_key = 'promotions';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is empty, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class FindEligiblePromotionsResponse extends \Google\Collection
   protected $promotionsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is empty, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class FindEligiblePromotionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Promotion[]
+   * The promotions for the current user.
+   *
+   * @param Promotion[] $promotions
    */
   public function setPromotions($promotions)
   {

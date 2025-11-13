@@ -20,12 +20,20 @@ namespace Google\Service\PaymentsResellerSubscription;
 class IntentPayloadIntentOptions extends \Google\Model
 {
   /**
+   * Optional. If true, Google may use a different product and promotion id from
+   * the ones in the `create_intent` based on the user's eligibility. Only
+   * applicable for certain YouTube free trial offers.
+   *
    * @var bool
    */
   public $enableOfferOverride;
 
   /**
-   * @param bool
+   * Optional. If true, Google may use a different product and promotion id from
+   * the ones in the `create_intent` based on the user's eligibility. Only
+   * applicable for certain YouTube free trial offers.
+   *
+   * @param bool $enableOfferOverride
    */
   public function setEnableOfferOverride($enableOfferOverride)
   {

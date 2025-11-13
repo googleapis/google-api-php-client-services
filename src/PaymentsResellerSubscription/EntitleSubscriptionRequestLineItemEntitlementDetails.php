@@ -21,16 +21,25 @@ class EntitleSubscriptionRequestLineItemEntitlementDetails extends \Google\Colle
 {
   protected $collection_key = 'products';
   /**
+   * Required. The index of the line item to be entitled.
+   *
    * @var int
    */
   public $lineItemIndex;
   /**
+   * Optional. Only applicable if the line item corresponds to a hard bundle.
+   * Product resource names that identify the bundle elements to be entitled in
+   * the line item. If unspecified, all bundle elements will be entitled. The
+   * format is 'partners/{partner_id}/products/{product_id}'.
+   *
    * @var string[]
    */
   public $products;
 
   /**
-   * @param int
+   * Required. The index of the line item to be entitled.
+   *
+   * @param int $lineItemIndex
    */
   public function setLineItemIndex($lineItemIndex)
   {
@@ -44,7 +53,12 @@ class EntitleSubscriptionRequestLineItemEntitlementDetails extends \Google\Colle
     return $this->lineItemIndex;
   }
   /**
-   * @param string[]
+   * Optional. Only applicable if the line item corresponds to a hard bundle.
+   * Product resource names that identify the bundle elements to be entitled in
+   * the line item. If unspecified, all bundle elements will be entitled. The
+   * format is 'partners/{partner_id}/products/{product_id}'.
+   *
+   * @param string[] $products
    */
   public function setProducts($products)
   {

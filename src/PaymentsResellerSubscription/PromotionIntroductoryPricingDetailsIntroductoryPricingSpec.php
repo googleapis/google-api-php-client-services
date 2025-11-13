@@ -22,20 +22,30 @@ class PromotionIntroductoryPricingDetailsIntroductoryPricingSpec extends \Google
   protected $discountAmountType = Amount::class;
   protected $discountAmountDataType = '';
   /**
+   * Output only. The discount percentage in micros. For example, 50,000
+   * represents 5%.
+   *
    * @var string
    */
   public $discountRatioMicros;
   /**
+   * Output only. The duration of an introductory offer in billing cycles.
+   *
    * @var int
    */
   public $recurrenceCount;
   /**
+   * Output only. 2-letter ISO region code where the product is available in.
+   * Ex. "US".
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param Amount
+   * Output only. The discount amount. The value is positive.
+   *
+   * @param Amount $discountAmount
    */
   public function setDiscountAmount(Amount $discountAmount)
   {
@@ -49,7 +59,10 @@ class PromotionIntroductoryPricingDetailsIntroductoryPricingSpec extends \Google
     return $this->discountAmount;
   }
   /**
-   * @param string
+   * Output only. The discount percentage in micros. For example, 50,000
+   * represents 5%.
+   *
+   * @param string $discountRatioMicros
    */
   public function setDiscountRatioMicros($discountRatioMicros)
   {
@@ -63,7 +76,9 @@ class PromotionIntroductoryPricingDetailsIntroductoryPricingSpec extends \Google
     return $this->discountRatioMicros;
   }
   /**
-   * @param int
+   * Output only. The duration of an introductory offer in billing cycles.
+   *
+   * @param int $recurrenceCount
    */
   public function setRecurrenceCount($recurrenceCount)
   {
@@ -77,7 +92,10 @@ class PromotionIntroductoryPricingDetailsIntroductoryPricingSpec extends \Google
     return $this->recurrenceCount;
   }
   /**
-   * @param string
+   * Output only. 2-letter ISO region code where the product is available in.
+   * Ex. "US".
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

@@ -19,15 +19,33 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class ResumeSubscriptionRequest extends \Google\Model
 {
+  /**
+   * Reserved value for invalid or unexpected value.
+   */
+  public const RESUME_MODE_RESUME_MODE_UNSPECIFIED = 'RESUME_MODE_UNSPECIFIED';
+  /**
+   * Resume the subscription using the input from `cycle_options`.
+   */
+  public const RESUME_MODE_RESUME_MODE_CYCLE_OPTIONS = 'RESUME_MODE_CYCLE_OPTIONS';
+  /**
+   * Resume the subscription with the existing billing schedule. The
+   * subscription's next renewal time must still be in the future for this mode
+   * to be applicable.
+   */
+  public const RESUME_MODE_RESUME_MODE_RESTORE_EXISTING_BILLING_SCHEDULE = 'RESUME_MODE_RESTORE_EXISTING_BILLING_SCHEDULE';
   protected $cycleOptionsType = CycleOptions::class;
   protected $cycleOptionsDataType = '';
   /**
+   * Optional. The mode to resume the subscription.
+   *
    * @var string
    */
   public $resumeMode;
 
   /**
-   * @param CycleOptions
+   * Optional. The cycle options for the subscription.
+   *
+   * @param CycleOptions $cycleOptions
    */
   public function setCycleOptions(CycleOptions $cycleOptions)
   {
@@ -41,14 +59,19 @@ class ResumeSubscriptionRequest extends \Google\Model
     return $this->cycleOptions;
   }
   /**
-   * @param string
+   * Optional. The mode to resume the subscription.
+   *
+   * Accepted values: RESUME_MODE_UNSPECIFIED, RESUME_MODE_CYCLE_OPTIONS,
+   * RESUME_MODE_RESTORE_EXISTING_BILLING_SCHEDULE
+   *
+   * @param self::RESUME_MODE_* $resumeMode
    */
   public function setResumeMode($resumeMode)
   {
     $this->resumeMode = $resumeMode;
   }
   /**
-   * @return string
+   * @return self::RESUME_MODE_*
    */
   public function getResumeMode()
   {

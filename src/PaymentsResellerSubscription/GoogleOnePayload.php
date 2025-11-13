@@ -19,26 +19,81 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class GoogleOnePayload extends \Google\Collection
 {
+  /**
+   * The type of partner offering is unspecified.
+   */
+  public const OFFERING_OFFERING_UNSPECIFIED = 'OFFERING_UNSPECIFIED';
+  /**
+   * Google One product purchased as a Value added service in addition to
+   * existing partner's products. Customer pays additional amount for Google One
+   * product.
+   */
+  public const OFFERING_OFFERING_VAS_BUNDLE = 'OFFERING_VAS_BUNDLE';
+  /**
+   * Google One product purchased by itself by customer as a value add service.
+   * Customer pays additional amount for Google One product.
+   */
+  public const OFFERING_OFFERING_VAS_STANDALONE = 'OFFERING_VAS_STANDALONE';
+  /**
+   * Product purchased as part of a hard bundle where Google One was included
+   * with the bundle. Google One pricing is included in the bundle.
+   */
+  public const OFFERING_OFFERING_HARD_BUNDLE = 'OFFERING_HARD_BUNDLE';
+  /**
+   * Purchased as part of a bundle where Google One was provided as an option.
+   * Google One pricing is included in the bundle.
+   */
+  public const OFFERING_OFFERING_SOFT_BUNDLE = 'OFFERING_SOFT_BUNDLE';
+  /**
+   * The channel type is unspecified.
+   */
+  public const SALES_CHANNEL_CHANNEL_UNSPECIFIED = 'CHANNEL_UNSPECIFIED';
+  /**
+   * Sold at store.
+   */
+  public const SALES_CHANNEL_CHANNEL_RETAIL = 'CHANNEL_RETAIL';
+  /**
+   * Sold through partner website.
+   */
+  public const SALES_CHANNEL_CHANNEL_ONLINE_WEB = 'CHANNEL_ONLINE_WEB';
+  /**
+   * Sold through partner android app.
+   */
+  public const SALES_CHANNEL_CHANNEL_ONLINE_ANDROID_APP = 'CHANNEL_ONLINE_ANDROID_APP';
+  /**
+   * Sold through partner iOS app.
+   */
+  public const SALES_CHANNEL_CHANNEL_ONLINE_IOS_APP = 'CHANNEL_ONLINE_IOS_APP';
   protected $collection_key = 'campaigns';
   /**
+   * Campaign attributed to sales of this subscription.
+   *
    * @var string[]
    */
   public $campaigns;
   /**
+   * The type of offering the subscription was sold by the partner. e.g. VAS.
+   *
    * @var string
    */
   public $offering;
   /**
+   * The type of sales channel through which the subscription was sold.
+   *
    * @var string
    */
   public $salesChannel;
   /**
+   * The identifier for the partner store where the subscription was sold.
+   *
    * @var string
    */
   public $storeId;
 
   /**
-   * @param string[]
+   * Campaign attributed to sales of this subscription.
+   *
+   * @param string[] $campaigns
    */
   public function setCampaigns($campaigns)
   {
@@ -52,35 +107,47 @@ class GoogleOnePayload extends \Google\Collection
     return $this->campaigns;
   }
   /**
-   * @param string
+   * The type of offering the subscription was sold by the partner. e.g. VAS.
+   *
+   * Accepted values: OFFERING_UNSPECIFIED, OFFERING_VAS_BUNDLE,
+   * OFFERING_VAS_STANDALONE, OFFERING_HARD_BUNDLE, OFFERING_SOFT_BUNDLE
+   *
+   * @param self::OFFERING_* $offering
    */
   public function setOffering($offering)
   {
     $this->offering = $offering;
   }
   /**
-   * @return string
+   * @return self::OFFERING_*
    */
   public function getOffering()
   {
     return $this->offering;
   }
   /**
-   * @param string
+   * The type of sales channel through which the subscription was sold.
+   *
+   * Accepted values: CHANNEL_UNSPECIFIED, CHANNEL_RETAIL, CHANNEL_ONLINE_WEB,
+   * CHANNEL_ONLINE_ANDROID_APP, CHANNEL_ONLINE_IOS_APP
+   *
+   * @param self::SALES_CHANNEL_* $salesChannel
    */
   public function setSalesChannel($salesChannel)
   {
     $this->salesChannel = $salesChannel;
   }
   /**
-   * @return string
+   * @return self::SALES_CHANNEL_*
    */
   public function getSalesChannel()
   {
     return $this->salesChannel;
   }
   /**
-   * @param string
+   * The identifier for the partner store where the subscription was sold.
+   *
+   * @param string $storeId
    */
   public function setStoreId($storeId)
   {

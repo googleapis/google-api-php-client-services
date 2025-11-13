@@ -20,20 +20,32 @@ namespace Google\Service\PaymentsResellerSubscription;
 class GoogleHomePayload extends \Google\Model
 {
   /**
+   * Output only. This identifies whether the subscription is attached to a
+   * Google Home structure.
+   *
    * @var bool
    */
   public $attachedToGoogleStructure;
   /**
+   * Optional. Structure identifier on Google side.
+   *
    * @var string
    */
   public $googleStructureId;
   /**
+   * Optional. This identifies the structure ID on partner side that the
+   * subscription should be applied to. Only required when the partner requires
+   * structure mapping.
+   *
    * @var string
    */
   public $partnerStructureId;
 
   /**
-   * @param bool
+   * Output only. This identifies whether the subscription is attached to a
+   * Google Home structure.
+   *
+   * @param bool $attachedToGoogleStructure
    */
   public function setAttachedToGoogleStructure($attachedToGoogleStructure)
   {
@@ -47,7 +59,9 @@ class GoogleHomePayload extends \Google\Model
     return $this->attachedToGoogleStructure;
   }
   /**
-   * @param string
+   * Optional. Structure identifier on Google side.
+   *
+   * @param string $googleStructureId
    */
   public function setGoogleStructureId($googleStructureId)
   {
@@ -61,7 +75,11 @@ class GoogleHomePayload extends \Google\Model
     return $this->googleStructureId;
   }
   /**
-   * @param string
+   * Optional. This identifies the structure ID on partner side that the
+   * subscription should be applied to. Only required when the partner requires
+   * structure mapping.
+   *
+   * @param string $partnerStructureId
    */
   public function setPartnerStructureId($partnerStructureId)
   {

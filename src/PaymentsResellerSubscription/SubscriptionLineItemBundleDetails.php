@@ -24,7 +24,9 @@ class SubscriptionLineItemBundleDetails extends \Google\Collection
   protected $bundleElementDetailsDataType = 'array';
 
   /**
-   * @param SubscriptionLineItemBundleDetailsBundleElementDetails[]
+   * Output only. The details for each element in the hard bundle.
+   *
+   * @param SubscriptionLineItemBundleDetailsBundleElementDetails[] $bundleElementDetails
    */
   public function setBundleElementDetails($bundleElementDetails)
   {

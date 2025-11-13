@@ -22,12 +22,16 @@ class Extension extends \Google\Model
   protected $durationType = Duration::class;
   protected $durationDataType = '';
   /**
+   * Required. Identifier of the end-user in partner’s system.
+   *
    * @var string
    */
   public $partnerUserToken;
 
   /**
-   * @param Duration
+   * Required. Specifies the period of access the subscription should grant.
+   *
+   * @param Duration $duration
    */
   public function setDuration(Duration $duration)
   {
@@ -41,7 +45,9 @@ class Extension extends \Google\Model
     return $this->duration;
   }
   /**
-   * @param string
+   * Required. Identifier of the end-user in partner’s system.
+   *
+   * @param string $partnerUserToken
    */
   public function setPartnerUserToken($partnerUserToken)
   {
