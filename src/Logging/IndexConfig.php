@@ -20,20 +20,46 @@ namespace Google\Service\Logging;
 class IndexConfig extends \Google\Model
 {
   /**
+   * The index's type is unspecified.
+   */
+  public const TYPE_INDEX_TYPE_UNSPECIFIED = 'INDEX_TYPE_UNSPECIFIED';
+  /**
+   * The index is a string-type index.
+   */
+  public const TYPE_INDEX_TYPE_STRING = 'INDEX_TYPE_STRING';
+  /**
+   * The index is a integer-type index.
+   */
+  public const TYPE_INDEX_TYPE_INTEGER = 'INDEX_TYPE_INTEGER';
+  /**
+   * Output only. The timestamp when the index was last modified.This is used to
+   * return the timestamp, and will be ignored if supplied during update.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The LogEntry field path to index.Note that some paths are
+   * automatically indexed, and other paths are not eligible for indexing. See
+   * indexing documentation(
+   * https://cloud.google.com/logging/docs/analyze/custom-index) for details.For
+   * example: jsonPayload.request.status
+   *
    * @var string
    */
   public $fieldPath;
   /**
+   * Required. The type of data in this index.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The timestamp when the index was last modified.This is used to
+   * return the timestamp, and will be ignored if supplied during update.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,7 +73,13 @@ class IndexConfig extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The LogEntry field path to index.Note that some paths are
+   * automatically indexed, and other paths are not eligible for indexing. See
+   * indexing documentation(
+   * https://cloud.google.com/logging/docs/analyze/custom-index) for details.For
+   * example: jsonPayload.request.status
+   *
+   * @param string $fieldPath
    */
   public function setFieldPath($fieldPath)
   {
@@ -61,14 +93,19 @@ class IndexConfig extends \Google\Model
     return $this->fieldPath;
   }
   /**
-   * @param string
+   * Required. The type of data in this index.
+   *
+   * Accepted values: INDEX_TYPE_UNSPECIFIED, INDEX_TYPE_STRING,
+   * INDEX_TYPE_INTEGER
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

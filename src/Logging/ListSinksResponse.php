@@ -21,6 +21,10 @@ class ListSinksResponse extends \Google\Collection
 {
   protected $collection_key = 'sinks';
   /**
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call the same
+   * method again using the value of nextPageToken as pageToken.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListSinksResponse extends \Google\Collection
   protected $sinksDataType = 'array';
 
   /**
-   * @param string
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call the same
+   * method again using the value of nextPageToken as pageToken.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListSinksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param LogSink[]
+   * A list of sinks.
+   *
+   * @param LogSink[] $sinks
    */
   public function setSinks($sinks)
   {

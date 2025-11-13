@@ -20,22 +20,67 @@ namespace Google\Service\Logging;
 class LogLine extends \Google\Model
 {
   /**
+   * (0) The log entry has no assigned severity level.
+   */
+  public const SEVERITY_DEFAULT = 'DEFAULT';
+  /**
+   * (100) Debug or trace information.
+   */
+  public const SEVERITY_DEBUG = 'DEBUG';
+  /**
+   * (200) Routine information, such as ongoing status or performance.
+   */
+  public const SEVERITY_INFO = 'INFO';
+  /**
+   * (300) Normal but significant events, such as start up, shut down, or a
+   * configuration change.
+   */
+  public const SEVERITY_NOTICE = 'NOTICE';
+  /**
+   * (400) Warning events might cause problems.
+   */
+  public const SEVERITY_WARNING = 'WARNING';
+  /**
+   * (500) Error events are likely to cause problems.
+   */
+  public const SEVERITY_ERROR = 'ERROR';
+  /**
+   * (600) Critical events cause more severe problems or outages.
+   */
+  public const SEVERITY_CRITICAL = 'CRITICAL';
+  /**
+   * (700) A person must take an action immediately.
+   */
+  public const SEVERITY_ALERT = 'ALERT';
+  /**
+   * (800) One or more systems are unusable.
+   */
+  public const SEVERITY_EMERGENCY = 'EMERGENCY';
+  /**
+   * App-provided log message.
+   *
    * @var string
    */
   public $logMessage;
   /**
+   * Severity of this log entry.
+   *
    * @var string
    */
   public $severity;
   protected $sourceLocationType = SourceLocation::class;
   protected $sourceLocationDataType = '';
   /**
+   * Approximate time when this log entry was made.
+   *
    * @var string
    */
   public $time;
 
   /**
-   * @param string
+   * App-provided log message.
+   *
+   * @param string $logMessage
    */
   public function setLogMessage($logMessage)
   {
@@ -49,21 +94,28 @@ class LogLine extends \Google\Model
     return $this->logMessage;
   }
   /**
-   * @param string
+   * Severity of this log entry.
+   *
+   * Accepted values: DEFAULT, DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL,
+   * ALERT, EMERGENCY
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
     return $this->severity;
   }
   /**
-   * @param SourceLocation
+   * Where in the source code this log message was written.
+   *
+   * @param SourceLocation $sourceLocation
    */
   public function setSourceLocation(SourceLocation $sourceLocation)
   {
@@ -77,7 +129,9 @@ class LogLine extends \Google\Model
     return $this->sourceLocation;
   }
   /**
-   * @param string
+   * Approximate time when this log entry was made.
+   *
+   * @param string $time
    */
   public function setTime($time)
   {

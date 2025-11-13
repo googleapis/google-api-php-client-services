@@ -20,12 +20,24 @@ namespace Google\Service\Logging;
 class BigQueryDataset extends \Google\Model
 {
   /**
+   * Output only. The full resource name of the BigQuery dataset. The DATASET_ID
+   * will match the ID of the link, so the link must match the naming
+   * restrictions of BigQuery datasets (alphanumeric characters and underscores
+   * only).The dataset will have a resource path of
+   * "bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID"
+   *
    * @var string
    */
   public $datasetId;
 
   /**
-   * @param string
+   * Output only. The full resource name of the BigQuery dataset. The DATASET_ID
+   * will match the ID of the link, so the link must match the naming
+   * restrictions of BigQuery datasets (alphanumeric characters and underscores
+   * only).The dataset will have a resource path of
+   * "bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID"
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {

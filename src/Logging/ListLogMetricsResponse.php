@@ -23,12 +23,18 @@ class ListLogMetricsResponse extends \Google\Collection
   protected $metricsType = LogMetric::class;
   protected $metricsDataType = 'array';
   /**
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call this method
+   * again using the value of nextPageToken as pageToken.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param LogMetric[]
+   * A list of logs-based metrics.
+   *
+   * @param LogMetric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -42,7 +48,11 @@ class ListLogMetricsResponse extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call this method
+   * again using the value of nextPageToken as pageToken.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

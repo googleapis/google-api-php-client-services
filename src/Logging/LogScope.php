@@ -21,28 +21,47 @@ class LogScope extends \Google\Collection
 {
   protected $collection_key = 'resourceNames';
   /**
+   * Output only. The creation timestamp of the log scope.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Describes this log scope.The maximum length of the description is
+   * 8000 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The resource name of the log scope.Log scopes are only
+   * available in the global location. For example:projects/my-
+   * project/locations/global/logScopes/my-log-scope
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Names of one or more parent resources (organizations and folders
+   * are not supported.): projects/[PROJECT_ID]May alternatively be one or more
+   * views: projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/vi
+   * ews/[VIEW_ID]A log scope can include a maximum of 5 projects and a maximum
+   * of 100 resources in total.
+   *
    * @var string[]
    */
   public $resourceNames;
   /**
+   * Output only. The last update timestamp of the log scope.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The creation timestamp of the log scope.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -56,7 +75,10 @@ class LogScope extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Describes this log scope.The maximum length of the description is
+   * 8000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -70,7 +92,11 @@ class LogScope extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The resource name of the log scope.Log scopes are only
+   * available in the global location. For example:projects/my-
+   * project/locations/global/logScopes/my-log-scope
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -84,7 +110,13 @@ class LogScope extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Required. Names of one or more parent resources (organizations and folders
+   * are not supported.): projects/[PROJECT_ID]May alternatively be one or more
+   * views: projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/vi
+   * ews/[VIEW_ID]A log scope can include a maximum of 5 projects and a maximum
+   * of 100 resources in total.
+   *
+   * @param string[] $resourceNames
    */
   public function setResourceNames($resourceNames)
   {
@@ -98,7 +130,9 @@ class LogScope extends \Google\Collection
     return $this->resourceNames;
   }
   /**
-   * @param string
+   * Output only. The last update timestamp of the log scope.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

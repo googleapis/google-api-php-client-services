@@ -20,12 +20,18 @@ namespace Google\Service\Logging;
 class SummaryField extends \Google\Model
 {
   /**
+   * Optional. The field from the LogEntry to include in the summary line, for
+   * example resource.type or jsonPayload.name.
+   *
    * @var string
    */
   public $field;
 
   /**
-   * @param string
+   * Optional. The field from the LogEntry to include in the summary line, for
+   * example resource.type or jsonPayload.name.
+   *
+   * @param string $field
    */
   public function setField($field)
   {

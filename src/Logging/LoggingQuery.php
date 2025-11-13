@@ -21,14 +21,22 @@ class LoggingQuery extends \Google\Collection
 {
   protected $collection_key = 'summaryFields';
   /**
+   * Required. An advanced query using the Logging Query Language
+   * (https://cloud.google.com/logging/docs/view/logging-query-language). The
+   * maximum length of the filter is 20000 characters.
+   *
    * @var string
    */
   public $filter;
   /**
+   * Characters will be counted from the end of the string.
+   *
    * @var int
    */
   public $summaryFieldEnd;
   /**
+   * Characters will be counted from the start of the string.
+   *
    * @var int
    */
   public $summaryFieldStart;
@@ -36,7 +44,11 @@ class LoggingQuery extends \Google\Collection
   protected $summaryFieldsDataType = 'array';
 
   /**
-   * @param string
+   * Required. An advanced query using the Logging Query Language
+   * (https://cloud.google.com/logging/docs/view/logging-query-language). The
+   * maximum length of the filter is 20000 characters.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -50,7 +62,9 @@ class LoggingQuery extends \Google\Collection
     return $this->filter;
   }
   /**
-   * @param int
+   * Characters will be counted from the end of the string.
+   *
+   * @param int $summaryFieldEnd
    */
   public function setSummaryFieldEnd($summaryFieldEnd)
   {
@@ -64,7 +78,9 @@ class LoggingQuery extends \Google\Collection
     return $this->summaryFieldEnd;
   }
   /**
-   * @param int
+   * Characters will be counted from the start of the string.
+   *
+   * @param int $summaryFieldStart
    */
   public function setSummaryFieldStart($summaryFieldStart)
   {
@@ -78,7 +94,9 @@ class LoggingQuery extends \Google\Collection
     return $this->summaryFieldStart;
   }
   /**
-   * @param SummaryField[]
+   * Optional. The set of summary fields to display for this saved query.
+   *
+   * @param SummaryField[] $summaryFields
    */
   public function setSummaryFields($summaryFields)
   {

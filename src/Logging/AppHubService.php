@@ -20,20 +20,28 @@ namespace Google\Service\Logging;
 class AppHubService extends \Google\Model
 {
   /**
+   * Service criticality type Example: "CRITICAL"
+   *
    * @var string
    */
   public $criticalityType;
   /**
+   * Service environment type Example: "DEV"
+   *
    * @var string
    */
   public $environmentType;
   /**
+   * Service Id. Example: "my-service"
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Service criticality type Example: "CRITICAL"
+   *
+   * @param string $criticalityType
    */
   public function setCriticalityType($criticalityType)
   {
@@ -47,7 +55,9 @@ class AppHubService extends \Google\Model
     return $this->criticalityType;
   }
   /**
-   * @param string
+   * Service environment type Example: "DEV"
+   *
+   * @param string $environmentType
    */
   public function setEnvironmentType($environmentType)
   {
@@ -61,7 +71,9 @@ class AppHubService extends \Google\Model
     return $this->environmentType;
   }
   /**
-   * @param string
+   * Service Id. Example: "my-service"
+   *
+   * @param string $id
    */
   public function setId($id)
   {

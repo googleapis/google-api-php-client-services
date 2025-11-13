@@ -20,46 +20,103 @@ namespace Google\Service\Logging;
 class CopyLogEntriesMetadata extends \Google\Model
 {
   /**
+   * Should not be used.
+   */
+  public const STATE_OPERATION_STATE_UNSPECIFIED = 'OPERATION_STATE_UNSPECIFIED';
+  /**
+   * The operation is scheduled.
+   */
+  public const STATE_OPERATION_STATE_SCHEDULED = 'OPERATION_STATE_SCHEDULED';
+  /**
+   * Waiting for necessary permissions.
+   */
+  public const STATE_OPERATION_STATE_WAITING_FOR_PERMISSIONS = 'OPERATION_STATE_WAITING_FOR_PERMISSIONS';
+  /**
+   * The operation is running.
+   */
+  public const STATE_OPERATION_STATE_RUNNING = 'OPERATION_STATE_RUNNING';
+  /**
+   * The operation was completed successfully.
+   */
+  public const STATE_OPERATION_STATE_SUCCEEDED = 'OPERATION_STATE_SUCCEEDED';
+  /**
+   * The operation failed.
+   */
+  public const STATE_OPERATION_STATE_FAILED = 'OPERATION_STATE_FAILED';
+  /**
+   * The operation was cancelled by the user.
+   */
+  public const STATE_OPERATION_STATE_CANCELLED = 'OPERATION_STATE_CANCELLED';
+  /**
+   * The operation is waiting for quota.
+   */
+  public const STATE_OPERATION_STATE_PENDING = 'OPERATION_STATE_PENDING';
+  /**
+   * Identifies whether the user has requested cancellation of the operation.
+   *
    * @var bool
    */
   public $cancellationRequested;
   /**
+   * Destination to which to copy log entries.For example, a Cloud Storage
+   * bucket:"storage.googleapis.com/my-cloud-storage-bucket"
+   *
    * @var string
    */
   public $destination;
   /**
+   * The end time of an operation.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Estimated progress of the operation (0 - 100%).
+   *
    * @var int
    */
   public $progress;
   protected $requestType = CopyLogEntriesRequest::class;
   protected $requestDataType = '';
   /**
+   * Source from which to copy log entries.For example, a log
+   * bucket:"projects/my-project/locations/global/buckets/my-source-bucket"
+   *
    * @var string
    */
   public $source;
   /**
+   * The create time of an operation.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. State of an operation.
+   *
    * @var string
    */
   public $state;
   /**
+   * Name of the verb executed by the operation.For example,"copy"
+   *
    * @var string
    */
   public $verb;
   /**
+   * The IAM identity of a service account that must be granted access to the
+   * destination.If the service account is not granted permission to the
+   * destination within an hour, the operation will be cancelled.For example:
+   * "serviceAccount:foo@bar.com"
+   *
    * @var string
    */
   public $writerIdentity;
 
   /**
-   * @param bool
+   * Identifies whether the user has requested cancellation of the operation.
+   *
+   * @param bool $cancellationRequested
    */
   public function setCancellationRequested($cancellationRequested)
   {
@@ -73,7 +130,10 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->cancellationRequested;
   }
   /**
-   * @param string
+   * Destination to which to copy log entries.For example, a Cloud Storage
+   * bucket:"storage.googleapis.com/my-cloud-storage-bucket"
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -87,7 +147,9 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * The end time of an operation.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -101,7 +163,9 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param int
+   * Estimated progress of the operation (0 - 100%).
+   *
+   * @param int $progress
    */
   public function setProgress($progress)
   {
@@ -115,13 +179,17 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->progress;
   }
   /**
-   * @param CopyLogEntriesRequest
+   * CopyLogEntries RPC request. This field is deprecated and not used.
+   *
+   * @deprecated
+   * @param CopyLogEntriesRequest $request
    */
   public function setRequest(CopyLogEntriesRequest $request)
   {
     $this->request = $request;
   }
   /**
+   * @deprecated
    * @return CopyLogEntriesRequest
    */
   public function getRequest()
@@ -129,7 +197,10 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->request;
   }
   /**
-   * @param string
+   * Source from which to copy log entries.For example, a log
+   * bucket:"projects/my-project/locations/global/buckets/my-source-bucket"
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -143,7 +214,9 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->source;
   }
   /**
-   * @param string
+   * The create time of an operation.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -157,21 +230,30 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. State of an operation.
+   *
+   * Accepted values: OPERATION_STATE_UNSPECIFIED, OPERATION_STATE_SCHEDULED,
+   * OPERATION_STATE_WAITING_FOR_PERMISSIONS, OPERATION_STATE_RUNNING,
+   * OPERATION_STATE_SUCCEEDED, OPERATION_STATE_FAILED,
+   * OPERATION_STATE_CANCELLED, OPERATION_STATE_PENDING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Name of the verb executed by the operation.For example,"copy"
+   *
+   * @param string $verb
    */
   public function setVerb($verb)
   {
@@ -185,7 +267,12 @@ class CopyLogEntriesMetadata extends \Google\Model
     return $this->verb;
   }
   /**
-   * @param string
+   * The IAM identity of a service account that must be granted access to the
+   * destination.If the service account is not granted permission to the
+   * destination within an hour, the operation will be cancelled.For example:
+   * "serviceAccount:foo@bar.com"
+   *
+   * @param string $writerIdentity
    */
   public function setWriterIdentity($writerIdentity)
   {

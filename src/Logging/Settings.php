@@ -22,32 +22,72 @@ class Settings extends \Google\Model
   protected $defaultSinkConfigType = DefaultSinkConfig::class;
   protected $defaultSinkConfigDataType = '';
   /**
+   * Optional. If set to true, the _Default sink in newly created projects and
+   * folders will created in a disabled state. This can be used to automatically
+   * disable log storage if there is already an aggregated sink configured in
+   * the hierarchy. The _Default sink can be re-enabled manually if needed.
+   *
    * @var bool
    */
   public $disableDefaultSink;
   /**
+   * Optional. The resource name for the configured Cloud KMS key.KMS key name
+   * format: "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryp
+   * toKeys/[KEY]" For example:"projects/my-project/locations/us-
+   * central1/keyRings/my-ring/cryptoKeys/my-key"To enable CMEK, set this field
+   * to a valid kms_key_name for which the associated service account has the
+   * required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the
+   * key.The Cloud KMS key used by the Log Router can be updated by changing the
+   * kms_key_name to a new valid key name.To disable CMEK for the Log Router,
+   * set this field to an empty string.See Enabling CMEK for Log Router
+   * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more
+   * information.
+   *
    * @var string
    */
   public $kmsKeyName;
   /**
+   * Output only. The service account that will be used by the Log Router to
+   * access your Cloud KMS key.Before enabling CMEK, you must first assign the
+   * role roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that
+   * will be used to access your Cloud KMS key. Use GetSettings to obtain the
+   * service account ID.See Enabling CMEK for Log Router
+   * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more
+   * information.
+   *
    * @var string
    */
   public $kmsServiceAccountId;
   /**
+   * Output only. The service account for the given resource container, such as
+   * project or folder. Log sinks use this service account as their
+   * writer_identity if no custom service account is provided in the request
+   * when calling the create sink method.
+   *
    * @var string
    */
   public $loggingServiceAccountId;
   /**
+   * Output only. The resource name of the settings.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The storage location for the _Default and _Required log buckets
+   * of newly created projects and folders, unless the storage location is
+   * explicitly provided.Example value: europe-west1.Note: this setting does not
+   * affect the location of resources where a location is explicitly provided
+   * when created, such as custom log buckets.
+   *
    * @var string
    */
   public $storageLocation;
 
   /**
-   * @param DefaultSinkConfig
+   * Optional. Overrides the built-in configuration for _Default sink.
+   *
+   * @param DefaultSinkConfig $defaultSinkConfig
    */
   public function setDefaultSinkConfig(DefaultSinkConfig $defaultSinkConfig)
   {
@@ -61,7 +101,12 @@ class Settings extends \Google\Model
     return $this->defaultSinkConfig;
   }
   /**
-   * @param bool
+   * Optional. If set to true, the _Default sink in newly created projects and
+   * folders will created in a disabled state. This can be used to automatically
+   * disable log storage if there is already an aggregated sink configured in
+   * the hierarchy. The _Default sink can be re-enabled manually if needed.
+   *
+   * @param bool $disableDefaultSink
    */
   public function setDisableDefaultSink($disableDefaultSink)
   {
@@ -75,7 +120,19 @@ class Settings extends \Google\Model
     return $this->disableDefaultSink;
   }
   /**
-   * @param string
+   * Optional. The resource name for the configured Cloud KMS key.KMS key name
+   * format: "projects/[PROJECT_ID]/locations/[LOCATION]/keyRings/[KEYRING]/cryp
+   * toKeys/[KEY]" For example:"projects/my-project/locations/us-
+   * central1/keyRings/my-ring/cryptoKeys/my-key"To enable CMEK, set this field
+   * to a valid kms_key_name for which the associated service account has the
+   * required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned for the
+   * key.The Cloud KMS key used by the Log Router can be updated by changing the
+   * kms_key_name to a new valid key name.To disable CMEK for the Log Router,
+   * set this field to an empty string.See Enabling CMEK for Log Router
+   * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more
+   * information.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {
@@ -89,7 +146,15 @@ class Settings extends \Google\Model
     return $this->kmsKeyName;
   }
   /**
-   * @param string
+   * Output only. The service account that will be used by the Log Router to
+   * access your Cloud KMS key.Before enabling CMEK, you must first assign the
+   * role roles/cloudkms.cryptoKeyEncrypterDecrypter to the service account that
+   * will be used to access your Cloud KMS key. Use GetSettings to obtain the
+   * service account ID.See Enabling CMEK for Log Router
+   * (https://cloud.google.com/logging/docs/routing/managed-encryption) for more
+   * information.
+   *
+   * @param string $kmsServiceAccountId
    */
   public function setKmsServiceAccountId($kmsServiceAccountId)
   {
@@ -103,7 +168,12 @@ class Settings extends \Google\Model
     return $this->kmsServiceAccountId;
   }
   /**
-   * @param string
+   * Output only. The service account for the given resource container, such as
+   * project or folder. Log sinks use this service account as their
+   * writer_identity if no custom service account is provided in the request
+   * when calling the create sink method.
+   *
+   * @param string $loggingServiceAccountId
    */
   public function setLoggingServiceAccountId($loggingServiceAccountId)
   {
@@ -117,7 +187,9 @@ class Settings extends \Google\Model
     return $this->loggingServiceAccountId;
   }
   /**
-   * @param string
+   * Output only. The resource name of the settings.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -131,7 +203,13 @@ class Settings extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The storage location for the _Default and _Required log buckets
+   * of newly created projects and folders, unless the storage location is
+   * explicitly provided.Example value: europe-west1.Note: this setting does not
+   * affect the location of resources where a location is explicitly provided
+   * when created, such as custom log buckets.
+   *
+   * @param string $storageLocation
    */
   public function setStorageLocation($storageLocation)
   {

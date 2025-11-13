@@ -20,12 +20,20 @@ namespace Google\Service\Logging;
 class RecentQuery extends \Google\Model
 {
   /**
+   * Output only. The timestamp when this query was last run.
+   *
    * @var string
    */
   public $lastRunTime;
   protected $loggingQueryType = LoggingQuery::class;
   protected $loggingQueryDataType = '';
   /**
+   * Output only. Resource name of the recent query.In the format:
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/recentQueries/[QUERY_ID]"
+   * For a list of supported locations, see Supported Regions
+   * (https://cloud.google.com/logging/docs/region-support)The QUERY_ID is a
+   * system generated alphanumeric ID.
+   *
    * @var string
    */
   public $name;
@@ -33,7 +41,9 @@ class RecentQuery extends \Google\Model
   protected $opsAnalyticsQueryDataType = '';
 
   /**
-   * @param string
+   * Output only. The timestamp when this query was last run.
+   *
+   * @param string $lastRunTime
    */
   public function setLastRunTime($lastRunTime)
   {
@@ -47,7 +57,9 @@ class RecentQuery extends \Google\Model
     return $this->lastRunTime;
   }
   /**
-   * @param LoggingQuery
+   * Logging query that can be executed in Logs Explorer or via Logging API.
+   *
+   * @param LoggingQuery $loggingQuery
    */
   public function setLoggingQuery(LoggingQuery $loggingQuery)
   {
@@ -61,7 +73,13 @@ class RecentQuery extends \Google\Model
     return $this->loggingQuery;
   }
   /**
-   * @param string
+   * Output only. Resource name of the recent query.In the format:
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/recentQueries/[QUERY_ID]"
+   * For a list of supported locations, see Supported Regions
+   * (https://cloud.google.com/logging/docs/region-support)The QUERY_ID is a
+   * system generated alphanumeric ID.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -75,7 +93,9 @@ class RecentQuery extends \Google\Model
     return $this->name;
   }
   /**
-   * @param OpsAnalyticsQuery
+   * Analytics query that can be executed in Log Analytics.
+   *
+   * @param OpsAnalyticsQuery $opsAnalyticsQuery
    */
   public function setOpsAnalyticsQuery(OpsAnalyticsQuery $opsAnalyticsQuery)
   {

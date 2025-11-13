@@ -20,20 +20,34 @@ namespace Google\Service\Logging;
 class LogSplit extends \Google\Model
 {
   /**
+   * The index of this LogEntry in the sequence of split log entries. Log
+   * entries are given |index| values 0, 1, ..., n-1 for a sequence of n log
+   * entries.
+   *
    * @var int
    */
   public $index;
   /**
+   * The total number of log entries that the original LogEntry was split into.
+   *
    * @var int
    */
   public $totalSplits;
   /**
+   * A globally unique identifier for all log entries in a sequence of split log
+   * entries. All log entries with the same |LogSplit.uid| are assumed to be
+   * part of the same sequence of split log entries.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param int
+   * The index of this LogEntry in the sequence of split log entries. Log
+   * entries are given |index| values 0, 1, ..., n-1 for a sequence of n log
+   * entries.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -47,7 +61,9 @@ class LogSplit extends \Google\Model
     return $this->index;
   }
   /**
-   * @param int
+   * The total number of log entries that the original LogEntry was split into.
+   *
+   * @param int $totalSplits
    */
   public function setTotalSplits($totalSplits)
   {
@@ -61,7 +77,11 @@ class LogSplit extends \Google\Model
     return $this->totalSplits;
   }
   /**
-   * @param string
+   * A globally unique identifier for all log entries in a sequence of split log
+   * entries. All log entries with the same |LogSplit.uid| are assumed to be
+   * part of the same sequence of split log entries.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

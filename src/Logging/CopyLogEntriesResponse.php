@@ -20,12 +20,16 @@ namespace Google\Service\Logging;
 class CopyLogEntriesResponse extends \Google\Model
 {
   /**
+   * Number of log entries copied.
+   *
    * @var string
    */
   public $logEntriesCopiedCount;
 
   /**
-   * @param string
+   * Number of log entries copied.
+   *
+   * @param string $logEntriesCopiedCount
    */
   public function setLogEntriesCopiedCount($logEntriesCopiedCount)
   {

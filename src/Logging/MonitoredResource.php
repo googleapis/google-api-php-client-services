@@ -20,16 +20,30 @@ namespace Google\Service\Logging;
 class MonitoredResource extends \Google\Model
 {
   /**
+   * Required. Values for all of the labels listed in the associated monitored
+   * resource descriptor. For example, Compute Engine VM instances use the
+   * labels "project_id", "instance_id", and "zone".
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. The monitored resource type. This field must match the type field
+   * of a MonitoredResourceDescriptor object. For example, the type of a Compute
+   * Engine VM instance is gce_instance. Some descriptors include the service
+   * name in the type; for example, the type of a Datastream stream is
+   * datastream.googleapis.com/Stream.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string[]
+   * Required. Values for all of the labels listed in the associated monitored
+   * resource descriptor. For example, Compute Engine VM instances use the
+   * labels "project_id", "instance_id", and "zone".
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -43,7 +57,13 @@ class MonitoredResource extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. The monitored resource type. This field must match the type field
+   * of a MonitoredResourceDescriptor object. For example, the type of a Compute
+   * Engine VM instance is gce_instance. Some descriptors include the service
+   * name in the type; for example, the type of a Datastream stream is
+   * datastream.googleapis.com/Stream.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

@@ -23,12 +23,18 @@ class ListBucketsResponse extends \Google\Collection
   protected $bucketsType = LogBucket::class;
   protected $bucketsDataType = 'array';
   /**
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call the same
+   * method again using the value of nextPageToken as pageToken.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param LogBucket[]
+   * A list of buckets.
+   *
+   * @param LogBucket[] $buckets
    */
   public function setBuckets($buckets)
   {
@@ -42,7 +48,11 @@ class ListBucketsResponse extends \Google\Collection
     return $this->buckets;
   }
   /**
-   * @param string
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call the same
+   * method again using the value of nextPageToken as pageToken.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

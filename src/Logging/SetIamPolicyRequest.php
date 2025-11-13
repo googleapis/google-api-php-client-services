@@ -22,12 +22,20 @@ class SetIamPolicyRequest extends \Google\Model
   protected $policyType = Policy::class;
   protected $policyDataType = '';
   /**
+   * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only
+   * the fields in the mask will be modified. If no mask is provided, the
+   * following default mask is used:paths: "bindings, etag"
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param Policy
+   * REQUIRED: The complete policy to be applied to the resource. The size of
+   * the policy is limited to a few 10s of KB. An empty policy is a valid policy
+   * but certain Google Cloud services (such as Projects) might reject them.
+   *
+   * @param Policy $policy
    */
   public function setPolicy(Policy $policy)
   {
@@ -41,7 +49,11 @@ class SetIamPolicyRequest extends \Google\Model
     return $this->policy;
   }
   /**
-   * @param string
+   * OPTIONAL: A FieldMask specifying which fields of the policy to modify. Only
+   * the fields in the mask will be modified. If no mask is provided, the
+   * following default mask is used:paths: "bindings, etag"
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

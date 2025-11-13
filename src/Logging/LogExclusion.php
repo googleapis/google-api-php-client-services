@@ -20,32 +20,60 @@ namespace Google\Service\Logging;
 class LogExclusion extends \Google\Model
 {
   /**
+   * Output only. The creation timestamp of the exclusion.This field may not be
+   * present for older exclusions.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. A description of this exclusion.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. If set to True, then this exclusion is disabled and it does not
+   * exclude any log entries. You can update an exclusion to change the value of
+   * this field.
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * Required. An advanced logs filter
+   * (https://cloud.google.com/logging/docs/view/advanced-queries) that matches
+   * the log entries to be excluded. By using the sample function
+   * (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you
+   * can exclude less than 100% of the matching log entries.For example, the
+   * following query matches 99% of low-severity log entries from Google Cloud
+   * Storage buckets:resource.type=gcs_bucket severity
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. A client-assigned identifier, such as "load-balancer-exclusion".
+   * Identifiers are limited to 100 characters and can include only letters,
+   * digits, underscores, hyphens, and periods. First character has to be
+   * alphanumeric.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The last update timestamp of the exclusion.This field may not
+   * be present for older exclusions.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The creation timestamp of the exclusion.This field may not be
+   * present for older exclusions.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -59,7 +87,9 @@ class LogExclusion extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. A description of this exclusion.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -73,7 +103,11 @@ class LogExclusion extends \Google\Model
     return $this->description;
   }
   /**
-   * @param bool
+   * Optional. If set to True, then this exclusion is disabled and it does not
+   * exclude any log entries. You can update an exclusion to change the value of
+   * this field.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -87,7 +121,15 @@ class LogExclusion extends \Google\Model
     return $this->disabled;
   }
   /**
-   * @param string
+   * Required. An advanced logs filter
+   * (https://cloud.google.com/logging/docs/view/advanced-queries) that matches
+   * the log entries to be excluded. By using the sample function
+   * (https://cloud.google.com/logging/docs/view/advanced-queries#sample), you
+   * can exclude less than 100% of the matching log entries.For example, the
+   * following query matches 99% of low-severity log entries from Google Cloud
+   * Storage buckets:resource.type=gcs_bucket severity
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -101,7 +143,12 @@ class LogExclusion extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param string
+   * Optional. A client-assigned identifier, such as "load-balancer-exclusion".
+   * Identifiers are limited to 100 characters and can include only letters,
+   * digits, underscores, hyphens, and periods. First character has to be
+   * alphanumeric.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -115,7 +162,10 @@ class LogExclusion extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The last update timestamp of the exclusion.This field may not
+   * be present for older exclusions.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

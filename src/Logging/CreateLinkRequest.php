@@ -22,16 +22,25 @@ class CreateLinkRequest extends \Google\Model
   protected $linkType = Link::class;
   protected $linkDataType = '';
   /**
+   * Required. The ID to use for the link. The link_id can have up to 100
+   * characters. A valid link_id must only have alphanumeric characters and
+   * underscores within it.
+   *
    * @var string
    */
   public $linkId;
   /**
+   * Required. The full resource name of the bucket to create a link for.
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param Link
+   * Required. The new link.
+   *
+   * @param Link $link
    */
   public function setLink(Link $link)
   {
@@ -45,7 +54,11 @@ class CreateLinkRequest extends \Google\Model
     return $this->link;
   }
   /**
-   * @param string
+   * Required. The ID to use for the link. The link_id can have up to 100
+   * characters. A valid link_id must only have alphanumeric characters and
+   * underscores within it.
+   *
+   * @param string $linkId
    */
   public function setLinkId($linkId)
   {
@@ -59,7 +72,10 @@ class CreateLinkRequest extends \Google\Model
     return $this->linkId;
   }
   /**
-   * @param string
+   * Required. The full resource name of the bucket to create a link for.
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]"
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {

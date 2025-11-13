@@ -22,16 +22,32 @@ class UpdateBucketRequest extends \Google\Model
   protected $bucketType = LogBucket::class;
   protected $bucketDataType = '';
   /**
+   * Required. The full resource name of the bucket to update.
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" "organi
+   * zations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" "bil
+   * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_I
+   * D]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+   * example:"projects/my-project/locations/global/buckets/my-bucket"
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Field mask that specifies the fields in bucket that need an
+   * update. A bucket field will be overwritten if, and only if, it is in the
+   * update mask. name and output only fields cannot be updated.For a detailed
+   * FieldMask definition, see: https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor
+   * example: updateMask=retention_days
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param LogBucket
+   * Required. The updated bucket.
+   *
+   * @param LogBucket $bucket
    */
   public function setBucket(LogBucket $bucket)
   {
@@ -45,7 +61,14 @@ class UpdateBucketRequest extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * Required. The full resource name of the bucket to update.
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" "organi
+   * zations/[ORGANIZATION_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" "bil
+   * lingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_I
+   * D]" "folders/[FOLDER_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]" For
+   * example:"projects/my-project/locations/global/buckets/my-bucket"
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -59,7 +82,14 @@ class UpdateBucketRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Field mask that specifies the fields in bucket that need an
+   * update. A bucket field will be overwritten if, and only if, it is in the
+   * update mask. name and output only fields cannot be updated.For a detailed
+   * FieldMask definition, see: https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor
+   * example: updateMask=retention_days
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

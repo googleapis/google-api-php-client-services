@@ -21,18 +21,36 @@ class ListRecentQueriesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call the same
+   * method again using the value of nextPageToken as pageToken.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $recentQueriesType = RecentQuery::class;
   protected $recentQueriesDataType = 'array';
   /**
+   * The unreachable resources. Each resource can be either 1) a saved query if
+   * a specific query is unreachable or 2) a location if a specific location is
+   * unreachable.
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/recentQueries/[QUERY_ID]"
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+   * project/locations/global/recentQueries/12345678" "projects/my-
+   * project/locations/global"If there are unreachable resources, the response
+   * will first return pages that contain recent queries, and then return pages
+   * that contain the unreachable resources.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * If there might be more results than appear in this response, then
+   * nextPageToken is included. To get the next set of results, call the same
+   * method again using the value of nextPageToken as pageToken.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +64,9 @@ class ListRecentQueriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param RecentQuery[]
+   * A list of recent queries.
+   *
+   * @param RecentQuery[] $recentQueries
    */
   public function setRecentQueries($recentQueries)
   {
@@ -60,7 +80,17 @@ class ListRecentQueriesResponse extends \Google\Collection
     return $this->recentQueries;
   }
   /**
-   * @param string[]
+   * The unreachable resources. Each resource can be either 1) a saved query if
+   * a specific query is unreachable or 2) a location if a specific location is
+   * unreachable.
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]/recentQueries/[QUERY_ID]"
+   * "projects/[PROJECT_ID]/locations/[LOCATION_ID]" For example:"projects/my-
+   * project/locations/global/recentQueries/12345678" "projects/my-
+   * project/locations/global"If there are unreachable resources, the response
+   * will first return pages that contain recent queries, and then return pages
+   * that contain the unreachable resources.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
