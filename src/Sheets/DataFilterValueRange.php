@@ -19,20 +19,41 @@ namespace Google\Service\Sheets;
 
 class DataFilterValueRange extends \Google\Collection
 {
+  /**
+   * The default value, do not use.
+   */
+  public const MAJOR_DIMENSION_DIMENSION_UNSPECIFIED = 'DIMENSION_UNSPECIFIED';
+  /**
+   * Operates on the rows of a sheet.
+   */
+  public const MAJOR_DIMENSION_ROWS = 'ROWS';
+  /**
+   * Operates on the columns of a sheet.
+   */
+  public const MAJOR_DIMENSION_COLUMNS = 'COLUMNS';
   protected $collection_key = 'values';
   protected $dataFilterType = DataFilter::class;
   protected $dataFilterDataType = '';
   /**
+   * The major dimension of the values.
+   *
    * @var string
    */
   public $majorDimension;
   /**
+   * The data to be written. If the provided values exceed any of the ranges
+   * matched by the data filter then the request fails. If the provided values
+   * are less than the matched ranges only the specified values are written,
+   * existing values in the matched ranges remain unaffected.
+   *
    * @var array[]
    */
   public $values;
 
   /**
-   * @param DataFilter
+   * The data filter describing the location of the values in the spreadsheet.
+   *
+   * @param DataFilter $dataFilter
    */
   public function setDataFilter(DataFilter $dataFilter)
   {
@@ -46,21 +67,30 @@ class DataFilterValueRange extends \Google\Collection
     return $this->dataFilter;
   }
   /**
-   * @param string
+   * The major dimension of the values.
+   *
+   * Accepted values: DIMENSION_UNSPECIFIED, ROWS, COLUMNS
+   *
+   * @param self::MAJOR_DIMENSION_* $majorDimension
    */
   public function setMajorDimension($majorDimension)
   {
     $this->majorDimension = $majorDimension;
   }
   /**
-   * @return string
+   * @return self::MAJOR_DIMENSION_*
    */
   public function getMajorDimension()
   {
     return $this->majorDimension;
   }
   /**
-   * @param array[]
+   * The data to be written. If the provided values exceed any of the ranges
+   * matched by the data filter then the request fails. If the provided values
+   * are less than the matched ranges only the specified values are written,
+   * existing values in the matched ranges remain unaffected.
+   *
+   * @param array[] $values
    */
   public function setValues($values)
   {

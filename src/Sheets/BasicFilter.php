@@ -29,18 +29,27 @@ class BasicFilter extends \Google\Collection
   protected $sortSpecsType = SortSpec::class;
   protected $sortSpecsDataType = 'array';
   /**
+   * The table this filter is backed by, if any. When writing, only one of range
+   * or table_id may be set.
+   *
    * @var string
    */
   public $tableId;
 
   /**
-   * @param FilterCriteria[]
+   * The criteria for showing/hiding values per column. The map's key is the
+   * column index, and the value is the criteria for that column. This field is
+   * deprecated in favor of filter_specs.
+   *
+   * @deprecated
+   * @param FilterCriteria[] $criteria
    */
   public function setCriteria($criteria)
   {
     $this->criteria = $criteria;
   }
   /**
+   * @deprecated
    * @return FilterCriteria[]
    */
   public function getCriteria()
@@ -48,7 +57,11 @@ class BasicFilter extends \Google\Collection
     return $this->criteria;
   }
   /**
-   * @param FilterSpec[]
+   * The filter criteria per column. Both criteria and filter_specs are
+   * populated in responses. If both fields are specified in an update request,
+   * this field takes precedence.
+   *
+   * @param FilterSpec[] $filterSpecs
    */
   public function setFilterSpecs($filterSpecs)
   {
@@ -62,7 +75,9 @@ class BasicFilter extends \Google\Collection
     return $this->filterSpecs;
   }
   /**
-   * @param GridRange
+   * The range the filter covers.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {
@@ -76,7 +91,10 @@ class BasicFilter extends \Google\Collection
     return $this->range;
   }
   /**
-   * @param SortSpec[]
+   * The sort order per column. Later specifications are used when values are
+   * equal in the earlier specifications.
+   *
+   * @param SortSpec[] $sortSpecs
    */
   public function setSortSpecs($sortSpecs)
   {
@@ -90,7 +108,10 @@ class BasicFilter extends \Google\Collection
     return $this->sortSpecs;
   }
   /**
-   * @param string
+   * The table this filter is backed by, if any. When writing, only one of range
+   * or table_id may be set.
+   *
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {

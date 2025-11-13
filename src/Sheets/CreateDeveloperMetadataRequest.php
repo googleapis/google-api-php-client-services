@@ -23,7 +23,9 @@ class CreateDeveloperMetadataRequest extends \Google\Model
   protected $developerMetadataDataType = '';
 
   /**
-   * @param DeveloperMetadata
+   * The developer metadata to create.
+   *
+   * @param DeveloperMetadata $developerMetadata
    */
   public function setDeveloperMetadata(DeveloperMetadata $developerMetadata)
   {

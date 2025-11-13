@@ -24,7 +24,12 @@ class CancelDataSourceRefreshResponse extends \Google\Collection
   protected $statusesDataType = 'array';
 
   /**
-   * @param CancelDataSourceRefreshStatus[]
+   * The cancellation statuses of refreshes of all data source objects specified
+   * in the request. If is_all is specified, the field contains only those in
+   * failure status. Refreshing and canceling refresh the same data source
+   * object is also not allowed in the same `batchUpdate`.
+   *
+   * @param CancelDataSourceRefreshStatus[] $statuses
    */
   public function setStatuses($statuses)
   {

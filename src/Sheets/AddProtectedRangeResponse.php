@@ -23,7 +23,9 @@ class AddProtectedRangeResponse extends \Google\Model
   protected $protectedRangeDataType = '';
 
   /**
-   * @param ProtectedRange
+   * The newly added protected range.
+   *
+   * @param ProtectedRange $protectedRange
    */
   public function setProtectedRange(ProtectedRange $protectedRange)
   {

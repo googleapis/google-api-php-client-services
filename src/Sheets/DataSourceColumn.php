@@ -20,6 +20,8 @@ namespace Google\Service\Sheets;
 class DataSourceColumn extends \Google\Model
 {
   /**
+   * The formula of the calculated column.
+   *
    * @var string
    */
   public $formula;
@@ -27,7 +29,9 @@ class DataSourceColumn extends \Google\Model
   protected $referenceDataType = '';
 
   /**
-   * @param string
+   * The formula of the calculated column.
+   *
+   * @param string $formula
    */
   public function setFormula($formula)
   {
@@ -41,7 +45,9 @@ class DataSourceColumn extends \Google\Model
     return $this->formula;
   }
   /**
-   * @param DataSourceColumnReference
+   * The column reference.
+   *
+   * @param DataSourceColumnReference $reference
    */
   public function setReference(DataSourceColumnReference $reference)
   {

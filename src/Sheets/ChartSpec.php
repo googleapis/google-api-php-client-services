@@ -19,8 +19,31 @@ namespace Google\Service\Sheets;
 
 class ChartSpec extends \Google\Collection
 {
+  /**
+   * Default value, do not use.
+   */
+  public const HIDDEN_DIMENSION_STRATEGY_CHART_HIDDEN_DIMENSION_STRATEGY_UNSPECIFIED = 'CHART_HIDDEN_DIMENSION_STRATEGY_UNSPECIFIED';
+  /**
+   * Charts will skip hidden rows and columns.
+   */
+  public const HIDDEN_DIMENSION_STRATEGY_SKIP_HIDDEN_ROWS_AND_COLUMNS = 'SKIP_HIDDEN_ROWS_AND_COLUMNS';
+  /**
+   * Charts will skip hidden rows only.
+   */
+  public const HIDDEN_DIMENSION_STRATEGY_SKIP_HIDDEN_ROWS = 'SKIP_HIDDEN_ROWS';
+  /**
+   * Charts will skip hidden columns only.
+   */
+  public const HIDDEN_DIMENSION_STRATEGY_SKIP_HIDDEN_COLUMNS = 'SKIP_HIDDEN_COLUMNS';
+  /**
+   * Charts will not skip any hidden rows or columns.
+   */
+  public const HIDDEN_DIMENSION_STRATEGY_SHOW_ALL = 'SHOW_ALL';
   protected $collection_key = 'sortSpecs';
   /**
+   * The alternative text that describes the chart. This is often used for
+   * accessibility.
+   *
    * @var string
    */
   public $altText;
@@ -39,16 +62,26 @@ class ChartSpec extends \Google\Collection
   protected $filterSpecsType = FilterSpec::class;
   protected $filterSpecsDataType = 'array';
   /**
+   * The name of the font to use by default for all chart text (e.g. title, axis
+   * labels, legend). If a font is specified for a specific part of the chart it
+   * will override this font name.
+   *
    * @var string
    */
   public $fontName;
   /**
+   * Determines how the charts will use hidden rows or columns.
+   *
    * @var string
    */
   public $hiddenDimensionStrategy;
   protected $histogramChartType = HistogramChartSpec::class;
   protected $histogramChartDataType = '';
   /**
+   * True to make a chart fill the entire space in which it's rendered with
+   * minimum padding. False to use the default padding. (Not applicable to Geo
+   * and Org charts.)
+   *
    * @var bool
    */
   public $maximized;
@@ -61,6 +94,8 @@ class ChartSpec extends \Google\Collection
   protected $sortSpecsType = SortSpec::class;
   protected $sortSpecsDataType = 'array';
   /**
+   * The subtitle of the chart.
+   *
    * @var string
    */
   public $subtitle;
@@ -69,6 +104,8 @@ class ChartSpec extends \Google\Collection
   protected $subtitleTextPositionType = TextPosition::class;
   protected $subtitleTextPositionDataType = '';
   /**
+   * The title of the chart.
+   *
    * @var string
    */
   public $title;
@@ -82,7 +119,10 @@ class ChartSpec extends \Google\Collection
   protected $waterfallChartDataType = '';
 
   /**
-   * @param string
+   * The alternative text that describes the chart. This is often used for
+   * accessibility.
+   *
+   * @param string $altText
    */
   public function setAltText($altText)
   {
@@ -96,13 +136,18 @@ class ChartSpec extends \Google\Collection
     return $this->altText;
   }
   /**
-   * @param Color
+   * The background color of the entire chart. Not applicable to Org charts.
+   * Deprecated: Use background_color_style.
+   *
+   * @deprecated
+   * @param Color $backgroundColor
    */
   public function setBackgroundColor(Color $backgroundColor)
   {
     $this->backgroundColor = $backgroundColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getBackgroundColor()
@@ -110,7 +155,10 @@ class ChartSpec extends \Google\Collection
     return $this->backgroundColor;
   }
   /**
-   * @param ColorStyle
+   * The background color of the entire chart. Not applicable to Org charts. If
+   * background_color is also set, this field takes precedence.
+   *
+   * @param ColorStyle $backgroundColorStyle
    */
   public function setBackgroundColorStyle(ColorStyle $backgroundColorStyle)
   {
@@ -124,7 +172,10 @@ class ChartSpec extends \Google\Collection
     return $this->backgroundColorStyle;
   }
   /**
-   * @param BasicChartSpec
+   * A basic chart specification, can be one of many kinds of charts. See
+   * BasicChartType for the list of all charts this supports.
+   *
+   * @param BasicChartSpec $basicChart
    */
   public function setBasicChart(BasicChartSpec $basicChart)
   {
@@ -138,7 +189,9 @@ class ChartSpec extends \Google\Collection
     return $this->basicChart;
   }
   /**
-   * @param BubbleChartSpec
+   * A bubble chart specification.
+   *
+   * @param BubbleChartSpec $bubbleChart
    */
   public function setBubbleChart(BubbleChartSpec $bubbleChart)
   {
@@ -152,7 +205,9 @@ class ChartSpec extends \Google\Collection
     return $this->bubbleChart;
   }
   /**
-   * @param CandlestickChartSpec
+   * A candlestick chart specification.
+   *
+   * @param CandlestickChartSpec $candlestickChart
    */
   public function setCandlestickChart(CandlestickChartSpec $candlestickChart)
   {
@@ -166,7 +221,9 @@ class ChartSpec extends \Google\Collection
     return $this->candlestickChart;
   }
   /**
-   * @param DataSourceChartProperties
+   * If present, the field contains data source chart specific properties.
+   *
+   * @param DataSourceChartProperties $dataSourceChartProperties
    */
   public function setDataSourceChartProperties(DataSourceChartProperties $dataSourceChartProperties)
   {
@@ -180,7 +237,10 @@ class ChartSpec extends \Google\Collection
     return $this->dataSourceChartProperties;
   }
   /**
-   * @param FilterSpec[]
+   * The filters applied to the source data of the chart. Only supported for
+   * data source charts.
+   *
+   * @param FilterSpec[] $filterSpecs
    */
   public function setFilterSpecs($filterSpecs)
   {
@@ -194,7 +254,11 @@ class ChartSpec extends \Google\Collection
     return $this->filterSpecs;
   }
   /**
-   * @param string
+   * The name of the font to use by default for all chart text (e.g. title, axis
+   * labels, legend). If a font is specified for a specific part of the chart it
+   * will override this font name.
+   *
+   * @param string $fontName
    */
   public function setFontName($fontName)
   {
@@ -208,21 +272,29 @@ class ChartSpec extends \Google\Collection
     return $this->fontName;
   }
   /**
-   * @param string
+   * Determines how the charts will use hidden rows or columns.
+   *
+   * Accepted values: CHART_HIDDEN_DIMENSION_STRATEGY_UNSPECIFIED,
+   * SKIP_HIDDEN_ROWS_AND_COLUMNS, SKIP_HIDDEN_ROWS, SKIP_HIDDEN_COLUMNS,
+   * SHOW_ALL
+   *
+   * @param self::HIDDEN_DIMENSION_STRATEGY_* $hiddenDimensionStrategy
    */
   public function setHiddenDimensionStrategy($hiddenDimensionStrategy)
   {
     $this->hiddenDimensionStrategy = $hiddenDimensionStrategy;
   }
   /**
-   * @return string
+   * @return self::HIDDEN_DIMENSION_STRATEGY_*
    */
   public function getHiddenDimensionStrategy()
   {
     return $this->hiddenDimensionStrategy;
   }
   /**
-   * @param HistogramChartSpec
+   * A histogram chart specification.
+   *
+   * @param HistogramChartSpec $histogramChart
    */
   public function setHistogramChart(HistogramChartSpec $histogramChart)
   {
@@ -236,7 +308,11 @@ class ChartSpec extends \Google\Collection
     return $this->histogramChart;
   }
   /**
-   * @param bool
+   * True to make a chart fill the entire space in which it's rendered with
+   * minimum padding. False to use the default padding. (Not applicable to Geo
+   * and Org charts.)
+   *
+   * @param bool $maximized
    */
   public function setMaximized($maximized)
   {
@@ -250,7 +326,9 @@ class ChartSpec extends \Google\Collection
     return $this->maximized;
   }
   /**
-   * @param OrgChartSpec
+   * An org chart specification.
+   *
+   * @param OrgChartSpec $orgChart
    */
   public function setOrgChart(OrgChartSpec $orgChart)
   {
@@ -264,7 +342,9 @@ class ChartSpec extends \Google\Collection
     return $this->orgChart;
   }
   /**
-   * @param PieChartSpec
+   * A pie chart specification.
+   *
+   * @param PieChartSpec $pieChart
    */
   public function setPieChart(PieChartSpec $pieChart)
   {
@@ -278,7 +358,9 @@ class ChartSpec extends \Google\Collection
     return $this->pieChart;
   }
   /**
-   * @param ScorecardChartSpec
+   * A scorecard chart specification.
+   *
+   * @param ScorecardChartSpec $scorecardChart
    */
   public function setScorecardChart(ScorecardChartSpec $scorecardChart)
   {
@@ -292,7 +374,10 @@ class ChartSpec extends \Google\Collection
     return $this->scorecardChart;
   }
   /**
-   * @param SortSpec[]
+   * The order to sort the chart data by. Only a single sort spec is supported.
+   * Only supported for data source charts.
+   *
+   * @param SortSpec[] $sortSpecs
    */
   public function setSortSpecs($sortSpecs)
   {
@@ -306,7 +391,9 @@ class ChartSpec extends \Google\Collection
     return $this->sortSpecs;
   }
   /**
-   * @param string
+   * The subtitle of the chart.
+   *
+   * @param string $subtitle
    */
   public function setSubtitle($subtitle)
   {
@@ -320,7 +407,10 @@ class ChartSpec extends \Google\Collection
     return $this->subtitle;
   }
   /**
-   * @param TextFormat
+   * The subtitle text format. Strikethrough, underline, and link are not
+   * supported.
+   *
+   * @param TextFormat $subtitleTextFormat
    */
   public function setSubtitleTextFormat(TextFormat $subtitleTextFormat)
   {
@@ -334,7 +424,9 @@ class ChartSpec extends \Google\Collection
     return $this->subtitleTextFormat;
   }
   /**
-   * @param TextPosition
+   * The subtitle text position. This field is optional.
+   *
+   * @param TextPosition $subtitleTextPosition
    */
   public function setSubtitleTextPosition(TextPosition $subtitleTextPosition)
   {
@@ -348,7 +440,9 @@ class ChartSpec extends \Google\Collection
     return $this->subtitleTextPosition;
   }
   /**
-   * @param string
+   * The title of the chart.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -362,7 +456,10 @@ class ChartSpec extends \Google\Collection
     return $this->title;
   }
   /**
-   * @param TextFormat
+   * The title text format. Strikethrough, underline, and link are not
+   * supported.
+   *
+   * @param TextFormat $titleTextFormat
    */
   public function setTitleTextFormat(TextFormat $titleTextFormat)
   {
@@ -376,7 +473,9 @@ class ChartSpec extends \Google\Collection
     return $this->titleTextFormat;
   }
   /**
-   * @param TextPosition
+   * The title text position. This field is optional.
+   *
+   * @param TextPosition $titleTextPosition
    */
   public function setTitleTextPosition(TextPosition $titleTextPosition)
   {
@@ -390,7 +489,9 @@ class ChartSpec extends \Google\Collection
     return $this->titleTextPosition;
   }
   /**
-   * @param TreemapChartSpec
+   * A treemap chart specification.
+   *
+   * @param TreemapChartSpec $treemapChart
    */
   public function setTreemapChart(TreemapChartSpec $treemapChart)
   {
@@ -404,7 +505,9 @@ class ChartSpec extends \Google\Collection
     return $this->treemapChart;
   }
   /**
-   * @param WaterfallChartSpec
+   * A waterfall chart specification.
+   *
+   * @param WaterfallChartSpec $waterfallChart
    */
   public function setWaterfallChart(WaterfallChartSpec $waterfallChart)
   {

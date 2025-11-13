@@ -22,12 +22,16 @@ class DataSourceFormula extends \Google\Model
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   /**
+   * The ID of the data source the formula is associated with.
+   *
    * @var string
    */
   public $dataSourceId;
 
   /**
-   * @param DataExecutionStatus
+   * Output only. The data execution status.
+   *
+   * @param DataExecutionStatus $dataExecutionStatus
    */
   public function setDataExecutionStatus(DataExecutionStatus $dataExecutionStatus)
   {
@@ -41,7 +45,9 @@ class DataSourceFormula extends \Google\Model
     return $this->dataExecutionStatus;
   }
   /**
-   * @param string
+   * The ID of the data source the formula is associated with.
+   *
+   * @param string $dataSourceId
    */
   public function setDataSourceId($dataSourceId)
   {

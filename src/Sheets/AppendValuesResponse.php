@@ -20,10 +20,15 @@ namespace Google\Service\Sheets;
 class AppendValuesResponse extends \Google\Model
 {
   /**
+   * The spreadsheet the updates were applied to.
+   *
    * @var string
    */
   public $spreadsheetId;
   /**
+   * The range (in A1 notation) of the table that values are being appended to
+   * (before the values were appended). Empty if no table was found.
+   *
    * @var string
    */
   public $tableRange;
@@ -31,7 +36,9 @@ class AppendValuesResponse extends \Google\Model
   protected $updatesDataType = '';
 
   /**
-   * @param string
+   * The spreadsheet the updates were applied to.
+   *
+   * @param string $spreadsheetId
    */
   public function setSpreadsheetId($spreadsheetId)
   {
@@ -45,7 +52,10 @@ class AppendValuesResponse extends \Google\Model
     return $this->spreadsheetId;
   }
   /**
-   * @param string
+   * The range (in A1 notation) of the table that values are being appended to
+   * (before the values were appended). Empty if no table was found.
+   *
+   * @param string $tableRange
    */
   public function setTableRange($tableRange)
   {
@@ -59,7 +69,9 @@ class AppendValuesResponse extends \Google\Model
     return $this->tableRange;
   }
   /**
-   * @param UpdateValuesResponse
+   * Information about the updates that were applied.
+   *
+   * @param UpdateValuesResponse $updates
    */
   public function setUpdates(UpdateValuesResponse $updates)
   {

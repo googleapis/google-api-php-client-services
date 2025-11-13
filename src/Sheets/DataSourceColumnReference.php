@@ -20,12 +20,16 @@ namespace Google\Service\Sheets;
 class DataSourceColumnReference extends \Google\Model
 {
   /**
+   * The display name of the column. It should be unique within a data source.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The display name of the column. It should be unique within a data source.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

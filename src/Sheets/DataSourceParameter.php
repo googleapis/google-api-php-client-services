@@ -20,10 +20,17 @@ namespace Google\Service\Sheets;
 class DataSourceParameter extends \Google\Model
 {
   /**
+   * Named parameter. Must be a legitimate identifier for the DataSource that
+   * supports it. For example, [BigQuery
+   * identifier](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/lexical#identifiers).
+   *
    * @var string
    */
   public $name;
   /**
+   * ID of a NamedRange. Its size must be 1x1.
+   *
    * @var string
    */
   public $namedRangeId;
@@ -31,7 +38,12 @@ class DataSourceParameter extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param string
+   * Named parameter. Must be a legitimate identifier for the DataSource that
+   * supports it. For example, [BigQuery
+   * identifier](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/lexical#identifiers).
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +57,9 @@ class DataSourceParameter extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * ID of a NamedRange. Its size must be 1x1.
+   *
+   * @param string $namedRangeId
    */
   public function setNamedRangeId($namedRangeId)
   {
@@ -59,7 +73,9 @@ class DataSourceParameter extends \Google\Model
     return $this->namedRangeId;
   }
   /**
-   * @param GridRange
+   * A range that contains the value of the parameter. Its size must be 1x1.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {

@@ -23,7 +23,11 @@ class AddNamedRangeRequest extends \Google\Model
   protected $namedRangeDataType = '';
 
   /**
-   * @param NamedRange
+   * The named range to add. The namedRangeId field is optional; if one is not
+   * set, an id will be randomly generated. (It is an error to specify the ID of
+   * a range that already exists.)
+   *
+   * @param NamedRange $namedRange
    */
   public function setNamedRange(NamedRange $namedRange)
   {

@@ -21,6 +21,8 @@ class BatchGetValuesByDataFilterResponse extends \Google\Collection
 {
   protected $collection_key = 'valueRanges';
   /**
+   * The ID of the spreadsheet the data was retrieved from.
+   *
    * @var string
    */
   public $spreadsheetId;
@@ -28,7 +30,9 @@ class BatchGetValuesByDataFilterResponse extends \Google\Collection
   protected $valueRangesDataType = 'array';
 
   /**
-   * @param string
+   * The ID of the spreadsheet the data was retrieved from.
+   *
+   * @param string $spreadsheetId
    */
   public function setSpreadsheetId($spreadsheetId)
   {
@@ -42,7 +46,9 @@ class BatchGetValuesByDataFilterResponse extends \Google\Collection
     return $this->spreadsheetId;
   }
   /**
-   * @param MatchedValueRange[]
+   * The requested values with the list of data filters that matched them.
+   *
+   * @param MatchedValueRange[] $valueRanges
    */
   public function setValueRanges($valueRanges)
   {

@@ -19,8 +19,27 @@ namespace Google\Service\Sheets;
 
 class ChartHistogramRule extends \Google\Model
 {
+  /**
+   * The size of the buckets that are created. Must be positive.
+   *
+   * @var 
+   */
   public $intervalSize;
+  /**
+   * The maximum value at which items are placed into buckets. Values greater
+   * than the maximum are grouped into a single bucket. If omitted, it is
+   * determined by the maximum item value.
+   *
+   * @var 
+   */
   public $maxValue;
+  /**
+   * The minimum value at which items are placed into buckets. Values that are
+   * less than the minimum are grouped into a single bucket. If omitted, it is
+   * determined by the minimum item value.
+   *
+   * @var 
+   */
   public $minValue;
 
   public function setIntervalSize($intervalSize)

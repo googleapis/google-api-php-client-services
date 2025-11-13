@@ -23,10 +23,18 @@ class DataSource extends \Google\Collection
   protected $calculatedColumnsType = DataSourceColumn::class;
   protected $calculatedColumnsDataType = 'array';
   /**
+   * The spreadsheet-scoped unique ID that identifies the data source. Example:
+   * 1080547365.
+   *
    * @var string
    */
   public $dataSourceId;
   /**
+   * The ID of the Sheet connected with the data source. The field cannot be
+   * changed once set. When creating a data source, an associated DATA_SOURCE
+   * sheet is also created, if the field is not specified, the ID of the created
+   * sheet will be randomly generated.
+   *
    * @var int
    */
   public $sheetId;
@@ -34,7 +42,9 @@ class DataSource extends \Google\Collection
   protected $specDataType = '';
 
   /**
-   * @param DataSourceColumn[]
+   * All calculated columns in the data source.
+   *
+   * @param DataSourceColumn[] $calculatedColumns
    */
   public function setCalculatedColumns($calculatedColumns)
   {
@@ -48,7 +58,10 @@ class DataSource extends \Google\Collection
     return $this->calculatedColumns;
   }
   /**
-   * @param string
+   * The spreadsheet-scoped unique ID that identifies the data source. Example:
+   * 1080547365.
+   *
+   * @param string $dataSourceId
    */
   public function setDataSourceId($dataSourceId)
   {
@@ -62,7 +75,12 @@ class DataSource extends \Google\Collection
     return $this->dataSourceId;
   }
   /**
-   * @param int
+   * The ID of the Sheet connected with the data source. The field cannot be
+   * changed once set. When creating a data source, an associated DATA_SOURCE
+   * sheet is also created, if the field is not specified, the ID of the created
+   * sheet will be randomly generated.
+   *
+   * @param int $sheetId
    */
   public function setSheetId($sheetId)
   {
@@ -76,7 +94,9 @@ class DataSource extends \Google\Collection
     return $this->sheetId;
   }
   /**
-   * @param DataSourceSpec
+   * The DataSourceSpec for the data source connected with this spreadsheet.
+   *
+   * @param DataSourceSpec $spec
    */
   public function setSpec(DataSourceSpec $spec)
   {

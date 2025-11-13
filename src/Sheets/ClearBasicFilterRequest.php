@@ -20,12 +20,16 @@ namespace Google\Service\Sheets;
 class ClearBasicFilterRequest extends \Google\Model
 {
   /**
+   * The sheet ID on which the basic filter should be cleared.
+   *
    * @var int
    */
   public $sheetId;
 
   /**
-   * @param int
+   * The sheet ID on which the basic filter should be cleared.
+   *
+   * @param int $sheetId
    */
   public function setSheetId($sheetId)
   {

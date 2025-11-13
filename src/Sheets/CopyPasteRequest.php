@@ -19,13 +19,53 @@ namespace Google\Service\Sheets;
 
 class CopyPasteRequest extends \Google\Model
 {
+  /**
+   * Paste normally.
+   */
+  public const PASTE_ORIENTATION_NORMAL = 'NORMAL';
+  /**
+   * Paste transposed, where all rows become columns and vice versa.
+   */
+  public const PASTE_ORIENTATION_TRANSPOSE = 'TRANSPOSE';
+  /**
+   * Paste values, formulas, formats, and merges.
+   */
+  public const PASTE_TYPE_PASTE_NORMAL = 'PASTE_NORMAL';
+  /**
+   * Paste the values ONLY without formats, formulas, or merges.
+   */
+  public const PASTE_TYPE_PASTE_VALUES = 'PASTE_VALUES';
+  /**
+   * Paste the format and data validation only.
+   */
+  public const PASTE_TYPE_PASTE_FORMAT = 'PASTE_FORMAT';
+  /**
+   * Like `PASTE_NORMAL` but without borders.
+   */
+  public const PASTE_TYPE_PASTE_NO_BORDERS = 'PASTE_NO_BORDERS';
+  /**
+   * Paste the formulas only.
+   */
+  public const PASTE_TYPE_PASTE_FORMULA = 'PASTE_FORMULA';
+  /**
+   * Paste the data validation only.
+   */
+  public const PASTE_TYPE_PASTE_DATA_VALIDATION = 'PASTE_DATA_VALIDATION';
+  /**
+   * Paste the conditional formatting rules only.
+   */
+  public const PASTE_TYPE_PASTE_CONDITIONAL_FORMATTING = 'PASTE_CONDITIONAL_FORMATTING';
   protected $destinationType = GridRange::class;
   protected $destinationDataType = '';
   /**
+   * How that data should be oriented when pasting.
+   *
    * @var string
    */
   public $pasteOrientation;
   /**
+   * What kind of data to paste.
+   *
    * @var string
    */
   public $pasteType;
@@ -33,7 +73,13 @@ class CopyPasteRequest extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param GridRange
+   * The location to paste to. If the range covers a span that's a multiple of
+   * the source's height or width, then the data will be repeated to fill in the
+   * destination range. If the range is smaller than the source range, the
+   * entire source data will still be copied (beyond the end of the destination
+   * range).
+   *
+   * @param GridRange $destination
    */
   public function setDestination(GridRange $destination)
   {
@@ -47,35 +93,47 @@ class CopyPasteRequest extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * How that data should be oriented when pasting.
+   *
+   * Accepted values: NORMAL, TRANSPOSE
+   *
+   * @param self::PASTE_ORIENTATION_* $pasteOrientation
    */
   public function setPasteOrientation($pasteOrientation)
   {
     $this->pasteOrientation = $pasteOrientation;
   }
   /**
-   * @return string
+   * @return self::PASTE_ORIENTATION_*
    */
   public function getPasteOrientation()
   {
     return $this->pasteOrientation;
   }
   /**
-   * @param string
+   * What kind of data to paste.
+   *
+   * Accepted values: PASTE_NORMAL, PASTE_VALUES, PASTE_FORMAT,
+   * PASTE_NO_BORDERS, PASTE_FORMULA, PASTE_DATA_VALIDATION,
+   * PASTE_CONDITIONAL_FORMATTING
+   *
+   * @param self::PASTE_TYPE_* $pasteType
    */
   public function setPasteType($pasteType)
   {
     $this->pasteType = $pasteType;
   }
   /**
-   * @return string
+   * @return self::PASTE_TYPE_*
    */
   public function getPasteType()
   {
     return $this->pasteType;
   }
   /**
-   * @param GridRange
+   * The source range to copy.
+   *
+   * @param GridRange $source
    */
   public function setSource(GridRange $source)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Sheets;
 class CopySheetToAnotherSpreadsheetRequest extends \Google\Model
 {
   /**
+   * The ID of the spreadsheet to copy the sheet to.
+   *
    * @var string
    */
   public $destinationSpreadsheetId;
 
   /**
-   * @param string
+   * The ID of the spreadsheet to copy the sheet to.
+   *
+   * @param string $destinationSpreadsheetId
    */
   public function setDestinationSpreadsheetId($destinationSpreadsheetId)
   {

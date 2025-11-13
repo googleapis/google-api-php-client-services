@@ -19,9 +19,40 @@ namespace Google\Service\Sheets;
 
 class CutPasteRequest extends \Google\Model
 {
+  /**
+   * Paste values, formulas, formats, and merges.
+   */
+  public const PASTE_TYPE_PASTE_NORMAL = 'PASTE_NORMAL';
+  /**
+   * Paste the values ONLY without formats, formulas, or merges.
+   */
+  public const PASTE_TYPE_PASTE_VALUES = 'PASTE_VALUES';
+  /**
+   * Paste the format and data validation only.
+   */
+  public const PASTE_TYPE_PASTE_FORMAT = 'PASTE_FORMAT';
+  /**
+   * Like `PASTE_NORMAL` but without borders.
+   */
+  public const PASTE_TYPE_PASTE_NO_BORDERS = 'PASTE_NO_BORDERS';
+  /**
+   * Paste the formulas only.
+   */
+  public const PASTE_TYPE_PASTE_FORMULA = 'PASTE_FORMULA';
+  /**
+   * Paste the data validation only.
+   */
+  public const PASTE_TYPE_PASTE_DATA_VALIDATION = 'PASTE_DATA_VALIDATION';
+  /**
+   * Paste the conditional formatting rules only.
+   */
+  public const PASTE_TYPE_PASTE_CONDITIONAL_FORMATTING = 'PASTE_CONDITIONAL_FORMATTING';
   protected $destinationType = GridCoordinate::class;
   protected $destinationDataType = '';
   /**
+   * What kind of data to paste. All the source data will be cut, regardless of
+   * what is pasted.
+   *
    * @var string
    */
   public $pasteType;
@@ -29,7 +60,9 @@ class CutPasteRequest extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param GridCoordinate
+   * The top-left coordinate where the data should be pasted.
+   *
+   * @param GridCoordinate $destination
    */
   public function setDestination(GridCoordinate $destination)
   {
@@ -43,21 +76,30 @@ class CutPasteRequest extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * What kind of data to paste. All the source data will be cut, regardless of
+   * what is pasted.
+   *
+   * Accepted values: PASTE_NORMAL, PASTE_VALUES, PASTE_FORMAT,
+   * PASTE_NO_BORDERS, PASTE_FORMULA, PASTE_DATA_VALIDATION,
+   * PASTE_CONDITIONAL_FORMATTING
+   *
+   * @param self::PASTE_TYPE_* $pasteType
    */
   public function setPasteType($pasteType)
   {
     $this->pasteType = $pasteType;
   }
   /**
-   * @return string
+   * @return self::PASTE_TYPE_*
    */
   public function getPasteType()
   {
     return $this->pasteType;
   }
   /**
-   * @param GridRange
+   * The source data to cut.
+   *
+   * @param GridRange $source
    */
   public function setSource(GridRange $source)
   {

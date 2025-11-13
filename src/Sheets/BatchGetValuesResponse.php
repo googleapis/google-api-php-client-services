@@ -21,6 +21,8 @@ class BatchGetValuesResponse extends \Google\Collection
 {
   protected $collection_key = 'valueRanges';
   /**
+   * The ID of the spreadsheet the data was retrieved from.
+   *
    * @var string
    */
   public $spreadsheetId;
@@ -28,7 +30,9 @@ class BatchGetValuesResponse extends \Google\Collection
   protected $valueRangesDataType = 'array';
 
   /**
-   * @param string
+   * The ID of the spreadsheet the data was retrieved from.
+   *
+   * @param string $spreadsheetId
    */
   public function setSpreadsheetId($spreadsheetId)
   {
@@ -42,7 +46,10 @@ class BatchGetValuesResponse extends \Google\Collection
     return $this->spreadsheetId;
   }
   /**
-   * @param ValueRange[]
+   * The requested values. The order of the ValueRanges is the same as the order
+   * of the requested ranges.
+   *
+   * @param ValueRange[] $valueRanges
    */
   public function setValueRanges($valueRanges)
   {

@@ -20,6 +20,8 @@ namespace Google\Service\Sheets;
 class DataFilter extends \Google\Model
 {
   /**
+   * Selects data that matches the specified A1 range.
+   *
    * @var string
    */
   public $a1Range;
@@ -29,7 +31,9 @@ class DataFilter extends \Google\Model
   protected $gridRangeDataType = '';
 
   /**
-   * @param string
+   * Selects data that matches the specified A1 range.
+   *
+   * @param string $a1Range
    */
   public function setA1Range($a1Range)
   {
@@ -43,7 +47,10 @@ class DataFilter extends \Google\Model
     return $this->a1Range;
   }
   /**
-   * @param DeveloperMetadataLookup
+   * Selects data associated with the developer metadata matching the criteria
+   * described by this DeveloperMetadataLookup.
+   *
+   * @param DeveloperMetadataLookup $developerMetadataLookup
    */
   public function setDeveloperMetadataLookup(DeveloperMetadataLookup $developerMetadataLookup)
   {
@@ -57,7 +64,9 @@ class DataFilter extends \Google\Model
     return $this->developerMetadataLookup;
   }
   /**
-   * @param GridRange
+   * Selects data that matches the range described by the GridRange.
+   *
+   * @param GridRange $gridRange
    */
   public function setGridRange(GridRange $gridRange)
   {

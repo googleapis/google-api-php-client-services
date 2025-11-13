@@ -24,7 +24,9 @@ class AddDimensionGroupResponse extends \Google\Collection
   protected $dimensionGroupsDataType = 'array';
 
   /**
-   * @param DimensionGroup[]
+   * All groups of a dimension after adding a group to that dimension.
+   *
+   * @param DimensionGroup[] $dimensionGroups
    */
   public function setDimensionGroups($dimensionGroups)
   {

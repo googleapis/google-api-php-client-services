@@ -25,7 +25,9 @@ class Chip extends \Google\Model
   protected $richLinkPropertiesDataType = '';
 
   /**
-   * @param PersonProperties
+   * Properties of a linked person.
+   *
+   * @param PersonProperties $personProperties
    */
   public function setPersonProperties(PersonProperties $personProperties)
   {
@@ -39,7 +41,9 @@ class Chip extends \Google\Model
     return $this->personProperties;
   }
   /**
-   * @param RichLinkProperties
+   * Properties of a rich link.
+   *
+   * @param RichLinkProperties $richLinkProperties
    */
   public function setRichLinkProperties(RichLinkProperties $richLinkProperties)
   {

@@ -21,16 +21,28 @@ class BatchClearValuesByDataFilterResponse extends \Google\Collection
 {
   protected $collection_key = 'clearedRanges';
   /**
+   * The ranges that were cleared, in [A1 notation](https://developers.google.co
+   * m/workspace/sheets/api/guides/concepts#cell). If the requests are for an
+   * unbounded range or a ranger larger than the bounds of the sheet, this is
+   * the actual ranges that were cleared, bounded to the sheet's limits.
+   *
    * @var string[]
    */
   public $clearedRanges;
   /**
+   * The spreadsheet the updates were applied to.
+   *
    * @var string
    */
   public $spreadsheetId;
 
   /**
-   * @param string[]
+   * The ranges that were cleared, in [A1 notation](https://developers.google.co
+   * m/workspace/sheets/api/guides/concepts#cell). If the requests are for an
+   * unbounded range or a ranger larger than the bounds of the sheet, this is
+   * the actual ranges that were cleared, bounded to the sheet's limits.
+   *
+   * @param string[] $clearedRanges
    */
   public function setClearedRanges($clearedRanges)
   {
@@ -44,7 +56,9 @@ class BatchClearValuesByDataFilterResponse extends \Google\Collection
     return $this->clearedRanges;
   }
   /**
-   * @param string
+   * The spreadsheet the updates were applied to.
+   *
+   * @param string $spreadsheetId
    */
   public function setSpreadsheetId($spreadsheetId)
   {

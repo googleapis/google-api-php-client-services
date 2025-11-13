@@ -24,7 +24,9 @@ class BatchClearValuesByDataFilterRequest extends \Google\Collection
   protected $dataFiltersDataType = 'array';
 
   /**
-   * @param DataFilter[]
+   * The DataFilters used to determine which ranges to clear.
+   *
+   * @param DataFilter[] $dataFilters
    */
   public function setDataFilters($dataFilters)
   {

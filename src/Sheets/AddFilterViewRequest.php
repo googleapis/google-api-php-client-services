@@ -23,7 +23,11 @@ class AddFilterViewRequest extends \Google\Model
   protected $filterDataType = '';
 
   /**
-   * @param FilterView
+   * The filter to add. The filterViewId field is optional; if one is not set,
+   * an id will be randomly generated. (It is an error to specify the ID of a
+   * filter that already exists.)
+   *
+   * @param FilterView $filter
    */
   public function setFilter(FilterView $filter)
   {

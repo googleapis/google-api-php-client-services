@@ -19,6 +19,34 @@ namespace Google\Service\Sheets;
 
 class BubbleChartSpec extends \Google\Model
 {
+  /**
+   * Default value, do not use.
+   */
+  public const LEGEND_POSITION_BUBBLE_CHART_LEGEND_POSITION_UNSPECIFIED = 'BUBBLE_CHART_LEGEND_POSITION_UNSPECIFIED';
+  /**
+   * The legend is rendered on the bottom of the chart.
+   */
+  public const LEGEND_POSITION_BOTTOM_LEGEND = 'BOTTOM_LEGEND';
+  /**
+   * The legend is rendered on the left of the chart.
+   */
+  public const LEGEND_POSITION_LEFT_LEGEND = 'LEFT_LEGEND';
+  /**
+   * The legend is rendered on the right of the chart.
+   */
+  public const LEGEND_POSITION_RIGHT_LEGEND = 'RIGHT_LEGEND';
+  /**
+   * The legend is rendered on the top of the chart.
+   */
+  public const LEGEND_POSITION_TOP_LEGEND = 'TOP_LEGEND';
+  /**
+   * No legend is rendered.
+   */
+  public const LEGEND_POSITION_NO_LEGEND = 'NO_LEGEND';
+  /**
+   * The legend is rendered inside the chart area.
+   */
+  public const LEGEND_POSITION_INSIDE_LEGEND = 'INSIDE_LEGEND';
   protected $bubbleBorderColorType = Color::class;
   protected $bubbleBorderColorDataType = '';
   protected $bubbleBorderColorStyleType = ColorStyle::class;
@@ -26,14 +54,23 @@ class BubbleChartSpec extends \Google\Model
   protected $bubbleLabelsType = ChartData::class;
   protected $bubbleLabelsDataType = '';
   /**
+   * The max radius size of the bubbles, in pixels. If specified, the field must
+   * be a positive value.
+   *
    * @var int
    */
   public $bubbleMaxRadiusSize;
   /**
+   * The minimum radius size of the bubbles, in pixels. If specific, the field
+   * must be a positive value.
+   *
    * @var int
    */
   public $bubbleMinRadiusSize;
   /**
+   * The opacity of the bubbles between 0 and 1.0. 0 is fully transparent and 1
+   * is fully opaque.
+   *
    * @var float
    */
   public $bubbleOpacity;
@@ -46,6 +83,8 @@ class BubbleChartSpec extends \Google\Model
   protected $groupIdsType = ChartData::class;
   protected $groupIdsDataType = '';
   /**
+   * Where the legend of the chart should be drawn.
+   *
    * @var string
    */
   public $legendPosition;
@@ -53,13 +92,17 @@ class BubbleChartSpec extends \Google\Model
   protected $seriesDataType = '';
 
   /**
-   * @param Color
+   * The bubble border color. Deprecated: Use bubble_border_color_style.
+   *
+   * @deprecated
+   * @param Color $bubbleBorderColor
    */
   public function setBubbleBorderColor(Color $bubbleBorderColor)
   {
     $this->bubbleBorderColor = $bubbleBorderColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getBubbleBorderColor()
@@ -67,7 +110,10 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleBorderColor;
   }
   /**
-   * @param ColorStyle
+   * The bubble border color. If bubble_border_color is also set, this field
+   * takes precedence.
+   *
+   * @param ColorStyle $bubbleBorderColorStyle
    */
   public function setBubbleBorderColorStyle(ColorStyle $bubbleBorderColorStyle)
   {
@@ -81,7 +127,9 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleBorderColorStyle;
   }
   /**
-   * @param ChartData
+   * The data containing the bubble labels. These do not need to be unique.
+   *
+   * @param ChartData $bubbleLabels
    */
   public function setBubbleLabels(ChartData $bubbleLabels)
   {
@@ -95,7 +143,10 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleLabels;
   }
   /**
-   * @param int
+   * The max radius size of the bubbles, in pixels. If specified, the field must
+   * be a positive value.
+   *
+   * @param int $bubbleMaxRadiusSize
    */
   public function setBubbleMaxRadiusSize($bubbleMaxRadiusSize)
   {
@@ -109,7 +160,10 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleMaxRadiusSize;
   }
   /**
-   * @param int
+   * The minimum radius size of the bubbles, in pixels. If specific, the field
+   * must be a positive value.
+   *
+   * @param int $bubbleMinRadiusSize
    */
   public function setBubbleMinRadiusSize($bubbleMinRadiusSize)
   {
@@ -123,7 +177,10 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleMinRadiusSize;
   }
   /**
-   * @param float
+   * The opacity of the bubbles between 0 and 1.0. 0 is fully transparent and 1
+   * is fully opaque.
+   *
+   * @param float $bubbleOpacity
    */
   public function setBubbleOpacity($bubbleOpacity)
   {
@@ -137,7 +194,11 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleOpacity;
   }
   /**
-   * @param ChartData
+   * The data containing the bubble sizes. Bubble sizes are used to draw the
+   * bubbles at different sizes relative to each other. If specified, group_ids
+   * must also be specified. This field is optional.
+   *
+   * @param ChartData $bubbleSizes
    */
   public function setBubbleSizes(ChartData $bubbleSizes)
   {
@@ -151,7 +212,10 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleSizes;
   }
   /**
-   * @param TextFormat
+   * The format of the text inside the bubbles. Strikethrough, underline, and
+   * link are not supported.
+   *
+   * @param TextFormat $bubbleTextStyle
    */
   public function setBubbleTextStyle(TextFormat $bubbleTextStyle)
   {
@@ -165,7 +229,10 @@ class BubbleChartSpec extends \Google\Model
     return $this->bubbleTextStyle;
   }
   /**
-   * @param ChartData
+   * The data containing the bubble x-values. These values locate the bubbles in
+   * the chart horizontally.
+   *
+   * @param ChartData $domain
    */
   public function setDomain(ChartData $domain)
   {
@@ -179,7 +246,12 @@ class BubbleChartSpec extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param ChartData
+   * The data containing the bubble group IDs. All bubbles with the same group
+   * ID are drawn in the same color. If bubble_sizes is specified then this
+   * field must also be specified but may contain blank values. This field is
+   * optional.
+   *
+   * @param ChartData $groupIds
    */
   public function setGroupIds(ChartData $groupIds)
   {
@@ -193,21 +265,29 @@ class BubbleChartSpec extends \Google\Model
     return $this->groupIds;
   }
   /**
-   * @param string
+   * Where the legend of the chart should be drawn.
+   *
+   * Accepted values: BUBBLE_CHART_LEGEND_POSITION_UNSPECIFIED, BOTTOM_LEGEND,
+   * LEFT_LEGEND, RIGHT_LEGEND, TOP_LEGEND, NO_LEGEND, INSIDE_LEGEND
+   *
+   * @param self::LEGEND_POSITION_* $legendPosition
    */
   public function setLegendPosition($legendPosition)
   {
     $this->legendPosition = $legendPosition;
   }
   /**
-   * @return string
+   * @return self::LEGEND_POSITION_*
    */
   public function getLegendPosition()
   {
     return $this->legendPosition;
   }
   /**
-   * @param ChartData
+   * The data containing the bubble y-values. These values locate the bubbles in
+   * the chart vertically.
+   *
+   * @param ChartData $series
    */
   public function setSeries(ChartData $series)
   {

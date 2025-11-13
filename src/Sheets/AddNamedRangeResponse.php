@@ -23,7 +23,9 @@ class AddNamedRangeResponse extends \Google\Model
   protected $namedRangeDataType = '';
 
   /**
-   * @param NamedRange
+   * The named range to add.
+   *
+   * @param NamedRange $namedRange
    */
   public function setNamedRange(NamedRange $namedRange)
   {

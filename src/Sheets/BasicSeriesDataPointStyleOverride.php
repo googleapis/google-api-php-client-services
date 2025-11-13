@@ -24,6 +24,8 @@ class BasicSeriesDataPointStyleOverride extends \Google\Model
   protected $colorStyleType = ColorStyle::class;
   protected $colorStyleDataType = '';
   /**
+   * The zero-based index of the series data point.
+   *
    * @var int
    */
   public $index;
@@ -31,13 +33,18 @@ class BasicSeriesDataPointStyleOverride extends \Google\Model
   protected $pointStyleDataType = '';
 
   /**
-   * @param Color
+   * Color of the series data point. If empty, the series default is used.
+   * Deprecated: Use color_style.
+   *
+   * @deprecated
+   * @param Color $color
    */
   public function setColor(Color $color)
   {
     $this->color = $color;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getColor()
@@ -45,7 +52,10 @@ class BasicSeriesDataPointStyleOverride extends \Google\Model
     return $this->color;
   }
   /**
-   * @param ColorStyle
+   * Color of the series data point. If empty, the series default is used. If
+   * color is also set, this field takes precedence.
+   *
+   * @param ColorStyle $colorStyle
    */
   public function setColorStyle(ColorStyle $colorStyle)
   {
@@ -59,7 +69,9 @@ class BasicSeriesDataPointStyleOverride extends \Google\Model
     return $this->colorStyle;
   }
   /**
-   * @param int
+   * The zero-based index of the series data point.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -73,7 +85,11 @@ class BasicSeriesDataPointStyleOverride extends \Google\Model
     return $this->index;
   }
   /**
-   * @param PointStyle
+   * Point style of the series data point. Valid only if the chartType is AREA,
+   * LINE, or SCATTER. COMBO charts are also supported if the series chart type
+   * is AREA, LINE, or SCATTER. If empty, the series default is used.
+   *
+   * @param PointStyle $pointStyle
    */
   public function setPointStyle(PointStyle $pointStyle)
   {

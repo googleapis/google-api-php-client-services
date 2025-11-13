@@ -19,9 +19,43 @@ namespace Google\Service\Sheets;
 
 class ChartAxisViewWindowOptions extends \Google\Model
 {
+  /**
+   * The default view window mode used in the Sheets editor for this chart type.
+   * In most cases, if set, the default mode is equivalent to `PRETTY`.
+   */
+  public const VIEW_WINDOW_MODE_DEFAULT_VIEW_WINDOW_MODE = 'DEFAULT_VIEW_WINDOW_MODE';
+  /**
+   * Do not use. Represents that the currently set mode is not supported by the
+   * API.
+   */
+  public const VIEW_WINDOW_MODE_VIEW_WINDOW_MODE_UNSUPPORTED = 'VIEW_WINDOW_MODE_UNSUPPORTED';
+  /**
+   * Follows the min and max exactly if specified. If a value is unspecified, it
+   * will fall back to the `PRETTY` value.
+   */
+  public const VIEW_WINDOW_MODE_EXPLICIT = 'EXPLICIT';
+  /**
+   * Chooses a min and max that make the chart look good. Both min and max are
+   * ignored in this mode.
+   */
+  public const VIEW_WINDOW_MODE_PRETTY = 'PRETTY';
+  /**
+   * The maximum numeric value to be shown in this view window. If unset, will
+   * automatically determine a maximum value that looks good for the data.
+   *
+   * @var 
+   */
   public $viewWindowMax;
+  /**
+   * The minimum numeric value to be shown in this view window. If unset, will
+   * automatically determine a minimum value that looks good for the data.
+   *
+   * @var 
+   */
   public $viewWindowMin;
   /**
+   * The view window's mode.
+   *
    * @var string
    */
   public $viewWindowMode;
@@ -43,14 +77,19 @@ class ChartAxisViewWindowOptions extends \Google\Model
     return $this->viewWindowMin;
   }
   /**
-   * @param string
+   * The view window's mode.
+   *
+   * Accepted values: DEFAULT_VIEW_WINDOW_MODE, VIEW_WINDOW_MODE_UNSUPPORTED,
+   * EXPLICIT, PRETTY
+   *
+   * @param self::VIEW_WINDOW_MODE_* $viewWindowMode
    */
   public function setViewWindowMode($viewWindowMode)
   {
     $this->viewWindowMode = $viewWindowMode;
   }
   /**
-   * @return string
+   * @return self::VIEW_WINDOW_MODE_*
    */
   public function getViewWindowMode()
   {

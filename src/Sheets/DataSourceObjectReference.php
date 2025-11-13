@@ -20,6 +20,8 @@ namespace Google\Service\Sheets;
 class DataSourceObjectReference extends \Google\Model
 {
   /**
+   * References to a data source chart.
+   *
    * @var int
    */
   public $chartId;
@@ -30,12 +32,16 @@ class DataSourceObjectReference extends \Google\Model
   protected $dataSourceTableAnchorCellType = GridCoordinate::class;
   protected $dataSourceTableAnchorCellDataType = '';
   /**
+   * References to a DATA_SOURCE sheet.
+   *
    * @var string
    */
   public $sheetId;
 
   /**
-   * @param int
+   * References to a data source chart.
+   *
+   * @param int $chartId
    */
   public function setChartId($chartId)
   {
@@ -49,7 +55,9 @@ class DataSourceObjectReference extends \Google\Model
     return $this->chartId;
   }
   /**
-   * @param GridCoordinate
+   * References to a cell containing DataSourceFormula.
+   *
+   * @param GridCoordinate $dataSourceFormulaCell
    */
   public function setDataSourceFormulaCell(GridCoordinate $dataSourceFormulaCell)
   {
@@ -63,7 +71,9 @@ class DataSourceObjectReference extends \Google\Model
     return $this->dataSourceFormulaCell;
   }
   /**
-   * @param GridCoordinate
+   * References to a data source PivotTable anchored at the cell.
+   *
+   * @param GridCoordinate $dataSourcePivotTableAnchorCell
    */
   public function setDataSourcePivotTableAnchorCell(GridCoordinate $dataSourcePivotTableAnchorCell)
   {
@@ -77,7 +87,9 @@ class DataSourceObjectReference extends \Google\Model
     return $this->dataSourcePivotTableAnchorCell;
   }
   /**
-   * @param GridCoordinate
+   * References to a DataSourceTable anchored at the cell.
+   *
+   * @param GridCoordinate $dataSourceTableAnchorCell
    */
   public function setDataSourceTableAnchorCell(GridCoordinate $dataSourceTableAnchorCell)
   {
@@ -91,7 +103,9 @@ class DataSourceObjectReference extends \Google\Model
     return $this->dataSourceTableAnchorCell;
   }
   /**
-   * @param string
+   * References to a DATA_SOURCE sheet.
+   *
+   * @param string $sheetId
    */
   public function setSheetId($sheetId)
   {
