@@ -20,20 +20,28 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TouchScreenDevice extends \Google\Model
 {
   /**
+   * Output only. Touch screen device display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Touch screen device is stylus capable or not.
+   *
    * @var bool
    */
   public $stylusCapable;
   /**
+   * Output only. Number of touch points supported on the device.
+   *
    * @var int
    */
   public $touchPointCount;
 
   /**
-   * @param string
+   * Output only. Touch screen device display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +55,9 @@ class GoogleChromeManagementV1TouchScreenDevice extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Output only. Touch screen device is stylus capable or not.
+   *
+   * @param bool $stylusCapable
    */
   public function setStylusCapable($stylusCapable)
   {
@@ -61,7 +71,9 @@ class GoogleChromeManagementV1TouchScreenDevice extends \Google\Model
     return $this->stylusCapable;
   }
   /**
-   * @param int
+   * Output only. Number of touch points supported on the device.
+   *
+   * @param int $touchPointCount
    */
   public function setTouchPointCount($touchPointCount)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1DeviceHardwareCountReport extends \Google\Model
 {
   /**
+   * Public name of the hardware specification.
+   *
    * @var string
    */
   public $bucket;
   /**
+   * Count of devices with a unique hardware specification.
+   *
    * @var string
    */
   public $count;
 
   /**
-   * @param string
+   * Public name of the hardware specification.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -43,7 +49,9 @@ class GoogleChromeManagementV1DeviceHardwareCountReport extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * Count of devices with a unique hardware specification.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {

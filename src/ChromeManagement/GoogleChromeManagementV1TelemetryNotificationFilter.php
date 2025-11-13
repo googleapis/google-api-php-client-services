@@ -20,26 +20,41 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TelemetryNotificationFilter extends \Google\Model
 {
   /**
+   * If set, only sends notifications for telemetry data coming from this
+   * device.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * If set, only sends notifications for telemetry data coming from devices in
+   * this org unit.
+   *
    * @var string
    */
   public $deviceOrgUnitId;
   protected $telemetryEventNotificationFilterType = GoogleChromeManagementV1TelemetryEventNotificationFilter::class;
   protected $telemetryEventNotificationFilterDataType = '';
   /**
+   * If set, only sends notifications for telemetry data coming from devices
+   * owned by this user.
+   *
    * @var string
    */
   public $userEmail;
   /**
+   * If set, only sends notifications for telemetry data coming from devices
+   * owned by users in this org unit.
+   *
    * @var string
    */
   public $userOrgUnitId;
 
   /**
-   * @param string
+   * If set, only sends notifications for telemetry data coming from this
+   * device.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -53,7 +68,10 @@ class GoogleChromeManagementV1TelemetryNotificationFilter extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * If set, only sends notifications for telemetry data coming from devices in
+   * this org unit.
+   *
+   * @param string $deviceOrgUnitId
    */
   public function setDeviceOrgUnitId($deviceOrgUnitId)
   {
@@ -67,7 +85,9 @@ class GoogleChromeManagementV1TelemetryNotificationFilter extends \Google\Model
     return $this->deviceOrgUnitId;
   }
   /**
-   * @param GoogleChromeManagementV1TelemetryEventNotificationFilter
+   * Only sends notifications for the telemetry events matching this filter.
+   *
+   * @param GoogleChromeManagementV1TelemetryEventNotificationFilter $telemetryEventNotificationFilter
    */
   public function setTelemetryEventNotificationFilter(GoogleChromeManagementV1TelemetryEventNotificationFilter $telemetryEventNotificationFilter)
   {
@@ -81,7 +101,10 @@ class GoogleChromeManagementV1TelemetryNotificationFilter extends \Google\Model
     return $this->telemetryEventNotificationFilter;
   }
   /**
-   * @param string
+   * If set, only sends notifications for telemetry data coming from devices
+   * owned by this user.
+   *
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {
@@ -95,7 +118,10 @@ class GoogleChromeManagementV1TelemetryNotificationFilter extends \Google\Model
     return $this->userEmail;
   }
   /**
-   * @param string
+   * If set, only sends notifications for telemetry data coming from devices
+   * owned by users in this org unit.
+   *
+   * @param string $userOrgUnitId
    */
   public function setUserOrgUnitId($userOrgUnitId)
   {

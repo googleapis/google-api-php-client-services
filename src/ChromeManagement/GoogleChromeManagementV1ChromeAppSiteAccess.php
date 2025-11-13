@@ -20,12 +20,18 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1ChromeAppSiteAccess extends \Google\Model
 {
   /**
+   * Output only. This can contain very specific hosts, or patterns like "*.com"
+   * for instance.
+   *
    * @var string
    */
   public $hostMatch;
 
   /**
-   * @param string
+   * Output only. This can contain very specific hosts, or patterns like "*.com"
+   * for instance.
+   *
+   * @param string $hostMatch
    */
   public function setHostMatch($hostMatch)
   {

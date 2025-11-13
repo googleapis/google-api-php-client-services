@@ -20,42 +20,115 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1DeviceAueCountReport extends \Google\Model
 {
   /**
+   * The unspecified month.
+   */
+  public const AUE_MONTH_MONTH_UNSPECIFIED = 'MONTH_UNSPECIFIED';
+  /**
+   * The month of January.
+   */
+  public const AUE_MONTH_JANUARY = 'JANUARY';
+  /**
+   * The month of February.
+   */
+  public const AUE_MONTH_FEBRUARY = 'FEBRUARY';
+  /**
+   * The month of March.
+   */
+  public const AUE_MONTH_MARCH = 'MARCH';
+  /**
+   * The month of April.
+   */
+  public const AUE_MONTH_APRIL = 'APRIL';
+  /**
+   * The month of May.
+   */
+  public const AUE_MONTH_MAY = 'MAY';
+  /**
+   * The month of June.
+   */
+  public const AUE_MONTH_JUNE = 'JUNE';
+  /**
+   * The month of July.
+   */
+  public const AUE_MONTH_JULY = 'JULY';
+  /**
+   * The month of August.
+   */
+  public const AUE_MONTH_AUGUST = 'AUGUST';
+  /**
+   * The month of September.
+   */
+  public const AUE_MONTH_SEPTEMBER = 'SEPTEMBER';
+  /**
+   * The month of October.
+   */
+  public const AUE_MONTH_OCTOBER = 'OCTOBER';
+  /**
+   * The month of November.
+   */
+  public const AUE_MONTH_NOVEMBER = 'NOVEMBER';
+  /**
+   * The month of December.
+   */
+  public const AUE_MONTH_DECEMBER = 'DECEMBER';
+  /**
+   * Enum value of month corresponding to the auto update expiration date in UTC
+   * time zone. If the device is already expired, this field is empty.
+   *
    * @var string
    */
   public $aueMonth;
   /**
+   * Int value of year corresponding to the Auto Update Expiration date in UTC
+   * time zone. If the device is already expired, this field is empty.
+   *
    * @var string
    */
   public $aueYear;
   /**
+   * Count of devices of this model.
+   *
    * @var string
    */
   public $count;
   /**
+   * Boolean value for whether or not the device has already expired.
+   *
    * @var bool
    */
   public $expired;
   /**
+   * Public model name of the devices.
+   *
    * @var string
    */
   public $model;
 
   /**
-   * @param string
+   * Enum value of month corresponding to the auto update expiration date in UTC
+   * time zone. If the device is already expired, this field is empty.
+   *
+   * Accepted values: MONTH_UNSPECIFIED, JANUARY, FEBRUARY, MARCH, APRIL, MAY,
+   * JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER
+   *
+   * @param self::AUE_MONTH_* $aueMonth
    */
   public function setAueMonth($aueMonth)
   {
     $this->aueMonth = $aueMonth;
   }
   /**
-   * @return string
+   * @return self::AUE_MONTH_*
    */
   public function getAueMonth()
   {
     return $this->aueMonth;
   }
   /**
-   * @param string
+   * Int value of year corresponding to the Auto Update Expiration date in UTC
+   * time zone. If the device is already expired, this field is empty.
+   *
+   * @param string $aueYear
    */
   public function setAueYear($aueYear)
   {
@@ -69,7 +142,9 @@ class GoogleChromeManagementV1DeviceAueCountReport extends \Google\Model
     return $this->aueYear;
   }
   /**
-   * @param string
+   * Count of devices of this model.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -83,7 +158,9 @@ class GoogleChromeManagementV1DeviceAueCountReport extends \Google\Model
     return $this->count;
   }
   /**
-   * @param bool
+   * Boolean value for whether or not the device has already expired.
+   *
+   * @param bool $expired
    */
   public function setExpired($expired)
   {
@@ -97,7 +174,9 @@ class GoogleChromeManagementV1DeviceAueCountReport extends \Google\Model
     return $this->expired;
   }
   /**
-   * @param string
+   * Public model name of the devices.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {

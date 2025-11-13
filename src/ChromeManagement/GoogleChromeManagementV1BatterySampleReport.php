@@ -20,40 +20,59 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
 {
   /**
+   * Output only. Battery charge percentage.
+   *
    * @var int
    */
   public $chargeRate;
   /**
+   * Output only. Battery current (mA).
+   *
    * @var string
    */
   public $current;
   /**
+   * Output only. The battery discharge rate measured in mW. Positive if the
+   * battery is being discharged, negative if it's being charged.
+   *
    * @var int
    */
   public $dischargeRate;
   /**
+   * Output only. Battery remaining capacity (mAmpere-hours).
+   *
    * @var string
    */
   public $remainingCapacity;
   /**
+   * Output only. Timestamp of when the sample was collected on device
+   *
    * @var string
    */
   public $reportTime;
   /**
+   * Output only. Battery status read from sysfs. Example: Discharging
+   *
    * @var string
    */
   public $status;
   /**
+   * Output only. Temperature in Celsius degrees.
+   *
    * @var int
    */
   public $temperature;
   /**
+   * Output only. Battery voltage (millivolt).
+   *
    * @var string
    */
   public $voltage;
 
   /**
-   * @param int
+   * Output only. Battery charge percentage.
+   *
+   * @param int $chargeRate
    */
   public function setChargeRate($chargeRate)
   {
@@ -67,7 +86,9 @@ class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
     return $this->chargeRate;
   }
   /**
-   * @param string
+   * Output only. Battery current (mA).
+   *
+   * @param string $current
    */
   public function setCurrent($current)
   {
@@ -81,7 +102,10 @@ class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
     return $this->current;
   }
   /**
-   * @param int
+   * Output only. The battery discharge rate measured in mW. Positive if the
+   * battery is being discharged, negative if it's being charged.
+   *
+   * @param int $dischargeRate
    */
   public function setDischargeRate($dischargeRate)
   {
@@ -95,7 +119,9 @@ class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
     return $this->dischargeRate;
   }
   /**
-   * @param string
+   * Output only. Battery remaining capacity (mAmpere-hours).
+   *
+   * @param string $remainingCapacity
    */
   public function setRemainingCapacity($remainingCapacity)
   {
@@ -109,7 +135,9 @@ class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
     return $this->remainingCapacity;
   }
   /**
-   * @param string
+   * Output only. Timestamp of when the sample was collected on device
+   *
+   * @param string $reportTime
    */
   public function setReportTime($reportTime)
   {
@@ -123,7 +151,9 @@ class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
     return $this->reportTime;
   }
   /**
-   * @param string
+   * Output only. Battery status read from sysfs. Example: Discharging
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {
@@ -137,7 +167,9 @@ class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
     return $this->status;
   }
   /**
-   * @param int
+   * Output only. Temperature in Celsius degrees.
+   *
+   * @param int $temperature
    */
   public function setTemperature($temperature)
   {
@@ -151,7 +183,9 @@ class GoogleChromeManagementV1BatterySampleReport extends \Google\Model
     return $this->temperature;
   }
   /**
-   * @param string
+   * Output only. Battery voltage (millivolt).
+   *
+   * @param string $voltage
    */
   public function setVoltage($voltage)
   {

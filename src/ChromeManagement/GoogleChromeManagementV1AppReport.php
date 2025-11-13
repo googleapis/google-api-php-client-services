@@ -21,6 +21,8 @@ class GoogleChromeManagementV1AppReport extends \Google\Collection
 {
   protected $collection_key = 'usageData';
   /**
+   * Timestamp when the report was collected.
+   *
    * @var string
    */
   public $reportTime;
@@ -28,7 +30,9 @@ class GoogleChromeManagementV1AppReport extends \Google\Collection
   protected $usageDataDataType = 'array';
 
   /**
-   * @param string
+   * Timestamp when the report was collected.
+   *
+   * @param string $reportTime
    */
   public function setReportTime($reportTime)
   {
@@ -42,7 +46,9 @@ class GoogleChromeManagementV1AppReport extends \Google\Collection
     return $this->reportTime;
   }
   /**
-   * @param GoogleChromeManagementV1AppUsageData[]
+   * App usage data.
+   *
+   * @param GoogleChromeManagementV1AppUsageData[] $usageData
    */
   public function setUsageData($usageData)
   {

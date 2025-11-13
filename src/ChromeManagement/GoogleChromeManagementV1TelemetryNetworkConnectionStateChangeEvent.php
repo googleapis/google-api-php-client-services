@@ -20,30 +20,67 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TelemetryNetworkConnectionStateChangeEvent extends \Google\Model
 {
   /**
+   * Network connection state unspecified.
+   */
+  public const CONNECTION_STATE_NETWORK_CONNECTION_STATE_UNSPECIFIED = 'NETWORK_CONNECTION_STATE_UNSPECIFIED';
+  /**
+   * The network is connected and internet connectivity is available.
+   */
+  public const CONNECTION_STATE_ONLINE = 'ONLINE';
+  /**
+   * The network is connected and not in a detected portal state, but internet
+   * connectivity may not be available.
+   */
+  public const CONNECTION_STATE_CONNECTED = 'CONNECTED';
+  /**
+   * The network is connected but a portal state was detected. Internet
+   * connectivity may be limited.
+   */
+  public const CONNECTION_STATE_PORTAL = 'PORTAL';
+  /**
+   * The network is in the process of connecting.
+   */
+  public const CONNECTION_STATE_CONNECTING = 'CONNECTING';
+  /**
+   * The network is not connected.
+   */
+  public const CONNECTION_STATE_NOT_CONNECTED = 'NOT_CONNECTED';
+  /**
+   * Current connection state of the network.
+   *
    * @var string
    */
   public $connectionState;
   /**
+   * Unique identifier of the network.
+   *
    * @var string
    */
   public $guid;
 
   /**
-   * @param string
+   * Current connection state of the network.
+   *
+   * Accepted values: NETWORK_CONNECTION_STATE_UNSPECIFIED, ONLINE, CONNECTED,
+   * PORTAL, CONNECTING, NOT_CONNECTED
+   *
+   * @param self::CONNECTION_STATE_* $connectionState
    */
   public function setConnectionState($connectionState)
   {
     $this->connectionState = $connectionState;
   }
   /**
-   * @return string
+   * @return self::CONNECTION_STATE_*
    */
   public function getConnectionState()
   {
     return $this->connectionState;
   }
   /**
-   * @param string
+   * Unique identifier of the network.
+   *
+   * @param string $guid
    */
   public function setGuid($guid)
   {

@@ -21,6 +21,8 @@ class GoogleChromeManagementV1PeripheralsReport extends \Google\Collection
 {
   protected $collection_key = 'usbPeripheralReport';
   /**
+   * Output only. Timestamp of when the report was collected.
+   *
    * @var string
    */
   public $reportTime;
@@ -28,7 +30,9 @@ class GoogleChromeManagementV1PeripheralsReport extends \Google\Collection
   protected $usbPeripheralReportDataType = 'array';
 
   /**
-   * @param string
+   * Output only. Timestamp of when the report was collected.
+   *
+   * @param string $reportTime
    */
   public function setReportTime($reportTime)
   {
@@ -42,7 +46,9 @@ class GoogleChromeManagementV1PeripheralsReport extends \Google\Collection
     return $this->reportTime;
   }
   /**
-   * @param GoogleChromeManagementV1UsbPeripheralReport[]
+   * Reports of all usb connected devices.
+   *
+   * @param GoogleChromeManagementV1UsbPeripheralReport[] $usbPeripheralReport
    */
   public function setUsbPeripheralReport($usbPeripheralReport)
   {

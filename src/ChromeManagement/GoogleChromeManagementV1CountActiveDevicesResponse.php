@@ -20,16 +20,25 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountActiveDevicesResponse extends \Google\Model
 {
   /**
+   * Number of active devices in the 7 days leading up to the date specified in
+   * the request.
+   *
    * @var string
    */
   public $sevenDaysCount;
   /**
+   * Number of active devices in the 30 days leading up to the date specified in
+   * the request.
+   *
    * @var string
    */
   public $thirtyDaysCount;
 
   /**
-   * @param string
+   * Number of active devices in the 7 days leading up to the date specified in
+   * the request.
+   *
+   * @param string $sevenDaysCount
    */
   public function setSevenDaysCount($sevenDaysCount)
   {
@@ -43,7 +52,10 @@ class GoogleChromeManagementV1CountActiveDevicesResponse extends \Google\Model
     return $this->sevenDaysCount;
   }
   /**
-   * @param string
+   * Number of active devices in the 30 days leading up to the date specified in
+   * the request.
+   *
+   * @param string $thirtyDaysCount
    */
   public function setThirtyDaysCount($thirtyDaysCount)
   {

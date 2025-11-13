@@ -22,12 +22,16 @@ class GoogleChromeManagementV1NetworkDiagnosticsReport extends \Google\Model
   protected $httpsLatencyDataType = GoogleChromeManagementV1HttpsLatencyRoutineData::class;
   protected $httpsLatencyDataDataType = '';
   /**
+   * Output only. Timestamp of when the diagnostics were collected.
+   *
    * @var string
    */
   public $reportTime;
 
   /**
-   * @param GoogleChromeManagementV1HttpsLatencyRoutineData
+   * Output only. HTTPS latency test data.
+   *
+   * @param GoogleChromeManagementV1HttpsLatencyRoutineData $httpsLatencyData
    */
   public function setHttpsLatencyData(GoogleChromeManagementV1HttpsLatencyRoutineData $httpsLatencyData)
   {
@@ -41,7 +45,9 @@ class GoogleChromeManagementV1NetworkDiagnosticsReport extends \Google\Model
     return $this->httpsLatencyData;
   }
   /**
-   * @param string
+   * Output only. Timestamp of when the diagnostics were collected.
+   *
+   * @param string $reportTime
    */
   public function setReportTime($reportTime)
   {

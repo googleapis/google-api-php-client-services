@@ -23,16 +23,22 @@ class GoogleChromeManagementV1CountChromeVersionsResponse extends \Google\Collec
   protected $browserVersionsType = GoogleChromeManagementV1BrowserVersion::class;
   protected $browserVersionsDataType = 'array';
   /**
+   * Token to specify the next page of the request.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Total number browser versions matching request.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param GoogleChromeManagementV1BrowserVersion[]
+   * List of all browser versions and their install counts.
+   *
+   * @param GoogleChromeManagementV1BrowserVersion[] $browserVersions
    */
   public function setBrowserVersions($browserVersions)
   {
@@ -46,7 +52,9 @@ class GoogleChromeManagementV1CountChromeVersionsResponse extends \Google\Collec
     return $this->browserVersions;
   }
   /**
-   * @param string
+   * Token to specify the next page of the request.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class GoogleChromeManagementV1CountChromeVersionsResponse extends \Google\Collec
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * Total number browser versions matching request.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

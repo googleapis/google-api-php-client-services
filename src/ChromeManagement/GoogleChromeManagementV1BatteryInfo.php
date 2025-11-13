@@ -20,30 +20,42 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1BatteryInfo extends \Google\Model
 {
   /**
+   * Output only. Design capacity (mAmpere-hours).
+   *
    * @var string
    */
   public $designCapacity;
   /**
+   * Output only. Designed minimum output voltage (mV)
+   *
    * @var int
    */
   public $designMinVoltage;
   protected $manufactureDateType = GoogleTypeDate::class;
   protected $manufactureDateDataType = '';
   /**
+   * Output only. Battery manufacturer.
+   *
    * @var string
    */
   public $manufacturer;
   /**
+   * Output only. Battery serial number.
+   *
    * @var string
    */
   public $serialNumber;
   /**
+   * Output only. Technology of the battery. Example: Li-ion
+   *
    * @var string
    */
   public $technology;
 
   /**
-   * @param string
+   * Output only. Design capacity (mAmpere-hours).
+   *
+   * @param string $designCapacity
    */
   public function setDesignCapacity($designCapacity)
   {
@@ -57,7 +69,9 @@ class GoogleChromeManagementV1BatteryInfo extends \Google\Model
     return $this->designCapacity;
   }
   /**
-   * @param int
+   * Output only. Designed minimum output voltage (mV)
+   *
+   * @param int $designMinVoltage
    */
   public function setDesignMinVoltage($designMinVoltage)
   {
@@ -71,7 +85,9 @@ class GoogleChromeManagementV1BatteryInfo extends \Google\Model
     return $this->designMinVoltage;
   }
   /**
-   * @param GoogleTypeDate
+   * Output only. The date the battery was manufactured.
+   *
+   * @param GoogleTypeDate $manufactureDate
    */
   public function setManufactureDate(GoogleTypeDate $manufactureDate)
   {
@@ -85,7 +101,9 @@ class GoogleChromeManagementV1BatteryInfo extends \Google\Model
     return $this->manufactureDate;
   }
   /**
-   * @param string
+   * Output only. Battery manufacturer.
+   *
+   * @param string $manufacturer
    */
   public function setManufacturer($manufacturer)
   {
@@ -99,7 +117,9 @@ class GoogleChromeManagementV1BatteryInfo extends \Google\Model
     return $this->manufacturer;
   }
   /**
-   * @param string
+   * Output only. Battery serial number.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {
@@ -113,7 +133,9 @@ class GoogleChromeManagementV1BatteryInfo extends \Google\Model
     return $this->serialNumber;
   }
   /**
-   * @param string
+   * Output only. Technology of the battery. Example: Li-ion
+   *
+   * @param string $technology
    */
   public function setTechnology($technology)
   {

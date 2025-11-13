@@ -20,22 +20,30 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TelemetryNotificationConfig extends \Google\Model
 {
   /**
+   * Output only. Google Workspace customer that owns the resource.
+   *
    * @var string
    */
   public $customer;
   protected $filterType = GoogleChromeManagementV1TelemetryNotificationFilter::class;
   protected $filterDataType = '';
   /**
+   * The pubsub topic to which notifications are published to.
+   *
    * @var string
    */
   public $googleCloudPubsubTopic;
   /**
+   * Output only. Resource name of the notification configuration.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. Google Workspace customer that owns the resource.
+   *
+   * @param string $customer
    */
   public function setCustomer($customer)
   {
@@ -49,7 +57,9 @@ class GoogleChromeManagementV1TelemetryNotificationConfig extends \Google\Model
     return $this->customer;
   }
   /**
-   * @param GoogleChromeManagementV1TelemetryNotificationFilter
+   * Only send notifications for telemetry data matching this filter.
+   *
+   * @param GoogleChromeManagementV1TelemetryNotificationFilter $filter
    */
   public function setFilter(GoogleChromeManagementV1TelemetryNotificationFilter $filter)
   {
@@ -63,7 +73,9 @@ class GoogleChromeManagementV1TelemetryNotificationConfig extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param string
+   * The pubsub topic to which notifications are published to.
+   *
+   * @param string $googleCloudPubsubTopic
    */
   public function setGoogleCloudPubsubTopic($googleCloudPubsubTopic)
   {
@@ -77,7 +89,9 @@ class GoogleChromeManagementV1TelemetryNotificationConfig extends \Google\Model
     return $this->googleCloudPubsubTopic;
   }
   /**
-   * @param string
+   * Output only. Resource name of the notification configuration.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

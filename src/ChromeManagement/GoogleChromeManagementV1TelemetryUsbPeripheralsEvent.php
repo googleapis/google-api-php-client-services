@@ -24,7 +24,9 @@ class GoogleChromeManagementV1TelemetryUsbPeripheralsEvent extends \Google\Colle
   protected $usbPeripheralReportDataType = 'array';
 
   /**
-   * @param GoogleChromeManagementV1UsbPeripheralReport[]
+   * List of usb devices that were either added or removed.
+   *
+   * @param GoogleChromeManagementV1UsbPeripheralReport[] $usbPeripheralReport
    */
   public function setUsbPeripheralReport($usbPeripheralReport)
   {

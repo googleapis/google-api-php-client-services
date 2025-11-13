@@ -19,110 +19,211 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
 {
+  /**
+   * Network connection state unspecified.
+   */
+  public const CONNECTION_STATE_NETWORK_CONNECTION_STATE_UNSPECIFIED = 'NETWORK_CONNECTION_STATE_UNSPECIFIED';
+  /**
+   * The network is connected and internet connectivity is available.
+   */
+  public const CONNECTION_STATE_ONLINE = 'ONLINE';
+  /**
+   * The network is connected and not in a detected portal state, but internet
+   * connectivity may not be available.
+   */
+  public const CONNECTION_STATE_CONNECTED = 'CONNECTED';
+  /**
+   * The network is connected but a portal state was detected. Internet
+   * connectivity may be limited.
+   */
+  public const CONNECTION_STATE_PORTAL = 'PORTAL';
+  /**
+   * The network is in the process of connecting.
+   */
+  public const CONNECTION_STATE_CONNECTING = 'CONNECTING';
+  /**
+   * The network is not connected.
+   */
+  public const CONNECTION_STATE_NOT_CONNECTED = 'NOT_CONNECTED';
+  /**
+   * Network connection type unspecified
+   */
+  public const CONNECTION_TYPE_NETWORK_TYPE_UNSPECIFIED = 'NETWORK_TYPE_UNSPECIFIED';
+  /**
+   * Cellular network connection.
+   */
+  public const CONNECTION_TYPE_CELLULAR = 'CELLULAR';
+  /**
+   * Ethernet network connection.
+   */
+  public const CONNECTION_TYPE_ETHERNET = 'ETHERNET';
+  /**
+   * Tether network connection.
+   */
+  public const CONNECTION_TYPE_TETHER = 'TETHER';
+  /**
+   * VPN network connection.
+   */
+  public const CONNECTION_TYPE_VPN = 'VPN';
+  /**
+   * Wifi network connection.
+   */
+  public const CONNECTION_TYPE_WIFI = 'WIFI';
   protected $collection_key = 'ipv6Address';
   /**
+   * Output only. Current connection state of the network.
+   *
    * @var string
    */
   public $connectionState;
   /**
+   * Output only. Network connection type.
+   *
    * @var string
    */
   public $connectionType;
   /**
+   * Output only. Whether the wifi encryption key is turned off.
+   *
    * @var bool
    */
   public $encryptionOn;
   /**
+   * Output only. Gateway IP address.
+   *
    * @var string
    */
   public $gatewayIpAddress;
   /**
+   * Output only. The gateway IPv6 for this interface, if detected
+   *
    * @var string
    */
   public $gatewayIpv6Address;
   /**
+   * Output only. Network connection guid.
+   *
    * @var string
    */
   public $guid;
   /**
+   * Output only. IPv6 addresses assigned to this network, if any. Each address
+   * is a string in standard IPv6 text representation (e.g., "2001:db8::1").
+   *
    * @var string[]
    */
   public $ipv6Address;
   /**
+   * Output only. LAN IP address.
+   *
    * @var string
    */
   public $lanIpAddress;
   /**
+   * Output only. The maximum downstream bandwidth in Kilobits per second
+   * (Kbps), if reported by the network interface or connection.
+   *
    * @var string
    */
   public $linkDownSpeedKbps;
   /**
+   * Output only. Whether the network was detected as metered.
+   *
    * @var bool
    */
   public $metered;
   /**
+   * Output only. Receiving bit rate measured in Megabits per second.
+   *
    * @var string
    */
   public $receivingBitRateMbps;
   /**
+   * Output only. Time at which the network state was reported.
+   *
    * @var string
    */
   public $reportTime;
   /**
+   * Output only. Frequency the report is sampled.
+   *
    * @var string
    */
   public $sampleFrequency;
   /**
+   * Output only. Signal strength for wireless networks measured in decibels.
+   *
    * @var int
    */
   public $signalStrengthDbm;
   /**
+   * Output only. Transmission bit rate measured in Megabits per second.
+   *
    * @var string
    */
   public $transmissionBitRateMbps;
   /**
+   * Output only. Transmission power measured in decibels.
+   *
    * @var int
    */
   public $transmissionPowerDbm;
   /**
+   * Output only. Wifi link quality. Value ranges from [0, 70]. 0 indicates no
+   * signal and 70 indicates a strong signal.
+   *
    * @var string
    */
   public $wifiLinkQuality;
   /**
+   * Output only. Wifi power management enabled
+   *
    * @var bool
    */
   public $wifiPowerManagementEnabled;
 
   /**
-   * @param string
+   * Output only. Current connection state of the network.
+   *
+   * Accepted values: NETWORK_CONNECTION_STATE_UNSPECIFIED, ONLINE, CONNECTED,
+   * PORTAL, CONNECTING, NOT_CONNECTED
+   *
+   * @param self::CONNECTION_STATE_* $connectionState
    */
   public function setConnectionState($connectionState)
   {
     $this->connectionState = $connectionState;
   }
   /**
-   * @return string
+   * @return self::CONNECTION_STATE_*
    */
   public function getConnectionState()
   {
     return $this->connectionState;
   }
   /**
-   * @param string
+   * Output only. Network connection type.
+   *
+   * Accepted values: NETWORK_TYPE_UNSPECIFIED, CELLULAR, ETHERNET, TETHER, VPN,
+   * WIFI
+   *
+   * @param self::CONNECTION_TYPE_* $connectionType
    */
   public function setConnectionType($connectionType)
   {
     $this->connectionType = $connectionType;
   }
   /**
-   * @return string
+   * @return self::CONNECTION_TYPE_*
    */
   public function getConnectionType()
   {
     return $this->connectionType;
   }
   /**
-   * @param bool
+   * Output only. Whether the wifi encryption key is turned off.
+   *
+   * @param bool $encryptionOn
    */
   public function setEncryptionOn($encryptionOn)
   {
@@ -136,7 +237,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->encryptionOn;
   }
   /**
-   * @param string
+   * Output only. Gateway IP address.
+   *
+   * @param string $gatewayIpAddress
    */
   public function setGatewayIpAddress($gatewayIpAddress)
   {
@@ -150,7 +253,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->gatewayIpAddress;
   }
   /**
-   * @param string
+   * Output only. The gateway IPv6 for this interface, if detected
+   *
+   * @param string $gatewayIpv6Address
    */
   public function setGatewayIpv6Address($gatewayIpv6Address)
   {
@@ -164,7 +269,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->gatewayIpv6Address;
   }
   /**
-   * @param string
+   * Output only. Network connection guid.
+   *
+   * @param string $guid
    */
   public function setGuid($guid)
   {
@@ -178,7 +285,10 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->guid;
   }
   /**
-   * @param string[]
+   * Output only. IPv6 addresses assigned to this network, if any. Each address
+   * is a string in standard IPv6 text representation (e.g., "2001:db8::1").
+   *
+   * @param string[] $ipv6Address
    */
   public function setIpv6Address($ipv6Address)
   {
@@ -192,7 +302,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->ipv6Address;
   }
   /**
-   * @param string
+   * Output only. LAN IP address.
+   *
+   * @param string $lanIpAddress
    */
   public function setLanIpAddress($lanIpAddress)
   {
@@ -206,7 +318,10 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->lanIpAddress;
   }
   /**
-   * @param string
+   * Output only. The maximum downstream bandwidth in Kilobits per second
+   * (Kbps), if reported by the network interface or connection.
+   *
+   * @param string $linkDownSpeedKbps
    */
   public function setLinkDownSpeedKbps($linkDownSpeedKbps)
   {
@@ -220,7 +335,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->linkDownSpeedKbps;
   }
   /**
-   * @param bool
+   * Output only. Whether the network was detected as metered.
+   *
+   * @param bool $metered
    */
   public function setMetered($metered)
   {
@@ -234,7 +351,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->metered;
   }
   /**
-   * @param string
+   * Output only. Receiving bit rate measured in Megabits per second.
+   *
+   * @param string $receivingBitRateMbps
    */
   public function setReceivingBitRateMbps($receivingBitRateMbps)
   {
@@ -248,7 +367,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->receivingBitRateMbps;
   }
   /**
-   * @param string
+   * Output only. Time at which the network state was reported.
+   *
+   * @param string $reportTime
    */
   public function setReportTime($reportTime)
   {
@@ -262,7 +383,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->reportTime;
   }
   /**
-   * @param string
+   * Output only. Frequency the report is sampled.
+   *
+   * @param string $sampleFrequency
    */
   public function setSampleFrequency($sampleFrequency)
   {
@@ -276,7 +399,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->sampleFrequency;
   }
   /**
-   * @param int
+   * Output only. Signal strength for wireless networks measured in decibels.
+   *
+   * @param int $signalStrengthDbm
    */
   public function setSignalStrengthDbm($signalStrengthDbm)
   {
@@ -290,7 +415,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->signalStrengthDbm;
   }
   /**
-   * @param string
+   * Output only. Transmission bit rate measured in Megabits per second.
+   *
+   * @param string $transmissionBitRateMbps
    */
   public function setTransmissionBitRateMbps($transmissionBitRateMbps)
   {
@@ -304,7 +431,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->transmissionBitRateMbps;
   }
   /**
-   * @param int
+   * Output only. Transmission power measured in decibels.
+   *
+   * @param int $transmissionPowerDbm
    */
   public function setTransmissionPowerDbm($transmissionPowerDbm)
   {
@@ -318,7 +447,10 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->transmissionPowerDbm;
   }
   /**
-   * @param string
+   * Output only. Wifi link quality. Value ranges from [0, 70]. 0 indicates no
+   * signal and 70 indicates a strong signal.
+   *
+   * @param string $wifiLinkQuality
    */
   public function setWifiLinkQuality($wifiLinkQuality)
   {
@@ -332,7 +464,9 @@ class GoogleChromeManagementV1NetworkStatusReport extends \Google\Collection
     return $this->wifiLinkQuality;
   }
   /**
-   * @param bool
+   * Output only. Wifi power management enabled
+   *
+   * @param bool $wifiPowerManagementEnabled
    */
   public function setWifiPowerManagementEnabled($wifiPowerManagementEnabled)
   {

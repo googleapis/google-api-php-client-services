@@ -21,18 +21,24 @@ class GoogleChromeManagementV1CountPrintJobsByPrinterResponse extends \Google\Co
 {
   protected $collection_key = 'printerReports';
   /**
+   * Pagination token for requesting the next page.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $printerReportsType = GoogleChromeManagementV1PrinterReport::class;
   protected $printerReportsDataType = 'array';
   /**
+   * Total number of printers matching request.
+   *
    * @var string
    */
   public $totalSize;
 
   /**
-   * @param string
+   * Pagination token for requesting the next page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class GoogleChromeManagementV1CountPrintJobsByPrinterResponse extends \Google\Co
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleChromeManagementV1PrinterReport[]
+   * List of PrinterReports matching request.
+   *
+   * @param GoogleChromeManagementV1PrinterReport[] $printerReports
    */
   public function setPrinterReports($printerReports)
   {
@@ -60,7 +68,9 @@ class GoogleChromeManagementV1CountPrintJobsByPrinterResponse extends \Google\Co
     return $this->printerReports;
   }
   /**
-   * @param string
+   * Total number of printers matching request.
+   *
+   * @param string $totalSize
    */
   public function setTotalSize($totalSize)
   {

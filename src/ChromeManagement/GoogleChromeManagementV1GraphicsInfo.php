@@ -25,6 +25,8 @@ class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
   protected $displayDevicesType = GoogleChromeManagementV1DisplayDevice::class;
   protected $displayDevicesDataType = 'array';
   /**
+   * Output only. Is ePrivacy screen supported or not.
+   *
    * @var bool
    */
   public $eprivacySupported;
@@ -32,7 +34,9 @@ class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
   protected $touchScreenInfoDataType = '';
 
   /**
-   * @param GoogleChromeManagementV1GraphicsAdapterInfo
+   * Output only. Information about the graphics adapter (GPU).
+   *
+   * @param GoogleChromeManagementV1GraphicsAdapterInfo $adapterInfo
    */
   public function setAdapterInfo(GoogleChromeManagementV1GraphicsAdapterInfo $adapterInfo)
   {
@@ -46,7 +50,9 @@ class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
     return $this->adapterInfo;
   }
   /**
-   * @param GoogleChromeManagementV1DisplayDevice[]
+   * Output only. Information about the display(s) of the device.
+   *
+   * @param GoogleChromeManagementV1DisplayDevice[] $displayDevices
    */
   public function setDisplayDevices($displayDevices)
   {
@@ -60,7 +66,9 @@ class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
     return $this->displayDevices;
   }
   /**
-   * @param bool
+   * Output only. Is ePrivacy screen supported or not.
+   *
+   * @param bool $eprivacySupported
    */
   public function setEprivacySupported($eprivacySupported)
   {
@@ -74,7 +82,9 @@ class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
     return $this->eprivacySupported;
   }
   /**
-   * @param GoogleChromeManagementV1TouchScreenInfo
+   * Output only. Information about the internal touch screen(s) of the device.
+   *
+   * @param GoogleChromeManagementV1TouchScreenInfo $touchScreenInfo
    */
   public function setTouchScreenInfo(GoogleChromeManagementV1TouchScreenInfo $touchScreenInfo)
   {

@@ -24,7 +24,10 @@ class GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateRespon
   protected $deviceAueCountReportsDataType = 'array';
 
   /**
-   * @param GoogleChromeManagementV1DeviceAueCountReport[]
+   * The list of reports sorted by auto update expiration date in ascending
+   * order.
+   *
+   * @param GoogleChromeManagementV1DeviceAueCountReport[] $deviceAueCountReports
    */
   public function setDeviceAueCountReports($deviceAueCountReports)
   {

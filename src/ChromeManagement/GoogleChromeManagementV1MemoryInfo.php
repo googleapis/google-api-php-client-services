@@ -20,18 +20,24 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1MemoryInfo extends \Google\Model
 {
   /**
+   * Output only. Amount of available RAM in bytes.
+   *
    * @var string
    */
   public $availableRamBytes;
   protected $totalMemoryEncryptionType = GoogleChromeManagementV1TotalMemoryEncryptionInfo::class;
   protected $totalMemoryEncryptionDataType = '';
   /**
+   * Output only. Total RAM in bytes.
+   *
    * @var string
    */
   public $totalRamBytes;
 
   /**
-   * @param string
+   * Output only. Amount of available RAM in bytes.
+   *
+   * @param string $availableRamBytes
    */
   public function setAvailableRamBytes($availableRamBytes)
   {
@@ -45,7 +51,9 @@ class GoogleChromeManagementV1MemoryInfo extends \Google\Model
     return $this->availableRamBytes;
   }
   /**
-   * @param GoogleChromeManagementV1TotalMemoryEncryptionInfo
+   * Output only. Total memory encryption info for the device.
+   *
+   * @param GoogleChromeManagementV1TotalMemoryEncryptionInfo $totalMemoryEncryption
    */
   public function setTotalMemoryEncryption(GoogleChromeManagementV1TotalMemoryEncryptionInfo $totalMemoryEncryption)
   {
@@ -59,7 +67,9 @@ class GoogleChromeManagementV1MemoryInfo extends \Google\Model
     return $this->totalMemoryEncryption;
   }
   /**
-   * @param string
+   * Output only. Total RAM in bytes.
+   *
+   * @param string $totalRamBytes
    */
   public function setTotalRamBytes($totalRamBytes)
   {

@@ -21,10 +21,14 @@ class GoogleChromeManagementV1StorageInfo extends \Google\Collection
 {
   protected $collection_key = 'volume';
   /**
+   * The available space for user data storage in the device in bytes.
+   *
    * @var string
    */
   public $availableDiskBytes;
   /**
+   * The total space for user data storage in the device in bytes.
+   *
    * @var string
    */
   public $totalDiskBytes;
@@ -32,7 +36,9 @@ class GoogleChromeManagementV1StorageInfo extends \Google\Collection
   protected $volumeDataType = 'array';
 
   /**
-   * @param string
+   * The available space for user data storage in the device in bytes.
+   *
+   * @param string $availableDiskBytes
    */
   public function setAvailableDiskBytes($availableDiskBytes)
   {
@@ -46,7 +52,9 @@ class GoogleChromeManagementV1StorageInfo extends \Google\Collection
     return $this->availableDiskBytes;
   }
   /**
-   * @param string
+   * The total space for user data storage in the device in bytes.
+   *
+   * @param string $totalDiskBytes
    */
   public function setTotalDiskBytes($totalDiskBytes)
   {
@@ -60,7 +68,9 @@ class GoogleChromeManagementV1StorageInfo extends \Google\Collection
     return $this->totalDiskBytes;
   }
   /**
-   * @param GoogleChromeManagementV1StorageInfoDiskVolume[]
+   * Information for disk volumes
+   *
+   * @param GoogleChromeManagementV1StorageInfoDiskVolume[] $volume
    */
   public function setVolume($volume)
   {

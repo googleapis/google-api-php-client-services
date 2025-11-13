@@ -23,20 +23,29 @@ class GoogleChromeManagementV1CpuStatusReport extends \Google\Collection
   protected $cpuTemperatureInfoType = GoogleChromeManagementV1CpuTemperatureInfo::class;
   protected $cpuTemperatureInfoDataType = 'array';
   /**
+   * Output only. Sample of CPU utilization (0-100 percent).
+   *
    * @var int
    */
   public $cpuUtilizationPct;
   /**
+   * Output only. The timestamp in milliseconds representing time at which this
+   * report was sampled.
+   *
    * @var string
    */
   public $reportTime;
   /**
+   * Output only. Frequency the report is sampled.
+   *
    * @var string
    */
   public $sampleFrequency;
 
   /**
-   * @param GoogleChromeManagementV1CpuTemperatureInfo[]
+   * Output only. CPU temperature sample info per CPU core in Celsius
+   *
+   * @param GoogleChromeManagementV1CpuTemperatureInfo[] $cpuTemperatureInfo
    */
   public function setCpuTemperatureInfo($cpuTemperatureInfo)
   {
@@ -50,7 +59,9 @@ class GoogleChromeManagementV1CpuStatusReport extends \Google\Collection
     return $this->cpuTemperatureInfo;
   }
   /**
-   * @param int
+   * Output only. Sample of CPU utilization (0-100 percent).
+   *
+   * @param int $cpuUtilizationPct
    */
   public function setCpuUtilizationPct($cpuUtilizationPct)
   {
@@ -64,7 +75,10 @@ class GoogleChromeManagementV1CpuStatusReport extends \Google\Collection
     return $this->cpuUtilizationPct;
   }
   /**
-   * @param string
+   * Output only. The timestamp in milliseconds representing time at which this
+   * report was sampled.
+   *
+   * @param string $reportTime
    */
   public function setReportTime($reportTime)
   {
@@ -78,7 +92,9 @@ class GoogleChromeManagementV1CpuStatusReport extends \Google\Collection
     return $this->reportTime;
   }
   /**
-   * @param string
+   * Output only. Frequency the report is sampled.
+   *
+   * @param string $sampleFrequency
    */
   public function setSampleFrequency($sampleFrequency)
   {

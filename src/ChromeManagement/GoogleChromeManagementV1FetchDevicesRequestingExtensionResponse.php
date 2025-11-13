@@ -23,16 +23,23 @@ class GoogleChromeManagementV1FetchDevicesRequestingExtensionResponse extends \G
   protected $deviceDetailsType = GoogleChromeManagementV1DeviceRequestingExtensionDetails::class;
   protected $deviceDetailsDataType = 'array';
   /**
+   * Optional. Token to specify the next page in the list. Token expires after 1
+   * day.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Optional. Total number of devices in response.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param GoogleChromeManagementV1DeviceRequestingExtensionDetails[]
+   * Details of devices that have requested the queried extension.
+   *
+   * @param GoogleChromeManagementV1DeviceRequestingExtensionDetails[] $deviceDetails
    */
   public function setDeviceDetails($deviceDetails)
   {
@@ -46,7 +53,10 @@ class GoogleChromeManagementV1FetchDevicesRequestingExtensionResponse extends \G
     return $this->deviceDetails;
   }
   /**
-   * @param string
+   * Optional. Token to specify the next page in the list. Token expires after 1
+   * day.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleChromeManagementV1FetchDevicesRequestingExtensionResponse extends \G
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * Optional. Total number of devices in response.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

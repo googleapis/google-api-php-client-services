@@ -20,20 +20,28 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse extends \Google\Model
 {
   /**
+   * Number of browsers that haven’t had any recent activity
+   *
    * @var string
    */
   public $noRecentActivityCount;
   /**
+   * Number of browsers that are pending an OS update
+   *
    * @var string
    */
   public $pendingBrowserUpdateCount;
   /**
+   * Number of browsers that have been recently enrolled
+   *
    * @var string
    */
   public $recentlyEnrolledCount;
 
   /**
-   * @param string
+   * Number of browsers that haven’t had any recent activity
+   *
+   * @param string $noRecentActivityCount
    */
   public function setNoRecentActivityCount($noRecentActivityCount)
   {
@@ -47,7 +55,9 @@ class GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse extend
     return $this->noRecentActivityCount;
   }
   /**
-   * @param string
+   * Number of browsers that are pending an OS update
+   *
+   * @param string $pendingBrowserUpdateCount
    */
   public function setPendingBrowserUpdateCount($pendingBrowserUpdateCount)
   {
@@ -61,7 +71,9 @@ class GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse extend
     return $this->pendingBrowserUpdateCount;
   }
   /**
-   * @param string
+   * Number of browsers that have been recently enrolled
+   *
+   * @param string $recentlyEnrolledCount
    */
   public function setRecentlyEnrolledCount($recentlyEnrolledCount)
   {

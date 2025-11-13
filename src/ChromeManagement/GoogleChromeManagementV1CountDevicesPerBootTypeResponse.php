@@ -20,20 +20,28 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountDevicesPerBootTypeResponse extends \Google\Model
 {
   /**
+   * Number of devices with dev boot type.
+   *
    * @var string
    */
   public $devBootTypeCount;
   /**
+   * Number of devices with unreported boot type.
+   *
    * @var string
    */
   public $unreportedBootTypeCount;
   /**
+   * Number of devices with verified boot type.
+   *
    * @var string
    */
   public $verifiedBootTypeCount;
 
   /**
-   * @param string
+   * Number of devices with dev boot type.
+   *
+   * @param string $devBootTypeCount
    */
   public function setDevBootTypeCount($devBootTypeCount)
   {
@@ -47,7 +55,9 @@ class GoogleChromeManagementV1CountDevicesPerBootTypeResponse extends \Google\Mo
     return $this->devBootTypeCount;
   }
   /**
-   * @param string
+   * Number of devices with unreported boot type.
+   *
+   * @param string $unreportedBootTypeCount
    */
   public function setUnreportedBootTypeCount($unreportedBootTypeCount)
   {
@@ -61,7 +71,9 @@ class GoogleChromeManagementV1CountDevicesPerBootTypeResponse extends \Google\Mo
     return $this->unreportedBootTypeCount;
   }
   /**
-   * @param string
+   * Number of devices with verified boot type.
+   *
+   * @param string $verifiedBootTypeCount
    */
   public function setVerifiedBootTypeCount($verifiedBootTypeCount)
   {

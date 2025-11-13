@@ -20,20 +20,30 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1GraphicsAdapterInfo extends \Google\Model
 {
   /**
+   * Output only. Adapter name. Example: Mesa DRI Intel(R) UHD Graphics 620
+   * (Kabylake GT2).
+   *
    * @var string
    */
   public $adapter;
   /**
+   * Output only. Represents the graphics card device id.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * Output only. Version of the GPU driver.
+   *
    * @var string
    */
   public $driverVersion;
 
   /**
-   * @param string
+   * Output only. Adapter name. Example: Mesa DRI Intel(R) UHD Graphics 620
+   * (Kabylake GT2).
+   *
+   * @param string $adapter
    */
   public function setAdapter($adapter)
   {
@@ -47,7 +57,9 @@ class GoogleChromeManagementV1GraphicsAdapterInfo extends \Google\Model
     return $this->adapter;
   }
   /**
-   * @param string
+   * Output only. Represents the graphics card device id.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -61,7 +73,9 @@ class GoogleChromeManagementV1GraphicsAdapterInfo extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * Output only. Version of the GPU driver.
+   *
+   * @param string $driverVersion
    */
   public function setDriverVersion($driverVersion)
   {

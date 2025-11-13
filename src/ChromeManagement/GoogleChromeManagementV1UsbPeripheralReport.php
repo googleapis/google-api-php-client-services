@@ -21,40 +21,60 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
 {
   protected $collection_key = 'categories';
   /**
+   * Output only. Categories the device belongs to https://www.usb.org/defined-
+   * class-codes
+   *
    * @var string[]
    */
   public $categories;
   /**
+   * Output only. Class ID https://www.usb.org/defined-class-codes
+   *
    * @var int
    */
   public $classId;
   /**
+   * Output only. Firmware version
+   *
    * @var string
    */
   public $firmwareVersion;
   /**
+   * Output only. Device name, model name, or product name
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Product ID
+   *
    * @var int
    */
   public $pid;
   /**
+   * Output only. Subclass ID https://www.usb.org/defined-class-codes
+   *
    * @var int
    */
   public $subclassId;
   /**
+   * Output only. Vendor name
+   *
    * @var string
    */
   public $vendor;
   /**
+   * Output only. Vendor ID
+   *
    * @var int
    */
   public $vid;
 
   /**
-   * @param string[]
+   * Output only. Categories the device belongs to https://www.usb.org/defined-
+   * class-codes
+   *
+   * @param string[] $categories
    */
   public function setCategories($categories)
   {
@@ -68,7 +88,9 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param int
+   * Output only. Class ID https://www.usb.org/defined-class-codes
+   *
+   * @param int $classId
    */
   public function setClassId($classId)
   {
@@ -82,7 +104,9 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
     return $this->classId;
   }
   /**
-   * @param string
+   * Output only. Firmware version
+   *
+   * @param string $firmwareVersion
    */
   public function setFirmwareVersion($firmwareVersion)
   {
@@ -96,7 +120,9 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
     return $this->firmwareVersion;
   }
   /**
-   * @param string
+   * Output only. Device name, model name, or product name
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -110,7 +136,9 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * Output only. Product ID
+   *
+   * @param int $pid
    */
   public function setPid($pid)
   {
@@ -124,7 +152,9 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
     return $this->pid;
   }
   /**
-   * @param int
+   * Output only. Subclass ID https://www.usb.org/defined-class-codes
+   *
+   * @param int $subclassId
    */
   public function setSubclassId($subclassId)
   {
@@ -138,7 +168,9 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
     return $this->subclassId;
   }
   /**
-   * @param string
+   * Output only. Vendor name
+   *
+   * @param string $vendor
    */
   public function setVendor($vendor)
   {
@@ -152,7 +184,9 @@ class GoogleChromeManagementV1UsbPeripheralReport extends \Google\Collection
     return $this->vendor;
   }
   /**
-   * @param int
+   * Output only. Vendor ID
+   *
+   * @param int $vid
    */
   public function setVid($vid)
   {

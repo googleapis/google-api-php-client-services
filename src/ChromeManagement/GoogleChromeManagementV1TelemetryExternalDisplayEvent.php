@@ -24,7 +24,9 @@ class GoogleChromeManagementV1TelemetryExternalDisplayEvent extends \Google\Coll
   protected $externalDisplayDataDataType = 'array';
 
   /**
-   * @param GoogleChromeManagementV1TelemetryExternalDisplayData[]
+   * List of external displays that were connected/disconnected.
+   *
+   * @param GoogleChromeManagementV1TelemetryExternalDisplayData[] $externalDisplayData
    */
   public function setExternalDisplayData($externalDisplayData)
   {

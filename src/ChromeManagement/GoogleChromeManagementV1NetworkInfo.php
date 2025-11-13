@@ -24,7 +24,9 @@ class GoogleChromeManagementV1NetworkInfo extends \Google\Collection
   protected $networkDevicesDataType = 'array';
 
   /**
-   * @param GoogleChromeManagementV1NetworkDevice[]
+   * Output only. List of network devices.
+   *
+   * @param GoogleChromeManagementV1NetworkDevice[] $networkDevices
    */
   public function setNetworkDevices($networkDevices)
   {

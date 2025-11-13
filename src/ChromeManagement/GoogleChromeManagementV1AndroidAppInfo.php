@@ -24,7 +24,9 @@ class GoogleChromeManagementV1AndroidAppInfo extends \Google\Collection
   protected $permissionsDataType = 'array';
 
   /**
-   * @param GoogleChromeManagementV1AndroidAppPermission[]
+   * Output only. Permissions requested by an Android app.
+   *
+   * @param GoogleChromeManagementV1AndroidAppPermission[] $permissions
    */
   public function setPermissions($permissions)
   {

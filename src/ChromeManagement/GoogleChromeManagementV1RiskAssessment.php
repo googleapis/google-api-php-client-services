@@ -20,20 +20,31 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1RiskAssessment extends \Google\Model
 {
   /**
+   * Risk assessment for the extension. Currently, this is a numerical value,
+   * and its interpretation is specific to each risk assessment provider.
+   *
    * @var string
    */
   public $assessment;
   /**
+   * A URL that a user can navigate to for more information about the risk
+   * assessment.
+   *
    * @var string
    */
   public $detailsUrl;
   /**
+   * The version of the extension that this assessment applies to.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Risk assessment for the extension. Currently, this is a numerical value,
+   * and its interpretation is specific to each risk assessment provider.
+   *
+   * @param string $assessment
    */
   public function setAssessment($assessment)
   {
@@ -47,7 +58,10 @@ class GoogleChromeManagementV1RiskAssessment extends \Google\Model
     return $this->assessment;
   }
   /**
-   * @param string
+   * A URL that a user can navigate to for more information about the risk
+   * assessment.
+   *
+   * @param string $detailsUrl
    */
   public function setDetailsUrl($detailsUrl)
   {
@@ -61,7 +75,9 @@ class GoogleChromeManagementV1RiskAssessment extends \Google\Model
     return $this->detailsUrl;
   }
   /**
-   * @param string
+   * The version of the extension that this assessment applies to.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

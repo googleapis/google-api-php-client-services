@@ -20,28 +20,42 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse extends \Google\Model
 {
   /**
+   * Number of ChromeOS devices have not synced policies in the past 28 days.
+   *
    * @var string
    */
   public $noRecentPolicySyncCount;
   /**
+   * Number of ChromeOS devices that have not seen any user activity in the past
+   * 28 days.
+   *
    * @var string
    */
   public $noRecentUserActivityCount;
   /**
+   * Number of devices whose OS version is not compliant.
+   *
    * @var string
    */
   public $osVersionNotCompliantCount;
   /**
+   * Number of devices that are pending an OS update.
+   *
    * @var string
    */
   public $pendingUpdate;
   /**
+   * Number of devices that are unable to apply a policy due to an OS version
+   * mismatch.
+   *
    * @var string
    */
   public $unsupportedPolicyCount;
 
   /**
-   * @param string
+   * Number of ChromeOS devices have not synced policies in the past 28 days.
+   *
+   * @param string $noRecentPolicySyncCount
    */
   public function setNoRecentPolicySyncCount($noRecentPolicySyncCount)
   {
@@ -55,7 +69,10 @@ class GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse extend
     return $this->noRecentPolicySyncCount;
   }
   /**
-   * @param string
+   * Number of ChromeOS devices that have not seen any user activity in the past
+   * 28 days.
+   *
+   * @param string $noRecentUserActivityCount
    */
   public function setNoRecentUserActivityCount($noRecentUserActivityCount)
   {
@@ -69,7 +86,9 @@ class GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse extend
     return $this->noRecentUserActivityCount;
   }
   /**
-   * @param string
+   * Number of devices whose OS version is not compliant.
+   *
+   * @param string $osVersionNotCompliantCount
    */
   public function setOsVersionNotCompliantCount($osVersionNotCompliantCount)
   {
@@ -83,7 +102,9 @@ class GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse extend
     return $this->osVersionNotCompliantCount;
   }
   /**
-   * @param string
+   * Number of devices that are pending an OS update.
+   *
+   * @param string $pendingUpdate
    */
   public function setPendingUpdate($pendingUpdate)
   {
@@ -97,7 +118,10 @@ class GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse extend
     return $this->pendingUpdate;
   }
   /**
-   * @param string
+   * Number of devices that are unable to apply a policy due to an OS version
+   * mismatch.
+   *
+   * @param string $unsupportedPolicyCount
    */
   public function setUnsupportedPolicyCount($unsupportedPolicyCount)
   {

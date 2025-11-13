@@ -20,10 +20,14 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountChromeCrashEventsResponseCrashEventCount extends \Google\Model
 {
   /**
+   * Browser version this is counting.
+   *
    * @var string
    */
   public $browserVersion;
   /**
+   * Total count of crash events.
+   *
    * @var string
    */
   public $count;
@@ -31,7 +35,9 @@ class GoogleChromeManagementV1CountChromeCrashEventsResponseCrashEventCount exte
   protected $dateDataType = '';
 
   /**
-   * @param string
+   * Browser version this is counting.
+   *
+   * @param string $browserVersion
    */
   public function setBrowserVersion($browserVersion)
   {
@@ -45,7 +51,9 @@ class GoogleChromeManagementV1CountChromeCrashEventsResponseCrashEventCount exte
     return $this->browserVersion;
   }
   /**
-   * @param string
+   * Total count of crash events.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -59,7 +67,9 @@ class GoogleChromeManagementV1CountChromeCrashEventsResponseCrashEventCount exte
     return $this->count;
   }
   /**
-   * @param GoogleTypeDate
+   * Date of the crash event.
+   *
+   * @param GoogleTypeDate $date
    */
   public function setDate(GoogleTypeDate $date)
   {

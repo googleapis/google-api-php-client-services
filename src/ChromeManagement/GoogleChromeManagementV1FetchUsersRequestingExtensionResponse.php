@@ -21,10 +21,14 @@ class GoogleChromeManagementV1FetchUsersRequestingExtensionResponse extends \Goo
 {
   protected $collection_key = 'userDetails';
   /**
+   * Token to specify the next page in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Total number of users in response.
+   *
    * @var int
    */
   public $totalSize;
@@ -32,7 +36,9 @@ class GoogleChromeManagementV1FetchUsersRequestingExtensionResponse extends \Goo
   protected $userDetailsDataType = 'array';
 
   /**
-   * @param string
+   * Token to specify the next page in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class GoogleChromeManagementV1FetchUsersRequestingExtensionResponse extends \Goo
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * Total number of users in response.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {
@@ -60,7 +68,9 @@ class GoogleChromeManagementV1FetchUsersRequestingExtensionResponse extends \Goo
     return $this->totalSize;
   }
   /**
-   * @param GoogleChromeManagementV1UserRequestingExtensionDetails[]
+   * Details of users that have requested the queried extension.
+   *
+   * @param GoogleChromeManagementV1UserRequestingExtensionDetails[] $userDetails
    */
   public function setUserDetails($userDetails)
   {

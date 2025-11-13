@@ -20,40 +20,58 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Google\Model
 {
   /**
+   * Number of devices with beta release channel.
+   *
    * @var string
    */
   public $betaChannelCount;
   /**
+   * Number of devices with canary release channel.
+   *
    * @var string
    */
   public $canaryChannelCount;
   /**
+   * Number of devices with dev release channel.
+   *
    * @var string
    */
   public $devChannelCount;
   /**
+   * Number of devices with ltc release channel.
+   *
    * @var string
    */
   public $ltcChannelCount;
   /**
+   * Number of devices with lts release channel.
+   *
    * @var string
    */
   public $ltsChannelCount;
   /**
+   * Number of devices with stable release channel.
+   *
    * @var string
    */
   public $stableChannelCount;
   /**
+   * Number of devices with an unreported release channel.
+   *
    * @var string
    */
   public $unreportedChannelCount;
   /**
+   * Number of devices with unsupported release channel.
+   *
    * @var string
    */
   public $unsupportedChannelCount;
 
   /**
-   * @param string
+   * Number of devices with beta release channel.
+   *
+   * @param string $betaChannelCount
    */
   public function setBetaChannelCount($betaChannelCount)
   {
@@ -67,7 +85,9 @@ class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Goo
     return $this->betaChannelCount;
   }
   /**
-   * @param string
+   * Number of devices with canary release channel.
+   *
+   * @param string $canaryChannelCount
    */
   public function setCanaryChannelCount($canaryChannelCount)
   {
@@ -81,7 +101,9 @@ class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Goo
     return $this->canaryChannelCount;
   }
   /**
-   * @param string
+   * Number of devices with dev release channel.
+   *
+   * @param string $devChannelCount
    */
   public function setDevChannelCount($devChannelCount)
   {
@@ -95,7 +117,9 @@ class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Goo
     return $this->devChannelCount;
   }
   /**
-   * @param string
+   * Number of devices with ltc release channel.
+   *
+   * @param string $ltcChannelCount
    */
   public function setLtcChannelCount($ltcChannelCount)
   {
@@ -109,7 +133,9 @@ class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Goo
     return $this->ltcChannelCount;
   }
   /**
-   * @param string
+   * Number of devices with lts release channel.
+   *
+   * @param string $ltsChannelCount
    */
   public function setLtsChannelCount($ltsChannelCount)
   {
@@ -123,7 +149,9 @@ class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Goo
     return $this->ltsChannelCount;
   }
   /**
-   * @param string
+   * Number of devices with stable release channel.
+   *
+   * @param string $stableChannelCount
    */
   public function setStableChannelCount($stableChannelCount)
   {
@@ -137,7 +165,9 @@ class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Goo
     return $this->stableChannelCount;
   }
   /**
-   * @param string
+   * Number of devices with an unreported release channel.
+   *
+   * @param string $unreportedChannelCount
    */
   public function setUnreportedChannelCount($unreportedChannelCount)
   {
@@ -151,7 +181,9 @@ class GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse extends \Goo
     return $this->unreportedChannelCount;
   }
   /**
-   * @param string
+   * Number of devices with unsupported release channel.
+   *
+   * @param string $unsupportedChannelCount
    */
   public function setUnsupportedChannelCount($unsupportedChannelCount)
   {

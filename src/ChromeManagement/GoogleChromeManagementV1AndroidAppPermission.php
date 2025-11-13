@@ -20,12 +20,16 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1AndroidAppPermission extends \Google\Model
 {
   /**
+   * Output only. The type of the permission.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The type of the permission.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

@@ -20,16 +20,24 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1Device extends \Google\Model
 {
   /**
+   * Output only. The ID of the device that reported this Chrome browser
+   * information.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * Output only. The name of the machine within its local network.
+   *
    * @var string
    */
   public $machine;
 
   /**
-   * @param string
+   * Output only. The ID of the device that reported this Chrome browser
+   * information.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -43,7 +51,9 @@ class GoogleChromeManagementV1Device extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * Output only. The name of the machine within its local network.
+   *
+   * @param string $machine
    */
   public function setMachine($machine)
   {

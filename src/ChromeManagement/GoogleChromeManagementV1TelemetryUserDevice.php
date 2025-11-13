@@ -27,6 +27,9 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
   protected $deviceActivityReportType = GoogleChromeManagementV1DeviceActivityReport::class;
   protected $deviceActivityReportDataType = 'array';
   /**
+   * The unique Directory API ID of the device. This value is the same as the
+   * Admin Console's Directory API ID in the ChromeOS Devices tab.
+   *
    * @var string
    */
   public $deviceId;
@@ -36,7 +39,10 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
   protected $peripheralsReportDataType = 'array';
 
   /**
-   * @param GoogleChromeManagementV1AppReport[]
+   * Output only. App reports collected periodically sorted in a decreasing
+   * order of report_time.
+   *
+   * @param GoogleChromeManagementV1AppReport[] $appReport
    */
   public function setAppReport($appReport)
   {
@@ -50,7 +56,10 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
     return $this->appReport;
   }
   /**
-   * @param GoogleChromeManagementV1AudioStatusReport[]
+   * Output only. Audio reports collected periodically sorted in a decreasing
+   * order of report_time.
+   *
+   * @param GoogleChromeManagementV1AudioStatusReport[] $audioStatusReport
    */
   public function setAudioStatusReport($audioStatusReport)
   {
@@ -64,7 +73,10 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
     return $this->audioStatusReport;
   }
   /**
-   * @param GoogleChromeManagementV1DeviceActivityReport[]
+   * Output only. Device activity reports collected periodically sorted in a
+   * decreasing order of report_time.
+   *
+   * @param GoogleChromeManagementV1DeviceActivityReport[] $deviceActivityReport
    */
   public function setDeviceActivityReport($deviceActivityReport)
   {
@@ -78,7 +90,10 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
     return $this->deviceActivityReport;
   }
   /**
-   * @param string
+   * The unique Directory API ID of the device. This value is the same as the
+   * Admin Console's Directory API ID in the ChromeOS Devices tab.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -92,7 +107,10 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
     return $this->deviceId;
   }
   /**
-   * @param GoogleChromeManagementV1NetworkBandwidthReport[]
+   * Output only. Network bandwidth reports collected periodically sorted in a
+   * decreasing order of report_time.
+   *
+   * @param GoogleChromeManagementV1NetworkBandwidthReport[] $networkBandwidthReport
    */
   public function setNetworkBandwidthReport($networkBandwidthReport)
   {
@@ -106,7 +124,10 @@ class GoogleChromeManagementV1TelemetryUserDevice extends \Google\Collection
     return $this->networkBandwidthReport;
   }
   /**
-   * @param GoogleChromeManagementV1PeripheralsReport[]
+   * Output only. Peripherals reports collected periodically sorted in a
+   * decreasing order of report_time.
+   *
+   * @param GoogleChromeManagementV1PeripheralsReport[] $peripheralsReport
    */
   public function setPeripheralsReport($peripheralsReport)
   {

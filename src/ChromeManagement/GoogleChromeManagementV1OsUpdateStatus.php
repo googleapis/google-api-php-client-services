@@ -20,32 +20,67 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1OsUpdateStatus extends \Google\Model
 {
   /**
+   * State unspecified.
+   */
+  public const UPDATE_STATE_UPDATE_STATE_UNSPECIFIED = 'UPDATE_STATE_UNSPECIFIED';
+  /**
+   * OS has not started downloading.
+   */
+  public const UPDATE_STATE_OS_IMAGE_DOWNLOAD_NOT_STARTED = 'OS_IMAGE_DOWNLOAD_NOT_STARTED';
+  /**
+   * OS has started download on device.
+   */
+  public const UPDATE_STATE_OS_IMAGE_DOWNLOAD_IN_PROGRESS = 'OS_IMAGE_DOWNLOAD_IN_PROGRESS';
+  /**
+   * Device needs reboot to finish upload.
+   */
+  public const UPDATE_STATE_OS_UPDATE_NEED_REBOOT = 'OS_UPDATE_NEED_REBOOT';
+  /**
+   * Output only. Timestamp of the last reboot.
+   *
    * @var string
    */
   public $lastRebootTime;
   /**
+   * Output only. Timestamp of the last update check.
+   *
    * @var string
    */
   public $lastUpdateCheckTime;
   /**
+   * Output only. Timestamp of the last successful update.
+   *
    * @var string
    */
   public $lastUpdateTime;
   /**
+   * Output only. New platform version of the os image being downloaded and
+   * applied. It is only set when update status is OS_IMAGE_DOWNLOAD_IN_PROGRESS
+   * or OS_UPDATE_NEED_REBOOT. Note this could be a dummy "0.0.0.0" for
+   * OS_UPDATE_NEED_REBOOT status for some edge cases, e.g. update engine is
+   * restarted without a reboot.
+   *
    * @var string
    */
   public $newPlatformVersion;
   /**
+   * Output only. New requested platform version from the pending updated kiosk
+   * app.
+   *
    * @var string
    */
   public $newRequestedPlatformVersion;
   /**
+   * Output only. Current state of the os update.
+   *
    * @var string
    */
   public $updateState;
 
   /**
-   * @param string
+   * Output only. Timestamp of the last reboot.
+   *
+   * @param string $lastRebootTime
    */
   public function setLastRebootTime($lastRebootTime)
   {
@@ -59,7 +94,9 @@ class GoogleChromeManagementV1OsUpdateStatus extends \Google\Model
     return $this->lastRebootTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the last update check.
+   *
+   * @param string $lastUpdateCheckTime
    */
   public function setLastUpdateCheckTime($lastUpdateCheckTime)
   {
@@ -73,7 +110,9 @@ class GoogleChromeManagementV1OsUpdateStatus extends \Google\Model
     return $this->lastUpdateCheckTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the last successful update.
+   *
+   * @param string $lastUpdateTime
    */
   public function setLastUpdateTime($lastUpdateTime)
   {
@@ -87,7 +126,13 @@ class GoogleChromeManagementV1OsUpdateStatus extends \Google\Model
     return $this->lastUpdateTime;
   }
   /**
-   * @param string
+   * Output only. New platform version of the os image being downloaded and
+   * applied. It is only set when update status is OS_IMAGE_DOWNLOAD_IN_PROGRESS
+   * or OS_UPDATE_NEED_REBOOT. Note this could be a dummy "0.0.0.0" for
+   * OS_UPDATE_NEED_REBOOT status for some edge cases, e.g. update engine is
+   * restarted without a reboot.
+   *
+   * @param string $newPlatformVersion
    */
   public function setNewPlatformVersion($newPlatformVersion)
   {
@@ -101,7 +146,10 @@ class GoogleChromeManagementV1OsUpdateStatus extends \Google\Model
     return $this->newPlatformVersion;
   }
   /**
-   * @param string
+   * Output only. New requested platform version from the pending updated kiosk
+   * app.
+   *
+   * @param string $newRequestedPlatformVersion
    */
   public function setNewRequestedPlatformVersion($newRequestedPlatformVersion)
   {
@@ -115,14 +163,19 @@ class GoogleChromeManagementV1OsUpdateStatus extends \Google\Model
     return $this->newRequestedPlatformVersion;
   }
   /**
-   * @param string
+   * Output only. Current state of the os update.
+   *
+   * Accepted values: UPDATE_STATE_UNSPECIFIED, OS_IMAGE_DOWNLOAD_NOT_STARTED,
+   * OS_IMAGE_DOWNLOAD_IN_PROGRESS, OS_UPDATE_NEED_REBOOT
+   *
+   * @param self::UPDATE_STATE_* $updateState
    */
   public function setUpdateState($updateState)
   {
     $this->updateState = $updateState;
   }
   /**
-   * @return string
+   * @return self::UPDATE_STATE_*
    */
   public function getUpdateState()
   {

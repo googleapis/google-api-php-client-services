@@ -20,16 +20,24 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TelemetryDeviceInfo extends \Google\Model
 {
   /**
+   * Output only. The unique Directory API ID of the device. This value is the
+   * same as the Admin Console's Directory API ID in the ChromeOS Devices tab.
+   *
    * @var string
    */
   public $deviceId;
   /**
+   * Output only. Organization unit ID of the device.
+   *
    * @var string
    */
   public $orgUnitId;
 
   /**
-   * @param string
+   * Output only. The unique Directory API ID of the device. This value is the
+   * same as the Admin Console's Directory API ID in the ChromeOS Devices tab.
+   *
+   * @param string $deviceId
    */
   public function setDeviceId($deviceId)
   {
@@ -43,7 +51,9 @@ class GoogleChromeManagementV1TelemetryDeviceInfo extends \Google\Model
     return $this->deviceId;
   }
   /**
-   * @param string
+   * Output only. Organization unit ID of the device.
+   *
+   * @param string $orgUnitId
    */
   public function setOrgUnitId($orgUnitId)
   {

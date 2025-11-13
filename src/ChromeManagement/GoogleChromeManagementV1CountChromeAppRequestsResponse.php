@@ -21,18 +21,24 @@ class GoogleChromeManagementV1CountChromeAppRequestsResponse extends \Google\Col
 {
   protected $collection_key = 'requestedApps';
   /**
+   * Token to specify the next page in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $requestedAppsType = GoogleChromeManagementV1ChromeAppRequest::class;
   protected $requestedAppsDataType = 'array';
   /**
+   * Total number of matching app requests.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param string
+   * Token to specify the next page in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class GoogleChromeManagementV1CountChromeAppRequestsResponse extends \Google\Col
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleChromeManagementV1ChromeAppRequest[]
+   * Count of requested apps matching request.
+   *
+   * @param GoogleChromeManagementV1ChromeAppRequest[] $requestedApps
    */
   public function setRequestedApps($requestedApps)
   {
@@ -60,7 +68,9 @@ class GoogleChromeManagementV1CountChromeAppRequestsResponse extends \Google\Col
     return $this->requestedApps;
   }
   /**
-   * @param int
+   * Total number of matching app requests.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

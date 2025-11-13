@@ -20,16 +20,22 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1UserRequestingExtensionDetails extends \Google\Model
 {
   /**
+   * The e-mail address of a user that has requested the extension.
+   *
    * @var string
    */
   public $email;
   /**
+   * Request justification as entered by the user.
+   *
    * @var string
    */
   public $justification;
 
   /**
-   * @param string
+   * The e-mail address of a user that has requested the extension.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -43,7 +49,9 @@ class GoogleChromeManagementV1UserRequestingExtensionDetails extends \Google\Mod
     return $this->email;
   }
   /**
-   * @param string
+   * Request justification as entered by the user.
+   *
+   * @param string $justification
    */
   public function setJustification($justification)
   {
