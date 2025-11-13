@@ -21,36 +21,72 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
 {
   protected $collection_key = 'otherTargets';
   /**
+   * URI path prefix used to route to the specified environment. May contain one
+   * or more wildcards. For example, path segments consisting of a single `*`
+   * character will match any string.
+   *
    * @var string
    */
   public $basepath;
   /**
+   * Name of a deployment group in an environment bound to the environment group
+   * in the following format:
+   * `organizations/{org}/environment/{env}/deploymentGroups/{group}` Only one
+   * of environment or deployment_group will be set.
+   *
    * @var string
    */
   public $deploymentGroup;
   /**
+   * The env group config revision_id when this rule was added or last updated.
+   * This value is set when the rule is created and will only update if the the
+   * environment_id changes. It is used to determine if the runtime is up to
+   * date with respect to this rule. This field is omitted from the
+   * IngressConfig unless the GetDeployedIngressConfig API is called with
+   * view=FULL.
+   *
    * @var string
    */
   public $envGroupRevision;
   /**
+   * Name of an environment bound to the environment group in the following
+   * format: `organizations/{org}/environments/{env}`. Only one of environment
+   * or deployment_group will be set.
+   *
    * @var string
    */
   public $environment;
   /**
+   * Conflicting targets, which will be resource names specifying either
+   * deployment groups or environments.
+   *
    * @var string[]
    */
   public $otherTargets;
   /**
+   * The resource name of the proxy revision that is receiving this basepath in
+   * the following format: `organizations/{org}/apis/{api}/revisions/{rev}`.
+   * This field is omitted from the IngressConfig unless the
+   * GetDeployedIngressConfig API is called with view=FULL.
+   *
    * @var string
    */
   public $receiver;
   /**
+   * The unix timestamp when this rule was updated. This is updated whenever
+   * env_group_revision is updated. This field is omitted from the IngressConfig
+   * unless the GetDeployedIngressConfig API is called with view=FULL.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * URI path prefix used to route to the specified environment. May contain one
+   * or more wildcards. For example, path segments consisting of a single `*`
+   * character will match any string.
+   *
+   * @param string $basepath
    */
   public function setBasepath($basepath)
   {
@@ -64,7 +100,12 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
     return $this->basepath;
   }
   /**
-   * @param string
+   * Name of a deployment group in an environment bound to the environment group
+   * in the following format:
+   * `organizations/{org}/environment/{env}/deploymentGroups/{group}` Only one
+   * of environment or deployment_group will be set.
+   *
+   * @param string $deploymentGroup
    */
   public function setDeploymentGroup($deploymentGroup)
   {
@@ -78,7 +119,14 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
     return $this->deploymentGroup;
   }
   /**
-   * @param string
+   * The env group config revision_id when this rule was added or last updated.
+   * This value is set when the rule is created and will only update if the the
+   * environment_id changes. It is used to determine if the runtime is up to
+   * date with respect to this rule. This field is omitted from the
+   * IngressConfig unless the GetDeployedIngressConfig API is called with
+   * view=FULL.
+   *
+   * @param string $envGroupRevision
    */
   public function setEnvGroupRevision($envGroupRevision)
   {
@@ -92,7 +140,11 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
     return $this->envGroupRevision;
   }
   /**
-   * @param string
+   * Name of an environment bound to the environment group in the following
+   * format: `organizations/{org}/environments/{env}`. Only one of environment
+   * or deployment_group will be set.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {
@@ -106,7 +158,10 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
     return $this->environment;
   }
   /**
-   * @param string[]
+   * Conflicting targets, which will be resource names specifying either
+   * deployment groups or environments.
+   *
+   * @param string[] $otherTargets
    */
   public function setOtherTargets($otherTargets)
   {
@@ -120,7 +175,12 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
     return $this->otherTargets;
   }
   /**
-   * @param string
+   * The resource name of the proxy revision that is receiving this basepath in
+   * the following format: `organizations/{org}/apis/{api}/revisions/{rev}`.
+   * This field is omitted from the IngressConfig unless the
+   * GetDeployedIngressConfig API is called with view=FULL.
+   *
+   * @param string $receiver
    */
   public function setReceiver($receiver)
   {
@@ -134,7 +194,11 @@ class GoogleCloudApigeeV1RoutingRule extends \Google\Collection
     return $this->receiver;
   }
   /**
-   * @param string
+   * The unix timestamp when this rule was updated. This is updated whenever
+   * env_group_revision is updated. This field is omitted from the IngressConfig
+   * unless the GetDeployedIngressConfig API is called with view=FULL.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,20 +20,33 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Quota extends \Google\Model
 {
   /**
+   * Required. Time interval over which the number of request messages is
+   * calculated.
+   *
    * @var string
    */
   public $interval;
   /**
+   * Required. Upper limit allowed for the time interval and time unit
+   * specified. Requests exceeding this limit will be rejected.
+   *
    * @var string
    */
   public $limit;
   /**
+   * Time unit defined for the `interval`. Valid values include `minute`,
+   * `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default
+   * value is `hour`; otherwise, the default is null.
+   *
    * @var string
    */
   public $timeUnit;
 
   /**
-   * @param string
+   * Required. Time interval over which the number of request messages is
+   * calculated.
+   *
+   * @param string $interval
    */
   public function setInterval($interval)
   {
@@ -47,7 +60,10 @@ class GoogleCloudApigeeV1Quota extends \Google\Model
     return $this->interval;
   }
   /**
-   * @param string
+   * Required. Upper limit allowed for the time interval and time unit
+   * specified. Requests exceeding this limit will be rejected.
+   *
+   * @param string $limit
    */
   public function setLimit($limit)
   {
@@ -61,7 +77,11 @@ class GoogleCloudApigeeV1Quota extends \Google\Model
     return $this->limit;
   }
   /**
-   * @param string
+   * Time unit defined for the `interval`. Valid values include `minute`,
+   * `hour`, `day`, or `month`. If `limit` and `interval` are valid, the default
+   * value is `hour`; otherwise, the default is null.
+   *
+   * @param string $timeUnit
    */
   public function setTimeUnit($timeUnit)
   {

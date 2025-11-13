@@ -21,46 +21,85 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
 {
   protected $collection_key = 'protocols';
   /**
+   * The SSL/TLS cipher suites to be used. For programmable proxies, it must be
+   * one of the cipher suite names listed in: http://docs.oracle.com/javase/8/do
+   * cs/technotes/guides/security/StandardNames.html#ciphersuites. For
+   * configurable proxies, it must follow the configuration specified in:
+   * https://commondatastorage.googleapis.com/chromium-boringssl-
+   * docs/ssl.h.html#Cipher-suite-configuration. This setting has no effect for
+   * configurable proxies when negotiating TLS 1.3.
+   *
    * @var string[]
    */
   public $ciphers;
   /**
+   * Optional. Enables two-way TLS.
+   *
    * @var bool
    */
   public $clientAuthEnabled;
   protected $commonNameType = GoogleCloudApigeeV1TlsInfoCommonName::class;
   protected $commonNameDataType = '';
   /**
+   * Required. Enables TLS. If false, neither one-way nor two-way TLS will be
+   * enabled.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * TLS is strictly enforced.
+   *
    * @var bool
    */
   public $enforce;
   /**
+   * If true, Edge ignores TLS certificate errors. Valid when configuring TLS
+   * for target servers and target endpoints, and when configuring virtual hosts
+   * that use 2-way TLS. When used with a target endpoint/target server, if the
+   * backend system uses SNI and returns a cert with a subject Distinguished
+   * Name (DN) that does not match the hostname, there is no way to ignore the
+   * error and the connection fails.
+   *
    * @var bool
    */
   public $ignoreValidationErrors;
   /**
+   * Required if `client_auth_enabled` is true. The resource ID for the alias
+   * containing the private key and cert.
+   *
    * @var string
    */
   public $keyAlias;
   /**
+   * Required if `client_auth_enabled` is true. The resource ID of the keystore.
+   *
    * @var string
    */
   public $keyStore;
   /**
+   * The TLS versioins to be used.
+   *
    * @var string[]
    */
   public $protocols;
   /**
+   * The resource ID of the truststore.
+   *
    * @var string
    */
   public $trustStore;
 
   /**
-   * @param string[]
+   * The SSL/TLS cipher suites to be used. For programmable proxies, it must be
+   * one of the cipher suite names listed in: http://docs.oracle.com/javase/8/do
+   * cs/technotes/guides/security/StandardNames.html#ciphersuites. For
+   * configurable proxies, it must follow the configuration specified in:
+   * https://commondatastorage.googleapis.com/chromium-boringssl-
+   * docs/ssl.h.html#Cipher-suite-configuration. This setting has no effect for
+   * configurable proxies when negotiating TLS 1.3.
+   *
+   * @param string[] $ciphers
    */
   public function setCiphers($ciphers)
   {
@@ -74,7 +113,9 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->ciphers;
   }
   /**
-   * @param bool
+   * Optional. Enables two-way TLS.
+   *
+   * @param bool $clientAuthEnabled
    */
   public function setClientAuthEnabled($clientAuthEnabled)
   {
@@ -88,7 +129,9 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->clientAuthEnabled;
   }
   /**
-   * @param GoogleCloudApigeeV1TlsInfoCommonName
+   * The TLS Common Name of the certificate.
+   *
+   * @param GoogleCloudApigeeV1TlsInfoCommonName $commonName
    */
   public function setCommonName(GoogleCloudApigeeV1TlsInfoCommonName $commonName)
   {
@@ -102,7 +145,10 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->commonName;
   }
   /**
-   * @param bool
+   * Required. Enables TLS. If false, neither one-way nor two-way TLS will be
+   * enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -116,7 +162,9 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->enabled;
   }
   /**
-   * @param bool
+   * TLS is strictly enforced.
+   *
+   * @param bool $enforce
    */
   public function setEnforce($enforce)
   {
@@ -130,7 +178,14 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->enforce;
   }
   /**
-   * @param bool
+   * If true, Edge ignores TLS certificate errors. Valid when configuring TLS
+   * for target servers and target endpoints, and when configuring virtual hosts
+   * that use 2-way TLS. When used with a target endpoint/target server, if the
+   * backend system uses SNI and returns a cert with a subject Distinguished
+   * Name (DN) that does not match the hostname, there is no way to ignore the
+   * error and the connection fails.
+   *
+   * @param bool $ignoreValidationErrors
    */
   public function setIgnoreValidationErrors($ignoreValidationErrors)
   {
@@ -144,7 +199,10 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->ignoreValidationErrors;
   }
   /**
-   * @param string
+   * Required if `client_auth_enabled` is true. The resource ID for the alias
+   * containing the private key and cert.
+   *
+   * @param string $keyAlias
    */
   public function setKeyAlias($keyAlias)
   {
@@ -158,7 +216,9 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->keyAlias;
   }
   /**
-   * @param string
+   * Required if `client_auth_enabled` is true. The resource ID of the keystore.
+   *
+   * @param string $keyStore
    */
   public function setKeyStore($keyStore)
   {
@@ -172,7 +232,9 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->keyStore;
   }
   /**
-   * @param string[]
+   * The TLS versioins to be used.
+   *
+   * @param string[] $protocols
    */
   public function setProtocols($protocols)
   {
@@ -186,7 +248,9 @@ class GoogleCloudApigeeV1TlsInfo extends \Google\Collection
     return $this->protocols;
   }
   /**
-   * @param string
+   * The resource ID of the truststore.
+   *
+   * @param string $trustStore
    */
   public function setTrustStore($trustStore)
   {

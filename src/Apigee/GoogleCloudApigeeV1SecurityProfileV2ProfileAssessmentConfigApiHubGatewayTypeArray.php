@@ -21,12 +21,16 @@ class GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTy
 {
   protected $collection_key = 'gatewayTypes';
   /**
+   * Required. The array of API Hub Gateway Types.
+   *
    * @var string[]
    */
   public $gatewayTypes;
 
   /**
-   * @param string[]
+   * Required. The array of API Hub Gateway Types.
+   *
+   * @param string[] $gatewayTypes
    */
   public function setGatewayTypes($gatewayTypes)
   {

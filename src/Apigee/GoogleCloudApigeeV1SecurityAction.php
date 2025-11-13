@@ -19,50 +19,92 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
 {
+  /**
+   * The default value. This only exists for forward compatibility. A create
+   * request with this value will be rejected.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * An ENABLED SecurityAction is actively enforced if the `expiration_time` is
+   * in the future.
+   */
+  public const STATE_ENABLED = 'ENABLED';
+  /**
+   * A disabled SecurityAction is never enforced.
+   */
+  public const STATE_DISABLED = 'DISABLED';
   protected $collection_key = 'apiProxies';
   protected $allowType = GoogleCloudApigeeV1SecurityActionAllow::class;
   protected $allowDataType = '';
   /**
+   * Optional. If unset, this would apply to all proxies in the environment. If
+   * set, this action is enforced only if at least one proxy in the repeated
+   * list is deployed at the time of enforcement. If set, several restrictions
+   * are enforced on SecurityActions. There can be at most 100 enabled actions
+   * with proxies set in an env. Several other restrictions apply on conditions
+   * and are detailed later.
+   *
    * @var string[]
    */
   public $apiProxies;
   protected $conditionConfigType = GoogleCloudApigeeV1SecurityActionConditionConfig::class;
   protected $conditionConfigDataType = '';
   /**
+   * Output only. The create time for this SecurityAction.
+   *
    * @var string
    */
   public $createTime;
   protected $denyType = GoogleCloudApigeeV1SecurityActionDeny::class;
   protected $denyDataType = '';
   /**
+   * Optional. An optional user provided description of the SecurityAction.
+   *
    * @var string
    */
   public $description;
   /**
+   * The expiration for this SecurityAction.
+   *
    * @var string
    */
   public $expireTime;
   protected $flagType = GoogleCloudApigeeV1SecurityActionFlag::class;
   protected $flagDataType = '';
   /**
+   * Immutable. This field is ignored during creation as per AIP-133. Please set
+   * the `security_action_id` field in the CreateSecurityActionRequest when
+   * creating a new SecurityAction. Format:
+   * organizations/{org}/environments/{env}/securityActions/{security_action}
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Only an ENABLED SecurityAction is enforced. An ENABLED
+   * SecurityAction past its expiration time will not be enforced.
+   *
    * @var string
    */
   public $state;
   /**
+   * Input only. The TTL for this SecurityAction.
+   *
    * @var string
    */
   public $ttl;
   /**
+   * Output only. The update time for this SecurityAction. This reflects when
+   * this SecurityAction changed states.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudApigeeV1SecurityActionAllow
+   * Allow a request through if it matches this SecurityAction.
+   *
+   * @param GoogleCloudApigeeV1SecurityActionAllow $allow
    */
   public function setAllow(GoogleCloudApigeeV1SecurityActionAllow $allow)
   {
@@ -76,7 +118,14 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->allow;
   }
   /**
-   * @param string[]
+   * Optional. If unset, this would apply to all proxies in the environment. If
+   * set, this action is enforced only if at least one proxy in the repeated
+   * list is deployed at the time of enforcement. If set, several restrictions
+   * are enforced on SecurityActions. There can be at most 100 enabled actions
+   * with proxies set in an env. Several other restrictions apply on conditions
+   * and are detailed later.
+   *
+   * @param string[] $apiProxies
    */
   public function setApiProxies($apiProxies)
   {
@@ -90,7 +139,9 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->apiProxies;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityActionConditionConfig
+   * Required. A valid SecurityAction must contain at least one condition.
+   *
+   * @param GoogleCloudApigeeV1SecurityActionConditionConfig $conditionConfig
    */
   public function setConditionConfig(GoogleCloudApigeeV1SecurityActionConditionConfig $conditionConfig)
   {
@@ -104,7 +155,9 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->conditionConfig;
   }
   /**
-   * @param string
+   * Output only. The create time for this SecurityAction.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -118,7 +171,9 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityActionDeny
+   * Deny a request through if it matches this SecurityAction.
+   *
+   * @param GoogleCloudApigeeV1SecurityActionDeny $deny
    */
   public function setDeny(GoogleCloudApigeeV1SecurityActionDeny $deny)
   {
@@ -132,7 +187,9 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->deny;
   }
   /**
-   * @param string
+   * Optional. An optional user provided description of the SecurityAction.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -146,7 +203,9 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The expiration for this SecurityAction.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -160,7 +219,9 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityActionFlag
+   * Flag a request through if it matches this SecurityAction.
+   *
+   * @param GoogleCloudApigeeV1SecurityActionFlag $flag
    */
   public function setFlag(GoogleCloudApigeeV1SecurityActionFlag $flag)
   {
@@ -174,7 +235,12 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->flag;
   }
   /**
-   * @param string
+   * Immutable. This field is ignored during creation as per AIP-133. Please set
+   * the `security_action_id` field in the CreateSecurityActionRequest when
+   * creating a new SecurityAction. Format:
+   * organizations/{org}/environments/{env}/securityActions/{security_action}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -188,21 +254,28 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Only an ENABLED SecurityAction is enforced. An ENABLED
+   * SecurityAction past its expiration time will not be enforced.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ENABLED, DISABLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Input only. The TTL for this SecurityAction.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {
@@ -216,7 +289,10 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Collection
     return $this->ttl;
   }
   /**
-   * @param string
+   * Output only. The update time for this SecurityAction. This reflects when
+   * this SecurityAction changed states.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityProfileScoringConfig extends \Google\Model
 {
   /**
+   * Description of the config.
+   *
    * @var string
    */
   public $description;
   /**
+   * Path of the component config used for scoring.
+   *
    * @var string
    */
   public $scorePath;
   /**
+   * Title of the config.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Description of the config.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +55,9 @@ class GoogleCloudApigeeV1SecurityProfileScoringConfig extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Path of the component config used for scoring.
+   *
+   * @param string $scorePath
    */
   public function setScorePath($scorePath)
   {
@@ -61,7 +71,9 @@ class GoogleCloudApigeeV1SecurityProfileScoringConfig extends \Google\Model
     return $this->scorePath;
   }
   /**
-   * @param string
+   * Title of the config.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

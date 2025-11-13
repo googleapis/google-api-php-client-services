@@ -25,12 +25,16 @@ class GoogleCloudApigeeV1StatsHostStats extends \Google\Collection
   protected $metricsType = GoogleCloudApigeeV1Metric::class;
   protected $metricsDataType = 'array';
   /**
+   * Hostname used in query.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GoogleCloudApigeeV1DimensionMetric[]
+   * List of metrics grouped under dimensions.
+   *
+   * @param GoogleCloudApigeeV1DimensionMetric[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -44,7 +48,17 @@ class GoogleCloudApigeeV1StatsHostStats extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param GoogleCloudApigeeV1Metric[]
+   * In the final response, only one of the following fields will be present
+   * based on the dimensions provided. If no dimensions are provided, then only
+   * the top-level metrics are provided. If dimensions are included, then there
+   * will be a top-level dimensions field under hostnames which will contain
+   * metrics values and the dimension name. Example: ``` "hosts": [ {
+   * "dimensions": [ { "metrics": [ { "name": "sum(message_count)", "values": [
+   * "2.14049521E8" ] } ], "name": "nit_proxy" } ], "name": "example.com" } ]```
+   * OR ```"hosts": [ { "metrics": [ { "name": "sum(message_count)", "values": [
+   * "2.19026331E8" ] } ], "name": "example.com" } ]``` List of metric values.
+   *
+   * @param GoogleCloudApigeeV1Metric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -58,7 +72,9 @@ class GoogleCloudApigeeV1StatsHostStats extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * Hostname used in query.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

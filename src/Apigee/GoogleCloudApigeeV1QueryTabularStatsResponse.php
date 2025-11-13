@@ -21,20 +21,30 @@ class GoogleCloudApigeeV1QueryTabularStatsResponse extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Column names corresponding to the same order as the inner values in the
+   * stats field.
+   *
    * @var string[]
    */
   public $columns;
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Resultant rows from the executed query.
+   *
    * @var array[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Column names corresponding to the same order as the inner values in the
+   * stats field.
+   *
+   * @param string[] $columns
    */
   public function setColumns($columns)
   {
@@ -48,7 +58,9 @@ class GoogleCloudApigeeV1QueryTabularStatsResponse extends \Google\Collection
     return $this->columns;
   }
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -62,7 +74,9 @@ class GoogleCloudApigeeV1QueryTabularStatsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param array[]
+   * Resultant rows from the executed query.
+   *
+   * @param array[] $values
    */
   public function setValues($values)
   {

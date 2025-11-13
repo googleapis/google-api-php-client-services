@@ -20,20 +20,34 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityActionsConfig extends \Google\Model
 {
   /**
+   * The flag that controls whether this feature is enabled. This is `unset` by
+   * default. When this flag is `false`, even if individual rules are enabled,
+   * no SecurityActions will be enforced.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * This is a singleton resource, the name will always be set by
+   * SecurityActions and any user input will be ignored. The name is always:
+   * `organizations/{org}/environments/{env}/security_actions_config`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The update time for configuration.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * The flag that controls whether this feature is enabled. This is `unset` by
+   * default. When this flag is `false`, even if individual rules are enabled,
+   * no SecurityActions will be enforced.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -47,7 +61,11 @@ class GoogleCloudApigeeV1SecurityActionsConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * This is a singleton resource, the name will always be set by
+   * SecurityActions and any user input will be ignored. The name is always:
+   * `organizations/{org}/environments/{env}/security_actions_config`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +79,9 @@ class GoogleCloudApigeeV1SecurityActionsConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The update time for configuration.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

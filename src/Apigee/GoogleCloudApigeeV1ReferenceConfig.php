@@ -20,16 +20,26 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ReferenceConfig extends \Google\Model
 {
   /**
+   * Name of the reference in the following format:
+   * `organizations/{org}/environments/{env}/references/{reference}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Name of the referenced resource in the following format:
+   * `organizations/{org}/environments/{env}/keystores/{keystore}` Only
+   * references to keystore resources are supported.
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Name of the reference in the following format:
+   * `organizations/{org}/environments/{env}/references/{reference}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +53,11 @@ class GoogleCloudApigeeV1ReferenceConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Name of the referenced resource in the following format:
+   * `organizations/{org}/environments/{env}/keystores/{keystore}` Only
+   * references to keystore resources are supported.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

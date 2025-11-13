@@ -23,20 +23,29 @@ class GoogleCloudApigeeV1RevisionStatus extends \Google\Collection
   protected $errorsType = GoogleCloudApigeeV1UpdateError::class;
   protected $errorsDataType = 'array';
   /**
+   * The json content of the resource revision. Large specs should be sent
+   * individually via the spec field to avoid hitting request size limits.
+   *
    * @var string
    */
   public $jsonSpec;
   /**
+   * The number of replicas that have successfully loaded this revision.
+   *
    * @var int
    */
   public $replicas;
   /**
+   * The revision of the resource.
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param GoogleCloudApigeeV1UpdateError[]
+   * Errors reported when attempting to load this revision.
+   *
+   * @param GoogleCloudApigeeV1UpdateError[] $errors
    */
   public function setErrors($errors)
   {
@@ -50,7 +59,10 @@ class GoogleCloudApigeeV1RevisionStatus extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * The json content of the resource revision. Large specs should be sent
+   * individually via the spec field to avoid hitting request size limits.
+   *
+   * @param string $jsonSpec
    */
   public function setJsonSpec($jsonSpec)
   {
@@ -64,7 +76,9 @@ class GoogleCloudApigeeV1RevisionStatus extends \Google\Collection
     return $this->jsonSpec;
   }
   /**
-   * @param int
+   * The number of replicas that have successfully loaded this revision.
+   *
+   * @param int $replicas
    */
   public function setReplicas($replicas)
   {
@@ -78,7 +92,9 @@ class GoogleCloudApigeeV1RevisionStatus extends \Google\Collection
     return $this->replicas;
   }
   /**
-   * @param string
+   * The revision of the resource.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

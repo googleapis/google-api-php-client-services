@@ -20,16 +20,22 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1TlsInfoCommonName extends \Google\Model
 {
   /**
+   * The TLS Common Name string of the certificate.
+   *
    * @var string
    */
   public $value;
   /**
+   * Indicates whether the cert should be matched against as a wildcard cert.
+   *
    * @var bool
    */
   public $wildcardMatch;
 
   /**
-   * @param string
+   * The TLS Common Name string of the certificate.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {
@@ -43,7 +49,9 @@ class GoogleCloudApigeeV1TlsInfoCommonName extends \Google\Model
     return $this->value;
   }
   /**
-   * @param bool
+   * Indicates whether the cert should be matched against as a wildcard cert.
+   *
+   * @param bool $wildcardMatch
    */
   public function setWildcardMatch($wildcardMatch)
   {

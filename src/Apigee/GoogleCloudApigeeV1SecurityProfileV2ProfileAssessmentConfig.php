@@ -19,15 +19,35 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfig extends \Google\Model
 {
+  /**
+   * The weight is unspecified.
+   */
+  public const WEIGHT_WEIGHT_UNSPECIFIED = 'WEIGHT_UNSPECIFIED';
+  /**
+   * The weight is minor.
+   */
+  public const WEIGHT_MINOR = 'MINOR';
+  /**
+   * The weight is moderate.
+   */
+  public const WEIGHT_MODERATE = 'MODERATE';
+  /**
+   * The weight is major.
+   */
+  public const WEIGHT_MAJOR = 'MAJOR';
   protected $includeType = GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray::class;
   protected $includeDataType = '';
   /**
+   * The weight of the assessment.
+   *
    * @var string
    */
   public $weight;
 
   /**
-   * @param GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray
+   * Include only these Gateway Types.
+   *
+   * @param GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray $include
    */
   public function setInclude(GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfigApiHubGatewayTypeArray $include)
   {
@@ -41,14 +61,18 @@ class GoogleCloudApigeeV1SecurityProfileV2ProfileAssessmentConfig extends \Googl
     return $this->include;
   }
   /**
-   * @param string
+   * The weight of the assessment.
+   *
+   * Accepted values: WEIGHT_UNSPECIFIED, MINOR, MODERATE, MAJOR
+   *
+   * @param self::WEIGHT_* $weight
    */
   public function setWeight($weight)
   {
     $this->weight = $weight;
   }
   /**
-   * @return string
+   * @return self::WEIGHT_*
    */
   public function getWeight()
   {

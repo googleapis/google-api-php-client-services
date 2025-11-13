@@ -20,20 +20,32 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SchemaSchemaProperty extends \Google\Model
 {
   /**
+   * Time the field was created in RFC3339 string form. For example:
+   * `2016-02-26T10:23:09.592Z`.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Flag that specifies whether the field is standard in the dataset or a
+   * custom field created by the customer. `true` indicates that it is a custom
+   * field.
+   *
    * @var string
    */
   public $custom;
   /**
+   * Data type of the field.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Time the field was created in RFC3339 string form. For example:
+   * `2016-02-26T10:23:09.592Z`.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,7 +59,11 @@ class GoogleCloudApigeeV1SchemaSchemaProperty extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Flag that specifies whether the field is standard in the dataset or a
+   * custom field created by the customer. `true` indicates that it is a custom
+   * field.
+   *
+   * @param string $custom
    */
   public function setCustom($custom)
   {
@@ -61,7 +77,9 @@ class GoogleCloudApigeeV1SchemaSchemaProperty extends \Google\Model
     return $this->custom;
   }
   /**
-   * @param string
+   * Data type of the field.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

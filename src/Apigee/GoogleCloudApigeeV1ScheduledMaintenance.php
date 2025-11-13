@@ -20,12 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ScheduledMaintenance extends \Google\Model
 {
   /**
+   * Output only. The start time (UTC) of the scheduled maintenance.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Output only. The start time (UTC) of the scheduled maintenance.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

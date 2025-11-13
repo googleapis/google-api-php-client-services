@@ -20,22 +20,60 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
 {
   /**
+   * UNSPECIFIED defaults to HTTP for backwards compatibility.
+   */
+  public const PROTOCOL_PROTOCOL_UNSPECIFIED = 'PROTOCOL_UNSPECIFIED';
+  /**
+   * The TargetServer uses HTTP.
+   */
+  public const PROTOCOL_HTTP = 'HTTP';
+  /**
+   * The TargetSever uses HTTP2.
+   */
+  public const PROTOCOL_HTTP2 = 'HTTP2';
+  /**
+   * The TargetServer uses GRPC.
+   */
+  public const PROTOCOL_GRPC_TARGET = 'GRPC_TARGET';
+  /**
+   * GRPC TargetServer to be used in ExternalCallout Policy. Prefer to use
+   * EXTERNAL_CALLOUT instead. TODO(b/266125112) deprecate once EXTERNAL
+   * _CALLOUT generally available.
+   */
+  public const PROTOCOL_GRPC = 'GRPC';
+  /**
+   * The TargetServer is to be used in the ExternalCallout Policy
+   */
+  public const PROTOCOL_EXTERNAL_CALLOUT = 'EXTERNAL_CALLOUT';
+  /**
+   * Whether the target server is enabled. An empty/omitted value for this field
+   * should be interpreted as true.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Host name of the target server.
+   *
    * @var string
    */
   public $host;
   /**
+   * Target server revision name in the following format: `organizations/{org}/e
+   * nvironments/{env}/targetservers/{targetserver}/revisions/{rev}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Port number for the target server.
+   *
    * @var int
    */
   public $port;
   /**
+   * The protocol used by this target server.
+   *
    * @var string
    */
   public $protocol;
@@ -43,7 +81,10 @@ class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
   protected $tlsInfoDataType = '';
 
   /**
-   * @param bool
+   * Whether the target server is enabled. An empty/omitted value for this field
+   * should be interpreted as true.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -57,7 +98,9 @@ class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Host name of the target server.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -71,7 +114,10 @@ class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
     return $this->host;
   }
   /**
-   * @param string
+   * Target server revision name in the following format: `organizations/{org}/e
+   * nvironments/{env}/targetservers/{targetserver}/revisions/{rev}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -85,7 +131,9 @@ class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * Port number for the target server.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -99,21 +147,28 @@ class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * The protocol used by this target server.
+   *
+   * Accepted values: PROTOCOL_UNSPECIFIED, HTTP, HTTP2, GRPC_TARGET, GRPC,
+   * EXTERNAL_CALLOUT
+   *
+   * @param self::PROTOCOL_* $protocol
    */
   public function setProtocol($protocol)
   {
     $this->protocol = $protocol;
   }
   /**
-   * @return string
+   * @return self::PROTOCOL_*
    */
   public function getProtocol()
   {
     return $this->protocol;
   }
   /**
-   * @param GoogleCloudApigeeV1TlsInfoConfig
+   * TLS settings for the target server.
+   *
+   * @param GoogleCloudApigeeV1TlsInfoConfig $tlsInfo
    */
   public function setTlsInfo(GoogleCloudApigeeV1TlsInfoConfig $tlsInfo)
   {

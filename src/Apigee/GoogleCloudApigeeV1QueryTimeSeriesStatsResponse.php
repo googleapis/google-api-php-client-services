@@ -21,10 +21,15 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsResponse extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Column names corresponding to the same order as the inner values in the
+   * stats field.
+   *
    * @var string[]
    */
   public $columns;
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +37,10 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsResponse extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param string[]
+   * Column names corresponding to the same order as the inner values in the
+   * stats field.
+   *
+   * @param string[] $columns
    */
   public function setColumns($columns)
   {
@@ -46,7 +54,9 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsResponse extends \Google\Collection
     return $this->columns;
   }
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1QueryTimeSeriesStatsResponseSequence[]
+   * Results of the query returned as a JSON array.
+   *
+   * @param GoogleCloudApigeeV1QueryTimeSeriesStatsResponseSequence[] $values
    */
   public function setValues($values)
   {

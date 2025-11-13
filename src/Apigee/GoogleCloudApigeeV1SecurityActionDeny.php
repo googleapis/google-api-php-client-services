@@ -20,12 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityActionDeny extends \Google\Model
 {
   /**
+   * Optional. The HTTP response code if the Action = DENY.
+   *
    * @var int
    */
   public $responseCode;
 
   /**
-   * @param int
+   * Optional. The HTTP response code if the Action = DENY.
+   *
+   * @param int $responseCode
    */
   public function setResponseCode($responseCode)
   {

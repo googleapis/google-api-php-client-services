@@ -20,6 +20,8 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SchemaSchemaElement extends \Google\Model
 {
   /**
+   * Name of the field.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +29,9 @@ class GoogleCloudApigeeV1SchemaSchemaElement extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * @param string
+   * Name of the field.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +45,10 @@ class GoogleCloudApigeeV1SchemaSchemaElement extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudApigeeV1SchemaSchemaProperty
+   * Properties for the schema field. For example: { "createTime":
+   * "2016-02-26T10:23:09.592Z", "custom": "false", "type": "string" }
+   *
+   * @param GoogleCloudApigeeV1SchemaSchemaProperty $properties
    */
   public function setProperties(GoogleCloudApigeeV1SchemaSchemaProperty $properties)
   {

@@ -20,28 +20,61 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails extends \Google\Model
 {
   /**
+   * Gateway type is not specified.
+   */
+  public const GATEWAY_TYPE_API_HUB_GATEWAY_TYPE_UNSPECIFIED = 'API_HUB_GATEWAY_TYPE_UNSPECIFIED';
+  /**
+   * Gateway is Apigee X for API Hub.
+   */
+  public const GATEWAY_TYPE_APIGEE_X = 'APIGEE_X';
+  /**
+   * Gateway is Apigee Hybrid for API Hub.
+   */
+  public const GATEWAY_TYPE_APIGEE_HYBRID = 'APIGEE_HYBRID';
+  /**
+   * Gateway is Apigee Edge for API Hub.
+   */
+  public const GATEWAY_TYPE_APIGEE_EDGE = 'APIGEE_EDGE';
+  /**
+   * Gateway is Apigee OPDK for API Hub.
+   */
+  public const GATEWAY_TYPE_APIGEE_OPDK = 'APIGEE_OPDK';
+  /**
+   * The display name of the API Hub deployment.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The gateway for the API Hub deployment. Format: `projects/{project}/locatio
+   * ns/{location}/plugins/{plugin}/instances/{instance}`
+   *
    * @var string
    */
   public $gateway;
   /**
+   * The gateway type for the API Hub deployment.
+   *
    * @var string
    */
   public $gatewayType;
   /**
+   * The resource uri for the API Hub deployment.
+   *
    * @var string
    */
   public $resourceUri;
   /**
+   * The source project for the API Hub deployment.
+   *
    * @var string
    */
   public $sourceProject;
 
   /**
-   * @param string
+   * The display name of the API Hub deployment.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -55,7 +88,10 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails
     return $this->displayName;
   }
   /**
-   * @param string
+   * The gateway for the API Hub deployment. Format: `projects/{project}/locatio
+   * ns/{location}/plugins/{plugin}/instances/{instance}`
+   *
+   * @param string $gateway
    */
   public function setGateway($gateway)
   {
@@ -69,21 +105,28 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails
     return $this->gateway;
   }
   /**
-   * @param string
+   * The gateway type for the API Hub deployment.
+   *
+   * Accepted values: API_HUB_GATEWAY_TYPE_UNSPECIFIED, APIGEE_X, APIGEE_HYBRID,
+   * APIGEE_EDGE, APIGEE_OPDK
+   *
+   * @param self::GATEWAY_TYPE_* $gatewayType
    */
   public function setGatewayType($gatewayType)
   {
     $this->gatewayType = $gatewayType;
   }
   /**
-   * @return string
+   * @return self::GATEWAY_TYPE_*
    */
   public function getGatewayType()
   {
     return $this->gatewayType;
   }
   /**
-   * @param string
+   * The resource uri for the API Hub deployment.
+   *
+   * @param string $resourceUri
    */
   public function setResourceUri($resourceUri)
   {
@@ -97,7 +140,9 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails
     return $this->resourceUri;
   }
   /**
-   * @param string
+   * The source project for the API Hub deployment.
+   *
+   * @param string $sourceProject
    */
   public function setSourceProject($sourceProject)
   {

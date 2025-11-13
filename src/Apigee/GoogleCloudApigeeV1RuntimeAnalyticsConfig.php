@@ -20,16 +20,22 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1RuntimeAnalyticsConfig extends \Google\Model
 {
   /**
+   * If Runtime should send billing data to AX or not.
+   *
    * @var bool
    */
   public $billingPipelineEnabled;
   /**
+   * If the Analytics is enabled or not.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * If Runtime should send billing data to AX or not.
+   *
+   * @param bool $billingPipelineEnabled
    */
   public function setBillingPipelineEnabled($billingPipelineEnabled)
   {
@@ -43,7 +49,9 @@ class GoogleCloudApigeeV1RuntimeAnalyticsConfig extends \Google\Model
     return $this->billingPipelineEnabled;
   }
   /**
-   * @param bool
+   * If the Analytics is enabled or not.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

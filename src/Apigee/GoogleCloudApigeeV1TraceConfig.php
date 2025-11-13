@@ -20,10 +20,28 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1TraceConfig extends \Google\Model
 {
   /**
+   * Exporter unspecified
+   */
+  public const EXPORTER_EXPORTER_UNSPECIFIED = 'EXPORTER_UNSPECIFIED';
+  /**
+   * Jaeger exporter
+   */
+  public const EXPORTER_JAEGER = 'JAEGER';
+  /**
+   * Cloudtrace exporter
+   */
+  public const EXPORTER_CLOUD_TRACE = 'CLOUD_TRACE';
+  /**
+   * Required. Endpoint of the exporter.
+   *
    * @var string
    */
   public $endpoint;
   /**
+   * Required. Exporter that is used to view the distributed trace captured
+   * using OpenCensus. An exporter sends traces to any backend that is capable
+   * of consuming them. Recorded spans can be exported by registered exporters.
+   *
    * @var string
    */
   public $exporter;
@@ -31,7 +49,9 @@ class GoogleCloudApigeeV1TraceConfig extends \Google\Model
   protected $samplingConfigDataType = '';
 
   /**
-   * @param string
+   * Required. Endpoint of the exporter.
+   *
+   * @param string $endpoint
    */
   public function setEndpoint($endpoint)
   {
@@ -45,21 +65,31 @@ class GoogleCloudApigeeV1TraceConfig extends \Google\Model
     return $this->endpoint;
   }
   /**
-   * @param string
+   * Required. Exporter that is used to view the distributed trace captured
+   * using OpenCensus. An exporter sends traces to any backend that is capable
+   * of consuming them. Recorded spans can be exported by registered exporters.
+   *
+   * Accepted values: EXPORTER_UNSPECIFIED, JAEGER, CLOUD_TRACE
+   *
+   * @param self::EXPORTER_* $exporter
    */
   public function setExporter($exporter)
   {
     $this->exporter = $exporter;
   }
   /**
-   * @return string
+   * @return self::EXPORTER_*
    */
   public function getExporter()
   {
     return $this->exporter;
   }
   /**
-   * @param GoogleCloudApigeeV1TraceSamplingConfig
+   * Distributed trace configuration for all API proxies in an environment. You
+   * can also override the configuration for a specific API proxy using the
+   * distributed trace configuration overrides API.
+   *
+   * @param GoogleCloudApigeeV1TraceSamplingConfig $samplingConfig
    */
   public function setSamplingConfig(GoogleCloudApigeeV1TraceSamplingConfig $samplingConfig)
   {

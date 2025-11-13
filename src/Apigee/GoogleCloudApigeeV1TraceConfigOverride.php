@@ -20,10 +20,15 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1TraceConfigOverride extends \Google\Model
 {
   /**
+   * ID of the API proxy that will have its trace configuration overridden.
+   *
    * @var string
    */
   public $apiProxy;
   /**
+   * ID of the trace configuration override specified as a system-generated
+   * UUID.
+   *
    * @var string
    */
   public $name;
@@ -31,7 +36,9 @@ class GoogleCloudApigeeV1TraceConfigOverride extends \Google\Model
   protected $samplingConfigDataType = '';
 
   /**
-   * @param string
+   * ID of the API proxy that will have its trace configuration overridden.
+   *
+   * @param string $apiProxy
    */
   public function setApiProxy($apiProxy)
   {
@@ -45,7 +52,10 @@ class GoogleCloudApigeeV1TraceConfigOverride extends \Google\Model
     return $this->apiProxy;
   }
   /**
-   * @param string
+   * ID of the trace configuration override specified as a system-generated
+   * UUID.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -59,7 +69,9 @@ class GoogleCloudApigeeV1TraceConfigOverride extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudApigeeV1TraceSamplingConfig
+   * Trace configuration to override.
+   *
+   * @param GoogleCloudApigeeV1TraceSamplingConfig $samplingConfig
    */
   public function setSamplingConfig(GoogleCloudApigeeV1TraceSamplingConfig $samplingConfig)
   {

@@ -20,56 +20,84 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityReport extends \Google\Model
 {
   /**
+   * Creation time of the query.
+   *
    * @var string
    */
   public $created;
   /**
+   * Display Name specified by the user.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Hostname is available only when query is executed at host level.
+   *
    * @var string
    */
   public $envgroupHostname;
   /**
+   * Error is set when query fails.
+   *
    * @var string
    */
   public $error;
   /**
+   * ExecutionTime is available only after the query is completed.
+   *
    * @var string
    */
   public $executionTime;
   protected $queryParamsType = GoogleCloudApigeeV1SecurityReportMetadata::class;
   protected $queryParamsDataType = '';
   /**
+   * Report Definition ID.
+   *
    * @var string
    */
   public $reportDefinitionId;
   protected $resultType = GoogleCloudApigeeV1SecurityReportResultMetadata::class;
   protected $resultDataType = '';
   /**
+   * ResultFileSize is available only after the query is completed.
+   *
    * @var string
    */
   public $resultFileSize;
   /**
+   * ResultRows is available only after the query is completed.
+   *
    * @var string
    */
   public $resultRows;
   /**
+   * Self link of the query. Example: `/organizations/myorg/environments/myenv/s
+   * ecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if
+   * query is running at host level: `/organizations/myorg/hostSecurityReports/9
+   * cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
+   *
    * @var string
    */
   public $self;
   /**
+   * Query state could be "enqueued", "running", "completed", "expired" and
+   * "failed".
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Last updated timestamp for the query.
+   *
    * @var string
    */
   public $updated;
 
   /**
-   * @param string
+   * Creation time of the query.
+   *
+   * @param string $created
    */
   public function setCreated($created)
   {
@@ -83,7 +111,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->created;
   }
   /**
-   * @param string
+   * Display Name specified by the user.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -97,7 +127,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Hostname is available only when query is executed at host level.
+   *
+   * @param string $envgroupHostname
    */
   public function setEnvgroupHostname($envgroupHostname)
   {
@@ -111,7 +143,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->envgroupHostname;
   }
   /**
-   * @param string
+   * Error is set when query fails.
+   *
+   * @param string $error
    */
   public function setError($error)
   {
@@ -125,7 +159,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * ExecutionTime is available only after the query is completed.
+   *
+   * @param string $executionTime
    */
   public function setExecutionTime($executionTime)
   {
@@ -139,7 +175,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->executionTime;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityReportMetadata
+   * Contains information like metrics, dimenstions etc of the Security Report.
+   *
+   * @param GoogleCloudApigeeV1SecurityReportMetadata $queryParams
    */
   public function setQueryParams(GoogleCloudApigeeV1SecurityReportMetadata $queryParams)
   {
@@ -153,7 +191,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->queryParams;
   }
   /**
-   * @param string
+   * Report Definition ID.
+   *
+   * @param string $reportDefinitionId
    */
   public function setReportDefinitionId($reportDefinitionId)
   {
@@ -167,7 +207,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->reportDefinitionId;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityReportResultMetadata
+   * Result is available only after the query is completed.
+   *
+   * @param GoogleCloudApigeeV1SecurityReportResultMetadata $result
    */
   public function setResult(GoogleCloudApigeeV1SecurityReportResultMetadata $result)
   {
@@ -181,7 +223,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->result;
   }
   /**
-   * @param string
+   * ResultFileSize is available only after the query is completed.
+   *
+   * @param string $resultFileSize
    */
   public function setResultFileSize($resultFileSize)
   {
@@ -195,7 +239,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->resultFileSize;
   }
   /**
-   * @param string
+   * ResultRows is available only after the query is completed.
+   *
+   * @param string $resultRows
    */
   public function setResultRows($resultRows)
   {
@@ -209,7 +255,12 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->resultRows;
   }
   /**
-   * @param string
+   * Self link of the query. Example: `/organizations/myorg/environments/myenv/s
+   * ecurityReports/9cfc0d85-0f30-46d6-ae6f-318d0cb961bd` or following format if
+   * query is running at host level: `/organizations/myorg/hostSecurityReports/9
+   * cfc0d85-0f30-46d6-ae6f-318d0cb961bd`
+   *
+   * @param string $self
    */
   public function setSelf($self)
   {
@@ -223,7 +274,10 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->self;
   }
   /**
-   * @param string
+   * Query state could be "enqueued", "running", "completed", "expired" and
+   * "failed".
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -237,7 +291,9 @@ class GoogleCloudApigeeV1SecurityReport extends \Google\Model
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Last updated timestamp for the query.
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {

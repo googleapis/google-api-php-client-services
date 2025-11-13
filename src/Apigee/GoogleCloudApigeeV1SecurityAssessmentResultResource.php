@@ -19,23 +19,46 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
 {
+  /**
+   * ResourceType not specified.
+   */
+  public const TYPE_RESOURCE_TYPE_UNSPECIFIED = 'RESOURCE_TYPE_UNSPECIFIED';
+  /**
+   * Resource is an Apigee Proxy.
+   */
+  public const TYPE_API_PROXY = 'API_PROXY';
+  /**
+   * Resource is an API Hub deployment.
+   */
+  public const TYPE_API_HUB_DEPLOYMENT = 'API_HUB_DEPLOYMENT';
   protected $apiHubDeploymentDetailsType = GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails::class;
   protected $apiHubDeploymentDetailsDataType = '';
   /**
+   * Required. Name of this resource. For an Apigee API Proxy, this should be
+   * the id of the API proxy. For an API Hub Deployment, this should be the id
+   * of the deployment.
+   *
    * @var string
    */
   public $name;
   /**
+   * The revision id for the resource. In case of Apigee, this is proxy revision
+   * id.
+   *
    * @var string
    */
   public $resourceRevisionId;
   /**
+   * Required. Type of this resource.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails
+   * Output only. Additional details for the API Hub deployment.
+   *
+   * @param GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails $apiHubDeploymentDetails
    */
   public function setApiHubDeploymentDetails(GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails $apiHubDeploymentDetails)
   {
@@ -49,7 +72,11 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
     return $this->apiHubDeploymentDetails;
   }
   /**
-   * @param string
+   * Required. Name of this resource. For an Apigee API Proxy, this should be
+   * the id of the API proxy. For an API Hub Deployment, this should be the id
+   * of the deployment.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -63,7 +90,10 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The revision id for the resource. In case of Apigee, this is proxy revision
+   * id.
+   *
+   * @param string $resourceRevisionId
    */
   public function setResourceRevisionId($resourceRevisionId)
   {
@@ -77,14 +107,18 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
     return $this->resourceRevisionId;
   }
   /**
-   * @param string
+   * Required. Type of this resource.
+   *
+   * Accepted values: RESOURCE_TYPE_UNSPECIFIED, API_PROXY, API_HUB_DEPLOYMENT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

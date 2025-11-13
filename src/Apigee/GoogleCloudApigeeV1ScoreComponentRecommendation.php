@@ -23,20 +23,29 @@ class GoogleCloudApigeeV1ScoreComponentRecommendation extends \Google\Collection
   protected $actionsType = GoogleCloudApigeeV1ScoreComponentRecommendationAction::class;
   protected $actionsDataType = 'array';
   /**
+   * Description of the recommendation.
+   *
    * @var string
    */
   public $description;
   /**
+   * Potential impact of this recommendation on the overall score. This denotes
+   * how important this recommendation is to improve the score.
+   *
    * @var int
    */
   public $impact;
   /**
+   * Title represents recommendation title.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param GoogleCloudApigeeV1ScoreComponentRecommendationAction[]
+   * Actions for the recommendation to improve the security score.
+   *
+   * @param GoogleCloudApigeeV1ScoreComponentRecommendationAction[] $actions
    */
   public function setActions($actions)
   {
@@ -50,7 +59,9 @@ class GoogleCloudApigeeV1ScoreComponentRecommendation extends \Google\Collection
     return $this->actions;
   }
   /**
-   * @param string
+   * Description of the recommendation.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -64,7 +75,10 @@ class GoogleCloudApigeeV1ScoreComponentRecommendation extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param int
+   * Potential impact of this recommendation on the overall score. This denotes
+   * how important this recommendation is to improve the score.
+   *
+   * @param int $impact
    */
   public function setImpact($impact)
   {
@@ -78,7 +92,9 @@ class GoogleCloudApigeeV1ScoreComponentRecommendation extends \Google\Collection
     return $this->impact;
   }
   /**
-   * @param string
+   * Title represents recommendation title.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

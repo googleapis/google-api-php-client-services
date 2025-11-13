@@ -20,24 +20,38 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Reference extends \Google\Model
 {
   /**
+   * Optional. A human-readable description of this reference.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The resource id of this reference. Values must match the regular
+   * expression [\w\s\-.]+.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The id of the resource to which this reference refers. Must be
+   * the id of a resource that exists in the parent environment and is of the
+   * given resource_type.
+   *
    * @var string
    */
   public $refers;
   /**
+   * The type of resource referred to by this reference. Valid values are
+   * 'KeyStore' or 'TrustStore'.
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param string
+   * Optional. A human-readable description of this reference.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -51,7 +65,10 @@ class GoogleCloudApigeeV1Reference extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The resource id of this reference. Values must match the regular
+   * expression [\w\s\-.]+.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +82,11 @@ class GoogleCloudApigeeV1Reference extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The id of the resource to which this reference refers. Must be
+   * the id of a resource that exists in the parent environment and is of the
+   * given resource_type.
+   *
+   * @param string $refers
    */
   public function setRefers($refers)
   {
@@ -79,7 +100,10 @@ class GoogleCloudApigeeV1Reference extends \Google\Model
     return $this->refers;
   }
   /**
-   * @param string
+   * The type of resource referred to by this reference. Valid values are
+   * 'KeyStore' or 'TrustStore'.
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {

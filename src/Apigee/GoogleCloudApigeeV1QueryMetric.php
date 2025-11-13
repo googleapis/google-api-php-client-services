@@ -20,28 +20,42 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1QueryMetric extends \Google\Model
 {
   /**
+   * Alias for the metric. Alias will be used to replace metric name in query
+   * results.
+   *
    * @var string
    */
   public $alias;
   /**
+   * Aggregation function: avg, min, max, or sum.
+   *
    * @var string
    */
   public $function;
   /**
+   * Required. Metric name.
+   *
    * @var string
    */
   public $name;
   /**
+   * One of `+`, `-`, `/`, `%`, `*`.
+   *
    * @var string
    */
   public $operator;
   /**
+   * Operand value should be provided when operator is set.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Alias for the metric. Alias will be used to replace metric name in query
+   * results.
+   *
+   * @param string $alias
    */
   public function setAlias($alias)
   {
@@ -55,7 +69,9 @@ class GoogleCloudApigeeV1QueryMetric extends \Google\Model
     return $this->alias;
   }
   /**
-   * @param string
+   * Aggregation function: avg, min, max, or sum.
+   *
+   * @param string $function
    */
   public function setFunction($function)
   {
@@ -69,7 +85,9 @@ class GoogleCloudApigeeV1QueryMetric extends \Google\Model
     return $this->function;
   }
   /**
-   * @param string
+   * Required. Metric name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +101,9 @@ class GoogleCloudApigeeV1QueryMetric extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * One of `+`, `-`, `/`, `%`, `*`.
+   *
+   * @param string $operator
    */
   public function setOperator($operator)
   {
@@ -97,7 +117,9 @@ class GoogleCloudApigeeV1QueryMetric extends \Google\Model
     return $this->operator;
   }
   /**
-   * @param string
+   * Operand value should be provided when operator is set.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

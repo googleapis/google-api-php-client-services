@@ -21,10 +21,17 @@ class GoogleCloudApigeeV1ReportInstanceStatusRequest extends \Google\Collection
 {
   protected $collection_key = 'resources';
   /**
+   * A unique ID for the instance which is guaranteed to be unique in case the
+   * user installs multiple hybrid runtimes with the same instance ID.
+   *
    * @var string
    */
   public $instanceUid;
   /**
+   * The time the report was generated in the runtime. Used to prevent an old
+   * status from overwriting a newer one. An instance should space out it's
+   * status reports so that clock skew does not play a factor.
+   *
    * @var string
    */
   public $reportTime;
@@ -32,7 +39,10 @@ class GoogleCloudApigeeV1ReportInstanceStatusRequest extends \Google\Collection
   protected $resourcesDataType = 'array';
 
   /**
-   * @param string
+   * A unique ID for the instance which is guaranteed to be unique in case the
+   * user installs multiple hybrid runtimes with the same instance ID.
+   *
+   * @param string $instanceUid
    */
   public function setInstanceUid($instanceUid)
   {
@@ -46,7 +56,11 @@ class GoogleCloudApigeeV1ReportInstanceStatusRequest extends \Google\Collection
     return $this->instanceUid;
   }
   /**
-   * @param string
+   * The time the report was generated in the runtime. Used to prevent an old
+   * status from overwriting a newer one. An instance should space out it's
+   * status reports so that clock skew does not play a factor.
+   *
+   * @param string $reportTime
    */
   public function setReportTime($reportTime)
   {
@@ -60,7 +74,9 @@ class GoogleCloudApigeeV1ReportInstanceStatusRequest extends \Google\Collection
     return $this->reportTime;
   }
   /**
-   * @param GoogleCloudApigeeV1ResourceStatus[]
+   * Status for config resources
+   *
+   * @param GoogleCloudApigeeV1ResourceStatus[] $resources
    */
   public function setResources($resources)
   {

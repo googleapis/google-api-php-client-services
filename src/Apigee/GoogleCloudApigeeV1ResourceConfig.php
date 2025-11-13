@@ -20,16 +20,24 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ResourceConfig extends \Google\Model
 {
   /**
+   * Location of the resource as a URI.
+   *
    * @var string
    */
   public $location;
   /**
+   * Resource name in the following format: `organizations/{org}/environments/{e
+   * nv}/resourcefiles/{type}/{file}/revisions/{rev}` Only environment-scoped
+   * resource files are supported.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Location of the resource as a URI.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -43,7 +51,11 @@ class GoogleCloudApigeeV1ResourceConfig extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Resource name in the following format: `organizations/{org}/environments/{e
+   * nv}/resourcefiles/{type}/{file}/revisions/{rev}` Only environment-scoped
+   * resource files are supported.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

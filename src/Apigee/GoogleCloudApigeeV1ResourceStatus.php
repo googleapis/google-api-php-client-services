@@ -21,22 +21,38 @@ class GoogleCloudApigeeV1ResourceStatus extends \Google\Collection
 {
   protected $collection_key = 'revisions';
   /**
+   * The resource name. Currently only two resources are supported:
+   * EnvironmentGroup - organizations/{org}/envgroups/{envgroup}
+   * EnvironmentConfig -
+   * organizations/{org}/environments/{environment}/deployedConfig
+   *
    * @var string
    */
   public $resource;
   protected $revisionsType = GoogleCloudApigeeV1RevisionStatus::class;
   protected $revisionsDataType = 'array';
   /**
+   * The total number of replicas that should have this resource.
+   *
    * @var int
    */
   public $totalReplicas;
   /**
+   * The uid of the resource. In the unexpected case that the instance has
+   * multiple uids for the same name, they should be reported under separate
+   * ResourceStatuses.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string
+   * The resource name. Currently only two resources are supported:
+   * EnvironmentGroup - organizations/{org}/envgroups/{envgroup}
+   * EnvironmentConfig -
+   * organizations/{org}/environments/{environment}/deployedConfig
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -50,7 +66,9 @@ class GoogleCloudApigeeV1ResourceStatus extends \Google\Collection
     return $this->resource;
   }
   /**
-   * @param GoogleCloudApigeeV1RevisionStatus[]
+   * Revisions of the resource currently deployed in the instance.
+   *
+   * @param GoogleCloudApigeeV1RevisionStatus[] $revisions
    */
   public function setRevisions($revisions)
   {
@@ -64,7 +82,9 @@ class GoogleCloudApigeeV1ResourceStatus extends \Google\Collection
     return $this->revisions;
   }
   /**
-   * @param int
+   * The total number of replicas that should have this resource.
+   *
+   * @param int $totalReplicas
    */
   public function setTotalReplicas($totalReplicas)
   {
@@ -78,7 +98,11 @@ class GoogleCloudApigeeV1ResourceStatus extends \Google\Collection
     return $this->totalReplicas;
   }
   /**
-   * @param string
+   * The uid of the resource. In the unexpected case that the instance has
+   * multiple uids for the same name, they should be reported under separate
+   * ResourceStatuses.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

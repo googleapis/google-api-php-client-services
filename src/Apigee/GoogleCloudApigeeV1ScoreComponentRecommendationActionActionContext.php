@@ -20,12 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ScoreComponentRecommendationActionActionContext extends \Google\Model
 {
   /**
+   * Documentation link for the action.
+   *
    * @var string
    */
   public $documentationLink;
 
   /**
-   * @param string
+   * Documentation link for the action.
+   *
+   * @param string $documentationLink
    */
   public function setDocumentationLink($documentationLink)
   {

@@ -23,6 +23,9 @@ class GoogleCloudApigeeV1Schema extends \Google\Collection
   protected $dimensionsType = GoogleCloudApigeeV1SchemaSchemaElement::class;
   protected $dimensionsDataType = 'array';
   /**
+   * Additional metadata associated with schema. This is a legacy field and
+   * usually consists of an empty array of strings.
+   *
    * @var string[]
    */
   public $meta;
@@ -30,7 +33,9 @@ class GoogleCloudApigeeV1Schema extends \Google\Collection
   protected $metricsDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1SchemaSchemaElement[]
+   * List of schema fields grouped as dimensions.
+   *
+   * @param GoogleCloudApigeeV1SchemaSchemaElement[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -44,7 +49,10 @@ class GoogleCloudApigeeV1Schema extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param string[]
+   * Additional metadata associated with schema. This is a legacy field and
+   * usually consists of an empty array of strings.
+   *
+   * @param string[] $meta
    */
   public function setMeta($meta)
   {
@@ -58,7 +66,10 @@ class GoogleCloudApigeeV1Schema extends \Google\Collection
     return $this->meta;
   }
   /**
-   * @param GoogleCloudApigeeV1SchemaSchemaElement[]
+   * List of schema fields grouped as dimensions that can be used with an
+   * aggregate function such as `sum`, `avg`, `min`, and `max`.
+   *
+   * @param GoogleCloudApigeeV1SchemaSchemaElement[] $metrics
    */
   public function setMetrics($metrics)
   {
