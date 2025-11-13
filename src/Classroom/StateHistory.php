@@ -20,20 +20,55 @@ namespace Google\Service\Classroom;
 class StateHistory extends \Google\Model
 {
   /**
+   * No state specified. This should never be returned.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Submission has been created.
+   */
+  public const STATE_CREATED = 'CREATED';
+  /**
+   * The student has turned in an assigned document, which may or may not be a
+   * template.
+   */
+  public const STATE_TURNED_IN = 'TURNED_IN';
+  /**
+   * The teacher has returned the assigned document to the student.
+   */
+  public const STATE_RETURNED = 'RETURNED';
+  /**
+   * The student turned in the assigned document, and then chose to "unsubmit"
+   * the assignment, giving the student control again as the owner.
+   */
+  public const STATE_RECLAIMED_BY_STUDENT = 'RECLAIMED_BY_STUDENT';
+  /**
+   * The student edited their submission after turning it in. Currently, only
+   * used by Questions, when the student edits their answer.
+   */
+  public const STATE_STUDENT_EDITED_AFTER_TURN_IN = 'STUDENT_EDITED_AFTER_TURN_IN';
+  /**
+   * The teacher or student who made the change.
+   *
    * @var string
    */
   public $actorUserId;
   /**
+   * The workflow pipeline stage.
+   *
    * @var string
    */
   public $state;
   /**
+   * When the submission entered this state.
+   *
    * @var string
    */
   public $stateTimestamp;
 
   /**
-   * @param string
+   * The teacher or student who made the change.
+   *
+   * @param string $actorUserId
    */
   public function setActorUserId($actorUserId)
   {
@@ -47,21 +82,28 @@ class StateHistory extends \Google\Model
     return $this->actorUserId;
   }
   /**
-   * @param string
+   * The workflow pipeline stage.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATED, TURNED_IN, RETURNED,
+   * RECLAIMED_BY_STUDENT, STUDENT_EDITED_AFTER_TURN_IN
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * When the submission entered this state.
+   *
+   * @param string $stateTimestamp
    */
   public function setStateTimestamp($stateTimestamp)
   {

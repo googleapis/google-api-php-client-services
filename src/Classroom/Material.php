@@ -33,7 +33,9 @@ class Material extends \Google\Model
   protected $youtubeVideoDataType = '';
 
   /**
-   * @param SharedDriveFile
+   * Google Drive file material.
+   *
+   * @param SharedDriveFile $driveFile
    */
   public function setDriveFile(SharedDriveFile $driveFile)
   {
@@ -47,7 +49,9 @@ class Material extends \Google\Model
     return $this->driveFile;
   }
   /**
-   * @param Form
+   * Google Forms material. Read-only.
+   *
+   * @param Form $form
    */
   public function setForm(Form $form)
   {
@@ -61,7 +65,9 @@ class Material extends \Google\Model
     return $this->form;
   }
   /**
-   * @param GeminiGem
+   * Gemini Gem material. Read-only.
+   *
+   * @param GeminiGem $gem
    */
   public function setGem(GeminiGem $gem)
   {
@@ -75,7 +81,10 @@ class Material extends \Google\Model
     return $this->gem;
   }
   /**
-   * @param Link
+   * Link material. On creation, this is upgraded to a more appropriate type if
+   * possible, and this is reflected in the response.
+   *
+   * @param Link $link
    */
   public function setLink(Link $link)
   {
@@ -89,7 +98,9 @@ class Material extends \Google\Model
     return $this->link;
   }
   /**
-   * @param NotebookLmNotebook
+   * NotebookLM Notebook material. Read-only.
+   *
+   * @param NotebookLmNotebook $notebook
    */
   public function setNotebook(NotebookLmNotebook $notebook)
   {
@@ -103,7 +114,9 @@ class Material extends \Google\Model
     return $this->notebook;
   }
   /**
-   * @param YouTubeVideo
+   * YouTube video material.
+   *
+   * @param YouTubeVideo $youtubeVideo
    */
   public function setYoutubeVideo(YouTubeVideo $youtubeVideo)
   {

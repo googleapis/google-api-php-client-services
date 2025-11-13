@@ -19,80 +19,179 @@ namespace Google\Service\Classroom;
 
 class Course extends \Google\Collection
 {
+  /**
+   * No course state. No returned Course message will use this value.
+   */
+  public const COURSE_STATE_COURSE_STATE_UNSPECIFIED = 'COURSE_STATE_UNSPECIFIED';
+  /**
+   * The course is active.
+   */
+  public const COURSE_STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The course has been archived. You cannot modify it except to change it to a
+   * different state.
+   */
+  public const COURSE_STATE_ARCHIVED = 'ARCHIVED';
+  /**
+   * The course has been created, but not yet activated. It is accessible by the
+   * primary teacher and domain administrators, who may modify it or change it
+   * to the `ACTIVE` or `DECLINED` states. A course may only be changed to
+   * `PROVISIONED` if it is in the `DECLINED` state.
+   */
+  public const COURSE_STATE_PROVISIONED = 'PROVISIONED';
+  /**
+   * The course has been created, but declined. It is accessible by the course
+   * owner and domain administrators, though it will not be displayed in the web
+   * UI. You cannot modify the course except to change it to the `PROVISIONED`
+   * state. A course may only be changed to `DECLINED` if it is in the
+   * `PROVISIONED` state.
+   */
+  public const COURSE_STATE_DECLINED = 'DECLINED';
+  /**
+   * The course has been suspended. You cannot modify the course, and only the
+   * user identified by the `owner_id` can view the course. A course may be
+   * placed in this state if it potentially violates the Terms of Service.
+   */
+  public const COURSE_STATE_SUSPENDED = 'SUSPENDED';
   protected $collection_key = 'courseMaterialSets';
   /**
+   * Absolute link to this course in the Classroom web UI. Read-only.
+   *
    * @var string
    */
   public $alternateLink;
   /**
+   * The Calendar ID for a calendar that all course members can see, to which
+   * Classroom adds events for course work and announcements in the course. The
+   * Calendar for a course is created asynchronously when the course is set to
+   * `CourseState.ACTIVE` for the first time (at creation time or when it is
+   * updated to `ACTIVE` through the UI or the API). The Calendar ID will not be
+   * populated until the creation process is completed. Read-only.
+   *
    * @var string
    */
   public $calendarId;
   /**
+   * The email address of a Google group containing all members of the course.
+   * This group does not accept email and can only be used for permissions.
+   * Read-only.
+   *
    * @var string
    */
   public $courseGroupEmail;
   protected $courseMaterialSetsType = CourseMaterialSet::class;
   protected $courseMaterialSetsDataType = 'array';
   /**
+   * State of the course. If unspecified, the default state is `PROVISIONED`.
+   *
    * @var string
    */
   public $courseState;
   /**
+   * Creation time of the course. Specifying this field in a course update mask
+   * results in an error. Read-only.
+   *
    * @var string
    */
   public $creationTime;
   /**
+   * Optional description. For example, "We'll be learning about the structure
+   * of living creatures from a combination of textbooks, guest lectures, and
+   * lab work. Expect to be excited!" If set, this field must be a valid UTF-8
+   * string and no longer than 30,000 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional heading for the description. For example, "Welcome to 10th Grade
+   * Biology." If set, this field must be a valid UTF-8 string and no longer
+   * than 3600 characters.
+   *
    * @var string
    */
   public $descriptionHeading;
   /**
+   * Enrollment code to use when joining this course. Specifying this field in a
+   * course update mask results in an error. Read-only.
+   *
    * @var string
    */
   public $enrollmentCode;
   protected $gradebookSettingsType = GradebookSettings::class;
   protected $gradebookSettingsDataType = '';
   /**
+   * Whether or not guardian notifications are enabled for this course. Read-
+   * only.
+   *
    * @var bool
    */
   public $guardiansEnabled;
   /**
+   * Identifier for this course assigned by Classroom. When creating a course,
+   * you may optionally set this identifier to an alias string in the request to
+   * create a corresponding alias. The `id` is still assigned by Classroom and
+   * cannot be updated after the course is created. Specifying this field in a
+   * course update mask results in an error.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of the course. For example, "10th Grade Biology". The name is
+   * required. It must be between 1 and 750 characters and a valid UTF-8 string.
+   *
    * @var string
    */
   public $name;
   /**
+   * The identifier of the owner of a course. When specified as a parameter of a
+   * create course request, this field is required. The identifier can be one of
+   * the following: * the numeric identifier for the user * the email address of
+   * the user * the string literal `"me"`, indicating the requesting user This
+   * must be set in a create request. Admins can also specify this field in a
+   * patch course request to transfer ownership. In other contexts, it is read-
+   * only.
+   *
    * @var string
    */
   public $ownerId;
   /**
+   * Optional room location. For example, "301". If set, this field must be a
+   * valid UTF-8 string and no longer than 650 characters.
+   *
    * @var string
    */
   public $room;
   /**
+   * Section of the course. For example, "Period 2". If set, this field must be
+   * a valid UTF-8 string and no longer than 2800 characters.
+   *
    * @var string
    */
   public $section;
   protected $teacherFolderType = DriveFolder::class;
   protected $teacherFolderDataType = '';
   /**
+   * The email address of a Google group containing all teachers of the course.
+   * This group does not accept email and can only be used for permissions.
+   * Read-only.
+   *
    * @var string
    */
   public $teacherGroupEmail;
   /**
+   * Time of the most recent update to this course. Specifying this field in a
+   * course update mask results in an error. Read-only.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Absolute link to this course in the Classroom web UI. Read-only.
+   *
+   * @param string $alternateLink
    */
   public function setAlternateLink($alternateLink)
   {
@@ -106,7 +205,14 @@ class Course extends \Google\Collection
     return $this->alternateLink;
   }
   /**
-   * @param string
+   * The Calendar ID for a calendar that all course members can see, to which
+   * Classroom adds events for course work and announcements in the course. The
+   * Calendar for a course is created asynchronously when the course is set to
+   * `CourseState.ACTIVE` for the first time (at creation time or when it is
+   * updated to `ACTIVE` through the UI or the API). The Calendar ID will not be
+   * populated until the creation process is completed. Read-only.
+   *
+   * @param string $calendarId
    */
   public function setCalendarId($calendarId)
   {
@@ -120,7 +226,11 @@ class Course extends \Google\Collection
     return $this->calendarId;
   }
   /**
-   * @param string
+   * The email address of a Google group containing all members of the course.
+   * This group does not accept email and can only be used for permissions.
+   * Read-only.
+   *
+   * @param string $courseGroupEmail
    */
   public function setCourseGroupEmail($courseGroupEmail)
   {
@@ -134,13 +244,18 @@ class Course extends \Google\Collection
     return $this->courseGroupEmail;
   }
   /**
-   * @param CourseMaterialSet[]
+   * Sets of materials that appear on the "about" page of this course. Read-
+   * only.
+   *
+   * @deprecated
+   * @param CourseMaterialSet[] $courseMaterialSets
    */
   public function setCourseMaterialSets($courseMaterialSets)
   {
     $this->courseMaterialSets = $courseMaterialSets;
   }
   /**
+   * @deprecated
    * @return CourseMaterialSet[]
    */
   public function getCourseMaterialSets()
@@ -148,21 +263,29 @@ class Course extends \Google\Collection
     return $this->courseMaterialSets;
   }
   /**
-   * @param string
+   * State of the course. If unspecified, the default state is `PROVISIONED`.
+   *
+   * Accepted values: COURSE_STATE_UNSPECIFIED, ACTIVE, ARCHIVED, PROVISIONED,
+   * DECLINED, SUSPENDED
+   *
+   * @param self::COURSE_STATE_* $courseState
    */
   public function setCourseState($courseState)
   {
     $this->courseState = $courseState;
   }
   /**
-   * @return string
+   * @return self::COURSE_STATE_*
    */
   public function getCourseState()
   {
     return $this->courseState;
   }
   /**
-   * @param string
+   * Creation time of the course. Specifying this field in a course update mask
+   * results in an error. Read-only.
+   *
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
@@ -176,7 +299,12 @@ class Course extends \Google\Collection
     return $this->creationTime;
   }
   /**
-   * @param string
+   * Optional description. For example, "We'll be learning about the structure
+   * of living creatures from a combination of textbooks, guest lectures, and
+   * lab work. Expect to be excited!" If set, this field must be a valid UTF-8
+   * string and no longer than 30,000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -190,7 +318,11 @@ class Course extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Optional heading for the description. For example, "Welcome to 10th Grade
+   * Biology." If set, this field must be a valid UTF-8 string and no longer
+   * than 3600 characters.
+   *
+   * @param string $descriptionHeading
    */
   public function setDescriptionHeading($descriptionHeading)
   {
@@ -204,7 +336,10 @@ class Course extends \Google\Collection
     return $this->descriptionHeading;
   }
   /**
-   * @param string
+   * Enrollment code to use when joining this course. Specifying this field in a
+   * course update mask results in an error. Read-only.
+   *
+   * @param string $enrollmentCode
    */
   public function setEnrollmentCode($enrollmentCode)
   {
@@ -218,7 +353,10 @@ class Course extends \Google\Collection
     return $this->enrollmentCode;
   }
   /**
-   * @param GradebookSettings
+   * The gradebook settings that specify how a student's overall grade for the
+   * course will be calculated and who it will be displayed to. Read-only.
+   *
+   * @param GradebookSettings $gradebookSettings
    */
   public function setGradebookSettings(GradebookSettings $gradebookSettings)
   {
@@ -232,7 +370,10 @@ class Course extends \Google\Collection
     return $this->gradebookSettings;
   }
   /**
-   * @param bool
+   * Whether or not guardian notifications are enabled for this course. Read-
+   * only.
+   *
+   * @param bool $guardiansEnabled
    */
   public function setGuardiansEnabled($guardiansEnabled)
   {
@@ -246,7 +387,13 @@ class Course extends \Google\Collection
     return $this->guardiansEnabled;
   }
   /**
-   * @param string
+   * Identifier for this course assigned by Classroom. When creating a course,
+   * you may optionally set this identifier to an alias string in the request to
+   * create a corresponding alias. The `id` is still assigned by Classroom and
+   * cannot be updated after the course is created. Specifying this field in a
+   * course update mask results in an error.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -260,7 +407,10 @@ class Course extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Name of the course. For example, "10th Grade Biology". The name is
+   * required. It must be between 1 and 750 characters and a valid UTF-8 string.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -274,7 +424,15 @@ class Course extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The identifier of the owner of a course. When specified as a parameter of a
+   * create course request, this field is required. The identifier can be one of
+   * the following: * the numeric identifier for the user * the email address of
+   * the user * the string literal `"me"`, indicating the requesting user This
+   * must be set in a create request. Admins can also specify this field in a
+   * patch course request to transfer ownership. In other contexts, it is read-
+   * only.
+   *
+   * @param string $ownerId
    */
   public function setOwnerId($ownerId)
   {
@@ -288,7 +446,10 @@ class Course extends \Google\Collection
     return $this->ownerId;
   }
   /**
-   * @param string
+   * Optional room location. For example, "301". If set, this field must be a
+   * valid UTF-8 string and no longer than 650 characters.
+   *
+   * @param string $room
    */
   public function setRoom($room)
   {
@@ -302,7 +463,10 @@ class Course extends \Google\Collection
     return $this->room;
   }
   /**
-   * @param string
+   * Section of the course. For example, "Period 2". If set, this field must be
+   * a valid UTF-8 string and no longer than 2800 characters.
+   *
+   * @param string $section
    */
   public function setSection($section)
   {
@@ -316,7 +480,11 @@ class Course extends \Google\Collection
     return $this->section;
   }
   /**
-   * @param DriveFolder
+   * Information about a Drive Folder that is shared with all teachers of the
+   * course. This field will only be set for teachers of the course and domain
+   * administrators. Read-only.
+   *
+   * @param DriveFolder $teacherFolder
    */
   public function setTeacherFolder(DriveFolder $teacherFolder)
   {
@@ -330,7 +498,11 @@ class Course extends \Google\Collection
     return $this->teacherFolder;
   }
   /**
-   * @param string
+   * The email address of a Google group containing all teachers of the course.
+   * This group does not accept email and can only be used for permissions.
+   * Read-only.
+   *
+   * @param string $teacherGroupEmail
    */
   public function setTeacherGroupEmail($teacherGroupEmail)
   {
@@ -344,7 +516,10 @@ class Course extends \Google\Collection
     return $this->teacherGroupEmail;
   }
   /**
-   * @param string
+   * Time of the most recent update to this course. Specifying this field in a
+   * course update mask results in an error. Read-only.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

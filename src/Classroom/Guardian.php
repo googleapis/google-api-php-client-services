@@ -20,22 +20,31 @@ namespace Google\Service\Classroom;
 class Guardian extends \Google\Model
 {
   /**
+   * Identifier for the guardian.
+   *
    * @var string
    */
   public $guardianId;
   protected $guardianProfileType = UserProfile::class;
   protected $guardianProfileDataType = '';
   /**
+   * The email address to which the initial guardian invitation was sent. This
+   * field is only visible to domain administrators.
+   *
    * @var string
    */
   public $invitedEmailAddress;
   /**
+   * Identifier for the student to whom the guardian relationship applies.
+   *
    * @var string
    */
   public $studentId;
 
   /**
-   * @param string
+   * Identifier for the guardian.
+   *
+   * @param string $guardianId
    */
   public function setGuardianId($guardianId)
   {
@@ -49,7 +58,9 @@ class Guardian extends \Google\Model
     return $this->guardianId;
   }
   /**
-   * @param UserProfile
+   * User profile for the guardian.
+   *
+   * @param UserProfile $guardianProfile
    */
   public function setGuardianProfile(UserProfile $guardianProfile)
   {
@@ -63,7 +74,10 @@ class Guardian extends \Google\Model
     return $this->guardianProfile;
   }
   /**
-   * @param string
+   * The email address to which the initial guardian invitation was sent. This
+   * field is only visible to domain administrators.
+   *
+   * @param string $invitedEmailAddress
    */
   public function setInvitedEmailAddress($invitedEmailAddress)
   {
@@ -77,7 +91,9 @@ class Guardian extends \Google\Model
     return $this->invitedEmailAddress;
   }
   /**
-   * @param string
+   * Identifier for the student to whom the guardian relationship applies.
+   *
+   * @param string $studentId
    */
   public function setStudentId($studentId)
   {

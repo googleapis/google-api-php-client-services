@@ -22,18 +22,24 @@ class GradingPeriod extends \Google\Model
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
   /**
+   * Output only. System generated grading period ID. Read-only.
+   *
    * @var string
    */
   public $id;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
   /**
+   * Required. Title of the grading period. For example, “Semester 1”.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param Date
+   * Required. End date, in UTC, of the grading period. Inclusive.
+   *
+   * @param Date $endDate
    */
   public function setEndDate(Date $endDate)
   {
@@ -47,7 +53,9 @@ class GradingPeriod extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param string
+   * Output only. System generated grading period ID. Read-only.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -61,7 +69,9 @@ class GradingPeriod extends \Google\Model
     return $this->id;
   }
   /**
-   * @param Date
+   * Required. Start date, in UTC, of the grading period. Inclusive.
+   *
+   * @param Date $startDate
    */
   public function setStartDate(Date $startDate)
   {
@@ -75,7 +85,9 @@ class GradingPeriod extends \Google\Model
     return $this->startDate;
   }
   /**
-   * @param string
+   * Required. Title of the grading period. For example, “Semester 1”.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

@@ -25,7 +25,9 @@ class SubmissionHistory extends \Google\Model
   protected $stateHistoryDataType = '';
 
   /**
-   * @param GradeHistory
+   * The grade history information of the submission, if present.
+   *
+   * @param GradeHistory $gradeHistory
    */
   public function setGradeHistory(GradeHistory $gradeHistory)
   {
@@ -39,7 +41,9 @@ class SubmissionHistory extends \Google\Model
     return $this->gradeHistory;
   }
   /**
-   * @param StateHistory
+   * The state history information of the submission, if present.
+   *
+   * @param StateHistory $stateHistory
    */
   public function setStateHistory(StateHistory $stateHistory)
   {

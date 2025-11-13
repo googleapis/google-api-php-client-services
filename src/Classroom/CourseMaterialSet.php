@@ -23,12 +23,16 @@ class CourseMaterialSet extends \Google\Collection
   protected $materialsType = CourseMaterial::class;
   protected $materialsDataType = 'array';
   /**
+   * Title for this set.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param CourseMaterial[]
+   * Materials attached to this set.
+   *
+   * @param CourseMaterial[] $materials
    */
   public function setMaterials($materials)
   {
@@ -42,7 +46,9 @@ class CourseMaterialSet extends \Google\Collection
     return $this->materials;
   }
   /**
-   * @param string
+   * Title for this set.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

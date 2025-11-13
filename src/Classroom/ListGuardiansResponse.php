@@ -23,12 +23,18 @@ class ListGuardiansResponse extends \Google\Collection
   protected $guardiansType = Guardian::class;
   protected $guardiansDataType = 'array';
   /**
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Guardian[]
+   * Guardians on this page of results that met the criteria specified in the
+   * request.
+   *
+   * @param Guardian[] $guardians
    */
   public function setGuardians($guardians)
   {
@@ -42,7 +48,10 @@ class ListGuardiansResponse extends \Google\Collection
     return $this->guardians;
   }
   /**
-   * @param string
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

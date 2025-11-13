@@ -20,17 +20,31 @@ namespace Google\Service\Classroom;
 class RubricGrade extends \Google\Model
 {
   /**
+   * Optional. Criterion ID.
+   *
    * @var string
    */
   public $criterionId;
   /**
+   * Optional. Optional level ID of the selected level. If empty, no level was
+   * selected.
+   *
    * @var string
    */
   public $levelId;
+  /**
+   * Optional. Optional points assigned for this criterion, typically based on
+   * the level. Levels might or might not have points. If unset, no points were
+   * set for this criterion.
+   *
+   * @var 
+   */
   public $points;
 
   /**
-   * @param string
+   * Optional. Criterion ID.
+   *
+   * @param string $criterionId
    */
   public function setCriterionId($criterionId)
   {
@@ -44,7 +58,10 @@ class RubricGrade extends \Google\Model
     return $this->criterionId;
   }
   /**
-   * @param string
+   * Optional. Optional level ID of the selected level. If empty, no level was
+   * selected.
+   *
+   * @param string $levelId
    */
   public function setLevelId($levelId)
   {

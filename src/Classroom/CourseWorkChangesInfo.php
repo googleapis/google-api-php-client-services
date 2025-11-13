@@ -20,12 +20,16 @@ namespace Google\Service\Classroom;
 class CourseWorkChangesInfo extends \Google\Model
 {
   /**
+   * The `course_id` of the course to subscribe to work changes for.
+   *
    * @var string
    */
   public $courseId;
 
   /**
-   * @param string
+   * The `course_id` of the course to subscribe to work changes for.
+   *
+   * @param string $courseId
    */
   public function setCourseId($courseId)
   {

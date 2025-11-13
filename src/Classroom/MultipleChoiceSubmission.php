@@ -20,12 +20,16 @@ namespace Google\Service\Classroom;
 class MultipleChoiceSubmission extends \Google\Model
 {
   /**
+   * Student's select choice.
+   *
    * @var string
    */
   public $answer;
 
   /**
-   * @param string
+   * Student's select choice.
+   *
+   * @param string $answer
    */
   public function setAnswer($answer)
   {

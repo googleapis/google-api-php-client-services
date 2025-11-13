@@ -20,12 +20,20 @@ namespace Google\Service\Classroom;
 class StudentContext extends \Google\Model
 {
   /**
+   * Requesting user's submission id to be used for grade passback and to
+   * identify the student when showing student work to the teacher. This is set
+   * exactly when `supportsStudentWork` is `true`.
+   *
    * @var string
    */
   public $submissionId;
 
   /**
-   * @param string
+   * Requesting user's submission id to be used for grade passback and to
+   * identify the student when showing student work to the teacher. This is set
+   * exactly when `supportsStudentWork` is `true`.
+   *
+   * @param string $submissionId
    */
   public function setSubmissionId($submissionId)
   {

@@ -21,12 +21,16 @@ class MultipleChoiceQuestion extends \Google\Collection
 {
   protected $collection_key = 'choices';
   /**
+   * Possible choices.
+   *
    * @var string[]
    */
   public $choices;
 
   /**
-   * @param string[]
+   * Possible choices.
+   *
+   * @param string[] $choices
    */
   public function setChoices($choices)
   {

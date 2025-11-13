@@ -21,16 +21,25 @@ class ModifyIndividualStudentsOptions extends \Google\Collection
 {
   protected $collection_key = 'removeStudentIds';
   /**
+   * IDs of students to be added as having access to this
+   * coursework/announcement.
+   *
    * @var string[]
    */
   public $addStudentIds;
   /**
+   * IDs of students to be removed from having access to this
+   * coursework/announcement.
+   *
    * @var string[]
    */
   public $removeStudentIds;
 
   /**
-   * @param string[]
+   * IDs of students to be added as having access to this
+   * coursework/announcement.
+   *
+   * @param string[] $addStudentIds
    */
   public function setAddStudentIds($addStudentIds)
   {
@@ -44,7 +53,10 @@ class ModifyIndividualStudentsOptions extends \Google\Collection
     return $this->addStudentIds;
   }
   /**
-   * @param string[]
+   * IDs of students to be removed from having access to this
+   * coursework/announcement.
+   *
+   * @param string[] $removeStudentIds
    */
   public function setRemoveStudentIds($removeStudentIds)
   {

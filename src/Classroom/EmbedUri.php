@@ -20,12 +20,18 @@ namespace Google\Service\Classroom;
 class EmbedUri extends \Google\Model
 {
   /**
+   * Required. URI to be iframed after being populated with query parameters.
+   * This must be a valid UTF-8 string containing between 1 and 1800 characters.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Required. URI to be iframed after being populated with query parameters.
+   * This must be a valid UTF-8 string containing between 1 and 1800 characters.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

@@ -21,6 +21,11 @@ class GradingPeriodSettings extends \Google\Collection
 {
   protected $collection_key = 'gradingPeriods';
   /**
+   * Supports toggling the application of grading periods on existing stream
+   * items. Once set, this value is persisted meaning that it does not need to
+   * be set in every request to update `GradingPeriodSettings`. If not
+   * previously set, the default is False.
+   *
    * @var bool
    */
   public $applyToExistingCoursework;
@@ -28,7 +33,12 @@ class GradingPeriodSettings extends \Google\Collection
   protected $gradingPeriodsDataType = 'array';
 
   /**
-   * @param bool
+   * Supports toggling the application of grading periods on existing stream
+   * items. Once set, this value is persisted meaning that it does not need to
+   * be set in every request to update `GradingPeriodSettings`. If not
+   * previously set, the default is False.
+   *
+   * @param bool $applyToExistingCoursework
    */
   public function setApplyToExistingCoursework($applyToExistingCoursework)
   {
@@ -42,7 +52,11 @@ class GradingPeriodSettings extends \Google\Collection
     return $this->applyToExistingCoursework;
   }
   /**
-   * @param GradingPeriod[]
+   * The list of grading periods in a specific course. Grading periods must not
+   * have overlapping date ranges and must be listed in chronological order.
+   * Each grading period must have a unique title within a course.
+   *
+   * @param GradingPeriod[] $gradingPeriods
    */
   public function setGradingPeriods($gradingPeriods)
   {

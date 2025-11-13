@@ -20,12 +20,16 @@ namespace Google\Service\Classroom;
 class ShortAnswerSubmission extends \Google\Model
 {
   /**
+   * Student response to a short-answer question.
+   *
    * @var string
    */
   public $answer;
 
   /**
-   * @param string
+   * Student response to a short-answer question.
+   *
+   * @param string $answer
    */
   public function setAnswer($answer)
   {

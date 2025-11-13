@@ -20,21 +20,36 @@ namespace Google\Service\Classroom;
 class Level extends \Google\Model
 {
   /**
+   * The description of the level.
+   *
    * @var string
    */
   public $description;
   /**
+   * The level ID. On creation, an ID is assigned.
+   *
    * @var string
    */
   public $id;
+  /**
+   * Optional points associated with this level. If set, all levels within the
+   * rubric must specify points and the value must be distinct across all levels
+   * within a single criterion. 0 is distinct from no points.
+   *
+   * @var 
+   */
   public $points;
   /**
+   * The title of the level. If the level has no points set, title must be set.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The description of the level.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -48,7 +63,9 @@ class Level extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The level ID. On creation, an ID is assigned.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -70,7 +87,9 @@ class Level extends \Google\Model
     return $this->points;
   }
   /**
-   * @param string
+   * The title of the level. If the level has no points set, title must be set.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

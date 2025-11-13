@@ -21,6 +21,9 @@ class ListStudentsResponse extends \Google\Collection
 {
   protected $collection_key = 'students';
   /**
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListStudentsResponse extends \Google\Collection
   protected $studentsDataType = 'array';
 
   /**
-   * @param string
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListStudentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Student[]
+   * Students who match the list request.
+   *
+   * @param Student[] $students
    */
   public function setStudents($students)
   {

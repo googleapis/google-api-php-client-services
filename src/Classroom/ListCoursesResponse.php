@@ -23,12 +23,17 @@ class ListCoursesResponse extends \Google\Collection
   protected $coursesType = Course::class;
   protected $coursesDataType = 'array';
   /**
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Course[]
+   * Courses that match the list request.
+   *
+   * @param Course[] $courses
    */
   public function setCourses($courses)
   {
@@ -42,7 +47,10 @@ class ListCoursesResponse extends \Google\Collection
     return $this->courses;
   }
   /**
-   * @param string
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

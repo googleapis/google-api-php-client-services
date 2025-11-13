@@ -23,12 +23,17 @@ class ListAnnouncementsResponse extends \Google\Collection
   protected $announcementsType = Announcement::class;
   protected $announcementsDataType = 'array';
   /**
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Announcement[]
+   * Announcement items that match the request.
+   *
+   * @param Announcement[] $announcements
    */
   public function setAnnouncements($announcements)
   {
@@ -42,7 +47,10 @@ class ListAnnouncementsResponse extends \Google\Collection
     return $this->announcements;
   }
   /**
-   * @param string
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

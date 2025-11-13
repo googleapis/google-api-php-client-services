@@ -23,12 +23,17 @@ class ListCourseAliasesResponse extends \Google\Collection
   protected $aliasesType = CourseAlias::class;
   protected $aliasesDataType = 'array';
   /**
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CourseAlias[]
+   * The course aliases.
+   *
+   * @param CourseAlias[] $aliases
    */
   public function setAliases($aliases)
   {
@@ -42,7 +47,10 @@ class ListCourseAliasesResponse extends \Google\Collection
     return $this->aliases;
   }
   /**
-   * @param string
+   * Token identifying the next page of results to return. If empty, no further
+   * results are available.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

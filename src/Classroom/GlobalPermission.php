@@ -20,19 +20,33 @@ namespace Google\Service\Classroom;
 class GlobalPermission extends \Google\Model
 {
   /**
+   * No permission is specified. This is not returned and is not a valid value.
+   */
+  public const PERMISSION_PERMISSION_UNSPECIFIED = 'PERMISSION_UNSPECIFIED';
+  /**
+   * User is permitted to create a course.
+   */
+  public const PERMISSION_CREATE_COURSE = 'CREATE_COURSE';
+  /**
+   * Permission value.
+   *
    * @var string
    */
   public $permission;
 
   /**
-   * @param string
+   * Permission value.
+   *
+   * Accepted values: PERMISSION_UNSPECIFIED, CREATE_COURSE
+   *
+   * @param self::PERMISSION_* $permission
    */
   public function setPermission($permission)
   {
     $this->permission = $permission;
   }
   /**
-   * @return string
+   * @return self::PERMISSION_*
    */
   public function getPermission()
   {

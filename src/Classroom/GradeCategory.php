@@ -20,24 +20,39 @@ namespace Google\Service\Classroom;
 class GradeCategory extends \Google\Model
 {
   /**
+   * Default value of denominator. Only applicable when grade calculation type
+   * is TOTAL_POINTS.
+   *
    * @var int
    */
   public $defaultGradeDenominator;
   /**
+   * ID of the grade category.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of the grade category.
+   *
    * @var string
    */
   public $name;
   /**
+   * The weight of the category average as part of overall average. A weight of
+   * 12.34% is represented as 123400 (100% is 1,000,000). The last two digits
+   * should always be zero since we use two decimal precision. Only applicable
+   * when grade calculation type is WEIGHTED_CATEGORIES.
+   *
    * @var int
    */
   public $weight;
 
   /**
-   * @param int
+   * Default value of denominator. Only applicable when grade calculation type
+   * is TOTAL_POINTS.
+   *
+   * @param int $defaultGradeDenominator
    */
   public function setDefaultGradeDenominator($defaultGradeDenominator)
   {
@@ -51,7 +66,9 @@ class GradeCategory extends \Google\Model
     return $this->defaultGradeDenominator;
   }
   /**
-   * @param string
+   * ID of the grade category.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -65,7 +82,9 @@ class GradeCategory extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Name of the grade category.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +98,12 @@ class GradeCategory extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * The weight of the category average as part of overall average. A weight of
+   * 12.34% is represented as 123400 (100% is 1,000,000). The last two digits
+   * should always be zero since we use two decimal precision. Only applicable
+   * when grade calculation type is WEIGHTED_CATEGORIES.
+   *
+   * @param int $weight
    */
   public function setWeight($weight)
   {

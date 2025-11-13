@@ -20,12 +20,22 @@ namespace Google\Service\Classroom;
 class CourseAlias extends \Google\Model
 {
   /**
+   * Alias string. The format of the string indicates the desired alias scoping.
+   * * `d:` indicates a domain-scoped alias. Example: `d:math_101` * `p:`
+   * indicates a project-scoped alias. Example: `p:abc123` This field has a
+   * maximum length of 256 characters.
+   *
    * @var string
    */
   public $alias;
 
   /**
-   * @param string
+   * Alias string. The format of the string indicates the desired alias scoping.
+   * * `d:` indicates a domain-scoped alias. Example: `d:math_101` * `p:`
+   * indicates a project-scoped alias. Example: `p:abc123` This field has a
+   * maximum length of 256 characters.
+   *
+   * @param string $alias
    */
   public function setAlias($alias)
   {

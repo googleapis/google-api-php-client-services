@@ -20,12 +20,16 @@ namespace Google\Service\Classroom;
 class CourseRosterChangesInfo extends \Google\Model
 {
   /**
+   * The `course_id` of the course to subscribe to roster changes for.
+   *
    * @var string
    */
   public $courseId;
 
   /**
-   * @param string
+   * The `course_id` of the course to subscribe to roster changes for.
+   *
+   * @param string $courseId
    */
   public function setCourseId($courseId)
   {

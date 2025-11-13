@@ -24,7 +24,10 @@ class ModifyAttachmentsRequest extends \Google\Collection
   protected $addAttachmentsDataType = 'array';
 
   /**
-   * @param Attachment[]
+   * Attachments to add. A student submission may not have more than 20
+   * attachments. Form attachments are not supported.
+   *
+   * @param Attachment[] $addAttachments
    */
   public function setAddAttachments($addAttachments)
   {

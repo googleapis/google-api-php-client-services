@@ -21,22 +21,30 @@ class Criterion extends \Google\Collection
 {
   protected $collection_key = 'levels';
   /**
+   * The description of the criterion.
+   *
    * @var string
    */
   public $description;
   /**
+   * The criterion ID. On creation, an ID is assigned.
+   *
    * @var string
    */
   public $id;
   protected $levelsType = Level::class;
   protected $levelsDataType = 'array';
   /**
+   * The title of the criterion.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The description of the criterion.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -50,7 +58,9 @@ class Criterion extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The criterion ID. On creation, an ID is assigned.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -64,7 +74,9 @@ class Criterion extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param Level[]
+   * The list of levels within this criterion.
+   *
+   * @param Level[] $levels
    */
   public function setLevels($levels)
   {
@@ -78,7 +90,9 @@ class Criterion extends \Google\Collection
     return $this->levels;
   }
   /**
-   * @param string
+   * The title of the criterion.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

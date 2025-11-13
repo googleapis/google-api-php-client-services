@@ -20,20 +20,29 @@ namespace Google\Service\Classroom;
 class Name extends \Google\Model
 {
   /**
+   * The user's last name. Read-only.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * The user's full name formed by concatenating the first and last name
+   * values. Read-only.
+   *
    * @var string
    */
   public $fullName;
   /**
+   * The user's first name. Read-only.
+   *
    * @var string
    */
   public $givenName;
 
   /**
-   * @param string
+   * The user's last name. Read-only.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -47,7 +56,10 @@ class Name extends \Google\Model
     return $this->familyName;
   }
   /**
-   * @param string
+   * The user's full name formed by concatenating the first and last name
+   * values. Read-only.
+   *
+   * @param string $fullName
    */
   public function setFullName($fullName)
   {
@@ -61,7 +73,9 @@ class Name extends \Google\Model
     return $this->fullName;
   }
   /**
-   * @param string
+   * The user's first name. Read-only.
+   *
+   * @param string $givenName
    */
   public function setGivenName($givenName)
   {

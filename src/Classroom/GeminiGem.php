@@ -20,20 +20,28 @@ namespace Google\Service\Classroom;
 class GeminiGem extends \Google\Model
 {
   /**
+   * Gems resource id.
+   *
    * @var string
    */
   public $id;
   /**
+   * Title of the Gem.
+   *
    * @var string
    */
   public $title;
   /**
+   * URL that can be used to access the Gem.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Gems resource id.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +55,9 @@ class GeminiGem extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Title of the Gem.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -61,7 +71,9 @@ class GeminiGem extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * URL that can be used to access the Gem.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

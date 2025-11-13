@@ -20,20 +20,31 @@ namespace Google\Service\Classroom;
 class AddOnContext extends \Google\Model
 {
   /**
+   * Immutable. Identifier of the course.
+   *
    * @var string
    */
   public $courseId;
   /**
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or
+   * `CourseWorkMaterial` under which the attachment is attached.
+   *
    * @var string
    */
   public $itemId;
   /**
+   * Immutable. Deprecated, use `item_id` instead.
+   *
+   * @deprecated
    * @var string
    */
   public $postId;
   protected $studentContextType = StudentContext::class;
   protected $studentContextDataType = '';
   /**
+   * Optional. Whether the post allows the teacher to see student work and
+   * passback grades.
+   *
    * @var bool
    */
   public $supportsStudentWork;
@@ -41,7 +52,9 @@ class AddOnContext extends \Google\Model
   protected $teacherContextDataType = '';
 
   /**
-   * @param string
+   * Immutable. Identifier of the course.
+   *
+   * @param string $courseId
    */
   public function setCourseId($courseId)
   {
@@ -55,7 +68,10 @@ class AddOnContext extends \Google\Model
     return $this->courseId;
   }
   /**
-   * @param string
+   * Immutable. Identifier of the `Announcement`, `CourseWork`, or
+   * `CourseWorkMaterial` under which the attachment is attached.
+   *
+   * @param string $itemId
    */
   public function setItemId($itemId)
   {
@@ -69,13 +85,17 @@ class AddOnContext extends \Google\Model
     return $this->itemId;
   }
   /**
-   * @param string
+   * Immutable. Deprecated, use `item_id` instead.
+   *
+   * @deprecated
+   * @param string $postId
    */
   public function setPostId($postId)
   {
     $this->postId = $postId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getPostId()
@@ -83,7 +103,10 @@ class AddOnContext extends \Google\Model
     return $this->postId;
   }
   /**
-   * @param StudentContext
+   * Add-on context corresponding to the requesting user's role as a student.
+   * Its presence implies that the requesting user is a student in the course.
+   *
+   * @param StudentContext $studentContext
    */
   public function setStudentContext(StudentContext $studentContext)
   {
@@ -97,7 +120,10 @@ class AddOnContext extends \Google\Model
     return $this->studentContext;
   }
   /**
-   * @param bool
+   * Optional. Whether the post allows the teacher to see student work and
+   * passback grades.
+   *
+   * @param bool $supportsStudentWork
    */
   public function setSupportsStudentWork($supportsStudentWork)
   {
@@ -111,7 +137,10 @@ class AddOnContext extends \Google\Model
     return $this->supportsStudentWork;
   }
   /**
-   * @param TeacherContext
+   * Add-on context corresponding to the requesting user's role as a teacher.
+   * Its presence implies that the requesting user is a teacher in the course.
+   *
+   * @param TeacherContext $teacherContext
    */
   public function setTeacherContext(TeacherContext $teacherContext)
   {
