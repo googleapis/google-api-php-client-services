@@ -20,19 +20,37 @@ namespace Google\Service\AndroidPublisher;
 class DeobfuscationFile extends \Google\Model
 {
   /**
+   * Unspecified deobfuscation file type.
+   */
+  public const SYMBOL_TYPE_deobfuscationFileTypeUnspecified = 'deobfuscationFileTypeUnspecified';
+  /**
+   * Proguard deobfuscation file type.
+   */
+  public const SYMBOL_TYPE_proguard = 'proguard';
+  /**
+   * Native debugging symbols file type.
+   */
+  public const SYMBOL_TYPE_nativeCode = 'nativeCode';
+  /**
+   * The type of the deobfuscation file.
+   *
    * @var string
    */
   public $symbolType;
 
   /**
-   * @param string
+   * The type of the deobfuscation file.
+   *
+   * Accepted values: deobfuscationFileTypeUnspecified, proguard, nativeCode
+   *
+   * @param self::SYMBOL_TYPE_* $symbolType
    */
   public function setSymbolType($symbolType)
   {
     $this->symbolType = $symbolType;
   }
   /**
-   * @return string
+   * @return self::SYMBOL_TYPE_*
    */
   public function getSymbolType()
   {

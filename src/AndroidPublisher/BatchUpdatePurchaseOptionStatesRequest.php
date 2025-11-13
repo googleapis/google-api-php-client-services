@@ -24,7 +24,10 @@ class BatchUpdatePurchaseOptionStatesRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param UpdatePurchaseOptionStateRequest[]
+   * Required. The update request list of up to 100 elements. All requests must
+   * update different purchase options.
+   *
+   * @param UpdatePurchaseOptionStateRequest[] $requests
    */
   public function setRequests($requests)
   {

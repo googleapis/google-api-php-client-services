@@ -24,7 +24,10 @@ class BatchUpdateBasePlanStatesRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param UpdateBasePlanStateRequest[]
+   * Required. The update request list of up to 100 elements. All requests must
+   * update different base plans.
+   *
+   * @param UpdateBasePlanStateRequest[] $requests
    */
   public function setRequests($requests)
   {

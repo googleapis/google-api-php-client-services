@@ -20,52 +20,76 @@ namespace Google\Service\AndroidPublisher;
 class DeviceMetadata extends \Google\Model
 {
   /**
+   * Device CPU make, e.g. "Qualcomm"
+   *
    * @var string
    */
   public $cpuMake;
   /**
+   * Device CPU model, e.g. "MSM8974"
+   *
    * @var string
    */
   public $cpuModel;
   /**
+   * Device class (e.g. tablet)
+   *
    * @var string
    */
   public $deviceClass;
   /**
+   * OpenGL version
+   *
    * @var int
    */
   public $glEsVersion;
   /**
+   * Device manufacturer (e.g. Motorola)
+   *
    * @var string
    */
   public $manufacturer;
   /**
+   * Comma separated list of native platforms (e.g. "arm", "arm7")
+   *
    * @var string
    */
   public $nativePlatform;
   /**
+   * Device model name (e.g. Droid)
+   *
    * @var string
    */
   public $productName;
   /**
+   * Device RAM in Megabytes, e.g. "2048"
+   *
    * @var int
    */
   public $ramMb;
   /**
+   * Screen density in DPI
+   *
    * @var int
    */
   public $screenDensityDpi;
   /**
+   * Screen height in pixels
+   *
    * @var int
    */
   public $screenHeightPx;
   /**
+   * Screen width in pixels
+   *
    * @var int
    */
   public $screenWidthPx;
 
   /**
-   * @param string
+   * Device CPU make, e.g. "Qualcomm"
+   *
+   * @param string $cpuMake
    */
   public function setCpuMake($cpuMake)
   {
@@ -79,7 +103,9 @@ class DeviceMetadata extends \Google\Model
     return $this->cpuMake;
   }
   /**
-   * @param string
+   * Device CPU model, e.g. "MSM8974"
+   *
+   * @param string $cpuModel
    */
   public function setCpuModel($cpuModel)
   {
@@ -93,7 +119,9 @@ class DeviceMetadata extends \Google\Model
     return $this->cpuModel;
   }
   /**
-   * @param string
+   * Device class (e.g. tablet)
+   *
+   * @param string $deviceClass
    */
   public function setDeviceClass($deviceClass)
   {
@@ -107,7 +135,9 @@ class DeviceMetadata extends \Google\Model
     return $this->deviceClass;
   }
   /**
-   * @param int
+   * OpenGL version
+   *
+   * @param int $glEsVersion
    */
   public function setGlEsVersion($glEsVersion)
   {
@@ -121,7 +151,9 @@ class DeviceMetadata extends \Google\Model
     return $this->glEsVersion;
   }
   /**
-   * @param string
+   * Device manufacturer (e.g. Motorola)
+   *
+   * @param string $manufacturer
    */
   public function setManufacturer($manufacturer)
   {
@@ -135,7 +167,9 @@ class DeviceMetadata extends \Google\Model
     return $this->manufacturer;
   }
   /**
-   * @param string
+   * Comma separated list of native platforms (e.g. "arm", "arm7")
+   *
+   * @param string $nativePlatform
    */
   public function setNativePlatform($nativePlatform)
   {
@@ -149,7 +183,9 @@ class DeviceMetadata extends \Google\Model
     return $this->nativePlatform;
   }
   /**
-   * @param string
+   * Device model name (e.g. Droid)
+   *
+   * @param string $productName
    */
   public function setProductName($productName)
   {
@@ -163,7 +199,9 @@ class DeviceMetadata extends \Google\Model
     return $this->productName;
   }
   /**
-   * @param int
+   * Device RAM in Megabytes, e.g. "2048"
+   *
+   * @param int $ramMb
    */
   public function setRamMb($ramMb)
   {
@@ -177,7 +215,9 @@ class DeviceMetadata extends \Google\Model
     return $this->ramMb;
   }
   /**
-   * @param int
+   * Screen density in DPI
+   *
+   * @param int $screenDensityDpi
    */
   public function setScreenDensityDpi($screenDensityDpi)
   {
@@ -191,7 +231,9 @@ class DeviceMetadata extends \Google\Model
     return $this->screenDensityDpi;
   }
   /**
-   * @param int
+   * Screen height in pixels
+   *
+   * @param int $screenHeightPx
    */
   public function setScreenHeightPx($screenHeightPx)
   {
@@ -205,7 +247,9 @@ class DeviceMetadata extends \Google\Model
     return $this->screenHeightPx;
   }
   /**
-   * @param int
+   * Screen width in pixels
+   *
+   * @param int $screenWidthPx
    */
   public function setScreenWidthPx($screenWidthPx)
   {

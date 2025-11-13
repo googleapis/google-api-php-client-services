@@ -21,12 +21,16 @@ class AppVersionList extends \Google\Collection
 {
   protected $collection_key = 'versionCodes';
   /**
+   * List of app version codes.
+   *
    * @var string[]
    */
   public $versionCodes;
 
   /**
-   * @param string[]
+   * List of app version codes.
+   *
+   * @param string[] $versionCodes
    */
   public function setVersionCodes($versionCodes)
   {

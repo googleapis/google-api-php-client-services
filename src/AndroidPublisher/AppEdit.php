@@ -20,16 +20,24 @@ namespace Google\Service\AndroidPublisher;
 class AppEdit extends \Google\Model
 {
   /**
+   * Output only. The time (as seconds since Epoch) at which the edit will
+   * expire and will be no longer valid for use.
+   *
    * @var string
    */
   public $expiryTimeSeconds;
   /**
+   * Output only. Identifier of the edit. Can be used in subsequent API calls.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Output only. The time (as seconds since Epoch) at which the edit will
+   * expire and will be no longer valid for use.
+   *
+   * @param string $expiryTimeSeconds
    */
   public function setExpiryTimeSeconds($expiryTimeSeconds)
   {
@@ -43,7 +51,9 @@ class AppEdit extends \Google\Model
     return $this->expiryTimeSeconds;
   }
   /**
-   * @param string
+   * Output only. Identifier of the edit. Can be used in subsequent API calls.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

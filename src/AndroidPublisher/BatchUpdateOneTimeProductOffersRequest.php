@@ -24,7 +24,10 @@ class BatchUpdateOneTimeProductOffersRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param UpdateOneTimeProductOfferRequest[]
+   * Required. A list of update requests of up to 100 elements. All requests
+   * must update different offers.
+   *
+   * @param UpdateOneTimeProductOfferRequest[] $requests
    */
   public function setRequests($requests)
   {

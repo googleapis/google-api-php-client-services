@@ -20,16 +20,23 @@ namespace Google\Service\AndroidPublisher;
 class DeviceFeature extends \Google\Model
 {
   /**
+   * Name of the feature.
+   *
    * @var string
    */
   public $featureName;
   /**
+   * The feature version specified by android:glEsVersion or android:version in
+   * in the AndroidManifest.
+   *
    * @var int
    */
   public $featureVersion;
 
   /**
-   * @param string
+   * Name of the feature.
+   *
+   * @param string $featureName
    */
   public function setFeatureName($featureName)
   {
@@ -43,7 +50,10 @@ class DeviceFeature extends \Google\Model
     return $this->featureName;
   }
   /**
-   * @param int
+   * The feature version specified by android:glEsVersion or android:version in
+   * in the AndroidManifest.
+   *
+   * @param int $featureVersion
    */
   public function setFeatureVersion($featureVersion)
   {

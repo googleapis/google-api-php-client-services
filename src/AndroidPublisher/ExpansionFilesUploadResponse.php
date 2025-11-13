@@ -23,7 +23,9 @@ class ExpansionFilesUploadResponse extends \Google\Model
   protected $expansionFileDataType = '';
 
   /**
-   * @param ExpansionFile
+   * The uploaded expansion file configuration.
+   *
+   * @param ExpansionFile $expansionFile
    */
   public function setExpansionFile(ExpansionFile $expansionFile)
   {

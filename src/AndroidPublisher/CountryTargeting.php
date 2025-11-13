@@ -21,16 +21,24 @@ class CountryTargeting extends \Google\Collection
 {
   protected $collection_key = 'countries';
   /**
+   * Countries to target, specified as two letter [CLDR codes](https://unicode.o
+   * rg/cldr/charts/latest/supplemental/territory_containment_un_m_49.html).
+   *
    * @var string[]
    */
   public $countries;
   /**
+   * Include "rest of world" as well as explicitly targeted countries.
+   *
    * @var bool
    */
   public $includeRestOfWorld;
 
   /**
-   * @param string[]
+   * Countries to target, specified as two letter [CLDR codes](https://unicode.o
+   * rg/cldr/charts/latest/supplemental/territory_containment_un_m_49.html).
+   *
+   * @param string[] $countries
    */
   public function setCountries($countries)
   {
@@ -44,7 +52,9 @@ class CountryTargeting extends \Google\Collection
     return $this->countries;
   }
   /**
-   * @param bool
+   * Include "rest of world" as well as explicitly targeted countries.
+   *
+   * @param bool $includeRestOfWorld
    */
   public function setIncludeRestOfWorld($includeRestOfWorld)
   {

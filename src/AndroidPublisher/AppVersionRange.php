@@ -20,16 +20,22 @@ namespace Google\Service\AndroidPublisher;
 class AppVersionRange extends \Google\Model
 {
   /**
+   * Highest app version in the range, inclusive.
+   *
    * @var string
    */
   public $versionCodeEnd;
   /**
+   * Lowest app version in the range, inclusive.
+   *
    * @var string
    */
   public $versionCodeStart;
 
   /**
-   * @param string
+   * Highest app version in the range, inclusive.
+   *
+   * @param string $versionCodeEnd
    */
   public function setVersionCodeEnd($versionCodeEnd)
   {
@@ -43,7 +49,9 @@ class AppVersionRange extends \Google\Model
     return $this->versionCodeEnd;
   }
   /**
-   * @param string
+   * Lowest app version in the range, inclusive.
+   *
+   * @param string $versionCodeStart
    */
   public function setVersionCodeStart($versionCodeStart)
   {

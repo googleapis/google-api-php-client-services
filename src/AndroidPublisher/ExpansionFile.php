@@ -20,16 +20,27 @@ namespace Google\Service\AndroidPublisher;
 class ExpansionFile extends \Google\Model
 {
   /**
+   * If set, this field indicates that this APK has an expansion file uploaded
+   * to it: this APK does not reference another APK's expansion file. The
+   * field's value is the size of the uploaded expansion file in bytes.
+   *
    * @var string
    */
   public $fileSize;
   /**
+   * If set, this APK's expansion file references another APK's expansion file.
+   * The file_size field will not be set.
+   *
    * @var int
    */
   public $referencesVersion;
 
   /**
-   * @param string
+   * If set, this field indicates that this APK has an expansion file uploaded
+   * to it: this APK does not reference another APK's expansion file. The
+   * field's value is the size of the uploaded expansion file in bytes.
+   *
+   * @param string $fileSize
    */
   public function setFileSize($fileSize)
   {
@@ -43,7 +54,10 @@ class ExpansionFile extends \Google\Model
     return $this->fileSize;
   }
   /**
-   * @param int
+   * If set, this APK's expansion file references another APK's expansion file.
+   * The file_size field will not be set.
+   *
+   * @param int $referencesVersion
    */
   public function setReferencesVersion($referencesVersion)
   {

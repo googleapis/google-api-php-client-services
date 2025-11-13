@@ -20,30 +20,69 @@ namespace Google\Service\AndroidPublisher;
 class CancelSurveyResult extends \Google\Model
 {
   /**
+   * Unspecified cancel survey reason.
+   */
+  public const REASON_CANCEL_SURVEY_REASON_UNSPECIFIED = 'CANCEL_SURVEY_REASON_UNSPECIFIED';
+  /**
+   * Not enough usage of the subscription.
+   */
+  public const REASON_CANCEL_SURVEY_REASON_NOT_ENOUGH_USAGE = 'CANCEL_SURVEY_REASON_NOT_ENOUGH_USAGE';
+  /**
+   * Technical issues while using the app.
+   */
+  public const REASON_CANCEL_SURVEY_REASON_TECHNICAL_ISSUES = 'CANCEL_SURVEY_REASON_TECHNICAL_ISSUES';
+  /**
+   * Cost related issues.
+   */
+  public const REASON_CANCEL_SURVEY_REASON_COST_RELATED = 'CANCEL_SURVEY_REASON_COST_RELATED';
+  /**
+   * The user found a better app.
+   */
+  public const REASON_CANCEL_SURVEY_REASON_FOUND_BETTER_APP = 'CANCEL_SURVEY_REASON_FOUND_BETTER_APP';
+  /**
+   * Other reasons.
+   */
+  public const REASON_CANCEL_SURVEY_REASON_OTHERS = 'CANCEL_SURVEY_REASON_OTHERS';
+  /**
+   * The reason the user selected in the cancel survey.
+   *
    * @var string
    */
   public $reason;
   /**
+   * Only set for CANCEL_SURVEY_REASON_OTHERS. This is the user's freeform
+   * response to the survey.
+   *
    * @var string
    */
   public $reasonUserInput;
 
   /**
-   * @param string
+   * The reason the user selected in the cancel survey.
+   *
+   * Accepted values: CANCEL_SURVEY_REASON_UNSPECIFIED,
+   * CANCEL_SURVEY_REASON_NOT_ENOUGH_USAGE,
+   * CANCEL_SURVEY_REASON_TECHNICAL_ISSUES, CANCEL_SURVEY_REASON_COST_RELATED,
+   * CANCEL_SURVEY_REASON_FOUND_BETTER_APP, CANCEL_SURVEY_REASON_OTHERS
+   *
+   * @param self::REASON_* $reason
    */
   public function setReason($reason)
   {
     $this->reason = $reason;
   }
   /**
-   * @return string
+   * @return self::REASON_*
    */
   public function getReason()
   {
     return $this->reason;
   }
   /**
-   * @param string
+   * Only set for CANCEL_SURVEY_REASON_OTHERS. This is the user's freeform
+   * response to the survey.
+   *
+   * @param string $reasonUserInput
    */
   public function setReasonUserInput($reasonUserInput)
   {

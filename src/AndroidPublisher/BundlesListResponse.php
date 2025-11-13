@@ -23,12 +23,16 @@ class BundlesListResponse extends \Google\Collection
   protected $bundlesType = Bundle::class;
   protected $bundlesDataType = 'array';
   /**
+   * The kind of this response ("androidpublisher#bundlesListResponse").
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param Bundle[]
+   * All app bundles.
+   *
+   * @param Bundle[] $bundles
    */
   public function setBundles($bundles)
   {
@@ -42,7 +46,9 @@ class BundlesListResponse extends \Google\Collection
     return $this->bundles;
   }
   /**
-   * @param string
+   * The kind of this response ("androidpublisher#bundlesListResponse").
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -24,7 +24,9 @@ class DeviceTierSet extends \Google\Collection
   protected $deviceTiersDataType = 'array';
 
   /**
-   * @param DeviceTier[]
+   * Device tiers belonging to the set.
+   *
+   * @param DeviceTier[] $deviceTiers
    */
   public function setDeviceTiers($deviceTiers)
   {

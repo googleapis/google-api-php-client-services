@@ -24,7 +24,9 @@ class BatchUpdateOneTimeProductOfferStatesResponse extends \Google\Collection
   protected $oneTimeProductOffersDataType = 'array';
 
   /**
-   * @param OneTimeProductOffer[]
+   * The updated one-time product offers list, in the same order as the request.
+   *
+   * @param OneTimeProductOffer[] $oneTimeProductOffers
    */
   public function setOneTimeProductOffers($oneTimeProductOffers)
   {

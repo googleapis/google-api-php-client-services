@@ -20,16 +20,25 @@ namespace Google\Service\AndroidPublisher;
 class ApkBinary extends \Google\Model
 {
   /**
+   * A sha1 hash of the APK payload, encoded as a hex string and matching the
+   * output of the sha1sum command.
+   *
    * @var string
    */
   public $sha1;
   /**
+   * A sha256 hash of the APK payload, encoded as a hex string and matching the
+   * output of the sha256sum command.
+   *
    * @var string
    */
   public $sha256;
 
   /**
-   * @param string
+   * A sha1 hash of the APK payload, encoded as a hex string and matching the
+   * output of the sha1sum command.
+   *
+   * @param string $sha1
    */
   public function setSha1($sha1)
   {
@@ -43,7 +52,10 @@ class ApkBinary extends \Google\Model
     return $this->sha1;
   }
   /**
-   * @param string
+   * A sha256 hash of the APK payload, encoded as a hex string and matching the
+   * output of the sha256sum command.
+   *
+   * @param string $sha256
    */
   public function setSha256($sha256)
   {

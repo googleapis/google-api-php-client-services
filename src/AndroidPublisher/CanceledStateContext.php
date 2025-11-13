@@ -29,7 +29,9 @@ class CanceledStateContext extends \Google\Model
   protected $userInitiatedCancellationDataType = '';
 
   /**
-   * @param DeveloperInitiatedCancellation
+   * Subscription was canceled by the developer.
+   *
+   * @param DeveloperInitiatedCancellation $developerInitiatedCancellation
    */
   public function setDeveloperInitiatedCancellation(DeveloperInitiatedCancellation $developerInitiatedCancellation)
   {
@@ -43,7 +45,9 @@ class CanceledStateContext extends \Google\Model
     return $this->developerInitiatedCancellation;
   }
   /**
-   * @param ReplacementCancellation
+   * Subscription was replaced by a new subscription.
+   *
+   * @param ReplacementCancellation $replacementCancellation
    */
   public function setReplacementCancellation(ReplacementCancellation $replacementCancellation)
   {
@@ -57,7 +61,10 @@ class CanceledStateContext extends \Google\Model
     return $this->replacementCancellation;
   }
   /**
-   * @param SystemInitiatedCancellation
+   * Subscription was canceled by the system, for example because of a billing
+   * problem.
+   *
+   * @param SystemInitiatedCancellation $systemInitiatedCancellation
    */
   public function setSystemInitiatedCancellation(SystemInitiatedCancellation $systemInitiatedCancellation)
   {
@@ -71,7 +78,9 @@ class CanceledStateContext extends \Google\Model
     return $this->systemInitiatedCancellation;
   }
   /**
-   * @param UserInitiatedCancellation
+   * Subscription was canceled by user.
+   *
+   * @param UserInitiatedCancellation $userInitiatedCancellation
    */
   public function setUserInitiatedCancellation(UserInitiatedCancellation $userInitiatedCancellation)
   {

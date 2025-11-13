@@ -20,36 +20,101 @@ namespace Google\Service\AndroidPublisher;
 class AutoRenewingBasePlanType extends \Google\Model
 {
   /**
+   * Unspecified mode.
+   */
+  public const PRORATION_MODE_SUBSCRIPTION_PRORATION_MODE_UNSPECIFIED = 'SUBSCRIPTION_PRORATION_MODE_UNSPECIFIED';
+  /**
+   * Users will be charged for their new base plan at the end of their current
+   * billing period.
+   */
+  public const PRORATION_MODE_SUBSCRIPTION_PRORATION_MODE_CHARGE_ON_NEXT_BILLING_DATE = 'SUBSCRIPTION_PRORATION_MODE_CHARGE_ON_NEXT_BILLING_DATE';
+  /**
+   * Users will be charged for their new base plan immediately and in full. Any
+   * remaining period of their existing subscription will be used to extend the
+   * duration of the new billing plan.
+   */
+  public const PRORATION_MODE_SUBSCRIPTION_PRORATION_MODE_CHARGE_FULL_PRICE_IMMEDIATELY = 'SUBSCRIPTION_PRORATION_MODE_CHARGE_FULL_PRICE_IMMEDIATELY';
+  /**
+   * Unspecified state.
+   */
+  public const RESUBSCRIBE_STATE_RESUBSCRIBE_STATE_UNSPECIFIED = 'RESUBSCRIBE_STATE_UNSPECIFIED';
+  /**
+   * Resubscribe is active.
+   */
+  public const RESUBSCRIBE_STATE_RESUBSCRIBE_STATE_ACTIVE = 'RESUBSCRIBE_STATE_ACTIVE';
+  /**
+   * Resubscribe is inactive.
+   */
+  public const RESUBSCRIBE_STATE_RESUBSCRIBE_STATE_INACTIVE = 'RESUBSCRIBE_STATE_INACTIVE';
+  /**
+   * Optional. Account hold period of the subscription, specified in ISO 8601
+   * format. Acceptable values must be in days and between P0D and P60D. If not
+   * specified, the default value is P30D. The sum of gracePeriodDuration and
+   * accountHoldDuration must be between P30D and P60D days, inclusive.
+   *
    * @var string
    */
   public $accountHoldDuration;
   /**
+   * Required. Immutable. Subscription period, specified in ISO 8601 format. For
+   * a list of acceptable billing periods, refer to the help center. The
+   * duration is immutable after the base plan is created.
+   *
    * @var string
    */
   public $billingPeriodDuration;
   /**
+   * Grace period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in days and between P0D and the lesser of 30D and base plan
+   * billing period. If not specified, a default value will be used based on the
+   * billing period. The sum of gracePeriodDuration and accountHoldDuration must
+   * be between P30D and P60D days, inclusive.
+   *
    * @var string
    */
   public $gracePeriodDuration;
   /**
+   * Whether the renewing base plan is backward compatible. The backward
+   * compatible base plan is returned by the Google Play Billing Library
+   * deprecated method querySkuDetailsAsync(). Only one renewing base plan can
+   * be marked as legacy compatible for a given subscription.
+   *
    * @var bool
    */
   public $legacyCompatible;
   /**
+   * Subscription offer id which is legacy compatible. The backward compatible
+   * subscription offer is returned by the Google Play Billing Library
+   * deprecated method querySkuDetailsAsync(). Only one subscription offer can
+   * be marked as legacy compatible for a given renewing base plan. To have no
+   * Subscription offer as legacy compatible set this field as empty string.
+   *
    * @var string
    */
   public $legacyCompatibleSubscriptionOfferId;
   /**
+   * The proration mode for the base plan determines what happens when a user
+   * switches to this plan from another base plan. If unspecified, defaults to
+   * CHARGE_ON_NEXT_BILLING_DATE.
+   *
    * @var string
    */
   public $prorationMode;
   /**
+   * Whether users should be able to resubscribe to this base plan in Google
+   * Play surfaces. Defaults to RESUBSCRIBE_STATE_ACTIVE if not specified.
+   *
    * @var string
    */
   public $resubscribeState;
 
   /**
-   * @param string
+   * Optional. Account hold period of the subscription, specified in ISO 8601
+   * format. Acceptable values must be in days and between P0D and P60D. If not
+   * specified, the default value is P30D. The sum of gracePeriodDuration and
+   * accountHoldDuration must be between P30D and P60D days, inclusive.
+   *
+   * @param string $accountHoldDuration
    */
   public function setAccountHoldDuration($accountHoldDuration)
   {
@@ -63,7 +128,11 @@ class AutoRenewingBasePlanType extends \Google\Model
     return $this->accountHoldDuration;
   }
   /**
-   * @param string
+   * Required. Immutable. Subscription period, specified in ISO 8601 format. For
+   * a list of acceptable billing periods, refer to the help center. The
+   * duration is immutable after the base plan is created.
+   *
+   * @param string $billingPeriodDuration
    */
   public function setBillingPeriodDuration($billingPeriodDuration)
   {
@@ -77,7 +146,13 @@ class AutoRenewingBasePlanType extends \Google\Model
     return $this->billingPeriodDuration;
   }
   /**
-   * @param string
+   * Grace period of the subscription, specified in ISO 8601 format. Acceptable
+   * values must be in days and between P0D and the lesser of 30D and base plan
+   * billing period. If not specified, a default value will be used based on the
+   * billing period. The sum of gracePeriodDuration and accountHoldDuration must
+   * be between P30D and P60D days, inclusive.
+   *
+   * @param string $gracePeriodDuration
    */
   public function setGracePeriodDuration($gracePeriodDuration)
   {
@@ -91,7 +166,12 @@ class AutoRenewingBasePlanType extends \Google\Model
     return $this->gracePeriodDuration;
   }
   /**
-   * @param bool
+   * Whether the renewing base plan is backward compatible. The backward
+   * compatible base plan is returned by the Google Play Billing Library
+   * deprecated method querySkuDetailsAsync(). Only one renewing base plan can
+   * be marked as legacy compatible for a given subscription.
+   *
+   * @param bool $legacyCompatible
    */
   public function setLegacyCompatible($legacyCompatible)
   {
@@ -105,7 +185,13 @@ class AutoRenewingBasePlanType extends \Google\Model
     return $this->legacyCompatible;
   }
   /**
-   * @param string
+   * Subscription offer id which is legacy compatible. The backward compatible
+   * subscription offer is returned by the Google Play Billing Library
+   * deprecated method querySkuDetailsAsync(). Only one subscription offer can
+   * be marked as legacy compatible for a given renewing base plan. To have no
+   * Subscription offer as legacy compatible set this field as empty string.
+   *
+   * @param string $legacyCompatibleSubscriptionOfferId
    */
   public function setLegacyCompatibleSubscriptionOfferId($legacyCompatibleSubscriptionOfferId)
   {
@@ -119,28 +205,42 @@ class AutoRenewingBasePlanType extends \Google\Model
     return $this->legacyCompatibleSubscriptionOfferId;
   }
   /**
-   * @param string
+   * The proration mode for the base plan determines what happens when a user
+   * switches to this plan from another base plan. If unspecified, defaults to
+   * CHARGE_ON_NEXT_BILLING_DATE.
+   *
+   * Accepted values: SUBSCRIPTION_PRORATION_MODE_UNSPECIFIED,
+   * SUBSCRIPTION_PRORATION_MODE_CHARGE_ON_NEXT_BILLING_DATE,
+   * SUBSCRIPTION_PRORATION_MODE_CHARGE_FULL_PRICE_IMMEDIATELY
+   *
+   * @param self::PRORATION_MODE_* $prorationMode
    */
   public function setProrationMode($prorationMode)
   {
     $this->prorationMode = $prorationMode;
   }
   /**
-   * @return string
+   * @return self::PRORATION_MODE_*
    */
   public function getProrationMode()
   {
     return $this->prorationMode;
   }
   /**
-   * @param string
+   * Whether users should be able to resubscribe to this base plan in Google
+   * Play surfaces. Defaults to RESUBSCRIBE_STATE_ACTIVE if not specified.
+   *
+   * Accepted values: RESUBSCRIBE_STATE_UNSPECIFIED, RESUBSCRIBE_STATE_ACTIVE,
+   * RESUBSCRIBE_STATE_INACTIVE
+   *
+   * @param self::RESUBSCRIBE_STATE_* $resubscribeState
    */
   public function setResubscribeState($resubscribeState)
   {
     $this->resubscribeState = $resubscribeState;
   }
   /**
-   * @return string
+   * @return self::RESUBSCRIBE_STATE_*
    */
   public function getResubscribeState()
   {

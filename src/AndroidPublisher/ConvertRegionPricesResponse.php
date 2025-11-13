@@ -27,7 +27,10 @@ class ConvertRegionPricesResponse extends \Google\Model
   protected $regionVersionDataType = '';
 
   /**
-   * @param ConvertedOtherRegionsPrice
+   * Converted other regions prices in USD and EUR, to use for countries where
+   * Play doesn't support a country's local currency.
+   *
+   * @param ConvertedOtherRegionsPrice $convertedOtherRegionsPrice
    */
   public function setConvertedOtherRegionsPrice(ConvertedOtherRegionsPrice $convertedOtherRegionsPrice)
   {
@@ -41,7 +44,9 @@ class ConvertRegionPricesResponse extends \Google\Model
     return $this->convertedOtherRegionsPrice;
   }
   /**
-   * @param ConvertedRegionPrice[]
+   * Map from region code to converted region price.
+   *
+   * @param ConvertedRegionPrice[] $convertedRegionPrices
    */
   public function setConvertedRegionPrices($convertedRegionPrices)
   {
@@ -55,7 +60,9 @@ class ConvertRegionPricesResponse extends \Google\Model
     return $this->convertedRegionPrices;
   }
   /**
-   * @param RegionsVersion
+   * The region version at which the prices were generated.
+   *
+   * @param RegionsVersion $regionVersion
    */
   public function setRegionVersion(RegionsVersion $regionVersion)
   {

@@ -22,12 +22,16 @@ class DeveloperComment extends \Google\Model
   protected $lastModifiedType = Timestamp::class;
   protected $lastModifiedDataType = '';
   /**
+   * The content of the comment, i.e. reply body.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param Timestamp
+   * The last time at which this comment was updated.
+   *
+   * @param Timestamp $lastModified
    */
   public function setLastModified(Timestamp $lastModified)
   {
@@ -41,7 +45,9 @@ class DeveloperComment extends \Google\Model
     return $this->lastModified;
   }
   /**
-   * @param string
+   * The content of the comment, i.e. reply body.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

@@ -23,7 +23,9 @@ class DeobfuscationFilesUploadResponse extends \Google\Model
   protected $deobfuscationFileDataType = '';
 
   /**
-   * @param DeobfuscationFile
+   * The uploaded Deobfuscation File configuration.
+   *
+   * @param DeobfuscationFile $deobfuscationFile
    */
   public function setDeobfuscationFile(DeobfuscationFile $deobfuscationFile)
   {

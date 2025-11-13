@@ -24,7 +24,9 @@ class BatchGetSubscriptionsResponse extends \Google\Collection
   protected $subscriptionsDataType = 'array';
 
   /**
-   * @param Subscription[]
+   * The list of requested subscriptions, in the same order as the request.
+   *
+   * @param Subscription[] $subscriptions
    */
   public function setSubscriptions($subscriptions)
   {

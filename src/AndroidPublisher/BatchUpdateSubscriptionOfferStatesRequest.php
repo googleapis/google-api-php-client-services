@@ -24,7 +24,10 @@ class BatchUpdateSubscriptionOfferStatesRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param UpdateSubscriptionOfferStateRequest[]
+   * Required. The update request list of up to 100 elements. All requests must
+   * update different offers.
+   *
+   * @param UpdateSubscriptionOfferStateRequest[] $requests
    */
   public function setRequests($requests)
   {

@@ -26,7 +26,10 @@ class AbiTargeting extends \Google\Collection
   protected $valueDataType = 'array';
 
   /**
-   * @param Abi[]
+   * Targeting of other sibling directories that were in the Bundle. For main
+   * splits this is targeting of other main splits.
+   *
+   * @param Abi[] $alternatives
    */
   public function setAlternatives($alternatives)
   {
@@ -40,7 +43,9 @@ class AbiTargeting extends \Google\Collection
     return $this->alternatives;
   }
   /**
-   * @param Abi[]
+   * Value of an abi.
+   *
+   * @param Abi[] $value
    */
   public function setValue($value)
   {

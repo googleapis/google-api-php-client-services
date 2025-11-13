@@ -23,7 +23,9 @@ class CancelSubscriptionPurchaseRequest extends \Google\Model
   protected $cancellationContextDataType = '';
 
   /**
-   * @param CancellationContext
+   * Required. Additional details around the subscription revocation.
+   *
+   * @param CancellationContext $cancellationContext
    */
   public function setCancellationContext(CancellationContext $cancellationContext)
   {

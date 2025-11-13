@@ -22,12 +22,16 @@ class Apk extends \Google\Model
   protected $binaryType = ApkBinary::class;
   protected $binaryDataType = '';
   /**
+   * The version code of the APK, as specified in the manifest file.
+   *
    * @var int
    */
   public $versionCode;
 
   /**
-   * @param ApkBinary
+   * Information about the binary payload of this APK.
+   *
+   * @param ApkBinary $binary
    */
   public function setBinary(ApkBinary $binary)
   {
@@ -41,7 +45,9 @@ class Apk extends \Google\Model
     return $this->binary;
   }
   /**
-   * @param int
+   * The version code of the APK, as specified in the manifest file.
+   *
+   * @param int $versionCode
    */
   public function setVersionCode($versionCode)
   {

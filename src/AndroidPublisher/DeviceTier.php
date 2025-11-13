@@ -21,16 +21,32 @@ class DeviceTier extends \Google\Collection
 {
   protected $collection_key = 'deviceGroupNames';
   /**
+   * Groups of devices included in this tier. These groups must be defined
+   * explicitly under device_groups in this configuration.
+   *
    * @var string[]
    */
   public $deviceGroupNames;
   /**
+   * The priority level of the tier. Tiers are evaluated in descending order of
+   * level: the highest level tier has the highest priority. The highest tier
+   * matching a given device is selected for that device. You should use a
+   * contiguous range of levels for your tiers in a tier set; tier levels in a
+   * tier set must be unique. For instance, if your tier set has 4 tiers
+   * (including the global fallback), you should define tiers 1, 2 and 3 in this
+   * configuration. Note: tier 0 is implicitly defined as a global fallback and
+   * selected for devices that don't match any of the tiers explicitly defined
+   * here. You mustn't define level 0 explicitly in this configuration.
+   *
    * @var int
    */
   public $level;
 
   /**
-   * @param string[]
+   * Groups of devices included in this tier. These groups must be defined
+   * explicitly under device_groups in this configuration.
+   *
+   * @param string[] $deviceGroupNames
    */
   public function setDeviceGroupNames($deviceGroupNames)
   {
@@ -44,7 +60,17 @@ class DeviceTier extends \Google\Collection
     return $this->deviceGroupNames;
   }
   /**
-   * @param int
+   * The priority level of the tier. Tiers are evaluated in descending order of
+   * level: the highest level tier has the highest priority. The highest tier
+   * matching a given device is selected for that device. You should use a
+   * contiguous range of levels for your tiers in a tier set; tier levels in a
+   * tier set must be unique. For instance, if your tier set has 4 tiers
+   * (including the global fallback), you should define tiers 1, 2 and 3 in this
+   * configuration. Note: tier 0 is implicitly defined as a global fallback and
+   * selected for devices that don't match any of the tiers explicitly defined
+   * here. You mustn't define level 0 explicitly in this configuration.
+   *
+   * @param int $level
    */
   public function setLevel($level)
   {

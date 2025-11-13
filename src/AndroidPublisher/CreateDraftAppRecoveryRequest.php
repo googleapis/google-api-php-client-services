@@ -25,7 +25,10 @@ class CreateDraftAppRecoveryRequest extends \Google\Model
   protected $targetingDataType = '';
 
   /**
-   * @param RemoteInAppUpdate
+   * Action type is remote in-app update. As a consequence of this action, a
+   * downloadable recovery module is also created for testing purposes.
+   *
+   * @param RemoteInAppUpdate $remoteInAppUpdate
    */
   public function setRemoteInAppUpdate(RemoteInAppUpdate $remoteInAppUpdate)
   {
@@ -39,7 +42,10 @@ class CreateDraftAppRecoveryRequest extends \Google\Model
     return $this->remoteInAppUpdate;
   }
   /**
-   * @param Targeting
+   * Specifies targeting criteria for the recovery action such as regions,
+   * android sdk versions, app versions etc.
+   *
+   * @param Targeting $targeting
    */
   public function setTargeting(Targeting $targeting)
   {

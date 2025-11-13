@@ -23,7 +23,9 @@ class AddTargetingRequest extends \Google\Model
   protected $targetingUpdateDataType = '';
 
   /**
-   * @param TargetingUpdate
+   * Specifies targeting updates such as regions, android sdk versions etc.
+   *
+   * @param TargetingUpdate $targetingUpdate
    */
   public function setTargetingUpdate(TargetingUpdate $targetingUpdate)
   {

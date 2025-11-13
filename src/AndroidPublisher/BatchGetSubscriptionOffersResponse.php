@@ -24,7 +24,7 @@ class BatchGetSubscriptionOffersResponse extends \Google\Collection
   protected $subscriptionOffersDataType = 'array';
 
   /**
-   * @param SubscriptionOffer[]
+   * @param SubscriptionOffer[] $subscriptionOffers
    */
   public function setSubscriptionOffers($subscriptionOffers)
   {

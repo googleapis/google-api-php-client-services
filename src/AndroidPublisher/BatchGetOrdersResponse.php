@@ -24,7 +24,9 @@ class BatchGetOrdersResponse extends \Google\Collection
   protected $ordersDataType = 'array';
 
   /**
-   * @param Order[]
+   * Details for the requested order IDs.
+   *
+   * @param Order[] $orders
    */
   public function setOrders($orders)
   {
