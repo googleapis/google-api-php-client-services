@@ -21,28 +21,43 @@ class TraceScope extends \Google\Collection
 {
   protected $collection_key = 'resourceNames';
   /**
+   * Output only. The creation timestamp of the trace scope.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Describes this trace scope. The maximum length of the description
+   * is 8000 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Identifier. The resource name of the trace scope. For example: projects/my-
+   * project/locations/global/traceScopes/my-trace-scope
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Names of the projects that are included in this trace scope. *
+   * `projects/[PROJECT_ID]` A trace scope can include a maximum of 20 projects.
+   *
    * @var string[]
    */
   public $resourceNames;
   /**
+   * Output only. The last update timestamp of the trace scope.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The creation timestamp of the trace scope.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -56,7 +71,10 @@ class TraceScope extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Describes this trace scope. The maximum length of the description
+   * is 8000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -70,7 +88,10 @@ class TraceScope extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the trace scope. For example: projects/my-
+   * project/locations/global/traceScopes/my-trace-scope
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -84,7 +105,10 @@ class TraceScope extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Required. Names of the projects that are included in this trace scope. *
+   * `projects/[PROJECT_ID]` A trace scope can include a maximum of 20 projects.
+   *
+   * @param string[] $resourceNames
    */
   public function setResourceNames($resourceNames)
   {
@@ -98,7 +122,9 @@ class TraceScope extends \Google\Collection
     return $this->resourceNames;
   }
   /**
-   * @param string
+   * Output only. The last update timestamp of the trace scope.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
