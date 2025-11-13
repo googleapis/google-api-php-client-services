@@ -21,6 +21,8 @@ class GoogleCloudAssuredworkloadsV1ListWorkloadUpdatesResponse extends \Google\C
 {
   protected $collection_key = 'workloadUpdates';
   /**
+   * The next page token. Return empty if reached the last page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudAssuredworkloadsV1ListWorkloadUpdatesResponse extends \Google\C
   protected $workloadUpdatesDataType = 'array';
 
   /**
-   * @param string
+   * The next page token. Return empty if reached the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAssuredworkloadsV1ListWorkloadUpdatesResponse extends \Google\C
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAssuredworkloadsV1WorkloadUpdate[]
+   * The list of workload updates for a given workload.
+   *
+   * @param GoogleCloudAssuredworkloadsV1WorkloadUpdate[] $workloadUpdates
    */
   public function setWorkloadUpdates($workloadUpdates)
   {

@@ -21,20 +21,28 @@ class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud extend
 {
   protected $collection_key = 'steps';
   /**
+   * Additional urls for more information about steps
+   *
    * @var string[]
    */
   public $additionalLinks;
   /**
+   * Gcloud command to resolve violation
+   *
    * @var string[]
    */
   public $gcloudCommands;
   /**
+   * Steps to resolve violation via gcloud cli
+   *
    * @var string[]
    */
   public $steps;
 
   /**
-   * @param string[]
+   * Additional urls for more information about steps
+   *
+   * @param string[] $additionalLinks
    */
   public function setAdditionalLinks($additionalLinks)
   {
@@ -48,7 +56,9 @@ class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud extend
     return $this->additionalLinks;
   }
   /**
-   * @param string[]
+   * Gcloud command to resolve violation
+   *
+   * @param string[] $gcloudCommands
    */
   public function setGcloudCommands($gcloudCommands)
   {
@@ -62,7 +72,9 @@ class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud extend
     return $this->gcloudCommands;
   }
   /**
-   * @param string[]
+   * Steps to resolve violation via gcloud cli
+   *
+   * @param string[] $steps
    */
   public function setSteps($steps)
   {

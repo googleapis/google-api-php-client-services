@@ -19,18 +19,36 @@ namespace Google\Service\Assuredworkloads;
 
 class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const SETUP_STATUS_SETUP_STATE_UNSPECIFIED = 'SETUP_STATE_UNSPECIFIED';
+  /**
+   * SAA enrollment pending.
+   */
+  public const SETUP_STATUS_STATUS_PENDING = 'STATUS_PENDING';
+  /**
+   * SAA enrollment comopleted.
+   */
+  public const SETUP_STATUS_STATUS_COMPLETE = 'STATUS_COMPLETE';
   protected $collection_key = 'setupErrors';
   /**
+   * Indicates SAA enrollment setup error if any.
+   *
    * @var string[]
    */
   public $setupErrors;
   /**
+   * Output only. Indicates SAA enrollment status of a given workload.
+   *
    * @var string
    */
   public $setupStatus;
 
   /**
-   * @param string[]
+   * Indicates SAA enrollment setup error if any.
+   *
+   * @param string[] $setupErrors
    */
   public function setSetupErrors($setupErrors)
   {
@@ -44,14 +62,18 @@ class GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse extends \Google
     return $this->setupErrors;
   }
   /**
-   * @param string
+   * Output only. Indicates SAA enrollment status of a given workload.
+   *
+   * Accepted values: SETUP_STATE_UNSPECIFIED, STATUS_PENDING, STATUS_COMPLETE
+   *
+   * @param self::SETUP_STATUS_* $setupStatus
    */
   public function setSetupStatus($setupStatus)
   {
     $this->setupStatus = $setupStatus;
   }
   /**
-   * @return string
+   * @return self::SETUP_STATUS_*
    */
   public function getSetupStatus()
   {

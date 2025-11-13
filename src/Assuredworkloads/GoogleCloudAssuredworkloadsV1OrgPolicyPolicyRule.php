@@ -20,14 +20,20 @@ namespace Google\Service\Assuredworkloads;
 class GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRule extends \Google\Model
 {
   /**
+   * ListPolicy only when all values are allowed.
+   *
    * @var bool
    */
   public $allowAll;
   /**
+   * ListPolicy only when all values are denied.
+   *
    * @var bool
    */
   public $denyAll;
   /**
+   * BooleanPolicy only.
+   *
    * @var bool
    */
   public $enforce;
@@ -35,7 +41,9 @@ class GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRule extends \Google\Model
   protected $valuesDataType = '';
 
   /**
-   * @param bool
+   * ListPolicy only when all values are allowed.
+   *
+   * @param bool $allowAll
    */
   public function setAllowAll($allowAll)
   {
@@ -49,7 +57,9 @@ class GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRule extends \Google\Model
     return $this->allowAll;
   }
   /**
-   * @param bool
+   * ListPolicy only when all values are denied.
+   *
+   * @param bool $denyAll
    */
   public function setDenyAll($denyAll)
   {
@@ -63,7 +73,9 @@ class GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRule extends \Google\Model
     return $this->denyAll;
   }
   /**
-   * @param bool
+   * BooleanPolicy only.
+   *
+   * @param bool $enforce
    */
   public function setEnforce($enforce)
   {
@@ -77,7 +89,9 @@ class GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRule extends \Google\Model
     return $this->enforce;
   }
   /**
-   * @param GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRuleStringValues
+   * ListPolicy only when custom values are specified.
+   *
+   * @param GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRuleStringValues $values
    */
   public function setValues(GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRuleStringValues $values)
   {

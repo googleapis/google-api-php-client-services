@@ -26,7 +26,10 @@ class GoogleCloudAssuredworkloadsV1MoveAnalysisResult extends \Google\Collection
   protected $warningsDataType = 'array';
 
   /**
-   * @param GoogleCloudAssuredworkloadsV1MoveImpact[]
+   * List of blockers. If not resolved, these will result in compliance
+   * violations in the target.
+   *
+   * @param GoogleCloudAssuredworkloadsV1MoveImpact[] $blockers
    */
   public function setBlockers($blockers)
   {
@@ -40,7 +43,10 @@ class GoogleCloudAssuredworkloadsV1MoveAnalysisResult extends \Google\Collection
     return $this->blockers;
   }
   /**
-   * @param GoogleCloudAssuredworkloadsV1MoveImpact[]
+   * List of warnings. These are risks that may or may not result in compliance
+   * violations.
+   *
+   * @param GoogleCloudAssuredworkloadsV1MoveImpact[] $warnings
    */
   public function setWarnings($warnings)
   {

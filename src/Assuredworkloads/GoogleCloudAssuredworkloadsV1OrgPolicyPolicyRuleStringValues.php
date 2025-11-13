@@ -21,16 +21,22 @@ class GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRuleStringValues extends \Goog
 {
   protected $collection_key = 'deniedValues';
   /**
+   * List of values allowed at this resource.
+   *
    * @var string[]
    */
   public $allowedValues;
   /**
+   * List of values denied at this resource.
+   *
    * @var string[]
    */
   public $deniedValues;
 
   /**
-   * @param string[]
+   * List of values allowed at this resource.
+   *
+   * @param string[] $allowedValues
    */
   public function setAllowedValues($allowedValues)
   {
@@ -44,7 +50,9 @@ class GoogleCloudAssuredworkloadsV1OrgPolicyPolicyRuleStringValues extends \Goog
     return $this->allowedValues;
   }
   /**
-   * @param string[]
+   * List of values denied at this resource.
+   *
+   * @param string[] $deniedValues
    */
   public function setDeniedValues($deniedValues)
   {

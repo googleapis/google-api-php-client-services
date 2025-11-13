@@ -22,6 +22,8 @@ class GoogleCloudAssuredworkloadsV1MoveAnalysisGroup extends \Google\Model
   protected $analysisResultType = GoogleCloudAssuredworkloadsV1MoveAnalysisResult::class;
   protected $analysisResultDataType = '';
   /**
+   * Name of the analysis group.
+   *
    * @var string
    */
   public $displayName;
@@ -29,7 +31,9 @@ class GoogleCloudAssuredworkloadsV1MoveAnalysisGroup extends \Google\Model
   protected $errorDataType = '';
 
   /**
-   * @param GoogleCloudAssuredworkloadsV1MoveAnalysisResult
+   * Result of a successful analysis.
+   *
+   * @param GoogleCloudAssuredworkloadsV1MoveAnalysisResult $analysisResult
    */
   public function setAnalysisResult(GoogleCloudAssuredworkloadsV1MoveAnalysisResult $analysisResult)
   {
@@ -43,7 +47,9 @@ class GoogleCloudAssuredworkloadsV1MoveAnalysisGroup extends \Google\Model
     return $this->analysisResult;
   }
   /**
-   * @param string
+   * Name of the analysis group.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -57,7 +63,9 @@ class GoogleCloudAssuredworkloadsV1MoveAnalysisGroup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GoogleRpcStatus
+   * Error details for a failed analysis.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {

@@ -20,19 +20,34 @@ namespace Google\Service\Assuredworkloads;
 class GoogleCloudAssuredworkloadsV1WorkloadWorkloadOptions extends \Google\Model
 {
   /**
+   * KAJ Enrollment type is unspecified
+   */
+  public const KAJ_ENROLLMENT_TYPE_KAJ_ENROLLMENT_TYPE_UNSPECIFIED = 'KAJ_ENROLLMENT_TYPE_UNSPECIFIED';
+  /**
+   * KAT sets External, Hardware, and Software key feature logging only to TRUE.
+   */
+  public const KAJ_ENROLLMENT_TYPE_KEY_ACCESS_TRANSPARENCY_OFF = 'KEY_ACCESS_TRANSPARENCY_OFF';
+  /**
+   * Optional. Specifies type of KAJ Enrollment if provided.
+   *
    * @var string
    */
   public $kajEnrollmentType;
 
   /**
-   * @param string
+   * Optional. Specifies type of KAJ Enrollment if provided.
+   *
+   * Accepted values: KAJ_ENROLLMENT_TYPE_UNSPECIFIED,
+   * KEY_ACCESS_TRANSPARENCY_OFF
+   *
+   * @param self::KAJ_ENROLLMENT_TYPE_* $kajEnrollmentType
    */
   public function setKajEnrollmentType($kajEnrollmentType)
   {
     $this->kajEnrollmentType = $kajEnrollmentType;
   }
   /**
-   * @return string
+   * @return self::KAJ_ENROLLMENT_TYPE_*
    */
   public function getKajEnrollmentType()
   {

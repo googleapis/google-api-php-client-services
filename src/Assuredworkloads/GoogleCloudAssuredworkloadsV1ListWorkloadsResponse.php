@@ -21,6 +21,8 @@ class GoogleCloudAssuredworkloadsV1ListWorkloadsResponse extends \Google\Collect
 {
   protected $collection_key = 'workloads';
   /**
+   * The next page token. Return empty if reached the last page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudAssuredworkloadsV1ListWorkloadsResponse extends \Google\Collect
   protected $workloadsDataType = 'array';
 
   /**
-   * @param string
+   * The next page token. Return empty if reached the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAssuredworkloadsV1ListWorkloadsResponse extends \Google\Collect
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudAssuredworkloadsV1Workload[]
+   * List of Workloads under a given parent.
+   *
+   * @param GoogleCloudAssuredworkloadsV1Workload[] $workloads
    */
   public function setWorkloads($workloads)
   {

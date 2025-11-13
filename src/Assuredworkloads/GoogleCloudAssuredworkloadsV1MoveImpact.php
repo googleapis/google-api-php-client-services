@@ -20,12 +20,16 @@ namespace Google\Service\Assuredworkloads;
 class GoogleCloudAssuredworkloadsV1MoveImpact extends \Google\Model
 {
   /**
+   * Explanation of the impact.
+   *
    * @var string
    */
   public $detail;
 
   /**
-   * @param string
+   * Explanation of the impact.
+   *
+   * @param string $detail
    */
   public function setDetail($detail)
   {

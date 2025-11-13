@@ -20,24 +20,34 @@ namespace Google\Service\Assuredworkloads;
 class GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus extends \Google\Model
 {
   /**
+   * Number of current resource violations which are not acknowledged.
+   *
    * @var int
    */
   public $acknowledgedResourceViolationCount;
   /**
+   * Number of current orgPolicy violations which are acknowledged.
+   *
    * @var int
    */
   public $acknowledgedViolationCount;
   /**
+   * Number of current resource violations which are acknowledged.
+   *
    * @var int
    */
   public $activeResourceViolationCount;
   /**
+   * Number of current orgPolicy violations which are not acknowledged.
+   *
    * @var int
    */
   public $activeViolationCount;
 
   /**
-   * @param int
+   * Number of current resource violations which are not acknowledged.
+   *
+   * @param int $acknowledgedResourceViolationCount
    */
   public function setAcknowledgedResourceViolationCount($acknowledgedResourceViolationCount)
   {
@@ -51,7 +61,9 @@ class GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus extends \Google\Mode
     return $this->acknowledgedResourceViolationCount;
   }
   /**
-   * @param int
+   * Number of current orgPolicy violations which are acknowledged.
+   *
+   * @param int $acknowledgedViolationCount
    */
   public function setAcknowledgedViolationCount($acknowledgedViolationCount)
   {
@@ -65,7 +77,9 @@ class GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus extends \Google\Mode
     return $this->acknowledgedViolationCount;
   }
   /**
-   * @param int
+   * Number of current resource violations which are acknowledged.
+   *
+   * @param int $activeResourceViolationCount
    */
   public function setActiveResourceViolationCount($activeResourceViolationCount)
   {
@@ -79,7 +93,9 @@ class GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus extends \Google\Mode
     return $this->activeResourceViolationCount;
   }
   /**
-   * @param int
+   * Number of current orgPolicy violations which are not acknowledged.
+   *
+   * @param int $activeViolationCount
    */
   public function setActiveViolationCount($activeViolationCount)
   {
