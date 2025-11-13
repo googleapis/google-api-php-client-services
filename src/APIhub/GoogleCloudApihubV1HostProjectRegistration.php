@@ -20,20 +20,33 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1HostProjectRegistration extends \Google\Model
 {
   /**
+   * Output only. The time at which the host project registration was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Immutable. Google cloud project name in the format:
+   * "projects/abc" or "projects/123". As input, project name with either
+   * project id or number are accepted. As output, this field will contain
+   * project number.
+   *
    * @var string
    */
   public $gcpProject;
   /**
+   * Identifier. The name of the host project registration. Format: "projects/{p
+   * roject}/locations/{location}/hostProjectRegistrations/{host_project_registr
+   * ation}".
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The time at which the host project registration was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,7 +60,12 @@ class GoogleCloudApihubV1HostProjectRegistration extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Immutable. Google cloud project name in the format:
+   * "projects/abc" or "projects/123". As input, project name with either
+   * project id or number are accepted. As output, this field will contain
+   * project number.
+   *
+   * @param string $gcpProject
    */
   public function setGcpProject($gcpProject)
   {
@@ -61,7 +79,11 @@ class GoogleCloudApihubV1HostProjectRegistration extends \Google\Model
     return $this->gcpProject;
   }
   /**
-   * @param string
+   * Identifier. The name of the host project registration. Format: "projects/{p
+   * roject}/locations/{location}/hostProjectRegistrations/{host_project_registr
+   * ation}".
+   *
+   * @param string $name
    */
   public function setName($name)
   {

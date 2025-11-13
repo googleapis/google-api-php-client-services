@@ -20,6 +20,20 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1CurationConfig extends \Google\Model
 {
   /**
+   * Default unspecified curation type.
+   */
+  public const CURATION_TYPE_CURATION_TYPE_UNSPECIFIED = 'CURATION_TYPE_UNSPECIFIED';
+  /**
+   * Default curation for API metadata will be used.
+   */
+  public const CURATION_TYPE_DEFAULT_CURATION_FOR_API_METADATA = 'DEFAULT_CURATION_FOR_API_METADATA';
+  /**
+   * Custom curation for API metadata will be used.
+   */
+  public const CURATION_TYPE_CUSTOM_CURATION_FOR_API_METADATA = 'CUSTOM_CURATION_FOR_API_METADATA';
+  /**
+   * Required. The curation type for this plugin instance.
+   *
    * @var string
    */
   public $curationType;
@@ -27,21 +41,28 @@ class GoogleCloudApihubV1CurationConfig extends \Google\Model
   protected $customCurationDataType = '';
 
   /**
-   * @param string
+   * Required. The curation type for this plugin instance.
+   *
+   * Accepted values: CURATION_TYPE_UNSPECIFIED,
+   * DEFAULT_CURATION_FOR_API_METADATA, CUSTOM_CURATION_FOR_API_METADATA
+   *
+   * @param self::CURATION_TYPE_* $curationType
    */
   public function setCurationType($curationType)
   {
     $this->curationType = $curationType;
   }
   /**
-   * @return string
+   * @return self::CURATION_TYPE_*
    */
   public function getCurationType()
   {
     return $this->curationType;
   }
   /**
-   * @param GoogleCloudApihubV1CustomCuration
+   * Optional. Custom curation information for this plugin instance.
+   *
+   * @param GoogleCloudApihubV1CustomCuration $customCuration
    */
   public function setCustomCuration(GoogleCloudApihubV1CustomCuration $customCuration)
   {

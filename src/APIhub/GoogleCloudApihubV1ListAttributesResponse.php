@@ -23,12 +23,17 @@ class GoogleCloudApihubV1ListAttributesResponse extends \Google\Collection
   protected $attributesType = GoogleCloudApihubV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApihubV1Attribute[]
+   * The list of all attributes.
+   *
+   * @param GoogleCloudApihubV1Attribute[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApihubV1ListAttributesResponse extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

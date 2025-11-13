@@ -24,7 +24,9 @@ class GoogleCloudApihubV1EnumAttributeValues extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param GoogleCloudApihubV1AllowedValue[]
+   * Required. The attribute values in case attribute data type is enum.
+   *
+   * @param GoogleCloudApihubV1AllowedValue[] $values
    */
   public function setValues($values)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1DisablePluginInstanceActionRequest extends \Google\Model
 {
   /**
+   * Required. The action id to disable.
+   *
    * @var string
    */
   public $actionId;
 
   /**
-   * @param string
+   * Required. The action id to disable.
+   *
+   * @param string $actionId
    */
   public function setActionId($actionId)
   {

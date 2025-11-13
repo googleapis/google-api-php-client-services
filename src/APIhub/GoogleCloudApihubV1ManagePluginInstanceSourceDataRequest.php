@@ -20,38 +20,84 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest extends \Google\Model
 {
   /**
+   * Default unspecified action.
+   */
+  public const ACTION_ACTION_UNSPECIFIED = 'ACTION_UNSPECIFIED';
+  /**
+   * Upload or upsert data.
+   */
+  public const ACTION_UPLOAD = 'UPLOAD';
+  /**
+   * Delete data.
+   */
+  public const ACTION_DELETE = 'DELETE';
+  /**
+   * Default unspecified type.
+   */
+  public const DATA_TYPE_DATA_TYPE_UNSPECIFIED = 'DATA_TYPE_UNSPECIFIED';
+  /**
+   * Proxy deployment manifest.
+   */
+  public const DATA_TYPE_PROXY_DEPLOYMENT_MANIFEST = 'PROXY_DEPLOYMENT_MANIFEST';
+  /**
+   * Environment manifest.
+   */
+  public const DATA_TYPE_ENVIRONMENT_MANIFEST = 'ENVIRONMENT_MANIFEST';
+  /**
+   * Proxy bundle.
+   */
+  public const DATA_TYPE_PROXY_BUNDLE = 'PROXY_BUNDLE';
+  /**
+   * Shared flow bundle.
+   */
+  public const DATA_TYPE_SHARED_FLOW_BUNDLE = 'SHARED_FLOW_BUNDLE';
+  /**
+   * Required. Action to be performed.
+   *
    * @var string
    */
   public $action;
   /**
+   * Required. Data to be managed.
+   *
    * @var string
    */
   public $data;
   /**
+   * Required. Type of data to be managed.
+   *
    * @var string
    */
   public $dataType;
   /**
+   * Required. Relative path of data being managed for a given plugin instance.
+   *
    * @var string
    */
   public $relativePath;
 
   /**
-   * @param string
+   * Required. Action to be performed.
+   *
+   * Accepted values: ACTION_UNSPECIFIED, UPLOAD, DELETE
+   *
+   * @param self::ACTION_* $action
    */
   public function setAction($action)
   {
     $this->action = $action;
   }
   /**
-   * @return string
+   * @return self::ACTION_*
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param string
+   * Required. Data to be managed.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -65,21 +111,28 @@ class GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest extends \Google\M
     return $this->data;
   }
   /**
-   * @param string
+   * Required. Type of data to be managed.
+   *
+   * Accepted values: DATA_TYPE_UNSPECIFIED, PROXY_DEPLOYMENT_MANIFEST,
+   * ENVIRONMENT_MANIFEST, PROXY_BUNDLE, SHARED_FLOW_BUNDLE
+   *
+   * @param self::DATA_TYPE_* $dataType
    */
   public function setDataType($dataType)
   {
     $this->dataType = $dataType;
   }
   /**
-   * @return string
+   * @return self::DATA_TYPE_*
    */
   public function getDataType()
   {
     return $this->dataType;
   }
   /**
-   * @param string
+   * Required. Relative path of data being managed for a given plugin instance.
+   *
+   * @param string $relativePath
    */
   public function setRelativePath($relativePath)
   {

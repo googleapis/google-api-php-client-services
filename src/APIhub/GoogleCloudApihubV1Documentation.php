@@ -20,12 +20,16 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1Documentation extends \Google\Model
 {
   /**
+   * Optional. The uri of the externally hosted documentation.
+   *
    * @var string
    */
   public $externalUri;
 
   /**
-   * @param string
+   * Optional. The uri of the externally hosted documentation.
+   *
+   * @param string $externalUri
    */
   public function setExternalUri($externalUri)
   {

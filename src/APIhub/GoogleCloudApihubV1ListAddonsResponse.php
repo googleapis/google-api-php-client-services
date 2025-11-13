@@ -17,38 +17,38 @@
 
 namespace Google\Service\APIhub;
 
-class GoogleCloudApihubV1ListDeploymentsResponse extends \Google\Collection
+class GoogleCloudApihubV1ListAddonsResponse extends \Google\Collection
 {
-  protected $collection_key = 'deployments';
-  protected $deploymentsType = GoogleCloudApihubV1Deployment::class;
-  protected $deploymentsDataType = 'array';
+  protected $collection_key = 'addons';
+  protected $addonsType = GoogleCloudApihubV1Addon::class;
+  protected $addonsDataType = 'array';
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
    *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * The deployment resources present in the API hub.
+   * The list of addons.
    *
-   * @param GoogleCloudApihubV1Deployment[] $deployments
+   * @param GoogleCloudApihubV1Addon[] $addons
    */
-  public function setDeployments($deployments)
+  public function setAddons($addons)
   {
-    $this->deployments = $deployments;
+    $this->addons = $addons;
   }
   /**
-   * @return GoogleCloudApihubV1Deployment[]
+   * @return GoogleCloudApihubV1Addon[]
    */
-  public function getDeployments()
+  public function getAddons()
   {
-    return $this->deployments;
+    return $this->addons;
   }
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If
-   * this field is omitted, there are no subsequent pages.
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
    *
    * @param string $nextPageToken
    */
@@ -66,4 +66,4 @@ class GoogleCloudApihubV1ListDeploymentsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApihubV1ListDeploymentsResponse::class, 'Google_Service_APIhub_GoogleCloudApihubV1ListDeploymentsResponse');
+class_alias(GoogleCloudApihubV1ListAddonsResponse::class, 'Google_Service_APIhub_GoogleCloudApihubV1ListAddonsResponse');

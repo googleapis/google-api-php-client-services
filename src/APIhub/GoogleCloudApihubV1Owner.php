@@ -20,16 +20,22 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1Owner extends \Google\Model
 {
   /**
+   * Optional. The name of the owner.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. The email of the owner.
+   *
    * @var string
    */
   public $email;
 
   /**
-   * @param string
+   * Optional. The name of the owner.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +49,9 @@ class GoogleCloudApihubV1Owner extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. The email of the owner.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {

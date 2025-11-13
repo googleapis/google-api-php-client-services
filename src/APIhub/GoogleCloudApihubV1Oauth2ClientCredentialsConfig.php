@@ -20,6 +20,8 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1Oauth2ClientCredentialsConfig extends \Google\Model
 {
   /**
+   * Required. The client identifier.
+   *
    * @var string
    */
   public $clientId;
@@ -27,7 +29,9 @@ class GoogleCloudApihubV1Oauth2ClientCredentialsConfig extends \Google\Model
   protected $clientSecretDataType = '';
 
   /**
-   * @param string
+   * Required. The client identifier.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -41,7 +45,11 @@ class GoogleCloudApihubV1Oauth2ClientCredentialsConfig extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param GoogleCloudApihubV1Secret
+   * Required. Secret version reference containing the client secret. The
+   * `secretmanager.versions.access` permission should be granted to the service
+   * account accessing the secret.
+   *
+   * @param GoogleCloudApihubV1Secret $clientSecret
    */
   public function setClientSecret(GoogleCloudApihubV1Secret $clientSecret)
   {

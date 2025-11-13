@@ -20,16 +20,22 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1Point extends \Google\Model
 {
   /**
+   * Required. Character position within the line (zero-indexed).
+   *
    * @var int
    */
   public $character;
   /**
+   * Required. Line number (zero-indexed).
+   *
    * @var int
    */
   public $line;
 
   /**
-   * @param int
+   * Required. Character position within the line (zero-indexed).
+   *
+   * @param int $character
    */
   public function setCharacter($character)
   {
@@ -43,7 +49,9 @@ class GoogleCloudApihubV1Point extends \Google\Model
     return $this->character;
   }
   /**
-   * @param int
+   * Required. Line number (zero-indexed).
+   *
+   * @param int $line
    */
   public function setLine($line)
   {

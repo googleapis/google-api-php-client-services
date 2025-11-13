@@ -20,24 +20,47 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1LastExecution extends \Google\Model
 {
   /**
+   * Default unspecified execution result.
+   */
+  public const RESULT_RESULT_UNSPECIFIED = 'RESULT_UNSPECIFIED';
+  /**
+   * The plugin instance executed successfully.
+   */
+  public const RESULT_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The plugin instance execution failed.
+   */
+  public const RESULT_FAILED = 'FAILED';
+  /**
+   * Output only. The last execution end time of the plugin instance.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. Error message describing the failure, if any, during the last
+   * execution.
+   *
    * @var string
    */
   public $errorMessage;
   /**
+   * Output only. The result of the last execution of the plugin instance.
+   *
    * @var string
    */
   public $result;
   /**
+   * Output only. The last execution start time of the plugin instance.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Output only. The last execution end time of the plugin instance.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -51,7 +74,10 @@ class GoogleCloudApihubV1LastExecution extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. Error message describing the failure, if any, during the last
+   * execution.
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -65,21 +91,27 @@ class GoogleCloudApihubV1LastExecution extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * @param string
+   * Output only. The result of the last execution of the plugin instance.
+   *
+   * Accepted values: RESULT_UNSPECIFIED, SUCCEEDED, FAILED
+   *
+   * @param self::RESULT_* $result
    */
   public function setResult($result)
   {
     $this->result = $result;
   }
   /**
-   * @return string
+   * @return self::RESULT_*
    */
   public function getResult()
   {
     return $this->result;
   }
   /**
-   * @param string
+   * Output only. The last execution start time of the plugin instance.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

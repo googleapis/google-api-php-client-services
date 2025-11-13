@@ -19,52 +19,157 @@ namespace Google\Service\APIhub;
 
 class GoogleCloudApihubV1Attribute extends \Google\Collection
 {
+  /**
+   * Attribute data type unspecified.
+   */
+  public const DATA_TYPE_DATA_TYPE_UNSPECIFIED = 'DATA_TYPE_UNSPECIFIED';
+  /**
+   * Attribute's value is of type enum.
+   */
+  public const DATA_TYPE_ENUM = 'ENUM';
+  /**
+   * Attribute's value is of type json.
+   */
+  public const DATA_TYPE_JSON = 'JSON';
+  /**
+   * Attribute's value is of type string.
+   */
+  public const DATA_TYPE_STRING = 'STRING';
+  /**
+   * Attribute's value is of type uri.
+   */
+  public const DATA_TYPE_URI = 'URI';
+  /**
+   * Attribute definition type unspecified.
+   */
+  public const DEFINITION_TYPE_DEFINITION_TYPE_UNSPECIFIED = 'DEFINITION_TYPE_UNSPECIFIED';
+  /**
+   * The attribute is predefined by the API Hub. Note that only the list of
+   * allowed values can be updated in this case via UpdateAttribute method.
+   */
+  public const DEFINITION_TYPE_SYSTEM_DEFINED = 'SYSTEM_DEFINED';
+  /**
+   * The attribute is defined by the user.
+   */
+  public const DEFINITION_TYPE_USER_DEFINED = 'USER_DEFINED';
+  /**
+   * Scope Unspecified.
+   */
+  public const SCOPE_SCOPE_UNSPECIFIED = 'SCOPE_UNSPECIFIED';
+  /**
+   * Attribute can be linked to an API.
+   */
+  public const SCOPE_API = 'API';
+  /**
+   * Attribute can be linked to an API version.
+   */
+  public const SCOPE_VERSION = 'VERSION';
+  /**
+   * Attribute can be linked to a Spec.
+   */
+  public const SCOPE_SPEC = 'SPEC';
+  /**
+   * Attribute can be linked to an API Operation.
+   */
+  public const SCOPE_API_OPERATION = 'API_OPERATION';
+  /**
+   * Attribute can be linked to a Deployment.
+   */
+  public const SCOPE_DEPLOYMENT = 'DEPLOYMENT';
+  /**
+   * Attribute can be linked to a Dependency.
+   */
+  public const SCOPE_DEPENDENCY = 'DEPENDENCY';
+  /**
+   * Attribute can be linked to a definition.
+   */
+  public const SCOPE_DEFINITION = 'DEFINITION';
+  /**
+   * Attribute can be linked to a ExternalAPI.
+   */
+  public const SCOPE_EXTERNAL_API = 'EXTERNAL_API';
+  /**
+   * Attribute can be linked to a Plugin.
+   */
+  public const SCOPE_PLUGIN = 'PLUGIN';
   protected $collection_key = 'allowedValues';
   protected $allowedValuesType = GoogleCloudApihubV1AllowedValue::class;
   protected $allowedValuesDataType = 'array';
   /**
+   * Optional. The maximum number of values that the attribute can have when
+   * associated with an API Hub resource. Cardinality 1 would represent a
+   * single-valued attribute. It must not be less than 1 or greater than 20. If
+   * not specified, the cardinality would be set to 1 by default and represent a
+   * single-valued attribute.
+   *
    * @var int
    */
   public $cardinality;
   /**
+   * Output only. The time at which the attribute was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The type of the data of the attribute.
+   *
    * @var string
    */
   public $dataType;
   /**
+   * Output only. The definition type of the attribute.
+   *
    * @var string
    */
   public $definitionType;
   /**
+   * Optional. The description of the attribute.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display name of the attribute.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. When mandatory is true, the attribute is mandatory for the
+   * resource specified in the scope. Only System defined attributes can be
+   * mandatory.
+   *
    * @var bool
    */
   public $mandatory;
   /**
+   * Identifier. The name of the attribute in the API Hub. Format:
+   * `projects/{project}/locations/{location}/attributes/{attribute}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The scope of the attribute. It represents the resource in the API
+   * Hub to which the attribute can be linked.
+   *
    * @var string
    */
   public $scope;
   /**
+   * Output only. The time at which the attribute was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudApihubV1AllowedValue[]
+   * Optional. The list of allowed values when the attribute value is of type
+   * enum. This is required when the data_type of the attribute is ENUM. The
+   * maximum number of allowed values of an attribute will be 1000.
+   *
+   * @param GoogleCloudApihubV1AllowedValue[] $allowedValues
    */
   public function setAllowedValues($allowedValues)
   {
@@ -78,7 +183,13 @@ class GoogleCloudApihubV1Attribute extends \Google\Collection
     return $this->allowedValues;
   }
   /**
-   * @param int
+   * Optional. The maximum number of values that the attribute can have when
+   * associated with an API Hub resource. Cardinality 1 would represent a
+   * single-valued attribute. It must not be less than 1 or greater than 20. If
+   * not specified, the cardinality would be set to 1 by default and represent a
+   * single-valued attribute.
+   *
+   * @param int $cardinality
    */
   public function setCardinality($cardinality)
   {
@@ -92,7 +203,9 @@ class GoogleCloudApihubV1Attribute extends \Google\Collection
     return $this->cardinality;
   }
   /**
-   * @param string
+   * Output only. The time at which the attribute was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -106,35 +219,45 @@ class GoogleCloudApihubV1Attribute extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The type of the data of the attribute.
+   *
+   * Accepted values: DATA_TYPE_UNSPECIFIED, ENUM, JSON, STRING, URI
+   *
+   * @param self::DATA_TYPE_* $dataType
    */
   public function setDataType($dataType)
   {
     $this->dataType = $dataType;
   }
   /**
-   * @return string
+   * @return self::DATA_TYPE_*
    */
   public function getDataType()
   {
     return $this->dataType;
   }
   /**
-   * @param string
+   * Output only. The definition type of the attribute.
+   *
+   * Accepted values: DEFINITION_TYPE_UNSPECIFIED, SYSTEM_DEFINED, USER_DEFINED
+   *
+   * @param self::DEFINITION_TYPE_* $definitionType
    */
   public function setDefinitionType($definitionType)
   {
     $this->definitionType = $definitionType;
   }
   /**
-   * @return string
+   * @return self::DEFINITION_TYPE_*
    */
   public function getDefinitionType()
   {
     return $this->definitionType;
   }
   /**
-   * @param string
+   * Optional. The description of the attribute.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -148,7 +271,9 @@ class GoogleCloudApihubV1Attribute extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display name of the attribute.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -162,7 +287,11 @@ class GoogleCloudApihubV1Attribute extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Output only. When mandatory is true, the attribute is mandatory for the
+   * resource specified in the scope. Only System defined attributes can be
+   * mandatory.
+   *
+   * @param bool $mandatory
    */
   public function setMandatory($mandatory)
   {
@@ -176,7 +305,10 @@ class GoogleCloudApihubV1Attribute extends \Google\Collection
     return $this->mandatory;
   }
   /**
-   * @param string
+   * Identifier. The name of the attribute in the API Hub. Format:
+   * `projects/{project}/locations/{location}/attributes/{attribute}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -190,21 +322,29 @@ class GoogleCloudApihubV1Attribute extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The scope of the attribute. It represents the resource in the API
+   * Hub to which the attribute can be linked.
+   *
+   * Accepted values: SCOPE_UNSPECIFIED, API, VERSION, SPEC, API_OPERATION,
+   * DEPLOYMENT, DEPENDENCY, DEFINITION, EXTERNAL_API, PLUGIN
+   *
+   * @param self::SCOPE_* $scope
    */
   public function setScope($scope)
   {
     $this->scope = $scope;
   }
   /**
-   * @return string
+   * @return self::SCOPE_*
    */
   public function getScope()
   {
     return $this->scope;
   }
   /**
-   * @param string
+   * Output only. The time at which the attribute was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

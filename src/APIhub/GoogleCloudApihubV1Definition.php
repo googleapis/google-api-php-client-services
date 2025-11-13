@@ -19,33 +19,59 @@ namespace Google\Service\APIhub;
 
 class GoogleCloudApihubV1Definition extends \Google\Model
 {
+  /**
+   * Definition type unspecified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Definition type schema.
+   */
+  public const TYPE_SCHEMA = 'SCHEMA';
   protected $attributesType = GoogleCloudApihubV1AttributeValues::class;
   protected $attributesDataType = 'map';
   /**
+   * Output only. The time at which the definition was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Identifier. The name of the definition. Format: `projects/{project}/locatio
+   * ns/{location}/apis/{api}/versions/{version}/definitions/{definition}`
+   *
    * @var string
    */
   public $name;
   protected $schemaType = GoogleCloudApihubV1Schema::class;
   protected $schemaDataType = '';
   /**
+   * Output only. The name of the spec from where the definition was parsed.
+   * Format is `projects/{project}/locations/{location}/apis/{api}/versions/{ver
+   * sion}/specs/{spec}`
+   *
    * @var string
    */
   public $spec;
   /**
+   * Output only. The type of the definition.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. The time at which the definition was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudApihubV1AttributeValues[]
+   * Optional. The list of user defined attributes associated with the
+   * definition resource. The key is the attribute name. It will be of the
+   * format: `projects/{project}/locations/{location}/attributes/{attribute}`.
+   * The value is the attribute values associated with the resource.
+   *
+   * @param GoogleCloudApihubV1AttributeValues[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -59,7 +85,9 @@ class GoogleCloudApihubV1Definition extends \Google\Model
     return $this->attributes;
   }
   /**
-   * @param string
+   * Output only. The time at which the definition was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -73,7 +101,10 @@ class GoogleCloudApihubV1Definition extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Identifier. The name of the definition. Format: `projects/{project}/locatio
+   * ns/{location}/apis/{api}/versions/{version}/definitions/{definition}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -87,7 +118,9 @@ class GoogleCloudApihubV1Definition extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudApihubV1Schema
+   * Output only. The value of a schema definition.
+   *
+   * @param GoogleCloudApihubV1Schema $schema
    */
   public function setSchema(GoogleCloudApihubV1Schema $schema)
   {
@@ -101,7 +134,11 @@ class GoogleCloudApihubV1Definition extends \Google\Model
     return $this->schema;
   }
   /**
-   * @param string
+   * Output only. The name of the spec from where the definition was parsed.
+   * Format is `projects/{project}/locations/{location}/apis/{api}/versions/{ver
+   * sion}/specs/{spec}`
+   *
+   * @param string $spec
    */
   public function setSpec($spec)
   {
@@ -115,21 +152,27 @@ class GoogleCloudApihubV1Definition extends \Google\Model
     return $this->spec;
   }
   /**
-   * @param string
+   * Output only. The type of the definition.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, SCHEMA
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. The time at which the definition was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

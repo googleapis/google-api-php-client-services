@@ -21,6 +21,9 @@ class GoogleCloudApihubV1ListVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'versions';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudApihubV1ListVersionsResponse extends \Google\Collection
   protected $versionsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudApihubV1ListVersionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApihubV1Version[]
+   * The versions corresponding to an API.
+   *
+   * @param GoogleCloudApihubV1Version[] $versions
    */
   public function setVersions($versions)
   {

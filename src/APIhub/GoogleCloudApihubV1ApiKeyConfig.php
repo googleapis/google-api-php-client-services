@@ -19,19 +19,53 @@ namespace Google\Service\APIhub;
 
 class GoogleCloudApihubV1ApiKeyConfig extends \Google\Model
 {
+  /**
+   * HTTP element location not specified.
+   */
+  public const HTTP_ELEMENT_LOCATION_HTTP_ELEMENT_LOCATION_UNSPECIFIED = 'HTTP_ELEMENT_LOCATION_UNSPECIFIED';
+  /**
+   * Element is in the HTTP request query.
+   */
+  public const HTTP_ELEMENT_LOCATION_QUERY = 'QUERY';
+  /**
+   * Element is in the HTTP request header.
+   */
+  public const HTTP_ELEMENT_LOCATION_HEADER = 'HEADER';
+  /**
+   * Element is in the HTTP request path.
+   */
+  public const HTTP_ELEMENT_LOCATION_PATH = 'PATH';
+  /**
+   * Element is in the HTTP request body.
+   */
+  public const HTTP_ELEMENT_LOCATION_BODY = 'BODY';
+  /**
+   * Element is in the HTTP request cookie.
+   */
+  public const HTTP_ELEMENT_LOCATION_COOKIE = 'COOKIE';
   protected $apiKeyType = GoogleCloudApihubV1Secret::class;
   protected $apiKeyDataType = '';
   /**
+   * Required. The location of the API key. The default value is QUERY.
+   *
    * @var string
    */
   public $httpElementLocation;
   /**
+   * Required. The parameter name of the API key. E.g. If the API request is
+   * "https://example.com/act?api_key=", "api_key" would be the parameter name.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GoogleCloudApihubV1Secret
+   * Required. The name of the SecretManager secret version resource storing the
+   * API key. Format: `projects/{project}/secrets/{secrete}/versions/{version}`.
+   * The `secretmanager.versions.access` permission should be granted to the
+   * service account accessing the secret.
+   *
+   * @param GoogleCloudApihubV1Secret $apiKey
    */
   public function setApiKey(GoogleCloudApihubV1Secret $apiKey)
   {
@@ -45,21 +79,29 @@ class GoogleCloudApihubV1ApiKeyConfig extends \Google\Model
     return $this->apiKey;
   }
   /**
-   * @param string
+   * Required. The location of the API key. The default value is QUERY.
+   *
+   * Accepted values: HTTP_ELEMENT_LOCATION_UNSPECIFIED, QUERY, HEADER, PATH,
+   * BODY, COOKIE
+   *
+   * @param self::HTTP_ELEMENT_LOCATION_* $httpElementLocation
    */
   public function setHttpElementLocation($httpElementLocation)
   {
     $this->httpElementLocation = $httpElementLocation;
   }
   /**
-   * @return string
+   * @return self::HTTP_ELEMENT_LOCATION_*
    */
   public function getHttpElementLocation()
   {
     return $this->httpElementLocation;
   }
   /**
-   * @param string
+   * Required. The parameter name of the API key. E.g. If the API request is
+   * "https://example.com/act?api_key=", "api_key" would be the parameter name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -23,12 +23,17 @@ class GoogleCloudApihubV1ListHostProjectRegistrationsResponse extends \Google\Co
   protected $hostProjectRegistrationsType = GoogleCloudApihubV1HostProjectRegistration::class;
   protected $hostProjectRegistrationsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApihubV1HostProjectRegistration[]
+   * The list of host project registrations.
+   *
+   * @param GoogleCloudApihubV1HostProjectRegistration[] $hostProjectRegistrations
    */
   public function setHostProjectRegistrations($hostProjectRegistrations)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApihubV1ListHostProjectRegistrationsResponse extends \Google\Co
     return $this->hostProjectRegistrations;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

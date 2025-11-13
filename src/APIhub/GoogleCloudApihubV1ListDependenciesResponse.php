@@ -23,12 +23,17 @@ class GoogleCloudApihubV1ListDependenciesResponse extends \Google\Collection
   protected $dependenciesType = GoogleCloudApihubV1Dependency::class;
   protected $dependenciesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApihubV1Dependency[]
+   * The dependency resources present in the API hub.
+   *
+   * @param GoogleCloudApihubV1Dependency[] $dependencies
    */
   public function setDependencies($dependencies)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApihubV1ListDependenciesResponse extends \Google\Collection
     return $this->dependencies;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

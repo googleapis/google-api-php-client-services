@@ -17,36 +17,30 @@
 
 namespace Google\Service\APIhub;
 
-class GoogleCloudApihubV1MatchResult extends \Google\Model
+class GoogleCloudApihubV1ManageAddonConfigRequest extends \Google\Model
 {
-  /**
-   * Output only. The name of the matched API Operation. Format: `projects/{proj
-   * ect}/locations/{location}/apis/{api}/versions/{version}/operations/{operati
-   * on}`
-   *
-   * @var string
-   */
-  public $name;
+  protected $configType = GoogleCloudApihubV1AddonConfig::class;
+  protected $configDataType = '';
 
   /**
-   * Output only. The name of the matched API Operation. Format: `projects/{proj
-   * ect}/locations/{location}/apis/{api}/versions/{version}/operations/{operati
-   * on}`
+   * Required. The config of the addon to be managed. This config will replace
+   * the config present in the addon. The type of the config should match the
+   * config type already present in the addon.
    *
-   * @param string $name
+   * @param GoogleCloudApihubV1AddonConfig $config
    */
-  public function setName($name)
+  public function setConfig(GoogleCloudApihubV1AddonConfig $config)
   {
-    $this->name = $name;
+    $this->config = $config;
   }
   /**
-   * @return string
+   * @return GoogleCloudApihubV1AddonConfig
    */
-  public function getName()
+  public function getConfig()
   {
-    return $this->name;
+    return $this->config;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApihubV1MatchResult::class, 'Google_Service_APIhub_GoogleCloudApihubV1MatchResult');
+class_alias(GoogleCloudApihubV1ManageAddonConfigRequest::class, 'Google_Service_APIhub_GoogleCloudApihubV1ManageAddonConfigRequest');

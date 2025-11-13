@@ -33,32 +33,50 @@ class GoogleCloudApihubV1Api extends \Google\Collection
   protected $businessUnitType = GoogleCloudApihubV1AttributeValues::class;
   protected $businessUnitDataType = '';
   /**
+   * Output only. The time at which the API resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The description of the API resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display name of the API resource.
+   *
    * @var string
    */
   public $displayName;
   protected $documentationType = GoogleCloudApihubV1Documentation::class;
   protected $documentationDataType = '';
   /**
+   * Optional. Fingerprint of the API resource. This must be unique for each API
+   * resource. It can neither be unset nor be updated to an existing fingerprint
+   * of another API resource.
+   *
    * @var string
    */
   public $fingerprint;
   protected $maturityLevelType = GoogleCloudApihubV1AttributeValues::class;
   protected $maturityLevelDataType = '';
   /**
+   * Identifier. The name of the API resource in the API Hub. Format:
+   * `projects/{project}/locations/{location}/apis/{api}`
+   *
    * @var string
    */
   public $name;
   protected $ownerType = GoogleCloudApihubV1Owner::class;
   protected $ownerDataType = '';
   /**
+   * Optional. The selected version for an API resource. This can be used when
+   * special handling is needed on client side for particular version of the
+   * API. Format is
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+   *
    * @var string
    */
   public $selectedVersion;
@@ -69,16 +87,30 @@ class GoogleCloudApihubV1Api extends \Google\Collection
   protected $teamType = GoogleCloudApihubV1AttributeValues::class;
   protected $teamDataType = '';
   /**
+   * Output only. The time at which the API resource was last updated.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. The list of versions present in an API resource. Note: An API
+   * resource can be associated with more than 1 version. Format is
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+   *
    * @var string[]
    */
   public $versions;
 
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The api functional requirements associated with the API resource.
+   * Carinality is 1 for this attribute. This maps to the following system
+   * defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-api-functional-
+   * requirements` attribute. The value of the attribute should be a proper URI,
+   * and in case of Cloud Storage URI, it should point to a Cloud Storage
+   * object, not a directory.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $apiFunctionalRequirements
    */
   public function setApiFunctionalRequirements(GoogleCloudApihubV1AttributeValues $apiFunctionalRequirements)
   {
@@ -92,7 +124,15 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->apiFunctionalRequirements;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The api requirement doc associated with the API resource.
+   * Carinality is 1 for this attribute. This maps to the following system
+   * defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-api-
+   * requirements` attribute. The value of the attribute should be a proper URI,
+   * and in case of Cloud Storage URI, it should point to a Cloud Storage
+   * object, not a directory.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $apiRequirements
    */
   public function setApiRequirements(GoogleCloudApihubV1AttributeValues $apiRequirements)
   {
@@ -106,7 +146,14 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->apiRequirements;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The style of the API. This maps to the following system defined
+   * attribute: `projects/{project}/locations/{location}/attributes/system-api-
+   * style` attribute. The number of values for this attribute will be based on
+   * the cardinality of the attribute. The same can be retrieved via
+   * GetAttribute API. All values should be from the list of allowed values
+   * defined for the attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $apiStyle
    */
   public function setApiStyle(GoogleCloudApihubV1AttributeValues $apiStyle)
   {
@@ -120,7 +167,15 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->apiStyle;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The api technical requirements associated with the API resource.
+   * Carinality is 1 for this attribute. This maps to the following system
+   * defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-api-technical-
+   * requirements` attribute. The value of the attribute should be a proper URI,
+   * and in case of Cloud Storage URI, it should point to a Cloud Storage
+   * object, not a directory.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $apiTechnicalRequirements
    */
   public function setApiTechnicalRequirements(GoogleCloudApihubV1AttributeValues $apiTechnicalRequirements)
   {
@@ -134,7 +189,12 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->apiTechnicalRequirements;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues[]
+   * Optional. The list of user defined attributes associated with the API
+   * resource. The key is the attribute name. It will be of the format:
+   * `projects/{project}/locations/{location}/attributes/{attribute}`. The value
+   * is the attribute values associated with the resource.
+   *
+   * @param GoogleCloudApihubV1AttributeValues[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -148,7 +208,15 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The business unit owning the API. This maps to the following
+   * system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-business-unit`
+   * attribute. The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. All values should be from the list of allowed values defined for the
+   * attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $businessUnit
    */
   public function setBusinessUnit(GoogleCloudApihubV1AttributeValues $businessUnit)
   {
@@ -162,7 +230,9 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->businessUnit;
   }
   /**
-   * @param string
+   * Output only. The time at which the API resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -176,7 +246,9 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The description of the API resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -190,7 +262,9 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display name of the API resource.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -204,7 +278,9 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudApihubV1Documentation
+   * Optional. The documentation for the API resource.
+   *
+   * @param GoogleCloudApihubV1Documentation $documentation
    */
   public function setDocumentation(GoogleCloudApihubV1Documentation $documentation)
   {
@@ -218,7 +294,11 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->documentation;
   }
   /**
-   * @param string
+   * Optional. Fingerprint of the API resource. This must be unique for each API
+   * resource. It can neither be unset nor be updated to an existing fingerprint
+   * of another API resource.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -232,7 +312,15 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The maturity level of the API. This maps to the following system
+   * defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-maturity-level`
+   * attribute. The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. All values should be from the list of allowed values defined for the
+   * attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $maturityLevel
    */
   public function setMaturityLevel(GoogleCloudApihubV1AttributeValues $maturityLevel)
   {
@@ -246,7 +334,10 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->maturityLevel;
   }
   /**
-   * @param string
+   * Identifier. The name of the API resource in the API Hub. Format:
+   * `projects/{project}/locations/{location}/apis/{api}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -260,7 +351,9 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudApihubV1Owner
+   * Optional. Owner details for the API resource.
+   *
+   * @param GoogleCloudApihubV1Owner $owner
    */
   public function setOwner(GoogleCloudApihubV1Owner $owner)
   {
@@ -274,7 +367,12 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->owner;
   }
   /**
-   * @param string
+   * Optional. The selected version for an API resource. This can be used when
+   * special handling is needed on client side for particular version of the
+   * API. Format is
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+   *
+   * @param string $selectedVersion
    */
   public function setSelectedVersion($selectedVersion)
   {
@@ -288,7 +386,10 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->selectedVersion;
   }
   /**
-   * @param GoogleCloudApihubV1SourceMetadata[]
+   * Output only. The list of sources and metadata from the sources of the API
+   * resource.
+   *
+   * @param GoogleCloudApihubV1SourceMetadata[] $sourceMetadata
    */
   public function setSourceMetadata($sourceMetadata)
   {
@@ -302,7 +403,15 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->sourceMetadata;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The target users for the API. This maps to the following system
+   * defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-target-user`
+   * attribute. The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. All values should be from the list of allowed values defined for the
+   * attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $targetUser
    */
   public function setTargetUser(GoogleCloudApihubV1AttributeValues $targetUser)
   {
@@ -316,7 +425,14 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->targetUser;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The team owning the API. This maps to the following system
+   * defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-team` attribute.
+   * The number of values for this attribute will be based on the cardinality of
+   * the attribute. The same can be retrieved via GetAttribute API. All values
+   * should be from the list of allowed values defined for the attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $team
    */
   public function setTeam(GoogleCloudApihubV1AttributeValues $team)
   {
@@ -330,7 +446,9 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->team;
   }
   /**
-   * @param string
+   * Output only. The time at which the API resource was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -344,7 +462,11 @@ class GoogleCloudApihubV1Api extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param string[]
+   * Output only. The list of versions present in an API resource. Note: An API
+   * resource can be associated with more than 1 version. Format is
+   * `projects/{project}/locations/{location}/apis/{api}/versions/{version}`
+   *
+   * @param string[] $versions
    */
   public function setVersions($versions)
   {

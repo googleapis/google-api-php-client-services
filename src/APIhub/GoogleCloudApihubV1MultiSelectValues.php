@@ -24,7 +24,9 @@ class GoogleCloudApihubV1MultiSelectValues extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param GoogleCloudApihubV1ConfigValueOption[]
+   * Optional. The config variable value of data type multi select.
+   *
+   * @param GoogleCloudApihubV1ConfigValueOption[] $values
    */
   public function setValues($values)
   {

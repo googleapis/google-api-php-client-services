@@ -22,12 +22,16 @@ class GoogleCloudApihubV1HttpResponse extends \Google\Model
   protected $headersType = GoogleCloudApihubV1Header::class;
   protected $headersDataType = 'map';
   /**
+   * Optional. Map of status code to observed count
+   *
    * @var string[]
    */
   public $responseCodes;
 
   /**
-   * @param GoogleCloudApihubV1Header[]
+   * Optional. Unordered map from header name to header metadata
+   *
+   * @param GoogleCloudApihubV1Header[] $headers
    */
   public function setHeaders($headers)
   {
@@ -41,7 +45,9 @@ class GoogleCloudApihubV1HttpResponse extends \Google\Model
     return $this->headers;
   }
   /**
-   * @param string[]
+   * Optional. Map of status code to observed count
+   *
+   * @param string[] $responseCodes
    */
   public function setResponseCodes($responseCodes)
   {

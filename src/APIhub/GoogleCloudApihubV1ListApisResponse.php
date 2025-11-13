@@ -23,12 +23,17 @@ class GoogleCloudApihubV1ListApisResponse extends \Google\Collection
   protected $apisType = GoogleCloudApihubV1Api::class;
   protected $apisDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApihubV1Api[]
+   * The API resources present in the API hub.
+   *
+   * @param GoogleCloudApihubV1Api[] $apis
    */
   public function setApis($apis)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApihubV1ListApisResponse extends \Google\Collection
     return $this->apis;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

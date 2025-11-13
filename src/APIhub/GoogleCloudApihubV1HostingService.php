@@ -20,12 +20,20 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1HostingService extends \Google\Model
 {
   /**
+   * Optional. The URI of the service implemented by the plugin developer, used
+   * to invoke the plugin's functionality. This information is only required for
+   * user defined plugins.
+   *
    * @var string
    */
   public $serviceUri;
 
   /**
-   * @param string
+   * Optional. The URI of the service implemented by the plugin developer, used
+   * to invoke the plugin's functionality. This information is only required for
+   * user defined plugins.
+   *
+   * @param string $serviceUri
    */
   public function setServiceUri($serviceUri)
   {

@@ -23,12 +23,17 @@ class GoogleCloudApihubV1ListDiscoveredApiObservationsResponse extends \Google\C
   protected $discoveredApiObservationsType = GoogleCloudApihubV1DiscoveredApiObservation::class;
   protected $discoveredApiObservationsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApihubV1DiscoveredApiObservation[]
+   * The DiscoveredApiObservation from the specified project and location.
+   *
+   * @param GoogleCloudApihubV1DiscoveredApiObservation[] $discoveredApiObservations
    */
   public function setDiscoveredApiObservations($discoveredApiObservations)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApihubV1ListDiscoveredApiObservationsResponse extends \Google\C
     return $this->discoveredApiObservations;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

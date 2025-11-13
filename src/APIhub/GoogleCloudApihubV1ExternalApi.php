@@ -23,38 +23,60 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
   protected $attributesType = GoogleCloudApihubV1AttributeValues::class;
   protected $attributesDataType = 'map';
   /**
+   * Output only. Creation timestamp.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Description of the external API. Max length is 2000 characters
+   * (Unicode Code Points).
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Display name of the external API. Max length is 63 characters
+   * (Unicode Code Points).
+   *
    * @var string
    */
   public $displayName;
   protected $documentationType = GoogleCloudApihubV1Documentation::class;
   protected $documentationDataType = '';
   /**
+   * Optional. List of endpoints on which this API is accessible.
+   *
    * @var string[]
    */
   public $endpoints;
   /**
+   * Identifier. Format:
+   * `projects/{project}/locations/{location}/externalApi/{externalApi}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. List of paths served by this API.
+   *
    * @var string[]
    */
   public $paths;
   /**
+   * Output only. Last update timestamp.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudApihubV1AttributeValues[]
+   * Optional. The list of user defined attributes associated with the Version
+   * resource. The key is the attribute name. It will be of the format:
+   * `projects/{project}/locations/{location}/attributes/{attribute}`. The value
+   * is the attribute values associated with the resource.
+   *
+   * @param GoogleCloudApihubV1AttributeValues[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -68,7 +90,9 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Output only. Creation timestamp.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -82,7 +106,10 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Description of the external API. Max length is 2000 characters
+   * (Unicode Code Points).
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -96,7 +123,10 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Display name of the external API. Max length is 63 characters
+   * (Unicode Code Points).
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -110,7 +140,9 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudApihubV1Documentation
+   * Optional. Documentation of the external API.
+   *
+   * @param GoogleCloudApihubV1Documentation $documentation
    */
   public function setDocumentation(GoogleCloudApihubV1Documentation $documentation)
   {
@@ -124,7 +156,9 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->documentation;
   }
   /**
-   * @param string[]
+   * Optional. List of endpoints on which this API is accessible.
+   *
+   * @param string[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -138,7 +172,10 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param string
+   * Identifier. Format:
+   * `projects/{project}/locations/{location}/externalApi/{externalApi}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -152,7 +189,9 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Optional. List of paths served by this API.
+   *
+   * @param string[] $paths
    */
   public function setPaths($paths)
   {
@@ -166,7 +205,9 @@ class GoogleCloudApihubV1ExternalApi extends \Google\Collection
     return $this->paths;
   }
   /**
-   * @param string
+   * Output only. Last update timestamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

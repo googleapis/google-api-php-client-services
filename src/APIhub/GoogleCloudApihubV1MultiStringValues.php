@@ -21,12 +21,16 @@ class GoogleCloudApihubV1MultiStringValues extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Optional. The config variable value of data type multi string.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Optional. The config variable value of data type multi string.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

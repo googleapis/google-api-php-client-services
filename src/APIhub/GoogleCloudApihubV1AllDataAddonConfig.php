@@ -17,36 +17,32 @@
 
 namespace Google\Service\APIhub;
 
-class GoogleCloudApihubV1MatchResult extends \Google\Model
+class GoogleCloudApihubV1AllDataAddonConfig extends \Google\Model
 {
   /**
-   * Output only. The name of the matched API Operation. Format: `projects/{proj
-   * ect}/locations/{location}/apis/{api}/versions/{version}/operations/{operati
-   * on}`
+   * Required. If true, the addon is enabled for all data in the API hub.
    *
-   * @var string
+   * @var bool
    */
-  public $name;
+  public $enabled;
 
   /**
-   * Output only. The name of the matched API Operation. Format: `projects/{proj
-   * ect}/locations/{location}/apis/{api}/versions/{version}/operations/{operati
-   * on}`
+   * Required. If true, the addon is enabled for all data in the API hub.
    *
-   * @param string $name
+   * @param bool $enabled
    */
-  public function setName($name)
+  public function setEnabled($enabled)
   {
-    $this->name = $name;
+    $this->enabled = $enabled;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getName()
+  public function getEnabled()
   {
-    return $this->name;
+    return $this->enabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApihubV1MatchResult::class, 'Google_Service_APIhub_GoogleCloudApihubV1MatchResult');
+class_alias(GoogleCloudApihubV1AllDataAddonConfig::class, 'Google_Service_APIhub_GoogleCloudApihubV1AllDataAddonConfig');

@@ -23,7 +23,9 @@ class GoogleCloudApihubV1LookupApiHubInstanceResponse extends \Google\Model
   protected $apiHubInstanceDataType = '';
 
   /**
-   * @param GoogleCloudApihubV1ApiHubInstance
+   * API Hub instance for a project if it exists, empty otherwise.
+   *
+   * @param GoogleCloudApihubV1ApiHubInstance $apiHubInstance
    */
   public function setApiHubInstance(GoogleCloudApihubV1ApiHubInstance $apiHubInstance)
   {

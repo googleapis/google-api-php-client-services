@@ -23,28 +23,45 @@ class GoogleCloudApihubV1ApiOperation extends \Google\Collection
   protected $attributesType = GoogleCloudApihubV1AttributeValues::class;
   protected $attributesDataType = 'map';
   /**
+   * Output only. The time at which the operation was created.
+   *
    * @var string
    */
   public $createTime;
   protected $detailsType = GoogleCloudApihubV1OperationDetails::class;
   protected $detailsDataType = '';
   /**
+   * Identifier. The name of the operation. Format: `projects/{project}/location
+   * s/{location}/apis/{api}/versions/{version}/operations/{operation}`
+   *
    * @var string
    */
   public $name;
   protected $sourceMetadataType = GoogleCloudApihubV1SourceMetadata::class;
   protected $sourceMetadataDataType = 'array';
   /**
+   * Output only. The name of the spec will be of the format: `projects/{project
+   * }/locations/{location}/apis/{api}/versions/{version}/specs/{spec}` Note:The
+   * name of the spec will be empty if the operation is created via
+   * CreateApiOperation API.
+   *
    * @var string
    */
   public $spec;
   /**
+   * Output only. The time at which the operation was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudApihubV1AttributeValues[]
+   * Optional. The list of user defined attributes associated with the API
+   * operation resource. The key is the attribute name. It will be of the
+   * format: `projects/{project}/locations/{location}/attributes/{attribute}`.
+   * The value is the attribute values associated with the resource.
+   *
+   * @param GoogleCloudApihubV1AttributeValues[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -58,7 +75,9 @@ class GoogleCloudApihubV1ApiOperation extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Output only. The time at which the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -72,7 +91,11 @@ class GoogleCloudApihubV1ApiOperation extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudApihubV1OperationDetails
+   * Optional. Operation details. Note: Even though this field is optional, it
+   * is required for CreateApiOperation API and we will fail the request if not
+   * provided.
+   *
+   * @param GoogleCloudApihubV1OperationDetails $details
    */
   public function setDetails(GoogleCloudApihubV1OperationDetails $details)
   {
@@ -86,7 +109,10 @@ class GoogleCloudApihubV1ApiOperation extends \Google\Collection
     return $this->details;
   }
   /**
-   * @param string
+   * Identifier. The name of the operation. Format: `projects/{project}/location
+   * s/{location}/apis/{api}/versions/{version}/operations/{operation}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -100,7 +126,10 @@ class GoogleCloudApihubV1ApiOperation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudApihubV1SourceMetadata[]
+   * Output only. The list of sources and metadata from the sources of the API
+   * operation.
+   *
+   * @param GoogleCloudApihubV1SourceMetadata[] $sourceMetadata
    */
   public function setSourceMetadata($sourceMetadata)
   {
@@ -114,7 +143,12 @@ class GoogleCloudApihubV1ApiOperation extends \Google\Collection
     return $this->sourceMetadata;
   }
   /**
-   * @param string
+   * Output only. The name of the spec will be of the format: `projects/{project
+   * }/locations/{location}/apis/{api}/versions/{version}/specs/{spec}` Note:The
+   * name of the spec will be empty if the operation is created via
+   * CreateApiOperation API.
+   *
+   * @param string $spec
    */
   public function setSpec($spec)
   {
@@ -128,7 +162,9 @@ class GoogleCloudApihubV1ApiOperation extends \Google\Collection
     return $this->spec;
   }
   /**
-   * @param string
+   * Output only. The time at which the operation was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

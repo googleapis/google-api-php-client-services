@@ -20,20 +20,52 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1Header extends \Google\Model
 {
   /**
+   * Unspecified data type
+   */
+  public const DATA_TYPE_DATA_TYPE_UNSPECIFIED = 'DATA_TYPE_UNSPECIFIED';
+  /**
+   * Boolean data type
+   */
+  public const DATA_TYPE_BOOL = 'BOOL';
+  /**
+   * Integer data type
+   */
+  public const DATA_TYPE_INTEGER = 'INTEGER';
+  /**
+   * Float data type
+   */
+  public const DATA_TYPE_FLOAT = 'FLOAT';
+  /**
+   * String data type
+   */
+  public const DATA_TYPE_STRING = 'STRING';
+  /**
+   * UUID data type
+   */
+  public const DATA_TYPE_UUID = 'UUID';
+  /**
+   * The number of occurrences of this Header across transactions.
+   *
    * @var string
    */
   public $count;
   /**
+   * Data type of header
+   *
    * @var string
    */
   public $dataType;
   /**
+   * Header name.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The number of occurrences of this Header across transactions.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -47,21 +79,27 @@ class GoogleCloudApihubV1Header extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * Data type of header
+   *
+   * Accepted values: DATA_TYPE_UNSPECIFIED, BOOL, INTEGER, FLOAT, STRING, UUID
+   *
+   * @param self::DATA_TYPE_* $dataType
    */
   public function setDataType($dataType)
   {
     $this->dataType = $dataType;
   }
   /**
-   * @return string
+   * @return self::DATA_TYPE_*
    */
   public function getDataType()
   {
     return $this->dataType;
   }
   /**
-   * @param string
+   * Header name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

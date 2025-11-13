@@ -23,7 +23,10 @@ class GoogleCloudApihubV1Endpoint extends \Google\Model
   protected $applicationIntegrationEndpointDetailsDataType = '';
 
   /**
-   * @param GoogleCloudApihubV1ApplicationIntegrationEndpointDetails
+   * Required. The details of the Application Integration endpoint to be
+   * triggered for curation.
+   *
+   * @param GoogleCloudApihubV1ApplicationIntegrationEndpointDetails $applicationIntegrationEndpointDetails
    */
   public function setApplicationIntegrationEndpointDetails(GoogleCloudApihubV1ApplicationIntegrationEndpointDetails $applicationIntegrationEndpointDetails)
   {

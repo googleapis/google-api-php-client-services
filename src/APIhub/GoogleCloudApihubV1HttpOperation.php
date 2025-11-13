@@ -20,6 +20,46 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1HttpOperation extends \Google\Model
 {
   /**
+   * Method unspecified.
+   */
+  public const METHOD_METHOD_UNSPECIFIED = 'METHOD_UNSPECIFIED';
+  /**
+   * Get Operation type.
+   */
+  public const METHOD_GET = 'GET';
+  /**
+   * Put Operation type.
+   */
+  public const METHOD_PUT = 'PUT';
+  /**
+   * Post Operation type.
+   */
+  public const METHOD_POST = 'POST';
+  /**
+   * Delete Operation type.
+   */
+  public const METHOD_DELETE = 'DELETE';
+  /**
+   * Options Operation type.
+   */
+  public const METHOD_OPTIONS = 'OPTIONS';
+  /**
+   * Head Operation type.
+   */
+  public const METHOD_HEAD = 'HEAD';
+  /**
+   * Patch Operation type.
+   */
+  public const METHOD_PATCH = 'PATCH';
+  /**
+   * Trace Operation type.
+   */
+  public const METHOD_TRACE = 'TRACE';
+  /**
+   * Optional. Operation method Note: Even though this field is optional, it is
+   * required for CreateApiOperation API and we will fail the request if not
+   * provided.
+   *
    * @var string
    */
   public $method;
@@ -27,21 +67,32 @@ class GoogleCloudApihubV1HttpOperation extends \Google\Model
   protected $pathDataType = '';
 
   /**
-   * @param string
+   * Optional. Operation method Note: Even though this field is optional, it is
+   * required for CreateApiOperation API and we will fail the request if not
+   * provided.
+   *
+   * Accepted values: METHOD_UNSPECIFIED, GET, PUT, POST, DELETE, OPTIONS, HEAD,
+   * PATCH, TRACE
+   *
+   * @param self::METHOD_* $method
    */
   public function setMethod($method)
   {
     $this->method = $method;
   }
   /**
-   * @return string
+   * @return self::METHOD_*
    */
   public function getMethod()
   {
     return $this->method;
   }
   /**
-   * @param GoogleCloudApihubV1Path
+   * Optional. The path details for the Operation. Note: Even though this field
+   * is optional, it is required for CreateApiOperation API and we will fail the
+   * request if not provided.
+   *
+   * @param GoogleCloudApihubV1Path $path
    */
   public function setPath(GoogleCloudApihubV1Path $path)
   {

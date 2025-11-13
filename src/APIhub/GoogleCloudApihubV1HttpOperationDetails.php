@@ -32,7 +32,9 @@ class GoogleCloudApihubV1HttpOperationDetails extends \Google\Collection
   protected $responseDataType = '';
 
   /**
-   * @param GoogleCloudApihubV1HttpOperation
+   * Required. An HTTP Operation.
+   *
+   * @param GoogleCloudApihubV1HttpOperation $httpOperation
    */
   public function setHttpOperation(GoogleCloudApihubV1HttpOperation $httpOperation)
   {
@@ -46,7 +48,9 @@ class GoogleCloudApihubV1HttpOperationDetails extends \Google\Collection
     return $this->httpOperation;
   }
   /**
-   * @param GoogleCloudApihubV1PathParam[]
+   * Optional. Path params of HttpOperation
+   *
+   * @param GoogleCloudApihubV1PathParam[] $pathParams
    */
   public function setPathParams($pathParams)
   {
@@ -60,7 +64,9 @@ class GoogleCloudApihubV1HttpOperationDetails extends \Google\Collection
     return $this->pathParams;
   }
   /**
-   * @param GoogleCloudApihubV1QueryParam[]
+   * Optional. Query params of HttpOperation
+   *
+   * @param GoogleCloudApihubV1QueryParam[] $queryParams
    */
   public function setQueryParams($queryParams)
   {
@@ -74,7 +80,9 @@ class GoogleCloudApihubV1HttpOperationDetails extends \Google\Collection
     return $this->queryParams;
   }
   /**
-   * @param GoogleCloudApihubV1HttpRequest
+   * Optional. Request metadata.
+   *
+   * @param GoogleCloudApihubV1HttpRequest $request
    */
   public function setRequest(GoogleCloudApihubV1HttpRequest $request)
   {
@@ -88,7 +96,9 @@ class GoogleCloudApihubV1HttpOperationDetails extends \Google\Collection
     return $this->request;
   }
   /**
-   * @param GoogleCloudApihubV1HttpResponse
+   * Optional. Response metadata.
+   *
+   * @param GoogleCloudApihubV1HttpResponse $response
    */
   public function setResponse(GoogleCloudApihubV1HttpResponse $response)
   {

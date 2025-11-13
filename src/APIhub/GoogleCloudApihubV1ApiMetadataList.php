@@ -24,7 +24,9 @@ class GoogleCloudApihubV1ApiMetadataList extends \Google\Collection
   protected $apiMetadataDataType = 'array';
 
   /**
-   * @param GoogleCloudApihubV1APIMetadata[]
+   * Required. The list of API metadata.
+   *
+   * @param GoogleCloudApihubV1APIMetadata[] $apiMetadata
    */
   public function setApiMetadata($apiMetadata)
   {

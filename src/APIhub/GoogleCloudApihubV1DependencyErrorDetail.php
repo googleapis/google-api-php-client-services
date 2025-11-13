@@ -20,30 +20,52 @@ namespace Google\Service\APIhub;
 class GoogleCloudApihubV1DependencyErrorDetail extends \Google\Model
 {
   /**
+   * Default value used for no error in the dependency.
+   */
+  public const ERROR_ERROR_UNSPECIFIED = 'ERROR_UNSPECIFIED';
+  /**
+   * Supplier entity has been deleted.
+   */
+  public const ERROR_SUPPLIER_NOT_FOUND = 'SUPPLIER_NOT_FOUND';
+  /**
+   * Supplier entity has been recreated.
+   */
+  public const ERROR_SUPPLIER_RECREATED = 'SUPPLIER_RECREATED';
+  /**
+   * Optional. Error in the dependency.
+   *
    * @var string
    */
   public $error;
   /**
+   * Optional. Timestamp at which the error was found.
+   *
    * @var string
    */
   public $errorTime;
 
   /**
-   * @param string
+   * Optional. Error in the dependency.
+   *
+   * Accepted values: ERROR_UNSPECIFIED, SUPPLIER_NOT_FOUND, SUPPLIER_RECREATED
+   *
+   * @param self::ERROR_* $error
    */
   public function setError($error)
   {
     $this->error = $error;
   }
   /**
-   * @return string
+   * @return self::ERROR_*
    */
   public function getError()
   {
     return $this->error;
   }
   /**
-   * @param string
+   * Optional. Timestamp at which the error was found.
+   *
+   * @param string $errorTime
    */
   public function setErrorTime($errorTime)
   {

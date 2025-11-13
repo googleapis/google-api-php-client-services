@@ -23,12 +23,17 @@ class GoogleCloudApihubV1ListExternalApisResponse extends \Google\Collection
   protected $externalApisType = GoogleCloudApihubV1ExternalApi::class;
   protected $externalApisDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApihubV1ExternalApi[]
+   * The External API resources present in the API hub.
+   *
+   * @param GoogleCloudApihubV1ExternalApi[] $externalApis
    */
   public function setExternalApis($externalApis)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApihubV1ListExternalApisResponse extends \Google\Collection
     return $this->externalApis;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

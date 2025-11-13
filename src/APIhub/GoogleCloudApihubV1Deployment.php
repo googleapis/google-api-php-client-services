@@ -21,28 +21,42 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
 {
   protected $collection_key = 'sourceMetadata';
   /**
+   * Output only. The API versions linked to this deployment. Note: A particular
+   * deployment could be linked to multiple different API versions (of same or
+   * different APIs).
+   *
    * @var string[]
    */
   public $apiVersions;
   protected $attributesType = GoogleCloudApihubV1AttributeValues::class;
   protected $attributesDataType = 'map';
   /**
+   * Output only. The time at which the deployment was created.
+   *
    * @var string
    */
   public $createTime;
   protected $deploymentTypeType = GoogleCloudApihubV1AttributeValues::class;
   protected $deploymentTypeDataType = '';
   /**
+   * Optional. The description of the deployment.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display name of the deployment.
+   *
    * @var string
    */
   public $displayName;
   protected $documentationType = GoogleCloudApihubV1Documentation::class;
   protected $documentationDataType = '';
   /**
+   * Required. The endpoints at which this deployment resource is listening for
+   * API requests. This could be a list of complete URIs, hostnames or an IP
+   * addresses.
+   *
    * @var string[]
    */
   public $endpoints;
@@ -51,34 +65,57 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
   protected $managementUrlType = GoogleCloudApihubV1AttributeValues::class;
   protected $managementUrlDataType = '';
   /**
+   * Identifier. The name of the deployment. Format:
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The resource URI identifies the deployment within its gateway.
+   * For Apigee gateways, its recommended to use the format:
+   * organizations/{org}/environments/{env}/apis/{api}. For ex: if a proxy with
+   * name `orders` is deployed in `staging` environment of `cymbal`
+   * organization, the resource URI would be:
+   * `organizations/cymbal/environments/staging/apis/orders`.
+   *
    * @var string
    */
   public $resourceUri;
   protected $sloType = GoogleCloudApihubV1AttributeValues::class;
   protected $sloDataType = '';
   /**
+   * Optional. The environment at source for the deployment. For example: prod,
+   * dev, staging, etc.
+   *
    * @var string
    */
   public $sourceEnvironment;
   protected $sourceMetadataType = GoogleCloudApihubV1SourceMetadata::class;
   protected $sourceMetadataDataType = 'array';
   /**
+   * Optional. The project to which the deployment belongs. For GCP gateways,
+   * this will refer to the project identifier. For others like Edge/OPDK, this
+   * will refer to the org identifier.
+   *
    * @var string
    */
   public $sourceProject;
   protected $sourceUriType = GoogleCloudApihubV1AttributeValues::class;
   protected $sourceUriDataType = '';
   /**
+   * Output only. The time at which the deployment was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Output only. The API versions linked to this deployment. Note: A particular
+   * deployment could be linked to multiple different API versions (of same or
+   * different APIs).
+   *
+   * @param string[] $apiVersions
    */
   public function setApiVersions($apiVersions)
   {
@@ -92,7 +129,12 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->apiVersions;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues[]
+   * Optional. The list of user defined attributes associated with the
+   * deployment resource. The key is the attribute name. It will be of the
+   * format: `projects/{project}/locations/{location}/attributes/{attribute}`.
+   * The value is the attribute values associated with the resource.
+   *
+   * @param GoogleCloudApihubV1AttributeValues[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -106,7 +148,9 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Output only. The time at which the deployment was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -120,7 +164,14 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Required. The type of deployment. This maps to the following system defined
+   * attribute: `projects/{project}/locations/{location}/attributes/system-
+   * deployment-type` attribute. The number of values for this attribute will be
+   * based on the cardinality of the attribute. The same can be retrieved via
+   * GetAttribute API. All values should be from the list of allowed values
+   * defined for the attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $deploymentType
    */
   public function setDeploymentType(GoogleCloudApihubV1AttributeValues $deploymentType)
   {
@@ -134,7 +185,9 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->deploymentType;
   }
   /**
-   * @param string
+   * Optional. The description of the deployment.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -148,7 +201,9 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display name of the deployment.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -162,7 +217,9 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudApihubV1Documentation
+   * Optional. The documentation of the deployment.
+   *
+   * @param GoogleCloudApihubV1Documentation $documentation
    */
   public function setDocumentation(GoogleCloudApihubV1Documentation $documentation)
   {
@@ -176,7 +233,11 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->documentation;
   }
   /**
-   * @param string[]
+   * Required. The endpoints at which this deployment resource is listening for
+   * API requests. This could be a list of complete URIs, hostnames or an IP
+   * addresses.
+   *
+   * @param string[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -190,7 +251,15 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The environment mapping to this deployment. This maps to the
+   * following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-environment`
+   * attribute. The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. All values should be from the list of allowed values defined for the
+   * attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $environment
    */
   public function setEnvironment(GoogleCloudApihubV1AttributeValues $environment)
   {
@@ -204,7 +273,14 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->environment;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The uri where users can navigate to for the management of the
+   * deployment. This maps to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-management-url`
+   * The number of values for this attribute will be based on the cardinality of
+   * the attribute. The same can be retrieved via GetAttribute API. The value of
+   * the attribute should be a valid URL.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $managementUrl
    */
   public function setManagementUrl(GoogleCloudApihubV1AttributeValues $managementUrl)
   {
@@ -218,7 +294,10 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->managementUrl;
   }
   /**
-   * @param string
+   * Identifier. The name of the deployment. Format:
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -232,7 +311,14 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The resource URI identifies the deployment within its gateway.
+   * For Apigee gateways, its recommended to use the format:
+   * organizations/{org}/environments/{env}/apis/{api}. For ex: if a proxy with
+   * name `orders` is deployed in `staging` environment of `cymbal`
+   * organization, the resource URI would be:
+   * `organizations/cymbal/environments/staging/apis/orders`.
+   *
+   * @param string $resourceUri
    */
   public function setResourceUri($resourceUri)
   {
@@ -246,7 +332,14 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->resourceUri;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The SLO for this deployment. This maps to the following system
+   * defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-slo` attribute.
+   * The number of values for this attribute will be based on the cardinality of
+   * the attribute. The same can be retrieved via GetAttribute API. All values
+   * should be from the list of allowed values defined for the attribute.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $slo
    */
   public function setSlo(GoogleCloudApihubV1AttributeValues $slo)
   {
@@ -260,7 +353,10 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->slo;
   }
   /**
-   * @param string
+   * Optional. The environment at source for the deployment. For example: prod,
+   * dev, staging, etc.
+   *
+   * @param string $sourceEnvironment
    */
   public function setSourceEnvironment($sourceEnvironment)
   {
@@ -274,7 +370,10 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->sourceEnvironment;
   }
   /**
-   * @param GoogleCloudApihubV1SourceMetadata[]
+   * Output only. The list of sources and metadata from the sources of the
+   * deployment.
+   *
+   * @param GoogleCloudApihubV1SourceMetadata[] $sourceMetadata
    */
   public function setSourceMetadata($sourceMetadata)
   {
@@ -288,7 +387,11 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->sourceMetadata;
   }
   /**
-   * @param string
+   * Optional. The project to which the deployment belongs. For GCP gateways,
+   * this will refer to the project identifier. For others like Edge/OPDK, this
+   * will refer to the org identifier.
+   *
+   * @param string $sourceProject
    */
   public function setSourceProject($sourceProject)
   {
@@ -302,7 +405,15 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->sourceProject;
   }
   /**
-   * @param GoogleCloudApihubV1AttributeValues
+   * Optional. The uri where additional source specific information for this
+   * deployment can be found. This maps to the following system defined
+   * attribute: `projects/{project}/locations/{location}/attributes/system-
+   * source-uri` The number of values for this attribute will be based on the
+   * cardinality of the attribute. The same can be retrieved via GetAttribute
+   * API. The value of the attribute should be a valid URI, and in case of Cloud
+   * Storage URI, it should point to a Cloud Storage object, not a directory.
+   *
+   * @param GoogleCloudApihubV1AttributeValues $sourceUri
    */
   public function setSourceUri(GoogleCloudApihubV1AttributeValues $sourceUri)
   {
@@ -316,7 +427,9 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->sourceUri;
   }
   /**
-   * @param string
+   * Output only. The time at which the deployment was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
