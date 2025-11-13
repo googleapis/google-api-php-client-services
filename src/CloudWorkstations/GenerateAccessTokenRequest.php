@@ -20,20 +20,38 @@ namespace Google\Service\CloudWorkstations;
 class GenerateAccessTokenRequest extends \Google\Model
 {
   /**
+   * Desired expiration time of the access token. This value must be at most 24
+   * hours in the future. If a value is not specified, the token's expiration
+   * time will be set to a default value of 1 hour in the future.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Optional. Port for which the access token should be generated. If
+   * specified, the generated access token grants access only to the specified
+   * port of the workstation. If specified, values must be within the range [1 -
+   * 65535]. If not specified, the generated access token grants access to all
+   * ports of the workstation.
+   *
    * @var int
    */
   public $port;
   /**
+   * Desired lifetime duration of the access token. This value must be at most
+   * 24 hours. If a value is not specified, the token's lifetime will be set to
+   * a default value of 1 hour.
+   *
    * @var string
    */
   public $ttl;
 
   /**
-   * @param string
+   * Desired expiration time of the access token. This value must be at most 24
+   * hours in the future. If a value is not specified, the token's expiration
+   * time will be set to a default value of 1 hour in the future.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -47,7 +65,13 @@ class GenerateAccessTokenRequest extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param int
+   * Optional. Port for which the access token should be generated. If
+   * specified, the generated access token grants access only to the specified
+   * port of the workstation. If specified, values must be within the range [1 -
+   * 65535]. If not specified, the generated access token grants access to all
+   * ports of the workstation.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -61,7 +85,11 @@ class GenerateAccessTokenRequest extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * Desired lifetime duration of the access token. This value must be at most
+   * 24 hours. If a value is not specified, the token's lifetime will be set to
+   * a default value of 1 hour.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {

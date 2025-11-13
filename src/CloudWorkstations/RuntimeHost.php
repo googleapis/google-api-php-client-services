@@ -23,7 +23,9 @@ class RuntimeHost extends \Google\Model
   protected $gceInstanceHostDataType = '';
 
   /**
-   * @param GceInstanceHost
+   * Specifies a Compute Engine instance as the host.
+   *
+   * @param GceInstanceHost $gceInstanceHost
    */
   public function setGceInstanceHost(GceInstanceHost $gceInstanceHost)
   {

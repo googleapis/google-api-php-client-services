@@ -23,7 +23,9 @@ class Host extends \Google\Model
   protected $gceInstanceDataType = '';
 
   /**
-   * @param GceInstance
+   * Specifies a Compute Engine instance as the host.
+   *
+   * @param GceInstance $gceInstance
    */
   public function setGceInstance(GceInstance $gceInstance)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\CloudWorkstations;
 class StopWorkstationRequest extends \Google\Model
 {
   /**
+   * Optional. If set, the request will be rejected if the latest version of the
+   * workstation on the server does not have this ETag.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. If set, validate the request and preview the review, but do not
+   * actually apply it.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string
+   * Optional. If set, the request will be rejected if the latest version of the
+   * workstation on the server does not have this ETag.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -43,7 +52,10 @@ class StopWorkstationRequest extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param bool
+   * Optional. If set, validate the request and preview the review, but do not
+   * actually apply it.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

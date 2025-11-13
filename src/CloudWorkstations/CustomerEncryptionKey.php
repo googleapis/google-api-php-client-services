@@ -20,16 +20,32 @@ namespace Google\Service\CloudWorkstations;
 class CustomerEncryptionKey extends \Google\Model
 {
   /**
+   * Immutable. The name of the Google Cloud KMS encryption key. For example, `"
+   * projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME"
+   * `. The key must be in the same region as the workstation configuration.
+   *
    * @var string
    */
   public $kmsKey;
   /**
+   * Immutable. The service account to use with the specified KMS key. We
+   * recommend that you use a separate service account and follow KMS best
+   * practices. For more information, see [Separation of
+   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud
+   * kms keys add-iam-policy-binding`
+   * [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-
+   * iam-policy-binding#--member).
+   *
    * @var string
    */
   public $kmsKeyServiceAccount;
 
   /**
-   * @param string
+   * Immutable. The name of the Google Cloud KMS encryption key. For example, `"
+   * projects/PROJECT_ID/locations/REGION/keyRings/KEY_RING/cryptoKeys/KEY_NAME"
+   * `. The key must be in the same region as the workstation configuration.
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {
@@ -43,7 +59,15 @@ class CustomerEncryptionKey extends \Google\Model
     return $this->kmsKey;
   }
   /**
-   * @param string
+   * Immutable. The service account to use with the specified KMS key. We
+   * recommend that you use a separate service account and follow KMS best
+   * practices. For more information, see [Separation of
+   * duties](https://cloud.google.com/kms/docs/separation-of-duties) and `gcloud
+   * kms keys add-iam-policy-binding`
+   * [`--member`](https://cloud.google.com/sdk/gcloud/reference/kms/keys/add-
+   * iam-policy-binding#--member).
+   *
+   * @param string $kmsKeyServiceAccount
    */
   public function setKmsKeyServiceAccount($kmsKeyServiceAccount)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\CloudWorkstations;
 class DomainConfig extends \Google\Model
 {
   /**
+   * Immutable. Domain used by Workstations for HTTP ingress.
+   *
    * @var string
    */
   public $domain;
 
   /**
-   * @param string
+   * Immutable. Domain used by Workstations for HTTP ingress.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {

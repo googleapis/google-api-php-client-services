@@ -20,20 +20,28 @@ namespace Google\Service\CloudWorkstations;
 class GceShieldedInstanceConfig extends \Google\Model
 {
   /**
+   * Optional. Whether the instance has integrity monitoring enabled.
+   *
    * @var bool
    */
   public $enableIntegrityMonitoring;
   /**
+   * Optional. Whether the instance has Secure Boot enabled.
+   *
    * @var bool
    */
   public $enableSecureBoot;
   /**
+   * Optional. Whether the instance has the vTPM enabled.
+   *
    * @var bool
    */
   public $enableVtpm;
 
   /**
-   * @param bool
+   * Optional. Whether the instance has integrity monitoring enabled.
+   *
+   * @param bool $enableIntegrityMonitoring
    */
   public function setEnableIntegrityMonitoring($enableIntegrityMonitoring)
   {
@@ -47,7 +55,9 @@ class GceShieldedInstanceConfig extends \Google\Model
     return $this->enableIntegrityMonitoring;
   }
   /**
-   * @param bool
+   * Optional. Whether the instance has Secure Boot enabled.
+   *
+   * @param bool $enableSecureBoot
    */
   public function setEnableSecureBoot($enableSecureBoot)
   {
@@ -61,7 +71,9 @@ class GceShieldedInstanceConfig extends \Google\Model
     return $this->enableSecureBoot;
   }
   /**
-   * @param bool
+   * Optional. Whether the instance has the vTPM enabled.
+   *
+   * @param bool $enableVtpm
    */
   public function setEnableVtpm($enableVtpm)
   {

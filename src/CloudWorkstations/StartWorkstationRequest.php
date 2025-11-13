@@ -20,20 +20,32 @@ namespace Google\Service\CloudWorkstations;
 class StartWorkstationRequest extends \Google\Model
 {
   /**
+   * Optional. If set, the workstation starts using the boost configuration with
+   * the specified ID.
+   *
    * @var string
    */
   public $boostConfig;
   /**
+   * Optional. If set, the request will be rejected if the latest version of the
+   * workstation on the server does not have this ETag.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. If set, validate the request and preview the review, but do not
+   * actually apply it.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string
+   * Optional. If set, the workstation starts using the boost configuration with
+   * the specified ID.
+   *
+   * @param string $boostConfig
    */
   public function setBoostConfig($boostConfig)
   {
@@ -47,7 +59,10 @@ class StartWorkstationRequest extends \Google\Model
     return $this->boostConfig;
   }
   /**
-   * @param string
+   * Optional. If set, the request will be rejected if the latest version of the
+   * workstation on the server does not have this ETag.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -61,7 +76,10 @@ class StartWorkstationRequest extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param bool
+   * Optional. If set, validate the request and preview the review, but do not
+   * actually apply it.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

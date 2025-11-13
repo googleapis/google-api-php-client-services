@@ -20,16 +20,23 @@ namespace Google\Service\CloudWorkstations;
 class Accelerator extends \Google\Model
 {
   /**
+   * Optional. Number of accelerator cards exposed to the instance.
+   *
    * @var int
    */
   public $count;
   /**
+   * Optional. Type of accelerator resource to attach to the instance, for
+   * example, `"nvidia-tesla-p100"`.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param int
+   * Optional. Number of accelerator cards exposed to the instance.
+   *
+   * @param int $count
    */
   public function setCount($count)
   {
@@ -43,7 +50,10 @@ class Accelerator extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * Optional. Type of accelerator resource to attach to the instance, for
+   * example, `"nvidia-tesla-p100"`.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

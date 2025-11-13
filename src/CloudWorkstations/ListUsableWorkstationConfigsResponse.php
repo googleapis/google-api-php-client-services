@@ -21,10 +21,15 @@ class ListUsableWorkstationConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'workstationConfigs';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unreachable resources.
+   *
    * @var string[]
    */
   public $unreachable;
@@ -32,7 +37,10 @@ class ListUsableWorkstationConfigsResponse extends \Google\Collection
   protected $workstationConfigsDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListUsableWorkstationConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Unreachable resources.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
@@ -60,7 +70,9 @@ class ListUsableWorkstationConfigsResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * @param WorkstationConfig[]
+   * The requested configs.
+   *
+   * @param WorkstationConfig[] $workstationConfigs
    */
   public function setWorkstationConfigs($workstationConfigs)
   {

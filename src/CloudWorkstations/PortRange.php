@@ -20,16 +20,25 @@ namespace Google\Service\CloudWorkstations;
 class PortRange extends \Google\Model
 {
   /**
+   * Required. Starting port number for the current range of ports. Valid ports
+   * are 22, 80, and ports within the range 1024-65535.
+   *
    * @var int
    */
   public $first;
   /**
+   * Required. Ending port number for the current range of ports. Valid ports
+   * are 22, 80, and ports within the range 1024-65535.
+   *
    * @var int
    */
   public $last;
 
   /**
-   * @param int
+   * Required. Starting port number for the current range of ports. Valid ports
+   * are 22, 80, and ports within the range 1024-65535.
+   *
+   * @param int $first
    */
   public function setFirst($first)
   {
@@ -43,7 +52,10 @@ class PortRange extends \Google\Model
     return $this->first;
   }
   /**
-   * @param int
+   * Required. Ending port number for the current range of ports. Valid ports
+   * are 22, 80, and ports within the range 1024-65535.
+   *
+   * @param int $last
    */
   public function setLast($last)
   {
