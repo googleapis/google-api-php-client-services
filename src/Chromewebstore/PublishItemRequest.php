@@ -19,20 +19,45 @@ namespace Google\Service\Chromewebstore;
 
 class PublishItemRequest extends \Google\Collection
 {
+  /**
+   * Default value. This is the same as DEFAULT_PUBLISH.
+   */
+  public const PUBLISH_TYPE_PUBLISH_TYPE_UNSPECIFIED = 'PUBLISH_TYPE_UNSPECIFIED';
+  /**
+   * The submission will be published immediately after being approved.
+   */
+  public const PUBLISH_TYPE_DEFAULT_PUBLISH = 'DEFAULT_PUBLISH';
+  /**
+   * After approval the submission will be staged and can then be published by
+   * the developer.
+   */
+  public const PUBLISH_TYPE_STAGED_PUBLISH = 'STAGED_PUBLISH';
   protected $collection_key = 'deployInfos';
   protected $deployInfosType = DeployInfo::class;
   protected $deployInfosDataType = 'array';
   /**
+   * Optional. Use this to control if the item is published immediately on
+   * approval or staged for publishing in the future. Defaults to
+   * `DEFAULT_PUBLISH` if unset.
+   *
    * @var string
    */
   public $publishType;
   /**
+   * Optional. Whether to attempt to skip item review. The API will validate if
+   * the item qualifies and return a validation error if the item requires
+   * review. Defaults to `false` if unset.
+   *
    * @var bool
    */
   public $skipReview;
 
   /**
-   * @param DeployInfo[]
+   * Optional. Additional deploy information including the desired initial
+   * percentage rollout. Defaults to the current value saved in the developer
+   * dashboard if unset.
+   *
+   * @param DeployInfo[] $deployInfos
    */
   public function setDeployInfos($deployInfos)
   {
@@ -46,21 +71,31 @@ class PublishItemRequest extends \Google\Collection
     return $this->deployInfos;
   }
   /**
-   * @param string
+   * Optional. Use this to control if the item is published immediately on
+   * approval or staged for publishing in the future. Defaults to
+   * `DEFAULT_PUBLISH` if unset.
+   *
+   * Accepted values: PUBLISH_TYPE_UNSPECIFIED, DEFAULT_PUBLISH, STAGED_PUBLISH
+   *
+   * @param self::PUBLISH_TYPE_* $publishType
    */
   public function setPublishType($publishType)
   {
     $this->publishType = $publishType;
   }
   /**
-   * @return string
+   * @return self::PUBLISH_TYPE_*
    */
   public function getPublishType()
   {
     return $this->publishType;
   }
   /**
-   * @param bool
+   * Optional. Whether to attempt to skip item review. The API will validate if
+   * the item qualifies and return a validation error if the item requires
+   * review. Defaults to `false` if unset.
+   *
+   * @param bool $skipReview
    */
   public function setSkipReview($skipReview)
   {

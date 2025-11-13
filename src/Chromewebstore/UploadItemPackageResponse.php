@@ -20,24 +20,61 @@ namespace Google\Service\Chromewebstore;
 class UploadItemPackageResponse extends \Google\Model
 {
   /**
+   * The default value.
+   */
+  public const UPLOAD_STATE_UPLOAD_STATE_UNSPECIFIED = 'UPLOAD_STATE_UNSPECIFIED';
+  /**
+   * The upload succeeded.
+   */
+  public const UPLOAD_STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The upload is currently being processed.
+   */
+  public const UPLOAD_STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * The upload failed.
+   */
+  public const UPLOAD_STATE_FAILED = 'FAILED';
+  /**
+   * Used as the value of `lastAsyncUploadState` in a `fetchStatus` response
+   * indicating that an upload attempt was not found.
+   */
+  public const UPLOAD_STATE_NOT_FOUND = 'NOT_FOUND';
+  /**
+   * The extension version provided in the manifest of the uploaded package.
+   * This will not be set if the upload is still in progress (`upload_state` is
+   * `UPLOAD_IN_PROGRESS`).
+   *
    * @var string
    */
   public $crxVersion;
   /**
+   * Output only. The ID of the item the package was uploaded to.
+   *
    * @var string
    */
   public $itemId;
   /**
+   * The name of the item the package was uploaded to.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The state of the upload. If `upload_state` is
+   * `UPLOAD_IN_PROGRESS`, you can poll for updates using the fetchStatus
+   * method.
+   *
    * @var string
    */
   public $uploadState;
 
   /**
-   * @param string
+   * The extension version provided in the manifest of the uploaded package.
+   * This will not be set if the upload is still in progress (`upload_state` is
+   * `UPLOAD_IN_PROGRESS`).
+   *
+   * @param string $crxVersion
    */
   public function setCrxVersion($crxVersion)
   {
@@ -51,7 +88,9 @@ class UploadItemPackageResponse extends \Google\Model
     return $this->crxVersion;
   }
   /**
-   * @param string
+   * Output only. The ID of the item the package was uploaded to.
+   *
+   * @param string $itemId
    */
   public function setItemId($itemId)
   {
@@ -65,7 +104,9 @@ class UploadItemPackageResponse extends \Google\Model
     return $this->itemId;
   }
   /**
-   * @param string
+   * The name of the item the package was uploaded to.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,14 +120,21 @@ class UploadItemPackageResponse extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The state of the upload. If `upload_state` is
+   * `UPLOAD_IN_PROGRESS`, you can poll for updates using the fetchStatus
+   * method.
+   *
+   * Accepted values: UPLOAD_STATE_UNSPECIFIED, SUCCEEDED, IN_PROGRESS, FAILED,
+   * NOT_FOUND
+   *
+   * @param self::UPLOAD_STATE_* $uploadState
    */
   public function setUploadState($uploadState)
   {
     $this->uploadState = $uploadState;
   }
   /**
-   * @return string
+   * @return self::UPLOAD_STATE_*
    */
   public function getUploadState()
   {
