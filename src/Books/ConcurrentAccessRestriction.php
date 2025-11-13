@@ -20,52 +20,77 @@ namespace Google\Service\Books;
 class ConcurrentAccessRestriction extends \Google\Model
 {
   /**
+   * Whether access is granted for this (user, device, volume).
+   *
    * @var bool
    */
   public $deviceAllowed;
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The maximum number of concurrent access licenses for this volume.
+   *
    * @var int
    */
   public $maxConcurrentDevices;
   /**
+   * Error/warning message.
+   *
    * @var string
    */
   public $message;
   /**
+   * Client nonce for verification. Download access and client-validation only.
+   *
    * @var string
    */
   public $nonce;
   /**
+   * Error/warning reason code.
+   *
    * @var string
    */
   public $reasonCode;
   /**
+   * Whether this volume has any concurrent access restrictions.
+   *
    * @var bool
    */
   public $restricted;
   /**
+   * Response signature.
+   *
    * @var string
    */
   public $signature;
   /**
+   * Client app identifier for verification. Download access and client-
+   * validation only.
+   *
    * @var string
    */
   public $source;
   /**
+   * Time in seconds for license auto-expiration.
+   *
    * @var int
    */
   public $timeWindowSeconds;
   /**
+   * Identifies the volume for which this entry applies.
+   *
    * @var string
    */
   public $volumeId;
 
   /**
-   * @param bool
+   * Whether access is granted for this (user, device, volume).
+   *
+   * @param bool $deviceAllowed
    */
   public function setDeviceAllowed($deviceAllowed)
   {
@@ -79,7 +104,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->deviceAllowed;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -93,7 +120,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param int
+   * The maximum number of concurrent access licenses for this volume.
+   *
+   * @param int $maxConcurrentDevices
    */
   public function setMaxConcurrentDevices($maxConcurrentDevices)
   {
@@ -107,7 +136,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->maxConcurrentDevices;
   }
   /**
-   * @param string
+   * Error/warning message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -121,7 +152,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Client nonce for verification. Download access and client-validation only.
+   *
+   * @param string $nonce
    */
   public function setNonce($nonce)
   {
@@ -135,7 +168,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->nonce;
   }
   /**
-   * @param string
+   * Error/warning reason code.
+   *
+   * @param string $reasonCode
    */
   public function setReasonCode($reasonCode)
   {
@@ -149,7 +184,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->reasonCode;
   }
   /**
-   * @param bool
+   * Whether this volume has any concurrent access restrictions.
+   *
+   * @param bool $restricted
    */
   public function setRestricted($restricted)
   {
@@ -163,7 +200,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->restricted;
   }
   /**
-   * @param string
+   * Response signature.
+   *
+   * @param string $signature
    */
   public function setSignature($signature)
   {
@@ -177,7 +216,10 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->signature;
   }
   /**
-   * @param string
+   * Client app identifier for verification. Download access and client-
+   * validation only.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -191,7 +233,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->source;
   }
   /**
-   * @param int
+   * Time in seconds for license auto-expiration.
+   *
+   * @param int $timeWindowSeconds
    */
   public function setTimeWindowSeconds($timeWindowSeconds)
   {
@@ -205,7 +249,9 @@ class ConcurrentAccessRestriction extends \Google\Model
     return $this->timeWindowSeconds;
   }
   /**
-   * @param string
+   * Identifies the volume for which this entry applies.
+   *
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

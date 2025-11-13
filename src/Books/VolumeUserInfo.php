@@ -20,50 +20,76 @@ namespace Google\Service\Books;
 class VolumeUserInfo extends \Google\Model
 {
   /**
+   * Timestamp when this volume was acquired by the user. (RFC 3339 UTC date-
+   * time format) Acquiring includes purchase, user upload, receiving family
+   * sharing, etc.
+   *
    * @var string
    */
   public $acquiredTime;
   /**
+   * How this volume was acquired.
+   *
    * @var int
    */
   public $acquisitionType;
   protected $copyType = VolumeUserInfoCopy::class;
   protected $copyDataType = '';
   /**
+   * Whether this volume is purchased, sample, pd download etc.
+   *
    * @var int
    */
   public $entitlementType;
   protected $familySharingType = VolumeUserInfoFamilySharing::class;
   protected $familySharingDataType = '';
   /**
+   * Whether or not the user shared this volume with the family.
+   *
    * @var bool
    */
   public $isFamilySharedFromUser;
   /**
+   * Whether or not the user received this volume through family sharing.
+   *
    * @var bool
    */
   public $isFamilySharedToUser;
   /**
+   * Deprecated: Replaced by familySharing.
+   *
    * @var bool
    */
   public $isFamilySharingAllowed;
   /**
+   * Deprecated: Replaced by familySharing.
+   *
    * @var bool
    */
   public $isFamilySharingDisabledByFop;
   /**
+   * Whether or not this volume is currently in "my books."
+   *
    * @var bool
    */
   public $isInMyBooks;
   /**
+   * Whether or not this volume was pre-ordered by the authenticated user making
+   * the request. (In LITE projection.)
+   *
    * @var bool
    */
   public $isPreordered;
   /**
+   * Whether or not this volume was purchased by the authenticated user making
+   * the request. (In LITE projection.)
+   *
    * @var bool
    */
   public $isPurchased;
   /**
+   * Whether or not this volume was user uploaded.
+   *
    * @var bool
    */
   public $isUploaded;
@@ -72,12 +98,18 @@ class VolumeUserInfo extends \Google\Model
   protected $rentalPeriodType = VolumeUserInfoRentalPeriod::class;
   protected $rentalPeriodDataType = '';
   /**
+   * Whether this book is an active or an expired rental.
+   *
    * @var string
    */
   public $rentalState;
   protected $reviewType = Review::class;
   protected $reviewDataType = '';
   /**
+   * Timestamp when this volume was last modified by a user action, such as a
+   * reading position update, volume purchase or writing a review. (RFC 3339 UTC
+   * date-time format).
+   *
    * @var string
    */
   public $updated;
@@ -85,7 +117,11 @@ class VolumeUserInfo extends \Google\Model
   protected $userUploadedVolumeInfoDataType = '';
 
   /**
-   * @param string
+   * Timestamp when this volume was acquired by the user. (RFC 3339 UTC date-
+   * time format) Acquiring includes purchase, user upload, receiving family
+   * sharing, etc.
+   *
+   * @param string $acquiredTime
    */
   public function setAcquiredTime($acquiredTime)
   {
@@ -99,7 +135,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->acquiredTime;
   }
   /**
-   * @param int
+   * How this volume was acquired.
+   *
+   * @param int $acquisitionType
    */
   public function setAcquisitionType($acquisitionType)
   {
@@ -113,7 +151,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->acquisitionType;
   }
   /**
-   * @param VolumeUserInfoCopy
+   * Copy/Paste accounting information.
+   *
+   * @param VolumeUserInfoCopy $copy
    */
   public function setCopy(VolumeUserInfoCopy $copy)
   {
@@ -127,7 +167,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->copy;
   }
   /**
-   * @param int
+   * Whether this volume is purchased, sample, pd download etc.
+   *
+   * @param int $entitlementType
    */
   public function setEntitlementType($entitlementType)
   {
@@ -141,7 +183,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->entitlementType;
   }
   /**
-   * @param VolumeUserInfoFamilySharing
+   * Information on the ability to share with the family.
+   *
+   * @param VolumeUserInfoFamilySharing $familySharing
    */
   public function setFamilySharing(VolumeUserInfoFamilySharing $familySharing)
   {
@@ -155,7 +199,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->familySharing;
   }
   /**
-   * @param bool
+   * Whether or not the user shared this volume with the family.
+   *
+   * @param bool $isFamilySharedFromUser
    */
   public function setIsFamilySharedFromUser($isFamilySharedFromUser)
   {
@@ -169,7 +215,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->isFamilySharedFromUser;
   }
   /**
-   * @param bool
+   * Whether or not the user received this volume through family sharing.
+   *
+   * @param bool $isFamilySharedToUser
    */
   public function setIsFamilySharedToUser($isFamilySharedToUser)
   {
@@ -183,7 +231,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->isFamilySharedToUser;
   }
   /**
-   * @param bool
+   * Deprecated: Replaced by familySharing.
+   *
+   * @param bool $isFamilySharingAllowed
    */
   public function setIsFamilySharingAllowed($isFamilySharingAllowed)
   {
@@ -197,7 +247,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->isFamilySharingAllowed;
   }
   /**
-   * @param bool
+   * Deprecated: Replaced by familySharing.
+   *
+   * @param bool $isFamilySharingDisabledByFop
    */
   public function setIsFamilySharingDisabledByFop($isFamilySharingDisabledByFop)
   {
@@ -211,7 +263,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->isFamilySharingDisabledByFop;
   }
   /**
-   * @param bool
+   * Whether or not this volume is currently in "my books."
+   *
+   * @param bool $isInMyBooks
    */
   public function setIsInMyBooks($isInMyBooks)
   {
@@ -225,7 +279,10 @@ class VolumeUserInfo extends \Google\Model
     return $this->isInMyBooks;
   }
   /**
-   * @param bool
+   * Whether or not this volume was pre-ordered by the authenticated user making
+   * the request. (In LITE projection.)
+   *
+   * @param bool $isPreordered
    */
   public function setIsPreordered($isPreordered)
   {
@@ -239,7 +296,10 @@ class VolumeUserInfo extends \Google\Model
     return $this->isPreordered;
   }
   /**
-   * @param bool
+   * Whether or not this volume was purchased by the authenticated user making
+   * the request. (In LITE projection.)
+   *
+   * @param bool $isPurchased
    */
   public function setIsPurchased($isPurchased)
   {
@@ -253,7 +313,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->isPurchased;
   }
   /**
-   * @param bool
+   * Whether or not this volume was user uploaded.
+   *
+   * @param bool $isUploaded
    */
   public function setIsUploaded($isUploaded)
   {
@@ -267,7 +329,10 @@ class VolumeUserInfo extends \Google\Model
     return $this->isUploaded;
   }
   /**
-   * @param ReadingPosition
+   * The user's current reading position in the volume, if one is available. (In
+   * LITE projection.)
+   *
+   * @param ReadingPosition $readingPosition
    */
   public function setReadingPosition(ReadingPosition $readingPosition)
   {
@@ -281,7 +346,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->readingPosition;
   }
   /**
-   * @param VolumeUserInfoRentalPeriod
+   * Period during this book is/was a valid rental.
+   *
+   * @param VolumeUserInfoRentalPeriod $rentalPeriod
    */
   public function setRentalPeriod(VolumeUserInfoRentalPeriod $rentalPeriod)
   {
@@ -295,7 +362,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->rentalPeriod;
   }
   /**
-   * @param string
+   * Whether this book is an active or an expired rental.
+   *
+   * @param string $rentalState
    */
   public function setRentalState($rentalState)
   {
@@ -309,7 +378,9 @@ class VolumeUserInfo extends \Google\Model
     return $this->rentalState;
   }
   /**
-   * @param Review
+   * This user's review of this volume, if one exists.
+   *
+   * @param Review $review
    */
   public function setReview(Review $review)
   {
@@ -323,7 +394,11 @@ class VolumeUserInfo extends \Google\Model
     return $this->review;
   }
   /**
-   * @param string
+   * Timestamp when this volume was last modified by a user action, such as a
+   * reading position update, volume purchase or writing a review. (RFC 3339 UTC
+   * date-time format).
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {
@@ -337,7 +412,7 @@ class VolumeUserInfo extends \Google\Model
     return $this->updated;
   }
   /**
-   * @param VolumeUserInfoUserUploadedVolumeInfo
+   * @param VolumeUserInfoUserUploadedVolumeInfo $userUploadedVolumeInfo
    */
   public function setUserUploadedVolumeInfo(VolumeUserInfoUserUploadedVolumeInfo $userUploadedVolumeInfo)
   {

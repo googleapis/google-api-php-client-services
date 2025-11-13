@@ -21,60 +21,91 @@ class Layersummary extends \Google\Collection
 {
   protected $collection_key = 'annotationTypes';
   /**
+   * The number of annotations for this layer.
+   *
    * @var int
    */
   public $annotationCount;
   /**
+   * The list of annotation types contained for this layer.
+   *
    * @var string[]
    */
   public $annotationTypes;
   /**
+   * Link to get data for this annotation.
+   *
    * @var string
    */
   public $annotationsDataLink;
   /**
+   * The link to get the annotations for this layer.
+   *
    * @var string
    */
   public $annotationsLink;
   /**
+   * The content version this resource is for.
+   *
    * @var string
    */
   public $contentVersion;
   /**
+   * The number of data items for this layer.
+   *
    * @var int
    */
   public $dataCount;
   /**
+   * Unique id of this layer summary.
+   *
    * @var string
    */
   public $id;
   /**
+   * Resource Type
+   *
    * @var string
    */
   public $kind;
   /**
+   * The layer id for this summary.
+   *
    * @var string
    */
   public $layerId;
   /**
+   * URL to this resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * Timestamp for the last time an item in this layer was updated. (RFC 3339
+   * UTC date-time format).
+   *
    * @var string
    */
   public $updated;
   /**
+   * The current version of this layer's volume annotations. Note that this
+   * version applies only to the data in the books.layers.volumeAnnotations.*
+   * responses. The actual annotation data is versioned separately.
+   *
    * @var string
    */
   public $volumeAnnotationsVersion;
   /**
+   * The volume id this resource is for.
+   *
    * @var string
    */
   public $volumeId;
 
   /**
-   * @param int
+   * The number of annotations for this layer.
+   *
+   * @param int $annotationCount
    */
   public function setAnnotationCount($annotationCount)
   {
@@ -88,7 +119,9 @@ class Layersummary extends \Google\Collection
     return $this->annotationCount;
   }
   /**
-   * @param string[]
+   * The list of annotation types contained for this layer.
+   *
+   * @param string[] $annotationTypes
    */
   public function setAnnotationTypes($annotationTypes)
   {
@@ -102,7 +135,9 @@ class Layersummary extends \Google\Collection
     return $this->annotationTypes;
   }
   /**
-   * @param string
+   * Link to get data for this annotation.
+   *
+   * @param string $annotationsDataLink
    */
   public function setAnnotationsDataLink($annotationsDataLink)
   {
@@ -116,7 +151,9 @@ class Layersummary extends \Google\Collection
     return $this->annotationsDataLink;
   }
   /**
-   * @param string
+   * The link to get the annotations for this layer.
+   *
+   * @param string $annotationsLink
    */
   public function setAnnotationsLink($annotationsLink)
   {
@@ -130,7 +167,9 @@ class Layersummary extends \Google\Collection
     return $this->annotationsLink;
   }
   /**
-   * @param string
+   * The content version this resource is for.
+   *
+   * @param string $contentVersion
    */
   public function setContentVersion($contentVersion)
   {
@@ -144,7 +183,9 @@ class Layersummary extends \Google\Collection
     return $this->contentVersion;
   }
   /**
-   * @param int
+   * The number of data items for this layer.
+   *
+   * @param int $dataCount
    */
   public function setDataCount($dataCount)
   {
@@ -158,7 +199,9 @@ class Layersummary extends \Google\Collection
     return $this->dataCount;
   }
   /**
-   * @param string
+   * Unique id of this layer summary.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -172,7 +215,9 @@ class Layersummary extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Resource Type
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -186,7 +231,9 @@ class Layersummary extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The layer id for this summary.
+   *
+   * @param string $layerId
    */
   public function setLayerId($layerId)
   {
@@ -200,7 +247,9 @@ class Layersummary extends \Google\Collection
     return $this->layerId;
   }
   /**
-   * @param string
+   * URL to this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -214,7 +263,10 @@ class Layersummary extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string
+   * Timestamp for the last time an item in this layer was updated. (RFC 3339
+   * UTC date-time format).
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {
@@ -228,7 +280,11 @@ class Layersummary extends \Google\Collection
     return $this->updated;
   }
   /**
-   * @param string
+   * The current version of this layer's volume annotations. Note that this
+   * version applies only to the data in the books.layers.volumeAnnotations.*
+   * responses. The actual annotation data is versioned separately.
+   *
+   * @param string $volumeAnnotationsVersion
    */
   public function setVolumeAnnotationsVersion($volumeAnnotationsVersion)
   {
@@ -242,7 +298,9 @@ class Layersummary extends \Google\Collection
     return $this->volumeAnnotationsVersion;
   }
   /**
-   * @param string
+   * The volume id this resource is for.
+   *
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

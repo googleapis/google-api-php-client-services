@@ -26,7 +26,9 @@ class DictlayerdataDict extends \Google\Collection
   protected $wordsDataType = 'array';
 
   /**
-   * @param DictlayerdataDictSource
+   * The source, url and attribution for this dictionary data.
+   *
+   * @param DictlayerdataDictSource $source
    */
   public function setSource(DictlayerdataDictSource $source)
   {
@@ -40,7 +42,7 @@ class DictlayerdataDict extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param DictlayerdataDictWords[]
+   * @param DictlayerdataDictWords[] $words
    */
   public function setWords($words)
   {

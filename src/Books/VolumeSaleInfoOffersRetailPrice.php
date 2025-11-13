@@ -34,7 +34,7 @@ class VolumeSaleInfoOffersRetailPrice extends \Google\Model
     return $this->amountInMicros;
   }
   /**
-   * @param string
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {

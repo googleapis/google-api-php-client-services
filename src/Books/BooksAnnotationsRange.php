@@ -20,24 +20,34 @@ namespace Google\Service\Books;
 class BooksAnnotationsRange extends \Google\Model
 {
   /**
+   * The offset from the ending position.
+   *
    * @var string
    */
   public $endOffset;
   /**
+   * The ending position for the range.
+   *
    * @var string
    */
   public $endPosition;
   /**
+   * The offset from the starting position.
+   *
    * @var string
    */
   public $startOffset;
   /**
+   * The starting position for the range.
+   *
    * @var string
    */
   public $startPosition;
 
   /**
-   * @param string
+   * The offset from the ending position.
+   *
+   * @param string $endOffset
    */
   public function setEndOffset($endOffset)
   {
@@ -51,7 +61,9 @@ class BooksAnnotationsRange extends \Google\Model
     return $this->endOffset;
   }
   /**
-   * @param string
+   * The ending position for the range.
+   *
+   * @param string $endPosition
    */
   public function setEndPosition($endPosition)
   {
@@ -65,7 +77,9 @@ class BooksAnnotationsRange extends \Google\Model
     return $this->endPosition;
   }
   /**
-   * @param string
+   * The offset from the starting position.
+   *
+   * @param string $startOffset
    */
   public function setStartOffset($startOffset)
   {
@@ -79,7 +93,9 @@ class BooksAnnotationsRange extends \Google\Model
     return $this->startOffset;
   }
   /**
-   * @param string
+   * The starting position for the range.
+   *
+   * @param string $startPosition
    */
   public function setStartPosition($startPosition)
   {

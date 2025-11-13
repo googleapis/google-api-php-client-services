@@ -31,7 +31,7 @@ class UsersettingsNotification extends \Google\Model
   protected $rewardExpirationsDataType = '';
 
   /**
-   * @param UsersettingsNotificationMatchMyInterests
+   * @param UsersettingsNotificationMatchMyInterests $matchMyInterests
    */
   public function setMatchMyInterests(UsersettingsNotificationMatchMyInterests $matchMyInterests)
   {
@@ -45,7 +45,7 @@ class UsersettingsNotification extends \Google\Model
     return $this->matchMyInterests;
   }
   /**
-   * @param UsersettingsNotificationMoreFromAuthors
+   * @param UsersettingsNotificationMoreFromAuthors $moreFromAuthors
    */
   public function setMoreFromAuthors(UsersettingsNotificationMoreFromAuthors $moreFromAuthors)
   {
@@ -59,7 +59,7 @@ class UsersettingsNotification extends \Google\Model
     return $this->moreFromAuthors;
   }
   /**
-   * @param UsersettingsNotificationMoreFromSeries
+   * @param UsersettingsNotificationMoreFromSeries $moreFromSeries
    */
   public function setMoreFromSeries(UsersettingsNotificationMoreFromSeries $moreFromSeries)
   {
@@ -73,7 +73,7 @@ class UsersettingsNotification extends \Google\Model
     return $this->moreFromSeries;
   }
   /**
-   * @param UsersettingsNotificationPriceDrop
+   * @param UsersettingsNotificationPriceDrop $priceDrop
    */
   public function setPriceDrop(UsersettingsNotificationPriceDrop $priceDrop)
   {
@@ -87,7 +87,7 @@ class UsersettingsNotification extends \Google\Model
     return $this->priceDrop;
   }
   /**
-   * @param UsersettingsNotificationRewardExpirations
+   * @param UsersettingsNotificationRewardExpirations $rewardExpirations
    */
   public function setRewardExpirations(UsersettingsNotificationRewardExpirations $rewardExpirations)
   {

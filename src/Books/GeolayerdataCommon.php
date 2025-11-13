@@ -20,28 +20,41 @@ namespace Google\Service\Books;
 class GeolayerdataCommon extends \Google\Model
 {
   /**
+   * The language of the information url and description.
+   *
    * @var string
    */
   public $lang;
   /**
+   * The URL for the preview image information.
+   *
    * @var string
    */
   public $previewImageUrl;
   /**
+   * The description for this location.
+   *
    * @var string
    */
   public $snippet;
   /**
+   * The URL for information for this location. Ex: wikipedia link.
+   *
    * @var string
    */
   public $snippetUrl;
   /**
+   * The display title and localized canonical name to use when searching for
+   * this entity on Google search.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The language of the information url and description.
+   *
+   * @param string $lang
    */
   public function setLang($lang)
   {
@@ -55,7 +68,9 @@ class GeolayerdataCommon extends \Google\Model
     return $this->lang;
   }
   /**
-   * @param string
+   * The URL for the preview image information.
+   *
+   * @param string $previewImageUrl
    */
   public function setPreviewImageUrl($previewImageUrl)
   {
@@ -69,7 +84,9 @@ class GeolayerdataCommon extends \Google\Model
     return $this->previewImageUrl;
   }
   /**
-   * @param string
+   * The description for this location.
+   *
+   * @param string $snippet
    */
   public function setSnippet($snippet)
   {
@@ -83,7 +100,9 @@ class GeolayerdataCommon extends \Google\Model
     return $this->snippet;
   }
   /**
-   * @param string
+   * The URL for information for this location. Ex: wikipedia link.
+   *
+   * @param string $snippetUrl
    */
   public function setSnippetUrl($snippetUrl)
   {
@@ -97,7 +116,10 @@ class GeolayerdataCommon extends \Google\Model
     return $this->snippetUrl;
   }
   /**
-   * @param string
+   * The display title and localized canonical name to use when searching for
+   * this entity on Google search.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

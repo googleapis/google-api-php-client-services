@@ -23,12 +23,16 @@ class Offers extends \Google\Collection
   protected $itemsType = OffersItems::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param OffersItems[]
+   * A list of offers.
+   *
+   * @param OffersItems[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +46,9 @@ class Offers extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

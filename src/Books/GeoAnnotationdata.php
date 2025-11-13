@@ -20,42 +20,61 @@ namespace Google\Service\Books;
 class GeoAnnotationdata extends \Google\Model
 {
   /**
+   * The type of annotation this data is for.
+   *
    * @var string
    */
   public $annotationType;
   protected $dataType = Geolayerdata::class;
   protected $dataDataType = '';
   /**
+   * Base64 encoded data for this annotation data.
+   *
    * @var string
    */
   public $encodedData;
   /**
+   * Unique id for this annotation data.
+   *
    * @var string
    */
   public $id;
   /**
+   * Resource Type
+   *
    * @var string
    */
   public $kind;
   /**
+   * The Layer id for this data. *
+   *
    * @var string
    */
   public $layerId;
   /**
+   * URL for this resource. *
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * Timestamp for the last time this data was updated. (RFC 3339 UTC date-time
+   * format).
+   *
    * @var string
    */
   public $updated;
   /**
+   * The volume id for this data. *
+   *
    * @var string
    */
   public $volumeId;
 
   /**
-   * @param string
+   * The type of annotation this data is for.
+   *
+   * @param string $annotationType
    */
   public function setAnnotationType($annotationType)
   {
@@ -69,7 +88,10 @@ class GeoAnnotationdata extends \Google\Model
     return $this->annotationType;
   }
   /**
-   * @param Geolayerdata
+   * JSON encoded data for this geo annotation data. Emitted with name 'data' in
+   * JSON output. Either this or dict_data will be populated.
+   *
+   * @param Geolayerdata $data
    */
   public function setData(Geolayerdata $data)
   {
@@ -83,7 +105,9 @@ class GeoAnnotationdata extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Base64 encoded data for this annotation data.
+   *
+   * @param string $encodedData
    */
   public function setEncodedData($encodedData)
   {
@@ -97,7 +121,9 @@ class GeoAnnotationdata extends \Google\Model
     return $this->encodedData;
   }
   /**
-   * @param string
+   * Unique id for this annotation data.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -111,7 +137,9 @@ class GeoAnnotationdata extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Resource Type
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -125,7 +153,9 @@ class GeoAnnotationdata extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The Layer id for this data. *
+   *
+   * @param string $layerId
    */
   public function setLayerId($layerId)
   {
@@ -139,7 +169,9 @@ class GeoAnnotationdata extends \Google\Model
     return $this->layerId;
   }
   /**
-   * @param string
+   * URL for this resource. *
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -153,7 +185,10 @@ class GeoAnnotationdata extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * Timestamp for the last time this data was updated. (RFC 3339 UTC date-time
+   * format).
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {
@@ -167,7 +202,9 @@ class GeoAnnotationdata extends \Google\Model
     return $this->updated;
   }
   /**
-   * @param string
+   * The volume id for this data. *
+   *
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

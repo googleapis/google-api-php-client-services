@@ -20,16 +20,22 @@ namespace Google\Service\Books;
 class VolumeVolumeInfoIndustryIdentifiers extends \Google\Model
 {
   /**
+   * Industry specific volume identifier.
+   *
    * @var string
    */
   public $identifier;
   /**
+   * Identifier type. Possible values are ISBN_10, ISBN_13, ISSN and OTHER.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Industry specific volume identifier.
+   *
+   * @param string $identifier
    */
   public function setIdentifier($identifier)
   {
@@ -43,7 +49,9 @@ class VolumeVolumeInfoIndustryIdentifiers extends \Google\Model
     return $this->identifier;
   }
   /**
-   * @param string
+   * Identifier type. Possible values are ISBN_10, ISBN_13, ISSN and OTHER.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

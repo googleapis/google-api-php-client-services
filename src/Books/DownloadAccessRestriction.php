@@ -20,56 +20,87 @@ namespace Google\Service\Books;
 class DownloadAccessRestriction extends \Google\Model
 {
   /**
+   * If restricted, whether access is granted for this (user, device, volume).
+   *
    * @var bool
    */
   public $deviceAllowed;
   /**
+   * If restricted, the number of content download licenses already acquired
+   * (including the requesting client, if licensed).
+   *
    * @var int
    */
   public $downloadsAcquired;
   /**
+   * If deviceAllowed, whether access was just acquired with this request.
+   *
    * @var bool
    */
   public $justAcquired;
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * If restricted, the maximum number of content download licenses for this
+   * volume.
+   *
    * @var int
    */
   public $maxDownloadDevices;
   /**
+   * Error/warning message.
+   *
    * @var string
    */
   public $message;
   /**
+   * Client nonce for verification. Download access and client-validation only.
+   *
    * @var string
    */
   public $nonce;
   /**
+   * Error/warning reason code. Additional codes may be added in the future. 0
+   * OK 100 ACCESS_DENIED_PUBLISHER_LIMIT 101 ACCESS_DENIED_LIMIT 200
+   * WARNING_USED_LAST_ACCESS
+   *
    * @var string
    */
   public $reasonCode;
   /**
+   * Whether this volume has any download access restrictions.
+   *
    * @var bool
    */
   public $restricted;
   /**
+   * Response signature.
+   *
    * @var string
    */
   public $signature;
   /**
+   * Client app identifier for verification. Download access and client-
+   * validation only.
+   *
    * @var string
    */
   public $source;
   /**
+   * Identifies the volume for which this entry applies.
+   *
    * @var string
    */
   public $volumeId;
 
   /**
-   * @param bool
+   * If restricted, whether access is granted for this (user, device, volume).
+   *
+   * @param bool $deviceAllowed
    */
   public function setDeviceAllowed($deviceAllowed)
   {
@@ -83,7 +114,10 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->deviceAllowed;
   }
   /**
-   * @param int
+   * If restricted, the number of content download licenses already acquired
+   * (including the requesting client, if licensed).
+   *
+   * @param int $downloadsAcquired
    */
   public function setDownloadsAcquired($downloadsAcquired)
   {
@@ -97,7 +131,9 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->downloadsAcquired;
   }
   /**
-   * @param bool
+   * If deviceAllowed, whether access was just acquired with this request.
+   *
+   * @param bool $justAcquired
    */
   public function setJustAcquired($justAcquired)
   {
@@ -111,7 +147,9 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->justAcquired;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -125,7 +163,10 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param int
+   * If restricted, the maximum number of content download licenses for this
+   * volume.
+   *
+   * @param int $maxDownloadDevices
    */
   public function setMaxDownloadDevices($maxDownloadDevices)
   {
@@ -139,7 +180,9 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->maxDownloadDevices;
   }
   /**
-   * @param string
+   * Error/warning message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -153,7 +196,9 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Client nonce for verification. Download access and client-validation only.
+   *
+   * @param string $nonce
    */
   public function setNonce($nonce)
   {
@@ -167,7 +212,11 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->nonce;
   }
   /**
-   * @param string
+   * Error/warning reason code. Additional codes may be added in the future. 0
+   * OK 100 ACCESS_DENIED_PUBLISHER_LIMIT 101 ACCESS_DENIED_LIMIT 200
+   * WARNING_USED_LAST_ACCESS
+   *
+   * @param string $reasonCode
    */
   public function setReasonCode($reasonCode)
   {
@@ -181,7 +230,9 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->reasonCode;
   }
   /**
-   * @param bool
+   * Whether this volume has any download access restrictions.
+   *
+   * @param bool $restricted
    */
   public function setRestricted($restricted)
   {
@@ -195,7 +246,9 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->restricted;
   }
   /**
-   * @param string
+   * Response signature.
+   *
+   * @param string $signature
    */
   public function setSignature($signature)
   {
@@ -209,7 +262,10 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->signature;
   }
   /**
-   * @param string
+   * Client app identifier for verification. Download access and client-
+   * validation only.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -223,7 +279,9 @@ class DownloadAccessRestriction extends \Google\Model
     return $this->source;
   }
   /**
-   * @param string
+   * Identifies the volume for which this entry applies.
+   *
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

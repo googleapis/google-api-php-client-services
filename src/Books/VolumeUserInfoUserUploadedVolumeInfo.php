@@ -25,7 +25,7 @@ class VolumeUserInfoUserUploadedVolumeInfo extends \Google\Model
   public $processingState;
 
   /**
-   * @param string
+   * @param string $processingState
    */
   public function setProcessingState($processingState)
   {

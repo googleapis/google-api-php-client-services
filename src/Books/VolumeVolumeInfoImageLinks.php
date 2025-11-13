@@ -20,32 +20,49 @@ namespace Google\Service\Books;
 class VolumeVolumeInfoImageLinks extends \Google\Model
 {
   /**
+   * Image link for extra large size (width of ~1280 pixels). (In LITE
+   * projection)
+   *
    * @var string
    */
   public $extraLarge;
   /**
+   * Image link for large size (width of ~800 pixels). (In LITE projection)
+   *
    * @var string
    */
   public $large;
   /**
+   * Image link for medium size (width of ~575 pixels). (In LITE projection)
+   *
    * @var string
    */
   public $medium;
   /**
+   * Image link for small size (width of ~300 pixels). (In LITE projection)
+   *
    * @var string
    */
   public $small;
   /**
+   * Image link for small thumbnail size (width of ~80 pixels). (In LITE
+   * projection)
+   *
    * @var string
    */
   public $smallThumbnail;
   /**
+   * Image link for thumbnail size (width of ~128 pixels). (In LITE projection)
+   *
    * @var string
    */
   public $thumbnail;
 
   /**
-   * @param string
+   * Image link for extra large size (width of ~1280 pixels). (In LITE
+   * projection)
+   *
+   * @param string $extraLarge
    */
   public function setExtraLarge($extraLarge)
   {
@@ -59,7 +76,9 @@ class VolumeVolumeInfoImageLinks extends \Google\Model
     return $this->extraLarge;
   }
   /**
-   * @param string
+   * Image link for large size (width of ~800 pixels). (In LITE projection)
+   *
+   * @param string $large
    */
   public function setLarge($large)
   {
@@ -73,7 +92,9 @@ class VolumeVolumeInfoImageLinks extends \Google\Model
     return $this->large;
   }
   /**
-   * @param string
+   * Image link for medium size (width of ~575 pixels). (In LITE projection)
+   *
+   * @param string $medium
    */
   public function setMedium($medium)
   {
@@ -87,7 +108,9 @@ class VolumeVolumeInfoImageLinks extends \Google\Model
     return $this->medium;
   }
   /**
-   * @param string
+   * Image link for small size (width of ~300 pixels). (In LITE projection)
+   *
+   * @param string $small
    */
   public function setSmall($small)
   {
@@ -101,7 +124,10 @@ class VolumeVolumeInfoImageLinks extends \Google\Model
     return $this->small;
   }
   /**
-   * @param string
+   * Image link for small thumbnail size (width of ~80 pixels). (In LITE
+   * projection)
+   *
+   * @param string $smallThumbnail
    */
   public function setSmallThumbnail($smallThumbnail)
   {
@@ -115,7 +141,9 @@ class VolumeVolumeInfoImageLinks extends \Google\Model
     return $this->smallThumbnail;
   }
   /**
-   * @param string
+   * Image link for thumbnail size (width of ~128 pixels). (In LITE projection)
+   *
+   * @param string $thumbnail
    */
   public function setThumbnail($thumbnail)
   {

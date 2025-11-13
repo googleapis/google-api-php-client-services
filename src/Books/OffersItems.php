@@ -36,7 +36,7 @@ class OffersItems extends \Google\Collection
   protected $itemsDataType = 'array';
 
   /**
-   * @param string
+   * @param string $artUrl
    */
   public function setArtUrl($artUrl)
   {
@@ -50,7 +50,7 @@ class OffersItems extends \Google\Collection
     return $this->artUrl;
   }
   /**
-   * @param string
+   * @param string $gservicesKey
    */
   public function setGservicesKey($gservicesKey)
   {
@@ -64,7 +64,7 @@ class OffersItems extends \Google\Collection
     return $this->gservicesKey;
   }
   /**
-   * @param string
+   * @param string $id
    */
   public function setId($id)
   {
@@ -78,7 +78,7 @@ class OffersItems extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param OffersItemsItems[]
+   * @param OffersItemsItems[] $items
    */
   public function setItems($items)
   {

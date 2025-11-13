@@ -20,20 +20,28 @@ namespace Google\Service\Books;
 class VolumeVolumeInfoDimensions extends \Google\Model
 {
   /**
+   * Height or length of this volume (in cm).
+   *
    * @var string
    */
   public $height;
   /**
+   * Thickness of this volume (in cm).
+   *
    * @var string
    */
   public $thickness;
   /**
+   * Width of this volume (in cm).
+   *
    * @var string
    */
   public $width;
 
   /**
-   * @param string
+   * Height or length of this volume (in cm).
+   *
+   * @param string $height
    */
   public function setHeight($height)
   {
@@ -47,7 +55,9 @@ class VolumeVolumeInfoDimensions extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * Thickness of this volume (in cm).
+   *
+   * @param string $thickness
    */
   public function setThickness($thickness)
   {
@@ -61,7 +71,9 @@ class VolumeVolumeInfoDimensions extends \Google\Model
     return $this->thickness;
   }
   /**
-   * @param string
+   * Width of this volume (in cm).
+   *
+   * @param string $width
    */
   public function setWidth($width)
   {

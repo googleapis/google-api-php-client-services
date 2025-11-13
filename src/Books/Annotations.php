@@ -23,20 +23,30 @@ class Annotations extends \Google\Collection
   protected $itemsType = Annotation::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token to pass in for pagination for the next page. This will not be present
+   * if this request does not have more results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Total number of annotations found. This may be greater than the number of
+   * notes returned in this response if results have been paginated.
+   *
    * @var int
    */
   public $totalItems;
 
   /**
-   * @param Annotation[]
+   * A list of annotations.
+   *
+   * @param Annotation[] $items
    */
   public function setItems($items)
   {
@@ -50,7 +60,9 @@ class Annotations extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -64,7 +76,10 @@ class Annotations extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token to pass in for pagination for the next page. This will not be present
+   * if this request does not have more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -78,7 +93,10 @@ class Annotations extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * Total number of annotations found. This may be greater than the number of
+   * notes returned in this response if results have been paginated.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {

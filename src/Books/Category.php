@@ -23,12 +23,16 @@ class Category extends \Google\Collection
   protected $itemsType = CategoryItems::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param CategoryItems[]
+   * A list of onboarding categories.
+   *
+   * @param CategoryItems[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +46,9 @@ class Category extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

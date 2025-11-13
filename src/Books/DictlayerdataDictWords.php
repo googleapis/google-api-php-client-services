@@ -30,7 +30,7 @@ class DictlayerdataDictWords extends \Google\Collection
   protected $sourceDataType = '';
 
   /**
-   * @param DictlayerdataDictWordsDerivatives[]
+   * @param DictlayerdataDictWordsDerivatives[] $derivatives
    */
   public function setDerivatives($derivatives)
   {
@@ -44,7 +44,7 @@ class DictlayerdataDictWords extends \Google\Collection
     return $this->derivatives;
   }
   /**
-   * @param DictlayerdataDictWordsExamples[]
+   * @param DictlayerdataDictWordsExamples[] $examples
    */
   public function setExamples($examples)
   {
@@ -58,7 +58,7 @@ class DictlayerdataDictWords extends \Google\Collection
     return $this->examples;
   }
   /**
-   * @param DictlayerdataDictWordsSenses[]
+   * @param DictlayerdataDictWordsSenses[] $senses
    */
   public function setSenses($senses)
   {
@@ -72,7 +72,10 @@ class DictlayerdataDictWords extends \Google\Collection
     return $this->senses;
   }
   /**
-   * @param DictlayerdataDictWordsSource
+   * The words with different meanings but not related words, e.g. "go" (game)
+   * and "go" (verb).
+   *
+   * @param DictlayerdataDictWordsSource $source
    */
   public function setSource(DictlayerdataDictWordsSource $source)
   {

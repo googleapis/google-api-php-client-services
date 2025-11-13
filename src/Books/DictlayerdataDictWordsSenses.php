@@ -46,7 +46,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
   protected $synonymsDataType = 'array';
 
   /**
-   * @param DictlayerdataDictWordsSensesConjugations[]
+   * @param DictlayerdataDictWordsSensesConjugations[] $conjugations
    */
   public function setConjugations($conjugations)
   {
@@ -60,7 +60,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
     return $this->conjugations;
   }
   /**
-   * @param DictlayerdataDictWordsSensesDefinitions[]
+   * @param DictlayerdataDictWordsSensesDefinitions[] $definitions
    */
   public function setDefinitions($definitions)
   {
@@ -74,7 +74,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
     return $this->definitions;
   }
   /**
-   * @param string
+   * @param string $partOfSpeech
    */
   public function setPartOfSpeech($partOfSpeech)
   {
@@ -88,7 +88,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
     return $this->partOfSpeech;
   }
   /**
-   * @param string
+   * @param string $pronunciation
    */
   public function setPronunciation($pronunciation)
   {
@@ -102,7 +102,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
     return $this->pronunciation;
   }
   /**
-   * @param string
+   * @param string $pronunciationUrl
    */
   public function setPronunciationUrl($pronunciationUrl)
   {
@@ -116,7 +116,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
     return $this->pronunciationUrl;
   }
   /**
-   * @param DictlayerdataDictWordsSensesSource
+   * @param DictlayerdataDictWordsSensesSource $source
    */
   public function setSource(DictlayerdataDictWordsSensesSource $source)
   {
@@ -130,7 +130,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param string
+   * @param string $syllabification
    */
   public function setSyllabification($syllabification)
   {
@@ -144,7 +144,7 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
     return $this->syllabification;
   }
   /**
-   * @param DictlayerdataDictWordsSensesSynonyms[]
+   * @param DictlayerdataDictWordsSensesSynonyms[] $synonyms
    */
   public function setSynonyms($synonyms)
   {

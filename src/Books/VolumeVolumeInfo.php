@@ -21,31 +21,54 @@ class VolumeVolumeInfo extends \Google\Collection
 {
   protected $collection_key = 'industryIdentifiers';
   /**
+   * Whether anonymous logging should be allowed.
+   *
    * @var bool
    */
   public $allowAnonLogging;
   /**
+   * The names of the authors and/or editors for this volume. (In LITE
+   * projection)
+   *
    * @var string[]
    */
   public $authors;
+  /**
+   * The mean review rating for this volume. (min = 1.0, max = 5.0)
+   *
+   * @var 
+   */
   public $averageRating;
   /**
+   * Canonical URL for a volume. (In LITE projection.)
+   *
    * @var string
    */
   public $canonicalVolumeLink;
   /**
+   * A list of subject categories, such as "Fiction", "Suspense", etc.
+   *
    * @var string[]
    */
   public $categories;
   /**
+   * Whether the volume has comics content.
+   *
    * @var bool
    */
   public $comicsContent;
   /**
+   * An identifier for the version of the volume content (text & images). (In
+   * LITE projection)
+   *
    * @var string
    */
   public $contentVersion;
   /**
+   * A synopsis of the volume. The text of the description is formatted in HTML
+   * and includes simple formatting elements, such as b, i, and br tags. (In
+   * LITE projection.)
+   *
    * @var string
    */
   public $description;
@@ -56,14 +79,23 @@ class VolumeVolumeInfo extends \Google\Collection
   protected $industryIdentifiersType = VolumeVolumeInfoIndustryIdentifiers::class;
   protected $industryIdentifiersDataType = 'array';
   /**
+   * URL to view information about this volume on the Google Books site. (In
+   * LITE projection)
+   *
    * @var string
    */
   public $infoLink;
   /**
+   * Best language for this volume (based on content). It is the two-letter ISO
+   * 639-1 code such as 'fr', 'en', etc.
+   *
    * @var string
    */
   public $language;
   /**
+   * The main category to which this volume belongs. It will be the category
+   * from the categories list returned below that has the highest weight.
+   *
    * @var string
    */
   public $mainCategory;
@@ -72,54 +104,76 @@ class VolumeVolumeInfo extends \Google\Collection
    */
   public $maturityRating;
   /**
+   * Total number of pages as per publisher metadata.
+   *
    * @var int
    */
   public $pageCount;
   protected $panelizationSummaryType = VolumeVolumeInfoPanelizationSummary::class;
   protected $panelizationSummaryDataType = '';
   /**
+   * URL to preview this volume on the Google Books site.
+   *
    * @var string
    */
   public $previewLink;
   /**
+   * Type of publication of this volume. Possible values are BOOK or MAGAZINE.
+   *
    * @var string
    */
   public $printType;
   /**
+   * Total number of printed pages in generated pdf representation.
+   *
    * @var int
    */
   public $printedPageCount;
   /**
+   * Date of publication. (In LITE projection.)
+   *
    * @var string
    */
   public $publishedDate;
   /**
+   * Publisher of this volume. (In LITE projection.)
+   *
    * @var string
    */
   public $publisher;
   /**
+   * The number of review ratings for this volume.
+   *
    * @var int
    */
   public $ratingsCount;
   protected $readingModesType = VolumeVolumeInfoReadingModes::class;
   protected $readingModesDataType = '';
   /**
+   * Total number of sample pages as per publisher metadata.
+   *
    * @var int
    */
   public $samplePageCount;
   protected $seriesInfoType = Volumeseriesinfo::class;
   protected $seriesInfoDataType = '';
   /**
+   * Volume subtitle. (In LITE projection.)
+   *
    * @var string
    */
   public $subtitle;
   /**
+   * Volume title. (In LITE projection.)
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param bool
+   * Whether anonymous logging should be allowed.
+   *
+   * @param bool $allowAnonLogging
    */
   public function setAllowAnonLogging($allowAnonLogging)
   {
@@ -133,7 +187,10 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->allowAnonLogging;
   }
   /**
-   * @param string[]
+   * The names of the authors and/or editors for this volume. (In LITE
+   * projection)
+   *
+   * @param string[] $authors
    */
   public function setAuthors($authors)
   {
@@ -155,7 +212,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->averageRating;
   }
   /**
-   * @param string
+   * Canonical URL for a volume. (In LITE projection.)
+   *
+   * @param string $canonicalVolumeLink
    */
   public function setCanonicalVolumeLink($canonicalVolumeLink)
   {
@@ -169,7 +228,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->canonicalVolumeLink;
   }
   /**
-   * @param string[]
+   * A list of subject categories, such as "Fiction", "Suspense", etc.
+   *
+   * @param string[] $categories
    */
   public function setCategories($categories)
   {
@@ -183,7 +244,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param bool
+   * Whether the volume has comics content.
+   *
+   * @param bool $comicsContent
    */
   public function setComicsContent($comicsContent)
   {
@@ -197,7 +260,10 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->comicsContent;
   }
   /**
-   * @param string
+   * An identifier for the version of the volume content (text & images). (In
+   * LITE projection)
+   *
+   * @param string $contentVersion
    */
   public function setContentVersion($contentVersion)
   {
@@ -211,7 +277,11 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->contentVersion;
   }
   /**
-   * @param string
+   * A synopsis of the volume. The text of the description is formatted in HTML
+   * and includes simple formatting elements, such as b, i, and br tags. (In
+   * LITE projection.)
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -225,7 +295,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param VolumeVolumeInfoDimensions
+   * Physical dimensions of this volume.
+   *
+   * @param VolumeVolumeInfoDimensions $dimensions
    */
   public function setDimensions(VolumeVolumeInfoDimensions $dimensions)
   {
@@ -239,7 +311,10 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param VolumeVolumeInfoImageLinks
+   * A list of image links for all the sizes that are available. (In LITE
+   * projection.)
+   *
+   * @param VolumeVolumeInfoImageLinks $imageLinks
    */
   public function setImageLinks(VolumeVolumeInfoImageLinks $imageLinks)
   {
@@ -253,7 +328,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->imageLinks;
   }
   /**
-   * @param VolumeVolumeInfoIndustryIdentifiers[]
+   * Industry standard identifiers for this volume.
+   *
+   * @param VolumeVolumeInfoIndustryIdentifiers[] $industryIdentifiers
    */
   public function setIndustryIdentifiers($industryIdentifiers)
   {
@@ -267,7 +344,10 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->industryIdentifiers;
   }
   /**
-   * @param string
+   * URL to view information about this volume on the Google Books site. (In
+   * LITE projection)
+   *
+   * @param string $infoLink
    */
   public function setInfoLink($infoLink)
   {
@@ -281,7 +361,10 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->infoLink;
   }
   /**
-   * @param string
+   * Best language for this volume (based on content). It is the two-letter ISO
+   * 639-1 code such as 'fr', 'en', etc.
+   *
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -295,7 +378,10 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->language;
   }
   /**
-   * @param string
+   * The main category to which this volume belongs. It will be the category
+   * from the categories list returned below that has the highest weight.
+   *
+   * @param string $mainCategory
    */
   public function setMainCategory($mainCategory)
   {
@@ -309,7 +395,7 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->mainCategory;
   }
   /**
-   * @param string
+   * @param string $maturityRating
    */
   public function setMaturityRating($maturityRating)
   {
@@ -323,7 +409,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->maturityRating;
   }
   /**
-   * @param int
+   * Total number of pages as per publisher metadata.
+   *
+   * @param int $pageCount
    */
   public function setPageCount($pageCount)
   {
@@ -337,7 +425,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->pageCount;
   }
   /**
-   * @param VolumeVolumeInfoPanelizationSummary
+   * A top-level summary of the panelization info in this volume.
+   *
+   * @param VolumeVolumeInfoPanelizationSummary $panelizationSummary
    */
   public function setPanelizationSummary(VolumeVolumeInfoPanelizationSummary $panelizationSummary)
   {
@@ -351,7 +441,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->panelizationSummary;
   }
   /**
-   * @param string
+   * URL to preview this volume on the Google Books site.
+   *
+   * @param string $previewLink
    */
   public function setPreviewLink($previewLink)
   {
@@ -365,7 +457,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->previewLink;
   }
   /**
-   * @param string
+   * Type of publication of this volume. Possible values are BOOK or MAGAZINE.
+   *
+   * @param string $printType
    */
   public function setPrintType($printType)
   {
@@ -379,7 +473,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->printType;
   }
   /**
-   * @param int
+   * Total number of printed pages in generated pdf representation.
+   *
+   * @param int $printedPageCount
    */
   public function setPrintedPageCount($printedPageCount)
   {
@@ -393,7 +489,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->printedPageCount;
   }
   /**
-   * @param string
+   * Date of publication. (In LITE projection.)
+   *
+   * @param string $publishedDate
    */
   public function setPublishedDate($publishedDate)
   {
@@ -407,7 +505,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->publishedDate;
   }
   /**
-   * @param string
+   * Publisher of this volume. (In LITE projection.)
+   *
+   * @param string $publisher
    */
   public function setPublisher($publisher)
   {
@@ -421,7 +521,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->publisher;
   }
   /**
-   * @param int
+   * The number of review ratings for this volume.
+   *
+   * @param int $ratingsCount
    */
   public function setRatingsCount($ratingsCount)
   {
@@ -435,7 +537,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->ratingsCount;
   }
   /**
-   * @param VolumeVolumeInfoReadingModes
+   * The reading modes available for this volume.
+   *
+   * @param VolumeVolumeInfoReadingModes $readingModes
    */
   public function setReadingModes(VolumeVolumeInfoReadingModes $readingModes)
   {
@@ -449,7 +553,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->readingModes;
   }
   /**
-   * @param int
+   * Total number of sample pages as per publisher metadata.
+   *
+   * @param int $samplePageCount
    */
   public function setSamplePageCount($samplePageCount)
   {
@@ -463,7 +569,7 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->samplePageCount;
   }
   /**
-   * @param Volumeseriesinfo
+   * @param Volumeseriesinfo $seriesInfo
    */
   public function setSeriesInfo(Volumeseriesinfo $seriesInfo)
   {
@@ -477,7 +583,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->seriesInfo;
   }
   /**
-   * @param string
+   * Volume subtitle. (In LITE projection.)
+   *
+   * @param string $subtitle
    */
   public function setSubtitle($subtitle)
   {
@@ -491,7 +599,9 @@ class VolumeVolumeInfo extends \Google\Collection
     return $this->subtitle;
   }
   /**
-   * @param string
+   * Volume title. (In LITE projection.)
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

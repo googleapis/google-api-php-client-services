@@ -22,14 +22,21 @@ class Volume extends \Google\Model
   protected $accessInfoType = VolumeAccessInfo::class;
   protected $accessInfoDataType = '';
   /**
+   * Opaque identifier for a specific version of a volume resource. (In LITE
+   * projection)
+   *
    * @var string
    */
   public $etag;
   /**
+   * Unique identifier for a volume. (In LITE projection.)
+   *
    * @var string
    */
   public $id;
   /**
+   * Resource type for a volume. (In LITE projection.)
+   *
    * @var string
    */
   public $kind;
@@ -42,6 +49,8 @@ class Volume extends \Google\Model
   protected $searchInfoType = VolumeSearchInfo::class;
   protected $searchInfoDataType = '';
   /**
+   * URL to this resource. (In LITE projection.)
+   *
    * @var string
    */
   public $selfLink;
@@ -51,7 +60,11 @@ class Volume extends \Google\Model
   protected $volumeInfoDataType = '';
 
   /**
-   * @param VolumeAccessInfo
+   * Any information about a volume related to reading or obtaining that volume
+   * text. This information can depend on country (books may be public domain in
+   * one country but not in another, e.g.).
+   *
+   * @param VolumeAccessInfo $accessInfo
    */
   public function setAccessInfo(VolumeAccessInfo $accessInfo)
   {
@@ -65,7 +78,10 @@ class Volume extends \Google\Model
     return $this->accessInfo;
   }
   /**
-   * @param string
+   * Opaque identifier for a specific version of a volume resource. (In LITE
+   * projection)
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -79,7 +95,9 @@ class Volume extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Unique identifier for a volume. (In LITE projection.)
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -93,7 +111,9 @@ class Volume extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Resource type for a volume. (In LITE projection.)
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -107,7 +127,9 @@ class Volume extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param VolumeLayerInfo
+   * What layers exist in this volume and high level information about them.
+   *
+   * @param VolumeLayerInfo $layerInfo
    */
   public function setLayerInfo(VolumeLayerInfo $layerInfo)
   {
@@ -121,7 +143,9 @@ class Volume extends \Google\Model
     return $this->layerInfo;
   }
   /**
-   * @param VolumeRecommendedInfo
+   * Recommendation related information for this volume.
+   *
+   * @param VolumeRecommendedInfo $recommendedInfo
    */
   public function setRecommendedInfo(VolumeRecommendedInfo $recommendedInfo)
   {
@@ -135,7 +159,12 @@ class Volume extends \Google\Model
     return $this->recommendedInfo;
   }
   /**
-   * @param VolumeSaleInfo
+   * Any information about a volume related to the eBookstore and/or
+   * purchaseability. This information can depend on the country where the
+   * request originates from (i.e. books may not be for sale in certain
+   * countries).
+   *
+   * @param VolumeSaleInfo $saleInfo
    */
   public function setSaleInfo(VolumeSaleInfo $saleInfo)
   {
@@ -149,7 +178,9 @@ class Volume extends \Google\Model
     return $this->saleInfo;
   }
   /**
-   * @param VolumeSearchInfo
+   * Search result information related to this volume.
+   *
+   * @param VolumeSearchInfo $searchInfo
    */
   public function setSearchInfo(VolumeSearchInfo $searchInfo)
   {
@@ -163,7 +194,9 @@ class Volume extends \Google\Model
     return $this->searchInfo;
   }
   /**
-   * @param string
+   * URL to this resource. (In LITE projection.)
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -177,7 +210,10 @@ class Volume extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param VolumeUserInfo
+   * User specific information related to this volume. (e.g. page this user last
+   * read or whether they purchased this book)
+   *
+   * @param VolumeUserInfo $userInfo
    */
   public function setUserInfo(VolumeUserInfo $userInfo)
   {
@@ -191,7 +227,9 @@ class Volume extends \Google\Model
     return $this->userInfo;
   }
   /**
-   * @param VolumeVolumeInfo
+   * General volume information.
+   *
+   * @param VolumeVolumeInfo $volumeInfo
    */
   public function setVolumeInfo(VolumeVolumeInfo $volumeInfo)
   {

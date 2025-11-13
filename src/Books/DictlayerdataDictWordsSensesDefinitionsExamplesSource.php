@@ -29,7 +29,7 @@ class DictlayerdataDictWordsSensesDefinitionsExamplesSource extends \Google\Mode
   public $url;
 
   /**
-   * @param string
+   * @param string $attribution
    */
   public function setAttribution($attribution)
   {
@@ -43,7 +43,7 @@ class DictlayerdataDictWordsSensesDefinitionsExamplesSource extends \Google\Mode
     return $this->attribution;
   }
   /**
-   * @param string
+   * @param string $url
    */
   public function setUrl($url)
   {

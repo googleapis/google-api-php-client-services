@@ -20,6 +20,8 @@ namespace Google\Service\Books;
 class Usersettings extends \Google\Model
 {
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
@@ -29,7 +31,9 @@ class Usersettings extends \Google\Model
   protected $notificationDataType = '';
 
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -43,7 +47,9 @@ class Usersettings extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param UsersettingsNotesExport
+   * User settings in sub-objects, each for different purposes.
+   *
+   * @param UsersettingsNotesExport $notesExport
    */
   public function setNotesExport(UsersettingsNotesExport $notesExport)
   {
@@ -57,7 +63,7 @@ class Usersettings extends \Google\Model
     return $this->notesExport;
   }
   /**
-   * @param UsersettingsNotification
+   * @param UsersettingsNotification $notification
    */
   public function setNotification(UsersettingsNotification $notification)
   {

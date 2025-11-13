@@ -19,8 +19,15 @@ namespace Google\Service\Books;
 
 class VolumeSaleInfoRetailPrice extends \Google\Model
 {
+  /**
+   * Amount in the currency listed below. (In LITE projection.)
+   *
+   * @var 
+   */
   public $amount;
   /**
+   * An ISO 4217, three-letter currency code. (In LITE projection.)
+   *
    * @var string
    */
   public $currencyCode;
@@ -34,7 +41,9 @@ class VolumeSaleInfoRetailPrice extends \Google\Model
     return $this->amount;
   }
   /**
-   * @param string
+   * An ISO 4217, three-letter currency code. (In LITE projection.)
+   *
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {

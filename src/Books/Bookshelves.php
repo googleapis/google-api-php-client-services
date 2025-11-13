@@ -23,12 +23,16 @@ class Bookshelves extends \Google\Collection
   protected $itemsType = Bookshelf::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param Bookshelf[]
+   * A list of bookshelves.
+   *
+   * @param Bookshelf[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +46,9 @@ class Bookshelves extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

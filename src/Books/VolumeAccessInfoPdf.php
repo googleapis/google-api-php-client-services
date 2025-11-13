@@ -20,20 +20,29 @@ namespace Google\Service\Books;
 class VolumeAccessInfoPdf extends \Google\Model
 {
   /**
+   * URL to retrieve ACS token for pdf download. (In LITE projection.)
+   *
    * @var string
    */
   public $acsTokenLink;
   /**
+   * URL to download pdf. (In LITE projection.)
+   *
    * @var string
    */
   public $downloadLink;
   /**
+   * Is a scanned image pdf available either as public domain or for purchase.
+   * (In LITE projection.)
+   *
    * @var bool
    */
   public $isAvailable;
 
   /**
-   * @param string
+   * URL to retrieve ACS token for pdf download. (In LITE projection.)
+   *
+   * @param string $acsTokenLink
    */
   public function setAcsTokenLink($acsTokenLink)
   {
@@ -47,7 +56,9 @@ class VolumeAccessInfoPdf extends \Google\Model
     return $this->acsTokenLink;
   }
   /**
-   * @param string
+   * URL to download pdf. (In LITE projection.)
+   *
+   * @param string $downloadLink
    */
   public function setDownloadLink($downloadLink)
   {
@@ -61,7 +72,10 @@ class VolumeAccessInfoPdf extends \Google\Model
     return $this->downloadLink;
   }
   /**
-   * @param bool
+   * Is a scanned image pdf available either as public domain or for purchase.
+   * (In LITE projection.)
+   *
+   * @param bool $isAvailable
    */
   public function setIsAvailable($isAvailable)
   {

@@ -22,42 +22,62 @@ class Review extends \Google\Model
   protected $authorType = ReviewAuthor::class;
   protected $authorDataType = '';
   /**
+   * Review text.
+   *
    * @var string
    */
   public $content;
   /**
+   * Date of this review.
+   *
    * @var string
    */
   public $date;
   /**
+   * URL for the full review text, for reviews gathered from the web.
+   *
    * @var string
    */
   public $fullTextUrl;
   /**
+   * Resource type for a review.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Star rating for this review. Possible values are ONE, TWO, THREE, FOUR,
+   * FIVE or NOT_RATED.
+   *
    * @var string
    */
   public $rating;
   protected $sourceType = ReviewSource::class;
   protected $sourceDataType = '';
   /**
+   * Title for this review.
+   *
    * @var string
    */
   public $title;
   /**
+   * Source type for this review. Possible values are EDITORIAL, WEB_USER or
+   * GOOGLE_USER.
+   *
    * @var string
    */
   public $type;
   /**
+   * Volume that this review is for.
+   *
    * @var string
    */
   public $volumeId;
 
   /**
-   * @param ReviewAuthor
+   * Author of this review.
+   *
+   * @param ReviewAuthor $author
    */
   public function setAuthor(ReviewAuthor $author)
   {
@@ -71,7 +91,9 @@ class Review extends \Google\Model
     return $this->author;
   }
   /**
-   * @param string
+   * Review text.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -85,7 +107,9 @@ class Review extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Date of this review.
+   *
+   * @param string $date
    */
   public function setDate($date)
   {
@@ -99,7 +123,9 @@ class Review extends \Google\Model
     return $this->date;
   }
   /**
-   * @param string
+   * URL for the full review text, for reviews gathered from the web.
+   *
+   * @param string $fullTextUrl
    */
   public function setFullTextUrl($fullTextUrl)
   {
@@ -113,7 +139,9 @@ class Review extends \Google\Model
     return $this->fullTextUrl;
   }
   /**
-   * @param string
+   * Resource type for a review.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -127,7 +155,10 @@ class Review extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Star rating for this review. Possible values are ONE, TWO, THREE, FOUR,
+   * FIVE or NOT_RATED.
+   *
+   * @param string $rating
    */
   public function setRating($rating)
   {
@@ -141,7 +172,10 @@ class Review extends \Google\Model
     return $this->rating;
   }
   /**
-   * @param ReviewSource
+   * Information regarding the source of this review, when the review is not
+   * from a Google Books user.
+   *
+   * @param ReviewSource $source
    */
   public function setSource(ReviewSource $source)
   {
@@ -155,7 +189,9 @@ class Review extends \Google\Model
     return $this->source;
   }
   /**
-   * @param string
+   * Title for this review.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -169,7 +205,10 @@ class Review extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * Source type for this review. Possible values are EDITORIAL, WEB_USER or
+   * GOOGLE_USER.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -183,7 +222,9 @@ class Review extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * Volume that this review is for.
+   *
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

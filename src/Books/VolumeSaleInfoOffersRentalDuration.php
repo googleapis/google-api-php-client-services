@@ -34,7 +34,7 @@ class VolumeSaleInfoOffersRentalDuration extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * @param string $unit
    */
   public function setUnit($unit)
   {

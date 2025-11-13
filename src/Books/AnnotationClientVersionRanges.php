@@ -22,6 +22,8 @@ class AnnotationClientVersionRanges extends \Google\Model
   protected $cfiRangeType = BooksAnnotationsRange::class;
   protected $cfiRangeDataType = '';
   /**
+   * Content version the client sent in.
+   *
    * @var string
    */
   public $contentVersion;
@@ -33,7 +35,9 @@ class AnnotationClientVersionRanges extends \Google\Model
   protected $imageCfiRangeDataType = '';
 
   /**
-   * @param BooksAnnotationsRange
+   * Range in CFI format for this annotation sent by client.
+   *
+   * @param BooksAnnotationsRange $cfiRange
    */
   public function setCfiRange(BooksAnnotationsRange $cfiRange)
   {
@@ -47,7 +51,9 @@ class AnnotationClientVersionRanges extends \Google\Model
     return $this->cfiRange;
   }
   /**
-   * @param string
+   * Content version the client sent in.
+   *
+   * @param string $contentVersion
    */
   public function setContentVersion($contentVersion)
   {
@@ -61,7 +67,9 @@ class AnnotationClientVersionRanges extends \Google\Model
     return $this->contentVersion;
   }
   /**
-   * @param BooksAnnotationsRange
+   * Range in GB image format for this annotation sent by client.
+   *
+   * @param BooksAnnotationsRange $gbImageRange
    */
   public function setGbImageRange(BooksAnnotationsRange $gbImageRange)
   {
@@ -75,7 +83,9 @@ class AnnotationClientVersionRanges extends \Google\Model
     return $this->gbImageRange;
   }
   /**
-   * @param BooksAnnotationsRange
+   * Range in GB text format for this annotation sent by client.
+   *
+   * @param BooksAnnotationsRange $gbTextRange
    */
   public function setGbTextRange(BooksAnnotationsRange $gbTextRange)
   {
@@ -89,7 +99,9 @@ class AnnotationClientVersionRanges extends \Google\Model
     return $this->gbTextRange;
   }
   /**
-   * @param BooksAnnotationsRange
+   * Range in image CFI format for this annotation sent by client.
+   *
+   * @param BooksAnnotationsRange $imageCfiRange
    */
   public function setImageCfiRange(BooksAnnotationsRange $imageCfiRange)
   {

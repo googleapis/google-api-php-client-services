@@ -23,16 +23,22 @@ class Layersummaries extends \Google\Collection
   protected $itemsType = Layersummary::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The total number of layer summaries found.
+   *
    * @var int
    */
   public $totalItems;
 
   /**
-   * @param Layersummary[]
+   * A list of layer summary items.
+   *
+   * @param Layersummary[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +52,9 @@ class Layersummaries extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +68,9 @@ class Layersummaries extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param int
+   * The total number of layer summaries found.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {

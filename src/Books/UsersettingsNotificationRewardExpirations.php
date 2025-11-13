@@ -28,7 +28,7 @@ class UsersettingsNotificationRewardExpirations extends \Google\Model
   public $optedState;
 
   /**
-   * @param string
+   * @param string $optedState
    */
   public function setOptedState($optedState)
   {

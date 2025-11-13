@@ -42,7 +42,7 @@ class SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo extends \Google\M
     return $this->amountInMicros;
   }
   /**
-   * @param string
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {
@@ -56,7 +56,7 @@ class SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo extends \Google\M
     return $this->currencyCode;
   }
   /**
-   * @param string
+   * @param string $releaseNumber
    */
   public function setReleaseNumber($releaseNumber)
   {
@@ -70,7 +70,7 @@ class SeriesSeriesSeriesSubscriptionReleaseInfoNextReleaseInfo extends \Google\M
     return $this->releaseNumber;
   }
   /**
-   * @param string
+   * @param string $releaseTime
    */
   public function setReleaseTime($releaseTime)
   {

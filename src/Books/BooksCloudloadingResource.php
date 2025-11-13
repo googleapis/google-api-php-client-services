@@ -37,7 +37,7 @@ class BooksCloudloadingResource extends \Google\Model
   public $volumeId;
 
   /**
-   * @param string
+   * @param string $author
    */
   public function setAuthor($author)
   {
@@ -51,7 +51,7 @@ class BooksCloudloadingResource extends \Google\Model
     return $this->author;
   }
   /**
-   * @param string
+   * @param string $processingState
    */
   public function setProcessingState($processingState)
   {
@@ -65,7 +65,7 @@ class BooksCloudloadingResource extends \Google\Model
     return $this->processingState;
   }
   /**
-   * @param string
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -79,7 +79,7 @@ class BooksCloudloadingResource extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * @param string $volumeId
    */
   public function setVolumeId($volumeId)
   {

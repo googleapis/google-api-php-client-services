@@ -28,7 +28,7 @@ class BooksVolumesRecommendedRateResponse extends \Google\Model
   public $consistencyToken;
 
   /**
-   * @param string
+   * @param string $consistencyToken
    */
   public function setConsistencyToken($consistencyToken)
   {

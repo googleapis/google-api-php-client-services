@@ -27,7 +27,7 @@ class DictlayerdataDictWordsExamples extends \Google\Model
   public $text;
 
   /**
-   * @param DictlayerdataDictWordsExamplesSource
+   * @param DictlayerdataDictWordsExamplesSource $source
    */
   public function setSource(DictlayerdataDictWordsExamplesSource $source)
   {
@@ -41,7 +41,7 @@ class DictlayerdataDictWordsExamples extends \Google\Model
     return $this->source;
   }
   /**
-   * @param string
+   * @param string $text
    */
   public function setText($text)
   {

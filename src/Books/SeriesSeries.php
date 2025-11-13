@@ -59,7 +59,7 @@ class SeriesSeries extends \Google\Model
   public $title;
 
   /**
-   * @param string
+   * @param string $bannerImageUrl
    */
   public function setBannerImageUrl($bannerImageUrl)
   {
@@ -73,7 +73,7 @@ class SeriesSeries extends \Google\Model
     return $this->bannerImageUrl;
   }
   /**
-   * @param bool
+   * @param bool $eligibleForSubscription
    */
   public function setEligibleForSubscription($eligibleForSubscription)
   {
@@ -87,7 +87,7 @@ class SeriesSeries extends \Google\Model
     return $this->eligibleForSubscription;
   }
   /**
-   * @param string
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -101,7 +101,7 @@ class SeriesSeries extends \Google\Model
     return $this->imageUrl;
   }
   /**
-   * @param bool
+   * @param bool $isComplete
    */
   public function setIsComplete($isComplete)
   {
@@ -115,7 +115,7 @@ class SeriesSeries extends \Google\Model
     return $this->isComplete;
   }
   /**
-   * @param string
+   * @param string $seriesFormatType
    */
   public function setSeriesFormatType($seriesFormatType)
   {
@@ -129,7 +129,7 @@ class SeriesSeries extends \Google\Model
     return $this->seriesFormatType;
   }
   /**
-   * @param string
+   * @param string $seriesId
    */
   public function setSeriesId($seriesId)
   {
@@ -143,7 +143,7 @@ class SeriesSeries extends \Google\Model
     return $this->seriesId;
   }
   /**
-   * @param SeriesSeriesSeriesSubscriptionReleaseInfo
+   * @param SeriesSeriesSeriesSubscriptionReleaseInfo $seriesSubscriptionReleaseInfo
    */
   public function setSeriesSubscriptionReleaseInfo(SeriesSeriesSeriesSubscriptionReleaseInfo $seriesSubscriptionReleaseInfo)
   {
@@ -157,7 +157,7 @@ class SeriesSeries extends \Google\Model
     return $this->seriesSubscriptionReleaseInfo;
   }
   /**
-   * @param string
+   * @param string $seriesType
    */
   public function setSeriesType($seriesType)
   {
@@ -171,7 +171,7 @@ class SeriesSeries extends \Google\Model
     return $this->seriesType;
   }
   /**
-   * @param string
+   * @param string $subscriptionId
    */
   public function setSubscriptionId($subscriptionId)
   {
@@ -185,7 +185,7 @@ class SeriesSeries extends \Google\Model
     return $this->subscriptionId;
   }
   /**
-   * @param string
+   * @param string $title
    */
   public function setTitle($title)
   {

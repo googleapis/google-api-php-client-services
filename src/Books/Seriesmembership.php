@@ -21,6 +21,8 @@ class Seriesmembership extends \Google\Collection
 {
   protected $collection_key = 'member';
   /**
+   * Resorce type.
+   *
    * @var string
    */
   public $kind;
@@ -32,7 +34,9 @@ class Seriesmembership extends \Google\Collection
   public $nextPageToken;
 
   /**
-   * @param string
+   * Resorce type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +50,7 @@ class Seriesmembership extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Volume[]
+   * @param Volume[] $member
    */
   public function setMember($member)
   {
@@ -60,7 +64,7 @@ class Seriesmembership extends \Google\Collection
     return $this->member;
   }
   /**
-   * @param string
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

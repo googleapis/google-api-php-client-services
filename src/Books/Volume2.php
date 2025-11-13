@@ -23,6 +23,8 @@ class Volume2 extends \Google\Collection
   protected $itemsType = Volume::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
@@ -32,7 +34,9 @@ class Volume2 extends \Google\Collection
   public $nextPageToken;
 
   /**
-   * @param Volume[]
+   * A list of volumes.
+   *
+   * @param Volume[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +50,9 @@ class Volume2 extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +66,7 @@ class Volume2 extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

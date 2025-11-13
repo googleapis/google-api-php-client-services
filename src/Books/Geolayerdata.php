@@ -29,7 +29,7 @@ class Geolayerdata extends \Google\Model
   public $kind;
 
   /**
-   * @param GeolayerdataCommon
+   * @param GeolayerdataCommon $common
    */
   public function setCommon(GeolayerdataCommon $common)
   {
@@ -43,7 +43,7 @@ class Geolayerdata extends \Google\Model
     return $this->common;
   }
   /**
-   * @param GeolayerdataGeo
+   * @param GeolayerdataGeo $geo
    */
   public function setGeo(GeolayerdataGeo $geo)
   {
@@ -57,7 +57,7 @@ class Geolayerdata extends \Google\Model
     return $this->geo;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
