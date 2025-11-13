@@ -21,6 +21,10 @@ class XPSSpeechModelSpec extends \Google\Collection
 {
   protected $collection_key = 'subModelSpecs';
   /**
+   * Required for speech xps backend. Speech xps has to use dataset_id and
+   * model_id as the primary key in db so that speech API can query the db
+   * directly.
+   *
    * @var string
    */
   public $datasetId;
@@ -32,7 +36,11 @@ class XPSSpeechModelSpec extends \Google\Collection
   protected $subModelSpecsDataType = 'array';
 
   /**
-   * @param string
+   * Required for speech xps backend. Speech xps has to use dataset_id and
+   * model_id as the primary key in db so that speech API can query the db
+   * directly.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -46,7 +54,7 @@ class XPSSpeechModelSpec extends \Google\Collection
     return $this->datasetId;
   }
   /**
-   * @param string
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -60,7 +68,9 @@ class XPSSpeechModelSpec extends \Google\Collection
     return $this->language;
   }
   /**
-   * @param XPSSpeechModelSpecSubModelSpec[]
+   * Model specs for all submodels contained in this model.
+   *
+   * @param XPSSpeechModelSpecSubModelSpec[] $subModelSpecs
    */
   public function setSubModelSpecs($subModelSpecs)
   {

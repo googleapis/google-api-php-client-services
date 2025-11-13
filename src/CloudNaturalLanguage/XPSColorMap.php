@@ -20,12 +20,16 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSColorMap extends \Google\Model
 {
   /**
+   * Should be used during training.
+   *
    * @var string
    */
   public $annotationSpecIdToken;
   protected $colorType = Color::class;
   protected $colorDataType = '';
   /**
+   * Should be used during preprocessing.
+   *
    * @var string
    */
   public $displayName;
@@ -33,7 +37,9 @@ class XPSColorMap extends \Google\Model
   protected $intColorDataType = '';
 
   /**
-   * @param string
+   * Should be used during training.
+   *
+   * @param string $annotationSpecIdToken
    */
   public function setAnnotationSpecIdToken($annotationSpecIdToken)
   {
@@ -47,13 +53,22 @@ class XPSColorMap extends \Google\Model
     return $this->annotationSpecIdToken;
   }
   /**
-   * @param Color
+   * This type is deprecated in favor of the IntColor below. This is because
+   * google.type.Color represent color has a float which semantically does not
+   * reflect discrete classes/categories concept. Moreover, to handle it well we
+   * need to have some tolerance when converting to a discretized color. As
+   * such, the recommendation is to have API surface still use google.type.Color
+   * while internally IntColor is used.
+   *
+   * @deprecated
+   * @param Color $color
    */
   public function setColor(Color $color)
   {
     $this->color = $color;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getColor()
@@ -61,7 +76,9 @@ class XPSColorMap extends \Google\Model
     return $this->color;
   }
   /**
-   * @param string
+   * Should be used during preprocessing.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -75,7 +92,7 @@ class XPSColorMap extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param XPSColorMapIntColor
+   * @param XPSColorMapIntColor $intColor
    */
   public function setIntColor(XPSColorMapIntColor $intColor)
   {

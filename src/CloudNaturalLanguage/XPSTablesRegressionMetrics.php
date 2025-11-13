@@ -20,12 +20,38 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSTablesRegressionMetrics extends \Google\Collection
 {
   protected $collection_key = 'regressionMetricsEntries';
+  /**
+   * Mean absolute error.
+   *
+   * @var 
+   */
   public $meanAbsoluteError;
+  /**
+   * Mean absolute percentage error, only set if all of the target column's
+   * values are positive.
+   *
+   * @var 
+   */
   public $meanAbsolutePercentageError;
+  /**
+   * R squared.
+   *
+   * @var 
+   */
   public $rSquared;
   protected $regressionMetricsEntriesType = XPSRegressionMetricsEntry::class;
   protected $regressionMetricsEntriesDataType = 'array';
+  /**
+   * Root mean squared error.
+   *
+   * @var 
+   */
   public $rootMeanSquaredError;
+  /**
+   * Root mean squared log error.
+   *
+   * @var 
+   */
   public $rootMeanSquaredLogError;
 
   public function setMeanAbsoluteError($meanAbsoluteError)
@@ -53,7 +79,9 @@ class XPSTablesRegressionMetrics extends \Google\Collection
     return $this->rSquared;
   }
   /**
-   * @param XPSRegressionMetricsEntry[]
+   * A list of actual versus predicted points for the model being evaluated.
+   *
+   * @param XPSRegressionMetricsEntry[] $regressionMetricsEntries
    */
   public function setRegressionMetricsEntries($regressionMetricsEntries)
   {

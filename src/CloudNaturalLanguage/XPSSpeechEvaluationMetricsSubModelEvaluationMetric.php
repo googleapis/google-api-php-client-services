@@ -19,11 +19,32 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class XPSSpeechEvaluationMetricsSubModelEvaluationMetric extends \Google\Model
 {
+  public const BIASING_MODEL_TYPE_BIASING_MODEL_TYPE_UNSPECIFIED = 'BIASING_MODEL_TYPE_UNSPECIFIED';
   /**
+   * Build biasing model on top of COMMAND_AND_SEARCH model
+   */
+  public const BIASING_MODEL_TYPE_COMMAND_AND_SEARCH = 'COMMAND_AND_SEARCH';
+  /**
+   * Build biasing model on top of PHONE_CALL model
+   */
+  public const BIASING_MODEL_TYPE_PHONE_CALL = 'PHONE_CALL';
+  /**
+   * Build biasing model on top of VIDEO model
+   */
+  public const BIASING_MODEL_TYPE_VIDEO = 'VIDEO';
+  /**
+   * Build biasing model on top of DEFAULT model
+   */
+  public const BIASING_MODEL_TYPE_DEFAULT = 'DEFAULT';
+  /**
+   * Type of the biasing model.
+   *
    * @var string
    */
   public $biasingModelType;
   /**
+   * If true then it means we have an enhanced version of the biasing models.
+   *
    * @var bool
    */
   public $isEnhancedModel;
@@ -40,32 +61,53 @@ class XPSSpeechEvaluationMetricsSubModelEvaluationMetric extends \Google\Model
    */
   public $numSubstitutions;
   /**
+   * Number of utterances used in the wer computation.
+   *
    * @var int
    */
   public $numUtterances;
   /**
+   * Number of words over which the word error rate was computed.
+   *
    * @var int
    */
   public $numWords;
+  /**
+   * Below fields are used for debugging purposes
+   *
+   * @var 
+   */
   public $sentenceAccuracy;
+  /**
+   * Word error rate (standard error metric used for speech recognition).
+   *
+   * @var 
+   */
   public $wer;
 
   /**
-   * @param string
+   * Type of the biasing model.
+   *
+   * Accepted values: BIASING_MODEL_TYPE_UNSPECIFIED, COMMAND_AND_SEARCH,
+   * PHONE_CALL, VIDEO, DEFAULT
+   *
+   * @param self::BIASING_MODEL_TYPE_* $biasingModelType
    */
   public function setBiasingModelType($biasingModelType)
   {
     $this->biasingModelType = $biasingModelType;
   }
   /**
-   * @return string
+   * @return self::BIASING_MODEL_TYPE_*
    */
   public function getBiasingModelType()
   {
     return $this->biasingModelType;
   }
   /**
-   * @param bool
+   * If true then it means we have an enhanced version of the biasing models.
+   *
+   * @param bool $isEnhancedModel
    */
   public function setIsEnhancedModel($isEnhancedModel)
   {
@@ -79,7 +121,7 @@ class XPSSpeechEvaluationMetricsSubModelEvaluationMetric extends \Google\Model
     return $this->isEnhancedModel;
   }
   /**
-   * @param int
+   * @param int $numDeletions
    */
   public function setNumDeletions($numDeletions)
   {
@@ -93,7 +135,7 @@ class XPSSpeechEvaluationMetricsSubModelEvaluationMetric extends \Google\Model
     return $this->numDeletions;
   }
   /**
-   * @param int
+   * @param int $numInsertions
    */
   public function setNumInsertions($numInsertions)
   {
@@ -107,7 +149,7 @@ class XPSSpeechEvaluationMetricsSubModelEvaluationMetric extends \Google\Model
     return $this->numInsertions;
   }
   /**
-   * @param int
+   * @param int $numSubstitutions
    */
   public function setNumSubstitutions($numSubstitutions)
   {
@@ -121,7 +163,9 @@ class XPSSpeechEvaluationMetricsSubModelEvaluationMetric extends \Google\Model
     return $this->numSubstitutions;
   }
   /**
-   * @param int
+   * Number of utterances used in the wer computation.
+   *
+   * @param int $numUtterances
    */
   public function setNumUtterances($numUtterances)
   {
@@ -135,7 +179,9 @@ class XPSSpeechEvaluationMetricsSubModelEvaluationMetric extends \Google\Model
     return $this->numUtterances;
   }
   /**
-   * @param int
+   * Number of words over which the word error rate was computed.
+   *
+   * @param int $numWords
    */
   public function setNumWords($numWords)
   {

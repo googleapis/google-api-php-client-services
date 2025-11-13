@@ -20,16 +20,35 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSTablesClassificationMetricsCurveMetrics extends \Google\Collection
 {
   protected $collection_key = 'confidenceMetricsEntries';
+  /**
+   * The area under the precision-recall curve.
+   *
+   * @var 
+   */
   public $aucPr;
+  /**
+   * The area under receiver operating characteristic curve.
+   *
+   * @var 
+   */
   public $aucRoc;
   protected $confidenceMetricsEntriesType = XPSTablesConfidenceMetricsEntry::class;
   protected $confidenceMetricsEntriesDataType = 'array';
+  /**
+   * The Log loss metric.
+   *
+   * @var 
+   */
   public $logLoss;
   /**
+   * The position threshold value used to compute the metrics.
+   *
    * @var int
    */
   public $positionThreshold;
   /**
+   * The CATEGORY row value (for ARRAY unnested) the curve metrics are for.
+   *
    * @var string
    */
   public $value;
@@ -51,7 +70,10 @@ class XPSTablesClassificationMetricsCurveMetrics extends \Google\Collection
     return $this->aucRoc;
   }
   /**
-   * @param XPSTablesConfidenceMetricsEntry[]
+   * Metrics that have confidence thresholds. Precision-recall curve and ROC
+   * curve can be derived from them.
+   *
+   * @param XPSTablesConfidenceMetricsEntry[] $confidenceMetricsEntries
    */
   public function setConfidenceMetricsEntries($confidenceMetricsEntries)
   {
@@ -73,7 +95,9 @@ class XPSTablesClassificationMetricsCurveMetrics extends \Google\Collection
     return $this->logLoss;
   }
   /**
-   * @param int
+   * The position threshold value used to compute the metrics.
+   *
+   * @param int $positionThreshold
    */
   public function setPositionThreshold($positionThreshold)
   {
@@ -87,7 +111,9 @@ class XPSTablesClassificationMetricsCurveMetrics extends \Google\Collection
     return $this->positionThreshold;
   }
   /**
-   * @param string
+   * The CATEGORY row value (for ARRAY unnested) the curve metrics are for.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

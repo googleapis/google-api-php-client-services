@@ -19,17 +19,29 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class TpuMetric extends \Google\Model
 {
+  public const TPU_TYPE_UNKNOWN_TPU_TYPE = 'UNKNOWN_TPU_TYPE';
+  public const TPU_TYPE_TPU_V2_POD = 'TPU_V2_POD';
+  public const TPU_TYPE_TPU_V2 = 'TPU_V2';
+  public const TPU_TYPE_TPU_V3_POD = 'TPU_V3_POD';
+  public const TPU_TYPE_TPU_V3 = 'TPU_V3';
+  public const TPU_TYPE_TPU_V5_LITEPOD = 'TPU_V5_LITEPOD';
   /**
+   * Required. Seconds of TPU usage, e.g. 3600.
+   *
    * @var string
    */
   public $tpuSec;
   /**
+   * Required. Type of TPU, e.g. TPU_V2, TPU_V3_POD.
+   *
    * @var string
    */
   public $tpuType;
 
   /**
-   * @param string
+   * Required. Seconds of TPU usage, e.g. 3600.
+   *
+   * @param string $tpuSec
    */
   public function setTpuSec($tpuSec)
   {
@@ -43,14 +55,19 @@ class TpuMetric extends \Google\Model
     return $this->tpuSec;
   }
   /**
-   * @param string
+   * Required. Type of TPU, e.g. TPU_V2, TPU_V3_POD.
+   *
+   * Accepted values: UNKNOWN_TPU_TYPE, TPU_V2_POD, TPU_V2, TPU_V3_POD, TPU_V3,
+   * TPU_V5_LITEPOD
+   *
+   * @param self::TPU_TYPE_* $tpuType
    */
   public function setTpuType($tpuType)
   {
     $this->tpuType = $tpuType;
   }
   /**
-   * @return string
+   * @return self::TPU_TYPE_*
    */
   public function getTpuType()
   {

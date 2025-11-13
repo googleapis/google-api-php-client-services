@@ -19,11 +19,20 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class XPSResponseExplanationMetadataInputMetadata extends \Google\Model
 {
+  public const MODALITY_MODALITY_UNSPECIFIED = 'MODALITY_UNSPECIFIED';
+  public const MODALITY_NUMERIC = 'NUMERIC';
+  public const MODALITY_IMAGE = 'IMAGE';
+  public const MODALITY_CATEGORICAL = 'CATEGORICAL';
   /**
+   * Name of the input tensor for this model. Only needed in train response.
+   *
    * @var string
    */
   public $inputTensorName;
   /**
+   * Modality of the feature. Valid values are: numeric, image. Defaults to
+   * numeric.
+   *
    * @var string
    */
   public $modality;
@@ -31,7 +40,9 @@ class XPSResponseExplanationMetadataInputMetadata extends \Google\Model
   protected $visualizationConfigDataType = '';
 
   /**
-   * @param string
+   * Name of the input tensor for this model. Only needed in train response.
+   *
+   * @param string $inputTensorName
    */
   public function setInputTensorName($inputTensorName)
   {
@@ -45,21 +56,28 @@ class XPSResponseExplanationMetadataInputMetadata extends \Google\Model
     return $this->inputTensorName;
   }
   /**
-   * @param string
+   * Modality of the feature. Valid values are: numeric, image. Defaults to
+   * numeric.
+   *
+   * Accepted values: MODALITY_UNSPECIFIED, NUMERIC, IMAGE, CATEGORICAL
+   *
+   * @param self::MODALITY_* $modality
    */
   public function setModality($modality)
   {
     $this->modality = $modality;
   }
   /**
-   * @return string
+   * @return self::MODALITY_*
    */
   public function getModality()
   {
     return $this->modality;
   }
   /**
-   * @param XPSVisualization
+   * Visualization configurations for image explanation.
+   *
+   * @param XPSVisualization $visualizationConfig
    */
   public function setVisualizationConfig(XPSVisualization $visualizationConfig)
   {

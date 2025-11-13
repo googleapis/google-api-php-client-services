@@ -20,30 +20,42 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSImageSegmentationEvaluationMetricsConfidenceMetricsEntry extends \Google\Model
 {
   /**
+   * The confidence threshold value used to compute the metrics.
+   *
    * @var float
    */
   public $confidenceThreshold;
   protected $confusionMatrixType = XPSConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
   /**
+   * DSC or the F1 score: The harmonic mean of recall and precision.
+   *
    * @var float
    */
   public $diceScoreCoefficient;
   /**
+   * IOU score.
+   *
    * @var float
    */
   public $iouScore;
   /**
+   * Precision for the given confidence threshold.
+   *
    * @var float
    */
   public $precision;
   /**
+   * Recall for the given confidence threshold.
+   *
    * @var float
    */
   public $recall;
 
   /**
-   * @param float
+   * The confidence threshold value used to compute the metrics.
+   *
+   * @param float $confidenceThreshold
    */
   public function setConfidenceThreshold($confidenceThreshold)
   {
@@ -57,7 +69,11 @@ class XPSImageSegmentationEvaluationMetricsConfidenceMetricsEntry extends \Googl
     return $this->confidenceThreshold;
   }
   /**
-   * @param XPSConfusionMatrix
+   * Confusion matrix of the per confidence_threshold evaluation. Pixel counts
+   * are set here. Only set for model level evaluation, not for evaluation per
+   * label.
+   *
+   * @param XPSConfusionMatrix $confusionMatrix
    */
   public function setConfusionMatrix(XPSConfusionMatrix $confusionMatrix)
   {
@@ -71,7 +87,9 @@ class XPSImageSegmentationEvaluationMetricsConfidenceMetricsEntry extends \Googl
     return $this->confusionMatrix;
   }
   /**
-   * @param float
+   * DSC or the F1 score: The harmonic mean of recall and precision.
+   *
+   * @param float $diceScoreCoefficient
    */
   public function setDiceScoreCoefficient($diceScoreCoefficient)
   {
@@ -85,7 +103,9 @@ class XPSImageSegmentationEvaluationMetricsConfidenceMetricsEntry extends \Googl
     return $this->diceScoreCoefficient;
   }
   /**
-   * @param float
+   * IOU score.
+   *
+   * @param float $iouScore
    */
   public function setIouScore($iouScore)
   {
@@ -99,7 +119,9 @@ class XPSImageSegmentationEvaluationMetricsConfidenceMetricsEntry extends \Googl
     return $this->iouScore;
   }
   /**
-   * @param float
+   * Precision for the given confidence threshold.
+   *
+   * @param float $precision
    */
   public function setPrecision($precision)
   {
@@ -113,7 +135,9 @@ class XPSImageSegmentationEvaluationMetricsConfidenceMetricsEntry extends \Googl
     return $this->precision;
   }
   /**
-   * @param float
+   * Recall for the given confidence threshold.
+   *
+   * @param float $recall
    */
   public function setRecall($recall)
   {

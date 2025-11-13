@@ -25,7 +25,7 @@ class XPSStructStats extends \Google\Model
   protected $fieldStatsDataType = 'map';
 
   /**
-   * @param XPSCommonStats
+   * @param XPSCommonStats $commonStats
    */
   public function setCommonStats(XPSCommonStats $commonStats)
   {
@@ -39,7 +39,10 @@ class XPSStructStats extends \Google\Model
     return $this->commonStats;
   }
   /**
-   * @param XPSDataStats[]
+   * Map from a field name of the struct to data stats aggregated over series of
+   * all data in that field across all the structs.
+   *
+   * @param XPSDataStats[] $fieldStats
    */
   public function setFieldStats($fieldStats)
   {

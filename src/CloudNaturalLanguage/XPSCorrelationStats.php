@@ -19,6 +19,11 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class XPSCorrelationStats extends \Google\Model
 {
+  /**
+   * The correlation value using the Cramer's V measure.
+   *
+   * @var 
+   */
   public $cramersV;
 
   public function setCramersV($cramersV)

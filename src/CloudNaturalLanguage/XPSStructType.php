@@ -23,7 +23,9 @@ class XPSStructType extends \Google\Model
   protected $fieldsDataType = 'map';
 
   /**
-   * @param XPSDataType[]
+   * Unordered map of struct field names to their data types.
+   *
+   * @param XPSDataType[] $fields
    */
   public function setFields($fields)
   {

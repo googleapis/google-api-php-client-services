@@ -21,6 +21,13 @@ class XPSColumnSpec extends \Google\Collection
 {
   protected $collection_key = 'topCorrelatedColumns';
   /**
+   * The unique id of the column. When Preprocess, the Tables BE will popuate
+   * the order id of the column, which reflects the order of the column inside
+   * the table, i.e. 0 means the first column in the table, N-1 means the last
+   * column. AutoML BE will persist this order id in Spanner and set the order
+   * id here when calling RefreshTablesStats and Train. Note: it's different
+   * than the column_spec_id that is generated in AutoML BE.
+   *
    * @var int
    */
   public $columnId;
@@ -29,6 +36,9 @@ class XPSColumnSpec extends \Google\Collection
   protected $dataTypeType = XPSDataType::class;
   protected $dataTypeDataType = '';
   /**
+   * The display name of the column. It's outputed in Preprocess and a required
+   * input for RefreshTablesStats and Train.
+   *
    * @var string
    */
   public $displayName;
@@ -38,7 +48,14 @@ class XPSColumnSpec extends \Google\Collection
   protected $topCorrelatedColumnsDataType = 'array';
 
   /**
-   * @param int
+   * The unique id of the column. When Preprocess, the Tables BE will popuate
+   * the order id of the column, which reflects the order of the column inside
+   * the table, i.e. 0 means the first column in the table, N-1 means the last
+   * column. AutoML BE will persist this order id in Spanner and set the order
+   * id here when calling RefreshTablesStats and Train. Note: it's different
+   * than the column_spec_id that is generated in AutoML BE.
+   *
+   * @param int $columnId
    */
   public function setColumnId($columnId)
   {
@@ -52,7 +69,10 @@ class XPSColumnSpec extends \Google\Collection
     return $this->columnId;
   }
   /**
-   * @param XPSDataStats
+   * The data stats of the column. It's outputed in RefreshTablesStats and a
+   * required input for Train.
+   *
+   * @param XPSDataStats $dataStats
    */
   public function setDataStats(XPSDataStats $dataStats)
   {
@@ -66,7 +86,10 @@ class XPSColumnSpec extends \Google\Collection
     return $this->dataStats;
   }
   /**
-   * @param XPSDataType
+   * The data type of the column. It's outputed in Preprocess rpc and a required
+   * input for RefreshTablesStats and Train.
+   *
+   * @param XPSDataType $dataType
    */
   public function setDataType(XPSDataType $dataType)
   {
@@ -80,7 +103,10 @@ class XPSColumnSpec extends \Google\Collection
     return $this->dataType;
   }
   /**
-   * @param string
+   * The display name of the column. It's outputed in Preprocess and a required
+   * input for RefreshTablesStats and Train.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -94,7 +120,7 @@ class XPSColumnSpec extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param XPSColumnSpecForecastingMetadata
+   * @param XPSColumnSpecForecastingMetadata $forecastingMetadata
    */
   public function setForecastingMetadata(XPSColumnSpecForecastingMetadata $forecastingMetadata)
   {
@@ -108,7 +134,9 @@ class XPSColumnSpec extends \Google\Collection
     return $this->forecastingMetadata;
   }
   /**
-   * @param XPSColumnSpecCorrelatedColumn[]
+   * It's outputed in RefreshTablesStats, and a required input in Train.
+   *
+   * @param XPSColumnSpecCorrelatedColumn[] $topCorrelatedColumns
    */
   public function setTopCorrelatedColumns($topCorrelatedColumns)
   {

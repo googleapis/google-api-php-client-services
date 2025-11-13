@@ -24,7 +24,9 @@ class XPSTablesModelStructure extends \Google\Collection
   protected $modelParametersDataType = 'array';
 
   /**
-   * @param XPSTablesModelStructureModelParameters[]
+   * A list of models.
+   *
+   * @param XPSTablesModelStructureModelParameters[] $modelParameters
    */
   public function setModelParameters($modelParameters)
   {

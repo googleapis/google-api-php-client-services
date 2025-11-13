@@ -21,16 +21,30 @@ class XPSConfusionMatrixRow extends \Google\Collection
 {
   protected $collection_key = 'exampleCount';
   /**
+   * Same as above except intended to represent other counts (for e.g. for
+   * segmentation this is pixel count). NOTE(params): Only example_count or
+   * count is set (oneoff does not support repeated fields unless they are
+   * embedded inside another message).
+   *
    * @var string[]
    */
   public $count;
   /**
+   * Value of the specific cell in the confusion matrix. The number of values
+   * each row has (i.e. the length of the row) is equal to the length of the
+   * annotation_spec_id_token field.
+   *
    * @var int[]
    */
   public $exampleCount;
 
   /**
-   * @param string[]
+   * Same as above except intended to represent other counts (for e.g. for
+   * segmentation this is pixel count). NOTE(params): Only example_count or
+   * count is set (oneoff does not support repeated fields unless they are
+   * embedded inside another message).
+   *
+   * @param string[] $count
    */
   public function setCount($count)
   {
@@ -44,7 +58,11 @@ class XPSConfusionMatrixRow extends \Google\Collection
     return $this->count;
   }
   /**
-   * @param int[]
+   * Value of the specific cell in the confusion matrix. The number of values
+   * each row has (i.e. the length of the row) is equal to the length of the
+   * annotation_spec_id_token field.
+   *
+   * @param int[] $exampleCount
    */
   public function setExampleCount($exampleCount)
   {

@@ -20,6 +20,9 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSResponseExplanationSpec extends \Google\Model
 {
   /**
+   * Explanation type. For AutoML Image Classification models, possible values
+   * are: * `image-integrated-gradients` * `image-xrai`
+   *
    * @var string
    */
   public $explanationType;
@@ -29,7 +32,10 @@ class XPSResponseExplanationSpec extends \Google\Model
   protected $parametersDataType = '';
 
   /**
-   * @param string
+   * Explanation type. For AutoML Image Classification models, possible values
+   * are: * `image-integrated-gradients` * `image-xrai`
+   *
+   * @param string $explanationType
    */
   public function setExplanationType($explanationType)
   {
@@ -43,7 +49,9 @@ class XPSResponseExplanationSpec extends \Google\Model
     return $this->explanationType;
   }
   /**
-   * @param XPSResponseExplanationMetadata
+   * Metadata describing the Model's input and output for explanation.
+   *
+   * @param XPSResponseExplanationMetadata $metadata
    */
   public function setMetadata(XPSResponseExplanationMetadata $metadata)
   {
@@ -57,7 +65,9 @@ class XPSResponseExplanationSpec extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param XPSResponseExplanationParameters
+   * Parameters that configure explaining of the Model's predictions.
+   *
+   * @param XPSResponseExplanationParameters $parameters
    */
   public function setParameters(XPSResponseExplanationParameters $parameters)
   {

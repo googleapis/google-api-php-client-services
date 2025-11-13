@@ -21,10 +21,18 @@ class ModerateTextResponse extends \Google\Collection
 {
   protected $collection_key = 'moderationCategories';
   /**
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Whether the language is officially supported. The API may still return a
+   * response when the language is not supported, but it is on a best effort
+   * basis.
+   *
    * @var bool
    */
   public $languageSupported;
@@ -32,7 +40,11 @@ class ModerateTextResponse extends \Google\Collection
   protected $moderationCategoriesDataType = 'array';
 
   /**
-   * @param string
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -46,7 +58,11 @@ class ModerateTextResponse extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Whether the language is officially supported. The API may still return a
+   * response when the language is not supported, but it is on a best effort
+   * basis.
+   *
+   * @param bool $languageSupported
    */
   public function setLanguageSupported($languageSupported)
   {
@@ -60,7 +76,9 @@ class ModerateTextResponse extends \Google\Collection
     return $this->languageSupported;
   }
   /**
-   * @param ClassificationCategory[]
+   * Harmful and sensitive categories representing the input document.
+   *
+   * @param ClassificationCategory[] $moderationCategories
    */
   public function setModerationCategories($moderationCategories)
   {

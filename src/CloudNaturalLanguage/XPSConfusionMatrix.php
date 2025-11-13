@@ -21,22 +21,37 @@ class XPSConfusionMatrix extends \Google\Collection
 {
   protected $collection_key = 'sentimentLabel';
   /**
+   * For the following three repeated fields, only one is intended to be set.
+   * annotation_spec_id_token is preferable to be set. ID tokens of the
+   * annotation specs used in the confusion matrix.
+   *
    * @var string[]
    */
   public $annotationSpecIdToken;
   /**
+   * Category (mainly for segmentation). Set only for image segmentation models.
+   * Note: uCAIP Image Segmentation should use annotation_spec_id_token.
+   *
    * @var int[]
    */
   public $category;
   protected $rowType = XPSConfusionMatrixRow::class;
   protected $rowDataType = 'array';
   /**
+   * Sentiment labels used in the confusion matrix. Set only for text sentiment
+   * models. For AutoML Text Revamp, use `annotation_spec_id_token` instead and
+   * leave this field empty.
+   *
    * @var int[]
    */
   public $sentimentLabel;
 
   /**
-   * @param string[]
+   * For the following three repeated fields, only one is intended to be set.
+   * annotation_spec_id_token is preferable to be set. ID tokens of the
+   * annotation specs used in the confusion matrix.
+   *
+   * @param string[] $annotationSpecIdToken
    */
   public function setAnnotationSpecIdToken($annotationSpecIdToken)
   {
@@ -50,7 +65,10 @@ class XPSConfusionMatrix extends \Google\Collection
     return $this->annotationSpecIdToken;
   }
   /**
-   * @param int[]
+   * Category (mainly for segmentation). Set only for image segmentation models.
+   * Note: uCAIP Image Segmentation should use annotation_spec_id_token.
+   *
+   * @param int[] $category
    */
   public function setCategory($category)
   {
@@ -64,7 +82,12 @@ class XPSConfusionMatrix extends \Google\Collection
     return $this->category;
   }
   /**
-   * @param XPSConfusionMatrixRow[]
+   * Rows in the confusion matrix. The number of rows is equal to the size of
+   * `annotation_spec_id_token`. `row[i].value[j]` is the number of examples
+   * that have ground truth of the `annotation_spec_id_token[i]` and are
+   * predicted as `annotation_spec_id_token[j]` by the model being evaluated.
+   *
+   * @param XPSConfusionMatrixRow[] $row
    */
   public function setRow($row)
   {
@@ -78,7 +101,11 @@ class XPSConfusionMatrix extends \Google\Collection
     return $this->row;
   }
   /**
-   * @param int[]
+   * Sentiment labels used in the confusion matrix. Set only for text sentiment
+   * models. For AutoML Text Revamp, use `annotation_spec_id_token` instead and
+   * leave this field empty.
+   *
+   * @param int[] $sentimentLabel
    */
   public function setSentimentLabel($sentimentLabel)
   {

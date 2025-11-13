@@ -20,6 +20,22 @@ namespace Google\Service\CloudNaturalLanguage;
 class EntityMention extends \Google\Model
 {
   /**
+   * Unknown
+   */
+  public const TYPE_TYPE_UNKNOWN = 'TYPE_UNKNOWN';
+  /**
+   * Proper name
+   */
+  public const TYPE_PROPER = 'PROPER';
+  /**
+   * Common noun (or noun compound)
+   */
+  public const TYPE_COMMON = 'COMMON';
+  /**
+   * Probability score associated with the entity. The score shows the
+   * probability of the entity mention being the entity type. The score is in
+   * (0, 1] range.
+   *
    * @var float
    */
   public $probability;
@@ -28,12 +44,18 @@ class EntityMention extends \Google\Model
   protected $textType = TextSpan::class;
   protected $textDataType = '';
   /**
+   * The type of the entity mention.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param float
+   * Probability score associated with the entity. The score shows the
+   * probability of the entity mention being the entity type. The score is in
+   * (0, 1] range.
+   *
+   * @param float $probability
    */
   public function setProbability($probability)
   {
@@ -47,7 +69,10 @@ class EntityMention extends \Google\Model
     return $this->probability;
   }
   /**
-   * @param Sentiment
+   * For calls to AnalyzeEntitySentiment this field will contain the sentiment
+   * expressed for this mention of the entity in the provided document.
+   *
+   * @param Sentiment $sentiment
    */
   public function setSentiment(Sentiment $sentiment)
   {
@@ -61,7 +86,9 @@ class EntityMention extends \Google\Model
     return $this->sentiment;
   }
   /**
-   * @param TextSpan
+   * The mention text.
+   *
+   * @param TextSpan $text
    */
   public function setText(TextSpan $text)
   {
@@ -75,14 +102,18 @@ class EntityMention extends \Google\Model
     return $this->text;
   }
   /**
-   * @param string
+   * The type of the entity mention.
+   *
+   * Accepted values: TYPE_UNKNOWN, PROPER, COMMON
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

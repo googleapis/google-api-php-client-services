@@ -25,7 +25,9 @@ class XPSTablesEvaluationMetrics extends \Google\Model
   protected $regressionMetricsDataType = '';
 
   /**
-   * @param XPSTablesClassificationMetrics
+   * Classification metrics.
+   *
+   * @param XPSTablesClassificationMetrics $classificationMetrics
    */
   public function setClassificationMetrics(XPSTablesClassificationMetrics $classificationMetrics)
   {
@@ -39,7 +41,9 @@ class XPSTablesEvaluationMetrics extends \Google\Model
     return $this->classificationMetrics;
   }
   /**
-   * @param XPSTablesRegressionMetrics
+   * Regression metrics.
+   *
+   * @param XPSTablesRegressionMetrics $regressionMetrics
    */
   public function setRegressionMetrics(XPSTablesRegressionMetrics $regressionMetrics)
   {

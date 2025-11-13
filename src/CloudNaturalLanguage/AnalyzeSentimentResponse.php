@@ -23,10 +23,18 @@ class AnalyzeSentimentResponse extends \Google\Collection
   protected $documentSentimentType = Sentiment::class;
   protected $documentSentimentDataType = '';
   /**
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Whether the language is officially supported. The API may still return a
+   * response when the language is not supported, but it is on a best effort
+   * basis.
+   *
    * @var bool
    */
   public $languageSupported;
@@ -34,7 +42,9 @@ class AnalyzeSentimentResponse extends \Google\Collection
   protected $sentencesDataType = 'array';
 
   /**
-   * @param Sentiment
+   * The overall sentiment of the input document.
+   *
+   * @param Sentiment $documentSentiment
    */
   public function setDocumentSentiment(Sentiment $documentSentiment)
   {
@@ -48,7 +58,11 @@ class AnalyzeSentimentResponse extends \Google\Collection
     return $this->documentSentiment;
   }
   /**
-   * @param string
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -62,7 +76,11 @@ class AnalyzeSentimentResponse extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Whether the language is officially supported. The API may still return a
+   * response when the language is not supported, but it is on a best effort
+   * basis.
+   *
+   * @param bool $languageSupported
    */
   public function setLanguageSupported($languageSupported)
   {
@@ -76,7 +94,9 @@ class AnalyzeSentimentResponse extends \Google\Collection
     return $this->languageSupported;
   }
   /**
-   * @param Sentence[]
+   * The sentiment for all the sentences in the document.
+   *
+   * @param Sentence[] $sentences
    */
   public function setSentences($sentences)
   {

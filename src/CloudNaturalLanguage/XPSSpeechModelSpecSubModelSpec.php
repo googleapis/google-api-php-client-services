@@ -19,39 +19,71 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class XPSSpeechModelSpecSubModelSpec extends \Google\Model
 {
+  public const BIASING_MODEL_TYPE_BIASING_MODEL_TYPE_UNSPECIFIED = 'BIASING_MODEL_TYPE_UNSPECIFIED';
   /**
+   * Build biasing model on top of COMMAND_AND_SEARCH model
+   */
+  public const BIASING_MODEL_TYPE_COMMAND_AND_SEARCH = 'COMMAND_AND_SEARCH';
+  /**
+   * Build biasing model on top of PHONE_CALL model
+   */
+  public const BIASING_MODEL_TYPE_PHONE_CALL = 'PHONE_CALL';
+  /**
+   * Build biasing model on top of VIDEO model
+   */
+  public const BIASING_MODEL_TYPE_VIDEO = 'VIDEO';
+  /**
+   * Build biasing model on top of DEFAULT model
+   */
+  public const BIASING_MODEL_TYPE_DEFAULT = 'DEFAULT';
+  /**
+   * Type of the biasing model.
+   *
    * @var string
    */
   public $biasingModelType;
   /**
+   * In S3, Recognition ClientContextId.client_id
+   *
    * @var string
    */
   public $clientId;
   /**
+   * In S3, Recognition ClientContextId.context_id
+   *
    * @var string
    */
   public $contextId;
   /**
+   * If true then it means we have an enhanced version of the biasing models.
+   *
    * @var bool
    */
   public $isEnhancedModel;
 
   /**
-   * @param string
+   * Type of the biasing model.
+   *
+   * Accepted values: BIASING_MODEL_TYPE_UNSPECIFIED, COMMAND_AND_SEARCH,
+   * PHONE_CALL, VIDEO, DEFAULT
+   *
+   * @param self::BIASING_MODEL_TYPE_* $biasingModelType
    */
   public function setBiasingModelType($biasingModelType)
   {
     $this->biasingModelType = $biasingModelType;
   }
   /**
-   * @return string
+   * @return self::BIASING_MODEL_TYPE_*
    */
   public function getBiasingModelType()
   {
     return $this->biasingModelType;
   }
   /**
-   * @param string
+   * In S3, Recognition ClientContextId.client_id
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -65,7 +97,9 @@ class XPSSpeechModelSpecSubModelSpec extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param string
+   * In S3, Recognition ClientContextId.context_id
+   *
+   * @param string $contextId
    */
   public function setContextId($contextId)
   {
@@ -79,7 +113,9 @@ class XPSSpeechModelSpecSubModelSpec extends \Google\Model
     return $this->contextId;
   }
   /**
-   * @param bool
+   * If true then it means we have an enhanced version of the biasing models.
+   *
+   * @param bool $isEnhancedModel
    */
   public function setIsEnhancedModel($isEnhancedModel)
   {

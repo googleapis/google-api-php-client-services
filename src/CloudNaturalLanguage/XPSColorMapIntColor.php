@@ -20,20 +20,28 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSColorMapIntColor extends \Google\Model
 {
   /**
+   * The value should be in range of [0, 255].
+   *
    * @var int
    */
   public $blue;
   /**
+   * The value should be in range of [0, 255].
+   *
    * @var int
    */
   public $green;
   /**
+   * The value should be in range of [0, 255].
+   *
    * @var int
    */
   public $red;
 
   /**
-   * @param int
+   * The value should be in range of [0, 255].
+   *
+   * @param int $blue
    */
   public function setBlue($blue)
   {
@@ -47,7 +55,9 @@ class XPSColorMapIntColor extends \Google\Model
     return $this->blue;
   }
   /**
-   * @param int
+   * The value should be in range of [0, 255].
+   *
+   * @param int $green
    */
   public function setGreen($green)
   {
@@ -61,7 +71,9 @@ class XPSColorMapIntColor extends \Google\Model
     return $this->green;
   }
   /**
-   * @param int
+   * The value should be in range of [0, 255].
+   *
+   * @param int $red
    */
   public function setRed($red)
   {

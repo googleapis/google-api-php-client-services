@@ -25,7 +25,7 @@ class XPSArrayStats extends \Google\Model
   protected $memberStatsDataType = '';
 
   /**
-   * @param XPSCommonStats
+   * @param XPSCommonStats $commonStats
    */
   public function setCommonStats(XPSCommonStats $commonStats)
   {
@@ -39,7 +39,10 @@ class XPSArrayStats extends \Google\Model
     return $this->commonStats;
   }
   /**
-   * @param XPSDataStats
+   * Stats of all the values of all arrays, as if they were a single long series
+   * of data. The type depends on the element type of the array.
+   *
+   * @param XPSDataStats $memberStats
    */
   public function setMemberStats(XPSDataStats $memberStats)
   {

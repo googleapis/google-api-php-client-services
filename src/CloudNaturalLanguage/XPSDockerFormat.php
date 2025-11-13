@@ -19,38 +19,58 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class XPSDockerFormat extends \Google\Model
 {
+  public const CPU_ARCHITECTURE_CPU_ARCHITECTURE_UNSPECIFIED = 'CPU_ARCHITECTURE_UNSPECIFIED';
+  public const CPU_ARCHITECTURE_CPU_ARCHITECTURE_X86_64 = 'CPU_ARCHITECTURE_X86_64';
+  public const GPU_ARCHITECTURE_GPU_ARCHITECTURE_UNSPECIFIED = 'GPU_ARCHITECTURE_UNSPECIFIED';
+  public const GPU_ARCHITECTURE_GPU_ARCHITECTURE_NVIDIA = 'GPU_ARCHITECTURE_NVIDIA';
   /**
+   * Optional. Additional cpu information describing the requirements for the to
+   * be exported model files.
+   *
    * @var string
    */
   public $cpuArchitecture;
   /**
+   * Optional. Additional gpu information describing the requirements for the to
+   * be exported model files.
+   *
    * @var string
    */
   public $gpuArchitecture;
 
   /**
-   * @param string
+   * Optional. Additional cpu information describing the requirements for the to
+   * be exported model files.
+   *
+   * Accepted values: CPU_ARCHITECTURE_UNSPECIFIED, CPU_ARCHITECTURE_X86_64
+   *
+   * @param self::CPU_ARCHITECTURE_* $cpuArchitecture
    */
   public function setCpuArchitecture($cpuArchitecture)
   {
     $this->cpuArchitecture = $cpuArchitecture;
   }
   /**
-   * @return string
+   * @return self::CPU_ARCHITECTURE_*
    */
   public function getCpuArchitecture()
   {
     return $this->cpuArchitecture;
   }
   /**
-   * @param string
+   * Optional. Additional gpu information describing the requirements for the to
+   * be exported model files.
+   *
+   * Accepted values: GPU_ARCHITECTURE_UNSPECIFIED, GPU_ARCHITECTURE_NVIDIA
+   *
+   * @param self::GPU_ARCHITECTURE_* $gpuArchitecture
    */
   public function setGpuArchitecture($gpuArchitecture)
   {
     $this->gpuArchitecture = $gpuArchitecture;
   }
   /**
-   * @return string
+   * @return self::GPU_ARCHITECTURE_*
    */
   public function getGpuArchitecture()
   {

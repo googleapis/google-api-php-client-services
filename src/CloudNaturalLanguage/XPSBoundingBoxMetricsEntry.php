@@ -23,16 +23,24 @@ class XPSBoundingBoxMetricsEntry extends \Google\Collection
   protected $confidenceMetricsEntriesType = XPSBoundingBoxMetricsEntryConfidenceMetricsEntry::class;
   protected $confidenceMetricsEntriesDataType = 'array';
   /**
+   * The intersection-over-union threshold value used to compute this metrics
+   * entry.
+   *
    * @var float
    */
   public $iouThreshold;
   /**
+   * The mean average precision.
+   *
    * @var float
    */
   public $meanAveragePrecision;
 
   /**
-   * @param XPSBoundingBoxMetricsEntryConfidenceMetricsEntry[]
+   * Metrics for each label-match confidence_threshold from
+   * 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99.
+   *
+   * @param XPSBoundingBoxMetricsEntryConfidenceMetricsEntry[] $confidenceMetricsEntries
    */
   public function setConfidenceMetricsEntries($confidenceMetricsEntries)
   {
@@ -46,7 +54,10 @@ class XPSBoundingBoxMetricsEntry extends \Google\Collection
     return $this->confidenceMetricsEntries;
   }
   /**
-   * @param float
+   * The intersection-over-union threshold value used to compute this metrics
+   * entry.
+   *
+   * @param float $iouThreshold
    */
   public function setIouThreshold($iouThreshold)
   {
@@ -60,7 +71,9 @@ class XPSBoundingBoxMetricsEntry extends \Google\Collection
     return $this->iouThreshold;
   }
   /**
-   * @param float
+   * The mean average precision.
+   *
+   * @param float $meanAveragePrecision
    */
   public function setMeanAveragePrecision($meanAveragePrecision)
   {

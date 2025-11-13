@@ -20,12 +20,16 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSResponseExplanationMetadataOutputMetadata extends \Google\Model
 {
   /**
+   * Name of the output tensor. Only needed in train response.
+   *
    * @var string
    */
   public $outputTensorName;
 
   /**
-   * @param string
+   * Name of the output tensor. Only needed in train response.
+   *
+   * @param string $outputTensorName
    */
   public function setOutputTensorName($outputTensorName)
   {

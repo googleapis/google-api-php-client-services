@@ -20,6 +20,8 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSTablesDatasetMetadata extends \Google\Model
 {
   /**
+   * Id the column to split the table.
+   *
    * @var int
    */
   public $mlUseColumnId;
@@ -28,16 +30,22 @@ class XPSTablesDatasetMetadata extends \Google\Model
   protected $targetColumnCorrelationsType = XPSCorrelationStats::class;
   protected $targetColumnCorrelationsDataType = 'map';
   /**
+   * Id of the primary table column that should be used as the training label.
+   *
    * @var int
    */
   public $targetColumnId;
   /**
+   * Id of the primary table column that should be used as the weight column.
+   *
    * @var int
    */
   public $weightColumnId;
 
   /**
-   * @param int
+   * Id the column to split the table.
+   *
+   * @param int $mlUseColumnId
    */
   public function setMlUseColumnId($mlUseColumnId)
   {
@@ -51,7 +59,9 @@ class XPSTablesDatasetMetadata extends \Google\Model
     return $this->mlUseColumnId;
   }
   /**
-   * @param XPSTableSpec
+   * Primary table.
+   *
+   * @param XPSTableSpec $primaryTableSpec
    */
   public function setPrimaryTableSpec(XPSTableSpec $primaryTableSpec)
   {
@@ -65,7 +75,9 @@ class XPSTablesDatasetMetadata extends \Google\Model
     return $this->primaryTableSpec;
   }
   /**
-   * @param XPSCorrelationStats[]
+   * (the column id : its CorrelationStats with target column).
+   *
+   * @param XPSCorrelationStats[] $targetColumnCorrelations
    */
   public function setTargetColumnCorrelations($targetColumnCorrelations)
   {
@@ -79,7 +91,9 @@ class XPSTablesDatasetMetadata extends \Google\Model
     return $this->targetColumnCorrelations;
   }
   /**
-   * @param int
+   * Id of the primary table column that should be used as the training label.
+   *
+   * @param int $targetColumnId
    */
   public function setTargetColumnId($targetColumnId)
   {
@@ -93,7 +107,9 @@ class XPSTablesDatasetMetadata extends \Google\Model
     return $this->targetColumnId;
   }
   /**
-   * @param int
+   * Id of the primary table column that should be used as the weight column.
+   *
+   * @param int $weightColumnId
    */
   public function setWeightColumnId($weightColumnId)
   {

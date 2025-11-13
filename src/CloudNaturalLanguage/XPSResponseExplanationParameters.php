@@ -25,7 +25,11 @@ class XPSResponseExplanationParameters extends \Google\Model
   protected $xraiAttributionDataType = '';
 
   /**
-   * @param XPSIntegratedGradientsAttribution
+   * An attribution method that computes Aumann-Shapley values taking advantage
+   * of the model's fully differentiable structure. Refer to this paper for more
+   * details: https://arxiv.org/abs/1703.01365
+   *
+   * @param XPSIntegratedGradientsAttribution $integratedGradientsAttribution
    */
   public function setIntegratedGradientsAttribution(XPSIntegratedGradientsAttribution $integratedGradientsAttribution)
   {
@@ -39,7 +43,16 @@ class XPSResponseExplanationParameters extends \Google\Model
     return $this->integratedGradientsAttribution;
   }
   /**
-   * @param XPSXraiAttribution
+   * An attribution method that redistributes Integrated Gradients attribution
+   * to segmented regions, taking advantage of the model's fully differentiable
+   * structure. Refer to this paper for more details:
+   * https://arxiv.org/abs/1906.02825 XRAI currently performs better on natural
+   * images, like a picture of a house or an animal. If the images are taken in
+   * artificial environments, like a lab or manufacturing line, or from
+   * diagnostic equipment, like x-rays or quality-control cameras, use
+   * Integrated Gradients instead.
+   *
+   * @param XPSXraiAttribution $xraiAttribution
    */
   public function setXraiAttribution(XPSXraiAttribution $xraiAttribution)
   {

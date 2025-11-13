@@ -26,7 +26,7 @@ class XPSStringStats extends \Google\Collection
   protected $topUnigramStatsDataType = 'array';
 
   /**
-   * @param XPSCommonStats
+   * @param XPSCommonStats $commonStats
    */
   public function setCommonStats(XPSCommonStats $commonStats)
   {
@@ -40,7 +40,10 @@ class XPSStringStats extends \Google\Collection
     return $this->commonStats;
   }
   /**
-   * @param XPSStringStatsUnigramStats[]
+   * The statistics of the top 20 unigrams, ordered by
+   * StringStats.UnigramStats.count.
+   *
+   * @param XPSStringStatsUnigramStats[] $topUnigramStats
    */
   public function setTopUnigramStats($topUnigramStats)
   {

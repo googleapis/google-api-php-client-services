@@ -19,26 +19,102 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class Entity extends \Google\Collection
 {
+  /**
+   * Unknown
+   */
+  public const TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Person
+   */
+  public const TYPE_PERSON = 'PERSON';
+  /**
+   * Location
+   */
+  public const TYPE_LOCATION = 'LOCATION';
+  /**
+   * Organization
+   */
+  public const TYPE_ORGANIZATION = 'ORGANIZATION';
+  /**
+   * Event
+   */
+  public const TYPE_EVENT = 'EVENT';
+  /**
+   * Artwork
+   */
+  public const TYPE_WORK_OF_ART = 'WORK_OF_ART';
+  /**
+   * Consumer product
+   */
+  public const TYPE_CONSUMER_GOOD = 'CONSUMER_GOOD';
+  /**
+   * Other types of entities
+   */
+  public const TYPE_OTHER = 'OTHER';
+  /**
+   * Phone number The metadata lists the phone number, formatted according to
+   * local convention, plus whichever additional elements appear in the text: *
+   * `number` - the actual number, broken down into sections as per local
+   * convention * `national_prefix` - country code, if detected * `area_code` -
+   * region or area code, if detected * `extension` - phone extension (to be
+   * dialed after connection), if detected
+   */
+  public const TYPE_PHONE_NUMBER = 'PHONE_NUMBER';
+  /**
+   * Address The metadata identifies the street number and locality plus
+   * whichever additional elements appear in the text: * `street_number` -
+   * street number * `locality` - city or town * `street_name` - street/route
+   * name, if detected * `postal_code` - postal code, if detected * `country` -
+   * country, if detected * `broad_region` - administrative area, such as the
+   * state, if detected * `narrow_region` - smaller administrative area, such as
+   * county, if detected * `sublocality` - used in Asian addresses to demark a
+   * district within a city, if detected
+   */
+  public const TYPE_ADDRESS = 'ADDRESS';
+  /**
+   * Date The metadata identifies the components of the date: * `year` - four
+   * digit year, if detected * `month` - two digit month number, if detected *
+   * `day` - two digit day number, if detected
+   */
+  public const TYPE_DATE = 'DATE';
+  /**
+   * Number The metadata is the number itself.
+   */
+  public const TYPE_NUMBER = 'NUMBER';
+  /**
+   * Price The metadata identifies the `value` and `currency`.
+   */
+  public const TYPE_PRICE = 'PRICE';
   protected $collection_key = 'mentions';
   protected $mentionsType = EntityMention::class;
   protected $mentionsDataType = 'array';
   /**
+   * Metadata associated with the entity. For the metadata associated with other
+   * entity types, see the Type table below.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * The representative name for the entity.
+   *
    * @var string
    */
   public $name;
   protected $sentimentType = Sentiment::class;
   protected $sentimentDataType = '';
   /**
+   * The entity type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param EntityMention[]
+   * The mentions of this entity in the input document. The API currently
+   * supports proper noun mentions.
+   *
+   * @param EntityMention[] $mentions
    */
   public function setMentions($mentions)
   {
@@ -52,7 +128,10 @@ class Entity extends \Google\Collection
     return $this->mentions;
   }
   /**
-   * @param string[]
+   * Metadata associated with the entity. For the metadata associated with other
+   * entity types, see the Type table below.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -66,7 +145,9 @@ class Entity extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * The representative name for the entity.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +161,10 @@ class Entity extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Sentiment
+   * For calls to AnalyzeEntitySentiment this field will contain the aggregate
+   * sentiment expressed for this entity in the provided document.
+   *
+   * @param Sentiment $sentiment
    */
   public function setSentiment(Sentiment $sentiment)
   {
@@ -94,14 +178,20 @@ class Entity extends \Google\Collection
     return $this->sentiment;
   }
   /**
-   * @param string
+   * The entity type.
+   *
+   * Accepted values: UNKNOWN, PERSON, LOCATION, ORGANIZATION, EVENT,
+   * WORK_OF_ART, CONSUMER_GOOD, OTHER, PHONE_NUMBER, ADDRESS, DATE, NUMBER,
+   * PRICE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

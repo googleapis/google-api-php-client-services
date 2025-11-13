@@ -21,16 +21,26 @@ class XPSRow extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * The ids of the columns. Note: The below `values` field must match order of
+   * this field, if this field is set.
+   *
    * @var int[]
    */
   public $columnIds;
   /**
+   * The values of the row cells, given in the same order as the column_ids. If
+   * column_ids is not set, then in the same order as the
+   * input_feature_column_ids in TablesModelMetadata.
+   *
    * @var array[]
    */
   public $values;
 
   /**
-   * @param int[]
+   * The ids of the columns. Note: The below `values` field must match order of
+   * this field, if this field is set.
+   *
+   * @param int[] $columnIds
    */
   public function setColumnIds($columnIds)
   {
@@ -44,7 +54,11 @@ class XPSRow extends \Google\Collection
     return $this->columnIds;
   }
   /**
-   * @param array[]
+   * The values of the row cells, given in the same order as the column_ids. If
+   * column_ids is not set, then in the same order as the
+   * input_feature_column_ids in TablesModelMetadata.
+   *
+   * @param array[] $values
    */
   public function setValues($values)
   {

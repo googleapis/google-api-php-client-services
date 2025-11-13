@@ -20,64 +20,105 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSConfidenceMetricsEntry extends \Google\Model
 {
   /**
+   * Metrics are computed with an assumption that the model never return
+   * predictions with score lower than this value.
+   *
    * @var float
    */
   public $confidenceThreshold;
   /**
+   * The harmonic mean of recall and precision.
+   *
    * @var float
    */
   public $f1Score;
   /**
+   * The harmonic mean of recall_at1 and precision_at1.
+   *
    * @var float
    */
   public $f1ScoreAt1;
   /**
+   * The number of ground truth labels that are not matched by a model created
+   * label.
+   *
    * @var string
    */
   public $falseNegativeCount;
   /**
+   * The number of model created labels that do not match a ground truth label.
+   *
    * @var string
    */
   public $falsePositiveCount;
   /**
+   * False Positive Rate for the given confidence threshold.
+   *
    * @var float
    */
   public $falsePositiveRate;
   /**
+   * The False Positive Rate when only considering the label that has the
+   * highest prediction score and not below the confidence threshold for each
+   * example.
+   *
    * @var float
    */
   public $falsePositiveRateAt1;
   /**
+   * Metrics are computed with an assumption that the model always returns at
+   * most this many predictions (ordered by their score, descendingly), but they
+   * all still need to meet the confidence_threshold.
+   *
    * @var int
    */
   public $positionThreshold;
   /**
+   * Precision for the given confidence threshold.
+   *
    * @var float
    */
   public $precision;
   /**
+   * The precision when only considering the label that has the highest
+   * prediction score and not below the confidence threshold for each example.
+   *
    * @var float
    */
   public $precisionAt1;
   /**
+   * Recall (true positive rate) for the given confidence threshold.
+   *
    * @var float
    */
   public $recall;
   /**
+   * The recall (true positive rate) when only considering the label that has
+   * the highest prediction score and not below the confidence threshold for
+   * each example.
+   *
    * @var float
    */
   public $recallAt1;
   /**
+   * The number of labels that were not created by the model, but if they would,
+   * they would not match a ground truth label.
+   *
    * @var string
    */
   public $trueNegativeCount;
   /**
+   * The number of model created labels that match a ground truth label.
+   *
    * @var string
    */
   public $truePositiveCount;
 
   /**
-   * @param float
+   * Metrics are computed with an assumption that the model never return
+   * predictions with score lower than this value.
+   *
+   * @param float $confidenceThreshold
    */
   public function setConfidenceThreshold($confidenceThreshold)
   {
@@ -91,7 +132,9 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->confidenceThreshold;
   }
   /**
-   * @param float
+   * The harmonic mean of recall and precision.
+   *
+   * @param float $f1Score
    */
   public function setF1Score($f1Score)
   {
@@ -105,7 +148,9 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->f1Score;
   }
   /**
-   * @param float
+   * The harmonic mean of recall_at1 and precision_at1.
+   *
+   * @param float $f1ScoreAt1
    */
   public function setF1ScoreAt1($f1ScoreAt1)
   {
@@ -119,7 +164,10 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->f1ScoreAt1;
   }
   /**
-   * @param string
+   * The number of ground truth labels that are not matched by a model created
+   * label.
+   *
+   * @param string $falseNegativeCount
    */
   public function setFalseNegativeCount($falseNegativeCount)
   {
@@ -133,7 +181,9 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->falseNegativeCount;
   }
   /**
-   * @param string
+   * The number of model created labels that do not match a ground truth label.
+   *
+   * @param string $falsePositiveCount
    */
   public function setFalsePositiveCount($falsePositiveCount)
   {
@@ -147,7 +197,9 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->falsePositiveCount;
   }
   /**
-   * @param float
+   * False Positive Rate for the given confidence threshold.
+   *
+   * @param float $falsePositiveRate
    */
   public function setFalsePositiveRate($falsePositiveRate)
   {
@@ -161,7 +213,11 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->falsePositiveRate;
   }
   /**
-   * @param float
+   * The False Positive Rate when only considering the label that has the
+   * highest prediction score and not below the confidence threshold for each
+   * example.
+   *
+   * @param float $falsePositiveRateAt1
    */
   public function setFalsePositiveRateAt1($falsePositiveRateAt1)
   {
@@ -175,7 +231,11 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->falsePositiveRateAt1;
   }
   /**
-   * @param int
+   * Metrics are computed with an assumption that the model always returns at
+   * most this many predictions (ordered by their score, descendingly), but they
+   * all still need to meet the confidence_threshold.
+   *
+   * @param int $positionThreshold
    */
   public function setPositionThreshold($positionThreshold)
   {
@@ -189,7 +249,9 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->positionThreshold;
   }
   /**
-   * @param float
+   * Precision for the given confidence threshold.
+   *
+   * @param float $precision
    */
   public function setPrecision($precision)
   {
@@ -203,7 +265,10 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->precision;
   }
   /**
-   * @param float
+   * The precision when only considering the label that has the highest
+   * prediction score and not below the confidence threshold for each example.
+   *
+   * @param float $precisionAt1
    */
   public function setPrecisionAt1($precisionAt1)
   {
@@ -217,7 +282,9 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->precisionAt1;
   }
   /**
-   * @param float
+   * Recall (true positive rate) for the given confidence threshold.
+   *
+   * @param float $recall
    */
   public function setRecall($recall)
   {
@@ -231,7 +298,11 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->recall;
   }
   /**
-   * @param float
+   * The recall (true positive rate) when only considering the label that has
+   * the highest prediction score and not below the confidence threshold for
+   * each example.
+   *
+   * @param float $recallAt1
    */
   public function setRecallAt1($recallAt1)
   {
@@ -245,7 +316,10 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->recallAt1;
   }
   /**
-   * @param string
+   * The number of labels that were not created by the model, but if they would,
+   * they would not match a ground truth label.
+   *
+   * @param string $trueNegativeCount
    */
   public function setTrueNegativeCount($trueNegativeCount)
   {
@@ -259,7 +333,9 @@ class XPSConfidenceMetricsEntry extends \Google\Model
     return $this->trueNegativeCount;
   }
   /**
-   * @param string
+   * The number of model created labels that match a ground truth label.
+   *
+   * @param string $truePositiveCount
    */
   public function setTruePositiveCount($truePositiveCount)
   {

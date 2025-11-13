@@ -25,22 +25,33 @@ class XPSImageModelArtifactSpec extends \Google\Collection
   protected $exportArtifactType = XPSModelArtifactItem::class;
   protected $exportArtifactDataType = 'array';
   /**
+   * Google Cloud Storage URI of decoded labels file for model export
+   * 'dict.txt'.
+   *
    * @var string
    */
   public $labelGcsUri;
   protected $servingArtifactType = XPSModelArtifactItem::class;
   protected $servingArtifactDataType = '';
   /**
+   * Google Cloud Storage URI prefix of Tensorflow JavaScript binary files
+   * 'groupX-shardXofX.bin'. Deprecated.
+   *
    * @var string
    */
   public $tfJsBinaryGcsPrefix;
   /**
+   * Google Cloud Storage URI of Tensorflow Lite metadata
+   * 'tflite_metadata.json'.
+   *
    * @var string
    */
   public $tfLiteMetadataGcsUri;
 
   /**
-   * @param XPSModelArtifactItem
+   * The Tensorflow checkpoint files. e.g. Used for resumable training.
+   *
+   * @param XPSModelArtifactItem $checkpointArtifact
    */
   public function setCheckpointArtifact(XPSModelArtifactItem $checkpointArtifact)
   {
@@ -54,7 +65,9 @@ class XPSImageModelArtifactSpec extends \Google\Collection
     return $this->checkpointArtifact;
   }
   /**
-   * @param XPSModelArtifactItem[]
+   * The model binary files in different formats for model export.
+   *
+   * @param XPSModelArtifactItem[] $exportArtifact
    */
   public function setExportArtifact($exportArtifact)
   {
@@ -68,7 +81,10 @@ class XPSImageModelArtifactSpec extends \Google\Collection
     return $this->exportArtifact;
   }
   /**
-   * @param string
+   * Google Cloud Storage URI of decoded labels file for model export
+   * 'dict.txt'.
+   *
+   * @param string $labelGcsUri
    */
   public function setLabelGcsUri($labelGcsUri)
   {
@@ -82,7 +98,10 @@ class XPSImageModelArtifactSpec extends \Google\Collection
     return $this->labelGcsUri;
   }
   /**
-   * @param XPSModelArtifactItem
+   * The default model binary file used for serving (e.g. online predict, batch
+   * predict) via public Cloud AI Platform API.
+   *
+   * @param XPSModelArtifactItem $servingArtifact
    */
   public function setServingArtifact(XPSModelArtifactItem $servingArtifact)
   {
@@ -96,7 +115,10 @@ class XPSImageModelArtifactSpec extends \Google\Collection
     return $this->servingArtifact;
   }
   /**
-   * @param string
+   * Google Cloud Storage URI prefix of Tensorflow JavaScript binary files
+   * 'groupX-shardXofX.bin'. Deprecated.
+   *
+   * @param string $tfJsBinaryGcsPrefix
    */
   public function setTfJsBinaryGcsPrefix($tfJsBinaryGcsPrefix)
   {
@@ -110,7 +132,10 @@ class XPSImageModelArtifactSpec extends \Google\Collection
     return $this->tfJsBinaryGcsPrefix;
   }
   /**
-   * @param string
+   * Google Cloud Storage URI of Tensorflow Lite metadata
+   * 'tflite_metadata.json'.
+   *
+   * @param string $tfLiteMetadataGcsUri
    */
   public function setTfLiteMetadataGcsUri($tfLiteMetadataGcsUri)
   {

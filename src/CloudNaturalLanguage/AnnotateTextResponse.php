@@ -27,10 +27,18 @@ class AnnotateTextResponse extends \Google\Collection
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
   /**
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Whether the language is officially supported by all requested features. The
+   * API may still return a response when the language is not supported, but it
+   * is on a best effort basis.
+   *
    * @var bool
    */
   public $languageSupported;
@@ -40,7 +48,9 @@ class AnnotateTextResponse extends \Google\Collection
   protected $sentencesDataType = 'array';
 
   /**
-   * @param ClassificationCategory[]
+   * Categories identified in the input document.
+   *
+   * @param ClassificationCategory[] $categories
    */
   public function setCategories($categories)
   {
@@ -54,7 +64,10 @@ class AnnotateTextResponse extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param Sentiment
+   * The overall sentiment for the document. Populated if the user enables
+   * AnnotateTextRequest.Features.extract_document_sentiment.
+   *
+   * @param Sentiment $documentSentiment
    */
   public function setDocumentSentiment(Sentiment $documentSentiment)
   {
@@ -68,7 +81,11 @@ class AnnotateTextResponse extends \Google\Collection
     return $this->documentSentiment;
   }
   /**
-   * @param Entity[]
+   * Entities, along with their semantic information, in the input document.
+   * Populated if the user enables AnnotateTextRequest.Features.extract_entities
+   * .
+   *
+   * @param Entity[] $entities
    */
   public function setEntities($entities)
   {
@@ -82,7 +99,11 @@ class AnnotateTextResponse extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param string
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -96,7 +117,11 @@ class AnnotateTextResponse extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Whether the language is officially supported by all requested features. The
+   * API may still return a response when the language is not supported, but it
+   * is on a best effort basis.
+   *
+   * @param bool $languageSupported
    */
   public function setLanguageSupported($languageSupported)
   {
@@ -110,7 +135,9 @@ class AnnotateTextResponse extends \Google\Collection
     return $this->languageSupported;
   }
   /**
-   * @param ClassificationCategory[]
+   * Harmful and sensitive categories identified in the input document.
+   *
+   * @param ClassificationCategory[] $moderationCategories
    */
   public function setModerationCategories($moderationCategories)
   {
@@ -124,7 +151,10 @@ class AnnotateTextResponse extends \Google\Collection
     return $this->moderationCategories;
   }
   /**
-   * @param Sentence[]
+   * Sentences in the input document. Populated if the user enables
+   * AnnotateTextRequest.Features.extract_document_sentiment.
+   *
+   * @param Sentence[] $sentences
    */
   public function setSentences($sentences)
   {

@@ -25,7 +25,9 @@ class XPSResponseExplanationMetadata extends \Google\Model
   protected $outputsDataType = 'map';
 
   /**
-   * @param XPSResponseExplanationMetadataInputMetadata[]
+   * Metadata of the input.
+   *
+   * @param XPSResponseExplanationMetadataInputMetadata[] $inputs
    */
   public function setInputs($inputs)
   {
@@ -39,7 +41,9 @@ class XPSResponseExplanationMetadata extends \Google\Model
     return $this->inputs;
   }
   /**
-   * @param XPSResponseExplanationMetadataOutputMetadata[]
+   * Metadata of the output.
+   *
+   * @param XPSResponseExplanationMetadataOutputMetadata[] $outputs
    */
   public function setOutputs($outputs)
   {

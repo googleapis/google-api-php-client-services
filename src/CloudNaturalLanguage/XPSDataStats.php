@@ -24,12 +24,16 @@ class XPSDataStats extends \Google\Model
   protected $categoryStatsType = XPSCategoryStats::class;
   protected $categoryStatsDataType = '';
   /**
+   * The number of distinct values.
+   *
    * @var string
    */
   public $distinctValueCount;
   protected $float64StatsType = XPSFloat64Stats::class;
   protected $float64StatsDataType = '';
   /**
+   * The number of values that are null.
+   *
    * @var string
    */
   public $nullValueCount;
@@ -40,12 +44,16 @@ class XPSDataStats extends \Google\Model
   protected $timestampStatsType = XPSTimestampStats::class;
   protected $timestampStatsDataType = '';
   /**
+   * The number of values that are valid.
+   *
    * @var string
    */
   public $validValueCount;
 
   /**
-   * @param XPSArrayStats
+   * The statistics for ARRAY DataType.
+   *
+   * @param XPSArrayStats $arrayStats
    */
   public function setArrayStats(XPSArrayStats $arrayStats)
   {
@@ -59,7 +67,9 @@ class XPSDataStats extends \Google\Model
     return $this->arrayStats;
   }
   /**
-   * @param XPSCategoryStats
+   * The statistics for CATEGORY DataType.
+   *
+   * @param XPSCategoryStats $categoryStats
    */
   public function setCategoryStats(XPSCategoryStats $categoryStats)
   {
@@ -73,7 +83,9 @@ class XPSDataStats extends \Google\Model
     return $this->categoryStats;
   }
   /**
-   * @param string
+   * The number of distinct values.
+   *
+   * @param string $distinctValueCount
    */
   public function setDistinctValueCount($distinctValueCount)
   {
@@ -87,7 +99,9 @@ class XPSDataStats extends \Google\Model
     return $this->distinctValueCount;
   }
   /**
-   * @param XPSFloat64Stats
+   * The statistics for FLOAT64 DataType.
+   *
+   * @param XPSFloat64Stats $float64Stats
    */
   public function setFloat64Stats(XPSFloat64Stats $float64Stats)
   {
@@ -101,7 +115,9 @@ class XPSDataStats extends \Google\Model
     return $this->float64Stats;
   }
   /**
-   * @param string
+   * The number of values that are null.
+   *
+   * @param string $nullValueCount
    */
   public function setNullValueCount($nullValueCount)
   {
@@ -115,7 +131,9 @@ class XPSDataStats extends \Google\Model
     return $this->nullValueCount;
   }
   /**
-   * @param XPSStringStats
+   * The statistics for STRING DataType.
+   *
+   * @param XPSStringStats $stringStats
    */
   public function setStringStats(XPSStringStats $stringStats)
   {
@@ -129,7 +147,9 @@ class XPSDataStats extends \Google\Model
     return $this->stringStats;
   }
   /**
-   * @param XPSStructStats
+   * The statistics for STRUCT DataType.
+   *
+   * @param XPSStructStats $structStats
    */
   public function setStructStats(XPSStructStats $structStats)
   {
@@ -143,7 +163,9 @@ class XPSDataStats extends \Google\Model
     return $this->structStats;
   }
   /**
-   * @param XPSTimestampStats
+   * The statistics for TIMESTAMP DataType.
+   *
+   * @param XPSTimestampStats $timestampStats
    */
   public function setTimestampStats(XPSTimestampStats $timestampStats)
   {
@@ -157,7 +179,9 @@ class XPSDataStats extends \Google\Model
     return $this->timestampStats;
   }
   /**
-   * @param string
+   * The number of values that are valid.
+   *
+   * @param string $validValueCount
    */
   public function setValidValueCount($validValueCount)
   {

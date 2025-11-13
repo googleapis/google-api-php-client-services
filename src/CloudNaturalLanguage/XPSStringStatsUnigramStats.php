@@ -20,16 +20,22 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSStringStatsUnigramStats extends \Google\Model
 {
   /**
+   * The number of occurrences of this unigram in the series.
+   *
    * @var string
    */
   public $count;
   /**
+   * The unigram.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The number of occurrences of this unigram in the series.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -43,7 +49,9 @@ class XPSStringStatsUnigramStats extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * The unigram.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

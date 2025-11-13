@@ -21,30 +21,43 @@ class XPSRegressionEvaluationMetrics extends \Google\Collection
 {
   protected $collection_key = 'regressionMetricsEntries';
   /**
+   * Mean Absolute Error (MAE).
+   *
    * @var float
    */
   public $meanAbsoluteError;
   /**
+   * Mean absolute percentage error. Only set if all ground truth values are
+   * positive.
+   *
    * @var float
    */
   public $meanAbsolutePercentageError;
   /**
+   * R squared.
+   *
    * @var float
    */
   public $rSquared;
   protected $regressionMetricsEntriesType = XPSRegressionMetricsEntry::class;
   protected $regressionMetricsEntriesDataType = 'array';
   /**
+   * Root Mean Squared Error (RMSE).
+   *
    * @var float
    */
   public $rootMeanSquaredError;
   /**
+   * Root mean squared log error.
+   *
    * @var float
    */
   public $rootMeanSquaredLogError;
 
   /**
-   * @param float
+   * Mean Absolute Error (MAE).
+   *
+   * @param float $meanAbsoluteError
    */
   public function setMeanAbsoluteError($meanAbsoluteError)
   {
@@ -58,7 +71,10 @@ class XPSRegressionEvaluationMetrics extends \Google\Collection
     return $this->meanAbsoluteError;
   }
   /**
-   * @param float
+   * Mean absolute percentage error. Only set if all ground truth values are
+   * positive.
+   *
+   * @param float $meanAbsolutePercentageError
    */
   public function setMeanAbsolutePercentageError($meanAbsolutePercentageError)
   {
@@ -72,7 +88,9 @@ class XPSRegressionEvaluationMetrics extends \Google\Collection
     return $this->meanAbsolutePercentageError;
   }
   /**
-   * @param float
+   * R squared.
+   *
+   * @param float $rSquared
    */
   public function setRSquared($rSquared)
   {
@@ -86,7 +104,9 @@ class XPSRegressionEvaluationMetrics extends \Google\Collection
     return $this->rSquared;
   }
   /**
-   * @param XPSRegressionMetricsEntry[]
+   * A list of actual versus predicted points for the model being evaluated.
+   *
+   * @param XPSRegressionMetricsEntry[] $regressionMetricsEntries
    */
   public function setRegressionMetricsEntries($regressionMetricsEntries)
   {
@@ -100,7 +120,9 @@ class XPSRegressionEvaluationMetrics extends \Google\Collection
     return $this->regressionMetricsEntries;
   }
   /**
-   * @param float
+   * Root Mean Squared Error (RMSE).
+   *
+   * @param float $rootMeanSquaredError
    */
   public function setRootMeanSquaredError($rootMeanSquaredError)
   {
@@ -114,7 +136,9 @@ class XPSRegressionEvaluationMetrics extends \Google\Collection
     return $this->rootMeanSquaredError;
   }
   /**
-   * @param float
+   * Root mean squared log error.
+   *
+   * @param float $rootMeanSquaredLogError
    */
   public function setRootMeanSquaredLogError($rootMeanSquaredLogError)
   {

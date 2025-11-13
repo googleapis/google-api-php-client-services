@@ -20,24 +20,34 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSBoundingBoxMetricsEntryConfidenceMetricsEntry extends \Google\Model
 {
   /**
+   * The confidence threshold value used to compute the metrics.
+   *
    * @var float
    */
   public $confidenceThreshold;
   /**
+   * The harmonic mean of recall and precision.
+   *
    * @var float
    */
   public $f1Score;
   /**
+   * Precision for the given confidence threshold.
+   *
    * @var float
    */
   public $precision;
   /**
+   * Recall for the given confidence threshold.
+   *
    * @var float
    */
   public $recall;
 
   /**
-   * @param float
+   * The confidence threshold value used to compute the metrics.
+   *
+   * @param float $confidenceThreshold
    */
   public function setConfidenceThreshold($confidenceThreshold)
   {
@@ -51,7 +61,9 @@ class XPSBoundingBoxMetricsEntryConfidenceMetricsEntry extends \Google\Model
     return $this->confidenceThreshold;
   }
   /**
-   * @param float
+   * The harmonic mean of recall and precision.
+   *
+   * @param float $f1Score
    */
   public function setF1Score($f1Score)
   {
@@ -65,7 +77,9 @@ class XPSBoundingBoxMetricsEntryConfidenceMetricsEntry extends \Google\Model
     return $this->f1Score;
   }
   /**
-   * @param float
+   * Precision for the given confidence threshold.
+   *
+   * @param float $precision
    */
   public function setPrecision($precision)
   {
@@ -79,7 +93,9 @@ class XPSBoundingBoxMetricsEntryConfidenceMetricsEntry extends \Google\Model
     return $this->precision;
   }
   /**
-   * @param float
+   * Recall for the given confidence threshold.
+   *
+   * @param float $recall
    */
   public function setRecall($recall)
   {

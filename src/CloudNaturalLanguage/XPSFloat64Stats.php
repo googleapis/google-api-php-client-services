@@ -24,12 +24,30 @@ class XPSFloat64Stats extends \Google\Collection
   protected $commonStatsDataType = '';
   protected $histogramBucketsType = XPSFloat64StatsHistogramBucket::class;
   protected $histogramBucketsDataType = 'array';
+  /**
+   * The mean of the series.
+   *
+   * @var 
+   */
   public $mean;
+  /**
+   * Ordered from 0 to k k-quantile values of the data series of n values. The
+   * value at index i is, approximately, the i*n/k-th smallest value in the
+   * series; for i = 0 and i = k these are, respectively, the min and max
+   * values.
+   *
+   * @var []
+   */
   public $quantiles;
+  /**
+   * The standard deviation of the series.
+   *
+   * @var 
+   */
   public $standardDeviation;
 
   /**
-   * @param XPSCommonStats
+   * @param XPSCommonStats $commonStats
    */
   public function setCommonStats(XPSCommonStats $commonStats)
   {
@@ -43,7 +61,13 @@ class XPSFloat64Stats extends \Google\Collection
     return $this->commonStats;
   }
   /**
-   * @param XPSFloat64StatsHistogramBucket[]
+   * Histogram buckets of the data series. Sorted by the min value of the
+   * bucket, ascendingly, and the number of the buckets is dynamically
+   * generated. The buckets are non-overlapping and completely cover whole
+   * FLOAT64 range with min of first bucket being `"-Infinity"`, and max of the
+   * last one being `"Infinity"`.
+   *
+   * @param XPSFloat64StatsHistogramBucket[] $histogramBuckets
    */
   public function setHistogramBuckets($histogramBuckets)
   {

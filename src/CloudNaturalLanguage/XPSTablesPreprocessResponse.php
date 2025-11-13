@@ -23,7 +23,10 @@ class XPSTablesPreprocessResponse extends \Google\Model
   protected $tablesDatasetMetadataDataType = '';
 
   /**
-   * @param XPSTablesDatasetMetadata
+   * The table/column id, column_name and the DataTypes of the columns will be
+   * populated.
+   *
+   * @param XPSTablesDatasetMetadata $tablesDatasetMetadata
    */
   public function setTablesDatasetMetadata(XPSTablesDatasetMetadata $tablesDatasetMetadata)
   {

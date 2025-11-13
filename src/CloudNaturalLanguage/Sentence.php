@@ -25,7 +25,11 @@ class Sentence extends \Google\Model
   protected $textDataType = '';
 
   /**
-   * @param Sentiment
+   * For calls to AnalyzeSentiment or if
+   * AnnotateTextRequest.Features.extract_document_sentiment is set to true,
+   * this field will contain the sentiment for the sentence.
+   *
+   * @param Sentiment $sentiment
    */
   public function setSentiment(Sentiment $sentiment)
   {
@@ -39,7 +43,9 @@ class Sentence extends \Google\Model
     return $this->sentiment;
   }
   /**
-   * @param TextSpan
+   * The sentence text.
+   *
+   * @param TextSpan $text
    */
   public function setText(TextSpan $text)
   {

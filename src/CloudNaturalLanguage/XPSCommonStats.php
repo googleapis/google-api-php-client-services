@@ -33,7 +33,7 @@ class XPSCommonStats extends \Google\Model
   public $validValueCount;
 
   /**
-   * @param string
+   * @param string $distinctValueCount
    */
   public function setDistinctValueCount($distinctValueCount)
   {
@@ -47,7 +47,7 @@ class XPSCommonStats extends \Google\Model
     return $this->distinctValueCount;
   }
   /**
-   * @param string
+   * @param string $nullValueCount
    */
   public function setNullValueCount($nullValueCount)
   {
@@ -61,7 +61,7 @@ class XPSCommonStats extends \Google\Model
     return $this->nullValueCount;
   }
   /**
-   * @param string
+   * @param string $validValueCount
    */
   public function setValidValueCount($validValueCount)
   {

@@ -23,44 +23,64 @@ class XPSSpeechPreprocessStats extends \Google\Collection
   protected $dataErrorsType = XPSDataErrors::class;
   protected $dataErrorsDataType = 'array';
   /**
+   * The number of rows marked HUMAN_LABELLED
+   *
    * @var int
    */
   public $numHumanLabeledExamples;
   /**
+   * The number of samples found in the previously recorded logs data.
+   *
    * @var int
    */
   public $numLogsExamples;
   /**
+   * The number of rows marked as MACHINE_TRANSCRIBED
+   *
    * @var int
    */
   public $numMachineTranscribedExamples;
   /**
+   * The number of examples labelled as TEST by Speech xps server.
+   *
    * @var int
    */
   public $testExamplesCount;
   /**
+   * The number of sentences in the test data set.
+   *
    * @var int
    */
   public $testSentencesCount;
   /**
+   * The number of words in the test data set.
+   *
    * @var int
    */
   public $testWordsCount;
   /**
+   * The number of examples labeled as TRAIN by Speech xps server.
+   *
    * @var int
    */
   public $trainExamplesCount;
   /**
+   * The number of sentences in the training data set.
+   *
    * @var int
    */
   public $trainSentencesCount;
   /**
+   * The number of words in the training data set.
+   *
    * @var int
    */
   public $trainWordsCount;
 
   /**
-   * @param XPSDataErrors[]
+   * Different types of data errors and the counts associated with them.
+   *
+   * @param XPSDataErrors[] $dataErrors
    */
   public function setDataErrors($dataErrors)
   {
@@ -74,7 +94,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->dataErrors;
   }
   /**
-   * @param int
+   * The number of rows marked HUMAN_LABELLED
+   *
+   * @param int $numHumanLabeledExamples
    */
   public function setNumHumanLabeledExamples($numHumanLabeledExamples)
   {
@@ -88,7 +110,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->numHumanLabeledExamples;
   }
   /**
-   * @param int
+   * The number of samples found in the previously recorded logs data.
+   *
+   * @param int $numLogsExamples
    */
   public function setNumLogsExamples($numLogsExamples)
   {
@@ -102,7 +126,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->numLogsExamples;
   }
   /**
-   * @param int
+   * The number of rows marked as MACHINE_TRANSCRIBED
+   *
+   * @param int $numMachineTranscribedExamples
    */
   public function setNumMachineTranscribedExamples($numMachineTranscribedExamples)
   {
@@ -116,7 +142,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->numMachineTranscribedExamples;
   }
   /**
-   * @param int
+   * The number of examples labelled as TEST by Speech xps server.
+   *
+   * @param int $testExamplesCount
    */
   public function setTestExamplesCount($testExamplesCount)
   {
@@ -130,7 +158,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->testExamplesCount;
   }
   /**
-   * @param int
+   * The number of sentences in the test data set.
+   *
+   * @param int $testSentencesCount
    */
   public function setTestSentencesCount($testSentencesCount)
   {
@@ -144,7 +174,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->testSentencesCount;
   }
   /**
-   * @param int
+   * The number of words in the test data set.
+   *
+   * @param int $testWordsCount
    */
   public function setTestWordsCount($testWordsCount)
   {
@@ -158,7 +190,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->testWordsCount;
   }
   /**
-   * @param int
+   * The number of examples labeled as TRAIN by Speech xps server.
+   *
+   * @param int $trainExamplesCount
    */
   public function setTrainExamplesCount($trainExamplesCount)
   {
@@ -172,7 +206,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->trainExamplesCount;
   }
   /**
-   * @param int
+   * The number of sentences in the training data set.
+   *
+   * @param int $trainSentencesCount
    */
   public function setTrainSentencesCount($trainSentencesCount)
   {
@@ -186,7 +222,9 @@ class XPSSpeechPreprocessStats extends \Google\Collection
     return $this->trainSentencesCount;
   }
   /**
-   * @param int
+   * The number of words in the training data set.
+   *
+   * @param int $trainWordsCount
    */
   public function setTrainWordsCount($trainWordsCount)
   {

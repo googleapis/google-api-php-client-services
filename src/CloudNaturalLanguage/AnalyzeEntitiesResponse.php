@@ -23,16 +23,26 @@ class AnalyzeEntitiesResponse extends \Google\Collection
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
   /**
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Whether the language is officially supported. The API may still return a
+   * response when the language is not supported, but it is on a best effort
+   * basis.
+   *
    * @var bool
    */
   public $languageSupported;
 
   /**
-   * @param Entity[]
+   * The recognized entities in the input document.
+   *
+   * @param Entity[] $entities
    */
   public function setEntities($entities)
   {
@@ -46,7 +56,11 @@ class AnalyzeEntitiesResponse extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param string
+   * The language of the text, which will be the same as the language specified
+   * in the request or, if not specified, the automatically-detected language.
+   * See Document.language_code field for more details.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -60,7 +74,11 @@ class AnalyzeEntitiesResponse extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Whether the language is officially supported. The API may still return a
+   * response when the language is not supported, but it is on a best effort
+   * basis.
+   *
+   * @param bool $languageSupported
    */
   public function setLanguageSupported($languageSupported)
   {

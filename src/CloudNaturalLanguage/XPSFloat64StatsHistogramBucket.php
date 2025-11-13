@@ -20,14 +20,31 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSFloat64StatsHistogramBucket extends \Google\Model
 {
   /**
+   * The number of data values that are in the bucket, i.e. are between min and
+   * max values.
+   *
    * @var string
    */
   public $count;
+  /**
+   * The maximum value of the bucket, exclusive unless max = `"Infinity"`, in
+   * which case it's inclusive.
+   *
+   * @var 
+   */
   public $max;
+  /**
+   * The minimum value of the bucket, inclusive.
+   *
+   * @var 
+   */
   public $min;
 
   /**
-   * @param string
+   * The number of data values that are in the bucket, i.e. are between min and
+   * max values.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
