@@ -20,12 +20,22 @@ namespace Google\Service\CloudFilestore;
 class RevertInstanceRequest extends \Google\Model
 {
   /**
+   * Required. The snapshot resource ID, in the format 'my-snapshot', where the
+   * specified ID is the {snapshot_id} of the fully qualified name like `project
+   * s/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{s
+   * napshot_id}`
+   *
    * @var string
    */
   public $targetSnapshotId;
 
   /**
-   * @param string
+   * Required. The snapshot resource ID, in the format 'my-snapshot', where the
+   * specified ID is the {snapshot_id} of the fully qualified name like `project
+   * s/{project_id}/locations/{location_id}/instances/{instance_id}/snapshots/{s
+   * napshot_id}`
+   *
+   * @param string $targetSnapshotId
    */
   public function setTargetSnapshotId($targetSnapshotId)
   {

@@ -20,12 +20,22 @@ namespace Google\Service\CloudFilestore;
 class PscConfig extends \Google\Model
 {
   /**
+   * Optional. Consumer service project in which the Private Service Connect
+   * endpoint would be set up. This is optional, and only relevant in case the
+   * network is a shared VPC. If this is not specified, the endpoint would be
+   * setup in the VPC host project.
+   *
    * @var string
    */
   public $endpointProject;
 
   /**
-   * @param string
+   * Optional. Consumer service project in which the Private Service Connect
+   * endpoint would be set up. This is optional, and only relevant in case the
+   * network is a shared VPC. If this is not specified, the endpoint would be
+   * setup in the VPC host project.
+   *
+   * @param string $endpointProject
    */
   public function setEndpointProject($endpointProject)
   {

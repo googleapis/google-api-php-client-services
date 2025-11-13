@@ -20,6 +20,8 @@ namespace Google\Service\CloudFilestore;
 class DailyCycle extends \Google\Model
 {
   /**
+   * Output only. Duration of the time window, set by service producer.
+   *
    * @var string
    */
   public $duration;
@@ -27,7 +29,9 @@ class DailyCycle extends \Google\Model
   protected $startTimeDataType = '';
 
   /**
-   * @param string
+   * Output only. Duration of the time window, set by service producer.
+   *
+   * @param string $duration
    */
   public function setDuration($duration)
   {
@@ -41,7 +45,9 @@ class DailyCycle extends \Google\Model
     return $this->duration;
   }
   /**
-   * @param TimeOfDay
+   * Time within the day to start the operations.
+   *
+   * @param TimeOfDay $startTime
    */
   public function setStartTime(TimeOfDay $startTime)
   {

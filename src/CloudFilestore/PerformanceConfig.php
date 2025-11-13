@@ -25,7 +25,15 @@ class PerformanceConfig extends \Google\Model
   protected $iopsPerTbDataType = '';
 
   /**
-   * @param FixedIOPS
+   * Choose a fixed provisioned IOPS value for the instance, which will remain
+   * constant regardless of instance capacity. Value must be a multiple of 1000.
+   * If the chosen value is outside the supported range for the instance's
+   * capacity during instance creation, instance creation will fail with an
+   * `InvalidArgument` error. Similarly, if an instance capacity update would
+   * result in a value outside the supported range, the update will fail with an
+   * `InvalidArgument` error.
+   *
+   * @param FixedIOPS $fixedIops
    */
   public function setFixedIops(FixedIOPS $fixedIops)
   {
@@ -39,7 +47,17 @@ class PerformanceConfig extends \Google\Model
     return $this->fixedIops;
   }
   /**
-   * @param IOPSPerTB
+   * Provision IOPS dynamically based on the capacity of the instance.
+   * Provisioned IOPS will be calculated by multiplying the capacity of the
+   * instance in TiB by the `iops_per_tb` value. For example, for a 2 TiB
+   * instance with an `iops_per_tb` value of 17000 the provisioned IOPS will be
+   * 34000. If the calculated value is outside the supported range for the
+   * instance's capacity during instance creation, instance creation will fail
+   * with an `InvalidArgument` error. Similarly, if an instance capacity update
+   * would result in a value outside the supported range, the update will fail
+   * with an `InvalidArgument` error.
+   *
+   * @param IOPSPerTB $iopsPerTb
    */
   public function setIopsPerTb(IOPSPerTB $iopsPerTb)
   {

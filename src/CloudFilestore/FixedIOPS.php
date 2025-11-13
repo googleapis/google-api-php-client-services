@@ -20,12 +20,16 @@ namespace Google\Service\CloudFilestore;
 class FixedIOPS extends \Google\Model
 {
   /**
+   * Required. Maximum IOPS.
+   *
    * @var string
    */
   public $maxIops;
 
   /**
-   * @param string
+   * Required. Maximum IOPS.
+   *
+   * @param string $maxIops
    */
   public function setMaxIops($maxIops)
   {

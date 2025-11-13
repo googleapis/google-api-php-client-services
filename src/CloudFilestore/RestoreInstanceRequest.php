@@ -20,16 +20,25 @@ namespace Google\Service\CloudFilestore;
 class RestoreInstanceRequest extends \Google\Model
 {
   /**
+   * Required. Name of the file share in the Filestore instance that the backup
+   * is being restored to.
+   *
    * @var string
    */
   public $fileShare;
   /**
+   * The resource name of the backup, in the format
+   * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.
+   *
    * @var string
    */
   public $sourceBackup;
 
   /**
-   * @param string
+   * Required. Name of the file share in the Filestore instance that the backup
+   * is being restored to.
+   *
+   * @param string $fileShare
    */
   public function setFileShare($fileShare)
   {
@@ -43,7 +52,10 @@ class RestoreInstanceRequest extends \Google\Model
     return $this->fileShare;
   }
   /**
-   * @param string
+   * The resource name of the backup, in the format
+   * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`.
+   *
+   * @param string $sourceBackup
    */
   public function setSourceBackup($sourceBackup)
   {

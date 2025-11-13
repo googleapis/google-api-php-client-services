@@ -20,12 +20,16 @@ namespace Google\Service\CloudFilestore;
 class IOPSPerTB extends \Google\Model
 {
   /**
+   * Required. Maximum IOPS per TiB.
+   *
    * @var string
    */
   public $maxIopsPerTb;
 
   /**
-   * @param string
+   * Required. Maximum IOPS per TiB.
+   *
+   * @param string $maxIopsPerTb
    */
   public function setMaxIopsPerTb($maxIopsPerTb)
   {

@@ -21,26 +21,46 @@ class FileShareConfig extends \Google\Collection
 {
   protected $collection_key = 'nfsExportOptions';
   /**
+   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3
+   * bytes.
+   *
    * @var string
    */
   public $capacityGb;
   /**
+   * Required. The name of the file share. Must use 1-16 characters for the
+   * basic service tier and 1-63 characters for all other service tiers. Must
+   * use lowercase letters, numbers, or underscores `[a-z0-9_]`. Must start with
+   * a letter. Immutable.
+   *
    * @var string
    */
   public $name;
   protected $nfsExportOptionsType = NfsExportOptions::class;
   protected $nfsExportOptionsDataType = 'array';
   /**
+   * The resource name of the backup, in the format
+   * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`,
+   * that this file share has been restored from.
+   *
    * @var string
    */
   public $sourceBackup;
   /**
+   * The resource name of the BackupDR backup, in the format `projects/{project_
+   * id}/locations/{location_id}/backupVaults/{backupvault_id}/dataSources/{data
+   * source_id}/backups/{backup_id}`, TODO (b/443690479) - Remove visibility
+   * restrictions once the feature is ready
+   *
    * @var string
    */
   public $sourceBackupdrBackup;
 
   /**
-   * @param string
+   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3
+   * bytes.
+   *
+   * @param string $capacityGb
    */
   public function setCapacityGb($capacityGb)
   {
@@ -54,7 +74,12 @@ class FileShareConfig extends \Google\Collection
     return $this->capacityGb;
   }
   /**
-   * @param string
+   * Required. The name of the file share. Must use 1-16 characters for the
+   * basic service tier and 1-63 characters for all other service tiers. Must
+   * use lowercase letters, numbers, or underscores `[a-z0-9_]`. Must start with
+   * a letter. Immutable.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -68,7 +93,9 @@ class FileShareConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param NfsExportOptions[]
+   * Nfs Export Options. There is a limit of 10 export options per file share.
+   *
+   * @param NfsExportOptions[] $nfsExportOptions
    */
   public function setNfsExportOptions($nfsExportOptions)
   {
@@ -82,7 +109,11 @@ class FileShareConfig extends \Google\Collection
     return $this->nfsExportOptions;
   }
   /**
-   * @param string
+   * The resource name of the backup, in the format
+   * `projects/{project_number}/locations/{location_id}/backups/{backup_id}`,
+   * that this file share has been restored from.
+   *
+   * @param string $sourceBackup
    */
   public function setSourceBackup($sourceBackup)
   {
@@ -96,7 +127,12 @@ class FileShareConfig extends \Google\Collection
     return $this->sourceBackup;
   }
   /**
-   * @param string
+   * The resource name of the BackupDR backup, in the format `projects/{project_
+   * id}/locations/{location_id}/backupVaults/{backupvault_id}/dataSources/{data
+   * source_id}/backups/{backup_id}`, TODO (b/443690479) - Remove visibility
+   * restrictions once the feature is ready
+   *
+   * @param string $sourceBackupdrBackup
    */
   public function setSourceBackupdrBackup($sourceBackupdrBackup)
   {
