@@ -23,24 +23,38 @@ class Volumeannotations extends \Google\Collection
   protected $itemsType = Volumeannotation::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token to pass in for pagination for the next page. This will not be present
+   * if this request does not have more results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The total number of volume annotations found.
+   *
    * @var int
    */
   public $totalItems;
   /**
+   * The version string for all of the volume annotations in this layer (not
+   * just the ones in this response). Note: the version string doesn't apply to
+   * the annotation data, just the information in this response (e.g. the
+   * location of annotations in the book).
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param Volumeannotation[]
+   * A list of volume annotations.
+   *
+   * @param Volumeannotation[] $items
    */
   public function setItems($items)
   {
@@ -54,7 +68,9 @@ class Volumeannotations extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -68,7 +84,10 @@ class Volumeannotations extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token to pass in for pagination for the next page. This will not be present
+   * if this request does not have more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -82,7 +101,9 @@ class Volumeannotations extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * The total number of volume annotations found.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {
@@ -96,7 +117,12 @@ class Volumeannotations extends \Google\Collection
     return $this->totalItems;
   }
   /**
-   * @param string
+   * The version string for all of the volume annotations in this layer (not
+   * just the ones in this response). Note: the version string doesn't apply to
+   * the annotation data, just the information in this response (e.g. the
+   * location of annotations in the book).
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

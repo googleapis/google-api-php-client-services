@@ -23,16 +23,23 @@ class Volumes extends \Google\Collection
   protected $itemsType = Volume::class;
   protected $itemsDataType = 'array';
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Total number of volumes found. This might be greater than the number of
+   * volumes returned in this response if results have been paginated.
+   *
    * @var int
    */
   public $totalItems;
 
   /**
-   * @param Volume[]
+   * A list of volumes.
+   *
+   * @param Volume[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +53,9 @@ class Volumes extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +69,10 @@ class Volumes extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param int
+   * Total number of volumes found. This might be greater than the number of
+   * volumes returned in this response if results have been paginated.
+   *
+   * @param int $totalItems
    */
   public function setTotalItems($totalItems)
   {

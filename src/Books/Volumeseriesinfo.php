@@ -21,14 +21,21 @@ class Volumeseriesinfo extends \Google\Collection
 {
   protected $collection_key = 'volumeSeries';
   /**
+   * The display number string. This should be used only for display purposes
+   * and the actual sequence should be inferred from the below orderNumber.
+   *
    * @var string
    */
   public $bookDisplayNumber;
   /**
+   * Resource type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Short book title in the context of the series.
+   *
    * @var string
    */
   public $shortSeriesBookTitle;
@@ -36,7 +43,10 @@ class Volumeseriesinfo extends \Google\Collection
   protected $volumeSeriesDataType = 'array';
 
   /**
-   * @param string
+   * The display number string. This should be used only for display purposes
+   * and the actual sequence should be inferred from the below orderNumber.
+   *
+   * @param string $bookDisplayNumber
    */
   public function setBookDisplayNumber($bookDisplayNumber)
   {
@@ -50,7 +60,9 @@ class Volumeseriesinfo extends \Google\Collection
     return $this->bookDisplayNumber;
   }
   /**
-   * @param string
+   * Resource type.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -64,7 +76,9 @@ class Volumeseriesinfo extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Short book title in the context of the series.
+   *
+   * @param string $shortSeriesBookTitle
    */
   public function setShortSeriesBookTitle($shortSeriesBookTitle)
   {
@@ -78,7 +92,7 @@ class Volumeseriesinfo extends \Google\Collection
     return $this->shortSeriesBookTitle;
   }
   /**
-   * @param VolumeseriesinfoVolumeSeries[]
+   * @param VolumeseriesinfoVolumeSeries[] $volumeSeries
    */
   public function setVolumeSeries($volumeSeries)
   {
