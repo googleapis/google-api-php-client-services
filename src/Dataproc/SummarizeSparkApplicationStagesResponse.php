@@ -23,7 +23,9 @@ class SummarizeSparkApplicationStagesResponse extends \Google\Model
   protected $stagesSummaryDataType = '';
 
   /**
-   * @param StagesSummary
+   * Summary of a Spark Application Stages
+   *
+   * @param StagesSummary $stagesSummary
    */
   public function setStagesSummary(StagesSummary $stagesSummary)
   {

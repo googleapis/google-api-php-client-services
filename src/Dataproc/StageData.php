@@ -19,6 +19,12 @@ namespace Google\Service\Dataproc;
 
 class StageData extends \Google\Collection
 {
+  public const STATUS_STAGE_STATUS_UNSPECIFIED = 'STAGE_STATUS_UNSPECIFIED';
+  public const STATUS_STAGE_STATUS_ACTIVE = 'STAGE_STATUS_ACTIVE';
+  public const STATUS_STAGE_STATUS_COMPLETE = 'STAGE_STATUS_COMPLETE';
+  public const STATUS_STAGE_STATUS_FAILED = 'STAGE_STATUS_FAILED';
+  public const STATUS_STAGE_STATUS_PENDING = 'STAGE_STATUS_PENDING';
+  public const STATUS_STAGE_STATUS_SKIPPED = 'STAGE_STATUS_SKIPPED';
   protected $collection_key = 'rddIds';
   protected $accumulatorUpdatesType = AccumulableInfo::class;
   protected $accumulatorUpdatesDataType = 'array';
@@ -138,7 +144,7 @@ class StageData extends \Google\Collection
   protected $tasksDataType = 'map';
 
   /**
-   * @param AccumulableInfo[]
+   * @param AccumulableInfo[] $accumulatorUpdates
    */
   public function setAccumulatorUpdates($accumulatorUpdates)
   {
@@ -152,7 +158,7 @@ class StageData extends \Google\Collection
     return $this->accumulatorUpdates;
   }
   /**
-   * @param string
+   * @param string $completionTime
    */
   public function setCompletionTime($completionTime)
   {
@@ -166,7 +172,7 @@ class StageData extends \Google\Collection
     return $this->completionTime;
   }
   /**
-   * @param string
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -180,7 +186,7 @@ class StageData extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * @param string $details
    */
   public function setDetails($details)
   {
@@ -194,7 +200,7 @@ class StageData extends \Google\Collection
     return $this->details;
   }
   /**
-   * @param ExecutorMetricsDistributions
+   * @param ExecutorMetricsDistributions $executorMetricsDistributions
    */
   public function setExecutorMetricsDistributions(ExecutorMetricsDistributions $executorMetricsDistributions)
   {
@@ -208,7 +214,7 @@ class StageData extends \Google\Collection
     return $this->executorMetricsDistributions;
   }
   /**
-   * @param ExecutorStageSummary[]
+   * @param ExecutorStageSummary[] $executorSummary
    */
   public function setExecutorSummary($executorSummary)
   {
@@ -222,7 +228,7 @@ class StageData extends \Google\Collection
     return $this->executorSummary;
   }
   /**
-   * @param string
+   * @param string $failureReason
    */
   public function setFailureReason($failureReason)
   {
@@ -236,7 +242,7 @@ class StageData extends \Google\Collection
     return $this->failureReason;
   }
   /**
-   * @param string
+   * @param string $firstTaskLaunchedTime
    */
   public function setFirstTaskLaunchedTime($firstTaskLaunchedTime)
   {
@@ -250,7 +256,7 @@ class StageData extends \Google\Collection
     return $this->firstTaskLaunchedTime;
   }
   /**
-   * @param bool
+   * @param bool $isShufflePushEnabled
    */
   public function setIsShufflePushEnabled($isShufflePushEnabled)
   {
@@ -264,7 +270,7 @@ class StageData extends \Google\Collection
     return $this->isShufflePushEnabled;
   }
   /**
-   * @param string[]
+   * @param string[] $jobIds
    */
   public function setJobIds($jobIds)
   {
@@ -278,7 +284,7 @@ class StageData extends \Google\Collection
     return $this->jobIds;
   }
   /**
-   * @param int[]
+   * @param int[] $killedTasksSummary
    */
   public function setKilledTasksSummary($killedTasksSummary)
   {
@@ -292,7 +298,7 @@ class StageData extends \Google\Collection
     return $this->killedTasksSummary;
   }
   /**
-   * @param string[]
+   * @param string[] $locality
    */
   public function setLocality($locality)
   {
@@ -306,7 +312,7 @@ class StageData extends \Google\Collection
     return $this->locality;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -320,7 +326,7 @@ class StageData extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * @param int $numActiveTasks
    */
   public function setNumActiveTasks($numActiveTasks)
   {
@@ -334,7 +340,7 @@ class StageData extends \Google\Collection
     return $this->numActiveTasks;
   }
   /**
-   * @param int
+   * @param int $numCompleteTasks
    */
   public function setNumCompleteTasks($numCompleteTasks)
   {
@@ -348,7 +354,7 @@ class StageData extends \Google\Collection
     return $this->numCompleteTasks;
   }
   /**
-   * @param int
+   * @param int $numCompletedIndices
    */
   public function setNumCompletedIndices($numCompletedIndices)
   {
@@ -362,7 +368,7 @@ class StageData extends \Google\Collection
     return $this->numCompletedIndices;
   }
   /**
-   * @param int
+   * @param int $numFailedTasks
    */
   public function setNumFailedTasks($numFailedTasks)
   {
@@ -376,7 +382,7 @@ class StageData extends \Google\Collection
     return $this->numFailedTasks;
   }
   /**
-   * @param int
+   * @param int $numKilledTasks
    */
   public function setNumKilledTasks($numKilledTasks)
   {
@@ -390,7 +396,7 @@ class StageData extends \Google\Collection
     return $this->numKilledTasks;
   }
   /**
-   * @param int
+   * @param int $numTasks
    */
   public function setNumTasks($numTasks)
   {
@@ -404,7 +410,7 @@ class StageData extends \Google\Collection
     return $this->numTasks;
   }
   /**
-   * @param string[]
+   * @param string[] $parentStageIds
    */
   public function setParentStageIds($parentStageIds)
   {
@@ -418,7 +424,7 @@ class StageData extends \Google\Collection
     return $this->parentStageIds;
   }
   /**
-   * @param ExecutorMetrics
+   * @param ExecutorMetrics $peakExecutorMetrics
    */
   public function setPeakExecutorMetrics(ExecutorMetrics $peakExecutorMetrics)
   {
@@ -432,7 +438,7 @@ class StageData extends \Google\Collection
     return $this->peakExecutorMetrics;
   }
   /**
-   * @param string[]
+   * @param string[] $rddIds
    */
   public function setRddIds($rddIds)
   {
@@ -446,7 +452,7 @@ class StageData extends \Google\Collection
     return $this->rddIds;
   }
   /**
-   * @param int
+   * @param int $resourceProfileId
    */
   public function setResourceProfileId($resourceProfileId)
   {
@@ -460,7 +466,7 @@ class StageData extends \Google\Collection
     return $this->resourceProfileId;
   }
   /**
-   * @param string
+   * @param string $schedulingPool
    */
   public function setSchedulingPool($schedulingPool)
   {
@@ -474,7 +480,7 @@ class StageData extends \Google\Collection
     return $this->schedulingPool;
   }
   /**
-   * @param int
+   * @param int $shuffleMergersCount
    */
   public function setShuffleMergersCount($shuffleMergersCount)
   {
@@ -488,7 +494,7 @@ class StageData extends \Google\Collection
     return $this->shuffleMergersCount;
   }
   /**
-   * @param SpeculationStageSummary
+   * @param SpeculationStageSummary $speculationSummary
    */
   public function setSpeculationSummary(SpeculationStageSummary $speculationSummary)
   {
@@ -502,7 +508,7 @@ class StageData extends \Google\Collection
     return $this->speculationSummary;
   }
   /**
-   * @param int
+   * @param int $stageAttemptId
    */
   public function setStageAttemptId($stageAttemptId)
   {
@@ -516,7 +522,7 @@ class StageData extends \Google\Collection
     return $this->stageAttemptId;
   }
   /**
-   * @param string
+   * @param string $stageId
    */
   public function setStageId($stageId)
   {
@@ -530,7 +536,7 @@ class StageData extends \Google\Collection
     return $this->stageId;
   }
   /**
-   * @param StageMetrics
+   * @param StageMetrics $stageMetrics
    */
   public function setStageMetrics(StageMetrics $stageMetrics)
   {
@@ -544,21 +550,21 @@ class StageData extends \Google\Collection
     return $this->stageMetrics;
   }
   /**
-   * @param string
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * @param string $submissionTime
    */
   public function setSubmissionTime($submissionTime)
   {
@@ -572,7 +578,10 @@ class StageData extends \Google\Collection
     return $this->submissionTime;
   }
   /**
-   * @param TaskQuantileMetrics
+   * Summary metrics fields. These are included in response only if present in
+   * summary_metrics_mask field in request
+   *
+   * @param TaskQuantileMetrics $taskQuantileMetrics
    */
   public function setTaskQuantileMetrics(TaskQuantileMetrics $taskQuantileMetrics)
   {
@@ -586,7 +595,7 @@ class StageData extends \Google\Collection
     return $this->taskQuantileMetrics;
   }
   /**
-   * @param TaskData[]
+   * @param TaskData[] $tasks
    */
   public function setTasks($tasks)
   {

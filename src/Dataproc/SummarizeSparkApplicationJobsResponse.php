@@ -23,7 +23,9 @@ class SummarizeSparkApplicationJobsResponse extends \Google\Model
   protected $jobsSummaryDataType = '';
 
   /**
-   * @param JobsSummary
+   * Summary of a Spark Application Jobs
+   *
+   * @param JobsSummary $jobsSummary
    */
   public function setJobsSummary(JobsSummary $jobsSummary)
   {

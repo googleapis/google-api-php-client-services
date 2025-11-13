@@ -33,7 +33,7 @@ class StageShuffleWriteMetrics extends \Google\Model
   public $writeTimeNanos;
 
   /**
-   * @param string
+   * @param string $bytesWritten
    */
   public function setBytesWritten($bytesWritten)
   {
@@ -47,7 +47,7 @@ class StageShuffleWriteMetrics extends \Google\Model
     return $this->bytesWritten;
   }
   /**
-   * @param string
+   * @param string $recordsWritten
    */
   public function setRecordsWritten($recordsWritten)
   {
@@ -61,7 +61,7 @@ class StageShuffleWriteMetrics extends \Google\Model
     return $this->recordsWritten;
   }
   /**
-   * @param string
+   * @param string $writeTimeNanos
    */
   public function setWriteTimeNanos($writeTimeNanos)
   {

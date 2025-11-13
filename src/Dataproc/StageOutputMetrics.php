@@ -29,7 +29,7 @@ class StageOutputMetrics extends \Google\Model
   public $recordsWritten;
 
   /**
-   * @param string
+   * @param string $bytesWritten
    */
   public function setBytesWritten($bytesWritten)
   {
@@ -43,7 +43,7 @@ class StageOutputMetrics extends \Google\Model
     return $this->bytesWritten;
   }
   /**
-   * @param string
+   * @param string $recordsWritten
    */
   public function setRecordsWritten($recordsWritten)
   {

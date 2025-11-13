@@ -29,7 +29,7 @@ class StageInputMetrics extends \Google\Model
   public $recordsRead;
 
   /**
-   * @param string
+   * @param string $bytesRead
    */
   public function setBytesRead($bytesRead)
   {
@@ -43,7 +43,7 @@ class StageInputMetrics extends \Google\Model
     return $this->bytesRead;
   }
   /**
-   * @param string
+   * @param string $recordsRead
    */
   public function setRecordsRead($recordsRead)
   {

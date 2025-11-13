@@ -21,12 +21,16 @@ class ValueValidation extends \Google\Collection
 {
   protected $collection_key = 'values';
   /**
+   * Required. List of allowed values for the parameter.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string[]
+   * Required. List of allowed values for the parameter.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

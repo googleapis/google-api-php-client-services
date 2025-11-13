@@ -22,6 +22,8 @@ class SummarizeSessionSparkApplicationExecutorsResponse extends \Google\Model
   protected $activeExecutorSummaryType = ConsolidatedExecutorSummary::class;
   protected $activeExecutorSummaryDataType = '';
   /**
+   * Spark Application Id
+   *
    * @var string
    */
   public $applicationId;
@@ -31,7 +33,9 @@ class SummarizeSessionSparkApplicationExecutorsResponse extends \Google\Model
   protected $totalExecutorSummaryDataType = '';
 
   /**
-   * @param ConsolidatedExecutorSummary
+   * Consolidated summary for active executors.
+   *
+   * @param ConsolidatedExecutorSummary $activeExecutorSummary
    */
   public function setActiveExecutorSummary(ConsolidatedExecutorSummary $activeExecutorSummary)
   {
@@ -45,7 +49,9 @@ class SummarizeSessionSparkApplicationExecutorsResponse extends \Google\Model
     return $this->activeExecutorSummary;
   }
   /**
-   * @param string
+   * Spark Application Id
+   *
+   * @param string $applicationId
    */
   public function setApplicationId($applicationId)
   {
@@ -59,7 +65,9 @@ class SummarizeSessionSparkApplicationExecutorsResponse extends \Google\Model
     return $this->applicationId;
   }
   /**
-   * @param ConsolidatedExecutorSummary
+   * Consolidated summary for dead executors.
+   *
+   * @param ConsolidatedExecutorSummary $deadExecutorSummary
    */
   public function setDeadExecutorSummary(ConsolidatedExecutorSummary $deadExecutorSummary)
   {
@@ -73,7 +81,9 @@ class SummarizeSessionSparkApplicationExecutorsResponse extends \Google\Model
     return $this->deadExecutorSummary;
   }
   /**
-   * @param ConsolidatedExecutorSummary
+   * Overall consolidated summary for all executors.
+   *
+   * @param ConsolidatedExecutorSummary $totalExecutorSummary
    */
   public function setTotalExecutorSummary(ConsolidatedExecutorSummary $totalExecutorSummary)
   {

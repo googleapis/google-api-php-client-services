@@ -20,34 +20,75 @@ namespace Google\Service\Dataproc;
 class StateHistory extends \Google\Model
 {
   /**
+   * The batch state is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The batch is created before running.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The batch is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The batch is cancelling.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * The batch cancellation was successful.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The batch completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The batch is no longer running due to an error.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Output only. The state of the batch at this point in history.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Details about the state at this point in history.
+   *
    * @var string
    */
   public $stateMessage;
   /**
+   * Output only. The time when the batch entered the historical state.
+   *
    * @var string
    */
   public $stateStartTime;
 
   /**
-   * @param string
+   * Output only. The state of the batch at this point in history.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, RUNNING, CANCELLING,
+   * CANCELLED, SUCCEEDED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Details about the state at this point in history.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {
@@ -61,7 +102,9 @@ class StateHistory extends \Google\Model
     return $this->stateMessage;
   }
   /**
-   * @param string
+   * Output only. The time when the batch entered the historical state.
+   *
+   * @param string $stateStartTime
    */
   public function setStateStartTime($stateStartTime)
   {

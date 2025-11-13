@@ -20,58 +20,109 @@ namespace Google\Service\Dataproc;
 class WorkflowMetadata extends \Google\Model
 {
   /**
+   * Unused.
+   */
+  public const STATE_UNKNOWN = 'UNKNOWN';
+  /**
+   * The operation has been created.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The operation is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The operation is done; either cancelled or completed.
+   */
+  public const STATE_DONE = 'DONE';
+  /**
+   * Output only. The name of the target cluster.
+   *
    * @var string
    */
   public $clusterName;
   /**
+   * Output only. The UUID of target cluster.
+   *
    * @var string
    */
   public $clusterUuid;
   protected $createClusterType = ClusterOperation::class;
   protected $createClusterDataType = '';
   /**
+   * Output only. DAG end time, only set for workflows with dag_timeout when DAG
+   * ends.
+   *
    * @var string
    */
   public $dagEndTime;
   /**
+   * Output only. DAG start time, only set for workflows with dag_timeout when
+   * DAG begins.
+   *
    * @var string
    */
   public $dagStartTime;
   /**
+   * Output only. The timeout duration for the DAG of jobs, expressed in seconds
+   * (see JSON representation of duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   *
    * @var string
    */
   public $dagTimeout;
   protected $deleteClusterType = ClusterOperation::class;
   protected $deleteClusterDataType = '';
   /**
+   * Output only. Workflow end time.
+   *
    * @var string
    */
   public $endTime;
   protected $graphType = WorkflowGraph::class;
   protected $graphDataType = '';
   /**
+   * Map from parameter names to values that were used for those parameters.
+   *
    * @var string[]
    */
   public $parameters;
   /**
+   * Output only. Workflow start time.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The workflow state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The resource name of the workflow template as described in
+   * https://cloud.google.com/apis/design/resource_names. For
+   * projects.regions.workflowTemplates, the resource name of the template has
+   * the following format:
+   * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+   * projects.locations.workflowTemplates, the resource name of the template has
+   * the following format:
+   * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   *
    * @var string
    */
   public $template;
   /**
+   * Output only. The version of template at the time of workflow instantiation.
+   *
    * @var int
    */
   public $version;
 
   /**
-   * @param string
+   * Output only. The name of the target cluster.
+   *
+   * @param string $clusterName
    */
   public function setClusterName($clusterName)
   {
@@ -85,7 +136,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->clusterName;
   }
   /**
-   * @param string
+   * Output only. The UUID of target cluster.
+   *
+   * @param string $clusterUuid
    */
   public function setClusterUuid($clusterUuid)
   {
@@ -99,7 +152,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->clusterUuid;
   }
   /**
-   * @param ClusterOperation
+   * Output only. The create cluster operation metadata.
+   *
+   * @param ClusterOperation $createCluster
    */
   public function setCreateCluster(ClusterOperation $createCluster)
   {
@@ -113,7 +168,10 @@ class WorkflowMetadata extends \Google\Model
     return $this->createCluster;
   }
   /**
-   * @param string
+   * Output only. DAG end time, only set for workflows with dag_timeout when DAG
+   * ends.
+   *
+   * @param string $dagEndTime
    */
   public function setDagEndTime($dagEndTime)
   {
@@ -127,7 +185,10 @@ class WorkflowMetadata extends \Google\Model
     return $this->dagEndTime;
   }
   /**
-   * @param string
+   * Output only. DAG start time, only set for workflows with dag_timeout when
+   * DAG begins.
+   *
+   * @param string $dagStartTime
    */
   public function setDagStartTime($dagStartTime)
   {
@@ -141,7 +202,11 @@ class WorkflowMetadata extends \Google\Model
     return $this->dagStartTime;
   }
   /**
-   * @param string
+   * Output only. The timeout duration for the DAG of jobs, expressed in seconds
+   * (see JSON representation of duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).
+   *
+   * @param string $dagTimeout
    */
   public function setDagTimeout($dagTimeout)
   {
@@ -155,7 +220,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->dagTimeout;
   }
   /**
-   * @param ClusterOperation
+   * Output only. The delete cluster operation metadata.
+   *
+   * @param ClusterOperation $deleteCluster
    */
   public function setDeleteCluster(ClusterOperation $deleteCluster)
   {
@@ -169,7 +236,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->deleteCluster;
   }
   /**
-   * @param string
+   * Output only. Workflow end time.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -183,7 +252,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param WorkflowGraph
+   * Output only. The workflow graph.
+   *
+   * @param WorkflowGraph $graph
    */
   public function setGraph(WorkflowGraph $graph)
   {
@@ -197,7 +268,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->graph;
   }
   /**
-   * @param string[]
+   * Map from parameter names to values that were used for those parameters.
+   *
+   * @param string[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -211,7 +284,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->parameters;
   }
   /**
-   * @param string
+   * Output only. Workflow start time.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -225,21 +300,34 @@ class WorkflowMetadata extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The workflow state.
+   *
+   * Accepted values: UNKNOWN, PENDING, RUNNING, DONE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The resource name of the workflow template as described in
+   * https://cloud.google.com/apis/design/resource_names. For
+   * projects.regions.workflowTemplates, the resource name of the template has
+   * the following format:
+   * projects/{project_id}/regions/{region}/workflowTemplates/{template_id} For
+   * projects.locations.workflowTemplates, the resource name of the template has
+   * the following format:
+   * projects/{project_id}/locations/{location}/workflowTemplates/{template_id}
+   *
+   * @param string $template
    */
   public function setTemplate($template)
   {
@@ -253,7 +341,9 @@ class WorkflowMetadata extends \Google\Model
     return $this->template;
   }
   /**
-   * @param int
+   * Output only. The version of template at the time of workflow instantiation.
+   *
+   * @param int $version
    */
   public function setVersion($version)
   {

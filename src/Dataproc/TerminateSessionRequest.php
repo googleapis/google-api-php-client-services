@@ -20,12 +20,30 @@ namespace Google\Service\Dataproc;
 class TerminateSessionRequest extends \Google\Model
 {
   /**
+   * Optional. A unique ID used to identify the request. If the service receives
+   * two TerminateSessionRequest (https://cloud.google.com/dataproc/docs/referen
+   * ce/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.TerminateSessionRe
+   * quest)s with the same ID, the second request is ignored.Recommendation: Set
+   * this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value
+   * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and
+   * hyphens (-). The maximum length is 40 characters.
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param string
+   * Optional. A unique ID used to identify the request. If the service receives
+   * two TerminateSessionRequest (https://cloud.google.com/dataproc/docs/referen
+   * ce/rpc/google.cloud.dataproc.v1#google.cloud.dataproc.v1.TerminateSessionRe
+   * quest)s with the same ID, the second request is ignored.Recommendation: Set
+   * this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The value
+   * must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and
+   * hyphens (-). The maximum length is 40 characters.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

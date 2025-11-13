@@ -25,7 +25,10 @@ class WorkflowTemplatePlacement extends \Google\Model
   protected $managedClusterDataType = '';
 
   /**
-   * @param ClusterSelector
+   * Optional. A selector that chooses target cluster for jobs based on
+   * metadata.The selector is evaluated at the time each job is submitted.
+   *
+   * @param ClusterSelector $clusterSelector
    */
   public function setClusterSelector(ClusterSelector $clusterSelector)
   {
@@ -39,7 +42,9 @@ class WorkflowTemplatePlacement extends \Google\Model
     return $this->clusterSelector;
   }
   /**
-   * @param ManagedCluster
+   * A cluster that is managed by the workflow.
+   *
+   * @param ManagedCluster $managedCluster
    */
   public function setManagedCluster(ManagedCluster $managedCluster)
   {

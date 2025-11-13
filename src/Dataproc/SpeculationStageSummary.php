@@ -49,7 +49,7 @@ class SpeculationStageSummary extends \Google\Model
   public $stageId;
 
   /**
-   * @param int
+   * @param int $numActiveTasks
    */
   public function setNumActiveTasks($numActiveTasks)
   {
@@ -63,7 +63,7 @@ class SpeculationStageSummary extends \Google\Model
     return $this->numActiveTasks;
   }
   /**
-   * @param int
+   * @param int $numCompletedTasks
    */
   public function setNumCompletedTasks($numCompletedTasks)
   {
@@ -77,7 +77,7 @@ class SpeculationStageSummary extends \Google\Model
     return $this->numCompletedTasks;
   }
   /**
-   * @param int
+   * @param int $numFailedTasks
    */
   public function setNumFailedTasks($numFailedTasks)
   {
@@ -91,7 +91,7 @@ class SpeculationStageSummary extends \Google\Model
     return $this->numFailedTasks;
   }
   /**
-   * @param int
+   * @param int $numKilledTasks
    */
   public function setNumKilledTasks($numKilledTasks)
   {
@@ -105,7 +105,7 @@ class SpeculationStageSummary extends \Google\Model
     return $this->numKilledTasks;
   }
   /**
-   * @param int
+   * @param int $numTasks
    */
   public function setNumTasks($numTasks)
   {
@@ -119,7 +119,7 @@ class SpeculationStageSummary extends \Google\Model
     return $this->numTasks;
   }
   /**
-   * @param int
+   * @param int $stageAttemptId
    */
   public function setStageAttemptId($stageAttemptId)
   {
@@ -133,7 +133,7 @@ class SpeculationStageSummary extends \Google\Model
     return $this->stageAttemptId;
   }
   /**
-   * @param string
+   * @param string $stageId
    */
   public function setStageId($stageId)
   {

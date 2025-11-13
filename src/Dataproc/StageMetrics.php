@@ -69,7 +69,7 @@ class StageMetrics extends \Google\Model
   protected $stageShuffleWriteMetricsDataType = '';
 
   /**
-   * @param string
+   * @param string $diskBytesSpilled
    */
   public function setDiskBytesSpilled($diskBytesSpilled)
   {
@@ -83,7 +83,7 @@ class StageMetrics extends \Google\Model
     return $this->diskBytesSpilled;
   }
   /**
-   * @param string
+   * @param string $executorCpuTimeNanos
    */
   public function setExecutorCpuTimeNanos($executorCpuTimeNanos)
   {
@@ -97,7 +97,7 @@ class StageMetrics extends \Google\Model
     return $this->executorCpuTimeNanos;
   }
   /**
-   * @param string
+   * @param string $executorDeserializeCpuTimeNanos
    */
   public function setExecutorDeserializeCpuTimeNanos($executorDeserializeCpuTimeNanos)
   {
@@ -111,7 +111,7 @@ class StageMetrics extends \Google\Model
     return $this->executorDeserializeCpuTimeNanos;
   }
   /**
-   * @param string
+   * @param string $executorDeserializeTimeMillis
    */
   public function setExecutorDeserializeTimeMillis($executorDeserializeTimeMillis)
   {
@@ -125,7 +125,7 @@ class StageMetrics extends \Google\Model
     return $this->executorDeserializeTimeMillis;
   }
   /**
-   * @param string
+   * @param string $executorRunTimeMillis
    */
   public function setExecutorRunTimeMillis($executorRunTimeMillis)
   {
@@ -139,7 +139,7 @@ class StageMetrics extends \Google\Model
     return $this->executorRunTimeMillis;
   }
   /**
-   * @param string
+   * @param string $jvmGcTimeMillis
    */
   public function setJvmGcTimeMillis($jvmGcTimeMillis)
   {
@@ -153,7 +153,7 @@ class StageMetrics extends \Google\Model
     return $this->jvmGcTimeMillis;
   }
   /**
-   * @param string
+   * @param string $memoryBytesSpilled
    */
   public function setMemoryBytesSpilled($memoryBytesSpilled)
   {
@@ -167,7 +167,7 @@ class StageMetrics extends \Google\Model
     return $this->memoryBytesSpilled;
   }
   /**
-   * @param string
+   * @param string $peakExecutionMemoryBytes
    */
   public function setPeakExecutionMemoryBytes($peakExecutionMemoryBytes)
   {
@@ -181,7 +181,7 @@ class StageMetrics extends \Google\Model
     return $this->peakExecutionMemoryBytes;
   }
   /**
-   * @param string
+   * @param string $resultSerializationTimeMillis
    */
   public function setResultSerializationTimeMillis($resultSerializationTimeMillis)
   {
@@ -195,7 +195,7 @@ class StageMetrics extends \Google\Model
     return $this->resultSerializationTimeMillis;
   }
   /**
-   * @param string
+   * @param string $resultSize
    */
   public function setResultSize($resultSize)
   {
@@ -209,7 +209,7 @@ class StageMetrics extends \Google\Model
     return $this->resultSize;
   }
   /**
-   * @param StageInputMetrics
+   * @param StageInputMetrics $stageInputMetrics
    */
   public function setStageInputMetrics(StageInputMetrics $stageInputMetrics)
   {
@@ -223,7 +223,7 @@ class StageMetrics extends \Google\Model
     return $this->stageInputMetrics;
   }
   /**
-   * @param StageOutputMetrics
+   * @param StageOutputMetrics $stageOutputMetrics
    */
   public function setStageOutputMetrics(StageOutputMetrics $stageOutputMetrics)
   {
@@ -237,7 +237,7 @@ class StageMetrics extends \Google\Model
     return $this->stageOutputMetrics;
   }
   /**
-   * @param StageShuffleReadMetrics
+   * @param StageShuffleReadMetrics $stageShuffleReadMetrics
    */
   public function setStageShuffleReadMetrics(StageShuffleReadMetrics $stageShuffleReadMetrics)
   {
@@ -251,7 +251,7 @@ class StageMetrics extends \Google\Model
     return $this->stageShuffleReadMetrics;
   }
   /**
-   * @param StageShuffleWriteMetrics
+   * @param StageShuffleWriteMetrics $stageShuffleWriteMetrics
    */
   public function setStageShuffleWriteMetrics(StageShuffleWriteMetrics $stageShuffleWriteMetrics)
   {
