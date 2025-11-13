@@ -24,7 +24,9 @@ class NetworkAdapterList extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param NetworkAdapterDetails[]
+   * Network adapter entries.
+   *
+   * @param NetworkAdapterDetails[] $entries
    */
   public function setEntries($entries)
   {

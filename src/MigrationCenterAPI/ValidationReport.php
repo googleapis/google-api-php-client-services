@@ -26,7 +26,9 @@ class ValidationReport extends \Google\Collection
   protected $jobErrorsDataType = 'array';
 
   /**
-   * @param FileValidationReport[]
+   * List of errors found in files.
+   *
+   * @param FileValidationReport[] $fileValidations
    */
   public function setFileValidations($fileValidations)
   {
@@ -40,7 +42,9 @@ class ValidationReport extends \Google\Collection
     return $this->fileValidations;
   }
   /**
-   * @param ImportError[]
+   * List of job level errors.
+   *
+   * @param ImportError[] $jobErrors
    */
   public function setJobErrors($jobErrors)
   {

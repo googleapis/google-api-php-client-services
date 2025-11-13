@@ -21,6 +21,8 @@ class PostgreSqlSchemaDetails extends \Google\Collection
 {
   protected $collection_key = 'postgresqlExtensions';
   /**
+   * Optional. PostgreSql foreign tables.
+   *
    * @var int
    */
   public $foreignTablesCount;
@@ -28,7 +30,9 @@ class PostgreSqlSchemaDetails extends \Google\Collection
   protected $postgresqlExtensionsDataType = 'array';
 
   /**
-   * @param int
+   * Optional. PostgreSql foreign tables.
+   *
+   * @param int $foreignTablesCount
    */
   public function setForeignTablesCount($foreignTablesCount)
   {
@@ -42,7 +46,9 @@ class PostgreSqlSchemaDetails extends \Google\Collection
     return $this->foreignTablesCount;
   }
   /**
-   * @param PostgreSqlExtension[]
+   * Optional. PostgreSql extensions.
+   *
+   * @param PostgreSqlExtension[] $postgresqlExtensions
    */
   public function setPostgresqlExtensions($postgresqlExtensions)
   {

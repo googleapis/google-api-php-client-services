@@ -24,7 +24,9 @@ class MySqlSchemaDetails extends \Google\Collection
   protected $storageEnginesDataType = 'array';
 
   /**
-   * @param MySqlStorageEngineDetails[]
+   * Optional. Mysql storage engine tables.
+   *
+   * @param MySqlStorageEngineDetails[] $storageEngines
    */
   public function setStorageEngines($storageEngines)
   {

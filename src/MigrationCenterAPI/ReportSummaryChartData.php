@@ -24,7 +24,10 @@ class ReportSummaryChartData extends \Google\Collection
   protected $dataPointsDataType = 'array';
 
   /**
-   * @param ReportSummaryChartDataDataPoint[]
+   * Each data point in the chart is represented as a name-value pair with the
+   * name being the x-axis label, and the value being the y-axis value.
+   *
+   * @param ReportSummaryChartDataDataPoint[] $dataPoints
    */
   public function setDataPoints($dataPoints)
   {

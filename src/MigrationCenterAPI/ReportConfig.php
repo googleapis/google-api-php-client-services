@@ -21,30 +21,42 @@ class ReportConfig extends \Google\Collection
 {
   protected $collection_key = 'groupPreferencesetAssignments';
   /**
+   * Output only. The timestamp when the resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Free-text description.
+   *
    * @var string
    */
   public $description;
   /**
+   * User-friendly display name. Maximum length is 63 characters.
+   *
    * @var string
    */
   public $displayName;
   protected $groupPreferencesetAssignmentsType = ReportConfigGroupPreferenceSetAssignment::class;
   protected $groupPreferencesetAssignmentsDataType = 'array';
   /**
+   * Output only. Name of resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The timestamp when the resource was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -58,7 +70,9 @@ class ReportConfig extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Free-text description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -72,7 +86,9 @@ class ReportConfig extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * User-friendly display name. Maximum length is 63 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -86,7 +102,9 @@ class ReportConfig extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param ReportConfigGroupPreferenceSetAssignment[]
+   * Required. Collection of combinations of groups and preference sets.
+   *
+   * @param ReportConfigGroupPreferenceSetAssignment[] $groupPreferencesetAssignments
    */
   public function setGroupPreferencesetAssignments($groupPreferencesetAssignments)
   {
@@ -100,7 +118,9 @@ class ReportConfig extends \Google\Collection
     return $this->groupPreferencesetAssignments;
   }
   /**
-   * @param string
+   * Output only. Name of resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -114,7 +134,9 @@ class ReportConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

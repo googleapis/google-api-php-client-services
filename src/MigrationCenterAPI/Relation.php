@@ -20,28 +20,52 @@ namespace Google\Service\MigrationCenterAPI;
 class Relation extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * DBDeployment -> Database
+   */
+  public const TYPE_LOGICAL_DATABASE = 'LOGICAL_DATABASE';
+  /**
+   * A relation between a machine/VM and the database deployment it hosts.
+   */
+  public const TYPE_DATABASE_DEPLOYMENT_HOSTING_SERVER = 'DATABASE_DEPLOYMENT_HOSTING_SERVER';
+  /**
+   * Output only. The timestamp when the relation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The destination asset name in the relation.
+   *
    * @var string
    */
   public $dstAsset;
   /**
+   * Output only. Identifier. The identifier of the relation.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The source asset name in the relation.
+   *
    * @var string
    */
   public $srcAsset;
   /**
+   * Optional. The type of the relation.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The timestamp when the relation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +79,9 @@ class Relation extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The destination asset name in the relation.
+   *
+   * @param string $dstAsset
    */
   public function setDstAsset($dstAsset)
   {
@@ -69,7 +95,9 @@ class Relation extends \Google\Model
     return $this->dstAsset;
   }
   /**
-   * @param string
+   * Output only. Identifier. The identifier of the relation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +111,9 @@ class Relation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The source asset name in the relation.
+   *
+   * @param string $srcAsset
    */
   public function setSrcAsset($srcAsset)
   {
@@ -97,14 +127,19 @@ class Relation extends \Google\Model
     return $this->srcAsset;
   }
   /**
-   * @param string
+   * Optional. The type of the relation.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, LOGICAL_DATABASE,
+   * DATABASE_DEPLOYMENT_HOSTING_SERVER
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

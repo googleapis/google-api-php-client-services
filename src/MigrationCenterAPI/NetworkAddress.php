@@ -20,42 +20,71 @@ namespace Google\Service\MigrationCenterAPI;
 class NetworkAddress extends \Google\Model
 {
   /**
+   * Unknown (default value).
+   */
+  public const ASSIGNMENT_ADDRESS_ASSIGNMENT_UNSPECIFIED = 'ADDRESS_ASSIGNMENT_UNSPECIFIED';
+  /**
+   * Statically assigned IP.
+   */
+  public const ASSIGNMENT_ADDRESS_ASSIGNMENT_STATIC = 'ADDRESS_ASSIGNMENT_STATIC';
+  /**
+   * Dynamically assigned IP (DHCP).
+   */
+  public const ASSIGNMENT_ADDRESS_ASSIGNMENT_DHCP = 'ADDRESS_ASSIGNMENT_DHCP';
+  /**
+   * Whether DHCP is used to assign addresses.
+   *
    * @var string
    */
   public $assignment;
   /**
+   * Broadcast address.
+   *
    * @var string
    */
   public $bcast;
   /**
+   * Fully qualified domain name.
+   *
    * @var string
    */
   public $fqdn;
   /**
+   * Assigned or configured IP Address.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * Subnet mask.
+   *
    * @var string
    */
   public $subnetMask;
 
   /**
-   * @param string
+   * Whether DHCP is used to assign addresses.
+   *
+   * Accepted values: ADDRESS_ASSIGNMENT_UNSPECIFIED, ADDRESS_ASSIGNMENT_STATIC,
+   * ADDRESS_ASSIGNMENT_DHCP
+   *
+   * @param self::ASSIGNMENT_* $assignment
    */
   public function setAssignment($assignment)
   {
     $this->assignment = $assignment;
   }
   /**
-   * @return string
+   * @return self::ASSIGNMENT_*
    */
   public function getAssignment()
   {
     return $this->assignment;
   }
   /**
-   * @param string
+   * Broadcast address.
+   *
+   * @param string $bcast
    */
   public function setBcast($bcast)
   {
@@ -69,7 +98,9 @@ class NetworkAddress extends \Google\Model
     return $this->bcast;
   }
   /**
-   * @param string
+   * Fully qualified domain name.
+   *
+   * @param string $fqdn
    */
   public function setFqdn($fqdn)
   {
@@ -83,7 +114,9 @@ class NetworkAddress extends \Google\Model
     return $this->fqdn;
   }
   /**
-   * @param string
+   * Assigned or configured IP Address.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -97,7 +130,9 @@ class NetworkAddress extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * Subnet mask.
+   *
+   * @param string $subnetMask
    */
   public function setSubnetMask($subnetMask)
   {

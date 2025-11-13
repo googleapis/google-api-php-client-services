@@ -31,7 +31,9 @@ class PlatformDetails extends \Google\Model
   protected $vmwareDetailsDataType = '';
 
   /**
-   * @param AwsEc2PlatformDetails
+   * AWS EC2 specific details.
+   *
+   * @param AwsEc2PlatformDetails $awsEc2Details
    */
   public function setAwsEc2Details(AwsEc2PlatformDetails $awsEc2Details)
   {
@@ -45,7 +47,9 @@ class PlatformDetails extends \Google\Model
     return $this->awsEc2Details;
   }
   /**
-   * @param AzureVmPlatformDetails
+   * Azure VM specific details.
+   *
+   * @param AzureVmPlatformDetails $azureVmDetails
    */
   public function setAzureVmDetails(AzureVmPlatformDetails $azureVmDetails)
   {
@@ -59,7 +63,9 @@ class PlatformDetails extends \Google\Model
     return $this->azureVmDetails;
   }
   /**
-   * @param GenericPlatformDetails
+   * Generic platform details.
+   *
+   * @param GenericPlatformDetails $genericDetails
    */
   public function setGenericDetails(GenericPlatformDetails $genericDetails)
   {
@@ -73,7 +79,9 @@ class PlatformDetails extends \Google\Model
     return $this->genericDetails;
   }
   /**
-   * @param PhysicalPlatformDetails
+   * Physical machines platform details.
+   *
+   * @param PhysicalPlatformDetails $physicalDetails
    */
   public function setPhysicalDetails(PhysicalPlatformDetails $physicalDetails)
   {
@@ -87,7 +95,9 @@ class PlatformDetails extends \Google\Model
     return $this->physicalDetails;
   }
   /**
-   * @param VmwarePlatformDetails
+   * VMware specific details.
+   *
+   * @param VmwarePlatformDetails $vmwareDetails
    */
   public function setVmwareDetails(VmwarePlatformDetails $vmwareDetails)
   {

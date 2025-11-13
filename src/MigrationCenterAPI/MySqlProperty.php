@@ -20,20 +20,28 @@ namespace Google\Service\MigrationCenterAPI;
 class MySqlProperty extends \Google\Model
 {
   /**
+   * Required. The property is enabled.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Required. The property numeric value.
+   *
    * @var string
    */
   public $numericValue;
   /**
+   * Required. The property name.
+   *
    * @var string
    */
   public $property;
 
   /**
-   * @param bool
+   * Required. The property is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -47,7 +55,9 @@ class MySqlProperty extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Required. The property numeric value.
+   *
+   * @param string $numericValue
    */
   public function setNumericValue($numericValue)
   {
@@ -61,7 +71,9 @@ class MySqlProperty extends \Google\Model
     return $this->numericValue;
   }
   /**
-   * @param string
+   * Required. The property name.
+   *
+   * @param string $property
    */
   public function setProperty($property)
   {

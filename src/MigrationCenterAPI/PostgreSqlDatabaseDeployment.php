@@ -26,7 +26,9 @@ class PostgreSqlDatabaseDeployment extends \Google\Collection
   protected $settingsDataType = 'array';
 
   /**
-   * @param PostgreSqlProperty[]
+   * Optional. List of PostgreSql properties.
+   *
+   * @param PostgreSqlProperty[] $properties
    */
   public function setProperties($properties)
   {
@@ -40,7 +42,9 @@ class PostgreSqlDatabaseDeployment extends \Google\Collection
     return $this->properties;
   }
   /**
-   * @param PostgreSqlSetting[]
+   * Optional. List of PostgreSql settings.
+   *
+   * @param PostgreSqlSetting[] $settings
    */
   public function setSettings($settings)
   {

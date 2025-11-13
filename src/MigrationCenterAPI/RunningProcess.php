@@ -20,28 +20,40 @@ namespace Google\Service\MigrationCenterAPI;
 class RunningProcess extends \Google\Model
 {
   /**
+   * Process extended attributes.
+   *
    * @var string[]
    */
   public $attributes;
   /**
+   * Process full command line.
+   *
    * @var string
    */
   public $cmdline;
   /**
+   * Process binary path.
+   *
    * @var string
    */
   public $exePath;
   /**
+   * Process ID.
+   *
    * @var string
    */
   public $pid;
   /**
+   * User running the process.
+   *
    * @var string
    */
   public $user;
 
   /**
-   * @param string[]
+   * Process extended attributes.
+   *
+   * @param string[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -55,7 +67,9 @@ class RunningProcess extends \Google\Model
     return $this->attributes;
   }
   /**
-   * @param string
+   * Process full command line.
+   *
+   * @param string $cmdline
    */
   public function setCmdline($cmdline)
   {
@@ -69,7 +83,9 @@ class RunningProcess extends \Google\Model
     return $this->cmdline;
   }
   /**
-   * @param string
+   * Process binary path.
+   *
+   * @param string $exePath
    */
   public function setExePath($exePath)
   {
@@ -83,7 +99,9 @@ class RunningProcess extends \Google\Model
     return $this->exePath;
   }
   /**
-   * @param string
+   * Process ID.
+   *
+   * @param string $pid
    */
   public function setPid($pid)
   {
@@ -97,7 +115,9 @@ class RunningProcess extends \Google\Model
     return $this->pid;
   }
   /**
-   * @param string
+   * User running the process.
+   *
+   * @param string $user
    */
   public function setUser($user)
   {

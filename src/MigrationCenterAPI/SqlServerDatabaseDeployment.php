@@ -28,7 +28,9 @@ class SqlServerDatabaseDeployment extends \Google\Collection
   protected $traceFlagsDataType = 'array';
 
   /**
-   * @param SqlServerFeature[]
+   * Optional. List of SQL Server features.
+   *
+   * @param SqlServerFeature[] $features
    */
   public function setFeatures($features)
   {
@@ -42,7 +44,9 @@ class SqlServerDatabaseDeployment extends \Google\Collection
     return $this->features;
   }
   /**
-   * @param SqlServerServerFlag[]
+   * Optional. List of SQL Server server flags.
+   *
+   * @param SqlServerServerFlag[] $serverFlags
    */
   public function setServerFlags($serverFlags)
   {
@@ -56,7 +60,9 @@ class SqlServerDatabaseDeployment extends \Google\Collection
     return $this->serverFlags;
   }
   /**
-   * @param SqlServerTraceFlag[]
+   * Optional. List of SQL Server trace flags.
+   *
+   * @param SqlServerTraceFlag[] $traceFlags
    */
   public function setTraceFlags($traceFlags)
   {

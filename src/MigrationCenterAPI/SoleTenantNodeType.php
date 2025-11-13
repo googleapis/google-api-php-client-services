@@ -20,12 +20,18 @@ namespace Google\Service\MigrationCenterAPI;
 class SoleTenantNodeType extends \Google\Model
 {
   /**
+   * Name of the Sole Tenant node. Consult
+   * https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes
+   *
    * @var string
    */
   public $nodeName;
 
   /**
-   * @param string
+   * Name of the Sole Tenant node. Consult
+   * https://cloud.google.com/compute/docs/nodes/sole-tenant-nodes
+   *
+   * @param string $nodeName
    */
   public function setNodeName($nodeName)
   {

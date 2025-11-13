@@ -20,10 +20,14 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportSummaryVmwareNodeAllocation extends \Google\Model
 {
   /**
+   * Count of assets allocated to these nodes
+   *
    * @var string
    */
   public $allocatedAssetCount;
   /**
+   * Count of this node type to be provisioned
+   *
    * @var string
    */
   public $nodeCount;
@@ -31,7 +35,9 @@ class ReportSummaryVmwareNodeAllocation extends \Google\Model
   protected $vmwareNodeDataType = '';
 
   /**
-   * @param string
+   * Count of assets allocated to these nodes
+   *
+   * @param string $allocatedAssetCount
    */
   public function setAllocatedAssetCount($allocatedAssetCount)
   {
@@ -45,7 +51,9 @@ class ReportSummaryVmwareNodeAllocation extends \Google\Model
     return $this->allocatedAssetCount;
   }
   /**
-   * @param string
+   * Count of this node type to be provisioned
+   *
+   * @param string $nodeCount
    */
   public function setNodeCount($nodeCount)
   {
@@ -59,7 +67,9 @@ class ReportSummaryVmwareNodeAllocation extends \Google\Model
     return $this->nodeCount;
   }
   /**
-   * @param ReportSummaryVmwareNode
+   * VMWare node type, e.g. "ve1-standard-72"
+   *
+   * @param ReportSummaryVmwareNode $vmwareNode
    */
   public function setVmwareNode(ReportSummaryVmwareNode $vmwareNode)
   {

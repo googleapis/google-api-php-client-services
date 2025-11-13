@@ -24,7 +24,9 @@ class NetworkAddressList extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param NetworkAddress[]
+   * Network address entries.
+   *
+   * @param NetworkAddress[] $entries
    */
   public function setEntries($entries)
   {

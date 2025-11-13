@@ -20,52 +20,118 @@ namespace Google\Service\MigrationCenterAPI;
 class Source extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The source is active and ready to be used.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * In the process of being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Source is in an invalid state. Asset frames reported to it will be ignored.
+   */
+  public const STATE_INVALID = 'INVALID';
+  /**
+   * Unspecified
+   */
+  public const TYPE_SOURCE_TYPE_UNKNOWN = 'SOURCE_TYPE_UNKNOWN';
+  /**
+   * Manually uploaded file (e.g. CSV)
+   */
+  public const TYPE_SOURCE_TYPE_UPLOAD = 'SOURCE_TYPE_UPLOAD';
+  /**
+   * Guest-level info
+   */
+  public const TYPE_SOURCE_TYPE_GUEST_OS_SCAN = 'SOURCE_TYPE_GUEST_OS_SCAN';
+  /**
+   * Inventory-level scan
+   */
+  public const TYPE_SOURCE_TYPE_INVENTORY_SCAN = 'SOURCE_TYPE_INVENTORY_SCAN';
+  /**
+   * Third-party owned sources.
+   */
+  public const TYPE_SOURCE_TYPE_CUSTOM = 'SOURCE_TYPE_CUSTOM';
+  /**
+   * Discovery clients
+   */
+  public const TYPE_SOURCE_TYPE_DISCOVERY_CLIENT = 'SOURCE_TYPE_DISCOVERY_CLIENT';
+  /**
+   * Output only. The timestamp when the source was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Free-text description.
+   *
    * @var string
    */
   public $description;
   /**
+   * User-friendly display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The number of frames that were reported by the source and
+   * contained errors.
+   *
    * @var int
    */
   public $errorFrameCount;
   /**
+   * If `true`, the source is managed by other service(s).
+   *
    * @var bool
    */
   public $managed;
   /**
+   * Output only. The full name of the source.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Number of frames that are still being processed.
+   *
    * @var int
    */
   public $pendingFrameCount;
   /**
+   * The information confidence of the source. The higher the value, the higher
+   * the confidence.
+   *
    * @var int
    */
   public $priority;
   /**
+   * Output only. The state of the source.
+   *
    * @var string
    */
   public $state;
   /**
+   * Data source type.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. The timestamp when the source was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The timestamp when the source was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -79,7 +145,9 @@ class Source extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Free-text description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -93,7 +161,9 @@ class Source extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * User-friendly display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -107,7 +177,10 @@ class Source extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param int
+   * Output only. The number of frames that were reported by the source and
+   * contained errors.
+   *
+   * @param int $errorFrameCount
    */
   public function setErrorFrameCount($errorFrameCount)
   {
@@ -121,7 +194,9 @@ class Source extends \Google\Model
     return $this->errorFrameCount;
   }
   /**
-   * @param bool
+   * If `true`, the source is managed by other service(s).
+   *
+   * @param bool $managed
    */
   public function setManaged($managed)
   {
@@ -135,7 +210,9 @@ class Source extends \Google\Model
     return $this->managed;
   }
   /**
-   * @param string
+   * Output only. The full name of the source.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -149,7 +226,9 @@ class Source extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * Output only. Number of frames that are still being processed.
+   *
+   * @param int $pendingFrameCount
    */
   public function setPendingFrameCount($pendingFrameCount)
   {
@@ -163,7 +242,10 @@ class Source extends \Google\Model
     return $this->pendingFrameCount;
   }
   /**
-   * @param int
+   * The information confidence of the source. The higher the value, the higher
+   * the confidence.
+   *
+   * @param int $priority
    */
   public function setPriority($priority)
   {
@@ -177,35 +259,47 @@ class Source extends \Google\Model
     return $this->priority;
   }
   /**
-   * @param string
+   * Output only. The state of the source.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, DELETING, INVALID
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Data source type.
+   *
+   * Accepted values: SOURCE_TYPE_UNKNOWN, SOURCE_TYPE_UPLOAD,
+   * SOURCE_TYPE_GUEST_OS_SCAN, SOURCE_TYPE_INVENTORY_SCAN, SOURCE_TYPE_CUSTOM,
+   * SOURCE_TYPE_DISCOVERY_CLIENT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the source was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

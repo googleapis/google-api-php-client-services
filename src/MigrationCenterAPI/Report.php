@@ -20,38 +20,78 @@ namespace Google\Service\MigrationCenterAPI;
 class Report extends \Google\Model
 {
   /**
+   * Default Report creation state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Creating Report.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * Successfully created Report.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Failed to create Report.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Default Report type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Total cost of ownership Report type.
+   */
+  public const TYPE_TOTAL_COST_OF_OWNERSHIP = 'TOTAL_COST_OF_OWNERSHIP';
+  /**
+   * Output only. Creation timestamp.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Free-text description.
+   *
    * @var string
    */
   public $description;
   /**
+   * User-friendly display name. Maximum length is 63 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Name of resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * Report creation state.
+   *
    * @var string
    */
   public $state;
   protected $summaryType = ReportSummary::class;
   protected $summaryDataType = '';
   /**
+   * Report type.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. Last update timestamp.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Creation timestamp.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -65,7 +105,9 @@ class Report extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Free-text description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -79,7 +121,9 @@ class Report extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * User-friendly display name. Maximum length is 63 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -93,7 +137,9 @@ class Report extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Name of resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -107,21 +153,27 @@ class Report extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Report creation state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, SUCCEEDED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param ReportSummary
+   * Output only. Summary view of the Report.
+   *
+   * @param ReportSummary $summary
    */
   public function setSummary(ReportSummary $summary)
   {
@@ -135,21 +187,27 @@ class Report extends \Google\Model
     return $this->summary;
   }
   /**
-   * @param string
+   * Report type.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, TOTAL_COST_OF_OWNERSHIP
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. Last update timestamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\MigrationCenterAPI;
 class MySqlPlugin extends \Google\Model
 {
   /**
+   * Required. The plugin is active.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Required. The plugin name.
+   *
    * @var string
    */
   public $plugin;
   /**
+   * Required. The plugin version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param bool
+   * Required. The plugin is active.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -47,7 +55,9 @@ class MySqlPlugin extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Required. The plugin name.
+   *
+   * @param string $plugin
    */
   public function setPlugin($plugin)
   {
@@ -61,7 +71,9 @@ class MySqlPlugin extends \Google\Model
     return $this->plugin;
   }
   /**
-   * @param string
+   * Required. The plugin version.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

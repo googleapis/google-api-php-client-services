@@ -20,16 +20,22 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportArtifactLink extends \Google\Model
 {
   /**
+   * Output only. URI of the artifact.
+   *
    * @var string
    */
   public $uri;
   /**
+   * Output only. Expiration time of the URI.
+   *
    * @var string
    */
   public $uriExpirationTime;
 
   /**
-   * @param string
+   * Output only. URI of the artifact.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {
@@ -43,7 +49,9 @@ class ReportArtifactLink extends \Google\Model
     return $this->uri;
   }
   /**
-   * @param string
+   * Output only. Expiration time of the URI.
+   *
+   * @param string $uriExpirationTime
    */
   public function setUriExpirationTime($uriExpirationTime)
   {

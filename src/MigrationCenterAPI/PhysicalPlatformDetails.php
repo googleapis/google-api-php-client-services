@@ -20,30 +20,57 @@ namespace Google\Service\MigrationCenterAPI;
 class PhysicalPlatformDetails extends \Google\Model
 {
   /**
+   * Simultaneous Multithreading status unknown.
+   */
+  public const HYPERTHREADING_HYPERTHREADING_STATUS_UNSPECIFIED = 'HYPERTHREADING_STATUS_UNSPECIFIED';
+  /**
+   * Simultaneous Multithreading is disabled or unavailable.
+   */
+  public const HYPERTHREADING_HYPERTHREADING_STATUS_DISABLED = 'HYPERTHREADING_STATUS_DISABLED';
+  /**
+   * Simultaneous Multithreading is enabled.
+   */
+  public const HYPERTHREADING_HYPERTHREADING_STATUS_ENABLED = 'HYPERTHREADING_STATUS_ENABLED';
+  /**
+   * Whether the machine is hyperthreaded.
+   *
    * @var string
    */
   public $hyperthreading;
   /**
+   * Free text representation of the machine location. The format of this field
+   * should not be relied on. Different machines in the same location may have
+   * different string values for this field.
+   *
    * @var string
    */
   public $location;
 
   /**
-   * @param string
+   * Whether the machine is hyperthreaded.
+   *
+   * Accepted values: HYPERTHREADING_STATUS_UNSPECIFIED,
+   * HYPERTHREADING_STATUS_DISABLED, HYPERTHREADING_STATUS_ENABLED
+   *
+   * @param self::HYPERTHREADING_* $hyperthreading
    */
   public function setHyperthreading($hyperthreading)
   {
     $this->hyperthreading = $hyperthreading;
   }
   /**
-   * @return string
+   * @return self::HYPERTHREADING_*
    */
   public function getHyperthreading()
   {
     return $this->hyperthreading;
   }
   /**
-   * @param string
+   * Free text representation of the machine location. The format of this field
+   * should not be relied on. Different machines in the same location may have
+   * different string values for this field.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {

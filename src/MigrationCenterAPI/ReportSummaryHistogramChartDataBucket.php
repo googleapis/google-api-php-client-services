@@ -20,20 +20,28 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportSummaryHistogramChartDataBucket extends \Google\Model
 {
   /**
+   * Count of items in the bucket.
+   *
    * @var string
    */
   public $count;
   /**
+   * Lower bound - inclusive.
+   *
    * @var string
    */
   public $lowerBound;
   /**
+   * Upper bound - exclusive.
+   *
    * @var string
    */
   public $upperBound;
 
   /**
-   * @param string
+   * Count of items in the bucket.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -47,7 +55,9 @@ class ReportSummaryHistogramChartDataBucket extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * Lower bound - inclusive.
+   *
+   * @param string $lowerBound
    */
   public function setLowerBound($lowerBound)
   {
@@ -61,7 +71,9 @@ class ReportSummaryHistogramChartDataBucket extends \Google\Model
     return $this->lowerBound;
   }
   /**
-   * @param string
+   * Upper bound - exclusive.
+   *
+   * @param string $upperBound
    */
   public function setUpperBound($upperBound)
   {

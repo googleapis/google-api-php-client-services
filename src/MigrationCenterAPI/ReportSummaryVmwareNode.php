@@ -20,12 +20,20 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportSummaryVmwareNode extends \Google\Model
 {
   /**
+   * Code to identify VMware Engine node series, e.g. "ve1-standard-72". Based
+   * on the displayName of cloud.google.com/vmware-
+   * engine/docs/reference/rest/v1/projects.locations.nodeTypes
+   *
    * @var string
    */
   public $code;
 
   /**
-   * @param string
+   * Code to identify VMware Engine node series, e.g. "ve1-standard-72". Based
+   * on the displayName of cloud.google.com/vmware-
+   * engine/docs/reference/rest/v1/projects.locations.nodeTypes
+   *
+   * @param string $code
    */
   public function setCode($code)
   {

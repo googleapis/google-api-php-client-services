@@ -26,7 +26,9 @@ class ReportSummary extends \Google\Collection
   protected $groupFindingsDataType = 'array';
 
   /**
-   * @param ReportSummaryAssetAggregateStats
+   * Aggregate statistics for all the assets across all the groups.
+   *
+   * @param ReportSummaryAssetAggregateStats $allAssetsStats
    */
   public function setAllAssetsStats(ReportSummaryAssetAggregateStats $allAssetsStats)
   {
@@ -40,7 +42,9 @@ class ReportSummary extends \Google\Collection
     return $this->allAssetsStats;
   }
   /**
-   * @param ReportSummaryGroupFinding[]
+   * Findings for each Group included in this report.
+   *
+   * @param ReportSummaryGroupFinding[] $groupFindings
    */
   public function setGroupFindings($groupFindings)
   {

@@ -20,16 +20,24 @@ namespace Google\Service\MigrationCenterAPI;
 class SqlServerFeature extends \Google\Model
 {
   /**
+   * Required. Field enabled is set when a feature is used on the source
+   * deployment.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Required. The feature name.
+   *
    * @var string
    */
   public $featureName;
 
   /**
-   * @param bool
+   * Required. Field enabled is set when a feature is used on the source
+   * deployment.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -43,7 +51,9 @@ class SqlServerFeature extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Required. The feature name.
+   *
+   * @param string $featureName
    */
   public function setFeatureName($featureName)
   {

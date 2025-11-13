@@ -20,16 +20,22 @@ namespace Google\Service\MigrationCenterAPI;
 class PostgreSqlExtension extends \Google\Model
 {
   /**
+   * Required. The extension name.
+   *
    * @var string
    */
   public $extension;
   /**
+   * Required. The extension version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Required. The extension name.
+   *
+   * @param string $extension
    */
   public function setExtension($extension)
   {
@@ -43,7 +49,9 @@ class PostgreSqlExtension extends \Google\Model
     return $this->extension;
   }
   /**
-   * @param string
+   * Required. The extension version.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

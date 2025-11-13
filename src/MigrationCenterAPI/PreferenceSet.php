@@ -20,22 +20,32 @@ namespace Google\Service\MigrationCenterAPI;
 class PreferenceSet extends \Google\Model
 {
   /**
+   * Output only. The timestamp when the preference set was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * A description of the preference set.
+   *
    * @var string
    */
   public $description;
   /**
+   * User-friendly display name. Maximum length is 63 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Name of the preference set.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The timestamp when the preference set was last updated.
+   *
    * @var string
    */
   public $updateTime;
@@ -43,7 +53,9 @@ class PreferenceSet extends \Google\Model
   protected $virtualMachinePreferencesDataType = '';
 
   /**
-   * @param string
+   * Output only. The timestamp when the preference set was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -57,7 +69,9 @@ class PreferenceSet extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * A description of the preference set.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -71,7 +85,9 @@ class PreferenceSet extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * User-friendly display name. Maximum length is 63 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -85,7 +101,9 @@ class PreferenceSet extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Name of the preference set.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -99,7 +117,9 @@ class PreferenceSet extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the preference set was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -113,7 +133,10 @@ class PreferenceSet extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param VirtualMachinePreferences
+   * Optional. A set of preferences that applies to all virtual machines in the
+   * context.
+   *
+   * @param VirtualMachinePreferences $virtualMachinePreferences
    */
   public function setVirtualMachinePreferences(VirtualMachinePreferences $virtualMachinePreferences)
   {

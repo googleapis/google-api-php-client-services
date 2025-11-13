@@ -21,10 +21,14 @@ class ReportSummarySoleTenantFinding extends \Google\Collection
 {
   protected $collection_key = 'nodeAllocations';
   /**
+   * Count of assets which are allocated
+   *
    * @var string
    */
   public $allocatedAssetCount;
   /**
+   * Set of regions in which the assets are allocated
+   *
    * @var string[]
    */
   public $allocatedRegions;
@@ -32,7 +36,9 @@ class ReportSummarySoleTenantFinding extends \Google\Collection
   protected $nodeAllocationsDataType = 'array';
 
   /**
-   * @param string
+   * Count of assets which are allocated
+   *
+   * @param string $allocatedAssetCount
    */
   public function setAllocatedAssetCount($allocatedAssetCount)
   {
@@ -46,7 +52,9 @@ class ReportSummarySoleTenantFinding extends \Google\Collection
     return $this->allocatedAssetCount;
   }
   /**
-   * @param string[]
+   * Set of regions in which the assets are allocated
+   *
+   * @param string[] $allocatedRegions
    */
   public function setAllocatedRegions($allocatedRegions)
   {
@@ -60,7 +68,9 @@ class ReportSummarySoleTenantFinding extends \Google\Collection
     return $this->allocatedRegions;
   }
   /**
-   * @param ReportSummarySoleTenantNodeAllocation[]
+   * Set of per-nodetype allocation records
+   *
+   * @param ReportSummarySoleTenantNodeAllocation[] $nodeAllocations
    */
   public function setNodeAllocations($nodeAllocations)
   {

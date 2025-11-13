@@ -24,7 +24,9 @@ class NetworkConnectionList extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param NetworkConnection[]
+   * Network connection entries.
+   *
+   * @param NetworkConnection[] $entries
    */
   public function setEntries($entries)
   {
