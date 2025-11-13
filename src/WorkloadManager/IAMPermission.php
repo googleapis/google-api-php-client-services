@@ -20,16 +20,22 @@ namespace Google\Service\WorkloadManager;
 class IAMPermission extends \Google\Model
 {
   /**
+   * Output only. Whether the permission is granted.
+   *
    * @var bool
    */
   public $granted;
   /**
+   * Output only. The name of the permission.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param bool
+   * Output only. Whether the permission is granted.
+   *
+   * @param bool $granted
    */
   public function setGranted($granted)
   {
@@ -43,7 +49,9 @@ class IAMPermission extends \Google\Model
     return $this->granted;
   }
   /**
-   * @param string
+   * Output only. The name of the permission.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

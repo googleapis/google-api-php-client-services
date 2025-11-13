@@ -19,16 +19,48 @@ namespace Google\Service\WorkloadManager;
 
 class SapWorkload extends \Google\Collection
 {
+  /**
+   * Unspecified architecture.
+   */
+  public const ARCHITECTURE_ARCHITECTURE_UNSPECIFIED = 'ARCHITECTURE_UNSPECIFIED';
+  /**
+   * Invaliad architecture.
+   */
+  public const ARCHITECTURE_INVALID = 'INVALID';
+  /**
+   * A centralized system.
+   */
+  public const ARCHITECTURE_CENTRALIZED = 'CENTRALIZED';
+  /**
+   * A distributed system.
+   */
+  public const ARCHITECTURE_DISTRIBUTED = 'DISTRIBUTED';
+  /**
+   * A distributed with HA system.
+   */
+  public const ARCHITECTURE_DISTRIBUTED_HA = 'DISTRIBUTED_HA';
+  /**
+   * A standalone database system.
+   */
+  public const ARCHITECTURE_STANDALONE_DATABASE = 'STANDALONE_DATABASE';
+  /**
+   * A standalone database with HA system.
+   */
+  public const ARCHITECTURE_STANDALONE_DATABASE_HA = 'STANDALONE_DATABASE_HA';
   protected $collection_key = 'products';
   protected $applicationType = SapComponent::class;
   protected $applicationDataType = '';
   /**
+   * Output only. the architecture
+   *
    * @var string
    */
   public $architecture;
   protected $databaseType = SapComponent::class;
   protected $databaseDataType = '';
   /**
+   * Output only. The metadata for SAP workload.
+   *
    * @var string[]
    */
   public $metadata;
@@ -36,7 +68,9 @@ class SapWorkload extends \Google\Collection
   protected $productsDataType = 'array';
 
   /**
-   * @param SapComponent
+   * Output only. the acsc componment
+   *
+   * @param SapComponent $application
    */
   public function setApplication(SapComponent $application)
   {
@@ -50,21 +84,28 @@ class SapWorkload extends \Google\Collection
     return $this->application;
   }
   /**
-   * @param string
+   * Output only. the architecture
+   *
+   * Accepted values: ARCHITECTURE_UNSPECIFIED, INVALID, CENTRALIZED,
+   * DISTRIBUTED, DISTRIBUTED_HA, STANDALONE_DATABASE, STANDALONE_DATABASE_HA
+   *
+   * @param self::ARCHITECTURE_* $architecture
    */
   public function setArchitecture($architecture)
   {
     $this->architecture = $architecture;
   }
   /**
-   * @return string
+   * @return self::ARCHITECTURE_*
    */
   public function getArchitecture()
   {
     return $this->architecture;
   }
   /**
-   * @param SapComponent
+   * Output only. the database componment
+   *
+   * @param SapComponent $database
    */
   public function setDatabase(SapComponent $database)
   {
@@ -78,7 +119,9 @@ class SapWorkload extends \Google\Collection
     return $this->database;
   }
   /**
-   * @param string[]
+   * Output only. The metadata for SAP workload.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -92,7 +135,9 @@ class SapWorkload extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param Product[]
+   * Output only. the products on this workload.
+   *
+   * @param Product[] $products
    */
   public function setProducts($products)
   {

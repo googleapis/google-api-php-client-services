@@ -20,16 +20,22 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryWorkloadPropertiesProductVersion extends \Google\Model
 {
   /**
+   * Optional. Name of the product.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Version of the product.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Optional. Name of the product.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class SapDiscoveryWorkloadPropertiesProductVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Version of the product.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

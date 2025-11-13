@@ -19,36 +19,116 @@ namespace Google\Service\WorkloadManager;
 
 class AgentStatus extends \Google\Collection
 {
+  /**
+   * The state is unspecified and has not been checked yet.
+   */
+  public const CLOUD_API_ACCESS_FULL_SCOPES_GRANTED_UNSPECIFIED_STATE = 'UNSPECIFIED_STATE';
+  /**
+   * The state is successful (enabled, granted, fully functional).
+   */
+  public const CLOUD_API_ACCESS_FULL_SCOPES_GRANTED_SUCCESS_STATE = 'SUCCESS_STATE';
+  /**
+   * The state is failed (disabled, denied, not fully functional).
+   */
+  public const CLOUD_API_ACCESS_FULL_SCOPES_GRANTED_FAILURE_STATE = 'FAILURE_STATE';
+  /**
+   * There was an internal error while checking the state, state is unknown.
+   */
+  public const CLOUD_API_ACCESS_FULL_SCOPES_GRANTED_ERROR_STATE = 'ERROR_STATE';
+  /**
+   * The state is unspecified and has not been checked yet.
+   */
+  public const CONFIGURATION_VALID_UNSPECIFIED_STATE = 'UNSPECIFIED_STATE';
+  /**
+   * The state is successful (enabled, granted, fully functional).
+   */
+  public const CONFIGURATION_VALID_SUCCESS_STATE = 'SUCCESS_STATE';
+  /**
+   * The state is failed (disabled, denied, not fully functional).
+   */
+  public const CONFIGURATION_VALID_FAILURE_STATE = 'FAILURE_STATE';
+  /**
+   * There was an internal error while checking the state, state is unknown.
+   */
+  public const CONFIGURATION_VALID_ERROR_STATE = 'ERROR_STATE';
+  /**
+   * The state is unspecified and has not been checked yet.
+   */
+  public const SYSTEMD_SERVICE_ENABLED_UNSPECIFIED_STATE = 'UNSPECIFIED_STATE';
+  /**
+   * The state is successful (enabled, granted, fully functional).
+   */
+  public const SYSTEMD_SERVICE_ENABLED_SUCCESS_STATE = 'SUCCESS_STATE';
+  /**
+   * The state is failed (disabled, denied, not fully functional).
+   */
+  public const SYSTEMD_SERVICE_ENABLED_FAILURE_STATE = 'FAILURE_STATE';
+  /**
+   * There was an internal error while checking the state, state is unknown.
+   */
+  public const SYSTEMD_SERVICE_ENABLED_ERROR_STATE = 'ERROR_STATE';
+  /**
+   * The state is unspecified and has not been checked yet.
+   */
+  public const SYSTEMD_SERVICE_RUNNING_UNSPECIFIED_STATE = 'UNSPECIFIED_STATE';
+  /**
+   * The state is successful (enabled, granted, fully functional).
+   */
+  public const SYSTEMD_SERVICE_RUNNING_SUCCESS_STATE = 'SUCCESS_STATE';
+  /**
+   * The state is failed (disabled, denied, not fully functional).
+   */
+  public const SYSTEMD_SERVICE_RUNNING_FAILURE_STATE = 'FAILURE_STATE';
+  /**
+   * There was an internal error while checking the state, state is unknown.
+   */
+  public const SYSTEMD_SERVICE_RUNNING_ERROR_STATE = 'ERROR_STATE';
   protected $collection_key = 'services';
   /**
+   * Output only. The name of the agent.
+   *
    * @var string
    */
   public $agentName;
   /**
+   * Output only. The available version of the agent in artifact registry.
+   *
    * @var string
    */
   public $availableVersion;
   /**
+   * Output only. Whether the agent has full access to Cloud APIs.
+   *
    * @var string
    */
   public $cloudApiAccessFullScopesGranted;
   /**
+   * Output only. The error message for the agent configuration if invalid.
+   *
    * @var string
    */
   public $configurationErrorMessage;
   /**
+   * Output only. The path to the agent configuration file.
+   *
    * @var string
    */
   public $configurationFilePath;
   /**
+   * Output only. Whether the agent configuration is valid.
+   *
    * @var string
    */
   public $configurationValid;
   /**
+   * Output only. The installed version of the agent on the host.
+   *
    * @var string
    */
   public $installedVersion;
   /**
+   * Output only. The URI of the instance. Format: projects//zones//instances/
+   *
    * @var string
    */
   public $instanceUri;
@@ -59,16 +139,22 @@ class AgentStatus extends \Google\Collection
   protected $servicesType = AgentStatusServiceStatus::class;
   protected $servicesDataType = 'array';
   /**
+   * Output only. Whether the agent service is enabled in systemd.
+   *
    * @var string
    */
   public $systemdServiceEnabled;
   /**
+   * Output only. Whether the agent service is running in systemd.
+   *
    * @var string
    */
   public $systemdServiceRunning;
 
   /**
-   * @param string
+   * Output only. The name of the agent.
+   *
+   * @param string $agentName
    */
   public function setAgentName($agentName)
   {
@@ -82,7 +168,9 @@ class AgentStatus extends \Google\Collection
     return $this->agentName;
   }
   /**
-   * @param string
+   * Output only. The available version of the agent in artifact registry.
+   *
+   * @param string $availableVersion
    */
   public function setAvailableVersion($availableVersion)
   {
@@ -96,21 +184,28 @@ class AgentStatus extends \Google\Collection
     return $this->availableVersion;
   }
   /**
-   * @param string
+   * Output only. Whether the agent has full access to Cloud APIs.
+   *
+   * Accepted values: UNSPECIFIED_STATE, SUCCESS_STATE, FAILURE_STATE,
+   * ERROR_STATE
+   *
+   * @param self::CLOUD_API_ACCESS_FULL_SCOPES_GRANTED_* $cloudApiAccessFullScopesGranted
    */
   public function setCloudApiAccessFullScopesGranted($cloudApiAccessFullScopesGranted)
   {
     $this->cloudApiAccessFullScopesGranted = $cloudApiAccessFullScopesGranted;
   }
   /**
-   * @return string
+   * @return self::CLOUD_API_ACCESS_FULL_SCOPES_GRANTED_*
    */
   public function getCloudApiAccessFullScopesGranted()
   {
     return $this->cloudApiAccessFullScopesGranted;
   }
   /**
-   * @param string
+   * Output only. The error message for the agent configuration if invalid.
+   *
+   * @param string $configurationErrorMessage
    */
   public function setConfigurationErrorMessage($configurationErrorMessage)
   {
@@ -124,7 +219,9 @@ class AgentStatus extends \Google\Collection
     return $this->configurationErrorMessage;
   }
   /**
-   * @param string
+   * Output only. The path to the agent configuration file.
+   *
+   * @param string $configurationFilePath
    */
   public function setConfigurationFilePath($configurationFilePath)
   {
@@ -138,21 +235,28 @@ class AgentStatus extends \Google\Collection
     return $this->configurationFilePath;
   }
   /**
-   * @param string
+   * Output only. Whether the agent configuration is valid.
+   *
+   * Accepted values: UNSPECIFIED_STATE, SUCCESS_STATE, FAILURE_STATE,
+   * ERROR_STATE
+   *
+   * @param self::CONFIGURATION_VALID_* $configurationValid
    */
   public function setConfigurationValid($configurationValid)
   {
     $this->configurationValid = $configurationValid;
   }
   /**
-   * @return string
+   * @return self::CONFIGURATION_VALID_*
    */
   public function getConfigurationValid()
   {
     return $this->configurationValid;
   }
   /**
-   * @param string
+   * Output only. The installed version of the agent on the host.
+   *
+   * @param string $installedVersion
    */
   public function setInstalledVersion($installedVersion)
   {
@@ -166,7 +270,9 @@ class AgentStatus extends \Google\Collection
     return $this->installedVersion;
   }
   /**
-   * @param string
+   * Output only. The URI of the instance. Format: projects//zones//instances/
+   *
+   * @param string $instanceUri
    */
   public function setInstanceUri($instanceUri)
   {
@@ -180,7 +286,9 @@ class AgentStatus extends \Google\Collection
     return $this->instanceUri;
   }
   /**
-   * @param SapDiscoveryResourceInstancePropertiesKernelVersion
+   * Output only. The kernel version of the system.
+   *
+   * @param SapDiscoveryResourceInstancePropertiesKernelVersion $kernelVersion
    */
   public function setKernelVersion(SapDiscoveryResourceInstancePropertiesKernelVersion $kernelVersion)
   {
@@ -194,7 +302,9 @@ class AgentStatus extends \Google\Collection
     return $this->kernelVersion;
   }
   /**
-   * @param AgentStatusReference[]
+   * Output only. Optional references to public documentation.
+   *
+   * @param AgentStatusReference[] $references
    */
   public function setReferences($references)
   {
@@ -208,7 +318,9 @@ class AgentStatus extends \Google\Collection
     return $this->references;
   }
   /**
-   * @param AgentStatusServiceStatus[]
+   * Output only. The services (process metrics, host metrics, etc.).
+   *
+   * @param AgentStatusServiceStatus[] $services
    */
   public function setServices($services)
   {
@@ -222,28 +334,38 @@ class AgentStatus extends \Google\Collection
     return $this->services;
   }
   /**
-   * @param string
+   * Output only. Whether the agent service is enabled in systemd.
+   *
+   * Accepted values: UNSPECIFIED_STATE, SUCCESS_STATE, FAILURE_STATE,
+   * ERROR_STATE
+   *
+   * @param self::SYSTEMD_SERVICE_ENABLED_* $systemdServiceEnabled
    */
   public function setSystemdServiceEnabled($systemdServiceEnabled)
   {
     $this->systemdServiceEnabled = $systemdServiceEnabled;
   }
   /**
-   * @return string
+   * @return self::SYSTEMD_SERVICE_ENABLED_*
    */
   public function getSystemdServiceEnabled()
   {
     return $this->systemdServiceEnabled;
   }
   /**
-   * @param string
+   * Output only. Whether the agent service is running in systemd.
+   *
+   * Accepted values: UNSPECIFIED_STATE, SUCCESS_STATE, FAILURE_STATE,
+   * ERROR_STATE
+   *
+   * @param self::SYSTEMD_SERVICE_RUNNING_* $systemdServiceRunning
    */
   public function setSystemdServiceRunning($systemdServiceRunning)
   {
     $this->systemdServiceRunning = $systemdServiceRunning;
   }
   /**
-   * @return string
+   * @return self::SYSTEMD_SERVICE_RUNNING_*
    */
   public function getSystemdServiceRunning()
   {

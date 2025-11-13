@@ -20,16 +20,24 @@ namespace Google\Service\WorkloadManager;
 class OpenShiftValidation extends \Google\Model
 {
   /**
+   * Required. The OpenShift cluster ID (e.g.
+   * 8371bb05-7cac-4d38-82c0-0f58c4f6f936).
+   *
    * @var string
    */
   public $clusterId;
   /**
+   * Required. The validation details of the OpenShift cluster in JSON format.
+   *
    * @var array[]
    */
   public $validationDetails;
 
   /**
-   * @param string
+   * Required. The OpenShift cluster ID (e.g.
+   * 8371bb05-7cac-4d38-82c0-0f58c4f6f936).
+   *
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {
@@ -43,7 +51,9 @@ class OpenShiftValidation extends \Google\Model
     return $this->clusterId;
   }
   /**
-   * @param array[]
+   * Required. The validation details of the OpenShift cluster in JSON format.
+   *
+   * @param array[] $validationDetails
    */
   public function setValidationDetails($validationDetails)
   {

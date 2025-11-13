@@ -19,15 +19,47 @@ namespace Google\Service\WorkloadManager;
 
 class DatabaseProperties extends \Google\Model
 {
+  /**
+   * unspecified
+   */
+  public const DATABASE_TYPE_DATABASE_TYPE_UNSPECIFIED = 'DATABASE_TYPE_UNSPECIFIED';
+  /**
+   * SAP HANA
+   */
+  public const DATABASE_TYPE_HANA = 'HANA';
+  /**
+   * SAP MAX_DB
+   */
+  public const DATABASE_TYPE_MAX_DB = 'MAX_DB';
+  /**
+   * IBM DB2
+   */
+  public const DATABASE_TYPE_DB2 = 'DB2';
+  /**
+   * Oracle Database
+   */
+  public const DATABASE_TYPE_ORACLE = 'ORACLE';
+  /**
+   * Microsoft SQL Server
+   */
+  public const DATABASE_TYPE_SQLSERVER = 'SQLSERVER';
+  /**
+   * SAP Sybase ASE
+   */
+  public const DATABASE_TYPE_ASE = 'ASE';
   protected $backupPropertiesType = BackupProperties::class;
   protected $backupPropertiesDataType = '';
   /**
+   * Output only. Type of the database. HANA, DB2, etc.
+   *
    * @var string
    */
   public $databaseType;
 
   /**
-   * @param BackupProperties
+   * Output only. Backup properties.
+   *
+   * @param BackupProperties $backupProperties
    */
   public function setBackupProperties(BackupProperties $backupProperties)
   {
@@ -41,14 +73,19 @@ class DatabaseProperties extends \Google\Model
     return $this->backupProperties;
   }
   /**
-   * @param string
+   * Output only. Type of the database. HANA, DB2, etc.
+   *
+   * Accepted values: DATABASE_TYPE_UNSPECIFIED, HANA, MAX_DB, DB2, ORACLE,
+   * SQLSERVER, ASE
+   *
+   * @param self::DATABASE_TYPE_* $databaseType
    */
   public function setDatabaseType($databaseType)
   {
     $this->databaseType = $databaseType;
   }
   /**
-   * @return string
+   * @return self::DATABASE_TYPE_*
    */
   public function getDatabaseType()
   {

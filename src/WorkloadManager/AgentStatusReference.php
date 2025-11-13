@@ -20,16 +20,22 @@ namespace Google\Service\WorkloadManager;
 class AgentStatusReference extends \Google\Model
 {
   /**
+   * Output only. The name of the reference.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The URL of the reference.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Output only. The name of the reference.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class AgentStatusReference extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The URL of the reference.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

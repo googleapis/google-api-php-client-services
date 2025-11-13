@@ -20,30 +20,57 @@ namespace Google\Service\WorkloadManager;
 class AgentStatusIAMPermission extends \Google\Model
 {
   /**
+   * The state is unspecified and has not been checked yet.
+   */
+  public const GRANTED_UNSPECIFIED_STATE = 'UNSPECIFIED_STATE';
+  /**
+   * The state is successful (enabled, granted, fully functional).
+   */
+  public const GRANTED_SUCCESS_STATE = 'SUCCESS_STATE';
+  /**
+   * The state is failed (disabled, denied, not fully functional).
+   */
+  public const GRANTED_FAILURE_STATE = 'FAILURE_STATE';
+  /**
+   * There was an internal error while checking the state, state is unknown.
+   */
+  public const GRANTED_ERROR_STATE = 'ERROR_STATE';
+  /**
+   * Output only. Whether the permission is granted.
+   *
    * @var string
    */
   public $granted;
   /**
+   * Output only. The name of the permission.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. Whether the permission is granted.
+   *
+   * Accepted values: UNSPECIFIED_STATE, SUCCESS_STATE, FAILURE_STATE,
+   * ERROR_STATE
+   *
+   * @param self::GRANTED_* $granted
    */
   public function setGranted($granted)
   {
     $this->granted = $granted;
   }
   /**
-   * @return string
+   * @return self::GRANTED_*
    */
   public function getGranted()
   {
     return $this->granted;
   }
   /**
-   * @param string
+   * Output only. The name of the permission.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

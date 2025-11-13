@@ -26,7 +26,9 @@ class SapDiscoveryWorkloadProperties extends \Google\Collection
   protected $softwareComponentVersionsDataType = 'array';
 
   /**
-   * @param SapDiscoveryWorkloadPropertiesProductVersion[]
+   * Optional. List of SAP Products and their versions running on the system.
+   *
+   * @param SapDiscoveryWorkloadPropertiesProductVersion[] $productVersions
    */
   public function setProductVersions($productVersions)
   {
@@ -40,7 +42,10 @@ class SapDiscoveryWorkloadProperties extends \Google\Collection
     return $this->productVersions;
   }
   /**
-   * @param SapDiscoveryWorkloadPropertiesSoftwareComponentProperties[]
+   * Optional. A list of SAP software components and their versions running on
+   * the system.
+   *
+   * @param SapDiscoveryWorkloadPropertiesSoftwareComponentProperties[] $softwareComponentVersions
    */
   public function setSoftwareComponentVersions($softwareComponentVersions)
   {

@@ -23,16 +23,22 @@ class ListExecutionsResponse extends \Google\Collection
   protected $executionsType = Execution::class;
   protected $executionsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Execution[]
+   * The list of Execution
+   *
+   * @param Execution[] $executions
    */
   public function setExecutions($executions)
   {
@@ -46,7 +52,9 @@ class ListExecutionsResponse extends \Google\Collection
     return $this->executions;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListExecutionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

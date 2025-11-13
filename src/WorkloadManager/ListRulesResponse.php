@@ -26,7 +26,9 @@ class ListRulesResponse extends \Google\Collection
   protected $rulesDataType = 'array';
 
   /**
-   * @param InvalidRulesWrapper
+   * A wrapper of the invalid rules that failed to be validated.
+   *
+   * @param InvalidRulesWrapper $invalidRulesWrapper
    */
   public function setInvalidRulesWrapper(InvalidRulesWrapper $invalidRulesWrapper)
   {
@@ -40,7 +42,9 @@ class ListRulesResponse extends \Google\Collection
     return $this->invalidRulesWrapper;
   }
   /**
-   * @param Rule[]
+   * all rules in response
+   *
+   * @param Rule[] $rules
    */
   public function setRules($rules)
   {

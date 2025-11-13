@@ -20,24 +20,34 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryWorkloadPropertiesSoftwareComponentProperties extends \Google\Model
 {
   /**
+   * Optional. The component's minor version.
+   *
    * @var string
    */
   public $extVersion;
   /**
+   * Optional. Name of the component.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The component's type.
+   *
    * @var string
    */
   public $type;
   /**
+   * Optional. The component's major version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Optional. The component's minor version.
+   *
+   * @param string $extVersion
    */
   public function setExtVersion($extVersion)
   {
@@ -51,7 +61,9 @@ class SapDiscoveryWorkloadPropertiesSoftwareComponentProperties extends \Google\
     return $this->extVersion;
   }
   /**
-   * @param string
+   * Optional. Name of the component.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +77,9 @@ class SapDiscoveryWorkloadPropertiesSoftwareComponentProperties extends \Google\
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The component's type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -79,7 +93,9 @@ class SapDiscoveryWorkloadPropertiesSoftwareComponentProperties extends \Google\
     return $this->type;
   }
   /**
-   * @param string
+   * Optional. The component's major version.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

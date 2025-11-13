@@ -19,19 +19,74 @@ namespace Google\Service\WorkloadManager;
 
 class CloudResource extends \Google\Model
 {
+  /**
+   * Unspecified resource kind.
+   */
+  public const KIND_RESOURCE_KIND_UNSPECIFIED = 'RESOURCE_KIND_UNSPECIFIED';
+  /**
+   * This is a compute instance.
+   */
+  public const KIND_RESOURCE_KIND_INSTANCE = 'RESOURCE_KIND_INSTANCE';
+  /**
+   * This is a compute disk.
+   */
+  public const KIND_RESOURCE_KIND_DISK = 'RESOURCE_KIND_DISK';
+  /**
+   * This is a compute address.
+   */
+  public const KIND_RESOURCE_KIND_ADDRESS = 'RESOURCE_KIND_ADDRESS';
+  /**
+   * This is a filestore instance.
+   */
+  public const KIND_RESOURCE_KIND_FILESTORE = 'RESOURCE_KIND_FILESTORE';
+  /**
+   * This is a compute health check.
+   */
+  public const KIND_RESOURCE_KIND_HEALTH_CHECK = 'RESOURCE_KIND_HEALTH_CHECK';
+  /**
+   * This is a compute forwarding rule.
+   */
+  public const KIND_RESOURCE_KIND_FORWARDING_RULE = 'RESOURCE_KIND_FORWARDING_RULE';
+  /**
+   * This is a compute backend service.
+   */
+  public const KIND_RESOURCE_KIND_BACKEND_SERVICE = 'RESOURCE_KIND_BACKEND_SERVICE';
+  /**
+   * This is a compute subnetwork.
+   */
+  public const KIND_RESOURCE_KIND_SUBNETWORK = 'RESOURCE_KIND_SUBNETWORK';
+  /**
+   * This is a compute network.
+   */
+  public const KIND_RESOURCE_KIND_NETWORK = 'RESOURCE_KIND_NETWORK';
+  /**
+   * This is a public accessible IP Address.
+   */
+  public const KIND_RESOURCE_KIND_PUBLIC_ADDRESS = 'RESOURCE_KIND_PUBLIC_ADDRESS';
+  /**
+   * This is a compute instance group.
+   */
+  public const KIND_RESOURCE_KIND_INSTANCE_GROUP = 'RESOURCE_KIND_INSTANCE_GROUP';
   protected $instancePropertiesType = InstanceProperties::class;
   protected $instancePropertiesDataType = '';
   /**
+   * Output only.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Output only. resource name Example: compute.googleapis.com/projects/wlm-
+   * obs-dev/zones/us-central1-a/instances/sap-pri
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param InstanceProperties
+   * Output only. All instance properties.
+   *
+   * @param InstanceProperties $instanceProperties
    */
   public function setInstanceProperties(InstanceProperties $instanceProperties)
   {
@@ -45,21 +100,33 @@ class CloudResource extends \Google\Model
     return $this->instanceProperties;
   }
   /**
-   * @param string
+   * Output only.
+   *
+   * Accepted values: RESOURCE_KIND_UNSPECIFIED, RESOURCE_KIND_INSTANCE,
+   * RESOURCE_KIND_DISK, RESOURCE_KIND_ADDRESS, RESOURCE_KIND_FILESTORE,
+   * RESOURCE_KIND_HEALTH_CHECK, RESOURCE_KIND_FORWARDING_RULE,
+   * RESOURCE_KIND_BACKEND_SERVICE, RESOURCE_KIND_SUBNETWORK,
+   * RESOURCE_KIND_NETWORK, RESOURCE_KIND_PUBLIC_ADDRESS,
+   * RESOURCE_KIND_INSTANCE_GROUP
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * Output only. resource name Example: compute.googleapis.com/projects/wlm-
+   * obs-dev/zones/us-central1-a/instances/sap-pri
+   *
+   * @param string $name
    */
   public function setName($name)
   {

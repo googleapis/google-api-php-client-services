@@ -19,20 +19,39 @@ namespace Google\Service\WorkloadManager;
 
 class SapDiscoveryComponent extends \Google\Collection
 {
+  /**
+   * Unspecified topology.
+   */
+  public const TOPOLOGY_TYPE_TOPOLOGY_TYPE_UNSPECIFIED = 'TOPOLOGY_TYPE_UNSPECIFIED';
+  /**
+   * A scale-up single node system.
+   */
+  public const TOPOLOGY_TYPE_TOPOLOGY_SCALE_UP = 'TOPOLOGY_SCALE_UP';
+  /**
+   * A scale-out multi-node system.
+   */
+  public const TOPOLOGY_TYPE_TOPOLOGY_SCALE_OUT = 'TOPOLOGY_SCALE_OUT';
   protected $collection_key = 'resources';
   protected $applicationPropertiesType = SapDiscoveryComponentApplicationProperties::class;
   protected $applicationPropertiesDataType = '';
   protected $databasePropertiesType = SapDiscoveryComponentDatabaseProperties::class;
   protected $databasePropertiesDataType = '';
   /**
+   * Optional. A list of host URIs that are part of the HA configuration if
+   * present. An empty list indicates the component is not configured for HA.
+   *
    * @var string[]
    */
   public $haHosts;
   /**
+   * Required. Pantheon Project in which the resources reside.
+   *
    * @var string
    */
   public $hostProject;
   /**
+   * Optional. The region this component's resources are primarily located in.
+   *
    * @var string
    */
   public $region;
@@ -41,16 +60,23 @@ class SapDiscoveryComponent extends \Google\Collection
   protected $resourcesType = SapDiscoveryResource::class;
   protected $resourcesDataType = 'array';
   /**
+   * Optional. The SAP identifier, used by the SAP software and helps
+   * differentiate systems for customers.
+   *
    * @var string
    */
   public $sid;
   /**
+   * Optional. The detected topology of the component.
+   *
    * @var string
    */
   public $topologyType;
 
   /**
-   * @param SapDiscoveryComponentApplicationProperties
+   * Optional. The component is a SAP application.
+   *
+   * @param SapDiscoveryComponentApplicationProperties $applicationProperties
    */
   public function setApplicationProperties(SapDiscoveryComponentApplicationProperties $applicationProperties)
   {
@@ -64,7 +90,9 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->applicationProperties;
   }
   /**
-   * @param SapDiscoveryComponentDatabaseProperties
+   * Optional. The component is a SAP database.
+   *
+   * @param SapDiscoveryComponentDatabaseProperties $databaseProperties
    */
   public function setDatabaseProperties(SapDiscoveryComponentDatabaseProperties $databaseProperties)
   {
@@ -78,7 +106,10 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->databaseProperties;
   }
   /**
-   * @param string[]
+   * Optional. A list of host URIs that are part of the HA configuration if
+   * present. An empty list indicates the component is not configured for HA.
+   *
+   * @param string[] $haHosts
    */
   public function setHaHosts($haHosts)
   {
@@ -92,7 +123,9 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->haHosts;
   }
   /**
-   * @param string
+   * Required. Pantheon Project in which the resources reside.
+   *
+   * @param string $hostProject
    */
   public function setHostProject($hostProject)
   {
@@ -106,7 +139,9 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->hostProject;
   }
   /**
-   * @param string
+   * Optional. The region this component's resources are primarily located in.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -120,7 +155,10 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param SapDiscoveryComponentReplicationSite[]
+   * Optional. A list of replication sites used in Disaster Recovery (DR)
+   * configurations.
+   *
+   * @param SapDiscoveryComponentReplicationSite[] $replicationSites
    */
   public function setReplicationSites($replicationSites)
   {
@@ -134,7 +172,9 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->replicationSites;
   }
   /**
-   * @param SapDiscoveryResource[]
+   * Optional. The resources in a component.
+   *
+   * @param SapDiscoveryResource[] $resources
    */
   public function setResources($resources)
   {
@@ -148,7 +188,10 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->resources;
   }
   /**
-   * @param string
+   * Optional. The SAP identifier, used by the SAP software and helps
+   * differentiate systems for customers.
+   *
+   * @param string $sid
    */
   public function setSid($sid)
   {
@@ -162,14 +205,19 @@ class SapDiscoveryComponent extends \Google\Collection
     return $this->sid;
   }
   /**
-   * @param string
+   * Optional. The detected topology of the component.
+   *
+   * Accepted values: TOPOLOGY_TYPE_UNSPECIFIED, TOPOLOGY_SCALE_UP,
+   * TOPOLOGY_SCALE_OUT
+   *
+   * @param self::TOPOLOGY_TYPE_* $topologyType
    */
   public function setTopologyType($topologyType)
   {
     $this->topologyType = $topologyType;
   }
   /**
-   * @return string
+   * @return self::TOPOLOGY_TYPE_*
    */
   public function getTopologyType()
   {

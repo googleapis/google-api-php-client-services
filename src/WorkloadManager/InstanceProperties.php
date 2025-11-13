@@ -21,20 +21,28 @@ class InstanceProperties extends \Google\Collection
 {
   protected $collection_key = 'roles';
   /**
+   * Optional. Instance number.
+   *
    * @var string
    */
   public $instanceNumber;
   /**
+   * Optional. Instance machine type.
+   *
    * @var string
    */
   public $machineType;
   /**
+   * Optional. Instance roles.
+   *
    * @var string[]
    */
   public $roles;
   protected $sapInstancePropertiesType = SapInstanceProperties::class;
   protected $sapInstancePropertiesDataType = '';
   /**
+   * Optional. Instance status.
+   *
    * @var string
    */
   public $status;
@@ -42,7 +50,9 @@ class InstanceProperties extends \Google\Collection
   protected $upcomingMaintenanceEventDataType = '';
 
   /**
-   * @param string
+   * Optional. Instance number.
+   *
+   * @param string $instanceNumber
    */
   public function setInstanceNumber($instanceNumber)
   {
@@ -56,7 +66,9 @@ class InstanceProperties extends \Google\Collection
     return $this->instanceNumber;
   }
   /**
-   * @param string
+   * Optional. Instance machine type.
+   *
+   * @param string $machineType
    */
   public function setMachineType($machineType)
   {
@@ -70,7 +82,9 @@ class InstanceProperties extends \Google\Collection
     return $this->machineType;
   }
   /**
-   * @param string[]
+   * Optional. Instance roles.
+   *
+   * @param string[] $roles
    */
   public function setRoles($roles)
   {
@@ -84,7 +98,9 @@ class InstanceProperties extends \Google\Collection
     return $this->roles;
   }
   /**
-   * @param SapInstanceProperties
+   * Optional. SAP Instance properties.
+   *
+   * @param SapInstanceProperties $sapInstanceProperties
    */
   public function setSapInstanceProperties(SapInstanceProperties $sapInstanceProperties)
   {
@@ -98,7 +114,9 @@ class InstanceProperties extends \Google\Collection
     return $this->sapInstanceProperties;
   }
   /**
-   * @param string
+   * Optional. Instance status.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {
@@ -112,7 +130,9 @@ class InstanceProperties extends \Google\Collection
     return $this->status;
   }
   /**
-   * @param UpcomingMaintenanceEvent
+   * Optional. the next maintenance event on VM
+   *
+   * @param UpcomingMaintenanceEvent $upcomingMaintenanceEvent
    */
   public function setUpcomingMaintenanceEvent(UpcomingMaintenanceEvent $upcomingMaintenanceEvent)
   {

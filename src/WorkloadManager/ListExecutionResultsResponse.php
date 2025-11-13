@@ -23,12 +23,17 @@ class ListExecutionResultsResponse extends \Google\Collection
   protected $executionResultsType = ExecutionResult::class;
   protected $executionResultsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ExecutionResult[]
+   * The versions from the specified publisher.
+   *
+   * @param ExecutionResult[] $executionResults
    */
   public function setExecutionResults($executionResults)
   {
@@ -42,7 +47,10 @@ class ListExecutionResultsResponse extends \Google\Collection
     return $this->executionResults;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

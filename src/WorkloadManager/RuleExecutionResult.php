@@ -20,28 +20,56 @@ namespace Google\Service\WorkloadManager;
 class RuleExecutionResult extends \Google\Model
 {
   /**
+   * Unknown state
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * execution completed successfully
+   */
+  public const STATE_STATE_SUCCESS = 'STATE_SUCCESS';
+  /**
+   * execution completed with failures
+   */
+  public const STATE_STATE_FAILURE = 'STATE_FAILURE';
+  /**
+   * execution was not executed
+   */
+  public const STATE_STATE_SKIPPED = 'STATE_SKIPPED';
+  /**
+   * Execution message, if any
+   *
    * @var string
    */
   public $message;
   /**
+   * Number of violations
+   *
    * @var string
    */
   public $resultCount;
   /**
+   * rule name
+   *
    * @var string
    */
   public $rule;
   /**
+   * Number of total scanned resources
+   *
    * @var string
    */
   public $scannedResourceCount;
   /**
+   * Output only. The execution status
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Execution message, if any
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -55,7 +83,9 @@ class RuleExecutionResult extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Number of violations
+   *
+   * @param string $resultCount
    */
   public function setResultCount($resultCount)
   {
@@ -69,7 +99,9 @@ class RuleExecutionResult extends \Google\Model
     return $this->resultCount;
   }
   /**
-   * @param string
+   * rule name
+   *
+   * @param string $rule
    */
   public function setRule($rule)
   {
@@ -83,7 +115,9 @@ class RuleExecutionResult extends \Google\Model
     return $this->rule;
   }
   /**
-   * @param string
+   * Number of total scanned resources
+   *
+   * @param string $scannedResourceCount
    */
   public function setScannedResourceCount($scannedResourceCount)
   {
@@ -97,14 +131,19 @@ class RuleExecutionResult extends \Google\Model
     return $this->scannedResourceCount;
   }
   /**
-   * @param string
+   * Output only. The execution status
+   *
+   * Accepted values: STATE_UNSPECIFIED, STATE_SUCCESS, STATE_FAILURE,
+   * STATE_SKIPPED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

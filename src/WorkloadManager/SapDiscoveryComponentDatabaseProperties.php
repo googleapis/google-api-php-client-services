@@ -20,36 +20,81 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryComponentDatabaseProperties extends \Google\Model
 {
   /**
+   * Unspecified database type.
+   */
+  public const DATABASE_TYPE_DATABASE_TYPE_UNSPECIFIED = 'DATABASE_TYPE_UNSPECIFIED';
+  /**
+   * SAP HANA
+   */
+  public const DATABASE_TYPE_HANA = 'HANA';
+  /**
+   * SAP MAX_DB
+   */
+  public const DATABASE_TYPE_MAX_DB = 'MAX_DB';
+  /**
+   * IBM DB2
+   */
+  public const DATABASE_TYPE_DB2 = 'DB2';
+  /**
+   * Oracle Database
+   */
+  public const DATABASE_TYPE_ORACLE = 'ORACLE';
+  /**
+   * Microsoft SQL Server
+   */
+  public const DATABASE_TYPE_SQLSERVER = 'SQLSERVER';
+  /**
+   * SAP Sybase ASE
+   */
+  public const DATABASE_TYPE_ASE = 'ASE';
+  /**
+   * Optional. SID of the system database.
+   *
    * @var string
    */
   public $databaseSid;
   /**
+   * Required. Type of the database. HANA, DB2, etc.
+   *
    * @var string
    */
   public $databaseType;
   /**
+   * Optional. The version of the database software running in the system.
+   *
    * @var string
    */
   public $databaseVersion;
   /**
+   * Optional. Instance number of the SAP instance.
+   *
    * @var string
    */
   public $instanceNumber;
   /**
+   * Optional. Landscape ID from the HANA nameserver.
+   *
    * @var string
    */
   public $landscapeId;
   /**
+   * Required. URI of the recognized primary instance of the database.
+   *
    * @var string
    */
   public $primaryInstanceUri;
   /**
+   * Optional. URI of the recognized shared NFS of the database. May be empty if
+   * the database has only a single node.
+   *
    * @var string
    */
   public $sharedNfsUri;
 
   /**
-   * @param string
+   * Optional. SID of the system database.
+   *
+   * @param string $databaseSid
    */
   public function setDatabaseSid($databaseSid)
   {
@@ -63,21 +108,28 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
     return $this->databaseSid;
   }
   /**
-   * @param string
+   * Required. Type of the database. HANA, DB2, etc.
+   *
+   * Accepted values: DATABASE_TYPE_UNSPECIFIED, HANA, MAX_DB, DB2, ORACLE,
+   * SQLSERVER, ASE
+   *
+   * @param self::DATABASE_TYPE_* $databaseType
    */
   public function setDatabaseType($databaseType)
   {
     $this->databaseType = $databaseType;
   }
   /**
-   * @return string
+   * @return self::DATABASE_TYPE_*
    */
   public function getDatabaseType()
   {
     return $this->databaseType;
   }
   /**
-   * @param string
+   * Optional. The version of the database software running in the system.
+   *
+   * @param string $databaseVersion
    */
   public function setDatabaseVersion($databaseVersion)
   {
@@ -91,7 +143,9 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
     return $this->databaseVersion;
   }
   /**
-   * @param string
+   * Optional. Instance number of the SAP instance.
+   *
+   * @param string $instanceNumber
    */
   public function setInstanceNumber($instanceNumber)
   {
@@ -105,7 +159,9 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
     return $this->instanceNumber;
   }
   /**
-   * @param string
+   * Optional. Landscape ID from the HANA nameserver.
+   *
+   * @param string $landscapeId
    */
   public function setLandscapeId($landscapeId)
   {
@@ -119,7 +175,9 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
     return $this->landscapeId;
   }
   /**
-   * @param string
+   * Required. URI of the recognized primary instance of the database.
+   *
+   * @param string $primaryInstanceUri
    */
   public function setPrimaryInstanceUri($primaryInstanceUri)
   {
@@ -133,7 +191,10 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
     return $this->primaryInstanceUri;
   }
   /**
-   * @param string
+   * Optional. URI of the recognized shared NFS of the database. May be empty if
+   * the database has only a single node.
+   *
+   * @param string $sharedNfsUri
    */
   public function setSharedNfsUri($sharedNfsUri)
   {

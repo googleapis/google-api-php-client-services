@@ -19,24 +19,50 @@ namespace Google\Service\WorkloadManager;
 
 class ResourceStatus extends \Google\Collection
 {
+  /**
+   * The state has not been populated in this message.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Resource has an active Create operation.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Resource has no outstanding operations on it or has active Update
+   * operations.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Resource has an active Delete operation.
+   */
+  public const STATE_DELETING = 'DELETING';
   protected $collection_key = 'rulesNewerVersions';
   /**
+   * Historical: Used before 2023-05-22 the new version of rule id if exists
+   *
+   * @deprecated
    * @var string[]
    */
   public $rulesNewerVersions;
   /**
+   * State of the resource
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string[]
+   * Historical: Used before 2023-05-22 the new version of rule id if exists
+   *
+   * @deprecated
+   * @param string[] $rulesNewerVersions
    */
   public function setRulesNewerVersions($rulesNewerVersions)
   {
     $this->rulesNewerVersions = $rulesNewerVersions;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getRulesNewerVersions()
@@ -44,14 +70,18 @@ class ResourceStatus extends \Google\Collection
     return $this->rulesNewerVersions;
   }
   /**
-   * @param string
+   * State of the resource
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, DELETING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -22,6 +22,8 @@ class Insight extends \Google\Model
   protected $agentStatusType = AgentStatus::class;
   protected $agentStatusDataType = '';
   /**
+   * Optional. The instance id where the insight is generated from
+   *
    * @var string
    */
   public $instanceId;
@@ -32,6 +34,8 @@ class Insight extends \Google\Model
   protected $sapValidationType = SapValidation::class;
   protected $sapValidationDataType = '';
   /**
+   * Output only. [Output only] Create time stamp
+   *
    * @var string
    */
   public $sentTime;
@@ -41,7 +45,9 @@ class Insight extends \Google\Model
   protected $torsoValidationDataType = '';
 
   /**
-   * @param AgentStatus
+   * The insights data for the agent status.
+   *
+   * @param AgentStatus $agentStatus
    */
   public function setAgentStatus(AgentStatus $agentStatus)
   {
@@ -55,7 +61,9 @@ class Insight extends \Google\Model
     return $this->agentStatus;
   }
   /**
-   * @param string
+   * Optional. The instance id where the insight is generated from
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -69,7 +77,9 @@ class Insight extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * @param OpenShiftValidation
+   * The insights data for the OpenShift workload validation.
+   *
+   * @param OpenShiftValidation $openShiftValidation
    */
   public function setOpenShiftValidation(OpenShiftValidation $openShiftValidation)
   {
@@ -83,7 +93,10 @@ class Insight extends \Google\Model
     return $this->openShiftValidation;
   }
   /**
-   * @param SapDiscovery
+   * The insights data for SAP system discovery. This is a copy of SAP System
+   * proto and should get updated whenever that one changes.
+   *
+   * @param SapDiscovery $sapDiscovery
    */
   public function setSapDiscovery(SapDiscovery $sapDiscovery)
   {
@@ -97,7 +110,9 @@ class Insight extends \Google\Model
     return $this->sapDiscovery;
   }
   /**
-   * @param SapValidation
+   * The insights data for the SAP workload validation.
+   *
+   * @param SapValidation $sapValidation
    */
   public function setSapValidation(SapValidation $sapValidation)
   {
@@ -111,7 +126,9 @@ class Insight extends \Google\Model
     return $this->sapValidation;
   }
   /**
-   * @param string
+   * Output only. [Output only] Create time stamp
+   *
+   * @param string $sentTime
    */
   public function setSentTime($sentTime)
   {
@@ -125,7 +142,9 @@ class Insight extends \Google\Model
     return $this->sentTime;
   }
   /**
-   * @param SqlserverValidation
+   * The insights data for the sqlserver workload validation.
+   *
+   * @param SqlserverValidation $sqlserverValidation
    */
   public function setSqlserverValidation(SqlserverValidation $sqlserverValidation)
   {
@@ -139,7 +158,9 @@ class Insight extends \Google\Model
     return $this->sqlserverValidation;
   }
   /**
-   * @param TorsoValidation
+   * The insights data for workload validation of torso workloads.
+   *
+   * @param TorsoValidation $torsoValidation
    */
   public function setTorsoValidation(TorsoValidation $torsoValidation)
   {

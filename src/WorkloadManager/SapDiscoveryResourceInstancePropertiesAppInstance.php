@@ -20,16 +20,22 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryResourceInstancePropertiesAppInstance extends \Google\Model
 {
   /**
+   * Optional. Instance name of the SAP application instance.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Instance number of the SAP application instance.
+   *
    * @var string
    */
   public $number;
 
   /**
-   * @param string
+   * Optional. Instance name of the SAP application instance.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class SapDiscoveryResourceInstancePropertiesAppInstance extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Instance number of the SAP application instance.
+   *
+   * @param string $number
    */
   public function setNumber($number)
   {

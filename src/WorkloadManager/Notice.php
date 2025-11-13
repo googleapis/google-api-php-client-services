@@ -20,12 +20,16 @@ namespace Google\Service\WorkloadManager;
 class Notice extends \Google\Model
 {
   /**
+   * Output only. Message of the notice
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * Output only. Message of the notice
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

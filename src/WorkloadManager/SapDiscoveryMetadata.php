@@ -20,24 +20,36 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryMetadata extends \Google\Model
 {
   /**
+   * Optional. Customer region string for customer's use. Does not represent GCP
+   * region.
+   *
    * @var string
    */
   public $customerRegion;
   /**
+   * Optional. Customer defined, something like "E-commerce pre prod"
+   *
    * @var string
    */
   public $definedSystem;
   /**
+   * Optional. Should be "prod", "QA", "dev", "staging", etc.
+   *
    * @var string
    */
   public $environmentType;
   /**
+   * Optional. This SAP product name
+   *
    * @var string
    */
   public $sapProduct;
 
   /**
-   * @param string
+   * Optional. Customer region string for customer's use. Does not represent GCP
+   * region.
+   *
+   * @param string $customerRegion
    */
   public function setCustomerRegion($customerRegion)
   {
@@ -51,7 +63,9 @@ class SapDiscoveryMetadata extends \Google\Model
     return $this->customerRegion;
   }
   /**
-   * @param string
+   * Optional. Customer defined, something like "E-commerce pre prod"
+   *
+   * @param string $definedSystem
    */
   public function setDefinedSystem($definedSystem)
   {
@@ -65,7 +79,9 @@ class SapDiscoveryMetadata extends \Google\Model
     return $this->definedSystem;
   }
   /**
-   * @param string
+   * Optional. Should be "prod", "QA", "dev", "staging", etc.
+   *
+   * @param string $environmentType
    */
   public function setEnvironmentType($environmentType)
   {
@@ -79,7 +95,9 @@ class SapDiscoveryMetadata extends \Google\Model
     return $this->environmentType;
   }
   /**
-   * @param string
+   * Optional. This SAP product name
+   *
+   * @param string $sapProduct
    */
   public function setSapProduct($sapProduct)
   {

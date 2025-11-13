@@ -25,7 +25,9 @@ class Command extends \Google\Model
   protected $shellCommandDataType = '';
 
   /**
-   * @param AgentCommand
+   * AgentCommand specifies a one-time executable program for the agent to run.
+   *
+   * @param AgentCommand $agentCommand
    */
   public function setAgentCommand(AgentCommand $agentCommand)
   {
@@ -39,7 +41,9 @@ class Command extends \Google\Model
     return $this->agentCommand;
   }
   /**
-   * @param ShellCommand
+   * ShellCommand is invoked via the agent's command line executor.
+   *
+   * @param ShellCommand $shellCommand
    */
   public function setShellCommand(ShellCommand $shellCommand)
   {

@@ -21,12 +21,16 @@ class GceInstanceFilter extends \Google\Collection
 {
   protected $collection_key = 'serviceAccounts';
   /**
+   * Service account of compute engine
+   *
    * @var string[]
    */
   public $serviceAccounts;
 
   /**
-   * @param string[]
+   * Service account of compute engine
+   *
+   * @param string[] $serviceAccounts
    */
   public function setServiceAccounts($serviceAccounts)
   {

@@ -20,30 +20,53 @@ namespace Google\Service\WorkloadManager;
 class BackupProperties extends \Google\Model
 {
   /**
+   * unspecified
+   */
+  public const LATEST_BACKUP_STATUS_BACKUP_STATE_UNSPECIFIED = 'BACKUP_STATE_UNSPECIFIED';
+  /**
+   * SUCCESS state
+   */
+  public const LATEST_BACKUP_STATUS_BACKUP_STATE_SUCCESS = 'BACKUP_STATE_SUCCESS';
+  /**
+   * FAILURE state
+   */
+  public const LATEST_BACKUP_STATUS_BACKUP_STATE_FAILURE = 'BACKUP_STATE_FAILURE';
+  /**
+   * Output only. The state of the latest backup.
+   *
    * @var string
    */
   public $latestBackupStatus;
   /**
+   * The time when the latest backup was performed.
+   *
    * @var string
    */
   public $latestBackupTime;
 
   /**
-   * @param string
+   * Output only. The state of the latest backup.
+   *
+   * Accepted values: BACKUP_STATE_UNSPECIFIED, BACKUP_STATE_SUCCESS,
+   * BACKUP_STATE_FAILURE
+   *
+   * @param self::LATEST_BACKUP_STATUS_* $latestBackupStatus
    */
   public function setLatestBackupStatus($latestBackupStatus)
   {
     $this->latestBackupStatus = $latestBackupStatus;
   }
   /**
-   * @return string
+   * @return self::LATEST_BACKUP_STATUS_*
    */
   public function getLatestBackupStatus()
   {
     return $this->latestBackupStatus;
   }
   /**
-   * @param string
+   * The time when the latest backup was performed.
+   *
+   * @param string $latestBackupTime
    */
   public function setLatestBackupTime($latestBackupTime)
   {

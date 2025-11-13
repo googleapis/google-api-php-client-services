@@ -21,14 +21,24 @@ class SqlserverValidation extends \Google\Collection
 {
   protected $collection_key = 'validationDetails';
   /**
+   * Optional. The agent version collected this data point
+   *
    * @var string
    */
   public $agentVersion;
   /**
+   * Required. The instance_name of the instance that the Insight data comes
+   * from. According to https://linter.aip.dev/122/name-suffix: field names
+   * should not use the _name suffix unless the field would be ambiguous without
+   * it.
+   *
    * @var string
    */
   public $instance;
   /**
+   * Required. The project_id of the cloud project that the Insight data comes
+   * from.
+   *
    * @var string
    */
   public $projectId;
@@ -36,7 +46,9 @@ class SqlserverValidation extends \Google\Collection
   protected $validationDetailsDataType = 'array';
 
   /**
-   * @param string
+   * Optional. The agent version collected this data point
+   *
+   * @param string $agentVersion
    */
   public function setAgentVersion($agentVersion)
   {
@@ -50,7 +62,12 @@ class SqlserverValidation extends \Google\Collection
     return $this->agentVersion;
   }
   /**
-   * @param string
+   * Required. The instance_name of the instance that the Insight data comes
+   * from. According to https://linter.aip.dev/122/name-suffix: field names
+   * should not use the _name suffix unless the field would be ambiguous without
+   * it.
+   *
+   * @param string $instance
    */
   public function setInstance($instance)
   {
@@ -64,7 +81,10 @@ class SqlserverValidation extends \Google\Collection
     return $this->instance;
   }
   /**
-   * @param string
+   * Required. The project_id of the cloud project that the Insight data comes
+   * from.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -78,7 +98,9 @@ class SqlserverValidation extends \Google\Collection
     return $this->projectId;
   }
   /**
-   * @param SqlserverValidationValidationDetail[]
+   * Optional. A list of SqlServer validation metrics data.
+   *
+   * @param SqlserverValidationValidationDetail[] $validationDetails
    */
   public function setValidationDetails($validationDetails)
   {

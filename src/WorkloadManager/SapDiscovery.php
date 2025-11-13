@@ -26,18 +26,27 @@ class SapDiscovery extends \Google\Model
   protected $metadataType = SapDiscoveryMetadata::class;
   protected $metadataDataType = '';
   /**
+   * Optional. The GCP project number that this SapSystem belongs to.
+   *
    * @var string
    */
   public $projectNumber;
   /**
+   * Output only. A combination of database SID, database instance URI and
+   * tenant DB name to make a unique identifier per-system.
+   *
    * @var string
    */
   public $systemId;
   /**
+   * Required. Unix timestamp this system has been updated last.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Optional. Whether to use DR reconciliation or not.
+   *
    * @var bool
    */
   public $useDrReconciliation;
@@ -45,7 +54,9 @@ class SapDiscovery extends \Google\Model
   protected $workloadPropertiesDataType = '';
 
   /**
-   * @param SapDiscoveryComponent
+   * Optional. An SAP system may run without an application layer.
+   *
+   * @param SapDiscoveryComponent $applicationLayer
    */
   public function setApplicationLayer(SapDiscoveryComponent $applicationLayer)
   {
@@ -59,7 +70,9 @@ class SapDiscovery extends \Google\Model
     return $this->applicationLayer;
   }
   /**
-   * @param SapDiscoveryComponent
+   * Required. An SAP System must have a database.
+   *
+   * @param SapDiscoveryComponent $databaseLayer
    */
   public function setDatabaseLayer(SapDiscoveryComponent $databaseLayer)
   {
@@ -73,7 +86,9 @@ class SapDiscovery extends \Google\Model
     return $this->databaseLayer;
   }
   /**
-   * @param SapDiscoveryMetadata
+   * Optional. The metadata for SAP system discovery data.
+   *
+   * @param SapDiscoveryMetadata $metadata
    */
   public function setMetadata(SapDiscoveryMetadata $metadata)
   {
@@ -87,7 +102,9 @@ class SapDiscovery extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * Optional. The GCP project number that this SapSystem belongs to.
+   *
+   * @param string $projectNumber
    */
   public function setProjectNumber($projectNumber)
   {
@@ -101,7 +118,10 @@ class SapDiscovery extends \Google\Model
     return $this->projectNumber;
   }
   /**
-   * @param string
+   * Output only. A combination of database SID, database instance URI and
+   * tenant DB name to make a unique identifier per-system.
+   *
+   * @param string $systemId
    */
   public function setSystemId($systemId)
   {
@@ -115,7 +135,9 @@ class SapDiscovery extends \Google\Model
     return $this->systemId;
   }
   /**
-   * @param string
+   * Required. Unix timestamp this system has been updated last.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -129,7 +151,9 @@ class SapDiscovery extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param bool
+   * Optional. Whether to use DR reconciliation or not.
+   *
+   * @param bool $useDrReconciliation
    */
   public function setUseDrReconciliation($useDrReconciliation)
   {
@@ -143,7 +167,9 @@ class SapDiscovery extends \Google\Model
     return $this->useDrReconciliation;
   }
   /**
-   * @param SapDiscoveryWorkloadProperties
+   * Optional. The properties of the workload.
+   *
+   * @param SapDiscoveryWorkloadProperties $workloadProperties
    */
   public function setWorkloadProperties(SapDiscoveryWorkloadProperties $workloadProperties)
   {

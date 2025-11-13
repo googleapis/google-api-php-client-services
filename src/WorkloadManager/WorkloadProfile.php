@@ -20,26 +20,47 @@ namespace Google\Service\WorkloadManager;
 class WorkloadProfile extends \Google\Model
 {
   /**
+   * unspecified workload type
+   */
+  public const WORKLOAD_TYPE_WORKLOAD_TYPE_UNSPECIFIED = 'WORKLOAD_TYPE_UNSPECIFIED';
+  /**
+   * running sap workload s4/hana
+   */
+  public const WORKLOAD_TYPE_S4_HANA = 'S4_HANA';
+  /**
+   * Optional. such as name, description, version. More example can be found in
+   * deployment
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. name of resource names have the form
+   * 'projects/{project_id}/locations/{location}/workloadProfiles/{workload_id}'
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. time when the workload data was refreshed
+   *
    * @var string
    */
   public $refreshedTime;
   protected $sapWorkloadType = SapWorkload::class;
   protected $sapWorkloadDataType = '';
   /**
+   * Required. The type of the workload
+   *
    * @var string
    */
   public $workloadType;
 
   /**
-   * @param string[]
+   * Optional. such as name, description, version. More example can be found in
+   * deployment
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -53,7 +74,10 @@ class WorkloadProfile extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. name of resource names have the form
+   * 'projects/{project_id}/locations/{location}/workloadProfiles/{workload_id}'
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -67,7 +91,9 @@ class WorkloadProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. time when the workload data was refreshed
+   *
+   * @param string $refreshedTime
    */
   public function setRefreshedTime($refreshedTime)
   {
@@ -81,7 +107,9 @@ class WorkloadProfile extends \Google\Model
     return $this->refreshedTime;
   }
   /**
-   * @param SapWorkload
+   * The sap workload content
+   *
+   * @param SapWorkload $sapWorkload
    */
   public function setSapWorkload(SapWorkload $sapWorkload)
   {
@@ -95,14 +123,18 @@ class WorkloadProfile extends \Google\Model
     return $this->sapWorkload;
   }
   /**
-   * @param string
+   * Required. The type of the workload
+   *
+   * Accepted values: WORKLOAD_TYPE_UNSPECIFIED, S4_HANA
+   *
+   * @param self::WORKLOAD_TYPE_* $workloadType
    */
   public function setWorkloadType($workloadType)
   {
     $this->workloadType = $workloadType;
   }
   /**
-   * @return string
+   * @return self::WORKLOAD_TYPE_*
    */
   public function getWorkloadType()
   {
