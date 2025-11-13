@@ -20,28 +20,44 @@ namespace Google\Service\Calendar;
 class EventWorkingLocationPropertiesOfficeLocation extends \Google\Model
 {
   /**
+   * An optional building identifier. This should reference a building ID in the
+   * organization's Resources database.
+   *
    * @var string
    */
   public $buildingId;
   /**
+   * An optional desk identifier.
+   *
    * @var string
    */
   public $deskId;
   /**
+   * An optional floor identifier.
+   *
    * @var string
    */
   public $floorId;
   /**
+   * An optional floor section identifier.
+   *
    * @var string
    */
   public $floorSectionId;
   /**
+   * The office name that's displayed in Calendar Web and Mobile clients. We
+   * recommend you reference a building name in the organization's Resources
+   * database.
+   *
    * @var string
    */
   public $label;
 
   /**
-   * @param string
+   * An optional building identifier. This should reference a building ID in the
+   * organization's Resources database.
+   *
+   * @param string $buildingId
    */
   public function setBuildingId($buildingId)
   {
@@ -55,7 +71,9 @@ class EventWorkingLocationPropertiesOfficeLocation extends \Google\Model
     return $this->buildingId;
   }
   /**
-   * @param string
+   * An optional desk identifier.
+   *
+   * @param string $deskId
    */
   public function setDeskId($deskId)
   {
@@ -69,7 +87,9 @@ class EventWorkingLocationPropertiesOfficeLocation extends \Google\Model
     return $this->deskId;
   }
   /**
-   * @param string
+   * An optional floor identifier.
+   *
+   * @param string $floorId
    */
   public function setFloorId($floorId)
   {
@@ -83,7 +103,9 @@ class EventWorkingLocationPropertiesOfficeLocation extends \Google\Model
     return $this->floorId;
   }
   /**
-   * @param string
+   * An optional floor section identifier.
+   *
+   * @param string $floorSectionId
    */
   public function setFloorSectionId($floorSectionId)
   {
@@ -97,7 +119,11 @@ class EventWorkingLocationPropertiesOfficeLocation extends \Google\Model
     return $this->floorSectionId;
   }
   /**
-   * @param string
+   * The office name that's displayed in Calendar Web and Mobile clients. We
+   * recommend you reference a building name in the organization's Resources
+   * database.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {

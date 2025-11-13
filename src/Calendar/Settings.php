@@ -21,26 +21,39 @@ class Settings extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of the collection.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = Setting::class;
   protected $itemsDataType = 'array';
   /**
+   * Type of the collection ("calendar#settings").
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token used to access the next page of this result. Omitted if no further
+   * results are available, in which case nextSyncToken is provided.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Token used at a later point in time to retrieve only the entries that have
+   * changed since this result was returned. Omitted if further results are
+   * available, in which case nextPageToken is provided.
+   *
    * @var string
    */
   public $nextSyncToken;
 
   /**
-   * @param string
+   * Etag of the collection.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -54,7 +67,9 @@ class Settings extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param Setting[]
+   * List of user settings.
+   *
+   * @param Setting[] $items
    */
   public function setItems($items)
   {
@@ -68,7 +83,9 @@ class Settings extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Type of the collection ("calendar#settings").
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -82,7 +99,10 @@ class Settings extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token used to access the next page of this result. Omitted if no further
+   * results are available, in which case nextSyncToken is provided.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -96,7 +116,11 @@ class Settings extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * Token used at a later point in time to retrieve only the entries that have
+   * changed since this result was returned. Omitted if further results are
+   * available, in which case nextPageToken is provided.
+   *
+   * @param string $nextSyncToken
    */
   public function setNextSyncToken($nextSyncToken)
   {

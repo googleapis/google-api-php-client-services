@@ -20,16 +20,25 @@ namespace Google\Service\Calendar;
 class EventExtendedProperties extends \Google\Model
 {
   /**
+   * Properties that are private to the copy of the event that appears on this
+   * calendar.
+   *
    * @var string[]
    */
   public $private;
   /**
+   * Properties that are shared between copies of the event on other attendees'
+   * calendars.
+   *
    * @var string[]
    */
   public $shared;
 
   /**
-   * @param string[]
+   * Properties that are private to the copy of the event that appears on this
+   * calendar.
+   *
+   * @param string[] $private
    */
   public function setPrivate($private)
   {
@@ -43,7 +52,10 @@ class EventExtendedProperties extends \Google\Model
     return $this->private;
   }
   /**
-   * @param string[]
+   * Properties that are shared between copies of the event on other attendees'
+   * calendars.
+   *
+   * @param string[] $shared
    */
   public function setShared($shared)
   {

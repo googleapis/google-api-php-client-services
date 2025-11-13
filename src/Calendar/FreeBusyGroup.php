@@ -21,6 +21,8 @@ class FreeBusyGroup extends \Google\Collection
 {
   protected $collection_key = 'errors';
   /**
+   * List of calendars' identifiers within a group.
+   *
    * @var string[]
    */
   public $calendars;
@@ -28,7 +30,9 @@ class FreeBusyGroup extends \Google\Collection
   protected $errorsDataType = 'array';
 
   /**
-   * @param string[]
+   * List of calendars' identifiers within a group.
+   *
+   * @param string[] $calendars
    */
   public function setCalendars($calendars)
   {
@@ -42,7 +46,9 @@ class FreeBusyGroup extends \Google\Collection
     return $this->calendars;
   }
   /**
-   * @param Error[]
+   * Optional error(s) (if computation for the group failed).
+   *
+   * @param Error[] $errors
    */
   public function setErrors($errors)
   {

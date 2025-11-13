@@ -20,16 +20,28 @@ namespace Google\Service\Calendar;
 class EventReminder extends \Google\Model
 {
   /**
+   * The method used by this reminder. Possible values are: - "email" -
+   * Reminders are sent via email.  - "popup" - Reminders are sent via a UI
+   * popup.   Required when adding a reminder.
+   *
    * @var string
    */
   public $method;
   /**
+   * Number of minutes before the start of the event when the reminder should
+   * trigger. Valid values are between 0 and 40320 (4 weeks in minutes).
+   * Required when adding a reminder.
+   *
    * @var int
    */
   public $minutes;
 
   /**
-   * @param string
+   * The method used by this reminder. Possible values are: - "email" -
+   * Reminders are sent via email.  - "popup" - Reminders are sent via a UI
+   * popup.   Required when adding a reminder.
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -43,7 +55,11 @@ class EventReminder extends \Google\Model
     return $this->method;
   }
   /**
-   * @param int
+   * Number of minutes before the start of the event when the reminder should
+   * trigger. Valid values are between 0 and 40320 (4 weeks in minutes).
+   * Required when adding a reminder.
+   *
+   * @param int $minutes
    */
   public function setMinutes($minutes)
   {

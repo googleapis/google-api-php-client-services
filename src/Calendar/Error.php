@@ -20,16 +20,29 @@ namespace Google\Service\Calendar;
 class Error extends \Google\Model
 {
   /**
+   * Domain, or broad category, of the error.
+   *
    * @var string
    */
   public $domain;
   /**
+   * Specific reason for the error. Some of the possible values are: -
+   * "groupTooBig" - The group of users requested is too large for a single
+   * query.  - "tooManyCalendarsRequested" - The number of calendars requested
+   * is too large for a single query.  - "notFound" - The requested resource was
+   * not found.  - "internalError" - The API service has encountered an internal
+   * error.  Additional error types may be added in the future, so clients
+   * should gracefully handle additional error statuses not included in this
+   * list.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * Domain, or broad category, of the error.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -43,7 +56,16 @@ class Error extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * Specific reason for the error. Some of the possible values are: -
+   * "groupTooBig" - The group of users requested is too large for a single
+   * query.  - "tooManyCalendarsRequested" - The number of calendars requested
+   * is too large for a single query.  - "notFound" - The requested resource was
+   * not found.  - "internalError" - The API service has encountered an internal
+   * error.  Additional error types may be added in the future, so clients
+   * should gracefully handle additional error statuses not included in this
+   * list.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Calendar;
 class FreeBusyRequestItem extends \Google\Model
 {
   /**
+   * The identifier of a calendar or a group.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * The identifier of a calendar or a group.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

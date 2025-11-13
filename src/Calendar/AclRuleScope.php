@@ -20,16 +20,31 @@ namespace Google\Service\Calendar;
 class AclRuleScope extends \Google\Model
 {
   /**
+   * The type of the scope. Possible values are: - "default" - The public scope.
+   * This is the default value.  - "user" - Limits the scope to a single user.
+   * - "group" - Limits the scope to a group.  - "domain" - Limits the scope to
+   * a domain.  Note: The permissions granted to the "default", or public, scope
+   * apply to any user, authenticated or not.
+   *
    * @var string
    */
   public $type;
   /**
+   * The email address of a user or group, or the name of a domain, depending on
+   * the scope type. Omitted for type "default".
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The type of the scope. Possible values are: - "default" - The public scope.
+   * This is the default value.  - "user" - Limits the scope to a single user.
+   * - "group" - Limits the scope to a group.  - "domain" - Limits the scope to
+   * a domain.  Note: The permissions granted to the "default", or public, scope
+   * apply to any user, authenticated or not.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -43,7 +58,10 @@ class AclRuleScope extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The email address of a user or group, or the name of a domain, depending on
+   * the scope type. Omitted for type "default".
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

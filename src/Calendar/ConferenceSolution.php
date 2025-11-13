@@ -20,18 +20,24 @@ namespace Google\Service\Calendar;
 class ConferenceSolution extends \Google\Model
 {
   /**
+   * The user-visible icon for this solution.
+   *
    * @var string
    */
   public $iconUri;
   protected $keyType = ConferenceSolutionKey::class;
   protected $keyDataType = '';
   /**
+   * The user-visible name of this solution. Not localized.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The user-visible icon for this solution.
+   *
+   * @param string $iconUri
    */
   public function setIconUri($iconUri)
   {
@@ -45,7 +51,9 @@ class ConferenceSolution extends \Google\Model
     return $this->iconUri;
   }
   /**
-   * @param ConferenceSolutionKey
+   * The key which can uniquely identify the conference solution for this event.
+   *
+   * @param ConferenceSolutionKey $key
    */
   public function setKey(ConferenceSolutionKey $key)
   {
@@ -59,7 +67,9 @@ class ConferenceSolution extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * The user-visible name of this solution. Not localized.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

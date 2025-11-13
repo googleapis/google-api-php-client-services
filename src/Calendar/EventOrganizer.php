@@ -20,24 +20,36 @@ namespace Google\Service\Calendar;
 class EventOrganizer extends \Google\Model
 {
   /**
+   * The organizer's name, if available.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The organizer's email address, if available. It must be a valid email
+   * address as per RFC5322.
+   *
    * @var string
    */
   public $email;
   /**
+   * The organizer's Profile ID, if available.
+   *
    * @var string
    */
   public $id;
   /**
+   * Whether the organizer corresponds to the calendar on which this copy of the
+   * event appears. Read-only. The default is False.
+   *
    * @var bool
    */
   public $self;
 
   /**
-   * @param string
+   * The organizer's name, if available.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -51,7 +63,10 @@ class EventOrganizer extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The organizer's email address, if available. It must be a valid email
+   * address as per RFC5322.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -65,7 +80,9 @@ class EventOrganizer extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The organizer's Profile ID, if available.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -79,7 +96,10 @@ class EventOrganizer extends \Google\Model
     return $this->id;
   }
   /**
-   * @param bool
+   * Whether the organizer corresponds to the calendar on which this copy of the
+   * event appears. Read-only. The default is False.
+   *
+   * @param bool $self
    */
   public function setSelf($self)
   {

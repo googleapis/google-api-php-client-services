@@ -20,24 +20,35 @@ namespace Google\Service\Calendar;
 class Setting extends \Google\Model
 {
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The id of the user setting.
+   *
    * @var string
    */
   public $id;
   /**
+   * Type of the resource ("calendar#setting").
+   *
    * @var string
    */
   public $kind;
   /**
+   * Value of the user setting. The format of the value depends on the ID of the
+   * setting. It must always be a UTF-8 string of length up to 1024 characters.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -51,7 +62,9 @@ class Setting extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The id of the user setting.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -65,7 +78,9 @@ class Setting extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Type of the resource ("calendar#setting").
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -79,7 +94,10 @@ class Setting extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Value of the user setting. The format of the value depends on the ID of the
+   * setting. It must always be a UTF-8 string of length up to 1024 characters.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

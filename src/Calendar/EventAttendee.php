@@ -20,48 +20,87 @@ namespace Google\Service\Calendar;
 class EventAttendee extends \Google\Model
 {
   /**
+   * Number of additional guests. Optional. The default is 0.
+   *
    * @var int
    */
   public $additionalGuests;
   /**
+   * The attendee's response comment. Optional.
+   *
    * @var string
    */
   public $comment;
   /**
+   * The attendee's name, if available. Optional.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The attendee's email address, if available. This field must be present when
+   * adding an attendee. It must be a valid email address as per RFC5322.
+   * Required when adding an attendee.
+   *
    * @var string
    */
   public $email;
   /**
+   * The attendee's Profile ID, if available.
+   *
    * @var string
    */
   public $id;
   /**
+   * Whether this is an optional attendee. Optional. The default is False.
+   *
    * @var bool
    */
   public $optional;
   /**
+   * Whether the attendee is the organizer of the event. Read-only. The default
+   * is False.
+   *
    * @var bool
    */
   public $organizer;
   /**
+   * Whether the attendee is a resource. Can only be set when the attendee is
+   * added to the event for the first time. Subsequent modifications are
+   * ignored. Optional. The default is False.
+   *
    * @var bool
    */
   public $resource;
   /**
+   * The attendee's response status. Possible values are: - "needsAction" - The
+   * attendee has not responded to the invitation (recommended for new events).
+   * - "declined" - The attendee has declined the invitation.  - "tentative" -
+   * The attendee has tentatively accepted the invitation.  - "accepted" - The
+   * attendee has accepted the invitation.  Warning: If you add an event using
+   * the values declined, tentative, or accepted, attendees with the "Add
+   * invitations to my calendar" setting set to "When I respond to invitation in
+   * email" or "Only if the sender is known" might have their response reset to
+   * needsAction and won't see an event in their calendar unless they change
+   * their response in the event invitation email. Furthermore, if more than 200
+   * guests are invited to the event, response status is not propagated to the
+   * guests.
+   *
    * @var string
    */
   public $responseStatus;
   /**
+   * Whether this entry represents the calendar on which this copy of the event
+   * appears. Read-only. The default is False.
+   *
    * @var bool
    */
   public $self;
 
   /**
-   * @param int
+   * Number of additional guests. Optional. The default is 0.
+   *
+   * @param int $additionalGuests
    */
   public function setAdditionalGuests($additionalGuests)
   {
@@ -75,7 +114,9 @@ class EventAttendee extends \Google\Model
     return $this->additionalGuests;
   }
   /**
-   * @param string
+   * The attendee's response comment. Optional.
+   *
+   * @param string $comment
    */
   public function setComment($comment)
   {
@@ -89,7 +130,9 @@ class EventAttendee extends \Google\Model
     return $this->comment;
   }
   /**
-   * @param string
+   * The attendee's name, if available. Optional.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -103,7 +146,11 @@ class EventAttendee extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The attendee's email address, if available. This field must be present when
+   * adding an attendee. It must be a valid email address as per RFC5322.
+   * Required when adding an attendee.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -117,7 +164,9 @@ class EventAttendee extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The attendee's Profile ID, if available.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -131,7 +180,9 @@ class EventAttendee extends \Google\Model
     return $this->id;
   }
   /**
-   * @param bool
+   * Whether this is an optional attendee. Optional. The default is False.
+   *
+   * @param bool $optional
    */
   public function setOptional($optional)
   {
@@ -145,7 +196,10 @@ class EventAttendee extends \Google\Model
     return $this->optional;
   }
   /**
-   * @param bool
+   * Whether the attendee is the organizer of the event. Read-only. The default
+   * is False.
+   *
+   * @param bool $organizer
    */
   public function setOrganizer($organizer)
   {
@@ -159,7 +213,11 @@ class EventAttendee extends \Google\Model
     return $this->organizer;
   }
   /**
-   * @param bool
+   * Whether the attendee is a resource. Can only be set when the attendee is
+   * added to the event for the first time. Subsequent modifications are
+   * ignored. Optional. The default is False.
+   *
+   * @param bool $resource
    */
   public function setResource($resource)
   {
@@ -173,7 +231,20 @@ class EventAttendee extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * The attendee's response status. Possible values are: - "needsAction" - The
+   * attendee has not responded to the invitation (recommended for new events).
+   * - "declined" - The attendee has declined the invitation.  - "tentative" -
+   * The attendee has tentatively accepted the invitation.  - "accepted" - The
+   * attendee has accepted the invitation.  Warning: If you add an event using
+   * the values declined, tentative, or accepted, attendees with the "Add
+   * invitations to my calendar" setting set to "When I respond to invitation in
+   * email" or "Only if the sender is known" might have their response reset to
+   * needsAction and won't see an event in their calendar unless they change
+   * their response in the event invitation email. Furthermore, if more than 200
+   * guests are invited to the event, response status is not propagated to the
+   * guests.
+   *
+   * @param string $responseStatus
    */
   public function setResponseStatus($responseStatus)
   {
@@ -187,7 +258,10 @@ class EventAttendee extends \Google\Model
     return $this->responseStatus;
   }
   /**
-   * @param bool
+   * Whether this entry represents the calendar on which this copy of the event
+   * appears. Read-only. The default is False.
+   *
+   * @param bool $self
    */
   public function setSelf($self)
   {

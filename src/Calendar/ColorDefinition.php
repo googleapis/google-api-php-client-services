@@ -20,16 +20,23 @@ namespace Google\Service\Calendar;
 class ColorDefinition extends \Google\Model
 {
   /**
+   * The background color associated with this color definition.
+   *
    * @var string
    */
   public $background;
   /**
+   * The foreground color that can be used to write on top of a background with
+   * 'background' color.
+   *
    * @var string
    */
   public $foreground;
 
   /**
-   * @param string
+   * The background color associated with this color definition.
+   *
+   * @param string $background
    */
   public function setBackground($background)
   {
@@ -43,7 +50,10 @@ class ColorDefinition extends \Google\Model
     return $this->background;
   }
   /**
-   * @param string
+   * The foreground color that can be used to write on top of a background with
+   * 'background' color.
+   *
+   * @param string $foreground
    */
   public function setForeground($foreground)
   {

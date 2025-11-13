@@ -20,24 +20,35 @@ namespace Google\Service\Calendar;
 class EventCreator extends \Google\Model
 {
   /**
+   * The creator's name, if available.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The creator's email address, if available.
+   *
    * @var string
    */
   public $email;
   /**
+   * The creator's Profile ID, if available.
+   *
    * @var string
    */
   public $id;
   /**
+   * Whether the creator corresponds to the calendar on which this copy of the
+   * event appears. Read-only. The default is False.
+   *
    * @var bool
    */
   public $self;
 
   /**
-   * @param string
+   * The creator's name, if available.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -51,7 +62,9 @@ class EventCreator extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The creator's email address, if available.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -65,7 +78,9 @@ class EventCreator extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The creator's Profile ID, if available.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -79,7 +94,10 @@ class EventCreator extends \Google\Model
     return $this->id;
   }
   /**
-   * @param bool
+   * Whether the creator corresponds to the calendar on which this copy of the
+   * event appears. Read-only. The default is False.
+   *
+   * @param bool $self
    */
   public function setSelf($self)
   {

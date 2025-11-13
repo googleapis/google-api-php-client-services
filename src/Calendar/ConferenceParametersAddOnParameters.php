@@ -25,7 +25,7 @@ class ConferenceParametersAddOnParameters extends \Google\Model
   public $parameters;
 
   /**
-   * @param string[]
+   * @param string[] $parameters
    */
   public function setParameters($parameters)
   {
