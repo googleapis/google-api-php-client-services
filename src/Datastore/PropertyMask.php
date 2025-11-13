@@ -21,12 +21,26 @@ class PropertyMask extends \Google\Collection
 {
   protected $collection_key = 'paths';
   /**
+   * The paths to the properties covered by this mask. A path is a list of
+   * property names separated by dots (`.`), for example `foo.bar` means the
+   * property `bar` inside the entity property `foo` inside the entity
+   * associated with this path. If a property name contains a dot `.` or a
+   * backslash `\`, then that name must be escaped. A path must not be empty,
+   * and may not reference a value inside an array value.
+   *
    * @var string[]
    */
   public $paths;
 
   /**
-   * @param string[]
+   * The paths to the properties covered by this mask. A path is a list of
+   * property names separated by dots (`.`), for example `foo.bar` means the
+   * property `bar` inside the entity property `foo` inside the entity
+   * associated with this path. If a property name contains a dot `.` or a
+   * backslash `\`, then that name must be escaped. A path must not be empty,
+   * and may not reference a value inside an array value.
+   *
+   * @param string[] $paths
    */
   public function setPaths($paths)
   {

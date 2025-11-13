@@ -24,6 +24,12 @@ class GoogleDatastoreAdminV1beta1ExportEntitiesMetadata extends \Google\Model
   protected $entityFilterType = GoogleDatastoreAdminV1beta1EntityFilter::class;
   protected $entityFilterDataType = '';
   /**
+   * Location for the export metadata and data files. This will be the same
+   * value as the
+   * google.datastore.admin.v1beta1.ExportEntitiesRequest.output_url_prefix
+   * field. The final output location is provided in
+   * google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url.
+   *
    * @var string
    */
   public $outputUrlPrefix;
@@ -33,7 +39,9 @@ class GoogleDatastoreAdminV1beta1ExportEntitiesMetadata extends \Google\Model
   protected $progressEntitiesDataType = '';
 
   /**
-   * @param GoogleDatastoreAdminV1beta1CommonMetadata
+   * Metadata common to all Datastore Admin operations.
+   *
+   * @param GoogleDatastoreAdminV1beta1CommonMetadata $common
    */
   public function setCommon(GoogleDatastoreAdminV1beta1CommonMetadata $common)
   {
@@ -47,7 +55,9 @@ class GoogleDatastoreAdminV1beta1ExportEntitiesMetadata extends \Google\Model
     return $this->common;
   }
   /**
-   * @param GoogleDatastoreAdminV1beta1EntityFilter
+   * Description of which entities are being exported.
+   *
+   * @param GoogleDatastoreAdminV1beta1EntityFilter $entityFilter
    */
   public function setEntityFilter(GoogleDatastoreAdminV1beta1EntityFilter $entityFilter)
   {
@@ -61,7 +71,13 @@ class GoogleDatastoreAdminV1beta1ExportEntitiesMetadata extends \Google\Model
     return $this->entityFilter;
   }
   /**
-   * @param string
+   * Location for the export metadata and data files. This will be the same
+   * value as the
+   * google.datastore.admin.v1beta1.ExportEntitiesRequest.output_url_prefix
+   * field. The final output location is provided in
+   * google.datastore.admin.v1beta1.ExportEntitiesResponse.output_url.
+   *
+   * @param string $outputUrlPrefix
    */
   public function setOutputUrlPrefix($outputUrlPrefix)
   {
@@ -75,7 +91,9 @@ class GoogleDatastoreAdminV1beta1ExportEntitiesMetadata extends \Google\Model
     return $this->outputUrlPrefix;
   }
   /**
-   * @param GoogleDatastoreAdminV1beta1Progress
+   * An estimate of the number of bytes processed.
+   *
+   * @param GoogleDatastoreAdminV1beta1Progress $progressBytes
    */
   public function setProgressBytes(GoogleDatastoreAdminV1beta1Progress $progressBytes)
   {
@@ -89,7 +107,9 @@ class GoogleDatastoreAdminV1beta1ExportEntitiesMetadata extends \Google\Model
     return $this->progressBytes;
   }
   /**
-   * @param GoogleDatastoreAdminV1beta1Progress
+   * An estimate of the number of entities processed.
+   *
+   * @param GoogleDatastoreAdminV1beta1Progress $progressEntities
    */
   public function setProgressEntities(GoogleDatastoreAdminV1beta1Progress $progressEntities)
   {

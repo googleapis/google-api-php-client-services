@@ -23,7 +23,9 @@ class Avg extends \Google\Model
   protected $propertyDataType = '';
 
   /**
-   * @param PropertyReference
+   * The property to aggregate on.
+   *
+   * @param PropertyReference $property
    */
   public function setProperty(PropertyReference $property)
   {

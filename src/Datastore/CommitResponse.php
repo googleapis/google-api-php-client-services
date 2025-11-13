@@ -21,10 +21,15 @@ class CommitResponse extends \Google\Collection
 {
   protected $collection_key = 'mutationResults';
   /**
+   * The transaction commit timestamp. Not set for non-transactional commits.
+   *
    * @var string
    */
   public $commitTime;
   /**
+   * The number of index entries updated during the commit, or zero if none were
+   * updated.
+   *
    * @var int
    */
   public $indexUpdates;
@@ -32,7 +37,9 @@ class CommitResponse extends \Google\Collection
   protected $mutationResultsDataType = 'array';
 
   /**
-   * @param string
+   * The transaction commit timestamp. Not set for non-transactional commits.
+   *
+   * @param string $commitTime
    */
   public function setCommitTime($commitTime)
   {
@@ -46,7 +53,10 @@ class CommitResponse extends \Google\Collection
     return $this->commitTime;
   }
   /**
-   * @param int
+   * The number of index entries updated during the commit, or zero if none were
+   * updated.
+   *
+   * @param int $indexUpdates
    */
   public function setIndexUpdates($indexUpdates)
   {
@@ -60,7 +70,10 @@ class CommitResponse extends \Google\Collection
     return $this->indexUpdates;
   }
   /**
-   * @param MutationResult[]
+   * The result of performing the mutations. The i-th mutation result
+   * corresponds to the i-th mutation in the request.
+   *
+   * @param MutationResult[] $mutationResults
    */
   public function setMutationResults($mutationResults)
   {

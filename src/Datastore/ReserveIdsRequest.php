@@ -21,6 +21,9 @@ class ReserveIdsRequest extends \Google\Collection
 {
   protected $collection_key = 'keys';
   /**
+   * The ID of the database against which to make the request. '(default)' is
+   * not allowed; please use empty string '' to refer the default database.
+   *
    * @var string
    */
   public $databaseId;
@@ -28,7 +31,10 @@ class ReserveIdsRequest extends \Google\Collection
   protected $keysDataType = 'array';
 
   /**
-   * @param string
+   * The ID of the database against which to make the request. '(default)' is
+   * not allowed; please use empty string '' to refer the default database.
+   *
+   * @param string $databaseId
    */
   public function setDatabaseId($databaseId)
   {
@@ -42,7 +48,10 @@ class ReserveIdsRequest extends \Google\Collection
     return $this->databaseId;
   }
   /**
-   * @param Key[]
+   * Required. A list of keys with complete key paths whose numeric IDs should
+   * not be auto-allocated.
+   *
+   * @param Key[] $keys
    */
   public function setKeys($keys)
   {

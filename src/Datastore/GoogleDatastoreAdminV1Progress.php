@@ -20,16 +20,25 @@ namespace Google\Service\Datastore;
 class GoogleDatastoreAdminV1Progress extends \Google\Model
 {
   /**
+   * The amount of work that has been completed. Note that this may be greater
+   * than work_estimated.
+   *
    * @var string
    */
   public $workCompleted;
   /**
+   * An estimate of how much work needs to be performed. May be zero if the work
+   * estimate is unavailable.
+   *
    * @var string
    */
   public $workEstimated;
 
   /**
-   * @param string
+   * The amount of work that has been completed. Note that this may be greater
+   * than work_estimated.
+   *
+   * @param string $workCompleted
    */
   public function setWorkCompleted($workCompleted)
   {
@@ -43,7 +52,10 @@ class GoogleDatastoreAdminV1Progress extends \Google\Model
     return $this->workCompleted;
   }
   /**
-   * @param string
+   * An estimate of how much work needs to be performed. May be zero if the work
+   * estimate is unavailable.
+   *
+   * @param string $workEstimated
    */
   public function setWorkEstimated($workEstimated)
   {

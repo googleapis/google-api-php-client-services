@@ -20,12 +20,22 @@ namespace Google\Service\Datastore;
 class ExplainOptions extends \Google\Model
 {
   /**
+   * Optional. Whether to execute this query. When false (the default), the
+   * query will be planned, returning only metrics from the planning stages.
+   * When true, the query will be planned and executed, returning the full query
+   * results along with both planning and execution stage metrics.
+   *
    * @var bool
    */
   public $analyze;
 
   /**
-   * @param bool
+   * Optional. Whether to execute this query. When false (the default), the
+   * query will be planned, returning only metrics from the planning stages.
+   * When true, the query will be planned and executed, returning the full query
+   * results along with both planning and execution stage metrics.
+   *
+   * @param bool $analyze
    */
   public function setAnalyze($analyze)
   {

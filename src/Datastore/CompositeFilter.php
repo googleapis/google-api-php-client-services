@@ -19,16 +19,32 @@ namespace Google\Service\Datastore;
 
 class CompositeFilter extends \Google\Collection
 {
+  /**
+   * Unspecified. This value must not be used.
+   */
+  public const OP_OPERATOR_UNSPECIFIED = 'OPERATOR_UNSPECIFIED';
+  /**
+   * The results are required to satisfy each of the combined filters.
+   */
+  public const OP_AND = 'AND';
+  /**
+   * Documents are required to satisfy at least one of the combined filters.
+   */
+  public const OP_OR = 'OR';
   protected $collection_key = 'filters';
   protected $filtersType = Filter::class;
   protected $filtersDataType = 'array';
   /**
+   * The operator for combining multiple filters.
+   *
    * @var string
    */
   public $op;
 
   /**
-   * @param Filter[]
+   * The list of filters to combine. Requires: * At least one filter is present.
+   *
+   * @param Filter[] $filters
    */
   public function setFilters($filters)
   {
@@ -42,14 +58,18 @@ class CompositeFilter extends \Google\Collection
     return $this->filters;
   }
   /**
-   * @param string
+   * The operator for combining multiple filters.
+   *
+   * Accepted values: OPERATOR_UNSPECIFIED, AND, OR
+   *
+   * @param self::OP_* $op
    */
   public function setOp($op)
   {
     $this->op = $op;
   }
   /**
-   * @return string
+   * @return self::OP_*
    */
   public function getOp()
   {

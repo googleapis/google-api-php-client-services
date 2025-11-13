@@ -23,7 +23,11 @@ class AggregationResult extends \Google\Model
   protected $aggregatePropertiesDataType = 'map';
 
   /**
-   * @param Value[]
+   * The result of the aggregation functions, ex: `COUNT(*) AS total_entities`.
+   * The key is the alias assigned to the aggregation function on input and the
+   * size of this map equals the number of aggregation functions in the query.
+   *
+   * @param Value[] $aggregateProperties
    */
   public function setAggregateProperties($aggregateProperties)
   {

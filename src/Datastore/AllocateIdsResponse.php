@@ -24,7 +24,10 @@ class AllocateIdsResponse extends \Google\Collection
   protected $keysDataType = 'array';
 
   /**
-   * @param Key[]
+   * The keys specified in the request (in the same order), each with its key
+   * path completed with a newly allocated ID.
+   *
+   * @param Key[] $keys
    */
   public function setKeys($keys)
   {

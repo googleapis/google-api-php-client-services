@@ -23,12 +23,16 @@ class GoogleDatastoreAdminV1ListIndexesResponse extends \Google\Collection
   protected $indexesType = GoogleDatastoreAdminV1Index::class;
   protected $indexesDataType = 'array';
   /**
+   * The standard List next-page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleDatastoreAdminV1Index[]
+   * The indexes.
+   *
+   * @param GoogleDatastoreAdminV1Index[] $indexes
    */
   public function setIndexes($indexes)
   {
@@ -42,7 +46,9 @@ class GoogleDatastoreAdminV1ListIndexesResponse extends \Google\Collection
     return $this->indexes;
   }
   /**
-   * @param string
+   * The standard List next-page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

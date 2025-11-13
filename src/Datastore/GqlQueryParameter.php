@@ -20,6 +20,8 @@ namespace Google\Service\Datastore;
 class GqlQueryParameter extends \Google\Model
 {
   /**
+   * A query cursor. Query cursors are returned in query result batches.
+   *
    * @var string
    */
   public $cursor;
@@ -27,7 +29,9 @@ class GqlQueryParameter extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param string
+   * A query cursor. Query cursors are returned in query result batches.
+   *
+   * @param string $cursor
    */
   public function setCursor($cursor)
   {
@@ -41,7 +45,9 @@ class GqlQueryParameter extends \Google\Model
     return $this->cursor;
   }
   /**
-   * @param Value
+   * A value parameter.
+   *
+   * @param Value $value
    */
   public function setValue(Value $value)
   {

@@ -25,7 +25,9 @@ class TransactionOptions extends \Google\Model
   protected $readWriteDataType = '';
 
   /**
-   * @param DatastoreReadOnly
+   * The transaction should only allow reads.
+   *
+   * @param DatastoreReadOnly $readOnly
    */
   public function setReadOnly(DatastoreReadOnly $readOnly)
   {
@@ -39,7 +41,9 @@ class TransactionOptions extends \Google\Model
     return $this->readOnly;
   }
   /**
-   * @param ReadWrite
+   * The transaction should allow both reads and writes.
+   *
+   * @param ReadWrite $readWrite
    */
   public function setReadWrite(ReadWrite $readWrite)
   {

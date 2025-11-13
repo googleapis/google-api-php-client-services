@@ -20,12 +20,22 @@ namespace Google\Service\Datastore;
 class DatastoreReadOnly extends \Google\Model
 {
   /**
+   * Reads entities at the given time. This must be a microsecond precision
+   * timestamp within the past one hour, or if Point-in-Time Recovery is
+   * enabled, can additionally be a whole minute timestamp within the past 7
+   * days.
+   *
    * @var string
    */
   public $readTime;
 
   /**
-   * @param string
+   * Reads entities at the given time. This must be a microsecond precision
+   * timestamp within the past one hour, or if Point-in-Time Recovery is
+   * enabled, can additionally be a whole minute timestamp within the past 7
+   * days.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {

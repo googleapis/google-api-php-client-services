@@ -19,12 +19,31 @@ namespace Google\Service\Datastore;
 
 class Mutation extends \Google\Collection
 {
+  /**
+   * Unspecified. Defaults to `SERVER_VALUE`.
+   */
+  public const CONFLICT_RESOLUTION_STRATEGY_STRATEGY_UNSPECIFIED = 'STRATEGY_UNSPECIFIED';
+  /**
+   * The server entity is kept.
+   */
+  public const CONFLICT_RESOLUTION_STRATEGY_SERVER_VALUE = 'SERVER_VALUE';
+  /**
+   * The whole commit request fails.
+   */
+  public const CONFLICT_RESOLUTION_STRATEGY_FAIL = 'FAIL';
   protected $collection_key = 'propertyTransforms';
   /**
+   * The version of the entity that this mutation is being applied to. If this
+   * does not match the current version on the server, the mutation conflicts.
+   *
    * @var string
    */
   public $baseVersion;
   /**
+   * The strategy to use when a conflict is detected. Defaults to
+   * `SERVER_VALUE`. If this is set, then `conflict_detection_strategy` must
+   * also be set.
+   *
    * @var string
    */
   public $conflictResolutionStrategy;
@@ -39,6 +58,10 @@ class Mutation extends \Google\Collection
   protected $updateType = Entity::class;
   protected $updateDataType = '';
   /**
+   * The update time of the entity that this mutation is being applied to. If
+   * this does not match the current update time on the server, the mutation
+   * conflicts.
+   *
    * @var string
    */
   public $updateTime;
@@ -46,7 +69,10 @@ class Mutation extends \Google\Collection
   protected $upsertDataType = '';
 
   /**
-   * @param string
+   * The version of the entity that this mutation is being applied to. If this
+   * does not match the current version on the server, the mutation conflicts.
+   *
+   * @param string $baseVersion
    */
   public function setBaseVersion($baseVersion)
   {
@@ -60,21 +86,30 @@ class Mutation extends \Google\Collection
     return $this->baseVersion;
   }
   /**
-   * @param string
+   * The strategy to use when a conflict is detected. Defaults to
+   * `SERVER_VALUE`. If this is set, then `conflict_detection_strategy` must
+   * also be set.
+   *
+   * Accepted values: STRATEGY_UNSPECIFIED, SERVER_VALUE, FAIL
+   *
+   * @param self::CONFLICT_RESOLUTION_STRATEGY_* $conflictResolutionStrategy
    */
   public function setConflictResolutionStrategy($conflictResolutionStrategy)
   {
     $this->conflictResolutionStrategy = $conflictResolutionStrategy;
   }
   /**
-   * @return string
+   * @return self::CONFLICT_RESOLUTION_STRATEGY_*
    */
   public function getConflictResolutionStrategy()
   {
     return $this->conflictResolutionStrategy;
   }
   /**
-   * @param Key
+   * The key of the entity to delete. The entity may or may not already exist.
+   * Must have a complete key path and must not be reserved/read-only.
+   *
+   * @param Key $delete
    */
   public function setDelete(Key $delete)
   {
@@ -88,7 +123,10 @@ class Mutation extends \Google\Collection
     return $this->delete;
   }
   /**
-   * @param Entity
+   * The entity to insert. The entity must not already exist. The entity key's
+   * final path element may be incomplete.
+   *
+   * @param Entity $insert
    */
   public function setInsert(Entity $insert)
   {
@@ -102,7 +140,13 @@ class Mutation extends \Google\Collection
     return $this->insert;
   }
   /**
-   * @param PropertyMask
+   * The properties to write in this mutation. None of the properties in the
+   * mask may have a reserved name, except for `__key__`. This field is ignored
+   * for `delete`. If the entity already exists, only properties referenced in
+   * the mask are updated, others are left untouched. Properties referenced in
+   * the mask but not in the entity are deleted.
+   *
+   * @param PropertyMask $propertyMask
    */
   public function setPropertyMask(PropertyMask $propertyMask)
   {
@@ -116,7 +160,12 @@ class Mutation extends \Google\Collection
     return $this->propertyMask;
   }
   /**
-   * @param PropertyTransform[]
+   * Optional. The transforms to perform on the entity. This field can be set
+   * only when the operation is `insert`, `update`, or `upsert`. If present, the
+   * transforms are be applied to the entity regardless of the property mask, in
+   * order, after the operation.
+   *
+   * @param PropertyTransform[] $propertyTransforms
    */
   public function setPropertyTransforms($propertyTransforms)
   {
@@ -130,7 +179,10 @@ class Mutation extends \Google\Collection
     return $this->propertyTransforms;
   }
   /**
-   * @param Entity
+   * The entity to update. The entity must already exist. Must have a complete
+   * key path.
+   *
+   * @param Entity $update
    */
   public function setUpdate(Entity $update)
   {
@@ -144,7 +196,11 @@ class Mutation extends \Google\Collection
     return $this->update;
   }
   /**
-   * @param string
+   * The update time of the entity that this mutation is being applied to. If
+   * this does not match the current update time on the server, the mutation
+   * conflicts.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -158,7 +214,10 @@ class Mutation extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param Entity
+   * The entity to upsert. The entity may or may not already exist. The entity
+   * key's final path element may be incomplete.
+   *
+   * @param Entity $upsert
    */
   public function setUpsert(Entity $upsert)
   {

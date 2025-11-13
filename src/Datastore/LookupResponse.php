@@ -27,16 +27,26 @@ class LookupResponse extends \Google\Collection
   protected $missingType = EntityResult::class;
   protected $missingDataType = 'array';
   /**
+   * The time at which these entities were read or found missing.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * The identifier of the transaction that was started as part of this Lookup
+   * request. Set only when ReadOptions.new_transaction was set in
+   * LookupRequest.read_options.
+   *
    * @var string
    */
   public $transaction;
 
   /**
-   * @param Key[]
+   * A list of keys that were not looked up due to resource constraints. The
+   * order of results in this field is undefined and has no relation to the
+   * order of the keys in the input.
+   *
+   * @param Key[] $deferred
    */
   public function setDeferred($deferred)
   {
@@ -50,7 +60,11 @@ class LookupResponse extends \Google\Collection
     return $this->deferred;
   }
   /**
-   * @param EntityResult[]
+   * Entities found as `ResultType.FULL` entities. The order of results in this
+   * field is undefined and has no relation to the order of the keys in the
+   * input.
+   *
+   * @param EntityResult[] $found
    */
   public function setFound($found)
   {
@@ -64,7 +78,11 @@ class LookupResponse extends \Google\Collection
     return $this->found;
   }
   /**
-   * @param EntityResult[]
+   * Entities not found as `ResultType.KEY_ONLY` entities. The order of results
+   * in this field is undefined and has no relation to the order of the keys in
+   * the input.
+   *
+   * @param EntityResult[] $missing
    */
   public function setMissing($missing)
   {
@@ -78,7 +96,9 @@ class LookupResponse extends \Google\Collection
     return $this->missing;
   }
   /**
-   * @param string
+   * The time at which these entities were read or found missing.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -92,7 +112,11 @@ class LookupResponse extends \Google\Collection
     return $this->readTime;
   }
   /**
-   * @param string
+   * The identifier of the transaction that was started as part of this Lookup
+   * request. Set only when ReadOptions.new_transaction was set in
+   * LookupRequest.read_options.
+   *
+   * @param string $transaction
    */
   public function setTransaction($transaction)
   {

@@ -23,7 +23,9 @@ class Projection extends \Google\Model
   protected $propertyDataType = '';
 
   /**
-   * @param PropertyReference
+   * The property to project.
+   *
+   * @param PropertyReference $property
    */
   public function setProperty(PropertyReference $property)
   {

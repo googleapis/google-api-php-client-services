@@ -21,16 +21,26 @@ class GoogleDatastoreAdminV1EntityFilter extends \Google\Collection
 {
   protected $collection_key = 'namespaceIds';
   /**
+   * If empty, then this represents all kinds.
+   *
    * @var string[]
    */
   public $kinds;
   /**
+   * An empty list represents all namespaces. This is the preferred usage for
+   * projects that don't use namespaces. An empty string element represents the
+   * default namespace. This should be used if the project has data in non-
+   * default namespaces, but doesn't want to include them. Each namespace in
+   * this list must be unique.
+   *
    * @var string[]
    */
   public $namespaceIds;
 
   /**
-   * @param string[]
+   * If empty, then this represents all kinds.
+   *
+   * @param string[] $kinds
    */
   public function setKinds($kinds)
   {
@@ -44,7 +54,13 @@ class GoogleDatastoreAdminV1EntityFilter extends \Google\Collection
     return $this->kinds;
   }
   /**
-   * @param string[]
+   * An empty list represents all namespaces. This is the preferred usage for
+   * projects that don't use namespaces. An empty string element represents the
+   * default namespace. This should be used if the project has data in non-
+   * default namespaces, but doesn't want to include them. Each namespace in
+   * this list must be unique.
+   *
+   * @param string[] $namespaceIds
    */
   public function setNamespaceIds($namespaceIds)
   {

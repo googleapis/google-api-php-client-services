@@ -20,20 +20,37 @@ namespace Google\Service\Datastore;
 class PathElement extends \Google\Model
 {
   /**
+   * The auto-allocated ID of the entity. Never equal to zero. Values less than
+   * zero are discouraged and may not be supported in the future.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of the entity. A kind matching regex `__.*__` is reserved/read-
+   * only. A kind must not contain more than 1500 bytes when UTF-8 encoded.
+   * Cannot be `""`. Must be valid UTF-8 bytes. Legacy values that are not valid
+   * UTF-8 are encoded as `__bytes__` where `` is the base-64 encoding of the
+   * bytes.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The name of the entity. A name matching regex `__.*__` is reserved/read-
+   * only. A name must not be more than 1500 bytes when UTF-8 encoded. Cannot be
+   * `""`. Must be valid UTF-8 bytes. Legacy values that are not valid UTF-8 are
+   * encoded as `__bytes__` where `` is the base-64 encoding of the bytes.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The auto-allocated ID of the entity. Never equal to zero. Values less than
+   * zero are discouraged and may not be supported in the future.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +64,13 @@ class PathElement extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of the entity. A kind matching regex `__.*__` is reserved/read-
+   * only. A kind must not contain more than 1500 bytes when UTF-8 encoded.
+   * Cannot be `""`. Must be valid UTF-8 bytes. Legacy values that are not valid
+   * UTF-8 are encoded as `__bytes__` where `` is the base-64 encoding of the
+   * bytes.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +84,12 @@ class PathElement extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The name of the entity. A name matching regex `__.*__` is reserved/read-
+   * only. A name must not be more than 1500 bytes when UTF-8 encoded. Cannot be
+   * `""`. Must be valid UTF-8 bytes. Legacy values that are not valid UTF-8 are
+   * encoded as `__bytes__` where `` is the base-64 encoding of the bytes.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

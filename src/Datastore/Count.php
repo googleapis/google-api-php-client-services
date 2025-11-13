@@ -20,12 +20,26 @@ namespace Google\Service\Datastore;
 class Count extends \Google\Model
 {
   /**
+   * Optional. Optional constraint on the maximum number of entities to count.
+   * This provides a way to set an upper bound on the number of entities to
+   * scan, limiting latency, and cost. Unspecified is interpreted as no bound.
+   * If a zero value is provided, a count result of zero should always be
+   * expected. High-Level Example: ``` AGGREGATE COUNT_UP_TO(1000) OVER ( SELECT
+   * * FROM k ); ``` Requires: * Must be non-negative when present.
+   *
    * @var string
    */
   public $upTo;
 
   /**
-   * @param string
+   * Optional. Optional constraint on the maximum number of entities to count.
+   * This provides a way to set an upper bound on the number of entities to
+   * scan, limiting latency, and cost. Unspecified is interpreted as no bound.
+   * If a zero value is provided, a count result of zero should always be
+   * expected. High-Level Example: ``` AGGREGATE COUNT_UP_TO(1000) OVER ( SELECT
+   * * FROM k ); ``` Requires: * Must be non-negative when present.
+   *
+   * @param string $upTo
    */
   public function setUpTo($upTo)
   {

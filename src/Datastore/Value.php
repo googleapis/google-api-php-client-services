@@ -19,50 +19,85 @@ namespace Google\Service\Datastore;
 
 class Value extends \Google\Model
 {
+  /**
+   * Null value.
+   */
+  public const NULL_VALUE_NULL_VALUE = 'NULL_VALUE';
   protected $arrayValueType = ArrayValue::class;
   protected $arrayValueDataType = '';
   /**
+   * A blob value. May have at most 1,000,000 bytes. When `exclude_from_indexes`
+   * is false, may have at most 1500 bytes. In JSON requests, must be
+   * base64-encoded.
+   *
    * @var string
    */
   public $blobValue;
   /**
+   * A boolean value.
+   *
    * @var bool
    */
   public $booleanValue;
+  /**
+   * A double value.
+   *
+   * @var 
+   */
   public $doubleValue;
   protected $entityValueType = Entity::class;
   protected $entityValueDataType = '';
   /**
+   * If the value should be excluded from all indexes including those defined
+   * explicitly.
+   *
    * @var bool
    */
   public $excludeFromIndexes;
   protected $geoPointValueType = LatLng::class;
   protected $geoPointValueDataType = '';
   /**
+   * An integer value.
+   *
    * @var string
    */
   public $integerValue;
   protected $keyValueType = Key::class;
   protected $keyValueDataType = '';
   /**
+   * The `meaning` field should only be populated for backwards compatibility.
+   *
    * @var int
    */
   public $meaning;
   /**
+   * A null value.
+   *
    * @var string
    */
   public $nullValue;
   /**
+   * A UTF-8 encoded string value. When `exclude_from_indexes` is false (it is
+   * indexed) , may have at most 1500 bytes. Otherwise, may be set to at most
+   * 1,000,000 bytes.
+   *
    * @var string
    */
   public $stringValue;
   /**
+   * A timestamp value. When stored in the Datastore, precise only to
+   * microseconds; any additional precision is rounded down.
+   *
    * @var string
    */
   public $timestampValue;
 
   /**
-   * @param ArrayValue
+   * An array value. Cannot contain another array value. A `Value` instance that
+   * sets field `array_value` must not set fields `meaning` or
+   * `exclude_from_indexes`.
+   *
+   * @param ArrayValue $arrayValue
    */
   public function setArrayValue(ArrayValue $arrayValue)
   {
@@ -76,7 +111,11 @@ class Value extends \Google\Model
     return $this->arrayValue;
   }
   /**
-   * @param string
+   * A blob value. May have at most 1,000,000 bytes. When `exclude_from_indexes`
+   * is false, may have at most 1500 bytes. In JSON requests, must be
+   * base64-encoded.
+   *
+   * @param string $blobValue
    */
   public function setBlobValue($blobValue)
   {
@@ -90,7 +129,9 @@ class Value extends \Google\Model
     return $this->blobValue;
   }
   /**
-   * @param bool
+   * A boolean value.
+   *
+   * @param bool $booleanValue
    */
   public function setBooleanValue($booleanValue)
   {
@@ -112,7 +153,10 @@ class Value extends \Google\Model
     return $this->doubleValue;
   }
   /**
-   * @param Entity
+   * An entity value. - May have no key. - May have a key with an incomplete key
+   * path. - May have a reserved/read-only key.
+   *
+   * @param Entity $entityValue
    */
   public function setEntityValue(Entity $entityValue)
   {
@@ -126,7 +170,10 @@ class Value extends \Google\Model
     return $this->entityValue;
   }
   /**
-   * @param bool
+   * If the value should be excluded from all indexes including those defined
+   * explicitly.
+   *
+   * @param bool $excludeFromIndexes
    */
   public function setExcludeFromIndexes($excludeFromIndexes)
   {
@@ -140,7 +187,9 @@ class Value extends \Google\Model
     return $this->excludeFromIndexes;
   }
   /**
-   * @param LatLng
+   * A geo point value representing a point on the surface of Earth.
+   *
+   * @param LatLng $geoPointValue
    */
   public function setGeoPointValue(LatLng $geoPointValue)
   {
@@ -154,7 +203,9 @@ class Value extends \Google\Model
     return $this->geoPointValue;
   }
   /**
-   * @param string
+   * An integer value.
+   *
+   * @param string $integerValue
    */
   public function setIntegerValue($integerValue)
   {
@@ -168,7 +219,9 @@ class Value extends \Google\Model
     return $this->integerValue;
   }
   /**
-   * @param Key
+   * A key value.
+   *
+   * @param Key $keyValue
    */
   public function setKeyValue(Key $keyValue)
   {
@@ -182,7 +235,9 @@ class Value extends \Google\Model
     return $this->keyValue;
   }
   /**
-   * @param int
+   * The `meaning` field should only be populated for backwards compatibility.
+   *
+   * @param int $meaning
    */
   public function setMeaning($meaning)
   {
@@ -196,21 +251,29 @@ class Value extends \Google\Model
     return $this->meaning;
   }
   /**
-   * @param string
+   * A null value.
+   *
+   * Accepted values: NULL_VALUE
+   *
+   * @param self::NULL_VALUE_* $nullValue
    */
   public function setNullValue($nullValue)
   {
     $this->nullValue = $nullValue;
   }
   /**
-   * @return string
+   * @return self::NULL_VALUE_*
    */
   public function getNullValue()
   {
     return $this->nullValue;
   }
   /**
-   * @param string
+   * A UTF-8 encoded string value. When `exclude_from_indexes` is false (it is
+   * indexed) , may have at most 1500 bytes. Otherwise, may be set to at most
+   * 1,000,000 bytes.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {
@@ -224,7 +287,10 @@ class Value extends \Google\Model
     return $this->stringValue;
   }
   /**
-   * @param string
+   * A timestamp value. When stored in the Datastore, precise only to
+   * microseconds; any additional precision is rounded down.
+   *
+   * @param string $timestampValue
    */
   public function setTimestampValue($timestampValue)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Datastore;
 class ReadWrite extends \Google\Model
 {
   /**
+   * The transaction identifier of the transaction being retried.
+   *
    * @var string
    */
   public $previousTransaction;
 
   /**
-   * @param string
+   * The transaction identifier of the transaction being retried.
+   *
+   * @param string $previousTransaction
    */
   public function setPreviousTransaction($previousTransaction)
   {
