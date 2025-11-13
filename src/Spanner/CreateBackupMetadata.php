@@ -20,14 +20,28 @@ namespace Google\Service\Spanner;
 class CreateBackupMetadata extends \Google\Model
 {
   /**
+   * The time at which cancellation of this operation was received.
+   * Operations.CancelOperation starts asynchronous cancellation on a long-
+   * running operation. The server makes a best effort to cancel the operation,
+   * but success is not guaranteed. Clients can use Operations.GetOperation or
+   * other methods to check whether the cancellation succeeded or whether the
+   * operation completed despite cancellation. On successful cancellation, the
+   * operation is not deleted; instead, it becomes an operation with an
+   * Operation.error value with a google.rpc.Status.code of 1, corresponding to
+   * `Code.CANCELLED`.
+   *
    * @var string
    */
   public $cancelTime;
   /**
+   * The name of the database the backup is created from.
+   *
    * @var string
    */
   public $database;
   /**
+   * The name of the backup being created.
+   *
    * @var string
    */
   public $name;
@@ -35,7 +49,17 @@ class CreateBackupMetadata extends \Google\Model
   protected $progressDataType = '';
 
   /**
-   * @param string
+   * The time at which cancellation of this operation was received.
+   * Operations.CancelOperation starts asynchronous cancellation on a long-
+   * running operation. The server makes a best effort to cancel the operation,
+   * but success is not guaranteed. Clients can use Operations.GetOperation or
+   * other methods to check whether the cancellation succeeded or whether the
+   * operation completed despite cancellation. On successful cancellation, the
+   * operation is not deleted; instead, it becomes an operation with an
+   * Operation.error value with a google.rpc.Status.code of 1, corresponding to
+   * `Code.CANCELLED`.
+   *
+   * @param string $cancelTime
    */
   public function setCancelTime($cancelTime)
   {
@@ -49,7 +73,9 @@ class CreateBackupMetadata extends \Google\Model
     return $this->cancelTime;
   }
   /**
-   * @param string
+   * The name of the database the backup is created from.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -63,7 +89,9 @@ class CreateBackupMetadata extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * The name of the backup being created.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -77,7 +105,9 @@ class CreateBackupMetadata extends \Google\Model
     return $this->name;
   }
   /**
-   * @param OperationProgress
+   * The progress of the CreateBackup operation.
+   *
+   * @param OperationProgress $progress
    */
   public function setProgress(OperationProgress $progress)
   {

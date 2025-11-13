@@ -20,12 +20,20 @@ namespace Google\Service\Spanner;
 class DatabaseRole extends \Google\Model
 {
   /**
+   * Required. The name of the database role. Values are of the form
+   * `projects//instances//databases//databaseRoles/` where `` is as specified
+   * in the `CREATE ROLE` DDL statement.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The name of the database role. Values are of the form
+   * `projects//instances//databases//databaseRoles/` where `` is as specified
+   * in the `CREATE ROLE` DDL statement.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

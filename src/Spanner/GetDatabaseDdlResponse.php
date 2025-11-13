@@ -21,16 +21,31 @@ class GetDatabaseDdlResponse extends \Google\Collection
 {
   protected $collection_key = 'statements';
   /**
+   * Proto descriptors stored in the database. Contains a protobuf-serialized [g
+   * oogle.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protob
+   * uf/blob/main/src/google/protobuf/descriptor.proto). For more details, see
+   * protobuffer [self description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
+   *
    * @var string
    */
   public $protoDescriptors;
   /**
+   * A list of formatted DDL statements defining the schema of the database
+   * specified in the request.
+   *
    * @var string[]
    */
   public $statements;
 
   /**
-   * @param string
+   * Proto descriptors stored in the database. Contains a protobuf-serialized [g
+   * oogle.protobuf.FileDescriptorSet](https://github.com/protocolbuffers/protob
+   * uf/blob/main/src/google/protobuf/descriptor.proto). For more details, see
+   * protobuffer [self description](https://developers.google.com/protocol-
+   * buffers/docs/techniques#self-description).
+   *
+   * @param string $protoDescriptors
    */
   public function setProtoDescriptors($protoDescriptors)
   {
@@ -44,7 +59,10 @@ class GetDatabaseDdlResponse extends \Google\Collection
     return $this->protoDescriptors;
   }
   /**
-   * @param string[]
+   * A list of formatted DDL statements defining the schema of the database
+   * specified in the request.
+   *
+   * @param string[] $statements
    */
   public function setStatements($statements)
   {

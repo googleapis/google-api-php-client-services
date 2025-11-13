@@ -20,14 +20,21 @@ namespace Google\Service\Spanner;
 class ColumnMetadata extends \Google\Model
 {
   /**
+   * Indicates whether the column is a primary key column.
+   *
    * @var bool
    */
   public $isPrimaryKey;
   /**
+   * Name of the column.
+   *
    * @var string
    */
   public $name;
   /**
+   * Ordinal position of the column based on the original table definition in
+   * the schema starting with a value of 1.
+   *
    * @var string
    */
   public $ordinalPosition;
@@ -35,7 +42,9 @@ class ColumnMetadata extends \Google\Model
   protected $typeDataType = '';
 
   /**
-   * @param bool
+   * Indicates whether the column is a primary key column.
+   *
+   * @param bool $isPrimaryKey
    */
   public function setIsPrimaryKey($isPrimaryKey)
   {
@@ -49,7 +58,9 @@ class ColumnMetadata extends \Google\Model
     return $this->isPrimaryKey;
   }
   /**
-   * @param string
+   * Name of the column.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -63,7 +74,10 @@ class ColumnMetadata extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Ordinal position of the column based on the original table definition in
+   * the schema starting with a value of 1.
+   *
+   * @param string $ordinalPosition
    */
   public function setOrdinalPosition($ordinalPosition)
   {
@@ -77,7 +91,9 @@ class ColumnMetadata extends \Google\Model
     return $this->ordinalPosition;
   }
   /**
-   * @param Type
+   * Type of the column.
+   *
+   * @param Type $type
    */
   public function setType(Type $type)
   {

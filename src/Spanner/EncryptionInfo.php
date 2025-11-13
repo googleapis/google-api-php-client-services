@@ -19,19 +19,43 @@ namespace Google\Service\Spanner;
 
 class EncryptionInfo extends \Google\Model
 {
+  /**
+   * Encryption type was not specified, though data at rest remains encrypted.
+   */
+  public const ENCRYPTION_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * The data is encrypted at rest with a key that is fully managed by Google.
+   * No key version or status will be populated. This is the default state.
+   */
+  public const ENCRYPTION_TYPE_GOOGLE_DEFAULT_ENCRYPTION = 'GOOGLE_DEFAULT_ENCRYPTION';
+  /**
+   * The data is encrypted at rest with a key that is managed by the customer.
+   * The active version of the key. `kms_key_version` will be populated, and
+   * `encryption_status` may be populated.
+   */
+  public const ENCRYPTION_TYPE_CUSTOMER_MANAGED_ENCRYPTION = 'CUSTOMER_MANAGED_ENCRYPTION';
   protected $encryptionStatusType = Status::class;
   protected $encryptionStatusDataType = '';
   /**
+   * Output only. The type of encryption.
+   *
    * @var string
    */
   public $encryptionType;
   /**
+   * Output only. A Cloud KMS key version that is being used to protect the
+   * database or backup.
+   *
    * @var string
    */
   public $kmsKeyVersion;
 
   /**
-   * @param Status
+   * Output only. If present, the status of a recent encrypt/decrypt call on
+   * underlying data for this database or backup. Regardless of status, data is
+   * always encrypted at rest.
+   *
+   * @param Status $encryptionStatus
    */
   public function setEncryptionStatus(Status $encryptionStatus)
   {
@@ -45,21 +69,29 @@ class EncryptionInfo extends \Google\Model
     return $this->encryptionStatus;
   }
   /**
-   * @param string
+   * Output only. The type of encryption.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, GOOGLE_DEFAULT_ENCRYPTION,
+   * CUSTOMER_MANAGED_ENCRYPTION
+   *
+   * @param self::ENCRYPTION_TYPE_* $encryptionType
    */
   public function setEncryptionType($encryptionType)
   {
     $this->encryptionType = $encryptionType;
   }
   /**
-   * @return string
+   * @return self::ENCRYPTION_TYPE_*
    */
   public function getEncryptionType()
   {
     return $this->encryptionType;
   }
   /**
-   * @param string
+   * Output only. A Cloud KMS key version that is being used to protect the
+   * database or backup.
+   *
+   * @param string $kmsKeyVersion
    */
   public function setKmsKeyVersion($kmsKeyVersion)
   {

@@ -21,10 +21,18 @@ class KeySet extends \Google\Collection
 {
   protected $collection_key = 'ranges';
   /**
+   * For convenience `all` can be set to `true` to indicate that this `KeySet`
+   * matches all keys in the table or index. Note that any keys specified in
+   * `keys` or `ranges` are only yielded once.
+   *
    * @var bool
    */
   public $all;
   /**
+   * A list of specific keys. Entries in `keys` should have exactly as many
+   * elements as there are columns in the primary or index key with which this
+   * `KeySet` is used. Individual key values are encoded as described here.
+   *
    * @var array[]
    */
   public $keys;
@@ -32,7 +40,11 @@ class KeySet extends \Google\Collection
   protected $rangesDataType = 'array';
 
   /**
-   * @param bool
+   * For convenience `all` can be set to `true` to indicate that this `KeySet`
+   * matches all keys in the table or index. Note that any keys specified in
+   * `keys` or `ranges` are only yielded once.
+   *
+   * @param bool $all
    */
   public function setAll($all)
   {
@@ -46,7 +58,11 @@ class KeySet extends \Google\Collection
     return $this->all;
   }
   /**
-   * @param array[]
+   * A list of specific keys. Entries in `keys` should have exactly as many
+   * elements as there are columns in the primary or index key with which this
+   * `KeySet` is used. Individual key values are encoded as described here.
+   *
+   * @param array[] $keys
    */
   public function setKeys($keys)
   {
@@ -60,7 +76,10 @@ class KeySet extends \Google\Collection
     return $this->keys;
   }
   /**
-   * @param KeyRange[]
+   * A list of key ranges. See KeyRange for more information about key range
+   * specifications.
+   *
+   * @param KeyRange[] $ranges
    */
   public function setRanges($ranges)
   {

@@ -20,20 +20,32 @@ namespace Google\Service\Spanner;
 class AdaptMessageResponse extends \Google\Model
 {
   /**
+   * Optional. Indicates whether this is the last AdaptMessageResponse in the
+   * stream. This field may be optionally set by the server. Clients should not
+   * rely on this field being set in all cases.
+   *
    * @var bool
    */
   public $last;
   /**
+   * Optional. Uninterpreted bytes from the underlying wire protocol.
+   *
    * @var string
    */
   public $payload;
   /**
+   * Optional. Opaque state updates to be applied by the client.
+   *
    * @var string[]
    */
   public $stateUpdates;
 
   /**
-   * @param bool
+   * Optional. Indicates whether this is the last AdaptMessageResponse in the
+   * stream. This field may be optionally set by the server. Clients should not
+   * rely on this field being set in all cases.
+   *
+   * @param bool $last
    */
   public function setLast($last)
   {
@@ -47,7 +59,9 @@ class AdaptMessageResponse extends \Google\Model
     return $this->last;
   }
   /**
-   * @param string
+   * Optional. Uninterpreted bytes from the underlying wire protocol.
+   *
+   * @param string $payload
    */
   public function setPayload($payload)
   {
@@ -61,7 +75,9 @@ class AdaptMessageResponse extends \Google\Model
     return $this->payload;
   }
   /**
-   * @param string[]
+   * Optional. Opaque state updates to be applied by the client.
+   *
+   * @param string[] $stateUpdates
    */
   public function setStateUpdates($stateUpdates)
   {

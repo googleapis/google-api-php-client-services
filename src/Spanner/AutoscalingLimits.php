@@ -20,24 +20,40 @@ namespace Google\Service\Spanner;
 class AutoscalingLimits extends \Google\Model
 {
   /**
+   * Maximum number of nodes allocated to the instance. If set, this number
+   * should be greater than or equal to min_nodes.
+   *
    * @var int
    */
   public $maxNodes;
   /**
+   * Maximum number of processing units allocated to the instance. If set, this
+   * number should be multiples of 1000 and be greater than or equal to
+   * min_processing_units.
+   *
    * @var int
    */
   public $maxProcessingUnits;
   /**
+   * Minimum number of nodes allocated to the instance. If set, this number
+   * should be greater than or equal to 1.
+   *
    * @var int
    */
   public $minNodes;
   /**
+   * Minimum number of processing units allocated to the instance. If set, this
+   * number should be multiples of 1000.
+   *
    * @var int
    */
   public $minProcessingUnits;
 
   /**
-   * @param int
+   * Maximum number of nodes allocated to the instance. If set, this number
+   * should be greater than or equal to min_nodes.
+   *
+   * @param int $maxNodes
    */
   public function setMaxNodes($maxNodes)
   {
@@ -51,7 +67,11 @@ class AutoscalingLimits extends \Google\Model
     return $this->maxNodes;
   }
   /**
-   * @param int
+   * Maximum number of processing units allocated to the instance. If set, this
+   * number should be multiples of 1000 and be greater than or equal to
+   * min_processing_units.
+   *
+   * @param int $maxProcessingUnits
    */
   public function setMaxProcessingUnits($maxProcessingUnits)
   {
@@ -65,7 +85,10 @@ class AutoscalingLimits extends \Google\Model
     return $this->maxProcessingUnits;
   }
   /**
-   * @param int
+   * Minimum number of nodes allocated to the instance. If set, this number
+   * should be greater than or equal to 1.
+   *
+   * @param int $minNodes
    */
   public function setMinNodes($minNodes)
   {
@@ -79,7 +102,10 @@ class AutoscalingLimits extends \Google\Model
     return $this->minNodes;
   }
   /**
-   * @param int
+   * Minimum number of processing units allocated to the instance. If set, this
+   * number should be multiples of 1000.
+   *
+   * @param int $minProcessingUnits
    */
   public function setMinProcessingUnits($minProcessingUnits)
   {

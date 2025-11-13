@@ -24,7 +24,9 @@ class ExcludeReplicas extends \Google\Collection
   protected $replicaSelectionsDataType = 'array';
 
   /**
-   * @param ReplicaSelection[]
+   * The directed read replica selector.
+   *
+   * @param ReplicaSelection[] $replicaSelections
    */
   public function setReplicaSelections($replicaSelections)
   {

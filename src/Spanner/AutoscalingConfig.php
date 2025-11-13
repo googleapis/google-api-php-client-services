@@ -28,7 +28,15 @@ class AutoscalingConfig extends \Google\Collection
   protected $autoscalingTargetsDataType = '';
 
   /**
-   * @param AsymmetricAutoscalingOption[]
+   * Optional. Optional asymmetric autoscaling options. Replicas matching the
+   * replica selection criteria will be autoscaled independently from other
+   * replicas. The autoscaler will scale the replicas based on the utilization
+   * of replicas identified by the replica selection. Replica selections should
+   * not overlap with each other. Other replicas (those do not match any replica
+   * selection) will be autoscaled together and will have the same compute
+   * capacity allocated to them.
+   *
+   * @param AsymmetricAutoscalingOption[] $asymmetricAutoscalingOptions
    */
   public function setAsymmetricAutoscalingOptions($asymmetricAutoscalingOptions)
   {
@@ -42,7 +50,9 @@ class AutoscalingConfig extends \Google\Collection
     return $this->asymmetricAutoscalingOptions;
   }
   /**
-   * @param AutoscalingLimits
+   * Required. Autoscaling limits for an instance.
+   *
+   * @param AutoscalingLimits $autoscalingLimits
    */
   public function setAutoscalingLimits(AutoscalingLimits $autoscalingLimits)
   {
@@ -56,7 +66,9 @@ class AutoscalingConfig extends \Google\Collection
     return $this->autoscalingLimits;
   }
   /**
-   * @param AutoscalingTargets
+   * Required. The autoscaling targets for an instance.
+   *
+   * @param AutoscalingTargets $autoscalingTargets
    */
   public function setAutoscalingTargets(AutoscalingTargets $autoscalingTargets)
   {

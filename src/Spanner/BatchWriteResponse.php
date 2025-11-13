@@ -21,10 +21,16 @@ class BatchWriteResponse extends \Google\Collection
 {
   protected $collection_key = 'indexes';
   /**
+   * The commit timestamp of the transaction that applied this batch. Present if
+   * `status` is `OK`, absent otherwise.
+   *
    * @var string
    */
   public $commitTimestamp;
   /**
+   * The mutation groups applied in this batch. The values index into the
+   * `mutation_groups` field in the corresponding `BatchWriteRequest`.
+   *
    * @var int[]
    */
   public $indexes;
@@ -32,7 +38,10 @@ class BatchWriteResponse extends \Google\Collection
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * The commit timestamp of the transaction that applied this batch. Present if
+   * `status` is `OK`, absent otherwise.
+   *
+   * @param string $commitTimestamp
    */
   public function setCommitTimestamp($commitTimestamp)
   {
@@ -46,7 +55,10 @@ class BatchWriteResponse extends \Google\Collection
     return $this->commitTimestamp;
   }
   /**
-   * @param int[]
+   * The mutation groups applied in this batch. The values index into the
+   * `mutation_groups` field in the corresponding `BatchWriteRequest`.
+   *
+   * @param int[] $indexes
    */
   public function setIndexes($indexes)
   {
@@ -60,7 +72,9 @@ class BatchWriteResponse extends \Google\Collection
     return $this->indexes;
   }
   /**
-   * @param Status
+   * An `OK` status indicates success. Any other status indicates a failure.
+   *
+   * @param Status $status
    */
   public function setStatus(Status $status)
   {

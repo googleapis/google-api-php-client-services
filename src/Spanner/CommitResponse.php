@@ -22,18 +22,28 @@ class CommitResponse extends \Google\Model
   protected $commitStatsType = CommitStats::class;
   protected $commitStatsDataType = '';
   /**
+   * The Cloud Spanner timestamp at which the transaction committed.
+   *
    * @var string
    */
   public $commitTimestamp;
   protected $precommitTokenType = MultiplexedSessionPrecommitToken::class;
   protected $precommitTokenDataType = '';
   /**
+   * If `TransactionOptions.isolation_level` is set to
+   * `IsolationLevel.REPEATABLE_READ`, then the snapshot timestamp is the
+   * timestamp at which all reads in the transaction ran. This timestamp is
+   * never returned.
+   *
    * @var string
    */
   public $snapshotTimestamp;
 
   /**
-   * @param CommitStats
+   * The statistics about this `Commit`. Not returned by default. For more
+   * information, see CommitRequest.return_commit_stats.
+   *
+   * @param CommitStats $commitStats
    */
   public function setCommitStats(CommitStats $commitStats)
   {
@@ -47,7 +57,9 @@ class CommitResponse extends \Google\Model
     return $this->commitStats;
   }
   /**
-   * @param string
+   * The Cloud Spanner timestamp at which the transaction committed.
+   *
+   * @param string $commitTimestamp
    */
   public function setCommitTimestamp($commitTimestamp)
   {
@@ -61,7 +73,10 @@ class CommitResponse extends \Google\Model
     return $this->commitTimestamp;
   }
   /**
-   * @param MultiplexedSessionPrecommitToken
+   * If specified, transaction has not committed yet. You must retry the commit
+   * with the new precommit token.
+   *
+   * @param MultiplexedSessionPrecommitToken $precommitToken
    */
   public function setPrecommitToken(MultiplexedSessionPrecommitToken $precommitToken)
   {
@@ -75,7 +90,12 @@ class CommitResponse extends \Google\Model
     return $this->precommitToken;
   }
   /**
-   * @param string
+   * If `TransactionOptions.isolation_level` is set to
+   * `IsolationLevel.REPEATABLE_READ`, then the snapshot timestamp is the
+   * timestamp at which all reads in the transaction ran. This timestamp is
+   * never returned.
+   *
+   * @param string $snapshotTimestamp
    */
   public function setSnapshotTimestamp($snapshotTimestamp)
   {

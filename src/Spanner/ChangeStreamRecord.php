@@ -31,7 +31,9 @@ class ChangeStreamRecord extends \Google\Model
   protected $partitionStartRecordDataType = '';
 
   /**
-   * @param DataChangeRecord
+   * Data change record describing a data change for a change stream partition.
+   *
+   * @param DataChangeRecord $dataChangeRecord
    */
   public function setDataChangeRecord(DataChangeRecord $dataChangeRecord)
   {
@@ -45,7 +47,9 @@ class ChangeStreamRecord extends \Google\Model
     return $this->dataChangeRecord;
   }
   /**
-   * @param HeartbeatRecord
+   * Heartbeat record describing a heartbeat for a change stream partition.
+   *
+   * @param HeartbeatRecord $heartbeatRecord
    */
   public function setHeartbeatRecord(HeartbeatRecord $heartbeatRecord)
   {
@@ -59,7 +63,9 @@ class ChangeStreamRecord extends \Google\Model
     return $this->heartbeatRecord;
   }
   /**
-   * @param PartitionEndRecord
+   * Partition end record describing a terminated change stream partition.
+   *
+   * @param PartitionEndRecord $partitionEndRecord
    */
   public function setPartitionEndRecord(PartitionEndRecord $partitionEndRecord)
   {
@@ -73,7 +79,10 @@ class ChangeStreamRecord extends \Google\Model
     return $this->partitionEndRecord;
   }
   /**
-   * @param PartitionEventRecord
+   * Partition event record describing key range changes for a change stream
+   * partition.
+   *
+   * @param PartitionEventRecord $partitionEventRecord
    */
   public function setPartitionEventRecord(PartitionEventRecord $partitionEventRecord)
   {
@@ -87,7 +96,9 @@ class ChangeStreamRecord extends \Google\Model
     return $this->partitionEventRecord;
   }
   /**
-   * @param PartitionStartRecord
+   * Partition start record describing a new change stream partition.
+   *
+   * @param PartitionStartRecord $partitionStartRecord
    */
   public function setPartitionStartRecord(PartitionStartRecord $partitionStartRecord)
   {

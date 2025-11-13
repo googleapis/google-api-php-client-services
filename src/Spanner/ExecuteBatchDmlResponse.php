@@ -28,7 +28,12 @@ class ExecuteBatchDmlResponse extends \Google\Collection
   protected $statusDataType = '';
 
   /**
-   * @param MultiplexedSessionPrecommitToken
+   * Optional. A precommit token is included if the read-write transaction is on
+   * a multiplexed session. Pass the precommit token with the highest sequence
+   * number from this transaction attempt should be passed to the Commit request
+   * for this transaction.
+   *
+   * @param MultiplexedSessionPrecommitToken $precommitToken
    */
   public function setPrecommitToken(MultiplexedSessionPrecommitToken $precommitToken)
   {
@@ -42,7 +47,13 @@ class ExecuteBatchDmlResponse extends \Google\Collection
     return $this->precommitToken;
   }
   /**
-   * @param ResultSet[]
+   * One ResultSet for each statement in the request that ran successfully, in
+   * the same order as the statements in the request. Each ResultSet does not
+   * contain any rows. The ResultSetStats in each ResultSet contain the number
+   * of rows modified by the statement. Only the first ResultSet in the response
+   * contains valid ResultSetMetadata.
+   *
+   * @param ResultSet[] $resultSets
    */
   public function setResultSets($resultSets)
   {
@@ -56,7 +67,10 @@ class ExecuteBatchDmlResponse extends \Google\Collection
     return $this->resultSets;
   }
   /**
-   * @param Status
+   * If all DML statements are executed successfully, the status is `OK`.
+   * Otherwise, the error status of the first failed statement.
+   *
+   * @param Status $status
    */
   public function setStatus(Status $status)
   {

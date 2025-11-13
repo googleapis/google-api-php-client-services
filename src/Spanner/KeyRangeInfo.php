@@ -23,34 +23,46 @@ class KeyRangeInfo extends \Google\Collection
   protected $contextValuesType = ContextValue::class;
   protected $contextValuesDataType = 'array';
   /**
+   * The index of the end key in indexed_keys.
+   *
    * @var int
    */
   public $endKeyIndex;
   protected $infoType = LocalizedString::class;
   protected $infoDataType = '';
   /**
+   * The number of keys this range covers.
+   *
    * @var string
    */
   public $keysCount;
   protected $metricType = LocalizedString::class;
   protected $metricDataType = '';
   /**
+   * The index of the start key in indexed_keys.
+   *
    * @var int
    */
   public $startKeyIndex;
   /**
+   * The time offset. This is the time since the start of the time interval.
+   *
    * @var string
    */
   public $timeOffset;
   protected $unitType = LocalizedString::class;
   protected $unitDataType = '';
   /**
+   * The value of the metric.
+   *
    * @var float
    */
   public $value;
 
   /**
-   * @param ContextValue[]
+   * The list of context values for this key range.
+   *
+   * @param ContextValue[] $contextValues
    */
   public function setContextValues($contextValues)
   {
@@ -64,7 +76,9 @@ class KeyRangeInfo extends \Google\Collection
     return $this->contextValues;
   }
   /**
-   * @param int
+   * The index of the end key in indexed_keys.
+   *
+   * @param int $endKeyIndex
    */
   public function setEndKeyIndex($endKeyIndex)
   {
@@ -78,7 +92,9 @@ class KeyRangeInfo extends \Google\Collection
     return $this->endKeyIndex;
   }
   /**
-   * @param LocalizedString
+   * Information about this key range, for all metrics.
+   *
+   * @param LocalizedString $info
    */
   public function setInfo(LocalizedString $info)
   {
@@ -92,7 +108,9 @@ class KeyRangeInfo extends \Google\Collection
     return $this->info;
   }
   /**
-   * @param string
+   * The number of keys this range covers.
+   *
+   * @param string $keysCount
    */
   public function setKeysCount($keysCount)
   {
@@ -106,7 +124,9 @@ class KeyRangeInfo extends \Google\Collection
     return $this->keysCount;
   }
   /**
-   * @param LocalizedString
+   * The name of the metric. e.g. "latency".
+   *
+   * @param LocalizedString $metric
    */
   public function setMetric(LocalizedString $metric)
   {
@@ -120,7 +140,9 @@ class KeyRangeInfo extends \Google\Collection
     return $this->metric;
   }
   /**
-   * @param int
+   * The index of the start key in indexed_keys.
+   *
+   * @param int $startKeyIndex
    */
   public function setStartKeyIndex($startKeyIndex)
   {
@@ -134,7 +156,9 @@ class KeyRangeInfo extends \Google\Collection
     return $this->startKeyIndex;
   }
   /**
-   * @param string
+   * The time offset. This is the time since the start of the time interval.
+   *
+   * @param string $timeOffset
    */
   public function setTimeOffset($timeOffset)
   {
@@ -148,7 +172,10 @@ class KeyRangeInfo extends \Google\Collection
     return $this->timeOffset;
   }
   /**
-   * @param LocalizedString
+   * The unit of the metric. This is an unstructured field and will be mapped as
+   * is to the user.
+   *
+   * @param LocalizedString $unit
    */
   public function setUnit(LocalizedString $unit)
   {
@@ -162,7 +189,9 @@ class KeyRangeInfo extends \Google\Collection
     return $this->unit;
   }
   /**
-   * @param float
+   * The value of the metric.
+   *
+   * @param float $value
    */
   public function setValue($value)
   {

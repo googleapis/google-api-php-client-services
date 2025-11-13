@@ -23,12 +23,17 @@ class ListInstanceConfigsResponse extends \Google\Collection
   protected $instanceConfigsType = InstanceConfig::class;
   protected $instanceConfigsDataType = 'array';
   /**
+   * `next_page_token` can be sent in a subsequent ListInstanceConfigs call to
+   * fetch more of the matching instance configurations.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param InstanceConfig[]
+   * The list of requested instance configurations.
+   *
+   * @param InstanceConfig[] $instanceConfigs
    */
   public function setInstanceConfigs($instanceConfigs)
   {
@@ -42,7 +47,10 @@ class ListInstanceConfigsResponse extends \Google\Collection
     return $this->instanceConfigs;
   }
   /**
-   * @param string
+   * `next_page_token` can be sent in a subsequent ListInstanceConfigs call to
+   * fetch more of the matching instance configurations.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

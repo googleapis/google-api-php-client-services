@@ -20,20 +20,37 @@ namespace Google\Service\Spanner;
 class ChildLink extends \Google\Model
 {
   /**
+   * The node to which the link points.
+   *
    * @var int
    */
   public $childIndex;
   /**
+   * The type of the link. For example, in Hash Joins this could be used to
+   * distinguish between the build child and the probe child, or in the case of
+   * the child being an output variable, to represent the tag associated with
+   * the output variable.
+   *
    * @var string
    */
   public $type;
   /**
+   * Only present if the child node is SCALAR and corresponds to an output
+   * variable of the parent node. The field carries the name of the output
+   * variable. For example, a `TableScan` operator that reads rows from a table
+   * will have child links to the `SCALAR` nodes representing the output
+   * variables created for each column that is read by the operator. The
+   * corresponding `variable` fields will be set to the variable names assigned
+   * to the columns.
+   *
    * @var string
    */
   public $variable;
 
   /**
-   * @param int
+   * The node to which the link points.
+   *
+   * @param int $childIndex
    */
   public function setChildIndex($childIndex)
   {
@@ -47,7 +64,12 @@ class ChildLink extends \Google\Model
     return $this->childIndex;
   }
   /**
-   * @param string
+   * The type of the link. For example, in Hash Joins this could be used to
+   * distinguish between the build child and the probe child, or in the case of
+   * the child being an output variable, to represent the tag associated with
+   * the output variable.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -61,7 +83,15 @@ class ChildLink extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * Only present if the child node is SCALAR and corresponds to an output
+   * variable of the parent node. The field carries the name of the output
+   * variable. For example, a `TableScan` operator that reads rows from a table
+   * will have child links to the `SCALAR` nodes representing the output
+   * variables created for each column that is read by the operator. The
+   * corresponding `variable` fields will be set to the variable names assigned
+   * to the columns.
+   *
+   * @param string $variable
    */
   public function setVariable($variable)
   {

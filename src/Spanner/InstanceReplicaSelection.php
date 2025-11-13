@@ -20,12 +20,18 @@ namespace Google\Service\Spanner;
 class InstanceReplicaSelection extends \Google\Model
 {
   /**
+   * Required. Name of the location of the replicas (for example, "us-
+   * central1").
+   *
    * @var string
    */
   public $location;
 
   /**
-   * @param string
+   * Required. Name of the location of the replicas (for example, "us-
+   * central1").
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {

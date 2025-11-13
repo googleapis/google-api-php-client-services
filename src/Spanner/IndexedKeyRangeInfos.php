@@ -23,7 +23,10 @@ class IndexedKeyRangeInfos extends \Google\Model
   protected $keyRangeInfosDataType = 'map';
 
   /**
-   * @param KeyRangeInfos[]
+   * A (sparse) mapping from key bucket index to the KeyRangeInfos for that key
+   * bucket.
+   *
+   * @param KeyRangeInfos[] $keyRangeInfos
    */
   public function setKeyRangeInfos($keyRangeInfos)
   {

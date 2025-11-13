@@ -20,18 +20,26 @@ namespace Google\Service\Spanner;
 class ChangeQuorumMetadata extends \Google\Model
 {
   /**
+   * If set, the time at which this operation failed or was completed
+   * successfully.
+   *
    * @var string
    */
   public $endTime;
   protected $requestType = ChangeQuorumRequest::class;
   protected $requestDataType = '';
   /**
+   * Time the request was received.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * If set, the time at which this operation failed or was completed
+   * successfully.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -45,7 +53,9 @@ class ChangeQuorumMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param ChangeQuorumRequest
+   * The request for ChangeQuorum.
+   *
+   * @param ChangeQuorumRequest $request
    */
   public function setRequest(ChangeQuorumRequest $request)
   {
@@ -59,7 +69,9 @@ class ChangeQuorumMetadata extends \Google\Model
     return $this->request;
   }
   /**
-   * @param string
+   * Time the request was received.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

@@ -25,7 +25,9 @@ class DerivedMetric extends \Google\Model
   protected $numeratorDataType = '';
 
   /**
-   * @param LocalizedString
+   * The name of the denominator metric. e.g. "rows".
+   *
+   * @param LocalizedString $denominator
    */
   public function setDenominator(LocalizedString $denominator)
   {
@@ -39,7 +41,9 @@ class DerivedMetric extends \Google\Model
     return $this->denominator;
   }
   /**
-   * @param LocalizedString
+   * The name of the numerator metric. e.g. "latency".
+   *
+   * @param LocalizedString $numerator
    */
   public function setNumerator(LocalizedString $numerator)
   {

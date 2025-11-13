@@ -23,16 +23,24 @@ class ListInstancesResponse extends \Google\Collection
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**
+   * `next_page_token` can be sent in a subsequent ListInstances call to fetch
+   * more of the matching instances.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The list of unreachable instances. It includes the names of instances whose
+   * metadata could not be retrieved within instance_deadline.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Instance[]
+   * The list of requested instances.
+   *
+   * @param Instance[] $instances
    */
   public function setInstances($instances)
   {
@@ -46,7 +54,10 @@ class ListInstancesResponse extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string
+   * `next_page_token` can be sent in a subsequent ListInstances call to fetch
+   * more of the matching instances.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +71,10 @@ class ListInstancesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * The list of unreachable instances. It includes the names of instances whose
+   * metadata could not be retrieved within instance_deadline.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
