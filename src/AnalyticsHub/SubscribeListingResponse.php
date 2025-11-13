@@ -23,7 +23,9 @@ class SubscribeListingResponse extends \Google\Model
   protected $subscriptionDataType = '';
 
   /**
-   * @param Subscription
+   * Subscription object created from this subscribe action.
+   *
+   * @param Subscription $subscription
    */
   public function setSubscription(Subscription $subscription)
   {

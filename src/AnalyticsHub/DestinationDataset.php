@@ -23,28 +23,46 @@ class DestinationDataset extends \Google\Collection
   protected $datasetReferenceType = DestinationDatasetReference::class;
   protected $datasetReferenceDataType = '';
   /**
+   * Optional. A user-friendly description of the dataset.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. A descriptive name for the dataset.
+   *
    * @var string
    */
   public $friendlyName;
   /**
+   * Optional. The labels associated with this dataset. You can use these to
+   * organize and group your datasets. You can set this property when inserting
+   * or updating a dataset. See https://cloud.google.com/resource-
+   * manager/docs/creating-managing-labels for more information.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. The geographic location where the dataset should reside. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
+   *
    * @var string
    */
   public $location;
   /**
+   * Optional. The geographic locations where the dataset should be replicated.
+   * See [BigQuery locations](https://cloud.google.com/bigquery/docs/locations)
+   * for supported locations.
+   *
    * @var string[]
    */
   public $replicaLocations;
 
   /**
-   * @param DestinationDatasetReference
+   * Required. A reference that identifies the destination dataset.
+   *
+   * @param DestinationDatasetReference $datasetReference
    */
   public function setDatasetReference(DestinationDatasetReference $datasetReference)
   {
@@ -58,7 +76,9 @@ class DestinationDataset extends \Google\Collection
     return $this->datasetReference;
   }
   /**
-   * @param string
+   * Optional. A user-friendly description of the dataset.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -72,7 +92,9 @@ class DestinationDataset extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. A descriptive name for the dataset.
+   *
+   * @param string $friendlyName
    */
   public function setFriendlyName($friendlyName)
   {
@@ -86,7 +108,12 @@ class DestinationDataset extends \Google\Collection
     return $this->friendlyName;
   }
   /**
-   * @param string[]
+   * Optional. The labels associated with this dataset. You can use these to
+   * organize and group your datasets. You can set this property when inserting
+   * or updating a dataset. See https://cloud.google.com/resource-
+   * manager/docs/creating-managing-labels for more information.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -100,7 +127,10 @@ class DestinationDataset extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. The geographic location where the dataset should reside. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -114,7 +144,11 @@ class DestinationDataset extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string[]
+   * Optional. The geographic locations where the dataset should be replicated.
+   * See [BigQuery locations](https://cloud.google.com/bigquery/docs/locations)
+   * for supported locations.
+   *
+   * @param string[] $replicaLocations
    */
   public function setReplicaLocations($replicaLocations)
   {

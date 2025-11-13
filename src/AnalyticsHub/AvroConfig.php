@@ -20,16 +20,28 @@ namespace Google\Service\AnalyticsHub;
 class AvroConfig extends \Google\Model
 {
   /**
+   * Optional. When true, the output Cloud Storage file will be serialized using
+   * the topic schema, if it exists.
+   *
    * @var bool
    */
   public $useTopicSchema;
   /**
+   * Optional. When true, write the subscription name, message_id, publish_time,
+   * attributes, and ordering_key as additional fields in the output. The
+   * subscription name, message_id, and publish_time fields are put in their own
+   * fields while all other message properties other than data (for example, an
+   * ordering_key, if present) are added as entries in the attributes map.
+   *
    * @var bool
    */
   public $writeMetadata;
 
   /**
-   * @param bool
+   * Optional. When true, the output Cloud Storage file will be serialized using
+   * the topic schema, if it exists.
+   *
+   * @param bool $useTopicSchema
    */
   public function setUseTopicSchema($useTopicSchema)
   {
@@ -43,7 +55,13 @@ class AvroConfig extends \Google\Model
     return $this->useTopicSchema;
   }
   /**
-   * @param bool
+   * Optional. When true, write the subscription name, message_id, publish_time,
+   * attributes, and ordering_key as additional fields in the output. The
+   * subscription name, message_id, and publish_time fields are put in their own
+   * fields while all other message properties other than data (for example, an
+   * ordering_key, if present) are added as entries in the attributes map.
+   *
+   * @param bool $writeMetadata
    */
   public function setWriteMetadata($writeMetadata)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\AnalyticsHub;
 class NoWrapper extends \Google\Model
 {
   /**
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-
+   * pubsub-:` headers of the HTTP request. Writes the Pub/Sub message
+   * attributes to `:` headers of the HTTP request.
+   *
    * @var bool
    */
   public $writeMetadata;
 
   /**
-   * @param bool
+   * Optional. When true, writes the Pub/Sub message metadata to `x-goog-
+   * pubsub-:` headers of the HTTP request. Writes the Pub/Sub message
+   * attributes to `:` headers of the HTTP request.
+   *
+   * @param bool $writeMetadata
    */
   public function setWriteMetadata($writeMetadata)
   {

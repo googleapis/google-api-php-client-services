@@ -23,7 +23,10 @@ class GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfo extends \Googl
   protected $cloudMarketplaceDataType = '';
 
   /**
-   * @param GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfoGoogleCloudMarketplaceInfo
+   * Output only. This is set when the subscription is commercialised via Cloud
+   * Marketplace.
+   *
+   * @param GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfoGoogleCloudMarketplaceInfo $cloudMarketplace
    */
   public function setCloudMarketplace(GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfoGoogleCloudMarketplaceInfo $cloudMarketplace)
   {

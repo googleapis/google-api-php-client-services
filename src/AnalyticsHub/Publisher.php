@@ -20,16 +20,22 @@ namespace Google\Service\AnalyticsHub;
 class Publisher extends \Google\Model
 {
   /**
+   * Optional. Name of the listing publisher.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Email or URL of the listing publisher. Max Length: 1000 bytes.
+   *
    * @var string
    */
   public $primaryContact;
 
   /**
-   * @param string
+   * Optional. Name of the listing publisher.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class Publisher extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Email or URL of the listing publisher. Max Length: 1000 bytes.
+   *
+   * @param string $primaryContact
    */
   public function setPrimaryContact($primaryContact)
   {

@@ -21,16 +21,27 @@ class PubSubTopicSource extends \Google\Collection
 {
   protected $collection_key = 'dataAffinityRegions';
   /**
+   * Optional. Region hint on where the data might be published. Data affinity
+   * regions are modifiable. See https://cloud.google.com/about/locations for
+   * full listing of possible Cloud regions.
+   *
    * @var string[]
    */
   public $dataAffinityRegions;
   /**
+   * Required. Resource name of the Pub/Sub topic source for this listing. e.g.
+   * projects/myproject/topics/topicId
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param string[]
+   * Optional. Region hint on where the data might be published. Data affinity
+   * regions are modifiable. See https://cloud.google.com/about/locations for
+   * full listing of possible Cloud regions.
+   *
+   * @param string[] $dataAffinityRegions
    */
   public function setDataAffinityRegions($dataAffinityRegions)
   {
@@ -44,7 +55,10 @@ class PubSubTopicSource extends \Google\Collection
     return $this->dataAffinityRegions;
   }
   /**
-   * @param string
+   * Required. Resource name of the Pub/Sub topic source for this listing. e.g.
+   * projects/myproject/topics/topicId
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {

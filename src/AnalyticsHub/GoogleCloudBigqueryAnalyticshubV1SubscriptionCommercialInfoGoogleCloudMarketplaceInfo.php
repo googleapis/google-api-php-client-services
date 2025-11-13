@@ -20,12 +20,16 @@ namespace Google\Service\AnalyticsHub;
 class GoogleCloudBigqueryAnalyticshubV1SubscriptionCommercialInfoGoogleCloudMarketplaceInfo extends \Google\Model
 {
   /**
+   * Resource name of the Marketplace Order.
+   *
    * @var string
    */
   public $order;
 
   /**
-   * @param string
+   * Resource name of the Marketplace Order.
+   *
+   * @param string $order
    */
   public function setOrder($order)
   {

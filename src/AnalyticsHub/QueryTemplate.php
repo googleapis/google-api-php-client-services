@@ -20,46 +20,95 @@ namespace Google\Service\AnalyticsHub;
 class QueryTemplate extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The QueryTemplate is in draft state.
+   */
+  public const STATE_DRAFTED = 'DRAFTED';
+  /**
+   * The QueryTemplate is in pending state.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The QueryTemplate is in deleted state.
+   */
+  public const STATE_DELETED = 'DELETED';
+  /**
+   * The QueryTemplate is in approved state.
+   */
+  public const STATE_APPROVED = 'APPROVED';
+  /**
+   * Output only. Timestamp when the QueryTemplate was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Short description of the QueryTemplate. The description must not
+   * contain Unicode non-characters and C0 and C1 control codes except tabs
+   * (HT), new lines (LF), carriage returns (CR), and page breaks (FF). Default
+   * value is an empty string. Max length: 2000 bytes.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Human-readable display name of the QueryTemplate. The display
+   * name must contain only Unicode letters, numbers (0-9), underscores (_),
+   * dashes (-), spaces ( ), ampersands (&) and can't start or end with spaces.
+   * Default value is an empty string. Max length: 63 bytes.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Documentation describing the QueryTemplate.
+   *
    * @var string
    */
   public $documentation;
   /**
+   * Output only. The resource name of the QueryTemplate. e.g.
+   * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Email or URL of the primary point of contact of the
+   * QueryTemplate. Max Length: 1000 bytes.
+   *
    * @var string
    */
   public $primaryContact;
   /**
+   * Optional. Will be deprecated. Email or URL of the primary point of contact
+   * of the QueryTemplate. Max Length: 1000 bytes.
+   *
    * @var string
    */
   public $proposer;
   protected $routineType = Routine::class;
   protected $routineDataType = '';
   /**
+   * Output only. The QueryTemplate lifecycle state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Timestamp when the QueryTemplate was last modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Timestamp when the QueryTemplate was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -73,7 +122,12 @@ class QueryTemplate extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Short description of the QueryTemplate. The description must not
+   * contain Unicode non-characters and C0 and C1 control codes except tabs
+   * (HT), new lines (LF), carriage returns (CR), and page breaks (FF). Default
+   * value is an empty string. Max length: 2000 bytes.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -87,7 +141,12 @@ class QueryTemplate extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Human-readable display name of the QueryTemplate. The display
+   * name must contain only Unicode letters, numbers (0-9), underscores (_),
+   * dashes (-), spaces ( ), ampersands (&) and can't start or end with spaces.
+   * Default value is an empty string. Max length: 63 bytes.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -101,7 +160,9 @@ class QueryTemplate extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Optional. Documentation describing the QueryTemplate.
+   *
+   * @param string $documentation
    */
   public function setDocumentation($documentation)
   {
@@ -115,7 +176,10 @@ class QueryTemplate extends \Google\Model
     return $this->documentation;
   }
   /**
-   * @param string
+   * Output only. The resource name of the QueryTemplate. e.g.
+   * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -129,7 +193,10 @@ class QueryTemplate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Email or URL of the primary point of contact of the
+   * QueryTemplate. Max Length: 1000 bytes.
+   *
+   * @param string $primaryContact
    */
   public function setPrimaryContact($primaryContact)
   {
@@ -143,7 +210,10 @@ class QueryTemplate extends \Google\Model
     return $this->primaryContact;
   }
   /**
-   * @param string
+   * Optional. Will be deprecated. Email or URL of the primary point of contact
+   * of the QueryTemplate. Max Length: 1000 bytes.
+   *
+   * @param string $proposer
    */
   public function setProposer($proposer)
   {
@@ -157,7 +227,9 @@ class QueryTemplate extends \Google\Model
     return $this->proposer;
   }
   /**
-   * @param Routine
+   * Optional. The routine associated with the QueryTemplate.
+   *
+   * @param Routine $routine
    */
   public function setRoutine(Routine $routine)
   {
@@ -171,21 +243,27 @@ class QueryTemplate extends \Google\Model
     return $this->routine;
   }
   /**
-   * @param string
+   * Output only. The QueryTemplate lifecycle state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, DRAFTED, PENDING, DELETED, APPROVED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the QueryTemplate was last modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

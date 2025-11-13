@@ -23,7 +23,9 @@ class RefreshSubscriptionResponse extends \Google\Model
   protected $subscriptionDataType = '';
 
   /**
-   * @param Subscription
+   * The refreshed subscription resource.
+   *
+   * @param Subscription $subscription
    */
   public function setSubscription(Subscription $subscription)
   {

@@ -23,7 +23,9 @@ class DestinationPubSubSubscription extends \Google\Model
   protected $pubsubSubscriptionDataType = '';
 
   /**
-   * @param GooglePubsubV1Subscription
+   * Required. Destination Pub/Sub subscription resource.
+   *
+   * @param GooglePubsubV1Subscription $pubsubSubscription
    */
   public function setPubsubSubscription(GooglePubsubV1Subscription $pubsubSubscription)
   {

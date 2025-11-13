@@ -20,12 +20,20 @@ namespace Google\Service\AnalyticsHub;
 class RevokeSubscriptionRequest extends \Google\Model
 {
   /**
+   * Optional. If the subscription is commercial then this field must be set to
+   * true, otherwise a failure is thrown. This acts as a safety guard to avoid
+   * revoking commercial subscriptions accidentally.
+   *
    * @var bool
    */
   public $revokeCommercial;
 
   /**
-   * @param bool
+   * Optional. If the subscription is commercial then this field must be set to
+   * true, otherwise a failure is thrown. This acts as a safety guard to avoid
+   * revoking commercial subscriptions accidentally.
+   *
+   * @param bool $revokeCommercial
    */
   public function setRevokeCommercial($revokeCommercial)
   {

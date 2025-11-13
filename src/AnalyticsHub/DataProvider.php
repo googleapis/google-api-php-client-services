@@ -20,16 +20,22 @@ namespace Google\Service\AnalyticsHub;
 class DataProvider extends \Google\Model
 {
   /**
+   * Optional. Name of the data provider.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Email or URL of the data provider. Max Length: 1000 bytes.
+   *
    * @var string
    */
   public $primaryContact;
 
   /**
-   * @param string
+   * Optional. Name of the data provider.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class DataProvider extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Email or URL of the data provider. Max Length: 1000 bytes.
+   *
+   * @param string $primaryContact
    */
   public function setPrimaryContact($primaryContact)
   {
