@@ -21,18 +21,26 @@ class GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse extends \Google\Colle
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $policyOrchestratorsType = GoogleCloudOsconfigV2PolicyOrchestrator::class;
   protected $policyOrchestratorsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse extends \Google\Colle
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudOsconfigV2PolicyOrchestrator[]
+   * The policy orchestrators for the specified parent resource.
+   *
+   * @param GoogleCloudOsconfigV2PolicyOrchestrator[] $policyOrchestrators
    */
   public function setPolicyOrchestrators($policyOrchestrators)
   {
@@ -60,7 +70,9 @@ class GoogleCloudOsconfigV2ListPolicyOrchestratorsResponse extends \Google\Colle
     return $this->policyOrchestrators;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

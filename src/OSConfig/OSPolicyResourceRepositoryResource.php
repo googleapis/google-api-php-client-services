@@ -29,7 +29,9 @@ class OSPolicyResourceRepositoryResource extends \Google\Model
   protected $zypperDataType = '';
 
   /**
-   * @param OSPolicyResourceRepositoryResourceAptRepository
+   * An Apt Repository.
+   *
+   * @param OSPolicyResourceRepositoryResourceAptRepository $apt
    */
   public function setApt(OSPolicyResourceRepositoryResourceAptRepository $apt)
   {
@@ -43,7 +45,9 @@ class OSPolicyResourceRepositoryResource extends \Google\Model
     return $this->apt;
   }
   /**
-   * @param OSPolicyResourceRepositoryResourceGooRepository
+   * A Goo Repository.
+   *
+   * @param OSPolicyResourceRepositoryResourceGooRepository $goo
    */
   public function setGoo(OSPolicyResourceRepositoryResourceGooRepository $goo)
   {
@@ -57,7 +61,9 @@ class OSPolicyResourceRepositoryResource extends \Google\Model
     return $this->goo;
   }
   /**
-   * @param OSPolicyResourceRepositoryResourceYumRepository
+   * A Yum Repository.
+   *
+   * @param OSPolicyResourceRepositoryResourceYumRepository $yum
    */
   public function setYum(OSPolicyResourceRepositoryResourceYumRepository $yum)
   {
@@ -71,7 +77,9 @@ class OSPolicyResourceRepositoryResource extends \Google\Model
     return $this->yum;
   }
   /**
-   * @param OSPolicyResourceRepositoryResourceZypperRepository
+   * A Zypper Repository.
+   *
+   * @param OSPolicyResourceRepositoryResourceZypperRepository $zypper
    */
   public function setZypper(OSPolicyResourceRepositoryResourceZypperRepository $zypper)
   {

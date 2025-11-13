@@ -20,16 +20,23 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourceFileRemote extends \Google\Model
 {
   /**
+   * SHA256 checksum of the remote file.
+   *
    * @var string
    */
   public $sha256Checksum;
   /**
+   * Required. URI from which to fetch the object. It should contain both the
+   * protocol and path following the format `{protocol}://{location}`.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * SHA256 checksum of the remote file.
+   *
+   * @param string $sha256Checksum
    */
   public function setSha256Checksum($sha256Checksum)
   {
@@ -43,7 +50,10 @@ class OSPolicyResourceFileRemote extends \Google\Model
     return $this->sha256Checksum;
   }
   /**
-   * @param string
+   * Required. URI from which to fetch the object. It should contain both the
+   * protocol and path following the format `{protocol}://{location}`.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

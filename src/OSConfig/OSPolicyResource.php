@@ -24,6 +24,11 @@ class OSPolicyResource extends \Google\Model
   protected $fileType = OSPolicyResourceFileResource::class;
   protected $fileDataType = '';
   /**
+   * Required. The id of the resource with the following restrictions: * Must
+   * contain only lowercase letters, numbers, and hyphens. * Must start with a
+   * letter. * Must be between 1-63 characters. * Must end with a number or a
+   * letter. * Must be unique within the OS policy.
+   *
    * @var string
    */
   public $id;
@@ -33,7 +38,9 @@ class OSPolicyResource extends \Google\Model
   protected $repositoryDataType = '';
 
   /**
-   * @param OSPolicyResourceExecResource
+   * Exec resource
+   *
+   * @param OSPolicyResourceExecResource $exec
    */
   public function setExec(OSPolicyResourceExecResource $exec)
   {
@@ -47,7 +54,9 @@ class OSPolicyResource extends \Google\Model
     return $this->exec;
   }
   /**
-   * @param OSPolicyResourceFileResource
+   * File resource
+   *
+   * @param OSPolicyResourceFileResource $file
    */
   public function setFile(OSPolicyResourceFileResource $file)
   {
@@ -61,7 +70,12 @@ class OSPolicyResource extends \Google\Model
     return $this->file;
   }
   /**
-   * @param string
+   * Required. The id of the resource with the following restrictions: * Must
+   * contain only lowercase letters, numbers, and hyphens. * Must start with a
+   * letter. * Must be between 1-63 characters. * Must end with a number or a
+   * letter. * Must be unique within the OS policy.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -75,7 +89,9 @@ class OSPolicyResource extends \Google\Model
     return $this->id;
   }
   /**
-   * @param OSPolicyResourcePackageResource
+   * Package resource
+   *
+   * @param OSPolicyResourcePackageResource $pkg
    */
   public function setPkg(OSPolicyResourcePackageResource $pkg)
   {
@@ -89,7 +105,9 @@ class OSPolicyResource extends \Google\Model
     return $this->pkg;
   }
   /**
-   * @param OSPolicyResourceRepositoryResource
+   * Package repository resource
+   *
+   * @param OSPolicyResourceRepositoryResource $repository
    */
   public function setRepository(OSPolicyResourceRepositoryResource $repository)
   {

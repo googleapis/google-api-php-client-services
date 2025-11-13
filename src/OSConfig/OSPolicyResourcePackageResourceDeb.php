@@ -20,6 +20,10 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourcePackageResourceDeb extends \Google\Model
 {
   /**
+   * Whether dependencies should also be installed. - install when false: `dpkg
+   * -i package` - install when true: `apt-get update && apt-get -y install
+   * package.deb`
+   *
    * @var bool
    */
   public $pullDeps;
@@ -27,7 +31,11 @@ class OSPolicyResourcePackageResourceDeb extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param bool
+   * Whether dependencies should also be installed. - install when false: `dpkg
+   * -i package` - install when true: `apt-get update && apt-get -y install
+   * package.deb`
+   *
+   * @param bool $pullDeps
    */
   public function setPullDeps($pullDeps)
   {
@@ -41,7 +49,9 @@ class OSPolicyResourcePackageResourceDeb extends \Google\Model
     return $this->pullDeps;
   }
   /**
-   * @param OSPolicyResourceFile
+   * Required. A deb package.
+   *
+   * @param OSPolicyResourceFile $source
    */
   public function setSource(OSPolicyResourceFile $source)
   {

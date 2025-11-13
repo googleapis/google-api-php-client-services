@@ -19,28 +19,61 @@ namespace Google\Service\OSConfig;
 
 class OSPolicyResourceExecResourceExec extends \Google\Collection
 {
+  /**
+   * Invalid value, the request will return validation error.
+   */
+  public const INTERPRETER_INTERPRETER_UNSPECIFIED = 'INTERPRETER_UNSPECIFIED';
+  /**
+   * If an interpreter is not specified, the source is executed directly. This
+   * execution, without an interpreter, only succeeds for executables and
+   * scripts that have shebang lines.
+   */
+  public const INTERPRETER_NONE = 'NONE';
+  /**
+   * Indicates that the script runs with `/bin/sh` on Linux and `cmd.exe` on
+   * Windows.
+   */
+  public const INTERPRETER_SHELL = 'SHELL';
+  /**
+   * Indicates that the script runs with PowerShell.
+   */
+  public const INTERPRETER_POWERSHELL = 'POWERSHELL';
   protected $collection_key = 'args';
   /**
+   * Optional arguments to pass to the source during execution.
+   *
    * @var string[]
    */
   public $args;
   protected $fileType = OSPolicyResourceFile::class;
   protected $fileDataType = '';
   /**
+   * Required. The script interpreter to use.
+   *
    * @var string
    */
   public $interpreter;
   /**
+   * Only recorded for enforce Exec. Path to an output file (that is created by
+   * this Exec) whose content will be recorded in OSPolicyResourceCompliance
+   * after a successful run. Absence or failure to read this file will result in
+   * this ExecResource being non-compliant. Output file size is limited to 500K
+   * bytes.
+   *
    * @var string
    */
   public $outputFilePath;
   /**
+   * An inline script. The size of the script is limited to 32KiB.
+   *
    * @var string
    */
   public $script;
 
   /**
-   * @param string[]
+   * Optional arguments to pass to the source during execution.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -54,7 +87,9 @@ class OSPolicyResourceExecResourceExec extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param OSPolicyResourceFile
+   * A remote or local file.
+   *
+   * @param OSPolicyResourceFile $file
    */
   public function setFile(OSPolicyResourceFile $file)
   {
@@ -68,21 +103,31 @@ class OSPolicyResourceExecResourceExec extends \Google\Collection
     return $this->file;
   }
   /**
-   * @param string
+   * Required. The script interpreter to use.
+   *
+   * Accepted values: INTERPRETER_UNSPECIFIED, NONE, SHELL, POWERSHELL
+   *
+   * @param self::INTERPRETER_* $interpreter
    */
   public function setInterpreter($interpreter)
   {
     $this->interpreter = $interpreter;
   }
   /**
-   * @return string
+   * @return self::INTERPRETER_*
    */
   public function getInterpreter()
   {
     return $this->interpreter;
   }
   /**
-   * @param string
+   * Only recorded for enforce Exec. Path to an output file (that is created by
+   * this Exec) whose content will be recorded in OSPolicyResourceCompliance
+   * after a successful run. Absence or failure to read this file will result in
+   * this ExecResource being non-compliant. Output file size is limited to 500K
+   * bytes.
+   *
+   * @param string $outputFilePath
    */
   public function setOutputFilePath($outputFilePath)
   {
@@ -96,7 +141,9 @@ class OSPolicyResourceExecResourceExec extends \Google\Collection
     return $this->outputFilePath;
   }
   /**
-   * @param string
+   * An inline script. The size of the script is limited to 32KiB.
+   *
+   * @param string $script
    */
   public function setScript($script)
   {

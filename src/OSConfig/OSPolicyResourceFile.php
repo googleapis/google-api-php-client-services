@@ -20,12 +20,18 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourceFile extends \Google\Model
 {
   /**
+   * Defaults to false. When false, files are subject to validations based on
+   * the file type: Remote: A checksum must be specified. Cloud Storage: An
+   * object generation number must be specified.
+   *
    * @var bool
    */
   public $allowInsecure;
   protected $gcsType = OSPolicyResourceFileGcs::class;
   protected $gcsDataType = '';
   /**
+   * A local path within the VM to use.
+   *
    * @var string
    */
   public $localPath;
@@ -33,7 +39,11 @@ class OSPolicyResourceFile extends \Google\Model
   protected $remoteDataType = '';
 
   /**
-   * @param bool
+   * Defaults to false. When false, files are subject to validations based on
+   * the file type: Remote: A checksum must be specified. Cloud Storage: An
+   * object generation number must be specified.
+   *
+   * @param bool $allowInsecure
    */
   public function setAllowInsecure($allowInsecure)
   {
@@ -47,7 +57,9 @@ class OSPolicyResourceFile extends \Google\Model
     return $this->allowInsecure;
   }
   /**
-   * @param OSPolicyResourceFileGcs
+   * A Cloud Storage object.
+   *
+   * @param OSPolicyResourceFileGcs $gcs
    */
   public function setGcs(OSPolicyResourceFileGcs $gcs)
   {
@@ -61,7 +73,9 @@ class OSPolicyResourceFile extends \Google\Model
     return $this->gcs;
   }
   /**
-   * @param string
+   * A local path within the VM to use.
+   *
+   * @param string $localPath
    */
   public function setLocalPath($localPath)
   {
@@ -75,7 +89,9 @@ class OSPolicyResourceFile extends \Google\Model
     return $this->localPath;
   }
   /**
-   * @param OSPolicyResourceFileRemote
+   * A generic remote file.
+   *
+   * @param OSPolicyResourceFileRemote $remote
    */
   public function setRemote(OSPolicyResourceFileRemote $remote)
   {

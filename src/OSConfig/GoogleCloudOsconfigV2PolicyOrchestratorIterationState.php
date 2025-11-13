@@ -19,39 +19,81 @@ namespace Google\Service\OSConfig;
 
 class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Iteration is in progress.
+   */
+  public const STATE_PROCESSING = 'PROCESSING';
+  /**
+   * Iteration completed, with all actions being successful.
+   */
+  public const STATE_COMPLETED = 'COMPLETED';
+  /**
+   * Iteration completed, with failures.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Iteration was explicitly cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Impossible to determine current state of the iteration.
+   */
+  public const STATE_UNKNOWN = 'UNKNOWN';
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
+   * Output only. Number of orchestration actions which failed so far. For more
+   * details, query the Cloud Logs.
+   *
    * @var string
    */
   public $failedActions;
   /**
+   * Output only. Finish time of the wave iteration.
+   *
    * @var string
    */
   public $finishTime;
   /**
+   * Output only. Unique identifier of the iteration.
+   *
    * @var string
    */
   public $iterationId;
   /**
+   * Output only. Overall number of actions done by the orchestrator so far.
+   *
    * @var string
    */
   public $performedActions;
   /**
+   * Output only. An estimated percentage of the progress. Number between 0 and
+   * 100.
+   *
    * @var float
    */
   public $progress;
   /**
+   * Output only. Start time of the wave iteration.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. State of the iteration.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param Status
+   * Output only. Error thrown in the wave iteration.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -65,7 +107,10 @@ class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Mode
     return $this->error;
   }
   /**
-   * @param string
+   * Output only. Number of orchestration actions which failed so far. For more
+   * details, query the Cloud Logs.
+   *
+   * @param string $failedActions
    */
   public function setFailedActions($failedActions)
   {
@@ -79,7 +124,9 @@ class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Mode
     return $this->failedActions;
   }
   /**
-   * @param string
+   * Output only. Finish time of the wave iteration.
+   *
+   * @param string $finishTime
    */
   public function setFinishTime($finishTime)
   {
@@ -93,7 +140,9 @@ class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Mode
     return $this->finishTime;
   }
   /**
-   * @param string
+   * Output only. Unique identifier of the iteration.
+   *
+   * @param string $iterationId
    */
   public function setIterationId($iterationId)
   {
@@ -107,7 +156,9 @@ class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Mode
     return $this->iterationId;
   }
   /**
-   * @param string
+   * Output only. Overall number of actions done by the orchestrator so far.
+   *
+   * @param string $performedActions
    */
   public function setPerformedActions($performedActions)
   {
@@ -121,7 +172,10 @@ class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Mode
     return $this->performedActions;
   }
   /**
-   * @param float
+   * Output only. An estimated percentage of the progress. Number between 0 and
+   * 100.
+   *
+   * @param float $progress
    */
   public function setProgress($progress)
   {
@@ -135,7 +189,9 @@ class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Mode
     return $this->progress;
   }
   /**
-   * @param string
+   * Output only. Start time of the wave iteration.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -149,14 +205,19 @@ class GoogleCloudOsconfigV2PolicyOrchestratorIterationState extends \Google\Mode
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. State of the iteration.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PROCESSING, COMPLETED, FAILED,
+   * CANCELLED, UNKNOWN
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

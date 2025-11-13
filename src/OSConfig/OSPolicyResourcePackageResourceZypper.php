@@ -20,12 +20,16 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourcePackageResourceZypper extends \Google\Model
 {
   /**
+   * Required. Package name.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. Package name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

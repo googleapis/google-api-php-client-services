@@ -21,12 +21,16 @@ class GoogleCloudOsconfigV2OrchestrationScopeLocationSelector extends \Google\Co
 {
   protected $collection_key = 'includedLocations';
   /**
+   * Optional. Names of the locations in scope. Format: `us-central1-a`
+   *
    * @var string[]
    */
   public $includedLocations;
 
   /**
-   * @param string[]
+   * Optional. Names of the locations in scope. Format: `us-central1-a`
+   *
+   * @param string[] $includedLocations
    */
   public function setIncludedLocations($includedLocations)
   {

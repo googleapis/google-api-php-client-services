@@ -20,12 +20,18 @@ namespace Google\Service\OSConfig;
 class OSPolicyAssignmentLabelSet extends \Google\Model
 {
   /**
+   * Labels are identified by key/value pairs in this map. A VM should contain
+   * all the key/value pairs specified in this map to be selected.
+   *
    * @var string[]
    */
   public $labels;
 
   /**
-   * @param string[]
+   * Labels are identified by key/value pairs in this map. A VM should contain
+   * all the key/value pairs specified in this map to be selected.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {

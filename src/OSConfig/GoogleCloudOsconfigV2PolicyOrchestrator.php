@@ -20,26 +20,47 @@ namespace Google\Service\OSConfig;
 class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
 {
   /**
+   * Required. Action to be done by the orchestrator in
+   * `projects/{project_id}/zones/{zone_id}` locations defined by the
+   * `orchestration_scope`. Allowed values: - `UPSERT` - Orchestrator will
+   * create or update target resources. - `DELETE` - Orchestrator will delete
+   * target resources, if they exist
+   *
    * @var string
    */
   public $action;
   /**
+   * Output only. Timestamp when the policy orchestrator resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Freeform text describing the purpose of the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. Labels as key value pairs
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Immutable. Identifier. In form of * `organizations/{organization_id}/locati
+   * ons/global/policyOrchestrators/{orchestrator_id}` * `folders/{folder_id}/lo
+   * cations/global/policyOrchestrators/{orchestrator_id}` * `projects/{project_
+   * id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+   *
    * @var string
    */
   public $name;
@@ -50,20 +71,39 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
   protected $orchestrationStateType = GoogleCloudOsconfigV2PolicyOrchestratorOrchestrationState::class;
   protected $orchestrationStateDataType = '';
   /**
+   * Output only. Set to true, if the there are ongoing changes being applied by
+   * the orchestrator.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Optional. State of the orchestrator. Can be updated to change orchestrator
+   * behaviour. Allowed values: - `ACTIVE` - orchestrator is actively looking
+   * for actions to be taken. - `STOPPED` - orchestrator won't make any changes.
+   * Note: There might be more states added in the future. We use string here
+   * instead of an enum, to avoid the need of propagating new states to all the
+   * client code.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Timestamp when the policy orchestrator resource was last
+   * modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Required. Action to be done by the orchestrator in
+   * `projects/{project_id}/zones/{zone_id}` locations defined by the
+   * `orchestration_scope`. Allowed values: - `UPSERT` - Orchestrator will
+   * create or update target resources. - `DELETE` - Orchestrator will delete
+   * target resources, if they exist
+   *
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -77,7 +117,9 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->action;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the policy orchestrator resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -91,7 +133,9 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Freeform text describing the purpose of the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -105,7 +149,11 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -119,7 +167,9 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. Labels as key value pairs
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -133,7 +183,12 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Immutable. Identifier. In form of * `organizations/{organization_id}/locati
+   * ons/global/policyOrchestrators/{orchestrator_id}` * `folders/{folder_id}/lo
+   * cations/global/policyOrchestrators/{orchestrator_id}` * `projects/{project_
+   * id_or_number}/locations/global/policyOrchestrators/{orchestrator_id}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -147,7 +202,9 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudOsconfigV2OrchestratedResource
+   * Required. Resource to be orchestrated by the policy orchestrator.
+   *
+   * @param GoogleCloudOsconfigV2OrchestratedResource $orchestratedResource
    */
   public function setOrchestratedResource(GoogleCloudOsconfigV2OrchestratedResource $orchestratedResource)
   {
@@ -161,7 +218,15 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->orchestratedResource;
   }
   /**
-   * @param GoogleCloudOsconfigV2OrchestrationScope
+   * Optional. Defines scope for the orchestration, in context of the enclosing
+   * PolicyOrchestrator resource. Scope is expanded into a list of pairs, in
+   * which the rollout action will take place. Expansion starts with a Folder
+   * resource parenting the PolicyOrchestrator resource: - All the descendant
+   * projects are listed. - List of project is cross joined with a list of all
+   * available zones. - Resulting list of pairs is filtered according to the
+   * selectors.
+   *
+   * @param GoogleCloudOsconfigV2OrchestrationScope $orchestrationScope
    */
   public function setOrchestrationScope(GoogleCloudOsconfigV2OrchestrationScope $orchestrationScope)
   {
@@ -175,7 +240,9 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->orchestrationScope;
   }
   /**
-   * @param GoogleCloudOsconfigV2PolicyOrchestratorOrchestrationState
+   * Output only. State of the orchestration.
+   *
+   * @param GoogleCloudOsconfigV2PolicyOrchestratorOrchestrationState $orchestrationState
    */
   public function setOrchestrationState(GoogleCloudOsconfigV2PolicyOrchestratorOrchestrationState $orchestrationState)
   {
@@ -189,7 +256,10 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->orchestrationState;
   }
   /**
-   * @param bool
+   * Output only. Set to true, if the there are ongoing changes being applied by
+   * the orchestrator.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -203,7 +273,14 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Optional. State of the orchestrator. Can be updated to change orchestrator
+   * behaviour. Allowed values: - `ACTIVE` - orchestrator is actively looking
+   * for actions to be taken. - `STOPPED` - orchestrator won't make any changes.
+   * Note: There might be more states added in the future. We use string here
+   * instead of an enum, to avoid the need of propagating new states to all the
+   * client code.
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -217,7 +294,10 @@ class GoogleCloudOsconfigV2PolicyOrchestrator extends \Google\Model
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the policy orchestrator resource was last
+   * modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

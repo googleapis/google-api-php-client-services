@@ -19,56 +19,112 @@ namespace Google\Service\OSConfig;
 
 class OSPolicyAssignment extends \Google\Collection
 {
+  /**
+   * Invalid value
+   */
+  public const ROLLOUT_STATE_ROLLOUT_STATE_UNSPECIFIED = 'ROLLOUT_STATE_UNSPECIFIED';
+  /**
+   * The rollout is in progress.
+   */
+  public const ROLLOUT_STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * The rollout is being cancelled.
+   */
+  public const ROLLOUT_STATE_CANCELLING = 'CANCELLING';
+  /**
+   * The rollout is cancelled.
+   */
+  public const ROLLOUT_STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The rollout has completed successfully.
+   */
+  public const ROLLOUT_STATE_SUCCEEDED = 'SUCCEEDED';
   protected $collection_key = 'osPolicies';
   /**
+   * Output only. Indicates that this revision has been successfully rolled out
+   * in this zone and new VMs will be assigned OS policies from this revision.
+   * For a given OS policy assignment, there is only one revision with a value
+   * of `true` for this field.
+   *
    * @var bool
    */
   public $baseline;
   /**
+   * Output only. Indicates that this revision deletes the OS policy assignment.
+   *
    * @var bool
    */
   public $deleted;
   /**
+   * OS policy assignment description. Length of the description is limited to
+   * 1024 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * The etag for this OS policy assignment. If this is provided on update, it
+   * must match the server's etag.
+   *
    * @var string
    */
   public $etag;
   protected $instanceFilterType = OSPolicyAssignmentInstanceFilter::class;
   protected $instanceFilterDataType = '';
   /**
+   * Resource name. Format: `projects/{project_number}/locations/{location}/osPo
+   * licyAssignments/{os_policy_assignment_id}` This field is ignored when you
+   * create an OS policy assignment.
+   *
    * @var string
    */
   public $name;
   protected $osPoliciesType = OSPolicy::class;
   protected $osPoliciesDataType = 'array';
   /**
+   * Output only. Indicates that reconciliation is in progress for the revision.
+   * This value is `true` when the `rollout_state` is one of: * IN_PROGRESS *
+   * CANCELLING
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. The timestamp that the revision was created.
+   *
    * @var string
    */
   public $revisionCreateTime;
   /**
+   * Output only. The assignment revision ID A new revision is committed
+   * whenever a rollout is triggered for a OS policy assignment
+   *
    * @var string
    */
   public $revisionId;
   protected $rolloutType = OSPolicyAssignmentRollout::class;
   protected $rolloutDataType = '';
   /**
+   * Output only. OS policy assignment rollout state
+   *
    * @var string
    */
   public $rolloutState;
   /**
+   * Output only. Server generated unique id for the OS policy assignment
+   * resource.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param bool
+   * Output only. Indicates that this revision has been successfully rolled out
+   * in this zone and new VMs will be assigned OS policies from this revision.
+   * For a given OS policy assignment, there is only one revision with a value
+   * of `true` for this field.
+   *
+   * @param bool $baseline
    */
   public function setBaseline($baseline)
   {
@@ -82,7 +138,9 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->baseline;
   }
   /**
-   * @param bool
+   * Output only. Indicates that this revision deletes the OS policy assignment.
+   *
+   * @param bool $deleted
    */
   public function setDeleted($deleted)
   {
@@ -96,7 +154,10 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->deleted;
   }
   /**
-   * @param string
+   * OS policy assignment description. Length of the description is limited to
+   * 1024 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -110,7 +171,10 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The etag for this OS policy assignment. If this is provided on update, it
+   * must match the server's etag.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -124,7 +188,9 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param OSPolicyAssignmentInstanceFilter
+   * Required. Filter to select VMs.
+   *
+   * @param OSPolicyAssignmentInstanceFilter $instanceFilter
    */
   public function setInstanceFilter(OSPolicyAssignmentInstanceFilter $instanceFilter)
   {
@@ -138,7 +204,11 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->instanceFilter;
   }
   /**
-   * @param string
+   * Resource name. Format: `projects/{project_number}/locations/{location}/osPo
+   * licyAssignments/{os_policy_assignment_id}` This field is ignored when you
+   * create an OS policy assignment.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -152,7 +222,9 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param OSPolicy[]
+   * Required. List of OS policies to be applied to the VMs.
+   *
+   * @param OSPolicy[] $osPolicies
    */
   public function setOsPolicies($osPolicies)
   {
@@ -166,7 +238,11 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->osPolicies;
   }
   /**
-   * @param bool
+   * Output only. Indicates that reconciliation is in progress for the revision.
+   * This value is `true` when the `rollout_state` is one of: * IN_PROGRESS *
+   * CANCELLING
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -180,7 +256,9 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. The timestamp that the revision was created.
+   *
+   * @param string $revisionCreateTime
    */
   public function setRevisionCreateTime($revisionCreateTime)
   {
@@ -194,7 +272,10 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->revisionCreateTime;
   }
   /**
-   * @param string
+   * Output only. The assignment revision ID A new revision is committed
+   * whenever a rollout is triggered for a OS policy assignment
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -208,7 +289,13 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->revisionId;
   }
   /**
-   * @param OSPolicyAssignmentRollout
+   * Required. Rollout to deploy the OS policy assignment. A rollout is
+   * triggered in the following situations: 1) OSPolicyAssignment is created. 2)
+   * OSPolicyAssignment is updated and the update contains changes to one of the
+   * following fields: - instance_filter - os_policies 3) OSPolicyAssignment is
+   * deleted.
+   *
+   * @param OSPolicyAssignmentRollout $rollout
    */
   public function setRollout(OSPolicyAssignmentRollout $rollout)
   {
@@ -222,21 +309,29 @@ class OSPolicyAssignment extends \Google\Collection
     return $this->rollout;
   }
   /**
-   * @param string
+   * Output only. OS policy assignment rollout state
+   *
+   * Accepted values: ROLLOUT_STATE_UNSPECIFIED, IN_PROGRESS, CANCELLING,
+   * CANCELLED, SUCCEEDED
+   *
+   * @param self::ROLLOUT_STATE_* $rolloutState
    */
   public function setRolloutState($rolloutState)
   {
     $this->rolloutState = $rolloutState;
   }
   /**
-   * @return string
+   * @return self::ROLLOUT_STATE_*
    */
   public function getRolloutState()
   {
     return $this->rolloutState;
   }
   /**
-   * @param string
+   * Output only. Server generated unique id for the OS policy assignment
+   * resource.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourceRepositoryResourceGooRepository extends \Google\Model
 {
   /**
+   * Required. The name of the repository.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The url of the repository.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Required. The name of the repository.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class OSPolicyResourceRepositoryResourceGooRepository extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The url of the repository.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

@@ -20,26 +20,60 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourceFileResource extends \Google\Model
 {
   /**
+   * Unspecified is invalid.
+   */
+  public const STATE_DESIRED_STATE_UNSPECIFIED = 'DESIRED_STATE_UNSPECIFIED';
+  /**
+   * Ensure file at path is present.
+   */
+  public const STATE_PRESENT = 'PRESENT';
+  /**
+   * Ensure file at path is absent.
+   */
+  public const STATE_ABSENT = 'ABSENT';
+  /**
+   * Ensure the contents of the file at path matches. If the file does not exist
+   * it will be created.
+   */
+  public const STATE_CONTENTS_MATCH = 'CONTENTS_MATCH';
+  /**
+   * A a file with this content. The size of the content is limited to 32KiB.
+   *
    * @var string
    */
   public $content;
   protected $fileType = OSPolicyResourceFile::class;
   protected $fileDataType = '';
   /**
+   * Required. The absolute path of the file within the VM.
+   *
    * @var string
    */
   public $path;
   /**
+   * Consists of three octal digits which represent, in order, the permissions
+   * of the owner, group, and other users for the file (similarly to the numeric
+   * mode used in the linux chmod utility). Each digit represents a three bit
+   * number with the 4 bit corresponding to the read permissions, the 2 bit
+   * corresponds to the write bit, and the one bit corresponds to the execute
+   * permission. Default behavior is 755. Below are some examples of permissions
+   * and their associated values: read, write, and execute: 7 read and execute:
+   * 5 read and write: 6 read only: 4
+   *
    * @var string
    */
   public $permissions;
   /**
+   * Required. Desired state of the file.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * A a file with this content. The size of the content is limited to 32KiB.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -53,7 +87,9 @@ class OSPolicyResourceFileResource extends \Google\Model
     return $this->content;
   }
   /**
-   * @param OSPolicyResourceFile
+   * A remote or local source.
+   *
+   * @param OSPolicyResourceFile $file
    */
   public function setFile(OSPolicyResourceFile $file)
   {
@@ -67,7 +103,9 @@ class OSPolicyResourceFileResource extends \Google\Model
     return $this->file;
   }
   /**
-   * @param string
+   * Required. The absolute path of the file within the VM.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -81,7 +119,16 @@ class OSPolicyResourceFileResource extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Consists of three octal digits which represent, in order, the permissions
+   * of the owner, group, and other users for the file (similarly to the numeric
+   * mode used in the linux chmod utility). Each digit represents a three bit
+   * number with the 4 bit corresponding to the read permissions, the 2 bit
+   * corresponds to the write bit, and the one bit corresponds to the execute
+   * permission. Default behavior is 755. Below are some examples of permissions
+   * and their associated values: read, write, and execute: 7 read and execute:
+   * 5 read and write: 6 read only: 4
+   *
+   * @param string $permissions
    */
   public function setPermissions($permissions)
   {
@@ -95,14 +142,18 @@ class OSPolicyResourceFileResource extends \Google\Model
     return $this->permissions;
   }
   /**
-   * @param string
+   * Required. Desired state of the file.
+   *
+   * Accepted values: DESIRED_STATE_UNSPECIFIED, PRESENT, ABSENT, CONTENTS_MATCH
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

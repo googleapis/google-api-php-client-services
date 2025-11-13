@@ -21,24 +21,37 @@ class OSPolicyResourceRepositoryResourceZypperRepository extends \Google\Collect
 {
   protected $collection_key = 'gpgKeys';
   /**
+   * Required. The location of the repository directory.
+   *
    * @var string
    */
   public $baseUrl;
   /**
+   * The display name of the repository.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * URIs of GPG keys.
+   *
    * @var string[]
    */
   public $gpgKeys;
   /**
+   * Required. A one word, unique name for this repository. This is the `repo
+   * id` in the zypper config file and also the `display_name` if `display_name`
+   * is omitted. This id is also used as the unique identifier when checking for
+   * GuestPolicy conflicts.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Required. The location of the repository directory.
+   *
+   * @param string $baseUrl
    */
   public function setBaseUrl($baseUrl)
   {
@@ -52,7 +65,9 @@ class OSPolicyResourceRepositoryResourceZypperRepository extends \Google\Collect
     return $this->baseUrl;
   }
   /**
-   * @param string
+   * The display name of the repository.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -66,7 +81,9 @@ class OSPolicyResourceRepositoryResourceZypperRepository extends \Google\Collect
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * URIs of GPG keys.
+   *
+   * @param string[] $gpgKeys
    */
   public function setGpgKeys($gpgKeys)
   {
@@ -80,7 +97,12 @@ class OSPolicyResourceRepositoryResourceZypperRepository extends \Google\Collect
     return $this->gpgKeys;
   }
   /**
-   * @param string
+   * Required. A one word, unique name for this repository. This is the `repo
+   * id` in the zypper config file and also the `display_name` if `display_name`
+   * is omitted. This id is also used as the unique identifier when checking for
+   * GuestPolicy conflicts.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

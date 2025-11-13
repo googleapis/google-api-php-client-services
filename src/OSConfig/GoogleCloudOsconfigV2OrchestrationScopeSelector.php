@@ -25,7 +25,9 @@ class GoogleCloudOsconfigV2OrchestrationScopeSelector extends \Google\Model
   protected $resourceHierarchySelectorDataType = '';
 
   /**
-   * @param GoogleCloudOsconfigV2OrchestrationScopeLocationSelector
+   * Selector for selecting locations.
+   *
+   * @param GoogleCloudOsconfigV2OrchestrationScopeLocationSelector $locationSelector
    */
   public function setLocationSelector(GoogleCloudOsconfigV2OrchestrationScopeLocationSelector $locationSelector)
   {
@@ -39,7 +41,9 @@ class GoogleCloudOsconfigV2OrchestrationScopeSelector extends \Google\Model
     return $this->locationSelector;
   }
   /**
-   * @param GoogleCloudOsconfigV2OrchestrationScopeResourceHierarchySelector
+   * Selector for selecting resource hierarchy.
+   *
+   * @param GoogleCloudOsconfigV2OrchestrationScopeResourceHierarchySelector $resourceHierarchySelector
    */
   public function setResourceHierarchySelector(GoogleCloudOsconfigV2OrchestrationScopeResourceHierarchySelector $resourceHierarchySelector)
   {

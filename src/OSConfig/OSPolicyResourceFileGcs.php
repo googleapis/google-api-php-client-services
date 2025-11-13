@@ -20,20 +20,28 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourceFileGcs extends \Google\Model
 {
   /**
+   * Required. Bucket of the Cloud Storage object.
+   *
    * @var string
    */
   public $bucket;
   /**
+   * Generation number of the Cloud Storage object.
+   *
    * @var string
    */
   public $generation;
   /**
+   * Required. Name of the Cloud Storage object.
+   *
    * @var string
    */
   public $object;
 
   /**
-   * @param string
+   * Required. Bucket of the Cloud Storage object.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -47,7 +55,9 @@ class OSPolicyResourceFileGcs extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * Generation number of the Cloud Storage object.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -61,7 +71,9 @@ class OSPolicyResourceFileGcs extends \Google\Model
     return $this->generation;
   }
   /**
-   * @param string
+   * Required. Name of the Cloud Storage object.
+   *
+   * @param string $object
    */
   public function setObject($object)
   {

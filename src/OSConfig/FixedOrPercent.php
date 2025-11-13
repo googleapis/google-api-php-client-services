@@ -20,16 +20,23 @@ namespace Google\Service\OSConfig;
 class FixedOrPercent extends \Google\Model
 {
   /**
+   * Specifies a fixed value.
+   *
    * @var int
    */
   public $fixed;
   /**
+   * Specifies the relative value defined as a percentage, which will be
+   * multiplied by a reference value.
+   *
    * @var int
    */
   public $percent;
 
   /**
-   * @param int
+   * Specifies a fixed value.
+   *
+   * @param int $fixed
    */
   public function setFixed($fixed)
   {
@@ -43,7 +50,10 @@ class FixedOrPercent extends \Google\Model
     return $this->fixed;
   }
   /**
-   * @param int
+   * Specifies the relative value defined as a percentage, which will be
+   * multiplied by a reference value.
+   *
+   * @param int $percent
    */
   public function setPercent($percent)
   {

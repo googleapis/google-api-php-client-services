@@ -20,6 +20,15 @@ namespace Google\Service\OSConfig;
 class GoogleCloudOsconfigV2OrchestratedResource extends \Google\Model
 {
   /**
+   * Optional. ID of the resource to be used while generating set of affected
+   * resources. For UPSERT action the value is auto-generated during
+   * PolicyOrchestrator creation when not set. When the value is set it should
+   * following next restrictions: * Must contain only lowercase letters,
+   * numbers, and hyphens. * Must start with a letter. * Must be between 1-63
+   * characters. * Must end with a number or a letter. * Must be unique within
+   * the project. For DELETE action, ID must be specified explicitly during
+   * PolicyOrchestrator creation.
+   *
    * @var string
    */
   public $id;
@@ -27,7 +36,16 @@ class GoogleCloudOsconfigV2OrchestratedResource extends \Google\Model
   protected $osPolicyAssignmentV1PayloadDataType = '';
 
   /**
-   * @param string
+   * Optional. ID of the resource to be used while generating set of affected
+   * resources. For UPSERT action the value is auto-generated during
+   * PolicyOrchestrator creation when not set. When the value is set it should
+   * following next restrictions: * Must contain only lowercase letters,
+   * numbers, and hyphens. * Must start with a letter. * Must be between 1-63
+   * characters. * Must end with a number or a letter. * Must be unique within
+   * the project. For DELETE action, ID must be specified explicitly during
+   * PolicyOrchestrator creation.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -41,7 +59,15 @@ class GoogleCloudOsconfigV2OrchestratedResource extends \Google\Model
     return $this->id;
   }
   /**
-   * @param OSPolicyAssignment
+   * Optional. OSPolicyAssignment resource to be created, updated or deleted.
+   * Name field is ignored and replace with a generated value. With this field
+   * set, orchestrator will perform actions on
+   * `project/{project}/locations/{zone}/osPolicyAssignments/{resource_id}`
+   * resources, where `project` and `zone` pairs come from the expanded scope,
+   * and `resource_id` comes from the `resource_id` field of orchestrator
+   * resource.
+   *
+   * @param OSPolicyAssignment $osPolicyAssignmentV1Payload
    */
   public function setOsPolicyAssignmentV1Payload(OSPolicyAssignment $osPolicyAssignmentV1Payload)
   {
