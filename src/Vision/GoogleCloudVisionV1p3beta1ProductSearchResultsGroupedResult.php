@@ -28,7 +28,9 @@ class GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult extends \Googl
   protected $resultsDataType = 'array';
 
   /**
-   * @param GoogleCloudVisionV1p3beta1BoundingPoly
+   * The bounding polygon around the product detected in the query image.
+   *
+   * @param GoogleCloudVisionV1p3beta1BoundingPoly $boundingPoly
    */
   public function setBoundingPoly(GoogleCloudVisionV1p3beta1BoundingPoly $boundingPoly)
   {
@@ -42,7 +44,9 @@ class GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult extends \Googl
     return $this->boundingPoly;
   }
   /**
-   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation[]
+   * List of generic predictions for the object in the bounding box.
+   *
+   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation[] $objectAnnotations
    */
   public function setObjectAnnotations($objectAnnotations)
   {
@@ -56,7 +60,9 @@ class GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult extends \Googl
     return $this->objectAnnotations;
   }
   /**
-   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsResult[]
+   * List of results, one for each product match.
+   *
+   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsResult[] $results
    */
   public function setResults($results)
   {

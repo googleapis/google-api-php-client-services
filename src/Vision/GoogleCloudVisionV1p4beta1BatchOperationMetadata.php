@@ -20,20 +20,52 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p4beta1BatchOperationMetadata extends \Google\Model
 {
   /**
+   * Invalid.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Request is actively being processed.
+   */
+  public const STATE_PROCESSING = 'PROCESSING';
+  /**
+   * The request is done and at least one item has been successfully processed.
+   */
+  public const STATE_SUCCESSFUL = 'SUCCESSFUL';
+  /**
+   * The request is done and no item has been successfully processed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The request is done after the longrunning.Operations.CancelOperation has
+   * been called by the user. Any records that were processed before the cancel
+   * command are output as specified in the request.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The time when the batch request is finished and
+   * google.longrunning.Operation.done is set to true.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The current state of the batch operation.
+   *
    * @var string
    */
   public $state;
   /**
+   * The time when the batch request was submitted to the server.
+   *
    * @var string
    */
   public $submitTime;
 
   /**
-   * @param string
+   * The time when the batch request is finished and
+   * google.longrunning.Operation.done is set to true.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -47,21 +79,28 @@ class GoogleCloudVisionV1p4beta1BatchOperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The current state of the batch operation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PROCESSING, SUCCESSFUL, FAILED,
+   * CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The time when the batch request was submitted to the server.
+   *
+   * @param string $submitTime
    */
   public function setSubmitTime($submitTime)
   {

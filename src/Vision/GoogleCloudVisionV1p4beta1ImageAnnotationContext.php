@@ -20,16 +20,24 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p4beta1ImageAnnotationContext extends \Google\Model
 {
   /**
+   * If the file was a PDF or TIFF, this field gives the page number within the
+   * file used to produce the image.
+   *
    * @var int
    */
   public $pageNumber;
   /**
+   * The URI of the file used to produce the image.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param int
+   * If the file was a PDF or TIFF, this field gives the page number within the
+   * file used to produce the image.
+   *
+   * @param int $pageNumber
    */
   public function setPageNumber($pageNumber)
   {
@@ -43,7 +51,9 @@ class GoogleCloudVisionV1p4beta1ImageAnnotationContext extends \Google\Model
     return $this->pageNumber;
   }
   /**
-   * @param string
+   * The URI of the file used to produce the image.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

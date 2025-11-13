@@ -22,12 +22,16 @@ class GoogleCloudVisionV1p4beta1FaceRecognitionResult extends \Google\Model
   protected $celebrityType = GoogleCloudVisionV1p4beta1Celebrity::class;
   protected $celebrityDataType = '';
   /**
+   * Recognition confidence. Range [0, 1].
+   *
    * @var float
    */
   public $confidence;
 
   /**
-   * @param GoogleCloudVisionV1p4beta1Celebrity
+   * The Celebrity that this face was matched to.
+   *
+   * @param GoogleCloudVisionV1p4beta1Celebrity $celebrity
    */
   public function setCelebrity(GoogleCloudVisionV1p4beta1Celebrity $celebrity)
   {
@@ -41,7 +45,9 @@ class GoogleCloudVisionV1p4beta1FaceRecognitionResult extends \Google\Model
     return $this->celebrity;
   }
   /**
-   * @param float
+   * Recognition confidence. Range [0, 1].
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {

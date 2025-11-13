@@ -26,7 +26,9 @@ class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends \Google\Collec
   protected $statusesDataType = 'array';
 
   /**
-   * @param GoogleCloudVisionV1p3beta1ReferenceImage[]
+   * The list of reference_images that are imported successfully.
+   *
+   * @param GoogleCloudVisionV1p3beta1ReferenceImage[] $referenceImages
    */
   public function setReferenceImages($referenceImages)
   {
@@ -40,7 +42,12 @@ class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends \Google\Collec
     return $this->referenceImages;
   }
   /**
-   * @param Status[]
+   * The rpc status for each ImportProductSet request, including both successes
+   * and errors. The number of statuses here matches the number of lines in the
+   * csv file, and statuses[i] stores the success or failure status of
+   * processing the i-th line of the csv, starting from line 0.
+   *
+   * @param Status[] $statuses
    */
   public function setStatuses($statuses)
   {

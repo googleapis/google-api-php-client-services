@@ -20,24 +20,38 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation extends \Google\Model
 {
   /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Object ID that should align with EntityAnnotation mid.
+   *
    * @var string
    */
   public $mid;
   /**
+   * Object name, expressed in its `language_code` language.
+   *
    * @var string
    */
   public $name;
   /**
+   * Score of the result. Range [0, 1].
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param string
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -51,7 +65,9 @@ class GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation extends \Go
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Object ID that should align with EntityAnnotation mid.
+   *
+   * @param string $mid
    */
   public function setMid($mid)
   {
@@ -65,7 +81,9 @@ class GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation extends \Go
     return $this->mid;
   }
   /**
-   * @param string
+   * Object name, expressed in its `language_code` language.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +97,9 @@ class GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation extends \Go
     return $this->name;
   }
   /**
-   * @param float
+   * Score of the result. Range [0, 1].
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

@@ -21,6 +21,10 @@ class GoogleCloudVisionV1p3beta1ProductSearchResults extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * Timestamp of the index which provided these results. Products added to the
+   * product set and products removed from the product set after this time are
+   * not reflected in the current results.
+   *
    * @var string
    */
   public $indexTime;
@@ -30,7 +34,11 @@ class GoogleCloudVisionV1p3beta1ProductSearchResults extends \Google\Collection
   protected $resultsDataType = 'array';
 
   /**
-   * @param string
+   * Timestamp of the index which provided these results. Products added to the
+   * product set and products removed from the product set after this time are
+   * not reflected in the current results.
+   *
+   * @param string $indexTime
    */
   public function setIndexTime($indexTime)
   {
@@ -44,7 +52,12 @@ class GoogleCloudVisionV1p3beta1ProductSearchResults extends \Google\Collection
     return $this->indexTime;
   }
   /**
-   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult[]
+   * List of results grouped by products detected in the query image. Each entry
+   * corresponds to one bounding polygon in the query image, and contains the
+   * matching products specific to that region. There may be duplicate product
+   * matches in the union of all the per-product results.
+   *
+   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult[] $productGroupedResults
    */
   public function setProductGroupedResults($productGroupedResults)
   {
@@ -58,7 +71,9 @@ class GoogleCloudVisionV1p3beta1ProductSearchResults extends \Google\Collection
     return $this->productGroupedResults;
   }
   /**
-   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsResult[]
+   * List of results, one for each product match.
+   *
+   * @param GoogleCloudVisionV1p3beta1ProductSearchResultsResult[] $results
    */
   public function setResults($results)
   {

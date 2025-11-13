@@ -24,7 +24,9 @@ class GoogleCloudVisionV1p3beta1CropHintsAnnotation extends \Google\Collection
   protected $cropHintsDataType = 'array';
 
   /**
-   * @param GoogleCloudVisionV1p3beta1CropHint[]
+   * Crop hint results.
+   *
+   * @param GoogleCloudVisionV1p3beta1CropHint[] $cropHints
    */
   public function setCropHints($cropHints)
   {

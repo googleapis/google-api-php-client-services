@@ -22,16 +22,23 @@ class GoogleCloudVisionV1p4beta1ColorInfo extends \Google\Model
   protected $colorType = Color::class;
   protected $colorDataType = '';
   /**
+   * The fraction of pixels the color occupies in the image. Value in range [0,
+   * 1].
+   *
    * @var float
    */
   public $pixelFraction;
   /**
+   * Image-specific score for this color. Value in range [0, 1].
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param Color
+   * RGB components of the color.
+   *
+   * @param Color $color
    */
   public function setColor(Color $color)
   {
@@ -45,7 +52,10 @@ class GoogleCloudVisionV1p4beta1ColorInfo extends \Google\Model
     return $this->color;
   }
   /**
-   * @param float
+   * The fraction of pixels the color occupies in the image. Value in range [0,
+   * 1].
+   *
+   * @param float $pixelFraction
    */
   public function setPixelFraction($pixelFraction)
   {
@@ -59,7 +69,9 @@ class GoogleCloudVisionV1p4beta1ColorInfo extends \Google\Model
     return $this->pixelFraction;
   }
   /**
-   * @param float
+   * Image-specific score for this color. Value in range [0, 1].
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

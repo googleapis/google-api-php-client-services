@@ -23,7 +23,9 @@ class GoogleCloudVisionV1p3beta1AsyncAnnotateFileResponse extends \Google\Model
   protected $outputConfigDataType = '';
 
   /**
-   * @param GoogleCloudVisionV1p3beta1OutputConfig
+   * The output location and metadata from AsyncAnnotateFileRequest.
+   *
+   * @param GoogleCloudVisionV1p3beta1OutputConfig $outputConfig
    */
   public function setOutputConfig(GoogleCloudVisionV1p3beta1OutputConfig $outputConfig)
   {

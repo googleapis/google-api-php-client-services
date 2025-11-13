@@ -22,24 +22,36 @@ class GoogleCloudVisionV1p3beta1LocalizedObjectAnnotation extends \Google\Model
   protected $boundingPolyType = GoogleCloudVisionV1p3beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Object ID that should align with EntityAnnotation mid.
+   *
    * @var string
    */
   public $mid;
   /**
+   * Object name, expressed in its `language_code` language.
+   *
    * @var string
    */
   public $name;
   /**
+   * Score of the result. Range [0, 1].
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param GoogleCloudVisionV1p3beta1BoundingPoly
+   * Image region to which this object belongs. This must be populated.
+   *
+   * @param GoogleCloudVisionV1p3beta1BoundingPoly $boundingPoly
    */
   public function setBoundingPoly(GoogleCloudVisionV1p3beta1BoundingPoly $boundingPoly)
   {
@@ -53,7 +65,11 @@ class GoogleCloudVisionV1p3beta1LocalizedObjectAnnotation extends \Google\Model
     return $this->boundingPoly;
   }
   /**
-   * @param string
+   * The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -67,7 +83,9 @@ class GoogleCloudVisionV1p3beta1LocalizedObjectAnnotation extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Object ID that should align with EntityAnnotation mid.
+   *
+   * @param string $mid
    */
   public function setMid($mid)
   {
@@ -81,7 +99,9 @@ class GoogleCloudVisionV1p3beta1LocalizedObjectAnnotation extends \Google\Model
     return $this->mid;
   }
   /**
-   * @param string
+   * Object name, expressed in its `language_code` language.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,7 +115,9 @@ class GoogleCloudVisionV1p3beta1LocalizedObjectAnnotation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param float
+   * Score of the result. Range [0, 1].
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

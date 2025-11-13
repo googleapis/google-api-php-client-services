@@ -23,7 +23,9 @@ class GoogleCloudVisionV1p4beta1ImageProperties extends \Google\Model
   protected $dominantColorsDataType = '';
 
   /**
-   * @param GoogleCloudVisionV1p4beta1DominantColorsAnnotation
+   * If present, dominant colors completed successfully.
+   *
+   * @param GoogleCloudVisionV1p4beta1DominantColorsAnnotation $dominantColors
    */
   public function setDominantColors(GoogleCloudVisionV1p4beta1DominantColorsAnnotation $dominantColors)
   {

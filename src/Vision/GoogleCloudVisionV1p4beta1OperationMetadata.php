@@ -20,20 +20,48 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p4beta1OperationMetadata extends \Google\Model
 {
   /**
+   * Invalid.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Request is received.
+   */
+  public const STATE_CREATED = 'CREATED';
+  /**
+   * Request is actively being processed.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The batch processing is done.
+   */
+  public const STATE_DONE = 'DONE';
+  /**
+   * The batch processing was cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The time when the batch request was received.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Current state of the batch operation.
+   *
    * @var string
    */
   public $state;
   /**
+   * The time when the operation result was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The time when the batch request was received.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -47,21 +75,27 @@ class GoogleCloudVisionV1p4beta1OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Current state of the batch operation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATED, RUNNING, DONE, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The time when the operation result was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

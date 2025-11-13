@@ -19,94 +19,308 @@ namespace Google\Service\Vision;
 
 class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
 {
+  /**
+   * Unknown likelihood.
+   */
+  public const ANGER_LIKELIHOOD_UNKNOWN = 'UNKNOWN';
+  /**
+   * It is very unlikely.
+   */
+  public const ANGER_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * It is unlikely.
+   */
+  public const ANGER_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * It is possible.
+   */
+  public const ANGER_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * It is likely.
+   */
+  public const ANGER_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * It is very likely.
+   */
+  public const ANGER_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
+  /**
+   * Unknown likelihood.
+   */
+  public const BLURRED_LIKELIHOOD_UNKNOWN = 'UNKNOWN';
+  /**
+   * It is very unlikely.
+   */
+  public const BLURRED_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * It is unlikely.
+   */
+  public const BLURRED_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * It is possible.
+   */
+  public const BLURRED_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * It is likely.
+   */
+  public const BLURRED_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * It is very likely.
+   */
+  public const BLURRED_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
+  /**
+   * Unknown likelihood.
+   */
+  public const HEADWEAR_LIKELIHOOD_UNKNOWN = 'UNKNOWN';
+  /**
+   * It is very unlikely.
+   */
+  public const HEADWEAR_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * It is unlikely.
+   */
+  public const HEADWEAR_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * It is possible.
+   */
+  public const HEADWEAR_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * It is likely.
+   */
+  public const HEADWEAR_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * It is very likely.
+   */
+  public const HEADWEAR_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
+  /**
+   * Unknown likelihood.
+   */
+  public const JOY_LIKELIHOOD_UNKNOWN = 'UNKNOWN';
+  /**
+   * It is very unlikely.
+   */
+  public const JOY_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * It is unlikely.
+   */
+  public const JOY_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * It is possible.
+   */
+  public const JOY_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * It is likely.
+   */
+  public const JOY_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * It is very likely.
+   */
+  public const JOY_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
+  /**
+   * Unknown likelihood.
+   */
+  public const SORROW_LIKELIHOOD_UNKNOWN = 'UNKNOWN';
+  /**
+   * It is very unlikely.
+   */
+  public const SORROW_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * It is unlikely.
+   */
+  public const SORROW_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * It is possible.
+   */
+  public const SORROW_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * It is likely.
+   */
+  public const SORROW_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * It is very likely.
+   */
+  public const SORROW_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
+  /**
+   * Unknown likelihood.
+   */
+  public const SURPRISE_LIKELIHOOD_UNKNOWN = 'UNKNOWN';
+  /**
+   * It is very unlikely.
+   */
+  public const SURPRISE_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * It is unlikely.
+   */
+  public const SURPRISE_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * It is possible.
+   */
+  public const SURPRISE_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * It is likely.
+   */
+  public const SURPRISE_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * It is very likely.
+   */
+  public const SURPRISE_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
+  /**
+   * Unknown likelihood.
+   */
+  public const UNDER_EXPOSED_LIKELIHOOD_UNKNOWN = 'UNKNOWN';
+  /**
+   * It is very unlikely.
+   */
+  public const UNDER_EXPOSED_LIKELIHOOD_VERY_UNLIKELY = 'VERY_UNLIKELY';
+  /**
+   * It is unlikely.
+   */
+  public const UNDER_EXPOSED_LIKELIHOOD_UNLIKELY = 'UNLIKELY';
+  /**
+   * It is possible.
+   */
+  public const UNDER_EXPOSED_LIKELIHOOD_POSSIBLE = 'POSSIBLE';
+  /**
+   * It is likely.
+   */
+  public const UNDER_EXPOSED_LIKELIHOOD_LIKELY = 'LIKELY';
+  /**
+   * It is very likely.
+   */
+  public const UNDER_EXPOSED_LIKELIHOOD_VERY_LIKELY = 'VERY_LIKELY';
   protected $collection_key = 'recognitionResult';
   /**
+   * Anger likelihood.
+   *
    * @var string
    */
   public $angerLikelihood;
   /**
+   * Blurred likelihood.
+   *
    * @var string
    */
   public $blurredLikelihood;
   protected $boundingPolyType = GoogleCloudVisionV1p4beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
+   * Detection confidence. Range [0, 1].
+   *
    * @var float
    */
   public $detectionConfidence;
   protected $fdBoundingPolyType = GoogleCloudVisionV1p4beta1BoundingPoly::class;
   protected $fdBoundingPolyDataType = '';
   /**
+   * Headwear likelihood.
+   *
    * @var string
    */
   public $headwearLikelihood;
   /**
+   * Joy likelihood.
+   *
    * @var string
    */
   public $joyLikelihood;
   /**
+   * Face landmarking confidence. Range [0, 1].
+   *
    * @var float
    */
   public $landmarkingConfidence;
   protected $landmarksType = GoogleCloudVisionV1p4beta1FaceAnnotationLandmark::class;
   protected $landmarksDataType = 'array';
   /**
+   * Yaw angle, which indicates the leftward/rightward angle that the face is
+   * pointing relative to the vertical plane perpendicular to the image. Range
+   * [-180,180].
+   *
    * @var float
    */
   public $panAngle;
   protected $recognitionResultType = GoogleCloudVisionV1p4beta1FaceRecognitionResult::class;
   protected $recognitionResultDataType = 'array';
   /**
+   * Roll angle, which indicates the amount of clockwise/anti-clockwise rotation
+   * of the face relative to the image vertical about the axis perpendicular to
+   * the face. Range [-180,180].
+   *
    * @var float
    */
   public $rollAngle;
   /**
+   * Sorrow likelihood.
+   *
    * @var string
    */
   public $sorrowLikelihood;
   /**
+   * Surprise likelihood.
+   *
    * @var string
    */
   public $surpriseLikelihood;
   /**
+   * Pitch angle, which indicates the upwards/downwards angle that the face is
+   * pointing relative to the image's horizontal plane. Range [-180,180].
+   *
    * @var float
    */
   public $tiltAngle;
   /**
+   * Under-exposed likelihood.
+   *
    * @var string
    */
   public $underExposedLikelihood;
 
   /**
-   * @param string
+   * Anger likelihood.
+   *
+   * Accepted values: UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY,
+   * VERY_LIKELY
+   *
+   * @param self::ANGER_LIKELIHOOD_* $angerLikelihood
    */
   public function setAngerLikelihood($angerLikelihood)
   {
     $this->angerLikelihood = $angerLikelihood;
   }
   /**
-   * @return string
+   * @return self::ANGER_LIKELIHOOD_*
    */
   public function getAngerLikelihood()
   {
     return $this->angerLikelihood;
   }
   /**
-   * @param string
+   * Blurred likelihood.
+   *
+   * Accepted values: UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY,
+   * VERY_LIKELY
+   *
+   * @param self::BLURRED_LIKELIHOOD_* $blurredLikelihood
    */
   public function setBlurredLikelihood($blurredLikelihood)
   {
     $this->blurredLikelihood = $blurredLikelihood;
   }
   /**
-   * @return string
+   * @return self::BLURRED_LIKELIHOOD_*
    */
   public function getBlurredLikelihood()
   {
     return $this->blurredLikelihood;
   }
   /**
-   * @param GoogleCloudVisionV1p4beta1BoundingPoly
+   * The bounding polygon around the face. The coordinates of the bounding box
+   * are in the original image's scale. The bounding box is computed to "frame"
+   * the face in accordance with human expectations. It is based on the
+   * landmarker results. Note that one or more x and/or y coordinates may not be
+   * generated in the `BoundingPoly` (the polygon will be unbounded) if only a
+   * partial face appears in the image to be annotated.
+   *
+   * @param GoogleCloudVisionV1p4beta1BoundingPoly $boundingPoly
    */
   public function setBoundingPoly(GoogleCloudVisionV1p4beta1BoundingPoly $boundingPoly)
   {
@@ -120,7 +334,9 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->boundingPoly;
   }
   /**
-   * @param float
+   * Detection confidence. Range [0, 1].
+   *
+   * @param float $detectionConfidence
    */
   public function setDetectionConfidence($detectionConfidence)
   {
@@ -134,7 +350,13 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->detectionConfidence;
   }
   /**
-   * @param GoogleCloudVisionV1p4beta1BoundingPoly
+   * The `fd_bounding_poly` bounding polygon is tighter than the `boundingPoly`,
+   * and encloses only the skin part of the face. Typically, it is used to
+   * eliminate the face from any image analysis that detects the "amount of
+   * skin" visible in an image. It is not based on the landmarker results, only
+   * on the initial face detection, hence the fd (face detection) prefix.
+   *
+   * @param GoogleCloudVisionV1p4beta1BoundingPoly $fdBoundingPoly
    */
   public function setFdBoundingPoly(GoogleCloudVisionV1p4beta1BoundingPoly $fdBoundingPoly)
   {
@@ -148,35 +370,47 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->fdBoundingPoly;
   }
   /**
-   * @param string
+   * Headwear likelihood.
+   *
+   * Accepted values: UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY,
+   * VERY_LIKELY
+   *
+   * @param self::HEADWEAR_LIKELIHOOD_* $headwearLikelihood
    */
   public function setHeadwearLikelihood($headwearLikelihood)
   {
     $this->headwearLikelihood = $headwearLikelihood;
   }
   /**
-   * @return string
+   * @return self::HEADWEAR_LIKELIHOOD_*
    */
   public function getHeadwearLikelihood()
   {
     return $this->headwearLikelihood;
   }
   /**
-   * @param string
+   * Joy likelihood.
+   *
+   * Accepted values: UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY,
+   * VERY_LIKELY
+   *
+   * @param self::JOY_LIKELIHOOD_* $joyLikelihood
    */
   public function setJoyLikelihood($joyLikelihood)
   {
     $this->joyLikelihood = $joyLikelihood;
   }
   /**
-   * @return string
+   * @return self::JOY_LIKELIHOOD_*
    */
   public function getJoyLikelihood()
   {
     return $this->joyLikelihood;
   }
   /**
-   * @param float
+   * Face landmarking confidence. Range [0, 1].
+   *
+   * @param float $landmarkingConfidence
    */
   public function setLandmarkingConfidence($landmarkingConfidence)
   {
@@ -190,7 +424,9 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->landmarkingConfidence;
   }
   /**
-   * @param GoogleCloudVisionV1p4beta1FaceAnnotationLandmark[]
+   * Detected face landmarks.
+   *
+   * @param GoogleCloudVisionV1p4beta1FaceAnnotationLandmark[] $landmarks
    */
   public function setLandmarks($landmarks)
   {
@@ -204,7 +440,11 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->landmarks;
   }
   /**
-   * @param float
+   * Yaw angle, which indicates the leftward/rightward angle that the face is
+   * pointing relative to the vertical plane perpendicular to the image. Range
+   * [-180,180].
+   *
+   * @param float $panAngle
    */
   public function setPanAngle($panAngle)
   {
@@ -218,7 +458,12 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->panAngle;
   }
   /**
-   * @param GoogleCloudVisionV1p4beta1FaceRecognitionResult[]
+   * Additional recognition information. Only computed if
+   * image_context.face_recognition_params is provided, **and** a match is found
+   * to a Celebrity in the input CelebritySet. This field is sorted in order of
+   * decreasing confidence values.
+   *
+   * @param GoogleCloudVisionV1p4beta1FaceRecognitionResult[] $recognitionResult
    */
   public function setRecognitionResult($recognitionResult)
   {
@@ -232,7 +477,11 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->recognitionResult;
   }
   /**
-   * @param float
+   * Roll angle, which indicates the amount of clockwise/anti-clockwise rotation
+   * of the face relative to the image vertical about the axis perpendicular to
+   * the face. Range [-180,180].
+   *
+   * @param float $rollAngle
    */
   public function setRollAngle($rollAngle)
   {
@@ -246,35 +495,48 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->rollAngle;
   }
   /**
-   * @param string
+   * Sorrow likelihood.
+   *
+   * Accepted values: UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY,
+   * VERY_LIKELY
+   *
+   * @param self::SORROW_LIKELIHOOD_* $sorrowLikelihood
    */
   public function setSorrowLikelihood($sorrowLikelihood)
   {
     $this->sorrowLikelihood = $sorrowLikelihood;
   }
   /**
-   * @return string
+   * @return self::SORROW_LIKELIHOOD_*
    */
   public function getSorrowLikelihood()
   {
     return $this->sorrowLikelihood;
   }
   /**
-   * @param string
+   * Surprise likelihood.
+   *
+   * Accepted values: UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY,
+   * VERY_LIKELY
+   *
+   * @param self::SURPRISE_LIKELIHOOD_* $surpriseLikelihood
    */
   public function setSurpriseLikelihood($surpriseLikelihood)
   {
     $this->surpriseLikelihood = $surpriseLikelihood;
   }
   /**
-   * @return string
+   * @return self::SURPRISE_LIKELIHOOD_*
    */
   public function getSurpriseLikelihood()
   {
     return $this->surpriseLikelihood;
   }
   /**
-   * @param float
+   * Pitch angle, which indicates the upwards/downwards angle that the face is
+   * pointing relative to the image's horizontal plane. Range [-180,180].
+   *
+   * @param float $tiltAngle
    */
   public function setTiltAngle($tiltAngle)
   {
@@ -288,14 +550,19 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
     return $this->tiltAngle;
   }
   /**
-   * @param string
+   * Under-exposed likelihood.
+   *
+   * Accepted values: UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY,
+   * VERY_LIKELY
+   *
+   * @param self::UNDER_EXPOSED_LIKELIHOOD_* $underExposedLikelihood
    */
   public function setUnderExposedLikelihood($underExposedLikelihood)
   {
     $this->underExposedLikelihood = $underExposedLikelihood;
   }
   /**
-   * @return string
+   * @return self::UNDER_EXPOSED_LIKELIHOOD_*
    */
   public function getUnderExposedLikelihood()
   {
