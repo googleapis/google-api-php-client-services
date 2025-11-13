@@ -20,16 +20,26 @@ namespace Google\Service\SmartDeviceManagement;
 class GoogleHomeEnterpriseSdmV1ParentRelation extends \Google\Model
 {
   /**
+   * Output only. The custom name of the relation -- e.g., structure/room where
+   * the device is assigned to.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The name of the relation -- e.g., structure/room where the
+   * device is assigned to. For example: "enterprises/XYZ/structures/ABC" or
+   * "enterprises/XYZ/structures/ABC/rooms/123"
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param string
+   * Output only. The custom name of the relation -- e.g., structure/room where
+   * the device is assigned to.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +53,11 @@ class GoogleHomeEnterpriseSdmV1ParentRelation extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The name of the relation -- e.g., structure/room where the
+   * device is assigned to. For example: "enterprises/XYZ/structures/ABC" or
+   * "enterprises/XYZ/structures/ABC/rooms/123"
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
