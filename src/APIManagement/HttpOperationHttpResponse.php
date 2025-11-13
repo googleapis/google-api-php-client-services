@@ -22,12 +22,16 @@ class HttpOperationHttpResponse extends \Google\Model
   protected $headersType = HttpOperationHeader::class;
   protected $headersDataType = 'map';
   /**
+   * Map of status code to observed count
+   *
    * @var string[]
    */
   public $responseCodes;
 
   /**
-   * @param HttpOperationHeader[]
+   * Unordered map from header name to header metadata
+   *
+   * @param HttpOperationHeader[] $headers
    */
   public function setHeaders($headers)
   {
@@ -41,7 +45,9 @@ class HttpOperationHttpResponse extends \Google\Model
     return $this->headers;
   }
   /**
-   * @param string[]
+   * Map of status code to observed count
+   *
+   * @param string[] $responseCodes
    */
   public function setResponseCodes($responseCodes)
   {

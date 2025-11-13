@@ -23,12 +23,18 @@ class ListApiObservationsResponse extends \Google\Collection
   protected $apiObservationsType = ApiObservation::class;
   protected $apiObservationsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ApiObservation[]
+   * The ApiObservation from the specified project and location and
+   * ObservationJobs.
+   *
+   * @param ApiObservation[] $apiObservations
    */
   public function setApiObservations($apiObservations)
   {
@@ -42,7 +48,10 @@ class ListApiObservationsResponse extends \Google\Collection
     return $this->apiObservations;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

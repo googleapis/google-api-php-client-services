@@ -21,18 +21,26 @@ class ListObservationJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $observationJobsType = ObservationJob::class;
   protected $observationJobsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListObservationJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ObservationJob[]
+   * The ObservationJob from the specified project and location.
+   *
+   * @param ObservationJob[] $observationJobs
    */
   public function setObservationJobs($observationJobs)
   {
@@ -60,7 +70,9 @@ class ListObservationJobsResponse extends \Google\Collection
     return $this->observationJobs;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

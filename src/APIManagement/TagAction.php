@@ -20,30 +20,52 @@ namespace Google\Service\APIManagement;
 class TagAction extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const ACTION_ACTION_UNSPECIFIED = 'ACTION_UNSPECIFIED';
+  /**
+   * Addition of a Tag.
+   */
+  public const ACTION_ADD = 'ADD';
+  /**
+   * Removal of a Tag.
+   */
+  public const ACTION_REMOVE = 'REMOVE';
+  /**
+   * Required. Action to be applied
+   *
    * @var string
    */
   public $action;
   /**
+   * Required. Tag to be added or removed
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * Required. Action to be applied
+   *
+   * Accepted values: ACTION_UNSPECIFIED, ADD, REMOVE
+   *
+   * @param self::ACTION_* $action
    */
   public function setAction($action)
   {
     $this->action = $action;
   }
   /**
-   * @return string
+   * @return self::ACTION_*
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param string
+   * Required. Tag to be added or removed
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

@@ -20,28 +20,42 @@ namespace Google\Service\APIManagement;
 class Entitlement extends \Google\Model
 {
   /**
+   * Whether API Observation is entitled.
+   *
    * @var bool
    */
   public $apiObservationEntitled;
   /**
+   * Project number of associated billing project that has Apigee and Advanced
+   * API Security entitled.
+   *
    * @var string
    */
   public $billingProjectNumber;
   /**
+   * Output only. The time of the entitlement creation.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Identifier. The entitlement resource name
+   * `projects/{project}/locations/{location}/entitlement`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The time of the entitlement update.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * Whether API Observation is entitled.
+   *
+   * @param bool $apiObservationEntitled
    */
   public function setApiObservationEntitled($apiObservationEntitled)
   {
@@ -55,7 +69,10 @@ class Entitlement extends \Google\Model
     return $this->apiObservationEntitled;
   }
   /**
-   * @param string
+   * Project number of associated billing project that has Apigee and Advanced
+   * API Security entitled.
+   *
+   * @param string $billingProjectNumber
    */
   public function setBillingProjectNumber($billingProjectNumber)
   {
@@ -69,7 +86,9 @@ class Entitlement extends \Google\Model
     return $this->billingProjectNumber;
   }
   /**
-   * @param string
+   * Output only. The time of the entitlement creation.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -83,7 +102,10 @@ class Entitlement extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Identifier. The entitlement resource name
+   * `projects/{project}/locations/{location}/entitlement`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -97,7 +119,9 @@ class Entitlement extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The time of the entitlement update.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

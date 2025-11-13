@@ -20,30 +20,64 @@ namespace Google\Service\APIManagement;
 class HttpOperationPathParam extends \Google\Model
 {
   /**
+   * Unspecified data type
+   */
+  public const DATA_TYPE_DATA_TYPE_UNSPECIFIED = 'DATA_TYPE_UNSPECIFIED';
+  /**
+   * Boolean data type
+   */
+  public const DATA_TYPE_BOOL = 'BOOL';
+  /**
+   * Integer data type
+   */
+  public const DATA_TYPE_INTEGER = 'INTEGER';
+  /**
+   * Float data type
+   */
+  public const DATA_TYPE_FLOAT = 'FLOAT';
+  /**
+   * String data type
+   */
+  public const DATA_TYPE_STRING = 'STRING';
+  /**
+   * UUID data type
+   */
+  public const DATA_TYPE_UUID = 'UUID';
+  /**
+   * Data type of path param
+   *
    * @var string
    */
   public $dataType;
   /**
+   * Segment location in the path, 1-indexed
+   *
    * @var int
    */
   public $position;
 
   /**
-   * @param string
+   * Data type of path param
+   *
+   * Accepted values: DATA_TYPE_UNSPECIFIED, BOOL, INTEGER, FLOAT, STRING, UUID
+   *
+   * @param self::DATA_TYPE_* $dataType
    */
   public function setDataType($dataType)
   {
     $this->dataType = $dataType;
   }
   /**
-   * @return string
+   * @return self::DATA_TYPE_*
    */
   public function getDataType()
   {
     return $this->dataType;
   }
   /**
-   * @param int
+   * Segment location in the path, 1-indexed
+   *
+   * @param int $position
    */
   public function setPosition($position)
   {

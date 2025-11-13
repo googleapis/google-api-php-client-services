@@ -21,6 +21,9 @@ class EditTagsApiObservationsRequest extends \Google\Collection
 {
   protected $collection_key = 'tagActions';
   /**
+   * Required. Identifier of ApiObservation need to be edit tags Format example:
+   * "apigee.googleapis.com|us-west1|443"
+   *
    * @var string
    */
   public $apiObservationId;
@@ -28,7 +31,10 @@ class EditTagsApiObservationsRequest extends \Google\Collection
   protected $tagActionsDataType = 'array';
 
   /**
-   * @param string
+   * Required. Identifier of ApiObservation need to be edit tags Format example:
+   * "apigee.googleapis.com|us-west1|443"
+   *
+   * @param string $apiObservationId
    */
   public function setApiObservationId($apiObservationId)
   {
@@ -42,7 +48,9 @@ class EditTagsApiObservationsRequest extends \Google\Collection
     return $this->apiObservationId;
   }
   /**
-   * @param TagAction[]
+   * Required. Tag actions to be applied
+   *
+   * @param TagAction[] $tagActions
    */
   public function setTagActions($tagActions)
   {

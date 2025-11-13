@@ -24,7 +24,10 @@ class BatchEditTagsApiObservationsRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param EditTagsApiObservationsRequest[]
+   * Required. The request message specifying the resources to update. A maximum
+   * of 1000 apiObservations can be modified in a batch.
+   *
+   * @param EditTagsApiObservationsRequest[] $requests
    */
   public function setRequests($requests)
   {

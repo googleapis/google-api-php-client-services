@@ -24,7 +24,9 @@ class BatchEditTagsApiObservationsResponse extends \Google\Collection
   protected $apiObservationsDataType = 'array';
 
   /**
-   * @param ApiObservation[]
+   * ApiObservations that were changed
+   *
+   * @param ApiObservation[] $apiObservations
    */
   public function setApiObservations($apiObservations)
   {

@@ -23,7 +23,9 @@ class HttpOperationHttpRequest extends \Google\Model
   protected $headersDataType = 'map';
 
   /**
-   * @param HttpOperationHeader[]
+   * Unordered map from header name to header metadata
+   *
+   * @param HttpOperationHeader[] $headers
    */
   public function setHeaders($headers)
   {

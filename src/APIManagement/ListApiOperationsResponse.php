@@ -23,12 +23,18 @@ class ListApiOperationsResponse extends \Google\Collection
   protected $apiOperationsType = ApiOperation::class;
   protected $apiOperationsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ApiOperation[]
+   * The ApiOperations from the specified project and location and
+   * ObservationJob and ApiObservation.
+   *
+   * @param ApiOperation[] $apiOperations
    */
   public function setApiOperations($apiOperations)
   {
@@ -42,7 +48,10 @@ class ListApiOperationsResponse extends \Google\Collection
     return $this->apiOperations;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

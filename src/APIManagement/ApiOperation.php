@@ -20,26 +20,36 @@ namespace Google\Service\APIManagement;
 class ApiOperation extends \Google\Model
 {
   /**
+   * The number of occurrences of this API Operation.
+   *
    * @var string
    */
   public $count;
   /**
+   * First seen time stamp
+   *
    * @var string
    */
   public $firstSeenTime;
   protected $httpOperationType = HttpOperation::class;
   protected $httpOperationDataType = '';
   /**
+   * Last seen time stamp
+   *
    * @var string
    */
   public $lastSeenTime;
   /**
+   * Identifier. Name of resource
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The number of occurrences of this API Operation.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -53,7 +63,9 @@ class ApiOperation extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * First seen time stamp
+   *
+   * @param string $firstSeenTime
    */
   public function setFirstSeenTime($firstSeenTime)
   {
@@ -67,7 +79,9 @@ class ApiOperation extends \Google\Model
     return $this->firstSeenTime;
   }
   /**
-   * @param HttpOperation
+   * An HTTP Operation.
+   *
+   * @param HttpOperation $httpOperation
    */
   public function setHttpOperation(HttpOperation $httpOperation)
   {
@@ -81,7 +95,9 @@ class ApiOperation extends \Google\Model
     return $this->httpOperation;
   }
   /**
-   * @param string
+   * Last seen time stamp
+   *
+   * @param string $lastSeenTime
    */
   public function setLastSeenTime($lastSeenTime)
   {
@@ -95,7 +111,9 @@ class ApiOperation extends \Google\Model
     return $this->lastSeenTime;
   }
   /**
-   * @param string
+   * Identifier. Name of resource
+   *
+   * @param string $name
    */
   public function setName($name)
   {

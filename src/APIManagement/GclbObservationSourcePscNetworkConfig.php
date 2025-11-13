@@ -20,16 +20,26 @@ namespace Google\Service\APIManagement;
 class GclbObservationSourcePscNetworkConfig extends \Google\Model
 {
   /**
+   * Required. The VPC network. Format:
+   * `projects/{project_id}/global/networks/{network}`
+   *
    * @var string
    */
   public $network;
   /**
+   * Required. The subnetwork in the source region that will be used to connect
+   * to the Cloud Load Balancers via PSC NEGs. Must belong to `network`. Format:
+   * projects/{project_id}/regions/{region}/subnetworks/{subnet}
+   *
    * @var string
    */
   public $subnetwork;
 
   /**
-   * @param string
+   * Required. The VPC network. Format:
+   * `projects/{project_id}/global/networks/{network}`
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -43,7 +53,11 @@ class GclbObservationSourcePscNetworkConfig extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * Required. The subnetwork in the source region that will be used to connect
+   * to the Cloud Load Balancers via PSC NEGs. Must belong to `network`. Format:
+   * projects/{project_id}/regions/{region}/subnetworks/{subnet}
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {
