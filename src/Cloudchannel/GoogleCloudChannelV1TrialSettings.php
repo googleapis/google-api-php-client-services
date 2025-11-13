@@ -20,16 +20,25 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1TrialSettings extends \Google\Model
 {
   /**
+   * Date when the trial ends. The value is in milliseconds using the UNIX Epoch
+   * format. See an example [Epoch converter](https://www.epochconverter.com).
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Determines if the entitlement is in a trial or not: * `true` - The
+   * entitlement is in trial. * `false` - The entitlement is not in trial.
+   *
    * @var bool
    */
   public $trial;
 
   /**
-   * @param string
+   * Date when the trial ends. The value is in milliseconds using the UNIX Epoch
+   * format. See an example [Epoch converter](https://www.epochconverter.com).
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +52,10 @@ class GoogleCloudChannelV1TrialSettings extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param bool
+   * Determines if the entitlement is in a trial or not: * `true` - The
+   * entitlement is in trial. * `false` - The entitlement is not in trial.
+   *
+   * @param bool $trial
    */
   public function setTrial($trial)
   {

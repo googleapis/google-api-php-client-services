@@ -20,16 +20,38 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1alpha1ChannelPartnerEvent extends \Google\Model
 {
   /**
+   * Default value. Does not display if there are no errors.
+   */
+  public const EVENT_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * The Channel Partner link state changed.
+   */
+  public const EVENT_TYPE_LINK_STATE_CHANGED = 'LINK_STATE_CHANGED';
+  /**
+   * The Channel Partner's Partner Advantage information changed. This can
+   * entail the Channel Partner's authorization to sell a product in a
+   * particular region.
+   */
+  public const EVENT_TYPE_PARTNER_ADVANTAGE_INFO_CHANGED = 'PARTNER_ADVANTAGE_INFO_CHANGED';
+  /**
+   * Resource name for the Channel Partner Link. Channel_partner uses the
+   * format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+   *
    * @var string
    */
   public $channelPartner;
   /**
+   * Type of event which happened for the channel partner.
+   *
    * @var string
    */
   public $eventType;
 
   /**
-   * @param string
+   * Resource name for the Channel Partner Link. Channel_partner uses the
+   * format: accounts/{account_id}/channelPartnerLinks/{channel_partner_id}
+   *
+   * @param string $channelPartner
    */
   public function setChannelPartner($channelPartner)
   {
@@ -43,14 +65,19 @@ class GoogleCloudChannelV1alpha1ChannelPartnerEvent extends \Google\Model
     return $this->channelPartner;
   }
   /**
-   * @param string
+   * Type of event which happened for the channel partner.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, LINK_STATE_CHANGED,
+   * PARTNER_ADVANTAGE_INFO_CHANGED
+   *
+   * @param self::EVENT_TYPE_* $eventType
    */
   public function setEventType($eventType)
   {
     $this->eventType = $eventType;
   }
   /**
-   * @return string
+   * @return self::EVENT_TYPE_*
    */
   public function getEventType()
   {

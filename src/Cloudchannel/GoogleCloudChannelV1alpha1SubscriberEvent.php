@@ -29,7 +29,9 @@ class GoogleCloudChannelV1alpha1SubscriberEvent extends \Google\Model
   protected $opportunityEventDataType = '';
 
   /**
-   * @param GoogleCloudChannelV1alpha1ChannelPartnerEvent
+   * Channel Partner event sent as part of Pub/Sub event to partners.
+   *
+   * @param GoogleCloudChannelV1alpha1ChannelPartnerEvent $channelPartnerEvent
    */
   public function setChannelPartnerEvent(GoogleCloudChannelV1alpha1ChannelPartnerEvent $channelPartnerEvent)
   {
@@ -43,7 +45,9 @@ class GoogleCloudChannelV1alpha1SubscriberEvent extends \Google\Model
     return $this->channelPartnerEvent;
   }
   /**
-   * @param GoogleCloudChannelV1alpha1CustomerEvent
+   * Customer event sent as part of Pub/Sub event to partners.
+   *
+   * @param GoogleCloudChannelV1alpha1CustomerEvent $customerEvent
    */
   public function setCustomerEvent(GoogleCloudChannelV1alpha1CustomerEvent $customerEvent)
   {
@@ -57,7 +61,9 @@ class GoogleCloudChannelV1alpha1SubscriberEvent extends \Google\Model
     return $this->customerEvent;
   }
   /**
-   * @param GoogleCloudChannelV1alpha1EntitlementEvent
+   * Entitlement event sent as part of Pub/Sub event to partners.
+   *
+   * @param GoogleCloudChannelV1alpha1EntitlementEvent $entitlementEvent
    */
   public function setEntitlementEvent(GoogleCloudChannelV1alpha1EntitlementEvent $entitlementEvent)
   {
@@ -71,7 +77,9 @@ class GoogleCloudChannelV1alpha1SubscriberEvent extends \Google\Model
     return $this->entitlementEvent;
   }
   /**
-   * @param GoogleCloudChannelV1alpha1OpportunityEvent
+   * Opportunity event sent as part of Pub/Sub event to partners/integrators.
+   *
+   * @param GoogleCloudChannelV1alpha1OpportunityEvent $opportunityEvent
    */
   public function setOpportunityEvent(GoogleCloudChannelV1alpha1OpportunityEvent $opportunityEvent)
   {

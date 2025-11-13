@@ -20,16 +20,36 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1alpha1CustomerEvent extends \Google\Model
 {
   /**
+   * Not used.
+   */
+  public const EVENT_TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Primary domain for customer was changed.
+   */
+  public const EVENT_TYPE_PRIMARY_DOMAIN_CHANGED = 'PRIMARY_DOMAIN_CHANGED';
+  /**
+   * Primary domain of the customer has been verified.
+   */
+  public const EVENT_TYPE_PRIMARY_DOMAIN_VERIFIED = 'PRIMARY_DOMAIN_VERIFIED';
+  /**
+   * Resource name of the customer. Format:
+   * accounts/{account_id}/customers/{customer_id}
+   *
    * @var string
    */
   public $customer;
   /**
+   * Type of event which happened for the customer.
+   *
    * @var string
    */
   public $eventType;
 
   /**
-   * @param string
+   * Resource name of the customer. Format:
+   * accounts/{account_id}/customers/{customer_id}
+   *
+   * @param string $customer
    */
   public function setCustomer($customer)
   {
@@ -43,14 +63,19 @@ class GoogleCloudChannelV1alpha1CustomerEvent extends \Google\Model
     return $this->customer;
   }
   /**
-   * @param string
+   * Type of event which happened for the customer.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, PRIMARY_DOMAIN_CHANGED,
+   * PRIMARY_DOMAIN_VERIFIED
+   *
+   * @param self::EVENT_TYPE_* $eventType
    */
   public function setEventType($eventType)
   {
     $this->eventType = $eventType;
   }
   /**
-   * @return string
+   * @return self::EVENT_TYPE_*
    */
   public function getEventType()
   {

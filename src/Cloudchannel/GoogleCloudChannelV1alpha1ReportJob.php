@@ -20,6 +20,9 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1alpha1ReportJob extends \Google\Model
 {
   /**
+   * Required. The resource name of a report job. Name uses the format:
+   * `accounts/{account_id}/reportJobs/{report_job_id}`
+   *
    * @var string
    */
   public $name;
@@ -27,7 +30,10 @@ class GoogleCloudChannelV1alpha1ReportJob extends \Google\Model
   protected $reportStatusDataType = '';
 
   /**
-   * @param string
+   * Required. The resource name of a report job. Name uses the format:
+   * `accounts/{account_id}/reportJobs/{report_job_id}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +47,9 @@ class GoogleCloudChannelV1alpha1ReportJob extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudChannelV1alpha1ReportStatus
+   * The current status of report generation.
+   *
+   * @param GoogleCloudChannelV1alpha1ReportStatus $reportStatus
    */
   public function setReportStatus(GoogleCloudChannelV1alpha1ReportStatus $reportStatus)
   {

@@ -20,40 +20,98 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1alpha1RenewalSettings extends \Google\Model
 {
   /**
+   * Not used.
+   */
+  public const PAYMENT_OPTION_PAYMENT_OPTION_UNSPECIFIED = 'PAYMENT_OPTION_UNSPECIFIED';
+  /**
+   * Paid in yearly installments.
+   */
+  public const PAYMENT_OPTION_ANNUAL = 'ANNUAL';
+  /**
+   * Paid in monthly installments.
+   */
+  public const PAYMENT_OPTION_MONTHLY = 'MONTHLY';
+  /**
+   * Not used.
+   */
+  public const PAYMENT_PLAN_PAYMENT_PLAN_UNSPECIFIED = 'PAYMENT_PLAN_UNSPECIFIED';
+  /**
+   * Commitment.
+   */
+  public const PAYMENT_PLAN_COMMITMENT = 'COMMITMENT';
+  /**
+   * No commitment.
+   */
+  public const PAYMENT_PLAN_FLEXIBLE = 'FLEXIBLE';
+  /**
+   * Free.
+   */
+  public const PAYMENT_PLAN_FREE = 'FREE';
+  /**
+   * Trial.
+   */
+  public const PAYMENT_PLAN_TRIAL = 'TRIAL';
+  /**
+   * Price and ordering not available through API.
+   */
+  public const PAYMENT_PLAN_OFFLINE = 'OFFLINE';
+  /**
+   * If true, disables commitment-based offer on renewal and switches to
+   * flexible or pay as you go. Deprecated: Use `payment_plan` instead.
+   *
+   * @deprecated
    * @var bool
    */
   public $disableCommitment;
   /**
+   * If false, the plan will be completed at the end date.
+   *
    * @var bool
    */
   public $enableRenewal;
   protected $paymentCycleType = GoogleCloudChannelV1alpha1Period::class;
   protected $paymentCycleDataType = '';
   /**
+   * Set if enable_renewal=true. Deprecated: Use `payment_cycle` instead.
+   *
+   * @deprecated
    * @var string
    */
   public $paymentOption;
   /**
+   * Describes how a reseller will be billed.
+   *
    * @var string
    */
   public $paymentPlan;
   /**
+   * If true and enable_renewal = true, the unit (for example seats or licenses)
+   * will be set to the number of active units at renewal time.
+   *
    * @var bool
    */
   public $resizeUnitCount;
   /**
+   * Output only. The offer resource name that the entitlement will renew on at
+   * the end date. Takes the form: accounts/{account_id}/offers/{offer_id}.
+   *
    * @var string
    */
   public $scheduledRenewalOffer;
 
   /**
-   * @param bool
+   * If true, disables commitment-based offer on renewal and switches to
+   * flexible or pay as you go. Deprecated: Use `payment_plan` instead.
+   *
+   * @deprecated
+   * @param bool $disableCommitment
    */
   public function setDisableCommitment($disableCommitment)
   {
     $this->disableCommitment = $disableCommitment;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getDisableCommitment()
@@ -61,7 +119,9 @@ class GoogleCloudChannelV1alpha1RenewalSettings extends \Google\Model
     return $this->disableCommitment;
   }
   /**
-   * @param bool
+   * If false, the plan will be completed at the end date.
+   *
+   * @param bool $enableRenewal
    */
   public function setEnableRenewal($enableRenewal)
   {
@@ -75,7 +135,10 @@ class GoogleCloudChannelV1alpha1RenewalSettings extends \Google\Model
     return $this->enableRenewal;
   }
   /**
-   * @param GoogleCloudChannelV1alpha1Period
+   * Describes how frequently the reseller will be billed, such as once per
+   * month.
+   *
+   * @param GoogleCloudChannelV1alpha1Period $paymentCycle
    */
   public function setPaymentCycle(GoogleCloudChannelV1alpha1Period $paymentCycle)
   {
@@ -89,35 +152,49 @@ class GoogleCloudChannelV1alpha1RenewalSettings extends \Google\Model
     return $this->paymentCycle;
   }
   /**
-   * @param string
+   * Set if enable_renewal=true. Deprecated: Use `payment_cycle` instead.
+   *
+   * Accepted values: PAYMENT_OPTION_UNSPECIFIED, ANNUAL, MONTHLY
+   *
+   * @deprecated
+   * @param self::PAYMENT_OPTION_* $paymentOption
    */
   public function setPaymentOption($paymentOption)
   {
     $this->paymentOption = $paymentOption;
   }
   /**
-   * @return string
+   * @deprecated
+   * @return self::PAYMENT_OPTION_*
    */
   public function getPaymentOption()
   {
     return $this->paymentOption;
   }
   /**
-   * @param string
+   * Describes how a reseller will be billed.
+   *
+   * Accepted values: PAYMENT_PLAN_UNSPECIFIED, COMMITMENT, FLEXIBLE, FREE,
+   * TRIAL, OFFLINE
+   *
+   * @param self::PAYMENT_PLAN_* $paymentPlan
    */
   public function setPaymentPlan($paymentPlan)
   {
     $this->paymentPlan = $paymentPlan;
   }
   /**
-   * @return string
+   * @return self::PAYMENT_PLAN_*
    */
   public function getPaymentPlan()
   {
     return $this->paymentPlan;
   }
   /**
-   * @param bool
+   * If true and enable_renewal = true, the unit (for example seats or licenses)
+   * will be set to the number of active units at renewal time.
+   *
+   * @param bool $resizeUnitCount
    */
   public function setResizeUnitCount($resizeUnitCount)
   {
@@ -131,7 +208,10 @@ class GoogleCloudChannelV1alpha1RenewalSettings extends \Google\Model
     return $this->resizeUnitCount;
   }
   /**
-   * @param string
+   * Output only. The offer resource name that the entitlement will renew on at
+   * the end date. Takes the form: accounts/{account_id}/offers/{offer_id}.
+   *
+   * @param string $scheduledRenewalOffer
    */
   public function setScheduledRenewalOffer($scheduledRenewalOffer)
   {

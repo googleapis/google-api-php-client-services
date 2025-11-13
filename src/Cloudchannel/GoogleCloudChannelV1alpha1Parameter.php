@@ -20,10 +20,16 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1alpha1Parameter extends \Google\Model
 {
   /**
+   * Output only. Specifies whether this parameter is allowed to be changed. For
+   * example, for a Google Workspace Business Starter entitlement in commitment
+   * plan, num_units is editable when entitlement is active.
+   *
    * @var bool
    */
   public $editable;
   /**
+   * Name of the parameter.
+   *
    * @var string
    */
   public $name;
@@ -31,7 +37,11 @@ class GoogleCloudChannelV1alpha1Parameter extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param bool
+   * Output only. Specifies whether this parameter is allowed to be changed. For
+   * example, for a Google Workspace Business Starter entitlement in commitment
+   * plan, num_units is editable when entitlement is active.
+   *
+   * @param bool $editable
    */
   public function setEditable($editable)
   {
@@ -45,7 +55,9 @@ class GoogleCloudChannelV1alpha1Parameter extends \Google\Model
     return $this->editable;
   }
   /**
-   * @param string
+   * Name of the parameter.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -59,7 +71,9 @@ class GoogleCloudChannelV1alpha1Parameter extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudChannelV1alpha1Value
+   * Value of the parameter.
+   *
+   * @param GoogleCloudChannelV1alpha1Value $value
    */
   public function setValue(GoogleCloudChannelV1alpha1Value $value)
   {

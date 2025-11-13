@@ -20,12 +20,16 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1UnregisterSubscriberResponse extends \Google\Model
 {
   /**
+   * Name of the topic the service account subscriber access was removed from.
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param string
+   * Name of the topic the service account subscriber access was removed from.
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {

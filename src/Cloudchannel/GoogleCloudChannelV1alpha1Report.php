@@ -23,20 +23,33 @@ class GoogleCloudChannelV1alpha1Report extends \Google\Collection
   protected $columnsType = GoogleCloudChannelV1alpha1Column::class;
   protected $columnsDataType = 'array';
   /**
+   * A description of other aspects of the report, such as the products it
+   * supports.
+   *
    * @var string
    */
   public $description;
   /**
+   * A human-readable name for this report.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. The report's resource name. Specifies the account and report used
+   * to generate report data. The report_id identifier is a UID (for example,
+   * `613bf59q`). Name uses the format:
+   * accounts/{account_id}/reports/{report_id}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GoogleCloudChannelV1alpha1Column[]
+   * The list of columns included in the report. This defines the schema of the
+   * report results.
+   *
+   * @param GoogleCloudChannelV1alpha1Column[] $columns
    */
   public function setColumns($columns)
   {
@@ -50,7 +63,10 @@ class GoogleCloudChannelV1alpha1Report extends \Google\Collection
     return $this->columns;
   }
   /**
-   * @param string
+   * A description of other aspects of the report, such as the products it
+   * supports.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -64,7 +80,9 @@ class GoogleCloudChannelV1alpha1Report extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * A human-readable name for this report.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -78,7 +96,12 @@ class GoogleCloudChannelV1alpha1Report extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. The report's resource name. Specifies the account and report used
+   * to generate report data. The report_id identifier is a UID (for example,
+   * `613bf59q`). Name uses the format:
+   * accounts/{account_id}/reports/{report_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
