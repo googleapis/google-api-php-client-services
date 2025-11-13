@@ -20,18 +20,31 @@ namespace Google\Service\OracleDatabase;
 class AutonomousDatabaseBackup extends \Google\Model
 {
   /**
+   * Required. The name of the Autonomous Database resource for which the backup
+   * is being created. Format: projects/{project}/locations/{region}/autonomousD
+   * atabases/{autonomous_database}
+   *
    * @var string
    */
   public $autonomousDatabase;
   /**
+   * Optional. User friendly name for the Backup. The name does not have to be
+   * unique.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. labels or tags associated with the resource.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The name of the Autonomous Database Backup resource with the
+   * format: projects/{project}/locations/{region}/autonomousDatabaseBackups/{au
+   * tonomous_database_backup}
+   *
    * @var string
    */
   public $name;
@@ -39,7 +52,11 @@ class AutonomousDatabaseBackup extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * @param string
+   * Required. The name of the Autonomous Database resource for which the backup
+   * is being created. Format: projects/{project}/locations/{region}/autonomousD
+   * atabases/{autonomous_database}
+   *
+   * @param string $autonomousDatabase
    */
   public function setAutonomousDatabase($autonomousDatabase)
   {
@@ -53,7 +70,10 @@ class AutonomousDatabaseBackup extends \Google\Model
     return $this->autonomousDatabase;
   }
   /**
-   * @param string
+   * Optional. User friendly name for the Backup. The name does not have to be
+   * unique.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -67,7 +87,9 @@ class AutonomousDatabaseBackup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Optional. labels or tags associated with the resource.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -81,7 +103,11 @@ class AutonomousDatabaseBackup extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The name of the Autonomous Database Backup resource with the
+   * format: projects/{project}/locations/{region}/autonomousDatabaseBackups/{au
+   * tonomous_database_backup}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,7 +121,9 @@ class AutonomousDatabaseBackup extends \Google\Model
     return $this->name;
   }
   /**
-   * @param AutonomousDatabaseBackupProperties
+   * Optional. Various properties of the backup.
+   *
+   * @param AutonomousDatabaseBackupProperties $properties
    */
   public function setProperties(AutonomousDatabaseBackupProperties $properties)
   {

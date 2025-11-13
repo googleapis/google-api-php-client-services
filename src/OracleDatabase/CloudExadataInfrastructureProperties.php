@@ -19,120 +19,242 @@ namespace Google\Service\OracleDatabase;
 
 class CloudExadataInfrastructureProperties extends \Google\Collection
 {
+  /**
+   * Unspecified compute model.
+   */
+  public const COMPUTE_MODEL_COMPUTE_MODEL_UNSPECIFIED = 'COMPUTE_MODEL_UNSPECIFIED';
+  /**
+   * Abstract measure of compute resources. ECPUs are based on the number of
+   * cores elastically allocated from a pool of compute and storage servers.
+   */
+  public const COMPUTE_MODEL_COMPUTE_MODEL_ECPU = 'COMPUTE_MODEL_ECPU';
+  /**
+   * Physical measure of compute resources. OCPUs are based on the physical core
+   * of a processor.
+   */
+  public const COMPUTE_MODEL_COMPUTE_MODEL_OCPU = 'COMPUTE_MODEL_OCPU';
+  /**
+   * Default unspecified value.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Exadata Infrastructure is being provisioned.
+   */
+  public const STATE_PROVISIONING = 'PROVISIONING';
+  /**
+   * The Exadata Infrastructure is available for use.
+   */
+  public const STATE_AVAILABLE = 'AVAILABLE';
+  /**
+   * The Exadata Infrastructure is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The Exadata Infrastructure is being terminated.
+   */
+  public const STATE_TERMINATING = 'TERMINATING';
+  /**
+   * The Exadata Infrastructure is terminated.
+   */
+  public const STATE_TERMINATED = 'TERMINATED';
+  /**
+   * The Exadata Infrastructure is in failed state.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The Exadata Infrastructure is in maintenance.
+   */
+  public const STATE_MAINTENANCE_IN_PROGRESS = 'MAINTENANCE_IN_PROGRESS';
   protected $collection_key = 'customerContacts';
   /**
+   * Output only. The requested number of additional storage servers activated
+   * for the Exadata Infrastructure.
+   *
    * @var int
    */
   public $activatedStorageCount;
   /**
+   * Output only. The requested number of additional storage servers for the
+   * Exadata Infrastructure.
+   *
    * @var int
    */
   public $additionalStorageCount;
   /**
+   * Output only. The available storage can be allocated to the Exadata
+   * Infrastructure resource, in gigabytes (GB).
+   *
    * @var int
    */
   public $availableStorageSizeGb;
   /**
+   * Optional. The number of compute servers for the Exadata Infrastructure.
+   *
    * @var int
    */
   public $computeCount;
   /**
+   * Output only. The compute model of the Exadata Infrastructure.
+   *
    * @var string
    */
   public $computeModel;
   /**
+   * Output only. The number of enabled CPU cores.
+   *
    * @var int
    */
   public $cpuCount;
   protected $customerContactsType = CustomerContact::class;
   protected $customerContactsDataType = 'array';
+  /**
+   * Output only. Size, in terabytes, of the DATA disk group.
+   *
+   * @var 
+   */
   public $dataStorageSizeTb;
   /**
+   * Output only. The database server type of the Exadata Infrastructure.
+   *
    * @var string
    */
   public $databaseServerType;
   /**
+   * Output only. The local node storage allocated in GBs.
+   *
    * @var int
    */
   public $dbNodeStorageSizeGb;
   /**
+   * Output only. The software version of the database servers (dom0) in the
+   * Exadata Infrastructure.
+   *
    * @var string
    */
   public $dbServerVersion;
   protected $maintenanceWindowType = MaintenanceWindow::class;
   protected $maintenanceWindowDataType = '';
   /**
+   * Output only. The total number of CPU cores available.
+   *
    * @var int
    */
   public $maxCpuCount;
+  /**
+   * Output only. The total available DATA disk group size.
+   *
+   * @var 
+   */
   public $maxDataStorageTb;
   /**
+   * Output only. The total local node storage available in GBs.
+   *
    * @var int
    */
   public $maxDbNodeStorageSizeGb;
   /**
+   * Output only. The total memory available in GBs.
+   *
    * @var int
    */
   public $maxMemoryGb;
   /**
+   * Output only. The memory allocated in GBs.
+   *
    * @var int
    */
   public $memorySizeGb;
   /**
+   * Output only. The monthly software version of the database servers (dom0) in
+   * the Exadata Infrastructure. Example: 20.1.15
+   *
    * @var string
    */
   public $monthlyDbServerVersion;
   /**
+   * Output only. The monthly software version of the storage servers (cells) in
+   * the Exadata Infrastructure. Example: 20.1.15
+   *
    * @var string
    */
   public $monthlyStorageServerVersion;
   /**
+   * Output only. The OCID of the next maintenance run.
+   *
    * @var string
    */
   public $nextMaintenanceRunId;
   /**
+   * Output only. The time when the next maintenance run will occur.
+   *
    * @var string
    */
   public $nextMaintenanceRunTime;
   /**
+   * Output only. The time when the next security maintenance run will occur.
+   *
    * @var string
    */
   public $nextSecurityMaintenanceRunTime;
   /**
+   * Output only. Deep link to the OCI console to view this resource.
+   *
    * @var string
    */
   public $ociUrl;
   /**
+   * Output only. OCID of created infra. https://docs.oracle.com/en-
+   * us/iaas/Content/General/Concepts/identifiers.htm#Oracle
+   *
    * @var string
    */
   public $ocid;
   /**
+   * Required. The shape of the Exadata Infrastructure. The shape determines the
+   * amount of CPU, storage, and memory resources allocated to the instance.
+   *
    * @var string
    */
   public $shape;
   /**
+   * Output only. The current lifecycle state of the Exadata Infrastructure.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. The number of Cloud Exadata storage servers for the Exadata
+   * Infrastructure.
+   *
    * @var int
    */
   public $storageCount;
   /**
+   * Output only. The storage server type of the Exadata Infrastructure.
+   *
    * @var string
    */
   public $storageServerType;
   /**
+   * Output only. The software version of the storage servers (cells) in the
+   * Exadata Infrastructure.
+   *
    * @var string
    */
   public $storageServerVersion;
   /**
+   * Optional. The total storage allocated to the Exadata Infrastructure
+   * resource, in gigabytes (GB).
+   *
    * @var int
    */
   public $totalStorageSizeGb;
 
   /**
-   * @param int
+   * Output only. The requested number of additional storage servers activated
+   * for the Exadata Infrastructure.
+   *
+   * @param int $activatedStorageCount
    */
   public function setActivatedStorageCount($activatedStorageCount)
   {
@@ -146,7 +268,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->activatedStorageCount;
   }
   /**
-   * @param int
+   * Output only. The requested number of additional storage servers for the
+   * Exadata Infrastructure.
+   *
+   * @param int $additionalStorageCount
    */
   public function setAdditionalStorageCount($additionalStorageCount)
   {
@@ -160,7 +285,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->additionalStorageCount;
   }
   /**
-   * @param int
+   * Output only. The available storage can be allocated to the Exadata
+   * Infrastructure resource, in gigabytes (GB).
+   *
+   * @param int $availableStorageSizeGb
    */
   public function setAvailableStorageSizeGb($availableStorageSizeGb)
   {
@@ -174,7 +302,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->availableStorageSizeGb;
   }
   /**
-   * @param int
+   * Optional. The number of compute servers for the Exadata Infrastructure.
+   *
+   * @param int $computeCount
    */
   public function setComputeCount($computeCount)
   {
@@ -188,21 +318,28 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->computeCount;
   }
   /**
-   * @param string
+   * Output only. The compute model of the Exadata Infrastructure.
+   *
+   * Accepted values: COMPUTE_MODEL_UNSPECIFIED, COMPUTE_MODEL_ECPU,
+   * COMPUTE_MODEL_OCPU
+   *
+   * @param self::COMPUTE_MODEL_* $computeModel
    */
   public function setComputeModel($computeModel)
   {
     $this->computeModel = $computeModel;
   }
   /**
-   * @return string
+   * @return self::COMPUTE_MODEL_*
    */
   public function getComputeModel()
   {
     return $this->computeModel;
   }
   /**
-   * @param int
+   * Output only. The number of enabled CPU cores.
+   *
+   * @param int $cpuCount
    */
   public function setCpuCount($cpuCount)
   {
@@ -216,7 +353,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->cpuCount;
   }
   /**
-   * @param CustomerContact[]
+   * Optional. The list of customer contacts.
+   *
+   * @param CustomerContact[] $customerContacts
    */
   public function setCustomerContacts($customerContacts)
   {
@@ -238,7 +377,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->dataStorageSizeTb;
   }
   /**
-   * @param string
+   * Output only. The database server type of the Exadata Infrastructure.
+   *
+   * @param string $databaseServerType
    */
   public function setDatabaseServerType($databaseServerType)
   {
@@ -252,7 +393,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->databaseServerType;
   }
   /**
-   * @param int
+   * Output only. The local node storage allocated in GBs.
+   *
+   * @param int $dbNodeStorageSizeGb
    */
   public function setDbNodeStorageSizeGb($dbNodeStorageSizeGb)
   {
@@ -266,7 +409,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->dbNodeStorageSizeGb;
   }
   /**
-   * @param string
+   * Output only. The software version of the database servers (dom0) in the
+   * Exadata Infrastructure.
+   *
+   * @param string $dbServerVersion
    */
   public function setDbServerVersion($dbServerVersion)
   {
@@ -280,7 +426,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->dbServerVersion;
   }
   /**
-   * @param MaintenanceWindow
+   * Optional. Maintenance window for repair.
+   *
+   * @param MaintenanceWindow $maintenanceWindow
    */
   public function setMaintenanceWindow(MaintenanceWindow $maintenanceWindow)
   {
@@ -294,7 +442,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->maintenanceWindow;
   }
   /**
-   * @param int
+   * Output only. The total number of CPU cores available.
+   *
+   * @param int $maxCpuCount
    */
   public function setMaxCpuCount($maxCpuCount)
   {
@@ -316,7 +466,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->maxDataStorageTb;
   }
   /**
-   * @param int
+   * Output only. The total local node storage available in GBs.
+   *
+   * @param int $maxDbNodeStorageSizeGb
    */
   public function setMaxDbNodeStorageSizeGb($maxDbNodeStorageSizeGb)
   {
@@ -330,7 +482,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->maxDbNodeStorageSizeGb;
   }
   /**
-   * @param int
+   * Output only. The total memory available in GBs.
+   *
+   * @param int $maxMemoryGb
    */
   public function setMaxMemoryGb($maxMemoryGb)
   {
@@ -344,7 +498,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->maxMemoryGb;
   }
   /**
-   * @param int
+   * Output only. The memory allocated in GBs.
+   *
+   * @param int $memorySizeGb
    */
   public function setMemorySizeGb($memorySizeGb)
   {
@@ -358,7 +514,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->memorySizeGb;
   }
   /**
-   * @param string
+   * Output only. The monthly software version of the database servers (dom0) in
+   * the Exadata Infrastructure. Example: 20.1.15
+   *
+   * @param string $monthlyDbServerVersion
    */
   public function setMonthlyDbServerVersion($monthlyDbServerVersion)
   {
@@ -372,7 +531,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->monthlyDbServerVersion;
   }
   /**
-   * @param string
+   * Output only. The monthly software version of the storage servers (cells) in
+   * the Exadata Infrastructure. Example: 20.1.15
+   *
+   * @param string $monthlyStorageServerVersion
    */
   public function setMonthlyStorageServerVersion($monthlyStorageServerVersion)
   {
@@ -386,7 +548,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->monthlyStorageServerVersion;
   }
   /**
-   * @param string
+   * Output only. The OCID of the next maintenance run.
+   *
+   * @param string $nextMaintenanceRunId
    */
   public function setNextMaintenanceRunId($nextMaintenanceRunId)
   {
@@ -400,7 +564,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->nextMaintenanceRunId;
   }
   /**
-   * @param string
+   * Output only. The time when the next maintenance run will occur.
+   *
+   * @param string $nextMaintenanceRunTime
    */
   public function setNextMaintenanceRunTime($nextMaintenanceRunTime)
   {
@@ -414,7 +580,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->nextMaintenanceRunTime;
   }
   /**
-   * @param string
+   * Output only. The time when the next security maintenance run will occur.
+   *
+   * @param string $nextSecurityMaintenanceRunTime
    */
   public function setNextSecurityMaintenanceRunTime($nextSecurityMaintenanceRunTime)
   {
@@ -428,7 +596,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->nextSecurityMaintenanceRunTime;
   }
   /**
-   * @param string
+   * Output only. Deep link to the OCI console to view this resource.
+   *
+   * @param string $ociUrl
    */
   public function setOciUrl($ociUrl)
   {
@@ -442,7 +612,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->ociUrl;
   }
   /**
-   * @param string
+   * Output only. OCID of created infra. https://docs.oracle.com/en-
+   * us/iaas/Content/General/Concepts/identifiers.htm#Oracle
+   *
+   * @param string $ocid
    */
   public function setOcid($ocid)
   {
@@ -456,7 +629,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->ocid;
   }
   /**
-   * @param string
+   * Required. The shape of the Exadata Infrastructure. The shape determines the
+   * amount of CPU, storage, and memory resources allocated to the instance.
+   *
+   * @param string $shape
    */
   public function setShape($shape)
   {
@@ -470,21 +646,29 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->shape;
   }
   /**
-   * @param string
+   * Output only. The current lifecycle state of the Exadata Infrastructure.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PROVISIONING, AVAILABLE, UPDATING,
+   * TERMINATING, TERMINATED, FAILED, MAINTENANCE_IN_PROGRESS
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param int
+   * Optional. The number of Cloud Exadata storage servers for the Exadata
+   * Infrastructure.
+   *
+   * @param int $storageCount
    */
   public function setStorageCount($storageCount)
   {
@@ -498,7 +682,9 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->storageCount;
   }
   /**
-   * @param string
+   * Output only. The storage server type of the Exadata Infrastructure.
+   *
+   * @param string $storageServerType
    */
   public function setStorageServerType($storageServerType)
   {
@@ -512,7 +698,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->storageServerType;
   }
   /**
-   * @param string
+   * Output only. The software version of the storage servers (cells) in the
+   * Exadata Infrastructure.
+   *
+   * @param string $storageServerVersion
    */
   public function setStorageServerVersion($storageServerVersion)
   {
@@ -526,7 +715,10 @@ class CloudExadataInfrastructureProperties extends \Google\Collection
     return $this->storageServerVersion;
   }
   /**
-   * @param int
+   * Optional. The total storage allocated to the Exadata Infrastructure
+   * resource, in gigabytes (GB).
+   *
+   * @param int $totalStorageSizeGb
    */
   public function setTotalStorageSizeGb($totalStorageSizeGb)
   {

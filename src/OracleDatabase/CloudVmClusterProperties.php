@@ -19,127 +19,265 @@ namespace Google\Service\OracleDatabase;
 
 class CloudVmClusterProperties extends \Google\Collection
 {
+  /**
+   * Unspecified compute model.
+   */
+  public const COMPUTE_MODEL_COMPUTE_MODEL_UNSPECIFIED = 'COMPUTE_MODEL_UNSPECIFIED';
+  /**
+   * Abstract measure of compute resources. ECPUs are based on the number of
+   * cores elastically allocated from a pool of compute and storage servers.
+   */
+  public const COMPUTE_MODEL_COMPUTE_MODEL_ECPU = 'COMPUTE_MODEL_ECPU';
+  /**
+   * Physical measure of compute resources. OCPUs are based on the physical core
+   * of a processor.
+   */
+  public const COMPUTE_MODEL_COMPUTE_MODEL_OCPU = 'COMPUTE_MODEL_OCPU';
+  /**
+   * Unspecified.
+   */
+  public const DISK_REDUNDANCY_DISK_REDUNDANCY_UNSPECIFIED = 'DISK_REDUNDANCY_UNSPECIFIED';
+  /**
+   * High - 3 way mirror.
+   */
+  public const DISK_REDUNDANCY_HIGH = 'HIGH';
+  /**
+   * Normal - 2 way mirror.
+   */
+  public const DISK_REDUNDANCY_NORMAL = 'NORMAL';
+  /**
+   * Unspecified
+   */
+  public const LICENSE_TYPE_LICENSE_TYPE_UNSPECIFIED = 'LICENSE_TYPE_UNSPECIFIED';
+  /**
+   * License included part of offer
+   */
+  public const LICENSE_TYPE_LICENSE_INCLUDED = 'LICENSE_INCLUDED';
+  /**
+   * Bring your own license
+   */
+  public const LICENSE_TYPE_BRING_YOUR_OWN_LICENSE = 'BRING_YOUR_OWN_LICENSE';
+  /**
+   * Default unspecified value.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Indicates that the resource is in provisioning state.
+   */
+  public const STATE_PROVISIONING = 'PROVISIONING';
+  /**
+   * Indicates that the resource is in available state.
+   */
+  public const STATE_AVAILABLE = 'AVAILABLE';
+  /**
+   * Indicates that the resource is in updating state.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Indicates that the resource is in terminating state.
+   */
+  public const STATE_TERMINATING = 'TERMINATING';
+  /**
+   * Indicates that the resource is in terminated state.
+   */
+  public const STATE_TERMINATED = 'TERMINATED';
+  /**
+   * Indicates that the resource is in failed state.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Indicates that the resource is in maintenance in progress state.
+   */
+  public const STATE_MAINTENANCE_IN_PROGRESS = 'MAINTENANCE_IN_PROGRESS';
   protected $collection_key = 'sshPublicKeys';
   /**
+   * Optional. OCI Cluster name.
+   *
    * @var string
    */
   public $clusterName;
   /**
+   * Output only. Compartment ID of cluster.
+   *
    * @var string
    */
   public $compartmentId;
   /**
+   * Output only. The compute model of the VM Cluster.
+   *
    * @var string
    */
   public $computeModel;
   /**
+   * Required. Number of enabled CPU cores.
+   *
    * @var int
    */
   public $cpuCoreCount;
+  /**
+   * Optional. The data disk group size to be allocated in TBs.
+   *
+   * @var 
+   */
   public $dataStorageSizeTb;
   /**
+   * Optional. Local storage per VM.
+   *
    * @var int
    */
   public $dbNodeStorageSizeGb;
   /**
+   * Optional. OCID of database servers.
+   *
    * @var string[]
    */
   public $dbServerOcids;
   protected $diagnosticsDataCollectionOptionsType = DataCollectionOptions::class;
   protected $diagnosticsDataCollectionOptionsDataType = '';
   /**
+   * Optional. The type of redundancy.
+   *
    * @var string
    */
   public $diskRedundancy;
   /**
+   * Output only. DNS listener IP.
+   *
    * @var string
    */
   public $dnsListenerIp;
   /**
+   * Output only. Parent DNS domain where SCAN DNS and hosts names are
+   * qualified. ex: ocispdelegated.ocisp10jvnet.oraclevcn.com
+   *
    * @var string
    */
   public $domain;
   /**
+   * Optional. Grid Infrastructure Version.
+   *
    * @var string
    */
   public $giVersion;
   /**
+   * Output only. host name without domain. format: "-" with some suffix. ex:
+   * sp2-yi0xq where "sp2" is the hostname_prefix.
+   *
    * @var string
    */
   public $hostname;
   /**
+   * Optional. Prefix for VM cluster host names.
+   *
    * @var string
    */
   public $hostnamePrefix;
   /**
+   * Required. License type of VM Cluster.
+   *
    * @var string
    */
   public $licenseType;
   /**
+   * Optional. Use local backup.
+   *
    * @var bool
    */
   public $localBackupEnabled;
   /**
+   * Optional. Memory allocated in GBs.
+   *
    * @var int
    */
   public $memorySizeGb;
   /**
+   * Optional. Number of database servers.
+   *
    * @var int
    */
   public $nodeCount;
   /**
+   * Output only. Deep link to the OCI console to view this resource.
+   *
    * @var string
    */
   public $ociUrl;
   /**
+   * Output only. Oracle Cloud Infrastructure ID of VM Cluster.
+   *
    * @var string
    */
   public $ocid;
   /**
+   * Optional. OCPU count per VM. Minimum is 0.1.
+   *
    * @var float
    */
   public $ocpuCount;
   /**
+   * Output only. SCAN DNS name. ex: sp2-yi0xq-
+   * scan.ocispdelegated.ocisp10jvnet.oraclevcn.com
+   *
    * @var string
    */
   public $scanDns;
   /**
+   * Output only. OCID of scan DNS record.
+   *
    * @var string
    */
   public $scanDnsRecordId;
   /**
+   * Output only. OCIDs of scan IPs.
+   *
    * @var string[]
    */
   public $scanIpIds;
   /**
+   * Output only. SCAN listener port - TCP
+   *
    * @var int
    */
   public $scanListenerPortTcp;
   /**
+   * Output only. SCAN listener port - TLS
+   *
    * @var int
    */
   public $scanListenerPortTcpSsl;
   /**
+   * Output only. Shape of VM Cluster.
+   *
    * @var string
    */
   public $shape;
   /**
+   * Optional. Use exadata sparse snapshots.
+   *
    * @var bool
    */
   public $sparseDiskgroupEnabled;
   /**
+   * Optional. SSH public keys to be stored with cluster.
+   *
    * @var string[]
    */
   public $sshPublicKeys;
   /**
+   * Output only. State of the cluster.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The storage allocation for the disk group, in gigabytes (GB).
+   *
    * @var int
    */
   public $storageSizeGb;
   /**
+   * Optional. Operating system version of the image.
+   *
    * @var string
    */
   public $systemVersion;
@@ -147,7 +285,9 @@ class CloudVmClusterProperties extends \Google\Collection
   protected $timeZoneDataType = '';
 
   /**
-   * @param string
+   * Optional. OCI Cluster name.
+   *
+   * @param string $clusterName
    */
   public function setClusterName($clusterName)
   {
@@ -161,7 +301,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->clusterName;
   }
   /**
-   * @param string
+   * Output only. Compartment ID of cluster.
+   *
+   * @param string $compartmentId
    */
   public function setCompartmentId($compartmentId)
   {
@@ -175,21 +317,28 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->compartmentId;
   }
   /**
-   * @param string
+   * Output only. The compute model of the VM Cluster.
+   *
+   * Accepted values: COMPUTE_MODEL_UNSPECIFIED, COMPUTE_MODEL_ECPU,
+   * COMPUTE_MODEL_OCPU
+   *
+   * @param self::COMPUTE_MODEL_* $computeModel
    */
   public function setComputeModel($computeModel)
   {
     $this->computeModel = $computeModel;
   }
   /**
-   * @return string
+   * @return self::COMPUTE_MODEL_*
    */
   public function getComputeModel()
   {
     return $this->computeModel;
   }
   /**
-   * @param int
+   * Required. Number of enabled CPU cores.
+   *
+   * @param int $cpuCoreCount
    */
   public function setCpuCoreCount($cpuCoreCount)
   {
@@ -211,7 +360,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->dataStorageSizeTb;
   }
   /**
-   * @param int
+   * Optional. Local storage per VM.
+   *
+   * @param int $dbNodeStorageSizeGb
    */
   public function setDbNodeStorageSizeGb($dbNodeStorageSizeGb)
   {
@@ -225,7 +376,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->dbNodeStorageSizeGb;
   }
   /**
-   * @param string[]
+   * Optional. OCID of database servers.
+   *
+   * @param string[] $dbServerOcids
    */
   public function setDbServerOcids($dbServerOcids)
   {
@@ -239,7 +392,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->dbServerOcids;
   }
   /**
-   * @param DataCollectionOptions
+   * Optional. Data collection options for diagnostics.
+   *
+   * @param DataCollectionOptions $diagnosticsDataCollectionOptions
    */
   public function setDiagnosticsDataCollectionOptions(DataCollectionOptions $diagnosticsDataCollectionOptions)
   {
@@ -253,21 +408,27 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->diagnosticsDataCollectionOptions;
   }
   /**
-   * @param string
+   * Optional. The type of redundancy.
+   *
+   * Accepted values: DISK_REDUNDANCY_UNSPECIFIED, HIGH, NORMAL
+   *
+   * @param self::DISK_REDUNDANCY_* $diskRedundancy
    */
   public function setDiskRedundancy($diskRedundancy)
   {
     $this->diskRedundancy = $diskRedundancy;
   }
   /**
-   * @return string
+   * @return self::DISK_REDUNDANCY_*
    */
   public function getDiskRedundancy()
   {
     return $this->diskRedundancy;
   }
   /**
-   * @param string
+   * Output only. DNS listener IP.
+   *
+   * @param string $dnsListenerIp
    */
   public function setDnsListenerIp($dnsListenerIp)
   {
@@ -281,7 +442,10 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->dnsListenerIp;
   }
   /**
-   * @param string
+   * Output only. Parent DNS domain where SCAN DNS and hosts names are
+   * qualified. ex: ocispdelegated.ocisp10jvnet.oraclevcn.com
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -295,7 +459,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->domain;
   }
   /**
-   * @param string
+   * Optional. Grid Infrastructure Version.
+   *
+   * @param string $giVersion
    */
   public function setGiVersion($giVersion)
   {
@@ -309,7 +475,10 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->giVersion;
   }
   /**
-   * @param string
+   * Output only. host name without domain. format: "-" with some suffix. ex:
+   * sp2-yi0xq where "sp2" is the hostname_prefix.
+   *
+   * @param string $hostname
    */
   public function setHostname($hostname)
   {
@@ -323,7 +492,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->hostname;
   }
   /**
-   * @param string
+   * Optional. Prefix for VM cluster host names.
+   *
+   * @param string $hostnamePrefix
    */
   public function setHostnamePrefix($hostnamePrefix)
   {
@@ -337,21 +508,28 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->hostnamePrefix;
   }
   /**
-   * @param string
+   * Required. License type of VM Cluster.
+   *
+   * Accepted values: LICENSE_TYPE_UNSPECIFIED, LICENSE_INCLUDED,
+   * BRING_YOUR_OWN_LICENSE
+   *
+   * @param self::LICENSE_TYPE_* $licenseType
    */
   public function setLicenseType($licenseType)
   {
     $this->licenseType = $licenseType;
   }
   /**
-   * @return string
+   * @return self::LICENSE_TYPE_*
    */
   public function getLicenseType()
   {
     return $this->licenseType;
   }
   /**
-   * @param bool
+   * Optional. Use local backup.
+   *
+   * @param bool $localBackupEnabled
    */
   public function setLocalBackupEnabled($localBackupEnabled)
   {
@@ -365,7 +543,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->localBackupEnabled;
   }
   /**
-   * @param int
+   * Optional. Memory allocated in GBs.
+   *
+   * @param int $memorySizeGb
    */
   public function setMemorySizeGb($memorySizeGb)
   {
@@ -379,7 +559,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->memorySizeGb;
   }
   /**
-   * @param int
+   * Optional. Number of database servers.
+   *
+   * @param int $nodeCount
    */
   public function setNodeCount($nodeCount)
   {
@@ -393,7 +575,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->nodeCount;
   }
   /**
-   * @param string
+   * Output only. Deep link to the OCI console to view this resource.
+   *
+   * @param string $ociUrl
    */
   public function setOciUrl($ociUrl)
   {
@@ -407,7 +591,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->ociUrl;
   }
   /**
-   * @param string
+   * Output only. Oracle Cloud Infrastructure ID of VM Cluster.
+   *
+   * @param string $ocid
    */
   public function setOcid($ocid)
   {
@@ -421,7 +607,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->ocid;
   }
   /**
-   * @param float
+   * Optional. OCPU count per VM. Minimum is 0.1.
+   *
+   * @param float $ocpuCount
    */
   public function setOcpuCount($ocpuCount)
   {
@@ -435,7 +623,10 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->ocpuCount;
   }
   /**
-   * @param string
+   * Output only. SCAN DNS name. ex: sp2-yi0xq-
+   * scan.ocispdelegated.ocisp10jvnet.oraclevcn.com
+   *
+   * @param string $scanDns
    */
   public function setScanDns($scanDns)
   {
@@ -449,7 +640,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->scanDns;
   }
   /**
-   * @param string
+   * Output only. OCID of scan DNS record.
+   *
+   * @param string $scanDnsRecordId
    */
   public function setScanDnsRecordId($scanDnsRecordId)
   {
@@ -463,7 +656,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->scanDnsRecordId;
   }
   /**
-   * @param string[]
+   * Output only. OCIDs of scan IPs.
+   *
+   * @param string[] $scanIpIds
    */
   public function setScanIpIds($scanIpIds)
   {
@@ -477,7 +672,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->scanIpIds;
   }
   /**
-   * @param int
+   * Output only. SCAN listener port - TCP
+   *
+   * @param int $scanListenerPortTcp
    */
   public function setScanListenerPortTcp($scanListenerPortTcp)
   {
@@ -491,7 +688,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->scanListenerPortTcp;
   }
   /**
-   * @param int
+   * Output only. SCAN listener port - TLS
+   *
+   * @param int $scanListenerPortTcpSsl
    */
   public function setScanListenerPortTcpSsl($scanListenerPortTcpSsl)
   {
@@ -505,7 +704,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->scanListenerPortTcpSsl;
   }
   /**
-   * @param string
+   * Output only. Shape of VM Cluster.
+   *
+   * @param string $shape
    */
   public function setShape($shape)
   {
@@ -519,7 +720,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->shape;
   }
   /**
-   * @param bool
+   * Optional. Use exadata sparse snapshots.
+   *
+   * @param bool $sparseDiskgroupEnabled
    */
   public function setSparseDiskgroupEnabled($sparseDiskgroupEnabled)
   {
@@ -533,7 +736,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->sparseDiskgroupEnabled;
   }
   /**
-   * @param string[]
+   * Optional. SSH public keys to be stored with cluster.
+   *
+   * @param string[] $sshPublicKeys
    */
   public function setSshPublicKeys($sshPublicKeys)
   {
@@ -547,21 +752,28 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->sshPublicKeys;
   }
   /**
-   * @param string
+   * Output only. State of the cluster.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PROVISIONING, AVAILABLE, UPDATING,
+   * TERMINATING, TERMINATED, FAILED, MAINTENANCE_IN_PROGRESS
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param int
+   * Output only. The storage allocation for the disk group, in gigabytes (GB).
+   *
+   * @param int $storageSizeGb
    */
   public function setStorageSizeGb($storageSizeGb)
   {
@@ -575,7 +787,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->storageSizeGb;
   }
   /**
-   * @param string
+   * Optional. Operating system version of the image.
+   *
+   * @param string $systemVersion
    */
   public function setSystemVersion($systemVersion)
   {
@@ -589,7 +803,9 @@ class CloudVmClusterProperties extends \Google\Collection
     return $this->systemVersion;
   }
   /**
-   * @param TimeZone
+   * Optional. Time zone of VM Cluster to set. Defaults to UTC if not specified.
+   *
+   * @param TimeZone $timeZone
    */
   public function setTimeZone(TimeZone $timeZone)
   {

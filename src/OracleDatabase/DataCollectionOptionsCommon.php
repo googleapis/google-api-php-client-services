@@ -20,20 +20,28 @@ namespace Google\Service\OracleDatabase;
 class DataCollectionOptionsCommon extends \Google\Model
 {
   /**
+   * Optional. Indicates whether to enable data collection for diagnostics.
+   *
    * @var bool
    */
   public $isDiagnosticsEventsEnabled;
   /**
+   * Optional. Indicates whether to enable health monitoring.
+   *
    * @var bool
    */
   public $isHealthMonitoringEnabled;
   /**
+   * Optional. Indicates whether to enable incident logs and trace collection.
+   *
    * @var bool
    */
   public $isIncidentLogsEnabled;
 
   /**
-   * @param bool
+   * Optional. Indicates whether to enable data collection for diagnostics.
+   *
+   * @param bool $isDiagnosticsEventsEnabled
    */
   public function setIsDiagnosticsEventsEnabled($isDiagnosticsEventsEnabled)
   {
@@ -47,7 +55,9 @@ class DataCollectionOptionsCommon extends \Google\Model
     return $this->isDiagnosticsEventsEnabled;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether to enable health monitoring.
+   *
+   * @param bool $isHealthMonitoringEnabled
    */
   public function setIsHealthMonitoringEnabled($isHealthMonitoringEnabled)
   {
@@ -61,7 +71,9 @@ class DataCollectionOptionsCommon extends \Google\Model
     return $this->isHealthMonitoringEnabled;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether to enable incident logs and trace collection.
+   *
+   * @param bool $isIncidentLogsEnabled
    */
   public function setIsIncidentLogsEnabled($isIncidentLogsEnabled)
   {

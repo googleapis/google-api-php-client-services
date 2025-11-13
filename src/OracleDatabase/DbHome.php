@@ -22,20 +22,30 @@ class DbHome extends \Google\Model
   protected $databaseType = Database::class;
   protected $databaseDataType = '';
   /**
+   * Required. A valid Oracle Database version. For a list of supported
+   * versions, use the ListDbVersions operation.
+   *
    * @var string
    */
   public $dbVersion;
   /**
+   * Optional. The display name for the Database Home. The name does not have to
+   * be unique within your project.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Whether unified auditing is enabled for the Database Home.
+   *
    * @var bool
    */
   public $isUnifiedAuditingEnabled;
 
   /**
-   * @param Database
+   * Required. The Database resource.
+   *
+   * @param Database $database
    */
   public function setDatabase(Database $database)
   {
@@ -49,7 +59,10 @@ class DbHome extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Required. A valid Oracle Database version. For a list of supported
+   * versions, use the ListDbVersions operation.
+   *
+   * @param string $dbVersion
    */
   public function setDbVersion($dbVersion)
   {
@@ -63,7 +76,10 @@ class DbHome extends \Google\Model
     return $this->dbVersion;
   }
   /**
-   * @param string
+   * Optional. The display name for the Database Home. The name does not have to
+   * be unique within your project.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -77,7 +93,9 @@ class DbHome extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Optional. Whether unified auditing is enabled for the Database Home.
+   *
+   * @param bool $isUnifiedAuditingEnabled
    */
   public function setIsUnifiedAuditingEnabled($isUnifiedAuditingEnabled)
   {

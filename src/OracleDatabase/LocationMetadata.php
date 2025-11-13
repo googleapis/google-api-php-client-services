@@ -21,12 +21,16 @@ class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'gcpOracleZones';
   /**
+   * Output only. Google Cloud Platform Oracle zones in a location.
+   *
    * @var string[]
    */
   public $gcpOracleZones;
 
   /**
-   * @param string[]
+   * Output only. Google Cloud Platform Oracle zones in a location.
+   *
+   * @param string[] $gcpOracleZones
    */
   public function setGcpOracleZones($gcpOracleZones)
   {

@@ -23,12 +23,16 @@ class ListCloudVmClustersResponse extends \Google\Collection
   protected $cloudVmClustersType = CloudVmCluster::class;
   protected $cloudVmClustersDataType = 'array';
   /**
+   * A token to fetch the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CloudVmCluster[]
+   * The list of VM Clusters.
+   *
+   * @param CloudVmCluster[] $cloudVmClusters
    */
   public function setCloudVmClusters($cloudVmClusters)
   {
@@ -42,7 +46,9 @@ class ListCloudVmClustersResponse extends \Google\Collection
     return $this->cloudVmClusters;
   }
   /**
-   * @param string
+   * A token to fetch the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

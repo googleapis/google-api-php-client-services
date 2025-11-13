@@ -23,12 +23,16 @@ class ListDbServersResponse extends \Google\Collection
   protected $dbServersType = DbServer::class;
   protected $dbServersDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DbServer[]
+   * The list of database servers.
+   *
+   * @param DbServer[] $dbServers
    */
   public function setDbServers($dbServers)
   {
@@ -42,7 +46,9 @@ class ListDbServersResponse extends \Google\Collection
     return $this->dbServers;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -19,46 +19,106 @@ namespace Google\Service\OracleDatabase;
 
 class MaintenanceWindow extends \Google\Collection
 {
+  /**
+   * Default unspecified value.
+   */
+  public const PATCHING_MODE_PATCHING_MODE_UNSPECIFIED = 'PATCHING_MODE_UNSPECIFIED';
+  /**
+   * Updates the Cloud Exadata database server hosts in a rolling fashion.
+   */
+  public const PATCHING_MODE_ROLLING = 'ROLLING';
+  /**
+   * The non-rolling maintenance method first updates your storage servers at
+   * the same time, then your database servers at the same time.
+   */
+  public const PATCHING_MODE_NON_ROLLING = 'NON_ROLLING';
+  /**
+   * Default unspecified value.
+   */
+  public const PREFERENCE_MAINTENANCE_WINDOW_PREFERENCE_UNSPECIFIED = 'MAINTENANCE_WINDOW_PREFERENCE_UNSPECIFIED';
+  /**
+   * Custom preference.
+   */
+  public const PREFERENCE_CUSTOM_PREFERENCE = 'CUSTOM_PREFERENCE';
+  /**
+   * No preference.
+   */
+  public const PREFERENCE_NO_PREFERENCE = 'NO_PREFERENCE';
   protected $collection_key = 'weeksOfMonth';
   /**
+   * Optional. Determines the amount of time the system will wait before the
+   * start of each database server patching operation. Custom action timeout is
+   * in minutes and valid value is between 15 to 120 (inclusive).
+   *
    * @var int
    */
   public $customActionTimeoutMins;
   /**
+   * Optional. Days during the week when maintenance should be performed.
+   *
    * @var string[]
    */
   public $daysOfWeek;
   /**
+   * Optional. The window of hours during the day when maintenance should be
+   * performed. The window is a 4 hour slot. Valid values are: 0 - represents
+   * time slot 0:00 - 3:59 UTC 4 - represents time slot 4:00 - 7:59 UTC 8 -
+   * represents time slot 8:00 - 11:59 UTC 12 - represents time slot 12:00 -
+   * 15:59 UTC 16 - represents time slot 16:00 - 19:59 UTC 20 - represents time
+   * slot 20:00 - 23:59 UTC
+   *
    * @var int[]
    */
   public $hoursOfDay;
   /**
+   * Optional. If true, enables the configuration of a custom action timeout
+   * (waiting period) between database server patching operations.
+   *
    * @var bool
    */
   public $isCustomActionTimeoutEnabled;
   /**
+   * Optional. Lead time window allows user to set a lead time to prepare for a
+   * down time. The lead time is in weeks and valid value is between 1 to 4.
+   *
    * @var int
    */
   public $leadTimeWeek;
   /**
+   * Optional. Months during the year when maintenance should be performed.
+   *
    * @var string[]
    */
   public $months;
   /**
+   * Optional. Cloud CloudExadataInfrastructure node patching method, either
+   * "ROLLING" or "NONROLLING". Default value is ROLLING.
+   *
    * @var string
    */
   public $patchingMode;
   /**
+   * Optional. The maintenance window scheduling preference.
+   *
    * @var string
    */
   public $preference;
   /**
+   * Optional. Weeks during the month when maintenance should be performed.
+   * Weeks start on the 1st, 8th, 15th, and 22nd days of the month, and have a
+   * duration of 7 days. Weeks start and end based on calendar dates, not days
+   * of the week.
+   *
    * @var int[]
    */
   public $weeksOfMonth;
 
   /**
-   * @param int
+   * Optional. Determines the amount of time the system will wait before the
+   * start of each database server patching operation. Custom action timeout is
+   * in minutes and valid value is between 15 to 120 (inclusive).
+   *
+   * @param int $customActionTimeoutMins
    */
   public function setCustomActionTimeoutMins($customActionTimeoutMins)
   {
@@ -72,7 +132,9 @@ class MaintenanceWindow extends \Google\Collection
     return $this->customActionTimeoutMins;
   }
   /**
-   * @param string[]
+   * Optional. Days during the week when maintenance should be performed.
+   *
+   * @param string[] $daysOfWeek
    */
   public function setDaysOfWeek($daysOfWeek)
   {
@@ -86,7 +148,14 @@ class MaintenanceWindow extends \Google\Collection
     return $this->daysOfWeek;
   }
   /**
-   * @param int[]
+   * Optional. The window of hours during the day when maintenance should be
+   * performed. The window is a 4 hour slot. Valid values are: 0 - represents
+   * time slot 0:00 - 3:59 UTC 4 - represents time slot 4:00 - 7:59 UTC 8 -
+   * represents time slot 8:00 - 11:59 UTC 12 - represents time slot 12:00 -
+   * 15:59 UTC 16 - represents time slot 16:00 - 19:59 UTC 20 - represents time
+   * slot 20:00 - 23:59 UTC
+   *
+   * @param int[] $hoursOfDay
    */
   public function setHoursOfDay($hoursOfDay)
   {
@@ -100,7 +169,10 @@ class MaintenanceWindow extends \Google\Collection
     return $this->hoursOfDay;
   }
   /**
-   * @param bool
+   * Optional. If true, enables the configuration of a custom action timeout
+   * (waiting period) between database server patching operations.
+   *
+   * @param bool $isCustomActionTimeoutEnabled
    */
   public function setIsCustomActionTimeoutEnabled($isCustomActionTimeoutEnabled)
   {
@@ -114,7 +186,10 @@ class MaintenanceWindow extends \Google\Collection
     return $this->isCustomActionTimeoutEnabled;
   }
   /**
-   * @param int
+   * Optional. Lead time window allows user to set a lead time to prepare for a
+   * down time. The lead time is in weeks and valid value is between 1 to 4.
+   *
+   * @param int $leadTimeWeek
    */
   public function setLeadTimeWeek($leadTimeWeek)
   {
@@ -128,7 +203,9 @@ class MaintenanceWindow extends \Google\Collection
     return $this->leadTimeWeek;
   }
   /**
-   * @param string[]
+   * Optional. Months during the year when maintenance should be performed.
+   *
+   * @param string[] $months
    */
   public function setMonths($months)
   {
@@ -142,35 +219,50 @@ class MaintenanceWindow extends \Google\Collection
     return $this->months;
   }
   /**
-   * @param string
+   * Optional. Cloud CloudExadataInfrastructure node patching method, either
+   * "ROLLING" or "NONROLLING". Default value is ROLLING.
+   *
+   * Accepted values: PATCHING_MODE_UNSPECIFIED, ROLLING, NON_ROLLING
+   *
+   * @param self::PATCHING_MODE_* $patchingMode
    */
   public function setPatchingMode($patchingMode)
   {
     $this->patchingMode = $patchingMode;
   }
   /**
-   * @return string
+   * @return self::PATCHING_MODE_*
    */
   public function getPatchingMode()
   {
     return $this->patchingMode;
   }
   /**
-   * @param string
+   * Optional. The maintenance window scheduling preference.
+   *
+   * Accepted values: MAINTENANCE_WINDOW_PREFERENCE_UNSPECIFIED,
+   * CUSTOM_PREFERENCE, NO_PREFERENCE
+   *
+   * @param self::PREFERENCE_* $preference
    */
   public function setPreference($preference)
   {
     $this->preference = $preference;
   }
   /**
-   * @return string
+   * @return self::PREFERENCE_*
    */
   public function getPreference()
   {
     return $this->preference;
   }
   /**
-   * @param int[]
+   * Optional. Weeks during the month when maintenance should be performed.
+   * Weeks start on the 1st, 8th, 15th, and 22nd days of the month, and have a
+   * duration of 7 days. Weeks start and end based on calendar dates, not days
+   * of the week.
+   *
+   * @param int[] $weeksOfMonth
    */
   public function setWeeksOfMonth($weeksOfMonth)
   {

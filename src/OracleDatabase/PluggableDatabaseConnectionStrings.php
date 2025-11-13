@@ -20,20 +20,32 @@ namespace Google\Service\OracleDatabase;
 class PluggableDatabaseConnectionStrings extends \Google\Model
 {
   /**
+   * Optional. All connection strings to use to connect to the pluggable
+   * database.
+   *
    * @var string[]
    */
   public $allConnectionStrings;
   /**
+   * Optional. The default connection string to use to connect to the pluggable
+   * database.
+   *
    * @var string
    */
   public $pdbDefault;
   /**
+   * Optional. The default connection string to use to connect to the pluggable
+   * database using IP.
+   *
    * @var string
    */
   public $pdbIpDefault;
 
   /**
-   * @param string[]
+   * Optional. All connection strings to use to connect to the pluggable
+   * database.
+   *
+   * @param string[] $allConnectionStrings
    */
   public function setAllConnectionStrings($allConnectionStrings)
   {
@@ -47,7 +59,10 @@ class PluggableDatabaseConnectionStrings extends \Google\Model
     return $this->allConnectionStrings;
   }
   /**
-   * @param string
+   * Optional. The default connection string to use to connect to the pluggable
+   * database.
+   *
+   * @param string $pdbDefault
    */
   public function setPdbDefault($pdbDefault)
   {
@@ -61,7 +76,10 @@ class PluggableDatabaseConnectionStrings extends \Google\Model
     return $this->pdbDefault;
   }
   /**
-   * @param string
+   * Optional. The default connection string to use to connect to the pluggable
+   * database using IP.
+   *
+   * @param string $pdbIpDefault
    */
   public function setPdbIpDefault($pdbIpDefault)
   {

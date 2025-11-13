@@ -20,16 +20,22 @@ namespace Google\Service\OracleDatabase;
 class DataCollectionOptionsDbSystem extends \Google\Model
 {
   /**
+   * Optional. Indicates whether to enable data collection for diagnostics.
+   *
    * @var bool
    */
   public $isDiagnosticsEventsEnabled;
   /**
+   * Optional. Indicates whether to enable incident logs and trace collection.
+   *
    * @var bool
    */
   public $isIncidentLogsEnabled;
 
   /**
-   * @param bool
+   * Optional. Indicates whether to enable data collection for diagnostics.
+   *
+   * @param bool $isDiagnosticsEventsEnabled
    */
   public function setIsDiagnosticsEventsEnabled($isDiagnosticsEventsEnabled)
   {
@@ -43,7 +49,9 @@ class DataCollectionOptionsDbSystem extends \Google\Model
     return $this->isDiagnosticsEventsEnabled;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether to enable incident logs and trace collection.
+   *
+   * @param bool $isIncidentLogsEnabled
    */
   public function setIsIncidentLogsEnabled($isIncidentLogsEnabled)
   {

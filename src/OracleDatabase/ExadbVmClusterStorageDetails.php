@@ -20,12 +20,20 @@ namespace Google\Service\OracleDatabase;
 class ExadbVmClusterStorageDetails extends \Google\Model
 {
   /**
+   * Required. The storage allocation for the exadbvmcluster per node, in
+   * gigabytes (GB). This field is used to calculate the total storage
+   * allocation for the exadbvmcluster.
+   *
    * @var int
    */
   public $sizeInGbsPerNode;
 
   /**
-   * @param int
+   * Required. The storage allocation for the exadbvmcluster per node, in
+   * gigabytes (GB). This field is used to calculate the total storage
+   * allocation for the exadbvmcluster.
+   *
+   * @param int $sizeInGbsPerNode
    */
   public function setSizeInGbsPerNode($sizeInGbsPerNode)
   {

@@ -20,40 +20,63 @@ namespace Google\Service\OracleDatabase;
 class AutonomousDatabaseConnectionUrls extends \Google\Model
 {
   /**
+   * Output only. Oracle Application Express (APEX) URL.
+   *
    * @var string
    */
   public $apexUri;
   /**
+   * Output only. The URL of the Database Transforms for the Autonomous
+   * Database.
+   *
    * @var string
    */
   public $databaseTransformsUri;
   /**
+   * Output only. The URL of the Graph Studio for the Autonomous Database.
+   *
    * @var string
    */
   public $graphStudioUri;
   /**
+   * Output only. The URL of the Oracle Machine Learning (OML) Notebook for the
+   * Autonomous Database.
+   *
    * @var string
    */
   public $machineLearningNotebookUri;
   /**
+   * Output only. The URL of Machine Learning user management the Autonomous
+   * Database.
+   *
    * @var string
    */
   public $machineLearningUserManagementUri;
   /**
+   * Output only. The URL of the MongoDB API for the Autonomous Database.
+   *
    * @var string
    */
   public $mongoDbUri;
   /**
+   * Output only. The Oracle REST Data Services (ORDS) URL of the Web Access for
+   * the Autonomous Database.
+   *
    * @var string
    */
   public $ordsUri;
   /**
+   * Output only. The URL of the Oracle SQL Developer Web for the Autonomous
+   * Database.
+   *
    * @var string
    */
   public $sqlDevWebUri;
 
   /**
-   * @param string
+   * Output only. Oracle Application Express (APEX) URL.
+   *
+   * @param string $apexUri
    */
   public function setApexUri($apexUri)
   {
@@ -67,7 +90,10 @@ class AutonomousDatabaseConnectionUrls extends \Google\Model
     return $this->apexUri;
   }
   /**
-   * @param string
+   * Output only. The URL of the Database Transforms for the Autonomous
+   * Database.
+   *
+   * @param string $databaseTransformsUri
    */
   public function setDatabaseTransformsUri($databaseTransformsUri)
   {
@@ -81,7 +107,9 @@ class AutonomousDatabaseConnectionUrls extends \Google\Model
     return $this->databaseTransformsUri;
   }
   /**
-   * @param string
+   * Output only. The URL of the Graph Studio for the Autonomous Database.
+   *
+   * @param string $graphStudioUri
    */
   public function setGraphStudioUri($graphStudioUri)
   {
@@ -95,7 +123,10 @@ class AutonomousDatabaseConnectionUrls extends \Google\Model
     return $this->graphStudioUri;
   }
   /**
-   * @param string
+   * Output only. The URL of the Oracle Machine Learning (OML) Notebook for the
+   * Autonomous Database.
+   *
+   * @param string $machineLearningNotebookUri
    */
   public function setMachineLearningNotebookUri($machineLearningNotebookUri)
   {
@@ -109,7 +140,10 @@ class AutonomousDatabaseConnectionUrls extends \Google\Model
     return $this->machineLearningNotebookUri;
   }
   /**
-   * @param string
+   * Output only. The URL of Machine Learning user management the Autonomous
+   * Database.
+   *
+   * @param string $machineLearningUserManagementUri
    */
   public function setMachineLearningUserManagementUri($machineLearningUserManagementUri)
   {
@@ -123,7 +157,9 @@ class AutonomousDatabaseConnectionUrls extends \Google\Model
     return $this->machineLearningUserManagementUri;
   }
   /**
-   * @param string
+   * Output only. The URL of the MongoDB API for the Autonomous Database.
+   *
+   * @param string $mongoDbUri
    */
   public function setMongoDbUri($mongoDbUri)
   {
@@ -137,7 +173,10 @@ class AutonomousDatabaseConnectionUrls extends \Google\Model
     return $this->mongoDbUri;
   }
   /**
-   * @param string
+   * Output only. The Oracle REST Data Services (ORDS) URL of the Web Access for
+   * the Autonomous Database.
+   *
+   * @param string $ordsUri
    */
   public function setOrdsUri($ordsUri)
   {
@@ -151,7 +190,10 @@ class AutonomousDatabaseConnectionUrls extends \Google\Model
     return $this->ordsUri;
   }
   /**
-   * @param string
+   * Output only. The URL of the Oracle SQL Developer Web for the Autonomous
+   * Database.
+   *
+   * @param string $sqlDevWebUri
    */
   public function setSqlDevWebUri($sqlDevWebUri)
   {

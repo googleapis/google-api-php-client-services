@@ -20,12 +20,16 @@ namespace Google\Service\OracleDatabase;
 class GenerateAutonomousDatabaseWalletResponse extends \Google\Model
 {
   /**
+   * Output only. The base64 encoded wallet files.
+   *
    * @var string
    */
   public $archiveContent;
 
   /**
-   * @param string
+   * Output only. The base64 encoded wallet files.
+   *
+   * @param string $archiveContent
    */
   public function setArchiveContent($archiveContent)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\OracleDatabase;
 class ExascaleDbStorageDetails extends \Google\Model
 {
   /**
+   * Output only. The available storage capacity for the ExascaleDbStorageVault,
+   * in gigabytes (GB).
+   *
    * @var int
    */
   public $availableSizeGbs;
   /**
+   * Required. The total storage allocation for the ExascaleDbStorageVault, in
+   * gigabytes (GB).
+   *
    * @var int
    */
   public $totalSizeGbs;
 
   /**
-   * @param int
+   * Output only. The available storage capacity for the ExascaleDbStorageVault,
+   * in gigabytes (GB).
+   *
+   * @param int $availableSizeGbs
    */
   public function setAvailableSizeGbs($availableSizeGbs)
   {
@@ -43,7 +52,10 @@ class ExascaleDbStorageDetails extends \Google\Model
     return $this->availableSizeGbs;
   }
   /**
-   * @param int
+   * Required. The total storage allocation for the ExascaleDbStorageVault, in
+   * gigabytes (GB).
+   *
+   * @param int $totalSizeGbs
    */
   public function setTotalSizeGbs($totalSizeGbs)
   {

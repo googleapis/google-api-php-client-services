@@ -20,16 +20,26 @@ namespace Google\Service\OracleDatabase;
 class GiVersion extends \Google\Model
 {
   /**
+   * Identifier. The name of the Oracle Grid Infrastructure (GI) version
+   * resource with the format:
+   * projects/{project}/locations/{region}/giVersions/{gi_versions}
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. version
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Identifier. The name of the Oracle Grid Infrastructure (GI) version
+   * resource with the format:
+   * projects/{project}/locations/{region}/giVersions/{gi_versions}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +53,9 @@ class GiVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. version
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

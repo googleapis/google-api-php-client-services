@@ -20,30 +20,65 @@ namespace Google\Service\OracleDatabase;
 class IdentityConnector extends \Google\Model
 {
   /**
+   * Default unspecified value.
+   */
+  public const CONNECTION_STATE_CONNECTION_STATE_UNSPECIFIED = 'CONNECTION_STATE_UNSPECIFIED';
+  /**
+   * The identity pool connection is connected.
+   */
+  public const CONNECTION_STATE_CONNECTED = 'CONNECTED';
+  /**
+   * The identity pool connection is partially connected.
+   */
+  public const CONNECTION_STATE_PARTIALLY_CONNECTED = 'PARTIALLY_CONNECTED';
+  /**
+   * The identity pool connection is disconnected.
+   */
+  public const CONNECTION_STATE_DISCONNECTED = 'DISCONNECTED';
+  /**
+   * The identity pool connection is in an unknown state.
+   */
+  public const CONNECTION_STATE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Output only. The connection state of the identity connector.
+   *
    * @var string
    */
   public $connectionState;
   /**
+   * Output only. A google managed service account on which customers can grant
+   * roles to access resources in the customer project. Example:
+   * `p176944527254-55-75119d87fd8f@gcp-sa-oci.iam.gserviceaccount.com`
+   *
    * @var string
    */
   public $serviceAgentEmail;
 
   /**
-   * @param string
+   * Output only. The connection state of the identity connector.
+   *
+   * Accepted values: CONNECTION_STATE_UNSPECIFIED, CONNECTED,
+   * PARTIALLY_CONNECTED, DISCONNECTED, UNKNOWN
+   *
+   * @param self::CONNECTION_STATE_* $connectionState
    */
   public function setConnectionState($connectionState)
   {
     $this->connectionState = $connectionState;
   }
   /**
-   * @return string
+   * @return self::CONNECTION_STATE_*
    */
   public function getConnectionState()
   {
     return $this->connectionState;
   }
   /**
-   * @param string
+   * Output only. A google managed service account on which customers can grant
+   * roles to access resources in the customer project. Example:
+   * `p176944527254-55-75119d87fd8f@gcp-sa-oci.iam.gserviceaccount.com`
+   *
+   * @param string $serviceAgentEmail
    */
   public function setServiceAgentEmail($serviceAgentEmail)
   {

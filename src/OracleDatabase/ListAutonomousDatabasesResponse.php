@@ -23,12 +23,16 @@ class ListAutonomousDatabasesResponse extends \Google\Collection
   protected $autonomousDatabasesType = AutonomousDatabase::class;
   protected $autonomousDatabasesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AutonomousDatabase[]
+   * The list of Autonomous Databases.
+   *
+   * @param AutonomousDatabase[] $autonomousDatabases
    */
   public function setAutonomousDatabases($autonomousDatabases)
   {
@@ -42,7 +46,9 @@ class ListAutonomousDatabasesResponse extends \Google\Collection
     return $this->autonomousDatabases;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

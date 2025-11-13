@@ -20,16 +20,22 @@ namespace Google\Service\OracleDatabase;
 class AutonomousDatabaseApex extends \Google\Model
 {
   /**
+   * Output only. The Oracle APEX Application Development version.
+   *
    * @var string
    */
   public $apexVersion;
   /**
+   * Output only. The Oracle REST Data Services (ORDS) version.
+   *
    * @var string
    */
   public $ordsVersion;
 
   /**
-   * @param string
+   * Output only. The Oracle APEX Application Development version.
+   *
+   * @param string $apexVersion
    */
   public function setApexVersion($apexVersion)
   {
@@ -43,7 +49,9 @@ class AutonomousDatabaseApex extends \Google\Model
     return $this->apexVersion;
   }
   /**
-   * @param string
+   * Output only. The Oracle REST Data Services (ORDS) version.
+   *
+   * @param string $ordsVersion
    */
   public function setOrdsVersion($ordsVersion)
   {

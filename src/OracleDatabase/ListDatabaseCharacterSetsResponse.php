@@ -23,12 +23,16 @@ class ListDatabaseCharacterSetsResponse extends \Google\Collection
   protected $databaseCharacterSetsType = DatabaseCharacterSet::class;
   protected $databaseCharacterSetsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DatabaseCharacterSet[]
+   * The list of DatabaseCharacterSets.
+   *
+   * @param DatabaseCharacterSet[] $databaseCharacterSets
    */
   public function setDatabaseCharacterSets($databaseCharacterSets)
   {
@@ -42,7 +46,9 @@ class ListDatabaseCharacterSetsResponse extends \Google\Collection
     return $this->databaseCharacterSets;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

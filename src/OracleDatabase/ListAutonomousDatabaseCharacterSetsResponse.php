@@ -23,12 +23,16 @@ class ListAutonomousDatabaseCharacterSetsResponse extends \Google\Collection
   protected $autonomousDatabaseCharacterSetsType = AutonomousDatabaseCharacterSet::class;
   protected $autonomousDatabaseCharacterSetsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AutonomousDatabaseCharacterSet[]
+   * The list of Autonomous Database Character Sets.
+   *
+   * @param AutonomousDatabaseCharacterSet[] $autonomousDatabaseCharacterSets
    */
   public function setAutonomousDatabaseCharacterSets($autonomousDatabaseCharacterSets)
   {
@@ -42,7 +46,9 @@ class ListAutonomousDatabaseCharacterSetsResponse extends \Google\Collection
     return $this->autonomousDatabaseCharacterSets;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

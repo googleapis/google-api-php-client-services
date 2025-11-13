@@ -20,6 +20,40 @@ namespace Google\Service\OracleDatabase;
 class ScheduledOperationDetails extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const DAY_OF_WEEK_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_OF_WEEK_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_OF_WEEK_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_OF_WEEK_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_OF_WEEK_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_OF_WEEK_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_OF_WEEK_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_OF_WEEK_SUNDAY = 'SUNDAY';
+  /**
+   * Output only. Day of week.
+   *
    * @var string
    */
   public $dayOfWeek;
@@ -29,21 +63,28 @@ class ScheduledOperationDetails extends \Google\Model
   protected $stopTimeDataType = '';
 
   /**
-   * @param string
+   * Output only. Day of week.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_OF_WEEK_* $dayOfWeek
    */
   public function setDayOfWeek($dayOfWeek)
   {
     $this->dayOfWeek = $dayOfWeek;
   }
   /**
-   * @return string
+   * @return self::DAY_OF_WEEK_*
    */
   public function getDayOfWeek()
   {
     return $this->dayOfWeek;
   }
   /**
-   * @param TimeOfDay
+   * Output only. Auto start time.
+   *
+   * @param TimeOfDay $startTime
    */
   public function setStartTime(TimeOfDay $startTime)
   {
@@ -57,7 +98,9 @@ class ScheduledOperationDetails extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param TimeOfDay
+   * Output only. Auto stop time.
+   *
+   * @param TimeOfDay $stopTime
    */
   public function setStopTime(TimeOfDay $stopTime)
   {

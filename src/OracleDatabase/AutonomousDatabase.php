@@ -21,54 +21,95 @@ class AutonomousDatabase extends \Google\Collection
 {
   protected $collection_key = 'peerAutonomousDatabases';
   /**
+   * Optional. The password for the default ADMIN user.
+   *
    * @var string
    */
   public $adminPassword;
   /**
+   * Optional. The subnet CIDR range for the Autonomous Database.
+   *
    * @var string
    */
   public $cidr;
   /**
+   * Output only. The date and time that the Autonomous Database was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The name of the Autonomous Database. The database name must be
+   * unique in the project. The name must begin with a letter and can contain a
+   * maximum of 30 alphanumeric characters.
+   *
    * @var string
    */
   public $database;
   /**
+   * Output only. List of supported GCP region to clone the Autonomous Database
+   * for disaster recovery. Format: `project/{project}/locations/{location}`.
+   *
    * @var string[]
    */
   public $disasterRecoverySupportedLocations;
   /**
+   * Optional. The display name for the Autonomous Database. The name does not
+   * have to be unique within your project.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The ID of the subscription entitlement associated with the
+   * Autonomous Database.
+   *
    * @var string
    */
   public $entitlementId;
   /**
+   * Optional. The labels or tags associated with the Autonomous Database.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The name of the Autonomous Database resource in the following
+   * format: projects/{project}/locations/{region}/autonomousDatabases/{autonomo
+   * us_database}
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The name of the VPC network used by the Autonomous Database in
+   * the following format: projects/{project}/global/networks/{network}
+   *
    * @var string
    */
   public $network;
   /**
+   * Optional. The name of the OdbNetwork associated with the Autonomous
+   * Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
+   * optional but if specified, this should match the parent ODBNetwork of the
+   * OdbSubnet.
+   *
    * @var string
    */
   public $odbNetwork;
   /**
+   * Optional. The name of the OdbSubnet associated with the Autonomous
+   * Database. Format: projects/{project}/locations/{location}/odbNetworks/{odb_
+   * network}/odbSubnets/{odb_subnet}
+   *
    * @var string
    */
   public $odbSubnet;
   /**
+   * Output only. The peer Autonomous Database names of the given Autonomous
+   * Database.
+   *
    * @var string[]
    */
   public $peerAutonomousDatabases;
@@ -78,7 +119,9 @@ class AutonomousDatabase extends \Google\Collection
   protected $sourceConfigDataType = '';
 
   /**
-   * @param string
+   * Optional. The password for the default ADMIN user.
+   *
+   * @param string $adminPassword
    */
   public function setAdminPassword($adminPassword)
   {
@@ -92,7 +135,9 @@ class AutonomousDatabase extends \Google\Collection
     return $this->adminPassword;
   }
   /**
-   * @param string
+   * Optional. The subnet CIDR range for the Autonomous Database.
+   *
+   * @param string $cidr
    */
   public function setCidr($cidr)
   {
@@ -106,7 +151,9 @@ class AutonomousDatabase extends \Google\Collection
     return $this->cidr;
   }
   /**
-   * @param string
+   * Output only. The date and time that the Autonomous Database was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -120,7 +167,11 @@ class AutonomousDatabase extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The name of the Autonomous Database. The database name must be
+   * unique in the project. The name must begin with a letter and can contain a
+   * maximum of 30 alphanumeric characters.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -134,7 +185,10 @@ class AutonomousDatabase extends \Google\Collection
     return $this->database;
   }
   /**
-   * @param string[]
+   * Output only. List of supported GCP region to clone the Autonomous Database
+   * for disaster recovery. Format: `project/{project}/locations/{location}`.
+   *
+   * @param string[] $disasterRecoverySupportedLocations
    */
   public function setDisasterRecoverySupportedLocations($disasterRecoverySupportedLocations)
   {
@@ -148,7 +202,10 @@ class AutonomousDatabase extends \Google\Collection
     return $this->disasterRecoverySupportedLocations;
   }
   /**
-   * @param string
+   * Optional. The display name for the Autonomous Database. The name does not
+   * have to be unique within your project.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -162,7 +219,10 @@ class AutonomousDatabase extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The ID of the subscription entitlement associated with the
+   * Autonomous Database.
+   *
+   * @param string $entitlementId
    */
   public function setEntitlementId($entitlementId)
   {
@@ -176,7 +236,9 @@ class AutonomousDatabase extends \Google\Collection
     return $this->entitlementId;
   }
   /**
-   * @param string[]
+   * Optional. The labels or tags associated with the Autonomous Database.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -190,7 +252,11 @@ class AutonomousDatabase extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The name of the Autonomous Database resource in the following
+   * format: projects/{project}/locations/{region}/autonomousDatabases/{autonomo
+   * us_database}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -204,7 +270,10 @@ class AutonomousDatabase extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The name of the VPC network used by the Autonomous Database in
+   * the following format: projects/{project}/global/networks/{network}
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -218,7 +287,13 @@ class AutonomousDatabase extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param string
+   * Optional. The name of the OdbNetwork associated with the Autonomous
+   * Database. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
+   * optional but if specified, this should match the parent ODBNetwork of the
+   * OdbSubnet.
+   *
+   * @param string $odbNetwork
    */
   public function setOdbNetwork($odbNetwork)
   {
@@ -232,7 +307,11 @@ class AutonomousDatabase extends \Google\Collection
     return $this->odbNetwork;
   }
   /**
-   * @param string
+   * Optional. The name of the OdbSubnet associated with the Autonomous
+   * Database. Format: projects/{project}/locations/{location}/odbNetworks/{odb_
+   * network}/odbSubnets/{odb_subnet}
+   *
+   * @param string $odbSubnet
    */
   public function setOdbSubnet($odbSubnet)
   {
@@ -246,7 +325,10 @@ class AutonomousDatabase extends \Google\Collection
     return $this->odbSubnet;
   }
   /**
-   * @param string[]
+   * Output only. The peer Autonomous Database names of the given Autonomous
+   * Database.
+   *
+   * @param string[] $peerAutonomousDatabases
    */
   public function setPeerAutonomousDatabases($peerAutonomousDatabases)
   {
@@ -260,7 +342,9 @@ class AutonomousDatabase extends \Google\Collection
     return $this->peerAutonomousDatabases;
   }
   /**
-   * @param AutonomousDatabaseProperties
+   * Optional. The properties of the Autonomous Database.
+   *
+   * @param AutonomousDatabaseProperties $properties
    */
   public function setProperties(AutonomousDatabaseProperties $properties)
   {
@@ -274,7 +358,11 @@ class AutonomousDatabase extends \Google\Collection
     return $this->properties;
   }
   /**
-   * @param SourceConfig
+   * Optional. The source Autonomous Database configuration for the standby
+   * Autonomous Database. The source Autonomous Database is configured while
+   * creating the Peer Autonomous Database and can't be updated after creation.
+   *
+   * @param SourceConfig $sourceConfig
    */
   public function setSourceConfig(SourceConfig $sourceConfig)
   {

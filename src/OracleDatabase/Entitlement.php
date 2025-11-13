@@ -19,23 +19,56 @@ namespace Google\Service\OracleDatabase;
 
 class Entitlement extends \Google\Model
 {
+  /**
+   * Default unspecified value.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Account not linked.
+   */
+  public const STATE_ACCOUNT_NOT_LINKED = 'ACCOUNT_NOT_LINKED';
+  /**
+   * Account is linked but not active.
+   */
+  public const STATE_ACCOUNT_NOT_ACTIVE = 'ACCOUNT_NOT_ACTIVE';
+  /**
+   * Entitlement and Account are active.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Account is suspended.
+   */
+  public const STATE_ACCOUNT_SUSPENDED = 'ACCOUNT_SUSPENDED';
+  /**
+   * Entitlement is not approved in private marketplace.
+   */
+  public const STATE_NOT_APPROVED_IN_PRIVATE_MARKETPLACE = 'NOT_APPROVED_IN_PRIVATE_MARKETPLACE';
   protected $cloudAccountDetailsType = CloudAccountDetails::class;
   protected $cloudAccountDetailsDataType = '';
   /**
+   * Output only. Google Cloud Marketplace order ID (aka entitlement ID)
+   *
    * @var string
    */
   public $entitlementId;
   /**
+   * Identifier. The name of the Entitlement resource with the format:
+   * projects/{project}/locations/{region}/entitlements/{entitlement}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Entitlement State.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param CloudAccountDetails
+   * Details of the OCI Cloud Account.
+   *
+   * @param CloudAccountDetails $cloudAccountDetails
    */
   public function setCloudAccountDetails(CloudAccountDetails $cloudAccountDetails)
   {
@@ -49,7 +82,9 @@ class Entitlement extends \Google\Model
     return $this->cloudAccountDetails;
   }
   /**
-   * @param string
+   * Output only. Google Cloud Marketplace order ID (aka entitlement ID)
+   *
+   * @param string $entitlementId
    */
   public function setEntitlementId($entitlementId)
   {
@@ -63,7 +98,10 @@ class Entitlement extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * @param string
+   * Identifier. The name of the Entitlement resource with the format:
+   * projects/{project}/locations/{region}/entitlements/{entitlement}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -77,14 +115,19 @@ class Entitlement extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Entitlement State.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACCOUNT_NOT_LINKED, ACCOUNT_NOT_ACTIVE,
+   * ACTIVE, ACCOUNT_SUSPENDED, NOT_APPROVED_IN_PRIVATE_MARKETPLACE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

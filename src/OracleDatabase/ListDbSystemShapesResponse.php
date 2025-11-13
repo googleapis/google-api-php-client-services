@@ -23,12 +23,16 @@ class ListDbSystemShapesResponse extends \Google\Collection
   protected $dbSystemShapesType = DbSystemShape::class;
   protected $dbSystemShapesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DbSystemShape[]
+   * The list of Database System shapes.
+   *
+   * @param DbSystemShape[] $dbSystemShapes
    */
   public function setDbSystemShapes($dbSystemShapes)
   {
@@ -42,7 +46,9 @@ class ListDbSystemShapesResponse extends \Google\Collection
     return $this->dbSystemShapes;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

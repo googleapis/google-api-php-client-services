@@ -19,50 +19,96 @@ namespace Google\Service\OracleDatabase;
 
 class DbServerProperties extends \Google\Collection
 {
+  /**
+   * Default unspecified value.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Indicates that the resource is in creating state.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Indicates that the resource is in available state.
+   */
+  public const STATE_AVAILABLE = 'AVAILABLE';
+  /**
+   * Indicates that the resource is in unavailable state.
+   */
+  public const STATE_UNAVAILABLE = 'UNAVAILABLE';
+  /**
+   * Indicates that the resource is in deleting state.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Indicates that the resource is in deleted state.
+   */
+  public const STATE_DELETED = 'DELETED';
   protected $collection_key = 'dbNodeIds';
   /**
+   * Output only. OCID of database nodes associated with the database server.
+   *
    * @var string[]
    */
   public $dbNodeIds;
   /**
+   * Optional. Local storage per VM.
+   *
    * @var int
    */
   public $dbNodeStorageSizeGb;
   /**
+   * Optional. Maximum local storage per VM.
+   *
    * @var int
    */
   public $maxDbNodeStorageSizeGb;
   /**
+   * Optional. Maximum memory allocated in GBs.
+   *
    * @var int
    */
   public $maxMemorySizeGb;
   /**
+   * Optional. Maximum OCPU count per database.
+   *
    * @var int
    */
   public $maxOcpuCount;
   /**
+   * Optional. Memory allocated in GBs.
+   *
    * @var int
    */
   public $memorySizeGb;
   /**
+   * Output only. OCID of database server.
+   *
    * @var string
    */
   public $ocid;
   /**
+   * Optional. OCPU count per database.
+   *
    * @var int
    */
   public $ocpuCount;
   /**
+   * Output only. State of the database server.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. Vm count per database.
+   *
    * @var int
    */
   public $vmCount;
 
   /**
-   * @param string[]
+   * Output only. OCID of database nodes associated with the database server.
+   *
+   * @param string[] $dbNodeIds
    */
   public function setDbNodeIds($dbNodeIds)
   {
@@ -76,7 +122,9 @@ class DbServerProperties extends \Google\Collection
     return $this->dbNodeIds;
   }
   /**
-   * @param int
+   * Optional. Local storage per VM.
+   *
+   * @param int $dbNodeStorageSizeGb
    */
   public function setDbNodeStorageSizeGb($dbNodeStorageSizeGb)
   {
@@ -90,7 +138,9 @@ class DbServerProperties extends \Google\Collection
     return $this->dbNodeStorageSizeGb;
   }
   /**
-   * @param int
+   * Optional. Maximum local storage per VM.
+   *
+   * @param int $maxDbNodeStorageSizeGb
    */
   public function setMaxDbNodeStorageSizeGb($maxDbNodeStorageSizeGb)
   {
@@ -104,7 +154,9 @@ class DbServerProperties extends \Google\Collection
     return $this->maxDbNodeStorageSizeGb;
   }
   /**
-   * @param int
+   * Optional. Maximum memory allocated in GBs.
+   *
+   * @param int $maxMemorySizeGb
    */
   public function setMaxMemorySizeGb($maxMemorySizeGb)
   {
@@ -118,7 +170,9 @@ class DbServerProperties extends \Google\Collection
     return $this->maxMemorySizeGb;
   }
   /**
-   * @param int
+   * Optional. Maximum OCPU count per database.
+   *
+   * @param int $maxOcpuCount
    */
   public function setMaxOcpuCount($maxOcpuCount)
   {
@@ -132,7 +186,9 @@ class DbServerProperties extends \Google\Collection
     return $this->maxOcpuCount;
   }
   /**
-   * @param int
+   * Optional. Memory allocated in GBs.
+   *
+   * @param int $memorySizeGb
    */
   public function setMemorySizeGb($memorySizeGb)
   {
@@ -146,7 +202,9 @@ class DbServerProperties extends \Google\Collection
     return $this->memorySizeGb;
   }
   /**
-   * @param string
+   * Output only. OCID of database server.
+   *
+   * @param string $ocid
    */
   public function setOcid($ocid)
   {
@@ -160,7 +218,9 @@ class DbServerProperties extends \Google\Collection
     return $this->ocid;
   }
   /**
-   * @param int
+   * Optional. OCPU count per database.
+   *
+   * @param int $ocpuCount
    */
   public function setOcpuCount($ocpuCount)
   {
@@ -174,21 +234,28 @@ class DbServerProperties extends \Google\Collection
     return $this->ocpuCount;
   }
   /**
-   * @param string
+   * Output only. State of the database server.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, AVAILABLE, UNAVAILABLE,
+   * DELETING, DELETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param int
+   * Optional. Vm count per database.
+   *
+   * @param int $vmCount
    */
   public function setVmCount($vmCount)
   {

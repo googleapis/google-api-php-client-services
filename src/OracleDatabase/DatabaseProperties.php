@@ -19,21 +19,71 @@ namespace Google\Service\OracleDatabase;
 
 class DatabaseProperties extends \Google\Model
 {
+  /**
+   * Default unspecified value.
+   */
+  public const STATE_DATABASE_LIFECYCLE_STATE_UNSPECIFIED = 'DATABASE_LIFECYCLE_STATE_UNSPECIFIED';
+  /**
+   * Indicates that the resource is in provisioning state.
+   */
+  public const STATE_PROVISIONING = 'PROVISIONING';
+  /**
+   * Indicates that the resource is in available state.
+   */
+  public const STATE_AVAILABLE = 'AVAILABLE';
+  /**
+   * Indicates that the resource is in updating state.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Indicates that the resource is in backup in progress state.
+   */
+  public const STATE_BACKUP_IN_PROGRESS = 'BACKUP_IN_PROGRESS';
+  /**
+   * Indicates that the resource is in upgrading state.
+   */
+  public const STATE_UPGRADING = 'UPGRADING';
+  /**
+   * Indicates that the resource is in converting state.
+   */
+  public const STATE_CONVERTING = 'CONVERTING';
+  /**
+   * Indicates that the resource is in terminating state.
+   */
+  public const STATE_TERMINATING = 'TERMINATING';
+  /**
+   * Indicates that the resource is in terminated state.
+   */
+  public const STATE_TERMINATED = 'TERMINATED';
+  /**
+   * Indicates that the resource is in restore failed state.
+   */
+  public const STATE_RESTORE_FAILED = 'RESTORE_FAILED';
+  /**
+   * Indicates that the resource is in failed state.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $databaseManagementConfigType = DatabaseManagementConfig::class;
   protected $databaseManagementConfigDataType = '';
   protected $dbBackupConfigType = DbBackupConfig::class;
   protected $dbBackupConfigDataType = '';
   /**
+   * Required. The Oracle Database version.
+   *
    * @var string
    */
   public $dbVersion;
   /**
+   * Output only. State of the Database.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param DatabaseManagementConfig
+   * Output only. The Database Management config.
+   *
+   * @param DatabaseManagementConfig $databaseManagementConfig
    */
   public function setDatabaseManagementConfig(DatabaseManagementConfig $databaseManagementConfig)
   {
@@ -47,7 +97,9 @@ class DatabaseProperties extends \Google\Model
     return $this->databaseManagementConfig;
   }
   /**
-   * @param DbBackupConfig
+   * Optional. Backup options for the Database.
+   *
+   * @param DbBackupConfig $dbBackupConfig
    */
   public function setDbBackupConfig(DbBackupConfig $dbBackupConfig)
   {
@@ -61,7 +113,9 @@ class DatabaseProperties extends \Google\Model
     return $this->dbBackupConfig;
   }
   /**
-   * @param string
+   * Required. The Oracle Database version.
+   *
+   * @param string $dbVersion
    */
   public function setDbVersion($dbVersion)
   {
@@ -75,14 +129,20 @@ class DatabaseProperties extends \Google\Model
     return $this->dbVersion;
   }
   /**
-   * @param string
+   * Output only. State of the Database.
+   *
+   * Accepted values: DATABASE_LIFECYCLE_STATE_UNSPECIFIED, PROVISIONING,
+   * AVAILABLE, UPDATING, BACKUP_IN_PROGRESS, UPGRADING, CONVERTING,
+   * TERMINATING, TERMINATED, RESTORE_FAILED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

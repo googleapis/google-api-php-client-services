@@ -20,38 +20,67 @@ namespace Google\Service\OracleDatabase;
 class DbSystem extends \Google\Model
 {
   /**
+   * Output only. The date and time that the DbSystem was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The display name for the System db. The name does not have to be
+   * unique within your project.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The ID of the subscription entitlement associated with the
+   * DbSystem
+   *
    * @var string
    */
   public $entitlementId;
   /**
+   * Optional. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-
+   * east4-b-r2. If not specified, the system will pick a zone based on
+   * availability.
+   *
    * @var string
    */
   public $gcpOracleZone;
   /**
+   * Optional. The labels or tags associated with the DbSystem.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The name of the DbSystem resource in the following format:
+   * projects/{project}/locations/{region}/dbSystems/{db_system}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. HTTPS link to OCI resources exposed to Customer via UI
+   * Interface.
+   *
    * @var string
    */
   public $ociUrl;
   /**
+   * Optional. The name of the OdbNetwork associated with the DbSystem. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
+   * optional but if specified, this should match the parent ODBNetwork of the
+   * OdbSubnet.
+   *
    * @var string
    */
   public $odbNetwork;
   /**
+   * Required. The name of the OdbSubnet associated with the DbSystem for IP
+   * allocation. Format: projects/{project}/locations/{location}/odbNetworks/{od
+   * b_network}/odbSubnets/{odb_subnet}
+   *
    * @var string
    */
   public $odbSubnet;
@@ -59,7 +88,9 @@ class DbSystem extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * @param string
+   * Output only. The date and time that the DbSystem was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -73,7 +104,10 @@ class DbSystem extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The display name for the System db. The name does not have to be
+   * unique within your project.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -87,7 +121,10 @@ class DbSystem extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The ID of the subscription entitlement associated with the
+   * DbSystem
+   *
+   * @param string $entitlementId
    */
   public function setEntitlementId($entitlementId)
   {
@@ -101,7 +138,11 @@ class DbSystem extends \Google\Model
     return $this->entitlementId;
   }
   /**
-   * @param string
+   * Optional. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-
+   * east4-b-r2. If not specified, the system will pick a zone based on
+   * availability.
+   *
+   * @param string $gcpOracleZone
    */
   public function setGcpOracleZone($gcpOracleZone)
   {
@@ -115,7 +156,9 @@ class DbSystem extends \Google\Model
     return $this->gcpOracleZone;
   }
   /**
-   * @param string[]
+   * Optional. The labels or tags associated with the DbSystem.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -129,7 +172,10 @@ class DbSystem extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The name of the DbSystem resource in the following format:
+   * projects/{project}/locations/{region}/dbSystems/{db_system}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -143,7 +189,10 @@ class DbSystem extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. HTTPS link to OCI resources exposed to Customer via UI
+   * Interface.
+   *
+   * @param string $ociUrl
    */
   public function setOciUrl($ociUrl)
   {
@@ -157,7 +206,12 @@ class DbSystem extends \Google\Model
     return $this->ociUrl;
   }
   /**
-   * @param string
+   * Optional. The name of the OdbNetwork associated with the DbSystem. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
+   * optional but if specified, this should match the parent ODBNetwork of the
+   * OdbSubnet.
+   *
+   * @param string $odbNetwork
    */
   public function setOdbNetwork($odbNetwork)
   {
@@ -171,7 +225,11 @@ class DbSystem extends \Google\Model
     return $this->odbNetwork;
   }
   /**
-   * @param string
+   * Required. The name of the OdbSubnet associated with the DbSystem for IP
+   * allocation. Format: projects/{project}/locations/{location}/odbNetworks/{od
+   * b_network}/odbSubnets/{odb_subnet}
+   *
+   * @param string $odbSubnet
    */
   public function setOdbSubnet($odbSubnet)
   {
@@ -185,7 +243,9 @@ class DbSystem extends \Google\Model
     return $this->odbSubnet;
   }
   /**
-   * @param DbSystemProperties
+   * Optional. The properties of the DbSystem.
+   *
+   * @param DbSystemProperties $properties
    */
   public function setProperties(DbSystemProperties $properties)
   {

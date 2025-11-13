@@ -21,18 +21,25 @@ class ListOdbSubnetsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $odbSubnetsType = OdbSubnet::class;
   protected $odbSubnetsDataType = 'array';
   /**
+   * Unreachable locations when listing resources across all locations using
+   * wildcard location '-'.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +53,9 @@ class ListOdbSubnetsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param OdbSubnet[]
+   * The list of ODB Subnets.
+   *
+   * @param OdbSubnet[] $odbSubnets
    */
   public function setOdbSubnets($odbSubnets)
   {
@@ -60,7 +69,10 @@ class ListOdbSubnetsResponse extends \Google\Collection
     return $this->odbSubnets;
   }
   /**
-   * @param string[]
+   * Unreachable locations when listing resources across all locations using
+   * wildcard location '-'.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

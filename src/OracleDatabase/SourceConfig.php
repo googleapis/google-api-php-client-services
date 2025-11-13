@@ -20,16 +20,25 @@ namespace Google\Service\OracleDatabase;
 class SourceConfig extends \Google\Model
 {
   /**
+   * Optional. This field specifies if the replication of automatic backups is
+   * enabled when creating a Data Guard.
+   *
    * @var bool
    */
   public $automaticBackupsReplicationEnabled;
   /**
+   * Optional. The name of the primary Autonomous Database that is used to
+   * create a Peer Autonomous Database from a source.
+   *
    * @var string
    */
   public $autonomousDatabase;
 
   /**
-   * @param bool
+   * Optional. This field specifies if the replication of automatic backups is
+   * enabled when creating a Data Guard.
+   *
+   * @param bool $automaticBackupsReplicationEnabled
    */
   public function setAutomaticBackupsReplicationEnabled($automaticBackupsReplicationEnabled)
   {
@@ -43,7 +52,10 @@ class SourceConfig extends \Google\Model
     return $this->automaticBackupsReplicationEnabled;
   }
   /**
-   * @param string
+   * Optional. The name of the primary Autonomous Database that is used to
+   * create a Peer Autonomous Database from a source.
+   *
+   * @param string $autonomousDatabase
    */
   public function setAutonomousDatabase($autonomousDatabase)
   {

@@ -23,12 +23,19 @@ class ListExascaleDbStorageVaultsResponse extends \Google\Collection
   protected $exascaleDbStorageVaultsType = ExascaleDbStorageVault::class;
   protected $exascaleDbStorageVaultsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return. If present,
+   * the next page token can be provided to a subsequent
+   * ListExascaleDbStorageVaults call to list the next page. If empty, there are
+   * no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ExascaleDbStorageVault[]
+   * The ExascaleDbStorageVaults.
+   *
+   * @param ExascaleDbStorageVault[] $exascaleDbStorageVaults
    */
   public function setExascaleDbStorageVaults($exascaleDbStorageVaults)
   {
@@ -42,7 +49,12 @@ class ListExascaleDbStorageVaultsResponse extends \Google\Collection
     return $this->exascaleDbStorageVaults;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return. If present,
+   * the next page token can be provided to a subsequent
+   * ListExascaleDbStorageVaults call to list the next page. If empty, there are
+   * no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

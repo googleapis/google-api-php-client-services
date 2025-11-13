@@ -20,12 +20,16 @@ namespace Google\Service\OracleDatabase;
 class RestoreAutonomousDatabaseRequest extends \Google\Model
 {
   /**
+   * Required. The time and date to restore the database to.
+   *
    * @var string
    */
   public $restoreTime;
 
   /**
-   * @param string
+   * Required. The time and date to restore the database to.
+   *
+   * @param string $restoreTime
    */
   public function setRestoreTime($restoreTime)
   {

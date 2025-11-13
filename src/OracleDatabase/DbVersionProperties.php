@@ -20,28 +20,45 @@ namespace Google\Service\OracleDatabase;
 class DbVersionProperties extends \Google\Model
 {
   /**
+   * Output only. True if this version of the Oracle Database software is the
+   * latest version for a release.
+   *
    * @var bool
    */
   public $isLatestForMajorVersion;
   /**
+   * Output only. True if this version of the Oracle Database software is the
+   * preview version.
+   *
    * @var bool
    */
   public $isPreviewDbVersion;
   /**
+   * Output only. True if this version of the Oracle Database software is
+   * supported for Upgrade.
+   *
    * @var bool
    */
   public $isUpgradeSupported;
   /**
+   * Output only. True if this version of the Oracle Database software supports
+   * pluggable databases.
+   *
    * @var bool
    */
   public $supportsPdb;
   /**
+   * Output only. A valid Oracle Database version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param bool
+   * Output only. True if this version of the Oracle Database software is the
+   * latest version for a release.
+   *
+   * @param bool $isLatestForMajorVersion
    */
   public function setIsLatestForMajorVersion($isLatestForMajorVersion)
   {
@@ -55,7 +72,10 @@ class DbVersionProperties extends \Google\Model
     return $this->isLatestForMajorVersion;
   }
   /**
-   * @param bool
+   * Output only. True if this version of the Oracle Database software is the
+   * preview version.
+   *
+   * @param bool $isPreviewDbVersion
    */
   public function setIsPreviewDbVersion($isPreviewDbVersion)
   {
@@ -69,7 +89,10 @@ class DbVersionProperties extends \Google\Model
     return $this->isPreviewDbVersion;
   }
   /**
-   * @param bool
+   * Output only. True if this version of the Oracle Database software is
+   * supported for Upgrade.
+   *
+   * @param bool $isUpgradeSupported
    */
   public function setIsUpgradeSupported($isUpgradeSupported)
   {
@@ -83,7 +106,10 @@ class DbVersionProperties extends \Google\Model
     return $this->isUpgradeSupported;
   }
   /**
-   * @param bool
+   * Output only. True if this version of the Oracle Database software supports
+   * pluggable databases.
+   *
+   * @param bool $supportsPdb
    */
   public function setSupportsPdb($supportsPdb)
   {
@@ -97,7 +123,9 @@ class DbVersionProperties extends \Google\Model
     return $this->supportsPdb;
   }
   /**
-   * @param string
+   * Output only. A valid Oracle Database version.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

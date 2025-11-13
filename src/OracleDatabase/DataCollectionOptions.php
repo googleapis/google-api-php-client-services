@@ -20,20 +20,31 @@ namespace Google\Service\OracleDatabase;
 class DataCollectionOptions extends \Google\Model
 {
   /**
+   * Optional. Indicates whether diagnostic collection is enabled for the VM
+   * cluster
+   *
    * @var bool
    */
   public $diagnosticsEventsEnabled;
   /**
+   * Optional. Indicates whether health monitoring is enabled for the VM cluster
+   *
    * @var bool
    */
   public $healthMonitoringEnabled;
   /**
+   * Optional. Indicates whether incident logs and trace collection are enabled
+   * for the VM cluster
+   *
    * @var bool
    */
   public $incidentLogsEnabled;
 
   /**
-   * @param bool
+   * Optional. Indicates whether diagnostic collection is enabled for the VM
+   * cluster
+   *
+   * @param bool $diagnosticsEventsEnabled
    */
   public function setDiagnosticsEventsEnabled($diagnosticsEventsEnabled)
   {
@@ -47,7 +58,9 @@ class DataCollectionOptions extends \Google\Model
     return $this->diagnosticsEventsEnabled;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether health monitoring is enabled for the VM cluster
+   *
+   * @param bool $healthMonitoringEnabled
    */
   public function setHealthMonitoringEnabled($healthMonitoringEnabled)
   {
@@ -61,7 +74,10 @@ class DataCollectionOptions extends \Google\Model
     return $this->healthMonitoringEnabled;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether incident logs and trace collection are enabled
+   * for the VM cluster
+   *
+   * @param bool $incidentLogsEnabled
    */
   public function setIncidentLogsEnabled($incidentLogsEnabled)
   {

@@ -20,6 +20,8 @@ namespace Google\Service\OracleDatabase;
 class DbSystemInitialStorageSize extends \Google\Model
 {
   /**
+   * Output only. The name of the resource.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +29,9 @@ class DbSystemInitialStorageSize extends \Google\Model
   protected $propertiesDataType = '';
 
   /**
-   * @param string
+   * Output only. The name of the resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +45,9 @@ class DbSystemInitialStorageSize extends \Google\Model
     return $this->name;
   }
   /**
-   * @param DbSystemInitialStorageSizeProperties
+   * Output only. The properties of the DbSystem initial storage size summary.
+   *
+   * @param DbSystemInitialStorageSizeProperties $properties
    */
   public function setProperties(DbSystemInitialStorageSizeProperties $properties)
   {
