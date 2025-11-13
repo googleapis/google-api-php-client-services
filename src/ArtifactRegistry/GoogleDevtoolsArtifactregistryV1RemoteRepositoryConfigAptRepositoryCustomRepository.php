@@ -20,12 +20,18 @@ namespace Google\Service\ArtifactRegistry;
 class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigAptRepositoryCustomRepository extends \Google\Model
 {
   /**
+   * An http/https uri reference to the upstream remote repository, for ex:
+   * "https://my.apt.registry/".
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * An http/https uri reference to the upstream remote repository, for ex:
+   * "https://my.apt.registry/".
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

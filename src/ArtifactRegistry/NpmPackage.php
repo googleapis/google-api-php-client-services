@@ -21,32 +21,50 @@ class NpmPackage extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * Output only. Time the package was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. registry_location, project_id, repository_name and npm_package
+   * forms a unique package For example, "projects/test-project/locations/us-
+   * west4/repositories/test-repo/npmPackages/ npm_test:1.0.0", where "us-west4"
+   * is the registry_location, "test-project" is the project_id, "test-repo" is
+   * the repository_name and npm_test:1.0.0" is the npm package.
+   *
    * @var string
    */
   public $name;
   /**
+   * Package for the artifact.
+   *
    * @var string
    */
   public $packageName;
   /**
+   * Tags attached to this package.
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * Output only. Time the package was updated.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Version of this package.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Output only. Time the package was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -60,7 +78,13 @@ class NpmPackage extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. registry_location, project_id, repository_name and npm_package
+   * forms a unique package For example, "projects/test-project/locations/us-
+   * west4/repositories/test-repo/npmPackages/ npm_test:1.0.0", where "us-west4"
+   * is the registry_location, "test-project" is the project_id, "test-repo" is
+   * the repository_name and npm_test:1.0.0" is the npm package.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -74,7 +98,9 @@ class NpmPackage extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Package for the artifact.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {
@@ -88,7 +114,9 @@ class NpmPackage extends \Google\Collection
     return $this->packageName;
   }
   /**
-   * @param string[]
+   * Tags attached to this package.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -102,7 +130,9 @@ class NpmPackage extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param string
+   * Output only. Time the package was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -116,7 +146,9 @@ class NpmPackage extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Version of this package.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

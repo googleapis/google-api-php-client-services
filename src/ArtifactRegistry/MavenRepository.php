@@ -19,15 +19,28 @@ namespace Google\Service\ArtifactRegistry;
 
 class MavenRepository extends \Google\Model
 {
+  /**
+   * Unspecified repository.
+   */
+  public const PUBLIC_REPOSITORY_PUBLIC_REPOSITORY_UNSPECIFIED = 'PUBLIC_REPOSITORY_UNSPECIFIED';
+  /**
+   * Maven Central.
+   */
+  public const PUBLIC_REPOSITORY_MAVEN_CENTRAL = 'MAVEN_CENTRAL';
   protected $customRepositoryType = GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository::class;
   protected $customRepositoryDataType = '';
   /**
+   * One of the publicly available Maven repositories supported by Artifact
+   * Registry.
+   *
    * @var string
    */
   public $publicRepository;
 
   /**
-   * @param GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository
+   * Customer-specified remote repository.
+   *
+   * @param GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository $customRepository
    */
   public function setCustomRepository(GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository $customRepository)
   {
@@ -41,14 +54,19 @@ class MavenRepository extends \Google\Model
     return $this->customRepository;
   }
   /**
-   * @param string
+   * One of the publicly available Maven repositories supported by Artifact
+   * Registry.
+   *
+   * Accepted values: PUBLIC_REPOSITORY_UNSPECIFIED, MAVEN_CENTRAL
+   *
+   * @param self::PUBLIC_REPOSITORY_* $publicRepository
    */
   public function setPublicRepository($publicRepository)
   {
     $this->publicRepository = $publicRepository;
   }
   /**
-   * @return string
+   * @return self::PUBLIC_REPOSITORY_*
    */
   public function getPublicRepository()
   {

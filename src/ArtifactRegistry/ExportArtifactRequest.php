@@ -20,20 +20,36 @@ namespace Google\Service\ArtifactRegistry;
 class ExportArtifactRequest extends \Google\Model
 {
   /**
+   * The Cloud Storage path to export the artifact to. Should start with the
+   * bucket name, and optionally have a directory path. Examples: `dst_bucket`,
+   * `dst_bucket/sub_dir`. Existing objects with the same path will be
+   * overwritten.
+   *
    * @var string
    */
   public $gcsPath;
   /**
+   * The artifact tag to export. Format:projects/{project}/locations/{location}/
+   * repositories/{repository}/packages/{package}/tags/{tag}
+   *
    * @var string
    */
   public $sourceTag;
   /**
+   * The artifact version to export. Format: projects/{project}/locations/{locat
+   * ion}/repositories/{repository}/packages/{package}/versions/{version}
+   *
    * @var string
    */
   public $sourceVersion;
 
   /**
-   * @param string
+   * The Cloud Storage path to export the artifact to. Should start with the
+   * bucket name, and optionally have a directory path. Examples: `dst_bucket`,
+   * `dst_bucket/sub_dir`. Existing objects with the same path will be
+   * overwritten.
+   *
+   * @param string $gcsPath
    */
   public function setGcsPath($gcsPath)
   {
@@ -47,7 +63,10 @@ class ExportArtifactRequest extends \Google\Model
     return $this->gcsPath;
   }
   /**
-   * @param string
+   * The artifact tag to export. Format:projects/{project}/locations/{location}/
+   * repositories/{repository}/packages/{package}/tags/{tag}
+   *
+   * @param string $sourceTag
    */
   public function setSourceTag($sourceTag)
   {
@@ -61,7 +80,10 @@ class ExportArtifactRequest extends \Google\Model
     return $this->sourceTag;
   }
   /**
-   * @param string
+   * The artifact version to export. Format: projects/{project}/locations/{locat
+   * ion}/repositories/{repository}/packages/{package}/versions/{version}
+   *
+   * @param string $sourceVersion
    */
   public function setSourceVersion($sourceVersion)
   {

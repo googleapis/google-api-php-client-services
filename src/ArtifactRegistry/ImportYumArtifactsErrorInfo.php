@@ -25,7 +25,9 @@ class ImportYumArtifactsErrorInfo extends \Google\Model
   protected $gcsSourceDataType = '';
 
   /**
-   * @param Status
+   * The detailed error status.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -39,7 +41,9 @@ class ImportYumArtifactsErrorInfo extends \Google\Model
     return $this->error;
   }
   /**
-   * @param ImportYumArtifactsGcsSource
+   * Google Cloud Storage location requested.
+   *
+   * @param ImportYumArtifactsGcsSource $gcsSource
    */
   public function setGcsSource(ImportYumArtifactsGcsSource $gcsSource)
   {

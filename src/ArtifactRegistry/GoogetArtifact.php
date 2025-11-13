@@ -20,20 +20,28 @@ namespace Google\Service\ArtifactRegistry;
 class GoogetArtifact extends \Google\Model
 {
   /**
+   * Output only. Operating system architecture of the artifact.
+   *
    * @var string
    */
   public $architecture;
   /**
+   * Output only. The Artifact Registry resource name of the artifact.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The GooGet package name of the artifact.
+   *
    * @var string
    */
   public $packageName;
 
   /**
-   * @param string
+   * Output only. Operating system architecture of the artifact.
+   *
+   * @param string $architecture
    */
   public function setArchitecture($architecture)
   {
@@ -47,7 +55,9 @@ class GoogetArtifact extends \Google\Model
     return $this->architecture;
   }
   /**
-   * @param string
+   * Output only. The Artifact Registry resource name of the artifact.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +71,9 @@ class GoogetArtifact extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The GooGet package name of the artifact.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {

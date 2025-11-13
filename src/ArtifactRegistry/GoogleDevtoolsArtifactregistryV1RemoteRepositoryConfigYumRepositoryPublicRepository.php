@@ -20,30 +20,69 @@ namespace Google\Service\ArtifactRegistry;
 class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryPublicRepository extends \Google\Model
 {
   /**
+   * Unspecified repository base.
+   */
+  public const REPOSITORY_BASE_REPOSITORY_BASE_UNSPECIFIED = 'REPOSITORY_BASE_UNSPECIFIED';
+  /**
+   * CentOS.
+   */
+  public const REPOSITORY_BASE_CENTOS = 'CENTOS';
+  /**
+   * CentOS Debug.
+   */
+  public const REPOSITORY_BASE_CENTOS_DEBUG = 'CENTOS_DEBUG';
+  /**
+   * CentOS Vault.
+   */
+  public const REPOSITORY_BASE_CENTOS_VAULT = 'CENTOS_VAULT';
+  /**
+   * CentOS Stream.
+   */
+  public const REPOSITORY_BASE_CENTOS_STREAM = 'CENTOS_STREAM';
+  /**
+   * Rocky.
+   */
+  public const REPOSITORY_BASE_ROCKY = 'ROCKY';
+  /**
+   * Fedora Extra Packages for Enterprise Linux (EPEL).
+   */
+  public const REPOSITORY_BASE_EPEL = 'EPEL';
+  /**
+   * A common public repository base for Yum.
+   *
    * @var string
    */
   public $repositoryBase;
   /**
+   * A custom field to define a path to a specific repository from the base.
+   *
    * @var string
    */
   public $repositoryPath;
 
   /**
-   * @param string
+   * A common public repository base for Yum.
+   *
+   * Accepted values: REPOSITORY_BASE_UNSPECIFIED, CENTOS, CENTOS_DEBUG,
+   * CENTOS_VAULT, CENTOS_STREAM, ROCKY, EPEL
+   *
+   * @param self::REPOSITORY_BASE_* $repositoryBase
    */
   public function setRepositoryBase($repositoryBase)
   {
     $this->repositoryBase = $repositoryBase;
   }
   /**
-   * @return string
+   * @return self::REPOSITORY_BASE_*
    */
   public function getRepositoryBase()
   {
     return $this->repositoryBase;
   }
   /**
-   * @param string
+   * A custom field to define a path to a specific repository from the base.
+   *
+   * @param string $repositoryPath
    */
   public function setRepositoryPath($repositoryPath)
   {

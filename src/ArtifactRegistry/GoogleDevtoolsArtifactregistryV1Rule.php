@@ -20,12 +20,37 @@ namespace Google\Service\ArtifactRegistry;
 class GoogleDevtoolsArtifactregistryV1Rule extends \Google\Model
 {
   /**
+   * Action not specified.
+   */
+  public const ACTION_ACTION_UNSPECIFIED = 'ACTION_UNSPECIFIED';
+  /**
+   * Allow the operation.
+   */
+  public const ACTION_ALLOW = 'ALLOW';
+  /**
+   * Deny the operation.
+   */
+  public const ACTION_DENY = 'DENY';
+  /**
+   * Operation not specified.
+   */
+  public const OPERATION_OPERATION_UNSPECIFIED = 'OPERATION_UNSPECIFIED';
+  /**
+   * Download operation.
+   */
+  public const OPERATION_DOWNLOAD = 'DOWNLOAD';
+  /**
+   * The action this rule takes.
+   *
    * @var string
    */
   public $action;
   protected $conditionType = Expr::class;
   protected $conditionDataType = '';
   /**
+   * The name of the rule, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/rules/rule1`.
+   *
    * @var string
    */
   public $name;
@@ -34,26 +59,36 @@ class GoogleDevtoolsArtifactregistryV1Rule extends \Google\Model
    */
   public $operation;
   /**
+   * The package ID the rule applies to. If empty, this rule applies to all
+   * packages inside the repository.
+   *
    * @var string
    */
   public $packageId;
 
   /**
-   * @param string
+   * The action this rule takes.
+   *
+   * Accepted values: ACTION_UNSPECIFIED, ALLOW, DENY
+   *
+   * @param self::ACTION_* $action
    */
   public function setAction($action)
   {
     $this->action = $action;
   }
   /**
-   * @return string
+   * @return self::ACTION_*
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param Expr
+   * Optional. A CEL expression for conditions that must be met in order for the
+   * rule to apply. If not provided, the rule matches all objects.
+   *
+   * @param Expr $condition
    */
   public function setCondition(Expr $condition)
   {
@@ -67,7 +102,10 @@ class GoogleDevtoolsArtifactregistryV1Rule extends \Google\Model
     return $this->condition;
   }
   /**
-   * @param string
+   * The name of the rule, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1/rules/rule1`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -81,21 +119,24 @@ class GoogleDevtoolsArtifactregistryV1Rule extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * @param self::OPERATION_* $operation
    */
   public function setOperation($operation)
   {
     $this->operation = $operation;
   }
   /**
-   * @return string
+   * @return self::OPERATION_*
    */
   public function getOperation()
   {
     return $this->operation;
   }
   /**
-   * @param string
+   * The package ID the rule applies to. If empty, this rule applies to all
+   * packages inside the repository.
+   *
+   * @param string $packageId
    */
   public function setPackageId($packageId)
   {

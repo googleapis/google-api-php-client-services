@@ -20,12 +20,18 @@ namespace Google\Service\ArtifactRegistry;
 class DockerRepositoryConfig extends \Google\Model
 {
   /**
+   * The repository which enabled this flag prevents all tags from being
+   * modified, moved or deleted. This does not prevent tags from being created.
+   *
    * @var bool
    */
   public $immutableTags;
 
   /**
-   * @param bool
+   * The repository which enabled this flag prevents all tags from being
+   * modified, moved or deleted. This does not prevent tags from being created.
+   *
+   * @param bool $immutableTags
    */
   public function setImmutableTags($immutableTags)
   {

@@ -19,67 +19,180 @@ namespace Google\Service\ArtifactRegistry;
 
 class Repository extends \Google\Model
 {
+  /**
+   * Unspecified package format.
+   */
+  public const FORMAT_FORMAT_UNSPECIFIED = 'FORMAT_UNSPECIFIED';
+  /**
+   * Docker package format.
+   */
+  public const FORMAT_DOCKER = 'DOCKER';
+  /**
+   * Maven package format.
+   */
+  public const FORMAT_MAVEN = 'MAVEN';
+  /**
+   * NPM package format.
+   */
+  public const FORMAT_NPM = 'NPM';
+  /**
+   * APT package format.
+   */
+  public const FORMAT_APT = 'APT';
+  /**
+   * YUM package format.
+   */
+  public const FORMAT_YUM = 'YUM';
+  /**
+   * GooGet package format.
+   */
+  public const FORMAT_GOOGET = 'GOOGET';
+  /**
+   * Python package format.
+   */
+  public const FORMAT_PYTHON = 'PYTHON';
+  /**
+   * Kubeflow Pipelines package format.
+   */
+  public const FORMAT_KFP = 'KFP';
+  /**
+   * Go package format.
+   */
+  public const FORMAT_GO = 'GO';
+  /**
+   * Generic package format.
+   */
+  public const FORMAT_GENERIC = 'GENERIC';
+  /**
+   * Ruby package format.
+   */
+  public const FORMAT_RUBY = 'RUBY';
+  /**
+   * Unspecified mode.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * A standard repository storing artifacts.
+   */
+  public const MODE_STANDARD_REPOSITORY = 'STANDARD_REPOSITORY';
+  /**
+   * A virtual repository to serve artifacts from one or more sources.
+   */
+  public const MODE_VIRTUAL_REPOSITORY = 'VIRTUAL_REPOSITORY';
+  /**
+   * A remote repository to serve artifacts from a remote source.
+   */
+  public const MODE_REMOTE_REPOSITORY = 'REMOTE_REPOSITORY';
+  /**
+   * An AOSS repository provides artifacts from AOSS upstreams.
+   */
+  public const MODE_AOSS_REPOSITORY = 'AOSS_REPOSITORY';
+  /**
+   * Replacement of AOSS_REPOSITORY.
+   */
+  public const MODE_ASSURED_OSS_REPOSITORY = 'ASSURED_OSS_REPOSITORY';
   protected $cleanupPoliciesType = CleanupPolicy::class;
   protected $cleanupPoliciesDataType = 'map';
   /**
+   * Optional. If true, the cleanup pipeline is prevented from deleting versions
+   * in this repository.
+   *
    * @var bool
    */
   public $cleanupPolicyDryRun;
   /**
+   * Output only. The time when the repository was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The user-provided description of the repository.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. If this is true, an unspecified repo type will be treated as
+   * error rather than defaulting to standard.
+   *
    * @var bool
    */
   public $disallowUnspecifiedMode;
   protected $dockerConfigType = DockerRepositoryConfig::class;
   protected $dockerConfigDataType = '';
   /**
+   * Optional. The format of packages that are stored in the repository.
+   *
    * @var string
    */
   public $format;
   /**
+   * The Cloud KMS resource name of the customer managed encryption key that's
+   * used to encrypt the contents of the Repository. Has the form: `projects/my-
+   * project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value
+   * may not be changed after the Repository has been created.
+   *
    * @var string
    */
   public $kmsKeyName;
   /**
+   * Labels with user-defined metadata. This field may contain up to 64 entries.
+   * Label keys and values may be no longer than 63 characters. Label keys must
+   * begin with a lowercase letter and may only contain lowercase letters,
+   * numeric characters, underscores, and dashes.
+   *
    * @var string[]
    */
   public $labels;
   protected $mavenConfigType = MavenRepositoryConfig::class;
   protected $mavenConfigDataType = '';
   /**
+   * Optional. The mode of the repository.
+   *
    * @var string
    */
   public $mode;
   /**
+   * The name of the repository, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`. For each location in a project, repository
+   * names must be unique.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-
+   * proj/my-repo`.
+   *
    * @var string
    */
   public $registryUri;
   protected $remoteRepositoryConfigType = RemoteRepositoryConfig::class;
   protected $remoteRepositoryConfigDataType = '';
   /**
+   * Output only. Whether or not this repository satisfies PZI.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Whether or not this repository satisfies PZS.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Output only. The size, in bytes, of all artifact storage in this
+   * repository. Repositories that are generally available or in public preview
+   * use this to calculate storage costs.
+   *
    * @var string
    */
   public $sizeBytes;
   /**
+   * Output only. The time when the repository was last updated.
+   *
    * @var string
    */
   public $updateTime;
@@ -89,7 +202,12 @@ class Repository extends \Google\Model
   protected $vulnerabilityScanningConfigDataType = '';
 
   /**
-   * @param CleanupPolicy[]
+   * Optional. Cleanup policies for this repository. Cleanup policies indicate
+   * when certain package versions can be automatically deleted. Map keys are
+   * policy IDs supplied by users during policy creation. They must unique
+   * within a repository and be under 128 characters in length.
+   *
+   * @param CleanupPolicy[] $cleanupPolicies
    */
   public function setCleanupPolicies($cleanupPolicies)
   {
@@ -103,7 +221,10 @@ class Repository extends \Google\Model
     return $this->cleanupPolicies;
   }
   /**
-   * @param bool
+   * Optional. If true, the cleanup pipeline is prevented from deleting versions
+   * in this repository.
+   *
+   * @param bool $cleanupPolicyDryRun
    */
   public function setCleanupPolicyDryRun($cleanupPolicyDryRun)
   {
@@ -117,7 +238,9 @@ class Repository extends \Google\Model
     return $this->cleanupPolicyDryRun;
   }
   /**
-   * @param string
+   * Output only. The time when the repository was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -131,7 +254,9 @@ class Repository extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The user-provided description of the repository.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -145,7 +270,10 @@ class Repository extends \Google\Model
     return $this->description;
   }
   /**
-   * @param bool
+   * Optional. If this is true, an unspecified repo type will be treated as
+   * error rather than defaulting to standard.
+   *
+   * @param bool $disallowUnspecifiedMode
    */
   public function setDisallowUnspecifiedMode($disallowUnspecifiedMode)
   {
@@ -159,7 +287,10 @@ class Repository extends \Google\Model
     return $this->disallowUnspecifiedMode;
   }
   /**
-   * @param DockerRepositoryConfig
+   * Docker repository config contains repository level configuration for the
+   * repositories of docker type.
+   *
+   * @param DockerRepositoryConfig $dockerConfig
    */
   public function setDockerConfig(DockerRepositoryConfig $dockerConfig)
   {
@@ -173,21 +304,31 @@ class Repository extends \Google\Model
     return $this->dockerConfig;
   }
   /**
-   * @param string
+   * Optional. The format of packages that are stored in the repository.
+   *
+   * Accepted values: FORMAT_UNSPECIFIED, DOCKER, MAVEN, NPM, APT, YUM, GOOGET,
+   * PYTHON, KFP, GO, GENERIC, RUBY
+   *
+   * @param self::FORMAT_* $format
    */
   public function setFormat($format)
   {
     $this->format = $format;
   }
   /**
-   * @return string
+   * @return self::FORMAT_*
    */
   public function getFormat()
   {
     return $this->format;
   }
   /**
-   * @param string
+   * The Cloud KMS resource name of the customer managed encryption key that's
+   * used to encrypt the contents of the Repository. Has the form: `projects/my-
+   * project/locations/my-region/keyRings/my-kr/cryptoKeys/my-key`. This value
+   * may not be changed after the Repository has been created.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {
@@ -201,7 +342,12 @@ class Repository extends \Google\Model
     return $this->kmsKeyName;
   }
   /**
-   * @param string[]
+   * Labels with user-defined metadata. This field may contain up to 64 entries.
+   * Label keys and values may be no longer than 63 characters. Label keys must
+   * begin with a lowercase letter and may only contain lowercase letters,
+   * numeric characters, underscores, and dashes.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -215,7 +361,10 @@ class Repository extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param MavenRepositoryConfig
+   * Maven repository config contains repository level configuration for the
+   * repositories of maven type.
+   *
+   * @param MavenRepositoryConfig $mavenConfig
    */
   public function setMavenConfig(MavenRepositoryConfig $mavenConfig)
   {
@@ -229,21 +378,30 @@ class Repository extends \Google\Model
     return $this->mavenConfig;
   }
   /**
-   * @param string
+   * Optional. The mode of the repository.
+   *
+   * Accepted values: MODE_UNSPECIFIED, STANDARD_REPOSITORY, VIRTUAL_REPOSITORY,
+   * REMOTE_REPOSITORY, AOSS_REPOSITORY, ASSURED_OSS_REPOSITORY
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {
     return $this->mode;
   }
   /**
-   * @param string
+   * The name of the repository, for example: `projects/p1/locations/us-
+   * central1/repositories/repo1`. For each location in a project, repository
+   * names must be unique.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -257,7 +415,10 @@ class Repository extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The repository endpoint, for example: `us-docker.pkg.dev/my-
+   * proj/my-repo`.
+   *
+   * @param string $registryUri
    */
   public function setRegistryUri($registryUri)
   {
@@ -271,7 +432,9 @@ class Repository extends \Google\Model
     return $this->registryUri;
   }
   /**
-   * @param RemoteRepositoryConfig
+   * Configuration specific for a Remote Repository.
+   *
+   * @param RemoteRepositoryConfig $remoteRepositoryConfig
    */
   public function setRemoteRepositoryConfig(RemoteRepositoryConfig $remoteRepositoryConfig)
   {
@@ -285,7 +448,9 @@ class Repository extends \Google\Model
     return $this->remoteRepositoryConfig;
   }
   /**
-   * @param bool
+   * Output only. Whether or not this repository satisfies PZI.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -299,7 +464,9 @@ class Repository extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Whether or not this repository satisfies PZS.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -313,7 +480,11 @@ class Repository extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Output only. The size, in bytes, of all artifact storage in this
+   * repository. Repositories that are generally available or in public preview
+   * use this to calculate storage costs.
+   *
+   * @param string $sizeBytes
    */
   public function setSizeBytes($sizeBytes)
   {
@@ -327,7 +498,9 @@ class Repository extends \Google\Model
     return $this->sizeBytes;
   }
   /**
-   * @param string
+   * Output only. The time when the repository was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -341,7 +514,9 @@ class Repository extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param VirtualRepositoryConfig
+   * Configuration specific for a Virtual Repository.
+   *
+   * @param VirtualRepositoryConfig $virtualRepositoryConfig
    */
   public function setVirtualRepositoryConfig(VirtualRepositoryConfig $virtualRepositoryConfig)
   {
@@ -355,7 +530,10 @@ class Repository extends \Google\Model
     return $this->virtualRepositoryConfig;
   }
   /**
-   * @param VulnerabilityScanningConfig
+   * Optional. Config and state for vulnerability scanning of resources within
+   * this Repository.
+   *
+   * @param VulnerabilityScanningConfig $vulnerabilityScanningConfig
    */
   public function setVulnerabilityScanningConfig(VulnerabilityScanningConfig $vulnerabilityScanningConfig)
   {

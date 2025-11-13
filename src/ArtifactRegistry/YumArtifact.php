@@ -20,24 +20,46 @@ namespace Google\Service\ArtifactRegistry;
 class YumArtifact extends \Google\Model
 {
   /**
+   * Package type is not specified.
+   */
+  public const PACKAGE_TYPE_PACKAGE_TYPE_UNSPECIFIED = 'PACKAGE_TYPE_UNSPECIFIED';
+  /**
+   * Binary package (.rpm).
+   */
+  public const PACKAGE_TYPE_BINARY = 'BINARY';
+  /**
+   * Source package (.srpm).
+   */
+  public const PACKAGE_TYPE_SOURCE = 'SOURCE';
+  /**
+   * Output only. Operating system architecture of the artifact.
+   *
    * @var string
    */
   public $architecture;
   /**
+   * Output only. The Artifact Registry resource name of the artifact.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The yum package name of the artifact.
+   *
    * @var string
    */
   public $packageName;
   /**
+   * Output only. An artifact is a binary or source package.
+   *
    * @var string
    */
   public $packageType;
 
   /**
-   * @param string
+   * Output only. Operating system architecture of the artifact.
+   *
+   * @param string $architecture
    */
   public function setArchitecture($architecture)
   {
@@ -51,7 +73,9 @@ class YumArtifact extends \Google\Model
     return $this->architecture;
   }
   /**
-   * @param string
+   * Output only. The Artifact Registry resource name of the artifact.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,7 +89,9 @@ class YumArtifact extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The yum package name of the artifact.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {
@@ -79,14 +105,18 @@ class YumArtifact extends \Google\Model
     return $this->packageName;
   }
   /**
-   * @param string
+   * Output only. An artifact is a binary or source package.
+   *
+   * Accepted values: PACKAGE_TYPE_UNSPECIFIED, BINARY, SOURCE
+   *
+   * @param self::PACKAGE_TYPE_* $packageType
    */
   public function setPackageType($packageType)
   {
     $this->packageType = $packageType;
   }
   /**
-   * @return string
+   * @return self::PACKAGE_TYPE_*
    */
   public function getPackageType()
   {

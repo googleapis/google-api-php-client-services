@@ -20,12 +20,18 @@ namespace Google\Service\ArtifactRegistry;
 class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigDockerRepositoryCustomRepository extends \Google\Model
 {
   /**
+   * An http/https uri reference to the custom remote repository, for ex:
+   * "https://registry-1.docker.io".
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * An http/https uri reference to the custom remote repository, for ex:
+   * "https://registry-1.docker.io".
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

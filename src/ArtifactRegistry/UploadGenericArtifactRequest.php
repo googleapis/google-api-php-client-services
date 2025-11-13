@@ -20,20 +20,39 @@ namespace Google\Service\ArtifactRegistry;
 class UploadGenericArtifactRequest extends \Google\Model
 {
   /**
+   * The name of the file of the generic artifact to be uploaded. E.g. `example-
+   * file.zip` The filename is limited to letters, numbers, and url safe
+   * characters, i.e. [a-zA-Z0-9-_.~@].
+   *
    * @var string
    */
   public $filename;
   /**
+   * The ID of the package of the generic artifact. If the package does not
+   * exist, a new package will be created. The `package_id` should start and end
+   * with a letter or number, only contain letters, numbers, hyphens,
+   * underscores, and periods, and not exceed 256 characters.
+   *
    * @var string
    */
   public $packageId;
   /**
+   * The ID of the version of the generic artifact. If the version does not
+   * exist, a new version will be created. The version_id must start and end
+   * with a letter or number, can only contain lowercase letters, numbers, the
+   * following characters [-.+~:], i.e.[a-z0-9-.+~:] and cannot exceed a total
+   * of 128 characters. Creating a version called `latest` is not allowed.
+   *
    * @var string
    */
   public $versionId;
 
   /**
-   * @param string
+   * The name of the file of the generic artifact to be uploaded. E.g. `example-
+   * file.zip` The filename is limited to letters, numbers, and url safe
+   * characters, i.e. [a-zA-Z0-9-_.~@].
+   *
+   * @param string $filename
    */
   public function setFilename($filename)
   {
@@ -47,7 +66,12 @@ class UploadGenericArtifactRequest extends \Google\Model
     return $this->filename;
   }
   /**
-   * @param string
+   * The ID of the package of the generic artifact. If the package does not
+   * exist, a new package will be created. The `package_id` should start and end
+   * with a letter or number, only contain letters, numbers, hyphens,
+   * underscores, and periods, and not exceed 256 characters.
+   *
+   * @param string $packageId
    */
   public function setPackageId($packageId)
   {
@@ -61,7 +85,13 @@ class UploadGenericArtifactRequest extends \Google\Model
     return $this->packageId;
   }
   /**
-   * @param string
+   * The ID of the version of the generic artifact. If the version does not
+   * exist, a new version will be created. The version_id must start and end
+   * with a letter or number, can only contain lowercase letters, numbers, the
+   * following characters [-.+~:], i.e.[a-z0-9-.+~:] and cannot exceed a total
+   * of 128 characters. Creating a version called `latest` is not allowed.
+   *
+   * @param string $versionId
    */
   public function setVersionId($versionId)
   {

@@ -21,40 +21,76 @@ class DockerImage extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * The time this image was built. This field is returned as the
+   * 'metadata.buildTime' field in the Version resource. The build time is
+   * returned to the client as an RFC 3339 string, which can be easily used with
+   * the JavaScript Date constructor.
+   *
    * @var string
    */
   public $buildTime;
   /**
+   * Calculated size of the image. This field is returned as the
+   * 'metadata.imageSizeBytes' field in the Version resource.
+   *
    * @var string
    */
   public $imageSizeBytes;
   /**
+   * Media type of this image, e.g.
+   * "application/vnd.docker.distribution.manifest.v2+json". This field is
+   * returned as the 'metadata.mediaType' field in the Version resource.
+   *
    * @var string
    */
   public $mediaType;
   /**
+   * Required. registry_location, project_id, repository_name and image id forms
+   * a unique image name:`projects//locations//repositories//dockerImages/`. For
+   * example, "projects/test-project/locations/us-west4/repositories/test-
+   * repo/dockerImages/ nginx@sha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf0
+   * 72163515467d6a823c7cf", where "us-west4" is the registry_location, "test-
+   * project" is the project_id, "test-repo" is the repository_name and "nginx@s
+   * ha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf072163515467d6a823c7cf" is
+   * the image's digest.
+   *
    * @var string
    */
   public $name;
   /**
+   * Tags attached to this image.
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * Output only. The time when the docker image was last updated.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Time the image was uploaded.
+   *
    * @var string
    */
   public $uploadTime;
   /**
+   * Required. URL to access the image. Example: us-west4-docker.pkg.dev/test-
+   * project/test-repo/nginx@sha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf07
+   * 2163515467d6a823c7cf
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The time this image was built. This field is returned as the
+   * 'metadata.buildTime' field in the Version resource. The build time is
+   * returned to the client as an RFC 3339 string, which can be easily used with
+   * the JavaScript Date constructor.
+   *
+   * @param string $buildTime
    */
   public function setBuildTime($buildTime)
   {
@@ -68,7 +104,10 @@ class DockerImage extends \Google\Collection
     return $this->buildTime;
   }
   /**
-   * @param string
+   * Calculated size of the image. This field is returned as the
+   * 'metadata.imageSizeBytes' field in the Version resource.
+   *
+   * @param string $imageSizeBytes
    */
   public function setImageSizeBytes($imageSizeBytes)
   {
@@ -82,7 +121,11 @@ class DockerImage extends \Google\Collection
     return $this->imageSizeBytes;
   }
   /**
-   * @param string
+   * Media type of this image, e.g.
+   * "application/vnd.docker.distribution.manifest.v2+json". This field is
+   * returned as the 'metadata.mediaType' field in the Version resource.
+   *
+   * @param string $mediaType
    */
   public function setMediaType($mediaType)
   {
@@ -96,7 +139,16 @@ class DockerImage extends \Google\Collection
     return $this->mediaType;
   }
   /**
-   * @param string
+   * Required. registry_location, project_id, repository_name and image id forms
+   * a unique image name:`projects//locations//repositories//dockerImages/`. For
+   * example, "projects/test-project/locations/us-west4/repositories/test-
+   * repo/dockerImages/ nginx@sha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf0
+   * 72163515467d6a823c7cf", where "us-west4" is the registry_location, "test-
+   * project" is the project_id, "test-repo" is the repository_name and "nginx@s
+   * ha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf072163515467d6a823c7cf" is
+   * the image's digest.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -110,7 +162,9 @@ class DockerImage extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Tags attached to this image.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -124,7 +178,9 @@ class DockerImage extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param string
+   * Output only. The time when the docker image was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -138,7 +194,9 @@ class DockerImage extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Time the image was uploaded.
+   *
+   * @param string $uploadTime
    */
   public function setUploadTime($uploadTime)
   {
@@ -152,7 +210,11 @@ class DockerImage extends \Google\Collection
     return $this->uploadTime;
   }
   /**
-   * @param string
+   * Required. URL to access the image. Example: us-west4-docker.pkg.dev/test-
+   * project/test-repo/nginx@sha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf07
+   * 2163515467d6a823c7cf
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

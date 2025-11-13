@@ -25,7 +25,9 @@ class YumRepository extends \Google\Model
   protected $publicRepositoryDataType = '';
 
   /**
-   * @param GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository
+   * Customer-specified remote repository.
+   *
+   * @param GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository $customRepository
    */
   public function setCustomRepository(GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository $customRepository)
   {
@@ -39,7 +41,10 @@ class YumRepository extends \Google\Model
     return $this->customRepository;
   }
   /**
-   * @param GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryPublicRepository
+   * One of the publicly available Yum repositories supported by Artifact
+   * Registry.
+   *
+   * @param GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryPublicRepository $publicRepository
    */
   public function setPublicRepository(GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryPublicRepository $publicRepository)
   {

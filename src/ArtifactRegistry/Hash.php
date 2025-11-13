@@ -20,30 +20,52 @@ namespace Google\Service\ArtifactRegistry;
 class Hash extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const TYPE_HASH_TYPE_UNSPECIFIED = 'HASH_TYPE_UNSPECIFIED';
+  /**
+   * SHA256 hash.
+   */
+  public const TYPE_SHA256 = 'SHA256';
+  /**
+   * MD5 hash.
+   */
+  public const TYPE_MD5 = 'MD5';
+  /**
+   * The algorithm used to compute the hash value.
+   *
    * @var string
    */
   public $type;
   /**
+   * The hash value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The algorithm used to compute the hash value.
+   *
+   * Accepted values: HASH_TYPE_UNSPECIFIED, SHA256, MD5
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * The hash value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

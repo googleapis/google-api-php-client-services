@@ -23,7 +23,10 @@ class ExportArtifactResponse extends \Google\Model
   protected $exportedVersionDataType = '';
 
   /**
-   * @param Version
+   * The exported version. Should be the same as the request version with
+   * fingerprint resource name.
+   *
+   * @param Version $exportedVersion
    */
   public function setExportedVersion(Version $exportedVersion)
   {

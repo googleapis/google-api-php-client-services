@@ -21,16 +21,22 @@ class CleanupPolicyMostRecentVersions extends \Google\Collection
 {
   protected $collection_key = 'packageNamePrefixes';
   /**
+   * Minimum number of versions to keep.
+   *
    * @var int
    */
   public $keepCount;
   /**
+   * List of package name prefixes that will apply this rule.
+   *
    * @var string[]
    */
   public $packageNamePrefixes;
 
   /**
-   * @param int
+   * Minimum number of versions to keep.
+   *
+   * @param int $keepCount
    */
   public function setKeepCount($keepCount)
   {
@@ -44,7 +50,9 @@ class CleanupPolicyMostRecentVersions extends \Google\Collection
     return $this->keepCount;
   }
   /**
-   * @param string[]
+   * List of package name prefixes that will apply this rule.
+   *
+   * @param string[] $packageNamePrefixes
    */
   public function setPackageNamePrefixes($packageNamePrefixes)
   {

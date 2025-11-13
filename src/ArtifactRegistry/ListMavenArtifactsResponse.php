@@ -23,12 +23,17 @@ class ListMavenArtifactsResponse extends \Google\Collection
   protected $mavenArtifactsType = MavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
   /**
+   * The token to retrieve the next page of artifacts, or empty if there are no
+   * more artifacts to return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param MavenArtifact[]
+   * The maven artifacts returned.
+   *
+   * @param MavenArtifact[] $mavenArtifacts
    */
   public function setMavenArtifacts($mavenArtifacts)
   {
@@ -42,7 +47,10 @@ class ListMavenArtifactsResponse extends \Google\Collection
     return $this->mavenArtifacts;
   }
   /**
-   * @param string
+   * The token to retrieve the next page of artifacts, or empty if there are no
+   * more artifacts to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

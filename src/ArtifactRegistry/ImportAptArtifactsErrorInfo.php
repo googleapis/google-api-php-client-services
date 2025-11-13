@@ -25,7 +25,9 @@ class ImportAptArtifactsErrorInfo extends \Google\Model
   protected $gcsSourceDataType = '';
 
   /**
-   * @param Status
+   * The detailed error status.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {
@@ -39,7 +41,9 @@ class ImportAptArtifactsErrorInfo extends \Google\Model
     return $this->error;
   }
   /**
-   * @param ImportAptArtifactsGcsSource
+   * Google Cloud Storage location requested.
+   *
+   * @param ImportAptArtifactsGcsSource $gcsSource
    */
   public function setGcsSource(ImportAptArtifactsGcsSource $gcsSource)
   {

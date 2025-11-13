@@ -23,7 +23,9 @@ class UploadGoModuleMediaResponse extends \Google\Model
   protected $operationDataType = '';
 
   /**
-   * @param Operation
+   * Operation to be returned to the user.
+   *
+   * @param Operation $operation
    */
   public function setOperation(Operation $operation)
   {

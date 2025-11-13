@@ -26,7 +26,9 @@ class ImportGoogetArtifactsResponse extends \Google\Collection
   protected $googetArtifactsDataType = 'array';
 
   /**
-   * @param ImportGoogetArtifactsErrorInfo[]
+   * Detailed error info for packages that were not imported.
+   *
+   * @param ImportGoogetArtifactsErrorInfo[] $errors
    */
   public function setErrors($errors)
   {
@@ -40,7 +42,9 @@ class ImportGoogetArtifactsResponse extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param GoogetArtifact[]
+   * The GooGet artifacts updated.
+   *
+   * @param GoogetArtifact[] $googetArtifacts
    */
   public function setGoogetArtifacts($googetArtifacts)
   {

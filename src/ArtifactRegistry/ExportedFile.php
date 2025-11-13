@@ -21,18 +21,27 @@ class ExportedFile extends \Google\Collection
 {
   protected $collection_key = 'hashes';
   /**
+   * Cloud Storage Object path of the exported file. Examples:
+   * `dst_bucket/file1`, `dst_bucket/sub_dir/file1`
+   *
    * @var string
    */
   public $gcsObjectPath;
   protected $hashesType = Hash::class;
   protected $hashesDataType = 'array';
   /**
+   * Name of the exported artifact file. Format:
+   * `projects/p1/locations/us/repositories/repo1/files/file1`
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Cloud Storage Object path of the exported file. Examples:
+   * `dst_bucket/file1`, `dst_bucket/sub_dir/file1`
+   *
+   * @param string $gcsObjectPath
    */
   public function setGcsObjectPath($gcsObjectPath)
   {
@@ -46,7 +55,9 @@ class ExportedFile extends \Google\Collection
     return $this->gcsObjectPath;
   }
   /**
-   * @param Hash[]
+   * The hashes of the file content.
+   *
+   * @param Hash[] $hashes
    */
   public function setHashes($hashes)
   {
@@ -60,7 +71,10 @@ class ExportedFile extends \Google\Collection
     return $this->hashes;
   }
   /**
-   * @param string
+   * Name of the exported artifact file. Format:
+   * `projects/p1/locations/us/repositories/repo1/files/file1`
+   *
+   * @param string $name
    */
   public function setName($name)
   {

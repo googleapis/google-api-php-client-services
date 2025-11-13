@@ -24,7 +24,9 @@ class UploadYumArtifactResponse extends \Google\Collection
   protected $yumArtifactsDataType = 'array';
 
   /**
-   * @param YumArtifact[]
+   * The Yum artifacts updated.
+   *
+   * @param YumArtifact[] $yumArtifacts
    */
   public function setYumArtifacts($yumArtifacts)
   {

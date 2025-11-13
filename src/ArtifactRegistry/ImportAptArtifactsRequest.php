@@ -23,7 +23,9 @@ class ImportAptArtifactsRequest extends \Google\Model
   protected $gcsSourceDataType = '';
 
   /**
-   * @param ImportAptArtifactsGcsSource
+   * Google Cloud Storage location where input content is located.
+   *
+   * @param ImportAptArtifactsGcsSource $gcsSource
    */
   public function setGcsSource(ImportAptArtifactsGcsSource $gcsSource)
   {

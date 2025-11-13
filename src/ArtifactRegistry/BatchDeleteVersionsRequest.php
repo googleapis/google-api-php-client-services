@@ -21,16 +21,26 @@ class BatchDeleteVersionsRequest extends \Google\Collection
 {
   protected $collection_key = 'names';
   /**
+   * Required. The names of the versions to delete. The maximum number of
+   * versions deleted per batch is determined by the service and is dependent on
+   * the available resources in the region.
+   *
    * @var string[]
    */
   public $names;
   /**
+   * If true, the request is performed without deleting data, following AIP-163.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string[]
+   * Required. The names of the versions to delete. The maximum number of
+   * versions deleted per batch is determined by the service and is dependent on
+   * the available resources in the region.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {
@@ -44,7 +54,9 @@ class BatchDeleteVersionsRequest extends \Google\Collection
     return $this->names;
   }
   /**
-   * @param bool
+   * If true, the request is performed without deleting data, following AIP-163.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

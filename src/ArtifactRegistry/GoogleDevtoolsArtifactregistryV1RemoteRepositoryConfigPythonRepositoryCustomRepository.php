@@ -20,12 +20,18 @@ namespace Google\Service\ArtifactRegistry;
 class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigPythonRepositoryCustomRepository extends \Google\Model
 {
   /**
+   * An http/https uri reference to the upstream remote repository, for ex:
+   * "https://my.python.registry/".
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * An http/https uri reference to the upstream remote repository, for ex:
+   * "https://my.python.registry/".
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

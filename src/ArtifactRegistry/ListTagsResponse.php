@@ -21,6 +21,9 @@ class ListTagsResponse extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * The token to retrieve the next page of tags, or empty if there are no more
+   * tags to return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListTagsResponse extends \Google\Collection
   protected $tagsDataType = 'array';
 
   /**
-   * @param string
+   * The token to retrieve the next page of tags, or empty if there are no more
+   * tags to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListTagsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Tag[]
+   * The tags returned.
+   *
+   * @param Tag[] $tags
    */
   public function setTags($tags)
   {

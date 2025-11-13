@@ -20,20 +20,29 @@ namespace Google\Service\ArtifactRegistry;
 class UpstreamPolicy extends \Google\Model
 {
   /**
+   * The user-provided ID of the upstream policy.
+   *
    * @var string
    */
   public $id;
   /**
+   * Entries with a greater priority value take precedence in the pull order.
+   *
    * @var int
    */
   public $priority;
   /**
+   * A reference to the repository resource, for example:
+   * `projects/p1/locations/us-central1/repositories/repo1`.
+   *
    * @var string
    */
   public $repository;
 
   /**
-   * @param string
+   * The user-provided ID of the upstream policy.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -47,7 +56,9 @@ class UpstreamPolicy extends \Google\Model
     return $this->id;
   }
   /**
-   * @param int
+   * Entries with a greater priority value take precedence in the pull order.
+   *
+   * @param int $priority
    */
   public function setPriority($priority)
   {
@@ -61,7 +72,10 @@ class UpstreamPolicy extends \Google\Model
     return $this->priority;
   }
   /**
-   * @param string
+   * A reference to the repository resource, for example:
+   * `projects/p1/locations/us-central1/repositories/repo1`.
+   *
+   * @param string $repository
    */
   public function setRepository($repository)
   {

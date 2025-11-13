@@ -21,16 +21,22 @@ class ImportYumArtifactsGcsSource extends \Google\Collection
 {
   protected $collection_key = 'uris';
   /**
+   * Cloud Storage paths URI (e.g., gs://my_bucket//my_object).
+   *
    * @var string[]
    */
   public $uris;
   /**
+   * Supports URI wildcards for matching multiple objects from a single URI.
+   *
    * @var bool
    */
   public $useWildcards;
 
   /**
-   * @param string[]
+   * Cloud Storage paths URI (e.g., gs://my_bucket//my_object).
+   *
+   * @param string[] $uris
    */
   public function setUris($uris)
   {
@@ -44,7 +50,9 @@ class ImportYumArtifactsGcsSource extends \Google\Collection
     return $this->uris;
   }
   /**
-   * @param bool
+   * Supports URI wildcards for matching multiple objects from a single URI.
+   *
+   * @param bool $useWildcards
    */
   public function setUseWildcards($useWildcards)
   {

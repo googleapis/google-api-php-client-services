@@ -23,12 +23,17 @@ class ListFilesResponse extends \Google\Collection
   protected $filesType = GoogleDevtoolsArtifactregistryV1File::class;
   protected $filesDataType = 'array';
   /**
+   * The token to retrieve the next page of files, or empty if there are no more
+   * files to return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleDevtoolsArtifactregistryV1File[]
+   * The files returned.
+   *
+   * @param GoogleDevtoolsArtifactregistryV1File[] $files
    */
   public function setFiles($files)
   {
@@ -42,7 +47,10 @@ class ListFilesResponse extends \Google\Collection
     return $this->files;
   }
   /**
-   * @param string
+   * The token to retrieve the next page of files, or empty if there are no more
+   * files to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

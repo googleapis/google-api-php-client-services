@@ -23,7 +23,9 @@ class UploadFileMediaResponse extends \Google\Model
   protected $operationDataType = '';
 
   /**
-   * @param Operation
+   * Operation that will be returned to the user.
+   *
+   * @param Operation $operation
    */
   public function setOperation(Operation $operation)
   {

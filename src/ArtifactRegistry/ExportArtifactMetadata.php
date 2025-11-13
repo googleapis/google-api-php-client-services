@@ -24,7 +24,9 @@ class ExportArtifactMetadata extends \Google\Collection
   protected $exportedFilesDataType = 'array';
 
   /**
-   * @param ExportedFile[]
+   * The exported artifact files.
+   *
+   * @param ExportedFile[] $exportedFiles
    */
   public function setExportedFiles($exportedFiles)
   {

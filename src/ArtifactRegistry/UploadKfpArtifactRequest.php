@@ -21,16 +21,22 @@ class UploadKfpArtifactRequest extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * Description of the package version.
+   *
    * @var string
    */
   public $description;
   /**
+   * Tags to be created with the version.
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string
+   * Description of the package version.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -44,7 +50,9 @@ class UploadKfpArtifactRequest extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * Tags to be created with the version.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

@@ -20,16 +20,43 @@ namespace Google\Service\ArtifactRegistry;
 class VPCSCConfig extends \Google\Model
 {
   /**
+   * VPCSC_POLICY_UNSPECIFIED - the VPS SC policy is not defined. When VPS SC
+   * policy is not defined - the Service will use the default behavior
+   * (VPCSC_DENY).
+   */
+  public const VPCSC_POLICY_VPCSC_POLICY_UNSPECIFIED = 'VPCSC_POLICY_UNSPECIFIED';
+  /**
+   * VPCSC_DENY - repository will block the requests to the Upstreams for the
+   * Remote Repositories if the resource is in the perimeter.
+   */
+  public const VPCSC_POLICY_DENY = 'DENY';
+  /**
+   * VPCSC_ALLOW - repository will allow the requests to the Upstreams for the
+   * Remote Repositories if the resource is in the perimeter.
+   */
+  public const VPCSC_POLICY_ALLOW = 'ALLOW';
+  /**
+   * The name of the project's VPC SC Config. Always of the form:
+   * projects/{projectID}/locations/{location}/vpcscConfig In update request:
+   * never set In response: always set
+   *
    * @var string
    */
   public $name;
   /**
+   * The project per location VPC SC policy that defines the VPC SC behavior for
+   * the Remote Repository (Allow/Deny).
+   *
    * @var string
    */
   public $vpcscPolicy;
 
   /**
-   * @param string
+   * The name of the project's VPC SC Config. Always of the form:
+   * projects/{projectID}/locations/{location}/vpcscConfig In update request:
+   * never set In response: always set
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,14 +70,19 @@ class VPCSCConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The project per location VPC SC policy that defines the VPC SC behavior for
+   * the Remote Repository (Allow/Deny).
+   *
+   * Accepted values: VPCSC_POLICY_UNSPECIFIED, DENY, ALLOW
+   *
+   * @param self::VPCSC_POLICY_* $vpcscPolicy
    */
   public function setVpcscPolicy($vpcscPolicy)
   {
     $this->vpcscPolicy = $vpcscPolicy;
   }
   /**
-   * @return string
+   * @return self::VPCSC_POLICY_*
    */
   public function getVpcscPolicy()
   {

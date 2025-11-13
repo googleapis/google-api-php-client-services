@@ -20,30 +20,57 @@ namespace Google\Service\ArtifactRegistry;
 class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigAptRepositoryPublicRepository extends \Google\Model
 {
   /**
+   * Unspecified repository base.
+   */
+  public const REPOSITORY_BASE_REPOSITORY_BASE_UNSPECIFIED = 'REPOSITORY_BASE_UNSPECIFIED';
+  /**
+   * Debian.
+   */
+  public const REPOSITORY_BASE_DEBIAN = 'DEBIAN';
+  /**
+   * Ubuntu LTS/Pro.
+   */
+  public const REPOSITORY_BASE_UBUNTU = 'UBUNTU';
+  /**
+   * Archived Debian.
+   */
+  public const REPOSITORY_BASE_DEBIAN_SNAPSHOT = 'DEBIAN_SNAPSHOT';
+  /**
+   * A common public repository base for Apt.
+   *
    * @var string
    */
   public $repositoryBase;
   /**
+   * A custom field to define a path to a specific repository from the base.
+   *
    * @var string
    */
   public $repositoryPath;
 
   /**
-   * @param string
+   * A common public repository base for Apt.
+   *
+   * Accepted values: REPOSITORY_BASE_UNSPECIFIED, DEBIAN, UBUNTU,
+   * DEBIAN_SNAPSHOT
+   *
+   * @param self::REPOSITORY_BASE_* $repositoryBase
    */
   public function setRepositoryBase($repositoryBase)
   {
     $this->repositoryBase = $repositoryBase;
   }
   /**
-   * @return string
+   * @return self::REPOSITORY_BASE_*
    */
   public function getRepositoryBase()
   {
     return $this->repositoryBase;
   }
   /**
-   * @param string
+   * A custom field to define a path to a specific repository from the base.
+   *
+   * @param string $repositoryPath
    */
   public function setRepositoryPath($repositoryPath)
   {

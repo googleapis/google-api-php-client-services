@@ -24,7 +24,9 @@ class UploadGoogetArtifactResponse extends \Google\Collection
   protected $googetArtifactsDataType = 'array';
 
   /**
-   * @param GoogetArtifact[]
+   * The GooGet artifacts updated.
+   *
+   * @param GoogetArtifact[] $googetArtifacts
    */
   public function setGoogetArtifacts($googetArtifacts)
   {

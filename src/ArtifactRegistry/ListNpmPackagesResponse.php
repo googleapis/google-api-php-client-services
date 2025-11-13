@@ -21,6 +21,9 @@ class ListNpmPackagesResponse extends \Google\Collection
 {
   protected $collection_key = 'npmPackages';
   /**
+   * The token to retrieve the next page of artifacts, or empty if there are no
+   * more artifacts to return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListNpmPackagesResponse extends \Google\Collection
   protected $npmPackagesDataType = 'array';
 
   /**
-   * @param string
+   * The token to retrieve the next page of artifacts, or empty if there are no
+   * more artifacts to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListNpmPackagesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param NpmPackage[]
+   * The npm packages returned.
+   *
+   * @param NpmPackage[] $npmPackages
    */
   public function setNpmPackages($npmPackages)
   {
