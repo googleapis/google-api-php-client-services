@@ -24,7 +24,9 @@ class ListAppRecoveriesResponse extends \Google\Collection
   protected $recoveryActionsDataType = 'array';
 
   /**
-   * @param AppRecoveryAction[]
+   * List of recovery actions associated with the requested package name.
+   *
+   * @param AppRecoveryAction[] $recoveryActions
    */
   public function setRecoveryActions($recoveryActions)
   {

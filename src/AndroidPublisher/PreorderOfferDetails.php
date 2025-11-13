@@ -20,12 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class PreorderOfferDetails extends \Google\Model
 {
   /**
+   * The time when a preordered item is released for a preorder purchase.
+   *
    * @var string
    */
   public $preorderReleaseTime;
 
   /**
-   * @param string
+   * The time when a preordered item is released for a preorder purchase.
+   *
+   * @param string $preorderReleaseTime
    */
   public function setPreorderReleaseTime($preorderReleaseTime)
   {

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class PartialRefund extends \Google\Model
 {
   /**
+   * Required. A unique id distinguishing this partial refund. If the refund is
+   * successful, subsequent refunds with the same id will fail. Must be unique
+   * across refunds for one individual transaction.
+   *
    * @var string
    */
   public $refundId;
@@ -27,7 +31,11 @@ class PartialRefund extends \Google\Model
   protected $refundPreTaxAmountDataType = '';
 
   /**
-   * @param string
+   * Required. A unique id distinguishing this partial refund. If the refund is
+   * successful, subsequent refunds with the same id will fail. Must be unique
+   * across refunds for one individual transaction.
+   *
+   * @param string $refundId
    */
   public function setRefundId($refundId)
   {
@@ -41,7 +49,10 @@ class PartialRefund extends \Google\Model
     return $this->refundId;
   }
   /**
-   * @param Price
+   * Required. The pre-tax amount of the partial refund. Should be less than the
+   * remaining pre-tax amount of the transaction.
+   *
+   * @param Price $refundPreTaxAmount
    */
   public function setRefundPreTaxAmount(Price $refundPreTaxAmount)
   {

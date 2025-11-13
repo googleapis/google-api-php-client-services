@@ -21,20 +21,31 @@ class Grant extends \Google\Collection
 {
   protected $collection_key = 'appLevelPermissions';
   /**
+   * The permissions granted to the user for this app.
+   *
    * @var string[]
    */
   public $appLevelPermissions;
   /**
+   * Required. Resource name for this grant, following the pattern
+   * "developers/{developer}/users/{email}/grants/{package_name}". If this grant
+   * is for a draft app, the app ID will be used in this resource name instead
+   * of the package name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Immutable. The package name of the app. This will be empty for draft apps.
+   *
    * @var string
    */
   public $packageName;
 
   /**
-   * @param string[]
+   * The permissions granted to the user for this app.
+   *
+   * @param string[] $appLevelPermissions
    */
   public function setAppLevelPermissions($appLevelPermissions)
   {
@@ -48,7 +59,12 @@ class Grant extends \Google\Collection
     return $this->appLevelPermissions;
   }
   /**
-   * @param string
+   * Required. Resource name for this grant, following the pattern
+   * "developers/{developer}/users/{email}/grants/{package_name}". If this grant
+   * is for a draft app, the app ID will be used in this resource name instead
+   * of the package name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -62,7 +78,9 @@ class Grant extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Immutable. The package name of the app. This will be empty for draft apps.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {

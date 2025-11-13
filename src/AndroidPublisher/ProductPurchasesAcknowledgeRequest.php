@@ -20,12 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class ProductPurchasesAcknowledgeRequest extends \Google\Model
 {
   /**
+   * Payload to attach to the purchase.
+   *
    * @var string
    */
   public $developerPayload;
 
   /**
-   * @param string
+   * Payload to attach to the purchase.
+   *
+   * @param string $developerPayload
    */
   public function setDeveloperPayload($developerPayload)
   {

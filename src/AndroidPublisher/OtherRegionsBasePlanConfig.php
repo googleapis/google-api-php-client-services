@@ -22,6 +22,9 @@ class OtherRegionsBasePlanConfig extends \Google\Model
   protected $eurPriceType = Money::class;
   protected $eurPriceDataType = '';
   /**
+   * Whether the base plan is available for new subscribers in any new locations
+   * Play may launch in. If not specified, this will default to false.
+   *
    * @var bool
    */
   public $newSubscriberAvailability;
@@ -29,7 +32,9 @@ class OtherRegionsBasePlanConfig extends \Google\Model
   protected $usdPriceDataType = '';
 
   /**
-   * @param Money
+   * Required. Price in EUR to use for any new locations Play may launch in.
+   *
+   * @param Money $eurPrice
    */
   public function setEurPrice(Money $eurPrice)
   {
@@ -43,7 +48,10 @@ class OtherRegionsBasePlanConfig extends \Google\Model
     return $this->eurPrice;
   }
   /**
-   * @param bool
+   * Whether the base plan is available for new subscribers in any new locations
+   * Play may launch in. If not specified, this will default to false.
+   *
+   * @param bool $newSubscriberAvailability
    */
   public function setNewSubscriberAvailability($newSubscriberAvailability)
   {
@@ -57,7 +65,9 @@ class OtherRegionsBasePlanConfig extends \Google\Model
     return $this->newSubscriberAvailability;
   }
   /**
-   * @param Money
+   * Required. Price in USD to use for any new locations Play may launch in.
+   *
+   * @param Money $usdPrice
    */
   public function setUsdPrice(Money $usdPrice)
   {

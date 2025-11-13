@@ -20,18 +20,42 @@ namespace Google\Service\AndroidPublisher;
 class PriceStepUpConsentDetails extends \Google\Model
 {
   /**
+   * Unspecified consent state.
+   */
+  public const STATE_CONSENT_STATE_UNSPECIFIED = 'CONSENT_STATE_UNSPECIFIED';
+  /**
+   * The user has not yet provided consent.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The user has consented, and the new price is waiting to take effect.
+   */
+  public const STATE_CONFIRMED = 'CONFIRMED';
+  /**
+   * The user has consented, and the new price has taken effect.
+   */
+  public const STATE_COMPLETED = 'COMPLETED';
+  /**
+   * The deadline by which the user must provide consent. If consent is not
+   * provided by this time, the subscription will be canceled.
+   *
    * @var string
    */
   public $consentDeadlineTime;
   protected $newPriceType = Money::class;
   protected $newPriceDataType = '';
   /**
+   * Output only. The state of the price step-up consent.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The deadline by which the user must provide consent. If consent is not
+   * provided by this time, the subscription will be canceled.
+   *
+   * @param string $consentDeadlineTime
    */
   public function setConsentDeadlineTime($consentDeadlineTime)
   {
@@ -45,7 +69,9 @@ class PriceStepUpConsentDetails extends \Google\Model
     return $this->consentDeadlineTime;
   }
   /**
-   * @param Money
+   * The new price which requires user consent.
+   *
+   * @param Money $newPrice
    */
   public function setNewPrice(Money $newPrice)
   {
@@ -59,14 +85,18 @@ class PriceStepUpConsentDetails extends \Google\Model
     return $this->newPrice;
   }
   /**
-   * @param string
+   * Output only. The state of the price step-up consent.
+   *
+   * Accepted values: CONSENT_STATE_UNSPECIFIED, PENDING, CONFIRMED, COMPLETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

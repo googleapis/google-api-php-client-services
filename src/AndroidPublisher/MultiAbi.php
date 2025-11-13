@@ -24,7 +24,9 @@ class MultiAbi extends \Google\Collection
   protected $abiDataType = 'array';
 
   /**
-   * @param Abi[]
+   * A list of targeted ABIs, as represented by the Android Platform
+   *
+   * @param Abi[] $abi
    */
   public function setAbi($abi)
   {

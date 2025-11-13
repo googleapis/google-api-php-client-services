@@ -20,30 +20,63 @@ namespace Google\Service\AndroidPublisher;
 class InappproductsUpdateRequest extends \Google\Model
 {
   /**
+   * Defaults to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE.
+   */
+  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED';
+  /**
+   * The update will propagate to clients within several minutes on average and
+   * up to a few hours in rare cases. Throughput is limited to 7,200 updates per
+   * app per hour.
+   */
+  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE';
+  /**
+   * The update will propagate to clients within 24 hours. Supports high
+   * throughput of up to 720,000 updates per app per hour using batch
+   * modification methods.
+   */
+  public const LATENCY_TOLERANCE_PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT = 'PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT';
+  /**
+   * If set to true, and the in-app product with the given package_name and sku
+   * doesn't exist, the in-app product will be created.
+   *
    * @var bool
    */
   public $allowMissing;
   /**
+   * If true the prices for all regions targeted by the parent app that don't
+   * have a price specified for this in-app product will be auto converted to
+   * the target currency based on the default price. Defaults to false.
+   *
    * @var bool
    */
   public $autoConvertMissingPrices;
   protected $inappproductType = InAppProduct::class;
   protected $inappproductDataType = '';
   /**
+   * Optional. The latency tolerance for the propagation of this product update.
+   * Defaults to latency-sensitive.
+   *
    * @var string
    */
   public $latencyTolerance;
   /**
+   * Package name of the app.
+   *
    * @var string
    */
   public $packageName;
   /**
+   * Unique identifier for the in-app product.
+   *
    * @var string
    */
   public $sku;
 
   /**
-   * @param bool
+   * If set to true, and the in-app product with the given package_name and sku
+   * doesn't exist, the in-app product will be created.
+   *
+   * @param bool $allowMissing
    */
   public function setAllowMissing($allowMissing)
   {
@@ -57,7 +90,11 @@ class InappproductsUpdateRequest extends \Google\Model
     return $this->allowMissing;
   }
   /**
-   * @param bool
+   * If true the prices for all regions targeted by the parent app that don't
+   * have a price specified for this in-app product will be auto converted to
+   * the target currency based on the default price. Defaults to false.
+   *
+   * @param bool $autoConvertMissingPrices
    */
   public function setAutoConvertMissingPrices($autoConvertMissingPrices)
   {
@@ -71,7 +108,9 @@ class InappproductsUpdateRequest extends \Google\Model
     return $this->autoConvertMissingPrices;
   }
   /**
-   * @param InAppProduct
+   * The new in-app product.
+   *
+   * @param InAppProduct $inappproduct
    */
   public function setInappproduct(InAppProduct $inappproduct)
   {
@@ -85,21 +124,30 @@ class InappproductsUpdateRequest extends \Google\Model
     return $this->inappproduct;
   }
   /**
-   * @param string
+   * Optional. The latency tolerance for the propagation of this product update.
+   * Defaults to latency-sensitive.
+   *
+   * Accepted values: PRODUCT_UPDATE_LATENCY_TOLERANCE_UNSPECIFIED,
+   * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_SENSITIVE,
+   * PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT
+   *
+   * @param self::LATENCY_TOLERANCE_* $latencyTolerance
    */
   public function setLatencyTolerance($latencyTolerance)
   {
     $this->latencyTolerance = $latencyTolerance;
   }
   /**
-   * @return string
+   * @return self::LATENCY_TOLERANCE_*
    */
   public function getLatencyTolerance()
   {
     return $this->latencyTolerance;
   }
   /**
-   * @param string
+   * Package name of the app.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {
@@ -113,7 +161,9 @@ class InappproductsUpdateRequest extends \Google\Model
     return $this->packageName;
   }
   /**
-   * @param string
+   * Unique identifier for the in-app product.
+   *
+   * @param string $sku
    */
   public function setSku($sku)
   {

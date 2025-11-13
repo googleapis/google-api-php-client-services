@@ -20,18 +20,36 @@ namespace Google\Service\AndroidPublisher;
 class RefundEvent extends \Google\Model
 {
   /**
+   * Refund reason unspecified. This value is not used.
+   */
+  public const REFUND_REASON_REFUND_REASON_UNSPECIFIED = 'REFUND_REASON_UNSPECIFIED';
+  /**
+   * The order was refunded for a reason other than the listed reasons here.
+   */
+  public const REFUND_REASON_OTHER = 'OTHER';
+  /**
+   * The order was charged back.
+   */
+  public const REFUND_REASON_CHARGEBACK = 'CHARGEBACK';
+  /**
+   * The time when the order was fully refunded.
+   *
    * @var string
    */
   public $eventTime;
   protected $refundDetailsType = RefundDetails::class;
   protected $refundDetailsDataType = '';
   /**
+   * The reason the order was refunded.
+   *
    * @var string
    */
   public $refundReason;
 
   /**
-   * @param string
+   * The time when the order was fully refunded.
+   *
+   * @param string $eventTime
    */
   public function setEventTime($eventTime)
   {
@@ -45,7 +63,9 @@ class RefundEvent extends \Google\Model
     return $this->eventTime;
   }
   /**
-   * @param RefundDetails
+   * Details for the full refund.
+   *
+   * @param RefundDetails $refundDetails
    */
   public function setRefundDetails(RefundDetails $refundDetails)
   {
@@ -59,14 +79,18 @@ class RefundEvent extends \Google\Model
     return $this->refundDetails;
   }
   /**
-   * @param string
+   * The reason the order was refunded.
+   *
+   * Accepted values: REFUND_REASON_UNSPECIFIED, OTHER, CHARGEBACK
+   *
+   * @param self::REFUND_REASON_* $refundReason
    */
   public function setRefundReason($refundReason)
   {
     $this->refundReason = $refundReason;
   }
   /**
-   * @return string
+   * @return self::REFUND_REASON_*
    */
   public function getRefundReason()
   {

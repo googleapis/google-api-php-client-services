@@ -20,28 +20,41 @@ namespace Google\Service\AndroidPublisher;
 class Listing extends \Google\Model
 {
   /**
+   * Full description of the app.
+   *
    * @var string
    */
   public $fullDescription;
   /**
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for
+   * Austrian German).
+   *
    * @var string
    */
   public $language;
   /**
+   * Short description of the app.
+   *
    * @var string
    */
   public $shortDescription;
   /**
+   * Localized title of the app.
+   *
    * @var string
    */
   public $title;
   /**
+   * URL of a promotional YouTube video for the app.
+   *
    * @var string
    */
   public $video;
 
   /**
-   * @param string
+   * Full description of the app.
+   *
+   * @param string $fullDescription
    */
   public function setFullDescription($fullDescription)
   {
@@ -55,7 +68,10 @@ class Listing extends \Google\Model
     return $this->fullDescription;
   }
   /**
-   * @param string
+   * Language localization code (a BCP-47 language tag; for example, "de-AT" for
+   * Austrian German).
+   *
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -69,7 +85,9 @@ class Listing extends \Google\Model
     return $this->language;
   }
   /**
-   * @param string
+   * Short description of the app.
+   *
+   * @param string $shortDescription
    */
   public function setShortDescription($shortDescription)
   {
@@ -83,7 +101,9 @@ class Listing extends \Google\Model
     return $this->shortDescription;
   }
   /**
-   * @param string
+   * Localized title of the app.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -97,7 +117,9 @@ class Listing extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * URL of a promotional YouTube video for the app.
+   *
+   * @param string $video
    */
   public function setVideo($video)
   {

@@ -20,16 +20,27 @@ namespace Google\Service\AndroidPublisher;
 class OneTimeProductBuyPurchaseOption extends \Google\Model
 {
   /**
+   * Optional. Whether this purchase option will be available in legacy PBL
+   * flows that do not support one-time products model. Up to one "buy" purchase
+   * option can be marked as backwards compatible.
+   *
    * @var bool
    */
   public $legacyCompatible;
   /**
+   * Optional. Whether this purchase option allows multi-quantity. Multi-
+   * quantity allows buyer to purchase more than one item in a single checkout.
+   *
    * @var bool
    */
   public $multiQuantityEnabled;
 
   /**
-   * @param bool
+   * Optional. Whether this purchase option will be available in legacy PBL
+   * flows that do not support one-time products model. Up to one "buy" purchase
+   * option can be marked as backwards compatible.
+   *
+   * @param bool $legacyCompatible
    */
   public function setLegacyCompatible($legacyCompatible)
   {
@@ -43,7 +54,10 @@ class OneTimeProductBuyPurchaseOption extends \Google\Model
     return $this->legacyCompatible;
   }
   /**
-   * @param bool
+   * Optional. Whether this purchase option allows multi-quantity. Multi-
+   * quantity allows buyer to purchase more than one item in a single checkout.
+   *
+   * @param bool $multiQuantityEnabled
    */
   public function setMultiQuantityEnabled($multiQuantityEnabled)
   {

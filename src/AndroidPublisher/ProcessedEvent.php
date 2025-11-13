@@ -20,12 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class ProcessedEvent extends \Google\Model
 {
   /**
+   * The time when the order was processed.
+   *
    * @var string
    */
   public $eventTime;
 
   /**
-   * @param string
+   * The time when the order was processed.
+   *
+   * @param string $eventTime
    */
   public function setEventTime($eventTime)
   {

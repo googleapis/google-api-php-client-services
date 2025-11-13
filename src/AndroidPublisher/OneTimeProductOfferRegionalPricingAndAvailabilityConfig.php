@@ -19,22 +19,55 @@ namespace Google\Service\AndroidPublisher;
 
 class OneTimeProductOfferRegionalPricingAndAvailabilityConfig extends \Google\Model
 {
+  /**
+   * Unspecified availability. Must not be used.
+   */
+  public const AVAILABILITY_AVAILABILITY_UNSPECIFIED = 'AVAILABILITY_UNSPECIFIED';
+  /**
+   * The offer is available to users.
+   */
+  public const AVAILABILITY_AVAILABLE = 'AVAILABLE';
+  /**
+   * The offer is no longer available to users. This value can only be used if
+   * the availability was previously set as AVAILABLE.
+   */
+  public const AVAILABILITY_NO_LONGER_AVAILABLE = 'NO_LONGER_AVAILABLE';
   protected $absoluteDiscountType = Money::class;
   protected $absoluteDiscountDataType = '';
   /**
+   * Required. The availability for this region.
+   *
    * @var string
    */
   public $availability;
   protected $noOverrideType = OneTimeProductOfferNoPriceOverrideOptions::class;
   protected $noOverrideDataType = '';
   /**
+   * Required. Region code this configuration applies to, as defined by ISO
+   * 3166-2, e.g., "US".
+   *
    * @var string
    */
   public $regionCode;
+  /**
+   * The fraction of the purchase option price that the user pays for this
+   * offer. For example, if the purchase option price for this region is $12,
+   * then a 50% discount would correspond to a price of $6. The discount must be
+   * specified as a fraction strictly larger than 0 and strictly smaller than 1.
+   * The resulting price will be rounded to the nearest billable unit (e.g.
+   * cents for USD). The relative discount is considered invalid if the
+   * discounted price ends up being smaller than the minimum price allowed in
+   * this region.
+   *
+   * @var 
+   */
   public $relativeDiscount;
 
   /**
-   * @param Money
+   * The absolute value of the discount that is subtracted from the purchase
+   * option price. It should be between 0 and the purchase option price.
+   *
+   * @param Money $absoluteDiscount
    */
   public function setAbsoluteDiscount(Money $absoluteDiscount)
   {
@@ -48,21 +81,27 @@ class OneTimeProductOfferRegionalPricingAndAvailabilityConfig extends \Google\Mo
     return $this->absoluteDiscount;
   }
   /**
-   * @param string
+   * Required. The availability for this region.
+   *
+   * Accepted values: AVAILABILITY_UNSPECIFIED, AVAILABLE, NO_LONGER_AVAILABLE
+   *
+   * @param self::AVAILABILITY_* $availability
    */
   public function setAvailability($availability)
   {
     $this->availability = $availability;
   }
   /**
-   * @return string
+   * @return self::AVAILABILITY_*
    */
   public function getAvailability()
   {
     return $this->availability;
   }
   /**
-   * @param OneTimeProductOfferNoPriceOverrideOptions
+   * The price defined in the purchase option for this region will be used.
+   *
+   * @param OneTimeProductOfferNoPriceOverrideOptions $noOverride
    */
   public function setNoOverride(OneTimeProductOfferNoPriceOverrideOptions $noOverride)
   {
@@ -76,7 +115,10 @@ class OneTimeProductOfferRegionalPricingAndAvailabilityConfig extends \Google\Mo
     return $this->noOverride;
   }
   /**
-   * @param string
+   * Required. Region code this configuration applies to, as defined by ISO
+   * 3166-2, e.g., "US".
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

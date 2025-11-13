@@ -20,6 +20,24 @@ namespace Google\Service\AndroidPublisher;
 class OneTimeProductPurchaseOptionNewRegionsConfig extends \Google\Model
 {
   /**
+   * Unspecified availability. Must not be used.
+   */
+  public const AVAILABILITY_AVAILABILITY_UNSPECIFIED = 'AVAILABILITY_UNSPECIFIED';
+  /**
+   * The config will be used for any new regions Play may launch in the future.
+   */
+  public const AVAILABILITY_AVAILABLE = 'AVAILABLE';
+  /**
+   * The config is not available anymore and will not be used for any new
+   * regions Play may launch in the future. This value can only be used if the
+   * availability was previously set as AVAILABLE.
+   */
+  public const AVAILABILITY_NO_LONGER_AVAILABLE = 'NO_LONGER_AVAILABLE';
+  /**
+   * Required. The regional availability for the new regions config. When set to
+   * AVAILABLE, the pricing information will be used for any new regions Play
+   * may launch in the future.
+   *
    * @var string
    */
   public $availability;
@@ -29,21 +47,29 @@ class OneTimeProductPurchaseOptionNewRegionsConfig extends \Google\Model
   protected $usdPriceDataType = '';
 
   /**
-   * @param string
+   * Required. The regional availability for the new regions config. When set to
+   * AVAILABLE, the pricing information will be used for any new regions Play
+   * may launch in the future.
+   *
+   * Accepted values: AVAILABILITY_UNSPECIFIED, AVAILABLE, NO_LONGER_AVAILABLE
+   *
+   * @param self::AVAILABILITY_* $availability
    */
   public function setAvailability($availability)
   {
     $this->availability = $availability;
   }
   /**
-   * @return string
+   * @return self::AVAILABILITY_*
    */
   public function getAvailability()
   {
     return $this->availability;
   }
   /**
-   * @param Money
+   * Required. Price in EUR to use for any new regions Play may launch in.
+   *
+   * @param Money $eurPrice
    */
   public function setEurPrice(Money $eurPrice)
   {
@@ -57,7 +83,9 @@ class OneTimeProductPurchaseOptionNewRegionsConfig extends \Google\Model
     return $this->eurPrice;
   }
   /**
-   * @param Money
+   * Required. Price in USD to use for any new regions Play may launch in.
+   *
+   * @param Money $usdPrice
    */
   public function setUsdPrice(Money $usdPrice)
   {

@@ -20,24 +20,34 @@ namespace Google\Service\AndroidPublisher;
 class GetOneTimeProductOfferRequest extends \Google\Model
 {
   /**
+   * Required. The unique offer ID of the offer to get.
+   *
    * @var string
    */
   public $offerId;
   /**
+   * Required. The parent app (package name) of the offer to get.
+   *
    * @var string
    */
   public $packageName;
   /**
+   * Required. The parent one-time product (ID) of the offer to get.
+   *
    * @var string
    */
   public $productId;
   /**
+   * Required. The parent purchase option (ID) of the offer to get.
+   *
    * @var string
    */
   public $purchaseOptionId;
 
   /**
-   * @param string
+   * Required. The unique offer ID of the offer to get.
+   *
+   * @param string $offerId
    */
   public function setOfferId($offerId)
   {
@@ -51,7 +61,9 @@ class GetOneTimeProductOfferRequest extends \Google\Model
     return $this->offerId;
   }
   /**
-   * @param string
+   * Required. The parent app (package name) of the offer to get.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {
@@ -65,7 +77,9 @@ class GetOneTimeProductOfferRequest extends \Google\Model
     return $this->packageName;
   }
   /**
-   * @param string
+   * Required. The parent one-time product (ID) of the offer to get.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -79,7 +93,9 @@ class GetOneTimeProductOfferRequest extends \Google\Model
     return $this->productId;
   }
   /**
-   * @param string
+   * Required. The parent purchase option (ID) of the offer to get.
+   *
+   * @param string $purchaseOptionId
    */
   public function setPurchaseOptionId($purchaseOptionId)
   {

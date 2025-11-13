@@ -25,7 +25,9 @@ class RefundDetails extends \Google\Model
   protected $totalDataType = '';
 
   /**
-   * @param Money
+   * The amount of tax refunded.
+   *
+   * @param Money $tax
    */
   public function setTax(Money $tax)
   {
@@ -39,7 +41,9 @@ class RefundDetails extends \Google\Model
     return $this->tax;
   }
   /**
-   * @param Money
+   * The total amount refunded, including tax.
+   *
+   * @param Money $total
    */
   public function setTotal(Money $total)
   {

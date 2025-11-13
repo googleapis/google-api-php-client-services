@@ -21,6 +21,9 @@ class ListUsersResponse extends \Google\Collection
 {
   protected $collection_key = 'users';
   /**
+   * A token to pass to subsequent calls in order to retrieve subsequent
+   * results. This will not be set if there are no more results to return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListUsersResponse extends \Google\Collection
   protected $usersDataType = 'array';
 
   /**
-   * @param string
+   * A token to pass to subsequent calls in order to retrieve subsequent
+   * results. This will not be set if there are no more results to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListUsersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param User[]
+   * The resulting users.
+   *
+   * @param User[] $users
    */
   public function setUsers($users)
   {

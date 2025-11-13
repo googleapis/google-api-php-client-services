@@ -20,24 +20,61 @@ namespace Google\Service\AndroidPublisher;
 class GeneratedRecoveryApk extends \Google\Model
 {
   /**
+   * RecoveryStatus is unspecified.
+   */
+  public const RECOVERY_STATUS_RECOVERY_STATUS_UNSPECIFIED = 'RECOVERY_STATUS_UNSPECIFIED';
+  /**
+   * The app recovery action has not been canceled since it has been created.
+   */
+  public const RECOVERY_STATUS_RECOVERY_STATUS_ACTIVE = 'RECOVERY_STATUS_ACTIVE';
+  /**
+   * The recovery action has been canceled. The action cannot be resumed.
+   */
+  public const RECOVERY_STATUS_RECOVERY_STATUS_CANCELED = 'RECOVERY_STATUS_CANCELED';
+  /**
+   * The recovery action is in the draft state and has not yet been deployed to
+   * users.
+   */
+  public const RECOVERY_STATUS_RECOVERY_STATUS_DRAFT = 'RECOVERY_STATUS_DRAFT';
+  /**
+   * The recovery action is generating recovery apks.
+   */
+  public const RECOVERY_STATUS_RECOVERY_STATUS_GENERATION_IN_PROGRESS = 'RECOVERY_STATUS_GENERATION_IN_PROGRESS';
+  /**
+   * The app recovery action generation has failed.
+   */
+  public const RECOVERY_STATUS_RECOVERY_STATUS_GENERATION_FAILED = 'RECOVERY_STATUS_GENERATION_FAILED';
+  /**
+   * Download ID, which uniquely identifies the APK to download. Should be
+   * supplied to `generatedapks.download` method.
+   *
    * @var string
    */
   public $downloadId;
   /**
+   * Name of the module which recovery apk belongs to.
+   *
    * @var string
    */
   public $moduleName;
   /**
+   * ID of the recovery action.
+   *
    * @var string
    */
   public $recoveryId;
   /**
+   * The status of the recovery action corresponding to the recovery apk.
+   *
    * @var string
    */
   public $recoveryStatus;
 
   /**
-   * @param string
+   * Download ID, which uniquely identifies the APK to download. Should be
+   * supplied to `generatedapks.download` method.
+   *
+   * @param string $downloadId
    */
   public function setDownloadId($downloadId)
   {
@@ -51,7 +88,9 @@ class GeneratedRecoveryApk extends \Google\Model
     return $this->downloadId;
   }
   /**
-   * @param string
+   * Name of the module which recovery apk belongs to.
+   *
+   * @param string $moduleName
    */
   public function setModuleName($moduleName)
   {
@@ -65,7 +104,9 @@ class GeneratedRecoveryApk extends \Google\Model
     return $this->moduleName;
   }
   /**
-   * @param string
+   * ID of the recovery action.
+   *
+   * @param string $recoveryId
    */
   public function setRecoveryId($recoveryId)
   {
@@ -79,14 +120,20 @@ class GeneratedRecoveryApk extends \Google\Model
     return $this->recoveryId;
   }
   /**
-   * @param string
+   * The status of the recovery action corresponding to the recovery apk.
+   *
+   * Accepted values: RECOVERY_STATUS_UNSPECIFIED, RECOVERY_STATUS_ACTIVE,
+   * RECOVERY_STATUS_CANCELED, RECOVERY_STATUS_DRAFT,
+   * RECOVERY_STATUS_GENERATION_IN_PROGRESS, RECOVERY_STATUS_GENERATION_FAILED
+   *
+   * @param self::RECOVERY_STATUS_* $recoveryStatus
    */
   public function setRecoveryStatus($recoveryStatus)
   {
     $this->recoveryStatus = $recoveryStatus;
   }
   /**
-   * @return string
+   * @return self::RECOVERY_STATUS_*
    */
   public function getRecoveryStatus()
   {

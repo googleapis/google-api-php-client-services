@@ -28,7 +28,9 @@ class ModuleTargeting extends \Google\Collection
   protected $userCountriesTargetingDataType = '';
 
   /**
-   * @param DeviceFeatureTargeting[]
+   * Targeting for device features.
+   *
+   * @param DeviceFeatureTargeting[] $deviceFeatureTargeting
    */
   public function setDeviceFeatureTargeting($deviceFeatureTargeting)
   {
@@ -42,7 +44,9 @@ class ModuleTargeting extends \Google\Collection
     return $this->deviceFeatureTargeting;
   }
   /**
-   * @param SdkVersionTargeting
+   * The sdk version that the variant targets
+   *
+   * @param SdkVersionTargeting $sdkVersionTargeting
    */
   public function setSdkVersionTargeting(SdkVersionTargeting $sdkVersionTargeting)
   {
@@ -56,7 +60,9 @@ class ModuleTargeting extends \Google\Collection
     return $this->sdkVersionTargeting;
   }
   /**
-   * @param UserCountriesTargeting
+   * Countries-level targeting
+   *
+   * @param UserCountriesTargeting $userCountriesTargeting
    */
   public function setUserCountriesTargeting(UserCountriesTargeting $userCountriesTargeting)
   {

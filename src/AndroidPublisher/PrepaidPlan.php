@@ -20,12 +20,18 @@ namespace Google\Service\AndroidPublisher;
 class PrepaidPlan extends \Google\Model
 {
   /**
+   * If present, this is the time after which top up purchases are allowed for
+   * the prepaid plan. Will not be present for expired prepaid plans.
+   *
    * @var string
    */
   public $allowExtendAfterTime;
 
   /**
-   * @param string
+   * If present, this is the time after which top up purchases are allowed for
+   * the prepaid plan. Will not be present for expired prepaid plans.
+   *
+   * @param string $allowExtendAfterTime
    */
   public function setAllowExtendAfterTime($allowExtendAfterTime)
   {

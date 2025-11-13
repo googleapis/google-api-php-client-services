@@ -26,7 +26,10 @@ class MultiAbiTargeting extends \Google\Collection
   protected $valueDataType = 'array';
 
   /**
-   * @param MultiAbi[]
+   * Targeting of other sibling directories that were in the Bundle. For main
+   * splits this is targeting of other main splits.
+   *
+   * @param MultiAbi[] $alternatives
    */
   public function setAlternatives($alternatives)
   {
@@ -40,7 +43,9 @@ class MultiAbiTargeting extends \Google\Collection
     return $this->alternatives;
   }
   /**
-   * @param MultiAbi[]
+   * Value of a multi abi.
+   *
+   * @param MultiAbi[] $value
    */
   public function setValue($value)
   {

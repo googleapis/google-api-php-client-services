@@ -20,24 +20,36 @@ namespace Google\Service\AndroidPublisher;
 class GeneratedSplitApk extends \Google\Model
 {
   /**
+   * Download ID, which uniquely identifies the APK to download. Should be
+   * supplied to `generatedapks.download` method.
+   *
    * @var string
    */
   public $downloadId;
   /**
+   * Name of the module that this APK belongs to.
+   *
    * @var string
    */
   public $moduleName;
   /**
+   * Split ID. Empty for the main split of the base module.
+   *
    * @var string
    */
   public $splitId;
   /**
+   * ID of the generated variant.
+   *
    * @var int
    */
   public $variantId;
 
   /**
-   * @param string
+   * Download ID, which uniquely identifies the APK to download. Should be
+   * supplied to `generatedapks.download` method.
+   *
+   * @param string $downloadId
    */
   public function setDownloadId($downloadId)
   {
@@ -51,7 +63,9 @@ class GeneratedSplitApk extends \Google\Model
     return $this->downloadId;
   }
   /**
-   * @param string
+   * Name of the module that this APK belongs to.
+   *
+   * @param string $moduleName
    */
   public function setModuleName($moduleName)
   {
@@ -65,7 +79,9 @@ class GeneratedSplitApk extends \Google\Model
     return $this->moduleName;
   }
   /**
-   * @param string
+   * Split ID. Empty for the main split of the base module.
+   *
+   * @param string $splitId
    */
   public function setSplitId($splitId)
   {
@@ -79,7 +95,9 @@ class GeneratedSplitApk extends \Google\Model
     return $this->splitId;
   }
   /**
-   * @param int
+   * ID of the generated variant.
+   *
+   * @param int $variantId
    */
   public function setVariantId($variantId)
   {

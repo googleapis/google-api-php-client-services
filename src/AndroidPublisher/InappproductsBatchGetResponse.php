@@ -24,7 +24,9 @@ class InappproductsBatchGetResponse extends \Google\Collection
   protected $inappproductDataType = 'array';
 
   /**
-   * @param InAppProduct[]
+   * The list of requested in-app products, in the same order as the request.
+   *
+   * @param InAppProduct[] $inappproduct
    */
   public function setInappproduct($inappproduct)
   {

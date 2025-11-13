@@ -20,20 +20,30 @@ namespace Google\Service\AndroidPublisher;
 class OneTimeProductDiscountedOffer extends \Google\Model
 {
   /**
+   * Time when the offer will stop being available.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Optional. The number of times this offer can be redeemed. If unset or set
+   * to 0, allows for unlimited offer redemptions. Otherwise must be a number
+   * between 1 and 50 inclusive.
+   *
    * @var string
    */
   public $redemptionLimit;
   /**
+   * Time when the offer will start being available.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Time when the offer will stop being available.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -47,7 +57,11 @@ class OneTimeProductDiscountedOffer extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Optional. The number of times this offer can be redeemed. If unset or set
+   * to 0, allows for unlimited offer redemptions. Otherwise must be a number
+   * between 1 and 50 inclusive.
+   *
+   * @param string $redemptionLimit
    */
   public function setRedemptionLimit($redemptionLimit)
   {
@@ -61,7 +75,9 @@ class OneTimeProductDiscountedOffer extends \Google\Model
     return $this->redemptionLimit;
   }
   /**
-   * @param string
+   * Time when the offer will start being available.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

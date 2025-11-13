@@ -25,7 +25,9 @@ class OtherRegionsSubscriptionOfferPhasePrices extends \Google\Model
   protected $usdPriceDataType = '';
 
   /**
-   * @param Money
+   * Required. Price in EUR to use for any new locations Play may launch in.
+   *
+   * @param Money $eurPrice
    */
   public function setEurPrice(Money $eurPrice)
   {
@@ -39,7 +41,9 @@ class OtherRegionsSubscriptionOfferPhasePrices extends \Google\Model
     return $this->eurPrice;
   }
   /**
-   * @param Money
+   * Required. Price in USD to use for any new locations Play may launch in.
+   *
+   * @param Money $usdPrice
    */
   public function setUsdPrice(Money $usdPrice)
   {

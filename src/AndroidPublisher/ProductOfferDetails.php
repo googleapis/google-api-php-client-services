@@ -19,34 +19,62 @@ namespace Google\Service\AndroidPublisher;
 
 class ProductOfferDetails extends \Google\Collection
 {
+  /**
+   * Consumption state unspecified. This value should never be set.
+   */
+  public const CONSUMPTION_STATE_CONSUMPTION_STATE_UNSPECIFIED = 'CONSUMPTION_STATE_UNSPECIFIED';
+  /**
+   * Yet to be consumed.
+   */
+  public const CONSUMPTION_STATE_CONSUMPTION_STATE_YET_TO_BE_CONSUMED = 'CONSUMPTION_STATE_YET_TO_BE_CONSUMED';
+  /**
+   * Consumed already.
+   */
+  public const CONSUMPTION_STATE_CONSUMPTION_STATE_CONSUMED = 'CONSUMPTION_STATE_CONSUMED';
   protected $collection_key = 'offerTags';
   /**
+   * Output only. The consumption state of the purchase.
+   *
    * @var string
    */
   public $consumptionState;
   /**
+   * The offer ID. Only present for offers.
+   *
    * @var string
    */
   public $offerId;
   /**
+   * The latest offer tags associated with the offer. It includes tags inherited
+   * from the purchase option.
+   *
    * @var string[]
    */
   public $offerTags;
   /**
+   * The per-transaction offer token used to make this purchase line item.
+   *
    * @var string
    */
   public $offerToken;
   protected $preorderOfferDetailsType = PreorderOfferDetails::class;
   protected $preorderOfferDetailsDataType = '';
   /**
+   * The purchase option ID.
+   *
    * @var string
    */
   public $purchaseOptionId;
   /**
+   * The quantity associated with the purchase of the inapp product.
+   *
    * @var int
    */
   public $quantity;
   /**
+   * The quantity eligible for refund, i.e. quantity that hasn't been refunded.
+   * The value reflects quantity-based partial refunds and full refunds.
+   *
    * @var int
    */
   public $refundableQuantity;
@@ -54,21 +82,28 @@ class ProductOfferDetails extends \Google\Collection
   protected $rentOfferDetailsDataType = '';
 
   /**
-   * @param string
+   * Output only. The consumption state of the purchase.
+   *
+   * Accepted values: CONSUMPTION_STATE_UNSPECIFIED,
+   * CONSUMPTION_STATE_YET_TO_BE_CONSUMED, CONSUMPTION_STATE_CONSUMED
+   *
+   * @param self::CONSUMPTION_STATE_* $consumptionState
    */
   public function setConsumptionState($consumptionState)
   {
     $this->consumptionState = $consumptionState;
   }
   /**
-   * @return string
+   * @return self::CONSUMPTION_STATE_*
    */
   public function getConsumptionState()
   {
     return $this->consumptionState;
   }
   /**
-   * @param string
+   * The offer ID. Only present for offers.
+   *
+   * @param string $offerId
    */
   public function setOfferId($offerId)
   {
@@ -82,7 +117,10 @@ class ProductOfferDetails extends \Google\Collection
     return $this->offerId;
   }
   /**
-   * @param string[]
+   * The latest offer tags associated with the offer. It includes tags inherited
+   * from the purchase option.
+   *
+   * @param string[] $offerTags
    */
   public function setOfferTags($offerTags)
   {
@@ -96,7 +134,9 @@ class ProductOfferDetails extends \Google\Collection
     return $this->offerTags;
   }
   /**
-   * @param string
+   * The per-transaction offer token used to make this purchase line item.
+   *
+   * @param string $offerToken
    */
   public function setOfferToken($offerToken)
   {
@@ -110,7 +150,9 @@ class ProductOfferDetails extends \Google\Collection
     return $this->offerToken;
   }
   /**
-   * @param PreorderOfferDetails
+   * Offer details for a preorder offer. This will only be set for preorders.
+   *
+   * @param PreorderOfferDetails $preorderOfferDetails
    */
   public function setPreorderOfferDetails(PreorderOfferDetails $preorderOfferDetails)
   {
@@ -124,7 +166,9 @@ class ProductOfferDetails extends \Google\Collection
     return $this->preorderOfferDetails;
   }
   /**
-   * @param string
+   * The purchase option ID.
+   *
+   * @param string $purchaseOptionId
    */
   public function setPurchaseOptionId($purchaseOptionId)
   {
@@ -138,7 +182,9 @@ class ProductOfferDetails extends \Google\Collection
     return $this->purchaseOptionId;
   }
   /**
-   * @param int
+   * The quantity associated with the purchase of the inapp product.
+   *
+   * @param int $quantity
    */
   public function setQuantity($quantity)
   {
@@ -152,7 +198,10 @@ class ProductOfferDetails extends \Google\Collection
     return $this->quantity;
   }
   /**
-   * @param int
+   * The quantity eligible for refund, i.e. quantity that hasn't been refunded.
+   * The value reflects quantity-based partial refunds and full refunds.
+   *
+   * @param int $refundableQuantity
    */
   public function setRefundableQuantity($refundableQuantity)
   {
@@ -166,7 +215,10 @@ class ProductOfferDetails extends \Google\Collection
     return $this->refundableQuantity;
   }
   /**
-   * @param RentOfferDetails
+   * Offer details about rent offers. This will only be set for rental line
+   * items.
+   *
+   * @param RentOfferDetails $rentOfferDetails
    */
   public function setRentOfferDetails(RentOfferDetails $rentOfferDetails)
   {

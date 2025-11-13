@@ -20,20 +20,31 @@ namespace Google\Service\AndroidPublisher;
 class PageInfo extends \Google\Model
 {
   /**
+   * Maximum number of results returned in one page. ! The number of results
+   * included in the API response.
+   *
    * @var int
    */
   public $resultPerPage;
   /**
+   * Index of the first result returned in the current page.
+   *
    * @var int
    */
   public $startIndex;
   /**
+   * Total number of results available on the backend ! The total number of
+   * results in the result set.
+   *
    * @var int
    */
   public $totalResults;
 
   /**
-   * @param int
+   * Maximum number of results returned in one page. ! The number of results
+   * included in the API response.
+   *
+   * @param int $resultPerPage
    */
   public function setResultPerPage($resultPerPage)
   {
@@ -47,7 +58,9 @@ class PageInfo extends \Google\Model
     return $this->resultPerPage;
   }
   /**
-   * @param int
+   * Index of the first result returned in the current page.
+   *
+   * @param int $startIndex
    */
   public function setStartIndex($startIndex)
   {
@@ -61,7 +74,10 @@ class PageInfo extends \Google\Model
     return $this->startIndex;
   }
   /**
-   * @param int
+   * Total number of results available on the backend ! The total number of
+   * results in the result set.
+   *
+   * @param int $totalResults
    */
   public function setTotalResults($totalResults)
   {

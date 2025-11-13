@@ -22,20 +22,35 @@ class PointsDetails extends \Google\Model
   protected $pointsCouponValueType = Money::class;
   protected $pointsCouponValueDataType = '';
   /**
+   * The percentage rate which the Play Points promotion reduces the cost by.
+   * E.g. for a 100 points for $2 coupon, this is 500,000. Since $2 has an
+   * estimate of 200 points, but the actual Points required, 100, is 50% of
+   * this, and 50% in micros is 500,000. Between 0 and 1,000,000.
+   *
    * @var string
    */
   public $pointsDiscountRateMicros;
   /**
+   * ID unique to the play points offer in use for this order.
+   *
    * @var string
    */
   public $pointsOfferId;
   /**
+   * The number of Play Points applied in this order. E.g. for a 100 points for
+   * $2 coupon, this is 100. For coupon stacked with base offer, this is the
+   * total points spent across both.
+   *
    * @var string
    */
   public $pointsSpent;
 
   /**
-   * @param Money
+   * The monetary value of a Play Points coupon. This is the discount the coupon
+   * provides, which may not be the total amount. Only set when Play Points
+   * coupons have been used. E.g. for a 100 points for $2 coupon, this is $2.
+   *
+   * @param Money $pointsCouponValue
    */
   public function setPointsCouponValue(Money $pointsCouponValue)
   {
@@ -49,7 +64,12 @@ class PointsDetails extends \Google\Model
     return $this->pointsCouponValue;
   }
   /**
-   * @param string
+   * The percentage rate which the Play Points promotion reduces the cost by.
+   * E.g. for a 100 points for $2 coupon, this is 500,000. Since $2 has an
+   * estimate of 200 points, but the actual Points required, 100, is 50% of
+   * this, and 50% in micros is 500,000. Between 0 and 1,000,000.
+   *
+   * @param string $pointsDiscountRateMicros
    */
   public function setPointsDiscountRateMicros($pointsDiscountRateMicros)
   {
@@ -63,7 +83,9 @@ class PointsDetails extends \Google\Model
     return $this->pointsDiscountRateMicros;
   }
   /**
-   * @param string
+   * ID unique to the play points offer in use for this order.
+   *
+   * @param string $pointsOfferId
    */
   public function setPointsOfferId($pointsOfferId)
   {
@@ -77,7 +99,11 @@ class PointsDetails extends \Google\Model
     return $this->pointsOfferId;
   }
   /**
-   * @param string
+   * The number of Play Points applied in this order. E.g. for a 100 points for
+   * $2 coupon, this is 100. For coupon stacked with base offer, this is the
+   * total points spent across both.
+   *
+   * @param string $pointsSpent
    */
   public function setPointsSpent($pointsSpent)
   {

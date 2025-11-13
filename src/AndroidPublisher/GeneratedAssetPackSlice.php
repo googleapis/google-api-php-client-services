@@ -20,24 +20,36 @@ namespace Google\Service\AndroidPublisher;
 class GeneratedAssetPackSlice extends \Google\Model
 {
   /**
+   * Download ID, which uniquely identifies the APK to download. Should be
+   * supplied to `generatedapks.download` method.
+   *
    * @var string
    */
   public $downloadId;
   /**
+   * Name of the module that this asset slice belongs to.
+   *
    * @var string
    */
   public $moduleName;
   /**
+   * Asset slice ID.
+   *
    * @var string
    */
   public $sliceId;
   /**
+   * Asset module version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Download ID, which uniquely identifies the APK to download. Should be
+   * supplied to `generatedapks.download` method.
+   *
+   * @param string $downloadId
    */
   public function setDownloadId($downloadId)
   {
@@ -51,7 +63,9 @@ class GeneratedAssetPackSlice extends \Google\Model
     return $this->downloadId;
   }
   /**
-   * @param string
+   * Name of the module that this asset slice belongs to.
+   *
+   * @param string $moduleName
    */
   public function setModuleName($moduleName)
   {
@@ -65,7 +79,9 @@ class GeneratedAssetPackSlice extends \Google\Model
     return $this->moduleName;
   }
   /**
-   * @param string
+   * Asset slice ID.
+   *
+   * @param string $sliceId
    */
   public function setSliceId($sliceId)
   {
@@ -79,7 +95,9 @@ class GeneratedAssetPackSlice extends \Google\Model
     return $this->sliceId;
   }
   /**
-   * @param string
+   * Asset module version.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

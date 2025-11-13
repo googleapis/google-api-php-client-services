@@ -20,12 +20,18 @@ namespace Google\Service\AndroidPublisher;
 class OneTimeExternalTransaction extends \Google\Model
 {
   /**
+   * Input only. Provided during the call to Create. Retrieved from the client
+   * when the alternative billing flow is launched.
+   *
    * @var string
    */
   public $externalTransactionToken;
 
   /**
-   * @param string
+   * Input only. Provided during the call to Create. Retrieved from the client
+   * when the alternative billing flow is launched.
+   *
+   * @param string $externalTransactionToken
    */
   public function setExternalTransactionToken($externalTransactionToken)
   {

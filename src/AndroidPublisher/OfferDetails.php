@@ -21,20 +21,29 @@ class OfferDetails extends \Google\Collection
 {
   protected $collection_key = 'offerTags';
   /**
+   * The base plan ID. Present for all base plan and offers.
+   *
    * @var string
    */
   public $basePlanId;
   /**
+   * The offer ID. Only present for discounted offers.
+   *
    * @var string
    */
   public $offerId;
   /**
+   * The latest offer tags associated with the offer. It includes tags inherited
+   * from the base plan.
+   *
    * @var string[]
    */
   public $offerTags;
 
   /**
-   * @param string
+   * The base plan ID. Present for all base plan and offers.
+   *
+   * @param string $basePlanId
    */
   public function setBasePlanId($basePlanId)
   {
@@ -48,7 +57,9 @@ class OfferDetails extends \Google\Collection
     return $this->basePlanId;
   }
   /**
-   * @param string
+   * The offer ID. Only present for discounted offers.
+   *
+   * @param string $offerId
    */
   public function setOfferId($offerId)
   {
@@ -62,7 +73,10 @@ class OfferDetails extends \Google\Collection
     return $this->offerId;
   }
   /**
-   * @param string[]
+   * The latest offer tags associated with the offer. It includes tags inherited
+   * from the base plan.
+   *
+   * @param string[] $offerTags
    */
   public function setOfferTags($offerTags)
   {
