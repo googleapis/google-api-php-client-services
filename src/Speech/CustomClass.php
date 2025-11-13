@@ -19,60 +19,119 @@ namespace Google\Service\Speech;
 
 class CustomClass extends \Google\Collection
 {
+  /**
+   * Unspecified state. This is only used/useful for distinguishing unset
+   * values.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The normal and active state.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * This CustomClass has been deleted.
+   */
+  public const STATE_DELETED = 'DELETED';
   protected $collection_key = 'items';
   /**
+   * Output only. Allows users to store small amounts of arbitrary data. Both
+   * the key and the value must be 63 characters or less each. At most 100
+   * annotations. This field is not used.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * If this custom class is a resource, the custom_class_id is the resource id
+   * of the CustomClass. Case sensitive.
+   *
    * @var string
    */
   public $customClassId;
   /**
+   * Output only. The time at which this resource was requested for deletion.
+   * This field is not used.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * Output only. User-settable, human-readable name for the CustomClass. Must
+   * be 63 characters or less. This field is not used.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields. This may be sent on update, undelete, and delete requests to
+   * ensure the client has an up-to-date value before proceeding. This field is
+   * not used.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. The time at which this resource will be purged. This field is
+   * not used.
+   *
    * @var string
    */
   public $expireTime;
   protected $itemsType = ClassItem::class;
   protected $itemsDataType = 'array';
   /**
+   * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-
+   * hierarchy#keys) with which the content of the ClassItem is encrypted. The
+   * expected format is `projects/{project}/locations/{location}/keyRings/{key_r
+   * ing}/cryptoKeys/{crypto_key}`.
+   *
    * @var string
    */
   public $kmsKeyName;
   /**
+   * Output only. The [KMS key version
+   * name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions)
+   * with which content of the ClassItem is encrypted. The expected format is `p
+   * rojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryp
+   * to_key}/cryptoKeyVersions/{crypto_key_version}`.
+   *
    * @var string
    */
   public $kmsKeyVersionName;
   /**
+   * The resource name of the custom class.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Whether or not this CustomClass is in the process of being
+   * updated. This field is not used.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. The CustomClass lifecycle state. This field is not used.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. System-assigned unique identifier for the CustomClass. This
+   * field is not used.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string[]
+   * Output only. Allows users to store small amounts of arbitrary data. Both
+   * the key and the value must be 63 characters or less each. At most 100
+   * annotations. This field is not used.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -86,7 +145,10 @@ class CustomClass extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param string
+   * If this custom class is a resource, the custom_class_id is the resource id
+   * of the CustomClass. Case sensitive.
+   *
+   * @param string $customClassId
    */
   public function setCustomClassId($customClassId)
   {
@@ -100,7 +162,10 @@ class CustomClass extends \Google\Collection
     return $this->customClassId;
   }
   /**
-   * @param string
+   * Output only. The time at which this resource was requested for deletion.
+   * This field is not used.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -114,7 +179,10 @@ class CustomClass extends \Google\Collection
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * Output only. User-settable, human-readable name for the CustomClass. Must
+   * be 63 characters or less. This field is not used.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -128,7 +196,12 @@ class CustomClass extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields. This may be sent on update, undelete, and delete requests to
+   * ensure the client has an up-to-date value before proceeding. This field is
+   * not used.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -142,7 +215,10 @@ class CustomClass extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. The time at which this resource will be purged. This field is
+   * not used.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -156,7 +232,9 @@ class CustomClass extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param ClassItem[]
+   * A collection of class items.
+   *
+   * @param ClassItem[] $items
    */
   public function setItems($items)
   {
@@ -170,7 +248,12 @@ class CustomClass extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Output only. The [KMS key name](https://cloud.google.com/kms/docs/resource-
+   * hierarchy#keys) with which the content of the ClassItem is encrypted. The
+   * expected format is `projects/{project}/locations/{location}/keyRings/{key_r
+   * ing}/cryptoKeys/{crypto_key}`.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {
@@ -184,7 +267,13 @@ class CustomClass extends \Google\Collection
     return $this->kmsKeyName;
   }
   /**
-   * @param string
+   * Output only. The [KMS key version
+   * name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions)
+   * with which content of the ClassItem is encrypted. The expected format is `p
+   * rojects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{cryp
+   * to_key}/cryptoKeyVersions/{crypto_key_version}`.
+   *
+   * @param string $kmsKeyVersionName
    */
   public function setKmsKeyVersionName($kmsKeyVersionName)
   {
@@ -198,7 +287,9 @@ class CustomClass extends \Google\Collection
     return $this->kmsKeyVersionName;
   }
   /**
-   * @param string
+   * The resource name of the custom class.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -212,7 +303,10 @@ class CustomClass extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Whether or not this CustomClass is in the process of being
+   * updated. This field is not used.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -226,21 +320,28 @@ class CustomClass extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. The CustomClass lifecycle state. This field is not used.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, DELETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. System-assigned unique identifier for the CustomClass. This
+   * field is not used.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

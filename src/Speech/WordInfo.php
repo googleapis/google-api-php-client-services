@@ -20,32 +20,72 @@ namespace Google\Service\Speech;
 class WordInfo extends \Google\Model
 {
   /**
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an
+   * estimated greater likelihood that the recognized words are correct. This
+   * field is set only for the top alternative of a non-streaming result or, of
+   * a streaming result where `is_final=true`. This field is not guaranteed to
+   * be accurate and users should not rely on it to be always provided. The
+   * default of 0.0 is a sentinel value indicating `confidence` was not set.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Time offset relative to the beginning of the audio, and corresponding to
+   * the end of the spoken word. This field is only set if
+   * `enable_word_time_offsets=true` and only in the top hypothesis. This is an
+   * experimental feature and the accuracy of the time offset can vary.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. A label value assigned for every unique speaker within the
+   * audio. This field specifies which speaker was detected to have spoken this
+   * word. For some models, like medical_conversation this can be actual speaker
+   * role, for example "patient" or "provider", but generally this would be a
+   * number identifying a speaker. This field is only set if
+   * enable_speaker_diarization = 'true' and only for the top alternative.
+   *
    * @var string
    */
   public $speakerLabel;
   /**
+   * Output only. A distinct integer value is assigned for every speaker within
+   * the audio. This field specifies which one of those speakers was detected to
+   * have spoken this word. Value ranges from '1' to diarization_speaker_count.
+   * speaker_tag is set if enable_speaker_diarization = 'true' and only for the
+   * top alternative. Note: Use speaker_label instead.
+   *
+   * @deprecated
    * @var int
    */
   public $speakerTag;
   /**
+   * Time offset relative to the beginning of the audio, and corresponding to
+   * the start of the spoken word. This field is only set if
+   * `enable_word_time_offsets=true` and only in the top hypothesis. This is an
+   * experimental feature and the accuracy of the time offset can vary.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The word corresponding to this set of information.
+   *
    * @var string
    */
   public $word;
 
   /**
-   * @param float
+   * The confidence estimate between 0.0 and 1.0. A higher number indicates an
+   * estimated greater likelihood that the recognized words are correct. This
+   * field is set only for the top alternative of a non-streaming result or, of
+   * a streaming result where `is_final=true`. This field is not guaranteed to
+   * be accurate and users should not rely on it to be always provided. The
+   * default of 0.0 is a sentinel value indicating `confidence` was not set.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -59,7 +99,12 @@ class WordInfo extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * Time offset relative to the beginning of the audio, and corresponding to
+   * the end of the spoken word. This field is only set if
+   * `enable_word_time_offsets=true` and only in the top hypothesis. This is an
+   * experimental feature and the accuracy of the time offset can vary.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -73,7 +118,14 @@ class WordInfo extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. A label value assigned for every unique speaker within the
+   * audio. This field specifies which speaker was detected to have spoken this
+   * word. For some models, like medical_conversation this can be actual speaker
+   * role, for example "patient" or "provider", but generally this would be a
+   * number identifying a speaker. This field is only set if
+   * enable_speaker_diarization = 'true' and only for the top alternative.
+   *
+   * @param string $speakerLabel
    */
   public function setSpeakerLabel($speakerLabel)
   {
@@ -87,13 +139,21 @@ class WordInfo extends \Google\Model
     return $this->speakerLabel;
   }
   /**
-   * @param int
+   * Output only. A distinct integer value is assigned for every speaker within
+   * the audio. This field specifies which one of those speakers was detected to
+   * have spoken this word. Value ranges from '1' to diarization_speaker_count.
+   * speaker_tag is set if enable_speaker_diarization = 'true' and only for the
+   * top alternative. Note: Use speaker_label instead.
+   *
+   * @deprecated
+   * @param int $speakerTag
    */
   public function setSpeakerTag($speakerTag)
   {
     $this->speakerTag = $speakerTag;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getSpeakerTag()
@@ -101,7 +161,12 @@ class WordInfo extends \Google\Model
     return $this->speakerTag;
   }
   /**
-   * @param string
+   * Time offset relative to the beginning of the audio, and corresponding to
+   * the start of the spoken word. This field is only set if
+   * `enable_word_time_offsets=true` and only in the top hypothesis. This is an
+   * experimental feature and the accuracy of the time offset can vary.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -115,7 +180,9 @@ class WordInfo extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The word corresponding to this set of information.
+   *
+   * @param string $word
    */
   public function setWord($word)
   {

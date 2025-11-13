@@ -25,6 +25,8 @@ class SpeechAdaptation extends \Google\Collection
   protected $customClassesType = CustomClass::class;
   protected $customClassesDataType = 'array';
   /**
+   * A collection of phrase set resource names to use.
+   *
    * @var string[]
    */
   public $phraseSetReferences;
@@ -32,7 +34,11 @@ class SpeechAdaptation extends \Google\Collection
   protected $phraseSetsDataType = 'array';
 
   /**
-   * @param ABNFGrammar
+   * Augmented Backus-Naur form (ABNF) is a standardized grammar notation
+   * comprised by a set of derivation rules. See specifications:
+   * https://www.w3.org/TR/speech-grammar
+   *
+   * @param ABNFGrammar $abnfGrammar
    */
   public function setAbnfGrammar(ABNFGrammar $abnfGrammar)
   {
@@ -46,7 +52,12 @@ class SpeechAdaptation extends \Google\Collection
     return $this->abnfGrammar;
   }
   /**
-   * @param CustomClass[]
+   * A collection of custom classes. To specify the classes inline, leave the
+   * class' `name` blank and fill in the rest of its fields, giving it a unique
+   * `custom_class_id`. Refer to the inline defined class in phrase hints by its
+   * `custom_class_id`.
+   *
+   * @param CustomClass[] $customClasses
    */
   public function setCustomClasses($customClasses)
   {
@@ -60,7 +71,9 @@ class SpeechAdaptation extends \Google\Collection
     return $this->customClasses;
   }
   /**
-   * @param string[]
+   * A collection of phrase set resource names to use.
+   *
+   * @param string[] $phraseSetReferences
    */
   public function setPhraseSetReferences($phraseSetReferences)
   {
@@ -74,7 +87,11 @@ class SpeechAdaptation extends \Google\Collection
     return $this->phraseSetReferences;
   }
   /**
-   * @param PhraseSet[]
+   * A collection of phrase sets. To specify the hints inline, leave the phrase
+   * set's `name` blank and fill in the rest of its fields. Any phrase set can
+   * use any custom class.
+   *
+   * @param PhraseSet[] $phraseSets
    */
   public function setPhraseSets($phraseSets)
   {

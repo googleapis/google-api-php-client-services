@@ -20,16 +20,25 @@ namespace Google\Service\Speech;
 class SpeechAdaptationInfo extends \Google\Model
 {
   /**
+   * Whether there was a timeout when applying speech adaptation. If true,
+   * adaptation had no effect in the response transcript.
+   *
    * @var bool
    */
   public $adaptationTimeout;
   /**
+   * If set, returns a message specifying which part of the speech adaptation
+   * request timed out.
+   *
    * @var string
    */
   public $timeoutMessage;
 
   /**
-   * @param bool
+   * Whether there was a timeout when applying speech adaptation. If true,
+   * adaptation had no effect in the response transcript.
+   *
+   * @param bool $adaptationTimeout
    */
   public function setAdaptationTimeout($adaptationTimeout)
   {
@@ -43,7 +52,10 @@ class SpeechAdaptationInfo extends \Google\Model
     return $this->adaptationTimeout;
   }
   /**
-   * @param string
+   * If set, returns a message specifying which part of the speech adaptation
+   * request timed out.
+   *
+   * @param string $timeoutMessage
    */
   public function setTimeoutMessage($timeoutMessage)
   {

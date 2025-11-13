@@ -24,7 +24,12 @@ class TranscriptNormalization extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param Entry[]
+   * A list of replacement entries. We will perform replacement with one entry
+   * at a time. For example, the second entry in ["cat" => "dog", "mountain cat"
+   * => "mountain dog"] will never be applied because we will always process the
+   * first entry before it. At most 100 entries.
+   *
+   * @param Entry[] $entries
    */
   public function setEntries($entries)
   {

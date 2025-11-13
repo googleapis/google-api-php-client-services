@@ -21,6 +21,9 @@ class RecognizeResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * The ID associated with the request. This is a unique ID specific only to
+   * the given request.
+   *
    * @var string
    */
   public $requestId;
@@ -29,16 +32,24 @@ class RecognizeResponse extends \Google\Collection
   protected $speechAdaptationInfoType = SpeechAdaptationInfo::class;
   protected $speechAdaptationInfoDataType = '';
   /**
+   * When available, billed audio seconds for the corresponding request.
+   *
    * @var string
    */
   public $totalBilledTime;
   /**
+   * Whether request used legacy asr models (was not automatically migrated to
+   * use conformer models).
+   *
    * @var bool
    */
   public $usingLegacyModels;
 
   /**
-   * @param string
+   * The ID associated with the request. This is a unique ID specific only to
+   * the given request.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -52,7 +63,10 @@ class RecognizeResponse extends \Google\Collection
     return $this->requestId;
   }
   /**
-   * @param SpeechRecognitionResult[]
+   * Sequential list of transcription results corresponding to sequential
+   * portions of audio.
+   *
+   * @param SpeechRecognitionResult[] $results
    */
   public function setResults($results)
   {
@@ -66,7 +80,9 @@ class RecognizeResponse extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param SpeechAdaptationInfo
+   * Provides information on adaptation behavior in response
+   *
+   * @param SpeechAdaptationInfo $speechAdaptationInfo
    */
   public function setSpeechAdaptationInfo(SpeechAdaptationInfo $speechAdaptationInfo)
   {
@@ -80,7 +96,9 @@ class RecognizeResponse extends \Google\Collection
     return $this->speechAdaptationInfo;
   }
   /**
-   * @param string
+   * When available, billed audio seconds for the corresponding request.
+   *
+   * @param string $totalBilledTime
    */
   public function setTotalBilledTime($totalBilledTime)
   {
@@ -94,7 +112,10 @@ class RecognizeResponse extends \Google\Collection
     return $this->totalBilledTime;
   }
   /**
-   * @param bool
+   * Whether request used legacy asr models (was not automatically migrated to
+   * use conformer models).
+   *
+   * @param bool $usingLegacyModels
    */
   public function setUsingLegacyModels($usingLegacyModels)
   {

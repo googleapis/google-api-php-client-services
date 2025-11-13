@@ -25,6 +25,9 @@ class LongRunningRecognizeResponse extends \Google\Collection
   protected $outputErrorType = Status::class;
   protected $outputErrorDataType = '';
   /**
+   * The ID associated with the request. This is a unique ID specific only to
+   * the given request.
+   *
    * @var string
    */
   public $requestId;
@@ -33,12 +36,16 @@ class LongRunningRecognizeResponse extends \Google\Collection
   protected $speechAdaptationInfoType = SpeechAdaptationInfo::class;
   protected $speechAdaptationInfoDataType = '';
   /**
+   * When available, billed audio seconds for the corresponding request.
+   *
    * @var string
    */
   public $totalBilledTime;
 
   /**
-   * @param TranscriptOutputConfig
+   * Original output config if present in the request.
+   *
+   * @param TranscriptOutputConfig $outputConfig
    */
   public function setOutputConfig(TranscriptOutputConfig $outputConfig)
   {
@@ -52,7 +59,9 @@ class LongRunningRecognizeResponse extends \Google\Collection
     return $this->outputConfig;
   }
   /**
-   * @param Status
+   * If the transcript output fails this field contains the relevant error.
+   *
+   * @param Status $outputError
    */
   public function setOutputError(Status $outputError)
   {
@@ -66,7 +75,10 @@ class LongRunningRecognizeResponse extends \Google\Collection
     return $this->outputError;
   }
   /**
-   * @param string
+   * The ID associated with the request. This is a unique ID specific only to
+   * the given request.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -80,7 +92,10 @@ class LongRunningRecognizeResponse extends \Google\Collection
     return $this->requestId;
   }
   /**
-   * @param SpeechRecognitionResult[]
+   * Sequential list of transcription results corresponding to sequential
+   * portions of audio.
+   *
+   * @param SpeechRecognitionResult[] $results
    */
   public function setResults($results)
   {
@@ -94,7 +109,9 @@ class LongRunningRecognizeResponse extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param SpeechAdaptationInfo
+   * Provides information on speech adaptation behavior in response
+   *
+   * @param SpeechAdaptationInfo $speechAdaptationInfo
    */
   public function setSpeechAdaptationInfo(SpeechAdaptationInfo $speechAdaptationInfo)
   {
@@ -108,7 +125,9 @@ class LongRunningRecognizeResponse extends \Google\Collection
     return $this->speechAdaptationInfo;
   }
   /**
-   * @param string
+   * When available, billed audio seconds for the corresponding request.
+   *
+   * @param string $totalBilledTime
    */
   public function setTotalBilledTime($totalBilledTime)
   {

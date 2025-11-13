@@ -20,20 +20,28 @@ namespace Google\Service\Speech;
 class Entry extends \Google\Model
 {
   /**
+   * Whether the search is case sensitive.
+   *
    * @var bool
    */
   public $caseSensitive;
   /**
+   * What to replace with. Max length is 100 characters.
+   *
    * @var string
    */
   public $replace;
   /**
+   * What to replace. Max length is 100 characters.
+   *
    * @var string
    */
   public $search;
 
   /**
-   * @param bool
+   * Whether the search is case sensitive.
+   *
+   * @param bool $caseSensitive
    */
   public function setCaseSensitive($caseSensitive)
   {
@@ -47,7 +55,9 @@ class Entry extends \Google\Model
     return $this->caseSensitive;
   }
   /**
-   * @param string
+   * What to replace with. Max length is 100 characters.
+   *
+   * @param string $replace
    */
   public function setReplace($replace)
   {
@@ -61,7 +71,9 @@ class Entry extends \Google\Model
     return $this->replace;
   }
   /**
-   * @param string
+   * What to replace. Max length is 100 characters.
+   *
+   * @param string $search
    */
   public function setSearch($search)
   {

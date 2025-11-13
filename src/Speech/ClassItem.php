@@ -20,12 +20,16 @@ namespace Google\Service\Speech;
 class ClassItem extends \Google\Model
 {
   /**
+   * The class item's value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The class item's value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

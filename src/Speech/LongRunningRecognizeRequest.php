@@ -27,7 +27,9 @@ class LongRunningRecognizeRequest extends \Google\Model
   protected $outputConfigDataType = '';
 
   /**
-   * @param RecognitionAudio
+   * Required. The audio data to be recognized.
+   *
+   * @param RecognitionAudio $audio
    */
   public function setAudio(RecognitionAudio $audio)
   {
@@ -41,7 +43,10 @@ class LongRunningRecognizeRequest extends \Google\Model
     return $this->audio;
   }
   /**
-   * @param RecognitionConfig
+   * Required. Provides information to the recognizer that specifies how to
+   * process the request.
+   *
+   * @param RecognitionConfig $config
    */
   public function setConfig(RecognitionConfig $config)
   {
@@ -55,7 +60,9 @@ class LongRunningRecognizeRequest extends \Google\Model
     return $this->config;
   }
   /**
-   * @param TranscriptOutputConfig
+   * Optional. Specifies an optional destination for the recognition results.
+   *
+   * @param TranscriptOutputConfig $outputConfig
    */
   public function setOutputConfig(TranscriptOutputConfig $outputConfig)
   {

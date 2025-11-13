@@ -20,24 +20,36 @@ namespace Google\Service\Speech;
 class LongRunningRecognizeMetadata extends \Google\Model
 {
   /**
+   * Time of the most recent processing update.
+   *
    * @var string
    */
   public $lastUpdateTime;
   /**
+   * Approximate percentage of audio processed thus far. Guaranteed to be 100
+   * when the audio is fully processed and the results are available.
+   *
    * @var int
    */
   public $progressPercent;
   /**
+   * Time when the request was received.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The URI of the audio file being transcribed. Empty if the
+   * audio was sent as byte content.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Time of the most recent processing update.
+   *
+   * @param string $lastUpdateTime
    */
   public function setLastUpdateTime($lastUpdateTime)
   {
@@ -51,7 +63,10 @@ class LongRunningRecognizeMetadata extends \Google\Model
     return $this->lastUpdateTime;
   }
   /**
-   * @param int
+   * Approximate percentage of audio processed thus far. Guaranteed to be 100
+   * when the audio is fully processed and the results are available.
+   *
+   * @param int $progressPercent
    */
   public function setProgressPercent($progressPercent)
   {
@@ -65,7 +80,9 @@ class LongRunningRecognizeMetadata extends \Google\Model
     return $this->progressPercent;
   }
   /**
-   * @param string
+   * Time when the request was received.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -79,7 +96,10 @@ class LongRunningRecognizeMetadata extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The URI of the audio file being transcribed. Empty if the
+   * audio was sent as byte content.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {
