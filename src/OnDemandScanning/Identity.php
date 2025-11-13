@@ -20,16 +20,22 @@ namespace Google\Service\OnDemandScanning;
 class Identity extends \Google\Model
 {
   /**
+   * The revision number of the update.
+   *
    * @var int
    */
   public $revision;
   /**
+   * The revision independent identifier of the update.
+   *
    * @var string
    */
   public $updateId;
 
   /**
-   * @param int
+   * The revision number of the update.
+   *
+   * @param int $revision
    */
   public function setRevision($revision)
   {
@@ -43,7 +49,9 @@ class Identity extends \Google\Model
     return $this->revision;
   }
   /**
-   * @param string
+   * The revision independent identifier of the update.
+   *
+   * @param string $updateId
    */
   public function setUpdateId($updateId)
   {

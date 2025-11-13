@@ -20,16 +20,22 @@ namespace Google\Service\OnDemandScanning;
 class Category extends \Google\Model
 {
   /**
+   * The identifier of the category.
+   *
    * @var string
    */
   public $categoryId;
   /**
+   * The localized name of the category.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The identifier of the category.
+   *
+   * @param string $categoryId
    */
   public function setCategoryId($categoryId)
   {
@@ -43,7 +49,9 @@ class Category extends \Google\Model
     return $this->categoryId;
   }
   /**
-   * @param string
+   * The localized name of the category.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

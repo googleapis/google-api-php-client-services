@@ -21,24 +21,35 @@ class AnalyzePackagesRequestV1 extends \Google\Collection
 {
   protected $collection_key = 'packages';
   /**
+   * [DEPRECATED] Whether to include OSV data in the scan. For backwards
+   * compatibility reasons, this field can be neither removed nor renamed.
+   *
+   * @deprecated
    * @var bool
    */
   public $includeOsvData;
   protected $packagesType = PackageData::class;
   protected $packagesDataType = 'array';
   /**
+   * Required. The resource URI of the container image being scanned.
+   *
    * @var string
    */
   public $resourceUri;
 
   /**
-   * @param bool
+   * [DEPRECATED] Whether to include OSV data in the scan. For backwards
+   * compatibility reasons, this field can be neither removed nor renamed.
+   *
+   * @deprecated
+   * @param bool $includeOsvData
    */
   public function setIncludeOsvData($includeOsvData)
   {
     $this->includeOsvData = $includeOsvData;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getIncludeOsvData()
@@ -46,7 +57,9 @@ class AnalyzePackagesRequestV1 extends \Google\Collection
     return $this->includeOsvData;
   }
   /**
-   * @param PackageData[]
+   * The packages to analyze.
+   *
+   * @param PackageData[] $packages
    */
   public function setPackages($packages)
   {
@@ -60,7 +73,9 @@ class AnalyzePackagesRequestV1 extends \Google\Collection
     return $this->packages;
   }
   /**
-   * @param string
+   * Required. The resource URI of the container image being scanned.
+   *
+   * @param string $resourceUri
    */
   public function setResourceUri($resourceUri)
   {

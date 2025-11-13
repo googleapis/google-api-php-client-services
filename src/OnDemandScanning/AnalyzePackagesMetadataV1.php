@@ -20,16 +20,22 @@ namespace Google\Service\OnDemandScanning;
 class AnalyzePackagesMetadataV1 extends \Google\Model
 {
   /**
+   * When the scan was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The resource URI of the container image being scanned.
+   *
    * @var string
    */
   public $resourceUri;
 
   /**
-   * @param string
+   * When the scan was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -43,7 +49,9 @@ class AnalyzePackagesMetadataV1 extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The resource URI of the container image being scanned.
+   *
+   * @param string $resourceUri
    */
   public function setResourceUri($resourceUri)
   {

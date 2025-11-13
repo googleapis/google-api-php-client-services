@@ -21,6 +21,9 @@ class ListVulnerabilitiesResponseV1 extends \Google\Collection
 {
   protected $collection_key = 'occurrences';
   /**
+   * A page token that can be used in a subsequent call to ListVulnerabilities
+   * to continue retrieving results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListVulnerabilitiesResponseV1 extends \Google\Collection
   protected $occurrencesDataType = 'array';
 
   /**
-   * @param string
+   * A page token that can be used in a subsequent call to ListVulnerabilities
+   * to continue retrieving results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListVulnerabilitiesResponseV1 extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Occurrence[]
+   * The list of Vulnerability Occurrences resulting from a scan.
+   *
+   * @param Occurrence[] $occurrences
    */
   public function setOccurrences($occurrences)
   {

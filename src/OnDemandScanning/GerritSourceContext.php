@@ -22,20 +22,30 @@ class GerritSourceContext extends \Google\Model
   protected $aliasContextType = AliasContext::class;
   protected $aliasContextDataType = '';
   /**
+   * The full project name within the host. Projects may be nested, so
+   * "project/subproject" is a valid project name. The "repo name" is the
+   * hostURI/project.
+   *
    * @var string
    */
   public $gerritProject;
   /**
+   * The URI of a running Gerrit instance.
+   *
    * @var string
    */
   public $hostUri;
   /**
+   * A revision (commit) ID.
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param AliasContext
+   * An alias, which may be a branch or tag.
+   *
+   * @param AliasContext $aliasContext
    */
   public function setAliasContext(AliasContext $aliasContext)
   {
@@ -49,7 +59,11 @@ class GerritSourceContext extends \Google\Model
     return $this->aliasContext;
   }
   /**
-   * @param string
+   * The full project name within the host. Projects may be nested, so
+   * "project/subproject" is a valid project name. The "repo name" is the
+   * hostURI/project.
+   *
+   * @param string $gerritProject
    */
   public function setGerritProject($gerritProject)
   {
@@ -63,7 +77,9 @@ class GerritSourceContext extends \Google\Model
     return $this->gerritProject;
   }
   /**
-   * @param string
+   * The URI of a running Gerrit instance.
+   *
+   * @param string $hostUri
    */
   public function setHostUri($hostUri)
   {
@@ -77,7 +93,9 @@ class GerritSourceContext extends \Google\Model
     return $this->hostUri;
   }
   /**
-   * @param string
+   * A revision (commit) ID.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

@@ -29,7 +29,7 @@ class LanguagePackageDependency extends \Google\Model
   public $version;
 
   /**
-   * @param string
+   * @param string $package
    */
   public function setPackage($package)
   {
@@ -43,7 +43,7 @@ class LanguagePackageDependency extends \Google\Model
     return $this->package;
   }
   /**
-   * @param string
+   * @param string $version
    */
   public function setVersion($version)
   {

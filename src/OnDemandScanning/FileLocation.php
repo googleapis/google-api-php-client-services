@@ -20,6 +20,9 @@ namespace Google\Service\OnDemandScanning;
 class FileLocation extends \Google\Model
 {
   /**
+   * For jars that are contained inside .war files, this filepath can indicate
+   * the path to war file combined with the path to jar file.
+   *
    * @var string
    */
   public $filePath;
@@ -27,7 +30,10 @@ class FileLocation extends \Google\Model
   protected $layerDetailsDataType = '';
 
   /**
-   * @param string
+   * For jars that are contained inside .war files, this filepath can indicate
+   * the path to war file combined with the path to jar file.
+   *
+   * @param string $filePath
    */
   public function setFilePath($filePath)
   {
@@ -41,7 +47,7 @@ class FileLocation extends \Google\Model
     return $this->filePath;
   }
   /**
-   * @param LayerDetails
+   * @param LayerDetails $layerDetails
    */
   public function setLayerDetails(LayerDetails $layerDetails)
   {

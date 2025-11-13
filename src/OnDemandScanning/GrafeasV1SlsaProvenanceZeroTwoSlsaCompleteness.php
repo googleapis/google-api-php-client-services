@@ -33,7 +33,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness extends \Google\Model
   public $parameters;
 
   /**
-   * @param bool
+   * @param bool $environment
    */
   public function setEnvironment($environment)
   {
@@ -47,7 +47,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness extends \Google\Model
     return $this->environment;
   }
   /**
-   * @param bool
+   * @param bool $materials
    */
   public function setMaterials($materials)
   {
@@ -61,7 +61,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness extends \Google\Model
     return $this->materials;
   }
   /**
-   * @param bool
+   * @param bool $parameters
    */
   public function setParameters($parameters)
   {

@@ -20,16 +20,36 @@ namespace Google\Service\OnDemandScanning;
 class SBOMStatus extends \Google\Model
 {
   /**
+   * Default unknown state.
+   */
+  public const SBOM_STATE_SBOM_STATE_UNSPECIFIED = 'SBOM_STATE_UNSPECIFIED';
+  /**
+   * SBOM scanning is pending.
+   */
+  public const SBOM_STATE_PENDING = 'PENDING';
+  /**
+   * SBOM scanning has completed.
+   */
+  public const SBOM_STATE_COMPLETE = 'COMPLETE';
+  /**
+   * If there was an error generating an SBOM, this will indicate what that
+   * error was.
+   *
    * @var string
    */
   public $error;
   /**
+   * The progress of the SBOM generation.
+   *
    * @var string
    */
   public $sbomState;
 
   /**
-   * @param string
+   * If there was an error generating an SBOM, this will indicate what that
+   * error was.
+   *
+   * @param string $error
    */
   public function setError($error)
   {
@@ -43,14 +63,18 @@ class SBOMStatus extends \Google\Model
     return $this->error;
   }
   /**
-   * @param string
+   * The progress of the SBOM generation.
+   *
+   * Accepted values: SBOM_STATE_UNSPECIFIED, PENDING, COMPLETE
+   *
+   * @param self::SBOM_STATE_* $sbomState
    */
   public function setSbomState($sbomState)
   {
     $this->sbomState = $sbomState;
   }
   /**
-   * @return string
+   * @return self::SBOM_STATE_*
    */
   public function getSbomState()
   {

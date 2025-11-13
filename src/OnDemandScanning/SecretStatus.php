@@ -20,20 +20,44 @@ namespace Google\Service\OnDemandScanning;
 class SecretStatus extends \Google\Model
 {
   /**
+   * Unspecified
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The status of the secret is unknown.
+   */
+  public const STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * The secret is valid.
+   */
+  public const STATUS_VALID = 'VALID';
+  /**
+   * The secret is invalid.
+   */
+  public const STATUS_INVALID = 'INVALID';
+  /**
+   * Optional. Optional message about the status code.
+   *
    * @var string
    */
   public $message;
   /**
+   * Optional. The status of the secret.
+   *
    * @var string
    */
   public $status;
   /**
+   * Optional. The time the secret status was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Optional. Optional message about the status code.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -47,21 +71,27 @@ class SecretStatus extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Optional. The status of the secret.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, UNKNOWN, VALID, INVALID
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * Optional. The time the secret status was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

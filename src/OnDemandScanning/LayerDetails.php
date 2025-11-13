@@ -23,24 +23,37 @@ class LayerDetails extends \Google\Collection
   protected $baseImagesType = BaseImage::class;
   protected $baseImagesDataType = 'array';
   /**
+   * The layer chain ID (sha256 hash) of the layer in the container image.
+   * https://github.com/opencontainers/image-spec/blob/main/config.md#layer-
+   * chainid
+   *
    * @var string
    */
   public $chainId;
   /**
+   * The layer build command that was used to build the layer. This may not be
+   * found in all layers depending on how the container image is built.
+   *
    * @var string
    */
   public $command;
   /**
+   * The diff ID (sha256 hash) of the layer in the container image.
+   *
    * @var string
    */
   public $diffId;
   /**
+   * The index of the layer in the container image.
+   *
    * @var int
    */
   public $index;
 
   /**
-   * @param BaseImage[]
+   * The base images the layer is found within.
+   *
+   * @param BaseImage[] $baseImages
    */
   public function setBaseImages($baseImages)
   {
@@ -54,7 +67,11 @@ class LayerDetails extends \Google\Collection
     return $this->baseImages;
   }
   /**
-   * @param string
+   * The layer chain ID (sha256 hash) of the layer in the container image.
+   * https://github.com/opencontainers/image-spec/blob/main/config.md#layer-
+   * chainid
+   *
+   * @param string $chainId
    */
   public function setChainId($chainId)
   {
@@ -68,7 +85,10 @@ class LayerDetails extends \Google\Collection
     return $this->chainId;
   }
   /**
-   * @param string
+   * The layer build command that was used to build the layer. This may not be
+   * found in all layers depending on how the container image is built.
+   *
+   * @param string $command
    */
   public function setCommand($command)
   {
@@ -82,7 +102,9 @@ class LayerDetails extends \Google\Collection
     return $this->command;
   }
   /**
-   * @param string
+   * The diff ID (sha256 hash) of the layer in the container image.
+   *
+   * @param string $diffId
    */
   public function setDiffId($diffId)
   {
@@ -96,7 +118,9 @@ class LayerDetails extends \Google\Collection
     return $this->diffId;
   }
   /**
-   * @param int
+   * The index of the layer in the container image.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {

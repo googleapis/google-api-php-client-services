@@ -25,7 +25,7 @@ class SlsaProvenanceV1 extends \Google\Model
   protected $runDetailsDataType = '';
 
   /**
-   * @param BuildDefinition
+   * @param BuildDefinition $buildDefinition
    */
   public function setBuildDefinition(BuildDefinition $buildDefinition)
   {
@@ -39,7 +39,7 @@ class SlsaProvenanceV1 extends \Google\Model
     return $this->buildDefinition;
   }
   /**
-   * @param RunDetails
+   * @param RunDetails $runDetails
    */
   public function setRunDetails(RunDetails $runDetails)
   {

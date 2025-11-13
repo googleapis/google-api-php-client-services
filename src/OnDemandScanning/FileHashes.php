@@ -24,7 +24,9 @@ class FileHashes extends \Google\Collection
   protected $fileHashDataType = 'array';
 
   /**
-   * @param Hash[]
+   * Required. Collection of file hashes.
+   *
+   * @param Hash[] $fileHash
    */
   public function setFileHash($fileHash)
   {

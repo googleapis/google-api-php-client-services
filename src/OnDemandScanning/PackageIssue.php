@@ -19,44 +19,91 @@ namespace Google\Service\OnDemandScanning;
 
 class PackageIssue extends \Google\Collection
 {
+  /**
+   * Unknown.
+   */
+  public const EFFECTIVE_SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * Minimal severity.
+   */
+  public const EFFECTIVE_SEVERITY_MINIMAL = 'MINIMAL';
+  /**
+   * Low severity.
+   */
+  public const EFFECTIVE_SEVERITY_LOW = 'LOW';
+  /**
+   * Medium severity.
+   */
+  public const EFFECTIVE_SEVERITY_MEDIUM = 'MEDIUM';
+  /**
+   * High severity.
+   */
+  public const EFFECTIVE_SEVERITY_HIGH = 'HIGH';
+  /**
+   * Critical severity.
+   */
+  public const EFFECTIVE_SEVERITY_CRITICAL = 'CRITICAL';
   protected $collection_key = 'fileLocation';
   /**
+   * Required. The [CPE URI](https://cpe.mitre.org/specification/) this
+   * vulnerability was found in.
+   *
    * @var string
    */
   public $affectedCpeUri;
   /**
+   * Required. The package this vulnerability was found in.
+   *
    * @var string
    */
   public $affectedPackage;
   protected $affectedVersionType = Version::class;
   protected $affectedVersionDataType = '';
   /**
+   * Output only. The distro or language system assigned severity for this
+   * vulnerability when that is available and note provider assigned severity
+   * when it is not available.
+   *
    * @var string
    */
   public $effectiveSeverity;
   protected $fileLocationType = GrafeasV1FileLocation::class;
   protected $fileLocationDataType = 'array';
   /**
+   * Output only. Whether a fix is available for this package.
+   *
    * @var bool
    */
   public $fixAvailable;
   /**
+   * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was
+   * fixed in. It is possible for this to be different from the
+   * affected_cpe_uri.
+   *
    * @var string
    */
   public $fixedCpeUri;
   /**
+   * The package this vulnerability was fixed in. It is possible for this to be
+   * different from the affected_package.
+   *
    * @var string
    */
   public $fixedPackage;
   protected $fixedVersionType = Version::class;
   protected $fixedVersionDataType = '';
   /**
+   * The type of package (e.g. OS, MAVEN, GO).
+   *
    * @var string
    */
   public $packageType;
 
   /**
-   * @param string
+   * Required. The [CPE URI](https://cpe.mitre.org/specification/) this
+   * vulnerability was found in.
+   *
+   * @param string $affectedCpeUri
    */
   public function setAffectedCpeUri($affectedCpeUri)
   {
@@ -70,7 +117,9 @@ class PackageIssue extends \Google\Collection
     return $this->affectedCpeUri;
   }
   /**
-   * @param string
+   * Required. The package this vulnerability was found in.
+   *
+   * @param string $affectedPackage
    */
   public function setAffectedPackage($affectedPackage)
   {
@@ -84,7 +133,10 @@ class PackageIssue extends \Google\Collection
     return $this->affectedPackage;
   }
   /**
-   * @param Version
+   * Required. The version of the package that is installed on the resource
+   * affected by this vulnerability.
+   *
+   * @param Version $affectedVersion
    */
   public function setAffectedVersion(Version $affectedVersion)
   {
@@ -98,21 +150,29 @@ class PackageIssue extends \Google\Collection
     return $this->affectedVersion;
   }
   /**
-   * @param string
+   * Output only. The distro or language system assigned severity for this
+   * vulnerability when that is available and note provider assigned severity
+   * when it is not available.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, MINIMAL, LOW, MEDIUM, HIGH, CRITICAL
+   *
+   * @param self::EFFECTIVE_SEVERITY_* $effectiveSeverity
    */
   public function setEffectiveSeverity($effectiveSeverity)
   {
     $this->effectiveSeverity = $effectiveSeverity;
   }
   /**
-   * @return string
+   * @return self::EFFECTIVE_SEVERITY_*
    */
   public function getEffectiveSeverity()
   {
     return $this->effectiveSeverity;
   }
   /**
-   * @param GrafeasV1FileLocation[]
+   * The location at which this package was found.
+   *
+   * @param GrafeasV1FileLocation[] $fileLocation
    */
   public function setFileLocation($fileLocation)
   {
@@ -126,7 +186,9 @@ class PackageIssue extends \Google\Collection
     return $this->fileLocation;
   }
   /**
-   * @param bool
+   * Output only. Whether a fix is available for this package.
+   *
+   * @param bool $fixAvailable
    */
   public function setFixAvailable($fixAvailable)
   {
@@ -140,7 +202,11 @@ class PackageIssue extends \Google\Collection
     return $this->fixAvailable;
   }
   /**
-   * @param string
+   * The [CPE URI](https://cpe.mitre.org/specification/) this vulnerability was
+   * fixed in. It is possible for this to be different from the
+   * affected_cpe_uri.
+   *
+   * @param string $fixedCpeUri
    */
   public function setFixedCpeUri($fixedCpeUri)
   {
@@ -154,7 +220,10 @@ class PackageIssue extends \Google\Collection
     return $this->fixedCpeUri;
   }
   /**
-   * @param string
+   * The package this vulnerability was fixed in. It is possible for this to be
+   * different from the affected_package.
+   *
+   * @param string $fixedPackage
    */
   public function setFixedPackage($fixedPackage)
   {
@@ -168,7 +237,10 @@ class PackageIssue extends \Google\Collection
     return $this->fixedPackage;
   }
   /**
-   * @param Version
+   * Required. The version of the package this vulnerability was fixed in.
+   * Setting this to VersionKind.MAXIMUM means no fix is yet available.
+   *
+   * @param Version $fixedVersion
    */
   public function setFixedVersion(Version $fixedVersion)
   {
@@ -182,7 +254,9 @@ class PackageIssue extends \Google\Collection
     return $this->fixedVersion;
   }
   /**
-   * @param string
+   * The type of package (e.g. OS, MAVEN, GO).
+   *
+   * @param string $packageType
    */
   public function setPackageType($packageType)
   {

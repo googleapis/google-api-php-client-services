@@ -20,6 +20,9 @@ namespace Google\Service\OnDemandScanning;
 class GrafeasV1FileLocation extends \Google\Model
 {
   /**
+   * For jars that are contained inside .war files, this filepath can indicate
+   * the path to war file combined with the path to jar file.
+   *
    * @var string
    */
   public $filePath;
@@ -27,7 +30,10 @@ class GrafeasV1FileLocation extends \Google\Model
   protected $layerDetailsDataType = '';
 
   /**
-   * @param string
+   * For jars that are contained inside .war files, this filepath can indicate
+   * the path to war file combined with the path to jar file.
+   *
+   * @param string $filePath
    */
   public function setFilePath($filePath)
   {
@@ -41,7 +47,10 @@ class GrafeasV1FileLocation extends \Google\Model
     return $this->filePath;
   }
   /**
-   * @param GrafeasV1LayerDetails
+   * Each package found in a file should have its own layer metadata (that is,
+   * information from the origin layer of the package).
+   *
+   * @param GrafeasV1LayerDetails $layerDetails
    */
   public function setLayerDetails(GrafeasV1LayerDetails $layerDetails)
   {

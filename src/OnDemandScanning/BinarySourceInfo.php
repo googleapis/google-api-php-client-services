@@ -25,7 +25,12 @@ class BinarySourceInfo extends \Google\Model
   protected $sourceVersionDataType = '';
 
   /**
-   * @param PackageVersion
+   * The binary package. This is significant when the source is different than
+   * the binary itself. Historically if they've differed, we've stored the name
+   * of the source and its version in the package/version fields, but we should
+   * also store the binary package info, as that's what's actually installed.
+   *
+   * @param PackageVersion $binaryVersion
    */
   public function setBinaryVersion(PackageVersion $binaryVersion)
   {
@@ -39,7 +44,13 @@ class BinarySourceInfo extends \Google\Model
     return $this->binaryVersion;
   }
   /**
-   * @param PackageVersion
+   * The source package. Similar to the above, this is significant when the
+   * source is different than the binary itself. Since the top-level
+   * package/version fields are based on an if/else, we need a separate field
+   * for both binary and source if we want to know definitively where the data
+   * is coming from.
+   *
+   * @param PackageVersion $sourceVersion
    */
   public function setSourceVersion(PackageVersion $sourceVersion)
   {

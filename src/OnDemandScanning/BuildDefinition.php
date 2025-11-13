@@ -36,7 +36,7 @@ class BuildDefinition extends \Google\Collection
   protected $resolvedDependenciesDataType = 'array';
 
   /**
-   * @param string
+   * @param string $buildType
    */
   public function setBuildType($buildType)
   {
@@ -50,7 +50,7 @@ class BuildDefinition extends \Google\Collection
     return $this->buildType;
   }
   /**
-   * @param array[]
+   * @param array[] $externalParameters
    */
   public function setExternalParameters($externalParameters)
   {
@@ -64,7 +64,7 @@ class BuildDefinition extends \Google\Collection
     return $this->externalParameters;
   }
   /**
-   * @param array[]
+   * @param array[] $internalParameters
    */
   public function setInternalParameters($internalParameters)
   {
@@ -78,7 +78,7 @@ class BuildDefinition extends \Google\Collection
     return $this->internalParameters;
   }
   /**
-   * @param ResourceDescriptor[]
+   * @param ResourceDescriptor[] $resolvedDependencies
    */
   public function setResolvedDependencies($resolvedDependencies)
   {

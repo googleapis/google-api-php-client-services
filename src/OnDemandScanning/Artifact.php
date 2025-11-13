@@ -21,20 +21,35 @@ class Artifact extends \Google\Collection
 {
   protected $collection_key = 'names';
   /**
+   * Hash or checksum value of a binary, or Docker Registry 2.0 digest of a
+   * container.
+   *
    * @var string
    */
   public $checksum;
   /**
+   * Artifact ID, if any; for container images, this will be a URL by digest
+   * like `gcr.io/projectID/imagename@sha256:123456`.
+   *
    * @var string
    */
   public $id;
   /**
+   * Related artifact names. This may be the path to a binary or jar file, or in
+   * the case of a container build, the name used to push the container image to
+   * Google Container Registry, as presented to `docker push`. Note that a
+   * single Artifact ID can have multiple names, for example if two tags are
+   * applied to one image.
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param string
+   * Hash or checksum value of a binary, or Docker Registry 2.0 digest of a
+   * container.
+   *
+   * @param string $checksum
    */
   public function setChecksum($checksum)
   {
@@ -48,7 +63,10 @@ class Artifact extends \Google\Collection
     return $this->checksum;
   }
   /**
-   * @param string
+   * Artifact ID, if any; for container images, this will be a URL by digest
+   * like `gcr.io/projectID/imagename@sha256:123456`.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -62,7 +80,13 @@ class Artifact extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string[]
+   * Related artifact names. This may be the path to a binary or jar file, or in
+   * the case of a container build, the name used to push the container image to
+   * Google Container Registry, as presented to `docker push`. Note that a
+   * single Artifact ID can have multiple names, for example if two tags are
+   * applied to one image.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {
