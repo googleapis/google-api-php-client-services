@@ -20,52 +20,90 @@ namespace Google\Service\CloudOSLogin;
 class PosixAccount extends \Google\Model
 {
   /**
+   * The operating system type associated with the user account information is
+   * unspecified.
+   */
+  public const OPERATING_SYSTEM_TYPE_OPERATING_SYSTEM_TYPE_UNSPECIFIED = 'OPERATING_SYSTEM_TYPE_UNSPECIFIED';
+  /**
+   * Linux user account information.
+   */
+  public const OPERATING_SYSTEM_TYPE_LINUX = 'LINUX';
+  /**
+   * Windows user account information.
+   */
+  public const OPERATING_SYSTEM_TYPE_WINDOWS = 'WINDOWS';
+  /**
+   * Output only. A POSIX account identifier.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * The GECOS (user information) entry for this account.
+   *
    * @var string
    */
   public $gecos;
   /**
+   * The default group ID.
+   *
    * @var string
    */
   public $gid;
   /**
+   * The path to the home directory for this account.
+   *
    * @var string
    */
   public $homeDirectory;
   /**
+   * Output only. The canonical resource name.
+   *
    * @var string
    */
   public $name;
   /**
+   * The operating system type where this account applies.
+   *
    * @var string
    */
   public $operatingSystemType;
   /**
+   * Only one POSIX account can be marked as primary.
+   *
    * @var bool
    */
   public $primary;
   /**
+   * The path to the logic shell for this account.
+   *
    * @var string
    */
   public $shell;
   /**
+   * System identifier for which account the username or uid applies to. By
+   * default, the empty value is used.
+   *
    * @var string
    */
   public $systemId;
   /**
+   * The user ID.
+   *
    * @var string
    */
   public $uid;
   /**
+   * The username of the POSIX account.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * Output only. A POSIX account identifier.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -79,7 +117,9 @@ class PosixAccount extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * The GECOS (user information) entry for this account.
+   *
+   * @param string $gecos
    */
   public function setGecos($gecos)
   {
@@ -93,7 +133,9 @@ class PosixAccount extends \Google\Model
     return $this->gecos;
   }
   /**
-   * @param string
+   * The default group ID.
+   *
+   * @param string $gid
    */
   public function setGid($gid)
   {
@@ -107,7 +149,9 @@ class PosixAccount extends \Google\Model
     return $this->gid;
   }
   /**
-   * @param string
+   * The path to the home directory for this account.
+   *
+   * @param string $homeDirectory
    */
   public function setHomeDirectory($homeDirectory)
   {
@@ -121,7 +165,9 @@ class PosixAccount extends \Google\Model
     return $this->homeDirectory;
   }
   /**
-   * @param string
+   * Output only. The canonical resource name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -135,21 +181,27 @@ class PosixAccount extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The operating system type where this account applies.
+   *
+   * Accepted values: OPERATING_SYSTEM_TYPE_UNSPECIFIED, LINUX, WINDOWS
+   *
+   * @param self::OPERATING_SYSTEM_TYPE_* $operatingSystemType
    */
   public function setOperatingSystemType($operatingSystemType)
   {
     $this->operatingSystemType = $operatingSystemType;
   }
   /**
-   * @return string
+   * @return self::OPERATING_SYSTEM_TYPE_*
    */
   public function getOperatingSystemType()
   {
     return $this->operatingSystemType;
   }
   /**
-   * @param bool
+   * Only one POSIX account can be marked as primary.
+   *
+   * @param bool $primary
    */
   public function setPrimary($primary)
   {
@@ -163,7 +215,9 @@ class PosixAccount extends \Google\Model
     return $this->primary;
   }
   /**
-   * @param string
+   * The path to the logic shell for this account.
+   *
+   * @param string $shell
    */
   public function setShell($shell)
   {
@@ -177,7 +231,10 @@ class PosixAccount extends \Google\Model
     return $this->shell;
   }
   /**
-   * @param string
+   * System identifier for which account the username or uid applies to. By
+   * default, the empty value is used.
+   *
+   * @param string $systemId
    */
   public function setSystemId($systemId)
   {
@@ -191,7 +248,9 @@ class PosixAccount extends \Google\Model
     return $this->systemId;
   }
   /**
-   * @param string
+   * The user ID.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -205,7 +264,9 @@ class PosixAccount extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * The username of the POSIX account.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {
