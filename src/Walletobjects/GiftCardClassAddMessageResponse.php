@@ -23,7 +23,9 @@ class GiftCardClassAddMessageResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param GiftCardClass
+   * The updated GiftCardClass resource.
+   *
+   * @param GiftCardClass $resource
    */
   public function setResource(GiftCardClass $resource)
   {

@@ -27,7 +27,9 @@ class CardBarcodeSectionDetails extends \Google\Model
   protected $secondTopDetailDataType = '';
 
   /**
-   * @param BarcodeSectionDetail
+   * Optional information to display below the barcode.
+   *
+   * @param BarcodeSectionDetail $firstBottomDetail
    */
   public function setFirstBottomDetail(BarcodeSectionDetail $firstBottomDetail)
   {
@@ -41,7 +43,10 @@ class CardBarcodeSectionDetails extends \Google\Model
     return $this->firstBottomDetail;
   }
   /**
-   * @param BarcodeSectionDetail
+   * Optional information to display above the barcode. If `secondTopDetail` is
+   * defined, this will be displayed to the start side of this detail section.
+   *
+   * @param BarcodeSectionDetail $firstTopDetail
    */
   public function setFirstTopDetail(BarcodeSectionDetail $firstTopDetail)
   {
@@ -55,7 +60,11 @@ class CardBarcodeSectionDetails extends \Google\Model
     return $this->firstTopDetail;
   }
   /**
-   * @param BarcodeSectionDetail
+   * Optional second piece of information to display above the barcode. If
+   * `firstTopDetail` is defined, this will be displayed to the end side of this
+   * detail section.
+   *
+   * @param BarcodeSectionDetail $secondTopDetail
    */
   public function setSecondTopDetail(BarcodeSectionDetail $secondTopDetail)
   {

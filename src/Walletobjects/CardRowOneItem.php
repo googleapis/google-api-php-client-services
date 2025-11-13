@@ -23,7 +23,10 @@ class CardRowOneItem extends \Google\Model
   protected $itemDataType = '';
 
   /**
-   * @param TemplateItem
+   * The item to be displayed in the row. This item will be automatically
+   * centered.
+   *
+   * @param TemplateItem $item
    */
   public function setItem(TemplateItem $item)
   {

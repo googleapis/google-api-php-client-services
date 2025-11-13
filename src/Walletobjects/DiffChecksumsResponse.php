@@ -22,22 +22,34 @@ class DiffChecksumsResponse extends \Google\Model
   protected $checksumsLocationType = CompositeMedia::class;
   protected $checksumsLocationDataType = '';
   /**
+   * The chunk size of checksums. Must be a multiple of 256KB.
+   *
    * @var string
    */
   public $chunkSizeBytes;
   protected $objectLocationType = CompositeMedia::class;
   protected $objectLocationDataType = '';
   /**
+   * The total size of the server object.
+   *
    * @var string
    */
   public $objectSizeBytes;
   /**
+   * The object version of the object the checksums are being returned for.
+   *
    * @var string
    */
   public $objectVersion;
 
   /**
-   * @param CompositeMedia
+   * Exactly one of these fields must be populated. If checksums_location is
+   * filled, the server will return the corresponding contents to the user. If
+   * object_location is filled, the server will calculate the checksums based on
+   * the content there and return that to the user. For details on the format of
+   * the checksums, see http://go/scotty-diff-protocol.
+   *
+   * @param CompositeMedia $checksumsLocation
    */
   public function setChecksumsLocation(CompositeMedia $checksumsLocation)
   {
@@ -51,7 +63,9 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->checksumsLocation;
   }
   /**
-   * @param string
+   * The chunk size of checksums. Must be a multiple of 256KB.
+   *
+   * @param string $chunkSizeBytes
    */
   public function setChunkSizeBytes($chunkSizeBytes)
   {
@@ -65,7 +79,10 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->chunkSizeBytes;
   }
   /**
-   * @param CompositeMedia
+   * If set, calculate the checksums based on the contents and return them to
+   * the caller.
+   *
+   * @param CompositeMedia $objectLocation
    */
   public function setObjectLocation(CompositeMedia $objectLocation)
   {
@@ -79,7 +96,9 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->objectLocation;
   }
   /**
-   * @param string
+   * The total size of the server object.
+   *
+   * @param string $objectSizeBytes
    */
   public function setObjectSizeBytes($objectSizeBytes)
   {
@@ -93,7 +112,9 @@ class DiffChecksumsResponse extends \Google\Model
     return $this->objectSizeBytes;
   }
   /**
-   * @param string
+   * The object version of the object the checksums are being returned for.
+   *
+   * @param string $objectVersion
    */
   public function setObjectVersion($objectVersion)
   {

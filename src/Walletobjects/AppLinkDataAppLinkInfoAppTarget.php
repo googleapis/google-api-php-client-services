@@ -20,6 +20,8 @@ namespace Google\Service\Walletobjects;
 class AppLinkDataAppLinkInfoAppTarget extends \Google\Model
 {
   /**
+   * Package name for AppTarget. For example: com.google.android.gm
+   *
    * @var string
    */
   public $packageName;
@@ -27,7 +29,9 @@ class AppLinkDataAppLinkInfoAppTarget extends \Google\Model
   protected $targetUriDataType = '';
 
   /**
-   * @param string
+   * Package name for AppTarget. For example: com.google.android.gm
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {
@@ -41,7 +45,10 @@ class AppLinkDataAppLinkInfoAppTarget extends \Google\Model
     return $this->packageName;
   }
   /**
-   * @param Uri
+   * URI for AppTarget. The description on the URI must be set. Prefer setting
+   * package field instead, if this target is defined for your application.
+   *
+   * @param Uri $targetUri
    */
   public function setTargetUri(Uri $targetUri)
   {

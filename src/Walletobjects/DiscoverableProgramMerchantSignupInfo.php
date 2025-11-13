@@ -21,6 +21,10 @@ class DiscoverableProgramMerchantSignupInfo extends \Google\Collection
 {
   protected $collection_key = 'signupSharedDatas';
   /**
+   * User data that is sent in a POST request to the signup website URL. This
+   * information is encoded and then shared so that the merchant's website can
+   * prefill fields used to enroll the user for the discoverable program.
+   *
    * @var string[]
    */
   public $signupSharedDatas;
@@ -28,7 +32,11 @@ class DiscoverableProgramMerchantSignupInfo extends \Google\Collection
   protected $signupWebsiteDataType = '';
 
   /**
-   * @param string[]
+   * User data that is sent in a POST request to the signup website URL. This
+   * information is encoded and then shared so that the merchant's website can
+   * prefill fields used to enroll the user for the discoverable program.
+   *
+   * @param string[] $signupSharedDatas
    */
   public function setSignupSharedDatas($signupSharedDatas)
   {
@@ -42,7 +50,9 @@ class DiscoverableProgramMerchantSignupInfo extends \Google\Collection
     return $this->signupSharedDatas;
   }
   /**
-   * @param Uri
+   * The URL to direct the user to for the merchant's signup site.
+   *
+   * @param Uri $signupWebsite
    */
   public function setSignupWebsite(Uri $signupWebsite)
   {

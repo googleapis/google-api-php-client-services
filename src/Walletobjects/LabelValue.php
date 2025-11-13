@@ -20,6 +20,10 @@ namespace Google\Service\Walletobjects;
 class LabelValue extends \Google\Model
 {
   /**
+   * The label for a specific row and column. Recommended maximum is 15
+   * characters for a two-column layout and 30 characters for a one-column
+   * layout.
+   *
    * @var string
    */
   public $label;
@@ -28,12 +32,20 @@ class LabelValue extends \Google\Model
   protected $localizedValueType = LocalizedString::class;
   protected $localizedValueDataType = '';
   /**
+   * The value for a specific row and column. Recommended maximum is 15
+   * characters for a two-column layout and 30 characters for a one-column
+   * layout.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The label for a specific row and column. Recommended maximum is 15
+   * characters for a two-column layout and 30 characters for a one-column
+   * layout.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -47,7 +59,10 @@ class LabelValue extends \Google\Model
     return $this->label;
   }
   /**
-   * @param LocalizedString
+   * Translated strings for the label. Recommended maximum is 15 characters for
+   * a two-column layout and 30 characters for a one-column layout.
+   *
+   * @param LocalizedString $localizedLabel
    */
   public function setLocalizedLabel(LocalizedString $localizedLabel)
   {
@@ -61,7 +76,10 @@ class LabelValue extends \Google\Model
     return $this->localizedLabel;
   }
   /**
-   * @param LocalizedString
+   * Translated strings for the value. Recommended maximum is 15 characters for
+   * a two-column layout and 30 characters for a one-column layout.
+   *
+   * @param LocalizedString $localizedValue
    */
   public function setLocalizedValue(LocalizedString $localizedValue)
   {
@@ -75,7 +93,11 @@ class LabelValue extends \Google\Model
     return $this->localizedValue;
   }
   /**
-   * @param string
+   * The value for a specific row and column. Recommended maximum is 15
+   * characters for a two-column layout and 30 characters for a one-column
+   * layout.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

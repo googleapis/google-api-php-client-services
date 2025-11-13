@@ -20,28 +20,46 @@ namespace Google\Service\Walletobjects;
 class Blobstore2Info extends \Google\Model
 {
   /**
+   * The blob generation id.
+   *
    * @var string
    */
   public $blobGeneration;
   /**
+   * The blob id, e.g., /blobstore/prod/playground/scotty
+   *
    * @var string
    */
   public $blobId;
   /**
+   * Read handle passed from Bigstore -> Scotty for a GCS download. This is a
+   * signed, serialized blobstore2.ReadHandle proto which must never be set
+   * outside of Bigstore, and is not applicable to non-GCS media downloads.
+   *
    * @var string
    */
   public $downloadReadHandle;
   /**
+   * The blob read token. Needed to read blobs that have not been replicated.
+   * Might not be available until the final call.
+   *
    * @var string
    */
   public $readToken;
   /**
+   * Metadata passed from Blobstore -> Scotty for a new GCS upload. This is a
+   * signed, serialized blobstore2.BlobMetadataContainer proto which must never
+   * be consumed outside of Bigstore, and is not applicable to non-GCS media
+   * uploads.
+   *
    * @var string
    */
   public $uploadMetadataContainer;
 
   /**
-   * @param string
+   * The blob generation id.
+   *
+   * @param string $blobGeneration
    */
   public function setBlobGeneration($blobGeneration)
   {
@@ -55,7 +73,9 @@ class Blobstore2Info extends \Google\Model
     return $this->blobGeneration;
   }
   /**
-   * @param string
+   * The blob id, e.g., /blobstore/prod/playground/scotty
+   *
+   * @param string $blobId
    */
   public function setBlobId($blobId)
   {
@@ -69,7 +89,11 @@ class Blobstore2Info extends \Google\Model
     return $this->blobId;
   }
   /**
-   * @param string
+   * Read handle passed from Bigstore -> Scotty for a GCS download. This is a
+   * signed, serialized blobstore2.ReadHandle proto which must never be set
+   * outside of Bigstore, and is not applicable to non-GCS media downloads.
+   *
+   * @param string $downloadReadHandle
    */
   public function setDownloadReadHandle($downloadReadHandle)
   {
@@ -83,7 +107,10 @@ class Blobstore2Info extends \Google\Model
     return $this->downloadReadHandle;
   }
   /**
-   * @param string
+   * The blob read token. Needed to read blobs that have not been replicated.
+   * Might not be available until the final call.
+   *
+   * @param string $readToken
    */
   public function setReadToken($readToken)
   {
@@ -97,7 +124,12 @@ class Blobstore2Info extends \Google\Model
     return $this->readToken;
   }
   /**
-   * @param string
+   * Metadata passed from Blobstore -> Scotty for a new GCS upload. This is a
+   * signed, serialized blobstore2.BlobMetadataContainer proto which must never
+   * be consumed outside of Bigstore, and is not applicable to non-GCS media
+   * uploads.
+   *
+   * @param string $uploadMetadataContainer
    */
   public function setUploadMetadataContainer($uploadMetadataContainer)
   {

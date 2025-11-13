@@ -23,7 +23,9 @@ class LoyaltyClassAddMessageResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param LoyaltyClass
+   * The updated LoyaltyClass resource.
+   *
+   * @param LoyaltyClass $resource
    */
   public function setResource(LoyaltyClass $resource)
   {

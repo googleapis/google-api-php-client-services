@@ -20,18 +20,28 @@ namespace Google\Service\Walletobjects;
 class FrequentFlyerInfo extends \Google\Model
 {
   /**
+   * Frequent flyer number. Required for each nested object of kind
+   * `walletobjects#frequentFlyerInfo`.
+   *
    * @var string
    */
   public $frequentFlyerNumber;
   protected $frequentFlyerProgramNameType = LocalizedString::class;
   protected $frequentFlyerProgramNameDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"walletobjects#frequentFlyerInfo"`.
+   *
+   * @deprecated
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * Frequent flyer number. Required for each nested object of kind
+   * `walletobjects#frequentFlyerInfo`.
+   *
+   * @param string $frequentFlyerNumber
    */
   public function setFrequentFlyerNumber($frequentFlyerNumber)
   {
@@ -45,7 +55,9 @@ class FrequentFlyerInfo extends \Google\Model
     return $this->frequentFlyerNumber;
   }
   /**
-   * @param LocalizedString
+   * Frequent flyer program name. eg: "Lufthansa Miles & More"
+   *
+   * @param LocalizedString $frequentFlyerProgramName
    */
   public function setFrequentFlyerProgramName(LocalizedString $frequentFlyerProgramName)
   {
@@ -59,13 +71,18 @@ class FrequentFlyerInfo extends \Google\Model
     return $this->frequentFlyerProgramName;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"walletobjects#frequentFlyerInfo"`.
+   *
+   * @deprecated
+   * @param string $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getKind()

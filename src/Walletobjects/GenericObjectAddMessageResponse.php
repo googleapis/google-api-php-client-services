@@ -23,7 +23,9 @@ class GenericObjectAddMessageResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param GenericObject
+   * The updated GenericObject resource.
+   *
+   * @param GenericObject $resource
    */
   public function setResource(GenericObject $resource)
   {

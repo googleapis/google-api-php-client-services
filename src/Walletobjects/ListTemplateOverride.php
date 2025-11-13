@@ -27,7 +27,11 @@ class ListTemplateOverride extends \Google\Model
   protected $thirdRowOptionDataType = '';
 
   /**
-   * @param FirstRowOption
+   * Specifies from a predefined set of options or from a reference to the field
+   * what will be displayed in the first row. To set this override, set the
+   * FirstRowOption.fieldOption to the FieldSelector of your choice.
+   *
+   * @param FirstRowOption $firstRowOption
    */
   public function setFirstRowOption(FirstRowOption $firstRowOption)
   {
@@ -41,7 +45,13 @@ class ListTemplateOverride extends \Google\Model
     return $this->firstRowOption;
   }
   /**
-   * @param FieldSelector
+   * A reference to the field to be displayed in the second row. This option is
+   * only displayed if there are not multiple user objects in a group. If there
+   * is a group, the second row will always display a field shared by all
+   * objects. To set this override, please set secondRowOption to the
+   * FieldSelector of you choice.
+   *
+   * @param FieldSelector $secondRowOption
    */
   public function setSecondRowOption(FieldSelector $secondRowOption)
   {
@@ -55,13 +65,18 @@ class ListTemplateOverride extends \Google\Model
     return $this->secondRowOption;
   }
   /**
-   * @param FieldSelector
+   * An unused/deprecated field. Setting it will have no effect on what the user
+   * sees.
+   *
+   * @deprecated
+   * @param FieldSelector $thirdRowOption
    */
   public function setThirdRowOption(FieldSelector $thirdRowOption)
   {
     $this->thirdRowOption = $thirdRowOption;
   }
   /**
+   * @deprecated
    * @return FieldSelector
    */
   public function getThirdRowOption()

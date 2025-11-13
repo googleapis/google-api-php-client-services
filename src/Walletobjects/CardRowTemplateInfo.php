@@ -27,7 +27,10 @@ class CardRowTemplateInfo extends \Google\Model
   protected $twoItemsDataType = '';
 
   /**
-   * @param CardRowOneItem
+   * Template for a row containing one item. Exactly one of "one_item",
+   * "two_items", "three_items" must be set.
+   *
+   * @param CardRowOneItem $oneItem
    */
   public function setOneItem(CardRowOneItem $oneItem)
   {
@@ -41,7 +44,10 @@ class CardRowTemplateInfo extends \Google\Model
     return $this->oneItem;
   }
   /**
-   * @param CardRowThreeItems
+   * Template for a row containing three items. Exactly one of "one_item",
+   * "two_items", "three_items" must be set.
+   *
+   * @param CardRowThreeItems $threeItems
    */
   public function setThreeItems(CardRowThreeItems $threeItems)
   {
@@ -55,7 +61,10 @@ class CardRowTemplateInfo extends \Google\Model
     return $this->threeItems;
   }
   /**
-   * @param CardRowTwoItems
+   * Template for a row containing two items. Exactly one of "one_item",
+   * "two_items", "three_items" must be set.
+   *
+   * @param CardRowTwoItems $twoItems
    */
   public function setTwoItems(CardRowTwoItems $twoItems)
   {

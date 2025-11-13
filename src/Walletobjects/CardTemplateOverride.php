@@ -24,7 +24,10 @@ class CardTemplateOverride extends \Google\Collection
   protected $cardRowTemplateInfosDataType = 'array';
 
   /**
-   * @param CardRowTemplateInfo[]
+   * Template information for rows in the card view. At most three rows are
+   * allowed to be specified.
+   *
+   * @param CardRowTemplateInfo[] $cardRowTemplateInfos
    */
   public function setCardRowTemplateInfos($cardRowTemplateInfos)
   {

@@ -23,7 +23,7 @@ class AddMessageRequest extends \Google\Model
   protected $messageDataType = '';
 
   /**
-   * @param Message
+   * @param Message $message
    */
   public function setMessage(Message $message)
   {

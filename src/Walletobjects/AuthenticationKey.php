@@ -20,16 +20,25 @@ namespace Google\Service\Walletobjects;
 class AuthenticationKey extends \Google\Model
 {
   /**
+   * Available only to Smart Tap enabled partners. Contact support for
+   * additional guidance.
+   *
    * @var int
    */
   public $id;
   /**
+   * Available only to Smart Tap enabled partners. Contact support for
+   * additional guidance.
+   *
    * @var string
    */
   public $publicKeyPem;
 
   /**
-   * @param int
+   * Available only to Smart Tap enabled partners. Contact support for
+   * additional guidance.
+   *
+   * @param int $id
    */
   public function setId($id)
   {
@@ -43,7 +52,10 @@ class AuthenticationKey extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Available only to Smart Tap enabled partners. Contact support for
+   * additional guidance.
+   *
+   * @param string $publicKeyPem
    */
   public function setPublicKeyPem($publicKeyPem)
   {

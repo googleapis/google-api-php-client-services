@@ -26,7 +26,9 @@ class GiftCardClassListResponse extends \Google\Collection
   protected $resourcesDataType = 'array';
 
   /**
-   * @param Pagination
+   * Pagination of the response.
+   *
+   * @param Pagination $pagination
    */
   public function setPagination(Pagination $pagination)
   {
@@ -40,7 +42,9 @@ class GiftCardClassListResponse extends \Google\Collection
     return $this->pagination;
   }
   /**
-   * @param GiftCardClass[]
+   * Resources corresponding to the list request.
+   *
+   * @param GiftCardClass[] $resources
    */
   public function setResources($resources)
   {

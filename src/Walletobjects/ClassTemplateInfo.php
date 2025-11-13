@@ -29,7 +29,9 @@ class ClassTemplateInfo extends \Google\Model
   protected $listTemplateOverrideDataType = '';
 
   /**
-   * @param CardBarcodeSectionDetails
+   * Specifies extra information to be displayed above and below the barcode.
+   *
+   * @param CardBarcodeSectionDetails $cardBarcodeSectionDetails
    */
   public function setCardBarcodeSectionDetails(CardBarcodeSectionDetails $cardBarcodeSectionDetails)
   {
@@ -43,7 +45,9 @@ class ClassTemplateInfo extends \Google\Model
     return $this->cardBarcodeSectionDetails;
   }
   /**
-   * @param CardTemplateOverride
+   * Override for the card view.
+   *
+   * @param CardTemplateOverride $cardTemplateOverride
    */
   public function setCardTemplateOverride(CardTemplateOverride $cardTemplateOverride)
   {
@@ -57,7 +61,9 @@ class ClassTemplateInfo extends \Google\Model
     return $this->cardTemplateOverride;
   }
   /**
-   * @param DetailsTemplateOverride
+   * Override for the details view (beneath the card view).
+   *
+   * @param DetailsTemplateOverride $detailsTemplateOverride
    */
   public function setDetailsTemplateOverride(DetailsTemplateOverride $detailsTemplateOverride)
   {
@@ -71,7 +77,9 @@ class ClassTemplateInfo extends \Google\Model
     return $this->detailsTemplateOverride;
   }
   /**
-   * @param ListTemplateOverride
+   * Override for the passes list view.
+   *
+   * @param ListTemplateOverride $listTemplateOverride
    */
   public function setListTemplateOverride(ListTemplateOverride $listTemplateOverride)
   {

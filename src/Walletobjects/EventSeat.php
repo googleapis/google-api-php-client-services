@@ -22,6 +22,10 @@ class EventSeat extends \Google\Model
   protected $gateType = LocalizedString::class;
   protected $gateDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"walletobjects#eventSeat"`.
+   *
+   * @deprecated
    * @var string
    */
   public $kind;
@@ -33,7 +37,11 @@ class EventSeat extends \Google\Model
   protected $sectionDataType = '';
 
   /**
-   * @param LocalizedString
+   * The gate the ticket holder should enter to get to their seat, such as "A"
+   * or "West". This field is localizable so you may translate words or use
+   * different alphabets for the characters in an identifier.
+   *
+   * @param LocalizedString $gate
    */
   public function setGate(LocalizedString $gate)
   {
@@ -47,13 +55,18 @@ class EventSeat extends \Google\Model
     return $this->gate;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"walletobjects#eventSeat"`.
+   *
+   * @deprecated
+   * @param string $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getKind()
@@ -61,7 +74,11 @@ class EventSeat extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param LocalizedString
+   * The row of the seat, such as "1", E", "BB", or "A5". This field is
+   * localizable so you may translate words or use different alphabets for the
+   * characters in an identifier.
+   *
+   * @param LocalizedString $row
    */
   public function setRow(LocalizedString $row)
   {
@@ -75,7 +92,11 @@ class EventSeat extends \Google\Model
     return $this->row;
   }
   /**
-   * @param LocalizedString
+   * The seat number, such as "1", "2", "3", or any other seat identifier. This
+   * field is localizable so you may translate words or use different alphabets
+   * for the characters in an identifier.
+   *
+   * @param LocalizedString $seat
    */
   public function setSeat(LocalizedString $seat)
   {
@@ -89,7 +110,11 @@ class EventSeat extends \Google\Model
     return $this->seat;
   }
   /**
-   * @param LocalizedString
+   * The section of the seat, such as "121". This field is localizable so you
+   * may translate words or use different alphabets for the characters in an
+   * identifier.
+   *
+   * @param LocalizedString $section
    */
   public function setSection(LocalizedString $section)
   {

@@ -19,14 +19,26 @@ namespace Google\Service\Walletobjects;
 
 class LoyaltyPointsBalance extends \Google\Model
 {
+  /**
+   * The double form of a balance. Only one of these subtypes (string, int,
+   * double, money) should be populated.
+   *
+   * @var 
+   */
   public $double;
   /**
+   * The integer form of a balance. Only one of these subtypes (string, int,
+   * double, money) should be populated.
+   *
    * @var int
    */
   public $int;
   protected $moneyType = Money::class;
   protected $moneyDataType = '';
   /**
+   * The string form of a balance. Only one of these subtypes (string, int,
+   * double, money) should be populated.
+   *
    * @var string
    */
   public $string;
@@ -40,7 +52,10 @@ class LoyaltyPointsBalance extends \Google\Model
     return $this->double;
   }
   /**
-   * @param int
+   * The integer form of a balance. Only one of these subtypes (string, int,
+   * double, money) should be populated.
+   *
+   * @param int $int
    */
   public function setInt($int)
   {
@@ -54,7 +69,10 @@ class LoyaltyPointsBalance extends \Google\Model
     return $this->int;
   }
   /**
-   * @param Money
+   * The money form of a balance. Only one of these subtypes (string, int,
+   * double, money) should be populated.
+   *
+   * @param Money $money
    */
   public function setMoney(Money $money)
   {
@@ -68,7 +86,10 @@ class LoyaltyPointsBalance extends \Google\Model
     return $this->money;
   }
   /**
-   * @param string
+   * The string form of a balance. Only one of these subtypes (string, int,
+   * double, money) should be populated.
+   *
+   * @param string $string
    */
   public function setString($string)
   {

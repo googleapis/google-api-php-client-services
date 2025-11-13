@@ -24,7 +24,9 @@ class DetailsTemplateOverride extends \Google\Collection
   protected $detailsItemInfosDataType = 'array';
 
   /**
-   * @param DetailsItemInfo[]
+   * Information for the "nth" item displayed in the details list.
+   *
+   * @param DetailsItemInfo[] $detailsItemInfos
    */
   public function setDetailsItemInfos($detailsItemInfos)
   {

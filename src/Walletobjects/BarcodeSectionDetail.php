@@ -23,7 +23,9 @@ class BarcodeSectionDetail extends \Google\Model
   protected $fieldSelectorDataType = '';
 
   /**
-   * @param FieldSelector
+   * A reference to an existing text-based or image field to display.
+   *
+   * @param FieldSelector $fieldSelector
    */
   public function setFieldSelector(FieldSelector $fieldSelector)
   {

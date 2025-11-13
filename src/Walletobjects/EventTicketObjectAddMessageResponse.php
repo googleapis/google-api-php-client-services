@@ -23,7 +23,9 @@ class EventTicketObjectAddMessageResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param EventTicketObject
+   * The updated EventTicketObject resource.
+   *
+   * @param EventTicketObject $resource
    */
   public function setResource(EventTicketObject $resource)
   {

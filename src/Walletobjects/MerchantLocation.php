@@ -19,7 +19,19 @@ namespace Google\Service\Walletobjects;
 
 class MerchantLocation extends \Google\Model
 {
+  /**
+   * The latitude specified as any value in the range of -90.0 through +90.0,
+   * both inclusive. Values outside these bounds will be rejected.
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * The longitude specified in the range -180.0 through +180.0, both inclusive.
+   * Values outside these bounds will be rejected.
+   *
+   * @var 
+   */
   public $longitude;
 
   public function setLatitude($latitude)

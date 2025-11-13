@@ -19,17 +19,53 @@ namespace Google\Service\Walletobjects;
 
 class DiscoverableProgram extends \Google\Model
 {
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Visible only to testers that have access to issuer account.
+   */
+  public const STATE_TRUSTED_TESTERS = 'TRUSTED_TESTERS';
+  /**
+   * Legacy alias for `TRUSTED_TESTERS`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const STATE_trustedTesters = 'trustedTesters';
+  /**
+   * Visible to all.
+   */
+  public const STATE_LIVE = 'LIVE';
+  /**
+   * Legacy alias for `LIVE`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const STATE_live = 'live';
+  /**
+   * Not visible.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * Legacy alias for `DISABLED`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const STATE_disabled = 'disabled';
   protected $merchantSigninInfoType = DiscoverableProgramMerchantSigninInfo::class;
   protected $merchantSigninInfoDataType = '';
   protected $merchantSignupInfoType = DiscoverableProgramMerchantSignupInfo::class;
   protected $merchantSignupInfoDataType = '';
   /**
+   * Visibility state of the discoverable program.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param DiscoverableProgramMerchantSigninInfo
+   * Information about the ability to signin and add a valuable for this program
+   * through a merchant site. Used when MERCHANT_HOSTED_SIGNIN is enabled.
+   *
+   * @param DiscoverableProgramMerchantSigninInfo $merchantSigninInfo
    */
   public function setMerchantSigninInfo(DiscoverableProgramMerchantSigninInfo $merchantSigninInfo)
   {
@@ -43,7 +79,10 @@ class DiscoverableProgram extends \Google\Model
     return $this->merchantSigninInfo;
   }
   /**
-   * @param DiscoverableProgramMerchantSignupInfo
+   * Information about the ability to signup and add a valuable for this program
+   * through a merchant site. Used when MERCHANT_HOSTED_SIGNUP is enabled.
+   *
+   * @param DiscoverableProgramMerchantSignupInfo $merchantSignupInfo
    */
   public function setMerchantSignupInfo(DiscoverableProgramMerchantSignupInfo $merchantSignupInfo)
   {
@@ -57,14 +96,19 @@ class DiscoverableProgram extends \Google\Model
     return $this->merchantSignupInfo;
   }
   /**
-   * @param string
+   * Visibility state of the discoverable program.
+   *
+   * Accepted values: STATE_UNSPECIFIED, TRUSTED_TESTERS, trustedTesters, LIVE,
+   * live, DISABLED, disabled
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

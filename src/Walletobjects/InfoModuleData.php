@@ -23,12 +23,16 @@ class InfoModuleData extends \Google\Collection
   protected $labelValueRowsType = LabelValueRow::class;
   protected $labelValueRowsDataType = 'array';
   /**
+   * @deprecated
    * @var bool
    */
   public $showLastUpdateTime;
 
   /**
-   * @param LabelValueRow[]
+   * A list of collections of labels and values. These will be displayed one
+   * after the other in a singular column.
+   *
+   * @param LabelValueRow[] $labelValueRows
    */
   public function setLabelValueRows($labelValueRows)
   {
@@ -42,13 +46,15 @@ class InfoModuleData extends \Google\Collection
     return $this->labelValueRows;
   }
   /**
-   * @param bool
+   * @deprecated
+   * @param bool $showLastUpdateTime
    */
   public function setShowLastUpdateTime($showLastUpdateTime)
   {
     $this->showLastUpdateTime = $showLastUpdateTime;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getShowLastUpdateTime()

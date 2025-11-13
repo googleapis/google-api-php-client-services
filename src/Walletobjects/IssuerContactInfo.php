@@ -21,24 +21,34 @@ class IssuerContactInfo extends \Google\Collection
 {
   protected $collection_key = 'alertsEmails';
   /**
+   * Email addresses which will receive alerts.
+   *
    * @var string[]
    */
   public $alertsEmails;
   /**
+   * The primary contact email address.
+   *
    * @var string
    */
   public $email;
   /**
+   * The primary contact name.
+   *
    * @var string
    */
   public $name;
   /**
+   * The primary contact phone number.
+   *
    * @var string
    */
   public $phone;
 
   /**
-   * @param string[]
+   * Email addresses which will receive alerts.
+   *
+   * @param string[] $alertsEmails
    */
   public function setAlertsEmails($alertsEmails)
   {
@@ -52,7 +62,9 @@ class IssuerContactInfo extends \Google\Collection
     return $this->alertsEmails;
   }
   /**
-   * @param string
+   * The primary contact email address.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -66,7 +78,9 @@ class IssuerContactInfo extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param string
+   * The primary contact name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +94,9 @@ class IssuerContactInfo extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The primary contact phone number.
+   *
+   * @param string $phone
    */
   public function setPhone($phone)
   {

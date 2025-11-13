@@ -23,7 +23,9 @@ class FlightClassAddMessageResponse extends \Google\Model
   protected $resourceDataType = '';
 
   /**
-   * @param FlightClass
+   * The updated FlightClass resource.
+   *
+   * @param FlightClass $resource
    */
   public function setResource(FlightClass $resource)
   {

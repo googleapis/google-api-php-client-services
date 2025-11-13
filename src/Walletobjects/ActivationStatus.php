@@ -19,20 +19,41 @@ namespace Google\Service\Walletobjects;
 
 class ActivationStatus extends \Google\Model
 {
+  public const STATE_UNKNOWN_STATE = 'UNKNOWN_STATE';
+  /**
+   * Not-Activated, this is the default status
+   */
+  public const STATE_NOT_ACTIVATED = 'NOT_ACTIVATED';
+  /**
+   * Legacy alias for `NOT_ACTIVATED`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const STATE_not_activated = 'not_activated';
+  /**
+   * Activated
+   */
+  public const STATE_ACTIVATED = 'ACTIVATED';
+  /**
+   * Legacy alias for `ACTIVATED`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const STATE_activated = 'activated';
   /**
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
