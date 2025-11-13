@@ -19,31 +19,64 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class ProgrammaticGuaranteedTerms extends \Google\Model
 {
+  /**
+   * An unspecified reservation type.
+   */
+  public const RESERVATION_TYPE_RESERVATION_TYPE_UNSPECIFIED = 'RESERVATION_TYPE_UNSPECIFIED';
+  /**
+   * Non-sponsorship deal.
+   */
+  public const RESERVATION_TYPE_STANDARD = 'STANDARD';
+  /**
+   * Sponsorship deals don't have impression goal (guaranteed_looks) and they
+   * are served based on the flight dates. For CPM Sponsorship deals,
+   * impression_cap is the lifetime impression limit.
+   */
+  public const RESERVATION_TYPE_SPONSORSHIP = 'SPONSORSHIP';
   protected $fixedPriceType = Price::class;
   protected $fixedPriceDataType = '';
   /**
+   * Count of guaranteed looks. For CPD deals, buyer changes to guaranteed_looks
+   * will be ignored.
+   *
    * @var string
    */
   public $guaranteedLooks;
   /**
+   * The lifetime impression cap for CPM Sponsorship deals. Deal will stop
+   * serving when cap is reached.
+   *
    * @var string
    */
   public $impressionCap;
   /**
+   * Daily minimum looks for CPD deal types. For CPD deals, buyer should
+   * negotiate on this field instead of guaranteed_looks.
+   *
    * @var string
    */
   public $minimumDailyLooks;
   /**
+   * For sponsorship deals, this is the percentage of the seller's eligible
+   * impressions that the deal will serve until the cap is reached. Valid value
+   * is within range 0~100.
+   *
    * @var string
    */
   public $percentShareOfVoice;
   /**
+   * The reservation type for a Programmatic Guaranteed deal. This indicates
+   * whether the number of impressions is fixed, or a percent of available
+   * impressions. If not specified, the default reservation type is STANDARD.
+   *
    * @var string
    */
   public $reservationType;
 
   /**
-   * @param Price
+   * Fixed price for the deal.
+   *
+   * @param Price $fixedPrice
    */
   public function setFixedPrice(Price $fixedPrice)
   {
@@ -57,7 +90,10 @@ class ProgrammaticGuaranteedTerms extends \Google\Model
     return $this->fixedPrice;
   }
   /**
-   * @param string
+   * Count of guaranteed looks. For CPD deals, buyer changes to guaranteed_looks
+   * will be ignored.
+   *
+   * @param string $guaranteedLooks
    */
   public function setGuaranteedLooks($guaranteedLooks)
   {
@@ -71,7 +107,10 @@ class ProgrammaticGuaranteedTerms extends \Google\Model
     return $this->guaranteedLooks;
   }
   /**
-   * @param string
+   * The lifetime impression cap for CPM Sponsorship deals. Deal will stop
+   * serving when cap is reached.
+   *
+   * @param string $impressionCap
    */
   public function setImpressionCap($impressionCap)
   {
@@ -85,7 +124,10 @@ class ProgrammaticGuaranteedTerms extends \Google\Model
     return $this->impressionCap;
   }
   /**
-   * @param string
+   * Daily minimum looks for CPD deal types. For CPD deals, buyer should
+   * negotiate on this field instead of guaranteed_looks.
+   *
+   * @param string $minimumDailyLooks
    */
   public function setMinimumDailyLooks($minimumDailyLooks)
   {
@@ -99,7 +141,11 @@ class ProgrammaticGuaranteedTerms extends \Google\Model
     return $this->minimumDailyLooks;
   }
   /**
-   * @param string
+   * For sponsorship deals, this is the percentage of the seller's eligible
+   * impressions that the deal will serve until the cap is reached. Valid value
+   * is within range 0~100.
+   *
+   * @param string $percentShareOfVoice
    */
   public function setPercentShareOfVoice($percentShareOfVoice)
   {
@@ -113,14 +159,20 @@ class ProgrammaticGuaranteedTerms extends \Google\Model
     return $this->percentShareOfVoice;
   }
   /**
-   * @param string
+   * The reservation type for a Programmatic Guaranteed deal. This indicates
+   * whether the number of impressions is fixed, or a percent of available
+   * impressions. If not specified, the default reservation type is STANDARD.
+   *
+   * Accepted values: RESERVATION_TYPE_UNSPECIFIED, STANDARD, SPONSORSHIP
+   *
+   * @param self::RESERVATION_TYPE_* $reservationType
    */
   public function setReservationType($reservationType)
   {
     $this->reservationType = $reservationType;
   }
   /**
-   * @return string
+   * @return self::RESERVATION_TYPE_*
    */
   public function getReservationType()
   {

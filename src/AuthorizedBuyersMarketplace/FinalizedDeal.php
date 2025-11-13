@@ -19,19 +19,47 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class FinalizedDeal extends \Google\Model
 {
+  /**
+   * Unspecified.
+   */
+  public const DEAL_SERVING_STATUS_DEAL_SERVING_STATUS_UNSPECIFIED = 'DEAL_SERVING_STATUS_UNSPECIFIED';
+  /**
+   * The deal is actively serving or ready to serve when the start date is
+   * reached.
+   */
+  public const DEAL_SERVING_STATUS_ACTIVE = 'ACTIVE';
+  /**
+   * The deal serving has ended.
+   */
+  public const DEAL_SERVING_STATUS_ENDED = 'ENDED';
+  /**
+   * The deal serving is paused by buyer.
+   */
+  public const DEAL_SERVING_STATUS_PAUSED_BY_BUYER = 'PAUSED_BY_BUYER';
+  /**
+   * The deal serving is paused by seller.
+   */
+  public const DEAL_SERVING_STATUS_PAUSED_BY_SELLER = 'PAUSED_BY_SELLER';
   protected $dealType = Deal::class;
   protected $dealDataType = '';
   protected $dealPausingInfoType = DealPausingInfo::class;
   protected $dealPausingInfoDataType = '';
   /**
+   * Serving status of the deal.
+   *
    * @var string
    */
   public $dealServingStatus;
   /**
+   * The resource name of the finalized deal. Format:
+   * `buyers/{accountId}/finalizedDeals/{finalizedDealId}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Whether the Programmatic Guaranteed deal is ready for serving.
+   *
    * @var bool
    */
   public $readyToServe;
@@ -39,7 +67,10 @@ class FinalizedDeal extends \Google\Model
   protected $rtbMetricsDataType = '';
 
   /**
-   * @param Deal
+   * A copy of the Deal made upon finalization. During renegotiation, this will
+   * reflect the last finalized deal before renegotiation was initiated.
+   *
+   * @param Deal $deal
    */
   public function setDeal(Deal $deal)
   {
@@ -53,7 +84,9 @@ class FinalizedDeal extends \Google\Model
     return $this->deal;
   }
   /**
-   * @param DealPausingInfo
+   * Information related to deal pausing for the deal.
+   *
+   * @param DealPausingInfo $dealPausingInfo
    */
   public function setDealPausingInfo(DealPausingInfo $dealPausingInfo)
   {
@@ -67,21 +100,29 @@ class FinalizedDeal extends \Google\Model
     return $this->dealPausingInfo;
   }
   /**
-   * @param string
+   * Serving status of the deal.
+   *
+   * Accepted values: DEAL_SERVING_STATUS_UNSPECIFIED, ACTIVE, ENDED,
+   * PAUSED_BY_BUYER, PAUSED_BY_SELLER
+   *
+   * @param self::DEAL_SERVING_STATUS_* $dealServingStatus
    */
   public function setDealServingStatus($dealServingStatus)
   {
     $this->dealServingStatus = $dealServingStatus;
   }
   /**
-   * @return string
+   * @return self::DEAL_SERVING_STATUS_*
    */
   public function getDealServingStatus()
   {
     return $this->dealServingStatus;
   }
   /**
-   * @param string
+   * The resource name of the finalized deal. Format:
+   * `buyers/{accountId}/finalizedDeals/{finalizedDealId}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,7 +136,9 @@ class FinalizedDeal extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Whether the Programmatic Guaranteed deal is ready for serving.
+   *
+   * @param bool $readyToServe
    */
   public function setReadyToServe($readyToServe)
   {
@@ -109,7 +152,9 @@ class FinalizedDeal extends \Google\Model
     return $this->readyToServe;
   }
   /**
-   * @param RtbMetrics
+   * Real-time bidding metrics for this deal.
+   *
+   * @param RtbMetrics $rtbMetrics
    */
   public function setRtbMetrics(RtbMetrics $rtbMetrics)
   {

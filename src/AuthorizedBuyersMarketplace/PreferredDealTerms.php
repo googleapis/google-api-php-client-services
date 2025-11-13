@@ -23,7 +23,9 @@ class PreferredDealTerms extends \Google\Model
   protected $fixedPriceDataType = '';
 
   /**
-   * @param Price
+   * Fixed price for the deal.
+   *
+   * @param Price $fixedPrice
    */
   public function setFixedPrice(Price $fixedPrice)
   {

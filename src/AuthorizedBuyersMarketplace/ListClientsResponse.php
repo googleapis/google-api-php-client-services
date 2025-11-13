@@ -23,12 +23,18 @@ class ListClientsResponse extends \Google\Collection
   protected $clientsType = Client::class;
   protected $clientsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListClientsRequest.pageToken field in the subsequent call to the list
+   * method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Client[]
+   * The returned list of clients.
+   *
+   * @param Client[] $clients
    */
   public function setClients($clients)
   {
@@ -42,7 +48,11 @@ class ListClientsResponse extends \Google\Collection
     return $this->clients;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * ListClientsRequest.pageToken field in the subsequent call to the list
+   * method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

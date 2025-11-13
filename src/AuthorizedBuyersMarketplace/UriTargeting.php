@@ -21,16 +21,22 @@ class UriTargeting extends \Google\Collection
 {
   protected $collection_key = 'targetedUris';
   /**
+   * A list of URLs to be excluded.
+   *
    * @var string[]
    */
   public $excludedUris;
   /**
+   * A list of URLs to be included.
+   *
    * @var string[]
    */
   public $targetedUris;
 
   /**
-   * @param string[]
+   * A list of URLs to be excluded.
+   *
+   * @param string[] $excludedUris
    */
   public function setExcludedUris($excludedUris)
   {
@@ -44,7 +50,9 @@ class UriTargeting extends \Google\Collection
     return $this->excludedUris;
   }
   /**
-   * @param string[]
+   * A list of URLs to be included.
+   *
+   * @param string[] $targetedUris
    */
   public function setTargetedUris($targetedUris)
   {

@@ -24,7 +24,9 @@ class BatchUpdateDealsResponse extends \Google\Collection
   protected $dealsDataType = 'array';
 
   /**
-   * @param Deal[]
+   * Deals updated.
+   *
+   * @param Deal[] $deals
    */
   public function setDeals($deals)
   {

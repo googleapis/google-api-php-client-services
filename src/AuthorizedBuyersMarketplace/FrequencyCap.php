@@ -20,20 +20,69 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class FrequencyCap extends \Google\Model
 {
   /**
+   * A placeholder for an undefined time unit type. This just indicates the
+   * variable with this value hasn't been initialized.
+   */
+  public const TIME_UNIT_TYPE_TIME_UNIT_TYPE_UNSPECIFIED = 'TIME_UNIT_TYPE_UNSPECIFIED';
+  /**
+   * Minute unit.
+   */
+  public const TIME_UNIT_TYPE_MINUTE = 'MINUTE';
+  /**
+   * Hour unit.
+   */
+  public const TIME_UNIT_TYPE_HOUR = 'HOUR';
+  /**
+   * Day unit.
+   */
+  public const TIME_UNIT_TYPE_DAY = 'DAY';
+  /**
+   * Week unit.
+   */
+  public const TIME_UNIT_TYPE_WEEK = 'WEEK';
+  /**
+   * Month unit.
+   */
+  public const TIME_UNIT_TYPE_MONTH = 'MONTH';
+  /**
+   * Lifecycle/Lifetime unit.
+   */
+  public const TIME_UNIT_TYPE_LIFETIME = 'LIFETIME';
+  /**
+   * Pod unit.
+   */
+  public const TIME_UNIT_TYPE_POD = 'POD';
+  /**
+   * Stream unit.
+   */
+  public const TIME_UNIT_TYPE_STREAM = 'STREAM';
+  /**
+   * The maximum number of impressions that can be served to a user within the
+   * specified time period.
+   *
    * @var int
    */
   public $maxImpressions;
   /**
+   * The time unit. Along with num_time_units defines the amount of time over
+   * which impressions per user are counted and capped.
+   *
    * @var string
    */
   public $timeUnitType;
   /**
+   * The amount of time, in the units specified by time_unit_type. Defines the
+   * amount of time over which impressions per user are counted and capped.
+   *
    * @var int
    */
   public $timeUnitsCount;
 
   /**
-   * @param int
+   * The maximum number of impressions that can be served to a user within the
+   * specified time period.
+   *
+   * @param int $maxImpressions
    */
   public function setMaxImpressions($maxImpressions)
   {
@@ -47,21 +96,30 @@ class FrequencyCap extends \Google\Model
     return $this->maxImpressions;
   }
   /**
-   * @param string
+   * The time unit. Along with num_time_units defines the amount of time over
+   * which impressions per user are counted and capped.
+   *
+   * Accepted values: TIME_UNIT_TYPE_UNSPECIFIED, MINUTE, HOUR, DAY, WEEK,
+   * MONTH, LIFETIME, POD, STREAM
+   *
+   * @param self::TIME_UNIT_TYPE_* $timeUnitType
    */
   public function setTimeUnitType($timeUnitType)
   {
     $this->timeUnitType = $timeUnitType;
   }
   /**
-   * @return string
+   * @return self::TIME_UNIT_TYPE_*
    */
   public function getTimeUnitType()
   {
     return $this->timeUnitType;
   }
   /**
-   * @param int
+   * The amount of time, in the units specified by time_unit_type. Defines the
+   * amount of time over which impressions per user are counted and capped.
+   *
+   * @param int $timeUnitsCount
    */
   public function setTimeUnitsCount($timeUnitsCount)
   {

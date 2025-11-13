@@ -21,12 +21,20 @@ class UnsubscribeClientsRequest extends \Google\Collection
 {
   protected $collection_key = 'clients';
   /**
+   * Optional. A list of client buyers to unsubscribe from the auction package,
+   * with client buyer in the format
+   * `buyers/{accountId}/clients/{clientAccountId}`.
+   *
    * @var string[]
    */
   public $clients;
 
   /**
-   * @param string[]
+   * Optional. A list of client buyers to unsubscribe from the auction package,
+   * with client buyer in the format
+   * `buyers/{accountId}/clients/{clientAccountId}`.
+   *
+   * @param string[] $clients
    */
   public function setClients($clients)
   {

@@ -23,20 +23,34 @@ class SendRfpRequest extends \Google\Collection
   protected $buyerContactsType = Contact::class;
   protected $buyerContactsDataType = 'array';
   /**
+   * If the current buyer is sending the RFP on behalf of its client, use this
+   * field to specify the name of the client in the format:
+   * `buyers/{accountId}/clients/{clientAccountid}`.
+   *
    * @var string
    */
   public $client;
   /**
+   * Required. The display name of the proposal being created by this RFP.
+   *
    * @var string
    */
   public $displayName;
   protected $estimatedGrossSpendType = Money::class;
   protected $estimatedGrossSpendDataType = '';
   /**
+   * Required. Proposed flight end time of the RFP. A timestamp in RFC3339 UTC
+   * "Zulu" format. Note that the specified value will be truncated to a
+   * granularity of one second.
+   *
    * @var string
    */
   public $flightEndTime;
   /**
+   * Required. Proposed flight start time of the RFP. A timestamp in RFC3339 UTC
+   * "Zulu" format. Note that the specified value will be truncated to a
+   * granularity of one second.
+   *
    * @var string
    */
   public $flightStartTime;
@@ -45,6 +59,8 @@ class SendRfpRequest extends \Google\Collection
   protected $inventorySizeTargetingType = InventorySizeTargeting::class;
   protected $inventorySizeTargetingDataType = '';
   /**
+   * A message that is sent to the publisher. Maximum length is 1024 characters.
+   *
    * @var string
    */
   public $note;
@@ -53,12 +69,17 @@ class SendRfpRequest extends \Google\Collection
   protected $programmaticGuaranteedTermsType = ProgrammaticGuaranteedTerms::class;
   protected $programmaticGuaranteedTermsDataType = '';
   /**
+   * Required. The profile of the publisher who will receive this RFP in the
+   * format: `buyers/{accountId}/publisherProfiles/{publisherProfileId}`.
+   *
    * @var string
    */
   public $publisherProfile;
 
   /**
-   * @param Contact[]
+   * Contact information for the buyer.
+   *
+   * @param Contact[] $buyerContacts
    */
   public function setBuyerContacts($buyerContacts)
   {
@@ -72,7 +93,11 @@ class SendRfpRequest extends \Google\Collection
     return $this->buyerContacts;
   }
   /**
-   * @param string
+   * If the current buyer is sending the RFP on behalf of its client, use this
+   * field to specify the name of the client in the format:
+   * `buyers/{accountId}/clients/{clientAccountid}`.
+   *
+   * @param string $client
    */
   public function setClient($client)
   {
@@ -86,7 +111,9 @@ class SendRfpRequest extends \Google\Collection
     return $this->client;
   }
   /**
-   * @param string
+   * Required. The display name of the proposal being created by this RFP.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -100,7 +127,11 @@ class SendRfpRequest extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param Money
+   * Specified by buyers in request for proposal (RFP) to notify publisher the
+   * total estimated spend for the proposal. Publishers will receive this
+   * information and send back proposed deals accordingly.
+   *
+   * @param Money $estimatedGrossSpend
    */
   public function setEstimatedGrossSpend(Money $estimatedGrossSpend)
   {
@@ -114,7 +145,11 @@ class SendRfpRequest extends \Google\Collection
     return $this->estimatedGrossSpend;
   }
   /**
-   * @param string
+   * Required. Proposed flight end time of the RFP. A timestamp in RFC3339 UTC
+   * "Zulu" format. Note that the specified value will be truncated to a
+   * granularity of one second.
+   *
+   * @param string $flightEndTime
    */
   public function setFlightEndTime($flightEndTime)
   {
@@ -128,7 +163,11 @@ class SendRfpRequest extends \Google\Collection
     return $this->flightEndTime;
   }
   /**
-   * @param string
+   * Required. Proposed flight start time of the RFP. A timestamp in RFC3339 UTC
+   * "Zulu" format. Note that the specified value will be truncated to a
+   * granularity of one second.
+   *
+   * @param string $flightStartTime
    */
   public function setFlightStartTime($flightStartTime)
   {
@@ -142,7 +181,9 @@ class SendRfpRequest extends \Google\Collection
     return $this->flightStartTime;
   }
   /**
-   * @param CriteriaTargeting
+   * Geo criteria IDs to be targeted. Refer to Geo tables.
+   *
+   * @param CriteriaTargeting $geoTargeting
    */
   public function setGeoTargeting(CriteriaTargeting $geoTargeting)
   {
@@ -156,7 +197,10 @@ class SendRfpRequest extends \Google\Collection
     return $this->geoTargeting;
   }
   /**
-   * @param InventorySizeTargeting
+   * Inventory sizes to be targeted. Only PIXEL inventory size type is
+   * supported.
+   *
+   * @param InventorySizeTargeting $inventorySizeTargeting
    */
   public function setInventorySizeTargeting(InventorySizeTargeting $inventorySizeTargeting)
   {
@@ -170,7 +214,9 @@ class SendRfpRequest extends \Google\Collection
     return $this->inventorySizeTargeting;
   }
   /**
-   * @param string
+   * A message that is sent to the publisher. Maximum length is 1024 characters.
+   *
+   * @param string $note
    */
   public function setNote($note)
   {
@@ -184,7 +230,9 @@ class SendRfpRequest extends \Google\Collection
     return $this->note;
   }
   /**
-   * @param PreferredDealTerms
+   * The terms for preferred deals.
+   *
+   * @param PreferredDealTerms $preferredDealTerms
    */
   public function setPreferredDealTerms(PreferredDealTerms $preferredDealTerms)
   {
@@ -198,7 +246,9 @@ class SendRfpRequest extends \Google\Collection
     return $this->preferredDealTerms;
   }
   /**
-   * @param ProgrammaticGuaranteedTerms
+   * The terms for programmatic guaranteed deals.
+   *
+   * @param ProgrammaticGuaranteedTerms $programmaticGuaranteedTerms
    */
   public function setProgrammaticGuaranteedTerms(ProgrammaticGuaranteedTerms $programmaticGuaranteedTerms)
   {
@@ -212,7 +262,10 @@ class SendRfpRequest extends \Google\Collection
     return $this->programmaticGuaranteedTerms;
   }
   /**
-   * @param string
+   * Required. The profile of the publisher who will receive this RFP in the
+   * format: `buyers/{accountId}/publisherProfiles/{publisherProfileId}`.
+   *
+   * @param string $publisherProfile
    */
   public function setPublisherProfile($publisherProfile)
   {

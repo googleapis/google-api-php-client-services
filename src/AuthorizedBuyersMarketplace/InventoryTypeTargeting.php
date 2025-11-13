@@ -21,12 +21,16 @@ class InventoryTypeTargeting extends \Google\Collection
 {
   protected $collection_key = 'inventoryTypes';
   /**
+   * The list of targeted inventory types for the bid request.
+   *
    * @var string[]
    */
   public $inventoryTypes;
 
   /**
-   * @param string[]
+   * The list of targeted inventory types for the bid request.
+   *
+   * @param string[] $inventoryTypes
    */
   public function setInventoryTypes($inventoryTypes)
   {

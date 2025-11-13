@@ -20,12 +20,18 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class AddCreativeRequest extends \Google\Model
 {
   /**
+   * Name of the creative to add to the finalized deal, in the format
+   * `buyers/{buyerAccountId}/creatives/{creativeId}`. See creative.name.
+   *
    * @var string
    */
   public $creative;
 
   /**
-   * @param string
+   * Name of the creative to add to the finalized deal, in the format
+   * `buyers/{buyerAccountId}/creatives/{creativeId}`. See creative.name.
+   *
+   * @param string $creative
    */
   public function setCreative($creative)
   {

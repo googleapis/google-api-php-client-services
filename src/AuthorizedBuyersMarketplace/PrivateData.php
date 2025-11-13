@@ -20,12 +20,18 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class PrivateData extends \Google\Model
 {
   /**
+   * A buyer specified reference ID. This can be queried in the list operations
+   * (max-length: 1024 unicode code units).
+   *
    * @var string
    */
   public $referenceId;
 
   /**
-   * @param string
+   * A buyer specified reference ID. This can be queried in the list operations
+   * (max-length: 1024 unicode code units).
+   *
+   * @param string $referenceId
    */
   public function setReferenceId($referenceId)
   {

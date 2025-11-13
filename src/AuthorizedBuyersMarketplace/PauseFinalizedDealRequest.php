@@ -20,12 +20,18 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class PauseFinalizedDealRequest extends \Google\Model
 {
   /**
+   * The reason to pause the finalized deal, will be displayed to the seller.
+   * Maximum length is 1000 characters.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * The reason to pause the finalized deal, will be displayed to the seller.
+   * Maximum length is 1000 characters.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

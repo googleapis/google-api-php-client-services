@@ -23,12 +23,18 @@ class ListAuctionPackagesResponse extends \Google\Collection
   protected $auctionPackagesType = AuctionPackage::class;
   protected $auctionPackagesDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results. Pass this value
+   * in the ListAuctionPackagesRequest.pageToken field in the subsequent call to
+   * the `ListAuctionPackages` method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AuctionPackage[]
+   * The list of auction packages.
+   *
+   * @param AuctionPackage[] $auctionPackages
    */
   public function setAuctionPackages($auctionPackages)
   {
@@ -42,7 +48,11 @@ class ListAuctionPackagesResponse extends \Google\Collection
     return $this->auctionPackages;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results. Pass this value
+   * in the ListAuctionPackagesRequest.pageToken field in the subsequent call to
+   * the `ListAuctionPackages` method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

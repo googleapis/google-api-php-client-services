@@ -19,16 +19,32 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class DayPartTargeting extends \Google\Collection
 {
+  /**
+   * Default value. This field is unused.
+   */
+  public const TIME_ZONE_TYPE_TIME_ZONE_TYPE_UNSPECIFIED = 'TIME_ZONE_TYPE_UNSPECIFIED';
+  /**
+   * The publisher's time zone
+   */
+  public const TIME_ZONE_TYPE_SELLER = 'SELLER';
+  /**
+   * The user's time zone
+   */
+  public const TIME_ZONE_TYPE_USER = 'USER';
   protected $collection_key = 'dayParts';
   protected $dayPartsType = DayPart::class;
   protected $dayPartsDataType = 'array';
   /**
+   * The time zone type of the day parts
+   *
    * @var string
    */
   public $timeZoneType;
 
   /**
-   * @param DayPart[]
+   * The targeted weekdays and times
+   *
+   * @param DayPart[] $dayParts
    */
   public function setDayParts($dayParts)
   {
@@ -42,14 +58,18 @@ class DayPartTargeting extends \Google\Collection
     return $this->dayParts;
   }
   /**
-   * @param string
+   * The time zone type of the day parts
+   *
+   * Accepted values: TIME_ZONE_TYPE_UNSPECIFIED, SELLER, USER
+   *
+   * @param self::TIME_ZONE_TYPE_* $timeZoneType
    */
   public function setTimeZoneType($timeZoneType)
   {
     $this->timeZoneType = $timeZoneType;
   }
   /**
-   * @return string
+   * @return self::TIME_ZONE_TYPE_*
    */
   public function getTimeZoneType()
   {

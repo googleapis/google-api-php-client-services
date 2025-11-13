@@ -23,12 +23,16 @@ class ListDealsResponse extends \Google\Collection
   protected $dealsType = Deal::class;
   protected $dealsDataType = 'array';
   /**
+   * Token to fetch the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Deal[]
+   * The list of deals.
+   *
+   * @param Deal[] $deals
    */
   public function setDeals($deals)
   {
@@ -42,7 +46,9 @@ class ListDealsResponse extends \Google\Collection
     return $this->deals;
   }
   /**
-   * @param string
+   * Token to fetch the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
