@@ -20,20 +20,28 @@ namespace Google\Service\Webfonts;
 class Axis extends \Google\Model
 {
   /**
+   * maximum value
+   *
    * @var float
    */
   public $end;
   /**
+   * minimum value
+   *
    * @var float
    */
   public $start;
   /**
+   * tag name.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param float
+   * maximum value
+   *
+   * @param float $end
    */
   public function setEnd($end)
   {
@@ -47,7 +55,9 @@ class Axis extends \Google\Model
     return $this->end;
   }
   /**
-   * @param float
+   * minimum value
+   *
+   * @param float $start
    */
   public function setStart($start)
   {
@@ -61,7 +71,9 @@ class Axis extends \Google\Model
     return $this->start;
   }
   /**
-   * @param string
+   * tag name.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {
