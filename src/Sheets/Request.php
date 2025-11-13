@@ -159,7 +159,9 @@ class Request extends \Google\Model
   protected $updateTableDataType = '';
 
   /**
-   * @param AddBandingRequest
+   * Adds a new banded range
+   *
+   * @param AddBandingRequest $addBanding
    */
   public function setAddBanding(AddBandingRequest $addBanding)
   {
@@ -173,7 +175,9 @@ class Request extends \Google\Model
     return $this->addBanding;
   }
   /**
-   * @param AddChartRequest
+   * Adds a chart.
+   *
+   * @param AddChartRequest $addChart
    */
   public function setAddChart(AddChartRequest $addChart)
   {
@@ -187,7 +191,9 @@ class Request extends \Google\Model
     return $this->addChart;
   }
   /**
-   * @param AddConditionalFormatRuleRequest
+   * Adds a new conditional format rule.
+   *
+   * @param AddConditionalFormatRuleRequest $addConditionalFormatRule
    */
   public function setAddConditionalFormatRule(AddConditionalFormatRuleRequest $addConditionalFormatRule)
   {
@@ -201,7 +207,9 @@ class Request extends \Google\Model
     return $this->addConditionalFormatRule;
   }
   /**
-   * @param AddDataSourceRequest
+   * Adds a data source.
+   *
+   * @param AddDataSourceRequest $addDataSource
    */
   public function setAddDataSource(AddDataSourceRequest $addDataSource)
   {
@@ -215,7 +223,9 @@ class Request extends \Google\Model
     return $this->addDataSource;
   }
   /**
-   * @param AddDimensionGroupRequest
+   * Creates a group over the specified range.
+   *
+   * @param AddDimensionGroupRequest $addDimensionGroup
    */
   public function setAddDimensionGroup(AddDimensionGroupRequest $addDimensionGroup)
   {
@@ -229,7 +239,9 @@ class Request extends \Google\Model
     return $this->addDimensionGroup;
   }
   /**
-   * @param AddFilterViewRequest
+   * Adds a filter view.
+   *
+   * @param AddFilterViewRequest $addFilterView
    */
   public function setAddFilterView(AddFilterViewRequest $addFilterView)
   {
@@ -243,7 +255,9 @@ class Request extends \Google\Model
     return $this->addFilterView;
   }
   /**
-   * @param AddNamedRangeRequest
+   * Adds a named range.
+   *
+   * @param AddNamedRangeRequest $addNamedRange
    */
   public function setAddNamedRange(AddNamedRangeRequest $addNamedRange)
   {
@@ -257,7 +271,9 @@ class Request extends \Google\Model
     return $this->addNamedRange;
   }
   /**
-   * @param AddProtectedRangeRequest
+   * Adds a protected range.
+   *
+   * @param AddProtectedRangeRequest $addProtectedRange
    */
   public function setAddProtectedRange(AddProtectedRangeRequest $addProtectedRange)
   {
@@ -271,7 +287,9 @@ class Request extends \Google\Model
     return $this->addProtectedRange;
   }
   /**
-   * @param AddSheetRequest
+   * Adds a sheet.
+   *
+   * @param AddSheetRequest $addSheet
    */
   public function setAddSheet(AddSheetRequest $addSheet)
   {
@@ -285,7 +303,9 @@ class Request extends \Google\Model
     return $this->addSheet;
   }
   /**
-   * @param AddSlicerRequest
+   * Adds a slicer.
+   *
+   * @param AddSlicerRequest $addSlicer
    */
   public function setAddSlicer(AddSlicerRequest $addSlicer)
   {
@@ -299,7 +319,9 @@ class Request extends \Google\Model
     return $this->addSlicer;
   }
   /**
-   * @param AddTableRequest
+   * Adds a table.
+   *
+   * @param AddTableRequest $addTable
    */
   public function setAddTable(AddTableRequest $addTable)
   {
@@ -313,7 +335,9 @@ class Request extends \Google\Model
     return $this->addTable;
   }
   /**
-   * @param AppendCellsRequest
+   * Appends cells after the last row with data in a sheet.
+   *
+   * @param AppendCellsRequest $appendCells
    */
   public function setAppendCells(AppendCellsRequest $appendCells)
   {
@@ -327,7 +351,9 @@ class Request extends \Google\Model
     return $this->appendCells;
   }
   /**
-   * @param AppendDimensionRequest
+   * Appends dimensions to the end of a sheet.
+   *
+   * @param AppendDimensionRequest $appendDimension
    */
   public function setAppendDimension(AppendDimensionRequest $appendDimension)
   {
@@ -341,7 +367,9 @@ class Request extends \Google\Model
     return $this->appendDimension;
   }
   /**
-   * @param AutoFillRequest
+   * Automatically fills in more data based on existing data.
+   *
+   * @param AutoFillRequest $autoFill
    */
   public function setAutoFill(AutoFillRequest $autoFill)
   {
@@ -355,7 +383,10 @@ class Request extends \Google\Model
     return $this->autoFill;
   }
   /**
-   * @param AutoResizeDimensionsRequest
+   * Automatically resizes one or more dimensions based on the contents of the
+   * cells in that dimension.
+   *
+   * @param AutoResizeDimensionsRequest $autoResizeDimensions
    */
   public function setAutoResizeDimensions(AutoResizeDimensionsRequest $autoResizeDimensions)
   {
@@ -369,7 +400,9 @@ class Request extends \Google\Model
     return $this->autoResizeDimensions;
   }
   /**
-   * @param CancelDataSourceRefreshRequest
+   * Cancels refreshes of one or multiple data sources and associated dbobjects.
+   *
+   * @param CancelDataSourceRefreshRequest $cancelDataSourceRefresh
    */
   public function setCancelDataSourceRefresh(CancelDataSourceRefreshRequest $cancelDataSourceRefresh)
   {
@@ -383,7 +416,9 @@ class Request extends \Google\Model
     return $this->cancelDataSourceRefresh;
   }
   /**
-   * @param ClearBasicFilterRequest
+   * Clears the basic filter on a sheet.
+   *
+   * @param ClearBasicFilterRequest $clearBasicFilter
    */
   public function setClearBasicFilter(ClearBasicFilterRequest $clearBasicFilter)
   {
@@ -397,7 +432,9 @@ class Request extends \Google\Model
     return $this->clearBasicFilter;
   }
   /**
-   * @param CopyPasteRequest
+   * Copies data from one area and pastes it to another.
+   *
+   * @param CopyPasteRequest $copyPaste
    */
   public function setCopyPaste(CopyPasteRequest $copyPaste)
   {
@@ -411,7 +448,9 @@ class Request extends \Google\Model
     return $this->copyPaste;
   }
   /**
-   * @param CreateDeveloperMetadataRequest
+   * Creates new developer metadata
+   *
+   * @param CreateDeveloperMetadataRequest $createDeveloperMetadata
    */
   public function setCreateDeveloperMetadata(CreateDeveloperMetadataRequest $createDeveloperMetadata)
   {
@@ -425,7 +464,9 @@ class Request extends \Google\Model
     return $this->createDeveloperMetadata;
   }
   /**
-   * @param CutPasteRequest
+   * Cuts data from one area and pastes it to another.
+   *
+   * @param CutPasteRequest $cutPaste
    */
   public function setCutPaste(CutPasteRequest $cutPaste)
   {
@@ -439,7 +480,9 @@ class Request extends \Google\Model
     return $this->cutPaste;
   }
   /**
-   * @param DeleteBandingRequest
+   * Removes a banded range
+   *
+   * @param DeleteBandingRequest $deleteBanding
    */
   public function setDeleteBanding(DeleteBandingRequest $deleteBanding)
   {
@@ -453,7 +496,9 @@ class Request extends \Google\Model
     return $this->deleteBanding;
   }
   /**
-   * @param DeleteConditionalFormatRuleRequest
+   * Deletes an existing conditional format rule.
+   *
+   * @param DeleteConditionalFormatRuleRequest $deleteConditionalFormatRule
    */
   public function setDeleteConditionalFormatRule(DeleteConditionalFormatRuleRequest $deleteConditionalFormatRule)
   {
@@ -467,7 +512,9 @@ class Request extends \Google\Model
     return $this->deleteConditionalFormatRule;
   }
   /**
-   * @param DeleteDataSourceRequest
+   * Deletes a data source.
+   *
+   * @param DeleteDataSourceRequest $deleteDataSource
    */
   public function setDeleteDataSource(DeleteDataSourceRequest $deleteDataSource)
   {
@@ -481,7 +528,9 @@ class Request extends \Google\Model
     return $this->deleteDataSource;
   }
   /**
-   * @param DeleteDeveloperMetadataRequest
+   * Deletes developer metadata
+   *
+   * @param DeleteDeveloperMetadataRequest $deleteDeveloperMetadata
    */
   public function setDeleteDeveloperMetadata(DeleteDeveloperMetadataRequest $deleteDeveloperMetadata)
   {
@@ -495,7 +544,9 @@ class Request extends \Google\Model
     return $this->deleteDeveloperMetadata;
   }
   /**
-   * @param DeleteDimensionRequest
+   * Deletes rows or columns in a sheet.
+   *
+   * @param DeleteDimensionRequest $deleteDimension
    */
   public function setDeleteDimension(DeleteDimensionRequest $deleteDimension)
   {
@@ -509,7 +560,9 @@ class Request extends \Google\Model
     return $this->deleteDimension;
   }
   /**
-   * @param DeleteDimensionGroupRequest
+   * Deletes a group over the specified range.
+   *
+   * @param DeleteDimensionGroupRequest $deleteDimensionGroup
    */
   public function setDeleteDimensionGroup(DeleteDimensionGroupRequest $deleteDimensionGroup)
   {
@@ -523,7 +576,10 @@ class Request extends \Google\Model
     return $this->deleteDimensionGroup;
   }
   /**
-   * @param DeleteDuplicatesRequest
+   * Removes rows containing duplicate values in specified columns of a cell
+   * range.
+   *
+   * @param DeleteDuplicatesRequest $deleteDuplicates
    */
   public function setDeleteDuplicates(DeleteDuplicatesRequest $deleteDuplicates)
   {
@@ -537,7 +593,9 @@ class Request extends \Google\Model
     return $this->deleteDuplicates;
   }
   /**
-   * @param DeleteEmbeddedObjectRequest
+   * Deletes an embedded object (e.g, chart, image) in a sheet.
+   *
+   * @param DeleteEmbeddedObjectRequest $deleteEmbeddedObject
    */
   public function setDeleteEmbeddedObject(DeleteEmbeddedObjectRequest $deleteEmbeddedObject)
   {
@@ -551,7 +609,9 @@ class Request extends \Google\Model
     return $this->deleteEmbeddedObject;
   }
   /**
-   * @param DeleteFilterViewRequest
+   * Deletes a filter view from a sheet.
+   *
+   * @param DeleteFilterViewRequest $deleteFilterView
    */
   public function setDeleteFilterView(DeleteFilterViewRequest $deleteFilterView)
   {
@@ -565,7 +625,9 @@ class Request extends \Google\Model
     return $this->deleteFilterView;
   }
   /**
-   * @param DeleteNamedRangeRequest
+   * Deletes a named range.
+   *
+   * @param DeleteNamedRangeRequest $deleteNamedRange
    */
   public function setDeleteNamedRange(DeleteNamedRangeRequest $deleteNamedRange)
   {
@@ -579,7 +641,9 @@ class Request extends \Google\Model
     return $this->deleteNamedRange;
   }
   /**
-   * @param DeleteProtectedRangeRequest
+   * Deletes a protected range.
+   *
+   * @param DeleteProtectedRangeRequest $deleteProtectedRange
    */
   public function setDeleteProtectedRange(DeleteProtectedRangeRequest $deleteProtectedRange)
   {
@@ -593,7 +657,9 @@ class Request extends \Google\Model
     return $this->deleteProtectedRange;
   }
   /**
-   * @param DeleteRangeRequest
+   * Deletes a range of cells from a sheet, shifting the remaining cells.
+   *
+   * @param DeleteRangeRequest $deleteRange
    */
   public function setDeleteRange(DeleteRangeRequest $deleteRange)
   {
@@ -607,7 +673,9 @@ class Request extends \Google\Model
     return $this->deleteRange;
   }
   /**
-   * @param DeleteSheetRequest
+   * Deletes a sheet.
+   *
+   * @param DeleteSheetRequest $deleteSheet
    */
   public function setDeleteSheet(DeleteSheetRequest $deleteSheet)
   {
@@ -621,7 +689,9 @@ class Request extends \Google\Model
     return $this->deleteSheet;
   }
   /**
-   * @param DeleteTableRequest
+   * A request for deleting a table.
+   *
+   * @param DeleteTableRequest $deleteTable
    */
   public function setDeleteTable(DeleteTableRequest $deleteTable)
   {
@@ -635,7 +705,9 @@ class Request extends \Google\Model
     return $this->deleteTable;
   }
   /**
-   * @param DuplicateFilterViewRequest
+   * Duplicates a filter view.
+   *
+   * @param DuplicateFilterViewRequest $duplicateFilterView
    */
   public function setDuplicateFilterView(DuplicateFilterViewRequest $duplicateFilterView)
   {
@@ -649,7 +721,9 @@ class Request extends \Google\Model
     return $this->duplicateFilterView;
   }
   /**
-   * @param DuplicateSheetRequest
+   * Duplicates a sheet.
+   *
+   * @param DuplicateSheetRequest $duplicateSheet
    */
   public function setDuplicateSheet(DuplicateSheetRequest $duplicateSheet)
   {
@@ -663,7 +737,9 @@ class Request extends \Google\Model
     return $this->duplicateSheet;
   }
   /**
-   * @param FindReplaceRequest
+   * Finds and replaces occurrences of some text with other text.
+   *
+   * @param FindReplaceRequest $findReplace
    */
   public function setFindReplace(FindReplaceRequest $findReplace)
   {
@@ -677,7 +753,9 @@ class Request extends \Google\Model
     return $this->findReplace;
   }
   /**
-   * @param InsertDimensionRequest
+   * Inserts new rows or columns in a sheet.
+   *
+   * @param InsertDimensionRequest $insertDimension
    */
   public function setInsertDimension(InsertDimensionRequest $insertDimension)
   {
@@ -691,7 +769,9 @@ class Request extends \Google\Model
     return $this->insertDimension;
   }
   /**
-   * @param InsertRangeRequest
+   * Inserts new cells in a sheet, shifting the existing cells.
+   *
+   * @param InsertRangeRequest $insertRange
    */
   public function setInsertRange(InsertRangeRequest $insertRange)
   {
@@ -705,7 +785,9 @@ class Request extends \Google\Model
     return $this->insertRange;
   }
   /**
-   * @param MergeCellsRequest
+   * Merges cells together.
+   *
+   * @param MergeCellsRequest $mergeCells
    */
   public function setMergeCells(MergeCellsRequest $mergeCells)
   {
@@ -719,7 +801,9 @@ class Request extends \Google\Model
     return $this->mergeCells;
   }
   /**
-   * @param MoveDimensionRequest
+   * Moves rows or columns to another location in a sheet.
+   *
+   * @param MoveDimensionRequest $moveDimension
    */
   public function setMoveDimension(MoveDimensionRequest $moveDimension)
   {
@@ -733,7 +817,9 @@ class Request extends \Google\Model
     return $this->moveDimension;
   }
   /**
-   * @param PasteDataRequest
+   * Pastes data (HTML or delimited) into a sheet.
+   *
+   * @param PasteDataRequest $pasteData
    */
   public function setPasteData(PasteDataRequest $pasteData)
   {
@@ -747,7 +833,9 @@ class Request extends \Google\Model
     return $this->pasteData;
   }
   /**
-   * @param RandomizeRangeRequest
+   * Randomizes the order of the rows in a range.
+   *
+   * @param RandomizeRangeRequest $randomizeRange
    */
   public function setRandomizeRange(RandomizeRangeRequest $randomizeRange)
   {
@@ -761,7 +849,9 @@ class Request extends \Google\Model
     return $this->randomizeRange;
   }
   /**
-   * @param RefreshDataSourceRequest
+   * Refreshes one or multiple data sources and associated dbobjects.
+   *
+   * @param RefreshDataSourceRequest $refreshDataSource
    */
   public function setRefreshDataSource(RefreshDataSourceRequest $refreshDataSource)
   {
@@ -775,7 +865,9 @@ class Request extends \Google\Model
     return $this->refreshDataSource;
   }
   /**
-   * @param RepeatCellRequest
+   * Repeats a single cell across a range.
+   *
+   * @param RepeatCellRequest $repeatCell
    */
   public function setRepeatCell(RepeatCellRequest $repeatCell)
   {
@@ -789,7 +881,9 @@ class Request extends \Google\Model
     return $this->repeatCell;
   }
   /**
-   * @param SetBasicFilterRequest
+   * Sets the basic filter on a sheet.
+   *
+   * @param SetBasicFilterRequest $setBasicFilter
    */
   public function setSetBasicFilter(SetBasicFilterRequest $setBasicFilter)
   {
@@ -803,7 +897,9 @@ class Request extends \Google\Model
     return $this->setBasicFilter;
   }
   /**
-   * @param SetDataValidationRequest
+   * Sets data validation for one or more cells.
+   *
+   * @param SetDataValidationRequest $setDataValidation
    */
   public function setSetDataValidation(SetDataValidationRequest $setDataValidation)
   {
@@ -817,7 +913,9 @@ class Request extends \Google\Model
     return $this->setDataValidation;
   }
   /**
-   * @param SortRangeRequest
+   * Sorts data in a range.
+   *
+   * @param SortRangeRequest $sortRange
    */
   public function setSortRange(SortRangeRequest $sortRange)
   {
@@ -831,7 +929,9 @@ class Request extends \Google\Model
     return $this->sortRange;
   }
   /**
-   * @param TextToColumnsRequest
+   * Converts a column of text into many columns of text.
+   *
+   * @param TextToColumnsRequest $textToColumns
    */
   public function setTextToColumns(TextToColumnsRequest $textToColumns)
   {
@@ -845,7 +945,9 @@ class Request extends \Google\Model
     return $this->textToColumns;
   }
   /**
-   * @param TrimWhitespaceRequest
+   * Trims cells of whitespace (such as spaces, tabs, or new lines).
+   *
+   * @param TrimWhitespaceRequest $trimWhitespace
    */
   public function setTrimWhitespace(TrimWhitespaceRequest $trimWhitespace)
   {
@@ -859,7 +961,9 @@ class Request extends \Google\Model
     return $this->trimWhitespace;
   }
   /**
-   * @param UnmergeCellsRequest
+   * Unmerges merged cells.
+   *
+   * @param UnmergeCellsRequest $unmergeCells
    */
   public function setUnmergeCells(UnmergeCellsRequest $unmergeCells)
   {
@@ -873,7 +977,9 @@ class Request extends \Google\Model
     return $this->unmergeCells;
   }
   /**
-   * @param UpdateBandingRequest
+   * Updates a banded range
+   *
+   * @param UpdateBandingRequest $updateBanding
    */
   public function setUpdateBanding(UpdateBandingRequest $updateBanding)
   {
@@ -887,7 +993,9 @@ class Request extends \Google\Model
     return $this->updateBanding;
   }
   /**
-   * @param UpdateBordersRequest
+   * Updates the borders in a range of cells.
+   *
+   * @param UpdateBordersRequest $updateBorders
    */
   public function setUpdateBorders(UpdateBordersRequest $updateBorders)
   {
@@ -901,7 +1009,9 @@ class Request extends \Google\Model
     return $this->updateBorders;
   }
   /**
-   * @param UpdateCellsRequest
+   * Updates many cells at once.
+   *
+   * @param UpdateCellsRequest $updateCells
    */
   public function setUpdateCells(UpdateCellsRequest $updateCells)
   {
@@ -915,7 +1025,9 @@ class Request extends \Google\Model
     return $this->updateCells;
   }
   /**
-   * @param UpdateChartSpecRequest
+   * Updates a chart's specifications.
+   *
+   * @param UpdateChartSpecRequest $updateChartSpec
    */
   public function setUpdateChartSpec(UpdateChartSpecRequest $updateChartSpec)
   {
@@ -929,7 +1041,9 @@ class Request extends \Google\Model
     return $this->updateChartSpec;
   }
   /**
-   * @param UpdateConditionalFormatRuleRequest
+   * Updates an existing conditional format rule.
+   *
+   * @param UpdateConditionalFormatRuleRequest $updateConditionalFormatRule
    */
   public function setUpdateConditionalFormatRule(UpdateConditionalFormatRuleRequest $updateConditionalFormatRule)
   {
@@ -943,7 +1057,9 @@ class Request extends \Google\Model
     return $this->updateConditionalFormatRule;
   }
   /**
-   * @param UpdateDataSourceRequest
+   * Updates a data source.
+   *
+   * @param UpdateDataSourceRequest $updateDataSource
    */
   public function setUpdateDataSource(UpdateDataSourceRequest $updateDataSource)
   {
@@ -957,7 +1073,9 @@ class Request extends \Google\Model
     return $this->updateDataSource;
   }
   /**
-   * @param UpdateDeveloperMetadataRequest
+   * Updates an existing developer metadata entry
+   *
+   * @param UpdateDeveloperMetadataRequest $updateDeveloperMetadata
    */
   public function setUpdateDeveloperMetadata(UpdateDeveloperMetadataRequest $updateDeveloperMetadata)
   {
@@ -971,7 +1089,9 @@ class Request extends \Google\Model
     return $this->updateDeveloperMetadata;
   }
   /**
-   * @param UpdateDimensionGroupRequest
+   * Updates the state of the specified group.
+   *
+   * @param UpdateDimensionGroupRequest $updateDimensionGroup
    */
   public function setUpdateDimensionGroup(UpdateDimensionGroupRequest $updateDimensionGroup)
   {
@@ -985,7 +1105,9 @@ class Request extends \Google\Model
     return $this->updateDimensionGroup;
   }
   /**
-   * @param UpdateDimensionPropertiesRequest
+   * Updates dimensions' properties.
+   *
+   * @param UpdateDimensionPropertiesRequest $updateDimensionProperties
    */
   public function setUpdateDimensionProperties(UpdateDimensionPropertiesRequest $updateDimensionProperties)
   {
@@ -999,7 +1121,9 @@ class Request extends \Google\Model
     return $this->updateDimensionProperties;
   }
   /**
-   * @param UpdateEmbeddedObjectBorderRequest
+   * Updates an embedded object's border.
+   *
+   * @param UpdateEmbeddedObjectBorderRequest $updateEmbeddedObjectBorder
    */
   public function setUpdateEmbeddedObjectBorder(UpdateEmbeddedObjectBorderRequest $updateEmbeddedObjectBorder)
   {
@@ -1013,7 +1137,9 @@ class Request extends \Google\Model
     return $this->updateEmbeddedObjectBorder;
   }
   /**
-   * @param UpdateEmbeddedObjectPositionRequest
+   * Updates an embedded object's (e.g. chart, image) position.
+   *
+   * @param UpdateEmbeddedObjectPositionRequest $updateEmbeddedObjectPosition
    */
   public function setUpdateEmbeddedObjectPosition(UpdateEmbeddedObjectPositionRequest $updateEmbeddedObjectPosition)
   {
@@ -1027,7 +1153,9 @@ class Request extends \Google\Model
     return $this->updateEmbeddedObjectPosition;
   }
   /**
-   * @param UpdateFilterViewRequest
+   * Updates the properties of a filter view.
+   *
+   * @param UpdateFilterViewRequest $updateFilterView
    */
   public function setUpdateFilterView(UpdateFilterViewRequest $updateFilterView)
   {
@@ -1041,7 +1169,9 @@ class Request extends \Google\Model
     return $this->updateFilterView;
   }
   /**
-   * @param UpdateNamedRangeRequest
+   * Updates a named range.
+   *
+   * @param UpdateNamedRangeRequest $updateNamedRange
    */
   public function setUpdateNamedRange(UpdateNamedRangeRequest $updateNamedRange)
   {
@@ -1055,7 +1185,9 @@ class Request extends \Google\Model
     return $this->updateNamedRange;
   }
   /**
-   * @param UpdateProtectedRangeRequest
+   * Updates a protected range.
+   *
+   * @param UpdateProtectedRangeRequest $updateProtectedRange
    */
   public function setUpdateProtectedRange(UpdateProtectedRangeRequest $updateProtectedRange)
   {
@@ -1069,7 +1201,9 @@ class Request extends \Google\Model
     return $this->updateProtectedRange;
   }
   /**
-   * @param UpdateSheetPropertiesRequest
+   * Updates a sheet's properties.
+   *
+   * @param UpdateSheetPropertiesRequest $updateSheetProperties
    */
   public function setUpdateSheetProperties(UpdateSheetPropertiesRequest $updateSheetProperties)
   {
@@ -1083,7 +1217,9 @@ class Request extends \Google\Model
     return $this->updateSheetProperties;
   }
   /**
-   * @param UpdateSlicerSpecRequest
+   * Updates a slicer's specifications.
+   *
+   * @param UpdateSlicerSpecRequest $updateSlicerSpec
    */
   public function setUpdateSlicerSpec(UpdateSlicerSpecRequest $updateSlicerSpec)
   {
@@ -1097,7 +1233,9 @@ class Request extends \Google\Model
     return $this->updateSlicerSpec;
   }
   /**
-   * @param UpdateSpreadsheetPropertiesRequest
+   * Updates the spreadsheet's properties.
+   *
+   * @param UpdateSpreadsheetPropertiesRequest $updateSpreadsheetProperties
    */
   public function setUpdateSpreadsheetProperties(UpdateSpreadsheetPropertiesRequest $updateSpreadsheetProperties)
   {
@@ -1111,7 +1249,9 @@ class Request extends \Google\Model
     return $this->updateSpreadsheetProperties;
   }
   /**
-   * @param UpdateTableRequest
+   * Updates a table.
+   *
+   * @param UpdateTableRequest $updateTable
    */
   public function setUpdateTable(UpdateTableRequest $updateTable)
   {

@@ -22,6 +22,10 @@ class RepeatCellRequest extends \Google\Model
   protected $cellType = CellData::class;
   protected $cellDataType = '';
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `cell` is implied and should not be specified. A single `"*"` can
+   * be used as short-hand for listing every field.
+   *
    * @var string
    */
   public $fields;
@@ -29,7 +33,9 @@ class RepeatCellRequest extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param CellData
+   * The data to write.
+   *
+   * @param CellData $cell
    */
   public function setCell(CellData $cell)
   {
@@ -43,7 +49,11 @@ class RepeatCellRequest extends \Google\Model
     return $this->cell;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `cell` is implied and should not be specified. A single `"*"` can
+   * be used as short-hand for listing every field.
+   *
+   * @param string $fields
    */
   public function setFields($fields)
   {
@@ -57,7 +67,9 @@ class RepeatCellRequest extends \Google\Model
     return $this->fields;
   }
   /**
-   * @param GridRange
+   * The range to repeat the cell in.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {

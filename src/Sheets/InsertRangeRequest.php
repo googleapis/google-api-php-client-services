@@ -19,15 +19,34 @@ namespace Google\Service\Sheets;
 
 class InsertRangeRequest extends \Google\Model
 {
+  /**
+   * The default value, do not use.
+   */
+  public const SHIFT_DIMENSION_DIMENSION_UNSPECIFIED = 'DIMENSION_UNSPECIFIED';
+  /**
+   * Operates on the rows of a sheet.
+   */
+  public const SHIFT_DIMENSION_ROWS = 'ROWS';
+  /**
+   * Operates on the columns of a sheet.
+   */
+  public const SHIFT_DIMENSION_COLUMNS = 'COLUMNS';
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
   /**
+   * The dimension which will be shifted when inserting cells. If ROWS, existing
+   * cells will be shifted down. If COLUMNS, existing cells will be shifted
+   * right.
+   *
    * @var string
    */
   public $shiftDimension;
 
   /**
-   * @param GridRange
+   * The range to insert new cells into. The range is constrained to the current
+   * sheet boundaries.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {
@@ -41,14 +60,20 @@ class InsertRangeRequest extends \Google\Model
     return $this->range;
   }
   /**
-   * @param string
+   * The dimension which will be shifted when inserting cells. If ROWS, existing
+   * cells will be shifted down. If COLUMNS, existing cells will be shifted
+   * right.
+   *
+   * Accepted values: DIMENSION_UNSPECIFIED, ROWS, COLUMNS
+   *
+   * @param self::SHIFT_DIMENSION_* $shiftDimension
    */
   public function setShiftDimension($shiftDimension)
   {
     $this->shiftDimension = $shiftDimension;
   }
   /**
-   * @return string
+   * @return self::SHIFT_DIMENSION_*
    */
   public function getShiftDimension()
   {

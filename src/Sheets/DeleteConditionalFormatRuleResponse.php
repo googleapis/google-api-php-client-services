@@ -23,7 +23,9 @@ class DeleteConditionalFormatRuleResponse extends \Google\Model
   protected $ruleDataType = '';
 
   /**
-   * @param ConditionalFormatRule
+   * The rule that was deleted.
+   *
+   * @param ConditionalFormatRule $rule
    */
   public function setRule(ConditionalFormatRule $rule)
   {

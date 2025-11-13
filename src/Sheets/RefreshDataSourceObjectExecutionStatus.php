@@ -25,7 +25,9 @@ class RefreshDataSourceObjectExecutionStatus extends \Google\Model
   protected $referenceDataType = '';
 
   /**
-   * @param DataExecutionStatus
+   * The data execution status.
+   *
+   * @param DataExecutionStatus $dataExecutionStatus
    */
   public function setDataExecutionStatus(DataExecutionStatus $dataExecutionStatus)
   {
@@ -39,7 +41,9 @@ class RefreshDataSourceObjectExecutionStatus extends \Google\Model
     return $this->dataExecutionStatus;
   }
   /**
-   * @param DataSourceObjectReference
+   * Reference to a data source object being refreshed.
+   *
+   * @param DataSourceObjectReference $reference
    */
   public function setReference(DataSourceObjectReference $reference)
   {

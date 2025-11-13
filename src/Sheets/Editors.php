@@ -21,20 +21,30 @@ class Editors extends \Google\Collection
 {
   protected $collection_key = 'users';
   /**
+   * True if anyone in the document's domain has edit access to the protected
+   * range. Domain protection is only supported on documents within a domain.
+   *
    * @var bool
    */
   public $domainUsersCanEdit;
   /**
+   * The email addresses of groups with edit access to the protected range.
+   *
    * @var string[]
    */
   public $groups;
   /**
+   * The email addresses of users with edit access to the protected range.
+   *
    * @var string[]
    */
   public $users;
 
   /**
-   * @param bool
+   * True if anyone in the document's domain has edit access to the protected
+   * range. Domain protection is only supported on documents within a domain.
+   *
+   * @param bool $domainUsersCanEdit
    */
   public function setDomainUsersCanEdit($domainUsersCanEdit)
   {
@@ -48,7 +58,9 @@ class Editors extends \Google\Collection
     return $this->domainUsersCanEdit;
   }
   /**
-   * @param string[]
+   * The email addresses of groups with edit access to the protected range.
+   *
+   * @param string[] $groups
    */
   public function setGroups($groups)
   {
@@ -62,7 +74,9 @@ class Editors extends \Google\Collection
     return $this->groups;
   }
   /**
-   * @param string[]
+   * The email addresses of users with edit access to the protected range.
+   *
+   * @param string[] $users
    */
   public function setUsers($users)
   {

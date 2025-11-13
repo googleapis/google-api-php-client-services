@@ -25,20 +25,28 @@ class DimensionProperties extends \Google\Collection
   protected $developerMetadataType = DeveloperMetadata::class;
   protected $developerMetadataDataType = 'array';
   /**
+   * True if this dimension is being filtered. This field is read-only.
+   *
    * @var bool
    */
   public $hiddenByFilter;
   /**
+   * True if this dimension is explicitly hidden.
+   *
    * @var bool
    */
   public $hiddenByUser;
   /**
+   * The height (if a row) or width (if a column) of the dimension in pixels.
+   *
    * @var int
    */
   public $pixelSize;
 
   /**
-   * @param DataSourceColumnReference
+   * Output only. If set, this is a column in a data source sheet.
+   *
+   * @param DataSourceColumnReference $dataSourceColumnReference
    */
   public function setDataSourceColumnReference(DataSourceColumnReference $dataSourceColumnReference)
   {
@@ -52,7 +60,9 @@ class DimensionProperties extends \Google\Collection
     return $this->dataSourceColumnReference;
   }
   /**
-   * @param DeveloperMetadata[]
+   * The developer metadata associated with a single row or column.
+   *
+   * @param DeveloperMetadata[] $developerMetadata
    */
   public function setDeveloperMetadata($developerMetadata)
   {
@@ -66,7 +76,9 @@ class DimensionProperties extends \Google\Collection
     return $this->developerMetadata;
   }
   /**
-   * @param bool
+   * True if this dimension is being filtered. This field is read-only.
+   *
+   * @param bool $hiddenByFilter
    */
   public function setHiddenByFilter($hiddenByFilter)
   {
@@ -80,7 +92,9 @@ class DimensionProperties extends \Google\Collection
     return $this->hiddenByFilter;
   }
   /**
-   * @param bool
+   * True if this dimension is explicitly hidden.
+   *
+   * @param bool $hiddenByUser
    */
   public function setHiddenByUser($hiddenByUser)
   {
@@ -94,7 +108,9 @@ class DimensionProperties extends \Google\Collection
     return $this->hiddenByUser;
   }
   /**
-   * @param int
+   * The height (if a row) or width (if a column) of the dimension in pixels.
+   *
+   * @param int $pixelSize
    */
   public function setPixelSize($pixelSize)
   {

@@ -20,24 +20,34 @@ namespace Google\Service\Sheets;
 class Padding extends \Google\Model
 {
   /**
+   * The bottom padding of the cell.
+   *
    * @var int
    */
   public $bottom;
   /**
+   * The left padding of the cell.
+   *
    * @var int
    */
   public $left;
   /**
+   * The right padding of the cell.
+   *
    * @var int
    */
   public $right;
   /**
+   * The top padding of the cell.
+   *
    * @var int
    */
   public $top;
 
   /**
-   * @param int
+   * The bottom padding of the cell.
+   *
+   * @param int $bottom
    */
   public function setBottom($bottom)
   {
@@ -51,7 +61,9 @@ class Padding extends \Google\Model
     return $this->bottom;
   }
   /**
-   * @param int
+   * The left padding of the cell.
+   *
+   * @param int $left
    */
   public function setLeft($left)
   {
@@ -65,7 +77,9 @@ class Padding extends \Google\Model
     return $this->left;
   }
   /**
-   * @param int
+   * The right padding of the cell.
+   *
+   * @param int $right
    */
   public function setRight($right)
   {
@@ -79,7 +93,9 @@ class Padding extends \Google\Model
     return $this->right;
   }
   /**
-   * @param int
+   * The top padding of the cell.
+   *
+   * @param int $top
    */
   public function setTop($top)
   {

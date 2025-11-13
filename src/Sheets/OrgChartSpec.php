@@ -19,6 +19,22 @@ namespace Google\Service\Sheets;
 
 class OrgChartSpec extends \Google\Model
 {
+  /**
+   * Default value, do not use.
+   */
+  public const NODE_SIZE_ORG_CHART_LABEL_SIZE_UNSPECIFIED = 'ORG_CHART_LABEL_SIZE_UNSPECIFIED';
+  /**
+   * The small org chart node size.
+   */
+  public const NODE_SIZE_SMALL = 'SMALL';
+  /**
+   * The medium org chart node size.
+   */
+  public const NODE_SIZE_MEDIUM = 'MEDIUM';
+  /**
+   * The large org chart node size.
+   */
+  public const NODE_SIZE_LARGE = 'LARGE';
   protected $labelsType = ChartData::class;
   protected $labelsDataType = '';
   protected $nodeColorType = Color::class;
@@ -26,6 +42,8 @@ class OrgChartSpec extends \Google\Model
   protected $nodeColorStyleType = ColorStyle::class;
   protected $nodeColorStyleDataType = '';
   /**
+   * The size of the org chart nodes.
+   *
    * @var string
    */
   public $nodeSize;
@@ -39,7 +57,10 @@ class OrgChartSpec extends \Google\Model
   protected $tooltipsDataType = '';
 
   /**
-   * @param ChartData
+   * The data containing the labels for all the nodes in the chart. Labels must
+   * be unique.
+   *
+   * @param ChartData $labels
    */
   public function setLabels(ChartData $labels)
   {
@@ -53,13 +74,17 @@ class OrgChartSpec extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param Color
+   * The color of the org chart nodes. Deprecated: Use node_color_style.
+   *
+   * @deprecated
+   * @param Color $nodeColor
    */
   public function setNodeColor(Color $nodeColor)
   {
     $this->nodeColor = $nodeColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getNodeColor()
@@ -67,7 +92,10 @@ class OrgChartSpec extends \Google\Model
     return $this->nodeColor;
   }
   /**
-   * @param ColorStyle
+   * The color of the org chart nodes. If node_color is also set, this field
+   * takes precedence.
+   *
+   * @param ColorStyle $nodeColorStyle
    */
   public function setNodeColorStyle(ColorStyle $nodeColorStyle)
   {
@@ -81,21 +109,29 @@ class OrgChartSpec extends \Google\Model
     return $this->nodeColorStyle;
   }
   /**
-   * @param string
+   * The size of the org chart nodes.
+   *
+   * Accepted values: ORG_CHART_LABEL_SIZE_UNSPECIFIED, SMALL, MEDIUM, LARGE
+   *
+   * @param self::NODE_SIZE_* $nodeSize
    */
   public function setNodeSize($nodeSize)
   {
     $this->nodeSize = $nodeSize;
   }
   /**
-   * @return string
+   * @return self::NODE_SIZE_*
    */
   public function getNodeSize()
   {
     return $this->nodeSize;
   }
   /**
-   * @param ChartData
+   * The data containing the label of the parent for the corresponding node. A
+   * blank value indicates that the node has no parent and is a top-level node.
+   * This field is optional.
+   *
+   * @param ChartData $parentLabels
    */
   public function setParentLabels(ChartData $parentLabels)
   {
@@ -109,13 +145,18 @@ class OrgChartSpec extends \Google\Model
     return $this->parentLabels;
   }
   /**
-   * @param Color
+   * The color of the selected org chart nodes. Deprecated: Use
+   * selected_node_color_style.
+   *
+   * @deprecated
+   * @param Color $selectedNodeColor
    */
   public function setSelectedNodeColor(Color $selectedNodeColor)
   {
     $this->selectedNodeColor = $selectedNodeColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getSelectedNodeColor()
@@ -123,7 +164,10 @@ class OrgChartSpec extends \Google\Model
     return $this->selectedNodeColor;
   }
   /**
-   * @param ColorStyle
+   * The color of the selected org chart nodes. If selected_node_color is also
+   * set, this field takes precedence.
+   *
+   * @param ColorStyle $selectedNodeColorStyle
    */
   public function setSelectedNodeColorStyle(ColorStyle $selectedNodeColorStyle)
   {
@@ -137,7 +181,10 @@ class OrgChartSpec extends \Google\Model
     return $this->selectedNodeColorStyle;
   }
   /**
-   * @param ChartData
+   * The data containing the tooltip for the corresponding node. A blank value
+   * results in no tooltip being displayed for the node. This field is optional.
+   *
+   * @param ChartData $tooltips
    */
   public function setTooltips(ChartData $tooltips)
   {

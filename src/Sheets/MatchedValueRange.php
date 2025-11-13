@@ -26,7 +26,9 @@ class MatchedValueRange extends \Google\Collection
   protected $valueRangeDataType = '';
 
   /**
-   * @param DataFilter[]
+   * The DataFilters from the request that matched the range of values.
+   *
+   * @param DataFilter[] $dataFilters
    */
   public function setDataFilters($dataFilters)
   {
@@ -40,7 +42,9 @@ class MatchedValueRange extends \Google\Collection
     return $this->dataFilters;
   }
   /**
-   * @param ValueRange
+   * The values matched by the DataFilter.
+   *
+   * @param ValueRange $valueRange
    */
   public function setValueRange(ValueRange $valueRange)
   {

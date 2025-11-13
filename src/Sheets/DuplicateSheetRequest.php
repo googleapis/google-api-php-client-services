@@ -20,24 +20,41 @@ namespace Google\Service\Sheets;
 class DuplicateSheetRequest extends \Google\Model
 {
   /**
+   * The zero-based index where the new sheet should be inserted. The index of
+   * all sheets after this are incremented.
+   *
    * @var int
    */
   public $insertSheetIndex;
   /**
+   * If set, the ID of the new sheet. If not set, an ID is chosen. If set, the
+   * ID must not conflict with any existing sheet ID. If set, it must be non-
+   * negative.
+   *
    * @var int
    */
   public $newSheetId;
   /**
+   * The name of the new sheet. If empty, a new name is chosen for you.
+   *
    * @var string
    */
   public $newSheetName;
   /**
+   * The sheet to duplicate. If the source sheet is of DATA_SOURCE type, its
+   * backing DataSource is also duplicated and associated with the new copy of
+   * the sheet. No data execution is triggered, the grid data of this sheet is
+   * also copied over but only available after the batch request completes.
+   *
    * @var int
    */
   public $sourceSheetId;
 
   /**
-   * @param int
+   * The zero-based index where the new sheet should be inserted. The index of
+   * all sheets after this are incremented.
+   *
+   * @param int $insertSheetIndex
    */
   public function setInsertSheetIndex($insertSheetIndex)
   {
@@ -51,7 +68,11 @@ class DuplicateSheetRequest extends \Google\Model
     return $this->insertSheetIndex;
   }
   /**
-   * @param int
+   * If set, the ID of the new sheet. If not set, an ID is chosen. If set, the
+   * ID must not conflict with any existing sheet ID. If set, it must be non-
+   * negative.
+   *
+   * @param int $newSheetId
    */
   public function setNewSheetId($newSheetId)
   {
@@ -65,7 +86,9 @@ class DuplicateSheetRequest extends \Google\Model
     return $this->newSheetId;
   }
   /**
-   * @param string
+   * The name of the new sheet. If empty, a new name is chosen for you.
+   *
+   * @param string $newSheetName
    */
   public function setNewSheetName($newSheetName)
   {
@@ -79,7 +102,12 @@ class DuplicateSheetRequest extends \Google\Model
     return $this->newSheetName;
   }
   /**
-   * @param int
+   * The sheet to duplicate. If the source sheet is of DATA_SOURCE type, its
+   * backing DataSource is also duplicated and associated with the new copy of
+   * the sheet. No data execution is triggered, the grid data of this sheet is
+   * also copied over but only available after the batch request completes.
+   *
+   * @param int $sourceSheetId
    */
   public function setSourceSheetId($sourceSheetId)
   {

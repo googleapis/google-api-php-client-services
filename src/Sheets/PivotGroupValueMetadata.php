@@ -20,6 +20,8 @@ namespace Google\Service\Sheets;
 class PivotGroupValueMetadata extends \Google\Model
 {
   /**
+   * True if the data corresponding to the value is collapsed.
+   *
    * @var bool
    */
   public $collapsed;
@@ -27,7 +29,9 @@ class PivotGroupValueMetadata extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param bool
+   * True if the data corresponding to the value is collapsed.
+   *
+   * @param bool $collapsed
    */
   public function setCollapsed($collapsed)
   {
@@ -41,7 +45,10 @@ class PivotGroupValueMetadata extends \Google\Model
     return $this->collapsed;
   }
   /**
-   * @param ExtendedValue
+   * The calculated value the metadata corresponds to. (Note that formulaValue
+   * is not valid, because the values will be calculated.)
+   *
+   * @param ExtendedValue $value
    */
   public function setValue(ExtendedValue $value)
   {

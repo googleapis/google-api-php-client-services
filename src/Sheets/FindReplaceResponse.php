@@ -20,28 +20,42 @@ namespace Google\Service\Sheets;
 class FindReplaceResponse extends \Google\Model
 {
   /**
+   * The number of formula cells changed.
+   *
    * @var int
    */
   public $formulasChanged;
   /**
+   * The number of occurrences (possibly multiple within a cell) changed. For
+   * example, if replacing `"e"` with `"o"` in `"Google Sheets"`, this would be
+   * `"3"` because `"Google Sheets"` -> `"Googlo Shoots"`.
+   *
    * @var int
    */
   public $occurrencesChanged;
   /**
+   * The number of rows changed.
+   *
    * @var int
    */
   public $rowsChanged;
   /**
+   * The number of sheets changed.
+   *
    * @var int
    */
   public $sheetsChanged;
   /**
+   * The number of non-formula cells changed.
+   *
    * @var int
    */
   public $valuesChanged;
 
   /**
-   * @param int
+   * The number of formula cells changed.
+   *
+   * @param int $formulasChanged
    */
   public function setFormulasChanged($formulasChanged)
   {
@@ -55,7 +69,11 @@ class FindReplaceResponse extends \Google\Model
     return $this->formulasChanged;
   }
   /**
-   * @param int
+   * The number of occurrences (possibly multiple within a cell) changed. For
+   * example, if replacing `"e"` with `"o"` in `"Google Sheets"`, this would be
+   * `"3"` because `"Google Sheets"` -> `"Googlo Shoots"`.
+   *
+   * @param int $occurrencesChanged
    */
   public function setOccurrencesChanged($occurrencesChanged)
   {
@@ -69,7 +87,9 @@ class FindReplaceResponse extends \Google\Model
     return $this->occurrencesChanged;
   }
   /**
-   * @param int
+   * The number of rows changed.
+   *
+   * @param int $rowsChanged
    */
   public function setRowsChanged($rowsChanged)
   {
@@ -83,7 +103,9 @@ class FindReplaceResponse extends \Google\Model
     return $this->rowsChanged;
   }
   /**
-   * @param int
+   * The number of sheets changed.
+   *
+   * @param int $sheetsChanged
    */
   public function setSheetsChanged($sheetsChanged)
   {
@@ -97,7 +119,9 @@ class FindReplaceResponse extends \Google\Model
     return $this->sheetsChanged;
   }
   /**
-   * @param int
+   * The number of non-formula cells changed.
+   *
+   * @param int $valuesChanged
    */
   public function setValuesChanged($valuesChanged)
   {

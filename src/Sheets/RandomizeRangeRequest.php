@@ -23,7 +23,9 @@ class RandomizeRangeRequest extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param GridRange
+   * The range to randomize.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {

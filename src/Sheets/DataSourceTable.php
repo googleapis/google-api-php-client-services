@@ -19,8 +19,24 @@ namespace Google\Service\Sheets;
 
 class DataSourceTable extends \Google\Collection
 {
+  /**
+   * The default column selection type, do not use.
+   */
+  public const COLUMN_SELECTION_TYPE_DATA_SOURCE_TABLE_COLUMN_SELECTION_TYPE_UNSPECIFIED = 'DATA_SOURCE_TABLE_COLUMN_SELECTION_TYPE_UNSPECIFIED';
+  /**
+   * Select columns specified by columns field.
+   */
+  public const COLUMN_SELECTION_TYPE_SELECTED = 'SELECTED';
+  /**
+   * Sync all current and future columns in the data source. If set, the data
+   * source table fetches all the columns in the data source at the time of
+   * refresh.
+   */
+  public const COLUMN_SELECTION_TYPE_SYNC_ALL = 'SYNC_ALL';
   protected $collection_key = 'sortSpecs';
   /**
+   * The type to select columns for the data source table. Defaults to SELECTED.
+   *
    * @var string
    */
   public $columnSelectionType;
@@ -29,12 +45,17 @@ class DataSourceTable extends \Google\Collection
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   /**
+   * The ID of the data source the data source table is associated with.
+   *
    * @var string
    */
   public $dataSourceId;
   protected $filterSpecsType = FilterSpec::class;
   protected $filterSpecsDataType = 'array';
   /**
+   * The limit of rows to return. If not set, a default limit is applied. Please
+   * refer to the Sheets editor for the default and max limit.
+   *
    * @var int
    */
   public $rowLimit;
@@ -42,21 +63,29 @@ class DataSourceTable extends \Google\Collection
   protected $sortSpecsDataType = 'array';
 
   /**
-   * @param string
+   * The type to select columns for the data source table. Defaults to SELECTED.
+   *
+   * Accepted values: DATA_SOURCE_TABLE_COLUMN_SELECTION_TYPE_UNSPECIFIED,
+   * SELECTED, SYNC_ALL
+   *
+   * @param self::COLUMN_SELECTION_TYPE_* $columnSelectionType
    */
   public function setColumnSelectionType($columnSelectionType)
   {
     $this->columnSelectionType = $columnSelectionType;
   }
   /**
-   * @return string
+   * @return self::COLUMN_SELECTION_TYPE_*
    */
   public function getColumnSelectionType()
   {
     return $this->columnSelectionType;
   }
   /**
-   * @param DataSourceColumnReference[]
+   * Columns selected for the data source table. The column_selection_type must
+   * be SELECTED.
+   *
+   * @param DataSourceColumnReference[] $columns
    */
   public function setColumns($columns)
   {
@@ -70,7 +99,9 @@ class DataSourceTable extends \Google\Collection
     return $this->columns;
   }
   /**
-   * @param DataExecutionStatus
+   * Output only. The data execution status.
+   *
+   * @param DataExecutionStatus $dataExecutionStatus
    */
   public function setDataExecutionStatus(DataExecutionStatus $dataExecutionStatus)
   {
@@ -84,7 +115,9 @@ class DataSourceTable extends \Google\Collection
     return $this->dataExecutionStatus;
   }
   /**
-   * @param string
+   * The ID of the data source the data source table is associated with.
+   *
+   * @param string $dataSourceId
    */
   public function setDataSourceId($dataSourceId)
   {
@@ -98,7 +131,9 @@ class DataSourceTable extends \Google\Collection
     return $this->dataSourceId;
   }
   /**
-   * @param FilterSpec[]
+   * Filter specifications in the data source table.
+   *
+   * @param FilterSpec[] $filterSpecs
    */
   public function setFilterSpecs($filterSpecs)
   {
@@ -112,7 +147,10 @@ class DataSourceTable extends \Google\Collection
     return $this->filterSpecs;
   }
   /**
-   * @param int
+   * The limit of rows to return. If not set, a default limit is applied. Please
+   * refer to the Sheets editor for the default and max limit.
+   *
+   * @param int $rowLimit
    */
   public function setRowLimit($rowLimit)
   {
@@ -126,7 +164,10 @@ class DataSourceTable extends \Google\Collection
     return $this->rowLimit;
   }
   /**
-   * @param SortSpec[]
+   * Sort specifications in the data source table. The result of the data source
+   * table is sorted based on the sort specifications in order.
+   *
+   * @param SortSpec[] $sortSpecs
    */
   public function setSortSpecs($sortSpecs)
   {

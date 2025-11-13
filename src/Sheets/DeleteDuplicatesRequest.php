@@ -26,7 +26,10 @@ class DeleteDuplicatesRequest extends \Google\Collection
   protected $rangeDataType = '';
 
   /**
-   * @param DimensionRange[]
+   * The columns in the range to analyze for duplicate values. If no columns are
+   * selected then all columns are analyzed for duplicates.
+   *
+   * @param DimensionRange[] $comparisonColumns
    */
   public function setComparisonColumns($comparisonColumns)
   {
@@ -40,7 +43,9 @@ class DeleteDuplicatesRequest extends \Google\Collection
     return $this->comparisonColumns;
   }
   /**
-   * @param GridRange
+   * The range to remove duplicates rows from.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {

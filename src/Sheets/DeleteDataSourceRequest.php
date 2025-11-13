@@ -20,12 +20,16 @@ namespace Google\Service\Sheets;
 class DeleteDataSourceRequest extends \Google\Model
 {
   /**
+   * The ID of the data source to delete.
+   *
    * @var string
    */
   public $dataSourceId;
 
   /**
-   * @param string
+   * The ID of the data source to delete.
+   *
+   * @param string $dataSourceId
    */
   public function setDataSourceId($dataSourceId)
   {

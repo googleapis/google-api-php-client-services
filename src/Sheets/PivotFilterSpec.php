@@ -20,6 +20,8 @@ namespace Google\Service\Sheets;
 class PivotFilterSpec extends \Google\Model
 {
   /**
+   * The zero-based column offset of the source range.
+   *
    * @var int
    */
   public $columnOffsetIndex;
@@ -29,7 +31,9 @@ class PivotFilterSpec extends \Google\Model
   protected $filterCriteriaDataType = '';
 
   /**
-   * @param int
+   * The zero-based column offset of the source range.
+   *
+   * @param int $columnOffsetIndex
    */
   public function setColumnOffsetIndex($columnOffsetIndex)
   {
@@ -43,7 +47,9 @@ class PivotFilterSpec extends \Google\Model
     return $this->columnOffsetIndex;
   }
   /**
-   * @param DataSourceColumnReference
+   * The reference to the data source column.
+   *
+   * @param DataSourceColumnReference $dataSourceColumnReference
    */
   public function setDataSourceColumnReference(DataSourceColumnReference $dataSourceColumnReference)
   {
@@ -57,7 +63,9 @@ class PivotFilterSpec extends \Google\Model
     return $this->dataSourceColumnReference;
   }
   /**
-   * @param PivotFilterCriteria
+   * The criteria for the column.
+   *
+   * @param PivotFilterCriteria $filterCriteria
    */
   public function setFilterCriteria(PivotFilterCriteria $filterCriteria)
   {

@@ -20,28 +20,40 @@ namespace Google\Service\Sheets;
 class GridRange extends \Google\Model
 {
   /**
+   * The end column (exclusive) of the range, or not set if unbounded.
+   *
    * @var int
    */
   public $endColumnIndex;
   /**
+   * The end row (exclusive) of the range, or not set if unbounded.
+   *
    * @var int
    */
   public $endRowIndex;
   /**
+   * The sheet this range is on.
+   *
    * @var int
    */
   public $sheetId;
   /**
+   * The start column (inclusive) of the range, or not set if unbounded.
+   *
    * @var int
    */
   public $startColumnIndex;
   /**
+   * The start row (inclusive) of the range, or not set if unbounded.
+   *
    * @var int
    */
   public $startRowIndex;
 
   /**
-   * @param int
+   * The end column (exclusive) of the range, or not set if unbounded.
+   *
+   * @param int $endColumnIndex
    */
   public function setEndColumnIndex($endColumnIndex)
   {
@@ -55,7 +67,9 @@ class GridRange extends \Google\Model
     return $this->endColumnIndex;
   }
   /**
-   * @param int
+   * The end row (exclusive) of the range, or not set if unbounded.
+   *
+   * @param int $endRowIndex
    */
   public function setEndRowIndex($endRowIndex)
   {
@@ -69,7 +83,9 @@ class GridRange extends \Google\Model
     return $this->endRowIndex;
   }
   /**
-   * @param int
+   * The sheet this range is on.
+   *
+   * @param int $sheetId
    */
   public function setSheetId($sheetId)
   {
@@ -83,7 +99,9 @@ class GridRange extends \Google\Model
     return $this->sheetId;
   }
   /**
-   * @param int
+   * The start column (inclusive) of the range, or not set if unbounded.
+   *
+   * @param int $startColumnIndex
    */
   public function setStartColumnIndex($startColumnIndex)
   {
@@ -97,7 +115,9 @@ class GridRange extends \Google\Model
     return $this->startColumnIndex;
   }
   /**
-   * @param int
+   * The start row (inclusive) of the range, or not set if unbounded.
+   *
+   * @param int $startRowIndex
    */
   public function setStartRowIndex($startRowIndex)
   {

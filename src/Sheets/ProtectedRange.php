@@ -21,38 +21,61 @@ class ProtectedRange extends \Google\Collection
 {
   protected $collection_key = 'unprotectedRanges';
   /**
+   * The description of this protected range.
+   *
    * @var string
    */
   public $description;
   protected $editorsType = Editors::class;
   protected $editorsDataType = '';
   /**
+   * The named range this protected range is backed by, if any. When writing,
+   * only one of range or named_range_id or table_id may be set.
+   *
    * @var string
    */
   public $namedRangeId;
   /**
+   * The ID of the protected range. This field is read-only.
+   *
    * @var int
    */
   public $protectedRangeId;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
   /**
+   * True if the user who requested this protected range can edit the protected
+   * area. This field is read-only.
+   *
    * @var bool
    */
   public $requestingUserCanEdit;
   /**
+   * The table this protected range is backed by, if any. When writing, only one
+   * of range or named_range_id or table_id may be set.
+   *
    * @var string
    */
   public $tableId;
   protected $unprotectedRangesType = GridRange::class;
   protected $unprotectedRangesDataType = 'array';
   /**
+   * True if this protected range will show a warning when editing. Warning-
+   * based protection means that every user can edit data in the protected
+   * range, except editing will prompt a warning asking the user to confirm the
+   * edit. When writing: if this field is true, then editors are ignored.
+   * Additionally, if this field is changed from true to false and the `editors`
+   * field is not set (nor included in the field mask), then the editors will be
+   * set to all the editors in the document.
+   *
    * @var bool
    */
   public $warningOnly;
 
   /**
-   * @param string
+   * The description of this protected range.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -66,7 +89,11 @@ class ProtectedRange extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param Editors
+   * The users and groups with edit access to the protected range. This field is
+   * only visible to users with edit access to the protected range and the
+   * document. Editors are not supported with warning_only protection.
+   *
+   * @param Editors $editors
    */
   public function setEditors(Editors $editors)
   {
@@ -80,7 +107,10 @@ class ProtectedRange extends \Google\Collection
     return $this->editors;
   }
   /**
-   * @param string
+   * The named range this protected range is backed by, if any. When writing,
+   * only one of range or named_range_id or table_id may be set.
+   *
+   * @param string $namedRangeId
    */
   public function setNamedRangeId($namedRangeId)
   {
@@ -94,7 +124,9 @@ class ProtectedRange extends \Google\Collection
     return $this->namedRangeId;
   }
   /**
-   * @param int
+   * The ID of the protected range. This field is read-only.
+   *
+   * @param int $protectedRangeId
    */
   public function setProtectedRangeId($protectedRangeId)
   {
@@ -108,7 +140,11 @@ class ProtectedRange extends \Google\Collection
     return $this->protectedRangeId;
   }
   /**
-   * @param GridRange
+   * The range that is being protected. The range may be fully unbounded, in
+   * which case this is considered a protected sheet. When writing, only one of
+   * range or named_range_id or table_id may be set.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {
@@ -122,7 +158,10 @@ class ProtectedRange extends \Google\Collection
     return $this->range;
   }
   /**
-   * @param bool
+   * True if the user who requested this protected range can edit the protected
+   * area. This field is read-only.
+   *
+   * @param bool $requestingUserCanEdit
    */
   public function setRequestingUserCanEdit($requestingUserCanEdit)
   {
@@ -136,7 +175,10 @@ class ProtectedRange extends \Google\Collection
     return $this->requestingUserCanEdit;
   }
   /**
-   * @param string
+   * The table this protected range is backed by, if any. When writing, only one
+   * of range or named_range_id or table_id may be set.
+   *
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {
@@ -150,7 +192,10 @@ class ProtectedRange extends \Google\Collection
     return $this->tableId;
   }
   /**
-   * @param GridRange[]
+   * The list of unprotected ranges within a protected sheet. Unprotected ranges
+   * are only supported on protected sheets.
+   *
+   * @param GridRange[] $unprotectedRanges
    */
   public function setUnprotectedRanges($unprotectedRanges)
   {
@@ -164,7 +209,15 @@ class ProtectedRange extends \Google\Collection
     return $this->unprotectedRanges;
   }
   /**
-   * @param bool
+   * True if this protected range will show a warning when editing. Warning-
+   * based protection means that every user can edit data in the protected
+   * range, except editing will prompt a warning asking the user to confirm the
+   * edit. When writing: if this field is true, then editors are ignored.
+   * Additionally, if this field is changed from true to false and the `editors`
+   * field is not set (nor included in the field mask), then the editors will be
+   * set to all the editors in the document.
+   *
+   * @param bool $warningOnly
    */
   public function setWarningOnly($warningOnly)
   {

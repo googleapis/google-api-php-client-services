@@ -20,20 +20,28 @@ namespace Google\Service\Sheets;
 class GridCoordinate extends \Google\Model
 {
   /**
+   * The column index of the coordinate.
+   *
    * @var int
    */
   public $columnIndex;
   /**
+   * The row index of the coordinate.
+   *
    * @var int
    */
   public $rowIndex;
   /**
+   * The sheet this coordinate is on.
+   *
    * @var int
    */
   public $sheetId;
 
   /**
-   * @param int
+   * The column index of the coordinate.
+   *
+   * @param int $columnIndex
    */
   public function setColumnIndex($columnIndex)
   {
@@ -47,7 +55,9 @@ class GridCoordinate extends \Google\Model
     return $this->columnIndex;
   }
   /**
-   * @param int
+   * The row index of the coordinate.
+   *
+   * @param int $rowIndex
    */
   public function setRowIndex($rowIndex)
   {
@@ -61,7 +71,9 @@ class GridCoordinate extends \Google\Model
     return $this->rowIndex;
   }
   /**
-   * @param int
+   * The sheet this coordinate is on.
+   *
+   * @param int $sheetId
    */
   public function setSheetId($sheetId)
   {

@@ -20,30 +20,79 @@ namespace Google\Service\Sheets;
 class LineStyle extends \Google\Model
 {
   /**
+   * Default value, do not use.
+   */
+  public const TYPE_LINE_DASH_TYPE_UNSPECIFIED = 'LINE_DASH_TYPE_UNSPECIFIED';
+  /**
+   * No dash type, which is equivalent to a non-visible line.
+   */
+  public const TYPE_INVISIBLE = 'INVISIBLE';
+  /**
+   * A custom dash for a line. Modifying the exact custom dash style is
+   * currently unsupported.
+   */
+  public const TYPE_CUSTOM = 'CUSTOM';
+  /**
+   * A solid line.
+   */
+  public const TYPE_SOLID = 'SOLID';
+  /**
+   * A dotted line.
+   */
+  public const TYPE_DOTTED = 'DOTTED';
+  /**
+   * A dashed line where the dashes have "medium" length.
+   */
+  public const TYPE_MEDIUM_DASHED = 'MEDIUM_DASHED';
+  /**
+   * A line that alternates between a "medium" dash and a dot.
+   */
+  public const TYPE_MEDIUM_DASHED_DOTTED = 'MEDIUM_DASHED_DOTTED';
+  /**
+   * A dashed line where the dashes have "long" length.
+   */
+  public const TYPE_LONG_DASHED = 'LONG_DASHED';
+  /**
+   * A line that alternates between a "long" dash and a dot.
+   */
+  public const TYPE_LONG_DASHED_DOTTED = 'LONG_DASHED_DOTTED';
+  /**
+   * The dash type of the line.
+   *
    * @var string
    */
   public $type;
   /**
+   * The thickness of the line, in px.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param string
+   * The dash type of the line.
+   *
+   * Accepted values: LINE_DASH_TYPE_UNSPECIFIED, INVISIBLE, CUSTOM, SOLID,
+   * DOTTED, MEDIUM_DASHED, MEDIUM_DASHED_DOTTED, LONG_DASHED,
+   * LONG_DASHED_DOTTED
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param int
+   * The thickness of the line, in px.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

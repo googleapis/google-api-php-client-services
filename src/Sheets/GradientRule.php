@@ -27,7 +27,9 @@ class GradientRule extends \Google\Model
   protected $minpointDataType = '';
 
   /**
-   * @param InterpolationPoint
+   * The final interpolation point.
+   *
+   * @param InterpolationPoint $maxpoint
    */
   public function setMaxpoint(InterpolationPoint $maxpoint)
   {
@@ -41,7 +43,9 @@ class GradientRule extends \Google\Model
     return $this->maxpoint;
   }
   /**
-   * @param InterpolationPoint
+   * An optional midway interpolation point.
+   *
+   * @param InterpolationPoint $midpoint
    */
   public function setMidpoint(InterpolationPoint $midpoint)
   {
@@ -55,7 +59,9 @@ class GradientRule extends \Google\Model
     return $this->midpoint;
   }
   /**
-   * @param InterpolationPoint
+   * The starting interpolation point.
+   *
+   * @param InterpolationPoint $minpoint
    */
   public function setMinpoint(InterpolationPoint $minpoint)
   {

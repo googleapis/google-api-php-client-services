@@ -20,12 +20,16 @@ namespace Google\Service\Sheets;
 class DeleteProtectedRangeRequest extends \Google\Model
 {
   /**
+   * The ID of the protected range to delete.
+   *
    * @var int
    */
   public $protectedRangeId;
 
   /**
-   * @param int
+   * The ID of the protected range to delete.
+   *
+   * @param int $protectedRangeId
    */
   public function setProtectedRangeId($protectedRangeId)
   {

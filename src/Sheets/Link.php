@@ -20,12 +20,16 @@ namespace Google\Service\Sheets;
 class Link extends \Google\Model
 {
   /**
+   * The link identifier.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The link identifier.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

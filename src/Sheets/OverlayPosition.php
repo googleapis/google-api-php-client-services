@@ -22,24 +22,36 @@ class OverlayPosition extends \Google\Model
   protected $anchorCellType = GridCoordinate::class;
   protected $anchorCellDataType = '';
   /**
+   * The height of the object, in pixels. Defaults to 371.
+   *
    * @var int
    */
   public $heightPixels;
   /**
+   * The horizontal offset, in pixels, that the object is offset from the anchor
+   * cell.
+   *
    * @var int
    */
   public $offsetXPixels;
   /**
+   * The vertical offset, in pixels, that the object is offset from the anchor
+   * cell.
+   *
    * @var int
    */
   public $offsetYPixels;
   /**
+   * The width of the object, in pixels. Defaults to 600.
+   *
    * @var int
    */
   public $widthPixels;
 
   /**
-   * @param GridCoordinate
+   * The cell the object is anchored to.
+   *
+   * @param GridCoordinate $anchorCell
    */
   public function setAnchorCell(GridCoordinate $anchorCell)
   {
@@ -53,7 +65,9 @@ class OverlayPosition extends \Google\Model
     return $this->anchorCell;
   }
   /**
-   * @param int
+   * The height of the object, in pixels. Defaults to 371.
+   *
+   * @param int $heightPixels
    */
   public function setHeightPixels($heightPixels)
   {
@@ -67,7 +81,10 @@ class OverlayPosition extends \Google\Model
     return $this->heightPixels;
   }
   /**
-   * @param int
+   * The horizontal offset, in pixels, that the object is offset from the anchor
+   * cell.
+   *
+   * @param int $offsetXPixels
    */
   public function setOffsetXPixels($offsetXPixels)
   {
@@ -81,7 +98,10 @@ class OverlayPosition extends \Google\Model
     return $this->offsetXPixels;
   }
   /**
-   * @param int
+   * The vertical offset, in pixels, that the object is offset from the anchor
+   * cell.
+   *
+   * @param int $offsetYPixels
    */
   public function setOffsetYPixels($offsetYPixels)
   {
@@ -95,7 +115,9 @@ class OverlayPosition extends \Google\Model
     return $this->offsetYPixels;
   }
   /**
-   * @param int
+   * The width of the object, in pixels. Defaults to 600.
+   *
+   * @param int $widthPixels
    */
   public function setWidthPixels($widthPixels)
   {

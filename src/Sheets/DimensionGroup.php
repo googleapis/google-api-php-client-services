@@ -20,10 +20,20 @@ namespace Google\Service\Sheets;
 class DimensionGroup extends \Google\Model
 {
   /**
+   * This field is true if this group is collapsed. A collapsed group remains
+   * collapsed if an overlapping group at a shallower depth is expanded. A true
+   * value does not imply that all dimensions within the group are hidden, since
+   * a dimension's visibility can change independently from this group property.
+   * However, when this property is updated, all dimensions within it are set to
+   * hidden if this field is true, or set to visible if this field is false.
+   *
    * @var bool
    */
   public $collapsed;
   /**
+   * The depth of the group, representing how many groups have a range that
+   * wholly contains the range of this group.
+   *
    * @var int
    */
   public $depth;
@@ -31,7 +41,14 @@ class DimensionGroup extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param bool
+   * This field is true if this group is collapsed. A collapsed group remains
+   * collapsed if an overlapping group at a shallower depth is expanded. A true
+   * value does not imply that all dimensions within the group are hidden, since
+   * a dimension's visibility can change independently from this group property.
+   * However, when this property is updated, all dimensions within it are set to
+   * hidden if this field is true, or set to visible if this field is false.
+   *
+   * @param bool $collapsed
    */
   public function setCollapsed($collapsed)
   {
@@ -45,7 +62,10 @@ class DimensionGroup extends \Google\Model
     return $this->collapsed;
   }
   /**
-   * @param int
+   * The depth of the group, representing how many groups have a range that
+   * wholly contains the range of this group.
+   *
+   * @param int $depth
    */
   public function setDepth($depth)
   {
@@ -59,7 +79,9 @@ class DimensionGroup extends \Google\Model
     return $this->depth;
   }
   /**
-   * @param DimensionRange
+   * The range over which this group exists.
+   *
+   * @param DimensionRange $range
    */
   public function setRange(DimensionRange $range)
   {

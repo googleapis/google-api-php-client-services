@@ -25,7 +25,10 @@ class KeyValueFormat extends \Google\Model
   protected $textFormatDataType = '';
 
   /**
-   * @param TextPosition
+   * Specifies the horizontal text positioning of key value. This field is
+   * optional. If not specified, default positioning is used.
+   *
+   * @param TextPosition $position
    */
   public function setPosition(TextPosition $position)
   {
@@ -39,7 +42,9 @@ class KeyValueFormat extends \Google\Model
     return $this->position;
   }
   /**
-   * @param TextFormat
+   * Text formatting options for key value. The link field is not supported.
+   *
+   * @param TextFormat $textFormat
    */
   public function setTextFormat(TextFormat $textFormat)
   {

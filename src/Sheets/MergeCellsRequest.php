@@ -20,6 +20,20 @@ namespace Google\Service\Sheets;
 class MergeCellsRequest extends \Google\Model
 {
   /**
+   * Create a single merge from the range
+   */
+  public const MERGE_TYPE_MERGE_ALL = 'MERGE_ALL';
+  /**
+   * Create a merge for each column in the range
+   */
+  public const MERGE_TYPE_MERGE_COLUMNS = 'MERGE_COLUMNS';
+  /**
+   * Create a merge for each row in the range
+   */
+  public const MERGE_TYPE_MERGE_ROWS = 'MERGE_ROWS';
+  /**
+   * How the cells should be merged.
+   *
    * @var string
    */
   public $mergeType;
@@ -27,21 +41,27 @@ class MergeCellsRequest extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param string
+   * How the cells should be merged.
+   *
+   * Accepted values: MERGE_ALL, MERGE_COLUMNS, MERGE_ROWS
+   *
+   * @param self::MERGE_TYPE_* $mergeType
    */
   public function setMergeType($mergeType)
   {
     $this->mergeType = $mergeType;
   }
   /**
-   * @return string
+   * @return self::MERGE_TYPE_*
    */
   public function getMergeType()
   {
     return $this->mergeType;
   }
   /**
-   * @param GridRange
+   * The range of cells to merge.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {

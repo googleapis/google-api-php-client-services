@@ -27,13 +27,18 @@ class HistogramSeries extends \Google\Model
   protected $dataDataType = '';
 
   /**
-   * @param Color
+   * The color of the column representing this series in each bucket. This field
+   * is optional. Deprecated: Use bar_color_style.
+   *
+   * @deprecated
+   * @param Color $barColor
    */
   public function setBarColor(Color $barColor)
   {
     $this->barColor = $barColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getBarColor()
@@ -41,7 +46,10 @@ class HistogramSeries extends \Google\Model
     return $this->barColor;
   }
   /**
-   * @param ColorStyle
+   * The color of the column representing this series in each bucket. This field
+   * is optional. If bar_color is also set, this field takes precedence.
+   *
+   * @param ColorStyle $barColorStyle
    */
   public function setBarColorStyle(ColorStyle $barColorStyle)
   {
@@ -55,7 +63,9 @@ class HistogramSeries extends \Google\Model
     return $this->barColorStyle;
   }
   /**
-   * @param ChartData
+   * The data for this histogram series.
+   *
+   * @param ChartData $data
    */
   public function setData(ChartData $data)
   {

@@ -20,20 +20,68 @@ namespace Google\Service\Sheets;
 class PointStyle extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const SHAPE_POINT_SHAPE_UNSPECIFIED = 'POINT_SHAPE_UNSPECIFIED';
+  /**
+   * A circle shape.
+   */
+  public const SHAPE_CIRCLE = 'CIRCLE';
+  /**
+   * A diamond shape.
+   */
+  public const SHAPE_DIAMOND = 'DIAMOND';
+  /**
+   * A hexagon shape.
+   */
+  public const SHAPE_HEXAGON = 'HEXAGON';
+  /**
+   * A pentagon shape.
+   */
+  public const SHAPE_PENTAGON = 'PENTAGON';
+  /**
+   * A square shape.
+   */
+  public const SHAPE_SQUARE = 'SQUARE';
+  /**
+   * A star shape.
+   */
+  public const SHAPE_STAR = 'STAR';
+  /**
+   * A triangle shape.
+   */
+  public const SHAPE_TRIANGLE = 'TRIANGLE';
+  /**
+   * An x-mark shape.
+   */
+  public const SHAPE_X_MARK = 'X_MARK';
+  /**
+   * The point shape. If empty or unspecified, a default shape is used.
+   *
    * @var string
    */
   public $shape;
+  /**
+   * The point size. If empty, a default size is used.
+   *
+   * @var 
+   */
   public $size;
 
   /**
-   * @param string
+   * The point shape. If empty or unspecified, a default shape is used.
+   *
+   * Accepted values: POINT_SHAPE_UNSPECIFIED, CIRCLE, DIAMOND, HEXAGON,
+   * PENTAGON, SQUARE, STAR, TRIANGLE, X_MARK
+   *
+   * @param self::SHAPE_* $shape
    */
   public function setShape($shape)
   {
     $this->shape = $shape;
   }
   /**
-   * @return string
+   * @return self::SHAPE_*
    */
   public function getShape()
   {

@@ -23,7 +23,9 @@ class DeleteDimensionRequest extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param DimensionRange
+   * The dimensions to delete from the sheet.
+   *
+   * @param DimensionRange $range
    */
   public function setRange(DimensionRange $range)
   {

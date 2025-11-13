@@ -28,7 +28,9 @@ class DataSourceSpec extends \Google\Collection
   protected $parametersDataType = 'array';
 
   /**
-   * @param BigQueryDataSourceSpec
+   * A BigQueryDataSourceSpec.
+   *
+   * @param BigQueryDataSourceSpec $bigQuery
    */
   public function setBigQuery(BigQueryDataSourceSpec $bigQuery)
   {
@@ -42,7 +44,9 @@ class DataSourceSpec extends \Google\Collection
     return $this->bigQuery;
   }
   /**
-   * @param LookerDataSourceSpec
+   * A LookerDatasourceSpec.
+   *
+   * @param LookerDataSourceSpec $looker
    */
   public function setLooker(LookerDataSourceSpec $looker)
   {
@@ -56,7 +60,9 @@ class DataSourceSpec extends \Google\Collection
     return $this->looker;
   }
   /**
-   * @param DataSourceParameter[]
+   * The parameters of the data source, used when querying the data source.
+   *
+   * @param DataSourceParameter[] $parameters
    */
   public function setParameters($parameters)
   {

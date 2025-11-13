@@ -24,7 +24,9 @@ class DeleteDeveloperMetadataResponse extends \Google\Collection
   protected $deletedDeveloperMetadataDataType = 'array';
 
   /**
-   * @param DeveloperMetadata[]
+   * The metadata that was deleted.
+   *
+   * @param DeveloperMetadata[] $deletedDeveloperMetadata
    */
   public function setDeletedDeveloperMetadata($deletedDeveloperMetadata)
   {

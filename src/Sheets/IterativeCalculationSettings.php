@@ -19,8 +19,17 @@ namespace Google\Service\Sheets;
 
 class IterativeCalculationSettings extends \Google\Model
 {
+  /**
+   * When iterative calculation is enabled and successive results differ by less
+   * than this threshold value, the calculation rounds stop.
+   *
+   * @var 
+   */
   public $convergenceThreshold;
   /**
+   * When iterative calculation is enabled, the maximum number of calculation
+   * rounds to perform.
+   *
    * @var int
    */
   public $maxIterations;
@@ -34,7 +43,10 @@ class IterativeCalculationSettings extends \Google\Model
     return $this->convergenceThreshold;
   }
   /**
-   * @param int
+   * When iterative calculation is enabled, the maximum number of calculation
+   * rounds to perform.
+   *
+   * @param int $maxIterations
    */
   public function setMaxIterations($maxIterations)
   {

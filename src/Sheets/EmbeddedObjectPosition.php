@@ -20,18 +20,27 @@ namespace Google\Service\Sheets;
 class EmbeddedObjectPosition extends \Google\Model
 {
   /**
+   * If true, the embedded object is put on a new sheet whose ID is chosen for
+   * you. Used only when writing.
+   *
    * @var bool
    */
   public $newSheet;
   protected $overlayPositionType = OverlayPosition::class;
   protected $overlayPositionDataType = '';
   /**
+   * The sheet this is on. Set only if the embedded object is on its own sheet.
+   * Must be non-negative.
+   *
    * @var int
    */
   public $sheetId;
 
   /**
-   * @param bool
+   * If true, the embedded object is put on a new sheet whose ID is chosen for
+   * you. Used only when writing.
+   *
+   * @param bool $newSheet
    */
   public function setNewSheet($newSheet)
   {
@@ -45,7 +54,9 @@ class EmbeddedObjectPosition extends \Google\Model
     return $this->newSheet;
   }
   /**
-   * @param OverlayPosition
+   * The position at which the object is overlaid on top of a grid.
+   *
+   * @param OverlayPosition $overlayPosition
    */
   public function setOverlayPosition(OverlayPosition $overlayPosition)
   {
@@ -59,7 +70,10 @@ class EmbeddedObjectPosition extends \Google\Model
     return $this->overlayPosition;
   }
   /**
-   * @param int
+   * The sheet this is on. Set only if the embedded object is on its own sheet.
+   * Must be non-negative.
+   *
+   * @param int $sheetId
    */
   public function setSheetId($sheetId)
   {

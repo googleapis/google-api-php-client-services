@@ -20,14 +20,23 @@ namespace Google\Service\Sheets;
 class RefreshDataSourceRequest extends \Google\Model
 {
   /**
+   * Reference to a DataSource. If specified, refreshes all associated data
+   * source objects for the data source.
+   *
    * @var string
    */
   public $dataSourceId;
   /**
+   * Refreshes the data source objects regardless of the current state. If not
+   * set and a referenced data source object was in error state, the refresh
+   * will fail immediately.
+   *
    * @var bool
    */
   public $force;
   /**
+   * Refreshes all existing data source objects in the spreadsheet.
+   *
    * @var bool
    */
   public $isAll;
@@ -35,7 +44,10 @@ class RefreshDataSourceRequest extends \Google\Model
   protected $referencesDataType = '';
 
   /**
-   * @param string
+   * Reference to a DataSource. If specified, refreshes all associated data
+   * source objects for the data source.
+   *
+   * @param string $dataSourceId
    */
   public function setDataSourceId($dataSourceId)
   {
@@ -49,7 +61,11 @@ class RefreshDataSourceRequest extends \Google\Model
     return $this->dataSourceId;
   }
   /**
-   * @param bool
+   * Refreshes the data source objects regardless of the current state. If not
+   * set and a referenced data source object was in error state, the refresh
+   * will fail immediately.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -63,7 +79,9 @@ class RefreshDataSourceRequest extends \Google\Model
     return $this->force;
   }
   /**
-   * @param bool
+   * Refreshes all existing data source objects in the spreadsheet.
+   *
+   * @param bool $isAll
    */
   public function setIsAll($isAll)
   {
@@ -77,7 +95,9 @@ class RefreshDataSourceRequest extends \Google\Model
     return $this->isAll;
   }
   /**
-   * @param DataSourceObjectReferences
+   * References to data source objects to refresh.
+   *
+   * @param DataSourceObjectReferences $references
    */
   public function setReferences(DataSourceObjectReferences $references)
   {

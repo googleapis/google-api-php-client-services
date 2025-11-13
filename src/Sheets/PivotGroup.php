@@ -19,6 +19,18 @@ namespace Google\Service\Sheets;
 
 class PivotGroup extends \Google\Collection
 {
+  /**
+   * Default value, do not use this.
+   */
+  public const SORT_ORDER_SORT_ORDER_UNSPECIFIED = 'SORT_ORDER_UNSPECIFIED';
+  /**
+   * Sort ascending.
+   */
+  public const SORT_ORDER_ASCENDING = 'ASCENDING';
+  /**
+   * Sort descending.
+   */
+  public const SORT_ORDER_DESCENDING = 'DESCENDING';
   protected $collection_key = 'valueMetadata';
   protected $dataSourceColumnReferenceType = DataSourceColumnReference::class;
   protected $dataSourceColumnReferenceDataType = '';
@@ -27,22 +39,52 @@ class PivotGroup extends \Google\Collection
   protected $groupRuleType = PivotGroupRule::class;
   protected $groupRuleDataType = '';
   /**
+   * The labels to use for the row/column groups which can be customized. For
+   * example, in the following pivot table, the row label is `Region` (which
+   * could be renamed to `State`) and the column label is `Product` (which could
+   * be renamed `Item`). Pivot tables created before December 2017 do not have
+   * header labels. If you'd like to add header labels to an existing pivot
+   * table, please delete the existing pivot table and then create a new pivot
+   * table with same parameters. +--------------+---------+-------+ | SUM of
+   * Units | Product | | | Region | Pen | Paper |
+   * +--------------+---------+-------+ | New York | 345 | 98 | | Oregon | 234 |
+   * 123 | | Tennessee | 531 | 415 | +--------------+---------+-------+ | Grand
+   * Total | 1110 | 636 | +--------------+---------+-------+
+   *
    * @var string
    */
   public $label;
   /**
+   * True if the headings in this pivot group should be repeated. This is only
+   * valid for row groupings and is ignored by columns. By default, we minimize
+   * repetition of headings by not showing higher level headings where they are
+   * the same. For example, even though the third row below corresponds to "Q1
+   * Mar", "Q1" is not shown because it is redundant with previous rows. Setting
+   * repeat_headings to true would cause "Q1" to be repeated for "Feb" and
+   * "Mar". +--------------+ | Q1 | Jan | | | Feb | | | Mar | +--------+-----+ |
+   * Q1 Total | +--------------+
+   *
    * @var bool
    */
   public $repeatHeadings;
   /**
+   * True if the pivot table should include the totals for this grouping.
+   *
    * @var bool
    */
   public $showTotals;
   /**
+   * The order the values in this group should be sorted.
+   *
    * @var string
    */
   public $sortOrder;
   /**
+   * The column offset of the source range that this grouping is based on. For
+   * example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means
+   * this group refers to column `C`, whereas the offset `1` would refer to
+   * column `D`.
+   *
    * @var int
    */
   public $sourceColumnOffset;
@@ -52,7 +94,9 @@ class PivotGroup extends \Google\Collection
   protected $valueMetadataDataType = 'array';
 
   /**
-   * @param DataSourceColumnReference
+   * The reference to the data source column this grouping is based on.
+   *
+   * @param DataSourceColumnReference $dataSourceColumnReference
    */
   public function setDataSourceColumnReference(DataSourceColumnReference $dataSourceColumnReference)
   {
@@ -66,7 +110,9 @@ class PivotGroup extends \Google\Collection
     return $this->dataSourceColumnReference;
   }
   /**
-   * @param PivotGroupLimit
+   * The count limit on rows or columns to apply to this pivot group.
+   *
+   * @param PivotGroupLimit $groupLimit
    */
   public function setGroupLimit(PivotGroupLimit $groupLimit)
   {
@@ -80,7 +126,9 @@ class PivotGroup extends \Google\Collection
     return $this->groupLimit;
   }
   /**
-   * @param PivotGroupRule
+   * The group rule to apply to this row/column group.
+   *
+   * @param PivotGroupRule $groupRule
    */
   public function setGroupRule(PivotGroupRule $groupRule)
   {
@@ -94,7 +142,19 @@ class PivotGroup extends \Google\Collection
     return $this->groupRule;
   }
   /**
-   * @param string
+   * The labels to use for the row/column groups which can be customized. For
+   * example, in the following pivot table, the row label is `Region` (which
+   * could be renamed to `State`) and the column label is `Product` (which could
+   * be renamed `Item`). Pivot tables created before December 2017 do not have
+   * header labels. If you'd like to add header labels to an existing pivot
+   * table, please delete the existing pivot table and then create a new pivot
+   * table with same parameters. +--------------+---------+-------+ | SUM of
+   * Units | Product | | | Region | Pen | Paper |
+   * +--------------+---------+-------+ | New York | 345 | 98 | | Oregon | 234 |
+   * 123 | | Tennessee | 531 | 415 | +--------------+---------+-------+ | Grand
+   * Total | 1110 | 636 | +--------------+---------+-------+
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -108,7 +168,16 @@ class PivotGroup extends \Google\Collection
     return $this->label;
   }
   /**
-   * @param bool
+   * True if the headings in this pivot group should be repeated. This is only
+   * valid for row groupings and is ignored by columns. By default, we minimize
+   * repetition of headings by not showing higher level headings where they are
+   * the same. For example, even though the third row below corresponds to "Q1
+   * Mar", "Q1" is not shown because it is redundant with previous rows. Setting
+   * repeat_headings to true would cause "Q1" to be repeated for "Feb" and
+   * "Mar". +--------------+ | Q1 | Jan | | | Feb | | | Mar | +--------+-----+ |
+   * Q1 Total | +--------------+
+   *
+   * @param bool $repeatHeadings
    */
   public function setRepeatHeadings($repeatHeadings)
   {
@@ -122,7 +191,9 @@ class PivotGroup extends \Google\Collection
     return $this->repeatHeadings;
   }
   /**
-   * @param bool
+   * True if the pivot table should include the totals for this grouping.
+   *
+   * @param bool $showTotals
    */
   public function setShowTotals($showTotals)
   {
@@ -136,21 +207,30 @@ class PivotGroup extends \Google\Collection
     return $this->showTotals;
   }
   /**
-   * @param string
+   * The order the values in this group should be sorted.
+   *
+   * Accepted values: SORT_ORDER_UNSPECIFIED, ASCENDING, DESCENDING
+   *
+   * @param self::SORT_ORDER_* $sortOrder
    */
   public function setSortOrder($sortOrder)
   {
     $this->sortOrder = $sortOrder;
   }
   /**
-   * @return string
+   * @return self::SORT_ORDER_*
    */
   public function getSortOrder()
   {
     return $this->sortOrder;
   }
   /**
-   * @param int
+   * The column offset of the source range that this grouping is based on. For
+   * example, if the source was `C10:E15`, a `sourceColumnOffset` of `0` means
+   * this group refers to column `C`, whereas the offset `1` would refer to
+   * column `D`.
+   *
+   * @param int $sourceColumnOffset
    */
   public function setSourceColumnOffset($sourceColumnOffset)
   {
@@ -164,7 +244,10 @@ class PivotGroup extends \Google\Collection
     return $this->sourceColumnOffset;
   }
   /**
-   * @param PivotGroupSortValueBucket
+   * The bucket of the opposite pivot group to sort by. If not specified,
+   * sorting is alphabetical by this group's values.
+   *
+   * @param PivotGroupSortValueBucket $valueBucket
    */
   public function setValueBucket(PivotGroupSortValueBucket $valueBucket)
   {
@@ -178,7 +261,9 @@ class PivotGroup extends \Google\Collection
     return $this->valueBucket;
   }
   /**
-   * @param PivotGroupValueMetadata[]
+   * Metadata about values in the grouping.
+   *
+   * @param PivotGroupValueMetadata[] $valueMetadata
    */
   public function setValueMetadata($valueMetadata)
   {
