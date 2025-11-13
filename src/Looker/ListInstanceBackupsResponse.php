@@ -23,16 +23,24 @@ class ListInstanceBackupsResponse extends \Google\Collection
   protected $instanceBackupsType = InstanceBackup::class;
   protected $instanceBackupsDataType = 'array';
   /**
+   * If provided, a page token that can look up the next `page_size` results. If
+   * empty, the results list is exhausted.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param InstanceBackup[]
+   * The list of instances matching the request filters, up to the requested
+   * `page_size`.
+   *
+   * @param InstanceBackup[] $instanceBackups
    */
   public function setInstanceBackups($instanceBackups)
   {
@@ -46,7 +54,10 @@ class ListInstanceBackupsResponse extends \Google\Collection
     return $this->instanceBackups;
   }
   /**
-   * @param string
+   * If provided, a page token that can look up the next `page_size` results. If
+   * empty, the results list is exhausted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +71,9 @@ class ListInstanceBackupsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

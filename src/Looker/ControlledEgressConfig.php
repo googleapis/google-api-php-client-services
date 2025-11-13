@@ -21,16 +21,24 @@ class ControlledEgressConfig extends \Google\Collection
 {
   protected $collection_key = 'egressFqdns';
   /**
+   * Optional. List of fully qualified domain names to be added to the allowlist
+   * for outbound traffic.
+   *
    * @var string[]
    */
   public $egressFqdns;
   /**
+   * Optional. Whether marketplace is enabled.
+   *
    * @var bool
    */
   public $marketplaceEnabled;
 
   /**
-   * @param string[]
+   * Optional. List of fully qualified domain names to be added to the allowlist
+   * for outbound traffic.
+   *
+   * @param string[] $egressFqdns
    */
   public function setEgressFqdns($egressFqdns)
   {
@@ -44,7 +52,9 @@ class ControlledEgressConfig extends \Google\Collection
     return $this->egressFqdns;
   }
   /**
-   * @param bool
+   * Optional. Whether marketplace is enabled.
+   *
+   * @param bool $marketplaceEnabled
    */
   public function setMarketplaceEnabled($marketplaceEnabled)
   {

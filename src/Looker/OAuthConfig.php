@@ -20,16 +20,25 @@ namespace Google\Service\Looker;
 class OAuthConfig extends \Google\Model
 {
   /**
+   * Input only. Client ID from an external OAuth application. This is an input-
+   * only field, and thus will not be set in any responses.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * Input only. Client secret from an external OAuth application. This is an
+   * input-only field, and thus will not be set in any responses.
+   *
    * @var string
    */
   public $clientSecret;
 
   /**
-   * @param string
+   * Input only. Client ID from an external OAuth application. This is an input-
+   * only field, and thus will not be set in any responses.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -43,7 +52,10 @@ class OAuthConfig extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param string
+   * Input only. Client secret from an external OAuth application. This is an
+   * input-only field, and thus will not be set in any responses.
+   *
+   * @param string $clientSecret
    */
   public function setClientSecret($clientSecret)
   {

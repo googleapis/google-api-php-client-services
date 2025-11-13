@@ -23,16 +23,25 @@ class ListInstancesResponse extends \Google\Collection
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**
+   * If provided, a page token that can look up the next
+   * ListInstancesRequest.pageSize results. If empty, the results list is
+   * exhausted.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Instance[]
+   * The list of instances matching the request filters, up to the requested
+   * ListInstancesRequest.pageSize.
+   *
+   * @param Instance[] $instances
    */
   public function setInstances($instances)
   {
@@ -46,7 +55,11 @@ class ListInstancesResponse extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string
+   * If provided, a page token that can look up the next
+   * ListInstancesRequest.pageSize results. If empty, the results list is
+   * exhausted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +73,9 @@ class ListInstancesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

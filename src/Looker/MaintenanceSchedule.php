@@ -20,16 +20,22 @@ namespace Google\Service\Looker;
 class MaintenanceSchedule extends \Google\Model
 {
   /**
+   * The scheduled end time for the maintenance.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The scheduled start time for the maintenance.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The scheduled end time for the maintenance.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +49,9 @@ class MaintenanceSchedule extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The scheduled start time for the maintenance.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Looker;
 class RestoreInstanceRequest extends \Google\Model
 {
   /**
+   * Required. Backup being used to restore the instance Format: projects/{proje
+   * ct}/locations/{location}/instances/{instance}/backups/{backup}
+   *
    * @var string
    */
   public $backup;
 
   /**
-   * @param string
+   * Required. Backup being used to restore the instance Format: projects/{proje
+   * ct}/locations/{location}/instances/{instance}/backups/{backup}
+   *
+   * @param string $backup
    */
   public function setBackup($backup)
   {

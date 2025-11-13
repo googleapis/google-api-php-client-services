@@ -19,44 +19,94 @@ namespace Google\Service\Looker;
 
 class ServiceAttachment extends \Google\Collection
 {
+  /**
+   * Connection status is unspecified.
+   */
+  public const CONNECTION_STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * Connection is established and functioning normally.
+   */
+  public const CONNECTION_STATUS_ACCEPTED = 'ACCEPTED';
+  /**
+   * Connection is not established (Looker tenant project hasn't been
+   * allowlisted).
+   */
+  public const CONNECTION_STATUS_PENDING = 'PENDING';
+  /**
+   * Connection is not established (Looker tenant project is explicitly in
+   * reject list).
+   */
+  public const CONNECTION_STATUS_REJECTED = 'REJECTED';
+  /**
+   * Issue with target service attachment, e.g. NAT subnet is exhausted.
+   */
+  public const CONNECTION_STATUS_NEEDS_ATTENTION = 'NEEDS_ATTENTION';
+  /**
+   * Target service attachment does not exist. This status is a terminal state.
+   */
+  public const CONNECTION_STATUS_CLOSED = 'CLOSED';
   protected $collection_key = 'localFqdns';
   /**
+   * Output only. Connection status.
+   *
    * @var string
    */
   public $connectionStatus;
   /**
+   * Output only. Reason the service attachment creation failed. This value will
+   * only be populated if the service attachment encounters an issue during
+   * provisioning.
+   *
    * @var string
    */
   public $failureReason;
   /**
+   * Optional. Fully qualified domain name that will be used in the private DNS
+   * record created for the service attachment.
+   *
    * @var string
    */
   public $localFqdn;
   /**
+   * Optional. List of fully qualified domain names that will be used in the
+   * private DNS record created for the service attachment.
+   *
    * @var string[]
    */
   public $localFqdns;
   /**
+   * Required. URI of the service attachment to connect to. Format:
+   * projects/{project}/regions/{region}/serviceAttachments/{service_attachment}
+   *
    * @var string
    */
   public $targetServiceAttachmentUri;
 
   /**
-   * @param string
+   * Output only. Connection status.
+   *
+   * Accepted values: UNKNOWN, ACCEPTED, PENDING, REJECTED, NEEDS_ATTENTION,
+   * CLOSED
+   *
+   * @param self::CONNECTION_STATUS_* $connectionStatus
    */
   public function setConnectionStatus($connectionStatus)
   {
     $this->connectionStatus = $connectionStatus;
   }
   /**
-   * @return string
+   * @return self::CONNECTION_STATUS_*
    */
   public function getConnectionStatus()
   {
     return $this->connectionStatus;
   }
   /**
-   * @param string
+   * Output only. Reason the service attachment creation failed. This value will
+   * only be populated if the service attachment encounters an issue during
+   * provisioning.
+   *
+   * @param string $failureReason
    */
   public function setFailureReason($failureReason)
   {
@@ -70,7 +120,10 @@ class ServiceAttachment extends \Google\Collection
     return $this->failureReason;
   }
   /**
-   * @param string
+   * Optional. Fully qualified domain name that will be used in the private DNS
+   * record created for the service attachment.
+   *
+   * @param string $localFqdn
    */
   public function setLocalFqdn($localFqdn)
   {
@@ -84,7 +137,10 @@ class ServiceAttachment extends \Google\Collection
     return $this->localFqdn;
   }
   /**
-   * @param string[]
+   * Optional. List of fully qualified domain names that will be used in the
+   * private DNS record created for the service attachment.
+   *
+   * @param string[] $localFqdns
    */
   public function setLocalFqdns($localFqdns)
   {
@@ -98,7 +154,10 @@ class ServiceAttachment extends \Google\Collection
     return $this->localFqdns;
   }
   /**
-   * @param string
+   * Required. URI of the service attachment to connect to. Format:
+   * projects/{project}/regions/{region}/serviceAttachments/{service_attachment}
+   *
+   * @param string $targetServiceAttachmentUri
    */
   public function setTargetServiceAttachmentUri($targetServiceAttachmentUri)
   {
