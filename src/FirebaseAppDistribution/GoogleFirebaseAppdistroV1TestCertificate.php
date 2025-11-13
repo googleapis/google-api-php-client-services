@@ -20,20 +20,28 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1TestCertificate extends \Google\Model
 {
   /**
+   * Hex string of MD5 hash of the test certificate used to resign the AAB
+   *
    * @var string
    */
   public $hashMd5;
   /**
+   * Hex string of SHA1 hash of the test certificate used to resign the AAB
+   *
    * @var string
    */
   public $hashSha1;
   /**
+   * Hex string of SHA256 hash of the test certificate used to resign the AAB
+   *
    * @var string
    */
   public $hashSha256;
 
   /**
-   * @param string
+   * Hex string of MD5 hash of the test certificate used to resign the AAB
+   *
+   * @param string $hashMd5
    */
   public function setHashMd5($hashMd5)
   {
@@ -47,7 +55,9 @@ class GoogleFirebaseAppdistroV1TestCertificate extends \Google\Model
     return $this->hashMd5;
   }
   /**
-   * @param string
+   * Hex string of SHA1 hash of the test certificate used to resign the AAB
+   *
+   * @param string $hashSha1
    */
   public function setHashSha1($hashSha1)
   {
@@ -61,7 +71,9 @@ class GoogleFirebaseAppdistroV1TestCertificate extends \Google\Model
     return $this->hashSha1;
   }
   /**
-   * @param string
+   * Hex string of SHA256 hash of the test certificate used to resign the AAB
+   *
+   * @param string $hashSha256
    */
   public function setHashSha256($hashSha256)
   {
