@@ -36,7 +36,7 @@ class SparkPlanGraphNode extends \Google\Collection
   public $sparkPlanGraphNodeId;
 
   /**
-   * @param string
+   * @param string $desc
    */
   public function setDesc($desc)
   {
@@ -50,7 +50,7 @@ class SparkPlanGraphNode extends \Google\Collection
     return $this->desc;
   }
   /**
-   * @param SqlPlanMetric[]
+   * @param SqlPlanMetric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -64,7 +64,7 @@ class SparkPlanGraphNode extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -78,7 +78,7 @@ class SparkPlanGraphNode extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * @param string $sparkPlanGraphNodeId
    */
   public function setSparkPlanGraphNodeId($sparkPlanGraphNodeId)
   {

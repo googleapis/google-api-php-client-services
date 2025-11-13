@@ -33,7 +33,7 @@ class SinkProgress extends \Google\Model
   public $numOutputRows;
 
   /**
-   * @param string
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +47,7 @@ class SinkProgress extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string[]
+   * @param string[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -61,7 +61,7 @@ class SinkProgress extends \Google\Model
     return $this->metrics;
   }
   /**
-   * @param string
+   * @param string $numOutputRows
    */
   public function setNumOutputRows($numOutputRows)
   {

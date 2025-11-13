@@ -20,12 +20,16 @@ namespace Google\Service\Dataproc;
 class PyPiRepositoryConfig extends \Google\Model
 {
   /**
+   * Optional. PyPi repository address
+   *
    * @var string
    */
   public $pypiRepository;
 
   /**
-   * @param string
+   * Optional. PyPi repository address
+   *
+   * @param string $pypiRepository
    */
   public function setPypiRepository($pypiRepository)
   {

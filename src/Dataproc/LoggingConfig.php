@@ -20,12 +20,20 @@ namespace Google\Service\Dataproc;
 class LoggingConfig extends \Google\Model
 {
   /**
+   * The per-package log levels for the driver. This can include "root" package
+   * name to configure rootLogger. Examples: - 'com.google = FATAL' - 'root =
+   * INFO' - 'org.apache = DEBUG'
+   *
    * @var string[]
    */
   public $driverLogLevels;
 
   /**
-   * @param string[]
+   * The per-package log levels for the driver. This can include "root" package
+   * name to configure rootLogger. Examples: - 'com.google = FATAL' - 'root =
+   * INFO' - 'org.apache = DEBUG'
+   *
+   * @param string[] $driverLogLevels
    */
   public function setDriverLogLevels($driverLogLevels)
   {

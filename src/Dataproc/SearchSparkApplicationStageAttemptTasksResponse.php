@@ -21,6 +21,10 @@ class SearchSparkApplicationStageAttemptTasksResponse extends \Google\Collection
 {
   protected $collection_key = 'sparkApplicationStageAttemptTasks';
   /**
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent ListSparkApplicationStageAttemptTasksRequest.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class SearchSparkApplicationStageAttemptTasksResponse extends \Google\Collection
   protected $sparkApplicationStageAttemptTasksDataType = 'array';
 
   /**
-   * @param string
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent ListSparkApplicationStageAttemptTasksRequest.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class SearchSparkApplicationStageAttemptTasksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TaskData[]
+   * Output only. Data corresponding to tasks created by spark.
+   *
+   * @param TaskData[] $sparkApplicationStageAttemptTasks
    */
   public function setSparkApplicationStageAttemptTasks($sparkApplicationStageAttemptTasks)
   {

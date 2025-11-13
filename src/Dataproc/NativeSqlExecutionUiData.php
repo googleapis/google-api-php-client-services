@@ -21,30 +21,42 @@ class NativeSqlExecutionUiData extends \Google\Collection
 {
   protected $collection_key = 'fallbackNodeToReason';
   /**
+   * Optional. Description of the execution.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Execution ID of the Native SQL Execution.
+   *
    * @var string
    */
   public $executionId;
   /**
+   * Optional. Description of the fallback.
+   *
    * @var string
    */
   public $fallbackDescription;
   protected $fallbackNodeToReasonType = FallbackReason::class;
   protected $fallbackNodeToReasonDataType = 'array';
   /**
+   * Optional. Number of nodes fallen back to Spark.
+   *
    * @var int
    */
   public $numFallbackNodes;
   /**
+   * Optional. Number of nodes in Native.
+   *
    * @var int
    */
   public $numNativeNodes;
 
   /**
-   * @param string
+   * Optional. Description of the execution.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -58,7 +70,9 @@ class NativeSqlExecutionUiData extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Execution ID of the Native SQL Execution.
+   *
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -72,7 +86,9 @@ class NativeSqlExecutionUiData extends \Google\Collection
     return $this->executionId;
   }
   /**
-   * @param string
+   * Optional. Description of the fallback.
+   *
+   * @param string $fallbackDescription
    */
   public function setFallbackDescription($fallbackDescription)
   {
@@ -86,7 +102,9 @@ class NativeSqlExecutionUiData extends \Google\Collection
     return $this->fallbackDescription;
   }
   /**
-   * @param FallbackReason[]
+   * Optional. Fallback node to reason.
+   *
+   * @param FallbackReason[] $fallbackNodeToReason
    */
   public function setFallbackNodeToReason($fallbackNodeToReason)
   {
@@ -100,7 +118,9 @@ class NativeSqlExecutionUiData extends \Google\Collection
     return $this->fallbackNodeToReason;
   }
   /**
-   * @param int
+   * Optional. Number of nodes fallen back to Spark.
+   *
+   * @param int $numFallbackNodes
    */
   public function setNumFallbackNodes($numFallbackNodes)
   {
@@ -114,7 +134,9 @@ class NativeSqlExecutionUiData extends \Google\Collection
     return $this->numFallbackNodes;
   }
   /**
-   * @param int
+   * Optional. Number of nodes in Native.
+   *
+   * @param int $numNativeNodes
    */
   public function setNumNativeNodes($numNativeNodes)
   {

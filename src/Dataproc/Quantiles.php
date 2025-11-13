@@ -49,7 +49,7 @@ class Quantiles extends \Google\Model
   public $sum;
 
   /**
-   * @param string
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -63,7 +63,7 @@ class Quantiles extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * @param string $maximum
    */
   public function setMaximum($maximum)
   {
@@ -77,7 +77,7 @@ class Quantiles extends \Google\Model
     return $this->maximum;
   }
   /**
-   * @param string
+   * @param string $minimum
    */
   public function setMinimum($minimum)
   {
@@ -91,7 +91,7 @@ class Quantiles extends \Google\Model
     return $this->minimum;
   }
   /**
-   * @param string
+   * @param string $percentile25
    */
   public function setPercentile25($percentile25)
   {
@@ -105,7 +105,7 @@ class Quantiles extends \Google\Model
     return $this->percentile25;
   }
   /**
-   * @param string
+   * @param string $percentile50
    */
   public function setPercentile50($percentile50)
   {
@@ -119,7 +119,7 @@ class Quantiles extends \Google\Model
     return $this->percentile50;
   }
   /**
-   * @param string
+   * @param string $percentile75
    */
   public function setPercentile75($percentile75)
   {
@@ -133,7 +133,7 @@ class Quantiles extends \Google\Model
     return $this->percentile75;
   }
   /**
-   * @param string
+   * @param string $sum
    */
   public function setSum($sum)
   {

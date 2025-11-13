@@ -25,7 +25,7 @@ class SparkPlanGraphNodeWrapper extends \Google\Model
   protected $nodeDataType = '';
 
   /**
-   * @param SparkPlanGraphCluster
+   * @param SparkPlanGraphCluster $cluster
    */
   public function setCluster(SparkPlanGraphCluster $cluster)
   {
@@ -39,7 +39,7 @@ class SparkPlanGraphNodeWrapper extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param SparkPlanGraphNode
+   * @param SparkPlanGraphNode $node
    */
   public function setNode(SparkPlanGraphNode $node)
   {

@@ -20,16 +20,27 @@ namespace Google\Service\Dataproc;
 class NodeInitializationAction extends \Google\Model
 {
   /**
+   * Required. Cloud Storage URI of executable file.
+   *
    * @var string
    */
   public $executableFile;
   /**
+   * Optional. Amount of time executable has to complete. Default is 10 minutes
+   * (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster
+   * creation fails with an explanatory error message (the name of the
+   * executable that caused the error and the exceeded timeout period) if the
+   * executable is not completed at end of the timeout period.
+   *
    * @var string
    */
   public $executionTimeout;
 
   /**
-   * @param string
+   * Required. Cloud Storage URI of executable file.
+   *
+   * @param string $executableFile
    */
   public function setExecutableFile($executableFile)
   {
@@ -43,7 +54,14 @@ class NodeInitializationAction extends \Google\Model
     return $this->executableFile;
   }
   /**
-   * @param string
+   * Optional. Amount of time executable has to complete. Default is 10 minutes
+   * (see JSON representation of Duration
+   * (https://developers.google.com/protocol-buffers/docs/proto3#json)).Cluster
+   * creation fails with an explanatory error message (the name of the
+   * executable that caused the error and the exceeded timeout period) if the
+   * executable is not completed at end of the timeout period.
+   *
+   * @param string $executionTimeout
    */
   public function setExecutionTimeout($executionTimeout)
   {

@@ -22,26 +22,39 @@ class RuntimeConfig extends \Google\Model
   protected $autotuningConfigType = AutotuningConfig::class;
   protected $autotuningConfigDataType = '';
   /**
+   * Optional. Cohort identifier. Identifies families of the workloads having
+   * the same shape, e.g. daily ETL jobs.
+   *
    * @var string
    */
   public $cohort;
   /**
+   * Optional. Optional custom container image for the job runtime environment.
+   * If not specified, a default container image will be used.
+   *
    * @var string
    */
   public $containerImage;
   /**
+   * Optional. A mapping of property names to values, which are used to
+   * configure workload execution.
+   *
    * @var string[]
    */
   public $properties;
   protected $repositoryConfigType = RepositoryConfig::class;
   protected $repositoryConfigDataType = '';
   /**
+   * Optional. Version of the batch runtime.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param AutotuningConfig
+   * Optional. Autotuning configuration of the workload.
+   *
+   * @param AutotuningConfig $autotuningConfig
    */
   public function setAutotuningConfig(AutotuningConfig $autotuningConfig)
   {
@@ -55,7 +68,10 @@ class RuntimeConfig extends \Google\Model
     return $this->autotuningConfig;
   }
   /**
-   * @param string
+   * Optional. Cohort identifier. Identifies families of the workloads having
+   * the same shape, e.g. daily ETL jobs.
+   *
+   * @param string $cohort
    */
   public function setCohort($cohort)
   {
@@ -69,7 +85,10 @@ class RuntimeConfig extends \Google\Model
     return $this->cohort;
   }
   /**
-   * @param string
+   * Optional. Optional custom container image for the job runtime environment.
+   * If not specified, a default container image will be used.
+   *
+   * @param string $containerImage
    */
   public function setContainerImage($containerImage)
   {
@@ -83,7 +102,10 @@ class RuntimeConfig extends \Google\Model
     return $this->containerImage;
   }
   /**
-   * @param string[]
+   * Optional. A mapping of property names to values, which are used to
+   * configure workload execution.
+   *
+   * @param string[] $properties
    */
   public function setProperties($properties)
   {
@@ -97,7 +119,9 @@ class RuntimeConfig extends \Google\Model
     return $this->properties;
   }
   /**
-   * @param RepositoryConfig
+   * Optional. Dependency repository configuration.
+   *
+   * @param RepositoryConfig $repositoryConfig
    */
   public function setRepositoryConfig(RepositoryConfig $repositoryConfig)
   {
@@ -111,7 +135,9 @@ class RuntimeConfig extends \Google\Model
     return $this->repositoryConfig;
   }
   /**
-   * @param string
+   * Optional. Version of the batch runtime.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

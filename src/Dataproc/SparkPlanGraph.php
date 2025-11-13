@@ -30,7 +30,7 @@ class SparkPlanGraph extends \Google\Collection
   protected $nodesDataType = 'array';
 
   /**
-   * @param SparkPlanGraphEdge[]
+   * @param SparkPlanGraphEdge[] $edges
    */
   public function setEdges($edges)
   {
@@ -44,7 +44,7 @@ class SparkPlanGraph extends \Google\Collection
     return $this->edges;
   }
   /**
-   * @param string
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -58,7 +58,7 @@ class SparkPlanGraph extends \Google\Collection
     return $this->executionId;
   }
   /**
-   * @param SparkPlanGraphNodeWrapper[]
+   * @param SparkPlanGraphNodeWrapper[] $nodes
    */
   public function setNodes($nodes)
   {

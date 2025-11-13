@@ -20,14 +20,20 @@ namespace Google\Service\Dataproc;
 class SessionTemplate extends \Google\Model
 {
   /**
+   * Output only. The time when the template was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The email address of the user who created the template.
+   *
    * @var string
    */
   public $creator;
   /**
+   * Optional. Brief description of the template.
+   *
    * @var string
    */
   public $description;
@@ -36,10 +42,19 @@ class SessionTemplate extends \Google\Model
   protected $jupyterSessionType = JupyterConfig::class;
   protected $jupyterSessionDataType = '';
   /**
+   * Optional. Labels to associate with sessions created using this template.
+   * Label keys must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty, but, if
+   * present, must contain 1 to 63 characters and conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with a session.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. Identifier. The resource name of the session template.
+   *
    * @var string
    */
   public $name;
@@ -48,16 +63,23 @@ class SessionTemplate extends \Google\Model
   protected $sparkConnectSessionType = SparkConnectConfig::class;
   protected $sparkConnectSessionDataType = '';
   /**
+   * Output only. The time the template was last updated.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. A session template UUID (Unique Universal Identifier). The
+   * service generates this value when it creates the session template.
+   *
    * @var string
    */
   public $uuid;
 
   /**
-   * @param string
+   * Output only. The time when the template was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +93,9 @@ class SessionTemplate extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The email address of the user who created the template.
+   *
+   * @param string $creator
    */
   public function setCreator($creator)
   {
@@ -85,7 +109,9 @@ class SessionTemplate extends \Google\Model
     return $this->creator;
   }
   /**
-   * @param string
+   * Optional. Brief description of the template.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -99,7 +125,9 @@ class SessionTemplate extends \Google\Model
     return $this->description;
   }
   /**
-   * @param EnvironmentConfig
+   * Optional. Environment configuration for session execution.
+   *
+   * @param EnvironmentConfig $environmentConfig
    */
   public function setEnvironmentConfig(EnvironmentConfig $environmentConfig)
   {
@@ -113,7 +141,9 @@ class SessionTemplate extends \Google\Model
     return $this->environmentConfig;
   }
   /**
-   * @param JupyterConfig
+   * Optional. Jupyter session config.
+   *
+   * @param JupyterConfig $jupyterSession
    */
   public function setJupyterSession(JupyterConfig $jupyterSession)
   {
@@ -127,7 +157,14 @@ class SessionTemplate extends \Google\Model
     return $this->jupyterSession;
   }
   /**
-   * @param string[]
+   * Optional. Labels to associate with sessions created using this template.
+   * Label keys must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values can be empty, but, if
+   * present, must contain 1 to 63 characters and conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with a session.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -141,7 +178,9 @@ class SessionTemplate extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. Identifier. The resource name of the session template.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -155,7 +194,9 @@ class SessionTemplate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param RuntimeConfig
+   * Optional. Runtime configuration for session execution.
+   *
+   * @param RuntimeConfig $runtimeConfig
    */
   public function setRuntimeConfig(RuntimeConfig $runtimeConfig)
   {
@@ -169,7 +210,9 @@ class SessionTemplate extends \Google\Model
     return $this->runtimeConfig;
   }
   /**
-   * @param SparkConnectConfig
+   * Optional. Spark connect session config.
+   *
+   * @param SparkConnectConfig $sparkConnectSession
    */
   public function setSparkConnectSession(SparkConnectConfig $sparkConnectSession)
   {
@@ -183,7 +226,9 @@ class SessionTemplate extends \Google\Model
     return $this->sparkConnectSession;
   }
   /**
-   * @param string
+   * Output only. The time the template was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -197,7 +242,10 @@ class SessionTemplate extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Output only. A session template UUID (Unique Universal Identifier). The
+   * service generates this value when it creates the session template.
+   *
+   * @param string $uuid
    */
   public function setUuid($uuid)
   {

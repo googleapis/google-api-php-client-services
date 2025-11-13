@@ -21,6 +21,10 @@ class SearchSessionSparkApplicationSqlQueriesResponse extends \Google\Collection
 {
   protected $collection_key = 'sparkApplicationSqlQueries';
   /**
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent SearchSessionSparkApplicationSqlQueriesRequest.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class SearchSessionSparkApplicationSqlQueriesResponse extends \Google\Collection
   protected $sparkApplicationSqlQueriesDataType = 'array';
 
   /**
-   * @param string
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent SearchSessionSparkApplicationSqlQueriesRequest.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class SearchSessionSparkApplicationSqlQueriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SqlExecutionUiData[]
+   * Output only. SQL Execution Data
+   *
+   * @param SqlExecutionUiData[] $sparkApplicationSqlQueries
    */
   public function setSparkApplicationSqlQueries($sparkApplicationSqlQueries)
   {

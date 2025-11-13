@@ -22,12 +22,16 @@ class SparkApplication extends \Google\Model
   protected $applicationType = ApplicationInfo::class;
   protected $applicationDataType = '';
   /**
+   * Identifier. Name of the spark application
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param ApplicationInfo
+   * Output only. High level information corresponding to an application.
+   *
+   * @param ApplicationInfo $application
    */
   public function setApplication(ApplicationInfo $application)
   {
@@ -41,7 +45,9 @@ class SparkApplication extends \Google\Model
     return $this->application;
   }
   /**
-   * @param string
+   * Identifier. Name of the spark application
+   *
+   * @param string $name
    */
   public function setName($name)
   {

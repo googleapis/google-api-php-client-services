@@ -20,6 +20,9 @@ namespace Google\Service\Dataproc;
 class PeripheralsConfig extends \Google\Model
 {
   /**
+   * Optional. Resource name of an existing Dataproc Metastore service.Example:
+   * projects/[project_id]/locations/[region]/services/[service_id]
+   *
    * @var string
    */
   public $metastoreService;
@@ -27,7 +30,10 @@ class PeripheralsConfig extends \Google\Model
   protected $sparkHistoryServerConfigDataType = '';
 
   /**
-   * @param string
+   * Optional. Resource name of an existing Dataproc Metastore service.Example:
+   * projects/[project_id]/locations/[region]/services/[service_id]
+   *
+   * @param string $metastoreService
    */
   public function setMetastoreService($metastoreService)
   {
@@ -41,7 +47,9 @@ class PeripheralsConfig extends \Google\Model
     return $this->metastoreService;
   }
   /**
-   * @param SparkHistoryServerConfig
+   * Optional. The Spark History Server configuration for the workload.
+   *
+   * @param SparkHistoryServerConfig $sparkHistoryServerConfig
    */
   public function setSparkHistoryServerConfig(SparkHistoryServerConfig $sparkHistoryServerConfig)
   {

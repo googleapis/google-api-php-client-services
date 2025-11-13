@@ -19,22 +19,46 @@ namespace Google\Service\Dataproc;
 
 class RepairNodeGroupRequest extends \Google\Collection
 {
+  /**
+   * No action will be taken by default.
+   */
+  public const REPAIR_ACTION_REPAIR_ACTION_UNSPECIFIED = 'REPAIR_ACTION_UNSPECIFIED';
+  /**
+   * replace the specified list of nodes.
+   */
+  public const REPAIR_ACTION_REPLACE = 'REPLACE';
   protected $collection_key = 'instanceNames';
   /**
+   * Required. Name of instances to be repaired. These instances must belong to
+   * specified node pool.
+   *
    * @var string[]
    */
   public $instanceNames;
   /**
+   * Required. Repair action to take on specified resources of the node pool.
+   *
    * @var string
    */
   public $repairAction;
   /**
+   * Optional. A unique ID used to identify the request. If the server receives
+   * two RepairNodeGroupRequest with the same ID, the second request is ignored
+   * and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and
+   * hyphens (-). The maximum length is 40 characters.
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param string[]
+   * Required. Name of instances to be repaired. These instances must belong to
+   * specified node pool.
+   *
+   * @param string[] $instanceNames
    */
   public function setInstanceNames($instanceNames)
   {
@@ -48,21 +72,33 @@ class RepairNodeGroupRequest extends \Google\Collection
     return $this->instanceNames;
   }
   /**
-   * @param string
+   * Required. Repair action to take on specified resources of the node pool.
+   *
+   * Accepted values: REPAIR_ACTION_UNSPECIFIED, REPLACE
+   *
+   * @param self::REPAIR_ACTION_* $repairAction
    */
   public function setRepairAction($repairAction)
   {
     $this->repairAction = $repairAction;
   }
   /**
-   * @return string
+   * @return self::REPAIR_ACTION_*
    */
   public function getRepairAction()
   {
     return $this->repairAction;
   }
   /**
-   * @param string
+   * Optional. A unique ID used to identify the request. If the server receives
+   * two RepairNodeGroupRequest with the same ID, the second request is ignored
+   * and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and
+   * hyphens (-). The maximum length is 40 characters.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

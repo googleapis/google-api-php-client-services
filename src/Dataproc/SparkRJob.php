@@ -21,30 +21,53 @@ class SparkRJob extends \Google\Collection
 {
   protected $collection_key = 'fileUris';
   /**
+   * Optional. HCFS URIs of archives to be extracted into the working directory
+   * of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
+   * .zip.
+   *
    * @var string[]
    */
   public $archiveUris;
   /**
+   * Optional. The arguments to pass to the driver. Do not include arguments,
+   * such as --conf, that can be set as job properties, since a collision may
+   * occur that causes an incorrect job submission.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * Optional. HCFS URIs of files to be placed in the working directory of each
+   * executor. Useful for naively parallel tasks.
+   *
    * @var string[]
    */
   public $fileUris;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
+   * Required. The HCFS URI of the main R file to use as the driver. Must be a
+   * .R file.
+   *
    * @var string
    */
   public $mainRFileUri;
   /**
+   * Optional. A mapping of property names to values, used to configure SparkR.
+   * Properties that conflict with values set by the Dataproc API might be
+   * overwritten. Can include properties set in /etc/spark/conf/spark-
+   * defaults.conf and classes in user code.
+   *
    * @var string[]
    */
   public $properties;
 
   /**
-   * @param string[]
+   * Optional. HCFS URIs of archives to be extracted into the working directory
+   * of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
+   * .zip.
+   *
+   * @param string[] $archiveUris
    */
   public function setArchiveUris($archiveUris)
   {
@@ -58,7 +81,11 @@ class SparkRJob extends \Google\Collection
     return $this->archiveUris;
   }
   /**
-   * @param string[]
+   * Optional. The arguments to pass to the driver. Do not include arguments,
+   * such as --conf, that can be set as job properties, since a collision may
+   * occur that causes an incorrect job submission.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -72,7 +99,10 @@ class SparkRJob extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param string[]
+   * Optional. HCFS URIs of files to be placed in the working directory of each
+   * executor. Useful for naively parallel tasks.
+   *
+   * @param string[] $fileUris
    */
   public function setFileUris($fileUris)
   {
@@ -86,7 +116,9 @@ class SparkRJob extends \Google\Collection
     return $this->fileUris;
   }
   /**
-   * @param LoggingConfig
+   * Optional. The runtime log config for job execution.
+   *
+   * @param LoggingConfig $loggingConfig
    */
   public function setLoggingConfig(LoggingConfig $loggingConfig)
   {
@@ -100,7 +132,10 @@ class SparkRJob extends \Google\Collection
     return $this->loggingConfig;
   }
   /**
-   * @param string
+   * Required. The HCFS URI of the main R file to use as the driver. Must be a
+   * .R file.
+   *
+   * @param string $mainRFileUri
    */
   public function setMainRFileUri($mainRFileUri)
   {
@@ -114,7 +149,12 @@ class SparkRJob extends \Google\Collection
     return $this->mainRFileUri;
   }
   /**
-   * @param string[]
+   * Optional. A mapping of property names to values, used to configure SparkR.
+   * Properties that conflict with values set by the Dataproc API might be
+   * overwritten. Can include properties set in /etc/spark/conf/spark-
+   * defaults.conf and classes in user code.
+   *
+   * @param string[] $properties
    */
   public function setProperties($properties)
   {

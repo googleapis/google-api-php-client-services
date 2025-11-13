@@ -42,7 +42,7 @@ class RddPartitionInfo extends \Google\Collection
   public $storageLevel;
 
   /**
-   * @param string
+   * @param string $blockName
    */
   public function setBlockName($blockName)
   {
@@ -56,7 +56,7 @@ class RddPartitionInfo extends \Google\Collection
     return $this->blockName;
   }
   /**
-   * @param string
+   * @param string $diskUsed
    */
   public function setDiskUsed($diskUsed)
   {
@@ -70,7 +70,7 @@ class RddPartitionInfo extends \Google\Collection
     return $this->diskUsed;
   }
   /**
-   * @param string[]
+   * @param string[] $executors
    */
   public function setExecutors($executors)
   {
@@ -84,7 +84,7 @@ class RddPartitionInfo extends \Google\Collection
     return $this->executors;
   }
   /**
-   * @param string
+   * @param string $memoryUsed
    */
   public function setMemoryUsed($memoryUsed)
   {
@@ -98,7 +98,7 @@ class RddPartitionInfo extends \Google\Collection
     return $this->memoryUsed;
   }
   /**
-   * @param string
+   * @param string $storageLevel
    */
   public function setStorageLevel($storageLevel)
   {

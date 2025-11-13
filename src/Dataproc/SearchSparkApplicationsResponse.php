@@ -21,6 +21,10 @@ class SearchSparkApplicationsResponse extends \Google\Collection
 {
   protected $collection_key = 'sparkApplications';
   /**
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent SearchSparkApplicationsRequest.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class SearchSparkApplicationsResponse extends \Google\Collection
   protected $sparkApplicationsDataType = 'array';
 
   /**
-   * @param string
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent SearchSparkApplicationsRequest.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class SearchSparkApplicationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SparkApplication[]
+   * Output only. High level information corresponding to an application.
+   *
+   * @param SparkApplication[] $sparkApplications
    */
   public function setSparkApplications($sparkApplications)
   {

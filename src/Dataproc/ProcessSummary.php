@@ -49,7 +49,7 @@ class ProcessSummary extends \Google\Model
   public $totalCores;
 
   /**
-   * @param string
+   * @param string $addTime
    */
   public function setAddTime($addTime)
   {
@@ -63,7 +63,7 @@ class ProcessSummary extends \Google\Model
     return $this->addTime;
   }
   /**
-   * @param string
+   * @param string $hostPort
    */
   public function setHostPort($hostPort)
   {
@@ -77,7 +77,7 @@ class ProcessSummary extends \Google\Model
     return $this->hostPort;
   }
   /**
-   * @param bool
+   * @param bool $isActive
    */
   public function setIsActive($isActive)
   {
@@ -91,7 +91,7 @@ class ProcessSummary extends \Google\Model
     return $this->isActive;
   }
   /**
-   * @param string
+   * @param string $processId
    */
   public function setProcessId($processId)
   {
@@ -105,7 +105,7 @@ class ProcessSummary extends \Google\Model
     return $this->processId;
   }
   /**
-   * @param string[]
+   * @param string[] $processLogs
    */
   public function setProcessLogs($processLogs)
   {
@@ -119,7 +119,7 @@ class ProcessSummary extends \Google\Model
     return $this->processLogs;
   }
   /**
-   * @param string
+   * @param string $removeTime
    */
   public function setRemoveTime($removeTime)
   {
@@ -133,7 +133,7 @@ class ProcessSummary extends \Google\Model
     return $this->removeTime;
   }
   /**
-   * @param int
+   * @param int $totalCores
    */
   public function setTotalCores($totalCores)
   {

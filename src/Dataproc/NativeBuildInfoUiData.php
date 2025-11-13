@@ -21,6 +21,8 @@ class NativeBuildInfoUiData extends \Google\Collection
 {
   protected $collection_key = 'buildInfo';
   /**
+   * Optional. Build class of Native.
+   *
    * @var string
    */
   public $buildClass;
@@ -28,7 +30,9 @@ class NativeBuildInfoUiData extends \Google\Collection
   protected $buildInfoDataType = 'array';
 
   /**
-   * @param string
+   * Optional. Build class of Native.
+   *
+   * @param string $buildClass
    */
   public function setBuildClass($buildClass)
   {
@@ -42,7 +46,9 @@ class NativeBuildInfoUiData extends \Google\Collection
     return $this->buildClass;
   }
   /**
-   * @param BuildInfo[]
+   * Optional. Build related details.
+   *
+   * @param BuildInfo[] $buildInfo
    */
   public function setBuildInfo($buildInfo)
   {

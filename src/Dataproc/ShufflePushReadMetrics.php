@@ -57,7 +57,7 @@ class ShufflePushReadMetrics extends \Google\Model
   public $remoteMergedReqsDuration;
 
   /**
-   * @param string
+   * @param string $corruptMergedBlockChunks
    */
   public function setCorruptMergedBlockChunks($corruptMergedBlockChunks)
   {
@@ -71,7 +71,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->corruptMergedBlockChunks;
   }
   /**
-   * @param string
+   * @param string $localMergedBlocksFetched
    */
   public function setLocalMergedBlocksFetched($localMergedBlocksFetched)
   {
@@ -85,7 +85,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->localMergedBlocksFetched;
   }
   /**
-   * @param string
+   * @param string $localMergedBytesRead
    */
   public function setLocalMergedBytesRead($localMergedBytesRead)
   {
@@ -99,7 +99,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->localMergedBytesRead;
   }
   /**
-   * @param string
+   * @param string $localMergedChunksFetched
    */
   public function setLocalMergedChunksFetched($localMergedChunksFetched)
   {
@@ -113,7 +113,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->localMergedChunksFetched;
   }
   /**
-   * @param string
+   * @param string $mergedFetchFallbackCount
    */
   public function setMergedFetchFallbackCount($mergedFetchFallbackCount)
   {
@@ -127,7 +127,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->mergedFetchFallbackCount;
   }
   /**
-   * @param string
+   * @param string $remoteMergedBlocksFetched
    */
   public function setRemoteMergedBlocksFetched($remoteMergedBlocksFetched)
   {
@@ -141,7 +141,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->remoteMergedBlocksFetched;
   }
   /**
-   * @param string
+   * @param string $remoteMergedBytesRead
    */
   public function setRemoteMergedBytesRead($remoteMergedBytesRead)
   {
@@ -155,7 +155,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->remoteMergedBytesRead;
   }
   /**
-   * @param string
+   * @param string $remoteMergedChunksFetched
    */
   public function setRemoteMergedChunksFetched($remoteMergedChunksFetched)
   {
@@ -169,7 +169,7 @@ class ShufflePushReadMetrics extends \Google\Model
     return $this->remoteMergedChunksFetched;
   }
   /**
-   * @param string
+   * @param string $remoteMergedReqsDuration
    */
   public function setRemoteMergedReqsDuration($remoteMergedReqsDuration)
   {

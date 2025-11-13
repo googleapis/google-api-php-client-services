@@ -20,16 +20,40 @@ namespace Google\Service\Dataproc;
 class ProvisioningModelMix extends \Google\Model
 {
   /**
+   * Optional. The base capacity that will always use Standard VMs to avoid risk
+   * of more preemption than the minimum capacity you need. Dataproc will create
+   * only standard VMs until it reaches standard_capacity_base, then it will
+   * start using standard_capacity_percent_above_base to mix Spot with Standard
+   * VMs. eg. If 15 instances are requested and standard_capacity_base is 5,
+   * Dataproc will create 5 standard VMs and then start mixing spot and standard
+   * VMs for remaining 10 instances.
+   *
    * @var int
    */
   public $standardCapacityBase;
   /**
+   * Optional. The percentage of target capacity that should use Standard VM.
+   * The remaining percentage will use Spot VMs. The percentage applies only to
+   * the capacity above standard_capacity_base. eg. If 15 instances are
+   * requested and standard_capacity_base is 5 and
+   * standard_capacity_percent_above_base is 30, Dataproc will create 5 standard
+   * VMs and then start mixing spot and standard VMs for remaining 10 instances.
+   * The mix will be 30% standard and 70% spot.
+   *
    * @var int
    */
   public $standardCapacityPercentAboveBase;
 
   /**
-   * @param int
+   * Optional. The base capacity that will always use Standard VMs to avoid risk
+   * of more preemption than the minimum capacity you need. Dataproc will create
+   * only standard VMs until it reaches standard_capacity_base, then it will
+   * start using standard_capacity_percent_above_base to mix Spot with Standard
+   * VMs. eg. If 15 instances are requested and standard_capacity_base is 5,
+   * Dataproc will create 5 standard VMs and then start mixing spot and standard
+   * VMs for remaining 10 instances.
+   *
+   * @param int $standardCapacityBase
    */
   public function setStandardCapacityBase($standardCapacityBase)
   {
@@ -43,7 +67,15 @@ class ProvisioningModelMix extends \Google\Model
     return $this->standardCapacityBase;
   }
   /**
-   * @param int
+   * Optional. The percentage of target capacity that should use Standard VM.
+   * The remaining percentage will use Spot VMs. The percentage applies only to
+   * the capacity above standard_capacity_base. eg. If 15 instances are
+   * requested and standard_capacity_base is 5 and
+   * standard_capacity_percent_above_base is 30, Dataproc will create 5 standard
+   * VMs and then start mixing spot and standard VMs for remaining 10 instances.
+   * The mix will be 30% standard and 70% spot.
+   *
+   * @param int $standardCapacityPercentAboveBase
    */
   public function setStandardCapacityPercentAboveBase($standardCapacityPercentAboveBase)
   {

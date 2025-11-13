@@ -25,7 +25,10 @@ class SecurityConfig extends \Google\Model
   protected $kerberosConfigDataType = '';
 
   /**
-   * @param IdentityConfig
+   * Optional. Identity related configuration, including service account based
+   * secure multi-tenancy user mappings.
+   *
+   * @param IdentityConfig $identityConfig
    */
   public function setIdentityConfig(IdentityConfig $identityConfig)
   {
@@ -39,7 +42,9 @@ class SecurityConfig extends \Google\Model
     return $this->identityConfig;
   }
   /**
-   * @param KerberosConfig
+   * Optional. Kerberos related configuration.
+   *
+   * @param KerberosConfig $kerberosConfig
    */
   public function setKerberosConfig(KerberosConfig $kerberosConfig)
   {

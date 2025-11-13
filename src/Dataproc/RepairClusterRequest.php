@@ -23,30 +23,60 @@ class RepairClusterRequest extends \Google\Collection
   protected $clusterType = ClusterToRepair::class;
   protected $clusterDataType = '';
   /**
+   * Optional. Specifying the cluster_uuid means the RPC will fail (with error
+   * NOT_FOUND) if a cluster with the specified UUID does not exist.
+   *
    * @var string
    */
   public $clusterUuid;
   /**
+   * Optional. Whether the request is submitted by Dataproc super user. If true,
+   * IAM will check 'dataproc.clusters.repair' permission instead of
+   * 'dataproc.clusters.update' permission. This is to give Dataproc superuser
+   * the ability to repair clusters without granting the overly broad update
+   * permission.
+   *
    * @var bool
    */
   public $dataprocSuperUser;
   /**
+   * Optional. Timeout for graceful YARN decommissioning. Graceful
+   * decommissioning facilitates the removal of cluster nodes without
+   * interrupting jobs in progress. The timeout specifies the amount of time to
+   * wait for jobs finish before forcefully removing nodes. The default timeout
+   * is 0 for forceful decommissioning, and the maximum timeout period is 1 day.
+   * (see JSON Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in
+   * Dataproc image versions 1.2+.
+   *
    * @var string
    */
   public $gracefulDecommissionTimeout;
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
   /**
+   * Optional. operation id of the parent operation sending the repair request
+   *
    * @var string
    */
   public $parentOperationId;
   /**
+   * Optional. A unique ID used to identify the request. If the server receives
+   * two RepairClusterRequests with the same ID, the second request is ignored,
+   * and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and
+   * hyphens (-). The maximum length is 40 characters.
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param ClusterToRepair
+   * Optional. Cluster to be repaired
+   *
+   * @param ClusterToRepair $cluster
    */
   public function setCluster(ClusterToRepair $cluster)
   {
@@ -60,7 +90,10 @@ class RepairClusterRequest extends \Google\Collection
     return $this->cluster;
   }
   /**
-   * @param string
+   * Optional. Specifying the cluster_uuid means the RPC will fail (with error
+   * NOT_FOUND) if a cluster with the specified UUID does not exist.
+   *
+   * @param string $clusterUuid
    */
   public function setClusterUuid($clusterUuid)
   {
@@ -74,7 +107,13 @@ class RepairClusterRequest extends \Google\Collection
     return $this->clusterUuid;
   }
   /**
-   * @param bool
+   * Optional. Whether the request is submitted by Dataproc super user. If true,
+   * IAM will check 'dataproc.clusters.repair' permission instead of
+   * 'dataproc.clusters.update' permission. This is to give Dataproc superuser
+   * the ability to repair clusters without granting the overly broad update
+   * permission.
+   *
+   * @param bool $dataprocSuperUser
    */
   public function setDataprocSuperUser($dataprocSuperUser)
   {
@@ -88,7 +127,16 @@ class RepairClusterRequest extends \Google\Collection
     return $this->dataprocSuperUser;
   }
   /**
-   * @param string
+   * Optional. Timeout for graceful YARN decommissioning. Graceful
+   * decommissioning facilitates the removal of cluster nodes without
+   * interrupting jobs in progress. The timeout specifies the amount of time to
+   * wait for jobs finish before forcefully removing nodes. The default timeout
+   * is 0 for forceful decommissioning, and the maximum timeout period is 1 day.
+   * (see JSON Mapping—Duration (https://developers.google.com/protocol-
+   * buffers/docs/proto3#json)).graceful_decommission_timeout is supported in
+   * Dataproc image versions 1.2+.
+   *
+   * @param string $gracefulDecommissionTimeout
    */
   public function setGracefulDecommissionTimeout($gracefulDecommissionTimeout)
   {
@@ -102,7 +150,11 @@ class RepairClusterRequest extends \Google\Collection
     return $this->gracefulDecommissionTimeout;
   }
   /**
-   * @param NodePool[]
+   * Optional. Node pools and corresponding repair action to be taken. All node
+   * pools should be unique in this request. i.e. Multiple entries for the same
+   * node pool id are not allowed.
+   *
+   * @param NodePool[] $nodePools
    */
   public function setNodePools($nodePools)
   {
@@ -116,7 +168,9 @@ class RepairClusterRequest extends \Google\Collection
     return $this->nodePools;
   }
   /**
-   * @param string
+   * Optional. operation id of the parent operation sending the repair request
+   *
+   * @param string $parentOperationId
    */
   public function setParentOperationId($parentOperationId)
   {
@@ -130,7 +184,15 @@ class RepairClusterRequest extends \Google\Collection
     return $this->parentOperationId;
   }
   /**
-   * @param string
+   * Optional. A unique ID used to identify the request. If the server receives
+   * two RepairClusterRequests with the same ID, the second request is ignored,
+   * and the first google.longrunning.Operation created and stored in the
+   * backend is returned.Recommendation: Set this value to a UUID
+   * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
+   * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and
+   * hyphens (-). The maximum length is 40 characters.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

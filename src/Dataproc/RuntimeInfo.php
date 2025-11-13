@@ -24,14 +24,22 @@ class RuntimeInfo extends \Google\Model
   protected $currentUsageType = UsageSnapshot::class;
   protected $currentUsageDataType = '';
   /**
+   * Output only. A URI pointing to the location of the diagnostics tarball.
+   *
    * @var string
    */
   public $diagnosticOutputUri;
   /**
+   * Output only. Map of remote access endpoints (such as web interfaces and
+   * APIs) to their URIs.
+   *
    * @var string[]
    */
   public $endpoints;
   /**
+   * Output only. A URI pointing to the location of the stdout and stderr of the
+   * workload.
+   *
    * @var string
    */
   public $outputUri;
@@ -39,7 +47,16 @@ class RuntimeInfo extends \Google\Model
   protected $propertiesInfoDataType = '';
 
   /**
-   * @param UsageMetrics
+   * Output only. Approximate workload resource usage, calculated when the
+   * workload completes (see Dataproc Serverless pricing
+   * (https://cloud.google.com/dataproc-serverless/pricing)).Note: This metric
+   * calculation may change in the future, for example, to capture cumulative
+   * workload resource consumption during workload execution (see the Dataproc
+   * Serverless release notes (https://cloud.google.com/dataproc-
+   * serverless/docs/release-notes) for announcements, changes, fixes and other
+   * Dataproc developments).
+   *
+   * @param UsageMetrics $approximateUsage
    */
   public function setApproximateUsage(UsageMetrics $approximateUsage)
   {
@@ -53,7 +70,9 @@ class RuntimeInfo extends \Google\Model
     return $this->approximateUsage;
   }
   /**
-   * @param UsageSnapshot
+   * Output only. Snapshot of current workload resource usage.
+   *
+   * @param UsageSnapshot $currentUsage
    */
   public function setCurrentUsage(UsageSnapshot $currentUsage)
   {
@@ -67,7 +86,9 @@ class RuntimeInfo extends \Google\Model
     return $this->currentUsage;
   }
   /**
-   * @param string
+   * Output only. A URI pointing to the location of the diagnostics tarball.
+   *
+   * @param string $diagnosticOutputUri
    */
   public function setDiagnosticOutputUri($diagnosticOutputUri)
   {
@@ -81,7 +102,10 @@ class RuntimeInfo extends \Google\Model
     return $this->diagnosticOutputUri;
   }
   /**
-   * @param string[]
+   * Output only. Map of remote access endpoints (such as web interfaces and
+   * APIs) to their URIs.
+   *
+   * @param string[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -95,7 +119,10 @@ class RuntimeInfo extends \Google\Model
     return $this->endpoints;
   }
   /**
-   * @param string
+   * Output only. A URI pointing to the location of the stdout and stderr of the
+   * workload.
+   *
+   * @param string $outputUri
    */
   public function setOutputUri($outputUri)
   {
@@ -109,7 +136,9 @@ class RuntimeInfo extends \Google\Model
     return $this->outputUri;
   }
   /**
-   * @param PropertiesInfo
+   * Optional. Properties of the workload organized by origin.
+   *
+   * @param PropertiesInfo $propertiesInfo
    */
   public function setPropertiesInfo(PropertiesInfo $propertiesInfo)
   {

@@ -19,12 +19,40 @@ namespace Google\Service\Dataproc;
 
 class Session extends \Google\Collection
 {
+  /**
+   * The session state is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The session is created prior to running.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The session is running.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The session is terminating.
+   */
+  public const STATE_TERMINATING = 'TERMINATING';
+  /**
+   * The session is terminated successfully.
+   */
+  public const STATE_TERMINATED = 'TERMINATED';
+  /**
+   * The session is no longer running due to an error.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'stateHistory';
   /**
+   * Output only. The time when the session was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The email address of the user who created the session.
+   *
    * @var string
    */
   public $creator;
@@ -33,10 +61,19 @@ class Session extends \Google\Collection
   protected $jupyterSessionType = JupyterConfig::class;
   protected $jupyterSessionDataType = '';
   /**
+   * Optional. The labels to associate with the session. Label keys must contain
+   * 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if
+   * present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with a session.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the session.
+   *
    * @var string
    */
   public $name;
@@ -45,36 +82,57 @@ class Session extends \Google\Collection
   protected $runtimeInfoType = RuntimeInfo::class;
   protected $runtimeInfoDataType = '';
   /**
+   * Optional. The session template used by the session.Only resource names,
+   * including project ID and location, are valid.Example: * https://www.googlea
+   * pis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/sessio
+   * nTemplates/[template_id] * projects/[project_id]/locations/[dataproc_region
+   * ]/sessionTemplates/[template_id]The template must be in the same project
+   * and Dataproc region as the session.
+   *
    * @var string
    */
   public $sessionTemplate;
   protected $sparkConnectSessionType = SparkConnectConfig::class;
   protected $sparkConnectSessionDataType = '';
   /**
+   * Output only. A state of the session.
+   *
    * @var string
    */
   public $state;
   protected $stateHistoryType = SessionStateHistory::class;
   protected $stateHistoryDataType = 'array';
   /**
+   * Output only. Session state details, such as the failure description if the
+   * state is FAILED.
+   *
    * @var string
    */
   public $stateMessage;
   /**
+   * Output only. The time when the session entered the current state.
+   *
    * @var string
    */
   public $stateTime;
   /**
+   * Optional. The email address of the user who owns the session.
+   *
    * @var string
    */
   public $user;
   /**
+   * Output only. A session UUID (Unique Universal Identifier). The service
+   * generates this value when it creates the session.
+   *
    * @var string
    */
   public $uuid;
 
   /**
-   * @param string
+   * Output only. The time when the session was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -88,7 +146,9 @@ class Session extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The email address of the user who created the session.
+   *
+   * @param string $creator
    */
   public function setCreator($creator)
   {
@@ -102,7 +162,9 @@ class Session extends \Google\Collection
     return $this->creator;
   }
   /**
-   * @param EnvironmentConfig
+   * Optional. Environment configuration for the session execution.
+   *
+   * @param EnvironmentConfig $environmentConfig
    */
   public function setEnvironmentConfig(EnvironmentConfig $environmentConfig)
   {
@@ -116,7 +178,9 @@ class Session extends \Google\Collection
     return $this->environmentConfig;
   }
   /**
-   * @param JupyterConfig
+   * Optional. Jupyter session config.
+   *
+   * @param JupyterConfig $jupyterSession
    */
   public function setJupyterSession(JupyterConfig $jupyterSession)
   {
@@ -130,7 +194,14 @@ class Session extends \Google\Collection
     return $this->jupyterSession;
   }
   /**
-   * @param string[]
+   * Optional. The labels to associate with the session. Label keys must contain
+   * 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). Label values may be empty, but, if
+   * present, must contain 1 to 63 characters, and must conform to RFC 1035
+   * (https://www.ietf.org/rfc/rfc1035.txt). No more than 32 labels can be
+   * associated with a session.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -144,7 +215,9 @@ class Session extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the session.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -158,7 +231,9 @@ class Session extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param RuntimeConfig
+   * Optional. Runtime configuration for the session execution.
+   *
+   * @param RuntimeConfig $runtimeConfig
    */
   public function setRuntimeConfig(RuntimeConfig $runtimeConfig)
   {
@@ -172,7 +247,9 @@ class Session extends \Google\Collection
     return $this->runtimeConfig;
   }
   /**
-   * @param RuntimeInfo
+   * Output only. Runtime information about session execution.
+   *
+   * @param RuntimeInfo $runtimeInfo
    */
   public function setRuntimeInfo(RuntimeInfo $runtimeInfo)
   {
@@ -186,7 +263,14 @@ class Session extends \Google\Collection
     return $this->runtimeInfo;
   }
   /**
-   * @param string
+   * Optional. The session template used by the session.Only resource names,
+   * including project ID and location, are valid.Example: * https://www.googlea
+   * pis.com/compute/v1/projects/[project_id]/locations/[dataproc_region]/sessio
+   * nTemplates/[template_id] * projects/[project_id]/locations/[dataproc_region
+   * ]/sessionTemplates/[template_id]The template must be in the same project
+   * and Dataproc region as the session.
+   *
+   * @param string $sessionTemplate
    */
   public function setSessionTemplate($sessionTemplate)
   {
@@ -200,7 +284,9 @@ class Session extends \Google\Collection
     return $this->sessionTemplate;
   }
   /**
-   * @param SparkConnectConfig
+   * Optional. Spark connect session config.
+   *
+   * @param SparkConnectConfig $sparkConnectSession
    */
   public function setSparkConnectSession(SparkConnectConfig $sparkConnectSession)
   {
@@ -214,21 +300,28 @@ class Session extends \Google\Collection
     return $this->sparkConnectSession;
   }
   /**
-   * @param string
+   * Output only. A state of the session.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, TERMINATING,
+   * TERMINATED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param SessionStateHistory[]
+   * Output only. Historical state information for the session.
+   *
+   * @param SessionStateHistory[] $stateHistory
    */
   public function setStateHistory($stateHistory)
   {
@@ -242,7 +335,10 @@ class Session extends \Google\Collection
     return $this->stateHistory;
   }
   /**
-   * @param string
+   * Output only. Session state details, such as the failure description if the
+   * state is FAILED.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {
@@ -256,7 +352,9 @@ class Session extends \Google\Collection
     return $this->stateMessage;
   }
   /**
-   * @param string
+   * Output only. The time when the session entered the current state.
+   *
+   * @param string $stateTime
    */
   public function setStateTime($stateTime)
   {
@@ -270,7 +368,9 @@ class Session extends \Google\Collection
     return $this->stateTime;
   }
   /**
-   * @param string
+   * Optional. The email address of the user who owns the session.
+   *
+   * @param string $user
    */
   public function setUser($user)
   {
@@ -284,7 +384,10 @@ class Session extends \Google\Collection
     return $this->user;
   }
   /**
-   * @param string
+   * Output only. A session UUID (Unique Universal Identifier). The service
+   * generates this value when it creates the session.
+   *
+   * @param string $uuid
    */
   public function setUuid($uuid)
   {

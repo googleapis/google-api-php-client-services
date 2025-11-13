@@ -25,7 +25,9 @@ class ParameterValidation extends \Google\Model
   protected $valuesDataType = '';
 
   /**
-   * @param RegexValidation
+   * Validation based on regular expressions.
+   *
+   * @param RegexValidation $regex
    */
   public function setRegex(RegexValidation $regex)
   {
@@ -39,7 +41,9 @@ class ParameterValidation extends \Google\Model
     return $this->regex;
   }
   /**
-   * @param ValueValidation
+   * Validation based on a list of allowed values.
+   *
+   * @param ValueValidation $values
    */
   public function setValues(ValueValidation $values)
   {

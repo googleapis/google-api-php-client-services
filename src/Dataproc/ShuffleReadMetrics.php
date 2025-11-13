@@ -55,7 +55,7 @@ class ShuffleReadMetrics extends \Google\Model
   protected $shufflePushReadMetricsDataType = '';
 
   /**
-   * @param string
+   * @param string $fetchWaitTimeMillis
    */
   public function setFetchWaitTimeMillis($fetchWaitTimeMillis)
   {
@@ -69,7 +69,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->fetchWaitTimeMillis;
   }
   /**
-   * @param string
+   * @param string $localBlocksFetched
    */
   public function setLocalBlocksFetched($localBlocksFetched)
   {
@@ -83,7 +83,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->localBlocksFetched;
   }
   /**
-   * @param string
+   * @param string $localBytesRead
    */
   public function setLocalBytesRead($localBytesRead)
   {
@@ -97,7 +97,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->localBytesRead;
   }
   /**
-   * @param string
+   * @param string $recordsRead
    */
   public function setRecordsRead($recordsRead)
   {
@@ -111,7 +111,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->recordsRead;
   }
   /**
-   * @param string
+   * @param string $remoteBlocksFetched
    */
   public function setRemoteBlocksFetched($remoteBlocksFetched)
   {
@@ -125,7 +125,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->remoteBlocksFetched;
   }
   /**
-   * @param string
+   * @param string $remoteBytesRead
    */
   public function setRemoteBytesRead($remoteBytesRead)
   {
@@ -139,7 +139,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->remoteBytesRead;
   }
   /**
-   * @param string
+   * @param string $remoteBytesReadToDisk
    */
   public function setRemoteBytesReadToDisk($remoteBytesReadToDisk)
   {
@@ -153,7 +153,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->remoteBytesReadToDisk;
   }
   /**
-   * @param string
+   * @param string $remoteReqsDuration
    */
   public function setRemoteReqsDuration($remoteReqsDuration)
   {
@@ -167,7 +167,7 @@ class ShuffleReadMetrics extends \Google\Model
     return $this->remoteReqsDuration;
   }
   /**
-   * @param ShufflePushReadMetrics
+   * @param ShufflePushReadMetrics $shufflePushReadMetrics
    */
   public function setShufflePushReadMetrics(ShufflePushReadMetrics $shufflePushReadMetrics)
   {

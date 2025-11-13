@@ -21,38 +21,66 @@ class SparkJob extends \Google\Collection
 {
   protected $collection_key = 'jarFileUris';
   /**
+   * Optional. HCFS URIs of archives to be extracted into the working directory
+   * of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
+   * .zip.
+   *
    * @var string[]
    */
   public $archiveUris;
   /**
+   * Optional. The arguments to pass to the driver. Do not include arguments,
+   * such as --conf, that can be set as job properties, since a collision may
+   * occur that causes an incorrect job submission.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * Optional. HCFS URIs of files to be placed in the working directory of each
+   * executor. Useful for naively parallel tasks.
+   *
    * @var string[]
    */
   public $fileUris;
   /**
+   * Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark
+   * driver and tasks.
+   *
    * @var string[]
    */
   public $jarFileUris;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
+   * The name of the driver's main class. The jar file that contains the class
+   * must be in the default CLASSPATH or specified in SparkJob.jar_file_uris.
+   *
    * @var string
    */
   public $mainClass;
   /**
+   * The HCFS URI of the jar file that contains the main class.
+   *
    * @var string
    */
   public $mainJarFileUri;
   /**
+   * Optional. A mapping of property names to values, used to configure Spark.
+   * Properties that conflict with values set by the Dataproc API might be
+   * overwritten. Can include properties set in /etc/spark/conf/spark-
+   * defaults.conf and classes in user code.
+   *
    * @var string[]
    */
   public $properties;
 
   /**
-   * @param string[]
+   * Optional. HCFS URIs of archives to be extracted into the working directory
+   * of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
+   * .zip.
+   *
+   * @param string[] $archiveUris
    */
   public function setArchiveUris($archiveUris)
   {
@@ -66,7 +94,11 @@ class SparkJob extends \Google\Collection
     return $this->archiveUris;
   }
   /**
-   * @param string[]
+   * Optional. The arguments to pass to the driver. Do not include arguments,
+   * such as --conf, that can be set as job properties, since a collision may
+   * occur that causes an incorrect job submission.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -80,7 +112,10 @@ class SparkJob extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param string[]
+   * Optional. HCFS URIs of files to be placed in the working directory of each
+   * executor. Useful for naively parallel tasks.
+   *
+   * @param string[] $fileUris
    */
   public function setFileUris($fileUris)
   {
@@ -94,7 +129,10 @@ class SparkJob extends \Google\Collection
     return $this->fileUris;
   }
   /**
-   * @param string[]
+   * Optional. HCFS URIs of jar files to add to the CLASSPATHs of the Spark
+   * driver and tasks.
+   *
+   * @param string[] $jarFileUris
    */
   public function setJarFileUris($jarFileUris)
   {
@@ -108,7 +146,9 @@ class SparkJob extends \Google\Collection
     return $this->jarFileUris;
   }
   /**
-   * @param LoggingConfig
+   * Optional. The runtime log config for job execution.
+   *
+   * @param LoggingConfig $loggingConfig
    */
   public function setLoggingConfig(LoggingConfig $loggingConfig)
   {
@@ -122,7 +162,10 @@ class SparkJob extends \Google\Collection
     return $this->loggingConfig;
   }
   /**
-   * @param string
+   * The name of the driver's main class. The jar file that contains the class
+   * must be in the default CLASSPATH or specified in SparkJob.jar_file_uris.
+   *
+   * @param string $mainClass
    */
   public function setMainClass($mainClass)
   {
@@ -136,7 +179,9 @@ class SparkJob extends \Google\Collection
     return $this->mainClass;
   }
   /**
-   * @param string
+   * The HCFS URI of the jar file that contains the main class.
+   *
+   * @param string $mainJarFileUri
    */
   public function setMainJarFileUri($mainJarFileUri)
   {
@@ -150,7 +195,12 @@ class SparkJob extends \Google\Collection
     return $this->mainJarFileUri;
   }
   /**
-   * @param string[]
+   * Optional. A mapping of property names to values, used to configure Spark.
+   * Properties that conflict with values set by the Dataproc API might be
+   * overwritten. Can include properties set in /etc/spark/conf/spark-
+   * defaults.conf and classes in user code.
+   *
+   * @param string[] $properties
    */
   public function setProperties($properties)
   {

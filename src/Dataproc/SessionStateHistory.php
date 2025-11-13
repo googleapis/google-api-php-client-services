@@ -20,34 +20,71 @@ namespace Google\Service\Dataproc;
 class SessionStateHistory extends \Google\Model
 {
   /**
+   * The session state is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The session is created prior to running.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The session is running.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The session is terminating.
+   */
+  public const STATE_TERMINATING = 'TERMINATING';
+  /**
+   * The session is terminated successfully.
+   */
+  public const STATE_TERMINATED = 'TERMINATED';
+  /**
+   * The session is no longer running due to an error.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Output only. The state of the session at this point in the session history.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Details about the state at this point in the session history.
+   *
    * @var string
    */
   public $stateMessage;
   /**
+   * Output only. The time when the session entered the historical state.
+   *
    * @var string
    */
   public $stateStartTime;
 
   /**
-   * @param string
+   * Output only. The state of the session at this point in the session history.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, TERMINATING,
+   * TERMINATED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Details about the state at this point in the session history.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {
@@ -61,7 +98,9 @@ class SessionStateHistory extends \Google\Model
     return $this->stateMessage;
   }
   /**
-   * @param string
+   * Output only. The time when the session entered the historical state.
+   *
+   * @param string $stateStartTime
    */
   public function setStateStartTime($stateStartTime)
   {

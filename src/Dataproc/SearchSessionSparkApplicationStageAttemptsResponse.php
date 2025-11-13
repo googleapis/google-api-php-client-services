@@ -21,6 +21,10 @@ class SearchSessionSparkApplicationStageAttemptsResponse extends \Google\Collect
 {
   protected $collection_key = 'sparkApplicationStageAttempts';
   /**
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent SearchSessionSparkApplicationStageAttemptsRequest.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class SearchSessionSparkApplicationStageAttemptsResponse extends \Google\Collect
   protected $sparkApplicationStageAttemptsDataType = 'array';
 
   /**
-   * @param string
+   * This token is included in the response if there are more results to fetch.
+   * To fetch additional results, provide this value as the page_token in a
+   * subsequent SearchSessionSparkApplicationStageAttemptsRequest.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class SearchSessionSparkApplicationStageAttemptsResponse extends \Google\Collect
     return $this->nextPageToken;
   }
   /**
-   * @param StageData[]
+   * Output only. Data corresponding to a stage attempts
+   *
+   * @param StageData[] $sparkApplicationStageAttempts
    */
   public function setSparkApplicationStageAttempts($sparkApplicationStageAttempts)
   {

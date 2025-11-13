@@ -53,7 +53,7 @@ class RddDataDistribution extends \Google\Model
   public $onHeapMemoryUsed;
 
   /**
-   * @param string
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -67,7 +67,7 @@ class RddDataDistribution extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * @param string $diskUsed
    */
   public function setDiskUsed($diskUsed)
   {
@@ -81,7 +81,7 @@ class RddDataDistribution extends \Google\Model
     return $this->diskUsed;
   }
   /**
-   * @param string
+   * @param string $memoryRemaining
    */
   public function setMemoryRemaining($memoryRemaining)
   {
@@ -95,7 +95,7 @@ class RddDataDistribution extends \Google\Model
     return $this->memoryRemaining;
   }
   /**
-   * @param string
+   * @param string $memoryUsed
    */
   public function setMemoryUsed($memoryUsed)
   {
@@ -109,7 +109,7 @@ class RddDataDistribution extends \Google\Model
     return $this->memoryUsed;
   }
   /**
-   * @param string
+   * @param string $offHeapMemoryRemaining
    */
   public function setOffHeapMemoryRemaining($offHeapMemoryRemaining)
   {
@@ -123,7 +123,7 @@ class RddDataDistribution extends \Google\Model
     return $this->offHeapMemoryRemaining;
   }
   /**
-   * @param string
+   * @param string $offHeapMemoryUsed
    */
   public function setOffHeapMemoryUsed($offHeapMemoryUsed)
   {
@@ -137,7 +137,7 @@ class RddDataDistribution extends \Google\Model
     return $this->offHeapMemoryUsed;
   }
   /**
-   * @param string
+   * @param string $onHeapMemoryRemaining
    */
   public function setOnHeapMemoryRemaining($onHeapMemoryRemaining)
   {
@@ -151,7 +151,7 @@ class RddDataDistribution extends \Google\Model
     return $this->onHeapMemoryRemaining;
   }
   /**
-   * @param string
+   * @param string $onHeapMemoryUsed
    */
   public function setOnHeapMemoryUsed($onHeapMemoryUsed)
   {

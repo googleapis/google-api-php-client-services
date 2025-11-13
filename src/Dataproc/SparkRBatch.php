@@ -21,24 +21,42 @@ class SparkRBatch extends \Google\Collection
 {
   protected $collection_key = 'fileUris';
   /**
+   * Optional. HCFS URIs of archives to be extracted into the working directory
+   * of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
+   * .zip.
+   *
    * @var string[]
    */
   public $archiveUris;
   /**
+   * Optional. The arguments to pass to the Spark driver. Do not include
+   * arguments that can be set as batch properties, such as --conf, since a
+   * collision can occur that causes an incorrect batch submission.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * Optional. HCFS URIs of files to be placed in the working directory of each
+   * executor.
+   *
    * @var string[]
    */
   public $fileUris;
   /**
+   * Required. The HCFS URI of the main R file to use as the driver. Must be a
+   * .R or .r file.
+   *
    * @var string
    */
   public $mainRFileUri;
 
   /**
-   * @param string[]
+   * Optional. HCFS URIs of archives to be extracted into the working directory
+   * of each executor. Supported file types: .jar, .tar, .tar.gz, .tgz, and
+   * .zip.
+   *
+   * @param string[] $archiveUris
    */
   public function setArchiveUris($archiveUris)
   {
@@ -52,7 +70,11 @@ class SparkRBatch extends \Google\Collection
     return $this->archiveUris;
   }
   /**
-   * @param string[]
+   * Optional. The arguments to pass to the Spark driver. Do not include
+   * arguments that can be set as batch properties, such as --conf, since a
+   * collision can occur that causes an incorrect batch submission.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -66,7 +88,10 @@ class SparkRBatch extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param string[]
+   * Optional. HCFS URIs of files to be placed in the working directory of each
+   * executor.
+   *
+   * @param string[] $fileUris
    */
   public function setFileUris($fileUris)
   {
@@ -80,7 +105,10 @@ class SparkRBatch extends \Google\Collection
     return $this->fileUris;
   }
   /**
-   * @param string
+   * Required. The HCFS URI of the main R file to use as the driver. Must be a
+   * .R or .r file.
+   *
+   * @param string $mainRFileUri
    */
   public function setMainRFileUri($mainRFileUri)
   {

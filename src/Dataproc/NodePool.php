@@ -19,22 +19,45 @@ namespace Google\Service\Dataproc;
 
 class NodePool extends \Google\Collection
 {
+  /**
+   * No action will be taken by default.
+   */
+  public const REPAIR_ACTION_REPAIR_ACTION_UNSPECIFIED = 'REPAIR_ACTION_UNSPECIFIED';
+  /**
+   * delete the specified list of nodes.
+   */
+  public const REPAIR_ACTION_DELETE = 'DELETE';
   protected $collection_key = 'instanceNames';
   /**
+   * Required. A unique id of the node pool. Primary and Secondary workers can
+   * be specified using special reserved ids PRIMARY_WORKER_POOL and
+   * SECONDARY_WORKER_POOL respectively. Aux node pools can be referenced using
+   * corresponding pool id.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of instances to be repaired. These instances must belong to specified
+   * node pool.
+   *
    * @var string[]
    */
   public $instanceNames;
   /**
+   * Required. Repair action to take on specified resources of the node pool.
+   *
    * @var string
    */
   public $repairAction;
 
   /**
-   * @param string
+   * Required. A unique id of the node pool. Primary and Secondary workers can
+   * be specified using special reserved ids PRIMARY_WORKER_POOL and
+   * SECONDARY_WORKER_POOL respectively. Aux node pools can be referenced using
+   * corresponding pool id.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -48,7 +71,10 @@ class NodePool extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string[]
+   * Name of instances to be repaired. These instances must belong to specified
+   * node pool.
+   *
+   * @param string[] $instanceNames
    */
   public function setInstanceNames($instanceNames)
   {
@@ -62,14 +88,18 @@ class NodePool extends \Google\Collection
     return $this->instanceNames;
   }
   /**
-   * @param string
+   * Required. Repair action to take on specified resources of the node pool.
+   *
+   * Accepted values: REPAIR_ACTION_UNSPECIFIED, DELETE
+   *
+   * @param self::REPAIR_ACTION_* $repairAction
    */
   public function setRepairAction($repairAction)
   {
     $this->repairAction = $repairAction;
   }
   /**
-   * @return string
+   * @return self::REPAIR_ACTION_*
    */
   public function getRepairAction()
   {

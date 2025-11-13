@@ -19,6 +19,10 @@ namespace Google\Service\Dataproc;
 
 class RddOperationNode extends \Google\Model
 {
+  public const OUTPUT_DETERMINISTIC_LEVEL_DETERMINISTIC_LEVEL_UNSPECIFIED = 'DETERMINISTIC_LEVEL_UNSPECIFIED';
+  public const OUTPUT_DETERMINISTIC_LEVEL_DETERMINISTIC_LEVEL_DETERMINATE = 'DETERMINISTIC_LEVEL_DETERMINATE';
+  public const OUTPUT_DETERMINISTIC_LEVEL_DETERMINISTIC_LEVEL_UNORDERED = 'DETERMINISTIC_LEVEL_UNORDERED';
+  public const OUTPUT_DETERMINISTIC_LEVEL_DETERMINISTIC_LEVEL_INDETERMINATE = 'DETERMINISTIC_LEVEL_INDETERMINATE';
   /**
    * @var bool
    */
@@ -45,7 +49,7 @@ class RddOperationNode extends \Google\Model
   public $outputDeterministicLevel;
 
   /**
-   * @param bool
+   * @param bool $barrier
    */
   public function setBarrier($barrier)
   {
@@ -59,7 +63,7 @@ class RddOperationNode extends \Google\Model
     return $this->barrier;
   }
   /**
-   * @param bool
+   * @param bool $cached
    */
   public function setCached($cached)
   {
@@ -73,7 +77,7 @@ class RddOperationNode extends \Google\Model
     return $this->cached;
   }
   /**
-   * @param string
+   * @param string $callsite
    */
   public function setCallsite($callsite)
   {
@@ -87,7 +91,7 @@ class RddOperationNode extends \Google\Model
     return $this->callsite;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -101,7 +105,7 @@ class RddOperationNode extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * @param int $nodeId
    */
   public function setNodeId($nodeId)
   {
@@ -115,14 +119,14 @@ class RddOperationNode extends \Google\Model
     return $this->nodeId;
   }
   /**
-   * @param string
+   * @param self::OUTPUT_DETERMINISTIC_LEVEL_* $outputDeterministicLevel
    */
   public function setOutputDeterministicLevel($outputDeterministicLevel)
   {
     $this->outputDeterministicLevel = $outputDeterministicLevel;
   }
   /**
-   * @return string
+   * @return self::OUTPUT_DETERMINISTIC_LEVEL_*
    */
   public function getOutputDeterministicLevel()
   {

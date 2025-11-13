@@ -54,7 +54,7 @@ class RddStorageInfo extends \Google\Collection
   public $storageLevel;
 
   /**
-   * @param RddDataDistribution[]
+   * @param RddDataDistribution[] $dataDistribution
    */
   public function setDataDistribution($dataDistribution)
   {
@@ -68,7 +68,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->dataDistribution;
   }
   /**
-   * @param string
+   * @param string $diskUsed
    */
   public function setDiskUsed($diskUsed)
   {
@@ -82,7 +82,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->diskUsed;
   }
   /**
-   * @param string
+   * @param string $memoryUsed
    */
   public function setMemoryUsed($memoryUsed)
   {
@@ -96,7 +96,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->memoryUsed;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -110,7 +110,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * @param int $numCachedPartitions
    */
   public function setNumCachedPartitions($numCachedPartitions)
   {
@@ -124,7 +124,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->numCachedPartitions;
   }
   /**
-   * @param int
+   * @param int $numPartitions
    */
   public function setNumPartitions($numPartitions)
   {
@@ -138,7 +138,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->numPartitions;
   }
   /**
-   * @param RddPartitionInfo[]
+   * @param RddPartitionInfo[] $partitions
    */
   public function setPartitions($partitions)
   {
@@ -152,7 +152,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->partitions;
   }
   /**
-   * @param int
+   * @param int $rddStorageId
    */
   public function setRddStorageId($rddStorageId)
   {
@@ -166,7 +166,7 @@ class RddStorageInfo extends \Google\Collection
     return $this->rddStorageId;
   }
   /**
-   * @param string
+   * @param string $storageLevel
    */
   public function setStorageLevel($storageLevel)
   {
