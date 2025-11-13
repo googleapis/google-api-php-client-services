@@ -20,16 +20,24 @@ namespace Google\Service\Vision;
 class WebLabel extends \Google\Model
 {
   /**
+   * Label for extra metadata.
+   *
    * @var string
    */
   public $label;
   /**
+   * The BCP-47 language code for `label`, such as "en-US" or "sr-Latn". For
+   * more information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
    * @var string
    */
   public $languageCode;
 
   /**
-   * @param string
+   * Label for extra metadata.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -43,7 +51,11 @@ class WebLabel extends \Google\Model
     return $this->label;
   }
   /**
-   * @param string
+   * The BCP-47 language code for `label`, such as "en-US" or "sr-Latn". For
+   * more information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {

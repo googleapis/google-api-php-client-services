@@ -20,20 +20,29 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p4beta1WebDetectionWebEntity extends \Google\Model
 {
   /**
+   * Canonical description of the entity, in English.
+   *
    * @var string
    */
   public $description;
   /**
+   * Opaque entity ID.
+   *
    * @var string
    */
   public $entityId;
   /**
+   * Overall relevancy score for the entity. Not normalized and not comparable
+   * across different image queries.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param string
+   * Canonical description of the entity, in English.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +56,9 @@ class GoogleCloudVisionV1p4beta1WebDetectionWebEntity extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Opaque entity ID.
+   *
+   * @param string $entityId
    */
   public function setEntityId($entityId)
   {
@@ -61,7 +72,10 @@ class GoogleCloudVisionV1p4beta1WebDetectionWebEntity extends \Google\Model
     return $this->entityId;
   }
   /**
-   * @param float
+   * Overall relevancy score for the entity. Not normalized and not comparable
+   * across different image queries.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

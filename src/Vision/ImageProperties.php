@@ -23,7 +23,9 @@ class ImageProperties extends \Google\Model
   protected $dominantColorsDataType = '';
 
   /**
-   * @param DominantColorsAnnotation
+   * If present, dominant colors completed successfully.
+   *
+   * @param DominantColorsAnnotation $dominantColors
    */
   public function setDominantColors(DominantColorsAnnotation $dominantColors)
   {

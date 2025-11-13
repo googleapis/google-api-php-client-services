@@ -23,12 +23,16 @@ class TextAnnotation extends \Google\Collection
   protected $pagesType = Page::class;
   protected $pagesDataType = 'array';
   /**
+   * UTF-8 text detected on the pages.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param Page[]
+   * List of pages detected by OCR.
+   *
+   * @param Page[] $pages
    */
   public function setPages($pages)
   {
@@ -42,7 +46,9 @@ class TextAnnotation extends \Google\Collection
     return $this->pages;
   }
   /**
-   * @param string
+   * UTF-8 text detected on the pages.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

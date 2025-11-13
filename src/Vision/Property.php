@@ -20,20 +20,28 @@ namespace Google\Service\Vision;
 class Property extends \Google\Model
 {
   /**
+   * Name of the property.
+   *
    * @var string
    */
   public $name;
   /**
+   * Value of numeric properties.
+   *
    * @var string
    */
   public $uint64Value;
   /**
+   * Value of the property.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Name of the property.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +55,9 @@ class Property extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Value of numeric properties.
+   *
+   * @param string $uint64Value
    */
   public function setUint64Value($uint64Value)
   {
@@ -61,7 +71,9 @@ class Property extends \Google\Model
     return $this->uint64Value;
   }
   /**
-   * @param string
+   * Value of the property.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

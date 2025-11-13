@@ -20,18 +20,25 @@ namespace Google\Service\Vision;
 class WebDetectionParams extends \Google\Model
 {
   /**
+   * This field has no effect on results.
+   *
+   * @deprecated
    * @var bool
    */
   public $includeGeoResults;
 
   /**
-   * @param bool
+   * This field has no effect on results.
+   *
+   * @deprecated
+   * @param bool $includeGeoResults
    */
   public function setIncludeGeoResults($includeGeoResults)
   {
     $this->includeGeoResults = $includeGeoResults;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getIncludeGeoResults()

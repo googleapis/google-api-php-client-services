@@ -34,7 +34,10 @@ class WebDetection extends \Google\Collection
   protected $webEntitiesDataType = 'array';
 
   /**
-   * @param WebLabel[]
+   * The service's best guess as to the topic of the request image. Inferred
+   * from similar images on the open web.
+   *
+   * @param WebLabel[] $bestGuessLabels
    */
   public function setBestGuessLabels($bestGuessLabels)
   {
@@ -48,7 +51,10 @@ class WebDetection extends \Google\Collection
     return $this->bestGuessLabels;
   }
   /**
-   * @param WebImage[]
+   * Fully matching images from the Internet. Can include resized copies of the
+   * query image.
+   *
+   * @param WebImage[] $fullMatchingImages
    */
   public function setFullMatchingImages($fullMatchingImages)
   {
@@ -62,7 +68,9 @@ class WebDetection extends \Google\Collection
     return $this->fullMatchingImages;
   }
   /**
-   * @param WebPage[]
+   * Web pages containing the matching images from the Internet.
+   *
+   * @param WebPage[] $pagesWithMatchingImages
    */
   public function setPagesWithMatchingImages($pagesWithMatchingImages)
   {
@@ -76,7 +84,11 @@ class WebDetection extends \Google\Collection
     return $this->pagesWithMatchingImages;
   }
   /**
-   * @param WebImage[]
+   * Partial matching images from the Internet. Those images are similar enough
+   * to share some key-point features. For example an original image will likely
+   * have partial matching for its crops.
+   *
+   * @param WebImage[] $partialMatchingImages
    */
   public function setPartialMatchingImages($partialMatchingImages)
   {
@@ -90,7 +102,9 @@ class WebDetection extends \Google\Collection
     return $this->partialMatchingImages;
   }
   /**
-   * @param WebImage[]
+   * The visually similar image results.
+   *
+   * @param WebImage[] $visuallySimilarImages
    */
   public function setVisuallySimilarImages($visuallySimilarImages)
   {
@@ -104,7 +118,9 @@ class WebDetection extends \Google\Collection
     return $this->visuallySimilarImages;
   }
   /**
-   * @param WebEntity[]
+   * Deduced entities from similar images on the Internet.
+   *
+   * @param WebEntity[] $webEntities
    */
   public function setWebEntities($webEntities)
   {

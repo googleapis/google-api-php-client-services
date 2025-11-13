@@ -23,6 +23,8 @@ class Paragraph extends \Google\Collection
   protected $boundingBoxType = BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
+   * Confidence of the OCR results for the paragraph. Range [0, 1].
+   *
    * @var float
    */
   public $confidence;
@@ -32,7 +34,15 @@ class Paragraph extends \Google\Collection
   protected $wordsDataType = 'array';
 
   /**
-   * @param BoundingPoly
+   * The bounding box for the paragraph. The vertices are in the order of top-
+   * left, top-right, bottom-right, bottom-left. When a rotation of the bounding
+   * box is detected the rotation is represented as around the top-left corner
+   * as defined when the text is read in the 'natural' orientation. For example:
+   * * when the text is horizontal it might look like: 0----1 | | 3----2 * when
+   * it's rotated 180 degrees around the top-left corner it becomes: 2----3 | |
+   * 1----0 and the vertex order will still be (0, 1, 2, 3).
+   *
+   * @param BoundingPoly $boundingBox
    */
   public function setBoundingBox(BoundingPoly $boundingBox)
   {
@@ -46,7 +56,9 @@ class Paragraph extends \Google\Collection
     return $this->boundingBox;
   }
   /**
-   * @param float
+   * Confidence of the OCR results for the paragraph. Range [0, 1].
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -60,7 +72,9 @@ class Paragraph extends \Google\Collection
     return $this->confidence;
   }
   /**
-   * @param TextProperty
+   * Additional information detected for the paragraph.
+   *
+   * @param TextProperty $property
    */
   public function setProperty(TextProperty $property)
   {
@@ -74,7 +88,9 @@ class Paragraph extends \Google\Collection
     return $this->property;
   }
   /**
-   * @param Word[]
+   * List of all words in this paragraph.
+   *
+   * @param Word[] $words
    */
   public function setWords($words)
   {

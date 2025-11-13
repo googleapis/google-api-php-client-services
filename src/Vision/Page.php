@@ -23,22 +23,32 @@ class Page extends \Google\Collection
   protected $blocksType = Block::class;
   protected $blocksDataType = 'array';
   /**
+   * Confidence of the OCR results on the page. Range [0, 1].
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Page height. For PDFs the unit is points. For images (including TIFFs) the
+   * unit is pixels.
+   *
    * @var int
    */
   public $height;
   protected $propertyType = TextProperty::class;
   protected $propertyDataType = '';
   /**
+   * Page width. For PDFs the unit is points. For images (including TIFFs) the
+   * unit is pixels.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param Block[]
+   * List of blocks of text, images etc on this page.
+   *
+   * @param Block[] $blocks
    */
   public function setBlocks($blocks)
   {
@@ -52,7 +62,9 @@ class Page extends \Google\Collection
     return $this->blocks;
   }
   /**
-   * @param float
+   * Confidence of the OCR results on the page. Range [0, 1].
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -66,7 +78,10 @@ class Page extends \Google\Collection
     return $this->confidence;
   }
   /**
-   * @param int
+   * Page height. For PDFs the unit is points. For images (including TIFFs) the
+   * unit is pixels.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -80,7 +95,9 @@ class Page extends \Google\Collection
     return $this->height;
   }
   /**
-   * @param TextProperty
+   * Additional information detected on the page.
+   *
+   * @param TextProperty $property
    */
   public function setProperty(TextProperty $property)
   {
@@ -94,7 +111,10 @@ class Page extends \Google\Collection
     return $this->property;
   }
   /**
-   * @param int
+   * Page width. For PDFs the unit is points. For images (including TIFFs) the
+   * unit is pixels.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

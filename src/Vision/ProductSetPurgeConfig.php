@@ -20,12 +20,20 @@ namespace Google\Service\Vision;
 class ProductSetPurgeConfig extends \Google\Model
 {
   /**
+   * The ProductSet that contains the Products to delete. If a Product is a
+   * member of product_set_id in addition to other ProductSets, the Product will
+   * still be deleted.
+   *
    * @var string
    */
   public $productSetId;
 
   /**
-   * @param string
+   * The ProductSet that contains the Products to delete. If a Product is a
+   * member of product_set_id in addition to other ProductSets, the Product will
+   * still be deleted.
+   *
+   * @param string $productSetId
    */
   public function setProductSetId($productSetId)
   {

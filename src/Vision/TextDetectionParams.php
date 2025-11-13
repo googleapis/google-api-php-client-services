@@ -21,16 +21,32 @@ class TextDetectionParams extends \Google\Collection
 {
   protected $collection_key = 'advancedOcrOptions';
   /**
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current
+   * valid values are: - `legacy_layout`: a heuristics layout detection
+   * algorithm, which serves as an alternative to the current ML-based layout
+   * detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
+   *
    * @var string[]
    */
   public $advancedOcrOptions;
   /**
+   * By default, Cloud Vision API only includes confidence score for
+   * DOCUMENT_TEXT_DETECTION result. Set the flag to true to include confidence
+   * score for TEXT_DETECTION as well.
+   *
    * @var bool
    */
   public $enableTextDetectionConfidenceScore;
 
   /**
-   * @param string[]
+   * A list of advanced OCR options to further fine-tune OCR behavior. Current
+   * valid values are: - `legacy_layout`: a heuristics layout detection
+   * algorithm, which serves as an alternative to the current ML-based layout
+   * detection algorithm. Customers can choose the best suitable layout
+   * algorithm based on their situation.
+   *
+   * @param string[] $advancedOcrOptions
    */
   public function setAdvancedOcrOptions($advancedOcrOptions)
   {
@@ -44,7 +60,11 @@ class TextDetectionParams extends \Google\Collection
     return $this->advancedOcrOptions;
   }
   /**
-   * @param bool
+   * By default, Cloud Vision API only includes confidence score for
+   * DOCUMENT_TEXT_DETECTION result. Set the flag to true to include confidence
+   * score for TEXT_DETECTION as well.
+   *
+   * @param bool $enableTextDetectionConfidenceScore
    */
   public function setEnableTextDetectionConfidenceScore($enableTextDetectionConfidenceScore)
   {

@@ -20,18 +20,27 @@ namespace Google\Service\Vision;
 class Result extends \Google\Model
 {
   /**
+   * The resource name of the image from the product that is the closest match
+   * to the query.
+   *
    * @var string
    */
   public $image;
   protected $productType = Product::class;
   protected $productDataType = '';
   /**
+   * A confidence level on the match, ranging from 0 (no confidence) to 1 (full
+   * confidence).
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param string
+   * The resource name of the image from the product that is the closest match
+   * to the query.
+   *
+   * @param string $image
    */
   public function setImage($image)
   {
@@ -45,7 +54,9 @@ class Result extends \Google\Model
     return $this->image;
   }
   /**
-   * @param Product
+   * The Product.
+   *
+   * @param Product $product
    */
   public function setProduct(Product $product)
   {
@@ -59,7 +70,10 @@ class Result extends \Google\Model
     return $this->product;
   }
   /**
-   * @param float
+   * A confidence level on the match, ranging from 0 (no confidence) to 1 (full
+   * confidence).
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

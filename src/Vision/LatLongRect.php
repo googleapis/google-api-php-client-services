@@ -25,7 +25,9 @@ class LatLongRect extends \Google\Model
   protected $minLatLngDataType = '';
 
   /**
-   * @param LatLng
+   * Max lat/long pair.
+   *
+   * @param LatLng $maxLatLng
    */
   public function setMaxLatLng(LatLng $maxLatLng)
   {
@@ -39,7 +41,9 @@ class LatLongRect extends \Google\Model
     return $this->maxLatLng;
   }
   /**
-   * @param LatLng
+   * Min lat/long pair.
+   *
+   * @param LatLng $minLatLng
    */
   public function setMinLatLng(LatLng $minLatLng)
   {

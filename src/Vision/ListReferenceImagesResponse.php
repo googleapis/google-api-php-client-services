@@ -21,10 +21,14 @@ class ListReferenceImagesResponse extends \Google\Collection
 {
   protected $collection_key = 'referenceImages';
   /**
+   * The next_page_token returned from a previous List request, if any.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The maximum number of items to return. Default 10, maximum 100.
+   *
    * @var int
    */
   public $pageSize;
@@ -32,7 +36,9 @@ class ListReferenceImagesResponse extends \Google\Collection
   protected $referenceImagesDataType = 'array';
 
   /**
-   * @param string
+   * The next_page_token returned from a previous List request, if any.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListReferenceImagesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * The maximum number of items to return. Default 10, maximum 100.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -60,7 +68,9 @@ class ListReferenceImagesResponse extends \Google\Collection
     return $this->pageSize;
   }
   /**
-   * @param ReferenceImage[]
+   * The list of reference images.
+   *
+   * @param ReferenceImage[] $referenceImages
    */
   public function setReferenceImages($referenceImages)
   {
