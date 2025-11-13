@@ -24,7 +24,9 @@ class GoogleRpcPreconditionFailure extends \Google\Collection
   protected $violationsDataType = 'array';
 
   /**
-   * @param GoogleRpcPreconditionFailureViolation[]
+   * Describes all precondition violations.
+   *
+   * @param GoogleRpcPreconditionFailureViolation[] $violations
    */
   public function setViolations($violations)
   {
