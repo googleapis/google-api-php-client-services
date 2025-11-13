@@ -20,20 +20,28 @@ namespace Google\Service\AndroidManagement;
 class RemoteLockEvent extends \Google\Model
 {
   /**
+   * Package name of the admin app requesting the change.
+   *
    * @var string
    */
   public $adminPackageName;
   /**
+   * User ID of the admin app from the which the change was requested.
+   *
    * @var int
    */
   public $adminUserId;
   /**
+   * User ID in which the change was requested in.
+   *
    * @var int
    */
   public $targetUserId;
 
   /**
-   * @param string
+   * Package name of the admin app requesting the change.
+   *
+   * @param string $adminPackageName
    */
   public function setAdminPackageName($adminPackageName)
   {
@@ -47,7 +55,9 @@ class RemoteLockEvent extends \Google\Model
     return $this->adminPackageName;
   }
   /**
-   * @param int
+   * User ID of the admin app from the which the change was requested.
+   *
+   * @param int $adminUserId
    */
   public function setAdminUserId($adminUserId)
   {
@@ -61,7 +71,9 @@ class RemoteLockEvent extends \Google\Model
     return $this->adminUserId;
   }
   /**
-   * @param int
+   * User ID in which the change was requested in.
+   *
+   * @param int $targetUserId
    */
   public function setTargetUserId($targetUserId)
   {

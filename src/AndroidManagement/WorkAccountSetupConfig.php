@@ -20,30 +20,61 @@ namespace Google\Service\AndroidManagement;
 class WorkAccountSetupConfig extends \Google\Model
 {
   /**
+   * Unspecified. Defaults to AUTHENTICATION_TYPE_NOT_ENFORCED.
+   */
+  public const AUTHENTICATION_TYPE_AUTHENTICATION_TYPE_UNSPECIFIED = 'AUTHENTICATION_TYPE_UNSPECIFIED';
+  /**
+   * Authentication status of user on device is not enforced.
+   */
+  public const AUTHENTICATION_TYPE_AUTHENTICATION_TYPE_NOT_ENFORCED = 'AUTHENTICATION_TYPE_NOT_ENFORCED';
+  /**
+   * Requires device to be managed with a Google authenticated account.
+   */
+  public const AUTHENTICATION_TYPE_GOOGLE_AUTHENTICATED = 'GOOGLE_AUTHENTICATED';
+  /**
+   * Optional. The authentication type of the user on the device.
+   *
    * @var string
    */
   public $authenticationType;
   /**
+   * Optional. The specific google work account email address to be added. This
+   * field is only relevant if authenticationType is GOOGLE_AUTHENTICATED. This
+   * must be an enterprise account and not a consumer account. Once set and a
+   * Google authenticated account is added to the device, changing this field
+   * will have no effect, and thus recommended to be set only once.
+   *
    * @var string
    */
   public $requiredAccountEmail;
 
   /**
-   * @param string
+   * Optional. The authentication type of the user on the device.
+   *
+   * Accepted values: AUTHENTICATION_TYPE_UNSPECIFIED,
+   * AUTHENTICATION_TYPE_NOT_ENFORCED, GOOGLE_AUTHENTICATED
+   *
+   * @param self::AUTHENTICATION_TYPE_* $authenticationType
    */
   public function setAuthenticationType($authenticationType)
   {
     $this->authenticationType = $authenticationType;
   }
   /**
-   * @return string
+   * @return self::AUTHENTICATION_TYPE_*
    */
   public function getAuthenticationType()
   {
     return $this->authenticationType;
   }
   /**
-   * @param string
+   * Optional. The specific google work account email address to be added. This
+   * field is only relevant if authenticationType is GOOGLE_AUTHENTICATED. This
+   * must be an enterprise account and not a consumer account. Once set and a
+   * Google authenticated account is added to the device, changing this field
+   * will have no effect, and thus recommended to be set only once.
+   *
+   * @param string $requiredAccountEmail
    */
   public function setRequiredAccountEmail($requiredAccountEmail)
   {

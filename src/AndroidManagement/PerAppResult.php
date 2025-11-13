@@ -20,19 +20,49 @@ namespace Google\Service\AndroidManagement;
 class PerAppResult extends \Google\Model
 {
   /**
+   * Unspecified result.
+   */
+  public const CLEARING_RESULT_CLEARING_RESULT_UNSPECIFIED = 'CLEARING_RESULT_UNSPECIFIED';
+  /**
+   * This app’s data was successfully cleared.
+   */
+  public const CLEARING_RESULT_SUCCESS = 'SUCCESS';
+  /**
+   * This app’s data could not be cleared because the app was not found.
+   */
+  public const CLEARING_RESULT_APP_NOT_FOUND = 'APP_NOT_FOUND';
+  /**
+   * This app’s data could not be cleared because the app is protected. For
+   * example, this may apply to apps critical to the functioning of the device,
+   * such as Google Play Store.
+   */
+  public const CLEARING_RESULT_APP_PROTECTED = 'APP_PROTECTED';
+  /**
+   * This app’s data could not be cleared because the device API level does not
+   * support this command.
+   */
+  public const CLEARING_RESULT_API_LEVEL = 'API_LEVEL';
+  /**
+   * The result of an attempt to clear the data of a single app.
+   *
    * @var string
    */
   public $clearingResult;
 
   /**
-   * @param string
+   * The result of an attempt to clear the data of a single app.
+   *
+   * Accepted values: CLEARING_RESULT_UNSPECIFIED, SUCCESS, APP_NOT_FOUND,
+   * APP_PROTECTED, API_LEVEL
+   *
+   * @param self::CLEARING_RESULT_* $clearingResult
    */
   public function setClearingResult($clearingResult)
   {
     $this->clearingResult = $clearingResult;
   }
   /**
-   * @return string
+   * @return self::CLEARING_RESULT_*
    */
   public function getClearingResult()
   {

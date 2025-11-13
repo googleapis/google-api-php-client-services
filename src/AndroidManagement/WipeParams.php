@@ -21,6 +21,8 @@ class WipeParams extends \Google\Collection
 {
   protected $collection_key = 'wipeDataFlags';
   /**
+   * Optional. Flags to determine what data to wipe.
+   *
    * @var string[]
    */
   public $wipeDataFlags;
@@ -28,7 +30,9 @@ class WipeParams extends \Google\Collection
   protected $wipeReasonDataType = '';
 
   /**
-   * @param string[]
+   * Optional. Flags to determine what data to wipe.
+   *
+   * @param string[] $wipeDataFlags
    */
   public function setWipeDataFlags($wipeDataFlags)
   {
@@ -42,7 +46,11 @@ class WipeParams extends \Google\Collection
     return $this->wipeDataFlags;
   }
   /**
-   * @param UserFacingMessage
+   * Optional. A short message displayed to the user before wiping the work
+   * profile on personal devices. This has no effect on company owned devices.
+   * The maximum message length is 200 characters.
+   *
+   * @param UserFacingMessage $wipeReason
    */
   public function setWipeReason(UserFacingMessage $wipeReason)
   {

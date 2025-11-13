@@ -19,8 +19,26 @@ namespace Google\Service\AndroidManagement;
 
 class WifiSsidPolicy extends \Google\Collection
 {
+  /**
+   * Defaults to WIFI_SSID_DENYLIST. wifiSsids must not be set. There are no
+   * restrictions on which SSID the device can connect to.
+   */
+  public const WIFI_SSID_POLICY_TYPE_WIFI_SSID_POLICY_TYPE_UNSPECIFIED = 'WIFI_SSID_POLICY_TYPE_UNSPECIFIED';
+  /**
+   * The device cannot connect to any Wi-Fi network whose SSID is in wifiSsids,
+   * but can connect to other networks.
+   */
+  public const WIFI_SSID_POLICY_TYPE_WIFI_SSID_DENYLIST = 'WIFI_SSID_DENYLIST';
+  /**
+   * The device can make Wi-Fi connections only to the SSIDs in wifiSsids.
+   * wifiSsids must not be empty. The device will not be able to connect to any
+   * other Wi-Fi network.
+   */
+  public const WIFI_SSID_POLICY_TYPE_WIFI_SSID_ALLOWLIST = 'WIFI_SSID_ALLOWLIST';
   protected $collection_key = 'wifiSsids';
   /**
+   * Type of the Wi-Fi SSID policy to be applied.
+   *
    * @var string
    */
   public $wifiSsidPolicyType;
@@ -28,21 +46,33 @@ class WifiSsidPolicy extends \Google\Collection
   protected $wifiSsidsDataType = 'array';
 
   /**
-   * @param string
+   * Type of the Wi-Fi SSID policy to be applied.
+   *
+   * Accepted values: WIFI_SSID_POLICY_TYPE_UNSPECIFIED, WIFI_SSID_DENYLIST,
+   * WIFI_SSID_ALLOWLIST
+   *
+   * @param self::WIFI_SSID_POLICY_TYPE_* $wifiSsidPolicyType
    */
   public function setWifiSsidPolicyType($wifiSsidPolicyType)
   {
     $this->wifiSsidPolicyType = $wifiSsidPolicyType;
   }
   /**
-   * @return string
+   * @return self::WIFI_SSID_POLICY_TYPE_*
    */
   public function getWifiSsidPolicyType()
   {
     return $this->wifiSsidPolicyType;
   }
   /**
-   * @param WifiSsid[]
+   * Optional. List of Wi-Fi SSIDs that should be applied in the policy. This
+   * field must be non-empty when WifiSsidPolicyType is set to
+   * WIFI_SSID_ALLOWLIST. If this is set to a non-empty list, then a
+   * NonComplianceDetail detail with API_LEVEL is reported if the Android
+   * version is less than 13 and a NonComplianceDetail with MANAGEMENT_MODE is
+   * reported for non-company-owned devices.
+   *
+   * @param WifiSsid[] $wifiSsids
    */
   public function setWifiSsids($wifiSsids)
   {

@@ -24,7 +24,10 @@ class WifiRoamingPolicy extends \Google\Collection
   protected $wifiRoamingSettingsDataType = 'array';
 
   /**
-   * @param WifiRoamingSetting[]
+   * Optional. Wi-Fi roaming settings. SSIDs provided in this list must be
+   * unique, the policy will be rejected otherwise.
+   *
+   * @param WifiRoamingSetting[] $wifiRoamingSettings
    */
   public function setWifiRoamingSettings($wifiRoamingSettings)
   {

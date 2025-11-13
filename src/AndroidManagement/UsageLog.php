@@ -21,16 +21,25 @@ class UsageLog extends \Google\Collection
 {
   protected $collection_key = 'uploadOnCellularAllowed';
   /**
+   * Specifies which log types are enabled. Note that users will receive on-
+   * device messaging when usage logging is enabled.
+   *
    * @var string[]
    */
   public $enabledLogTypes;
   /**
+   * Specifies which of the enabled log types can be uploaded over mobile data.
+   * By default logs are queued for upload when the device connects to WiFi.
+   *
    * @var string[]
    */
   public $uploadOnCellularAllowed;
 
   /**
-   * @param string[]
+   * Specifies which log types are enabled. Note that users will receive on-
+   * device messaging when usage logging is enabled.
+   *
+   * @param string[] $enabledLogTypes
    */
   public function setEnabledLogTypes($enabledLogTypes)
   {
@@ -44,7 +53,10 @@ class UsageLog extends \Google\Collection
     return $this->enabledLogTypes;
   }
   /**
-   * @param string[]
+   * Specifies which of the enabled log types can be uploaded over mobile data.
+   * By default logs are queued for upload when the device connects to WiFi.
+   *
+   * @param string[] $uploadOnCellularAllowed
    */
   public function setUploadOnCellularAllowed($uploadOnCellularAllowed)
   {

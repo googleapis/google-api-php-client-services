@@ -21,12 +21,18 @@ class RemovePolicyApplicationsRequest extends \Google\Collection
 {
   protected $collection_key = 'packageNames';
   /**
+   * Required. Package names to be removed. Entries that are not found are
+   * ignored. There must be at least one entry in package_names.
+   *
    * @var string[]
    */
   public $packageNames;
 
   /**
-   * @param string[]
+   * Required. Package names to be removed. Entries that are not found are
+   * ignored. There must be at least one entry in package_names.
+   *
+   * @param string[] $packageNames
    */
   public function setPackageNames($packageNames)
   {

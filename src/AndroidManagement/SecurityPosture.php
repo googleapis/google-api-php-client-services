@@ -19,8 +19,28 @@ namespace Google\Service\AndroidManagement;
 
 class SecurityPosture extends \Google\Collection
 {
+  /**
+   * Unspecified. There is no posture detail for this posture value.
+   */
+  public const DEVICE_POSTURE_POSTURE_UNSPECIFIED = 'POSTURE_UNSPECIFIED';
+  /**
+   * This device is secure.
+   */
+  public const DEVICE_POSTURE_SECURE = 'SECURE';
+  /**
+   * This device may be more vulnerable to malicious actors than is recommended
+   * for use with corporate data.
+   */
+  public const DEVICE_POSTURE_AT_RISK = 'AT_RISK';
+  /**
+   * This device may be compromised and corporate data may be accessible to
+   * unauthorized actors.
+   */
+  public const DEVICE_POSTURE_POTENTIALLY_COMPROMISED = 'POTENTIALLY_COMPROMISED';
   protected $collection_key = 'postureDetails';
   /**
+   * Device's security posture value.
+   *
    * @var string
    */
   public $devicePosture;
@@ -28,21 +48,28 @@ class SecurityPosture extends \Google\Collection
   protected $postureDetailsDataType = 'array';
 
   /**
-   * @param string
+   * Device's security posture value.
+   *
+   * Accepted values: POSTURE_UNSPECIFIED, SECURE, AT_RISK,
+   * POTENTIALLY_COMPROMISED
+   *
+   * @param self::DEVICE_POSTURE_* $devicePosture
    */
   public function setDevicePosture($devicePosture)
   {
     $this->devicePosture = $devicePosture;
   }
   /**
-   * @return string
+   * @return self::DEVICE_POSTURE_*
    */
   public function getDevicePosture()
   {
     return $this->devicePosture;
   }
   /**
-   * @param PostureDetail[]
+   * Additional details regarding the security posture of the device.
+   *
+   * @param PostureDetail[] $postureDetails
    */
   public function setPostureDetails($postureDetails)
   {

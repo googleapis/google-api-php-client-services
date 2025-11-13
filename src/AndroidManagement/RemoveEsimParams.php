@@ -20,12 +20,16 @@ namespace Google\Service\AndroidManagement;
 class RemoveEsimParams extends \Google\Model
 {
   /**
+   * Required. ICC ID of the eSIM profile to be deleted.
+   *
    * @var string
    */
   public $iccId;
 
   /**
-   * @param string
+   * Required. ICC ID of the eSIM profile to be deleted.
+   *
+   * @param string $iccId
    */
   public function setIccId($iccId)
   {

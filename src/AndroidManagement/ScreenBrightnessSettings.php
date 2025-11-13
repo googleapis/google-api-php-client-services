@@ -20,16 +20,62 @@ namespace Google\Service\AndroidManagement;
 class ScreenBrightnessSettings extends \Google\Model
 {
   /**
+   * Unspecified. Defaults to BRIGHTNESS_USER_CHOICE.
+   */
+  public const SCREEN_BRIGHTNESS_MODE_SCREEN_BRIGHTNESS_MODE_UNSPECIFIED = 'SCREEN_BRIGHTNESS_MODE_UNSPECIFIED';
+  /**
+   * The user is allowed to configure the screen brightness. screenBrightness
+   * must not be set.
+   */
+  public const SCREEN_BRIGHTNESS_MODE_BRIGHTNESS_USER_CHOICE = 'BRIGHTNESS_USER_CHOICE';
+  /**
+   * The screen brightness mode is automatic in which the brightness is
+   * automatically adjusted and the user is not allowed to configure the screen
+   * brightness. screenBrightness can still be set and it is taken into account
+   * while the brightness is automatically adjusted. Supported on Android 9 and
+   * above on fully managed devices. A NonComplianceDetail with API_LEVEL is
+   * reported if the Android version is less than 9. Supported on work profiles
+   * on company-owned devices on Android 15 and above.
+   */
+  public const SCREEN_BRIGHTNESS_MODE_BRIGHTNESS_AUTOMATIC = 'BRIGHTNESS_AUTOMATIC';
+  /**
+   * The screen brightness mode is fixed in which the brightness is set to
+   * screenBrightness and the user is not allowed to configure the screen
+   * brightness. screenBrightness must be set. Supported on Android 9 and above
+   * on fully managed devices. A NonComplianceDetail with API_LEVEL is reported
+   * if the Android version is less than 9. Supported on work profiles on
+   * company-owned devices on Android 15 and above.
+   */
+  public const SCREEN_BRIGHTNESS_MODE_BRIGHTNESS_FIXED = 'BRIGHTNESS_FIXED';
+  /**
+   * Optional. The screen brightness between 1 and 255 where 1 is the lowest and
+   * 255 is the highest brightness. A value of 0 (default) means no screen
+   * brightness set. Any other value is rejected. screenBrightnessMode must be
+   * either BRIGHTNESS_AUTOMATIC or BRIGHTNESS_FIXED to set this. Supported on
+   * Android 9 and above on fully managed devices. A NonComplianceDetail with
+   * API_LEVEL is reported if the Android version is less than 9. Supported on
+   * work profiles on company-owned devices on Android 15 and above.
+   *
    * @var int
    */
   public $screenBrightness;
   /**
+   * Optional. Controls the screen brightness mode.
+   *
    * @var string
    */
   public $screenBrightnessMode;
 
   /**
-   * @param int
+   * Optional. The screen brightness between 1 and 255 where 1 is the lowest and
+   * 255 is the highest brightness. A value of 0 (default) means no screen
+   * brightness set. Any other value is rejected. screenBrightnessMode must be
+   * either BRIGHTNESS_AUTOMATIC or BRIGHTNESS_FIXED to set this. Supported on
+   * Android 9 and above on fully managed devices. A NonComplianceDetail with
+   * API_LEVEL is reported if the Android version is less than 9. Supported on
+   * work profiles on company-owned devices on Android 15 and above.
+   *
+   * @param int $screenBrightness
    */
   public function setScreenBrightness($screenBrightness)
   {
@@ -43,14 +89,19 @@ class ScreenBrightnessSettings extends \Google\Model
     return $this->screenBrightness;
   }
   /**
-   * @param string
+   * Optional. Controls the screen brightness mode.
+   *
+   * Accepted values: SCREEN_BRIGHTNESS_MODE_UNSPECIFIED,
+   * BRIGHTNESS_USER_CHOICE, BRIGHTNESS_AUTOMATIC, BRIGHTNESS_FIXED
+   *
+   * @param self::SCREEN_BRIGHTNESS_MODE_* $screenBrightnessMode
    */
   public function setScreenBrightnessMode($screenBrightnessMode)
   {
     $this->screenBrightnessMode = $screenBrightnessMode;
   }
   /**
-   * @return string
+   * @return self::SCREEN_BRIGHTNESS_MODE_*
    */
   public function getScreenBrightnessMode()
   {

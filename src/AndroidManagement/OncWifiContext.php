@@ -20,12 +20,16 @@ namespace Google\Service\AndroidManagement;
 class OncWifiContext extends \Google\Model
 {
   /**
+   * The GUID of non-compliant Wi-Fi configuration.
+   *
    * @var string
    */
   public $wifiGuid;
 
   /**
-   * @param string
+   * The GUID of non-compliant Wi-Fi configuration.
+   *
+   * @param string $wifiGuid
    */
   public function setWifiGuid($wifiGuid)
   {

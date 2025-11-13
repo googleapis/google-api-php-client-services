@@ -27,7 +27,9 @@ class SetupAction extends \Google\Model
   protected $titleDataType = '';
 
   /**
-   * @param UserFacingMessage
+   * Description of this action.
+   *
+   * @param UserFacingMessage $description
    */
   public function setDescription(UserFacingMessage $description)
   {
@@ -41,7 +43,15 @@ class SetupAction extends \Google\Model
     return $this->description;
   }
   /**
-   * @param LaunchAppAction
+   * An action to launch an app. The app will be launched with an intent
+   * containing an extra with key
+   * com.google.android.apps.work.clouddpc.EXTRA_LAUNCHED_AS_SETUP_ACTION set to
+   * the boolean value true to indicate that this is a setup action flow. If
+   * SetupAction references an app, the corresponding installType in the
+   * application policy must be set as REQUIRED_FOR_SETUP or said setup will
+   * fail.
+   *
+   * @param LaunchAppAction $launchApp
    */
   public function setLaunchApp(LaunchAppAction $launchApp)
   {
@@ -55,7 +65,9 @@ class SetupAction extends \Google\Model
     return $this->launchApp;
   }
   /**
-   * @param UserFacingMessage
+   * Title of this action.
+   *
+   * @param UserFacingMessage $title
    */
   public function setTitle(UserFacingMessage $title)
   {

@@ -19,15 +19,41 @@ namespace Google\Service\AndroidManagement;
 
 class RequestDeviceInfoStatus extends \Google\Model
 {
+  /**
+   * Unspecified. This value is not used.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * Device information has been successfully delivered.
+   */
+  public const STATUS_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The user has not completed the actions required to share device
+   * information.
+   */
+  public const STATUS_PENDING_USER_ACTION = 'PENDING_USER_ACTION';
+  /**
+   * The user declined sharing device information.
+   */
+  public const STATUS_USER_DECLINED = 'USER_DECLINED';
+  /**
+   * The requested device info is not supported on this device, e.g. eSIM is not
+   * supported on the device.
+   */
+  public const STATUS_UNSUPPORTED = 'UNSUPPORTED';
   protected $eidInfoType = EidInfo::class;
   protected $eidInfoDataType = '';
   /**
+   * Output only. Status of a REQUEST_DEVICE_INFO command.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param EidInfo
+   * Information related to the EIDs of the device.
+   *
+   * @param EidInfo $eidInfo
    */
   public function setEidInfo(EidInfo $eidInfo)
   {
@@ -41,14 +67,19 @@ class RequestDeviceInfoStatus extends \Google\Model
     return $this->eidInfo;
   }
   /**
-   * @param string
+   * Output only. Status of a REQUEST_DEVICE_INFO command.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, SUCCEEDED, PENDING_USER_ACTION,
+   * USER_DECLINED, UNSUPPORTED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

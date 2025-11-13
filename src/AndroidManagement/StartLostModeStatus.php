@@ -20,19 +20,48 @@ namespace Google\Service\AndroidManagement;
 class StartLostModeStatus extends \Google\Model
 {
   /**
+   * Unspecified. This value is not used.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The device was put into lost mode.
+   */
+  public const STATUS_SUCCESS = 'SUCCESS';
+  /**
+   * The device could not be put into lost mode because the admin reset the
+   * device's password recently.
+   */
+  public const STATUS_RESET_PASSWORD_RECENTLY = 'RESET_PASSWORD_RECENTLY';
+  /**
+   * The device could not be put into lost mode because the user exited lost
+   * mode recently.
+   */
+  public const STATUS_USER_EXIT_LOST_MODE_RECENTLY = 'USER_EXIT_LOST_MODE_RECENTLY';
+  /**
+   * The device is already in lost mode.
+   */
+  public const STATUS_ALREADY_IN_LOST_MODE = 'ALREADY_IN_LOST_MODE';
+  /**
+   * The status. See StartLostModeStatus.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * The status. See StartLostModeStatus.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, SUCCESS, RESET_PASSWORD_RECENTLY,
+   * USER_EXIT_LOST_MODE_RECENTLY, ALREADY_IN_LOST_MODE
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

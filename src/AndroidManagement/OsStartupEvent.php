@@ -20,37 +20,86 @@ namespace Google\Service\AndroidManagement;
 class OsStartupEvent extends \Google\Model
 {
   /**
+   * Unknown value.
+   */
+  public const VERIFIED_BOOT_STATE_VERIFIED_BOOT_STATE_UNSPECIFIED = 'VERIFIED_BOOT_STATE_UNSPECIFIED';
+  /**
+   * Indicates that there is a full chain of trust extending from the bootloader
+   * to verified partitions including the bootloader, boot partition, and all
+   * verified partitions.
+   */
+  public const VERIFIED_BOOT_STATE_GREEN = 'GREEN';
+  /**
+   * Indicates that the boot partition has been verified using the embedded
+   * certificate and the signature is valid.
+   */
+  public const VERIFIED_BOOT_STATE_YELLOW = 'YELLOW';
+  /**
+   * Indicates that the device may be freely modified. Device integrity is left
+   * to the user to verify out-of-band.
+   */
+  public const VERIFIED_BOOT_STATE_ORANGE = 'ORANGE';
+  /**
+   * Unknown value.
+   */
+  public const VERITY_MODE_DM_VERITY_MODE_UNSPECIFIED = 'DM_VERITY_MODE_UNSPECIFIED';
+  /**
+   * Indicates that the device will be restarted when corruption is detected.
+   */
+  public const VERITY_MODE_ENFORCING = 'ENFORCING';
+  /**
+   * Indicates that an I/O error will be returned for an attempt to read
+   * corrupted data blocks (also known as eio boot state).
+   */
+  public const VERITY_MODE_IO_ERROR = 'IO_ERROR';
+  /**
+   * Indicates that dm-verity is disabled on device.
+   */
+  public const VERITY_MODE_DISABLED = 'DISABLED';
+  /**
+   * Verified Boot state.
+   *
    * @var string
    */
   public $verifiedBootState;
   /**
+   * dm-verity mode.
+   *
    * @var string
    */
   public $verityMode;
 
   /**
-   * @param string
+   * Verified Boot state.
+   *
+   * Accepted values: VERIFIED_BOOT_STATE_UNSPECIFIED, GREEN, YELLOW, ORANGE
+   *
+   * @param self::VERIFIED_BOOT_STATE_* $verifiedBootState
    */
   public function setVerifiedBootState($verifiedBootState)
   {
     $this->verifiedBootState = $verifiedBootState;
   }
   /**
-   * @return string
+   * @return self::VERIFIED_BOOT_STATE_*
    */
   public function getVerifiedBootState()
   {
     return $this->verifiedBootState;
   }
   /**
-   * @param string
+   * dm-verity mode.
+   *
+   * Accepted values: DM_VERITY_MODE_UNSPECIFIED, ENFORCING, IO_ERROR, DISABLED
+   *
+   * @param self::VERITY_MODE_* $verityMode
    */
   public function setVerityMode($verityMode)
   {
     $this->verityMode = $verityMode;
   }
   /**
-   * @return string
+   * @return self::VERITY_MODE_*
    */
   public function getVerityMode()
   {

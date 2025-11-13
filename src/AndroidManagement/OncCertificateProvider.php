@@ -21,6 +21,8 @@ class OncCertificateProvider extends \Google\Collection
 {
   protected $collection_key = 'certificateReferences';
   /**
+   * This feature is not generally available.
+   *
    * @var string[]
    */
   public $certificateReferences;
@@ -28,7 +30,9 @@ class OncCertificateProvider extends \Google\Collection
   protected $contentProviderEndpointDataType = '';
 
   /**
-   * @param string[]
+   * This feature is not generally available.
+   *
+   * @param string[] $certificateReferences
    */
   public function setCertificateReferences($certificateReferences)
   {
@@ -42,7 +46,9 @@ class OncCertificateProvider extends \Google\Collection
     return $this->certificateReferences;
   }
   /**
-   * @param ContentProviderEndpoint
+   * This feature is not generally available.
+   *
+   * @param ContentProviderEndpoint $contentProviderEndpoint
    */
   public function setContentProviderEndpoint(ContentProviderEndpoint $contentProviderEndpoint)
   {

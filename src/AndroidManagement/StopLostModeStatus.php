@@ -20,19 +20,37 @@ namespace Google\Service\AndroidManagement;
 class StopLostModeStatus extends \Google\Model
 {
   /**
+   * Unspecified. This value is not used.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * The device was taken out of lost mode.
+   */
+  public const STATUS_SUCCESS = 'SUCCESS';
+  /**
+   * The device is not in lost mode.
+   */
+  public const STATUS_NOT_IN_LOST_MODE = 'NOT_IN_LOST_MODE';
+  /**
+   * The status. See StopLostModeStatus.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * The status. See StopLostModeStatus.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, SUCCESS, NOT_IN_LOST_MODE
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

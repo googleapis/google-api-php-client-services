@@ -20,19 +20,37 @@ namespace Google\Service\AndroidManagement;
 class RequestDeviceInfoParams extends \Google\Model
 {
   /**
+   * This value is disallowed.
+   */
+  public const DEVICE_INFO_DEVICE_INFO_UNSPECIFIED = 'DEVICE_INFO_UNSPECIFIED';
+  /**
+   * Request the identifier for eSIM. The user will be asked to approve the
+   * disclosure of the information before the result can be returned. If the
+   * user doesn't approve the disclosure, USER_DECLINED will be returned. This
+   * is supported only for personally owned devices with work profiles and
+   * Android versions 13 and above.
+   */
+  public const DEVICE_INFO_EID = 'EID';
+  /**
+   * Required. Type of device information to be requested.
+   *
    * @var string
    */
   public $deviceInfo;
 
   /**
-   * @param string
+   * Required. Type of device information to be requested.
+   *
+   * Accepted values: DEVICE_INFO_UNSPECIFIED, EID
+   *
+   * @param self::DEVICE_INFO_* $deviceInfo
    */
   public function setDeviceInfo($deviceInfo)
   {
     $this->deviceInfo = $deviceInfo;
   }
   /**
-   * @return string
+   * @return self::DEVICE_INFO_*
    */
   public function getDeviceInfo()
   {

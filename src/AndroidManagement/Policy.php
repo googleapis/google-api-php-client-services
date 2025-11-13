@@ -19,16 +19,317 @@ namespace Google\Service\AndroidManagement;
 
 class Policy extends \Google\Collection
 {
+  /**
+   * The auto-update policy is not set. Equivalent to CHOICE_TO_THE_USER.
+   */
+  public const APP_AUTO_UPDATE_POLICY_APP_AUTO_UPDATE_POLICY_UNSPECIFIED = 'APP_AUTO_UPDATE_POLICY_UNSPECIFIED';
+  /**
+   * The user can control auto-updates.
+   */
+  public const APP_AUTO_UPDATE_POLICY_CHOICE_TO_THE_USER = 'CHOICE_TO_THE_USER';
+  /**
+   * Apps are never auto-updated.
+   */
+  public const APP_AUTO_UPDATE_POLICY_NEVER = 'NEVER';
+  /**
+   * Apps are auto-updated over Wi-Fi only.
+   */
+  public const APP_AUTO_UPDATE_POLICY_WIFI_ONLY = 'WIFI_ONLY';
+  /**
+   * Apps are auto-updated at any time. Data charges may apply.
+   */
+  public const APP_AUTO_UPDATE_POLICY_ALWAYS = 'ALWAYS';
+  /**
+   * Unspecified. Defaults to APP_FUNCTIONS_ALLOWED.
+   */
+  public const APP_FUNCTIONS_APP_FUNCTIONS_UNSPECIFIED = 'APP_FUNCTIONS_UNSPECIFIED';
+  /**
+   * Apps on the device for fully managed devices or in the work profile for
+   * devices with work profiles are not allowed to expose app functions. If this
+   * is set, crossProfileAppFunctions must not be set to
+   * CROSS_PROFILE_APP_FUNCTIONS_ALLOWED, otherwise the policy will be rejected.
+   */
+  public const APP_FUNCTIONS_APP_FUNCTIONS_DISALLOWED = 'APP_FUNCTIONS_DISALLOWED';
+  /**
+   * Apps on the device for fully managed devices or in the work profile for
+   * devices with work profiles are allowed to expose app functions.
+   */
+  public const APP_FUNCTIONS_APP_FUNCTIONS_ALLOWED = 'APP_FUNCTIONS_ALLOWED';
+  /**
+   * Unspecified. Defaults to ASSIST_CONTENT_ALLOWED.
+   */
+  public const ASSIST_CONTENT_POLICY_ASSIST_CONTENT_POLICY_UNSPECIFIED = 'ASSIST_CONTENT_POLICY_UNSPECIFIED';
+  /**
+   * Assist content is blocked from being sent to a privileged app.Supported on
+   * Android 15 and above. A NonComplianceDetail with API_LEVEL is reported if
+   * the Android version is less than 15.
+   */
+  public const ASSIST_CONTENT_POLICY_ASSIST_CONTENT_DISALLOWED = 'ASSIST_CONTENT_DISALLOWED';
+  /**
+   * Assist content is allowed to be sent to a privileged app.Supported on
+   * Android 15 and above.
+   */
+  public const ASSIST_CONTENT_POLICY_ASSIST_CONTENT_ALLOWED = 'ASSIST_CONTENT_ALLOWED';
+  /**
+   * Unspecified. Defaults to AUTO_DATE_AND_TIME_ZONE_USER_CHOICE.
+   */
+  public const AUTO_DATE_AND_TIME_ZONE_AUTO_DATE_AND_TIME_ZONE_UNSPECIFIED = 'AUTO_DATE_AND_TIME_ZONE_UNSPECIFIED';
+  /**
+   * Auto date, time, and time zone are left to user's choice.
+   */
+  public const AUTO_DATE_AND_TIME_ZONE_AUTO_DATE_AND_TIME_ZONE_USER_CHOICE = 'AUTO_DATE_AND_TIME_ZONE_USER_CHOICE';
+  /**
+   * Enforce auto date, time, and time zone on the device.
+   */
+  public const AUTO_DATE_AND_TIME_ZONE_AUTO_DATE_AND_TIME_ZONE_ENFORCED = 'AUTO_DATE_AND_TIME_ZONE_ENFORCED';
+  /**
+   * If camera_disabled is true, this is equivalent to CAMERA_ACCESS_DISABLED.
+   * Otherwise, this is equivalent to CAMERA_ACCESS_USER_CHOICE.
+   */
+  public const CAMERA_ACCESS_CAMERA_ACCESS_UNSPECIFIED = 'CAMERA_ACCESS_UNSPECIFIED';
+  /**
+   * The field camera_disabled is ignored. This is the default device behaviour:
+   * all cameras on the device are available. On Android 12 and above, the user
+   * can use the camera access toggle.
+   */
+  public const CAMERA_ACCESS_CAMERA_ACCESS_USER_CHOICE = 'CAMERA_ACCESS_USER_CHOICE';
+  /**
+   * The field camera_disabled is ignored. All cameras on the device are
+   * disabled (for fully managed devices, this applies device-wide and for work
+   * profiles this applies only to the work profile).There are no explicit
+   * restrictions placed on the camera access toggle on Android 12 and above: on
+   * fully managed devices, the camera access toggle has no effect as all
+   * cameras are disabled. On devices with a work profile, this toggle has no
+   * effect on apps in the work profile, but it affects apps outside the work
+   * profile.
+   */
+  public const CAMERA_ACCESS_CAMERA_ACCESS_DISABLED = 'CAMERA_ACCESS_DISABLED';
+  /**
+   * The field camera_disabled is ignored. All cameras on the device are
+   * available. On fully managed devices running Android 12 and above, the user
+   * is unable to use the camera access toggle. On devices which are not fully
+   * managed or which run Android 11 or below, this is equivalent to
+   * CAMERA_ACCESS_USER_CHOICE.
+   */
+  public const CAMERA_ACCESS_CAMERA_ACCESS_ENFORCED = 'CAMERA_ACCESS_ENFORCED';
+  /**
+   * Unspecified. Defaults to CREDENTIAL_PROVIDER_DEFAULT_DISALLOWED.
+   */
+  public const CREDENTIAL_PROVIDER_POLICY_DEFAULT_CREDENTIAL_PROVIDER_POLICY_DEFAULT_UNSPECIFIED = 'CREDENTIAL_PROVIDER_POLICY_DEFAULT_UNSPECIFIED';
+  /**
+   * Apps with credentialProviderPolicy unspecified are not allowed to act as a
+   * credential provider.
+   */
+  public const CREDENTIAL_PROVIDER_POLICY_DEFAULT_CREDENTIAL_PROVIDER_DEFAULT_DISALLOWED = 'CREDENTIAL_PROVIDER_DEFAULT_DISALLOWED';
+  /**
+   * Apps with credentialProviderPolicy unspecified are not allowed to act as a
+   * credential provider except for the OEM default credential providers. OEM
+   * default credential providers are always allowed to act as credential
+   * providers.
+   */
+  public const CREDENTIAL_PROVIDER_POLICY_DEFAULT_CREDENTIAL_PROVIDER_DEFAULT_DISALLOWED_EXCEPT_SYSTEM = 'CREDENTIAL_PROVIDER_DEFAULT_DISALLOWED_EXCEPT_SYSTEM';
+  /**
+   * Policy not specified. If no policy is specified for a permission at any
+   * level, then the PROMPT behavior is used by default.
+   */
+  public const DEFAULT_PERMISSION_POLICY_PERMISSION_POLICY_UNSPECIFIED = 'PERMISSION_POLICY_UNSPECIFIED';
+  /**
+   * Prompt the user to grant a permission.
+   */
+  public const DEFAULT_PERMISSION_POLICY_PROMPT = 'PROMPT';
+  /**
+   * Automatically grant a permission.On Android 12 and above, READ_SMS (https:/
+   * /developer.android.com/reference/android/Manifest.permission#READ_SMS) and
+   * following sensor-related permissions can only be granted on fully managed
+   * devices: ACCESS_FINE_LOCATION (https://developer.android.com/reference/andr
+   * oid/Manifest.permission#ACCESS_FINE_LOCATION) ACCESS_BACKGROUND_LOCATION (h
+   * ttps://developer.android.com/reference/android/Manifest.permission#ACCESS_B
+   * ACKGROUND_LOCATION) ACCESS_COARSE_LOCATION (https://developer.android.com/r
+   * eference/android/Manifest.permission#ACCESS_COARSE_LOCATION) CAMERA (https:
+   * //developer.android.com/reference/android/Manifest.permission#CAMERA)
+   * RECORD_AUDIO (https://developer.android.com/reference/android/Manifest.perm
+   * ission#RECORD_AUDIO) ACTIVITY_RECOGNITION (https://developer.android.com/re
+   * ference/android/Manifest.permission#ACTIVITY_RECOGNITION) BODY_SENSORS (htt
+   * ps://developer.android.com/reference/android/Manifest.permission#BODY_SENSO
+   * RS)
+   */
+  public const DEFAULT_PERMISSION_POLICY_GRANT = 'GRANT';
+  /**
+   * Automatically deny a permission.
+   */
+  public const DEFAULT_PERMISSION_POLICY_DENY = 'DENY';
+  /**
+   * This value is ignored, i.e. no encryption required
+   */
+  public const ENCRYPTION_POLICY_ENCRYPTION_POLICY_UNSPECIFIED = 'ENCRYPTION_POLICY_UNSPECIFIED';
+  /**
+   * Encryption required but no password required to boot
+   */
+  public const ENCRYPTION_POLICY_ENABLED_WITHOUT_PASSWORD = 'ENABLED_WITHOUT_PASSWORD';
+  /**
+   * Encryption required with password required to boot
+   */
+  public const ENCRYPTION_POLICY_ENABLED_WITH_PASSWORD = 'ENABLED_WITH_PASSWORD';
+  /**
+   * Unspecified. Defaults to displaying the enterprise name that's set at the
+   * time of device setup. In future, this will default to
+   * ENTERPRISE_DISPLAY_NAME_VISIBLE.
+   */
+  public const ENTERPRISE_DISPLAY_NAME_VISIBILITY_ENTERPRISE_DISPLAY_NAME_VISIBILITY_UNSPECIFIED = 'ENTERPRISE_DISPLAY_NAME_VISIBILITY_UNSPECIFIED';
+  /**
+   * The enterprise display name is visible on the device. Supported on work
+   * profiles on Android 7 and above. Supported on fully managed devices on
+   * Android 8 and above. A NonComplianceDetail with API_LEVEL is reported if
+   * the Android version is less than 7. A NonComplianceDetail with
+   * MANAGEMENT_MODE is reported on fully managed devices on Android 7.
+   */
+  public const ENTERPRISE_DISPLAY_NAME_VISIBILITY_ENTERPRISE_DISPLAY_NAME_VISIBLE = 'ENTERPRISE_DISPLAY_NAME_VISIBLE';
+  /**
+   * The enterprise display name is hidden on the device.
+   */
+  public const ENTERPRISE_DISPLAY_NAME_VISIBILITY_ENTERPRISE_DISPLAY_NAME_HIDDEN = 'ENTERPRISE_DISPLAY_NAME_HIDDEN';
+  /**
+   * Defaults to LOCATION_USER_CHOICE.
+   */
+  public const LOCATION_MODE_LOCATION_MODE_UNSPECIFIED = 'LOCATION_MODE_UNSPECIFIED';
+  /**
+   * On Android 8 and below, all location detection methods are enabled,
+   * including GPS, networks, and other sensors. On Android 9 and above, this is
+   * equivalent to LOCATION_ENFORCED.
+   *
+   * @deprecated
+   */
+  public const LOCATION_MODE_HIGH_ACCURACY = 'HIGH_ACCURACY';
+  /**
+   * On Android 8 and below, only GPS and other sensors are enabled. On Android
+   * 9 and above, this is equivalent to LOCATION_ENFORCED.
+   *
+   * @deprecated
+   */
+  public const LOCATION_MODE_SENSORS_ONLY = 'SENSORS_ONLY';
+  /**
+   * On Android 8 and below, only the network location provider is enabled. On
+   * Android 9 and above, this is equivalent to LOCATION_ENFORCED.
+   *
+   * @deprecated
+   */
+  public const LOCATION_MODE_BATTERY_SAVING = 'BATTERY_SAVING';
+  /**
+   * On Android 8 and below, location setting and accuracy are disabled. On
+   * Android 9 and above, this is equivalent to LOCATION_DISABLED.
+   *
+   * @deprecated
+   */
+  public const LOCATION_MODE_OFF = 'OFF';
+  /**
+   * Location setting is not restricted on the device. No specific behavior is
+   * set or enforced.
+   */
+  public const LOCATION_MODE_LOCATION_USER_CHOICE = 'LOCATION_USER_CHOICE';
+  /**
+   * Enable location setting on the device. Important: On Android 11 and above,
+   * work profiles on company-owned devices cannot directly enforce enabling of
+   * location services. When LOCATION_ENFORCED is set, then a
+   * NonComplianceDetail with USER_ACTION is reported. Compliance can only be
+   * restored once the user manually turns on location services through the
+   * device's Settings application.
+   */
+  public const LOCATION_MODE_LOCATION_ENFORCED = 'LOCATION_ENFORCED';
+  /**
+   * Disable location setting on the device. Important: On Android 11 and above,
+   * work profiles on company-owned devices cannot directly enforce disabling of
+   * location services. When LOCATION_DISABLED is set, then a
+   * nonComplianceDetail with USER_ACTION is reported. Compliance can only be
+   * restored once the user manually turns off location services through the
+   * device's Settings application.
+   */
+  public const LOCATION_MODE_LOCATION_DISABLED = 'LOCATION_DISABLED';
+  /**
+   * If unmute_microphone_disabled is true, this is equivalent to
+   * MICROPHONE_ACCESS_DISABLED. Otherwise, this is equivalent to
+   * MICROPHONE_ACCESS_USER_CHOICE.
+   */
+  public const MICROPHONE_ACCESS_MICROPHONE_ACCESS_UNSPECIFIED = 'MICROPHONE_ACCESS_UNSPECIFIED';
+  /**
+   * The field unmute_microphone_disabled is ignored. This is the default device
+   * behaviour: the microphone on the device is available. On Android 12 and
+   * above, the user can use the microphone access toggle.
+   */
+  public const MICROPHONE_ACCESS_MICROPHONE_ACCESS_USER_CHOICE = 'MICROPHONE_ACCESS_USER_CHOICE';
+  /**
+   * The field unmute_microphone_disabled is ignored. The microphone on the
+   * device is disabled (for fully managed devices, this applies device-
+   * wide).The microphone access toggle has no effect as the microphone is
+   * disabled.
+   */
+  public const MICROPHONE_ACCESS_MICROPHONE_ACCESS_DISABLED = 'MICROPHONE_ACCESS_DISABLED';
+  /**
+   * The field unmute_microphone_disabled is ignored. The microphone on the
+   * device is available. On devices running Android 12 and above, the user is
+   * unable to use the microphone access toggle. On devices which run Android 11
+   * or below, this is equivalent to MICROPHONE_ACCESS_USER_CHOICE.
+   */
+  public const MICROPHONE_ACCESS_MICROPHONE_ACCESS_ENFORCED = 'MICROPHONE_ACCESS_ENFORCED';
+  /**
+   * Unspecified. Defaults to WHITELIST.
+   */
+  public const PLAY_STORE_MODE_PLAY_STORE_MODE_UNSPECIFIED = 'PLAY_STORE_MODE_UNSPECIFIED';
+  /**
+   * Only apps that are in the policy are available and any app not in the
+   * policy will be automatically uninstalled from the device.
+   */
+  public const PLAY_STORE_MODE_WHITELIST = 'WHITELIST';
+  /**
+   * All apps are available and any app that should not be on the device should
+   * be explicitly marked as 'BLOCKED' in the applications policy.
+   */
+  public const PLAY_STORE_MODE_BLACKLIST = 'BLACKLIST';
+  /**
+   * Unspecified. Defaults to PREFERENTIAL_NETWORK_SERVICES_DISABLED.
+   */
+  public const PREFERENTIAL_NETWORK_SERVICE_PREFERENTIAL_NETWORK_SERVICE_UNSPECIFIED = 'PREFERENTIAL_NETWORK_SERVICE_UNSPECIFIED';
+  /**
+   * Preferential network service is disabled on the work profile.
+   */
+  public const PREFERENTIAL_NETWORK_SERVICE_PREFERENTIAL_NETWORK_SERVICE_DISABLED = 'PREFERENTIAL_NETWORK_SERVICE_DISABLED';
+  /**
+   * Preferential network service is enabled on the work profile. This setting
+   * is only supported on work profiles on devices running Android 12 or above.
+   * Starting with Android 13, fully managed devices are also supported.
+   */
+  public const PREFERENTIAL_NETWORK_SERVICE_PREFERENTIAL_NETWORK_SERVICE_ENABLED = 'PREFERENTIAL_NETWORK_SERVICE_ENABLED';
+  /**
+   * Unspecified. Defaults to PRINTING_ALLOWED.
+   */
+  public const PRINTING_POLICY_PRINTING_POLICY_UNSPECIFIED = 'PRINTING_POLICY_UNSPECIFIED';
+  /**
+   * Printing is disallowed. A NonComplianceDetail with API_LEVEL is reported if
+   * the Android version is less than 9.
+   */
+  public const PRINTING_POLICY_PRINTING_DISALLOWED = 'PRINTING_DISALLOWED';
+  /**
+   * Printing is allowed.
+   */
+  public const PRINTING_POLICY_PRINTING_ALLOWED = 'PRINTING_ALLOWED';
   protected $collection_key = 'wipeDataFlags';
   /**
+   * Account types that can't be managed by the user.
+   *
    * @var string[]
    */
   public $accountTypesWithManagementDisabled;
   /**
+   * Whether adding new users and profiles is disabled. For devices where
+   * managementMode is DEVICE_OWNER this field is ignored and the user is never
+   * allowed to add or remove users.
+   *
    * @var bool
    */
   public $addUserDisabled;
   /**
+   * Whether adjusting the master volume is disabled. Also mutes the device. The
+   * setting has effect only on fully managed devices.
+   *
    * @var bool
    */
   public $adjustVolumeDisabled;
@@ -37,56 +338,110 @@ class Policy extends \Google\Collection
   protected $alwaysOnVpnPackageType = AlwaysOnVpnPackage::class;
   protected $alwaysOnVpnPackageDataType = '';
   /**
+   * This setting is not supported. Any value is ignored.
+   *
+   * @deprecated
    * @var string[]
    */
   public $androidDevicePolicyTracks;
   /**
+   * Recommended alternative: autoUpdateMode which is set per app, provides
+   * greater flexibility around update frequency.When autoUpdateMode is set to
+   * AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no
+   * effect.The app auto update policy, which controls when automatic app
+   * updates can be applied.
+   *
    * @var string
    */
   public $appAutoUpdatePolicy;
   /**
+   * Optional. Controls whether apps on the device for fully managed devices or
+   * in the work profile for devices with work profiles are allowed to expose
+   * app functions.
+   *
    * @var string
    */
   public $appFunctions;
   protected $applicationsType = ApplicationPolicy::class;
   protected $applicationsDataType = 'array';
   /**
+   * Optional. Controls whether AssistContent
+   * (https://developer.android.com/reference/android/app/assist/AssistContent)
+   * is allowed to be sent to a privileged app such as an assistant app.
+   * AssistContent includes screenshots and information about an app, such as
+   * package name. This is supported on Android 15 and above.
+   *
    * @var string
    */
   public $assistContentPolicy;
   /**
+   * Whether auto date, time, and time zone are enabled on a company-owned
+   * device. If this is set, then autoTimeRequired is ignored.
+   *
    * @var string
    */
   public $autoDateAndTimeZone;
   /**
+   * Whether auto time is required, which prevents the user from manually
+   * setting the date and time. If autoDateAndTimeZone is set, this field is
+   * ignored.
+   *
+   * @deprecated
    * @var bool
    */
   public $autoTimeRequired;
   /**
+   * Whether applications other than the ones configured in applications are
+   * blocked from being installed. When set, applications that were installed
+   * under a previous policy but no longer appear in the policy are
+   * automatically uninstalled.
+   *
+   * @deprecated
    * @var bool
    */
   public $blockApplicationsEnabled;
   /**
+   * Whether configuring bluetooth is disabled.
+   *
    * @var bool
    */
   public $bluetoothConfigDisabled;
   /**
+   * Whether bluetooth contact sharing is disabled.
+   *
    * @var bool
    */
   public $bluetoothContactSharingDisabled;
   /**
+   * Whether bluetooth is disabled. Prefer this setting over
+   * bluetooth_config_disabled because bluetooth_config_disabled can be bypassed
+   * by the user.
+   *
    * @var bool
    */
   public $bluetoothDisabled;
   /**
+   * Controls the use of the camera and whether the user has access to the
+   * camera access toggle.
+   *
    * @var string
    */
   public $cameraAccess;
   /**
+   * If camera_access is set to any value other than CAMERA_ACCESS_UNSPECIFIED,
+   * this has no effect. Otherwise this field controls whether cameras are
+   * disabled: If true, all cameras are disabled, otherwise they are available.
+   * For fully managed devices this field applies for all apps on the device.
+   * For work profiles, this field applies only to apps in the work profile, and
+   * the camera access of apps outside the work profile is unaffected.
+   *
+   * @deprecated
    * @var bool
    */
   public $cameraDisabled;
   /**
+   * Whether configuring cell broadcast is disabled.
+   *
    * @var bool
    */
   public $cellBroadcastsConfigDisabled;
@@ -95,30 +450,47 @@ class Policy extends \Google\Collection
   protected $complianceRulesType = ComplianceRule::class;
   protected $complianceRulesDataType = 'array';
   /**
+   * Whether creating windows besides app windows is disabled.
+   *
    * @var bool
    */
   public $createWindowsDisabled;
   /**
+   * Controls which apps are allowed to act as credential providers on Android
+   * 14 and above. These apps store credentials, see this
+   * (https://developer.android.com/training/sign-in/passkeys) and this (https:/
+   * /developer.android.com/reference/androidx/credentials/CredentialManager)
+   * for details. See also credentialProviderPolicy.
+   *
    * @var string
    */
   public $credentialProviderPolicyDefault;
   /**
+   * Whether configuring user credentials is disabled.
+   *
    * @var bool
    */
   public $credentialsConfigDisabled;
   protected $crossProfilePoliciesType = CrossProfilePolicies::class;
   protected $crossProfilePoliciesDataType = '';
   /**
+   * Whether roaming data services are disabled.
+   *
    * @var bool
    */
   public $dataRoamingDisabled;
   /**
+   * Whether the user is allowed to enable debugging features.
+   *
+   * @deprecated
    * @var bool
    */
   public $debuggingFeaturesAllowed;
   protected $defaultApplicationSettingsType = DefaultApplicationSetting::class;
   protected $defaultApplicationSettingsDataType = 'array';
   /**
+   * The default permission policy for runtime permission requests.
+   *
    * @var string
    */
   public $defaultPermissionPolicy;
@@ -131,104 +503,180 @@ class Policy extends \Google\Collection
   protected $displaySettingsType = DisplaySettings::class;
   protected $displaySettingsDataType = '';
   /**
+   * Whether encryption is enabled
+   *
    * @var string
    */
   public $encryptionPolicy;
   /**
+   * Whether app verification is force-enabled.
+   *
+   * @deprecated
    * @var bool
    */
   public $ensureVerifyAppsEnabled;
   /**
+   * Optional. Controls whether the enterpriseDisplayName is visible on the
+   * device (e.g. lock screen message on company-owned devices).
+   *
    * @var string
    */
   public $enterpriseDisplayNameVisibility;
   /**
+   * Whether factory resetting from settings is disabled.
+   *
    * @var bool
    */
   public $factoryResetDisabled;
   /**
+   * Email addresses of device administrators for factory reset protection. When
+   * the device is factory reset, it will require one of these admins to log in
+   * with the Google account email and password to unlock the device. If no
+   * admins are specified, the device won't provide factory reset protection.
+   *
    * @var string[]
    */
   public $frpAdminEmails;
   /**
+   * Whether the user is allowed to have fun. Controls whether the Easter egg
+   * game in Settings is disabled.
+   *
    * @var bool
    */
   public $funDisabled;
   /**
+   * Whether user installation of apps is disabled.
+   *
    * @var bool
    */
   public $installAppsDisabled;
   /**
+   * This field has no effect.
+   *
+   * @deprecated
    * @var bool
    */
   public $installUnknownSourcesAllowed;
   /**
+   * If true, this disables the Lock Screen
+   * (https://source.android.com/docs/core/display/multi_display/lock-screen)
+   * for primary and/or secondary displays. This policy is supported only in
+   * dedicated device management mode.
+   *
    * @var bool
    */
   public $keyguardDisabled;
   /**
+   * Disabled keyguard customizations, such as widgets.
+   *
    * @var string[]
    */
   public $keyguardDisabledFeatures;
   /**
+   * Whether the kiosk custom launcher is enabled. This replaces the home screen
+   * with a launcher that locks down the device to the apps installed via the
+   * applications setting. Apps appear on a single page in alphabetical order.
+   * Use kioskCustomization to further configure the kiosk device behavior.
+   *
    * @var bool
    */
   public $kioskCustomLauncherEnabled;
   protected $kioskCustomizationType = KioskCustomization::class;
   protected $kioskCustomizationDataType = '';
   /**
+   * The degree of location detection enabled.
+   *
    * @var string
    */
   public $locationMode;
   protected $longSupportMessageType = UserFacingMessage::class;
   protected $longSupportMessageDataType = '';
   /**
+   * Maximum time in milliseconds for user activity until the device locks. A
+   * value of 0 means there is no restriction.
+   *
    * @var string
    */
   public $maximumTimeToLock;
   /**
+   * Controls the use of the microphone and whether the user has access to the
+   * microphone access toggle. This applies only on fully managed devices.
+   *
    * @var string
    */
   public $microphoneAccess;
   /**
+   * The minimum allowed Android API level.
+   *
    * @var int
    */
   public $minimumApiLevel;
   /**
+   * Whether configuring mobile networks is disabled.
+   *
    * @var bool
    */
   public $mobileNetworksConfigDisabled;
   /**
+   * Whether adding or removing accounts is disabled.
+   *
    * @var bool
    */
   public $modifyAccountsDisabled;
   /**
+   * Whether the user mounting physical external media is disabled.
+   *
    * @var bool
    */
   public $mountPhysicalMediaDisabled;
   /**
+   * The name of the policy in the form
+   * enterprises/{enterpriseId}/policies/{policyId}.
+   *
    * @var string
    */
   public $name;
   /**
+   * Whether the network escape hatch is enabled. If a network connection can't
+   * be made at boot time, the escape hatch prompts the user to temporarily
+   * connect to a network in order to refresh the device policy. After applying
+   * policy, the temporary network will be forgotten and the device will
+   * continue booting. This prevents being unable to connect to a network if
+   * there is no suitable network in the last policy and the device boots into
+   * an app in lock task mode, or the user is otherwise unable to reach device
+   * settings.Note: Setting wifiConfigDisabled to true will override this
+   * setting under specific circumstances. Please see wifiConfigDisabled for
+   * further details. Setting configureWifi to DISALLOW_CONFIGURING_WIFI will
+   * override this setting under specific circumstances. Please see
+   * DISALLOW_CONFIGURING_WIFI for further details.
+   *
    * @var bool
    */
   public $networkEscapeHatchEnabled;
   /**
+   * Whether resetting network settings is disabled.
+   *
    * @var bool
    */
   public $networkResetDisabled;
   protected $oncCertificateProvidersType = OncCertificateProvider::class;
   protected $oncCertificateProvidersDataType = 'array';
   /**
+   * Network configuration for the device. See configure networks for more
+   * information.
+   *
    * @var array[]
    */
   public $openNetworkConfiguration;
   /**
+   * Whether using NFC to beam data from apps is disabled.
+   *
    * @var bool
    */
   public $outgoingBeamDisabled;
   /**
+   * Whether outgoing calls are disabled.
+   *
    * @var bool
    */
   public $outgoingCallsDisabled;
@@ -247,112 +695,212 @@ class Policy extends \Google\Collection
   protected $personalUsagePoliciesType = PersonalUsagePolicies::class;
   protected $personalUsagePoliciesDataType = '';
   /**
+   * This mode controls which apps are available to the user in the Play Store
+   * and the behavior on the device when apps are removed from the policy.
+   *
    * @var string
    */
   public $playStoreMode;
   protected $policyEnforcementRulesType = PolicyEnforcementRule::class;
   protected $policyEnforcementRulesDataType = 'array';
   /**
+   * Controls whether preferential network service is enabled on the work
+   * profile or on fully managed devices. For example, an organization may have
+   * an agreement with a carrier that all of the work data from its employees'
+   * devices will be sent via a network service dedicated for enterprise use. An
+   * example of a supported preferential network service is the enterprise slice
+   * on 5G networks. This policy has no effect if
+   * preferentialNetworkServiceSettings or
+   * ApplicationPolicy.preferentialNetworkId is set on devices running Android
+   * 13 or above.
+   *
    * @var string
    */
   public $preferentialNetworkService;
   /**
+   * Optional. Controls whether printing is allowed. This is supported on
+   * devices running Android 9 and above. .
+   *
    * @var string
    */
   public $printingPolicy;
   /**
+   * Allows showing UI on a device for a user to choose a private key alias if
+   * there are no matching rules in ChoosePrivateKeyRules. For devices below
+   * Android P, setting this may leave enterprise keys vulnerable. This value
+   * will have no effect if any application has CERT_SELECTION delegation scope.
+   *
    * @var bool
    */
   public $privateKeySelectionEnabled;
   protected $recommendedGlobalProxyType = ProxyInfo::class;
   protected $recommendedGlobalProxyDataType = '';
   /**
+   * Whether removing other users is disabled.
+   *
    * @var bool
    */
   public $removeUserDisabled;
   /**
+   * Whether rebooting the device into safe boot is disabled.
+   *
+   * @deprecated
    * @var bool
    */
   public $safeBootDisabled;
   /**
+   * Whether screen capture is disabled.
+   *
    * @var bool
    */
   public $screenCaptureDisabled;
   /**
+   * Whether changing the user icon is disabled. The setting has effect only on
+   * fully managed devices.
+   *
    * @var bool
    */
   public $setUserIconDisabled;
   /**
+   * Whether changing the wallpaper is disabled.
+   *
    * @var bool
    */
   public $setWallpaperDisabled;
   protected $setupActionsType = SetupAction::class;
   protected $setupActionsDataType = 'array';
   /**
+   * Whether location sharing is disabled. share_location_disabled is supported
+   * for both fully managed devices and personally owned work profiles.
+   *
    * @var bool
    */
   public $shareLocationDisabled;
   protected $shortSupportMessageType = UserFacingMessage::class;
   protected $shortSupportMessageDataType = '';
   /**
+   * Flag to skip hints on the first use. Enterprise admin can enable the system
+   * recommendation for apps to skip their user tutorial and other introductory
+   * hints on first start-up.
+   *
    * @var bool
    */
   public $skipFirstUseHintsEnabled;
   /**
+   * Whether sending and receiving SMS messages is disabled.
+   *
    * @var bool
    */
   public $smsDisabled;
   /**
+   * Whether the status bar is disabled. This disables notifications, quick
+   * settings, and other screen overlays that allow escape from full-screen
+   * mode. DEPRECATED. To disable the status bar on a kiosk device, use
+   * InstallType KIOSK or kioskCustomLauncherEnabled.
+   *
+   * @deprecated
    * @var bool
    */
   public $statusBarDisabled;
   protected $statusReportingSettingsType = StatusReportingSettings::class;
   protected $statusReportingSettingsDataType = '';
   /**
+   * The battery plugged in modes for which the device stays on. When using this
+   * setting, it is recommended to clear maximum_time_to_lock so that the device
+   * doesn't lock itself while it stays on.
+   *
    * @var string[]
    */
   public $stayOnPluggedModes;
   protected $systemUpdateType = SystemUpdate::class;
   protected $systemUpdateDataType = '';
   /**
+   * Whether configuring tethering and portable hotspots is disabled. If
+   * tetheringSettings is set to anything other than
+   * TETHERING_SETTINGS_UNSPECIFIED, this setting is ignored.
+   *
+   * @deprecated
    * @var bool
    */
   public $tetheringConfigDisabled;
   /**
+   * Whether user uninstallation of applications is disabled. This prevents apps
+   * from being uninstalled, even those removed using applications
+   *
    * @var bool
    */
   public $uninstallAppsDisabled;
   /**
+   * If microphone_access is set to any value other than
+   * MICROPHONE_ACCESS_UNSPECIFIED, this has no effect. Otherwise this field
+   * controls whether microphones are disabled: If true, all microphones are
+   * disabled, otherwise they are available. This is available only on fully
+   * managed devices.
+   *
+   * @deprecated
    * @var bool
    */
   public $unmuteMicrophoneDisabled;
   protected $usageLogType = UsageLog::class;
   protected $usageLogDataType = '';
   /**
+   * Whether transferring files over USB is disabled. This is supported only on
+   * company-owned devices.
+   *
+   * @deprecated
    * @var bool
    */
   public $usbFileTransferDisabled;
   /**
+   * Whether USB storage is enabled. Deprecated.
+   *
+   * @deprecated
    * @var bool
    */
   public $usbMassStorageEnabled;
   /**
+   * The version of the policy. This is a read-only field. The version is
+   * incremented each time the policy is updated.
+   *
    * @var string
    */
   public $version;
   /**
+   * Whether configuring VPN is disabled.
+   *
    * @var bool
    */
   public $vpnConfigDisabled;
   /**
+   * Whether configuring Wi-Fi networks is disabled. Supported on fully managed
+   * devices and work profiles on company-owned devices. For fully managed
+   * devices, setting this to true removes all configured networks and retains
+   * only the networks configured using openNetworkConfiguration. For work
+   * profiles on company-owned devices, existing configured networks are not
+   * affected and the user is not allowed to add, remove, or modify Wi-Fi
+   * networks. If configureWifi is set to anything other than
+   * CONFIGURE_WIFI_UNSPECIFIED, this setting is ignored. Note: If a network
+   * connection can't be made at boot time and configuring Wi-Fi is disabled
+   * then network escape hatch will be shown in order to refresh the device
+   * policy (see networkEscapeHatchEnabled).
+   *
+   * @deprecated
    * @var bool
    */
   public $wifiConfigDisabled;
   /**
+   * This is deprecated.
+   *
+   * @deprecated
    * @var bool
    */
   public $wifiConfigsLockdownEnabled;
   /**
+   * Optional. Wipe flags to indicate what data is wiped when a device or
+   * profile wipe is triggered due to any reason (for example, non-compliance).
+   * This does not apply to the enterprises.devices.delete method. . This list
+   * must not have duplicates.
+   *
    * @var string[]
    */
   public $wipeDataFlags;
@@ -360,7 +908,9 @@ class Policy extends \Google\Collection
   protected $workAccountSetupConfigDataType = '';
 
   /**
-   * @param string[]
+   * Account types that can't be managed by the user.
+   *
+   * @param string[] $accountTypesWithManagementDisabled
    */
   public function setAccountTypesWithManagementDisabled($accountTypesWithManagementDisabled)
   {
@@ -374,7 +924,11 @@ class Policy extends \Google\Collection
     return $this->accountTypesWithManagementDisabled;
   }
   /**
-   * @param bool
+   * Whether adding new users and profiles is disabled. For devices where
+   * managementMode is DEVICE_OWNER this field is ignored and the user is never
+   * allowed to add or remove users.
+   *
+   * @param bool $addUserDisabled
    */
   public function setAddUserDisabled($addUserDisabled)
   {
@@ -388,7 +942,10 @@ class Policy extends \Google\Collection
     return $this->addUserDisabled;
   }
   /**
-   * @param bool
+   * Whether adjusting the master volume is disabled. Also mutes the device. The
+   * setting has effect only on fully managed devices.
+   *
+   * @param bool $adjustVolumeDisabled
    */
   public function setAdjustVolumeDisabled($adjustVolumeDisabled)
   {
@@ -402,7 +959,9 @@ class Policy extends \Google\Collection
     return $this->adjustVolumeDisabled;
   }
   /**
-   * @param AdvancedSecurityOverrides
+   * Advanced security settings. In most cases, setting these is not needed.
+   *
+   * @param AdvancedSecurityOverrides $advancedSecurityOverrides
    */
   public function setAdvancedSecurityOverrides(AdvancedSecurityOverrides $advancedSecurityOverrides)
   {
@@ -416,7 +975,10 @@ class Policy extends \Google\Collection
     return $this->advancedSecurityOverrides;
   }
   /**
-   * @param AlwaysOnVpnPackage
+   * Configuration for an always-on VPN connection. Use with vpn_config_disabled
+   * to prevent modification of this setting.
+   *
+   * @param AlwaysOnVpnPackage $alwaysOnVpnPackage
    */
   public function setAlwaysOnVpnPackage(AlwaysOnVpnPackage $alwaysOnVpnPackage)
   {
@@ -430,13 +992,17 @@ class Policy extends \Google\Collection
     return $this->alwaysOnVpnPackage;
   }
   /**
-   * @param string[]
+   * This setting is not supported. Any value is ignored.
+   *
+   * @deprecated
+   * @param string[] $androidDevicePolicyTracks
    */
   public function setAndroidDevicePolicyTracks($androidDevicePolicyTracks)
   {
     $this->androidDevicePolicyTracks = $androidDevicePolicyTracks;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getAndroidDevicePolicyTracks()
@@ -444,35 +1010,53 @@ class Policy extends \Google\Collection
     return $this->androidDevicePolicyTracks;
   }
   /**
-   * @param string
+   * Recommended alternative: autoUpdateMode which is set per app, provides
+   * greater flexibility around update frequency.When autoUpdateMode is set to
+   * AUTO_UPDATE_POSTPONED or AUTO_UPDATE_HIGH_PRIORITY, this field has no
+   * effect.The app auto update policy, which controls when automatic app
+   * updates can be applied.
+   *
+   * Accepted values: APP_AUTO_UPDATE_POLICY_UNSPECIFIED, CHOICE_TO_THE_USER,
+   * NEVER, WIFI_ONLY, ALWAYS
+   *
+   * @param self::APP_AUTO_UPDATE_POLICY_* $appAutoUpdatePolicy
    */
   public function setAppAutoUpdatePolicy($appAutoUpdatePolicy)
   {
     $this->appAutoUpdatePolicy = $appAutoUpdatePolicy;
   }
   /**
-   * @return string
+   * @return self::APP_AUTO_UPDATE_POLICY_*
    */
   public function getAppAutoUpdatePolicy()
   {
     return $this->appAutoUpdatePolicy;
   }
   /**
-   * @param string
+   * Optional. Controls whether apps on the device for fully managed devices or
+   * in the work profile for devices with work profiles are allowed to expose
+   * app functions.
+   *
+   * Accepted values: APP_FUNCTIONS_UNSPECIFIED, APP_FUNCTIONS_DISALLOWED,
+   * APP_FUNCTIONS_ALLOWED
+   *
+   * @param self::APP_FUNCTIONS_* $appFunctions
    */
   public function setAppFunctions($appFunctions)
   {
     $this->appFunctions = $appFunctions;
   }
   /**
-   * @return string
+   * @return self::APP_FUNCTIONS_*
    */
   public function getAppFunctions()
   {
     return $this->appFunctions;
   }
   /**
-   * @param ApplicationPolicy[]
+   * Policy applied to apps. This can have at most 3,000 elements.
+   *
+   * @param ApplicationPolicy[] $applications
    */
   public function setApplications($applications)
   {
@@ -486,41 +1070,62 @@ class Policy extends \Google\Collection
     return $this->applications;
   }
   /**
-   * @param string
+   * Optional. Controls whether AssistContent
+   * (https://developer.android.com/reference/android/app/assist/AssistContent)
+   * is allowed to be sent to a privileged app such as an assistant app.
+   * AssistContent includes screenshots and information about an app, such as
+   * package name. This is supported on Android 15 and above.
+   *
+   * Accepted values: ASSIST_CONTENT_POLICY_UNSPECIFIED,
+   * ASSIST_CONTENT_DISALLOWED, ASSIST_CONTENT_ALLOWED
+   *
+   * @param self::ASSIST_CONTENT_POLICY_* $assistContentPolicy
    */
   public function setAssistContentPolicy($assistContentPolicy)
   {
     $this->assistContentPolicy = $assistContentPolicy;
   }
   /**
-   * @return string
+   * @return self::ASSIST_CONTENT_POLICY_*
    */
   public function getAssistContentPolicy()
   {
     return $this->assistContentPolicy;
   }
   /**
-   * @param string
+   * Whether auto date, time, and time zone are enabled on a company-owned
+   * device. If this is set, then autoTimeRequired is ignored.
+   *
+   * Accepted values: AUTO_DATE_AND_TIME_ZONE_UNSPECIFIED,
+   * AUTO_DATE_AND_TIME_ZONE_USER_CHOICE, AUTO_DATE_AND_TIME_ZONE_ENFORCED
+   *
+   * @param self::AUTO_DATE_AND_TIME_ZONE_* $autoDateAndTimeZone
    */
   public function setAutoDateAndTimeZone($autoDateAndTimeZone)
   {
     $this->autoDateAndTimeZone = $autoDateAndTimeZone;
   }
   /**
-   * @return string
+   * @return self::AUTO_DATE_AND_TIME_ZONE_*
    */
   public function getAutoDateAndTimeZone()
   {
     return $this->autoDateAndTimeZone;
   }
   /**
-   * @param bool
+   * Whether auto time is required, which prevents the user from manually
+   * setting the date and time. If autoDateAndTimeZone is set, this field is
+   * ignored.
+   *
+   * @deprecated
+   * @param bool $autoTimeRequired
    */
   public function setAutoTimeRequired($autoTimeRequired)
   {
     $this->autoTimeRequired = $autoTimeRequired;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getAutoTimeRequired()
@@ -528,13 +1133,20 @@ class Policy extends \Google\Collection
     return $this->autoTimeRequired;
   }
   /**
-   * @param bool
+   * Whether applications other than the ones configured in applications are
+   * blocked from being installed. When set, applications that were installed
+   * under a previous policy but no longer appear in the policy are
+   * automatically uninstalled.
+   *
+   * @deprecated
+   * @param bool $blockApplicationsEnabled
    */
   public function setBlockApplicationsEnabled($blockApplicationsEnabled)
   {
     $this->blockApplicationsEnabled = $blockApplicationsEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getBlockApplicationsEnabled()
@@ -542,7 +1154,9 @@ class Policy extends \Google\Collection
     return $this->blockApplicationsEnabled;
   }
   /**
-   * @param bool
+   * Whether configuring bluetooth is disabled.
+   *
+   * @param bool $bluetoothConfigDisabled
    */
   public function setBluetoothConfigDisabled($bluetoothConfigDisabled)
   {
@@ -556,7 +1170,9 @@ class Policy extends \Google\Collection
     return $this->bluetoothConfigDisabled;
   }
   /**
-   * @param bool
+   * Whether bluetooth contact sharing is disabled.
+   *
+   * @param bool $bluetoothContactSharingDisabled
    */
   public function setBluetoothContactSharingDisabled($bluetoothContactSharingDisabled)
   {
@@ -570,7 +1186,11 @@ class Policy extends \Google\Collection
     return $this->bluetoothContactSharingDisabled;
   }
   /**
-   * @param bool
+   * Whether bluetooth is disabled. Prefer this setting over
+   * bluetooth_config_disabled because bluetooth_config_disabled can be bypassed
+   * by the user.
+   *
+   * @param bool $bluetoothDisabled
    */
   public function setBluetoothDisabled($bluetoothDisabled)
   {
@@ -584,27 +1204,42 @@ class Policy extends \Google\Collection
     return $this->bluetoothDisabled;
   }
   /**
-   * @param string
+   * Controls the use of the camera and whether the user has access to the
+   * camera access toggle.
+   *
+   * Accepted values: CAMERA_ACCESS_UNSPECIFIED, CAMERA_ACCESS_USER_CHOICE,
+   * CAMERA_ACCESS_DISABLED, CAMERA_ACCESS_ENFORCED
+   *
+   * @param self::CAMERA_ACCESS_* $cameraAccess
    */
   public function setCameraAccess($cameraAccess)
   {
     $this->cameraAccess = $cameraAccess;
   }
   /**
-   * @return string
+   * @return self::CAMERA_ACCESS_*
    */
   public function getCameraAccess()
   {
     return $this->cameraAccess;
   }
   /**
-   * @param bool
+   * If camera_access is set to any value other than CAMERA_ACCESS_UNSPECIFIED,
+   * this has no effect. Otherwise this field controls whether cameras are
+   * disabled: If true, all cameras are disabled, otherwise they are available.
+   * For fully managed devices this field applies for all apps on the device.
+   * For work profiles, this field applies only to apps in the work profile, and
+   * the camera access of apps outside the work profile is unaffected.
+   *
+   * @deprecated
+   * @param bool $cameraDisabled
    */
   public function setCameraDisabled($cameraDisabled)
   {
     $this->cameraDisabled = $cameraDisabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getCameraDisabled()
@@ -612,7 +1247,9 @@ class Policy extends \Google\Collection
     return $this->cameraDisabled;
   }
   /**
-   * @param bool
+   * Whether configuring cell broadcast is disabled.
+   *
+   * @param bool $cellBroadcastsConfigDisabled
    */
   public function setCellBroadcastsConfigDisabled($cellBroadcastsConfigDisabled)
   {
@@ -626,7 +1263,11 @@ class Policy extends \Google\Collection
     return $this->cellBroadcastsConfigDisabled;
   }
   /**
-   * @param ChoosePrivateKeyRule[]
+   * Rules for determining apps' access to private keys. See
+   * ChoosePrivateKeyRule for details. This must be empty if any application has
+   * CERT_SELECTION delegation scope.
+   *
+   * @param ChoosePrivateKeyRule[] $choosePrivateKeyRules
    */
   public function setChoosePrivateKeyRules($choosePrivateKeyRules)
   {
@@ -640,13 +1281,20 @@ class Policy extends \Google\Collection
     return $this->choosePrivateKeyRules;
   }
   /**
-   * @param ComplianceRule[]
+   * Rules declaring which mitigating actions to take when a device is not
+   * compliant with its policy. When the conditions for multiple rules are
+   * satisfied, all of the mitigating actions for the rules are taken. There is
+   * a maximum limit of 100 rules. Use policy enforcement rules instead.
+   *
+   * @deprecated
+   * @param ComplianceRule[] $complianceRules
    */
   public function setComplianceRules($complianceRules)
   {
     $this->complianceRules = $complianceRules;
   }
   /**
+   * @deprecated
    * @return ComplianceRule[]
    */
   public function getComplianceRules()
@@ -654,7 +1302,9 @@ class Policy extends \Google\Collection
     return $this->complianceRules;
   }
   /**
-   * @param bool
+   * Whether creating windows besides app windows is disabled.
+   *
+   * @param bool $createWindowsDisabled
    */
   public function setCreateWindowsDisabled($createWindowsDisabled)
   {
@@ -668,21 +1318,33 @@ class Policy extends \Google\Collection
     return $this->createWindowsDisabled;
   }
   /**
-   * @param string
+   * Controls which apps are allowed to act as credential providers on Android
+   * 14 and above. These apps store credentials, see this
+   * (https://developer.android.com/training/sign-in/passkeys) and this (https:/
+   * /developer.android.com/reference/androidx/credentials/CredentialManager)
+   * for details. See also credentialProviderPolicy.
+   *
+   * Accepted values: CREDENTIAL_PROVIDER_POLICY_DEFAULT_UNSPECIFIED,
+   * CREDENTIAL_PROVIDER_DEFAULT_DISALLOWED,
+   * CREDENTIAL_PROVIDER_DEFAULT_DISALLOWED_EXCEPT_SYSTEM
+   *
+   * @param self::CREDENTIAL_PROVIDER_POLICY_DEFAULT_* $credentialProviderPolicyDefault
    */
   public function setCredentialProviderPolicyDefault($credentialProviderPolicyDefault)
   {
     $this->credentialProviderPolicyDefault = $credentialProviderPolicyDefault;
   }
   /**
-   * @return string
+   * @return self::CREDENTIAL_PROVIDER_POLICY_DEFAULT_*
    */
   public function getCredentialProviderPolicyDefault()
   {
     return $this->credentialProviderPolicyDefault;
   }
   /**
-   * @param bool
+   * Whether configuring user credentials is disabled.
+   *
+   * @param bool $credentialsConfigDisabled
    */
   public function setCredentialsConfigDisabled($credentialsConfigDisabled)
   {
@@ -696,7 +1358,9 @@ class Policy extends \Google\Collection
     return $this->credentialsConfigDisabled;
   }
   /**
-   * @param CrossProfilePolicies
+   * Cross-profile policies applied on the device.
+   *
+   * @param CrossProfilePolicies $crossProfilePolicies
    */
   public function setCrossProfilePolicies(CrossProfilePolicies $crossProfilePolicies)
   {
@@ -710,7 +1374,9 @@ class Policy extends \Google\Collection
     return $this->crossProfilePolicies;
   }
   /**
-   * @param bool
+   * Whether roaming data services are disabled.
+   *
+   * @param bool $dataRoamingDisabled
    */
   public function setDataRoamingDisabled($dataRoamingDisabled)
   {
@@ -724,13 +1390,17 @@ class Policy extends \Google\Collection
     return $this->dataRoamingDisabled;
   }
   /**
-   * @param bool
+   * Whether the user is allowed to enable debugging features.
+   *
+   * @deprecated
+   * @param bool $debuggingFeaturesAllowed
    */
   public function setDebuggingFeaturesAllowed($debuggingFeaturesAllowed)
   {
     $this->debuggingFeaturesAllowed = $debuggingFeaturesAllowed;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getDebuggingFeaturesAllowed()
@@ -738,7 +1408,15 @@ class Policy extends \Google\Collection
     return $this->debuggingFeaturesAllowed;
   }
   /**
-   * @param DefaultApplicationSetting[]
+   * Optional. The default application setting for supported types. If the
+   * default application is successfully set for at least one app type on a
+   * profile, users are prevented from changing any default applications on that
+   * profile.Only one DefaultApplicationSetting is allowed for each
+   * DefaultApplicationType.See Default application settings
+   * (https://developers.google.com/android/management/default-application-
+   * settings) guide for more details.
+   *
+   * @param DefaultApplicationSetting[] $defaultApplicationSettings
    */
   public function setDefaultApplicationSettings($defaultApplicationSettings)
   {
@@ -752,21 +1430,28 @@ class Policy extends \Google\Collection
     return $this->defaultApplicationSettings;
   }
   /**
-   * @param string
+   * The default permission policy for runtime permission requests.
+   *
+   * Accepted values: PERMISSION_POLICY_UNSPECIFIED, PROMPT, GRANT, DENY
+   *
+   * @param self::DEFAULT_PERMISSION_POLICY_* $defaultPermissionPolicy
    */
   public function setDefaultPermissionPolicy($defaultPermissionPolicy)
   {
     $this->defaultPermissionPolicy = $defaultPermissionPolicy;
   }
   /**
-   * @return string
+   * @return self::DEFAULT_PERMISSION_POLICY_*
    */
   public function getDefaultPermissionPolicy()
   {
     return $this->defaultPermissionPolicy;
   }
   /**
-   * @param DeviceConnectivityManagement
+   * Covers controls for device connectivity such as Wi-Fi, USB data access,
+   * keyboard/mouse connections, and more.
+   *
+   * @param DeviceConnectivityManagement $deviceConnectivityManagement
    */
   public function setDeviceConnectivityManagement(DeviceConnectivityManagement $deviceConnectivityManagement)
   {
@@ -780,7 +1465,9 @@ class Policy extends \Google\Collection
     return $this->deviceConnectivityManagement;
   }
   /**
-   * @param UserFacingMessage
+   * The device owner information to be shown on the lock screen.
+   *
+   * @param UserFacingMessage $deviceOwnerLockScreenInfo
    */
   public function setDeviceOwnerLockScreenInfo(UserFacingMessage $deviceOwnerLockScreenInfo)
   {
@@ -794,7 +1481,9 @@ class Policy extends \Google\Collection
     return $this->deviceOwnerLockScreenInfo;
   }
   /**
-   * @param DeviceRadioState
+   * Covers controls for radio state such as Wi-Fi, bluetooth, and more.
+   *
+   * @param DeviceRadioState $deviceRadioState
    */
   public function setDeviceRadioState(DeviceRadioState $deviceRadioState)
   {
@@ -808,7 +1497,9 @@ class Policy extends \Google\Collection
     return $this->deviceRadioState;
   }
   /**
-   * @param DisplaySettings
+   * Optional. Controls for the display settings.
+   *
+   * @param DisplaySettings $displaySettings
    */
   public function setDisplaySettings(DisplaySettings $displaySettings)
   {
@@ -822,27 +1513,36 @@ class Policy extends \Google\Collection
     return $this->displaySettings;
   }
   /**
-   * @param string
+   * Whether encryption is enabled
+   *
+   * Accepted values: ENCRYPTION_POLICY_UNSPECIFIED, ENABLED_WITHOUT_PASSWORD,
+   * ENABLED_WITH_PASSWORD
+   *
+   * @param self::ENCRYPTION_POLICY_* $encryptionPolicy
    */
   public function setEncryptionPolicy($encryptionPolicy)
   {
     $this->encryptionPolicy = $encryptionPolicy;
   }
   /**
-   * @return string
+   * @return self::ENCRYPTION_POLICY_*
    */
   public function getEncryptionPolicy()
   {
     return $this->encryptionPolicy;
   }
   /**
-   * @param bool
+   * Whether app verification is force-enabled.
+   *
+   * @deprecated
+   * @param bool $ensureVerifyAppsEnabled
    */
   public function setEnsureVerifyAppsEnabled($ensureVerifyAppsEnabled)
   {
     $this->ensureVerifyAppsEnabled = $ensureVerifyAppsEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnsureVerifyAppsEnabled()
@@ -850,21 +1550,29 @@ class Policy extends \Google\Collection
     return $this->ensureVerifyAppsEnabled;
   }
   /**
-   * @param string
+   * Optional. Controls whether the enterpriseDisplayName is visible on the
+   * device (e.g. lock screen message on company-owned devices).
+   *
+   * Accepted values: ENTERPRISE_DISPLAY_NAME_VISIBILITY_UNSPECIFIED,
+   * ENTERPRISE_DISPLAY_NAME_VISIBLE, ENTERPRISE_DISPLAY_NAME_HIDDEN
+   *
+   * @param self::ENTERPRISE_DISPLAY_NAME_VISIBILITY_* $enterpriseDisplayNameVisibility
    */
   public function setEnterpriseDisplayNameVisibility($enterpriseDisplayNameVisibility)
   {
     $this->enterpriseDisplayNameVisibility = $enterpriseDisplayNameVisibility;
   }
   /**
-   * @return string
+   * @return self::ENTERPRISE_DISPLAY_NAME_VISIBILITY_*
    */
   public function getEnterpriseDisplayNameVisibility()
   {
     return $this->enterpriseDisplayNameVisibility;
   }
   /**
-   * @param bool
+   * Whether factory resetting from settings is disabled.
+   *
+   * @param bool $factoryResetDisabled
    */
   public function setFactoryResetDisabled($factoryResetDisabled)
   {
@@ -878,7 +1586,12 @@ class Policy extends \Google\Collection
     return $this->factoryResetDisabled;
   }
   /**
-   * @param string[]
+   * Email addresses of device administrators for factory reset protection. When
+   * the device is factory reset, it will require one of these admins to log in
+   * with the Google account email and password to unlock the device. If no
+   * admins are specified, the device won't provide factory reset protection.
+   *
+   * @param string[] $frpAdminEmails
    */
   public function setFrpAdminEmails($frpAdminEmails)
   {
@@ -892,7 +1605,10 @@ class Policy extends \Google\Collection
     return $this->frpAdminEmails;
   }
   /**
-   * @param bool
+   * Whether the user is allowed to have fun. Controls whether the Easter egg
+   * game in Settings is disabled.
+   *
+   * @param bool $funDisabled
    */
   public function setFunDisabled($funDisabled)
   {
@@ -906,7 +1622,9 @@ class Policy extends \Google\Collection
     return $this->funDisabled;
   }
   /**
-   * @param bool
+   * Whether user installation of apps is disabled.
+   *
+   * @param bool $installAppsDisabled
    */
   public function setInstallAppsDisabled($installAppsDisabled)
   {
@@ -920,13 +1638,17 @@ class Policy extends \Google\Collection
     return $this->installAppsDisabled;
   }
   /**
-   * @param bool
+   * This field has no effect.
+   *
+   * @deprecated
+   * @param bool $installUnknownSourcesAllowed
    */
   public function setInstallUnknownSourcesAllowed($installUnknownSourcesAllowed)
   {
     $this->installUnknownSourcesAllowed = $installUnknownSourcesAllowed;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getInstallUnknownSourcesAllowed()
@@ -934,7 +1656,12 @@ class Policy extends \Google\Collection
     return $this->installUnknownSourcesAllowed;
   }
   /**
-   * @param bool
+   * If true, this disables the Lock Screen
+   * (https://source.android.com/docs/core/display/multi_display/lock-screen)
+   * for primary and/or secondary displays. This policy is supported only in
+   * dedicated device management mode.
+   *
+   * @param bool $keyguardDisabled
    */
   public function setKeyguardDisabled($keyguardDisabled)
   {
@@ -948,7 +1675,9 @@ class Policy extends \Google\Collection
     return $this->keyguardDisabled;
   }
   /**
-   * @param string[]
+   * Disabled keyguard customizations, such as widgets.
+   *
+   * @param string[] $keyguardDisabledFeatures
    */
   public function setKeyguardDisabledFeatures($keyguardDisabledFeatures)
   {
@@ -962,7 +1691,12 @@ class Policy extends \Google\Collection
     return $this->keyguardDisabledFeatures;
   }
   /**
-   * @param bool
+   * Whether the kiosk custom launcher is enabled. This replaces the home screen
+   * with a launcher that locks down the device to the apps installed via the
+   * applications setting. Apps appear on a single page in alphabetical order.
+   * Use kioskCustomization to further configure the kiosk device behavior.
+   *
+   * @param bool $kioskCustomLauncherEnabled
    */
   public function setKioskCustomLauncherEnabled($kioskCustomLauncherEnabled)
   {
@@ -976,7 +1710,11 @@ class Policy extends \Google\Collection
     return $this->kioskCustomLauncherEnabled;
   }
   /**
-   * @param KioskCustomization
+   * Settings controlling the behavior of a device in kiosk mode. To enable
+   * kiosk mode, set kioskCustomLauncherEnabled to true or specify an app in the
+   * policy with installType KIOSK.
+   *
+   * @param KioskCustomization $kioskCustomization
    */
   public function setKioskCustomization(KioskCustomization $kioskCustomization)
   {
@@ -990,21 +1728,30 @@ class Policy extends \Google\Collection
     return $this->kioskCustomization;
   }
   /**
-   * @param string
+   * The degree of location detection enabled.
+   *
+   * Accepted values: LOCATION_MODE_UNSPECIFIED, HIGH_ACCURACY, SENSORS_ONLY,
+   * BATTERY_SAVING, OFF, LOCATION_USER_CHOICE, LOCATION_ENFORCED,
+   * LOCATION_DISABLED
+   *
+   * @param self::LOCATION_MODE_* $locationMode
    */
   public function setLocationMode($locationMode)
   {
     $this->locationMode = $locationMode;
   }
   /**
-   * @return string
+   * @return self::LOCATION_MODE_*
    */
   public function getLocationMode()
   {
     return $this->locationMode;
   }
   /**
-   * @param UserFacingMessage
+   * A message displayed to the user in the device administators settings
+   * screen.
+   *
+   * @param UserFacingMessage $longSupportMessage
    */
   public function setLongSupportMessage(UserFacingMessage $longSupportMessage)
   {
@@ -1018,7 +1765,10 @@ class Policy extends \Google\Collection
     return $this->longSupportMessage;
   }
   /**
-   * @param string
+   * Maximum time in milliseconds for user activity until the device locks. A
+   * value of 0 means there is no restriction.
+   *
+   * @param string $maximumTimeToLock
    */
   public function setMaximumTimeToLock($maximumTimeToLock)
   {
@@ -1032,21 +1782,30 @@ class Policy extends \Google\Collection
     return $this->maximumTimeToLock;
   }
   /**
-   * @param string
+   * Controls the use of the microphone and whether the user has access to the
+   * microphone access toggle. This applies only on fully managed devices.
+   *
+   * Accepted values: MICROPHONE_ACCESS_UNSPECIFIED,
+   * MICROPHONE_ACCESS_USER_CHOICE, MICROPHONE_ACCESS_DISABLED,
+   * MICROPHONE_ACCESS_ENFORCED
+   *
+   * @param self::MICROPHONE_ACCESS_* $microphoneAccess
    */
   public function setMicrophoneAccess($microphoneAccess)
   {
     $this->microphoneAccess = $microphoneAccess;
   }
   /**
-   * @return string
+   * @return self::MICROPHONE_ACCESS_*
    */
   public function getMicrophoneAccess()
   {
     return $this->microphoneAccess;
   }
   /**
-   * @param int
+   * The minimum allowed Android API level.
+   *
+   * @param int $minimumApiLevel
    */
   public function setMinimumApiLevel($minimumApiLevel)
   {
@@ -1060,7 +1819,9 @@ class Policy extends \Google\Collection
     return $this->minimumApiLevel;
   }
   /**
-   * @param bool
+   * Whether configuring mobile networks is disabled.
+   *
+   * @param bool $mobileNetworksConfigDisabled
    */
   public function setMobileNetworksConfigDisabled($mobileNetworksConfigDisabled)
   {
@@ -1074,7 +1835,9 @@ class Policy extends \Google\Collection
     return $this->mobileNetworksConfigDisabled;
   }
   /**
-   * @param bool
+   * Whether adding or removing accounts is disabled.
+   *
+   * @param bool $modifyAccountsDisabled
    */
   public function setModifyAccountsDisabled($modifyAccountsDisabled)
   {
@@ -1088,7 +1851,9 @@ class Policy extends \Google\Collection
     return $this->modifyAccountsDisabled;
   }
   /**
-   * @param bool
+   * Whether the user mounting physical external media is disabled.
+   *
+   * @param bool $mountPhysicalMediaDisabled
    */
   public function setMountPhysicalMediaDisabled($mountPhysicalMediaDisabled)
   {
@@ -1102,7 +1867,10 @@ class Policy extends \Google\Collection
     return $this->mountPhysicalMediaDisabled;
   }
   /**
-   * @param string
+   * The name of the policy in the form
+   * enterprises/{enterpriseId}/policies/{policyId}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -1116,7 +1884,20 @@ class Policy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Whether the network escape hatch is enabled. If a network connection can't
+   * be made at boot time, the escape hatch prompts the user to temporarily
+   * connect to a network in order to refresh the device policy. After applying
+   * policy, the temporary network will be forgotten and the device will
+   * continue booting. This prevents being unable to connect to a network if
+   * there is no suitable network in the last policy and the device boots into
+   * an app in lock task mode, or the user is otherwise unable to reach device
+   * settings.Note: Setting wifiConfigDisabled to true will override this
+   * setting under specific circumstances. Please see wifiConfigDisabled for
+   * further details. Setting configureWifi to DISALLOW_CONFIGURING_WIFI will
+   * override this setting under specific circumstances. Please see
+   * DISALLOW_CONFIGURING_WIFI for further details.
+   *
+   * @param bool $networkEscapeHatchEnabled
    */
   public function setNetworkEscapeHatchEnabled($networkEscapeHatchEnabled)
   {
@@ -1130,7 +1911,9 @@ class Policy extends \Google\Collection
     return $this->networkEscapeHatchEnabled;
   }
   /**
-   * @param bool
+   * Whether resetting network settings is disabled.
+   *
+   * @param bool $networkResetDisabled
    */
   public function setNetworkResetDisabled($networkResetDisabled)
   {
@@ -1144,7 +1927,9 @@ class Policy extends \Google\Collection
     return $this->networkResetDisabled;
   }
   /**
-   * @param OncCertificateProvider[]
+   * This feature is not generally available.
+   *
+   * @param OncCertificateProvider[] $oncCertificateProviders
    */
   public function setOncCertificateProviders($oncCertificateProviders)
   {
@@ -1158,7 +1943,10 @@ class Policy extends \Google\Collection
     return $this->oncCertificateProviders;
   }
   /**
-   * @param array[]
+   * Network configuration for the device. See configure networks for more
+   * information.
+   *
+   * @param array[] $openNetworkConfiguration
    */
   public function setOpenNetworkConfiguration($openNetworkConfiguration)
   {
@@ -1172,7 +1960,9 @@ class Policy extends \Google\Collection
     return $this->openNetworkConfiguration;
   }
   /**
-   * @param bool
+   * Whether using NFC to beam data from apps is disabled.
+   *
+   * @param bool $outgoingBeamDisabled
    */
   public function setOutgoingBeamDisabled($outgoingBeamDisabled)
   {
@@ -1186,7 +1976,9 @@ class Policy extends \Google\Collection
     return $this->outgoingBeamDisabled;
   }
   /**
-   * @param bool
+   * Whether outgoing calls are disabled.
+   *
+   * @param bool $outgoingCallsDisabled
    */
   public function setOutgoingCallsDisabled($outgoingCallsDisabled)
   {
@@ -1200,7 +1992,11 @@ class Policy extends \Google\Collection
     return $this->outgoingCallsDisabled;
   }
   /**
-   * @param PasswordRequirements[]
+   * Password requirement policies. Different policies can be set for work
+   * profile or fully managed devices by setting the password_scope field in the
+   * policy.
+   *
+   * @param PasswordRequirements[] $passwordPolicies
    */
   public function setPasswordPolicies($passwordPolicies)
   {
@@ -1214,13 +2010,21 @@ class Policy extends \Google\Collection
     return $this->passwordPolicies;
   }
   /**
-   * @param PasswordRequirements
+   * Password requirements. The field
+   * password_requirements.require_password_unlock must not be set. DEPRECATED -
+   * Use passwordPolicies.Note:Complexity-based values of PasswordQuality, that
+   * is, COMPLEXITY_LOW, COMPLEXITY_MEDIUM, and COMPLEXITY_HIGH, cannot be used
+   * here. unified_lock_settings cannot be used here.
+   *
+   * @deprecated
+   * @param PasswordRequirements $passwordRequirements
    */
   public function setPasswordRequirements(PasswordRequirements $passwordRequirements)
   {
     $this->passwordRequirements = $passwordRequirements;
   }
   /**
+   * @deprecated
    * @return PasswordRequirements
    */
   public function getPasswordRequirements()
@@ -1228,7 +2032,10 @@ class Policy extends \Google\Collection
     return $this->passwordRequirements;
   }
   /**
-   * @param PermissionGrant[]
+   * Explicit permission or group grants or denials for all apps. These values
+   * override the default_permission_policy.
+   *
+   * @param PermissionGrant[] $permissionGrants
    */
   public function setPermissionGrants($permissionGrants)
   {
@@ -1242,7 +2049,15 @@ class Policy extends \Google\Collection
     return $this->permissionGrants;
   }
   /**
-   * @param PackageNameList
+   * Specifies permitted accessibility services. If the field is not set, any
+   * accessibility service can be used. If the field is set, only the
+   * accessibility services in this list and the system's built-in accessibility
+   * service can be used. In particular, if the field is set to empty, only the
+   * system's built-in accessibility servicess can be used. This can be set on
+   * fully managed devices and on work profiles. When applied to a work profile,
+   * this affects both the personal profile and the work profile.
+   *
+   * @param PackageNameList $permittedAccessibilityServices
    */
   public function setPermittedAccessibilityServices(PackageNameList $permittedAccessibilityServices)
   {
@@ -1256,7 +2071,11 @@ class Policy extends \Google\Collection
     return $this->permittedAccessibilityServices;
   }
   /**
-   * @param PackageNameList
+   * If present, only the input methods provided by packages in this list are
+   * permitted. If this field is present, but the list is empty, then only
+   * system input methods are permitted.
+   *
+   * @param PackageNameList $permittedInputMethods
    */
   public function setPermittedInputMethods(PackageNameList $permittedInputMethods)
   {
@@ -1270,7 +2089,9 @@ class Policy extends \Google\Collection
     return $this->permittedInputMethods;
   }
   /**
-   * @param PersistentPreferredActivity[]
+   * Default intent handler activities.
+   *
+   * @param PersistentPreferredActivity[] $persistentPreferredActivities
    */
   public function setPersistentPreferredActivities($persistentPreferredActivities)
   {
@@ -1284,7 +2105,9 @@ class Policy extends \Google\Collection
     return $this->persistentPreferredActivities;
   }
   /**
-   * @param PersonalUsagePolicies
+   * Policies managing personal usage on a company-owned device.
+   *
+   * @param PersonalUsagePolicies $personalUsagePolicies
    */
   public function setPersonalUsagePolicies(PersonalUsagePolicies $personalUsagePolicies)
   {
@@ -1298,21 +2121,29 @@ class Policy extends \Google\Collection
     return $this->personalUsagePolicies;
   }
   /**
-   * @param string
+   * This mode controls which apps are available to the user in the Play Store
+   * and the behavior on the device when apps are removed from the policy.
+   *
+   * Accepted values: PLAY_STORE_MODE_UNSPECIFIED, WHITELIST, BLACKLIST
+   *
+   * @param self::PLAY_STORE_MODE_* $playStoreMode
    */
   public function setPlayStoreMode($playStoreMode)
   {
     $this->playStoreMode = $playStoreMode;
   }
   /**
-   * @return string
+   * @return self::PLAY_STORE_MODE_*
    */
   public function getPlayStoreMode()
   {
     return $this->playStoreMode;
   }
   /**
-   * @param PolicyEnforcementRule[]
+   * Rules that define the behavior when a particular policy can not be applied
+   * on device
+   *
+   * @param PolicyEnforcementRule[] $policyEnforcementRules
    */
   public function setPolicyEnforcementRules($policyEnforcementRules)
   {
@@ -1326,35 +2157,59 @@ class Policy extends \Google\Collection
     return $this->policyEnforcementRules;
   }
   /**
-   * @param string
+   * Controls whether preferential network service is enabled on the work
+   * profile or on fully managed devices. For example, an organization may have
+   * an agreement with a carrier that all of the work data from its employees'
+   * devices will be sent via a network service dedicated for enterprise use. An
+   * example of a supported preferential network service is the enterprise slice
+   * on 5G networks. This policy has no effect if
+   * preferentialNetworkServiceSettings or
+   * ApplicationPolicy.preferentialNetworkId is set on devices running Android
+   * 13 or above.
+   *
+   * Accepted values: PREFERENTIAL_NETWORK_SERVICE_UNSPECIFIED,
+   * PREFERENTIAL_NETWORK_SERVICE_DISABLED, PREFERENTIAL_NETWORK_SERVICE_ENABLED
+   *
+   * @param self::PREFERENTIAL_NETWORK_SERVICE_* $preferentialNetworkService
    */
   public function setPreferentialNetworkService($preferentialNetworkService)
   {
     $this->preferentialNetworkService = $preferentialNetworkService;
   }
   /**
-   * @return string
+   * @return self::PREFERENTIAL_NETWORK_SERVICE_*
    */
   public function getPreferentialNetworkService()
   {
     return $this->preferentialNetworkService;
   }
   /**
-   * @param string
+   * Optional. Controls whether printing is allowed. This is supported on
+   * devices running Android 9 and above. .
+   *
+   * Accepted values: PRINTING_POLICY_UNSPECIFIED, PRINTING_DISALLOWED,
+   * PRINTING_ALLOWED
+   *
+   * @param self::PRINTING_POLICY_* $printingPolicy
    */
   public function setPrintingPolicy($printingPolicy)
   {
     $this->printingPolicy = $printingPolicy;
   }
   /**
-   * @return string
+   * @return self::PRINTING_POLICY_*
    */
   public function getPrintingPolicy()
   {
     return $this->printingPolicy;
   }
   /**
-   * @param bool
+   * Allows showing UI on a device for a user to choose a private key alias if
+   * there are no matching rules in ChoosePrivateKeyRules. For devices below
+   * Android P, setting this may leave enterprise keys vulnerable. This value
+   * will have no effect if any application has CERT_SELECTION delegation scope.
+   *
+   * @param bool $privateKeySelectionEnabled
    */
   public function setPrivateKeySelectionEnabled($privateKeySelectionEnabled)
   {
@@ -1368,7 +2223,13 @@ class Policy extends \Google\Collection
     return $this->privateKeySelectionEnabled;
   }
   /**
-   * @param ProxyInfo
+   * The network-independent global HTTP proxy. Typically proxies should be
+   * configured per-network in open_network_configuration. However for unusual
+   * configurations like general internal filtering a global HTTP proxy may be
+   * useful. If the proxy is not accessible, network access may break. The
+   * global proxy is only a recommendation and some apps may ignore it.
+   *
+   * @param ProxyInfo $recommendedGlobalProxy
    */
   public function setRecommendedGlobalProxy(ProxyInfo $recommendedGlobalProxy)
   {
@@ -1382,7 +2243,9 @@ class Policy extends \Google\Collection
     return $this->recommendedGlobalProxy;
   }
   /**
-   * @param bool
+   * Whether removing other users is disabled.
+   *
+   * @param bool $removeUserDisabled
    */
   public function setRemoveUserDisabled($removeUserDisabled)
   {
@@ -1396,13 +2259,17 @@ class Policy extends \Google\Collection
     return $this->removeUserDisabled;
   }
   /**
-   * @param bool
+   * Whether rebooting the device into safe boot is disabled.
+   *
+   * @deprecated
+   * @param bool $safeBootDisabled
    */
   public function setSafeBootDisabled($safeBootDisabled)
   {
     $this->safeBootDisabled = $safeBootDisabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getSafeBootDisabled()
@@ -1410,7 +2277,9 @@ class Policy extends \Google\Collection
     return $this->safeBootDisabled;
   }
   /**
-   * @param bool
+   * Whether screen capture is disabled.
+   *
+   * @param bool $screenCaptureDisabled
    */
   public function setScreenCaptureDisabled($screenCaptureDisabled)
   {
@@ -1424,7 +2293,10 @@ class Policy extends \Google\Collection
     return $this->screenCaptureDisabled;
   }
   /**
-   * @param bool
+   * Whether changing the user icon is disabled. The setting has effect only on
+   * fully managed devices.
+   *
+   * @param bool $setUserIconDisabled
    */
   public function setSetUserIconDisabled($setUserIconDisabled)
   {
@@ -1438,7 +2310,9 @@ class Policy extends \Google\Collection
     return $this->setUserIconDisabled;
   }
   /**
-   * @param bool
+   * Whether changing the wallpaper is disabled.
+   *
+   * @param bool $setWallpaperDisabled
    */
   public function setSetWallpaperDisabled($setWallpaperDisabled)
   {
@@ -1452,7 +2326,10 @@ class Policy extends \Google\Collection
     return $this->setWallpaperDisabled;
   }
   /**
-   * @param SetupAction[]
+   * Action to take during the setup process. At most one action may be
+   * specified.
+   *
+   * @param SetupAction[] $setupActions
    */
   public function setSetupActions($setupActions)
   {
@@ -1466,7 +2343,10 @@ class Policy extends \Google\Collection
     return $this->setupActions;
   }
   /**
-   * @param bool
+   * Whether location sharing is disabled. share_location_disabled is supported
+   * for both fully managed devices and personally owned work profiles.
+   *
+   * @param bool $shareLocationDisabled
    */
   public function setShareLocationDisabled($shareLocationDisabled)
   {
@@ -1480,7 +2360,11 @@ class Policy extends \Google\Collection
     return $this->shareLocationDisabled;
   }
   /**
-   * @param UserFacingMessage
+   * A message displayed to the user in the settings screen wherever
+   * functionality has been disabled by the admin. If the message is longer than
+   * 200 characters it may be truncated.
+   *
+   * @param UserFacingMessage $shortSupportMessage
    */
   public function setShortSupportMessage(UserFacingMessage $shortSupportMessage)
   {
@@ -1494,7 +2378,11 @@ class Policy extends \Google\Collection
     return $this->shortSupportMessage;
   }
   /**
-   * @param bool
+   * Flag to skip hints on the first use. Enterprise admin can enable the system
+   * recommendation for apps to skip their user tutorial and other introductory
+   * hints on first start-up.
+   *
+   * @param bool $skipFirstUseHintsEnabled
    */
   public function setSkipFirstUseHintsEnabled($skipFirstUseHintsEnabled)
   {
@@ -1508,7 +2396,9 @@ class Policy extends \Google\Collection
     return $this->skipFirstUseHintsEnabled;
   }
   /**
-   * @param bool
+   * Whether sending and receiving SMS messages is disabled.
+   *
+   * @param bool $smsDisabled
    */
   public function setSmsDisabled($smsDisabled)
   {
@@ -1522,13 +2412,20 @@ class Policy extends \Google\Collection
     return $this->smsDisabled;
   }
   /**
-   * @param bool
+   * Whether the status bar is disabled. This disables notifications, quick
+   * settings, and other screen overlays that allow escape from full-screen
+   * mode. DEPRECATED. To disable the status bar on a kiosk device, use
+   * InstallType KIOSK or kioskCustomLauncherEnabled.
+   *
+   * @deprecated
+   * @param bool $statusBarDisabled
    */
   public function setStatusBarDisabled($statusBarDisabled)
   {
     $this->statusBarDisabled = $statusBarDisabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getStatusBarDisabled()
@@ -1536,7 +2433,9 @@ class Policy extends \Google\Collection
     return $this->statusBarDisabled;
   }
   /**
-   * @param StatusReportingSettings
+   * Status reporting settings
+   *
+   * @param StatusReportingSettings $statusReportingSettings
    */
   public function setStatusReportingSettings(StatusReportingSettings $statusReportingSettings)
   {
@@ -1550,7 +2449,11 @@ class Policy extends \Google\Collection
     return $this->statusReportingSettings;
   }
   /**
-   * @param string[]
+   * The battery plugged in modes for which the device stays on. When using this
+   * setting, it is recommended to clear maximum_time_to_lock so that the device
+   * doesn't lock itself while it stays on.
+   *
+   * @param string[] $stayOnPluggedModes
    */
   public function setStayOnPluggedModes($stayOnPluggedModes)
   {
@@ -1564,7 +2467,16 @@ class Policy extends \Google\Collection
     return $this->stayOnPluggedModes;
   }
   /**
-   * @param SystemUpdate
+   * The system update policy, which controls how OS updates are applied. If the
+   * update type is WINDOWED, the update window will automatically apply to Play
+   * app updates as well.Note: Google Play system updates
+   * (https://source.android.com/docs/core/ota/modular-system) (also called
+   * Mainline updates) are automatically downloaded and require a device reboot
+   * to be installed. Refer to the mainline section in Manage system updates
+   * (https://developer.android.com/work/dpc/system-updates#mainline) for
+   * further details.
+   *
+   * @param SystemUpdate $systemUpdate
    */
   public function setSystemUpdate(SystemUpdate $systemUpdate)
   {
@@ -1578,13 +2490,19 @@ class Policy extends \Google\Collection
     return $this->systemUpdate;
   }
   /**
-   * @param bool
+   * Whether configuring tethering and portable hotspots is disabled. If
+   * tetheringSettings is set to anything other than
+   * TETHERING_SETTINGS_UNSPECIFIED, this setting is ignored.
+   *
+   * @deprecated
+   * @param bool $tetheringConfigDisabled
    */
   public function setTetheringConfigDisabled($tetheringConfigDisabled)
   {
     $this->tetheringConfigDisabled = $tetheringConfigDisabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getTetheringConfigDisabled()
@@ -1592,7 +2510,10 @@ class Policy extends \Google\Collection
     return $this->tetheringConfigDisabled;
   }
   /**
-   * @param bool
+   * Whether user uninstallation of applications is disabled. This prevents apps
+   * from being uninstalled, even those removed using applications
+   *
+   * @param bool $uninstallAppsDisabled
    */
   public function setUninstallAppsDisabled($uninstallAppsDisabled)
   {
@@ -1606,13 +2527,21 @@ class Policy extends \Google\Collection
     return $this->uninstallAppsDisabled;
   }
   /**
-   * @param bool
+   * If microphone_access is set to any value other than
+   * MICROPHONE_ACCESS_UNSPECIFIED, this has no effect. Otherwise this field
+   * controls whether microphones are disabled: If true, all microphones are
+   * disabled, otherwise they are available. This is available only on fully
+   * managed devices.
+   *
+   * @deprecated
+   * @param bool $unmuteMicrophoneDisabled
    */
   public function setUnmuteMicrophoneDisabled($unmuteMicrophoneDisabled)
   {
     $this->unmuteMicrophoneDisabled = $unmuteMicrophoneDisabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getUnmuteMicrophoneDisabled()
@@ -1620,7 +2549,9 @@ class Policy extends \Google\Collection
     return $this->unmuteMicrophoneDisabled;
   }
   /**
-   * @param UsageLog
+   * Configuration of device activity logging.
+   *
+   * @param UsageLog $usageLog
    */
   public function setUsageLog(UsageLog $usageLog)
   {
@@ -1634,13 +2565,18 @@ class Policy extends \Google\Collection
     return $this->usageLog;
   }
   /**
-   * @param bool
+   * Whether transferring files over USB is disabled. This is supported only on
+   * company-owned devices.
+   *
+   * @deprecated
+   * @param bool $usbFileTransferDisabled
    */
   public function setUsbFileTransferDisabled($usbFileTransferDisabled)
   {
     $this->usbFileTransferDisabled = $usbFileTransferDisabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getUsbFileTransferDisabled()
@@ -1648,13 +2584,17 @@ class Policy extends \Google\Collection
     return $this->usbFileTransferDisabled;
   }
   /**
-   * @param bool
+   * Whether USB storage is enabled. Deprecated.
+   *
+   * @deprecated
+   * @param bool $usbMassStorageEnabled
    */
   public function setUsbMassStorageEnabled($usbMassStorageEnabled)
   {
     $this->usbMassStorageEnabled = $usbMassStorageEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getUsbMassStorageEnabled()
@@ -1662,7 +2602,10 @@ class Policy extends \Google\Collection
     return $this->usbMassStorageEnabled;
   }
   /**
-   * @param string
+   * The version of the policy. This is a read-only field. The version is
+   * incremented each time the policy is updated.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {
@@ -1676,7 +2619,9 @@ class Policy extends \Google\Collection
     return $this->version;
   }
   /**
-   * @param bool
+   * Whether configuring VPN is disabled.
+   *
+   * @param bool $vpnConfigDisabled
    */
   public function setVpnConfigDisabled($vpnConfigDisabled)
   {
@@ -1690,13 +2635,27 @@ class Policy extends \Google\Collection
     return $this->vpnConfigDisabled;
   }
   /**
-   * @param bool
+   * Whether configuring Wi-Fi networks is disabled. Supported on fully managed
+   * devices and work profiles on company-owned devices. For fully managed
+   * devices, setting this to true removes all configured networks and retains
+   * only the networks configured using openNetworkConfiguration. For work
+   * profiles on company-owned devices, existing configured networks are not
+   * affected and the user is not allowed to add, remove, or modify Wi-Fi
+   * networks. If configureWifi is set to anything other than
+   * CONFIGURE_WIFI_UNSPECIFIED, this setting is ignored. Note: If a network
+   * connection can't be made at boot time and configuring Wi-Fi is disabled
+   * then network escape hatch will be shown in order to refresh the device
+   * policy (see networkEscapeHatchEnabled).
+   *
+   * @deprecated
+   * @param bool $wifiConfigDisabled
    */
   public function setWifiConfigDisabled($wifiConfigDisabled)
   {
     $this->wifiConfigDisabled = $wifiConfigDisabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getWifiConfigDisabled()
@@ -1704,13 +2663,17 @@ class Policy extends \Google\Collection
     return $this->wifiConfigDisabled;
   }
   /**
-   * @param bool
+   * This is deprecated.
+   *
+   * @deprecated
+   * @param bool $wifiConfigsLockdownEnabled
    */
   public function setWifiConfigsLockdownEnabled($wifiConfigsLockdownEnabled)
   {
     $this->wifiConfigsLockdownEnabled = $wifiConfigsLockdownEnabled;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getWifiConfigsLockdownEnabled()
@@ -1718,7 +2681,12 @@ class Policy extends \Google\Collection
     return $this->wifiConfigsLockdownEnabled;
   }
   /**
-   * @param string[]
+   * Optional. Wipe flags to indicate what data is wiped when a device or
+   * profile wipe is triggered due to any reason (for example, non-compliance).
+   * This does not apply to the enterprises.devices.delete method. . This list
+   * must not have duplicates.
+   *
+   * @param string[] $wipeDataFlags
    */
   public function setWipeDataFlags($wipeDataFlags)
   {
@@ -1732,7 +2700,10 @@ class Policy extends \Google\Collection
     return $this->wipeDataFlags;
   }
   /**
-   * @param WorkAccountSetupConfig
+   * Optional. Controls the work account setup configuration, such as details of
+   * whether a Google authenticated account is required.
+   *
+   * @param WorkAccountSetupConfig $workAccountSetupConfig
    */
   public function setWorkAccountSetupConfig(WorkAccountSetupConfig $workAccountSetupConfig)
   {

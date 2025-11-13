@@ -21,20 +21,39 @@ class PersistentPreferredActivity extends \Google\Collection
 {
   protected $collection_key = 'categories';
   /**
+   * The intent actions to match in the filter. If any actions are included in
+   * the filter, then an intent's action must be one of those values for it to
+   * match. If no actions are included, the intent action is ignored.
+   *
    * @var string[]
    */
   public $actions;
   /**
+   * The intent categories to match in the filter. An intent includes the
+   * categories that it requires, all of which must be included in the filter in
+   * order to match. In other words, adding a category to the filter has no
+   * impact on matching unless that category is specified in the intent.
+   *
    * @var string[]
    */
   public $categories;
   /**
+   * The activity that should be the default intent handler. This should be an
+   * Android component name, e.g. com.android.enterprise.app/.MainActivity.
+   * Alternatively, the value may be the package name of an app, which causes
+   * Android Device Policy to choose an appropriate activity from the app to
+   * handle the intent.
+   *
    * @var string
    */
   public $receiverActivity;
 
   /**
-   * @param string[]
+   * The intent actions to match in the filter. If any actions are included in
+   * the filter, then an intent's action must be one of those values for it to
+   * match. If no actions are included, the intent action is ignored.
+   *
+   * @param string[] $actions
    */
   public function setActions($actions)
   {
@@ -48,7 +67,12 @@ class PersistentPreferredActivity extends \Google\Collection
     return $this->actions;
   }
   /**
-   * @param string[]
+   * The intent categories to match in the filter. An intent includes the
+   * categories that it requires, all of which must be included in the filter in
+   * order to match. In other words, adding a category to the filter has no
+   * impact on matching unless that category is specified in the intent.
+   *
+   * @param string[] $categories
    */
   public function setCategories($categories)
   {
@@ -62,7 +86,13 @@ class PersistentPreferredActivity extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param string
+   * The activity that should be the default intent handler. This should be an
+   * Android component name, e.g. com.android.enterprise.app/.MainActivity.
+   * Alternatively, the value may be the package name of an app, which causes
+   * Android Device Policy to choose an appropriate activity from the app to
+   * handle the intent.
+   *
+   * @param string $receiverActivity
    */
   public function setReceiverActivity($receiverActivity)
   {

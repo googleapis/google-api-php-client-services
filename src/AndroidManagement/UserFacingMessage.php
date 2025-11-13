@@ -20,16 +20,28 @@ namespace Google\Service\AndroidManagement;
 class UserFacingMessage extends \Google\Model
 {
   /**
+   * The default message displayed if no localized message is specified or the
+   * user's locale doesn't match with any of the localized messages. A default
+   * message must be provided if any localized messages are provided.
+   *
    * @var string
    */
   public $defaultMessage;
   /**
+   * A map containing pairs, where locale is a well-formed BCP 47 language
+   * (https://www.w3.org/International/articles/language-tags/) code, such as
+   * en-US, es-ES, or fr.
+   *
    * @var string[]
    */
   public $localizedMessages;
 
   /**
-   * @param string
+   * The default message displayed if no localized message is specified or the
+   * user's locale doesn't match with any of the localized messages. A default
+   * message must be provided if any localized messages are provided.
+   *
+   * @param string $defaultMessage
    */
   public function setDefaultMessage($defaultMessage)
   {
@@ -43,7 +55,11 @@ class UserFacingMessage extends \Google\Model
     return $this->defaultMessage;
   }
   /**
-   * @param string[]
+   * A map containing pairs, where locale is a well-formed BCP 47 language
+   * (https://www.w3.org/International/articles/language-tags/) code, such as
+   * en-US, es-ES, or fr.
+   *
+   * @param string[] $localizedMessages
    */
   public function setLocalizedMessages($localizedMessages)
   {
