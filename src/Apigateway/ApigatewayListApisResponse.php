@@ -23,16 +23,22 @@ class ApigatewayListApisResponse extends \Google\Collection
   protected $apisType = ApigatewayApi::class;
   protected $apisDataType = 'array';
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param ApigatewayApi[]
+   * APIs.
+   *
+   * @param ApigatewayApi[] $apis
    */
   public function setApis($apis)
   {
@@ -46,7 +52,9 @@ class ApigatewayListApisResponse extends \Google\Collection
     return $this->apis;
   }
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ApigatewayListApisResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

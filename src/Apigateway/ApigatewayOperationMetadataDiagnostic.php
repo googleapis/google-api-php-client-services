@@ -20,16 +20,22 @@ namespace Google\Service\Apigateway;
 class ApigatewayOperationMetadataDiagnostic extends \Google\Model
 {
   /**
+   * Location of the diagnostic.
+   *
    * @var string
    */
   public $location;
   /**
+   * The diagnostic message.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * Location of the diagnostic.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -43,7 +49,9 @@ class ApigatewayOperationMetadataDiagnostic extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The diagnostic message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

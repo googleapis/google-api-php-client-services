@@ -23,16 +23,22 @@ class ApigatewayListGatewaysResponse extends \Google\Collection
   protected $gatewaysType = ApigatewayGateway::class;
   protected $gatewaysDataType = 'array';
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param ApigatewayGateway[]
+   * Gateways.
+   *
+   * @param ApigatewayGateway[] $gateways
    */
   public function setGateways($gateways)
   {
@@ -46,7 +52,9 @@ class ApigatewayListGatewaysResponse extends \Google\Collection
     return $this->gateways;
   }
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ApigatewayListGatewaysResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

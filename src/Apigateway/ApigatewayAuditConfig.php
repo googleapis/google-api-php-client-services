@@ -23,12 +23,18 @@ class ApigatewayAuditConfig extends \Google\Collection
   protected $auditLogConfigsType = ApigatewayAuditLogConfig::class;
   protected $auditLogConfigsDataType = 'array';
   /**
+   * Specifies a service that will be enabled for audit logging. For example,
+   * `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a
+   * special value that covers all services.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param ApigatewayAuditLogConfig[]
+   * The configuration for logging of each type of permission.
+   *
+   * @param ApigatewayAuditLogConfig[] $auditLogConfigs
    */
   public function setAuditLogConfigs($auditLogConfigs)
   {
@@ -42,7 +48,11 @@ class ApigatewayAuditConfig extends \Google\Collection
     return $this->auditLogConfigs;
   }
   /**
-   * @param string
+   * Specifies a service that will be enabled for audit logging. For example,
+   * `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a
+   * special value that covers all services.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

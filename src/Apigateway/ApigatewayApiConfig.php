@@ -19,48 +19,104 @@ namespace Google\Service\Apigateway;
 
 class ApigatewayApiConfig extends \Google\Collection
 {
+  /**
+   * API Config does not have a state yet.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * API Config is being created and deployed to the API Controller.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * API Config is ready for use by Gateways.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * API Config creation failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * API Config is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * API Config is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * API Config settings are being activated in downstream systems. API Configs
+   * in this state cannot be used by Gateways.
+   */
+  public const STATE_ACTIVATING = 'ACTIVATING';
   protected $collection_key = 'openapiDocuments';
   /**
+   * Output only. Created time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Immutable. The Google Cloud IAM Service Account that Gateways serving this
+   * config should use to authenticate to other services. This may either be the
+   * Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`)
+   * or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This
+   * is most often used when the service is a GCP resource such as a Cloud Run
+   * Service or an IAP-secured service.
+   *
    * @var string
    */
   public $gatewayServiceAccount;
   protected $grpcServicesType = ApigatewayApiConfigGrpcServiceDefinition::class;
   protected $grpcServicesDataType = 'array';
   /**
+   * Optional. Resource labels to represent user-provided metadata. Refer to
+   * cloud documentation on labels for more details.
+   * https://cloud.google.com/compute/docs/labeling-resources
+   *
    * @var string[]
    */
   public $labels;
   protected $managedServiceConfigsType = ApigatewayApiConfigFile::class;
   protected $managedServiceConfigsDataType = 'array';
   /**
+   * Output only. Resource name of the API Config. Format:
+   * projects/{project}/locations/global/apis/{api}/configs/{api_config}
+   *
    * @var string
    */
   public $name;
   protected $openapiDocumentsType = ApigatewayApiConfigOpenApiDocument::class;
   protected $openapiDocumentsDataType = 'array';
   /**
+   * Output only. The ID of the associated Service Config (
+   * https://cloud.google.com/service-infrastructure/docs/glossary#config).
+   *
    * @var string
    */
   public $serviceConfigId;
   /**
+   * Output only. State of the API Config.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Updated time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Created time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -74,7 +130,9 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -88,7 +146,14 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Immutable. The Google Cloud IAM Service Account that Gateways serving this
+   * config should use to authenticate to other services. This may either be the
+   * Service Account's email (`{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`)
+   * or its full resource name (`projects/{PROJECT}/accounts/{UNIQUE_ID}`). This
+   * is most often used when the service is a GCP resource such as a Cloud Run
+   * Service or an IAP-secured service.
+   *
+   * @param string $gatewayServiceAccount
    */
   public function setGatewayServiceAccount($gatewayServiceAccount)
   {
@@ -102,7 +167,10 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->gatewayServiceAccount;
   }
   /**
-   * @param ApigatewayApiConfigGrpcServiceDefinition[]
+   * Optional. gRPC service definition files. If specified, openapi_documents
+   * must not be included.
+   *
+   * @param ApigatewayApiConfigGrpcServiceDefinition[] $grpcServices
    */
   public function setGrpcServices($grpcServices)
   {
@@ -116,7 +184,11 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->grpcServices;
   }
   /**
-   * @param string[]
+   * Optional. Resource labels to represent user-provided metadata. Refer to
+   * cloud documentation on labels for more details.
+   * https://cloud.google.com/compute/docs/labeling-resources
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -130,7 +202,17 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param ApigatewayApiConfigFile[]
+   * Optional. Service Configuration files. At least one must be included when
+   * using gRPC service definitions. See
+   * https://cloud.google.com/endpoints/docs/grpc/grpc-service-
+   * config#service_configuration_overview for the expected file contents. If
+   * multiple files are specified, the files are merged with the following
+   * rules: * All singular scalar fields are merged using "last one wins"
+   * semantics in the order of the files uploaded. * Repeated fields are
+   * concatenated. * Singular embedded messages are merged using these rules for
+   * nested fields.
+   *
+   * @param ApigatewayApiConfigFile[] $managedServiceConfigs
    */
   public function setManagedServiceConfigs($managedServiceConfigs)
   {
@@ -144,7 +226,10 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->managedServiceConfigs;
   }
   /**
-   * @param string
+   * Output only. Resource name of the API Config. Format:
+   * projects/{project}/locations/global/apis/{api}/configs/{api_config}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -158,7 +243,10 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param ApigatewayApiConfigOpenApiDocument[]
+   * Optional. OpenAPI specification documents. If specified, grpc_services and
+   * managed_service_configs must not be included.
+   *
+   * @param ApigatewayApiConfigOpenApiDocument[] $openapiDocuments
    */
   public function setOpenapiDocuments($openapiDocuments)
   {
@@ -172,7 +260,10 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->openapiDocuments;
   }
   /**
-   * @param string
+   * Output only. The ID of the associated Service Config (
+   * https://cloud.google.com/service-infrastructure/docs/glossary#config).
+   *
+   * @param string $serviceConfigId
    */
   public function setServiceConfigId($serviceConfigId)
   {
@@ -186,21 +277,28 @@ class ApigatewayApiConfig extends \Google\Collection
     return $this->serviceConfigId;
   }
   /**
-   * @param string
+   * Output only. State of the API Config.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, ACTIVE, FAILED, DELETING,
+   * UPDATING, ACTIVATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Updated time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
