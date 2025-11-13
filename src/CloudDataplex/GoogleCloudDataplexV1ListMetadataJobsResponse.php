@@ -23,16 +23,23 @@ class GoogleCloudDataplexV1ListMetadataJobsResponse extends \Google\Collection
   protected $metadataJobsType = GoogleCloudDataplexV1MetadataJob::class;
   protected $metadataJobsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. If there are no more results
+   * in the list, the value is empty.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that the service couldn't reach.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param GoogleCloudDataplexV1MetadataJob[]
+   * Metadata jobs under the specified parent location.
+   *
+   * @param GoogleCloudDataplexV1MetadataJob[] $metadataJobs
    */
   public function setMetadataJobs($metadataJobs)
   {
@@ -46,7 +53,10 @@ class GoogleCloudDataplexV1ListMetadataJobsResponse extends \Google\Collection
     return $this->metadataJobs;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. If there are no more results
+   * in the list, the value is empty.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListMetadataJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that the service couldn't reach.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

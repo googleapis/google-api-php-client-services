@@ -21,6 +21,9 @@ class GoogleCloudDataplexV1ListZonesResponse extends \Google\Collection
 {
   protected $collection_key = 'zones';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudDataplexV1ListZonesResponse extends \Google\Collection
   protected $zonesDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudDataplexV1ListZonesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDataplexV1Zone[]
+   * Zones under the given parent lake.
+   *
+   * @param GoogleCloudDataplexV1Zone[] $zones
    */
   public function setZones($zones)
   {

@@ -23,44 +23,73 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
   protected $ancestorsType = GoogleCloudDataplexV1EntrySourceAncestor::class;
   protected $ancestorsDataType = 'array';
   /**
+   * The time when the resource was created in the source system.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * A description of the data resource. Maximum length is 2,000 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * A user-friendly display name. Maximum length is 500 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * User-defined labels. The maximum size of keys and values is 128 characters
+   * each.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. Location of the resource in the source system. You can search
+   * the entry by this location. By default, this should match the location of
+   * the entry group containing this entry. A different value allows capturing
+   * the source location for data external to Google Cloud.
+   *
    * @var string
    */
   public $location;
   /**
+   * The platform containing the source system. Maximum length is 64 characters.
+   *
    * @var string
    */
   public $platform;
   /**
+   * The name of the resource in the source system. Maximum length is 4,000
+   * characters.
+   *
    * @var string
    */
   public $resource;
   /**
+   * The name of the source system. Maximum length is 64 characters.
+   *
    * @var string
    */
   public $system;
   /**
+   * The time when the resource was last updated in the source system. If the
+   * entry exists in the system and its EntrySource has update_time populated,
+   * further updates to the EntrySource of the entry must provide incremental
+   * updates to its update_time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudDataplexV1EntrySourceAncestor[]
+   * Immutable. The entries representing the ancestors of the data resource in
+   * the source system.
+   *
+   * @param GoogleCloudDataplexV1EntrySourceAncestor[] $ancestors
    */
   public function setAncestors($ancestors)
   {
@@ -74,7 +103,9 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->ancestors;
   }
   /**
-   * @param string
+   * The time when the resource was created in the source system.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -88,7 +119,9 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * A description of the data resource. Maximum length is 2,000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -102,7 +135,9 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * A user-friendly display name. Maximum length is 500 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -116,7 +151,10 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * User-defined labels. The maximum size of keys and values is 128 characters
+   * each.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -130,7 +168,12 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. Location of the resource in the source system. You can search
+   * the entry by this location. By default, this should match the location of
+   * the entry group containing this entry. A different value allows capturing
+   * the source location for data external to Google Cloud.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -144,7 +187,9 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string
+   * The platform containing the source system. Maximum length is 64 characters.
+   *
+   * @param string $platform
    */
   public function setPlatform($platform)
   {
@@ -158,7 +203,10 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->platform;
   }
   /**
-   * @param string
+   * The name of the resource in the source system. Maximum length is 4,000
+   * characters.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -172,7 +220,9 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->resource;
   }
   /**
-   * @param string
+   * The name of the source system. Maximum length is 64 characters.
+   *
+   * @param string $system
    */
   public function setSystem($system)
   {
@@ -186,7 +236,12 @@ class GoogleCloudDataplexV1EntrySource extends \Google\Collection
     return $this->system;
   }
   /**
-   * @param string
+   * The time when the resource was last updated in the source system. If the
+   * entry exists in the system and its EntrySource has update_time populated,
+   * further updates to the EntrySource of the entry must provide incremental
+   * updates to its update_time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

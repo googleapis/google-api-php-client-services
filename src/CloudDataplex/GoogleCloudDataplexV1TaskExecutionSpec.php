@@ -20,28 +20,61 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1TaskExecutionSpec extends \Google\Model
 {
   /**
+   * Optional. The arguments to pass to the task. The args can use placeholders
+   * of the format ${placeholder} as part of key/value string. These will be
+   * interpolated before passing the args to the driver. Currently supported
+   * placeholders: - ${task_id} - ${job_time} To pass positional args, set the
+   * key as TASK_ARGS. The value should be a comma-separated string of all the
+   * positional arguments. To use a delimiter other than comma, refer to
+   * https://cloud.google.com/sdk/gcloud/reference/topic/escaping. In case of
+   * other keys being present in the args, then TASK_ARGS will be passed as the
+   * last argument.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * Optional. The Cloud KMS key to use for encryption, of the form:
+   * projects/{project_number}/locations/{location_id}/keyRings/{key-ring-
+   * name}/cryptoKeys/{key-name}.
+   *
    * @var string
    */
   public $kmsKey;
   /**
+   * Optional. The maximum duration after which the job execution is expired.
+   *
    * @var string
    */
   public $maxJobExecutionLifetime;
   /**
+   * Optional. The project in which jobs are run. By default, the project
+   * containing the Lake is used. If a project is provided, the
+   * ExecutionSpec.service_account must belong to this project.
+   *
    * @var string
    */
   public $project;
   /**
+   * Required. Service account to use to execute a task. If not provided, the
+   * default Compute service account for the project is used.
+   *
    * @var string
    */
   public $serviceAccount;
 
   /**
-   * @param string[]
+   * Optional. The arguments to pass to the task. The args can use placeholders
+   * of the format ${placeholder} as part of key/value string. These will be
+   * interpolated before passing the args to the driver. Currently supported
+   * placeholders: - ${task_id} - ${job_time} To pass positional args, set the
+   * key as TASK_ARGS. The value should be a comma-separated string of all the
+   * positional arguments. To use a delimiter other than comma, refer to
+   * https://cloud.google.com/sdk/gcloud/reference/topic/escaping. In case of
+   * other keys being present in the args, then TASK_ARGS will be passed as the
+   * last argument.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -55,7 +88,11 @@ class GoogleCloudDataplexV1TaskExecutionSpec extends \Google\Model
     return $this->args;
   }
   /**
-   * @param string
+   * Optional. The Cloud KMS key to use for encryption, of the form:
+   * projects/{project_number}/locations/{location_id}/keyRings/{key-ring-
+   * name}/cryptoKeys/{key-name}.
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {
@@ -69,7 +106,9 @@ class GoogleCloudDataplexV1TaskExecutionSpec extends \Google\Model
     return $this->kmsKey;
   }
   /**
-   * @param string
+   * Optional. The maximum duration after which the job execution is expired.
+   *
+   * @param string $maxJobExecutionLifetime
    */
   public function setMaxJobExecutionLifetime($maxJobExecutionLifetime)
   {
@@ -83,7 +122,11 @@ class GoogleCloudDataplexV1TaskExecutionSpec extends \Google\Model
     return $this->maxJobExecutionLifetime;
   }
   /**
-   * @param string
+   * Optional. The project in which jobs are run. By default, the project
+   * containing the Lake is used. If a project is provided, the
+   * ExecutionSpec.service_account must belong to this project.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {
@@ -97,7 +140,10 @@ class GoogleCloudDataplexV1TaskExecutionSpec extends \Google\Model
     return $this->project;
   }
   /**
-   * @param string
+   * Required. Service account to use to execute a task. If not provided, the
+   * default Compute service account for the project is used.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {

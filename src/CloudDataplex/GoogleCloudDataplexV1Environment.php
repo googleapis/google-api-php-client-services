@@ -20,14 +20,40 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1Environment extends \Google\Model
 {
   /**
+   * State is not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Resource is active, i.e., ready to use.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Resource is under creation.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Resource is under deletion.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Resource is active but has unresolved actions.
+   */
+  public const STATE_ACTION_REQUIRED = 'ACTION_REQUIRED';
+  /**
+   * Output only. Environment creation time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Description of the environment.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. User friendly display name.
+   *
    * @var string
    */
   public $displayName;
@@ -36,10 +62,16 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
   protected $infrastructureSpecType = GoogleCloudDataplexV1EnvironmentInfrastructureSpec::class;
   protected $infrastructureSpecDataType = '';
   /**
+   * Optional. User defined labels for the environment.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The relative resource name of the environment, of the form: pr
+   * ojects/{project_id}/locations/{location_id}/lakes/{lake_id}/environment/{en
+   * vironment_id}
+   *
    * @var string
    */
   public $name;
@@ -48,20 +80,30 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
   protected $sessionStatusType = GoogleCloudDataplexV1EnvironmentSessionStatus::class;
   protected $sessionStatusDataType = '';
   /**
+   * Output only. Current state of the environment.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. System generated globally unique ID for the environment. This
+   * ID will be different if the environment is deleted and re-created with the
+   * same name.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The time when the environment was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Environment creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -75,7 +117,9 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Description of the environment.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -89,7 +133,9 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. User friendly display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -103,7 +149,10 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDataplexV1EnvironmentEndpoints
+   * Output only. URI Endpoints to access sessions associated with the
+   * Environment.
+   *
+   * @param GoogleCloudDataplexV1EnvironmentEndpoints $endpoints
    */
   public function setEndpoints(GoogleCloudDataplexV1EnvironmentEndpoints $endpoints)
   {
@@ -117,7 +166,9 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->endpoints;
   }
   /**
-   * @param GoogleCloudDataplexV1EnvironmentInfrastructureSpec
+   * Required. Infrastructure specification for the Environment.
+   *
+   * @param GoogleCloudDataplexV1EnvironmentInfrastructureSpec $infrastructureSpec
    */
   public function setInfrastructureSpec(GoogleCloudDataplexV1EnvironmentInfrastructureSpec $infrastructureSpec)
   {
@@ -131,7 +182,9 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->infrastructureSpec;
   }
   /**
-   * @param string[]
+   * Optional. User defined labels for the environment.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -145,7 +198,11 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The relative resource name of the environment, of the form: pr
+   * ojects/{project_id}/locations/{location_id}/lakes/{lake_id}/environment/{en
+   * vironment_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -159,7 +216,9 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDataplexV1EnvironmentSessionSpec
+   * Optional. Configuration for sessions created for this environment.
+   *
+   * @param GoogleCloudDataplexV1EnvironmentSessionSpec $sessionSpec
    */
   public function setSessionSpec(GoogleCloudDataplexV1EnvironmentSessionSpec $sessionSpec)
   {
@@ -173,7 +232,9 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->sessionSpec;
   }
   /**
-   * @param GoogleCloudDataplexV1EnvironmentSessionStatus
+   * Output only. Status of sessions created for this environment.
+   *
+   * @param GoogleCloudDataplexV1EnvironmentSessionStatus $sessionStatus
    */
   public function setSessionStatus(GoogleCloudDataplexV1EnvironmentSessionStatus $sessionStatus)
   {
@@ -187,21 +248,30 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->sessionStatus;
   }
   /**
-   * @param string
+   * Output only. Current state of the environment.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, DELETING,
+   * ACTION_REQUIRED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. System generated globally unique ID for the environment. This
+   * ID will be different if the environment is deleted and re-created with the
+   * same name.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -215,7 +285,9 @@ class GoogleCloudDataplexV1Environment extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The time when the environment was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

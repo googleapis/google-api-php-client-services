@@ -20,30 +20,54 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1EncryptionConfigFailureDetails extends \Google\Model
 {
   /**
+   * The error code is not specified
+   */
+  public const ERROR_CODE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Error because of internal server error, will be retried automatically.
+   */
+  public const ERROR_CODE_INTERNAL_ERROR = 'INTERNAL_ERROR';
+  /**
+   * User action is required to resolve the error.
+   */
+  public const ERROR_CODE_REQUIRE_USER_ACTION = 'REQUIRE_USER_ACTION';
+  /**
+   * Output only. The error code for the failure.
+   *
    * @var string
    */
   public $errorCode;
   /**
+   * Output only. The error message will be shown to the user. Set only if the
+   * error code is REQUIRE_USER_ACTION.
+   *
    * @var string
    */
   public $errorMessage;
 
   /**
-   * @param string
+   * Output only. The error code for the failure.
+   *
+   * Accepted values: UNKNOWN, INTERNAL_ERROR, REQUIRE_USER_ACTION
+   *
+   * @param self::ERROR_CODE_* $errorCode
    */
   public function setErrorCode($errorCode)
   {
     $this->errorCode = $errorCode;
   }
   /**
-   * @return string
+   * @return self::ERROR_CODE_*
    */
   public function getErrorCode()
   {
     return $this->errorCode;
   }
   /**
-   * @param string
+   * Output only. The error message will be shown to the user. Set only if the
+   * error code is REQUIRE_USER_ACTION.
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {

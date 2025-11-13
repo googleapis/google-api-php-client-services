@@ -20,24 +20,56 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1Session extends \Google\Model
 {
   /**
+   * State is not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Resource is active, i.e., ready to use.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Resource is under creation.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Resource is under deletion.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Resource is active but has unresolved actions.
+   */
+  public const STATE_ACTION_REQUIRED = 'ACTION_REQUIRED';
+  /**
+   * Output only. Session start time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The relative resource name of the content, of the form: projec
+   * ts/{project_id}/locations/{location_id}/lakes/{lake_id}/environment/{enviro
+   * nment_id}/sessions/{session_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. State of Session
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Email of user running the session.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param string
+   * Output only. Session start time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -51,7 +83,11 @@ class GoogleCloudDataplexV1Session extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The relative resource name of the content, of the form: projec
+   * ts/{project_id}/locations/{location_id}/lakes/{lake_id}/environment/{enviro
+   * nment_id}/sessions/{session_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -65,21 +101,28 @@ class GoogleCloudDataplexV1Session extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. State of Session
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, DELETING,
+   * ACTION_REQUIRED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Email of user running the session.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

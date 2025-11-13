@@ -20,24 +20,54 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1LakeMetastoreStatus extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * A Metastore service instance is not associated with the lake.
+   */
+  public const STATE_NONE = 'NONE';
+  /**
+   * A Metastore service instance is attached to the lake.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Attach/detach is in progress.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Attach/detach could not be done due to errors.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * The URI of the endpoint used to access the Metastore service.
+   *
    * @var string
    */
   public $endpoint;
   /**
+   * Additional information about the current status.
+   *
    * @var string
    */
   public $message;
   /**
+   * Current state of association.
+   *
    * @var string
    */
   public $state;
   /**
+   * Last update time of the metastore status of the lake.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The URI of the endpoint used to access the Metastore service.
+   *
+   * @param string $endpoint
    */
   public function setEndpoint($endpoint)
   {
@@ -51,7 +81,9 @@ class GoogleCloudDataplexV1LakeMetastoreStatus extends \Google\Model
     return $this->endpoint;
   }
   /**
-   * @param string
+   * Additional information about the current status.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -65,21 +97,27 @@ class GoogleCloudDataplexV1LakeMetastoreStatus extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Current state of association.
+   *
+   * Accepted values: STATE_UNSPECIFIED, NONE, READY, UPDATING, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Last update time of the metastore status of the lake.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

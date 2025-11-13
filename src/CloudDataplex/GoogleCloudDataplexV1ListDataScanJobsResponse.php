@@ -23,12 +23,17 @@ class GoogleCloudDataplexV1ListDataScanJobsResponse extends \Google\Collection
   protected $dataScanJobsType = GoogleCloudDataplexV1DataScanJob::class;
   protected $dataScanJobsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDataplexV1DataScanJob[]
+   * DataScanJobs (BASIC view only) under a given dataScan.
+   *
+   * @param GoogleCloudDataplexV1DataScanJob[] $dataScanJobs
    */
   public function setDataScanJobs($dataScanJobs)
   {
@@ -42,7 +47,10 @@ class GoogleCloudDataplexV1ListDataScanJobsResponse extends \Google\Collection
     return $this->dataScanJobs;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

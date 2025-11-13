@@ -21,18 +21,26 @@ class GoogleCloudDataplexV1ListGlossaryTermsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachableLocations';
   /**
+   * A token, which can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $termsType = GoogleCloudDataplexV1GlossaryTerm::class;
   protected $termsDataType = 'array';
   /**
+   * Locations that the service couldn't reach.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param string
+   * A token, which can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class GoogleCloudDataplexV1ListGlossaryTermsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDataplexV1GlossaryTerm[]
+   * Lists the GlossaryTerms in the specified parent.
+   *
+   * @param GoogleCloudDataplexV1GlossaryTerm[] $terms
    */
   public function setTerms($terms)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListGlossaryTermsResponse extends \Google\Collection
     return $this->terms;
   }
   /**
-   * @param string[]
+   * Locations that the service couldn't reach.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

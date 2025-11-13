@@ -25,7 +25,9 @@ class GoogleCloudDataplexV1EntityCompatibilityStatus extends \Google\Model
   protected $hiveMetastoreDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility
+   * Output only. Whether this entity is compatible with BigQuery.
+   *
+   * @param GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility $bigquery
    */
   public function setBigquery(GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility $bigquery)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDataplexV1EntityCompatibilityStatus extends \Google\Model
     return $this->bigquery;
   }
   /**
-   * @param GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility
+   * Output only. Whether this entity is compatible with Hive Metastore.
+   *
+   * @param GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility $hiveMetastore
    */
   public function setHiveMetastore(GoogleCloudDataplexV1EntityCompatibilityStatusCompatibility $hiveMetastore)
   {

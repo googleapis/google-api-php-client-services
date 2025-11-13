@@ -21,24 +21,41 @@ class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime extends \
 {
   protected $collection_key = 'pythonPackages';
   /**
+   * Required. Dataplex Universal Catalog Image version.
+   *
    * @var string
    */
   public $imageVersion;
   /**
+   * Optional. List of Java jars to be included in the runtime environment.
+   * Valid input includes Cloud Storage URIs to Jar binaries. For example,
+   * gs://bucket-name/my/path/to/file.jar
+   *
    * @var string[]
    */
   public $javaLibraries;
   /**
+   * Optional. Spark properties to provide configuration for use in sessions
+   * created for this environment. The properties to set on daemon config files.
+   * Property keys are specified in prefix:property format. The prefix must be
+   * "spark".
+   *
    * @var string[]
    */
   public $properties;
   /**
+   * Optional. A list of python packages to be installed. Valid formats include
+   * Cloud Storage URI to a PIP installable library. For example, gs://bucket-
+   * name/my/path/to/lib.tar.gz
+   *
    * @var string[]
    */
   public $pythonPackages;
 
   /**
-   * @param string
+   * Required. Dataplex Universal Catalog Image version.
+   *
+   * @param string $imageVersion
    */
   public function setImageVersion($imageVersion)
   {
@@ -52,7 +69,11 @@ class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime extends \
     return $this->imageVersion;
   }
   /**
-   * @param string[]
+   * Optional. List of Java jars to be included in the runtime environment.
+   * Valid input includes Cloud Storage URIs to Jar binaries. For example,
+   * gs://bucket-name/my/path/to/file.jar
+   *
+   * @param string[] $javaLibraries
    */
   public function setJavaLibraries($javaLibraries)
   {
@@ -66,7 +87,12 @@ class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime extends \
     return $this->javaLibraries;
   }
   /**
-   * @param string[]
+   * Optional. Spark properties to provide configuration for use in sessions
+   * created for this environment. The properties to set on daemon config files.
+   * Property keys are specified in prefix:property format. The prefix must be
+   * "spark".
+   *
+   * @param string[] $properties
    */
   public function setProperties($properties)
   {
@@ -80,7 +106,11 @@ class GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime extends \
     return $this->properties;
   }
   /**
-   * @param string[]
+   * Optional. A list of python packages to be installed. Valid formats include
+   * Cloud Storage URI to a PIP installable library. For example, gs://bucket-
+   * name/my/path/to/lib.tar.gz
+   *
+   * @param string[] $pythonPackages
    */
   public function setPythonPackages($pythonPackages)
   {

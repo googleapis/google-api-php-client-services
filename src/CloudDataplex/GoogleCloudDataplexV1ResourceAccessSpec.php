@@ -21,20 +21,30 @@ class GoogleCloudDataplexV1ResourceAccessSpec extends \Google\Collection
 {
   protected $collection_key = 'writers';
   /**
+   * Optional. The set of principals to be granted owner role on the resource.
+   *
    * @var string[]
    */
   public $owners;
   /**
+   * Optional. The format of strings follows the pattern followed by IAM in the
+   * bindings. user:{email}, serviceAccount:{email} group:{email}. The set of
+   * principals to be granted reader role on the resource.
+   *
    * @var string[]
    */
   public $readers;
   /**
+   * Optional. The set of principals to be granted writer role on the resource.
+   *
    * @var string[]
    */
   public $writers;
 
   /**
-   * @param string[]
+   * Optional. The set of principals to be granted owner role on the resource.
+   *
+   * @param string[] $owners
    */
   public function setOwners($owners)
   {
@@ -48,7 +58,11 @@ class GoogleCloudDataplexV1ResourceAccessSpec extends \Google\Collection
     return $this->owners;
   }
   /**
-   * @param string[]
+   * Optional. The format of strings follows the pattern followed by IAM in the
+   * bindings. user:{email}, serviceAccount:{email} group:{email}. The set of
+   * principals to be granted reader role on the resource.
+   *
+   * @param string[] $readers
    */
   public function setReaders($readers)
   {
@@ -62,7 +76,9 @@ class GoogleCloudDataplexV1ResourceAccessSpec extends \Google\Collection
     return $this->readers;
   }
   /**
-   * @param string[]
+   * Optional. The set of principals to be granted writer role on the resource.
+   *
+   * @param string[] $writers
    */
   public function setWriters($writers)
   {

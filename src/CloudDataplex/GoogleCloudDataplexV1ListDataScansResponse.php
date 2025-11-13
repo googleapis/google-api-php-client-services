@@ -23,16 +23,23 @@ class GoogleCloudDataplexV1ListDataScansResponse extends \Google\Collection
   protected $dataScansType = GoogleCloudDataplexV1DataScan::class;
   protected $dataScansDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param GoogleCloudDataplexV1DataScan[]
+   * DataScans (BASIC view only) under the given parent location.
+   *
+   * @param GoogleCloudDataplexV1DataScan[] $dataScans
    */
   public function setDataScans($dataScans)
   {
@@ -46,7 +53,10 @@ class GoogleCloudDataplexV1ListDataScansResponse extends \Google\Collection
     return $this->dataScans;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListDataScansResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

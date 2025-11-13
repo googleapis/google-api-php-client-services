@@ -23,12 +23,17 @@ class GoogleCloudDataplexV1ListJobsResponse extends \Google\Collection
   protected $jobsType = GoogleCloudDataplexV1Job::class;
   protected $jobsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDataplexV1Job[]
+   * Jobs under a given task.
+   *
+   * @param GoogleCloudDataplexV1Job[] $jobs
    */
   public function setJobs($jobs)
   {
@@ -42,7 +47,10 @@ class GoogleCloudDataplexV1ListJobsResponse extends \Google\Collection
     return $this->jobs;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

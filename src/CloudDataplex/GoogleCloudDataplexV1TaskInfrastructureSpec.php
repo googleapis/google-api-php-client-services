@@ -27,7 +27,9 @@ class GoogleCloudDataplexV1TaskInfrastructureSpec extends \Google\Model
   protected $vpcNetworkDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources
+   * Compute resources needed for a Task when using Dataproc Serverless.
+   *
+   * @param GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources $batch
    */
   public function setBatch(GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources $batch)
   {
@@ -41,7 +43,9 @@ class GoogleCloudDataplexV1TaskInfrastructureSpec extends \Google\Model
     return $this->batch;
   }
   /**
-   * @param GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime
+   * Container Image Runtime Configuration.
+   *
+   * @param GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime $containerImage
    */
   public function setContainerImage(GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime $containerImage)
   {
@@ -55,7 +59,9 @@ class GoogleCloudDataplexV1TaskInfrastructureSpec extends \Google\Model
     return $this->containerImage;
   }
   /**
-   * @param GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork
+   * Vpc network.
+   *
+   * @param GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork $vpcNetwork
    */
   public function setVpcNetwork(GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork $vpcNetwork)
   {

@@ -21,28 +21,66 @@ class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope extends \Googl
 {
   protected $collection_key = 'projects';
   /**
+   * The aspect types that are in scope for the export job, specified as
+   * relative resource names in the format projects/{project_id_or_number}/locat
+   * ions/{location}/aspectTypes/{aspect_type_id}. Only aspects that belong to
+   * the specified aspect types are affected by the job.
+   *
    * @var string[]
    */
   public $aspectTypes;
   /**
+   * The entry groups whose metadata you want to export, in the format projects/
+   * {project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}
+   * . Only the entries in the specified entry groups are exported.The entry
+   * groups must be in the same location and the same VPC Service Controls
+   * perimeter as the job.If you set the job scope to be a list of entry groups,
+   * then set the organization-level export flag to false and don't provide a
+   * list of projects.
+   *
    * @var string[]
    */
   public $entryGroups;
   /**
+   * The entry types that are in scope for the export job, specified as relative
+   * resource names in the format projects/{project_id_or_number}/locations/{loc
+   * ation}/entryTypes/{entry_type_id}. Only entries that belong to the
+   * specified entry types are affected by the job.
+   *
    * @var string[]
    */
   public $entryTypes;
   /**
+   * Whether the metadata export job is an organization-level export job. If
+   * true, the job exports the entries from the same organization and VPC
+   * Service Controls perimeter as the job. The project that the job belongs to
+   * determines the VPC Service Controls perimeter. If you set the job scope to
+   * be at the organization level, then don't provide a list of projects or
+   * entry groups. If false, you must specify a list of projects or a list of
+   * entry groups whose entries you want to export.The default is false.
+   *
    * @var bool
    */
   public $organizationLevel;
   /**
+   * The projects whose metadata you want to export, in the format
+   * projects/{project_id_or_number}. Only the entries from the specified
+   * projects are exported.The projects must be in the same organization and VPC
+   * Service Controls perimeter as the job.If you set the job scope to be a list
+   * of projects, then set the organization-level export flag to false and don't
+   * provide a list of entry groups.
+   *
    * @var string[]
    */
   public $projects;
 
   /**
-   * @param string[]
+   * The aspect types that are in scope for the export job, specified as
+   * relative resource names in the format projects/{project_id_or_number}/locat
+   * ions/{location}/aspectTypes/{aspect_type_id}. Only aspects that belong to
+   * the specified aspect types are affected by the job.
+   *
+   * @param string[] $aspectTypes
    */
   public function setAspectTypes($aspectTypes)
   {
@@ -56,7 +94,15 @@ class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope extends \Googl
     return $this->aspectTypes;
   }
   /**
-   * @param string[]
+   * The entry groups whose metadata you want to export, in the format projects/
+   * {project_id_or_number}/locations/{location_id}/entryGroups/{entry_group_id}
+   * . Only the entries in the specified entry groups are exported.The entry
+   * groups must be in the same location and the same VPC Service Controls
+   * perimeter as the job.If you set the job scope to be a list of entry groups,
+   * then set the organization-level export flag to false and don't provide a
+   * list of projects.
+   *
+   * @param string[] $entryGroups
    */
   public function setEntryGroups($entryGroups)
   {
@@ -70,7 +116,12 @@ class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope extends \Googl
     return $this->entryGroups;
   }
   /**
-   * @param string[]
+   * The entry types that are in scope for the export job, specified as relative
+   * resource names in the format projects/{project_id_or_number}/locations/{loc
+   * ation}/entryTypes/{entry_type_id}. Only entries that belong to the
+   * specified entry types are affected by the job.
+   *
+   * @param string[] $entryTypes
    */
   public function setEntryTypes($entryTypes)
   {
@@ -84,7 +135,15 @@ class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope extends \Googl
     return $this->entryTypes;
   }
   /**
-   * @param bool
+   * Whether the metadata export job is an organization-level export job. If
+   * true, the job exports the entries from the same organization and VPC
+   * Service Controls perimeter as the job. The project that the job belongs to
+   * determines the VPC Service Controls perimeter. If you set the job scope to
+   * be at the organization level, then don't provide a list of projects or
+   * entry groups. If false, you must specify a list of projects or a list of
+   * entry groups whose entries you want to export.The default is false.
+   *
+   * @param bool $organizationLevel
    */
   public function setOrganizationLevel($organizationLevel)
   {
@@ -98,7 +157,14 @@ class GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope extends \Googl
     return $this->organizationLevel;
   }
   /**
-   * @param string[]
+   * The projects whose metadata you want to export, in the format
+   * projects/{project_id_or_number}. Only the entries from the specified
+   * projects are exported.The projects must be in the same organization and VPC
+   * Service Controls perimeter as the job.If you set the job scope to be a list
+   * of projects, then set the organization-level export flag to false and don't
+   * provide a list of entry groups.
+   *
+   * @param string[] $projects
    */
   public function setProjects($projects)
   {

@@ -20,24 +20,38 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1StorageFormatCsvOptions extends \Google\Model
 {
   /**
+   * Optional. The delimiter used to separate values. Defaults to ','.
+   *
    * @var string
    */
   public $delimiter;
   /**
+   * Optional. The character encoding of the data. Accepts "US-ASCII", "UTF-8",
+   * and "ISO-8859-1". Defaults to UTF-8 if unspecified.
+   *
    * @var string
    */
   public $encoding;
   /**
+   * Optional. The number of rows to interpret as header rows that should be
+   * skipped when reading data rows. Defaults to 0.
+   *
    * @var int
    */
   public $headerRows;
   /**
+   * Optional. The character used to quote column values. Accepts '"' (double
+   * quotation mark) or ''' (single quotation mark). Defaults to '"' (double
+   * quotation mark) if unspecified.
+   *
    * @var string
    */
   public $quote;
 
   /**
-   * @param string
+   * Optional. The delimiter used to separate values. Defaults to ','.
+   *
+   * @param string $delimiter
    */
   public function setDelimiter($delimiter)
   {
@@ -51,7 +65,10 @@ class GoogleCloudDataplexV1StorageFormatCsvOptions extends \Google\Model
     return $this->delimiter;
   }
   /**
-   * @param string
+   * Optional. The character encoding of the data. Accepts "US-ASCII", "UTF-8",
+   * and "ISO-8859-1". Defaults to UTF-8 if unspecified.
+   *
+   * @param string $encoding
    */
   public function setEncoding($encoding)
   {
@@ -65,7 +82,10 @@ class GoogleCloudDataplexV1StorageFormatCsvOptions extends \Google\Model
     return $this->encoding;
   }
   /**
-   * @param int
+   * Optional. The number of rows to interpret as header rows that should be
+   * skipped when reading data rows. Defaults to 0.
+   *
+   * @param int $headerRows
    */
   public function setHeaderRows($headerRows)
   {
@@ -79,7 +99,11 @@ class GoogleCloudDataplexV1StorageFormatCsvOptions extends \Google\Model
     return $this->headerRows;
   }
   /**
-   * @param string
+   * Optional. The character used to quote column values. Accepts '"' (double
+   * quotation mark) or ''' (single quotation mark). Defaults to '"' (double
+   * quotation mark) if unspecified.
+   *
+   * @param string $quote
    */
   public function setQuote($quote)
   {

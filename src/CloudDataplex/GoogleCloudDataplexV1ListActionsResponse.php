@@ -23,12 +23,17 @@ class GoogleCloudDataplexV1ListActionsResponse extends \Google\Collection
   protected $actionsType = GoogleCloudDataplexV1Action::class;
   protected $actionsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDataplexV1Action[]
+   * Actions under the given parent lake/zone/asset.
+   *
+   * @param GoogleCloudDataplexV1Action[] $actions
    */
   public function setActions($actions)
   {
@@ -42,7 +47,10 @@ class GoogleCloudDataplexV1ListActionsResponse extends \Google\Collection
     return $this->actions;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

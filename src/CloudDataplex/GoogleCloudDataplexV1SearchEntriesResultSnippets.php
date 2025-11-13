@@ -23,13 +23,17 @@ class GoogleCloudDataplexV1SearchEntriesResultSnippets extends \Google\Model
   protected $dataplexEntryDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1Entry
+   * Entry
+   *
+   * @deprecated
+   * @param GoogleCloudDataplexV1Entry $dataplexEntry
    */
   public function setDataplexEntry(GoogleCloudDataplexV1Entry $dataplexEntry)
   {
     $this->dataplexEntry = $dataplexEntry;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDataplexV1Entry
    */
   public function getDataplexEntry()

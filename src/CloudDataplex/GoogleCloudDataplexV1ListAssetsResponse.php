@@ -23,12 +23,17 @@ class GoogleCloudDataplexV1ListAssetsResponse extends \Google\Collection
   protected $assetsType = GoogleCloudDataplexV1Asset::class;
   protected $assetsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDataplexV1Asset[]
+   * Asset under the given parent zone.
+   *
+   * @param GoogleCloudDataplexV1Asset[] $assets
    */
   public function setAssets($assets)
   {
@@ -42,7 +47,10 @@ class GoogleCloudDataplexV1ListAssetsResponse extends \Google\Collection
     return $this->assets;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

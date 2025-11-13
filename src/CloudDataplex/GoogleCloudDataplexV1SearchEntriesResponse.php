@@ -21,22 +21,34 @@ class GoogleCloudDataplexV1SearchEntriesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $resultsType = GoogleCloudDataplexV1SearchEntriesResult::class;
   protected $resultsDataType = 'array';
   /**
+   * The estimated total number of matching entries. This number isn't
+   * guaranteed to be accurate.
+   *
    * @var int
    */
   public $totalSize;
   /**
+   * Locations that the service couldn't reach. Search results don't include
+   * data from these locations.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -50,7 +62,9 @@ class GoogleCloudDataplexV1SearchEntriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDataplexV1SearchEntriesResult[]
+   * The results matching the search query.
+   *
+   * @param GoogleCloudDataplexV1SearchEntriesResult[] $results
    */
   public function setResults($results)
   {
@@ -64,7 +78,10 @@ class GoogleCloudDataplexV1SearchEntriesResponse extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param int
+   * The estimated total number of matching entries. This number isn't
+   * guaranteed to be accurate.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {
@@ -78,7 +95,10 @@ class GoogleCloudDataplexV1SearchEntriesResponse extends \Google\Collection
     return $this->totalSize;
   }
   /**
-   * @param string[]
+   * Locations that the service couldn't reach. Search results don't include
+   * data from these locations.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -23,16 +23,23 @@ class GoogleCloudDataplexV1ListDataAttributeBindingsResponse extends \Google\Col
   protected $dataAttributeBindingsType = GoogleCloudDataplexV1DataAttributeBinding::class;
   protected $dataAttributeBindingsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param GoogleCloudDataplexV1DataAttributeBinding[]
+   * DataAttributeBindings under the given parent Location.
+   *
+   * @param GoogleCloudDataplexV1DataAttributeBinding[] $dataAttributeBindings
    */
   public function setDataAttributeBindings($dataAttributeBindings)
   {
@@ -46,7 +53,10 @@ class GoogleCloudDataplexV1ListDataAttributeBindingsResponse extends \Google\Col
     return $this->dataAttributeBindings;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListDataAttributeBindingsResponse extends \Google\Col
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

@@ -20,20 +20,46 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1EntryLinkEntryReference extends \Google\Model
 {
   /**
+   * Unspecified reference type. Implies that the Entry is referenced in a non-
+   * directional Entry Link.
+   */
+  public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * The Entry is referenced as the source of the directional Entry Link.
+   */
+  public const TYPE_SOURCE = 'SOURCE';
+  /**
+   * The Entry is referenced as the target of the directional Entry Link.
+   */
+  public const TYPE_TARGET = 'TARGET';
+  /**
+   * Required. Immutable. The relative resource name of the referenced Entry, of
+   * the form: projects/{project_id_or_number}/locations/{location_id}/entryGrou
+   * ps/{entry_group_id}/entries/{entry_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Immutable. The path in the Entry that is referenced in the Entry Link.
+   * Empty path denotes that the Entry itself is referenced in the Entry Link.
+   *
    * @var string
    */
   public $path;
   /**
+   * Required. Immutable. The reference type of the Entry.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Required. Immutable. The relative resource name of the referenced Entry, of
+   * the form: projects/{project_id_or_number}/locations/{location_id}/entryGrou
+   * ps/{entry_group_id}/entries/{entry_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +73,10 @@ class GoogleCloudDataplexV1EntryLinkEntryReference extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Immutable. The path in the Entry that is referenced in the Entry Link.
+   * Empty path denotes that the Entry itself is referenced in the Entry Link.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -61,14 +90,18 @@ class GoogleCloudDataplexV1EntryLinkEntryReference extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Required. Immutable. The reference type of the Entry.
+   *
+   * Accepted values: UNSPECIFIED, SOURCE, TARGET
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

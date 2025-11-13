@@ -21,20 +21,30 @@ class GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork extends \Google\Coll
 {
   protected $collection_key = 'networkTags';
   /**
+   * Optional. The Cloud VPC network in which the job is run. By default, the
+   * Cloud VPC network named Default within the project is used.
+   *
    * @var string
    */
   public $network;
   /**
+   * Optional. List of network tags to apply to the job.
+   *
    * @var string[]
    */
   public $networkTags;
   /**
+   * Optional. The Cloud VPC sub-network in which the job is run.
+   *
    * @var string
    */
   public $subNetwork;
 
   /**
-   * @param string
+   * Optional. The Cloud VPC network in which the job is run. By default, the
+   * Cloud VPC network named Default within the project is used.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -48,7 +58,9 @@ class GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork extends \Google\Coll
     return $this->network;
   }
   /**
-   * @param string[]
+   * Optional. List of network tags to apply to the job.
+   *
+   * @param string[] $networkTags
    */
   public function setNetworkTags($networkTags)
   {
@@ -62,7 +74,9 @@ class GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork extends \Google\Coll
     return $this->networkTags;
   }
   /**
-   * @param string
+   * Optional. The Cloud VPC sub-network in which the job is run.
+   *
+   * @param string $subNetwork
    */
   public function setSubNetwork($subNetwork)
   {

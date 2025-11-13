@@ -20,12 +20,22 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1LakeMetastore extends \Google\Model
 {
   /**
+   * Optional. A relative reference to the Dataproc Metastore
+   * (https://cloud.google.com/dataproc-metastore/docs) service associated with
+   * the lake:
+   * projects/{project_id}/locations/{location_id}/services/{service_id}
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * Optional. A relative reference to the Dataproc Metastore
+   * (https://cloud.google.com/dataproc-metastore/docs) service associated with
+   * the lake:
+   * projects/{project_id}/locations/{location_id}/services/{service_id}
+   *
+   * @param string $service
    */
   public function setService($service)
   {

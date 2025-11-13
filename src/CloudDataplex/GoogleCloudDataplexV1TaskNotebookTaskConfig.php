@@ -21,22 +21,37 @@ class GoogleCloudDataplexV1TaskNotebookTaskConfig extends \Google\Collection
 {
   protected $collection_key = 'fileUris';
   /**
+   * Optional. Cloud Storage URIs of archives to be extracted into the working
+   * directory of each executor. Supported file types: .jar, .tar, .tar.gz,
+   * .tgz, and .zip.
+   *
    * @var string[]
    */
   public $archiveUris;
   /**
+   * Optional. Cloud Storage URIs of files to be placed in the working directory
+   * of each executor.
+   *
    * @var string[]
    */
   public $fileUris;
   protected $infrastructureSpecType = GoogleCloudDataplexV1TaskInfrastructureSpec::class;
   protected $infrastructureSpecDataType = '';
   /**
+   * Required. Path to input notebook. This can be the Cloud Storage URI of the
+   * notebook file or the path to a Notebook Content. The execution args are
+   * accessible as environment variables (TASK_key=value).
+   *
    * @var string
    */
   public $notebook;
 
   /**
-   * @param string[]
+   * Optional. Cloud Storage URIs of archives to be extracted into the working
+   * directory of each executor. Supported file types: .jar, .tar, .tar.gz,
+   * .tgz, and .zip.
+   *
+   * @param string[] $archiveUris
    */
   public function setArchiveUris($archiveUris)
   {
@@ -50,7 +65,10 @@ class GoogleCloudDataplexV1TaskNotebookTaskConfig extends \Google\Collection
     return $this->archiveUris;
   }
   /**
-   * @param string[]
+   * Optional. Cloud Storage URIs of files to be placed in the working directory
+   * of each executor.
+   *
+   * @param string[] $fileUris
    */
   public function setFileUris($fileUris)
   {
@@ -64,7 +82,9 @@ class GoogleCloudDataplexV1TaskNotebookTaskConfig extends \Google\Collection
     return $this->fileUris;
   }
   /**
-   * @param GoogleCloudDataplexV1TaskInfrastructureSpec
+   * Optional. Infrastructure specification for the execution.
+   *
+   * @param GoogleCloudDataplexV1TaskInfrastructureSpec $infrastructureSpec
    */
   public function setInfrastructureSpec(GoogleCloudDataplexV1TaskInfrastructureSpec $infrastructureSpec)
   {
@@ -78,7 +98,11 @@ class GoogleCloudDataplexV1TaskNotebookTaskConfig extends \Google\Collection
     return $this->infrastructureSpec;
   }
   /**
-   * @param string
+   * Required. Path to input notebook. This can be the Cloud Storage URI of the
+   * notebook file or the path to a Notebook Content. The execution args are
+   * accessible as environment variables (TASK_key=value).
+   *
+   * @param string $notebook
    */
   public function setNotebook($notebook)
   {

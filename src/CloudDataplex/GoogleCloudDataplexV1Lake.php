@@ -19,21 +19,49 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1Lake extends \Google\Model
 {
+  /**
+   * State is not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Resource is active, i.e., ready to use.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Resource is under creation.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Resource is under deletion.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Resource is active but has unresolved actions.
+   */
+  public const STATE_ACTION_REQUIRED = 'ACTION_REQUIRED';
   protected $assetStatusType = GoogleCloudDataplexV1AssetStatus::class;
   protected $assetStatusDataType = '';
   /**
+   * Output only. The time when the lake was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Description of the lake.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. User friendly display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. User-defined labels for the lake.
+   *
    * @var string[]
    */
   public $labels;
@@ -42,28 +70,44 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
   protected $metastoreStatusType = GoogleCloudDataplexV1LakeMetastoreStatus::class;
   protected $metastoreStatusDataType = '';
   /**
+   * Output only. The relative resource name of the lake, of the form:
+   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Service account associated with this lake. This service
+   * account must be authorized to access or operate on resources managed by the
+   * lake.
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * Output only. Current state of the lake.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. System generated globally unique ID for the lake. This ID will
+   * be different if the lake is deleted and re-created with the same name.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The time when the lake was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudDataplexV1AssetStatus
+   * Output only. Aggregated status of the underlying assets of the lake.
+   *
+   * @param GoogleCloudDataplexV1AssetStatus $assetStatus
    */
   public function setAssetStatus(GoogleCloudDataplexV1AssetStatus $assetStatus)
   {
@@ -77,7 +121,9 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->assetStatus;
   }
   /**
-   * @param string
+   * Output only. The time when the lake was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -91,7 +137,9 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Description of the lake.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -105,7 +153,9 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. User friendly display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -119,7 +169,9 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Optional. User-defined labels for the lake.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -133,7 +185,10 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param GoogleCloudDataplexV1LakeMetastore
+   * Optional. Settings to manage lake and Dataproc Metastore service instance
+   * association.
+   *
+   * @param GoogleCloudDataplexV1LakeMetastore $metastore
    */
   public function setMetastore(GoogleCloudDataplexV1LakeMetastore $metastore)
   {
@@ -147,7 +202,9 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->metastore;
   }
   /**
-   * @param GoogleCloudDataplexV1LakeMetastoreStatus
+   * Output only. Metastore status of the lake.
+   *
+   * @param GoogleCloudDataplexV1LakeMetastoreStatus $metastoreStatus
    */
   public function setMetastoreStatus(GoogleCloudDataplexV1LakeMetastoreStatus $metastoreStatus)
   {
@@ -161,7 +218,10 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->metastoreStatus;
   }
   /**
-   * @param string
+   * Output only. The relative resource name of the lake, of the form:
+   * projects/{project_number}/locations/{location_id}/lakes/{lake_id}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -175,7 +235,11 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Service account associated with this lake. This service
+   * account must be authorized to access or operate on resources managed by the
+   * lake.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -189,21 +253,29 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * Output only. Current state of the lake.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, DELETING,
+   * ACTION_REQUIRED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. System generated globally unique ID for the lake. This ID will
+   * be different if the lake is deleted and re-created with the same name.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -217,7 +289,9 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The time when the lake was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

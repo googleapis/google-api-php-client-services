@@ -20,20 +20,29 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ScannedDataIncrementalField extends \Google\Model
 {
   /**
+   * Output only. Value that marks the end of the range.
+   *
    * @var string
    */
   public $end;
   /**
+   * Output only. The field that contains values which monotonically increases
+   * over time (e.g. a timestamp column).
+   *
    * @var string
    */
   public $field;
   /**
+   * Output only. Value that marks the start of the range.
+   *
    * @var string
    */
   public $start;
 
   /**
-   * @param string
+   * Output only. Value that marks the end of the range.
+   *
+   * @param string $end
    */
   public function setEnd($end)
   {
@@ -47,7 +56,10 @@ class GoogleCloudDataplexV1ScannedDataIncrementalField extends \Google\Model
     return $this->end;
   }
   /**
-   * @param string
+   * Output only. The field that contains values which monotonically increases
+   * over time (e.g. a timestamp column).
+   *
+   * @param string $field
    */
   public function setField($field)
   {
@@ -61,7 +73,9 @@ class GoogleCloudDataplexV1ScannedDataIncrementalField extends \Google\Model
     return $this->field;
   }
   /**
-   * @param string
+   * Output only. Value that marks the start of the range.
+   *
+   * @param string $start
    */
   public function setStart($start)
   {

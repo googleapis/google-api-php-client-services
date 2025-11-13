@@ -20,34 +20,59 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1EntryLinkEvent extends \Google\Model
 {
   /**
+   * An unspecified event type.
+   */
+  public const EVENT_TYPE_EVENT_TYPE_UNSPECIFIED = 'EVENT_TYPE_UNSPECIFIED';
+  /**
+   * EntryLink create event.
+   */
+  public const EVENT_TYPE_ENTRY_LINK_CREATE = 'ENTRY_LINK_CREATE';
+  /**
+   * EntryLink delete event.
+   */
+  public const EVENT_TYPE_ENTRY_LINK_DELETE = 'ENTRY_LINK_DELETE';
+  /**
+   * The type of the event.
+   *
    * @var string
    */
   public $eventType;
   /**
+   * The log message.
+   *
    * @var string
    */
   public $message;
   /**
+   * Name of the resource.
+   *
    * @var string
    */
   public $resource;
 
   /**
-   * @param string
+   * The type of the event.
+   *
+   * Accepted values: EVENT_TYPE_UNSPECIFIED, ENTRY_LINK_CREATE,
+   * ENTRY_LINK_DELETE
+   *
+   * @param self::EVENT_TYPE_* $eventType
    */
   public function setEventType($eventType)
   {
     $this->eventType = $eventType;
   }
   /**
-   * @return string
+   * @return self::EVENT_TYPE_*
    */
   public function getEventType()
   {
     return $this->eventType;
   }
   /**
-   * @param string
+   * The log message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -61,7 +86,9 @@ class GoogleCloudDataplexV1EntryLinkEvent extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Name of the resource.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {

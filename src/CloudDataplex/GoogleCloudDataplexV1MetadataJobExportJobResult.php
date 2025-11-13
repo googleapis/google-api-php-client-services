@@ -20,16 +20,22 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1MetadataJobExportJobResult extends \Google\Model
 {
   /**
+   * Output only. The error message if the metadata export job failed.
+   *
    * @var string
    */
   public $errorMessage;
   /**
+   * Output only. The number of entries that were exported.
+   *
    * @var string
    */
   public $exportedEntries;
 
   /**
-   * @param string
+   * Output only. The error message if the metadata export job failed.
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDataplexV1MetadataJobExportJobResult extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * @param string
+   * Output only. The number of entries that were exported.
+   *
+   * @param string $exportedEntries
    */
   public function setExportedEntries($exportedEntries)
   {

@@ -20,38 +20,77 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
 {
   /**
+   * State is not specified.
+   */
+  public const ENCRYPTION_STATE_ENCRYPTION_STATE_UNSPECIFIED = 'ENCRYPTION_STATE_UNSPECIFIED';
+  /**
+   * The encryption state of the database when the EncryptionConfig is created
+   * or updated. If the encryption fails, it is retried indefinitely and the
+   * state is shown as ENCRYPTING.
+   */
+  public const ENCRYPTION_STATE_ENCRYPTING = 'ENCRYPTING';
+  /**
+   * The encryption of data has completed successfully.
+   */
+  public const ENCRYPTION_STATE_COMPLETED = 'COMPLETED';
+  /**
+   * The encryption of data has failed. The state is set to FAILED when the
+   * encryption fails due to reasons like permission issues, invalid key etc.
+   */
+  public const ENCRYPTION_STATE_FAILED = 'FAILED';
+  /**
+   * Output only. The time when the Encryption configuration was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Represent the state of CMEK opt-in for metastore.
+   *
    * @var bool
    */
   public $enableMetastoreEncryption;
   /**
+   * Output only. The state of encryption of the databases.
+   *
    * @var string
    */
   public $encryptionState;
   /**
+   * Etag of the EncryptionConfig. This is a strong etag.
+   *
    * @var string
    */
   public $etag;
   protected $failureDetailsType = GoogleCloudDataplexV1EncryptionConfigFailureDetails::class;
   protected $failureDetailsDataType = '';
   /**
+   * Optional. If a key is chosen, it means that the customer is using CMEK. If
+   * a key is not chosen, it means that the customer is using Google managed
+   * encryption.
+   *
    * @var string
    */
   public $key;
   /**
+   * Identifier. The resource name of the EncryptionConfig. Format: organization
+   * s/{organization}/locations/{location}/encryptionConfigs/{encryption_config}
+   * Global location is not supported.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The time when the Encryption configuration was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time when the Encryption configuration was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -65,7 +104,9 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param bool
+   * Optional. Represent the state of CMEK opt-in for metastore.
+   *
+   * @param bool $enableMetastoreEncryption
    */
   public function setEnableMetastoreEncryption($enableMetastoreEncryption)
   {
@@ -79,21 +120,28 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
     return $this->enableMetastoreEncryption;
   }
   /**
-   * @param string
+   * Output only. The state of encryption of the databases.
+   *
+   * Accepted values: ENCRYPTION_STATE_UNSPECIFIED, ENCRYPTING, COMPLETED,
+   * FAILED
+   *
+   * @param self::ENCRYPTION_STATE_* $encryptionState
    */
   public function setEncryptionState($encryptionState)
   {
     $this->encryptionState = $encryptionState;
   }
   /**
-   * @return string
+   * @return self::ENCRYPTION_STATE_*
    */
   public function getEncryptionState()
   {
     return $this->encryptionState;
   }
   /**
-   * @param string
+   * Etag of the EncryptionConfig. This is a strong etag.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -107,7 +155,9 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param GoogleCloudDataplexV1EncryptionConfigFailureDetails
+   * Output only. Details of the failure if anything related to Cmek db fails.
+   *
+   * @param GoogleCloudDataplexV1EncryptionConfigFailureDetails $failureDetails
    */
   public function setFailureDetails(GoogleCloudDataplexV1EncryptionConfigFailureDetails $failureDetails)
   {
@@ -121,7 +171,11 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
     return $this->failureDetails;
   }
   /**
-   * @param string
+   * Optional. If a key is chosen, it means that the customer is using CMEK. If
+   * a key is not chosen, it means that the customer is using Google managed
+   * encryption.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -135,7 +189,11 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the EncryptionConfig. Format: organization
+   * s/{organization}/locations/{location}/encryptionConfigs/{encryption_config}
+   * Global location is not supported.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -149,7 +207,9 @@ class GoogleCloudDataplexV1EncryptionConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The time when the Encryption configuration was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

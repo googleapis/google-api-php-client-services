@@ -20,16 +20,22 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1EntrySourceAncestor extends \Google\Model
 {
   /**
+   * Optional. The name of the ancestor resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The type of the ancestor resource.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Optional. The name of the ancestor resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDataplexV1EntrySourceAncestor extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The type of the ancestor resource.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

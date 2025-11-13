@@ -20,12 +20,20 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1EntryTypeAuthorization extends \Google\Model
 {
   /**
+   * Immutable. The IAM permission grantable on the Entry Group to allow access
+   * to instantiate Entries of Dataplex Universal Catalog owned Entry Types,
+   * only settable for Dataplex Universal Catalog owned Types.
+   *
    * @var string
    */
   public $alternateUsePermission;
 
   /**
-   * @param string
+   * Immutable. The IAM permission grantable on the Entry Group to allow access
+   * to instantiate Entries of Dataplex Universal Catalog owned Entry Types,
+   * only settable for Dataplex Universal Catalog owned Types.
+   *
+   * @param string $alternateUsePermission
    */
   public function setAlternateUsePermission($alternateUsePermission)
   {

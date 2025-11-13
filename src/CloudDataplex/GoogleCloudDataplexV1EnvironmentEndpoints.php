@@ -20,16 +20,22 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1EnvironmentEndpoints extends \Google\Model
 {
   /**
+   * Output only. URI to serve notebook APIs
+   *
    * @var string
    */
   public $notebooks;
   /**
+   * Output only. URI to serve SQL APIs
+   *
    * @var string
    */
   public $sql;
 
   /**
-   * @param string
+   * Output only. URI to serve notebook APIs
+   *
+   * @param string $notebooks
    */
   public function setNotebooks($notebooks)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDataplexV1EnvironmentEndpoints extends \Google\Model
     return $this->notebooks;
   }
   /**
-   * @param string
+   * Output only. URI to serve SQL APIs
+   *
+   * @param string $sql
    */
   public function setSql($sql)
   {

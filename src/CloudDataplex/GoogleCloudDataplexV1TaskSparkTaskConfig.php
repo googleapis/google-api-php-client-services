@@ -21,38 +21,69 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
 {
   protected $collection_key = 'fileUris';
   /**
+   * Optional. Cloud Storage URIs of archives to be extracted into the working
+   * directory of each executor. Supported file types: .jar, .tar, .tar.gz,
+   * .tgz, and .zip.
+   *
    * @var string[]
    */
   public $archiveUris;
   /**
+   * Optional. Cloud Storage URIs of files to be placed in the working directory
+   * of each executor.
+   *
    * @var string[]
    */
   public $fileUris;
   protected $infrastructureSpecType = GoogleCloudDataplexV1TaskInfrastructureSpec::class;
   protected $infrastructureSpecDataType = '';
   /**
+   * The name of the driver's main class. The jar file that contains the class
+   * must be in the default CLASSPATH or specified in jar_file_uris. The
+   * execution args are passed in as a sequence of named process arguments
+   * (--key=value).
+   *
    * @var string
    */
   public $mainClass;
   /**
+   * The Cloud Storage URI of the jar file that contains the main class. The
+   * execution args are passed in as a sequence of named process arguments
+   * (--key=value).
+   *
    * @var string
    */
   public $mainJarFileUri;
   /**
+   * The Gcloud Storage URI of the main Python file to use as the driver. Must
+   * be a .py file. The execution args are passed in as a sequence of named
+   * process arguments (--key=value).
+   *
    * @var string
    */
   public $pythonScriptFile;
   /**
+   * The query text. The execution args are used to declare a set of script
+   * variables (set key="value";).
+   *
    * @var string
    */
   public $sqlScript;
   /**
+   * A reference to a query file. This should be the Cloud Storage URI of the
+   * query file. The execution args are used to declare a set of script
+   * variables (set key="value";).
+   *
    * @var string
    */
   public $sqlScriptFile;
 
   /**
-   * @param string[]
+   * Optional. Cloud Storage URIs of archives to be extracted into the working
+   * directory of each executor. Supported file types: .jar, .tar, .tar.gz,
+   * .tgz, and .zip.
+   *
+   * @param string[] $archiveUris
    */
   public function setArchiveUris($archiveUris)
   {
@@ -66,7 +97,10 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
     return $this->archiveUris;
   }
   /**
-   * @param string[]
+   * Optional. Cloud Storage URIs of files to be placed in the working directory
+   * of each executor.
+   *
+   * @param string[] $fileUris
    */
   public function setFileUris($fileUris)
   {
@@ -80,7 +114,9 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
     return $this->fileUris;
   }
   /**
-   * @param GoogleCloudDataplexV1TaskInfrastructureSpec
+   * Optional. Infrastructure specification for the execution.
+   *
+   * @param GoogleCloudDataplexV1TaskInfrastructureSpec $infrastructureSpec
    */
   public function setInfrastructureSpec(GoogleCloudDataplexV1TaskInfrastructureSpec $infrastructureSpec)
   {
@@ -94,7 +130,12 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
     return $this->infrastructureSpec;
   }
   /**
-   * @param string
+   * The name of the driver's main class. The jar file that contains the class
+   * must be in the default CLASSPATH or specified in jar_file_uris. The
+   * execution args are passed in as a sequence of named process arguments
+   * (--key=value).
+   *
+   * @param string $mainClass
    */
   public function setMainClass($mainClass)
   {
@@ -108,7 +149,11 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
     return $this->mainClass;
   }
   /**
-   * @param string
+   * The Cloud Storage URI of the jar file that contains the main class. The
+   * execution args are passed in as a sequence of named process arguments
+   * (--key=value).
+   *
+   * @param string $mainJarFileUri
    */
   public function setMainJarFileUri($mainJarFileUri)
   {
@@ -122,7 +167,11 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
     return $this->mainJarFileUri;
   }
   /**
-   * @param string
+   * The Gcloud Storage URI of the main Python file to use as the driver. Must
+   * be a .py file. The execution args are passed in as a sequence of named
+   * process arguments (--key=value).
+   *
+   * @param string $pythonScriptFile
    */
   public function setPythonScriptFile($pythonScriptFile)
   {
@@ -136,7 +185,10 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
     return $this->pythonScriptFile;
   }
   /**
-   * @param string
+   * The query text. The execution args are used to declare a set of script
+   * variables (set key="value";).
+   *
+   * @param string $sqlScript
    */
   public function setSqlScript($sqlScript)
   {
@@ -150,7 +202,11 @@ class GoogleCloudDataplexV1TaskSparkTaskConfig extends \Google\Collection
     return $this->sqlScript;
   }
   /**
-   * @param string
+   * A reference to a query file. This should be the Cloud Storage URI of the
+   * query file. The execution args are used to declare a set of script
+   * variables (set key="value";).
+   *
+   * @param string $sqlScriptFile
    */
   public function setSqlScriptFile($sqlScriptFile)
   {

@@ -21,18 +21,26 @@ class GoogleCloudDataplexV1ListTasksResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachableLocations';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $tasksType = GoogleCloudDataplexV1Task::class;
   protected $tasksDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class GoogleCloudDataplexV1ListTasksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDataplexV1Task[]
+   * Tasks under the given parent lake.
+   *
+   * @param GoogleCloudDataplexV1Task[] $tasks
    */
   public function setTasks($tasks)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListTasksResponse extends \Google\Collection
     return $this->tasks;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

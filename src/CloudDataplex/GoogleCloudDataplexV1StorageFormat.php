@@ -20,12 +20,82 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1StorageFormat extends \Google\Model
 {
   /**
+   * CompressionFormat unspecified. Implies uncompressed data.
+   */
+  public const COMPRESSION_FORMAT_COMPRESSION_FORMAT_UNSPECIFIED = 'COMPRESSION_FORMAT_UNSPECIFIED';
+  /**
+   * GZip compressed set of files.
+   */
+  public const COMPRESSION_FORMAT_GZIP = 'GZIP';
+  /**
+   * BZip2 compressed set of files.
+   */
+  public const COMPRESSION_FORMAT_BZIP2 = 'BZIP2';
+  /**
+   * Format unspecified.
+   */
+  public const FORMAT_FORMAT_UNSPECIFIED = 'FORMAT_UNSPECIFIED';
+  /**
+   * Parquet-formatted structured data.
+   */
+  public const FORMAT_PARQUET = 'PARQUET';
+  /**
+   * Avro-formatted structured data.
+   */
+  public const FORMAT_AVRO = 'AVRO';
+  /**
+   * Orc-formatted structured data.
+   */
+  public const FORMAT_ORC = 'ORC';
+  /**
+   * Csv-formatted semi-structured data.
+   */
+  public const FORMAT_CSV = 'CSV';
+  /**
+   * Json-formatted semi-structured data.
+   */
+  public const FORMAT_JSON = 'JSON';
+  /**
+   * Image data formats (such as jpg and png).
+   */
+  public const FORMAT_IMAGE = 'IMAGE';
+  /**
+   * Audio data formats (such as mp3, and wav).
+   */
+  public const FORMAT_AUDIO = 'AUDIO';
+  /**
+   * Video data formats (such as mp4 and mpg).
+   */
+  public const FORMAT_VIDEO = 'VIDEO';
+  /**
+   * Textual data formats (such as txt and xml).
+   */
+  public const FORMAT_TEXT = 'TEXT';
+  /**
+   * TensorFlow record format.
+   */
+  public const FORMAT_TFRECORD = 'TFRECORD';
+  /**
+   * Data that doesn't match a specific format.
+   */
+  public const FORMAT_OTHER = 'OTHER';
+  /**
+   * Data of an unknown format.
+   */
+  public const FORMAT_UNKNOWN = 'UNKNOWN';
+  /**
+   * Optional. The compression type associated with the stored data. If
+   * unspecified, the data is uncompressed.
+   *
    * @var string
    */
   public $compressionFormat;
   protected $csvType = GoogleCloudDataplexV1StorageFormatCsvOptions::class;
   protected $csvDataType = '';
   /**
+   * Output only. The data format associated with the stored data, which
+   * represents content type values. The value is inferred from mime type.
+   *
    * @var string
    */
   public $format;
@@ -34,26 +104,40 @@ class GoogleCloudDataplexV1StorageFormat extends \Google\Model
   protected $jsonType = GoogleCloudDataplexV1StorageFormatJsonOptions::class;
   protected $jsonDataType = '';
   /**
+   * Required. The mime type descriptor for the data. Must match the pattern
+   * {type}/{subtype}. Supported values: application/x-parquet
+   * application/x-avro application/x-orc application/x-tfrecord
+   * application/x-parquet+iceberg application/x-avro+iceberg
+   * application/x-orc+iceberg application/json application/{subtypes} text/csv
+   * text/ image/{image subtype} video/{video subtype} audio/{audio subtype}
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * Optional. The compression type associated with the stored data. If
+   * unspecified, the data is uncompressed.
+   *
+   * Accepted values: COMPRESSION_FORMAT_UNSPECIFIED, GZIP, BZIP2
+   *
+   * @param self::COMPRESSION_FORMAT_* $compressionFormat
    */
   public function setCompressionFormat($compressionFormat)
   {
     $this->compressionFormat = $compressionFormat;
   }
   /**
-   * @return string
+   * @return self::COMPRESSION_FORMAT_*
    */
   public function getCompressionFormat()
   {
     return $this->compressionFormat;
   }
   /**
-   * @param GoogleCloudDataplexV1StorageFormatCsvOptions
+   * Optional. Additional information about CSV formatted data.
+   *
+   * @param GoogleCloudDataplexV1StorageFormatCsvOptions $csv
    */
   public function setCsv(GoogleCloudDataplexV1StorageFormatCsvOptions $csv)
   {
@@ -67,21 +151,29 @@ class GoogleCloudDataplexV1StorageFormat extends \Google\Model
     return $this->csv;
   }
   /**
-   * @param string
+   * Output only. The data format associated with the stored data, which
+   * represents content type values. The value is inferred from mime type.
+   *
+   * Accepted values: FORMAT_UNSPECIFIED, PARQUET, AVRO, ORC, CSV, JSON, IMAGE,
+   * AUDIO, VIDEO, TEXT, TFRECORD, OTHER, UNKNOWN
+   *
+   * @param self::FORMAT_* $format
    */
   public function setFormat($format)
   {
     $this->format = $format;
   }
   /**
-   * @return string
+   * @return self::FORMAT_*
    */
   public function getFormat()
   {
     return $this->format;
   }
   /**
-   * @param GoogleCloudDataplexV1StorageFormatIcebergOptions
+   * Optional. Additional information about iceberg tables.
+   *
+   * @param GoogleCloudDataplexV1StorageFormatIcebergOptions $iceberg
    */
   public function setIceberg(GoogleCloudDataplexV1StorageFormatIcebergOptions $iceberg)
   {
@@ -95,7 +187,9 @@ class GoogleCloudDataplexV1StorageFormat extends \Google\Model
     return $this->iceberg;
   }
   /**
-   * @param GoogleCloudDataplexV1StorageFormatJsonOptions
+   * Optional. Additional information about CSV formatted data.
+   *
+   * @param GoogleCloudDataplexV1StorageFormatJsonOptions $json
    */
   public function setJson(GoogleCloudDataplexV1StorageFormatJsonOptions $json)
   {
@@ -109,7 +203,14 @@ class GoogleCloudDataplexV1StorageFormat extends \Google\Model
     return $this->json;
   }
   /**
-   * @param string
+   * Required. The mime type descriptor for the data. Must match the pattern
+   * {type}/{subtype}. Supported values: application/x-parquet
+   * application/x-avro application/x-orc application/x-tfrecord
+   * application/x-parquet+iceberg application/x-avro+iceberg
+   * application/x-orc+iceberg application/json application/{subtypes} text/csv
+   * text/ image/{image subtype} video/{video subtype} audio/{audio subtype}
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

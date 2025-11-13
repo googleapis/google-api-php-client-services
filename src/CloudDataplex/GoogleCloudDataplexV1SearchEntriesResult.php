@@ -22,6 +22,9 @@ class GoogleCloudDataplexV1SearchEntriesResult extends \Google\Model
   protected $dataplexEntryType = GoogleCloudDataplexV1Entry::class;
   protected $dataplexEntryDataType = '';
   /**
+   * Linked resource name.
+   *
+   * @deprecated
    * @var string
    */
   public $linkedResource;
@@ -29,7 +32,7 @@ class GoogleCloudDataplexV1SearchEntriesResult extends \Google\Model
   protected $snippetsDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1Entry
+   * @param GoogleCloudDataplexV1Entry $dataplexEntry
    */
   public function setDataplexEntry(GoogleCloudDataplexV1Entry $dataplexEntry)
   {
@@ -43,13 +46,17 @@ class GoogleCloudDataplexV1SearchEntriesResult extends \Google\Model
     return $this->dataplexEntry;
   }
   /**
-   * @param string
+   * Linked resource name.
+   *
+   * @deprecated
+   * @param string $linkedResource
    */
   public function setLinkedResource($linkedResource)
   {
     $this->linkedResource = $linkedResource;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getLinkedResource()
@@ -57,13 +64,17 @@ class GoogleCloudDataplexV1SearchEntriesResult extends \Google\Model
     return $this->linkedResource;
   }
   /**
-   * @param GoogleCloudDataplexV1SearchEntriesResultSnippets
+   * Snippets.
+   *
+   * @deprecated
+   * @param GoogleCloudDataplexV1SearchEntriesResultSnippets $snippets
    */
   public function setSnippets(GoogleCloudDataplexV1SearchEntriesResultSnippets $snippets)
   {
     $this->snippets = $snippets;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDataplexV1SearchEntriesResultSnippets
    */
   public function getSnippets()

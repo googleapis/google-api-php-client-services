@@ -23,16 +23,23 @@ class GoogleCloudDataplexV1ListLakesResponse extends \Google\Collection
   protected $lakesType = GoogleCloudDataplexV1Lake::class;
   protected $lakesDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param GoogleCloudDataplexV1Lake[]
+   * Lakes under the given parent location.
+   *
+   * @param GoogleCloudDataplexV1Lake[] $lakes
    */
   public function setLakes($lakes)
   {
@@ -46,7 +53,10 @@ class GoogleCloudDataplexV1ListLakesResponse extends \Google\Collection
     return $this->lakes;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListLakesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

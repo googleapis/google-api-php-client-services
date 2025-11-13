@@ -20,19 +20,39 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1StorageAccess extends \Google\Model
 {
   /**
+   * Access mode unspecified.
+   */
+  public const READ_ACCESS_MODE_UNSPECIFIED = 'ACCESS_MODE_UNSPECIFIED';
+  /**
+   * Default. Data is accessed directly using storage APIs.
+   */
+  public const READ_DIRECT = 'DIRECT';
+  /**
+   * Data is accessed through a managed interface using BigQuery APIs.
+   */
+  public const READ_MANAGED = 'MANAGED';
+  /**
+   * Output only. Describes the read access mechanism of the data. Not user
+   * settable.
+   *
    * @var string
    */
   public $read;
 
   /**
-   * @param string
+   * Output only. Describes the read access mechanism of the data. Not user
+   * settable.
+   *
+   * Accepted values: ACCESS_MODE_UNSPECIFIED, DIRECT, MANAGED
+   *
+   * @param self::READ_* $read
    */
   public function setRead($read)
   {
     $this->read = $read;
   }
   /**
-   * @return string
+   * @return self::READ_*
    */
   public function getRead()
   {

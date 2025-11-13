@@ -19,22 +19,49 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1Schema extends \Google\Collection
 {
+  /**
+   * PartitionStyle unspecified
+   */
+  public const PARTITION_STYLE_PARTITION_STYLE_UNSPECIFIED = 'PARTITION_STYLE_UNSPECIFIED';
+  /**
+   * Partitions are hive-compatible. Examples:
+   * gs://bucket/path/to/table/dt=2019-10-31/lang=en,
+   * gs://bucket/path/to/table/dt=2019-10-31/lang=en/late.
+   */
+  public const PARTITION_STYLE_HIVE_COMPATIBLE = 'HIVE_COMPATIBLE';
   protected $collection_key = 'partitionFields';
   protected $fieldsType = GoogleCloudDataplexV1SchemaSchemaField::class;
   protected $fieldsDataType = 'array';
   protected $partitionFieldsType = GoogleCloudDataplexV1SchemaPartitionField::class;
   protected $partitionFieldsDataType = 'array';
   /**
+   * Optional. The structure of paths containing partition data within the
+   * entity.
+   *
    * @var string
    */
   public $partitionStyle;
   /**
+   * Required. Set to true if user-managed or false if managed by Dataplex
+   * Universal Catalog. The default is false (managed by Dataplex Universal
+   * Catalog). Set to falseto enable Dataplex Universal Catalog discovery to
+   * update the schema. including new data discovery, schema inference, and
+   * schema evolution. Users retain the ability to input and edit the schema.
+   * Dataplex Universal Catalog treats schema input by the user as though
+   * produced by a previous Dataplex Universal Catalog discovery operation, and
+   * it will evolve the schema and take action based on that treatment. Set to
+   * true to fully manage the entity schema. This setting guarantees that
+   * Dataplex Universal Catalog will not change schema fields.
+   *
    * @var bool
    */
   public $userManaged;
 
   /**
-   * @param GoogleCloudDataplexV1SchemaSchemaField[]
+   * Optional. The sequence of fields describing data in table entities. Note:
+   * BigQuery SchemaFields are immutable.
+   *
+   * @param GoogleCloudDataplexV1SchemaSchemaField[] $fields
    */
   public function setFields($fields)
   {
@@ -48,7 +75,10 @@ class GoogleCloudDataplexV1Schema extends \Google\Collection
     return $this->fields;
   }
   /**
-   * @param GoogleCloudDataplexV1SchemaPartitionField[]
+   * Optional. The sequence of fields describing the partition structure in
+   * entities. If this field is empty, there are no partitions within the data.
+   *
+   * @param GoogleCloudDataplexV1SchemaPartitionField[] $partitionFields
    */
   public function setPartitionFields($partitionFields)
   {
@@ -62,21 +92,37 @@ class GoogleCloudDataplexV1Schema extends \Google\Collection
     return $this->partitionFields;
   }
   /**
-   * @param string
+   * Optional. The structure of paths containing partition data within the
+   * entity.
+   *
+   * Accepted values: PARTITION_STYLE_UNSPECIFIED, HIVE_COMPATIBLE
+   *
+   * @param self::PARTITION_STYLE_* $partitionStyle
    */
   public function setPartitionStyle($partitionStyle)
   {
     $this->partitionStyle = $partitionStyle;
   }
   /**
-   * @return string
+   * @return self::PARTITION_STYLE_*
    */
   public function getPartitionStyle()
   {
     return $this->partitionStyle;
   }
   /**
-   * @param bool
+   * Required. Set to true if user-managed or false if managed by Dataplex
+   * Universal Catalog. The default is false (managed by Dataplex Universal
+   * Catalog). Set to falseto enable Dataplex Universal Catalog discovery to
+   * update the schema. including new data discovery, schema inference, and
+   * schema evolution. Users retain the ability to input and edit the schema.
+   * Dataplex Universal Catalog treats schema input by the user as though
+   * produced by a previous Dataplex Universal Catalog discovery operation, and
+   * it will evolve the schema and take action based on that treatment. Set to
+   * true to fully manage the entity schema. This setting guarantees that
+   * Dataplex Universal Catalog will not change schema fields.
+   *
+   * @param bool $userManaged
    */
   public function setUserManaged($userManaged)
   {

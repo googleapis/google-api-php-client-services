@@ -22,12 +22,16 @@ class GoogleCloudDataplexV1TaskExecutionStatus extends \Google\Model
   protected $latestJobType = GoogleCloudDataplexV1Job::class;
   protected $latestJobDataType = '';
   /**
+   * Output only. Last update time of the status.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudDataplexV1Job
+   * Output only. latest job execution
+   *
+   * @param GoogleCloudDataplexV1Job $latestJob
    */
   public function setLatestJob(GoogleCloudDataplexV1Job $latestJob)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDataplexV1TaskExecutionStatus extends \Google\Model
     return $this->latestJob;
   }
   /**
-   * @param string
+   * Output only. Last update time of the status.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

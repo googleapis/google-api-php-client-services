@@ -23,7 +23,9 @@ class GoogleCloudDataplexV1ScannedData extends \Google\Model
   protected $incrementalFieldDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1ScannedDataIncrementalField
+   * The range denoted by values of an incremental field
+   *
+   * @param GoogleCloudDataplexV1ScannedDataIncrementalField $incrementalField
    */
   public function setIncrementalField(GoogleCloudDataplexV1ScannedDataIncrementalField $incrementalField)
   {

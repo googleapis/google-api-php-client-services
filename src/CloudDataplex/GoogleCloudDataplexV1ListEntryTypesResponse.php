@@ -23,16 +23,23 @@ class GoogleCloudDataplexV1ListEntryTypesResponse extends \Google\Collection
   protected $entryTypesType = GoogleCloudDataplexV1EntryType::class;
   protected $entryTypesDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that the service couldn't reach.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param GoogleCloudDataplexV1EntryType[]
+   * EntryTypes under the given parent location.
+   *
+   * @param GoogleCloudDataplexV1EntryType[] $entryTypes
    */
   public function setEntryTypes($entryTypes)
   {
@@ -46,7 +53,10 @@ class GoogleCloudDataplexV1ListEntryTypesResponse extends \Google\Collection
     return $this->entryTypes;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListEntryTypesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that the service couldn't reach.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

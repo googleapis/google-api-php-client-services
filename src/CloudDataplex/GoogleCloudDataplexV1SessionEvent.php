@@ -20,38 +20,77 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1SessionEvent extends \Google\Model
 {
   /**
+   * An unspecified event type.
+   */
+  public const TYPE_EVENT_TYPE_UNSPECIFIED = 'EVENT_TYPE_UNSPECIFIED';
+  /**
+   * Event when the session is assigned to a user.
+   */
+  public const TYPE_START = 'START';
+  /**
+   * Event for stop of a session.
+   */
+  public const TYPE_STOP = 'STOP';
+  /**
+   * Query events in the session.
+   */
+  public const TYPE_QUERY = 'QUERY';
+  /**
+   * Event for creation of a cluster. It is not yet assigned to a user. This
+   * comes before START in the sequence
+   */
+  public const TYPE_CREATE = 'CREATE';
+  /**
+   * The status of the event.
+   *
    * @var bool
    */
   public $eventSucceeded;
   /**
+   * If the session is associated with an environment with fast startup enabled,
+   * and was created before being assigned to a user.
+   *
    * @var bool
    */
   public $fastStartupEnabled;
   /**
+   * The log message.
+   *
    * @var string
    */
   public $message;
   protected $queryType = GoogleCloudDataplexV1SessionEventQueryDetail::class;
   protected $queryDataType = '';
   /**
+   * Unique identifier for the session.
+   *
    * @var string
    */
   public $sessionId;
   /**
+   * The type of the event.
+   *
    * @var string
    */
   public $type;
   /**
+   * The idle duration of a warm pooled session before it is assigned to user.
+   *
    * @var string
    */
   public $unassignedDuration;
   /**
+   * The information about the user that created the session. It will be the
+   * email address of the user.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param bool
+   * The status of the event.
+   *
+   * @param bool $eventSucceeded
    */
   public function setEventSucceeded($eventSucceeded)
   {
@@ -65,7 +104,10 @@ class GoogleCloudDataplexV1SessionEvent extends \Google\Model
     return $this->eventSucceeded;
   }
   /**
-   * @param bool
+   * If the session is associated with an environment with fast startup enabled,
+   * and was created before being assigned to a user.
+   *
+   * @param bool $fastStartupEnabled
    */
   public function setFastStartupEnabled($fastStartupEnabled)
   {
@@ -79,7 +121,9 @@ class GoogleCloudDataplexV1SessionEvent extends \Google\Model
     return $this->fastStartupEnabled;
   }
   /**
-   * @param string
+   * The log message.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -93,7 +137,9 @@ class GoogleCloudDataplexV1SessionEvent extends \Google\Model
     return $this->message;
   }
   /**
-   * @param GoogleCloudDataplexV1SessionEventQueryDetail
+   * The execution details of the query.
+   *
+   * @param GoogleCloudDataplexV1SessionEventQueryDetail $query
    */
   public function setQuery(GoogleCloudDataplexV1SessionEventQueryDetail $query)
   {
@@ -107,7 +153,9 @@ class GoogleCloudDataplexV1SessionEvent extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * Unique identifier for the session.
+   *
+   * @param string $sessionId
    */
   public function setSessionId($sessionId)
   {
@@ -121,21 +169,27 @@ class GoogleCloudDataplexV1SessionEvent extends \Google\Model
     return $this->sessionId;
   }
   /**
-   * @param string
+   * The type of the event.
+   *
+   * Accepted values: EVENT_TYPE_UNSPECIFIED, START, STOP, QUERY, CREATE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * The idle duration of a warm pooled session before it is assigned to user.
+   *
+   * @param string $unassignedDuration
    */
   public function setUnassignedDuration($unassignedDuration)
   {
@@ -149,7 +203,10 @@ class GoogleCloudDataplexV1SessionEvent extends \Google\Model
     return $this->unassignedDuration;
   }
   /**
-   * @param string
+   * The information about the user that created the session. It will be the
+   * email address of the user.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

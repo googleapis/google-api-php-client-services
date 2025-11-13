@@ -23,16 +23,23 @@ class GoogleCloudDataplexV1ListGlossaryCategoriesResponse extends \Google\Collec
   protected $categoriesType = GoogleCloudDataplexV1GlossaryCategory::class;
   protected $categoriesDataType = 'array';
   /**
+   * A token, which can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that the service couldn't reach.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param GoogleCloudDataplexV1GlossaryCategory[]
+   * Lists the GlossaryCategories in the specified parent.
+   *
+   * @param GoogleCloudDataplexV1GlossaryCategory[] $categories
    */
   public function setCategories($categories)
   {
@@ -46,7 +53,10 @@ class GoogleCloudDataplexV1ListGlossaryCategoriesResponse extends \Google\Collec
     return $this->categories;
   }
   /**
-   * @param string
+   * A token, which can be sent as page_token to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListGlossaryCategoriesResponse extends \Google\Collec
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that the service couldn't reach.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {

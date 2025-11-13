@@ -21,32 +21,91 @@ class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope extends \Googl
 {
   protected $collection_key = 'referencedEntryScopes';
   /**
+   * Optional. The aspect types that are in scope for the import job, specified
+   * as relative resource names in the format projects/{project_number_or_id}/lo
+   * cations/{location_id}/aspectTypes/{aspect_type_id}. The job modifies only
+   * the aspects that belong to these aspect types.This field is required when
+   * creating an aspect-only import job.If the metadata import file attempts to
+   * modify an aspect whose type isn't included in this list, the import job is
+   * halted before modifying any entries or aspects.The location of an aspect
+   * type must either match the location of the job, or the aspect type must be
+   * global.
+   *
    * @var string[]
    */
   public $aspectTypes;
   /**
+   * Required. The entry groups that are in scope for the import job, specified
+   * as relative resource names in the format projects/{project_number_or_id}/lo
+   * cations/{location_id}/entryGroups/{entry_group_id}. Only entries and
+   * aspects that belong to the specified entry groups are affected by the
+   * job.The entry groups and the job must be in the same location.
+   *
    * @var string[]
    */
   public $entryGroups;
   /**
+   * Optional. The entry link types that are in scope for the import job,
+   * specified as relative resource names in the format projects/{project_number
+   * _or_id}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}. The
+   * job modifies only the entryLinks that belong to these entry link types.If
+   * the metadata import file attempts to create or delete an entry link whose
+   * entry link type isn't included in this list, the import job will skip those
+   * entry links.
+   *
    * @var string[]
    */
   public $entryLinkTypes;
   /**
+   * Required. The entry types that are in scope for the import job, specified
+   * as relative resource names in the format projects/{project_number_or_id}/lo
+   * cations/{location_id}/entryTypes/{entry_type_id}. The job modifies only the
+   * entries and aspects that belong to these entry types.If the metadata import
+   * file attempts to modify an entry whose type isn't included in this list,
+   * the import job is halted before modifying any entries or aspects.The
+   * location of an entry type must either match the location of the job, or the
+   * entry type must be global.
+   *
    * @var string[]
    */
   public $entryTypes;
   /**
+   * Optional. The glossaries that are in scope for the import job, specified as
+   * relative resource names in the format projects/{project_number_or_id}/locat
+   * ions/{location_id}/glossaries/{glossary_id}.While importing Business
+   * Glossary entries, the user must provide glossaries. While importing
+   * entries, the user does not have to provide glossaries. If the metadata
+   * import file attempts to modify Business Glossary entries whose glossary
+   * isn't included in this list, the import job will skip those entries.The
+   * location of a glossary must either match the location of the job, or the
+   * glossary must be global.
+   *
    * @var string[]
    */
   public $glossaries;
   /**
+   * Optional. Defines the scope of entries that can be referenced in the entry
+   * links.Currently, projects are supported as valid scopes. Format:
+   * projects/{project_number_or_id}If the metadata import file attempts to
+   * create an entry link which references an entry that is not in the scope,
+   * the import job will skip that entry link.
+   *
    * @var string[]
    */
   public $referencedEntryScopes;
 
   /**
-   * @param string[]
+   * Optional. The aspect types that are in scope for the import job, specified
+   * as relative resource names in the format projects/{project_number_or_id}/lo
+   * cations/{location_id}/aspectTypes/{aspect_type_id}. The job modifies only
+   * the aspects that belong to these aspect types.This field is required when
+   * creating an aspect-only import job.If the metadata import file attempts to
+   * modify an aspect whose type isn't included in this list, the import job is
+   * halted before modifying any entries or aspects.The location of an aspect
+   * type must either match the location of the job, or the aspect type must be
+   * global.
+   *
+   * @param string[] $aspectTypes
    */
   public function setAspectTypes($aspectTypes)
   {
@@ -60,7 +119,13 @@ class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope extends \Googl
     return $this->aspectTypes;
   }
   /**
-   * @param string[]
+   * Required. The entry groups that are in scope for the import job, specified
+   * as relative resource names in the format projects/{project_number_or_id}/lo
+   * cations/{location_id}/entryGroups/{entry_group_id}. Only entries and
+   * aspects that belong to the specified entry groups are affected by the
+   * job.The entry groups and the job must be in the same location.
+   *
+   * @param string[] $entryGroups
    */
   public function setEntryGroups($entryGroups)
   {
@@ -74,7 +139,15 @@ class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope extends \Googl
     return $this->entryGroups;
   }
   /**
-   * @param string[]
+   * Optional. The entry link types that are in scope for the import job,
+   * specified as relative resource names in the format projects/{project_number
+   * _or_id}/locations/{location_id}/entryLinkTypes/{entry_link_type_id}. The
+   * job modifies only the entryLinks that belong to these entry link types.If
+   * the metadata import file attempts to create or delete an entry link whose
+   * entry link type isn't included in this list, the import job will skip those
+   * entry links.
+   *
+   * @param string[] $entryLinkTypes
    */
   public function setEntryLinkTypes($entryLinkTypes)
   {
@@ -88,7 +161,16 @@ class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope extends \Googl
     return $this->entryLinkTypes;
   }
   /**
-   * @param string[]
+   * Required. The entry types that are in scope for the import job, specified
+   * as relative resource names in the format projects/{project_number_or_id}/lo
+   * cations/{location_id}/entryTypes/{entry_type_id}. The job modifies only the
+   * entries and aspects that belong to these entry types.If the metadata import
+   * file attempts to modify an entry whose type isn't included in this list,
+   * the import job is halted before modifying any entries or aspects.The
+   * location of an entry type must either match the location of the job, or the
+   * entry type must be global.
+   *
+   * @param string[] $entryTypes
    */
   public function setEntryTypes($entryTypes)
   {
@@ -102,7 +184,17 @@ class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope extends \Googl
     return $this->entryTypes;
   }
   /**
-   * @param string[]
+   * Optional. The glossaries that are in scope for the import job, specified as
+   * relative resource names in the format projects/{project_number_or_id}/locat
+   * ions/{location_id}/glossaries/{glossary_id}.While importing Business
+   * Glossary entries, the user must provide glossaries. While importing
+   * entries, the user does not have to provide glossaries. If the metadata
+   * import file attempts to modify Business Glossary entries whose glossary
+   * isn't included in this list, the import job will skip those entries.The
+   * location of a glossary must either match the location of the job, or the
+   * glossary must be global.
+   *
+   * @param string[] $glossaries
    */
   public function setGlossaries($glossaries)
   {
@@ -116,7 +208,13 @@ class GoogleCloudDataplexV1MetadataJobImportJobSpecImportJobScope extends \Googl
     return $this->glossaries;
   }
   /**
-   * @param string[]
+   * Optional. Defines the scope of entries that can be referenced in the entry
+   * links.Currently, projects are supported as valid scopes. Format:
+   * projects/{project_number_or_id}If the metadata import file attempts to
+   * create an entry link which references an entry that is not in the scope,
+   * the import job will skip that entry link.
+   *
+   * @param string[] $referencedEntryScopes
    */
   public function setReferencedEntryScopes($referencedEntryScopes)
   {

@@ -23,16 +23,23 @@ class GoogleCloudDataplexV1ListEncryptionConfigsResponse extends \Google\Collect
   protected $encryptionConfigsType = GoogleCloudDataplexV1EncryptionConfig::class;
   protected $encryptionConfigsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachableLocations;
 
   /**
-   * @param GoogleCloudDataplexV1EncryptionConfig[]
+   * The list of EncryptionConfigs under the given parent location.
+   *
+   * @param GoogleCloudDataplexV1EncryptionConfig[] $encryptionConfigs
    */
   public function setEncryptionConfigs($encryptionConfigs)
   {
@@ -46,7 +53,10 @@ class GoogleCloudDataplexV1ListEncryptionConfigsResponse extends \Google\Collect
     return $this->encryptionConfigs;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudDataplexV1ListEncryptionConfigsResponse extends \Google\Collect
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachableLocations
    */
   public function setUnreachableLocations($unreachableLocations)
   {
