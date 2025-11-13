@@ -20,34 +20,82 @@ namespace Google\Service\FirebaseManagement;
 class ShaCertificate extends \Google\Model
 {
   /**
+   * Unknown state. This is only used for distinguishing unset values.
+   */
+  public const CERT_TYPE_SHA_CERTIFICATE_TYPE_UNSPECIFIED = 'SHA_CERTIFICATE_TYPE_UNSPECIFIED';
+  /**
+   * Certificate is a SHA-1 type certificate.
+   */
+  public const CERT_TYPE_SHA_1 = 'SHA_1';
+  /**
+   * Certificate is a SHA-256 type certificate.
+   */
+  public const CERT_TYPE_SHA_256 = 'SHA_256';
+  /**
+   * The type of SHA certificate encoded in the hash.
+   *
    * @var string
    */
   public $certType;
   /**
+   * The resource name of the ShaCertificate for the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH *
+   * PROJECT_IDENTIFIER: the parent Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+   * ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more
+   * about using project identifiers in Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510). Note that the value for
+   * PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID:
+   * the globally unique, Firebase-assigned identifier for the App (see
+   * [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)). * SHA_HASH:
+   * the certificate hash for the App (see
+   * [`shaHash`](../projects.androidApps.sha#ShaCertificate.FIELDS.sha_hash)).
+   *
    * @var string
    */
   public $name;
   /**
+   * The certificate hash for the `AndroidApp`.
+   *
    * @var string
    */
   public $shaHash;
 
   /**
-   * @param string
+   * The type of SHA certificate encoded in the hash.
+   *
+   * Accepted values: SHA_CERTIFICATE_TYPE_UNSPECIFIED, SHA_1, SHA_256
+   *
+   * @param self::CERT_TYPE_* $certType
    */
   public function setCertType($certType)
   {
     $this->certType = $certType;
   }
   /**
-   * @return string
+   * @return self::CERT_TYPE_*
    */
   public function getCertType()
   {
     return $this->certType;
   }
   /**
-   * @param string
+   * The resource name of the ShaCertificate for the AndroidApp, in the format:
+   * projects/PROJECT_IDENTIFIER/androidApps/APP_ID/sha/SHA_HASH *
+   * PROJECT_IDENTIFIER: the parent Project's
+   * [`ProjectNumber`](../projects#FirebaseProject.FIELDS.project_number)
+   * ***(recommended)*** or its
+   * [`ProjectId`](../projects#FirebaseProject.FIELDS.project_id). Learn more
+   * about using project identifiers in Google's [AIP 2510
+   * standard](https://google.aip.dev/cloud/2510). Note that the value for
+   * PROJECT_IDENTIFIER in any response body will be the `ProjectId`. * APP_ID:
+   * the globally unique, Firebase-assigned identifier for the App (see
+   * [`appId`](../projects.androidApps#AndroidApp.FIELDS.app_id)). * SHA_HASH:
+   * the certificate hash for the App (see
+   * [`shaHash`](../projects.androidApps.sha#ShaCertificate.FIELDS.sha_hash)).
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +109,9 @@ class ShaCertificate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The certificate hash for the `AndroidApp`.
+   *
+   * @param string $shaHash
    */
   public function setShaHash($shaHash)
   {

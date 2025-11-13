@@ -20,16 +20,23 @@ namespace Google\Service\FirebaseManagement;
 class AndroidAppConfig extends \Google\Model
 {
   /**
+   * The contents of the JSON configuration file.
+   *
    * @var string
    */
   public $configFileContents;
   /**
+   * The filename that the configuration artifact for the `AndroidApp` is
+   * typically saved as. For example: `google-services.json`
+   *
    * @var string
    */
   public $configFilename;
 
   /**
-   * @param string
+   * The contents of the JSON configuration file.
+   *
+   * @param string $configFileContents
    */
   public function setConfigFileContents($configFileContents)
   {
@@ -43,7 +50,10 @@ class AndroidAppConfig extends \Google\Model
     return $this->configFileContents;
   }
   /**
-   * @param string
+   * The filename that the configuration artifact for the `AndroidApp` is
+   * typically saved as. For example: `google-services.json`
+   *
+   * @param string $configFilename
    */
   public function setConfigFilename($configFilename)
   {

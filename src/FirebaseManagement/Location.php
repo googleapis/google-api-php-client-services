@@ -19,22 +19,53 @@ namespace Google\Service\FirebaseManagement;
 
 class Location extends \Google\Collection
 {
+  /**
+   * Used internally for distinguishing unset values and is not intended for
+   * external use.
+   */
+  public const TYPE_LOCATION_TYPE_UNSPECIFIED = 'LOCATION_TYPE_UNSPECIFIED';
+  /**
+   * The location is a regional location. Data in a regional location is
+   * replicated in multiple zones within a region.
+   */
+  public const TYPE_REGIONAL = 'REGIONAL';
+  /**
+   * The location is a multi-regional location. Data in a multi-region location
+   * is replicated in multiple regions. Within each region, data is replicated
+   * in multiple zones.
+   */
+  public const TYPE_MULTI_REGIONAL = 'MULTI_REGIONAL';
   protected $collection_key = 'features';
   /**
+   * Products and services that are available in the location for default Google
+   * Cloud resources.
+   *
    * @var string[]
    */
   public $features;
   /**
+   * The ID of the Project's location for default Google Cloud resources. It
+   * will be one of the available [Google App Engine
+   * locations](https://cloud.google.com/about/locations#region).
+   *
    * @var string
    */
   public $locationId;
   /**
+   * Indicates whether the location for default Google Cloud resources is a
+   * [regional or multi-regional
+   * location](https://firebase.google.com/docs/projects/locations#types) for
+   * data replication.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string[]
+   * Products and services that are available in the location for default Google
+   * Cloud resources.
+   *
+   * @param string[] $features
    */
   public function setFeatures($features)
   {
@@ -48,7 +79,11 @@ class Location extends \Google\Collection
     return $this->features;
   }
   /**
-   * @param string
+   * The ID of the Project's location for default Google Cloud resources. It
+   * will be one of the available [Google App Engine
+   * locations](https://cloud.google.com/about/locations#region).
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -62,14 +97,21 @@ class Location extends \Google\Collection
     return $this->locationId;
   }
   /**
-   * @param string
+   * Indicates whether the location for default Google Cloud resources is a
+   * [regional or multi-regional
+   * location](https://firebase.google.com/docs/projects/locations#types) for
+   * data replication.
+   *
+   * Accepted values: LOCATION_TYPE_UNSPECIFIED, REGIONAL, MULTI_REGIONAL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

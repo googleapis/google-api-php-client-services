@@ -20,16 +20,23 @@ namespace Google\Service\FirebaseManagement;
 class IosAppConfig extends \Google\Model
 {
   /**
+   * The content of the XML configuration file.
+   *
    * @var string
    */
   public $configFileContents;
   /**
+   * The filename that the configuration artifact for the `IosApp` is typically
+   * saved as. For example: `GoogleService-Info.plist`
+   *
    * @var string
    */
   public $configFilename;
 
   /**
-   * @param string
+   * The content of the XML configuration file.
+   *
+   * @param string $configFileContents
    */
   public function setConfigFileContents($configFileContents)
   {
@@ -43,7 +50,10 @@ class IosAppConfig extends \Google\Model
     return $this->configFileContents;
   }
   /**
-   * @param string
+   * The filename that the configuration artifact for the `IosApp` is typically
+   * saved as. For example: `GoogleService-Info.plist`
+   *
+   * @param string $configFilename
    */
   public function setConfigFilename($configFilename)
   {

@@ -21,12 +21,16 @@ class ProductMetadata extends \Google\Collection
 {
   protected $collection_key = 'warningMessages';
   /**
+   * List of warnings related to the associated operation.
+   *
    * @var string[]
    */
   public $warningMessages;
 
   /**
-   * @param string[]
+   * List of warnings related to the associated operation.
+   *
+   * @param string[] $warningMessages
    */
   public function setWarningMessages($warningMessages)
   {

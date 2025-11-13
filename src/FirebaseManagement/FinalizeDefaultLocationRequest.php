@@ -20,12 +20,24 @@ namespace Google\Service\FirebaseManagement;
 class FinalizeDefaultLocationRequest extends \Google\Model
 {
   /**
+   * **DEPRECATED** The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-
+   * cloud-location), which are resources associated with Google App Engine. The
+   * location must be one of the available [Google App Engine
+   * locations](https://cloud.google.com/about/locations#region).
+   *
    * @var string
    */
   public $locationId;
 
   /**
-   * @param string
+   * **DEPRECATED** The ID of the Project's ["location for default Google Cloud
+   * resources"](https://firebase.google.com/docs/projects/locations#default-
+   * cloud-location), which are resources associated with Google App Engine. The
+   * location must be one of the available [Google App Engine
+   * locations](https://cloud.google.com/about/locations#region).
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {

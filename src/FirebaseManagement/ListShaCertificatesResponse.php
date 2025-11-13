@@ -24,7 +24,9 @@ class ListShaCertificatesResponse extends \Google\Collection
   protected $certificatesDataType = 'array';
 
   /**
-   * @param ShaCertificate[]
+   * The list of each `ShaCertificate` associated with the `AndroidApp`.
+   *
+   * @param ShaCertificate[] $certificates
    */
   public function setCertificates($certificates)
   {

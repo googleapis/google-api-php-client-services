@@ -20,16 +20,25 @@ namespace Google\Service\FirebaseManagement;
 class UndeleteAndroidAppRequest extends \Google\Model
 {
   /**
+   * Checksum provided in the AndroidApp resource. If provided, this checksum
+   * ensures that the client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * If set to true, the request is only validated. The App will _not_ be
+   * undeleted.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param string
+   * Checksum provided in the AndroidApp resource. If provided, this checksum
+   * ensures that the client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -43,7 +52,10 @@ class UndeleteAndroidAppRequest extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param bool
+   * If set to true, the request is only validated. The App will _not_ be
+   * undeleted.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

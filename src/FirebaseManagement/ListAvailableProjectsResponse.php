@@ -21,6 +21,12 @@ class ListAvailableProjectsResponse extends \Google\Collection
 {
   protected $collection_key = 'projectInfo';
   /**
+   * If the result list is too large to fit in a single response, then a token
+   * is returned. If the string is empty, then this response is the last page of
+   * results. This token can be used in a subsequent calls to
+   * `ListAvailableProjects` to find the next group of Projects. Page tokens are
+   * short-lived and should not be persisted.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +34,13 @@ class ListAvailableProjectsResponse extends \Google\Collection
   protected $projectInfoDataType = 'array';
 
   /**
-   * @param string
+   * If the result list is too large to fit in a single response, then a token
+   * is returned. If the string is empty, then this response is the last page of
+   * results. This token can be used in a subsequent calls to
+   * `ListAvailableProjects` to find the next group of Projects. Page tokens are
+   * short-lived and should not be persisted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +54,10 @@ class ListAvailableProjectsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ProjectInfo[]
+   * The list of Google Cloud `Projects` which can have Firebase resources added
+   * to them.
+   *
+   * @param ProjectInfo[] $projectInfo
    */
   public function setProjectInfo($projectInfo)
   {

@@ -20,20 +20,45 @@ namespace Google\Service\FirebaseManagement;
 class StreamMapping extends \Google\Model
 {
   /**
+   * The resource name of the Firebase App associated with the Google Analytics
+   * data stream, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+   * or projects/PROJECT_IDENTIFIER/iosApps/APP_ID or
+   * projects/PROJECT_IDENTIFIER /webApps/APP_ID Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
+   *
    * @var string
    */
   public $app;
   /**
+   * Applicable for Firebase Web Apps only. The unique Google-assigned
+   * identifier of the Google Analytics web stream associated with the Firebase
+   * Web App. Firebase SDKs use this ID to interact with Google Analytics APIs.
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/answer/9304153).
+   *
    * @var string
    */
   public $measurementId;
   /**
+   * The unique Google-assigned identifier of the Google Analytics data stream
+   * associated with the Firebase App. Learn more about Google Analytics data
+   * streams in the [Analytics
+   * documentation](https://support.google.com/analytics/answer/9303323).
+   *
    * @var string
    */
   public $streamId;
 
   /**
-   * @param string
+   * The resource name of the Firebase App associated with the Google Analytics
+   * data stream, in the format: projects/PROJECT_IDENTIFIER/androidApps/APP_ID
+   * or projects/PROJECT_IDENTIFIER/iosApps/APP_ID or
+   * projects/PROJECT_IDENTIFIER /webApps/APP_ID Refer to the `FirebaseProject`
+   * [`name`](../projects#FirebaseProject.FIELDS.name) field for details about
+   * PROJECT_IDENTIFIER values.
+   *
+   * @param string $app
    */
   public function setApp($app)
   {
@@ -47,7 +72,13 @@ class StreamMapping extends \Google\Model
     return $this->app;
   }
   /**
-   * @param string
+   * Applicable for Firebase Web Apps only. The unique Google-assigned
+   * identifier of the Google Analytics web stream associated with the Firebase
+   * Web App. Firebase SDKs use this ID to interact with Google Analytics APIs.
+   * Learn more about this ID and Google Analytics web streams in the [Analytics
+   * documentation](https://support.google.com/analytics/answer/9304153).
+   *
+   * @param string $measurementId
    */
   public function setMeasurementId($measurementId)
   {
@@ -61,7 +92,12 @@ class StreamMapping extends \Google\Model
     return $this->measurementId;
   }
   /**
-   * @param string
+   * The unique Google-assigned identifier of the Google Analytics data stream
+   * associated with the Firebase App. Learn more about Google Analytics data
+   * streams in the [Analytics
+   * documentation](https://support.google.com/analytics/answer/9303323).
+   *
+   * @param string $streamId
    */
   public function setStreamId($streamId)
   {

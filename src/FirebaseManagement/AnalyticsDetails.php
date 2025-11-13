@@ -26,7 +26,11 @@ class AnalyticsDetails extends \Google\Collection
   protected $streamMappingsDataType = 'array';
 
   /**
-   * @param AnalyticsProperty
+   * The Analytics Property object associated with the specified
+   * `FirebaseProject`. This object contains the details of the Google Analytics
+   * property associated with the Project.
+   *
+   * @param AnalyticsProperty $analyticsProperty
    */
   public function setAnalyticsProperty(AnalyticsProperty $analyticsProperty)
   {
@@ -40,7 +44,13 @@ class AnalyticsDetails extends \Google\Collection
     return $this->analyticsProperty;
   }
   /**
-   * @param StreamMapping[]
+   * - For `AndroidApps` and `IosApps`: a map of `app` to `streamId` for each
+   * Firebase App in the specified `FirebaseProject`. Each `app` and `streamId`
+   * appears only once. - For `WebApps`: a map of `app` to `streamId` and
+   * `measurementId` for each `WebApp` in the specified `FirebaseProject`. Each
+   * `app`, `streamId`, and `measurementId` appears only once.
+   *
+   * @param StreamMapping[] $streamMappings
    */
   public function setStreamMappings($streamMappings)
   {
