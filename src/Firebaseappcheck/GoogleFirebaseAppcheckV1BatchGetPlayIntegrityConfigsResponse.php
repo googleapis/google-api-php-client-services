@@ -24,7 +24,9 @@ class GoogleFirebaseAppcheckV1BatchGetPlayIntegrityConfigsResponse extends \Goog
   protected $configsDataType = 'array';
 
   /**
-   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfig[]
+   * PlayIntegrityConfigs retrieved.
+   *
+   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfig[] $configs
    */
   public function setConfigs($configs)
   {

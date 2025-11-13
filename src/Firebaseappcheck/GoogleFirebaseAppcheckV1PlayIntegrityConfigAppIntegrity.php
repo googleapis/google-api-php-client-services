@@ -20,12 +20,38 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity extends \Google\Model
 {
   /**
+   * Specifies whether your running app is allowed to have the
+   * `UNRECOGNIZED_VERSION` [app recognition verdict](https://developer.android.
+   * com/google/play/integrity/verdicts#application-integrity-field). Note that
+   * the app recognition verdict `PLAY_RECOGNIZED` is a strong, comprehensive
+   * integrity signal that takes into account various other signals, including
+   * conditional and optional device integrity responses that you have opted
+   * into. If your app is published off-Play, this field should be set to `true`
+   * to allow instances of your app installed from off-Play sources to function.
+   * If set to `false`, only `PLAY_RECOGNIZED` verdicts are allowed, and both
+   * `UNRECOGNIZED_VERSION` and `UNEVALUATED` will be rejected. If set to
+   * `true`, any app recognition verdict is allowed. The default value is
+   * `false`.
+   *
    * @var bool
    */
   public $allowUnrecognizedVersion;
 
   /**
-   * @param bool
+   * Specifies whether your running app is allowed to have the
+   * `UNRECOGNIZED_VERSION` [app recognition verdict](https://developer.android.
+   * com/google/play/integrity/verdicts#application-integrity-field). Note that
+   * the app recognition verdict `PLAY_RECOGNIZED` is a strong, comprehensive
+   * integrity signal that takes into account various other signals, including
+   * conditional and optional device integrity responses that you have opted
+   * into. If your app is published off-Play, this field should be set to `true`
+   * to allow instances of your app installed from off-Play sources to function.
+   * If set to `false`, only `PLAY_RECOGNIZED` verdicts are allowed, and both
+   * `UNRECOGNIZED_VERSION` and `UNEVALUATED` will be rejected. If set to
+   * `true`, any app recognition verdict is allowed. The default value is
+   * `false`.
+   *
+   * @param bool $allowUnrecognizedVersion
    */
   public function setAllowUnrecognizedVersion($allowUnrecognizedVersion)
   {

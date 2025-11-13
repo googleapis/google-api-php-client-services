@@ -24,7 +24,9 @@ class GoogleFirebaseAppcheckV1BatchGetAppAttestConfigsResponse extends \Google\C
   protected $configsDataType = 'array';
 
   /**
-   * @param GoogleFirebaseAppcheckV1AppAttestConfig[]
+   * AppAttestConfigs retrieved.
+   *
+   * @param GoogleFirebaseAppcheckV1AppAttestConfig[] $configs
    */
   public function setConfigs($configs)
   {

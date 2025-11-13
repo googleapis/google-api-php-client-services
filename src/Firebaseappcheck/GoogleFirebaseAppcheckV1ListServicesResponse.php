@@ -21,6 +21,12 @@ class GoogleFirebaseAppcheckV1ListServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'services';
   /**
+   * If the result list is too large to fit in a single response, then a token
+   * is returned. If the string is empty or omitted, then this response is the
+   * last page of results. This token can be used in a subsequent call to
+   * ListServices to find the next group of Services. Page tokens are short-
+   * lived and should not be persisted.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +34,13 @@ class GoogleFirebaseAppcheckV1ListServicesResponse extends \Google\Collection
   protected $servicesDataType = 'array';
 
   /**
-   * @param string
+   * If the result list is too large to fit in a single response, then a token
+   * is returned. If the string is empty or omitted, then this response is the
+   * last page of results. This token can be used in a subsequent call to
+   * ListServices to find the next group of Services. Page tokens are short-
+   * lived and should not be persisted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +54,9 @@ class GoogleFirebaseAppcheckV1ListServicesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleFirebaseAppcheckV1Service[]
+   * The Services retrieved.
+   *
+   * @param GoogleFirebaseAppcheckV1Service[] $services
    */
   public function setServices($services)
   {

@@ -24,7 +24,9 @@ class GoogleFirebaseAppcheckV1BatchUpdateServicesResponse extends \Google\Collec
   protected $servicesDataType = 'array';
 
   /**
-   * @param GoogleFirebaseAppcheckV1Service[]
+   * Service objects after the updates have been applied.
+   *
+   * @param GoogleFirebaseAppcheckV1Service[] $services
    */
   public function setServices($services)
   {

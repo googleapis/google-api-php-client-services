@@ -20,16 +20,29 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1GeneratePlayIntegrityChallengeResponse extends \Google\Model
 {
   /**
+   * A one-time use [challenge](https://developer.android.com/google/play/integr
+   * ity/verdict#protect-against-replay-attacks) for the client to pass to the
+   * Play Integrity API.
+   *
    * @var string
    */
   public $challenge;
   /**
+   * The duration from the time this challenge is minted until its expiration.
+   * This field is intended to ease client-side token management, since the
+   * client may have clock skew, but is still able to accurately measure a
+   * duration.
+   *
    * @var string
    */
   public $ttl;
 
   /**
-   * @param string
+   * A one-time use [challenge](https://developer.android.com/google/play/integr
+   * ity/verdict#protect-against-replay-attacks) for the client to pass to the
+   * Play Integrity API.
+   *
+   * @param string $challenge
    */
   public function setChallenge($challenge)
   {
@@ -43,7 +56,12 @@ class GoogleFirebaseAppcheckV1GeneratePlayIntegrityChallengeResponse extends \Go
     return $this->challenge;
   }
   /**
-   * @param string
+   * The duration from the time this challenge is minted until its expiration.
+   * This field is intended to ease client-side token management, since the
+   * client may have clock skew, but is still able to accurately measure a
+   * duration.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {

@@ -20,22 +20,42 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends \Google\Model
 {
   /**
+   * Required. The relative resource name of the reCAPTCHA Enterprise
+   * configuration object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/recaptchaEnterpriseConfig ```
+   *
    * @var string
    */
   public $name;
   protected $riskAnalysisType = GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis::class;
   protected $riskAnalysisDataType = '';
   /**
+   * The score-based site key [created in reCAPTCHA
+   * Enterprise](https://cloud.google.com/recaptcha-enterprise/docs/create-
+   * key#creating_a_site_key) used to [invoke reCAPTCHA and generate the
+   * reCAPTCHA tokens](https://cloud.google.com/recaptcha-
+   * enterprise/docs/instrument-web-pages) for your application. Important: This
+   * is *not* the `site_secret` (as it is in reCAPTCHA v3), but rather your
+   * score-based reCAPTCHA Enterprise site key.
+   *
    * @var string
    */
   public $siteKey;
   /**
+   * Specifies the duration for which App Check tokens exchanged from reCAPTCHA
+   * Enterprise tokens will be valid. If unset, a default value of 1 hour is
+   * assumed. Must be between 30 minutes and 7 days, inclusive.
+   *
    * @var string
    */
   public $tokenTtl;
 
   /**
-   * @param string
+   * Required. The relative resource name of the reCAPTCHA Enterprise
+   * configuration object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/recaptchaEnterpriseConfig ```
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -49,7 +69,14 @@ class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis
+   * Specifies risk tolerance and requirements for your application. These
+   * settings correspond to requirements on the
+   * [**`riskAnalysis`**](https://cloud.google.com/recaptcha/docs/interpret-
+   * assessment-website#interpret_assessment) tuple in the assessment obtained
+   * from reCAPTCHA Enterprise. The default values for these settings work for
+   * most apps, and are recommended.
+   *
+   * @param GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis $riskAnalysis
    */
   public function setRiskAnalysis(GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis $riskAnalysis)
   {
@@ -63,7 +90,15 @@ class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends \Google\Model
     return $this->riskAnalysis;
   }
   /**
-   * @param string
+   * The score-based site key [created in reCAPTCHA
+   * Enterprise](https://cloud.google.com/recaptcha-enterprise/docs/create-
+   * key#creating_a_site_key) used to [invoke reCAPTCHA and generate the
+   * reCAPTCHA tokens](https://cloud.google.com/recaptcha-
+   * enterprise/docs/instrument-web-pages) for your application. Important: This
+   * is *not* the `site_secret` (as it is in reCAPTCHA v3), but rather your
+   * score-based reCAPTCHA Enterprise site key.
+   *
+   * @param string $siteKey
    */
   public function setSiteKey($siteKey)
   {
@@ -77,7 +112,11 @@ class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends \Google\Model
     return $this->siteKey;
   }
   /**
-   * @param string
+   * Specifies the duration for which App Check tokens exchanged from reCAPTCHA
+   * Enterprise tokens will be valid. If unset, a default value of 1 hour is
+   * assumed. Must be between 30 minutes and 7 days, inclusive.
+   *
+   * @param string $tokenTtl
    */
   public function setTokenTtl($tokenTtl)
   {

@@ -20,16 +20,28 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1AppAttestConfig extends \Google\Model
 {
   /**
+   * Required. The relative resource name of the App Attest configuration
+   * object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/appAttestConfig ```
+   *
    * @var string
    */
   public $name;
   /**
+   * Specifies the duration for which App Check tokens exchanged from App Attest
+   * artifacts will be valid. If unset, a default value of 1 hour is assumed.
+   * Must be between 30 minutes and 7 days, inclusive.
+   *
    * @var string
    */
   public $tokenTtl;
 
   /**
-   * @param string
+   * Required. The relative resource name of the App Attest configuration
+   * object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/appAttestConfig ```
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +55,11 @@ class GoogleFirebaseAppcheckV1AppAttestConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Specifies the duration for which App Check tokens exchanged from App Attest
+   * artifacts will be valid. If unset, a default value of 1 hour is assumed.
+   * Must be between 30 minutes and 7 days, inclusive.
+   *
+   * @param string $tokenTtl
    */
   public function setTokenTtl($tokenTtl)
   {

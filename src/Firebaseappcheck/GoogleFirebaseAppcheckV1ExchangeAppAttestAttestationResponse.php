@@ -22,12 +22,16 @@ class GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse extends \Goog
   protected $appCheckTokenType = GoogleFirebaseAppcheckV1AppCheckToken::class;
   protected $appCheckTokenDataType = '';
   /**
+   * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
+   *
    * @var string
    */
   public $artifact;
 
   /**
-   * @param GoogleFirebaseAppcheckV1AppCheckToken
+   * Encapsulates an App Check token.
+   *
+   * @param GoogleFirebaseAppcheckV1AppCheckToken $appCheckToken
    */
   public function setAppCheckToken(GoogleFirebaseAppcheckV1AppCheckToken $appCheckToken)
   {
@@ -41,7 +45,9 @@ class GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse extends \Goog
     return $this->appCheckToken;
   }
   /**
-   * @param string
+   * An artifact that can be used in future calls to ExchangeAppAttestAssertion.
+   *
+   * @param string $artifact
    */
   public function setArtifact($artifact)
   {

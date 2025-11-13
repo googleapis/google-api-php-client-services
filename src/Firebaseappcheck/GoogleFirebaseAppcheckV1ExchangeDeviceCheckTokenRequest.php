@@ -20,16 +20,31 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1ExchangeDeviceCheckTokenRequest extends \Google\Model
 {
   /**
+   * Required. The `device_token` as returned by Apple's client-side
+   * [DeviceCheck
+   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This
+   * is the base64 encoded `Data` (Swift) or `NSData` (ObjC) object.
+   *
    * @var string
    */
   public $deviceToken;
   /**
+   * Specifies whether this attestation is for use in a *limited use* (`true`)
+   * or *session based* (`false`) context. To enable this attestation to be used
+   * with the *replay protection* feature, set this to `true`. The default value
+   * is `false`.
+   *
    * @var bool
    */
   public $limitedUse;
 
   /**
-   * @param string
+   * Required. The `device_token` as returned by Apple's client-side
+   * [DeviceCheck
+   * API](https://developer.apple.com/documentation/devicecheck/dcdevice). This
+   * is the base64 encoded `Data` (Swift) or `NSData` (ObjC) object.
+   *
+   * @param string $deviceToken
    */
   public function setDeviceToken($deviceToken)
   {
@@ -43,7 +58,12 @@ class GoogleFirebaseAppcheckV1ExchangeDeviceCheckTokenRequest extends \Google\Mo
     return $this->deviceToken;
   }
   /**
-   * @param bool
+   * Specifies whether this attestation is for use in a *limited use* (`true`)
+   * or *session based* (`false`) context. To enable this attestation to be used
+   * with the *replay protection* feature, set this to `true`. The default value
+   * is `false`.
+   *
+   * @param bool $limitedUse
    */
   public function setLimitedUse($limitedUse)
   {

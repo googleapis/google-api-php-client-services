@@ -26,16 +26,32 @@ class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends \Google\Model
   protected $deviceIntegrityType = GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity::class;
   protected $deviceIntegrityDataType = '';
   /**
+   * Required. The relative resource name of the Play Integrity configuration
+   * object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+   *
    * @var string
    */
   public $name;
   /**
+   * Specifies the duration for which App Check tokens exchanged from Play
+   * Integrity tokens will be valid. If unset, a default value of 1 hour is
+   * assumed. Must be between 30 minutes and 7 days, inclusive.
+   *
    * @var string
    */
   public $tokenTtl;
 
   /**
-   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails
+   * Specifies account requirements for Android devices running your app. These
+   * settings correspond to requirements on the [**account details** field](http
+   * s://developer.android.com/google/play/integrity/verdicts#account-details-
+   * field) obtained from the Play Integrity API. See the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default)
+   * for a quick summary. The default values for these settings work for most
+   * apps, and are recommended.
+   *
+   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails $accountDetails
    */
   public function setAccountDetails(GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails $accountDetails)
   {
@@ -49,7 +65,16 @@ class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends \Google\Model
     return $this->accountDetails;
   }
   /**
-   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity
+   * Specifies application integrity requirements for Android devices running
+   * your app. These settings correspond to requirements on the [**application
+   * integrity** field](https://developer.android.com/google/play/integrity/verd
+   * icts#application-integrity-field) obtained from the Play Integrity API. See
+   * the [default responses
+   * table](https://developer.android.com/google/play/integrity/setup#default)
+   * for a quick summary. The default values for these settings work for most
+   * apps, and are recommended.
+   *
+   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity $appIntegrity
    */
   public function setAppIntegrity(GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity $appIntegrity)
   {
@@ -63,7 +88,21 @@ class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends \Google\Model
     return $this->appIntegrity;
   }
   /**
-   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity
+   * Specifies device integrity requirements for Android devices running your
+   * app. These settings correspond to requirements on the [**device integrity**
+   * field](https://developer.android.com/google/play/integrity/verdicts#device-
+   * integrity-field) obtained from the Play Integrity API. See the [default
+   * responses
+   * table](https://developer.android.com/google/play/integrity/setup#default)
+   * for a quick summary. Warning: There are also [conditional](https://develope
+   * r.android.com/google/play/integrity/setup#conditional) as well as [optional
+   * ](https://developer.android.com/google/play/integrity/setup#optional_device
+   * _information) responses that you can receive, but requires additional
+   * explicit opt-in from you. The App Check API is **not** responsible for any
+   * such opt-ins. The default values for these settings work for most apps, and
+   * are recommended.
+   *
+   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity $deviceIntegrity
    */
   public function setDeviceIntegrity(GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity $deviceIntegrity)
   {
@@ -77,7 +116,11 @@ class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends \Google\Model
     return $this->deviceIntegrity;
   }
   /**
-   * @param string
+   * Required. The relative resource name of the Play Integrity configuration
+   * object, in the format: ```
+   * projects/{project_number}/apps/{app_id}/playIntegrityConfig ```
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -91,7 +134,11 @@ class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Specifies the duration for which App Check tokens exchanged from Play
+   * Integrity tokens will be valid. If unset, a default value of 1 hour is
+   * assumed. Must be between 30 minutes and 7 days, inclusive.
+   *
+   * @param string $tokenTtl
    */
   public function setTokenTtl($tokenTtl)
   {

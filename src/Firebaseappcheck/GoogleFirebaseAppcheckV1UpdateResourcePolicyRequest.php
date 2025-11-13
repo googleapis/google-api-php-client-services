@@ -22,12 +22,22 @@ class GoogleFirebaseAppcheckV1UpdateResourcePolicyRequest extends \Google\Model
   protected $resourcePolicyType = GoogleFirebaseAppcheckV1ResourcePolicy::class;
   protected $resourcePolicyDataType = '';
   /**
+   * Required. A comma-separated list of names of fields in the ResourcePolicy
+   * to update. Example: `enforcement_mode`.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GoogleFirebaseAppcheckV1ResourcePolicy
+   * Required. The ResourcePolicy to update. The ResourcePolicy's `name` field
+   * is used to identify the ResourcePolicy to be updated, in the format: ``` pr
+   * ojects/{project_number}/services/{service_id}/resourcePolicies/{resource_po
+   * licy_id} ``` Note that the `service_id` element must be a supported service
+   * ID. Currently, the following service IDs are supported: *
+   * `oauth2.googleapis.com` (Google Identity for iOS)
+   *
+   * @param GoogleFirebaseAppcheckV1ResourcePolicy $resourcePolicy
    */
   public function setResourcePolicy(GoogleFirebaseAppcheckV1ResourcePolicy $resourcePolicy)
   {
@@ -41,7 +51,10 @@ class GoogleFirebaseAppcheckV1UpdateResourcePolicyRequest extends \Google\Model
     return $this->resourcePolicy;
   }
   /**
-   * @param string
+   * Required. A comma-separated list of names of fields in the ResourcePolicy
+   * to update. Example: `enforcement_mode`.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

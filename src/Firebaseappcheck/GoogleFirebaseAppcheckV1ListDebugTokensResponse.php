@@ -23,12 +23,20 @@ class GoogleFirebaseAppcheckV1ListDebugTokensResponse extends \Google\Collection
   protected $debugTokensType = GoogleFirebaseAppcheckV1DebugToken::class;
   protected $debugTokensDataType = 'array';
   /**
+   * If the result list is too large to fit in a single response, then a token
+   * is returned. If the string is empty or omitted, then this response is the
+   * last page of results. This token can be used in a subsequent call to
+   * ListDebugTokens to find the next group of DebugTokens. Page tokens are
+   * short-lived and should not be persisted.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleFirebaseAppcheckV1DebugToken[]
+   * The DebugTokens retrieved.
+   *
+   * @param GoogleFirebaseAppcheckV1DebugToken[] $debugTokens
    */
   public function setDebugTokens($debugTokens)
   {
@@ -42,7 +50,13 @@ class GoogleFirebaseAppcheckV1ListDebugTokensResponse extends \Google\Collection
     return $this->debugTokens;
   }
   /**
-   * @param string
+   * If the result list is too large to fit in a single response, then a token
+   * is returned. If the string is empty or omitted, then this response is the
+   * last page of results. This token can be used in a subsequent call to
+   * ListDebugTokens to find the next group of DebugTokens. Page tokens are
+   * short-lived and should not be persisted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,16 +20,34 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1AppCheckToken extends \Google\Model
 {
   /**
+   * The App Check token. App Check tokens are signed
+   * [JWTs](https://tools.ietf.org/html/rfc7519) containing claims that identify
+   * the attested app and GCP project. This token is used to access Google
+   * services protected by App Check. These tokens can also be [verified by your
+   * own custom backends](https://firebase.google.com/docs/app-check/custom-
+   * resource-backend) using the Firebase Admin SDK or third-party libraries.
+   *
    * @var string
    */
   public $token;
   /**
+   * The duration from the time this token is minted until its expiration. This
+   * field is intended to ease client-side token management, since the client
+   * may have clock skew, but is still able to accurately measure a duration.
+   *
    * @var string
    */
   public $ttl;
 
   /**
-   * @param string
+   * The App Check token. App Check tokens are signed
+   * [JWTs](https://tools.ietf.org/html/rfc7519) containing claims that identify
+   * the attested app and GCP project. This token is used to access Google
+   * services protected by App Check. These tokens can also be [verified by your
+   * own custom backends](https://firebase.google.com/docs/app-check/custom-
+   * resource-backend) using the Firebase Admin SDK or third-party libraries.
+   *
+   * @param string $token
    */
   public function setToken($token)
   {
@@ -43,7 +61,11 @@ class GoogleFirebaseAppcheckV1AppCheckToken extends \Google\Model
     return $this->token;
   }
   /**
-   * @param string
+   * The duration from the time this token is minted until its expiration. This
+   * field is intended to ease client-side token management, since the client
+   * may have clock skew, but is still able to accurately measure a duration.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {
