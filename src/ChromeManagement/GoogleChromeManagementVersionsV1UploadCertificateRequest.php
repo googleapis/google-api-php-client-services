@@ -20,12 +20,16 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1UploadCertificateRequest extends \Google\Model
 {
   /**
+   * Required. The issued certificate in PEM format.
+   *
    * @var string
    */
   public $certificatePem;
 
   /**
-   * @param string
+   * Required. The issued certificate in PEM format.
+   *
+   * @param string $certificatePem
    */
   public function setCertificatePem($certificatePem)
   {

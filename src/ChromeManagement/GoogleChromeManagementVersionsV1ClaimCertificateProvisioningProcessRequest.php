@@ -20,12 +20,16 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1ClaimCertificateProvisioningProcessRequest extends \Google\Model
 {
   /**
+   * Required. The instance id of the caller.
+   *
    * @var string
    */
   public $callerInstanceId;
 
   /**
-   * @param string
+   * Required. The instance id of the caller.
+   *
+   * @param string $callerInstanceId
    */
   public function setCallerInstanceId($callerInstanceId)
   {

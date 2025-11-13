@@ -20,16 +20,25 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1ChromeOsDevice extends \Google\Model
 {
   /**
+   * Output only. The unique Directory API ID of the device. This value is the
+   * same as the Admin Console's Directory API ID in the ChromeOS Devices tab.
+   *
    * @var string
    */
   public $deviceDirectoryApiId;
   /**
+   * Output only. Device serial number. This value is the same as the Admin
+   * Console's Serial Number in the ChromeOS Devices tab.
+   *
    * @var string
    */
   public $serialNumber;
 
   /**
-   * @param string
+   * Output only. The unique Directory API ID of the device. This value is the
+   * same as the Admin Console's Directory API ID in the ChromeOS Devices tab.
+   *
+   * @param string $deviceDirectoryApiId
    */
   public function setDeviceDirectoryApiId($deviceDirectoryApiId)
   {
@@ -43,7 +52,10 @@ class GoogleChromeManagementVersionsV1ChromeOsDevice extends \Google\Model
     return $this->deviceDirectoryApiId;
   }
   /**
-   * @param string
+   * Output only. Device serial number. This value is the same as the Admin
+   * Console's Serial Number in the ChromeOS Devices tab.
+   *
+   * @param string $serialNumber
    */
   public function setSerialNumber($serialNumber)
   {

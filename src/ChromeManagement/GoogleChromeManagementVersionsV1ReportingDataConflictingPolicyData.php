@@ -20,19 +20,50 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1ReportingDataConflictingPolicyData extends \Google\Model
 {
   /**
+   * Represents an unspecified policy source.
+   */
+  public const SOURCE_POLICY_SOURCE_UNSPECIFIED = 'POLICY_SOURCE_UNSPECIFIED';
+  /**
+   * Represents a machine level platform policy.
+   */
+  public const SOURCE_MACHINE_PLATFORM = 'MACHINE_PLATFORM';
+  /**
+   * Represents a user level platform policy.
+   */
+  public const SOURCE_USER_PLATFORM = 'USER_PLATFORM';
+  /**
+   * Represents a machine level user cloud policy.
+   */
+  public const SOURCE_MACHINE_LEVEL_USER_CLOUD = 'MACHINE_LEVEL_USER_CLOUD';
+  /**
+   * Represents a user level cloud policy.
+   */
+  public const SOURCE_USER_CLOUD = 'USER_CLOUD';
+  /**
+   * Represents a machine level merged policy.
+   */
+  public const SOURCE_MACHINE_MERGED = 'MACHINE_MERGED';
+  /**
+   * Output only. Source of the policy.
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param string
+   * Output only. Source of the policy.
+   *
+   * Accepted values: POLICY_SOURCE_UNSPECIFIED, MACHINE_PLATFORM,
+   * USER_PLATFORM, MACHINE_LEVEL_USER_CLOUD, USER_CLOUD, MACHINE_MERGED
+   *
+   * @param self::SOURCE_* $source
    */
   public function setSource($source)
   {
     $this->source = $source;
   }
   /**
-   * @return string
+   * @return self::SOURCE_*
    */
   public function getSource()
   {

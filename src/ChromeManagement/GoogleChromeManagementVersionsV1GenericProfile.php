@@ -20,12 +20,18 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1GenericProfile extends \Google\Model
 {
   /**
+   * Output only. A string that references the administrator-provided
+   * configuration for the certificate provisioning profile.
+   *
    * @var string
    */
   public $profileAdapterConfigReference;
 
   /**
-   * @param string
+   * Output only. A string that references the administrator-provided
+   * configuration for the certificate provisioning profile.
+   *
+   * @param string $profileAdapterConfigReference
    */
   public function setProfileAdapterConfigReference($profileAdapterConfigReference)
   {

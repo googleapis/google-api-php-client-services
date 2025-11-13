@@ -21,42 +21,64 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
 {
   protected $collection_key = 'subjectAltNames';
   /**
+   * Output only. The certificate template name as defined by the admin on their
+   * on-prem infrastructure. The Certificate Authority uses this name to
+   * identify the certificate template.
+   *
    * @var string
    */
   public $certificateTemplateName;
   /**
+   * Output only. The country of the subject.
+   *
    * @var string
    */
   public $country;
   /**
+   * Output only. The allowed key usages for certificate's key.
+   *
    * @var string[]
    */
   public $keyUsages;
   /**
+   * Output only. The locality of the subject.
+   *
    * @var string
    */
   public $locality;
   /**
+   * Output only. The name of the organization the subject belongs to.
+   *
    * @var string
    */
   public $organization;
   /**
+   * Output only. The organizational units of the subject.
+   *
    * @var string[]
    */
   public $organizationalUnits;
   /**
+   * Output only. The state of the subject.
+   *
    * @var string
    */
   public $state;
   protected $subjectAltNamesType = GoogleChromeManagementVersionsV1SubjectAltName::class;
   protected $subjectAltNamesDataType = 'array';
   /**
+   * Output only. The common name of the subject.
+   *
    * @var string
    */
   public $subjectCommonName;
 
   /**
-   * @param string
+   * Output only. The certificate template name as defined by the admin on their
+   * on-prem infrastructure. The Certificate Authority uses this name to
+   * identify the certificate template.
+   *
+   * @param string $certificateTemplateName
    */
   public function setCertificateTemplateName($certificateTemplateName)
   {
@@ -70,7 +92,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->certificateTemplateName;
   }
   /**
-   * @param string
+   * Output only. The country of the subject.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -84,7 +108,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->country;
   }
   /**
-   * @param string[]
+   * Output only. The allowed key usages for certificate's key.
+   *
+   * @param string[] $keyUsages
    */
   public function setKeyUsages($keyUsages)
   {
@@ -98,7 +124,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->keyUsages;
   }
   /**
-   * @param string
+   * Output only. The locality of the subject.
+   *
+   * @param string $locality
    */
   public function setLocality($locality)
   {
@@ -112,7 +140,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->locality;
   }
   /**
-   * @param string
+   * Output only. The name of the organization the subject belongs to.
+   *
+   * @param string $organization
    */
   public function setOrganization($organization)
   {
@@ -126,7 +156,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->organization;
   }
   /**
-   * @param string[]
+   * Output only. The organizational units of the subject.
+   *
+   * @param string[] $organizationalUnits
    */
   public function setOrganizationalUnits($organizationalUnits)
   {
@@ -140,7 +172,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->organizationalUnits;
   }
   /**
-   * @param string
+   * Output only. The state of the subject.
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -154,7 +188,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->state;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1SubjectAltName[]
+   * Output only. The subject alternative names.
+   *
+   * @param GoogleChromeManagementVersionsV1SubjectAltName[] $subjectAltNames
    */
   public function setSubjectAltNames($subjectAltNames)
   {
@@ -168,7 +204,9 @@ class GoogleChromeManagementVersionsV1ScepProfile extends \Google\Collection
     return $this->subjectAltNames;
   }
   /**
-   * @param string
+   * Output only. The common name of the subject.
+   *
+   * @param string $subjectCommonName
    */
   public function setSubjectCommonName($subjectCommonName)
   {

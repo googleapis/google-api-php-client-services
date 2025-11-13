@@ -20,124 +20,227 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
 {
   /**
+   * Unspecified affiliation state.
+   */
+  public const AFFILIATION_STATE_AFFILIATION_STATE_UNSPECIFIED = 'AFFILIATION_STATE_UNSPECIFIED';
+  /**
+   * Unaffiliated - but we do not have the details for the type of unaffiliated
+   * profile.
+   */
+  public const AFFILIATION_STATE_UNAFFILIATED_GENERIC = 'UNAFFILIATED_GENERIC';
+  /**
+   * Unaffiliated - A managed profile that appears on a totally unamanaged
+   * browser.
+   */
+  public const AFFILIATION_STATE_PROFILE_ONLY = 'PROFILE_ONLY';
+  /**
+   * Unaffiliated - A managed profile that appears on a machine that is locally
+   * managed by a different organization (through platform management mechanisms
+   * like GPO).
+   */
+  public const AFFILIATION_STATE_UNAFFILIATED_LOCAL_MACHINE = 'UNAFFILIATED_LOCAL_MACHINE';
+  /**
+   * Unaffiliated - A managed profile that appears on a managed browser that is
+   * cloud managed by a different organization (using Chrome Browser Cloud
+   * Management).
+   */
+  public const AFFILIATION_STATE_UNAFFILIATED_CLOUD_MACHINE = 'UNAFFILIATED_CLOUD_MACHINE';
+  /**
+   * Affiliated - Both the profile and the managed browser are managed by the
+   * same organization.
+   */
+  public const AFFILIATION_STATE_AFFILIATED_CLOUD_MANAGED = 'AFFILIATED_CLOUD_MANAGED';
+  /**
+   * Represents an unspecified identity provider.
+   */
+  public const IDENTITY_PROVIDER_IDENTITY_PROVIDER_UNSPECIFIED = 'IDENTITY_PROVIDER_UNSPECIFIED';
+  /**
+   * Represents a Google identity provider.
+   */
+  public const IDENTITY_PROVIDER_GOOGLE_IDENTITY_PROVIDER = 'GOOGLE_IDENTITY_PROVIDER';
+  /**
+   * Represents an external identity provider.
+   */
+  public const IDENTITY_PROVIDER_EXTERNAL_IDENTITY_PROVIDER = 'EXTERNAL_IDENTITY_PROVIDER';
+  /**
+   * Output only. The specific affiliation state of the profile.
+   *
    * @var string
    */
   public $affiliationState;
   /**
+   * Optional. Location of the profile annotated by the admin.
+   *
    * @var string
    */
   public $annotatedLocation;
   /**
+   * Optional. User of the profile annotated by the admin.
+   *
    * @var string
    */
   public $annotatedUser;
   protected $attestationCredentialType = GoogleChromeManagementVersionsV1AttestationCredential::class;
   protected $attestationCredentialDataType = '';
   /**
+   * Output only. Channel of the browser on which the profile exists.
+   *
    * @var string
    */
   public $browserChannel;
   /**
+   * Output only. Version of the browser on which the profile exists.
+   *
    * @var string
    */
   public $browserVersion;
   protected $deviceInfoType = GoogleChromeManagementVersionsV1DeviceInfo::class;
   protected $deviceInfoDataType = '';
   /**
+   * Output only. Profile display name set by client.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Etag of this ChromeBrowserProfile resource. This etag can be
+   * used with UPDATE operation to ensure consistency.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. Number of extensions installed on the profile.
+   *
    * @var string
    */
   public $extensionCount;
   /**
+   * Output only. Timestamp of the first enrollment of the profile.
+   *
    * @var string
    */
   public $firstEnrollmentTime;
   /**
+   * Output only. Identify provider of the profile.
+   *
    * @var string
    */
   public $identityProvider;
   /**
+   * Output only. Timestamp of the latest activity by the profile.
+   *
    * @var string
    */
   public $lastActivityTime;
   /**
+   * Output only. Timestamp of the latest policy fetch by the profile.
+   *
    * @var string
    */
   public $lastPolicyFetchTime;
   /**
+   * Output only. Timestamp of the latest policy sync by the profile.
+   *
    * @var string
    */
   public $lastPolicySyncTime;
   /**
+   * Output only. Timestamp of the latest status report by the profile.
+   *
    * @var string
    */
   public $lastStatusReportTime;
   /**
+   * Identifier. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. OS platform of the device on which the profile exists.
+   *
    * @var string
    */
   public $osPlatformType;
   /**
+   * Output only. Major OS platform version of the device on which the profile
+   * exists, from profile reporting.
+   *
    * @var string
    */
   public $osPlatformVersion;
   /**
+   * Output only. OS version of the device on which the profile exists.
+   *
    * @var string
    */
   public $osVersion;
   /**
+   * Output only. Number of policies applied on the profile.
+   *
    * @var string
    */
   public $policyCount;
   /**
+   * Output only. Chrome client side profile ID.
+   *
    * @var string
    */
   public $profileId;
   /**
+   * Output only. Profile permanent ID is the unique identifier of a profile
+   * within one customer.
+   *
    * @var string
    */
   public $profilePermanentId;
   protected $reportingDataType = GoogleChromeManagementVersionsV1ReportingData::class;
   protected $reportingDataDataType = '';
   /**
+   * Output only. Whether the profile supports FCM notifications.
+   *
    * @var bool
    */
   public $supportsFcmNotifications;
   /**
+   * Output only. Email address of the user to which the profile belongs.
+   *
    * @var string
    */
   public $userEmail;
   /**
+   * Output only. Unique Directory API ID of the user that can be used in Admin
+   * SDK Users API.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param string
+   * Output only. The specific affiliation state of the profile.
+   *
+   * Accepted values: AFFILIATION_STATE_UNSPECIFIED, UNAFFILIATED_GENERIC,
+   * PROFILE_ONLY, UNAFFILIATED_LOCAL_MACHINE, UNAFFILIATED_CLOUD_MACHINE,
+   * AFFILIATED_CLOUD_MANAGED
+   *
+   * @param self::AFFILIATION_STATE_* $affiliationState
    */
   public function setAffiliationState($affiliationState)
   {
     $this->affiliationState = $affiliationState;
   }
   /**
-   * @return string
+   * @return self::AFFILIATION_STATE_*
    */
   public function getAffiliationState()
   {
     return $this->affiliationState;
   }
   /**
-   * @param string
+   * Optional. Location of the profile annotated by the admin.
+   *
+   * @param string $annotatedLocation
    */
   public function setAnnotatedLocation($annotatedLocation)
   {
@@ -151,7 +254,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->annotatedLocation;
   }
   /**
-   * @param string
+   * Optional. User of the profile annotated by the admin.
+   *
+   * @param string $annotatedUser
    */
   public function setAnnotatedUser($annotatedUser)
   {
@@ -165,7 +270,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->annotatedUser;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1AttestationCredential
+   * Output only. Attestation credential information of the profile.
+   *
+   * @param GoogleChromeManagementVersionsV1AttestationCredential $attestationCredential
    */
   public function setAttestationCredential(GoogleChromeManagementVersionsV1AttestationCredential $attestationCredential)
   {
@@ -179,7 +286,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->attestationCredential;
   }
   /**
-   * @param string
+   * Output only. Channel of the browser on which the profile exists.
+   *
+   * @param string $browserChannel
    */
   public function setBrowserChannel($browserChannel)
   {
@@ -193,7 +302,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->browserChannel;
   }
   /**
-   * @param string
+   * Output only. Version of the browser on which the profile exists.
+   *
+   * @param string $browserVersion
    */
   public function setBrowserVersion($browserVersion)
   {
@@ -207,7 +318,10 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->browserVersion;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1DeviceInfo
+   * Output only. Basic information of the device on which the profile exists.
+   * This information is only available for the affiliated profiles.
+   *
+   * @param GoogleChromeManagementVersionsV1DeviceInfo $deviceInfo
    */
   public function setDeviceInfo(GoogleChromeManagementVersionsV1DeviceInfo $deviceInfo)
   {
@@ -221,7 +335,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->deviceInfo;
   }
   /**
-   * @param string
+   * Output only. Profile display name set by client.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -235,7 +351,10 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Etag of this ChromeBrowserProfile resource. This etag can be
+   * used with UPDATE operation to ensure consistency.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -249,7 +368,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. Number of extensions installed on the profile.
+   *
+   * @param string $extensionCount
    */
   public function setExtensionCount($extensionCount)
   {
@@ -263,7 +384,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->extensionCount;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the first enrollment of the profile.
+   *
+   * @param string $firstEnrollmentTime
    */
   public function setFirstEnrollmentTime($firstEnrollmentTime)
   {
@@ -277,21 +400,28 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->firstEnrollmentTime;
   }
   /**
-   * @param string
+   * Output only. Identify provider of the profile.
+   *
+   * Accepted values: IDENTITY_PROVIDER_UNSPECIFIED, GOOGLE_IDENTITY_PROVIDER,
+   * EXTERNAL_IDENTITY_PROVIDER
+   *
+   * @param self::IDENTITY_PROVIDER_* $identityProvider
    */
   public function setIdentityProvider($identityProvider)
   {
     $this->identityProvider = $identityProvider;
   }
   /**
-   * @return string
+   * @return self::IDENTITY_PROVIDER_*
    */
   public function getIdentityProvider()
   {
     return $this->identityProvider;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the latest activity by the profile.
+   *
+   * @param string $lastActivityTime
    */
   public function setLastActivityTime($lastActivityTime)
   {
@@ -305,7 +435,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->lastActivityTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the latest policy fetch by the profile.
+   *
+   * @param string $lastPolicyFetchTime
    */
   public function setLastPolicyFetchTime($lastPolicyFetchTime)
   {
@@ -319,7 +451,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->lastPolicyFetchTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the latest policy sync by the profile.
+   *
+   * @param string $lastPolicySyncTime
    */
   public function setLastPolicySyncTime($lastPolicySyncTime)
   {
@@ -333,7 +467,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->lastPolicySyncTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the latest status report by the profile.
+   *
+   * @param string $lastStatusReportTime
    */
   public function setLastStatusReportTime($lastStatusReportTime)
   {
@@ -347,7 +483,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->lastStatusReportTime;
   }
   /**
-   * @param string
+   * Identifier. Format: customers/{customer_id}/profiles/{profile_permanent_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -361,7 +499,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. OS platform of the device on which the profile exists.
+   *
+   * @param string $osPlatformType
    */
   public function setOsPlatformType($osPlatformType)
   {
@@ -375,7 +515,10 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->osPlatformType;
   }
   /**
-   * @param string
+   * Output only. Major OS platform version of the device on which the profile
+   * exists, from profile reporting.
+   *
+   * @param string $osPlatformVersion
    */
   public function setOsPlatformVersion($osPlatformVersion)
   {
@@ -389,7 +532,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->osPlatformVersion;
   }
   /**
-   * @param string
+   * Output only. OS version of the device on which the profile exists.
+   *
+   * @param string $osVersion
    */
   public function setOsVersion($osVersion)
   {
@@ -403,7 +548,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->osVersion;
   }
   /**
-   * @param string
+   * Output only. Number of policies applied on the profile.
+   *
+   * @param string $policyCount
    */
   public function setPolicyCount($policyCount)
   {
@@ -417,7 +564,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->policyCount;
   }
   /**
-   * @param string
+   * Output only. Chrome client side profile ID.
+   *
+   * @param string $profileId
    */
   public function setProfileId($profileId)
   {
@@ -431,7 +580,10 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->profileId;
   }
   /**
-   * @param string
+   * Output only. Profile permanent ID is the unique identifier of a profile
+   * within one customer.
+   *
+   * @param string $profilePermanentId
    */
   public function setProfilePermanentId($profilePermanentId)
   {
@@ -445,7 +597,10 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->profilePermanentId;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1ReportingData
+   * Output only. Detailed reporting data of the profile. This information is
+   * only available when the profile reporting policy is enabled.
+   *
+   * @param GoogleChromeManagementVersionsV1ReportingData $reportingData
    */
   public function setReportingData(GoogleChromeManagementVersionsV1ReportingData $reportingData)
   {
@@ -459,7 +614,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->reportingData;
   }
   /**
-   * @param bool
+   * Output only. Whether the profile supports FCM notifications.
+   *
+   * @param bool $supportsFcmNotifications
    */
   public function setSupportsFcmNotifications($supportsFcmNotifications)
   {
@@ -473,7 +630,9 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->supportsFcmNotifications;
   }
   /**
-   * @param string
+   * Output only. Email address of the user to which the profile belongs.
+   *
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {
@@ -487,7 +646,10 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfile extends \Google\Model
     return $this->userEmail;
   }
   /**
-   * @param string
+   * Output only. Unique Directory API ID of the user that can be used in Admin
+   * SDK Users API.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserRequest extends \Google\Model
 {
   /**
+   * Required. Destination organizational unit where the third party chrome
+   * profile user will be moved to.
+   *
    * @var string
    */
   public $destinationOrgUnit;
 
   /**
-   * @param string
+   * Required. Destination organizational unit where the third party chrome
+   * profile user will be moved to.
+   *
+   * @param string $destinationOrgUnit
    */
   public function setDestinationOrgUnit($destinationOrgUnit)
   {

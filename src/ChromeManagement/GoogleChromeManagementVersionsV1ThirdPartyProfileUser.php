@@ -20,16 +20,24 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1ThirdPartyProfileUser extends \Google\Model
 {
   /**
+   * Identifier. Format: customers/{customer_id}/thirdPartyProfileUsers/{third_p
+   * arty_profile_user_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The ID of the organizational unit assigned to the user.
+   *
    * @var string
    */
   public $orgUnitId;
 
   /**
-   * @param string
+   * Identifier. Format: customers/{customer_id}/thirdPartyProfileUsers/{third_p
+   * arty_profile_user_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,9 @@ class GoogleChromeManagementVersionsV1ThirdPartyProfileUser extends \Google\Mode
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The ID of the organizational unit assigned to the user.
+   *
+   * @param string $orgUnitId
    */
   public function setOrgUnitId($orgUnitId)
   {

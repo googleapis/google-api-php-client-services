@@ -20,16 +20,38 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1SignDataRequest extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const SIGNATURE_ALGORITHM_SIGNATURE_ALGORITHM_UNSPECIFIED = 'SIGNATURE_ALGORITHM_UNSPECIFIED';
+  /**
+   * The server-side builds the PKCS#1 DigestInfo and sends a SHA256 hash of it
+   * to the client. The client should sign using RSA with PKCS#1 v1.5 padding.
+   */
+  public const SIGNATURE_ALGORITHM_SIGNATURE_ALGORITHM_RSA_PKCS1_V1_5_SHA256 = 'SIGNATURE_ALGORITHM_RSA_PKCS1_V1_5_SHA256';
+  /**
+   * The server-side builds the PKCS#1 DigestInfo and sends it unhashed to the
+   * client. The client is responsible for signing and hashing using the P-256
+   * curve.
+   */
+  public const SIGNATURE_ALGORITHM_SIGNATURE_ALGORITHM_ECDSA_SHA256 = 'SIGNATURE_ALGORITHM_ECDSA_SHA256';
+  /**
+   * Required. The data that the client was asked to sign.
+   *
    * @var string
    */
   public $signData;
   /**
+   * Required. The signature algorithm that the adapter expects the client and
+   * backend components to use when processing `sign_data`.
+   *
    * @var string
    */
   public $signatureAlgorithm;
 
   /**
-   * @param string
+   * Required. The data that the client was asked to sign.
+   *
+   * @param string $signData
    */
   public function setSignData($signData)
   {
@@ -43,14 +65,20 @@ class GoogleChromeManagementVersionsV1SignDataRequest extends \Google\Model
     return $this->signData;
   }
   /**
-   * @param string
+   * Required. The signature algorithm that the adapter expects the client and
+   * backend components to use when processing `sign_data`.
+   *
+   * Accepted values: SIGNATURE_ALGORITHM_UNSPECIFIED,
+   * SIGNATURE_ALGORITHM_RSA_PKCS1_V1_5_SHA256, SIGNATURE_ALGORITHM_ECDSA_SHA256
+   *
+   * @param self::SIGNATURE_ALGORITHM_* $signatureAlgorithm
    */
   public function setSignatureAlgorithm($signatureAlgorithm)
   {
     $this->signatureAlgorithm = $signatureAlgorithm;
   }
   /**
-   * @return string
+   * @return self::SIGNATURE_ALGORITHM_*
    */
   public function getSignatureAlgorithm()
   {

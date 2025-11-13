@@ -19,11 +19,30 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const SIGNATURE_ALGORITHM_SIGNATURE_ALGORITHM_UNSPECIFIED = 'SIGNATURE_ALGORITHM_UNSPECIFIED';
+  /**
+   * The server-side builds the PKCS#1 DigestInfo and sends a SHA256 hash of it
+   * to the client. The client should sign using RSA with PKCS#1 v1.5 padding.
+   */
+  public const SIGNATURE_ALGORITHM_SIGNATURE_ALGORITHM_RSA_PKCS1_V1_5_SHA256 = 'SIGNATURE_ALGORITHM_RSA_PKCS1_V1_5_SHA256';
+  /**
+   * The server-side builds the PKCS#1 DigestInfo and sends it unhashed to the
+   * client. The client is responsible for signing and hashing using the P-256
+   * curve.
+   */
+  public const SIGNATURE_ALGORITHM_SIGNATURE_ALGORITHM_ECDSA_SHA256 = 'SIGNATURE_ALGORITHM_ECDSA_SHA256';
   protected $chromeOsDeviceType = GoogleChromeManagementVersionsV1ChromeOsDevice::class;
   protected $chromeOsDeviceDataType = '';
   protected $chromeOsUserSessionType = GoogleChromeManagementVersionsV1ChromeOsUserSession::class;
   protected $chromeOsUserSessionDataType = '';
   /**
+   * Output only. A message describing why this `CertificateProvisioningProcess`
+   * has failed. Presence of this field indicates that the
+   * `CertificateProvisioningProcess` has failed.
+   *
    * @var string
    */
   public $failureMessage;
@@ -32,14 +51,25 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
   protected $genericProfileType = GoogleChromeManagementVersionsV1GenericProfile::class;
   protected $genericProfileDataType = '';
   /**
+   * Output only. The issued certificate for this
+   * `CertificateProvisioningProcess` in PEM format.
+   *
    * @var string
    */
   public $issuedCertificate;
   /**
+   * Identifier. Resource name of the `CertificateProvisioningProcess`. The name
+   * pattern is given as `customers/{customer}/certificateProvisioningProcesses/
+   * {certificate_provisioning_process}` with `{customer}` being the obfuscated
+   * customer id and `{certificate_provisioning_process}` being the certificate
+   * provisioning process id.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The ID of the certificate provisioning profile.
+   *
    * @var string
    */
   public $provisioningProfileId;
@@ -48,28 +78,50 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
   protected $scepProfileType = GoogleChromeManagementVersionsV1ScepProfile::class;
   protected $scepProfileDataType = '';
   /**
+   * Output only. The data that the client was asked to sign. This field is only
+   * present after the `SignData` operation has been initiated.
+   *
    * @var string
    */
   public $signData;
   /**
+   * Output only. The signature of `signature_algorithm`, generated using the
+   * client's private key using `signature_algorithm`. This field is only
+   * present after the `SignData` operation has finished.
+   *
    * @var string
    */
   public $signature;
   /**
+   * Output only. The signature algorithm that the client and backend components
+   * use when processing `sign_data`. If the `profile_type` is a
+   * `GenericProfile`, this field will only be present after the `SignData`
+   * operation was initiated. If the `profile_type` is a `ScepProfile`, the
+   * field will always be present.
+   *
    * @var string
    */
   public $signatureAlgorithm;
   /**
+   * Output only. Server-generated timestamp of when the certificate
+   * provisioning process has been created.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The public key for which a certificate should be provisioned.
+   * Represented as a DER-encoded X.509 SubjectPublicKeyInfo.
+   *
    * @var string
    */
   public $subjectPublicKeyInfo;
 
   /**
-   * @param GoogleChromeManagementVersionsV1ChromeOsDevice
+   * Output only. The client certificate is being provisioned for a ChromeOS
+   * device. This contains information about the device.
+   *
+   * @param GoogleChromeManagementVersionsV1ChromeOsDevice $chromeOsDevice
    */
   public function setChromeOsDevice(GoogleChromeManagementVersionsV1ChromeOsDevice $chromeOsDevice)
   {
@@ -83,7 +135,10 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->chromeOsDevice;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1ChromeOsUserSession
+   * Output only. The client certificate is being provisioned for a ChromeOS
+   * user. This contains information about the current user session.
+   *
+   * @param GoogleChromeManagementVersionsV1ChromeOsUserSession $chromeOsUserSession
    */
   public function setChromeOsUserSession(GoogleChromeManagementVersionsV1ChromeOsUserSession $chromeOsUserSession)
   {
@@ -97,7 +152,11 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->chromeOsUserSession;
   }
   /**
-   * @param string
+   * Output only. A message describing why this `CertificateProvisioningProcess`
+   * has failed. Presence of this field indicates that the
+   * `CertificateProvisioningProcess` has failed.
+   *
+   * @param string $failureMessage
    */
   public function setFailureMessage($failureMessage)
   {
@@ -111,7 +170,9 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->failureMessage;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1GenericCaConnection
+   * Output only. The CA connection is a generic CA connection.
+   *
+   * @param GoogleChromeManagementVersionsV1GenericCaConnection $genericCaConnection
    */
   public function setGenericCaConnection(GoogleChromeManagementVersionsV1GenericCaConnection $genericCaConnection)
   {
@@ -125,7 +186,9 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->genericCaConnection;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1GenericProfile
+   * Output only. The profile is a generic certificate provisioning profile.
+   *
+   * @param GoogleChromeManagementVersionsV1GenericProfile $genericProfile
    */
   public function setGenericProfile(GoogleChromeManagementVersionsV1GenericProfile $genericProfile)
   {
@@ -139,7 +202,10 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->genericProfile;
   }
   /**
-   * @param string
+   * Output only. The issued certificate for this
+   * `CertificateProvisioningProcess` in PEM format.
+   *
+   * @param string $issuedCertificate
    */
   public function setIssuedCertificate($issuedCertificate)
   {
@@ -153,7 +219,13 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->issuedCertificate;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the `CertificateProvisioningProcess`. The name
+   * pattern is given as `customers/{customer}/certificateProvisioningProcesses/
+   * {certificate_provisioning_process}` with `{customer}` being the obfuscated
+   * customer id and `{certificate_provisioning_process}` being the certificate
+   * provisioning process id.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -167,7 +239,9 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The ID of the certificate provisioning profile.
+   *
+   * @param string $provisioningProfileId
    */
   public function setProvisioningProfileId($provisioningProfileId)
   {
@@ -181,7 +255,9 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->provisioningProfileId;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1ScepCaConnection
+   * Output only. The CA connection is a SCEP CA connection.
+   *
+   * @param GoogleChromeManagementVersionsV1ScepCaConnection $scepCaConnection
    */
   public function setScepCaConnection(GoogleChromeManagementVersionsV1ScepCaConnection $scepCaConnection)
   {
@@ -195,7 +271,9 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->scepCaConnection;
   }
   /**
-   * @param GoogleChromeManagementVersionsV1ScepProfile
+   * Output only. The profile is a SCEP certificate provisioning profile.
+   *
+   * @param GoogleChromeManagementVersionsV1ScepProfile $scepProfile
    */
   public function setScepProfile(GoogleChromeManagementVersionsV1ScepProfile $scepProfile)
   {
@@ -209,7 +287,10 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->scepProfile;
   }
   /**
-   * @param string
+   * Output only. The data that the client was asked to sign. This field is only
+   * present after the `SignData` operation has been initiated.
+   *
+   * @param string $signData
    */
   public function setSignData($signData)
   {
@@ -223,7 +304,11 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->signData;
   }
   /**
-   * @param string
+   * Output only. The signature of `signature_algorithm`, generated using the
+   * client's private key using `signature_algorithm`. This field is only
+   * present after the `SignData` operation has finished.
+   *
+   * @param string $signature
    */
   public function setSignature($signature)
   {
@@ -237,21 +322,33 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->signature;
   }
   /**
-   * @param string
+   * Output only. The signature algorithm that the client and backend components
+   * use when processing `sign_data`. If the `profile_type` is a
+   * `GenericProfile`, this field will only be present after the `SignData`
+   * operation was initiated. If the `profile_type` is a `ScepProfile`, the
+   * field will always be present.
+   *
+   * Accepted values: SIGNATURE_ALGORITHM_UNSPECIFIED,
+   * SIGNATURE_ALGORITHM_RSA_PKCS1_V1_5_SHA256, SIGNATURE_ALGORITHM_ECDSA_SHA256
+   *
+   * @param self::SIGNATURE_ALGORITHM_* $signatureAlgorithm
    */
   public function setSignatureAlgorithm($signatureAlgorithm)
   {
     $this->signatureAlgorithm = $signatureAlgorithm;
   }
   /**
-   * @return string
+   * @return self::SIGNATURE_ALGORITHM_*
    */
   public function getSignatureAlgorithm()
   {
     return $this->signatureAlgorithm;
   }
   /**
-   * @param string
+   * Output only. Server-generated timestamp of when the certificate
+   * provisioning process has been created.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -265,7 +362,10 @@ class GoogleChromeManagementVersionsV1CertificateProvisioningProcess extends \Go
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The public key for which a certificate should be provisioned.
+   * Represented as a DER-encoded X.509 SubjectPublicKeyInfo.
+   *
+   * @param string $subjectPublicKeyInfo
    */
   public function setSubjectPublicKeyInfo($subjectPublicKeyInfo)
   {

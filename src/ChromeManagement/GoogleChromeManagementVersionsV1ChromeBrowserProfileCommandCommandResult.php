@@ -20,20 +20,45 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommandCommandResult extends \Google\Model
 {
   /**
+   * Represents an unspecified command result.
+   */
+  public const RESULT_TYPE_COMMAND_RESULT_TYPE_UNSPECIFIED = 'COMMAND_RESULT_TYPE_UNSPECIFIED';
+  /**
+   * Represents a command with an ignored result.
+   */
+  public const RESULT_TYPE_IGNORED = 'IGNORED';
+  /**
+   * Represents a failed command.
+   */
+  public const RESULT_TYPE_FAILURE = 'FAILURE';
+  /**
+   * Represents a succeeded command.
+   */
+  public const RESULT_TYPE_SUCCESS = 'SUCCESS';
+  /**
+   * Output only. Timestamp of the client execution of the remote command.
+   *
    * @var string
    */
   public $clientExecutionTime;
   /**
+   * Output only. Result code that indicates the type of error or success of the
+   * command.
+   *
    * @var string
    */
   public $resultCode;
   /**
+   * Output only. Result type of the remote command.
+   *
    * @var string
    */
   public $resultType;
 
   /**
-   * @param string
+   * Output only. Timestamp of the client execution of the remote command.
+   *
+   * @param string $clientExecutionTime
    */
   public function setClientExecutionTime($clientExecutionTime)
   {
@@ -47,7 +72,10 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommandCommandResult e
     return $this->clientExecutionTime;
   }
   /**
-   * @param string
+   * Output only. Result code that indicates the type of error or success of the
+   * command.
+   *
+   * @param string $resultCode
    */
   public function setResultCode($resultCode)
   {
@@ -61,14 +89,18 @@ class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommandCommandResult e
     return $this->resultCode;
   }
   /**
-   * @param string
+   * Output only. Result type of the remote command.
+   *
+   * Accepted values: COMMAND_RESULT_TYPE_UNSPECIFIED, IGNORED, FAILURE, SUCCESS
+   *
+   * @param self::RESULT_TYPE_* $resultType
    */
   public function setResultType($resultType)
   {
     $this->resultType = $resultType;
   }
   /**
-   * @return string
+   * @return self::RESULT_TYPE_*
    */
   public function getResultType()
   {

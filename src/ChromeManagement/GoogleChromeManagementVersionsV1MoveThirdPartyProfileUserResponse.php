@@ -23,7 +23,9 @@ class GoogleChromeManagementVersionsV1MoveThirdPartyProfileUserResponse extends 
   protected $thirdPartyProfileUserDataType = '';
 
   /**
-   * @param GoogleChromeManagementVersionsV1ThirdPartyProfileUser
+   * Output only. The moved third party profile user.
+   *
+   * @param GoogleChromeManagementVersionsV1ThirdPartyProfileUser $thirdPartyProfileUser
    */
   public function setThirdPartyProfileUser(GoogleChromeManagementVersionsV1ThirdPartyProfileUser $thirdPartyProfileUser)
   {
