@@ -22,12 +22,16 @@ class GooglePlayDeveloperReportingV1beta1CrashRateMetricSet extends \Google\Mode
   protected $freshnessInfoType = GooglePlayDeveloperReportingV1beta1FreshnessInfo::class;
   protected $freshnessInfoDataType = '';
   /**
+   * Identifier. The resource name. Format: apps/{app}/crashRateMetricSet
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GooglePlayDeveloperReportingV1beta1FreshnessInfo
+   * Summary about data freshness in this resource.
+   *
+   * @param GooglePlayDeveloperReportingV1beta1FreshnessInfo $freshnessInfo
    */
   public function setFreshnessInfo(GooglePlayDeveloperReportingV1beta1FreshnessInfo $freshnessInfo)
   {
@@ -41,7 +45,9 @@ class GooglePlayDeveloperReportingV1beta1CrashRateMetricSet extends \Google\Mode
     return $this->freshnessInfo;
   }
   /**
-   * @param string
+   * Identifier. The resource name. Format: apps/{app}/crashRateMetricSet
+   *
+   * @param string $name
    */
   public function setName($name)
   {

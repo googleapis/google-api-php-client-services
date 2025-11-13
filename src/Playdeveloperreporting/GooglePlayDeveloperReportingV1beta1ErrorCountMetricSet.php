@@ -22,12 +22,16 @@ class GooglePlayDeveloperReportingV1beta1ErrorCountMetricSet extends \Google\Mod
   protected $freshnessInfoType = GooglePlayDeveloperReportingV1beta1FreshnessInfo::class;
   protected $freshnessInfoDataType = '';
   /**
+   * The resource name. Format: apps/{app}/errorCountMetricSet
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GooglePlayDeveloperReportingV1beta1FreshnessInfo
+   * Summary about data freshness in this resource.
+   *
+   * @param GooglePlayDeveloperReportingV1beta1FreshnessInfo $freshnessInfo
    */
   public function setFreshnessInfo(GooglePlayDeveloperReportingV1beta1FreshnessInfo $freshnessInfo)
   {
@@ -41,7 +45,9 @@ class GooglePlayDeveloperReportingV1beta1ErrorCountMetricSet extends \Google\Mod
     return $this->freshnessInfo;
   }
   /**
-   * @param string
+   * The resource name. Format: apps/{app}/errorCountMetricSet
+   *
+   * @param string $name
    */
   public function setName($name)
   {

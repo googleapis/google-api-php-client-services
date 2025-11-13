@@ -22,12 +22,16 @@ class GooglePlayDeveloperReportingV1beta1SlowStartRateMetricSet extends \Google\
   protected $freshnessInfoType = GooglePlayDeveloperReportingV1beta1FreshnessInfo::class;
   protected $freshnessInfoDataType = '';
   /**
+   * Identifier. The resource name. Format: apps/{app}/slowStartRateMetricSet
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GooglePlayDeveloperReportingV1beta1FreshnessInfo
+   * Summary about data freshness in this resource.
+   *
+   * @param GooglePlayDeveloperReportingV1beta1FreshnessInfo $freshnessInfo
    */
   public function setFreshnessInfo(GooglePlayDeveloperReportingV1beta1FreshnessInfo $freshnessInfo)
   {
@@ -41,7 +45,9 @@ class GooglePlayDeveloperReportingV1beta1SlowStartRateMetricSet extends \Google\
     return $this->freshnessInfo;
   }
   /**
-   * @param string
+   * Identifier. The resource name. Format: apps/{app}/slowStartRateMetricSet
+   *
+   * @param string $name
    */
   public function setName($name)
   {

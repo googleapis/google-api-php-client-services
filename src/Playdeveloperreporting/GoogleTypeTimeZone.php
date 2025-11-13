@@ -20,16 +20,22 @@ namespace Google\Service\Playdeveloperreporting;
 class GoogleTypeTimeZone extends \Google\Model
 {
   /**
+   * IANA Time Zone Database time zone. For example "America/New_York".
+   *
    * @var string
    */
   public $id;
   /**
+   * Optional. IANA Time Zone Database version number. For example "2019a".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * IANA Time Zone Database time zone. For example "America/New_York".
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class GoogleTypeTimeZone extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Optional. IANA Time Zone Database version number. For example "2019a".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

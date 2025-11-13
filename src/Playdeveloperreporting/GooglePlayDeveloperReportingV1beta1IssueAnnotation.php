@@ -20,20 +20,29 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1IssueAnnotation extends \Google\Model
 {
   /**
+   * Contains the contents of the annotation message.
+   *
    * @var string
    */
   public $body;
   /**
+   * Category that the annotation belongs to. An annotation will belong to a
+   * single category. Example categories: "Potential fix", "Insight".
+   *
    * @var string
    */
   public $category;
   /**
+   * Title for the annotation.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Contains the contents of the annotation message.
+   *
+   * @param string $body
    */
   public function setBody($body)
   {
@@ -47,7 +56,10 @@ class GooglePlayDeveloperReportingV1beta1IssueAnnotation extends \Google\Model
     return $this->body;
   }
   /**
-   * @param string
+   * Category that the annotation belongs to. An annotation will belong to a
+   * single category. Example categories: "Potential fix", "Insight".
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -61,7 +73,9 @@ class GooglePlayDeveloperReportingV1beta1IssueAnnotation extends \Google\Model
     return $this->category;
   }
   /**
-   * @param string
+   * Title for the annotation.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
