@@ -23,7 +23,9 @@ class CascadingRule extends \Google\Model
   protected $cascadeLogicalDbsDataType = '';
 
   /**
-   * @param CascadeLogicalDBsRule
+   * Cascading rule for related logical DBs.
+   *
+   * @param CascadeLogicalDBsRule $cascadeLogicalDbs
    */
   public function setCascadeLogicalDbs(CascadeLogicalDBsRule $cascadeLogicalDbs)
   {

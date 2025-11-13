@@ -20,16 +20,22 @@ namespace Google\Service\MigrationCenterAPI;
 class ImportRowErrorXlsxErrorDetails extends \Google\Model
 {
   /**
+   * The row number where the error was detected.
+   *
    * @var int
    */
   public $rowNumber;
   /**
+   * The name of the sheet where the error was detected.
+   *
    * @var string
    */
   public $sheet;
 
   /**
-   * @param int
+   * The row number where the error was detected.
+   *
+   * @param int $rowNumber
    */
   public function setRowNumber($rowNumber)
   {
@@ -43,7 +49,9 @@ class ImportRowErrorXlsxErrorDetails extends \Google\Model
     return $this->rowNumber;
   }
   /**
-   * @param string
+   * The name of the sheet where the error was detected.
+   *
+   * @param string $sheet
    */
   public function setSheet($sheet)
   {

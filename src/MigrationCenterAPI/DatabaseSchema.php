@@ -27,18 +27,24 @@ class DatabaseSchema extends \Google\Collection
   protected $postgresqlType = PostgreSqlSchemaDetails::class;
   protected $postgresqlDataType = '';
   /**
+   * Required. The name of the schema.
+   *
    * @var string
    */
   public $schemaName;
   protected $sqlServerType = SqlServerSchemaDetails::class;
   protected $sqlServerDataType = '';
   /**
+   * Optional. The total size of tables in bytes.
+   *
    * @var string
    */
   public $tablesSizeBytes;
 
   /**
-   * @param MySqlSchemaDetails
+   * Optional. Details of a Mysql schema.
+   *
+   * @param MySqlSchemaDetails $mysql
    */
   public function setMysql(MySqlSchemaDetails $mysql)
   {
@@ -52,7 +58,9 @@ class DatabaseSchema extends \Google\Collection
     return $this->mysql;
   }
   /**
-   * @param DatabaseObjects[]
+   * Optional. List of details of objects by category.
+   *
+   * @param DatabaseObjects[] $objects
    */
   public function setObjects($objects)
   {
@@ -66,7 +74,9 @@ class DatabaseSchema extends \Google\Collection
     return $this->objects;
   }
   /**
-   * @param PostgreSqlSchemaDetails
+   * Optional. Details of a PostgreSql schema.
+   *
+   * @param PostgreSqlSchemaDetails $postgresql
    */
   public function setPostgresql(PostgreSqlSchemaDetails $postgresql)
   {
@@ -80,7 +90,9 @@ class DatabaseSchema extends \Google\Collection
     return $this->postgresql;
   }
   /**
-   * @param string
+   * Required. The name of the schema.
+   *
+   * @param string $schemaName
    */
   public function setSchemaName($schemaName)
   {
@@ -94,7 +106,9 @@ class DatabaseSchema extends \Google\Collection
     return $this->schemaName;
   }
   /**
-   * @param SqlServerSchemaDetails
+   * Optional. Details of a SqlServer schema.
+   *
+   * @param SqlServerSchemaDetails $sqlServer
    */
   public function setSqlServer(SqlServerSchemaDetails $sqlServer)
   {
@@ -108,7 +122,9 @@ class DatabaseSchema extends \Google\Collection
     return $this->sqlServer;
   }
   /**
-   * @param string
+   * Optional. The total size of tables in bytes.
+   *
+   * @param string $tablesSizeBytes
    */
   public function setTablesSizeBytes($tablesSizeBytes)
   {

@@ -20,32 +20,47 @@ namespace Google\Service\MigrationCenterAPI;
 class FstabEntry extends \Google\Model
 {
   /**
+   * The mount point for the filesystem.
+   *
    * @var string
    */
   public $file;
   /**
+   * Used by dump to determine which filesystems need to be dumped.
+   *
    * @var int
    */
   public $freq;
   /**
+   * Mount options associated with the filesystem.
+   *
    * @var string
    */
   public $mntops;
   /**
+   * Used by the fsck(8) program to determine the order in which filesystem
+   * checks are done at reboot time.
+   *
    * @var int
    */
   public $passno;
   /**
+   * The block special device or remote filesystem to be mounted.
+   *
    * @var string
    */
   public $spec;
   /**
+   * The type of the filesystem.
+   *
    * @var string
    */
   public $vfstype;
 
   /**
-   * @param string
+   * The mount point for the filesystem.
+   *
+   * @param string $file
    */
   public function setFile($file)
   {
@@ -59,7 +74,9 @@ class FstabEntry extends \Google\Model
     return $this->file;
   }
   /**
-   * @param int
+   * Used by dump to determine which filesystems need to be dumped.
+   *
+   * @param int $freq
    */
   public function setFreq($freq)
   {
@@ -73,7 +90,9 @@ class FstabEntry extends \Google\Model
     return $this->freq;
   }
   /**
-   * @param string
+   * Mount options associated with the filesystem.
+   *
+   * @param string $mntops
    */
   public function setMntops($mntops)
   {
@@ -87,7 +106,10 @@ class FstabEntry extends \Google\Model
     return $this->mntops;
   }
   /**
-   * @param int
+   * Used by the fsck(8) program to determine the order in which filesystem
+   * checks are done at reboot time.
+   *
+   * @param int $passno
    */
   public function setPassno($passno)
   {
@@ -101,7 +123,9 @@ class FstabEntry extends \Google\Model
     return $this->passno;
   }
   /**
-   * @param string
+   * The block special device or remote filesystem to be mounted.
+   *
+   * @param string $spec
    */
   public function setSpec($spec)
   {
@@ -115,7 +139,9 @@ class FstabEntry extends \Google\Model
     return $this->spec;
   }
   /**
-   * @param string
+   * The type of the filesystem.
+   *
+   * @param string $vfstype
    */
   public function setVfstype($vfstype)
   {

@@ -21,18 +21,30 @@ class BatchDeleteAssetsRequest extends \Google\Collection
 {
   protected $collection_key = 'names';
   /**
+   * Optional. When this value is set to `true` the request is a no-op for non-
+   * existing assets. See https://google.aip.dev/135#delete-if-existing for
+   * additional details. Default value is `false`.
+   *
    * @var bool
    */
   public $allowMissing;
   protected $cascadingRulesType = CascadingRule::class;
   protected $cascadingRulesDataType = 'array';
   /**
+   * Required. The IDs of the assets to delete. A maximum of 1000 assets can be
+   * deleted in a batch. Format:
+   * projects/{project}/locations/{location}/assets/{name}.
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param bool
+   * Optional. When this value is set to `true` the request is a no-op for non-
+   * existing assets. See https://google.aip.dev/135#delete-if-existing for
+   * additional details. Default value is `false`.
+   *
+   * @param bool $allowMissing
    */
   public function setAllowMissing($allowMissing)
   {
@@ -46,7 +58,9 @@ class BatchDeleteAssetsRequest extends \Google\Collection
     return $this->allowMissing;
   }
   /**
-   * @param CascadingRule[]
+   * Optional. Optional cascading rules for deleting related assets.
+   *
+   * @param CascadingRule[] $cascadingRules
    */
   public function setCascadingRules($cascadingRules)
   {
@@ -60,7 +74,11 @@ class BatchDeleteAssetsRequest extends \Google\Collection
     return $this->cascadingRules;
   }
   /**
-   * @param string[]
+   * Required. The IDs of the assets to delete. A maximum of 1000 assets can be
+   * deleted in a batch. Format:
+   * projects/{project}/locations/{location}/assets/{name}.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {

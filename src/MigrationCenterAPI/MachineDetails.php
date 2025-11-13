@@ -19,13 +19,47 @@ namespace Google\Service\MigrationCenterAPI;
 
 class MachineDetails extends \Google\Model
 {
+  /**
+   * Power state is unknown.
+   */
+  public const POWER_STATE_POWER_STATE_UNSPECIFIED = 'POWER_STATE_UNSPECIFIED';
+  /**
+   * The machine is preparing to enter the ACTIVE state. An instance may enter
+   * the PENDING state when it launches for the first time, or when it is
+   * started after being in the SUSPENDED state.
+   */
+  public const POWER_STATE_PENDING = 'PENDING';
+  /**
+   * The machine is active.
+   */
+  public const POWER_STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The machine is being turned off.
+   */
+  public const POWER_STATE_SUSPENDING = 'SUSPENDING';
+  /**
+   * The machine is off.
+   */
+  public const POWER_STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * The machine is being deleted from the hosting platform.
+   */
+  public const POWER_STATE_DELETING = 'DELETING';
+  /**
+   * The machine is deleted from the hosting platform.
+   */
+  public const POWER_STATE_DELETED = 'DELETED';
   protected $architectureType = MachineArchitectureDetails::class;
   protected $architectureDataType = '';
   /**
+   * Number of logical CPU cores in the machine. Must be non-negative.
+   *
    * @var int
    */
   public $coreCount;
   /**
+   * Machine creation time.
+   *
    * @var string
    */
   public $createTime;
@@ -36,10 +70,14 @@ class MachineDetails extends \Google\Model
   protected $guestOsType = GuestOsDetails::class;
   protected $guestOsDataType = '';
   /**
+   * Machine name.
+   *
    * @var string
    */
   public $machineName;
   /**
+   * The amount of memory in the machine. Must be non-negative.
+   *
    * @var int
    */
   public $memoryMb;
@@ -48,16 +86,22 @@ class MachineDetails extends \Google\Model
   protected $platformType = PlatformDetails::class;
   protected $platformDataType = '';
   /**
+   * Power state of the machine.
+   *
    * @var string
    */
   public $powerState;
   /**
+   * Machine unique identifier.
+   *
    * @var string
    */
   public $uuid;
 
   /**
-   * @param MachineArchitectureDetails
+   * Architecture details (vendor, CPU architecture).
+   *
+   * @param MachineArchitectureDetails $architecture
    */
   public function setArchitecture(MachineArchitectureDetails $architecture)
   {
@@ -71,7 +115,9 @@ class MachineDetails extends \Google\Model
     return $this->architecture;
   }
   /**
-   * @param int
+   * Number of logical CPU cores in the machine. Must be non-negative.
+   *
+   * @param int $coreCount
    */
   public function setCoreCount($coreCount)
   {
@@ -85,7 +131,9 @@ class MachineDetails extends \Google\Model
     return $this->coreCount;
   }
   /**
-   * @param string
+   * Machine creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -99,7 +147,11 @@ class MachineDetails extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param DiskPartitionDetails
+   * Optional. Disk partitions details. Note: Partitions are not necessarily
+   * mounted on local disks and therefore might not have a one-to-one
+   * correspondence with local disks.
+   *
+   * @param DiskPartitionDetails $diskPartitions
    */
   public function setDiskPartitions(DiskPartitionDetails $diskPartitions)
   {
@@ -113,7 +165,9 @@ class MachineDetails extends \Google\Model
     return $this->diskPartitions;
   }
   /**
-   * @param MachineDiskDetails
+   * Disk details.
+   *
+   * @param MachineDiskDetails $disks
    */
   public function setDisks(MachineDiskDetails $disks)
   {
@@ -127,7 +181,9 @@ class MachineDetails extends \Google\Model
     return $this->disks;
   }
   /**
-   * @param GuestOsDetails
+   * Guest OS information.
+   *
+   * @param GuestOsDetails $guestOs
    */
   public function setGuestOs(GuestOsDetails $guestOs)
   {
@@ -141,7 +197,9 @@ class MachineDetails extends \Google\Model
     return $this->guestOs;
   }
   /**
-   * @param string
+   * Machine name.
+   *
+   * @param string $machineName
    */
   public function setMachineName($machineName)
   {
@@ -155,7 +213,9 @@ class MachineDetails extends \Google\Model
     return $this->machineName;
   }
   /**
-   * @param int
+   * The amount of memory in the machine. Must be non-negative.
+   *
+   * @param int $memoryMb
    */
   public function setMemoryMb($memoryMb)
   {
@@ -169,7 +229,9 @@ class MachineDetails extends \Google\Model
     return $this->memoryMb;
   }
   /**
-   * @param MachineNetworkDetails
+   * Network details.
+   *
+   * @param MachineNetworkDetails $network
    */
   public function setNetwork(MachineNetworkDetails $network)
   {
@@ -183,7 +245,9 @@ class MachineDetails extends \Google\Model
     return $this->network;
   }
   /**
-   * @param PlatformDetails
+   * Platform specific information.
+   *
+   * @param PlatformDetails $platform
    */
   public function setPlatform(PlatformDetails $platform)
   {
@@ -197,21 +261,28 @@ class MachineDetails extends \Google\Model
     return $this->platform;
   }
   /**
-   * @param string
+   * Power state of the machine.
+   *
+   * Accepted values: POWER_STATE_UNSPECIFIED, PENDING, ACTIVE, SUSPENDING,
+   * SUSPENDED, DELETING, DELETED
+   *
+   * @param self::POWER_STATE_* $powerState
    */
   public function setPowerState($powerState)
   {
     $this->powerState = $powerState;
   }
   /**
-   * @return string
+   * @return self::POWER_STATE_*
    */
   public function getPowerState()
   {
     return $this->powerState;
   }
   /**
-   * @param string
+   * Machine unique identifier.
+   *
+   * @param string $uuid
    */
   public function setUuid($uuid)
   {

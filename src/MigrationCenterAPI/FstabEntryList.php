@@ -24,7 +24,9 @@ class FstabEntryList extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param FstabEntry[]
+   * Fstab entries.
+   *
+   * @param FstabEntry[] $entries
    */
   public function setEntries($entries)
   {

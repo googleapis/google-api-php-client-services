@@ -27,7 +27,9 @@ class DailyResourceUsageAggregationDisk extends \Google\Model
   protected $writeIopsDataType = '';
 
   /**
-   * @param DailyResourceUsageAggregationStats
+   * Optional. Disk I/O operations per second.
+   *
+   * @param DailyResourceUsageAggregationStats $iops
    */
   public function setIops(DailyResourceUsageAggregationStats $iops)
   {
@@ -41,7 +43,9 @@ class DailyResourceUsageAggregationDisk extends \Google\Model
     return $this->iops;
   }
   /**
-   * @param DailyResourceUsageAggregationStats
+   * Optional. Disk read I/O operations per second.
+   *
+   * @param DailyResourceUsageAggregationStats $readIops
    */
   public function setReadIops(DailyResourceUsageAggregationStats $readIops)
   {
@@ -55,7 +59,9 @@ class DailyResourceUsageAggregationDisk extends \Google\Model
     return $this->readIops;
   }
   /**
-   * @param DailyResourceUsageAggregationStats
+   * Optional. Disk write I/O operations per second.
+   *
+   * @param DailyResourceUsageAggregationStats $writeIops
    */
   public function setWriteIops(DailyResourceUsageAggregationStats $writeIops)
   {

@@ -20,34 +20,59 @@ namespace Google\Service\MigrationCenterAPI;
 class AwsEc2PlatformDetails extends \Google\Model
 {
   /**
+   * Simultaneous Multithreading status unknown.
+   */
+  public const HYPERTHREADING_HYPERTHREADING_STATUS_UNSPECIFIED = 'HYPERTHREADING_STATUS_UNSPECIFIED';
+  /**
+   * Simultaneous Multithreading is disabled or unavailable.
+   */
+  public const HYPERTHREADING_HYPERTHREADING_STATUS_DISABLED = 'HYPERTHREADING_STATUS_DISABLED';
+  /**
+   * Simultaneous Multithreading is enabled.
+   */
+  public const HYPERTHREADING_HYPERTHREADING_STATUS_ENABLED = 'HYPERTHREADING_STATUS_ENABLED';
+  /**
+   * Optional. Whether the machine is hyperthreaded.
+   *
    * @var string
    */
   public $hyperthreading;
   /**
+   * The location of the machine in the AWS format.
+   *
    * @var string
    */
   public $location;
   /**
+   * AWS platform's machine type label.
+   *
    * @var string
    */
   public $machineTypeLabel;
 
   /**
-   * @param string
+   * Optional. Whether the machine is hyperthreaded.
+   *
+   * Accepted values: HYPERTHREADING_STATUS_UNSPECIFIED,
+   * HYPERTHREADING_STATUS_DISABLED, HYPERTHREADING_STATUS_ENABLED
+   *
+   * @param self::HYPERTHREADING_* $hyperthreading
    */
   public function setHyperthreading($hyperthreading)
   {
     $this->hyperthreading = $hyperthreading;
   }
   /**
-   * @return string
+   * @return self::HYPERTHREADING_*
    */
   public function getHyperthreading()
   {
     return $this->hyperthreading;
   }
   /**
-   * @param string
+   * The location of the machine in the AWS format.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -61,7 +86,9 @@ class AwsEc2PlatformDetails extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * AWS platform's machine type label.
+   *
+   * @param string $machineTypeLabel
    */
   public function setMachineTypeLabel($machineTypeLabel)
   {

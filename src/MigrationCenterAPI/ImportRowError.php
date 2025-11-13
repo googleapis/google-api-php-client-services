@@ -23,6 +23,8 @@ class ImportRowError extends \Google\Collection
   protected $archiveErrorType = ImportRowErrorArchiveErrorDetails::class;
   protected $archiveErrorDataType = '';
   /**
+   * Output only. The asset title.
+   *
    * @var string
    */
   public $assetTitle;
@@ -31,14 +33,21 @@ class ImportRowError extends \Google\Collection
   protected $errorsType = ImportError::class;
   protected $errorsDataType = 'array';
   /**
+   * The row number where the error was detected.
+   *
+   * @deprecated
    * @var int
    */
   public $rowNumber;
   /**
+   * The name of the VM in the row.
+   *
    * @var string
    */
   public $vmName;
   /**
+   * The VM UUID.
+   *
    * @var string
    */
   public $vmUuid;
@@ -46,7 +55,9 @@ class ImportRowError extends \Google\Collection
   protected $xlsxErrorDataType = '';
 
   /**
-   * @param ImportRowErrorArchiveErrorDetails
+   * Error details for an archive file.
+   *
+   * @param ImportRowErrorArchiveErrorDetails $archiveError
    */
   public function setArchiveError(ImportRowErrorArchiveErrorDetails $archiveError)
   {
@@ -60,7 +71,9 @@ class ImportRowError extends \Google\Collection
     return $this->archiveError;
   }
   /**
-   * @param string
+   * Output only. The asset title.
+   *
+   * @param string $assetTitle
    */
   public function setAssetTitle($assetTitle)
   {
@@ -74,7 +87,9 @@ class ImportRowError extends \Google\Collection
     return $this->assetTitle;
   }
   /**
-   * @param ImportRowErrorCsvErrorDetails
+   * Error details for a CSV file.
+   *
+   * @param ImportRowErrorCsvErrorDetails $csvError
    */
   public function setCsvError(ImportRowErrorCsvErrorDetails $csvError)
   {
@@ -88,7 +103,9 @@ class ImportRowError extends \Google\Collection
     return $this->csvError;
   }
   /**
-   * @param ImportError[]
+   * The list of errors detected in the row.
+   *
+   * @param ImportError[] $errors
    */
   public function setErrors($errors)
   {
@@ -102,13 +119,17 @@ class ImportRowError extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param int
+   * The row number where the error was detected.
+   *
+   * @deprecated
+   * @param int $rowNumber
    */
   public function setRowNumber($rowNumber)
   {
     $this->rowNumber = $rowNumber;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getRowNumber()
@@ -116,7 +137,9 @@ class ImportRowError extends \Google\Collection
     return $this->rowNumber;
   }
   /**
-   * @param string
+   * The name of the VM in the row.
+   *
+   * @param string $vmName
    */
   public function setVmName($vmName)
   {
@@ -130,7 +153,9 @@ class ImportRowError extends \Google\Collection
     return $this->vmName;
   }
   /**
-   * @param string
+   * The VM UUID.
+   *
+   * @param string $vmUuid
    */
   public function setVmUuid($vmUuid)
   {
@@ -144,7 +169,9 @@ class ImportRowError extends \Google\Collection
     return $this->vmUuid;
   }
   /**
-   * @param ImportRowErrorXlsxErrorDetails
+   * Error details for an XLSX file.
+   *
+   * @param ImportRowErrorXlsxErrorDetails $xlsxError
    */
   public function setXlsxError(ImportRowErrorXlsxErrorDetails $xlsxError)
   {

@@ -20,24 +20,34 @@ namespace Google\Service\MigrationCenterAPI;
 class DailyResourceUsageAggregationStats extends \Google\Model
 {
   /**
+   * Average usage value.
+   *
    * @var float
    */
   public $average;
   /**
+   * Median usage value.
+   *
    * @var float
    */
   public $median;
   /**
+   * 95th percentile usage value.
+   *
    * @var float
    */
   public $ninteyFifthPercentile;
   /**
+   * Peak usage value.
+   *
    * @var float
    */
   public $peak;
 
   /**
-   * @param float
+   * Average usage value.
+   *
+   * @param float $average
    */
   public function setAverage($average)
   {
@@ -51,7 +61,9 @@ class DailyResourceUsageAggregationStats extends \Google\Model
     return $this->average;
   }
   /**
-   * @param float
+   * Median usage value.
+   *
+   * @param float $median
    */
   public function setMedian($median)
   {
@@ -65,7 +77,9 @@ class DailyResourceUsageAggregationStats extends \Google\Model
     return $this->median;
   }
   /**
-   * @param float
+   * 95th percentile usage value.
+   *
+   * @param float $ninteyFifthPercentile
    */
   public function setNinteyFifthPercentile($ninteyFifthPercentile)
   {
@@ -79,7 +93,9 @@ class DailyResourceUsageAggregationStats extends \Google\Model
     return $this->ninteyFifthPercentile;
   }
   /**
-   * @param float
+   * Peak usage value.
+   *
+   * @param float $peak
    */
   public function setPeak($peak)
   {

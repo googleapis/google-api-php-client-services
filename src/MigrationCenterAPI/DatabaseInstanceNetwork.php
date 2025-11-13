@@ -21,20 +21,28 @@ class DatabaseInstanceNetwork extends \Google\Collection
 {
   protected $collection_key = 'ipAddresses';
   /**
+   * Optional. The instance's host names.
+   *
    * @var string[]
    */
   public $hostNames;
   /**
+   * Optional. The instance's IP addresses.
+   *
    * @var string[]
    */
   public $ipAddresses;
   /**
+   * Optional. The instance's primary MAC address.
+   *
    * @var string
    */
   public $primaryMacAddress;
 
   /**
-   * @param string[]
+   * Optional. The instance's host names.
+   *
+   * @param string[] $hostNames
    */
   public function setHostNames($hostNames)
   {
@@ -48,7 +56,9 @@ class DatabaseInstanceNetwork extends \Google\Collection
     return $this->hostNames;
   }
   /**
-   * @param string[]
+   * Optional. The instance's IP addresses.
+   *
+   * @param string[] $ipAddresses
    */
   public function setIpAddresses($ipAddresses)
   {
@@ -62,7 +72,9 @@ class DatabaseInstanceNetwork extends \Google\Collection
     return $this->ipAddresses;
   }
   /**
-   * @param string
+   * Optional. The instance's primary MAC address.
+   *
+   * @param string $primaryMacAddress
    */
   public function setPrimaryMacAddress($primaryMacAddress)
   {

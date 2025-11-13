@@ -20,6 +20,17 @@ namespace Google\Service\MigrationCenterAPI;
 class AggregationHistogram extends \Google\Collection
 {
   protected $collection_key = 'lowerBounds';
+  /**
+   * Lower bounds of buckets. The response will contain `n+1` buckets for `n`
+   * bounds. The first bucket will count all assets for which the field value is
+   * smaller than the first bound. Subsequent buckets will count assets for
+   * which the field value is greater or equal to a lower bound and smaller than
+   * the next one. The last bucket will count assets for which the field value
+   * is greater or equal to the final lower bound. You can define up to 20 lower
+   * bounds.
+   *
+   * @var []
+   */
   public $lowerBounds;
 
   public function setLowerBounds($lowerBounds)

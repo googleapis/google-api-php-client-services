@@ -24,7 +24,10 @@ class MachinePreferences extends \Google\Collection
   protected $allowedMachineSeriesDataType = 'array';
 
   /**
-   * @param MachineSeries[]
+   * Compute Engine machine series to consider for insights and recommendations.
+   * If empty, no restriction is applied on the machine series.
+   *
+   * @param MachineSeries[] $allowedMachineSeries
    */
   public function setAllowedMachineSeries($allowedMachineSeries)
   {

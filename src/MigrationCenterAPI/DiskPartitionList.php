@@ -24,7 +24,9 @@ class DiskPartitionList extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param DiskPartition[]
+   * Partition entries.
+   *
+   * @param DiskPartition[] $entries
    */
   public function setEntries($entries)
   {

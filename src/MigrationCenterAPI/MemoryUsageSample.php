@@ -20,12 +20,16 @@ namespace Google\Service\MigrationCenterAPI;
 class MemoryUsageSample extends \Google\Model
 {
   /**
+   * Percentage of system memory utilized. Must be in the interval [0, 100].
+   *
    * @var float
    */
   public $utilizedPercentage;
 
   /**
-   * @param float
+   * Percentage of system memory utilized. Must be in the interval [0, 100].
+   *
+   * @param float $utilizedPercentage
    */
   public function setUtilizedPercentage($utilizedPercentage)
   {

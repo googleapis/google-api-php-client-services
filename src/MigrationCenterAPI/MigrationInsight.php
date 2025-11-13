@@ -25,7 +25,9 @@ class MigrationInsight extends \Google\Model
   protected $fitDataType = '';
 
   /**
-   * @param ComputeEngineMigrationTarget
+   * Output only. A Google Compute Engine target.
+   *
+   * @param ComputeEngineMigrationTarget $computeEngineTarget
    */
   public function setComputeEngineTarget(ComputeEngineMigrationTarget $computeEngineTarget)
   {
@@ -39,7 +41,10 @@ class MigrationInsight extends \Google\Model
     return $this->computeEngineTarget;
   }
   /**
-   * @param FitDescriptor
+   * Output only. Description of how well the asset this insight is associated
+   * with fits the proposed migration.
+   *
+   * @param FitDescriptor $fit
    */
   public function setFit(FitDescriptor $fit)
   {

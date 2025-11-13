@@ -19,17 +19,27 @@ namespace Google\Service\MigrationCenterAPI;
 
 class ImportError extends \Google\Model
 {
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  public const SEVERITY_ERROR = 'ERROR';
+  public const SEVERITY_WARNING = 'WARNING';
+  public const SEVERITY_INFO = 'INFO';
   /**
+   * The error information.
+   *
    * @var string
    */
   public $errorDetails;
   /**
+   * The severity of the error.
+   *
    * @var string
    */
   public $severity;
 
   /**
-   * @param string
+   * The error information.
+   *
+   * @param string $errorDetails
    */
   public function setErrorDetails($errorDetails)
   {
@@ -43,14 +53,18 @@ class ImportError extends \Google\Model
     return $this->errorDetails;
   }
   /**
-   * @param string
+   * The severity of the error.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, ERROR, WARNING, INFO
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {

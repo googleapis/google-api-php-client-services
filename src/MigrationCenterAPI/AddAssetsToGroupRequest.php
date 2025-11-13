@@ -20,18 +20,40 @@ namespace Google\Service\MigrationCenterAPI;
 class AddAssetsToGroupRequest extends \Google\Model
 {
   /**
+   * Optional. When this value is set to `false` and one of the given assets is
+   * already an existing member of the group, the operation fails with an
+   * `Already Exists` error. When set to `true` this situation is silently
+   * ignored by the server. Default value is `false`.
+   *
    * @var bool
    */
   public $allowExisting;
   protected $assetsType = AssetList::class;
   protected $assetsDataType = '';
   /**
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server will know to
+   * ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param bool
+   * Optional. When this value is set to `false` and one of the given assets is
+   * already an existing member of the group, the operation fails with an
+   * `Already Exists` error. When set to `true` this situation is silently
+   * ignored by the server. Default value is `false`.
+   *
+   * @param bool $allowExisting
    */
   public function setAllowExisting($allowExisting)
   {
@@ -45,7 +67,10 @@ class AddAssetsToGroupRequest extends \Google\Model
     return $this->allowExisting;
   }
   /**
-   * @param AssetList
+   * Required. List of assets to be added. The maximum number of assets that can
+   * be added in a single request is 2000.
+   *
+   * @param AssetList $assets
    */
   public function setAssets(AssetList $assets)
   {
@@ -59,7 +84,19 @@ class AddAssetsToGroupRequest extends \Google\Model
     return $this->assets;
   }
   /**
-   * @param string
+   * Optional. An optional request ID to identify requests. Specify a unique
+   * request ID so that if you must retry your request, the server will know to
+   * ignore the request if it has already been completed. The server will
+   * guarantee that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

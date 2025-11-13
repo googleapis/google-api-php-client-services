@@ -20,16 +20,22 @@ namespace Google\Service\MigrationCenterAPI;
 class FrameViolationEntry extends \Google\Model
 {
   /**
+   * The field of the original frame where the violation occurred.
+   *
    * @var string
    */
   public $field;
   /**
+   * A message describing the violation.
+   *
    * @var string
    */
   public $violation;
 
   /**
-   * @param string
+   * The field of the original frame where the violation occurred.
+   *
+   * @param string $field
    */
   public function setField($field)
   {
@@ -43,7 +49,9 @@ class FrameViolationEntry extends \Google\Model
     return $this->field;
   }
   /**
-   * @param string
+   * A message describing the violation.
+   *
+   * @param string $violation
    */
   public function setViolation($violation)
   {

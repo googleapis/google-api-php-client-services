@@ -21,20 +21,35 @@ class GenericInsight extends \Google\Collection
 {
   protected $collection_key = 'additionalInformation';
   /**
+   * Output only. Additional information about the insight, each entry can be a
+   * logical entry and must make sense if it is displayed with line breaks
+   * between each entry. Text can contain md style links.
+   *
    * @var string[]
    */
   public $additionalInformation;
   /**
+   * Output only. In case message_code is not yet known by the client
+   * default_message will be the message to be used instead.
+   *
    * @var string
    */
   public $defaultMessage;
   /**
+   * Output only. Represents a globally unique message id for this insight, can
+   * be used for localization purposes, in case message_code is not yet known by
+   * the client use default_message instead.
+   *
    * @var string
    */
   public $messageId;
 
   /**
-   * @param string[]
+   * Output only. Additional information about the insight, each entry can be a
+   * logical entry and must make sense if it is displayed with line breaks
+   * between each entry. Text can contain md style links.
+   *
+   * @param string[] $additionalInformation
    */
   public function setAdditionalInformation($additionalInformation)
   {
@@ -48,7 +63,10 @@ class GenericInsight extends \Google\Collection
     return $this->additionalInformation;
   }
   /**
-   * @param string
+   * Output only. In case message_code is not yet known by the client
+   * default_message will be the message to be used instead.
+   *
+   * @param string $defaultMessage
    */
   public function setDefaultMessage($defaultMessage)
   {
@@ -62,7 +80,11 @@ class GenericInsight extends \Google\Collection
     return $this->defaultMessage;
   }
   /**
-   * @param string
+   * Output only. Represents a globally unique message id for this insight, can
+   * be used for localization purposes, in case message_code is not yet known by
+   * the client use default_message instead.
+   *
+   * @param string $messageId
    */
   public function setMessageId($messageId)
   {

@@ -23,10 +23,15 @@ class FileValidationReport extends \Google\Collection
   protected $fileErrorsType = ImportError::class;
   protected $fileErrorsDataType = 'array';
   /**
+   * The name of the file.
+   *
    * @var string
    */
   public $fileName;
   /**
+   * Flag indicating that processing was aborted due to maximum number of
+   * errors.
+   *
    * @var bool
    */
   public $partialReport;
@@ -34,7 +39,9 @@ class FileValidationReport extends \Google\Collection
   protected $rowErrorsDataType = 'array';
 
   /**
-   * @param ImportError[]
+   * List of file level errors.
+   *
+   * @param ImportError[] $fileErrors
    */
   public function setFileErrors($fileErrors)
   {
@@ -48,7 +55,9 @@ class FileValidationReport extends \Google\Collection
     return $this->fileErrors;
   }
   /**
-   * @param string
+   * The name of the file.
+   *
+   * @param string $fileName
    */
   public function setFileName($fileName)
   {
@@ -62,7 +71,10 @@ class FileValidationReport extends \Google\Collection
     return $this->fileName;
   }
   /**
-   * @param bool
+   * Flag indicating that processing was aborted due to maximum number of
+   * errors.
+   *
+   * @param bool $partialReport
    */
   public function setPartialReport($partialReport)
   {
@@ -76,7 +88,9 @@ class FileValidationReport extends \Google\Collection
     return $this->partialReport;
   }
   /**
-   * @param ImportRowError[]
+   * Partial list of rows that encountered validation error.
+   *
+   * @param ImportRowError[] $rowErrors
    */
   public function setRowErrors($rowErrors)
   {

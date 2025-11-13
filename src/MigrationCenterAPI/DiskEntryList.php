@@ -24,7 +24,9 @@ class DiskEntryList extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param DiskEntry[]
+   * Disk entries.
+   *
+   * @param DiskEntry[] $entries
    */
   public function setEntries($entries)
   {

@@ -20,16 +20,38 @@ namespace Google\Service\MigrationCenterAPI;
 class ComputeStorageDescriptor extends \Google\Model
 {
   /**
+   * Unspecified. Fallback to default value based on context.
+   */
+  public const TYPE_PERSISTENT_DISK_TYPE_UNSPECIFIED = 'PERSISTENT_DISK_TYPE_UNSPECIFIED';
+  /**
+   * Standard HDD Persistent Disk.
+   */
+  public const TYPE_PERSISTENT_DISK_TYPE_STANDARD = 'PERSISTENT_DISK_TYPE_STANDARD';
+  /**
+   * Balanced Persistent Disk.
+   */
+  public const TYPE_PERSISTENT_DISK_TYPE_BALANCED = 'PERSISTENT_DISK_TYPE_BALANCED';
+  /**
+   * SSD Persistent Disk.
+   */
+  public const TYPE_PERSISTENT_DISK_TYPE_SSD = 'PERSISTENT_DISK_TYPE_SSD';
+  /**
+   * Output only. Disk size in GiB.
+   *
    * @var int
    */
   public $sizeGb;
   /**
+   * Output only. Disk type backing the storage.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param int
+   * Output only. Disk size in GiB.
+   *
+   * @param int $sizeGb
    */
   public function setSizeGb($sizeGb)
   {
@@ -43,14 +65,20 @@ class ComputeStorageDescriptor extends \Google\Model
     return $this->sizeGb;
   }
   /**
-   * @param string
+   * Output only. Disk type backing the storage.
+   *
+   * Accepted values: PERSISTENT_DISK_TYPE_UNSPECIFIED,
+   * PERSISTENT_DISK_TYPE_STANDARD, PERSISTENT_DISK_TYPE_BALANCED,
+   * PERSISTENT_DISK_TYPE_SSD
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

@@ -25,7 +25,9 @@ class Insight extends \Google\Model
   protected $migrationInsightDataType = '';
 
   /**
-   * @param GenericInsight
+   * Output only. A generic insight about an asset.
+   *
+   * @param GenericInsight $genericInsight
    */
   public function setGenericInsight(GenericInsight $genericInsight)
   {
@@ -39,7 +41,9 @@ class Insight extends \Google\Model
     return $this->genericInsight;
   }
   /**
-   * @param MigrationInsight
+   * Output only. An insight about potential migrations for an asset.
+   *
+   * @param MigrationInsight $migrationInsight
    */
   public function setMigrationInsight(MigrationInsight $migrationInsight)
   {

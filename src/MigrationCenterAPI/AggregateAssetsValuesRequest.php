@@ -23,16 +23,24 @@ class AggregateAssetsValuesRequest extends \Google\Collection
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
   /**
+   * Optional. The aggregation will be performed on assets that match the
+   * provided filter.
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. When this value is set to 'true,' the response will include all
+   * assets, including those that are hidden.
+   *
    * @var bool
    */
   public $showHidden;
 
   /**
-   * @param Aggregation[]
+   * Array of aggregations to perform. Up to 25 aggregations can be defined.
+   *
+   * @param Aggregation[] $aggregations
    */
   public function setAggregations($aggregations)
   {
@@ -46,7 +54,10 @@ class AggregateAssetsValuesRequest extends \Google\Collection
     return $this->aggregations;
   }
   /**
-   * @param string
+   * Optional. The aggregation will be performed on assets that match the
+   * provided filter.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -60,7 +71,10 @@ class AggregateAssetsValuesRequest extends \Google\Collection
     return $this->filter;
   }
   /**
-   * @param bool
+   * Optional. When this value is set to 'true,' the response will include all
+   * assets, including those that are hidden.
+   *
+   * @param bool $showHidden
    */
   public function setShowHidden($showHidden)
   {

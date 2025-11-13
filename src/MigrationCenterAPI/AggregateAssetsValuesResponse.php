@@ -24,7 +24,9 @@ class AggregateAssetsValuesResponse extends \Google\Collection
   protected $resultsDataType = 'array';
 
   /**
-   * @param AggregationResult[]
+   * The aggregation results.
+   *
+   * @param AggregationResult[] $results
    */
   public function setResults($results)
   {

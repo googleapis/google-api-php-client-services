@@ -20,12 +20,26 @@ namespace Google\Service\MigrationCenterAPI;
 class MachineSeries extends \Google\Model
 {
   /**
+   * Code to identify a machine series. Consult this for more details on the
+   * available series for Compute Engine:
+   * https://cloud.google.com/compute/docs/machine-
+   * resource#machine_type_comparison Consult this for more details on the
+   * available series for Google Cloud VMware Engine:
+   * https://cloud.google.com/vmware-engine/pricing
+   *
    * @var string
    */
   public $code;
 
   /**
-   * @param string
+   * Code to identify a machine series. Consult this for more details on the
+   * available series for Compute Engine:
+   * https://cloud.google.com/compute/docs/machine-
+   * resource#machine_type_comparison Consult this for more details on the
+   * available series for Google Cloud VMware Engine:
+   * https://cloud.google.com/vmware-engine/pricing
+   *
+   * @param string $code
    */
   public function setCode($code)
   {

@@ -25,7 +25,7 @@ class AggregationResultCount extends \Google\Model
   public $value;
 
   /**
-   * @param string
+   * @param string $value
    */
   public function setValue($value)
   {

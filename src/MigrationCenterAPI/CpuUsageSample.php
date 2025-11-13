@@ -20,12 +20,18 @@ namespace Google\Service\MigrationCenterAPI;
 class CpuUsageSample extends \Google\Model
 {
   /**
+   * Percentage of total CPU capacity utilized. Must be in the interval [0,
+   * 100]. On most systems can be calculated using 100 - idle percentage.
+   *
    * @var float
    */
   public $utilizedPercentage;
 
   /**
-   * @param float
+   * Percentage of total CPU capacity utilized. Must be in the interval [0,
+   * 100]. On most systems can be calculated using 100 - idle percentage.
+   *
+   * @param float $utilizedPercentage
    */
   public function setUtilizedPercentage($utilizedPercentage)
   {

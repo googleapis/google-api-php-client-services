@@ -23,16 +23,23 @@ class ListDiscoveryClientsResponse extends \Google\Collection
   protected $discoveryClientsType = DiscoveryClient::class;
   protected $discoveryClientsDataType = 'array';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param DiscoveryClient[]
+   * List of discovery clients.
+   *
+   * @param DiscoveryClient[] $discoveryClients
    */
   public function setDiscoveryClients($discoveryClients)
   {
@@ -46,7 +53,10 @@ class ListDiscoveryClientsResponse extends \Google\Collection
     return $this->discoveryClients;
   }
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListDiscoveryClientsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

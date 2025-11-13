@@ -22,20 +22,29 @@ class MachineNetworkDetails extends \Google\Model
   protected $adaptersType = NetworkAdapterList::class;
   protected $adaptersDataType = '';
   /**
+   * The primary IP address of the machine.
+   *
    * @var string
    */
   public $primaryIpAddress;
   /**
+   * MAC address of the machine. This property is used to uniqly identify the
+   * machine.
+   *
    * @var string
    */
   public $primaryMacAddress;
   /**
+   * The public IP address of the machine.
+   *
    * @var string
    */
   public $publicIpAddress;
 
   /**
-   * @param NetworkAdapterList
+   * List of network adapters.
+   *
+   * @param NetworkAdapterList $adapters
    */
   public function setAdapters(NetworkAdapterList $adapters)
   {
@@ -49,7 +58,9 @@ class MachineNetworkDetails extends \Google\Model
     return $this->adapters;
   }
   /**
-   * @param string
+   * The primary IP address of the machine.
+   *
+   * @param string $primaryIpAddress
    */
   public function setPrimaryIpAddress($primaryIpAddress)
   {
@@ -63,7 +74,10 @@ class MachineNetworkDetails extends \Google\Model
     return $this->primaryIpAddress;
   }
   /**
-   * @param string
+   * MAC address of the machine. This property is used to uniqly identify the
+   * machine.
+   *
+   * @param string $primaryMacAddress
    */
   public function setPrimaryMacAddress($primaryMacAddress)
   {
@@ -77,7 +91,9 @@ class MachineNetworkDetails extends \Google\Model
     return $this->primaryMacAddress;
   }
   /**
-   * @param string
+   * The public IP address of the machine.
+   *
+   * @param string $publicIpAddress
    */
   public function setPublicIpAddress($publicIpAddress)
   {

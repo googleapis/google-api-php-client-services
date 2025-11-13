@@ -24,7 +24,9 @@ class Frames extends \Google\Collection
   protected $framesDataDataType = 'array';
 
   /**
-   * @param AssetFrame[]
+   * A repeated field of asset data.
+   *
+   * @param AssetFrame[] $framesData
    */
   public function setFramesData($framesData)
   {

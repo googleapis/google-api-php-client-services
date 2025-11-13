@@ -21,18 +21,24 @@ class ListReportConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $reportConfigsType = ReportConfig::class;
   protected $reportConfigsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListReportConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ReportConfig[]
+   * A list of report configs.
+   *
+   * @param ReportConfig[] $reportConfigs
    */
   public function setReportConfigs($reportConfigs)
   {
@@ -60,7 +68,9 @@ class ListReportConfigsResponse extends \Google\Collection
     return $this->reportConfigs;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

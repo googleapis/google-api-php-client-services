@@ -21,18 +21,24 @@ class ListPreferenceSetsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $preferenceSetsType = PreferenceSet::class;
   protected $preferenceSetsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListPreferenceSetsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PreferenceSet[]
+   * The list of PreferenceSets
+   *
+   * @param PreferenceSet[] $preferenceSets
    */
   public function setPreferenceSets($preferenceSets)
   {
@@ -60,7 +68,9 @@ class ListPreferenceSetsResponse extends \Google\Collection
     return $this->preferenceSets;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

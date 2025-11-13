@@ -20,18 +20,24 @@ namespace Google\Service\MigrationCenterAPI;
 class DiskPartitionDetails extends \Google\Model
 {
   /**
+   * Output only. Total free space of all partitions.
+   *
    * @var string
    */
   public $freeSpaceBytes;
   protected $partitionsType = DiskPartitionList::class;
   protected $partitionsDataType = '';
   /**
+   * Output only. Total capacity of all partitions.
+   *
    * @var string
    */
   public $totalCapacityBytes;
 
   /**
-   * @param string
+   * Output only. Total free space of all partitions.
+   *
+   * @param string $freeSpaceBytes
    */
   public function setFreeSpaceBytes($freeSpaceBytes)
   {
@@ -45,7 +51,9 @@ class DiskPartitionDetails extends \Google\Model
     return $this->freeSpaceBytes;
   }
   /**
-   * @param DiskPartitionList
+   * Optional. List of partitions.
+   *
+   * @param DiskPartitionList $partitions
    */
   public function setPartitions(DiskPartitionList $partitions)
   {
@@ -59,7 +67,9 @@ class DiskPartitionDetails extends \Google\Model
     return $this->partitions;
   }
   /**
-   * @param string
+   * Output only. Total capacity of all partitions.
+   *
+   * @param string $totalCapacityBytes
    */
   public function setTotalCapacityBytes($totalCapacityBytes)
   {

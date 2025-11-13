@@ -20,36 +20,51 @@ namespace Google\Service\MigrationCenterAPI;
 class BiosDetails extends \Google\Model
 {
   /**
+   * BIOS name. This fields is deprecated. Please use the `id` field instead.
+   *
+   * @deprecated
    * @var string
    */
   public $biosName;
   /**
+   * BIOS ID.
+   *
    * @var string
    */
   public $id;
   /**
+   * BIOS manufacturer.
+   *
    * @var string
    */
   public $manufacturer;
   protected $releaseDateType = Date::class;
   protected $releaseDateDataType = '';
   /**
+   * SMBIOS UUID.
+   *
    * @var string
    */
   public $smbiosUuid;
   /**
+   * BIOS version.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * BIOS name. This fields is deprecated. Please use the `id` field instead.
+   *
+   * @deprecated
+   * @param string $biosName
    */
   public function setBiosName($biosName)
   {
     $this->biosName = $biosName;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getBiosName()
@@ -57,7 +72,9 @@ class BiosDetails extends \Google\Model
     return $this->biosName;
   }
   /**
-   * @param string
+   * BIOS ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -71,7 +88,9 @@ class BiosDetails extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * BIOS manufacturer.
+   *
+   * @param string $manufacturer
    */
   public function setManufacturer($manufacturer)
   {
@@ -85,7 +104,9 @@ class BiosDetails extends \Google\Model
     return $this->manufacturer;
   }
   /**
-   * @param Date
+   * BIOS release date.
+   *
+   * @param Date $releaseDate
    */
   public function setReleaseDate(Date $releaseDate)
   {
@@ -99,7 +120,9 @@ class BiosDetails extends \Google\Model
     return $this->releaseDate;
   }
   /**
-   * @param string
+   * SMBIOS UUID.
+   *
+   * @param string $smbiosUuid
    */
   public function setSmbiosUuid($smbiosUuid)
   {
@@ -113,7 +136,9 @@ class BiosDetails extends \Google\Model
     return $this->smbiosUuid;
   }
   /**
-   * @param string
+   * BIOS version.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

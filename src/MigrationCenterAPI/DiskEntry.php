@@ -20,26 +20,70 @@ namespace Google\Service\MigrationCenterAPI;
 class DiskEntry extends \Google\Model
 {
   /**
+   * Interface type unknown or unspecified.
+   */
+  public const INTERFACE_TYPE_INTERFACE_TYPE_UNSPECIFIED = 'INTERFACE_TYPE_UNSPECIFIED';
+  /**
+   * IDE interface type.
+   */
+  public const INTERFACE_TYPE_IDE = 'IDE';
+  /**
+   * SATA interface type.
+   */
+  public const INTERFACE_TYPE_SATA = 'SATA';
+  /**
+   * SAS interface type.
+   */
+  public const INTERFACE_TYPE_SAS = 'SAS';
+  /**
+   * SCSI interface type.
+   */
+  public const INTERFACE_TYPE_SCSI = 'SCSI';
+  /**
+   * NVME interface type.
+   */
+  public const INTERFACE_TYPE_NVME = 'NVME';
+  /**
+   * FC interface type.
+   */
+  public const INTERFACE_TYPE_FC = 'FC';
+  /**
+   * iSCSI interface type.
+   */
+  public const INTERFACE_TYPE_ISCSI = 'ISCSI';
+  /**
+   * Disk capacity.
+   *
    * @var string
    */
   public $capacityBytes;
   /**
+   * Disk label.
+   *
    * @var string
    */
   public $diskLabel;
   /**
+   * Disk label type (e.g. BIOS/GPT)
+   *
    * @var string
    */
   public $diskLabelType;
   /**
+   * Disk free space.
+   *
    * @var string
    */
   public $freeBytes;
   /**
+   * Disk hardware address (e.g. 0:1 for SCSI).
+   *
    * @var string
    */
   public $hwAddress;
   /**
+   * Disks interface type.
+   *
    * @var string
    */
   public $interfaceType;
@@ -49,7 +93,9 @@ class DiskEntry extends \Google\Model
   protected $vmwareDataType = '';
 
   /**
-   * @param string
+   * Disk capacity.
+   *
+   * @param string $capacityBytes
    */
   public function setCapacityBytes($capacityBytes)
   {
@@ -63,7 +109,9 @@ class DiskEntry extends \Google\Model
     return $this->capacityBytes;
   }
   /**
-   * @param string
+   * Disk label.
+   *
+   * @param string $diskLabel
    */
   public function setDiskLabel($diskLabel)
   {
@@ -77,7 +125,9 @@ class DiskEntry extends \Google\Model
     return $this->diskLabel;
   }
   /**
-   * @param string
+   * Disk label type (e.g. BIOS/GPT)
+   *
+   * @param string $diskLabelType
    */
   public function setDiskLabelType($diskLabelType)
   {
@@ -91,7 +141,9 @@ class DiskEntry extends \Google\Model
     return $this->diskLabelType;
   }
   /**
-   * @param string
+   * Disk free space.
+   *
+   * @param string $freeBytes
    */
   public function setFreeBytes($freeBytes)
   {
@@ -105,7 +157,9 @@ class DiskEntry extends \Google\Model
     return $this->freeBytes;
   }
   /**
-   * @param string
+   * Disk hardware address (e.g. 0:1 for SCSI).
+   *
+   * @param string $hwAddress
    */
   public function setHwAddress($hwAddress)
   {
@@ -119,21 +173,28 @@ class DiskEntry extends \Google\Model
     return $this->hwAddress;
   }
   /**
-   * @param string
+   * Disks interface type.
+   *
+   * Accepted values: INTERFACE_TYPE_UNSPECIFIED, IDE, SATA, SAS, SCSI, NVME,
+   * FC, ISCSI
+   *
+   * @param self::INTERFACE_TYPE_* $interfaceType
    */
   public function setInterfaceType($interfaceType)
   {
     $this->interfaceType = $interfaceType;
   }
   /**
-   * @return string
+   * @return self::INTERFACE_TYPE_*
    */
   public function getInterfaceType()
   {
     return $this->interfaceType;
   }
   /**
-   * @param DiskPartitionList
+   * Partition layout.
+   *
+   * @param DiskPartitionList $partitions
    */
   public function setPartitions(DiskPartitionList $partitions)
   {
@@ -147,7 +208,9 @@ class DiskEntry extends \Google\Model
     return $this->partitions;
   }
   /**
-   * @param VmwareDiskConfig
+   * VMware disk details.
+   *
+   * @param VmwareDiskConfig $vmware
    */
   public function setVmware(VmwareDiskConfig $vmware)
   {

@@ -20,20 +20,34 @@ namespace Google\Service\MigrationCenterAPI;
 class DiskUsageSample extends \Google\Model
 {
   /**
+   * Optional. Average IOPS sampled over a short window. Must be non-negative.
+   * If read or write are set, the sum of read and write will override the value
+   * of the average_iops.
+   *
    * @var float
    */
   public $averageIops;
   /**
+   * Optional. Average read IOPS sampled over a short window. Must be non-
+   * negative. If both read and write are zero they are ignored.
+   *
    * @var float
    */
   public $averageReadIops;
   /**
+   * Optional. Average write IOPS sampled over a short window. Must be non-
+   * negative. If both read and write are zero they are ignored.
+   *
    * @var float
    */
   public $averageWriteIops;
 
   /**
-   * @param float
+   * Optional. Average IOPS sampled over a short window. Must be non-negative.
+   * If read or write are set, the sum of read and write will override the value
+   * of the average_iops.
+   *
+   * @param float $averageIops
    */
   public function setAverageIops($averageIops)
   {
@@ -47,7 +61,10 @@ class DiskUsageSample extends \Google\Model
     return $this->averageIops;
   }
   /**
-   * @param float
+   * Optional. Average read IOPS sampled over a short window. Must be non-
+   * negative. If both read and write are zero they are ignored.
+   *
+   * @param float $averageReadIops
    */
   public function setAverageReadIops($averageReadIops)
   {
@@ -61,7 +78,10 @@ class DiskUsageSample extends \Google\Model
     return $this->averageReadIops;
   }
   /**
-   * @param float
+   * Optional. Average write IOPS sampled over a short window. Must be non-
+   * negative. If both read and write are zero they are ignored.
+   *
+   * @param float $averageWriteIops
    */
   public function setAverageWriteIops($averageWriteIops)
   {

@@ -23,16 +23,22 @@ class ListGroupsResponse extends \Google\Collection
   protected $groupsType = Group::class;
   protected $groupsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Group[]
+   * The list of Group
+   *
+   * @param Group[] $groups
    */
   public function setGroups($groups)
   {
@@ -46,7 +52,9 @@ class ListGroupsResponse extends \Google\Collection
     return $this->groups;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListGroupsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

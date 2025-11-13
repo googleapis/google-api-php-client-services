@@ -20,34 +20,48 @@ namespace Google\Service\MigrationCenterAPI;
 class DiskPartition extends \Google\Model
 {
   /**
+   * Partition capacity.
+   *
    * @var string
    */
   public $capacityBytes;
   /**
+   * Partition file system.
+   *
    * @var string
    */
   public $fileSystem;
   /**
+   * Partition free space.
+   *
    * @var string
    */
   public $freeBytes;
   /**
+   * Mount point (Linux/Windows) or drive letter (Windows).
+   *
    * @var string
    */
   public $mountPoint;
   protected $subPartitionsType = DiskPartitionList::class;
   protected $subPartitionsDataType = '';
   /**
+   * Partition type.
+   *
    * @var string
    */
   public $type;
   /**
+   * Partition UUID.
+   *
    * @var string
    */
   public $uuid;
 
   /**
-   * @param string
+   * Partition capacity.
+   *
+   * @param string $capacityBytes
    */
   public function setCapacityBytes($capacityBytes)
   {
@@ -61,7 +75,9 @@ class DiskPartition extends \Google\Model
     return $this->capacityBytes;
   }
   /**
-   * @param string
+   * Partition file system.
+   *
+   * @param string $fileSystem
    */
   public function setFileSystem($fileSystem)
   {
@@ -75,7 +91,9 @@ class DiskPartition extends \Google\Model
     return $this->fileSystem;
   }
   /**
-   * @param string
+   * Partition free space.
+   *
+   * @param string $freeBytes
    */
   public function setFreeBytes($freeBytes)
   {
@@ -89,7 +107,9 @@ class DiskPartition extends \Google\Model
     return $this->freeBytes;
   }
   /**
-   * @param string
+   * Mount point (Linux/Windows) or drive letter (Windows).
+   *
+   * @param string $mountPoint
    */
   public function setMountPoint($mountPoint)
   {
@@ -103,7 +123,9 @@ class DiskPartition extends \Google\Model
     return $this->mountPoint;
   }
   /**
-   * @param DiskPartitionList
+   * Sub-partitions.
+   *
+   * @param DiskPartitionList $subPartitions
    */
   public function setSubPartitions(DiskPartitionList $subPartitions)
   {
@@ -117,7 +139,9 @@ class DiskPartition extends \Google\Model
     return $this->subPartitions;
   }
   /**
-   * @param string
+   * Partition type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -131,7 +155,9 @@ class DiskPartition extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * Partition UUID.
+   *
+   * @param string $uuid
    */
   public function setUuid($uuid)
   {

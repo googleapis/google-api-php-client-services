@@ -19,68 +19,127 @@ namespace Google\Service\MigrationCenterAPI;
 
 class DiscoveryClient extends \Google\Collection
 {
+  /**
+   * Client state is unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Client is active.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Client is offline.
+   */
+  public const STATE_OFFLINE = 'OFFLINE';
+  /**
+   * Client is in a degraded state. See the `errors` field for details.
+   */
+  public const STATE_DEGRADED = 'DEGRADED';
+  /**
+   * Client has expired. See the expire_time field for the expire time.
+   */
+  public const STATE_EXPIRED = 'EXPIRED';
   protected $collection_key = 'errors';
   /**
+   * Output only. Time when the discovery client was first created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Free text description. Maximum length is 1000 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. Free text display name. Maximum length is 63 characters.
+   *
    * @var string
    */
   public $displayName;
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
   /**
+   * Optional. Client expiration time in UTC. If specified, the backend will not
+   * accept new frames after this time.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Output only. Last heartbeat time. Healthy clients are expected to send
+   * heartbeats regularly (normally every few minutes).
+   *
    * @var string
    */
   public $heartbeatTime;
   /**
+   * Optional. Labels as key value pairs.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. Identifier. Full name of this discovery client.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Service account used by the discovery client for various
+   * operation.
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * Output only. This field is intended for internal use.
+   *
    * @var string
    */
   public $signalsEndpoint;
   /**
+   * Required. Immutable. Full name of the source object associated with this
+   * discovery client.
+   *
    * @var string
    */
   public $source;
   /**
+   * Output only. Current state of the discovery client.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. Input only. Client time-to-live. If specified, the backend will
+   * not accept new frames after this time. This field is input only. The
+   * derived expiration time is provided as output through the `expire_time`
+   * field.
+   *
    * @var string
    */
   public $ttl;
   /**
+   * Output only. Time when the discovery client was last updated. This value is
+   * not updated by heartbeats, to view the last heartbeat time please refer to
+   * the `heartbeat_time` field.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. Client version, as reported in recent heartbeat.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Output only. Time when the discovery client was first created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -94,7 +153,9 @@ class DiscoveryClient extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Free text description. Maximum length is 1000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -108,7 +169,9 @@ class DiscoveryClient extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. Free text display name. Maximum length is 63 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -122,7 +185,9 @@ class DiscoveryClient extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param Status[]
+   * Output only. Errors affecting client functionality.
+   *
+   * @param Status[] $errors
    */
   public function setErrors($errors)
   {
@@ -136,7 +201,10 @@ class DiscoveryClient extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * Optional. Client expiration time in UTC. If specified, the backend will not
+   * accept new frames after this time.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -150,7 +218,10 @@ class DiscoveryClient extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param string
+   * Output only. Last heartbeat time. Healthy clients are expected to send
+   * heartbeats regularly (normally every few minutes).
+   *
+   * @param string $heartbeatTime
    */
   public function setHeartbeatTime($heartbeatTime)
   {
@@ -164,7 +235,9 @@ class DiscoveryClient extends \Google\Collection
     return $this->heartbeatTime;
   }
   /**
-   * @param string[]
+   * Optional. Labels as key value pairs.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -178,7 +251,9 @@ class DiscoveryClient extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. Identifier. Full name of this discovery client.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -192,7 +267,10 @@ class DiscoveryClient extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Service account used by the discovery client for various
+   * operation.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -206,7 +284,9 @@ class DiscoveryClient extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param string
+   * Output only. This field is intended for internal use.
+   *
+   * @param string $signalsEndpoint
    */
   public function setSignalsEndpoint($signalsEndpoint)
   {
@@ -220,7 +300,10 @@ class DiscoveryClient extends \Google\Collection
     return $this->signalsEndpoint;
   }
   /**
-   * @param string
+   * Required. Immutable. Full name of the source object associated with this
+   * discovery client.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -234,21 +317,30 @@ class DiscoveryClient extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param string
+   * Output only. Current state of the discovery client.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, OFFLINE, DEGRADED, EXPIRED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Optional. Input only. Client time-to-live. If specified, the backend will
+   * not accept new frames after this time. This field is input only. The
+   * derived expiration time is provided as output through the `expire_time`
+   * field.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {
@@ -262,7 +354,11 @@ class DiscoveryClient extends \Google\Collection
     return $this->ttl;
   }
   /**
-   * @param string
+   * Output only. Time when the discovery client was last updated. This value is
+   * not updated by heartbeats, to view the last heartbeat time please refer to
+   * the `heartbeat_time` field.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -276,7 +372,9 @@ class DiscoveryClient extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Output only. Client version, as reported in recent heartbeat.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

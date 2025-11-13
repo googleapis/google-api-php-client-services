@@ -23,16 +23,22 @@ class ListErrorFramesResponse extends \Google\Collection
   protected $errorFramesType = ErrorFrame::class;
   protected $errorFramesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ErrorFrame[]
+   * The list of error frames.
+   *
+   * @param ErrorFrame[] $errorFrames
    */
   public function setErrorFrames($errorFrames)
   {
@@ -46,7 +52,9 @@ class ListErrorFramesResponse extends \Google\Collection
     return $this->errorFrames;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListErrorFramesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

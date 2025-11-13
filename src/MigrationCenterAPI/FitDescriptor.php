@@ -20,19 +20,41 @@ namespace Google\Service\MigrationCenterAPI;
 class FitDescriptor extends \Google\Model
 {
   /**
+   * Not enough information.
+   */
+  public const FIT_LEVEL_FIT_LEVEL_UNSPECIFIED = 'FIT_LEVEL_UNSPECIFIED';
+  /**
+   * Fit.
+   */
+  public const FIT_LEVEL_FIT = 'FIT';
+  /**
+   * No Fit.
+   */
+  public const FIT_LEVEL_NO_FIT = 'NO_FIT';
+  /**
+   * Fit with effort.
+   */
+  public const FIT_LEVEL_REQUIRES_EFFORT = 'REQUIRES_EFFORT';
+  /**
+   * Output only. Fit level.
+   *
    * @var string
    */
   public $fitLevel;
 
   /**
-   * @param string
+   * Output only. Fit level.
+   *
+   * Accepted values: FIT_LEVEL_UNSPECIFIED, FIT, NO_FIT, REQUIRES_EFFORT
+   *
+   * @param self::FIT_LEVEL_* $fitLevel
    */
   public function setFitLevel($fitLevel)
   {
     $this->fitLevel = $fitLevel;
   }
   /**
-   * @return string
+   * @return self::FIT_LEVEL_*
    */
   public function getFitLevel()
   {

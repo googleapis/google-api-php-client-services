@@ -21,10 +21,14 @@ class ErrorFrame extends \Google\Collection
 {
   protected $collection_key = 'violations';
   /**
+   * Output only. Frame ingestion time.
+   *
    * @var string
    */
   public $ingestionTime;
   /**
+   * Output only. The identifier of the ErrorFrame.
+   *
    * @var string
    */
   public $name;
@@ -34,7 +38,9 @@ class ErrorFrame extends \Google\Collection
   protected $violationsDataType = 'array';
 
   /**
-   * @param string
+   * Output only. Frame ingestion time.
+   *
+   * @param string $ingestionTime
    */
   public function setIngestionTime($ingestionTime)
   {
@@ -48,7 +54,9 @@ class ErrorFrame extends \Google\Collection
     return $this->ingestionTime;
   }
   /**
-   * @param string
+   * Output only. The identifier of the ErrorFrame.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -62,7 +70,9 @@ class ErrorFrame extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param AssetFrame
+   * Output only. The frame that was originally reported.
+   *
+   * @param AssetFrame $originalFrame
    */
   public function setOriginalFrame(AssetFrame $originalFrame)
   {
@@ -76,7 +86,9 @@ class ErrorFrame extends \Google\Collection
     return $this->originalFrame;
   }
   /**
-   * @param FrameViolationEntry[]
+   * Output only. All the violations that were detected for the frame.
+   *
+   * @param FrameViolationEntry[] $violations
    */
   public function setViolations($violations)
   {

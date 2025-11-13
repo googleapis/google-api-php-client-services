@@ -20,16 +20,22 @@ namespace Google\Service\MigrationCenterAPI;
 class GuestRuntimeDetails extends \Google\Model
 {
   /**
+   * Domain, e.g. c.stratozone-development.internal.
+   *
    * @var string
    */
   public $domain;
   protected $installedAppsType = GuestInstalledApplicationList::class;
   protected $installedAppsDataType = '';
   /**
+   * Last time the OS was booted.
+   *
    * @var string
    */
   public $lastBootTime;
   /**
+   * Machine name.
+   *
    * @var string
    */
   public $machineName;
@@ -43,7 +49,9 @@ class GuestRuntimeDetails extends \Google\Model
   protected $servicesDataType = '';
 
   /**
-   * @param string
+   * Domain, e.g. c.stratozone-development.internal.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -57,7 +65,9 @@ class GuestRuntimeDetails extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param GuestInstalledApplicationList
+   * Installed applications information.
+   *
+   * @param GuestInstalledApplicationList $installedApps
    */
   public function setInstalledApps(GuestInstalledApplicationList $installedApps)
   {
@@ -71,7 +81,9 @@ class GuestRuntimeDetails extends \Google\Model
     return $this->installedApps;
   }
   /**
-   * @param string
+   * Last time the OS was booted.
+   *
+   * @param string $lastBootTime
    */
   public function setLastBootTime($lastBootTime)
   {
@@ -85,7 +97,9 @@ class GuestRuntimeDetails extends \Google\Model
     return $this->lastBootTime;
   }
   /**
-   * @param string
+   * Machine name.
+   *
+   * @param string $machineName
    */
   public function setMachineName($machineName)
   {
@@ -99,7 +113,9 @@ class GuestRuntimeDetails extends \Google\Model
     return $this->machineName;
   }
   /**
-   * @param RuntimeNetworkInfo
+   * Runtime network information (connections, ports).
+   *
+   * @param RuntimeNetworkInfo $network
    */
   public function setNetwork(RuntimeNetworkInfo $network)
   {
@@ -113,7 +129,9 @@ class GuestRuntimeDetails extends \Google\Model
     return $this->network;
   }
   /**
-   * @param OpenFileList
+   * Open files information.
+   *
+   * @param OpenFileList $openFileList
    */
   public function setOpenFileList(OpenFileList $openFileList)
   {
@@ -127,7 +145,9 @@ class GuestRuntimeDetails extends \Google\Model
     return $this->openFileList;
   }
   /**
-   * @param RunningProcessList
+   * Running processes.
+   *
+   * @param RunningProcessList $processes
    */
   public function setProcesses(RunningProcessList $processes)
   {
@@ -141,7 +161,9 @@ class GuestRuntimeDetails extends \Google\Model
     return $this->processes;
   }
   /**
-   * @param RunningServiceList
+   * Running background services.
+   *
+   * @param RunningServiceList $services
    */
   public function setServices(RunningServiceList $services)
   {
