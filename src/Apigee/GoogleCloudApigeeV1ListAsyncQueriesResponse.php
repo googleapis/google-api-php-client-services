@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1ListAsyncQueriesResponse extends \Google\Collection
   protected $queriesDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1AsyncQuery[]
+   * The asynchronous queries belong to requested resource name.
+   *
+   * @param GoogleCloudApigeeV1AsyncQuery[] $queries
    */
   public function setQueries($queries)
   {

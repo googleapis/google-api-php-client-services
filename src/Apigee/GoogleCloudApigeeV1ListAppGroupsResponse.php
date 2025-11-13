@@ -23,16 +23,23 @@ class GoogleCloudApigeeV1ListAppGroupsResponse extends \Google\Collection
   protected $appGroupsType = GoogleCloudApigeeV1AppGroup::class;
   protected $appGroupsDataType = 'array';
   /**
+   * Token that can be sent as `next_page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Total count of AppGroups.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param GoogleCloudApigeeV1AppGroup[]
+   * List of AppGroups.
+   *
+   * @param GoogleCloudApigeeV1AppGroup[] $appGroups
    */
   public function setAppGroups($appGroups)
   {
@@ -46,7 +53,10 @@ class GoogleCloudApigeeV1ListAppGroupsResponse extends \Google\Collection
     return $this->appGroups;
   }
   /**
-   * @param string
+   * Token that can be sent as `next_page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class GoogleCloudApigeeV1ListAppGroupsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * Total count of AppGroups.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

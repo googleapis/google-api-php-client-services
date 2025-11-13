@@ -23,28 +23,41 @@ class GoogleCloudApigeeV1ListApiDocsResponse extends \Google\Collection
   protected $dataType = GoogleCloudApigeeV1ApiDoc::class;
   protected $dataDataType = 'array';
   /**
+   * Unique error code for the request, if any.
+   *
    * @var string
    */
   public $errorCode;
   /**
+   * Description of the operation.
+   *
    * @var string
    */
   public $message;
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unique ID of the request.
+   *
    * @var string
    */
   public $requestId;
   /**
+   * Status of the operation.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param GoogleCloudApigeeV1ApiDoc[]
+   * The catalog item resources.
+   *
+   * @param GoogleCloudApigeeV1ApiDoc[] $data
    */
   public function setData($data)
   {
@@ -58,7 +71,9 @@ class GoogleCloudApigeeV1ListApiDocsResponse extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param string
+   * Unique error code for the request, if any.
+   *
+   * @param string $errorCode
    */
   public function setErrorCode($errorCode)
   {
@@ -72,7 +87,9 @@ class GoogleCloudApigeeV1ListApiDocsResponse extends \Google\Collection
     return $this->errorCode;
   }
   /**
-   * @param string
+   * Description of the operation.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -86,7 +103,10 @@ class GoogleCloudApigeeV1ListApiDocsResponse extends \Google\Collection
     return $this->message;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -100,7 +120,9 @@ class GoogleCloudApigeeV1ListApiDocsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * Unique ID of the request.
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {
@@ -114,7 +136,9 @@ class GoogleCloudApigeeV1ListApiDocsResponse extends \Google\Collection
     return $this->requestId;
   }
   /**
-   * @param string
+   * Status of the operation.
+   *
+   * @param string $status
    */
   public function setStatus($status)
   {

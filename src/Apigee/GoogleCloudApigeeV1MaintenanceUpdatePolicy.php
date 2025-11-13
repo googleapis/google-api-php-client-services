@@ -19,8 +19,23 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1MaintenanceUpdatePolicy extends \Google\Collection
 {
+  /**
+   * Unspecified maintenance channel.
+   */
+  public const MAINTENANCE_CHANNEL_MAINTENANCE_CHANNEL_UNSPECIFIED = 'MAINTENANCE_CHANNEL_UNSPECIFIED';
+  /**
+   * Receive 1 weeks notice before maintenance occurs
+   */
+  public const MAINTENANCE_CHANNEL_WEEK1 = 'WEEK1';
+  /**
+   * Receive 2 weeks notice before maintenance occurs
+   */
+  public const MAINTENANCE_CHANNEL_WEEK2 = 'WEEK2';
   protected $collection_key = 'maintenanceWindows';
   /**
+   * Optional. Maintenance channel to specify relative scheduling for
+   * maintenance.
+   *
    * @var string
    */
   public $maintenanceChannel;
@@ -28,21 +43,28 @@ class GoogleCloudApigeeV1MaintenanceUpdatePolicy extends \Google\Collection
   protected $maintenanceWindowsDataType = 'array';
 
   /**
-   * @param string
+   * Optional. Maintenance channel to specify relative scheduling for
+   * maintenance.
+   *
+   * Accepted values: MAINTENANCE_CHANNEL_UNSPECIFIED, WEEK1, WEEK2
+   *
+   * @param self::MAINTENANCE_CHANNEL_* $maintenanceChannel
    */
   public function setMaintenanceChannel($maintenanceChannel)
   {
     $this->maintenanceChannel = $maintenanceChannel;
   }
   /**
-   * @return string
+   * @return self::MAINTENANCE_CHANNEL_*
    */
   public function getMaintenanceChannel()
   {
     return $this->maintenanceChannel;
   }
   /**
-   * @param GoogleCloudApigeeV1MaintenanceUpdatePolicyMaintenanceWindow[]
+   * Optional. Preferred windows to perform maintenance. Currently limited to 1.
+   *
+   * @param GoogleCloudApigeeV1MaintenanceUpdatePolicyMaintenanceWindow[] $maintenanceWindows
    */
   public function setMaintenanceWindows($maintenanceWindows)
   {

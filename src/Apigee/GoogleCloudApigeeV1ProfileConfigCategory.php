@@ -33,7 +33,11 @@ class GoogleCloudApigeeV1ProfileConfigCategory extends \Google\Model
   protected $threatDataType = '';
 
   /**
-   * @param GoogleCloudApigeeV1ProfileConfigAbuse
+   * Checks for abuse, which includes any requests sent to the API for purposes
+   * other than what it is intended for, such as high volumes of requests, data
+   * scraping, and abuse related to authorization.
+   *
+   * @param GoogleCloudApigeeV1ProfileConfigAbuse $abuse
    */
   public function setAbuse(GoogleCloudApigeeV1ProfileConfigAbuse $abuse)
   {
@@ -47,7 +51,9 @@ class GoogleCloudApigeeV1ProfileConfigCategory extends \Google\Model
     return $this->abuse;
   }
   /**
-   * @param GoogleCloudApigeeV1ProfileConfigAuthorization
+   * Checks to see if you have an authorization policy in place.
+   *
+   * @param GoogleCloudApigeeV1ProfileConfigAuthorization $authorization
    */
   public function setAuthorization(GoogleCloudApigeeV1ProfileConfigAuthorization $authorization)
   {
@@ -61,7 +67,9 @@ class GoogleCloudApigeeV1ProfileConfigCategory extends \Google\Model
     return $this->authorization;
   }
   /**
-   * @param GoogleCloudApigeeV1ProfileConfigCORS
+   * Checks to see if you have CORS policy in place.
+   *
+   * @param GoogleCloudApigeeV1ProfileConfigCORS $cors
    */
   public function setCors(GoogleCloudApigeeV1ProfileConfigCORS $cors)
   {
@@ -75,7 +83,9 @@ class GoogleCloudApigeeV1ProfileConfigCategory extends \Google\Model
     return $this->cors;
   }
   /**
-   * @param GoogleCloudApigeeV1ProfileConfigMediation
+   * Checks to see if you have a mediation policy in place.
+   *
+   * @param GoogleCloudApigeeV1ProfileConfigMediation $mediation
    */
   public function setMediation(GoogleCloudApigeeV1ProfileConfigMediation $mediation)
   {
@@ -89,7 +99,9 @@ class GoogleCloudApigeeV1ProfileConfigCategory extends \Google\Model
     return $this->mediation;
   }
   /**
-   * @param GoogleCloudApigeeV1ProfileConfigMTLS
+   * Checks to see if you have configured mTLS for the target server.
+   *
+   * @param GoogleCloudApigeeV1ProfileConfigMTLS $mtls
    */
   public function setMtls(GoogleCloudApigeeV1ProfileConfigMTLS $mtls)
   {
@@ -103,7 +115,9 @@ class GoogleCloudApigeeV1ProfileConfigCategory extends \Google\Model
     return $this->mtls;
   }
   /**
-   * @param GoogleCloudApigeeV1ProfileConfigThreat
+   * Checks to see if you have a threat protection policy in place.
+   *
+   * @param GoogleCloudApigeeV1ProfileConfigThreat $threat
    */
   public function setThreat(GoogleCloudApigeeV1ProfileConfigThreat $threat)
   {

@@ -20,6 +20,20 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1OASDocumentation extends \Google\Model
 {
   /**
+   * The format is not available.
+   */
+  public const FORMAT_FORMAT_UNSPECIFIED = 'FORMAT_UNSPECIFIED';
+  /**
+   * YAML format.
+   */
+  public const FORMAT_YAML = 'YAML';
+  /**
+   * JSON format.
+   */
+  public const FORMAT_JSON = 'JSON';
+  /**
+   * Output only. The format of the input specification file contents.
+   *
    * @var string
    */
   public $format;
@@ -27,21 +41,28 @@ class GoogleCloudApigeeV1OASDocumentation extends \Google\Model
   protected $specDataType = '';
 
   /**
-   * @param string
+   * Output only. The format of the input specification file contents.
+   *
+   * Accepted values: FORMAT_UNSPECIFIED, YAML, JSON
+   *
+   * @param self::FORMAT_* $format
    */
   public function setFormat($format)
   {
     $this->format = $format;
   }
   /**
-   * @return string
+   * @return self::FORMAT_*
    */
   public function getFormat()
   {
     return $this->format;
   }
   /**
-   * @param GoogleCloudApigeeV1DocumentationFile
+   * Required. The documentation file contents for the OpenAPI Specification.
+   * JSON and YAML file formats are supported.
+   *
+   * @param GoogleCloudApigeeV1DocumentationFile $spec
    */
   public function setSpec(GoogleCloudApigeeV1DocumentationFile $spec)
   {

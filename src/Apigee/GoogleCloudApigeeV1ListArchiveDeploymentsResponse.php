@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListArchiveDeploymentsResponse extends \Google\Collecti
   protected $archiveDeploymentsType = GoogleCloudApigeeV1ArchiveDeployment::class;
   protected $archiveDeploymentsDataType = 'array';
   /**
+   * Page token that you can include in a ListArchiveDeployments request to
+   * retrieve the next page. If omitted, no subsequent pages exist.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApigeeV1ArchiveDeployment[]
+   * Archive Deployments in the specified environment.
+   *
+   * @param GoogleCloudApigeeV1ArchiveDeployment[] $archiveDeployments
    */
   public function setArchiveDeployments($archiveDeployments)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListArchiveDeploymentsResponse extends \Google\Collecti
     return $this->archiveDeployments;
   }
   /**
-   * @param string
+   * Page token that you can include in a ListArchiveDeployments request to
+   * retrieve the next page. If omitted, no subsequent pages exist.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

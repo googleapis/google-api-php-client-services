@@ -21,6 +21,11 @@ class GoogleCloudApigeeV1ListSecurityReportsResponse extends \Google\Collection
 {
   protected $collection_key = 'securityReports';
   /**
+   * If the number of security reports exceeded the page size requested, the
+   * token can be used to fetch the next page in a subsequent call. If the
+   * response is the last page and there are no more reports to return this
+   * field is left empty.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +33,12 @@ class GoogleCloudApigeeV1ListSecurityReportsResponse extends \Google\Collection
   protected $securityReportsDataType = 'array';
 
   /**
-   * @param string
+   * If the number of security reports exceeded the page size requested, the
+   * token can be used to fetch the next page in a subsequent call. If the
+   * response is the last page and there are no more reports to return this
+   * field is left empty.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +52,9 @@ class GoogleCloudApigeeV1ListSecurityReportsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityReport[]
+   * The security reports belong to requested resource name.
+   *
+   * @param GoogleCloudApigeeV1SecurityReport[] $securityReports
    */
   public function setSecurityReports($securityReports)
   {

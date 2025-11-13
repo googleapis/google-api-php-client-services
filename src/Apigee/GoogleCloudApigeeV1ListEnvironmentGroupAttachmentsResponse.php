@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListEnvironmentGroupAttachmentsResponse extends \Google
   protected $environmentGroupAttachmentsType = GoogleCloudApigeeV1EnvironmentGroupAttachment::class;
   protected $environmentGroupAttachmentsDataType = 'array';
   /**
+   * Page token that you can include in a ListEnvironmentGroupAttachments
+   * request to retrieve the next page. If omitted, no subsequent pages exist.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApigeeV1EnvironmentGroupAttachment[]
+   * EnvironmentGroupAttachments for the specified environment group.
+   *
+   * @param GoogleCloudApigeeV1EnvironmentGroupAttachment[] $environmentGroupAttachments
    */
   public function setEnvironmentGroupAttachments($environmentGroupAttachments)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListEnvironmentGroupAttachmentsResponse extends \Google
     return $this->environmentGroupAttachments;
   }
   /**
-   * @param string
+   * Page token that you can include in a ListEnvironmentGroupAttachments
+   * request to retrieve the next page. If omitted, no subsequent pages exist.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

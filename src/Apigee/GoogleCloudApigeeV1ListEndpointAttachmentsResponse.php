@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends \Google\Collect
   protected $endpointAttachmentsType = GoogleCloudApigeeV1EndpointAttachment::class;
   protected $endpointAttachmentsDataType = 'array';
   /**
+   * Page token that you can include in an `ListEndpointAttachments` request to
+   * retrieve the next page. If omitted, no subsequent pages exist.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApigeeV1EndpointAttachment[]
+   * Endpoint attachments in the specified organization.
+   *
+   * @param GoogleCloudApigeeV1EndpointAttachment[] $endpointAttachments
    */
   public function setEndpointAttachments($endpointAttachments)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends \Google\Collect
     return $this->endpointAttachments;
   }
   /**
-   * @param string
+   * Page token that you can include in an `ListEndpointAttachments` request to
+   * retrieve the next page. If omitted, no subsequent pages exist.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

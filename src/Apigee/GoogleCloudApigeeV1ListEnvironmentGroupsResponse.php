@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListEnvironmentGroupsResponse extends \Google\Collectio
   protected $environmentGroupsType = GoogleCloudApigeeV1EnvironmentGroup::class;
   protected $environmentGroupsDataType = 'array';
   /**
+   * Page token that you can include in a ListEnvironmentGroups request to
+   * retrieve the next page. If omitted, no subsequent pages exist.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApigeeV1EnvironmentGroup[]
+   * EnvironmentGroups in the specified organization.
+   *
+   * @param GoogleCloudApigeeV1EnvironmentGroup[] $environmentGroups
    */
   public function setEnvironmentGroups($environmentGroups)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListEnvironmentGroupsResponse extends \Google\Collectio
     return $this->environmentGroups;
   }
   /**
-   * @param string
+   * Page token that you can include in a ListEnvironmentGroups request to
+   * retrieve the next page. If omitted, no subsequent pages exist.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1MonetizationConfig extends \Google\Model
 {
   /**
+   * Flag that specifies whether the Monetization add-on is enabled.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Flag that specifies whether the Monetization add-on is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

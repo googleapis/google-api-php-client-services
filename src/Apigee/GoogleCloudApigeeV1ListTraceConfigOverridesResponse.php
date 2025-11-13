@@ -21,6 +21,9 @@ class GoogleCloudApigeeV1ListTraceConfigOverridesResponse extends \Google\Collec
 {
   protected $collection_key = 'traceConfigOverrides';
   /**
+   * Token value that can be passed as `page_token` to retrieve the next page of
+   * content.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudApigeeV1ListTraceConfigOverridesResponse extends \Google\Collec
   protected $traceConfigOverridesDataType = 'array';
 
   /**
-   * @param string
+   * Token value that can be passed as `page_token` to retrieve the next page of
+   * content.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudApigeeV1ListTraceConfigOverridesResponse extends \Google\Collec
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1TraceConfigOverride[]
+   * List all trace configuration overrides in an environment.
+   *
+   * @param GoogleCloudApigeeV1TraceConfigOverride[] $traceConfigOverrides
    */
   public function setTraceConfigOverrides($traceConfigOverrides)
   {

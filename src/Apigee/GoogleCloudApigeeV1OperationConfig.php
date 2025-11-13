@@ -21,6 +21,9 @@ class GoogleCloudApigeeV1OperationConfig extends \Google\Collection
 {
   protected $collection_key = 'operations';
   /**
+   * Required. Name of the API proxy or remote service with which the resources,
+   * methods, and quota are associated.
+   *
    * @var string
    */
   public $apiSource;
@@ -32,7 +35,10 @@ class GoogleCloudApigeeV1OperationConfig extends \Google\Collection
   protected $quotaDataType = '';
 
   /**
-   * @param string
+   * Required. Name of the API proxy or remote service with which the resources,
+   * methods, and quota are associated.
+   *
+   * @param string $apiSource
    */
   public function setApiSource($apiSource)
   {
@@ -46,7 +52,9 @@ class GoogleCloudApigeeV1OperationConfig extends \Google\Collection
     return $this->apiSource;
   }
   /**
-   * @param GoogleCloudApigeeV1Attribute[]
+   * Custom attributes associated with the operation.
+   *
+   * @param GoogleCloudApigeeV1Attribute[] $attributes
    */
   public function setAttributes($attributes)
   {
@@ -60,7 +68,12 @@ class GoogleCloudApigeeV1OperationConfig extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param GoogleCloudApigeeV1Operation[]
+   * List of resource/method pairs for the API proxy or remote service to which
+   * quota will applied. **Note**: Currently, you can specify only a single
+   * resource/method pair. The call will fail if more than one resource/method
+   * pair is provided.
+   *
+   * @param GoogleCloudApigeeV1Operation[] $operations
    */
   public function setOperations($operations)
   {
@@ -74,7 +87,10 @@ class GoogleCloudApigeeV1OperationConfig extends \Google\Collection
     return $this->operations;
   }
   /**
-   * @param GoogleCloudApigeeV1Quota
+   * Quota parameters to be enforced for the resources, methods, and API source
+   * combination. If none are specified, quota enforcement will not be done.
+   *
+   * @param GoogleCloudApigeeV1Quota $quota
    */
   public function setQuota(GoogleCloudApigeeV1Quota $quota)
   {

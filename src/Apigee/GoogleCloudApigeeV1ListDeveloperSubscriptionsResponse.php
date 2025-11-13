@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListDeveloperSubscriptionsResponse extends \Google\Coll
   protected $developerSubscriptionsType = GoogleCloudApigeeV1DeveloperSubscription::class;
   protected $developerSubscriptionsDataType = 'array';
   /**
+   * Value that can be sent as `startKey` to retrieve the next page of content.
+   * If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextStartKey;
 
   /**
-   * @param GoogleCloudApigeeV1DeveloperSubscription[]
+   * List of all subscriptions.
+   *
+   * @param GoogleCloudApigeeV1DeveloperSubscription[] $developerSubscriptions
    */
   public function setDeveloperSubscriptions($developerSubscriptions)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListDeveloperSubscriptionsResponse extends \Google\Coll
     return $this->developerSubscriptions;
   }
   /**
-   * @param string
+   * Value that can be sent as `startKey` to retrieve the next page of content.
+   * If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextStartKey
    */
   public function setNextStartKey($nextStartKey)
   {

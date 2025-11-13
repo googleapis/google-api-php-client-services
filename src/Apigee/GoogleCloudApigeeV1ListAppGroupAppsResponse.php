@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListAppGroupAppsResponse extends \Google\Collection
   protected $appGroupAppsType = GoogleCloudApigeeV1AppGroupApp::class;
   protected $appGroupAppsDataType = 'array';
   /**
+   * Token that can be sent as `next_page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApigeeV1AppGroupApp[]
+   * List of AppGroup apps and their credentials.
+   *
+   * @param GoogleCloudApigeeV1AppGroupApp[] $appGroupApps
    */
   public function setAppGroupApps($appGroupApps)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListAppGroupAppsResponse extends \Google\Collection
     return $this->appGroupApps;
   }
   /**
-   * @param string
+   * Token that can be sent as `next_page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

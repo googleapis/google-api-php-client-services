@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1Properties extends \Google\Collection
   protected $propertyDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1Property[]
+   * List of all properties in the object
+   *
+   * @param GoogleCloudApigeeV1Property[] $property
    */
   public function setProperty($property)
   {

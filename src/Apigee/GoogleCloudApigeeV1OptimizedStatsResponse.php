@@ -24,12 +24,17 @@ class GoogleCloudApigeeV1OptimizedStatsResponse extends \Google\Collection
         "timeUnit" => "TimeUnit",
   ];
   /**
+   * List of time unit values. Time unit refers to an epoch timestamp value.
+   *
    * @var string[]
    */
   public $timeUnit;
   protected $metaDataType = GoogleCloudApigeeV1Metadata::class;
   protected $metaDataDataType = '';
   /**
+   * Boolean flag that indicates whether the results were truncated based on the
+   * limit parameter.
+   *
    * @var bool
    */
   public $resultTruncated;
@@ -37,7 +42,9 @@ class GoogleCloudApigeeV1OptimizedStatsResponse extends \Google\Collection
   protected $statsDataType = '';
 
   /**
-   * @param string[]
+   * List of time unit values. Time unit refers to an epoch timestamp value.
+   *
+   * @param string[] $timeUnit
    */
   public function setTimeUnit($timeUnit)
   {
@@ -51,7 +58,9 @@ class GoogleCloudApigeeV1OptimizedStatsResponse extends \Google\Collection
     return $this->timeUnit;
   }
   /**
-   * @param GoogleCloudApigeeV1Metadata
+   * Metadata information about the query executed.
+   *
+   * @param GoogleCloudApigeeV1Metadata $metaData
    */
   public function setMetaData(GoogleCloudApigeeV1Metadata $metaData)
   {
@@ -65,7 +74,10 @@ class GoogleCloudApigeeV1OptimizedStatsResponse extends \Google\Collection
     return $this->metaData;
   }
   /**
-   * @param bool
+   * Boolean flag that indicates whether the results were truncated based on the
+   * limit parameter.
+   *
+   * @param bool $resultTruncated
    */
   public function setResultTruncated($resultTruncated)
   {
@@ -79,7 +91,9 @@ class GoogleCloudApigeeV1OptimizedStatsResponse extends \Google\Collection
     return $this->resultTruncated;
   }
   /**
-   * @param GoogleCloudApigeeV1OptimizedStatsNode
+   * `stats` results.
+   *
+   * @param GoogleCloudApigeeV1OptimizedStatsNode $stats
    */
   public function setStats(GoogleCloudApigeeV1OptimizedStatsNode $stats)
   {

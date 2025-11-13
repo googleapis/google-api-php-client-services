@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListInstanceAttachmentsResponse extends \Google\Collect
   protected $attachmentsType = GoogleCloudApigeeV1InstanceAttachment::class;
   protected $attachmentsDataType = 'array';
   /**
+   * Page token that you can include in a ListInstanceAttachments request to
+   * retrieve the next page of content. If omitted, no subsequent pages exist.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApigeeV1InstanceAttachment[]
+   * Attachments for the instance.
+   *
+   * @param GoogleCloudApigeeV1InstanceAttachment[] $attachments
    */
   public function setAttachments($attachments)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListInstanceAttachmentsResponse extends \Google\Collect
     return $this->attachments;
   }
   /**
-   * @param string
+   * Page token that you can include in a ListInstanceAttachments request to
+   * retrieve the next page of content. If omitted, no subsequent pages exist.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

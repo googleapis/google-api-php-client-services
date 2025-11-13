@@ -21,16 +21,28 @@ class GoogleCloudApigeeV1GraphQLOperation extends \Google\Collection
 {
   protected $collection_key = 'operationTypes';
   /**
+   * GraphQL operation name. The name and operation type will be used to apply
+   * quotas. If no name is specified, the quota will be applied to all GraphQL
+   * operations irrespective of their operation names in the payload.
+   *
    * @var string
    */
   public $operation;
   /**
+   * Required. GraphQL operation types. Valid values include `query` or
+   * `mutation`. **Note**: Apigee does not currently support `subscription`
+   * types.
+   *
    * @var string[]
    */
   public $operationTypes;
 
   /**
-   * @param string
+   * GraphQL operation name. The name and operation type will be used to apply
+   * quotas. If no name is specified, the quota will be applied to all GraphQL
+   * operations irrespective of their operation names in the payload.
+   *
+   * @param string $operation
    */
   public function setOperation($operation)
   {
@@ -44,7 +56,11 @@ class GoogleCloudApigeeV1GraphQLOperation extends \Google\Collection
     return $this->operation;
   }
   /**
-   * @param string[]
+   * Required. GraphQL operation types. Valid values include `query` or
+   * `mutation`. **Note**: Apigee does not currently support `subscription`
+   * types.
+   *
+   * @param string[] $operationTypes
    */
   public function setOperationTypes($operationTypes)
   {

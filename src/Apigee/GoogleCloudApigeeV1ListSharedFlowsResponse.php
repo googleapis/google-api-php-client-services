@@ -24,7 +24,7 @@ class GoogleCloudApigeeV1ListSharedFlowsResponse extends \Google\Collection
   protected $sharedFlowsDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1SharedFlow[]
+   * @param GoogleCloudApigeeV1SharedFlow[] $sharedFlows
    */
   public function setSharedFlows($sharedFlows)
   {

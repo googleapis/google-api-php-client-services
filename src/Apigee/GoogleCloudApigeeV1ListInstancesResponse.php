@@ -23,12 +23,17 @@ class GoogleCloudApigeeV1ListInstancesResponse extends \Google\Collection
   protected $instancesType = GoogleCloudApigeeV1Instance::class;
   protected $instancesDataType = 'array';
   /**
+   * Page token that you can include in a ListInstance request to retrieve the
+   * next page of content. If omitted, no subsequent pages exist.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudApigeeV1Instance[]
+   * Instances in the specified organization.
+   *
+   * @param GoogleCloudApigeeV1Instance[] $instances
    */
   public function setInstances($instances)
   {
@@ -42,7 +47,10 @@ class GoogleCloudApigeeV1ListInstancesResponse extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string
+   * Page token that you can include in a ListInstance request to retrieve the
+   * next page of content. If omitted, no subsequent pages exist.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1ListDeveloperAppsResponse extends \Google\Collection
   protected $appDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1DeveloperApp[]
+   * List of developer apps and their credentials.
+   *
+   * @param GoogleCloudApigeeV1DeveloperApp[] $app
    */
   public function setApp($app)
   {

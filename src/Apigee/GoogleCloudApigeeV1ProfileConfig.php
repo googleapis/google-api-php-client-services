@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1ProfileConfig extends \Google\Collection
   protected $categoriesDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1ProfileConfigCategory[]
+   * List of categories of profile config.
+   *
+   * @param GoogleCloudApigeeV1ProfileConfigCategory[] $categories
    */
   public function setCategories($categories)
   {

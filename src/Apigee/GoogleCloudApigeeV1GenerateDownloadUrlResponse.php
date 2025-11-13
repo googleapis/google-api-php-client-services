@@ -20,12 +20,18 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1GenerateDownloadUrlResponse extends \Google\Model
 {
   /**
+   * The Google Cloud Storage signed URL that can be used to download the
+   * Archive zip file.
+   *
    * @var string
    */
   public $downloadUri;
 
   /**
-   * @param string
+   * The Google Cloud Storage signed URL that can be used to download the
+   * Archive zip file.
+   *
+   * @param string $downloadUri
    */
   public function setDownloadUri($downloadUri)
   {

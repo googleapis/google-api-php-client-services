@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1ListApiProductsResponse extends \Google\Collection
   protected $apiProductDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1ApiProduct[]
+   * Lists all API product names defined for an organization.
+   *
+   * @param GoogleCloudApigeeV1ApiProduct[] $apiProduct
    */
   public function setApiProduct($apiProduct)
   {

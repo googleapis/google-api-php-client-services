@@ -20,16 +20,22 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRevision extends \Google\Model
 {
   /**
+   * Percentage of MP replicas reporting this revision.
+   *
    * @var int
    */
   public $percentage;
   /**
+   * API proxy revision reported as deployed.
+   *
    * @var string
    */
   public $revision;
 
   /**
-   * @param int
+   * Percentage of MP replicas reporting this revision.
+   *
+   * @param int $percentage
    */
   public function setPercentage($percentage)
   {
@@ -43,7 +49,9 @@ class GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRevision extends \Googl
     return $this->percentage;
   }
   /**
-   * @param string
+   * API proxy revision reported as deployed.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {

@@ -21,6 +21,10 @@ class GoogleCloudApigeeV1ListSecurityFeedbackResponse extends \Google\Collection
 {
   protected $collection_key = 'securityFeedback';
   /**
+   * A token that can be sent as `page_token` in `ListSecurityFeedbackRequest`
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class GoogleCloudApigeeV1ListSecurityFeedbackResponse extends \Google\Collection
   protected $securityFeedbackDataType = 'array';
 
   /**
-   * @param string
+   * A token that can be sent as `page_token` in `ListSecurityFeedbackRequest`
+   * to retrieve the next page. If this field is omitted, there are no
+   * subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class GoogleCloudApigeeV1ListSecurityFeedbackResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityFeedback[]
+   * List of SecurityFeedback reports.
+   *
+   * @param GoogleCloudApigeeV1SecurityFeedback[] $securityFeedback
    */
   public function setSecurityFeedback($securityFeedback)
   {

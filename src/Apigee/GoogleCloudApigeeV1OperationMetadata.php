@@ -19,6 +19,14 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1OperationMetadata extends \Google\Collection
 {
+  public const OPERATION_TYPE_OPERATION_TYPE_UNSPECIFIED = 'OPERATION_TYPE_UNSPECIFIED';
+  public const OPERATION_TYPE_INSERT = 'INSERT';
+  public const OPERATION_TYPE_DELETE = 'DELETE';
+  public const OPERATION_TYPE_UPDATE = 'UPDATE';
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  public const STATE_NOT_STARTED = 'NOT_STARTED';
+  public const STATE_IN_PROGRESS = 'IN_PROGRESS';
+  public const STATE_FINISHED = 'FINISHED';
   protected $collection_key = 'warnings';
   /**
    * @var string
@@ -31,30 +39,36 @@ class GoogleCloudApigeeV1OperationMetadata extends \Google\Collection
    */
   public $state;
   /**
+   * Name of the resource for which the operation is operating on.
+   *
    * @var string
    */
   public $targetResourceName;
   /**
+   * Warnings encountered while executing the operation.
+   *
    * @var string[]
    */
   public $warnings;
 
   /**
-   * @param string
+   * @param self::OPERATION_TYPE_* $operationType
    */
   public function setOperationType($operationType)
   {
     $this->operationType = $operationType;
   }
   /**
-   * @return string
+   * @return self::OPERATION_TYPE_*
    */
   public function getOperationType()
   {
     return $this->operationType;
   }
   /**
-   * @param GoogleCloudApigeeV1OperationMetadataProgress
+   * Progress of the operation.
+   *
+   * @param GoogleCloudApigeeV1OperationMetadataProgress $progress
    */
   public function setProgress(GoogleCloudApigeeV1OperationMetadataProgress $progress)
   {
@@ -68,21 +82,23 @@ class GoogleCloudApigeeV1OperationMetadata extends \Google\Collection
     return $this->progress;
   }
   /**
-   * @param string
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Name of the resource for which the operation is operating on.
+   *
+   * @param string $targetResourceName
    */
   public function setTargetResourceName($targetResourceName)
   {
@@ -96,7 +112,9 @@ class GoogleCloudApigeeV1OperationMetadata extends \Google\Collection
     return $this->targetResourceName;
   }
   /**
-   * @param string[]
+   * Warnings encountered while executing the operation.
+   *
+   * @param string[] $warnings
    */
   public function setWarnings($warnings)
   {

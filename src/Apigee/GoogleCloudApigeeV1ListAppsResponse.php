@@ -23,16 +23,21 @@ class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
   protected $appType = GoogleCloudApigeeV1App::class;
   protected $appDataType = 'array';
   /**
+   * Token that can be sent as `next_page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Total count of Apps.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param GoogleCloudApigeeV1App[]
+   * @param GoogleCloudApigeeV1App[] $app
    */
   public function setApp($app)
   {
@@ -46,7 +51,10 @@ class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
     return $this->app;
   }
   /**
-   * @param string
+   * Token that can be sent as `next_page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class GoogleCloudApigeeV1ListAppsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * Total count of Apps.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

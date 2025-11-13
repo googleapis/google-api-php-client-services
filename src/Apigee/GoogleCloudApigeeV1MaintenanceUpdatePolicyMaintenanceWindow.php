@@ -20,6 +20,41 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1MaintenanceUpdatePolicyMaintenanceWindow extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const DAY_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_SUNDAY = 'SUNDAY';
+  /**
+   * Required. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY,
+   * etc.
+   *
    * @var string
    */
   public $day;
@@ -27,21 +62,29 @@ class GoogleCloudApigeeV1MaintenanceUpdatePolicyMaintenanceWindow extends \Googl
   protected $startTimeDataType = '';
 
   /**
-   * @param string
+   * Required. Preferred day of the week for maintenance, e.g. MONDAY, TUESDAY,
+   * etc.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_* $day
    */
   public function setDay($day)
   {
     $this->day = $day;
   }
   /**
-   * @return string
+   * @return self::DAY_*
    */
   public function getDay()
   {
     return $this->day;
   }
   /**
-   * @param GoogleTypeTimeOfDay
+   * Required. The start time (UTC) of the maintenance window.
+   *
+   * @param GoogleTypeTimeOfDay $startTime
    */
   public function setStartTime(GoogleTypeTimeOfDay $startTime)
   {

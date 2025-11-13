@@ -21,32 +21,47 @@ class GoogleCloudApigeeV1QueryMetadata extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
+   * Dimensions of the AsyncQuery.
+   *
    * @var string[]
    */
   public $dimensions;
   /**
+   * End timestamp of the query range.
+   *
    * @var string
    */
   public $endTimestamp;
   /**
+   * Metrics of the AsyncQuery. Example:
+   * ["name:message_count,func:sum,alias:sum_message_count"]
+   *
    * @var string[]
    */
   public $metrics;
   /**
+   * Output format.
+   *
    * @var string
    */
   public $outputFormat;
   /**
+   * Start timestamp of the query range.
+   *
    * @var string
    */
   public $startTimestamp;
   /**
+   * Query GroupBy time unit.
+   *
    * @var string
    */
   public $timeUnit;
 
   /**
-   * @param string[]
+   * Dimensions of the AsyncQuery.
+   *
+   * @param string[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -60,7 +75,9 @@ class GoogleCloudApigeeV1QueryMetadata extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param string
+   * End timestamp of the query range.
+   *
+   * @param string $endTimestamp
    */
   public function setEndTimestamp($endTimestamp)
   {
@@ -74,7 +91,10 @@ class GoogleCloudApigeeV1QueryMetadata extends \Google\Collection
     return $this->endTimestamp;
   }
   /**
-   * @param string[]
+   * Metrics of the AsyncQuery. Example:
+   * ["name:message_count,func:sum,alias:sum_message_count"]
+   *
+   * @param string[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -88,7 +108,9 @@ class GoogleCloudApigeeV1QueryMetadata extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * Output format.
+   *
+   * @param string $outputFormat
    */
   public function setOutputFormat($outputFormat)
   {
@@ -102,7 +124,9 @@ class GoogleCloudApigeeV1QueryMetadata extends \Google\Collection
     return $this->outputFormat;
   }
   /**
-   * @param string
+   * Start timestamp of the query range.
+   *
+   * @param string $startTimestamp
    */
   public function setStartTimestamp($startTimestamp)
   {
@@ -116,7 +140,9 @@ class GoogleCloudApigeeV1QueryMetadata extends \Google\Collection
     return $this->startTimestamp;
   }
   /**
-   * @param string
+   * Query GroupBy time unit.
+   *
+   * @param string $timeUnit
    */
   public function setTimeUnit($timeUnit)
   {

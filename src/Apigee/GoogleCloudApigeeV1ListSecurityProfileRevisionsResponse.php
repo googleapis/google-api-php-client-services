@@ -21,6 +21,9 @@ class GoogleCloudApigeeV1ListSecurityProfileRevisionsResponse extends \Google\Co
 {
   protected $collection_key = 'securityProfiles';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudApigeeV1ListSecurityProfileRevisionsResponse extends \Google\Co
   protected $securityProfilesDataType = 'array';
 
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,10 @@ class GoogleCloudApigeeV1ListSecurityProfileRevisionsResponse extends \Google\Co
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityProfile[]
+   * List of security profile revisions. The revisions may be attached or
+   * unattached to any environment.
+   *
+   * @param GoogleCloudApigeeV1SecurityProfile[] $securityProfiles
    */
   public function setSecurityProfiles($securityProfiles)
   {

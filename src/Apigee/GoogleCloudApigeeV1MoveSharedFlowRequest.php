@@ -20,12 +20,18 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1MoveSharedFlowRequest extends \Google\Model
 {
   /**
+   * Optional. Resource ID of the space to move the shared flow to. If
+   * unspecified, the shared flow will be moved to the organization level.
+   *
    * @var string
    */
   public $space;
 
   /**
-   * @param string
+   * Optional. Resource ID of the space to move the shared flow to. If
+   * unspecified, the shared flow will be moved to the organization level.
+   *
+   * @param string $space
    */
   public function setSpace($space)
   {

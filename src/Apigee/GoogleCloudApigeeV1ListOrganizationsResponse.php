@@ -24,7 +24,9 @@ class GoogleCloudApigeeV1ListOrganizationsResponse extends \Google\Collection
   protected $organizationsDataType = 'array';
 
   /**
-   * @param GoogleCloudApigeeV1OrganizationProjectMapping[]
+   * List of Apigee organizations and associated Google Cloud projects.
+   *
+   * @param GoogleCloudApigeeV1OrganizationProjectMapping[] $organizations
    */
   public function setOrganizations($organizations)
   {

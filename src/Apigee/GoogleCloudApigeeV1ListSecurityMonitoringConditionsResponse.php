@@ -21,6 +21,9 @@ class GoogleCloudApigeeV1ListSecurityMonitoringConditionsResponse extends \Googl
 {
   protected $collection_key = 'securityMonitoringConditions';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudApigeeV1ListSecurityMonitoringConditionsResponse extends \Googl
   protected $securityMonitoringConditionsDataType = 'array';
 
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudApigeeV1ListSecurityMonitoringConditionsResponse extends \Googl
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityMonitoringCondition[]
+   * List of security monitoring conditions in the organization.
+   *
+   * @param GoogleCloudApigeeV1SecurityMonitoringCondition[] $securityMonitoringConditions
    */
   public function setSecurityMonitoringConditions($securityMonitoringConditions)
   {

@@ -21,6 +21,9 @@ class GoogleCloudApigeeV1ListSecurityActionsResponse extends \Google\Collection
 {
   protected $collection_key = 'securityActions';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudApigeeV1ListSecurityActionsResponse extends \Google\Collection
   protected $securityActionsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudApigeeV1ListSecurityActionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1SecurityAction[]
+   * The SecurityActions for the specified environment.
+   *
+   * @param GoogleCloudApigeeV1SecurityAction[] $securityActions
    */
   public function setSecurityActions($securityActions)
   {

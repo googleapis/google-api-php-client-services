@@ -25,12 +25,16 @@ class GoogleCloudApigeeV1InstanceDeploymentStatus extends \Google\Collection
   protected $deployedRoutesType = GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRoute::class;
   protected $deployedRoutesDataType = 'array';
   /**
+   * ID of the instance reporting the status.
+   *
    * @var string
    */
   public $instance;
 
   /**
-   * @param GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRevision[]
+   * Revisions currently deployed in MPs.
+   *
+   * @param GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRevision[] $deployedRevisions
    */
   public function setDeployedRevisions($deployedRevisions)
   {
@@ -44,7 +48,10 @@ class GoogleCloudApigeeV1InstanceDeploymentStatus extends \Google\Collection
     return $this->deployedRevisions;
   }
   /**
-   * @param GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRoute[]
+   * Current routes deployed in the ingress routing table. A route which is
+   * missing will appear in `missing_routes`.
+   *
+   * @param GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRoute[] $deployedRoutes
    */
   public function setDeployedRoutes($deployedRoutes)
   {
@@ -58,7 +65,9 @@ class GoogleCloudApigeeV1InstanceDeploymentStatus extends \Google\Collection
     return $this->deployedRoutes;
   }
   /**
-   * @param string
+   * ID of the instance reporting the status.
+   *
+   * @param string $instance
    */
   public function setInstance($instance)
   {
