@@ -20,12 +20,16 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1AspectTypeMetadataTemplateConstraints extends \Google\Model
 {
   /**
+   * Optional. Marks this field as optional or required.
+   *
    * @var bool
    */
   public $required;
 
   /**
-   * @param bool
+   * Optional. Marks this field as optional or required.
+   *
+   * @param bool $required
    */
   public function setRequired($required)
   {

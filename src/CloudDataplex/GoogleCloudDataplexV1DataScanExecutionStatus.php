@@ -20,20 +20,28 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataScanExecutionStatus extends \Google\Model
 {
   /**
+   * Optional. The time when the DataScanJob execution was created.
+   *
    * @var string
    */
   public $latestJobCreateTime;
   /**
+   * Optional. The time when the latest DataScanJob ended.
+   *
    * @var string
    */
   public $latestJobEndTime;
   /**
+   * Optional. The time when the latest DataScanJob started.
+   *
    * @var string
    */
   public $latestJobStartTime;
 
   /**
-   * @param string
+   * Optional. The time when the DataScanJob execution was created.
+   *
+   * @param string $latestJobCreateTime
    */
   public function setLatestJobCreateTime($latestJobCreateTime)
   {
@@ -47,7 +55,9 @@ class GoogleCloudDataplexV1DataScanExecutionStatus extends \Google\Model
     return $this->latestJobCreateTime;
   }
   /**
-   * @param string
+   * Optional. The time when the latest DataScanJob ended.
+   *
+   * @param string $latestJobEndTime
    */
   public function setLatestJobEndTime($latestJobEndTime)
   {
@@ -61,7 +71,9 @@ class GoogleCloudDataplexV1DataScanExecutionStatus extends \Google\Model
     return $this->latestJobEndTime;
   }
   /**
-   * @param string
+   * Optional. The time when the latest DataScanJob started.
+   *
+   * @param string $latestJobStartTime
    */
   public function setLatestJobStartTime($latestJobStartTime)
   {

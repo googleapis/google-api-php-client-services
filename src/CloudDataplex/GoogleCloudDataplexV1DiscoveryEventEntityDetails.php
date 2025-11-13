@@ -20,16 +20,36 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DiscoveryEventEntityDetails extends \Google\Model
 {
   /**
+   * An unspecified event type.
+   */
+  public const TYPE_ENTITY_TYPE_UNSPECIFIED = 'ENTITY_TYPE_UNSPECIFIED';
+  /**
+   * Entities representing structured data.
+   */
+  public const TYPE_TABLE = 'TABLE';
+  /**
+   * Entities representing unstructured data.
+   */
+  public const TYPE_FILESET = 'FILESET';
+  /**
+   * The name of the entity resource. The name is the fully-qualified resource
+   * name.
+   *
    * @var string
    */
   public $entity;
   /**
+   * The type of the entity resource.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The name of the entity resource. The name is the fully-qualified resource
+   * name.
+   *
+   * @param string $entity
    */
   public function setEntity($entity)
   {
@@ -43,14 +63,18 @@ class GoogleCloudDataplexV1DiscoveryEventEntityDetails extends \Google\Model
     return $this->entity;
   }
   /**
-   * @param string
+   * The type of the entity resource.
+   *
+   * Accepted values: ENTITY_TYPE_UNSPECIFIED, TABLE, FILESET
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

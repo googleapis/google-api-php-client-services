@@ -20,12 +20,16 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation extends \Google\Model
 {
   /**
+   * Optional. The SQL expression.
+   *
    * @var string
    */
   public $sqlExpression;
 
   /**
-   * @param string
+   * Optional. The SQL expression.
+   *
+   * @param string $sqlExpression
    */
   public function setSqlExpression($sqlExpression)
   {

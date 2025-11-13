@@ -20,48 +20,76 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
 {
   /**
+   * Output only. The number of attributes in the DataTaxonomy.
+   *
    * @var int
    */
   public $attributeCount;
   /**
+   * Output only. The number of classes in the DataTaxonomy.
+   *
    * @var int
    */
   public $classCount;
   /**
+   * Output only. The time when the DataTaxonomy was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Description of the DataTaxonomy.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. User friendly display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. User-defined labels for the DataTaxonomy.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The relative resource name of the DataTaxonomy, of the form: p
+   * rojects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxon
+   * omy_id}.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. System generated globally unique ID for the dataTaxonomy. This
+   * ID will be different if the DataTaxonomy is deleted and re-created with the
+   * same name.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The time when the DataTaxonomy was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param int
+   * Output only. The number of attributes in the DataTaxonomy.
+   *
+   * @param int $attributeCount
    */
   public function setAttributeCount($attributeCount)
   {
@@ -75,7 +103,9 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->attributeCount;
   }
   /**
-   * @param int
+   * Output only. The number of classes in the DataTaxonomy.
+   *
+   * @param int $classCount
    */
   public function setClassCount($classCount)
   {
@@ -89,7 +119,9 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->classCount;
   }
   /**
-   * @param string
+   * Output only. The time when the DataTaxonomy was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -103,7 +135,9 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Description of the DataTaxonomy.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -117,7 +151,9 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. User friendly display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -131,7 +167,11 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -145,7 +185,9 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. User-defined labels for the DataTaxonomy.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -159,7 +201,11 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The relative resource name of the DataTaxonomy, of the form: p
+   * rojects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxon
+   * omy_id}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -173,7 +219,11 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. System generated globally unique ID for the dataTaxonomy. This
+   * ID will be different if the DataTaxonomy is deleted and re-created with the
+   * same name.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -187,7 +237,9 @@ class GoogleCloudDataplexV1DataTaxonomy extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The time when the DataTaxonomy was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

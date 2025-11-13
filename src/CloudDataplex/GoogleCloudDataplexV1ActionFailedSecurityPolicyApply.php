@@ -20,12 +20,18 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ActionFailedSecurityPolicyApply extends \Google\Model
 {
   /**
+   * Resource name of one of the assets with failing security policy
+   * application. Populated for a lake or zone resource only.
+   *
    * @var string
    */
   public $asset;
 
   /**
-   * @param string
+   * Resource name of one of the assets with failing security policy
+   * application. Populated for a lake or zone resource only.
+   *
+   * @param string $asset
    */
   public function setAsset($asset)
   {

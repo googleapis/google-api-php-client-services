@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataScanExecutionSpec extends \Google\Model
 {
   /**
+   * Immutable. The unnested field (of type Date or Timestamp) that contains
+   * values which monotonically increase over time.If not specified, a data scan
+   * will run for all data in the table.
+   *
    * @var string
    */
   public $field;
@@ -27,7 +31,11 @@ class GoogleCloudDataplexV1DataScanExecutionSpec extends \Google\Model
   protected $triggerDataType = '';
 
   /**
-   * @param string
+   * Immutable. The unnested field (of type Date or Timestamp) that contains
+   * values which monotonically increase over time.If not specified, a data scan
+   * will run for all data in the table.
+   *
+   * @param string $field
    */
   public function setField($field)
   {
@@ -41,7 +49,11 @@ class GoogleCloudDataplexV1DataScanExecutionSpec extends \Google\Model
     return $this->field;
   }
   /**
-   * @param GoogleCloudDataplexV1Trigger
+   * Optional. Spec related to how often and when a scan should be triggered.If
+   * not specified, the default is OnDemand, which means the scan will not run
+   * until the user calls RunDataScan API.
+   *
+   * @param GoogleCloudDataplexV1Trigger $trigger
    */
   public function setTrigger(GoogleCloudDataplexV1Trigger $trigger)
   {

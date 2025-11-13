@@ -29,7 +29,9 @@ class GoogleCloudDataplexV1DataQualitySpecPostScanActionsNotificationReport exte
   protected $scoreThresholdTriggerDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsJobEndTrigger
+   * Optional. If set, report will be sent when a scan job ends.
+   *
+   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsJobEndTrigger $jobEndTrigger
    */
   public function setJobEndTrigger(GoogleCloudDataplexV1DataQualitySpecPostScanActionsJobEndTrigger $jobEndTrigger)
   {
@@ -43,7 +45,9 @@ class GoogleCloudDataplexV1DataQualitySpecPostScanActionsNotificationReport exte
     return $this->jobEndTrigger;
   }
   /**
-   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsJobFailureTrigger
+   * Optional. If set, report will be sent when a scan job fails.
+   *
+   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsJobFailureTrigger $jobFailureTrigger
    */
   public function setJobFailureTrigger(GoogleCloudDataplexV1DataQualitySpecPostScanActionsJobFailureTrigger $jobFailureTrigger)
   {
@@ -57,7 +61,9 @@ class GoogleCloudDataplexV1DataQualitySpecPostScanActionsNotificationReport exte
     return $this->jobFailureTrigger;
   }
   /**
-   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsRecipients
+   * Required. The recipients who will receive the notification report.
+   *
+   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsRecipients $recipients
    */
   public function setRecipients(GoogleCloudDataplexV1DataQualitySpecPostScanActionsRecipients $recipients)
   {
@@ -71,7 +77,9 @@ class GoogleCloudDataplexV1DataQualitySpecPostScanActionsNotificationReport exte
     return $this->recipients;
   }
   /**
-   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsScoreThresholdTrigger
+   * Optional. If set, report will be sent when score threshold is met.
+   *
+   * @param GoogleCloudDataplexV1DataQualitySpecPostScanActionsScoreThresholdTrigger $scoreThresholdTrigger
    */
   public function setScoreThresholdTrigger(GoogleCloudDataplexV1DataQualitySpecPostScanActionsScoreThresholdTrigger $scoreThresholdTrigger)
   {

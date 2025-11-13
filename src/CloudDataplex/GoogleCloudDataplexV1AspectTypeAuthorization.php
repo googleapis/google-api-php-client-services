@@ -20,12 +20,20 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1AspectTypeAuthorization extends \Google\Model
 {
   /**
+   * Immutable. The IAM permission grantable on the EntryGroup to allow access
+   * to instantiate Aspects of Dataplex Universal Catalog owned AspectTypes,
+   * only settable for Dataplex Universal Catalog owned Types.
+   *
    * @var string
    */
   public $alternateUsePermission;
 
   /**
-   * @param string
+   * Immutable. The IAM permission grantable on the EntryGroup to allow access
+   * to instantiate Aspects of Dataplex Universal Catalog owned AspectTypes,
+   * only settable for Dataplex Universal Catalog owned Types.
+   *
+   * @param string $alternateUsePermission
    */
   public function setAlternateUsePermission($alternateUsePermission)
   {

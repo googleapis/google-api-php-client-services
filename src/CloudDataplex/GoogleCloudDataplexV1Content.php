@@ -20,44 +20,68 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1Content extends \Google\Model
 {
   /**
+   * Output only. Content creation time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Content data in string format.
+   *
    * @var string
    */
   public $dataText;
   /**
+   * Optional. Description of the content.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. User defined labels for the content.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The relative resource name of the content, of the form: projec
+   * ts/{project_id}/locations/{location_id}/lakes/{lake_id}/content/{content_id
+   * }
+   *
    * @var string
    */
   public $name;
   protected $notebookType = GoogleCloudDataplexV1ContentNotebook::class;
   protected $notebookDataType = '';
   /**
+   * Required. The path for the Content file, represented as directory
+   * structure. Unique within a lake. Limited to alphanumerics, hyphens,
+   * underscores, dots and slashes.
+   *
    * @var string
    */
   public $path;
   protected $sqlScriptType = GoogleCloudDataplexV1ContentSqlScript::class;
   protected $sqlScriptDataType = '';
   /**
+   * Output only. System generated globally unique ID for the content. This ID
+   * will be different if the content is deleted and re-created with the same
+   * name.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The time when the content was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Content creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +95,9 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Content data in string format.
+   *
+   * @param string $dataText
    */
   public function setDataText($dataText)
   {
@@ -85,7 +111,9 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->dataText;
   }
   /**
-   * @param string
+   * Optional. Description of the content.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -99,7 +127,9 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string[]
+   * Optional. User defined labels for the content.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -113,7 +143,11 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The relative resource name of the content, of the form: projec
+   * ts/{project_id}/locations/{location_id}/lakes/{lake_id}/content/{content_id
+   * }
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -127,7 +161,9 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDataplexV1ContentNotebook
+   * Notebook related configurations.
+   *
+   * @param GoogleCloudDataplexV1ContentNotebook $notebook
    */
   public function setNotebook(GoogleCloudDataplexV1ContentNotebook $notebook)
   {
@@ -141,7 +177,11 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->notebook;
   }
   /**
-   * @param string
+   * Required. The path for the Content file, represented as directory
+   * structure. Unique within a lake. Limited to alphanumerics, hyphens,
+   * underscores, dots and slashes.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -155,7 +195,9 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->path;
   }
   /**
-   * @param GoogleCloudDataplexV1ContentSqlScript
+   * Sql Script related configurations.
+   *
+   * @param GoogleCloudDataplexV1ContentSqlScript $sqlScript
    */
   public function setSqlScript(GoogleCloudDataplexV1ContentSqlScript $sqlScript)
   {
@@ -169,7 +211,11 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->sqlScript;
   }
   /**
-   * @param string
+   * Output only. System generated globally unique ID for the content. This ID
+   * will be different if the content is deleted and re-created with the same
+   * name.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -183,7 +229,9 @@ class GoogleCloudDataplexV1Content extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The time when the content was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

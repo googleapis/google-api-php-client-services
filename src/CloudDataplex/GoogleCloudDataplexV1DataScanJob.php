@@ -20,6 +20,56 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataScanJob extends \Google\Model
 {
   /**
+   * The DataScanJob state is unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The DataScanJob is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The DataScanJob is canceling.
+   */
+  public const STATE_CANCELING = 'CANCELING';
+  /**
+   * The DataScanJob cancellation was successful.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The DataScanJob completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The DataScanJob is no longer running due to an error.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The DataScanJob has been created but not started to run yet.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The data scan type is unspecified.
+   */
+  public const TYPE_DATA_SCAN_TYPE_UNSPECIFIED = 'DATA_SCAN_TYPE_UNSPECIFIED';
+  /**
+   * Data quality scan.
+   */
+  public const TYPE_DATA_QUALITY = 'DATA_QUALITY';
+  /**
+   * Data profile scan.
+   */
+  public const TYPE_DATA_PROFILE = 'DATA_PROFILE';
+  /**
+   * Data discovery scan.
+   */
+  public const TYPE_DATA_DISCOVERY = 'DATA_DISCOVERY';
+  /**
+   * Data documentation scan.
+   */
+  public const TYPE_DATA_DOCUMENTATION = 'DATA_DOCUMENTATION';
+  /**
+   * Output only. The time when the DataScanJob was created.
+   *
    * @var string
    */
   public $createTime;
@@ -40,36 +90,55 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
   protected $dataQualitySpecType = GoogleCloudDataplexV1DataQualitySpec::class;
   protected $dataQualitySpecDataType = '';
   /**
+   * Output only. The time when the DataScanJob ended.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. Additional information about the current state.
+   *
    * @var string
    */
   public $message;
   /**
+   * Output only. Identifier. The relative resource name of the DataScanJob, of
+   * the form: projects/{project}/locations/{location_id}/dataScans/{datascan_id
+   * }/jobs/{job_id}, where project refers to a project_id or project_number and
+   * location_id refers to a Google Cloud region.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The time when the DataScanJob was started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. Execution state for the DataScanJob.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The type of the parent DataScan.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. System generated globally unique ID for the DataScanJob.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param string
+   * Output only. The time when the DataScanJob was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -83,7 +152,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudDataplexV1DataDiscoveryResult
+   * Output only. The result of a data discovery scan.
+   *
+   * @param GoogleCloudDataplexV1DataDiscoveryResult $dataDiscoveryResult
    */
   public function setDataDiscoveryResult(GoogleCloudDataplexV1DataDiscoveryResult $dataDiscoveryResult)
   {
@@ -97,7 +168,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataDiscoveryResult;
   }
   /**
-   * @param GoogleCloudDataplexV1DataDiscoverySpec
+   * Output only. Settings for a data discovery scan.
+   *
+   * @param GoogleCloudDataplexV1DataDiscoverySpec $dataDiscoverySpec
    */
   public function setDataDiscoverySpec(GoogleCloudDataplexV1DataDiscoverySpec $dataDiscoverySpec)
   {
@@ -111,7 +184,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataDiscoverySpec;
   }
   /**
-   * @param GoogleCloudDataplexV1DataDocumentationResult
+   * Output only. The result of a data documentation scan.
+   *
+   * @param GoogleCloudDataplexV1DataDocumentationResult $dataDocumentationResult
    */
   public function setDataDocumentationResult(GoogleCloudDataplexV1DataDocumentationResult $dataDocumentationResult)
   {
@@ -125,7 +200,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataDocumentationResult;
   }
   /**
-   * @param GoogleCloudDataplexV1DataDocumentationSpec
+   * Output only. Settings for a data documentation scan.
+   *
+   * @param GoogleCloudDataplexV1DataDocumentationSpec $dataDocumentationSpec
    */
   public function setDataDocumentationSpec(GoogleCloudDataplexV1DataDocumentationSpec $dataDocumentationSpec)
   {
@@ -139,7 +216,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataDocumentationSpec;
   }
   /**
-   * @param GoogleCloudDataplexV1DataProfileResult
+   * Output only. The result of a data profile scan.
+   *
+   * @param GoogleCloudDataplexV1DataProfileResult $dataProfileResult
    */
   public function setDataProfileResult(GoogleCloudDataplexV1DataProfileResult $dataProfileResult)
   {
@@ -153,7 +232,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataProfileResult;
   }
   /**
-   * @param GoogleCloudDataplexV1DataProfileSpec
+   * Output only. Settings for a data profile scan.
+   *
+   * @param GoogleCloudDataplexV1DataProfileSpec $dataProfileSpec
    */
   public function setDataProfileSpec(GoogleCloudDataplexV1DataProfileSpec $dataProfileSpec)
   {
@@ -167,7 +248,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataProfileSpec;
   }
   /**
-   * @param GoogleCloudDataplexV1DataQualityResult
+   * Output only. The result of a data quality scan.
+   *
+   * @param GoogleCloudDataplexV1DataQualityResult $dataQualityResult
    */
   public function setDataQualityResult(GoogleCloudDataplexV1DataQualityResult $dataQualityResult)
   {
@@ -181,7 +264,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataQualityResult;
   }
   /**
-   * @param GoogleCloudDataplexV1DataQualitySpec
+   * Output only. Settings for a data quality scan.
+   *
+   * @param GoogleCloudDataplexV1DataQualitySpec $dataQualitySpec
    */
   public function setDataQualitySpec(GoogleCloudDataplexV1DataQualitySpec $dataQualitySpec)
   {
@@ -195,7 +280,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->dataQualitySpec;
   }
   /**
-   * @param string
+   * Output only. The time when the DataScanJob ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -209,7 +296,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. Additional information about the current state.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -223,7 +312,12 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Output only. Identifier. The relative resource name of the DataScanJob, of
+   * the form: projects/{project}/locations/{location_id}/dataScans/{datascan_id
+   * }/jobs/{job_id}, where project refers to a project_id or project_number and
+   * location_id refers to a Google Cloud region.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -237,7 +331,9 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The time when the DataScanJob was started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -251,35 +347,47 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. Execution state for the DataScanJob.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, CANCELING, CANCELLED,
+   * SUCCEEDED, FAILED, PENDING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The type of the parent DataScan.
+   *
+   * Accepted values: DATA_SCAN_TYPE_UNSPECIFIED, DATA_QUALITY, DATA_PROFILE,
+   * DATA_DISCOVERY, DATA_DOCUMENTATION
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. System generated globally unique ID for the DataScanJob.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualitySpecPostScanActionsBigQueryExport extends \Google\Model
 {
   /**
+   * Optional. The BigQuery table to export DataQualityScan results to. Format: 
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TA
+   * BLE_ID or projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   *
    * @var string
    */
   public $resultsTable;
 
   /**
-   * @param string
+   * Optional. The BigQuery table to export DataQualityScan results to. Format: 
+   * //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TA
+   * BLE_ID or projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+   *
+   * @param string $resultsTable
    */
   public function setResultsTable($resultsTable)
   {

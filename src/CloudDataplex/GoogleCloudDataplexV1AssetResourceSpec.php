@@ -20,20 +20,59 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1AssetResourceSpec extends \Google\Model
 {
   /**
+   * Access mode unspecified.
+   */
+  public const READ_ACCESS_MODE_ACCESS_MODE_UNSPECIFIED = 'ACCESS_MODE_UNSPECIFIED';
+  /**
+   * Default. Data is accessed directly using storage APIs.
+   */
+  public const READ_ACCESS_MODE_DIRECT = 'DIRECT';
+  /**
+   * Data is accessed through a managed interface using BigQuery APIs.
+   */
+  public const READ_ACCESS_MODE_MANAGED = 'MANAGED';
+  /**
+   * Type not specified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Cloud Storage bucket.
+   */
+  public const TYPE_STORAGE_BUCKET = 'STORAGE_BUCKET';
+  /**
+   * BigQuery dataset.
+   */
+  public const TYPE_BIGQUERY_DATASET = 'BIGQUERY_DATASET';
+  /**
+   * Immutable. Relative name of the cloud resource that contains the data that
+   * is being managed within a lake. For example:
+   * projects/{project_number}/buckets/{bucket_id}
+   * projects/{project_number}/datasets/{dataset_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Determines how read permissions are handled for each asset and
+   * their associated tables. Only available to storage buckets assets.
+   *
    * @var string
    */
   public $readAccessMode;
   /**
+   * Required. Immutable. Type of resource.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Immutable. Relative name of the cloud resource that contains the data that
+   * is being managed within a lake. For example:
+   * projects/{project_number}/buckets/{bucket_id}
+   * projects/{project_number}/datasets/{dataset_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,28 +86,37 @@ class GoogleCloudDataplexV1AssetResourceSpec extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Determines how read permissions are handled for each asset and
+   * their associated tables. Only available to storage buckets assets.
+   *
+   * Accepted values: ACCESS_MODE_UNSPECIFIED, DIRECT, MANAGED
+   *
+   * @param self::READ_ACCESS_MODE_* $readAccessMode
    */
   public function setReadAccessMode($readAccessMode)
   {
     $this->readAccessMode = $readAccessMode;
   }
   /**
-   * @return string
+   * @return self::READ_ACCESS_MODE_*
    */
   public function getReadAccessMode()
   {
     return $this->readAccessMode;
   }
   /**
-   * @param string
+   * Required. Immutable. Type of resource.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, STORAGE_BUCKET, BIGQUERY_DATASET
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

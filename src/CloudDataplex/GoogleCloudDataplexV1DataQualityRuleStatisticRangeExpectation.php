@@ -20,28 +20,63 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation extends \Google\Model
 {
   /**
+   * Unspecified statistic type
+   */
+  public const STATISTIC_STATISTIC_UNDEFINED = 'STATISTIC_UNDEFINED';
+  /**
+   * Evaluate the column mean
+   */
+  public const STATISTIC_MEAN = 'MEAN';
+  /**
+   * Evaluate the column min
+   */
+  public const STATISTIC_MIN = 'MIN';
+  /**
+   * Evaluate the column max
+   */
+  public const STATISTIC_MAX = 'MAX';
+  /**
+   * Optional. The maximum column statistic value allowed for a row to pass this
+   * validation.At least one of min_value and max_value need to be provided.
+   *
    * @var string
    */
   public $maxValue;
   /**
+   * Optional. The minimum column statistic value allowed for a row to pass this
+   * validation.At least one of min_value and max_value need to be provided.
+   *
    * @var string
    */
   public $minValue;
   /**
+   * Optional. The aggregate metric to evaluate.
+   *
    * @var string
    */
   public $statistic;
   /**
+   * Optional. Whether column statistic needs to be strictly lesser than ('<')
+   * the maximum, or if equality is allowed.Only relevant if a max_value has
+   * been defined. Default = false.
+   *
    * @var bool
    */
   public $strictMaxEnabled;
   /**
+   * Optional. Whether column statistic needs to be strictly greater than ('>')
+   * the minimum, or if equality is allowed.Only relevant if a min_value has
+   * been defined. Default = false.
+   *
    * @var bool
    */
   public $strictMinEnabled;
 
   /**
-   * @param string
+   * Optional. The maximum column statistic value allowed for a row to pass this
+   * validation.At least one of min_value and max_value need to be provided.
+   *
+   * @param string $maxValue
    */
   public function setMaxValue($maxValue)
   {
@@ -55,7 +90,10 @@ class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation extends \Goo
     return $this->maxValue;
   }
   /**
-   * @param string
+   * Optional. The minimum column statistic value allowed for a row to pass this
+   * validation.At least one of min_value and max_value need to be provided.
+   *
+   * @param string $minValue
    */
   public function setMinValue($minValue)
   {
@@ -69,21 +107,29 @@ class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation extends \Goo
     return $this->minValue;
   }
   /**
-   * @param string
+   * Optional. The aggregate metric to evaluate.
+   *
+   * Accepted values: STATISTIC_UNDEFINED, MEAN, MIN, MAX
+   *
+   * @param self::STATISTIC_* $statistic
    */
   public function setStatistic($statistic)
   {
     $this->statistic = $statistic;
   }
   /**
-   * @return string
+   * @return self::STATISTIC_*
    */
   public function getStatistic()
   {
     return $this->statistic;
   }
   /**
-   * @param bool
+   * Optional. Whether column statistic needs to be strictly lesser than ('<')
+   * the maximum, or if equality is allowed.Only relevant if a max_value has
+   * been defined. Default = false.
+   *
+   * @param bool $strictMaxEnabled
    */
   public function setStrictMaxEnabled($strictMaxEnabled)
   {
@@ -97,7 +143,11 @@ class GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation extends \Goo
     return $this->strictMaxEnabled;
   }
   /**
-   * @param bool
+   * Optional. Whether column statistic needs to be strictly greater than ('>')
+   * the minimum, or if equality is allowed.Only relevant if a min_value has
+   * been defined. Default = false.
+   *
+   * @param bool $strictMinEnabled
    */
   public function setStrictMinEnabled($strictMinEnabled)
   {

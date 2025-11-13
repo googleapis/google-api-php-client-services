@@ -20,24 +20,41 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends \Google\Model
 {
   /**
+   * Optional. The maximum column value allowed for a row to pass this
+   * validation. At least one of min_value and max_value need to be provided.
+   *
    * @var string
    */
   public $maxValue;
   /**
+   * Optional. The minimum column value allowed for a row to pass this
+   * validation. At least one of min_value and max_value need to be provided.
+   *
    * @var string
    */
   public $minValue;
   /**
+   * Optional. Whether each value needs to be strictly lesser than ('<') the
+   * maximum, or if equality is allowed.Only relevant if a max_value has been
+   * defined. Default = false.
+   *
    * @var bool
    */
   public $strictMaxEnabled;
   /**
+   * Optional. Whether each value needs to be strictly greater than ('>') the
+   * minimum, or if equality is allowed.Only relevant if a min_value has been
+   * defined. Default = false.
+   *
    * @var bool
    */
   public $strictMinEnabled;
 
   /**
-   * @param string
+   * Optional. The maximum column value allowed for a row to pass this
+   * validation. At least one of min_value and max_value need to be provided.
+   *
+   * @param string $maxValue
    */
   public function setMaxValue($maxValue)
   {
@@ -51,7 +68,10 @@ class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends \Google\Model
     return $this->maxValue;
   }
   /**
-   * @param string
+   * Optional. The minimum column value allowed for a row to pass this
+   * validation. At least one of min_value and max_value need to be provided.
+   *
+   * @param string $minValue
    */
   public function setMinValue($minValue)
   {
@@ -65,7 +85,11 @@ class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends \Google\Model
     return $this->minValue;
   }
   /**
-   * @param bool
+   * Optional. Whether each value needs to be strictly lesser than ('<') the
+   * maximum, or if equality is allowed.Only relevant if a max_value has been
+   * defined. Default = false.
+   *
+   * @param bool $strictMaxEnabled
    */
   public function setStrictMaxEnabled($strictMaxEnabled)
   {
@@ -79,7 +103,11 @@ class GoogleCloudDataplexV1DataQualityRuleRangeExpectation extends \Google\Model
     return $this->strictMaxEnabled;
   }
   /**
-   * @param bool
+   * Optional. Whether each value needs to be strictly greater than ('>') the
+   * minimum, or if equality is allowed.Only relevant if a min_value has been
+   * defined. Default = false.
+   *
+   * @param bool $strictMinEnabled
    */
   public function setStrictMinEnabled($strictMinEnabled)
   {

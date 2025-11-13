@@ -20,20 +20,46 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1AssetSecurityStatus extends \Google\Model
 {
   /**
+   * State unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Security policy has been successfully applied to the attached resource.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Security policy is in the process of being applied to the attached
+   * resource.
+   */
+  public const STATE_APPLYING = 'APPLYING';
+  /**
+   * Security policy could not be applied to the attached resource due to
+   * errors.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * Additional information about the current state.
+   *
    * @var string
    */
   public $message;
   /**
+   * The current state of the security policy applied to the attached resource.
+   *
    * @var string
    */
   public $state;
   /**
+   * Last update time of the status.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Additional information about the current state.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -47,21 +73,27 @@ class GoogleCloudDataplexV1AssetSecurityStatus extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * The current state of the security policy applied to the attached resource.
+   *
+   * Accepted values: STATE_UNSPECIFIED, READY, APPLYING, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Last update time of the status.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

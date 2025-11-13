@@ -23,7 +23,9 @@ class GoogleCloudDataplexV1DataDocumentationResult extends \Google\Model
   protected $tableResultDataType = '';
 
   /**
-   * @param GoogleCloudDataplexV1DataDocumentationResultTableResult
+   * Output only. Table result for insights.
+   *
+   * @param GoogleCloudDataplexV1DataDocumentationResultTableResult $tableResult
    */
   public function setTableResult(GoogleCloudDataplexV1DataDocumentationResultTableResult $tableResult)
   {

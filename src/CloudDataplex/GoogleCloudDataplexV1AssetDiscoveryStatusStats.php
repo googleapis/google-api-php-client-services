@@ -20,24 +20,34 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1AssetDiscoveryStatusStats extends \Google\Model
 {
   /**
+   * The count of data items within the referenced resource.
+   *
    * @var string
    */
   public $dataItems;
   /**
+   * The number of stored data bytes within the referenced resource.
+   *
    * @var string
    */
   public $dataSize;
   /**
+   * The count of fileset entities within the referenced resource.
+   *
    * @var string
    */
   public $filesets;
   /**
+   * The count of table entities within the referenced resource.
+   *
    * @var string
    */
   public $tables;
 
   /**
-   * @param string
+   * The count of data items within the referenced resource.
+   *
+   * @param string $dataItems
    */
   public function setDataItems($dataItems)
   {
@@ -51,7 +61,9 @@ class GoogleCloudDataplexV1AssetDiscoveryStatusStats extends \Google\Model
     return $this->dataItems;
   }
   /**
-   * @param string
+   * The number of stored data bytes within the referenced resource.
+   *
+   * @param string $dataSize
    */
   public function setDataSize($dataSize)
   {
@@ -65,7 +77,9 @@ class GoogleCloudDataplexV1AssetDiscoveryStatusStats extends \Google\Model
     return $this->dataSize;
   }
   /**
-   * @param string
+   * The count of fileset entities within the referenced resource.
+   *
+   * @param string $filesets
    */
   public function setFilesets($filesets)
   {
@@ -79,7 +93,9 @@ class GoogleCloudDataplexV1AssetDiscoveryStatusStats extends \Google\Model
     return $this->filesets;
   }
   /**
-   * @param string
+   * The count of table entities within the referenced resource.
+   *
+   * @param string $tables
    */
   public function setTables($tables)
   {

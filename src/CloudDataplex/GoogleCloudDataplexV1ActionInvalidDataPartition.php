@@ -20,19 +20,38 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ActionInvalidDataPartition extends \Google\Model
 {
   /**
+   * PartitionStructure unspecified.
+   */
+  public const EXPECTED_STRUCTURE_PARTITION_STRUCTURE_UNSPECIFIED = 'PARTITION_STRUCTURE_UNSPECIFIED';
+  /**
+   * Consistent hive-style partition definition (both raw and curated zone).
+   */
+  public const EXPECTED_STRUCTURE_CONSISTENT_KEYS = 'CONSISTENT_KEYS';
+  /**
+   * Hive style partition definition (curated zone only).
+   */
+  public const EXPECTED_STRUCTURE_HIVE_STYLE_KEYS = 'HIVE_STYLE_KEYS';
+  /**
+   * The issue type of InvalidDataPartition.
+   *
    * @var string
    */
   public $expectedStructure;
 
   /**
-   * @param string
+   * The issue type of InvalidDataPartition.
+   *
+   * Accepted values: PARTITION_STRUCTURE_UNSPECIFIED, CONSISTENT_KEYS,
+   * HIVE_STYLE_KEYS
+   *
+   * @param self::EXPECTED_STRUCTURE_* $expectedStructure
    */
   public function setExpectedStructure($expectedStructure)
   {
     $this->expectedStructure = $expectedStructure;
   }
   /**
-   * @return string
+   * @return self::EXPECTED_STRUCTURE_*
    */
   public function getExpectedStructure()
   {

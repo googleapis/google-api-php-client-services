@@ -19,9 +19,79 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
 {
+  /**
+   * An unspecified scope type.
+   */
+  public const SCOPE_SCOPE_UNSPECIFIED = 'SCOPE_UNSPECIFIED';
+  /**
+   * Data scan runs on all of the data.
+   */
+  public const SCOPE_FULL = 'FULL';
+  /**
+   * Data scan runs on incremental data.
+   */
+  public const SCOPE_INCREMENTAL = 'INCREMENTAL';
+  /**
+   * Unspecified job state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Data scan job started.
+   */
+  public const STATE_STARTED = 'STARTED';
+  /**
+   * Data scan job successfully completed.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Data scan job was unsuccessful.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Data scan job was cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Data scan job was created.
+   */
+  public const STATE_CREATED = 'CREATED';
+  /**
+   * An unspecified trigger type.
+   */
+  public const TRIGGER_TRIGGER_UNSPECIFIED = 'TRIGGER_UNSPECIFIED';
+  /**
+   * Data scan triggers on demand.
+   */
+  public const TRIGGER_ON_DEMAND = 'ON_DEMAND';
+  /**
+   * Data scan triggers as per schedule.
+   */
+  public const TRIGGER_SCHEDULE = 'SCHEDULE';
+  /**
+   * Data scan is run one time on creation.
+   */
+  public const TRIGGER_ONE_TIME = 'ONE_TIME';
+  /**
+   * An unspecified data scan type.
+   */
+  public const TYPE_SCAN_TYPE_UNSPECIFIED = 'SCAN_TYPE_UNSPECIFIED';
+  /**
+   * Data scan for data profile.
+   */
+  public const TYPE_DATA_PROFILE = 'DATA_PROFILE';
+  /**
+   * Data scan for data quality.
+   */
+  public const TYPE_DATA_QUALITY = 'DATA_QUALITY';
+  /**
+   * Data scan for data discovery.
+   */
+  public const TYPE_DATA_DISCOVERY = 'DATA_DISCOVERY';
   protected $catalogPublishingStatusType = GoogleCloudDataplexV1DataScanCatalogPublishingStatus::class;
   protected $catalogPublishingStatusDataType = '';
   /**
+   * The time when the data scan job was created.
+   *
    * @var string
    */
   public $createTime;
@@ -34,50 +104,73 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
   protected $dataQualityConfigsType = GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs::class;
   protected $dataQualityConfigsDataType = '';
   /**
+   * The data source of the data scan
+   *
    * @var string
    */
   public $dataSource;
   /**
+   * The time when the data scan job finished.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The identifier of the specific data scan job this log entry is for.
+   *
    * @var string
    */
   public $jobId;
   /**
+   * The message describing the data scan job event.
+   *
    * @var string
    */
   public $message;
   protected $postScanActionsResultType = GoogleCloudDataplexV1DataScanEventPostScanActionsResult::class;
   protected $postScanActionsResultDataType = '';
   /**
+   * The scope of the data scan (e.g. full, incremental).
+   *
    * @var string
    */
   public $scope;
   /**
+   * A version identifier of the spec which was used to execute this job.
+   *
    * @var string
    */
   public $specVersion;
   /**
+   * The time when the data scan job started to run.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The status of the data scan job.
+   *
    * @var string
    */
   public $state;
   /**
+   * The trigger type of the data scan job.
+   *
    * @var string
    */
   public $trigger;
   /**
+   * The type of the data scan.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GoogleCloudDataplexV1DataScanCatalogPublishingStatus
+   * The status of publishing the data scan as Dataplex Universal Catalog
+   * metadata.
+   *
+   * @param GoogleCloudDataplexV1DataScanCatalogPublishingStatus $catalogPublishingStatus
    */
   public function setCatalogPublishingStatus(GoogleCloudDataplexV1DataScanCatalogPublishingStatus $catalogPublishingStatus)
   {
@@ -91,7 +184,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->catalogPublishingStatus;
   }
   /**
-   * @param string
+   * The time when the data scan job was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -105,7 +200,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudDataplexV1DataScanEventDataProfileResult
+   * Data profile result for data profile type data scan.
+   *
+   * @param GoogleCloudDataplexV1DataScanEventDataProfileResult $dataProfile
    */
   public function setDataProfile(GoogleCloudDataplexV1DataScanEventDataProfileResult $dataProfile)
   {
@@ -119,7 +216,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->dataProfile;
   }
   /**
-   * @param GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs
+   * Applied configs for data profile type data scan.
+   *
+   * @param GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs $dataProfileConfigs
    */
   public function setDataProfileConfigs(GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs $dataProfileConfigs)
   {
@@ -133,7 +232,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->dataProfileConfigs;
   }
   /**
-   * @param GoogleCloudDataplexV1DataScanEventDataQualityResult
+   * Data quality result for data quality type data scan.
+   *
+   * @param GoogleCloudDataplexV1DataScanEventDataQualityResult $dataQuality
    */
   public function setDataQuality(GoogleCloudDataplexV1DataScanEventDataQualityResult $dataQuality)
   {
@@ -147,7 +248,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->dataQuality;
   }
   /**
-   * @param GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs
+   * Applied configs for data quality type data scan.
+   *
+   * @param GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs $dataQualityConfigs
    */
   public function setDataQualityConfigs(GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs $dataQualityConfigs)
   {
@@ -161,7 +264,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->dataQualityConfigs;
   }
   /**
-   * @param string
+   * The data source of the data scan
+   *
+   * @param string $dataSource
    */
   public function setDataSource($dataSource)
   {
@@ -175,7 +280,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->dataSource;
   }
   /**
-   * @param string
+   * The time when the data scan job finished.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -189,7 +296,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The identifier of the specific data scan job this log entry is for.
+   *
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {
@@ -203,7 +312,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->jobId;
   }
   /**
-   * @param string
+   * The message describing the data scan job event.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -217,7 +328,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->message;
   }
   /**
-   * @param GoogleCloudDataplexV1DataScanEventPostScanActionsResult
+   * The result of post scan actions.
+   *
+   * @param GoogleCloudDataplexV1DataScanEventPostScanActionsResult $postScanActionsResult
    */
   public function setPostScanActionsResult(GoogleCloudDataplexV1DataScanEventPostScanActionsResult $postScanActionsResult)
   {
@@ -231,21 +344,27 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->postScanActionsResult;
   }
   /**
-   * @param string
+   * The scope of the data scan (e.g. full, incremental).
+   *
+   * Accepted values: SCOPE_UNSPECIFIED, FULL, INCREMENTAL
+   *
+   * @param self::SCOPE_* $scope
    */
   public function setScope($scope)
   {
     $this->scope = $scope;
   }
   /**
-   * @return string
+   * @return self::SCOPE_*
    */
   public function getScope()
   {
     return $this->scope;
   }
   /**
-   * @param string
+   * A version identifier of the spec which was used to execute this job.
+   *
+   * @param string $specVersion
    */
   public function setSpecVersion($specVersion)
   {
@@ -259,7 +378,9 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->specVersion;
   }
   /**
-   * @param string
+   * The time when the data scan job started to run.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -273,42 +394,56 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The status of the data scan job.
+   *
+   * Accepted values: STATE_UNSPECIFIED, STARTED, SUCCEEDED, FAILED, CANCELLED,
+   * CREATED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The trigger type of the data scan job.
+   *
+   * Accepted values: TRIGGER_UNSPECIFIED, ON_DEMAND, SCHEDULE, ONE_TIME
+   *
+   * @param self::TRIGGER_* $trigger
    */
   public function setTrigger($trigger)
   {
     $this->trigger = $trigger;
   }
   /**
-   * @return string
+   * @return self::TRIGGER_*
    */
   public function getTrigger()
   {
     return $this->trigger;
   }
   /**
-   * @param string
+   * The type of the data scan.
+   *
+   * Accepted values: SCAN_TYPE_UNSPECIFIED, DATA_PROFILE, DATA_QUALITY,
+   * DATA_DISCOVERY
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

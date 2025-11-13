@@ -20,20 +20,29 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1AssetStatus extends \Google\Model
 {
   /**
+   * Number of active assets.
+   *
    * @var int
    */
   public $activeAssets;
   /**
+   * Number of assets that are in process of updating the security policy on
+   * attached resources.
+   *
    * @var int
    */
   public $securityPolicyApplyingAssets;
   /**
+   * Last update time of the status.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param int
+   * Number of active assets.
+   *
+   * @param int $activeAssets
    */
   public function setActiveAssets($activeAssets)
   {
@@ -47,7 +56,10 @@ class GoogleCloudDataplexV1AssetStatus extends \Google\Model
     return $this->activeAssets;
   }
   /**
-   * @param int
+   * Number of assets that are in process of updating the security policy on
+   * attached resources.
+   *
+   * @param int $securityPolicyApplyingAssets
    */
   public function setSecurityPolicyApplyingAssets($securityPolicyApplyingAssets)
   {
@@ -61,7 +73,9 @@ class GoogleCloudDataplexV1AssetStatus extends \Google\Model
     return $this->securityPolicyApplyingAssets;
   }
   /**
-   * @param string
+   * Last update time of the status.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

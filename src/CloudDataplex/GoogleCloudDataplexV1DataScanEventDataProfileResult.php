@@ -20,12 +20,16 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataScanEventDataProfileResult extends \Google\Model
 {
   /**
+   * The count of rows processed in the data scan job.
+   *
    * @var string
    */
   public $rowCount;
 
   /**
-   * @param string
+   * The count of rows processed in the data scan job.
+   *
+   * @param string $rowCount
    */
   public function setRowCount($rowCount)
   {

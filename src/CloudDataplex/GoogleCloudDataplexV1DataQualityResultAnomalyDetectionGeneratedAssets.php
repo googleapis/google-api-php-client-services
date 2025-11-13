@@ -20,24 +20,41 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualityResultAnomalyDetectionGeneratedAssets extends \Google\Model
 {
   /**
+   * Output only. The intermediate table for data anomaly detection. Format:
+   * PROJECT_ID.DATASET_ID.TABLE_ID
+   *
    * @var string
    */
   public $dataIntermediateTable;
   /**
+   * Output only. The intermediate table for freshness anomaly detection.
+   * Format: PROJECT_ID.DATASET_ID.TABLE_ID
+   *
    * @var string
    */
   public $freshnessIntermediateTable;
   /**
+   * Output only. The result table for anomaly detection. Format:
+   * PROJECT_ID.DATASET_ID.TABLE_ID If the result table is set at
+   * AnomalyDetectionAssets, the result table here would be the same as the one
+   * set in the AnomalyDetectionAssets.result_table.
+   *
    * @var string
    */
   public $resultTable;
   /**
+   * Output only. The intermediate table for volume anomaly detection. Format:
+   * PROJECT_ID.DATASET_ID.TABLE_ID
+   *
    * @var string
    */
   public $volumeIntermediateTable;
 
   /**
-   * @param string
+   * Output only. The intermediate table for data anomaly detection. Format:
+   * PROJECT_ID.DATASET_ID.TABLE_ID
+   *
+   * @param string $dataIntermediateTable
    */
   public function setDataIntermediateTable($dataIntermediateTable)
   {
@@ -51,7 +68,10 @@ class GoogleCloudDataplexV1DataQualityResultAnomalyDetectionGeneratedAssets exte
     return $this->dataIntermediateTable;
   }
   /**
-   * @param string
+   * Output only. The intermediate table for freshness anomaly detection.
+   * Format: PROJECT_ID.DATASET_ID.TABLE_ID
+   *
+   * @param string $freshnessIntermediateTable
    */
   public function setFreshnessIntermediateTable($freshnessIntermediateTable)
   {
@@ -65,7 +85,12 @@ class GoogleCloudDataplexV1DataQualityResultAnomalyDetectionGeneratedAssets exte
     return $this->freshnessIntermediateTable;
   }
   /**
-   * @param string
+   * Output only. The result table for anomaly detection. Format:
+   * PROJECT_ID.DATASET_ID.TABLE_ID If the result table is set at
+   * AnomalyDetectionAssets, the result table here would be the same as the one
+   * set in the AnomalyDetectionAssets.result_table.
+   *
+   * @param string $resultTable
    */
   public function setResultTable($resultTable)
   {
@@ -79,7 +104,10 @@ class GoogleCloudDataplexV1DataQualityResultAnomalyDetectionGeneratedAssets exte
     return $this->resultTable;
   }
   /**
-   * @param string
+   * Output only. The intermediate table for volume anomaly detection. Format:
+   * PROJECT_ID.DATASET_ID.TABLE_ID
+   *
+   * @param string $volumeIntermediateTable
    */
   public function setVolumeIntermediateTable($volumeIntermediateTable)
   {

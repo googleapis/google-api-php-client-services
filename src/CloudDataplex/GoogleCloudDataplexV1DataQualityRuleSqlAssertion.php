@@ -20,12 +20,16 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualityRuleSqlAssertion extends \Google\Model
 {
   /**
+   * Optional. The SQL statement.
+   *
    * @var string
    */
   public $sqlStatement;
 
   /**
-   * @param string
+   * Optional. The SQL statement.
+   *
+   * @param string $sqlStatement
    */
   public function setSqlStatement($sqlStatement)
   {
