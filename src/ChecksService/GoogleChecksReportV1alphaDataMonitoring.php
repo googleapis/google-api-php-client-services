@@ -30,7 +30,9 @@ class GoogleChecksReportV1alphaDataMonitoring extends \Google\Collection
   protected $sdksDataType = 'array';
 
   /**
-   * @param GoogleChecksReportV1alphaDataMonitoringDataTypeResult[]
+   * Data types that your app shares or collects.
+   *
+   * @param GoogleChecksReportV1alphaDataMonitoringDataTypeResult[] $dataTypes
    */
   public function setDataTypes($dataTypes)
   {
@@ -44,7 +46,9 @@ class GoogleChecksReportV1alphaDataMonitoring extends \Google\Collection
     return $this->dataTypes;
   }
   /**
-   * @param GoogleChecksReportV1alphaDataMonitoringEndpointResult[]
+   * Endpoints that were found by dynamic analysis of your app.
+   *
+   * @param GoogleChecksReportV1alphaDataMonitoringEndpointResult[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -58,7 +62,9 @@ class GoogleChecksReportV1alphaDataMonitoring extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param GoogleChecksReportV1alphaDataMonitoringPermissionResult[]
+   * Permissions that your app uses.
+   *
+   * @param GoogleChecksReportV1alphaDataMonitoringPermissionResult[] $permissions
    */
   public function setPermissions($permissions)
   {
@@ -72,7 +78,9 @@ class GoogleChecksReportV1alphaDataMonitoring extends \Google\Collection
     return $this->permissions;
   }
   /**
-   * @param GoogleChecksReportV1alphaDataMonitoringSdkResult[]
+   * SDKs that your app uses.
+   *
+   * @param GoogleChecksReportV1alphaDataMonitoringSdkResult[] $sdks
    */
   public function setSdks($sdks)
   {

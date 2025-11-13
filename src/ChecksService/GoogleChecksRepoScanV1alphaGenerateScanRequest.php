@@ -22,10 +22,14 @@ class GoogleChecksRepoScanV1alphaGenerateScanRequest extends \Google\Model
   protected $cliAnalysisType = GoogleChecksRepoScanV1alphaCliAnalysis::class;
   protected $cliAnalysisDataType = '';
   /**
+   * Required. CLI version.
+   *
    * @var string
    */
   public $cliVersion;
   /**
+   * Required. Local scan path.
+   *
    * @var string
    */
   public $localScanPath;
@@ -33,7 +37,9 @@ class GoogleChecksRepoScanV1alphaGenerateScanRequest extends \Google\Model
   protected $scmMetadataDataType = '';
 
   /**
-   * @param GoogleChecksRepoScanV1alphaCliAnalysis
+   * Required. CLI analysis results.
+   *
+   * @param GoogleChecksRepoScanV1alphaCliAnalysis $cliAnalysis
    */
   public function setCliAnalysis(GoogleChecksRepoScanV1alphaCliAnalysis $cliAnalysis)
   {
@@ -47,7 +53,9 @@ class GoogleChecksRepoScanV1alphaGenerateScanRequest extends \Google\Model
     return $this->cliAnalysis;
   }
   /**
-   * @param string
+   * Required. CLI version.
+   *
+   * @param string $cliVersion
    */
   public function setCliVersion($cliVersion)
   {
@@ -61,7 +69,9 @@ class GoogleChecksRepoScanV1alphaGenerateScanRequest extends \Google\Model
     return $this->cliVersion;
   }
   /**
-   * @param string
+   * Required. Local scan path.
+   *
+   * @param string $localScanPath
    */
   public function setLocalScanPath($localScanPath)
   {
@@ -75,7 +85,9 @@ class GoogleChecksRepoScanV1alphaGenerateScanRequest extends \Google\Model
     return $this->localScanPath;
   }
   /**
-   * @param GoogleChecksRepoScanV1alphaScmMetadata
+   * Required. SCM metadata.
+   *
+   * @param GoogleChecksRepoScanV1alphaScmMetadata $scmMetadata
    */
   public function setScmMetadata(GoogleChecksRepoScanV1alphaScmMetadata $scmMetadata)
   {

@@ -20,24 +20,34 @@ namespace Google\Service\ChecksService;
 class GoogleChecksRepoScanV1alphaSourceCode extends \Google\Model
 {
   /**
+   * Required. Source code.
+   *
    * @var string
    */
   public $code;
   /**
+   * Required. End line number (1-based).
+   *
    * @var int
    */
   public $endLine;
   /**
+   * Required. Path of the file.
+   *
    * @var string
    */
   public $path;
   /**
+   * Required. Start line number (1-based).
+   *
    * @var int
    */
   public $startLine;
 
   /**
-   * @param string
+   * Required. Source code.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -51,7 +61,9 @@ class GoogleChecksRepoScanV1alphaSourceCode extends \Google\Model
     return $this->code;
   }
   /**
-   * @param int
+   * Required. End line number (1-based).
+   *
+   * @param int $endLine
    */
   public function setEndLine($endLine)
   {
@@ -65,7 +77,9 @@ class GoogleChecksRepoScanV1alphaSourceCode extends \Google\Model
     return $this->endLine;
   }
   /**
-   * @param string
+   * Required. Path of the file.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -79,7 +93,9 @@ class GoogleChecksRepoScanV1alphaSourceCode extends \Google\Model
     return $this->path;
   }
   /**
-   * @param int
+   * Required. Start line number (1-based).
+   *
+   * @param int $startLine
    */
   public function setStartLine($startLine)
   {

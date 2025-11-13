@@ -28,7 +28,9 @@ class GoogleChecksReportV1alphaDataTypeEvidence extends \Google\Collection
   protected $privacyPolicyTextsDataType = 'array';
 
   /**
-   * @param GoogleChecksReportV1alphaDataTypeEndpointEvidence[]
+   * List of endpoints the data type was sent to.
+   *
+   * @param GoogleChecksReportV1alphaDataTypeEndpointEvidence[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -42,7 +44,9 @@ class GoogleChecksReportV1alphaDataTypeEvidence extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param GoogleChecksReportV1alphaDataTypePermissionEvidence[]
+   * List of included permissions that imply collection of the data type.
+   *
+   * @param GoogleChecksReportV1alphaDataTypePermissionEvidence[] $permissions
    */
   public function setPermissions($permissions)
   {
@@ -56,7 +60,9 @@ class GoogleChecksReportV1alphaDataTypeEvidence extends \Google\Collection
     return $this->permissions;
   }
   /**
-   * @param GoogleChecksReportV1alphaDataTypePrivacyPolicyTextEvidence[]
+   * List of privacy policy texts that imply collection of the data type.
+   *
+   * @param GoogleChecksReportV1alphaDataTypePrivacyPolicyTextEvidence[] $privacyPolicyTexts
    */
   public function setPrivacyPolicyTexts($privacyPolicyTexts)
   {

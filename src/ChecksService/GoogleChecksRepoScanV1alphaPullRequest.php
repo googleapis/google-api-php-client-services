@@ -20,16 +20,25 @@ namespace Google\Service\ChecksService;
 class GoogleChecksRepoScanV1alphaPullRequest extends \Google\Model
 {
   /**
+   * Required. For PR analysis, we compare against the most recent scan of the
+   * base branch to highlight new issues.
+   *
    * @var string
    */
   public $baseBranch;
   /**
+   * Required. This can be supplied by the user or parsed automatically from
+   * predefined CI environment variables.
+   *
    * @var string
    */
   public $prNumber;
 
   /**
-   * @param string
+   * Required. For PR analysis, we compare against the most recent scan of the
+   * base branch to highlight new issues.
+   *
+   * @param string $baseBranch
    */
   public function setBaseBranch($baseBranch)
   {
@@ -43,7 +52,10 @@ class GoogleChecksRepoScanV1alphaPullRequest extends \Google\Model
     return $this->baseBranch;
   }
   /**
-   * @param string
+   * Required. This can be supplied by the user or parsed automatically from
+   * predefined CI environment variables.
+   *
+   * @param string $prNumber
    */
   public function setPrNumber($prNumber)
   {

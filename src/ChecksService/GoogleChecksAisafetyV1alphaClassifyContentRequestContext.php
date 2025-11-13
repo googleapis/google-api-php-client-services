@@ -20,12 +20,16 @@ namespace Google\Service\ChecksService;
 class GoogleChecksAisafetyV1alphaClassifyContentRequestContext extends \Google\Model
 {
   /**
+   * Optional. Prompt that generated the model response.
+   *
    * @var string
    */
   public $prompt;
 
   /**
-   * @param string
+   * Optional. Prompt that generated the model response.
+   *
+   * @param string $prompt
    */
   public function setPrompt($prompt)
   {

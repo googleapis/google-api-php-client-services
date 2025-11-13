@@ -23,7 +23,9 @@ class GoogleChecksReportV1alphaDataTypeEndpointEvidenceAttributedSdk extends \Go
   protected $sdkDataType = '';
 
   /**
-   * @param GoogleChecksReportV1alphaSdk
+   * SDK that is attributed to the exfiltration.
+   *
+   * @param GoogleChecksReportV1alphaSdk $sdk
    */
   public function setSdk(GoogleChecksReportV1alphaSdk $sdk)
   {

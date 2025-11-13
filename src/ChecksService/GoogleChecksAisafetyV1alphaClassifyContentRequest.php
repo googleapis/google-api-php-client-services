@@ -19,8 +19,23 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksAisafetyV1alphaClassifyContentRequest extends \Google\Collection
 {
+  /**
+   * Unspecified version.
+   */
+  public const CLASSIFIER_VERSION_CLASSIFIER_VERSION_UNSPECIFIED = 'CLASSIFIER_VERSION_UNSPECIFIED';
+  /**
+   * Stable version.
+   */
+  public const CLASSIFIER_VERSION_STABLE = 'STABLE';
+  /**
+   * Latest version.
+   */
+  public const CLASSIFIER_VERSION_LATEST = 'LATEST';
   protected $collection_key = 'policies';
   /**
+   * Optional. Version of the classifier to use. If not specified, the latest
+   * version will be used.
+   *
    * @var string
    */
   public $classifierVersion;
@@ -32,21 +47,29 @@ class GoogleChecksAisafetyV1alphaClassifyContentRequest extends \Google\Collecti
   protected $policiesDataType = 'array';
 
   /**
-   * @param string
+   * Optional. Version of the classifier to use. If not specified, the latest
+   * version will be used.
+   *
+   * Accepted values: CLASSIFIER_VERSION_UNSPECIFIED, STABLE, LATEST
+   *
+   * @param self::CLASSIFIER_VERSION_* $classifierVersion
    */
   public function setClassifierVersion($classifierVersion)
   {
     $this->classifierVersion = $classifierVersion;
   }
   /**
-   * @return string
+   * @return self::CLASSIFIER_VERSION_*
    */
   public function getClassifierVersion()
   {
     return $this->classifierVersion;
   }
   /**
-   * @param GoogleChecksAisafetyV1alphaClassifyContentRequestContext
+   * Optional. Context about the input that will be used to help on the
+   * classification.
+   *
+   * @param GoogleChecksAisafetyV1alphaClassifyContentRequestContext $context
    */
   public function setContext(GoogleChecksAisafetyV1alphaClassifyContentRequestContext $context)
   {
@@ -60,7 +83,9 @@ class GoogleChecksAisafetyV1alphaClassifyContentRequest extends \Google\Collecti
     return $this->context;
   }
   /**
-   * @param GoogleChecksAisafetyV1alphaClassifyContentRequestInputContent
+   * Required. Content to be classified.
+   *
+   * @param GoogleChecksAisafetyV1alphaClassifyContentRequestInputContent $input
    */
   public function setInput(GoogleChecksAisafetyV1alphaClassifyContentRequestInputContent $input)
   {
@@ -74,7 +99,9 @@ class GoogleChecksAisafetyV1alphaClassifyContentRequest extends \Google\Collecti
     return $this->input;
   }
   /**
-   * @param GoogleChecksAisafetyV1alphaClassifyContentRequestPolicyConfig[]
+   * Required. List of policies to classify against.
+   *
+   * @param GoogleChecksAisafetyV1alphaClassifyContentRequestPolicyConfig[] $policies
    */
   public function setPolicies($policies)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaSdk extends \Google\Model
 {
   /**
+   * SDK identifier.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * SDK identifier.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

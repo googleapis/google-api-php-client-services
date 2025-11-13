@@ -24,7 +24,9 @@ class GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence extends
   protected $endpointDetailsDataType = 'array';
 
   /**
-   * @param GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails[]
+   * Endpoints in violation.
+   *
+   * @param GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails[] $endpointDetails
    */
   public function setEndpointDetails($endpointDetails)
   {

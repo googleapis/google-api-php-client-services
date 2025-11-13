@@ -23,12 +23,17 @@ class GoogleChecksAccountV1alphaListAppsResponse extends \Google\Collection
   protected $appsType = GoogleChecksAccountV1alphaApp::class;
   protected $appsDataType = 'array';
   /**
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleChecksAccountV1alphaApp[]
+   * The apps.
+   *
+   * @param GoogleChecksAccountV1alphaApp[] $apps
    */
   public function setApps($apps)
   {
@@ -42,7 +47,10 @@ class GoogleChecksAccountV1alphaListAppsResponse extends \Google\Collection
     return $this->apps;
   }
   /**
-   * @param string
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

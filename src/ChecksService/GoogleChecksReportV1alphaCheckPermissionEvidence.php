@@ -23,7 +23,9 @@ class GoogleChecksReportV1alphaCheckPermissionEvidence extends \Google\Model
   protected $permissionDataType = '';
 
   /**
-   * @param GoogleChecksReportV1alphaPermission
+   * The permission that was found in your app.
+   *
+   * @param GoogleChecksReportV1alphaPermission $permission
    */
   public function setPermission(GoogleChecksReportV1alphaPermission $permission)
   {

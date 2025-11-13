@@ -20,22 +20,30 @@ namespace Google\Service\ChecksService;
 class GoogleChecksRepoScanV1alphaScmMetadata extends \Google\Model
 {
   /**
+   * Required. Branch name.
+   *
    * @var string
    */
   public $branch;
   protected $pullRequestType = GoogleChecksRepoScanV1alphaPullRequest::class;
   protected $pullRequestDataType = '';
   /**
+   * Required. Git remote URL.
+   *
    * @var string
    */
   public $remoteUri;
   /**
+   * Required. Revision ID, e.g. Git commit hash.
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param string
+   * Required. Branch name.
+   *
+   * @param string $branch
    */
   public function setBranch($branch)
   {
@@ -49,7 +57,10 @@ class GoogleChecksRepoScanV1alphaScmMetadata extends \Google\Model
     return $this->branch;
   }
   /**
-   * @param GoogleChecksRepoScanV1alphaPullRequest
+   * Optional. Contains info about the associated pull request. This is only
+   * populated for pull request scans.
+   *
+   * @param GoogleChecksRepoScanV1alphaPullRequest $pullRequest
    */
   public function setPullRequest(GoogleChecksRepoScanV1alphaPullRequest $pullRequest)
   {
@@ -63,7 +74,9 @@ class GoogleChecksRepoScanV1alphaScmMetadata extends \Google\Model
     return $this->pullRequest;
   }
   /**
-   * @param string
+   * Required. Git remote URL.
+   *
+   * @param string $remoteUri
    */
   public function setRemoteUri($remoteUri)
   {
@@ -77,7 +90,9 @@ class GoogleChecksRepoScanV1alphaScmMetadata extends \Google\Model
     return $this->remoteUri;
   }
   /**
-   * @param string
+   * Required. Revision ID, e.g. Git commit hash.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

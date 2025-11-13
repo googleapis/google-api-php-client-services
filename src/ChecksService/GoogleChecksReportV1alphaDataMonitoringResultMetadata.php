@@ -21,24 +21,37 @@ class GoogleChecksReportV1alphaDataMonitoringResultMetadata extends \Google\Coll
 {
   protected $collection_key = 'badges';
   /**
+   * Badges that apply to this result.
+   *
    * @var string[]
    */
   public $badges;
   /**
+   * The timestamp when this result was first detected within the last 8 weeks.
+   * If not set, it wasn't detected within the last 8 weeks.
+   *
    * @var string
    */
   public $firstDetectedTime;
   /**
+   * Your app's version name when this result was last detected within the last
+   * 8 weeks. If not set, it wasn't detected within the last 8 weeks.
+   *
    * @var string
    */
   public $lastDetectedAppVersion;
   /**
+   * The timestamp when this result was last detected within the last 8 weeks.
+   * If not set, it wasn't detected within the last 8 weeks.
+   *
    * @var string
    */
   public $lastDetectedTime;
 
   /**
-   * @param string[]
+   * Badges that apply to this result.
+   *
+   * @param string[] $badges
    */
   public function setBadges($badges)
   {
@@ -52,7 +65,10 @@ class GoogleChecksReportV1alphaDataMonitoringResultMetadata extends \Google\Coll
     return $this->badges;
   }
   /**
-   * @param string
+   * The timestamp when this result was first detected within the last 8 weeks.
+   * If not set, it wasn't detected within the last 8 weeks.
+   *
+   * @param string $firstDetectedTime
    */
   public function setFirstDetectedTime($firstDetectedTime)
   {
@@ -66,7 +82,10 @@ class GoogleChecksReportV1alphaDataMonitoringResultMetadata extends \Google\Coll
     return $this->firstDetectedTime;
   }
   /**
-   * @param string
+   * Your app's version name when this result was last detected within the last
+   * 8 weeks. If not set, it wasn't detected within the last 8 weeks.
+   *
+   * @param string $lastDetectedAppVersion
    */
   public function setLastDetectedAppVersion($lastDetectedAppVersion)
   {
@@ -80,7 +99,10 @@ class GoogleChecksReportV1alphaDataMonitoringResultMetadata extends \Google\Coll
     return $this->lastDetectedAppVersion;
   }
   /**
-   * @param string
+   * The timestamp when this result was last detected within the last 8 weeks.
+   * If not set, it wasn't detected within the last 8 weeks.
+   *
+   * @param string $lastDetectedTime
    */
   public function setLastDetectedTime($lastDetectedTime)
   {

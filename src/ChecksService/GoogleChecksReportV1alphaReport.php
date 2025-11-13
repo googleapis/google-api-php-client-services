@@ -27,16 +27,22 @@ class GoogleChecksReportV1alphaReport extends \Google\Collection
   protected $dataMonitoringType = GoogleChecksReportV1alphaDataMonitoring::class;
   protected $dataMonitoringDataType = '';
   /**
+   * Resource name of the report.
+   *
    * @var string
    */
   public $name;
   /**
+   * A URL to view results.
+   *
    * @var string
    */
   public $resultsUri;
 
   /**
-   * @param GoogleChecksReportV1alphaAppBundle
+   * Information about the analyzed app bundle.
+   *
+   * @param GoogleChecksReportV1alphaAppBundle $appBundle
    */
   public function setAppBundle(GoogleChecksReportV1alphaAppBundle $appBundle)
   {
@@ -50,7 +56,9 @@ class GoogleChecksReportV1alphaReport extends \Google\Collection
     return $this->appBundle;
   }
   /**
-   * @param GoogleChecksReportV1alphaCheck[]
+   * List of checks that were run on the app bundle.
+   *
+   * @param GoogleChecksReportV1alphaCheck[] $checks
    */
   public function setChecks($checks)
   {
@@ -64,7 +72,9 @@ class GoogleChecksReportV1alphaReport extends \Google\Collection
     return $this->checks;
   }
   /**
-   * @param GoogleChecksReportV1alphaDataMonitoring
+   * Information related to data monitoring.
+   *
+   * @param GoogleChecksReportV1alphaDataMonitoring $dataMonitoring
    */
   public function setDataMonitoring(GoogleChecksReportV1alphaDataMonitoring $dataMonitoring)
   {
@@ -78,7 +88,9 @@ class GoogleChecksReportV1alphaReport extends \Google\Collection
     return $this->dataMonitoring;
   }
   /**
-   * @param string
+   * Resource name of the report.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -92,7 +104,9 @@ class GoogleChecksReportV1alphaReport extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * A URL to view results.
+   *
+   * @param string $resultsUri
    */
   public function setResultsUri($resultsUri)
   {

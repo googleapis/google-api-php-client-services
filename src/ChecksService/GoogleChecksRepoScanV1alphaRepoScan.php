@@ -21,18 +21,26 @@ class GoogleChecksRepoScanV1alphaRepoScan extends \Google\Collection
 {
   protected $collection_key = 'sources';
   /**
+   * CLI version.
+   *
    * @var string
    */
   public $cliVersion;
   /**
+   * Local scan path.
+   *
    * @var string
    */
   public $localScanPath;
   /**
+   * Identifier. Resource name of the scan.
+   *
    * @var string
    */
   public $name;
   /**
+   * A URL to view results.
+   *
    * @var string
    */
   public $resultsUri;
@@ -42,7 +50,9 @@ class GoogleChecksRepoScanV1alphaRepoScan extends \Google\Collection
   protected $sourcesDataType = 'array';
 
   /**
-   * @param string
+   * CLI version.
+   *
+   * @param string $cliVersion
    */
   public function setCliVersion($cliVersion)
   {
@@ -56,7 +66,9 @@ class GoogleChecksRepoScanV1alphaRepoScan extends \Google\Collection
     return $this->cliVersion;
   }
   /**
-   * @param string
+   * Local scan path.
+   *
+   * @param string $localScanPath
    */
   public function setLocalScanPath($localScanPath)
   {
@@ -70,7 +82,9 @@ class GoogleChecksRepoScanV1alphaRepoScan extends \Google\Collection
     return $this->localScanPath;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the scan.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -84,7 +98,9 @@ class GoogleChecksRepoScanV1alphaRepoScan extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * A URL to view results.
+   *
+   * @param string $resultsUri
    */
   public function setResultsUri($resultsUri)
   {
@@ -98,7 +114,9 @@ class GoogleChecksRepoScanV1alphaRepoScan extends \Google\Collection
     return $this->resultsUri;
   }
   /**
-   * @param GoogleChecksRepoScanV1alphaScmMetadata
+   * SCM metadata.
+   *
+   * @param GoogleChecksRepoScanV1alphaScmMetadata $scmMetadata
    */
   public function setScmMetadata(GoogleChecksRepoScanV1alphaScmMetadata $scmMetadata)
   {
@@ -112,7 +130,9 @@ class GoogleChecksRepoScanV1alphaRepoScan extends \Google\Collection
     return $this->scmMetadata;
   }
   /**
-   * @param GoogleChecksRepoScanV1alphaSource[]
+   * Data sources detected.
+   *
+   * @param GoogleChecksRepoScanV1alphaSource[] $sources
    */
   public function setSources($sources)
   {

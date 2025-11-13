@@ -23,7 +23,9 @@ class GoogleChecksReportV1alphaCheckSdkRestrictionViolationEvidenceSdkDetails ex
   protected $sdkDataType = '';
 
   /**
-   * @param GoogleChecksReportV1alphaSdk
+   * The SDK in violation.
+   *
+   * @param GoogleChecksReportV1alphaSdk $sdk
    */
   public function setSdk(GoogleChecksReportV1alphaSdk $sdk)
   {

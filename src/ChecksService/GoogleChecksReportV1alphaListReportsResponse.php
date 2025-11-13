@@ -21,6 +21,9 @@ class GoogleChecksReportV1alphaListReportsResponse extends \Google\Collection
 {
   protected $collection_key = 'reports';
   /**
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleChecksReportV1alphaListReportsResponse extends \Google\Collection
   protected $reportsDataType = 'array';
 
   /**
-   * @param string
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleChecksReportV1alphaListReportsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleChecksReportV1alphaReport[]
+   * The reports for the specified app.
+   *
+   * @param GoogleChecksReportV1alphaReport[] $reports
    */
   public function setReports($reports)
   {

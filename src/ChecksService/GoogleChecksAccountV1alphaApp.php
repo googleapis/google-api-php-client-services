@@ -20,16 +20,22 @@ namespace Google\Service\ChecksService;
 class GoogleChecksAccountV1alphaApp extends \Google\Model
 {
   /**
+   * The resource name of the app. Example: `accounts/123/apps/456`
+   *
    * @var string
    */
   public $name;
   /**
+   * The app's title.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The resource name of the app. Example: `accounts/123/apps/456`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class GoogleChecksAccountV1alphaApp extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The app's title.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

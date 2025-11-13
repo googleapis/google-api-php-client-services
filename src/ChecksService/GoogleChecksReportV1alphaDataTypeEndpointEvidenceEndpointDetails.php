@@ -23,7 +23,9 @@ class GoogleChecksReportV1alphaDataTypeEndpointEvidenceEndpointDetails extends \
   protected $endpointDataType = '';
 
   /**
-   * @param GoogleChecksReportV1alphaEndpoint
+   * Endpoint the data type was sent to.
+   *
+   * @param GoogleChecksReportV1alphaEndpoint $endpoint
    */
   public function setEndpoint(GoogleChecksReportV1alphaEndpoint $endpoint)
   {

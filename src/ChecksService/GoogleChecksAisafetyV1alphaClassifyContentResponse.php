@@ -24,7 +24,9 @@ class GoogleChecksAisafetyV1alphaClassifyContentResponse extends \Google\Collect
   protected $policyResultsDataType = 'array';
 
   /**
-   * @param GoogleChecksAisafetyV1alphaClassifyContentResponsePolicyResult[]
+   * Results of the classification for each policy.
+   *
+   * @param GoogleChecksAisafetyV1alphaClassifyContentResponsePolicyResult[] $policyResults
    */
   public function setPolicyResults($policyResults)
   {

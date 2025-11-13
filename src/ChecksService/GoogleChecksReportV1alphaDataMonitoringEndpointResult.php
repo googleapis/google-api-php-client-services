@@ -22,6 +22,8 @@ class GoogleChecksReportV1alphaDataMonitoringEndpointResult extends \Google\Mode
   protected $endpointType = GoogleChecksReportV1alphaEndpoint::class;
   protected $endpointDataType = '';
   /**
+   * The number of times this endpoint was contacted by your app.
+   *
    * @var int
    */
   public $hitCount;
@@ -29,7 +31,9 @@ class GoogleChecksReportV1alphaDataMonitoringEndpointResult extends \Google\Mode
   protected $metadataDataType = '';
 
   /**
-   * @param GoogleChecksReportV1alphaEndpoint
+   * The endpoint that was contacted by your app.
+   *
+   * @param GoogleChecksReportV1alphaEndpoint $endpoint
    */
   public function setEndpoint(GoogleChecksReportV1alphaEndpoint $endpoint)
   {
@@ -43,7 +47,9 @@ class GoogleChecksReportV1alphaDataMonitoringEndpointResult extends \Google\Mode
     return $this->endpoint;
   }
   /**
-   * @param int
+   * The number of times this endpoint was contacted by your app.
+   *
+   * @param int $hitCount
    */
   public function setHitCount($hitCount)
   {
@@ -57,7 +63,9 @@ class GoogleChecksReportV1alphaDataMonitoringEndpointResult extends \Google\Mode
     return $this->hitCount;
   }
   /**
-   * @param GoogleChecksReportV1alphaDataMonitoringResultMetadata
+   * Metadata about the result.
+   *
+   * @param GoogleChecksReportV1alphaDataMonitoringResultMetadata $metadata
    */
   public function setMetadata(GoogleChecksReportV1alphaDataMonitoringResultMetadata $metadata)
   {

@@ -26,7 +26,9 @@ class GoogleChecksRepoScanV1alphaCodeScan extends \Google\Collection
   protected $sourceCodeDataType = '';
 
   /**
-   * @param GoogleChecksRepoScanV1alphaCodeScanDataTypeClassification[]
+   * Optional. Data type classification requests.
+   *
+   * @param GoogleChecksRepoScanV1alphaCodeScanDataTypeClassification[] $dataTypeClassifications
    */
   public function setDataTypeClassifications($dataTypeClassifications)
   {
@@ -40,7 +42,9 @@ class GoogleChecksRepoScanV1alphaCodeScan extends \Google\Collection
     return $this->dataTypeClassifications;
   }
   /**
-   * @param GoogleChecksRepoScanV1alphaSourceCode
+   * Required. Source code to analyze.
+   *
+   * @param GoogleChecksRepoScanV1alphaSourceCode $sourceCode
    */
   public function setSourceCode(GoogleChecksRepoScanV1alphaSourceCode $sourceCode)
   {

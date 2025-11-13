@@ -20,12 +20,20 @@ namespace Google\Service\ChecksService;
 class WaitOperationRequest extends \Google\Model
 {
   /**
+   * The maximum duration to wait before timing out. If left blank, the wait
+   * will be at most the time permitted by the underlying HTTP/RPC protocol. If
+   * RPC context deadline is also specified, the shorter one will be used.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param string
+   * The maximum duration to wait before timing out. If left blank, the wait
+   * will be at most the time permitted by the underlying HTTP/RPC protocol. If
+   * RPC context deadline is also specified, the shorter one will be used.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {
