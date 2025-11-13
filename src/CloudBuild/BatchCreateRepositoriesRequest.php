@@ -24,7 +24,9 @@ class BatchCreateRepositoriesRequest extends \Google\Collection
   protected $requestsDataType = 'array';
 
   /**
-   * @param CreateRepositoryRequest[]
+   * Required. The request messages specifying the repositories to create.
+   *
+   * @param CreateRepositoryRequest[] $requests
    */
   public function setRequests($requests)
   {

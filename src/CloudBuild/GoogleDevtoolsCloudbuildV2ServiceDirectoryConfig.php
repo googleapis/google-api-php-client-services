@@ -20,12 +20,18 @@ namespace Google\Service\CloudBuild;
 class GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig extends \Google\Model
 {
   /**
+   * Required. The Service Directory service name. Format: projects/{project}/lo
+   * cations/{location}/namespaces/{namespace}/services/{service}.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * Required. The Service Directory service name. Format: projects/{project}/lo
+   * cations/{location}/namespaces/{namespace}/services/{service}.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

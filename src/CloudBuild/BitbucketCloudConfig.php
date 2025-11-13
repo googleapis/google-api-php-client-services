@@ -24,16 +24,27 @@ class BitbucketCloudConfig extends \Google\Model
   protected $readAuthorizerCredentialType = UserCredential::class;
   protected $readAuthorizerCredentialDataType = '';
   /**
+   * Required. SecretManager resource containing the webhook secret used to
+   * verify webhook events, formatted as `projects/secrets/versions`.
+   *
    * @var string
    */
   public $webhookSecretSecretVersion;
   /**
+   * Required. The Bitbucket Cloud Workspace ID to be connected to Google Cloud
+   * Platform.
+   *
    * @var string
    */
   public $workspace;
 
   /**
-   * @param UserCredential
+   * Required. An access token with the `webhook`, `repository`,
+   * `repository:admin` and `pullrequest` scope access. It can be either a
+   * workspace, project or repository access token. It's recommended to use a
+   * system account to generate these credentials.
+   *
+   * @param UserCredential $authorizerCredential
    */
   public function setAuthorizerCredential(UserCredential $authorizerCredential)
   {
@@ -47,7 +58,11 @@ class BitbucketCloudConfig extends \Google\Model
     return $this->authorizerCredential;
   }
   /**
-   * @param UserCredential
+   * Required. An access token with the `repository` access. It can be either a
+   * workspace, project or repository access token. It's recommended to use a
+   * system account to generate the credentials.
+   *
+   * @param UserCredential $readAuthorizerCredential
    */
   public function setReadAuthorizerCredential(UserCredential $readAuthorizerCredential)
   {
@@ -61,7 +76,10 @@ class BitbucketCloudConfig extends \Google\Model
     return $this->readAuthorizerCredential;
   }
   /**
-   * @param string
+   * Required. SecretManager resource containing the webhook secret used to
+   * verify webhook events, formatted as `projects/secrets/versions`.
+   *
+   * @param string $webhookSecretSecretVersion
    */
   public function setWebhookSecretSecretVersion($webhookSecretSecretVersion)
   {
@@ -75,7 +93,10 @@ class BitbucketCloudConfig extends \Google\Model
     return $this->webhookSecretSecretVersion;
   }
   /**
-   * @param string
+   * Required. The Bitbucket Cloud Workspace ID to be connected to Google Cloud
+   * Platform.
+   *
+   * @param string $workspace
    */
   public function setWorkspace($workspace)
   {

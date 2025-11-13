@@ -20,20 +20,31 @@ namespace Google\Service\CloudBuild;
 class PipelineWorkspaceDeclaration extends \Google\Model
 {
   /**
+   * Description is a human readable string describing how the workspace will be
+   * used in the Pipeline.
+   *
    * @var string
    */
   public $description;
   /**
+   * Name is the name of a workspace to be provided by a PipelineRun.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional marks a Workspace as not being required in PipelineRuns. By
+   * default this field is false and so declared workspaces are required.
+   *
    * @var bool
    */
   public $optional;
 
   /**
-   * @param string
+   * Description is a human readable string describing how the workspace will be
+   * used in the Pipeline.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +58,9 @@ class PipelineWorkspaceDeclaration extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Name is the name of a workspace to be provided by a PipelineRun.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +74,10 @@ class PipelineWorkspaceDeclaration extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Optional marks a Workspace as not being required in PipelineRuns. By
+   * default this field is false and so declared workspaces are required.
+   *
+   * @param bool $optional
    */
   public function setOptional($optional)
   {

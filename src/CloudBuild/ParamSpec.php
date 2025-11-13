@@ -19,23 +19,47 @@ namespace Google\Service\CloudBuild;
 
 class ParamSpec extends \Google\Model
 {
+  /**
+   * Default enum type; should not be used.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Default
+   */
+  public const TYPE_STRING = 'STRING';
+  /**
+   * Array type.
+   */
+  public const TYPE_ARRAY = 'ARRAY';
+  /**
+   * Object type.
+   */
+  public const TYPE_OBJECT = 'OBJECT';
   protected $defaultType = ParamValue::class;
   protected $defaultDataType = '';
   /**
+   * Description of the ParamSpec
+   *
    * @var string
    */
   public $description;
   /**
+   * Name of the ParamSpec
+   *
    * @var string
    */
   public $name;
   /**
+   * Type of ParamSpec
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param ParamValue
+   * The default value a parameter takes if no input value is supplied
+   *
+   * @param ParamValue $default
    */
   public function setDefault(ParamValue $default)
   {
@@ -49,7 +73,9 @@ class ParamSpec extends \Google\Model
     return $this->default;
   }
   /**
-   * @param string
+   * Description of the ParamSpec
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -63,7 +89,9 @@ class ParamSpec extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Name of the ParamSpec
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -77,14 +105,18 @@ class ParamSpec extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Type of ParamSpec
+   *
+   * Accepted values: TYPE_UNSPECIFIED, STRING, ARRAY, OBJECT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

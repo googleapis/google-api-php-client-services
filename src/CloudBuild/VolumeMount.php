@@ -20,28 +20,46 @@ namespace Google\Service\CloudBuild;
 class VolumeMount extends \Google\Model
 {
   /**
+   * Path within the container at which the volume should be mounted. Must not
+   * contain ':'.
+   *
    * @var string
    */
   public $mountPath;
   /**
+   * Name of the volume.
+   *
    * @var string
    */
   public $name;
   /**
+   * Mounted read-only if true, read-write otherwise (false or unspecified).
+   *
    * @var bool
    */
   public $readOnly;
   /**
+   * Path within the volume from which the container's volume should be mounted.
+   * Defaults to "" (volume's root).
+   *
    * @var string
    */
   public $subPath;
   /**
+   * Expanded path within the volume from which the container's volume should be
+   * mounted. Behaves similarly to SubPath but environment variable references
+   * $(VAR_NAME) are expanded using the container's environment. Defaults to ""
+   * (volume's root).
+   *
    * @var string
    */
   public $subPathExpr;
 
   /**
-   * @param string
+   * Path within the container at which the volume should be mounted. Must not
+   * contain ':'.
+   *
+   * @param string $mountPath
    */
   public function setMountPath($mountPath)
   {
@@ -55,7 +73,9 @@ class VolumeMount extends \Google\Model
     return $this->mountPath;
   }
   /**
-   * @param string
+   * Name of the volume.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -69,7 +89,9 @@ class VolumeMount extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Mounted read-only if true, read-write otherwise (false or unspecified).
+   *
+   * @param bool $readOnly
    */
   public function setReadOnly($readOnly)
   {
@@ -83,7 +105,10 @@ class VolumeMount extends \Google\Model
     return $this->readOnly;
   }
   /**
-   * @param string
+   * Path within the volume from which the container's volume should be mounted.
+   * Defaults to "" (volume's root).
+   *
+   * @param string $subPath
    */
   public function setSubPath($subPath)
   {
@@ -97,7 +122,12 @@ class VolumeMount extends \Google\Model
     return $this->subPath;
   }
   /**
-   * @param string
+   * Expanded path within the volume from which the container's volume should be
+   * mounted. Behaves similarly to SubPath but environment variable references
+   * $(VAR_NAME) are expanded using the container's environment. Defaults to ""
+   * (volume's root).
+   *
+   * @param string $subPathExpr
    */
   public function setSubPathExpr($subPathExpr)
   {

@@ -19,26 +19,50 @@ namespace Google\Service\CloudBuild;
 
 class Step extends \Google\Collection
 {
+  /**
+   * Default enum type; should not be used.
+   */
+  public const ON_ERROR_ON_ERROR_TYPE_UNSPECIFIED = 'ON_ERROR_TYPE_UNSPECIFIED';
+  /**
+   * StopAndFail indicates exit if the step/task exits with non-zero exit code
+   */
+  public const ON_ERROR_STOP_AND_FAIL = 'STOP_AND_FAIL';
+  /**
+   * Continue indicates continue executing the rest of the steps/tasks
+   * irrespective of the exit code
+   */
+  public const ON_ERROR_CONTINUE = 'CONTINUE';
   protected $collection_key = 'volumeMounts';
   /**
+   * Arguments to the entrypoint.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * Entrypoint array.
+   *
    * @var string[]
    */
   public $command;
   protected $envType = EnvVar::class;
   protected $envDataType = 'array';
   /**
+   * Docker image name.
+   *
    * @var string
    */
   public $image;
   /**
+   * Name of the container specified as a DNS_LABEL.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. OnError defines the exiting behavior on error can be set to [
+   * continue | stopAndFail ]
+   *
    * @var string
    */
   public $onError;
@@ -47,24 +71,32 @@ class Step extends \Google\Collection
   protected $refType = StepRef::class;
   protected $refDataType = '';
   /**
+   * The contents of an executable file to execute.
+   *
    * @var string
    */
   public $script;
   protected $securityContextType = SecurityContext::class;
   protected $securityContextDataType = '';
   /**
+   * Time after which the Step times out. Defaults to never.
+   *
    * @var string
    */
   public $timeout;
   protected $volumeMountsType = VolumeMount::class;
   protected $volumeMountsDataType = 'array';
   /**
+   * Container's working directory.
+   *
    * @var string
    */
   public $workingDir;
 
   /**
-   * @param string[]
+   * Arguments to the entrypoint.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -78,7 +110,9 @@ class Step extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param string[]
+   * Entrypoint array.
+   *
+   * @param string[] $command
    */
   public function setCommand($command)
   {
@@ -92,7 +126,9 @@ class Step extends \Google\Collection
     return $this->command;
   }
   /**
-   * @param EnvVar[]
+   * List of environment variables to set in the container.
+   *
+   * @param EnvVar[] $env
    */
   public function setEnv($env)
   {
@@ -106,7 +142,9 @@ class Step extends \Google\Collection
     return $this->env;
   }
   /**
-   * @param string
+   * Docker image name.
+   *
+   * @param string $image
    */
   public function setImage($image)
   {
@@ -120,7 +158,9 @@ class Step extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param string
+   * Name of the container specified as a DNS_LABEL.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -134,21 +174,28 @@ class Step extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. OnError defines the exiting behavior on error can be set to [
+   * continue | stopAndFail ]
+   *
+   * Accepted values: ON_ERROR_TYPE_UNSPECIFIED, STOP_AND_FAIL, CONTINUE
+   *
+   * @param self::ON_ERROR_* $onError
    */
   public function setOnError($onError)
   {
     $this->onError = $onError;
   }
   /**
-   * @return string
+   * @return self::ON_ERROR_*
    */
   public function getOnError()
   {
     return $this->onError;
   }
   /**
-   * @param Param[]
+   * Optional. Optional parameters passed to the StepAction.
+   *
+   * @param Param[] $params
    */
   public function setParams($params)
   {
@@ -162,7 +209,9 @@ class Step extends \Google\Collection
     return $this->params;
   }
   /**
-   * @param StepRef
+   * Optional. Optional reference to a remote StepAction.
+   *
+   * @param StepRef $ref
    */
   public function setRef(StepRef $ref)
   {
@@ -176,7 +225,9 @@ class Step extends \Google\Collection
     return $this->ref;
   }
   /**
-   * @param string
+   * The contents of an executable file to execute.
+   *
+   * @param string $script
    */
   public function setScript($script)
   {
@@ -190,7 +241,13 @@ class Step extends \Google\Collection
     return $this->script;
   }
   /**
-   * @param SecurityContext
+   * Optional. SecurityContext defines the security options the Step should be
+   * run with. If set, the fields of SecurityContext override the equivalent
+   * fields of PodSecurityContext. More info:
+   * https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
+   * +optional
+   *
+   * @param SecurityContext $securityContext
    */
   public function setSecurityContext(SecurityContext $securityContext)
   {
@@ -204,7 +261,9 @@ class Step extends \Google\Collection
     return $this->securityContext;
   }
   /**
-   * @param string
+   * Time after which the Step times out. Defaults to never.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {
@@ -218,7 +277,9 @@ class Step extends \Google\Collection
     return $this->timeout;
   }
   /**
-   * @param VolumeMount[]
+   * Pod volumes to mount into the container's filesystem.
+   *
+   * @param VolumeMount[] $volumeMounts
    */
   public function setVolumeMounts($volumeMounts)
   {
@@ -232,7 +293,9 @@ class Step extends \Google\Collection
     return $this->volumeMounts;
   }
   /**
-   * @param string
+   * Container's working directory.
+   *
+   * @param string $workingDir
    */
   public function setWorkingDir($workingDir)
   {

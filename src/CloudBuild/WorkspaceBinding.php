@@ -20,18 +20,26 @@ namespace Google\Service\CloudBuild;
 class WorkspaceBinding extends \Google\Model
 {
   /**
+   * Name of the workspace.
+   *
    * @var string
    */
   public $name;
   protected $secretType = SecretVolumeSource::class;
   protected $secretDataType = '';
   /**
+   * Optional. SubPath is optionally a directory on the volume which should be
+   * used for this binding (i.e. the volume will be mounted at this sub
+   * directory). +optional
+   *
    * @var string
    */
   public $subPath;
 
   /**
-   * @param string
+   * Name of the workspace.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +53,9 @@ class WorkspaceBinding extends \Google\Model
     return $this->name;
   }
   /**
-   * @param SecretVolumeSource
+   * Secret Volume Source.
+   *
+   * @param SecretVolumeSource $secret
    */
   public function setSecret(SecretVolumeSource $secret)
   {
@@ -59,7 +69,11 @@ class WorkspaceBinding extends \Google\Model
     return $this->secret;
   }
   /**
-   * @param string
+   * Optional. SubPath is optionally a directory on the volume which should be
+   * used for this binding (i.e. the volume will be mounted at this sub
+   * directory). +optional
+   *
+   * @param string $subPath
    */
   public function setSubPath($subPath)
   {

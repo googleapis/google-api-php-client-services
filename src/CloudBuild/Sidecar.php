@@ -21,26 +21,36 @@ class Sidecar extends \Google\Collection
 {
   protected $collection_key = 'volumeMounts';
   /**
+   * Arguments to the entrypoint.
+   *
    * @var string[]
    */
   public $args;
   /**
+   * Entrypoint array.
+   *
    * @var string[]
    */
   public $command;
   protected $envType = EnvVar::class;
   protected $envDataType = 'array';
   /**
+   * Docker image name.
+   *
    * @var string
    */
   public $image;
   /**
+   * Name of the Sidecar.
+   *
    * @var string
    */
   public $name;
   protected $readinessProbeType = Probe::class;
   protected $readinessProbeDataType = '';
   /**
+   * The contents of an executable file to execute.
+   *
    * @var string
    */
   public $script;
@@ -49,12 +59,16 @@ class Sidecar extends \Google\Collection
   protected $volumeMountsType = VolumeMount::class;
   protected $volumeMountsDataType = 'array';
   /**
+   * Container's working directory.
+   *
    * @var string
    */
   public $workingDir;
 
   /**
-   * @param string[]
+   * Arguments to the entrypoint.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -68,7 +82,9 @@ class Sidecar extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param string[]
+   * Entrypoint array.
+   *
+   * @param string[] $command
    */
   public function setCommand($command)
   {
@@ -82,7 +98,9 @@ class Sidecar extends \Google\Collection
     return $this->command;
   }
   /**
-   * @param EnvVar[]
+   * List of environment variables to set in the container.
+   *
+   * @param EnvVar[] $env
    */
   public function setEnv($env)
   {
@@ -96,7 +114,9 @@ class Sidecar extends \Google\Collection
     return $this->env;
   }
   /**
-   * @param string
+   * Docker image name.
+   *
+   * @param string $image
    */
   public function setImage($image)
   {
@@ -110,7 +130,9 @@ class Sidecar extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param string
+   * Name of the Sidecar.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -124,7 +146,12 @@ class Sidecar extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Probe
+   * Optional. Periodic probe of Sidecar service readiness. Container will be
+   * removed from service endpoints if the probe fails. Cannot be updated. More
+   * info: https://kubernetes.io/docs/concepts/workloads/pods/pod-
+   * lifecycle#container-probes +optional
+   *
+   * @param Probe $readinessProbe
    */
   public function setReadinessProbe(Probe $readinessProbe)
   {
@@ -138,7 +165,9 @@ class Sidecar extends \Google\Collection
     return $this->readinessProbe;
   }
   /**
-   * @param string
+   * The contents of an executable file to execute.
+   *
+   * @param string $script
    */
   public function setScript($script)
   {
@@ -152,7 +181,9 @@ class Sidecar extends \Google\Collection
     return $this->script;
   }
   /**
-   * @param SecurityContext
+   * Optional. Security options the container should be run with.
+   *
+   * @param SecurityContext $securityContext
    */
   public function setSecurityContext(SecurityContext $securityContext)
   {
@@ -166,7 +197,9 @@ class Sidecar extends \Google\Collection
     return $this->securityContext;
   }
   /**
-   * @param VolumeMount[]
+   * Pod volumes to mount into the container's filesystem.
+   *
+   * @param VolumeMount[] $volumeMounts
    */
   public function setVolumeMounts($volumeMounts)
   {
@@ -180,7 +213,9 @@ class Sidecar extends \Google\Collection
     return $this->volumeMounts;
   }
   /**
-   * @param string
+   * Container's working directory.
+   *
+   * @param string $workingDir
    */
   public function setWorkingDir($workingDir)
   {

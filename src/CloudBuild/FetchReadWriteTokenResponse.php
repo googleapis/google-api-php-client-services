@@ -20,16 +20,22 @@ namespace Google\Service\CloudBuild;
 class FetchReadWriteTokenResponse extends \Google\Model
 {
   /**
+   * Expiration timestamp. Can be empty if unknown or non-expiring.
+   *
    * @var string
    */
   public $expirationTime;
   /**
+   * The token content.
+   *
    * @var string
    */
   public $token;
 
   /**
-   * @param string
+   * Expiration timestamp. Can be empty if unknown or non-expiring.
+   *
+   * @param string $expirationTime
    */
   public function setExpirationTime($expirationTime)
   {
@@ -43,7 +49,9 @@ class FetchReadWriteTokenResponse extends \Google\Model
     return $this->expirationTime;
   }
   /**
-   * @param string
+   * The token content.
+   *
+   * @param string $token
    */
   public function setToken($token)
   {

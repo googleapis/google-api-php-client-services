@@ -20,18 +20,31 @@ namespace Google\Service\CloudBuild;
 class CreateRepositoryRequest extends \Google\Model
 {
   /**
+   * Required. The connection to contain the repository. If the request is part
+   * of a BatchCreateRepositoriesRequest, this field should be empty or match
+   * the parent specified there.
+   *
    * @var string
    */
   public $parent;
   protected $repositoryType = Repository::class;
   protected $repositoryDataType = '';
   /**
+   * Required. The ID to use for the repository, which will become the final
+   * component of the repository's resource name. This ID should be unique in
+   * the connection. Allows alphanumeric characters and any of
+   * -._~%!$&'()*+,;=@.
+   *
    * @var string
    */
   public $repositoryId;
 
   /**
-   * @param string
+   * Required. The connection to contain the repository. If the request is part
+   * of a BatchCreateRepositoriesRequest, this field should be empty or match
+   * the parent specified there.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -45,7 +58,9 @@ class CreateRepositoryRequest extends \Google\Model
     return $this->parent;
   }
   /**
-   * @param Repository
+   * Required. The repository to create.
+   *
+   * @param Repository $repository
    */
   public function setRepository(Repository $repository)
   {
@@ -59,7 +74,12 @@ class CreateRepositoryRequest extends \Google\Model
     return $this->repository;
   }
   /**
-   * @param string
+   * Required. The ID to use for the repository, which will become the final
+   * component of the repository's resource name. This ID should be unique in
+   * the connection. Allows alphanumeric characters and any of
+   * -._~%!$&'()*+,;=@.
+   *
+   * @param string $repositoryId
    */
   public function setRepositoryId($repositoryId)
   {

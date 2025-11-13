@@ -20,28 +20,63 @@ namespace Google\Service\CloudBuild;
 class SecurityContext extends \Google\Model
 {
   /**
+   * Optional. AllowPrivilegeEscalation controls whether a process can gain more
+   * privileges than its parent process. This bool directly controls if the
+   * no_new_privs flag will be set on the container process.
+   * AllowPrivilegeEscalation is true always when the container is: 1) run as
+   * Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when
+   * spec.os.name is windows. +optional
+   *
    * @var bool
    */
   public $allowPrivilegeEscalation;
   /**
+   * Run container in privileged mode.
+   *
    * @var bool
    */
   public $privileged;
   /**
+   * Optional. The GID to run the entrypoint of the container process. Uses
+   * runtime default if unset. May also be set in PodSecurityContext. If set in
+   * both SecurityContext and PodSecurityContext, the value specified in
+   * SecurityContext takes precedence. Note that this field cannot be set when
+   * spec.os.name is windows. +optional
+   *
    * @var string
    */
   public $runAsGroup;
   /**
+   * Optional. Indicates that the container must run as a non-root user. If
+   * true, the Kubelet will validate the image at runtime to ensure that it does
+   * not run as UID 0 (root) and fail to start the container if it does. If
+   * unset or false, no such validation will be performed. May also be set in
+   * PodSecurityContext. If set in both SecurityContext and PodSecurityContext,
+   * the value specified in SecurityContext takes precedence. +optional
+   *
    * @var bool
    */
   public $runAsNonRoot;
   /**
+   * Optional. The UID to run the entrypoint of the container process. Defaults
+   * to user specified in image metadata if unspecified. May also be set in
+   * PodSecurityContext. If set in both SecurityContext and PodSecurityContext,
+   * the value specified in SecurityContext takes precedence. Note that this
+   * field cannot be set when spec.os.name is windows. +optional
+   *
    * @var string
    */
   public $runAsUser;
 
   /**
-   * @param bool
+   * Optional. AllowPrivilegeEscalation controls whether a process can gain more
+   * privileges than its parent process. This bool directly controls if the
+   * no_new_privs flag will be set on the container process.
+   * AllowPrivilegeEscalation is true always when the container is: 1) run as
+   * Privileged 2) has CAP_SYS_ADMIN Note that this field cannot be set when
+   * spec.os.name is windows. +optional
+   *
+   * @param bool $allowPrivilegeEscalation
    */
   public function setAllowPrivilegeEscalation($allowPrivilegeEscalation)
   {
@@ -55,7 +90,9 @@ class SecurityContext extends \Google\Model
     return $this->allowPrivilegeEscalation;
   }
   /**
-   * @param bool
+   * Run container in privileged mode.
+   *
+   * @param bool $privileged
    */
   public function setPrivileged($privileged)
   {
@@ -69,7 +106,13 @@ class SecurityContext extends \Google\Model
     return $this->privileged;
   }
   /**
-   * @param string
+   * Optional. The GID to run the entrypoint of the container process. Uses
+   * runtime default if unset. May also be set in PodSecurityContext. If set in
+   * both SecurityContext and PodSecurityContext, the value specified in
+   * SecurityContext takes precedence. Note that this field cannot be set when
+   * spec.os.name is windows. +optional
+   *
+   * @param string $runAsGroup
    */
   public function setRunAsGroup($runAsGroup)
   {
@@ -83,7 +126,14 @@ class SecurityContext extends \Google\Model
     return $this->runAsGroup;
   }
   /**
-   * @param bool
+   * Optional. Indicates that the container must run as a non-root user. If
+   * true, the Kubelet will validate the image at runtime to ensure that it does
+   * not run as UID 0 (root) and fail to start the container if it does. If
+   * unset or false, no such validation will be performed. May also be set in
+   * PodSecurityContext. If set in both SecurityContext and PodSecurityContext,
+   * the value specified in SecurityContext takes precedence. +optional
+   *
+   * @param bool $runAsNonRoot
    */
   public function setRunAsNonRoot($runAsNonRoot)
   {
@@ -97,7 +147,13 @@ class SecurityContext extends \Google\Model
     return $this->runAsNonRoot;
   }
   /**
-   * @param string
+   * Optional. The UID to run the entrypoint of the container process. Defaults
+   * to user specified in image metadata if unspecified. May also be set in
+   * PodSecurityContext. If set in both SecurityContext and PodSecurityContext,
+   * the value specified in SecurityContext takes precedence. Note that this
+   * field cannot be set when spec.os.name is windows. +optional
+   *
+   * @param string $runAsUser
    */
   public function setRunAsUser($runAsUser)
   {

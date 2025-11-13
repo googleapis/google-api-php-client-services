@@ -20,36 +20,55 @@ namespace Google\Service\CloudBuild;
 class Repository extends \Google\Model
 {
   /**
+   * Optional. Allows clients to store small amounts of arbitrary data.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. Server assigned timestamp for when the connection was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Immutable. Resource name of the repository, in the format
+   * `projects/locations/connections/repositories`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Git Clone HTTPS URI.
+   *
    * @var string
    */
   public $remoteUri;
   /**
+   * Output only. Server assigned timestamp for when the connection was updated.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. External ID of the webhook created for the repository.
+   *
    * @var string
    */
   public $webhookId;
 
   /**
-   * @param string[]
+   * Optional. Allows clients to store small amounts of arbitrary data.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -63,7 +82,9 @@ class Repository extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * Output only. Server assigned timestamp for when the connection was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -77,7 +98,11 @@ class Repository extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * This checksum is computed by the server based on the value of other fields,
+   * and may be sent on update and delete requests to ensure the client has an
+   * up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -91,7 +116,10 @@ class Repository extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Immutable. Resource name of the repository, in the format
+   * `projects/locations/connections/repositories`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -105,7 +133,9 @@ class Repository extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Git Clone HTTPS URI.
+   *
+   * @param string $remoteUri
    */
   public function setRemoteUri($remoteUri)
   {
@@ -119,7 +149,9 @@ class Repository extends \Google\Model
     return $this->remoteUri;
   }
   /**
-   * @param string
+   * Output only. Server assigned timestamp for when the connection was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -133,7 +165,9 @@ class Repository extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Output only. External ID of the webhook created for the repository.
+   *
+   * @param string $webhookId
    */
   public function setWebhookId($webhookId)
   {

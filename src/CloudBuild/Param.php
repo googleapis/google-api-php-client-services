@@ -20,6 +20,8 @@ namespace Google\Service\CloudBuild;
 class Param extends \Google\Model
 {
   /**
+   * Name of the parameter.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +29,9 @@ class Param extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param string
+   * Name of the parameter.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +45,9 @@ class Param extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ParamValue
+   * Value of the parameter.
+   *
+   * @param ParamValue $value
    */
   public function setValue(ParamValue $value)
   {

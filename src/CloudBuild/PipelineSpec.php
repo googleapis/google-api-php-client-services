@@ -23,6 +23,9 @@ class PipelineSpec extends \Google\Collection
   protected $finallyTasksType = PipelineTask::class;
   protected $finallyTasksDataType = 'array';
   /**
+   * Output only. auto-generated yaml that is output only for display purpose
+   * for workflows using pipeline_spec, used by UI/gcloud cli for Workflows.
+   *
    * @var string
    */
   public $generatedYaml;
@@ -36,7 +39,11 @@ class PipelineSpec extends \Google\Collection
   protected $workspacesDataType = 'array';
 
   /**
-   * @param PipelineTask[]
+   * List of Tasks that execute just before leaving the Pipeline i.e. either
+   * after all Tasks are finished executing successfully or after a failure
+   * which would result in ending the Pipeline.
+   *
+   * @param PipelineTask[] $finallyTasks
    */
   public function setFinallyTasks($finallyTasks)
   {
@@ -50,7 +57,10 @@ class PipelineSpec extends \Google\Collection
     return $this->finallyTasks;
   }
   /**
-   * @param string
+   * Output only. auto-generated yaml that is output only for display purpose
+   * for workflows using pipeline_spec, used by UI/gcloud cli for Workflows.
+   *
+   * @param string $generatedYaml
    */
   public function setGeneratedYaml($generatedYaml)
   {
@@ -64,7 +74,9 @@ class PipelineSpec extends \Google\Collection
     return $this->generatedYaml;
   }
   /**
-   * @param ParamSpec[]
+   * List of parameters.
+   *
+   * @param ParamSpec[] $params
    */
   public function setParams($params)
   {
@@ -78,7 +90,10 @@ class PipelineSpec extends \Google\Collection
     return $this->params;
   }
   /**
-   * @param PipelineResult[]
+   * Optional. Output only. List of results written out by the pipeline's
+   * containers
+   *
+   * @param PipelineResult[] $results
    */
   public function setResults($results)
   {
@@ -92,7 +107,9 @@ class PipelineSpec extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param PipelineTask[]
+   * List of Tasks that execute when this Pipeline is run.
+   *
+   * @param PipelineTask[] $tasks
    */
   public function setTasks($tasks)
   {
@@ -106,7 +123,10 @@ class PipelineSpec extends \Google\Collection
     return $this->tasks;
   }
   /**
-   * @param PipelineWorkspaceDeclaration[]
+   * Workspaces declares a set of named workspaces that are expected to be
+   * provided by a PipelineRun.
+   *
+   * @param PipelineWorkspaceDeclaration[] $workspaces
    */
   public function setWorkspaces($workspaces)
   {
