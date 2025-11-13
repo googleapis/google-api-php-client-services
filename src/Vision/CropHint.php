@@ -22,16 +22,24 @@ class CropHint extends \Google\Model
   protected $boundingPolyType = BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
+   * Confidence of this being a salient region. Range [0, 1].
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Fraction of importance of this salient region with respect to the original
+   * image.
+   *
    * @var float
    */
   public $importanceFraction;
 
   /**
-   * @param BoundingPoly
+   * The bounding polygon for the crop region. The coordinates of the bounding
+   * box are in the original image's scale.
+   *
+   * @param BoundingPoly $boundingPoly
    */
   public function setBoundingPoly(BoundingPoly $boundingPoly)
   {
@@ -45,7 +53,9 @@ class CropHint extends \Google\Model
     return $this->boundingPoly;
   }
   /**
-   * @param float
+   * Confidence of this being a salient region. Range [0, 1].
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -59,7 +69,10 @@ class CropHint extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param float
+   * Fraction of importance of this salient region with respect to the original
+   * image.
+   *
+   * @param float $importanceFraction
    */
   public function setImportanceFraction($importanceFraction)
   {

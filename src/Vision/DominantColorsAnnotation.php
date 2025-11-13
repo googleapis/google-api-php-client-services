@@ -24,7 +24,9 @@ class DominantColorsAnnotation extends \Google\Collection
   protected $colorsDataType = 'array';
 
   /**
-   * @param ColorInfo[]
+   * RGB color values with their score and pixel fraction.
+   *
+   * @param ColorInfo[] $colors
    */
   public function setColors($colors)
   {

@@ -23,7 +23,9 @@ class AsyncAnnotateFileResponse extends \Google\Model
   protected $outputConfigDataType = '';
 
   /**
-   * @param OutputConfig
+   * The output location and metadata from AsyncAnnotateFileRequest.
+   *
+   * @param OutputConfig $outputConfig
    */
   public function setOutputConfig(OutputConfig $outputConfig)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p1beta1ProductKeyValue extends \Google\Model
 {
   /**
+   * The key of the label attached to the product. Cannot be empty and cannot
+   * exceed 128 bytes.
+   *
    * @var string
    */
   public $key;
   /**
+   * The value of the label attached to the product. Cannot be empty and cannot
+   * exceed 128 bytes.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The key of the label attached to the product. Cannot be empty and cannot
+   * exceed 128 bytes.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -43,7 +52,10 @@ class GoogleCloudVisionV1p1beta1ProductKeyValue extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * The value of the label attached to the product. Cannot be empty and cannot
+   * exceed 128 bytes.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\Vision;
 class AddProductToProductSetRequest extends \Google\Model
 {
   /**
+   * Required. The resource name for the Product to be added to this ProductSet.
+   * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+   *
    * @var string
    */
   public $product;
 
   /**
-   * @param string
+   * Required. The resource name for the Product to be added to this ProductSet.
+   * Format is: `projects/PROJECT_ID/locations/LOC_ID/products/PRODUCT_ID`
+   *
+   * @param string $product
    */
   public function setProduct($product)
   {

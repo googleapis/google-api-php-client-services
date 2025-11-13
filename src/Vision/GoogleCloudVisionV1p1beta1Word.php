@@ -23,6 +23,8 @@ class GoogleCloudVisionV1p1beta1Word extends \Google\Collection
   protected $boundingBoxType = GoogleCloudVisionV1p1beta1BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
+   * Confidence of the OCR results for the word. Range [0, 1].
+   *
    * @var float
    */
   public $confidence;
@@ -32,7 +34,15 @@ class GoogleCloudVisionV1p1beta1Word extends \Google\Collection
   protected $symbolsDataType = 'array';
 
   /**
-   * @param GoogleCloudVisionV1p1beta1BoundingPoly
+   * The bounding box for the word. The vertices are in the order of top-left,
+   * top-right, bottom-right, bottom-left. When a rotation of the bounding box
+   * is detected the rotation is represented as around the top-left corner as
+   * defined when the text is read in the 'natural' orientation. For example: *
+   * when the text is horizontal it might look like: 0----1 | | 3----2 * when
+   * it's rotated 180 degrees around the top-left corner it becomes: 2----3 | |
+   * 1----0 and the vertex order will still be (0, 1, 2, 3).
+   *
+   * @param GoogleCloudVisionV1p1beta1BoundingPoly $boundingBox
    */
   public function setBoundingBox(GoogleCloudVisionV1p1beta1BoundingPoly $boundingBox)
   {
@@ -46,7 +56,9 @@ class GoogleCloudVisionV1p1beta1Word extends \Google\Collection
     return $this->boundingBox;
   }
   /**
-   * @param float
+   * Confidence of the OCR results for the word. Range [0, 1].
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -60,7 +72,9 @@ class GoogleCloudVisionV1p1beta1Word extends \Google\Collection
     return $this->confidence;
   }
   /**
-   * @param GoogleCloudVisionV1p1beta1TextAnnotationTextProperty
+   * Additional information detected for the word.
+   *
+   * @param GoogleCloudVisionV1p1beta1TextAnnotationTextProperty $property
    */
   public function setProperty(GoogleCloudVisionV1p1beta1TextAnnotationTextProperty $property)
   {
@@ -74,7 +88,10 @@ class GoogleCloudVisionV1p1beta1Word extends \Google\Collection
     return $this->property;
   }
   /**
-   * @param GoogleCloudVisionV1p1beta1Symbol[]
+   * List of symbols in the word. The order of the symbols follows the natural
+   * reading order.
+   *
+   * @param GoogleCloudVisionV1p1beta1Symbol[] $symbols
    */
   public function setSymbols($symbols)
   {

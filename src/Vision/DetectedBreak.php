@@ -20,16 +20,47 @@ namespace Google\Service\Vision;
 class DetectedBreak extends \Google\Model
 {
   /**
+   * Unknown break label type.
+   */
+  public const TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Regular space.
+   */
+  public const TYPE_SPACE = 'SPACE';
+  /**
+   * Sure space (very wide).
+   */
+  public const TYPE_SURE_SPACE = 'SURE_SPACE';
+  /**
+   * Line-wrapping break.
+   */
+  public const TYPE_EOL_SURE_SPACE = 'EOL_SURE_SPACE';
+  /**
+   * End-line hyphen that is not present in text; does not co-occur with
+   * `SPACE`, `LEADER_SPACE`, or `LINE_BREAK`.
+   */
+  public const TYPE_HYPHEN = 'HYPHEN';
+  /**
+   * Line break that ends a paragraph.
+   */
+  public const TYPE_LINE_BREAK = 'LINE_BREAK';
+  /**
+   * True if break prepends the element.
+   *
    * @var bool
    */
   public $isPrefix;
   /**
+   * Detected break type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param bool
+   * True if break prepends the element.
+   *
+   * @param bool $isPrefix
    */
   public function setIsPrefix($isPrefix)
   {
@@ -43,14 +74,19 @@ class DetectedBreak extends \Google\Model
     return $this->isPrefix;
   }
   /**
-   * @param string
+   * Detected break type.
+   *
+   * Accepted values: UNKNOWN, SPACE, SURE_SPACE, EOL_SURE_SPACE, HYPHEN,
+   * LINE_BREAK
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

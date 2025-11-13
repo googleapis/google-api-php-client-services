@@ -23,36 +23,61 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
   protected $boundingPolyType = GoogleCloudVisionV1p1beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
+   * **Deprecated. Use `score` instead.** The accuracy of the entity detection
+   * in an image. For example, for an image in which the "Eiffel Tower" entity
+   * is detected, this field represents the confidence that there is a tower in
+   * the query image. Range [0, 1].
+   *
+   * @deprecated
    * @var float
    */
   public $confidence;
   /**
+   * Entity textual description, expressed in its `locale` language.
+   *
    * @var string
    */
   public $description;
   /**
+   * The language code for the locale in which the entity textual `description`
+   * is expressed.
+   *
    * @var string
    */
   public $locale;
   protected $locationsType = GoogleCloudVisionV1p1beta1LocationInfo::class;
   protected $locationsDataType = 'array';
   /**
+   * Opaque entity ID. Some IDs may be available in [Google Knowledge Graph
+   * Search API](https://developers.google.com/knowledge-graph/).
+   *
    * @var string
    */
   public $mid;
   protected $propertiesType = GoogleCloudVisionV1p1beta1Property::class;
   protected $propertiesDataType = 'array';
   /**
+   * Overall score of the result. Range [0, 1].
+   *
    * @var float
    */
   public $score;
   /**
+   * The relevancy of the ICA (Image Content Annotation) label to the image. For
+   * example, the relevancy of "tower" is likely higher to an image containing
+   * the detected "Eiffel Tower" than to an image containing a detected distant
+   * towering building, even though the confidence that there is a tower in each
+   * image may be the same. Range [0, 1].
+   *
    * @var float
    */
   public $topicality;
 
   /**
-   * @param GoogleCloudVisionV1p1beta1BoundingPoly
+   * Image region to which this entity belongs. Not produced for
+   * `LABEL_DETECTION` features.
+   *
+   * @param GoogleCloudVisionV1p1beta1BoundingPoly $boundingPoly
    */
   public function setBoundingPoly(GoogleCloudVisionV1p1beta1BoundingPoly $boundingPoly)
   {
@@ -66,13 +91,20 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->boundingPoly;
   }
   /**
-   * @param float
+   * **Deprecated. Use `score` instead.** The accuracy of the entity detection
+   * in an image. For example, for an image in which the "Eiffel Tower" entity
+   * is detected, this field represents the confidence that there is a tower in
+   * the query image. Range [0, 1].
+   *
+   * @deprecated
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
     $this->confidence = $confidence;
   }
   /**
+   * @deprecated
    * @return float
    */
   public function getConfidence()
@@ -80,7 +112,9 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->confidence;
   }
   /**
-   * @param string
+   * Entity textual description, expressed in its `locale` language.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -94,7 +128,10 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The language code for the locale in which the entity textual `description`
+   * is expressed.
+   *
+   * @param string $locale
    */
   public function setLocale($locale)
   {
@@ -108,7 +145,13 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->locale;
   }
   /**
-   * @param GoogleCloudVisionV1p1beta1LocationInfo[]
+   * The location information for the detected entity. Multiple `LocationInfo`
+   * elements can be present because one location may indicate the location of
+   * the scene in the image, and another location may indicate the location of
+   * the place where the image was taken. Location information is usually
+   * present for landmarks.
+   *
+   * @param GoogleCloudVisionV1p1beta1LocationInfo[] $locations
    */
   public function setLocations($locations)
   {
@@ -122,7 +165,10 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param string
+   * Opaque entity ID. Some IDs may be available in [Google Knowledge Graph
+   * Search API](https://developers.google.com/knowledge-graph/).
+   *
+   * @param string $mid
    */
   public function setMid($mid)
   {
@@ -136,7 +182,10 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->mid;
   }
   /**
-   * @param GoogleCloudVisionV1p1beta1Property[]
+   * Some entities may have optional user-supplied `Property` (name/value)
+   * fields, such a score or string that qualifies the entity.
+   *
+   * @param GoogleCloudVisionV1p1beta1Property[] $properties
    */
   public function setProperties($properties)
   {
@@ -150,7 +199,9 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->properties;
   }
   /**
-   * @param float
+   * Overall score of the result. Range [0, 1].
+   *
+   * @param float $score
    */
   public function setScore($score)
   {
@@ -164,7 +215,13 @@ class GoogleCloudVisionV1p1beta1EntityAnnotation extends \Google\Collection
     return $this->score;
   }
   /**
-   * @param float
+   * The relevancy of the ICA (Image Content Annotation) label to the image. For
+   * example, the relevancy of "tower" is likely higher to an image containing
+   * the detected "Eiffel Tower" than to an image containing a detected distant
+   * towering building, even though the confidence that there is a tower in each
+   * image may be the same. Range [0, 1].
+   *
+   * @param float $topicality
    */
   public function setTopicality($topicality)
   {

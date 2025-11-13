@@ -26,7 +26,9 @@ class GoogleCloudVisionV1p1beta1BoundingPoly extends \Google\Collection
   protected $verticesDataType = 'array';
 
   /**
-   * @param GoogleCloudVisionV1p1beta1NormalizedVertex[]
+   * The bounding polygon normalized vertices.
+   *
+   * @param GoogleCloudVisionV1p1beta1NormalizedVertex[] $normalizedVertices
    */
   public function setNormalizedVertices($normalizedVertices)
   {
@@ -40,7 +42,9 @@ class GoogleCloudVisionV1p1beta1BoundingPoly extends \Google\Collection
     return $this->normalizedVertices;
   }
   /**
-   * @param GoogleCloudVisionV1p1beta1Vertex[]
+   * The bounding polygon vertices.
+   *
+   * @param GoogleCloudVisionV1p1beta1Vertex[] $vertices
    */
   public function setVertices($vertices)
   {

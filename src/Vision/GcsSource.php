@@ -20,12 +20,18 @@ namespace Google\Service\Vision;
 class GcsSource extends \Google\Model
 {
   /**
+   * Google Cloud Storage URI for the input file. This must only be a Google
+   * Cloud Storage object. Wildcards are not currently supported.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Google Cloud Storage URI for the input file. This must only be a Google
+   * Cloud Storage object. Wildcards are not currently supported.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {
