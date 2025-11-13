@@ -23,7 +23,11 @@ class GraphqlRequestExtensions extends \Google\Model
   protected $impersonateDataType = '';
 
   /**
-   * @param Impersonation
+   * Optional. If set, impersonate a request with given Firebase Auth context
+   * and evaluate the auth policies on the operation. If omitted, bypass any
+   * defined auth policies.
+   *
+   * @param Impersonation $impersonate
    */
   public function setImpersonate(Impersonation $impersonate)
   {

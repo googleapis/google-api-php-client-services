@@ -20,16 +20,26 @@ namespace Google\Service\FirebaseDataConnect;
 class ExecuteQueryRequest extends \Google\Model
 {
   /**
+   * Required. The name of the GraphQL operation name. Required because all
+   * Connector operations must be named. See
+   * https://graphql.org/learn/queries/#operation-name.
+   *
    * @var string
    */
   public $operationName;
   /**
+   * Optional. Values for GraphQL variables provided in this request.
+   *
    * @var array[]
    */
   public $variables;
 
   /**
-   * @param string
+   * Required. The name of the GraphQL operation name. Required because all
+   * Connector operations must be named. See
+   * https://graphql.org/learn/queries/#operation-name.
+   *
+   * @param string $operationName
    */
   public function setOperationName($operationName)
   {
@@ -43,7 +53,9 @@ class ExecuteQueryRequest extends \Google\Model
     return $this->operationName;
   }
   /**
-   * @param array[]
+   * Optional. Values for GraphQL variables provided in this request.
+   *
+   * @param array[] $variables
    */
   public function setVariables($variables)
   {

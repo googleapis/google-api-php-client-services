@@ -20,12 +20,18 @@ namespace Google\Service\FirebaseDataConnect;
 class CloudSqlInstance extends \Google\Model
 {
   /**
+   * Required. Name of the CloudSQL instance, in the format: ```
+   * projects/{project}/locations/{location}/instances/{instance} ```
+   *
    * @var string
    */
   public $instance;
 
   /**
-   * @param string
+   * Required. Name of the CloudSQL instance, in the format: ```
+   * projects/{project}/locations/{location}/instances/{instance} ```
+   *
+   * @param string $instance
    */
   public function setInstance($instance)
   {

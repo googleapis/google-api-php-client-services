@@ -21,6 +21,8 @@ class ExecuteMutationResponse extends \Google\Collection
 {
   protected $collection_key = 'errors';
   /**
+   * The result of executing the requested operation.
+   *
    * @var array[]
    */
   public $data;
@@ -28,7 +30,9 @@ class ExecuteMutationResponse extends \Google\Collection
   protected $errorsDataType = 'array';
 
   /**
-   * @param array[]
+   * The result of executing the requested operation.
+   *
+   * @param array[] $data
    */
   public function setData($data)
   {
@@ -42,7 +46,9 @@ class ExecuteMutationResponse extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param GraphqlError[]
+   * Errors of this response.
+   *
+   * @param GraphqlError[] $errors
    */
   public function setErrors($errors)
   {

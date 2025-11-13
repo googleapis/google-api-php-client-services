@@ -21,48 +21,74 @@ class Schema extends \Google\Collection
 {
   protected $collection_key = 'datasources';
   /**
+   * Optional. Stores small amounts of arbitrary data.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. [Output only] Create time stamp.
+   *
    * @var string
    */
   public $createTime;
   protected $datasourcesType = Datasource::class;
   protected $datasourcesDataType = 'array';
   /**
+   * Optional. Mutable human-readable name. 63 character limit.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154)
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. Labels as key value pairs.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The relative resource name of the schema, in the format: ```
+   * projects/{project}/locations/{location}/services/{service}/schemas/{schema}
+   * ``` Right now, the only supported schema is "main".
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. A field that if true, indicates that the system is working to
+   * compile and deploy the schema.
+   *
    * @var bool
    */
   public $reconciling;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
   /**
+   * Output only. System-assigned, unique identifier.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. [Output only] Update time stamp.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. Stores small amounts of arbitrary data.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -76,7 +102,9 @@ class Schema extends \Google\Collection
     return $this->annotations;
   }
   /**
-   * @param string
+   * Output only. [Output only] Create time stamp.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -90,7 +118,9 @@ class Schema extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param Datasource[]
+   * Required. The data sources linked in the schema.
+   *
+   * @param Datasource[] $datasources
    */
   public function setDatasources($datasources)
   {
@@ -104,7 +134,9 @@ class Schema extends \Google\Collection
     return $this->datasources;
   }
   /**
-   * @param string
+   * Optional. Mutable human-readable name. 63 character limit.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -118,7 +150,12 @@ class Schema extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   * [AIP-154](https://google.aip.dev/154)
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -132,7 +169,9 @@ class Schema extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. Labels as key value pairs.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -146,7 +185,11 @@ class Schema extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The relative resource name of the schema, in the format: ```
+   * projects/{project}/locations/{location}/services/{service}/schemas/{schema}
+   * ``` Right now, the only supported schema is "main".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -160,7 +203,10 @@ class Schema extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. A field that if true, indicates that the system is working to
+   * compile and deploy the schema.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -174,7 +220,9 @@ class Schema extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param Source
+   * Required. The source files that comprise the application schema.
+   *
+   * @param Source $source
    */
   public function setSource(Source $source)
   {
@@ -188,7 +236,9 @@ class Schema extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param string
+   * Output only. System-assigned, unique identifier.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -202,7 +252,9 @@ class Schema extends \Google\Collection
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. [Output only] Update time stamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

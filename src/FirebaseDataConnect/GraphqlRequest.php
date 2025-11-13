@@ -22,20 +22,30 @@ class GraphqlRequest extends \Google\Model
   protected $extensionsType = GraphqlRequestExtensions::class;
   protected $extensionsDataType = '';
   /**
+   * Optional. The name of the GraphQL operation name. Required only if `query`
+   * contains multiple operations. See
+   * https://graphql.org/learn/queries/#operation-name.
+   *
    * @var string
    */
   public $operationName;
   /**
+   * Required. The GraphQL query document source.
+   *
    * @var string
    */
   public $query;
   /**
+   * Optional. Values for GraphQL variables provided in this request.
+   *
    * @var array[]
    */
   public $variables;
 
   /**
-   * @param GraphqlRequestExtensions
+   * Optional. Additional GraphQL request information.
+   *
+   * @param GraphqlRequestExtensions $extensions
    */
   public function setExtensions(GraphqlRequestExtensions $extensions)
   {
@@ -49,7 +59,11 @@ class GraphqlRequest extends \Google\Model
     return $this->extensions;
   }
   /**
-   * @param string
+   * Optional. The name of the GraphQL operation name. Required only if `query`
+   * contains multiple operations. See
+   * https://graphql.org/learn/queries/#operation-name.
+   *
+   * @param string $operationName
    */
   public function setOperationName($operationName)
   {
@@ -63,7 +77,9 @@ class GraphqlRequest extends \Google\Model
     return $this->operationName;
   }
   /**
-   * @param string
+   * Required. The GraphQL query document source.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -77,7 +93,9 @@ class GraphqlRequest extends \Google\Model
     return $this->query;
   }
   /**
-   * @param array[]
+   * Optional. Values for GraphQL variables provided in this request.
+   *
+   * @param array[] $variables
    */
   public function setVariables($variables)
   {

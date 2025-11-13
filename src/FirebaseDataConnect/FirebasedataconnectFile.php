@@ -20,16 +20,25 @@ namespace Google\Service\FirebaseDataConnect;
 class FirebasedataconnectFile extends \Google\Model
 {
   /**
+   * Required. The file's textual content.
+   *
    * @var string
    */
   public $content;
   /**
+   * Required. The file name including folder path, if applicable. The path
+   * should be relative to a local workspace (e.g.
+   * dataconnect/(schema|connector).gql) and not an absolute path (e.g.
+   * /absolute/path/(schema|connector).gql).
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Required. The file's textual content.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -43,7 +52,12 @@ class FirebasedataconnectFile extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Required. The file name including folder path, if applicable. The path
+   * should be relative to a local workspace (e.g.
+   * dataconnect/(schema|connector).gql) and not an absolute path (e.g.
+   * /absolute/path/(schema|connector).gql).
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

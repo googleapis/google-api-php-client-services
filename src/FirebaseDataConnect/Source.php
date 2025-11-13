@@ -24,7 +24,9 @@ class Source extends \Google\Collection
   protected $filesDataType = 'array';
 
   /**
-   * @param FirebasedataconnectFile[]
+   * Required. The files that comprise the source set.
+   *
+   * @param FirebasedataconnectFile[] $files
    */
   public function setFiles($files)
   {
