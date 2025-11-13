@@ -21,6 +21,9 @@ class MerchantReviewStatus extends \Google\Collection
 {
   protected $collection_key = 'itemLevelIssues';
   /**
+   * Output only. Date on which the item has been created, in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format.
+   *
    * @var string
    */
   public $createTime;
@@ -29,12 +32,18 @@ class MerchantReviewStatus extends \Google\Collection
   protected $itemLevelIssuesType = MerchantReviewItemLevelIssue::class;
   protected $itemLevelIssuesDataType = 'array';
   /**
+   * Output only. Date on which the item has been last updated, in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format.
+   *
    * @var string
    */
   public $lastUpdateTime;
 
   /**
-   * @param string
+   * Output only. Date on which the item has been created, in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -48,7 +57,9 @@ class MerchantReviewStatus extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param MerchantReviewDestinationStatus[]
+   * Output only. The intended destinations for the merchant review.
+   *
+   * @param MerchantReviewDestinationStatus[] $destinationStatuses
    */
   public function setDestinationStatuses($destinationStatuses)
   {
@@ -62,7 +73,9 @@ class MerchantReviewStatus extends \Google\Collection
     return $this->destinationStatuses;
   }
   /**
-   * @param MerchantReviewItemLevelIssue[]
+   * Output only. A list of all issues associated with the merchant review.
+   *
+   * @param MerchantReviewItemLevelIssue[] $itemLevelIssues
    */
   public function setItemLevelIssues($itemLevelIssues)
   {
@@ -76,7 +89,10 @@ class MerchantReviewStatus extends \Google\Collection
     return $this->itemLevelIssues;
   }
   /**
-   * @param string
+   * Output only. Date on which the item has been last updated, in [ISO
+   * 8601](http://en.wikipedia.org/wiki/ISO_8601) format.
+   *
+   * @param string $lastUpdateTime
    */
   public function setLastUpdateTime($lastUpdateTime)
   {
