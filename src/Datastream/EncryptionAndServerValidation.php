@@ -20,16 +20,31 @@ namespace Google\Service\Datastream;
 class EncryptionAndServerValidation extends \Google\Model
 {
   /**
+   * Optional. Input only. PEM-encoded certificate of the CA that signed the
+   * source database server's certificate.
+   *
    * @var string
    */
   public $caCertificate;
   /**
+   * Optional. The hostname mentioned in the Subject or SAN extension of the
+   * server certificate. This field is used for bypassing the hostname
+   * validation while verifying server certificate. This is required for
+   * scenarios where the host name that datastream connects to is different from
+   * the certificate's subject. This specifically happens for private
+   * connectivity. It could also happen when the customer provides a public IP
+   * in connection profile but the same is not present in the server
+   * certificate.
+   *
    * @var string
    */
   public $serverCertificateHostname;
 
   /**
-   * @param string
+   * Optional. Input only. PEM-encoded certificate of the CA that signed the
+   * source database server's certificate.
+   *
+   * @param string $caCertificate
    */
   public function setCaCertificate($caCertificate)
   {
@@ -43,7 +58,16 @@ class EncryptionAndServerValidation extends \Google\Model
     return $this->caCertificate;
   }
   /**
-   * @param string
+   * Optional. The hostname mentioned in the Subject or SAN extension of the
+   * server certificate. This field is used for bypassing the hostname
+   * validation while verifying server certificate. This is required for
+   * scenarios where the host name that datastream connects to is different from
+   * the certificate's subject. This specifically happens for private
+   * connectivity. It could also happen when the customer provides a public IP
+   * in connection profile but the same is not present in the server
+   * certificate.
+   *
+   * @param string $serverCertificateHostname
    */
   public function setServerCertificateHostname($serverCertificateHostname)
   {

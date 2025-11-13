@@ -20,12 +20,18 @@ namespace Google\Service\Datastream;
 class PrivateConnectivity extends \Google\Model
 {
   /**
+   * Required. A reference to a private connection resource. Format:
+   * `projects/{project}/locations/{location}/privateConnections/{name}`
+   *
    * @var string
    */
   public $privateConnection;
 
   /**
-   * @param string
+   * Required. A reference to a private connection resource. Format:
+   * `projects/{project}/locations/{location}/privateConnections/{name}`
+   *
+   * @param string $privateConnection
    */
   public function setPrivateConnection($privateConnection)
   {

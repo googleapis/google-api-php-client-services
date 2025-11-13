@@ -19,21 +19,41 @@ namespace Google\Service\Datastream;
 
 class MongodbSourceConfig extends \Google\Model
 {
+  /**
+   * Unspecified JSON mode.
+   */
+  public const JSON_MODE_MONGODB_JSON_MODE_UNSPECIFIED = 'MONGODB_JSON_MODE_UNSPECIFIED';
+  /**
+   * Strict JSON mode.
+   */
+  public const JSON_MODE_STRICT = 'STRICT';
+  /**
+   * Canonical JSON mode.
+   */
+  public const JSON_MODE_CANONICAL = 'CANONICAL';
   protected $excludeObjectsType = MongodbCluster::class;
   protected $excludeObjectsDataType = '';
   protected $includeObjectsType = MongodbCluster::class;
   protected $includeObjectsDataType = '';
   /**
+   * Optional. MongoDB JSON mode to use for the stream.
+   *
    * @var string
    */
   public $jsonMode;
   /**
+   * Optional. Maximum number of concurrent backfill tasks. The number should be
+   * non-negative and less than or equal to 50. If not set (or set to 0), the
+   * system's default value is used
+   *
    * @var int
    */
   public $maxConcurrentBackfillTasks;
 
   /**
-   * @param MongodbCluster
+   * MongoDB collections to exclude from the stream.
+   *
+   * @param MongodbCluster $excludeObjects
    */
   public function setExcludeObjects(MongodbCluster $excludeObjects)
   {
@@ -47,7 +67,9 @@ class MongodbSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * @param MongodbCluster
+   * MongoDB collections to include in the stream.
+   *
+   * @param MongodbCluster $includeObjects
    */
   public function setIncludeObjects(MongodbCluster $includeObjects)
   {
@@ -61,21 +83,29 @@ class MongodbSourceConfig extends \Google\Model
     return $this->includeObjects;
   }
   /**
-   * @param string
+   * Optional. MongoDB JSON mode to use for the stream.
+   *
+   * Accepted values: MONGODB_JSON_MODE_UNSPECIFIED, STRICT, CANONICAL
+   *
+   * @param self::JSON_MODE_* $jsonMode
    */
   public function setJsonMode($jsonMode)
   {
     $this->jsonMode = $jsonMode;
   }
   /**
-   * @return string
+   * @return self::JSON_MODE_*
    */
   public function getJsonMode()
   {
     return $this->jsonMode;
   }
   /**
-   * @param int
+   * Optional. Maximum number of concurrent backfill tasks. The number should be
+   * non-negative and less than or equal to 50. If not set (or set to 0), the
+   * system's default value is used
+   *
+   * @param int $maxConcurrentBackfillTasks
    */
   public function setMaxConcurrentBackfillTasks($maxConcurrentBackfillTasks)
   {

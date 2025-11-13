@@ -24,7 +24,9 @@ class PostgresqlRdbms extends \Google\Collection
   protected $postgresqlSchemasDataType = 'array';
 
   /**
-   * @param PostgresqlSchema[]
+   * PostgreSQL schemas in the database server.
+   *
+   * @param PostgresqlSchema[] $postgresqlSchemas
    */
   public function setPostgresqlSchemas($postgresqlSchemas)
   {

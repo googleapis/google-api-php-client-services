@@ -20,20 +20,36 @@ namespace Google\Service\Datastream;
 class OracleSslConfig extends \Google\Model
 {
   /**
+   * Input only. PEM-encoded certificate of the CA that signed the source
+   * database server's certificate.
+   *
    * @var string
    */
   public $caCertificate;
   /**
+   * Output only. Indicates whether the ca_certificate field has been set for
+   * this Connection-Profile.
+   *
    * @var bool
    */
   public $caCertificateSet;
   /**
+   * Optional. The distinguished name (DN) mentioned in the server certificate.
+   * This corresponds to SSL_SERVER_CERT_DN sqlnet parameter. Refer
+   * https://docs.oracle.com/en/database/oracle/oracle-database/19/netrf/local-
+   * naming-parameters-in-tns-ora-
+   * file.html#GUID-70AB0695-A9AA-4A94-B141-4C605236EEB7 If this field is not
+   * provided, the DN matching is not enforced.
+   *
    * @var string
    */
   public $serverCertificateDistinguishedName;
 
   /**
-   * @param string
+   * Input only. PEM-encoded certificate of the CA that signed the source
+   * database server's certificate.
+   *
+   * @param string $caCertificate
    */
   public function setCaCertificate($caCertificate)
   {
@@ -47,7 +63,10 @@ class OracleSslConfig extends \Google\Model
     return $this->caCertificate;
   }
   /**
-   * @param bool
+   * Output only. Indicates whether the ca_certificate field has been set for
+   * this Connection-Profile.
+   *
+   * @param bool $caCertificateSet
    */
   public function setCaCertificateSet($caCertificateSet)
   {
@@ -61,7 +80,14 @@ class OracleSslConfig extends \Google\Model
     return $this->caCertificateSet;
   }
   /**
-   * @param string
+   * Optional. The distinguished name (DN) mentioned in the server certificate.
+   * This corresponds to SSL_SERVER_CERT_DN sqlnet parameter. Refer
+   * https://docs.oracle.com/en/database/oracle/oracle-database/19/netrf/local-
+   * naming-parameters-in-tns-ora-
+   * file.html#GUID-70AB0695-A9AA-4A94-B141-4C605236EEB7 If this field is not
+   * provided, the DN matching is not enforced.
+   *
+   * @param string $serverCertificateDistinguishedName
    */
   public function setServerCertificateDistinguishedName($serverCertificateDistinguishedName)
   {

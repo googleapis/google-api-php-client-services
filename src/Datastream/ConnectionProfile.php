@@ -22,10 +22,14 @@ class ConnectionProfile extends \Google\Model
   protected $bigqueryProfileType = BigQueryProfile::class;
   protected $bigqueryProfileDataType = '';
   /**
+   * Output only. The create time of the resource.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Display name.
+   *
    * @var string
    */
   public $displayName;
@@ -34,6 +38,8 @@ class ConnectionProfile extends \Google\Model
   protected $gcsProfileType = GcsProfile::class;
   protected $gcsProfileDataType = '';
   /**
+   * Labels.
+   *
    * @var string[]
    */
   public $labels;
@@ -42,6 +48,8 @@ class ConnectionProfile extends \Google\Model
   protected $mysqlProfileType = MysqlProfile::class;
   protected $mysqlProfileDataType = '';
   /**
+   * Output only. Identifier. The resource's name.
+   *
    * @var string
    */
   public $name;
@@ -54,10 +62,14 @@ class ConnectionProfile extends \Google\Model
   protected $salesforceProfileType = SalesforceProfile::class;
   protected $salesforceProfileDataType = '';
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
@@ -66,12 +78,16 @@ class ConnectionProfile extends \Google\Model
   protected $staticServiceIpConnectivityType = StaticServiceIpConnectivity::class;
   protected $staticServiceIpConnectivityDataType = '';
   /**
+   * Output only. The update time of the resource.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param BigQueryProfile
+   * BigQuery Connection Profile configuration.
+   *
+   * @param BigQueryProfile $bigqueryProfile
    */
   public function setBigqueryProfile(BigQueryProfile $bigqueryProfile)
   {
@@ -85,7 +101,9 @@ class ConnectionProfile extends \Google\Model
     return $this->bigqueryProfile;
   }
   /**
-   * @param string
+   * Output only. The create time of the resource.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -99,7 +117,9 @@ class ConnectionProfile extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -113,7 +133,9 @@ class ConnectionProfile extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param ForwardSshTunnelConnectivity
+   * Forward SSH tunnel connectivity.
+   *
+   * @param ForwardSshTunnelConnectivity $forwardSshConnectivity
    */
   public function setForwardSshConnectivity(ForwardSshTunnelConnectivity $forwardSshConnectivity)
   {
@@ -127,7 +149,9 @@ class ConnectionProfile extends \Google\Model
     return $this->forwardSshConnectivity;
   }
   /**
-   * @param GcsProfile
+   * Cloud Storage ConnectionProfile configuration.
+   *
+   * @param GcsProfile $gcsProfile
    */
   public function setGcsProfile(GcsProfile $gcsProfile)
   {
@@ -141,7 +165,9 @@ class ConnectionProfile extends \Google\Model
     return $this->gcsProfile;
   }
   /**
-   * @param string[]
+   * Labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -155,7 +181,9 @@ class ConnectionProfile extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param MongodbProfile
+   * MongoDB Connection Profile configuration.
+   *
+   * @param MongodbProfile $mongodbProfile
    */
   public function setMongodbProfile(MongodbProfile $mongodbProfile)
   {
@@ -169,7 +197,9 @@ class ConnectionProfile extends \Google\Model
     return $this->mongodbProfile;
   }
   /**
-   * @param MysqlProfile
+   * MySQL ConnectionProfile configuration.
+   *
+   * @param MysqlProfile $mysqlProfile
    */
   public function setMysqlProfile(MysqlProfile $mysqlProfile)
   {
@@ -183,7 +213,9 @@ class ConnectionProfile extends \Google\Model
     return $this->mysqlProfile;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource's name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -197,7 +229,9 @@ class ConnectionProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * @param OracleProfile
+   * Oracle ConnectionProfile configuration.
+   *
+   * @param OracleProfile $oracleProfile
    */
   public function setOracleProfile(OracleProfile $oracleProfile)
   {
@@ -211,7 +245,9 @@ class ConnectionProfile extends \Google\Model
     return $this->oracleProfile;
   }
   /**
-   * @param PostgresqlProfile
+   * PostgreSQL Connection Profile configuration.
+   *
+   * @param PostgresqlProfile $postgresqlProfile
    */
   public function setPostgresqlProfile(PostgresqlProfile $postgresqlProfile)
   {
@@ -225,7 +261,9 @@ class ConnectionProfile extends \Google\Model
     return $this->postgresqlProfile;
   }
   /**
-   * @param PrivateConnectivity
+   * Private connectivity.
+   *
+   * @param PrivateConnectivity $privateConnectivity
    */
   public function setPrivateConnectivity(PrivateConnectivity $privateConnectivity)
   {
@@ -239,7 +277,9 @@ class ConnectionProfile extends \Google\Model
     return $this->privateConnectivity;
   }
   /**
-   * @param SalesforceProfile
+   * Salesforce Connection Profile configuration.
+   *
+   * @param SalesforceProfile $salesforceProfile
    */
   public function setSalesforceProfile(SalesforceProfile $salesforceProfile)
   {
@@ -253,7 +293,9 @@ class ConnectionProfile extends \Google\Model
     return $this->salesforceProfile;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -267,7 +309,9 @@ class ConnectionProfile extends \Google\Model
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -281,7 +325,9 @@ class ConnectionProfile extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param SqlServerProfile
+   * SQLServer Connection Profile configuration.
+   *
+   * @param SqlServerProfile $sqlServerProfile
    */
   public function setSqlServerProfile(SqlServerProfile $sqlServerProfile)
   {
@@ -295,7 +341,9 @@ class ConnectionProfile extends \Google\Model
     return $this->sqlServerProfile;
   }
   /**
-   * @param StaticServiceIpConnectivity
+   * Static Service IP connectivity.
+   *
+   * @param StaticServiceIpConnectivity $staticServiceIpConnectivity
    */
   public function setStaticServiceIpConnectivity(StaticServiceIpConnectivity $staticServiceIpConnectivity)
   {
@@ -309,7 +357,9 @@ class ConnectionProfile extends \Google\Model
     return $this->staticServiceIpConnectivity;
   }
   /**
-   * @param string
+   * Output only. The update time of the resource.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

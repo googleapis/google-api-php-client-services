@@ -21,6 +21,8 @@ class MongodbCollection extends \Google\Collection
 {
   protected $collection_key = 'fields';
   /**
+   * Collection name.
+   *
    * @var string
    */
   public $collection;
@@ -28,7 +30,9 @@ class MongodbCollection extends \Google\Collection
   protected $fieldsDataType = 'array';
 
   /**
-   * @param string
+   * Collection name.
+   *
+   * @param string $collection
    */
   public function setCollection($collection)
   {
@@ -42,7 +46,9 @@ class MongodbCollection extends \Google\Collection
     return $this->collection;
   }
   /**
-   * @param MongodbField[]
+   * Fields in the collection.
+   *
+   * @param MongodbField[] $fields
    */
   public function setFields($fields)
   {

@@ -21,18 +21,26 @@ class ListRoutesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $routesType = Route::class;
   protected $routesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListRoutesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Route[]
+   * List of Routes.
+   *
+   * @param Route[] $routes
    */
   public function setRoutes($routes)
   {
@@ -60,7 +70,9 @@ class ListRoutesResponse extends \Google\Collection
     return $this->routes;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -24,7 +24,9 @@ class SqlServerRdbms extends \Google\Collection
   protected $schemasDataType = 'array';
 
   /**
-   * @param SqlServerSchema[]
+   * SQLServer schemas in the database server.
+   *
+   * @param SqlServerSchema[] $schemas
    */
   public function setSchemas($schemas)
   {

@@ -24,7 +24,9 @@ class OracleRdbms extends \Google\Collection
   protected $oracleSchemasDataType = 'array';
 
   /**
-   * @param OracleSchema[]
+   * Oracle schemas/databases in the database server.
+   *
+   * @param OracleSchema[] $oracleSchemas
    */
   public function setOracleSchemas($oracleSchemas)
   {

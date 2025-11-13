@@ -23,7 +23,9 @@ class StartBackfillJobResponse extends \Google\Model
   protected $objectDataType = '';
 
   /**
-   * @param StreamObject
+   * The stream object resource a backfill job was started for.
+   *
+   * @param StreamObject $object
    */
   public function setObject(StreamObject $object)
   {

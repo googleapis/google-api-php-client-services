@@ -23,14 +23,25 @@ class MongodbProfile extends \Google\Collection
   protected $hostAddressesType = HostAddress::class;
   protected $hostAddressesDataType = 'array';
   /**
+   * Optional. Password for the MongoDB connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
+   *
    * @var string
    */
   public $password;
   /**
+   * Optional. Name of the replica set. Only needed for self hosted replica set
+   * type MongoDB cluster. For SRV connection format, this field must be empty.
+   * For Standard connection format, this field must be specified.
+   *
    * @var string
    */
   public $replicaSet;
   /**
+   * Optional. A reference to a Secret Manager resource name storing the
+   * SQLServer connection password. Mutually exclusive with the `password`
+   * field.
+   *
    * @var string
    */
   public $secretManagerStoredPassword;
@@ -41,12 +52,19 @@ class MongodbProfile extends \Google\Collection
   protected $standardConnectionFormatType = StandardConnectionFormat::class;
   protected $standardConnectionFormatDataType = '';
   /**
+   * Required. Username for the MongoDB connection.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param HostAddress[]
+   * Required. List of host addresses for a MongoDB cluster. For SRV connection
+   * format, this list must contain exactly one DNS host without a port. For
+   * Standard connection format, this list must contain all the required hosts
+   * in the cluster with their respective ports.
+   *
+   * @param HostAddress[] $hostAddresses
    */
   public function setHostAddresses($hostAddresses)
   {
@@ -60,7 +78,10 @@ class MongodbProfile extends \Google\Collection
     return $this->hostAddresses;
   }
   /**
-   * @param string
+   * Optional. Password for the MongoDB connection. Mutually exclusive with the
+   * `secret_manager_stored_password` field.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -74,7 +95,11 @@ class MongodbProfile extends \Google\Collection
     return $this->password;
   }
   /**
-   * @param string
+   * Optional. Name of the replica set. Only needed for self hosted replica set
+   * type MongoDB cluster. For SRV connection format, this field must be empty.
+   * For Standard connection format, this field must be specified.
+   *
+   * @param string $replicaSet
    */
   public function setReplicaSet($replicaSet)
   {
@@ -88,7 +113,11 @@ class MongodbProfile extends \Google\Collection
     return $this->replicaSet;
   }
   /**
-   * @param string
+   * Optional. A reference to a Secret Manager resource name storing the
+   * SQLServer connection password. Mutually exclusive with the `password`
+   * field.
+   *
+   * @param string $secretManagerStoredPassword
    */
   public function setSecretManagerStoredPassword($secretManagerStoredPassword)
   {
@@ -102,7 +131,9 @@ class MongodbProfile extends \Google\Collection
     return $this->secretManagerStoredPassword;
   }
   /**
-   * @param SrvConnectionFormat
+   * Srv connection format.
+   *
+   * @param SrvConnectionFormat $srvConnectionFormat
    */
   public function setSrvConnectionFormat(SrvConnectionFormat $srvConnectionFormat)
   {
@@ -116,7 +147,9 @@ class MongodbProfile extends \Google\Collection
     return $this->srvConnectionFormat;
   }
   /**
-   * @param MongodbSslConfig
+   * Optional. SSL configuration for the MongoDB connection.
+   *
+   * @param MongodbSslConfig $sslConfig
    */
   public function setSslConfig(MongodbSslConfig $sslConfig)
   {
@@ -130,7 +163,9 @@ class MongodbProfile extends \Google\Collection
     return $this->sslConfig;
   }
   /**
-   * @param StandardConnectionFormat
+   * Standard connection format.
+   *
+   * @param StandardConnectionFormat $standardConnectionFormat
    */
   public function setStandardConnectionFormat(StandardConnectionFormat $standardConnectionFormat)
   {
@@ -144,7 +179,9 @@ class MongodbProfile extends \Google\Collection
     return $this->standardConnectionFormat;
   }
   /**
-   * @param string
+   * Required. Username for the MongoDB connection.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

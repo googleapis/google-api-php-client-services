@@ -20,44 +20,65 @@ namespace Google\Service\Datastream;
 class MysqlColumn extends \Google\Model
 {
   /**
+   * Column collation.
+   *
    * @var string
    */
   public $collation;
   /**
+   * Column name.
+   *
    * @var string
    */
   public $column;
   /**
+   * The MySQL data type. Full data types list can be found here:
+   * https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+   *
    * @var string
    */
   public $dataType;
   /**
+   * Column length.
+   *
    * @var int
    */
   public $length;
   /**
+   * Whether or not the column can accept a null value.
+   *
    * @var bool
    */
   public $nullable;
   /**
+   * The ordinal position of the column in the table.
+   *
    * @var int
    */
   public $ordinalPosition;
   /**
+   * Column precision.
+   *
    * @var int
    */
   public $precision;
   /**
+   * Whether or not the column represents a primary key.
+   *
    * @var bool
    */
   public $primaryKey;
   /**
+   * Column scale.
+   *
    * @var int
    */
   public $scale;
 
   /**
-   * @param string
+   * Column collation.
+   *
+   * @param string $collation
    */
   public function setCollation($collation)
   {
@@ -71,7 +92,9 @@ class MysqlColumn extends \Google\Model
     return $this->collation;
   }
   /**
-   * @param string
+   * Column name.
+   *
+   * @param string $column
    */
   public function setColumn($column)
   {
@@ -85,7 +108,10 @@ class MysqlColumn extends \Google\Model
     return $this->column;
   }
   /**
-   * @param string
+   * The MySQL data type. Full data types list can be found here:
+   * https://dev.mysql.com/doc/refman/8.0/en/data-types.html
+   *
+   * @param string $dataType
    */
   public function setDataType($dataType)
   {
@@ -99,7 +125,9 @@ class MysqlColumn extends \Google\Model
     return $this->dataType;
   }
   /**
-   * @param int
+   * Column length.
+   *
+   * @param int $length
    */
   public function setLength($length)
   {
@@ -113,7 +141,9 @@ class MysqlColumn extends \Google\Model
     return $this->length;
   }
   /**
-   * @param bool
+   * Whether or not the column can accept a null value.
+   *
+   * @param bool $nullable
    */
   public function setNullable($nullable)
   {
@@ -127,7 +157,9 @@ class MysqlColumn extends \Google\Model
     return $this->nullable;
   }
   /**
-   * @param int
+   * The ordinal position of the column in the table.
+   *
+   * @param int $ordinalPosition
    */
   public function setOrdinalPosition($ordinalPosition)
   {
@@ -141,7 +173,9 @@ class MysqlColumn extends \Google\Model
     return $this->ordinalPosition;
   }
   /**
-   * @param int
+   * Column precision.
+   *
+   * @param int $precision
    */
   public function setPrecision($precision)
   {
@@ -155,7 +189,9 @@ class MysqlColumn extends \Google\Model
     return $this->precision;
   }
   /**
-   * @param bool
+   * Whether or not the column represents a primary key.
+   *
+   * @param bool $primaryKey
    */
   public function setPrimaryKey($primaryKey)
   {
@@ -169,7 +205,9 @@ class MysqlColumn extends \Google\Model
     return $this->primaryKey;
   }
   /**
-   * @param int
+   * Column scale.
+   *
+   * @param int $scale
    */
   public function setScale($scale)
   {

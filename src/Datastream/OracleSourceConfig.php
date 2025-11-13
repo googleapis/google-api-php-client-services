@@ -30,10 +30,16 @@ class OracleSourceConfig extends \Google\Model
   protected $logMinerType = LogMiner::class;
   protected $logMinerDataType = '';
   /**
+   * Maximum number of concurrent backfill tasks. The number should be non-
+   * negative. If not set (or set to 0), the system's default value is used.
+   *
    * @var int
    */
   public $maxConcurrentBackfillTasks;
   /**
+   * Maximum number of concurrent CDC tasks. The number should be non-negative.
+   * If not set (or set to 0), the system's default value is used.
+   *
    * @var int
    */
   public $maxConcurrentCdcTasks;
@@ -41,7 +47,9 @@ class OracleSourceConfig extends \Google\Model
   protected $streamLargeObjectsDataType = '';
 
   /**
-   * @param BinaryLogParser
+   * Use Binary Log Parser.
+   *
+   * @param BinaryLogParser $binaryLogParser
    */
   public function setBinaryLogParser(BinaryLogParser $binaryLogParser)
   {
@@ -55,7 +63,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->binaryLogParser;
   }
   /**
-   * @param DropLargeObjects
+   * Drop large object values.
+   *
+   * @param DropLargeObjects $dropLargeObjects
    */
   public function setDropLargeObjects(DropLargeObjects $dropLargeObjects)
   {
@@ -69,7 +79,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->dropLargeObjects;
   }
   /**
-   * @param OracleRdbms
+   * Oracle objects to exclude from the stream.
+   *
+   * @param OracleRdbms $excludeObjects
    */
   public function setExcludeObjects(OracleRdbms $excludeObjects)
   {
@@ -83,7 +95,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * @param OracleRdbms
+   * Oracle objects to include in the stream.
+   *
+   * @param OracleRdbms $includeObjects
    */
   public function setIncludeObjects(OracleRdbms $includeObjects)
   {
@@ -97,7 +111,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->includeObjects;
   }
   /**
-   * @param LogMiner
+   * Use LogMiner.
+   *
+   * @param LogMiner $logMiner
    */
   public function setLogMiner(LogMiner $logMiner)
   {
@@ -111,7 +127,10 @@ class OracleSourceConfig extends \Google\Model
     return $this->logMiner;
   }
   /**
-   * @param int
+   * Maximum number of concurrent backfill tasks. The number should be non-
+   * negative. If not set (or set to 0), the system's default value is used.
+   *
+   * @param int $maxConcurrentBackfillTasks
    */
   public function setMaxConcurrentBackfillTasks($maxConcurrentBackfillTasks)
   {
@@ -125,7 +144,10 @@ class OracleSourceConfig extends \Google\Model
     return $this->maxConcurrentBackfillTasks;
   }
   /**
-   * @param int
+   * Maximum number of concurrent CDC tasks. The number should be non-negative.
+   * If not set (or set to 0), the system's default value is used.
+   *
+   * @param int $maxConcurrentCdcTasks
    */
   public function setMaxConcurrentCdcTasks($maxConcurrentCdcTasks)
   {
@@ -139,7 +161,9 @@ class OracleSourceConfig extends \Google\Model
     return $this->maxConcurrentCdcTasks;
   }
   /**
-   * @param StreamLargeObjects
+   * Stream large object values.
+   *
+   * @param StreamLargeObjects $streamLargeObjects
    */
   public function setStreamLargeObjects(StreamLargeObjects $streamLargeObjects)
   {

@@ -27,7 +27,10 @@ class SqlServerSslConfig extends \Google\Model
   protected $encryptionNotEnforcedDataType = '';
 
   /**
-   * @param BasicEncryption
+   * If set, Datastream will enforce encryption without authenticating server
+   * identity. Server certificates will be trusted by default.
+   *
+   * @param BasicEncryption $basicEncryption
    */
   public function setBasicEncryption(BasicEncryption $basicEncryption)
   {
@@ -41,7 +44,10 @@ class SqlServerSslConfig extends \Google\Model
     return $this->basicEncryption;
   }
   /**
-   * @param EncryptionAndServerValidation
+   * If set, Datastream will enforce encryption and authenticate server
+   * identity.
+   *
+   * @param EncryptionAndServerValidation $encryptionAndServerValidation
    */
   public function setEncryptionAndServerValidation(EncryptionAndServerValidation $encryptionAndServerValidation)
   {
@@ -55,7 +61,11 @@ class SqlServerSslConfig extends \Google\Model
     return $this->encryptionAndServerValidation;
   }
   /**
-   * @param EncryptionNotEnforced
+   * If set, Datastream will not enforce encryption. If the DB server mandates
+   * encryption, then connection will be encrypted but server identity will not
+   * be authenticated.
+   *
+   * @param EncryptionNotEnforced $encryptionNotEnforced
    */
   public function setEncryptionNotEnforced(EncryptionNotEnforced $encryptionNotEnforced)
   {

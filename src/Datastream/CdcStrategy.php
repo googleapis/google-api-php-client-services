@@ -27,7 +27,9 @@ class CdcStrategy extends \Google\Model
   protected $specificStartPositionDataType = '';
 
   /**
-   * @param MostRecentStartPosition
+   * Optional. Start replicating from the most recent position in the source.
+   *
+   * @param MostRecentStartPosition $mostRecentStartPosition
    */
   public function setMostRecentStartPosition(MostRecentStartPosition $mostRecentStartPosition)
   {
@@ -41,7 +43,10 @@ class CdcStrategy extends \Google\Model
     return $this->mostRecentStartPosition;
   }
   /**
-   * @param NextAvailableStartPosition
+   * Optional. Resume replication from the next available position in the
+   * source.
+   *
+   * @param NextAvailableStartPosition $nextAvailableStartPosition
    */
   public function setNextAvailableStartPosition(NextAvailableStartPosition $nextAvailableStartPosition)
   {
@@ -55,7 +60,9 @@ class CdcStrategy extends \Google\Model
     return $this->nextAvailableStartPosition;
   }
   /**
-   * @param SpecificStartPosition
+   * Optional. Start replicating from a specific position in the source.
+   *
+   * @param SpecificStartPosition $specificStartPosition
    */
   public function setSpecificStartPosition(SpecificStartPosition $specificStartPosition)
   {

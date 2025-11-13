@@ -20,16 +20,22 @@ namespace Google\Service\Datastream;
 class MysqlObjectIdentifier extends \Google\Model
 {
   /**
+   * Required. The database name.
+   *
    * @var string
    */
   public $database;
   /**
+   * Required. The table name.
+   *
    * @var string
    */
   public $table;
 
   /**
-   * @param string
+   * Required. The database name.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -43,7 +49,9 @@ class MysqlObjectIdentifier extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Required. The table name.
+   *
+   * @param string $table
    */
   public function setTable($table)
   {

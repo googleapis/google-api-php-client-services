@@ -24,20 +24,32 @@ class PostgresqlSourceConfig extends \Google\Model
   protected $includeObjectsType = PostgresqlRdbms::class;
   protected $includeObjectsDataType = '';
   /**
+   * Maximum number of concurrent backfill tasks. The number should be non
+   * negative. If not set (or set to 0), the system's default value will be
+   * used.
+   *
    * @var int
    */
   public $maxConcurrentBackfillTasks;
   /**
+   * Required. The name of the publication that includes the set of all tables
+   * that are defined in the stream's include_objects.
+   *
    * @var string
    */
   public $publication;
   /**
+   * Required. Immutable. The name of the logical replication slot that's
+   * configured with the pgoutput plugin.
+   *
    * @var string
    */
   public $replicationSlot;
 
   /**
-   * @param PostgresqlRdbms
+   * PostgreSQL objects to exclude from the stream.
+   *
+   * @param PostgresqlRdbms $excludeObjects
    */
   public function setExcludeObjects(PostgresqlRdbms $excludeObjects)
   {
@@ -51,7 +63,9 @@ class PostgresqlSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * @param PostgresqlRdbms
+   * PostgreSQL objects to include in the stream.
+   *
+   * @param PostgresqlRdbms $includeObjects
    */
   public function setIncludeObjects(PostgresqlRdbms $includeObjects)
   {
@@ -65,7 +79,11 @@ class PostgresqlSourceConfig extends \Google\Model
     return $this->includeObjects;
   }
   /**
-   * @param int
+   * Maximum number of concurrent backfill tasks. The number should be non
+   * negative. If not set (or set to 0), the system's default value will be
+   * used.
+   *
+   * @param int $maxConcurrentBackfillTasks
    */
   public function setMaxConcurrentBackfillTasks($maxConcurrentBackfillTasks)
   {
@@ -79,7 +97,10 @@ class PostgresqlSourceConfig extends \Google\Model
     return $this->maxConcurrentBackfillTasks;
   }
   /**
-   * @param string
+   * Required. The name of the publication that includes the set of all tables
+   * that are defined in the stream's include_objects.
+   *
+   * @param string $publication
    */
   public function setPublication($publication)
   {
@@ -93,7 +114,10 @@ class PostgresqlSourceConfig extends \Google\Model
     return $this->publication;
   }
   /**
-   * @param string
+   * Required. Immutable. The name of the logical replication slot that's
+   * configured with the pgoutput plugin.
+   *
+   * @param string $replicationSlot
    */
   public function setReplicationSlot($replicationSlot)
   {

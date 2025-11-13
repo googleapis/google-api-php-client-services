@@ -21,6 +21,8 @@ class ListStreamObjectsResponse extends \Google\Collection
 {
   protected $collection_key = 'streamObjects';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListStreamObjectsResponse extends \Google\Collection
   protected $streamObjectsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListStreamObjectsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param StreamObject[]
+   * List of stream objects.
+   *
+   * @param StreamObject[] $streamObjects
    */
   public function setStreamObjects($streamObjects)
   {

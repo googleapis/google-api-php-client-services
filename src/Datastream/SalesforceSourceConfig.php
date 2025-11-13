@@ -24,12 +24,18 @@ class SalesforceSourceConfig extends \Google\Model
   protected $includeObjectsType = SalesforceOrg::class;
   protected $includeObjectsDataType = '';
   /**
+   * Required. Salesforce objects polling interval. The interval at which new
+   * changes will be polled for each object. The duration must be between 5
+   * minutes and 24 hours.
+   *
    * @var string
    */
   public $pollingInterval;
 
   /**
-   * @param SalesforceOrg
+   * Salesforce objects to exclude from the stream.
+   *
+   * @param SalesforceOrg $excludeObjects
    */
   public function setExcludeObjects(SalesforceOrg $excludeObjects)
   {
@@ -43,7 +49,9 @@ class SalesforceSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * @param SalesforceOrg
+   * Salesforce objects to retrieve from the source.
+   *
+   * @param SalesforceOrg $includeObjects
    */
   public function setIncludeObjects(SalesforceOrg $includeObjects)
   {
@@ -57,7 +65,11 @@ class SalesforceSourceConfig extends \Google\Model
     return $this->includeObjects;
   }
   /**
-   * @param string
+   * Required. Salesforce objects polling interval. The interval at which new
+   * changes will be polled for each object. The duration must be between 5
+   * minutes and 24 hours.
+   *
+   * @param string $pollingInterval
    */
   public function setPollingInterval($pollingInterval)
   {

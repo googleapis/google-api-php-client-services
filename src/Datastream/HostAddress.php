@@ -20,16 +20,22 @@ namespace Google\Service\Datastream;
 class HostAddress extends \Google\Model
 {
   /**
+   * Required. Hostname for the connection.
+   *
    * @var string
    */
   public $hostname;
   /**
+   * Optional. Port for the connection.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param string
+   * Required. Hostname for the connection.
+   *
+   * @param string $hostname
    */
   public function setHostname($hostname)
   {
@@ -43,7 +49,9 @@ class HostAddress extends \Google\Model
     return $this->hostname;
   }
   /**
-   * @param int
+   * Optional. Port for the connection.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {

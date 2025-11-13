@@ -20,20 +20,31 @@ namespace Google\Service\Datastream;
 class Oauth2ClientCredentials extends \Google\Model
 {
   /**
+   * Required. Client ID for Salesforce OAuth2 Client Credentials.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * Optional. Client secret for Salesforce OAuth2 Client Credentials. Mutually
+   * exclusive with the `secret_manager_stored_client_secret` field.
+   *
    * @var string
    */
   public $clientSecret;
   /**
+   * Optional. A reference to a Secret Manager resource name storing the
+   * Salesforce OAuth2 client_secret. Mutually exclusive with the
+   * `client_secret` field.
+   *
    * @var string
    */
   public $secretManagerStoredClientSecret;
 
   /**
-   * @param string
+   * Required. Client ID for Salesforce OAuth2 Client Credentials.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -47,7 +58,10 @@ class Oauth2ClientCredentials extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param string
+   * Optional. Client secret for Salesforce OAuth2 Client Credentials. Mutually
+   * exclusive with the `secret_manager_stored_client_secret` field.
+   *
+   * @param string $clientSecret
    */
   public function setClientSecret($clientSecret)
   {
@@ -61,7 +75,11 @@ class Oauth2ClientCredentials extends \Google\Model
     return $this->clientSecret;
   }
   /**
-   * @param string
+   * Optional. A reference to a Secret Manager resource name storing the
+   * Salesforce OAuth2 client_secret. Mutually exclusive with the
+   * `client_secret` field.
+   *
+   * @param string $secretManagerStoredClientSecret
    */
   public function setSecretManagerStoredClientSecret($secretManagerStoredClientSecret)
   {

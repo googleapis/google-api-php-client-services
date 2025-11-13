@@ -23,12 +23,17 @@ class OracleTable extends \Google\Collection
   protected $oracleColumnsType = OracleColumn::class;
   protected $oracleColumnsDataType = 'array';
   /**
+   * Table name.
+   *
    * @var string
    */
   public $table;
 
   /**
-   * @param OracleColumn[]
+   * Oracle columns in the schema. When unspecified as part of include/exclude
+   * objects, includes/excludes everything.
+   *
+   * @param OracleColumn[] $oracleColumns
    */
   public function setOracleColumns($oracleColumns)
   {
@@ -42,7 +47,9 @@ class OracleTable extends \Google\Collection
     return $this->oracleColumns;
   }
   /**
-   * @param string
+   * Table name.
+   *
+   * @param string $table
    */
   public function setTable($table)
   {

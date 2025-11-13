@@ -20,12 +20,16 @@ namespace Google\Service\Datastream;
 class MongodbChangeStreamPosition extends \Google\Model
 {
   /**
+   * Required. The timestamp to start change stream from.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Required. The timestamp to start change stream from.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

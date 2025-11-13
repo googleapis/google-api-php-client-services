@@ -20,16 +20,22 @@ namespace Google\Service\Datastream;
 class MysqlLogPosition extends \Google\Model
 {
   /**
+   * Required. The binary log file name.
+   *
    * @var string
    */
   public $logFile;
   /**
+   * Optional. The position within the binary log file. Default is head of file.
+   *
    * @var int
    */
   public $logPosition;
 
   /**
-   * @param string
+   * Required. The binary log file name.
+   *
+   * @param string $logFile
    */
   public function setLogFile($logFile)
   {
@@ -43,7 +49,9 @@ class MysqlLogPosition extends \Google\Model
     return $this->logFile;
   }
   /**
-   * @param int
+   * Optional. The position within the binary log file. Default is head of file.
+   *
+   * @param int $logPosition
    */
   public function setLogPosition($logPosition)
   {

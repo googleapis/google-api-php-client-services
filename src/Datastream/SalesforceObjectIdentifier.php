@@ -20,12 +20,16 @@ namespace Google\Service\Datastream;
 class SalesforceObjectIdentifier extends \Google\Model
 {
   /**
+   * Required. The object name.
+   *
    * @var string
    */
   public $objectName;
 
   /**
-   * @param string
+   * Required. The object name.
+   *
+   * @param string $objectName
    */
   public function setObjectName($objectName)
   {

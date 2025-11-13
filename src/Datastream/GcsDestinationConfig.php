@@ -22,22 +22,32 @@ class GcsDestinationConfig extends \Google\Model
   protected $avroFileFormatType = AvroFileFormat::class;
   protected $avroFileFormatDataType = '';
   /**
+   * The maximum duration for which new events are added before a file is closed
+   * and a new file is created. Values within the range of 15-60 seconds are
+   * allowed.
+   *
    * @var string
    */
   public $fileRotationInterval;
   /**
+   * The maximum file size to be saved in the bucket.
+   *
    * @var int
    */
   public $fileRotationMb;
   protected $jsonFileFormatType = JsonFileFormat::class;
   protected $jsonFileFormatDataType = '';
   /**
+   * Path inside the Cloud Storage bucket to write data to.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param AvroFileFormat
+   * AVRO file format configuration.
+   *
+   * @param AvroFileFormat $avroFileFormat
    */
   public function setAvroFileFormat(AvroFileFormat $avroFileFormat)
   {
@@ -51,7 +61,11 @@ class GcsDestinationConfig extends \Google\Model
     return $this->avroFileFormat;
   }
   /**
-   * @param string
+   * The maximum duration for which new events are added before a file is closed
+   * and a new file is created. Values within the range of 15-60 seconds are
+   * allowed.
+   *
+   * @param string $fileRotationInterval
    */
   public function setFileRotationInterval($fileRotationInterval)
   {
@@ -65,7 +79,9 @@ class GcsDestinationConfig extends \Google\Model
     return $this->fileRotationInterval;
   }
   /**
-   * @param int
+   * The maximum file size to be saved in the bucket.
+   *
+   * @param int $fileRotationMb
    */
   public function setFileRotationMb($fileRotationMb)
   {
@@ -79,7 +95,9 @@ class GcsDestinationConfig extends \Google\Model
     return $this->fileRotationMb;
   }
   /**
-   * @param JsonFileFormat
+   * JSON file format configuration.
+   *
+   * @param JsonFileFormat $jsonFileFormat
    */
   public function setJsonFileFormat(JsonFileFormat $jsonFileFormat)
   {
@@ -93,7 +111,9 @@ class GcsDestinationConfig extends \Google\Model
     return $this->jsonFileFormat;
   }
   /**
-   * @param string
+   * Path inside the Cloud Storage bucket to write data to.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

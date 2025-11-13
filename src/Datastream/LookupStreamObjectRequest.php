@@ -23,7 +23,9 @@ class LookupStreamObjectRequest extends \Google\Model
   protected $sourceObjectIdentifierDataType = '';
 
   /**
-   * @param SourceObjectIdentifier
+   * Required. The source object identifier which maps to the stream object.
+   *
+   * @param SourceObjectIdentifier $sourceObjectIdentifier
    */
   public function setSourceObjectIdentifier(SourceObjectIdentifier $sourceObjectIdentifier)
   {

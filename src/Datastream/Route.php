@@ -20,36 +20,52 @@ namespace Google\Service\Datastream;
 class Route extends \Google\Model
 {
   /**
+   * Output only. The create time of the resource.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. Destination address for connection
+   *
    * @var string
    */
   public $destinationAddress;
   /**
+   * Destination port for connection
+   *
    * @var int
    */
   public $destinationPort;
   /**
+   * Required. Display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. Identifier. The resource's name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The update time of the resource.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The create time of the resource.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -63,7 +79,9 @@ class Route extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. Destination address for connection
+   *
+   * @param string $destinationAddress
    */
   public function setDestinationAddress($destinationAddress)
   {
@@ -77,7 +95,9 @@ class Route extends \Google\Model
     return $this->destinationAddress;
   }
   /**
-   * @param int
+   * Destination port for connection
+   *
+   * @param int $destinationPort
    */
   public function setDestinationPort($destinationPort)
   {
@@ -91,7 +111,9 @@ class Route extends \Google\Model
     return $this->destinationPort;
   }
   /**
-   * @param string
+   * Required. Display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -105,7 +127,9 @@ class Route extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -119,7 +143,9 @@ class Route extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource's name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -133,7 +159,9 @@ class Route extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The update time of the resource.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

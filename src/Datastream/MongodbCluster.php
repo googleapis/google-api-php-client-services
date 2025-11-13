@@ -24,7 +24,9 @@ class MongodbCluster extends \Google\Collection
   protected $databasesDataType = 'array';
 
   /**
-   * @param MongodbDatabase[]
+   * MongoDB databases in the cluster.
+   *
+   * @param MongodbDatabase[] $databases
    */
   public function setDatabases($databases)
   {

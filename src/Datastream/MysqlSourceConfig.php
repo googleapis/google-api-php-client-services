@@ -28,16 +28,25 @@ class MysqlSourceConfig extends \Google\Model
   protected $includeObjectsType = MysqlRdbms::class;
   protected $includeObjectsDataType = '';
   /**
+   * Maximum number of concurrent backfill tasks. The number should be non
+   * negative. If not set (or set to 0), the system's default value will be
+   * used.
+   *
    * @var int
    */
   public $maxConcurrentBackfillTasks;
   /**
+   * Maximum number of concurrent CDC tasks. The number should be non negative.
+   * If not set (or set to 0), the system's default value will be used.
+   *
    * @var int
    */
   public $maxConcurrentCdcTasks;
 
   /**
-   * @param BinaryLogPosition
+   * Use Binary log position based replication.
+   *
+   * @param BinaryLogPosition $binaryLogPosition
    */
   public function setBinaryLogPosition(BinaryLogPosition $binaryLogPosition)
   {
@@ -51,7 +60,9 @@ class MysqlSourceConfig extends \Google\Model
     return $this->binaryLogPosition;
   }
   /**
-   * @param MysqlRdbms
+   * MySQL objects to exclude from the stream.
+   *
+   * @param MysqlRdbms $excludeObjects
    */
   public function setExcludeObjects(MysqlRdbms $excludeObjects)
   {
@@ -65,7 +76,9 @@ class MysqlSourceConfig extends \Google\Model
     return $this->excludeObjects;
   }
   /**
-   * @param Gtid
+   * Use GTID based replication.
+   *
+   * @param Gtid $gtid
    */
   public function setGtid(Gtid $gtid)
   {
@@ -79,7 +92,9 @@ class MysqlSourceConfig extends \Google\Model
     return $this->gtid;
   }
   /**
-   * @param MysqlRdbms
+   * MySQL objects to retrieve from the source.
+   *
+   * @param MysqlRdbms $includeObjects
    */
   public function setIncludeObjects(MysqlRdbms $includeObjects)
   {
@@ -93,7 +108,11 @@ class MysqlSourceConfig extends \Google\Model
     return $this->includeObjects;
   }
   /**
-   * @param int
+   * Maximum number of concurrent backfill tasks. The number should be non
+   * negative. If not set (or set to 0), the system's default value will be
+   * used.
+   *
+   * @param int $maxConcurrentBackfillTasks
    */
   public function setMaxConcurrentBackfillTasks($maxConcurrentBackfillTasks)
   {
@@ -107,7 +126,10 @@ class MysqlSourceConfig extends \Google\Model
     return $this->maxConcurrentBackfillTasks;
   }
   /**
-   * @param int
+   * Maximum number of concurrent CDC tasks. The number should be non negative.
+   * If not set (or set to 0), the system's default value will be used.
+   *
+   * @param int $maxConcurrentCdcTasks
    */
   public function setMaxConcurrentCdcTasks($maxConcurrentCdcTasks)
   {

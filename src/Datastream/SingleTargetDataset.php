@@ -20,12 +20,20 @@ namespace Google\Service\Datastream;
 class SingleTargetDataset extends \Google\Model
 {
   /**
+   * The dataset ID of the target dataset. DatasetIds allowed characters: https:
+   * //cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreferenc
+   * e.
+   *
    * @var string
    */
   public $datasetId;
 
   /**
-   * @param string
+   * The dataset ID of the target dataset. DatasetIds allowed characters: https:
+   * //cloud.google.com/bigquery/docs/reference/rest/v2/datasets#datasetreferenc
+   * e.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {

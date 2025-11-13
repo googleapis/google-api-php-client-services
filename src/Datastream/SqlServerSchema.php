@@ -21,6 +21,8 @@ class SqlServerSchema extends \Google\Collection
 {
   protected $collection_key = 'tables';
   /**
+   * Schema name.
+   *
    * @var string
    */
   public $schema;
@@ -28,7 +30,9 @@ class SqlServerSchema extends \Google\Collection
   protected $tablesDataType = 'array';
 
   /**
-   * @param string
+   * Schema name.
+   *
+   * @param string $schema
    */
   public function setSchema($schema)
   {
@@ -42,7 +46,9 @@ class SqlServerSchema extends \Google\Collection
     return $this->schema;
   }
   /**
-   * @param SqlServerTable[]
+   * Tables in the schema.
+   *
+   * @param SqlServerTable[] $tables
    */
   public function setTables($tables)
   {

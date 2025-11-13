@@ -20,16 +20,22 @@ namespace Google\Service\Datastream;
 class MongodbObjectIdentifier extends \Google\Model
 {
   /**
+   * Required. The collection name.
+   *
    * @var string
    */
   public $collection;
   /**
+   * Required. The database name.
+   *
    * @var string
    */
   public $database;
 
   /**
-   * @param string
+   * Required. The collection name.
+   *
+   * @param string $collection
    */
   public function setCollection($collection)
   {
@@ -43,7 +49,9 @@ class MongodbObjectIdentifier extends \Google\Model
     return $this->collection;
   }
   /**
-   * @param string
+   * Required. The database name.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
