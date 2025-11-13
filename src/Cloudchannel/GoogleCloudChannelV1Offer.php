@@ -23,16 +23,22 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
   protected $constraintsType = GoogleCloudChannelV1Constraints::class;
   protected $constraintsDataType = '';
   /**
+   * The deal code of the offer to get a special promotion or discount.
+   *
    * @var string
    */
   public $dealCode;
   /**
+   * Output only. End of the Offer validity time.
+   *
    * @var string
    */
   public $endTime;
   protected $marketingInfoType = GoogleCloudChannelV1MarketingInfo::class;
   protected $marketingInfoDataType = '';
   /**
+   * Resource Name of the Offer. Format: accounts/{account_id}/offers/{offer_id}
+   *
    * @var string
    */
   public $name;
@@ -45,12 +51,16 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
   protected $skuType = GoogleCloudChannelV1Sku::class;
   protected $skuDataType = '';
   /**
+   * Start of the Offer validity time.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param GoogleCloudChannelV1Constraints
+   * Constraints on transacting the Offer.
+   *
+   * @param GoogleCloudChannelV1Constraints $constraints
    */
   public function setConstraints(GoogleCloudChannelV1Constraints $constraints)
   {
@@ -64,7 +74,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->constraints;
   }
   /**
-   * @param string
+   * The deal code of the offer to get a special promotion or discount.
+   *
+   * @param string $dealCode
    */
   public function setDealCode($dealCode)
   {
@@ -78,7 +90,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->dealCode;
   }
   /**
-   * @param string
+   * Output only. End of the Offer validity time.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -92,7 +106,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudChannelV1MarketingInfo
+   * Marketing information for the Offer.
+   *
+   * @param GoogleCloudChannelV1MarketingInfo $marketingInfo
    */
   public function setMarketingInfo(GoogleCloudChannelV1MarketingInfo $marketingInfo)
   {
@@ -106,7 +122,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->marketingInfo;
   }
   /**
-   * @param string
+   * Resource Name of the Offer. Format: accounts/{account_id}/offers/{offer_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -120,7 +138,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudChannelV1ParameterDefinition[]
+   * Parameters required to use current Offer to purchase.
+   *
+   * @param GoogleCloudChannelV1ParameterDefinition[] $parameterDefinitions
    */
   public function setParameterDefinitions($parameterDefinitions)
   {
@@ -134,7 +154,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->parameterDefinitions;
   }
   /**
-   * @param GoogleCloudChannelV1Plan
+   * Describes the payment plan for the Offer.
+   *
+   * @param GoogleCloudChannelV1Plan $plan
    */
   public function setPlan(GoogleCloudChannelV1Plan $plan)
   {
@@ -148,7 +170,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->plan;
   }
   /**
-   * @param GoogleCloudChannelV1PriceByResource[]
+   * Price for each monetizable resource type.
+   *
+   * @param GoogleCloudChannelV1PriceByResource[] $priceByResources
    */
   public function setPriceByResources($priceByResources)
   {
@@ -162,7 +186,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->priceByResources;
   }
   /**
-   * @param GoogleCloudChannelV1Sku
+   * SKU the offer is associated with.
+   *
+   * @param GoogleCloudChannelV1Sku $sku
    */
   public function setSku(GoogleCloudChannelV1Sku $sku)
   {
@@ -176,7 +202,9 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
     return $this->sku;
   }
   /**
-   * @param string
+   * Start of the Offer validity time.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

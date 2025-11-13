@@ -20,16 +20,27 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest extends \Google\Model
 {
   /**
+   * Required. Domain to fetch for Cloud Identity account customers, including
+   * domain and team customers. For team customers, please use the domain for
+   * their emails.
+   *
    * @var string
    */
   public $domain;
   /**
+   * Optional. Primary admin email to fetch for Cloud Identity account team
+   * customer.
+   *
    * @var string
    */
   public $primaryAdminEmail;
 
   /**
-   * @param string
+   * Required. Domain to fetch for Cloud Identity account customers, including
+   * domain and team customers. For team customers, please use the domain for
+   * their emails.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -43,7 +54,10 @@ class GoogleCloudChannelV1CheckCloudIdentityAccountsExistRequest extends \Google
     return $this->domain;
   }
   /**
-   * @param string
+   * Optional. Primary admin email to fetch for Cloud Identity account team
+   * customer.
+   *
+   * @param string $primaryAdminEmail
    */
   public function setPrimaryAdminEmail($primaryAdminEmail)
   {

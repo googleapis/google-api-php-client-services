@@ -21,6 +21,8 @@ class GoogleCloudChannelV1ListOffersResponse extends \Google\Collection
 {
   protected $collection_key = 'offers';
   /**
+   * A token to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudChannelV1ListOffersResponse extends \Google\Collection
   protected $offersDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,10 @@ class GoogleCloudChannelV1ListOffersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudChannelV1Offer[]
+   * The list of Offers requested. The pricing information for each Offer only
+   * includes the base price. Effective prices and discounts aren't populated.
+   *
+   * @param GoogleCloudChannelV1Offer[] $offers
    */
   public function setOffers($offers)
   {

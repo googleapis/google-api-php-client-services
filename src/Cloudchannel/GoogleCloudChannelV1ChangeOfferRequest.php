@@ -21,30 +21,57 @@ class GoogleCloudChannelV1ChangeOfferRequest extends \Google\Collection
 {
   protected $collection_key = 'parameters';
   /**
+   * Optional. The billing account resource name that is used to pay for this
+   * entitlement when setting up billing on a trial subscription. This field is
+   * only relevant for multi-currency accounts. It should be left empty for
+   * single currency accounts.
+   *
    * @var string
    */
   public $billingAccount;
   /**
+   * Required. New Offer. Format: accounts/{account_id}/offers/{offer_id}.
+   *
    * @var string
    */
   public $offer;
   protected $parametersType = GoogleCloudChannelV1Parameter::class;
   protected $parametersDataType = 'array';
   /**
+   * Optional. Price reference ID for the offer. Only for offers that require
+   * additional price information. Used to guarantee that the pricing is
+   * consistent between quoting the offer and placing the order.
+   *
    * @var string
    */
   public $priceReferenceId;
   /**
+   * Optional. Purchase order id provided by the reseller.
+   *
    * @var string
    */
   public $purchaseOrderId;
   /**
+   * Optional. You can specify an optional unique request ID, and if you need to
+   * retry your request, the server will know to ignore the request if it's
+   * complete. For example, you make an initial request and the request times
+   * out. If you make the request again with the same request ID, the server can
+   * check if it received the original operation with the same request ID. If it
+   * did, it will ignore the second request. The request ID must be a valid
+   * [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero
+   * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param string
+   * Optional. The billing account resource name that is used to pay for this
+   * entitlement when setting up billing on a trial subscription. This field is
+   * only relevant for multi-currency accounts. It should be left empty for
+   * single currency accounts.
+   *
+   * @param string $billingAccount
    */
   public function setBillingAccount($billingAccount)
   {
@@ -58,7 +85,9 @@ class GoogleCloudChannelV1ChangeOfferRequest extends \Google\Collection
     return $this->billingAccount;
   }
   /**
-   * @param string
+   * Required. New Offer. Format: accounts/{account_id}/offers/{offer_id}.
+   *
+   * @param string $offer
    */
   public function setOffer($offer)
   {
@@ -72,7 +101,10 @@ class GoogleCloudChannelV1ChangeOfferRequest extends \Google\Collection
     return $this->offer;
   }
   /**
-   * @param GoogleCloudChannelV1Parameter[]
+   * Optional. Parameters needed to purchase the Offer. To view the available
+   * Parameters refer to the Offer.parameter_definitions from the desired offer.
+   *
+   * @param GoogleCloudChannelV1Parameter[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -86,7 +118,11 @@ class GoogleCloudChannelV1ChangeOfferRequest extends \Google\Collection
     return $this->parameters;
   }
   /**
-   * @param string
+   * Optional. Price reference ID for the offer. Only for offers that require
+   * additional price information. Used to guarantee that the pricing is
+   * consistent between quoting the offer and placing the order.
+   *
+   * @param string $priceReferenceId
    */
   public function setPriceReferenceId($priceReferenceId)
   {
@@ -100,7 +136,9 @@ class GoogleCloudChannelV1ChangeOfferRequest extends \Google\Collection
     return $this->priceReferenceId;
   }
   /**
-   * @param string
+   * Optional. Purchase order id provided by the reseller.
+   *
+   * @param string $purchaseOrderId
    */
   public function setPurchaseOrderId($purchaseOrderId)
   {
@@ -114,7 +152,16 @@ class GoogleCloudChannelV1ChangeOfferRequest extends \Google\Collection
     return $this->purchaseOrderId;
   }
   /**
-   * @param string
+   * Optional. You can specify an optional unique request ID, and if you need to
+   * retry your request, the server will know to ignore the request if it's
+   * complete. For example, you make an initial request and the request times
+   * out. If you make the request again with the same request ID, the server can
+   * check if it received the original operation with the same request ID. If it
+   * did, it will ignore the second request. The request ID must be a valid
+   * [UUID](https://tools.ietf.org/html/rfc4122) with the exception that zero
+   * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

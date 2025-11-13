@@ -20,12 +20,18 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1RepricingConfigEntitlementGranularity extends \Google\Model
 {
   /**
+   * Resource name of the entitlement. Format:
+   * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+   *
    * @var string
    */
   public $entitlement;
 
   /**
-   * @param string
+   * Resource name of the entitlement. Format:
+   * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
+   *
+   * @param string $entitlement
    */
   public function setEntitlement($entitlement)
   {

@@ -20,28 +20,41 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1BillingAccount extends \Google\Model
 {
   /**
+   * Output only. The time when this billing account was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The 3-letter currency code defined in ISO 4217.
+   *
    * @var string
    */
   public $currencyCode;
   /**
+   * Display name of the billing account.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Resource name of the billing account. Format:
+   * accounts/{account_id}/billingAccounts/{billing_account_id}.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The CLDR region code.
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param string
+   * Output only. The time when this billing account was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +68,9 @@ class GoogleCloudChannelV1BillingAccount extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The 3-letter currency code defined in ISO 4217.
+   *
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {
@@ -69,7 +84,9 @@ class GoogleCloudChannelV1BillingAccount extends \Google\Model
     return $this->currencyCode;
   }
   /**
-   * @param string
+   * Display name of the billing account.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -83,7 +100,10 @@ class GoogleCloudChannelV1BillingAccount extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Resource name of the billing account. Format:
+   * accounts/{account_id}/billingAccounts/{billing_account_id}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -97,7 +117,9 @@ class GoogleCloudChannelV1BillingAccount extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The CLDR region code.
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

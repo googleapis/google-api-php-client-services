@@ -21,6 +21,9 @@ class GoogleCloudChannelV1FetchReportResultsResponse extends \Google\Collection
 {
   protected $collection_key = 'rows';
   /**
+   * Pass this token to FetchReportResultsRequest.page_token to retrieve the
+   * next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -30,7 +33,10 @@ class GoogleCloudChannelV1FetchReportResultsResponse extends \Google\Collection
   protected $rowsDataType = 'array';
 
   /**
-   * @param string
+   * Pass this token to FetchReportResultsRequest.page_token to retrieve the
+   * next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -44,7 +50,10 @@ class GoogleCloudChannelV1FetchReportResultsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudChannelV1ReportResultsMetadata
+   * The metadata for the report results (display name, columns, row count, and
+   * date ranges).
+   *
+   * @param GoogleCloudChannelV1ReportResultsMetadata $reportMetadata
    */
   public function setReportMetadata(GoogleCloudChannelV1ReportResultsMetadata $reportMetadata)
   {
@@ -58,7 +67,10 @@ class GoogleCloudChannelV1FetchReportResultsResponse extends \Google\Collection
     return $this->reportMetadata;
   }
   /**
-   * @param GoogleCloudChannelV1Row[]
+   * The report's lists of values. Each row follows the settings and ordering of
+   * the columns from `report_metadata`.
+   *
+   * @param GoogleCloudChannelV1Row[] $rows
    */
   public function setRows($rows)
   {

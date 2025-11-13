@@ -29,7 +29,10 @@ class GoogleCloudChannelV1DateRange extends \Google\Model
   protected $usageStartDateTimeDataType = '';
 
   /**
-   * @param GoogleTypeDate
+   * The latest invoice date (inclusive). If this value is not the last day of a
+   * month, this will move it forward to the last day of the given month.
+   *
+   * @param GoogleTypeDate $invoiceEndDate
    */
   public function setInvoiceEndDate(GoogleTypeDate $invoiceEndDate)
   {
@@ -43,7 +46,10 @@ class GoogleCloudChannelV1DateRange extends \Google\Model
     return $this->invoiceEndDate;
   }
   /**
-   * @param GoogleTypeDate
+   * The earliest invoice date (inclusive). If this value is not the first day
+   * of a month, this will move it back to the first day of the given month.
+   *
+   * @param GoogleTypeDate $invoiceStartDate
    */
   public function setInvoiceStartDate(GoogleTypeDate $invoiceStartDate)
   {
@@ -57,7 +63,13 @@ class GoogleCloudChannelV1DateRange extends \Google\Model
     return $this->invoiceStartDate;
   }
   /**
-   * @param GoogleTypeDateTime
+   * The latest usage date time (exclusive). If you use time groupings (daily,
+   * weekly, etc), each group uses midnight to midnight (Pacific time). The
+   * usage end date is rounded down to include all usage from the specified
+   * date. We recommend that clients pass `usage_start_date_time` in Pacific
+   * time.
+   *
+   * @param GoogleTypeDateTime $usageEndDateTime
    */
   public function setUsageEndDateTime(GoogleTypeDateTime $usageEndDateTime)
   {
@@ -71,7 +83,13 @@ class GoogleCloudChannelV1DateRange extends \Google\Model
     return $this->usageEndDateTime;
   }
   /**
-   * @param GoogleTypeDateTime
+   * The earliest usage date time (inclusive). If you use time groupings (daily,
+   * weekly, etc), each group uses midnight to midnight (Pacific time). The
+   * usage start date is rounded down to include all usage from the specified
+   * date. We recommend that clients pass `usage_start_date_time` in Pacific
+   * time.
+   *
+   * @param GoogleTypeDateTime $usageStartDateTime
    */
   public function setUsageStartDateTime(GoogleTypeDateTime $usageStartDateTime)
   {

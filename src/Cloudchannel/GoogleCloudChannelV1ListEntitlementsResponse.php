@@ -23,12 +23,17 @@ class GoogleCloudChannelV1ListEntitlementsResponse extends \Google\Collection
   protected $entitlementsType = GoogleCloudChannelV1Entitlement::class;
   protected $entitlementsDataType = 'array';
   /**
+   * A token to list the next page of results. Pass to
+   * ListEntitlementsRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudChannelV1Entitlement[]
+   * The reseller customer's entitlements.
+   *
+   * @param GoogleCloudChannelV1Entitlement[] $entitlements
    */
   public function setEntitlements($entitlements)
   {
@@ -42,7 +47,10 @@ class GoogleCloudChannelV1ListEntitlementsResponse extends \Google\Collection
     return $this->entitlements;
   }
   /**
-   * @param string
+   * A token to list the next page of results. Pass to
+   * ListEntitlementsRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

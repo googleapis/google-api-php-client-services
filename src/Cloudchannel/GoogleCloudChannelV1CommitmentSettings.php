@@ -20,18 +20,24 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1CommitmentSettings extends \Google\Model
 {
   /**
+   * Output only. Commitment end timestamp.
+   *
    * @var string
    */
   public $endTime;
   protected $renewalSettingsType = GoogleCloudChannelV1RenewalSettings::class;
   protected $renewalSettingsDataType = '';
   /**
+   * Output only. Commitment start timestamp.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Output only. Commitment end timestamp.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -45,7 +51,9 @@ class GoogleCloudChannelV1CommitmentSettings extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudChannelV1RenewalSettings
+   * Optional. Renewal settings applicable for a commitment-based Offer.
+   *
+   * @param GoogleCloudChannelV1RenewalSettings $renewalSettings
    */
   public function setRenewalSettings(GoogleCloudChannelV1RenewalSettings $renewalSettings)
   {
@@ -59,7 +67,9 @@ class GoogleCloudChannelV1CommitmentSettings extends \Google\Model
     return $this->renewalSettings;
   }
   /**
-   * @param string
+   * Output only. Commitment start timestamp.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

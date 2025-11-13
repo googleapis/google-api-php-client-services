@@ -23,12 +23,17 @@ class GoogleCloudChannelV1ListSkuGroupBillableSkusResponse extends \Google\Colle
   protected $billableSkusType = GoogleCloudChannelV1BillableSku::class;
   protected $billableSkusDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListSkuGroupBillableSkusRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudChannelV1BillableSku[]
+   * The list of billable SKUs in the requested SKU group.
+   *
+   * @param GoogleCloudChannelV1BillableSku[] $billableSkus
    */
   public function setBillableSkus($billableSkus)
   {
@@ -42,7 +47,10 @@ class GoogleCloudChannelV1ListSkuGroupBillableSkusResponse extends \Google\Colle
     return $this->billableSkus;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListSkuGroupBillableSkusRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

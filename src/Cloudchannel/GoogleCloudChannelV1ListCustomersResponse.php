@@ -23,12 +23,17 @@ class GoogleCloudChannelV1ListCustomersResponse extends \Google\Collection
   protected $customersType = GoogleCloudChannelV1Customer::class;
   protected $customersDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListCustomersRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudChannelV1Customer[]
+   * The customers belonging to a reseller or distributor.
+   *
+   * @param GoogleCloudChannelV1Customer[] $customers
    */
   public function setCustomers($customers)
   {
@@ -42,7 +47,10 @@ class GoogleCloudChannelV1ListCustomersResponse extends \Google\Collection
     return $this->customers;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListCustomersRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

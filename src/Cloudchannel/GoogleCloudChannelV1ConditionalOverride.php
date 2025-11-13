@@ -19,9 +19,27 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1ConditionalOverride extends \Google\Model
 {
+  /**
+   * Not used.
+   */
+  public const REBILLING_BASIS_REBILLING_BASIS_UNSPECIFIED = 'REBILLING_BASIS_UNSPECIFIED';
+  /**
+   * Use the list cost, also known as the MSRP.
+   */
+  public const REBILLING_BASIS_COST_AT_LIST = 'COST_AT_LIST';
+  /**
+   * Pass through all discounts except the Reseller Program Discount. If this is
+   * the default cost base and no adjustments are specified, the output cost
+   * will be exactly what the customer would see if they viewed the bill in the
+   * Google Cloud Console.
+   */
+  public const REBILLING_BASIS_DIRECT_CUSTOMER_COST = 'DIRECT_CUSTOMER_COST';
   protected $adjustmentType = GoogleCloudChannelV1RepricingAdjustment::class;
   protected $adjustmentDataType = '';
   /**
+   * Required. The RebillingBasis to use for the applied override. Shows the
+   * relative cost based on your repricing costs.
+   *
    * @var string
    */
   public $rebillingBasis;
@@ -29,7 +47,9 @@ class GoogleCloudChannelV1ConditionalOverride extends \Google\Model
   protected $repricingConditionDataType = '';
 
   /**
-   * @param GoogleCloudChannelV1RepricingAdjustment
+   * Required. Information about the applied override's adjustment.
+   *
+   * @param GoogleCloudChannelV1RepricingAdjustment $adjustment
    */
   public function setAdjustment(GoogleCloudChannelV1RepricingAdjustment $adjustment)
   {
@@ -43,21 +63,29 @@ class GoogleCloudChannelV1ConditionalOverride extends \Google\Model
     return $this->adjustment;
   }
   /**
-   * @param string
+   * Required. The RebillingBasis to use for the applied override. Shows the
+   * relative cost based on your repricing costs.
+   *
+   * Accepted values: REBILLING_BASIS_UNSPECIFIED, COST_AT_LIST,
+   * DIRECT_CUSTOMER_COST
+   *
+   * @param self::REBILLING_BASIS_* $rebillingBasis
    */
   public function setRebillingBasis($rebillingBasis)
   {
     $this->rebillingBasis = $rebillingBasis;
   }
   /**
-   * @return string
+   * @return self::REBILLING_BASIS_*
    */
   public function getRebillingBasis()
   {
     return $this->rebillingBasis;
   }
   /**
-   * @param GoogleCloudChannelV1RepricingCondition
+   * Required. Specifies the condition which, if met, will apply the override.
+   *
+   * @param GoogleCloudChannelV1RepricingCondition $repricingCondition
    */
   public function setRepricingCondition(GoogleCloudChannelV1RepricingCondition $repricingCondition)
   {

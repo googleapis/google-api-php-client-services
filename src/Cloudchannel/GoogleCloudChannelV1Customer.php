@@ -20,44 +20,91 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1Customer extends \Google\Model
 {
   /**
+   * Default value if not set yet
+   */
+  public const CUSTOMER_ATTESTATION_STATE_CUSTOMER_ATTESTATION_STATE_UNSPECIFIED = 'CUSTOMER_ATTESTATION_STATE_UNSPECIFIED';
+  /**
+   * Customer is exempt from attesting based on exemption list at
+   * https://cloud.google.com/terms/direct-tos-exemptions. Contact information
+   * of customer will be mandatory.
+   */
+  public const CUSTOMER_ATTESTATION_STATE_EXEMPT = 'EXEMPT';
+  /**
+   * Customer is not exempt and has verified the information provided is
+   * correct. Contact information of customer will be mandatory.
+   */
+  public const CUSTOMER_ATTESTATION_STATE_NON_EXEMPT_AND_INFO_VERIFIED = 'NON_EXEMPT_AND_INFO_VERIFIED';
+  /**
+   * Secondary contact email. You need to provide an alternate email to create
+   * different domains if a primary contact email already exists. Users will
+   * receive a notification with credentials when you create an admin.google.com
+   * account. Secondary emails are also recovery email addresses. Alternate
+   * emails are optional when you create Team customers.
+   *
    * @var string
    */
   public $alternateEmail;
   /**
+   * Cloud Identity ID of the customer's channel partner. Populated only if a
+   * channel partner exists for this customer.
+   *
    * @var string
    */
   public $channelPartnerId;
   /**
+   * Output only. The customer's Cloud Identity ID if the customer has a Cloud
+   * Identity resource.
+   *
    * @var string
    */
   public $cloudIdentityId;
   protected $cloudIdentityInfoType = GoogleCloudChannelV1CloudIdentityInfo::class;
   protected $cloudIdentityInfoDataType = '';
   /**
+   * Optional. External CRM ID for the customer. Populated only if a CRM ID
+   * exists for this customer.
+   *
    * @var string
    */
   public $correlationId;
   /**
+   * Output only. Time when the customer was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Indicate if a customer is attesting about the correctness of
+   * provided information. Only required if creating a GCP Entitlement.
+   *
    * @var string
    */
   public $customerAttestationState;
   /**
+   * Required. The customer's primary domain. Must match the primary contact
+   * email's domain.
+   *
    * @var string
    */
   public $domain;
   /**
+   * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Output only. Resource name of the customer. Format:
+   * accounts/{account_id}/customers/{customer_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Name of the organization that the customer entity represents.
+   *
    * @var string
    */
   public $orgDisplayName;
@@ -66,12 +113,20 @@ class GoogleCloudChannelV1Customer extends \Google\Model
   protected $primaryContactInfoType = GoogleCloudChannelV1ContactInfo::class;
   protected $primaryContactInfoDataType = '';
   /**
+   * Output only. Time when the customer was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Secondary contact email. You need to provide an alternate email to create
+   * different domains if a primary contact email already exists. Users will
+   * receive a notification with credentials when you create an admin.google.com
+   * account. Secondary emails are also recovery email addresses. Alternate
+   * emails are optional when you create Team customers.
+   *
+   * @param string $alternateEmail
    */
   public function setAlternateEmail($alternateEmail)
   {
@@ -85,7 +140,10 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->alternateEmail;
   }
   /**
-   * @param string
+   * Cloud Identity ID of the customer's channel partner. Populated only if a
+   * channel partner exists for this customer.
+   *
+   * @param string $channelPartnerId
    */
   public function setChannelPartnerId($channelPartnerId)
   {
@@ -99,7 +157,10 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->channelPartnerId;
   }
   /**
-   * @param string
+   * Output only. The customer's Cloud Identity ID if the customer has a Cloud
+   * Identity resource.
+   *
+   * @param string $cloudIdentityId
    */
   public function setCloudIdentityId($cloudIdentityId)
   {
@@ -113,7 +174,10 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->cloudIdentityId;
   }
   /**
-   * @param GoogleCloudChannelV1CloudIdentityInfo
+   * Output only. Cloud Identity information for the customer. Populated only if
+   * a Cloud Identity account exists for this customer.
+   *
+   * @param GoogleCloudChannelV1CloudIdentityInfo $cloudIdentityInfo
    */
   public function setCloudIdentityInfo(GoogleCloudChannelV1CloudIdentityInfo $cloudIdentityInfo)
   {
@@ -127,7 +191,10 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->cloudIdentityInfo;
   }
   /**
-   * @param string
+   * Optional. External CRM ID for the customer. Populated only if a CRM ID
+   * exists for this customer.
+   *
+   * @param string $correlationId
    */
   public function setCorrelationId($correlationId)
   {
@@ -141,7 +208,9 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->correlationId;
   }
   /**
-   * @param string
+   * Output only. Time when the customer was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -155,21 +224,30 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Indicate if a customer is attesting about the correctness of
+   * provided information. Only required if creating a GCP Entitlement.
+   *
+   * Accepted values: CUSTOMER_ATTESTATION_STATE_UNSPECIFIED, EXEMPT,
+   * NON_EXEMPT_AND_INFO_VERIFIED
+   *
+   * @param self::CUSTOMER_ATTESTATION_STATE_* $customerAttestationState
    */
   public function setCustomerAttestationState($customerAttestationState)
   {
     $this->customerAttestationState = $customerAttestationState;
   }
   /**
-   * @return string
+   * @return self::CUSTOMER_ATTESTATION_STATE_*
    */
   public function getCustomerAttestationState()
   {
     return $this->customerAttestationState;
   }
   /**
-   * @param string
+   * Required. The customer's primary domain. Must match the primary contact
+   * email's domain.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -183,7 +261,11 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * Optional. The BCP-47 language code, such as "en-US" or "sr-Latn". For more
+   * information, see
+   * https://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -197,7 +279,10 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Output only. Resource name of the customer. Format:
+   * accounts/{account_id}/customers/{customer_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -211,7 +296,9 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Name of the organization that the customer entity represents.
+   *
+   * @param string $orgDisplayName
    */
   public function setOrgDisplayName($orgDisplayName)
   {
@@ -225,7 +312,12 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->orgDisplayName;
   }
   /**
-   * @param GoogleTypePostalAddress
+   * Required. The organization address for the customer. To enforce US laws and
+   * embargoes, we require a region, postal code, and address lines. You must
+   * provide valid addresses for every customer. To set the customer's language,
+   * use the Customer-level language code.
+   *
+   * @param GoogleTypePostalAddress $orgPostalAddress
    */
   public function setOrgPostalAddress(GoogleTypePostalAddress $orgPostalAddress)
   {
@@ -239,7 +331,9 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->orgPostalAddress;
   }
   /**
-   * @param GoogleCloudChannelV1ContactInfo
+   * Primary contact info.
+   *
+   * @param GoogleCloudChannelV1ContactInfo $primaryContactInfo
    */
   public function setPrimaryContactInfo(GoogleCloudChannelV1ContactInfo $primaryContactInfo)
   {
@@ -253,7 +347,9 @@ class GoogleCloudChannelV1Customer extends \Google\Model
     return $this->primaryContactInfo;
   }
   /**
-   * @param string
+   * Output only. Time when the customer was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

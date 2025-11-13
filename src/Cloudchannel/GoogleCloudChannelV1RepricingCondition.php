@@ -23,7 +23,9 @@ class GoogleCloudChannelV1RepricingCondition extends \Google\Model
   protected $skuGroupConditionDataType = '';
 
   /**
-   * @param GoogleCloudChannelV1SkuGroupCondition
+   * SKU Group condition for override.
+   *
+   * @param GoogleCloudChannelV1SkuGroupCondition $skuGroupCondition
    */
   public function setSkuGroupCondition(GoogleCloudChannelV1SkuGroupCondition $skuGroupCondition)
   {

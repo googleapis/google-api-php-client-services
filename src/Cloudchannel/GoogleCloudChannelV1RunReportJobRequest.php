@@ -22,16 +22,29 @@ class GoogleCloudChannelV1RunReportJobRequest extends \Google\Model
   protected $dateRangeType = GoogleCloudChannelV1DateRange::class;
   protected $dateRangeDataType = '';
   /**
+   * Optional. A structured string that defines conditions on dimension columns
+   * to restrict the report output. Filters support logical operators (AND, OR,
+   * NOT) and conditional operators (=, !=, <, >, <=, and >=) using `column_id`
+   * as keys. For example: `(customer:"accounts/C123abc/customers/S456def" OR
+   * customer:"accounts/C123abc/customers/S789ghi") AND invoice_start_date.year
+   * >= 2022`
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. The BCP-47 language code, such as "en-US". If specified, the
+   * response is localized to the corresponding language code if the original
+   * data sources support it. Default is "en-US".
+   *
    * @var string
    */
   public $languageCode;
 
   /**
-   * @param GoogleCloudChannelV1DateRange
+   * Optional. The range of usage or invoice dates to include in the result.
+   *
+   * @param GoogleCloudChannelV1DateRange $dateRange
    */
   public function setDateRange(GoogleCloudChannelV1DateRange $dateRange)
   {
@@ -45,7 +58,14 @@ class GoogleCloudChannelV1RunReportJobRequest extends \Google\Model
     return $this->dateRange;
   }
   /**
-   * @param string
+   * Optional. A structured string that defines conditions on dimension columns
+   * to restrict the report output. Filters support logical operators (AND, OR,
+   * NOT) and conditional operators (=, !=, <, >, <=, and >=) using `column_id`
+   * as keys. For example: `(customer:"accounts/C123abc/customers/S456def" OR
+   * customer:"accounts/C123abc/customers/S789ghi") AND invoice_start_date.year
+   * >= 2022`
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -59,7 +79,11 @@ class GoogleCloudChannelV1RunReportJobRequest extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param string
+   * Optional. The BCP-47 language code, such as "en-US". If specified, the
+   * response is localized to the corresponding language code if the original
+   * data sources support it. Default is "en-US".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {

@@ -25,7 +25,9 @@ class GoogleCloudChannelV1SubscriberEvent extends \Google\Model
   protected $entitlementEventDataType = '';
 
   /**
-   * @param GoogleCloudChannelV1CustomerEvent
+   * Customer event sent as part of Pub/Sub event to partners.
+   *
+   * @param GoogleCloudChannelV1CustomerEvent $customerEvent
    */
   public function setCustomerEvent(GoogleCloudChannelV1CustomerEvent $customerEvent)
   {
@@ -39,7 +41,9 @@ class GoogleCloudChannelV1SubscriberEvent extends \Google\Model
     return $this->customerEvent;
   }
   /**
-   * @param GoogleCloudChannelV1EntitlementEvent
+   * Entitlement event sent as part of Pub/Sub event to partners.
+   *
+   * @param GoogleCloudChannelV1EntitlementEvent $entitlementEvent
    */
   public function setEntitlementEvent(GoogleCloudChannelV1EntitlementEvent $entitlementEvent)
   {

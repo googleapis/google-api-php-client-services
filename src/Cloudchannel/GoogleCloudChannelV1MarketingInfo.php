@@ -22,16 +22,22 @@ class GoogleCloudChannelV1MarketingInfo extends \Google\Model
   protected $defaultLogoType = GoogleCloudChannelV1Media::class;
   protected $defaultLogoDataType = '';
   /**
+   * Human readable description. Description can contain HTML.
+   *
    * @var string
    */
   public $description;
   /**
+   * Human readable name.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param GoogleCloudChannelV1Media
+   * Default logo.
+   *
+   * @param GoogleCloudChannelV1Media $defaultLogo
    */
   public function setDefaultLogo(GoogleCloudChannelV1Media $defaultLogo)
   {
@@ -45,7 +51,9 @@ class GoogleCloudChannelV1MarketingInfo extends \Google\Model
     return $this->defaultLogo;
   }
   /**
-   * @param string
+   * Human readable description. Description can contain HTML.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -59,7 +67,9 @@ class GoogleCloudChannelV1MarketingInfo extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Human readable name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

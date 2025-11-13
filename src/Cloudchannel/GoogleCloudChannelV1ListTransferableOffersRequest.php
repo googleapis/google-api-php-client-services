@@ -20,36 +20,65 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1ListTransferableOffersRequest extends \Google\Model
 {
   /**
+   * Optional. The Billing Account to look up Offers for. Format:
+   * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is
+   * only relevant for multi-currency accounts. It should be left empty for
+   * single currency accounts.
+   *
    * @var string
    */
   public $billingAccount;
   /**
+   * Customer's Cloud Identity ID
+   *
    * @var string
    */
   public $cloudIdentityId;
   /**
+   * A reseller should create a customer and use the resource name of that
+   * customer here.
+   *
    * @var string
    */
   public $customerName;
   /**
+   * Optional. The BCP-47 language code. For example, "en-US". The response will
+   * localize in the corresponding language code, if specified. The default
+   * value is "en-US".
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Requested page size. Server might return fewer results than requested. If
+   * unspecified, returns at most 100 offers. The maximum value is 1000; the
+   * server will coerce values above 1000.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * A token for a page of results other than the first page. Obtained using
+   * ListTransferableOffersResponse.next_page_token of the previous
+   * CloudChannelService.ListTransferableOffers call.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Required. The SKU to look up Offers for.
+   *
    * @var string
    */
   public $sku;
 
   /**
-   * @param string
+   * Optional. The Billing Account to look up Offers for. Format:
+   * accounts/{account_id}/billingAccounts/{billing_account_id}. This field is
+   * only relevant for multi-currency accounts. It should be left empty for
+   * single currency accounts.
+   *
+   * @param string $billingAccount
    */
   public function setBillingAccount($billingAccount)
   {
@@ -63,7 +92,9 @@ class GoogleCloudChannelV1ListTransferableOffersRequest extends \Google\Model
     return $this->billingAccount;
   }
   /**
-   * @param string
+   * Customer's Cloud Identity ID
+   *
+   * @param string $cloudIdentityId
    */
   public function setCloudIdentityId($cloudIdentityId)
   {
@@ -77,7 +108,10 @@ class GoogleCloudChannelV1ListTransferableOffersRequest extends \Google\Model
     return $this->cloudIdentityId;
   }
   /**
-   * @param string
+   * A reseller should create a customer and use the resource name of that
+   * customer here.
+   *
+   * @param string $customerName
    */
   public function setCustomerName($customerName)
   {
@@ -91,7 +125,11 @@ class GoogleCloudChannelV1ListTransferableOffersRequest extends \Google\Model
     return $this->customerName;
   }
   /**
-   * @param string
+   * Optional. The BCP-47 language code. For example, "en-US". The response will
+   * localize in the corresponding language code, if specified. The default
+   * value is "en-US".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -105,7 +143,11 @@ class GoogleCloudChannelV1ListTransferableOffersRequest extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param int
+   * Requested page size. Server might return fewer results than requested. If
+   * unspecified, returns at most 100 offers. The maximum value is 1000; the
+   * server will coerce values above 1000.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -119,7 +161,11 @@ class GoogleCloudChannelV1ListTransferableOffersRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * A token for a page of results other than the first page. Obtained using
+   * ListTransferableOffersResponse.next_page_token of the previous
+   * CloudChannelService.ListTransferableOffers call.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -133,7 +179,9 @@ class GoogleCloudChannelV1ListTransferableOffersRequest extends \Google\Model
     return $this->pageToken;
   }
   /**
-   * @param string
+   * Required. The SKU to look up Offers for.
+   *
+   * @param string $sku
    */
   public function setSku($sku)
   {

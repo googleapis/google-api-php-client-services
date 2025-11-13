@@ -23,7 +23,10 @@ class GoogleCloudChannelV1PercentageAdjustment extends \Google\Model
   protected $percentageDataType = '';
 
   /**
-   * @param GoogleTypeDecimal
+   * The percentage of the bill to adjust. For example: Mark down by 1% =>
+   * "-1.00" Mark up by 1% => "1.00" Pass-Through => "0.00"
+   *
+   * @param GoogleTypeDecimal $percentage
    */
   public function setPercentage(GoogleTypeDecimal $percentage)
   {

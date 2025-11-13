@@ -20,12 +20,20 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1SkuGroupCondition extends \Google\Model
 {
   /**
+   * Specifies a SKU group (https://cloud.google.com/skus/sku-groups). Resource
+   * name of SKU group. Format: accounts/{account}/skuGroups/{sku_group}.
+   * Example: "accounts/C01234/skuGroups/3d50fd57-3157-4577-a5a9-a219b8490041".
+   *
    * @var string
    */
   public $skuGroup;
 
   /**
-   * @param string
+   * Specifies a SKU group (https://cloud.google.com/skus/sku-groups). Resource
+   * name of SKU group. Format: accounts/{account}/skuGroups/{sku_group}.
+   * Example: "accounts/C01234/skuGroups/3d50fd57-3157-4577-a5a9-a219b8490041".
+   *
+   * @param string $skuGroup
    */
   public function setSkuGroup($skuGroup)
   {

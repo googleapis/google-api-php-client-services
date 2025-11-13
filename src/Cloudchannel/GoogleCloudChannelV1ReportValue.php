@@ -26,18 +26,25 @@ class GoogleCloudChannelV1ReportValue extends \Google\Model
   protected $decimalValueType = GoogleTypeDecimal::class;
   protected $decimalValueDataType = '';
   /**
+   * A value of type `int`.
+   *
    * @var string
    */
   public $intValue;
   protected $moneyValueType = GoogleTypeMoney::class;
   protected $moneyValueDataType = '';
   /**
+   * A value of type `string`.
+   *
    * @var string
    */
   public $stringValue;
 
   /**
-   * @param GoogleTypeDateTime
+   * A value of type `google.type.DateTime` (year, month, day, hour, minute,
+   * second, and UTC offset or timezone.)
+   *
+   * @param GoogleTypeDateTime $dateTimeValue
    */
   public function setDateTimeValue(GoogleTypeDateTime $dateTimeValue)
   {
@@ -51,7 +58,9 @@ class GoogleCloudChannelV1ReportValue extends \Google\Model
     return $this->dateTimeValue;
   }
   /**
-   * @param GoogleTypeDate
+   * A value of type `google.type.Date` (year, month, day).
+   *
+   * @param GoogleTypeDate $dateValue
    */
   public function setDateValue(GoogleTypeDate $dateValue)
   {
@@ -65,7 +74,10 @@ class GoogleCloudChannelV1ReportValue extends \Google\Model
     return $this->dateValue;
   }
   /**
-   * @param GoogleTypeDecimal
+   * A value of type `google.type.Decimal`, representing non-integer numeric
+   * values.
+   *
+   * @param GoogleTypeDecimal $decimalValue
    */
   public function setDecimalValue(GoogleTypeDecimal $decimalValue)
   {
@@ -79,7 +91,9 @@ class GoogleCloudChannelV1ReportValue extends \Google\Model
     return $this->decimalValue;
   }
   /**
-   * @param string
+   * A value of type `int`.
+   *
+   * @param string $intValue
    */
   public function setIntValue($intValue)
   {
@@ -93,7 +107,10 @@ class GoogleCloudChannelV1ReportValue extends \Google\Model
     return $this->intValue;
   }
   /**
-   * @param GoogleTypeMoney
+   * A value of type `google.type.Money` (currency code, whole units, decimal
+   * units).
+   *
+   * @param GoogleTypeMoney $moneyValue
    */
   public function setMoneyValue(GoogleTypeMoney $moneyValue)
   {
@@ -107,7 +124,9 @@ class GoogleCloudChannelV1ReportValue extends \Google\Model
     return $this->moneyValue;
   }
   /**
-   * @param string
+   * A value of type `string`.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

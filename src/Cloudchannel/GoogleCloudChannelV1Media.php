@@ -20,20 +20,36 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1Media extends \Google\Model
 {
   /**
+   * Not used.
+   */
+  public const TYPE_MEDIA_TYPE_UNSPECIFIED = 'MEDIA_TYPE_UNSPECIFIED';
+  /**
+   * Type of image.
+   */
+  public const TYPE_MEDIA_TYPE_IMAGE = 'MEDIA_TYPE_IMAGE';
+  /**
+   * URL of the media.
+   *
    * @var string
    */
   public $content;
   /**
+   * Title of the media.
+   *
    * @var string
    */
   public $title;
   /**
+   * Type of the media.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * URL of the media.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -47,7 +63,9 @@ class GoogleCloudChannelV1Media extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Title of the media.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -61,14 +79,18 @@ class GoogleCloudChannelV1Media extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * Type of the media.
+   *
+   * Accepted values: MEDIA_TYPE_UNSPECIFIED, MEDIA_TYPE_IMAGE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

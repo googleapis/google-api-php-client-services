@@ -21,6 +21,9 @@ class GoogleCloudChannelV1ListTransferableOffersResponse extends \Google\Collect
 {
   protected $collection_key = 'transferableOffers';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListTransferableOffersRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudChannelV1ListTransferableOffersResponse extends \Google\Collect
   protected $transferableOffersDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListTransferableOffersRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudChannelV1ListTransferableOffersResponse extends \Google\Collect
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudChannelV1TransferableOffer[]
+   * Information about Offers for a customer that can be used for transfer.
+   *
+   * @param GoogleCloudChannelV1TransferableOffer[] $transferableOffers
    */
   public function setTransferableOffers($transferableOffers)
   {

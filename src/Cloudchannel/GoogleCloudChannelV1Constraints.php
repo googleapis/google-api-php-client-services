@@ -23,7 +23,9 @@ class GoogleCloudChannelV1Constraints extends \Google\Model
   protected $customerConstraintsDataType = '';
 
   /**
-   * @param GoogleCloudChannelV1CustomerConstraints
+   * Represents constraints required to purchase the Offer for a customer.
+   *
+   * @param GoogleCloudChannelV1CustomerConstraints $customerConstraints
    */
   public function setCustomerConstraints(GoogleCloudChannelV1CustomerConstraints $customerConstraints)
   {

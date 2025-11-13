@@ -20,24 +20,37 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1BillableSku extends \Google\Model
 {
   /**
+   * Resource name of Service which contains Repricing SKU. Format:
+   * services/{service}. Example: "services/B7D9-FDCB-15D8".
+   *
    * @var string
    */
   public $service;
   /**
+   * Unique human readable name for the Service.
+   *
    * @var string
    */
   public $serviceDisplayName;
   /**
+   * Resource name of Billable SKU. Format: billableSkus/{sku}. Example:
+   * billableSkus/6E1B-6634-470F".
+   *
    * @var string
    */
   public $sku;
   /**
+   * Unique human readable name for the SKU.
+   *
    * @var string
    */
   public $skuDisplayName;
 
   /**
-   * @param string
+   * Resource name of Service which contains Repricing SKU. Format:
+   * services/{service}. Example: "services/B7D9-FDCB-15D8".
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -51,7 +64,9 @@ class GoogleCloudChannelV1BillableSku extends \Google\Model
     return $this->service;
   }
   /**
-   * @param string
+   * Unique human readable name for the Service.
+   *
+   * @param string $serviceDisplayName
    */
   public function setServiceDisplayName($serviceDisplayName)
   {
@@ -65,7 +80,10 @@ class GoogleCloudChannelV1BillableSku extends \Google\Model
     return $this->serviceDisplayName;
   }
   /**
-   * @param string
+   * Resource name of Billable SKU. Format: billableSkus/{sku}. Example:
+   * billableSkus/6E1B-6634-470F".
+   *
+   * @param string $sku
    */
   public function setSku($sku)
   {
@@ -79,7 +97,9 @@ class GoogleCloudChannelV1BillableSku extends \Google\Model
     return $this->sku;
   }
   /**
-   * @param string
+   * Unique human readable name for the SKU.
+   *
+   * @param string $skuDisplayName
    */
   public function setSkuDisplayName($skuDisplayName)
   {

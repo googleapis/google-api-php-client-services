@@ -20,20 +20,28 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1AdminUser extends \Google\Model
 {
   /**
+   * Primary email of the admin user.
+   *
    * @var string
    */
   public $email;
   /**
+   * Family name of the admin user.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * Given name of the admin user.
+   *
    * @var string
    */
   public $givenName;
 
   /**
-   * @param string
+   * Primary email of the admin user.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -47,7 +55,9 @@ class GoogleCloudChannelV1AdminUser extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * Family name of the admin user.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -61,7 +71,9 @@ class GoogleCloudChannelV1AdminUser extends \Google\Model
     return $this->familyName;
   }
   /**
-   * @param string
+   * Given name of the admin user.
+   *
+   * @param string $givenName
    */
   public function setGivenName($givenName)
   {

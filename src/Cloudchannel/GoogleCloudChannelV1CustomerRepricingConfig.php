@@ -20,18 +20,28 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1CustomerRepricingConfig extends \Google\Model
 {
   /**
+   * Output only. Resource name of the CustomerRepricingConfig. Format: accounts
+   * /{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+   *
    * @var string
    */
   public $name;
   protected $repricingConfigType = GoogleCloudChannelV1RepricingConfig::class;
   protected $repricingConfigDataType = '';
   /**
+   * Output only. Timestamp of an update to the repricing rule. If `update_time`
+   * is after RepricingConfig.effective_invoice_month then it indicates this was
+   * set mid-month.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Resource name of the CustomerRepricingConfig. Format: accounts
+   * /{account_id}/customers/{customer_id}/customerRepricingConfigs/{id}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +55,10 @@ class GoogleCloudChannelV1CustomerRepricingConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudChannelV1RepricingConfig
+   * Required. The configuration for bill modifications made by a reseller
+   * before sending it to customers.
+   *
+   * @param GoogleCloudChannelV1RepricingConfig $repricingConfig
    */
   public function setRepricingConfig(GoogleCloudChannelV1RepricingConfig $repricingConfig)
   {
@@ -59,7 +72,11 @@ class GoogleCloudChannelV1CustomerRepricingConfig extends \Google\Model
     return $this->repricingConfig;
   }
   /**
-   * @param string
+   * Output only. Timestamp of an update to the repricing rule. If `update_time`
+   * is after RepricingConfig.effective_invoice_month then it indicates this was
+   * set mid-month.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

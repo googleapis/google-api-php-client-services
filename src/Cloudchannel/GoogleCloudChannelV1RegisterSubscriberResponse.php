@@ -20,12 +20,16 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1RegisterSubscriberResponse extends \Google\Model
 {
   /**
+   * Name of the topic the subscriber will listen to.
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param string
+   * Name of the topic the subscriber will listen to.
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {

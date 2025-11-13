@@ -20,20 +20,49 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1TransferEligibility extends \Google\Model
 {
   /**
+   * Not used.
+   */
+  public const INELIGIBILITY_REASON_REASON_UNSPECIFIED = 'REASON_UNSPECIFIED';
+  /**
+   * Reseller needs to accept TOS before transferring the SKU.
+   */
+  public const INELIGIBILITY_REASON_PENDING_TOS_ACCEPTANCE = 'PENDING_TOS_ACCEPTANCE';
+  /**
+   * Reseller not eligible to sell the SKU.
+   */
+  public const INELIGIBILITY_REASON_SKU_NOT_ELIGIBLE = 'SKU_NOT_ELIGIBLE';
+  /**
+   * SKU subscription is suspended
+   */
+  public const INELIGIBILITY_REASON_SKU_SUSPENDED = 'SKU_SUSPENDED';
+  /**
+   * The reseller is not authorized to transact on this Product. See
+   * https://support.google.com/channelservices/answer/9759265
+   */
+  public const INELIGIBILITY_REASON_CHANNEL_PARTNER_NOT_AUTHORIZED_FOR_SKU = 'CHANNEL_PARTNER_NOT_AUTHORIZED_FOR_SKU';
+  /**
+   * Localized description if reseller is not eligible to transfer the SKU.
+   *
    * @var string
    */
   public $description;
   /**
+   * Specified the reason for ineligibility.
+   *
    * @var string
    */
   public $ineligibilityReason;
   /**
+   * Whether reseller is eligible to transfer the SKU.
+   *
    * @var bool
    */
   public $isEligible;
 
   /**
-   * @param string
+   * Localized description if reseller is not eligible to transfer the SKU.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,21 +76,28 @@ class GoogleCloudChannelV1TransferEligibility extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Specified the reason for ineligibility.
+   *
+   * Accepted values: REASON_UNSPECIFIED, PENDING_TOS_ACCEPTANCE,
+   * SKU_NOT_ELIGIBLE, SKU_SUSPENDED, CHANNEL_PARTNER_NOT_AUTHORIZED_FOR_SKU
+   *
+   * @param self::INELIGIBILITY_REASON_* $ineligibilityReason
    */
   public function setIneligibilityReason($ineligibilityReason)
   {
     $this->ineligibilityReason = $ineligibilityReason;
   }
   /**
-   * @return string
+   * @return self::INELIGIBILITY_REASON_*
    */
   public function getIneligibilityReason()
   {
     return $this->ineligibilityReason;
   }
   /**
-   * @param bool
+   * Whether reseller is eligible to transfer the SKU.
+   *
+   * @param bool $isEligible
    */
   public function setIsEligible($isEligible)
   {

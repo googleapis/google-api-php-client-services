@@ -21,6 +21,9 @@ class GoogleCloudChannelV1ListTransferableSkusResponse extends \Google\Collectio
 {
   protected $collection_key = 'transferableSkus';
   /**
+   * A token to retrieve the next page of results. Pass to
+   * ListTransferableSkusRequest.page_token to obtain that page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudChannelV1ListTransferableSkusResponse extends \Google\Collectio
   protected $transferableSkusDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass to
+   * ListTransferableSkusRequest.page_token to obtain that page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudChannelV1ListTransferableSkusResponse extends \Google\Collectio
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudChannelV1TransferableSku[]
+   * Information about existing SKUs for a customer that needs a transfer.
+   *
+   * @param GoogleCloudChannelV1TransferableSku[] $transferableSkus
    */
   public function setTransferableSkus($transferableSkus)
   {
