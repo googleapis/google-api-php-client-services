@@ -22,12 +22,17 @@ class XPSVideoActionRecognitionTrainResponse extends \Google\Model
   protected $modelArtifactSpecType = XPSVideoModelArtifactSpec::class;
   protected $modelArtifactSpecDataType = '';
   /**
+   * The actual train cost of creating this model, expressed in node seconds,
+   * i.e. 3,600 value in this field means 1 node hour.
+   *
    * @var string
    */
   public $trainCostNodeSeconds;
 
   /**
-   * @param XPSVideoModelArtifactSpec
+   * ## The fields below are only populated under uCAIP request scope.
+   *
+   * @param XPSVideoModelArtifactSpec $modelArtifactSpec
    */
   public function setModelArtifactSpec(XPSVideoModelArtifactSpec $modelArtifactSpec)
   {
@@ -41,7 +46,10 @@ class XPSVideoActionRecognitionTrainResponse extends \Google\Model
     return $this->modelArtifactSpec;
   }
   /**
-   * @param string
+   * The actual train cost of creating this model, expressed in node seconds,
+   * i.e. 3,600 value in this field means 1 node hour.
+   *
+   * @param string $trainCostNodeSeconds
    */
   public function setTrainCostNodeSeconds($trainCostNodeSeconds)
   {

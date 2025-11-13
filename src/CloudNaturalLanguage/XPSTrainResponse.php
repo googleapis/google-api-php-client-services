@@ -21,6 +21,8 @@ class XPSTrainResponse extends \Google\Collection
 {
   protected $collection_key = 'explanationConfigs';
   /**
+   * Estimated model size in bytes once deployed.
+   *
    * @var string
    */
   public $deployedModelSizeBytes;
@@ -39,6 +41,11 @@ class XPSTrainResponse extends \Google\Collection
   protected $imageSegmentationTrainRespType = XPSImageSegmentationTrainResponse::class;
   protected $imageSegmentationTrainRespDataType = '';
   /**
+   * Token that represents the trained model. This is considered immutable and
+   * is persisted in AutoML. xPS can put their own proto in the byte string, to
+   * e.g. point to the model checkpoints. The token is passed to other xPS APIs
+   * to refer to the model.
+   *
    * @var string
    */
   public $modelToken;
@@ -60,7 +67,9 @@ class XPSTrainResponse extends \Google\Collection
   protected $videoObjectTrackingTrainRespDataType = '';
 
   /**
-   * @param string
+   * Estimated model size in bytes once deployed.
+   *
+   * @param string $deployedModelSizeBytes
    */
   public function setDeployedModelSizeBytes($deployedModelSizeBytes)
   {
@@ -74,7 +83,12 @@ class XPSTrainResponse extends \Google\Collection
     return $this->deployedModelSizeBytes;
   }
   /**
-   * @param XPSVisionErrorAnalysisConfig[]
+   * Optional vision model error analysis configuration. The field is set when
+   * model error analysis is enabled in the training request. The results of
+   * error analysis will be binded together with evaluation results (in the
+   * format of AnnotatedExample).
+   *
+   * @param XPSVisionErrorAnalysisConfig[] $errorAnalysisConfigs
    */
   public function setErrorAnalysisConfigs($errorAnalysisConfigs)
   {
@@ -88,7 +102,13 @@ class XPSTrainResponse extends \Google\Collection
     return $this->errorAnalysisConfigs;
   }
   /**
-   * @param XPSExampleSet
+   * Examples used to evaluate the model (usually the test set), with the
+   * predicted annotations. The file_spec should point to recordio file(s) of
+   * AnnotatedExample. For each returned example, the example_id_token and
+   * annotations predicted by the model must be set. The example payload can and
+   * is recommended to be omitted.
+   *
+   * @param XPSExampleSet $evaluatedExampleSet
    */
   public function setEvaluatedExampleSet(XPSExampleSet $evaluatedExampleSet)
   {
@@ -102,7 +122,9 @@ class XPSTrainResponse extends \Google\Collection
     return $this->evaluatedExampleSet;
   }
   /**
-   * @param XPSEvaluationMetricsSet
+   * The trained model evaluation metrics. This can be optionally returned.
+   *
+   * @param XPSEvaluationMetricsSet $evaluationMetricsSet
    */
   public function setEvaluationMetricsSet(XPSEvaluationMetricsSet $evaluationMetricsSet)
   {
@@ -116,13 +138,18 @@ class XPSTrainResponse extends \Google\Collection
     return $this->evaluationMetricsSet;
   }
   /**
-   * @param XPSResponseExplanationSpec[]
+   * VisionExplanationConfig for XAI on test set. Optional for when XAI is
+   * enable in training request.
+   *
+   * @deprecated
+   * @param XPSResponseExplanationSpec[] $explanationConfigs
    */
   public function setExplanationConfigs($explanationConfigs)
   {
     $this->explanationConfigs = $explanationConfigs;
   }
   /**
+   * @deprecated
    * @return XPSResponseExplanationSpec[]
    */
   public function getExplanationConfigs()
@@ -130,7 +157,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->explanationConfigs;
   }
   /**
-   * @param XPSImageClassificationTrainResponse
+   * @param XPSImageClassificationTrainResponse $imageClassificationTrainResp
    */
   public function setImageClassificationTrainResp(XPSImageClassificationTrainResponse $imageClassificationTrainResp)
   {
@@ -144,7 +171,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->imageClassificationTrainResp;
   }
   /**
-   * @param XPSImageObjectDetectionModelSpec
+   * @param XPSImageObjectDetectionModelSpec $imageObjectDetectionTrainResp
    */
   public function setImageObjectDetectionTrainResp(XPSImageObjectDetectionModelSpec $imageObjectDetectionTrainResp)
   {
@@ -158,7 +185,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->imageObjectDetectionTrainResp;
   }
   /**
-   * @param XPSImageSegmentationTrainResponse
+   * @param XPSImageSegmentationTrainResponse $imageSegmentationTrainResp
    */
   public function setImageSegmentationTrainResp(XPSImageSegmentationTrainResponse $imageSegmentationTrainResp)
   {
@@ -172,7 +199,12 @@ class XPSTrainResponse extends \Google\Collection
     return $this->imageSegmentationTrainResp;
   }
   /**
-   * @param string
+   * Token that represents the trained model. This is considered immutable and
+   * is persisted in AutoML. xPS can put their own proto in the byte string, to
+   * e.g. point to the model checkpoints. The token is passed to other xPS APIs
+   * to refer to the model.
+   *
+   * @param string $modelToken
    */
   public function setModelToken($modelToken)
   {
@@ -186,7 +218,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->modelToken;
   }
   /**
-   * @param XPSSpeechModelSpec
+   * @param XPSSpeechModelSpec $speechTrainResp
    */
   public function setSpeechTrainResp(XPSSpeechModelSpec $speechTrainResp)
   {
@@ -200,7 +232,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->speechTrainResp;
   }
   /**
-   * @param XPSTablesTrainResponse
+   * @param XPSTablesTrainResponse $tablesTrainResp
    */
   public function setTablesTrainResp(XPSTablesTrainResponse $tablesTrainResp)
   {
@@ -214,7 +246,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->tablesTrainResp;
   }
   /**
-   * @param XPSTextToSpeechTrainResponse
+   * @param XPSTextToSpeechTrainResponse $textToSpeechTrainResp
    */
   public function setTextToSpeechTrainResp(XPSTextToSpeechTrainResponse $textToSpeechTrainResp)
   {
@@ -228,7 +260,9 @@ class XPSTrainResponse extends \Google\Collection
     return $this->textToSpeechTrainResp;
   }
   /**
-   * @param XPSTextTrainResponse
+   * Will only be needed for uCAIP from Beta.
+   *
+   * @param XPSTextTrainResponse $textTrainResp
    */
   public function setTextTrainResp(XPSTextTrainResponse $textTrainResp)
   {
@@ -242,7 +276,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->textTrainResp;
   }
   /**
-   * @param XPSTranslationTrainResponse
+   * @param XPSTranslationTrainResponse $translationTrainResp
    */
   public function setTranslationTrainResp(XPSTranslationTrainResponse $translationTrainResp)
   {
@@ -256,7 +290,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->translationTrainResp;
   }
   /**
-   * @param XPSVideoActionRecognitionTrainResponse
+   * @param XPSVideoActionRecognitionTrainResponse $videoActionRecognitionTrainResp
    */
   public function setVideoActionRecognitionTrainResp(XPSVideoActionRecognitionTrainResponse $videoActionRecognitionTrainResp)
   {
@@ -270,7 +304,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->videoActionRecognitionTrainResp;
   }
   /**
-   * @param XPSVideoClassificationTrainResponse
+   * @param XPSVideoClassificationTrainResponse $videoClassificationTrainResp
    */
   public function setVideoClassificationTrainResp(XPSVideoClassificationTrainResponse $videoClassificationTrainResp)
   {
@@ -284,7 +318,7 @@ class XPSTrainResponse extends \Google\Collection
     return $this->videoClassificationTrainResp;
   }
   /**
-   * @param XPSVideoObjectTrackingTrainResponse
+   * @param XPSVideoObjectTrackingTrainResponse $videoObjectTrackingTrainResp
    */
   public function setVideoObjectTrackingTrainResp(XPSVideoObjectTrackingTrainResponse $videoObjectTrackingTrainResp)
   {

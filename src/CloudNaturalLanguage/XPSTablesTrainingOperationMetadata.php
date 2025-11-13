@@ -19,44 +19,79 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class XPSTablesTrainingOperationMetadata extends \Google\Collection
 {
+  /**
+   * Unspecified stage.
+   */
+  public const CREATE_MODEL_STAGE_CREATE_MODEL_STAGE_UNSPECIFIED = 'CREATE_MODEL_STAGE_UNSPECIFIED';
+  /**
+   * Prepare the model training pipeline and run data processing.
+   */
+  public const CREATE_MODEL_STAGE_DATA_PREPROCESSING = 'DATA_PREPROCESSING';
+  /**
+   * Training model.
+   */
+  public const CREATE_MODEL_STAGE_TRAINING = 'TRAINING';
+  /**
+   * Run evaluation.
+   */
+  public const CREATE_MODEL_STAGE_EVALUATING = 'EVALUATING';
+  /**
+   * Finalizing model training pipeline.
+   */
+  public const CREATE_MODEL_STAGE_MODEL_POST_PROCESSING = 'MODEL_POST_PROCESSING';
   protected $collection_key = 'trainingObjectivePoints';
   /**
+   * Current stage of creating model.
+   *
    * @var string
    */
   public $createModelStage;
   /**
+   * The optimization objective for model.
+   *
    * @var string
    */
   public $optimizationObjective;
   protected $topTrialsType = XPSTuningTrial::class;
   protected $topTrialsDataType = 'array';
   /**
+   * Creating model budget.
+   *
    * @var string
    */
   public $trainBudgetMilliNodeHours;
   protected $trainingObjectivePointsType = XPSTrainingObjectivePoint::class;
   protected $trainingObjectivePointsDataType = 'array';
   /**
+   * Timestamp when training process starts.
+   *
    * @var string
    */
   public $trainingStartTime;
 
   /**
-   * @param string
+   * Current stage of creating model.
+   *
+   * Accepted values: CREATE_MODEL_STAGE_UNSPECIFIED, DATA_PREPROCESSING,
+   * TRAINING, EVALUATING, MODEL_POST_PROCESSING
+   *
+   * @param self::CREATE_MODEL_STAGE_* $createModelStage
    */
   public function setCreateModelStage($createModelStage)
   {
     $this->createModelStage = $createModelStage;
   }
   /**
-   * @return string
+   * @return self::CREATE_MODEL_STAGE_*
    */
   public function getCreateModelStage()
   {
     return $this->createModelStage;
   }
   /**
-   * @param string
+   * The optimization objective for model.
+   *
+   * @param string $optimizationObjective
    */
   public function setOptimizationObjective($optimizationObjective)
   {
@@ -70,7 +105,12 @@ class XPSTablesTrainingOperationMetadata extends \Google\Collection
     return $this->optimizationObjective;
   }
   /**
-   * @param XPSTuningTrial[]
+   * This field is for training. When the operation is terminated successfully,
+   * AutoML Backend post this field to operation metadata in spanner. If the
+   * metadata has no trials returned, the training operation is supposed to be a
+   * failure.
+   *
+   * @param XPSTuningTrial[] $topTrials
    */
   public function setTopTrials($topTrials)
   {
@@ -84,7 +124,9 @@ class XPSTablesTrainingOperationMetadata extends \Google\Collection
     return $this->topTrials;
   }
   /**
-   * @param string
+   * Creating model budget.
+   *
+   * @param string $trainBudgetMilliNodeHours
    */
   public function setTrainBudgetMilliNodeHours($trainBudgetMilliNodeHours)
   {
@@ -98,7 +140,11 @@ class XPSTablesTrainingOperationMetadata extends \Google\Collection
     return $this->trainBudgetMilliNodeHours;
   }
   /**
-   * @param XPSTrainingObjectivePoint[]
+   * This field records the training objective value with respect to time,
+   * giving insight into how the model architecture search is performing as
+   * training time elapses.
+   *
+   * @param XPSTrainingObjectivePoint[] $trainingObjectivePoints
    */
   public function setTrainingObjectivePoints($trainingObjectivePoints)
   {
@@ -112,7 +158,9 @@ class XPSTablesTrainingOperationMetadata extends \Google\Collection
     return $this->trainingObjectivePoints;
   }
   /**
-   * @param string
+   * Timestamp when training process starts.
+   *
+   * @param string $trainingStartTime
    */
   public function setTrainingStartTime($trainingStartTime)
   {

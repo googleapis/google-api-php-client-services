@@ -23,7 +23,10 @@ class XPSVisionTrainingOperationMetadata extends \Google\Model
   protected $explanationUsageDataType = '';
 
   /**
-   * @param InfraUsage
+   * Aggregated infra usage within certain time period, for billing report
+   * purpose if XAI is enable in training request.
+   *
+   * @param InfraUsage $explanationUsage
    */
   public function setExplanationUsage(InfraUsage $explanationUsage)
   {

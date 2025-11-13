@@ -20,16 +20,22 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSTrainingObjectivePoint extends \Google\Model
 {
   /**
+   * The time at which this point was recorded.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The objective value when this point was recorded.
+   *
    * @var float
    */
   public $value;
 
   /**
-   * @param string
+   * The time at which this point was recorded.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -43,7 +49,9 @@ class XPSTrainingObjectivePoint extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param float
+   * The objective value when this point was recorded.
+   *
+   * @param float $value
    */
   public function setValue($value)
   {

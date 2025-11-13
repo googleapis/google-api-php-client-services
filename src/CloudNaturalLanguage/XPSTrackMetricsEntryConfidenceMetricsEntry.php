@@ -20,28 +20,45 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSTrackMetricsEntryConfidenceMetricsEntry extends \Google\Model
 {
   /**
+   * Output only. Bounding box intersection-over-union precision. Measures how
+   * well the bounding boxes overlap between each other (e.g. complete overlap
+   * or just barely above iou_threshold).
+   *
    * @var float
    */
   public $boundingBoxIou;
   /**
+   * Output only. The confidence threshold value used to compute the metrics.
+   *
    * @var float
    */
   public $confidenceThreshold;
   /**
+   * Output only. Mismatch rate, which measures the tracking consistency, i.e.
+   * correctness of instance ID continuity.
+   *
    * @var float
    */
   public $mismatchRate;
   /**
+   * Output only. Tracking precision.
+   *
    * @var float
    */
   public $trackingPrecision;
   /**
+   * Output only. Tracking recall.
+   *
    * @var float
    */
   public $trackingRecall;
 
   /**
-   * @param float
+   * Output only. Bounding box intersection-over-union precision. Measures how
+   * well the bounding boxes overlap between each other (e.g. complete overlap
+   * or just barely above iou_threshold).
+   *
+   * @param float $boundingBoxIou
    */
   public function setBoundingBoxIou($boundingBoxIou)
   {
@@ -55,7 +72,9 @@ class XPSTrackMetricsEntryConfidenceMetricsEntry extends \Google\Model
     return $this->boundingBoxIou;
   }
   /**
-   * @param float
+   * Output only. The confidence threshold value used to compute the metrics.
+   *
+   * @param float $confidenceThreshold
    */
   public function setConfidenceThreshold($confidenceThreshold)
   {
@@ -69,7 +88,10 @@ class XPSTrackMetricsEntryConfidenceMetricsEntry extends \Google\Model
     return $this->confidenceThreshold;
   }
   /**
-   * @param float
+   * Output only. Mismatch rate, which measures the tracking consistency, i.e.
+   * correctness of instance ID continuity.
+   *
+   * @param float $mismatchRate
    */
   public function setMismatchRate($mismatchRate)
   {
@@ -83,7 +105,9 @@ class XPSTrackMetricsEntryConfidenceMetricsEntry extends \Google\Model
     return $this->mismatchRate;
   }
   /**
-   * @param float
+   * Output only. Tracking precision.
+   *
+   * @param float $trackingPrecision
    */
   public function setTrackingPrecision($trackingPrecision)
   {
@@ -97,7 +121,9 @@ class XPSTrackMetricsEntryConfidenceMetricsEntry extends \Google\Model
     return $this->trackingPrecision;
   }
   /**
-   * @param float
+   * Output only. Tracking recall.
+   *
+   * @param float $trackingRecall
    */
   public function setTrackingRecall($trackingRecall)
   {

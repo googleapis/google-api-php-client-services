@@ -25,7 +25,9 @@ class XPSTuningTrial extends \Google\Model
   protected $trainingObjectivePointDataType = '';
 
   /**
-   * @param XPSTablesModelStructure
+   * Model parameters for the trial.
+   *
+   * @param XPSTablesModelStructure $modelStructure
    */
   public function setModelStructure(XPSTablesModelStructure $modelStructure)
   {
@@ -39,7 +41,9 @@ class XPSTuningTrial extends \Google\Model
     return $this->modelStructure;
   }
   /**
-   * @param XPSTrainingObjectivePoint
+   * The optimization objective evaluation of the eval split data.
+   *
+   * @param XPSTrainingObjectivePoint $trainingObjectivePoint
    */
   public function setTrainingObjectivePoint(XPSTrainingObjectivePoint $trainingObjectivePoint)
   {

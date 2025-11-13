@@ -22,36 +22,57 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
   protected $confusionMatrixType = XPSConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
   /**
+   * Output only. The harmonic mean of recall and precision.
+   *
    * @var float
    */
   public $f1Score;
   /**
+   * Output only. Linear weighted kappa. Only set for the overall model
+   * evaluation, not for evaluation of a single annotation spec.
+   *
    * @var float
    */
   public $linearKappa;
   /**
+   * Output only. Mean absolute error. Only set for the overall model
+   * evaluation, not for evaluation of a single annotation spec.
+   *
    * @var float
    */
   public $meanAbsoluteError;
   /**
+   * Output only. Mean squared error. Only set for the overall model evaluation,
+   * not for evaluation of a single annotation spec.
+   *
    * @var float
    */
   public $meanSquaredError;
   /**
+   * Output only. Precision.
+   *
    * @var float
    */
   public $precision;
   /**
+   * Output only. Quadratic weighted kappa. Only set for the overall model
+   * evaluation, not for evaluation of a single annotation spec.
+   *
    * @var float
    */
   public $quadraticKappa;
   /**
+   * Output only. Recall.
+   *
    * @var float
    */
   public $recall;
 
   /**
-   * @param XPSConfusionMatrix
+   * Output only. Confusion matrix of the evaluation. Only set for the overall
+   * model evaluation, not for evaluation of a single annotation spec.
+   *
+   * @param XPSConfusionMatrix $confusionMatrix
    */
   public function setConfusionMatrix(XPSConfusionMatrix $confusionMatrix)
   {
@@ -65,7 +86,9 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
     return $this->confusionMatrix;
   }
   /**
-   * @param float
+   * Output only. The harmonic mean of recall and precision.
+   *
+   * @param float $f1Score
    */
   public function setF1Score($f1Score)
   {
@@ -79,7 +102,10 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
     return $this->f1Score;
   }
   /**
-   * @param float
+   * Output only. Linear weighted kappa. Only set for the overall model
+   * evaluation, not for evaluation of a single annotation spec.
+   *
+   * @param float $linearKappa
    */
   public function setLinearKappa($linearKappa)
   {
@@ -93,7 +119,10 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
     return $this->linearKappa;
   }
   /**
-   * @param float
+   * Output only. Mean absolute error. Only set for the overall model
+   * evaluation, not for evaluation of a single annotation spec.
+   *
+   * @param float $meanAbsoluteError
    */
   public function setMeanAbsoluteError($meanAbsoluteError)
   {
@@ -107,7 +136,10 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
     return $this->meanAbsoluteError;
   }
   /**
-   * @param float
+   * Output only. Mean squared error. Only set for the overall model evaluation,
+   * not for evaluation of a single annotation spec.
+   *
+   * @param float $meanSquaredError
    */
   public function setMeanSquaredError($meanSquaredError)
   {
@@ -121,7 +153,9 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
     return $this->meanSquaredError;
   }
   /**
-   * @param float
+   * Output only. Precision.
+   *
+   * @param float $precision
    */
   public function setPrecision($precision)
   {
@@ -135,7 +169,10 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
     return $this->precision;
   }
   /**
-   * @param float
+   * Output only. Quadratic weighted kappa. Only set for the overall model
+   * evaluation, not for evaluation of a single annotation spec.
+   *
+   * @param float $quadraticKappa
    */
   public function setQuadraticKappa($quadraticKappa)
   {
@@ -149,7 +186,9 @@ class XPSTextSentimentEvaluationMetrics extends \Google\Model
     return $this->quadraticKappa;
   }
   /**
-   * @param float
+   * Output only. Recall.
+   *
+   * @param float $recall
    */
   public function setRecall($recall)
   {

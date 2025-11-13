@@ -26,7 +26,9 @@ class XPSVideoModelArtifactSpec extends \Google\Collection
   protected $servingArtifactDataType = '';
 
   /**
-   * @param XPSModelArtifactItem[]
+   * The model binary files in different formats for model export.
+   *
+   * @param XPSModelArtifactItem[] $exportArtifact
    */
   public function setExportArtifact($exportArtifact)
   {
@@ -40,7 +42,10 @@ class XPSVideoModelArtifactSpec extends \Google\Collection
     return $this->exportArtifact;
   }
   /**
-   * @param XPSModelArtifactItem
+   * The default model binary file used for serving (e.g. batch predict) via
+   * public Cloud AI Platform API.
+   *
+   * @param XPSModelArtifactItem $servingArtifact
    */
   public function setServingArtifact(XPSModelArtifactItem $servingArtifact)
   {

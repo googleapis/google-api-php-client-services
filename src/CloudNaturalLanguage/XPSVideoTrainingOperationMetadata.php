@@ -20,12 +20,24 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSVideoTrainingOperationMetadata extends \Google\Model
 {
   /**
+   * This is an estimation of the node hours necessary for training a model,
+   * expressed in milli node hours (i.e. 1,000 value in this field means 1 node
+   * hour). A node hour represents the time a virtual machine spends running
+   * your training job. The cost of one node running for one hour is a node
+   * hour.
+   *
    * @var string
    */
   public $trainCostMilliNodeHour;
 
   /**
-   * @param string
+   * This is an estimation of the node hours necessary for training a model,
+   * expressed in milli node hours (i.e. 1,000 value in this field means 1 node
+   * hour). A node hour represents the time a virtual machine spends running
+   * your training job. The cost of one node running for one hour is a node
+   * hour.
+   *
+   * @param string $trainCostMilliNodeHour
    */
   public function setTrainCostMilliNodeHour($trainCostMilliNodeHour)
   {

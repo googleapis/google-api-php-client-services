@@ -20,6 +20,9 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSXpsOperationMetadata extends \Google\Model
 {
   /**
+   * Optional. XPS server can opt to provide example count of the long running
+   * operation (e.g. training, data importing, batch prediction).
+   *
    * @var string
    */
   public $exampleCount;
@@ -35,7 +38,10 @@ class XPSXpsOperationMetadata extends \Google\Model
   protected $visionTrainingOperationMetadataDataType = '';
 
   /**
-   * @param string
+   * Optional. XPS server can opt to provide example count of the long running
+   * operation (e.g. training, data importing, batch prediction).
+   *
+   * @param string $exampleCount
    */
   public function setExampleCount($exampleCount)
   {
@@ -49,7 +55,15 @@ class XPSXpsOperationMetadata extends \Google\Model
     return $this->exampleCount;
   }
   /**
-   * @param XPSReportingMetrics
+   * Metrics for the operation. By the time the operation is terminated (whether
+   * succeeded or failed) as returned from XPS, AutoML BE assumes the metrics
+   * are finalized. AutoML BE transparently posts the metrics to Chemist if it's
+   * not empty, regardless of the response content or error type. If user is
+   * supposed to be charged in case of cancellation/error, this field should be
+   * set. In the case where the type of LRO doesn't require any billing, this
+   * field should be left unset.
+   *
+   * @param XPSReportingMetrics $reportingMetrics
    */
   public function setReportingMetrics(XPSReportingMetrics $reportingMetrics)
   {
@@ -63,7 +77,7 @@ class XPSXpsOperationMetadata extends \Google\Model
     return $this->reportingMetrics;
   }
   /**
-   * @param XPSTablesTrainingOperationMetadata
+   * @param XPSTablesTrainingOperationMetadata $tablesTrainingOperationMetadata
    */
   public function setTablesTrainingOperationMetadata(XPSTablesTrainingOperationMetadata $tablesTrainingOperationMetadata)
   {
@@ -77,7 +91,7 @@ class XPSXpsOperationMetadata extends \Google\Model
     return $this->tablesTrainingOperationMetadata;
   }
   /**
-   * @param XPSVideoBatchPredictOperationMetadata
+   * @param XPSVideoBatchPredictOperationMetadata $videoBatchPredictOperationMetadata
    */
   public function setVideoBatchPredictOperationMetadata(XPSVideoBatchPredictOperationMetadata $videoBatchPredictOperationMetadata)
   {
@@ -91,7 +105,7 @@ class XPSXpsOperationMetadata extends \Google\Model
     return $this->videoBatchPredictOperationMetadata;
   }
   /**
-   * @param XPSVideoTrainingOperationMetadata
+   * @param XPSVideoTrainingOperationMetadata $videoTrainingOperationMetadata
    */
   public function setVideoTrainingOperationMetadata(XPSVideoTrainingOperationMetadata $videoTrainingOperationMetadata)
   {
@@ -105,7 +119,7 @@ class XPSXpsOperationMetadata extends \Google\Model
     return $this->videoTrainingOperationMetadata;
   }
   /**
-   * @param XPSVisionTrainingOperationMetadata
+   * @param XPSVisionTrainingOperationMetadata $visionTrainingOperationMetadata
    */
   public function setVisionTrainingOperationMetadata(XPSVisionTrainingOperationMetadata $visionTrainingOperationMetadata)
   {

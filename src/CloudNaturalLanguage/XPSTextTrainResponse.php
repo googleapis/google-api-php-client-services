@@ -24,7 +24,9 @@ class XPSTextTrainResponse extends \Google\Collection
   protected $componentModelDataType = 'array';
 
   /**
-   * @param XPSTextComponentModel[]
+   * Component submodels.
+   *
+   * @param XPSTextComponentModel[] $componentModel
    */
   public function setComponentModel($componentModel)
   {

@@ -21,32 +21,50 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
 {
   protected $collection_key = 'trackMetricsEntries';
   /**
+   * Output only. The single metric for bounding boxes evaluation: the
+   * mean_average_precision averaged over all bounding_box_metrics_entries.
+   *
    * @var float
    */
   public $boundingBoxMeanAveragePrecision;
   protected $boundingBoxMetricsEntriesType = XPSBoundingBoxMetricsEntry::class;
   protected $boundingBoxMetricsEntriesDataType = 'array';
   /**
+   * The number of bounding boxes used for model evaluation.
+   *
    * @var int
    */
   public $evaluatedBoundingboxCount;
   /**
+   * The number of video frames used for model evaluation.
+   *
    * @var int
    */
   public $evaluatedFrameCount;
   /**
+   * The number of tracks used for model evaluation.
+   *
    * @var int
    */
   public $evaluatedTrackCount;
   /**
+   * Output only. The single metric for tracks accuracy evaluation: the
+   * mean_average_precision averaged over all track_metrics_entries.
+   *
    * @var float
    */
   public $trackMeanAveragePrecision;
   /**
+   * Output only. The single metric for tracks bounding box iou evaluation: the
+   * mean_bounding_box_iou averaged over all track_metrics_entries.
+   *
    * @var float
    */
   public $trackMeanBoundingBoxIou;
   /**
+   * Output only. The single metric for tracking consistency evaluation: the
+   * mean_mismatch_rate averaged over all track_metrics_entries.
+   *
    * @var float
    */
   public $trackMeanMismatchRate;
@@ -54,7 +72,10 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
   protected $trackMetricsEntriesDataType = 'array';
 
   /**
-   * @param float
+   * Output only. The single metric for bounding boxes evaluation: the
+   * mean_average_precision averaged over all bounding_box_metrics_entries.
+   *
+   * @param float $boundingBoxMeanAveragePrecision
    */
   public function setBoundingBoxMeanAveragePrecision($boundingBoxMeanAveragePrecision)
   {
@@ -68,7 +89,10 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->boundingBoxMeanAveragePrecision;
   }
   /**
-   * @param XPSBoundingBoxMetricsEntry[]
+   * Output only. The bounding boxes match metrics for each Intersection-over-
+   * union threshold 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99.
+   *
+   * @param XPSBoundingBoxMetricsEntry[] $boundingBoxMetricsEntries
    */
   public function setBoundingBoxMetricsEntries($boundingBoxMetricsEntries)
   {
@@ -82,7 +106,9 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->boundingBoxMetricsEntries;
   }
   /**
-   * @param int
+   * The number of bounding boxes used for model evaluation.
+   *
+   * @param int $evaluatedBoundingboxCount
    */
   public function setEvaluatedBoundingboxCount($evaluatedBoundingboxCount)
   {
@@ -96,7 +122,9 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->evaluatedBoundingboxCount;
   }
   /**
-   * @param int
+   * The number of video frames used for model evaluation.
+   *
+   * @param int $evaluatedFrameCount
    */
   public function setEvaluatedFrameCount($evaluatedFrameCount)
   {
@@ -110,7 +138,9 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->evaluatedFrameCount;
   }
   /**
-   * @param int
+   * The number of tracks used for model evaluation.
+   *
+   * @param int $evaluatedTrackCount
    */
   public function setEvaluatedTrackCount($evaluatedTrackCount)
   {
@@ -124,7 +154,10 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->evaluatedTrackCount;
   }
   /**
-   * @param float
+   * Output only. The single metric for tracks accuracy evaluation: the
+   * mean_average_precision averaged over all track_metrics_entries.
+   *
+   * @param float $trackMeanAveragePrecision
    */
   public function setTrackMeanAveragePrecision($trackMeanAveragePrecision)
   {
@@ -138,7 +171,10 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->trackMeanAveragePrecision;
   }
   /**
-   * @param float
+   * Output only. The single metric for tracks bounding box iou evaluation: the
+   * mean_bounding_box_iou averaged over all track_metrics_entries.
+   *
+   * @param float $trackMeanBoundingBoxIou
    */
   public function setTrackMeanBoundingBoxIou($trackMeanBoundingBoxIou)
   {
@@ -152,7 +188,10 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->trackMeanBoundingBoxIou;
   }
   /**
-   * @param float
+   * Output only. The single metric for tracking consistency evaluation: the
+   * mean_mismatch_rate averaged over all track_metrics_entries.
+   *
+   * @param float $trackMeanMismatchRate
    */
   public function setTrackMeanMismatchRate($trackMeanMismatchRate)
   {
@@ -166,7 +205,10 @@ class XPSVideoObjectTrackingEvaluationMetrics extends \Google\Collection
     return $this->trackMeanMismatchRate;
   }
   /**
-   * @param XPSTrackMetricsEntry[]
+   * Output only. The tracks match metrics for each Intersection-over-union
+   * threshold 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99.
+   *
+   * @param XPSTrackMetricsEntry[] $trackMetricsEntries
    */
   public function setTrackMetricsEntries($trackMetricsEntries)
   {

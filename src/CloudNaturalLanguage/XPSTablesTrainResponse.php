@@ -27,12 +27,16 @@ class XPSTablesTrainResponse extends \Google\Collection
   protected $tablesModelColumnInfoType = XPSTablesModelColumnInfo::class;
   protected $tablesModelColumnInfoDataType = 'array';
   /**
+   * The actual training cost of the model, expressed in milli node hours, i.e.
+   * 1,000 value in this field means 1 node hour. Guaranteed to not exceed the
+   * train budget.
+   *
    * @var string
    */
   public $trainCostMilliNodeHours;
 
   /**
-   * @param XPSTablesModelStructure
+   * @param XPSTablesModelStructure $modelStructure
    */
   public function setModelStructure(XPSTablesModelStructure $modelStructure)
   {
@@ -46,7 +50,9 @@ class XPSTablesTrainResponse extends \Google\Collection
     return $this->modelStructure;
   }
   /**
-   * @param XPSRow[]
+   * Sample rows from the dataset this model was trained.
+   *
+   * @param XPSRow[] $predictionSampleRows
    */
   public function setPredictionSampleRows($predictionSampleRows)
   {
@@ -60,7 +66,10 @@ class XPSTablesTrainResponse extends \Google\Collection
     return $this->predictionSampleRows;
   }
   /**
-   * @param XPSTablesModelColumnInfo[]
+   * Output only. Auxiliary information for each of the
+   * input_feature_column_specs, with respect to this particular model.
+   *
+   * @param XPSTablesModelColumnInfo[] $tablesModelColumnInfo
    */
   public function setTablesModelColumnInfo($tablesModelColumnInfo)
   {
@@ -74,7 +83,11 @@ class XPSTablesTrainResponse extends \Google\Collection
     return $this->tablesModelColumnInfo;
   }
   /**
-   * @param string
+   * The actual training cost of the model, expressed in milli node hours, i.e.
+   * 1,000 value in this field means 1 node hour. Guaranteed to not exceed the
+   * train budget.
+   *
+   * @param string $trainCostMilliNodeHours
    */
   public function setTrainCostMilliNodeHours($trainCostMilliNodeHours)
   {

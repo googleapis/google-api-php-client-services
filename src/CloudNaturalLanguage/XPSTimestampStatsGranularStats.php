@@ -20,12 +20,18 @@ namespace Google\Service\CloudNaturalLanguage;
 class XPSTimestampStatsGranularStats extends \Google\Model
 {
   /**
+   * A map from granularity key to example count for that key. E.g. for
+   * hour_of_day `13` means 1pm, or for month_of_year `5` means May).
+   *
    * @var string[]
    */
   public $buckets;
 
   /**
-   * @param string[]
+   * A map from granularity key to example count for that key. E.g. for
+   * hour_of_day `13` means 1pm, or for month_of_year `5` means May).
+   *
+   * @param string[] $buckets
    */
   public function setBuckets($buckets)
   {
