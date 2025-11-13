@@ -23,6 +23,9 @@ class Write extends \Google\Collection
   protected $currentDocumentType = Precondition::class;
   protected $currentDocumentDataType = '';
   /**
+   * A document name to delete. In the format:
+   * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+   *
    * @var string
    */
   public $delete;
@@ -36,7 +39,10 @@ class Write extends \Google\Collection
   protected $updateTransformsDataType = 'array';
 
   /**
-   * @param Precondition
+   * An optional precondition on the document. The write will fail if this is
+   * set and not met by the target document.
+   *
+   * @param Precondition $currentDocument
    */
   public function setCurrentDocument(Precondition $currentDocument)
   {
@@ -50,7 +56,10 @@ class Write extends \Google\Collection
     return $this->currentDocument;
   }
   /**
-   * @param string
+   * A document name to delete. In the format:
+   * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+   *
+   * @param string $delete
    */
   public function setDelete($delete)
   {
@@ -64,7 +73,9 @@ class Write extends \Google\Collection
     return $this->delete;
   }
   /**
-   * @param DocumentTransform
+   * Applies a transformation to a document.
+   *
+   * @param DocumentTransform $transform
    */
   public function setTransform(DocumentTransform $transform)
   {
@@ -78,7 +89,9 @@ class Write extends \Google\Collection
     return $this->transform;
   }
   /**
-   * @param Document
+   * A document to write.
+   *
+   * @param Document $update
    */
   public function setUpdate(Document $update)
   {
@@ -92,7 +105,15 @@ class Write extends \Google\Collection
     return $this->update;
   }
   /**
-   * @param DocumentMask
+   * The fields to update in this write. This field can be set only when the
+   * operation is `update`. If the mask is not set for an `update` and the
+   * document exists, any existing data will be overwritten. If the mask is set
+   * and the document on the server has fields not covered by the mask, they are
+   * left unchanged. Fields referenced in the mask, but not present in the input
+   * document, are deleted from the document on the server. The field paths in
+   * this mask must not contain a reserved field name.
+   *
+   * @param DocumentMask $updateMask
    */
   public function setUpdateMask(DocumentMask $updateMask)
   {
@@ -106,7 +127,11 @@ class Write extends \Google\Collection
     return $this->updateMask;
   }
   /**
-   * @param FieldTransform[]
+   * The transforms to perform after update. This field can be set only when the
+   * operation is `update`. If present, this write is equivalent to performing
+   * `update` and `transform` to the same document atomically and in order.
+   *
+   * @param FieldTransform[] $updateTransforms
    */
   public function setUpdateTransforms($updateTransforms)
   {

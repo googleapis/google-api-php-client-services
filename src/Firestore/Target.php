@@ -22,30 +22,58 @@ class Target extends \Google\Model
   protected $documentsType = DocumentsTarget::class;
   protected $documentsDataType = '';
   /**
+   * The number of documents that last matched the query at the resume token or
+   * read time. This value is only relevant when a `resume_type` is provided.
+   * This value being present and greater than zero signals that the client
+   * wants `ExistenceFilter.unchanged_names` to be included in the response.
+   *
    * @var int
    */
   public $expectedCount;
   /**
+   * If the target should be removed once it is current and consistent.
+   *
    * @var bool
    */
   public $once;
   protected $queryType = QueryTarget::class;
   protected $queryDataType = '';
   /**
+   * Start listening after a specific `read_time`. The client must know the
+   * state of matching documents at this time.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * A resume token from a prior TargetChange for an identical target. Using a
+   * resume token with a different target is unsupported and may fail.
+   *
    * @var string
    */
   public $resumeToken;
   /**
+   * The target ID that identifies the target on the stream. Must be a positive
+   * number and non-zero. If `target_id` is 0 (or unspecified), the server will
+   * assign an ID for this target and return that in a `TargetChange::ADD`
+   * event. Once a target with `target_id=0` is added, all subsequent targets
+   * must also have `target_id=0`. If an `AddTarget` request with `target_id !=
+   * 0` is sent to the server after a target with `target_id=0` is added, the
+   * server will immediately send a response with a `TargetChange::Remove`
+   * event. Note that if the client sends multiple `AddTarget` requests without
+   * an ID, the order of IDs returned in `TargetChange.target_ids` are
+   * undefined. Therefore, clients should provide a target ID instead of relying
+   * on the server to assign one. If `target_id` is non-zero, there must not be
+   * an existing active target on this stream with the same ID.
+   *
    * @var int
    */
   public $targetId;
 
   /**
-   * @param DocumentsTarget
+   * A target specified by a set of document names.
+   *
+   * @param DocumentsTarget $documents
    */
   public function setDocuments(DocumentsTarget $documents)
   {
@@ -59,7 +87,12 @@ class Target extends \Google\Model
     return $this->documents;
   }
   /**
-   * @param int
+   * The number of documents that last matched the query at the resume token or
+   * read time. This value is only relevant when a `resume_type` is provided.
+   * This value being present and greater than zero signals that the client
+   * wants `ExistenceFilter.unchanged_names` to be included in the response.
+   *
+   * @param int $expectedCount
    */
   public function setExpectedCount($expectedCount)
   {
@@ -73,7 +106,9 @@ class Target extends \Google\Model
     return $this->expectedCount;
   }
   /**
-   * @param bool
+   * If the target should be removed once it is current and consistent.
+   *
+   * @param bool $once
    */
   public function setOnce($once)
   {
@@ -87,7 +122,9 @@ class Target extends \Google\Model
     return $this->once;
   }
   /**
-   * @param QueryTarget
+   * A target specified by a query.
+   *
+   * @param QueryTarget $query
    */
   public function setQuery(QueryTarget $query)
   {
@@ -101,7 +138,10 @@ class Target extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * Start listening after a specific `read_time`. The client must know the
+   * state of matching documents at this time.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -115,7 +155,10 @@ class Target extends \Google\Model
     return $this->readTime;
   }
   /**
-   * @param string
+   * A resume token from a prior TargetChange for an identical target. Using a
+   * resume token with a different target is unsupported and may fail.
+   *
+   * @param string $resumeToken
    */
   public function setResumeToken($resumeToken)
   {
@@ -129,7 +172,20 @@ class Target extends \Google\Model
     return $this->resumeToken;
   }
   /**
-   * @param int
+   * The target ID that identifies the target on the stream. Must be a positive
+   * number and non-zero. If `target_id` is 0 (or unspecified), the server will
+   * assign an ID for this target and return that in a `TargetChange::ADD`
+   * event. Once a target with `target_id=0` is added, all subsequent targets
+   * must also have `target_id=0`. If an `AddTarget` request with `target_id !=
+   * 0` is sent to the server after a target with `target_id=0` is added, the
+   * server will immediately send a response with a `TargetChange::Remove`
+   * event. Note that if the client sends multiple `AddTarget` requests without
+   * an ID, the order of IDs returned in `TargetChange.target_ids` are
+   * undefined. Therefore, clients should provide a target ID instead of relying
+   * on the server to assign one. If `target_id` is non-zero, there must not be
+   * an existing active target on this stream with the same ID.
+   *
+   * @param int $targetId
    */
   public function setTargetId($targetId)
   {

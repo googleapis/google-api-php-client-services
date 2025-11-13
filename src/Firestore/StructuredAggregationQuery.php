@@ -26,7 +26,11 @@ class StructuredAggregationQuery extends \Google\Collection
   protected $structuredQueryDataType = '';
 
   /**
-   * @param Aggregation[]
+   * Optional. Series of aggregations to apply over the results of the
+   * `structured_query`. Requires: * A minimum of one and maximum of five
+   * aggregations per query.
+   *
+   * @param Aggregation[] $aggregations
    */
   public function setAggregations($aggregations)
   {
@@ -40,7 +44,9 @@ class StructuredAggregationQuery extends \Google\Collection
     return $this->aggregations;
   }
   /**
-   * @param StructuredQuery
+   * Nested structured query.
+   *
+   * @param StructuredQuery $structuredQuery
    */
   public function setStructuredQuery(StructuredQuery $structuredQuery)
   {

@@ -19,15 +19,43 @@ namespace Google\Service\Firestore;
 
 class UnaryFilter extends \Google\Model
 {
+  /**
+   * Unspecified. This value must not be used.
+   */
+  public const OP_OPERATOR_UNSPECIFIED = 'OPERATOR_UNSPECIFIED';
+  /**
+   * The given `field` is equal to `NaN`.
+   */
+  public const OP_IS_NAN = 'IS_NAN';
+  /**
+   * The given `field` is equal to `NULL`.
+   */
+  public const OP_IS_NULL = 'IS_NULL';
+  /**
+   * The given `field` is not equal to `NaN`. Requires: * No other `NOT_EQUAL`,
+   * `NOT_IN`, `IS_NOT_NULL`, or `IS_NOT_NAN`. * That `field` comes first in the
+   * `order_by`.
+   */
+  public const OP_IS_NOT_NAN = 'IS_NOT_NAN';
+  /**
+   * The given `field` is not equal to `NULL`. Requires: * A single `NOT_EQUAL`,
+   * `NOT_IN`, `IS_NOT_NULL`, or `IS_NOT_NAN`. * That `field` comes first in the
+   * `order_by`.
+   */
+  public const OP_IS_NOT_NULL = 'IS_NOT_NULL';
   protected $fieldType = FieldReference::class;
   protected $fieldDataType = '';
   /**
+   * The unary operator to apply.
+   *
    * @var string
    */
   public $op;
 
   /**
-   * @param FieldReference
+   * The field to which to apply the operator.
+   *
+   * @param FieldReference $field
    */
   public function setField(FieldReference $field)
   {
@@ -41,14 +69,19 @@ class UnaryFilter extends \Google\Model
     return $this->field;
   }
   /**
-   * @param string
+   * The unary operator to apply.
+   *
+   * Accepted values: OPERATOR_UNSPECIFIED, IS_NAN, IS_NULL, IS_NOT_NAN,
+   * IS_NOT_NULL
+   *
+   * @param self::OP_* $op
    */
   public function setOp($op)
   {
     $this->op = $op;
   }
   /**
-   * @return string
+   * @return self::OP_*
    */
   public function getOp()
   {

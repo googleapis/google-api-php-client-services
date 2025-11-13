@@ -23,12 +23,19 @@ class WriteResult extends \Google\Collection
   protected $transformResultsType = Value::class;
   protected $transformResultsDataType = 'array';
   /**
+   * The last update time of the document after applying the write. Not set
+   * after a `delete`. If the write did not actually change the document, this
+   * will be the previous update_time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param Value[]
+   * The results of applying each DocumentTransform.FieldTransform, in the same
+   * order.
+   *
+   * @param Value[] $transformResults
    */
   public function setTransformResults($transformResults)
   {
@@ -42,7 +49,11 @@ class WriteResult extends \Google\Collection
     return $this->transformResults;
   }
   /**
-   * @param string
+   * The last update time of the document after applying the write. Not set
+   * after a `delete`. If the write did not actually change the document, this
+   * will be the previous update_time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
