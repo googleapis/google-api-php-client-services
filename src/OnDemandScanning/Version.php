@@ -20,32 +20,70 @@ namespace Google\Service\OnDemandScanning;
 class Version extends \Google\Model
 {
   /**
+   * Unknown.
+   */
+  public const KIND_VERSION_KIND_UNSPECIFIED = 'VERSION_KIND_UNSPECIFIED';
+  /**
+   * A standard package version.
+   */
+  public const KIND_NORMAL = 'NORMAL';
+  /**
+   * A special version representing negative infinity.
+   */
+  public const KIND_MINIMUM = 'MINIMUM';
+  /**
+   * A special version representing positive infinity.
+   */
+  public const KIND_MAXIMUM = 'MAXIMUM';
+  /**
+   * Used to correct mistakes in the version numbering scheme.
+   *
    * @var int
    */
   public $epoch;
   /**
+   * Human readable version string. This string is of the form :- and is only
+   * set when kind is NORMAL.
+   *
    * @var string
    */
   public $fullName;
   /**
+   * Whether this version is specifying part of an inclusive range. Grafeas does
+   * not have the capability to specify version ranges; instead we have fields
+   * that specify start version and end versions. At times this is insufficient
+   * - we also need to specify whether the version is included in the range or
+   * is excluded from the range. This boolean is expected to be set to true when
+   * the version is included in a range.
+   *
    * @var bool
    */
   public $inclusive;
   /**
+   * Required. Distinguishes between sentinel MIN/MAX versions and normal
+   * versions.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Required only when version kind is NORMAL. The main part of the version
+   * name.
+   *
    * @var string
    */
   public $name;
   /**
+   * The iteration of the package build from the above version.
+   *
    * @var string
    */
   public $revision;
 
   /**
-   * @param int
+   * Used to correct mistakes in the version numbering scheme.
+   *
+   * @param int $epoch
    */
   public function setEpoch($epoch)
   {
@@ -59,7 +97,10 @@ class Version extends \Google\Model
     return $this->epoch;
   }
   /**
-   * @param string
+   * Human readable version string. This string is of the form :- and is only
+   * set when kind is NORMAL.
+   *
+   * @param string $fullName
    */
   public function setFullName($fullName)
   {
@@ -73,7 +114,14 @@ class Version extends \Google\Model
     return $this->fullName;
   }
   /**
-   * @param bool
+   * Whether this version is specifying part of an inclusive range. Grafeas does
+   * not have the capability to specify version ranges; instead we have fields
+   * that specify start version and end versions. At times this is insufficient
+   * - we also need to specify whether the version is included in the range or
+   * is excluded from the range. This boolean is expected to be set to true when
+   * the version is included in a range.
+   *
+   * @param bool $inclusive
    */
   public function setInclusive($inclusive)
   {
@@ -87,21 +135,29 @@ class Version extends \Google\Model
     return $this->inclusive;
   }
   /**
-   * @param string
+   * Required. Distinguishes between sentinel MIN/MAX versions and normal
+   * versions.
+   *
+   * Accepted values: VERSION_KIND_UNSPECIFIED, NORMAL, MINIMUM, MAXIMUM
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * Required only when version kind is NORMAL. The main part of the version
+   * name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -115,7 +171,9 @@ class Version extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The iteration of the package build from the above version.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {
