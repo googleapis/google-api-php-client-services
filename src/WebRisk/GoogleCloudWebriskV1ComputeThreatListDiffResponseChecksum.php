@@ -20,12 +20,18 @@ namespace Google\Service\WebRisk;
 class GoogleCloudWebriskV1ComputeThreatListDiffResponseChecksum extends \Google\Model
 {
   /**
+   * The SHA256 hash of the client state; that is, of the sorted list of all
+   * hashes present in the database.
+   *
    * @var string
    */
   public $sha256;
 
   /**
-   * @param string
+   * The SHA256 hash of the client state; that is, of the sorted list of all
+   * hashes present in the database.
+   *
+   * @param string $sha256
    */
   public function setSha256($sha256)
   {
