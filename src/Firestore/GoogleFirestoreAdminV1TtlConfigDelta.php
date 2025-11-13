@@ -20,19 +20,37 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1TtlConfigDelta extends \Google\Model
 {
   /**
+   * The type of change is not specified or known.
+   */
+  public const CHANGE_TYPE_CHANGE_TYPE_UNSPECIFIED = 'CHANGE_TYPE_UNSPECIFIED';
+  /**
+   * The TTL config is being added.
+   */
+  public const CHANGE_TYPE_ADD = 'ADD';
+  /**
+   * The TTL config is being removed.
+   */
+  public const CHANGE_TYPE_REMOVE = 'REMOVE';
+  /**
+   * Specifies how the TTL configuration is changing.
+   *
    * @var string
    */
   public $changeType;
 
   /**
-   * @param string
+   * Specifies how the TTL configuration is changing.
+   *
+   * Accepted values: CHANGE_TYPE_UNSPECIFIED, ADD, REMOVE
+   *
+   * @param self::CHANGE_TYPE_* $changeType
    */
   public function setChangeType($changeType)
   {
     $this->changeType = $changeType;
   }
   /**
-   * @return string
+   * @return self::CHANGE_TYPE_*
    */
   public function getChangeType()
   {

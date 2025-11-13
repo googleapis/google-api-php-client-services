@@ -27,7 +27,9 @@ class GoogleFirestoreAdminV1EncryptionConfig extends \Google\Model
   protected $useSourceEncryptionDataType = '';
 
   /**
-   * @param GoogleFirestoreAdminV1CustomerManagedEncryptionOptions
+   * Use Customer Managed Encryption Keys (CMEK) for encryption.
+   *
+   * @param GoogleFirestoreAdminV1CustomerManagedEncryptionOptions $customerManagedEncryption
    */
   public function setCustomerManagedEncryption(GoogleFirestoreAdminV1CustomerManagedEncryptionOptions $customerManagedEncryption)
   {
@@ -41,7 +43,9 @@ class GoogleFirestoreAdminV1EncryptionConfig extends \Google\Model
     return $this->customerManagedEncryption;
   }
   /**
-   * @param GoogleFirestoreAdminV1GoogleDefaultEncryptionOptions
+   * Use Google default encryption.
+   *
+   * @param GoogleFirestoreAdminV1GoogleDefaultEncryptionOptions $googleDefaultEncryption
    */
   public function setGoogleDefaultEncryption(GoogleFirestoreAdminV1GoogleDefaultEncryptionOptions $googleDefaultEncryption)
   {
@@ -55,7 +59,9 @@ class GoogleFirestoreAdminV1EncryptionConfig extends \Google\Model
     return $this->googleDefaultEncryption;
   }
   /**
-   * @param GoogleFirestoreAdminV1SourceEncryptionOptions
+   * The database will use the same encryption configuration as the source.
+   *
+   * @param GoogleFirestoreAdminV1SourceEncryptionOptions $useSourceEncryption
    */
   public function setUseSourceEncryption(GoogleFirestoreAdminV1SourceEncryptionOptions $useSourceEncryption)
   {

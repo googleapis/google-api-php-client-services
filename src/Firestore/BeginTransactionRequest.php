@@ -23,7 +23,9 @@ class BeginTransactionRequest extends \Google\Model
   protected $optionsDataType = '';
 
   /**
-   * @param TransactionOptions
+   * The options for the transaction. Defaults to a read-write transaction.
+   *
+   * @param TransactionOptions $options
    */
   public function setOptions(TransactionOptions $options)
   {

@@ -20,30 +20,76 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const OPERATION_STATE_OPERATION_STATE_UNSPECIFIED = 'OPERATION_STATE_UNSPECIFIED';
+  /**
+   * Request is being prepared for processing.
+   */
+  public const OPERATION_STATE_INITIALIZING = 'INITIALIZING';
+  /**
+   * Request is actively being processed.
+   */
+  public const OPERATION_STATE_PROCESSING = 'PROCESSING';
+  /**
+   * Request is in the process of being cancelled after user called
+   * google.longrunning.Operations.CancelOperation on the operation.
+   */
+  public const OPERATION_STATE_CANCELLING = 'CANCELLING';
+  /**
+   * Request has been processed and is in its finalization stage.
+   */
+  public const OPERATION_STATE_FINALIZING = 'FINALIZING';
+  /**
+   * Request has completed successfully.
+   */
+  public const OPERATION_STATE_SUCCESSFUL = 'SUCCESSFUL';
+  /**
+   * Request has finished being processed, but encountered an error.
+   */
+  public const OPERATION_STATE_FAILED = 'FAILED';
+  /**
+   * Request has finished being cancelled after user called
+   * google.longrunning.Operations.CancelOperation.
+   */
+  public const OPERATION_STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The name of the backup restoring from.
+   *
    * @var string
    */
   public $backup;
   /**
+   * The name of the database being restored to.
+   *
    * @var string
    */
   public $database;
   /**
+   * The time the restore finished, unset for ongoing restores.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The operation state of the restore.
+   *
    * @var string
    */
   public $operationState;
   protected $progressPercentageType = GoogleFirestoreAdminV1Progress::class;
   protected $progressPercentageDataType = '';
   /**
+   * The time the restore was started.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The name of the backup restoring from.
+   *
+   * @param string $backup
    */
   public function setBackup($backup)
   {
@@ -57,7 +103,9 @@ class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
     return $this->backup;
   }
   /**
-   * @param string
+   * The name of the database being restored to.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -71,7 +119,9 @@ class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * The time the restore finished, unset for ongoing restores.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -85,21 +135,28 @@ class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The operation state of the restore.
+   *
+   * Accepted values: OPERATION_STATE_UNSPECIFIED, INITIALIZING, PROCESSING,
+   * CANCELLING, FINALIZING, SUCCESSFUL, FAILED, CANCELLED
+   *
+   * @param self::OPERATION_STATE_* $operationState
    */
   public function setOperationState($operationState)
   {
     $this->operationState = $operationState;
   }
   /**
-   * @return string
+   * @return self::OPERATION_STATE_*
    */
   public function getOperationState()
   {
     return $this->operationState;
   }
   /**
-   * @param GoogleFirestoreAdminV1Progress
+   * How far along the restore is as an estimated percentage of remaining time.
+   *
+   * @param GoogleFirestoreAdminV1Progress $progressPercentage
    */
   public function setProgressPercentage(GoogleFirestoreAdminV1Progress $progressPercentage)
   {
@@ -113,7 +170,9 @@ class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
     return $this->progressPercentage;
   }
   /**
-   * @param string
+   * The time the restore was started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

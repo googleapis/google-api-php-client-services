@@ -21,16 +21,28 @@ class GoogleFirestoreAdminV1BulkDeleteDocumentsRequest extends \Google\Collectio
 {
   protected $collection_key = 'namespaceIds';
   /**
+   * Optional. IDs of the collection groups to delete. Unspecified means all
+   * collection groups. Each collection group in this list must be unique.
+   *
    * @var string[]
    */
   public $collectionIds;
   /**
+   * Optional. Namespaces to delete. An empty list means all namespaces. This is
+   * the recommended usage for databases that don't use namespaces. An empty
+   * string element represents the default namespace. This should be used if the
+   * database has data in non-default namespaces, but doesn't want to delete
+   * from them. Each namespace in this list must be unique.
+   *
    * @var string[]
    */
   public $namespaceIds;
 
   /**
-   * @param string[]
+   * Optional. IDs of the collection groups to delete. Unspecified means all
+   * collection groups. Each collection group in this list must be unique.
+   *
+   * @param string[] $collectionIds
    */
   public function setCollectionIds($collectionIds)
   {
@@ -44,7 +56,13 @@ class GoogleFirestoreAdminV1BulkDeleteDocumentsRequest extends \Google\Collectio
     return $this->collectionIds;
   }
   /**
-   * @param string[]
+   * Optional. Namespaces to delete. An empty list means all namespaces. This is
+   * the recommended usage for databases that don't use namespaces. An empty
+   * string element represents the default namespace. This should be used if the
+   * database has data in non-default namespaces, but doesn't want to delete
+   * from them. Each namespace in this list must be unique.
+   *
+   * @param string[] $namespaceIds
    */
   public function setNamespaceIds($namespaceIds)
   {

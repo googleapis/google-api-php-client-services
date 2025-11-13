@@ -21,20 +21,29 @@ class DocumentDelete extends \Google\Collection
 {
   protected $collection_key = 'removedTargetIds';
   /**
+   * The resource name of the Document that was deleted.
+   *
    * @var string
    */
   public $document;
   /**
+   * The read timestamp at which the delete was observed. Greater or equal to
+   * the `commit_time` of the delete.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * A set of target IDs for targets that previously matched this entity.
+   *
    * @var int[]
    */
   public $removedTargetIds;
 
   /**
-   * @param string
+   * The resource name of the Document that was deleted.
+   *
+   * @param string $document
    */
   public function setDocument($document)
   {
@@ -48,7 +57,10 @@ class DocumentDelete extends \Google\Collection
     return $this->document;
   }
   /**
-   * @param string
+   * The read timestamp at which the delete was observed. Greater or equal to
+   * the `commit_time` of the delete.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -62,7 +74,9 @@ class DocumentDelete extends \Google\Collection
     return $this->readTime;
   }
   /**
-   * @param int[]
+   * A set of target IDs for targets that previously matched this entity.
+   *
+   * @param int[] $removedTargetIds
    */
   public function setRemovedTargetIds($removedTargetIds)
   {

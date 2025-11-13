@@ -31,7 +31,9 @@ class ListenResponse extends \Google\Model
   protected $targetChangeDataType = '';
 
   /**
-   * @param DocumentChange
+   * A Document has changed.
+   *
+   * @param DocumentChange $documentChange
    */
   public function setDocumentChange(DocumentChange $documentChange)
   {
@@ -45,7 +47,9 @@ class ListenResponse extends \Google\Model
     return $this->documentChange;
   }
   /**
-   * @param DocumentDelete
+   * A Document has been deleted.
+   *
+   * @param DocumentDelete $documentDelete
    */
   public function setDocumentDelete(DocumentDelete $documentDelete)
   {
@@ -59,7 +63,10 @@ class ListenResponse extends \Google\Model
     return $this->documentDelete;
   }
   /**
-   * @param DocumentRemove
+   * A Document has been removed from a target (because it is no longer relevant
+   * to that target).
+   *
+   * @param DocumentRemove $documentRemove
    */
   public function setDocumentRemove(DocumentRemove $documentRemove)
   {
@@ -73,7 +80,11 @@ class ListenResponse extends \Google\Model
     return $this->documentRemove;
   }
   /**
-   * @param ExistenceFilter
+   * A filter to apply to the set of documents previously returned for the given
+   * target. Returned when documents may have been removed from the given
+   * target, but the exact documents are unknown.
+   *
+   * @param ExistenceFilter $filter
    */
   public function setFilter(ExistenceFilter $filter)
   {
@@ -87,7 +98,9 @@ class ListenResponse extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param TargetChange
+   * Targets have changed.
+   *
+   * @param TargetChange $targetChange
    */
   public function setTargetChange(TargetChange $targetChange)
   {

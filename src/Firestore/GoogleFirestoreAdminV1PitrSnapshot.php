@@ -20,20 +20,30 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1PitrSnapshot extends \Google\Model
 {
   /**
+   * Required. The name of the database that this was a snapshot of. Format:
+   * `projects/{project}/databases/{database}`.
+   *
    * @var string
    */
   public $database;
   /**
+   * Output only. Public UUID of the database the snapshot was associated with.
+   *
    * @var string
    */
   public $databaseUid;
   /**
+   * Required. Snapshot time of the database.
+   *
    * @var string
    */
   public $snapshotTime;
 
   /**
-   * @param string
+   * Required. The name of the database that this was a snapshot of. Format:
+   * `projects/{project}/databases/{database}`.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -47,7 +57,9 @@ class GoogleFirestoreAdminV1PitrSnapshot extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Output only. Public UUID of the database the snapshot was associated with.
+   *
+   * @param string $databaseUid
    */
   public function setDatabaseUid($databaseUid)
   {
@@ -61,7 +73,9 @@ class GoogleFirestoreAdminV1PitrSnapshot extends \Google\Model
     return $this->databaseUid;
   }
   /**
-   * @param string
+   * Required. Snapshot time of the database.
+   *
+   * @param string $snapshotTime
    */
   public function setSnapshotTime($snapshotTime)
   {

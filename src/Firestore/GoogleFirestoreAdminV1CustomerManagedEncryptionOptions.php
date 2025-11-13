@@ -20,12 +20,28 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1CustomerManagedEncryptionOptions extends \Google\Model
 {
   /**
+   * Required. Only keys in the same location as the database are allowed to be
+   * used for encryption. For Firestore's nam5 multi-region, this corresponds to
+   * Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
+   * corresponds to Cloud KMS multi-region europe. See
+   * https://cloud.google.com/kms/docs/locations. The expected format is `projec
+   * ts/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{cr
+   * ypto_key}`.
+   *
    * @var string
    */
   public $kmsKeyName;
 
   /**
-   * @param string
+   * Required. Only keys in the same location as the database are allowed to be
+   * used for encryption. For Firestore's nam5 multi-region, this corresponds to
+   * Cloud KMS multi-region us. For Firestore's eur3 multi-region, this
+   * corresponds to Cloud KMS multi-region europe. See
+   * https://cloud.google.com/kms/docs/locations. The expected format is `projec
+   * ts/{project_id}/locations/{kms_location}/keyRings/{key_ring}/cryptoKeys/{cr
+   * ypto_key}`.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {

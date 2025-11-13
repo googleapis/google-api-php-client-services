@@ -20,19 +20,58 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1WeeklyRecurrence extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const DAY_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_SUNDAY = 'SUNDAY';
+  /**
+   * The day of week to run. DAY_OF_WEEK_UNSPECIFIED is not allowed.
+   *
    * @var string
    */
   public $day;
 
   /**
-   * @param string
+   * The day of week to run. DAY_OF_WEEK_UNSPECIFIED is not allowed.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_* $day
    */
   public function setDay($day)
   {
     $this->day = $day;
   }
   /**
-   * @return string
+   * @return self::DAY_*
    */
   public function getDay()
   {

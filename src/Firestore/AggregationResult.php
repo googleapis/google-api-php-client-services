@@ -23,7 +23,11 @@ class AggregationResult extends \Google\Model
   protected $aggregateFieldsDataType = 'map';
 
   /**
-   * @param Value[]
+   * The result of the aggregation functions, ex: `COUNT(*) AS total_docs`. The
+   * key is the alias assigned to the aggregation function on input and the size
+   * of this map equals the number of aggregation functions in the query.
+   *
+   * @param Value[] $aggregateFields
    */
   public function setAggregateFields($aggregateFields)
   {

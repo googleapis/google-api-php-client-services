@@ -23,12 +23,17 @@ class GoogleFirestoreAdminV1ListIndexesResponse extends \Google\Collection
   protected $indexesType = GoogleFirestoreAdminV1Index::class;
   protected $indexesDataType = 'array';
   /**
+   * A page token that may be used to request another page of results. If blank,
+   * this is the last page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleFirestoreAdminV1Index[]
+   * The requested indexes.
+   *
+   * @param GoogleFirestoreAdminV1Index[] $indexes
    */
   public function setIndexes($indexes)
   {
@@ -42,7 +47,10 @@ class GoogleFirestoreAdminV1ListIndexesResponse extends \Google\Collection
     return $this->indexes;
   }
   /**
-   * @param string
+   * A page token that may be used to request another page of results. If blank,
+   * this is the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

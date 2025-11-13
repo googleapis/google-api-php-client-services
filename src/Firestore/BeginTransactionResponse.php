@@ -20,12 +20,16 @@ namespace Google\Service\Firestore;
 class BeginTransactionResponse extends \Google\Model
 {
   /**
+   * The transaction that was started.
+   *
    * @var string
    */
   public $transaction;
 
   /**
-   * @param string
+   * The transaction that was started.
+   *
+   * @param string $transaction
    */
   public function setTransaction($transaction)
   {

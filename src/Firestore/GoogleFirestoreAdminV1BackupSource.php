@@ -20,12 +20,18 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1BackupSource extends \Google\Model
 {
   /**
+   * The resource name of the backup that was used to restore this database.
+   * Format: `projects/{project}/locations/{location}/backups/{backup}`.
+   *
    * @var string
    */
   public $backup;
 
   /**
-   * @param string
+   * The resource name of the backup that was used to restore this database.
+   * Format: `projects/{project}/locations/{location}/backups/{backup}`.
+   *
+   * @param string $backup
    */
   public function setBackup($backup)
   {

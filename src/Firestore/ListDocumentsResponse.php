@@ -23,12 +23,17 @@ class ListDocumentsResponse extends \Google\Collection
   protected $documentsType = Document::class;
   protected $documentsDataType = 'array';
   /**
+   * A token to retrieve the next page of documents. If this field is omitted,
+   * there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Document[]
+   * The Documents found.
+   *
+   * @param Document[] $documents
    */
   public function setDocuments($documents)
   {
@@ -42,7 +47,10 @@ class ListDocumentsResponse extends \Google\Collection
     return $this->documents;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of documents. If this field is omitted,
+   * there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

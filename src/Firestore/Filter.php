@@ -27,7 +27,9 @@ class Filter extends \Google\Model
   protected $unaryFilterDataType = '';
 
   /**
-   * @param CompositeFilter
+   * A composite filter.
+   *
+   * @param CompositeFilter $compositeFilter
    */
   public function setCompositeFilter(CompositeFilter $compositeFilter)
   {
@@ -41,7 +43,9 @@ class Filter extends \Google\Model
     return $this->compositeFilter;
   }
   /**
-   * @param FieldFilter
+   * A filter on a document field.
+   *
+   * @param FieldFilter $fieldFilter
    */
   public function setFieldFilter(FieldFilter $fieldFilter)
   {
@@ -55,7 +59,9 @@ class Filter extends \Google\Model
     return $this->fieldFilter;
   }
   /**
-   * @param UnaryFilter
+   * A filter that takes exactly one argument.
+   *
+   * @param UnaryFilter $unaryFilter
    */
   public function setUnaryFilter(UnaryFilter $unaryFilter)
   {

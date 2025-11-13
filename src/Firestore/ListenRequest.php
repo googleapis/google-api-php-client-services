@@ -22,16 +22,22 @@ class ListenRequest extends \Google\Model
   protected $addTargetType = Target::class;
   protected $addTargetDataType = '';
   /**
+   * Labels associated with this target change.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The ID of a target to remove from this stream.
+   *
    * @var int
    */
   public $removeTarget;
 
   /**
-   * @param Target
+   * A target to add to this stream.
+   *
+   * @param Target $addTarget
    */
   public function setAddTarget(Target $addTarget)
   {
@@ -45,7 +51,9 @@ class ListenRequest extends \Google\Model
     return $this->addTarget;
   }
   /**
-   * @param string[]
+   * Labels associated with this target change.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -59,7 +67,9 @@ class ListenRequest extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param int
+   * The ID of a target to remove from this stream.
+   *
+   * @param int $removeTarget
    */
   public function setRemoveTarget($removeTarget)
   {

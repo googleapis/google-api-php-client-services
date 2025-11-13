@@ -23,7 +23,9 @@ class Avg extends \Google\Model
   protected $fieldDataType = '';
 
   /**
-   * @param FieldReference
+   * The field to aggregate on.
+   *
+   * @param FieldReference $field
    */
   public function setField(FieldReference $field)
   {

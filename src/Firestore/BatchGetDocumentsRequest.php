@@ -21,6 +21,11 @@ class BatchGetDocumentsRequest extends \Google\Collection
 {
   protected $collection_key = 'documents';
   /**
+   * The names of the documents to retrieve. In the format:
+   * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+   * The request will fail if any of the document is not a child resource of the
+   * given `database`. Duplicate names will be elided.
+   *
    * @var string[]
    */
   public $documents;
@@ -29,16 +34,28 @@ class BatchGetDocumentsRequest extends \Google\Collection
   protected $newTransactionType = TransactionOptions::class;
   protected $newTransactionDataType = '';
   /**
+   * Reads documents as they were at the given time. This must be a microsecond
+   * precision timestamp within the past one hour, or if Point-in-Time Recovery
+   * is enabled, can additionally be a whole minute timestamp within the past 7
+   * days.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * Reads documents in a transaction.
+   *
    * @var string
    */
   public $transaction;
 
   /**
-   * @param string[]
+   * The names of the documents to retrieve. In the format:
+   * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+   * The request will fail if any of the document is not a child resource of the
+   * given `database`. Duplicate names will be elided.
+   *
+   * @param string[] $documents
    */
   public function setDocuments($documents)
   {
@@ -52,7 +69,11 @@ class BatchGetDocumentsRequest extends \Google\Collection
     return $this->documents;
   }
   /**
-   * @param DocumentMask
+   * The fields to return. If not set, returns all fields. If a document has a
+   * field that is not present in this mask, that field will not be returned in
+   * the response.
+   *
+   * @param DocumentMask $mask
    */
   public function setMask(DocumentMask $mask)
   {
@@ -66,7 +87,11 @@ class BatchGetDocumentsRequest extends \Google\Collection
     return $this->mask;
   }
   /**
-   * @param TransactionOptions
+   * Starts a new transaction and reads the documents. Defaults to a read-only
+   * transaction. The new transaction ID will be returned as the first response
+   * in the stream.
+   *
+   * @param TransactionOptions $newTransaction
    */
   public function setNewTransaction(TransactionOptions $newTransaction)
   {
@@ -80,7 +105,12 @@ class BatchGetDocumentsRequest extends \Google\Collection
     return $this->newTransaction;
   }
   /**
-   * @param string
+   * Reads documents as they were at the given time. This must be a microsecond
+   * precision timestamp within the past one hour, or if Point-in-Time Recovery
+   * is enabled, can additionally be a whole minute timestamp within the past 7
+   * days.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -94,7 +124,9 @@ class BatchGetDocumentsRequest extends \Google\Collection
     return $this->readTime;
   }
   /**
-   * @param string
+   * Reads documents in a transaction.
+   *
+   * @param string $transaction
    */
   public function setTransaction($transaction)
   {

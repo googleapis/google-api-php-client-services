@@ -22,26 +22,44 @@ class RunQueryResponse extends \Google\Model
   protected $documentType = Document::class;
   protected $documentDataType = '';
   /**
+   * If present, Firestore has completely finished the request and no more
+   * documents will be returned.
+   *
    * @var bool
    */
   public $done;
   protected $explainMetricsType = ExplainMetrics::class;
   protected $explainMetricsDataType = '';
   /**
+   * The time at which the document was read. This may be monotonically
+   * increasing; in this case, the previous documents in the result stream are
+   * guaranteed not to have changed between their `read_time` and this one. If
+   * the query returns no results, a response with `read_time` and no `document`
+   * will be sent, and this represents the time at which the query was run.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * The number of results that have been skipped due to an offset between the
+   * last response and the current response.
+   *
    * @var int
    */
   public $skippedResults;
   /**
+   * The transaction that was started as part of this request. Can only be set
+   * in the first response, and only if RunQueryRequest.new_transaction was set
+   * in the request. If set, no other fields will be set in this response.
+   *
    * @var string
    */
   public $transaction;
 
   /**
-   * @param Document
+   * A query result, not set when reporting partial progress.
+   *
+   * @param Document $document
    */
   public function setDocument(Document $document)
   {
@@ -55,7 +73,10 @@ class RunQueryResponse extends \Google\Model
     return $this->document;
   }
   /**
-   * @param bool
+   * If present, Firestore has completely finished the request and no more
+   * documents will be returned.
+   *
+   * @param bool $done
    */
   public function setDone($done)
   {
@@ -69,7 +90,11 @@ class RunQueryResponse extends \Google\Model
     return $this->done;
   }
   /**
-   * @param ExplainMetrics
+   * Query explain metrics. This is only present when the
+   * RunQueryRequest.explain_options is provided, and it is sent only once with
+   * the last response in the stream.
+   *
+   * @param ExplainMetrics $explainMetrics
    */
   public function setExplainMetrics(ExplainMetrics $explainMetrics)
   {
@@ -83,7 +108,13 @@ class RunQueryResponse extends \Google\Model
     return $this->explainMetrics;
   }
   /**
-   * @param string
+   * The time at which the document was read. This may be monotonically
+   * increasing; in this case, the previous documents in the result stream are
+   * guaranteed not to have changed between their `read_time` and this one. If
+   * the query returns no results, a response with `read_time` and no `document`
+   * will be sent, and this represents the time at which the query was run.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -97,7 +128,10 @@ class RunQueryResponse extends \Google\Model
     return $this->readTime;
   }
   /**
-   * @param int
+   * The number of results that have been skipped due to an offset between the
+   * last response and the current response.
+   *
+   * @param int $skippedResults
    */
   public function setSkippedResults($skippedResults)
   {
@@ -111,7 +145,11 @@ class RunQueryResponse extends \Google\Model
     return $this->skippedResults;
   }
   /**
-   * @param string
+   * The transaction that was started as part of this request. Can only be set
+   * in the first response, and only if RunQueryRequest.new_transaction was set
+   * in the request. If set, no other fields will be set in this response.
+   *
+   * @param string $transaction
    */
   public function setTransaction($transaction)
   {

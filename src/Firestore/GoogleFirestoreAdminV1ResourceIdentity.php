@@ -20,12 +20,18 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1ResourceIdentity extends \Google\Model
 {
   /**
+   * Output only. Principal identifier string. See:
+   * https://cloud.google.com/iam/docs/principal-identifiers
+   *
    * @var string
    */
   public $principal;
 
   /**
-   * @param string
+   * Output only. Principal identifier string. See:
+   * https://cloud.google.com/iam/docs/principal-identifiers
+   *
+   * @param string $principal
    */
   public function setPrincipal($principal)
   {

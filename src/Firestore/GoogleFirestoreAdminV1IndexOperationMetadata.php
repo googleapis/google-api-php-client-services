@@ -20,10 +20,51 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const STATE_OPERATION_STATE_UNSPECIFIED = 'OPERATION_STATE_UNSPECIFIED';
+  /**
+   * Request is being prepared for processing.
+   */
+  public const STATE_INITIALIZING = 'INITIALIZING';
+  /**
+   * Request is actively being processed.
+   */
+  public const STATE_PROCESSING = 'PROCESSING';
+  /**
+   * Request is in the process of being cancelled after user called
+   * google.longrunning.Operations.CancelOperation on the operation.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * Request has been processed and is in its finalization stage.
+   */
+  public const STATE_FINALIZING = 'FINALIZING';
+  /**
+   * Request has completed successfully.
+   */
+  public const STATE_SUCCESSFUL = 'SUCCESSFUL';
+  /**
+   * Request has finished being processed, but encountered an error.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Request has finished being cancelled after user called
+   * google.longrunning.Operations.CancelOperation.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The time this operation completed. Will be unset if operation still in
+   * progress.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The index resource that this operation is acting on. For example: `projects
+   * /{project_id}/databases/{database_id}/collectionGroups/{collection_id}/inde
+   * xes/{index_id}`
+   *
    * @var string
    */
   public $index;
@@ -32,16 +73,23 @@ class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
   protected $progressDocumentsType = GoogleFirestoreAdminV1Progress::class;
   protected $progressDocumentsDataType = '';
   /**
+   * The time this operation started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The state of the operation.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The time this operation completed. Will be unset if operation still in
+   * progress.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -55,7 +103,11 @@ class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The index resource that this operation is acting on. For example: `projects
+   * /{project_id}/databases/{database_id}/collectionGroups/{collection_id}/inde
+   * xes/{index_id}`
+   *
+   * @param string $index
    */
   public function setIndex($index)
   {
@@ -69,7 +121,9 @@ class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
     return $this->index;
   }
   /**
-   * @param GoogleFirestoreAdminV1Progress
+   * The progress, in bytes, of this operation.
+   *
+   * @param GoogleFirestoreAdminV1Progress $progressBytes
    */
   public function setProgressBytes(GoogleFirestoreAdminV1Progress $progressBytes)
   {
@@ -83,7 +137,9 @@ class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
     return $this->progressBytes;
   }
   /**
-   * @param GoogleFirestoreAdminV1Progress
+   * The progress, in documents, of this operation.
+   *
+   * @param GoogleFirestoreAdminV1Progress $progressDocuments
    */
   public function setProgressDocuments(GoogleFirestoreAdminV1Progress $progressDocuments)
   {
@@ -97,7 +153,9 @@ class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
     return $this->progressDocuments;
   }
   /**
-   * @param string
+   * The time this operation started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -111,14 +169,19 @@ class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * The state of the operation.
+   *
+   * Accepted values: OPERATION_STATE_UNSPECIFIED, INITIALIZING, PROCESSING,
+   * CANCELLING, FINALIZING, SUCCESSFUL, FAILED, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

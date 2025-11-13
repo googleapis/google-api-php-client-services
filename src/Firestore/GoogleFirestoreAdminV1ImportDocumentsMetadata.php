@@ -19,24 +19,69 @@ namespace Google\Service\Firestore;
 
 class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const OPERATION_STATE_OPERATION_STATE_UNSPECIFIED = 'OPERATION_STATE_UNSPECIFIED';
+  /**
+   * Request is being prepared for processing.
+   */
+  public const OPERATION_STATE_INITIALIZING = 'INITIALIZING';
+  /**
+   * Request is actively being processed.
+   */
+  public const OPERATION_STATE_PROCESSING = 'PROCESSING';
+  /**
+   * Request is in the process of being cancelled after user called
+   * google.longrunning.Operations.CancelOperation on the operation.
+   */
+  public const OPERATION_STATE_CANCELLING = 'CANCELLING';
+  /**
+   * Request has been processed and is in its finalization stage.
+   */
+  public const OPERATION_STATE_FINALIZING = 'FINALIZING';
+  /**
+   * Request has completed successfully.
+   */
+  public const OPERATION_STATE_SUCCESSFUL = 'SUCCESSFUL';
+  /**
+   * Request has finished being processed, but encountered an error.
+   */
+  public const OPERATION_STATE_FAILED = 'FAILED';
+  /**
+   * Request has finished being cancelled after user called
+   * google.longrunning.Operations.CancelOperation.
+   */
+  public const OPERATION_STATE_CANCELLED = 'CANCELLED';
   protected $collection_key = 'namespaceIds';
   /**
+   * Which collection IDs are being imported.
+   *
    * @var string[]
    */
   public $collectionIds;
   /**
+   * The time this operation completed. Will be unset if operation still in
+   * progress.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The location of the documents being imported.
+   *
    * @var string
    */
   public $inputUriPrefix;
   /**
+   * Which namespace IDs are being imported.
+   *
    * @var string[]
    */
   public $namespaceIds;
   /**
+   * The state of the import operation.
+   *
    * @var string
    */
   public $operationState;
@@ -45,12 +90,16 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
   protected $progressDocumentsType = GoogleFirestoreAdminV1Progress::class;
   protected $progressDocumentsDataType = '';
   /**
+   * The time this operation started.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string[]
+   * Which collection IDs are being imported.
+   *
+   * @param string[] $collectionIds
    */
   public function setCollectionIds($collectionIds)
   {
@@ -64,7 +113,10 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
     return $this->collectionIds;
   }
   /**
-   * @param string
+   * The time this operation completed. Will be unset if operation still in
+   * progress.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -78,7 +130,9 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param string
+   * The location of the documents being imported.
+   *
+   * @param string $inputUriPrefix
    */
   public function setInputUriPrefix($inputUriPrefix)
   {
@@ -92,7 +146,9 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
     return $this->inputUriPrefix;
   }
   /**
-   * @param string[]
+   * Which namespace IDs are being imported.
+   *
+   * @param string[] $namespaceIds
    */
   public function setNamespaceIds($namespaceIds)
   {
@@ -106,21 +162,28 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
     return $this->namespaceIds;
   }
   /**
-   * @param string
+   * The state of the import operation.
+   *
+   * Accepted values: OPERATION_STATE_UNSPECIFIED, INITIALIZING, PROCESSING,
+   * CANCELLING, FINALIZING, SUCCESSFUL, FAILED, CANCELLED
+   *
+   * @param self::OPERATION_STATE_* $operationState
    */
   public function setOperationState($operationState)
   {
     $this->operationState = $operationState;
   }
   /**
-   * @return string
+   * @return self::OPERATION_STATE_*
    */
   public function getOperationState()
   {
     return $this->operationState;
   }
   /**
-   * @param GoogleFirestoreAdminV1Progress
+   * The progress, in bytes, of this operation.
+   *
+   * @param GoogleFirestoreAdminV1Progress $progressBytes
    */
   public function setProgressBytes(GoogleFirestoreAdminV1Progress $progressBytes)
   {
@@ -134,7 +197,9 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
     return $this->progressBytes;
   }
   /**
-   * @param GoogleFirestoreAdminV1Progress
+   * The progress, in documents, of this operation.
+   *
+   * @param GoogleFirestoreAdminV1Progress $progressDocuments
    */
   public function setProgressDocuments(GoogleFirestoreAdminV1Progress $progressDocuments)
   {
@@ -148,7 +213,9 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
     return $this->progressDocuments;
   }
   /**
-   * @param string
+   * The time this operation started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

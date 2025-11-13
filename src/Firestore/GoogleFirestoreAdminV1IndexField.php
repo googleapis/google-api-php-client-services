@@ -20,14 +20,42 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1IndexField extends \Google\Model
 {
   /**
+   * The index does not support additional array queries.
+   */
+  public const ARRAY_CONFIG_ARRAY_CONFIG_UNSPECIFIED = 'ARRAY_CONFIG_UNSPECIFIED';
+  /**
+   * The index supports array containment queries.
+   */
+  public const ARRAY_CONFIG_CONTAINS = 'CONTAINS';
+  /**
+   * The ordering is unspecified. Not a valid option.
+   */
+  public const ORDER_ORDER_UNSPECIFIED = 'ORDER_UNSPECIFIED';
+  /**
+   * The field is ordered by ascending field value.
+   */
+  public const ORDER_ASCENDING = 'ASCENDING';
+  /**
+   * The field is ordered by descending field value.
+   */
+  public const ORDER_DESCENDING = 'DESCENDING';
+  /**
+   * Indicates that this field supports operations on `array_value`s.
+   *
    * @var string
    */
   public $arrayConfig;
   /**
+   * Can be __name__. For single field indexes, this must match the name of the
+   * field or may be omitted.
+   *
    * @var string
    */
   public $fieldPath;
   /**
+   * Indicates that this field supports ordering by the specified order or
+   * comparing using =, !=, <, <=, >, >=.
+   *
    * @var string
    */
   public $order;
@@ -35,21 +63,28 @@ class GoogleFirestoreAdminV1IndexField extends \Google\Model
   protected $vectorConfigDataType = '';
 
   /**
-   * @param string
+   * Indicates that this field supports operations on `array_value`s.
+   *
+   * Accepted values: ARRAY_CONFIG_UNSPECIFIED, CONTAINS
+   *
+   * @param self::ARRAY_CONFIG_* $arrayConfig
    */
   public function setArrayConfig($arrayConfig)
   {
     $this->arrayConfig = $arrayConfig;
   }
   /**
-   * @return string
+   * @return self::ARRAY_CONFIG_*
    */
   public function getArrayConfig()
   {
     return $this->arrayConfig;
   }
   /**
-   * @param string
+   * Can be __name__. For single field indexes, this must match the name of the
+   * field or may be omitted.
+   *
+   * @param string $fieldPath
    */
   public function setFieldPath($fieldPath)
   {
@@ -63,21 +98,29 @@ class GoogleFirestoreAdminV1IndexField extends \Google\Model
     return $this->fieldPath;
   }
   /**
-   * @param string
+   * Indicates that this field supports ordering by the specified order or
+   * comparing using =, !=, <, <=, >, >=.
+   *
+   * Accepted values: ORDER_UNSPECIFIED, ASCENDING, DESCENDING
+   *
+   * @param self::ORDER_* $order
    */
   public function setOrder($order)
   {
     $this->order = $order;
   }
   /**
-   * @return string
+   * @return self::ORDER_*
    */
   public function getOrder()
   {
     return $this->order;
   }
   /**
-   * @param GoogleFirestoreAdminV1VectorConfig
+   * Indicates that this field supports nearest neighbor and distance operations
+   * on vector.
+   *
+   * @param GoogleFirestoreAdminV1VectorConfig $vectorConfig
    */
   public function setVectorConfig(GoogleFirestoreAdminV1VectorConfig $vectorConfig)
   {

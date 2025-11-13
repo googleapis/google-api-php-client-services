@@ -24,7 +24,9 @@ class GoogleFirestoreAdminV1ListBackupSchedulesResponse extends \Google\Collecti
   protected $backupSchedulesDataType = 'array';
 
   /**
-   * @param GoogleFirestoreAdminV1BackupSchedule[]
+   * List of all backup schedules.
+   *
+   * @param GoogleFirestoreAdminV1BackupSchedule[] $backupSchedules
    */
   public function setBackupSchedules($backupSchedules)
   {

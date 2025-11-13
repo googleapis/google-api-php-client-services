@@ -23,16 +23,23 @@ class DocumentChange extends \Google\Collection
   protected $documentType = Document::class;
   protected $documentDataType = '';
   /**
+   * A set of target IDs for targets that no longer match this document.
+   *
    * @var int[]
    */
   public $removedTargetIds;
   /**
+   * A set of target IDs of targets that match this document.
+   *
    * @var int[]
    */
   public $targetIds;
 
   /**
-   * @param Document
+   * The new state of the Document. If `mask` is set, contains only fields that
+   * were updated or added.
+   *
+   * @param Document $document
    */
   public function setDocument(Document $document)
   {
@@ -46,7 +53,9 @@ class DocumentChange extends \Google\Collection
     return $this->document;
   }
   /**
-   * @param int[]
+   * A set of target IDs for targets that no longer match this document.
+   *
+   * @param int[] $removedTargetIds
    */
   public function setRemovedTargetIds($removedTargetIds)
   {
@@ -60,7 +69,9 @@ class DocumentChange extends \Google\Collection
     return $this->removedTargetIds;
   }
   /**
-   * @param int[]
+   * A set of target IDs of targets that match this document.
+   *
+   * @param int[] $targetIds
    */
   public function setTargetIds($targetIds)
   {

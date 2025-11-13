@@ -22,18 +22,32 @@ class RunAggregationQueryResponse extends \Google\Model
   protected $explainMetricsType = ExplainMetrics::class;
   protected $explainMetricsDataType = '';
   /**
+   * The time at which the aggregate result was computed. This is always
+   * monotonically increasing; in this case, the previous AggregationResult in
+   * the result stream are guaranteed not to have changed between their
+   * `read_time` and this one. If the query returns no results, a response with
+   * `read_time` and no `result` will be sent, and this represents the time at
+   * which the query was run.
+   *
    * @var string
    */
   public $readTime;
   protected $resultType = AggregationResult::class;
   protected $resultDataType = '';
   /**
+   * The transaction that was started as part of this request. Only present on
+   * the first response when the request requested to start a new transaction.
+   *
    * @var string
    */
   public $transaction;
 
   /**
-   * @param ExplainMetrics
+   * Query explain metrics. This is only present when the
+   * RunAggregationQueryRequest.explain_options is provided, and it is sent only
+   * once with the last response in the stream.
+   *
+   * @param ExplainMetrics $explainMetrics
    */
   public function setExplainMetrics(ExplainMetrics $explainMetrics)
   {
@@ -47,7 +61,14 @@ class RunAggregationQueryResponse extends \Google\Model
     return $this->explainMetrics;
   }
   /**
-   * @param string
+   * The time at which the aggregate result was computed. This is always
+   * monotonically increasing; in this case, the previous AggregationResult in
+   * the result stream are guaranteed not to have changed between their
+   * `read_time` and this one. If the query returns no results, a response with
+   * `read_time` and no `result` will be sent, and this represents the time at
+   * which the query was run.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -61,7 +82,9 @@ class RunAggregationQueryResponse extends \Google\Model
     return $this->readTime;
   }
   /**
-   * @param AggregationResult
+   * A single aggregation result. Not present when reporting partial progress.
+   *
+   * @param AggregationResult $result
    */
   public function setResult(AggregationResult $result)
   {
@@ -75,7 +98,10 @@ class RunAggregationQueryResponse extends \Google\Model
     return $this->result;
   }
   /**
-   * @param string
+   * The transaction that was started as part of this request. Only present on
+   * the first response when the request requested to start a new transaction.
+   *
+   * @param string $transaction
    */
   public function setTransaction($transaction)
   {

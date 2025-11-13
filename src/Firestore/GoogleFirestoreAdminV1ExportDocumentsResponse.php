@@ -20,12 +20,20 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1ExportDocumentsResponse extends \Google\Model
 {
   /**
+   * Location of the output files. This can be used to begin an import into
+   * Cloud Firestore (this project or another project) after the operation
+   * completes successfully.
+   *
    * @var string
    */
   public $outputUriPrefix;
 
   /**
-   * @param string
+   * Location of the output files. This can be used to begin an import into
+   * Cloud Firestore (this project or another project) after the operation
+   * completes successfully.
+   *
+   * @param string $outputUriPrefix
    */
   public function setOutputUriPrefix($outputUriPrefix)
   {

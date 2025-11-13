@@ -20,12 +20,16 @@ namespace Google\Service\Firestore;
 class RollbackRequest extends \Google\Model
 {
   /**
+   * Required. The transaction to roll back.
+   *
    * @var string
    */
   public $transaction;
 
   /**
-   * @param string
+   * Required. The transaction to roll back.
+   *
+   * @param string $transaction
    */
   public function setTransaction($transaction)
   {

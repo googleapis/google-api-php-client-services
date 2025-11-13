@@ -22,20 +22,33 @@ class BatchGetDocumentsResponse extends \Google\Model
   protected $foundType = Document::class;
   protected $foundDataType = '';
   /**
+   * A document name that was requested but does not exist. In the format:
+   * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+   *
    * @var string
    */
   public $missing;
   /**
+   * The time at which the document was read. This may be monotically
+   * increasing, in this case the previous documents in the result stream are
+   * guaranteed not to have changed between their read_time and this one.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * The transaction that was started as part of this request. Will only be set
+   * in the first response, and only if BatchGetDocumentsRequest.new_transaction
+   * was set in the request.
+   *
    * @var string
    */
   public $transaction;
 
   /**
-   * @param Document
+   * A document that was requested.
+   *
+   * @param Document $found
    */
   public function setFound(Document $found)
   {
@@ -49,7 +62,10 @@ class BatchGetDocumentsResponse extends \Google\Model
     return $this->found;
   }
   /**
-   * @param string
+   * A document name that was requested but does not exist. In the format:
+   * `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
+   *
+   * @param string $missing
    */
   public function setMissing($missing)
   {
@@ -63,7 +79,11 @@ class BatchGetDocumentsResponse extends \Google\Model
     return $this->missing;
   }
   /**
-   * @param string
+   * The time at which the document was read. This may be monotically
+   * increasing, in this case the previous documents in the result stream are
+   * guaranteed not to have changed between their read_time and this one.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -77,7 +97,11 @@ class BatchGetDocumentsResponse extends \Google\Model
     return $this->readTime;
   }
   /**
-   * @param string
+   * The transaction that was started as part of this request. Will only be set
+   * in the first response, and only if BatchGetDocumentsRequest.new_transaction
+   * was set in the request.
+   *
+   * @param string $transaction
    */
   public function setTransaction($transaction)
   {

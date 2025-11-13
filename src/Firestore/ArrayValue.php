@@ -24,7 +24,9 @@ class ArrayValue extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param Value[]
+   * Values in the array.
+   *
+   * @param Value[] $values
    */
   public function setValues($values)
   {

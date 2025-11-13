@@ -21,6 +21,8 @@ class DocumentTransform extends \Google\Collection
 {
   protected $collection_key = 'fieldTransforms';
   /**
+   * The name of the document to transform.
+   *
    * @var string
    */
   public $document;
@@ -28,7 +30,9 @@ class DocumentTransform extends \Google\Collection
   protected $fieldTransformsDataType = 'array';
 
   /**
-   * @param string
+   * The name of the document to transform.
+   *
+   * @param string $document
    */
   public function setDocument($document)
   {
@@ -42,7 +46,10 @@ class DocumentTransform extends \Google\Collection
     return $this->document;
   }
   /**
-   * @param FieldTransform[]
+   * The list of transformations to apply to the fields of the document, in
+   * order. This must not be empty.
+   *
+   * @param FieldTransform[] $fieldTransforms
    */
   public function setFieldTransforms($fieldTransforms)
   {

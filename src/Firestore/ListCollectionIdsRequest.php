@@ -20,20 +20,31 @@ namespace Google\Service\Firestore;
 class ListCollectionIdsRequest extends \Google\Model
 {
   /**
+   * The maximum number of results to return.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * A page token. Must be a value from ListCollectionIdsResponse.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Reads documents as they were at the given time. This must be a microsecond
+   * precision timestamp within the past one hour, or if Point-in-Time Recovery
+   * is enabled, can additionally be a whole minute timestamp within the past 7
+   * days.
+   *
    * @var string
    */
   public $readTime;
 
   /**
-   * @param int
+   * The maximum number of results to return.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -47,7 +58,9 @@ class ListCollectionIdsRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * A page token. Must be a value from ListCollectionIdsResponse.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -61,7 +74,12 @@ class ListCollectionIdsRequest extends \Google\Model
     return $this->pageToken;
   }
   /**
-   * @param string
+   * Reads documents as they were at the given time. This must be a microsecond
+   * precision timestamp within the past one hour, or if Point-in-Time Recovery
+   * is enabled, can additionally be a whole minute timestamp within the past 7
+   * days.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {

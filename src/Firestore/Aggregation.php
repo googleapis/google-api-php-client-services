@@ -20,6 +20,15 @@ namespace Google\Service\Firestore;
 class Aggregation extends \Google\Model
 {
   /**
+   * Optional. Optional name of the field to store the result of the aggregation
+   * into. If not provided, Firestore will pick a default name following the
+   * format `field_`. For example: ``` AGGREGATE COUNT_UP_TO(1) AS
+   * count_up_to_1, COUNT_UP_TO(2), COUNT_UP_TO(3) AS count_up_to_3, COUNT(*)
+   * OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
+   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT(*) AS
+   * field_2 OVER ( ... ); ``` Requires: * Must be unique across all aggregation
+   * aliases. * Conform to document field name limitations.
+   *
    * @var string
    */
   public $alias;
@@ -31,7 +40,16 @@ class Aggregation extends \Google\Model
   protected $sumDataType = '';
 
   /**
-   * @param string
+   * Optional. Optional name of the field to store the result of the aggregation
+   * into. If not provided, Firestore will pick a default name following the
+   * format `field_`. For example: ``` AGGREGATE COUNT_UP_TO(1) AS
+   * count_up_to_1, COUNT_UP_TO(2), COUNT_UP_TO(3) AS count_up_to_3, COUNT(*)
+   * OVER ( ... ); ``` becomes: ``` AGGREGATE COUNT_UP_TO(1) AS count_up_to_1,
+   * COUNT_UP_TO(2) AS field_1, COUNT_UP_TO(3) AS count_up_to_3, COUNT(*) AS
+   * field_2 OVER ( ... ); ``` Requires: * Must be unique across all aggregation
+   * aliases. * Conform to document field name limitations.
+   *
+   * @param string $alias
    */
   public function setAlias($alias)
   {
@@ -45,7 +63,9 @@ class Aggregation extends \Google\Model
     return $this->alias;
   }
   /**
-   * @param Avg
+   * Average aggregator.
+   *
+   * @param Avg $avg
    */
   public function setAvg(Avg $avg)
   {
@@ -59,7 +79,9 @@ class Aggregation extends \Google\Model
     return $this->avg;
   }
   /**
-   * @param Count
+   * Count aggregator.
+   *
+   * @param Count $count
    */
   public function setCount(Count $count)
   {
@@ -73,7 +95,9 @@ class Aggregation extends \Google\Model
     return $this->count;
   }
   /**
-   * @param Sum
+   * Sum aggregator.
+   *
+   * @param Sum $sum
    */
   public function setSum(Sum $sum)
   {

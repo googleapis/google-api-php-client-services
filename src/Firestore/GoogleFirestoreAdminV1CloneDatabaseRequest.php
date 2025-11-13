@@ -20,6 +20,14 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1CloneDatabaseRequest extends \Google\Model
 {
   /**
+   * Required. The ID to use for the database, which will become the final
+   * component of the database's resource name. This database ID must not be
+   * associated with an existing database. This value should be 4-63 characters.
+   * Valid characters are /a-z-/ with first character a letter and the last a
+   * letter or a number. Must not be UUID-like
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is
+   * also valid if the database is Standard edition.
+   *
    * @var string
    */
   public $databaseId;
@@ -28,12 +36,24 @@ class GoogleFirestoreAdminV1CloneDatabaseRequest extends \Google\Model
   protected $pitrSnapshotType = GoogleFirestoreAdminV1PitrSnapshot::class;
   protected $pitrSnapshotDataType = '';
   /**
+   * Optional. Immutable. Tags to be bound to the cloned database. The tags
+   * should be provided in the format of `tagKeys/{tag_key_id} ->
+   * tagValues/{tag_value_id}`.
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string
+   * Required. The ID to use for the database, which will become the final
+   * component of the database's resource name. This database ID must not be
+   * associated with an existing database. This value should be 4-63 characters.
+   * Valid characters are /a-z-/ with first character a letter and the last a
+   * letter or a number. Must not be UUID-like
+   * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database ID is
+   * also valid if the database is Standard edition.
+   *
+   * @param string $databaseId
    */
   public function setDatabaseId($databaseId)
   {
@@ -47,7 +67,11 @@ class GoogleFirestoreAdminV1CloneDatabaseRequest extends \Google\Model
     return $this->databaseId;
   }
   /**
-   * @param GoogleFirestoreAdminV1EncryptionConfig
+   * Optional. Encryption configuration for the cloned database. If this field
+   * is not specified, the cloned database will use the same encryption
+   * configuration as the source database, namely use_source_encryption.
+   *
+   * @param GoogleFirestoreAdminV1EncryptionConfig $encryptionConfig
    */
   public function setEncryptionConfig(GoogleFirestoreAdminV1EncryptionConfig $encryptionConfig)
   {
@@ -61,7 +85,11 @@ class GoogleFirestoreAdminV1CloneDatabaseRequest extends \Google\Model
     return $this->encryptionConfig;
   }
   /**
-   * @param GoogleFirestoreAdminV1PitrSnapshot
+   * Required. Specification of the PITR data to clone from. The source database
+   * must exist. The cloned database will be created in the same location as the
+   * source database.
+   *
+   * @param GoogleFirestoreAdminV1PitrSnapshot $pitrSnapshot
    */
   public function setPitrSnapshot(GoogleFirestoreAdminV1PitrSnapshot $pitrSnapshot)
   {
@@ -75,7 +103,11 @@ class GoogleFirestoreAdminV1CloneDatabaseRequest extends \Google\Model
     return $this->pitrSnapshot;
   }
   /**
-   * @param string[]
+   * Optional. Immutable. Tags to be bound to the cloned database. The tags
+   * should be provided in the format of `tagKeys/{tag_key_id} ->
+   * tagValues/{tag_value_id}`.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

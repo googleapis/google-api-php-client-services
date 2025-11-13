@@ -20,16 +20,22 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1Progress extends \Google\Model
 {
   /**
+   * The amount of work completed.
+   *
    * @var string
    */
   public $completedWork;
   /**
+   * The amount of work estimated.
+   *
    * @var string
    */
   public $estimatedWork;
 
   /**
-   * @param string
+   * The amount of work completed.
+   *
+   * @param string $completedWork
    */
   public function setCompletedWork($completedWork)
   {
@@ -43,7 +49,9 @@ class GoogleFirestoreAdminV1Progress extends \Google\Model
     return $this->completedWork;
   }
   /**
-   * @param string
+   * The amount of work estimated.
+   *
+   * @param string $estimatedWork
    */
   public function setEstimatedWork($estimatedWork)
   {

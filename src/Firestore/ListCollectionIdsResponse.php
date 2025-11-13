@@ -21,16 +21,22 @@ class ListCollectionIdsResponse extends \Google\Collection
 {
   protected $collection_key = 'collectionIds';
   /**
+   * The collection ids.
+   *
    * @var string[]
    */
   public $collectionIds;
   /**
+   * A page token that may be used to continue the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string[]
+   * The collection ids.
+   *
+   * @param string[] $collectionIds
    */
   public function setCollectionIds($collectionIds)
   {
@@ -44,7 +50,9 @@ class ListCollectionIdsResponse extends \Google\Collection
     return $this->collectionIds;
   }
   /**
-   * @param string
+   * A page token that may be used to continue the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

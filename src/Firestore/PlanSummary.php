@@ -21,12 +21,20 @@ class PlanSummary extends \Google\Collection
 {
   protected $collection_key = 'indexesUsed';
   /**
+   * The indexes selected for the query. For example: [ {"query_scope":
+   * "Collection", "properties": "(foo ASC, __name__ ASC)"}, {"query_scope":
+   * "Collection", "properties": "(bar ASC, __name__ ASC)"} ]
+   *
    * @var array[]
    */
   public $indexesUsed;
 
   /**
-   * @param array[]
+   * The indexes selected for the query. For example: [ {"query_scope":
+   * "Collection", "properties": "(foo ASC, __name__ ASC)"}, {"query_scope":
+   * "Collection", "properties": "(bar ASC, __name__ ASC)"} ]
+   *
+   * @param array[] $indexesUsed
    */
   public function setIndexesUsed($indexesUsed)
   {

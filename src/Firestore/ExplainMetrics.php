@@ -25,7 +25,10 @@ class ExplainMetrics extends \Google\Model
   protected $planSummaryDataType = '';
 
   /**
-   * @param ExecutionStats
+   * Aggregated stats from the execution of the query. Only present when
+   * ExplainOptions.analyze is set to true.
+   *
+   * @param ExecutionStats $executionStats
    */
   public function setExecutionStats(ExecutionStats $executionStats)
   {
@@ -39,7 +42,9 @@ class ExplainMetrics extends \Google\Model
     return $this->executionStats;
   }
   /**
-   * @param PlanSummary
+   * Planning phase information for the query.
+   *
+   * @param PlanSummary $planSummary
    */
   public function setPlanSummary(PlanSummary $planSummary)
   {
