@@ -26,7 +26,9 @@ class SortRangeRequest extends \Google\Collection
   protected $sortSpecsDataType = 'array';
 
   /**
-   * @param GridRange
+   * The range to sort.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {
@@ -40,7 +42,10 @@ class SortRangeRequest extends \Google\Collection
     return $this->range;
   }
   /**
-   * @param SortSpec[]
+   * The sort order per column. Later specifications are used when values are
+   * equal in the earlier specifications.
+   *
+   * @param SortSpec[] $sortSpecs
    */
   public function setSortSpecs($sortSpecs)
   {

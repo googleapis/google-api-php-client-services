@@ -20,10 +20,28 @@ namespace Google\Service\Sheets;
 class SourceAndDestination extends \Google\Model
 {
   /**
+   * The default value, do not use.
+   */
+  public const DIMENSION_DIMENSION_UNSPECIFIED = 'DIMENSION_UNSPECIFIED';
+  /**
+   * Operates on the rows of a sheet.
+   */
+  public const DIMENSION_ROWS = 'ROWS';
+  /**
+   * Operates on the columns of a sheet.
+   */
+  public const DIMENSION_COLUMNS = 'COLUMNS';
+  /**
+   * The dimension that data should be filled into.
+   *
    * @var string
    */
   public $dimension;
   /**
+   * The number of rows or columns that data should be filled into. Positive
+   * numbers expand beyond the last row or last column of the source. Negative
+   * numbers expand before the first row or first column of the source.
+   *
    * @var int
    */
   public $fillLength;
@@ -31,21 +49,29 @@ class SourceAndDestination extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param string
+   * The dimension that data should be filled into.
+   *
+   * Accepted values: DIMENSION_UNSPECIFIED, ROWS, COLUMNS
+   *
+   * @param self::DIMENSION_* $dimension
    */
   public function setDimension($dimension)
   {
     $this->dimension = $dimension;
   }
   /**
-   * @return string
+   * @return self::DIMENSION_*
    */
   public function getDimension()
   {
     return $this->dimension;
   }
   /**
-   * @param int
+   * The number of rows or columns that data should be filled into. Positive
+   * numbers expand beyond the last row or last column of the source. Negative
+   * numbers expand before the first row or first column of the source.
+   *
+   * @param int $fillLength
    */
   public function setFillLength($fillLength)
   {
@@ -59,7 +85,9 @@ class SourceAndDestination extends \Google\Model
     return $this->fillLength;
   }
   /**
-   * @param GridRange
+   * The location of the data to use as the source of the autofill.
+   *
+   * @param GridRange $source
    */
   public function setSource(GridRange $source)
   {

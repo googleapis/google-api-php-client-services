@@ -19,22 +19,41 @@ namespace Google\Service\Sheets;
 
 class WaterfallChartSpec extends \Google\Collection
 {
+  /**
+   * Default value, do not use.
+   */
+  public const STACKED_TYPE_WATERFALL_STACKED_TYPE_UNSPECIFIED = 'WATERFALL_STACKED_TYPE_UNSPECIFIED';
+  /**
+   * Values corresponding to the same domain (horizontal axis) value will be
+   * stacked vertically.
+   */
+  public const STACKED_TYPE_STACKED = 'STACKED';
+  /**
+   * Series will spread out along the horizontal axis.
+   */
+  public const STACKED_TYPE_SEQUENTIAL = 'SEQUENTIAL';
   protected $collection_key = 'series';
   protected $connectorLineStyleType = LineStyle::class;
   protected $connectorLineStyleDataType = '';
   protected $domainType = WaterfallChartDomain::class;
   protected $domainDataType = '';
   /**
+   * True to interpret the first value as a total.
+   *
    * @var bool
    */
   public $firstValueIsTotal;
   /**
+   * True to hide connector lines between columns.
+   *
    * @var bool
    */
   public $hideConnectorLines;
   protected $seriesType = WaterfallChartSeries::class;
   protected $seriesDataType = 'array';
   /**
+   * The stacked type.
+   *
    * @var string
    */
   public $stackedType;
@@ -42,7 +61,9 @@ class WaterfallChartSpec extends \Google\Collection
   protected $totalDataLabelDataType = '';
 
   /**
-   * @param LineStyle
+   * The line style for the connector lines.
+   *
+   * @param LineStyle $connectorLineStyle
    */
   public function setConnectorLineStyle(LineStyle $connectorLineStyle)
   {
@@ -56,7 +77,9 @@ class WaterfallChartSpec extends \Google\Collection
     return $this->connectorLineStyle;
   }
   /**
-   * @param WaterfallChartDomain
+   * The domain data (horizontal axis) for the waterfall chart.
+   *
+   * @param WaterfallChartDomain $domain
    */
   public function setDomain(WaterfallChartDomain $domain)
   {
@@ -70,7 +93,9 @@ class WaterfallChartSpec extends \Google\Collection
     return $this->domain;
   }
   /**
-   * @param bool
+   * True to interpret the first value as a total.
+   *
+   * @param bool $firstValueIsTotal
    */
   public function setFirstValueIsTotal($firstValueIsTotal)
   {
@@ -84,7 +109,9 @@ class WaterfallChartSpec extends \Google\Collection
     return $this->firstValueIsTotal;
   }
   /**
-   * @param bool
+   * True to hide connector lines between columns.
+   *
+   * @param bool $hideConnectorLines
    */
   public function setHideConnectorLines($hideConnectorLines)
   {
@@ -98,7 +125,9 @@ class WaterfallChartSpec extends \Google\Collection
     return $this->hideConnectorLines;
   }
   /**
-   * @param WaterfallChartSeries[]
+   * The data this waterfall chart is visualizing.
+   *
+   * @param WaterfallChartSeries[] $series
    */
   public function setSeries($series)
   {
@@ -112,21 +141,30 @@ class WaterfallChartSpec extends \Google\Collection
     return $this->series;
   }
   /**
-   * @param string
+   * The stacked type.
+   *
+   * Accepted values: WATERFALL_STACKED_TYPE_UNSPECIFIED, STACKED, SEQUENTIAL
+   *
+   * @param self::STACKED_TYPE_* $stackedType
    */
   public function setStackedType($stackedType)
   {
     $this->stackedType = $stackedType;
   }
   /**
-   * @return string
+   * @return self::STACKED_TYPE_*
    */
   public function getStackedType()
   {
     return $this->stackedType;
   }
   /**
-   * @param DataLabel
+   * Controls whether to display additional data labels on stacked charts which
+   * sum the total value of all stacked values at each value along the domain
+   * axis. stacked_type must be STACKED and neither CUSTOM nor placement can be
+   * set on the total_data_label.
+   *
+   * @param DataLabel $totalDataLabel
    */
   public function setTotalDataLabel(DataLabel $totalDataLabel)
   {

@@ -28,20 +28,46 @@ class TreemapChartSpec extends \Google\Model
   protected $headerColorStyleType = ColorStyle::class;
   protected $headerColorStyleDataType = '';
   /**
+   * True to hide tooltips.
+   *
    * @var bool
    */
   public $hideTooltips;
   /**
+   * The number of additional data levels beyond the labeled levels to be shown
+   * on the treemap chart. These levels are not interactive and are shown
+   * without their labels. Defaults to 0 if not specified.
+   *
    * @var int
    */
   public $hintedLevels;
   protected $labelsType = ChartData::class;
   protected $labelsDataType = '';
   /**
+   * The number of data levels to show on the treemap chart. These levels are
+   * interactive and are shown with their labels. Defaults to 2 if not
+   * specified.
+   *
    * @var int
    */
   public $levels;
+  /**
+   * The maximum possible data value. Cells with values greater than this will
+   * have the same color as cells with this value. If not specified, defaults to
+   * the actual maximum value from color_data, or the maximum value from
+   * size_data if color_data is not specified.
+   *
+   * @var 
+   */
   public $maxValue;
+  /**
+   * The minimum possible data value. Cells with values less than this will have
+   * the same color as cells with this value. If not specified, defaults to the
+   * actual minimum value from color_data, or the minimum value from size_data
+   * if color_data is not specified.
+   *
+   * @var 
+   */
   public $minValue;
   protected $parentLabelsType = ChartData::class;
   protected $parentLabelsDataType = '';
@@ -51,7 +77,13 @@ class TreemapChartSpec extends \Google\Model
   protected $textFormatDataType = '';
 
   /**
-   * @param ChartData
+   * The data that determines the background color of each treemap data cell.
+   * This field is optional. If not specified, size_data is used to determine
+   * background colors. If specified, the data is expected to be numeric.
+   * color_scale will determine how the values in this data map to data cell
+   * background colors.
+   *
+   * @param ChartData $colorData
    */
   public function setColorData(ChartData $colorData)
   {
@@ -65,7 +97,18 @@ class TreemapChartSpec extends \Google\Model
     return $this->colorData;
   }
   /**
-   * @param TreemapChartColorScale
+   * The color scale for data cells in the treemap chart. Data cells are
+   * assigned colors based on their color values. These color values come from
+   * color_data, or from size_data if color_data is not specified. Cells with
+   * color values less than or equal to min_value will have minValueColor as
+   * their background color. Cells with color values greater than or equal to
+   * max_value will have maxValueColor as their background color. Cells with
+   * color values between min_value and max_value will have background colors on
+   * a gradient between minValueColor and maxValueColor, the midpoint of the
+   * gradient being midValueColor. Cells with missing or non-numeric color
+   * values will have noDataColor as their background color.
+   *
+   * @param TreemapChartColorScale $colorScale
    */
   public function setColorScale(TreemapChartColorScale $colorScale)
   {
@@ -79,13 +122,17 @@ class TreemapChartSpec extends \Google\Model
     return $this->colorScale;
   }
   /**
-   * @param Color
+   * The background color for header cells. Deprecated: Use header_color_style.
+   *
+   * @deprecated
+   * @param Color $headerColor
    */
   public function setHeaderColor(Color $headerColor)
   {
     $this->headerColor = $headerColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getHeaderColor()
@@ -93,7 +140,10 @@ class TreemapChartSpec extends \Google\Model
     return $this->headerColor;
   }
   /**
-   * @param ColorStyle
+   * The background color for header cells. If header_color is also set, this
+   * field takes precedence.
+   *
+   * @param ColorStyle $headerColorStyle
    */
   public function setHeaderColorStyle(ColorStyle $headerColorStyle)
   {
@@ -107,7 +157,9 @@ class TreemapChartSpec extends \Google\Model
     return $this->headerColorStyle;
   }
   /**
-   * @param bool
+   * True to hide tooltips.
+   *
+   * @param bool $hideTooltips
    */
   public function setHideTooltips($hideTooltips)
   {
@@ -121,7 +173,11 @@ class TreemapChartSpec extends \Google\Model
     return $this->hideTooltips;
   }
   /**
-   * @param int
+   * The number of additional data levels beyond the labeled levels to be shown
+   * on the treemap chart. These levels are not interactive and are shown
+   * without their labels. Defaults to 0 if not specified.
+   *
+   * @param int $hintedLevels
    */
   public function setHintedLevels($hintedLevels)
   {
@@ -135,7 +191,9 @@ class TreemapChartSpec extends \Google\Model
     return $this->hintedLevels;
   }
   /**
-   * @param ChartData
+   * The data that contains the treemap cell labels.
+   *
+   * @param ChartData $labels
    */
   public function setLabels(ChartData $labels)
   {
@@ -149,7 +207,11 @@ class TreemapChartSpec extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param int
+   * The number of data levels to show on the treemap chart. These levels are
+   * interactive and are shown with their labels. Defaults to 2 if not
+   * specified.
+   *
+   * @param int $levels
    */
   public function setLevels($levels)
   {
@@ -179,7 +241,9 @@ class TreemapChartSpec extends \Google\Model
     return $this->minValue;
   }
   /**
-   * @param ChartData
+   * The data the contains the treemap cells' parent labels.
+   *
+   * @param ChartData $parentLabels
    */
   public function setParentLabels(ChartData $parentLabels)
   {
@@ -193,7 +257,12 @@ class TreemapChartSpec extends \Google\Model
     return $this->parentLabels;
   }
   /**
-   * @param ChartData
+   * The data that determines the size of each treemap data cell. This data is
+   * expected to be numeric. The cells corresponding to non-numeric or missing
+   * data will not be rendered. If color_data is not specified, this data is
+   * used to determine data cell background colors as well.
+   *
+   * @param ChartData $sizeData
    */
   public function setSizeData(ChartData $sizeData)
   {
@@ -207,7 +276,10 @@ class TreemapChartSpec extends \Google\Model
     return $this->sizeData;
   }
   /**
-   * @param TextFormat
+   * The text format for all labels on the chart. The link field is not
+   * supported.
+   *
+   * @param TextFormat $textFormat
    */
   public function setTextFormat(TextFormat $textFormat)
   {

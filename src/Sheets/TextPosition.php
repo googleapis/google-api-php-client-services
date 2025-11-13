@@ -20,19 +20,41 @@ namespace Google\Service\Sheets;
 class TextPosition extends \Google\Model
 {
   /**
+   * The horizontal alignment is not specified. Do not use this.
+   */
+  public const HORIZONTAL_ALIGNMENT_HORIZONTAL_ALIGN_UNSPECIFIED = 'HORIZONTAL_ALIGN_UNSPECIFIED';
+  /**
+   * The text is explicitly aligned to the left of the cell.
+   */
+  public const HORIZONTAL_ALIGNMENT_LEFT = 'LEFT';
+  /**
+   * The text is explicitly aligned to the center of the cell.
+   */
+  public const HORIZONTAL_ALIGNMENT_CENTER = 'CENTER';
+  /**
+   * The text is explicitly aligned to the right of the cell.
+   */
+  public const HORIZONTAL_ALIGNMENT_RIGHT = 'RIGHT';
+  /**
+   * Horizontal alignment setting for the piece of text.
+   *
    * @var string
    */
   public $horizontalAlignment;
 
   /**
-   * @param string
+   * Horizontal alignment setting for the piece of text.
+   *
+   * Accepted values: HORIZONTAL_ALIGN_UNSPECIFIED, LEFT, CENTER, RIGHT
+   *
+   * @param self::HORIZONTAL_ALIGNMENT_* $horizontalAlignment
    */
   public function setHorizontalAlignment($horizontalAlignment)
   {
     $this->horizontalAlignment = $horizontalAlignment;
   }
   /**
-   * @return string
+   * @return self::HORIZONTAL_ALIGNMENT_*
    */
   public function getHorizontalAlignment()
   {

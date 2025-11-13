@@ -20,6 +20,25 @@ namespace Google\Service\Sheets;
 class SlicerSpec extends \Google\Model
 {
   /**
+   * The horizontal alignment is not specified. Do not use this.
+   */
+  public const HORIZONTAL_ALIGNMENT_HORIZONTAL_ALIGN_UNSPECIFIED = 'HORIZONTAL_ALIGN_UNSPECIFIED';
+  /**
+   * The text is explicitly aligned to the left of the cell.
+   */
+  public const HORIZONTAL_ALIGNMENT_LEFT = 'LEFT';
+  /**
+   * The text is explicitly aligned to the center of the cell.
+   */
+  public const HORIZONTAL_ALIGNMENT_CENTER = 'CENTER';
+  /**
+   * The text is explicitly aligned to the right of the cell.
+   */
+  public const HORIZONTAL_ALIGNMENT_RIGHT = 'RIGHT';
+  /**
+   * True if the filter should apply to pivot tables. If not set, default to
+   * `True`.
+   *
    * @var bool
    */
   public $applyToPivotTables;
@@ -28,6 +47,9 @@ class SlicerSpec extends \Google\Model
   protected $backgroundColorStyleType = ColorStyle::class;
   protected $backgroundColorStyleDataType = '';
   /**
+   * The zero-based column index in the data table on which the filter is
+   * applied to.
+   *
    * @var int
    */
   public $columnIndex;
@@ -36,18 +58,26 @@ class SlicerSpec extends \Google\Model
   protected $filterCriteriaType = FilterCriteria::class;
   protected $filterCriteriaDataType = '';
   /**
+   * The horizontal alignment of title in the slicer. If unspecified, defaults
+   * to `LEFT`
+   *
    * @var string
    */
   public $horizontalAlignment;
   protected $textFormatType = TextFormat::class;
   protected $textFormatDataType = '';
   /**
+   * The title of the slicer.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param bool
+   * True if the filter should apply to pivot tables. If not set, default to
+   * `True`.
+   *
+   * @param bool $applyToPivotTables
    */
   public function setApplyToPivotTables($applyToPivotTables)
   {
@@ -61,13 +91,17 @@ class SlicerSpec extends \Google\Model
     return $this->applyToPivotTables;
   }
   /**
-   * @param Color
+   * The background color of the slicer. Deprecated: Use background_color_style.
+   *
+   * @deprecated
+   * @param Color $backgroundColor
    */
   public function setBackgroundColor(Color $backgroundColor)
   {
     $this->backgroundColor = $backgroundColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getBackgroundColor()
@@ -75,7 +109,10 @@ class SlicerSpec extends \Google\Model
     return $this->backgroundColor;
   }
   /**
-   * @param ColorStyle
+   * The background color of the slicer. If background_color is also set, this
+   * field takes precedence.
+   *
+   * @param ColorStyle $backgroundColorStyle
    */
   public function setBackgroundColorStyle(ColorStyle $backgroundColorStyle)
   {
@@ -89,7 +126,10 @@ class SlicerSpec extends \Google\Model
     return $this->backgroundColorStyle;
   }
   /**
-   * @param int
+   * The zero-based column index in the data table on which the filter is
+   * applied to.
+   *
+   * @param int $columnIndex
    */
   public function setColumnIndex($columnIndex)
   {
@@ -103,7 +143,9 @@ class SlicerSpec extends \Google\Model
     return $this->columnIndex;
   }
   /**
-   * @param GridRange
+   * The data range of the slicer.
+   *
+   * @param GridRange $dataRange
    */
   public function setDataRange(GridRange $dataRange)
   {
@@ -117,7 +159,9 @@ class SlicerSpec extends \Google\Model
     return $this->dataRange;
   }
   /**
-   * @param FilterCriteria
+   * The filtering criteria of the slicer.
+   *
+   * @param FilterCriteria $filterCriteria
    */
   public function setFilterCriteria(FilterCriteria $filterCriteria)
   {
@@ -131,21 +175,28 @@ class SlicerSpec extends \Google\Model
     return $this->filterCriteria;
   }
   /**
-   * @param string
+   * The horizontal alignment of title in the slicer. If unspecified, defaults
+   * to `LEFT`
+   *
+   * Accepted values: HORIZONTAL_ALIGN_UNSPECIFIED, LEFT, CENTER, RIGHT
+   *
+   * @param self::HORIZONTAL_ALIGNMENT_* $horizontalAlignment
    */
   public function setHorizontalAlignment($horizontalAlignment)
   {
     $this->horizontalAlignment = $horizontalAlignment;
   }
   /**
-   * @return string
+   * @return self::HORIZONTAL_ALIGNMENT_*
    */
   public function getHorizontalAlignment()
   {
     return $this->horizontalAlignment;
   }
   /**
-   * @param TextFormat
+   * The text format of title in the slicer. The link field is not supported.
+   *
+   * @param TextFormat $textFormat
    */
   public function setTextFormat(TextFormat $textFormat)
   {
@@ -159,7 +210,9 @@ class SlicerSpec extends \Google\Model
     return $this->textFormat;
   }
   /**
-   * @param string
+   * The title of the slicer.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

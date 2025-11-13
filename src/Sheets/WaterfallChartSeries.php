@@ -27,6 +27,10 @@ class WaterfallChartSeries extends \Google\Collection
   protected $dataLabelType = DataLabel::class;
   protected $dataLabelDataType = '';
   /**
+   * True to hide the subtotal column from the end of the series. By default, a
+   * subtotal column will appear at the end of each series. Setting this field
+   * to true will hide that subtotal column for this series.
+   *
    * @var bool
    */
   public $hideTrailingSubtotal;
@@ -38,7 +42,11 @@ class WaterfallChartSeries extends \Google\Collection
   protected $subtotalColumnsStyleDataType = '';
 
   /**
-   * @param WaterfallChartCustomSubtotal[]
+   * Custom subtotal columns appearing in this series. The order in which
+   * subtotals are defined is not significant. Only one subtotal may be defined
+   * for each data point.
+   *
+   * @param WaterfallChartCustomSubtotal[] $customSubtotals
    */
   public function setCustomSubtotals($customSubtotals)
   {
@@ -52,7 +60,9 @@ class WaterfallChartSeries extends \Google\Collection
     return $this->customSubtotals;
   }
   /**
-   * @param ChartData
+   * The data being visualized in this series.
+   *
+   * @param ChartData $data
    */
   public function setData(ChartData $data)
   {
@@ -66,7 +76,9 @@ class WaterfallChartSeries extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param DataLabel
+   * Information about the data labels for this series.
+   *
+   * @param DataLabel $dataLabel
    */
   public function setDataLabel(DataLabel $dataLabel)
   {
@@ -80,7 +92,11 @@ class WaterfallChartSeries extends \Google\Collection
     return $this->dataLabel;
   }
   /**
-   * @param bool
+   * True to hide the subtotal column from the end of the series. By default, a
+   * subtotal column will appear at the end of each series. Setting this field
+   * to true will hide that subtotal column for this series.
+   *
+   * @param bool $hideTrailingSubtotal
    */
   public function setHideTrailingSubtotal($hideTrailingSubtotal)
   {
@@ -94,7 +110,9 @@ class WaterfallChartSeries extends \Google\Collection
     return $this->hideTrailingSubtotal;
   }
   /**
-   * @param WaterfallChartColumnStyle
+   * Styles for all columns in this series with negative values.
+   *
+   * @param WaterfallChartColumnStyle $negativeColumnsStyle
    */
   public function setNegativeColumnsStyle(WaterfallChartColumnStyle $negativeColumnsStyle)
   {
@@ -108,7 +126,9 @@ class WaterfallChartSeries extends \Google\Collection
     return $this->negativeColumnsStyle;
   }
   /**
-   * @param WaterfallChartColumnStyle
+   * Styles for all columns in this series with positive values.
+   *
+   * @param WaterfallChartColumnStyle $positiveColumnsStyle
    */
   public function setPositiveColumnsStyle(WaterfallChartColumnStyle $positiveColumnsStyle)
   {
@@ -122,7 +142,9 @@ class WaterfallChartSeries extends \Google\Collection
     return $this->positiveColumnsStyle;
   }
   /**
-   * @param WaterfallChartColumnStyle
+   * Styles for all subtotal columns in this series.
+   *
+   * @param WaterfallChartColumnStyle $subtotalColumnsStyle
    */
   public function setSubtotalColumnsStyle(WaterfallChartColumnStyle $subtotalColumnsStyle)
   {

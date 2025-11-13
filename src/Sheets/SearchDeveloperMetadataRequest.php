@@ -24,7 +24,11 @@ class SearchDeveloperMetadataRequest extends \Google\Collection
   protected $dataFiltersDataType = 'array';
 
   /**
-   * @param DataFilter[]
+   * The data filters describing the criteria used to determine which
+   * DeveloperMetadata entries to return. DeveloperMetadata matching any of the
+   * specified filters are included in the response.
+   *
+   * @param DataFilter[] $dataFilters
    */
   public function setDataFilters($dataFilters)
   {

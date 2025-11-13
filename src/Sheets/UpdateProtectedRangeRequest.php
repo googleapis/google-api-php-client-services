@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class UpdateProtectedRangeRequest extends \Google\Model
 {
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `protectedRange` is implied and should not be specified. A single
+   * `"*"` can be used as short-hand for listing every field.
+   *
    * @var string
    */
   public $fields;
@@ -27,7 +31,11 @@ class UpdateProtectedRangeRequest extends \Google\Model
   protected $protectedRangeDataType = '';
 
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `protectedRange` is implied and should not be specified. A single
+   * `"*"` can be used as short-hand for listing every field.
+   *
+   * @param string $fields
    */
   public function setFields($fields)
   {
@@ -41,7 +49,9 @@ class UpdateProtectedRangeRequest extends \Google\Model
     return $this->fields;
   }
   /**
-   * @param ProtectedRange
+   * The protected range to update with the new properties.
+   *
+   * @param ProtectedRange $protectedRange
    */
   public function setProtectedRange(ProtectedRange $protectedRange)
   {

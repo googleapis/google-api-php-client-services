@@ -20,30 +20,42 @@ namespace Google\Service\Sheets;
 class UpdateValuesResponse extends \Google\Model
 {
   /**
+   * The spreadsheet the updates were applied to.
+   *
    * @var string
    */
   public $spreadsheetId;
   /**
+   * The number of cells updated.
+   *
    * @var int
    */
   public $updatedCells;
   /**
+   * The number of columns where at least one cell in the column was updated.
+   *
    * @var int
    */
   public $updatedColumns;
   protected $updatedDataType = ValueRange::class;
   protected $updatedDataDataType = '';
   /**
+   * The range (in A1 notation) that updates were applied to.
+   *
    * @var string
    */
   public $updatedRange;
   /**
+   * The number of rows where at least one cell in the row was updated.
+   *
    * @var int
    */
   public $updatedRows;
 
   /**
-   * @param string
+   * The spreadsheet the updates were applied to.
+   *
+   * @param string $spreadsheetId
    */
   public function setSpreadsheetId($spreadsheetId)
   {
@@ -57,7 +69,9 @@ class UpdateValuesResponse extends \Google\Model
     return $this->spreadsheetId;
   }
   /**
-   * @param int
+   * The number of cells updated.
+   *
+   * @param int $updatedCells
    */
   public function setUpdatedCells($updatedCells)
   {
@@ -71,7 +85,9 @@ class UpdateValuesResponse extends \Google\Model
     return $this->updatedCells;
   }
   /**
-   * @param int
+   * The number of columns where at least one cell in the column was updated.
+   *
+   * @param int $updatedColumns
    */
   public function setUpdatedColumns($updatedColumns)
   {
@@ -85,7 +101,10 @@ class UpdateValuesResponse extends \Google\Model
     return $this->updatedColumns;
   }
   /**
-   * @param ValueRange
+   * The values of the cells after updates were applied. This is only included
+   * if the request's `includeValuesInResponse` field was `true`.
+   *
+   * @param ValueRange $updatedData
    */
   public function setUpdatedData(ValueRange $updatedData)
   {
@@ -99,7 +118,9 @@ class UpdateValuesResponse extends \Google\Model
     return $this->updatedData;
   }
   /**
-   * @param string
+   * The range (in A1 notation) that updates were applied to.
+   *
+   * @param string $updatedRange
    */
   public function setUpdatedRange($updatedRange)
   {
@@ -113,7 +134,9 @@ class UpdateValuesResponse extends \Google\Model
     return $this->updatedRange;
   }
   /**
-   * @param int
+   * The number of rows where at least one cell in the row was updated.
+   *
+   * @param int $updatedRows
    */
   public function setUpdatedRows($updatedRows)
   {

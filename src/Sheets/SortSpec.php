@@ -19,6 +19,18 @@ namespace Google\Service\Sheets;
 
 class SortSpec extends \Google\Model
 {
+  /**
+   * Default value, do not use this.
+   */
+  public const SORT_ORDER_SORT_ORDER_UNSPECIFIED = 'SORT_ORDER_UNSPECIFIED';
+  /**
+   * Sort ascending.
+   */
+  public const SORT_ORDER_ASCENDING = 'ASCENDING';
+  /**
+   * Sort descending.
+   */
+  public const SORT_ORDER_DESCENDING = 'DESCENDING';
   protected $backgroundColorType = Color::class;
   protected $backgroundColorDataType = '';
   protected $backgroundColorStyleType = ColorStyle::class;
@@ -26,6 +38,8 @@ class SortSpec extends \Google\Model
   protected $dataSourceColumnReferenceType = DataSourceColumnReference::class;
   protected $dataSourceColumnReferenceDataType = '';
   /**
+   * The dimension the sort should be applied to.
+   *
    * @var int
    */
   public $dimensionIndex;
@@ -34,18 +48,26 @@ class SortSpec extends \Google\Model
   protected $foregroundColorStyleType = ColorStyle::class;
   protected $foregroundColorStyleDataType = '';
   /**
+   * The order data should be sorted.
+   *
    * @var string
    */
   public $sortOrder;
 
   /**
-   * @param Color
+   * The background fill color to sort by; cells with this fill color are sorted
+   * to the top. Mutually exclusive with foreground_color. Deprecated: Use
+   * background_color_style.
+   *
+   * @deprecated
+   * @param Color $backgroundColor
    */
   public function setBackgroundColor(Color $backgroundColor)
   {
     $this->backgroundColor = $backgroundColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getBackgroundColor()
@@ -53,7 +75,11 @@ class SortSpec extends \Google\Model
     return $this->backgroundColor;
   }
   /**
-   * @param ColorStyle
+   * The background fill color to sort by; cells with this fill color are sorted
+   * to the top. Mutually exclusive with foreground_color, and must be an RGB-
+   * type color. If background_color is also set, this field takes precedence.
+   *
+   * @param ColorStyle $backgroundColorStyle
    */
   public function setBackgroundColorStyle(ColorStyle $backgroundColorStyle)
   {
@@ -67,7 +93,9 @@ class SortSpec extends \Google\Model
     return $this->backgroundColorStyle;
   }
   /**
-   * @param DataSourceColumnReference
+   * Reference to a data source column.
+   *
+   * @param DataSourceColumnReference $dataSourceColumnReference
    */
   public function setDataSourceColumnReference(DataSourceColumnReference $dataSourceColumnReference)
   {
@@ -81,7 +109,9 @@ class SortSpec extends \Google\Model
     return $this->dataSourceColumnReference;
   }
   /**
-   * @param int
+   * The dimension the sort should be applied to.
+   *
+   * @param int $dimensionIndex
    */
   public function setDimensionIndex($dimensionIndex)
   {
@@ -95,13 +125,19 @@ class SortSpec extends \Google\Model
     return $this->dimensionIndex;
   }
   /**
-   * @param Color
+   * The foreground color to sort by; cells with this foreground color are
+   * sorted to the top. Mutually exclusive with background_color. Deprecated:
+   * Use foreground_color_style.
+   *
+   * @deprecated
+   * @param Color $foregroundColor
    */
   public function setForegroundColor(Color $foregroundColor)
   {
     $this->foregroundColor = $foregroundColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getForegroundColor()
@@ -109,7 +145,12 @@ class SortSpec extends \Google\Model
     return $this->foregroundColor;
   }
   /**
-   * @param ColorStyle
+   * The foreground color to sort by; cells with this foreground color are
+   * sorted to the top. Mutually exclusive with background_color, and must be an
+   * RGB-type color. If foreground_color is also set, this field takes
+   * precedence.
+   *
+   * @param ColorStyle $foregroundColorStyle
    */
   public function setForegroundColorStyle(ColorStyle $foregroundColorStyle)
   {
@@ -123,14 +164,18 @@ class SortSpec extends \Google\Model
     return $this->foregroundColorStyle;
   }
   /**
-   * @param string
+   * The order data should be sorted.
+   *
+   * Accepted values: SORT_ORDER_UNSPECIFIED, ASCENDING, DESCENDING
+   *
+   * @param self::SORT_ORDER_* $sortOrder
    */
   public function setSortOrder($sortOrder)
   {
     $this->sortOrder = $sortOrder;
   }
   /**
-   * @return string
+   * @return self::SORT_ORDER_*
    */
   public function getSortOrder()
   {

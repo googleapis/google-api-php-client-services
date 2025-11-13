@@ -24,7 +24,9 @@ class SearchDeveloperMetadataResponse extends \Google\Collection
   protected $matchedDeveloperMetadataDataType = 'array';
 
   /**
-   * @param MatchedDeveloperMetadata[]
+   * The metadata matching the criteria of the search request.
+   *
+   * @param MatchedDeveloperMetadata[] $matchedDeveloperMetadata
    */
   public function setMatchedDeveloperMetadata($matchedDeveloperMetadata)
   {

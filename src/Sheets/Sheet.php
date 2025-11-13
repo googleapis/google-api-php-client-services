@@ -50,7 +50,9 @@ class Sheet extends \Google\Collection
   protected $tablesDataType = 'array';
 
   /**
-   * @param BandedRange[]
+   * The banded (alternating colors) ranges on this sheet.
+   *
+   * @param BandedRange[] $bandedRanges
    */
   public function setBandedRanges($bandedRanges)
   {
@@ -64,7 +66,9 @@ class Sheet extends \Google\Collection
     return $this->bandedRanges;
   }
   /**
-   * @param BasicFilter
+   * The filter on this sheet, if any.
+   *
+   * @param BasicFilter $basicFilter
    */
   public function setBasicFilter(BasicFilter $basicFilter)
   {
@@ -78,7 +82,9 @@ class Sheet extends \Google\Collection
     return $this->basicFilter;
   }
   /**
-   * @param EmbeddedChart[]
+   * The specifications of every chart on this sheet.
+   *
+   * @param EmbeddedChart[] $charts
    */
   public function setCharts($charts)
   {
@@ -92,7 +98,10 @@ class Sheet extends \Google\Collection
     return $this->charts;
   }
   /**
-   * @param DimensionGroup[]
+   * All column groups on this sheet, ordered by increasing range start index,
+   * then by group depth.
+   *
+   * @param DimensionGroup[] $columnGroups
    */
   public function setColumnGroups($columnGroups)
   {
@@ -106,7 +115,9 @@ class Sheet extends \Google\Collection
     return $this->columnGroups;
   }
   /**
-   * @param ConditionalFormatRule[]
+   * The conditional format rules in this sheet.
+   *
+   * @param ConditionalFormatRule[] $conditionalFormats
    */
   public function setConditionalFormats($conditionalFormats)
   {
@@ -120,7 +131,16 @@ class Sheet extends \Google\Collection
     return $this->conditionalFormats;
   }
   /**
-   * @param GridData[]
+   * Data in the grid, if this is a grid sheet. The number of GridData objects
+   * returned is dependent on the number of ranges requested on this sheet. For
+   * example, if this is representing `Sheet1`, and the spreadsheet was
+   * requested with ranges `Sheet1!A1:C10` and `Sheet1!D15:E20`, then the first
+   * GridData will have a startRow/startColumn of `0`, while the second one will
+   * have `startRow 14` (zero-based row 15), and `startColumn 3` (zero-based
+   * column D). For a DATA_SOURCE sheet, you can not request a specific range,
+   * the GridData contains all the values.
+   *
+   * @param GridData[] $data
    */
   public function setData($data)
   {
@@ -134,7 +154,9 @@ class Sheet extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param DeveloperMetadata[]
+   * The developer metadata associated with a sheet.
+   *
+   * @param DeveloperMetadata[] $developerMetadata
    */
   public function setDeveloperMetadata($developerMetadata)
   {
@@ -148,7 +170,9 @@ class Sheet extends \Google\Collection
     return $this->developerMetadata;
   }
   /**
-   * @param FilterView[]
+   * The filter views in this sheet.
+   *
+   * @param FilterView[] $filterViews
    */
   public function setFilterViews($filterViews)
   {
@@ -162,7 +186,9 @@ class Sheet extends \Google\Collection
     return $this->filterViews;
   }
   /**
-   * @param GridRange[]
+   * The ranges that are merged together.
+   *
+   * @param GridRange[] $merges
    */
   public function setMerges($merges)
   {
@@ -176,7 +202,9 @@ class Sheet extends \Google\Collection
     return $this->merges;
   }
   /**
-   * @param SheetProperties
+   * The properties of the sheet.
+   *
+   * @param SheetProperties $properties
    */
   public function setProperties(SheetProperties $properties)
   {
@@ -190,7 +218,9 @@ class Sheet extends \Google\Collection
     return $this->properties;
   }
   /**
-   * @param ProtectedRange[]
+   * The protected ranges in this sheet.
+   *
+   * @param ProtectedRange[] $protectedRanges
    */
   public function setProtectedRanges($protectedRanges)
   {
@@ -204,7 +234,10 @@ class Sheet extends \Google\Collection
     return $this->protectedRanges;
   }
   /**
-   * @param DimensionGroup[]
+   * All row groups on this sheet, ordered by increasing range start index, then
+   * by group depth.
+   *
+   * @param DimensionGroup[] $rowGroups
    */
   public function setRowGroups($rowGroups)
   {
@@ -218,7 +251,9 @@ class Sheet extends \Google\Collection
     return $this->rowGroups;
   }
   /**
-   * @param Slicer[]
+   * The slicers on this sheet.
+   *
+   * @param Slicer[] $slicers
    */
   public function setSlicers($slicers)
   {
@@ -232,7 +267,9 @@ class Sheet extends \Google\Collection
     return $this->slicers;
   }
   /**
-   * @param Table[]
+   * The tables on this sheet.
+   *
+   * @param Table[] $tables
    */
   public function setTables($tables)
   {

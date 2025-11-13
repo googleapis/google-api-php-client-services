@@ -22,12 +22,16 @@ class TextFormatRun extends \Google\Model
   protected $formatType = TextFormat::class;
   protected $formatDataType = '';
   /**
+   * The zero-based character index where this run starts, in UTF-16 code units.
+   *
    * @var int
    */
   public $startIndex;
 
   /**
-   * @param TextFormat
+   * The format of this run. Absent values inherit the cell's format.
+   *
+   * @param TextFormat $format
    */
   public function setFormat(TextFormat $format)
   {
@@ -41,7 +45,9 @@ class TextFormatRun extends \Google\Model
     return $this->format;
   }
   /**
-   * @param int
+   * The zero-based character index where this run starts, in UTF-16 code units.
+   *
+   * @param int $startIndex
    */
   public function setStartIndex($startIndex)
   {

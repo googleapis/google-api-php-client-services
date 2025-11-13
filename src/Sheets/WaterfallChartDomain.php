@@ -22,12 +22,16 @@ class WaterfallChartDomain extends \Google\Model
   protected $dataType = ChartData::class;
   protected $dataDataType = '';
   /**
+   * True to reverse the order of the domain values (horizontal axis).
+   *
    * @var bool
    */
   public $reversed;
 
   /**
-   * @param ChartData
+   * The data of the WaterfallChartDomain.
+   *
+   * @param ChartData $data
    */
   public function setData(ChartData $data)
   {
@@ -41,7 +45,9 @@ class WaterfallChartDomain extends \Google\Model
     return $this->data;
   }
   /**
-   * @param bool
+   * True to reverse the order of the domain values (horizontal axis).
+   *
+   * @param bool $reversed
    */
   public function setReversed($reversed)
   {

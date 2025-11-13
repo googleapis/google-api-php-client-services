@@ -22,12 +22,18 @@ class UpdateDataSourceRequest extends \Google\Model
   protected $dataSourceType = DataSource::class;
   protected $dataSourceDataType = '';
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `dataSource` is implied and should not be specified. A single
+   * `"*"` can be used as short-hand for listing every field.
+   *
    * @var string
    */
   public $fields;
 
   /**
-   * @param DataSource
+   * The data source to update.
+   *
+   * @param DataSource $dataSource
    */
   public function setDataSource(DataSource $dataSource)
   {
@@ -41,7 +47,11 @@ class UpdateDataSourceRequest extends \Google\Model
     return $this->dataSource;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `dataSource` is implied and should not be specified. A single
+   * `"*"` can be used as short-hand for listing every field.
+   *
+   * @param string $fields
    */
   public function setFields($fields)
   {

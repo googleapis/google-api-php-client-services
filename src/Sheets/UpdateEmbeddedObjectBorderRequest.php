@@ -22,16 +22,24 @@ class UpdateEmbeddedObjectBorderRequest extends \Google\Model
   protected $borderType = EmbeddedObjectBorder::class;
   protected $borderDataType = '';
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `border` is implied and should not be specified. A single `"*"`
+   * can be used as short-hand for listing every field.
+   *
    * @var string
    */
   public $fields;
   /**
+   * The ID of the embedded object to update.
+   *
    * @var int
    */
   public $objectId;
 
   /**
-   * @param EmbeddedObjectBorder
+   * The border that applies to the embedded object.
+   *
+   * @param EmbeddedObjectBorder $border
    */
   public function setBorder(EmbeddedObjectBorder $border)
   {
@@ -45,7 +53,11 @@ class UpdateEmbeddedObjectBorderRequest extends \Google\Model
     return $this->border;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `border` is implied and should not be specified. A single `"*"`
+   * can be used as short-hand for listing every field.
+   *
+   * @param string $fields
    */
   public function setFields($fields)
   {
@@ -59,7 +71,9 @@ class UpdateEmbeddedObjectBorderRequest extends \Google\Model
     return $this->fields;
   }
   /**
-   * @param int
+   * The ID of the embedded object to update.
+   *
+   * @param int $objectId
    */
   public function setObjectId($objectId)
   {

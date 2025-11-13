@@ -24,7 +24,9 @@ class UpdateDeveloperMetadataResponse extends \Google\Collection
   protected $developerMetadataDataType = 'array';
 
   /**
-   * @param DeveloperMetadata[]
+   * The updated developer metadata.
+   *
+   * @param DeveloperMetadata[] $developerMetadata
    */
   public function setDeveloperMetadata($developerMetadata)
   {

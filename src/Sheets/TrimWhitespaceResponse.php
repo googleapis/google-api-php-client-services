@@ -20,12 +20,16 @@ namespace Google\Service\Sheets;
 class TrimWhitespaceResponse extends \Google\Model
 {
   /**
+   * The number of cells that were trimmed of whitespace.
+   *
    * @var int
    */
   public $cellsChangedCount;
 
   /**
-   * @param int
+   * The number of cells that were trimmed of whitespace.
+   *
+   * @param int $cellsChangedCount
    */
   public function setCellsChangedCount($cellsChangedCount)
   {

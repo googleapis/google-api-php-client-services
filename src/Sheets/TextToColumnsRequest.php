@@ -20,10 +20,42 @@ namespace Google\Service\Sheets;
 class TextToColumnsRequest extends \Google\Model
 {
   /**
+   * Default value. This value must not be used.
+   */
+  public const DELIMITER_TYPE_DELIMITER_TYPE_UNSPECIFIED = 'DELIMITER_TYPE_UNSPECIFIED';
+  /**
+   * ","
+   */
+  public const DELIMITER_TYPE_COMMA = 'COMMA';
+  /**
+   * ";"
+   */
+  public const DELIMITER_TYPE_SEMICOLON = 'SEMICOLON';
+  /**
+   * "."
+   */
+  public const DELIMITER_TYPE_PERIOD = 'PERIOD';
+  /**
+   * " "
+   */
+  public const DELIMITER_TYPE_SPACE = 'SPACE';
+  /**
+   * A custom value as defined in delimiter.
+   */
+  public const DELIMITER_TYPE_CUSTOM = 'CUSTOM';
+  /**
+   * Automatically detect columns.
+   */
+  public const DELIMITER_TYPE_AUTODETECT = 'AUTODETECT';
+  /**
+   * The delimiter to use. Used only if delimiterType is CUSTOM.
+   *
    * @var string
    */
   public $delimiter;
   /**
+   * The delimiter type to use.
+   *
    * @var string
    */
   public $delimiterType;
@@ -31,7 +63,9 @@ class TextToColumnsRequest extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param string
+   * The delimiter to use. Used only if delimiterType is CUSTOM.
+   *
+   * @param string $delimiter
    */
   public function setDelimiter($delimiter)
   {
@@ -45,21 +79,28 @@ class TextToColumnsRequest extends \Google\Model
     return $this->delimiter;
   }
   /**
-   * @param string
+   * The delimiter type to use.
+   *
+   * Accepted values: DELIMITER_TYPE_UNSPECIFIED, COMMA, SEMICOLON, PERIOD,
+   * SPACE, CUSTOM, AUTODETECT
+   *
+   * @param self::DELIMITER_TYPE_* $delimiterType
    */
   public function setDelimiterType($delimiterType)
   {
     $this->delimiterType = $delimiterType;
   }
   /**
-   * @return string
+   * @return self::DELIMITER_TYPE_*
    */
   public function getDelimiterType()
   {
     return $this->delimiterType;
   }
   /**
-   * @param GridRange
+   * The source data range. This must span exactly one column.
+   *
+   * @param GridRange $source
    */
   public function setSource(GridRange $source)
   {

@@ -35,7 +35,9 @@ class UpdateBordersRequest extends \Google\Model
   protected $topDataType = '';
 
   /**
-   * @param Border
+   * The border to put at the bottom of the range.
+   *
+   * @param Border $bottom
    */
   public function setBottom(Border $bottom)
   {
@@ -49,7 +51,9 @@ class UpdateBordersRequest extends \Google\Model
     return $this->bottom;
   }
   /**
-   * @param Border
+   * The horizontal border to put within the range.
+   *
+   * @param Border $innerHorizontal
    */
   public function setInnerHorizontal(Border $innerHorizontal)
   {
@@ -63,7 +67,9 @@ class UpdateBordersRequest extends \Google\Model
     return $this->innerHorizontal;
   }
   /**
-   * @param Border
+   * The vertical border to put within the range.
+   *
+   * @param Border $innerVertical
    */
   public function setInnerVertical(Border $innerVertical)
   {
@@ -77,7 +83,9 @@ class UpdateBordersRequest extends \Google\Model
     return $this->innerVertical;
   }
   /**
-   * @param Border
+   * The border to put at the left of the range.
+   *
+   * @param Border $left
    */
   public function setLeft(Border $left)
   {
@@ -91,7 +99,9 @@ class UpdateBordersRequest extends \Google\Model
     return $this->left;
   }
   /**
-   * @param GridRange
+   * The range whose borders should be updated.
+   *
+   * @param GridRange $range
    */
   public function setRange(GridRange $range)
   {
@@ -105,7 +115,9 @@ class UpdateBordersRequest extends \Google\Model
     return $this->range;
   }
   /**
-   * @param Border
+   * The border to put at the right of the range.
+   *
+   * @param Border $right
    */
   public function setRight(Border $right)
   {
@@ -119,7 +131,9 @@ class UpdateBordersRequest extends \Google\Model
     return $this->right;
   }
   /**
-   * @param Border
+   * The border to put at the top of the range.
+   *
+   * @param Border $top
    */
   public function setTop(Border $top)
   {

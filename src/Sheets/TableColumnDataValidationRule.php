@@ -23,7 +23,10 @@ class TableColumnDataValidationRule extends \Google\Model
   protected $conditionDataType = '';
 
   /**
-   * @param BooleanCondition
+   * The condition that data in the cell must match. Valid only if the
+   * [BooleanCondition.type] is ONE_OF_LIST.
+   *
+   * @param BooleanCondition $condition
    */
   public function setCondition(BooleanCondition $condition)
   {

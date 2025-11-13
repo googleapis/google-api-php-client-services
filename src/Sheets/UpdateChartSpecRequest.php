@@ -20,6 +20,8 @@ namespace Google\Service\Sheets;
 class UpdateChartSpecRequest extends \Google\Model
 {
   /**
+   * The ID of the chart to update.
+   *
    * @var int
    */
   public $chartId;
@@ -27,7 +29,9 @@ class UpdateChartSpecRequest extends \Google\Model
   protected $specDataType = '';
 
   /**
-   * @param int
+   * The ID of the chart to update.
+   *
+   * @param int $chartId
    */
   public function setChartId($chartId)
   {
@@ -41,7 +45,9 @@ class UpdateChartSpecRequest extends \Google\Model
     return $this->chartId;
   }
   /**
-   * @param ChartSpec
+   * The specification to apply to the chart.
+   *
+   * @param ChartSpec $spec
    */
   public function setSpec(ChartSpec $spec)
   {

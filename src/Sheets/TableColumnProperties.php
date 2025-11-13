@@ -20,14 +20,81 @@ namespace Google\Service\Sheets;
 class TableColumnProperties extends \Google\Model
 {
   /**
+   * An unspecified column type.
+   */
+  public const COLUMN_TYPE_COLUMN_TYPE_UNSPECIFIED = 'COLUMN_TYPE_UNSPECIFIED';
+  /**
+   * The number column type.
+   */
+  public const COLUMN_TYPE_DOUBLE = 'DOUBLE';
+  /**
+   * The currency column type.
+   */
+  public const COLUMN_TYPE_CURRENCY = 'CURRENCY';
+  /**
+   * The percent column type.
+   */
+  public const COLUMN_TYPE_PERCENT = 'PERCENT';
+  /**
+   * The date column type.
+   */
+  public const COLUMN_TYPE_DATE = 'DATE';
+  /**
+   * The time column type.
+   */
+  public const COLUMN_TYPE_TIME = 'TIME';
+  /**
+   * The date and time column type.
+   */
+  public const COLUMN_TYPE_DATE_TIME = 'DATE_TIME';
+  /**
+   * The text column type.
+   */
+  public const COLUMN_TYPE_TEXT = 'TEXT';
+  /**
+   * The boolean column type.
+   */
+  public const COLUMN_TYPE_BOOLEAN = 'BOOLEAN';
+  /**
+   * The dropdown column type.
+   */
+  public const COLUMN_TYPE_DROPDOWN = 'DROPDOWN';
+  /**
+   * The files chip column type
+   */
+  public const COLUMN_TYPE_FILES_CHIP = 'FILES_CHIP';
+  /**
+   * The people chip column type
+   */
+  public const COLUMN_TYPE_PEOPLE_CHIP = 'PEOPLE_CHIP';
+  /**
+   * The finance chip column type
+   */
+  public const COLUMN_TYPE_FINANCE_CHIP = 'FINANCE_CHIP';
+  /**
+   * The place chip column type
+   */
+  public const COLUMN_TYPE_PLACE_CHIP = 'PLACE_CHIP';
+  /**
+   * The ratings chip column type
+   */
+  public const COLUMN_TYPE_RATINGS_CHIP = 'RATINGS_CHIP';
+  /**
+   * The 0-based column index. This index is relative to its position in the
+   * table and is not necessarily the same as the column index in the sheet.
+   *
    * @var int
    */
   public $columnIndex;
   /**
+   * The column name.
+   *
    * @var string
    */
   public $columnName;
   /**
+   * The column type.
+   *
    * @var string
    */
   public $columnType;
@@ -35,7 +102,10 @@ class TableColumnProperties extends \Google\Model
   protected $dataValidationRuleDataType = '';
 
   /**
-   * @param int
+   * The 0-based column index. This index is relative to its position in the
+   * table and is not necessarily the same as the column index in the sheet.
+   *
+   * @param int $columnIndex
    */
   public function setColumnIndex($columnIndex)
   {
@@ -49,7 +119,9 @@ class TableColumnProperties extends \Google\Model
     return $this->columnIndex;
   }
   /**
-   * @param string
+   * The column name.
+   *
+   * @param string $columnName
    */
   public function setColumnName($columnName)
   {
@@ -63,21 +135,29 @@ class TableColumnProperties extends \Google\Model
     return $this->columnName;
   }
   /**
-   * @param string
+   * The column type.
+   *
+   * Accepted values: COLUMN_TYPE_UNSPECIFIED, DOUBLE, CURRENCY, PERCENT, DATE,
+   * TIME, DATE_TIME, TEXT, BOOLEAN, DROPDOWN, FILES_CHIP, PEOPLE_CHIP,
+   * FINANCE_CHIP, PLACE_CHIP, RATINGS_CHIP
+   *
+   * @param self::COLUMN_TYPE_* $columnType
    */
   public function setColumnType($columnType)
   {
     $this->columnType = $columnType;
   }
   /**
-   * @return string
+   * @return self::COLUMN_TYPE_*
    */
   public function getColumnType()
   {
     return $this->columnType;
   }
   /**
-   * @param TableColumnDataValidationRule
+   * The column data validation rule. Only set for dropdown column type.
+   *
+   * @param TableColumnDataValidationRule $dataValidationRule
    */
   public function setDataValidationRule(TableColumnDataValidationRule $dataValidationRule)
   {

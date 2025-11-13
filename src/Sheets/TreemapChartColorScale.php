@@ -37,13 +37,19 @@ class TreemapChartColorScale extends \Google\Model
   protected $noDataColorStyleDataType = '';
 
   /**
-   * @param Color
+   * The background color for cells with a color value greater than or equal to
+   * maxValue. Defaults to #109618 if not specified. Deprecated: Use
+   * max_value_color_style.
+   *
+   * @deprecated
+   * @param Color $maxValueColor
    */
   public function setMaxValueColor(Color $maxValueColor)
   {
     $this->maxValueColor = $maxValueColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getMaxValueColor()
@@ -51,7 +57,11 @@ class TreemapChartColorScale extends \Google\Model
     return $this->maxValueColor;
   }
   /**
-   * @param ColorStyle
+   * The background color for cells with a color value greater than or equal to
+   * maxValue. Defaults to #109618 if not specified. If max_value_color is also
+   * set, this field takes precedence.
+   *
+   * @param ColorStyle $maxValueColorStyle
    */
   public function setMaxValueColorStyle(ColorStyle $maxValueColorStyle)
   {
@@ -65,13 +75,19 @@ class TreemapChartColorScale extends \Google\Model
     return $this->maxValueColorStyle;
   }
   /**
-   * @param Color
+   * The background color for cells with a color value at the midpoint between
+   * minValue and maxValue. Defaults to #efe6dc if not specified. Deprecated:
+   * Use mid_value_color_style.
+   *
+   * @deprecated
+   * @param Color $midValueColor
    */
   public function setMidValueColor(Color $midValueColor)
   {
     $this->midValueColor = $midValueColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getMidValueColor()
@@ -79,7 +95,11 @@ class TreemapChartColorScale extends \Google\Model
     return $this->midValueColor;
   }
   /**
-   * @param ColorStyle
+   * The background color for cells with a color value at the midpoint between
+   * minValue and maxValue. Defaults to #efe6dc if not specified. If
+   * mid_value_color is also set, this field takes precedence.
+   *
+   * @param ColorStyle $midValueColorStyle
    */
   public function setMidValueColorStyle(ColorStyle $midValueColorStyle)
   {
@@ -93,13 +113,19 @@ class TreemapChartColorScale extends \Google\Model
     return $this->midValueColorStyle;
   }
   /**
-   * @param Color
+   * The background color for cells with a color value less than or equal to
+   * minValue. Defaults to #dc3912 if not specified. Deprecated: Use
+   * min_value_color_style.
+   *
+   * @deprecated
+   * @param Color $minValueColor
    */
   public function setMinValueColor(Color $minValueColor)
   {
     $this->minValueColor = $minValueColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getMinValueColor()
@@ -107,7 +133,11 @@ class TreemapChartColorScale extends \Google\Model
     return $this->minValueColor;
   }
   /**
-   * @param ColorStyle
+   * The background color for cells with a color value less than or equal to
+   * minValue. Defaults to #dc3912 if not specified. If min_value_color is also
+   * set, this field takes precedence.
+   *
+   * @param ColorStyle $minValueColorStyle
    */
   public function setMinValueColorStyle(ColorStyle $minValueColorStyle)
   {
@@ -121,13 +151,19 @@ class TreemapChartColorScale extends \Google\Model
     return $this->minValueColorStyle;
   }
   /**
-   * @param Color
+   * The background color for cells that have no color data associated with
+   * them. Defaults to #000000 if not specified. Deprecated: Use
+   * no_data_color_style.
+   *
+   * @deprecated
+   * @param Color $noDataColor
    */
   public function setNoDataColor(Color $noDataColor)
   {
     $this->noDataColor = $noDataColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getNoDataColor()
@@ -135,7 +171,11 @@ class TreemapChartColorScale extends \Google\Model
     return $this->noDataColor;
   }
   /**
-   * @param ColorStyle
+   * The background color for cells that have no color data associated with
+   * them. Defaults to #000000 if not specified. If no_data_color is also set,
+   * this field takes precedence.
+   *
+   * @param ColorStyle $noDataColorStyle
    */
   public function setNoDataColorStyle(ColorStyle $noDataColorStyle)
   {

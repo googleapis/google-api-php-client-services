@@ -23,7 +23,9 @@ class SetBasicFilterRequest extends \Google\Model
   protected $filterDataType = '';
 
   /**
-   * @param BasicFilter
+   * The filter to set.
+   *
+   * @param BasicFilter $filter
    */
   public function setFilter(BasicFilter $filter)
   {

@@ -20,14 +20,20 @@ namespace Google\Service\Sheets;
 class TextFormat extends \Google\Model
 {
   /**
+   * True if the text is bold.
+   *
    * @var bool
    */
   public $bold;
   /**
+   * The font family.
+   *
    * @var string
    */
   public $fontFamily;
   /**
+   * The size of the font.
+   *
    * @var int
    */
   public $fontSize;
@@ -36,22 +42,30 @@ class TextFormat extends \Google\Model
   protected $foregroundColorStyleType = ColorStyle::class;
   protected $foregroundColorStyleDataType = '';
   /**
+   * True if the text is italicized.
+   *
    * @var bool
    */
   public $italic;
   protected $linkType = Link::class;
   protected $linkDataType = '';
   /**
+   * True if the text has a strikethrough.
+   *
    * @var bool
    */
   public $strikethrough;
   /**
+   * True if the text is underlined.
+   *
    * @var bool
    */
   public $underline;
 
   /**
-   * @param bool
+   * True if the text is bold.
+   *
+   * @param bool $bold
    */
   public function setBold($bold)
   {
@@ -65,7 +79,9 @@ class TextFormat extends \Google\Model
     return $this->bold;
   }
   /**
-   * @param string
+   * The font family.
+   *
+   * @param string $fontFamily
    */
   public function setFontFamily($fontFamily)
   {
@@ -79,7 +95,9 @@ class TextFormat extends \Google\Model
     return $this->fontFamily;
   }
   /**
-   * @param int
+   * The size of the font.
+   *
+   * @param int $fontSize
    */
   public function setFontSize($fontSize)
   {
@@ -93,13 +111,17 @@ class TextFormat extends \Google\Model
     return $this->fontSize;
   }
   /**
-   * @param Color
+   * The foreground color of the text. Deprecated: Use foreground_color_style.
+   *
+   * @deprecated
+   * @param Color $foregroundColor
    */
   public function setForegroundColor(Color $foregroundColor)
   {
     $this->foregroundColor = $foregroundColor;
   }
   /**
+   * @deprecated
    * @return Color
    */
   public function getForegroundColor()
@@ -107,7 +129,10 @@ class TextFormat extends \Google\Model
     return $this->foregroundColor;
   }
   /**
-   * @param ColorStyle
+   * The foreground color of the text. If foreground_color is also set, this
+   * field takes precedence.
+   *
+   * @param ColorStyle $foregroundColorStyle
    */
   public function setForegroundColorStyle(ColorStyle $foregroundColorStyle)
   {
@@ -121,7 +146,9 @@ class TextFormat extends \Google\Model
     return $this->foregroundColorStyle;
   }
   /**
-   * @param bool
+   * True if the text is italicized.
+   *
+   * @param bool $italic
    */
   public function setItalic($italic)
   {
@@ -135,7 +162,14 @@ class TextFormat extends \Google\Model
     return $this->italic;
   }
   /**
-   * @param Link
+   * The link destination of the text, if any. Setting the link field in a
+   * TextFormatRun will clear the cell's existing links or a cell-level link set
+   * in the same request. When a link is set, the text foreground color will be
+   * set to the default link color and the text will be underlined. If these
+   * fields are modified in the same request, those values will be used instead
+   * of the link defaults.
+   *
+   * @param Link $link
    */
   public function setLink(Link $link)
   {
@@ -149,7 +183,9 @@ class TextFormat extends \Google\Model
     return $this->link;
   }
   /**
-   * @param bool
+   * True if the text has a strikethrough.
+   *
+   * @param bool $strikethrough
    */
   public function setStrikethrough($strikethrough)
   {
@@ -163,7 +199,9 @@ class TextFormat extends \Google\Model
     return $this->strikethrough;
   }
   /**
-   * @param bool
+   * True if the text is underlined.
+   *
+   * @param bool $underline
    */
   public function setUnderline($underline)
   {
