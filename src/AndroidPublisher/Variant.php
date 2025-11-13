@@ -24,12 +24,16 @@ class Variant extends \Google\Model
   protected $optionsType = SystemApkOptions::class;
   protected $optionsDataType = '';
   /**
+   * Output only. The ID of a previously created system APK variant.
+   *
    * @var string
    */
   public $variantId;
 
   /**
-   * @param DeviceSpec
+   * The device spec used to generate the APK.
+   *
+   * @param DeviceSpec $deviceSpec
    */
   public function setDeviceSpec(DeviceSpec $deviceSpec)
   {
@@ -43,7 +47,9 @@ class Variant extends \Google\Model
     return $this->deviceSpec;
   }
   /**
-   * @param SystemApkOptions
+   * Optional. Options applied to the generated APK.
+   *
+   * @param SystemApkOptions $options
    */
   public function setOptions(SystemApkOptions $options)
   {
@@ -57,7 +63,9 @@ class Variant extends \Google\Model
     return $this->options;
   }
   /**
-   * @param string
+   * Output only. The ID of a previously created system APK variant.
+   *
+   * @param string $variantId
    */
   public function setVariantId($variantId)
   {

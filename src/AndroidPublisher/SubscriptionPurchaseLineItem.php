@@ -26,10 +26,17 @@ class SubscriptionPurchaseLineItem extends \Google\Model
   protected $deferredItemReplacementType = DeferredItemReplacement::class;
   protected $deferredItemReplacementDataType = '';
   /**
+   * Time at which the subscription expired or will expire unless the access is
+   * extended (ex. renews).
+   *
    * @var string
    */
   public $expiryTime;
   /**
+   * The order id of the latest successful order associated with this item. Not
+   * present if the item is not owned by the user yet (e.g. the item being
+   * deferred replaced to).
+   *
    * @var string
    */
   public $latestSuccessfulOrderId;
@@ -38,6 +45,8 @@ class SubscriptionPurchaseLineItem extends \Google\Model
   protected $prepaidPlanType = PrepaidPlan::class;
   protected $prepaidPlanDataType = '';
   /**
+   * The purchased product ID (for example, 'monthly001').
+   *
    * @var string
    */
   public $productId;
@@ -45,7 +54,9 @@ class SubscriptionPurchaseLineItem extends \Google\Model
   protected $signupPromotionDataType = '';
 
   /**
-   * @param AutoRenewingPlan
+   * The item is auto renewing.
+   *
+   * @param AutoRenewingPlan $autoRenewingPlan
    */
   public function setAutoRenewingPlan(AutoRenewingPlan $autoRenewingPlan)
   {
@@ -59,7 +70,9 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->autoRenewingPlan;
   }
   /**
-   * @param DeferredItemRemoval
+   * Information for deferred item removal.
+   *
+   * @param DeferredItemRemoval $deferredItemRemoval
    */
   public function setDeferredItemRemoval(DeferredItemRemoval $deferredItemRemoval)
   {
@@ -73,7 +86,9 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->deferredItemRemoval;
   }
   /**
-   * @param DeferredItemReplacement
+   * Information for deferred item replacement.
+   *
+   * @param DeferredItemReplacement $deferredItemReplacement
    */
   public function setDeferredItemReplacement(DeferredItemReplacement $deferredItemReplacement)
   {
@@ -87,7 +102,10 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->deferredItemReplacement;
   }
   /**
-   * @param string
+   * Time at which the subscription expired or will expire unless the access is
+   * extended (ex. renews).
+   *
+   * @param string $expiryTime
    */
   public function setExpiryTime($expiryTime)
   {
@@ -101,7 +119,11 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->expiryTime;
   }
   /**
-   * @param string
+   * The order id of the latest successful order associated with this item. Not
+   * present if the item is not owned by the user yet (e.g. the item being
+   * deferred replaced to).
+   *
+   * @param string $latestSuccessfulOrderId
    */
   public function setLatestSuccessfulOrderId($latestSuccessfulOrderId)
   {
@@ -115,7 +137,9 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->latestSuccessfulOrderId;
   }
   /**
-   * @param OfferDetails
+   * The offer details for this item.
+   *
+   * @param OfferDetails $offerDetails
    */
   public function setOfferDetails(OfferDetails $offerDetails)
   {
@@ -129,7 +153,9 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->offerDetails;
   }
   /**
-   * @param PrepaidPlan
+   * The item is prepaid.
+   *
+   * @param PrepaidPlan $prepaidPlan
    */
   public function setPrepaidPlan(PrepaidPlan $prepaidPlan)
   {
@@ -143,7 +169,9 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->prepaidPlan;
   }
   /**
-   * @param string
+   * The purchased product ID (for example, 'monthly001').
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -157,7 +185,10 @@ class SubscriptionPurchaseLineItem extends \Google\Model
     return $this->productId;
   }
   /**
-   * @param SignupPromotion
+   * Promotion details about this item. Only set if a promotion was applied
+   * during signup.
+   *
+   * @param SignupPromotion $signupPromotion
    */
   public function setSignupPromotion(SignupPromotion $signupPromotion)
   {

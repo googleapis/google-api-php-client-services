@@ -23,7 +23,9 @@ class SubscriptionPurchasesDeferRequest extends \Google\Model
   protected $deferralInfoDataType = '';
 
   /**
-   * @param SubscriptionDeferralInfo
+   * The information about the new desired expiry time for the subscription.
+   *
+   * @param SubscriptionDeferralInfo $deferralInfo
    */
   public function setDeferralInfo(SubscriptionDeferralInfo $deferralInfo)
   {

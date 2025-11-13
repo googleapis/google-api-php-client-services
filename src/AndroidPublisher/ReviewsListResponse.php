@@ -28,7 +28,9 @@ class ReviewsListResponse extends \Google\Collection
   protected $tokenPaginationDataType = '';
 
   /**
-   * @param PageInfo
+   * Information about the current page.
+   *
+   * @param PageInfo $pageInfo
    */
   public function setPageInfo(PageInfo $pageInfo)
   {
@@ -42,7 +44,9 @@ class ReviewsListResponse extends \Google\Collection
     return $this->pageInfo;
   }
   /**
-   * @param Review[]
+   * List of reviews.
+   *
+   * @param Review[] $reviews
    */
   public function setReviews($reviews)
   {
@@ -56,7 +60,9 @@ class ReviewsListResponse extends \Google\Collection
     return $this->reviews;
   }
   /**
-   * @param TokenPagination
+   * Pagination token, to handle a number of products that is over one page.
+   *
+   * @param TokenPagination $tokenPagination
    */
   public function setTokenPagination(TokenPagination $tokenPagination)
   {

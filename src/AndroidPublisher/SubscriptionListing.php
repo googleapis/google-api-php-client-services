@@ -21,24 +21,40 @@ class SubscriptionListing extends \Google\Collection
 {
   protected $collection_key = 'benefits';
   /**
+   * A list of benefits shown to the user on platforms such as the Play Store
+   * and in restoration flows in the language of this listing. Plain text.
+   * Ordered list of at most four benefits.
+   *
    * @var string[]
    */
   public $benefits;
   /**
+   * The description of this subscription in the language of this listing.
+   * Maximum length - 80 characters. Plain text.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The language of this listing, as defined by BCP-47, e.g. "en-US".
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Required. The title of this subscription in the language of this listing.
+   * Plain text.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string[]
+   * A list of benefits shown to the user on platforms such as the Play Store
+   * and in restoration flows in the language of this listing. Plain text.
+   * Ordered list of at most four benefits.
+   *
+   * @param string[] $benefits
    */
   public function setBenefits($benefits)
   {
@@ -52,7 +68,10 @@ class SubscriptionListing extends \Google\Collection
     return $this->benefits;
   }
   /**
-   * @param string
+   * The description of this subscription in the language of this listing.
+   * Maximum length - 80 characters. Plain text.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -66,7 +85,9 @@ class SubscriptionListing extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The language of this listing, as defined by BCP-47, e.g. "en-US".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -80,7 +101,10 @@ class SubscriptionListing extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Required. The title of this subscription in the language of this listing.
+   * Plain text.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

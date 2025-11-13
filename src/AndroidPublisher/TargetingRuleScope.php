@@ -22,6 +22,10 @@ class TargetingRuleScope extends \Google\Model
   protected $anySubscriptionInAppType = TargetingRuleScopeAnySubscriptionInApp::class;
   protected $anySubscriptionInAppDataType = '';
   /**
+   * The scope of the current targeting rule is the subscription with the
+   * specified subscription ID. Must be a subscription within the same parent
+   * app.
+   *
    * @var string
    */
   public $specificSubscriptionInApp;
@@ -29,7 +33,10 @@ class TargetingRuleScope extends \Google\Model
   protected $thisSubscriptionDataType = '';
 
   /**
-   * @param TargetingRuleScopeAnySubscriptionInApp
+   * The scope of the current targeting rule is any subscription in the parent
+   * app.
+   *
+   * @param TargetingRuleScopeAnySubscriptionInApp $anySubscriptionInApp
    */
   public function setAnySubscriptionInApp(TargetingRuleScopeAnySubscriptionInApp $anySubscriptionInApp)
   {
@@ -43,7 +50,11 @@ class TargetingRuleScope extends \Google\Model
     return $this->anySubscriptionInApp;
   }
   /**
-   * @param string
+   * The scope of the current targeting rule is the subscription with the
+   * specified subscription ID. Must be a subscription within the same parent
+   * app.
+   *
+   * @param string $specificSubscriptionInApp
    */
   public function setSpecificSubscriptionInApp($specificSubscriptionInApp)
   {
@@ -57,7 +68,10 @@ class TargetingRuleScope extends \Google\Model
     return $this->specificSubscriptionInApp;
   }
   /**
-   * @param TargetingRuleScopeThisSubscription
+   * The scope of the current targeting rule is the subscription in which this
+   * offer is defined.
+   *
+   * @param TargetingRuleScopeThisSubscription $thisSubscription
    */
   public function setThisSubscription(TargetingRuleScopeThisSubscription $thisSubscription)
   {

@@ -21,6 +21,9 @@ class Subscription extends \Google\Collection
 {
   protected $collection_key = 'listings';
   /**
+   * Output only. Deprecated: subscription archiving is not supported.
+   *
+   * @deprecated
    * @var bool
    */
   public $archived;
@@ -29,10 +32,17 @@ class Subscription extends \Google\Collection
   protected $listingsType = SubscriptionListing::class;
   protected $listingsDataType = 'array';
   /**
+   * Immutable. Package name of the parent app.
+   *
    * @var string
    */
   public $packageName;
   /**
+   * Immutable. Unique product ID of the product. Unique within the parent app.
+   * Product IDs must be composed of lower-case letters (a-z), numbers (0-9),
+   * underscores (_) and dots (.). It must start with a lower-case letter or
+   * number, and be between 1 and 40 (inclusive) characters in length.
+   *
    * @var string
    */
   public $productId;
@@ -42,13 +52,17 @@ class Subscription extends \Google\Collection
   protected $taxAndComplianceSettingsDataType = '';
 
   /**
-   * @param bool
+   * Output only. Deprecated: subscription archiving is not supported.
+   *
+   * @deprecated
+   * @param bool $archived
    */
   public function setArchived($archived)
   {
     $this->archived = $archived;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getArchived()
@@ -56,7 +70,10 @@ class Subscription extends \Google\Collection
     return $this->archived;
   }
   /**
-   * @param BasePlan[]
+   * The set of base plans for this subscription. Represents the prices and
+   * duration of the subscription if no other offers apply.
+   *
+   * @param BasePlan[] $basePlans
    */
   public function setBasePlans($basePlans)
   {
@@ -70,7 +87,10 @@ class Subscription extends \Google\Collection
     return $this->basePlans;
   }
   /**
-   * @param SubscriptionListing[]
+   * Required. List of localized listings for this subscription. Must contain at
+   * least an entry for the default language of the parent app.
+   *
+   * @param SubscriptionListing[] $listings
    */
   public function setListings($listings)
   {
@@ -84,7 +104,9 @@ class Subscription extends \Google\Collection
     return $this->listings;
   }
   /**
-   * @param string
+   * Immutable. Package name of the parent app.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {
@@ -98,7 +120,12 @@ class Subscription extends \Google\Collection
     return $this->packageName;
   }
   /**
-   * @param string
+   * Immutable. Unique product ID of the product. Unique within the parent app.
+   * Product IDs must be composed of lower-case letters (a-z), numbers (0-9),
+   * underscores (_) and dots (.). It must start with a lower-case letter or
+   * number, and be between 1 and 40 (inclusive) characters in length.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -112,7 +139,11 @@ class Subscription extends \Google\Collection
     return $this->productId;
   }
   /**
-   * @param RestrictedPaymentCountries
+   * Optional. Countries where the purchase of this subscription is restricted
+   * to payment methods registered in the same country. If empty, no payment
+   * location restrictions are imposed.
+   *
+   * @param RestrictedPaymentCountries $restrictedPaymentCountries
    */
   public function setRestrictedPaymentCountries(RestrictedPaymentCountries $restrictedPaymentCountries)
   {
@@ -126,7 +157,9 @@ class Subscription extends \Google\Collection
     return $this->restrictedPaymentCountries;
   }
   /**
-   * @param SubscriptionTaxAndComplianceSettings
+   * Details about taxes and legal compliance.
+   *
+   * @param SubscriptionTaxAndComplianceSettings $taxAndComplianceSettings
    */
   public function setTaxAndComplianceSettings(SubscriptionTaxAndComplianceSettings $taxAndComplianceSettings)
   {

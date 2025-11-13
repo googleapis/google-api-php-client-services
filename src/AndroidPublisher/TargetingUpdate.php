@@ -27,7 +27,9 @@ class TargetingUpdate extends \Google\Model
   protected $regionsDataType = '';
 
   /**
-   * @param AllUsers
+   * All users are targeted.
+   *
+   * @param AllUsers $allUsers
    */
   public function setAllUsers(AllUsers $allUsers)
   {
@@ -41,7 +43,9 @@ class TargetingUpdate extends \Google\Model
     return $this->allUsers;
   }
   /**
-   * @param AndroidSdks
+   * Additional android sdk levels are targeted by the recovery action.
+   *
+   * @param AndroidSdks $androidSdks
    */
   public function setAndroidSdks(AndroidSdks $androidSdks)
   {
@@ -55,7 +59,9 @@ class TargetingUpdate extends \Google\Model
     return $this->androidSdks;
   }
   /**
-   * @param Regions
+   * Additional regions are targeted by the recovery action.
+   *
+   * @param Regions $regions
    */
   public function setRegions(Regions $regions)
   {

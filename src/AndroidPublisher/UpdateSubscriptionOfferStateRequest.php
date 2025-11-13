@@ -25,7 +25,10 @@ class UpdateSubscriptionOfferStateRequest extends \Google\Model
   protected $deactivateSubscriptionOfferRequestDataType = '';
 
   /**
-   * @param ActivateSubscriptionOfferRequest
+   * Activates an offer. Once activated, the offer will be available to new
+   * subscribers.
+   *
+   * @param ActivateSubscriptionOfferRequest $activateSubscriptionOfferRequest
    */
   public function setActivateSubscriptionOfferRequest(ActivateSubscriptionOfferRequest $activateSubscriptionOfferRequest)
   {
@@ -39,7 +42,11 @@ class UpdateSubscriptionOfferStateRequest extends \Google\Model
     return $this->activateSubscriptionOfferRequest;
   }
   /**
-   * @param DeactivateSubscriptionOfferRequest
+   * Deactivates an offer. Once deactivated, the offer will become unavailable
+   * to new subscribers, but existing subscribers will maintain their
+   * subscription
+   *
+   * @param DeactivateSubscriptionOfferRequest $deactivateSubscriptionOfferRequest
    */
   public function setDeactivateSubscriptionOfferRequest(DeactivateSubscriptionOfferRequest $deactivateSubscriptionOfferRequest)
   {

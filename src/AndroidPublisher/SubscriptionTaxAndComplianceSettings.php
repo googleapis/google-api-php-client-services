@@ -19,11 +19,23 @@ namespace Google\Service\AndroidPublisher;
 
 class SubscriptionTaxAndComplianceSettings extends \Google\Model
 {
+  public const EEA_WITHDRAWAL_RIGHT_TYPE_WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED = 'WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED';
+  public const EEA_WITHDRAWAL_RIGHT_TYPE_WITHDRAWAL_RIGHT_DIGITAL_CONTENT = 'WITHDRAWAL_RIGHT_DIGITAL_CONTENT';
+  public const EEA_WITHDRAWAL_RIGHT_TYPE_WITHDRAWAL_RIGHT_SERVICE = 'WITHDRAWAL_RIGHT_SERVICE';
   /**
+   * Digital content or service classification for products distributed to users
+   * in the European Economic Area (EEA). The withdrawal regime under EEA
+   * consumer laws depends on this classification. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-
+   * developer/answer/10463498) for more information.
+   *
    * @var string
    */
   public $eeaWithdrawalRightType;
   /**
+   * Whether this subscription is declared as a product representing a tokenized
+   * digital asset.
+   *
    * @var bool
    */
   public $isTokenizedDigitalAsset;
@@ -31,21 +43,33 @@ class SubscriptionTaxAndComplianceSettings extends \Google\Model
   protected $taxRateInfoByRegionCodeDataType = 'map';
 
   /**
-   * @param string
+   * Digital content or service classification for products distributed to users
+   * in the European Economic Area (EEA). The withdrawal regime under EEA
+   * consumer laws depends on this classification. Refer to the [Help Center
+   * article](https://support.google.com/googleplay/android-
+   * developer/answer/10463498) for more information.
+   *
+   * Accepted values: WITHDRAWAL_RIGHT_TYPE_UNSPECIFIED,
+   * WITHDRAWAL_RIGHT_DIGITAL_CONTENT, WITHDRAWAL_RIGHT_SERVICE
+   *
+   * @param self::EEA_WITHDRAWAL_RIGHT_TYPE_* $eeaWithdrawalRightType
    */
   public function setEeaWithdrawalRightType($eeaWithdrawalRightType)
   {
     $this->eeaWithdrawalRightType = $eeaWithdrawalRightType;
   }
   /**
-   * @return string
+   * @return self::EEA_WITHDRAWAL_RIGHT_TYPE_*
    */
   public function getEeaWithdrawalRightType()
   {
     return $this->eeaWithdrawalRightType;
   }
   /**
-   * @param bool
+   * Whether this subscription is declared as a product representing a tokenized
+   * digital asset.
+   *
+   * @param bool $isTokenizedDigitalAsset
    */
   public function setIsTokenizedDigitalAsset($isTokenizedDigitalAsset)
   {
@@ -59,7 +83,10 @@ class SubscriptionTaxAndComplianceSettings extends \Google\Model
     return $this->isTokenizedDigitalAsset;
   }
   /**
-   * @param RegionalTaxRateInfo[]
+   * A mapping from region code to tax rate details. The keys are region codes
+   * as defined by Unicode's "CLDR".
+   *
+   * @param RegionalTaxRateInfo[] $taxRateInfoByRegionCode
    */
   public function setTaxRateInfoByRegionCode($taxRateInfoByRegionCode)
   {

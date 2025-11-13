@@ -19,31 +19,78 @@ namespace Google\Service\AndroidPublisher;
 
 class TrackRelease extends \Google\Collection
 {
+  /**
+   * Unspecified status.
+   */
+  public const STATUS_statusUnspecified = 'statusUnspecified';
+  /**
+   * The release's APKs are not being served to users.
+   */
+  public const STATUS_draft = 'draft';
+  /**
+   * The release's APKs are being served to a fraction of users, determined by
+   * 'user_fraction'.
+   */
+  public const STATUS_inProgress = 'inProgress';
+  /**
+   * The release's APKs will no longer be served to users. Users who already
+   * have these APKs are unaffected.
+   */
+  public const STATUS_halted = 'halted';
+  /**
+   * The release will have no further changes. Its APKs are being served to all
+   * users, unless they are eligible to APKs of a more recent release.
+   */
+  public const STATUS_completed = 'completed';
   protected $collection_key = 'versionCodes';
   protected $countryTargetingType = CountryTargeting::class;
   protected $countryTargetingDataType = '';
   /**
+   * In-app update priority of the release. All newly added APKs in the release
+   * will be considered at this priority. Can take values in the range [0, 5],
+   * with 5 the highest priority. Defaults to 0. in_app_update_priority can not
+   * be updated once the release is rolled out. See
+   * https://developer.android.com/guide/playcore/in-app-updates.
+   *
    * @var int
    */
   public $inAppUpdatePriority;
   /**
+   * The release name. Not required to be unique. If not set, the name is
+   * generated from the APK's version_name. If the release contains multiple
+   * APKs, the name is generated from the date.
+   *
    * @var string
    */
   public $name;
   protected $releaseNotesType = LocalizedText::class;
   protected $releaseNotesDataType = 'array';
   /**
+   * The status of the release.
+   *
    * @var string
    */
   public $status;
+  /**
+   * Fraction of users who are eligible for a staged release. 0 < fraction < 1.
+   * Can only be set when status is "inProgress" or "halted".
+   *
+   * @var 
+   */
   public $userFraction;
   /**
+   * Version codes of all APKs in the release. Must include version codes to
+   * retain from previous releases.
+   *
    * @var string[]
    */
   public $versionCodes;
 
   /**
-   * @param CountryTargeting
+   * Restricts a release to a specific set of countries. Note this is only
+   * allowed to be set for inProgress releases in the production track.
+   *
+   * @param CountryTargeting $countryTargeting
    */
   public function setCountryTargeting(CountryTargeting $countryTargeting)
   {
@@ -57,7 +104,13 @@ class TrackRelease extends \Google\Collection
     return $this->countryTargeting;
   }
   /**
-   * @param int
+   * In-app update priority of the release. All newly added APKs in the release
+   * will be considered at this priority. Can take values in the range [0, 5],
+   * with 5 the highest priority. Defaults to 0. in_app_update_priority can not
+   * be updated once the release is rolled out. See
+   * https://developer.android.com/guide/playcore/in-app-updates.
+   *
+   * @param int $inAppUpdatePriority
    */
   public function setInAppUpdatePriority($inAppUpdatePriority)
   {
@@ -71,7 +124,11 @@ class TrackRelease extends \Google\Collection
     return $this->inAppUpdatePriority;
   }
   /**
-   * @param string
+   * The release name. Not required to be unique. If not set, the name is
+   * generated from the APK's version_name. If the release contains multiple
+   * APKs, the name is generated from the date.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -85,7 +142,9 @@ class TrackRelease extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param LocalizedText[]
+   * A description of what is new in this release.
+   *
+   * @param LocalizedText[] $releaseNotes
    */
   public function setReleaseNotes($releaseNotes)
   {
@@ -99,14 +158,18 @@ class TrackRelease extends \Google\Collection
     return $this->releaseNotes;
   }
   /**
-   * @param string
+   * The status of the release.
+   *
+   * Accepted values: statusUnspecified, draft, inProgress, halted, completed
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
@@ -121,7 +184,10 @@ class TrackRelease extends \Google\Collection
     return $this->userFraction;
   }
   /**
-   * @param string[]
+   * Version codes of all APKs in the release. Must include version codes to
+   * retain from previous releases.
+   *
+   * @param string[] $versionCodes
    */
   public function setVersionCodes($versionCodes)
   {

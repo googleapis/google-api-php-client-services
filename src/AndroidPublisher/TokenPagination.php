@@ -20,6 +20,9 @@ namespace Google\Service\AndroidPublisher;
 class TokenPagination extends \Google\Model
 {
   /**
+   * Tokens to pass to the standard list field 'page_token'. Whenever available,
+   * tokens are preferred over manipulating start_index.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -29,7 +32,10 @@ class TokenPagination extends \Google\Model
   public $previousPageToken;
 
   /**
-   * @param string
+   * Tokens to pass to the standard list field 'page_token'. Whenever available,
+   * tokens are preferred over manipulating start_index.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -43,7 +49,7 @@ class TokenPagination extends \Google\Model
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * @param string $previousPageToken
    */
   public function setPreviousPageToken($previousPageToken)
   {

@@ -24,7 +24,9 @@ class SystemApksListResponse extends \Google\Collection
   protected $variantsDataType = 'array';
 
   /**
-   * @param Variant[]
+   * All system APK variants created.
+   *
+   * @param Variant[] $variants
    */
   public function setVariants($variants)
   {

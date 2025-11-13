@@ -21,12 +21,16 @@ class Testers extends \Google\Collection
 {
   protected $collection_key = 'googleGroups';
   /**
+   * All testing Google Groups, as email addresses.
+   *
    * @var string[]
    */
   public $googleGroups;
 
   /**
-   * @param string[]
+   * All testing Google Groups, as email addresses.
+   *
+   * @param string[] $googleGroups
    */
   public function setGoogleGroups($googleGroups)
   {

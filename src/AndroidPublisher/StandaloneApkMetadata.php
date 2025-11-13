@@ -21,12 +21,16 @@ class StandaloneApkMetadata extends \Google\Collection
 {
   protected $collection_key = 'fusedModuleName';
   /**
+   * Names of the modules fused in this standalone APK.
+   *
    * @var string[]
    */
   public $fusedModuleName;
 
   /**
-   * @param string[]
+   * Names of the modules fused in this standalone APK.
+   *
+   * @param string[] $fusedModuleName
    */
   public function setFusedModuleName($fusedModuleName)
   {

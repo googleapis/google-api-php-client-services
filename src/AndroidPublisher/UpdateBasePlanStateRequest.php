@@ -25,7 +25,10 @@ class UpdateBasePlanStateRequest extends \Google\Model
   protected $deactivateBasePlanRequestDataType = '';
 
   /**
-   * @param ActivateBasePlanRequest
+   * Activates a base plan. Once activated, base plans will be available to new
+   * subscribers.
+   *
+   * @param ActivateBasePlanRequest $activateBasePlanRequest
    */
   public function setActivateBasePlanRequest(ActivateBasePlanRequest $activateBasePlanRequest)
   {
@@ -39,7 +42,11 @@ class UpdateBasePlanStateRequest extends \Google\Model
     return $this->activateBasePlanRequest;
   }
   /**
-   * @param DeactivateBasePlanRequest
+   * Deactivates a base plan. Once deactivated, the base plan will become
+   * unavailable to new subscribers, but existing subscribers will maintain
+   * their subscription
+   *
+   * @param DeactivateBasePlanRequest $deactivateBasePlanRequest
    */
   public function setDeactivateBasePlanRequest(DeactivateBasePlanRequest $deactivateBasePlanRequest)
   {

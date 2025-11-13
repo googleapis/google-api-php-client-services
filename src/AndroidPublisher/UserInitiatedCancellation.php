@@ -22,12 +22,19 @@ class UserInitiatedCancellation extends \Google\Model
   protected $cancelSurveyResultType = CancelSurveyResult::class;
   protected $cancelSurveyResultDataType = '';
   /**
+   * The time at which the subscription was canceled by the user. The user might
+   * still have access to the subscription after this time. Use
+   * line_items.expiry_time to determine if a user still has access.
+   *
    * @var string
    */
   public $cancelTime;
 
   /**
-   * @param CancelSurveyResult
+   * Information provided by the user when they complete the subscription
+   * cancellation flow (cancellation reason survey).
+   *
+   * @param CancelSurveyResult $cancelSurveyResult
    */
   public function setCancelSurveyResult(CancelSurveyResult $cancelSurveyResult)
   {
@@ -41,7 +48,11 @@ class UserInitiatedCancellation extends \Google\Model
     return $this->cancelSurveyResult;
   }
   /**
-   * @param string
+   * The time at which the subscription was canceled by the user. The user might
+   * still have access to the subscription after this time. Use
+   * line_items.expiry_time to determine if a user still has access.
+   *
+   * @param string $cancelTime
    */
   public function setCancelTime($cancelTime)
   {

@@ -21,16 +21,24 @@ class UserCountrySet extends \Google\Collection
 {
   protected $collection_key = 'countryCodes';
   /**
+   * List of country codes representing countries. A Country code is represented
+   * in ISO 3166 alpha-2 format. For Example:- "IT" for Italy, "GE" for Georgia.
+   *
    * @var string[]
    */
   public $countryCodes;
   /**
+   * Country set name.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string[]
+   * List of country codes representing countries. A Country code is represented
+   * in ISO 3166 alpha-2 format. For Example:- "IT" for Italy, "GE" for Georgia.
+   *
+   * @param string[] $countryCodes
    */
   public function setCountryCodes($countryCodes)
   {
@@ -44,7 +52,9 @@ class UserCountrySet extends \Google\Collection
     return $this->countryCodes;
   }
   /**
-   * @param string
+   * Country set name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

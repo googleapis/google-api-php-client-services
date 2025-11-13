@@ -23,12 +23,20 @@ class Track extends \Google\Collection
   protected $releasesType = TrackRelease::class;
   protected $releasesDataType = 'array';
   /**
+   * Identifier of the track. Form factor tracks have a special prefix as an
+   * identifier, for example `wear:production`, `automotive:production`. [More
+   * on track name](https://developers.google.com/android-publisher/tracks#ff-
+   * track-name)
+   *
    * @var string
    */
   public $track;
 
   /**
-   * @param TrackRelease[]
+   * In a read request, represents all active releases in the track. In an
+   * update request, represents desired changes.
+   *
+   * @param TrackRelease[] $releases
    */
   public function setReleases($releases)
   {
@@ -42,7 +50,12 @@ class Track extends \Google\Collection
     return $this->releases;
   }
   /**
-   * @param string
+   * Identifier of the track. Form factor tracks have a special prefix as an
+   * identifier, for example `wear:production`, `automotive:production`. [More
+   * on track name](https://developers.google.com/android-publisher/tracks#ff-
+   * track-name)
+   *
+   * @param string $track
    */
   public function setTrack($track)
   {

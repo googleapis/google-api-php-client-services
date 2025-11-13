@@ -20,16 +20,31 @@ namespace Google\Service\AndroidPublisher;
 class SystemOnChip extends \Google\Model
 {
   /**
+   * Required. The designer of the SoC, eg. "Google" Value of build property
+   * "ro.soc.manufacturer"
+   * https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER
+   * Required.
+   *
    * @var string
    */
   public $manufacturer;
   /**
+   * Required. The model of the SoC, eg. "Tensor" Value of build property
+   * "ro.soc.model"
+   * https://developer.android.com/reference/android/os/Build#SOC_MODEL
+   * Required.
+   *
    * @var string
    */
   public $model;
 
   /**
-   * @param string
+   * Required. The designer of the SoC, eg. "Google" Value of build property
+   * "ro.soc.manufacturer"
+   * https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER
+   * Required.
+   *
+   * @param string $manufacturer
    */
   public function setManufacturer($manufacturer)
   {
@@ -43,7 +58,12 @@ class SystemOnChip extends \Google\Model
     return $this->manufacturer;
   }
   /**
-   * @param string
+   * Required. The model of the SoC, eg. "Tensor" Value of build property
+   * "ro.soc.model"
+   * https://developer.android.com/reference/android/os/Build#SOC_MODEL
+   * Required.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\AndroidPublisher;
 class SplitApkMetadata extends \Google\Model
 {
   /**
+   * Indicates whether this APK is the main split of the module.
+   *
    * @var bool
    */
   public $isMasterSplit;
   /**
+   * Id of the split.
+   *
    * @var string
    */
   public $splitId;
 
   /**
-   * @param bool
+   * Indicates whether this APK is the main split of the module.
+   *
+   * @param bool $isMasterSplit
    */
   public function setIsMasterSplit($isMasterSplit)
   {
@@ -43,7 +49,9 @@ class SplitApkMetadata extends \Google\Model
     return $this->isMasterSplit;
   }
   /**
-   * @param string
+   * Id of the split.
+   *
+   * @param string $splitId
    */
   public function setSplitId($splitId)
   {

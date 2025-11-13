@@ -23,7 +23,9 @@ class ReviewsReplyResponse extends \Google\Model
   protected $resultDataType = '';
 
   /**
-   * @param ReviewReplyResult
+   * The result of replying/updating a reply to review.
+   *
+   * @param ReviewReplyResult $result
    */
   public function setResult(ReviewReplyResult $result)
   {

@@ -20,19 +20,33 @@ namespace Google\Service\AndroidPublisher;
 class TestPurchaseContext extends \Google\Model
 {
   /**
+   * Fop type unspecified. This value should never be set.
+   */
+  public const FOP_TYPE_FOP_TYPE_UNSPECIFIED = 'FOP_TYPE_UNSPECIFIED';
+  /**
+   * The purchase was made using a test card.
+   */
+  public const FOP_TYPE_TEST = 'TEST';
+  /**
+   * The fop type of the test purchase.
+   *
    * @var string
    */
   public $fopType;
 
   /**
-   * @param string
+   * The fop type of the test purchase.
+   *
+   * Accepted values: FOP_TYPE_UNSPECIFIED, TEST
+   *
+   * @param self::FOP_TYPE_* $fopType
    */
   public function setFopType($fopType)
   {
     $this->fopType = $fopType;
   }
   /**
-   * @return string
+   * @return self::FOP_TYPE_*
    */
   public function getFopType()
   {

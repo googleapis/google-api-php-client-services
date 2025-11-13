@@ -20,12 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class VanityCode extends \Google\Model
 {
   /**
+   * The promotion code.
+   *
    * @var string
    */
   public $promotionCode;
 
   /**
-   * @param string
+   * The promotion code.
+   *
+   * @param string $promotionCode
    */
   public function setPromotionCode($promotionCode)
   {

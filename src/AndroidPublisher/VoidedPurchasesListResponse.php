@@ -28,7 +28,9 @@ class VoidedPurchasesListResponse extends \Google\Collection
   protected $voidedPurchasesDataType = 'array';
 
   /**
-   * @param PageInfo
+   * General pagination information.
+   *
+   * @param PageInfo $pageInfo
    */
   public function setPageInfo(PageInfo $pageInfo)
   {
@@ -42,7 +44,9 @@ class VoidedPurchasesListResponse extends \Google\Collection
     return $this->pageInfo;
   }
   /**
-   * @param TokenPagination
+   * Pagination information for token pagination.
+   *
+   * @param TokenPagination $tokenPagination
    */
   public function setTokenPagination(TokenPagination $tokenPagination)
   {
@@ -56,7 +60,7 @@ class VoidedPurchasesListResponse extends \Google\Collection
     return $this->tokenPagination;
   }
   /**
-   * @param VoidedPurchase[]
+   * @param VoidedPurchase[] $voidedPurchases
    */
   public function setVoidedPurchases($voidedPurchases)
   {

@@ -20,16 +20,27 @@ namespace Google\Service\AndroidPublisher;
 class SubscriptionCancelSurveyResult extends \Google\Model
 {
   /**
+   * The cancellation reason the user chose in the survey. Possible values are:
+   * 0. Other 1. I don't use this service enough 2. Technical issues 3. Cost-
+   * related reasons 4. I found a better app
+   *
    * @var int
    */
   public $cancelSurveyReason;
   /**
+   * The customized input cancel reason from the user. Only present when
+   * cancelReason is 0.
+   *
    * @var string
    */
   public $userInputCancelReason;
 
   /**
-   * @param int
+   * The cancellation reason the user chose in the survey. Possible values are:
+   * 0. Other 1. I don't use this service enough 2. Technical issues 3. Cost-
+   * related reasons 4. I found a better app
+   *
+   * @param int $cancelSurveyReason
    */
   public function setCancelSurveyReason($cancelSurveyReason)
   {
@@ -43,7 +54,10 @@ class SubscriptionCancelSurveyResult extends \Google\Model
     return $this->cancelSurveyReason;
   }
   /**
-   * @param string
+   * The customized input cancel reason from the user. Only present when
+   * cancelReason is 0.
+   *
+   * @param string $userInputCancelReason
    */
   public function setUserInputCancelReason($userInputCancelReason)
   {

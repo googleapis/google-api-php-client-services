@@ -27,7 +27,10 @@ class UpdateOneTimeProductOfferStateRequest extends \Google\Model
   protected $deactivateOneTimeProductOfferRequestDataType = '';
 
   /**
-   * @param ActivateOneTimeProductOfferRequest
+   * Activates an offer. Once activated, the offer is available to users, as
+   * long as its conditions are met.
+   *
+   * @param ActivateOneTimeProductOfferRequest $activateOneTimeProductOfferRequest
    */
   public function setActivateOneTimeProductOfferRequest(ActivateOneTimeProductOfferRequest $activateOneTimeProductOfferRequest)
   {
@@ -41,7 +44,11 @@ class UpdateOneTimeProductOfferStateRequest extends \Google\Model
     return $this->activateOneTimeProductOfferRequest;
   }
   /**
-   * @param CancelOneTimeProductOfferRequest
+   * Cancels an offer. Once cancelled, the offer is not available to users. Any
+   * pending orders related to this offer will be cancelled. This state
+   * transition is specific to pre-orders.
+   *
+   * @param CancelOneTimeProductOfferRequest $cancelOneTimeProductOfferRequest
    */
   public function setCancelOneTimeProductOfferRequest(CancelOneTimeProductOfferRequest $cancelOneTimeProductOfferRequest)
   {
@@ -55,7 +62,10 @@ class UpdateOneTimeProductOfferStateRequest extends \Google\Model
     return $this->cancelOneTimeProductOfferRequest;
   }
   /**
-   * @param DeactivateOneTimeProductOfferRequest
+   * Deactivates an offer. Once deactivated, the offer is no longer available to
+   * users. This state transition is specific to discounted offers.
+   *
+   * @param DeactivateOneTimeProductOfferRequest $deactivateOneTimeProductOfferRequest
    */
   public function setDeactivateOneTimeProductOfferRequest(DeactivateOneTimeProductOfferRequest $deactivateOneTimeProductOfferRequest)
   {

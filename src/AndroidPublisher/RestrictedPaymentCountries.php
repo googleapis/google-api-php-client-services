@@ -21,12 +21,18 @@ class RestrictedPaymentCountries extends \Google\Collection
 {
   protected $collection_key = 'regionCodes';
   /**
+   * Required. Region codes to impose payment restrictions on, as defined by ISO
+   * 3166-2, e.g. "US".
+   *
    * @var string[]
    */
   public $regionCodes;
 
   /**
-   * @param string[]
+   * Required. Region codes to impose payment restrictions on, as defined by ISO
+   * 3166-2, e.g. "US".
+   *
+   * @param string[] $regionCodes
    */
   public function setRegionCodes($regionCodes)
   {

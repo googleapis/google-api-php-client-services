@@ -24,7 +24,9 @@ class RemoteInAppUpdateData extends \Google\Collection
   protected $remoteAppUpdateDataPerBundleDataType = 'array';
 
   /**
-   * @param RemoteInAppUpdateDataPerBundle[]
+   * Data related to the recovery action at bundle level.
+   *
+   * @param RemoteInAppUpdateDataPerBundle[] $remoteAppUpdateDataPerBundle
    */
   public function setRemoteAppUpdateDataPerBundle($remoteAppUpdateDataPerBundle)
   {

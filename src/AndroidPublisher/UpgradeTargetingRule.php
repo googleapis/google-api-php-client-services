@@ -20,10 +20,17 @@ namespace Google\Service\AndroidPublisher;
 class UpgradeTargetingRule extends \Google\Model
 {
   /**
+   * The specific billing period duration, specified in ISO 8601 format, that a
+   * user must be currently subscribed to to be eligible for this rule. If not
+   * specified, users subscribed to any billing period are matched.
+   *
    * @var string
    */
   public $billingPeriodDuration;
   /**
+   * Limit this offer to only once per user. If set to true, a user can never be
+   * eligible for this offer again if they ever subscribed to this offer.
+   *
    * @var bool
    */
   public $oncePerUser;
@@ -31,7 +38,11 @@ class UpgradeTargetingRule extends \Google\Model
   protected $scopeDataType = '';
 
   /**
-   * @param string
+   * The specific billing period duration, specified in ISO 8601 format, that a
+   * user must be currently subscribed to to be eligible for this rule. If not
+   * specified, users subscribed to any billing period are matched.
+   *
+   * @param string $billingPeriodDuration
    */
   public function setBillingPeriodDuration($billingPeriodDuration)
   {
@@ -45,7 +56,10 @@ class UpgradeTargetingRule extends \Google\Model
     return $this->billingPeriodDuration;
   }
   /**
-   * @param bool
+   * Limit this offer to only once per user. If set to true, a user can never be
+   * eligible for this offer again if they ever subscribed to this offer.
+   *
+   * @param bool $oncePerUser
    */
   public function setOncePerUser($oncePerUser)
   {
@@ -59,7 +73,10 @@ class UpgradeTargetingRule extends \Google\Model
     return $this->oncePerUser;
   }
   /**
-   * @param TargetingRuleScope
+   * Required. The scope of subscriptions this rule considers. Only allows "this
+   * subscription" and "specific subscription in app".
+   *
+   * @param TargetingRuleScope $scope
    */
   public function setScope(TargetingRuleScope $scope)
   {

@@ -31,7 +31,9 @@ class Targeting extends \Google\Model
   protected $versionRangeDataType = '';
 
   /**
-   * @param AllUsers
+   * All users are targeted.
+   *
+   * @param AllUsers $allUsers
    */
   public function setAllUsers(AllUsers $allUsers)
   {
@@ -45,7 +47,9 @@ class Targeting extends \Google\Model
     return $this->allUsers;
   }
   /**
-   * @param AndroidSdks
+   * Targeting is based on android api levels of devices.
+   *
+   * @param AndroidSdks $androidSdks
    */
   public function setAndroidSdks(AndroidSdks $androidSdks)
   {
@@ -59,7 +63,9 @@ class Targeting extends \Google\Model
     return $this->androidSdks;
   }
   /**
-   * @param Regions
+   * Targeting is based on the user account region.
+   *
+   * @param Regions $regions
    */
   public function setRegions(Regions $regions)
   {
@@ -73,7 +79,9 @@ class Targeting extends \Google\Model
     return $this->regions;
   }
   /**
-   * @param AppVersionList
+   * Target version codes as a list.
+   *
+   * @param AppVersionList $versionList
    */
   public function setVersionList(AppVersionList $versionList)
   {
@@ -87,7 +95,9 @@ class Targeting extends \Google\Model
     return $this->versionList;
   }
   /**
-   * @param AppVersionRange
+   * Target version codes as a range.
+   *
+   * @param AppVersionRange $versionRange
    */
   public function setVersionRange(AppVersionRange $versionRange)
   {

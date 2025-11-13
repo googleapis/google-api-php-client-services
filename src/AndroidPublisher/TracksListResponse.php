@@ -21,6 +21,8 @@ class TracksListResponse extends \Google\Collection
 {
   protected $collection_key = 'tracks';
   /**
+   * The kind of this response ("androidpublisher#tracksListResponse").
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +30,9 @@ class TracksListResponse extends \Google\Collection
   protected $tracksDataType = 'array';
 
   /**
-   * @param string
+   * The kind of this response ("androidpublisher#tracksListResponse").
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +46,9 @@ class TracksListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Track[]
+   * All tracks (including tracks with no releases).
+   *
+   * @param Track[] $tracks
    */
   public function setTracks($tracks)
   {

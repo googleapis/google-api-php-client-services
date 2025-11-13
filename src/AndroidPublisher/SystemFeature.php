@@ -20,12 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class SystemFeature extends \Google\Model
 {
   /**
+   * The name of the feature.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The name of the feature.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

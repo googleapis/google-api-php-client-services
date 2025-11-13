@@ -20,12 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class SubscriptionPurchasesDeferResponse extends \Google\Model
 {
   /**
+   * The new expiry time for the subscription in milliseconds since the Epoch.
+   *
    * @var string
    */
   public $newExpiryTimeMillis;
 
   /**
-   * @param string
+   * The new expiry time for the subscription in milliseconds since the Epoch.
+   *
+   * @param string $newExpiryTimeMillis
    */
   public function setNewExpiryTimeMillis($newExpiryTimeMillis)
   {

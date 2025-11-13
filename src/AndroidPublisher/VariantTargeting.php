@@ -31,7 +31,9 @@ class VariantTargeting extends \Google\Model
   protected $textureCompressionFormatTargetingDataType = '';
 
   /**
-   * @param AbiTargeting
+   * The abi that the variant targets
+   *
+   * @param AbiTargeting $abiTargeting
    */
   public function setAbiTargeting(AbiTargeting $abiTargeting)
   {
@@ -45,7 +47,9 @@ class VariantTargeting extends \Google\Model
     return $this->abiTargeting;
   }
   /**
-   * @param MultiAbiTargeting
+   * Multi-api-level targeting
+   *
+   * @param MultiAbiTargeting $multiAbiTargeting
    */
   public function setMultiAbiTargeting(MultiAbiTargeting $multiAbiTargeting)
   {
@@ -59,7 +63,9 @@ class VariantTargeting extends \Google\Model
     return $this->multiAbiTargeting;
   }
   /**
-   * @param ScreenDensityTargeting
+   * The screen densities that this variant supports
+   *
+   * @param ScreenDensityTargeting $screenDensityTargeting
    */
   public function setScreenDensityTargeting(ScreenDensityTargeting $screenDensityTargeting)
   {
@@ -73,7 +79,9 @@ class VariantTargeting extends \Google\Model
     return $this->screenDensityTargeting;
   }
   /**
-   * @param SdkVersionTargeting
+   * The sdk version that the variant targets
+   *
+   * @param SdkVersionTargeting $sdkVersionTargeting
    */
   public function setSdkVersionTargeting(SdkVersionTargeting $sdkVersionTargeting)
   {
@@ -87,7 +95,9 @@ class VariantTargeting extends \Google\Model
     return $this->sdkVersionTargeting;
   }
   /**
-   * @param TextureCompressionFormatTargeting
+   * Texture-compression-format-level targeting
+   *
+   * @param TextureCompressionFormatTargeting $textureCompressionFormatTargeting
    */
   public function setTextureCompressionFormatTargeting(TextureCompressionFormatTargeting $textureCompressionFormatTargeting)
   {

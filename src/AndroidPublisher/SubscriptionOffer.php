@@ -19,12 +19,35 @@ namespace Google\Service\AndroidPublisher;
 
 class SubscriptionOffer extends \Google\Collection
 {
+  /**
+   * Default value, should never be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The subscription offer is not and has never been available to users.
+   */
+  public const STATE_DRAFT = 'DRAFT';
+  /**
+   * The subscription offer is available to new and existing users.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The subscription offer is not available to new users. Existing users retain
+   * access.
+   */
+  public const STATE_INACTIVE = 'INACTIVE';
   protected $collection_key = 'regionalConfigs';
   /**
+   * Required. Immutable. The ID of the base plan to which this offer is an
+   * extension.
+   *
    * @var string
    */
   public $basePlanId;
   /**
+   * Required. Immutable. Unique ID of this subscription offer. Must be unique
+   * within the base plan.
+   *
    * @var string
    */
   public $offerId;
@@ -33,18 +56,28 @@ class SubscriptionOffer extends \Google\Collection
   protected $otherRegionsConfigType = OtherRegionsSubscriptionOfferConfig::class;
   protected $otherRegionsConfigDataType = '';
   /**
+   * Required. Immutable. The package name of the app the parent subscription
+   * belongs to.
+   *
    * @var string
    */
   public $packageName;
   protected $phasesType = SubscriptionOfferPhase::class;
   protected $phasesDataType = 'array';
   /**
+   * Required. Immutable. The ID of the parent subscription this offer belongs
+   * to.
+   *
    * @var string
    */
   public $productId;
   protected $regionalConfigsType = RegionalSubscriptionOfferConfig::class;
   protected $regionalConfigsDataType = 'array';
   /**
+   * Output only. The current state of this offer. Can be changed using Activate
+   * and Deactivate actions. NB: the base plan state supersedes this state, so
+   * an active offer may not be available if the base plan is not active.
+   *
    * @var string
    */
   public $state;
@@ -52,7 +85,10 @@ class SubscriptionOffer extends \Google\Collection
   protected $targetingDataType = '';
 
   /**
-   * @param string
+   * Required. Immutable. The ID of the base plan to which this offer is an
+   * extension.
+   *
+   * @param string $basePlanId
    */
   public function setBasePlanId($basePlanId)
   {
@@ -66,7 +102,10 @@ class SubscriptionOffer extends \Google\Collection
     return $this->basePlanId;
   }
   /**
-   * @param string
+   * Required. Immutable. Unique ID of this subscription offer. Must be unique
+   * within the base plan.
+   *
+   * @param string $offerId
    */
   public function setOfferId($offerId)
   {
@@ -80,7 +119,10 @@ class SubscriptionOffer extends \Google\Collection
     return $this->offerId;
   }
   /**
-   * @param OfferTag[]
+   * List of up to 20 custom tags specified for this offer, and returned to the
+   * app through the billing library.
+   *
+   * @param OfferTag[] $offerTags
    */
   public function setOfferTags($offerTags)
   {
@@ -94,7 +136,9 @@ class SubscriptionOffer extends \Google\Collection
     return $this->offerTags;
   }
   /**
-   * @param OtherRegionsSubscriptionOfferConfig
+   * The configuration for any new locations Play may launch in the future.
+   *
+   * @param OtherRegionsSubscriptionOfferConfig $otherRegionsConfig
    */
   public function setOtherRegionsConfig(OtherRegionsSubscriptionOfferConfig $otherRegionsConfig)
   {
@@ -108,7 +152,10 @@ class SubscriptionOffer extends \Google\Collection
     return $this->otherRegionsConfig;
   }
   /**
-   * @param string
+   * Required. Immutable. The package name of the app the parent subscription
+   * belongs to.
+   *
+   * @param string $packageName
    */
   public function setPackageName($packageName)
   {
@@ -122,7 +169,11 @@ class SubscriptionOffer extends \Google\Collection
     return $this->packageName;
   }
   /**
-   * @param SubscriptionOfferPhase[]
+   * Required. The phases of this subscription offer. Must contain at least one
+   * and at most two entries. Users will always receive all these phases in the
+   * specified order.
+   *
+   * @param SubscriptionOfferPhase[] $phases
    */
   public function setPhases($phases)
   {
@@ -136,7 +187,10 @@ class SubscriptionOffer extends \Google\Collection
     return $this->phases;
   }
   /**
-   * @param string
+   * Required. Immutable. The ID of the parent subscription this offer belongs
+   * to.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -150,7 +204,10 @@ class SubscriptionOffer extends \Google\Collection
     return $this->productId;
   }
   /**
-   * @param RegionalSubscriptionOfferConfig[]
+   * Required. The region-specific configuration of this offer. Must contain at
+   * least one entry.
+   *
+   * @param RegionalSubscriptionOfferConfig[] $regionalConfigs
    */
   public function setRegionalConfigs($regionalConfigs)
   {
@@ -164,21 +221,32 @@ class SubscriptionOffer extends \Google\Collection
     return $this->regionalConfigs;
   }
   /**
-   * @param string
+   * Output only. The current state of this offer. Can be changed using Activate
+   * and Deactivate actions. NB: the base plan state supersedes this state, so
+   * an active offer may not be available if the base plan is not active.
+   *
+   * Accepted values: STATE_UNSPECIFIED, DRAFT, ACTIVE, INACTIVE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param SubscriptionOfferTargeting
+   * The requirements that users need to fulfil to be eligible for this offer.
+   * Represents the requirements that Play will evaluate to decide whether an
+   * offer should be returned. Developers may further filter these offers
+   * themselves.
+   *
+   * @param SubscriptionOfferTargeting $targeting
    */
   public function setTargeting(SubscriptionOfferTargeting $targeting)
   {

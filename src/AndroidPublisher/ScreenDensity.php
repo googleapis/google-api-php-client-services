@@ -20,30 +20,77 @@ namespace Google\Service\AndroidPublisher;
 class ScreenDensity extends \Google\Model
 {
   /**
+   * Unspecified screen density.
+   */
+  public const DENSITY_ALIAS_DENSITY_UNSPECIFIED = 'DENSITY_UNSPECIFIED';
+  /**
+   * NODPI screen density.
+   */
+  public const DENSITY_ALIAS_NODPI = 'NODPI';
+  /**
+   * LDPI screen density.
+   */
+  public const DENSITY_ALIAS_LDPI = 'LDPI';
+  /**
+   * MDPI screen density.
+   */
+  public const DENSITY_ALIAS_MDPI = 'MDPI';
+  /**
+   * TVDPI screen density.
+   */
+  public const DENSITY_ALIAS_TVDPI = 'TVDPI';
+  /**
+   * HDPI screen density.
+   */
+  public const DENSITY_ALIAS_HDPI = 'HDPI';
+  /**
+   * XHDPI screen density.
+   */
+  public const DENSITY_ALIAS_XHDPI = 'XHDPI';
+  /**
+   * XXHDPI screen density.
+   */
+  public const DENSITY_ALIAS_XXHDPI = 'XXHDPI';
+  /**
+   * XXXHDPI screen density.
+   */
+  public const DENSITY_ALIAS_XXXHDPI = 'XXXHDPI';
+  /**
+   * Alias for a screen density.
+   *
    * @var string
    */
   public $densityAlias;
   /**
+   * Value for density dpi.
+   *
    * @var int
    */
   public $densityDpi;
 
   /**
-   * @param string
+   * Alias for a screen density.
+   *
+   * Accepted values: DENSITY_UNSPECIFIED, NODPI, LDPI, MDPI, TVDPI, HDPI,
+   * XHDPI, XXHDPI, XXXHDPI
+   *
+   * @param self::DENSITY_ALIAS_* $densityAlias
    */
   public function setDensityAlias($densityAlias)
   {
     $this->densityAlias = $densityAlias;
   }
   /**
-   * @return string
+   * @return self::DENSITY_ALIAS_*
    */
   public function getDensityAlias()
   {
     return $this->densityAlias;
   }
   /**
-   * @param int
+   * Value for density dpi.
+   *
+   * @param int $densityDpi
    */
   public function setDensityDpi($densityDpi)
   {

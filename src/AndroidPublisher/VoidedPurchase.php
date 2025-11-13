@@ -20,40 +20,70 @@ namespace Google\Service\AndroidPublisher;
 class VoidedPurchase extends \Google\Model
 {
   /**
+   * This kind represents a voided purchase object in the androidpublisher
+   * service.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The order id which uniquely identifies a one-time purchase, subscription
+   * purchase, or subscription renewal.
+   *
    * @var string
    */
   public $orderId;
   /**
+   * The time at which the purchase was made, in milliseconds since the epoch
+   * (Jan 1, 1970).
+   *
    * @var string
    */
   public $purchaseTimeMillis;
   /**
+   * The token which uniquely identifies a one-time purchase or subscription. To
+   * uniquely identify subscription renewals use order_id (available starting
+   * from version 3 of the API).
+   *
    * @var string
    */
   public $purchaseToken;
   /**
+   * The voided quantity as the result of a quantity-based partial refund.
+   * Voided purchases of quantity-based partial refunds may only be returned
+   * when includeQuantityBasedPartialRefund is set to true.
+   *
    * @var int
    */
   public $voidedQuantity;
   /**
+   * The reason why the purchase was voided, possible values are: 0. Other 1.
+   * Remorse 2. Not_received 3. Defective 4. Accidental_purchase 5. Fraud 6.
+   * Friendly_fraud 7. Chargeback 8. Unacknowledged_purchase
+   *
    * @var int
    */
   public $voidedReason;
   /**
+   * The initiator of voided purchase, possible values are: 0. User 1. Developer
+   * 2. Google
+   *
    * @var int
    */
   public $voidedSource;
   /**
+   * The time at which the purchase was canceled/refunded/charged-back, in
+   * milliseconds since the epoch (Jan 1, 1970).
+   *
    * @var string
    */
   public $voidedTimeMillis;
 
   /**
-   * @param string
+   * This kind represents a voided purchase object in the androidpublisher
+   * service.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -67,7 +97,10 @@ class VoidedPurchase extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The order id which uniquely identifies a one-time purchase, subscription
+   * purchase, or subscription renewal.
+   *
+   * @param string $orderId
    */
   public function setOrderId($orderId)
   {
@@ -81,7 +114,10 @@ class VoidedPurchase extends \Google\Model
     return $this->orderId;
   }
   /**
-   * @param string
+   * The time at which the purchase was made, in milliseconds since the epoch
+   * (Jan 1, 1970).
+   *
+   * @param string $purchaseTimeMillis
    */
   public function setPurchaseTimeMillis($purchaseTimeMillis)
   {
@@ -95,7 +131,11 @@ class VoidedPurchase extends \Google\Model
     return $this->purchaseTimeMillis;
   }
   /**
-   * @param string
+   * The token which uniquely identifies a one-time purchase or subscription. To
+   * uniquely identify subscription renewals use order_id (available starting
+   * from version 3 of the API).
+   *
+   * @param string $purchaseToken
    */
   public function setPurchaseToken($purchaseToken)
   {
@@ -109,7 +149,11 @@ class VoidedPurchase extends \Google\Model
     return $this->purchaseToken;
   }
   /**
-   * @param int
+   * The voided quantity as the result of a quantity-based partial refund.
+   * Voided purchases of quantity-based partial refunds may only be returned
+   * when includeQuantityBasedPartialRefund is set to true.
+   *
+   * @param int $voidedQuantity
    */
   public function setVoidedQuantity($voidedQuantity)
   {
@@ -123,7 +167,11 @@ class VoidedPurchase extends \Google\Model
     return $this->voidedQuantity;
   }
   /**
-   * @param int
+   * The reason why the purchase was voided, possible values are: 0. Other 1.
+   * Remorse 2. Not_received 3. Defective 4. Accidental_purchase 5. Fraud 6.
+   * Friendly_fraud 7. Chargeback 8. Unacknowledged_purchase
+   *
+   * @param int $voidedReason
    */
   public function setVoidedReason($voidedReason)
   {
@@ -137,7 +185,10 @@ class VoidedPurchase extends \Google\Model
     return $this->voidedReason;
   }
   /**
-   * @param int
+   * The initiator of voided purchase, possible values are: 0. User 1. Developer
+   * 2. Google
+   *
+   * @param int $voidedSource
    */
   public function setVoidedSource($voidedSource)
   {
@@ -151,7 +202,10 @@ class VoidedPurchase extends \Google\Model
     return $this->voidedSource;
   }
   /**
-   * @param string
+   * The time at which the purchase was canceled/refunded/charged-back, in
+   * milliseconds since the epoch (Jan 1, 1970).
+   *
+   * @param string $voidedTimeMillis
    */
   public function setVoidedTimeMillis($voidedTimeMillis)
   {
