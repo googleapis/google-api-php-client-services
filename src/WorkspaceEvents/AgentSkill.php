@@ -21,38 +21,57 @@ class AgentSkill extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * A human (or llm) readable description of the skill details and behaviors.
+   *
    * @var string
    */
   public $description;
   /**
+   * A set of example queries that this skill is designed to address. These
+   * examples should help the caller to understand how to craft requests to the
+   * agent to achieve specific goals. Example: ["I need a recipe for bread"]
+   *
    * @var string[]
    */
   public $examples;
   /**
+   * Unique identifier of the skill within this agent.
+   *
    * @var string
    */
   public $id;
   /**
+   * Possible input modalities supported.
+   *
    * @var string[]
    */
   public $inputModes;
   /**
+   * A human readable name for the skill.
+   *
    * @var string
    */
   public $name;
   /**
+   * Possible output modalities produced
+   *
    * @var string[]
    */
   public $outputModes;
   protected $securityType = Security::class;
   protected $securityDataType = 'array';
   /**
+   * A set of tags for the skill to enhance categorization/utilization. Example:
+   * ["cooking", "customer support", "billing"]
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string
+   * A human (or llm) readable description of the skill details and behaviors.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -66,7 +85,11 @@ class AgentSkill extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * A set of example queries that this skill is designed to address. These
+   * examples should help the caller to understand how to craft requests to the
+   * agent to achieve specific goals. Example: ["I need a recipe for bread"]
+   *
+   * @param string[] $examples
    */
   public function setExamples($examples)
   {
@@ -80,7 +103,9 @@ class AgentSkill extends \Google\Collection
     return $this->examples;
   }
   /**
-   * @param string
+   * Unique identifier of the skill within this agent.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -94,7 +119,9 @@ class AgentSkill extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string[]
+   * Possible input modalities supported.
+   *
+   * @param string[] $inputModes
    */
   public function setInputModes($inputModes)
   {
@@ -108,7 +135,9 @@ class AgentSkill extends \Google\Collection
     return $this->inputModes;
   }
   /**
-   * @param string
+   * A human readable name for the skill.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -122,7 +151,9 @@ class AgentSkill extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Possible output modalities produced
+   *
+   * @param string[] $outputModes
    */
   public function setOutputModes($outputModes)
   {
@@ -136,7 +167,14 @@ class AgentSkill extends \Google\Collection
     return $this->outputModes;
   }
   /**
-   * @param Security[]
+   * protolint:disable REPEATED_FIELD_NAMES_PLURALIZED Security schemes
+   * necessary for the agent to leverage this skill. As in the overall
+   * AgentCard.security, this list represents a logical OR of security
+   * requirement objects. Each object is a set of security schemes that must be
+   * used together (a logical AND). protolint:enable
+   * REPEATED_FIELD_NAMES_PLURALIZED
+   *
+   * @param Security[] $security
    */
   public function setSecurity($security)
   {
@@ -150,7 +188,10 @@ class AgentSkill extends \Google\Collection
     return $this->security;
   }
   /**
-   * @param string[]
+   * A set of tags for the skill to enhance categorization/utilization. Example:
+   * ["cooking", "customer support", "billing"]
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

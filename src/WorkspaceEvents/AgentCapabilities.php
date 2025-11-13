@@ -23,16 +23,22 @@ class AgentCapabilities extends \Google\Collection
   protected $extensionsType = AgentExtension::class;
   protected $extensionsDataType = 'array';
   /**
+   * If the agent can send push notifications to the clients webhook
+   *
    * @var bool
    */
   public $pushNotifications;
   /**
+   * If the agent will support streaming responses
+   *
    * @var bool
    */
   public $streaming;
 
   /**
-   * @param AgentExtension[]
+   * Extensions supported by this agent.
+   *
+   * @param AgentExtension[] $extensions
    */
   public function setExtensions($extensions)
   {
@@ -46,7 +52,9 @@ class AgentCapabilities extends \Google\Collection
     return $this->extensions;
   }
   /**
-   * @param bool
+   * If the agent can send push notifications to the clients webhook
+   *
+   * @param bool $pushNotifications
    */
   public function setPushNotifications($pushNotifications)
   {
@@ -60,7 +68,9 @@ class AgentCapabilities extends \Google\Collection
     return $this->pushNotifications;
   }
   /**
-   * @param bool
+   * If the agent will support streaming responses
+   *
+   * @param bool $streaming
    */
   public function setStreaming($streaming)
   {

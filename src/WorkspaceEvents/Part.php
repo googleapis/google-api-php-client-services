@@ -24,6 +24,8 @@ class Part extends \Google\Model
   protected $fileType = FilePart::class;
   protected $fileDataType = '';
   /**
+   * Optional metadata associated with this part.
+   *
    * @var array[]
    */
   public $metadata;
@@ -33,7 +35,7 @@ class Part extends \Google\Model
   public $text;
 
   /**
-   * @param DataPart
+   * @param DataPart $data
    */
   public function setData(DataPart $data)
   {
@@ -47,7 +49,7 @@ class Part extends \Google\Model
     return $this->data;
   }
   /**
-   * @param FilePart
+   * @param FilePart $file
    */
   public function setFile(FilePart $file)
   {
@@ -61,7 +63,9 @@ class Part extends \Google\Model
     return $this->file;
   }
   /**
-   * @param array[]
+   * Optional metadata associated with this part.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -75,7 +79,7 @@ class Part extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * @param string $text
    */
   public function setText($text)
   {

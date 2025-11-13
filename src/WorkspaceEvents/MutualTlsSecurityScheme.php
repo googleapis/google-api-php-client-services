@@ -20,12 +20,16 @@ namespace Google\Service\WorkspaceEvents;
 class MutualTlsSecurityScheme extends \Google\Model
 {
   /**
+   * Description of this security scheme.
+   *
    * @var string
    */
   public $description;
 
   /**
-   * @param string
+   * Description of this security scheme.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {

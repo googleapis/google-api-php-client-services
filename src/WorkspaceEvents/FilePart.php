@@ -37,7 +37,7 @@ class FilePart extends \Google\Model
   public $name;
 
   /**
-   * @param string
+   * @param string $fileWithBytes
    */
   public function setFileWithBytes($fileWithBytes)
   {
@@ -51,7 +51,7 @@ class FilePart extends \Google\Model
     return $this->fileWithBytes;
   }
   /**
-   * @param string
+   * @param string $fileWithUri
    */
   public function setFileWithUri($fileWithUri)
   {
@@ -65,7 +65,7 @@ class FilePart extends \Google\Model
     return $this->fileWithUri;
   }
   /**
-   * @param string
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -79,7 +79,7 @@ class FilePart extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {

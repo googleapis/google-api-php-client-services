@@ -20,20 +20,32 @@ namespace Google\Service\WorkspaceEvents;
 class ClientCredentialsOAuthFlow extends \Google\Model
 {
   /**
+   * The URL to be used for obtaining refresh tokens. This MUST be in the form
+   * of a URL. The OAuth2 standard requires the use of TLS.
+   *
    * @var string
    */
   public $refreshUrl;
   /**
+   * The available scopes for the OAuth2 security scheme. A map between the
+   * scope name and a short description for it. The map MAY be empty.
+   *
    * @var string[]
    */
   public $scopes;
   /**
+   * The token URL to be used for this flow. This MUST be in the form of a URL.
+   * The OAuth2 standard requires the use of TLS.
+   *
    * @var string
    */
   public $tokenUrl;
 
   /**
-   * @param string
+   * The URL to be used for obtaining refresh tokens. This MUST be in the form
+   * of a URL. The OAuth2 standard requires the use of TLS.
+   *
+   * @param string $refreshUrl
    */
   public function setRefreshUrl($refreshUrl)
   {
@@ -47,7 +59,10 @@ class ClientCredentialsOAuthFlow extends \Google\Model
     return $this->refreshUrl;
   }
   /**
-   * @param string[]
+   * The available scopes for the OAuth2 security scheme. A map between the
+   * scope name and a short description for it. The map MAY be empty.
+   *
+   * @param string[] $scopes
    */
   public function setScopes($scopes)
   {
@@ -61,7 +76,10 @@ class ClientCredentialsOAuthFlow extends \Google\Model
     return $this->scopes;
   }
   /**
-   * @param string
+   * The token URL to be used for this flow. This MUST be in the form of a URL.
+   * The OAuth2 standard requires the use of TLS.
+   *
+   * @param string $tokenUrl
    */
   public function setTokenUrl($tokenUrl)
   {

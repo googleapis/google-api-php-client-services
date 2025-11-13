@@ -21,22 +21,33 @@ class Artifact extends \Google\Collection
 {
   protected $collection_key = 'parts';
   /**
+   * Unique identifier (e.g. UUID) for the artifact. It must be at least unique
+   * within a task.
+   *
    * @var string
    */
   public $artifactId;
   /**
+   * A human readable description of the artifact, optional.
+   *
    * @var string
    */
   public $description;
   /**
+   * The URIs of extensions that are present or contributed to this Artifact.
+   *
    * @var string[]
    */
   public $extensions;
   /**
+   * Optional metadata included with the artifact.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * A human readable name for the artifact.
+   *
    * @var string
    */
   public $name;
@@ -44,7 +55,10 @@ class Artifact extends \Google\Collection
   protected $partsDataType = 'array';
 
   /**
-   * @param string
+   * Unique identifier (e.g. UUID) for the artifact. It must be at least unique
+   * within a task.
+   *
+   * @param string $artifactId
    */
   public function setArtifactId($artifactId)
   {
@@ -58,7 +72,9 @@ class Artifact extends \Google\Collection
     return $this->artifactId;
   }
   /**
-   * @param string
+   * A human readable description of the artifact, optional.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -72,7 +88,9 @@ class Artifact extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * The URIs of extensions that are present or contributed to this Artifact.
+   *
+   * @param string[] $extensions
    */
   public function setExtensions($extensions)
   {
@@ -86,7 +104,9 @@ class Artifact extends \Google\Collection
     return $this->extensions;
   }
   /**
-   * @param array[]
+   * Optional metadata included with the artifact.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -100,7 +120,9 @@ class Artifact extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * A human readable name for the artifact.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -114,7 +136,9 @@ class Artifact extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Part[]
+   * The content of the artifact.
+   *
+   * @param Part[] $parts
    */
   public function setParts($parts)
   {

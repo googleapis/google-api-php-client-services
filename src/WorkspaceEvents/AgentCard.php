@@ -25,34 +25,53 @@ class AgentCard extends \Google\Collection
   protected $capabilitiesType = AgentCapabilities::class;
   protected $capabilitiesDataType = '';
   /**
+   * protolint:enable REPEATED_FIELD_NAMES_PLURALIZED The set of interaction
+   * modes that the agent supports across all skills. This can be overridden per
+   * skill. Defined as mime types.
+   *
    * @var string[]
    */
   public $defaultInputModes;
   /**
+   * The mime types supported as outputs from this agent.
+   *
    * @var string[]
    */
   public $defaultOutputModes;
   /**
+   * A description of the agent's domain of action/solution space. Example:
+   * "Agent that helps users with recipes and cooking."
+   *
    * @var string
    */
   public $description;
   /**
+   * A url to provide additional documentation about the agent.
+   *
    * @var string
    */
   public $documentationUrl;
   /**
+   * An optional URL to an icon for the agent.
+   *
    * @var string
    */
   public $iconUrl;
   /**
+   * A human readable name for the agent. Example: "Recipe Agent"
+   *
    * @var string
    */
   public $name;
   /**
+   * The transport of the preferred endpoint. If empty, defaults to JSONRPC.
+   *
    * @var string
    */
   public $preferredTransport;
   /**
+   * The version of the A2A protocol this agent supports.
+   *
    * @var string
    */
   public $protocolVersion;
@@ -67,20 +86,32 @@ class AgentCard extends \Google\Collection
   protected $skillsType = AgentSkill::class;
   protected $skillsDataType = 'array';
   /**
+   * Whether the agent supports providing an extended agent card when the user
+   * is authenticated, i.e. is the card from .well-known different than the card
+   * from GetAgentCard.
+   *
    * @var bool
    */
   public $supportsAuthenticatedExtendedCard;
   /**
+   * A URL to the address the agent is hosted at. This represents the preferred
+   * endpoint as declared by the agent.
+   *
    * @var string
    */
   public $url;
   /**
+   * The version of the agent. Example: "1.0.0"
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param AgentInterface[]
+   * Announcement of additional supported transports. Client can use any of the
+   * supported transports.
+   *
+   * @param AgentInterface[] $additionalInterfaces
    */
   public function setAdditionalInterfaces($additionalInterfaces)
   {
@@ -94,7 +125,9 @@ class AgentCard extends \Google\Collection
     return $this->additionalInterfaces;
   }
   /**
-   * @param AgentCapabilities
+   * A2A Capability set supported by the agent.
+   *
+   * @param AgentCapabilities $capabilities
    */
   public function setCapabilities(AgentCapabilities $capabilities)
   {
@@ -108,7 +141,11 @@ class AgentCard extends \Google\Collection
     return $this->capabilities;
   }
   /**
-   * @param string[]
+   * protolint:enable REPEATED_FIELD_NAMES_PLURALIZED The set of interaction
+   * modes that the agent supports across all skills. This can be overridden per
+   * skill. Defined as mime types.
+   *
+   * @param string[] $defaultInputModes
    */
   public function setDefaultInputModes($defaultInputModes)
   {
@@ -122,7 +159,9 @@ class AgentCard extends \Google\Collection
     return $this->defaultInputModes;
   }
   /**
-   * @param string[]
+   * The mime types supported as outputs from this agent.
+   *
+   * @param string[] $defaultOutputModes
    */
   public function setDefaultOutputModes($defaultOutputModes)
   {
@@ -136,7 +175,10 @@ class AgentCard extends \Google\Collection
     return $this->defaultOutputModes;
   }
   /**
-   * @param string
+   * A description of the agent's domain of action/solution space. Example:
+   * "Agent that helps users with recipes and cooking."
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -150,7 +192,9 @@ class AgentCard extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * A url to provide additional documentation about the agent.
+   *
+   * @param string $documentationUrl
    */
   public function setDocumentationUrl($documentationUrl)
   {
@@ -164,7 +208,9 @@ class AgentCard extends \Google\Collection
     return $this->documentationUrl;
   }
   /**
-   * @param string
+   * An optional URL to an icon for the agent.
+   *
+   * @param string $iconUrl
    */
   public function setIconUrl($iconUrl)
   {
@@ -178,7 +224,9 @@ class AgentCard extends \Google\Collection
     return $this->iconUrl;
   }
   /**
-   * @param string
+   * A human readable name for the agent. Example: "Recipe Agent"
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -192,7 +240,9 @@ class AgentCard extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The transport of the preferred endpoint. If empty, defaults to JSONRPC.
+   *
+   * @param string $preferredTransport
    */
   public function setPreferredTransport($preferredTransport)
   {
@@ -206,7 +256,9 @@ class AgentCard extends \Google\Collection
     return $this->preferredTransport;
   }
   /**
-   * @param string
+   * The version of the A2A protocol this agent supports.
+   *
+   * @param string $protocolVersion
    */
   public function setProtocolVersion($protocolVersion)
   {
@@ -220,7 +272,9 @@ class AgentCard extends \Google\Collection
     return $this->protocolVersion;
   }
   /**
-   * @param AgentProvider
+   * The service provider of the agent.
+   *
+   * @param AgentProvider $provider
    */
   public function setProvider(AgentProvider $provider)
   {
@@ -234,7 +288,15 @@ class AgentCard extends \Google\Collection
     return $this->provider;
   }
   /**
-   * @param Security[]
+   * protolint:disable REPEATED_FIELD_NAMES_PLURALIZED Security requirements for
+   * contacting the agent. This list can be seen as an OR of ANDs. Each object
+   * in the list describes one possible set of security requirements that must
+   * be present on a request. This allows specifying, for example, "callers must
+   * either use OAuth OR an API Key AND mTLS." Example: security { schemes {
+   * key: "oauth" value { list: ["read"] } } } security { schemes { key: "api-
+   * key" } schemes { key: "mtls" } }
+   *
+   * @param Security[] $security
    */
   public function setSecurity($security)
   {
@@ -248,7 +310,9 @@ class AgentCard extends \Google\Collection
     return $this->security;
   }
   /**
-   * @param SecurityScheme[]
+   * The security scheme details used for authenticating with this agent.
+   *
+   * @param SecurityScheme[] $securitySchemes
    */
   public function setSecuritySchemes($securitySchemes)
   {
@@ -262,7 +326,9 @@ class AgentCard extends \Google\Collection
     return $this->securitySchemes;
   }
   /**
-   * @param AgentCardSignature[]
+   * JSON Web Signatures computed for this AgentCard.
+   *
+   * @param AgentCardSignature[] $signatures
    */
   public function setSignatures($signatures)
   {
@@ -276,7 +342,11 @@ class AgentCard extends \Google\Collection
     return $this->signatures;
   }
   /**
-   * @param AgentSkill[]
+   * Skills represent a unit of ability an agent can perform. This may somewhat
+   * abstract but represents a more focused set of actions that the agent is
+   * highly likely to succeed at.
+   *
+   * @param AgentSkill[] $skills
    */
   public function setSkills($skills)
   {
@@ -290,7 +360,11 @@ class AgentCard extends \Google\Collection
     return $this->skills;
   }
   /**
-   * @param bool
+   * Whether the agent supports providing an extended agent card when the user
+   * is authenticated, i.e. is the card from .well-known different than the card
+   * from GetAgentCard.
+   *
+   * @param bool $supportsAuthenticatedExtendedCard
    */
   public function setSupportsAuthenticatedExtendedCard($supportsAuthenticatedExtendedCard)
   {
@@ -304,7 +378,10 @@ class AgentCard extends \Google\Collection
     return $this->supportsAuthenticatedExtendedCard;
   }
   /**
-   * @param string
+   * A URL to the address the agent is hosted at. This represents the preferred
+   * endpoint as declared by the agent.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {
@@ -318,7 +395,9 @@ class AgentCard extends \Google\Collection
     return $this->url;
   }
   /**
-   * @param string
+   * The version of the agent. Example: "1.0.0"
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

@@ -23,7 +23,7 @@ class Security extends \Google\Model
   protected $schemesDataType = 'map';
 
   /**
-   * @param StringList[]
+   * @param StringList[] $schemes
    */
   public function setSchemes($schemes)
   {

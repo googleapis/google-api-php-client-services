@@ -20,30 +20,42 @@ namespace Google\Service\WorkspaceEvents;
 class TaskArtifactUpdateEvent extends \Google\Model
 {
   /**
+   * Whether this should be appended to a prior one produced
+   *
    * @var bool
    */
   public $append;
   protected $artifactType = Artifact::class;
   protected $artifactDataType = '';
   /**
+   * The id of the context that this task belongs too
+   *
    * @var string
    */
   public $contextId;
   /**
+   * Whether this represents the last part of an artifact
+   *
    * @var bool
    */
   public $lastChunk;
   /**
+   * Optional metadata associated with the artifact update.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * The id of the task for this artifact
+   *
    * @var string
    */
   public $taskId;
 
   /**
-   * @param bool
+   * Whether this should be appended to a prior one produced
+   *
+   * @param bool $append
    */
   public function setAppend($append)
   {
@@ -57,7 +69,9 @@ class TaskArtifactUpdateEvent extends \Google\Model
     return $this->append;
   }
   /**
-   * @param Artifact
+   * The artifact itself
+   *
+   * @param Artifact $artifact
    */
   public function setArtifact(Artifact $artifact)
   {
@@ -71,7 +85,9 @@ class TaskArtifactUpdateEvent extends \Google\Model
     return $this->artifact;
   }
   /**
-   * @param string
+   * The id of the context that this task belongs too
+   *
+   * @param string $contextId
    */
   public function setContextId($contextId)
   {
@@ -85,7 +101,9 @@ class TaskArtifactUpdateEvent extends \Google\Model
     return $this->contextId;
   }
   /**
-   * @param bool
+   * Whether this represents the last part of an artifact
+   *
+   * @param bool $lastChunk
    */
   public function setLastChunk($lastChunk)
   {
@@ -99,7 +117,9 @@ class TaskArtifactUpdateEvent extends \Google\Model
     return $this->lastChunk;
   }
   /**
-   * @param array[]
+   * Optional metadata associated with the artifact update.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -113,7 +133,9 @@ class TaskArtifactUpdateEvent extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The id of the task for this artifact
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {

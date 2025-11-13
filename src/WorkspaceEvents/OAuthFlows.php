@@ -29,7 +29,7 @@ class OAuthFlows extends \Google\Model
   protected $passwordDataType = '';
 
   /**
-   * @param AuthorizationCodeOAuthFlow
+   * @param AuthorizationCodeOAuthFlow $authorizationCode
    */
   public function setAuthorizationCode(AuthorizationCodeOAuthFlow $authorizationCode)
   {
@@ -43,7 +43,7 @@ class OAuthFlows extends \Google\Model
     return $this->authorizationCode;
   }
   /**
-   * @param ClientCredentialsOAuthFlow
+   * @param ClientCredentialsOAuthFlow $clientCredentials
    */
   public function setClientCredentials(ClientCredentialsOAuthFlow $clientCredentials)
   {
@@ -57,7 +57,7 @@ class OAuthFlows extends \Google\Model
     return $this->clientCredentials;
   }
   /**
-   * @param ImplicitOAuthFlow
+   * @param ImplicitOAuthFlow $implicit
    */
   public function setImplicit(ImplicitOAuthFlow $implicit)
   {
@@ -71,7 +71,7 @@ class OAuthFlows extends \Google\Model
     return $this->implicit;
   }
   /**
-   * @param PasswordOAuthFlow
+   * @param PasswordOAuthFlow $password
    */
   public function setPassword(PasswordOAuthFlow $password)
   {

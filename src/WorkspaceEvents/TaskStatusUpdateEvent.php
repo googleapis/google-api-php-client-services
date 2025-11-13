@@ -20,26 +20,36 @@ namespace Google\Service\WorkspaceEvents;
 class TaskStatusUpdateEvent extends \Google\Model
 {
   /**
+   * The id of the context that the task belongs to
+   *
    * @var string
    */
   public $contextId;
   /**
+   * Whether this is the last status update expected for this task.
+   *
    * @var bool
    */
   public $final;
   /**
+   * Optional metadata to associate with the task update.
+   *
    * @var array[]
    */
   public $metadata;
   protected $statusType = TaskStatus::class;
   protected $statusDataType = '';
   /**
+   * The id of the task that is changed
+   *
    * @var string
    */
   public $taskId;
 
   /**
-   * @param string
+   * The id of the context that the task belongs to
+   *
+   * @param string $contextId
    */
   public function setContextId($contextId)
   {
@@ -53,7 +63,9 @@ class TaskStatusUpdateEvent extends \Google\Model
     return $this->contextId;
   }
   /**
-   * @param bool
+   * Whether this is the last status update expected for this task.
+   *
+   * @param bool $final
    */
   public function setFinal($final)
   {
@@ -67,7 +79,9 @@ class TaskStatusUpdateEvent extends \Google\Model
     return $this->final;
   }
   /**
-   * @param array[]
+   * Optional metadata to associate with the task update.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -81,7 +95,9 @@ class TaskStatusUpdateEvent extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param TaskStatus
+   * The new status of the task.
+   *
+   * @param TaskStatus $status
    */
   public function setStatus(TaskStatus $status)
   {
@@ -95,7 +111,9 @@ class TaskStatusUpdateEvent extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * The id of the task that is changed
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {

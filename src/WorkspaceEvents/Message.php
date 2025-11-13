@@ -19,36 +19,64 @@ namespace Google\Service\WorkspaceEvents;
 
 class Message extends \Google\Collection
 {
+  public const ROLE_ROLE_UNSPECIFIED = 'ROLE_UNSPECIFIED';
+  /**
+   * USER role refers to communication from the client to the server.
+   */
+  public const ROLE_ROLE_USER = 'ROLE_USER';
+  /**
+   * AGENT role refers to communication from the server to the client.
+   */
+  public const ROLE_ROLE_AGENT = 'ROLE_AGENT';
   protected $collection_key = 'extensions';
   protected $contentType = Part::class;
   protected $contentDataType = 'array';
   /**
+   * The context id of the message. This is optional and if set, the message
+   * will be associated with the given context.
+   *
    * @var string
    */
   public $contextId;
   /**
+   * The URIs of extensions that are present or contributed to this Message.
+   *
    * @var string[]
    */
   public $extensions;
   /**
+   * The unique identifier (e.g. UUID)of the message. This is required and
+   * created by the message creator.
+   *
    * @var string
    */
   public $messageId;
   /**
+   * protolint:enable REPEATED_FIELD_NAMES_PLURALIZED Any optional metadata to
+   * provide along with the message.
+   *
    * @var array[]
    */
   public $metadata;
   /**
+   * A role for the message.
+   *
    * @var string
    */
   public $role;
   /**
+   * The task id of the message. This is optional and if set, the message will
+   * be associated with the given task.
+   *
    * @var string
    */
   public $taskId;
 
   /**
-   * @param Part[]
+   * protolint:disable REPEATED_FIELD_NAMES_PLURALIZED Content is the container
+   * of the message content.
+   *
+   * @param Part[] $content
    */
   public function setContent($content)
   {
@@ -62,7 +90,10 @@ class Message extends \Google\Collection
     return $this->content;
   }
   /**
-   * @param string
+   * The context id of the message. This is optional and if set, the message
+   * will be associated with the given context.
+   *
+   * @param string $contextId
    */
   public function setContextId($contextId)
   {
@@ -76,7 +107,9 @@ class Message extends \Google\Collection
     return $this->contextId;
   }
   /**
-   * @param string[]
+   * The URIs of extensions that are present or contributed to this Message.
+   *
+   * @param string[] $extensions
    */
   public function setExtensions($extensions)
   {
@@ -90,7 +123,10 @@ class Message extends \Google\Collection
     return $this->extensions;
   }
   /**
-   * @param string
+   * The unique identifier (e.g. UUID)of the message. This is required and
+   * created by the message creator.
+   *
+   * @param string $messageId
    */
   public function setMessageId($messageId)
   {
@@ -104,7 +140,10 @@ class Message extends \Google\Collection
     return $this->messageId;
   }
   /**
-   * @param array[]
+   * protolint:enable REPEATED_FIELD_NAMES_PLURALIZED Any optional metadata to
+   * provide along with the message.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -118,21 +157,28 @@ class Message extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * A role for the message.
+   *
+   * Accepted values: ROLE_UNSPECIFIED, ROLE_USER, ROLE_AGENT
+   *
+   * @param self::ROLE_* $role
    */
   public function setRole($role)
   {
     $this->role = $role;
   }
   /**
-   * @return string
+   * @return self::ROLE_*
    */
   public function getRole()
   {
     return $this->role;
   }
   /**
-   * @param string
+   * The task id of the message. This is optional and if set, the message will
+   * be associated with the given task.
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {

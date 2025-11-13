@@ -20,16 +20,26 @@ namespace Google\Service\WorkspaceEvents;
 class AgentInterface extends \Google\Model
 {
   /**
+   * The transport supported this url. This is an open form string, to be easily
+   * extended for many transport protocols. The core ones officially supported
+   * are JSONRPC, GRPC and HTTP+JSON.
+   *
    * @var string
    */
   public $transport;
   /**
+   * The url this interface is found at.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The transport supported this url. This is an open form string, to be easily
+   * extended for many transport protocols. The core ones officially supported
+   * are JSONRPC, GRPC and HTTP+JSON.
+   *
+   * @param string $transport
    */
   public function setTransport($transport)
   {
@@ -43,7 +53,9 @@ class AgentInterface extends \Google\Model
     return $this->transport;
   }
   /**
-   * @param string
+   * The url this interface is found at.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

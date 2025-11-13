@@ -20,16 +20,22 @@ namespace Google\Service\WorkspaceEvents;
 class AgentProvider extends \Google\Model
 {
   /**
+   * The providers organization name Example: "Google"
+   *
    * @var string
    */
   public $organization;
   /**
+   * The providers reference url Example: "https://ai.google.dev"
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The providers organization name Example: "Google"
+   *
+   * @param string $organization
    */
   public function setOrganization($organization)
   {
@@ -43,7 +49,9 @@ class AgentProvider extends \Google\Model
     return $this->organization;
   }
   /**
-   * @param string
+   * The providers reference url Example: "https://ai.google.dev"
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

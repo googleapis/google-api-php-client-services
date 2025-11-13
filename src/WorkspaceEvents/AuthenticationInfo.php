@@ -21,16 +21,22 @@ class AuthenticationInfo extends \Google\Collection
 {
   protected $collection_key = 'schemes';
   /**
+   * Optional credentials
+   *
    * @var string
    */
   public $credentials;
   /**
+   * Supported authentication schemes - e.g. Basic, Bearer, etc
+   *
    * @var string[]
    */
   public $schemes;
 
   /**
-   * @param string
+   * Optional credentials
+   *
+   * @param string $credentials
    */
   public function setCredentials($credentials)
   {
@@ -44,7 +50,9 @@ class AuthenticationInfo extends \Google\Collection
     return $this->credentials;
   }
   /**
-   * @param string[]
+   * Supported authentication schemes - e.g. Basic, Bearer, etc
+   *
+   * @param string[] $schemes
    */
   public function setSchemes($schemes)
   {

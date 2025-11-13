@@ -20,16 +20,23 @@ namespace Google\Service\WorkspaceEvents;
 class OpenIdConnectSecurityScheme extends \Google\Model
 {
   /**
+   * Description of this security scheme.
+   *
    * @var string
    */
   public $description;
   /**
+   * Well-known URL to discover the [[OpenID-Connect-Discovery]] provider
+   * metadata.
+   *
    * @var string
    */
   public $openIdConnectUrl;
 
   /**
-   * @param string
+   * Description of this security scheme.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +50,10 @@ class OpenIdConnectSecurityScheme extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Well-known URL to discover the [[OpenID-Connect-Discovery]] provider
+   * metadata.
+   *
+   * @param string $openIdConnectUrl
    */
   public function setOpenIdConnectUrl($openIdConnectUrl)
   {

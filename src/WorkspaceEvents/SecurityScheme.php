@@ -31,7 +31,7 @@ class SecurityScheme extends \Google\Model
   protected $openIdConnectSecuritySchemeDataType = '';
 
   /**
-   * @param APIKeySecurityScheme
+   * @param APIKeySecurityScheme $apiKeySecurityScheme
    */
   public function setApiKeySecurityScheme(APIKeySecurityScheme $apiKeySecurityScheme)
   {
@@ -45,7 +45,7 @@ class SecurityScheme extends \Google\Model
     return $this->apiKeySecurityScheme;
   }
   /**
-   * @param HTTPAuthSecurityScheme
+   * @param HTTPAuthSecurityScheme $httpAuthSecurityScheme
    */
   public function setHttpAuthSecurityScheme(HTTPAuthSecurityScheme $httpAuthSecurityScheme)
   {
@@ -59,7 +59,7 @@ class SecurityScheme extends \Google\Model
     return $this->httpAuthSecurityScheme;
   }
   /**
-   * @param MutualTlsSecurityScheme
+   * @param MutualTlsSecurityScheme $mtlsSecurityScheme
    */
   public function setMtlsSecurityScheme(MutualTlsSecurityScheme $mtlsSecurityScheme)
   {
@@ -73,7 +73,7 @@ class SecurityScheme extends \Google\Model
     return $this->mtlsSecurityScheme;
   }
   /**
-   * @param OAuth2SecurityScheme
+   * @param OAuth2SecurityScheme $oauth2SecurityScheme
    */
   public function setOauth2SecurityScheme(OAuth2SecurityScheme $oauth2SecurityScheme)
   {
@@ -87,7 +87,7 @@ class SecurityScheme extends \Google\Model
     return $this->oauth2SecurityScheme;
   }
   /**
-   * @param OpenIdConnectSecurityScheme
+   * @param OpenIdConnectSecurityScheme $openIdConnectSecurityScheme
    */
   public function setOpenIdConnectSecurityScheme(OpenIdConnectSecurityScheme $openIdConnectSecurityScheme)
   {

@@ -23,12 +23,17 @@ class ListTaskPushNotificationConfigResponse extends \Google\Collection
   protected $configsType = TaskPushNotificationConfig::class;
   protected $configsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param TaskPushNotificationConfig[]
+   * The list of push notification configurations.
+   *
+   * @param TaskPushNotificationConfig[] $configs
    */
   public function setConfigs($configs)
   {
@@ -42,7 +47,10 @@ class ListTaskPushNotificationConfigResponse extends \Google\Collection
     return $this->configs;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

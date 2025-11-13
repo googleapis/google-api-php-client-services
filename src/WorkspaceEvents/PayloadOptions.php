@@ -20,16 +20,36 @@ namespace Google\Service\WorkspaceEvents;
 class PayloadOptions extends \Google\Model
 {
   /**
+   * Optional. If `include_resource` is set to `true`, the list of fields to
+   * include in the event payload. Separate fields with a comma. For example, to
+   * include a Google Chat message's sender and create time, enter
+   * `message.sender,message.createTime`. If omitted, the payload includes all
+   * fields for the resource. If you specify a field that doesn't exist for the
+   * resource, the system ignores the field.
+   *
    * @var string
    */
   public $fieldMask;
   /**
+   * Optional. Whether the event payload includes data about the resource that
+   * changed. For example, for an event where a Google Chat message was created,
+   * whether the payload contains data about the [`Message`](https://developers.
+   * google.com/chat/api/reference/rest/v1/spaces.messages) resource. If false,
+   * the event payload only includes the name of the changed resource.
+   *
    * @var bool
    */
   public $includeResource;
 
   /**
-   * @param string
+   * Optional. If `include_resource` is set to `true`, the list of fields to
+   * include in the event payload. Separate fields with a comma. For example, to
+   * include a Google Chat message's sender and create time, enter
+   * `message.sender,message.createTime`. If omitted, the payload includes all
+   * fields for the resource. If you specify a field that doesn't exist for the
+   * resource, the system ignores the field.
+   *
+   * @param string $fieldMask
    */
   public function setFieldMask($fieldMask)
   {
@@ -43,7 +63,13 @@ class PayloadOptions extends \Google\Model
     return $this->fieldMask;
   }
   /**
-   * @param bool
+   * Optional. Whether the event payload includes data about the resource that
+   * changed. For example, for an event where a Google Chat message was created,
+   * whether the payload contains data about the [`Message`](https://developers.
+   * google.com/chat/api/reference/rest/v1/spaces.messages) resource. If false,
+   * the event payload only includes the name of the changed resource.
+   *
+   * @param bool $includeResource
    */
   public function setIncludeResource($includeResource)
   {

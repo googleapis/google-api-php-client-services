@@ -26,7 +26,7 @@ class StringList extends \Google\Collection
   public $list;
 
   /**
-   * @param string[]
+   * @param string[] $list
    */
   public function setList($list)
   {

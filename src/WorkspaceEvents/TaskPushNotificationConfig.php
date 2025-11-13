@@ -20,6 +20,9 @@ namespace Google\Service\WorkspaceEvents;
 class TaskPushNotificationConfig extends \Google\Model
 {
   /**
+   * The resource name of the config. Format:
+   * tasks/{task_id}/pushNotificationConfigs/{config_id}
+   *
    * @var string
    */
   public $name;
@@ -27,7 +30,10 @@ class TaskPushNotificationConfig extends \Google\Model
   protected $pushNotificationConfigDataType = '';
 
   /**
-   * @param string
+   * The resource name of the config. Format:
+   * tasks/{task_id}/pushNotificationConfigs/{config_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +47,9 @@ class TaskPushNotificationConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param PushNotificationConfig
+   * The push notification configuration details.
+   *
+   * @param PushNotificationConfig $pushNotificationConfig
    */
   public function setPushNotificationConfig(PushNotificationConfig $pushNotificationConfig)
   {

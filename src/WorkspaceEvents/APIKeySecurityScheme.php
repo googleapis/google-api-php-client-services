@@ -20,20 +20,28 @@ namespace Google\Service\WorkspaceEvents;
 class APIKeySecurityScheme extends \Google\Model
 {
   /**
+   * Description of this security scheme.
+   *
    * @var string
    */
   public $description;
   /**
+   * Location of the API key, valid values are "query", "header", or "cookie"
+   *
    * @var string
    */
   public $location;
   /**
+   * Name of the header, query or cookie parameter to be used.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Description of this security scheme.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +55,9 @@ class APIKeySecurityScheme extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Location of the API key, valid values are "query", "header", or "cookie"
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -61,7 +71,9 @@ class APIKeySecurityScheme extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Name of the header, query or cookie parameter to be used.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

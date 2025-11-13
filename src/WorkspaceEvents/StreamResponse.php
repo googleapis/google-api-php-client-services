@@ -29,7 +29,7 @@ class StreamResponse extends \Google\Model
   protected $taskDataType = '';
 
   /**
-   * @param TaskArtifactUpdateEvent
+   * @param TaskArtifactUpdateEvent $artifactUpdate
    */
   public function setArtifactUpdate(TaskArtifactUpdateEvent $artifactUpdate)
   {
@@ -43,7 +43,7 @@ class StreamResponse extends \Google\Model
     return $this->artifactUpdate;
   }
   /**
-   * @param Message
+   * @param Message $message
    */
   public function setMessage(Message $message)
   {
@@ -57,7 +57,7 @@ class StreamResponse extends \Google\Model
     return $this->message;
   }
   /**
-   * @param TaskStatusUpdateEvent
+   * @param TaskStatusUpdateEvent $statusUpdate
    */
   public function setStatusUpdate(TaskStatusUpdateEvent $statusUpdate)
   {
@@ -71,7 +71,7 @@ class StreamResponse extends \Google\Model
     return $this->statusUpdate;
   }
   /**
-   * @param Task
+   * @param Task $task
    */
   public function setTask(Task $task)
   {

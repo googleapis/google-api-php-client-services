@@ -20,20 +20,29 @@ namespace Google\Service\WorkspaceEvents;
 class AgentCardSignature extends \Google\Model
 {
   /**
+   * The unprotected JWS header values.
+   *
    * @var array[]
    */
   public $header;
   /**
+   * Required. The protected JWS header for the signature. This is always a
+   * base64url-encoded JSON object. Required.
+   *
    * @var string
    */
   public $protected;
   /**
+   * Required. The computed signature, base64url-encoded. Required.
+   *
    * @var string
    */
   public $signature;
 
   /**
-   * @param array[]
+   * The unprotected JWS header values.
+   *
+   * @param array[] $header
    */
   public function setHeader($header)
   {
@@ -47,7 +56,10 @@ class AgentCardSignature extends \Google\Model
     return $this->header;
   }
   /**
-   * @param string
+   * Required. The protected JWS header for the signature. This is always a
+   * base64url-encoded JSON object. Required.
+   *
+   * @param string $protected
    */
   public function setProtected($protected)
   {
@@ -61,7 +73,9 @@ class AgentCardSignature extends \Google\Model
     return $this->protected;
   }
   /**
-   * @param string
+   * Required. The computed signature, base64url-encoded. Required.
+   *
+   * @param string $signature
    */
   public function setSignature($signature)
   {

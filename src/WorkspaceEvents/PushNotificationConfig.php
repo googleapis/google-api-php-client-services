@@ -22,20 +22,28 @@ class PushNotificationConfig extends \Google\Model
   protected $authenticationType = AuthenticationInfo::class;
   protected $authenticationDataType = '';
   /**
+   * A unique identifier (e.g. UUID) for this push notification.
+   *
    * @var string
    */
   public $id;
   /**
+   * Token unique for this task/session
+   *
    * @var string
    */
   public $token;
   /**
+   * Url to send the notification too
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param AuthenticationInfo
+   * Information about the authentication to sent with the notification
+   *
+   * @param AuthenticationInfo $authentication
    */
   public function setAuthentication(AuthenticationInfo $authentication)
   {
@@ -49,7 +57,9 @@ class PushNotificationConfig extends \Google\Model
     return $this->authentication;
   }
   /**
-   * @param string
+   * A unique identifier (e.g. UUID) for this push notification.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +73,9 @@ class PushNotificationConfig extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Token unique for this task/session
+   *
+   * @param string $token
    */
   public function setToken($token)
   {
@@ -77,7 +89,9 @@ class PushNotificationConfig extends \Google\Model
     return $this->token;
   }
   /**
-   * @param string
+   * Url to send the notification too
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

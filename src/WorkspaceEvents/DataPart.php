@@ -25,7 +25,7 @@ class DataPart extends \Google\Model
   public $data;
 
   /**
-   * @param array[]
+   * @param array[] $data
    */
   public function setData($data)
   {

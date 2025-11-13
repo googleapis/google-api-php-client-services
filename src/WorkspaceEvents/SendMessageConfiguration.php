@@ -21,14 +21,24 @@ class SendMessageConfiguration extends \Google\Collection
 {
   protected $collection_key = 'acceptedOutputModes';
   /**
+   * The output modes that the agent is expected to respond with.
+   *
    * @var string[]
    */
   public $acceptedOutputModes;
   /**
+   * If true, the message will be blocking until the task is completed. If
+   * false, the message will be non-blocking and the task will be returned
+   * immediately. It is the caller's responsibility to check for any task
+   * updates.
+   *
    * @var bool
    */
   public $blocking;
   /**
+   * The maximum number of messages to include in the history. if 0, the history
+   * will be unlimited.
+   *
    * @var int
    */
   public $historyLength;
@@ -36,7 +46,9 @@ class SendMessageConfiguration extends \Google\Collection
   protected $pushNotificationDataType = '';
 
   /**
-   * @param string[]
+   * The output modes that the agent is expected to respond with.
+   *
+   * @param string[] $acceptedOutputModes
    */
   public function setAcceptedOutputModes($acceptedOutputModes)
   {
@@ -50,7 +62,12 @@ class SendMessageConfiguration extends \Google\Collection
     return $this->acceptedOutputModes;
   }
   /**
-   * @param bool
+   * If true, the message will be blocking until the task is completed. If
+   * false, the message will be non-blocking and the task will be returned
+   * immediately. It is the caller's responsibility to check for any task
+   * updates.
+   *
+   * @param bool $blocking
    */
   public function setBlocking($blocking)
   {
@@ -64,7 +81,10 @@ class SendMessageConfiguration extends \Google\Collection
     return $this->blocking;
   }
   /**
-   * @param int
+   * The maximum number of messages to include in the history. if 0, the history
+   * will be unlimited.
+   *
+   * @param int $historyLength
    */
   public function setHistoryLength($historyLength)
   {
@@ -78,7 +98,9 @@ class SendMessageConfiguration extends \Google\Collection
     return $this->historyLength;
   }
   /**
-   * @param PushNotificationConfig
+   * A configuration of a webhook that can be used to receive updates
+   *
+   * @param PushNotificationConfig $pushNotification
    */
   public function setPushNotification(PushNotificationConfig $pushNotification)
   {

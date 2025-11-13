@@ -24,12 +24,16 @@ class SendMessageRequest extends \Google\Model
   protected $messageType = Message::class;
   protected $messageDataType = '';
   /**
+   * Optional metadata for the request.
+   *
    * @var array[]
    */
   public $metadata;
 
   /**
-   * @param SendMessageConfiguration
+   * Configuration for the send request.
+   *
+   * @param SendMessageConfiguration $configuration
    */
   public function setConfiguration(SendMessageConfiguration $configuration)
   {
@@ -43,7 +47,9 @@ class SendMessageRequest extends \Google\Model
     return $this->configuration;
   }
   /**
-   * @param Message
+   * Required. The message to send to the agent.
+   *
+   * @param Message $message
    */
   public function setMessage(Message $message)
   {
@@ -57,7 +63,9 @@ class SendMessageRequest extends \Google\Model
     return $this->message;
   }
   /**
-   * @param array[]
+   * Optional metadata for the request.
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {

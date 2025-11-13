@@ -20,18 +20,25 @@ namespace Google\Service\WorkspaceEvents;
 class OAuth2SecurityScheme extends \Google\Model
 {
   /**
+   * Description of this security scheme.
+   *
    * @var string
    */
   public $description;
   protected $flowsType = OAuthFlows::class;
   protected $flowsDataType = '';
   /**
+   * URL to the oauth2 authorization server metadata
+   * [RFC8414](https://datatracker.ietf.org/doc/html/rfc8414). TLS is required.
+   *
    * @var string
    */
   public $oauth2MetadataUrl;
 
   /**
-   * @param string
+   * Description of this security scheme.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -45,7 +52,9 @@ class OAuth2SecurityScheme extends \Google\Model
     return $this->description;
   }
   /**
-   * @param OAuthFlows
+   * An object containing configuration information for the flow types supported
+   *
+   * @param OAuthFlows $flows
    */
   public function setFlows(OAuthFlows $flows)
   {
@@ -59,7 +68,10 @@ class OAuth2SecurityScheme extends \Google\Model
     return $this->flows;
   }
   /**
-   * @param string
+   * URL to the oauth2 authorization server metadata
+   * [RFC8414](https://datatracker.ietf.org/doc/html/rfc8414). TLS is required.
+   *
+   * @param string $oauth2MetadataUrl
    */
   public function setOauth2MetadataUrl($oauth2MetadataUrl)
   {

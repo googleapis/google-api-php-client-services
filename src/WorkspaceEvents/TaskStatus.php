@@ -19,19 +19,64 @@ namespace Google\Service\WorkspaceEvents;
 
 class TaskStatus extends \Google\Model
 {
+  public const STATE_TASK_STATE_UNSPECIFIED = 'TASK_STATE_UNSPECIFIED';
+  /**
+   * Represents the status that acknowledges a task is created
+   */
+  public const STATE_TASK_STATE_SUBMITTED = 'TASK_STATE_SUBMITTED';
+  /**
+   * Represents the status that a task is actively being processed
+   */
+  public const STATE_TASK_STATE_WORKING = 'TASK_STATE_WORKING';
+  /**
+   * Represents the status a task is finished. This is a terminal state
+   */
+  public const STATE_TASK_STATE_COMPLETED = 'TASK_STATE_COMPLETED';
+  /**
+   * Represents the status a task is done but failed. This is a terminal state
+   */
+  public const STATE_TASK_STATE_FAILED = 'TASK_STATE_FAILED';
+  /**
+   * Represents the status a task was cancelled before it finished. This is a
+   * terminal state.
+   */
+  public const STATE_TASK_STATE_CANCELLED = 'TASK_STATE_CANCELLED';
+  /**
+   * Represents the status that the task requires information to complete. This
+   * is an interrupted state.
+   */
+  public const STATE_TASK_STATE_INPUT_REQUIRED = 'TASK_STATE_INPUT_REQUIRED';
+  /**
+   * Represents the status that the agent has decided to not perform the task.
+   * This may be done during initial task creation or later once an agent has
+   * determined it can't or won't proceed. This is a terminal state.
+   */
+  public const STATE_TASK_STATE_REJECTED = 'TASK_STATE_REJECTED';
+  /**
+   * Represents the state that some authentication is needed from the upstream
+   * client. Authentication is expected to come out-of-band thus this is not an
+   * interrupted or terminal state.
+   */
+  public const STATE_TASK_STATE_AUTH_REQUIRED = 'TASK_STATE_AUTH_REQUIRED';
   protected $messageType = Message::class;
   protected $messageDataType = '';
   /**
+   * The current state of this task
+   *
    * @var string
    */
   public $state;
   /**
+   * Timestamp when the status was recorded. Example: "2023-10-27T10:00:00Z"
+   *
    * @var string
    */
   public $timestamp;
 
   /**
-   * @param Message
+   * A message associated with the status.
+   *
+   * @param Message $message
    */
   public function setMessage(Message $message)
   {
@@ -45,21 +90,30 @@ class TaskStatus extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * The current state of this task
+   *
+   * Accepted values: TASK_STATE_UNSPECIFIED, TASK_STATE_SUBMITTED,
+   * TASK_STATE_WORKING, TASK_STATE_COMPLETED, TASK_STATE_FAILED,
+   * TASK_STATE_CANCELLED, TASK_STATE_INPUT_REQUIRED, TASK_STATE_REJECTED,
+   * TASK_STATE_AUTH_REQUIRED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Timestamp when the status was recorded. Example: "2023-10-27T10:00:00Z"
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {
