@@ -19,54 +19,96 @@ namespace Google\Service\VMwareEngine;
 
 class NodeType extends \Google\Collection
 {
+  /**
+   * The default value. This value should never be used.
+   */
+  public const KIND_KIND_UNSPECIFIED = 'KIND_UNSPECIFIED';
+  /**
+   * Standard HCI node.
+   */
+  public const KIND_STANDARD = 'STANDARD';
+  /**
+   * Storage only Node.
+   */
+  public const KIND_STORAGE_ONLY = 'STORAGE_ONLY';
   protected $collection_key = 'families';
   /**
+   * Output only. List of possible values of custom core count.
+   *
    * @var int[]
    */
   public $availableCustomCoreCounts;
   /**
+   * Output only. Capabilities of this node type.
+   *
    * @var string[]
    */
   public $capabilities;
   /**
+   * Output only. The amount of storage available, defined in GB.
+   *
    * @var int
    */
   public $diskSizeGb;
   /**
+   * Output only. The friendly name for this node type. For example:
+   * ve1-standard-72
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Families of the node type. For node types to be in the same
+   * cluster they must share at least one element in the `families`.
+   *
    * @var string[]
    */
   public $families;
   /**
+   * Output only. The type of the resource.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Output only. The amount of physical memory available, defined in GB.
+   *
    * @var int
    */
   public $memoryGb;
   /**
+   * Output only. The resource name of this node type. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The canonical identifier of the node type (corresponds to the
+   * `NodeType`). For example: standard-72.
+   *
    * @var string
    */
   public $nodeTypeId;
   /**
+   * Output only. The total number of CPU cores in a single node.
+   *
    * @var int
    */
   public $totalCoreCount;
   /**
+   * Output only. The total number of virtual CPUs in a single node.
+   *
    * @var int
    */
   public $virtualCpuCount;
 
   /**
-   * @param int[]
+   * Output only. List of possible values of custom core count.
+   *
+   * @param int[] $availableCustomCoreCounts
    */
   public function setAvailableCustomCoreCounts($availableCustomCoreCounts)
   {
@@ -80,7 +122,9 @@ class NodeType extends \Google\Collection
     return $this->availableCustomCoreCounts;
   }
   /**
-   * @param string[]
+   * Output only. Capabilities of this node type.
+   *
+   * @param string[] $capabilities
    */
   public function setCapabilities($capabilities)
   {
@@ -94,7 +138,9 @@ class NodeType extends \Google\Collection
     return $this->capabilities;
   }
   /**
-   * @param int
+   * Output only. The amount of storage available, defined in GB.
+   *
+   * @param int $diskSizeGb
    */
   public function setDiskSizeGb($diskSizeGb)
   {
@@ -108,7 +154,10 @@ class NodeType extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * @param string
+   * Output only. The friendly name for this node type. For example:
+   * ve1-standard-72
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -122,7 +171,10 @@ class NodeType extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Output only. Families of the node type. For node types to be in the same
+   * cluster they must share at least one element in the `families`.
+   *
+   * @param string[] $families
    */
   public function setFamilies($families)
   {
@@ -136,21 +188,27 @@ class NodeType extends \Google\Collection
     return $this->families;
   }
   /**
-   * @param string
+   * Output only. The type of the resource.
+   *
+   * Accepted values: KIND_UNSPECIFIED, STANDARD, STORAGE_ONLY
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param int
+   * Output only. The amount of physical memory available, defined in GB.
+   *
+   * @param int $memoryGb
    */
   public function setMemoryGb($memoryGb)
   {
@@ -164,7 +222,12 @@ class NodeType extends \Google\Collection
     return $this->memoryGb;
   }
   /**
-   * @param string
+   * Output only. The resource name of this node type. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-proj/locations/us-central1-a/nodeTypes/standard-72`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -178,7 +241,10 @@ class NodeType extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The canonical identifier of the node type (corresponds to the
+   * `NodeType`). For example: standard-72.
+   *
+   * @param string $nodeTypeId
    */
   public function setNodeTypeId($nodeTypeId)
   {
@@ -192,7 +258,9 @@ class NodeType extends \Google\Collection
     return $this->nodeTypeId;
   }
   /**
-   * @param int
+   * Output only. The total number of CPU cores in a single node.
+   *
+   * @param int $totalCoreCount
    */
   public function setTotalCoreCount($totalCoreCount)
   {
@@ -206,7 +274,9 @@ class NodeType extends \Google\Collection
     return $this->totalCoreCount;
   }
   /**
-   * @param int
+   * Output only. The total number of virtual CPUs in a single node.
+   *
+   * @param int $virtualCpuCount
    */
   public function setVirtualCpuCount($virtualCpuCount)
   {

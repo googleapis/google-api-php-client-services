@@ -20,18 +20,72 @@ namespace Google\Service\VMwareEngine;
 class PrivateCloud extends \Google\Model
 {
   /**
+   * The default value. This value should never be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The private cloud is ready.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The private cloud is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The private cloud is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The private cloud is in failed state.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The private cloud is scheduled for deletion. The deletion process can be
+   * cancelled by using the corresponding undelete method.
+   */
+  public const STATE_DELETED = 'DELETED';
+  /**
+   * The private cloud is irreversibly deleted and is being removed from the
+   * system.
+   */
+  public const STATE_PURGING = 'PURGING';
+  /**
+   * Standard private is a zonal resource, with 3+ nodes. Default type.
+   */
+  public const TYPE_STANDARD = 'STANDARD';
+  /**
+   * Time limited private cloud is a zonal resource, can have only 1 node and
+   * has limited life span. Will be deleted after defined period of time, can be
+   * converted into standard private cloud by expanding it up to 3 or more
+   * nodes.
+   */
+  public const TYPE_TIME_LIMITED = 'TIME_LIMITED';
+  /**
+   * Stretched private cloud is a regional resource with redundancy, with a
+   * minimum of 6 nodes, nodes count has to be even.
+   */
+  public const TYPE_STRETCHED = 'STRETCHED';
+  /**
+   * Output only. Creation time of this resource.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Time when the resource was scheduled for deletion.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * User-provided description for this private cloud.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. Time when the resource will be irreversibly deleted.
+   *
    * @var string
    */
   public $expireTime;
@@ -40,6 +94,11 @@ class PrivateCloud extends \Google\Model
   protected $managementClusterType = ManagementCluster::class;
   protected $managementClusterDataType = '';
   /**
+   * Output only. Identifier. The resource name of this private cloud. Resource
+   * names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+   *
    * @var string
    */
   public $name;
@@ -48,18 +107,27 @@ class PrivateCloud extends \Google\Model
   protected $nsxType = Nsx::class;
   protected $nsxDataType = '';
   /**
+   * Output only. State of the resource. New values may be added to this enum
+   * when appropriate.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. Type of the private cloud. Defaults to STANDARD.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. System-generated unique identifier for the resource.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Last update time of this resource.
+   *
    * @var string
    */
   public $updateTime;
@@ -67,7 +135,9 @@ class PrivateCloud extends \Google\Model
   protected $vcenterDataType = '';
 
   /**
-   * @param string
+   * Output only. Creation time of this resource.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -81,7 +151,9 @@ class PrivateCloud extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Time when the resource was scheduled for deletion.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -95,7 +167,9 @@ class PrivateCloud extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * User-provided description for this private cloud.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -109,7 +183,9 @@ class PrivateCloud extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. Time when the resource will be irreversibly deleted.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -123,7 +199,9 @@ class PrivateCloud extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param Hcx
+   * Output only. HCX appliance.
+   *
+   * @param Hcx $hcx
    */
   public function setHcx(Hcx $hcx)
   {
@@ -137,7 +215,13 @@ class PrivateCloud extends \Google\Model
     return $this->hcx;
   }
   /**
-   * @param ManagementCluster
+   * Required. Input only. The management cluster for this private cloud. This
+   * field is required during creation of the private cloud to provide details
+   * for the default cluster. The following fields can't be changed after
+   * private cloud creation: `ManagementCluster.clusterId`,
+   * `ManagementCluster.nodeTypeId`.
+   *
+   * @param ManagementCluster $managementCluster
    */
   public function setManagementCluster(ManagementCluster $managementCluster)
   {
@@ -151,7 +235,12 @@ class PrivateCloud extends \Google\Model
     return $this->managementCluster;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of this private cloud. Resource
+   * names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -165,7 +254,9 @@ class PrivateCloud extends \Google\Model
     return $this->name;
   }
   /**
-   * @param NetworkConfig
+   * Required. Network configuration of the private cloud.
+   *
+   * @param NetworkConfig $networkConfig
    */
   public function setNetworkConfig(NetworkConfig $networkConfig)
   {
@@ -179,7 +270,9 @@ class PrivateCloud extends \Google\Model
     return $this->networkConfig;
   }
   /**
-   * @param Nsx
+   * Output only. NSX appliance.
+   *
+   * @param Nsx $nsx
    */
   public function setNsx(Nsx $nsx)
   {
@@ -193,35 +286,47 @@ class PrivateCloud extends \Google\Model
     return $this->nsx;
   }
   /**
-   * @param string
+   * Output only. State of the resource. New values may be added to this enum
+   * when appropriate.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, UPDATING, FAILED,
+   * DELETED, PURGING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Optional. Type of the private cloud. Defaults to STANDARD.
+   *
+   * Accepted values: STANDARD, TIME_LIMITED, STRETCHED
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. System-generated unique identifier for the resource.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -235,7 +340,9 @@ class PrivateCloud extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Last update time of this resource.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -249,7 +356,9 @@ class PrivateCloud extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param Vcenter
+   * Output only. Vcenter appliance.
+   *
+   * @param Vcenter $vcenter
    */
   public function setVcenter(Vcenter $vcenter)
   {

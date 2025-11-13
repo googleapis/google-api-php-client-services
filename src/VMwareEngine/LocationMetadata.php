@@ -21,12 +21,16 @@ class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'capabilities';
   /**
+   * Output only. Capabilities of this location.
+   *
    * @var string[]
    */
   public $capabilities;
 
   /**
-   * @param string[]
+   * Output only. Capabilities of this location.
+   *
+   * @param string[] $capabilities
    */
   public function setCapabilities($capabilities)
   {

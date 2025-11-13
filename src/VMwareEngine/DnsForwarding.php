@@ -21,22 +21,34 @@ class DnsForwarding extends \Google\Collection
 {
   protected $collection_key = 'forwardingRules';
   /**
+   * Output only. Creation time of this resource.
+   *
    * @var string
    */
   public $createTime;
   protected $forwardingRulesType = ForwardingRule::class;
   protected $forwardingRulesDataType = 'array';
   /**
+   * Output only. Identifier. The resource name of this DNS profile. Resource
+   * names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-
+   * cloud/dnsForwarding`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Last update time of this resource.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Creation time of this resource.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -50,7 +62,9 @@ class DnsForwarding extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param ForwardingRule[]
+   * Required. List of domain mappings to configure
+   *
+   * @param ForwardingRule[] $forwardingRules
    */
   public function setForwardingRules($forwardingRules)
   {
@@ -64,7 +78,13 @@ class DnsForwarding extends \Google\Collection
     return $this->forwardingRules;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of this DNS profile. Resource
+   * names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-
+   * cloud/dnsForwarding`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -78,7 +98,9 @@ class DnsForwarding extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Last update time of this resource.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

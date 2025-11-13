@@ -20,24 +20,46 @@ namespace Google\Service\VMwareEngine;
 class Nsx extends \Google\Model
 {
   /**
+   * Unspecified appliance state. This is the default value.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The appliance is operational and can be used.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The appliance is being deployed.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Fully qualified domain name of the appliance.
+   *
    * @var string
    */
   public $fqdn;
   /**
+   * Internal IP address of the appliance.
+   *
    * @var string
    */
   public $internalIp;
   /**
+   * Output only. The state of the appliance.
+   *
    * @var string
    */
   public $state;
   /**
+   * Version of the appliance.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Fully qualified domain name of the appliance.
+   *
+   * @param string $fqdn
    */
   public function setFqdn($fqdn)
   {
@@ -51,7 +73,9 @@ class Nsx extends \Google\Model
     return $this->fqdn;
   }
   /**
-   * @param string
+   * Internal IP address of the appliance.
+   *
+   * @param string $internalIp
    */
   public function setInternalIp($internalIp)
   {
@@ -65,21 +89,27 @@ class Nsx extends \Google\Model
     return $this->internalIp;
   }
   /**
-   * @param string
+   * Output only. The state of the appliance.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Version of the appliance.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

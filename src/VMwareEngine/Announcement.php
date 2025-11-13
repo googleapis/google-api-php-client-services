@@ -20,52 +20,106 @@ namespace Google\Service\VMwareEngine;
 class Announcement extends \Google\Model
 {
   /**
+   * The default value. This value should never be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Active announcement which should be visible to user.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Inactive announcement which should not be visible to user.
+   */
+  public const STATE_INACTIVE = 'INACTIVE';
+  /**
+   * Announcement which is being deleted
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Announcement which being created
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Optional. Activity type of the announcement There can be only one active
+   * announcement for a given activity type and target resource.
+   *
    * @var string
    */
   public $activityType;
   /**
+   * A Cluster resource name.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * Required. Code of the announcement. Indicates the presence of a VMware
+   * Engine related announcement and corresponds to a related message in the
+   * `description` field.
+   *
    * @var string
    */
   public $code;
   /**
+   * Output only. Creation time of this resource. It also serves as start time
+   * of notification.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Description of the announcement.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. Additional structured details about this announcement.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * Output only. The resource name of the announcement. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-west1-a/announcements/my-announcement-id`
+   *
    * @var string
    */
   public $name;
   /**
+   * A Private Cloud resource name.
+   *
    * @var string
    */
   public $privateCloud;
   /**
+   * Output only. State of the resource. New values may be added to this enum
+   * when appropriate.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Target Resource Type defines the type of the target for the
+   * announcement
+   *
    * @var string
    */
   public $targetResourceType;
   /**
+   * Output only. Last update time of this resource.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Optional. Activity type of the announcement There can be only one active
+   * announcement for a given activity type and target resource.
+   *
+   * @param string $activityType
    */
   public function setActivityType($activityType)
   {
@@ -79,7 +133,9 @@ class Announcement extends \Google\Model
     return $this->activityType;
   }
   /**
-   * @param string
+   * A Cluster resource name.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -93,7 +149,11 @@ class Announcement extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * Required. Code of the announcement. Indicates the presence of a VMware
+   * Engine related announcement and corresponds to a related message in the
+   * `description` field.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -107,7 +167,10 @@ class Announcement extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * Output only. Creation time of this resource. It also serves as start time
+   * of notification.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -121,7 +184,9 @@ class Announcement extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Description of the announcement.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -135,7 +200,9 @@ class Announcement extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string[]
+   * Output only. Additional structured details about this announcement.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -149,7 +216,12 @@ class Announcement extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * Output only. The resource name of the announcement. Resource names are
+   * schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-west1-a/announcements/my-announcement-id`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -163,7 +235,9 @@ class Announcement extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * A Private Cloud resource name.
+   *
+   * @param string $privateCloud
    */
   public function setPrivateCloud($privateCloud)
   {
@@ -177,21 +251,29 @@ class Announcement extends \Google\Model
     return $this->privateCloud;
   }
   /**
-   * @param string
+   * Output only. State of the resource. New values may be added to this enum
+   * when appropriate.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, INACTIVE, DELETING, CREATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Target Resource Type defines the type of the target for the
+   * announcement
+   *
+   * @param string $targetResourceType
    */
   public function setTargetResourceType($targetResourceType)
   {
@@ -205,7 +287,9 @@ class Announcement extends \Google\Model
     return $this->targetResourceType;
   }
   /**
-   * @param string
+   * Output only. Last update time of this resource.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -21,18 +21,27 @@ class ListPrivateCloudsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $privateCloudsType = PrivateCloud::class;
   protected $privateCloudsDataType = 'array';
   /**
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +55,9 @@ class ListPrivateCloudsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PrivateCloud[]
+   * A list of private clouds.
+   *
+   * @param PrivateCloud[] $privateClouds
    */
   public function setPrivateClouds($privateClouds)
   {
@@ -60,7 +71,10 @@ class ListPrivateCloudsResponse extends \Google\Collection
     return $this->privateClouds;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

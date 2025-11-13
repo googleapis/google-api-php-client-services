@@ -26,10 +26,18 @@ class AutoscalingPolicy extends \Google\Model
   protected $grantedMemoryThresholdsType = Thresholds::class;
   protected $grantedMemoryThresholdsDataType = '';
   /**
+   * Required. The canonical identifier of the node type to add or remove.
+   * Corresponds to the `NodeType`.
+   *
    * @var string
    */
   public $nodeTypeId;
   /**
+   * Required. Number of nodes to add to a cluster during a scale-out operation.
+   * Must be divisible by 2 for stretched clusters. During a scale-in operation
+   * only one node (or 2 for stretched clusters) are removed in a single
+   * iteration.
+   *
    * @var int
    */
   public $scaleOutSize;
@@ -37,7 +45,9 @@ class AutoscalingPolicy extends \Google\Model
   protected $storageThresholdsDataType = '';
 
   /**
-   * @param Thresholds
+   * Optional. Utilization thresholds pertaining to amount of consumed memory.
+   *
+   * @param Thresholds $consumedMemoryThresholds
    */
   public function setConsumedMemoryThresholds(Thresholds $consumedMemoryThresholds)
   {
@@ -51,7 +61,9 @@ class AutoscalingPolicy extends \Google\Model
     return $this->consumedMemoryThresholds;
   }
   /**
-   * @param Thresholds
+   * Optional. Utilization thresholds pertaining to CPU utilization.
+   *
+   * @param Thresholds $cpuThresholds
    */
   public function setCpuThresholds(Thresholds $cpuThresholds)
   {
@@ -65,7 +77,9 @@ class AutoscalingPolicy extends \Google\Model
     return $this->cpuThresholds;
   }
   /**
-   * @param Thresholds
+   * Optional. Utilization thresholds pertaining to amount of granted memory.
+   *
+   * @param Thresholds $grantedMemoryThresholds
    */
   public function setGrantedMemoryThresholds(Thresholds $grantedMemoryThresholds)
   {
@@ -79,7 +93,10 @@ class AutoscalingPolicy extends \Google\Model
     return $this->grantedMemoryThresholds;
   }
   /**
-   * @param string
+   * Required. The canonical identifier of the node type to add or remove.
+   * Corresponds to the `NodeType`.
+   *
+   * @param string $nodeTypeId
    */
   public function setNodeTypeId($nodeTypeId)
   {
@@ -93,7 +110,12 @@ class AutoscalingPolicy extends \Google\Model
     return $this->nodeTypeId;
   }
   /**
-   * @param int
+   * Required. Number of nodes to add to a cluster during a scale-out operation.
+   * Must be divisible by 2 for stretched clusters. During a scale-in operation
+   * only one node (or 2 for stretched clusters) are removed in a single
+   * iteration.
+   *
+   * @param int $scaleOutSize
    */
   public function setScaleOutSize($scaleOutSize)
   {
@@ -107,7 +129,9 @@ class AutoscalingPolicy extends \Google\Model
     return $this->scaleOutSize;
   }
   /**
-   * @param Thresholds
+   * Optional. Utilization thresholds pertaining to amount of consumed storage.
+   *
+   * @param Thresholds $storageThresholds
    */
   public function setStorageThresholds(Thresholds $storageThresholds)
   {

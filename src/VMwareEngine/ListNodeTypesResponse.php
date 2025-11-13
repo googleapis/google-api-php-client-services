@@ -21,18 +21,27 @@ class ListNodeTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $nodeTypesType = NodeType::class;
   protected $nodeTypesDataType = 'array';
   /**
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +55,9 @@ class ListNodeTypesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param NodeType[]
+   * A list of Node Types.
+   *
+   * @param NodeType[] $nodeTypes
    */
   public function setNodeTypes($nodeTypes)
   {
@@ -60,7 +71,10 @@ class ListNodeTypesResponse extends \Google\Collection
     return $this->nodeTypes;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

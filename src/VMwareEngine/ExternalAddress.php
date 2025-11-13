@@ -20,40 +20,82 @@ namespace Google\Service\VMwareEngine;
 class ExternalAddress extends \Google\Model
 {
   /**
+   * The default value. This value should never be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The address is ready.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The address is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The address is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The address is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Output only. Creation time of this resource.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * User-provided description for this resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The external IP address of a workload VM.
+   *
    * @var string
    */
   public $externalIp;
   /**
+   * The internal IP address of a workload VM.
+   *
    * @var string
    */
   public $internalIp;
   /**
+   * Output only. Identifier. The resource name of this external IP address.
+   * Resource names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-
+   * cloud/externalAddresses/my-address`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The state of the resource.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. System-generated unique identifier for the resource.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Last update time of this resource.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Creation time of this resource.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -67,7 +109,9 @@ class ExternalAddress extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * User-provided description for this resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -81,7 +125,9 @@ class ExternalAddress extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The external IP address of a workload VM.
+   *
+   * @param string $externalIp
    */
   public function setExternalIp($externalIp)
   {
@@ -95,7 +141,9 @@ class ExternalAddress extends \Google\Model
     return $this->externalIp;
   }
   /**
-   * @param string
+   * The internal IP address of a workload VM.
+   *
+   * @param string $internalIp
    */
   public function setInternalIp($internalIp)
   {
@@ -109,7 +157,13 @@ class ExternalAddress extends \Google\Model
     return $this->internalIp;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of this external IP address.
+   * Resource names are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-
+   * cloud/externalAddresses/my-address`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -123,21 +177,27 @@ class ExternalAddress extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The state of the resource.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, UPDATING, DELETING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. System-generated unique identifier for the resource.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -151,7 +211,9 @@ class ExternalAddress extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Last update time of this resource.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

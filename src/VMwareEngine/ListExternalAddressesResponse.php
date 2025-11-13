@@ -23,16 +23,24 @@ class ListExternalAddressesResponse extends \Google\Collection
   protected $externalAddressesType = ExternalAddress::class;
   protected $externalAddressesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ExternalAddress[]
+   * A list of external IP addresses.
+   *
+   * @param ExternalAddress[] $externalAddresses
    */
   public function setExternalAddresses($externalAddresses)
   {
@@ -46,7 +54,10 @@ class ListExternalAddressesResponse extends \Google\Collection
     return $this->externalAddresses;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +71,10 @@ class ListExternalAddressesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

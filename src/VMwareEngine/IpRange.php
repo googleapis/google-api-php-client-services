@@ -20,20 +20,38 @@ namespace Google\Service\VMwareEngine;
 class IpRange extends \Google\Model
 {
   /**
+   * The name of an `ExternalAddress` resource. The external address must have
+   * been reserved in the scope of this external access rule's parent network
+   * policy. Provide the external address name in the form of `projects/{project
+   * }/locations/{location}/privateClouds/{private_cloud}/externalAddresses/{ext
+   * ernal_address}`. For example: `projects/my-project/locations/us-
+   * central1-a/privateClouds/my-cloud/externalAddresses/my-address`.
+   *
    * @var string
    */
   public $externalAddress;
   /**
+   * A single IP address. For example: `10.0.0.5`.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * An IP address range in the CIDR format. For example: `10.0.0.0/24`.
+   *
    * @var string
    */
   public $ipAddressRange;
 
   /**
-   * @param string
+   * The name of an `ExternalAddress` resource. The external address must have
+   * been reserved in the scope of this external access rule's parent network
+   * policy. Provide the external address name in the form of `projects/{project
+   * }/locations/{location}/privateClouds/{private_cloud}/externalAddresses/{ext
+   * ernal_address}`. For example: `projects/my-project/locations/us-
+   * central1-a/privateClouds/my-cloud/externalAddresses/my-address`.
+   *
+   * @param string $externalAddress
    */
   public function setExternalAddress($externalAddress)
   {
@@ -47,7 +65,9 @@ class IpRange extends \Google\Model
     return $this->externalAddress;
   }
   /**
-   * @param string
+   * A single IP address. For example: `10.0.0.5`.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -61,7 +81,9 @@ class IpRange extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * An IP address range in the CIDR format. For example: `10.0.0.0/24`.
+   *
+   * @param string $ipAddressRange
    */
   public function setIpAddressRange($ipAddressRange)
   {

@@ -20,28 +20,55 @@ namespace Google\Service\VMwareEngine;
 class NetworkConfig extends \Google\Model
 {
   /**
+   * Output only. DNS Server IP of the Private Cloud. All DNS queries can be
+   * forwarded to this address for name resolution of Private Cloud's management
+   * entities like vCenter, NSX-T Manager and ESXi hosts.
+   *
    * @var string
    */
   public $dnsServerIp;
   /**
+   * Required. Management CIDR used by VMware management appliances.
+   *
    * @var string
    */
   public $managementCidr;
   /**
+   * Output only. The IP address layout version of the management IP address
+   * range. Possible versions include: * `managementIpAddressLayoutVersion=1`:
+   * Indicates the legacy IP address layout used by some existing private
+   * clouds. This is no longer supported for new private clouds as it does not
+   * support all features. * `managementIpAddressLayoutVersion=2`: Indicates the
+   * latest IP address layout used by all newly created private clouds. This
+   * version supports all current features.
+   *
    * @var int
    */
   public $managementIpAddressLayoutVersion;
   /**
+   * Optional. The relative resource name of the VMware Engine network attached
+   * to the private cloud. Specify the name in the following form: `projects/{pr
+   * oject}/locations/{location}/vmwareEngineNetworks/{vmware_engine_network_id}
+   * ` where `{project}` can either be a project number or a project ID.
+   *
    * @var string
    */
   public $vmwareEngineNetwork;
   /**
+   * Output only. The canonical name of the VMware Engine network in the form: `
+   * projects/{project_number}/locations/{location}/vmwareEngineNetworks/{vmware
+   * _engine_network_id}`
+   *
    * @var string
    */
   public $vmwareEngineNetworkCanonical;
 
   /**
-   * @param string
+   * Output only. DNS Server IP of the Private Cloud. All DNS queries can be
+   * forwarded to this address for name resolution of Private Cloud's management
+   * entities like vCenter, NSX-T Manager and ESXi hosts.
+   *
+   * @param string $dnsServerIp
    */
   public function setDnsServerIp($dnsServerIp)
   {
@@ -55,7 +82,9 @@ class NetworkConfig extends \Google\Model
     return $this->dnsServerIp;
   }
   /**
-   * @param string
+   * Required. Management CIDR used by VMware management appliances.
+   *
+   * @param string $managementCidr
    */
   public function setManagementCidr($managementCidr)
   {
@@ -69,7 +98,15 @@ class NetworkConfig extends \Google\Model
     return $this->managementCidr;
   }
   /**
-   * @param int
+   * Output only. The IP address layout version of the management IP address
+   * range. Possible versions include: * `managementIpAddressLayoutVersion=1`:
+   * Indicates the legacy IP address layout used by some existing private
+   * clouds. This is no longer supported for new private clouds as it does not
+   * support all features. * `managementIpAddressLayoutVersion=2`: Indicates the
+   * latest IP address layout used by all newly created private clouds. This
+   * version supports all current features.
+   *
+   * @param int $managementIpAddressLayoutVersion
    */
   public function setManagementIpAddressLayoutVersion($managementIpAddressLayoutVersion)
   {
@@ -83,7 +120,12 @@ class NetworkConfig extends \Google\Model
     return $this->managementIpAddressLayoutVersion;
   }
   /**
-   * @param string
+   * Optional. The relative resource name of the VMware Engine network attached
+   * to the private cloud. Specify the name in the following form: `projects/{pr
+   * oject}/locations/{location}/vmwareEngineNetworks/{vmware_engine_network_id}
+   * ` where `{project}` can either be a project number or a project ID.
+   *
+   * @param string $vmwareEngineNetwork
    */
   public function setVmwareEngineNetwork($vmwareEngineNetwork)
   {
@@ -97,7 +139,11 @@ class NetworkConfig extends \Google\Model
     return $this->vmwareEngineNetwork;
   }
   /**
-   * @param string
+   * Output only. The canonical name of the VMware Engine network in the form: `
+   * projects/{project_number}/locations/{location}/vmwareEngineNetworks/{vmware
+   * _engine_network_id}`
+   *
+   * @param string $vmwareEngineNetworkCanonical
    */
   public function setVmwareEngineNetworkCanonical($vmwareEngineNetworkCanonical)
   {

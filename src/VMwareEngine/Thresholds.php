@@ -20,16 +20,22 @@ namespace Google\Service\VMwareEngine;
 class Thresholds extends \Google\Model
 {
   /**
+   * Required. The utilization triggering the scale-in operation in percent.
+   *
    * @var int
    */
   public $scaleIn;
   /**
+   * Required. The utilization triggering the scale-out operation in percent.
+   *
    * @var int
    */
   public $scaleOut;
 
   /**
-   * @param int
+   * Required. The utilization triggering the scale-in operation in percent.
+   *
+   * @param int $scaleIn
    */
   public function setScaleIn($scaleIn)
   {
@@ -43,7 +49,9 @@ class Thresholds extends \Google\Model
     return $this->scaleIn;
   }
   /**
-   * @param int
+   * Required. The utilization triggering the scale-out operation in percent.
+   *
+   * @param int $scaleOut
    */
   public function setScaleOut($scaleOut)
   {

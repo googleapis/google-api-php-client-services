@@ -21,6 +21,9 @@ class ListNodesResponse extends \Google\Collection
 {
   protected $collection_key = 'nodes';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListNodesResponse extends \Google\Collection
   protected $nodesDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListNodesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Node[]
+   * The nodes.
+   *
+   * @param Node[] $nodes
    */
   public function setNodes($nodes)
   {

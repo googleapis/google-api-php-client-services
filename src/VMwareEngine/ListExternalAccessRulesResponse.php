@@ -23,16 +23,24 @@ class ListExternalAccessRulesResponse extends \Google\Collection
   protected $externalAccessRulesType = ExternalAccessRule::class;
   protected $externalAccessRulesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ExternalAccessRule[]
+   * A list of external access firewall rules.
+   *
+   * @param ExternalAccessRule[] $externalAccessRules
    */
   public function setExternalAccessRules($externalAccessRules)
   {
@@ -46,7 +54,10 @@ class ListExternalAccessRulesResponse extends \Google\Collection
     return $this->externalAccessRules;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +71,10 @@ class ListExternalAccessRulesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached when making an aggregated query using
+   * wildcards.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
