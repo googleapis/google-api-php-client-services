@@ -20,28 +20,42 @@ namespace Google\Service\VMMigrationService;
 class VmwareSourceDetails extends \Google\Model
 {
   /**
+   * Input only. The credentials password. This is write only and can not be
+   * read in a GET operation.
+   *
    * @var string
    */
   public $password;
   /**
+   * The hostname of the vcenter.
+   *
    * @var string
    */
   public $resolvedVcenterHost;
   /**
+   * The thumbprint representing the certificate for the vcenter.
+   *
    * @var string
    */
   public $thumbprint;
   /**
+   * The credentials username.
+   *
    * @var string
    */
   public $username;
   /**
+   * The ip address of the vcenter this Source represents.
+   *
    * @var string
    */
   public $vcenterIp;
 
   /**
-   * @param string
+   * Input only. The credentials password. This is write only and can not be
+   * read in a GET operation.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -55,7 +69,9 @@ class VmwareSourceDetails extends \Google\Model
     return $this->password;
   }
   /**
-   * @param string
+   * The hostname of the vcenter.
+   *
+   * @param string $resolvedVcenterHost
    */
   public function setResolvedVcenterHost($resolvedVcenterHost)
   {
@@ -69,7 +85,9 @@ class VmwareSourceDetails extends \Google\Model
     return $this->resolvedVcenterHost;
   }
   /**
-   * @param string
+   * The thumbprint representing the certificate for the vcenter.
+   *
+   * @param string $thumbprint
    */
   public function setThumbprint($thumbprint)
   {
@@ -83,7 +101,9 @@ class VmwareSourceDetails extends \Google\Model
     return $this->thumbprint;
   }
   /**
-   * @param string
+   * The credentials username.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {
@@ -97,7 +117,9 @@ class VmwareSourceDetails extends \Google\Model
     return $this->username;
   }
   /**
-   * @param string
+   * The ip address of the vcenter this Source represents.
+   *
+   * @param string $vcenterIp
    */
   public function setVcenterIp($vcenterIp)
   {
