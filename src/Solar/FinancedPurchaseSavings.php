@@ -22,6 +22,8 @@ class FinancedPurchaseSavings extends \Google\Model
   protected $annualLoanPaymentType = Money::class;
   protected $annualLoanPaymentDataType = '';
   /**
+   * The interest rate on loans assumed in this set of calculations.
+   *
    * @var float
    */
   public $loanInterestRate;
@@ -31,7 +33,9 @@ class FinancedPurchaseSavings extends \Google\Model
   protected $savingsDataType = '';
 
   /**
-   * @param Money
+   * Annual loan payments.
+   *
+   * @param Money $annualLoanPayment
    */
   public function setAnnualLoanPayment(Money $annualLoanPayment)
   {
@@ -45,7 +49,9 @@ class FinancedPurchaseSavings extends \Google\Model
     return $this->annualLoanPayment;
   }
   /**
-   * @param float
+   * The interest rate on loans assumed in this set of calculations.
+   *
+   * @param float $loanInterestRate
    */
   public function setLoanInterestRate($loanInterestRate)
   {
@@ -59,7 +65,10 @@ class FinancedPurchaseSavings extends \Google\Model
     return $this->loanInterestRate;
   }
   /**
-   * @param Money
+   * The value of all tax rebates (including Federal Investment Tax Credit
+   * (ITC)).
+   *
+   * @param Money $rebateValue
    */
   public function setRebateValue(Money $rebateValue)
   {
@@ -73,7 +82,9 @@ class FinancedPurchaseSavings extends \Google\Model
     return $this->rebateValue;
   }
   /**
-   * @param SavingsOverTime
+   * How much is saved (or not) over the lifetime period.
+   *
+   * @param SavingsOverTime $savings
    */
   public function setSavings(SavingsOverTime $savings)
   {

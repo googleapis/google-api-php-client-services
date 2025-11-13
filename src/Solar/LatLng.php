@@ -19,7 +19,17 @@ namespace Google\Service\Solar;
 
 class LatLng extends \Google\Model
 {
+  /**
+   * The latitude in degrees. It must be in the range [-90.0, +90.0].
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * The longitude in degrees. It must be in the range [-180.0, +180.0].
+   *
+   * @var 
+   */
   public $longitude;
 
   public function setLatitude($latitude)

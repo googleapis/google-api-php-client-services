@@ -23,36 +23,61 @@ class SolarPotential extends \Google\Collection
   protected $buildingStatsType = SizeAndSunshineStats::class;
   protected $buildingStatsDataType = '';
   /**
+   * Equivalent amount of CO2 produced per MWh of grid electricity. This is a
+   * measure of the carbon intensity of grid electricity displaced by solar
+   * electricity.
+   *
    * @var float
    */
   public $carbonOffsetFactorKgPerMwh;
   protected $financialAnalysesType = FinancialAnalysis::class;
   protected $financialAnalysesDataType = 'array';
   /**
+   * Size, in square meters, of the maximum array.
+   *
    * @var float
    */
   public $maxArrayAreaMeters2;
   /**
+   * Size of the maximum array - that is, the maximum number of panels that can
+   * fit on the roof.
+   *
    * @var int
    */
   public $maxArrayPanelsCount;
   /**
+   * Maximum number of sunshine hours received per year, by any point on the
+   * roof. Sunshine hours are a measure of the total amount of insolation
+   * (energy) received per year. 1 sunshine hour = 1 kWh per kW (where kW refers
+   * to kW of capacity under Standard Testing Conditions).
+   *
    * @var float
    */
   public $maxSunshineHoursPerYear;
   /**
+   * Capacity, in watts, of the panel used in the calculations.
+   *
    * @var float
    */
   public $panelCapacityWatts;
   /**
+   * Height, in meters in portrait orientation, of the panel used in the
+   * calculations.
+   *
    * @var float
    */
   public $panelHeightMeters;
   /**
+   * The expected lifetime, in years, of the solar panels. This is used in the
+   * financial calculations.
+   *
    * @var int
    */
   public $panelLifetimeYears;
   /**
+   * Width, in meters in portrait orientation, of the panel used in the
+   * calculations.
+   *
    * @var float
    */
   public $panelWidthMeters;
@@ -66,7 +91,15 @@ class SolarPotential extends \Google\Collection
   protected $wholeRoofStatsDataType = '';
 
   /**
-   * @param SizeAndSunshineStats
+   * Size and sunlight quantiles for the entire building, including parts of the
+   * roof that were not assigned to some roof segment. Because the orientations
+   * of these parts are not well characterised, the roof area estimate is
+   * unreliable, but the ground area estimate is reliable. It may be that a more
+   * reliable whole building roof area can be obtained by scaling the roof area
+   * from whole_roof_stats by the ratio of the ground areas of `building_stats`
+   * and `whole_roof_stats`.
+   *
+   * @param SizeAndSunshineStats $buildingStats
    */
   public function setBuildingStats(SizeAndSunshineStats $buildingStats)
   {
@@ -80,7 +113,11 @@ class SolarPotential extends \Google\Collection
     return $this->buildingStats;
   }
   /**
-   * @param float
+   * Equivalent amount of CO2 produced per MWh of grid electricity. This is a
+   * measure of the carbon intensity of grid electricity displaced by solar
+   * electricity.
+   *
+   * @param float $carbonOffsetFactorKgPerMwh
    */
   public function setCarbonOffsetFactorKgPerMwh($carbonOffsetFactorKgPerMwh)
   {
@@ -94,7 +131,13 @@ class SolarPotential extends \Google\Collection
     return $this->carbonOffsetFactorKgPerMwh;
   }
   /**
-   * @param FinancialAnalysis[]
+   * A FinancialAnalysis gives the savings from going solar assuming a given
+   * monthly bill and a given electricity provider. They are in order of
+   * increasing order of monthly bill amount. This field will be empty for
+   * buildings in areas for which the Solar API does not have enough information
+   * to perform financial computations.
+   *
+   * @param FinancialAnalysis[] $financialAnalyses
    */
   public function setFinancialAnalyses($financialAnalyses)
   {
@@ -108,7 +151,9 @@ class SolarPotential extends \Google\Collection
     return $this->financialAnalyses;
   }
   /**
-   * @param float
+   * Size, in square meters, of the maximum array.
+   *
+   * @param float $maxArrayAreaMeters2
    */
   public function setMaxArrayAreaMeters2($maxArrayAreaMeters2)
   {
@@ -122,7 +167,10 @@ class SolarPotential extends \Google\Collection
     return $this->maxArrayAreaMeters2;
   }
   /**
-   * @param int
+   * Size of the maximum array - that is, the maximum number of panels that can
+   * fit on the roof.
+   *
+   * @param int $maxArrayPanelsCount
    */
   public function setMaxArrayPanelsCount($maxArrayPanelsCount)
   {
@@ -136,7 +184,12 @@ class SolarPotential extends \Google\Collection
     return $this->maxArrayPanelsCount;
   }
   /**
-   * @param float
+   * Maximum number of sunshine hours received per year, by any point on the
+   * roof. Sunshine hours are a measure of the total amount of insolation
+   * (energy) received per year. 1 sunshine hour = 1 kWh per kW (where kW refers
+   * to kW of capacity under Standard Testing Conditions).
+   *
+   * @param float $maxSunshineHoursPerYear
    */
   public function setMaxSunshineHoursPerYear($maxSunshineHoursPerYear)
   {
@@ -150,7 +203,9 @@ class SolarPotential extends \Google\Collection
     return $this->maxSunshineHoursPerYear;
   }
   /**
-   * @param float
+   * Capacity, in watts, of the panel used in the calculations.
+   *
+   * @param float $panelCapacityWatts
    */
   public function setPanelCapacityWatts($panelCapacityWatts)
   {
@@ -164,7 +219,10 @@ class SolarPotential extends \Google\Collection
     return $this->panelCapacityWatts;
   }
   /**
-   * @param float
+   * Height, in meters in portrait orientation, of the panel used in the
+   * calculations.
+   *
+   * @param float $panelHeightMeters
    */
   public function setPanelHeightMeters($panelHeightMeters)
   {
@@ -178,7 +236,10 @@ class SolarPotential extends \Google\Collection
     return $this->panelHeightMeters;
   }
   /**
-   * @param int
+   * The expected lifetime, in years, of the solar panels. This is used in the
+   * financial calculations.
+   *
+   * @param int $panelLifetimeYears
    */
   public function setPanelLifetimeYears($panelLifetimeYears)
   {
@@ -192,7 +253,10 @@ class SolarPotential extends \Google\Collection
     return $this->panelLifetimeYears;
   }
   /**
-   * @param float
+   * Width, in meters in portrait orientation, of the panel used in the
+   * calculations.
+   *
+   * @param float $panelWidthMeters
    */
   public function setPanelWidthMeters($panelWidthMeters)
   {
@@ -206,7 +270,9 @@ class SolarPotential extends \Google\Collection
     return $this->panelWidthMeters;
   }
   /**
-   * @param RoofSegmentSizeAndSunshineStats[]
+   * Size and sunlight quantiles for each roof segment.
+   *
+   * @param RoofSegmentSizeAndSunshineStats[] $roofSegmentStats
    */
   public function setRoofSegmentStats($roofSegmentStats)
   {
@@ -220,7 +286,13 @@ class SolarPotential extends \Google\Collection
     return $this->roofSegmentStats;
   }
   /**
-   * @param SolarPanelConfig[]
+   * Each SolarPanelConfig describes a different arrangement of solar panels on
+   * the roof. They are in order of increasing number of panels. The
+   * `SolarPanelConfig` with panels_count=N is based on the first N panels in
+   * the `solar_panels` list. This field is only populated if at least 4 panels
+   * can fit on a roof.
+   *
+   * @param SolarPanelConfig[] $solarPanelConfigs
    */
   public function setSolarPanelConfigs($solarPanelConfigs)
   {
@@ -234,7 +306,11 @@ class SolarPotential extends \Google\Collection
     return $this->solarPanelConfigs;
   }
   /**
-   * @param SolarPanel[]
+   * Each SolarPanel describes a single solar panel. They are listed in the
+   * order that the panel layout algorithm placed this. This is usually, though
+   * not always, in decreasing order of annual energy production.
+   *
+   * @param SolarPanel[] $solarPanels
    */
   public function setSolarPanels($solarPanels)
   {
@@ -248,7 +324,11 @@ class SolarPotential extends \Google\Collection
     return $this->solarPanels;
   }
   /**
-   * @param SizeAndSunshineStats
+   * Total size and sunlight quantiles for the part of the roof that was
+   * assigned to some roof segment. Despite the name, this may not include the
+   * entire building. See building_stats.
+   *
+   * @param SizeAndSunshineStats $wholeRoofStats
    */
   public function setWholeRoofStats(SizeAndSunshineStats $wholeRoofStats)
   {

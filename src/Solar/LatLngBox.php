@@ -25,7 +25,9 @@ class LatLngBox extends \Google\Model
   protected $swDataType = '';
 
   /**
-   * @param LatLng
+   * The northeast corner of the box.
+   *
+   * @param LatLng $ne
    */
   public function setNe(LatLng $ne)
   {
@@ -39,7 +41,9 @@ class LatLngBox extends \Google\Model
     return $this->ne;
   }
   /**
-   * @param LatLng
+   * The southwest corner of the box.
+   *
+   * @param LatLng $sw
    */
   public function setSw(LatLng $sw)
   {
