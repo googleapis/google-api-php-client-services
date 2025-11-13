@@ -21,14 +21,20 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest extends \Go
 {
   protected $collection_key = 'groupIds';
   /**
+   * Required. The group IDs, in desired priority ordering.
+   *
    * @var string[]
    */
   public $groupIds;
   /**
+   * The namespace of the policy type for the request.
+   *
    * @var string
    */
   public $policyNamespace;
   /**
+   * The schema name of the policy for the request.
+   *
    * @var string
    */
   public $policySchema;
@@ -36,7 +42,9 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest extends \Go
   protected $policyTargetKeyDataType = '';
 
   /**
-   * @param string[]
+   * Required. The group IDs, in desired priority ordering.
+   *
+   * @param string[] $groupIds
    */
   public function setGroupIds($groupIds)
   {
@@ -50,7 +58,9 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest extends \Go
     return $this->groupIds;
   }
   /**
-   * @param string
+   * The namespace of the policy type for the request.
+   *
+   * @param string $policyNamespace
    */
   public function setPolicyNamespace($policyNamespace)
   {
@@ -64,7 +74,9 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest extends \Go
     return $this->policyNamespace;
   }
   /**
-   * @param string
+   * The schema name of the policy for the request.
+   *
+   * @param string $policySchema
    */
   public function setPolicySchema($policySchema)
   {
@@ -78,7 +90,10 @@ class GoogleChromePolicyVersionsV1UpdateGroupPriorityOrderingRequest extends \Go
     return $this->policySchema;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Required. The key of the target for which we want to update the group
+   * priority ordering. The target resource must point to an app.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey
    */
   public function setPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey)
   {

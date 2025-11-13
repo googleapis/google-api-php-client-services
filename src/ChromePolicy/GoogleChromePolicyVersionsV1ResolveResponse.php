@@ -21,6 +21,9 @@ class GoogleChromePolicyVersionsV1ResolveResponse extends \Google\Collection
 {
   protected $collection_key = 'resolvedPolicies';
   /**
+   * The page token used to get the next set of resolved policies found by the
+   * request.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleChromePolicyVersionsV1ResolveResponse extends \Google\Collection
   protected $resolvedPoliciesDataType = 'array';
 
   /**
-   * @param string
+   * The page token used to get the next set of resolved policies found by the
+   * request.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleChromePolicyVersionsV1ResolveResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1ResolvedPolicy[]
+   * The list of resolved policies found by the resolve request.
+   *
+   * @param GoogleChromePolicyVersionsV1ResolvedPolicy[] $resolvedPolicies
    */
   public function setResolvedPolicies($resolvedPolicies)
   {

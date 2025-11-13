@@ -21,18 +21,25 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription extends
 {
   protected $collection_key = 'fieldDependencies';
   /**
+   * Output only. Additional description for this value.
+   *
    * @var string
    */
   public $description;
   protected $fieldDependenciesType = GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies::class;
   protected $fieldDependenciesDataType = 'array';
   /**
+   * Output only. The string represenstation of the value that can be set for
+   * the field.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Output only. Additional description for this value.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -46,7 +53,9 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription extends
     return $this->description;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[]
+   * Output only. Field conditions required for this value to be valid.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[] $fieldDependencies
    */
   public function setFieldDependencies($fieldDependencies)
   {
@@ -60,7 +69,10 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription extends
     return $this->fieldDependencies;
   }
   /**
-   * @param string
+   * Output only. The string represenstation of the value that can be set for
+   * the field.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

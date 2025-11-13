@@ -20,14 +20,28 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1ResolveRequest extends \Google\Model
 {
   /**
+   * The maximum number of policies to return, defaults to 100 and has a maximum
+   * of 1000.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * The page token used to retrieve a specific page of the request.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Required. The schema filter to apply to the resolve request. Specify a
+   * schema name to view a particular schema, for example:
+   * chrome.users.ShowLogoutButton Wildcards are supported, but only in the leaf
+   * portion of the schema name. Wildcards cannot be used in namespace directly.
+   * Please read https://developers.google.com/chrome/policy/guides/policy-
+   * schemas for details on schema namespaces. For example: Valid:
+   * "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*" Invalid: "*",
+   * "*.users", "chrome.*", "chrome.*.apps.*"
+   *
    * @var string
    */
   public $policySchemaFilter;
@@ -35,7 +49,10 @@ class GoogleChromePolicyVersionsV1ResolveRequest extends \Google\Model
   protected $policyTargetKeyDataType = '';
 
   /**
-   * @param int
+   * The maximum number of policies to return, defaults to 100 and has a maximum
+   * of 1000.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -49,7 +66,9 @@ class GoogleChromePolicyVersionsV1ResolveRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * The page token used to retrieve a specific page of the request.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -63,7 +82,16 @@ class GoogleChromePolicyVersionsV1ResolveRequest extends \Google\Model
     return $this->pageToken;
   }
   /**
-   * @param string
+   * Required. The schema filter to apply to the resolve request. Specify a
+   * schema name to view a particular schema, for example:
+   * chrome.users.ShowLogoutButton Wildcards are supported, but only in the leaf
+   * portion of the schema name. Wildcards cannot be used in namespace directly.
+   * Please read https://developers.google.com/chrome/policy/guides/policy-
+   * schemas for details on schema namespaces. For example: Valid:
+   * "chrome.users.*", "chrome.users.apps.*", "chrome.printers.*" Invalid: "*",
+   * "*.users", "chrome.*", "chrome.*.apps.*"
+   *
+   * @param string $policySchemaFilter
    */
   public function setPolicySchemaFilter($policySchemaFilter)
   {
@@ -77,7 +105,10 @@ class GoogleChromePolicyVersionsV1ResolveRequest extends \Google\Model
     return $this->policySchemaFilter;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Required. The key of the target resource on which the policies should be
+   * resolved.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey
    */
   public function setPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey)
   {

@@ -19,28 +19,75 @@ namespace Google\Service\ChromePolicy;
 
 class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
 {
+  /**
+   * Policy Api Lifecycle is Unspecified.
+   */
+  public const POLICY_API_LIFECYCLE_STAGE_API_UNSPECIFIED = 'API_UNSPECIFIED';
+  /**
+   * Policy is not working yet, but giving developers heads up on format. This
+   * stage can transfer to API_DEVELOPEMNT or API_CURRENT.
+   */
+  public const POLICY_API_LIFECYCLE_STAGE_API_PREVIEW = 'API_PREVIEW';
+  /**
+   * Policy can change format in backward incompatible way (breaking change).
+   * This stage can transfer to API_CURRENT or API_DEPRECATED. This could be
+   * used for policies launched only to TTs or launched to selected customers
+   * for emergency usage.
+   */
+  public const POLICY_API_LIFECYCLE_STAGE_API_DEVELOPMENT = 'API_DEVELOPMENT';
+  /**
+   * Policy in official format. Policy can change format in backward compatible
+   * way (non-breaking change). Example: this policy can introduce a new field,
+   * which is considered non-breaking change, when field masks are properly
+   * utilized. This stage can transfer to API_DEPRECATED.
+   */
+  public const POLICY_API_LIFECYCLE_STAGE_API_CURRENT = 'API_CURRENT';
+  /**
+   * Please stop using this policy. This policy is deprecated and may/will be
+   * removed in the future. Most likely a new policy was introduced to replace
+   * this one.
+   */
+  public const POLICY_API_LIFECYCLE_STAGE_API_DEPRECATED = 'API_DEPRECATED';
   protected $collection_key = 'scheduledToDeprecatePolicies';
   /**
+   * In the event that this policy was deprecated in favor of another policy,
+   * the fully qualified namespace(s) of the new policies as they will show in
+   * PolicyAPI. Could only be set if policy_api_lifecycle_stage is
+   * API_DEPRECATED.
+   *
    * @var string[]
    */
   public $deprecatedInFavorOf;
   /**
+   * Description about current life cycle.
+   *
    * @var string
    */
   public $description;
   protected $endSupportType = GoogleTypeDate::class;
   protected $endSupportDataType = '';
   /**
+   * Indicates current life cycle stage of the policy API.
+   *
    * @var string
    */
   public $policyApiLifecycleStage;
   /**
+   * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s)
+   * of the old policies that will be deprecated because of introduction of this
+   * policy.
+   *
    * @var string[]
    */
   public $scheduledToDeprecatePolicies;
 
   /**
-   * @param string[]
+   * In the event that this policy was deprecated in favor of another policy,
+   * the fully qualified namespace(s) of the new policies as they will show in
+   * PolicyAPI. Could only be set if policy_api_lifecycle_stage is
+   * API_DEPRECATED.
+   *
+   * @param string[] $deprecatedInFavorOf
    */
   public function setDeprecatedInFavorOf($deprecatedInFavorOf)
   {
@@ -54,7 +101,9 @@ class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
     return $this->deprecatedInFavorOf;
   }
   /**
-   * @param string
+   * Description about current life cycle.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -68,7 +117,11 @@ class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param GoogleTypeDate
+   * End supporting date for current policy. Attempting to modify a policy after
+   * its end support date will result in a Bad Request (400 error). Could only
+   * be set if policy_api_lifecycle_stage is API_DEPRECATED.
+   *
+   * @param GoogleTypeDate $endSupport
    */
   public function setEndSupport(GoogleTypeDate $endSupport)
   {
@@ -82,21 +135,30 @@ class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
     return $this->endSupport;
   }
   /**
-   * @param string
+   * Indicates current life cycle stage of the policy API.
+   *
+   * Accepted values: API_UNSPECIFIED, API_PREVIEW, API_DEVELOPMENT,
+   * API_CURRENT, API_DEPRECATED
+   *
+   * @param self::POLICY_API_LIFECYCLE_STAGE_* $policyApiLifecycleStage
    */
   public function setPolicyApiLifecycleStage($policyApiLifecycleStage)
   {
     $this->policyApiLifecycleStage = $policyApiLifecycleStage;
   }
   /**
-   * @return string
+   * @return self::POLICY_API_LIFECYCLE_STAGE_*
    */
   public function getPolicyApiLifecycleStage()
   {
     return $this->policyApiLifecycleStage;
   }
   /**
-   * @param string[]
+   * Corresponding to deprecated_in_favor_of, the fully qualified namespace(s)
+   * of the old policies that will be deprecated because of introduction of this
+   * policy.
+   *
+   * @param string[] $scheduledToDeprecatePolicies
    */
   public function setScheduledToDeprecatePolicies($scheduledToDeprecatePolicies)
   {

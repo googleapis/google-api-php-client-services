@@ -21,14 +21,20 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
 {
   protected $collection_key = 'groupIds';
   /**
+   * Output only. The group IDs, in priority ordering.
+   *
    * @var string[]
    */
   public $groupIds;
   /**
+   * Output only. The namespace of the policy type of the group IDs.
+   *
    * @var string
    */
   public $policyNamespace;
   /**
+   * Output only. The schema name of the policy for the group IDs.
+   *
    * @var string
    */
   public $policySchema;
@@ -36,7 +42,9 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
   protected $policyTargetKeyDataType = '';
 
   /**
-   * @param string[]
+   * Output only. The group IDs, in priority ordering.
+   *
+   * @param string[] $groupIds
    */
   public function setGroupIds($groupIds)
   {
@@ -50,7 +58,9 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
     return $this->groupIds;
   }
   /**
-   * @param string
+   * Output only. The namespace of the policy type of the group IDs.
+   *
+   * @param string $policyNamespace
    */
   public function setPolicyNamespace($policyNamespace)
   {
@@ -64,7 +74,9 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
     return $this->policyNamespace;
   }
   /**
-   * @param string
+   * Output only. The schema name of the policy for the group IDs.
+   *
+   * @param string $policySchema
    */
   public function setPolicySchema($policySchema)
   {
@@ -78,7 +90,10 @@ class GoogleChromePolicyVersionsV1ListGroupPriorityOrderingResponse extends \Goo
     return $this->policySchema;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Output only. The target resource for which the group priority ordering has
+   * been retrieved.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey
    */
   public function setPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey)
   {

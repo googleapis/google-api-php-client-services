@@ -20,24 +20,38 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription extends \Google\Model
 {
   /**
+   * Output only. Whether the user needs to acknowledge the notice message
+   * before the value can be set.
+   *
    * @var bool
    */
   public $acknowledgementRequired;
   /**
+   * Output only. The field name associated with the notice.
+   *
    * @var string
    */
   public $field;
   /**
+   * Output only. The notice message associate with the value of the field.
+   *
    * @var string
    */
   public $noticeMessage;
   /**
+   * Output only. The value of the field that has a notice. When setting the
+   * field to this value, the user may be required to acknowledge the notice
+   * message in order for the value to be set.
+   *
    * @var string
    */
   public $noticeValue;
 
   /**
-   * @param bool
+   * Output only. Whether the user needs to acknowledge the notice message
+   * before the value can be set.
+   *
+   * @param bool $acknowledgementRequired
    */
   public function setAcknowledgementRequired($acknowledgementRequired)
   {
@@ -51,7 +65,9 @@ class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription extends \Google\
     return $this->acknowledgementRequired;
   }
   /**
-   * @param string
+   * Output only. The field name associated with the notice.
+   *
+   * @param string $field
    */
   public function setField($field)
   {
@@ -65,7 +81,9 @@ class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription extends \Google\
     return $this->field;
   }
   /**
-   * @param string
+   * Output only. The notice message associate with the value of the field.
+   *
+   * @param string $noticeMessage
    */
   public function setNoticeMessage($noticeMessage)
   {
@@ -79,7 +97,11 @@ class GoogleChromePolicyVersionsV1PolicySchemaNoticeDescription extends \Google\
     return $this->noticeMessage;
   }
   /**
-   * @param string
+   * Output only. The value of the field that has a notice. When setting the
+   * field to this value, the user may be required to acknowledge the notice
+   * message in order for the value to be set.
+   *
+   * @param string $noticeValue
    */
   public function setNoticeValue($noticeValue)
   {

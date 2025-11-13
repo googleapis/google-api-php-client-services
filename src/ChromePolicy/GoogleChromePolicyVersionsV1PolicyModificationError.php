@@ -21,12 +21,16 @@ class GoogleChromePolicyVersionsV1PolicyModificationError extends \Google\Collec
 {
   protected $collection_key = 'fieldErrors';
   /**
+   * Output only. The non-field errors related to the modification.
+   *
    * @var string[]
    */
   public $errors;
   protected $fieldErrorsType = GoogleChromePolicyVersionsV1PolicyModificationFieldError::class;
   protected $fieldErrorsDataType = 'array';
   /**
+   * Output only. The specific policy schema modification that had an error.
+   *
    * @var string
    */
   public $policySchema;
@@ -34,7 +38,9 @@ class GoogleChromePolicyVersionsV1PolicyModificationError extends \Google\Collec
   protected $policyTargetKeyDataType = '';
 
   /**
-   * @param string[]
+   * Output only. The non-field errors related to the modification.
+   *
+   * @param string[] $errors
    */
   public function setErrors($errors)
   {
@@ -48,7 +54,9 @@ class GoogleChromePolicyVersionsV1PolicyModificationError extends \Google\Collec
     return $this->errors;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyModificationFieldError[]
+   * Output only. The error messages related to the modification.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyModificationFieldError[] $fieldErrors
    */
   public function setFieldErrors($fieldErrors)
   {
@@ -62,7 +70,9 @@ class GoogleChromePolicyVersionsV1PolicyModificationError extends \Google\Collec
     return $this->fieldErrors;
   }
   /**
-   * @param string
+   * Output only. The specific policy schema modification that had an error.
+   *
+   * @param string $policySchema
    */
   public function setPolicySchema($policySchema)
   {
@@ -76,7 +86,9 @@ class GoogleChromePolicyVersionsV1PolicyModificationError extends \Google\Collec
     return $this->policySchema;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Output only. The specific policy target modification that had error.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey
    */
   public function setPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey)
   {

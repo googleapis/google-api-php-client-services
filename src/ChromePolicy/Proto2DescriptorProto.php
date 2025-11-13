@@ -19,6 +19,9 @@ namespace Google\Service\ChromePolicy;
 
 class Proto2DescriptorProto extends \Google\Collection
 {
+  public const VISIBILITY_VISIBILITY_UNSET = 'VISIBILITY_UNSET';
+  public const VISIBILITY_VISIBILITY_LOCAL = 'VISIBILITY_LOCAL';
+  public const VISIBILITY_VISIBILITY_EXPORT = 'VISIBILITY_EXPORT';
   protected $collection_key = 'oneofDecl';
   protected $enumTypeType = Proto2EnumDescriptorProto::class;
   protected $enumTypeDataType = 'array';
@@ -33,12 +36,14 @@ class Proto2DescriptorProto extends \Google\Collection
   protected $oneofDeclType = Proto2OneofDescriptorProto::class;
   protected $oneofDeclDataType = 'array';
   /**
+   * Support for `export` and `local` keywords on enums.
+   *
    * @var string
    */
   public $visibility;
 
   /**
-   * @param Proto2EnumDescriptorProto[]
+   * @param Proto2EnumDescriptorProto[] $enumType
    */
   public function setEnumType($enumType)
   {
@@ -52,7 +57,7 @@ class Proto2DescriptorProto extends \Google\Collection
     return $this->enumType;
   }
   /**
-   * @param Proto2FieldDescriptorProto[]
+   * @param Proto2FieldDescriptorProto[] $field
    */
   public function setField($field)
   {
@@ -66,7 +71,7 @@ class Proto2DescriptorProto extends \Google\Collection
     return $this->field;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +85,7 @@ class Proto2DescriptorProto extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Proto2DescriptorProto[]
+   * @param Proto2DescriptorProto[] $nestedType
    */
   public function setNestedType($nestedType)
   {
@@ -94,7 +99,7 @@ class Proto2DescriptorProto extends \Google\Collection
     return $this->nestedType;
   }
   /**
-   * @param Proto2OneofDescriptorProto[]
+   * @param Proto2OneofDescriptorProto[] $oneofDecl
    */
   public function setOneofDecl($oneofDecl)
   {
@@ -108,14 +113,18 @@ class Proto2DescriptorProto extends \Google\Collection
     return $this->oneofDecl;
   }
   /**
-   * @param string
+   * Support for `export` and `local` keywords on enums.
+   *
+   * Accepted values: VISIBILITY_UNSET, VISIBILITY_LOCAL, VISIBILITY_EXPORT
+   *
+   * @param self::VISIBILITY_* $visibility
    */
   public function setVisibility($visibility)
   {
     $this->visibility = $visibility;
   }
   /**
-   * @return string
+   * @return self::VISIBILITY_*
    */
   public function getVisibility()
   {

@@ -20,12 +20,20 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1UploadPolicyFileRequest extends \Google\Model
 {
   /**
+   * Required. The fully qualified policy schema and field name this file is
+   * uploaded for. This information will be used to validate the content type of
+   * the file.
+   *
    * @var string
    */
   public $policyField;
 
   /**
-   * @param string
+   * Required. The fully qualified policy schema and field name this file is
+   * uploaded for. This information will be used to validate the content type of
+   * the file.
+   *
+   * @param string $policyField
    */
   public function setPolicyField($policyField)
   {

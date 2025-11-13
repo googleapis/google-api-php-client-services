@@ -24,12 +24,19 @@ class GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest extends \Google\Mod
   protected $policyValueType = GoogleChromePolicyVersionsV1PolicyValue::class;
   protected $policyValueDataType = '';
   /**
+   * Required. Policy fields to update. Only fields in this mask will be
+   * updated; other fields in `policy_value` will be ignored (even if they have
+   * values). If a field is in this list it must have a value in 'policy_value'.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Required. The key of the target for which we want to modify a policy. The
+   * target resource must point to an Org Unit.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey
    */
   public function setPolicyTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey $policyTargetKey)
   {
@@ -43,7 +50,9 @@ class GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest extends \Google\Mod
     return $this->policyTargetKey;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyValue
+   * The new value for the policy.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyValue $policyValue
    */
   public function setPolicyValue(GoogleChromePolicyVersionsV1PolicyValue $policyValue)
   {
@@ -57,7 +66,11 @@ class GoogleChromePolicyVersionsV1ModifyOrgUnitPolicyRequest extends \Google\Mod
     return $this->policyValue;
   }
   /**
-   * @param string
+   * Required. Policy fields to update. Only fields in this mask will be
+   * updated; other fields in `policy_value` will be ignored (even if they have
+   * values). If a field is in this list it must have a value in 'policy_value'.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

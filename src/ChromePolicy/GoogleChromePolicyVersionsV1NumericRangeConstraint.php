@@ -20,16 +20,22 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1NumericRangeConstraint extends \Google\Model
 {
   /**
+   * Maximum value.
+   *
    * @var string
    */
   public $maximum;
   /**
+   * Minimum value.
+   *
    * @var string
    */
   public $minimum;
 
   /**
-   * @param string
+   * Maximum value.
+   *
+   * @param string $maximum
    */
   public function setMaximum($maximum)
   {
@@ -43,7 +49,9 @@ class GoogleChromePolicyVersionsV1NumericRangeConstraint extends \Google\Model
     return $this->maximum;
   }
   /**
-   * @param string
+   * Minimum value.
+   *
+   * @param string $minimum
    */
   public function setMinimum($minimum)
   {

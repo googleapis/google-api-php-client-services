@@ -20,16 +20,23 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1CertificateReference extends \Google\Model
 {
   /**
+   * Output only. The name of the referencing network.
+   *
    * @var string
    */
   public $network;
   /**
+   * Output only. The obfuscated id of the org unit the referencing network is
+   * in.
+   *
    * @var string
    */
   public $orgUnitId;
 
   /**
-   * @param string
+   * Output only. The name of the referencing network.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -43,7 +50,10 @@ class GoogleChromePolicyVersionsV1CertificateReference extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * Output only. The obfuscated id of the org unit the referencing network is
+   * in.
+   *
+   * @param string $orgUnitId
    */
   public function setOrgUnitId($orgUnitId)
   {

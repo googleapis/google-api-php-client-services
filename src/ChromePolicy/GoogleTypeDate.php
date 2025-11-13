@@ -20,20 +20,34 @@ namespace Google\Service\ChromePolicy;
 class GoogleTypeDate extends \Google\Model
 {
   /**
+   * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0
+   * to specify a year by itself or a year and month where the day isn't
+   * significant.
+   *
    * @var int
    */
   public $day;
   /**
+   * Month of a year. Must be from 1 to 12, or 0 to specify a year without a
+   * month and day.
+   *
    * @var int
    */
   public $month;
   /**
+   * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a
+   * year.
+   *
    * @var int
    */
   public $year;
 
   /**
-   * @param int
+   * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0
+   * to specify a year by itself or a year and month where the day isn't
+   * significant.
+   *
+   * @param int $day
    */
   public function setDay($day)
   {
@@ -47,7 +61,10 @@ class GoogleTypeDate extends \Google\Model
     return $this->day;
   }
   /**
-   * @param int
+   * Month of a year. Must be from 1 to 12, or 0 to specify a year without a
+   * month and day.
+   *
+   * @param int $month
    */
   public function setMonth($month)
   {
@@ -61,7 +78,10 @@ class GoogleTypeDate extends \Google\Model
     return $this->month;
   }
   /**
-   * @param int
+   * Year of the date. Must be from 1 to 9999, or 0 to specify a date without a
+   * year.
+   *
+   * @param int $year
    */
   public function setYear($year)
   {

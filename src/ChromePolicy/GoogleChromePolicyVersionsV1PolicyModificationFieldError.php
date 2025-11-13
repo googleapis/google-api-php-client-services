@@ -20,16 +20,22 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1PolicyModificationFieldError extends \Google\Model
 {
   /**
+   * Output only. The error message related to the field.
+   *
    * @var string
    */
   public $error;
   /**
+   * Output only. The name of the field with the error.
+   *
    * @var string
    */
   public $field;
 
   /**
-   * @param string
+   * Output only. The error message related to the field.
+   *
+   * @param string $error
    */
   public function setError($error)
   {
@@ -43,7 +49,9 @@ class GoogleChromePolicyVersionsV1PolicyModificationFieldError extends \Google\M
     return $this->error;
   }
   /**
-   * @param string
+   * Output only. The name of the field with the error.
+   *
+   * @param string $field
    */
   public function setField($field)
   {

@@ -21,18 +21,26 @@ class GoogleChromePolicyVersionsV1DefineNetworkResponse extends \Google\Collecti
 {
   protected $collection_key = 'settings';
   /**
+   * Network ID of the new created network.
+   *
    * @var string
    */
   public $networkId;
   protected $settingsType = GoogleChromePolicyVersionsV1NetworkSetting::class;
   protected $settingsDataType = 'array';
   /**
+   * The target resource on which this new network will be defined. The
+   * following resources are supported: * Organizational Unit
+   * ("orgunits/{orgunit_id}")
+   *
    * @var string
    */
   public $targetResource;
 
   /**
-   * @param string
+   * Network ID of the new created network.
+   *
+   * @param string $networkId
    */
   public function setNetworkId($networkId)
   {
@@ -46,7 +54,9 @@ class GoogleChromePolicyVersionsV1DefineNetworkResponse extends \Google\Collecti
     return $this->networkId;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1NetworkSetting[]
+   * Detailed network settings of the new created network
+   *
+   * @param GoogleChromePolicyVersionsV1NetworkSetting[] $settings
    */
   public function setSettings($settings)
   {
@@ -60,7 +70,11 @@ class GoogleChromePolicyVersionsV1DefineNetworkResponse extends \Google\Collecti
     return $this->settings;
   }
   /**
-   * @param string
+   * The target resource on which this new network will be defined. The
+   * following resources are supported: * Organizational Unit
+   * ("orgunits/{orgunit_id}")
+   *
+   * @param string $targetResource
    */
   public function setTargetResource($targetResource)
   {

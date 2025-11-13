@@ -21,22 +21,34 @@ class GoogleChromePolicyVersionsV1DefineCertificateRequest extends \Google\Colle
 {
   protected $collection_key = 'settings';
   /**
+   * Optional. The optional name of the certificate. If not specified, the
+   * certificate issuer will be used as the name.
+   *
    * @var string
    */
   public $ceritificateName;
   /**
+   * Required. The raw contents of the .PEM, .CRT, or .CER file.
+   *
    * @var string
    */
   public $certificate;
   protected $settingsType = GoogleChromePolicyVersionsV1NetworkSetting::class;
   protected $settingsDataType = 'array';
   /**
+   * Required. The target resource on which this certificate is applied. The
+   * following resources are supported: * Organizational Unit
+   * ("orgunits/{orgunit_id}")
+   *
    * @var string
    */
   public $targetResource;
 
   /**
-   * @param string
+   * Optional. The optional name of the certificate. If not specified, the
+   * certificate issuer will be used as the name.
+   *
+   * @param string $ceritificateName
    */
   public function setCeritificateName($ceritificateName)
   {
@@ -50,7 +62,9 @@ class GoogleChromePolicyVersionsV1DefineCertificateRequest extends \Google\Colle
     return $this->ceritificateName;
   }
   /**
-   * @param string
+   * Required. The raw contents of the .PEM, .CRT, or .CER file.
+   *
+   * @param string $certificate
    */
   public function setCertificate($certificate)
   {
@@ -64,7 +78,10 @@ class GoogleChromePolicyVersionsV1DefineCertificateRequest extends \Google\Colle
     return $this->certificate;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1NetworkSetting[]
+   * Optional. Certificate settings within the chrome.networks.certificates
+   * namespace.
+   *
+   * @param GoogleChromePolicyVersionsV1NetworkSetting[] $settings
    */
   public function setSettings($settings)
   {
@@ -78,7 +95,11 @@ class GoogleChromePolicyVersionsV1DefineCertificateRequest extends \Google\Colle
     return $this->settings;
   }
   /**
-   * @param string
+   * Required. The target resource on which this certificate is applied. The
+   * following resources are supported: * Organizational Unit
+   * ("orgunits/{orgunit_id}")
+   *
+   * @param string $targetResource
    */
   public function setTargetResource($targetResource)
   {

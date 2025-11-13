@@ -20,12 +20,16 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1UploadPolicyFileResponse extends \Google\Model
 {
   /**
+   * The uri for end user to download the file.
+   *
    * @var string
    */
   public $downloadUri;
 
   /**
-   * @param string
+   * The uri for end user to download the file.
+   *
+   * @param string $downloadUri
    */
   public function setDownloadUri($downloadUri)
   {

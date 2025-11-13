@@ -20,16 +20,24 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1RemoveCertificateRequest extends \Google\Model
 {
   /**
+   * Required. The GUID of the certificate to remove.
+   *
    * @var string
    */
   public $networkId;
   /**
+   * Required. The target resource on which this certificate will be removed.
+   * The following resources are supported: * Organizational Unit
+   * ("orgunits/{orgunit_id}")
+   *
    * @var string
    */
   public $targetResource;
 
   /**
-   * @param string
+   * Required. The GUID of the certificate to remove.
+   *
+   * @param string $networkId
    */
   public function setNetworkId($networkId)
   {
@@ -43,7 +51,11 @@ class GoogleChromePolicyVersionsV1RemoveCertificateRequest extends \Google\Model
     return $this->networkId;
   }
   /**
-   * @param string
+   * Required. The target resource on which this certificate will be removed.
+   * The following resources are supported: * Organizational Unit
+   * ("orgunits/{orgunit_id}")
+   *
+   * @param string $targetResource
    */
   public function setTargetResource($targetResource)
   {

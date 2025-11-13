@@ -29,7 +29,15 @@ class GoogleChromePolicyVersionsV1ResolvedPolicy extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Output only. The added source key establishes at which level an entity was
+   * explicitly added for management. This is useful for certain type of
+   * policies that are only applied if they are explicitly added for management.
+   * For example: apps and networks. An entity can only be deleted from
+   * management in an Organizational Unit that it was explicitly added to. If
+   * this is not present it means that the policy is managed without the need to
+   * explicitly add an entity, for example: standard user or device policies.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $addedSourceKey
    */
   public function setAddedSourceKey(GoogleChromePolicyVersionsV1PolicyTargetKey $addedSourceKey)
   {
@@ -43,7 +51,13 @@ class GoogleChromePolicyVersionsV1ResolvedPolicy extends \Google\Model
     return $this->addedSourceKey;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Output only. The source resource from which this policy value is obtained.
+   * May be the same as `targetKey` if the policy is directly modified on the
+   * target, otherwise it would be another resource from which the policy gets
+   * its value (if applicable). If not present, the source is the default value
+   * for the customer.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $sourceKey
    */
   public function setSourceKey(GoogleChromePolicyVersionsV1PolicyTargetKey $sourceKey)
   {
@@ -57,7 +71,10 @@ class GoogleChromePolicyVersionsV1ResolvedPolicy extends \Google\Model
     return $this->sourceKey;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyTargetKey
+   * Output only. The target resource for which the resolved policy value
+   * applies.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyTargetKey $targetKey
    */
   public function setTargetKey(GoogleChromePolicyVersionsV1PolicyTargetKey $targetKey)
   {
@@ -71,7 +88,9 @@ class GoogleChromePolicyVersionsV1ResolvedPolicy extends \Google\Model
     return $this->targetKey;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1PolicyValue
+   * Output only. The resolved value of the policy.
+   *
+   * @param GoogleChromePolicyVersionsV1PolicyValue $value
    */
   public function setValue(GoogleChromePolicyVersionsV1PolicyValue $value)
   {

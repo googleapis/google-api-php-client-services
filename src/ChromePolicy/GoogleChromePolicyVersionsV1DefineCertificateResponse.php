@@ -21,18 +21,24 @@ class GoogleChromePolicyVersionsV1DefineCertificateResponse extends \Google\Coll
 {
   protected $collection_key = 'settings';
   /**
+   * The guid of the certificate created by the action.
+   *
    * @var string
    */
   public $networkId;
   protected $settingsType = GoogleChromePolicyVersionsV1NetworkSetting::class;
   protected $settingsDataType = 'array';
   /**
+   * the resource at which the certificate is defined.
+   *
    * @var string
    */
   public $targetResource;
 
   /**
-   * @param string
+   * The guid of the certificate created by the action.
+   *
+   * @param string $networkId
    */
   public function setNetworkId($networkId)
   {
@@ -46,7 +52,9 @@ class GoogleChromePolicyVersionsV1DefineCertificateResponse extends \Google\Coll
     return $this->networkId;
   }
   /**
-   * @param GoogleChromePolicyVersionsV1NetworkSetting[]
+   * the affiliated settings of the certificate (NOT IMPLEMENTED)
+   *
+   * @param GoogleChromePolicyVersionsV1NetworkSetting[] $settings
    */
   public function setSettings($settings)
   {
@@ -60,7 +68,9 @@ class GoogleChromePolicyVersionsV1DefineCertificateResponse extends \Google\Coll
     return $this->settings;
   }
   /**
-   * @param string
+   * the resource at which the certificate is defined.
+   *
+   * @param string $targetResource
    */
   public function setTargetResource($targetResource)
   {
