@@ -26,7 +26,11 @@ class TrustStore extends \Google\Collection
   protected $trustAnchorsDataType = 'array';
 
   /**
-   * @param IntermediateCA[]
+   * Optional. Set of intermediate CA certificates used for the path building
+   * phase of chain validation. The field is currently not supported if
+   * TrustConfig is used for the workload certificate feature.
+   *
+   * @param IntermediateCA[] $intermediateCas
    */
   public function setIntermediateCas($intermediateCas)
   {
@@ -40,7 +44,10 @@ class TrustStore extends \Google\Collection
     return $this->intermediateCas;
   }
   /**
-   * @param TrustAnchor[]
+   * Optional. List of Trust Anchors to be used while performing validation
+   * against a given TrustStore.
+   *
+   * @param TrustAnchor[] $trustAnchors
    */
   public function setTrustAnchors($trustAnchors)
   {

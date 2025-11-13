@@ -23,16 +23,24 @@ class ListCertificatesResponse extends \Google\Collection
   protected $certificatesType = Certificate::class;
   protected $certificatesDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * A list of locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Certificate[]
+   * A list of certificates for the parent resource.
+   *
+   * @param Certificate[] $certificates
    */
   public function setCertificates($certificates)
   {
@@ -46,7 +54,11 @@ class ListCertificatesResponse extends \Google\Collection
     return $this->certificates;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListCertificatesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * A list of locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

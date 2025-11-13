@@ -20,16 +20,24 @@ namespace Google\Service\CertificateManager;
 class SelfManagedCertificate extends \Google\Model
 {
   /**
+   * Optional. Input only. The PEM-encoded certificate chain. Leaf certificate
+   * comes first, followed by intermediate ones if any.
+   *
    * @var string
    */
   public $pemCertificate;
   /**
+   * Optional. Input only. The PEM-encoded private key of the leaf certificate.
+   *
    * @var string
    */
   public $pemPrivateKey;
 
   /**
-   * @param string
+   * Optional. Input only. The PEM-encoded certificate chain. Leaf certificate
+   * comes first, followed by intermediate ones if any.
+   *
+   * @param string $pemCertificate
    */
   public function setPemCertificate($pemCertificate)
   {
@@ -43,7 +51,9 @@ class SelfManagedCertificate extends \Google\Model
     return $this->pemCertificate;
   }
   /**
-   * @param string
+   * Optional. Input only. The PEM-encoded private key of the leaf certificate.
+   *
+   * @param string $pemPrivateKey
    */
   public function setPemPrivateKey($pemPrivateKey)
   {

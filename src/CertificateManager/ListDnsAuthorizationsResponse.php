@@ -23,16 +23,24 @@ class ListDnsAuthorizationsResponse extends \Google\Collection
   protected $dnsAuthorizationsType = DnsAuthorization::class;
   protected $dnsAuthorizationsDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param DnsAuthorization[]
+   * A list of dns authorizations for the parent resource.
+   *
+   * @param DnsAuthorization[] $dnsAuthorizations
    */
   public function setDnsAuthorizations($dnsAuthorizations)
   {
@@ -46,7 +54,11 @@ class ListDnsAuthorizationsResponse extends \Google\Collection
     return $this->dnsAuthorizations;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListDnsAuthorizationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

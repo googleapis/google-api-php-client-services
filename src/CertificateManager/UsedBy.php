@@ -20,12 +20,22 @@ namespace Google\Service\CertificateManager;
 class UsedBy extends \Google\Model
 {
   /**
+   * Output only. Full name of the resource https://google.aip.dev/122#full-
+   * resource-names, e.g. `//certificatemanager.googleapis.com/projects/location
+   * s/certificateMaps/certificateMapEntries` or
+   * `//compute.googleapis.com/projects/locations/targetHttpsProxies`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. Full name of the resource https://google.aip.dev/122#full-
+   * resource-names, e.g. `//certificatemanager.googleapis.com/projects/location
+   * s/certificateMaps/certificateMapEntries` or
+   * `//compute.googleapis.com/projects/locations/targetHttpsProxies`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

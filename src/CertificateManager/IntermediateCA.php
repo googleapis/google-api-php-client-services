@@ -20,12 +20,18 @@ namespace Google\Service\CertificateManager;
 class IntermediateCA extends \Google\Model
 {
   /**
+   * PEM intermediate certificate used for building up paths for validation.
+   * Each certificate provided in PEM format may occupy up to 5kB.
+   *
    * @var string
    */
   public $pemCertificate;
 
   /**
-   * @param string
+   * PEM intermediate certificate used for building up paths for validation.
+   * Each certificate provided in PEM format may occupy up to 5kB.
+   *
+   * @param string $pemCertificate
    */
   public function setPemCertificate($pemCertificate)
   {

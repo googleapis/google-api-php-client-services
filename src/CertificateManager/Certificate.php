@@ -19,44 +19,89 @@ namespace Google\Service\CertificateManager;
 
 class Certificate extends \Google\Collection
 {
+  /**
+   * Use the DEFAULT scope if you plan to use the certificate with global
+   * external Application Load Balancer, global external proxy Network Load
+   * Balancer, or any of the regional Google Cloud services.
+   */
+  public const SCOPE_DEFAULT = 'DEFAULT';
+  /**
+   * Use the EDGE_CACHE scope if you plan to use the certificate with Media CDN.
+   * The certificates are served from Edge Points of Presence. See
+   * https://cloud.google.com/vpc/docs/edge-locations.
+   */
+  public const SCOPE_EDGE_CACHE = 'EDGE_CACHE';
+  /**
+   * Use the ALL_REGIONS scope if you plan to use the certificate with cross-
+   * region internal Application Load Balancer. The certificates are served from
+   * all Google Cloud regions. See
+   * https://cloud.google.com/compute/docs/regions-zones.
+   */
+  public const SCOPE_ALL_REGIONS = 'ALL_REGIONS';
+  /**
+   * Associated with certificates used as client certificates in Backend mTLS.
+   */
+  public const SCOPE_CLIENT_AUTH = 'CLIENT_AUTH';
   protected $collection_key = 'usedBy';
   /**
+   * Output only. The creation timestamp of a Certificate.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. One or more paragraphs of text description of a certificate.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The expiry timestamp of a Certificate.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * Optional. Set of labels associated with a Certificate.
+   *
    * @var string[]
    */
   public $labels;
   protected $managedType = ManagedCertificate::class;
   protected $managedDataType = '';
   /**
+   * Identifier. A user-defined name of the certificate. Certificate names must
+   * be unique globally and match pattern `projects/locations/certificates`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The PEM-encoded certificate chain.
+   *
    * @var string
    */
   public $pemCertificate;
   /**
+   * Output only. The list of Subject Alternative Names of dnsName type defined
+   * in the certificate (see RFC 5280 4.2.1.6). Managed certificates that
+   * haven't been provisioned yet have this field populated with a value of the
+   * managed.domains field.
+   *
    * @var string[]
    */
   public $sanDnsnames;
   /**
+   * Optional. Immutable. The scope of the certificate.
+   *
    * @var string
    */
   public $scope;
   protected $selfManagedType = SelfManagedCertificate::class;
   protected $selfManagedDataType = '';
   /**
+   * Output only. The last update timestamp of a Certificate.
+   *
    * @var string
    */
   public $updateTime;
@@ -64,7 +109,9 @@ class Certificate extends \Google\Collection
   protected $usedByDataType = 'array';
 
   /**
-   * @param string
+   * Output only. The creation timestamp of a Certificate.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -78,7 +125,9 @@ class Certificate extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. One or more paragraphs of text description of a certificate.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -92,7 +141,9 @@ class Certificate extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The expiry timestamp of a Certificate.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -106,7 +157,9 @@ class Certificate extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param string[]
+   * Optional. Set of labels associated with a Certificate.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -120,7 +173,9 @@ class Certificate extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param ManagedCertificate
+   * If set, contains configuration and state of a managed certificate.
+   *
+   * @param ManagedCertificate $managed
    */
   public function setManaged(ManagedCertificate $managed)
   {
@@ -134,7 +189,10 @@ class Certificate extends \Google\Collection
     return $this->managed;
   }
   /**
-   * @param string
+   * Identifier. A user-defined name of the certificate. Certificate names must
+   * be unique globally and match pattern `projects/locations/certificates`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -148,7 +206,9 @@ class Certificate extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The PEM-encoded certificate chain.
+   *
+   * @param string $pemCertificate
    */
   public function setPemCertificate($pemCertificate)
   {
@@ -162,7 +222,12 @@ class Certificate extends \Google\Collection
     return $this->pemCertificate;
   }
   /**
-   * @param string[]
+   * Output only. The list of Subject Alternative Names of dnsName type defined
+   * in the certificate (see RFC 5280 4.2.1.6). Managed certificates that
+   * haven't been provisioned yet have this field populated with a value of the
+   * managed.domains field.
+   *
+   * @param string[] $sanDnsnames
    */
   public function setSanDnsnames($sanDnsnames)
   {
@@ -176,21 +241,27 @@ class Certificate extends \Google\Collection
     return $this->sanDnsnames;
   }
   /**
-   * @param string
+   * Optional. Immutable. The scope of the certificate.
+   *
+   * Accepted values: DEFAULT, EDGE_CACHE, ALL_REGIONS, CLIENT_AUTH
+   *
+   * @param self::SCOPE_* $scope
    */
   public function setScope($scope)
   {
     $this->scope = $scope;
   }
   /**
-   * @return string
+   * @return self::SCOPE_*
    */
   public function getScope()
   {
     return $this->scope;
   }
   /**
-   * @param SelfManagedCertificate
+   * If set, defines data of a self-managed certificate.
+   *
+   * @param SelfManagedCertificate $selfManaged
    */
   public function setSelfManaged(SelfManagedCertificate $selfManaged)
   {
@@ -204,7 +275,9 @@ class Certificate extends \Google\Collection
     return $this->selfManaged;
   }
   /**
-   * @param string
+   * Output only. The last update timestamp of a Certificate.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -218,7 +291,9 @@ class Certificate extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param UsedBy[]
+   * Output only. The list of resources that use this Certificate.
+   *
+   * @param UsedBy[] $usedBy
    */
   public function setUsedBy($usedBy)
   {

@@ -23,16 +23,24 @@ class ListCertificateMapEntriesResponse extends \Google\Collection
   protected $certificateMapEntriesType = CertificateMapEntry::class;
   protected $certificateMapEntriesDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param CertificateMapEntry[]
+   * A list of certificate map entries for the parent resource.
+   *
+   * @param CertificateMapEntry[] $certificateMapEntries
    */
   public function setCertificateMapEntries($certificateMapEntries)
   {
@@ -46,7 +54,11 @@ class ListCertificateMapEntriesResponse extends \Google\Collection
     return $this->certificateMapEntries;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListCertificateMapEntriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

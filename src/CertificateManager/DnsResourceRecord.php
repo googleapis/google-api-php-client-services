@@ -20,20 +20,30 @@ namespace Google\Service\CertificateManager;
 class DnsResourceRecord extends \Google\Model
 {
   /**
+   * Output only. Data of the DNS Resource Record.
+   *
    * @var string
    */
   public $data;
   /**
+   * Output only. Fully qualified name of the DNS Resource Record. e.g. `_acme-
+   * challenge.example.com`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Type of the DNS Resource Record. Currently always set to
+   * "CNAME".
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. Data of the DNS Resource Record.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -47,7 +57,10 @@ class DnsResourceRecord extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Output only. Fully qualified name of the DNS Resource Record. e.g. `_acme-
+   * challenge.example.com`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +74,10 @@ class DnsResourceRecord extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Type of the DNS Resource Record. Currently always set to
+   * "CNAME".
+   *
+   * @param string $type
    */
   public function setType($type)
   {
