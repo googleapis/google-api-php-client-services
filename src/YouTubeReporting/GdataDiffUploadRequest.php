@@ -24,12 +24,16 @@ class GdataDiffUploadRequest extends \Google\Model
   protected $objectInfoType = GdataCompositeMedia::class;
   protected $objectInfoDataType = '';
   /**
+   * gdata
+   *
    * @var string
    */
   public $objectVersion;
 
   /**
-   * @param GdataCompositeMedia
+   * gdata
+   *
+   * @param GdataCompositeMedia $checksumsInfo
    */
   public function setChecksumsInfo(GdataCompositeMedia $checksumsInfo)
   {
@@ -43,7 +47,9 @@ class GdataDiffUploadRequest extends \Google\Model
     return $this->checksumsInfo;
   }
   /**
-   * @param GdataCompositeMedia
+   * gdata
+   *
+   * @param GdataCompositeMedia $objectInfo
    */
   public function setObjectInfo(GdataCompositeMedia $objectInfo)
   {
@@ -57,7 +63,9 @@ class GdataDiffUploadRequest extends \Google\Model
     return $this->objectInfo;
   }
   /**
-   * @param string
+   * gdata
+   *
+   * @param string $objectVersion
    */
   public function setObjectVersion($objectVersion)
   {

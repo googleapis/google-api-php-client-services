@@ -20,24 +20,36 @@ namespace Google\Service\YouTubeReporting;
 class ReportType extends \Google\Model
 {
   /**
+   * The date/time when this report type was/will be deprecated.
+   *
    * @var string
    */
   public $deprecateTime;
   /**
+   * The ID of the report type (max. 100 characters).
+   *
    * @var string
    */
   public $id;
   /**
+   * The name of the report type (max. 100 characters).
+   *
    * @var string
    */
   public $name;
   /**
+   * True if this a system-managed report type; otherwise false. Reporting jobs
+   * for system-managed report types are created automatically and can thus not
+   * be used in the `CreateJob` method.
+   *
    * @var bool
    */
   public $systemManaged;
 
   /**
-   * @param string
+   * The date/time when this report type was/will be deprecated.
+   *
+   * @param string $deprecateTime
    */
   public function setDeprecateTime($deprecateTime)
   {
@@ -51,7 +63,9 @@ class ReportType extends \Google\Model
     return $this->deprecateTime;
   }
   /**
-   * @param string
+   * The ID of the report type (max. 100 characters).
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -65,7 +79,9 @@ class ReportType extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The name of the report type (max. 100 characters).
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +95,11 @@ class ReportType extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * True if this a system-managed report type; otherwise false. Reporting jobs
+   * for system-managed report types are created automatically and can thus not
+   * be used in the `CreateJob` method.
+   *
+   * @param bool $systemManaged
    */
   public function setSystemManaged($systemManaged)
   {

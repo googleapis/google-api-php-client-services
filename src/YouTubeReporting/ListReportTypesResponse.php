@@ -21,6 +21,10 @@ class ListReportTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'reportTypes';
   /**
+   * A token to retrieve next page of results. Pass this value in the
+   * ListReportTypesRequest.page_token field in the subsequent call to
+   * `ListReportTypes` method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListReportTypesResponse extends \Google\Collection
   protected $reportTypesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass this value in the
+   * ListReportTypesRequest.page_token field in the subsequent call to
+   * `ListReportTypes` method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListReportTypesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ReportType[]
+   * The list of report types.
+   *
+   * @param ReportType[] $reportTypes
    */
   public function setReportTypes($reportTypes)
   {

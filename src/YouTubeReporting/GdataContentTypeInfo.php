@@ -20,28 +20,40 @@ namespace Google\Service\YouTubeReporting;
 class GdataContentTypeInfo extends \Google\Model
 {
   /**
+   * gdata
+   *
    * @var string
    */
   public $bestGuess;
   /**
+   * gdata
+   *
    * @var string
    */
   public $fromBytes;
   /**
+   * gdata
+   *
    * @var string
    */
   public $fromFileName;
   /**
+   * gdata
+   *
    * @var string
    */
   public $fromHeader;
   /**
+   * gdata
+   *
    * @var string
    */
   public $fromUrlPath;
 
   /**
-   * @param string
+   * gdata
+   *
+   * @param string $bestGuess
    */
   public function setBestGuess($bestGuess)
   {
@@ -55,7 +67,9 @@ class GdataContentTypeInfo extends \Google\Model
     return $this->bestGuess;
   }
   /**
-   * @param string
+   * gdata
+   *
+   * @param string $fromBytes
    */
   public function setFromBytes($fromBytes)
   {
@@ -69,7 +83,9 @@ class GdataContentTypeInfo extends \Google\Model
     return $this->fromBytes;
   }
   /**
-   * @param string
+   * gdata
+   *
+   * @param string $fromFileName
    */
   public function setFromFileName($fromFileName)
   {
@@ -83,7 +99,9 @@ class GdataContentTypeInfo extends \Google\Model
     return $this->fromFileName;
   }
   /**
-   * @param string
+   * gdata
+   *
+   * @param string $fromHeader
    */
   public function setFromHeader($fromHeader)
   {
@@ -97,7 +115,9 @@ class GdataContentTypeInfo extends \Google\Model
     return $this->fromHeader;
   }
   /**
-   * @param string
+   * gdata
+   *
+   * @param string $fromUrlPath
    */
   public function setFromUrlPath($fromUrlPath)
   {
