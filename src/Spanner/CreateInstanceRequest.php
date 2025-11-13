@@ -22,12 +22,18 @@ class CreateInstanceRequest extends \Google\Model
   protected $instanceType = Instance::class;
   protected $instanceDataType = '';
   /**
+   * Required. The ID of the instance to create. Valid identifiers are of the
+   * form `a-z*[a-z0-9]` and must be between 2 and 64 characters in length.
+   *
    * @var string
    */
   public $instanceId;
 
   /**
-   * @param Instance
+   * Required. The instance to create. The name may be omitted, but if specified
+   * must be `/instances/`.
+   *
+   * @param Instance $instance
    */
   public function setInstance(Instance $instance)
   {
@@ -41,7 +47,10 @@ class CreateInstanceRequest extends \Google\Model
     return $this->instance;
   }
   /**
-   * @param string
+   * Required. The ID of the instance to create. Valid identifiers are of the
+   * form `a-z*[a-z0-9]` and must be between 2 and 64 characters in length.
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {

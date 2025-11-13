@@ -20,6 +20,8 @@ namespace Google\Service\Spanner;
 class UpdateInstanceConfigMetadata extends \Google\Model
 {
   /**
+   * The time at which this operation was cancelled.
+   *
    * @var string
    */
   public $cancelTime;
@@ -29,7 +31,9 @@ class UpdateInstanceConfigMetadata extends \Google\Model
   protected $progressDataType = '';
 
   /**
-   * @param string
+   * The time at which this operation was cancelled.
+   *
+   * @param string $cancelTime
    */
   public function setCancelTime($cancelTime)
   {
@@ -43,7 +47,9 @@ class UpdateInstanceConfigMetadata extends \Google\Model
     return $this->cancelTime;
   }
   /**
-   * @param InstanceConfig
+   * The desired instance configuration after updating.
+   *
+   * @param InstanceConfig $instanceConfig
    */
   public function setInstanceConfig(InstanceConfig $instanceConfig)
   {
@@ -57,7 +63,9 @@ class UpdateInstanceConfigMetadata extends \Google\Model
     return $this->instanceConfig;
   }
   /**
-   * @param InstanceOperationProgress
+   * The progress of the UpdateInstanceConfig operation.
+   *
+   * @param InstanceOperationProgress $progress
    */
   public function setProgress(InstanceOperationProgress $progress)
   {

@@ -20,10 +20,16 @@ namespace Google\Service\Spanner;
 class ReplicaComputeCapacity extends \Google\Model
 {
   /**
+   * The number of nodes allocated to each replica. This may be zero in API
+   * responses for instances that are not yet in state `READY`.
+   *
    * @var int
    */
   public $nodeCount;
   /**
+   * The number of processing units allocated to each replica. This may be zero
+   * in API responses for instances that are not yet in state `READY`.
+   *
    * @var int
    */
   public $processingUnits;
@@ -31,7 +37,10 @@ class ReplicaComputeCapacity extends \Google\Model
   protected $replicaSelectionDataType = '';
 
   /**
-   * @param int
+   * The number of nodes allocated to each replica. This may be zero in API
+   * responses for instances that are not yet in state `READY`.
+   *
+   * @param int $nodeCount
    */
   public function setNodeCount($nodeCount)
   {
@@ -45,7 +54,10 @@ class ReplicaComputeCapacity extends \Google\Model
     return $this->nodeCount;
   }
   /**
-   * @param int
+   * The number of processing units allocated to each replica. This may be zero
+   * in API responses for instances that are not yet in state `READY`.
+   *
+   * @param int $processingUnits
    */
   public function setProcessingUnits($processingUnits)
   {
@@ -59,7 +71,10 @@ class ReplicaComputeCapacity extends \Google\Model
     return $this->processingUnits;
   }
   /**
-   * @param InstanceReplicaSelection
+   * Required. Identifies replicas by specified properties. All replicas in the
+   * selection have the same amount of compute capacity.
+   *
+   * @param InstanceReplicaSelection $replicaSelection
    */
   public function setReplicaSelection(InstanceReplicaSelection $replicaSelection)
   {

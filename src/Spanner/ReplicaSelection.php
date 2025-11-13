@@ -20,16 +20,34 @@ namespace Google\Service\Spanner;
 class ReplicaSelection extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Read-write replicas support both reads and writes.
+   */
+  public const TYPE_READ_WRITE = 'READ_WRITE';
+  /**
+   * Read-only replicas only support reads (not writes).
+   */
+  public const TYPE_READ_ONLY = 'READ_ONLY';
+  /**
+   * The location or region of the serving requests, for example, "us-east1".
+   *
    * @var string
    */
   public $location;
   /**
+   * The type of replica.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The location or region of the serving requests, for example, "us-east1".
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -43,14 +61,18 @@ class ReplicaSelection extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The type of replica.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, READ_WRITE, READ_ONLY
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

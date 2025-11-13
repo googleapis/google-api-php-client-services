@@ -20,16 +20,24 @@ namespace Google\Service\Spanner;
 class MultiplexedSessionPrecommitToken extends \Google\Model
 {
   /**
+   * Opaque precommit token.
+   *
    * @var string
    */
   public $precommitToken;
   /**
+   * An incrementing seq number is generated on every precommit token that is
+   * returned. Clients should remember the precommit token with the highest
+   * sequence number from the current transaction attempt.
+   *
    * @var int
    */
   public $seqNum;
 
   /**
-   * @param string
+   * Opaque precommit token.
+   *
+   * @param string $precommitToken
    */
   public function setPrecommitToken($precommitToken)
   {
@@ -43,7 +51,11 @@ class MultiplexedSessionPrecommitToken extends \Google\Model
     return $this->precommitToken;
   }
   /**
-   * @param int
+   * An incrementing seq number is generated on every precommit token that is
+   * returned. Clients should remember the precommit token with the highest
+   * sequence number from the current transaction attempt.
+   *
+   * @param int $seqNum
    */
   public function setSeqNum($seqNum)
   {

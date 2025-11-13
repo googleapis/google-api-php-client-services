@@ -21,12 +21,20 @@ class TestIamPermissionsRequest extends \Google\Collection
 {
   protected $collection_key = 'permissions';
   /**
+   * REQUIRED: The set of permissions to check for 'resource'. Permissions with
+   * wildcards (such as '*', 'spanner.*', 'spanner.instances.*') are not
+   * allowed.
+   *
    * @var string[]
    */
   public $permissions;
 
   /**
-   * @param string[]
+   * REQUIRED: The set of permissions to check for 'resource'. Permissions with
+   * wildcards (such as '*', 'spanner.*', 'spanner.instances.*') are not
+   * allowed.
+   *
+   * @param string[] $permissions
    */
   public function setPermissions($permissions)
   {

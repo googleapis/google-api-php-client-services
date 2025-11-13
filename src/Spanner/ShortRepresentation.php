@@ -20,16 +20,25 @@ namespace Google\Service\Spanner;
 class ShortRepresentation extends \Google\Model
 {
   /**
+   * A string representation of the expression subtree rooted at this node.
+   *
    * @var string
    */
   public $description;
   /**
+   * A mapping of (subquery variable name) -> (subquery node id) for cases where
+   * the `description` string of this node references a `SCALAR` subquery
+   * contained in the expression subtree rooted at this node. The referenced
+   * `SCALAR` subquery may not necessarily be a direct child of this node.
+   *
    * @var int[]
    */
   public $subqueries;
 
   /**
-   * @param string
+   * A string representation of the expression subtree rooted at this node.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +52,12 @@ class ShortRepresentation extends \Google\Model
     return $this->description;
   }
   /**
-   * @param int[]
+   * A mapping of (subquery variable name) -> (subquery node id) for cases where
+   * the `description` string of this node references a `SCALAR` subquery
+   * contained in the expression subtree rooted at this node. The referenced
+   * `SCALAR` subquery may not necessarily be a direct child of this node.
+   *
+   * @param int[] $subqueries
    */
   public function setSubqueries($subqueries)
   {

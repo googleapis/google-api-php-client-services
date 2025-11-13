@@ -23,16 +23,25 @@ class ListInstancePartitionsResponse extends \Google\Collection
   protected $instancePartitionsType = InstancePartition::class;
   protected $instancePartitionsDataType = 'array';
   /**
+   * `next_page_token` can be sent in a subsequent ListInstancePartitions call
+   * to fetch more of the matching instance partitions.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The list of unreachable instances or instance partitions. It includes the
+   * names of instances or instance partitions whose metadata could not be
+   * retrieved within instance_partition_deadline.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param InstancePartition[]
+   * The list of requested instancePartitions.
+   *
+   * @param InstancePartition[] $instancePartitions
    */
   public function setInstancePartitions($instancePartitions)
   {
@@ -46,7 +55,10 @@ class ListInstancePartitionsResponse extends \Google\Collection
     return $this->instancePartitions;
   }
   /**
-   * @param string
+   * `next_page_token` can be sent in a subsequent ListInstancePartitions call
+   * to fetch more of the matching instance partitions.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,11 @@ class ListInstancePartitionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * The list of unreachable instances or instance partitions. It includes the
+   * names of instances or instance partitions whose metadata could not be
+   * retrieved within instance_partition_deadline.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -23,12 +23,17 @@ class ListBackupSchedulesResponse extends \Google\Collection
   protected $backupSchedulesType = BackupSchedule::class;
   protected $backupSchedulesDataType = 'array';
   /**
+   * `next_page_token` can be sent in a subsequent ListBackupSchedules call to
+   * fetch more of the schedules.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param BackupSchedule[]
+   * The list of backup schedules for a database.
+   *
+   * @param BackupSchedule[] $backupSchedules
    */
   public function setBackupSchedules($backupSchedules)
   {
@@ -42,7 +47,10 @@ class ListBackupSchedulesResponse extends \Google\Collection
     return $this->backupSchedules;
   }
   /**
-   * @param string
+   * `next_page_token` can be sent in a subsequent ListBackupSchedules call to
+   * fetch more of the schedules.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Spanner;
 class AdaptMessageRequest extends \Google\Model
 {
   /**
+   * Optional. Opaque request state passed by the client to the server.
+   *
    * @var string[]
    */
   public $attachments;
   /**
+   * Optional. Uninterpreted bytes from the underlying wire protocol.
+   *
    * @var string
    */
   public $payload;
   /**
+   * Required. Identifier for the underlying wire protocol.
+   *
    * @var string
    */
   public $protocol;
 
   /**
-   * @param string[]
+   * Optional. Opaque request state passed by the client to the server.
+   *
+   * @param string[] $attachments
    */
   public function setAttachments($attachments)
   {
@@ -47,7 +55,9 @@ class AdaptMessageRequest extends \Google\Model
     return $this->attachments;
   }
   /**
-   * @param string
+   * Optional. Uninterpreted bytes from the underlying wire protocol.
+   *
+   * @param string $payload
    */
   public function setPayload($payload)
   {
@@ -61,7 +71,9 @@ class AdaptMessageRequest extends \Google\Model
     return $this->payload;
   }
   /**
-   * @param string
+   * Required. Identifier for the underlying wire protocol.
+   *
+   * @param string $protocol
    */
   public function setProtocol($protocol)
   {

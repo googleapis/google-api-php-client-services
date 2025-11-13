@@ -23,12 +23,18 @@ class KeyRangeInfos extends \Google\Collection
   protected $infosType = KeyRangeInfo::class;
   protected $infosDataType = 'array';
   /**
+   * The total size of the list of all KeyRangeInfos. This may be larger than
+   * the number of repeated messages above. If that is the case, this number may
+   * be used to determine how many are not being shown.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param KeyRangeInfo[]
+   * The list individual KeyRangeInfos.
+   *
+   * @param KeyRangeInfo[] $infos
    */
   public function setInfos($infos)
   {
@@ -42,7 +48,11 @@ class KeyRangeInfos extends \Google\Collection
     return $this->infos;
   }
   /**
-   * @param int
+   * The total size of the list of all KeyRangeInfos. This may be larger than
+   * the number of repeated messages above. If that is the case, this number may
+   * be used to determine how many are not being shown.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

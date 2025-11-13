@@ -20,12 +20,20 @@ namespace Google\Service\Spanner;
 class Partition extends \Google\Model
 {
   /**
+   * This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or
+   * `ExecuteStreamingSql` requests to restrict the results to those identified
+   * by this partition token.
+   *
    * @var string
    */
   public $partitionToken;
 
   /**
-   * @param string
+   * This token can be passed to `Read`, `StreamingRead`, `ExecuteSql`, or
+   * `ExecuteStreamingSql` requests to restrict the results to those identified
+   * by this partition token.
+   *
+   * @param string $partitionToken
    */
   public function setPartitionToken($partitionToken)
   {

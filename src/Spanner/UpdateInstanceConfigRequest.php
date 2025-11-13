@@ -22,16 +22,29 @@ class UpdateInstanceConfigRequest extends \Google\Model
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
   /**
+   * Required. A mask specifying which fields in InstanceConfig should be
+   * updated. The field mask must always be specified; this prevents any future
+   * fields in InstanceConfig from being erased accidentally by clients that do
+   * not know about them. Only display_name and labels can be updated.
+   *
    * @var string
    */
   public $updateMask;
   /**
+   * An option to validate, but not actually execute, a request, and provide the
+   * same response.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param InstanceConfig
+   * Required. The user instance configuration to update, which must always
+   * include the instance configuration name. Otherwise, only fields mentioned
+   * in update_mask need be included. To prevent conflicts of concurrent
+   * updates, etag can be used.
+   *
+   * @param InstanceConfig $instanceConfig
    */
   public function setInstanceConfig(InstanceConfig $instanceConfig)
   {
@@ -45,7 +58,12 @@ class UpdateInstanceConfigRequest extends \Google\Model
     return $this->instanceConfig;
   }
   /**
-   * @param string
+   * Required. A mask specifying which fields in InstanceConfig should be
+   * updated. The field mask must always be specified; this prevents any future
+   * fields in InstanceConfig from being erased accidentally by clients that do
+   * not know about them. Only display_name and labels can be updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {
@@ -59,7 +77,10 @@ class UpdateInstanceConfigRequest extends \Google\Model
     return $this->updateMask;
   }
   /**
-   * @param bool
+   * An option to validate, but not actually execute, a request, and provide the
+   * same response.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

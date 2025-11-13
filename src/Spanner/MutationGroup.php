@@ -24,7 +24,9 @@ class MutationGroup extends \Google\Collection
   protected $mutationsDataType = 'array';
 
   /**
-   * @param Mutation[]
+   * Required. The mutations in this group.
+   *
+   * @param Mutation[] $mutations
    */
   public function setMutations($mutations)
   {

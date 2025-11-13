@@ -23,7 +23,9 @@ class BackupScheduleSpec extends \Google\Model
   protected $cronSpecDataType = '';
 
   /**
-   * @param CrontabSpec
+   * Cron style schedule specification.
+   *
+   * @param CrontabSpec $cronSpec
    */
   public function setCronSpec(CrontabSpec $cronSpec)
   {

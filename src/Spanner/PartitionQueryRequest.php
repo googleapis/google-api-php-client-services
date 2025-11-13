@@ -22,12 +22,31 @@ class PartitionQueryRequest extends \Google\Model
   protected $paramTypesType = Type::class;
   protected $paramTypesDataType = 'map';
   /**
+   * Parameter names and values that bind to placeholders in the SQL string. A
+   * parameter placeholder consists of the `@` character followed by the
+   * parameter name (for example, `@firstName`). Parameter names can contain
+   * letters, numbers, and underscores. Parameters can appear anywhere that a
+   * literal value is expected. The same parameter name can be used more than
+   * once, for example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an
+   * error to execute a SQL statement with unbound parameters.
+   *
    * @var array[]
    */
   public $params;
   protected $partitionOptionsType = PartitionOptions::class;
   protected $partitionOptionsDataType = '';
   /**
+   * Required. The query request to generate partitions for. The request fails
+   * if the query isn't root partitionable. For a query to be root
+   * partitionable, it needs to satisfy a few conditions. For example, if the
+   * query execution plan contains a distributed union operator, then it must be
+   * the first operator in the plan. For more information about other
+   * conditions, see [Read data in parallel](https://cloud.google.com/spanner/do
+   * cs/reads#read_data_in_parallel). The query request must not contain DML
+   * commands, such as `INSERT`, `UPDATE`, or `DELETE`. Use
+   * `ExecuteStreamingSql` with a `PartitionedDml` transaction for large,
+   * partition-friendly DML operations.
+   *
    * @var string
    */
   public $sql;
@@ -35,7 +54,14 @@ class PartitionQueryRequest extends \Google\Model
   protected $transactionDataType = '';
 
   /**
-   * @param Type[]
+   * It isn't always possible for Cloud Spanner to infer the right SQL type from
+   * a JSON value. For example, values of type `BYTES` and values of type
+   * `STRING` both appear in params as JSON strings. In these cases,
+   * `param_types` can be used to specify the exact SQL type for some or all of
+   * the SQL query parameters. See the definition of Type for more information
+   * about SQL types.
+   *
+   * @param Type[] $paramTypes
    */
   public function setParamTypes($paramTypes)
   {
@@ -49,7 +75,15 @@ class PartitionQueryRequest extends \Google\Model
     return $this->paramTypes;
   }
   /**
-   * @param array[]
+   * Parameter names and values that bind to placeholders in the SQL string. A
+   * parameter placeholder consists of the `@` character followed by the
+   * parameter name (for example, `@firstName`). Parameter names can contain
+   * letters, numbers, and underscores. Parameters can appear anywhere that a
+   * literal value is expected. The same parameter name can be used more than
+   * once, for example: `"WHERE id > @msg_id AND id < @msg_id + 100"` It's an
+   * error to execute a SQL statement with unbound parameters.
+   *
+   * @param array[] $params
    */
   public function setParams($params)
   {
@@ -63,7 +97,9 @@ class PartitionQueryRequest extends \Google\Model
     return $this->params;
   }
   /**
-   * @param PartitionOptions
+   * Additional options that affect how many partitions are created.
+   *
+   * @param PartitionOptions $partitionOptions
    */
   public function setPartitionOptions(PartitionOptions $partitionOptions)
   {
@@ -77,7 +113,18 @@ class PartitionQueryRequest extends \Google\Model
     return $this->partitionOptions;
   }
   /**
-   * @param string
+   * Required. The query request to generate partitions for. The request fails
+   * if the query isn't root partitionable. For a query to be root
+   * partitionable, it needs to satisfy a few conditions. For example, if the
+   * query execution plan contains a distributed union operator, then it must be
+   * the first operator in the plan. For more information about other
+   * conditions, see [Read data in parallel](https://cloud.google.com/spanner/do
+   * cs/reads#read_data_in_parallel). The query request must not contain DML
+   * commands, such as `INSERT`, `UPDATE`, or `DELETE`. Use
+   * `ExecuteStreamingSql` with a `PartitionedDml` transaction for large,
+   * partition-friendly DML operations.
+   *
+   * @param string $sql
    */
   public function setSql($sql)
   {
@@ -91,7 +138,10 @@ class PartitionQueryRequest extends \Google\Model
     return $this->sql;
   }
   /**
-   * @param TransactionSelector
+   * Read-only snapshot transactions are supported, read and write and single-
+   * use transactions are not.
+   *
+   * @param TransactionSelector $transaction
    */
   public function setTransaction(TransactionSelector $transaction)
   {

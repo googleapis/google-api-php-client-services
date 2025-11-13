@@ -20,20 +20,51 @@ namespace Google\Service\Spanner;
 class CrontabSpec extends \Google\Model
 {
   /**
+   * Output only. Scheduled backups contain an externally consistent copy of the
+   * database at the version time specified in `schedule_spec.cron_spec`.
+   * However, Spanner might not initiate the creation of the scheduled backups
+   * at that version time. Spanner initiates the creation of scheduled backups
+   * within the time window bounded by the version_time specified in
+   * `schedule_spec.cron_spec` and version_time + `creation_window`.
+   *
    * @var string
    */
   public $creationWindow;
   /**
+   * Required. Textual representation of the crontab. User can customize the
+   * backup frequency and the backup version time using the cron expression. The
+   * version time must be in UTC timezone. The backup will contain an externally
+   * consistent copy of the database at the version time. Full backups must be
+   * scheduled a minimum of 12 hours apart and incremental backups must be
+   * scheduled a minimum of 4 hours apart. Examples of valid cron
+   * specifications: * `0 2/12 * * *` : every 12 hours at (2, 14) hours past
+   * midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2, 14) hours past
+   * midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours
+   * at (0, 4, 8, 12, 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a
+   * day at 2 past midnight in UTC. * `0 2 * * 0` : once a week every Sunday at
+   * 2 past midnight in UTC. * `0 2 8 * *` : once a month on 8th day at 2 past
+   * midnight in UTC.
+   *
    * @var string
    */
   public $text;
   /**
+   * Output only. The time zone of the times in `CrontabSpec.text`. Currently,
+   * only UTC is supported.
+   *
    * @var string
    */
   public $timeZone;
 
   /**
-   * @param string
+   * Output only. Scheduled backups contain an externally consistent copy of the
+   * database at the version time specified in `schedule_spec.cron_spec`.
+   * However, Spanner might not initiate the creation of the scheduled backups
+   * at that version time. Spanner initiates the creation of scheduled backups
+   * within the time window bounded by the version_time specified in
+   * `schedule_spec.cron_spec` and version_time + `creation_window`.
+   *
+   * @param string $creationWindow
    */
   public function setCreationWindow($creationWindow)
   {
@@ -47,7 +78,21 @@ class CrontabSpec extends \Google\Model
     return $this->creationWindow;
   }
   /**
-   * @param string
+   * Required. Textual representation of the crontab. User can customize the
+   * backup frequency and the backup version time using the cron expression. The
+   * version time must be in UTC timezone. The backup will contain an externally
+   * consistent copy of the database at the version time. Full backups must be
+   * scheduled a minimum of 12 hours apart and incremental backups must be
+   * scheduled a minimum of 4 hours apart. Examples of valid cron
+   * specifications: * `0 2/12 * * *` : every 12 hours at (2, 14) hours past
+   * midnight in UTC. * `0 2,14 * * *` : every 12 hours at (2, 14) hours past
+   * midnight in UTC. * `0 4 * * *` : (incremental backups only) every 4 hours
+   * at (0, 4, 8, 12, 16, 20) hours past midnight in UTC. * `0 2 * * *` : once a
+   * day at 2 past midnight in UTC. * `0 2 * * 0` : once a week every Sunday at
+   * 2 past midnight in UTC. * `0 2 8 * *` : once a month on 8th day at 2 past
+   * midnight in UTC.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
@@ -61,7 +106,10 @@ class CrontabSpec extends \Google\Model
     return $this->text;
   }
   /**
-   * @param string
+   * Output only. The time zone of the times in `CrontabSpec.text`. Currently,
+   * only UTC is supported.
+   *
+   * @param string $timeZone
    */
   public function setTimeZone($timeZone)
   {

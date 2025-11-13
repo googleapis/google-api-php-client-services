@@ -22,20 +22,32 @@ class ResultSetStats extends \Google\Model
   protected $queryPlanType = QueryPlan::class;
   protected $queryPlanDataType = '';
   /**
+   * Aggregated statistics from the execution of the query. Only present when
+   * the query is profiled. For example, a query could return the statistics as
+   * follows: { "rows_returned": "3", "elapsed_time": "1.22 secs", "cpu_time":
+   * "1.19 secs" }
+   *
    * @var array[]
    */
   public $queryStats;
   /**
+   * Standard DML returns an exact count of rows that were modified.
+   *
    * @var string
    */
   public $rowCountExact;
   /**
+   * Partitioned DML doesn't offer exactly-once semantics, so it returns a lower
+   * bound of the rows modified.
+   *
    * @var string
    */
   public $rowCountLowerBound;
 
   /**
-   * @param QueryPlan
+   * QueryPlan for the query associated with this result.
+   *
+   * @param QueryPlan $queryPlan
    */
   public function setQueryPlan(QueryPlan $queryPlan)
   {
@@ -49,7 +61,12 @@ class ResultSetStats extends \Google\Model
     return $this->queryPlan;
   }
   /**
-   * @param array[]
+   * Aggregated statistics from the execution of the query. Only present when
+   * the query is profiled. For example, a query could return the statistics as
+   * follows: { "rows_returned": "3", "elapsed_time": "1.22 secs", "cpu_time":
+   * "1.19 secs" }
+   *
+   * @param array[] $queryStats
    */
   public function setQueryStats($queryStats)
   {
@@ -63,7 +80,9 @@ class ResultSetStats extends \Google\Model
     return $this->queryStats;
   }
   /**
-   * @param string
+   * Standard DML returns an exact count of rows that were modified.
+   *
+   * @param string $rowCountExact
    */
   public function setRowCountExact($rowCountExact)
   {
@@ -77,7 +96,10 @@ class ResultSetStats extends \Google\Model
     return $this->rowCountExact;
   }
   /**
-   * @param string
+   * Partitioned DML doesn't offer exactly-once semantics, so it returns a lower
+   * bound of the rows modified.
+   *
+   * @param string $rowCountLowerBound
    */
   public function setRowCountLowerBound($rowCountLowerBound)
   {

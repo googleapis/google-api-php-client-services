@@ -21,22 +21,35 @@ class SplitPoints extends \Google\Collection
 {
   protected $collection_key = 'keys';
   /**
+   * Optional. The expiration timestamp of the split points. A timestamp in the
+   * past means immediate expiration. The maximum value can be 30 days in the
+   * future. Defaults to 10 days in the future if not specified.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * The index to split. If specified, the `table` field must refer to the
+   * index's base table.
+   *
    * @var string
    */
   public $index;
   protected $keysType = Key::class;
   protected $keysDataType = 'array';
   /**
+   * The table to split.
+   *
    * @var string
    */
   public $table;
 
   /**
-   * @param string
+   * Optional. The expiration timestamp of the split points. A timestamp in the
+   * past means immediate expiration. The maximum value can be 30 days in the
+   * future. Defaults to 10 days in the future if not specified.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -50,7 +63,10 @@ class SplitPoints extends \Google\Collection
     return $this->expireTime;
   }
   /**
-   * @param string
+   * The index to split. If specified, the `table` field must refer to the
+   * index's base table.
+   *
+   * @param string $index
    */
   public function setIndex($index)
   {
@@ -64,7 +80,9 @@ class SplitPoints extends \Google\Collection
     return $this->index;
   }
   /**
-   * @param Key[]
+   * Required. The list of split keys. In essence, the split boundaries.
+   *
+   * @param Key[] $keys
    */
   public function setKeys($keys)
   {
@@ -78,7 +96,9 @@ class SplitPoints extends \Google\Collection
     return $this->keys;
   }
   /**
-   * @param string
+   * The table to split.
+   *
+   * @param string $table
    */
   public function setTable($table)
   {

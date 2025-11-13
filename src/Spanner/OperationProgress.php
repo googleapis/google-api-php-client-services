@@ -20,20 +20,31 @@ namespace Google\Service\Spanner;
 class OperationProgress extends \Google\Model
 {
   /**
+   * If set, the time at which this operation failed or was completed
+   * successfully.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Percent completion of the operation. Values are between 0 and 100
+   * inclusive.
+   *
    * @var int
    */
   public $progressPercent;
   /**
+   * Time the request was received.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * If set, the time at which this operation failed or was completed
+   * successfully.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -47,7 +58,10 @@ class OperationProgress extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param int
+   * Percent completion of the operation. Values are between 0 and 100
+   * inclusive.
+   *
+   * @param int $progressPercent
    */
   public function setProgressPercent($progressPercent)
   {
@@ -61,7 +75,9 @@ class OperationProgress extends \Google\Model
     return $this->progressPercent;
   }
   /**
-   * @param string
+   * Time the request was received.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

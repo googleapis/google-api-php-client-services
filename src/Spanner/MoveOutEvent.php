@@ -20,12 +20,20 @@ namespace Google\Service\Spanner;
 class MoveOutEvent extends \Google\Model
 {
   /**
+   * An unique partition identifier describing the destination change stream
+   * partition that will record changes for the key range that is moving out of
+   * this partition.
+   *
    * @var string
    */
   public $destinationPartitionToken;
 
   /**
-   * @param string
+   * An unique partition identifier describing the destination change stream
+   * partition that will record changes for the key range that is moving out of
+   * this partition.
+   *
+   * @param string $destinationPartitionToken
    */
   public function setDestinationPartitionToken($destinationPartitionToken)
   {

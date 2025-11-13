@@ -20,28 +20,40 @@ namespace Google\Service\Spanner;
 class PrefixNode extends \Google\Model
 {
   /**
+   * Whether this corresponds to a data_source name.
+   *
    * @var bool
    */
   public $dataSourceNode;
   /**
+   * The depth in the prefix hierarchy.
+   *
    * @var int
    */
   public $depth;
   /**
+   * The index of the end key bucket of the range that this node spans.
+   *
    * @var int
    */
   public $endIndex;
   /**
+   * The index of the start key bucket of the range that this node spans.
+   *
    * @var int
    */
   public $startIndex;
   /**
+   * The string represented by the prefix node.
+   *
    * @var string
    */
   public $word;
 
   /**
-   * @param bool
+   * Whether this corresponds to a data_source name.
+   *
+   * @param bool $dataSourceNode
    */
   public function setDataSourceNode($dataSourceNode)
   {
@@ -55,7 +67,9 @@ class PrefixNode extends \Google\Model
     return $this->dataSourceNode;
   }
   /**
-   * @param int
+   * The depth in the prefix hierarchy.
+   *
+   * @param int $depth
    */
   public function setDepth($depth)
   {
@@ -69,7 +83,9 @@ class PrefixNode extends \Google\Model
     return $this->depth;
   }
   /**
-   * @param int
+   * The index of the end key bucket of the range that this node spans.
+   *
+   * @param int $endIndex
    */
   public function setEndIndex($endIndex)
   {
@@ -83,7 +99,9 @@ class PrefixNode extends \Google\Model
     return $this->endIndex;
   }
   /**
-   * @param int
+   * The index of the start key bucket of the range that this node spans.
+   *
+   * @param int $startIndex
    */
   public function setStartIndex($startIndex)
   {
@@ -97,7 +115,9 @@ class PrefixNode extends \Google\Model
     return $this->startIndex;
   }
   /**
-   * @param string
+   * The string represented by the prefix node.
+   *
+   * @param string $word
    */
   public function setWord($word)
   {
