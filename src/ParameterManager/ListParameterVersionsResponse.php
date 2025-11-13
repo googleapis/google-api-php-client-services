@@ -21,18 +21,24 @@ class ListParameterVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $parameterVersionsType = ParameterVersion::class;
   protected $parameterVersionsDataType = 'array';
   /**
+   * Unordered list. Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListParameterVersionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ParameterVersion[]
+   * The list of ParameterVersions
+   *
+   * @param ParameterVersion[] $parameterVersions
    */
   public function setParameterVersions($parameterVersions)
   {
@@ -60,7 +68,9 @@ class ListParameterVersionsResponse extends \Google\Collection
     return $this->parameterVersions;
   }
   /**
-   * @param string[]
+   * Unordered list. Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

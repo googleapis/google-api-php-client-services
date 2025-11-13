@@ -20,12 +20,16 @@ namespace Google\Service\ParameterManager;
 class ParameterVersionPayload extends \Google\Model
 {
   /**
+   * Required. bytes data for storing payload.
+   *
    * @var string
    */
   public $data;
 
   /**
-   * @param string
+   * Required. bytes data for storing payload.
+   *
+   * @param string $data
    */
   public function setData($data)
   {

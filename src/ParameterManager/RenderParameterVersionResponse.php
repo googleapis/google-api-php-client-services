@@ -20,18 +20,29 @@ namespace Google\Service\ParameterManager;
 class RenderParameterVersionResponse extends \Google\Model
 {
   /**
+   * Output only. Resource identifier of a ParameterVersion in the format
+   * `projects/locations/parameters/versions`.
+   *
    * @var string
    */
   public $parameterVersion;
   protected $payloadType = ParameterVersionPayload::class;
   protected $payloadDataType = '';
   /**
+   * Output only. Server generated rendered version of the user provided payload
+   * data (ParameterVersionPayload) which has substitutions of all (if any)
+   * references to a SecretManager SecretVersion resources. This substitution
+   * only works for a Parameter which is in JSON or YAML format.
+   *
    * @var string
    */
   public $renderedPayload;
 
   /**
-   * @param string
+   * Output only. Resource identifier of a ParameterVersion in the format
+   * `projects/locations/parameters/versions`.
+   *
+   * @param string $parameterVersion
    */
   public function setParameterVersion($parameterVersion)
   {
@@ -45,7 +56,9 @@ class RenderParameterVersionResponse extends \Google\Model
     return $this->parameterVersion;
   }
   /**
-   * @param ParameterVersionPayload
+   * Payload content of a ParameterVersion resource.
+   *
+   * @param ParameterVersionPayload $payload
    */
   public function setPayload(ParameterVersionPayload $payload)
   {
@@ -59,7 +72,12 @@ class RenderParameterVersionResponse extends \Google\Model
     return $this->payload;
   }
   /**
-   * @param string
+   * Output only. Server generated rendered version of the user provided payload
+   * data (ParameterVersionPayload) which has substitutions of all (if any)
+   * references to a SecretManager SecretVersion resources. This substitution
+   * only works for a Parameter which is in JSON or YAML format.
+   *
+   * @param string $renderedPayload
    */
   public function setRenderedPayload($renderedPayload)
   {
