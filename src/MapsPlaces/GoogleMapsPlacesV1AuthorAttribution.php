@@ -20,20 +20,28 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1AuthorAttribution extends \Google\Model
 {
   /**
+   * Name of the author of the Photo or Review.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Profile photo URI of the author of the Photo or Review.
+   *
    * @var string
    */
   public $photoUri;
   /**
+   * URI of the author of the Photo or Review.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Name of the author of the Photo or Review.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +55,9 @@ class GoogleMapsPlacesV1AuthorAttribution extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Profile photo URI of the author of the Photo or Review.
+   *
+   * @param string $photoUri
    */
   public function setPhotoUri($photoUri)
   {
@@ -61,7 +71,9 @@ class GoogleMapsPlacesV1AuthorAttribution extends \Google\Model
     return $this->photoUri;
   }
   /**
-   * @param string
+   * URI of the author of the Photo or Review.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

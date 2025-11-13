@@ -29,7 +29,7 @@ class GoogleMapsPlacesV1ContextualContentJustificationReviewJustificationHighlig
   public $startIndex;
 
   /**
-   * @param int
+   * @param int $endIndex
    */
   public function setEndIndex($endIndex)
   {
@@ -43,7 +43,7 @@ class GoogleMapsPlacesV1ContextualContentJustificationReviewJustificationHighlig
     return $this->endIndex;
   }
   /**
-   * @param int
+   * @param int $startIndex
    */
   public function setStartIndex($startIndex)
   {

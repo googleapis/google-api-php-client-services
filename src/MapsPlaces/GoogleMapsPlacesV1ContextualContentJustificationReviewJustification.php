@@ -25,7 +25,7 @@ class GoogleMapsPlacesV1ContextualContentJustificationReviewJustification extend
   protected $reviewDataType = '';
 
   /**
-   * @param GoogleMapsPlacesV1ContextualContentJustificationReviewJustificationHighlightedText
+   * @param GoogleMapsPlacesV1ContextualContentJustificationReviewJustificationHighlightedText $highlightedText
    */
   public function setHighlightedText(GoogleMapsPlacesV1ContextualContentJustificationReviewJustificationHighlightedText $highlightedText)
   {
@@ -39,7 +39,9 @@ class GoogleMapsPlacesV1ContextualContentJustificationReviewJustification extend
     return $this->highlightedText;
   }
   /**
-   * @param GoogleMapsPlacesV1Review
+   * The review that the highlighted text is generated from.
+   *
+   * @param GoogleMapsPlacesV1Review $review
    */
   public function setReview(GoogleMapsPlacesV1Review $review)
   {

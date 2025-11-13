@@ -26,7 +26,10 @@ class GoogleMapsPlacesV1AddressDescriptor extends \Google\Collection
   protected $landmarksDataType = 'array';
 
   /**
-   * @param GoogleMapsPlacesV1AddressDescriptorArea[]
+   * A ranked list of containing or adjacent areas. The most recognizable and
+   * precise areas are ranked first.
+   *
+   * @param GoogleMapsPlacesV1AddressDescriptorArea[] $areas
    */
   public function setAreas($areas)
   {
@@ -40,7 +43,10 @@ class GoogleMapsPlacesV1AddressDescriptor extends \Google\Collection
     return $this->areas;
   }
   /**
-   * @param GoogleMapsPlacesV1AddressDescriptorLandmark[]
+   * A ranked list of nearby landmarks. The most recognizable and nearby
+   * landmarks are ranked first.
+   *
+   * @param GoogleMapsPlacesV1AddressDescriptorLandmark[] $landmarks
    */
   public function setLandmarks($landmarks)
   {

@@ -23,7 +23,9 @@ class GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay extends \Google\Model
   protected $dateDataType = '';
 
   /**
-   * @param GoogleTypeDate
+   * The date of this special day.
+   *
+   * @param GoogleTypeDate $date
    */
   public function setDate(GoogleTypeDate $date)
   {

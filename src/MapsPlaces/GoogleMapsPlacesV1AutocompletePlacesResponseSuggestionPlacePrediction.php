@@ -21,14 +21,23 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionPlacePrediction exte
 {
   protected $collection_key = 'types';
   /**
+   * The length of the geodesic in meters from `origin` if `origin` is
+   * specified. Certain predictions such as routes may not populate this field.
+   *
    * @var int
    */
   public $distanceMeters;
   /**
+   * The resource name of the suggested Place. This name can be used in other
+   * APIs that accept Place names.
+   *
    * @var string
    */
   public $place;
   /**
+   * The unique identifier of the suggested Place. This identifier can be used
+   * in other APIs that accept Place IDs.
+   *
    * @var string
    */
   public $placeId;
@@ -37,12 +46,20 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionPlacePrediction exte
   protected $textType = GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionFormattableText::class;
   protected $textDataType = '';
   /**
+   * List of types that apply to this Place from Table A or Table B in
+   * https://developers.google.com/maps/documentation/places/web-service/place-
+   * types. A type is a categorization of a Place. Places with shared types will
+   * share similar characteristics.
+   *
    * @var string[]
    */
   public $types;
 
   /**
-   * @param int
+   * The length of the geodesic in meters from `origin` if `origin` is
+   * specified. Certain predictions such as routes may not populate this field.
+   *
+   * @param int $distanceMeters
    */
   public function setDistanceMeters($distanceMeters)
   {
@@ -56,7 +73,10 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionPlacePrediction exte
     return $this->distanceMeters;
   }
   /**
-   * @param string
+   * The resource name of the suggested Place. This name can be used in other
+   * APIs that accept Place names.
+   *
+   * @param string $place
    */
   public function setPlace($place)
   {
@@ -70,7 +90,10 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionPlacePrediction exte
     return $this->place;
   }
   /**
-   * @param string
+   * The unique identifier of the suggested Place. This identifier can be used
+   * in other APIs that accept Place IDs.
+   *
+   * @param string $placeId
    */
   public function setPlaceId($placeId)
   {
@@ -84,7 +107,15 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionPlacePrediction exte
     return $this->placeId;
   }
   /**
-   * @param GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStructuredFormat
+   * A breakdown of the Place prediction into main text containing the name of
+   * the Place and secondary text containing additional disambiguating features
+   * (such as a city or region). `structured_format` is recommended for
+   * developers who wish to show two separate, but related, UI elements.
+   * Developers who wish to show a single UI element may want to use `text`
+   * instead. They are two different ways to represent a Place prediction. Users
+   * should not try to parse `structured_format` into `text` or vice versa.
+   *
+   * @param GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStructuredFormat $structuredFormat
    */
   public function setStructuredFormat(GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStructuredFormat $structuredFormat)
   {
@@ -98,7 +129,18 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionPlacePrediction exte
     return $this->structuredFormat;
   }
   /**
-   * @param GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionFormattableText
+   * Contains the human-readable name for the returned result. For establishment
+   * results, this is usually the business name and address. `text` is
+   * recommended for developers who wish to show a single UI element. Developers
+   * who wish to show two separate, but related, UI elements may want to use
+   * `structured_format` instead. They are two different ways to represent a
+   * Place prediction. Users should not try to parse `structured_format` into
+   * `text` or vice versa. This text may be different from the `display_name`
+   * returned by GetPlace. May be in mixed languages if the request `input` and
+   * `language_code` are in different languages or if the Place does not have a
+   * translation from the local language to `language_code`.
+   *
+   * @param GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionFormattableText $text
    */
   public function setText(GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionFormattableText $text)
   {
@@ -112,7 +154,12 @@ class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionPlacePrediction exte
     return $this->text;
   }
   /**
-   * @param string[]
+   * List of types that apply to this Place from Table A or Table B in
+   * https://developers.google.com/maps/documentation/places/web-service/place-
+   * types. A type is a categorization of a Place. Places with shared types will
+   * share similar characteristics.
+   *
+   * @param string[] $types
    */
   public function setTypes($types)
   {

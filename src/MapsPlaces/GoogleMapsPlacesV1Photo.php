@@ -23,28 +23,42 @@ class GoogleMapsPlacesV1Photo extends \Google\Collection
   protected $authorAttributionsType = GoogleMapsPlacesV1AuthorAttribution::class;
   protected $authorAttributionsDataType = 'array';
   /**
+   * A link where users can flag a problem with the photo.
+   *
    * @var string
    */
   public $flagContentUri;
   /**
+   * A link to show the photo on Google Maps.
+   *
    * @var string
    */
   public $googleMapsUri;
   /**
+   * The maximum available height, in pixels.
+   *
    * @var int
    */
   public $heightPx;
   /**
+   * Identifier. A reference representing this place photo which may be used to
+   * look up this place photo again (also called the API "resource" name:
+   * `places/{place_id}/photos/{photo}`).
+   *
    * @var string
    */
   public $name;
   /**
+   * The maximum available width, in pixels.
+   *
    * @var int
    */
   public $widthPx;
 
   /**
-   * @param GoogleMapsPlacesV1AuthorAttribution[]
+   * This photo's authors.
+   *
+   * @param GoogleMapsPlacesV1AuthorAttribution[] $authorAttributions
    */
   public function setAuthorAttributions($authorAttributions)
   {
@@ -58,7 +72,9 @@ class GoogleMapsPlacesV1Photo extends \Google\Collection
     return $this->authorAttributions;
   }
   /**
-   * @param string
+   * A link where users can flag a problem with the photo.
+   *
+   * @param string $flagContentUri
    */
   public function setFlagContentUri($flagContentUri)
   {
@@ -72,7 +88,9 @@ class GoogleMapsPlacesV1Photo extends \Google\Collection
     return $this->flagContentUri;
   }
   /**
-   * @param string
+   * A link to show the photo on Google Maps.
+   *
+   * @param string $googleMapsUri
    */
   public function setGoogleMapsUri($googleMapsUri)
   {
@@ -86,7 +104,9 @@ class GoogleMapsPlacesV1Photo extends \Google\Collection
     return $this->googleMapsUri;
   }
   /**
-   * @param int
+   * The maximum available height, in pixels.
+   *
+   * @param int $heightPx
    */
   public function setHeightPx($heightPx)
   {
@@ -100,7 +120,11 @@ class GoogleMapsPlacesV1Photo extends \Google\Collection
     return $this->heightPx;
   }
   /**
-   * @param string
+   * Identifier. A reference representing this place photo which may be used to
+   * look up this place photo again (also called the API "resource" name:
+   * `places/{place_id}/photos/{photo}`).
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -114,7 +138,9 @@ class GoogleMapsPlacesV1Photo extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * The maximum available width, in pixels.
+   *
+   * @param int $widthPx
    */
   public function setWidthPx($widthPx)
   {

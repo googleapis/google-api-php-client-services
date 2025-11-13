@@ -24,12 +24,18 @@ class GoogleMapsPlacesV1PlaceGenerativeSummary extends \Google\Model
   protected $overviewType = GoogleTypeLocalizedText::class;
   protected $overviewDataType = '';
   /**
+   * A link where users can flag a problem with the overview summary.
+   *
    * @var string
    */
   public $overviewFlagContentUri;
 
   /**
-   * @param GoogleTypeLocalizedText
+   * The AI disclosure message "Summarized with Gemini" (and its localized
+   * variants). This will be in the language specified in the request if
+   * available.
+   *
+   * @param GoogleTypeLocalizedText $disclosureText
    */
   public function setDisclosureText(GoogleTypeLocalizedText $disclosureText)
   {
@@ -43,7 +49,9 @@ class GoogleMapsPlacesV1PlaceGenerativeSummary extends \Google\Model
     return $this->disclosureText;
   }
   /**
-   * @param GoogleTypeLocalizedText
+   * The overview of the place.
+   *
+   * @param GoogleTypeLocalizedText $overview
    */
   public function setOverview(GoogleTypeLocalizedText $overview)
   {
@@ -57,7 +65,9 @@ class GoogleMapsPlacesV1PlaceGenerativeSummary extends \Google\Model
     return $this->overview;
   }
   /**
-   * @param string
+   * A link where users can flag a problem with the overview summary.
+   *
+   * @param string $overviewFlagContentUri
    */
   public function setOverviewFlagContentUri($overviewFlagContentUri)
   {

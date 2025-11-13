@@ -21,24 +21,38 @@ class GoogleMapsPlacesV1PlaceAddressComponent extends \Google\Collection
 {
   protected $collection_key = 'types';
   /**
+   * The language used to format this components, in CLDR notation.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * The full text description or name of the address component. For example, an
+   * address component for the country Australia may have a long_name of
+   * "Australia".
+   *
    * @var string
    */
   public $longText;
   /**
+   * An abbreviated textual name for the address component, if available. For
+   * example, an address component for the country of Australia may have a
+   * short_name of "AU".
+   *
    * @var string
    */
   public $shortText;
   /**
+   * An array indicating the type(s) of the address component.
+   *
    * @var string[]
    */
   public $types;
 
   /**
-   * @param string
+   * The language used to format this components, in CLDR notation.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -52,7 +66,11 @@ class GoogleMapsPlacesV1PlaceAddressComponent extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param string
+   * The full text description or name of the address component. For example, an
+   * address component for the country Australia may have a long_name of
+   * "Australia".
+   *
+   * @param string $longText
    */
   public function setLongText($longText)
   {
@@ -66,7 +84,11 @@ class GoogleMapsPlacesV1PlaceAddressComponent extends \Google\Collection
     return $this->longText;
   }
   /**
-   * @param string
+   * An abbreviated textual name for the address component, if available. For
+   * example, an address component for the country of Australia may have a
+   * short_name of "AU".
+   *
+   * @param string $shortText
    */
   public function setShortText($shortText)
   {
@@ -80,7 +102,9 @@ class GoogleMapsPlacesV1PlaceAddressComponent extends \Google\Collection
     return $this->shortText;
   }
   /**
-   * @param string[]
+   * An array indicating the type(s) of the address component.
+   *
+   * @param string[] $types
    */
   public function setTypes($types)
   {

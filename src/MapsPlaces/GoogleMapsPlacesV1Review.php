@@ -22,25 +22,43 @@ class GoogleMapsPlacesV1Review extends \Google\Model
   protected $authorAttributionType = GoogleMapsPlacesV1AuthorAttribution::class;
   protected $authorAttributionDataType = '';
   /**
+   * A link where users can flag a problem with the review.
+   *
    * @var string
    */
   public $flagContentUri;
   /**
+   * A link to show the review on Google Maps.
+   *
    * @var string
    */
   public $googleMapsUri;
   /**
+   * A reference representing this place review which may be used to look up
+   * this place review again (also called the API "resource" name:
+   * `places/{place_id}/reviews/{review}`).
+   *
    * @var string
    */
   public $name;
   protected $originalTextType = GoogleTypeLocalizedText::class;
   protected $originalTextDataType = '';
   /**
+   * Timestamp for the review.
+   *
    * @var string
    */
   public $publishTime;
+  /**
+   * A number between 1.0 and 5.0, also called the number of stars.
+   *
+   * @var 
+   */
   public $rating;
   /**
+   * A string of formatted recent time, expressing the review time relative to
+   * the current time in a form appropriate for the language and country.
+   *
    * @var string
    */
   public $relativePublishTimeDescription;
@@ -50,7 +68,9 @@ class GoogleMapsPlacesV1Review extends \Google\Model
   protected $visitDateDataType = '';
 
   /**
-   * @param GoogleMapsPlacesV1AuthorAttribution
+   * This review's author.
+   *
+   * @param GoogleMapsPlacesV1AuthorAttribution $authorAttribution
    */
   public function setAuthorAttribution(GoogleMapsPlacesV1AuthorAttribution $authorAttribution)
   {
@@ -64,7 +84,9 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->authorAttribution;
   }
   /**
-   * @param string
+   * A link where users can flag a problem with the review.
+   *
+   * @param string $flagContentUri
    */
   public function setFlagContentUri($flagContentUri)
   {
@@ -78,7 +100,9 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->flagContentUri;
   }
   /**
-   * @param string
+   * A link to show the review on Google Maps.
+   *
+   * @param string $googleMapsUri
    */
   public function setGoogleMapsUri($googleMapsUri)
   {
@@ -92,7 +116,11 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->googleMapsUri;
   }
   /**
-   * @param string
+   * A reference representing this place review which may be used to look up
+   * this place review again (also called the API "resource" name:
+   * `places/{place_id}/reviews/{review}`).
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -106,7 +134,9 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleTypeLocalizedText
+   * The review text in its original language.
+   *
+   * @param GoogleTypeLocalizedText $originalText
    */
   public function setOriginalText(GoogleTypeLocalizedText $originalText)
   {
@@ -120,7 +150,9 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->originalText;
   }
   /**
-   * @param string
+   * Timestamp for the review.
+   *
+   * @param string $publishTime
    */
   public function setPublishTime($publishTime)
   {
@@ -142,7 +174,10 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->rating;
   }
   /**
-   * @param string
+   * A string of formatted recent time, expressing the review time relative to
+   * the current time in a form appropriate for the language and country.
+   *
+   * @param string $relativePublishTimeDescription
    */
   public function setRelativePublishTimeDescription($relativePublishTimeDescription)
   {
@@ -156,7 +191,9 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->relativePublishTimeDescription;
   }
   /**
-   * @param GoogleTypeLocalizedText
+   * The localized text of the review.
+   *
+   * @param GoogleTypeLocalizedText $text
    */
   public function setText(GoogleTypeLocalizedText $text)
   {
@@ -170,7 +207,10 @@ class GoogleMapsPlacesV1Review extends \Google\Model
     return $this->text;
   }
   /**
-   * @param GoogleTypeDate
+   * The date when the author visited the place. This is truncated to the year
+   * and month of the visit.
+   *
+   * @param GoogleTypeDate $visitDate
    */
   public function setVisitDate(GoogleTypeDate $visitDate)
   {

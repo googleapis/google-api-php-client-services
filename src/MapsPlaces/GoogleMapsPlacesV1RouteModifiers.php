@@ -20,24 +20,44 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1RouteModifiers extends \Google\Model
 {
   /**
+   * Optional. When set to true, avoids ferries where reasonable, giving
+   * preference to routes not containing ferries. Applies only to the `DRIVE`
+   * and `TWO_WHEELER` `TravelMode`.
+   *
    * @var bool
    */
   public $avoidFerries;
   /**
+   * Optional. When set to true, avoids highways where reasonable, giving
+   * preference to routes not containing highways. Applies only to the `DRIVE`
+   * and `TWO_WHEELER` `TravelMode`.
+   *
    * @var bool
    */
   public $avoidHighways;
   /**
+   * Optional. When set to true, avoids navigating indoors where reasonable,
+   * giving preference to routes not containing indoor navigation. Applies only
+   * to the `WALK` `TravelMode`.
+   *
    * @var bool
    */
   public $avoidIndoor;
   /**
+   * Optional. When set to true, avoids toll roads where reasonable, giving
+   * preference to routes not containing toll roads. Applies only to the `DRIVE`
+   * and `TWO_WHEELER` `TravelMode`.
+   *
    * @var bool
    */
   public $avoidTolls;
 
   /**
-   * @param bool
+   * Optional. When set to true, avoids ferries where reasonable, giving
+   * preference to routes not containing ferries. Applies only to the `DRIVE`
+   * and `TWO_WHEELER` `TravelMode`.
+   *
+   * @param bool $avoidFerries
    */
   public function setAvoidFerries($avoidFerries)
   {
@@ -51,7 +71,11 @@ class GoogleMapsPlacesV1RouteModifiers extends \Google\Model
     return $this->avoidFerries;
   }
   /**
-   * @param bool
+   * Optional. When set to true, avoids highways where reasonable, giving
+   * preference to routes not containing highways. Applies only to the `DRIVE`
+   * and `TWO_WHEELER` `TravelMode`.
+   *
+   * @param bool $avoidHighways
    */
   public function setAvoidHighways($avoidHighways)
   {
@@ -65,7 +89,11 @@ class GoogleMapsPlacesV1RouteModifiers extends \Google\Model
     return $this->avoidHighways;
   }
   /**
-   * @param bool
+   * Optional. When set to true, avoids navigating indoors where reasonable,
+   * giving preference to routes not containing indoor navigation. Applies only
+   * to the `WALK` `TravelMode`.
+   *
+   * @param bool $avoidIndoor
    */
   public function setAvoidIndoor($avoidIndoor)
   {
@@ -79,7 +107,11 @@ class GoogleMapsPlacesV1RouteModifiers extends \Google\Model
     return $this->avoidIndoor;
   }
   /**
-   * @param bool
+   * Optional. When set to true, avoids toll roads where reasonable, giving
+   * preference to routes not containing toll roads. Applies only to the `DRIVE`
+   * and `TWO_WHEELER` `TravelMode`.
+   *
+   * @param bool $avoidTolls
    */
   public function setAvoidTolls($avoidTolls)
   {

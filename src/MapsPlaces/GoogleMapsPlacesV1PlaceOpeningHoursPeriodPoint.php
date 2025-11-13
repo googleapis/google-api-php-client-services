@@ -22,24 +22,38 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends \Google\Model
   protected $dateType = GoogleTypeDate::class;
   protected $dateDataType = '';
   /**
+   * A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is
+   * Monday, etc.
+   *
    * @var int
    */
   public $day;
   /**
+   * The hour in 24 hour format. Ranges from 0 to 23.
+   *
    * @var int
    */
   public $hour;
   /**
+   * The minute. Ranges from 0 to 59.
+   *
    * @var int
    */
   public $minute;
   /**
+   * Whether or not this endpoint was truncated. Truncation occurs when the real
+   * hours are outside the times we are willing to return hours between, so we
+   * truncate the hours back to these boundaries. This ensures that at most 24 *
+   * 7 hours from midnight of the day of the request are returned.
+   *
    * @var bool
    */
   public $truncated;
 
   /**
-   * @param GoogleTypeDate
+   * Date in the local timezone for the place.
+   *
+   * @param GoogleTypeDate $date
    */
   public function setDate(GoogleTypeDate $date)
   {
@@ -53,7 +67,10 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends \Google\Model
     return $this->date;
   }
   /**
-   * @param int
+   * A day of the week, as an integer in the range 0-6. 0 is Sunday, 1 is
+   * Monday, etc.
+   *
+   * @param int $day
    */
   public function setDay($day)
   {
@@ -67,7 +84,9 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends \Google\Model
     return $this->day;
   }
   /**
-   * @param int
+   * The hour in 24 hour format. Ranges from 0 to 23.
+   *
+   * @param int $hour
    */
   public function setHour($hour)
   {
@@ -81,7 +100,9 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends \Google\Model
     return $this->hour;
   }
   /**
-   * @param int
+   * The minute. Ranges from 0 to 59.
+   *
+   * @param int $minute
    */
   public function setMinute($minute)
   {
@@ -95,7 +116,12 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint extends \Google\Model
     return $this->minute;
   }
   /**
-   * @param bool
+   * Whether or not this endpoint was truncated. Truncation occurs when the real
+   * hours are outside the times we are willing to return hours between, so we
+   * truncate the hours back to these boundaries. This ensures that at most 24 *
+   * 7 hours from midnight of the day of the request are returned.
+   *
+   * @param bool $truncated
    */
   public function setTruncated($truncated)
   {

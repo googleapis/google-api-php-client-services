@@ -25,7 +25,9 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriod extends \Google\Model
   protected $openDataType = '';
 
   /**
-   * @param GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint
+   * The time that the place starts to be closed.
+   *
+   * @param GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint $close
    */
   public function setClose(GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint $close)
   {
@@ -39,7 +41,9 @@ class GoogleMapsPlacesV1PlaceOpeningHoursPeriod extends \Google\Model
     return $this->close;
   }
   /**
-   * @param GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint
+   * The time that the place starts to be open.
+   *
+   * @param GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint $open
    */
   public function setOpen(GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint $open)
   {
