@@ -20,14 +20,21 @@ namespace Google\Service\YouTube;
 class VideoCategory extends \Google\Model
 {
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID that YouTube uses to uniquely identify the video category.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#videoCategory".
+   *
    * @var string
    */
   public $kind;
@@ -35,7 +42,9 @@ class VideoCategory extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -49,7 +58,9 @@ class VideoCategory extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the video category.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +74,10 @@ class VideoCategory extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#videoCategory".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -77,7 +91,10 @@ class VideoCategory extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param VideoCategorySnippet
+   * The snippet object contains basic details about the video category,
+   * including its title.
+   *
+   * @param VideoCategorySnippet $snippet
    */
   public function setSnippet(VideoCategorySnippet $snippet)
   {

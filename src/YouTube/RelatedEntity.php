@@ -23,7 +23,7 @@ class RelatedEntity extends \Google\Model
   protected $entityDataType = '';
 
   /**
-   * @param Entity
+   * @param Entity $entity
    */
   public function setEntity(Entity $entity)
   {

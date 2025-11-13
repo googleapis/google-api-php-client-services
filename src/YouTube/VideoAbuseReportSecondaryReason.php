@@ -20,16 +20,22 @@ namespace Google\Service\YouTube;
 class VideoAbuseReportSecondaryReason extends \Google\Model
 {
   /**
+   * The ID of this abuse report secondary reason.
+   *
    * @var string
    */
   public $id;
   /**
+   * The localized label for this abuse report secondary reason.
+   *
    * @var string
    */
   public $label;
 
   /**
-   * @param string
+   * The ID of this abuse report secondary reason.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class VideoAbuseReportSecondaryReason extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The localized label for this abuse report secondary reason.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {

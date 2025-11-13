@@ -20,14 +20,21 @@ namespace Google\Service\YouTube;
 class MembershipsLevel extends \Google\Model
 {
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID that YouTube assigns to uniquely identify the memberships level.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#membershipsLevelListResponse".
+   *
    * @var string
    */
   public $kind;
@@ -35,7 +42,9 @@ class MembershipsLevel extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -49,7 +58,9 @@ class MembershipsLevel extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID that YouTube assigns to uniquely identify the memberships level.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +74,10 @@ class MembershipsLevel extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#membershipsLevelListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -77,7 +91,9 @@ class MembershipsLevel extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param MembershipsLevelSnippet
+   * The snippet object contains basic details about the level.
+   *
+   * @param MembershipsLevelSnippet $snippet
    */
   public function setSnippet(MembershipsLevelSnippet $snippet)
   {

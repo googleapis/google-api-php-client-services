@@ -22,14 +22,21 @@ class PlaylistItem extends \Google\Model
   protected $contentDetailsType = PlaylistItemContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID that YouTube uses to uniquely identify the playlist item.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#playlistItem".
+   *
    * @var string
    */
   public $kind;
@@ -39,7 +46,11 @@ class PlaylistItem extends \Google\Model
   protected $statusDataType = '';
 
   /**
-   * @param PlaylistItemContentDetails
+   * The contentDetails object is included in the resource if the included item
+   * is a YouTube video. The object contains additional information about the
+   * video.
+   *
+   * @param PlaylistItemContentDetails $contentDetails
    */
   public function setContentDetails(PlaylistItemContentDetails $contentDetails)
   {
@@ -53,7 +64,9 @@ class PlaylistItem extends \Google\Model
     return $this->contentDetails;
   }
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -67,7 +80,9 @@ class PlaylistItem extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the playlist item.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -81,7 +96,10 @@ class PlaylistItem extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#playlistItem".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -95,7 +113,10 @@ class PlaylistItem extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param PlaylistItemSnippet
+   * The snippet object contains basic details about the playlist item, such as
+   * its title and position in the playlist.
+   *
+   * @param PlaylistItemSnippet $snippet
    */
   public function setSnippet(PlaylistItemSnippet $snippet)
   {
@@ -109,7 +130,10 @@ class PlaylistItem extends \Google\Model
     return $this->snippet;
   }
   /**
-   * @param PlaylistItemStatus
+   * The status object contains information about the playlist item's privacy
+   * status.
+   *
+   * @param PlaylistItemStatus $status
    */
   public function setStatus(PlaylistItemStatus $status)
   {

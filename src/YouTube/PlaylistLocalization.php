@@ -20,16 +20,22 @@ namespace Google\Service\YouTube;
 class PlaylistLocalization extends \Google\Model
 {
   /**
+   * The localized strings for playlist's description.
+   *
    * @var string
    */
   public $description;
   /**
+   * The localized strings for playlist's title.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The localized strings for playlist's description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +49,9 @@ class PlaylistLocalization extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The localized strings for playlist's title.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

@@ -22,14 +22,21 @@ class Subscription extends \Google\Model
   protected $contentDetailsType = SubscriptionContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID that YouTube uses to uniquely identify the subscription.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#subscription".
+   *
    * @var string
    */
   public $kind;
@@ -39,7 +46,9 @@ class Subscription extends \Google\Model
   protected $subscriberSnippetDataType = '';
 
   /**
-   * @param SubscriptionContentDetails
+   * The contentDetails object contains basic statistics about the subscription.
+   *
+   * @param SubscriptionContentDetails $contentDetails
    */
   public function setContentDetails(SubscriptionContentDetails $contentDetails)
   {
@@ -53,7 +62,9 @@ class Subscription extends \Google\Model
     return $this->contentDetails;
   }
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -67,7 +78,9 @@ class Subscription extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the subscription.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -81,7 +94,10 @@ class Subscription extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#subscription".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -95,7 +111,10 @@ class Subscription extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param SubscriptionSnippet
+   * The snippet object contains basic details about the subscription, including
+   * its title and the channel that the user subscribed to.
+   *
+   * @param SubscriptionSnippet $snippet
    */
   public function setSnippet(SubscriptionSnippet $snippet)
   {
@@ -109,7 +128,9 @@ class Subscription extends \Google\Model
     return $this->snippet;
   }
   /**
-   * @param SubscriptionSubscriberSnippet
+   * The subscriberSnippet object contains basic details about the subscriber.
+   *
+   * @param SubscriptionSubscriberSnippet $subscriberSnippet
    */
   public function setSubscriberSnippet(SubscriptionSubscriberSnippet $subscriberSnippet)
   {

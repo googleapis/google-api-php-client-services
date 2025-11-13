@@ -19,29 +19,60 @@ namespace Google\Service\YouTube;
 
 class VideoFileDetailsVideoStream extends \Google\Model
 {
+  public const ROTATION_none = 'none';
+  public const ROTATION_clockwise = 'clockwise';
+  public const ROTATION_upsideDown = 'upsideDown';
+  public const ROTATION_counterClockwise = 'counterClockwise';
+  public const ROTATION_other = 'other';
+  /**
+   * The video content's display aspect ratio, which specifies the aspect ratio
+   * in which the video should be displayed.
+   *
+   * @var 
+   */
   public $aspectRatio;
   /**
+   * The video stream's bitrate, in bits per second.
+   *
    * @var string
    */
   public $bitrateBps;
   /**
+   * The video codec that the stream uses.
+   *
    * @var string
    */
   public $codec;
+  /**
+   * The video stream's frame rate, in frames per second.
+   *
+   * @var 
+   */
   public $frameRateFps;
   /**
+   * The encoded video content's height in pixels.
+   *
    * @var string
    */
   public $heightPixels;
   /**
+   * The amount that YouTube needs to rotate the original source content to
+   * properly display the video.
+   *
    * @var string
    */
   public $rotation;
   /**
+   * A value that uniquely identifies a video vendor. Typically, the value is a
+   * four-letter vendor code.
+   *
    * @var string
    */
   public $vendor;
   /**
+   * The encoded video content's width in pixels. You can calculate the video's
+   * encoding aspect ratio as width_pixels / height_pixels.
+   *
    * @var string
    */
   public $widthPixels;
@@ -55,7 +86,9 @@ class VideoFileDetailsVideoStream extends \Google\Model
     return $this->aspectRatio;
   }
   /**
-   * @param string
+   * The video stream's bitrate, in bits per second.
+   *
+   * @param string $bitrateBps
    */
   public function setBitrateBps($bitrateBps)
   {
@@ -69,7 +102,9 @@ class VideoFileDetailsVideoStream extends \Google\Model
     return $this->bitrateBps;
   }
   /**
-   * @param string
+   * The video codec that the stream uses.
+   *
+   * @param string $codec
    */
   public function setCodec($codec)
   {
@@ -91,7 +126,9 @@ class VideoFileDetailsVideoStream extends \Google\Model
     return $this->frameRateFps;
   }
   /**
-   * @param string
+   * The encoded video content's height in pixels.
+   *
+   * @param string $heightPixels
    */
   public function setHeightPixels($heightPixels)
   {
@@ -105,21 +142,29 @@ class VideoFileDetailsVideoStream extends \Google\Model
     return $this->heightPixels;
   }
   /**
-   * @param string
+   * The amount that YouTube needs to rotate the original source content to
+   * properly display the video.
+   *
+   * Accepted values: none, clockwise, upsideDown, counterClockwise, other
+   *
+   * @param self::ROTATION_* $rotation
    */
   public function setRotation($rotation)
   {
     $this->rotation = $rotation;
   }
   /**
-   * @return string
+   * @return self::ROTATION_*
    */
   public function getRotation()
   {
     return $this->rotation;
   }
   /**
-   * @param string
+   * A value that uniquely identifies a video vendor. Typically, the value is a
+   * four-letter vendor code.
+   *
+   * @param string $vendor
    */
   public function setVendor($vendor)
   {
@@ -133,7 +178,10 @@ class VideoFileDetailsVideoStream extends \Google\Model
     return $this->vendor;
   }
   /**
-   * @param string
+   * The encoded video content's width in pixels. You can calculate the video's
+   * encoding aspect ratio as width_pixels / height_pixels.
+   *
+   * @param string $widthPixels
    */
   public function setWidthPixels($widthPixels)
   {

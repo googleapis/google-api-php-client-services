@@ -19,6 +19,11 @@ namespace Google\Service\YouTube;
 
 class LiveStreamStatus extends \Google\Model
 {
+  public const STREAM_STATUS_created = 'created';
+  public const STREAM_STATUS_ready = 'ready';
+  public const STREAM_STATUS_active = 'active';
+  public const STREAM_STATUS_inactive = 'inactive';
+  public const STREAM_STATUS_error = 'error';
   protected $healthStatusType = LiveStreamHealthStatus::class;
   protected $healthStatusDataType = '';
   /**
@@ -27,7 +32,9 @@ class LiveStreamStatus extends \Google\Model
   public $streamStatus;
 
   /**
-   * @param LiveStreamHealthStatus
+   * The health status of the stream.
+   *
+   * @param LiveStreamHealthStatus $healthStatus
    */
   public function setHealthStatus(LiveStreamHealthStatus $healthStatus)
   {
@@ -41,14 +48,14 @@ class LiveStreamStatus extends \Google\Model
     return $this->healthStatus;
   }
   /**
-   * @param string
+   * @param self::STREAM_STATUS_* $streamStatus
    */
   public function setStreamStatus($streamStatus)
   {
     $this->streamStatus = $streamStatus;
   }
   /**
-   * @return string
+   * @return self::STREAM_STATUS_*
    */
   public function getStreamStatus()
   {

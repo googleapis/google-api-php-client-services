@@ -21,26 +21,39 @@ class SearchListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Serialized EventId of the request which produced this response.
+   *
    * @var string
    */
   public $eventId;
   protected $itemsType = SearchResult::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#searchListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the next page in the result set.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the previous page in the result set.
+   *
    * @var string
    */
   public $prevPageToken;
@@ -51,12 +64,16 @@ class SearchListResponse extends \Google\Collection
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**
+   * The visitorId identifies the visitor.
+   *
    * @var string
    */
   public $visitorId;
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -70,7 +87,9 @@ class SearchListResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Serialized EventId of the request which produced this response.
+   *
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {
@@ -84,7 +103,9 @@ class SearchListResponse extends \Google\Collection
     return $this->eventId;
   }
   /**
-   * @param SearchResult[]
+   * Pagination information for token pagination.
+   *
+   * @param SearchResult[] $items
    */
   public function setItems($items)
   {
@@ -98,7 +119,10 @@ class SearchListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#searchListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -112,7 +136,10 @@ class SearchListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the next page in the result set.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -126,7 +153,9 @@ class SearchListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PageInfo
+   * General pagination information.
+   *
+   * @param PageInfo $pageInfo
    */
   public function setPageInfo(PageInfo $pageInfo)
   {
@@ -140,7 +169,10 @@ class SearchListResponse extends \Google\Collection
     return $this->pageInfo;
   }
   /**
-   * @param string
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the previous page in the result set.
+   *
+   * @param string $prevPageToken
    */
   public function setPrevPageToken($prevPageToken)
   {
@@ -154,7 +186,7 @@ class SearchListResponse extends \Google\Collection
     return $this->prevPageToken;
   }
   /**
-   * @param string
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {
@@ -168,7 +200,7 @@ class SearchListResponse extends \Google\Collection
     return $this->regionCode;
   }
   /**
-   * @param TokenPagination
+   * @param TokenPagination $tokenPagination
    */
   public function setTokenPagination(TokenPagination $tokenPagination)
   {
@@ -182,7 +214,9 @@ class SearchListResponse extends \Google\Collection
     return $this->tokenPagination;
   }
   /**
-   * @param string
+   * The visitorId identifies the visitor.
+   *
+   * @param string $visitorId
    */
   public function setVisitorId($visitorId)
   {

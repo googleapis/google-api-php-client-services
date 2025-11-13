@@ -20,20 +20,37 @@ namespace Google\Service\YouTube;
 class MonitorStreamInfo extends \Google\Model
 {
   /**
+   * If you have set the enableMonitorStream property to true, then this
+   * property determines the length of the live broadcast delay.
+   *
    * @var string
    */
   public $broadcastStreamDelayMs;
   /**
+   * HTML code that embeds a player that plays the monitor stream.
+   *
    * @var string
    */
   public $embedHtml;
   /**
+   * This value determines whether the monitor stream is enabled for the
+   * broadcast. If the monitor stream is enabled, then YouTube will broadcast
+   * the event content on a special stream intended only for the broadcaster's
+   * consumption. The broadcaster can use the stream to review the event content
+   * and also to identify the optimal times to insert cuepoints. You need to set
+   * this value to true if you intend to have a broadcast delay for your event.
+   * *Note:* This property cannot be updated once the broadcast is in the
+   * testing or live state.
+   *
    * @var bool
    */
   public $enableMonitorStream;
 
   /**
-   * @param string
+   * If you have set the enableMonitorStream property to true, then this
+   * property determines the length of the live broadcast delay.
+   *
+   * @param string $broadcastStreamDelayMs
    */
   public function setBroadcastStreamDelayMs($broadcastStreamDelayMs)
   {
@@ -47,7 +64,9 @@ class MonitorStreamInfo extends \Google\Model
     return $this->broadcastStreamDelayMs;
   }
   /**
-   * @param string
+   * HTML code that embeds a player that plays the monitor stream.
+   *
+   * @param string $embedHtml
    */
   public function setEmbedHtml($embedHtml)
   {
@@ -61,7 +80,16 @@ class MonitorStreamInfo extends \Google\Model
     return $this->embedHtml;
   }
   /**
-   * @param bool
+   * This value determines whether the monitor stream is enabled for the
+   * broadcast. If the monitor stream is enabled, then YouTube will broadcast
+   * the event content on a special stream intended only for the broadcaster's
+   * consumption. The broadcaster can use the stream to review the event content
+   * and also to identify the optimal times to insert cuepoints. You need to set
+   * this value to true if you intend to have a broadcast delay for your event.
+   * *Note:* This property cannot be updated once the broadcast is in the
+   * testing or live state.
+   *
+   * @param bool $enableMonitorStream
    */
   public function setEnableMonitorStream($enableMonitorStream)
   {

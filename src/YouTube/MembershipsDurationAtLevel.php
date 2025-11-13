@@ -20,20 +20,30 @@ namespace Google\Service\YouTube;
 class MembershipsDurationAtLevel extends \Google\Model
 {
   /**
+   * Pricing level ID.
+   *
    * @var string
    */
   public $level;
   /**
+   * The date and time when the user became a continuous member for the given
+   * level.
+   *
    * @var string
    */
   public $memberSince;
   /**
+   * The cumulative time the user has been a member for the given level in
+   * complete months (the time is rounded down to the nearest integer).
+   *
    * @var int
    */
   public $memberTotalDurationMonths;
 
   /**
-   * @param string
+   * Pricing level ID.
+   *
+   * @param string $level
    */
   public function setLevel($level)
   {
@@ -47,7 +57,10 @@ class MembershipsDurationAtLevel extends \Google\Model
     return $this->level;
   }
   /**
-   * @param string
+   * The date and time when the user became a continuous member for the given
+   * level.
+   *
+   * @param string $memberSince
    */
   public function setMemberSince($memberSince)
   {
@@ -61,7 +74,10 @@ class MembershipsDurationAtLevel extends \Google\Model
     return $this->memberSince;
   }
   /**
-   * @param int
+   * The cumulative time the user has been a member for the given level in
+   * complete months (the time is rounded down to the nearest integer).
+   *
+   * @param int $memberTotalDurationMonths
    */
   public function setMemberTotalDurationMonths($memberTotalDurationMonths)
   {

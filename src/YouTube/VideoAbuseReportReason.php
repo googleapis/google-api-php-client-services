@@ -20,14 +20,21 @@ namespace Google\Service\YouTube;
 class VideoAbuseReportReason extends \Google\Model
 {
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID of this abuse report reason.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"youtube#videoAbuseReportReason"`.
+   *
    * @var string
    */
   public $kind;
@@ -35,7 +42,9 @@ class VideoAbuseReportReason extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -49,7 +58,9 @@ class VideoAbuseReportReason extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID of this abuse report reason.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +74,10 @@ class VideoAbuseReportReason extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"youtube#videoAbuseReportReason"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -77,7 +91,9 @@ class VideoAbuseReportReason extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param VideoAbuseReportReasonSnippet
+   * The `snippet` object contains basic details about the abuse report reason.
+   *
+   * @param VideoAbuseReportReasonSnippet $snippet
    */
   public function setSnippet(VideoAbuseReportReasonSnippet $snippet)
   {

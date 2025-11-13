@@ -23,7 +23,9 @@ class VideoMonetizationDetails extends \Google\Model
   protected $accessDataType = '';
 
   /**
-   * @param AccessPolicy
+   * The value of access indicates whether the video can be monetized or not.
+   *
+   * @param AccessPolicy $access
    */
   public function setAccess(AccessPolicy $access)
   {

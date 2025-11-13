@@ -20,24 +20,38 @@ namespace Google\Service\YouTube;
 class PlaylistImageSnippet extends \Google\Model
 {
   /**
+   * The main image that will be used for this playlist.
+   */
+  public const TYPE_hero = 'hero';
+  /**
+   * The image height.
+   *
    * @var int
    */
   public $height;
   /**
+   * The Playlist ID of the playlist this image is associated with.
+   *
    * @var string
    */
   public $playlistId;
   /**
+   * The image type.
+   *
    * @var string
    */
   public $type;
   /**
+   * The image width.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * The image height.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -51,7 +65,9 @@ class PlaylistImageSnippet extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * The Playlist ID of the playlist this image is associated with.
+   *
+   * @param string $playlistId
    */
   public function setPlaylistId($playlistId)
   {
@@ -65,21 +81,27 @@ class PlaylistImageSnippet extends \Google\Model
     return $this->playlistId;
   }
   /**
-   * @param string
+   * The image type.
+   *
+   * Accepted values: hero
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param int
+   * The image width.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

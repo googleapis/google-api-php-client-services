@@ -19,31 +19,50 @@ namespace Google\Service\YouTube;
 
 class VideoRating extends \Google\Model
 {
+  public const RATING_none = 'none';
   /**
+   * The entity is liked.
+   */
+  public const RATING_like = 'like';
+  /**
+   * The entity is disliked.
+   */
+  public const RATING_dislike = 'dislike';
+  /**
+   * Rating of a video.
+   *
    * @var string
    */
   public $rating;
   /**
+   * The ID that YouTube uses to uniquely identify the video.
+   *
    * @var string
    */
   public $videoId;
 
   /**
-   * @param string
+   * Rating of a video.
+   *
+   * Accepted values: none, like, dislike
+   *
+   * @param self::RATING_* $rating
    */
   public function setRating($rating)
   {
     $this->rating = $rating;
   }
   /**
-   * @return string
+   * @return self::RATING_*
    */
   public function getRating()
   {
     return $this->rating;
   }
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the video.
+   *
+   * @param string $videoId
    */
   public function setVideoId($videoId)
   {

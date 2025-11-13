@@ -29,7 +29,7 @@ class LocalizedString extends \Google\Model
   public $value;
 
   /**
-   * @param string
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -43,7 +43,7 @@ class LocalizedString extends \Google\Model
     return $this->language;
   }
   /**
-   * @param string
+   * @param string $value
    */
   public function setValue($value)
   {

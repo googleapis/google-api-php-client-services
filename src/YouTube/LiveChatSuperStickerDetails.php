@@ -20,26 +20,37 @@ namespace Google\Service\YouTube;
 class LiveChatSuperStickerDetails extends \Google\Model
 {
   /**
+   * A rendered string that displays the fund amount and currency to the user.
+   *
    * @var string
    */
   public $amountDisplayString;
   /**
+   * The amount purchased by the user, in micros (1,750,000 micros = 1.75).
+   *
    * @var string
    */
   public $amountMicros;
   /**
+   * The currency in which the purchase was made.
+   *
    * @var string
    */
   public $currency;
   protected $superStickerMetadataType = SuperStickerMetadata::class;
   protected $superStickerMetadataDataType = '';
   /**
+   * The tier in which the amount belongs. Lower amounts belong to lower tiers.
+   * The lowest tier is 1.
+   *
    * @var string
    */
   public $tier;
 
   /**
-   * @param string
+   * A rendered string that displays the fund amount and currency to the user.
+   *
+   * @param string $amountDisplayString
    */
   public function setAmountDisplayString($amountDisplayString)
   {
@@ -53,7 +64,9 @@ class LiveChatSuperStickerDetails extends \Google\Model
     return $this->amountDisplayString;
   }
   /**
-   * @param string
+   * The amount purchased by the user, in micros (1,750,000 micros = 1.75).
+   *
+   * @param string $amountMicros
    */
   public function setAmountMicros($amountMicros)
   {
@@ -67,7 +80,9 @@ class LiveChatSuperStickerDetails extends \Google\Model
     return $this->amountMicros;
   }
   /**
-   * @param string
+   * The currency in which the purchase was made.
+   *
+   * @param string $currency
    */
   public function setCurrency($currency)
   {
@@ -81,7 +96,9 @@ class LiveChatSuperStickerDetails extends \Google\Model
     return $this->currency;
   }
   /**
-   * @param SuperStickerMetadata
+   * Information about the Super Sticker.
+   *
+   * @param SuperStickerMetadata $superStickerMetadata
    */
   public function setSuperStickerMetadata(SuperStickerMetadata $superStickerMetadata)
   {
@@ -95,7 +112,10 @@ class LiveChatSuperStickerDetails extends \Google\Model
     return $this->superStickerMetadata;
   }
   /**
-   * @param string
+   * The tier in which the amount belongs. Lower amounts belong to lower tiers.
+   * The lowest tier is 1.
+   *
+   * @param string $tier
    */
   public function setTier($tier)
   {

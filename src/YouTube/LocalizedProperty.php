@@ -30,7 +30,7 @@ class LocalizedProperty extends \Google\Collection
   protected $localizedDataType = 'array';
 
   /**
-   * @param string
+   * @param string $default
    */
   public function setDefault($default)
   {
@@ -44,7 +44,9 @@ class LocalizedProperty extends \Google\Collection
     return $this->default;
   }
   /**
-   * @param LanguageTag
+   * The language of the default property.
+   *
+   * @param LanguageTag $defaultLanguage
    */
   public function setDefaultLanguage(LanguageTag $defaultLanguage)
   {
@@ -58,7 +60,7 @@ class LocalizedProperty extends \Google\Collection
     return $this->defaultLanguage;
   }
   /**
-   * @param LocalizedString[]
+   * @param LocalizedString[] $localized
    */
   public function setLocalized($localized)
   {

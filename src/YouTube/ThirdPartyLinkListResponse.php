@@ -21,18 +21,25 @@ class ThirdPartyLinkListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = ThirdPartyLink::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#thirdPartyLinkListResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -46,7 +53,7 @@ class ThirdPartyLinkListResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param ThirdPartyLink[]
+   * @param ThirdPartyLink[] $items
    */
   public function setItems($items)
   {
@@ -60,7 +67,10 @@ class ThirdPartyLinkListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#thirdPartyLinkListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

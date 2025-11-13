@@ -20,10 +20,15 @@ namespace Google\Service\YouTube;
 class PlaylistImage extends \Google\Model
 {
   /**
+   * Identifies this resource (playlist id and image type).
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#playlistImages".
+   *
    * @var string
    */
   public $kind;
@@ -31,7 +36,9 @@ class PlaylistImage extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * @param string
+   * Identifies this resource (playlist id and image type).
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -45,7 +52,10 @@ class PlaylistImage extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#playlistImages".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -59,7 +69,7 @@ class PlaylistImage extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param PlaylistImageSnippet
+   * @param PlaylistImageSnippet $snippet
    */
   public function setSnippet(PlaylistImageSnippet $snippet)
   {

@@ -20,10 +20,15 @@ namespace Google\Service\YouTube;
 class LiveStreamSnippet extends \Google\Model
 {
   /**
+   * The ID that YouTube uses to uniquely identify the channel that is
+   * transmitting the stream.
+   *
    * @var string
    */
   public $channelId;
   /**
+   * The stream's description. The value cannot be longer than 10000 characters.
+   *
    * @var string
    */
   public $description;
@@ -32,16 +37,23 @@ class LiveStreamSnippet extends \Google\Model
    */
   public $isDefaultStream;
   /**
+   * The date and time that the stream was created.
+   *
    * @var string
    */
   public $publishedAt;
   /**
+   * The stream's title. The value must be between 1 and 128 characters long.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The ID that YouTube uses to uniquely identify the channel that is
+   * transmitting the stream.
+   *
+   * @param string $channelId
    */
   public function setChannelId($channelId)
   {
@@ -55,7 +67,9 @@ class LiveStreamSnippet extends \Google\Model
     return $this->channelId;
   }
   /**
-   * @param string
+   * The stream's description. The value cannot be longer than 10000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -69,7 +83,7 @@ class LiveStreamSnippet extends \Google\Model
     return $this->description;
   }
   /**
-   * @param bool
+   * @param bool $isDefaultStream
    */
   public function setIsDefaultStream($isDefaultStream)
   {
@@ -83,7 +97,9 @@ class LiveStreamSnippet extends \Google\Model
     return $this->isDefaultStream;
   }
   /**
-   * @param string
+   * The date and time that the stream was created.
+   *
+   * @param string $publishedAt
    */
   public function setPublishedAt($publishedAt)
   {
@@ -97,7 +113,9 @@ class LiveStreamSnippet extends \Google\Model
     return $this->publishedAt;
   }
   /**
-   * @param string
+   * The stream's title. The value must be between 1 and 128 characters long.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

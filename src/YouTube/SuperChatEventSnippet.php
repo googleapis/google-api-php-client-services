@@ -20,34 +20,53 @@ namespace Google\Service\YouTube;
 class SuperChatEventSnippet extends \Google\Model
 {
   /**
+   * The purchase amount, in micros of the purchase currency. e.g., 1 is
+   * represented as 1000000.
+   *
    * @var string
    */
   public $amountMicros;
   /**
+   * Channel id where the event occurred.
+   *
    * @var string
    */
   public $channelId;
   /**
+   * The text contents of the comment left by the user.
+   *
    * @var string
    */
   public $commentText;
   /**
+   * The date and time when the event occurred.
+   *
    * @var string
    */
   public $createdAt;
   /**
+   * The currency in which the purchase was made. ISO 4217.
+   *
    * @var string
    */
   public $currency;
   /**
+   * A rendered string that displays the purchase amount and currency (e.g.,
+   * "$1.00"). The string is rendered for the given language.
+   *
    * @var string
    */
   public $displayString;
   /**
+   * True if this event is a Super Sticker event.
+   *
    * @var bool
    */
   public $isSuperStickerEvent;
   /**
+   * The tier for the paid message, which is based on the amount of money spent
+   * to purchase the message.
+   *
    * @var string
    */
   public $messageType;
@@ -57,7 +76,10 @@ class SuperChatEventSnippet extends \Google\Model
   protected $supporterDetailsDataType = '';
 
   /**
-   * @param string
+   * The purchase amount, in micros of the purchase currency. e.g., 1 is
+   * represented as 1000000.
+   *
+   * @param string $amountMicros
    */
   public function setAmountMicros($amountMicros)
   {
@@ -71,7 +93,9 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->amountMicros;
   }
   /**
-   * @param string
+   * Channel id where the event occurred.
+   *
+   * @param string $channelId
    */
   public function setChannelId($channelId)
   {
@@ -85,7 +109,9 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->channelId;
   }
   /**
-   * @param string
+   * The text contents of the comment left by the user.
+   *
+   * @param string $commentText
    */
   public function setCommentText($commentText)
   {
@@ -99,7 +125,9 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->commentText;
   }
   /**
-   * @param string
+   * The date and time when the event occurred.
+   *
+   * @param string $createdAt
    */
   public function setCreatedAt($createdAt)
   {
@@ -113,7 +141,9 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->createdAt;
   }
   /**
-   * @param string
+   * The currency in which the purchase was made. ISO 4217.
+   *
+   * @param string $currency
    */
   public function setCurrency($currency)
   {
@@ -127,7 +157,10 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->currency;
   }
   /**
-   * @param string
+   * A rendered string that displays the purchase amount and currency (e.g.,
+   * "$1.00"). The string is rendered for the given language.
+   *
+   * @param string $displayString
    */
   public function setDisplayString($displayString)
   {
@@ -141,7 +174,9 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->displayString;
   }
   /**
-   * @param bool
+   * True if this event is a Super Sticker event.
+   *
+   * @param bool $isSuperStickerEvent
    */
   public function setIsSuperStickerEvent($isSuperStickerEvent)
   {
@@ -155,7 +190,10 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->isSuperStickerEvent;
   }
   /**
-   * @param string
+   * The tier for the paid message, which is based on the amount of money spent
+   * to purchase the message.
+   *
+   * @param string $messageType
    */
   public function setMessageType($messageType)
   {
@@ -169,7 +207,10 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->messageType;
   }
   /**
-   * @param SuperStickerMetadata
+   * If this event is a Super Sticker event, this field will contain metadata
+   * about the Super Sticker.
+   *
+   * @param SuperStickerMetadata $superStickerMetadata
    */
   public function setSuperStickerMetadata(SuperStickerMetadata $superStickerMetadata)
   {
@@ -183,7 +224,9 @@ class SuperChatEventSnippet extends \Google\Model
     return $this->superStickerMetadata;
   }
   /**
-   * @param ChannelProfileDetails
+   * Details about the supporter.
+   *
+   * @param ChannelProfileDetails $supporterDetails
    */
   public function setSupporterDetails(ChannelProfileDetails $supporterDetails)
   {

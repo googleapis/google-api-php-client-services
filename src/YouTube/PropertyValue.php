@@ -20,16 +20,22 @@ namespace Google\Service\YouTube;
 class PropertyValue extends \Google\Model
 {
   /**
+   * A property.
+   *
    * @var string
    */
   public $property;
   /**
+   * The property's value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * A property.
+   *
+   * @param string $property
    */
   public function setProperty($property)
   {
@@ -43,7 +49,9 @@ class PropertyValue extends \Google\Model
     return $this->property;
   }
   /**
-   * @param string
+   * The property's value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

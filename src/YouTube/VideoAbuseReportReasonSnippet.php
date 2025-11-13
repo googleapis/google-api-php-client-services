@@ -21,6 +21,8 @@ class VideoAbuseReportReasonSnippet extends \Google\Collection
 {
   protected $collection_key = 'secondaryReasons';
   /**
+   * The localized label belonging to this abuse report reason.
+   *
    * @var string
    */
   public $label;
@@ -28,7 +30,9 @@ class VideoAbuseReportReasonSnippet extends \Google\Collection
   protected $secondaryReasonsDataType = 'array';
 
   /**
-   * @param string
+   * The localized label belonging to this abuse report reason.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -42,7 +46,10 @@ class VideoAbuseReportReasonSnippet extends \Google\Collection
     return $this->label;
   }
   /**
-   * @param VideoAbuseReportSecondaryReason[]
+   * The secondary reasons associated with this reason, if any are available.
+   * (There might be 0 or more.)
+   *
+   * @param VideoAbuseReportSecondaryReason[] $secondaryReasons
    */
   public function setSecondaryReasons($secondaryReasons)
   {

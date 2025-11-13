@@ -21,20 +21,31 @@ class MemberListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Serialized EventId of the request which produced this response.
+   *
+   * @deprecated
    * @var string
    */
   public $eventId;
   protected $itemsType = Member::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#memberListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the next page in the result set.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -43,12 +54,17 @@ class MemberListResponse extends \Google\Collection
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**
+   * The visitorId identifies the visitor.
+   *
+   * @deprecated
    * @var string
    */
   public $visitorId;
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -62,13 +78,17 @@ class MemberListResponse extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Serialized EventId of the request which produced this response.
+   *
+   * @deprecated
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {
     $this->eventId = $eventId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getEventId()
@@ -76,7 +96,9 @@ class MemberListResponse extends \Google\Collection
     return $this->eventId;
   }
   /**
-   * @param Member[]
+   * A list of members that match the request criteria.
+   *
+   * @param Member[] $items
    */
   public function setItems($items)
   {
@@ -90,7 +112,10 @@ class MemberListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#memberListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -104,7 +129,10 @@ class MemberListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The token that can be used as the value of the pageToken parameter to
+   * retrieve the next page in the result set.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -118,7 +146,7 @@ class MemberListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PageInfo
+   * @param PageInfo $pageInfo
    */
   public function setPageInfo(PageInfo $pageInfo)
   {
@@ -132,13 +160,15 @@ class MemberListResponse extends \Google\Collection
     return $this->pageInfo;
   }
   /**
-   * @param TokenPagination
+   * @deprecated
+   * @param TokenPagination $tokenPagination
    */
   public function setTokenPagination(TokenPagination $tokenPagination)
   {
     $this->tokenPagination = $tokenPagination;
   }
   /**
+   * @deprecated
    * @return TokenPagination
    */
   public function getTokenPagination()
@@ -146,13 +176,17 @@ class MemberListResponse extends \Google\Collection
     return $this->tokenPagination;
   }
   /**
-   * @param string
+   * The visitorId identifies the visitor.
+   *
+   * @deprecated
+   * @param string $visitorId
    */
   public function setVisitorId($visitorId)
   {
     $this->visitorId = $visitorId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getVisitorId()

@@ -20,14 +20,22 @@ namespace Google\Service\YouTube;
 class ThirdPartyLink extends \Google\Model
 {
   /**
+   * Etag of this resource
+   *
    * @var string
    */
   public $etag;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#thirdPartyLink".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The linking_token identifies a YouTube account and channel with which the
+   * third party account is linked.
+   *
    * @var string
    */
   public $linkingToken;
@@ -37,7 +45,9 @@ class ThirdPartyLink extends \Google\Model
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * Etag of this resource
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -51,7 +61,10 @@ class ThirdPartyLink extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#thirdPartyLink".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -65,7 +78,10 @@ class ThirdPartyLink extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The linking_token identifies a YouTube account and channel with which the
+   * third party account is linked.
+   *
+   * @param string $linkingToken
    */
   public function setLinkingToken($linkingToken)
   {
@@ -79,7 +95,10 @@ class ThirdPartyLink extends \Google\Model
     return $this->linkingToken;
   }
   /**
-   * @param ThirdPartyLinkSnippet
+   * The snippet object contains basic details about the third- party account
+   * link.
+   *
+   * @param ThirdPartyLinkSnippet $snippet
    */
   public function setSnippet(ThirdPartyLinkSnippet $snippet)
   {
@@ -93,7 +112,9 @@ class ThirdPartyLink extends \Google\Model
     return $this->snippet;
   }
   /**
-   * @param ThirdPartyLinkStatus
+   * The status object contains information about the status of the link.
+   *
+   * @param ThirdPartyLinkStatus $status
    */
   public function setStatus(ThirdPartyLinkStatus $status)
   {

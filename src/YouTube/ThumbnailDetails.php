@@ -31,7 +31,9 @@ class ThumbnailDetails extends \Google\Model
   protected $standardDataType = '';
 
   /**
-   * @param Thumbnail
+   * The default image for this resource.
+   *
+   * @param Thumbnail $default
    */
   public function setDefault(Thumbnail $default)
   {
@@ -45,7 +47,9 @@ class ThumbnailDetails extends \Google\Model
     return $this->default;
   }
   /**
-   * @param Thumbnail
+   * The high quality image for this resource.
+   *
+   * @param Thumbnail $high
    */
   public function setHigh(Thumbnail $high)
   {
@@ -59,7 +63,9 @@ class ThumbnailDetails extends \Google\Model
     return $this->high;
   }
   /**
-   * @param Thumbnail
+   * The maximum resolution quality image for this resource.
+   *
+   * @param Thumbnail $maxres
    */
   public function setMaxres(Thumbnail $maxres)
   {
@@ -73,7 +79,9 @@ class ThumbnailDetails extends \Google\Model
     return $this->maxres;
   }
   /**
-   * @param Thumbnail
+   * The medium quality image for this resource.
+   *
+   * @param Thumbnail $medium
    */
   public function setMedium(Thumbnail $medium)
   {
@@ -87,7 +95,9 @@ class ThumbnailDetails extends \Google\Model
     return $this->medium;
   }
   /**
-   * @param Thumbnail
+   * The standard quality image for this resource.
+   *
+   * @param Thumbnail $standard
    */
   public function setStandard(Thumbnail $standard)
   {

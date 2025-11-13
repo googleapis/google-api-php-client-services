@@ -20,28 +20,41 @@ namespace Google\Service\YouTube;
 class LiveChatSuperChatDetails extends \Google\Model
 {
   /**
+   * A rendered string that displays the fund amount and currency to the user.
+   *
    * @var string
    */
   public $amountDisplayString;
   /**
+   * The amount purchased by the user, in micros (1,750,000 micros = 1.75).
+   *
    * @var string
    */
   public $amountMicros;
   /**
+   * The currency in which the purchase was made.
+   *
    * @var string
    */
   public $currency;
   /**
+   * The tier in which the amount belongs. Lower amounts belong to lower tiers.
+   * The lowest tier is 1.
+   *
    * @var string
    */
   public $tier;
   /**
+   * The comment added by the user to this Super Chat event.
+   *
    * @var string
    */
   public $userComment;
 
   /**
-   * @param string
+   * A rendered string that displays the fund amount and currency to the user.
+   *
+   * @param string $amountDisplayString
    */
   public function setAmountDisplayString($amountDisplayString)
   {
@@ -55,7 +68,9 @@ class LiveChatSuperChatDetails extends \Google\Model
     return $this->amountDisplayString;
   }
   /**
-   * @param string
+   * The amount purchased by the user, in micros (1,750,000 micros = 1.75).
+   *
+   * @param string $amountMicros
    */
   public function setAmountMicros($amountMicros)
   {
@@ -69,7 +84,9 @@ class LiveChatSuperChatDetails extends \Google\Model
     return $this->amountMicros;
   }
   /**
-   * @param string
+   * The currency in which the purchase was made.
+   *
+   * @param string $currency
    */
   public function setCurrency($currency)
   {
@@ -83,7 +100,10 @@ class LiveChatSuperChatDetails extends \Google\Model
     return $this->currency;
   }
   /**
-   * @param string
+   * The tier in which the amount belongs. Lower amounts belong to lower tiers.
+   * The lowest tier is 1.
+   *
+   * @param string $tier
    */
   public function setTier($tier)
   {
@@ -97,7 +117,9 @@ class LiveChatSuperChatDetails extends \Google\Model
     return $this->tier;
   }
   /**
-   * @param string
+   * The comment added by the user to this Super Chat event.
+   *
+   * @param string $userComment
    */
   public function setUserComment($userComment)
   {

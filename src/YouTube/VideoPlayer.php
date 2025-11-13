@@ -24,16 +24,20 @@ class VideoPlayer extends \Google\Model
    */
   public $embedHeight;
   /**
+   * An  tag that embeds a player that will play the video.
+   *
    * @var string
    */
   public $embedHtml;
   /**
+   * The embed width
+   *
    * @var string
    */
   public $embedWidth;
 
   /**
-   * @param string
+   * @param string $embedHeight
    */
   public function setEmbedHeight($embedHeight)
   {
@@ -47,7 +51,9 @@ class VideoPlayer extends \Google\Model
     return $this->embedHeight;
   }
   /**
-   * @param string
+   * An  tag that embeds a player that will play the video.
+   *
+   * @param string $embedHtml
    */
   public function setEmbedHtml($embedHtml)
   {
@@ -61,7 +67,9 @@ class VideoPlayer extends \Google\Model
     return $this->embedHtml;
   }
   /**
-   * @param string
+   * The embed width
+   *
+   * @param string $embedWidth
    */
   public function setEmbedWidth($embedWidth)
   {

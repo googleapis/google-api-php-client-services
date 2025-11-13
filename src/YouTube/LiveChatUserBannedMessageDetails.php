@@ -19,11 +19,18 @@ namespace Google\Service\YouTube;
 
 class LiveChatUserBannedMessageDetails extends \Google\Model
 {
+  public const BAN_TYPE_permanent = 'permanent';
+  public const BAN_TYPE_temporary = 'temporary';
   /**
+   * The duration of the ban. This property is only present if the banType is
+   * temporary.
+   *
    * @var string
    */
   public $banDurationSeconds;
   /**
+   * The type of ban.
+   *
    * @var string
    */
   public $banType;
@@ -31,7 +38,10 @@ class LiveChatUserBannedMessageDetails extends \Google\Model
   protected $bannedUserDetailsDataType = '';
 
   /**
-   * @param string
+   * The duration of the ban. This property is only present if the banType is
+   * temporary.
+   *
+   * @param string $banDurationSeconds
    */
   public function setBanDurationSeconds($banDurationSeconds)
   {
@@ -45,21 +55,27 @@ class LiveChatUserBannedMessageDetails extends \Google\Model
     return $this->banDurationSeconds;
   }
   /**
-   * @param string
+   * The type of ban.
+   *
+   * Accepted values: permanent, temporary
+   *
+   * @param self::BAN_TYPE_* $banType
    */
   public function setBanType($banType)
   {
     $this->banType = $banType;
   }
   /**
-   * @return string
+   * @return self::BAN_TYPE_*
    */
   public function getBanType()
   {
     return $this->banType;
   }
   /**
-   * @param ChannelProfileDetails
+   * The details of the user that was banned.
+   *
+   * @param ChannelProfileDetails $bannedUserDetails
    */
   public function setBannedUserDetails(ChannelProfileDetails $bannedUserDetails)
   {

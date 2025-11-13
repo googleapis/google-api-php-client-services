@@ -20,6 +20,8 @@ namespace Google\Service\YouTube;
 class MemberSnippet extends \Google\Model
 {
   /**
+   * The id of the channel that's offering memberships.
+   *
    * @var string
    */
   public $creatorChannelId;
@@ -29,7 +31,9 @@ class MemberSnippet extends \Google\Model
   protected $membershipsDetailsDataType = '';
 
   /**
-   * @param string
+   * The id of the channel that's offering memberships.
+   *
+   * @param string $creatorChannelId
    */
   public function setCreatorChannelId($creatorChannelId)
   {
@@ -43,7 +47,9 @@ class MemberSnippet extends \Google\Model
     return $this->creatorChannelId;
   }
   /**
-   * @param ChannelProfileDetails
+   * Details about the member.
+   *
+   * @param ChannelProfileDetails $memberDetails
    */
   public function setMemberDetails(ChannelProfileDetails $memberDetails)
   {
@@ -57,7 +63,9 @@ class MemberSnippet extends \Google\Model
     return $this->memberDetails;
   }
   /**
-   * @param MembershipsDetails
+   * Details about the user's membership.
+   *
+   * @param MembershipsDetails $membershipsDetails
    */
   public function setMembershipsDetails(MembershipsDetails $membershipsDetails)
   {

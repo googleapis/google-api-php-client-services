@@ -21,18 +21,36 @@ class VideoSuggestions extends \Google\Collection
 {
   protected $collection_key = 'tagSuggestions';
   /**
+   * A list of video editing operations that might improve the video quality or
+   * playback experience of the uploaded video.
+   *
    * @var string[]
    */
   public $editorSuggestions;
   /**
+   * A list of errors that will prevent YouTube from successfully processing the
+   * uploaded video video. These errors indicate that, regardless of the video's
+   * current processing status, eventually, that status will almost certainly be
+   * failed.
+   *
    * @var string[]
    */
   public $processingErrors;
   /**
+   * A list of suggestions that may improve YouTube's ability to process the
+   * video.
+   *
    * @var string[]
    */
   public $processingHints;
   /**
+   * A list of reasons why YouTube may have difficulty transcoding the uploaded
+   * video or that might result in an erroneous transcoding. These warnings are
+   * generated before YouTube actually processes the uploaded video file. In
+   * addition, they identify issues that are unlikely to cause the video
+   * processing to fail but that might cause problems such as sync issues, video
+   * artifacts, or a missing audio track.
+   *
    * @var string[]
    */
   public $processingWarnings;
@@ -40,7 +58,10 @@ class VideoSuggestions extends \Google\Collection
   protected $tagSuggestionsDataType = 'array';
 
   /**
-   * @param string[]
+   * A list of video editing operations that might improve the video quality or
+   * playback experience of the uploaded video.
+   *
+   * @param string[] $editorSuggestions
    */
   public function setEditorSuggestions($editorSuggestions)
   {
@@ -54,7 +75,12 @@ class VideoSuggestions extends \Google\Collection
     return $this->editorSuggestions;
   }
   /**
-   * @param string[]
+   * A list of errors that will prevent YouTube from successfully processing the
+   * uploaded video video. These errors indicate that, regardless of the video's
+   * current processing status, eventually, that status will almost certainly be
+   * failed.
+   *
+   * @param string[] $processingErrors
    */
   public function setProcessingErrors($processingErrors)
   {
@@ -68,7 +94,10 @@ class VideoSuggestions extends \Google\Collection
     return $this->processingErrors;
   }
   /**
-   * @param string[]
+   * A list of suggestions that may improve YouTube's ability to process the
+   * video.
+   *
+   * @param string[] $processingHints
    */
   public function setProcessingHints($processingHints)
   {
@@ -82,7 +111,14 @@ class VideoSuggestions extends \Google\Collection
     return $this->processingHints;
   }
   /**
-   * @param string[]
+   * A list of reasons why YouTube may have difficulty transcoding the uploaded
+   * video or that might result in an erroneous transcoding. These warnings are
+   * generated before YouTube actually processes the uploaded video file. In
+   * addition, they identify issues that are unlikely to cause the video
+   * processing to fail but that might cause problems such as sync issues, video
+   * artifacts, or a missing audio track.
+   *
+   * @param string[] $processingWarnings
    */
   public function setProcessingWarnings($processingWarnings)
   {
@@ -96,7 +132,11 @@ class VideoSuggestions extends \Google\Collection
     return $this->processingWarnings;
   }
   /**
-   * @param VideoSuggestionsTagSuggestion[]
+   * A list of keyword tags that could be added to the video's metadata to
+   * increase the likelihood that users will locate your video when searching or
+   * browsing on YouTube.
+   *
+   * @param VideoSuggestionsTagSuggestion[] $tagSuggestions
    */
   public function setTagSuggestions($tagSuggestions)
   {

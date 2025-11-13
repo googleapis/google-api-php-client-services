@@ -20,20 +20,29 @@ namespace Google\Service\YouTube;
 class WatchSettings extends \Google\Model
 {
   /**
+   * The text color for the video watch page's branded area.
+   *
    * @var string
    */
   public $backgroundColor;
   /**
+   * An ID that uniquely identifies a playlist that displays next to the video
+   * player.
+   *
    * @var string
    */
   public $featuredPlaylistId;
   /**
+   * The background color for the video watch page's branded area.
+   *
    * @var string
    */
   public $textColor;
 
   /**
-   * @param string
+   * The text color for the video watch page's branded area.
+   *
+   * @param string $backgroundColor
    */
   public function setBackgroundColor($backgroundColor)
   {
@@ -47,7 +56,10 @@ class WatchSettings extends \Google\Model
     return $this->backgroundColor;
   }
   /**
-   * @param string
+   * An ID that uniquely identifies a playlist that displays next to the video
+   * player.
+   *
+   * @param string $featuredPlaylistId
    */
   public function setFeaturedPlaylistId($featuredPlaylistId)
   {
@@ -61,7 +73,9 @@ class WatchSettings extends \Google\Model
     return $this->featuredPlaylistId;
   }
   /**
-   * @param string
+   * The background color for the video watch page's branded area.
+   *
+   * @param string $textColor
    */
   public function setTextColor($textColor)
   {

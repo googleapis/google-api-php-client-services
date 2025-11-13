@@ -20,12 +20,17 @@ namespace Google\Service\YouTube;
 class SearchResult extends \Google\Model
 {
   /**
+   * Etag of this resource.
+   *
    * @var string
    */
   public $etag;
   protected $idType = ResourceId::class;
   protected $idDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#searchResult".
+   *
    * @var string
    */
   public $kind;
@@ -33,7 +38,9 @@ class SearchResult extends \Google\Model
   protected $snippetDataType = '';
 
   /**
-   * @param string
+   * Etag of this resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -47,7 +54,10 @@ class SearchResult extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param ResourceId
+   * The id object contains information that can be used to uniquely identify
+   * the resource that matches the search request.
+   *
+   * @param ResourceId $id
    */
   public function setId(ResourceId $id)
   {
@@ -61,7 +71,10 @@ class SearchResult extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "youtube#searchResult".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -75,7 +88,12 @@ class SearchResult extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param SearchResultSnippet
+   * The snippet object contains basic details about a search result, such as
+   * its title or description. For example, if the search result is a video,
+   * then the title will be the video's title and the description will be the
+   * video's description.
+   *
+   * @param SearchResultSnippet $snippet
    */
   public function setSnippet(SearchResultSnippet $snippet)
   {

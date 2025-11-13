@@ -22,16 +22,22 @@ class VideoRecordingDetails extends \Google\Model
   protected $locationType = GeoPoint::class;
   protected $locationDataType = '';
   /**
+   * The text description of the location where the video was recorded.
+   *
    * @var string
    */
   public $locationDescription;
   /**
+   * The date and time when the video was recorded.
+   *
    * @var string
    */
   public $recordingDate;
 
   /**
-   * @param GeoPoint
+   * The geolocation information associated with the video.
+   *
+   * @param GeoPoint $location
    */
   public function setLocation(GeoPoint $location)
   {
@@ -45,7 +51,9 @@ class VideoRecordingDetails extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The text description of the location where the video was recorded.
+   *
+   * @param string $locationDescription
    */
   public function setLocationDescription($locationDescription)
   {
@@ -59,7 +67,9 @@ class VideoRecordingDetails extends \Google\Model
     return $this->locationDescription;
   }
   /**
-   * @param string
+   * The date and time when the video was recorded.
+   *
+   * @param string $recordingDate
    */
   public function setRecordingDate($recordingDate)
   {

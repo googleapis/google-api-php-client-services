@@ -20,28 +20,44 @@ namespace Google\Service\YouTube;
 class VideoStatistics extends \Google\Model
 {
   /**
+   * The number of comments for the video.
+   *
    * @var string
    */
   public $commentCount;
   /**
+   * The number of users who have indicated that they disliked the video by
+   * giving it a negative rating.
+   *
    * @var string
    */
   public $dislikeCount;
   /**
+   * The number of users who currently have the video marked as a favorite
+   * video.
+   *
+   * @deprecated
    * @var string
    */
   public $favoriteCount;
   /**
+   * The number of users who have indicated that they liked the video by giving
+   * it a positive rating.
+   *
    * @var string
    */
   public $likeCount;
   /**
+   * The number of times the video has been viewed.
+   *
    * @var string
    */
   public $viewCount;
 
   /**
-   * @param string
+   * The number of comments for the video.
+   *
+   * @param string $commentCount
    */
   public function setCommentCount($commentCount)
   {
@@ -55,7 +71,10 @@ class VideoStatistics extends \Google\Model
     return $this->commentCount;
   }
   /**
-   * @param string
+   * The number of users who have indicated that they disliked the video by
+   * giving it a negative rating.
+   *
+   * @param string $dislikeCount
    */
   public function setDislikeCount($dislikeCount)
   {
@@ -69,13 +88,18 @@ class VideoStatistics extends \Google\Model
     return $this->dislikeCount;
   }
   /**
-   * @param string
+   * The number of users who currently have the video marked as a favorite
+   * video.
+   *
+   * @deprecated
+   * @param string $favoriteCount
    */
   public function setFavoriteCount($favoriteCount)
   {
     $this->favoriteCount = $favoriteCount;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getFavoriteCount()
@@ -83,7 +107,10 @@ class VideoStatistics extends \Google\Model
     return $this->favoriteCount;
   }
   /**
-   * @param string
+   * The number of users who have indicated that they liked the video by giving
+   * it a positive rating.
+   *
+   * @param string $likeCount
    */
   public function setLikeCount($likeCount)
   {
@@ -97,7 +124,9 @@ class VideoStatistics extends \Google\Model
     return $this->likeCount;
   }
   /**
-   * @param string
+   * The number of times the video has been viewed.
+   *
+   * @param string $viewCount
    */
   public function setViewCount($viewCount)
   {

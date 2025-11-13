@@ -21,14 +21,23 @@ class MembershipsDetails extends \Google\Collection
 {
   protected $collection_key = 'membershipsDurationAtLevels';
   /**
+   * Ids of all levels that the user has access to. This includes the currently
+   * active level and all other levels that are included because of a higher
+   * purchase.
+   *
    * @var string[]
    */
   public $accessibleLevels;
   /**
+   * Id of the highest level that the user has access to at the moment.
+   *
    * @var string
    */
   public $highestAccessibleLevel;
   /**
+   * Display name for the highest level that the user has access to at the
+   * moment.
+   *
    * @var string
    */
   public $highestAccessibleLevelDisplayName;
@@ -38,7 +47,11 @@ class MembershipsDetails extends \Google\Collection
   protected $membershipsDurationAtLevelsDataType = 'array';
 
   /**
-   * @param string[]
+   * Ids of all levels that the user has access to. This includes the currently
+   * active level and all other levels that are included because of a higher
+   * purchase.
+   *
+   * @param string[] $accessibleLevels
    */
   public function setAccessibleLevels($accessibleLevels)
   {
@@ -52,7 +65,9 @@ class MembershipsDetails extends \Google\Collection
     return $this->accessibleLevels;
   }
   /**
-   * @param string
+   * Id of the highest level that the user has access to at the moment.
+   *
+   * @param string $highestAccessibleLevel
    */
   public function setHighestAccessibleLevel($highestAccessibleLevel)
   {
@@ -66,7 +81,10 @@ class MembershipsDetails extends \Google\Collection
     return $this->highestAccessibleLevel;
   }
   /**
-   * @param string
+   * Display name for the highest level that the user has access to at the
+   * moment.
+   *
+   * @param string $highestAccessibleLevelDisplayName
    */
   public function setHighestAccessibleLevelDisplayName($highestAccessibleLevelDisplayName)
   {
@@ -80,7 +98,10 @@ class MembershipsDetails extends \Google\Collection
     return $this->highestAccessibleLevelDisplayName;
   }
   /**
-   * @param MembershipsDuration
+   * Data about memberships duration without taking into consideration pricing
+   * levels.
+   *
+   * @param MembershipsDuration $membershipsDuration
    */
   public function setMembershipsDuration(MembershipsDuration $membershipsDuration)
   {
@@ -94,7 +115,9 @@ class MembershipsDetails extends \Google\Collection
     return $this->membershipsDuration;
   }
   /**
-   * @param MembershipsDurationAtLevel[]
+   * Data about memberships duration on particular pricing levels.
+   *
+   * @param MembershipsDurationAtLevel[] $membershipsDurationAtLevels
    */
   public function setMembershipsDurationAtLevels($membershipsDurationAtLevels)
   {
