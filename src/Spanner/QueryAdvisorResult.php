@@ -24,7 +24,11 @@ class QueryAdvisorResult extends \Google\Collection
   protected $indexAdviceDataType = 'array';
 
   /**
-   * @param IndexAdvice[]
+   * Optional. Index Recommendation for a query. This is an optional field and
+   * the recommendation will only be available when the recommendation
+   * guarantees significant improvement in query performance.
+   *
+   * @param IndexAdvice[] $indexAdvice
    */
   public function setIndexAdvice($indexAdvice)
   {

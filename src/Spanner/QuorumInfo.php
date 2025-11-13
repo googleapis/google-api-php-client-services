@@ -20,22 +20,46 @@ namespace Google\Service\Spanner;
 class QuorumInfo extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const INITIATOR_INITIATOR_UNSPECIFIED = 'INITIATOR_UNSPECIFIED';
+  /**
+   * `ChangeQuorum` initiated by Google.
+   */
+  public const INITIATOR_GOOGLE = 'GOOGLE';
+  /**
+   * `ChangeQuorum` initiated by User.
+   */
+  public const INITIATOR_USER = 'USER';
+  /**
+   * Output only. The etag is used for optimistic concurrency control as a way
+   * to help prevent simultaneous `ChangeQuorum` requests that might create a
+   * race condition.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. Whether this `ChangeQuorum` is Google or User initiated.
+   *
    * @var string
    */
   public $initiator;
   protected $quorumTypeType = QuorumType::class;
   protected $quorumTypeDataType = '';
   /**
+   * Output only. The timestamp when the request was triggered.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Output only. The etag is used for optimistic concurrency control as a way
+   * to help prevent simultaneous `ChangeQuorum` requests that might create a
+   * race condition.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -49,21 +73,28 @@ class QuorumInfo extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. Whether this `ChangeQuorum` is Google or User initiated.
+   *
+   * Accepted values: INITIATOR_UNSPECIFIED, GOOGLE, USER
+   *
+   * @param self::INITIATOR_* $initiator
    */
   public function setInitiator($initiator)
   {
     $this->initiator = $initiator;
   }
   /**
-   * @return string
+   * @return self::INITIATOR_*
    */
   public function getInitiator()
   {
     return $this->initiator;
   }
   /**
-   * @param QuorumType
+   * Output only. The type of this quorum. See QuorumType for more information
+   * about quorum type specifications.
+   *
+   * @param QuorumType $quorumType
    */
   public function setQuorumType(QuorumType $quorumType)
   {
@@ -77,7 +108,9 @@ class QuorumInfo extends \Google\Model
     return $this->quorumType;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the request was triggered.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

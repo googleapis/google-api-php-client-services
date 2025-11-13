@@ -19,26 +19,62 @@ namespace Google\Service\Spanner;
 
 class PlanNode extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const KIND_KIND_UNSPECIFIED = 'KIND_UNSPECIFIED';
+  /**
+   * Denotes a Relational operator node in the expression tree. Relational
+   * operators represent iterative processing of rows during query execution.
+   * For example, a `TableScan` operation that reads rows from a table.
+   */
+  public const KIND_RELATIONAL = 'RELATIONAL';
+  /**
+   * Denotes a Scalar node in the expression tree. Scalar nodes represent non-
+   * iterable entities in the query plan. For example, constants or arithmetic
+   * operators appearing inside predicate expressions or references to column
+   * names.
+   */
+  public const KIND_SCALAR = 'SCALAR';
   protected $collection_key = 'childLinks';
   protected $childLinksType = ChildLink::class;
   protected $childLinksDataType = 'array';
   /**
+   * The display name for the node.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The execution statistics associated with the node, contained in a group of
+   * key-value pairs. Only present if the plan was returned as a result of a
+   * profile query. For example, number of executions, number of rows/time per
+   * execution etc.
+   *
    * @var array[]
    */
   public $executionStats;
   /**
+   * The `PlanNode`'s index in node list.
+   *
    * @var int
    */
   public $index;
   /**
+   * Used to determine the type of node. May be needed for visualizing different
+   * kinds of nodes differently. For example, If the node is a SCALAR node, it
+   * will have a condensed representation which can be used to directly embed a
+   * description of the node in its parent.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Attributes relevant to the node contained in a group of key-value pairs.
+   * For example, a Parameter Reference node could have the following
+   * information in its metadata: { "parameter_reference": "param1",
+   * "parameter_type": "array" }
+   *
    * @var array[]
    */
   public $metadata;
@@ -46,7 +82,9 @@ class PlanNode extends \Google\Collection
   protected $shortRepresentationDataType = '';
 
   /**
-   * @param ChildLink[]
+   * List of child node `index`es and their relationship to this parent.
+   *
+   * @param ChildLink[] $childLinks
    */
   public function setChildLinks($childLinks)
   {
@@ -60,7 +98,9 @@ class PlanNode extends \Google\Collection
     return $this->childLinks;
   }
   /**
-   * @param string
+   * The display name for the node.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -74,7 +114,12 @@ class PlanNode extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param array[]
+   * The execution statistics associated with the node, contained in a group of
+   * key-value pairs. Only present if the plan was returned as a result of a
+   * profile query. For example, number of executions, number of rows/time per
+   * execution etc.
+   *
+   * @param array[] $executionStats
    */
   public function setExecutionStats($executionStats)
   {
@@ -88,7 +133,9 @@ class PlanNode extends \Google\Collection
     return $this->executionStats;
   }
   /**
-   * @param int
+   * The `PlanNode`'s index in node list.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -102,21 +149,33 @@ class PlanNode extends \Google\Collection
     return $this->index;
   }
   /**
-   * @param string
+   * Used to determine the type of node. May be needed for visualizing different
+   * kinds of nodes differently. For example, If the node is a SCALAR node, it
+   * will have a condensed representation which can be used to directly embed a
+   * description of the node in its parent.
+   *
+   * Accepted values: KIND_UNSPECIFIED, RELATIONAL, SCALAR
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param array[]
+   * Attributes relevant to the node contained in a group of key-value pairs.
+   * For example, a Parameter Reference node could have the following
+   * information in its metadata: { "parameter_reference": "param1",
+   * "parameter_type": "array" }
+   *
+   * @param array[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -130,7 +189,9 @@ class PlanNode extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param ShortRepresentation
+   * Condensed representation for SCALAR nodes.
+   *
+   * @param ShortRepresentation $shortRepresentation
    */
   public function setShortRepresentation(ShortRepresentation $shortRepresentation)
   {

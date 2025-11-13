@@ -25,6 +25,10 @@ class ResultSet extends \Google\Collection
   protected $precommitTokenType = MultiplexedSessionPrecommitToken::class;
   protected $precommitTokenDataType = '';
   /**
+   * Each element in `rows` is a row whose format is defined by
+   * metadata.row_type. The ith element in each row matches the ith field in
+   * metadata.row_type. Elements are encoded based on type as described here.
+   *
    * @var array[]
    */
   public $rows;
@@ -32,7 +36,9 @@ class ResultSet extends \Google\Collection
   protected $statsDataType = '';
 
   /**
-   * @param ResultSetMetadata
+   * Metadata about the result set, such as row type information.
+   *
+   * @param ResultSetMetadata $metadata
    */
   public function setMetadata(ResultSetMetadata $metadata)
   {
@@ -46,7 +52,12 @@ class ResultSet extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param MultiplexedSessionPrecommitToken
+   * Optional. A precommit token is included if the read-write transaction is on
+   * a multiplexed session. Pass the precommit token with the highest sequence
+   * number from this transaction attempt to the Commit request for this
+   * transaction.
+   *
+   * @param MultiplexedSessionPrecommitToken $precommitToken
    */
   public function setPrecommitToken(MultiplexedSessionPrecommitToken $precommitToken)
   {
@@ -60,7 +71,11 @@ class ResultSet extends \Google\Collection
     return $this->precommitToken;
   }
   /**
-   * @param array[]
+   * Each element in `rows` is a row whose format is defined by
+   * metadata.row_type. The ith element in each row matches the ith field in
+   * metadata.row_type. Elements are encoded based on type as described here.
+   *
+   * @param array[] $rows
    */
   public function setRows($rows)
   {
@@ -74,7 +89,14 @@ class ResultSet extends \Google\Collection
     return $this->rows;
   }
   /**
-   * @param ResultSetStats
+   * Query plan and execution statistics for the SQL statement that produced
+   * this result set. These can be requested by setting
+   * ExecuteSqlRequest.query_mode. DML statements always produce stats
+   * containing the number of rows modified, unless executed using the
+   * ExecuteSqlRequest.QueryMode.PLAN ExecuteSqlRequest.query_mode. Other fields
+   * might or might not be populated, based on the ExecuteSqlRequest.query_mode.
+   *
+   * @param ResultSetStats $stats
    */
   public function setStats(ResultSetStats $stats)
   {

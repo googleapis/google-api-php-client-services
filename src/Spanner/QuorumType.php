@@ -25,7 +25,9 @@ class QuorumType extends \Google\Model
   protected $singleRegionDataType = '';
 
   /**
-   * @param DualRegionQuorum
+   * Dual-region quorum type.
+   *
+   * @param DualRegionQuorum $dualRegion
    */
   public function setDualRegion(DualRegionQuorum $dualRegion)
   {
@@ -39,7 +41,9 @@ class QuorumType extends \Google\Model
     return $this->dualRegion;
   }
   /**
-   * @param SingleRegionQuorum
+   * Single-region quorum type.
+   *
+   * @param SingleRegionQuorum $singleRegion
    */
   public function setSingleRegion(SingleRegionQuorum $singleRegion)
   {

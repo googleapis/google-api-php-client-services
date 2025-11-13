@@ -21,6 +21,9 @@ class MoveInstanceRequest extends \Google\Collection
 {
   protected $collection_key = 'targetDatabaseMoveConfigs';
   /**
+   * Required. The target instance configuration where to move the instance.
+   * Values are of the form `projects//instanceConfigs/`.
+   *
    * @var string
    */
   public $targetConfig;
@@ -28,7 +31,10 @@ class MoveInstanceRequest extends \Google\Collection
   protected $targetDatabaseMoveConfigsDataType = 'array';
 
   /**
-   * @param string
+   * Required. The target instance configuration where to move the instance.
+   * Values are of the form `projects//instanceConfigs/`.
+   *
+   * @param string $targetConfig
    */
   public function setTargetConfig($targetConfig)
   {
@@ -42,7 +48,10 @@ class MoveInstanceRequest extends \Google\Collection
     return $this->targetConfig;
   }
   /**
-   * @param DatabaseMoveConfig[]
+   * Optional. The configuration for each database in the target instance
+   * configuration.
+   *
+   * @param DatabaseMoveConfig[] $targetDatabaseMoveConfigs
    */
   public function setTargetDatabaseMoveConfigs($targetDatabaseMoveConfigs)
   {

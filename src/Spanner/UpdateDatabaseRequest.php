@@ -22,12 +22,18 @@ class UpdateDatabaseRequest extends \Google\Model
   protected $databaseType = Database::class;
   protected $databaseDataType = '';
   /**
+   * Required. The list of fields to update. Currently, only
+   * `enable_drop_protection` field can be updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param Database
+   * Required. The database to update. The `name` field of the database is of
+   * the form `projects//instances//databases/`.
+   *
+   * @param Database $database
    */
   public function setDatabase(Database $database)
   {
@@ -41,7 +47,10 @@ class UpdateDatabaseRequest extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Required. The list of fields to update. Currently, only
+   * `enable_drop_protection` field can be updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

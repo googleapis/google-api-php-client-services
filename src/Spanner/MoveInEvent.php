@@ -20,12 +20,20 @@ namespace Google\Service\Spanner;
 class MoveInEvent extends \Google\Model
 {
   /**
+   * An unique partition identifier describing the source change stream
+   * partition that recorded changes for the key range that is moving into this
+   * partition.
+   *
    * @var string
    */
   public $sourcePartitionToken;
 
   /**
-   * @param string
+   * An unique partition identifier describing the source change stream
+   * partition that recorded changes for the key range that is moving into this
+   * partition.
+   *
+   * @param string $sourcePartitionToken
    */
   public function setSourcePartitionToken($sourcePartitionToken)
   {

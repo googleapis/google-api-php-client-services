@@ -23,26 +23,42 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
   protected $actionsType = DdlStatementActionInfo::class;
   protected $actionsDataType = 'array';
   /**
+   * Reports the commit timestamps of all statements that have succeeded so far,
+   * where `commit_timestamps[i]` is the commit timestamp for the statement
+   * `statements[i]`.
+   *
    * @var string[]
    */
   public $commitTimestamps;
   /**
+   * The database being modified.
+   *
    * @var string
    */
   public $database;
   protected $progressType = OperationProgress::class;
   protected $progressDataType = 'array';
   /**
+   * For an update this list contains all the statements. For an individual
+   * statement, this list contains only that statement.
+   *
    * @var string[]
    */
   public $statements;
   /**
+   * Output only. When true, indicates that the operation is throttled, for
+   * example, due to resource constraints. When resources become available the
+   * operation will resume and this field will be false again.
+   *
    * @var bool
    */
   public $throttled;
 
   /**
-   * @param DdlStatementActionInfo[]
+   * The brief action info for the DDL statements. `actions[i]` is the brief
+   * info for `statements[i]`.
+   *
+   * @param DdlStatementActionInfo[] $actions
    */
   public function setActions($actions)
   {
@@ -56,7 +72,11 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
     return $this->actions;
   }
   /**
-   * @param string[]
+   * Reports the commit timestamps of all statements that have succeeded so far,
+   * where `commit_timestamps[i]` is the commit timestamp for the statement
+   * `statements[i]`.
+   *
+   * @param string[] $commitTimestamps
    */
   public function setCommitTimestamps($commitTimestamps)
   {
@@ -70,7 +90,9 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
     return $this->commitTimestamps;
   }
   /**
-   * @param string
+   * The database being modified.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -84,7 +106,13 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
     return $this->database;
   }
   /**
-   * @param OperationProgress[]
+   * The progress of the UpdateDatabaseDdl operations. All DDL statements will
+   * have continuously updating progress, and `progress[i]` is the operation
+   * progress for `statements[i]`. Also, `progress[i]` will have start time and
+   * end time populated with commit timestamp of operation, as well as a
+   * progress of 100% once the operation has completed.
+   *
+   * @param OperationProgress[] $progress
    */
   public function setProgress($progress)
   {
@@ -98,7 +126,10 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
     return $this->progress;
   }
   /**
-   * @param string[]
+   * For an update this list contains all the statements. For an individual
+   * statement, this list contains only that statement.
+   *
+   * @param string[] $statements
    */
   public function setStatements($statements)
   {
@@ -112,7 +143,11 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
     return $this->statements;
   }
   /**
-   * @param bool
+   * Output only. When true, indicates that the operation is throttled, for
+   * example, due to resource constraints. When resources become available the
+   * operation will resume and this field will be false again.
+   *
+   * @param bool $throttled
    */
   public function setThrottled($throttled)
   {
