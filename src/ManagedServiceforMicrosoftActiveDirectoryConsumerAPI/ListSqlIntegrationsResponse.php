@@ -21,18 +21,26 @@ class ListSqlIntegrationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $sqlIntegrationsType = SqlIntegration::class;
   protected $sqlIntegrationsDataType = 'array';
   /**
+   * A list of locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListSqlIntegrationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SqlIntegration[]
+   * A list of SQLIntegrations of a domain.
+   *
+   * @param SqlIntegration[] $sqlIntegrations
    */
   public function setSqlIntegrations($sqlIntegrations)
   {
@@ -60,7 +70,9 @@ class ListSqlIntegrationsResponse extends \Google\Collection
     return $this->sqlIntegrations;
   }
   /**
-   * @param string[]
+   * A list of locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -24,7 +24,9 @@ class EnableMigrationRequest extends \Google\Collection
   protected $migratingDomainsDataType = 'array';
 
   /**
-   * @param OnPremDomainDetails[]
+   * Required. List of the on-prem domains to be migrated.
+   *
+   * @param OnPremDomainDetails[] $migratingDomains
    */
   public function setMigratingDomains($migratingDomains)
   {

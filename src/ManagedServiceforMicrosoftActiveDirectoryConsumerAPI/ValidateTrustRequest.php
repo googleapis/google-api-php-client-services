@@ -23,7 +23,9 @@ class ValidateTrustRequest extends \Google\Model
   protected $trustDataType = '';
 
   /**
-   * @param Trust
+   * Required. The domain trust to validate trust state for.
+   *
+   * @param Trust $trust
    */
   public function setTrust(Trust $trust)
   {

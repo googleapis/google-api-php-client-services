@@ -20,20 +20,33 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class DomainJoinMachineRequest extends \Google\Model
 {
   /**
+   * Optional. force if True, forces domain join even if the computer account
+   * already exists.
+   *
    * @var bool
    */
   public $force;
   /**
+   * Optional. OU name where the VM needs to be domain joined
+   *
    * @var string
    */
   public $ouName;
   /**
+   * Required. Full instance id token of compute engine VM to verify instance
+   * identity. More about this:
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-
+   * identity#request_signature
+   *
    * @var string
    */
   public $vmIdToken;
 
   /**
-   * @param bool
+   * Optional. force if True, forces domain join even if the computer account
+   * already exists.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -47,7 +60,9 @@ class DomainJoinMachineRequest extends \Google\Model
     return $this->force;
   }
   /**
-   * @param string
+   * Optional. OU name where the VM needs to be domain joined
+   *
+   * @param string $ouName
    */
   public function setOuName($ouName)
   {
@@ -61,7 +76,12 @@ class DomainJoinMachineRequest extends \Google\Model
     return $this->ouName;
   }
   /**
-   * @param string
+   * Required. Full instance id token of compute engine VM to verify instance
+   * identity. More about this:
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-
+   * identity#request_signature
+   *
+   * @param string $vmIdToken
    */
   public function setVmIdToken($vmIdToken)
   {

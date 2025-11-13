@@ -20,28 +20,57 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class SqlIntegration extends \Google\Model
 {
   /**
+   * Not Set
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The SQL integration is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The SQL integration is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The SQL integration is ready.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Output only. The time the SQL integration was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The unique name of the SQL integration in the form of `projects/{project_id
+   * }/locations/global/domains/{domain_name}/sqlIntegrations/{sql_integration}`
+   *
    * @var string
    */
   public $name;
   /**
+   * The full resource name of an integrated SQL instance
+   *
    * @var string
    */
   public $sqlInstance;
   /**
+   * Output only. The current state of the SQL integration.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time the SQL integration was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time the SQL integration was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +84,10 @@ class SqlIntegration extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The unique name of the SQL integration in the form of `projects/{project_id
+   * }/locations/global/domains/{domain_name}/sqlIntegrations/{sql_integration}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -69,7 +101,9 @@ class SqlIntegration extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The full resource name of an integrated SQL instance
+   *
+   * @param string $sqlInstance
    */
   public function setSqlInstance($sqlInstance)
   {
@@ -83,21 +117,27 @@ class SqlIntegration extends \Google\Model
     return $this->sqlInstance;
   }
   /**
-   * @param string
+   * Output only. The current state of the SQL integration.
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, DELETING, READY
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time the SQL integration was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

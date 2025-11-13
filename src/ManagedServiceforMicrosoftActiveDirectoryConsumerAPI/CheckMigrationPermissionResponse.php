@@ -19,16 +19,36 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 
 class CheckMigrationPermissionResponse extends \Google\Collection
 {
+  /**
+   * DomainMigration is in unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Domain Migration is Disabled.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * Domain Migration is Enabled.
+   */
+  public const STATE_ENABLED = 'ENABLED';
+  /**
+   * Domain Migration is not in valid state.
+   */
+  public const STATE_NEEDS_MAINTENANCE = 'NEEDS_MAINTENANCE';
   protected $collection_key = 'onpremDomains';
   protected $onpremDomainsType = OnPremDomainSIDDetails::class;
   protected $onpremDomainsDataType = 'array';
   /**
+   * The state of DomainMigration.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param OnPremDomainSIDDetails[]
+   * The state of SID filtering of all the domains which has trust established.
+   *
+   * @param OnPremDomainSIDDetails[] $onpremDomains
    */
   public function setOnpremDomains($onpremDomains)
   {
@@ -42,14 +62,18 @@ class CheckMigrationPermissionResponse extends \Google\Collection
     return $this->onpremDomains;
   }
   /**
-   * @param string
+   * The state of DomainMigration.
+   *
+   * Accepted values: STATE_UNSPECIFIED, DISABLED, ENABLED, NEEDS_MAINTENANCE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

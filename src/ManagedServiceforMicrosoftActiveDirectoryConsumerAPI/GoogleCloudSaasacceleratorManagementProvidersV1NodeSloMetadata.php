@@ -20,10 +20,14 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends \Google\Model
 {
   /**
+   * The location of the node, if different from instance location.
+   *
    * @var string
    */
   public $location;
   /**
+   * The id of the node. This should be equal to SaasInstanceNode.node_id.
+   *
    * @var string
    */
   public $nodeId;
@@ -31,7 +35,9 @@ class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends \Go
   protected $perSliEligibilityDataType = '';
 
   /**
-   * @param string
+   * The location of the node, if different from instance location.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -45,7 +51,9 @@ class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends \Go
     return $this->location;
   }
   /**
-   * @param string
+   * The id of the node. This should be equal to SaasInstanceNode.node_id.
+   *
+   * @param string $nodeId
    */
   public function setNodeId($nodeId)
   {
@@ -59,7 +67,10 @@ class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends \Go
     return $this->nodeId;
   }
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility
+   * If present, this will override eligibility for the node coming from
+   * instance or exclusions for specified SLIs.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility $perSliEligibility
    */
   public function setPerSliEligibility(GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility $perSliEligibility)
   {

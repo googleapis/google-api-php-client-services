@@ -19,24 +19,78 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 
 class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Collection
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Instance is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Instance has been created and is ready to use.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Instance is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Instance is unheathy and under repair.
+   */
+  public const STATE_REPAIRING = 'REPAIRING';
+  /**
+   * Instance is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Instance encountered an error and is in indeterministic state.
+   */
+  public const STATE_ERROR = 'ERROR';
   protected $collection_key = 'provisionedResources';
   /**
+   * consumer_defined_name is the name of the instance set by the service
+   * consumers. Generally this is different from the `name` field which
+   * reperesents the system-assigned id of the instance which the service
+   * consumers do not recognize. This is a required field for tenants onboarding
+   * to Maintenance Window notifications (go/slm-rollout-maintenance-
+   * policies#prerequisites).
+   *
    * @var string
    */
   public $consumerDefinedName;
   /**
+   * Output only. Timestamp when the resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The instance_type of this instance of format: projects/{project_n
+   * umber}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance
+   * Type represents a high-level tier or SKU of the service that this instance
+   * belong to. When enabled(eg: Maintenance Rollout), Rollout uses
+   * 'instance_type' along with 'software_versions' to determine whether
+   * instance needs an update or not.
+   *
    * @var string
    */
   public $instanceType;
   /**
+   * Optional. Resource labels to represent user provided metadata. Each label
+   * is a key-value pair, where both the key and the value are arbitrary strings
+   * provided by the user.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. The MaintenancePolicies that have been attached to the instance.
+   * The key must be of the type name of the oneof policy name defined in
+   * MaintenancePolicy, and the referenced policy must define the same policy
+   * type. For details, please refer to go/mr-user-guide. Should not be set if
+   * maintenance_settings.maintenance_policies is set.
+   *
    * @var string[]
    */
   public $maintenancePolicyNames;
@@ -45,42 +99,76 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
   protected $maintenanceSettingsType = GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings::class;
   protected $maintenanceSettingsDataType = '';
   /**
+   * Unique name of the resource. It uses the form:
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}`
+   * Note: This name is passed, stored and logged across the rollout system. So
+   * use of consumer project_id or any other consumer PII in the name is
+   * strongly discouraged for wipeout (go/wipeout) compliance. See
+   * go/elysium/project_ids#storage-guidance for more details.
+   *
    * @var string
    */
   public $name;
   protected $notificationParametersType = GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter::class;
   protected $notificationParametersDataType = 'map';
   /**
+   * Output only. Custom string attributes used primarily to expose producer-
+   * specific information in monitoring dashboards. See go/get-instance-
+   * metadata.
+   *
    * @var string[]
    */
   public $producerMetadata;
   protected $provisionedResourcesType = GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource::class;
   protected $provisionedResourcesDataType = 'array';
   /**
+   * Link to the SLM instance template. Only populated when updating SLM
+   * instances via SSA's Actuation service adaptor. Service producers with
+   * custom control plane (e.g. Cloud SQL) doesn't need to populate this field.
+   * Instead they should use software_versions.
+   *
    * @var string
    */
   public $slmInstanceTemplate;
   protected $sloMetadataType = GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata::class;
   protected $sloMetadataDataType = '';
   /**
+   * Software versions that are used to deploy this instance. This can be
+   * mutated by rollout services.
+   *
    * @var string[]
    */
   public $softwareVersions;
   /**
+   * Output only. Current lifecycle state of the resource (e.g. if it's being
+   * created or ready to use).
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. ID of the associated GCP tenant project. See go/get-instance-
+   * metadata.
+   *
    * @var string
    */
   public $tenantProjectId;
   /**
+   * Output only. Timestamp when the resource was last modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * consumer_defined_name is the name of the instance set by the service
+   * consumers. Generally this is different from the `name` field which
+   * reperesents the system-assigned id of the instance which the service
+   * consumers do not recognize. This is a required field for tenants onboarding
+   * to Maintenance Window notifications (go/slm-rollout-maintenance-
+   * policies#prerequisites).
+   *
+   * @param string $consumerDefinedName
    */
   public function setConsumerDefinedName($consumerDefinedName)
   {
@@ -94,7 +182,9 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->consumerDefinedName;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -108,7 +198,14 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The instance_type of this instance of format: projects/{project_n
+   * umber}/locations/{location_id}/instanceTypes/{instance_type_id}. Instance
+   * Type represents a high-level tier or SKU of the service that this instance
+   * belong to. When enabled(eg: Maintenance Rollout), Rollout uses
+   * 'instance_type' along with 'software_versions' to determine whether
+   * instance needs an update or not.
+   *
+   * @param string $instanceType
    */
   public function setInstanceType($instanceType)
   {
@@ -122,7 +219,11 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->instanceType;
   }
   /**
-   * @param string[]
+   * Optional. Resource labels to represent user provided metadata. Each label
+   * is a key-value pair, where both the key and the value are arbitrary strings
+   * provided by the user.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -136,7 +237,13 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->labels;
   }
   /**
-   * @param string[]
+   * Optional. The MaintenancePolicies that have been attached to the instance.
+   * The key must be of the type name of the oneof policy name defined in
+   * MaintenancePolicy, and the referenced policy must define the same policy
+   * type. For details, please refer to go/mr-user-guide. Should not be set if
+   * maintenance_settings.maintenance_policies is set.
+   *
+   * @param string[] $maintenancePolicyNames
    */
   public function setMaintenancePolicyNames($maintenancePolicyNames)
   {
@@ -150,7 +257,10 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->maintenancePolicyNames;
   }
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule[]
+   * The MaintenanceSchedule contains the scheduling information of published
+   * maintenance schedule with same key as software_versions.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule[] $maintenanceSchedules
    */
   public function setMaintenanceSchedules($maintenanceSchedules)
   {
@@ -164,7 +274,9 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->maintenanceSchedules;
   }
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings
+   * Optional. The MaintenanceSettings associated with instance.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings $maintenanceSettings
    */
   public function setMaintenanceSettings(GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings $maintenanceSettings)
   {
@@ -178,7 +290,14 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->maintenanceSettings;
   }
   /**
-   * @param string
+   * Unique name of the resource. It uses the form:
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}`
+   * Note: This name is passed, stored and logged across the rollout system. So
+   * use of consumer project_id or any other consumer PII in the name is
+   * strongly discouraged for wipeout (go/wipeout) compliance. See
+   * go/elysium/project_ids#storage-guidance for more details.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -192,7 +311,11 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->name;
   }
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter[]
+   * Optional. notification_parameter are information that service producers may
+   * like to include that is not relevant to Rollout. This parameter will only
+   * be passed to Gamma and Cloud Logging for notification/logging purpose.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter[] $notificationParameters
    */
   public function setNotificationParameters($notificationParameters)
   {
@@ -206,7 +329,11 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->notificationParameters;
   }
   /**
-   * @param string[]
+   * Output only. Custom string attributes used primarily to expose producer-
+   * specific information in monitoring dashboards. See go/get-instance-
+   * metadata.
+   *
+   * @param string[] $producerMetadata
    */
   public function setProducerMetadata($producerMetadata)
   {
@@ -220,7 +347,10 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->producerMetadata;
   }
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource[]
+   * Output only. The list of data plane resources provisioned for this
+   * instance, e.g. compute VMs. See go/get-instance-metadata.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource[] $provisionedResources
    */
   public function setProvisionedResources($provisionedResources)
   {
@@ -234,7 +364,12 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->provisionedResources;
   }
   /**
-   * @param string
+   * Link to the SLM instance template. Only populated when updating SLM
+   * instances via SSA's Actuation service adaptor. Service producers with
+   * custom control plane (e.g. Cloud SQL) doesn't need to populate this field.
+   * Instead they should use software_versions.
+   *
+   * @param string $slmInstanceTemplate
    */
   public function setSlmInstanceTemplate($slmInstanceTemplate)
   {
@@ -248,7 +383,11 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->slmInstanceTemplate;
   }
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata
+   * Output only. SLO metadata for instance classification in the Standardized
+   * dataplane SLO platform. See go/cloud-ssa-standard-slo for feature
+   * description.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata $sloMetadata
    */
   public function setSloMetadata(GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata $sloMetadata)
   {
@@ -262,7 +401,10 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->sloMetadata;
   }
   /**
-   * @param string[]
+   * Software versions that are used to deploy this instance. This can be
+   * mutated by rollout services.
+   *
+   * @param string[] $softwareVersions
    */
   public function setSoftwareVersions($softwareVersions)
   {
@@ -276,21 +418,30 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->softwareVersions;
   }
   /**
-   * @param string
+   * Output only. Current lifecycle state of the resource (e.g. if it's being
+   * created or ready to use).
+   *
+   * Accepted values: STATE_UNSPECIFIED, CREATING, READY, UPDATING, REPAIRING,
+   * DELETING, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. ID of the associated GCP tenant project. See go/get-instance-
+   * metadata.
+   *
+   * @param string $tenantProjectId
    */
   public function setTenantProjectId($tenantProjectId)
   {
@@ -304,7 +455,9 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
     return $this->tenantProjectId;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the resource was last modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

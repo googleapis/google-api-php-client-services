@@ -21,16 +21,25 @@ class ReconfigureTrustRequest extends \Google\Collection
 {
   protected $collection_key = 'targetDnsIpAddresses';
   /**
+   * Required. The target DNS server IP addresses to resolve the remote domain
+   * involved in the trust.
+   *
    * @var string[]
    */
   public $targetDnsIpAddresses;
   /**
+   * Required. The fully-qualified target domain name which will be in trust
+   * with current domain.
+   *
    * @var string
    */
   public $targetDomainName;
 
   /**
-   * @param string[]
+   * Required. The target DNS server IP addresses to resolve the remote domain
+   * involved in the trust.
+   *
+   * @param string[] $targetDnsIpAddresses
    */
   public function setTargetDnsIpAddresses($targetDnsIpAddresses)
   {
@@ -44,7 +53,10 @@ class ReconfigureTrustRequest extends \Google\Collection
     return $this->targetDnsIpAddresses;
   }
   /**
-   * @param string
+   * Required. The fully-qualified target domain name which will be in trust
+   * with current domain.
+   *
+   * @param string $targetDomainName
    */
   public function setTargetDomainName($targetDomainName)
   {

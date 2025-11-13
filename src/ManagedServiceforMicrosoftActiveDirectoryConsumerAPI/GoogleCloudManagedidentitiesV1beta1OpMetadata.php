@@ -20,32 +20,49 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class GoogleCloudManagedidentitiesV1beta1OpMetadata extends \Google\Model
 {
   /**
+   * Output only. API version used to start the operation.
+   *
    * @var string
    */
   public $apiVersion;
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. Identifies whether the user has requested cancellation of the
+   * operation. Operations that have successfully been cancelled have
+   * Operation.error value with a google.rpc.Status.code of 1, corresponding to
+   * `Code.CANCELLED`.
+   *
    * @var bool
    */
   public $requestedCancellation;
   /**
+   * Output only. Server-defined resource path for the target of the operation.
+   *
    * @var string
    */
   public $target;
   /**
+   * Output only. Name of the verb executed by the operation.
+   *
    * @var string
    */
   public $verb;
 
   /**
-   * @param string
+   * Output only. API version used to start the operation.
+   *
+   * @param string $apiVersion
    */
   public function setApiVersion($apiVersion)
   {
@@ -59,7 +76,9 @@ class GoogleCloudManagedidentitiesV1beta1OpMetadata extends \Google\Model
     return $this->apiVersion;
   }
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -73,7 +92,9 @@ class GoogleCloudManagedidentitiesV1beta1OpMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -87,7 +108,12 @@ class GoogleCloudManagedidentitiesV1beta1OpMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param bool
+   * Output only. Identifies whether the user has requested cancellation of the
+   * operation. Operations that have successfully been cancelled have
+   * Operation.error value with a google.rpc.Status.code of 1, corresponding to
+   * `Code.CANCELLED`.
+   *
+   * @param bool $requestedCancellation
    */
   public function setRequestedCancellation($requestedCancellation)
   {
@@ -101,7 +127,9 @@ class GoogleCloudManagedidentitiesV1beta1OpMetadata extends \Google\Model
     return $this->requestedCancellation;
   }
   /**
-   * @param string
+   * Output only. Server-defined resource path for the target of the operation.
+   *
+   * @param string $target
    */
   public function setTarget($target)
   {
@@ -115,7 +143,9 @@ class GoogleCloudManagedidentitiesV1beta1OpMetadata extends \Google\Model
     return $this->target;
   }
   /**
-   * @param string
+   * Output only. Name of the verb executed by the operation.
+   *
+   * @param string $verb
    */
   public function setVerb($verb)
   {

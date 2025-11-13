@@ -21,18 +21,26 @@ class ListPeeringsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $peeringsType = Peering::class;
   protected $peeringsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListPeeringsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Peering[]
+   * A list of Managed Identities Service Peerings in the project.
+   *
+   * @param Peering[] $peerings
    */
   public function setPeerings($peerings)
   {
@@ -60,7 +70,9 @@ class ListPeeringsResponse extends \Google\Collection
     return $this->peerings;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
