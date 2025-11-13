@@ -23,7 +23,9 @@ class StopBackfillJobResponse extends \Google\Model
   protected $objectDataType = '';
 
   /**
-   * @param StreamObject
+   * The stream object resource the backfill job was stopped for.
+   *
+   * @param StreamObject $object
    */
   public function setObject(StreamObject $object)
   {

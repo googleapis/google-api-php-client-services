@@ -19,24 +19,52 @@ namespace Google\Service\Datastream;
 
 class Validation extends \Google\Collection
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Validation did not execute.
+   */
+  public const STATE_NOT_EXECUTED = 'NOT_EXECUTED';
+  /**
+   * Validation failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Validation passed.
+   */
+  public const STATE_PASSED = 'PASSED';
+  /**
+   * Validation executed with warnings.
+   */
+  public const STATE_WARNING = 'WARNING';
   protected $collection_key = 'message';
   /**
+   * A custom code identifying this validation.
+   *
    * @var string
    */
   public $code;
   /**
+   * A short description of the validation.
+   *
    * @var string
    */
   public $description;
   protected $messageType = ValidationMessage::class;
   protected $messageDataType = 'array';
   /**
+   * Output only. Validation execution status.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * A custom code identifying this validation.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -50,7 +78,9 @@ class Validation extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param string
+   * A short description of the validation.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -64,7 +94,9 @@ class Validation extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param ValidationMessage[]
+   * Messages reflecting the validation results.
+   *
+   * @param ValidationMessage[] $message
    */
   public function setMessage($message)
   {
@@ -78,14 +110,18 @@ class Validation extends \Google\Collection
     return $this->message;
   }
   /**
-   * @param string
+   * Output only. Validation execution status.
+   *
+   * Accepted values: STATE_UNSPECIFIED, NOT_EXECUTED, FAILED, PASSED, WARNING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

@@ -19,60 +19,125 @@ namespace Google\Service\Datastream;
 
 class Stream extends \Google\Collection
 {
+  /**
+   * Unspecified stream state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The stream has been created but has not yet started streaming data.
+   */
+  public const STATE_NOT_STARTED = 'NOT_STARTED';
+  /**
+   * The stream is running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The stream is paused.
+   */
+  public const STATE_PAUSED = 'PAUSED';
+  /**
+   * The stream is in maintenance mode. Updates are rejected on the resource in
+   * this state.
+   */
+  public const STATE_MAINTENANCE = 'MAINTENANCE';
+  /**
+   * The stream is experiencing an error that is preventing data from being
+   * streamed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The stream has experienced a terminal failure.
+   */
+  public const STATE_FAILED_PERMANENTLY = 'FAILED_PERMANENTLY';
+  /**
+   * The stream is starting, but not yet running.
+   */
+  public const STATE_STARTING = 'STARTING';
+  /**
+   * The Stream is no longer reading new events, but still writing events in the
+   * buffer.
+   */
+  public const STATE_DRAINING = 'DRAINING';
   protected $collection_key = 'errors';
   protected $backfillAllType = BackfillAllStrategy::class;
   protected $backfillAllDataType = '';
   protected $backfillNoneType = BackfillNoneStrategy::class;
   protected $backfillNoneDataType = '';
   /**
+   * Output only. The creation time of the stream.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Immutable. A reference to a KMS encryption key. If provided, it will be
+   * used to encrypt the data. If left blank, data will be encrypted using an
+   * internal Stream-specific encryption key provisioned through KMS.
+   *
    * @var string
    */
   public $customerManagedEncryptionKey;
   protected $destinationConfigType = DestinationConfig::class;
   protected $destinationConfigDataType = '';
   /**
+   * Required. Display name.
+   *
    * @var string
    */
   public $displayName;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**
+   * Labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. If the stream was recovered, the time of the last recovery.
+   * Note: This field is currently experimental.
+   *
    * @var string
    */
   public $lastRecoveryTime;
   /**
+   * Output only. Identifier. The stream's name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   protected $sourceConfigType = SourceConfig::class;
   protected $sourceConfigDataType = '';
   /**
+   * The state of the stream.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The last update time of the stream.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param BackfillAllStrategy
+   * Automatically backfill objects included in the stream source configuration.
+   * Specific objects can be excluded.
+   *
+   * @param BackfillAllStrategy $backfillAll
    */
   public function setBackfillAll(BackfillAllStrategy $backfillAll)
   {
@@ -86,7 +151,9 @@ class Stream extends \Google\Collection
     return $this->backfillAll;
   }
   /**
-   * @param BackfillNoneStrategy
+   * Do not automatically backfill any objects.
+   *
+   * @param BackfillNoneStrategy $backfillNone
    */
   public function setBackfillNone(BackfillNoneStrategy $backfillNone)
   {
@@ -100,7 +167,9 @@ class Stream extends \Google\Collection
     return $this->backfillNone;
   }
   /**
-   * @param string
+   * Output only. The creation time of the stream.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -114,7 +183,11 @@ class Stream extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Immutable. A reference to a KMS encryption key. If provided, it will be
+   * used to encrypt the data. If left blank, data will be encrypted using an
+   * internal Stream-specific encryption key provisioned through KMS.
+   *
+   * @param string $customerManagedEncryptionKey
    */
   public function setCustomerManagedEncryptionKey($customerManagedEncryptionKey)
   {
@@ -128,7 +201,9 @@ class Stream extends \Google\Collection
     return $this->customerManagedEncryptionKey;
   }
   /**
-   * @param DestinationConfig
+   * Required. Destination connection profile configuration.
+   *
+   * @param DestinationConfig $destinationConfig
    */
   public function setDestinationConfig(DestinationConfig $destinationConfig)
   {
@@ -142,7 +217,9 @@ class Stream extends \Google\Collection
     return $this->destinationConfig;
   }
   /**
-   * @param string
+   * Required. Display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -156,7 +233,9 @@ class Stream extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param Error[]
+   * Output only. Errors on the Stream.
+   *
+   * @param Error[] $errors
    */
   public function setErrors($errors)
   {
@@ -170,7 +249,9 @@ class Stream extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string[]
+   * Labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -184,7 +265,10 @@ class Stream extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. If the stream was recovered, the time of the last recovery.
+   * Note: This field is currently experimental.
+   *
+   * @param string $lastRecoveryTime
    */
   public function setLastRecoveryTime($lastRecoveryTime)
   {
@@ -198,7 +282,9 @@ class Stream extends \Google\Collection
     return $this->lastRecoveryTime;
   }
   /**
-   * @param string
+   * Output only. Identifier. The stream's name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -212,7 +298,9 @@ class Stream extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -226,7 +314,9 @@ class Stream extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -240,7 +330,9 @@ class Stream extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param SourceConfig
+   * Required. Source connection profile configuration.
+   *
+   * @param SourceConfig $sourceConfig
    */
   public function setSourceConfig(SourceConfig $sourceConfig)
   {
@@ -254,21 +346,28 @@ class Stream extends \Google\Collection
     return $this->sourceConfig;
   }
   /**
-   * @param string
+   * The state of the stream.
+   *
+   * Accepted values: STATE_UNSPECIFIED, NOT_STARTED, RUNNING, PAUSED,
+   * MAINTENANCE, FAILED, FAILED_PERMANENTLY, STARTING, DRAINING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The last update time of the stream.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

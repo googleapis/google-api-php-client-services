@@ -20,24 +20,46 @@ namespace Google\Service\Datastream;
 class ValidationMessage extends \Google\Model
 {
   /**
+   * Unspecified level.
+   */
+  public const LEVEL_LEVEL_UNSPECIFIED = 'LEVEL_UNSPECIFIED';
+  /**
+   * Potentially cause issues with the Stream.
+   */
+  public const LEVEL_WARNING = 'WARNING';
+  /**
+   * Definitely cause issues with the Stream.
+   */
+  public const LEVEL_ERROR = 'ERROR';
+  /**
+   * A custom code identifying this specific message.
+   *
    * @var string
    */
   public $code;
   /**
+   * Message severity level (warning or error).
+   *
    * @var string
    */
   public $level;
   /**
+   * The result of the validation.
+   *
    * @var string
    */
   public $message;
   /**
+   * Additional metadata related to the result.
+   *
    * @var string[]
    */
   public $metadata;
 
   /**
-   * @param string
+   * A custom code identifying this specific message.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -51,21 +73,27 @@ class ValidationMessage extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * Message severity level (warning or error).
+   *
+   * Accepted values: LEVEL_UNSPECIFIED, WARNING, ERROR
+   *
+   * @param self::LEVEL_* $level
    */
   public function setLevel($level)
   {
     $this->level = $level;
   }
   /**
-   * @return string
+   * @return self::LEVEL_*
    */
   public function getLevel()
   {
     return $this->level;
   }
   /**
-   * @param string
+   * The result of the validation.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -79,7 +107,9 @@ class ValidationMessage extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string[]
+   * Additional metadata related to the result.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
