@@ -20,34 +20,58 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends \Google\Model
 {
   /**
+   * This field is deprecated, and will be always set to true since reschedule
+   * can happen multiple times now. This field should not be removed until all
+   * service producers remove this for their customers.
+   *
+   * @deprecated
    * @var bool
    */
   public $canReschedule;
   /**
+   * The scheduled end time for the maintenance.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The rollout management policy this maintenance schedule is associated with.
+   * When doing reschedule update request, the reschedule should be against this
+   * given policy.
+   *
    * @var string
    */
   public $rolloutManagementPolicy;
   /**
+   * schedule_deadline_time is the time deadline any schedule start time cannot
+   * go beyond, including reschedule. It's normally the initial schedule start
+   * time plus maintenance window length (1 day or 1 week). Maintenance cannot
+   * be scheduled to start beyond this deadline.
+   *
    * @var string
    */
   public $scheduleDeadlineTime;
   /**
+   * The scheduled start time for the maintenance.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param bool
+   * This field is deprecated, and will be always set to true since reschedule
+   * can happen multiple times now. This field should not be removed until all
+   * service producers remove this for their customers.
+   *
+   * @deprecated
+   * @param bool $canReschedule
    */
   public function setCanReschedule($canReschedule)
   {
     $this->canReschedule = $canReschedule;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getCanReschedule()
@@ -55,7 +79,9 @@ class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends
     return $this->canReschedule;
   }
   /**
-   * @param string
+   * The scheduled end time for the maintenance.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -69,7 +95,11 @@ class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends
     return $this->endTime;
   }
   /**
-   * @param string
+   * The rollout management policy this maintenance schedule is associated with.
+   * When doing reschedule update request, the reschedule should be against this
+   * given policy.
+   *
+   * @param string $rolloutManagementPolicy
    */
   public function setRolloutManagementPolicy($rolloutManagementPolicy)
   {
@@ -83,7 +113,12 @@ class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends
     return $this->rolloutManagementPolicy;
   }
   /**
-   * @param string
+   * schedule_deadline_time is the time deadline any schedule start time cannot
+   * go beyond, including reschedule. It's normally the initial schedule start
+   * time plus maintenance window length (1 day or 1 week). Maintenance cannot
+   * be scheduled to start beyond this deadline.
+   *
+   * @param string $scheduleDeadlineTime
    */
   public function setScheduleDeadlineTime($scheduleDeadlineTime)
   {
@@ -97,7 +132,9 @@ class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule extends
     return $this->scheduleDeadlineTime;
   }
   /**
-   * @param string
+   * The scheduled start time for the maintenance.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

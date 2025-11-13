@@ -21,16 +21,26 @@ class ApplyParametersRequest extends \Google\Collection
 {
   protected $collection_key = 'nodeIds';
   /**
+   * Whether to apply instance-level parameter group to all nodes. If set to
+   * true, users are restricted from specifying individual nodes, and
+   * `ApplyParameters` updates all nodes within the instance.
+   *
    * @var bool
    */
   public $applyAll;
   /**
+   * Nodes to which the instance-level parameter group is applied.
+   *
    * @var string[]
    */
   public $nodeIds;
 
   /**
-   * @param bool
+   * Whether to apply instance-level parameter group to all nodes. If set to
+   * true, users are restricted from specifying individual nodes, and
+   * `ApplyParameters` updates all nodes within the instance.
+   *
+   * @param bool $applyAll
    */
   public function setApplyAll($applyAll)
   {
@@ -44,7 +54,9 @@ class ApplyParametersRequest extends \Google\Collection
     return $this->applyAll;
   }
   /**
-   * @param string[]
+   * Nodes to which the instance-level parameter group is applied.
+   *
+   * @param string[] $nodeIds
    */
   public function setNodeIds($nodeIds)
   {

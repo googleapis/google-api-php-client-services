@@ -22,12 +22,16 @@ class UpdateParametersRequest extends \Google\Model
   protected $parametersType = MemcacheParameters::class;
   protected $parametersDataType = '';
   /**
+   * Required. Mask of fields to update.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param MemcacheParameters
+   * The parameters to apply to the instance.
+   *
+   * @param MemcacheParameters $parameters
    */
   public function setParameters(MemcacheParameters $parameters)
   {
@@ -41,7 +45,9 @@ class UpdateParametersRequest extends \Google\Model
     return $this->parameters;
   }
   /**
-   * @param string
+   * Required. Mask of fields to update.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

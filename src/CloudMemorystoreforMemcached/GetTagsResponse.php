@@ -20,20 +20,31 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class GetTagsResponse extends \Google\Model
 {
   /**
+   * Required. The full One Platform resource name of the service resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Tag keys/values directly bound to this resource. Each item in the
+   * map must be expressed as " : ". For example: "123/environment" :
+   * "production", "123/costCenter" : "marketing"
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * A checksum based on the current bindings. This field is always set in
+   * server responses.
+   *
    * @var string
    */
   public $tagsEtag;
 
   /**
-   * @param string
+   * Required. The full One Platform resource name of the service resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +58,11 @@ class GetTagsResponse extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string[]
+   * Required. Tag keys/values directly bound to this resource. Each item in the
+   * map must be expressed as " : ". For example: "123/environment" :
+   * "production", "123/costCenter" : "marketing"
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -61,7 +76,10 @@ class GetTagsResponse extends \Google\Model
     return $this->tags;
   }
   /**
-   * @param string
+   * A checksum based on the current bindings. This field is always set in
+   * server responses.
+   *
+   * @param string $tagsEtag
    */
   public function setTagsEtag($tagsEtag)
   {

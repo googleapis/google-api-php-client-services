@@ -25,12 +25,21 @@ class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends \Google
   protected $perSliEligibilityType = GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility::class;
   protected $perSliEligibilityDataType = '';
   /**
+   * Name of the SLO tier the Instance belongs to. This name will be expected to
+   * match the tiers specified in the service SLO configuration. Field is
+   * mandatory and must not be empty.
+   *
    * @var string
    */
   public $tier;
 
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata[]
+   * Optional. List of nodes. Some producers need to use per-node metadata to
+   * calculate SLO. This field allows such producers to publish per-node SLO
+   * meta data, which will be consumed by SSA Eligibility Exporter and published
+   * in the form of per node metric to Monarch.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata[] $nodes
    */
   public function setNodes($nodes)
   {
@@ -44,7 +53,10 @@ class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends \Google
     return $this->nodes;
   }
   /**
-   * @param GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility
+   * Optional. Multiple per-instance SLI eligibilities which apply for
+   * individual SLIs.
+   *
+   * @param GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility $perSliEligibility
    */
   public function setPerSliEligibility(GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility $perSliEligibility)
   {
@@ -58,7 +70,11 @@ class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends \Google
     return $this->perSliEligibility;
   }
   /**
-   * @param string
+   * Name of the SLO tier the Instance belongs to. This name will be expected to
+   * match the tiers specified in the service SLO configuration. Field is
+   * mandatory and must not be empty.
+   *
+   * @param string $tier
    */
   public function setTier($tier)
   {

@@ -25,7 +25,9 @@ class MaintenanceWindow extends \Google\Model
   protected $weeklyCycleDataType = '';
 
   /**
-   * @param DailyCycle
+   * Daily cycle.
+   *
+   * @param DailyCycle $dailyCycle
    */
   public function setDailyCycle(DailyCycle $dailyCycle)
   {
@@ -39,7 +41,9 @@ class MaintenanceWindow extends \Google\Model
     return $this->dailyCycle;
   }
   /**
-   * @param WeeklyCycle
+   * Weekly cycle.
+   *
+   * @param WeeklyCycle $weeklyCycle
    */
   public function setWeeklyCycle(WeeklyCycle $weeklyCycle)
   {

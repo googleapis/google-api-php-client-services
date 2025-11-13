@@ -23,16 +23,26 @@ class ListInstancesResponse extends \Google\Collection
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Instance[]
+   * A list of Memcached instances in the project in the specified location, or
+   * across all locations. If the `location_id` in the parent field of the
+   * request is "-", all regions available to the project are queried, and the
+   * results aggregated.
+   *
+   * @param Instance[] $instances
    */
   public function setInstances($instances)
   {
@@ -46,7 +56,10 @@ class ListInstancesResponse extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +73,9 @@ class ListInstancesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

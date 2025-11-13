@@ -23,7 +23,11 @@ class LocationMetadata extends \Google\Model
   protected $availableZonesDataType = 'map';
 
   /**
-   * @param ZoneMetadata[]
+   * Output only. The set of available zones in the location. The map is keyed
+   * by the lowercase ID of each zone, as defined by GCE. These keys can be
+   * specified in the `zones` field when creating a Memcached instance.
+   *
+   * @param ZoneMetadata[] $availableZones
    */
   public function setAvailableZones($availableZones)
   {

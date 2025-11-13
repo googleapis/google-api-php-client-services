@@ -20,30 +20,48 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class InstanceMessage extends \Google\Model
 {
   /**
+   * Message Code not set.
+   */
+  public const CODE_CODE_UNSPECIFIED = 'CODE_UNSPECIFIED';
+  /**
+   * Memcached nodes are distributed unevenly.
+   */
+  public const CODE_ZONE_DISTRIBUTION_UNBALANCED = 'ZONE_DISTRIBUTION_UNBALANCED';
+  /**
+   * A code that correspond to one type of user-facing message.
+   *
    * @var string
    */
   public $code;
   /**
+   * Message on memcached instance which will be exposed to users.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * A code that correspond to one type of user-facing message.
+   *
+   * Accepted values: CODE_UNSPECIFIED, ZONE_DISTRIBUTION_UNBALANCED
+   *
+   * @param self::CODE_* $code
    */
   public function setCode($code)
   {
     $this->code = $code;
   }
   /**
-   * @return string
+   * @return self::CODE_*
    */
   public function getCode()
   {
     return $this->code;
   }
   /**
-   * @param string
+   * Message on memcached instance which will be exposed to users.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

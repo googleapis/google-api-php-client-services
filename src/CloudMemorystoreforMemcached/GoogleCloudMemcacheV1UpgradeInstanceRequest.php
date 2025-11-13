@@ -20,19 +20,38 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class GoogleCloudMemcacheV1UpgradeInstanceRequest extends \Google\Model
 {
   /**
+   * Memcache version is not specified by customer
+   */
+  public const MEMCACHE_VERSION_MEMCACHE_VERSION_UNSPECIFIED = 'MEMCACHE_VERSION_UNSPECIFIED';
+  /**
+   * Memcached 1.5 version.
+   */
+  public const MEMCACHE_VERSION_MEMCACHE_1_5 = 'MEMCACHE_1_5';
+  /**
+   * Memcached 1.6.15 version.
+   */
+  public const MEMCACHE_VERSION_MEMCACHE_1_6_15 = 'MEMCACHE_1_6_15';
+  /**
+   * Required. Specifies the target version of memcached engine to upgrade to.
+   *
    * @var string
    */
   public $memcacheVersion;
 
   /**
-   * @param string
+   * Required. Specifies the target version of memcached engine to upgrade to.
+   *
+   * Accepted values: MEMCACHE_VERSION_UNSPECIFIED, MEMCACHE_1_5,
+   * MEMCACHE_1_6_15
+   *
+   * @param self::MEMCACHE_VERSION_* $memcacheVersion
    */
   public function setMemcacheVersion($memcacheVersion)
   {
     $this->memcacheVersion = $memcacheVersion;
   }
   /**
-   * @return string
+   * @return self::MEMCACHE_VERSION_*
    */
   public function getMemcacheVersion()
   {

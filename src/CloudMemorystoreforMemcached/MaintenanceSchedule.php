@@ -20,20 +20,32 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class MaintenanceSchedule extends \Google\Model
 {
   /**
+   * Output only. The end time of any upcoming scheduled maintenance for this
+   * instance.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. The deadline that the maintenance schedule start time can not
+   * go beyond, including reschedule.
+   *
    * @var string
    */
   public $scheduleDeadlineTime;
   /**
+   * Output only. The start time of any upcoming scheduled maintenance for this
+   * instance.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Output only. The end time of any upcoming scheduled maintenance for this
+   * instance.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -47,7 +59,10 @@ class MaintenanceSchedule extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. The deadline that the maintenance schedule start time can not
+   * go beyond, including reschedule.
+   *
+   * @param string $scheduleDeadlineTime
    */
   public function setScheduleDeadlineTime($scheduleDeadlineTime)
   {
@@ -61,7 +76,10 @@ class MaintenanceSchedule extends \Google\Model
     return $this->scheduleDeadlineTime;
   }
   /**
-   * @param string
+   * Output only. The start time of any upcoming scheduled maintenance for this
+   * instance.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
