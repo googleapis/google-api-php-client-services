@@ -20,12 +20,18 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaEngineChatEngineMetadata extends \Google\Model
 {
   /**
+   * The resource name of a Dialogflow agent, that this Chat Engine refers to.
+   * Format: `projects//locations//agents/`.
+   *
    * @var string
    */
   public $dialogflowAgent;
 
   /**
-   * @param string
+   * The resource name of a Dialogflow agent, that this Chat Engine refers to.
+   * Format: `projects//locations//agents/`.
+   *
+   * @param string $dialogflowAgent
    */
   public function setDialogflowAgent($dialogflowAgent)
   {

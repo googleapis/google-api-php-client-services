@@ -23,16 +23,22 @@ class GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesResponse e
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
   /**
+   * Count of deny list entries that failed to be imported.
+   *
    * @var string
    */
   public $failedEntriesCount;
   /**
+   * Count of deny list entries successfully imported.
+   *
    * @var string
    */
   public $importedEntriesCount;
 
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {
@@ -46,7 +52,9 @@ class GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesResponse e
     return $this->errorSamples;
   }
   /**
-   * @param string
+   * Count of deny list entries that failed to be imported.
+   *
+   * @param string $failedEntriesCount
    */
   public function setFailedEntriesCount($failedEntriesCount)
   {
@@ -60,7 +68,9 @@ class GoogleCloudDiscoveryengineV1alphaImportSuggestionDenyListEntriesResponse e
     return $this->failedEntriesCount;
   }
   /**
-   * @param string
+   * Count of deny list entries successfully imported.
+   *
+   * @param string $importedEntriesCount
    */
   public function setImportedEntriesCount($importedEntriesCount)
   {
