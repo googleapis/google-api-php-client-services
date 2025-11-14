@@ -20,19 +20,33 @@ namespace Google\Service\Monitoring;
 class ServiceAgentAuthentication extends \Google\Model
 {
   /**
+   * Default value, will result in OIDC Authentication.
+   */
+  public const TYPE_SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED = 'SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED';
+  /**
+   * OIDC Authentication
+   */
+  public const TYPE_OIDC_TOKEN = 'OIDC_TOKEN';
+  /**
+   * Type of authentication.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Type of authentication.
+   *
+   * Accepted values: SERVICE_AGENT_AUTHENTICATION_TYPE_UNSPECIFIED, OIDC_TOKEN
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

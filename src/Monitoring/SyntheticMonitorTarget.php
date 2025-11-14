@@ -23,7 +23,9 @@ class SyntheticMonitorTarget extends \Google\Model
   protected $cloudFunctionV2DataType = '';
 
   /**
-   * @param CloudFunctionV2Target
+   * Target a Synthetic Monitor GCFv2 instance.
+   *
+   * @param CloudFunctionV2Target $cloudFunctionV2
    */
   public function setCloudFunctionV2(CloudFunctionV2Target $cloudFunctionV2)
   {
