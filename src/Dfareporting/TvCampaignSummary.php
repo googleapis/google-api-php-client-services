@@ -20,41 +20,88 @@ namespace Google\Service\Dfareporting;
 class TvCampaignSummary extends \Google\Model
 {
   /**
+   * Required to exist; do not use.
+   */
+  public const TYPE_CAMPAIGN_COMPONENT_TYPE_UNSPECIFIED = 'CAMPAIGN_COMPONENT_TYPE_UNSPECIFIED';
+  /**
+   * Company.
+   */
+  public const TYPE_COMPANY = 'COMPANY';
+  /**
+   * Brand.
+   */
+  public const TYPE_BRAND = 'BRAND';
+  /**
+   * Product.
+   */
+  public const TYPE_PRODUCT = 'PRODUCT';
+  /**
+   * Campaign.
+   */
+  public const TYPE_CAMPAIGN = 'CAMPAIGN';
+  /**
+   * The end date of the TV campaign, inclusive. A string of the format: "yyyy-
+   * MM-dd".
+   *
    * @var string
    */
   public $endDate;
   /**
+   * GRP of this TV campaign.
+   *
    * @var string
    */
   public $grp;
   /**
+   * ID of this TV campaign.
+   *
    * @var string
    */
   public $id;
   /**
+   * Impressions across the entire TV campaign.
+   *
    * @var string
    */
   public $impressions;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#tvCampaignSummary".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Identifier. Name of this TV campaign.
+   *
    * @var string
    */
   public $name;
+  /**
+   * Spend across the entire TV campaign.
+   *
+   * @var 
+   */
   public $spend;
   /**
+   * The start date of the TV campaign, inclusive. A string of the format:
+   * "yyyy-MM-dd".
+   *
    * @var string
    */
   public $startDate;
   /**
+   * "CampaignComponentType" of this TV campaign.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The end date of the TV campaign, inclusive. A string of the format: "yyyy-
+   * MM-dd".
+   *
+   * @param string $endDate
    */
   public function setEndDate($endDate)
   {
@@ -68,7 +115,9 @@ class TvCampaignSummary extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param string
+   * GRP of this TV campaign.
+   *
+   * @param string $grp
    */
   public function setGrp($grp)
   {
@@ -82,7 +131,9 @@ class TvCampaignSummary extends \Google\Model
     return $this->grp;
   }
   /**
-   * @param string
+   * ID of this TV campaign.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -96,7 +147,9 @@ class TvCampaignSummary extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Impressions across the entire TV campaign.
+   *
+   * @param string $impressions
    */
   public function setImpressions($impressions)
   {
@@ -110,7 +163,10 @@ class TvCampaignSummary extends \Google\Model
     return $this->impressions;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#tvCampaignSummary".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -124,7 +180,9 @@ class TvCampaignSummary extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Identifier. Name of this TV campaign.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -146,7 +204,10 @@ class TvCampaignSummary extends \Google\Model
     return $this->spend;
   }
   /**
-   * @param string
+   * The start date of the TV campaign, inclusive. A string of the format:
+   * "yyyy-MM-dd".
+   *
+   * @param string $startDate
    */
   public function setStartDate($startDate)
   {
@@ -160,14 +221,19 @@ class TvCampaignSummary extends \Google\Model
     return $this->startDate;
   }
   /**
-   * @param string
+   * "CampaignComponentType" of this TV campaign.
+   *
+   * Accepted values: CAMPAIGN_COMPONENT_TYPE_UNSPECIFIED, COMPANY, BRAND,
+   * PRODUCT, CAMPAIGN
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
