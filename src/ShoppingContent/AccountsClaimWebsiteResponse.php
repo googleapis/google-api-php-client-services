@@ -20,12 +20,18 @@ namespace Google\Service\ShoppingContent;
 class AccountsClaimWebsiteResponse extends \Google\Model
 {
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountsClaimWebsiteResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountsClaimWebsiteResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

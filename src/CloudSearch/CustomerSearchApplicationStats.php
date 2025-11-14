@@ -20,6 +20,8 @@ namespace Google\Service\CloudSearch;
 class CustomerSearchApplicationStats extends \Google\Model
 {
   /**
+   * The count of search applications for the date.
+   *
    * @var string
    */
   public $count;
@@ -27,7 +29,9 @@ class CustomerSearchApplicationStats extends \Google\Model
   protected $dateDataType = '';
 
   /**
-   * @param string
+   * The count of search applications for the date.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -41,7 +45,9 @@ class CustomerSearchApplicationStats extends \Google\Model
     return $this->count;
   }
   /**
-   * @param Date
+   * The date for which search application stats were calculated.
+   *
+   * @param Date $date
    */
   public function setDate(Date $date)
   {

@@ -22,12 +22,18 @@ class SubmitConfigSourceRequest extends \Google\Model
   protected $configSourceType = ConfigSource::class;
   protected $configSourceDataType = '';
   /**
+   * Optional. If set, this will result in the generation of a
+   * `google.api.Service` configuration based on the `ConfigSource` provided,
+   * but the generated config and the sources will NOT be persisted.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param ConfigSource
+   * Required. The source configuration for the service.
+   *
+   * @param ConfigSource $configSource
    */
   public function setConfigSource(ConfigSource $configSource)
   {
@@ -41,7 +47,11 @@ class SubmitConfigSourceRequest extends \Google\Model
     return $this->configSource;
   }
   /**
-   * @param bool
+   * Optional. If set, this will result in the generation of a
+   * `google.api.Service` configuration based on the `ConfigSource` provided,
+   * but the generated config and the sources will NOT be persisted.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

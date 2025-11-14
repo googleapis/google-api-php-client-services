@@ -21,6 +21,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends \Google\Co
 {
   protected $collection_key = 'suggestions';
   /**
+   * Optional. Description of the card (at most 2000 bytes). At least one of the
+   * title, description or media must be set.
+   *
    * @var string
    */
   public $description;
@@ -29,12 +32,18 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends \Google\Co
   protected $suggestionsType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion::class;
   protected $suggestionsDataType = 'array';
   /**
+   * Optional. Title of the card (at most 200 bytes). At least one of the title,
+   * description or media must be set.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Optional. Description of the card (at most 2000 bytes). At least one of the
+   * title, description or media must be set.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -48,7 +57,10 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends \Google\Co
     return $this->description;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia
+   * Optional. However at least one of the title, description or media must be
+   * set. Media (image, GIF or a video) to include in the card.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia $media
    */
   public function setMedia(GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia $media)
   {
@@ -62,7 +74,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends \Google\Co
     return $this->media;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[]
+   * Optional. List of suggestions to include in the card.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[] $suggestions
    */
   public function setSuggestions($suggestions)
   {
@@ -76,7 +90,10 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends \Google\Co
     return $this->suggestions;
   }
   /**
-   * @param string
+   * Optional. Title of the card (at most 200 bytes). At least one of the title,
+   * description or media must be set.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

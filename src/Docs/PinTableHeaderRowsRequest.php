@@ -20,6 +20,9 @@ namespace Google\Service\Docs;
 class PinTableHeaderRowsRequest extends \Google\Model
 {
   /**
+   * The number of table rows to pin, where 0 implies that all rows are
+   * unpinned.
+   *
    * @var int
    */
   public $pinnedHeaderRowsCount;
@@ -27,7 +30,10 @@ class PinTableHeaderRowsRequest extends \Google\Model
   protected $tableStartLocationDataType = '';
 
   /**
-   * @param int
+   * The number of table rows to pin, where 0 implies that all rows are
+   * unpinned.
+   *
+   * @param int $pinnedHeaderRowsCount
    */
   public function setPinnedHeaderRowsCount($pinnedHeaderRowsCount)
   {
@@ -41,7 +47,9 @@ class PinTableHeaderRowsRequest extends \Google\Model
     return $this->pinnedHeaderRowsCount;
   }
   /**
-   * @param Location
+   * The location where the table starts in the document.
+   *
+   * @param Location $tableStartLocation
    */
   public function setTableStartLocation(Location $tableStartLocation)
   {

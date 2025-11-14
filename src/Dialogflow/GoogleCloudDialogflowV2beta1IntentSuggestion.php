@@ -20,20 +20,31 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentSuggestion extends \Google\Model
 {
   /**
+   * Human readable description for better understanding an intent like its
+   * scope, content, result etc. Maximum character limit: 140 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * The display name of the intent.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The unique identifier of this intent. Format:
+   * `projects//locations//agent/intents/`.
+   *
    * @var string
    */
   public $intentV2;
 
   /**
-   * @param string
+   * Human readable description for better understanding an intent like its
+   * scope, content, result etc. Maximum character limit: 140 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +58,9 @@ class GoogleCloudDialogflowV2beta1IntentSuggestion extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The display name of the intent.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +74,10 @@ class GoogleCloudDialogflowV2beta1IntentSuggestion extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The unique identifier of this intent. Format:
+   * `projects//locations//agent/intents/`.
+   *
+   * @param string $intentV2
    */
   public function setIntentV2($intentV2)
   {

@@ -20,13 +20,25 @@ namespace Google\Service\Monitoring;
 class Trigger extends \Google\Model
 {
   /**
+   * The absolute number of time series that must fail the predicate for the
+   * condition to be triggered.
+   *
    * @var int
    */
   public $count;
+  /**
+   * The percentage of time series that must fail the predicate for the
+   * condition to be triggered.
+   *
+   * @var 
+   */
   public $percent;
 
   /**
-   * @param int
+   * The absolute number of time series that must fail the predicate for the
+   * condition to be triggered.
+   *
+   * @param int $count
    */
   public function setCount($count)
   {

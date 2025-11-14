@@ -39,7 +39,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata extends \Google\Model
   public $reproducible;
 
   /**
-   * @param string
+   * @param string $buildFinishedOn
    */
   public function setBuildFinishedOn($buildFinishedOn)
   {
@@ -53,7 +53,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata extends \Google\Model
     return $this->buildFinishedOn;
   }
   /**
-   * @param string
+   * @param string $buildInvocationId
    */
   public function setBuildInvocationId($buildInvocationId)
   {
@@ -67,7 +67,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata extends \Google\Model
     return $this->buildInvocationId;
   }
   /**
-   * @param string
+   * @param string $buildStartedOn
    */
   public function setBuildStartedOn($buildStartedOn)
   {
@@ -81,7 +81,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata extends \Google\Model
     return $this->buildStartedOn;
   }
   /**
-   * @param GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness
+   * @param GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness $completeness
    */
   public function setCompleteness(GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness $completeness)
   {
@@ -95,7 +95,7 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata extends \Google\Model
     return $this->completeness;
   }
   /**
-   * @param bool
+   * @param bool $reproducible
    */
   public function setReproducible($reproducible)
   {

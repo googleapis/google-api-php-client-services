@@ -24,12 +24,16 @@ class CloudRepoSourceContext extends \Google\Model
   protected $repoIdType = RepoId::class;
   protected $repoIdDataType = '';
   /**
+   * A revision ID.
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param AliasContext
+   * An alias, which may be a branch or tag.
+   *
+   * @param AliasContext $aliasContext
    */
   public function setAliasContext(AliasContext $aliasContext)
   {
@@ -43,7 +47,9 @@ class CloudRepoSourceContext extends \Google\Model
     return $this->aliasContext;
   }
   /**
-   * @param RepoId
+   * The ID of the repo.
+   *
+   * @param RepoId $repoId
    */
   public function setRepoId(RepoId $repoId)
   {
@@ -57,7 +63,9 @@ class CloudRepoSourceContext extends \Google\Model
     return $this->repoId;
   }
   /**
-   * @param string
+   * A revision ID.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

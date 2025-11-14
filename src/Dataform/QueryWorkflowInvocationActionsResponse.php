@@ -21,6 +21,9 @@ class QueryWorkflowInvocationActionsResponse extends \Google\Collection
 {
   protected $collection_key = 'workflowInvocationActions';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class QueryWorkflowInvocationActionsResponse extends \Google\Collection
   protected $workflowInvocationActionsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class QueryWorkflowInvocationActionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param WorkflowInvocationAction[]
+   * List of workflow invocation actions.
+   *
+   * @param WorkflowInvocationAction[] $workflowInvocationActions
    */
   public function setWorkflowInvocationActions($workflowInvocationActions)
   {

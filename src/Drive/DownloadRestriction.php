@@ -20,16 +20,23 @@ namespace Google\Service\Drive;
 class DownloadRestriction extends \Google\Model
 {
   /**
+   * Whether download and copy is restricted for readers.
+   *
    * @var bool
    */
   public $restrictedForReaders;
   /**
+   * Whether download and copy is restricted for writers. If `true`, download is
+   * also restricted for readers.
+   *
    * @var bool
    */
   public $restrictedForWriters;
 
   /**
-   * @param bool
+   * Whether download and copy is restricted for readers.
+   *
+   * @param bool $restrictedForReaders
    */
   public function setRestrictedForReaders($restrictedForReaders)
   {
@@ -43,7 +50,10 @@ class DownloadRestriction extends \Google\Model
     return $this->restrictedForReaders;
   }
   /**
-   * @param bool
+   * Whether download and copy is restricted for writers. If `true`, download is
+   * also restricted for readers.
+   *
+   * @param bool $restrictedForWriters
    */
   public function setRestrictedForWriters($restrictedForWriters)
   {

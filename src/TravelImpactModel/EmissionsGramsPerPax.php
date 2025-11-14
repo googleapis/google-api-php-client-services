@@ -20,24 +20,44 @@ namespace Google\Service\TravelImpactModel;
 class EmissionsGramsPerPax extends \Google\Model
 {
   /**
+   * Emissions for one passenger in business class in grams. This field is
+   * always computed and populated, regardless of whether the aircraft has
+   * business class seats or not.
+   *
    * @var int
    */
   public $business;
   /**
+   * Emissions for one passenger in economy class in grams. This field is always
+   * computed and populated, regardless of whether the aircraft has economy
+   * class seats or not.
+   *
    * @var int
    */
   public $economy;
   /**
+   * Emissions for one passenger in first class in grams. This field is always
+   * computed and populated, regardless of whether the aircraft has first class
+   * seats or not.
+   *
    * @var int
    */
   public $first;
   /**
+   * Emissions for one passenger in premium economy class in grams. This field
+   * is always computed and populated, regardless of whether the aircraft has
+   * premium economy class seats or not.
+   *
    * @var int
    */
   public $premiumEconomy;
 
   /**
-   * @param int
+   * Emissions for one passenger in business class in grams. This field is
+   * always computed and populated, regardless of whether the aircraft has
+   * business class seats or not.
+   *
+   * @param int $business
    */
   public function setBusiness($business)
   {
@@ -51,7 +71,11 @@ class EmissionsGramsPerPax extends \Google\Model
     return $this->business;
   }
   /**
-   * @param int
+   * Emissions for one passenger in economy class in grams. This field is always
+   * computed and populated, regardless of whether the aircraft has economy
+   * class seats or not.
+   *
+   * @param int $economy
    */
   public function setEconomy($economy)
   {
@@ -65,7 +89,11 @@ class EmissionsGramsPerPax extends \Google\Model
     return $this->economy;
   }
   /**
-   * @param int
+   * Emissions for one passenger in first class in grams. This field is always
+   * computed and populated, regardless of whether the aircraft has first class
+   * seats or not.
+   *
+   * @param int $first
    */
   public function setFirst($first)
   {
@@ -79,7 +107,11 @@ class EmissionsGramsPerPax extends \Google\Model
     return $this->first;
   }
   /**
-   * @param int
+   * Emissions for one passenger in premium economy class in grams. This field
+   * is always computed and populated, regardless of whether the aircraft has
+   * premium economy class seats or not.
+   *
+   * @param int $premiumEconomy
    */
   public function setPremiumEconomy($premiumEconomy)
   {

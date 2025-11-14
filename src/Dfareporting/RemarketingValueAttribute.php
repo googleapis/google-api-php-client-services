@@ -21,16 +21,22 @@ class RemarketingValueAttribute extends \Google\Collection
 {
   protected $collection_key = 'userAttributeIds';
   /**
+   * Optional. Field ID in the element.
+   *
    * @var int
    */
   public $fieldId;
   /**
+   * Optional. Remarketing user attribute IDs for auto filtering.
+   *
    * @var string[]
    */
   public $userAttributeIds;
 
   /**
-   * @param int
+   * Optional. Field ID in the element.
+   *
+   * @param int $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -44,7 +50,9 @@ class RemarketingValueAttribute extends \Google\Collection
     return $this->fieldId;
   }
   /**
-   * @param string[]
+   * Optional. Remarketing user attribute IDs for auto filtering.
+   *
+   * @param string[] $userAttributeIds
    */
   public function setUserAttributeIds($userAttributeIds)
   {

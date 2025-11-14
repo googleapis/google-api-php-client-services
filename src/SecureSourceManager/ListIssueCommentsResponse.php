@@ -23,12 +23,16 @@ class ListIssueCommentsResponse extends \Google\Collection
   protected $issueCommentsType = IssueComment::class;
   protected $issueCommentsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param IssueComment[]
+   * The list of issue comments.
+   *
+   * @param IssueComment[] $issueComments
    */
   public function setIssueComments($issueComments)
   {
@@ -42,7 +46,9 @@ class ListIssueCommentsResponse extends \Google\Collection
     return $this->issueComments;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

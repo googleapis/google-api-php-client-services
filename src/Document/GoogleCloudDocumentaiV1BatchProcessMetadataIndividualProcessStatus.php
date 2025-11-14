@@ -22,10 +22,17 @@ class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus extends
   protected $humanReviewStatusType = GoogleCloudDocumentaiV1HumanReviewStatus::class;
   protected $humanReviewStatusDataType = '';
   /**
+   * The source of the document, same as the input_gcs_source field in the
+   * request when the batch process started.
+   *
    * @var string
    */
   public $inputGcsSource;
   /**
+   * The Cloud Storage output destination (in the request as
+   * DocumentOutputConfig.GcsOutputConfig.gcs_uri) of the processed document if
+   * it was successful, otherwise empty.
+   *
    * @var string
    */
   public $outputGcsDestination;
@@ -33,7 +40,9 @@ class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus extends
   protected $statusDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1HumanReviewStatus
+   * The status of human review on the processed document.
+   *
+   * @param GoogleCloudDocumentaiV1HumanReviewStatus $humanReviewStatus
    */
   public function setHumanReviewStatus(GoogleCloudDocumentaiV1HumanReviewStatus $humanReviewStatus)
   {
@@ -47,7 +56,10 @@ class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus extends
     return $this->humanReviewStatus;
   }
   /**
-   * @param string
+   * The source of the document, same as the input_gcs_source field in the
+   * request when the batch process started.
+   *
+   * @param string $inputGcsSource
    */
   public function setInputGcsSource($inputGcsSource)
   {
@@ -61,7 +73,11 @@ class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus extends
     return $this->inputGcsSource;
   }
   /**
-   * @param string
+   * The Cloud Storage output destination (in the request as
+   * DocumentOutputConfig.GcsOutputConfig.gcs_uri) of the processed document if
+   * it was successful, otherwise empty.
+   *
+   * @param string $outputGcsDestination
    */
   public function setOutputGcsDestination($outputGcsDestination)
   {
@@ -75,7 +91,9 @@ class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus extends
     return $this->outputGcsDestination;
   }
   /**
-   * @param GoogleRpcStatus
+   * The status processing the document.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {

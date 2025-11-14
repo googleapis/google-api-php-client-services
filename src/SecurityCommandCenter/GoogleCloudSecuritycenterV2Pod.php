@@ -25,16 +25,22 @@ class GoogleCloudSecuritycenterV2Pod extends \Google\Collection
   protected $labelsType = GoogleCloudSecuritycenterV2Label::class;
   protected $labelsDataType = 'array';
   /**
+   * Kubernetes Pod name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Kubernetes Pod namespace.
+   *
    * @var string
    */
   public $ns;
 
   /**
-   * @param GoogleCloudSecuritycenterV2Container[]
+   * Pod containers associated with this finding, if any.
+   *
+   * @param GoogleCloudSecuritycenterV2Container[] $containers
    */
   public function setContainers($containers)
   {
@@ -48,7 +54,9 @@ class GoogleCloudSecuritycenterV2Pod extends \Google\Collection
     return $this->containers;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2Label[]
+   * Pod labels. For Kubernetes containers, these are applied to the container.
+   *
+   * @param GoogleCloudSecuritycenterV2Label[] $labels
    */
   public function setLabels($labels)
   {
@@ -62,7 +70,9 @@ class GoogleCloudSecuritycenterV2Pod extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Kubernetes Pod name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -76,7 +86,9 @@ class GoogleCloudSecuritycenterV2Pod extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Kubernetes Pod namespace.
+   *
+   * @param string $ns
    */
   public function setNs($ns)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\DisplayVideo;
 class PrismaCpeCode extends \Google\Model
 {
   /**
+   * The Prisma client code.
+   *
    * @var string
    */
   public $prismaClientCode;
   /**
+   * The Prisma estimate code.
+   *
    * @var string
    */
   public $prismaEstimateCode;
   /**
+   * The Prisma product code.
+   *
    * @var string
    */
   public $prismaProductCode;
 
   /**
-   * @param string
+   * The Prisma client code.
+   *
+   * @param string $prismaClientCode
    */
   public function setPrismaClientCode($prismaClientCode)
   {
@@ -47,7 +55,9 @@ class PrismaCpeCode extends \Google\Model
     return $this->prismaClientCode;
   }
   /**
-   * @param string
+   * The Prisma estimate code.
+   *
+   * @param string $prismaEstimateCode
    */
   public function setPrismaEstimateCode($prismaEstimateCode)
   {
@@ -61,7 +71,9 @@ class PrismaCpeCode extends \Google\Model
     return $this->prismaEstimateCode;
   }
   /**
-   * @param string
+   * The Prisma product code.
+   *
+   * @param string $prismaProductCode
    */
   public function setPrismaProductCode($prismaProductCode)
   {

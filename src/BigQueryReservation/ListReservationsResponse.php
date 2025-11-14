@@ -21,6 +21,9 @@ class ListReservationsResponse extends \Google\Collection
 {
   protected $collection_key = 'reservations';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListReservationsResponse extends \Google\Collection
   protected $reservationsDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListReservationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Reservation[]
+   * List of reservations visible to the user.
+   *
+   * @param Reservation[] $reservations
    */
   public function setReservations($reservations)
   {

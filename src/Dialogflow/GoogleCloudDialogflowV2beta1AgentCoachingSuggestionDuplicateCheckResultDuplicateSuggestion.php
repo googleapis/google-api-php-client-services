@@ -20,22 +20,32 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResultDuplicateSuggestion extends \Google\Model
 {
   /**
+   * Output only. The answer record id of the past duplicate suggestion.
+   *
    * @var string
    */
   public $answerRecord;
   /**
+   * Output only. The similarity score of between the past and current
+   * suggestion.
+   *
    * @var float
    */
   public $similarityScore;
   protected $sourcesType = GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources::class;
   protected $sourcesDataType = '';
   /**
+   * Output only. The index of the duplicate suggestion in the past suggestion
+   * list.
+   *
    * @var int
    */
   public $suggestionIndex;
 
   /**
-   * @param string
+   * Output only. The answer record id of the past duplicate suggestion.
+   *
+   * @param string $answerRecord
    */
   public function setAnswerRecord($answerRecord)
   {
@@ -49,7 +59,10 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResultDup
     return $this->answerRecord;
   }
   /**
-   * @param float
+   * Output only. The similarity score of between the past and current
+   * suggestion.
+   *
+   * @param float $similarityScore
    */
   public function setSimilarityScore($similarityScore)
   {
@@ -63,7 +76,9 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResultDup
     return $this->similarityScore;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources
+   * Output only. Sources for the suggestion.
+   *
+   * @param GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources $sources
    */
   public function setSources(GoogleCloudDialogflowV2beta1AgentCoachingSuggestionSources $sources)
   {
@@ -77,7 +92,10 @@ class GoogleCloudDialogflowV2beta1AgentCoachingSuggestionDuplicateCheckResultDup
     return $this->sources;
   }
   /**
-   * @param int
+   * Output only. The index of the duplicate suggestion in the past suggestion
+   * list.
+   *
+   * @param int $suggestionIndex
    */
   public function setSuggestionIndex($suggestionIndex)
   {

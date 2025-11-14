@@ -20,36 +20,55 @@ namespace Google\Service\CloudScheduler;
 class OperationMetadata extends \Google\Model
 {
   /**
+   * Output only. API version used to start the operation.
+   *
    * @var string
    */
   public $apiVersion;
   /**
+   * Output only. Identifies whether the user has requested cancellation of the
+   * operation. Operations that have been cancelled successfully have
+   * google.longrunning.Operation.error value with a google.rpc.Status.code of
+   * `1`, corresponding to `Code.CANCELLED`.
+   *
    * @var bool
    */
   public $cancelRequested;
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. Human-readable status of the operation, if any.
+   *
    * @var string
    */
   public $statusDetail;
   /**
+   * Output only. Server-defined resource path for the target of the operation.
+   *
    * @var string
    */
   public $target;
   /**
+   * Output only. Name of the verb executed by the operation.
+   *
    * @var string
    */
   public $verb;
 
   /**
-   * @param string
+   * Output only. API version used to start the operation.
+   *
+   * @param string $apiVersion
    */
   public function setApiVersion($apiVersion)
   {
@@ -63,7 +82,12 @@ class OperationMetadata extends \Google\Model
     return $this->apiVersion;
   }
   /**
-   * @param bool
+   * Output only. Identifies whether the user has requested cancellation of the
+   * operation. Operations that have been cancelled successfully have
+   * google.longrunning.Operation.error value with a google.rpc.Status.code of
+   * `1`, corresponding to `Code.CANCELLED`.
+   *
+   * @param bool $cancelRequested
    */
   public function setCancelRequested($cancelRequested)
   {
@@ -77,7 +101,9 @@ class OperationMetadata extends \Google\Model
     return $this->cancelRequested;
   }
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -91,7 +117,9 @@ class OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -105,7 +133,9 @@ class OperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. Human-readable status of the operation, if any.
+   *
+   * @param string $statusDetail
    */
   public function setStatusDetail($statusDetail)
   {
@@ -119,7 +149,9 @@ class OperationMetadata extends \Google\Model
     return $this->statusDetail;
   }
   /**
-   * @param string
+   * Output only. Server-defined resource path for the target of the operation.
+   *
+   * @param string $target
    */
   public function setTarget($target)
   {
@@ -133,7 +165,9 @@ class OperationMetadata extends \Google\Model
     return $this->target;
   }
   /**
-   * @param string
+   * Output only. Name of the verb executed by the operation.
+   *
+   * @param string $verb
    */
   public function setVerb($verb)
   {

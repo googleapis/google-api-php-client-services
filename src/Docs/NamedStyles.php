@@ -24,7 +24,10 @@ class NamedStyles extends \Google\Collection
   protected $stylesDataType = 'array';
 
   /**
-   * @param NamedStyle[]
+   * The named styles. There's an entry for each of the possible named style
+   * types.
+   *
+   * @param NamedStyle[] $styles
    */
   public function setStyles($styles)
   {

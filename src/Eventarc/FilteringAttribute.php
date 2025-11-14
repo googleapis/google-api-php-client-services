@@ -20,24 +20,36 @@ namespace Google\Service\Eventarc;
 class FilteringAttribute extends \Google\Model
 {
   /**
+   * Output only. Attribute used for filtering the event type.
+   *
    * @var string
    */
   public $attribute;
   /**
+   * Output only. Description of the purpose of the attribute.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. If true, the attribute accepts matching expressions in the
+   * Eventarc PathPattern format.
+   *
    * @var bool
    */
   public $pathPatternSupported;
   /**
+   * Output only. If true, the triggers for this provider should always specify
+   * a filter on these attributes. Trigger creation will fail otherwise.
+   *
    * @var bool
    */
   public $required;
 
   /**
-   * @param string
+   * Output only. Attribute used for filtering the event type.
+   *
+   * @param string $attribute
    */
   public function setAttribute($attribute)
   {
@@ -51,7 +63,9 @@ class FilteringAttribute extends \Google\Model
     return $this->attribute;
   }
   /**
-   * @param string
+   * Output only. Description of the purpose of the attribute.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -65,7 +79,10 @@ class FilteringAttribute extends \Google\Model
     return $this->description;
   }
   /**
-   * @param bool
+   * Output only. If true, the attribute accepts matching expressions in the
+   * Eventarc PathPattern format.
+   *
+   * @param bool $pathPatternSupported
    */
   public function setPathPatternSupported($pathPatternSupported)
   {
@@ -79,7 +96,10 @@ class FilteringAttribute extends \Google\Model
     return $this->pathPatternSupported;
   }
   /**
-   * @param bool
+   * Output only. If true, the triggers for this provider should always specify
+   * a filter on these attributes. Trigger creation will fail otherwise.
+   *
+   * @param bool $required
    */
   public function setRequired($required)
   {

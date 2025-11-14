@@ -21,16 +21,22 @@ class GoogleCloudDiscoveryengineV1alphaBAPConfig extends \Google\Collection
 {
   protected $collection_key = 'supportedConnectorModes';
   /**
+   * Optional. The actions enabled on the associated BAP connection.
+   *
    * @var string[]
    */
   public $enabledActions;
   /**
+   * Required. The supported connector modes for the associated BAP connection.
+   *
    * @var string[]
    */
   public $supportedConnectorModes;
 
   /**
-   * @param string[]
+   * Optional. The actions enabled on the associated BAP connection.
+   *
+   * @param string[] $enabledActions
    */
   public function setEnabledActions($enabledActions)
   {
@@ -44,7 +50,9 @@ class GoogleCloudDiscoveryengineV1alphaBAPConfig extends \Google\Collection
     return $this->enabledActions;
   }
   /**
-   * @param string[]
+   * Required. The supported connector modes for the associated BAP connection.
+   *
+   * @param string[] $supportedConnectorModes
    */
   public function setSupportedConnectorModes($supportedConnectorModes)
   {

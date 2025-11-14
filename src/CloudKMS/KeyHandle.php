@@ -20,20 +20,41 @@ namespace Google\Service\CloudKMS;
 class KeyHandle extends \Google\Model
 {
   /**
+   * Output only. Name of a CryptoKey that has been provisioned for Customer
+   * Managed Encryption Key (CMEK) use in the KeyHandle project and location for
+   * the requested resource type. The CryptoKey project will reflect the value
+   * configured in the AutokeyConfig on the resource project's ancestor folder
+   * at the time of the KeyHandle creation. If more than one ancestor folder has
+   * a configured AutokeyConfig, the nearest of these configurations is used.
+   *
    * @var string
    */
   public $kmsKey;
   /**
+   * Identifier. Name of the KeyHandle resource, e.g.
+   * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Indicates the resource type that the resulting CryptoKey is meant
+   * to protect, e.g. `{SERVICE}.googleapis.com/{TYPE}`. See documentation for
+   * supported resource types.
+   *
    * @var string
    */
   public $resourceTypeSelector;
 
   /**
-   * @param string
+   * Output only. Name of a CryptoKey that has been provisioned for Customer
+   * Managed Encryption Key (CMEK) use in the KeyHandle project and location for
+   * the requested resource type. The CryptoKey project will reflect the value
+   * configured in the AutokeyConfig on the resource project's ancestor folder
+   * at the time of the KeyHandle creation. If more than one ancestor folder has
+   * a configured AutokeyConfig, the nearest of these configurations is used.
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {
@@ -47,7 +68,10 @@ class KeyHandle extends \Google\Model
     return $this->kmsKey;
   }
   /**
-   * @param string
+   * Identifier. Name of the KeyHandle resource, e.g.
+   * `projects/{PROJECT_ID}/locations/{LOCATION}/keyHandles/{KEY_HANDLE_ID}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +85,11 @@ class KeyHandle extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Indicates the resource type that the resulting CryptoKey is meant
+   * to protect, e.g. `{SERVICE}.googleapis.com/{TYPE}`. See documentation for
+   * supported resource types.
+   *
+   * @param string $resourceTypeSelector
    */
   public function setResourceTypeSelector($resourceTypeSelector)
   {

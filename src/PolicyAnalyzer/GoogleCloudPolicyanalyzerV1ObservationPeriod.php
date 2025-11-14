@@ -20,16 +20,23 @@ namespace Google\Service\PolicyAnalyzer;
 class GoogleCloudPolicyanalyzerV1ObservationPeriod extends \Google\Model
 {
   /**
+   * The observation end time. The time in this timestamp is always `07:00:00Z`.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The observation start time. The time in this timestamp is always
+   * `07:00:00Z`.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The observation end time. The time in this timestamp is always `07:00:00Z`.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +50,10 @@ class GoogleCloudPolicyanalyzerV1ObservationPeriod extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The observation start time. The time in this timestamp is always
+   * `07:00:00Z`.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

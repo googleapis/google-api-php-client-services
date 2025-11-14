@@ -29,7 +29,7 @@ class StartActivityNotFound extends \Google\Model
   public $uri;
 
   /**
-   * @param string
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -43,7 +43,7 @@ class StartActivityNotFound extends \Google\Model
     return $this->action;
   }
   /**
-   * @param string
+   * @param string $uri
    */
   public function setUri($uri)
   {

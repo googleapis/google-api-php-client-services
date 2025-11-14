@@ -19,12 +19,36 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
 {
+  /**
+   * The evaluation is unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The service is preparing to run the evaluation.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The evaluation is in progress.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The evaluation completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The evaluation failed.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'errorSamples';
   /**
+   * Output only. Timestamp the Evaluation was created at.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Timestamp the Evaluation was completed at.
+   *
    * @var string
    */
   public $endTime;
@@ -35,18 +59,27 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
   protected $evaluationSpecType = GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpec::class;
   protected $evaluationSpecDataType = '';
   /**
+   * Identifier. The full resource name of the Evaluation, in the format of
+   * `projects/{project}/locations/{location}/evaluations/{evaluation}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
    * @var string
    */
   public $name;
   protected $qualityMetricsType = GoogleCloudDiscoveryengineV1alphaQualityMetrics::class;
   protected $qualityMetricsDataType = '';
   /**
+   * Output only. The state of the evaluation.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. Timestamp the Evaluation was created at.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -60,7 +93,9 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp the Evaluation was completed at.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -74,7 +109,10 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param GoogleRpcStatus
+   * Output only. The error that occurred during evaluation. Only populated when
+   * the evaluation's state is FAILED.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -88,7 +126,9 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Output only. A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {
@@ -102,7 +142,9 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
     return $this->errorSamples;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpec
+   * Required. The specification of the evaluation.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpec $evaluationSpec
    */
   public function setEvaluationSpec(GoogleCloudDiscoveryengineV1alphaEvaluationEvaluationSpec $evaluationSpec)
   {
@@ -116,7 +158,12 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
     return $this->evaluationSpec;
   }
   /**
-   * @param string
+   * Identifier. The full resource name of the Evaluation, in the format of
+   * `projects/{project}/locations/{location}/evaluations/{evaluation}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -130,7 +177,11 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaQualityMetrics
+   * Output only. The metrics produced by the evaluation, averaged across all
+   * SampleQuerys in the SampleQuerySet. Only populated when the evaluation's
+   * state is SUCCEEDED.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaQualityMetrics $qualityMetrics
    */
   public function setQualityMetrics(GoogleCloudDiscoveryengineV1alphaQualityMetrics $qualityMetrics)
   {
@@ -144,14 +195,18 @@ class GoogleCloudDiscoveryengineV1alphaEvaluation extends \Google\Collection
     return $this->qualityMetrics;
   }
   /**
-   * @param string
+   * Output only. The state of the evaluation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, RUNNING, SUCCEEDED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

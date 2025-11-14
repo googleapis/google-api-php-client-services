@@ -20,20 +20,32 @@ namespace Google\Service\DisplayVideo;
 class YoutubeAndPartnersInventorySourceConfig extends \Google\Model
 {
   /**
+   * Optional. Whether to target inventory in video apps available with Google
+   * TV.
+   *
    * @var bool
    */
   public $includeGoogleTv;
   /**
+   * Optional. Whether to target inventory on YouTube. This includes both
+   * search, channels and videos.
+   *
    * @var bool
    */
   public $includeYoutube;
   /**
+   * Whether to target inventory on a collection of partner sites and apps that
+   * follow the same brand safety standards as YouTube.
+   *
    * @var bool
    */
   public $includeYoutubeVideoPartners;
 
   /**
-   * @param bool
+   * Optional. Whether to target inventory in video apps available with Google
+   * TV.
+   *
+   * @param bool $includeGoogleTv
    */
   public function setIncludeGoogleTv($includeGoogleTv)
   {
@@ -47,7 +59,10 @@ class YoutubeAndPartnersInventorySourceConfig extends \Google\Model
     return $this->includeGoogleTv;
   }
   /**
-   * @param bool
+   * Optional. Whether to target inventory on YouTube. This includes both
+   * search, channels and videos.
+   *
+   * @param bool $includeYoutube
    */
   public function setIncludeYoutube($includeYoutube)
   {
@@ -61,7 +76,10 @@ class YoutubeAndPartnersInventorySourceConfig extends \Google\Model
     return $this->includeYoutube;
   }
   /**
-   * @param bool
+   * Whether to target inventory on a collection of partner sites and apps that
+   * follow the same brand safety standards as YouTube.
+   *
+   * @param bool $includeYoutubeVideoPartners
    */
   public function setIncludeYoutubeVideoPartners($includeYoutubeVideoPartners)
   {

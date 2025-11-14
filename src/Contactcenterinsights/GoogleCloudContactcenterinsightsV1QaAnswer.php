@@ -25,24 +25,36 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
   protected $answerValueType = GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue::class;
   protected $answerValueDataType = '';
   /**
+   * The conversation the answer applies to.
+   *
    * @var string
    */
   public $conversation;
   /**
+   * The QaQuestion answered by this answer.
+   *
    * @var string
    */
   public $qaQuestion;
   /**
+   * Question text. E.g., "Did the agent greet the customer?"
+   *
    * @var string
    */
   public $questionBody;
   /**
+   * User-defined list of arbitrary tags. Matches the value from
+   * QaScorecard.ScorecardQuestion.tags. Used for grouping/organization and for
+   * weighting the score of each answer.
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1QaAnswerAnswerSource[]
+   * List of all individual answers given to the question.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QaAnswerAnswerSource[] $answerSources
    */
   public function setAnswerSources($answerSources)
   {
@@ -56,7 +68,9 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
     return $this->answerSources;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue
+   * The main answer value, incorporating any manual edits if they exist.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue $answerValue
    */
   public function setAnswerValue(GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue $answerValue)
   {
@@ -70,7 +84,9 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
     return $this->answerValue;
   }
   /**
-   * @param string
+   * The conversation the answer applies to.
+   *
+   * @param string $conversation
    */
   public function setConversation($conversation)
   {
@@ -84,7 +100,9 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
     return $this->conversation;
   }
   /**
-   * @param string
+   * The QaQuestion answered by this answer.
+   *
+   * @param string $qaQuestion
    */
   public function setQaQuestion($qaQuestion)
   {
@@ -98,7 +116,9 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
     return $this->qaQuestion;
   }
   /**
-   * @param string
+   * Question text. E.g., "Did the agent greet the customer?"
+   *
+   * @param string $questionBody
    */
   public function setQuestionBody($questionBody)
   {
@@ -112,7 +132,11 @@ class GoogleCloudContactcenterinsightsV1QaAnswer extends \Google\Collection
     return $this->questionBody;
   }
   /**
-   * @param string[]
+   * User-defined list of arbitrary tags. Matches the value from
+   * QaScorecard.ScorecardQuestion.tags. Used for grouping/organization and for
+   * weighting the score of each answer.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

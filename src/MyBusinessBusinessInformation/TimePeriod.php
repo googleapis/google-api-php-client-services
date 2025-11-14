@@ -20,12 +20,80 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class TimePeriod extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const CLOSE_DAY_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const CLOSE_DAY_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const CLOSE_DAY_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const CLOSE_DAY_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const CLOSE_DAY_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const CLOSE_DAY_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const CLOSE_DAY_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const CLOSE_DAY_SUNDAY = 'SUNDAY';
+  /**
+   * The day of the week is unspecified.
+   */
+  public const OPEN_DAY_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const OPEN_DAY_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const OPEN_DAY_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const OPEN_DAY_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const OPEN_DAY_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const OPEN_DAY_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const OPEN_DAY_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const OPEN_DAY_SUNDAY = 'SUNDAY';
+  /**
+   * Required. Indicates the day of the week this period ends on.
+   *
    * @var string
    */
   public $closeDay;
   protected $closeTimeType = TimeOfDay::class;
   protected $closeTimeDataType = '';
   /**
+   * Required. Indicates the day of the week this period starts on.
+   *
    * @var string
    */
   public $openDay;
@@ -33,21 +101,29 @@ class TimePeriod extends \Google\Model
   protected $openTimeDataType = '';
 
   /**
-   * @param string
+   * Required. Indicates the day of the week this period ends on.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::CLOSE_DAY_* $closeDay
    */
   public function setCloseDay($closeDay)
   {
     $this->closeDay = $closeDay;
   }
   /**
-   * @return string
+   * @return self::CLOSE_DAY_*
    */
   public function getCloseDay()
   {
     return $this->closeDay;
   }
   /**
-   * @param TimeOfDay
+   * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at
+   * the end of the specified day field.
+   *
+   * @param TimeOfDay $closeTime
    */
   public function setCloseTime(TimeOfDay $closeTime)
   {
@@ -61,21 +137,29 @@ class TimePeriod extends \Google\Model
     return $this->closeTime;
   }
   /**
-   * @param string
+   * Required. Indicates the day of the week this period starts on.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::OPEN_DAY_* $openDay
    */
   public function setOpenDay($openDay)
   {
     $this->openDay = $openDay;
   }
   /**
-   * @return string
+   * @return self::OPEN_DAY_*
    */
   public function getOpenDay()
   {
     return $this->openDay;
   }
   /**
-   * @param TimeOfDay
+   * Required. Valid values are 00:00-24:00, where 24:00 represents midnight at
+   * the end of the specified day field.
+   *
+   * @param TimeOfDay $openTime
    */
   public function setOpenTime(TimeOfDay $openTime)
   {

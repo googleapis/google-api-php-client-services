@@ -21,38 +21,58 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
 {
   protected $collection_key = 'policyDriftDetails';
   /**
+   * The name of the updated policy, for example,
+   * `projects/{project_id}/policies/{constraint_name}`.
+   *
    * @var string
    */
   public $changedPolicy;
   /**
+   * Name of the posture, for example, `CIS-Posture`.
+   *
    * @var string
    */
   public $name;
   /**
+   * The ID of the updated policy, for example, `compute-policy-1`.
+   *
    * @var string
    */
   public $policy;
   protected $policyDriftDetailsType = GoogleCloudSecuritycenterV2PolicyDriftDetails::class;
   protected $policyDriftDetailsDataType = 'array';
   /**
+   * The name of the updated policy set, for example, `cis-policyset`.
+   *
    * @var string
    */
   public $policySet;
   /**
+   * The name of the posture deployment, for example,
+   * `organizations/{org_id}/posturedeployments/{posture_deployment_id}`.
+   *
    * @var string
    */
   public $postureDeployment;
   /**
+   * The project, folder, or organization on which the posture is deployed, for
+   * example, `projects/{project_number}`.
+   *
    * @var string
    */
   public $postureDeploymentResource;
   /**
+   * The version of the posture, for example, `c7cfa2a8`.
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param string
+   * The name of the updated policy, for example,
+   * `projects/{project_id}/policies/{constraint_name}`.
+   *
+   * @param string $changedPolicy
    */
   public function setChangedPolicy($changedPolicy)
   {
@@ -66,7 +86,9 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
     return $this->changedPolicy;
   }
   /**
-   * @param string
+   * Name of the posture, for example, `CIS-Posture`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +102,9 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The ID of the updated policy, for example, `compute-policy-1`.
+   *
+   * @param string $policy
    */
   public function setPolicy($policy)
   {
@@ -94,7 +118,10 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
     return $this->policy;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2PolicyDriftDetails[]
+   * The details about a change in an updated policy that violates the deployed
+   * posture.
+   *
+   * @param GoogleCloudSecuritycenterV2PolicyDriftDetails[] $policyDriftDetails
    */
   public function setPolicyDriftDetails($policyDriftDetails)
   {
@@ -108,7 +135,9 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
     return $this->policyDriftDetails;
   }
   /**
-   * @param string
+   * The name of the updated policy set, for example, `cis-policyset`.
+   *
+   * @param string $policySet
    */
   public function setPolicySet($policySet)
   {
@@ -122,7 +151,10 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
     return $this->policySet;
   }
   /**
-   * @param string
+   * The name of the posture deployment, for example,
+   * `organizations/{org_id}/posturedeployments/{posture_deployment_id}`.
+   *
+   * @param string $postureDeployment
    */
   public function setPostureDeployment($postureDeployment)
   {
@@ -136,7 +168,10 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
     return $this->postureDeployment;
   }
   /**
-   * @param string
+   * The project, folder, or organization on which the posture is deployed, for
+   * example, `projects/{project_number}`.
+   *
+   * @param string $postureDeploymentResource
    */
   public function setPostureDeploymentResource($postureDeploymentResource)
   {
@@ -150,7 +185,9 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
     return $this->postureDeploymentResource;
   }
   /**
-   * @param string
+   * The version of the posture, for example, `c7cfa2a8`.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

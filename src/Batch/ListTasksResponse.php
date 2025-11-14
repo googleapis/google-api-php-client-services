@@ -21,18 +21,24 @@ class ListTasksResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * Next page token.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $tasksType = Task::class;
   protected $tasksDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * Next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListTasksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Task[]
+   * Tasks.
+   *
+   * @param Task[] $tasks
    */
   public function setTasks($tasks)
   {
@@ -60,7 +68,9 @@ class ListTasksResponse extends \Google\Collection
     return $this->tasks;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

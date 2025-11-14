@@ -19,19 +19,46 @@ namespace Google\Service\DisplayVideo;
 
 class YoutubeAssetAssociationAffiliateLocationAssetFilter extends \Google\Model
 {
+  /**
+   * Affiliate location matching type is not specified or is unknown in this
+   * version.
+   */
+  public const AFFILIATE_LOCATION_MATCHING_TYPE_AFFILIATE_LOCATION_MATCHING_TYPE_UNSPECIFIED = 'AFFILIATE_LOCATION_MATCHING_TYPE_UNSPECIFIED';
+  /**
+   * All available affiliate location assets are eligible for serving.
+   */
+  public const AFFILIATE_LOCATION_MATCHING_TYPE_SELECT_ALL = 'SELECT_ALL';
+  /**
+   * The selected affiliate location assets can serve.
+   */
+  public const AFFILIATE_LOCATION_MATCHING_TYPE_SELECTED_CHAINS = 'SELECTED_CHAINS';
+  /**
+   * No affiliate location assets can serve.
+   */
+  public const AFFILIATE_LOCATION_MATCHING_TYPE_DISABLED = 'DISABLED';
   protected $affiliateLocationMatchingFunctionType = YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationMatchingFunction::class;
   protected $affiliateLocationMatchingFunctionDataType = '';
   /**
+   * Required. The matching type of this affiliate location asset filter.
+   *
    * @var string
    */
   public $affiliateLocationMatchingType;
   /**
+   * Output only. The ID of the asset set that matches the affiliate location
+   * assets eligible for serving.
+   *
    * @var string
    */
   public $assetSetId;
 
   /**
-   * @param YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationMatchingFunction
+   * Optional. The matching function that determines how the affiliate location
+   * asset filter matches affiliate location assets. This field is required and
+   * can only be set for if affiliate_location_matching_type is
+   * `SELECTED_CHAINS`.
+   *
+   * @param YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationMatchingFunction $affiliateLocationMatchingFunction
    */
   public function setAffiliateLocationMatchingFunction(YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationMatchingFunction $affiliateLocationMatchingFunction)
   {
@@ -45,21 +72,29 @@ class YoutubeAssetAssociationAffiliateLocationAssetFilter extends \Google\Model
     return $this->affiliateLocationMatchingFunction;
   }
   /**
-   * @param string
+   * Required. The matching type of this affiliate location asset filter.
+   *
+   * Accepted values: AFFILIATE_LOCATION_MATCHING_TYPE_UNSPECIFIED, SELECT_ALL,
+   * SELECTED_CHAINS, DISABLED
+   *
+   * @param self::AFFILIATE_LOCATION_MATCHING_TYPE_* $affiliateLocationMatchingType
    */
   public function setAffiliateLocationMatchingType($affiliateLocationMatchingType)
   {
     $this->affiliateLocationMatchingType = $affiliateLocationMatchingType;
   }
   /**
-   * @return string
+   * @return self::AFFILIATE_LOCATION_MATCHING_TYPE_*
    */
   public function getAffiliateLocationMatchingType()
   {
     return $this->affiliateLocationMatchingType;
   }
   /**
-   * @param string
+   * Output only. The ID of the asset set that matches the affiliate location
+   * assets eligible for serving.
+   *
+   * @param string $assetSetId
    */
   public function setAssetSetId($assetSetId)
   {

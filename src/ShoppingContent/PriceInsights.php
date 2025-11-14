@@ -20,39 +20,104 @@ namespace Google\Service\ShoppingContent;
 class PriceInsights extends \Google\Model
 {
   /**
+   * Effectiveness is unknown.
+   */
+  public const EFFECTIVENESS_EFFECTIVENESS_UNSPECIFIED = 'EFFECTIVENESS_UNSPECIFIED';
+  /**
+   * Effectiveness is low.
+   */
+  public const EFFECTIVENESS_LOW = 'LOW';
+  /**
+   * Effectiveness is medium.
+   */
+  public const EFFECTIVENESS_MEDIUM = 'MEDIUM';
+  /**
+   * Effectiveness is high.
+   */
+  public const EFFECTIVENESS_HIGH = 'HIGH';
+  /**
+   * The predicted effectiveness of applying the price suggestion, bucketed.
+   *
    * @var string
    */
   public $effectiveness;
+  /**
+   * The predicted change in clicks as a fraction after introducing the
+   * suggested price compared to current active price. For example, 0.05 is a 5%
+   * predicted increase in clicks.
+   *
+   * @var 
+   */
   public $predictedClicksChangeFraction;
+  /**
+   * The predicted change in conversions as a fraction after introducing the
+   * suggested price compared to current active price. For example, 0.05 is a 5%
+   * predicted increase in conversions).
+   *
+   * @var 
+   */
   public $predictedConversionsChangeFraction;
+  /**
+   * *Deprecated*: This field is no longer supported and will start returning 0.
+   * The predicted change in gross profit as a fraction after introducing the
+   * suggested price compared to current active price. For example, 0.05 is a 5%
+   * predicted increase in gross profit.
+   *
+   * @var 
+   */
   public $predictedGrossProfitChangeFraction;
+  /**
+   * The predicted change in impressions as a fraction after introducing the
+   * suggested price compared to current active price. For example, 0.05 is a 5%
+   * predicted increase in impressions.
+   *
+   * @var 
+   */
   public $predictedImpressionsChangeFraction;
   /**
+   * *Deprecated*: This field is no longer supported and will start returning
+   * USD for all requests. The predicted monthly gross profit change currency
+   * (ISO 4217 code).
+   *
    * @var string
    */
   public $predictedMonthlyGrossProfitChangeCurrencyCode;
   /**
+   * *Deprecated*: This field is no longer supported and will start returning 0.
+   * The predicted change in gross profit in micros (1 millionth of a standard
+   * unit, 1 USD = 1000000 micros) after introducing the suggested price for a
+   * month compared to current active price.
+   *
    * @var string
    */
   public $predictedMonthlyGrossProfitChangeMicros;
   /**
+   * The suggested price currency (ISO 4217 code).
+   *
    * @var string
    */
   public $suggestedPriceCurrencyCode;
   /**
+   * The latest suggested price in micros (1 millionth of a standard unit, 1 USD
+   * = 1000000 micros) for the product.
+   *
    * @var string
    */
   public $suggestedPriceMicros;
 
   /**
-   * @param string
+   * The predicted effectiveness of applying the price suggestion, bucketed.
+   *
+   * Accepted values: EFFECTIVENESS_UNSPECIFIED, LOW, MEDIUM, HIGH
+   *
+   * @param self::EFFECTIVENESS_* $effectiveness
    */
   public function setEffectiveness($effectiveness)
   {
     $this->effectiveness = $effectiveness;
   }
   /**
-   * @return string
+   * @return self::EFFECTIVENESS_*
    */
   public function getEffectiveness()
   {
@@ -91,7 +156,11 @@ class PriceInsights extends \Google\Model
     return $this->predictedImpressionsChangeFraction;
   }
   /**
-   * @param string
+   * *Deprecated*: This field is no longer supported and will start returning
+   * USD for all requests. The predicted monthly gross profit change currency
+   * (ISO 4217 code).
+   *
+   * @param string $predictedMonthlyGrossProfitChangeCurrencyCode
    */
   public function setPredictedMonthlyGrossProfitChangeCurrencyCode($predictedMonthlyGrossProfitChangeCurrencyCode)
   {
@@ -105,7 +174,12 @@ class PriceInsights extends \Google\Model
     return $this->predictedMonthlyGrossProfitChangeCurrencyCode;
   }
   /**
-   * @param string
+   * *Deprecated*: This field is no longer supported and will start returning 0.
+   * The predicted change in gross profit in micros (1 millionth of a standard
+   * unit, 1 USD = 1000000 micros) after introducing the suggested price for a
+   * month compared to current active price.
+   *
+   * @param string $predictedMonthlyGrossProfitChangeMicros
    */
   public function setPredictedMonthlyGrossProfitChangeMicros($predictedMonthlyGrossProfitChangeMicros)
   {
@@ -119,7 +193,9 @@ class PriceInsights extends \Google\Model
     return $this->predictedMonthlyGrossProfitChangeMicros;
   }
   /**
-   * @param string
+   * The suggested price currency (ISO 4217 code).
+   *
+   * @param string $suggestedPriceCurrencyCode
    */
   public function setSuggestedPriceCurrencyCode($suggestedPriceCurrencyCode)
   {
@@ -133,7 +209,10 @@ class PriceInsights extends \Google\Model
     return $this->suggestedPriceCurrencyCode;
   }
   /**
-   * @param string
+   * The latest suggested price in micros (1 millionth of a standard unit, 1 USD
+   * = 1000000 micros) for the product.
+   *
+   * @param string $suggestedPriceMicros
    */
   public function setSuggestedPriceMicros($suggestedPriceMicros)
   {

@@ -20,16 +20,46 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestSuggestionTypeSpec extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const SUGGESTION_TYPE_SUGGESTION_TYPE_UNSPECIFIED = 'SUGGESTION_TYPE_UNSPECIFIED';
+  /**
+   * Returns query suggestions.
+   */
+  public const SUGGESTION_TYPE_QUERY = 'QUERY';
+  /**
+   * Returns people suggestions.
+   */
+  public const SUGGESTION_TYPE_PEOPLE = 'PEOPLE';
+  /**
+   * Returns content suggestions.
+   */
+  public const SUGGESTION_TYPE_CONTENT = 'CONTENT';
+  /**
+   * Returns recent search suggestions.
+   */
+  public const SUGGESTION_TYPE_RECENT_SEARCH = 'RECENT_SEARCH';
+  /**
+   * Returns Google Workspace suggestions.
+   */
+  public const SUGGESTION_TYPE_GOOGLE_WORKSPACE = 'GOOGLE_WORKSPACE';
+  /**
+   * Optional. Maximum number of suggestions to return for each suggestion type.
+   *
    * @var int
    */
   public $maxSuggestions;
   /**
+   * Optional. Suggestion type.
+   *
    * @var string
    */
   public $suggestionType;
 
   /**
-   * @param int
+   * Optional. Maximum number of suggestions to return for each suggestion type.
+   *
+   * @param int $maxSuggestions
    */
   public function setMaxSuggestions($maxSuggestions)
   {
@@ -43,14 +73,19 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestSuggestionTypeSpec
     return $this->maxSuggestions;
   }
   /**
-   * @param string
+   * Optional. Suggestion type.
+   *
+   * Accepted values: SUGGESTION_TYPE_UNSPECIFIED, QUERY, PEOPLE, CONTENT,
+   * RECENT_SEARCH, GOOGLE_WORKSPACE
+   *
+   * @param self::SUGGESTION_TYPE_* $suggestionType
    */
   public function setSuggestionType($suggestionType)
   {
     $this->suggestionType = $suggestionType;
   }
   /**
-   * @return string
+   * @return self::SUGGESTION_TYPE_*
    */
   public function getSuggestionType()
   {

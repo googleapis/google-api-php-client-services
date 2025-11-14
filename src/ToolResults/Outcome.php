@@ -19,6 +19,36 @@ namespace Google\Service\ToolResults;
 
 class Outcome extends \Google\Model
 {
+  /**
+   * Do not use. For proto versioning only.
+   */
+  public const SUMMARY_unset = 'unset';
+  /**
+   * The test matrix run was successful, for instance: - All the test cases
+   * passed. - Robo did not detect a crash of the application under test.
+   */
+  public const SUMMARY_success = 'success';
+  /**
+   * A run failed, for instance: - One or more test case failed. - A test timed
+   * out. - The application under test crashed.
+   */
+  public const SUMMARY_failure = 'failure';
+  /**
+   * Something unexpected happened. The run should still be considered
+   * unsuccessful but this is likely a transient problem and re-running the test
+   * might be successful.
+   */
+  public const SUMMARY_inconclusive = 'inconclusive';
+  /**
+   * All tests were skipped, for instance: - All device configurations were
+   * incompatible.
+   */
+  public const SUMMARY_skipped = 'skipped';
+  /**
+   * A group of steps that were run with the same configuration had both failure
+   * and success outcomes.
+   */
+  public const SUMMARY_flaky = 'flaky';
   protected $failureDetailType = FailureDetail::class;
   protected $failureDetailDataType = '';
   protected $inconclusiveDetailType = InconclusiveDetail::class;
@@ -28,12 +58,17 @@ class Outcome extends \Google\Model
   protected $successDetailType = SuccessDetail::class;
   protected $successDetailDataType = '';
   /**
+   * The simplest way to interpret a result. Required
+   *
    * @var string
    */
   public $summary;
 
   /**
-   * @param FailureDetail
+   * More information about a FAILURE outcome. Returns INVALID_ARGUMENT if this
+   * field is set but the summary is not FAILURE. Optional
+   *
+   * @param FailureDetail $failureDetail
    */
   public function setFailureDetail(FailureDetail $failureDetail)
   {
@@ -47,7 +82,10 @@ class Outcome extends \Google\Model
     return $this->failureDetail;
   }
   /**
-   * @param InconclusiveDetail
+   * More information about an INCONCLUSIVE outcome. Returns INVALID_ARGUMENT if
+   * this field is set but the summary is not INCONCLUSIVE. Optional
+   *
+   * @param InconclusiveDetail $inconclusiveDetail
    */
   public function setInconclusiveDetail(InconclusiveDetail $inconclusiveDetail)
   {
@@ -61,7 +99,10 @@ class Outcome extends \Google\Model
     return $this->inconclusiveDetail;
   }
   /**
-   * @param SkippedDetail
+   * More information about a SKIPPED outcome. Returns INVALID_ARGUMENT if this
+   * field is set but the summary is not SKIPPED. Optional
+   *
+   * @param SkippedDetail $skippedDetail
    */
   public function setSkippedDetail(SkippedDetail $skippedDetail)
   {
@@ -75,7 +116,10 @@ class Outcome extends \Google\Model
     return $this->skippedDetail;
   }
   /**
-   * @param SuccessDetail
+   * More information about a SUCCESS outcome. Returns INVALID_ARGUMENT if this
+   * field is set but the summary is not SUCCESS. Optional
+   *
+   * @param SuccessDetail $successDetail
    */
   public function setSuccessDetail(SuccessDetail $successDetail)
   {
@@ -89,14 +133,18 @@ class Outcome extends \Google\Model
     return $this->successDetail;
   }
   /**
-   * @param string
+   * The simplest way to interpret a result. Required
+   *
+   * Accepted values: unset, success, failure, inconclusive, skipped, flaky
+   *
+   * @param self::SUMMARY_* $summary
    */
   public function setSummary($summary)
   {
     $this->summary = $summary;
   }
   /**
-   * @return string
+   * @return self::SUMMARY_*
    */
   public function getSummary()
   {

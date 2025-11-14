@@ -22,12 +22,16 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequestGenerateSchemaVersionPa
   protected $historyType = GoogleCloudDocumentaiV1SchemaGenerationHistory::class;
   protected $historyDataType = '';
   /**
+   * Optional. The prompt used for the schema generation.
+   *
    * @var string
    */
   public $prompt;
 
   /**
-   * @param GoogleCloudDocumentaiV1SchemaGenerationHistory
+   * Optional. Previous prompt-answers in a chronological order.
+   *
+   * @param GoogleCloudDocumentaiV1SchemaGenerationHistory $history
    */
   public function setHistory(GoogleCloudDocumentaiV1SchemaGenerationHistory $history)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDocumentaiV1GenerateSchemaVersionRequestGenerateSchemaVersionPa
     return $this->history;
   }
   /**
-   * @param string
+   * Optional. The prompt used for the schema generation.
+   *
+   * @param string $prompt
    */
   public function setPrompt($prompt)
   {

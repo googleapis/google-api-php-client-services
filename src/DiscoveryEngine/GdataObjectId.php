@@ -20,20 +20,31 @@ namespace Google\Service\DiscoveryEngine;
 class GdataObjectId extends \Google\Model
 {
   /**
+   * The name of the bucket to which this object belongs.
+   *
    * @var string
    */
   public $bucketName;
   /**
+   * Generation of the object. Generations are monotonically increasing across
+   * writes, allowing them to be be compared to determine which generation is
+   * newer. If this is omitted in a request, then you are requesting the live
+   * object. See http://go/bigstore-versions
+   *
    * @var string
    */
   public $generation;
   /**
+   * The name of the object.
+   *
    * @var string
    */
   public $objectName;
 
   /**
-   * @param string
+   * The name of the bucket to which this object belongs.
+   *
+   * @param string $bucketName
    */
   public function setBucketName($bucketName)
   {
@@ -47,7 +58,12 @@ class GdataObjectId extends \Google\Model
     return $this->bucketName;
   }
   /**
-   * @param string
+   * Generation of the object. Generations are monotonically increasing across
+   * writes, allowing them to be be compared to determine which generation is
+   * newer. If this is omitted in a request, then you are requesting the live
+   * object. See http://go/bigstore-versions
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -61,7 +77,9 @@ class GdataObjectId extends \Google\Model
     return $this->generation;
   }
   /**
-   * @param string
+   * The name of the object.
+   *
+   * @param string $objectName
    */
   public function setObjectName($objectName)
   {

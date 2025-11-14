@@ -20,26 +20,37 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ToolVersion extends \Google\Model
 {
   /**
+   * Output only. Last time the tool version was created or modified.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Required. The display name of the tool version.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. The unique identifier of the tool version. Format:
+   * `projects//locations//agents//tools//versions/`.
+   *
    * @var string
    */
   public $name;
   protected $toolType = GoogleCloudDialogflowCxV3Tool::class;
   protected $toolDataType = '';
   /**
+   * Output only. Last time the tool version was created or modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Last time the tool version was created or modified.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -53,7 +64,9 @@ class GoogleCloudDialogflowCxV3ToolVersion extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Required. The display name of the tool version.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -67,7 +80,10 @@ class GoogleCloudDialogflowCxV3ToolVersion extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. The unique identifier of the tool version. Format:
+   * `projects//locations//agents//tools//versions/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -81,7 +97,9 @@ class GoogleCloudDialogflowCxV3ToolVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Tool
+   * Required. Snapshot of the tool to be associated with this version.
+   *
+   * @param GoogleCloudDialogflowCxV3Tool $tool
    */
   public function setTool(GoogleCloudDialogflowCxV3Tool $tool)
   {
@@ -95,7 +113,9 @@ class GoogleCloudDialogflowCxV3ToolVersion extends \Google\Model
     return $this->tool;
   }
   /**
-   * @param string
+   * Output only. Last time the tool version was created or modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

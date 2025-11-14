@@ -21,12 +21,18 @@ class ServiceResources extends \Google\Collection
 {
   protected $collection_key = 'zones';
   /**
+   * Output only. List of Cloud Zones being used by the Dataflow Service for
+   * this job. Example: us-central1-c
+   *
    * @var string[]
    */
   public $zones;
 
   /**
-   * @param string[]
+   * Output only. List of Cloud Zones being used by the Dataflow Service for
+   * this job. Example: us-central1-c
+   *
+   * @param string[] $zones
    */
   public function setZones($zones)
   {

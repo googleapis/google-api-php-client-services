@@ -25,24 +25,47 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
   /**
+   * Optional. The text response message intended for the end-user. It is
+   * recommended to use `fulfillment_messages.text.text[0]` instead. When
+   * provided, Dialogflow uses this field to populate
+   * QueryResult.fulfillment_text sent to the integration or API caller.
+   *
    * @var string
    */
   public $fulfillmentText;
   protected $outputContextsType = GoogleCloudDialogflowV2Context::class;
   protected $outputContextsDataType = 'array';
   /**
+   * Optional. This field can be used to pass custom data from your webhook to
+   * the integration or API caller. Arbitrary JSON objects are supported. When
+   * provided, Dialogflow uses this field to populate
+   * QueryResult.webhook_payload sent to the integration or API caller. This
+   * field is also used by the [Google Assistant
+   * integration](https://cloud.google.com/dialogflow/docs/integrations/aog) for
+   * rich response messages. See the format definition at [Google Assistant
+   * Dialogflow webhook format](https://developers.google.com/assistant/actions/
+   * build/json/dialogflow-webhook-json)
+   *
    * @var array[]
    */
   public $payload;
   protected $sessionEntityTypesType = GoogleCloudDialogflowV2SessionEntityType::class;
   protected $sessionEntityTypesDataType = 'array';
   /**
+   * Optional. A custom field used to identify the webhook source. Arbitrary
+   * strings are supported. When provided, Dialogflow uses this field to
+   * populate QueryResult.webhook_source sent to the integration or API caller.
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param GoogleCloudDialogflowV2EventInput
+   * Optional. Invokes the supplied events. When this field is set, Dialogflow
+   * ignores the `fulfillment_text`, `fulfillment_messages`, and `payload`
+   * fields.
+   *
+   * @param GoogleCloudDialogflowV2EventInput $followupEventInput
    */
   public function setFollowupEventInput(GoogleCloudDialogflowV2EventInput $followupEventInput)
   {
@@ -56,7 +79,11 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
     return $this->followupEventInput;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentMessage[]
+   * Optional. The rich response messages intended for the end-user. When
+   * provided, Dialogflow uses this field to populate
+   * QueryResult.fulfillment_messages sent to the integration or API caller.
+   *
+   * @param GoogleCloudDialogflowV2IntentMessage[] $fulfillmentMessages
    */
   public function setFulfillmentMessages($fulfillmentMessages)
   {
@@ -70,7 +97,12 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
     return $this->fulfillmentMessages;
   }
   /**
-   * @param string
+   * Optional. The text response message intended for the end-user. It is
+   * recommended to use `fulfillment_messages.text.text[0]` instead. When
+   * provided, Dialogflow uses this field to populate
+   * QueryResult.fulfillment_text sent to the integration or API caller.
+   *
+   * @param string $fulfillmentText
    */
   public function setFulfillmentText($fulfillmentText)
   {
@@ -84,7 +116,12 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
     return $this->fulfillmentText;
   }
   /**
-   * @param GoogleCloudDialogflowV2Context[]
+   * Optional. The collection of output contexts that will overwrite currently
+   * active contexts for the session and reset their lifespans. When provided,
+   * Dialogflow uses this field to populate QueryResult.output_contexts sent to
+   * the integration or API caller.
+   *
+   * @param GoogleCloudDialogflowV2Context[] $outputContexts
    */
   public function setOutputContexts($outputContexts)
   {
@@ -98,7 +135,17 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
     return $this->outputContexts;
   }
   /**
-   * @param array[]
+   * Optional. This field can be used to pass custom data from your webhook to
+   * the integration or API caller. Arbitrary JSON objects are supported. When
+   * provided, Dialogflow uses this field to populate
+   * QueryResult.webhook_payload sent to the integration or API caller. This
+   * field is also used by the [Google Assistant
+   * integration](https://cloud.google.com/dialogflow/docs/integrations/aog) for
+   * rich response messages. See the format definition at [Google Assistant
+   * Dialogflow webhook format](https://developers.google.com/assistant/actions/
+   * build/json/dialogflow-webhook-json)
+   *
+   * @param array[] $payload
    */
   public function setPayload($payload)
   {
@@ -112,7 +159,13 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
     return $this->payload;
   }
   /**
-   * @param GoogleCloudDialogflowV2SessionEntityType[]
+   * Optional. Additional session entity types to replace or extend developer
+   * entity types with. The entity synonyms apply to all languages and persist
+   * for the session. Setting this data from a webhook overwrites the session
+   * entity types that have been set using `detectIntent`,
+   * `streamingDetectIntent` or SessionEntityType management methods.
+   *
+   * @param GoogleCloudDialogflowV2SessionEntityType[] $sessionEntityTypes
    */
   public function setSessionEntityTypes($sessionEntityTypes)
   {
@@ -126,7 +179,11 @@ class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
     return $this->sessionEntityTypes;
   }
   /**
-   * @param string
+   * Optional. A custom field used to identify the webhook source. Arbitrary
+   * strings are supported. When provided, Dialogflow uses this field to
+   * populate QueryResult.webhook_source sent to the integration or API caller.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {

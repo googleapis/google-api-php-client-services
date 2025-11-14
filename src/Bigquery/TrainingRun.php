@@ -31,26 +31,43 @@ class TrainingRun extends \Google\Collection
   protected $resultsType = IterationResult::class;
   protected $resultsDataType = 'array';
   /**
+   * Output only. The start time of this training run.
+   *
    * @var string
    */
   public $startTime;
   protected $trainingOptionsType = TrainingOptions::class;
   protected $trainingOptionsDataType = '';
   /**
+   * Output only. The start time of this training run, in milliseconds since
+   * epoch.
+   *
+   * @deprecated
    * @var string
    */
   public $trainingStartTime;
   /**
+   * The model id in the [Vertex AI Model
+   * Registry](https://cloud.google.com/vertex-ai/docs/model-
+   * registry/introduction) for this training run.
+   *
    * @var string
    */
   public $vertexAiModelId;
   /**
+   * Output only. The model version in the [Vertex AI Model
+   * Registry](https://cloud.google.com/vertex-ai/docs/model-
+   * registry/introduction) for this training run.
+   *
    * @var string
    */
   public $vertexAiModelVersion;
 
   /**
-   * @param GlobalExplanation[]
+   * Output only. Global explanation contains the explanation of top features on
+   * the class level. Applies to classification models only.
+   *
+   * @param GlobalExplanation[] $classLevelGlobalExplanations
    */
   public function setClassLevelGlobalExplanations($classLevelGlobalExplanations)
   {
@@ -64,7 +81,10 @@ class TrainingRun extends \Google\Collection
     return $this->classLevelGlobalExplanations;
   }
   /**
-   * @param DataSplitResult
+   * Output only. Data split result of the training run. Only set when the input
+   * data is actually split.
+   *
+   * @param DataSplitResult $dataSplitResult
    */
   public function setDataSplitResult(DataSplitResult $dataSplitResult)
   {
@@ -78,7 +98,10 @@ class TrainingRun extends \Google\Collection
     return $this->dataSplitResult;
   }
   /**
-   * @param EvaluationMetrics
+   * Output only. The evaluation metrics over training/eval data that were
+   * computed at the end of training.
+   *
+   * @param EvaluationMetrics $evaluationMetrics
    */
   public function setEvaluationMetrics(EvaluationMetrics $evaluationMetrics)
   {
@@ -92,7 +115,10 @@ class TrainingRun extends \Google\Collection
     return $this->evaluationMetrics;
   }
   /**
-   * @param GlobalExplanation
+   * Output only. Global explanation contains the explanation of top features on
+   * the model level. Applies to both regression and classification models.
+   *
+   * @param GlobalExplanation $modelLevelGlobalExplanation
    */
   public function setModelLevelGlobalExplanation(GlobalExplanation $modelLevelGlobalExplanation)
   {
@@ -106,7 +132,10 @@ class TrainingRun extends \Google\Collection
     return $this->modelLevelGlobalExplanation;
   }
   /**
-   * @param IterationResult[]
+   * Output only. Output of each iteration run, results.size() <=
+   * max_iterations.
+   *
+   * @param IterationResult[] $results
    */
   public function setResults($results)
   {
@@ -120,7 +149,9 @@ class TrainingRun extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param string
+   * Output only. The start time of this training run.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -134,7 +165,10 @@ class TrainingRun extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param TrainingOptions
+   * Output only. Options that were used for this training run, includes user
+   * specified and default options that were used.
+   *
+   * @param TrainingOptions $trainingOptions
    */
   public function setTrainingOptions(TrainingOptions $trainingOptions)
   {
@@ -148,13 +182,18 @@ class TrainingRun extends \Google\Collection
     return $this->trainingOptions;
   }
   /**
-   * @param string
+   * Output only. The start time of this training run, in milliseconds since
+   * epoch.
+   *
+   * @deprecated
+   * @param string $trainingStartTime
    */
   public function setTrainingStartTime($trainingStartTime)
   {
     $this->trainingStartTime = $trainingStartTime;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTrainingStartTime()
@@ -162,7 +201,11 @@ class TrainingRun extends \Google\Collection
     return $this->trainingStartTime;
   }
   /**
-   * @param string
+   * The model id in the [Vertex AI Model
+   * Registry](https://cloud.google.com/vertex-ai/docs/model-
+   * registry/introduction) for this training run.
+   *
+   * @param string $vertexAiModelId
    */
   public function setVertexAiModelId($vertexAiModelId)
   {
@@ -176,7 +219,11 @@ class TrainingRun extends \Google\Collection
     return $this->vertexAiModelId;
   }
   /**
-   * @param string
+   * Output only. The model version in the [Vertex AI Model
+   * Registry](https://cloud.google.com/vertex-ai/docs/model-
+   * registry/introduction) for this training run.
+   *
+   * @param string $vertexAiModelVersion
    */
   public function setVertexAiModelVersion($vertexAiModelVersion)
   {

@@ -21,6 +21,8 @@ class BatchUpdateDocumentResponse extends \Google\Collection
 {
   protected $collection_key = 'replies';
   /**
+   * The ID of the document to which the updates were applied to.
+   *
    * @var string
    */
   public $documentId;
@@ -30,7 +32,9 @@ class BatchUpdateDocumentResponse extends \Google\Collection
   protected $writeControlDataType = '';
 
   /**
-   * @param string
+   * The ID of the document to which the updates were applied to.
+   *
+   * @param string $documentId
    */
   public function setDocumentId($documentId)
   {
@@ -44,7 +48,10 @@ class BatchUpdateDocumentResponse extends \Google\Collection
     return $this->documentId;
   }
   /**
-   * @param Response[]
+   * The reply of the updates. This maps 1:1 with the updates, although replies
+   * to some requests may be empty.
+   *
+   * @param Response[] $replies
    */
   public function setReplies($replies)
   {
@@ -58,7 +65,9 @@ class BatchUpdateDocumentResponse extends \Google\Collection
     return $this->replies;
   }
   /**
-   * @param WriteControl
+   * The updated write control after applying the request.
+   *
+   * @param WriteControl $writeControl
    */
   public function setWriteControl(WriteControl $writeControl)
   {

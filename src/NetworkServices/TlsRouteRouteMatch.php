@@ -21,16 +21,31 @@ class TlsRouteRouteMatch extends \Google\Collection
 {
   protected $collection_key = 'sniHost';
   /**
+   * Optional. ALPN (Application-Layer Protocol Negotiation) to match against.
+   * Examples: "http/1.1", "h2". At least one of sni_host and alpn is required.
+   * Up to 5 alpns across all matches can be set.
+   *
    * @var string[]
    */
   public $alpn;
   /**
+   * Optional. SNI (server name indicator) to match against. SNI will be matched
+   * against all wildcard domains, i.e. `www.example.com` will be first matched
+   * against `www.example.com`, then `*.example.com`, then `*.com.` Partial
+   * wildcards are not supported, and values like *w.example.com are invalid. At
+   * least one of sni_host and alpn is required. Up to 100 sni hosts across all
+   * matches can be set.
+   *
    * @var string[]
    */
   public $sniHost;
 
   /**
-   * @param string[]
+   * Optional. ALPN (Application-Layer Protocol Negotiation) to match against.
+   * Examples: "http/1.1", "h2". At least one of sni_host and alpn is required.
+   * Up to 5 alpns across all matches can be set.
+   *
+   * @param string[] $alpn
    */
   public function setAlpn($alpn)
   {
@@ -44,7 +59,14 @@ class TlsRouteRouteMatch extends \Google\Collection
     return $this->alpn;
   }
   /**
-   * @param string[]
+   * Optional. SNI (server name indicator) to match against. SNI will be matched
+   * against all wildcard domains, i.e. `www.example.com` will be first matched
+   * against `www.example.com`, then `*.example.com`, then `*.com.` Partial
+   * wildcards are not supported, and values like *w.example.com are invalid. At
+   * least one of sni_host and alpn is required. Up to 100 sni hosts across all
+   * matches can be set.
+   *
+   * @param string[] $sniHost
    */
   public function setSniHost($sniHost)
   {

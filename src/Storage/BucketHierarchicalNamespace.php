@@ -20,12 +20,16 @@ namespace Google\Service\Storage;
 class BucketHierarchicalNamespace extends \Google\Model
 {
   /**
+   * When set to true, hierarchical namespace is enabled for this bucket.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * When set to true, hierarchical namespace is enabled for this bucket.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

@@ -21,10 +21,16 @@ class ListUrlListsResponse extends \Google\Collection
 {
   protected $collection_key = 'urlLists';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
@@ -32,7 +38,11 @@ class ListUrlListsResponse extends \Google\Collection
   protected $urlListsDataType = 'array';
 
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,9 @@ class ListUrlListsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
@@ -60,7 +72,9 @@ class ListUrlListsResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * @param UrlList[]
+   * List of UrlList resources.
+   *
+   * @param UrlList[] $urlLists
    */
   public function setUrlLists($urlLists)
   {

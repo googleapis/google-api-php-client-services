@@ -20,24 +20,80 @@ namespace Google\Service\DisplayVideo;
 class Pacing extends \Google\Model
 {
   /**
+   * Period value is not specified or is unknown in this version.
+   */
+  public const PACING_PERIOD_PACING_PERIOD_UNSPECIFIED = 'PACING_PERIOD_UNSPECIFIED';
+  /**
+   * The pacing setting will be applied on daily basis.
+   */
+  public const PACING_PERIOD_PACING_PERIOD_DAILY = 'PACING_PERIOD_DAILY';
+  /**
+   * The pacing setting will be applied to the whole flight duration.
+   */
+  public const PACING_PERIOD_PACING_PERIOD_FLIGHT = 'PACING_PERIOD_FLIGHT';
+  /**
+   * Pacing mode value is not specified or is unknown in this version.
+   */
+  public const PACING_TYPE_PACING_TYPE_UNSPECIFIED = 'PACING_TYPE_UNSPECIFIED';
+  /**
+   * Only applicable to `PACING_PERIOD_FLIGHT` pacing period. Ahead pacing
+   * attempts to spend faster than evenly, to make sure the entire budget is
+   * spent by the end of the flight.
+   */
+  public const PACING_TYPE_PACING_TYPE_AHEAD = 'PACING_TYPE_AHEAD';
+  /**
+   * Spend all of pacing budget amount as quick as possible.
+   */
+  public const PACING_TYPE_PACING_TYPE_ASAP = 'PACING_TYPE_ASAP';
+  /**
+   * Spend a consistent budget amount every period of time.
+   */
+  public const PACING_TYPE_PACING_TYPE_EVEN = 'PACING_TYPE_EVEN';
+  /**
+   * Maximum number of impressions to serve every day. Applicable when the
+   * budget is impression based. Must be greater than 0.
+   *
    * @var string
    */
   public $dailyMaxImpressions;
   /**
+   * Maximum currency amount to spend every day in micros of advertiser's
+   * currency. Applicable when the budget is currency based. Must be greater
+   * than 0. For example, for 1.5 standard unit of the currency, set this field
+   * to 1500000. The value assigned will be rounded to whole billable units for
+   * the relevant currency by the following rules: any positive value less than
+   * a single billable unit will be rounded up to one billable unit and any
+   * value larger than a single billable unit will be rounded down to the
+   * nearest billable value. For example, if the currency's billable unit is
+   * 0.01, and this field is set to 10257770, it will round down to 10250000, a
+   * value of 10.25. If set to 505, it will round up to 10000, a value of 0.01.
+   *
    * @var string
    */
   public $dailyMaxMicros;
   /**
+   * Required. The time period in which the pacing budget will be spent. When
+   * automatic budget allocation is enabled at the insertion order via
+   * automationType, this field is output only and defaults to
+   * `PACING_PERIOD_FLIGHT`.
+   *
    * @var string
    */
   public $pacingPeriod;
   /**
+   * Required. The type of pacing that defines how the budget amount will be
+   * spent across the pacing_period. `PACING_TYPE_ASAP` is not compatible with
+   * pacing_period `PACING_PERIOD_FLIGHT` for insertion orders.
+   *
    * @var string
    */
   public $pacingType;
 
   /**
-   * @param string
+   * Maximum number of impressions to serve every day. Applicable when the
+   * budget is impression based. Must be greater than 0.
+   *
+   * @param string $dailyMaxImpressions
    */
   public function setDailyMaxImpressions($dailyMaxImpressions)
   {
@@ -51,7 +107,18 @@ class Pacing extends \Google\Model
     return $this->dailyMaxImpressions;
   }
   /**
-   * @param string
+   * Maximum currency amount to spend every day in micros of advertiser's
+   * currency. Applicable when the budget is currency based. Must be greater
+   * than 0. For example, for 1.5 standard unit of the currency, set this field
+   * to 1500000. The value assigned will be rounded to whole billable units for
+   * the relevant currency by the following rules: any positive value less than
+   * a single billable unit will be rounded up to one billable unit and any
+   * value larger than a single billable unit will be rounded down to the
+   * nearest billable value. For example, if the currency's billable unit is
+   * 0.01, and this field is set to 10257770, it will round down to 10250000, a
+   * value of 10.25. If set to 505, it will round up to 10000, a value of 0.01.
+   *
+   * @param string $dailyMaxMicros
    */
   public function setDailyMaxMicros($dailyMaxMicros)
   {
@@ -65,28 +132,43 @@ class Pacing extends \Google\Model
     return $this->dailyMaxMicros;
   }
   /**
-   * @param string
+   * Required. The time period in which the pacing budget will be spent. When
+   * automatic budget allocation is enabled at the insertion order via
+   * automationType, this field is output only and defaults to
+   * `PACING_PERIOD_FLIGHT`.
+   *
+   * Accepted values: PACING_PERIOD_UNSPECIFIED, PACING_PERIOD_DAILY,
+   * PACING_PERIOD_FLIGHT
+   *
+   * @param self::PACING_PERIOD_* $pacingPeriod
    */
   public function setPacingPeriod($pacingPeriod)
   {
     $this->pacingPeriod = $pacingPeriod;
   }
   /**
-   * @return string
+   * @return self::PACING_PERIOD_*
    */
   public function getPacingPeriod()
   {
     return $this->pacingPeriod;
   }
   /**
-   * @param string
+   * Required. The type of pacing that defines how the budget amount will be
+   * spent across the pacing_period. `PACING_TYPE_ASAP` is not compatible with
+   * pacing_period `PACING_PERIOD_FLIGHT` for insertion orders.
+   *
+   * Accepted values: PACING_TYPE_UNSPECIFIED, PACING_TYPE_AHEAD,
+   * PACING_TYPE_ASAP, PACING_TYPE_EVEN
+   *
+   * @param self::PACING_TYPE_* $pacingType
    */
   public function setPacingType($pacingType)
   {
     $this->pacingType = $pacingType;
   }
   /**
-   * @return string
+   * @return self::PACING_TYPE_*
    */
   public function getPacingType()
   {

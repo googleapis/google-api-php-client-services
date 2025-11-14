@@ -20,14 +20,21 @@ namespace Google\Service\PolicySimulator;
 class GoogleCloudPolicysimulatorV1ReplayResultsSummary extends \Google\Model
 {
   /**
+   * The number of replayed log entries with a difference between baseline and
+   * simulated policies.
+   *
    * @var int
    */
   public $differenceCount;
   /**
+   * The number of log entries that could not be replayed.
+   *
    * @var int
    */
   public $errorCount;
   /**
+   * The total number of log entries replayed.
+   *
    * @var int
    */
   public $logCount;
@@ -36,12 +43,18 @@ class GoogleCloudPolicysimulatorV1ReplayResultsSummary extends \Google\Model
   protected $oldestDateType = GoogleTypeDate::class;
   protected $oldestDateDataType = '';
   /**
+   * The number of replayed log entries with no difference between baseline and
+   * simulated policies.
+   *
    * @var int
    */
   public $unchangedCount;
 
   /**
-   * @param int
+   * The number of replayed log entries with a difference between baseline and
+   * simulated policies.
+   *
+   * @param int $differenceCount
    */
   public function setDifferenceCount($differenceCount)
   {
@@ -55,7 +68,9 @@ class GoogleCloudPolicysimulatorV1ReplayResultsSummary extends \Google\Model
     return $this->differenceCount;
   }
   /**
-   * @param int
+   * The number of log entries that could not be replayed.
+   *
+   * @param int $errorCount
    */
   public function setErrorCount($errorCount)
   {
@@ -69,7 +84,9 @@ class GoogleCloudPolicysimulatorV1ReplayResultsSummary extends \Google\Model
     return $this->errorCount;
   }
   /**
-   * @param int
+   * The total number of log entries replayed.
+   *
+   * @param int $logCount
    */
   public function setLogCount($logCount)
   {
@@ -83,7 +100,9 @@ class GoogleCloudPolicysimulatorV1ReplayResultsSummary extends \Google\Model
     return $this->logCount;
   }
   /**
-   * @param GoogleTypeDate
+   * The date of the newest log entry replayed.
+   *
+   * @param GoogleTypeDate $newestDate
    */
   public function setNewestDate(GoogleTypeDate $newestDate)
   {
@@ -97,7 +116,9 @@ class GoogleCloudPolicysimulatorV1ReplayResultsSummary extends \Google\Model
     return $this->newestDate;
   }
   /**
-   * @param GoogleTypeDate
+   * The date of the oldest log entry replayed.
+   *
+   * @param GoogleTypeDate $oldestDate
    */
   public function setOldestDate(GoogleTypeDate $oldestDate)
   {
@@ -111,7 +132,10 @@ class GoogleCloudPolicysimulatorV1ReplayResultsSummary extends \Google\Model
     return $this->oldestDate;
   }
   /**
-   * @param int
+   * The number of replayed log entries with no difference between baseline and
+   * simulated policies.
+   *
+   * @param int $unchangedCount
    */
   public function setUnchangedCount($unchangedCount)
   {

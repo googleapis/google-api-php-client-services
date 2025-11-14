@@ -21,18 +21,24 @@ class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase extends \Google\Collect
 {
   protected $collection_key = 'parts';
   /**
+   * Output only. The unique identifier of the training phrase.
+   *
    * @var string
    */
   public $id;
   protected $partsType = GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart::class;
   protected $partsDataType = 'array';
   /**
+   * Indicates how many times this example was added to the intent.
+   *
    * @var int
    */
   public $repeatCount;
 
   /**
-   * @param string
+   * Output only. The unique identifier of the training phrase.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -46,7 +52,20 @@ class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase extends \Google\Collect
     return $this->id;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart[]
+   * Required. The ordered list of training phrase parts. The parts are
+   * concatenated in order to form the training phrase. Note: The API does not
+   * automatically annotate training phrases like the Dialogflow Console does.
+   * Note: Do not forget to include whitespace at part boundaries, so the
+   * training phrase is well formatted when the parts are concatenated. If the
+   * training phrase does not need to be annotated with parameters, you just
+   * need a single part with only the Part.text field set. If you want to
+   * annotate the training phrase, you must create multiple parts, where the
+   * fields of each part are populated in one of two ways: - `Part.text` is set
+   * to a part of the phrase that has no parameters. - `Part.text` is set to a
+   * part of the phrase that you want to annotate, and the `parameter_id` field
+   * is set.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePart[] $parts
    */
   public function setParts($parts)
   {
@@ -60,7 +79,9 @@ class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase extends \Google\Collect
     return $this->parts;
   }
   /**
-   * @param int
+   * Indicates how many times this example was added to the intent.
+   *
+   * @param int $repeatCount
    */
   public function setRepeatCount($repeatCount)
   {

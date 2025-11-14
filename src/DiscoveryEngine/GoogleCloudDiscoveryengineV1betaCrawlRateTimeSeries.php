@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1betaCrawlRateTimeSeries extends \Google\Model
   protected $qpsTimeSeriesDataType = '';
 
   /**
-   * @param GoogleMonitoringV3TimeSeries
+   * The QPS of the crawl rate.
+   *
+   * @param GoogleMonitoringV3TimeSeries $qpsTimeSeries
    */
   public function setQpsTimeSeries(GoogleMonitoringV3TimeSeries $qpsTimeSeries)
   {

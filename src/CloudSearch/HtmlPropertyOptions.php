@@ -25,7 +25,9 @@ class HtmlPropertyOptions extends \Google\Model
   protected $retrievalImportanceDataType = '';
 
   /**
-   * @param HtmlOperatorOptions
+   * If set, describes how the property should be used as a search operator.
+   *
+   * @param HtmlOperatorOptions $operatorOptions
    */
   public function setOperatorOptions(HtmlOperatorOptions $operatorOptions)
   {
@@ -39,7 +41,10 @@ class HtmlPropertyOptions extends \Google\Model
     return $this->operatorOptions;
   }
   /**
-   * @param RetrievalImportance
+   * Indicates the search quality importance of the tokens within the field when
+   * used for retrieval. Can only be set to DEFAULT or NONE.
+   *
+   * @param RetrievalImportance $retrievalImportance
    */
   public function setRetrievalImportance(RetrievalImportance $retrievalImportance)
   {

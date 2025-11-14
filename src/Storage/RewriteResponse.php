@@ -20,30 +20,47 @@ namespace Google\Service\Storage;
 class RewriteResponse extends \Google\Model
 {
   /**
+   * true if the copy is finished; otherwise, false if the copy is in progress.
+   * This property is always present in the response.
+   *
    * @var bool
    */
   public $done;
   /**
+   * The kind of item this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The total size of the object being copied in bytes. This property is always
+   * present in the response.
+   *
    * @var string
    */
   public $objectSize;
   protected $resourceType = StorageObject::class;
   protected $resourceDataType = '';
   /**
+   * A token to use in subsequent requests to continue copying data. This token
+   * is present in the response only when there is more data to copy.
+   *
    * @var string
    */
   public $rewriteToken;
   /**
+   * The total bytes written so far, which can be used to provide a waiting user
+   * with a progress indicator. This property is always present in the response.
+   *
    * @var string
    */
   public $totalBytesRewritten;
 
   /**
-   * @param bool
+   * true if the copy is finished; otherwise, false if the copy is in progress.
+   * This property is always present in the response.
+   *
+   * @param bool $done
    */
   public function setDone($done)
   {
@@ -57,7 +74,9 @@ class RewriteResponse extends \Google\Model
     return $this->done;
   }
   /**
-   * @param string
+   * The kind of item this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -71,7 +90,10 @@ class RewriteResponse extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The total size of the object being copied in bytes. This property is always
+   * present in the response.
+   *
+   * @param string $objectSize
    */
   public function setObjectSize($objectSize)
   {
@@ -85,7 +107,10 @@ class RewriteResponse extends \Google\Model
     return $this->objectSize;
   }
   /**
-   * @param StorageObject
+   * A resource containing the metadata for the copied-to object. This property
+   * is present in the response only when copying completes.
+   *
+   * @param StorageObject $resource
    */
   public function setResource(StorageObject $resource)
   {
@@ -99,7 +124,10 @@ class RewriteResponse extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * A token to use in subsequent requests to continue copying data. This token
+   * is present in the response only when there is more data to copy.
+   *
+   * @param string $rewriteToken
    */
   public function setRewriteToken($rewriteToken)
   {
@@ -113,7 +141,10 @@ class RewriteResponse extends \Google\Model
     return $this->rewriteToken;
   }
   /**
-   * @param string
+   * The total bytes written so far, which can be used to provide a waiting user
+   * with a progress indicator. This property is always present in the response.
+   *
+   * @param string $totalBytesRewritten
    */
   public function setTotalBytesRewritten($totalBytesRewritten)
   {

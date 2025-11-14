@@ -20,16 +20,22 @@ namespace Google\Service\Verifiedaccess;
 class CrowdStrikeAgent extends \Google\Model
 {
   /**
+   * Output only. The Agent ID of the Crowdstrike agent.
+   *
    * @var string
    */
   public $agentId;
   /**
+   * Output only. The Customer ID to which the agent belongs to.
+   *
    * @var string
    */
   public $customerId;
 
   /**
-   * @param string
+   * Output only. The Agent ID of the Crowdstrike agent.
+   *
+   * @param string $agentId
    */
   public function setAgentId($agentId)
   {
@@ -43,7 +49,9 @@ class CrowdStrikeAgent extends \Google\Model
     return $this->agentId;
   }
   /**
-   * @param string
+   * Output only. The Customer ID to which the agent belongs to.
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {

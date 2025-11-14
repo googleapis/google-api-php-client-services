@@ -27,7 +27,9 @@ class ServiceItem extends \Google\Model
   protected $structuredServiceItemDataType = '';
 
   /**
-   * @param FreeFormServiceItem
+   * Optional. This field will be set case of free-form services data.
+   *
+   * @param FreeFormServiceItem $freeFormServiceItem
    */
   public function setFreeFormServiceItem(FreeFormServiceItem $freeFormServiceItem)
   {
@@ -41,7 +43,11 @@ class ServiceItem extends \Google\Model
     return $this->freeFormServiceItem;
   }
   /**
-   * @param Money
+   * Optional. Represents the monetary price of the service item. We recommend
+   * that currency_code and units should be set when including a price. This
+   * will be treated as a fixed price for the service item.
+   *
+   * @param Money $price
    */
   public function setPrice(Money $price)
   {
@@ -55,7 +61,9 @@ class ServiceItem extends \Google\Model
     return $this->price;
   }
   /**
-   * @param StructuredServiceItem
+   * Optional. This field will be set case of structured services data.
+   *
+   * @param StructuredServiceItem $structuredServiceItem
    */
   public function setStructuredServiceItem(StructuredServiceItem $structuredServiceItem)
   {

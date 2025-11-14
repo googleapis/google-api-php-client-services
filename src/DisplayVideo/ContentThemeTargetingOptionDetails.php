@@ -20,19 +20,70 @@ namespace Google\Service\DisplayVideo;
 class ContentThemeTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Content theme is not specified or is unknown in this version.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_UNSPECIFIED = 'CONTENT_THEME_UNSPECIFIED';
+  /**
+   * Fighting video games.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_FIGHTING_VIDEO_GAMES = 'CONTENT_THEME_FIGHTING_VIDEO_GAMES';
+  /**
+   * Mature games.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_MATURE_GAMES = 'CONTENT_THEME_MATURE_GAMES';
+  /**
+   * Not yet determined health sources.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES = 'CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES';
+  /**
+   * Not yet determined news sources.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES = 'CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES';
+  /**
+   * Politics.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_POLITICS = 'CONTENT_THEME_POLITICS';
+  /**
+   * Recent news.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_RECENT_NEWS = 'CONTENT_THEME_RECENT_NEWS';
+  /**
+   * Religion.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_RELIGION = 'CONTENT_THEME_RELIGION';
+  /**
+   * Unpleasant health content.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT = 'CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT';
+  /**
+   * Unpleasant news.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_UNPLEASANT_NEWS = 'CONTENT_THEME_UNPLEASANT_NEWS';
+  /**
+   * Output only. An enum for the DV360 content theme content classifier.
+   *
    * @var string
    */
   public $contentTheme;
 
   /**
-   * @param string
+   * Output only. An enum for the DV360 content theme content classifier.
+   *
+   * Accepted values: CONTENT_THEME_UNSPECIFIED,
+   * CONTENT_THEME_FIGHTING_VIDEO_GAMES, CONTENT_THEME_MATURE_GAMES,
+   * CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES,
+   * CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES, CONTENT_THEME_POLITICS,
+   * CONTENT_THEME_RECENT_NEWS, CONTENT_THEME_RELIGION,
+   * CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT, CONTENT_THEME_UNPLEASANT_NEWS
+   *
+   * @param self::CONTENT_THEME_* $contentTheme
    */
   public function setContentTheme($contentTheme)
   {
     $this->contentTheme = $contentTheme;
   }
   /**
-   * @return string
+   * @return self::CONTENT_THEME_*
    */
   public function getContentTheme()
   {

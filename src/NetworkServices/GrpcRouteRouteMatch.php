@@ -26,7 +26,9 @@ class GrpcRouteRouteMatch extends \Google\Collection
   protected $methodDataType = '';
 
   /**
-   * @param GrpcRouteHeaderMatch[]
+   * Optional. Specifies a collection of headers to match.
+   *
+   * @param GrpcRouteHeaderMatch[] $headers
    */
   public function setHeaders($headers)
   {
@@ -40,7 +42,10 @@ class GrpcRouteRouteMatch extends \Google\Collection
     return $this->headers;
   }
   /**
-   * @param GrpcRouteMethodMatch
+   * Optional. A gRPC method to match against. If this field is empty or
+   * omitted, will match all methods.
+   *
+   * @param GrpcRouteMethodMatch $method
    */
   public function setMethod(GrpcRouteMethodMatch $method)
   {

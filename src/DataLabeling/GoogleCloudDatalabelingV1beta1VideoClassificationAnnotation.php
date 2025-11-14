@@ -25,7 +25,9 @@ class GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation extends \Googl
   protected $timeSegmentDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec
+   * Label of the segment specified by time_segment.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec
    */
   public function setAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation extends \Googl
     return $this->annotationSpec;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1TimeSegment
+   * The time segment of the video to which the annotation applies.
+   *
+   * @param GoogleCloudDatalabelingV1beta1TimeSegment $timeSegment
    */
   public function setTimeSegment(GoogleCloudDatalabelingV1beta1TimeSegment $timeSegment)
   {

@@ -20,24 +20,40 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1BigQueryDateShardedSpec extends \Google\Model
 {
   /**
+   * Output only. The Data Catalog resource name of the dataset entry the
+   * current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LO
+   * CATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
+   *
    * @var string
    */
   public $dataset;
   /**
+   * Output only. BigQuery resource name of the latest shard.
+   *
    * @var string
    */
   public $latestShardResource;
   /**
+   * Output only. Total number of shards.
+   *
    * @var string
    */
   public $shardCount;
   /**
+   * Output only. The table name prefix of the shards. The name of any given
+   * shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101`
+   * shard, the `table_prefix` is `MyTable`.
+   *
    * @var string
    */
   public $tablePrefix;
 
   /**
-   * @param string
+   * Output only. The Data Catalog resource name of the dataset entry the
+   * current table belongs to. For example: `projects/{PROJECT_ID}/locations/{LO
+   * CATION}/entrygroups/{ENTRY_GROUP_ID}/entries/{ENTRY_ID}`.
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -51,7 +67,9 @@ class GoogleCloudDatacatalogV1BigQueryDateShardedSpec extends \Google\Model
     return $this->dataset;
   }
   /**
-   * @param string
+   * Output only. BigQuery resource name of the latest shard.
+   *
+   * @param string $latestShardResource
    */
   public function setLatestShardResource($latestShardResource)
   {
@@ -65,7 +83,9 @@ class GoogleCloudDatacatalogV1BigQueryDateShardedSpec extends \Google\Model
     return $this->latestShardResource;
   }
   /**
-   * @param string
+   * Output only. Total number of shards.
+   *
+   * @param string $shardCount
    */
   public function setShardCount($shardCount)
   {
@@ -79,7 +99,11 @@ class GoogleCloudDatacatalogV1BigQueryDateShardedSpec extends \Google\Model
     return $this->shardCount;
   }
   /**
-   * @param string
+   * Output only. The table name prefix of the shards. The name of any given
+   * shard is `[table_prefix]YYYYMMDD`. For example, for the `MyTable20180101`
+   * shard, the `table_prefix` is `MyTable`.
+   *
+   * @param string $tablePrefix
    */
   public function setTablePrefix($tablePrefix)
   {

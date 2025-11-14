@@ -21,6 +21,11 @@ class ListQueuesResponse extends \Google\Collection
 {
   protected $collection_key = 'queues';
   /**
+   * A token to retrieve next page of results. To return the next page of
+   * results, call ListQueues with this value as the page_token. If the
+   * next_page_token is empty, there are no more results. The page token is
+   * valid for only 2 hours.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +33,12 @@ class ListQueuesResponse extends \Google\Collection
   protected $queuesDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve next page of results. To return the next page of
+   * results, call ListQueues with this value as the page_token. If the
+   * next_page_token is empty, there are no more results. The page token is
+   * valid for only 2 hours.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +52,9 @@ class ListQueuesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Queue[]
+   * The list of queues.
+   *
+   * @param Queue[] $queues
    */
   public function setQueues($queues)
   {

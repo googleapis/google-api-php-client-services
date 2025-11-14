@@ -20,6 +20,9 @@ namespace Google\Service\Dns;
 class ManagedZoneServiceDirectoryConfigNamespace extends \Google\Model
 {
   /**
+   * The time that the namespace backing this zone was deleted; an empty string
+   * if it still exists. This is in RFC3339 text format. Output only.
+   *
    * @var string
    */
   public $deletionTime;
@@ -28,12 +31,19 @@ class ManagedZoneServiceDirectoryConfigNamespace extends \Google\Model
    */
   public $kind;
   /**
+   * The fully qualified URL of the namespace associated with the zone. Format
+   * must be `https://servicedirectory.googleapis.com/v1/projects/{project}/loca
+   * tions/{location}/namespaces/{namespace}`
+   *
    * @var string
    */
   public $namespaceUrl;
 
   /**
-   * @param string
+   * The time that the namespace backing this zone was deleted; an empty string
+   * if it still exists. This is in RFC3339 text format. Output only.
+   *
+   * @param string $deletionTime
    */
   public function setDeletionTime($deletionTime)
   {
@@ -47,7 +57,7 @@ class ManagedZoneServiceDirectoryConfigNamespace extends \Google\Model
     return $this->deletionTime;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +71,11 @@ class ManagedZoneServiceDirectoryConfigNamespace extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The fully qualified URL of the namespace associated with the zone. Format
+   * must be `https://servicedirectory.googleapis.com/v1/projects/{project}/loca
+   * tions/{location}/namespaces/{namespace}`
+   *
+   * @param string $namespaceUrl
    */
   public function setNamespaceUrl($namespaceUrl)
   {

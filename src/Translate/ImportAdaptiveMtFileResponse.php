@@ -23,7 +23,9 @@ class ImportAdaptiveMtFileResponse extends \Google\Model
   protected $adaptiveMtFileDataType = '';
 
   /**
-   * @param AdaptiveMtFile
+   * Output only. The Adaptive MT file that was imported.
+   *
+   * @param AdaptiveMtFile $adaptiveMtFile
    */
   public function setAdaptiveMtFile(AdaptiveMtFile $adaptiveMtFile)
   {

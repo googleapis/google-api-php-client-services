@@ -20,16 +20,30 @@ namespace Google\Service\Appengine;
 class CertificateRawData extends \Google\Model
 {
   /**
+   * Unencrypted PEM encoded RSA private key. This field is set once on
+   * certificate creation and then encrypted. The key size must be 2048 bits or
+   * fewer. Must include the header and footer. Example: -----BEGIN RSA PRIVATE
+   * KEY----- -----END RSA PRIVATE KEY----- @InputOnly
+   *
    * @var string
    */
   public $privateKey;
   /**
+   * PEM encoded x.509 public key certificate. This field is set once on
+   * certificate creation. Must include the header and footer. Example:
+   * -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
+   *
    * @var string
    */
   public $publicCertificate;
 
   /**
-   * @param string
+   * Unencrypted PEM encoded RSA private key. This field is set once on
+   * certificate creation and then encrypted. The key size must be 2048 bits or
+   * fewer. Must include the header and footer. Example: -----BEGIN RSA PRIVATE
+   * KEY----- -----END RSA PRIVATE KEY----- @InputOnly
+   *
+   * @param string $privateKey
    */
   public function setPrivateKey($privateKey)
   {
@@ -43,7 +57,11 @@ class CertificateRawData extends \Google\Model
     return $this->privateKey;
   }
   /**
-   * @param string
+   * PEM encoded x.509 public key certificate. This field is set once on
+   * certificate creation. Must include the header and footer. Example:
+   * -----BEGIN CERTIFICATE----- -----END CERTIFICATE-----
+   *
+   * @param string $publicCertificate
    */
   public function setPublicCertificate($publicCertificate)
   {

@@ -25,24 +25,37 @@ class AttackPathNode extends \Google\Collection
   protected $attackStepsType = AttackStepNode::class;
   protected $attackStepsDataType = 'array';
   /**
+   * Human-readable name of this resource.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The name of the resource at this point in the attack path. The format of
+   * the name follows the Cloud Asset Inventory [resource name
+   * format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
+   *
    * @var string
    */
   public $resource;
   /**
+   * The [supported resource type](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types)
+   *
    * @var string
    */
   public $resourceType;
   /**
+   * Unique id of the attack path node.
+   *
    * @var string
    */
   public $uuid;
 
   /**
-   * @param PathNodeAssociatedFinding[]
+   * The findings associated with this node in the attack path.
+   *
+   * @param PathNodeAssociatedFinding[] $associatedFindings
    */
   public function setAssociatedFindings($associatedFindings)
   {
@@ -56,7 +69,9 @@ class AttackPathNode extends \Google\Collection
     return $this->associatedFindings;
   }
   /**
-   * @param AttackStepNode[]
+   * A list of attack step nodes that exist in this attack path node.
+   *
+   * @param AttackStepNode[] $attackSteps
    */
   public function setAttackSteps($attackSteps)
   {
@@ -70,7 +85,9 @@ class AttackPathNode extends \Google\Collection
     return $this->attackSteps;
   }
   /**
-   * @param string
+   * Human-readable name of this resource.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -84,7 +101,11 @@ class AttackPathNode extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * The name of the resource at this point in the attack path. The format of
+   * the name follows the Cloud Asset Inventory [resource name
+   * format](https://cloud.google.com/asset-inventory/docs/resource-name-format)
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -98,7 +119,10 @@ class AttackPathNode extends \Google\Collection
     return $this->resource;
   }
   /**
-   * @param string
+   * The [supported resource type](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types)
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {
@@ -112,7 +136,9 @@ class AttackPathNode extends \Google\Collection
     return $this->resourceType;
   }
   /**
-   * @param string
+   * Unique id of the attack path node.
+   *
+   * @param string $uuid
    */
   public function setUuid($uuid)
   {

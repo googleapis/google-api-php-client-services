@@ -19,47 +19,354 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const ENGINE_STATUS_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const ENGINE_STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * Deprecated. Do not use.
+   *
+   * @deprecated
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_ELIGIBLE = 'AD_GROUP_CRITERION_ELIGIBLE';
+  /**
+   * Baidu: Bid or quality too low to be displayed.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_INAPPROPRIATE_FOR_CAMPAIGN = 'AD_GROUP_CRITERION_INAPPROPRIATE_FOR_CAMPAIGN';
+  /**
+   * Baidu: Bid or quality too low for mobile, but eligible to display for
+   * desktop.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_INVALID_MOBILE_SEARCH = 'AD_GROUP_CRITERION_INVALID_MOBILE_SEARCH';
+  /**
+   * Baidu: Bid or quality too low for desktop, but eligible to display for
+   * mobile.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_INVALID_PC_SEARCH = 'AD_GROUP_CRITERION_INVALID_PC_SEARCH';
+  /**
+   * Baidu: Bid or quality too low to be displayed.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_INVALID_SEARCH = 'AD_GROUP_CRITERION_INVALID_SEARCH';
+  /**
+   * Baidu: Paused by Baidu due to low search volume.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_LOW_SEARCH_VOLUME = 'AD_GROUP_CRITERION_LOW_SEARCH_VOLUME';
+  /**
+   * Baidu: Mobile URL in process to be reviewed.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_MOBILE_URL_UNDER_REVIEW = 'AD_GROUP_CRITERION_MOBILE_URL_UNDER_REVIEW';
+  /**
+   * Baidu: The landing page for one device is invalid, while the landing page
+   * for the other device is valid.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_PARTIALLY_INVALID = 'AD_GROUP_CRITERION_PARTIALLY_INVALID';
+  /**
+   * Baidu: Keyword has been created and paused by Baidu account management, and
+   * is now ready for you to activate it.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_TO_BE_ACTIVATED = 'AD_GROUP_CRITERION_TO_BE_ACTIVATED';
+  /**
+   * Baidu: In process to be reviewed by Baidu. Gemini: Criterion under review.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_UNDER_REVIEW = 'AD_GROUP_CRITERION_UNDER_REVIEW';
+  /**
+   * Baidu: Criterion to be reviewed.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_NOT_REVIEWED = 'AD_GROUP_CRITERION_NOT_REVIEWED';
+  /**
+   * Deprecated. Do not use. Previously used by Gemini
+   *
+   * @deprecated
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_ON_HOLD = 'AD_GROUP_CRITERION_ON_HOLD';
+  /**
+   * Y!J : Criterion pending review
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_PENDING_REVIEW = 'AD_GROUP_CRITERION_PENDING_REVIEW';
+  /**
+   * Criterion has been paused.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_PAUSED = 'AD_GROUP_CRITERION_PAUSED';
+  /**
+   * Criterion has been removed.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_REMOVED = 'AD_GROUP_CRITERION_REMOVED';
+  /**
+   * Criterion has been approved.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_APPROVED = 'AD_GROUP_CRITERION_APPROVED';
+  /**
+   * Criterion has been disapproved.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_DISAPPROVED = 'AD_GROUP_CRITERION_DISAPPROVED';
+  /**
+   * Criterion is active and serving.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_SERVING = 'AD_GROUP_CRITERION_SERVING';
+  /**
+   * Criterion has been paused since the account is paused.
+   */
+  public const ENGINE_STATUS_AD_GROUP_CRITERION_ACCOUNT_PAUSED = 'AD_GROUP_CRITERION_ACCOUNT_PAUSED';
+  /**
+   * No value has been specified.
+   */
+  public const STATUS_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * The received value is not known in this version. This is a response-only
+   * value.
+   */
+  public const STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * The ad group criterion is enabled.
+   */
+  public const STATUS_ENABLED = 'ENABLED';
+  /**
+   * The ad group criterion is paused.
+   */
+  public const STATUS_PAUSED = 'PAUSED';
+  /**
+   * The ad group criterion is removed.
+   */
+  public const STATUS_REMOVED = 'REMOVED';
+  /**
+   * Not specified.
+   */
+  public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Keyword, for example, 'mars cruise'.
+   */
+  public const TYPE_KEYWORD = 'KEYWORD';
+  /**
+   * Placement, also known as Website, for example, 'www.flowers4sale.com'
+   */
+  public const TYPE_PLACEMENT = 'PLACEMENT';
+  /**
+   * Mobile application categories to target.
+   */
+  public const TYPE_MOBILE_APP_CATEGORY = 'MOBILE_APP_CATEGORY';
+  /**
+   * Mobile applications to target.
+   */
+  public const TYPE_MOBILE_APPLICATION = 'MOBILE_APPLICATION';
+  /**
+   * Devices to target.
+   */
+  public const TYPE_DEVICE = 'DEVICE';
+  /**
+   * Locations to target.
+   */
+  public const TYPE_LOCATION = 'LOCATION';
+  /**
+   * Listing groups to target.
+   */
+  public const TYPE_LISTING_GROUP = 'LISTING_GROUP';
+  /**
+   * Ad Schedule.
+   */
+  public const TYPE_AD_SCHEDULE = 'AD_SCHEDULE';
+  /**
+   * Age range.
+   */
+  public const TYPE_AGE_RANGE = 'AGE_RANGE';
+  /**
+   * Gender.
+   */
+  public const TYPE_GENDER = 'GENDER';
+  /**
+   * Income Range.
+   */
+  public const TYPE_INCOME_RANGE = 'INCOME_RANGE';
+  /**
+   * Parental status.
+   */
+  public const TYPE_PARENTAL_STATUS = 'PARENTAL_STATUS';
+  /**
+   * YouTube Video.
+   */
+  public const TYPE_YOUTUBE_VIDEO = 'YOUTUBE_VIDEO';
+  /**
+   * YouTube Channel.
+   */
+  public const TYPE_YOUTUBE_CHANNEL = 'YOUTUBE_CHANNEL';
+  /**
+   * User list.
+   */
+  public const TYPE_USER_LIST = 'USER_LIST';
+  /**
+   * Proximity.
+   */
+  public const TYPE_PROXIMITY = 'PROXIMITY';
+  /**
+   * A topic target on the display network (for example, "Pets & Animals").
+   */
+  public const TYPE_TOPIC = 'TOPIC';
+  /**
+   * Listing scope to target.
+   */
+  public const TYPE_LISTING_SCOPE = 'LISTING_SCOPE';
+  /**
+   * Language.
+   */
+  public const TYPE_LANGUAGE = 'LANGUAGE';
+  /**
+   * IpBlock.
+   */
+  public const TYPE_IP_BLOCK = 'IP_BLOCK';
+  /**
+   * Content Label for category exclusion.
+   */
+  public const TYPE_CONTENT_LABEL = 'CONTENT_LABEL';
+  /**
+   * Carrier.
+   */
+  public const TYPE_CARRIER = 'CARRIER';
+  /**
+   * A category the user is interested in.
+   */
+  public const TYPE_USER_INTEREST = 'USER_INTEREST';
+  /**
+   * Webpage criterion for dynamic search ads.
+   */
+  public const TYPE_WEBPAGE = 'WEBPAGE';
+  /**
+   * Operating system version.
+   */
+  public const TYPE_OPERATING_SYSTEM_VERSION = 'OPERATING_SYSTEM_VERSION';
+  /**
+   * App payment model.
+   */
+  public const TYPE_APP_PAYMENT_MODEL = 'APP_PAYMENT_MODEL';
+  /**
+   * Mobile device.
+   */
+  public const TYPE_MOBILE_DEVICE = 'MOBILE_DEVICE';
+  /**
+   * Custom affinity.
+   */
+  public const TYPE_CUSTOM_AFFINITY = 'CUSTOM_AFFINITY';
+  /**
+   * Custom intent.
+   */
+  public const TYPE_CUSTOM_INTENT = 'CUSTOM_INTENT';
+  /**
+   * Location group.
+   */
+  public const TYPE_LOCATION_GROUP = 'LOCATION_GROUP';
+  /**
+   * Custom audience
+   */
+  public const TYPE_CUSTOM_AUDIENCE = 'CUSTOM_AUDIENCE';
+  /**
+   * Combined audience
+   */
+  public const TYPE_COMBINED_AUDIENCE = 'COMBINED_AUDIENCE';
+  /**
+   * Smart Campaign keyword theme
+   */
+  public const TYPE_KEYWORD_THEME = 'KEYWORD_THEME';
+  /**
+   * Audience
+   */
+  public const TYPE_AUDIENCE = 'AUDIENCE';
+  /**
+   * Local Services Ads Service ID.
+   */
+  public const TYPE_LOCAL_SERVICE_ID = 'LOCAL_SERVICE_ID';
+  /**
+   * Brand
+   */
+  public const TYPE_BRAND = 'BRAND';
+  /**
+   * Brand List
+   */
+  public const TYPE_BRAND_LIST = 'BRAND_LIST';
+  /**
+   * Life Event
+   */
+  public const TYPE_LIFE_EVENT = 'LIFE_EVENT';
   protected $collection_key = 'labels';
   /**
+   * Immutable. The ad group to which the criterion belongs.
+   *
    * @var string
    */
   public $adGroup;
   protected $ageRangeType = GoogleAdsSearchads360V0CommonAgeRangeInfo::class;
   protected $ageRangeDataType = '';
+  /**
+   * The modifier for the bid when the criterion matches. The modifier must be
+   * in the range: 0.1 - 10.0. Most targetable criteria types support modifiers.
+   *
+   * @var 
+   */
   public $bidModifier;
   /**
+   * The CPC (cost-per-click) bid.
+   *
    * @var string
    */
   public $cpcBidMicros;
   /**
+   * Output only. The timestamp when this ad group criterion was created. The
+   * timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss"
+   * format.
+   *
    * @var string
    */
   public $creationTime;
   /**
+   * Output only. The ID of the criterion.
+   *
    * @var string
    */
   public $criterionId;
   /**
+   * Output only. The effective CPC (cost-per-click) bid.
+   *
    * @var string
    */
   public $effectiveCpcBidMicros;
   /**
+   * Output only. The resource names of effective labels attached to this ad
+   * group criterion. An effective label is a label inherited or directly
+   * assigned to this ad group criterion.
+   *
    * @var string[]
    */
   public $effectiveLabels;
   /**
+   * Output only. ID of the ad group criterion in the external engine account.
+   * This field is for non-Google Ads account only, for example, Yahoo Japan,
+   * Microsoft, Baidu etc. For Google Ads entity, use
+   * "ad_group_criterion.criterion_id" instead.
+   *
    * @var string
    */
   public $engineId;
   /**
+   * Output only. The Engine Status for ad group criterion.
+   *
    * @var string
    */
   public $engineStatus;
   /**
+   * URL template for appending params to final URL.
+   *
    * @var string
    */
   public $finalUrlSuffix;
   /**
+   * The list of possible final URLs after all cross-domain redirects for the
+   * ad.
+   *
    * @var string[]
    */
   public $finalUrls;
@@ -68,10 +375,17 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
   protected $keywordType = GoogleAdsSearchads360V0CommonKeywordInfo::class;
   protected $keywordDataType = '';
   /**
+   * Output only. The resource names of labels attached to this ad group
+   * criterion.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The datetime when this ad group criterion was last modified.
+   * The datetime is in the customer's time zone and in "yyyy-MM-dd
+   * HH:mm:ss.ssssss" format.
+   *
    * @var string
    */
   public $lastModifiedTime;
@@ -80,6 +394,10 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
   protected $locationType = GoogleAdsSearchads360V0CommonLocationInfo::class;
   protected $locationDataType = '';
   /**
+   * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+   * This field is immutable. To switch a criterion from positive to negative,
+   * remove then re-add it.
+   *
    * @var bool
    */
   public $negative;
@@ -88,18 +406,35 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
   protected $qualityInfoType = GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo::class;
   protected $qualityInfoDataType = '';
   /**
+   * Immutable. The resource name of the ad group criterion. Ad group criterion
+   * resource names have the form:
+   * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
+   *
    * @var string
    */
   public $resourceName;
   /**
+   * The status of the criterion. This is the status of the ad group criterion
+   * entity, set by the client. Note: UI reports may incorporate additional
+   * information that affects whether a criterion is eligible to run. In some
+   * cases a criterion that's REMOVED in the API can still show as enabled in
+   * the UI. For example, campaigns by default show to users of all age ranges
+   * unless excluded. The UI will show each age range as "enabled", since
+   * they're eligible to see the ads; but AdGroupCriterion.status will show
+   * "removed", since no positive criterion was added.
+   *
    * @var string
    */
   public $status;
   /**
+   * The URL template for constructing a tracking URL.
+   *
    * @var string
    */
   public $trackingUrlTemplate;
   /**
+   * Output only. The type of the criterion.
+   *
    * @var string
    */
   public $type;
@@ -109,7 +444,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
   protected $webpageDataType = '';
 
   /**
-   * @param string
+   * Immutable. The ad group to which the criterion belongs.
+   *
+   * @param string $adGroup
    */
   public function setAdGroup($adGroup)
   {
@@ -123,7 +460,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->adGroup;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonAgeRangeInfo
+   * Immutable. Age range.
+   *
+   * @param GoogleAdsSearchads360V0CommonAgeRangeInfo $ageRange
    */
   public function setAgeRange(GoogleAdsSearchads360V0CommonAgeRangeInfo $ageRange)
   {
@@ -145,7 +484,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->bidModifier;
   }
   /**
-   * @param string
+   * The CPC (cost-per-click) bid.
+   *
+   * @param string $cpcBidMicros
    */
   public function setCpcBidMicros($cpcBidMicros)
   {
@@ -159,7 +500,11 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->cpcBidMicros;
   }
   /**
-   * @param string
+   * Output only. The timestamp when this ad group criterion was created. The
+   * timestamp is in the customer's time zone and in "yyyy-MM-dd HH:mm:ss"
+   * format.
+   *
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
@@ -173,7 +518,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->creationTime;
   }
   /**
-   * @param string
+   * Output only. The ID of the criterion.
+   *
+   * @param string $criterionId
    */
   public function setCriterionId($criterionId)
   {
@@ -187,7 +534,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->criterionId;
   }
   /**
-   * @param string
+   * Output only. The effective CPC (cost-per-click) bid.
+   *
+   * @param string $effectiveCpcBidMicros
    */
   public function setEffectiveCpcBidMicros($effectiveCpcBidMicros)
   {
@@ -201,7 +550,11 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->effectiveCpcBidMicros;
   }
   /**
-   * @param string[]
+   * Output only. The resource names of effective labels attached to this ad
+   * group criterion. An effective label is a label inherited or directly
+   * assigned to this ad group criterion.
+   *
+   * @param string[] $effectiveLabels
    */
   public function setEffectiveLabels($effectiveLabels)
   {
@@ -215,7 +568,12 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->effectiveLabels;
   }
   /**
-   * @param string
+   * Output only. ID of the ad group criterion in the external engine account.
+   * This field is for non-Google Ads account only, for example, Yahoo Japan,
+   * Microsoft, Baidu etc. For Google Ads entity, use
+   * "ad_group_criterion.criterion_id" instead.
+   *
+   * @param string $engineId
    */
   public function setEngineId($engineId)
   {
@@ -229,21 +587,38 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->engineId;
   }
   /**
-   * @param string
+   * Output only. The Engine Status for ad group criterion.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, AD_GROUP_CRITERION_ELIGIBLE,
+   * AD_GROUP_CRITERION_INAPPROPRIATE_FOR_CAMPAIGN,
+   * AD_GROUP_CRITERION_INVALID_MOBILE_SEARCH,
+   * AD_GROUP_CRITERION_INVALID_PC_SEARCH, AD_GROUP_CRITERION_INVALID_SEARCH,
+   * AD_GROUP_CRITERION_LOW_SEARCH_VOLUME,
+   * AD_GROUP_CRITERION_MOBILE_URL_UNDER_REVIEW,
+   * AD_GROUP_CRITERION_PARTIALLY_INVALID, AD_GROUP_CRITERION_TO_BE_ACTIVATED,
+   * AD_GROUP_CRITERION_UNDER_REVIEW, AD_GROUP_CRITERION_NOT_REVIEWED,
+   * AD_GROUP_CRITERION_ON_HOLD, AD_GROUP_CRITERION_PENDING_REVIEW,
+   * AD_GROUP_CRITERION_PAUSED, AD_GROUP_CRITERION_REMOVED,
+   * AD_GROUP_CRITERION_APPROVED, AD_GROUP_CRITERION_DISAPPROVED,
+   * AD_GROUP_CRITERION_SERVING, AD_GROUP_CRITERION_ACCOUNT_PAUSED
+   *
+   * @param self::ENGINE_STATUS_* $engineStatus
    */
   public function setEngineStatus($engineStatus)
   {
     $this->engineStatus = $engineStatus;
   }
   /**
-   * @return string
+   * @return self::ENGINE_STATUS_*
    */
   public function getEngineStatus()
   {
     return $this->engineStatus;
   }
   /**
-   * @param string
+   * URL template for appending params to final URL.
+   *
+   * @param string $finalUrlSuffix
    */
   public function setFinalUrlSuffix($finalUrlSuffix)
   {
@@ -257,7 +632,10 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->finalUrlSuffix;
   }
   /**
-   * @param string[]
+   * The list of possible final URLs after all cross-domain redirects for the
+   * ad.
+   *
+   * @param string[] $finalUrls
    */
   public function setFinalUrls($finalUrls)
   {
@@ -271,7 +649,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->finalUrls;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonGenderInfo
+   * Immutable. Gender.
+   *
+   * @param GoogleAdsSearchads360V0CommonGenderInfo $gender
    */
   public function setGender(GoogleAdsSearchads360V0CommonGenderInfo $gender)
   {
@@ -285,7 +665,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->gender;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonKeywordInfo
+   * Immutable. Keyword.
+   *
+   * @param GoogleAdsSearchads360V0CommonKeywordInfo $keyword
    */
   public function setKeyword(GoogleAdsSearchads360V0CommonKeywordInfo $keyword)
   {
@@ -299,7 +681,10 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->keyword;
   }
   /**
-   * @param string[]
+   * Output only. The resource names of labels attached to this ad group
+   * criterion.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -313,7 +698,11 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The datetime when this ad group criterion was last modified.
+   * The datetime is in the customer's time zone and in "yyyy-MM-dd
+   * HH:mm:ss.ssssss" format.
+   *
+   * @param string $lastModifiedTime
    */
   public function setLastModifiedTime($lastModifiedTime)
   {
@@ -327,7 +716,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->lastModifiedTime;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonListingGroupInfo
+   * Immutable. Listing group.
+   *
+   * @param GoogleAdsSearchads360V0CommonListingGroupInfo $listingGroup
    */
   public function setListingGroup(GoogleAdsSearchads360V0CommonListingGroupInfo $listingGroup)
   {
@@ -341,7 +732,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->listingGroup;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonLocationInfo
+   * Immutable. Location.
+   *
+   * @param GoogleAdsSearchads360V0CommonLocationInfo $location
    */
   public function setLocation(GoogleAdsSearchads360V0CommonLocationInfo $location)
   {
@@ -355,7 +748,11 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->location;
   }
   /**
-   * @param bool
+   * Immutable. Whether to target (`false`) or exclude (`true`) the criterion.
+   * This field is immutable. To switch a criterion from positive to negative,
+   * remove then re-add it.
+   *
+   * @param bool $negative
    */
   public function setNegative($negative)
   {
@@ -369,7 +766,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->negative;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates
+   * Output only. Estimates for criterion bids at various positions.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates $positionEstimates
    */
   public function setPositionEstimates(GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates $positionEstimates)
   {
@@ -383,7 +782,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->positionEstimates;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo
+   * Output only. Information regarding the quality of the criterion.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo $qualityInfo
    */
   public function setQualityInfo(GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo $qualityInfo)
   {
@@ -397,7 +798,11 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->qualityInfo;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the ad group criterion. Ad group criterion
+   * resource names have the form:
+   * `customers/{customer_id}/adGroupCriteria/{ad_group_id}~{criterion_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -411,21 +816,34 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->resourceName;
   }
   /**
-   * @param string
+   * The status of the criterion. This is the status of the ad group criterion
+   * entity, set by the client. Note: UI reports may incorporate additional
+   * information that affects whether a criterion is eligible to run. In some
+   * cases a criterion that's REMOVED in the API can still show as enabled in
+   * the UI. For example, campaigns by default show to users of all age ranges
+   * unless excluded. The UI will show each age range as "enabled", since
+   * they're eligible to see the ads; but AdGroupCriterion.status will show
+   * "removed", since no positive criterion was added.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, ENABLED, PAUSED, REMOVED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * The URL template for constructing a tracking URL.
+   *
+   * @param string $trackingUrlTemplate
    */
   public function setTrackingUrlTemplate($trackingUrlTemplate)
   {
@@ -439,21 +857,35 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->trackingUrlTemplate;
   }
   /**
-   * @param string
+   * Output only. The type of the criterion.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, KEYWORD, PLACEMENT,
+   * MOBILE_APP_CATEGORY, MOBILE_APPLICATION, DEVICE, LOCATION, LISTING_GROUP,
+   * AD_SCHEDULE, AGE_RANGE, GENDER, INCOME_RANGE, PARENTAL_STATUS,
+   * YOUTUBE_VIDEO, YOUTUBE_CHANNEL, USER_LIST, PROXIMITY, TOPIC, LISTING_SCOPE,
+   * LANGUAGE, IP_BLOCK, CONTENT_LABEL, CARRIER, USER_INTEREST, WEBPAGE,
+   * OPERATING_SYSTEM_VERSION, APP_PAYMENT_MODEL, MOBILE_DEVICE,
+   * CUSTOM_AFFINITY, CUSTOM_INTENT, LOCATION_GROUP, CUSTOM_AUDIENCE,
+   * COMBINED_AUDIENCE, KEYWORD_THEME, AUDIENCE, LOCAL_SERVICE_ID, BRAND,
+   * BRAND_LIST, LIFE_EVENT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonUserListInfo
+   * Immutable. User List.
+   *
+   * @param GoogleAdsSearchads360V0CommonUserListInfo $userList
    */
   public function setUserList(GoogleAdsSearchads360V0CommonUserListInfo $userList)
   {
@@ -467,7 +899,9 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
     return $this->userList;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonWebpageInfo
+   * Immutable. Webpage
+   *
+   * @param GoogleAdsSearchads360V0CommonWebpageInfo $webpage
    */
   public function setWebpage(GoogleAdsSearchads360V0CommonWebpageInfo $webpage)
   {

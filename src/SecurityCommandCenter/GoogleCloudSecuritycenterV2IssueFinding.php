@@ -22,6 +22,8 @@ class GoogleCloudSecuritycenterV2IssueFinding extends \Google\Model
   protected $cveType = GoogleCloudSecuritycenterV2IssueFindingCve::class;
   protected $cveDataType = '';
   /**
+   * The name of the finding.
+   *
    * @var string
    */
   public $name;
@@ -29,7 +31,9 @@ class GoogleCloudSecuritycenterV2IssueFinding extends \Google\Model
   protected $securityBulletinDataType = '';
 
   /**
-   * @param GoogleCloudSecuritycenterV2IssueFindingCve
+   * The CVE of the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueFindingCve $cve
    */
   public function setCve(GoogleCloudSecuritycenterV2IssueFindingCve $cve)
   {
@@ -43,7 +47,9 @@ class GoogleCloudSecuritycenterV2IssueFinding extends \Google\Model
     return $this->cve;
   }
   /**
-   * @param string
+   * The name of the finding.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -57,7 +63,9 @@ class GoogleCloudSecuritycenterV2IssueFinding extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2IssueFindingSecurityBulletin
+   * The security bulletin of the finding.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueFindingSecurityBulletin $securityBulletin
    */
   public function setSecurityBulletin(GoogleCloudSecuritycenterV2IssueFindingSecurityBulletin $securityBulletin)
   {

@@ -21,6 +21,9 @@ class MetrosListResponse extends \Google\Collection
 {
   protected $collection_key = 'metros';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#metrosListResponse".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class MetrosListResponse extends \Google\Collection
   protected $metrosDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#metrosListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class MetrosListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Metro[]
+   * Metro collection.
+   *
+   * @param Metro[] $metros
    */
   public function setMetros($metros)
   {

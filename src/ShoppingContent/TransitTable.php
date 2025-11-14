@@ -21,18 +21,29 @@ class TransitTable extends \Google\Collection
 {
   protected $collection_key = 'transitTimeLabels';
   /**
+   * A list of postal group names. The last value can be `"all other
+   * locations"`. Example: `["zone 1", "zone 2", "all other locations"]`. The
+   * referred postal code groups must match the delivery country of the service.
+   *
    * @var string[]
    */
   public $postalCodeGroupNames;
   protected $rowsType = TransitTableTransitTimeRow::class;
   protected $rowsDataType = 'array';
   /**
+   * A list of transit time labels. The last value can be `"all other labels"`.
+   * Example: `["food", "electronics", "all other labels"]`.
+   *
    * @var string[]
    */
   public $transitTimeLabels;
 
   /**
-   * @param string[]
+   * A list of postal group names. The last value can be `"all other
+   * locations"`. Example: `["zone 1", "zone 2", "all other locations"]`. The
+   * referred postal code groups must match the delivery country of the service.
+   *
+   * @param string[] $postalCodeGroupNames
    */
   public function setPostalCodeGroupNames($postalCodeGroupNames)
   {
@@ -46,7 +57,7 @@ class TransitTable extends \Google\Collection
     return $this->postalCodeGroupNames;
   }
   /**
-   * @param TransitTableTransitTimeRow[]
+   * @param TransitTableTransitTimeRow[] $rows
    */
   public function setRows($rows)
   {
@@ -60,7 +71,10 @@ class TransitTable extends \Google\Collection
     return $this->rows;
   }
   /**
-   * @param string[]
+   * A list of transit time labels. The last value can be `"all other labels"`.
+   * Example: `["food", "electronics", "all other labels"]`.
+   *
+   * @param string[] $transitTimeLabels
    */
   public function setTransitTimeLabels($transitTimeLabels)
   {

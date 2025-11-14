@@ -21,6 +21,9 @@ class UserRolePermissionGroupsListResponse extends \Google\Collection
 {
   protected $collection_key = 'userRolePermissionGroups';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#userRolePermissionGroupsListResponse".
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class UserRolePermissionGroupsListResponse extends \Google\Collection
   protected $userRolePermissionGroupsDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#userRolePermissionGroupsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class UserRolePermissionGroupsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param UserRolePermissionGroup[]
+   * User role permission group collection.
+   *
+   * @param UserRolePermissionGroup[] $userRolePermissionGroups
    */
   public function setUserRolePermissionGroups($userRolePermissionGroups)
   {

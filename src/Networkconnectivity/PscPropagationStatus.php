@@ -20,50 +20,114 @@ namespace Google\Service\Networkconnectivity;
 class PscPropagationStatus extends \Google\Model
 {
   /**
+   * The code is unspecified.
+   */
+  public const CODE_CODE_UNSPECIFIED = 'CODE_UNSPECIFIED';
+  /**
+   * The propagated Private Service Connect connection is ready.
+   */
+  public const CODE_READY = 'READY';
+  /**
+   * The Private Service Connect connection is propagating. This is a transient
+   * state.
+   */
+  public const CODE_PROPAGATING = 'PROPAGATING';
+  /**
+   * The Private Service Connect connection propagation failed because the VPC
+   * network or the project of the target spoke has exceeded the connection
+   * limit set by the producer.
+   */
+  public const CODE_ERROR_PRODUCER_PROPAGATED_CONNECTION_LIMIT_EXCEEDED = 'ERROR_PRODUCER_PROPAGATED_CONNECTION_LIMIT_EXCEEDED';
+  /**
+   * The Private Service Connect connection propagation failed because the NAT
+   * IP subnet space has been exhausted. It is equivalent to the `Needs
+   * attention` status of the Private Service Connect connection. See
+   * https://cloud.google.com/vpc/docs/about-accessing-vpc-hosted-services-
+   * endpoints#connection-statuses.
+   */
+  public const CODE_ERROR_PRODUCER_NAT_IP_SPACE_EXHAUSTED = 'ERROR_PRODUCER_NAT_IP_SPACE_EXHAUSTED';
+  /**
+   * The Private Service Connect connection propagation failed because the
+   * `PSC_ILB_CONSUMER_FORWARDING_RULES_PER_PRODUCER_NETWORK` quota in the
+   * producer VPC network has been exceeded.
+   */
+  public const CODE_ERROR_PRODUCER_QUOTA_EXCEEDED = 'ERROR_PRODUCER_QUOTA_EXCEEDED';
+  /**
+   * The Private Service Connect connection propagation failed because the
+   * `PSC_PROPAGATED_CONNECTIONS_PER_VPC_NETWORK` quota in the consumer VPC
+   * network has been exceeded.
+   */
+  public const CODE_ERROR_CONSUMER_QUOTA_EXCEEDED = 'ERROR_CONSUMER_QUOTA_EXCEEDED';
+  /**
+   * The propagation status.
+   *
    * @var string
    */
   public $code;
   /**
+   * The human-readable summary of the Private Service Connect connection
+   * propagation status.
+   *
    * @var string
    */
   public $message;
   /**
+   * The name of the forwarding rule exported to the hub.
+   *
    * @var string
    */
   public $sourceForwardingRule;
   /**
+   * The name of the group that the source spoke belongs to.
+   *
    * @var string
    */
   public $sourceGroup;
   /**
+   * The name of the spoke that the source forwarding rule belongs to.
+   *
    * @var string
    */
   public $sourceSpoke;
   /**
+   * The name of the group that the target spoke belongs to.
+   *
    * @var string
    */
   public $targetGroup;
   /**
+   * The name of the spoke that the source forwarding rule propagates to.
+   *
    * @var string
    */
   public $targetSpoke;
 
   /**
-   * @param string
+   * The propagation status.
+   *
+   * Accepted values: CODE_UNSPECIFIED, READY, PROPAGATING,
+   * ERROR_PRODUCER_PROPAGATED_CONNECTION_LIMIT_EXCEEDED,
+   * ERROR_PRODUCER_NAT_IP_SPACE_EXHAUSTED, ERROR_PRODUCER_QUOTA_EXCEEDED,
+   * ERROR_CONSUMER_QUOTA_EXCEEDED
+   *
+   * @param self::CODE_* $code
    */
   public function setCode($code)
   {
     $this->code = $code;
   }
   /**
-   * @return string
+   * @return self::CODE_*
    */
   public function getCode()
   {
     return $this->code;
   }
   /**
-   * @param string
+   * The human-readable summary of the Private Service Connect connection
+   * propagation status.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -77,7 +141,9 @@ class PscPropagationStatus extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * The name of the forwarding rule exported to the hub.
+   *
+   * @param string $sourceForwardingRule
    */
   public function setSourceForwardingRule($sourceForwardingRule)
   {
@@ -91,7 +157,9 @@ class PscPropagationStatus extends \Google\Model
     return $this->sourceForwardingRule;
   }
   /**
-   * @param string
+   * The name of the group that the source spoke belongs to.
+   *
+   * @param string $sourceGroup
    */
   public function setSourceGroup($sourceGroup)
   {
@@ -105,7 +173,9 @@ class PscPropagationStatus extends \Google\Model
     return $this->sourceGroup;
   }
   /**
-   * @param string
+   * The name of the spoke that the source forwarding rule belongs to.
+   *
+   * @param string $sourceSpoke
    */
   public function setSourceSpoke($sourceSpoke)
   {
@@ -119,7 +189,9 @@ class PscPropagationStatus extends \Google\Model
     return $this->sourceSpoke;
   }
   /**
-   * @param string
+   * The name of the group that the target spoke belongs to.
+   *
+   * @param string $targetGroup
    */
   public function setTargetGroup($targetGroup)
   {
@@ -133,7 +205,9 @@ class PscPropagationStatus extends \Google\Model
     return $this->targetGroup;
   }
   /**
-   * @param string
+   * The name of the spoke that the source forwarding rule propagates to.
+   *
+   * @param string $targetSpoke
    */
   public function setTargetSpoke($targetSpoke)
   {

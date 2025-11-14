@@ -22,22 +22,34 @@ class Modification extends \Google\Model
   protected $createType = ColumnFamily::class;
   protected $createDataType = '';
   /**
+   * Drop (delete) the column family with the given ID, or fail if no such
+   * family exists.
+   *
    * @var bool
    */
   public $drop;
   /**
+   * The ID of the column family to be modified.
+   *
    * @var string
    */
   public $id;
   protected $updateType = ColumnFamily::class;
   protected $updateDataType = '';
   /**
+   * Optional. A mask specifying which fields (e.g. `gc_rule`) in the `update`
+   * mod should be updated, ignored for other modification types. If unset or
+   * empty, we treat it as updating `gc_rule` to be backward compatible.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param ColumnFamily
+   * Create a new column family with the specified schema, or fail if one
+   * already exists with the given ID.
+   *
+   * @param ColumnFamily $create
    */
   public function setCreate(ColumnFamily $create)
   {
@@ -51,7 +63,10 @@ class Modification extends \Google\Model
     return $this->create;
   }
   /**
-   * @param bool
+   * Drop (delete) the column family with the given ID, or fail if no such
+   * family exists.
+   *
+   * @param bool $drop
    */
   public function setDrop($drop)
   {
@@ -65,7 +80,9 @@ class Modification extends \Google\Model
     return $this->drop;
   }
   /**
-   * @param string
+   * The ID of the column family to be modified.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -79,7 +96,10 @@ class Modification extends \Google\Model
     return $this->id;
   }
   /**
-   * @param ColumnFamily
+   * Update an existing column family to the specified schema, or fail if no
+   * column family exists with the given ID.
+   *
+   * @param ColumnFamily $update
    */
   public function setUpdate(ColumnFamily $update)
   {
@@ -93,7 +113,11 @@ class Modification extends \Google\Model
     return $this->update;
   }
   /**
-   * @param string
+   * Optional. A mask specifying which fields (e.g. `gc_rule`) in the `update`
+   * mod should be updated, ignored for other modification types. If unset or
+   * empty, we treat it as updating `gc_rule` to be backward compatible.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

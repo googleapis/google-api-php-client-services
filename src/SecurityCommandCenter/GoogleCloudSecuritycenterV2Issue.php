@@ -19,33 +19,99 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
 {
+  /**
+   * Unspecified issue type.
+   */
+  public const ISSUE_TYPE_ISSUE_TYPE_UNSPECIFIED = 'ISSUE_TYPE_UNSPECIFIED';
+  /**
+   * Chokepoint issue type.
+   */
+  public const ISSUE_TYPE_CHOKEPOINT = 'CHOKEPOINT';
+  /**
+   * Toxic combination issue type.
+   */
+  public const ISSUE_TYPE_TOXIC_COMBINATION = 'TOXIC_COMBINATION';
+  /**
+   * Insight issue type.
+   */
+  public const ISSUE_TYPE_INSIGHT = 'INSIGHT';
+  /**
+   * Unspecified severity.
+   */
+  public const SEVERITY_SEVERITY_UNSPECIFIED = 'SEVERITY_UNSPECIFIED';
+  /**
+   * Critical severity.
+   */
+  public const SEVERITY_CRITICAL = 'CRITICAL';
+  /**
+   * High severity.
+   */
+  public const SEVERITY_HIGH = 'HIGH';
+  /**
+   * Medium severity.
+   */
+  public const SEVERITY_MEDIUM = 'MEDIUM';
+  /**
+   * Low severity.
+   */
+  public const SEVERITY_LOW = 'LOW';
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Active state.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Inactive state.
+   */
+  public const STATE_INACTIVE = 'INACTIVE';
   protected $collection_key = 'securityContexts';
   /**
+   * Output only. The time the issue was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The description of the issue in Markdown format.
+   *
    * @var string
    */
   public $description;
   /**
+   * The finding category or rule name that generated the issue.
+   *
    * @var string
    */
   public $detection;
   protected $domainsType = GoogleCloudSecuritycenterV2IssueDomain::class;
   protected $domainsDataType = 'array';
+  /**
+   * The exposure score of the issue.
+   *
+   * @var 
+   */
   public $exposureScore;
   /**
+   * The type of the issue.
+   *
    * @var string
    */
   public $issueType;
   /**
+   * The time the issue was last observed.
+   *
    * @var string
    */
   public $lastObservationTime;
   protected $muteType = GoogleCloudSecuritycenterV2IssueMute::class;
   protected $muteDataType = '';
   /**
+   * Identifier. The name of the issue. Format:
+   * organizations/{organization}/locations/{location}/issues/{issue}
+   *
    * @var string
    */
   public $name;
@@ -54,6 +120,8 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
   protected $relatedFindingsType = GoogleCloudSecuritycenterV2IssueFinding::class;
   protected $relatedFindingsDataType = 'array';
   /**
+   * Approaches to remediate the issue in Markdown format.
+   *
    * @var string[]
    */
   public $remediations;
@@ -62,20 +130,28 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
   protected $securityContextsType = GoogleCloudSecuritycenterV2IssueSecurityContext::class;
   protected $securityContextsDataType = 'array';
   /**
+   * The severity of the issue.
+   *
    * @var string
    */
   public $severity;
   /**
+   * Output only. The state of the issue.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time the issue was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time the issue was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -89,7 +165,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * The description of the issue in Markdown format.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -103,7 +181,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The finding category or rule name that generated the issue.
+   *
+   * @param string $detection
    */
   public function setDetection($detection)
   {
@@ -117,7 +197,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->detection;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2IssueDomain[]
+   * The domains of the issue.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueDomain[] $domains
    */
   public function setDomains($domains)
   {
@@ -139,21 +221,28 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->exposureScore;
   }
   /**
-   * @param string
+   * The type of the issue.
+   *
+   * Accepted values: ISSUE_TYPE_UNSPECIFIED, CHOKEPOINT, TOXIC_COMBINATION,
+   * INSIGHT
+   *
+   * @param self::ISSUE_TYPE_* $issueType
    */
   public function setIssueType($issueType)
   {
     $this->issueType = $issueType;
   }
   /**
-   * @return string
+   * @return self::ISSUE_TYPE_*
    */
   public function getIssueType()
   {
     return $this->issueType;
   }
   /**
-   * @param string
+   * The time the issue was last observed.
+   *
+   * @param string $lastObservationTime
    */
   public function setLastObservationTime($lastObservationTime)
   {
@@ -167,7 +256,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->lastObservationTime;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2IssueMute
+   * The mute information of the issue.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueMute $mute
    */
   public function setMute(GoogleCloudSecuritycenterV2IssueMute $mute)
   {
@@ -181,7 +272,10 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->mute;
   }
   /**
-   * @param string
+   * Identifier. The name of the issue. Format:
+   * organizations/{organization}/locations/{location}/issues/{issue}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -195,7 +289,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2IssueResource
+   * The primary resource associated with the issue.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueResource $primaryResource
    */
   public function setPrimaryResource(GoogleCloudSecuritycenterV2IssueResource $primaryResource)
   {
@@ -209,7 +305,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->primaryResource;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2IssueFinding[]
+   * The findings related to the issue.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueFinding[] $relatedFindings
    */
   public function setRelatedFindings($relatedFindings)
   {
@@ -223,7 +321,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->relatedFindings;
   }
   /**
-   * @param string[]
+   * Approaches to remediate the issue in Markdown format.
+   *
+   * @param string[] $remediations
    */
   public function setRemediations($remediations)
   {
@@ -237,7 +337,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->remediations;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2IssueResource[]
+   * Additional resources associated with the issue.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueResource[] $secondaryResources
    */
   public function setSecondaryResources($secondaryResources)
   {
@@ -251,7 +353,9 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->secondaryResources;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2IssueSecurityContext[]
+   * The security context of the issue.
+   *
+   * @param GoogleCloudSecuritycenterV2IssueSecurityContext[] $securityContexts
    */
   public function setSecurityContexts($securityContexts)
   {
@@ -265,35 +369,45 @@ class GoogleCloudSecuritycenterV2Issue extends \Google\Collection
     return $this->securityContexts;
   }
   /**
-   * @param string
+   * The severity of the issue.
+   *
+   * Accepted values: SEVERITY_UNSPECIFIED, CRITICAL, HIGH, MEDIUM, LOW
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
     return $this->severity;
   }
   /**
-   * @param string
+   * Output only. The state of the issue.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, INACTIVE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time the issue was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

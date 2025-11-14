@@ -27,7 +27,9 @@ class GooglePrivacyDlpV2RecordLocation extends \Google\Model
   protected $tableLocationDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2FieldId
+   * Field id of the field containing the finding.
+   *
+   * @param GooglePrivacyDlpV2FieldId $fieldId
    */
   public function setFieldId(GooglePrivacyDlpV2FieldId $fieldId)
   {
@@ -41,7 +43,9 @@ class GooglePrivacyDlpV2RecordLocation extends \Google\Model
     return $this->fieldId;
   }
   /**
-   * @param GooglePrivacyDlpV2RecordKey
+   * Key of the finding.
+   *
+   * @param GooglePrivacyDlpV2RecordKey $recordKey
    */
   public function setRecordKey(GooglePrivacyDlpV2RecordKey $recordKey)
   {
@@ -55,7 +59,9 @@ class GooglePrivacyDlpV2RecordLocation extends \Google\Model
     return $this->recordKey;
   }
   /**
-   * @param GooglePrivacyDlpV2TableLocation
+   * Location within a `ContentItem.Table`.
+   *
+   * @param GooglePrivacyDlpV2TableLocation $tableLocation
    */
   public function setTableLocation(GooglePrivacyDlpV2TableLocation $tableLocation)
   {

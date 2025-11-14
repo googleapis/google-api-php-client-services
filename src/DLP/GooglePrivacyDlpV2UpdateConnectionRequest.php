@@ -22,12 +22,16 @@ class GooglePrivacyDlpV2UpdateConnectionRequest extends \Google\Model
   protected $connectionType = GooglePrivacyDlpV2Connection::class;
   protected $connectionDataType = '';
   /**
+   * Optional. Mask to control which fields get updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GooglePrivacyDlpV2Connection
+   * Required. The connection with new values for the relevant fields.
+   *
+   * @param GooglePrivacyDlpV2Connection $connection
    */
   public function setConnection(GooglePrivacyDlpV2Connection $connection)
   {
@@ -41,7 +45,9 @@ class GooglePrivacyDlpV2UpdateConnectionRequest extends \Google\Model
     return $this->connection;
   }
   /**
-   * @param string
+   * Optional. Mask to control which fields get updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

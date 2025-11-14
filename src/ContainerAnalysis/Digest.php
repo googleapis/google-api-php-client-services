@@ -20,16 +20,22 @@ namespace Google\Service\ContainerAnalysis;
 class Digest extends \Google\Model
 {
   /**
+   * `SHA1`, `SHA512` etc.
+   *
    * @var string
    */
   public $algo;
   /**
+   * Value of the digest.
+   *
    * @var string
    */
   public $digestBytes;
 
   /**
-   * @param string
+   * `SHA1`, `SHA512` etc.
+   *
+   * @param string $algo
    */
   public function setAlgo($algo)
   {
@@ -43,7 +49,9 @@ class Digest extends \Google\Model
     return $this->algo;
   }
   /**
-   * @param string
+   * Value of the digest.
+   *
+   * @param string $digestBytes
    */
   public function setDigestBytes($digestBytes)
   {

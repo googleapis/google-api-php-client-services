@@ -20,18 +20,26 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAssetGroupSignal extends \Google\Model
 {
   /**
+   * Immutable. The asset group which this asset group signal belongs to.
+   *
    * @var string
    */
   public $assetGroup;
   protected $audienceType = GoogleAdsSearchads360V0CommonAudienceInfo::class;
   protected $audienceDataType = '';
   /**
+   * Immutable. The resource name of the asset group signal. Asset group signal
+   * resource name have the form:
+   * `customers/{customer_id}/assetGroupSignals/{asset_group_id}~{signal_id}`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Immutable. The asset group which this asset group signal belongs to.
+   *
+   * @param string $assetGroup
    */
   public function setAssetGroup($assetGroup)
   {
@@ -45,7 +53,9 @@ class GoogleAdsSearchads360V0ResourcesAssetGroupSignal extends \Google\Model
     return $this->assetGroup;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonAudienceInfo
+   * Immutable. The audience signal to be used by the performance max campaign.
+   *
+   * @param GoogleAdsSearchads360V0CommonAudienceInfo $audience
    */
   public function setAudience(GoogleAdsSearchads360V0CommonAudienceInfo $audience)
   {
@@ -59,7 +69,11 @@ class GoogleAdsSearchads360V0ResourcesAssetGroupSignal extends \Google\Model
     return $this->audience;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the asset group signal. Asset group signal
+   * resource name have the form:
+   * `customers/{customer_id}/assetGroupSignals/{asset_group_id}~{signal_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

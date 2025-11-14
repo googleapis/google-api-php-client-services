@@ -19,17 +19,36 @@ namespace Google\Service\Dfareporting;
 
 class CreativeAssetId extends \Google\Model
 {
+  public const TYPE_IMAGE = 'IMAGE';
+  public const TYPE_FLASH = 'FLASH';
+  public const TYPE_VIDEO = 'VIDEO';
+  public const TYPE_HTML = 'HTML';
+  public const TYPE_HTML_IMAGE = 'HTML_IMAGE';
+  public const TYPE_AUDIO = 'AUDIO';
   /**
+   * Name of the creative asset. This is a required field while inserting an
+   * asset. After insertion, this assetIdentifier is used to identify the
+   * uploaded asset. Characters in the name must be alphanumeric or one of the
+   * following: ".-_ ". Spaces are allowed.
+   *
    * @var string
    */
   public $name;
   /**
+   * Type of asset to upload. This is a required field. FLASH and IMAGE are no
+   * longer supported for new uploads. All image assets should use HTML_IMAGE.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Name of the creative asset. This is a required field while inserting an
+   * asset. After insertion, this assetIdentifier is used to identify the
+   * uploaded asset. Characters in the name must be alphanumeric or one of the
+   * following: ".-_ ". Spaces are allowed.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,14 +62,19 @@ class CreativeAssetId extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Type of asset to upload. This is a required field. FLASH and IMAGE are no
+   * longer supported for new uploads. All image assets should use HTML_IMAGE.
+   *
+   * Accepted values: IMAGE, FLASH, VIDEO, HTML, HTML_IMAGE, AUDIO
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

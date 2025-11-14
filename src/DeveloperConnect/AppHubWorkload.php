@@ -20,20 +20,30 @@ namespace Google\Service\DeveloperConnect;
 class AppHubWorkload extends \Google\Model
 {
   /**
+   * Output only. The criticality of the App Hub Workload.
+   *
    * @var string
    */
   public $criticality;
   /**
+   * Output only. The environment of the App Hub Workload.
+   *
    * @var string
    */
   public $environment;
   /**
+   * Required. Output only. Immutable. The name of the App Hub Workload. Format:
+   * `projects/{project}/locations/{location}/applications/{application}/workloa
+   * ds/{workload}`.
+   *
    * @var string
    */
   public $workload;
 
   /**
-   * @param string
+   * Output only. The criticality of the App Hub Workload.
+   *
+   * @param string $criticality
    */
   public function setCriticality($criticality)
   {
@@ -47,7 +57,9 @@ class AppHubWorkload extends \Google\Model
     return $this->criticality;
   }
   /**
-   * @param string
+   * Output only. The environment of the App Hub Workload.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {
@@ -61,7 +73,11 @@ class AppHubWorkload extends \Google\Model
     return $this->environment;
   }
   /**
-   * @param string
+   * Required. Output only. Immutable. The name of the App Hub Workload. Format:
+   * `projects/{project}/locations/{location}/applications/{application}/workloa
+   * ds/{workload}`.
+   *
+   * @param string $workload
    */
   public function setWorkload($workload)
   {

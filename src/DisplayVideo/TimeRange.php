@@ -20,16 +20,22 @@ namespace Google\Service\DisplayVideo;
 class TimeRange extends \Google\Model
 {
   /**
+   * Required. The upper bound of a time range, inclusive.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Required. The lower bound of a time range, inclusive.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Required. The upper bound of a time range, inclusive.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +49,9 @@ class TimeRange extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Required. The lower bound of a time range, inclusive.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

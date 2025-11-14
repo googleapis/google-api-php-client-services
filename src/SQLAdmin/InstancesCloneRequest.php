@@ -23,7 +23,9 @@ class InstancesCloneRequest extends \Google\Model
   protected $cloneContextDataType = '';
 
   /**
-   * @param CloneContext
+   * Required. Contains details about the clone operation.
+   *
+   * @param CloneContext $cloneContext
    */
   public function setCloneContext(CloneContext $cloneContext)
   {

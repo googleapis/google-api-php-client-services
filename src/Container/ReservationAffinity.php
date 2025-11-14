@@ -19,36 +19,70 @@ namespace Google\Service\Container;
 
 class ReservationAffinity extends \Google\Collection
 {
+  /**
+   * Default value. This should not be used.
+   */
+  public const CONSUME_RESERVATION_TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Do not consume from any reserved capacity.
+   */
+  public const CONSUME_RESERVATION_TYPE_NO_RESERVATION = 'NO_RESERVATION';
+  /**
+   * Consume any reservation available.
+   */
+  public const CONSUME_RESERVATION_TYPE_ANY_RESERVATION = 'ANY_RESERVATION';
+  /**
+   * Must consume from a specific reservation. Must specify key value fields for
+   * specifying the reservations.
+   */
+  public const CONSUME_RESERVATION_TYPE_SPECIFIC_RESERVATION = 'SPECIFIC_RESERVATION';
   protected $collection_key = 'values';
   /**
+   * Corresponds to the type of reservation consumption.
+   *
    * @var string
    */
   public $consumeReservationType;
   /**
+   * Corresponds to the label key of a reservation resource. To target a
+   * SPECIFIC_RESERVATION by name, specify "compute.googleapis.com/reservation-
+   * name" as the key and specify the name of your reservation as its value.
+   *
    * @var string
    */
   public $key;
   /**
+   * Corresponds to the label value(s) of reservation resource(s).
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * Corresponds to the type of reservation consumption.
+   *
+   * Accepted values: UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION,
+   * SPECIFIC_RESERVATION
+   *
+   * @param self::CONSUME_RESERVATION_TYPE_* $consumeReservationType
    */
   public function setConsumeReservationType($consumeReservationType)
   {
     $this->consumeReservationType = $consumeReservationType;
   }
   /**
-   * @return string
+   * @return self::CONSUME_RESERVATION_TYPE_*
    */
   public function getConsumeReservationType()
   {
     return $this->consumeReservationType;
   }
   /**
-   * @param string
+   * Corresponds to the label key of a reservation resource. To target a
+   * SPECIFIC_RESERVATION by name, specify "compute.googleapis.com/reservation-
+   * name" as the key and specify the name of your reservation as its value.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -62,7 +96,9 @@ class ReservationAffinity extends \Google\Collection
     return $this->key;
   }
   /**
-   * @param string[]
+   * Corresponds to the label value(s) of reservation resource(s).
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

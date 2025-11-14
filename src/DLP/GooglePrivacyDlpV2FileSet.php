@@ -22,12 +22,23 @@ class GooglePrivacyDlpV2FileSet extends \Google\Model
   protected $regexFileSetType = GooglePrivacyDlpV2CloudStorageRegexFileSet::class;
   protected $regexFileSetDataType = '';
   /**
+   * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing
+   * wildcard in the path is allowed. If the url ends in a trailing slash, the
+   * bucket or directory represented by the url will be scanned non-recursively
+   * (content in sub-directories will not be scanned). This means that
+   * `gs://mybucket/` is equivalent to `gs://mybucket`, and
+   * `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory`.
+   * Exactly one of `url` or `regex_file_set` must be set.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param GooglePrivacyDlpV2CloudStorageRegexFileSet
+   * The regex-filtered set of files to scan. Exactly one of `url` or
+   * `regex_file_set` must be set.
+   *
+   * @param GooglePrivacyDlpV2CloudStorageRegexFileSet $regexFileSet
    */
   public function setRegexFileSet(GooglePrivacyDlpV2CloudStorageRegexFileSet $regexFileSet)
   {
@@ -41,7 +52,15 @@ class GooglePrivacyDlpV2FileSet extends \Google\Model
     return $this->regexFileSet;
   }
   /**
-   * @param string
+   * The Cloud Storage url of the file(s) to scan, in the format `gs:`. Trailing
+   * wildcard in the path is allowed. If the url ends in a trailing slash, the
+   * bucket or directory represented by the url will be scanned non-recursively
+   * (content in sub-directories will not be scanned). This means that
+   * `gs://mybucket/` is equivalent to `gs://mybucket`, and
+   * `gs://mybucket/directory/` is equivalent to `gs://mybucket/directory`.
+   * Exactly one of `url` or `regex_file_set` must be set.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

@@ -20,50 +20,67 @@ namespace Google\Service\Dataflow;
 class StreamingScalingReport extends \Google\Model
 {
   /**
+   * @deprecated
    * @var int
    */
   public $activeBundleCount;
   /**
+   * Current acive thread count.
+   *
    * @var int
    */
   public $activeThreadCount;
   /**
+   * Maximum bundle count.
+   *
    * @var int
    */
   public $maximumBundleCount;
   /**
+   * Maximum bytes.
+   *
    * @var string
    */
   public $maximumBytes;
   /**
+   * @deprecated
    * @var int
    */
   public $maximumBytesCount;
   /**
+   * Maximum thread count limit.
+   *
    * @var int
    */
   public $maximumThreadCount;
   /**
+   * Current outstanding bundle count.
+   *
    * @var int
    */
   public $outstandingBundleCount;
   /**
+   * Current outstanding bytes.
+   *
    * @var string
    */
   public $outstandingBytes;
   /**
+   * @deprecated
    * @var int
    */
   public $outstandingBytesCount;
 
   /**
-   * @param int
+   * @deprecated
+   * @param int $activeBundleCount
    */
   public function setActiveBundleCount($activeBundleCount)
   {
     $this->activeBundleCount = $activeBundleCount;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getActiveBundleCount()
@@ -71,7 +88,9 @@ class StreamingScalingReport extends \Google\Model
     return $this->activeBundleCount;
   }
   /**
-   * @param int
+   * Current acive thread count.
+   *
+   * @param int $activeThreadCount
    */
   public function setActiveThreadCount($activeThreadCount)
   {
@@ -85,7 +104,9 @@ class StreamingScalingReport extends \Google\Model
     return $this->activeThreadCount;
   }
   /**
-   * @param int
+   * Maximum bundle count.
+   *
+   * @param int $maximumBundleCount
    */
   public function setMaximumBundleCount($maximumBundleCount)
   {
@@ -99,7 +120,9 @@ class StreamingScalingReport extends \Google\Model
     return $this->maximumBundleCount;
   }
   /**
-   * @param string
+   * Maximum bytes.
+   *
+   * @param string $maximumBytes
    */
   public function setMaximumBytes($maximumBytes)
   {
@@ -113,13 +136,15 @@ class StreamingScalingReport extends \Google\Model
     return $this->maximumBytes;
   }
   /**
-   * @param int
+   * @deprecated
+   * @param int $maximumBytesCount
    */
   public function setMaximumBytesCount($maximumBytesCount)
   {
     $this->maximumBytesCount = $maximumBytesCount;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getMaximumBytesCount()
@@ -127,7 +152,9 @@ class StreamingScalingReport extends \Google\Model
     return $this->maximumBytesCount;
   }
   /**
-   * @param int
+   * Maximum thread count limit.
+   *
+   * @param int $maximumThreadCount
    */
   public function setMaximumThreadCount($maximumThreadCount)
   {
@@ -141,7 +168,9 @@ class StreamingScalingReport extends \Google\Model
     return $this->maximumThreadCount;
   }
   /**
-   * @param int
+   * Current outstanding bundle count.
+   *
+   * @param int $outstandingBundleCount
    */
   public function setOutstandingBundleCount($outstandingBundleCount)
   {
@@ -155,7 +184,9 @@ class StreamingScalingReport extends \Google\Model
     return $this->outstandingBundleCount;
   }
   /**
-   * @param string
+   * Current outstanding bytes.
+   *
+   * @param string $outstandingBytes
    */
   public function setOutstandingBytes($outstandingBytes)
   {
@@ -169,13 +200,15 @@ class StreamingScalingReport extends \Google\Model
     return $this->outstandingBytes;
   }
   /**
-   * @param int
+   * @deprecated
+   * @param int $outstandingBytesCount
    */
   public function setOutstandingBytesCount($outstandingBytesCount)
   {
     $this->outstandingBytesCount = $outstandingBytesCount;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getOutstandingBytesCount()

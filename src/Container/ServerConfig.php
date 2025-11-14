@@ -23,28 +23,40 @@ class ServerConfig extends \Google\Collection
   protected $channelsType = ReleaseChannelConfig::class;
   protected $channelsDataType = 'array';
   /**
+   * Version of Kubernetes the service deploys by default.
+   *
    * @var string
    */
   public $defaultClusterVersion;
   /**
+   * Default image type.
+   *
    * @var string
    */
   public $defaultImageType;
   /**
+   * List of valid image types.
+   *
    * @var string[]
    */
   public $validImageTypes;
   /**
+   * List of valid master versions, in descending order.
+   *
    * @var string[]
    */
   public $validMasterVersions;
   /**
+   * List of valid node upgrade target versions, in descending order.
+   *
    * @var string[]
    */
   public $validNodeVersions;
 
   /**
-   * @param ReleaseChannelConfig[]
+   * List of release channel configurations.
+   *
+   * @param ReleaseChannelConfig[] $channels
    */
   public function setChannels($channels)
   {
@@ -58,7 +70,9 @@ class ServerConfig extends \Google\Collection
     return $this->channels;
   }
   /**
-   * @param string
+   * Version of Kubernetes the service deploys by default.
+   *
+   * @param string $defaultClusterVersion
    */
   public function setDefaultClusterVersion($defaultClusterVersion)
   {
@@ -72,7 +86,9 @@ class ServerConfig extends \Google\Collection
     return $this->defaultClusterVersion;
   }
   /**
-   * @param string
+   * Default image type.
+   *
+   * @param string $defaultImageType
    */
   public function setDefaultImageType($defaultImageType)
   {
@@ -86,7 +102,9 @@ class ServerConfig extends \Google\Collection
     return $this->defaultImageType;
   }
   /**
-   * @param string[]
+   * List of valid image types.
+   *
+   * @param string[] $validImageTypes
    */
   public function setValidImageTypes($validImageTypes)
   {
@@ -100,7 +118,9 @@ class ServerConfig extends \Google\Collection
     return $this->validImageTypes;
   }
   /**
-   * @param string[]
+   * List of valid master versions, in descending order.
+   *
+   * @param string[] $validMasterVersions
    */
   public function setValidMasterVersions($validMasterVersions)
   {
@@ -114,7 +134,9 @@ class ServerConfig extends \Google\Collection
     return $this->validMasterVersions;
   }
   /**
-   * @param string[]
+   * List of valid node upgrade target versions, in descending order.
+   *
+   * @param string[] $validNodeVersions
    */
   public function setValidNodeVersions($validNodeVersions)
   {

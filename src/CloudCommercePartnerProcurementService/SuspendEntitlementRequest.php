@@ -20,12 +20,16 @@ namespace Google\Service\CloudCommercePartnerProcurementService;
 class SuspendEntitlementRequest extends \Google\Model
 {
   /**
+   * A free-form reason string, explaining the reason for suspension request.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * A free-form reason string, explaining the reason for suspension request.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

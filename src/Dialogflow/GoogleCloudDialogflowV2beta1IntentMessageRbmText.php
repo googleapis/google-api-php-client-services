@@ -23,12 +23,16 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends \Google\Collectio
   protected $rbmSuggestionType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion::class;
   protected $rbmSuggestionDataType = 'array';
   /**
+   * Required. Text sent and displayed to the user.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[]
+   * Optional. One or more suggestions to show to the user.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[] $rbmSuggestion
    */
   public function setRbmSuggestion($rbmSuggestion)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends \Google\Collectio
     return $this->rbmSuggestion;
   }
   /**
-   * @param string
+   * Required. Text sent and displayed to the user.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

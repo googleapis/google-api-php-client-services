@@ -21,36 +21,70 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
 {
   protected $collection_key = 'oauthScopes';
   /**
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached
+   * to each node in the node pool. This should be of the form projects/[KEY_PRO
+   * JECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME].
+   * For more information about protecting resources with Cloud KMS Keys please
+   * see: https://cloud.google.com/compute/docs/disks/customer-managed-
+   * encryption
+   *
    * @var string
    */
   public $bootDiskKmsKey;
   /**
+   * Size of the disk attached to each node, specified in GB. The smallest
+   * allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+   *
    * @var int
    */
   public $diskSizeGb;
   /**
+   * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or
+   * 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
+   *
    * @var string
    */
   public $diskType;
   /**
+   * The image type to use for NAP created node. Please see
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for
+   * available image types.
+   *
    * @var string
    */
   public $imageType;
   /**
+   * DEPRECATED. Use NodePoolAutoConfig.NodeKubeletConfig instead.
+   *
    * @var bool
    */
   public $insecureKubeletReadonlyPortEnabled;
   protected $managementType = NodeManagement::class;
   protected $managementDataType = '';
   /**
+   * Deprecated. Minimum CPU platform to be used for NAP created node pools. The
+   * instance may be scheduled on the specified or newer CPU platform.
+   * Applicable values are the friendly names of CPU platforms, such as
+   * minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
+   * more information, read [how to specify min CPU
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform). This field is deprecated, min_cpu_platform should be specified
+   * using `cloud.google.com/requested-min-cpu-platform` label selector on the
+   * pod. To unset the min cpu platform field pass "automatic" as field value.
+   *
+   * @deprecated
    * @var string
    */
   public $minCpuPlatform;
   /**
+   * Scopes that are used by NAP when creating node pools.
+   *
    * @var string[]
    */
   public $oauthScopes;
   /**
+   * The Google Cloud Platform Service Account to be used by the node VMs.
+   *
    * @var string
    */
   public $serviceAccount;
@@ -60,7 +94,14 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
   protected $upgradeSettingsDataType = '';
 
   /**
-   * @param string
+   * The Customer Managed Encryption Key used to encrypt the boot disk attached
+   * to each node in the node pool. This should be of the form projects/[KEY_PRO
+   * JECT_ID]/locations/[LOCATION]/keyRings/[RING_NAME]/cryptoKeys/[KEY_NAME].
+   * For more information about protecting resources with Cloud KMS Keys please
+   * see: https://cloud.google.com/compute/docs/disks/customer-managed-
+   * encryption
+   *
+   * @param string $bootDiskKmsKey
    */
   public function setBootDiskKmsKey($bootDiskKmsKey)
   {
@@ -74,7 +115,10 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->bootDiskKmsKey;
   }
   /**
-   * @param int
+   * Size of the disk attached to each node, specified in GB. The smallest
+   * allowed disk size is 10GB. If unspecified, the default disk size is 100GB.
+   *
+   * @param int $diskSizeGb
    */
   public function setDiskSizeGb($diskSizeGb)
   {
@@ -88,7 +132,10 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->diskSizeGb;
   }
   /**
-   * @param string
+   * Type of the disk attached to each node (e.g. 'pd-standard', 'pd-ssd' or
+   * 'pd-balanced') If unspecified, the default disk type is 'pd-standard'
+   *
+   * @param string $diskType
    */
   public function setDiskType($diskType)
   {
@@ -102,7 +149,11 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->diskType;
   }
   /**
-   * @param string
+   * The image type to use for NAP created node. Please see
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/node-images for
+   * available image types.
+   *
+   * @param string $imageType
    */
   public function setImageType($imageType)
   {
@@ -116,7 +167,9 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->imageType;
   }
   /**
-   * @param bool
+   * DEPRECATED. Use NodePoolAutoConfig.NodeKubeletConfig instead.
+   *
+   * @param bool $insecureKubeletReadonlyPortEnabled
    */
   public function setInsecureKubeletReadonlyPortEnabled($insecureKubeletReadonlyPortEnabled)
   {
@@ -130,7 +183,9 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->insecureKubeletReadonlyPortEnabled;
   }
   /**
-   * @param NodeManagement
+   * Specifies the node management options for NAP created node-pools.
+   *
+   * @param NodeManagement $management
    */
   public function setManagement(NodeManagement $management)
   {
@@ -144,13 +199,25 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->management;
   }
   /**
-   * @param string
+   * Deprecated. Minimum CPU platform to be used for NAP created node pools. The
+   * instance may be scheduled on the specified or newer CPU platform.
+   * Applicable values are the friendly names of CPU platforms, such as
+   * minCpuPlatform: Intel Haswell or minCpuPlatform: Intel Sandy Bridge. For
+   * more information, read [how to specify min CPU
+   * platform](https://cloud.google.com/compute/docs/instances/specify-min-cpu-
+   * platform). This field is deprecated, min_cpu_platform should be specified
+   * using `cloud.google.com/requested-min-cpu-platform` label selector on the
+   * pod. To unset the min cpu platform field pass "automatic" as field value.
+   *
+   * @deprecated
+   * @param string $minCpuPlatform
    */
   public function setMinCpuPlatform($minCpuPlatform)
   {
     $this->minCpuPlatform = $minCpuPlatform;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getMinCpuPlatform()
@@ -158,7 +225,9 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->minCpuPlatform;
   }
   /**
-   * @param string[]
+   * Scopes that are used by NAP when creating node pools.
+   *
+   * @param string[] $oauthScopes
    */
   public function setOauthScopes($oauthScopes)
   {
@@ -172,7 +241,9 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->oauthScopes;
   }
   /**
-   * @param string
+   * The Google Cloud Platform Service Account to be used by the node VMs.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -186,7 +257,9 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param ShieldedInstanceConfig
+   * Shielded Instance options.
+   *
+   * @param ShieldedInstanceConfig $shieldedInstanceConfig
    */
   public function setShieldedInstanceConfig(ShieldedInstanceConfig $shieldedInstanceConfig)
   {
@@ -200,7 +273,9 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
     return $this->shieldedInstanceConfig;
   }
   /**
-   * @param UpgradeSettings
+   * Specifies the upgrade settings for NAP created node pools
+   *
+   * @param UpgradeSettings $upgradeSettings
    */
   public function setUpgradeSettings(UpgradeSettings $upgradeSettings)
   {

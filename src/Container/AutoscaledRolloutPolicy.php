@@ -20,12 +20,20 @@ namespace Google\Service\Container;
 class AutoscaledRolloutPolicy extends \Google\Model
 {
   /**
+   * Optional. Time to wait after cordoning the blue pool before draining the
+   * nodes. Defaults to 3 days. The value can be set between 0 and 7 days,
+   * inclusive.
+   *
    * @var string
    */
   public $waitForDrainDuration;
 
   /**
-   * @param string
+   * Optional. Time to wait after cordoning the blue pool before draining the
+   * nodes. Defaults to 3 days. The value can be set between 0 and 7 days,
+   * inclusive.
+   *
+   * @param string $waitForDrainDuration
    */
   public function setWaitForDrainDuration($waitForDrainDuration)
   {

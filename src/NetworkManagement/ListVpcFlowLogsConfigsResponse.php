@@ -21,10 +21,14 @@ class ListVpcFlowLogsConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'vpcFlowLogsConfigs';
   /**
+   * Page token to fetch the next set of configurations.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached (when querying all locations with `-`).
+   *
    * @var string[]
    */
   public $unreachable;
@@ -32,7 +36,9 @@ class ListVpcFlowLogsConfigsResponse extends \Google\Collection
   protected $vpcFlowLogsConfigsDataType = 'array';
 
   /**
-   * @param string
+   * Page token to fetch the next set of configurations.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListVpcFlowLogsConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached (when querying all locations with `-`).
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
@@ -60,7 +68,9 @@ class ListVpcFlowLogsConfigsResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * @param VpcFlowLogsConfig[]
+   * List of VPC Flow Log configurations.
+   *
+   * @param VpcFlowLogsConfig[] $vpcFlowLogsConfigs
    */
   public function setVpcFlowLogsConfigs($vpcFlowLogsConfigs)
   {

@@ -20,12 +20,24 @@ namespace Google\Service\CloudKMS;
 class WrappingPublicKey extends \Google\Model
 {
   /**
+   * The public key, encoded in PEM format. For more information, see the [RFC
+   * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
+   * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
+   * Encoding of Subject Public Key Info]
+   * (https://tools.ietf.org/html/rfc7468#section-13).
+   *
    * @var string
    */
   public $pem;
 
   /**
-   * @param string
+   * The public key, encoded in PEM format. For more information, see the [RFC
+   * 7468](https://tools.ietf.org/html/rfc7468) sections for [General
+   * Considerations](https://tools.ietf.org/html/rfc7468#section-2) and [Textual
+   * Encoding of Subject Public Key Info]
+   * (https://tools.ietf.org/html/rfc7468#section-13).
+   *
+   * @param string $pem
    */
   public function setPem($pem)
   {

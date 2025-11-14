@@ -23,7 +23,9 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo extends \Goo
   protected $serviceAccountDataType = '';
 
   /**
-   * @param GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount
+   * A GCP service account.
+   *
+   * @param GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount $serviceAccount
    */
   public function setServiceAccount(GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount $serviceAccount)
   {

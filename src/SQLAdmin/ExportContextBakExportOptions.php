@@ -20,56 +20,106 @@ namespace Google\Service\SQLAdmin;
 class ExportContextBakExportOptions extends \Google\Model
 {
   /**
+   * Default type.
+   */
+  public const BAK_TYPE_BAK_TYPE_UNSPECIFIED = 'BAK_TYPE_UNSPECIFIED';
+  /**
+   * Full backup.
+   */
+  public const BAK_TYPE_FULL = 'FULL';
+  /**
+   * Differential backup.
+   */
+  public const BAK_TYPE_DIFF = 'DIFF';
+  /**
+   * Transaction Log backup
+   */
+  public const BAK_TYPE_TLOG = 'TLOG';
+  /**
+   * Type of this bak file will be export, FULL or DIFF, SQL Server only
+   *
    * @var string
    */
   public $bakType;
   /**
+   * Deprecated: copy_only is deprecated. Use differential_base instead
+   *
+   * @deprecated
    * @var bool
    */
   public $copyOnly;
   /**
+   * Whether or not the backup can be used as a differential base copy_only
+   * backup can not be served as differential base
+   *
    * @var bool
    */
   public $differentialBase;
   /**
+   * Optional. The end timestamp when transaction log will be included in the
+   * export operation. [RFC 3339](https://tools.ietf.org/html/rfc3339) format
+   * (for example, `2023-10-01T16:19:00.094`) in UTC. When omitted, all
+   * available logs until current time will be included. Only applied to Cloud
+   * SQL for SQL Server.
+   *
    * @var string
    */
   public $exportLogEndTime;
   /**
+   * Optional. The begin timestamp when transaction log will be included in the
+   * export operation. [RFC 3339](https://tools.ietf.org/html/rfc3339) format
+   * (for example, `2023-10-01T16:19:00.094`) in UTC. When omitted, all
+   * available logs from the beginning of retention period will be included.
+   * Only applied to Cloud SQL for SQL Server.
+   *
    * @var string
    */
   public $exportLogStartTime;
   /**
+   * Option for specifying how many stripes to use for the export. If blank, and
+   * the value of the striped field is true, the number of stripes is
+   * automatically chosen.
+   *
    * @var int
    */
   public $stripeCount;
   /**
+   * Whether or not the export should be striped.
+   *
    * @var bool
    */
   public $striped;
 
   /**
-   * @param string
+   * Type of this bak file will be export, FULL or DIFF, SQL Server only
+   *
+   * Accepted values: BAK_TYPE_UNSPECIFIED, FULL, DIFF, TLOG
+   *
+   * @param self::BAK_TYPE_* $bakType
    */
   public function setBakType($bakType)
   {
     $this->bakType = $bakType;
   }
   /**
-   * @return string
+   * @return self::BAK_TYPE_*
    */
   public function getBakType()
   {
     return $this->bakType;
   }
   /**
-   * @param bool
+   * Deprecated: copy_only is deprecated. Use differential_base instead
+   *
+   * @deprecated
+   * @param bool $copyOnly
    */
   public function setCopyOnly($copyOnly)
   {
     $this->copyOnly = $copyOnly;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getCopyOnly()
@@ -77,7 +127,10 @@ class ExportContextBakExportOptions extends \Google\Model
     return $this->copyOnly;
   }
   /**
-   * @param bool
+   * Whether or not the backup can be used as a differential base copy_only
+   * backup can not be served as differential base
+   *
+   * @param bool $differentialBase
    */
   public function setDifferentialBase($differentialBase)
   {
@@ -91,7 +144,13 @@ class ExportContextBakExportOptions extends \Google\Model
     return $this->differentialBase;
   }
   /**
-   * @param string
+   * Optional. The end timestamp when transaction log will be included in the
+   * export operation. [RFC 3339](https://tools.ietf.org/html/rfc3339) format
+   * (for example, `2023-10-01T16:19:00.094`) in UTC. When omitted, all
+   * available logs until current time will be included. Only applied to Cloud
+   * SQL for SQL Server.
+   *
+   * @param string $exportLogEndTime
    */
   public function setExportLogEndTime($exportLogEndTime)
   {
@@ -105,7 +164,13 @@ class ExportContextBakExportOptions extends \Google\Model
     return $this->exportLogEndTime;
   }
   /**
-   * @param string
+   * Optional. The begin timestamp when transaction log will be included in the
+   * export operation. [RFC 3339](https://tools.ietf.org/html/rfc3339) format
+   * (for example, `2023-10-01T16:19:00.094`) in UTC. When omitted, all
+   * available logs from the beginning of retention period will be included.
+   * Only applied to Cloud SQL for SQL Server.
+   *
+   * @param string $exportLogStartTime
    */
   public function setExportLogStartTime($exportLogStartTime)
   {
@@ -119,7 +184,11 @@ class ExportContextBakExportOptions extends \Google\Model
     return $this->exportLogStartTime;
   }
   /**
-   * @param int
+   * Option for specifying how many stripes to use for the export. If blank, and
+   * the value of the striped field is true, the number of stripes is
+   * automatically chosen.
+   *
+   * @param int $stripeCount
    */
   public function setStripeCount($stripeCount)
   {
@@ -133,7 +202,9 @@ class ExportContextBakExportOptions extends \Google\Model
     return $this->stripeCount;
   }
   /**
-   * @param bool
+   * Whether or not the export should be striped.
+   *
+   * @param bool $striped
    */
   public function setStriped($striped)
   {

@@ -20,16 +20,59 @@ namespace Google\Service\DisplayVideo;
 class DoubleVerifyFraudInvalidTraffic extends \Google\Model
 {
   /**
+   * This enum is only a placeholder and it doesn't specify any fraud and
+   * invalid traffic options.
+   */
+  public const AVOIDED_FRAUD_OPTION_FRAUD_UNSPECIFIED = 'FRAUD_UNSPECIFIED';
+  /**
+   * 100% Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_100 = 'AD_IMPRESSION_FRAUD_100';
+  /**
+   * 50% or Higher Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_50 = 'AD_IMPRESSION_FRAUD_50';
+  /**
+   * 25% or Higher Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_25 = 'AD_IMPRESSION_FRAUD_25';
+  /**
+   * 10% or Higher Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_10 = 'AD_IMPRESSION_FRAUD_10';
+  /**
+   * 8% or Higher Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_8 = 'AD_IMPRESSION_FRAUD_8';
+  /**
+   * 6% or Higher Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_6 = 'AD_IMPRESSION_FRAUD_6';
+  /**
+   * 4% or Higher Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_4 = 'AD_IMPRESSION_FRAUD_4';
+  /**
+   * 2% or Higher Fraud & IVT.
+   */
+  public const AVOIDED_FRAUD_OPTION_AD_IMPRESSION_FRAUD_2 = 'AD_IMPRESSION_FRAUD_2';
+  /**
+   * Insufficient Historical Fraud & IVT Stats.
+   *
    * @var bool
    */
   public $avoidInsufficientOption;
   /**
+   * Avoid Sites and Apps with historical Fraud & IVT.
+   *
    * @var string
    */
   public $avoidedFraudOption;
 
   /**
-   * @param bool
+   * Insufficient Historical Fraud & IVT Stats.
+   *
+   * @param bool $avoidInsufficientOption
    */
   public function setAvoidInsufficientOption($avoidInsufficientOption)
   {
@@ -43,14 +86,21 @@ class DoubleVerifyFraudInvalidTraffic extends \Google\Model
     return $this->avoidInsufficientOption;
   }
   /**
-   * @param string
+   * Avoid Sites and Apps with historical Fraud & IVT.
+   *
+   * Accepted values: FRAUD_UNSPECIFIED, AD_IMPRESSION_FRAUD_100,
+   * AD_IMPRESSION_FRAUD_50, AD_IMPRESSION_FRAUD_25, AD_IMPRESSION_FRAUD_10,
+   * AD_IMPRESSION_FRAUD_8, AD_IMPRESSION_FRAUD_6, AD_IMPRESSION_FRAUD_4,
+   * AD_IMPRESSION_FRAUD_2
+   *
+   * @param self::AVOIDED_FRAUD_OPTION_* $avoidedFraudOption
    */
   public function setAvoidedFraudOption($avoidedFraudOption)
   {
     $this->avoidedFraudOption = $avoidedFraudOption;
   }
   /**
-   * @return string
+   * @return self::AVOIDED_FRAUD_OPTION_*
    */
   public function getAvoidedFraudOption()
   {

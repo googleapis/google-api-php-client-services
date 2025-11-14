@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class DefaultSnatStatus extends \Google\Model
 {
   /**
+   * Disables cluster default sNAT rules.
+   *
    * @var bool
    */
   public $disabled;
 
   /**
-   * @param bool
+   * Disables cluster default sNAT rules.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {

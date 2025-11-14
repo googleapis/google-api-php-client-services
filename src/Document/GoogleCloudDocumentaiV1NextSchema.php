@@ -20,28 +20,41 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1NextSchema extends \Google\Model
 {
   /**
+   * Output only. The time when the Schema was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The user-defined name of the Schema.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. The GCP labels for the Schema.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the Schema. Format:
+   * `projects/{project}/locations/{location}/schemas/{schema}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The time when the Schema was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time when the Schema was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +68,9 @@ class GoogleCloudDocumentaiV1NextSchema extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The user-defined name of the Schema.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -69,7 +84,9 @@ class GoogleCloudDocumentaiV1NextSchema extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Optional. The GCP labels for the Schema.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -83,7 +100,10 @@ class GoogleCloudDocumentaiV1NextSchema extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the Schema. Format:
+   * `projects/{project}/locations/{location}/schemas/{schema}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -97,7 +117,9 @@ class GoogleCloudDocumentaiV1NextSchema extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The time when the Schema was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

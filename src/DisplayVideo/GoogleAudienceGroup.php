@@ -24,7 +24,10 @@ class GoogleAudienceGroup extends \Google\Collection
   protected $settingsDataType = 'array';
 
   /**
-   * @param GoogleAudienceTargetingSetting[]
+   * Required. All Google audience targeting settings in Google audience group.
+   * Repeated settings with the same id will be ignored.
+   *
+   * @param GoogleAudienceTargetingSetting[] $settings
    */
   public function setSettings($settings)
   {

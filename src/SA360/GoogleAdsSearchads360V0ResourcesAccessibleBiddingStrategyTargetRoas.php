@@ -19,6 +19,12 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategyTargetRoas extends \Google\Model
 {
+  /**
+   * Output only. The chosen revenue (based on conversion data) per unit of
+   * spend.
+   *
+   * @var 
+   */
   public $targetRoas;
 
   public function setTargetRoas($targetRoas)

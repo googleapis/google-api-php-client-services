@@ -21,18 +21,24 @@ class BoundedTrie extends \Google\Collection
 {
   protected $collection_key = 'singleton';
   /**
+   * The maximum number of elements to store before truncation.
+   *
    * @var int
    */
   public $bound;
   protected $rootType = BoundedTrieNode::class;
   protected $rootDataType = '';
   /**
+   * A more efficient representation for metrics consisting of a single value.
+   *
    * @var string[]
    */
   public $singleton;
 
   /**
-   * @param int
+   * The maximum number of elements to store before truncation.
+   *
+   * @param int $bound
    */
   public function setBound($bound)
   {
@@ -46,7 +52,9 @@ class BoundedTrie extends \Google\Collection
     return $this->bound;
   }
   /**
-   * @param BoundedTrieNode
+   * A compact representation of all the elements in this trie.
+   *
+   * @param BoundedTrieNode $root
    */
   public function setRoot(BoundedTrieNode $root)
   {
@@ -60,7 +68,9 @@ class BoundedTrie extends \Google\Collection
     return $this->root;
   }
   /**
-   * @param string[]
+   * A more efficient representation for metrics consisting of a single value.
+   *
+   * @param string[] $singleton
    */
   public function setSingleton($singleton)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\NetworkServices;
 class HttpRouteURLRewrite extends \Google\Model
 {
   /**
+   * Prior to forwarding the request to the selected destination, the requests
+   * host header is replaced by this value.
+   *
    * @var string
    */
   public $hostRewrite;
   /**
+   * Prior to forwarding the request to the selected destination, the matching
+   * portion of the requests path is replaced by this value.
+   *
    * @var string
    */
   public $pathPrefixRewrite;
 
   /**
-   * @param string
+   * Prior to forwarding the request to the selected destination, the requests
+   * host header is replaced by this value.
+   *
+   * @param string $hostRewrite
    */
   public function setHostRewrite($hostRewrite)
   {
@@ -43,7 +52,10 @@ class HttpRouteURLRewrite extends \Google\Model
     return $this->hostRewrite;
   }
   /**
-   * @param string
+   * Prior to forwarding the request to the selected destination, the matching
+   * portion of the requests path is replaced by this value.
+   *
+   * @param string $pathPrefixRewrite
    */
   public function setPathPrefixRewrite($pathPrefixRewrite)
   {

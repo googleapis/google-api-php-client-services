@@ -21,10 +21,15 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
 {
   protected $collection_key = 'messages';
   /**
+   * Always present. The unique identifier of the DetectIntentResponse that will
+   * be returned to the API caller.
+   *
    * @var string
    */
   public $detectIntentResponseId;
   /**
+   * If DTMF was provided as input, this field will contain the DTMF digits.
+   *
    * @var string
    */
   public $dtmfDigits;
@@ -33,6 +38,8 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
   protected $intentInfoType = GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo::class;
   protected $intentInfoDataType = '';
   /**
+   * The language code specified in the original request.
+   *
    * @var string
    */
   public $languageCode;
@@ -43,6 +50,8 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
   protected $pageInfoType = GoogleCloudDialogflowCxV3beta1PageInfo::class;
   protected $pageInfoDataType = '';
   /**
+   * Custom data set in QueryParameters.payload.
+   *
    * @var array[]
    */
   public $payload;
@@ -51,24 +60,39 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
   protected $sessionInfoType = GoogleCloudDialogflowCxV3beta1SessionInfo::class;
   protected $sessionInfoDataType = '';
   /**
+   * If natural language text was provided as input, this field will contain a
+   * copy of the text.
+   *
    * @var string
    */
   public $text;
   /**
+   * If natural language speech audio was provided as input, this field will
+   * contain the transcript for the audio.
+   *
    * @var string
    */
   public $transcript;
   /**
+   * If an event was provided as input, this field will contain the name of the
+   * event.
+   *
    * @var string
    */
   public $triggerEvent;
   /**
+   * If an intent was provided as input, this field will contain a copy of the
+   * intent identifier. Format: `projects//locations//agents//intents/`.
+   *
    * @var string
    */
   public $triggerIntent;
 
   /**
-   * @param string
+   * Always present. The unique identifier of the DetectIntentResponse that will
+   * be returned to the API caller.
+   *
+   * @param string $detectIntentResponseId
    */
   public function setDetectIntentResponseId($detectIntentResponseId)
   {
@@ -82,7 +106,9 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->detectIntentResponseId;
   }
   /**
-   * @param string
+   * If DTMF was provided as input, this field will contain the DTMF digits.
+   *
+   * @param string $dtmfDigits
    */
   public function setDtmfDigits($dtmfDigits)
   {
@@ -96,7 +122,10 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->dtmfDigits;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1WebhookRequestFulfillmentInfo
+   * Always present. Information about the fulfillment that triggered this
+   * webhook call.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1WebhookRequestFulfillmentInfo $fulfillmentInfo
    */
   public function setFulfillmentInfo(GoogleCloudDialogflowCxV3beta1WebhookRequestFulfillmentInfo $fulfillmentInfo)
   {
@@ -110,7 +139,9 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->fulfillmentInfo;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo
+   * Information about the last matched intent.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo $intentInfo
    */
   public function setIntentInfo(GoogleCloudDialogflowCxV3beta1WebhookRequestIntentInfo $intentInfo)
   {
@@ -124,7 +155,9 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->intentInfo;
   }
   /**
-   * @param string
+   * The language code specified in the original request.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -138,7 +171,9 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1LanguageInfo
+   * Information about the language of the request.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1LanguageInfo $languageInfo
    */
   public function setLanguageInfo(GoogleCloudDialogflowCxV3beta1LanguageInfo $languageInfo)
   {
@@ -152,7 +187,11 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->languageInfo;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1ResponseMessage[]
+   * The list of rich message responses to present to the user. Webhook can
+   * choose to append or replace this list in
+   * WebhookResponse.fulfillment_response;
+   *
+   * @param GoogleCloudDialogflowCxV3beta1ResponseMessage[] $messages
    */
   public function setMessages($messages)
   {
@@ -166,7 +205,9 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->messages;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1PageInfo
+   * Information about page status.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1PageInfo $pageInfo
    */
   public function setPageInfo(GoogleCloudDialogflowCxV3beta1PageInfo $pageInfo)
   {
@@ -180,7 +221,9 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->pageInfo;
   }
   /**
-   * @param array[]
+   * Custom data set in QueryParameters.payload.
+   *
+   * @param array[] $payload
    */
   public function setPayload($payload)
   {
@@ -194,7 +237,10 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->payload;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1WebhookRequestSentimentAnalysisResult
+   * The sentiment analysis result of the current user request. The field is
+   * filled when sentiment analysis is configured to be enabled for the request.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1WebhookRequestSentimentAnalysisResult $sentimentAnalysisResult
    */
   public function setSentimentAnalysisResult(GoogleCloudDialogflowCxV3beta1WebhookRequestSentimentAnalysisResult $sentimentAnalysisResult)
   {
@@ -208,7 +254,9 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->sentimentAnalysisResult;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1SessionInfo
+   * Information about session status.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1SessionInfo $sessionInfo
    */
   public function setSessionInfo(GoogleCloudDialogflowCxV3beta1SessionInfo $sessionInfo)
   {
@@ -222,7 +270,10 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->sessionInfo;
   }
   /**
-   * @param string
+   * If natural language text was provided as input, this field will contain a
+   * copy of the text.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
@@ -236,7 +287,10 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->text;
   }
   /**
-   * @param string
+   * If natural language speech audio was provided as input, this field will
+   * contain the transcript for the audio.
+   *
+   * @param string $transcript
    */
   public function setTranscript($transcript)
   {
@@ -250,7 +304,10 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->transcript;
   }
   /**
-   * @param string
+   * If an event was provided as input, this field will contain the name of the
+   * event.
+   *
+   * @param string $triggerEvent
    */
   public function setTriggerEvent($triggerEvent)
   {
@@ -264,7 +321,10 @@ class GoogleCloudDialogflowCxV3beta1WebhookRequest extends \Google\Collection
     return $this->triggerEvent;
   }
   /**
-   * @param string
+   * If an intent was provided as input, this field will contain a copy of the
+   * intent identifier. Format: `projects//locations//agents//intents/`.
+   *
+   * @param string $triggerIntent
    */
   public function setTriggerIntent($triggerIntent)
   {

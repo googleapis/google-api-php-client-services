@@ -20,30 +20,89 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1Job extends \Google\Model
 {
   /**
+   * The job state is unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The job has been just created and processing has not yet begun.
+   */
+  public const STATE_QUEUED = 'QUEUED';
+  /**
+   * The service is preparing to run the job.
+   */
+  public const STATE_PREPARING = 'PREPARING';
+  /**
+   * The job is in progress.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The job completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The job failed. `error_message` should contain the details of the failure.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The job is being cancelled. `error_message` should describe the reason for
+   * the cancellation.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * The job has been cancelled. `error_message` should describe the reason for
+   * the cancellation.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Output only. When the job was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. When the job processing was completed.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. The details of a failure or a cancellation.
+   *
    * @var string
    */
   public $errorMessage;
   /**
+   * `etag` is used for optimistic concurrency control as a way to help prevent
+   * simultaneous updates of a job from overwriting each other. It is strongly
+   * suggested that systems make use of the `etag` in the read-modify-write
+   * cycle to perform job updates in order to avoid race conditions: An `etag`
+   * is returned in the response to `GetJob`, and systems are expected to put
+   * that etag in the request to `UpdateJob` to ensure that their change will be
+   * applied to the same version of the job.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Required. The user-specified id of the job.
+   *
    * @var string
    */
   public $jobId;
   /**
+   * Output only. It's only effect when the job is in QUEUED state. If it's
+   * positive, it indicates the job's position in the job scheduler. It's 0 when
+   * the job is already scheduled.
+   *
    * @var string
    */
   public $jobPosition;
   /**
+   * Optional. One or more labels that you can add, to organize your jobs. Each
+   * label is a key-value pair, where both the key and the value are arbitrary
+   * strings that you supply. For more information, see the documentation on
+   * using labels.
+   *
    * @var string[]
    */
   public $labels;
@@ -52,10 +111,14 @@ class GoogleCloudMlV1Job extends \Google\Model
   protected $predictionOutputType = GoogleCloudMlV1PredictionOutput::class;
   protected $predictionOutputDataType = '';
   /**
+   * Output only. When the job processing was started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The detailed state of a job.
+   *
    * @var string
    */
   public $state;
@@ -65,7 +128,9 @@ class GoogleCloudMlV1Job extends \Google\Model
   protected $trainingOutputDataType = '';
 
   /**
-   * @param string
+   * Output only. When the job was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -79,7 +144,9 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. When the job processing was completed.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -93,7 +160,9 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. The details of a failure or a cancellation.
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -107,7 +176,15 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * @param string
+   * `etag` is used for optimistic concurrency control as a way to help prevent
+   * simultaneous updates of a job from overwriting each other. It is strongly
+   * suggested that systems make use of the `etag` in the read-modify-write
+   * cycle to perform job updates in order to avoid race conditions: An `etag`
+   * is returned in the response to `GetJob`, and systems are expected to put
+   * that etag in the request to `UpdateJob` to ensure that their change will be
+   * applied to the same version of the job.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -121,7 +198,9 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Required. The user-specified id of the job.
+   *
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {
@@ -135,7 +214,11 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->jobId;
   }
   /**
-   * @param string
+   * Output only. It's only effect when the job is in QUEUED state. If it's
+   * positive, it indicates the job's position in the job scheduler. It's 0 when
+   * the job is already scheduled.
+   *
+   * @param string $jobPosition
    */
   public function setJobPosition($jobPosition)
   {
@@ -149,7 +232,12 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->jobPosition;
   }
   /**
-   * @param string[]
+   * Optional. One or more labels that you can add, to organize your jobs. Each
+   * label is a key-value pair, where both the key and the value are arbitrary
+   * strings that you supply. For more information, see the documentation on
+   * using labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -163,7 +251,9 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param GoogleCloudMlV1PredictionInput
+   * Input parameters to create a prediction job.
+   *
+   * @param GoogleCloudMlV1PredictionInput $predictionInput
    */
   public function setPredictionInput(GoogleCloudMlV1PredictionInput $predictionInput)
   {
@@ -177,7 +267,9 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->predictionInput;
   }
   /**
-   * @param GoogleCloudMlV1PredictionOutput
+   * The current prediction job result.
+   *
+   * @param GoogleCloudMlV1PredictionOutput $predictionOutput
    */
   public function setPredictionOutput(GoogleCloudMlV1PredictionOutput $predictionOutput)
   {
@@ -191,7 +283,9 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->predictionOutput;
   }
   /**
-   * @param string
+   * Output only. When the job processing was started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -205,21 +299,28 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The detailed state of a job.
+   *
+   * Accepted values: STATE_UNSPECIFIED, QUEUED, PREPARING, RUNNING, SUCCEEDED,
+   * FAILED, CANCELLING, CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param GoogleCloudMlV1TrainingInput
+   * Input parameters to create a training job.
+   *
+   * @param GoogleCloudMlV1TrainingInput $trainingInput
    */
   public function setTrainingInput(GoogleCloudMlV1TrainingInput $trainingInput)
   {
@@ -233,7 +334,9 @@ class GoogleCloudMlV1Job extends \Google\Model
     return $this->trainingInput;
   }
   /**
-   * @param GoogleCloudMlV1TrainingOutput
+   * The current training job result.
+   *
+   * @param GoogleCloudMlV1TrainingOutput $trainingOutput
    */
   public function setTrainingOutput(GoogleCloudMlV1TrainingOutput $trainingOutput)
   {

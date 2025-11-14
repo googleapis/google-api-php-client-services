@@ -23,12 +23,17 @@ class ConnectionTypesListResponse extends \Google\Collection
   protected $connectionTypesType = ConnectionType::class;
   protected $connectionTypesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#connectionTypesListResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param ConnectionType[]
+   * Collection of connection types such as broadband and mobile.
+   *
+   * @param ConnectionType[] $connectionTypes
    */
   public function setConnectionTypes($connectionTypes)
   {
@@ -42,7 +47,10 @@ class ConnectionTypesListResponse extends \Google\Collection
     return $this->connectionTypes;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#connectionTypesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

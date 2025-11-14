@@ -23,7 +23,7 @@ class ResponsePolicyRulesUpdateResponse extends \Google\Model
   protected $responsePolicyRuleDataType = '';
 
   /**
-   * @param ResponsePolicyRule
+   * @param ResponsePolicyRule $responsePolicyRule
    */
   public function setResponsePolicyRule(ResponsePolicyRule $responsePolicyRule)
   {

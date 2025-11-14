@@ -21,10 +21,15 @@ class ListWorkspacesResponse extends \Google\Collection
 {
   protected $collection_key = 'workspaces';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations which could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
@@ -32,7 +37,10 @@ class ListWorkspacesResponse extends \Google\Collection
   protected $workspacesDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListWorkspacesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations which could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
@@ -60,7 +70,9 @@ class ListWorkspacesResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * @param Workspace[]
+   * List of workspaces.
+   *
+   * @param Workspace[] $workspaces
    */
   public function setWorkspaces($workspaces)
   {

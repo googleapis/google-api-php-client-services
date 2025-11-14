@@ -20,16 +20,27 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudio extends \Google\Model
 {
   /**
+   * Output only. Whether the playback of this message can be interrupted by the
+   * end user's speech and the client can then starts the next Dialogflow
+   * request.
+   *
    * @var bool
    */
   public $allowPlaybackInterruption;
   /**
+   * Required. URI of the audio clip. Dialogflow does not impose any validation
+   * on this value. It is specific to the client that reads it.
+   *
    * @var string
    */
   public $audioUri;
 
   /**
-   * @param bool
+   * Output only. Whether the playback of this message can be interrupted by the
+   * end user's speech and the client can then starts the next Dialogflow
+   * request.
+   *
+   * @param bool $allowPlaybackInterruption
    */
   public function setAllowPlaybackInterruption($allowPlaybackInterruption)
   {
@@ -43,7 +54,10 @@ class GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudio extends \Google\Mod
     return $this->allowPlaybackInterruption;
   }
   /**
-   * @param string
+   * Required. URI of the audio clip. Dialogflow does not impose any validation
+   * on this value. It is specific to the client that reads it.
+   *
+   * @param string $audioUri
    */
   public function setAudioUri($audioUri)
   {

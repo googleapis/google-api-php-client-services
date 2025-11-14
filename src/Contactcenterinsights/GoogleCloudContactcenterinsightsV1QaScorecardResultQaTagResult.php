@@ -19,10 +19,27 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1QaScorecardResultQaTagResult extends \Google\Model
 {
+  /**
+   * The normalized score the tag applies to.
+   *
+   * @var 
+   */
   public $normalizedScore;
+  /**
+   * The potential score the tag applies to.
+   *
+   * @var 
+   */
   public $potentialScore;
+  /**
+   * The score the tag applies to.
+   *
+   * @var 
+   */
   public $score;
   /**
+   * The tag the score applies to.
+   *
    * @var string
    */
   public $tag;
@@ -52,7 +69,9 @@ class GoogleCloudContactcenterinsightsV1QaScorecardResultQaTagResult extends \Go
     return $this->score;
   }
   /**
-   * @param string
+   * The tag the score applies to.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

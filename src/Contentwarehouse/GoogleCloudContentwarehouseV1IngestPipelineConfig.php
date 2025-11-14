@@ -20,22 +20,55 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1IngestPipelineConfig extends \Google\Model
 {
   /**
+   * The Cloud Function resource name. The Cloud Function needs to live inside
+   * consumer project and is accessible to Document AI Warehouse P4SA. Only
+   * Cloud Functions V2 is supported. Cloud function execution should complete
+   * within 5 minutes or this file ingestion may fail due to timeout. Format:
+   * `https://{region}-{project_id}.cloudfunctions.net/{cloud_function}` The
+   * following keys are available the request json payload. * display_name *
+   * properties * plain_text * reference_id * document_schema_name *
+   * raw_document_path * raw_document_file_type The following keys from the
+   * cloud function json response payload will be ingested to the Document AI
+   * Warehouse as part of Document proto content and/or related information. The
+   * original values will be overridden if any key is present in the response. *
+   * display_name * properties * plain_text * document_acl_policy * folder
+   *
    * @var string
    */
   public $cloudFunction;
   protected $documentAclPolicyType = GoogleIamV1Policy::class;
   protected $documentAclPolicyDataType = '';
   /**
+   * The document text extraction enabled flag. If the flag is set to true, DWH
+   * will perform text extraction on the raw document.
+   *
    * @var bool
    */
   public $enableDocumentTextExtraction;
   /**
+   * Optional. The name of the folder to which all ingested documents will be
+   * linked during ingestion process. Format is
+   * `projects/{project}/locations/{location}/documents/{folder_id}`
+   *
    * @var string
    */
   public $folder;
 
   /**
-   * @param string
+   * The Cloud Function resource name. The Cloud Function needs to live inside
+   * consumer project and is accessible to Document AI Warehouse P4SA. Only
+   * Cloud Functions V2 is supported. Cloud function execution should complete
+   * within 5 minutes or this file ingestion may fail due to timeout. Format:
+   * `https://{region}-{project_id}.cloudfunctions.net/{cloud_function}` The
+   * following keys are available the request json payload. * display_name *
+   * properties * plain_text * reference_id * document_schema_name *
+   * raw_document_path * raw_document_file_type The following keys from the
+   * cloud function json response payload will be ingested to the Document AI
+   * Warehouse as part of Document proto content and/or related information. The
+   * original values will be overridden if any key is present in the response. *
+   * display_name * properties * plain_text * document_acl_policy * folder
+   *
+   * @param string $cloudFunction
    */
   public function setCloudFunction($cloudFunction)
   {
@@ -49,7 +82,18 @@ class GoogleCloudContentwarehouseV1IngestPipelineConfig extends \Google\Model
     return $this->cloudFunction;
   }
   /**
-   * @param GoogleIamV1Policy
+   * The document level acl policy config. This refers to an Identity and Access
+   * (IAM) policy, which specifies access controls for all documents ingested by
+   * the pipeline. The role and members under the policy needs to be specified.
+   * The following roles are supported for document level acl control: *
+   * roles/contentwarehouse.documentAdmin *
+   * roles/contentwarehouse.documentEditor *
+   * roles/contentwarehouse.documentViewer The following members are supported
+   * for document level acl control: * user:user-email@example.com *
+   * group:group-email@example.com Note that for documents searched with LLM,
+   * only single level user or group acl check is supported.
+   *
+   * @param GoogleIamV1Policy $documentAclPolicy
    */
   public function setDocumentAclPolicy(GoogleIamV1Policy $documentAclPolicy)
   {
@@ -63,7 +107,10 @@ class GoogleCloudContentwarehouseV1IngestPipelineConfig extends \Google\Model
     return $this->documentAclPolicy;
   }
   /**
-   * @param bool
+   * The document text extraction enabled flag. If the flag is set to true, DWH
+   * will perform text extraction on the raw document.
+   *
+   * @param bool $enableDocumentTextExtraction
    */
   public function setEnableDocumentTextExtraction($enableDocumentTextExtraction)
   {
@@ -77,7 +124,11 @@ class GoogleCloudContentwarehouseV1IngestPipelineConfig extends \Google\Model
     return $this->enableDocumentTextExtraction;
   }
   /**
-   * @param string
+   * Optional. The name of the folder to which all ingested documents will be
+   * linked during ingestion process. Format is
+   * `projects/{project}/locations/{location}/documents/{folder_id}`
+   *
+   * @param string $folder
    */
   public function setFolder($folder)
   {

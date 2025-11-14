@@ -19,56 +19,109 @@ namespace Google\Service\PolicySimulator;
 
 class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
 {
+  /**
+   * This is only used for distinguishing unset values and should never be used.
+   * Results in an error.
+   */
+  public const ACTION_TYPE_ACTION_TYPE_UNSPECIFIED = 'ACTION_TYPE_UNSPECIFIED';
+  /**
+   * Allowed action type.
+   */
+  public const ACTION_TYPE_ALLOW = 'ALLOW';
+  /**
+   * Deny action type.
+   */
+  public const ACTION_TYPE_DENY = 'DENY';
   protected $collection_key = 'resourceTypes';
   /**
+   * Allow or deny type.
+   *
    * @var string
    */
   public $actionType;
   /**
+   * A Common Expression Language (CEL) condition which is used in the
+   * evaluation of the constraint. For example:
+   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * `resource.management.auto_upgrade == true` The max length of the condition
+   * is 1000 characters.
+   *
    * @var string
    */
   public $condition;
   /**
+   * Detailed information about this custom policy constraint. The max length of
+   * the description is 2000 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * One line display name for the UI. The max length of the display_name is 200
+   * characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * All the operations being applied for this constraint.
+   *
    * @var string[]
    */
   public $methodTypes;
   /**
+   * Immutable. Name of the constraint. This is unique within the organization.
+   * Format of the name should be *
+   * `organizations/{organization_id}/customConstraints/{custom_constraint_id}`
+   * Example: `organizations/123/customConstraints/custom.createOnlyE2TypeVms`
+   * The max length is 70 characters and the minimum length is 1. Note that the
+   * prefix `organizations/{organization_id}/customConstraints/` is not counted.
+   *
    * @var string
    */
   public $name;
   /**
+   * Immutable. The resource instance type on which this policy applies. Format
+   * will be of the form : `/` Example: * `compute.googleapis.com/Instance`.
+   *
    * @var string[]
    */
   public $resourceTypes;
   /**
+   * Output only. The last time this custom constraint was updated. This
+   * represents the last time that the `CreateCustomConstraint` or
+   * `UpdateCustomConstraint` methods were called.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Allow or deny type.
+   *
+   * Accepted values: ACTION_TYPE_UNSPECIFIED, ALLOW, DENY
+   *
+   * @param self::ACTION_TYPE_* $actionType
    */
   public function setActionType($actionType)
   {
     $this->actionType = $actionType;
   }
   /**
-   * @return string
+   * @return self::ACTION_TYPE_*
    */
   public function getActionType()
   {
     return $this->actionType;
   }
   /**
-   * @param string
+   * A Common Expression Language (CEL) condition which is used in the
+   * evaluation of the constraint. For example:
+   * `resource.instanceName.matches("[production|test]_.*_(\d)+")` or,
+   * `resource.management.auto_upgrade == true` The max length of the condition
+   * is 1000 characters.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -82,7 +135,10 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
     return $this->condition;
   }
   /**
-   * @param string
+   * Detailed information about this custom policy constraint. The max length of
+   * the description is 2000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -96,7 +152,10 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * One line display name for the UI. The max length of the display_name is 200
+   * characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -110,7 +169,9 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * All the operations being applied for this constraint.
+   *
+   * @param string[] $methodTypes
    */
   public function setMethodTypes($methodTypes)
   {
@@ -124,7 +185,14 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
     return $this->methodTypes;
   }
   /**
-   * @param string
+   * Immutable. Name of the constraint. This is unique within the organization.
+   * Format of the name should be *
+   * `organizations/{organization_id}/customConstraints/{custom_constraint_id}`
+   * Example: `organizations/123/customConstraints/custom.createOnlyE2TypeVms`
+   * The max length is 70 characters and the minimum length is 1. Note that the
+   * prefix `organizations/{organization_id}/customConstraints/` is not counted.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -138,7 +206,10 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Immutable. The resource instance type on which this policy applies. Format
+   * will be of the form : `/` Example: * `compute.googleapis.com/Instance`.
+   *
+   * @param string[] $resourceTypes
    */
   public function setResourceTypes($resourceTypes)
   {
@@ -152,7 +223,11 @@ class GoogleCloudOrgpolicyV2CustomConstraint extends \Google\Collection
     return $this->resourceTypes;
   }
   /**
-   * @param string
+   * Output only. The last time this custom constraint was updated. This
+   * represents the last time that the `CreateCustomConstraint` or
+   * `UpdateCustomConstraint` methods were called.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

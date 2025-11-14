@@ -20,20 +20,33 @@ namespace Google\Service\Docs;
 class SubstringMatchCriteria extends \Google\Model
 {
   /**
+   * Indicates whether the search should respect case: - `True`: the search is
+   * case sensitive. - `False`: the search is case insensitive.
+   *
    * @var bool
    */
   public $matchCase;
   /**
+   * Optional. True if the find value should be treated as a regular expression.
+   * Any backslashes in the pattern should be escaped. - `True`: the search text
+   * is treated as a regular expressions. - `False`: the search text is treated
+   * as a substring for matching.
+   *
    * @var bool
    */
   public $searchByRegex;
   /**
+   * The text to search for in the document.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param bool
+   * Indicates whether the search should respect case: - `True`: the search is
+   * case sensitive. - `False`: the search is case insensitive.
+   *
+   * @param bool $matchCase
    */
   public function setMatchCase($matchCase)
   {
@@ -47,7 +60,12 @@ class SubstringMatchCriteria extends \Google\Model
     return $this->matchCase;
   }
   /**
-   * @param bool
+   * Optional. True if the find value should be treated as a regular expression.
+   * Any backslashes in the pattern should be escaped. - `True`: the search text
+   * is treated as a regular expressions. - `False`: the search text is treated
+   * as a substring for matching.
+   *
+   * @param bool $searchByRegex
    */
   public function setSearchByRegex($searchByRegex)
   {
@@ -61,7 +79,9 @@ class SubstringMatchCriteria extends \Google\Model
     return $this->searchByRegex;
   }
   /**
-   * @param string
+   * The text to search for in the document.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2SaveFindings extends \Google\Model
   protected $outputConfigDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2OutputStorageConfig
+   * Location to store findings outside of DLP.
+   *
+   * @param GooglePrivacyDlpV2OutputStorageConfig $outputConfig
    */
   public function setOutputConfig(GooglePrivacyDlpV2OutputStorageConfig $outputConfig)
   {

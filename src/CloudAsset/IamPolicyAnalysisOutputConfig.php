@@ -25,7 +25,9 @@ class IamPolicyAnalysisOutputConfig extends \Google\Model
   protected $gcsDestinationDataType = '';
 
   /**
-   * @param GoogleCloudAssetV1BigQueryDestination
+   * Destination on BigQuery.
+   *
+   * @param GoogleCloudAssetV1BigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(GoogleCloudAssetV1BigQueryDestination $bigqueryDestination)
   {
@@ -39,7 +41,9 @@ class IamPolicyAnalysisOutputConfig extends \Google\Model
     return $this->bigqueryDestination;
   }
   /**
-   * @param GoogleCloudAssetV1GcsDestination
+   * Destination on Cloud Storage.
+   *
+   * @param GoogleCloudAssetV1GcsDestination $gcsDestination
    */
   public function setGcsDestination(GoogleCloudAssetV1GcsDestination $gcsDestination)
   {

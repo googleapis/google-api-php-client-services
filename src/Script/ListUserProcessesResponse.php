@@ -21,6 +21,9 @@ class ListUserProcessesResponse extends \Google\Collection
 {
   protected $collection_key = 'processes';
   /**
+   * Token for the next page of results. If empty, there are no more pages
+   * remaining.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListUserProcessesResponse extends \Google\Collection
   protected $processesDataType = 'array';
 
   /**
-   * @param string
+   * Token for the next page of results. If empty, there are no more pages
+   * remaining.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListUserProcessesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleAppsScriptTypeProcess[]
+   * List of processes matching request parameters.
+   *
+   * @param GoogleAppsScriptTypeProcess[] $processes
    */
   public function setProcesses($processes)
   {

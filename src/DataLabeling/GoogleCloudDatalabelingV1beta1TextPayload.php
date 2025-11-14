@@ -20,12 +20,16 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1TextPayload extends \Google\Model
 {
   /**
+   * Text content.
+   *
    * @var string
    */
   public $textContent;
 
   /**
-   * @param string
+   * Text content.
+   *
+   * @param string $textContent
    */
   public function setTextContent($textContent)
   {

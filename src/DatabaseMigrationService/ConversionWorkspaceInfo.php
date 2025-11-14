@@ -20,16 +20,22 @@ namespace Google\Service\DatabaseMigrationService;
 class ConversionWorkspaceInfo extends \Google\Model
 {
   /**
+   * The commit ID of the conversion workspace.
+   *
    * @var string
    */
   public $commitId;
   /**
+   * The resource name (URI) of the conversion workspace.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The commit ID of the conversion workspace.
+   *
+   * @param string $commitId
    */
   public function setCommitId($commitId)
   {
@@ -43,7 +49,9 @@ class ConversionWorkspaceInfo extends \Google\Model
     return $this->commitId;
   }
   /**
-   * @param string
+   * The resource name (URI) of the conversion workspace.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

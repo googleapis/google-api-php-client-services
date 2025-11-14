@@ -21,20 +21,28 @@ class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'supportedServiceLevels';
   /**
+   * Output only. Indicates if the location has VCP support.
+   *
    * @var bool
    */
   public $hasVcp;
   /**
+   * Output only. Supported flex performance in a location.
+   *
    * @var string[]
    */
   public $supportedFlexPerformance;
   /**
+   * Output only. Supported service levels in a location.
+   *
    * @var string[]
    */
   public $supportedServiceLevels;
 
   /**
-   * @param bool
+   * Output only. Indicates if the location has VCP support.
+   *
+   * @param bool $hasVcp
    */
   public function setHasVcp($hasVcp)
   {
@@ -48,7 +56,9 @@ class LocationMetadata extends \Google\Collection
     return $this->hasVcp;
   }
   /**
-   * @param string[]
+   * Output only. Supported flex performance in a location.
+   *
+   * @param string[] $supportedFlexPerformance
    */
   public function setSupportedFlexPerformance($supportedFlexPerformance)
   {
@@ -62,7 +72,9 @@ class LocationMetadata extends \Google\Collection
     return $this->supportedFlexPerformance;
   }
   /**
-   * @param string[]
+   * Output only. Supported service levels in a location.
+   *
+   * @param string[] $supportedServiceLevels
    */
   public function setSupportedServiceLevels($supportedServiceLevels)
   {

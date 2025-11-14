@@ -24,7 +24,9 @@ class PartitionSkew extends \Google\Collection
   protected $skewSourcesDataType = 'array';
 
   /**
-   * @param SkewSource[]
+   * Output only. Source stages which produce skewed data.
+   *
+   * @param SkewSource[] $skewSources
    */
   public function setSkewSources($skewSources)
   {

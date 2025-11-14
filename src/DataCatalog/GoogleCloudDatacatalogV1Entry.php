@@ -19,6 +19,127 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1Entry extends \Google\Model
 {
+  /**
+   * Default unknown system.
+   */
+  public const INTEGRATED_SYSTEM_INTEGRATED_SYSTEM_UNSPECIFIED = 'INTEGRATED_SYSTEM_UNSPECIFIED';
+  /**
+   * BigQuery.
+   */
+  public const INTEGRATED_SYSTEM_BIGQUERY = 'BIGQUERY';
+  /**
+   * Cloud Pub/Sub.
+   */
+  public const INTEGRATED_SYSTEM_CLOUD_PUBSUB = 'CLOUD_PUBSUB';
+  /**
+   * Dataproc Metastore.
+   */
+  public const INTEGRATED_SYSTEM_DATAPROC_METASTORE = 'DATAPROC_METASTORE';
+  /**
+   * Dataplex Universal Catalog.
+   */
+  public const INTEGRATED_SYSTEM_DATAPLEX = 'DATAPLEX';
+  /**
+   * Cloud Spanner
+   */
+  public const INTEGRATED_SYSTEM_CLOUD_SPANNER = 'CLOUD_SPANNER';
+  /**
+   * Cloud Bigtable
+   */
+  public const INTEGRATED_SYSTEM_CLOUD_BIGTABLE = 'CLOUD_BIGTABLE';
+  /**
+   * Cloud Sql
+   */
+  public const INTEGRATED_SYSTEM_CLOUD_SQL = 'CLOUD_SQL';
+  /**
+   * Looker
+   */
+  public const INTEGRATED_SYSTEM_LOOKER = 'LOOKER';
+  /**
+   * Vertex AI
+   */
+  public const INTEGRATED_SYSTEM_VERTEX_AI = 'VERTEX_AI';
+  /**
+   * Default unknown type.
+   */
+  public const TYPE_ENTRY_TYPE_UNSPECIFIED = 'ENTRY_TYPE_UNSPECIFIED';
+  /**
+   * The entry type that has a GoogleSQL schema, including logical views.
+   */
+  public const TYPE_TABLE = 'TABLE';
+  /**
+   * The type of models. For more information, see [Supported models in BigQuery
+   * ML](/bigquery/docs/bqml-introduction#supported_models).
+   */
+  public const TYPE_MODEL = 'MODEL';
+  /**
+   * An entry type for streaming entries. For example, a Pub/Sub topic.
+   */
+  public const TYPE_DATA_STREAM = 'DATA_STREAM';
+  /**
+   * An entry type for a set of files or objects. For example, a Cloud Storage
+   * fileset.
+   */
+  public const TYPE_FILESET = 'FILESET';
+  /**
+   * A group of servers that work together. For example, a Kafka cluster.
+   */
+  public const TYPE_CLUSTER = 'CLUSTER';
+  /**
+   * A database.
+   */
+  public const TYPE_DATABASE = 'DATABASE';
+  /**
+   * Connection to a data source. For example, a BigQuery connection.
+   */
+  public const TYPE_DATA_SOURCE_CONNECTION = 'DATA_SOURCE_CONNECTION';
+  /**
+   * Routine, for example, a BigQuery routine.
+   */
+  public const TYPE_ROUTINE = 'ROUTINE';
+  /**
+   * A Dataplex Universal Catalog lake.
+   */
+  public const TYPE_LAKE = 'LAKE';
+  /**
+   * A Dataplex Universal Catalog zone.
+   */
+  public const TYPE_ZONE = 'ZONE';
+  /**
+   * A service, for example, a Dataproc Metastore service.
+   */
+  public const TYPE_SERVICE = 'SERVICE';
+  /**
+   * Schema within a relational database.
+   */
+  public const TYPE_DATABASE_SCHEMA = 'DATABASE_SCHEMA';
+  /**
+   * A Dashboard, for example from Looker.
+   */
+  public const TYPE_DASHBOARD = 'DASHBOARD';
+  /**
+   * A Looker Explore. For more information, see [Looker Explore API] (https://d
+   * evelopers.looker.com/api/explorer/4.0/methods/LookmlModel/lookml_model_expl
+   * ore).
+   */
+  public const TYPE_EXPLORE = 'EXPLORE';
+  /**
+   * A Looker Look. For more information, see [Looker Look API]
+   * (https://developers.looker.com/api/explorer/4.0/methods/Look).
+   */
+  public const TYPE_LOOK = 'LOOK';
+  /**
+   * Feature Online Store resource in Vertex AI Feature Store.
+   */
+  public const TYPE_FEATURE_ONLINE_STORE = 'FEATURE_ONLINE_STORE';
+  /**
+   * Feature View resource in Vertex AI Feature Store.
+   */
+  public const TYPE_FEATURE_VIEW = 'FEATURE_VIEW';
+  /**
+   * Feature Group resource in Vertex AI Feature Store.
+   */
+  public const TYPE_FEATURE_GROUP = 'FEATURE_GROUP';
   protected $bigqueryDateShardedSpecType = GoogleCloudDatacatalogV1BigQueryDateShardedSpec::class;
   protected $bigqueryDateShardedSpecDataType = '';
   protected $bigqueryTableSpecType = GoogleCloudDatacatalogV1BigQueryTableSpec::class;
@@ -36,10 +157,19 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $datasetSpecType = GoogleCloudDatacatalogV1DatasetSpec::class;
   protected $datasetSpecDataType = '';
   /**
+   * Entry description that can consist of several sentences or paragraphs that
+   * describe entry contents. The description must not contain Unicode non-
+   * characters as well as C0 and C1 control codes except tabs (HT), new lines
+   * (LF), carriage returns (CR), and page breaks (FF). The maximum size is 2000
+   * bytes when encoded in UTF-8. Default value is an empty string.
+   *
    * @var string
    */
   public $description;
   /**
+   * Display name of an entry. The maximum size is 500 bytes when encoded in
+   * UTF-8. Default value is an empty string.
+   *
    * @var string
    */
   public $displayName;
@@ -48,20 +178,45 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $filesetSpecType = GoogleCloudDatacatalogV1FilesetSpec::class;
   protected $filesetSpecDataType = '';
   /**
+   * [Fully Qualified Name (FQN)](https://cloud.google.com//data-
+   * catalog/docs/fully-qualified-names) of the resource. Set automatically for
+   * entries representing resources from synced systems. Settable only during
+   * creation, and read-only later. Can be used for search and lookup of the
+   * entries.
+   *
    * @var string
    */
   public $fullyQualifiedName;
   protected $gcsFilesetSpecType = GoogleCloudDatacatalogV1GcsFilesetSpec::class;
   protected $gcsFilesetSpecDataType = '';
   /**
+   * Output only. Indicates the entry's source system that Data Catalog
+   * integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
+   *
    * @var string
    */
   public $integratedSystem;
   /**
+   * Cloud labels attached to the entry. In Data Catalog, you can create and
+   * modify labels attached only to custom entries. Synced entries have
+   * unmodifiable labels that come from the source system.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The resource this metadata entry refers to. For Google Cloud Platform
+   * resources, `linked_resource` is the [Full Resource Name]
+   * (https://cloud.google.com/apis/design/resource_names#full_resource_name).
+   * For example, the `linked_resource` for a table resource from BigQuery is: `
+   * //bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/table
+   * s/{TABLE_ID}` Output only when the entry is one of the types in the
+   * `EntryType` enum. For entries with a `user_specified_type`, this field is
+   * optional and defaults to an empty string. The resource string must contain
+   * only letters (a-z, A-Z), numbers (0-9), underscores (_), periods (.),
+   * colons (:), slashes (/), dashes (-), and hashes (#). The maximum size is
+   * 200 bytes when encoded in UTF-8.
+   *
    * @var string
    */
   public $linkedResource;
@@ -70,6 +225,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $modelSpecType = GoogleCloudDatacatalogV1ModelSpec::class;
   protected $modelSpecDataType = '';
   /**
+   * Output only. Identifier. The resource name of an entry in URL format. Note:
+   * The entry itself and its child resources might not be stored in the
+   * location specified in its name.
+   *
    * @var string
    */
   public $name;
@@ -86,22 +245,44 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   protected $sqlDatabaseSystemSpecType = GoogleCloudDatacatalogV1SqlDatabaseSystemSpec::class;
   protected $sqlDatabaseSystemSpecDataType = '';
   /**
+   * The type of the entry. For details, see [`EntryType`](#entrytype).
+   *
    * @var string
    */
   public $type;
   protected $usageSignalType = GoogleCloudDatacatalogV1UsageSignal::class;
   protected $usageSignalDataType = '';
   /**
+   * Indicates the entry's source system that Data Catalog doesn't automatically
+   * integrate with. The `user_specified_system` string has the following
+   * limitations: * Is case insensitive. * Must begin with a letter or
+   * underscore. * Can only contain letters, numbers, and underscores. * Must be
+   * at least 1 character and at most 64 characters long.
+   *
    * @var string
    */
   public $userSpecifiedSystem;
   /**
+   * Custom entry type that doesn't match any of the values allowed for input
+   * and listed in the `EntryType` enum. When creating an entry, first check the
+   * type values in the enum. If there are no appropriate types for the new
+   * entry, provide a custom value, for example, `my_special_type`. The
+   * `user_specified_type` string has the following limitations: * Is case
+   * insensitive. * Must begin with a letter or underscore. * Can only contain
+   * letters, numbers, and underscores. * Must be at least 1 character and at
+   * most 64 characters long.
+   *
    * @var string
    */
   public $userSpecifiedType;
 
   /**
-   * @param GoogleCloudDatacatalogV1BigQueryDateShardedSpec
+   * Output only. Specification for a group of BigQuery tables with the
+   * `[prefix]YYYYMMDD` name pattern. For more information, see [Introduction to
+   * partitioned tables] (https://cloud.google.com/bigquery/docs/partitioned-
+   * tables#partitioning_versus_sharding).
+   *
+   * @param GoogleCloudDatacatalogV1BigQueryDateShardedSpec $bigqueryDateShardedSpec
    */
   public function setBigqueryDateShardedSpec(GoogleCloudDatacatalogV1BigQueryDateShardedSpec $bigqueryDateShardedSpec)
   {
@@ -115,7 +296,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->bigqueryDateShardedSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1BigQueryTableSpec
+   * Output only. Specification that applies to a BigQuery table. Valid only for
+   * entries with the `TABLE` type.
+   *
+   * @param GoogleCloudDatacatalogV1BigQueryTableSpec $bigqueryTableSpec
    */
   public function setBigqueryTableSpec(GoogleCloudDatacatalogV1BigQueryTableSpec $bigqueryTableSpec)
   {
@@ -129,7 +313,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->bigqueryTableSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1BusinessContext
+   * Business Context of the entry. Not supported for BigQuery datasets
+   *
+   * @param GoogleCloudDatacatalogV1BusinessContext $businessContext
    */
   public function setBusinessContext(GoogleCloudDatacatalogV1BusinessContext $businessContext)
   {
@@ -143,7 +329,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->businessContext;
   }
   /**
-   * @param GoogleCloudDatacatalogV1CloudBigtableSystemSpec
+   * Specification that applies to Cloud Bigtable system. Only settable when
+   * `integrated_system` is equal to `CLOUD_BIGTABLE`
+   *
+   * @param GoogleCloudDatacatalogV1CloudBigtableSystemSpec $cloudBigtableSystemSpec
    */
   public function setCloudBigtableSystemSpec(GoogleCloudDatacatalogV1CloudBigtableSystemSpec $cloudBigtableSystemSpec)
   {
@@ -157,7 +346,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->cloudBigtableSystemSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1DataSource
+   * Output only. Physical location of the entry.
+   *
+   * @param GoogleCloudDatacatalogV1DataSource $dataSource
    */
   public function setDataSource(GoogleCloudDatacatalogV1DataSource $dataSource)
   {
@@ -171,7 +362,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->dataSource;
   }
   /**
-   * @param GoogleCloudDatacatalogV1DataSourceConnectionSpec
+   * Specification that applies to a data source connection. Valid only for
+   * entries with the `DATA_SOURCE_CONNECTION` type.
+   *
+   * @param GoogleCloudDatacatalogV1DataSourceConnectionSpec $dataSourceConnectionSpec
    */
   public function setDataSourceConnectionSpec(GoogleCloudDatacatalogV1DataSourceConnectionSpec $dataSourceConnectionSpec)
   {
@@ -185,7 +379,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->dataSourceConnectionSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1DatabaseTableSpec
+   * Specification that applies to a table resource. Valid only for entries with
+   * the `TABLE` or `EXPLORE` type.
+   *
+   * @param GoogleCloudDatacatalogV1DatabaseTableSpec $databaseTableSpec
    */
   public function setDatabaseTableSpec(GoogleCloudDatacatalogV1DatabaseTableSpec $databaseTableSpec)
   {
@@ -199,7 +396,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->databaseTableSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1DatasetSpec
+   * Specification that applies to a dataset.
+   *
+   * @param GoogleCloudDatacatalogV1DatasetSpec $datasetSpec
    */
   public function setDatasetSpec(GoogleCloudDatacatalogV1DatasetSpec $datasetSpec)
   {
@@ -213,7 +412,13 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->datasetSpec;
   }
   /**
-   * @param string
+   * Entry description that can consist of several sentences or paragraphs that
+   * describe entry contents. The description must not contain Unicode non-
+   * characters as well as C0 and C1 control codes except tabs (HT), new lines
+   * (LF), carriage returns (CR), and page breaks (FF). The maximum size is 2000
+   * bytes when encoded in UTF-8. Default value is an empty string.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -227,7 +432,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Display name of an entry. The maximum size is 500 bytes when encoded in
+   * UTF-8. Default value is an empty string.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -241,7 +449,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDatacatalogV1FeatureOnlineStoreSpec
+   * FeatureonlineStore spec for Vertex AI Feature Store.
+   *
+   * @param GoogleCloudDatacatalogV1FeatureOnlineStoreSpec $featureOnlineStoreSpec
    */
   public function setFeatureOnlineStoreSpec(GoogleCloudDatacatalogV1FeatureOnlineStoreSpec $featureOnlineStoreSpec)
   {
@@ -255,7 +465,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->featureOnlineStoreSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1FilesetSpec
+   * Specification that applies to a fileset resource. Valid only for entries
+   * with the `FILESET` type.
+   *
+   * @param GoogleCloudDatacatalogV1FilesetSpec $filesetSpec
    */
   public function setFilesetSpec(GoogleCloudDatacatalogV1FilesetSpec $filesetSpec)
   {
@@ -269,7 +482,13 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->filesetSpec;
   }
   /**
-   * @param string
+   * [Fully Qualified Name (FQN)](https://cloud.google.com//data-
+   * catalog/docs/fully-qualified-names) of the resource. Set automatically for
+   * entries representing resources from synced systems. Settable only during
+   * creation, and read-only later. Can be used for search and lookup of the
+   * entries.
+   *
+   * @param string $fullyQualifiedName
    */
   public function setFullyQualifiedName($fullyQualifiedName)
   {
@@ -283,7 +502,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->fullyQualifiedName;
   }
   /**
-   * @param GoogleCloudDatacatalogV1GcsFilesetSpec
+   * Specification that applies to a Cloud Storage fileset. Valid only for
+   * entries with the `FILESET` type.
+   *
+   * @param GoogleCloudDatacatalogV1GcsFilesetSpec $gcsFilesetSpec
    */
   public function setGcsFilesetSpec(GoogleCloudDatacatalogV1GcsFilesetSpec $gcsFilesetSpec)
   {
@@ -297,21 +519,32 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->gcsFilesetSpec;
   }
   /**
-   * @param string
+   * Output only. Indicates the entry's source system that Data Catalog
+   * integrates with, such as BigQuery, Pub/Sub, or Dataproc Metastore.
+   *
+   * Accepted values: INTEGRATED_SYSTEM_UNSPECIFIED, BIGQUERY, CLOUD_PUBSUB,
+   * DATAPROC_METASTORE, DATAPLEX, CLOUD_SPANNER, CLOUD_BIGTABLE, CLOUD_SQL,
+   * LOOKER, VERTEX_AI
+   *
+   * @param self::INTEGRATED_SYSTEM_* $integratedSystem
    */
   public function setIntegratedSystem($integratedSystem)
   {
     $this->integratedSystem = $integratedSystem;
   }
   /**
-   * @return string
+   * @return self::INTEGRATED_SYSTEM_*
    */
   public function getIntegratedSystem()
   {
     return $this->integratedSystem;
   }
   /**
-   * @param string[]
+   * Cloud labels attached to the entry. In Data Catalog, you can create and
+   * modify labels attached only to custom entries. Synced entries have
+   * unmodifiable labels that come from the source system.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -325,7 +558,19 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * The resource this metadata entry refers to. For Google Cloud Platform
+   * resources, `linked_resource` is the [Full Resource Name]
+   * (https://cloud.google.com/apis/design/resource_names#full_resource_name).
+   * For example, the `linked_resource` for a table resource from BigQuery is: `
+   * //bigquery.googleapis.com/projects/{PROJECT_ID}/datasets/{DATASET_ID}/table
+   * s/{TABLE_ID}` Output only when the entry is one of the types in the
+   * `EntryType` enum. For entries with a `user_specified_type`, this field is
+   * optional and defaults to an empty string. The resource string must contain
+   * only letters (a-z, A-Z), numbers (0-9), underscores (_), periods (.),
+   * colons (:), slashes (/), dashes (-), and hashes (#). The maximum size is
+   * 200 bytes when encoded in UTF-8.
+   *
+   * @param string $linkedResource
    */
   public function setLinkedResource($linkedResource)
   {
@@ -339,7 +584,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->linkedResource;
   }
   /**
-   * @param GoogleCloudDatacatalogV1LookerSystemSpec
+   * Specification that applies to Looker sysstem. Only settable when
+   * `user_specified_system` is equal to `LOOKER`
+   *
+   * @param GoogleCloudDatacatalogV1LookerSystemSpec $lookerSystemSpec
    */
   public function setLookerSystemSpec(GoogleCloudDatacatalogV1LookerSystemSpec $lookerSystemSpec)
   {
@@ -353,7 +601,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->lookerSystemSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1ModelSpec
+   * Model specification.
+   *
+   * @param GoogleCloudDatacatalogV1ModelSpec $modelSpec
    */
   public function setModelSpec(GoogleCloudDatacatalogV1ModelSpec $modelSpec)
   {
@@ -367,7 +617,11 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->modelSpec;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of an entry in URL format. Note:
+   * The entry itself and its child resources might not be stored in the
+   * location specified in its name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -381,7 +635,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDatacatalogV1PersonalDetails
+   * Output only. Additional information related to the entry. Private to the
+   * current user.
+   *
+   * @param GoogleCloudDatacatalogV1PersonalDetails $personalDetails
    */
   public function setPersonalDetails(GoogleCloudDatacatalogV1PersonalDetails $personalDetails)
   {
@@ -395,7 +652,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->personalDetails;
   }
   /**
-   * @param GoogleCloudDatacatalogV1RoutineSpec
+   * Specification that applies to a user-defined function or procedure. Valid
+   * only for entries with the `ROUTINE` type.
+   *
+   * @param GoogleCloudDatacatalogV1RoutineSpec $routineSpec
    */
   public function setRoutineSpec(GoogleCloudDatacatalogV1RoutineSpec $routineSpec)
   {
@@ -409,7 +669,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->routineSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1Schema
+   * Schema of the entry. An entry might not have any schema attached to it.
+   *
+   * @param GoogleCloudDatacatalogV1Schema $schema
    */
   public function setSchema(GoogleCloudDatacatalogV1Schema $schema)
   {
@@ -423,7 +685,9 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->schema;
   }
   /**
-   * @param GoogleCloudDatacatalogV1ServiceSpec
+   * Specification that applies to a Service resource.
+   *
+   * @param GoogleCloudDatacatalogV1ServiceSpec $serviceSpec
    */
   public function setServiceSpec(GoogleCloudDatacatalogV1ServiceSpec $serviceSpec)
   {
@@ -437,7 +701,12 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->serviceSpec;
   }
   /**
-   * @param GoogleCloudDatacatalogV1SystemTimestamps
+   * Timestamps from the underlying resource, not from the Data Catalog entry.
+   * Output only when the entry has a system listed in the `IntegratedSystem`
+   * enum. For entries with `user_specified_system`, this field is optional and
+   * defaults to an empty timestamp.
+   *
+   * @param GoogleCloudDatacatalogV1SystemTimestamps $sourceSystemTimestamps
    */
   public function setSourceSystemTimestamps(GoogleCloudDatacatalogV1SystemTimestamps $sourceSystemTimestamps)
   {
@@ -451,7 +720,10 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->sourceSystemTimestamps;
   }
   /**
-   * @param GoogleCloudDatacatalogV1SqlDatabaseSystemSpec
+   * Specification that applies to a relational database system. Only settable
+   * when `user_specified_system` is equal to `SQL_DATABASE`
+   *
+   * @param GoogleCloudDatacatalogV1SqlDatabaseSystemSpec $sqlDatabaseSystemSpec
    */
   public function setSqlDatabaseSystemSpec(GoogleCloudDatacatalogV1SqlDatabaseSystemSpec $sqlDatabaseSystemSpec)
   {
@@ -465,21 +737,30 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->sqlDatabaseSystemSpec;
   }
   /**
-   * @param string
+   * The type of the entry. For details, see [`EntryType`](#entrytype).
+   *
+   * Accepted values: ENTRY_TYPE_UNSPECIFIED, TABLE, MODEL, DATA_STREAM,
+   * FILESET, CLUSTER, DATABASE, DATA_SOURCE_CONNECTION, ROUTINE, LAKE, ZONE,
+   * SERVICE, DATABASE_SCHEMA, DASHBOARD, EXPLORE, LOOK, FEATURE_ONLINE_STORE,
+   * FEATURE_VIEW, FEATURE_GROUP
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param GoogleCloudDatacatalogV1UsageSignal
+   * Resource usage statistics.
+   *
+   * @param GoogleCloudDatacatalogV1UsageSignal $usageSignal
    */
   public function setUsageSignal(GoogleCloudDatacatalogV1UsageSignal $usageSignal)
   {
@@ -493,7 +774,13 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->usageSignal;
   }
   /**
-   * @param string
+   * Indicates the entry's source system that Data Catalog doesn't automatically
+   * integrate with. The `user_specified_system` string has the following
+   * limitations: * Is case insensitive. * Must begin with a letter or
+   * underscore. * Can only contain letters, numbers, and underscores. * Must be
+   * at least 1 character and at most 64 characters long.
+   *
+   * @param string $userSpecifiedSystem
    */
   public function setUserSpecifiedSystem($userSpecifiedSystem)
   {
@@ -507,7 +794,16 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
     return $this->userSpecifiedSystem;
   }
   /**
-   * @param string
+   * Custom entry type that doesn't match any of the values allowed for input
+   * and listed in the `EntryType` enum. When creating an entry, first check the
+   * type values in the enum. If there are no appropriate types for the new
+   * entry, provide a custom value, for example, `my_special_type`. The
+   * `user_specified_type` string has the following limitations: * Is case
+   * insensitive. * Must begin with a letter or underscore. * Can only contain
+   * letters, numbers, and underscores. * Must be at least 1 character and at
+   * most 64 characters long.
+   *
+   * @param string $userSpecifiedType
    */
   public function setUserSpecifiedType($userSpecifiedType)
   {

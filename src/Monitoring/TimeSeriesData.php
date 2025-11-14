@@ -26,7 +26,12 @@ class TimeSeriesData extends \Google\Collection
   protected $pointDataDataType = 'array';
 
   /**
-   * @param LabelValue[]
+   * The values of the labels in the time series identifier, given in the same
+   * order as the label_descriptors field of the TimeSeriesDescriptor associated
+   * with this object. Each value must have a value of the type given in the
+   * corresponding entry of label_descriptors.
+   *
+   * @param LabelValue[] $labelValues
    */
   public function setLabelValues($labelValues)
   {
@@ -40,7 +45,9 @@ class TimeSeriesData extends \Google\Collection
     return $this->labelValues;
   }
   /**
-   * @param PointData[]
+   * The points in the time series.
+   *
+   * @param PointData[] $pointData
    */
   public function setPointData($pointData)
   {

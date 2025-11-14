@@ -23,16 +23,24 @@ class ListChannelConnectionsResponse extends \Google\Collection
   protected $channelConnectionsType = ChannelConnection::class;
   protected $channelConnectionsDataType = 'array';
   /**
+   * A page token that can be sent to `ListChannelConnections` to request the
+   * next page. If this is empty, then there are no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unreachable resources, if any.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ChannelConnection[]
+   * The requested channel connections, up to the number specified in
+   * `page_size`.
+   *
+   * @param ChannelConnection[] $channelConnections
    */
   public function setChannelConnections($channelConnections)
   {
@@ -46,7 +54,10 @@ class ListChannelConnectionsResponse extends \Google\Collection
     return $this->channelConnections;
   }
   /**
-   * @param string
+   * A page token that can be sent to `ListChannelConnections` to request the
+   * next page. If this is empty, then there are no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +71,9 @@ class ListChannelConnectionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Unreachable resources, if any.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

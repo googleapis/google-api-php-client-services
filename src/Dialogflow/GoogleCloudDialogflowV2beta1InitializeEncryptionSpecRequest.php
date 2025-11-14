@@ -23,7 +23,12 @@ class GoogleCloudDialogflowV2beta1InitializeEncryptionSpecRequest extends \Googl
   protected $encryptionSpecDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowV2beta1EncryptionSpec
+   * Required. The encryption spec used for CMEK encryption. It is required that
+   * the kms key is in the same region as the endpoint. The same key will be
+   * used for all provisioned resources, if encryption is available. If the
+   * kms_key_name is left empty, no encryption will be enforced.
+   *
+   * @param GoogleCloudDialogflowV2beta1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudDialogflowV2beta1EncryptionSpec $encryptionSpec)
   {

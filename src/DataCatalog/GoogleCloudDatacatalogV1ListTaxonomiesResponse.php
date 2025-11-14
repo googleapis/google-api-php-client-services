@@ -21,6 +21,9 @@ class GoogleCloudDatacatalogV1ListTaxonomiesResponse extends \Google\Collection
 {
   protected $collection_key = 'taxonomies';
   /**
+   * Pagination token of the next results page. Empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudDatacatalogV1ListTaxonomiesResponse extends \Google\Collection
   protected $taxonomiesDataType = 'array';
 
   /**
-   * @param string
+   * Pagination token of the next results page. Empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudDatacatalogV1ListTaxonomiesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDatacatalogV1Taxonomy[]
+   * Taxonomies that the project contains.
+   *
+   * @param GoogleCloudDatacatalogV1Taxonomy[] $taxonomies
    */
   public function setTaxonomies($taxonomies)
   {

@@ -19,13 +19,44 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1alpha1QaScorecardResultScoreSource extends \Google\Collection
 {
+  /**
+   * Source type is unspecified.
+   */
+  public const SOURCE_TYPE_SOURCE_TYPE_UNSPECIFIED = 'SOURCE_TYPE_UNSPECIFIED';
+  /**
+   * Score is derived only from system-generated answers.
+   */
+  public const SOURCE_TYPE_SYSTEM_GENERATED_ONLY = 'SYSTEM_GENERATED_ONLY';
+  /**
+   * Score is derived from both system-generated answers, and includes any
+   * manual edits if they exist.
+   */
+  public const SOURCE_TYPE_INCLUDES_MANUAL_EDITS = 'INCLUDES_MANUAL_EDITS';
   protected $collection_key = 'qaTagResults';
+  /**
+   * The normalized score, which is the score divided by the potential score.
+   *
+   * @var 
+   */
   public $normalizedScore;
+  /**
+   * The maximum potential overall score of the scorecard. Any questions
+   * answered using `na_value` are excluded from this calculation.
+   *
+   * @var 
+   */
   public $potentialScore;
   protected $qaTagResultsType = GoogleCloudContactcenterinsightsV1alpha1QaScorecardResultQaTagResult::class;
   protected $qaTagResultsDataType = 'array';
+  /**
+   * The overall numerical score of the result.
+   *
+   * @var 
+   */
   public $score;
   /**
+   * What created the score.
+   *
    * @var string
    */
   public $sourceType;
@@ -47,7 +78,9 @@ class GoogleCloudContactcenterinsightsV1alpha1QaScorecardResultScoreSource exten
     return $this->potentialScore;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1QaScorecardResultQaTagResult[]
+   * Collection of tags and their scores.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1QaScorecardResultQaTagResult[] $qaTagResults
    */
   public function setQaTagResults($qaTagResults)
   {
@@ -69,14 +102,19 @@ class GoogleCloudContactcenterinsightsV1alpha1QaScorecardResultScoreSource exten
     return $this->score;
   }
   /**
-   * @param string
+   * What created the score.
+   *
+   * Accepted values: SOURCE_TYPE_UNSPECIFIED, SYSTEM_GENERATED_ONLY,
+   * INCLUDES_MANUAL_EDITS
+   *
+   * @param self::SOURCE_TYPE_* $sourceType
    */
   public function setSourceType($sourceType)
   {
     $this->sourceType = $sourceType;
   }
   /**
-   * @return string
+   * @return self::SOURCE_TYPE_*
    */
   public function getSourceType()
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Bigquery;
 class PruningStats extends \Google\Model
 {
   /**
+   * The number of parallel inputs matched.
+   *
    * @var string
    */
   public $postCmetaPruningParallelInputCount;
   /**
+   * The number of partitions matched.
+   *
    * @var string
    */
   public $postCmetaPruningPartitionCount;
   /**
+   * The number of parallel inputs scanned.
+   *
    * @var string
    */
   public $preCmetaPruningParallelInputCount;
 
   /**
-   * @param string
+   * The number of parallel inputs matched.
+   *
+   * @param string $postCmetaPruningParallelInputCount
    */
   public function setPostCmetaPruningParallelInputCount($postCmetaPruningParallelInputCount)
   {
@@ -47,7 +55,9 @@ class PruningStats extends \Google\Model
     return $this->postCmetaPruningParallelInputCount;
   }
   /**
-   * @param string
+   * The number of partitions matched.
+   *
+   * @param string $postCmetaPruningPartitionCount
    */
   public function setPostCmetaPruningPartitionCount($postCmetaPruningPartitionCount)
   {
@@ -61,7 +71,9 @@ class PruningStats extends \Google\Model
     return $this->postCmetaPruningPartitionCount;
   }
   /**
-   * @param string
+   * The number of parallel inputs scanned.
+   *
+   * @param string $preCmetaPruningParallelInputCount
    */
   public function setPreCmetaPruningParallelInputCount($preCmetaPruningParallelInputCount)
   {

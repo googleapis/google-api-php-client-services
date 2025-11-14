@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class Metric extends \Google\Model
 {
   /**
+   * The kind of resource this is, in this case dfareporting#metric.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The metric name, e.g. impressions
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The kind of resource this is, in this case dfareporting#metric.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -43,7 +49,9 @@ class Metric extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The metric name, e.g. impressions
+   *
+   * @param string $name
    */
   public function setName($name)
   {

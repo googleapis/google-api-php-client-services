@@ -20,31 +20,60 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const PERSON_TYPE_PERSON_TYPE_UNSPECIFIED = 'PERSON_TYPE_UNSPECIFIED';
+  /**
+   * The suggestion is from a GOOGLE_IDENTITY source.
+   */
+  public const PERSON_TYPE_CLOUD_IDENTITY = 'CLOUD_IDENTITY';
+  /**
+   * The suggestion is from a THIRD_PARTY_IDENTITY source.
+   */
+  public const PERSON_TYPE_THIRD_PARTY_IDENTITY = 'THIRD_PARTY_IDENTITY';
+  /**
+   * The name of the dataStore that this suggestion belongs to.
+   *
    * @var string
    */
   public $dataStore;
   /**
+   * The destination uri of the person suggestion.
+   *
    * @var string
    */
   public $destinationUri;
   /**
+   * The photo uri of the person suggestion.
+   *
    * @var string
    */
   public $displayPhotoUri;
   protected $documentType = GoogleCloudDiscoveryengineV1Document::class;
   protected $documentDataType = '';
   /**
+   * The type of the person.
+   *
    * @var string
    */
   public $personType;
+  /**
+   * The score of each suggestion. The score is in the range of [0, 1].
+   *
+   * @var 
+   */
   public $score;
   /**
+   * The suggestion for the query.
+   *
    * @var string
    */
   public $suggestion;
 
   /**
-   * @param string
+   * The name of the dataStore that this suggestion belongs to.
+   *
+   * @param string $dataStore
    */
   public function setDataStore($dataStore)
   {
@@ -58,7 +87,9 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion 
     return $this->dataStore;
   }
   /**
-   * @param string
+   * The destination uri of the person suggestion.
+   *
+   * @param string $destinationUri
    */
   public function setDestinationUri($destinationUri)
   {
@@ -72,7 +103,9 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion 
     return $this->destinationUri;
   }
   /**
-   * @param string
+   * The photo uri of the person suggestion.
+   *
+   * @param string $displayPhotoUri
    */
   public function setDisplayPhotoUri($displayPhotoUri)
   {
@@ -86,7 +119,10 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion 
     return $this->displayPhotoUri;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1Document
+   * The document data snippet in the suggestion. Only a subset of fields is
+   * populated.
+   *
+   * @param GoogleCloudDiscoveryengineV1Document $document
    */
   public function setDocument(GoogleCloudDiscoveryengineV1Document $document)
   {
@@ -100,14 +136,19 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion 
     return $this->document;
   }
   /**
-   * @param string
+   * The type of the person.
+   *
+   * Accepted values: PERSON_TYPE_UNSPECIFIED, CLOUD_IDENTITY,
+   * THIRD_PARTY_IDENTITY
+   *
+   * @param self::PERSON_TYPE_* $personType
    */
   public function setPersonType($personType)
   {
     $this->personType = $personType;
   }
   /**
-   * @return string
+   * @return self::PERSON_TYPE_*
    */
   public function getPersonType()
   {
@@ -122,7 +163,9 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryResponsePersonSuggestion 
     return $this->score;
   }
   /**
-   * @param string
+   * The suggestion for the query.
+   *
+   * @param string $suggestion
    */
   public function setSuggestion($suggestion)
   {

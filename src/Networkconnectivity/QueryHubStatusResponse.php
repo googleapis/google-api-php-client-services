@@ -23,12 +23,18 @@ class QueryHubStatusResponse extends \Google\Collection
   protected $hubStatusEntriesType = HubStatusEntry::class;
   protected $hubStatusEntriesDataType = 'array';
   /**
+   * The token for the next page of the response. To see more results, use this
+   * value as the page_token for your next request. If this value is empty,
+   * there are no more results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param HubStatusEntry[]
+   * The list of hub status.
+   *
+   * @param HubStatusEntry[] $hubStatusEntries
    */
   public function setHubStatusEntries($hubStatusEntries)
   {
@@ -42,7 +48,11 @@ class QueryHubStatusResponse extends \Google\Collection
     return $this->hubStatusEntries;
   }
   /**
-   * @param string
+   * The token for the next page of the response. To see more results, use this
+   * value as the page_token for your next request. If this value is empty,
+   * there are no more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

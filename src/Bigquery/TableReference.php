@@ -20,20 +20,34 @@ namespace Google\Service\Bigquery;
 class TableReference extends \Google\Model
 {
   /**
+   * Required. The ID of the dataset containing this table.
+   *
    * @var string
    */
   public $datasetId;
   /**
+   * Required. The ID of the project containing this table.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Required. The ID of the table. The ID can contain Unicode characters in
+   * category L (letter), M (mark), N (number), Pc (connector, including
+   * underscore), Pd (dash), and Zs (space). For more information, see [General 
+   * Category](https://wikipedia.org/wiki/Unicode_character_property#General_Cat
+   * egory). The maximum length is 1,024 characters. Certain operations allow
+   * suffixing of the table ID with a partition decorator, such as
+   * `sample_table$20190123`.
+   *
    * @var string
    */
   public $tableId;
 
   /**
-   * @param string
+   * Required. The ID of the dataset containing this table.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -47,7 +61,9 @@ class TableReference extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param string
+   * Required. The ID of the project containing this table.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -61,7 +77,15 @@ class TableReference extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Required. The ID of the table. The ID can contain Unicode characters in
+   * category L (letter), M (mark), N (number), Pc (connector, including
+   * underscore), Pd (dash), and Zs (space). For more information, see [General 
+   * Category](https://wikipedia.org/wiki/Unicode_character_property#General_Cat
+   * egory). The maximum length is 1,024 characters. Certain operations allow
+   * suffixing of the table ID with a partition decorator, such as
+   * `sample_table$20190123`.
+   *
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {

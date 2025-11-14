@@ -20,37 +20,117 @@ namespace Google\Service\DisplayVideo;
 class DoubleVerifyDisplayViewability extends \Google\Model
 {
   /**
+   * This enum is only a placeholder and it doesn't specify any IAB viewed rate
+   * options.
+   */
+  public const IAB_IAB_VIEWED_RATE_UNSPECIFIED = 'IAB_VIEWED_RATE_UNSPECIFIED';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 80% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_80_PERCENT_HIGHER = 'IAB_VIEWED_RATE_80_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 75% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_75_PERCENT_HIGHER = 'IAB_VIEWED_RATE_75_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 70% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_70_PERCENT_HIGHER = 'IAB_VIEWED_RATE_70_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 65% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_65_PERCENT_HIGHER = 'IAB_VIEWED_RATE_65_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 60% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_60_PERCENT_HIGHER = 'IAB_VIEWED_RATE_60_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 55% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_55_PERCENT_HIGHER = 'IAB_VIEWED_RATE_55_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 50% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_50_PERCENT_HIGHER = 'IAB_VIEWED_RATE_50_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 40% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_40_PERCENT_HIGHER = 'IAB_VIEWED_RATE_40_PERCENT_HIGHER';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate 30% or higher.
+   */
+  public const IAB_IAB_VIEWED_RATE_30_PERCENT_HIGHER = 'IAB_VIEWED_RATE_30_PERCENT_HIGHER';
+  /**
+   * This enum is only a placeholder and it doesn't specify any average view
+   * duration options.
+   */
+  public const VIEWABLE_DURING_AVERAGE_VIEW_DURATION_UNSPECIFIED = 'AVERAGE_VIEW_DURATION_UNSPECIFIED';
+  /**
+   * Target web and app inventory to maximize 100% viewable duration 5 seconds
+   * or more.
+   */
+  public const VIEWABLE_DURING_AVERAGE_VIEW_DURATION_5_SEC = 'AVERAGE_VIEW_DURATION_5_SEC';
+  /**
+   * Target web and app inventory to maximize 100% viewable duration 10 seconds
+   * or more.
+   */
+  public const VIEWABLE_DURING_AVERAGE_VIEW_DURATION_10_SEC = 'AVERAGE_VIEW_DURATION_10_SEC';
+  /**
+   * Target web and app inventory to maximize 100% viewable duration 15 seconds
+   * or more.
+   */
+  public const VIEWABLE_DURING_AVERAGE_VIEW_DURATION_15_SEC = 'AVERAGE_VIEW_DURATION_15_SEC';
+  /**
+   * Target web and app inventory to maximize IAB viewable rate.
+   *
    * @var string
    */
   public $iab;
   /**
+   * Target web and app inventory to maximize 100% viewable duration.
+   *
    * @var string
    */
   public $viewableDuring;
 
   /**
-   * @param string
+   * Target web and app inventory to maximize IAB viewable rate.
+   *
+   * Accepted values: IAB_VIEWED_RATE_UNSPECIFIED,
+   * IAB_VIEWED_RATE_80_PERCENT_HIGHER, IAB_VIEWED_RATE_75_PERCENT_HIGHER,
+   * IAB_VIEWED_RATE_70_PERCENT_HIGHER, IAB_VIEWED_RATE_65_PERCENT_HIGHER,
+   * IAB_VIEWED_RATE_60_PERCENT_HIGHER, IAB_VIEWED_RATE_55_PERCENT_HIGHER,
+   * IAB_VIEWED_RATE_50_PERCENT_HIGHER, IAB_VIEWED_RATE_40_PERCENT_HIGHER,
+   * IAB_VIEWED_RATE_30_PERCENT_HIGHER
+   *
+   * @param self::IAB_* $iab
    */
   public function setIab($iab)
   {
     $this->iab = $iab;
   }
   /**
-   * @return string
+   * @return self::IAB_*
    */
   public function getIab()
   {
     return $this->iab;
   }
   /**
-   * @param string
+   * Target web and app inventory to maximize 100% viewable duration.
+   *
+   * Accepted values: AVERAGE_VIEW_DURATION_UNSPECIFIED,
+   * AVERAGE_VIEW_DURATION_5_SEC, AVERAGE_VIEW_DURATION_10_SEC,
+   * AVERAGE_VIEW_DURATION_15_SEC
+   *
+   * @param self::VIEWABLE_DURING_* $viewableDuring
    */
   public function setViewableDuring($viewableDuring)
   {
     $this->viewableDuring = $viewableDuring;
   }
   /**
-   * @return string
+   * @return self::VIEWABLE_DURING_*
    */
   public function getViewableDuring()
   {

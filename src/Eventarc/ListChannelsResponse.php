@@ -23,16 +23,23 @@ class ListChannelsResponse extends \Google\Collection
   protected $channelsType = Channel::class;
   protected $channelsDataType = 'array';
   /**
+   * A page token that can be sent to `ListChannels` to request the next page.
+   * If this is empty, then there are no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unreachable resources, if any.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Channel[]
+   * The requested channels, up to the number specified in `page_size`.
+   *
+   * @param Channel[] $channels
    */
   public function setChannels($channels)
   {
@@ -46,7 +53,10 @@ class ListChannelsResponse extends \Google\Collection
     return $this->channels;
   }
   /**
-   * @param string
+   * A page token that can be sent to `ListChannels` to request the next page.
+   * If this is empty, then there are no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListChannelsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Unreachable resources, if any.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

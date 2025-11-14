@@ -20,6 +20,8 @@ namespace Google\Service\DatabaseMigrationService;
 class ConditionalColumnSetValue extends \Google\Model
 {
   /**
+   * Optional. Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
@@ -31,7 +33,9 @@ class ConditionalColumnSetValue extends \Google\Model
   protected $valueTransformationDataType = '';
 
   /**
-   * @param array[]
+   * Optional. Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {
@@ -45,7 +49,10 @@ class ConditionalColumnSetValue extends \Google\Model
     return $this->customFeatures;
   }
   /**
-   * @param SourceNumericFilter
+   * Optional. Optional filter on source column precision and scale. Used for
+   * fixed point numbers such as NUMERIC/NUMBER data types.
+   *
+   * @param SourceNumericFilter $sourceNumericFilter
    */
   public function setSourceNumericFilter(SourceNumericFilter $sourceNumericFilter)
   {
@@ -59,7 +66,10 @@ class ConditionalColumnSetValue extends \Google\Model
     return $this->sourceNumericFilter;
   }
   /**
-   * @param SourceTextFilter
+   * Optional. Optional filter on source column length. Used for text based data
+   * types like varchar.
+   *
+   * @param SourceTextFilter $sourceTextFilter
    */
   public function setSourceTextFilter(SourceTextFilter $sourceTextFilter)
   {
@@ -73,7 +83,9 @@ class ConditionalColumnSetValue extends \Google\Model
     return $this->sourceTextFilter;
   }
   /**
-   * @param ValueTransformation
+   * Required. Description of data transformation during migration.
+   *
+   * @param ValueTransformation $valueTransformation
    */
   public function setValueTransformation(ValueTransformation $valueTransformation)
   {

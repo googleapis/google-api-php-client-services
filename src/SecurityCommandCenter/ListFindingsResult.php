@@ -19,17 +19,44 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ListFindingsResult extends \Google\Model
 {
+  /**
+   * State change is unused, this is the canonical default for this enum.
+   */
+  public const STATE_CHANGE_UNUSED = 'UNUSED';
+  /**
+   * The finding has changed state in some way between the points in time and
+   * existed at both points.
+   */
+  public const STATE_CHANGE_CHANGED = 'CHANGED';
+  /**
+   * The finding has not changed state between the points in time and existed at
+   * both points.
+   */
+  public const STATE_CHANGE_UNCHANGED = 'UNCHANGED';
+  /**
+   * The finding was created between the points in time.
+   */
+  public const STATE_CHANGE_ADDED = 'ADDED';
+  /**
+   * The finding at timestamp does not match the filter specified, but it did at
+   * timestamp - compare_duration.
+   */
+  public const STATE_CHANGE_REMOVED = 'REMOVED';
   protected $findingType = Finding::class;
   protected $findingDataType = '';
   protected $resourceType = SecuritycenterResource::class;
   protected $resourceDataType = '';
   /**
+   * State change of the finding between the points in time.
+   *
    * @var string
    */
   public $stateChange;
 
   /**
-   * @param Finding
+   * Finding matching the search request.
+   *
+   * @param Finding $finding
    */
   public function setFinding(Finding $finding)
   {
@@ -43,7 +70,9 @@ class ListFindingsResult extends \Google\Model
     return $this->finding;
   }
   /**
-   * @param SecuritycenterResource
+   * Output only. Resource that is associated with this finding.
+   *
+   * @param SecuritycenterResource $resource
    */
   public function setResource(SecuritycenterResource $resource)
   {
@@ -57,14 +86,18 @@ class ListFindingsResult extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * State change of the finding between the points in time.
+   *
+   * Accepted values: UNUSED, CHANGED, UNCHANGED, ADDED, REMOVED
+   *
+   * @param self::STATE_CHANGE_* $stateChange
    */
   public function setStateChange($stateChange)
   {
     $this->stateChange = $stateChange;
   }
   /**
-   * @return string
+   * @return self::STATE_CHANGE_*
    */
   public function getStateChange()
   {

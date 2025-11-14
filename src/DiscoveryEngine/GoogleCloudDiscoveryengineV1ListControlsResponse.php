@@ -23,12 +23,16 @@ class GoogleCloudDiscoveryengineV1ListControlsResponse extends \Google\Collectio
   protected $controlsType = GoogleCloudDiscoveryengineV1Control::class;
   protected $controlsDataType = 'array';
   /**
+   * Pagination token, if not returned indicates the last page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1Control[]
+   * All the Controls for a given data store.
+   *
+   * @param GoogleCloudDiscoveryengineV1Control[] $controls
    */
   public function setControls($controls)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDiscoveryengineV1ListControlsResponse extends \Google\Collectio
     return $this->controls;
   }
   /**
-   * @param string
+   * Pagination token, if not returned indicates the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

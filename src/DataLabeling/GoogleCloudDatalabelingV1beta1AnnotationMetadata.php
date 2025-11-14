@@ -23,7 +23,9 @@ class GoogleCloudDatalabelingV1beta1AnnotationMetadata extends \Google\Model
   protected $operatorMetadataDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1OperatorMetadata
+   * Metadata related to human labeling.
+   *
+   * @param GoogleCloudDatalabelingV1beta1OperatorMetadata $operatorMetadata
    */
   public function setOperatorMetadata(GoogleCloudDatalabelingV1beta1OperatorMetadata $operatorMetadata)
   {

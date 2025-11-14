@@ -20,12 +20,18 @@ namespace Google\Service\Transcoder;
 class MpegCommonEncryption extends \Google\Model
 {
   /**
+   * Required. Specify the encryption scheme. Supported encryption schemes: -
+   * `cenc` - `cbcs`
+   *
    * @var string
    */
   public $scheme;
 
   /**
-   * @param string
+   * Required. Specify the encryption scheme. Supported encryption schemes: -
+   * `cenc` - `cbcs`
+   *
+   * @param string $scheme
    */
   public function setScheme($scheme)
   {

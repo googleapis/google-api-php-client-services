@@ -26,7 +26,9 @@ class GoogleCloudDatalabelingV1beta1ExampleComparison extends \Google\Collection
   protected $modelCreatedExamplesDataType = 'array';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1Example
+   * The ground truth output for the input.
+   *
+   * @param GoogleCloudDatalabelingV1beta1Example $groundTruthExample
    */
   public function setGroundTruthExample(GoogleCloudDatalabelingV1beta1Example $groundTruthExample)
   {
@@ -40,7 +42,9 @@ class GoogleCloudDatalabelingV1beta1ExampleComparison extends \Google\Collection
     return $this->groundTruthExample;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1Example[]
+   * Predictions by the model for the input.
+   *
+   * @param GoogleCloudDatalabelingV1beta1Example[] $modelCreatedExamples
    */
   public function setModelCreatedExamples($modelCreatedExamples)
   {

@@ -19,32 +19,83 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
 {
+  /**
+   * No sampling.
+   */
+  public const SAMPLE_METHOD_SAMPLE_METHOD_UNSPECIFIED = 'SAMPLE_METHOD_UNSPECIFIED';
+  /**
+   * Scan from the top (default).
+   */
+  public const SAMPLE_METHOD_TOP = 'TOP';
+  /**
+   * For each file larger than bytes_limit_per_file, randomly pick the offset to
+   * start scanning. The scanned bytes are contiguous.
+   */
+  public const SAMPLE_METHOD_RANDOM_START = 'RANDOM_START';
   protected $collection_key = 'fileTypes';
   /**
+   * Max number of bytes to scan from a file. If a scanned file's size is bigger
+   * than this value then the rest of the bytes are omitted. Only one of
+   * `bytes_limit_per_file` and `bytes_limit_per_file_percent` can be specified.
+   * This field can't be set if de-identification is requested. For certain file
+   * types, setting this field has no effect. For more information, see [Limits
+   * on bytes scanned per file](https://cloud.google.com/sensitive-data-
+   * protection/docs/supported-file-types#max-byte-size-per-file).
+   *
    * @var string
    */
   public $bytesLimitPerFile;
   /**
+   * Max percentage of bytes to scan from a file. The rest are omitted. The
+   * number of bytes scanned is rounded down. Must be between 0 and 100,
+   * inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
+   * bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
+   * This field can't be set if de-identification is requested. For certain file
+   * types, setting this field has no effect. For more information, see [Limits
+   * on bytes scanned per file](https://cloud.google.com/sensitive-data-
+   * protection/docs/supported-file-types#max-byte-size-per-file).
+   *
    * @var int
    */
   public $bytesLimitPerFilePercent;
   protected $fileSetType = GooglePrivacyDlpV2FileSet::class;
   protected $fileSetDataType = '';
   /**
+   * List of file type groups to include in the scan. If empty, all files are
+   * scanned and available data format processors are applied. In addition, the
+   * binary content of the selected files is always scanned as well. Images are
+   * scanned only as binary if the specified region does not support image
+   * inspection and no file_types were specified. Image inspection is restricted
+   * to 'global', 'us', 'asia', and 'europe'.
+   *
    * @var string[]
    */
   public $fileTypes;
   /**
+   * Limits the number of files to scan to this percentage of the input FileSet.
+   * Number of files scanned is rounded down. Must be between 0 and 100,
+   * inclusively. Both 0 and 100 means no limit. Defaults to 0.
+   *
    * @var int
    */
   public $filesLimitPercent;
   /**
+   * How to sample the data.
+   *
    * @var string
    */
   public $sampleMethod;
 
   /**
-   * @param string
+   * Max number of bytes to scan from a file. If a scanned file's size is bigger
+   * than this value then the rest of the bytes are omitted. Only one of
+   * `bytes_limit_per_file` and `bytes_limit_per_file_percent` can be specified.
+   * This field can't be set if de-identification is requested. For certain file
+   * types, setting this field has no effect. For more information, see [Limits
+   * on bytes scanned per file](https://cloud.google.com/sensitive-data-
+   * protection/docs/supported-file-types#max-byte-size-per-file).
+   *
+   * @param string $bytesLimitPerFile
    */
   public function setBytesLimitPerFile($bytesLimitPerFile)
   {
@@ -58,7 +109,16 @@ class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
     return $this->bytesLimitPerFile;
   }
   /**
-   * @param int
+   * Max percentage of bytes to scan from a file. The rest are omitted. The
+   * number of bytes scanned is rounded down. Must be between 0 and 100,
+   * inclusively. Both 0 and 100 means no limit. Defaults to 0. Only one of
+   * bytes_limit_per_file and bytes_limit_per_file_percent can be specified.
+   * This field can't be set if de-identification is requested. For certain file
+   * types, setting this field has no effect. For more information, see [Limits
+   * on bytes scanned per file](https://cloud.google.com/sensitive-data-
+   * protection/docs/supported-file-types#max-byte-size-per-file).
+   *
+   * @param int $bytesLimitPerFilePercent
    */
   public function setBytesLimitPerFilePercent($bytesLimitPerFilePercent)
   {
@@ -72,7 +132,9 @@ class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
     return $this->bytesLimitPerFilePercent;
   }
   /**
-   * @param GooglePrivacyDlpV2FileSet
+   * The set of one or more files to scan.
+   *
+   * @param GooglePrivacyDlpV2FileSet $fileSet
    */
   public function setFileSet(GooglePrivacyDlpV2FileSet $fileSet)
   {
@@ -86,7 +148,14 @@ class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
     return $this->fileSet;
   }
   /**
-   * @param string[]
+   * List of file type groups to include in the scan. If empty, all files are
+   * scanned and available data format processors are applied. In addition, the
+   * binary content of the selected files is always scanned as well. Images are
+   * scanned only as binary if the specified region does not support image
+   * inspection and no file_types were specified. Image inspection is restricted
+   * to 'global', 'us', 'asia', and 'europe'.
+   *
+   * @param string[] $fileTypes
    */
   public function setFileTypes($fileTypes)
   {
@@ -100,7 +169,11 @@ class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
     return $this->fileTypes;
   }
   /**
-   * @param int
+   * Limits the number of files to scan to this percentage of the input FileSet.
+   * Number of files scanned is rounded down. Must be between 0 and 100,
+   * inclusively. Both 0 and 100 means no limit. Defaults to 0.
+   *
+   * @param int $filesLimitPercent
    */
   public function setFilesLimitPercent($filesLimitPercent)
   {
@@ -114,14 +187,18 @@ class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
     return $this->filesLimitPercent;
   }
   /**
-   * @param string
+   * How to sample the data.
+   *
+   * Accepted values: SAMPLE_METHOD_UNSPECIFIED, TOP, RANDOM_START
+   *
+   * @param self::SAMPLE_METHOD_* $sampleMethod
    */
   public function setSampleMethod($sampleMethod)
   {
     $this->sampleMethod = $sampleMethod;
   }
   /**
-   * @return string
+   * @return self::SAMPLE_METHOD_*
    */
   public function getSampleMethod()
   {

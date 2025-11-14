@@ -20,38 +20,150 @@ namespace Google\Service\DatabaseMigrationService;
 class EntityIssue extends \Google\Model
 {
   /**
+   * Unspecified database entity type.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_UNSPECIFIED = 'DATABASE_ENTITY_TYPE_UNSPECIFIED';
+  /**
+   * Schema.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_SCHEMA = 'DATABASE_ENTITY_TYPE_SCHEMA';
+  /**
+   * Table.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_TABLE = 'DATABASE_ENTITY_TYPE_TABLE';
+  /**
+   * Column.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_COLUMN = 'DATABASE_ENTITY_TYPE_COLUMN';
+  /**
+   * Constraint.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_CONSTRAINT = 'DATABASE_ENTITY_TYPE_CONSTRAINT';
+  /**
+   * Index.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_INDEX = 'DATABASE_ENTITY_TYPE_INDEX';
+  /**
+   * Trigger.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_TRIGGER = 'DATABASE_ENTITY_TYPE_TRIGGER';
+  /**
+   * View.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_VIEW = 'DATABASE_ENTITY_TYPE_VIEW';
+  /**
+   * Sequence.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_SEQUENCE = 'DATABASE_ENTITY_TYPE_SEQUENCE';
+  /**
+   * Stored Procedure.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_STORED_PROCEDURE = 'DATABASE_ENTITY_TYPE_STORED_PROCEDURE';
+  /**
+   * Function.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_FUNCTION = 'DATABASE_ENTITY_TYPE_FUNCTION';
+  /**
+   * Synonym.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_SYNONYM = 'DATABASE_ENTITY_TYPE_SYNONYM';
+  /**
+   * Package.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_DATABASE_PACKAGE = 'DATABASE_ENTITY_TYPE_DATABASE_PACKAGE';
+  /**
+   * UDT.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_UDT = 'DATABASE_ENTITY_TYPE_UDT';
+  /**
+   * Materialized View.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW = 'DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW';
+  /**
+   * Database.
+   */
+  public const ENTITY_TYPE_DATABASE_ENTITY_TYPE_DATABASE = 'DATABASE_ENTITY_TYPE_DATABASE';
+  /**
+   * Unspecified issue severity
+   */
+  public const SEVERITY_ISSUE_SEVERITY_UNSPECIFIED = 'ISSUE_SEVERITY_UNSPECIFIED';
+  /**
+   * Info
+   */
+  public const SEVERITY_ISSUE_SEVERITY_INFO = 'ISSUE_SEVERITY_INFO';
+  /**
+   * Warning
+   */
+  public const SEVERITY_ISSUE_SEVERITY_WARNING = 'ISSUE_SEVERITY_WARNING';
+  /**
+   * Error
+   */
+  public const SEVERITY_ISSUE_SEVERITY_ERROR = 'ISSUE_SEVERITY_ERROR';
+  /**
+   * Unspecified issue type.
+   */
+  public const TYPE_ISSUE_TYPE_UNSPECIFIED = 'ISSUE_TYPE_UNSPECIFIED';
+  /**
+   * Issue originated from the DDL
+   */
+  public const TYPE_ISSUE_TYPE_DDL = 'ISSUE_TYPE_DDL';
+  /**
+   * Issue originated during the apply process
+   */
+  public const TYPE_ISSUE_TYPE_APPLY = 'ISSUE_TYPE_APPLY';
+  /**
+   * Issue originated during the convert process
+   */
+  public const TYPE_ISSUE_TYPE_CONVERT = 'ISSUE_TYPE_CONVERT';
+  /**
+   * Error/Warning code
+   *
    * @var string
    */
   public $code;
   /**
+   * The ddl which caused the issue, if relevant.
+   *
    * @var string
    */
   public $ddl;
   /**
+   * The entity type (if the DDL is for a sub entity).
+   *
    * @var string
    */
   public $entityType;
   /**
+   * Unique Issue ID.
+   *
    * @var string
    */
   public $id;
   /**
+   * Issue detailed message
+   *
    * @var string
    */
   public $message;
   protected $positionType = Position::class;
   protected $positionDataType = '';
   /**
+   * Severity of the issue
+   *
    * @var string
    */
   public $severity;
   /**
+   * The type of the issue.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Error/Warning code
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -65,7 +177,9 @@ class EntityIssue extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * The ddl which caused the issue, if relevant.
+   *
+   * @param string $ddl
    */
   public function setDdl($ddl)
   {
@@ -79,21 +193,35 @@ class EntityIssue extends \Google\Model
     return $this->ddl;
   }
   /**
-   * @param string
+   * The entity type (if the DDL is for a sub entity).
+   *
+   * Accepted values: DATABASE_ENTITY_TYPE_UNSPECIFIED,
+   * DATABASE_ENTITY_TYPE_SCHEMA, DATABASE_ENTITY_TYPE_TABLE,
+   * DATABASE_ENTITY_TYPE_COLUMN, DATABASE_ENTITY_TYPE_CONSTRAINT,
+   * DATABASE_ENTITY_TYPE_INDEX, DATABASE_ENTITY_TYPE_TRIGGER,
+   * DATABASE_ENTITY_TYPE_VIEW, DATABASE_ENTITY_TYPE_SEQUENCE,
+   * DATABASE_ENTITY_TYPE_STORED_PROCEDURE, DATABASE_ENTITY_TYPE_FUNCTION,
+   * DATABASE_ENTITY_TYPE_SYNONYM, DATABASE_ENTITY_TYPE_DATABASE_PACKAGE,
+   * DATABASE_ENTITY_TYPE_UDT, DATABASE_ENTITY_TYPE_MATERIALIZED_VIEW,
+   * DATABASE_ENTITY_TYPE_DATABASE
+   *
+   * @param self::ENTITY_TYPE_* $entityType
    */
   public function setEntityType($entityType)
   {
     $this->entityType = $entityType;
   }
   /**
-   * @return string
+   * @return self::ENTITY_TYPE_*
    */
   public function getEntityType()
   {
     return $this->entityType;
   }
   /**
-   * @param string
+   * Unique Issue ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -107,7 +235,9 @@ class EntityIssue extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Issue detailed message
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -121,7 +251,9 @@ class EntityIssue extends \Google\Model
     return $this->message;
   }
   /**
-   * @param Position
+   * The position of the issue found, if relevant.
+   *
+   * @param Position $position
    */
   public function setPosition(Position $position)
   {
@@ -135,28 +267,38 @@ class EntityIssue extends \Google\Model
     return $this->position;
   }
   /**
-   * @param string
+   * Severity of the issue
+   *
+   * Accepted values: ISSUE_SEVERITY_UNSPECIFIED, ISSUE_SEVERITY_INFO,
+   * ISSUE_SEVERITY_WARNING, ISSUE_SEVERITY_ERROR
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
     return $this->severity;
   }
   /**
-   * @param string
+   * The type of the issue.
+   *
+   * Accepted values: ISSUE_TYPE_UNSPECIFIED, ISSUE_TYPE_DDL, ISSUE_TYPE_APPLY,
+   * ISSUE_TYPE_CONVERT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

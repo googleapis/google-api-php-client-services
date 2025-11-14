@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1DestinationConfigDestination extends \Google\Model
 {
   /**
+   * Publicly routable host.
+   *
    * @var string
    */
   public $host;
   /**
+   * Optional. Target port number accepted by the destination.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param string
+   * Publicly routable host.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1DestinationConfigDestination extends \Google\M
     return $this->host;
   }
   /**
-   * @param int
+   * Optional. Target port number accepted by the destination.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {

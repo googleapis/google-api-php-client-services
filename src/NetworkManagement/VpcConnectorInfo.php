@@ -20,20 +20,28 @@ namespace Google\Service\NetworkManagement;
 class VpcConnectorInfo extends \Google\Model
 {
   /**
+   * Name of a VPC connector.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Location in which the VPC connector is deployed.
+   *
    * @var string
    */
   public $location;
   /**
+   * URI of a VPC connector.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Name of a VPC connector.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +55,9 @@ class VpcConnectorInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Location in which the VPC connector is deployed.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -61,7 +71,9 @@ class VpcConnectorInfo extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * URI of a VPC connector.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

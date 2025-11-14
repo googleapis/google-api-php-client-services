@@ -21,12 +21,16 @@ class PredeployJob extends \Google\Collection
 {
   protected $collection_key = 'actions';
   /**
+   * Output only. The custom actions that the predeploy Job executes.
+   *
    * @var string[]
    */
   public $actions;
 
   /**
-   * @param string[]
+   * Output only. The custom actions that the predeploy Job executes.
+   *
+   * @param string[] $actions
    */
   public function setActions($actions)
   {

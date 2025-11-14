@@ -19,23 +19,66 @@ namespace Google\Service\Texttospeech;
 
 class VoiceSelectionParams extends \Google\Model
 {
+  /**
+   * An unspecified gender. In VoiceSelectionParams, this means that the client
+   * doesn't care which gender the selected voice will have. In the Voice field
+   * of ListVoicesResponse, this may mean that the voice doesn't fit any of the
+   * other categories in this enum, or that the gender of the voice isn't known.
+   */
+  public const SSML_GENDER_SSML_VOICE_GENDER_UNSPECIFIED = 'SSML_VOICE_GENDER_UNSPECIFIED';
+  /**
+   * A male voice.
+   */
+  public const SSML_GENDER_MALE = 'MALE';
+  /**
+   * A female voice.
+   */
+  public const SSML_GENDER_FEMALE = 'FEMALE';
+  /**
+   * A gender-neutral voice. This voice is not yet supported.
+   */
+  public const SSML_GENDER_NEUTRAL = 'NEUTRAL';
   protected $customVoiceType = CustomVoiceParams::class;
   protected $customVoiceDataType = '';
   /**
+   * Required. The language (and potentially also the region) of the voice
+   * expressed as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+   * language tag, e.g. "en-US". This should not include a script tag (e.g. use
+   * "cmn-cn" rather than "cmn-Hant-cn"), because the script will be inferred
+   * from the input provided in the SynthesisInput. The TTS service will use
+   * this parameter to help choose an appropriate voice. Note that the TTS
+   * service may choose a voice with a slightly different language code than the
+   * one selected; it may substitute a different region (e.g. using en-US rather
+   * than en-CA if there isn't a Canadian voice available), or even a different
+   * language, e.g. using "nb" (Norwegian Bokmal) instead of "no" (Norwegian)".
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Optional. The name of the model. If set, the service will choose the model
+   * matching the specified configuration.
+   *
    * @var string
    */
   public $modelName;
   protected $multiSpeakerVoiceConfigType = MultiSpeakerVoiceConfig::class;
   protected $multiSpeakerVoiceConfigDataType = '';
   /**
+   * The name of the voice. If both the name and the gender are not set, the
+   * service will choose a voice based on the other parameters such as
+   * language_code.
+   *
    * @var string
    */
   public $name;
   /**
+   * The preferred gender of the voice. If not set, the service will choose a
+   * voice based on the other parameters such as language_code and name. Note
+   * that this is only a preference, not requirement; if a voice of the
+   * appropriate gender is not available, the synthesizer should substitute a
+   * voice with a different gender rather than failing the request.
+   *
    * @var string
    */
   public $ssmlGender;
@@ -43,7 +86,11 @@ class VoiceSelectionParams extends \Google\Model
   protected $voiceCloneDataType = '';
 
   /**
-   * @param CustomVoiceParams
+   * The configuration for a custom voice. If [CustomVoiceParams.model] is set,
+   * the service will choose the custom voice matching the specified
+   * configuration.
+   *
+   * @param CustomVoiceParams $customVoice
    */
   public function setCustomVoice(CustomVoiceParams $customVoice)
   {
@@ -57,7 +104,18 @@ class VoiceSelectionParams extends \Google\Model
     return $this->customVoice;
   }
   /**
-   * @param string
+   * Required. The language (and potentially also the region) of the voice
+   * expressed as a [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt)
+   * language tag, e.g. "en-US". This should not include a script tag (e.g. use
+   * "cmn-cn" rather than "cmn-Hant-cn"), because the script will be inferred
+   * from the input provided in the SynthesisInput. The TTS service will use
+   * this parameter to help choose an appropriate voice. Note that the TTS
+   * service may choose a voice with a slightly different language code than the
+   * one selected; it may substitute a different region (e.g. using en-US rather
+   * than en-CA if there isn't a Canadian voice available), or even a different
+   * language, e.g. using "nb" (Norwegian Bokmal) instead of "no" (Norwegian)".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -71,7 +129,10 @@ class VoiceSelectionParams extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Optional. The name of the model. If set, the service will choose the model
+   * matching the specified configuration.
+   *
+   * @param string $modelName
    */
   public function setModelName($modelName)
   {
@@ -85,7 +146,11 @@ class VoiceSelectionParams extends \Google\Model
     return $this->modelName;
   }
   /**
-   * @param MultiSpeakerVoiceConfig
+   * Optional. The configuration for a Gemini multi-speaker text-to-speech
+   * setup. Enables the use of two distinct voices in a single synthesis
+   * request.
+   *
+   * @param MultiSpeakerVoiceConfig $multiSpeakerVoiceConfig
    */
   public function setMultiSpeakerVoiceConfig(MultiSpeakerVoiceConfig $multiSpeakerVoiceConfig)
   {
@@ -99,7 +164,11 @@ class VoiceSelectionParams extends \Google\Model
     return $this->multiSpeakerVoiceConfig;
   }
   /**
-   * @param string
+   * The name of the voice. If both the name and the gender are not set, the
+   * service will choose a voice based on the other parameters such as
+   * language_code.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -113,21 +182,33 @@ class VoiceSelectionParams extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The preferred gender of the voice. If not set, the service will choose a
+   * voice based on the other parameters such as language_code and name. Note
+   * that this is only a preference, not requirement; if a voice of the
+   * appropriate gender is not available, the synthesizer should substitute a
+   * voice with a different gender rather than failing the request.
+   *
+   * Accepted values: SSML_VOICE_GENDER_UNSPECIFIED, MALE, FEMALE, NEUTRAL
+   *
+   * @param self::SSML_GENDER_* $ssmlGender
    */
   public function setSsmlGender($ssmlGender)
   {
     $this->ssmlGender = $ssmlGender;
   }
   /**
-   * @return string
+   * @return self::SSML_GENDER_*
    */
   public function getSsmlGender()
   {
     return $this->ssmlGender;
   }
   /**
-   * @param VoiceCloneParams
+   * Optional. The configuration for a voice clone. If
+   * [VoiceCloneParams.voice_clone_key] is set, the service chooses the voice
+   * clone matching the specified configuration.
+   *
+   * @param VoiceCloneParams $voiceClone
    */
   public function setVoiceClone(VoiceCloneParams $voiceClone)
   {

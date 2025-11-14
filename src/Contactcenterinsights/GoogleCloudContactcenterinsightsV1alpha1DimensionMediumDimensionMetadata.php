@@ -20,12 +20,16 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1DimensionMediumDimensionMetadata extends \Google\Model
 {
   /**
+   * Optional. The conversation medium. Currently supports : PHONE_CALL, CHAT.
+   *
    * @var string
    */
   public $medium;
 
   /**
-   * @param string
+   * Optional. The conversation medium. Currently supports : PHONE_CALL, CHAT.
+   *
+   * @param string $medium
    */
   public function setMedium($medium)
   {

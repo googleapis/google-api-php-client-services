@@ -20,16 +20,24 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1SegmentationConfig extends \Google\Model
 {
   /**
+   * Required. Annotation spec set resource name. format:
+   * projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}
+   *
    * @var string
    */
   public $annotationSpecSet;
   /**
+   * Instruction message showed on labelers UI.
+   *
    * @var string
    */
   public $instructionMessage;
 
   /**
-   * @param string
+   * Required. Annotation spec set resource name. format:
+   * projects/{project_id}/annotationSpecSets/{annotation_spec_set_id}
+   *
+   * @param string $annotationSpecSet
    */
   public function setAnnotationSpecSet($annotationSpecSet)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDatalabelingV1beta1SegmentationConfig extends \Google\Model
     return $this->annotationSpecSet;
   }
   /**
-   * @param string
+   * Instruction message showed on labelers UI.
+   *
+   * @param string $instructionMessage
    */
   public function setInstructionMessage($instructionMessage)
   {

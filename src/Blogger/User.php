@@ -20,40 +20,56 @@ namespace Google\Service\Blogger;
 class User extends \Google\Model
 {
   /**
+   * Profile summary information.
+   *
    * @var string
    */
   public $about;
   protected $blogsType = UserBlogs::class;
   protected $blogsDataType = '';
   /**
+   * The timestamp of when this profile was created, in seconds since epoch.
+   *
    * @var string
    */
   public $created;
   /**
+   * The display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The identifier for this User.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of this entity. Always blogger#user.
+   *
    * @var string
    */
   public $kind;
   protected $localeType = UserLocale::class;
   protected $localeDataType = '';
   /**
+   * The API REST URL to fetch this resource from.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The user's profile page.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Profile summary information.
+   *
+   * @param string $about
    */
   public function setAbout($about)
   {
@@ -67,7 +83,9 @@ class User extends \Google\Model
     return $this->about;
   }
   /**
-   * @param UserBlogs
+   * The container of blogs for this user.
+   *
+   * @param UserBlogs $blogs
    */
   public function setBlogs(UserBlogs $blogs)
   {
@@ -81,7 +99,9 @@ class User extends \Google\Model
     return $this->blogs;
   }
   /**
-   * @param string
+   * The timestamp of when this profile was created, in seconds since epoch.
+   *
+   * @param string $created
    */
   public function setCreated($created)
   {
@@ -95,7 +115,9 @@ class User extends \Google\Model
     return $this->created;
   }
   /**
-   * @param string
+   * The display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -109,7 +131,9 @@ class User extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The identifier for this User.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -123,7 +147,9 @@ class User extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of this entity. Always blogger#user.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -137,7 +163,9 @@ class User extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param UserLocale
+   * This user's locale
+   *
+   * @param UserLocale $locale
    */
   public function setLocale(UserLocale $locale)
   {
@@ -151,7 +179,9 @@ class User extends \Google\Model
     return $this->locale;
   }
   /**
-   * @param string
+   * The API REST URL to fetch this resource from.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -165,7 +195,9 @@ class User extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The user's profile page.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

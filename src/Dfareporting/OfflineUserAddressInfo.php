@@ -20,36 +20,56 @@ namespace Google\Service\Dfareporting;
 class OfflineUserAddressInfo extends \Google\Model
 {
   /**
+   * City of the address.
+   *
    * @var string
    */
   public $city;
   /**
+   * 2-letter country code in ISO-3166-1 alpha-2 of the user's address.
+   *
    * @var string
    */
   public $countryCode;
   /**
+   * First name of the user, which is hashed as SHA-256 after normalized
+   * (Lowercase all characters; Remove any extra spaces before, after, and in
+   * between).
+   *
    * @var string
    */
   public $hashedFirstName;
   /**
+   * Last name of the user, which is hashed as SHA-256 after normalized (lower
+   * case only and no punctuation).
+   *
    * @var string
    */
   public $hashedLastName;
   /**
+   * The street address of the user hashed using SHA-256 hash function after
+   * normalization (lower case only).
+   *
    * @var string
    */
   public $hashedStreetAddress;
   /**
+   * Postal code of the user's address.
+   *
    * @var string
    */
   public $postalCode;
   /**
+   * State code of the address.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * City of the address.
+   *
+   * @param string $city
    */
   public function setCity($city)
   {
@@ -63,7 +83,9 @@ class OfflineUserAddressInfo extends \Google\Model
     return $this->city;
   }
   /**
-   * @param string
+   * 2-letter country code in ISO-3166-1 alpha-2 of the user's address.
+   *
+   * @param string $countryCode
    */
   public function setCountryCode($countryCode)
   {
@@ -77,7 +99,11 @@ class OfflineUserAddressInfo extends \Google\Model
     return $this->countryCode;
   }
   /**
-   * @param string
+   * First name of the user, which is hashed as SHA-256 after normalized
+   * (Lowercase all characters; Remove any extra spaces before, after, and in
+   * between).
+   *
+   * @param string $hashedFirstName
    */
   public function setHashedFirstName($hashedFirstName)
   {
@@ -91,7 +117,10 @@ class OfflineUserAddressInfo extends \Google\Model
     return $this->hashedFirstName;
   }
   /**
-   * @param string
+   * Last name of the user, which is hashed as SHA-256 after normalized (lower
+   * case only and no punctuation).
+   *
+   * @param string $hashedLastName
    */
   public function setHashedLastName($hashedLastName)
   {
@@ -105,7 +134,10 @@ class OfflineUserAddressInfo extends \Google\Model
     return $this->hashedLastName;
   }
   /**
-   * @param string
+   * The street address of the user hashed using SHA-256 hash function after
+   * normalization (lower case only).
+   *
+   * @param string $hashedStreetAddress
    */
   public function setHashedStreetAddress($hashedStreetAddress)
   {
@@ -119,7 +151,9 @@ class OfflineUserAddressInfo extends \Google\Model
     return $this->hashedStreetAddress;
   }
   /**
-   * @param string
+   * Postal code of the user's address.
+   *
+   * @param string $postalCode
    */
   public function setPostalCode($postalCode)
   {
@@ -133,7 +167,9 @@ class OfflineUserAddressInfo extends \Google\Model
     return $this->postalCode;
   }
   /**
-   * @param string
+   * State code of the address.
+   *
+   * @param string $state
    */
   public function setState($state)
   {

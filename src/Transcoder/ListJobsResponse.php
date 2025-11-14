@@ -23,16 +23,22 @@ class ListJobsResponse extends \Google\Collection
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
   /**
+   * The pagination token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * List of regions that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Job[]
+   * List of jobs in the specified region.
+   *
+   * @param Job[] $jobs
    */
   public function setJobs($jobs)
   {
@@ -46,7 +52,9 @@ class ListJobsResponse extends \Google\Collection
     return $this->jobs;
   }
   /**
-   * @param string
+   * The pagination token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * List of regions that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

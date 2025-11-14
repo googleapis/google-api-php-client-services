@@ -20,26 +20,66 @@ namespace Google\Service\Storagetransfer;
 class TransferOptions extends \Google\Model
 {
   /**
+   * Overwrite behavior is unspecified.
+   */
+  public const OVERWRITE_WHEN_OVERWRITE_WHEN_UNSPECIFIED = 'OVERWRITE_WHEN_UNSPECIFIED';
+  /**
+   * Overwrites destination objects with the source objects, only if the objects
+   * have the same name but different HTTP ETags or checksum values.
+   */
+  public const OVERWRITE_WHEN_DIFFERENT = 'DIFFERENT';
+  /**
+   * Never overwrites a destination object if a source object has the same name.
+   * In this case, the source object is not transferred.
+   */
+  public const OVERWRITE_WHEN_NEVER = 'NEVER';
+  /**
+   * Always overwrite the destination object with the source object, even if the
+   * HTTP Etags or checksum values are the same.
+   */
+  public const OVERWRITE_WHEN_ALWAYS = 'ALWAYS';
+  /**
+   * Whether objects should be deleted from the source after they are
+   * transferred to the sink. **Note:** This option and
+   * delete_objects_unique_in_sink are mutually exclusive.
+   *
    * @var bool
    */
   public $deleteObjectsFromSourceAfterTransfer;
   /**
+   * Whether objects that exist only in the sink should be deleted. **Note:**
+   * This option and delete_objects_from_source_after_transfer are mutually
+   * exclusive.
+   *
    * @var bool
    */
   public $deleteObjectsUniqueInSink;
   protected $metadataOptionsType = MetadataOptions::class;
   protected $metadataOptionsDataType = '';
   /**
+   * When to overwrite objects that already exist in the sink. The default is
+   * that only objects that are different from the source are overwritten. If
+   * true, all objects in the sink whose name matches an object in the source
+   * are overwritten with the source object.
+   *
    * @var bool
    */
   public $overwriteObjectsAlreadyExistingInSink;
   /**
+   * When to overwrite objects that already exist in the sink. If not set,
+   * overwrite behavior is determined by
+   * overwrite_objects_already_existing_in_sink.
+   *
    * @var string
    */
   public $overwriteWhen;
 
   /**
-   * @param bool
+   * Whether objects should be deleted from the source after they are
+   * transferred to the sink. **Note:** This option and
+   * delete_objects_unique_in_sink are mutually exclusive.
+   *
+   * @param bool $deleteObjectsFromSourceAfterTransfer
    */
   public function setDeleteObjectsFromSourceAfterTransfer($deleteObjectsFromSourceAfterTransfer)
   {
@@ -53,7 +93,11 @@ class TransferOptions extends \Google\Model
     return $this->deleteObjectsFromSourceAfterTransfer;
   }
   /**
-   * @param bool
+   * Whether objects that exist only in the sink should be deleted. **Note:**
+   * This option and delete_objects_from_source_after_transfer are mutually
+   * exclusive.
+   *
+   * @param bool $deleteObjectsUniqueInSink
    */
   public function setDeleteObjectsUniqueInSink($deleteObjectsUniqueInSink)
   {
@@ -67,7 +111,9 @@ class TransferOptions extends \Google\Model
     return $this->deleteObjectsUniqueInSink;
   }
   /**
-   * @param MetadataOptions
+   * Represents the selected metadata options for a transfer job.
+   *
+   * @param MetadataOptions $metadataOptions
    */
   public function setMetadataOptions(MetadataOptions $metadataOptions)
   {
@@ -81,7 +127,12 @@ class TransferOptions extends \Google\Model
     return $this->metadataOptions;
   }
   /**
-   * @param bool
+   * When to overwrite objects that already exist in the sink. The default is
+   * that only objects that are different from the source are overwritten. If
+   * true, all objects in the sink whose name matches an object in the source
+   * are overwritten with the source object.
+   *
+   * @param bool $overwriteObjectsAlreadyExistingInSink
    */
   public function setOverwriteObjectsAlreadyExistingInSink($overwriteObjectsAlreadyExistingInSink)
   {
@@ -95,14 +146,20 @@ class TransferOptions extends \Google\Model
     return $this->overwriteObjectsAlreadyExistingInSink;
   }
   /**
-   * @param string
+   * When to overwrite objects that already exist in the sink. If not set,
+   * overwrite behavior is determined by
+   * overwrite_objects_already_existing_in_sink.
+   *
+   * Accepted values: OVERWRITE_WHEN_UNSPECIFIED, DIFFERENT, NEVER, ALWAYS
+   *
+   * @param self::OVERWRITE_WHEN_* $overwriteWhen
    */
   public function setOverwriteWhen($overwriteWhen)
   {
     $this->overwriteWhen = $overwriteWhen;
   }
   /**
-   * @return string
+   * @return self::OVERWRITE_WHEN_*
    */
   public function getOverwriteWhen()
   {

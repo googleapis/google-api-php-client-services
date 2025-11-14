@@ -22,6 +22,8 @@ class GoogleCloudContentwarehouseV1RuleEngineOutput extends \Google\Model
   protected $actionExecutorOutputType = GoogleCloudContentwarehouseV1ActionExecutorOutput::class;
   protected $actionExecutorOutputDataType = '';
   /**
+   * Name of the document against which the rules and actions were evaluated.
+   *
    * @var string
    */
   public $documentName;
@@ -29,7 +31,10 @@ class GoogleCloudContentwarehouseV1RuleEngineOutput extends \Google\Model
   protected $ruleEvaluatorOutputDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1ActionExecutorOutput
+   * Output from Action Executor containing rule and corresponding actions
+   * execution result.
+   *
+   * @param GoogleCloudContentwarehouseV1ActionExecutorOutput $actionExecutorOutput
    */
   public function setActionExecutorOutput(GoogleCloudContentwarehouseV1ActionExecutorOutput $actionExecutorOutput)
   {
@@ -43,7 +48,9 @@ class GoogleCloudContentwarehouseV1RuleEngineOutput extends \Google\Model
     return $this->actionExecutorOutput;
   }
   /**
-   * @param string
+   * Name of the document against which the rules and actions were evaluated.
+   *
+   * @param string $documentName
    */
   public function setDocumentName($documentName)
   {
@@ -57,7 +64,9 @@ class GoogleCloudContentwarehouseV1RuleEngineOutput extends \Google\Model
     return $this->documentName;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1RuleEvaluatorOutput
+   * Output from Rule Evaluator containing matched, unmatched and invalid rules.
+   *
+   * @param GoogleCloudContentwarehouseV1RuleEvaluatorOutput $ruleEvaluatorOutput
    */
   public function setRuleEvaluatorOutput(GoogleCloudContentwarehouseV1RuleEvaluatorOutput $ruleEvaluatorOutput)
   {

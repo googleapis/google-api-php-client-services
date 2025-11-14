@@ -24,7 +24,11 @@ class SitesListResponse extends \Google\Collection
   protected $siteEntryDataType = 'array';
 
   /**
-   * @param WmxSite[]
+   * Contains permission level information about a Search Console site. For more
+   * information, see [Permissions in Search
+   * Console](https://support.google.com/webmasters/answer/2451999).
+   *
+   * @param WmxSite[] $siteEntry
    */
   public function setSiteEntry($siteEntry)
   {

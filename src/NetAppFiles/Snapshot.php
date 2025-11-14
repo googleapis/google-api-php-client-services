@@ -20,33 +20,82 @@ namespace Google\Service\NetAppFiles;
 class Snapshot extends \Google\Model
 {
   /**
+   * Unspecified Snapshot State
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Snapshot State is Ready
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Snapshot State is Creating
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * Snapshot State is Deleting
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Snapshot State is Updating
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * Snapshot State is Disabled
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * Snapshot State is Error
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * Output only. The time when the snapshot was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * A description of the snapshot with 2048 characters or less. Requests with
+   * longer descriptions will be rejected.
+   *
    * @var string
    */
   public $description;
   /**
+   * Resource labels to represent user provided metadata.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the snapshot. Format: `projects/{project_i
+   * d}/locations/{location}/volumes/{volume_id}/snapshots/{snapshot_id}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The snapshot state.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. State details of the storage pool
+   *
    * @var string
    */
   public $stateDetails;
+  /**
+   * Output only. Current storage usage for the snapshot in bytes.
+   *
+   * @var 
+   */
   public $usedBytes;
 
   /**
-   * @param string
+   * Output only. The time when the snapshot was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -60,7 +109,10 @@ class Snapshot extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * A description of the snapshot with 2048 characters or less. Requests with
+   * longer descriptions will be rejected.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -74,7 +126,9 @@ class Snapshot extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string[]
+   * Resource labels to represent user provided metadata.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -88,7 +142,10 @@ class Snapshot extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the snapshot. Format: `projects/{project_i
+   * d}/locations/{location}/volumes/{volume_id}/snapshots/{snapshot_id}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -102,21 +159,28 @@ class Snapshot extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The snapshot state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, READY, CREATING, DELETING, UPDATING,
+   * DISABLED, ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. State details of the storage pool
+   *
+   * @param string $stateDetails
    */
   public function setStateDetails($stateDetails)
   {

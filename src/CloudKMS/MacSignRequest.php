@@ -20,16 +20,34 @@ namespace Google\Service\CloudKMS;
 class MacSignRequest extends \Google\Model
 {
   /**
+   * Required. The data to sign. The MAC tag is computed over this data field
+   * based on the specific algorithm.
+   *
    * @var string
    */
   public $data;
   /**
+   * Optional. An optional CRC32C checksum of the MacSignRequest.data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * MacSignRequest.data using this checksum. KeyManagementService will report
+   * an error if the checksum verification fails. If you receive a checksum
+   * error, your client should verify that CRC32C(MacSignRequest.data) is equal
+   * to MacSignRequest.data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of
+   * the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
    * @var string
    */
   public $dataCrc32c;
 
   /**
-   * @param string
+   * Required. The data to sign. The MAC tag is computed over this data field
+   * based on the specific algorithm.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -43,7 +61,19 @@ class MacSignRequest extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Optional. An optional CRC32C checksum of the MacSignRequest.data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * MacSignRequest.data using this checksum. KeyManagementService will report
+   * an error if the checksum verification fails. If you receive a checksum
+   * error, your client should verify that CRC32C(MacSignRequest.data) is equal
+   * to MacSignRequest.data_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of
+   * the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
+   * @param string $dataCrc32c
    */
   public function setDataCrc32c($dataCrc32c)
   {

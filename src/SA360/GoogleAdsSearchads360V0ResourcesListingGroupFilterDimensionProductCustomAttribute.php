@@ -20,30 +20,69 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductCustomAttribute extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const INDEX_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const INDEX_UNKNOWN = 'UNKNOWN';
+  /**
+   * First listing group filter custom attribute.
+   */
+  public const INDEX_INDEX0 = 'INDEX0';
+  /**
+   * Second listing group filter custom attribute.
+   */
+  public const INDEX_INDEX1 = 'INDEX1';
+  /**
+   * Third listing group filter custom attribute.
+   */
+  public const INDEX_INDEX2 = 'INDEX2';
+  /**
+   * Fourth listing group filter custom attribute.
+   */
+  public const INDEX_INDEX3 = 'INDEX3';
+  /**
+   * Fifth listing group filter custom attribute.
+   */
+  public const INDEX_INDEX4 = 'INDEX4';
+  /**
+   * Indicates the index of the custom attribute.
+   *
    * @var string
    */
   public $index;
   /**
+   * String value of the product custom attribute.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Indicates the index of the custom attribute.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, INDEX0, INDEX1, INDEX2, INDEX3,
+   * INDEX4
+   *
+   * @param self::INDEX_* $index
    */
   public function setIndex($index)
   {
     $this->index = $index;
   }
   /**
-   * @return string
+   * @return self::INDEX_*
    */
   public function getIndex()
   {
     return $this->index;
   }
   /**
-   * @param string
+   * String value of the product custom attribute.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

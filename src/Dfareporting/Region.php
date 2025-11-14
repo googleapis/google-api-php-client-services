@@ -20,32 +20,47 @@ namespace Google\Service\Dfareporting;
 class Region extends \Google\Model
 {
   /**
+   * Country code of the country to which this region belongs.
+   *
    * @var string
    */
   public $countryCode;
   /**
+   * DART ID of the country to which this region belongs.
+   *
    * @var string
    */
   public $countryDartId;
   /**
+   * DART ID of this region.
+   *
    * @var string
    */
   public $dartId;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#region".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of this region.
+   *
    * @var string
    */
   public $name;
   /**
+   * Region code.
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param string
+   * Country code of the country to which this region belongs.
+   *
+   * @param string $countryCode
    */
   public function setCountryCode($countryCode)
   {
@@ -59,7 +74,9 @@ class Region extends \Google\Model
     return $this->countryCode;
   }
   /**
-   * @param string
+   * DART ID of the country to which this region belongs.
+   *
+   * @param string $countryDartId
    */
   public function setCountryDartId($countryDartId)
   {
@@ -73,7 +90,9 @@ class Region extends \Google\Model
     return $this->countryDartId;
   }
   /**
-   * @param string
+   * DART ID of this region.
+   *
+   * @param string $dartId
    */
   public function setDartId($dartId)
   {
@@ -87,7 +106,10 @@ class Region extends \Google\Model
     return $this->dartId;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#region".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -101,7 +123,9 @@ class Region extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of this region.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -115,7 +139,9 @@ class Region extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Region code.
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

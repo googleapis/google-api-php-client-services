@@ -26,7 +26,9 @@ class NodeMatcher extends \Google\Collection
   protected $nodeMetadatasDataType = 'array';
 
   /**
-   * @param StringMatcher
+   * Specifies match criteria on the node id.
+   *
+   * @param StringMatcher $nodeId
    */
   public function setNodeId(StringMatcher $nodeId)
   {
@@ -40,7 +42,9 @@ class NodeMatcher extends \Google\Collection
     return $this->nodeId;
   }
   /**
-   * @param StructMatcher[]
+   * Specifies match criteria on the node metadata.
+   *
+   * @param StructMatcher[] $nodeMetadatas
    */
   public function setNodeMetadatas($nodeMetadatas)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2PartitionId extends \Google\Model
 {
   /**
+   * If not empty, the ID of the namespace to which the entities belong.
+   *
    * @var string
    */
   public $namespaceId;
   /**
+   * The ID of the project to which the entities belong.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * If not empty, the ID of the namespace to which the entities belong.
+   *
+   * @param string $namespaceId
    */
   public function setNamespaceId($namespaceId)
   {
@@ -43,7 +49,9 @@ class GooglePrivacyDlpV2PartitionId extends \Google\Model
     return $this->namespaceId;
   }
   /**
-   * @param string
+   * The ID of the project to which the entities belong.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

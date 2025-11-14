@@ -23,7 +23,11 @@ class RevertClientResponse extends \Google\Model
   protected $clientDataType = '';
 
   /**
-   * @param Client
+   * Client as it appears in the latest container version since the last
+   * workspace synchronization operation. If no client is present, that means
+   * the client was deleted in the latest container version.
+   *
+   * @param Client $client
    */
   public function setClient(Client $client)
   {

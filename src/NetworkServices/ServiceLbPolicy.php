@@ -19,13 +19,45 @@ namespace Google\Service\NetworkServices;
 
 class ServiceLbPolicy extends \Google\Model
 {
+  /**
+   * The type of the loadbalancing algorithm is unspecified.
+   */
+  public const LOAD_BALANCING_ALGORITHM_LOAD_BALANCING_ALGORITHM_UNSPECIFIED = 'LOAD_BALANCING_ALGORITHM_UNSPECIFIED';
+  /**
+   * Balance traffic across all backends across the world proportionally based
+   * on capacity.
+   */
+  public const LOAD_BALANCING_ALGORITHM_SPRAY_TO_WORLD = 'SPRAY_TO_WORLD';
+  /**
+   * Direct traffic to the nearest region with endpoints and capacity before
+   * spilling over to other regions and spread the traffic from each client to
+   * all the MIGs/NEGs in a region.
+   */
+  public const LOAD_BALANCING_ALGORITHM_SPRAY_TO_REGION = 'SPRAY_TO_REGION';
+  /**
+   * Direct traffic to the nearest region with endpoints and capacity before
+   * spilling over to other regions. All MIGs/NEGs within a region are evenly
+   * loaded but each client might not spread the traffic to all the MIGs/NEGs in
+   * the region.
+   */
+  public const LOAD_BALANCING_ALGORITHM_WATERFALL_BY_REGION = 'WATERFALL_BY_REGION';
+  /**
+   * Attempt to keep traffic in a single zone closest to the client, before
+   * spilling over to other zones.
+   */
+  public const LOAD_BALANCING_ALGORITHM_WATERFALL_BY_ZONE = 'WATERFALL_BY_ZONE';
   protected $autoCapacityDrainType = ServiceLbPolicyAutoCapacityDrain::class;
   protected $autoCapacityDrainDataType = '';
   /**
+   * Output only. The timestamp when this resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. A free-text description of the resource. Max length 1024
+   * characters.
+   *
    * @var string
    */
   public $description;
@@ -34,24 +66,38 @@ class ServiceLbPolicy extends \Google\Model
   protected $isolationConfigType = ServiceLbPolicyIsolationConfig::class;
   protected $isolationConfigDataType = '';
   /**
+   * Optional. Set of label tags associated with the ServiceLbPolicy resource.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. The type of load balancing algorithm to be used. The default
+   * behavior is WATERFALL_BY_REGION.
+   *
    * @var string
    */
   public $loadBalancingAlgorithm;
   /**
+   * Identifier. Name of the ServiceLbPolicy resource. It matches pattern `proje
+   * cts/{project}/locations/{location}/serviceLbPolicies/{service_lb_policy_nam
+   * e}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The timestamp when this resource was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param ServiceLbPolicyAutoCapacityDrain
+   * Optional. Configuration to automatically move traffic away for unhealthy
+   * IG/NEG for the associated Backend Service.
+   *
+   * @param ServiceLbPolicyAutoCapacityDrain $autoCapacityDrain
    */
   public function setAutoCapacityDrain(ServiceLbPolicyAutoCapacityDrain $autoCapacityDrain)
   {
@@ -65,7 +111,9 @@ class ServiceLbPolicy extends \Google\Model
     return $this->autoCapacityDrain;
   }
   /**
-   * @param string
+   * Output only. The timestamp when this resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -79,7 +127,10 @@ class ServiceLbPolicy extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. A free-text description of the resource. Max length 1024
+   * characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -93,7 +144,9 @@ class ServiceLbPolicy extends \Google\Model
     return $this->description;
   }
   /**
-   * @param ServiceLbPolicyFailoverConfig
+   * Optional. Configuration related to health based failover.
+   *
+   * @param ServiceLbPolicyFailoverConfig $failoverConfig
    */
   public function setFailoverConfig(ServiceLbPolicyFailoverConfig $failoverConfig)
   {
@@ -107,7 +160,10 @@ class ServiceLbPolicy extends \Google\Model
     return $this->failoverConfig;
   }
   /**
-   * @param ServiceLbPolicyIsolationConfig
+   * Optional. Configuration to provide isolation support for the associated
+   * Backend Service.
+   *
+   * @param ServiceLbPolicyIsolationConfig $isolationConfig
    */
   public function setIsolationConfig(ServiceLbPolicyIsolationConfig $isolationConfig)
   {
@@ -121,7 +177,9 @@ class ServiceLbPolicy extends \Google\Model
     return $this->isolationConfig;
   }
   /**
-   * @param string[]
+   * Optional. Set of label tags associated with the ServiceLbPolicy resource.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -135,21 +193,31 @@ class ServiceLbPolicy extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Optional. The type of load balancing algorithm to be used. The default
+   * behavior is WATERFALL_BY_REGION.
+   *
+   * Accepted values: LOAD_BALANCING_ALGORITHM_UNSPECIFIED, SPRAY_TO_WORLD,
+   * SPRAY_TO_REGION, WATERFALL_BY_REGION, WATERFALL_BY_ZONE
+   *
+   * @param self::LOAD_BALANCING_ALGORITHM_* $loadBalancingAlgorithm
    */
   public function setLoadBalancingAlgorithm($loadBalancingAlgorithm)
   {
     $this->loadBalancingAlgorithm = $loadBalancingAlgorithm;
   }
   /**
-   * @return string
+   * @return self::LOAD_BALANCING_ALGORITHM_*
    */
   public function getLoadBalancingAlgorithm()
   {
     return $this->loadBalancingAlgorithm;
   }
   /**
-   * @param string
+   * Identifier. Name of the ServiceLbPolicy resource. It matches pattern `proje
+   * cts/{project}/locations/{location}/serviceLbPolicies/{service_lb_policy_nam
+   * e}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -163,7 +231,9 @@ class ServiceLbPolicy extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The timestamp when this resource was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

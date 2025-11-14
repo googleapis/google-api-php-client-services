@@ -23,24 +23,35 @@ class ListEnvironmentsResponse extends \Google\Collection
   protected $environmentsType = Environment::class;
   protected $environmentsDataType = 'array';
   /**
+   * A Execution id Always set.
+   *
    * @var string
    */
   public $executionId;
   /**
+   * A History id. Always set.
+   *
    * @var string
    */
   public $historyId;
   /**
+   * A continuation token to resume the query at the next item. Will only be set
+   * if there are more Environments to fetch.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * A Project id. Always set.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param Environment[]
+   * Environments. Always set.
+   *
+   * @param Environment[] $environments
    */
   public function setEnvironments($environments)
   {
@@ -54,7 +65,9 @@ class ListEnvironmentsResponse extends \Google\Collection
     return $this->environments;
   }
   /**
-   * @param string
+   * A Execution id Always set.
+   *
+   * @param string $executionId
    */
   public function setExecutionId($executionId)
   {
@@ -68,7 +81,9 @@ class ListEnvironmentsResponse extends \Google\Collection
     return $this->executionId;
   }
   /**
-   * @param string
+   * A History id. Always set.
+   *
+   * @param string $historyId
    */
   public function setHistoryId($historyId)
   {
@@ -82,7 +97,10 @@ class ListEnvironmentsResponse extends \Google\Collection
     return $this->historyId;
   }
   /**
-   * @param string
+   * A continuation token to resume the query at the next item. Will only be set
+   * if there are more Environments to fetch.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -96,7 +114,9 @@ class ListEnvironmentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * A Project id. Always set.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

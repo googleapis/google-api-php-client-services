@@ -23,7 +23,10 @@ class RestrictionEvaluations extends \Google\Model
   protected $memberRestrictionEvaluationDataType = '';
 
   /**
-   * @param MembershipRoleRestrictionEvaluation
+   * Evaluation of the member restriction applied to this membership. Empty if
+   * the user lacks permission to view the restriction evaluation.
+   *
+   * @param MembershipRoleRestrictionEvaluation $memberRestrictionEvaluation
    */
   public function setMemberRestrictionEvaluation(MembershipRoleRestrictionEvaluation $memberRestrictionEvaluation)
   {

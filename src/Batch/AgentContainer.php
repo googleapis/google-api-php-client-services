@@ -21,28 +21,47 @@ class AgentContainer extends \Google\Collection
 {
   protected $collection_key = 'volumes';
   /**
+   * Overrides the `CMD` specified in the container. If there is an ENTRYPOINT
+   * (either in the container image or with the entrypoint field below) then
+   * commands are appended as arguments to the ENTRYPOINT.
+   *
    * @var string[]
    */
   public $commands;
   /**
+   * Overrides the `ENTRYPOINT` specified in the container.
+   *
    * @var string
    */
   public $entrypoint;
   /**
+   * The URI to pull the container image from.
+   *
    * @var string
    */
   public $imageUri;
   /**
+   * Arbitrary additional options to include in the "docker run" command when
+   * running this container, e.g. "--network host".
+   *
    * @var string
    */
   public $options;
   /**
+   * Volumes to mount (bind mount) from the host machine files or directories
+   * into the container, formatted to match docker run's --volume option, e.g.
+   * /foo:/bar, or /foo:/bar:ro
+   *
    * @var string[]
    */
   public $volumes;
 
   /**
-   * @param string[]
+   * Overrides the `CMD` specified in the container. If there is an ENTRYPOINT
+   * (either in the container image or with the entrypoint field below) then
+   * commands are appended as arguments to the ENTRYPOINT.
+   *
+   * @param string[] $commands
    */
   public function setCommands($commands)
   {
@@ -56,7 +75,9 @@ class AgentContainer extends \Google\Collection
     return $this->commands;
   }
   /**
-   * @param string
+   * Overrides the `ENTRYPOINT` specified in the container.
+   *
+   * @param string $entrypoint
    */
   public function setEntrypoint($entrypoint)
   {
@@ -70,7 +91,9 @@ class AgentContainer extends \Google\Collection
     return $this->entrypoint;
   }
   /**
-   * @param string
+   * The URI to pull the container image from.
+   *
+   * @param string $imageUri
    */
   public function setImageUri($imageUri)
   {
@@ -84,7 +107,10 @@ class AgentContainer extends \Google\Collection
     return $this->imageUri;
   }
   /**
-   * @param string
+   * Arbitrary additional options to include in the "docker run" command when
+   * running this container, e.g. "--network host".
+   *
+   * @param string $options
    */
   public function setOptions($options)
   {
@@ -98,7 +124,11 @@ class AgentContainer extends \Google\Collection
     return $this->options;
   }
   /**
-   * @param string[]
+   * Volumes to mount (bind mount) from the host machine files or directories
+   * into the container, formatted to match docker run's --volume option, e.g.
+   * /foo:/bar, or /foo:/bar:ro
+   *
+   * @param string[] $volumes
    */
   public function setVolumes($volumes)
   {

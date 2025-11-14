@@ -21,10 +21,26 @@ class UserOwnedGrafeasNote extends \Google\Collection
 {
   protected $collection_key = 'publicKeys';
   /**
+   * Output only. This field will contain the service account email address that
+   * this attestor will use as the principal when querying Container Analysis.
+   * Attestor administrators must grant this service account the IAM role needed
+   * to read attestations from the note_reference in Container Analysis
+   * (`containeranalysis.notes.occurrences.viewer`). This email address is fixed
+   * for the lifetime of the attestor, but callers should not make any other
+   * assumptions about the service account email; future versions may use an
+   * email based on a different naming pattern.
+   *
    * @var string
    */
   public $delegationServiceAccountEmail;
   /**
+   * Required. The Grafeas resource name of a Attestation.Authority Note,
+   * created by the user, in the format: `projects/[PROJECT_ID]/notes`. This
+   * field may not be updated. A project ID must be used, not a project number.
+   * An attestation by this attestor is stored as a Grafeas
+   * Attestation.Authority Occurrence that names a container image and that
+   * links to this Note. Grafeas is an external dependency.
+   *
    * @var string
    */
   public $noteReference;
@@ -32,7 +48,16 @@ class UserOwnedGrafeasNote extends \Google\Collection
   protected $publicKeysDataType = 'array';
 
   /**
-   * @param string
+   * Output only. This field will contain the service account email address that
+   * this attestor will use as the principal when querying Container Analysis.
+   * Attestor administrators must grant this service account the IAM role needed
+   * to read attestations from the note_reference in Container Analysis
+   * (`containeranalysis.notes.occurrences.viewer`). This email address is fixed
+   * for the lifetime of the attestor, but callers should not make any other
+   * assumptions about the service account email; future versions may use an
+   * email based on a different naming pattern.
+   *
+   * @param string $delegationServiceAccountEmail
    */
   public function setDelegationServiceAccountEmail($delegationServiceAccountEmail)
   {
@@ -46,7 +71,14 @@ class UserOwnedGrafeasNote extends \Google\Collection
     return $this->delegationServiceAccountEmail;
   }
   /**
-   * @param string
+   * Required. The Grafeas resource name of a Attestation.Authority Note,
+   * created by the user, in the format: `projects/[PROJECT_ID]/notes`. This
+   * field may not be updated. A project ID must be used, not a project number.
+   * An attestation by this attestor is stored as a Grafeas
+   * Attestation.Authority Occurrence that names a container image and that
+   * links to this Note. Grafeas is an external dependency.
+   *
+   * @param string $noteReference
    */
   public function setNoteReference($noteReference)
   {
@@ -60,7 +92,13 @@ class UserOwnedGrafeasNote extends \Google\Collection
     return $this->noteReference;
   }
   /**
-   * @param AttestorPublicKey[]
+   * Optional. Public keys that verify attestations signed by this attestor.
+   * This field may be updated. If this field is non-empty, one of the specified
+   * public keys must verify that an attestation was signed by this attestor for
+   * the image specified in the admission request. If this field is empty, this
+   * attestor always returns that no valid attestations exist.
+   *
+   * @param AttestorPublicKey[] $publicKeys
    */
   public function setPublicKeys($publicKeys)
   {

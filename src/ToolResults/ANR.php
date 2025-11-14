@@ -23,7 +23,9 @@ class ANR extends \Google\Model
   protected $stackTraceDataType = '';
 
   /**
-   * @param StackTrace
+   * The stack trace of the ANR crash. Optional.
+   *
+   * @param StackTrace $stackTrace
    */
   public function setStackTrace(StackTrace $stackTrace)
   {

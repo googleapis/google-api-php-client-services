@@ -23,16 +23,23 @@ class CampaignCreativeAssociationsListResponse extends \Google\Collection
   protected $campaignCreativeAssociationsType = CampaignCreativeAssociation::class;
   protected $campaignCreativeAssociationsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#campaignCreativeAssociationsListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CampaignCreativeAssociation[]
+   * Campaign creative association collection
+   *
+   * @param CampaignCreativeAssociation[] $campaignCreativeAssociations
    */
   public function setCampaignCreativeAssociations($campaignCreativeAssociations)
   {
@@ -46,7 +53,10 @@ class CampaignCreativeAssociationsListResponse extends \Google\Collection
     return $this->campaignCreativeAssociations;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#campaignCreativeAssociationsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class CampaignCreativeAssociationsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\BeyondCorp;
 class AllocatedConnection extends \Google\Model
 {
   /**
+   * Required. The ingress port of an allocated connection
+   *
    * @var int
    */
   public $ingressPort;
   /**
+   * Required. The PSC uri of an allocated connection
+   *
    * @var string
    */
   public $pscUri;
 
   /**
-   * @param int
+   * Required. The ingress port of an allocated connection
+   *
+   * @param int $ingressPort
    */
   public function setIngressPort($ingressPort)
   {
@@ -43,7 +49,9 @@ class AllocatedConnection extends \Google\Model
     return $this->ingressPort;
   }
   /**
-   * @param string
+   * Required. The PSC uri of an allocated connection
+   *
+   * @param string $pscUri
    */
   public function setPscUri($pscUri)
   {

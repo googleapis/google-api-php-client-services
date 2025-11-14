@@ -25,7 +25,9 @@ class ResizeDiskRequest extends \Google\Model
   protected $dataDiskDataType = '';
 
   /**
-   * @param BootDisk
+   * Required. The boot disk to be resized. Only disk_size_gb will be used.
+   *
+   * @param BootDisk $bootDisk
    */
   public function setBootDisk(BootDisk $bootDisk)
   {
@@ -39,7 +41,9 @@ class ResizeDiskRequest extends \Google\Model
     return $this->bootDisk;
   }
   /**
-   * @param DataDisk
+   * Required. The data disk to be resized. Only disk_size_gb will be used.
+   *
+   * @param DataDisk $dataDisk
    */
   public function setDataDisk(DataDisk $dataDisk)
   {

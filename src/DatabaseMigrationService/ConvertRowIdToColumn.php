@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class ConvertRowIdToColumn extends \Google\Model
 {
   /**
+   * Required. Only work on tables without primary key defined
+   *
    * @var bool
    */
   public $onlyIfNoPrimaryKey;
 
   /**
-   * @param bool
+   * Required. Only work on tables without primary key defined
+   *
+   * @param bool $onlyIfNoPrimaryKey
    */
   public function setOnlyIfNoPrimaryKey($onlyIfNoPrimaryKey)
   {

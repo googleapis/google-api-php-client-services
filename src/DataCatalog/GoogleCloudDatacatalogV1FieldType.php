@@ -19,15 +19,43 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1FieldType extends \Google\Model
 {
+  /**
+   * The default invalid value for a type.
+   */
+  public const PRIMITIVE_TYPE_PRIMITIVE_TYPE_UNSPECIFIED = 'PRIMITIVE_TYPE_UNSPECIFIED';
+  /**
+   * A double precision number.
+   */
+  public const PRIMITIVE_TYPE_DOUBLE = 'DOUBLE';
+  /**
+   * An UTF-8 string.
+   */
+  public const PRIMITIVE_TYPE_STRING = 'STRING';
+  /**
+   * A boolean value.
+   */
+  public const PRIMITIVE_TYPE_BOOL = 'BOOL';
+  /**
+   * A timestamp.
+   */
+  public const PRIMITIVE_TYPE_TIMESTAMP = 'TIMESTAMP';
+  /**
+   * A Richtext description.
+   */
+  public const PRIMITIVE_TYPE_RICHTEXT = 'RICHTEXT';
   protected $enumTypeType = GoogleCloudDatacatalogV1FieldTypeEnumType::class;
   protected $enumTypeDataType = '';
   /**
+   * Primitive types, such as string, boolean, etc.
+   *
    * @var string
    */
   public $primitiveType;
 
   /**
-   * @param GoogleCloudDatacatalogV1FieldTypeEnumType
+   * An enum type.
+   *
+   * @param GoogleCloudDatacatalogV1FieldTypeEnumType $enumType
    */
   public function setEnumType(GoogleCloudDatacatalogV1FieldTypeEnumType $enumType)
   {
@@ -41,14 +69,19 @@ class GoogleCloudDatacatalogV1FieldType extends \Google\Model
     return $this->enumType;
   }
   /**
-   * @param string
+   * Primitive types, such as string, boolean, etc.
+   *
+   * Accepted values: PRIMITIVE_TYPE_UNSPECIFIED, DOUBLE, STRING, BOOL,
+   * TIMESTAMP, RICHTEXT
+   *
+   * @param self::PRIMITIVE_TYPE_* $primitiveType
    */
   public function setPrimitiveType($primitiveType)
   {
     $this->primitiveType = $primitiveType;
   }
   /**
-   * @return string
+   * @return self::PRIMITIVE_TYPE_*
    */
   public function getPrimitiveType()
   {

@@ -20,20 +20,32 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2SecurityPolicy extends \Google\Model
 {
   /**
+   * The name of the Google Cloud Armor security policy, for example, "my-
+   * security-policy".
+   *
    * @var string
    */
   public $name;
   /**
+   * Whether or not the associated rule or policy is in preview mode.
+   *
    * @var bool
    */
   public $preview;
   /**
+   * The type of Google Cloud Armor security policy for example, 'backend
+   * security policy', 'edge security policy', 'network edge security policy',
+   * or 'always-on DDoS protection'.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The name of the Google Cloud Armor security policy, for example, "my-
+   * security-policy".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +59,9 @@ class GoogleCloudSecuritycenterV2SecurityPolicy extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Whether or not the associated rule or policy is in preview mode.
+   *
+   * @param bool $preview
    */
   public function setPreview($preview)
   {
@@ -61,7 +75,11 @@ class GoogleCloudSecuritycenterV2SecurityPolicy extends \Google\Model
     return $this->preview;
   }
   /**
-   * @param string
+   * The type of Google Cloud Armor security policy for example, 'backend
+   * security policy', 'edge security policy', 'network edge security policy',
+   * or 'always-on DDoS protection'.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

@@ -20,24 +20,39 @@ namespace Google\Service\Safebrowsing;
 class GoogleSecuritySafebrowsingV5RiceDeltaEncoded64Bit extends \Google\Model
 {
   /**
+   * The encoded deltas that are encoded using the Golomb-Rice coder.
+   *
    * @var string
    */
   public $encodedData;
   /**
+   * The number of entries that are delta encoded in the encoded data. If only a
+   * single integer was encoded, this will be zero and the single value will be
+   * stored in `first_value`.
+   *
    * @var int
    */
   public $entriesCount;
   /**
+   * The first entry in the encoded data (hashes), or, if only a single hash
+   * prefix was encoded, that entry's value. If the field is empty, the entry is
+   * zero.
+   *
    * @var string
    */
   public $firstValue;
   /**
+   * The Golomb-Rice parameter. This parameter is guaranteed to be between 35
+   * and 62, inclusive.
+   *
    * @var int
    */
   public $riceParameter;
 
   /**
-   * @param string
+   * The encoded deltas that are encoded using the Golomb-Rice coder.
+   *
+   * @param string $encodedData
    */
   public function setEncodedData($encodedData)
   {
@@ -51,7 +66,11 @@ class GoogleSecuritySafebrowsingV5RiceDeltaEncoded64Bit extends \Google\Model
     return $this->encodedData;
   }
   /**
-   * @param int
+   * The number of entries that are delta encoded in the encoded data. If only a
+   * single integer was encoded, this will be zero and the single value will be
+   * stored in `first_value`.
+   *
+   * @param int $entriesCount
    */
   public function setEntriesCount($entriesCount)
   {
@@ -65,7 +84,11 @@ class GoogleSecuritySafebrowsingV5RiceDeltaEncoded64Bit extends \Google\Model
     return $this->entriesCount;
   }
   /**
-   * @param string
+   * The first entry in the encoded data (hashes), or, if only a single hash
+   * prefix was encoded, that entry's value. If the field is empty, the entry is
+   * zero.
+   *
+   * @param string $firstValue
    */
   public function setFirstValue($firstValue)
   {
@@ -79,7 +102,10 @@ class GoogleSecuritySafebrowsingV5RiceDeltaEncoded64Bit extends \Google\Model
     return $this->firstValue;
   }
   /**
-   * @param int
+   * The Golomb-Rice parameter. This parameter is guaranteed to be between 35
+   * and 62, inclusive.
+   *
+   * @param int $riceParameter
    */
   public function setRiceParameter($riceParameter)
   {

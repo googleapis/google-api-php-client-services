@@ -23,12 +23,17 @@ class DescribeDatabaseEntitiesResponse extends \Google\Collection
   protected $databaseEntitiesType = DatabaseEntity::class;
   protected $databaseEntitiesDataType = 'array';
   /**
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DatabaseEntity[]
+   * The list of database entities for the conversion workspace.
+   *
+   * @param DatabaseEntity[] $databaseEntities
    */
   public function setDatabaseEntities($databaseEntities)
   {
@@ -42,7 +47,10 @@ class DescribeDatabaseEntitiesResponse extends \Google\Collection
     return $this->databaseEntities;
   }
   /**
-   * @param string
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

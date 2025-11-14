@@ -20,20 +20,28 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionDimensionMetadata extends \Google\Model
 {
   /**
+   * Optional. The QA question ID.
+   *
    * @var string
    */
   public $qaQuestionId;
   /**
+   * Optional. The QA scorecard ID.
+   *
    * @var string
    */
   public $qaScorecardId;
   /**
+   * Optional. The full body of the question.
+   *
    * @var string
    */
   public $questionBody;
 
   /**
-   * @param string
+   * Optional. The QA question ID.
+   *
+   * @param string $qaQuestionId
    */
   public function setQaQuestionId($qaQuestionId)
   {
@@ -47,7 +55,9 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionDimensionMetada
     return $this->qaQuestionId;
   }
   /**
-   * @param string
+   * Optional. The QA scorecard ID.
+   *
+   * @param string $qaScorecardId
    */
   public function setQaScorecardId($qaScorecardId)
   {
@@ -61,7 +71,9 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionDimensionMetada
     return $this->qaScorecardId;
   }
   /**
-   * @param string
+   * Optional. The full body of the question.
+   *
+   * @param string $questionBody
    */
   public function setQuestionBody($questionBody)
   {

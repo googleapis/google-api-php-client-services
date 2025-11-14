@@ -21,6 +21,10 @@ class SendWorkerMessagesRequest extends \Google\Collection
 {
   protected $collection_key = 'workerMessages';
   /**
+   * The [regional endpoint]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+   * contains the job.
+   *
    * @var string
    */
   public $location;
@@ -28,7 +32,11 @@ class SendWorkerMessagesRequest extends \Google\Collection
   protected $workerMessagesDataType = 'array';
 
   /**
-   * @param string
+   * The [regional endpoint]
+   * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints) that
+   * contains the job.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -42,7 +50,9 @@ class SendWorkerMessagesRequest extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param WorkerMessage[]
+   * The WorkerMessages to send.
+   *
+   * @param WorkerMessage[] $workerMessages
    */
   public function setWorkerMessages($workerMessages)
   {

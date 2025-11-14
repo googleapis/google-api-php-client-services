@@ -20,20 +20,28 @@ namespace Google\Service\CloudKMS;
 class Digest extends \Google\Model
 {
   /**
+   * A message digest produced with the SHA-256 algorithm.
+   *
    * @var string
    */
   public $sha256;
   /**
+   * A message digest produced with the SHA-384 algorithm.
+   *
    * @var string
    */
   public $sha384;
   /**
+   * A message digest produced with the SHA-512 algorithm.
+   *
    * @var string
    */
   public $sha512;
 
   /**
-   * @param string
+   * A message digest produced with the SHA-256 algorithm.
+   *
+   * @param string $sha256
    */
   public function setSha256($sha256)
   {
@@ -47,7 +55,9 @@ class Digest extends \Google\Model
     return $this->sha256;
   }
   /**
-   * @param string
+   * A message digest produced with the SHA-384 algorithm.
+   *
+   * @param string $sha384
    */
   public function setSha384($sha384)
   {
@@ -61,7 +71,9 @@ class Digest extends \Google\Model
     return $this->sha384;
   }
   /**
-   * @param string
+   * A message digest produced with the SHA-512 algorithm.
+   *
+   * @param string $sha512
    */
   public function setSha512($sha512)
   {

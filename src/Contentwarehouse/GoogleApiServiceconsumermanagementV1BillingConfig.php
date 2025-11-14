@@ -20,12 +20,18 @@ namespace Google\Service\Contentwarehouse;
 class GoogleApiServiceconsumermanagementV1BillingConfig extends \Google\Model
 {
   /**
+   * Name of the billing account. For example
+   * `billingAccounts/012345-567890-ABCDEF`.
+   *
    * @var string
    */
   public $billingAccount;
 
   /**
-   * @param string
+   * Name of the billing account. For example
+   * `billingAccounts/012345-567890-ABCDEF`.
+   *
+   * @param string $billingAccount
    */
   public function setBillingAccount($billingAccount)
   {

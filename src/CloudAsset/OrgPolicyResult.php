@@ -23,22 +23,40 @@ class OrgPolicyResult extends \Google\Collection
   protected $consolidatedPolicyType = AnalyzerOrgPolicy::class;
   protected $consolidatedPolicyDataType = '';
   /**
+   * The folder(s) that this consolidated policy belongs to, in the format of
+   * folders/{FOLDER_NUMBER}. This field is available when the consolidated
+   * policy belongs (directly or cascadingly) to one or more folders.
+   *
    * @var string[]
    */
   public $folders;
   /**
+   * The organization that this consolidated policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the
+   * consolidated policy belongs (directly or cascadingly) to an organization.
+   *
    * @var string
    */
   public $organization;
   protected $policyBundleType = AnalyzerOrgPolicy::class;
   protected $policyBundleDataType = 'array';
   /**
+   * The project that this consolidated policy belongs to, in the format of
+   * projects/{PROJECT_NUMBER}. This field is available when the consolidated
+   * policy belongs to a project.
+   *
    * @var string
    */
   public $project;
 
   /**
-   * @param AnalyzerOrgPolicy
+   * The consolidated organization policy for the analyzed resource. The
+   * consolidated organization policy is computed by merging and evaluating
+   * policy_bundle. The evaluation will respect the organization policy
+   * [hierarchy rules](https://cloud.google.com/resource-
+   * manager/docs/organization-policy/understanding-hierarchy).
+   *
+   * @param AnalyzerOrgPolicy $consolidatedPolicy
    */
   public function setConsolidatedPolicy(AnalyzerOrgPolicy $consolidatedPolicy)
   {
@@ -52,7 +70,11 @@ class OrgPolicyResult extends \Google\Collection
     return $this->consolidatedPolicy;
   }
   /**
-   * @param string[]
+   * The folder(s) that this consolidated policy belongs to, in the format of
+   * folders/{FOLDER_NUMBER}. This field is available when the consolidated
+   * policy belongs (directly or cascadingly) to one or more folders.
+   *
+   * @param string[] $folders
    */
   public function setFolders($folders)
   {
@@ -66,7 +88,11 @@ class OrgPolicyResult extends \Google\Collection
     return $this->folders;
   }
   /**
-   * @param string
+   * The organization that this consolidated policy belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the
+   * consolidated policy belongs (directly or cascadingly) to an organization.
+   *
+   * @param string $organization
    */
   public function setOrganization($organization)
   {
@@ -80,7 +106,12 @@ class OrgPolicyResult extends \Google\Collection
     return $this->organization;
   }
   /**
-   * @param AnalyzerOrgPolicy[]
+   * The ordered list of all organization policies from the
+   * consolidated_policy.attached_resource. to the scope specified in the
+   * request. If the constraint is defined with default policy, it will also
+   * appear in the list.
+   *
+   * @param AnalyzerOrgPolicy[] $policyBundle
    */
   public function setPolicyBundle($policyBundle)
   {
@@ -94,7 +125,11 @@ class OrgPolicyResult extends \Google\Collection
     return $this->policyBundle;
   }
   /**
-   * @param string
+   * The project that this consolidated policy belongs to, in the format of
+   * projects/{PROJECT_NUMBER}. This field is available when the consolidated
+   * policy belongs to a project.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {

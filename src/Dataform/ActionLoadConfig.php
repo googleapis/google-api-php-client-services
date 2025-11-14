@@ -29,7 +29,9 @@ class ActionLoadConfig extends \Google\Model
   protected $uniqueDataType = '';
 
   /**
-   * @param ActionSimpleLoadMode
+   * Append into destination table
+   *
+   * @param ActionSimpleLoadMode $append
    */
   public function setAppend(ActionSimpleLoadMode $append)
   {
@@ -43,7 +45,10 @@ class ActionLoadConfig extends \Google\Model
     return $this->append;
   }
   /**
-   * @param ActionIncrementalLoadMode
+   * Insert records where the value exceeds the previous maximum value for a
+   * column in the destination table
+   *
+   * @param ActionIncrementalLoadMode $maximum
    */
   public function setMaximum(ActionIncrementalLoadMode $maximum)
   {
@@ -57,7 +62,9 @@ class ActionLoadConfig extends \Google\Model
     return $this->maximum;
   }
   /**
-   * @param ActionSimpleLoadMode
+   * Replace destination table
+   *
+   * @param ActionSimpleLoadMode $replace
    */
   public function setReplace(ActionSimpleLoadMode $replace)
   {
@@ -71,7 +78,10 @@ class ActionLoadConfig extends \Google\Model
     return $this->replace;
   }
   /**
-   * @param ActionIncrementalLoadMode
+   * Insert records where the value of a column is not already present in the
+   * destination table
+   *
+   * @param ActionIncrementalLoadMode $unique
    */
   public function setUnique(ActionIncrementalLoadMode $unique)
   {

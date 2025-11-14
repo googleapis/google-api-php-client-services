@@ -21,6 +21,10 @@ class ListTransferRunsResponse extends \Google\Collection
 {
   protected $collection_key = 'transferRuns';
   /**
+   * Output only. The next-pagination token. For multiple-page list results,
+   * this token can be used as the `ListTransferRunsRequest.page_token` to
+   * request the next page of list results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListTransferRunsResponse extends \Google\Collection
   protected $transferRunsDataType = 'array';
 
   /**
-   * @param string
+   * Output only. The next-pagination token. For multiple-page list results,
+   * this token can be used as the `ListTransferRunsRequest.page_token` to
+   * request the next page of list results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListTransferRunsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TransferRun[]
+   * Output only. The stored pipeline transfer runs.
+   *
+   * @param TransferRun[] $transferRuns
    */
   public function setTransferRuns($transferRuns)
   {

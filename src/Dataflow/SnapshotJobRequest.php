@@ -20,24 +20,34 @@ namespace Google\Service\Dataflow;
 class SnapshotJobRequest extends \Google\Model
 {
   /**
+   * User specified description of the snapshot. Maybe empty.
+   *
    * @var string
    */
   public $description;
   /**
+   * The location that contains this job.
+   *
    * @var string
    */
   public $location;
   /**
+   * If true, perform snapshots for sources which support this.
+   *
    * @var bool
    */
   public $snapshotSources;
   /**
+   * TTL for the snapshot.
+   *
    * @var string
    */
   public $ttl;
 
   /**
-   * @param string
+   * User specified description of the snapshot. Maybe empty.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -51,7 +61,9 @@ class SnapshotJobRequest extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The location that contains this job.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -65,7 +77,9 @@ class SnapshotJobRequest extends \Google\Model
     return $this->location;
   }
   /**
-   * @param bool
+   * If true, perform snapshots for sources which support this.
+   *
+   * @param bool $snapshotSources
    */
   public function setSnapshotSources($snapshotSources)
   {
@@ -79,7 +93,9 @@ class SnapshotJobRequest extends \Google\Model
     return $this->snapshotSources;
   }
   /**
-   * @param string
+   * TTL for the snapshot.
+   *
+   * @param string $ttl
    */
   public function setTtl($ttl)
   {

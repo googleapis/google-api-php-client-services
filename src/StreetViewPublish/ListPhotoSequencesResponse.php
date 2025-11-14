@@ -21,6 +21,9 @@ class ListPhotoSequencesResponse extends \Google\Collection
 {
   protected $collection_key = 'photoSequences';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListPhotoSequencesResponse extends \Google\Collection
   protected $photoSequencesDataType = 'array';
 
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,15 @@ class ListPhotoSequencesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Operation[]
+   * List of photo sequences via Operation interface. The maximum number of
+   * items returned is based on the pageSize field in the request. Each item in
+   * the list can have three possible states, * `Operation.done` = false, if the
+   * processing of PhotoSequence is not finished yet. * `Operation.done` = true
+   * and `Operation.error` is populated, if there was an error in processing. *
+   * `Operation.done` = true and `Operation.response` contains a PhotoSequence
+   * message, In each sequence, only Id is populated.
+   *
+   * @param Operation[] $photoSequences
    */
   public function setPhotoSequences($photoSequences)
   {

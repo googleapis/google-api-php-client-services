@@ -20,16 +20,23 @@ namespace Google\Service\Dfareporting;
 class ThirdPartyAuthenticationToken extends \Google\Model
 {
   /**
+   * Name of the third-party authentication token.
+   *
    * @var string
    */
   public $name;
   /**
+   * Value of the third-party authentication token. This is a read-only, auto-
+   * generated field.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Name of the third-party authentication token.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +50,10 @@ class ThirdPartyAuthenticationToken extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Value of the third-party authentication token. This is a read-only, auto-
+   * generated field.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

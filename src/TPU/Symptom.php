@@ -20,24 +20,63 @@ namespace Google\Service\TPU;
 class Symptom extends \Google\Model
 {
   /**
+   * Unspecified symptom.
+   */
+  public const SYMPTOM_TYPE_SYMPTOM_TYPE_UNSPECIFIED = 'SYMPTOM_TYPE_UNSPECIFIED';
+  /**
+   * TPU VM memory is low.
+   */
+  public const SYMPTOM_TYPE_LOW_MEMORY = 'LOW_MEMORY';
+  /**
+   * TPU runtime is out of memory.
+   */
+  public const SYMPTOM_TYPE_OUT_OF_MEMORY = 'OUT_OF_MEMORY';
+  /**
+   * TPU runtime execution has timed out.
+   */
+  public const SYMPTOM_TYPE_EXECUTE_TIMED_OUT = 'EXECUTE_TIMED_OUT';
+  /**
+   * TPU runtime fails to construct a mesh that recognizes each TPU device's
+   * neighbors.
+   */
+  public const SYMPTOM_TYPE_MESH_BUILD_FAIL = 'MESH_BUILD_FAIL';
+  /**
+   * TPU HBM is out of memory.
+   */
+  public const SYMPTOM_TYPE_HBM_OUT_OF_MEMORY = 'HBM_OUT_OF_MEMORY';
+  /**
+   * Abusive behaviors have been identified on the current project.
+   */
+  public const SYMPTOM_TYPE_PROJECT_ABUSE = 'PROJECT_ABUSE';
+  /**
+   * Timestamp when the Symptom is created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Detailed information of the current Symptom.
+   *
    * @var string
    */
   public $details;
   /**
+   * Type of the Symptom.
+   *
    * @var string
    */
   public $symptomType;
   /**
+   * A string used to uniquely distinguish a worker within a TPU node.
+   *
    * @var string
    */
   public $workerId;
 
   /**
-   * @param string
+   * Timestamp when the Symptom is created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -51,7 +90,9 @@ class Symptom extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Detailed information of the current Symptom.
+   *
+   * @param string $details
    */
   public function setDetails($details)
   {
@@ -65,21 +106,28 @@ class Symptom extends \Google\Model
     return $this->details;
   }
   /**
-   * @param string
+   * Type of the Symptom.
+   *
+   * Accepted values: SYMPTOM_TYPE_UNSPECIFIED, LOW_MEMORY, OUT_OF_MEMORY,
+   * EXECUTE_TIMED_OUT, MESH_BUILD_FAIL, HBM_OUT_OF_MEMORY, PROJECT_ABUSE
+   *
+   * @param self::SYMPTOM_TYPE_* $symptomType
    */
   public function setSymptomType($symptomType)
   {
     $this->symptomType = $symptomType;
   }
   /**
-   * @return string
+   * @return self::SYMPTOM_TYPE_*
    */
   public function getSymptomType()
   {
     return $this->symptomType;
   }
   /**
-   * @param string
+   * A string used to uniquely distinguish a worker within a TPU node.
+   *
+   * @param string $workerId
    */
   public function setWorkerId($workerId)
   {

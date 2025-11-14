@@ -23,12 +23,17 @@ class BucketAccessControls extends \Google\Collection
   protected $itemsType = BucketAccessControl::class;
   protected $itemsDataType = 'array';
   /**
+   * The kind of item this is. For lists of bucket access control entries, this
+   * is always storage#bucketAccessControls.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param BucketAccessControl[]
+   * The list of items.
+   *
+   * @param BucketAccessControl[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +47,10 @@ class BucketAccessControls extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The kind of item this is. For lists of bucket access control entries, this
+   * is always storage#bucketAccessControls.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

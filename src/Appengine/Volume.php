@@ -20,17 +20,28 @@ namespace Google\Service\Appengine;
 class Volume extends \Google\Model
 {
   /**
+   * Unique name for the volume.
+   *
    * @var string
    */
   public $name;
+  /**
+   * Volume size in gigabytes.
+   *
+   * @var 
+   */
   public $sizeGb;
   /**
+   * Underlying volume type, e.g. 'tmpfs'.
+   *
    * @var string
    */
   public $volumeType;
 
   /**
-   * @param string
+   * Unique name for the volume.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -52,7 +63,9 @@ class Volume extends \Google\Model
     return $this->sizeGb;
   }
   /**
-   * @param string
+   * Underlying volume type, e.g. 'tmpfs'.
+   *
+   * @param string $volumeType
    */
   public function setVolumeType($volumeType)
   {

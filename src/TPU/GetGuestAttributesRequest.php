@@ -21,16 +21,23 @@ class GetGuestAttributesRequest extends \Google\Collection
 {
   protected $collection_key = 'workerIds';
   /**
+   * The guest attributes path to be queried.
+   *
    * @var string
    */
   public $queryPath;
   /**
+   * The 0-based worker ID. If it is empty, all workers' GuestAttributes will be
+   * returned.
+   *
    * @var string[]
    */
   public $workerIds;
 
   /**
-   * @param string
+   * The guest attributes path to be queried.
+   *
+   * @param string $queryPath
    */
   public function setQueryPath($queryPath)
   {
@@ -44,7 +51,10 @@ class GetGuestAttributesRequest extends \Google\Collection
     return $this->queryPath;
   }
   /**
-   * @param string[]
+   * The 0-based worker ID. If it is empty, all workers' GuestAttributes will be
+   * returned.
+   *
+   * @param string[] $workerIds
    */
   public function setWorkerIds($workerIds)
   {

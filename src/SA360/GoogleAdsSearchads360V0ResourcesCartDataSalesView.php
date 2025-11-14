@@ -20,12 +20,20 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesCartDataSalesView extends \Google\Model
 {
   /**
+   * Output only. The resource name of the Cart data sales view. Cart data sales
+   * view resource names have the form:
+   * `customers/{customer_id}/cartDataSalesView`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Output only. The resource name of the Cart data sales view. Cart data sales
+   * view resource names have the form:
+   * `customers/{customer_id}/cartDataSalesView`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

@@ -21,16 +21,26 @@ class GoogleCloudDialogflowCxV3AnswerFeedbackRatingReason extends \Google\Collec
 {
   protected $collection_key = 'reasonLabels';
   /**
+   * Optional. Additional feedback about the rating. This field can be populated
+   * without choosing a predefined `reason`.
+   *
    * @var string
    */
   public $feedback;
   /**
+   * Optional. Custom reason labels for thumbs down rating provided by the user.
+   * The maximum number of labels allowed is 10 and the maximum length of a
+   * single label is 128 characters.
+   *
    * @var string[]
    */
   public $reasonLabels;
 
   /**
-   * @param string
+   * Optional. Additional feedback about the rating. This field can be populated
+   * without choosing a predefined `reason`.
+   *
+   * @param string $feedback
    */
   public function setFeedback($feedback)
   {
@@ -44,7 +54,11 @@ class GoogleCloudDialogflowCxV3AnswerFeedbackRatingReason extends \Google\Collec
     return $this->feedback;
   }
   /**
-   * @param string[]
+   * Optional. Custom reason labels for thumbs down rating provided by the user.
+   * The maximum number of labels allowed is 10 and the maximum length of a
+   * single label is 128 characters.
+   *
+   * @param string[] $reasonLabels
    */
   public function setReasonLabels($reasonLabels)
   {

@@ -59,6 +59,18 @@ class Cluster extends \Google\Model
    */
   public const DATABASE_VERSION_POSTGRES_17 = 'POSTGRES_17';
   /**
+   * The maintenance version selection policy is not specified.
+   */
+  public const MAINTENANCE_VERSION_SELECTION_POLICY_MAINTENANCE_VERSION_SELECTION_POLICY_UNSPECIFIED = 'MAINTENANCE_VERSION_SELECTION_POLICY_UNSPECIFIED';
+  /**
+   * Use the latest available maintenance version.
+   */
+  public const MAINTENANCE_VERSION_SELECTION_POLICY_MAINTENANCE_VERSION_SELECTION_POLICY_LATEST = 'MAINTENANCE_VERSION_SELECTION_POLICY_LATEST';
+  /**
+   * Use the current default maintenance version.
+   */
+  public const MAINTENANCE_VERSION_SELECTION_POLICY_MAINTENANCE_VERSION_SELECTION_POLICY_DEFAULT = 'MAINTENANCE_VERSION_SELECTION_POLICY_DEFAULT';
+  /**
    * The state of the cluster is unknown.
    */
   public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
@@ -197,6 +209,13 @@ class Cluster extends \Google\Model
   protected $maintenanceScheduleDataType = '';
   protected $maintenanceUpdatePolicyType = MaintenanceUpdatePolicy::class;
   protected $maintenanceUpdatePolicyDataType = '';
+  /**
+   * Input only. Policy to use to automatically select the maintenance version
+   * to which to update the cluster's instances.
+   *
+   * @var string
+   */
+  public $maintenanceVersionSelectionPolicy;
   protected $migrationSourceType = MigrationSource::class;
   protected $migrationSourceDataType = '';
   /**
@@ -641,6 +660,27 @@ class Cluster extends \Google\Model
   public function getMaintenanceUpdatePolicy()
   {
     return $this->maintenanceUpdatePolicy;
+  }
+  /**
+   * Input only. Policy to use to automatically select the maintenance version
+   * to which to update the cluster's instances.
+   *
+   * Accepted values: MAINTENANCE_VERSION_SELECTION_POLICY_UNSPECIFIED,
+   * MAINTENANCE_VERSION_SELECTION_POLICY_LATEST,
+   * MAINTENANCE_VERSION_SELECTION_POLICY_DEFAULT
+   *
+   * @param self::MAINTENANCE_VERSION_SELECTION_POLICY_* $maintenanceVersionSelectionPolicy
+   */
+  public function setMaintenanceVersionSelectionPolicy($maintenanceVersionSelectionPolicy)
+  {
+    $this->maintenanceVersionSelectionPolicy = $maintenanceVersionSelectionPolicy;
+  }
+  /**
+   * @return self::MAINTENANCE_VERSION_SELECTION_POLICY_*
+   */
+  public function getMaintenanceVersionSelectionPolicy()
+  {
+    return $this->maintenanceVersionSelectionPolicy;
   }
   /**
    * Output only. Cluster created via DMS migration.

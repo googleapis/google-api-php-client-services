@@ -21,22 +21,30 @@ class Notebook extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * The contents of the notebook.
+   *
    * @var string
    */
   public $contents;
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
+   * Whether this action is disabled (i.e. should not be run).
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * Arbitrary, user-defined tags on this action.
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string
+   * The contents of the notebook.
+   *
+   * @param string $contents
    */
   public function setContents($contents)
   {
@@ -50,7 +58,9 @@ class Notebook extends \Google\Collection
     return $this->contents;
   }
   /**
-   * @param Target[]
+   * A list of actions that this action depends on.
+   *
+   * @param Target[] $dependencyTargets
    */
   public function setDependencyTargets($dependencyTargets)
   {
@@ -64,7 +74,9 @@ class Notebook extends \Google\Collection
     return $this->dependencyTargets;
   }
   /**
-   * @param bool
+   * Whether this action is disabled (i.e. should not be run).
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -78,7 +90,9 @@ class Notebook extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * @param string[]
+   * Arbitrary, user-defined tags on this action.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

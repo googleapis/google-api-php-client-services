@@ -20,20 +20,34 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2HybridInspectStatistics extends \Google\Model
 {
   /**
+   * The number of hybrid inspection requests aborted because the job ran out of
+   * quota or was ended before they could be processed.
+   *
    * @var string
    */
   public $abortedCount;
   /**
+   * The number of hybrid requests currently being processed. Only populated
+   * when called via method `getDlpJob`. A burst of traffic may cause hybrid
+   * inspect requests to be enqueued. Processing will take place as quickly as
+   * possible, but resource limitations may impact how long a request is
+   * enqueued for.
+   *
    * @var string
    */
   public $pendingCount;
   /**
+   * The number of hybrid inspection requests processed within this job.
+   *
    * @var string
    */
   public $processedCount;
 
   /**
-   * @param string
+   * The number of hybrid inspection requests aborted because the job ran out of
+   * quota or was ended before they could be processed.
+   *
+   * @param string $abortedCount
    */
   public function setAbortedCount($abortedCount)
   {
@@ -47,7 +61,13 @@ class GooglePrivacyDlpV2HybridInspectStatistics extends \Google\Model
     return $this->abortedCount;
   }
   /**
-   * @param string
+   * The number of hybrid requests currently being processed. Only populated
+   * when called via method `getDlpJob`. A burst of traffic may cause hybrid
+   * inspect requests to be enqueued. Processing will take place as quickly as
+   * possible, but resource limitations may impact how long a request is
+   * enqueued for.
+   *
+   * @param string $pendingCount
    */
   public function setPendingCount($pendingCount)
   {
@@ -61,7 +81,9 @@ class GooglePrivacyDlpV2HybridInspectStatistics extends \Google\Model
     return $this->pendingCount;
   }
   /**
-   * @param string
+   * The number of hybrid inspection requests processed within this job.
+   *
+   * @param string $processedCount
    */
   public function setProcessedCount($processedCount)
   {

@@ -20,32 +20,56 @@ namespace Google\Service\SecureSourceManager;
 class Repository extends \Google\Model
 {
   /**
+   * Output only. Create timestamp.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Description of the repository, which cannot exceed 500
+   * characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   protected $initialConfigType = InitialConfig::class;
   protected $initialConfigDataType = '';
   /**
+   * Optional. The name of the instance in which the repository is hosted,
+   * formatted as
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}`
+   * When creating repository via securesourcemanager.googleapis.com, this field
+   * is used as input. When creating repository via *.sourcemanager.dev, this
+   * field is output only.
+   *
    * @var string
    */
   public $instance;
   /**
+   * Optional. A unique identifier for a repository. The name should be of the
+   * format:
+   * `projects/{project}/locations/{location_id}/repositories/{repository_id}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Unique identifier of the repository.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Update timestamp.
+   *
    * @var string
    */
   public $updateTime;
@@ -53,7 +77,9 @@ class Repository extends \Google\Model
   protected $urisDataType = '';
 
   /**
-   * @param string
+   * Output only. Create timestamp.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -67,7 +93,10 @@ class Repository extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Description of the repository, which cannot exceed 500
+   * characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -81,7 +110,11 @@ class Repository extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -95,7 +128,9 @@ class Repository extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param InitialConfig
+   * Input only. Initial configurations for the repository.
+   *
+   * @param InitialConfig $initialConfig
    */
   public function setInitialConfig(InitialConfig $initialConfig)
   {
@@ -109,7 +144,14 @@ class Repository extends \Google\Model
     return $this->initialConfig;
   }
   /**
-   * @param string
+   * Optional. The name of the instance in which the repository is hosted,
+   * formatted as
+   * `projects/{project_number}/locations/{location_id}/instances/{instance_id}`
+   * When creating repository via securesourcemanager.googleapis.com, this field
+   * is used as input. When creating repository via *.sourcemanager.dev, this
+   * field is output only.
+   *
+   * @param string $instance
    */
   public function setInstance($instance)
   {
@@ -123,7 +165,11 @@ class Repository extends \Google\Model
     return $this->instance;
   }
   /**
-   * @param string
+   * Optional. A unique identifier for a repository. The name should be of the
+   * format:
+   * `projects/{project}/locations/{location_id}/repositories/{repository_id}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -137,7 +183,9 @@ class Repository extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Unique identifier of the repository.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -151,7 +199,9 @@ class Repository extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Update timestamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -165,7 +215,9 @@ class Repository extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param URIs
+   * Output only. URIs for the repository.
+   *
+   * @param URIs $uris
    */
   public function setUris(URIs $uris)
   {

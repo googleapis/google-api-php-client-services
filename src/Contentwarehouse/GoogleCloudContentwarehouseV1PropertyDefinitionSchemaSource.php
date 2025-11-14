@@ -20,16 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource extends \Google\Model
 {
   /**
+   * The schema name in the source.
+   *
    * @var string
    */
   public $name;
   /**
+   * The Doc AI processor type name.
+   *
    * @var string
    */
   public $processorType;
 
   /**
-   * @param string
+   * The schema name in the source.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource extends \Googl
     return $this->name;
   }
   /**
-   * @param string
+   * The Doc AI processor type name.
+   *
+   * @param string $processorType
    */
   public function setProcessorType($processorType)
   {

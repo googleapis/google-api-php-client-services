@@ -19,6 +19,36 @@ namespace Google\Service\Batch;
 
 class InstancePolicy extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const PROVISIONING_MODEL_PROVISIONING_MODEL_UNSPECIFIED = 'PROVISIONING_MODEL_UNSPECIFIED';
+  /**
+   * Standard VM.
+   */
+  public const PROVISIONING_MODEL_STANDARD = 'STANDARD';
+  /**
+   * SPOT VM.
+   */
+  public const PROVISIONING_MODEL_SPOT = 'SPOT';
+  /**
+   * Preemptible VM (PVM). Above SPOT VM is the preferable model for preemptible
+   * VM instances: the old preemptible VM model (indicated by this field) is the
+   * older model, and has been migrated to use the SPOT model as the underlying
+   * technology. This old model will still be supported.
+   *
+   * @deprecated
+   */
+  public const PROVISIONING_MODEL_PREEMPTIBLE = 'PREEMPTIBLE';
+  /**
+   * Bound to the lifecycle of the reservation in which it is provisioned.
+   */
+  public const PROVISIONING_MODEL_RESERVATION_BOUND = 'RESERVATION_BOUND';
+  /**
+   * Instance is provisioned with DWS Flex Start and has limited max run
+   * duration.
+   */
+  public const PROVISIONING_MODEL_FLEX_START = 'FLEX_START';
   protected $collection_key = 'disks';
   protected $acceleratorsType = Accelerator::class;
   protected $acceleratorsDataType = 'array';
@@ -27,24 +57,38 @@ class InstancePolicy extends \Google\Collection
   protected $disksType = AttachedDisk::class;
   protected $disksDataType = 'array';
   /**
+   * The Compute Engine machine type.
+   *
    * @var string
    */
   public $machineType;
   /**
+   * The minimum CPU platform. See
+   * https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
+   *
    * @var string
    */
   public $minCpuPlatform;
   /**
+   * The provisioning model.
+   *
    * @var string
    */
   public $provisioningModel;
   /**
+   * Optional. If not specified (default), VMs will consume any applicable
+   * reservation. If "NO_RESERVATION" is specified, VMs will not consume any
+   * reservation. Otherwise, if specified, VMs will consume only the specified
+   * reservation.
+   *
    * @var string
    */
   public $reservation;
 
   /**
-   * @param Accelerator[]
+   * The accelerators attached to each VM instance.
+   *
+   * @param Accelerator[] $accelerators
    */
   public function setAccelerators($accelerators)
   {
@@ -58,7 +102,11 @@ class InstancePolicy extends \Google\Collection
     return $this->accelerators;
   }
   /**
-   * @param Disk
+   * Boot disk to be created and attached to each VM by this InstancePolicy.
+   * Boot disk will be deleted when the VM is deleted. Batch API now only
+   * supports booting from image.
+   *
+   * @param Disk $bootDisk
    */
   public function setBootDisk(Disk $bootDisk)
   {
@@ -72,7 +120,12 @@ class InstancePolicy extends \Google\Collection
     return $this->bootDisk;
   }
   /**
-   * @param AttachedDisk[]
+   * Non-boot disks to be attached for each VM created by this InstancePolicy.
+   * New disks will be deleted when the VM is deleted. A non-boot disk is a disk
+   * that can be of a device with a file system or a raw storage drive that is
+   * not ready for data storage and accessing.
+   *
+   * @param AttachedDisk[] $disks
    */
   public function setDisks($disks)
   {
@@ -86,7 +139,9 @@ class InstancePolicy extends \Google\Collection
     return $this->disks;
   }
   /**
-   * @param string
+   * The Compute Engine machine type.
+   *
+   * @param string $machineType
    */
   public function setMachineType($machineType)
   {
@@ -100,7 +155,10 @@ class InstancePolicy extends \Google\Collection
     return $this->machineType;
   }
   /**
-   * @param string
+   * The minimum CPU platform. See
+   * https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
+   *
+   * @param string $minCpuPlatform
    */
   public function setMinCpuPlatform($minCpuPlatform)
   {
@@ -114,21 +172,31 @@ class InstancePolicy extends \Google\Collection
     return $this->minCpuPlatform;
   }
   /**
-   * @param string
+   * The provisioning model.
+   *
+   * Accepted values: PROVISIONING_MODEL_UNSPECIFIED, STANDARD, SPOT,
+   * PREEMPTIBLE, RESERVATION_BOUND, FLEX_START
+   *
+   * @param self::PROVISIONING_MODEL_* $provisioningModel
    */
   public function setProvisioningModel($provisioningModel)
   {
     $this->provisioningModel = $provisioningModel;
   }
   /**
-   * @return string
+   * @return self::PROVISIONING_MODEL_*
    */
   public function getProvisioningModel()
   {
     return $this->provisioningModel;
   }
   /**
-   * @param string
+   * Optional. If not specified (default), VMs will consume any applicable
+   * reservation. If "NO_RESERVATION" is specified, VMs will not consume any
+   * reservation. Otherwise, if specified, VMs will consume only the specified
+   * reservation.
+   *
+   * @param string $reservation
    */
   public function setReservation($reservation)
   {

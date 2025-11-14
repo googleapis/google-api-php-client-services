@@ -22,12 +22,17 @@ class ReportRequestOrderBy extends \Google\Model
   protected $columnType = ReportApiColumnSpec::class;
   protected $columnDataType = '';
   /**
+   * The sort direction, which is either `ascending` or `descending`.
+   *
    * @var string
    */
   public $sortOrder;
 
   /**
-   * @param ReportApiColumnSpec
+   * Column to perform the sort on. This can be a DoubleClick Search-defined
+   * column or a saved column.
+   *
+   * @param ReportApiColumnSpec $column
    */
   public function setColumn(ReportApiColumnSpec $column)
   {
@@ -41,7 +46,9 @@ class ReportRequestOrderBy extends \Google\Model
     return $this->column;
   }
   /**
-   * @param string
+   * The sort direction, which is either `ascending` or `descending`.
+   *
+   * @param string $sortOrder
    */
   public function setSortOrder($sortOrder)
   {

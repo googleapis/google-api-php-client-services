@@ -20,24 +20,34 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1SuggestTrialsMetadata extends \Google\Model
 {
   /**
+   * The identifier of the client that is requesting the suggestion.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * The time operation was submitted.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The name of the study that the trial belongs to.
+   *
    * @var string
    */
   public $study;
   /**
+   * The number of suggestions requested.
+   *
    * @var int
    */
   public $suggestionCount;
 
   /**
-   * @param string
+   * The identifier of the client that is requesting the suggestion.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -51,7 +61,9 @@ class GoogleCloudMlV1SuggestTrialsMetadata extends \Google\Model
     return $this->clientId;
   }
   /**
-   * @param string
+   * The time operation was submitted.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -65,7 +77,9 @@ class GoogleCloudMlV1SuggestTrialsMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The name of the study that the trial belongs to.
+   *
+   * @param string $study
    */
   public function setStudy($study)
   {
@@ -79,7 +93,9 @@ class GoogleCloudMlV1SuggestTrialsMetadata extends \Google\Model
     return $this->study;
   }
   /**
-   * @param int
+   * The number of suggestions requested.
+   *
+   * @param int $suggestionCount
    */
   public function setSuggestionCount($suggestionCount)
   {

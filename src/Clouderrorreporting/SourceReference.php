@@ -20,16 +20,25 @@ namespace Google\Service\Clouderrorreporting;
 class SourceReference extends \Google\Model
 {
   /**
+   * Optional. A URI string identifying the repository. Example:
+   * "https://github.com/GoogleCloudPlatform/kubernetes.git"
+   *
    * @var string
    */
   public $repository;
   /**
+   * The canonical and persistent identifier of the deployed revision. Example
+   * (git): "0035781c50ec7aa23385dc841529ce8a4b70db1b"
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param string
+   * Optional. A URI string identifying the repository. Example:
+   * "https://github.com/GoogleCloudPlatform/kubernetes.git"
+   *
+   * @param string $repository
    */
   public function setRepository($repository)
   {
@@ -43,7 +52,10 @@ class SourceReference extends \Google\Model
     return $this->repository;
   }
   /**
-   * @param string
+   * The canonical and persistent identifier of the deployed revision. Example
+   * (git): "0035781c50ec7aa23385dc841529ce8a4b70db1b"
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

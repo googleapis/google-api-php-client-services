@@ -21,26 +21,39 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
 {
   protected $collection_key = 'targetMetrics';
   /**
+   * Indicates whether read pool auto scaling supports scale in operations
+   * (removing nodes).
+   *
    * @var bool
    */
   public $disableScaleIn;
   /**
+   * Indicates whether read pool auto scaling is enabled.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Maximum number of read pool nodes to be maintained.
+   *
    * @var int
    */
   public $maxNodeCount;
   /**
+   * Minimum number of read pool nodes to be maintained.
+   *
    * @var int
    */
   public $minNodeCount;
   /**
+   * The cooldown period for scale-in operations.
+   *
    * @var int
    */
   public $scaleInCooldownSeconds;
   /**
+   * The cooldown period for scale-out operations.
+   *
    * @var int
    */
   public $scaleOutCooldownSeconds;
@@ -48,7 +61,10 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
   protected $targetMetricsDataType = 'array';
 
   /**
-   * @param bool
+   * Indicates whether read pool auto scaling supports scale in operations
+   * (removing nodes).
+   *
+   * @param bool $disableScaleIn
    */
   public function setDisableScaleIn($disableScaleIn)
   {
@@ -62,7 +78,9 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
     return $this->disableScaleIn;
   }
   /**
-   * @param bool
+   * Indicates whether read pool auto scaling is enabled.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -76,7 +94,9 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
     return $this->enabled;
   }
   /**
-   * @param int
+   * Maximum number of read pool nodes to be maintained.
+   *
+   * @param int $maxNodeCount
    */
   public function setMaxNodeCount($maxNodeCount)
   {
@@ -90,7 +110,9 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
     return $this->maxNodeCount;
   }
   /**
-   * @param int
+   * Minimum number of read pool nodes to be maintained.
+   *
+   * @param int $minNodeCount
    */
   public function setMinNodeCount($minNodeCount)
   {
@@ -104,7 +126,9 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
     return $this->minNodeCount;
   }
   /**
-   * @param int
+   * The cooldown period for scale-in operations.
+   *
+   * @param int $scaleInCooldownSeconds
    */
   public function setScaleInCooldownSeconds($scaleInCooldownSeconds)
   {
@@ -118,7 +142,9 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
     return $this->scaleInCooldownSeconds;
   }
   /**
-   * @param int
+   * The cooldown period for scale-out operations.
+   *
+   * @param int $scaleOutCooldownSeconds
    */
   public function setScaleOutCooldownSeconds($scaleOutCooldownSeconds)
   {
@@ -132,7 +158,9 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
     return $this->scaleOutCooldownSeconds;
   }
   /**
-   * @param TargetMetric[]
+   * Optional. Target metrics for read pool auto scaling.
+   *
+   * @param TargetMetric[] $targetMetrics
    */
   public function setTargetMetrics($targetMetrics)
   {

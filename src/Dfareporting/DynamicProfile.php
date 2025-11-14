@@ -19,45 +19,93 @@ namespace Google\Service\Dfareporting;
 
 class DynamicProfile extends \Google\Model
 {
+  /**
+   * The dynamic profile archive status is unknown. This value is unused.
+   */
+  public const ARCHIVE_STATUS_ARCHIVE_STATUS_UNKNOWN = 'ARCHIVE_STATUS_UNKNOWN';
+  /**
+   * The dynamic profile archive status is unarchived.
+   */
+  public const ARCHIVE_STATUS_UNARCHIVED = 'UNARCHIVED';
+  /**
+   * The dynamic profile archive status is archived.
+   */
+  public const ARCHIVE_STATUS_ARCHIVED = 'ARCHIVED';
+  /**
+   * The dynamic profile status is unknown. This value is unused.
+   */
+  public const STATUS_STATUS_UNKNOWN = 'STATUS_UNKNOWN';
+  /**
+   * The dynamic profile is active.
+   */
+  public const STATUS_ACTIVE = 'ACTIVE';
+  /**
+   * The dynamic profile is inactive.
+   */
+  public const STATUS_INACTIVE = 'INACTIVE';
+  /**
+   * The dynamic profile is deleted.
+   */
+  public const STATUS_DELETED = 'DELETED';
   protected $activeType = DynamicProfileVersion::class;
   protected $activeDataType = '';
   /**
+   * Optional. Archive status of this dynamic profile.
+   *
    * @var string
    */
   public $archiveStatus;
   protected $createInfoType = LastModifiedInfo::class;
   protected $createInfoDataType = '';
   /**
+   * Optional. Description of this dynamic profile.
+   *
    * @var string
    */
   public $description;
   protected $draftType = DynamicProfileVersion::class;
   protected $draftDataType = '';
   /**
+   * Output only. Unique ID of this dynamic profile. This is a read-only, auto-
+   * generated field.
+   *
    * @var string
    */
   public $dynamicProfileId;
   /**
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string "dfareporting#dynamicProfile".
+   *
    * @var string
    */
   public $kind;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**
+   * Required. Identifier. Name of this dynamic profile. This is a required
+   * field and must be less than 256 characters long.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Status of this dynamic profile.
+   *
    * @var string
    */
   public $status;
   /**
+   * Required. Advertiser ID of this dynamic profile. This is a required field
+   * on insertion.
+   *
    * @var string
    */
   public $studioAdvertiserId;
 
   /**
-   * @param DynamicProfileVersion
+   * Optional. Active version of the dynamic profile.
+   *
+   * @param DynamicProfileVersion $active
    */
   public function setActive(DynamicProfileVersion $active)
   {
@@ -71,21 +119,28 @@ class DynamicProfile extends \Google\Model
     return $this->active;
   }
   /**
-   * @param string
+   * Optional. Archive status of this dynamic profile.
+   *
+   * Accepted values: ARCHIVE_STATUS_UNKNOWN, UNARCHIVED, ARCHIVED
+   *
+   * @param self::ARCHIVE_STATUS_* $archiveStatus
    */
   public function setArchiveStatus($archiveStatus)
   {
     $this->archiveStatus = $archiveStatus;
   }
   /**
-   * @return string
+   * @return self::ARCHIVE_STATUS_*
    */
   public function getArchiveStatus()
   {
     return $this->archiveStatus;
   }
   /**
-   * @param LastModifiedInfo
+   * Output only. The creation timestamp of the dynamic profile. This is a read-
+   * only field.
+   *
+   * @param LastModifiedInfo $createInfo
    */
   public function setCreateInfo(LastModifiedInfo $createInfo)
   {
@@ -99,7 +154,9 @@ class DynamicProfile extends \Google\Model
     return $this->createInfo;
   }
   /**
-   * @param string
+   * Optional. Description of this dynamic profile.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -113,7 +170,9 @@ class DynamicProfile extends \Google\Model
     return $this->description;
   }
   /**
-   * @param DynamicProfileVersion
+   * Optional. Draft version of the dynamic profile.
+   *
+   * @param DynamicProfileVersion $draft
    */
   public function setDraft(DynamicProfileVersion $draft)
   {
@@ -127,7 +186,10 @@ class DynamicProfile extends \Google\Model
     return $this->draft;
   }
   /**
-   * @param string
+   * Output only. Unique ID of this dynamic profile. This is a read-only, auto-
+   * generated field.
+   *
+   * @param string $dynamicProfileId
    */
   public function setDynamicProfileId($dynamicProfileId)
   {
@@ -141,7 +203,10 @@ class DynamicProfile extends \Google\Model
     return $this->dynamicProfileId;
   }
   /**
-   * @param string
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string "dfareporting#dynamicProfile".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -155,7 +220,10 @@ class DynamicProfile extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param LastModifiedInfo
+   * Output only. The last modified timestamp of the dynamic profile. This is a
+   * read-only field.
+   *
+   * @param LastModifiedInfo $lastModifiedInfo
    */
   public function setLastModifiedInfo(LastModifiedInfo $lastModifiedInfo)
   {
@@ -169,7 +237,10 @@ class DynamicProfile extends \Google\Model
     return $this->lastModifiedInfo;
   }
   /**
-   * @param string
+   * Required. Identifier. Name of this dynamic profile. This is a required
+   * field and must be less than 256 characters long.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -183,21 +254,28 @@ class DynamicProfile extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. Status of this dynamic profile.
+   *
+   * Accepted values: STATUS_UNKNOWN, ACTIVE, INACTIVE, DELETED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * Required. Advertiser ID of this dynamic profile. This is a required field
+   * on insertion.
+   *
+   * @param string $studioAdvertiserId
    */
   public function setStudioAdvertiserId($studioAdvertiserId)
   {

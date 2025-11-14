@@ -25,7 +25,9 @@ class AllowedKeyType extends \Google\Model
   protected $rsaDataType = '';
 
   /**
-   * @param EcKeyType
+   * Represents an allowed Elliptic Curve key type.
+   *
+   * @param EcKeyType $ellipticCurve
    */
   public function setEllipticCurve(EcKeyType $ellipticCurve)
   {
@@ -39,7 +41,9 @@ class AllowedKeyType extends \Google\Model
     return $this->ellipticCurve;
   }
   /**
-   * @param RsaKeyType
+   * Represents an allowed RSA key type.
+   *
+   * @param RsaKeyType $rsa
    */
   public function setRsa(RsaKeyType $rsa)
   {

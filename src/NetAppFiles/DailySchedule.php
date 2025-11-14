@@ -19,8 +19,24 @@ namespace Google\Service\NetAppFiles;
 
 class DailySchedule extends \Google\Model
 {
+  /**
+   * Set the hour to start the snapshot (0-23), defaults to midnight (0).
+   *
+   * @var 
+   */
   public $hour;
+  /**
+   * Set the minute of the hour to start the snapshot (0-59), defaults to the
+   * top of the hour (0).
+   *
+   * @var 
+   */
   public $minute;
+  /**
+   * The maximum number of Snapshots to keep for the hourly schedule
+   *
+   * @var 
+   */
   public $snapshotsToKeep;
 
   public function setHour($hour)

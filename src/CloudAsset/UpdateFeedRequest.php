@@ -22,12 +22,22 @@ class UpdateFeedRequest extends \Google\Model
   protected $feedType = Feed::class;
   protected $feedDataType = '';
   /**
+   * Required. Only updates the `feed` fields indicated by this mask. The field
+   * mask must not be empty, and it must not contain fields that are immutable
+   * or only set by the server.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param Feed
+   * Required. The new values of feed details. It must match an existing feed
+   * and the field `name` must be in the format of:
+   * projects/project_number/feeds/feed_id or
+   * folders/folder_number/feeds/feed_id or
+   * organizations/organization_number/feeds/feed_id.
+   *
+   * @param Feed $feed
    */
   public function setFeed(Feed $feed)
   {
@@ -41,7 +51,11 @@ class UpdateFeedRequest extends \Google\Model
     return $this->feed;
   }
   /**
-   * @param string
+   * Required. Only updates the `feed` fields indicated by this mask. The field
+   * mask must not be empty, and it must not contain fields that are immutable
+   * or only set by the server.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

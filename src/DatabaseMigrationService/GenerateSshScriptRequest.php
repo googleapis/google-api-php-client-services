@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class GenerateSshScriptRequest extends \Google\Model
 {
   /**
+   * Required. Bastion VM Instance name to use or to create.
+   *
    * @var string
    */
   public $vm;
   protected $vmCreationConfigType = VmCreationConfig::class;
   protected $vmCreationConfigDataType = '';
   /**
+   * The port that will be open on the bastion host.
+   *
    * @var int
    */
   public $vmPort;
@@ -33,7 +37,9 @@ class GenerateSshScriptRequest extends \Google\Model
   protected $vmSelectionConfigDataType = '';
 
   /**
-   * @param string
+   * Required. Bastion VM Instance name to use or to create.
+   *
+   * @param string $vm
    */
   public function setVm($vm)
   {
@@ -47,7 +53,9 @@ class GenerateSshScriptRequest extends \Google\Model
     return $this->vm;
   }
   /**
-   * @param VmCreationConfig
+   * The VM creation configuration
+   *
+   * @param VmCreationConfig $vmCreationConfig
    */
   public function setVmCreationConfig(VmCreationConfig $vmCreationConfig)
   {
@@ -61,7 +69,9 @@ class GenerateSshScriptRequest extends \Google\Model
     return $this->vmCreationConfig;
   }
   /**
-   * @param int
+   * The port that will be open on the bastion host.
+   *
+   * @param int $vmPort
    */
   public function setVmPort($vmPort)
   {
@@ -75,7 +85,9 @@ class GenerateSshScriptRequest extends \Google\Model
     return $this->vmPort;
   }
   /**
-   * @param VmSelectionConfig
+   * The VM selection configuration
+   *
+   * @param VmSelectionConfig $vmSelectionConfig
    */
   public function setVmSelectionConfig(VmSelectionConfig $vmSelectionConfig)
   {

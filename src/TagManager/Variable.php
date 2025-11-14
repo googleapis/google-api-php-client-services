@@ -21,72 +21,109 @@ class Variable extends \Google\Collection
 {
   protected $collection_key = 'parameter';
   /**
+   * GTM Account ID.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * GTM Container ID.
+   *
    * @var string
    */
   public $containerId;
   /**
+   * For mobile containers only: A list of trigger IDs for disabling conditional
+   * variables; the variable is enabled if one of the enabling trigger is true
+   * while all the disabling trigger are false. Treated as an unordered set.
+   *
    * @var string[]
    */
   public $disablingTriggerId;
   /**
+   * For mobile containers only: A list of trigger IDs for enabling conditional
+   * variables; the variable is enabled if one of the enabling triggers is true
+   * while all the disabling triggers are false. Treated as an unordered set.
+   *
    * @var string[]
    */
   public $enablingTriggerId;
   /**
+   * The fingerprint of the GTM Variable as computed at storage time. This value
+   * is recomputed whenever the variable is modified.
+   *
    * @var string
    */
   public $fingerprint;
   protected $formatValueType = VariableFormatValue::class;
   protected $formatValueDataType = '';
   /**
+   * Variable display name.
+   *
    * @var string
    */
   public $name;
   /**
+   * User notes on how to apply this variable in the container.
+   *
    * @var string
    */
   public $notes;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
   /**
+   * Parent folder id.
+   *
    * @var string
    */
   public $parentFolderId;
   /**
+   * GTM Variable's API relative path.
+   *
    * @var string
    */
   public $path;
   /**
+   * The end timestamp in milliseconds to schedule a variable.
+   *
    * @var string
    */
   public $scheduleEndMs;
   /**
+   * The start timestamp in milliseconds to schedule a variable.
+   *
    * @var string
    */
   public $scheduleStartMs;
   /**
+   * Auto generated link to the tag manager UI
+   *
    * @var string
    */
   public $tagManagerUrl;
   /**
+   * GTM Variable Type.
+   *
    * @var string
    */
   public $type;
   /**
+   * The Variable ID uniquely identifies the GTM Variable.
+   *
    * @var string
    */
   public $variableId;
   /**
+   * GTM Workspace ID.
+   *
    * @var string
    */
   public $workspaceId;
 
   /**
-   * @param string
+   * GTM Account ID.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -100,7 +137,9 @@ class Variable extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param string
+   * GTM Container ID.
+   *
+   * @param string $containerId
    */
   public function setContainerId($containerId)
   {
@@ -114,7 +153,11 @@ class Variable extends \Google\Collection
     return $this->containerId;
   }
   /**
-   * @param string[]
+   * For mobile containers only: A list of trigger IDs for disabling conditional
+   * variables; the variable is enabled if one of the enabling trigger is true
+   * while all the disabling trigger are false. Treated as an unordered set.
+   *
+   * @param string[] $disablingTriggerId
    */
   public function setDisablingTriggerId($disablingTriggerId)
   {
@@ -128,7 +171,11 @@ class Variable extends \Google\Collection
     return $this->disablingTriggerId;
   }
   /**
-   * @param string[]
+   * For mobile containers only: A list of trigger IDs for enabling conditional
+   * variables; the variable is enabled if one of the enabling triggers is true
+   * while all the disabling triggers are false. Treated as an unordered set.
+   *
+   * @param string[] $enablingTriggerId
    */
   public function setEnablingTriggerId($enablingTriggerId)
   {
@@ -142,7 +189,10 @@ class Variable extends \Google\Collection
     return $this->enablingTriggerId;
   }
   /**
-   * @param string
+   * The fingerprint of the GTM Variable as computed at storage time. This value
+   * is recomputed whenever the variable is modified.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -156,7 +206,9 @@ class Variable extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * @param VariableFormatValue
+   * Option to convert a variable value to other value.
+   *
+   * @param VariableFormatValue $formatValue
    */
   public function setFormatValue(VariableFormatValue $formatValue)
   {
@@ -170,7 +222,9 @@ class Variable extends \Google\Collection
     return $this->formatValue;
   }
   /**
-   * @param string
+   * Variable display name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -184,7 +238,9 @@ class Variable extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * User notes on how to apply this variable in the container.
+   *
+   * @param string $notes
    */
   public function setNotes($notes)
   {
@@ -198,7 +254,9 @@ class Variable extends \Google\Collection
     return $this->notes;
   }
   /**
-   * @param Parameter[]
+   * The variable's parameters.
+   *
+   * @param Parameter[] $parameter
    */
   public function setParameter($parameter)
   {
@@ -212,7 +270,9 @@ class Variable extends \Google\Collection
     return $this->parameter;
   }
   /**
-   * @param string
+   * Parent folder id.
+   *
+   * @param string $parentFolderId
    */
   public function setParentFolderId($parentFolderId)
   {
@@ -226,7 +286,9 @@ class Variable extends \Google\Collection
     return $this->parentFolderId;
   }
   /**
-   * @param string
+   * GTM Variable's API relative path.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -240,7 +302,9 @@ class Variable extends \Google\Collection
     return $this->path;
   }
   /**
-   * @param string
+   * The end timestamp in milliseconds to schedule a variable.
+   *
+   * @param string $scheduleEndMs
    */
   public function setScheduleEndMs($scheduleEndMs)
   {
@@ -254,7 +318,9 @@ class Variable extends \Google\Collection
     return $this->scheduleEndMs;
   }
   /**
-   * @param string
+   * The start timestamp in milliseconds to schedule a variable.
+   *
+   * @param string $scheduleStartMs
    */
   public function setScheduleStartMs($scheduleStartMs)
   {
@@ -268,7 +334,9 @@ class Variable extends \Google\Collection
     return $this->scheduleStartMs;
   }
   /**
-   * @param string
+   * Auto generated link to the tag manager UI
+   *
+   * @param string $tagManagerUrl
    */
   public function setTagManagerUrl($tagManagerUrl)
   {
@@ -282,7 +350,9 @@ class Variable extends \Google\Collection
     return $this->tagManagerUrl;
   }
   /**
-   * @param string
+   * GTM Variable Type.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -296,7 +366,9 @@ class Variable extends \Google\Collection
     return $this->type;
   }
   /**
-   * @param string
+   * The Variable ID uniquely identifies the GTM Variable.
+   *
+   * @param string $variableId
    */
   public function setVariableId($variableId)
   {
@@ -310,7 +382,9 @@ class Variable extends \Google\Collection
     return $this->variableId;
   }
   /**
-   * @param string
+   * GTM Workspace ID.
+   *
+   * @param string $workspaceId
    */
   public function setWorkspaceId($workspaceId)
   {

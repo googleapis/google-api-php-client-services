@@ -23,12 +23,17 @@ class ListExecutionsResponse extends \Google\Collection
   protected $executionsType = Execution::class;
   protected $executionsDataType = 'array';
   /**
+   * A continuation token to resume the query at the next item. Will only be set
+   * if there are more Executions to fetch.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Execution[]
+   * Executions. Always set.
+   *
+   * @param Execution[] $executions
    */
   public function setExecutions($executions)
   {
@@ -42,7 +47,10 @@ class ListExecutionsResponse extends \Google\Collection
     return $this->executions;
   }
   /**
-   * @param string
+   * A continuation token to resume the query at the next item. Will only be set
+   * if there are more Executions to fetch.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

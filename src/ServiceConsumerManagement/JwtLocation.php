@@ -20,24 +20,39 @@ namespace Google\Service\ServiceConsumerManagement;
 class JwtLocation extends \Google\Model
 {
   /**
+   * Specifies cookie name to extract JWT token.
+   *
    * @var string
    */
   public $cookie;
   /**
+   * Specifies HTTP header name to extract JWT token.
+   *
    * @var string
    */
   public $header;
   /**
+   * Specifies URL query parameter name to extract JWT token.
+   *
    * @var string
    */
   public $query;
   /**
+   * The value prefix. The value format is "value_prefix{token}" Only applies to
+   * "in" header type. Must be empty for "in" query type. If not empty, the
+   * header value has to match (case sensitive) this prefix. If not matched, JWT
+   * will not be extracted. If matched, JWT will be extracted after the prefix
+   * is removed. For example, for "Authorization: Bearer {JWT}",
+   * value_prefix="Bearer " with a space at the end.
+   *
    * @var string
    */
   public $valuePrefix;
 
   /**
-   * @param string
+   * Specifies cookie name to extract JWT token.
+   *
+   * @param string $cookie
    */
   public function setCookie($cookie)
   {
@@ -51,7 +66,9 @@ class JwtLocation extends \Google\Model
     return $this->cookie;
   }
   /**
-   * @param string
+   * Specifies HTTP header name to extract JWT token.
+   *
+   * @param string $header
    */
   public function setHeader($header)
   {
@@ -65,7 +82,9 @@ class JwtLocation extends \Google\Model
     return $this->header;
   }
   /**
-   * @param string
+   * Specifies URL query parameter name to extract JWT token.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -79,7 +98,14 @@ class JwtLocation extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * The value prefix. The value format is "value_prefix{token}" Only applies to
+   * "in" header type. Must be empty for "in" query type. If not empty, the
+   * header value has to match (case sensitive) this prefix. If not matched, JWT
+   * will not be extracted. If matched, JWT will be extracted after the prefix
+   * is removed. For example, for "Authorization: Bearer {JWT}",
+   * value_prefix="Bearer " with a space at the end.
+   *
+   * @param string $valuePrefix
    */
   public function setValuePrefix($valuePrefix)
   {

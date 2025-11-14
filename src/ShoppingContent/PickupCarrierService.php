@@ -20,16 +20,22 @@ namespace Google\Service\ShoppingContent;
 class PickupCarrierService extends \Google\Model
 {
   /**
+   * The name of the pickup carrier (for example, `"UPS"`). Required.
+   *
    * @var string
    */
   public $carrierName;
   /**
+   * The name of the pickup service (for example, `"Access point"`). Required.
+   *
    * @var string
    */
   public $serviceName;
 
   /**
-   * @param string
+   * The name of the pickup carrier (for example, `"UPS"`). Required.
+   *
+   * @param string $carrierName
    */
   public function setCarrierName($carrierName)
   {
@@ -43,7 +49,9 @@ class PickupCarrierService extends \Google\Model
     return $this->carrierName;
   }
   /**
-   * @param string
+   * The name of the pickup service (for example, `"Access point"`). Required.
+   *
+   * @param string $serviceName
    */
   public function setServiceName($serviceName)
   {

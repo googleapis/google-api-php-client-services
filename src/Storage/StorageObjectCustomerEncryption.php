@@ -20,16 +20,22 @@ namespace Google\Service\Storage;
 class StorageObjectCustomerEncryption extends \Google\Model
 {
   /**
+   * The encryption algorithm.
+   *
    * @var string
    */
   public $encryptionAlgorithm;
   /**
+   * SHA256 hash value of the encryption key.
+   *
    * @var string
    */
   public $keySha256;
 
   /**
-   * @param string
+   * The encryption algorithm.
+   *
+   * @param string $encryptionAlgorithm
    */
   public function setEncryptionAlgorithm($encryptionAlgorithm)
   {
@@ -43,7 +49,9 @@ class StorageObjectCustomerEncryption extends \Google\Model
     return $this->encryptionAlgorithm;
   }
   /**
-   * @param string
+   * SHA256 hash value of the encryption key.
+   *
+   * @param string $keySha256
    */
   public function setKeySha256($keySha256)
   {

@@ -23,28 +23,50 @@ class HostConfig extends \Google\Collection
   protected $caType = CertificateConfig::class;
   protected $caDataType = 'array';
   /**
+   * Capabilities represent the capabilities of the registry host, specifying
+   * what operations a host is capable of performing. If not set, containerd
+   * enables all capabilities by default.
+   *
    * @var string[]
    */
   public $capabilities;
   protected $clientType = CertificateConfigPair::class;
   protected $clientDataType = 'array';
   /**
+   * Specifies the maximum duration allowed for a connection attempt to
+   * complete. A shorter timeout helps reduce delays when falling back to the
+   * original registry if the mirror is unreachable. Maximum allowed value is
+   * 180s. If not set, containerd sets default 30s. The value should be a
+   * decimal number of seconds with an `s` suffix.
+   *
    * @var string
    */
   public $dialTimeout;
   protected $headerType = RegistryHeader::class;
   protected $headerDataType = 'array';
   /**
+   * Host configures the registry host/mirror. It supports fully qualified
+   * domain names (FQDN) and IP addresses: Specifying port is supported.
+   * Wildcards are NOT supported. Examples: - my.customdomain.com -
+   * 10.0.1.2:5000
+   *
    * @var string
    */
   public $host;
   /**
+   * OverridePath is used to indicate the host's API root endpoint is defined in
+   * the URL path rather than by the API specification. This may be used with
+   * non-compliant OCI registries which are missing the /v2 prefix. If not set,
+   * containerd sets default false.
+   *
    * @var bool
    */
   public $overridePath;
 
   /**
-   * @param CertificateConfig[]
+   * CA configures the registry host certificate.
+   *
+   * @param CertificateConfig[] $ca
    */
   public function setCa($ca)
   {
@@ -58,7 +80,11 @@ class HostConfig extends \Google\Collection
     return $this->ca;
   }
   /**
-   * @param string[]
+   * Capabilities represent the capabilities of the registry host, specifying
+   * what operations a host is capable of performing. If not set, containerd
+   * enables all capabilities by default.
+   *
+   * @param string[] $capabilities
    */
   public function setCapabilities($capabilities)
   {
@@ -72,7 +98,9 @@ class HostConfig extends \Google\Collection
     return $this->capabilities;
   }
   /**
-   * @param CertificateConfigPair[]
+   * Client configures the registry host client certificate and key.
+   *
+   * @param CertificateConfigPair[] $client
    */
   public function setClient($client)
   {
@@ -86,7 +114,13 @@ class HostConfig extends \Google\Collection
     return $this->client;
   }
   /**
-   * @param string
+   * Specifies the maximum duration allowed for a connection attempt to
+   * complete. A shorter timeout helps reduce delays when falling back to the
+   * original registry if the mirror is unreachable. Maximum allowed value is
+   * 180s. If not set, containerd sets default 30s. The value should be a
+   * decimal number of seconds with an `s` suffix.
+   *
+   * @param string $dialTimeout
    */
   public function setDialTimeout($dialTimeout)
   {
@@ -100,7 +134,9 @@ class HostConfig extends \Google\Collection
     return $this->dialTimeout;
   }
   /**
-   * @param RegistryHeader[]
+   * Header configures the registry host headers.
+   *
+   * @param RegistryHeader[] $header
    */
   public function setHeader($header)
   {
@@ -114,7 +150,12 @@ class HostConfig extends \Google\Collection
     return $this->header;
   }
   /**
-   * @param string
+   * Host configures the registry host/mirror. It supports fully qualified
+   * domain names (FQDN) and IP addresses: Specifying port is supported.
+   * Wildcards are NOT supported. Examples: - my.customdomain.com -
+   * 10.0.1.2:5000
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -128,7 +169,12 @@ class HostConfig extends \Google\Collection
     return $this->host;
   }
   /**
-   * @param bool
+   * OverridePath is used to indicate the host's API root endpoint is defined in
+   * the URL path rather than by the API specification. This may be used with
+   * non-compliant OCI registries which are missing the /v2 prefix. If not set,
+   * containerd sets default false.
+   *
+   * @param bool $overridePath
    */
   public function setOverridePath($overridePath)
   {

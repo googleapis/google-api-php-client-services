@@ -23,10 +23,20 @@ class PrimaryBackupPolicy extends \Google\Model
   protected $backupGeoTargetsDataType = '';
   protected $primaryTargetsType = HealthCheckTargets::class;
   protected $primaryTargetsDataType = '';
+  /**
+   * When serving state is `PRIMARY`, this field provides the option of sending
+   * a small percentage of the traffic to the backup targets.
+   *
+   * @var 
+   */
   public $trickleTraffic;
 
   /**
-   * @param GeoPolicy
+   * Backup targets provide a regional failover policy for the otherwise global
+   * primary targets. If serving state is set to `BACKUP`, this policy
+   * essentially becomes a geo routing policy.
+   *
+   * @param GeoPolicy $backupGeoTargets
    */
   public function setBackupGeoTargets(GeoPolicy $backupGeoTargets)
   {
@@ -40,7 +50,11 @@ class PrimaryBackupPolicy extends \Google\Model
     return $this->backupGeoTargets;
   }
   /**
-   * @param HealthCheckTargets
+   * Endpoints that are health checked before making the routing decision.
+   * Unhealthy endpoints are omitted from the results. If all endpoints are
+   * unhealthy, we serve a response based on the `backup_geo_targets`.
+   *
+   * @param HealthCheckTargets $primaryTargets
    */
   public function setPrimaryTargets(HealthCheckTargets $primaryTargets)
   {

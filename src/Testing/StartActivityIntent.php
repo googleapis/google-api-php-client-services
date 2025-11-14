@@ -21,20 +21,28 @@ class StartActivityIntent extends \Google\Collection
 {
   protected $collection_key = 'categories';
   /**
+   * Action name. Required for START_ACTIVITY.
+   *
    * @var string
    */
   public $action;
   /**
+   * Intent categories to set on the intent.
+   *
    * @var string[]
    */
   public $categories;
   /**
+   * URI for the action.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Action name. Required for START_ACTIVITY.
+   *
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -48,7 +56,9 @@ class StartActivityIntent extends \Google\Collection
     return $this->action;
   }
   /**
-   * @param string[]
+   * Intent categories to set on the intent.
+   *
+   * @param string[] $categories
    */
   public function setCategories($categories)
   {
@@ -62,7 +72,9 @@ class StartActivityIntent extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param string
+   * URI for the action.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

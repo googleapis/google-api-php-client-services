@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GdataDiffVersionResponse extends \Google\Model
 {
   /**
+   * The total size of the server object.
+   *
    * @var string
    */
   public $objectSizeBytes;
   /**
+   * The version of the object stored at the server.
+   *
    * @var string
    */
   public $objectVersion;
 
   /**
-   * @param string
+   * The total size of the server object.
+   *
+   * @param string $objectSizeBytes
    */
   public function setObjectSizeBytes($objectSizeBytes)
   {
@@ -43,7 +49,9 @@ class GdataDiffVersionResponse extends \Google\Model
     return $this->objectSizeBytes;
   }
   /**
-   * @param string
+   * The version of the object stored at the server.
+   *
+   * @param string $objectVersion
    */
   public function setObjectVersion($objectVersion)
   {

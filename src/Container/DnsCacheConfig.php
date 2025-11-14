@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class DnsCacheConfig extends \Google\Model
 {
   /**
+   * Whether NodeLocal DNSCache is enabled for this cluster.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether NodeLocal DNSCache is enabled for this cluster.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

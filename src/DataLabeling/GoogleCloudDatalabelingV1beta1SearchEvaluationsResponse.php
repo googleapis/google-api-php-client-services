@@ -23,12 +23,16 @@ class GoogleCloudDatalabelingV1beta1SearchEvaluationsResponse extends \Google\Co
   protected $evaluationsType = GoogleCloudDatalabelingV1beta1Evaluation::class;
   protected $evaluationsDataType = 'array';
   /**
+   * A token to retrieve next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1Evaluation[]
+   * The list of evaluations matching the search.
+   *
+   * @param GoogleCloudDatalabelingV1beta1Evaluation[] $evaluations
    */
   public function setEvaluations($evaluations)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDatalabelingV1beta1SearchEvaluationsResponse extends \Google\Co
     return $this->evaluations;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

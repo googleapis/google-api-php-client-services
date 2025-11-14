@@ -22,20 +22,37 @@ class CreateClusterRequest extends \Google\Model
   protected $clusterType = Cluster::class;
   protected $clusterDataType = '';
   /**
+   * The parent (project and location) where the cluster will be created.
+   * Specified in the format `projects/locations`.
+   *
    * @var string
    */
   public $parent;
   /**
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the parent field.
+   *
+   * @deprecated
    * @var string
    */
   public $projectId;
   /**
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the parent
+   * field.
+   *
+   * @deprecated
    * @var string
    */
   public $zone;
 
   /**
-   * @param Cluster
+   * Required. A [cluster resource](https://cloud.google.com/container-
+   * engine/reference/rest/v1/projects.locations.clusters)
+   *
+   * @param Cluster $cluster
    */
   public function setCluster(Cluster $cluster)
   {
@@ -49,7 +66,10 @@ class CreateClusterRequest extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * The parent (project and location) where the cluster will be created.
+   * Specified in the format `projects/locations`.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -63,13 +83,19 @@ class CreateClusterRequest extends \Google\Model
     return $this->parent;
   }
   /**
-   * @param string
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the parent field.
+   *
+   * @deprecated
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
     $this->projectId = $projectId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProjectId()
@@ -77,13 +103,20 @@ class CreateClusterRequest extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the parent
+   * field.
+   *
+   * @deprecated
+   * @param string $zone
    */
   public function setZone($zone)
   {
     $this->zone = $zone;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getZone()

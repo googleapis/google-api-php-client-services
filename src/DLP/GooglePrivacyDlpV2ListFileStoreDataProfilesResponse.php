@@ -23,12 +23,16 @@ class GooglePrivacyDlpV2ListFileStoreDataProfilesResponse extends \Google\Collec
   protected $fileStoreDataProfilesType = GooglePrivacyDlpV2FileStoreDataProfile::class;
   protected $fileStoreDataProfilesDataType = 'array';
   /**
+   * The next page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GooglePrivacyDlpV2FileStoreDataProfile[]
+   * List of data profiles.
+   *
+   * @param GooglePrivacyDlpV2FileStoreDataProfile[] $fileStoreDataProfiles
    */
   public function setFileStoreDataProfiles($fileStoreDataProfiles)
   {
@@ -42,7 +46,9 @@ class GooglePrivacyDlpV2ListFileStoreDataProfilesResponse extends \Google\Collec
     return $this->fileStoreDataProfiles;
   }
   /**
-   * @param string
+   * The next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

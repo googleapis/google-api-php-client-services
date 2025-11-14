@@ -20,12 +20,20 @@ namespace Google\Service\Storagetransfer;
 class TransferManifest extends \Google\Model
 {
   /**
+   * Specifies the path to the manifest in Cloud Storage. The Google-managed
+   * service account for the transfer must have `storage.objects.get` permission
+   * for this object. An example path is `gs://bucket_name/path/manifest.csv`.
+   *
    * @var string
    */
   public $location;
 
   /**
-   * @param string
+   * Specifies the path to the manifest in Cloud Storage. The Google-managed
+   * service account for the transfer must have `storage.objects.get` permission
+   * for this object. An example path is `gs://bucket_name/path/manifest.csv`.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {

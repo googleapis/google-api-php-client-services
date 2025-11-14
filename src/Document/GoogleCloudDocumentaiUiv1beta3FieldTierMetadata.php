@@ -20,12 +20,24 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3FieldTierMetadata extends \Google\Model
 {
   /**
+   * Integer that indicates the tier of a property. e.g. Invoice has entities
+   * that are classified as tier 1 which is the most important, while tier 2 and
+   * tier 3 less so. This attribute can be used to filter schema attributes
+   * before running eval. e.g. compute F1 score for only tier 1 entities. If not
+   * present this attribute should be inferred as 1.
+   *
    * @var int
    */
   public $tierLevel;
 
   /**
-   * @param int
+   * Integer that indicates the tier of a property. e.g. Invoice has entities
+   * that are classified as tier 1 which is the most important, while tier 2 and
+   * tier 3 less so. This attribute can be used to filter schema attributes
+   * before running eval. e.g. compute F1 score for only tier 1 entities. If not
+   * present this attribute should be inferred as 1.
+   *
+   * @param int $tierLevel
    */
   public function setTierLevel($tierLevel)
   {

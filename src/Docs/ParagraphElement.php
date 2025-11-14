@@ -24,6 +24,9 @@ class ParagraphElement extends \Google\Model
   protected $columnBreakType = ColumnBreak::class;
   protected $columnBreakDataType = '';
   /**
+   * The zero-base end index of this paragraph element, exclusive, in UTF-16
+   * code units.
+   *
    * @var int
    */
   public $endIndex;
@@ -42,6 +45,8 @@ class ParagraphElement extends \Google\Model
   protected $richLinkType = RichLink::class;
   protected $richLinkDataType = '';
   /**
+   * The zero-based start index of this paragraph element, in UTF-16 code units.
+   *
    * @var int
    */
   public $startIndex;
@@ -49,7 +54,9 @@ class ParagraphElement extends \Google\Model
   protected $textRunDataType = '';
 
   /**
-   * @param AutoText
+   * An auto text paragraph element.
+   *
+   * @param AutoText $autoText
    */
   public function setAutoText(AutoText $autoText)
   {
@@ -63,7 +70,9 @@ class ParagraphElement extends \Google\Model
     return $this->autoText;
   }
   /**
-   * @param ColumnBreak
+   * A column break paragraph element.
+   *
+   * @param ColumnBreak $columnBreak
    */
   public function setColumnBreak(ColumnBreak $columnBreak)
   {
@@ -77,7 +86,10 @@ class ParagraphElement extends \Google\Model
     return $this->columnBreak;
   }
   /**
-   * @param int
+   * The zero-base end index of this paragraph element, exclusive, in UTF-16
+   * code units.
+   *
+   * @param int $endIndex
    */
   public function setEndIndex($endIndex)
   {
@@ -91,7 +103,9 @@ class ParagraphElement extends \Google\Model
     return $this->endIndex;
   }
   /**
-   * @param Equation
+   * An equation paragraph element.
+   *
+   * @param Equation $equation
    */
   public function setEquation(Equation $equation)
   {
@@ -105,7 +119,9 @@ class ParagraphElement extends \Google\Model
     return $this->equation;
   }
   /**
-   * @param FootnoteReference
+   * A footnote reference paragraph element.
+   *
+   * @param FootnoteReference $footnoteReference
    */
   public function setFootnoteReference(FootnoteReference $footnoteReference)
   {
@@ -119,7 +135,9 @@ class ParagraphElement extends \Google\Model
     return $this->footnoteReference;
   }
   /**
-   * @param HorizontalRule
+   * A horizontal rule paragraph element.
+   *
+   * @param HorizontalRule $horizontalRule
    */
   public function setHorizontalRule(HorizontalRule $horizontalRule)
   {
@@ -133,7 +151,9 @@ class ParagraphElement extends \Google\Model
     return $this->horizontalRule;
   }
   /**
-   * @param InlineObjectElement
+   * An inline object paragraph element.
+   *
+   * @param InlineObjectElement $inlineObjectElement
    */
   public function setInlineObjectElement(InlineObjectElement $inlineObjectElement)
   {
@@ -147,7 +167,9 @@ class ParagraphElement extends \Google\Model
     return $this->inlineObjectElement;
   }
   /**
-   * @param PageBreak
+   * A page break paragraph element.
+   *
+   * @param PageBreak $pageBreak
    */
   public function setPageBreak(PageBreak $pageBreak)
   {
@@ -161,7 +183,9 @@ class ParagraphElement extends \Google\Model
     return $this->pageBreak;
   }
   /**
-   * @param Person
+   * A paragraph element that links to a person or email address.
+   *
+   * @param Person $person
    */
   public function setPerson(Person $person)
   {
@@ -175,7 +199,10 @@ class ParagraphElement extends \Google\Model
     return $this->person;
   }
   /**
-   * @param RichLink
+   * A paragraph element that links to a Google resource (such as a file in
+   * Google Drive, a YouTube video, or a Calendar event.)
+   *
+   * @param RichLink $richLink
    */
   public function setRichLink(RichLink $richLink)
   {
@@ -189,7 +216,9 @@ class ParagraphElement extends \Google\Model
     return $this->richLink;
   }
   /**
-   * @param int
+   * The zero-based start index of this paragraph element, in UTF-16 code units.
+   *
+   * @param int $startIndex
    */
   public function setStartIndex($startIndex)
   {
@@ -203,7 +232,9 @@ class ParagraphElement extends \Google\Model
     return $this->startIndex;
   }
   /**
-   * @param TextRun
+   * A text run paragraph element.
+   *
+   * @param TextRun $textRun
    */
   public function setTextRun(TextRun $textRun)
   {

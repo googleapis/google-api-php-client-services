@@ -20,20 +20,28 @@ namespace Google\Service\SQLAdmin;
 class SqlInstancesGetDiskShrinkConfigResponse extends \Google\Model
 {
   /**
+   * This is always `sql#getDiskShrinkConfig`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Additional message to customers.
+   *
    * @var string
    */
   public $message;
   /**
+   * The minimum size to which a disk can be shrunk in GigaBytes.
+   *
    * @var string
    */
   public $minimalTargetSizeGb;
 
   /**
-   * @param string
+   * This is always `sql#getDiskShrinkConfig`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -47,7 +55,9 @@ class SqlInstancesGetDiskShrinkConfigResponse extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Additional message to customers.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -61,7 +71,9 @@ class SqlInstancesGetDiskShrinkConfigResponse extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * The minimum size to which a disk can be shrunk in GigaBytes.
+   *
+   * @param string $minimalTargetSizeGb
    */
   public function setMinimalTargetSizeGb($minimalTargetSizeGb)
   {

@@ -28,7 +28,7 @@ class RRSetRoutingPolicyWrrPolicy extends \Google\Collection
   public $kind;
 
   /**
-   * @param RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]
+   * @param RRSetRoutingPolicyWrrPolicyWrrPolicyItem[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +42,7 @@ class RRSetRoutingPolicyWrrPolicy extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {

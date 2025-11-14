@@ -20,18 +20,26 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest extends \Google\Model
 {
   /**
+   * Required. The field to update.
+   *
    * @var string
    */
   public $id;
   protected $propertiesType = GoogleAppsDriveLabelsV2FieldProperties::class;
   protected $propertiesDataType = '';
   /**
+   * The fields that should be updated. At least one field must be specified.
+   * The root `properties` is implied and should not be specified. A single `*`
+   * can be used as a short-hand for updating every field.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param string
+   * Required. The field to update.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -45,7 +53,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest
     return $this->id;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2FieldProperties
+   * Required. Basic field properties.
+   *
+   * @param GoogleAppsDriveLabelsV2FieldProperties $properties
    */
   public function setProperties(GoogleAppsDriveLabelsV2FieldProperties $properties)
   {
@@ -59,7 +69,11 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest
     return $this->properties;
   }
   /**
-   * @param string
+   * The fields that should be updated. At least one field must be specified.
+   * The root `properties` is implied and should not be specified. A single `*`
+   * can be used as a short-hand for updating every field.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

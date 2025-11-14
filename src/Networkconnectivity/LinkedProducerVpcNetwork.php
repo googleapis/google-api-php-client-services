@@ -21,40 +21,63 @@ class LinkedProducerVpcNetwork extends \Google\Collection
 {
   protected $collection_key = 'proposedIncludeExportRanges';
   /**
+   * Optional. IP ranges encompassing the subnets to be excluded from peering.
+   *
    * @var string[]
    */
   public $excludeExportRanges;
   /**
+   * Optional. IP ranges allowed to be included from peering.
+   *
    * @var string[]
    */
   public $includeExportRanges;
   /**
+   * Immutable. The URI of the Service Consumer VPC that the Producer VPC is
+   * peered with.
+   *
    * @var string
    */
   public $network;
   /**
+   * Immutable. The name of the VPC peering between the Service Consumer VPC and
+   * the Producer VPC (defined in the Tenant project) which is added to the NCC
+   * hub. This peering must be in ACTIVE state.
+   *
    * @var string
    */
   public $peering;
   /**
+   * Output only. The URI of the Producer VPC.
+   *
    * @var string
    */
   public $producerNetwork;
   /**
+   * Output only. The proposed exclude export IP ranges waiting for hub
+   * administration's approval.
+   *
    * @var string[]
    */
   public $proposedExcludeExportRanges;
   /**
+   * Output only. The proposed include export IP ranges waiting for hub
+   * administration's approval.
+   *
    * @var string[]
    */
   public $proposedIncludeExportRanges;
   /**
+   * Output only. The Service Consumer Network spoke.
+   *
    * @var string
    */
   public $serviceConsumerVpcSpoke;
 
   /**
-   * @param string[]
+   * Optional. IP ranges encompassing the subnets to be excluded from peering.
+   *
+   * @param string[] $excludeExportRanges
    */
   public function setExcludeExportRanges($excludeExportRanges)
   {
@@ -68,7 +91,9 @@ class LinkedProducerVpcNetwork extends \Google\Collection
     return $this->excludeExportRanges;
   }
   /**
-   * @param string[]
+   * Optional. IP ranges allowed to be included from peering.
+   *
+   * @param string[] $includeExportRanges
    */
   public function setIncludeExportRanges($includeExportRanges)
   {
@@ -82,7 +107,10 @@ class LinkedProducerVpcNetwork extends \Google\Collection
     return $this->includeExportRanges;
   }
   /**
-   * @param string
+   * Immutable. The URI of the Service Consumer VPC that the Producer VPC is
+   * peered with.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -96,7 +124,11 @@ class LinkedProducerVpcNetwork extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param string
+   * Immutable. The name of the VPC peering between the Service Consumer VPC and
+   * the Producer VPC (defined in the Tenant project) which is added to the NCC
+   * hub. This peering must be in ACTIVE state.
+   *
+   * @param string $peering
    */
   public function setPeering($peering)
   {
@@ -110,7 +142,9 @@ class LinkedProducerVpcNetwork extends \Google\Collection
     return $this->peering;
   }
   /**
-   * @param string
+   * Output only. The URI of the Producer VPC.
+   *
+   * @param string $producerNetwork
    */
   public function setProducerNetwork($producerNetwork)
   {
@@ -124,7 +158,10 @@ class LinkedProducerVpcNetwork extends \Google\Collection
     return $this->producerNetwork;
   }
   /**
-   * @param string[]
+   * Output only. The proposed exclude export IP ranges waiting for hub
+   * administration's approval.
+   *
+   * @param string[] $proposedExcludeExportRanges
    */
   public function setProposedExcludeExportRanges($proposedExcludeExportRanges)
   {
@@ -138,7 +175,10 @@ class LinkedProducerVpcNetwork extends \Google\Collection
     return $this->proposedExcludeExportRanges;
   }
   /**
-   * @param string[]
+   * Output only. The proposed include export IP ranges waiting for hub
+   * administration's approval.
+   *
+   * @param string[] $proposedIncludeExportRanges
    */
   public function setProposedIncludeExportRanges($proposedIncludeExportRanges)
   {
@@ -152,7 +192,9 @@ class LinkedProducerVpcNetwork extends \Google\Collection
     return $this->proposedIncludeExportRanges;
   }
   /**
-   * @param string
+   * Output only. The Service Consumer Network spoke.
+   *
+   * @param string $serviceConsumerVpcSpoke
    */
   public function setServiceConsumerVpcSpoke($serviceConsumerVpcSpoke)
   {

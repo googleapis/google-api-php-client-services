@@ -21,26 +21,36 @@ class GooglePrivacyDlpV2KAnonymityHistogramBucket extends \Google\Collection
 {
   protected $collection_key = 'bucketValues';
   /**
+   * Total number of equivalence classes in this bucket.
+   *
    * @var string
    */
   public $bucketSize;
   /**
+   * Total number of distinct equivalence classes in this bucket.
+   *
    * @var string
    */
   public $bucketValueCount;
   protected $bucketValuesType = GooglePrivacyDlpV2KAnonymityEquivalenceClass::class;
   protected $bucketValuesDataType = 'array';
   /**
+   * Lower bound on the size of the equivalence classes in this bucket.
+   *
    * @var string
    */
   public $equivalenceClassSizeLowerBound;
   /**
+   * Upper bound on the size of the equivalence classes in this bucket.
+   *
    * @var string
    */
   public $equivalenceClassSizeUpperBound;
 
   /**
-   * @param string
+   * Total number of equivalence classes in this bucket.
+   *
+   * @param string $bucketSize
    */
   public function setBucketSize($bucketSize)
   {
@@ -54,7 +64,9 @@ class GooglePrivacyDlpV2KAnonymityHistogramBucket extends \Google\Collection
     return $this->bucketSize;
   }
   /**
-   * @param string
+   * Total number of distinct equivalence classes in this bucket.
+   *
+   * @param string $bucketValueCount
    */
   public function setBucketValueCount($bucketValueCount)
   {
@@ -68,7 +80,10 @@ class GooglePrivacyDlpV2KAnonymityHistogramBucket extends \Google\Collection
     return $this->bucketValueCount;
   }
   /**
-   * @param GooglePrivacyDlpV2KAnonymityEquivalenceClass[]
+   * Sample of equivalence classes in this bucket. The total number of classes
+   * returned per bucket is capped at 20.
+   *
+   * @param GooglePrivacyDlpV2KAnonymityEquivalenceClass[] $bucketValues
    */
   public function setBucketValues($bucketValues)
   {
@@ -82,7 +97,9 @@ class GooglePrivacyDlpV2KAnonymityHistogramBucket extends \Google\Collection
     return $this->bucketValues;
   }
   /**
-   * @param string
+   * Lower bound on the size of the equivalence classes in this bucket.
+   *
+   * @param string $equivalenceClassSizeLowerBound
    */
   public function setEquivalenceClassSizeLowerBound($equivalenceClassSizeLowerBound)
   {
@@ -96,7 +113,9 @@ class GooglePrivacyDlpV2KAnonymityHistogramBucket extends \Google\Collection
     return $this->equivalenceClassSizeLowerBound;
   }
   /**
-   * @param string
+   * Upper bound on the size of the equivalence classes in this bucket.
+   *
+   * @param string $equivalenceClassSizeUpperBound
    */
   public function setEquivalenceClassSizeUpperBound($equivalenceClassSizeUpperBound)
   {

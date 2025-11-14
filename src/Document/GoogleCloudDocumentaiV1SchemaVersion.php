@@ -20,18 +20,27 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
 {
   /**
+   * Output only. The time when the SchemaVersion was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The user-defined name of the SchemaVersion.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. The GCP labels for the SchemaVersion.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name of the SchemaVersion. Format: `projects/{proj
+   * ect}/locations/{location}/schemas/{schema}/schemaVersions/{schema_version}`
+   *
    * @var string
    */
   public $name;
@@ -39,7 +48,9 @@ class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
   protected $schemaDataType = '';
 
   /**
-   * @param string
+   * Output only. The time when the SchemaVersion was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -53,7 +64,9 @@ class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The user-defined name of the SchemaVersion.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -67,7 +80,9 @@ class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Optional. The GCP labels for the SchemaVersion.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -81,7 +96,10 @@ class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the SchemaVersion. Format: `projects/{proj
+   * ect}/locations/{location}/schemas/{schema}/schemaVersions/{schema_version}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,7 +113,9 @@ class GoogleCloudDocumentaiV1SchemaVersion extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentSchema
+   * Required. The schema of the SchemaVersion.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentSchema $schema
    */
   public function setSchema(GoogleCloudDocumentaiV1DocumentSchema $schema)
   {

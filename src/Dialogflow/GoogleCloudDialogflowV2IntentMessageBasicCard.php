@@ -23,22 +23,30 @@ class GoogleCloudDialogflowV2IntentMessageBasicCard extends \Google\Collection
   protected $buttonsType = GoogleCloudDialogflowV2IntentMessageBasicCardButton::class;
   protected $buttonsDataType = 'array';
   /**
+   * Required, unless image is present. The body text of the card.
+   *
    * @var string
    */
   public $formattedText;
   protected $imageType = GoogleCloudDialogflowV2IntentMessageImage::class;
   protected $imageDataType = '';
   /**
+   * Optional. The subtitle of the card.
+   *
    * @var string
    */
   public $subtitle;
   /**
+   * Optional. The title of the card.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param GoogleCloudDialogflowV2IntentMessageBasicCardButton[]
+   * Optional. The collection of card buttons.
+   *
+   * @param GoogleCloudDialogflowV2IntentMessageBasicCardButton[] $buttons
    */
   public function setButtons($buttons)
   {
@@ -52,7 +60,9 @@ class GoogleCloudDialogflowV2IntentMessageBasicCard extends \Google\Collection
     return $this->buttons;
   }
   /**
-   * @param string
+   * Required, unless image is present. The body text of the card.
+   *
+   * @param string $formattedText
    */
   public function setFormattedText($formattedText)
   {
@@ -66,7 +76,9 @@ class GoogleCloudDialogflowV2IntentMessageBasicCard extends \Google\Collection
     return $this->formattedText;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentMessageImage
+   * Optional. The image for the card.
+   *
+   * @param GoogleCloudDialogflowV2IntentMessageImage $image
    */
   public function setImage(GoogleCloudDialogflowV2IntentMessageImage $image)
   {
@@ -80,7 +92,9 @@ class GoogleCloudDialogflowV2IntentMessageBasicCard extends \Google\Collection
     return $this->image;
   }
   /**
-   * @param string
+   * Optional. The subtitle of the card.
+   *
+   * @param string $subtitle
    */
   public function setSubtitle($subtitle)
   {
@@ -94,7 +108,9 @@ class GoogleCloudDialogflowV2IntentMessageBasicCard extends \Google\Collection
     return $this->subtitle;
   }
   /**
-   * @param string
+   * Optional. The title of the card.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

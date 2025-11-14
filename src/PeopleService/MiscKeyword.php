@@ -20,22 +20,80 @@ namespace Google\Service\PeopleService;
 class MiscKeyword extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Outlook field for billing information.
+   */
+  public const TYPE_OUTLOOK_BILLING_INFORMATION = 'OUTLOOK_BILLING_INFORMATION';
+  /**
+   * Outlook field for directory server.
+   */
+  public const TYPE_OUTLOOK_DIRECTORY_SERVER = 'OUTLOOK_DIRECTORY_SERVER';
+  /**
+   * Outlook field for keyword.
+   */
+  public const TYPE_OUTLOOK_KEYWORD = 'OUTLOOK_KEYWORD';
+  /**
+   * Outlook field for mileage.
+   */
+  public const TYPE_OUTLOOK_MILEAGE = 'OUTLOOK_MILEAGE';
+  /**
+   * Outlook field for priority.
+   */
+  public const TYPE_OUTLOOK_PRIORITY = 'OUTLOOK_PRIORITY';
+  /**
+   * Outlook field for sensitivity.
+   */
+  public const TYPE_OUTLOOK_SENSITIVITY = 'OUTLOOK_SENSITIVITY';
+  /**
+   * Outlook field for subject.
+   */
+  public const TYPE_OUTLOOK_SUBJECT = 'OUTLOOK_SUBJECT';
+  /**
+   * Outlook field for user.
+   */
+  public const TYPE_OUTLOOK_USER = 'OUTLOOK_USER';
+  /**
+   * Home.
+   */
+  public const TYPE_HOME = 'HOME';
+  /**
+   * Work.
+   */
+  public const TYPE_WORK = 'WORK';
+  /**
+   * Other.
+   */
+  public const TYPE_OTHER = 'OTHER';
+  /**
+   * Output only. The type of the miscellaneous keyword translated and formatted
+   * in the viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
    * @var string
    */
   public $formattedType;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The miscellaneous keyword type.
+   *
    * @var string
    */
   public $type;
   /**
+   * The value of the miscellaneous keyword.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Output only. The type of the miscellaneous keyword translated and formatted
+   * in the viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
+   * @param string $formattedType
    */
   public function setFormattedType($formattedType)
   {
@@ -49,7 +107,9 @@ class MiscKeyword extends \Google\Model
     return $this->formattedType;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the miscellaneous keyword.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -63,21 +123,30 @@ class MiscKeyword extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The miscellaneous keyword type.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, OUTLOOK_BILLING_INFORMATION,
+   * OUTLOOK_DIRECTORY_SERVER, OUTLOOK_KEYWORD, OUTLOOK_MILEAGE,
+   * OUTLOOK_PRIORITY, OUTLOOK_SENSITIVITY, OUTLOOK_SUBJECT, OUTLOOK_USER, HOME,
+   * WORK, OTHER
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * The value of the miscellaneous keyword.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

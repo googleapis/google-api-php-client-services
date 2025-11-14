@@ -23,12 +23,18 @@ class BulkEditNegativeKeywordsRequest extends \Google\Collection
   protected $createdNegativeKeywordsType = NegativeKeyword::class;
   protected $createdNegativeKeywordsDataType = 'array';
   /**
+   * The negative keywords to delete in batch, specified as a list of
+   * keyword_values.
+   *
    * @var string[]
    */
   public $deletedNegativeKeywords;
 
   /**
-   * @param NegativeKeyword[]
+   * The negative keywords to create in batch, specified as a list of
+   * NegativeKeywords.
+   *
+   * @param NegativeKeyword[] $createdNegativeKeywords
    */
   public function setCreatedNegativeKeywords($createdNegativeKeywords)
   {
@@ -42,7 +48,10 @@ class BulkEditNegativeKeywordsRequest extends \Google\Collection
     return $this->createdNegativeKeywords;
   }
   /**
-   * @param string[]
+   * The negative keywords to delete in batch, specified as a list of
+   * keyword_values.
+   *
+   * @param string[] $deletedNegativeKeywords
    */
   public function setDeletedNegativeKeywords($deletedNegativeKeywords)
   {

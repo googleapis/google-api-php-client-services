@@ -25,20 +25,28 @@ class TopologyConfig extends \Google\Collection
   protected $dataDiskAssignmentsType = DataDiskAssignment::class;
   protected $dataDiskAssignmentsDataType = 'array';
   /**
+   * The size (in bits) of keys that will be assigned to source messages.
+   *
    * @var int
    */
   public $forwardingKeyBits;
   /**
+   * Version number for persistent state.
+   *
    * @var int
    */
   public $persistentStateVersion;
   /**
+   * Maps user stage names to stable computation names.
+   *
    * @var string[]
    */
   public $userStageToComputationNameMap;
 
   /**
-   * @param ComputationTopology[]
+   * The computations associated with a streaming Dataflow job.
+   *
+   * @param ComputationTopology[] $computations
    */
   public function setComputations($computations)
   {
@@ -52,7 +60,9 @@ class TopologyConfig extends \Google\Collection
     return $this->computations;
   }
   /**
-   * @param DataDiskAssignment[]
+   * The disks assigned to a streaming Dataflow job.
+   *
+   * @param DataDiskAssignment[] $dataDiskAssignments
    */
   public function setDataDiskAssignments($dataDiskAssignments)
   {
@@ -66,7 +76,9 @@ class TopologyConfig extends \Google\Collection
     return $this->dataDiskAssignments;
   }
   /**
-   * @param int
+   * The size (in bits) of keys that will be assigned to source messages.
+   *
+   * @param int $forwardingKeyBits
    */
   public function setForwardingKeyBits($forwardingKeyBits)
   {
@@ -80,7 +92,9 @@ class TopologyConfig extends \Google\Collection
     return $this->forwardingKeyBits;
   }
   /**
-   * @param int
+   * Version number for persistent state.
+   *
+   * @param int $persistentStateVersion
    */
   public function setPersistentStateVersion($persistentStateVersion)
   {
@@ -94,7 +108,9 @@ class TopologyConfig extends \Google\Collection
     return $this->persistentStateVersion;
   }
   /**
-   * @param string[]
+   * Maps user stage names to stable computation names.
+   *
+   * @param string[] $userStageToComputationNameMap
    */
   public function setUserStageToComputationNameMap($userStageToComputationNameMap)
   {

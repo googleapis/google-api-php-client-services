@@ -20,16 +20,27 @@ namespace Google\Service\CloudSearch;
 class ScoringConfig extends \Google\Model
 {
   /**
+   * Whether to use freshness as a ranking signal. By default, freshness is used
+   * as a ranking signal. Note that this setting is not available in the Admin
+   * UI.
+   *
    * @var bool
    */
   public $disableFreshness;
   /**
+   * Whether to personalize the results. By default, personal signals will be
+   * used to boost results.
+   *
    * @var bool
    */
   public $disablePersonalization;
 
   /**
-   * @param bool
+   * Whether to use freshness as a ranking signal. By default, freshness is used
+   * as a ranking signal. Note that this setting is not available in the Admin
+   * UI.
+   *
+   * @param bool $disableFreshness
    */
   public function setDisableFreshness($disableFreshness)
   {
@@ -43,7 +54,10 @@ class ScoringConfig extends \Google\Model
     return $this->disableFreshness;
   }
   /**
-   * @param bool
+   * Whether to personalize the results. By default, personal signals will be
+   * used to boost results.
+   *
+   * @param bool $disablePersonalization
    */
   public function setDisablePersonalization($disablePersonalization)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\TagManager;
 class RevertBuiltInVariableResponse extends \Google\Model
 {
   /**
+   * Whether the built-in variable is enabled after reversion.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether the built-in variable is enabled after reversion.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\ShoppingContent;
 class BreakdownRegion extends \Google\Model
 {
   /**
+   * The [CLDR territory code]
+   * (http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml)
+   *
    * @var string
    */
   public $code;
   /**
+   * The localized name of the region. For region with code='001' the value is
+   * 'All countries' or the equivalent in other languages.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The [CLDR territory code]
+   * (http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml)
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -43,7 +52,10 @@ class BreakdownRegion extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * The localized name of the region. For region with code='001' the value is
+   * 'All countries' or the equivalent in other languages.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -19,44 +19,97 @@ namespace Google\Service\CloudFunctions;
 
 class EventTrigger extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const RETRY_POLICY_RETRY_POLICY_UNSPECIFIED = 'RETRY_POLICY_UNSPECIFIED';
+  /**
+   * Do not retry.
+   */
+  public const RETRY_POLICY_RETRY_POLICY_DO_NOT_RETRY = 'RETRY_POLICY_DO_NOT_RETRY';
+  /**
+   * Retry on any failure, retry up to 7 days with an exponential backoff
+   * (capped at 10 seconds).
+   */
+  public const RETRY_POLICY_RETRY_POLICY_RETRY = 'RETRY_POLICY_RETRY';
   protected $collection_key = 'eventFilters';
   /**
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You
+   * must provide a channel to receive events from Eventarc SaaS partners.
+   *
    * @var string
    */
   public $channel;
   protected $eventFiltersType = EventFilter::class;
   protected $eventFiltersDataType = 'array';
   /**
+   * Required. The type of event to observe. For example:
+   * `google.cloud.audit.log.v1.written` or
+   * `google.cloud.pubsub.topic.v1.messagePublished`.
+   *
    * @var string
    */
   public $eventType;
   /**
+   * Optional. The name of a Pub/Sub topic in the same project that will be used
+   * as the transport topic for the event delivery. Format:
+   * `projects/{project}/topics/{topic}`. This is only valid for events of type
+   * `google.cloud.pubsub.topic.v1.messagePublished`. The topic provided here
+   * will not be deleted at function deletion.
+   *
    * @var string
    */
   public $pubsubTopic;
   /**
+   * Optional. If unset, then defaults to ignoring failures (i.e. not retrying
+   * them).
+   *
    * @var string
    */
   public $retryPolicy;
   /**
+   * Optional. The hostname of the service that 1st Gen function should be
+   * observed. If no string is provided, the default service implementing the
+   * API will be used. For example, `storage.googleapis.com` is the default for
+   * all event types in the `google.storage` namespace. The field is only
+   * applicable to 1st Gen functions.
+   *
    * @var string
    */
   public $service;
   /**
+   * Optional. The email of the trigger's service account. The service account
+   * must have permission to invoke Cloud Run services, the permission is
+   * `run.routes.invoke`. If empty, defaults to the Compute Engine default
+   * service account: `{project_number}-compute@developer.gserviceaccount.com`.
+   *
    * @var string
    */
   public $serviceAccountEmail;
   /**
+   * Output only. The resource name of the Eventarc trigger. The format of this
+   * field is `projects/{project}/locations/{region}/triggers/{trigger}`.
+   *
    * @var string
    */
   public $trigger;
   /**
+   * The region that the trigger will be in. The trigger will only receive
+   * events originating in this region. It can be the same region as the
+   * function, a different region or multi-region, or the global region. If not
+   * provided, defaults to the same region as the function.
+   *
    * @var string
    */
   public $triggerRegion;
 
   /**
-   * @param string
+   * Optional. The name of the channel associated with the trigger in
+   * `projects/{project}/locations/{location}/channels/{channel}` format. You
+   * must provide a channel to receive events from Eventarc SaaS partners.
+   *
+   * @param string $channel
    */
   public function setChannel($channel)
   {
@@ -70,7 +123,9 @@ class EventTrigger extends \Google\Collection
     return $this->channel;
   }
   /**
-   * @param EventFilter[]
+   * Criteria used to filter events.
+   *
+   * @param EventFilter[] $eventFilters
    */
   public function setEventFilters($eventFilters)
   {
@@ -84,7 +139,11 @@ class EventTrigger extends \Google\Collection
     return $this->eventFilters;
   }
   /**
-   * @param string
+   * Required. The type of event to observe. For example:
+   * `google.cloud.audit.log.v1.written` or
+   * `google.cloud.pubsub.topic.v1.messagePublished`.
+   *
+   * @param string $eventType
    */
   public function setEventType($eventType)
   {
@@ -98,7 +157,13 @@ class EventTrigger extends \Google\Collection
     return $this->eventType;
   }
   /**
-   * @param string
+   * Optional. The name of a Pub/Sub topic in the same project that will be used
+   * as the transport topic for the event delivery. Format:
+   * `projects/{project}/topics/{topic}`. This is only valid for events of type
+   * `google.cloud.pubsub.topic.v1.messagePublished`. The topic provided here
+   * will not be deleted at function deletion.
+   *
+   * @param string $pubsubTopic
    */
   public function setPubsubTopic($pubsubTopic)
   {
@@ -112,21 +177,33 @@ class EventTrigger extends \Google\Collection
     return $this->pubsubTopic;
   }
   /**
-   * @param string
+   * Optional. If unset, then defaults to ignoring failures (i.e. not retrying
+   * them).
+   *
+   * Accepted values: RETRY_POLICY_UNSPECIFIED, RETRY_POLICY_DO_NOT_RETRY,
+   * RETRY_POLICY_RETRY
+   *
+   * @param self::RETRY_POLICY_* $retryPolicy
    */
   public function setRetryPolicy($retryPolicy)
   {
     $this->retryPolicy = $retryPolicy;
   }
   /**
-   * @return string
+   * @return self::RETRY_POLICY_*
    */
   public function getRetryPolicy()
   {
     return $this->retryPolicy;
   }
   /**
-   * @param string
+   * Optional. The hostname of the service that 1st Gen function should be
+   * observed. If no string is provided, the default service implementing the
+   * API will be used. For example, `storage.googleapis.com` is the default for
+   * all event types in the `google.storage` namespace. The field is only
+   * applicable to 1st Gen functions.
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -140,7 +217,12 @@ class EventTrigger extends \Google\Collection
     return $this->service;
   }
   /**
-   * @param string
+   * Optional. The email of the trigger's service account. The service account
+   * must have permission to invoke Cloud Run services, the permission is
+   * `run.routes.invoke`. If empty, defaults to the Compute Engine default
+   * service account: `{project_number}-compute@developer.gserviceaccount.com`.
+   *
+   * @param string $serviceAccountEmail
    */
   public function setServiceAccountEmail($serviceAccountEmail)
   {
@@ -154,7 +236,10 @@ class EventTrigger extends \Google\Collection
     return $this->serviceAccountEmail;
   }
   /**
-   * @param string
+   * Output only. The resource name of the Eventarc trigger. The format of this
+   * field is `projects/{project}/locations/{region}/triggers/{trigger}`.
+   *
+   * @param string $trigger
    */
   public function setTrigger($trigger)
   {
@@ -168,7 +253,12 @@ class EventTrigger extends \Google\Collection
     return $this->trigger;
   }
   /**
-   * @param string
+   * The region that the trigger will be in. The trigger will only receive
+   * events originating in this region. It can be the same region as the
+   * function, a different region or multi-region, or the global region. If not
+   * provided, defaults to the same region as the function.
+   *
+   * @param string $triggerRegion
    */
   public function setTriggerRegion($triggerRegion)
   {

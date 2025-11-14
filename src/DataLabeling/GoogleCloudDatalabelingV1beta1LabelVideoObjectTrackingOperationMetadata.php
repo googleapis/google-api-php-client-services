@@ -23,7 +23,9 @@ class GoogleCloudDatalabelingV1beta1LabelVideoObjectTrackingOperationMetadata ex
   protected $basicConfigDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   * Basic human annotation config used in labeling request.
+   *
+   * @param GoogleCloudDatalabelingV1beta1HumanAnnotationConfig $basicConfig
    */
   public function setBasicConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfig $basicConfig)
   {

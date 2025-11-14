@@ -33,7 +33,7 @@ class TableConstraintsForeignKeysReferencedTable extends \Google\Model
   public $tableId;
 
   /**
-   * @param string
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -47,7 +47,7 @@ class TableConstraintsForeignKeysReferencedTable extends \Google\Model
     return $this->datasetId;
   }
   /**
-   * @param string
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -61,7 +61,7 @@ class TableConstraintsForeignKeysReferencedTable extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {

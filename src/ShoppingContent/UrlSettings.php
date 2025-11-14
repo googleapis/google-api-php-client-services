@@ -20,16 +20,25 @@ namespace Google\Service\ShoppingContent;
 class UrlSettings extends \Google\Model
 {
   /**
+   * URL template when the placeholders are expanded will redirect the buyer to
+   * the cart page on the merchant website with the selected item in cart.
+   *
    * @var string
    */
   public $cartUriTemplate;
   /**
+   * URL template when the placeholders are expanded will redirect the buyer to
+   * the merchant checkout page with the item in the cart.
+   *
    * @var string
    */
   public $checkoutUriTemplate;
 
   /**
-   * @param string
+   * URL template when the placeholders are expanded will redirect the buyer to
+   * the cart page on the merchant website with the selected item in cart.
+   *
+   * @param string $cartUriTemplate
    */
   public function setCartUriTemplate($cartUriTemplate)
   {
@@ -43,7 +52,10 @@ class UrlSettings extends \Google\Model
     return $this->cartUriTemplate;
   }
   /**
-   * @param string
+   * URL template when the placeholders are expanded will redirect the buyer to
+   * the merchant checkout page with the item in the cart.
+   *
+   * @param string $checkoutUriTemplate
    */
   public function setCheckoutUriTemplate($checkoutUriTemplate)
   {

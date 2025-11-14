@@ -25,7 +25,9 @@ class SourceSplitRequest extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param SourceSplitOptions
+   * Hints for tuning the splitting process.
+   *
+   * @param SourceSplitOptions $options
    */
   public function setOptions(SourceSplitOptions $options)
   {
@@ -39,7 +41,9 @@ class SourceSplitRequest extends \Google\Model
     return $this->options;
   }
   /**
-   * @param Source
+   * Specification of the source to be split.
+   *
+   * @param Source $source
    */
   public function setSource(Source $source)
   {

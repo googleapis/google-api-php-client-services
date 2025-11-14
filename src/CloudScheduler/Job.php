@@ -19,23 +19,80 @@ namespace Google\Service\CloudScheduler;
 
 class Job extends \Google\Model
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The job is executing normally.
+   */
+  public const STATE_ENABLED = 'ENABLED';
+  /**
+   * The job is paused by the user. It will not execute. A user can
+   * intentionally pause the job using PauseJobRequest.
+   */
+  public const STATE_PAUSED = 'PAUSED';
+  /**
+   * The job is disabled by the system due to error. The user cannot directly
+   * set a job to be disabled.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * The job state resulting from a failed CloudScheduler.UpdateJob operation.
+   * To recover a job from this state, retry CloudScheduler.UpdateJob until a
+   * successful response is received.
+   */
+  public const STATE_UPDATE_FAILED = 'UPDATE_FAILED';
   protected $appEngineHttpTargetType = AppEngineHttpTarget::class;
   protected $appEngineHttpTargetDataType = '';
   /**
+   * The deadline for job attempts. If the request handler does not respond by
+   * this deadline then the request is cancelled and the attempt is marked as a
+   * `DEADLINE_EXCEEDED` failure. The failed attempt can be viewed in execution
+   * logs. Cloud Scheduler will retry the job according to the RetryConfig. The
+   * default and the allowed values depend on the type of target: * For HTTP
+   * targets, the default is 3 minutes. The deadline must be in the interval [15
+   * seconds, 30 minutes]. * For App Engine HTTP targets, 0 indicates that the
+   * request has the default deadline. The default deadline depends on the
+   * scaling type of the service: 10 minutes for standard apps with automatic
+   * scaling, 24 hours for standard apps with manual and basic scaling, and 60
+   * minutes for flex apps. If the request deadline is set, it must be in the
+   * interval [15 seconds, 24 hours 15 seconds]. * For Pub/Sub targets, this
+   * field is ignored.
+   *
    * @var string
    */
   public $attemptDeadline;
   /**
+   * Optionally caller-specified in CreateJob or UpdateJob. A human-readable
+   * description for the job. This string must not contain more than 500
+   * characters.
+   *
    * @var string
    */
   public $description;
   protected $httpTargetType = HttpTarget::class;
   protected $httpTargetDataType = '';
   /**
+   * Output only. The time the last job attempt started.
+   *
    * @var string
    */
   public $lastAttemptTime;
   /**
+   * Optionally caller-specified in CreateJob, after which it becomes output
+   * only. The job name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can
+   * contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or
+   * periods (.). For more information, see [Identifying projects](/resource-
+   * manager/docs/creating-managing-projects#identifying_projects) *
+   * `LOCATION_ID` is the canonical ID for the job's location. The list of
+   * available locations can be obtained by calling [locations.list](/scheduler/
+   * docs/reference/rest/v1/projects.locations/list). For more information, see
+   * [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can
+   * contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or
+   * underscores (_). The maximum length is 500 characters.
+   *
    * @var string
    */
   public $name;
@@ -44,34 +101,72 @@ class Job extends \Google\Model
   protected $retryConfigType = RetryConfig::class;
   protected $retryConfigDataType = '';
   /**
+   * Output only. Whether or not this Job satisfies the requirements of physical
+   * zone separation
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Required, except when used with UpdateJob. Describes the schedule on which
+   * the job will be executed. The schedule can be either of the following
+   * types: * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-
+   * like [schedule](/scheduler/docs/configuring/cron-job-schedules) As a
+   * general rule, execution `n + 1` of a job will not begin until execution `n`
+   * has finished. Cloud Scheduler will never allow two simultaneously
+   * outstanding executions. For example, this implies that if the `n+1`th
+   * execution is scheduled to run at 16:00 but the `n`th execution takes until
+   * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled
+   * start time will be delayed if the previous execution has not ended when its
+   * scheduled time occurs. If retry_count > 0 and a job attempt fails, the job
+   * will be tried a total of retry_count times, with exponential backoff, until
+   * the next scheduled start time. If retry_count is 0, a job attempt will not
+   * be retried if it fails. Instead the Cloud Scheduler system will wait for
+   * the next scheduled execution time. Setting retry_count to 0 does not
+   * prevent failed jobs from running according to schedule after the failure.
+   *
    * @var string
    */
   public $schedule;
   /**
+   * Output only. The next time the job is scheduled. Note that this may be a
+   * retry of a previously failed attempt or the next execution time according
+   * to the schedule.
+   *
    * @var string
    */
   public $scheduleTime;
   /**
+   * Output only. State of the job.
+   *
    * @var string
    */
   public $state;
   protected $statusType = Status::class;
   protected $statusDataType = '';
   /**
+   * Specifies the time zone to be used in interpreting schedule. The value of
+   * this field must be a time zone name from the [tz
+   * database](http://en.wikipedia.org/wiki/Tz_database). Note that some time
+   * zones include a provision for daylight savings time. The rules for daylight
+   * saving time are determined by the chosen tz. For UTC use the string "utc".
+   * If a time zone is not specified, the default will be in UTC (also known as
+   * GMT).
+   *
    * @var string
    */
   public $timeZone;
   /**
+   * Output only. The creation time of the job.
+   *
    * @var string
    */
   public $userUpdateTime;
 
   /**
-   * @param AppEngineHttpTarget
+   * App Engine HTTP target.
+   *
+   * @param AppEngineHttpTarget $appEngineHttpTarget
    */
   public function setAppEngineHttpTarget(AppEngineHttpTarget $appEngineHttpTarget)
   {
@@ -85,7 +180,21 @@ class Job extends \Google\Model
     return $this->appEngineHttpTarget;
   }
   /**
-   * @param string
+   * The deadline for job attempts. If the request handler does not respond by
+   * this deadline then the request is cancelled and the attempt is marked as a
+   * `DEADLINE_EXCEEDED` failure. The failed attempt can be viewed in execution
+   * logs. Cloud Scheduler will retry the job according to the RetryConfig. The
+   * default and the allowed values depend on the type of target: * For HTTP
+   * targets, the default is 3 minutes. The deadline must be in the interval [15
+   * seconds, 30 minutes]. * For App Engine HTTP targets, 0 indicates that the
+   * request has the default deadline. The default deadline depends on the
+   * scaling type of the service: 10 minutes for standard apps with automatic
+   * scaling, 24 hours for standard apps with manual and basic scaling, and 60
+   * minutes for flex apps. If the request deadline is set, it must be in the
+   * interval [15 seconds, 24 hours 15 seconds]. * For Pub/Sub targets, this
+   * field is ignored.
+   *
+   * @param string $attemptDeadline
    */
   public function setAttemptDeadline($attemptDeadline)
   {
@@ -99,7 +208,11 @@ class Job extends \Google\Model
     return $this->attemptDeadline;
   }
   /**
-   * @param string
+   * Optionally caller-specified in CreateJob or UpdateJob. A human-readable
+   * description for the job. This string must not contain more than 500
+   * characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -113,7 +226,9 @@ class Job extends \Google\Model
     return $this->description;
   }
   /**
-   * @param HttpTarget
+   * HTTP target.
+   *
+   * @param HttpTarget $httpTarget
    */
   public function setHttpTarget(HttpTarget $httpTarget)
   {
@@ -127,7 +242,9 @@ class Job extends \Google\Model
     return $this->httpTarget;
   }
   /**
-   * @param string
+   * Output only. The time the last job attempt started.
+   *
+   * @param string $lastAttemptTime
    */
   public function setLastAttemptTime($lastAttemptTime)
   {
@@ -141,7 +258,20 @@ class Job extends \Google\Model
     return $this->lastAttemptTime;
   }
   /**
-   * @param string
+   * Optionally caller-specified in CreateJob, after which it becomes output
+   * only. The job name. For example:
+   * `projects/PROJECT_ID/locations/LOCATION_ID/jobs/JOB_ID`. * `PROJECT_ID` can
+   * contain letters ([A-Za-z]), numbers ([0-9]), hyphens (-), colons (:), or
+   * periods (.). For more information, see [Identifying projects](/resource-
+   * manager/docs/creating-managing-projects#identifying_projects) *
+   * `LOCATION_ID` is the canonical ID for the job's location. The list of
+   * available locations can be obtained by calling [locations.list](/scheduler/
+   * docs/reference/rest/v1/projects.locations/list). For more information, see
+   * [Cloud Scheduler locations](/scheduler/docs/locations). * `JOB_ID` can
+   * contain only letters ([A-Za-z]), numbers ([0-9]), hyphens (-), or
+   * underscores (_). The maximum length is 500 characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -155,7 +285,9 @@ class Job extends \Google\Model
     return $this->name;
   }
   /**
-   * @param PubsubTarget
+   * Pub/Sub target.
+   *
+   * @param PubsubTarget $pubsubTarget
    */
   public function setPubsubTarget(PubsubTarget $pubsubTarget)
   {
@@ -169,7 +301,9 @@ class Job extends \Google\Model
     return $this->pubsubTarget;
   }
   /**
-   * @param RetryConfig
+   * Settings that determine the retry behavior.
+   *
+   * @param RetryConfig $retryConfig
    */
   public function setRetryConfig(RetryConfig $retryConfig)
   {
@@ -183,7 +317,10 @@ class Job extends \Google\Model
     return $this->retryConfig;
   }
   /**
-   * @param bool
+   * Output only. Whether or not this Job satisfies the requirements of physical
+   * zone separation
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -197,7 +334,24 @@ class Job extends \Google\Model
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Required, except when used with UpdateJob. Describes the schedule on which
+   * the job will be executed. The schedule can be either of the following
+   * types: * [Crontab](https://en.wikipedia.org/wiki/Cron#Overview) * English-
+   * like [schedule](/scheduler/docs/configuring/cron-job-schedules) As a
+   * general rule, execution `n + 1` of a job will not begin until execution `n`
+   * has finished. Cloud Scheduler will never allow two simultaneously
+   * outstanding executions. For example, this implies that if the `n+1`th
+   * execution is scheduled to run at 16:00 but the `n`th execution takes until
+   * 16:15, the `n+1`th execution will not start until `16:15`. A scheduled
+   * start time will be delayed if the previous execution has not ended when its
+   * scheduled time occurs. If retry_count > 0 and a job attempt fails, the job
+   * will be tried a total of retry_count times, with exponential backoff, until
+   * the next scheduled start time. If retry_count is 0, a job attempt will not
+   * be retried if it fails. Instead the Cloud Scheduler system will wait for
+   * the next scheduled execution time. Setting retry_count to 0 does not
+   * prevent failed jobs from running according to schedule after the failure.
+   *
+   * @param string $schedule
    */
   public function setSchedule($schedule)
   {
@@ -211,7 +365,11 @@ class Job extends \Google\Model
     return $this->schedule;
   }
   /**
-   * @param string
+   * Output only. The next time the job is scheduled. Note that this may be a
+   * retry of a previously failed attempt or the next execution time according
+   * to the schedule.
+   *
+   * @param string $scheduleTime
    */
   public function setScheduleTime($scheduleTime)
   {
@@ -225,21 +383,28 @@ class Job extends \Google\Model
     return $this->scheduleTime;
   }
   /**
-   * @param string
+   * Output only. State of the job.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ENABLED, PAUSED, DISABLED,
+   * UPDATE_FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param Status
+   * Output only. The response from the target for the last attempted execution.
+   *
+   * @param Status $status
    */
   public function setStatus(Status $status)
   {
@@ -253,7 +418,15 @@ class Job extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * Specifies the time zone to be used in interpreting schedule. The value of
+   * this field must be a time zone name from the [tz
+   * database](http://en.wikipedia.org/wiki/Tz_database). Note that some time
+   * zones include a provision for daylight savings time. The rules for daylight
+   * saving time are determined by the chosen tz. For UTC use the string "utc".
+   * If a time zone is not specified, the default will be in UTC (also known as
+   * GMT).
+   *
+   * @param string $timeZone
    */
   public function setTimeZone($timeZone)
   {
@@ -267,7 +440,9 @@ class Job extends \Google\Model
     return $this->timeZone;
   }
   /**
-   * @param string
+   * Output only. The creation time of the job.
+   *
+   * @param string $userUpdateTime
    */
   public function setUserUpdateTime($userUpdateTime)
   {

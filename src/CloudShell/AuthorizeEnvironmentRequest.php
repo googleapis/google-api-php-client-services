@@ -20,20 +20,29 @@ namespace Google\Service\CloudShell;
 class AuthorizeEnvironmentRequest extends \Google\Model
 {
   /**
+   * The OAuth access token that should be sent to the environment.
+   *
    * @var string
    */
   public $accessToken;
   /**
+   * The time when the credentials expire. If not set, defaults to one hour from
+   * when the server received the request.
+   *
    * @var string
    */
   public $expireTime;
   /**
+   * The OAuth ID token that should be sent to the environment.
+   *
    * @var string
    */
   public $idToken;
 
   /**
-   * @param string
+   * The OAuth access token that should be sent to the environment.
+   *
+   * @param string $accessToken
    */
   public function setAccessToken($accessToken)
   {
@@ -47,7 +56,10 @@ class AuthorizeEnvironmentRequest extends \Google\Model
     return $this->accessToken;
   }
   /**
-   * @param string
+   * The time when the credentials expire. If not set, defaults to one hour from
+   * when the server received the request.
+   *
+   * @param string $expireTime
    */
   public function setExpireTime($expireTime)
   {
@@ -61,7 +73,9 @@ class AuthorizeEnvironmentRequest extends \Google\Model
     return $this->expireTime;
   }
   /**
-   * @param string
+   * The OAuth ID token that should be sent to the environment.
+   *
+   * @param string $idToken
    */
   public function setIdToken($idToken)
   {

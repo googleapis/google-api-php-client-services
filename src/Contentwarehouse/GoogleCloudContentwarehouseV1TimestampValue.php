@@ -20,16 +20,24 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1TimestampValue extends \Google\Model
 {
   /**
+   * The string must represent a valid instant in UTC and is parsed using
+   * java.time.format.DateTimeFormatter.ISO_INSTANT. e.g. "2013-09-29T18:46:19Z"
+   *
    * @var string
    */
   public $textValue;
   /**
+   * Timestamp value
+   *
    * @var string
    */
   public $timestampValue;
 
   /**
-   * @param string
+   * The string must represent a valid instant in UTC and is parsed using
+   * java.time.format.DateTimeFormatter.ISO_INSTANT. e.g. "2013-09-29T18:46:19Z"
+   *
+   * @param string $textValue
    */
   public function setTextValue($textValue)
   {
@@ -43,7 +51,9 @@ class GoogleCloudContentwarehouseV1TimestampValue extends \Google\Model
     return $this->textValue;
   }
   /**
-   * @param string
+   * Timestamp value
+   *
+   * @param string $timestampValue
    */
   public function setTimestampValue($timestampValue)
   {

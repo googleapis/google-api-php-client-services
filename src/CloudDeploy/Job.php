@@ -19,6 +19,42 @@ namespace Google\Service\CloudDeploy;
 
 class Job extends \Google\Model
 {
+  /**
+   * The Job has an unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Job is waiting for an earlier Phase(s) or Job(s) to complete.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The Job is disabled.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * The Job is in progress.
+   */
+  public const STATE_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * The Job succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The Job failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The Job was aborted.
+   */
+  public const STATE_ABORTED = 'ABORTED';
+  /**
+   * The Job was skipped.
+   */
+  public const STATE_SKIPPED = 'SKIPPED';
+  /**
+   * The Job was ignored.
+   */
+  public const STATE_IGNORED = 'IGNORED';
   protected $advanceChildRolloutJobType = AdvanceChildRolloutJob::class;
   protected $advanceChildRolloutJobDataType = '';
   protected $createChildRolloutJobType = CreateChildRolloutJob::class;
@@ -26,10 +62,15 @@ class Job extends \Google\Model
   protected $deployJobType = DeployJob::class;
   protected $deployJobDataType = '';
   /**
+   * Output only. The ID of the Job.
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. The name of the `JobRun` responsible for the most recent
+   * invocation of this Job.
+   *
    * @var string
    */
   public $jobRun;
@@ -38,10 +79,15 @@ class Job extends \Google\Model
   protected $predeployJobType = PredeployJob::class;
   protected $predeployJobDataType = '';
   /**
+   * Output only. Additional information on why the Job was skipped, if
+   * available.
+   *
    * @var string
    */
   public $skipMessage;
   /**
+   * Output only. The current state of the Job.
+   *
    * @var string
    */
   public $state;
@@ -49,7 +95,9 @@ class Job extends \Google\Model
   protected $verifyJobDataType = '';
 
   /**
-   * @param AdvanceChildRolloutJob
+   * Output only. An advanceChildRollout Job.
+   *
+   * @param AdvanceChildRolloutJob $advanceChildRolloutJob
    */
   public function setAdvanceChildRolloutJob(AdvanceChildRolloutJob $advanceChildRolloutJob)
   {
@@ -63,7 +111,9 @@ class Job extends \Google\Model
     return $this->advanceChildRolloutJob;
   }
   /**
-   * @param CreateChildRolloutJob
+   * Output only. A createChildRollout Job.
+   *
+   * @param CreateChildRolloutJob $createChildRolloutJob
    */
   public function setCreateChildRolloutJob(CreateChildRolloutJob $createChildRolloutJob)
   {
@@ -77,7 +127,9 @@ class Job extends \Google\Model
     return $this->createChildRolloutJob;
   }
   /**
-   * @param DeployJob
+   * Output only. A deploy Job.
+   *
+   * @param DeployJob $deployJob
    */
   public function setDeployJob(DeployJob $deployJob)
   {
@@ -91,7 +143,9 @@ class Job extends \Google\Model
     return $this->deployJob;
   }
   /**
-   * @param string
+   * Output only. The ID of the Job.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -105,7 +159,10 @@ class Job extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Output only. The name of the `JobRun` responsible for the most recent
+   * invocation of this Job.
+   *
+   * @param string $jobRun
    */
   public function setJobRun($jobRun)
   {
@@ -119,7 +176,9 @@ class Job extends \Google\Model
     return $this->jobRun;
   }
   /**
-   * @param PostdeployJob
+   * Output only. A postdeploy Job.
+   *
+   * @param PostdeployJob $postdeployJob
    */
   public function setPostdeployJob(PostdeployJob $postdeployJob)
   {
@@ -133,7 +192,9 @@ class Job extends \Google\Model
     return $this->postdeployJob;
   }
   /**
-   * @param PredeployJob
+   * Output only. A predeploy Job.
+   *
+   * @param PredeployJob $predeployJob
    */
   public function setPredeployJob(PredeployJob $predeployJob)
   {
@@ -147,7 +208,10 @@ class Job extends \Google\Model
     return $this->predeployJob;
   }
   /**
-   * @param string
+   * Output only. Additional information on why the Job was skipped, if
+   * available.
+   *
+   * @param string $skipMessage
    */
   public function setSkipMessage($skipMessage)
   {
@@ -161,21 +225,28 @@ class Job extends \Google\Model
     return $this->skipMessage;
   }
   /**
-   * @param string
+   * Output only. The current state of the Job.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, DISABLED, IN_PROGRESS,
+   * SUCCEEDED, FAILED, ABORTED, SKIPPED, IGNORED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param VerifyJob
+   * Output only. A verify Job.
+   *
+   * @param VerifyJob $verifyJob
    */
   public function setVerifyJob(VerifyJob $verifyJob)
   {

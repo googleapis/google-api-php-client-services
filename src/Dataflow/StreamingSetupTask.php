@@ -20,10 +20,15 @@ namespace Google\Service\Dataflow;
 class StreamingSetupTask extends \Google\Model
 {
   /**
+   * The user has requested drain.
+   *
    * @var bool
    */
   public $drain;
   /**
+   * The TCP port on which the worker should listen for messages from other
+   * streaming computation workers.
+   *
    * @var int
    */
   public $receiveWorkPort;
@@ -32,12 +37,17 @@ class StreamingSetupTask extends \Google\Model
   protected $streamingComputationTopologyType = TopologyConfig::class;
   protected $streamingComputationTopologyDataType = '';
   /**
+   * The TCP port used by the worker to communicate with the Dataflow worker
+   * harness.
+   *
    * @var int
    */
   public $workerHarnessPort;
 
   /**
-   * @param bool
+   * The user has requested drain.
+   *
+   * @param bool $drain
    */
   public function setDrain($drain)
   {
@@ -51,7 +61,10 @@ class StreamingSetupTask extends \Google\Model
     return $this->drain;
   }
   /**
-   * @param int
+   * The TCP port on which the worker should listen for messages from other
+   * streaming computation workers.
+   *
+   * @param int $receiveWorkPort
    */
   public function setReceiveWorkPort($receiveWorkPort)
   {
@@ -65,7 +78,9 @@ class StreamingSetupTask extends \Google\Model
     return $this->receiveWorkPort;
   }
   /**
-   * @param StreamingApplianceSnapshotConfig
+   * Configures streaming appliance snapshot.
+   *
+   * @param StreamingApplianceSnapshotConfig $snapshotConfig
    */
   public function setSnapshotConfig(StreamingApplianceSnapshotConfig $snapshotConfig)
   {
@@ -79,7 +94,9 @@ class StreamingSetupTask extends \Google\Model
     return $this->snapshotConfig;
   }
   /**
-   * @param TopologyConfig
+   * The global topology of the streaming Dataflow job.
+   *
+   * @param TopologyConfig $streamingComputationTopology
    */
   public function setStreamingComputationTopology(TopologyConfig $streamingComputationTopology)
   {
@@ -93,7 +110,10 @@ class StreamingSetupTask extends \Google\Model
     return $this->streamingComputationTopology;
   }
   /**
-   * @param int
+   * The TCP port used by the worker to communicate with the Dataflow worker
+   * harness.
+   *
+   * @param int $workerHarnessPort
    */
   public function setWorkerHarnessPort($workerHarnessPort)
   {

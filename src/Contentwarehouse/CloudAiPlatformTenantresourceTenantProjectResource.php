@@ -29,16 +29,24 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
   protected $infraSpannerConfigsType = CloudAiPlatformTenantresourceInfraSpannerConfig::class;
   protected $infraSpannerConfigsDataType = 'array';
   /**
+   * Input/Output [Required]. The tag that uniquely identifies a tenant project
+   * within a tenancy unit. Note: for the same tenant project tag, all tenant
+   * manager operations should be idempotent.
+   *
    * @var string
    */
   public $tag;
   protected $tenantProjectConfigType = CloudAiPlatformTenantresourceTenantProjectConfig::class;
   protected $tenantProjectConfigDataType = '';
   /**
+   * Output only. The tenant project ID that has been created.
+   *
    * @var string
    */
   public $tenantProjectId;
   /**
+   * Output only. The tenant project number that has been created.
+   *
    * @var string
    */
   public $tenantProjectNumber;
@@ -46,7 +54,9 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
   protected $tenantServiceAccountsDataType = 'array';
 
   /**
-   * @param CloudAiPlatformTenantresourceCloudSqlInstanceConfig[]
+   * The CloudSQL instances that are provisioned under the tenant project.
+   *
+   * @param CloudAiPlatformTenantresourceCloudSqlInstanceConfig[] $cloudSqlInstances
    */
   public function setCloudSqlInstances($cloudSqlInstances)
   {
@@ -60,7 +70,9 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->cloudSqlInstances;
   }
   /**
-   * @param CloudAiPlatformTenantresourceGcsBucketConfig[]
+   * The GCS buckets that are provisioned under the tenant project.
+   *
+   * @param CloudAiPlatformTenantresourceGcsBucketConfig[] $gcsBuckets
    */
   public function setGcsBuckets($gcsBuckets)
   {
@@ -74,7 +86,11 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->gcsBuckets;
   }
   /**
-   * @param CloudAiPlatformTenantresourceIamPolicyBinding[]
+   * The dynamic IAM bindings that are granted under the tenant project. Note:
+   * this should only add new bindings to the project if they don't exist and
+   * the existing bindings won't be affected.
+   *
+   * @param CloudAiPlatformTenantresourceIamPolicyBinding[] $iamPolicyBindings
    */
   public function setIamPolicyBindings($iamPolicyBindings)
   {
@@ -88,7 +104,10 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->iamPolicyBindings;
   }
   /**
-   * @param CloudAiPlatformTenantresourceInfraSpannerConfig[]
+   * The Infra Spanner databases that are provisioned under the tenant project.
+   * Note: this is an experimental feature.
+   *
+   * @param CloudAiPlatformTenantresourceInfraSpannerConfig[] $infraSpannerConfigs
    */
   public function setInfraSpannerConfigs($infraSpannerConfigs)
   {
@@ -102,7 +121,11 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->infraSpannerConfigs;
   }
   /**
-   * @param string
+   * Input/Output [Required]. The tag that uniquely identifies a tenant project
+   * within a tenancy unit. Note: for the same tenant project tag, all tenant
+   * manager operations should be idempotent.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {
@@ -116,7 +139,9 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->tag;
   }
   /**
-   * @param CloudAiPlatformTenantresourceTenantProjectConfig
+   * The configurations of a tenant project.
+   *
+   * @param CloudAiPlatformTenantresourceTenantProjectConfig $tenantProjectConfig
    */
   public function setTenantProjectConfig(CloudAiPlatformTenantresourceTenantProjectConfig $tenantProjectConfig)
   {
@@ -130,7 +155,9 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->tenantProjectConfig;
   }
   /**
-   * @param string
+   * Output only. The tenant project ID that has been created.
+   *
+   * @param string $tenantProjectId
    */
   public function setTenantProjectId($tenantProjectId)
   {
@@ -144,7 +171,9 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->tenantProjectId;
   }
   /**
-   * @param string
+   * Output only. The tenant project number that has been created.
+   *
+   * @param string $tenantProjectNumber
    */
   public function setTenantProjectNumber($tenantProjectNumber)
   {
@@ -158,7 +187,11 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
     return $this->tenantProjectNumber;
   }
   /**
-   * @param CloudAiPlatformTenantresourceTenantServiceAccountIdentity[]
+   * The service account identities (or enabled API service's P4SA) that are
+   * expclicitly created under the tenant project (before JIT provisioning
+   * during enabled API services).
+   *
+   * @param CloudAiPlatformTenantresourceTenantServiceAccountIdentity[] $tenantServiceAccounts
    */
   public function setTenantServiceAccounts($tenantServiceAccounts)
   {

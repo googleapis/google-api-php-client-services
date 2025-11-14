@@ -20,16 +20,22 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableSelectionChoiceRequest extends \Google\Model
 {
   /**
+   * Required. The selection field in which a choice will be enabled.
+   *
    * @var string
    */
   public $fieldId;
   /**
+   * Required. Choice to enable.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * Required. The selection field in which a choice will be enabled.
+   *
+   * @param string $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -43,7 +49,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableSelectionChoiceRequest
     return $this->fieldId;
   }
   /**
-   * @param string
+   * Required. Choice to enable.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

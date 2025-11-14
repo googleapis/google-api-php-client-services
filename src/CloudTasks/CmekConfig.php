@@ -20,16 +20,30 @@ namespace Google\Service\CloudTasks;
 class CmekConfig extends \Google\Model
 {
   /**
+   * Resource name of the Cloud KMS key, of the form `projects/PROJECT_ID/locati
+   * ons/LOCATION_ID/keyRings/KEY_RING_ID/cryptoKeys/KEY_ID`, that will be used
+   * to encrypt the Queues & Tasks in the region. Setting this as blank will
+   * turn off CMEK encryption.
+   *
    * @var string
    */
   public $kmsKey;
   /**
+   * Output only. The config resource name which includes the project and
+   * location and must end in 'cmekConfig', in the format
+   * projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Resource name of the Cloud KMS key, of the form `projects/PROJECT_ID/locati
+   * ons/LOCATION_ID/keyRings/KEY_RING_ID/cryptoKeys/KEY_ID`, that will be used
+   * to encrypt the Queues & Tasks in the region. Setting this as blank will
+   * turn off CMEK encryption.
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {
@@ -43,7 +57,11 @@ class CmekConfig extends \Google\Model
     return $this->kmsKey;
   }
   /**
-   * @param string
+   * Output only. The config resource name which includes the project and
+   * location and must end in 'cmekConfig', in the format
+   * projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+   *
+   * @param string $name
    */
   public function setName($name)
   {

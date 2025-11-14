@@ -20,16 +20,22 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ServicesConversionCustomMetricHeader extends \Google\Model
 {
   /**
+   * The conversion custom metric ID.
+   *
    * @var string
    */
   public $id;
   /**
+   * The user defined name of the conversion custom metric.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The conversion custom metric ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class GoogleAdsSearchads360V0ServicesConversionCustomMetricHeader extends \Googl
     return $this->id;
   }
   /**
-   * @param string
+   * The user defined name of the conversion custom metric.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

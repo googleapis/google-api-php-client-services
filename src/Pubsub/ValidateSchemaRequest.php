@@ -23,7 +23,9 @@ class ValidateSchemaRequest extends \Google\Model
   protected $schemaDataType = '';
 
   /**
-   * @param Schema
+   * Required. The schema object to validate.
+   *
+   * @param Schema $schema
    */
   public function setSchema(Schema $schema)
   {

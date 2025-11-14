@@ -20,32 +20,48 @@ namespace Google\Service\NetworkManagement;
 class VpnGatewayInfo extends \Google\Model
 {
   /**
+   * Name of a VPN gateway.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * IP address of the VPN gateway.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * URI of a Compute Engine network where the VPN gateway is configured.
+   *
    * @var string
    */
   public $networkUri;
   /**
+   * Name of a Google Cloud region where this VPN gateway is configured.
+   *
    * @var string
    */
   public $region;
   /**
+   * URI of a VPN gateway.
+   *
    * @var string
    */
   public $uri;
   /**
+   * A VPN tunnel that is associated with this VPN gateway. There may be
+   * multiple VPN tunnels configured on a VPN gateway, and only the one relevant
+   * to the test is displayed.
+   *
    * @var string
    */
   public $vpnTunnelUri;
 
   /**
-   * @param string
+   * Name of a VPN gateway.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -59,7 +75,9 @@ class VpnGatewayInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * IP address of the VPN gateway.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -73,7 +91,9 @@ class VpnGatewayInfo extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * URI of a Compute Engine network where the VPN gateway is configured.
+   *
+   * @param string $networkUri
    */
   public function setNetworkUri($networkUri)
   {
@@ -87,7 +107,9 @@ class VpnGatewayInfo extends \Google\Model
     return $this->networkUri;
   }
   /**
-   * @param string
+   * Name of a Google Cloud region where this VPN gateway is configured.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -101,7 +123,9 @@ class VpnGatewayInfo extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * URI of a VPN gateway.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {
@@ -115,7 +139,11 @@ class VpnGatewayInfo extends \Google\Model
     return $this->uri;
   }
   /**
-   * @param string
+   * A VPN tunnel that is associated with this VPN gateway. There may be
+   * multiple VPN tunnels configured on a VPN gateway, and only the one relevant
+   * to the test is displayed.
+   *
+   * @param string $vpnTunnelUri
    */
   public function setVpnTunnelUri($vpnTunnelUri)
   {

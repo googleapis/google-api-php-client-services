@@ -20,16 +20,23 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1UploadConversationMetadata extends \Google\Model
 {
   /**
+   * Output only. The operation name for a successfully created analysis
+   * operation, if any.
+   *
    * @var string
    */
   public $analysisOperation;
   protected $appliedRedactionConfigType = GoogleCloudContactcenterinsightsV1RedactionConfig::class;
   protected $appliedRedactionConfigDataType = '';
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
@@ -37,7 +44,10 @@ class GoogleCloudContactcenterinsightsV1UploadConversationMetadata extends \Goog
   protected $requestDataType = '';
 
   /**
-   * @param string
+   * Output only. The operation name for a successfully created analysis
+   * operation, if any.
+   *
+   * @param string $analysisOperation
    */
   public function setAnalysisOperation($analysisOperation)
   {
@@ -51,7 +61,9 @@ class GoogleCloudContactcenterinsightsV1UploadConversationMetadata extends \Goog
     return $this->analysisOperation;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1RedactionConfig
+   * Output only. The redaction config applied to the uploaded conversation.
+   *
+   * @param GoogleCloudContactcenterinsightsV1RedactionConfig $appliedRedactionConfig
    */
   public function setAppliedRedactionConfig(GoogleCloudContactcenterinsightsV1RedactionConfig $appliedRedactionConfig)
   {
@@ -65,7 +77,9 @@ class GoogleCloudContactcenterinsightsV1UploadConversationMetadata extends \Goog
     return $this->appliedRedactionConfig;
   }
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -79,7 +93,9 @@ class GoogleCloudContactcenterinsightsV1UploadConversationMetadata extends \Goog
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -93,7 +109,9 @@ class GoogleCloudContactcenterinsightsV1UploadConversationMetadata extends \Goog
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1UploadConversationRequest
+   * Output only. The original request.
+   *
+   * @param GoogleCloudContactcenterinsightsV1UploadConversationRequest $request
    */
   public function setRequest(GoogleCloudContactcenterinsightsV1UploadConversationRequest $request)
   {

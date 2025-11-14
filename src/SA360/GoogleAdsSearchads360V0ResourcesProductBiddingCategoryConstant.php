@@ -20,40 +20,109 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const LEVEL_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const LEVEL_UNKNOWN = 'UNKNOWN';
+  /**
+   * Level 1.
+   */
+  public const LEVEL_LEVEL1 = 'LEVEL1';
+  /**
+   * Level 2.
+   */
+  public const LEVEL_LEVEL2 = 'LEVEL2';
+  /**
+   * Level 3.
+   */
+  public const LEVEL_LEVEL3 = 'LEVEL3';
+  /**
+   * Level 4.
+   */
+  public const LEVEL_LEVEL4 = 'LEVEL4';
+  /**
+   * Level 5.
+   */
+  public const LEVEL_LEVEL5 = 'LEVEL5';
+  /**
+   * Not specified.
+   */
+  public const STATUS_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * The category is active and can be used for bidding.
+   */
+  public const STATUS_ACTIVE = 'ACTIVE';
+  /**
+   * The category is obsolete. Used only for reporting purposes.
+   */
+  public const STATUS_OBSOLETE = 'OBSOLETE';
+  /**
+   * Output only. Two-letter upper-case country code of the product bidding
+   * category.
+   *
    * @var string
    */
   public $countryCode;
   /**
+   * Output only. ID of the product bidding category. This ID is equivalent to
+   * the google_product_category ID as described in this article:
+   * https://support.google.com/merchants/answer/6324436.
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. Language code of the product bidding category.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Output only. Level of the product bidding category.
+   *
    * @var string
    */
   public $level;
   /**
+   * Output only. Display value of the product bidding category localized
+   * according to language_code.
+   *
    * @var string
    */
   public $localizedName;
   /**
+   * Output only. Resource name of the parent product bidding category.
+   *
    * @var string
    */
   public $productBiddingCategoryConstantParent;
   /**
+   * Output only. The resource name of the product bidding category. Product
+   * bidding category resource names have the form:
+   * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
+   *
    * @var string
    */
   public $resourceName;
   /**
+   * Output only. Status of the product bidding category.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * Output only. Two-letter upper-case country code of the product bidding
+   * category.
+   *
+   * @param string $countryCode
    */
   public function setCountryCode($countryCode)
   {
@@ -67,7 +136,11 @@ class GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant extends \Go
     return $this->countryCode;
   }
   /**
-   * @param string
+   * Output only. ID of the product bidding category. This ID is equivalent to
+   * the google_product_category ID as described in this article:
+   * https://support.google.com/merchants/answer/6324436.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -81,7 +154,9 @@ class GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant extends \Go
     return $this->id;
   }
   /**
-   * @param string
+   * Output only. Language code of the product bidding category.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -95,21 +170,29 @@ class GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant extends \Go
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Output only. Level of the product bidding category.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, LEVEL1, LEVEL2, LEVEL3, LEVEL4,
+   * LEVEL5
+   *
+   * @param self::LEVEL_* $level
    */
   public function setLevel($level)
   {
     $this->level = $level;
   }
   /**
-   * @return string
+   * @return self::LEVEL_*
    */
   public function getLevel()
   {
     return $this->level;
   }
   /**
-   * @param string
+   * Output only. Display value of the product bidding category localized
+   * according to language_code.
+   *
+   * @param string $localizedName
    */
   public function setLocalizedName($localizedName)
   {
@@ -123,7 +206,9 @@ class GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant extends \Go
     return $this->localizedName;
   }
   /**
-   * @param string
+   * Output only. Resource name of the parent product bidding category.
+   *
+   * @param string $productBiddingCategoryConstantParent
    */
   public function setProductBiddingCategoryConstantParent($productBiddingCategoryConstantParent)
   {
@@ -137,7 +222,11 @@ class GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant extends \Go
     return $this->productBiddingCategoryConstantParent;
   }
   /**
-   * @param string
+   * Output only. The resource name of the product bidding category. Product
+   * bidding category resource names have the form:
+   * `productBiddingCategoryConstants/{country_code}~{level}~{id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -151,14 +240,18 @@ class GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant extends \Go
     return $this->resourceName;
   }
   /**
-   * @param string
+   * Output only. Status of the product bidding category.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, ACTIVE, OBSOLETE
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

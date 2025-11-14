@@ -20,16 +20,32 @@ namespace Google\Service\Networkconnectivity;
 class NextHopSpoke extends \Google\Model
 {
   /**
+   * Indicates whether site-to-site data transfer is allowed for this spoke
+   * resource. Data transfer is available only in [supported
+   * locations](https://cloud.google.com/network-connectivity/docs/network-
+   * connectivity-center/concepts/locations). Whether this route is accessible
+   * to other hybrid spokes with site-to-site data transfer enabled. If this is
+   * false, the route is only accessible to VPC spokes of the connected Hub.
+   *
    * @var bool
    */
   public $siteToSiteDataTransfer;
   /**
+   * The URI of the spoke resource.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param bool
+   * Indicates whether site-to-site data transfer is allowed for this spoke
+   * resource. Data transfer is available only in [supported
+   * locations](https://cloud.google.com/network-connectivity/docs/network-
+   * connectivity-center/concepts/locations). Whether this route is accessible
+   * to other hybrid spokes with site-to-site data transfer enabled. If this is
+   * false, the route is only accessible to VPC spokes of the connected Hub.
+   *
+   * @param bool $siteToSiteDataTransfer
    */
   public function setSiteToSiteDataTransfer($siteToSiteDataTransfer)
   {
@@ -43,7 +59,9 @@ class NextHopSpoke extends \Google\Model
     return $this->siteToSiteDataTransfer;
   }
   /**
-   * @param string
+   * The URI of the spoke resource.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

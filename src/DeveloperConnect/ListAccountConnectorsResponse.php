@@ -23,16 +23,22 @@ class ListAccountConnectorsResponse extends \Google\Collection
   protected $accountConnectorsType = AccountConnector::class;
   protected $accountConnectorsDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param AccountConnector[]
+   * The list of AccountConnectors
+   *
+   * @param AccountConnector[] $accountConnectors
    */
   public function setAccountConnectors($accountConnectors)
   {
@@ -46,7 +52,9 @@ class ListAccountConnectorsResponse extends \Google\Collection
     return $this->accountConnectors;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListAccountConnectorsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

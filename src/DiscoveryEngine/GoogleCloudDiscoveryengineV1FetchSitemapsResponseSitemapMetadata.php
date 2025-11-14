@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1FetchSitemapsResponseSitemapMetadata extends \
   protected $sitemapDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1Sitemap
+   * The Sitemap.
+   *
+   * @param GoogleCloudDiscoveryengineV1Sitemap $sitemap
    */
   public function setSitemap(GoogleCloudDiscoveryengineV1Sitemap $sitemap)
   {

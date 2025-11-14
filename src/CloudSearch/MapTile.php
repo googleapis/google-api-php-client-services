@@ -21,11 +21,25 @@ class MapTile extends \Google\Model
 {
   protected $imageUrlType = SafeUrlProto::class;
   protected $imageUrlDataType = '';
+  /**
+   * Map tile x coordinate
+   *
+   * @var 
+   */
   public $tileX;
+  /**
+   * Map tile y coordinate
+   *
+   * @var 
+   */
   public $tileY;
 
   /**
-   * @param SafeUrlProto
+   * URL to an image file containing an office layout of the user's location for
+   * their organization, if one is available. For google.com, this image is from
+   * Corp Campus Maps.
+   *
+   * @param SafeUrlProto $imageUrl
    */
   public function setImageUrl(SafeUrlProto $imageUrl)
   {

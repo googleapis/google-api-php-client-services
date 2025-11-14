@@ -20,16 +20,22 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2VersionDescription extends \Google\Model
 {
   /**
+   * Description of the version.
+   *
    * @var string
    */
   public $description;
   /**
+   * Name of the version
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Description of the version.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +49,9 @@ class GooglePrivacyDlpV2VersionDescription extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Name of the version
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

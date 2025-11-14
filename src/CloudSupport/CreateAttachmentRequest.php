@@ -23,7 +23,9 @@ class CreateAttachmentRequest extends \Google\Model
   protected $attachmentDataType = '';
 
   /**
-   * @param Attachment
+   * Required. The attachment to be created.
+   *
+   * @param Attachment $attachment
    */
   public function setAttachment(Attachment $attachment)
   {

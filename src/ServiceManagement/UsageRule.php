@@ -20,20 +20,40 @@ namespace Google\Service\ServiceManagement;
 class UsageRule extends \Google\Model
 {
   /**
+   * Use this rule to configure unregistered calls for the service. Unregistered
+   * calls are calls that do not contain consumer project identity. (Example:
+   * calls that do not contain an API key). WARNING: By default, API methods do
+   * not allow unregistered calls, and each method call must be identified by a
+   * consumer project identity.
+   *
    * @var bool
    */
   public $allowUnregisteredCalls;
   /**
+   * Selects the methods to which this rule applies. Use '*' to indicate all
+   * methods in all APIs. Refer to selector for syntax details.
+   *
    * @var string
    */
   public $selector;
   /**
+   * If true, the selected method should skip service control and the control
+   * plane features, such as quota and billing, will not be available. This flag
+   * is used by Google Cloud Endpoints to bypass checks for internal methods,
+   * such as service health check methods.
+   *
    * @var bool
    */
   public $skipServiceControl;
 
   /**
-   * @param bool
+   * Use this rule to configure unregistered calls for the service. Unregistered
+   * calls are calls that do not contain consumer project identity. (Example:
+   * calls that do not contain an API key). WARNING: By default, API methods do
+   * not allow unregistered calls, and each method call must be identified by a
+   * consumer project identity.
+   *
+   * @param bool $allowUnregisteredCalls
    */
   public function setAllowUnregisteredCalls($allowUnregisteredCalls)
   {
@@ -47,7 +67,10 @@ class UsageRule extends \Google\Model
     return $this->allowUnregisteredCalls;
   }
   /**
-   * @param string
+   * Selects the methods to which this rule applies. Use '*' to indicate all
+   * methods in all APIs. Refer to selector for syntax details.
+   *
+   * @param string $selector
    */
   public function setSelector($selector)
   {
@@ -61,7 +84,12 @@ class UsageRule extends \Google\Model
     return $this->selector;
   }
   /**
-   * @param bool
+   * If true, the selected method should skip service control and the control
+   * plane features, such as quota and billing, will not be available. This flag
+   * is used by Google Cloud Endpoints to bypass checks for internal methods,
+   * such as service health check methods.
+   *
+   * @param bool $skipServiceControl
    */
   public function setSkipServiceControl($skipServiceControl)
   {

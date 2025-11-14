@@ -21,24 +21,34 @@ class ContentSourceMetaData extends \Google\Collection
 {
   protected $collection_key = 'fieldNames';
   /**
+   * Output only. The charset of the content source.
+   *
    * @var string
    */
   public $charset;
   /**
+   * Output only. The list of column names in the content source.
+   *
    * @var string[]
    */
   public $fieldNames;
   /**
+   * Output only. The number of rows in the content source.
+   *
    * @var int
    */
   public $rowNumber;
   /**
+   * Output only. The separator of the content source.
+   *
    * @var string
    */
   public $separator;
 
   /**
-   * @param string
+   * Output only. The charset of the content source.
+   *
+   * @param string $charset
    */
   public function setCharset($charset)
   {
@@ -52,7 +62,9 @@ class ContentSourceMetaData extends \Google\Collection
     return $this->charset;
   }
   /**
-   * @param string[]
+   * Output only. The list of column names in the content source.
+   *
+   * @param string[] $fieldNames
    */
   public function setFieldNames($fieldNames)
   {
@@ -66,7 +78,9 @@ class ContentSourceMetaData extends \Google\Collection
     return $this->fieldNames;
   }
   /**
-   * @param int
+   * Output only. The number of rows in the content source.
+   *
+   * @param int $rowNumber
    */
   public function setRowNumber($rowNumber)
   {
@@ -80,7 +94,9 @@ class ContentSourceMetaData extends \Google\Collection
     return $this->rowNumber;
   }
   /**
-   * @param string
+   * Output only. The separator of the content source.
+   *
+   * @param string $separator
    */
   public function setSeparator($separator)
   {

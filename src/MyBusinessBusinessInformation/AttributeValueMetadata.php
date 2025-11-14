@@ -20,16 +20,28 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class AttributeValueMetadata extends \Google\Model
 {
   /**
+   * The display name for this value, localized where available; otherwise, in
+   * English. The value display name is intended to be used in context with the
+   * attribute display name. For example, for a "WiFi" enum attribute, this
+   * could contain "Paid" to represent paid Wi-Fi.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The attribute value.
+   *
    * @var array
    */
   public $value;
 
   /**
-   * @param string
+   * The display name for this value, localized where available; otherwise, in
+   * English. The value display name is intended to be used in context with the
+   * attribute display name. For example, for a "WiFi" enum attribute, this
+   * could contain "Paid" to represent paid Wi-Fi.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +55,9 @@ class AttributeValueMetadata extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param array
+   * The attribute value.
+   *
+   * @param array $value
    */
   public function setValue($value)
   {

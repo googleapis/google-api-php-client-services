@@ -20,24 +20,38 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConversationsStats extends \Google\Model
 {
   /**
+   * Output only. The number of objects skipped because another conversation
+   * with the same transcript uri had already been ingested.
+   *
    * @var int
    */
   public $duplicatesSkippedCount;
   /**
+   * Output only. The number of objects which were unable to be ingested due to
+   * errors. The errors are populated in the partial_errors field.
+   *
    * @var int
    */
   public $failedIngestCount;
   /**
+   * Output only. The number of objects processed during the ingest operation.
+   *
    * @var int
    */
   public $processedObjectCount;
   /**
+   * Output only. The number of new conversations added during this ingest
+   * operation.
+   *
    * @var int
    */
   public $successfulIngestCount;
 
   /**
-   * @param int
+   * Output only. The number of objects skipped because another conversation
+   * with the same transcript uri had already been ingested.
+   *
+   * @param int $duplicatesSkippedCount
    */
   public function setDuplicatesSkippedCount($duplicatesSkippedCount)
   {
@@ -51,7 +65,10 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConvers
     return $this->duplicatesSkippedCount;
   }
   /**
-   * @param int
+   * Output only. The number of objects which were unable to be ingested due to
+   * errors. The errors are populated in the partial_errors field.
+   *
+   * @param int $failedIngestCount
    */
   public function setFailedIngestCount($failedIngestCount)
   {
@@ -65,7 +82,9 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConvers
     return $this->failedIngestCount;
   }
   /**
-   * @param int
+   * Output only. The number of objects processed during the ingest operation.
+   *
+   * @param int $processedObjectCount
    */
   public function setProcessedObjectCount($processedObjectCount)
   {
@@ -79,7 +98,10 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConvers
     return $this->processedObjectCount;
   }
   /**
-   * @param int
+   * Output only. The number of new conversations added during this ingest
+   * operation.
+   *
+   * @param int $successfulIngestCount
    */
   public function setSuccessfulIngestCount($successfulIngestCount)
   {

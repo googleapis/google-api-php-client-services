@@ -20,24 +20,113 @@ namespace Google\Service\ShoppingContent;
 class CheckoutSettings extends \Google\Model
 {
   /**
+   * Default enrollment state when enrollment state is not specified.
+   */
+  public const EFFECTIVE_ENROLLMENT_STATE_CHECKOUT_ON_MERCHANT_ENROLLMENT_STATE_UNSPECIFIED = 'CHECKOUT_ON_MERCHANT_ENROLLMENT_STATE_UNSPECIFIED';
+  /**
+   * Merchant has not enrolled into the feature.
+   */
+  public const EFFECTIVE_ENROLLMENT_STATE_INACTIVE = 'INACTIVE';
+  /**
+   * Merchant has enrolled into the feature by providing either an account level
+   * URL or checkout URLs as part of their feed.
+   */
+  public const EFFECTIVE_ENROLLMENT_STATE_ENROLLED = 'ENROLLED';
+  /**
+   * Merchant has previously enrolled but opted out of the feature.
+   */
+  public const EFFECTIVE_ENROLLMENT_STATE_OPT_OUT = 'OPT_OUT';
+  /**
+   * Default review state when review state is not specified.
+   */
+  public const EFFECTIVE_REVIEW_STATE_CHECKOUT_ON_MERCHANT_REVIEW_STATE_UNSPECIFIED = 'CHECKOUT_ON_MERCHANT_REVIEW_STATE_UNSPECIFIED';
+  /**
+   * Merchant provided URLs are being reviewed for data quality issues.
+   */
+  public const EFFECTIVE_REVIEW_STATE_IN_REVIEW = 'IN_REVIEW';
+  /**
+   * Merchant account has been approved. Indicates the data quality checks have
+   * passed.
+   */
+  public const EFFECTIVE_REVIEW_STATE_APPROVED = 'APPROVED';
+  /**
+   * Merchant account has been disapproved due to data quality issues.
+   */
+  public const EFFECTIVE_REVIEW_STATE_DISAPPROVED = 'DISAPPROVED';
+  /**
+   * Default enrollment state when enrollment state is not specified.
+   */
+  public const ENROLLMENT_STATE_CHECKOUT_ON_MERCHANT_ENROLLMENT_STATE_UNSPECIFIED = 'CHECKOUT_ON_MERCHANT_ENROLLMENT_STATE_UNSPECIFIED';
+  /**
+   * Merchant has not enrolled into the feature.
+   */
+  public const ENROLLMENT_STATE_INACTIVE = 'INACTIVE';
+  /**
+   * Merchant has enrolled into the feature by providing either an account level
+   * URL or checkout URLs as part of their feed.
+   */
+  public const ENROLLMENT_STATE_ENROLLED = 'ENROLLED';
+  /**
+   * Merchant has previously enrolled but opted out of the feature.
+   */
+  public const ENROLLMENT_STATE_OPT_OUT = 'OPT_OUT';
+  /**
+   * Default review state when review state is not specified.
+   */
+  public const REVIEW_STATE_CHECKOUT_ON_MERCHANT_REVIEW_STATE_UNSPECIFIED = 'CHECKOUT_ON_MERCHANT_REVIEW_STATE_UNSPECIFIED';
+  /**
+   * Merchant provided URLs are being reviewed for data quality issues.
+   */
+  public const REVIEW_STATE_IN_REVIEW = 'IN_REVIEW';
+  /**
+   * Merchant account has been approved. Indicates the data quality checks have
+   * passed.
+   */
+  public const REVIEW_STATE_APPROVED = 'APPROVED';
+  /**
+   * Merchant account has been disapproved due to data quality issues.
+   */
+  public const REVIEW_STATE_DISAPPROVED = 'DISAPPROVED';
+  /**
+   * Output only. The effective value of enrollment state for a given merchant
+   * ID. If account level settings are present then this value will be a copy of
+   * the account level settings. Otherwise, it will have the value of the parent
+   * account.
+   *
    * @var string
    */
   public $effectiveEnrollmentState;
   /**
+   * Output only. The effective value of review state for a given merchant ID.
+   * If account level settings are present then this value will be a copy of the
+   * account level settings. Otherwise, it will have the value of the parent
+   * account.
+   *
    * @var string
    */
   public $effectiveReviewState;
   protected $effectiveUriSettingsType = UrlSettings::class;
   protected $effectiveUriSettingsDataType = '';
   /**
+   * Output only. Reflects the merchant enrollment state in `Checkout` feature.
+   *
    * @var string
    */
   public $enrollmentState;
   /**
+   * Required. The ID of the account.
+   *
    * @var string
    */
   public $merchantId;
   /**
+   * Output only. Reflects the merchant review state in `Checkout` feature. This
+   * is set based on the data quality reviews of the URL provided by the
+   * merchant. A merchant with enrollment state as `ENROLLED` can be in the
+   * following review states: `IN_REVIEW`, `APPROVED` or `DISAPPROVED`. A
+   * merchant must be in an enrollment_state of `ENROLLED` before a review can
+   * begin for the merchant.
+   *
    * @var string
    */
   public $reviewState;
@@ -45,35 +134,55 @@ class CheckoutSettings extends \Google\Model
   protected $uriSettingsDataType = '';
 
   /**
-   * @param string
+   * Output only. The effective value of enrollment state for a given merchant
+   * ID. If account level settings are present then this value will be a copy of
+   * the account level settings. Otherwise, it will have the value of the parent
+   * account.
+   *
+   * Accepted values: CHECKOUT_ON_MERCHANT_ENROLLMENT_STATE_UNSPECIFIED,
+   * INACTIVE, ENROLLED, OPT_OUT
+   *
+   * @param self::EFFECTIVE_ENROLLMENT_STATE_* $effectiveEnrollmentState
    */
   public function setEffectiveEnrollmentState($effectiveEnrollmentState)
   {
     $this->effectiveEnrollmentState = $effectiveEnrollmentState;
   }
   /**
-   * @return string
+   * @return self::EFFECTIVE_ENROLLMENT_STATE_*
    */
   public function getEffectiveEnrollmentState()
   {
     return $this->effectiveEnrollmentState;
   }
   /**
-   * @param string
+   * Output only. The effective value of review state for a given merchant ID.
+   * If account level settings are present then this value will be a copy of the
+   * account level settings. Otherwise, it will have the value of the parent
+   * account.
+   *
+   * Accepted values: CHECKOUT_ON_MERCHANT_REVIEW_STATE_UNSPECIFIED, IN_REVIEW,
+   * APPROVED, DISAPPROVED
+   *
+   * @param self::EFFECTIVE_REVIEW_STATE_* $effectiveReviewState
    */
   public function setEffectiveReviewState($effectiveReviewState)
   {
     $this->effectiveReviewState = $effectiveReviewState;
   }
   /**
-   * @return string
+   * @return self::EFFECTIVE_REVIEW_STATE_*
    */
   public function getEffectiveReviewState()
   {
     return $this->effectiveReviewState;
   }
   /**
-   * @param UrlSettings
+   * The effective value of `url_settings` for a given merchant ID. If account
+   * level settings are present then this value will be a copy of the account
+   * level settings. Otherwise, it will have the value of the parent account.
+   *
+   * @param UrlSettings $effectiveUriSettings
    */
   public function setEffectiveUriSettings(UrlSettings $effectiveUriSettings)
   {
@@ -87,21 +196,28 @@ class CheckoutSettings extends \Google\Model
     return $this->effectiveUriSettings;
   }
   /**
-   * @param string
+   * Output only. Reflects the merchant enrollment state in `Checkout` feature.
+   *
+   * Accepted values: CHECKOUT_ON_MERCHANT_ENROLLMENT_STATE_UNSPECIFIED,
+   * INACTIVE, ENROLLED, OPT_OUT
+   *
+   * @param self::ENROLLMENT_STATE_* $enrollmentState
    */
   public function setEnrollmentState($enrollmentState)
   {
     $this->enrollmentState = $enrollmentState;
   }
   /**
-   * @return string
+   * @return self::ENROLLMENT_STATE_*
    */
   public function getEnrollmentState()
   {
     return $this->enrollmentState;
   }
   /**
-   * @param string
+   * Required. The ID of the account.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -115,21 +231,33 @@ class CheckoutSettings extends \Google\Model
     return $this->merchantId;
   }
   /**
-   * @param string
+   * Output only. Reflects the merchant review state in `Checkout` feature. This
+   * is set based on the data quality reviews of the URL provided by the
+   * merchant. A merchant with enrollment state as `ENROLLED` can be in the
+   * following review states: `IN_REVIEW`, `APPROVED` or `DISAPPROVED`. A
+   * merchant must be in an enrollment_state of `ENROLLED` before a review can
+   * begin for the merchant.
+   *
+   * Accepted values: CHECKOUT_ON_MERCHANT_REVIEW_STATE_UNSPECIFIED, IN_REVIEW,
+   * APPROVED, DISAPPROVED
+   *
+   * @param self::REVIEW_STATE_* $reviewState
    */
   public function setReviewState($reviewState)
   {
     $this->reviewState = $reviewState;
   }
   /**
-   * @return string
+   * @return self::REVIEW_STATE_*
    */
   public function getReviewState()
   {
     return $this->reviewState;
   }
   /**
-   * @param UrlSettings
+   * URL settings for cart or checkout URL.
+   *
+   * @param UrlSettings $uriSettings
    */
   public function setUriSettings(UrlSettings $uriSettings)
   {

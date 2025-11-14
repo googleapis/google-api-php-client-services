@@ -21,16 +21,26 @@ class GoogleCloudDiscoveryengineV1CompleteQueryResponseQuerySuggestion extends \
 {
   protected $collection_key = 'completableFieldPaths';
   /**
+   * The unique document field paths that serve as the source of this suggestion
+   * if it was generated from completable fields. This field is only populated
+   * for the document-completable model.
+   *
    * @var string[]
    */
   public $completableFieldPaths;
   /**
+   * The suggestion for the query.
+   *
    * @var string
    */
   public $suggestion;
 
   /**
-   * @param string[]
+   * The unique document field paths that serve as the source of this suggestion
+   * if it was generated from completable fields. This field is only populated
+   * for the document-completable model.
+   *
+   * @param string[] $completableFieldPaths
    */
   public function setCompletableFieldPaths($completableFieldPaths)
   {
@@ -44,7 +54,9 @@ class GoogleCloudDiscoveryengineV1CompleteQueryResponseQuerySuggestion extends \
     return $this->completableFieldPaths;
   }
   /**
-   * @param string
+   * The suggestion for the query.
+   *
+   * @param string $suggestion
    */
   public function setSuggestion($suggestion)
   {

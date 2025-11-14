@@ -20,28 +20,80 @@ namespace Google\Service\MyBusinessAccountManagement;
 class Admin extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const ROLE_ADMIN_ROLE_UNSPECIFIED = 'ADMIN_ROLE_UNSPECIFIED';
+  /**
+   * The admin has owner-level access and is the primary owner. (Displays as
+   * 'Primary Owner' in UI).
+   */
+  public const ROLE_PRIMARY_OWNER = 'PRIMARY_OWNER';
+  /**
+   * The admin has owner-level access. (Displays as 'Owner' in UI).
+   */
+  public const ROLE_OWNER = 'OWNER';
+  /**
+   * The admin has managerial access.
+   */
+  public const ROLE_MANAGER = 'MANAGER';
+  /**
+   * The admin can manage social (Google+) pages. (Displays as 'Site Manager' in
+   * UI). This API doesn't allow creating an account admin with a SITE_MANAGER
+   * role.
+   */
+  public const ROLE_SITE_MANAGER = 'SITE_MANAGER';
+  /**
+   * Immutable. The name of the Account resource that this Admin refers to. Used
+   * when calling locations.admins.create to invite a LocationGroup as an admin.
+   * If both this field and `admin` are set on `CREATE` requests, this field
+   * takes precedence and the email address in `admin` will be ignored. Format:
+   * `accounts/{account}`.
+   *
    * @var string
    */
   public $account;
   /**
+   * Optional. The name of the admin. When making the initial invitation, this
+   * is the invitee's email address. On `GET` calls, the user's email address is
+   * returned if the invitation is still pending. Otherwise, it contains the
+   * user's first and last names. This field is only needed to be set during
+   * admin creation.
+   *
    * @var string
    */
   public $admin;
   /**
+   * Immutable. The resource name. For account admins, this is in the form:
+   * `accounts/{account_id}/admins/{admin_id}` For location admins, this is in
+   * the form: `locations/{location_id}/admins/{admin_id}` This field will be
+   * ignored if set during admin creation.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Indicates whether this admin has a pending invitation for the
+   * specified resource.
+   *
    * @var bool
    */
   public $pendingInvitation;
   /**
+   * Required. Specifies the role that this admin uses with the specified
+   * Account or Location.
+   *
    * @var string
    */
   public $role;
 
   /**
-   * @param string
+   * Immutable. The name of the Account resource that this Admin refers to. Used
+   * when calling locations.admins.create to invite a LocationGroup as an admin.
+   * If both this field and `admin` are set on `CREATE` requests, this field
+   * takes precedence and the email address in `admin` will be ignored. Format:
+   * `accounts/{account}`.
+   *
+   * @param string $account
    */
   public function setAccount($account)
   {
@@ -55,7 +107,13 @@ class Admin extends \Google\Model
     return $this->account;
   }
   /**
-   * @param string
+   * Optional. The name of the admin. When making the initial invitation, this
+   * is the invitee's email address. On `GET` calls, the user's email address is
+   * returned if the invitation is still pending. Otherwise, it contains the
+   * user's first and last names. This field is only needed to be set during
+   * admin creation.
+   *
+   * @param string $admin
    */
   public function setAdmin($admin)
   {
@@ -69,7 +127,12 @@ class Admin extends \Google\Model
     return $this->admin;
   }
   /**
-   * @param string
+   * Immutable. The resource name. For account admins, this is in the form:
+   * `accounts/{account_id}/admins/{admin_id}` For location admins, this is in
+   * the form: `locations/{location_id}/admins/{admin_id}` This field will be
+   * ignored if set during admin creation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +146,10 @@ class Admin extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Indicates whether this admin has a pending invitation for the
+   * specified resource.
+   *
+   * @param bool $pendingInvitation
    */
   public function setPendingInvitation($pendingInvitation)
   {
@@ -97,14 +163,20 @@ class Admin extends \Google\Model
     return $this->pendingInvitation;
   }
   /**
-   * @param string
+   * Required. Specifies the role that this admin uses with the specified
+   * Account or Location.
+   *
+   * Accepted values: ADMIN_ROLE_UNSPECIFIED, PRIMARY_OWNER, OWNER, MANAGER,
+   * SITE_MANAGER
+   *
+   * @param self::ROLE_* $role
    */
   public function setRole($role)
   {
     $this->role = $role;
   }
   /**
-   * @return string
+   * @return self::ROLE_*
    */
   public function getRole()
   {

@@ -23,7 +23,10 @@ class Connection extends \Google\Model
   protected $targetDataType = '';
 
   /**
-   * @param PhotoId
+   * Required. The destination of the connection from the containing photo to
+   * another photo.
+   *
+   * @param PhotoId $target
    */
   public function setTarget(PhotoId $target)
   {

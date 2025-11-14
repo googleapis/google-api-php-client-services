@@ -22,10 +22,19 @@ class VoiceOfMerchantState extends \Google\Model
   protected $complyWithGuidelinesType = ComplyWithGuidelines::class;
   protected $complyWithGuidelinesDataType = '';
   /**
+   * Indicates whether the location has the authority (ownership) over the
+   * business on Google. If true, another location cannot take over and become
+   * the dominant listing on Maps. However, edits will not become live unless
+   * Voice of Merchant is gained (i.e. has_voice_of_merchant is true).
+   *
    * @var bool
    */
   public $hasBusinessAuthority;
   /**
+   * Indicates whether the location is in good standing and has control over the
+   * business on Google. Any edits made to the location will propagate to Maps
+   * after passing the review phase.
+   *
    * @var bool
    */
   public $hasVoiceOfMerchant;
@@ -37,7 +46,12 @@ class VoiceOfMerchantState extends \Google\Model
   protected $waitForVoiceOfMerchantDataType = '';
 
   /**
-   * @param ComplyWithGuidelines
+   * The location fails to comply with our
+   * [guidelines](https://support.google.com/business/answer/3038177) and
+   * requires additional steps for reinstatement. To fix this issue, consult the
+   * [Help Center Article](https://support.google.com/business/answer/4569145).
+   *
+   * @param ComplyWithGuidelines $complyWithGuidelines
    */
   public function setComplyWithGuidelines(ComplyWithGuidelines $complyWithGuidelines)
   {
@@ -51,7 +65,12 @@ class VoiceOfMerchantState extends \Google\Model
     return $this->complyWithGuidelines;
   }
   /**
-   * @param bool
+   * Indicates whether the location has the authority (ownership) over the
+   * business on Google. If true, another location cannot take over and become
+   * the dominant listing on Maps. However, edits will not become live unless
+   * Voice of Merchant is gained (i.e. has_voice_of_merchant is true).
+   *
+   * @param bool $hasBusinessAuthority
    */
   public function setHasBusinessAuthority($hasBusinessAuthority)
   {
@@ -65,7 +84,11 @@ class VoiceOfMerchantState extends \Google\Model
     return $this->hasBusinessAuthority;
   }
   /**
-   * @param bool
+   * Indicates whether the location is in good standing and has control over the
+   * business on Google. Any edits made to the location will propagate to Maps
+   * after passing the review phase.
+   *
+   * @param bool $hasVoiceOfMerchant
    */
   public function setHasVoiceOfMerchant($hasVoiceOfMerchant)
   {
@@ -79,7 +102,11 @@ class VoiceOfMerchantState extends \Google\Model
     return $this->hasVoiceOfMerchant;
   }
   /**
-   * @param ResolveOwnershipConflict
+   * This location duplicates another location that is in good standing. If you
+   * have access to the location in good standing, use that location's id to
+   * perform operations. Otherwise, request access from the current owner.
+   *
+   * @param ResolveOwnershipConflict $resolveOwnershipConflict
    */
   public function setResolveOwnershipConflict(ResolveOwnershipConflict $resolveOwnershipConflict)
   {
@@ -93,7 +120,9 @@ class VoiceOfMerchantState extends \Google\Model
     return $this->resolveOwnershipConflict;
   }
   /**
-   * @param Verify
+   * Start or continue the verification process.
+   *
+   * @param Verify $verify
    */
   public function setVerify(Verify $verify)
   {
@@ -107,7 +136,10 @@ class VoiceOfMerchantState extends \Google\Model
     return $this->verify;
   }
   /**
-   * @param WaitForVoiceOfMerchant
+   * Wait to gain Voice of Merchant. The location is under review for quality
+   * purposes.
+   *
+   * @param WaitForVoiceOfMerchant $waitForVoiceOfMerchant
    */
   public function setWaitForVoiceOfMerchant(WaitForVoiceOfMerchant $waitForVoiceOfMerchant)
   {

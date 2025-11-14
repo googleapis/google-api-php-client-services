@@ -23,12 +23,16 @@ class TableDataInsertAllResponse extends \Google\Collection
   protected $insertErrorsType = TableDataInsertAllResponseInsertErrors::class;
   protected $insertErrorsDataType = 'array';
   /**
+   * Returns "bigquery#tableDataInsertAllResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param TableDataInsertAllResponseInsertErrors[]
+   * Describes specific errors encountered while processing the request.
+   *
+   * @param TableDataInsertAllResponseInsertErrors[] $insertErrors
    */
   public function setInsertErrors($insertErrors)
   {
@@ -42,7 +46,9 @@ class TableDataInsertAllResponse extends \Google\Collection
     return $this->insertErrors;
   }
   /**
-   * @param string
+   * Returns "bigquery#tableDataInsertAllResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -20,10 +20,14 @@ namespace Google\Service\Docs;
 class TableRange extends \Google\Model
 {
   /**
+   * The column span of the table range.
+   *
    * @var int
    */
   public $columnSpan;
   /**
+   * The row span of the table range.
+   *
    * @var int
    */
   public $rowSpan;
@@ -31,7 +35,9 @@ class TableRange extends \Google\Model
   protected $tableCellLocationDataType = '';
 
   /**
-   * @param int
+   * The column span of the table range.
+   *
+   * @param int $columnSpan
    */
   public function setColumnSpan($columnSpan)
   {
@@ -45,7 +51,9 @@ class TableRange extends \Google\Model
     return $this->columnSpan;
   }
   /**
-   * @param int
+   * The row span of the table range.
+   *
+   * @param int $rowSpan
    */
   public function setRowSpan($rowSpan)
   {
@@ -59,7 +67,9 @@ class TableRange extends \Google\Model
     return $this->rowSpan;
   }
   /**
-   * @param TableCellLocation
+   * The cell location where the table range starts.
+   *
+   * @param TableCellLocation $tableCellLocation
    */
   public function setTableCellLocation(TableCellLocation $tableCellLocation)
   {

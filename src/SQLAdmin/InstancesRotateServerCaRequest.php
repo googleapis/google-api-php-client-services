@@ -23,7 +23,9 @@ class InstancesRotateServerCaRequest extends \Google\Model
   protected $rotateServerCaContextDataType = '';
 
   /**
-   * @param RotateServerCaContext
+   * Contains details about the rotate server CA operation.
+   *
+   * @param RotateServerCaContext $rotateServerCaContext
    */
   public function setRotateServerCaContext(RotateServerCaContext $rotateServerCaContext)
   {

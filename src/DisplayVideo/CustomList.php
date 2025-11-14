@@ -20,20 +20,28 @@ namespace Google\Service\DisplayVideo;
 class CustomList extends \Google\Model
 {
   /**
+   * Output only. The unique ID of the custom list. Assigned by the system.
+   *
    * @var string
    */
   public $customListId;
   /**
+   * Output only. The display name of the custom list. .
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The resource name of the custom list.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The unique ID of the custom list. Assigned by the system.
+   *
+   * @param string $customListId
    */
   public function setCustomListId($customListId)
   {
@@ -47,7 +55,9 @@ class CustomList extends \Google\Model
     return $this->customListId;
   }
   /**
-   * @param string
+   * Output only. The display name of the custom list. .
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +71,9 @@ class CustomList extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The resource name of the custom list.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

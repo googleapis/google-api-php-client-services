@@ -22,12 +22,16 @@ class GooglePrivacyDlpV2AmazonS3Bucket extends \Google\Model
   protected $awsAccountType = GooglePrivacyDlpV2AwsAccount::class;
   protected $awsAccountDataType = '';
   /**
+   * Required. The bucket name.
+   *
    * @var string
    */
   public $bucketName;
 
   /**
-   * @param GooglePrivacyDlpV2AwsAccount
+   * The AWS account.
+   *
+   * @param GooglePrivacyDlpV2AwsAccount $awsAccount
    */
   public function setAwsAccount(GooglePrivacyDlpV2AwsAccount $awsAccount)
   {
@@ -41,7 +45,9 @@ class GooglePrivacyDlpV2AmazonS3Bucket extends \Google\Model
     return $this->awsAccount;
   }
   /**
-   * @param string
+   * Required. The bucket name.
+   *
+   * @param string $bucketName
    */
   public function setBucketName($bucketName)
   {

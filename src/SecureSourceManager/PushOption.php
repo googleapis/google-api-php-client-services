@@ -20,12 +20,22 @@ namespace Google\Service\SecureSourceManager;
 class PushOption extends \Google\Model
 {
   /**
+   * Optional. Trigger hook for matching branches only. Specified as glob
+   * pattern. If empty or *, events for all branches are reported. Examples:
+   * main, {main,release*}. See https://pkg.go.dev/github.com/gobwas/glob
+   * documentation.
+   *
    * @var string
    */
   public $branchFilter;
 
   /**
-   * @param string
+   * Optional. Trigger hook for matching branches only. Specified as glob
+   * pattern. If empty or *, events for all branches are reported. Examples:
+   * main, {main,release*}. See https://pkg.go.dev/github.com/gobwas/glob
+   * documentation.
+   *
+   * @param string $branchFilter
    */
   public function setBranchFilter($branchFilter)
   {

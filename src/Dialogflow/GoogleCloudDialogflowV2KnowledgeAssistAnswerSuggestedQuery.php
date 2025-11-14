@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2KnowledgeAssistAnswerSuggestedQuery extends \Google\Model
 {
   /**
+   * Suggested query text.
+   *
    * @var string
    */
   public $queryText;
 
   /**
-   * @param string
+   * Suggested query text.
+   *
+   * @param string $queryText
    */
   public function setQueryText($queryText)
   {

@@ -23,12 +23,16 @@ class FetchLinkableGitRepositoriesResponse extends \Google\Collection
   protected $linkableGitRepositoriesType = LinkableGitRepository::class;
   protected $linkableGitRepositoriesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param LinkableGitRepository[]
+   * The git repositories that can be linked to the connection.
+   *
+   * @param LinkableGitRepository[] $linkableGitRepositories
    */
   public function setLinkableGitRepositories($linkableGitRepositories)
   {
@@ -42,7 +46,9 @@ class FetchLinkableGitRepositoriesResponse extends \Google\Collection
     return $this->linkableGitRepositories;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

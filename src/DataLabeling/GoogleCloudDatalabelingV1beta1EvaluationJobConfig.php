@@ -20,6 +20,21 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
 {
   /**
+   * Required. Prediction keys that tell Data Labeling Service where to find the
+   * data for evaluation in your BigQuery table. When the service samples
+   * prediction input and output from your model version and saves it to
+   * BigQuery, the data gets stored as JSON strings in the BigQuery table. These
+   * keys tell Data Labeling Service how to parse the JSON. You can provide the
+   * following entries in this field: * `data_json_key`: the data key for
+   * prediction input. You must provide either this key or `reference_json_key`.
+   * * `reference_json_key`: the data reference key for prediction input. You
+   * must provide either this key or `data_json_key`. * `label_json_key`: the
+   * label key for prediction output. Required. * `label_score_json_key`: the
+   * score key for prediction output. Required. * `bounding_box_json_key`: the
+   * bounding box key for prediction output. Required if your model version
+   * perform image object detection. Learn [how to configure prediction
+   * keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).
+   *
    * @var string[]
    */
   public $bigqueryImportKeys;
@@ -30,9 +45,22 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
   protected $evaluationJobAlertConfigType = GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig::class;
   protected $evaluationJobAlertConfigDataType = '';
   /**
+   * Required. The maximum number of predictions to sample and save to BigQuery
+   * during each evaluation interval. This limit overrides
+   * `example_sample_percentage`: even if the service has not sampled enough
+   * predictions to fulfill `example_sample_perecentage` during an interval, it
+   * stops sampling predictions when it meets this limit.
+   *
    * @var int
    */
   public $exampleCount;
+  /**
+   * Required. Fraction of predictions to sample and save to BigQuery during
+   * each evaluation interval. For example, 0.1 means 10% of predictions served
+   * by your model version get saved to BigQuery.
+   *
+   * @var 
+   */
   public $exampleSamplePercentage;
   protected $humanAnnotationConfigType = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig::class;
   protected $humanAnnotationConfigDataType = '';
@@ -44,7 +72,22 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
   protected $textClassificationConfigDataType = '';
 
   /**
-   * @param string[]
+   * Required. Prediction keys that tell Data Labeling Service where to find the
+   * data for evaluation in your BigQuery table. When the service samples
+   * prediction input and output from your model version and saves it to
+   * BigQuery, the data gets stored as JSON strings in the BigQuery table. These
+   * keys tell Data Labeling Service how to parse the JSON. You can provide the
+   * following entries in this field: * `data_json_key`: the data key for
+   * prediction input. You must provide either this key or `reference_json_key`.
+   * * `reference_json_key`: the data reference key for prediction input. You
+   * must provide either this key or `data_json_key`. * `label_json_key`: the
+   * label key for prediction output. Required. * `label_score_json_key`: the
+   * score key for prediction output. Required. * `bounding_box_json_key`: the
+   * bounding box key for prediction output. Required if your model version
+   * perform image object detection. Learn [how to configure prediction
+   * keys](/ml-engine/docs/continuous-evaluation/create-job#prediction-keys).
+   *
+   * @param string[] $bigqueryImportKeys
    */
   public function setBigqueryImportKeys($bigqueryImportKeys)
   {
@@ -58,7 +101,11 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->bigqueryImportKeys;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1BoundingPolyConfig
+   * Specify this field if your model version performs image object detection
+   * (bounding box detection). `annotationSpecSet` in this configuration must
+   * match EvaluationJob.annotationSpecSet.
+   *
+   * @param GoogleCloudDatalabelingV1beta1BoundingPolyConfig $boundingPolyConfig
    */
   public function setBoundingPolyConfig(GoogleCloudDatalabelingV1beta1BoundingPolyConfig $boundingPolyConfig)
   {
@@ -72,7 +119,12 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->boundingPolyConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1EvaluationConfig
+   * Required. Details for calculating evaluation metrics and creating
+   * Evaulations. If your model version performs image object detection, you
+   * must specify the `boundingBoxEvaluationOptions` field within this
+   * configuration. Otherwise, provide an empty object for this configuration.
+   *
+   * @param GoogleCloudDatalabelingV1beta1EvaluationConfig $evaluationConfig
    */
   public function setEvaluationConfig(GoogleCloudDatalabelingV1beta1EvaluationConfig $evaluationConfig)
   {
@@ -86,7 +138,11 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->evaluationConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig
+   * Optional. Configuration details for evaluation job alerts. Specify this
+   * field if you want to receive email alerts if the evaluation job finds that
+   * your predictions have low mean average precision during a run.
+   *
+   * @param GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig $evaluationJobAlertConfig
    */
   public function setEvaluationJobAlertConfig(GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig $evaluationJobAlertConfig)
   {
@@ -100,7 +156,13 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->evaluationJobAlertConfig;
   }
   /**
-   * @param int
+   * Required. The maximum number of predictions to sample and save to BigQuery
+   * during each evaluation interval. This limit overrides
+   * `example_sample_percentage`: even if the service has not sampled enough
+   * predictions to fulfill `example_sample_perecentage` during an interval, it
+   * stops sampling predictions when it meets this limit.
+   *
+   * @param int $exampleCount
    */
   public function setExampleCount($exampleCount)
   {
@@ -122,7 +184,14 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->exampleSamplePercentage;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   * Optional. Details for human annotation of your data. If you set
+   * labelMissingGroundTruth to `true` for this evaluation job, then you must
+   * specify this field. If you plan to provide your own ground truth labels,
+   * then omit this field. Note that you must create an Instruction resource
+   * before you can specify this field. Provide the name of the instruction
+   * resource in the `instruction` field within this configuration.
+   *
+   * @param GoogleCloudDatalabelingV1beta1HumanAnnotationConfig $humanAnnotationConfig
    */
   public function setHumanAnnotationConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfig $humanAnnotationConfig)
   {
@@ -136,7 +205,13 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->humanAnnotationConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1ImageClassificationConfig
+   * Specify this field if your model version performs image classification or
+   * general classification. `annotationSpecSet` in this configuration must
+   * match EvaluationJob.annotationSpecSet. `allowMultiLabel` in this
+   * configuration must match `classificationMetadata.isMultiLabel` in
+   * input_config.
+   *
+   * @param GoogleCloudDatalabelingV1beta1ImageClassificationConfig $imageClassificationConfig
    */
   public function setImageClassificationConfig(GoogleCloudDatalabelingV1beta1ImageClassificationConfig $imageClassificationConfig)
   {
@@ -150,7 +225,16 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->imageClassificationConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1InputConfig
+   * Rquired. Details for the sampled prediction input. Within this
+   * configuration, there are requirements for several fields: * `dataType` must
+   * be one of `IMAGE`, `TEXT`, or `GENERAL_DATA`. * `annotationType` must be
+   * one of `IMAGE_CLASSIFICATION_ANNOTATION`, `TEXT_CLASSIFICATION_ANNOTATION`,
+   * `GENERAL_CLASSIFICATION_ANNOTATION`, or `IMAGE_BOUNDING_BOX_ANNOTATION`
+   * (image object detection). * If your machine learning model performs
+   * classification, you must specify `classificationMetadata.isMultiLabel`. *
+   * You must specify `bigquerySource` (not `gcsSource`).
+   *
+   * @param GoogleCloudDatalabelingV1beta1InputConfig $inputConfig
    */
   public function setInputConfig(GoogleCloudDatalabelingV1beta1InputConfig $inputConfig)
   {
@@ -164,7 +248,12 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
     return $this->inputConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1TextClassificationConfig
+   * Specify this field if your model version performs text classification.
+   * `annotationSpecSet` in this configuration must match
+   * EvaluationJob.annotationSpecSet. `allowMultiLabel` in this configuration
+   * must match `classificationMetadata.isMultiLabel` in input_config.
+   *
+   * @param GoogleCloudDatalabelingV1beta1TextClassificationConfig $textClassificationConfig
    */
   public function setTextClassificationConfig(GoogleCloudDatalabelingV1beta1TextClassificationConfig $textClassificationConfig)
   {

@@ -21,10 +21,14 @@ class ListVolumeSnapshotsResponse extends \Google\Collection
 {
   protected $collection_key = 'volumeSnapshots';
   /**
+   * A token identifying a page of results from the server.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
@@ -32,7 +36,9 @@ class ListVolumeSnapshotsResponse extends \Google\Collection
   protected $volumeSnapshotsDataType = 'array';
 
   /**
-   * @param string
+   * A token identifying a page of results from the server.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListVolumeSnapshotsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
@@ -60,7 +68,9 @@ class ListVolumeSnapshotsResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * @param VolumeSnapshot[]
+   * The list of snapshots.
+   *
+   * @param VolumeSnapshot[] $volumeSnapshots
    */
   public function setVolumeSnapshots($volumeSnapshots)
   {

@@ -26,7 +26,9 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadata 
   protected $segmentsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReference[]
+   * References for the grounded text.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataReference[] $references
    */
   public function setReferences($references)
   {
@@ -40,7 +42,9 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadata 
     return $this->references;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataSegment[]
+   * Grounding information for parts of the text.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataSegment[] $segments
    */
   public function setSegments($segments)
   {

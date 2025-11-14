@@ -20,12 +20,16 @@ namespace Google\Service\Dfareporting;
 class ContextualKeyword extends \Google\Model
 {
   /**
+   * The keyword that can be targeted by ads.
+   *
    * @var string
    */
   public $keyword;
 
   /**
-   * @param string
+   * The keyword that can be targeted by ads.
+   *
+   * @param string $keyword
    */
   public function setKeyword($keyword)
   {

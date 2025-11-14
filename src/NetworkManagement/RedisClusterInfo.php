@@ -20,32 +20,49 @@ namespace Google\Service\NetworkManagement;
 class RedisClusterInfo extends \Google\Model
 {
   /**
+   * Discovery endpoint IP address of a Redis Cluster.
+   *
    * @var string
    */
   public $discoveryEndpointIpAddress;
   /**
+   * Name of a Redis Cluster.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Name of the region in which the Redis Cluster is defined. For example, "us-
+   * central1".
+   *
    * @var string
    */
   public $location;
   /**
+   * URI of the network containing the Redis Cluster endpoints in format
+   * "projects/{project_id}/global/networks/{network_id}".
+   *
    * @var string
    */
   public $networkUri;
   /**
+   * Secondary endpoint IP address of a Redis Cluster.
+   *
    * @var string
    */
   public $secondaryEndpointIpAddress;
   /**
+   * URI of a Redis Cluster in format
+   * "projects/{project_id}/locations/{location}/clusters/{cluster_id}"
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Discovery endpoint IP address of a Redis Cluster.
+   *
+   * @param string $discoveryEndpointIpAddress
    */
   public function setDiscoveryEndpointIpAddress($discoveryEndpointIpAddress)
   {
@@ -59,7 +76,9 @@ class RedisClusterInfo extends \Google\Model
     return $this->discoveryEndpointIpAddress;
   }
   /**
-   * @param string
+   * Name of a Redis Cluster.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -73,7 +92,10 @@ class RedisClusterInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Name of the region in which the Redis Cluster is defined. For example, "us-
+   * central1".
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -87,7 +109,10 @@ class RedisClusterInfo extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * URI of the network containing the Redis Cluster endpoints in format
+   * "projects/{project_id}/global/networks/{network_id}".
+   *
+   * @param string $networkUri
    */
   public function setNetworkUri($networkUri)
   {
@@ -101,7 +126,9 @@ class RedisClusterInfo extends \Google\Model
     return $this->networkUri;
   }
   /**
-   * @param string
+   * Secondary endpoint IP address of a Redis Cluster.
+   *
+   * @param string $secondaryEndpointIpAddress
    */
   public function setSecondaryEndpointIpAddress($secondaryEndpointIpAddress)
   {
@@ -115,7 +142,10 @@ class RedisClusterInfo extends \Google\Model
     return $this->secondaryEndpointIpAddress;
   }
   /**
-   * @param string
+   * URI of a Redis Cluster in format
+   * "projects/{project_id}/locations/{location}/clusters/{cluster_id}"
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

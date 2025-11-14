@@ -24,7 +24,9 @@ class DatasetInputConfig extends \Google\Collection
   protected $inputFilesDataType = 'array';
 
   /**
-   * @param InputFile[]
+   * Files containing the sentence pairs to be imported to the dataset.
+   *
+   * @param InputFile[] $inputFiles
    */
   public function setInputFiles($inputFiles)
   {

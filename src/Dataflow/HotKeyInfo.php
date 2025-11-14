@@ -20,20 +20,31 @@ namespace Google\Service\Dataflow;
 class HotKeyInfo extends \Google\Model
 {
   /**
+   * The age of the hot key measured from when it was first detected.
+   *
    * @var string
    */
   public $hotKeyAge;
   /**
+   * A detected hot key that is causing limited parallelism. This field will be
+   * populated only if the following flag is set to true: "--
+   * enable_hot_key_logging".
+   *
    * @var string
    */
   public $key;
   /**
+   * If true, then the above key is truncated and cannot be deserialized. This
+   * occurs if the key above is populated and the key size is >5MB.
+   *
    * @var bool
    */
   public $keyTruncated;
 
   /**
-   * @param string
+   * The age of the hot key measured from when it was first detected.
+   *
+   * @param string $hotKeyAge
    */
   public function setHotKeyAge($hotKeyAge)
   {
@@ -47,7 +58,11 @@ class HotKeyInfo extends \Google\Model
     return $this->hotKeyAge;
   }
   /**
-   * @param string
+   * A detected hot key that is causing limited parallelism. This field will be
+   * populated only if the following flag is set to true: "--
+   * enable_hot_key_logging".
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -61,7 +76,10 @@ class HotKeyInfo extends \Google\Model
     return $this->key;
   }
   /**
-   * @param bool
+   * If true, then the above key is truncated and cannot be deserialized. This
+   * occurs if the key above is populated and the key size is >5MB.
+   *
+   * @param bool $keyTruncated
    */
   public function setKeyTruncated($keyTruncated)
   {
