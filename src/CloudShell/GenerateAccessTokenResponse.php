@@ -20,12 +20,16 @@ namespace Google\Service\CloudShell;
 class GenerateAccessTokenResponse extends \Google\Model
 {
   /**
+   * The access token.
+   *
    * @var string
    */
   public $accessToken;
 
   /**
-   * @param string
+   * The access token.
+   *
+   * @param string $accessToken
    */
   public function setAccessToken($accessToken)
   {
