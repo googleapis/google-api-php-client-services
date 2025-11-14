@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class AutoIpamConfig extends \Google\Model
 {
   /**
+   * The flag that enables Auto IPAM on this cluster
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * The flag that enables Auto IPAM on this cluster
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

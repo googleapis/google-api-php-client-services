@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class KubernetesDashboard extends \Google\Model
 {
   /**
+   * Whether the Kubernetes Dashboard is enabled for this cluster.
+   *
    * @var bool
    */
   public $disabled;
 
   /**
-   * @param bool
+   * Whether the Kubernetes Dashboard is enabled for this cluster.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {

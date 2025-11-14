@@ -20,19 +20,37 @@ namespace Google\Service\Container;
 class AnonymousAuthenticationConfig extends \Google\Model
 {
   /**
+   * Default value not specified.
+   */
+  public const MODE_MODE_UNSPECIFIED = 'MODE_UNSPECIFIED';
+  /**
+   * Anonymous authentication is allowed for all endpoints.
+   */
+  public const MODE_ENABLED = 'ENABLED';
+  /**
+   * Anonymous authentication is allowed for only health check endpoints.
+   */
+  public const MODE_LIMITED = 'LIMITED';
+  /**
+   * Defines the mode of limiting anonymous access in the cluster.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param string
+   * Defines the mode of limiting anonymous access in the cluster.
+   *
+   * Accepted values: MODE_UNSPECIFIED, ENABLED, LIMITED
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {

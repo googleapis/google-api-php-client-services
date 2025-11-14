@@ -20,20 +20,44 @@ namespace Google\Service\Container;
 class AdvancedDatapathObservabilityConfig extends \Google\Model
 {
   /**
+   * Default value. This shouldn't be used.
+   */
+  public const RELAY_MODE_RELAY_MODE_UNSPECIFIED = 'RELAY_MODE_UNSPECIFIED';
+  /**
+   * disabled
+   */
+  public const RELAY_MODE_DISABLED = 'DISABLED';
+  /**
+   * exposed via internal load balancer
+   */
+  public const RELAY_MODE_INTERNAL_VPC_LB = 'INTERNAL_VPC_LB';
+  /**
+   * exposed via external load balancer
+   */
+  public const RELAY_MODE_EXTERNAL_LB = 'EXTERNAL_LB';
+  /**
+   * Expose flow metrics on nodes
+   *
    * @var bool
    */
   public $enableMetrics;
   /**
+   * Enable Relay component
+   *
    * @var bool
    */
   public $enableRelay;
   /**
+   * Method used to make Relay available
+   *
    * @var string
    */
   public $relayMode;
 
   /**
-   * @param bool
+   * Expose flow metrics on nodes
+   *
+   * @param bool $enableMetrics
    */
   public function setEnableMetrics($enableMetrics)
   {
@@ -47,7 +71,9 @@ class AdvancedDatapathObservabilityConfig extends \Google\Model
     return $this->enableMetrics;
   }
   /**
-   * @param bool
+   * Enable Relay component
+   *
+   * @param bool $enableRelay
    */
   public function setEnableRelay($enableRelay)
   {
@@ -61,14 +87,19 @@ class AdvancedDatapathObservabilityConfig extends \Google\Model
     return $this->enableRelay;
   }
   /**
-   * @param string
+   * Method used to make Relay available
+   *
+   * Accepted values: RELAY_MODE_UNSPECIFIED, DISABLED, INTERNAL_VPC_LB,
+   * EXTERNAL_LB
+   *
+   * @param self::RELAY_MODE_* $relayMode
    */
   public function setRelayMode($relayMode)
   {
     $this->relayMode = $relayMode;
   }
   /**
-   * @return string
+   * @return self::RELAY_MODE_*
    */
   public function getRelayMode()
   {

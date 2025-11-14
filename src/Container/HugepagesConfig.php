@@ -20,16 +20,22 @@ namespace Google\Service\Container;
 class HugepagesConfig extends \Google\Model
 {
   /**
+   * Optional. Amount of 1G hugepages
+   *
    * @var int
    */
   public $hugepageSize1g;
   /**
+   * Optional. Amount of 2M hugepages
+   *
    * @var int
    */
   public $hugepageSize2m;
 
   /**
-   * @param int
+   * Optional. Amount of 1G hugepages
+   *
+   * @param int $hugepageSize1g
    */
   public function setHugepageSize1g($hugepageSize1g)
   {
@@ -43,7 +49,9 @@ class HugepagesConfig extends \Google\Model
     return $this->hugepageSize1g;
   }
   /**
-   * @param int
+   * Optional. Amount of 2M hugepages
+   *
+   * @param int $hugepageSize2m
    */
   public function setHugepageSize2m($hugepageSize2m)
   {
