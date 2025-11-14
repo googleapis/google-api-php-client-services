@@ -27,7 +27,9 @@ class SourceConfig extends \Google\Model
   protected $sourceDataType = '';
 
   /**
-   * @param SourceCrowdingConfig
+   * The crowding configuration for the source.
+   *
+   * @param SourceCrowdingConfig $crowdingConfig
    */
   public function setCrowdingConfig(SourceCrowdingConfig $crowdingConfig)
   {
@@ -41,7 +43,9 @@ class SourceConfig extends \Google\Model
     return $this->crowdingConfig;
   }
   /**
-   * @param SourceScoringConfig
+   * The scoring configuration for the source.
+   *
+   * @param SourceScoringConfig $scoringConfig
    */
   public function setScoringConfig(SourceScoringConfig $scoringConfig)
   {
@@ -55,7 +59,9 @@ class SourceConfig extends \Google\Model
     return $this->scoringConfig;
   }
   /**
-   * @param Source
+   * The source for which this configuration is to be used.
+   *
+   * @param Source $source
    */
   public function setSource(Source $source)
   {

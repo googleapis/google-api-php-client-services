@@ -19,55 +19,125 @@ namespace Google\Service\ServiceControl;
 
 class V2LogEntry extends \Google\Model
 {
+  /**
+   * (0) The log entry has no assigned severity level.
+   */
+  public const SEVERITY_DEFAULT = 'DEFAULT';
+  /**
+   * (100) Debug or trace information.
+   */
+  public const SEVERITY_DEBUG = 'DEBUG';
+  /**
+   * (200) Routine information, such as ongoing status or performance.
+   */
+  public const SEVERITY_INFO = 'INFO';
+  /**
+   * (300) Normal but significant events, such as start up, shut down, or a
+   * configuration change.
+   */
+  public const SEVERITY_NOTICE = 'NOTICE';
+  /**
+   * (400) Warning events might cause problems.
+   */
+  public const SEVERITY_WARNING = 'WARNING';
+  /**
+   * (500) Error events are likely to cause problems.
+   */
+  public const SEVERITY_ERROR = 'ERROR';
+  /**
+   * (600) Critical events cause more severe problems or outages.
+   */
+  public const SEVERITY_CRITICAL = 'CRITICAL';
+  /**
+   * (700) A person must take an action immediately.
+   */
+  public const SEVERITY_ALERT = 'ALERT';
+  /**
+   * (800) One or more systems are unusable.
+   */
+  public const SEVERITY_EMERGENCY = 'EMERGENCY';
   protected $httpRequestType = V2HttpRequest::class;
   protected $httpRequestDataType = '';
   /**
+   * A unique ID for the log entry used for deduplication. If omitted, the
+   * implementation will generate one based on operation_id.
+   *
    * @var string
    */
   public $insertId;
   /**
+   * A set of user-defined (key, value) data that provides additional
+   * information about the log entry.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * A set of user-defined (key, value) data that provides additional
+   * information about the moniotored resource that the log entry belongs to.
+   *
    * @var string[]
    */
   public $monitoredResourceLabels;
   /**
+   * Required. The log to which this log entry belongs. Examples: `"syslog"`,
+   * `"book_log"`.
+   *
    * @var string
    */
   public $name;
   protected $operationType = V2LogEntryOperation::class;
   protected $operationDataType = '';
   /**
+   * The log entry payload, represented as a protocol buffer that is expressed
+   * as a JSON object. The only accepted type currently is AuditLog.
+   *
    * @var array[]
    */
   public $protoPayload;
   /**
+   * The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
+   *
    * @var string
    */
   public $severity;
   protected $sourceLocationType = V2LogEntrySourceLocation::class;
   protected $sourceLocationDataType = '';
   /**
+   * The log entry payload, represented as a structure that is expressed as a
+   * JSON object.
+   *
    * @var array[]
    */
   public $structPayload;
   /**
+   * The log entry payload, represented as a Unicode string (UTF-8).
+   *
    * @var string
    */
   public $textPayload;
   /**
+   * The time the event described by the log entry occurred. If omitted,
+   * defaults to operation start time.
+   *
    * @var string
    */
   public $timestamp;
   /**
+   * Optional. Resource name of the trace associated with the log entry, if any.
+   * If this field contains a relative resource name, you can assume the name is
+   * relative to `//tracing.googleapis.com`. Example: `projects/my-
+   * projectid/traces/06796866738c859f2f19b7cfb3214824`
+   *
    * @var string
    */
   public $trace;
 
   /**
-   * @param V2HttpRequest
+   * Optional. Information about the HTTP request associated with this log
+   * entry, if applicable.
+   *
+   * @param V2HttpRequest $httpRequest
    */
   public function setHttpRequest(V2HttpRequest $httpRequest)
   {
@@ -81,7 +151,10 @@ class V2LogEntry extends \Google\Model
     return $this->httpRequest;
   }
   /**
-   * @param string
+   * A unique ID for the log entry used for deduplication. If omitted, the
+   * implementation will generate one based on operation_id.
+   *
+   * @param string $insertId
    */
   public function setInsertId($insertId)
   {
@@ -95,7 +168,10 @@ class V2LogEntry extends \Google\Model
     return $this->insertId;
   }
   /**
-   * @param string[]
+   * A set of user-defined (key, value) data that provides additional
+   * information about the log entry.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -109,7 +185,10 @@ class V2LogEntry extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string[]
+   * A set of user-defined (key, value) data that provides additional
+   * information about the moniotored resource that the log entry belongs to.
+   *
+   * @param string[] $monitoredResourceLabels
    */
   public function setMonitoredResourceLabels($monitoredResourceLabels)
   {
@@ -123,7 +202,10 @@ class V2LogEntry extends \Google\Model
     return $this->monitoredResourceLabels;
   }
   /**
-   * @param string
+   * Required. The log to which this log entry belongs. Examples: `"syslog"`,
+   * `"book_log"`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -137,7 +219,10 @@ class V2LogEntry extends \Google\Model
     return $this->name;
   }
   /**
-   * @param V2LogEntryOperation
+   * Optional. Information about an operation associated with the log entry, if
+   * applicable.
+   *
+   * @param V2LogEntryOperation $operation
    */
   public function setOperation(V2LogEntryOperation $operation)
   {
@@ -151,7 +236,10 @@ class V2LogEntry extends \Google\Model
     return $this->operation;
   }
   /**
-   * @param array[]
+   * The log entry payload, represented as a protocol buffer that is expressed
+   * as a JSON object. The only accepted type currently is AuditLog.
+   *
+   * @param array[] $protoPayload
    */
   public function setProtoPayload($protoPayload)
   {
@@ -165,21 +253,29 @@ class V2LogEntry extends \Google\Model
     return $this->protoPayload;
   }
   /**
-   * @param string
+   * The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
+   *
+   * Accepted values: DEFAULT, DEBUG, INFO, NOTICE, WARNING, ERROR, CRITICAL,
+   * ALERT, EMERGENCY
+   *
+   * @param self::SEVERITY_* $severity
    */
   public function setSeverity($severity)
   {
     $this->severity = $severity;
   }
   /**
-   * @return string
+   * @return self::SEVERITY_*
    */
   public function getSeverity()
   {
     return $this->severity;
   }
   /**
-   * @param V2LogEntrySourceLocation
+   * Optional. Source code location information associated with the log entry,
+   * if any.
+   *
+   * @param V2LogEntrySourceLocation $sourceLocation
    */
   public function setSourceLocation(V2LogEntrySourceLocation $sourceLocation)
   {
@@ -193,7 +289,10 @@ class V2LogEntry extends \Google\Model
     return $this->sourceLocation;
   }
   /**
-   * @param array[]
+   * The log entry payload, represented as a structure that is expressed as a
+   * JSON object.
+   *
+   * @param array[] $structPayload
    */
   public function setStructPayload($structPayload)
   {
@@ -207,7 +306,9 @@ class V2LogEntry extends \Google\Model
     return $this->structPayload;
   }
   /**
-   * @param string
+   * The log entry payload, represented as a Unicode string (UTF-8).
+   *
+   * @param string $textPayload
    */
   public function setTextPayload($textPayload)
   {
@@ -221,7 +322,10 @@ class V2LogEntry extends \Google\Model
     return $this->textPayload;
   }
   /**
-   * @param string
+   * The time the event described by the log entry occurred. If omitted,
+   * defaults to operation start time.
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {
@@ -235,7 +339,12 @@ class V2LogEntry extends \Google\Model
     return $this->timestamp;
   }
   /**
-   * @param string
+   * Optional. Resource name of the trace associated with the log entry, if any.
+   * If this field contains a relative resource name, you can assume the name is
+   * relative to `//tracing.googleapis.com`. Example: `projects/my-
+   * projectid/traces/06796866738c859f2f19b7cfb3214824`
+   *
+   * @param string $trace
    */
   public function setTrace($trace)
   {

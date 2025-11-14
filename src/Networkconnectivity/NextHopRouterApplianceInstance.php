@@ -20,20 +20,34 @@ namespace Google\Service\Networkconnectivity;
 class NextHopRouterApplianceInstance extends \Google\Model
 {
   /**
+   * Indicates whether site-to-site data transfer is allowed for this Router
+   * appliance instance resource. Data transfer is available only in [supported
+   * locations](https://cloud.google.com/network-connectivity/docs/network-
+   * connectivity-center/concepts/locations).
+   *
    * @var bool
    */
   public $siteToSiteDataTransfer;
   /**
+   * The URI of the Router appliance instance.
+   *
    * @var string
    */
   public $uri;
   /**
+   * The VPC network where this VM is located.
+   *
    * @var string
    */
   public $vpcNetwork;
 
   /**
-   * @param bool
+   * Indicates whether site-to-site data transfer is allowed for this Router
+   * appliance instance resource. Data transfer is available only in [supported
+   * locations](https://cloud.google.com/network-connectivity/docs/network-
+   * connectivity-center/concepts/locations).
+   *
+   * @param bool $siteToSiteDataTransfer
    */
   public function setSiteToSiteDataTransfer($siteToSiteDataTransfer)
   {
@@ -47,7 +61,9 @@ class NextHopRouterApplianceInstance extends \Google\Model
     return $this->siteToSiteDataTransfer;
   }
   /**
-   * @param string
+   * The URI of the Router appliance instance.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {
@@ -61,7 +77,9 @@ class NextHopRouterApplianceInstance extends \Google\Model
     return $this->uri;
   }
   /**
-   * @param string
+   * The VPC network where this VM is located.
+   *
+   * @param string $vpcNetwork
    */
   public function setVpcNetwork($vpcNetwork)
   {

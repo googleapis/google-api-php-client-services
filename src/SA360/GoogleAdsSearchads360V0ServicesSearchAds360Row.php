@@ -140,7 +140,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
   protected $webpageViewDataType = '';
 
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategy
+   * The accessible bidding strategy referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategy $accessibleBiddingStrategy
    */
   public function setAccessibleBiddingStrategy(GoogleAdsSearchads360V0ResourcesAccessibleBiddingStrategy $accessibleBiddingStrategy)
   {
@@ -154,7 +156,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->accessibleBiddingStrategy;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroup
+   * The ad group referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroup $adGroup
    */
   public function setAdGroup(GoogleAdsSearchads360V0ResourcesAdGroup $adGroup)
   {
@@ -168,7 +172,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroup;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupAd
+   * The ad referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupAd $adGroupAd
    */
   public function setAdGroupAd(GoogleAdsSearchads360V0ResourcesAdGroupAd $adGroupAd)
   {
@@ -182,7 +188,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupAd;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel
+   * The ad group ad effective label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel $adGroupAdEffectiveLabel
    */
   public function setAdGroupAdEffectiveLabel(GoogleAdsSearchads360V0ResourcesAdGroupAdEffectiveLabel $adGroupAdEffectiveLabel)
   {
@@ -196,7 +204,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupAdEffectiveLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupAdLabel
+   * The ad group ad label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupAdLabel $adGroupAdLabel
    */
   public function setAdGroupAdLabel(GoogleAdsSearchads360V0ResourcesAdGroupAdLabel $adGroupAdLabel)
   {
@@ -210,7 +220,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupAdLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupAsset
+   * The ad group asset referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupAsset $adGroupAsset
    */
   public function setAdGroupAsset(GoogleAdsSearchads360V0ResourcesAdGroupAsset $adGroupAsset)
   {
@@ -224,7 +236,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupAsset;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupAssetSet
+   * The ad group asset set referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupAssetSet $adGroupAssetSet
    */
   public function setAdGroupAssetSet(GoogleAdsSearchads360V0ResourcesAdGroupAssetSet $adGroupAssetSet)
   {
@@ -238,7 +252,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupAssetSet;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupAudienceView
+   * The ad group audience view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupAudienceView $adGroupAudienceView
    */
   public function setAdGroupAudienceView(GoogleAdsSearchads360V0ResourcesAdGroupAudienceView $adGroupAudienceView)
   {
@@ -252,7 +268,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupAudienceView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupBidModifier
+   * The bid modifier referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupBidModifier $adGroupBidModifier
    */
   public function setAdGroupBidModifier(GoogleAdsSearchads360V0ResourcesAdGroupBidModifier $adGroupBidModifier)
   {
@@ -266,7 +284,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupBidModifier;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterion
+   * The criterion referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterion $adGroupCriterion
    */
   public function setAdGroupCriterion(GoogleAdsSearchads360V0ResourcesAdGroupCriterion $adGroupCriterion)
   {
@@ -280,7 +300,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupCriterion;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel
+   * The ad group criterion effective label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel $adGroupCriterionEffectiveLabel
    */
   public function setAdGroupCriterionEffectiveLabel(GoogleAdsSearchads360V0ResourcesAdGroupCriterionEffectiveLabel $adGroupCriterionEffectiveLabel)
   {
@@ -294,7 +316,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupCriterionEffectiveLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel
+   * The ad group criterion label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel $adGroupCriterionLabel
    */
   public function setAdGroupCriterionLabel(GoogleAdsSearchads360V0ResourcesAdGroupCriterionLabel $adGroupCriterionLabel)
   {
@@ -308,7 +332,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupCriterionLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel
+   * The ad group effective label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel $adGroupEffectiveLabel
    */
   public function setAdGroupEffectiveLabel(GoogleAdsSearchads360V0ResourcesAdGroupEffectiveLabel $adGroupEffectiveLabel)
   {
@@ -322,7 +348,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupEffectiveLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAdGroupLabel
+   * The ad group label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAdGroupLabel $adGroupLabel
    */
   public function setAdGroupLabel(GoogleAdsSearchads360V0ResourcesAdGroupLabel $adGroupLabel)
   {
@@ -336,7 +364,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->adGroupLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAgeRangeView
+   * The age range view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAgeRangeView $ageRangeView
    */
   public function setAgeRangeView(GoogleAdsSearchads360V0ResourcesAgeRangeView $ageRangeView)
   {
@@ -350,7 +380,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->ageRangeView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAsset
+   * The asset referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAsset $asset
    */
   public function setAsset(GoogleAdsSearchads360V0ResourcesAsset $asset)
   {
@@ -364,7 +396,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->asset;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAssetGroup
+   * The asset group referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAssetGroup $assetGroup
    */
   public function setAssetGroup(GoogleAdsSearchads360V0ResourcesAssetGroup $assetGroup)
   {
@@ -378,7 +412,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->assetGroup;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAssetGroupAsset
+   * The asset group asset referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAssetGroupAsset $assetGroupAsset
    */
   public function setAssetGroupAsset(GoogleAdsSearchads360V0ResourcesAssetGroupAsset $assetGroupAsset)
   {
@@ -392,7 +428,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->assetGroupAsset;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter
+   * The asset group listing group filter referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter $assetGroupListingGroupFilter
    */
   public function setAssetGroupListingGroupFilter(GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter $assetGroupListingGroupFilter)
   {
@@ -406,7 +444,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->assetGroupListingGroupFilter;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAssetGroupSignal
+   * The asset group signal referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAssetGroupSignal $assetGroupSignal
    */
   public function setAssetGroupSignal(GoogleAdsSearchads360V0ResourcesAssetGroupSignal $assetGroupSignal)
   {
@@ -420,7 +460,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->assetGroupSignal;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAssetGroupTopCombinationView
+   * The asset group top combination view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAssetGroupTopCombinationView $assetGroupTopCombinationView
    */
   public function setAssetGroupTopCombinationView(GoogleAdsSearchads360V0ResourcesAssetGroupTopCombinationView $assetGroupTopCombinationView)
   {
@@ -434,7 +476,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->assetGroupTopCombinationView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAssetSet
+   * The asset set referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAssetSet $assetSet
    */
   public function setAssetSet(GoogleAdsSearchads360V0ResourcesAssetSet $assetSet)
   {
@@ -448,7 +492,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->assetSet;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAssetSetAsset
+   * The asset set asset referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAssetSetAsset $assetSetAsset
    */
   public function setAssetSetAsset(GoogleAdsSearchads360V0ResourcesAssetSetAsset $assetSetAsset)
   {
@@ -462,7 +508,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->assetSetAsset;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesAudience
+   * The Audience referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesAudience $audience
    */
   public function setAudience(GoogleAdsSearchads360V0ResourcesAudience $audience)
   {
@@ -476,7 +524,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->audience;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesBiddingStrategy
+   * The bidding strategy referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesBiddingStrategy $biddingStrategy
    */
   public function setBiddingStrategy(GoogleAdsSearchads360V0ResourcesBiddingStrategy $biddingStrategy)
   {
@@ -490,7 +540,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->biddingStrategy;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaign
+   * The campaign referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaign $campaign
    */
   public function setCampaign(GoogleAdsSearchads360V0ResourcesCampaign $campaign)
   {
@@ -504,7 +556,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaign;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaignAsset
+   * The campaign asset referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaignAsset $campaignAsset
    */
   public function setCampaignAsset(GoogleAdsSearchads360V0ResourcesCampaignAsset $campaignAsset)
   {
@@ -518,7 +572,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaignAsset;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaignAssetSet
+   * The campaign asset set referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaignAssetSet $campaignAssetSet
    */
   public function setCampaignAssetSet(GoogleAdsSearchads360V0ResourcesCampaignAssetSet $campaignAssetSet)
   {
@@ -532,7 +588,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaignAssetSet;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaignAudienceView
+   * The campaign audience view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaignAudienceView $campaignAudienceView
    */
   public function setCampaignAudienceView(GoogleAdsSearchads360V0ResourcesCampaignAudienceView $campaignAudienceView)
   {
@@ -546,7 +604,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaignAudienceView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaignBudget
+   * The campaign budget referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaignBudget $campaignBudget
    */
   public function setCampaignBudget(GoogleAdsSearchads360V0ResourcesCampaignBudget $campaignBudget)
   {
@@ -560,7 +620,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaignBudget;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaignCriterion
+   * The campaign criterion referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaignCriterion $campaignCriterion
    */
   public function setCampaignCriterion(GoogleAdsSearchads360V0ResourcesCampaignCriterion $campaignCriterion)
   {
@@ -574,7 +636,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaignCriterion;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel
+   * The campaign effective label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel $campaignEffectiveLabel
    */
   public function setCampaignEffectiveLabel(GoogleAdsSearchads360V0ResourcesCampaignEffectiveLabel $campaignEffectiveLabel)
   {
@@ -588,7 +652,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaignEffectiveLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCampaignLabel
+   * The campaign label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCampaignLabel $campaignLabel
    */
   public function setCampaignLabel(GoogleAdsSearchads360V0ResourcesCampaignLabel $campaignLabel)
   {
@@ -602,7 +668,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->campaignLabel;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCartDataSalesView
+   * The cart data sales view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCartDataSalesView $cartDataSalesView
    */
   public function setCartDataSalesView(GoogleAdsSearchads360V0ResourcesCartDataSalesView $cartDataSalesView)
   {
@@ -616,7 +684,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->cartDataSalesView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesConversion
+   * The event level conversion referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesConversion $conversion
    */
   public function setConversion(GoogleAdsSearchads360V0ResourcesConversion $conversion)
   {
@@ -630,7 +700,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->conversion;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesConversionAction
+   * The conversion action referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesConversionAction $conversionAction
    */
   public function setConversionAction(GoogleAdsSearchads360V0ResourcesConversionAction $conversionAction)
   {
@@ -644,7 +716,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->conversionAction;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesConversionCustomVariable
+   * The conversion custom variable referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesConversionCustomVariable $conversionCustomVariable
    */
   public function setConversionCustomVariable(GoogleAdsSearchads360V0ResourcesConversionCustomVariable $conversionCustomVariable)
   {
@@ -658,7 +732,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->conversionCustomVariable;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonValue[]
+   * The custom columns.
+   *
+   * @param GoogleAdsSearchads360V0CommonValue[] $customColumns
    */
   public function setCustomColumns($customColumns)
   {
@@ -672,7 +748,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->customColumns;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomer
+   * The customer referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCustomer $customer
    */
   public function setCustomer(GoogleAdsSearchads360V0ResourcesCustomer $customer)
   {
@@ -686,7 +764,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->customer;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomerAsset
+   * The customer asset referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCustomerAsset $customerAsset
    */
   public function setCustomerAsset(GoogleAdsSearchads360V0ResourcesCustomerAsset $customerAsset)
   {
@@ -700,7 +780,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->customerAsset;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomerAssetSet
+   * The customer asset set referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCustomerAssetSet $customerAssetSet
    */
   public function setCustomerAssetSet(GoogleAdsSearchads360V0ResourcesCustomerAssetSet $customerAssetSet)
   {
@@ -714,7 +796,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->customerAssetSet;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomerClient
+   * The CustomerClient referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCustomerClient $customerClient
    */
   public function setCustomerClient(GoogleAdsSearchads360V0ResourcesCustomerClient $customerClient)
   {
@@ -728,7 +812,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->customerClient;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesCustomerManagerLink
+   * The CustomerManagerLink referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesCustomerManagerLink $customerManagerLink
    */
   public function setCustomerManagerLink(GoogleAdsSearchads360V0ResourcesCustomerManagerLink $customerManagerLink)
   {
@@ -742,7 +828,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->customerManagerLink;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView
+   * The dynamic search ads search term view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView $dynamicSearchAdsSearchTermView
    */
   public function setDynamicSearchAdsSearchTermView(GoogleAdsSearchads360V0ResourcesDynamicSearchAdsSearchTermView $dynamicSearchAdsSearchTermView)
   {
@@ -756,7 +844,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->dynamicSearchAdsSearchTermView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesGenderView
+   * The gender view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesGenderView $genderView
    */
   public function setGenderView(GoogleAdsSearchads360V0ResourcesGenderView $genderView)
   {
@@ -770,7 +860,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->genderView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesGeoTargetConstant
+   * The geo target constant referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesGeoTargetConstant $geoTargetConstant
    */
   public function setGeoTargetConstant(GoogleAdsSearchads360V0ResourcesGeoTargetConstant $geoTargetConstant)
   {
@@ -784,7 +876,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->geoTargetConstant;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesKeywordView
+   * The keyword view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesKeywordView $keywordView
    */
   public function setKeywordView(GoogleAdsSearchads360V0ResourcesKeywordView $keywordView)
   {
@@ -798,7 +892,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->keywordView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesLabel
+   * The label referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesLabel $label
    */
   public function setLabel(GoogleAdsSearchads360V0ResourcesLabel $label)
   {
@@ -812,7 +908,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->label;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesLanguageConstant
+   * The language constant referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesLanguageConstant $languageConstant
    */
   public function setLanguageConstant(GoogleAdsSearchads360V0ResourcesLanguageConstant $languageConstant)
   {
@@ -826,7 +924,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->languageConstant;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesLocationView
+   * The location view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesLocationView $locationView
    */
   public function setLocationView(GoogleAdsSearchads360V0ResourcesLocationView $locationView)
   {
@@ -840,7 +940,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->locationView;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonMetrics
+   * The metrics.
+   *
+   * @param GoogleAdsSearchads360V0CommonMetrics $metrics
    */
   public function setMetrics(GoogleAdsSearchads360V0CommonMetrics $metrics)
   {
@@ -854,7 +956,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant
+   * The Product Bidding Category referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant $productBiddingCategoryConstant
    */
   public function setProductBiddingCategoryConstant(GoogleAdsSearchads360V0ResourcesProductBiddingCategoryConstant $productBiddingCategoryConstant)
   {
@@ -868,7 +972,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->productBiddingCategoryConstant;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesProductGroupView
+   * The product group view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesProductGroupView $productGroupView
    */
   public function setProductGroupView(GoogleAdsSearchads360V0ResourcesProductGroupView $productGroupView)
   {
@@ -882,7 +988,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->productGroupView;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonSegments
+   * The segments.
+   *
+   * @param GoogleAdsSearchads360V0CommonSegments $segments
    */
   public function setSegments(GoogleAdsSearchads360V0CommonSegments $segments)
   {
@@ -896,7 +1004,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->segments;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesShoppingPerformanceView
+   * The shopping performance view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesShoppingPerformanceView $shoppingPerformanceView
    */
   public function setShoppingPerformanceView(GoogleAdsSearchads360V0ResourcesShoppingPerformanceView $shoppingPerformanceView)
   {
@@ -910,7 +1020,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->shoppingPerformanceView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesUserList
+   * The user list referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesUserList $userList
    */
   public function setUserList(GoogleAdsSearchads360V0ResourcesUserList $userList)
   {
@@ -924,7 +1036,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->userList;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesUserLocationView
+   * The user location view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesUserLocationView $userLocationView
    */
   public function setUserLocationView(GoogleAdsSearchads360V0ResourcesUserLocationView $userLocationView)
   {
@@ -938,7 +1052,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->userLocationView;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesVisit
+   * The event level visit referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesVisit $visit
    */
   public function setVisit(GoogleAdsSearchads360V0ResourcesVisit $visit)
   {
@@ -952,7 +1068,9 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
     return $this->visit;
   }
   /**
-   * @param GoogleAdsSearchads360V0ResourcesWebpageView
+   * The webpage view referenced in the query.
+   *
+   * @param GoogleAdsSearchads360V0ResourcesWebpageView $webpageView
    */
   public function setWebpageView(GoogleAdsSearchads360V0ResourcesWebpageView $webpageView)
   {

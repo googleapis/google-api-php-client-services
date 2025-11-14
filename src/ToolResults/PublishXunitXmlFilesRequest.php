@@ -24,7 +24,10 @@ class PublishXunitXmlFilesRequest extends \Google\Collection
   protected $xunitXmlFilesDataType = 'array';
 
   /**
-   * @param FileReference[]
+   * URI of the Xunit XML files to publish. The maximum size of the file this
+   * reference is pointing to is 50MB. Required.
+   *
+   * @param FileReference[] $xunitXmlFiles
    */
   public function setXunitXmlFiles($xunitXmlFiles)
   {

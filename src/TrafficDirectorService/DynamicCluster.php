@@ -20,40 +20,94 @@ namespace Google\Service\TrafficDirectorService;
 class DynamicCluster extends \Google\Model
 {
   /**
+   * Resource status is not available/unknown.
+   */
+  public const CLIENT_STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * Client requested this resource but hasn't received any update from
+   * management server. The client will not fail requests, but will queue them
+   * until update arrives or the client times out waiting for the resource.
+   */
+  public const CLIENT_STATUS_REQUESTED = 'REQUESTED';
+  /**
+   * This resource has been requested by the client but has either not been
+   * delivered by the server or was previously delivered by the server and then
+   * subsequently removed from resources provided by the server. For more
+   * information, please refer to the :ref:`"Knowing When a Requested Resource
+   * Does Not Exist" ` section.
+   */
+  public const CLIENT_STATUS_DOES_NOT_EXIST = 'DOES_NOT_EXIST';
+  /**
+   * Client received this resource and replied with ACK.
+   */
+  public const CLIENT_STATUS_ACKED = 'ACKED';
+  /**
+   * Client received this resource and replied with NACK.
+   */
+  public const CLIENT_STATUS_NACKED = 'NACKED';
+  /**
+   * Client received an error from the control plane. The attached config dump
+   * is the most recent accepted one. If no config is accepted yet, the attached
+   * config dump will be empty.
+   */
+  public const CLIENT_STATUS_RECEIVED_ERROR = 'RECEIVED_ERROR';
+  /**
+   * Client timed out waiting for the resource from the control plane.
+   */
+  public const CLIENT_STATUS_TIMEOUT = 'TIMEOUT';
+  /**
+   * The client status of this resource. [#not-implemented-hide:]
+   *
    * @var string
    */
   public $clientStatus;
   /**
+   * The cluster config.
+   *
    * @var array[]
    */
   public $cluster;
   protected $errorStateType = UpdateFailureState::class;
   protected $errorStateDataType = '';
   /**
+   * The timestamp when the Cluster was last updated.
+   *
    * @var string
    */
   public $lastUpdated;
   /**
+   * This is the per-resource version information. This version is currently
+   * taken from the :ref:`version_info ` field at the time that the cluster was
+   * loaded. In the future, discrete per-cluster versions may be supported by
+   * the API.
+   *
    * @var string
    */
   public $versionInfo;
 
   /**
-   * @param string
+   * The client status of this resource. [#not-implemented-hide:]
+   *
+   * Accepted values: UNKNOWN, REQUESTED, DOES_NOT_EXIST, ACKED, NACKED,
+   * RECEIVED_ERROR, TIMEOUT
+   *
+   * @param self::CLIENT_STATUS_* $clientStatus
    */
   public function setClientStatus($clientStatus)
   {
     $this->clientStatus = $clientStatus;
   }
   /**
-   * @return string
+   * @return self::CLIENT_STATUS_*
    */
   public function getClientStatus()
   {
     return $this->clientStatus;
   }
   /**
-   * @param array[]
+   * The cluster config.
+   *
+   * @param array[] $cluster
    */
   public function setCluster($cluster)
   {
@@ -67,7 +121,12 @@ class DynamicCluster extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param UpdateFailureState
+   * Set if the last update failed, cleared after the next successful update.
+   * The ``error_state`` field contains the rejected version of this particular
+   * resource along with the reason and timestamp. For successfully updated or
+   * acknowledged resource, this field should be empty. [#not-implemented-hide:]
+   *
+   * @param UpdateFailureState $errorState
    */
   public function setErrorState(UpdateFailureState $errorState)
   {
@@ -81,7 +140,9 @@ class DynamicCluster extends \Google\Model
     return $this->errorState;
   }
   /**
-   * @param string
+   * The timestamp when the Cluster was last updated.
+   *
+   * @param string $lastUpdated
    */
   public function setLastUpdated($lastUpdated)
   {
@@ -95,7 +156,12 @@ class DynamicCluster extends \Google\Model
     return $this->lastUpdated;
   }
   /**
-   * @param string
+   * This is the per-resource version information. This version is currently
+   * taken from the :ref:`version_info ` field at the time that the cluster was
+   * loaded. In the future, discrete per-cluster versions may be supported by
+   * the API.
+   *
+   * @param string $versionInfo
    */
   public function setVersionInfo($versionInfo)
   {

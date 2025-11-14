@@ -21,28 +21,62 @@ class CheckResponse extends \Google\Collection
 {
   protected $collection_key = 'relationExtensions';
   /**
+   * Human-readable message containing information intended to help end users
+   * understand, reproduce and debug the result. The message will be in English
+   * and we are currently not planning to offer any translations. Please note
+   * that no guarantees are made about the contents or format of this string.
+   * Any aspect of it may be subject to change without notice. You should not
+   * attempt to programmatically parse this data. For programmatic access, use
+   * the error_code field below.
+   *
    * @var string
    */
   public $debugString;
   /**
+   * Error codes that describe the result of the Check operation. NOTE: Error
+   * codes may be populated even when `linked` is true. The error codes do not
+   * necessarily imply that the request failed, but rather, specify any errors
+   * encountered in the statements file(s) which may or may not impact whether
+   * the server determines the requested source and target to be linked.
+   *
    * @var string[]
    */
   public $errorCode;
   /**
+   * Set to true if the assets specified in the request are linked by the
+   * relation specified in the request.
+   *
    * @var bool
    */
   public $linked;
   /**
+   * From serving time, how much longer the response should be considered valid
+   * barring further updates. REQUIRED
+   *
    * @var string
    */
   public $maxAge;
   /**
+   * Statements may specify relation level extensions/payloads to express more
+   * details when declaring permissions to grant from the source asset to the
+   * target asset. When requested, the API will return relation_extensions
+   * specified in any and all statements linking the requested source and target
+   * assets by the relation specified in the request.
+   *
    * @var array[]
    */
   public $relationExtensions;
 
   /**
-   * @param string
+   * Human-readable message containing information intended to help end users
+   * understand, reproduce and debug the result. The message will be in English
+   * and we are currently not planning to offer any translations. Please note
+   * that no guarantees are made about the contents or format of this string.
+   * Any aspect of it may be subject to change without notice. You should not
+   * attempt to programmatically parse this data. For programmatic access, use
+   * the error_code field below.
+   *
+   * @param string $debugString
    */
   public function setDebugString($debugString)
   {
@@ -56,7 +90,13 @@ class CheckResponse extends \Google\Collection
     return $this->debugString;
   }
   /**
-   * @param string[]
+   * Error codes that describe the result of the Check operation. NOTE: Error
+   * codes may be populated even when `linked` is true. The error codes do not
+   * necessarily imply that the request failed, but rather, specify any errors
+   * encountered in the statements file(s) which may or may not impact whether
+   * the server determines the requested source and target to be linked.
+   *
+   * @param string[] $errorCode
    */
   public function setErrorCode($errorCode)
   {
@@ -70,7 +110,10 @@ class CheckResponse extends \Google\Collection
     return $this->errorCode;
   }
   /**
-   * @param bool
+   * Set to true if the assets specified in the request are linked by the
+   * relation specified in the request.
+   *
+   * @param bool $linked
    */
   public function setLinked($linked)
   {
@@ -84,7 +127,10 @@ class CheckResponse extends \Google\Collection
     return $this->linked;
   }
   /**
-   * @param string
+   * From serving time, how much longer the response should be considered valid
+   * barring further updates. REQUIRED
+   *
+   * @param string $maxAge
    */
   public function setMaxAge($maxAge)
   {
@@ -98,7 +144,13 @@ class CheckResponse extends \Google\Collection
     return $this->maxAge;
   }
   /**
-   * @param array[]
+   * Statements may specify relation level extensions/payloads to express more
+   * details when declaring permissions to grant from the source asset to the
+   * target asset. When requested, the API will return relation_extensions
+   * specified in any and all statements linking the requested source and target
+   * assets by the relation specified in the request.
+   *
+   * @param array[] $relationExtensions
    */
   public function setRelationExtensions($relationExtensions)
   {

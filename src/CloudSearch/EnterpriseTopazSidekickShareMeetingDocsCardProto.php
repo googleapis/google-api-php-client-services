@@ -26,7 +26,9 @@ class EnterpriseTopazSidekickShareMeetingDocsCardProto extends \Google\Collectio
   protected $eventDataType = '';
 
   /**
-   * @param EnterpriseTopazSidekickCommonDocument[]
+   * Documents to share for the given meeting.
+   *
+   * @param EnterpriseTopazSidekickCommonDocument[] $document
    */
   public function setDocument($document)
   {
@@ -40,7 +42,9 @@ class EnterpriseTopazSidekickShareMeetingDocsCardProto extends \Google\Collectio
     return $this->document;
   }
   /**
-   * @param EnterpriseTopazSidekickAgendaEntry
+   * Event.
+   *
+   * @param EnterpriseTopazSidekickAgendaEntry $event
    */
   public function setEvent(EnterpriseTopazSidekickAgendaEntry $event)
   {

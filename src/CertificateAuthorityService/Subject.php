@@ -21,42 +21,60 @@ class Subject extends \Google\Collection
 {
   protected $collection_key = 'rdnSequence';
   /**
+   * The "common name" of the subject.
+   *
    * @var string
    */
   public $commonName;
   /**
+   * The country code of the subject.
+   *
    * @var string
    */
   public $countryCode;
   /**
+   * The locality or city of the subject.
+   *
    * @var string
    */
   public $locality;
   /**
+   * The organization of the subject.
+   *
    * @var string
    */
   public $organization;
   /**
+   * The organizational_unit of the subject.
+   *
    * @var string
    */
   public $organizationalUnit;
   /**
+   * The postal code of the subject.
+   *
    * @var string
    */
   public $postalCode;
   /**
+   * The province, territory, or regional state of the subject.
+   *
    * @var string
    */
   public $province;
   protected $rdnSequenceType = RelativeDistinguishedName::class;
   protected $rdnSequenceDataType = 'array';
   /**
+   * The street address of the subject.
+   *
    * @var string
    */
   public $streetAddress;
 
   /**
-   * @param string
+   * The "common name" of the subject.
+   *
+   * @param string $commonName
    */
   public function setCommonName($commonName)
   {
@@ -70,7 +88,9 @@ class Subject extends \Google\Collection
     return $this->commonName;
   }
   /**
-   * @param string
+   * The country code of the subject.
+   *
+   * @param string $countryCode
    */
   public function setCountryCode($countryCode)
   {
@@ -84,7 +104,9 @@ class Subject extends \Google\Collection
     return $this->countryCode;
   }
   /**
-   * @param string
+   * The locality or city of the subject.
+   *
+   * @param string $locality
    */
   public function setLocality($locality)
   {
@@ -98,7 +120,9 @@ class Subject extends \Google\Collection
     return $this->locality;
   }
   /**
-   * @param string
+   * The organization of the subject.
+   *
+   * @param string $organization
    */
   public function setOrganization($organization)
   {
@@ -112,7 +136,9 @@ class Subject extends \Google\Collection
     return $this->organization;
   }
   /**
-   * @param string
+   * The organizational_unit of the subject.
+   *
+   * @param string $organizationalUnit
    */
   public function setOrganizationalUnit($organizationalUnit)
   {
@@ -126,7 +152,9 @@ class Subject extends \Google\Collection
     return $this->organizationalUnit;
   }
   /**
-   * @param string
+   * The postal code of the subject.
+   *
+   * @param string $postalCode
    */
   public function setPostalCode($postalCode)
   {
@@ -140,7 +168,9 @@ class Subject extends \Google\Collection
     return $this->postalCode;
   }
   /**
-   * @param string
+   * The province, territory, or regional state of the subject.
+   *
+   * @param string $province
    */
   public function setProvince($province)
   {
@@ -154,7 +184,9 @@ class Subject extends \Google\Collection
     return $this->province;
   }
   /**
-   * @param RelativeDistinguishedName[]
+   * This field can be used in place of the named subject fields.
+   *
+   * @param RelativeDistinguishedName[] $rdnSequence
    */
   public function setRdnSequence($rdnSequence)
   {
@@ -168,7 +200,9 @@ class Subject extends \Google\Collection
     return $this->rdnSequence;
   }
   /**
-   * @param string
+   * The street address of the subject.
+   *
+   * @param string $streetAddress
    */
   public function setStreetAddress($streetAddress)
   {

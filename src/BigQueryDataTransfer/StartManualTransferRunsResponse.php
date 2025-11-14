@@ -24,7 +24,9 @@ class StartManualTransferRunsResponse extends \Google\Collection
   protected $runsDataType = 'array';
 
   /**
-   * @param TransferRun[]
+   * The transfer runs that were created.
+   *
+   * @param TransferRun[] $runs
    */
   public function setRuns($runs)
   {

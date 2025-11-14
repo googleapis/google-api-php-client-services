@@ -20,36 +20,57 @@ namespace Google\Service\BigtableAdmin;
 class HotTablet extends \Google\Model
 {
   /**
+   * Tablet End Key (inclusive).
+   *
    * @var string
    */
   public $endKey;
   /**
+   * Output only. The end time of the hot tablet.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The unique name of the hot tablet. Values are of the form `projects/{projec
+   * t}/instances/{instance}/clusters/{cluster}/hotTablets/[a-zA-Z0-9_-]*`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The average CPU usage spent by a node on this tablet over the
+   * start_time to end_time time range. The percentage is the amount of CPU used
+   * by the node to serve the tablet, from 0% (tablet was not interacted with)
+   * to 100% (the node spent all cycles serving the hot tablet).
+   *
    * @var float
    */
   public $nodeCpuUsagePercent;
   /**
+   * Tablet Start Key (inclusive).
+   *
    * @var string
    */
   public $startKey;
   /**
+   * Output only. The start time of the hot tablet.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Name of the table that contains the tablet. Values are of the form
+   * `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`.
+   *
    * @var string
    */
   public $tableName;
 
   /**
-   * @param string
+   * Tablet End Key (inclusive).
+   *
+   * @param string $endKey
    */
   public function setEndKey($endKey)
   {
@@ -63,7 +84,9 @@ class HotTablet extends \Google\Model
     return $this->endKey;
   }
   /**
-   * @param string
+   * Output only. The end time of the hot tablet.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -77,7 +100,10 @@ class HotTablet extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The unique name of the hot tablet. Values are of the form `projects/{projec
+   * t}/instances/{instance}/clusters/{cluster}/hotTablets/[a-zA-Z0-9_-]*`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -91,7 +117,12 @@ class HotTablet extends \Google\Model
     return $this->name;
   }
   /**
-   * @param float
+   * Output only. The average CPU usage spent by a node on this tablet over the
+   * start_time to end_time time range. The percentage is the amount of CPU used
+   * by the node to serve the tablet, from 0% (tablet was not interacted with)
+   * to 100% (the node spent all cycles serving the hot tablet).
+   *
+   * @param float $nodeCpuUsagePercent
    */
   public function setNodeCpuUsagePercent($nodeCpuUsagePercent)
   {
@@ -105,7 +136,9 @@ class HotTablet extends \Google\Model
     return $this->nodeCpuUsagePercent;
   }
   /**
-   * @param string
+   * Tablet Start Key (inclusive).
+   *
+   * @param string $startKey
    */
   public function setStartKey($startKey)
   {
@@ -119,7 +152,9 @@ class HotTablet extends \Google\Model
     return $this->startKey;
   }
   /**
-   * @param string
+   * Output only. The start time of the hot tablet.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -133,7 +168,10 @@ class HotTablet extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Name of the table that contains the tablet. Values are of the form
+   * `projects/{project}/instances/{instance}/tables/_a-zA-Z0-9*`.
+   *
+   * @param string $tableName
    */
   public function setTableName($tableName)
   {

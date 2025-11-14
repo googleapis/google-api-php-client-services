@@ -20,26 +20,45 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSnippetSpec extends \Google\Model
 {
   /**
+   * [DEPRECATED] This field is deprecated. To control snippet return, use
+   * `return_snippet` field. For backwards compatibility, we will return snippet
+   * if max_snippet_count > 0.
+   *
+   * @deprecated
    * @var int
    */
   public $maxSnippetCount;
   /**
+   * [DEPRECATED] This field is deprecated and will have no affect on the
+   * snippet.
+   *
+   * @deprecated
    * @var bool
    */
   public $referenceOnly;
   /**
+   * If `true`, then return snippet. If no snippet can be generated, we return
+   * "No snippet is available for this page." A `snippet_status` with `SUCCESS`
+   * or `NO_SNIPPET_AVAILABLE` will also be returned.
+   *
    * @var bool
    */
   public $returnSnippet;
 
   /**
-   * @param int
+   * [DEPRECATED] This field is deprecated. To control snippet return, use
+   * `return_snippet` field. For backwards compatibility, we will return snippet
+   * if max_snippet_count > 0.
+   *
+   * @deprecated
+   * @param int $maxSnippetCount
    */
   public function setMaxSnippetCount($maxSnippetCount)
   {
     $this->maxSnippetCount = $maxSnippetCount;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getMaxSnippetCount()
@@ -47,13 +66,18 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSnippetSpec
     return $this->maxSnippetCount;
   }
   /**
-   * @param bool
+   * [DEPRECATED] This field is deprecated and will have no affect on the
+   * snippet.
+   *
+   * @deprecated
+   * @param bool $referenceOnly
    */
   public function setReferenceOnly($referenceOnly)
   {
     $this->referenceOnly = $referenceOnly;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getReferenceOnly()
@@ -61,7 +85,11 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpecSnippetSpec
     return $this->referenceOnly;
   }
   /**
-   * @param bool
+   * If `true`, then return snippet. If no snippet can be generated, we return
+   * "No snippet is available for this page." A `snippet_status` with `SUCCESS`
+   * or `NO_SNIPPET_AVAILABLE` will also be returned.
+   *
+   * @param bool $returnSnippet
    */
   public function setReturnSnippet($returnSnippet)
   {

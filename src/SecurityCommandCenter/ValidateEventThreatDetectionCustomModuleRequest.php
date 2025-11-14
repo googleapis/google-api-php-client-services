@@ -20,16 +20,24 @@ namespace Google\Service\SecurityCommandCenter;
 class ValidateEventThreatDetectionCustomModuleRequest extends \Google\Model
 {
   /**
+   * Required. The raw text of the module's contents. Used to generate error
+   * messages.
+   *
    * @var string
    */
   public $rawText;
   /**
+   * Required. The type of the module (e.g. CONFIGURABLE_BAD_IP).
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Required. The raw text of the module's contents. Used to generate error
+   * messages.
+   *
+   * @param string $rawText
    */
   public function setRawText($rawText)
   {
@@ -43,7 +51,9 @@ class ValidateEventThreatDetectionCustomModuleRequest extends \Google\Model
     return $this->rawText;
   }
   /**
-   * @param string
+   * Required. The type of the module (e.g. CONFIGURABLE_BAD_IP).
+   *
+   * @param string $type
    */
   public function setType($type)
   {

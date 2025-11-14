@@ -23,7 +23,9 @@ class GoogleCloudDatacatalogV1ModifyEntryContactsRequest extends \Google\Model
   protected $contactsDataType = '';
 
   /**
-   * @param GoogleCloudDatacatalogV1Contacts
+   * Required. The new value for the Contacts.
+   *
+   * @param GoogleCloudDatacatalogV1Contacts $contacts
    */
   public function setContacts(GoogleCloudDatacatalogV1Contacts $contacts)
   {

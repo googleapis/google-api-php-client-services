@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiBrandingSettings extends \Google
   protected $logoDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigImage
+   * Logo image.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigImage $logo
    */
   public function setLogo(GoogleCloudDiscoveryengineV1WidgetConfigImage $logo)
   {

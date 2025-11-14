@@ -20,30 +20,63 @@ namespace Google\Service\DisplayVideo;
 class AdUrl extends \Google\Model
 {
   /**
+   * Unknown or unspecified.
+   */
+  public const TYPE_AD_URL_TYPE_UNSPECIFIED = 'AD_URL_TYPE_UNSPECIFIED';
+  /**
+   * A 1x1 tracking pixel to ping when an impression of a creative is delivered.
+   */
+  public const TYPE_AD_URL_TYPE_BEACON_IMPRESSION = 'AD_URL_TYPE_BEACON_IMPRESSION';
+  /**
+   * Expandable DCM impression beacon. At serving time, it is expanded to
+   * several beacons.
+   */
+  public const TYPE_AD_URL_TYPE_BEACON_EXPANDABLE_DCM_IMPRESSION = 'AD_URL_TYPE_BEACON_EXPANDABLE_DCM_IMPRESSION';
+  /**
+   * Tracking URL to ping when the click event is triggered.
+   */
+  public const TYPE_AD_URL_TYPE_BEACON_CLICK = 'AD_URL_TYPE_BEACON_CLICK';
+  /**
+   * Tracking URL to ping when the skip event is triggered.
+   */
+  public const TYPE_AD_URL_TYPE_BEACON_SKIP = 'AD_URL_TYPE_BEACON_SKIP';
+  /**
+   * The type of the Ad URL.
+   *
    * @var string
    */
   public $type;
   /**
+   * The URL string value.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The type of the Ad URL.
+   *
+   * Accepted values: AD_URL_TYPE_UNSPECIFIED, AD_URL_TYPE_BEACON_IMPRESSION,
+   * AD_URL_TYPE_BEACON_EXPANDABLE_DCM_IMPRESSION, AD_URL_TYPE_BEACON_CLICK,
+   * AD_URL_TYPE_BEACON_SKIP
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * The URL string value.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

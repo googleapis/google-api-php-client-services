@@ -20,14 +20,22 @@ namespace Google\Service\PolicyAnalyzer;
 class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
 {
   /**
+   * A struct of custom fields to explain the activity.
+   *
    * @var array[]
    */
   public $activity;
   /**
+   * The type of the activity.
+   *
    * @var string
    */
   public $activityType;
   /**
+   * The full resource name that identifies the resource. For examples of full
+   * resource names for Google Cloud services, see
+   * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
+   *
    * @var string
    */
   public $fullResourceName;
@@ -35,7 +43,9 @@ class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
   protected $observationPeriodDataType = '';
 
   /**
-   * @param array[]
+   * A struct of custom fields to explain the activity.
+   *
+   * @param array[] $activity
    */
   public function setActivity($activity)
   {
@@ -49,7 +59,9 @@ class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
     return $this->activity;
   }
   /**
-   * @param string
+   * The type of the activity.
+   *
+   * @param string $activityType
    */
   public function setActivityType($activityType)
   {
@@ -63,7 +75,11 @@ class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
     return $this->activityType;
   }
   /**
-   * @param string
+   * The full resource name that identifies the resource. For examples of full
+   * resource names for Google Cloud services, see
+   * https://cloud.google.com/iam/help/troubleshooter/full-resource-names.
+   *
+   * @param string $fullResourceName
    */
   public function setFullResourceName($fullResourceName)
   {
@@ -77,7 +93,9 @@ class GoogleCloudPolicyanalyzerV1Activity extends \Google\Model
     return $this->fullResourceName;
   }
   /**
-   * @param GoogleCloudPolicyanalyzerV1ObservationPeriod
+   * The data observation period to build the activity.
+   *
+   * @param GoogleCloudPolicyanalyzerV1ObservationPeriod $observationPeriod
    */
   public function setObservationPeriod(GoogleCloudPolicyanalyzerV1ObservationPeriod $observationPeriod)
   {

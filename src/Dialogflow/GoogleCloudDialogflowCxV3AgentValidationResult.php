@@ -23,12 +23,17 @@ class GoogleCloudDialogflowCxV3AgentValidationResult extends \Google\Collection
   protected $flowValidationResultsType = GoogleCloudDialogflowCxV3FlowValidationResult::class;
   protected $flowValidationResultsDataType = 'array';
   /**
+   * The unique identifier of the agent validation result. Format:
+   * `projects//locations//agents//validationResult`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GoogleCloudDialogflowCxV3FlowValidationResult[]
+   * Contains all flow validation results.
+   *
+   * @param GoogleCloudDialogflowCxV3FlowValidationResult[] $flowValidationResults
    */
   public function setFlowValidationResults($flowValidationResults)
   {
@@ -42,7 +47,10 @@ class GoogleCloudDialogflowCxV3AgentValidationResult extends \Google\Collection
     return $this->flowValidationResults;
   }
   /**
-   * @param string
+   * The unique identifier of the agent validation result. Format:
+   * `projects//locations//agents//validationResult`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

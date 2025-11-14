@@ -20,12 +20,22 @@ namespace Google\Service\NetAppFiles;
 class RevertVolumeRequest extends \Google\Model
 {
   /**
+   * Required. The snapshot resource ID, in the format 'my-snapshot', where the
+   * specified ID is the {snapshot_id} of the fully qualified name like projects
+   * /{project_id}/locations/{location_id}/volumes/{volume_id}/snapshots/{snapsh
+   * ot_id}
+   *
    * @var string
    */
   public $snapshotId;
 
   /**
-   * @param string
+   * Required. The snapshot resource ID, in the format 'my-snapshot', where the
+   * specified ID is the {snapshot_id} of the fully qualified name like projects
+   * /{project_id}/locations/{location_id}/volumes/{volume_id}/snapshots/{snapsh
+   * ot_id}
+   *
+   * @param string $snapshotId
    */
   public function setSnapshotId($snapshotId)
   {

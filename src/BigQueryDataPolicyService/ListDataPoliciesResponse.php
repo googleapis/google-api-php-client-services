@@ -23,12 +23,17 @@ class ListDataPoliciesResponse extends \Google\Collection
   protected $dataPoliciesType = DataPolicy::class;
   protected $dataPoliciesDataType = 'array';
   /**
+   * Token used to retrieve the next page of results, or empty if there are no
+   * more results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param DataPolicy[]
+   * Data policies that belong to the requested project.
+   *
+   * @param DataPolicy[] $dataPolicies
    */
   public function setDataPolicies($dataPolicies)
   {
@@ -42,7 +47,10 @@ class ListDataPoliciesResponse extends \Google\Collection
     return $this->dataPolicies;
   }
   /**
-   * @param string
+   * Token used to retrieve the next page of results, or empty if there are no
+   * more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

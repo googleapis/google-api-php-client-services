@@ -21,18 +21,27 @@ class TeamDriveInfo extends \Google\Collection
 {
   protected $collection_key = 'teamDriveIds';
   /**
+   * List of Team Drive IDs, as provided by the [Drive
+   * API](https://developers.google.com/drive).
+   *
+   * @deprecated
    * @var string[]
    */
   public $teamDriveIds;
 
   /**
-   * @param string[]
+   * List of Team Drive IDs, as provided by the [Drive
+   * API](https://developers.google.com/drive).
+   *
+   * @deprecated
+   * @param string[] $teamDriveIds
    */
   public function setTeamDriveIds($teamDriveIds)
   {
     $this->teamDriveIds = $teamDriveIds;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getTeamDriveIds()

@@ -22,16 +22,24 @@ class RichMediaExitOverride extends \Google\Model
   protected $clickThroughUrlType = ClickThroughUrl::class;
   protected $clickThroughUrlDataType = '';
   /**
+   * Whether to use the clickThroughUrl. If false, the creative-level exit will
+   * be used.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * ID for the override to refer to a specific exit in the creative.
+   *
    * @var string
    */
   public $exitId;
 
   /**
-   * @param ClickThroughUrl
+   * Click-through URL of this rich media exit override. Applicable if the
+   * enabled field is set to true.
+   *
+   * @param ClickThroughUrl $clickThroughUrl
    */
   public function setClickThroughUrl(ClickThroughUrl $clickThroughUrl)
   {
@@ -45,7 +53,10 @@ class RichMediaExitOverride extends \Google\Model
     return $this->clickThroughUrl;
   }
   /**
-   * @param bool
+   * Whether to use the clickThroughUrl. If false, the creative-level exit will
+   * be used.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -59,7 +70,9 @@ class RichMediaExitOverride extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * ID for the override to refer to a specific exit in the creative.
+   *
+   * @param string $exitId
    */
   public function setExitId($exitId)
   {

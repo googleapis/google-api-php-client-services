@@ -21,18 +21,26 @@ class CustomTargetSkaffoldActions extends \Google\Collection
 {
   protected $collection_key = 'includeSkaffoldModules';
   /**
+   * Required. The Skaffold custom action responsible for deploy operations.
+   *
    * @var string
    */
   public $deployAction;
   protected $includeSkaffoldModulesType = SkaffoldModules::class;
   protected $includeSkaffoldModulesDataType = 'array';
   /**
+   * Optional. The Skaffold custom action responsible for render operations. If
+   * not provided then Cloud Deploy will perform the render operations via
+   * `skaffold render`.
+   *
    * @var string
    */
   public $renderAction;
 
   /**
-   * @param string
+   * Required. The Skaffold custom action responsible for deploy operations.
+   *
+   * @param string $deployAction
    */
   public function setDeployAction($deployAction)
   {
@@ -46,7 +54,10 @@ class CustomTargetSkaffoldActions extends \Google\Collection
     return $this->deployAction;
   }
   /**
-   * @param SkaffoldModules[]
+   * Optional. List of Skaffold modules Cloud Deploy will include in the
+   * Skaffold Config as required before performing diagnose.
+   *
+   * @param SkaffoldModules[] $includeSkaffoldModules
    */
   public function setIncludeSkaffoldModules($includeSkaffoldModules)
   {
@@ -60,7 +71,11 @@ class CustomTargetSkaffoldActions extends \Google\Collection
     return $this->includeSkaffoldModules;
   }
   /**
-   * @param string
+   * Optional. The Skaffold custom action responsible for render operations. If
+   * not provided then Cloud Deploy will perform the render operations via
+   * `skaffold render`.
+   *
+   * @param string $renderAction
    */
   public function setRenderAction($renderAction)
   {

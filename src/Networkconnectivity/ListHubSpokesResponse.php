@@ -21,18 +21,28 @@ class ListHubSpokesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * The token for the next page of the response. To see more results, use this
+   * value as the page_token for your next request. If this value is empty,
+   * there are no more results.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $spokesType = Spoke::class;
   protected $spokesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * The token for the next page of the response. To see more results, use this
+   * value as the page_token for your next request. If this value is empty,
+   * there are no more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,10 @@ class ListHubSpokesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Spoke[]
+   * The requested spokes. The spoke fields can be partially populated based on
+   * the `view` field in the request message.
+   *
+   * @param Spoke[] $spokes
    */
   public function setSpokes($spokes)
   {
@@ -60,7 +73,9 @@ class ListHubSpokesResponse extends \Google\Collection
     return $this->spokes;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

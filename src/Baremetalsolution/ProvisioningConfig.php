@@ -19,64 +19,132 @@ namespace Google\Service\Baremetalsolution;
 
 class ProvisioningConfig extends \Google\Collection
 {
+  /**
+   * State wasn't specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * ProvisioningConfig is a draft and can be freely modified.
+   */
+  public const STATE_DRAFT = 'DRAFT';
+  /**
+   * ProvisioningConfig was already submitted and cannot be modified.
+   */
+  public const STATE_SUBMITTED = 'SUBMITTED';
+  /**
+   * ProvisioningConfig was in the provisioning state. Initially this state
+   * comes from the work order table in big query when SNOW is used. Later this
+   * field can be set by the work order API.
+   */
+  public const STATE_PROVISIONING = 'PROVISIONING';
+  /**
+   * ProvisioningConfig was provisioned, meaning the resources exist.
+   */
+  public const STATE_PROVISIONED = 'PROVISIONED';
+  /**
+   * ProvisioningConfig was validated. A validation tool will be run to set this
+   * state.
+   */
+  public const STATE_VALIDATED = 'VALIDATED';
+  /**
+   * ProvisioningConfig was canceled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The request is submitted for provisioning, with error return.
+   */
+  public const STATE_FAILED = 'FAILED';
   protected $collection_key = 'volumes';
   /**
+   * Output only. URI to Cloud Console UI view of this provisioning config.
+   *
    * @var string
    */
   public $cloudConsoleUri;
   /**
+   * Optional. The user-defined identifier of the provisioning config.
+   *
    * @var string
    */
   public $customId;
   /**
+   * Email provided to send a confirmation with provisioning config to.
+   * Deprecated in favour of email field in request messages.
+   *
+   * @deprecated
    * @var string
    */
   public $email;
   /**
+   * A service account to enable customers to access instance credentials upon
+   * handover.
+   *
    * @var string
    */
   public $handoverServiceAccount;
   protected $instancesType = InstanceConfig::class;
   protected $instancesDataType = 'array';
   /**
+   * Optional. Location name of this ProvisioningConfig. It is optional only for
+   * Intake UI transition period.
+   *
    * @var string
    */
   public $location;
   /**
+   * Output only. The system-generated name of the provisioning config. This
+   * follows the UUID format.
+   *
    * @var string
    */
   public $name;
   protected $networksType = NetworkConfig::class;
   protected $networksDataType = 'array';
   /**
+   * Optional. Pod name. Pod is an independent part of infrastructure. Instance
+   * can be connected to the assets (networks, volumes, nfsshares) allocated in
+   * the same pod only.
+   *
    * @var string
    */
   public $pod;
   /**
+   * Output only. State of ProvisioningConfig.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional status messages associated with the FAILED state.
+   *
    * @var string
    */
   public $statusMessage;
   /**
+   * A generated ticket id to track provisioning request.
+   *
    * @var string
    */
   public $ticketId;
   /**
+   * Output only. Last update timestamp.
+   *
    * @var string
    */
   public $updateTime;
   protected $volumesType = VolumeConfig::class;
   protected $volumesDataType = 'array';
   /**
+   * If true, VPC SC is enabled for the cluster.
+   *
    * @var bool
    */
   public $vpcScEnabled;
 
   /**
-   * @param string
+   * Output only. URI to Cloud Console UI view of this provisioning config.
+   *
+   * @param string $cloudConsoleUri
    */
   public function setCloudConsoleUri($cloudConsoleUri)
   {
@@ -90,7 +158,9 @@ class ProvisioningConfig extends \Google\Collection
     return $this->cloudConsoleUri;
   }
   /**
-   * @param string
+   * Optional. The user-defined identifier of the provisioning config.
+   *
+   * @param string $customId
    */
   public function setCustomId($customId)
   {
@@ -104,13 +174,18 @@ class ProvisioningConfig extends \Google\Collection
     return $this->customId;
   }
   /**
-   * @param string
+   * Email provided to send a confirmation with provisioning config to.
+   * Deprecated in favour of email field in request messages.
+   *
+   * @deprecated
+   * @param string $email
    */
   public function setEmail($email)
   {
     $this->email = $email;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getEmail()
@@ -118,7 +193,10 @@ class ProvisioningConfig extends \Google\Collection
     return $this->email;
   }
   /**
-   * @param string
+   * A service account to enable customers to access instance credentials upon
+   * handover.
+   *
+   * @param string $handoverServiceAccount
    */
   public function setHandoverServiceAccount($handoverServiceAccount)
   {
@@ -132,7 +210,9 @@ class ProvisioningConfig extends \Google\Collection
     return $this->handoverServiceAccount;
   }
   /**
-   * @param InstanceConfig[]
+   * Instances to be created.
+   *
+   * @param InstanceConfig[] $instances
    */
   public function setInstances($instances)
   {
@@ -146,7 +226,10 @@ class ProvisioningConfig extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string
+   * Optional. Location name of this ProvisioningConfig. It is optional only for
+   * Intake UI transition period.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -160,7 +243,10 @@ class ProvisioningConfig extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string
+   * Output only. The system-generated name of the provisioning config. This
+   * follows the UUID format.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -174,7 +260,9 @@ class ProvisioningConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param NetworkConfig[]
+   * Networks to be created.
+   *
+   * @param NetworkConfig[] $networks
    */
   public function setNetworks($networks)
   {
@@ -188,7 +276,11 @@ class ProvisioningConfig extends \Google\Collection
     return $this->networks;
   }
   /**
-   * @param string
+   * Optional. Pod name. Pod is an independent part of infrastructure. Instance
+   * can be connected to the assets (networks, volumes, nfsshares) allocated in
+   * the same pod only.
+   *
+   * @param string $pod
    */
   public function setPod($pod)
   {
@@ -202,21 +294,28 @@ class ProvisioningConfig extends \Google\Collection
     return $this->pod;
   }
   /**
-   * @param string
+   * Output only. State of ProvisioningConfig.
+   *
+   * Accepted values: STATE_UNSPECIFIED, DRAFT, SUBMITTED, PROVISIONING,
+   * PROVISIONED, VALIDATED, CANCELLED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Optional status messages associated with the FAILED state.
+   *
+   * @param string $statusMessage
    */
   public function setStatusMessage($statusMessage)
   {
@@ -230,7 +329,9 @@ class ProvisioningConfig extends \Google\Collection
     return $this->statusMessage;
   }
   /**
-   * @param string
+   * A generated ticket id to track provisioning request.
+   *
+   * @param string $ticketId
    */
   public function setTicketId($ticketId)
   {
@@ -244,7 +345,9 @@ class ProvisioningConfig extends \Google\Collection
     return $this->ticketId;
   }
   /**
-   * @param string
+   * Output only. Last update timestamp.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -258,7 +361,9 @@ class ProvisioningConfig extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param VolumeConfig[]
+   * Volumes to be created.
+   *
+   * @param VolumeConfig[] $volumes
    */
   public function setVolumes($volumes)
   {
@@ -272,7 +377,9 @@ class ProvisioningConfig extends \Google\Collection
     return $this->volumes;
   }
   /**
-   * @param bool
+   * If true, VPC SC is enabled for the cluster.
+   *
+   * @param bool $vpcScEnabled
    */
   public function setVpcScEnabled($vpcScEnabled)
   {

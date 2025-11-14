@@ -20,12 +20,18 @@ namespace Google\Service\Pubsub;
 class RollbackSchemaRequest extends \Google\Model
 {
   /**
+   * Required. The revision ID to roll back to. It must be a revision of the
+   * same schema. Example: c7cfa2a8
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param string
+   * Required. The revision ID to roll back to. It must be a revision of the
+   * same schema. Example: c7cfa2a8
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

@@ -19,62 +19,181 @@ namespace Google\Service\ServiceConsumerManagement;
 
 class Field extends \Google\Collection
 {
+  /**
+   * For fields with unknown cardinality.
+   */
+  public const CARDINALITY_CARDINALITY_UNKNOWN = 'CARDINALITY_UNKNOWN';
+  /**
+   * For optional fields.
+   */
+  public const CARDINALITY_CARDINALITY_OPTIONAL = 'CARDINALITY_OPTIONAL';
+  /**
+   * For required fields. Proto2 syntax only.
+   */
+  public const CARDINALITY_CARDINALITY_REQUIRED = 'CARDINALITY_REQUIRED';
+  /**
+   * For repeated fields.
+   */
+  public const CARDINALITY_CARDINALITY_REPEATED = 'CARDINALITY_REPEATED';
+  /**
+   * Field type unknown.
+   */
+  public const KIND_TYPE_UNKNOWN = 'TYPE_UNKNOWN';
+  /**
+   * Field type double.
+   */
+  public const KIND_TYPE_DOUBLE = 'TYPE_DOUBLE';
+  /**
+   * Field type float.
+   */
+  public const KIND_TYPE_FLOAT = 'TYPE_FLOAT';
+  /**
+   * Field type int64.
+   */
+  public const KIND_TYPE_INT64 = 'TYPE_INT64';
+  /**
+   * Field type uint64.
+   */
+  public const KIND_TYPE_UINT64 = 'TYPE_UINT64';
+  /**
+   * Field type int32.
+   */
+  public const KIND_TYPE_INT32 = 'TYPE_INT32';
+  /**
+   * Field type fixed64.
+   */
+  public const KIND_TYPE_FIXED64 = 'TYPE_FIXED64';
+  /**
+   * Field type fixed32.
+   */
+  public const KIND_TYPE_FIXED32 = 'TYPE_FIXED32';
+  /**
+   * Field type bool.
+   */
+  public const KIND_TYPE_BOOL = 'TYPE_BOOL';
+  /**
+   * Field type string.
+   */
+  public const KIND_TYPE_STRING = 'TYPE_STRING';
+  /**
+   * Field type group. Proto2 syntax only, and deprecated.
+   */
+  public const KIND_TYPE_GROUP = 'TYPE_GROUP';
+  /**
+   * Field type message.
+   */
+  public const KIND_TYPE_MESSAGE = 'TYPE_MESSAGE';
+  /**
+   * Field type bytes.
+   */
+  public const KIND_TYPE_BYTES = 'TYPE_BYTES';
+  /**
+   * Field type uint32.
+   */
+  public const KIND_TYPE_UINT32 = 'TYPE_UINT32';
+  /**
+   * Field type enum.
+   */
+  public const KIND_TYPE_ENUM = 'TYPE_ENUM';
+  /**
+   * Field type sfixed32.
+   */
+  public const KIND_TYPE_SFIXED32 = 'TYPE_SFIXED32';
+  /**
+   * Field type sfixed64.
+   */
+  public const KIND_TYPE_SFIXED64 = 'TYPE_SFIXED64';
+  /**
+   * Field type sint32.
+   */
+  public const KIND_TYPE_SINT32 = 'TYPE_SINT32';
+  /**
+   * Field type sint64.
+   */
+  public const KIND_TYPE_SINT64 = 'TYPE_SINT64';
   protected $collection_key = 'options';
   /**
+   * The field cardinality.
+   *
    * @var string
    */
   public $cardinality;
   /**
+   * The string value of the default value of this field. Proto2 syntax only.
+   *
    * @var string
    */
   public $defaultValue;
   /**
+   * The field JSON name.
+   *
    * @var string
    */
   public $jsonName;
   /**
+   * The field type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The field name.
+   *
    * @var string
    */
   public $name;
   /**
+   * The field number.
+   *
    * @var int
    */
   public $number;
   /**
+   * The index of the field type in `Type.oneofs`, for message or enumeration
+   * types. The first type has index 1; zero means the type is not in the list.
+   *
    * @var int
    */
   public $oneofIndex;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
   /**
+   * Whether to use alternative packed wire representation.
+   *
    * @var bool
    */
   public $packed;
   /**
+   * The field type URL, without the scheme, for message or enumeration types.
+   * Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+   *
    * @var string
    */
   public $typeUrl;
 
   /**
-   * @param string
+   * The field cardinality.
+   *
+   * Accepted values: CARDINALITY_UNKNOWN, CARDINALITY_OPTIONAL,
+   * CARDINALITY_REQUIRED, CARDINALITY_REPEATED
+   *
+   * @param self::CARDINALITY_* $cardinality
    */
   public function setCardinality($cardinality)
   {
     $this->cardinality = $cardinality;
   }
   /**
-   * @return string
+   * @return self::CARDINALITY_*
    */
   public function getCardinality()
   {
     return $this->cardinality;
   }
   /**
-   * @param string
+   * The string value of the default value of this field. Proto2 syntax only.
+   *
+   * @param string $defaultValue
    */
   public function setDefaultValue($defaultValue)
   {
@@ -88,7 +207,9 @@ class Field extends \Google\Collection
     return $this->defaultValue;
   }
   /**
-   * @param string
+   * The field JSON name.
+   *
+   * @param string $jsonName
    */
   public function setJsonName($jsonName)
   {
@@ -102,21 +223,30 @@ class Field extends \Google\Collection
     return $this->jsonName;
   }
   /**
-   * @param string
+   * The field type.
+   *
+   * Accepted values: TYPE_UNKNOWN, TYPE_DOUBLE, TYPE_FLOAT, TYPE_INT64,
+   * TYPE_UINT64, TYPE_INT32, TYPE_FIXED64, TYPE_FIXED32, TYPE_BOOL,
+   * TYPE_STRING, TYPE_GROUP, TYPE_MESSAGE, TYPE_BYTES, TYPE_UINT32, TYPE_ENUM,
+   * TYPE_SFIXED32, TYPE_SFIXED64, TYPE_SINT32, TYPE_SINT64
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * The field name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -130,7 +260,9 @@ class Field extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * The field number.
+   *
+   * @param int $number
    */
   public function setNumber($number)
   {
@@ -144,7 +276,10 @@ class Field extends \Google\Collection
     return $this->number;
   }
   /**
-   * @param int
+   * The index of the field type in `Type.oneofs`, for message or enumeration
+   * types. The first type has index 1; zero means the type is not in the list.
+   *
+   * @param int $oneofIndex
    */
   public function setOneofIndex($oneofIndex)
   {
@@ -158,7 +293,9 @@ class Field extends \Google\Collection
     return $this->oneofIndex;
   }
   /**
-   * @param Option[]
+   * The protocol buffer options.
+   *
+   * @param Option[] $options
    */
   public function setOptions($options)
   {
@@ -172,7 +309,9 @@ class Field extends \Google\Collection
     return $this->options;
   }
   /**
-   * @param bool
+   * Whether to use alternative packed wire representation.
+   *
+   * @param bool $packed
    */
   public function setPacked($packed)
   {
@@ -186,7 +325,10 @@ class Field extends \Google\Collection
     return $this->packed;
   }
   /**
-   * @param string
+   * The field type URL, without the scheme, for message or enumeration types.
+   * Example: `"type.googleapis.com/google.protobuf.Timestamp"`.
+   *
+   * @param string $typeUrl
    */
   public function setTypeUrl($typeUrl)
   {

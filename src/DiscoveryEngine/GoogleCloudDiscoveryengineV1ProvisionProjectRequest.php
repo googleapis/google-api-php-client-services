@@ -20,10 +20,19 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
 {
   /**
+   * Required. Set to `true` to specify that caller has read and would like to
+   * give consent to the [Terms for data
+   * use](https://cloud.google.com/retail/data-use-terms).
+   *
    * @var bool
    */
   public $acceptDataUseTerms;
   /**
+   * Required. The version of the [Terms for data
+   * use](https://cloud.google.com/retail/data-use-terms) that caller has read
+   * and would like to give consent to. Acceptable version is `2022-11-23`, and
+   * this may change over time.
+   *
    * @var string
    */
   public $dataUseTermsVersion;
@@ -31,7 +40,11 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
   protected $saasParamsDataType = '';
 
   /**
-   * @param bool
+   * Required. Set to `true` to specify that caller has read and would like to
+   * give consent to the [Terms for data
+   * use](https://cloud.google.com/retail/data-use-terms).
+   *
+   * @param bool $acceptDataUseTerms
    */
   public function setAcceptDataUseTerms($acceptDataUseTerms)
   {
@@ -45,7 +58,12 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
     return $this->acceptDataUseTerms;
   }
   /**
-   * @param string
+   * Required. The version of the [Terms for data
+   * use](https://cloud.google.com/retail/data-use-terms) that caller has read
+   * and would like to give consent to. Acceptable version is `2022-11-23`, and
+   * this may change over time.
+   *
+   * @param string $dataUseTermsVersion
    */
   public function setDataUseTermsVersion($dataUseTermsVersion)
   {
@@ -59,7 +77,9 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
     return $this->dataUseTermsVersion;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams
+   * Optional. Parameters for Agentspace.
+   *
+   * @param GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams $saasParams
    */
   public function setSaasParams(GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams $saasParams)
   {

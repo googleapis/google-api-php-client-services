@@ -20,16 +20,22 @@ namespace Google\Service\Bigquery;
 class SparkLoggingInfo extends \Google\Model
 {
   /**
+   * Output only. Project ID where the Spark logs were written.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Output only. Resource type used for logging.
+   *
    * @var string
    */
   public $resourceType;
 
   /**
-   * @param string
+   * Output only. Project ID where the Spark logs were written.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -43,7 +49,9 @@ class SparkLoggingInfo extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Output only. Resource type used for logging.
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {

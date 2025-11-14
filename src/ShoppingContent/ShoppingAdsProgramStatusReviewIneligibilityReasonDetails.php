@@ -20,12 +20,18 @@ namespace Google\Service\ShoppingContent;
 class ShoppingAdsProgramStatusReviewIneligibilityReasonDetails extends \Google\Model
 {
   /**
+   * This timestamp represents end of cooldown period for review ineligbility
+   * reason `IN_COOLDOWN_PERIOD`.
+   *
    * @var string
    */
   public $cooldownTime;
 
   /**
-   * @param string
+   * This timestamp represents end of cooldown period for review ineligbility
+   * reason `IN_COOLDOWN_PERIOD`.
+   *
+   * @param string $cooldownTime
    */
   public function setCooldownTime($cooldownTime)
   {

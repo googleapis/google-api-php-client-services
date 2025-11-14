@@ -22,12 +22,16 @@ class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton extends \Google\M
   protected $openUriActionType = GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction::class;
   protected $openUriActionDataType = '';
   /**
+   * Required. The title of the button.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction
+   * Required. Action to take when a user taps on the button.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction $openUriAction
    */
   public function setOpenUriAction(GoogleCloudDialogflowV2beta1IntentMessageBasicCardButtonOpenUriAction $openUriAction)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton extends \Google\M
     return $this->openUriAction;
   }
   /**
-   * @param string
+   * Required. The title of the button.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

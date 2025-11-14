@@ -20,18 +20,30 @@ namespace Google\Service\PeopleService;
 class RelationshipInterest extends \Google\Model
 {
   /**
+   * Output only. The value of the relationship interest translated and
+   * formatted in the viewer's account locale or the locale specified in the
+   * Accept-Language HTTP header.
+   *
    * @var string
    */
   public $formattedValue;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The kind of relationship the person is looking for. The value can be custom
+   * or one of these predefined values: * `friend` * `date` * `relationship` *
+   * `networking`
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Output only. The value of the relationship interest translated and
+   * formatted in the viewer's account locale or the locale specified in the
+   * Accept-Language HTTP header.
+   *
+   * @param string $formattedValue
    */
   public function setFormattedValue($formattedValue)
   {
@@ -45,7 +57,9 @@ class RelationshipInterest extends \Google\Model
     return $this->formattedValue;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the relationship interest.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -59,7 +73,11 @@ class RelationshipInterest extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The kind of relationship the person is looking for. The value can be custom
+   * or one of these predefined values: * `friend` * `date` * `relationship` *
+   * `networking`
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

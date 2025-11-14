@@ -27,7 +27,9 @@ class ServiceLevelIndicator extends \Google\Model
   protected $windowsBasedDataType = '';
 
   /**
-   * @param BasicSli
+   * Basic SLI on a well-known service type.
+   *
+   * @param BasicSli $basicSli
    */
   public function setBasicSli(BasicSli $basicSli)
   {
@@ -41,7 +43,9 @@ class ServiceLevelIndicator extends \Google\Model
     return $this->basicSli;
   }
   /**
-   * @param RequestBasedSli
+   * Request-based SLIs
+   *
+   * @param RequestBasedSli $requestBased
    */
   public function setRequestBased(RequestBasedSli $requestBased)
   {
@@ -55,7 +59,9 @@ class ServiceLevelIndicator extends \Google\Model
     return $this->requestBased;
   }
   /**
-   * @param WindowsBasedSli
+   * Windows-based SLIs
+   *
+   * @param WindowsBasedSli $windowsBased
    */
   public function setWindowsBased(WindowsBasedSli $windowsBased)
   {

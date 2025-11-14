@@ -20,20 +20,37 @@ namespace Google\Service\Games;
 class EventRecordFailure extends \Google\Model
 {
   /**
+   * An attempt was made to set an event that was not defined.
+   */
+  public const FAILURE_CAUSE_NOT_FOUND = 'NOT_FOUND';
+  /**
+   * An attempt was made to increment an event by a non-positive value.
+   */
+  public const FAILURE_CAUSE_INVALID_UPDATE_VALUE = 'INVALID_UPDATE_VALUE';
+  /**
+   * The ID of the event that was not updated.
+   *
    * @var string
    */
   public $eventId;
   /**
+   * The cause for the update failure.
+   *
    * @var string
    */
   public $failureCause;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventRecordFailure`.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * The ID of the event that was not updated.
+   *
+   * @param string $eventId
    */
   public function setEventId($eventId)
   {
@@ -47,21 +64,28 @@ class EventRecordFailure extends \Google\Model
     return $this->eventId;
   }
   /**
-   * @param string
+   * The cause for the update failure.
+   *
+   * Accepted values: NOT_FOUND, INVALID_UPDATE_VALUE
+   *
+   * @param self::FAILURE_CAUSE_* $failureCause
    */
   public function setFailureCause($failureCause)
   {
     $this->failureCause = $failureCause;
   }
   /**
-   * @return string
+   * @return self::FAILURE_CAUSE_*
    */
   public function getFailureCause()
   {
     return $this->failureCause;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventRecordFailure`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

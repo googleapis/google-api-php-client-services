@@ -20,24 +20,34 @@ namespace Google\Service\Dataflow;
 class BigQueryIODetails extends \Google\Model
 {
   /**
+   * Dataset accessed in the connection.
+   *
    * @var string
    */
   public $dataset;
   /**
+   * Project accessed in the connection.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Query used to access data in the connection.
+   *
    * @var string
    */
   public $query;
   /**
+   * Table accessed in the connection.
+   *
    * @var string
    */
   public $table;
 
   /**
-   * @param string
+   * Dataset accessed in the connection.
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -51,7 +61,9 @@ class BigQueryIODetails extends \Google\Model
     return $this->dataset;
   }
   /**
-   * @param string
+   * Project accessed in the connection.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -65,7 +77,9 @@ class BigQueryIODetails extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * Query used to access data in the connection.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -79,7 +93,9 @@ class BigQueryIODetails extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * Table accessed in the connection.
+   *
+   * @param string $table
    */
   public function setTable($table)
   {

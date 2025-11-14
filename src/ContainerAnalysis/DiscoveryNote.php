@@ -20,19 +20,85 @@ namespace Google\Service\ContainerAnalysis;
 class DiscoveryNote extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const ANALYSIS_KIND_NOTE_KIND_UNSPECIFIED = 'NOTE_KIND_UNSPECIFIED';
+  /**
+   * The note and occurrence represent a package vulnerability.
+   */
+  public const ANALYSIS_KIND_VULNERABILITY = 'VULNERABILITY';
+  /**
+   * The note and occurrence assert build provenance.
+   */
+  public const ANALYSIS_KIND_BUILD = 'BUILD';
+  /**
+   * This represents an image basis relationship.
+   */
+  public const ANALYSIS_KIND_IMAGE = 'IMAGE';
+  /**
+   * This represents a package installed via a package manager.
+   */
+  public const ANALYSIS_KIND_PACKAGE = 'PACKAGE';
+  /**
+   * The note and occurrence track deployment events.
+   */
+  public const ANALYSIS_KIND_DEPLOYMENT = 'DEPLOYMENT';
+  /**
+   * The note and occurrence track the initial discovery status of a resource.
+   */
+  public const ANALYSIS_KIND_DISCOVERY = 'DISCOVERY';
+  /**
+   * This represents a logical "role" that can attest to artifacts.
+   */
+  public const ANALYSIS_KIND_ATTESTATION = 'ATTESTATION';
+  /**
+   * This represents an available package upgrade.
+   */
+  public const ANALYSIS_KIND_UPGRADE = 'UPGRADE';
+  /**
+   * This represents a Compliance Note
+   */
+  public const ANALYSIS_KIND_COMPLIANCE = 'COMPLIANCE';
+  /**
+   * This represents a DSSE attestation Note
+   */
+  public const ANALYSIS_KIND_DSSE_ATTESTATION = 'DSSE_ATTESTATION';
+  /**
+   * This represents a Vulnerability Assessment.
+   */
+  public const ANALYSIS_KIND_VULNERABILITY_ASSESSMENT = 'VULNERABILITY_ASSESSMENT';
+  /**
+   * This represents an SBOM Reference.
+   */
+  public const ANALYSIS_KIND_SBOM_REFERENCE = 'SBOM_REFERENCE';
+  /**
+   * This represents a secret.
+   */
+  public const ANALYSIS_KIND_SECRET = 'SECRET';
+  /**
+   * Required. Immutable. The kind of analysis that is handled by this
+   * discovery.
+   *
    * @var string
    */
   public $analysisKind;
 
   /**
-   * @param string
+   * Required. Immutable. The kind of analysis that is handled by this
+   * discovery.
+   *
+   * Accepted values: NOTE_KIND_UNSPECIFIED, VULNERABILITY, BUILD, IMAGE,
+   * PACKAGE, DEPLOYMENT, DISCOVERY, ATTESTATION, UPGRADE, COMPLIANCE,
+   * DSSE_ATTESTATION, VULNERABILITY_ASSESSMENT, SBOM_REFERENCE, SECRET
+   *
+   * @param self::ANALYSIS_KIND_* $analysisKind
    */
   public function setAnalysisKind($analysisKind)
   {
     $this->analysisKind = $analysisKind;
   }
   /**
-   * @return string
+   * @return self::ANALYSIS_KIND_*
    */
   public function getAnalysisKind()
   {

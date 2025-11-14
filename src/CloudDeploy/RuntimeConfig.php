@@ -25,7 +25,9 @@ class RuntimeConfig extends \Google\Model
   protected $kubernetesDataType = '';
 
   /**
-   * @param CloudRunConfig
+   * Optional. Cloud Run runtime configuration.
+   *
+   * @param CloudRunConfig $cloudRun
    */
   public function setCloudRun(CloudRunConfig $cloudRun)
   {
@@ -39,7 +41,9 @@ class RuntimeConfig extends \Google\Model
     return $this->cloudRun;
   }
   /**
-   * @param KubernetesConfig
+   * Optional. Kubernetes runtime configuration.
+   *
+   * @param KubernetesConfig $kubernetes
    */
   public function setKubernetes(KubernetesConfig $kubernetes)
   {

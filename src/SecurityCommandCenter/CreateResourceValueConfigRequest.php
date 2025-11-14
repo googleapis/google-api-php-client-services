@@ -20,6 +20,8 @@ namespace Google\Service\SecurityCommandCenter;
 class CreateResourceValueConfigRequest extends \Google\Model
 {
   /**
+   * Required. Resource name of the new ResourceValueConfig's parent.
+   *
    * @var string
    */
   public $parent;
@@ -27,7 +29,9 @@ class CreateResourceValueConfigRequest extends \Google\Model
   protected $resourceValueConfigDataType = '';
 
   /**
-   * @param string
+   * Required. Resource name of the new ResourceValueConfig's parent.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -41,7 +45,9 @@ class CreateResourceValueConfigRequest extends \Google\Model
     return $this->parent;
   }
   /**
-   * @param GoogleCloudSecuritycenterV1ResourceValueConfig
+   * Required. The resource value config being created.
+   *
+   * @param GoogleCloudSecuritycenterV1ResourceValueConfig $resourceValueConfig
    */
   public function setResourceValueConfig(GoogleCloudSecuritycenterV1ResourceValueConfig $resourceValueConfig)
   {

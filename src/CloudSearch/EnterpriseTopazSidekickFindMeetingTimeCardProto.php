@@ -33,12 +33,16 @@ class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
   protected $timeBoundariesType = EnterpriseTopazSidekickTimeSlot::class;
   protected $timeBoundariesDataType = '';
   /**
+   * Timezone ID.
+   *
    * @var string
    */
   public $timezoneId;
 
   /**
-   * @param EnterpriseTopazSidekickTimeSlot[]
+   * Slots when all attendees have availability.
+   *
+   * @param EnterpriseTopazSidekickTimeSlot[] $commonAvailableTimeSlots
    */
   public function setCommonAvailableTimeSlots($commonAvailableTimeSlots)
   {
@@ -52,7 +56,9 @@ class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
     return $this->commonAvailableTimeSlots;
   }
   /**
-   * @param EnterpriseTopazSidekickPerson[]
+   * Invitees to the event.
+   *
+   * @param EnterpriseTopazSidekickPerson[] $invitees
    */
   public function setInvitees($invitees)
   {
@@ -66,7 +72,9 @@ class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
     return $this->invitees;
   }
   /**
-   * @param EnterpriseTopazSidekickPerson
+   * Requester.
+   *
+   * @param EnterpriseTopazSidekickPerson $requester
    */
   public function setRequester(EnterpriseTopazSidekickPerson $requester)
   {
@@ -80,7 +88,9 @@ class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
     return $this->requester;
   }
   /**
-   * @param EnterpriseTopazSidekickScheduledMeeting
+   * Details about the scheduled meeting, if one exists.
+   *
+   * @param EnterpriseTopazSidekickScheduledMeeting $scheduledMeeting
    */
   public function setScheduledMeeting(EnterpriseTopazSidekickScheduledMeeting $scheduledMeeting)
   {
@@ -94,7 +104,10 @@ class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
     return $this->scheduledMeeting;
   }
   /**
-   * @param EnterpriseTopazSidekickPerson[]
+   * Invitees that have been skipped in the computation, most likely because
+   * they are groups.
+   *
+   * @param EnterpriseTopazSidekickPerson[] $skippedInvitees
    */
   public function setSkippedInvitees($skippedInvitees)
   {
@@ -108,7 +121,9 @@ class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
     return $this->skippedInvitees;
   }
   /**
-   * @param EnterpriseTopazSidekickTimeSlot
+   * Min and max timestamp used to find a common available timeslot.
+   *
+   * @param EnterpriseTopazSidekickTimeSlot $timeBoundaries
    */
   public function setTimeBoundaries(EnterpriseTopazSidekickTimeSlot $timeBoundaries)
   {
@@ -122,7 +137,9 @@ class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
     return $this->timeBoundaries;
   }
   /**
-   * @param string
+   * Timezone ID.
+   *
+   * @param string $timezoneId
    */
   public function setTimezoneId($timezoneId)
   {

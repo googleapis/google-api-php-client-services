@@ -21,6 +21,11 @@ class ListUserInvitationsResponse extends \Google\Collection
 {
   protected $collection_key = 'userInvitations';
   /**
+   * The token for the next page. If not empty, indicates that there may be more
+   * `UserInvitation` resources that match the listing request; this value can
+   * be used in a subsequent ListUserInvitationsRequest to get continued results
+   * with the current list call.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +33,12 @@ class ListUserInvitationsResponse extends \Google\Collection
   protected $userInvitationsDataType = 'array';
 
   /**
-   * @param string
+   * The token for the next page. If not empty, indicates that there may be more
+   * `UserInvitation` resources that match the listing request; this value can
+   * be used in a subsequent ListUserInvitationsRequest to get continued results
+   * with the current list call.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +52,9 @@ class ListUserInvitationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param UserInvitation[]
+   * The list of UserInvitation resources.
+   *
+   * @param UserInvitation[] $userInvitations
    */
   public function setUserInvitations($userInvitations)
   {

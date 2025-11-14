@@ -20,24 +20,70 @@ namespace Google\Service\Dfareporting;
 class ProximityFilter extends \Google\Model
 {
   /**
+   * The radius bucket type is unknown.
+   */
+  public const RADIUS_BUCKET_TYPE_RADIUS_BUCKET_TYPE_UNKNOWN = 'RADIUS_BUCKET_TYPE_UNKNOWN';
+  /**
+   * The radius bucket type is small.
+   */
+  public const RADIUS_BUCKET_TYPE_SMALL = 'SMALL';
+  /**
+   * The radius bucket type is medium.
+   */
+  public const RADIUS_BUCKET_TYPE_MEDIUM = 'MEDIUM';
+  /**
+   * The radius bucket type is large.
+   */
+  public const RADIUS_BUCKET_TYPE_LARGE = 'LARGE';
+  /**
+   * The radius bucket type is multi-regional.
+   */
+  public const RADIUS_BUCKET_TYPE_MULTI_REGIONAL = 'MULTI_REGIONAL';
+  /**
+   * The radius bucket type is national.
+   */
+  public const RADIUS_BUCKET_TYPE_NATIONAL = 'NATIONAL';
+  /**
+   * The units of the radius value are unknown. This value is unused.
+   */
+  public const RADIUS_UNIT_TYPE_RADIUS_UNIT_TYPE_UNKNOWN = 'RADIUS_UNIT_TYPE_UNKNOWN';
+  /**
+   * The units of the radius value are kilometers.
+   */
+  public const RADIUS_UNIT_TYPE_KILOMETERS = 'KILOMETERS';
+  /**
+   * The units of the radius value are miles.
+   */
+  public const RADIUS_UNIT_TYPE_MILES = 'MILES';
+  /**
+   * Optional. Field ID in the element.
+   *
    * @var int
    */
   public $fieldId;
   /**
+   * Optional. The radius bucket type of the proximity filter
+   *
    * @var string
    */
   public $radiusBucketType;
   /**
+   * Optional. The units of the radius value
+   *
    * @var string
    */
   public $radiusUnitType;
   /**
+   * Optional. Radius length in units defined by radius_units.
+   *
    * @var int
    */
   public $radiusValue;
 
   /**
-   * @param int
+   * Optional. Field ID in the element.
+   *
+   * @param int $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -51,35 +97,46 @@ class ProximityFilter extends \Google\Model
     return $this->fieldId;
   }
   /**
-   * @param string
+   * Optional. The radius bucket type of the proximity filter
+   *
+   * Accepted values: RADIUS_BUCKET_TYPE_UNKNOWN, SMALL, MEDIUM, LARGE,
+   * MULTI_REGIONAL, NATIONAL
+   *
+   * @param self::RADIUS_BUCKET_TYPE_* $radiusBucketType
    */
   public function setRadiusBucketType($radiusBucketType)
   {
     $this->radiusBucketType = $radiusBucketType;
   }
   /**
-   * @return string
+   * @return self::RADIUS_BUCKET_TYPE_*
    */
   public function getRadiusBucketType()
   {
     return $this->radiusBucketType;
   }
   /**
-   * @param string
+   * Optional. The units of the radius value
+   *
+   * Accepted values: RADIUS_UNIT_TYPE_UNKNOWN, KILOMETERS, MILES
+   *
+   * @param self::RADIUS_UNIT_TYPE_* $radiusUnitType
    */
   public function setRadiusUnitType($radiusUnitType)
   {
     $this->radiusUnitType = $radiusUnitType;
   }
   /**
-   * @return string
+   * @return self::RADIUS_UNIT_TYPE_*
    */
   public function getRadiusUnitType()
   {
     return $this->radiusUnitType;
   }
   /**
-   * @param int
+   * Optional. Radius length in units defined by radius_units.
+   *
+   * @param int $radiusValue
    */
   public function setRadiusValue($radiusValue)
   {

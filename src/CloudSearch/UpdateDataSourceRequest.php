@@ -24,12 +24,24 @@ class UpdateDataSourceRequest extends \Google\Model
   protected $sourceType = DataSource::class;
   protected $sourceDataType = '';
   /**
+   * Only applies to
+   * [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to
+   * control which fields to update. Example field paths: `name`, `displayName`.
+   * * If `update_mask` is non-empty, then only the fields specified in the
+   * `update_mask` are updated. * If you specify a field in the `update_mask`,
+   * but don't specify its value in the source, that field is cleared. * If the
+   * `update_mask` is not present or empty or has the value `*`, then all fields
+   * are updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param DebugOptions
+   * Common debug options.
+   *
+   * @param DebugOptions $debugOptions
    */
   public function setDebugOptions(DebugOptions $debugOptions)
   {
@@ -43,7 +55,7 @@ class UpdateDataSourceRequest extends \Google\Model
     return $this->debugOptions;
   }
   /**
-   * @param DataSource
+   * @param DataSource $source
    */
   public function setSource(DataSource $source)
   {
@@ -57,7 +69,17 @@ class UpdateDataSourceRequest extends \Google\Model
     return $this->source;
   }
   /**
-   * @param string
+   * Only applies to
+   * [`settings.datasources.patch`](https://developers.google.com/cloud-
+   * search/docs/reference/rest/v1/settings.datasources/patch). Update mask to
+   * control which fields to update. Example field paths: `name`, `displayName`.
+   * * If `update_mask` is non-empty, then only the fields specified in the
+   * `update_mask` are updated. * If you specify a field in the `update_mask`,
+   * but don't specify its value in the source, that field is cleared. * If the
+   * `update_mask` is not present or empty or has the value `*`, then all fields
+   * are updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

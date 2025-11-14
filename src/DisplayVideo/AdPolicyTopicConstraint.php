@@ -30,6 +30,8 @@ class AdPolicyTopicConstraint extends \Google\Model
   protected $globalCertificateMissingType = AdPolicyTopicConstraintAdPolicyGlobalCertificateMissingConstraint::class;
   protected $globalCertificateMissingDataType = '';
   /**
+   * Link to the form to request a certificate for the constraint.
+   *
    * @var string
    */
   public $requestCertificateFormLink;
@@ -37,7 +39,10 @@ class AdPolicyTopicConstraint extends \Google\Model
   protected $resellerConstraintDataType = '';
 
   /**
-   * @param AdPolicyTopicConstraintAdPolicyCountryConstraintList
+   * Countries where the resource's domain is not covered by the certificates
+   * associated with it.
+   *
+   * @param AdPolicyTopicConstraintAdPolicyCountryConstraintList $certificateDomainMismatchCountryList
    */
   public function setCertificateDomainMismatchCountryList(AdPolicyTopicConstraintAdPolicyCountryConstraintList $certificateDomainMismatchCountryList)
   {
@@ -51,7 +56,9 @@ class AdPolicyTopicConstraint extends \Google\Model
     return $this->certificateDomainMismatchCountryList;
   }
   /**
-   * @param AdPolicyTopicConstraintAdPolicyCountryConstraintList
+   * Countries where a certificate is required for serving.
+   *
+   * @param AdPolicyTopicConstraintAdPolicyCountryConstraintList $certificateMissingCountryList
    */
   public function setCertificateMissingCountryList(AdPolicyTopicConstraintAdPolicyCountryConstraintList $certificateMissingCountryList)
   {
@@ -65,7 +72,9 @@ class AdPolicyTopicConstraint extends \Google\Model
     return $this->certificateMissingCountryList;
   }
   /**
-   * @param AdPolicyTopicConstraintAdPolicyCountryConstraintList
+   * Countries where the ad cannot serve.
+   *
+   * @param AdPolicyTopicConstraintAdPolicyCountryConstraintList $countryConstraint
    */
   public function setCountryConstraint(AdPolicyTopicConstraintAdPolicyCountryConstraintList $countryConstraint)
   {
@@ -79,7 +88,10 @@ class AdPolicyTopicConstraint extends \Google\Model
     return $this->countryConstraint;
   }
   /**
-   * @param AdPolicyTopicConstraintAdPolicyGlobalCertificateDomainMismatchConstraint
+   * Certificate is required to serve in any country and the existing
+   * certificate does not cover the ad's domain.
+   *
+   * @param AdPolicyTopicConstraintAdPolicyGlobalCertificateDomainMismatchConstraint $globalCertificateDomainMismatch
    */
   public function setGlobalCertificateDomainMismatch(AdPolicyTopicConstraintAdPolicyGlobalCertificateDomainMismatchConstraint $globalCertificateDomainMismatch)
   {
@@ -93,7 +105,9 @@ class AdPolicyTopicConstraint extends \Google\Model
     return $this->globalCertificateDomainMismatch;
   }
   /**
-   * @param AdPolicyTopicConstraintAdPolicyGlobalCertificateMissingConstraint
+   * Certificate is required to serve in any country.
+   *
+   * @param AdPolicyTopicConstraintAdPolicyGlobalCertificateMissingConstraint $globalCertificateMissing
    */
   public function setGlobalCertificateMissing(AdPolicyTopicConstraintAdPolicyGlobalCertificateMissingConstraint $globalCertificateMissing)
   {
@@ -107,7 +121,9 @@ class AdPolicyTopicConstraint extends \Google\Model
     return $this->globalCertificateMissing;
   }
   /**
-   * @param string
+   * Link to the form to request a certificate for the constraint.
+   *
+   * @param string $requestCertificateFormLink
    */
   public function setRequestCertificateFormLink($requestCertificateFormLink)
   {
@@ -121,7 +137,9 @@ class AdPolicyTopicConstraint extends \Google\Model
     return $this->requestCertificateFormLink;
   }
   /**
-   * @param AdPolicyTopicConstraintAdPolicyResellerConstraint
+   * Reseller constraint.
+   *
+   * @param AdPolicyTopicConstraintAdPolicyResellerConstraint $resellerConstraint
    */
   public function setResellerConstraint(AdPolicyTopicConstraintAdPolicyResellerConstraint $resellerConstraint)
   {

@@ -19,15 +19,39 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3InlineSchema extends \Google\Model
 {
+  /**
+   * Not specified.
+   */
+  public const TYPE_DATA_TYPE_UNSPECIFIED = 'DATA_TYPE_UNSPECIFIED';
+  /**
+   * Represents any string value.
+   */
+  public const TYPE_STRING = 'STRING';
+  /**
+   * Represents any number value.
+   */
+  public const TYPE_NUMBER = 'NUMBER';
+  /**
+   * Represents a boolean value.
+   */
+  public const TYPE_BOOLEAN = 'BOOLEAN';
+  /**
+   * Represents a repeated value.
+   */
+  public const TYPE_ARRAY = 'ARRAY';
   protected $itemsType = GoogleCloudDialogflowCxV3TypeSchema::class;
   protected $itemsDataType = '';
   /**
+   * Data type of the schema.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GoogleCloudDialogflowCxV3TypeSchema
+   * Schema of the elements if this is an ARRAY type.
+   *
+   * @param GoogleCloudDialogflowCxV3TypeSchema $items
    */
   public function setItems(GoogleCloudDialogflowCxV3TypeSchema $items)
   {
@@ -41,14 +65,18 @@ class GoogleCloudDialogflowCxV3InlineSchema extends \Google\Model
     return $this->items;
   }
   /**
-   * @param string
+   * Data type of the schema.
+   *
+   * Accepted values: DATA_TYPE_UNSPECIFIED, STRING, NUMBER, BOOLEAN, ARRAY
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

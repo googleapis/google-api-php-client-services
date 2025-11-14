@@ -22,12 +22,17 @@ class ReturnPolicyOnlineRestockingFee extends \Google\Model
   protected $fixedFeeType = PriceAmount::class;
   protected $fixedFeeDataType = '';
   /**
+   * Percent of total price in micros. 15,000,000 means 15% of the total price
+   * would be charged.
+   *
    * @var int
    */
   public $microPercent;
 
   /**
-   * @param PriceAmount
+   * Fixed restocking fee.
+   *
+   * @param PriceAmount $fixedFee
    */
   public function setFixedFee(PriceAmount $fixedFee)
   {
@@ -41,7 +46,10 @@ class ReturnPolicyOnlineRestockingFee extends \Google\Model
     return $this->fixedFee;
   }
   /**
-   * @param int
+   * Percent of total price in micros. 15,000,000 means 15% of the total price
+   * would be charged.
+   *
+   * @param int $microPercent
    */
   public function setMicroPercent($microPercent)
   {

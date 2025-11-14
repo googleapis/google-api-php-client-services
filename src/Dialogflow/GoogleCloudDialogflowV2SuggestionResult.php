@@ -33,7 +33,9 @@ class GoogleCloudDialogflowV2SuggestionResult extends \Google\Model
   protected $suggestSmartRepliesResponseDataType = '';
 
   /**
-   * @param GoogleRpcStatus
+   * Error status if the request failed.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -47,7 +49,10 @@ class GoogleCloudDialogflowV2SuggestionResult extends \Google\Model
     return $this->error;
   }
   /**
-   * @param GoogleCloudDialogflowV2GenerateSuggestionsResponse
+   * Suggestions generated using generators triggered by customer or agent
+   * messages.
+   *
+   * @param GoogleCloudDialogflowV2GenerateSuggestionsResponse $generateSuggestionsResponse
    */
   public function setGenerateSuggestionsResponse(GoogleCloudDialogflowV2GenerateSuggestionsResponse $generateSuggestionsResponse)
   {
@@ -61,7 +66,9 @@ class GoogleCloudDialogflowV2SuggestionResult extends \Google\Model
     return $this->generateSuggestionsResponse;
   }
   /**
-   * @param GoogleCloudDialogflowV2SuggestArticlesResponse
+   * SuggestArticlesResponse if request is for ARTICLE_SUGGESTION.
+   *
+   * @param GoogleCloudDialogflowV2SuggestArticlesResponse $suggestArticlesResponse
    */
   public function setSuggestArticlesResponse(GoogleCloudDialogflowV2SuggestArticlesResponse $suggestArticlesResponse)
   {
@@ -75,7 +82,9 @@ class GoogleCloudDialogflowV2SuggestionResult extends \Google\Model
     return $this->suggestArticlesResponse;
   }
   /**
-   * @param GoogleCloudDialogflowV2SuggestFaqAnswersResponse
+   * SuggestFaqAnswersResponse if request is for FAQ_ANSWER.
+   *
+   * @param GoogleCloudDialogflowV2SuggestFaqAnswersResponse $suggestFaqAnswersResponse
    */
   public function setSuggestFaqAnswersResponse(GoogleCloudDialogflowV2SuggestFaqAnswersResponse $suggestFaqAnswersResponse)
   {
@@ -89,7 +98,9 @@ class GoogleCloudDialogflowV2SuggestionResult extends \Google\Model
     return $this->suggestFaqAnswersResponse;
   }
   /**
-   * @param GoogleCloudDialogflowV2SuggestKnowledgeAssistResponse
+   * SuggestKnowledgeAssistResponse if request is for KNOWLEDGE_ASSIST.
+   *
+   * @param GoogleCloudDialogflowV2SuggestKnowledgeAssistResponse $suggestKnowledgeAssistResponse
    */
   public function setSuggestKnowledgeAssistResponse(GoogleCloudDialogflowV2SuggestKnowledgeAssistResponse $suggestKnowledgeAssistResponse)
   {
@@ -103,7 +114,9 @@ class GoogleCloudDialogflowV2SuggestionResult extends \Google\Model
     return $this->suggestKnowledgeAssistResponse;
   }
   /**
-   * @param GoogleCloudDialogflowV2SuggestSmartRepliesResponse
+   * SuggestSmartRepliesResponse if request is for SMART_REPLY.
+   *
+   * @param GoogleCloudDialogflowV2SuggestSmartRepliesResponse $suggestSmartRepliesResponse
    */
   public function setSuggestSmartRepliesResponse(GoogleCloudDialogflowV2SuggestSmartRepliesResponse $suggestSmartRepliesResponse)
   {

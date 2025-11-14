@@ -29,16 +29,25 @@ class SearchResult extends \Google\Collection
   protected $snippetType = Snippet::class;
   protected $snippetDataType = '';
   /**
+   * Title of the search result.
+   *
    * @var string
    */
   public $title;
   /**
+   * The URL of the search result. The URL contains a Google redirect to the
+   * actual item. This URL is signed and shouldn't be changed.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param SearchResult[]
+   * If source is clustered, provide list of clustered results. There will only
+   * be one level of clustered results. If current source is not enabled for
+   * clustering, this field will be empty.
+   *
+   * @param SearchResult[] $clusteredResults
    */
   public function setClusteredResults($clusteredResults)
   {
@@ -52,7 +61,9 @@ class SearchResult extends \Google\Collection
     return $this->clusteredResults;
   }
   /**
-   * @param ResultDebugInfo
+   * Debugging information about this search result.
+   *
+   * @param ResultDebugInfo $debugInfo
    */
   public function setDebugInfo(ResultDebugInfo $debugInfo)
   {
@@ -66,7 +77,9 @@ class SearchResult extends \Google\Collection
     return $this->debugInfo;
   }
   /**
-   * @param Metadata
+   * Metadata of the search result.
+   *
+   * @param Metadata $metadata
    */
   public function setMetadata(Metadata $metadata)
   {
@@ -80,7 +93,9 @@ class SearchResult extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param Snippet
+   * The concatenation of all snippets (summaries) available for this result.
+   *
+   * @param Snippet $snippet
    */
   public function setSnippet(Snippet $snippet)
   {
@@ -94,7 +109,9 @@ class SearchResult extends \Google\Collection
     return $this->snippet;
   }
   /**
-   * @param string
+   * Title of the search result.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -108,7 +125,10 @@ class SearchResult extends \Google\Collection
     return $this->title;
   }
   /**
-   * @param string
+   * The URL of the search result. The URL contains a Google redirect to the
+   * actual item. This URL is signed and shouldn't be changed.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

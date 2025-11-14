@@ -20,16 +20,27 @@ namespace Google\Service\CloudScheduler;
 class OAuthToken extends \Google\Model
 {
   /**
+   * OAuth scope to be used for generating OAuth access token. If not specified,
+   * "https://www.googleapis.com/auth/cloud-platform" will be used.
+   *
    * @var string
    */
   public $scope;
   /**
+   * [Service account email](https://cloud.google.com/iam/docs/service-accounts)
+   * to be used for generating OAuth token. The service account must be within
+   * the same project as the job. The caller must have iam.serviceAccounts.actAs
+   * permission for the service account.
+   *
    * @var string
    */
   public $serviceAccountEmail;
 
   /**
-   * @param string
+   * OAuth scope to be used for generating OAuth access token. If not specified,
+   * "https://www.googleapis.com/auth/cloud-platform" will be used.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {
@@ -43,7 +54,12 @@ class OAuthToken extends \Google\Model
     return $this->scope;
   }
   /**
-   * @param string
+   * [Service account email](https://cloud.google.com/iam/docs/service-accounts)
+   * to be used for generating OAuth token. The service account must be within
+   * the same project as the job. The caller must have iam.serviceAccounts.actAs
+   * permission for the service account.
+   *
+   * @param string $serviceAccountEmail
    */
   public function setServiceAccountEmail($serviceAccountEmail)
   {

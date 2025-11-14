@@ -20,12 +20,18 @@ namespace Google\Service\Monitoring;
 class BooleanTest extends \Google\Model
 {
   /**
+   * Required. The name of the column containing the boolean value. If the value
+   * in a row is NULL, that row is ignored.
+   *
    * @var string
    */
   public $column;
 
   /**
-   * @param string
+   * Required. The name of the column containing the boolean value. If the value
+   * in a row is NULL, that row is ignored.
+   *
+   * @param string $column
    */
   public function setColumn($column)
   {

@@ -24,16 +24,24 @@ class Subscription extends \Google\Model
   protected $exportConfigType = ExportConfig::class;
   protected $exportConfigDataType = '';
   /**
+   * The name of the subscription. Structured like: projects/{project_number}/lo
+   * cations/{location}/subscriptions/{subscription_id}
+   *
    * @var string
    */
   public $name;
   /**
+   * The name of the topic this subscription is attached to. Structured like:
+   * projects/{project_number}/locations/{location}/topics/{topic_id}
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param DeliveryConfig
+   * The settings for this subscription's message delivery.
+   *
+   * @param DeliveryConfig $deliveryConfig
    */
   public function setDeliveryConfig(DeliveryConfig $deliveryConfig)
   {
@@ -47,7 +55,10 @@ class Subscription extends \Google\Model
     return $this->deliveryConfig;
   }
   /**
-   * @param ExportConfig
+   * If present, messages are automatically written from the Pub/Sub Lite topic
+   * associated with this subscription to a destination.
+   *
+   * @param ExportConfig $exportConfig
    */
   public function setExportConfig(ExportConfig $exportConfig)
   {
@@ -61,7 +72,10 @@ class Subscription extends \Google\Model
     return $this->exportConfig;
   }
   /**
-   * @param string
+   * The name of the subscription. Structured like: projects/{project_number}/lo
+   * cations/{location}/subscriptions/{subscription_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -75,7 +89,10 @@ class Subscription extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The name of the topic this subscription is attached to. Structured like:
+   * projects/{project_number}/locations/{location}/topics/{topic_id}
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {

@@ -23,7 +23,9 @@ class GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelectorQaConfig extends 
   protected $scorecardListDataType = '';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelectorQaConfigScorecardList
+   * A manual list of scorecards to score.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelectorQaConfigScorecardList $scorecardList
    */
   public function setScorecardList(GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelectorQaConfigScorecardList $scorecardList)
   {

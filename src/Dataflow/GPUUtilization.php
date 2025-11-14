@@ -19,6 +19,12 @@ namespace Google\Service\Dataflow;
 
 class GPUUtilization extends \Google\Model
 {
+  /**
+   * Required. GPU utilization rate of any kernel over the last sample period in
+   * the range of [0, 1].
+   *
+   * @var 
+   */
   public $rate;
 
   public function setRate($rate)

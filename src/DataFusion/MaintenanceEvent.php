@@ -20,20 +20,52 @@ namespace Google\Service\DataFusion;
 class MaintenanceEvent extends \Google\Model
 {
   /**
+   * The state of the maintenance event is unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The maintenance is scheduled but has not started.
+   */
+  public const STATE_SCHEDULED = 'SCHEDULED';
+  /**
+   * The maintenance has been started.
+   */
+  public const STATE_STARTED = 'STARTED';
+  /**
+   * The maintenance has been completed.
+   */
+  public const STATE_COMPLETED = 'COMPLETED';
+  /**
+   * Output only. The end time of the maintenance event provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. Example:
+   * "2024-01-02T12:04:06-06:00" This field will be empty if the maintenance
+   * event is not yet complete.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. The start time of the maintenance event provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. Example:
+   * "2024-01-01T12:04:06-04:00"
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The state of the maintenance event.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The end time of the maintenance event provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. Example:
+   * "2024-01-02T12:04:06-06:00" This field will be empty if the maintenance
+   * event is not yet complete.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -47,7 +79,11 @@ class MaintenanceEvent extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. The start time of the maintenance event provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. Example:
+   * "2024-01-01T12:04:06-04:00"
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -61,14 +97,18 @@ class MaintenanceEvent extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The state of the maintenance event.
+   *
+   * Accepted values: STATE_UNSPECIFIED, SCHEDULED, STARTED, COMPLETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

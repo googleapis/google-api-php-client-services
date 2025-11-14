@@ -20,10 +20,14 @@ namespace Google\Service\Docs;
 class BulletSuggestionState extends \Google\Model
 {
   /**
+   * Indicates if there was a suggested change to the list_id.
+   *
    * @var bool
    */
   public $listIdSuggested;
   /**
+   * Indicates if there was a suggested change to the nesting_level.
+   *
    * @var bool
    */
   public $nestingLevelSuggested;
@@ -31,7 +35,9 @@ class BulletSuggestionState extends \Google\Model
   protected $textStyleSuggestionStateDataType = '';
 
   /**
-   * @param bool
+   * Indicates if there was a suggested change to the list_id.
+   *
+   * @param bool $listIdSuggested
    */
   public function setListIdSuggested($listIdSuggested)
   {
@@ -45,7 +51,9 @@ class BulletSuggestionState extends \Google\Model
     return $this->listIdSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to the nesting_level.
+   *
+   * @param bool $nestingLevelSuggested
    */
   public function setNestingLevelSuggested($nestingLevelSuggested)
   {
@@ -59,7 +67,10 @@ class BulletSuggestionState extends \Google\Model
     return $this->nestingLevelSuggested;
   }
   /**
-   * @param TextStyleSuggestionState
+   * A mask that indicates which of the fields in text style have been changed
+   * in this suggestion.
+   *
+   * @param TextStyleSuggestionState $textStyleSuggestionState
    */
   public function setTextStyleSuggestionState(TextStyleSuggestionState $textStyleSuggestionState)
   {

@@ -24,7 +24,9 @@ class GoogleCloudDialogflowCxV3FulfillmentConditionalCases extends \Google\Colle
   protected $casesDataType = 'array';
 
   /**
-   * @param GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCase[]
+   * A list of cascading if-else conditions.
+   *
+   * @param GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCase[] $cases
    */
   public function setCases($cases)
   {

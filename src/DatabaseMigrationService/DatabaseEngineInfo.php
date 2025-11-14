@@ -20,30 +20,61 @@ namespace Google\Service\DatabaseMigrationService;
 class DatabaseEngineInfo extends \Google\Model
 {
   /**
+   * The source database engine of the migration job is unknown.
+   */
+  public const ENGINE_DATABASE_ENGINE_UNSPECIFIED = 'DATABASE_ENGINE_UNSPECIFIED';
+  /**
+   * The source engine is MySQL.
+   */
+  public const ENGINE_MYSQL = 'MYSQL';
+  /**
+   * The source engine is PostgreSQL.
+   */
+  public const ENGINE_POSTGRESQL = 'POSTGRESQL';
+  /**
+   * The source engine is SQL Server.
+   */
+  public const ENGINE_SQLSERVER = 'SQLSERVER';
+  /**
+   * The source engine is Oracle.
+   */
+  public const ENGINE_ORACLE = 'ORACLE';
+  /**
+   * Required. Engine type.
+   *
    * @var string
    */
   public $engine;
   /**
+   * Required. Engine version, for example "12.c.1".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Required. Engine type.
+   *
+   * Accepted values: DATABASE_ENGINE_UNSPECIFIED, MYSQL, POSTGRESQL, SQLSERVER,
+   * ORACLE
+   *
+   * @param self::ENGINE_* $engine
    */
   public function setEngine($engine)
   {
     $this->engine = $engine;
   }
   /**
-   * @return string
+   * @return self::ENGINE_*
    */
   public function getEngine()
   {
     return $this->engine;
   }
   /**
-   * @param string
+   * Required. Engine version, for example "12.c.1".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

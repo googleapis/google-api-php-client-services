@@ -27,13 +27,31 @@ class WrrPolicyItem extends \Google\Collection
    */
   public $rrdata;
   /**
+   * DNSSEC generated signatures for all the `rrdata` within this item. When
+   * using health-checked targets for DNSSEC-enabled zones, you can only use at
+   * most one health-checked IP address per item.
+   *
    * @var string[]
    */
   public $signatureRrdata;
+  /**
+   * The weight corresponding to this `WrrPolicyItem` object. When multiple
+   * `WrrPolicyItem` objects are configured, the probability of returning an
+   * `WrrPolicyItem` object's data is proportional to its weight relative to the
+   * sum of weights configured for all items. This weight must be non-negative.
+   *
+   * @var 
+   */
   public $weight;
 
   /**
-   * @param HealthCheckTargets
+   * Endpoints that are health checked before making the routing decision. The
+   * unhealthy endpoints are omitted from the result. If all endpoints within a
+   * bucket are unhealthy, we choose a different bucket (sampled with respect to
+   * its weight) for responding. If DNSSEC is enabled for this zone, only one of
+   * `rrdata` or `health_checked_targets` can be set.
+   *
+   * @param HealthCheckTargets $healthCheckedTargets
    */
   public function setHealthCheckedTargets(HealthCheckTargets $healthCheckedTargets)
   {
@@ -47,7 +65,7 @@ class WrrPolicyItem extends \Google\Collection
     return $this->healthCheckedTargets;
   }
   /**
-   * @param string[]
+   * @param string[] $rrdata
    */
   public function setRrdata($rrdata)
   {
@@ -61,7 +79,11 @@ class WrrPolicyItem extends \Google\Collection
     return $this->rrdata;
   }
   /**
-   * @param string[]
+   * DNSSEC generated signatures for all the `rrdata` within this item. When
+   * using health-checked targets for DNSSEC-enabled zones, you can only use at
+   * most one health-checked IP address per item.
+   *
+   * @param string[] $signatureRrdata
    */
   public function setSignatureRrdata($signatureRrdata)
   {

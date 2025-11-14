@@ -21,10 +21,16 @@ class GoogleCloudDialogflowV2ImportConversationDataOperationMetadata extends \Go
 {
   protected $collection_key = 'partialFailures';
   /**
+   * The resource name of the imported conversation dataset. Format:
+   * `projects//locations//conversationDatasets/`
+   *
    * @var string
    */
   public $conversationDataset;
   /**
+   * Timestamp when import conversation data request was created. The time is
+   * measured on server side.
+   *
    * @var string
    */
   public $createTime;
@@ -32,7 +38,10 @@ class GoogleCloudDialogflowV2ImportConversationDataOperationMetadata extends \Go
   protected $partialFailuresDataType = 'array';
 
   /**
-   * @param string
+   * The resource name of the imported conversation dataset. Format:
+   * `projects//locations//conversationDatasets/`
+   *
+   * @param string $conversationDataset
    */
   public function setConversationDataset($conversationDataset)
   {
@@ -46,7 +55,10 @@ class GoogleCloudDialogflowV2ImportConversationDataOperationMetadata extends \Go
     return $this->conversationDataset;
   }
   /**
-   * @param string
+   * Timestamp when import conversation data request was created. The time is
+   * measured on server side.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -60,7 +72,10 @@ class GoogleCloudDialogflowV2ImportConversationDataOperationMetadata extends \Go
     return $this->createTime;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Partial failures are failures that don't fail the whole long running
+   * operation, e.g. single files that couldn't be read.
+   *
+   * @param GoogleRpcStatus[] $partialFailures
    */
   public function setPartialFailures($partialFailures)
   {

@@ -19,42 +19,82 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
 {
+  /**
+   * Data type is unspecified.
+   */
+  public const DATA_TYPE_DATA_TYPE_UNSPECIFIED = 'DATA_TYPE_UNSPECIFIED';
+  /**
+   * Allowed for continuous evaluation.
+   */
+  public const DATA_TYPE_IMAGE = 'IMAGE';
+  /**
+   * Video data type.
+   */
+  public const DATA_TYPE_VIDEO = 'VIDEO';
+  /**
+   * Allowed for continuous evaluation.
+   */
+  public const DATA_TYPE_TEXT = 'TEXT';
+  /**
+   * Allowed for continuous evaluation.
+   */
+  public const DATA_TYPE_GENERAL_DATA = 'GENERAL_DATA';
   protected $collection_key = 'blockingResources';
   /**
+   * Output only. The names of any related resources that are blocking changes
+   * to the instruction.
+   *
    * @var string[]
    */
   public $blockingResources;
   /**
+   * Output only. Creation time of instruction.
+   *
    * @var string
    */
   public $createTime;
   protected $csvInstructionType = GoogleCloudDatalabelingV1beta1CsvInstruction::class;
   protected $csvInstructionDataType = '';
   /**
+   * Required. The data type of this instruction.
+   *
    * @var string
    */
   public $dataType;
   /**
+   * Optional. User-provided description of the instruction. The description can
+   * be up to 10000 characters long.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The display name of the instruction. Maximum of 64 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Instruction resource name, format:
+   * projects/{project_id}/instructions/{instruction_id}
+   *
    * @var string
    */
   public $name;
   protected $pdfInstructionType = GoogleCloudDatalabelingV1beta1PdfInstruction::class;
   protected $pdfInstructionDataType = '';
   /**
+   * Output only. Last update time of instruction.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Output only. The names of any related resources that are blocking changes
+   * to the instruction.
+   *
+   * @param string[] $blockingResources
    */
   public function setBlockingResources($blockingResources)
   {
@@ -68,7 +108,9 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
     return $this->blockingResources;
   }
   /**
-   * @param string
+   * Output only. Creation time of instruction.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -82,13 +124,21 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1CsvInstruction
+   * Deprecated: this instruction format is not supported any more. Instruction
+   * from a CSV file, such as for classification task. The CSV file should have
+   * exact two columns, in the following format: * The first column is labeled
+   * data, such as an image reference, text. * The second column is comma
+   * separated labels associated with data.
+   *
+   * @deprecated
+   * @param GoogleCloudDatalabelingV1beta1CsvInstruction $csvInstruction
    */
   public function setCsvInstruction(GoogleCloudDatalabelingV1beta1CsvInstruction $csvInstruction)
   {
     $this->csvInstruction = $csvInstruction;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDatalabelingV1beta1CsvInstruction
    */
   public function getCsvInstruction()
@@ -96,21 +146,28 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
     return $this->csvInstruction;
   }
   /**
-   * @param string
+   * Required. The data type of this instruction.
+   *
+   * Accepted values: DATA_TYPE_UNSPECIFIED, IMAGE, VIDEO, TEXT, GENERAL_DATA
+   *
+   * @param self::DATA_TYPE_* $dataType
    */
   public function setDataType($dataType)
   {
     $this->dataType = $dataType;
   }
   /**
-   * @return string
+   * @return self::DATA_TYPE_*
    */
   public function getDataType()
   {
     return $this->dataType;
   }
   /**
-   * @param string
+   * Optional. User-provided description of the instruction. The description can
+   * be up to 10000 characters long.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -124,7 +181,9 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The display name of the instruction. Maximum of 64 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -138,7 +197,10 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Instruction resource name, format:
+   * projects/{project_id}/instructions/{instruction_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -152,7 +214,10 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1PdfInstruction
+   * Instruction from a PDF document. The PDF should be in a Cloud Storage
+   * bucket.
+   *
+   * @param GoogleCloudDatalabelingV1beta1PdfInstruction $pdfInstruction
    */
   public function setPdfInstruction(GoogleCloudDatalabelingV1beta1PdfInstruction $pdfInstruction)
   {
@@ -166,7 +231,9 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
     return $this->pdfInstruction;
   }
   /**
-   * @param string
+   * Output only. Last update time of instruction.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -26,7 +26,9 @@ class MuteInfo extends \Google\Collection
   protected $staticMuteDataType = '';
 
   /**
-   * @param DynamicMuteRecord[]
+   * The list of dynamic mute rules that currently match the finding.
+   *
+   * @param DynamicMuteRecord[] $dynamicMuteRecords
    */
   public function setDynamicMuteRecords($dynamicMuteRecords)
   {
@@ -40,7 +42,10 @@ class MuteInfo extends \Google\Collection
     return $this->dynamicMuteRecords;
   }
   /**
-   * @param StaticMute
+   * If set, the static mute applied to this finding. Static mutes override
+   * dynamic mutes. If unset, there is no static mute.
+   *
+   * @param StaticMute $staticMute
    */
   public function setStaticMute(StaticMute $staticMute)
   {

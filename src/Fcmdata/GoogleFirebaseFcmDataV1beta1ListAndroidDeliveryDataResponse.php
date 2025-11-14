@@ -23,12 +23,18 @@ class GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse extends \Googl
   protected $androidDeliveryDataType = GoogleFirebaseFcmDataV1beta1AndroidDeliveryData::class;
   protected $androidDeliveryDataDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleFirebaseFcmDataV1beta1AndroidDeliveryData[]
+   * The delivery data for the provided app. There will be one entry per
+   * combination of app, date, and analytics label.
+   *
+   * @param GoogleFirebaseFcmDataV1beta1AndroidDeliveryData[] $androidDeliveryData
    */
   public function setAndroidDeliveryData($androidDeliveryData)
   {
@@ -42,7 +48,10 @@ class GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse extends \Googl
     return $this->androidDeliveryData;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

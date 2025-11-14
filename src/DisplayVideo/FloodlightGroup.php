@@ -19,33 +19,75 @@ namespace Google\Service\DisplayVideo;
 
 class FloodlightGroup extends \Google\Model
 {
+  /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const WEB_TAG_TYPE_WEB_TAG_TYPE_UNSPECIFIED = 'WEB_TAG_TYPE_UNSPECIFIED';
+  /**
+   * No tag type.
+   */
+  public const WEB_TAG_TYPE_WEB_TAG_TYPE_NONE = 'WEB_TAG_TYPE_NONE';
+  /**
+   * Image tag.
+   */
+  public const WEB_TAG_TYPE_WEB_TAG_TYPE_IMAGE = 'WEB_TAG_TYPE_IMAGE';
+  /**
+   * Dynamic tag.
+   */
+  public const WEB_TAG_TYPE_WEB_TAG_TYPE_DYNAMIC = 'WEB_TAG_TYPE_DYNAMIC';
   protected $activeViewConfigType = ActiveViewVideoViewabilityMetricConfig::class;
   protected $activeViewConfigDataType = '';
   /**
+   * User-defined custom variables owned by the Floodlight group. Use custom
+   * Floodlight variables to create reporting data that is tailored to your
+   * unique business needs. Custom Floodlight variables use the keys `U1=`,
+   * `U2=`, and so on, and can take any values that you choose to pass to them.
+   * You can use them to track virtually any type of data that you collect about
+   * your customers, such as the genre of movie that a customer purchases, the
+   * country to which the item is shipped, and so on. Custom Floodlight
+   * variables may not be used to pass any data that could be used or recognized
+   * as personally identifiable information (PII). Example: `custom_variables {
+   * fields { "U1": value { number_value: 123.4 }, "U2": value { string_value:
+   * "MyVariable2" }, "U3": value { string_value: "MyVariable3" } } }`
+   * Acceptable values for keys are "U1" through "U100", inclusive. String
+   * values must be less than 64 characters long, and cannot contain the
+   * following characters: `"<>`.
+   *
    * @var array[]
    */
   public $customVariables;
   /**
+   * Required. The display name of the Floodlight group.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The unique ID of the Floodlight group. Assigned by the system.
+   *
    * @var string
    */
   public $floodlightGroupId;
   protected $lookbackWindowType = LookbackWindow::class;
   protected $lookbackWindowDataType = '';
   /**
+   * Output only. The resource name of the Floodlight group.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The web tag type enabled for the Floodlight group.
+   *
    * @var string
    */
   public $webTagType;
 
   /**
-   * @param ActiveViewVideoViewabilityMetricConfig
+   * The Active View video viewability metric configuration for the Floodlight
+   * group.
+   *
+   * @param ActiveViewVideoViewabilityMetricConfig $activeViewConfig
    */
   public function setActiveViewConfig(ActiveViewVideoViewabilityMetricConfig $activeViewConfig)
   {
@@ -59,7 +101,22 @@ class FloodlightGroup extends \Google\Model
     return $this->activeViewConfig;
   }
   /**
-   * @param array[]
+   * User-defined custom variables owned by the Floodlight group. Use custom
+   * Floodlight variables to create reporting data that is tailored to your
+   * unique business needs. Custom Floodlight variables use the keys `U1=`,
+   * `U2=`, and so on, and can take any values that you choose to pass to them.
+   * You can use them to track virtually any type of data that you collect about
+   * your customers, such as the genre of movie that a customer purchases, the
+   * country to which the item is shipped, and so on. Custom Floodlight
+   * variables may not be used to pass any data that could be used or recognized
+   * as personally identifiable information (PII). Example: `custom_variables {
+   * fields { "U1": value { number_value: 123.4 }, "U2": value { string_value:
+   * "MyVariable2" }, "U3": value { string_value: "MyVariable3" } } }`
+   * Acceptable values for keys are "U1" through "U100", inclusive. String
+   * values must be less than 64 characters long, and cannot contain the
+   * following characters: `"<>`.
+   *
+   * @param array[] $customVariables
    */
   public function setCustomVariables($customVariables)
   {
@@ -73,7 +130,9 @@ class FloodlightGroup extends \Google\Model
     return $this->customVariables;
   }
   /**
-   * @param string
+   * Required. The display name of the Floodlight group.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -87,7 +146,9 @@ class FloodlightGroup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the Floodlight group. Assigned by the system.
+   *
+   * @param string $floodlightGroupId
    */
   public function setFloodlightGroupId($floodlightGroupId)
   {
@@ -101,7 +162,11 @@ class FloodlightGroup extends \Google\Model
     return $this->floodlightGroupId;
   }
   /**
-   * @param LookbackWindow
+   * Required. The lookback window for the Floodlight group. Both click_days and
+   * impression_days are required. Acceptable values for both are `0` to `90`,
+   * inclusive.
+   *
+   * @param LookbackWindow $lookbackWindow
    */
   public function setLookbackWindow(LookbackWindow $lookbackWindow)
   {
@@ -115,7 +180,9 @@ class FloodlightGroup extends \Google\Model
     return $this->lookbackWindow;
   }
   /**
-   * @param string
+   * Output only. The resource name of the Floodlight group.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -129,14 +196,19 @@ class FloodlightGroup extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The web tag type enabled for the Floodlight group.
+   *
+   * Accepted values: WEB_TAG_TYPE_UNSPECIFIED, WEB_TAG_TYPE_NONE,
+   * WEB_TAG_TYPE_IMAGE, WEB_TAG_TYPE_DYNAMIC
+   *
+   * @param self::WEB_TAG_TYPE_* $webTagType
    */
   public function setWebTagType($webTagType)
   {
     $this->webTagType = $webTagType;
   }
   /**
-   * @return string
+   * @return self::WEB_TAG_TYPE_*
    */
   public function getWebTagType()
   {

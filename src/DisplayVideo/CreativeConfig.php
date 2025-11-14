@@ -20,6 +20,92 @@ namespace Google\Service\DisplayVideo;
 class CreativeConfig extends \Google\Model
 {
   /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_UNSPECIFIED = 'CREATIVE_TYPE_UNSPECIFIED';
+  /**
+   * Standard display creative. Create and update methods are supported for this
+   * creative type if the hosting_source is one of the following: *
+   * `HOSTING_SOURCE_HOSTED` * `HOSTING_SOURCE_THIRD_PARTY`
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_STANDARD = 'CREATIVE_TYPE_STANDARD';
+  /**
+   * Expandable creative. Create and update methods are supported for this
+   * creative type if the hosting_source is `HOSTING_SOURCE_THIRD_PARTY`
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_EXPANDABLE = 'CREATIVE_TYPE_EXPANDABLE';
+  /**
+   * Video creative. Create and update methods are supported for this creative
+   * type if the hosting_source is one of the following: *
+   * `HOSTING_SOURCE_HOSTED` * `HOSTING_SOURCE_THIRD_PARTY`
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_VIDEO = 'CREATIVE_TYPE_VIDEO';
+  /**
+   * Native creative rendered by publishers with assets from advertiser. Create
+   * and update methods are supported for this creative type if the
+   * hosting_source is `HOSTING_SOURCE_HOSTED`
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_NATIVE = 'CREATIVE_TYPE_NATIVE';
+  /**
+   * Templated app install mobile creative (banner). Create and update methods
+   * are **not** supported for this creative type.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_TEMPLATED_APP_INSTALL = 'CREATIVE_TYPE_TEMPLATED_APP_INSTALL';
+  /**
+   * Square native creative. Create and update methods are supported for this
+   * creative type if the hosting_source is `HOSTING_SOURCE_HOSTED`
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_NATIVE_SITE_SQUARE = 'CREATIVE_TYPE_NATIVE_SITE_SQUARE';
+  /**
+   * Interstitial creative including both display and video. Create and update
+   * methods are **not** supported for this creative type.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_TEMPLATED_APP_INSTALL_INTERSTITIAL = 'CREATIVE_TYPE_TEMPLATED_APP_INSTALL_INTERSTITIAL';
+  /**
+   * Responsive and expandable Lightbox creative. Create and update methods are
+   * **not** supported for this creative type.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_LIGHTBOX = 'CREATIVE_TYPE_LIGHTBOX';
+  /**
+   * Native app install creative. Create and update methods are **not**
+   * supported for this creative type.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_NATIVE_APP_INSTALL = 'CREATIVE_TYPE_NATIVE_APP_INSTALL';
+  /**
+   * Square native app install creative. Create and update methods are **not**
+   * supported for this creative type.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE = 'CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE';
+  /**
+   * Audio creative. Create and update methods are supported for this creative
+   * type if the hosting_source is `HOSTING_SOURCE_HOSTED`
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_AUDIO = 'CREATIVE_TYPE_AUDIO';
+  /**
+   * Publisher hosted creative. Create and update methods are **not** supported
+   * for this creative type.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_PUBLISHER_HOSTED = 'CREATIVE_TYPE_PUBLISHER_HOSTED';
+  /**
+   * Native video creative. Create and update methods are supported for this
+   * creative type if the hosting_source is `HOSTING_SOURCE_HOSTED`
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_NATIVE_VIDEO = 'CREATIVE_TYPE_NATIVE_VIDEO';
+  /**
+   * Templated app install mobile video creative. Create and update methods are
+   * **not** supported for this creative type.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO = 'CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO';
+  /**
+   * Asset-based creative. Create and update methods are supported for this
+   * creative type if the hosting_source is `HOSTING_SOURCE_HOSTED`.
+   */
+  public const CREATIVE_TYPE_CREATIVE_TYPE_ASSET_BASED_CREATIVE = 'CREATIVE_TYPE_ASSET_BASED_CREATIVE';
+  /**
+   * The type of creative that can be assigned to the inventory source. Only the
+   * following types are supported: * `CREATIVE_TYPE_STANDARD` *
+   * `CREATIVE_TYPE_VIDEO`
+   *
    * @var string
    */
   public $creativeType;
@@ -29,21 +115,37 @@ class CreativeConfig extends \Google\Model
   protected $videoCreativeConfigDataType = '';
 
   /**
-   * @param string
+   * The type of creative that can be assigned to the inventory source. Only the
+   * following types are supported: * `CREATIVE_TYPE_STANDARD` *
+   * `CREATIVE_TYPE_VIDEO`
+   *
+   * Accepted values: CREATIVE_TYPE_UNSPECIFIED, CREATIVE_TYPE_STANDARD,
+   * CREATIVE_TYPE_EXPANDABLE, CREATIVE_TYPE_VIDEO, CREATIVE_TYPE_NATIVE,
+   * CREATIVE_TYPE_TEMPLATED_APP_INSTALL, CREATIVE_TYPE_NATIVE_SITE_SQUARE,
+   * CREATIVE_TYPE_TEMPLATED_APP_INSTALL_INTERSTITIAL, CREATIVE_TYPE_LIGHTBOX,
+   * CREATIVE_TYPE_NATIVE_APP_INSTALL, CREATIVE_TYPE_NATIVE_APP_INSTALL_SQUARE,
+   * CREATIVE_TYPE_AUDIO, CREATIVE_TYPE_PUBLISHER_HOSTED,
+   * CREATIVE_TYPE_NATIVE_VIDEO, CREATIVE_TYPE_TEMPLATED_APP_INSTALL_VIDEO,
+   * CREATIVE_TYPE_ASSET_BASED_CREATIVE
+   *
+   * @param self::CREATIVE_TYPE_* $creativeType
    */
   public function setCreativeType($creativeType)
   {
     $this->creativeType = $creativeType;
   }
   /**
-   * @return string
+   * @return self::CREATIVE_TYPE_*
    */
   public function getCreativeType()
   {
     return $this->creativeType;
   }
   /**
-   * @param InventorySourceDisplayCreativeConfig
+   * The configuration for display creatives. Applicable when creative_type is
+   * `CREATIVE_TYPE_STANDARD`.
+   *
+   * @param InventorySourceDisplayCreativeConfig $displayCreativeConfig
    */
   public function setDisplayCreativeConfig(InventorySourceDisplayCreativeConfig $displayCreativeConfig)
   {
@@ -57,7 +159,10 @@ class CreativeConfig extends \Google\Model
     return $this->displayCreativeConfig;
   }
   /**
-   * @param InventorySourceVideoCreativeConfig
+   * The configuration for video creatives. Applicable when creative_type is
+   * `CREATIVE_TYPE_VIDEO`.
+   *
+   * @param InventorySourceVideoCreativeConfig $videoCreativeConfig
    */
   public function setVideoCreativeConfig(InventorySourceVideoCreativeConfig $videoCreativeConfig)
   {

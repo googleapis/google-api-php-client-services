@@ -19,8 +19,33 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
 {
+  /**
+   * Default value.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_UNSPECIFIED = 'SOLUTION_TYPE_UNSPECIFIED';
+  /**
+   * Used for Recommendations AI.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_RECOMMENDATION = 'SOLUTION_TYPE_RECOMMENDATION';
+  /**
+   * Used for Discovery Search.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_SEARCH = 'SOLUTION_TYPE_SEARCH';
+  /**
+   * Used for use cases related to the Generative AI agent.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_CHAT = 'SOLUTION_TYPE_CHAT';
+  /**
+   * Used for use cases related to the Generative Chat agent. It's used for
+   * Generative chat engine only, the associated data stores must enrolled with
+   * `SOLUTION_TYPE_CHAT` solution.
+   */
+  public const SOLUTION_TYPE_SOLUTION_TYPE_GENERATIVE_CHAT = 'SOLUTION_TYPE_GENERATIVE_CHAT';
   protected $collection_key = 'useCases';
   /**
+   * Output only. List of all ServingConfig IDs this control is attached to. May
+   * take up to 10 minutes to update after changes.
+   *
    * @var string[]
    */
   public $associatedServingConfigIds;
@@ -29,12 +54,19 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
   protected $conditionsType = GoogleCloudDiscoveryengineV1betaCondition::class;
   protected $conditionsDataType = 'array';
   /**
+   * Required. Human readable name. The identifier used in UI views. Must be
+   * UTF-8 encoded string. Length limit is 128 characters. Otherwise an INVALID
+   * ARGUMENT error is thrown.
+   *
    * @var string
    */
   public $displayName;
   protected $filterActionType = GoogleCloudDiscoveryengineV1betaControlFilterAction::class;
   protected $filterActionDataType = '';
   /**
+   * Immutable. Fully qualified name
+   * `projects/locations/global/dataStore/controls`
+   *
    * @var string
    */
   public $name;
@@ -43,18 +75,30 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
   protected $redirectActionType = GoogleCloudDiscoveryengineV1betaControlRedirectAction::class;
   protected $redirectActionDataType = '';
   /**
+   * Required. Immutable. What solution the control belongs to. Must be
+   * compatible with vertical of resource. Otherwise an INVALID ARGUMENT error
+   * is thrown.
+   *
    * @var string
    */
   public $solutionType;
   protected $synonymsActionType = GoogleCloudDiscoveryengineV1betaControlSynonymsAction::class;
   protected $synonymsActionDataType = '';
   /**
+   * Specifies the use case for the control. Affects what condition fields can
+   * be set. Only applies to SOLUTION_TYPE_SEARCH. Currently only allow one use
+   * case per control. Must be set when solution_type is
+   * SolutionType.SOLUTION_TYPE_SEARCH.
+   *
    * @var string[]
    */
   public $useCases;
 
   /**
-   * @param string[]
+   * Output only. List of all ServingConfig IDs this control is attached to. May
+   * take up to 10 minutes to update after changes.
+   *
+   * @param string[] $associatedServingConfigIds
    */
   public function setAssociatedServingConfigIds($associatedServingConfigIds)
   {
@@ -68,7 +112,9 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->associatedServingConfigIds;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaControlBoostAction
+   * Defines a boost-type control
+   *
+   * @param GoogleCloudDiscoveryengineV1betaControlBoostAction $boostAction
    */
   public function setBoostAction(GoogleCloudDiscoveryengineV1betaControlBoostAction $boostAction)
   {
@@ -82,7 +128,11 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->boostAction;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaCondition[]
+   * Determines when the associated action will trigger. Omit to always apply
+   * the action. Currently only a single condition may be specified. Otherwise
+   * an INVALID ARGUMENT error is thrown.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaCondition[] $conditions
    */
   public function setConditions($conditions)
   {
@@ -96,7 +146,11 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->conditions;
   }
   /**
-   * @param string
+   * Required. Human readable name. The identifier used in UI views. Must be
+   * UTF-8 encoded string. Length limit is 128 characters. Otherwise an INVALID
+   * ARGUMENT error is thrown.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -110,7 +164,9 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaControlFilterAction
+   * Defines a filter-type control Currently not supported by Recommendation
+   *
+   * @param GoogleCloudDiscoveryengineV1betaControlFilterAction $filterAction
    */
   public function setFilterAction(GoogleCloudDiscoveryengineV1betaControlFilterAction $filterAction)
   {
@@ -124,7 +180,10 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->filterAction;
   }
   /**
-   * @param string
+   * Immutable. Fully qualified name
+   * `projects/locations/global/dataStore/controls`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -138,7 +197,9 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaControlPromoteAction
+   * Promote certain links based on predefined trigger queries.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaControlPromoteAction $promoteAction
    */
   public function setPromoteAction(GoogleCloudDiscoveryengineV1betaControlPromoteAction $promoteAction)
   {
@@ -152,7 +213,9 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->promoteAction;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaControlRedirectAction
+   * Defines a redirect-type control.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaControlRedirectAction $redirectAction
    */
   public function setRedirectAction(GoogleCloudDiscoveryengineV1betaControlRedirectAction $redirectAction)
   {
@@ -166,21 +229,30 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->redirectAction;
   }
   /**
-   * @param string
+   * Required. Immutable. What solution the control belongs to. Must be
+   * compatible with vertical of resource. Otherwise an INVALID ARGUMENT error
+   * is thrown.
+   *
+   * Accepted values: SOLUTION_TYPE_UNSPECIFIED, SOLUTION_TYPE_RECOMMENDATION,
+   * SOLUTION_TYPE_SEARCH, SOLUTION_TYPE_CHAT, SOLUTION_TYPE_GENERATIVE_CHAT
+   *
+   * @param self::SOLUTION_TYPE_* $solutionType
    */
   public function setSolutionType($solutionType)
   {
     $this->solutionType = $solutionType;
   }
   /**
-   * @return string
+   * @return self::SOLUTION_TYPE_*
    */
   public function getSolutionType()
   {
     return $this->solutionType;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaControlSynonymsAction
+   * Treats a group of terms as synonyms of one another.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaControlSynonymsAction $synonymsAction
    */
   public function setSynonymsAction(GoogleCloudDiscoveryengineV1betaControlSynonymsAction $synonymsAction)
   {
@@ -194,7 +266,12 @@ class GoogleCloudDiscoveryengineV1betaControl extends \Google\Collection
     return $this->synonymsAction;
   }
   /**
-   * @param string[]
+   * Specifies the use case for the control. Affects what condition fields can
+   * be set. Only applies to SOLUTION_TYPE_SEARCH. Currently only allow one use
+   * case per control. Must be set when solution_type is
+   * SolutionType.SOLUTION_TYPE_SEARCH.
+   *
+   * @param string[] $useCases
    */
   public function setUseCases($useCases)
   {

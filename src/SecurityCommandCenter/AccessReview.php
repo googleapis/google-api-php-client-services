@@ -20,36 +20,55 @@ namespace Google\Service\SecurityCommandCenter;
 class AccessReview extends \Google\Model
 {
   /**
+   * The API group of the resource. "*" means all.
+   *
    * @var string
    */
   public $group;
   /**
+   * The name of the resource being requested. Empty means all.
+   *
    * @var string
    */
   public $name;
   /**
+   * Namespace of the action being requested. Currently, there is no distinction
+   * between no namespace and all namespaces. Both are represented by ""
+   * (empty).
+   *
    * @var string
    */
   public $ns;
   /**
+   * The optional resource type requested. "*" means all.
+   *
    * @var string
    */
   public $resource;
   /**
+   * The optional subresource type.
+   *
    * @var string
    */
   public $subresource;
   /**
+   * A Kubernetes resource API verb, like get, list, watch, create, update,
+   * delete, proxy. "*" means all.
+   *
    * @var string
    */
   public $verb;
   /**
+   * The API version of the resource. "*" means all.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The API group of the resource. "*" means all.
+   *
+   * @param string $group
    */
   public function setGroup($group)
   {
@@ -63,7 +82,9 @@ class AccessReview extends \Google\Model
     return $this->group;
   }
   /**
-   * @param string
+   * The name of the resource being requested. Empty means all.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -77,7 +98,11 @@ class AccessReview extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Namespace of the action being requested. Currently, there is no distinction
+   * between no namespace and all namespaces. Both are represented by ""
+   * (empty).
+   *
+   * @param string $ns
    */
   public function setNs($ns)
   {
@@ -91,7 +116,9 @@ class AccessReview extends \Google\Model
     return $this->ns;
   }
   /**
-   * @param string
+   * The optional resource type requested. "*" means all.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -105,7 +132,9 @@ class AccessReview extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * The optional subresource type.
+   *
+   * @param string $subresource
    */
   public function setSubresource($subresource)
   {
@@ -119,7 +148,10 @@ class AccessReview extends \Google\Model
     return $this->subresource;
   }
   /**
-   * @param string
+   * A Kubernetes resource API verb, like get, list, watch, create, update,
+   * delete, proxy. "*" means all.
+   *
+   * @param string $verb
    */
   public function setVerb($verb)
   {
@@ -133,7 +165,9 @@ class AccessReview extends \Google\Model
     return $this->verb;
   }
   /**
-   * @param string
+   * The API version of the resource. "*" means all.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

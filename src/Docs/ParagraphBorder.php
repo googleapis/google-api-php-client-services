@@ -19,9 +19,28 @@ namespace Google\Service\Docs;
 
 class ParagraphBorder extends \Google\Model
 {
+  /**
+   * Unspecified dash style.
+   */
+  public const DASH_STYLE_DASH_STYLE_UNSPECIFIED = 'DASH_STYLE_UNSPECIFIED';
+  /**
+   * Solid line. Corresponds to ECMA-376 ST_PresetLineDashVal value 'solid'.
+   * This is the default dash style.
+   */
+  public const DASH_STYLE_SOLID = 'SOLID';
+  /**
+   * Dotted line. Corresponds to ECMA-376 ST_PresetLineDashVal value 'dot'.
+   */
+  public const DASH_STYLE_DOT = 'DOT';
+  /**
+   * Dashed line. Corresponds to ECMA-376 ST_PresetLineDashVal value 'dash'.
+   */
+  public const DASH_STYLE_DASH = 'DASH';
   protected $colorType = OptionalColor::class;
   protected $colorDataType = '';
   /**
+   * The dash style of the border.
+   *
    * @var string
    */
   public $dashStyle;
@@ -31,7 +50,9 @@ class ParagraphBorder extends \Google\Model
   protected $widthDataType = '';
 
   /**
-   * @param OptionalColor
+   * The color of the border.
+   *
+   * @param OptionalColor $color
    */
   public function setColor(OptionalColor $color)
   {
@@ -45,21 +66,27 @@ class ParagraphBorder extends \Google\Model
     return $this->color;
   }
   /**
-   * @param string
+   * The dash style of the border.
+   *
+   * Accepted values: DASH_STYLE_UNSPECIFIED, SOLID, DOT, DASH
+   *
+   * @param self::DASH_STYLE_* $dashStyle
    */
   public function setDashStyle($dashStyle)
   {
     $this->dashStyle = $dashStyle;
   }
   /**
-   * @return string
+   * @return self::DASH_STYLE_*
    */
   public function getDashStyle()
   {
     return $this->dashStyle;
   }
   /**
-   * @param Dimension
+   * The padding of the border.
+   *
+   * @param Dimension $padding
    */
   public function setPadding(Dimension $padding)
   {
@@ -73,7 +100,9 @@ class ParagraphBorder extends \Google\Model
     return $this->padding;
   }
   /**
-   * @param Dimension
+   * The width of the border.
+   *
+   * @param Dimension $width
    */
   public function setWidth(Dimension $width)
   {

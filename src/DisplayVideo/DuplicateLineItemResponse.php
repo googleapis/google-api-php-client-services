@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class DuplicateLineItemResponse extends \Google\Model
 {
   /**
+   * The ID of the created line item.
+   *
    * @var string
    */
   public $duplicateLineItemId;
 
   /**
-   * @param string
+   * The ID of the created line item.
+   *
+   * @param string $duplicateLineItemId
    */
   public function setDuplicateLineItemId($duplicateLineItemId)
   {

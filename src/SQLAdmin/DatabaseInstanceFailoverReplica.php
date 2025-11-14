@@ -20,16 +20,28 @@ namespace Google\Service\SQLAdmin;
 class DatabaseInstanceFailoverReplica extends \Google\Model
 {
   /**
+   * The availability status of the failover replica. A false status indicates
+   * that the failover replica is out of sync. The primary instance can only
+   * failover to the failover replica when the status is true.
+   *
    * @var bool
    */
   public $available;
   /**
+   * The name of the failover replica. If specified at instance creation, a
+   * failover replica is created for the instance. The name doesn't include the
+   * project ID.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param bool
+   * The availability status of the failover replica. A false status indicates
+   * that the failover replica is out of sync. The primary instance can only
+   * failover to the failover replica when the status is true.
+   *
+   * @param bool $available
    */
   public function setAvailable($available)
   {
@@ -43,7 +55,11 @@ class DatabaseInstanceFailoverReplica extends \Google\Model
     return $this->available;
   }
   /**
-   * @param string
+   * The name of the failover replica. If specified at instance creation, a
+   * failover replica is created for the instance. The name doesn't include the
+   * project ID.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Backupdr;
 class PitrSettings extends \Google\Model
 {
   /**
+   * Output only. Number of days to retain the backup.
+   *
    * @var int
    */
   public $retentionDays;
 
   /**
-   * @param int
+   * Output only. Number of days to retain the backup.
+   *
+   * @param int $retentionDays
    */
   public function setRetentionDays($retentionDays)
   {

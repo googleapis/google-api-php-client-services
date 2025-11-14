@@ -23,7 +23,9 @@ class V1GenerateServiceAccountResponse extends \Google\Model
   protected $accountDataType = '';
 
   /**
-   * @param V1ServiceAccount
+   * ServiceAccount that was created or retrieved.
+   *
+   * @param V1ServiceAccount $account
    */
   public function setAccount(V1ServiceAccount $account)
   {

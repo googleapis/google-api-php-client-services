@@ -20,30 +20,64 @@ namespace Google\Service\Networkconnectivity;
 class ServiceConfig extends \Google\Model
 {
   /**
+   * The service is not eligible for Data Transfer Essentials configuration.
+   * This is the default case.
+   */
+  public const ELIGIBILITY_CRITERIA_ELIGIBILITY_CRITERIA_UNSPECIFIED = 'ELIGIBILITY_CRITERIA_UNSPECIFIED';
+  /**
+   * The service is eligible for Data Transfer Essentials configuration only for
+   * Premium Tier.
+   */
+  public const ELIGIBILITY_CRITERIA_NETWORK_SERVICE_TIER_PREMIUM_ONLY = 'NETWORK_SERVICE_TIER_PREMIUM_ONLY';
+  /**
+   * The service is eligible for Data Transfer Essentials configuration only for
+   * Standard Tier.
+   */
+  public const ELIGIBILITY_CRITERIA_NETWORK_SERVICE_TIER_STANDARD_ONLY = 'NETWORK_SERVICE_TIER_STANDARD_ONLY';
+  /**
+   * The service is eligible for Data Transfer Essentials configuration only for
+   * the regional endpoint.
+   */
+  public const ELIGIBILITY_CRITERIA_REQUEST_ENDPOINT_REGIONAL_ENDPOINT_ONLY = 'REQUEST_ENDPOINT_REGIONAL_ENDPOINT_ONLY';
+  /**
+   * Output only. The eligibility criteria for the service.
+   *
    * @var string
    */
   public $eligibilityCriteria;
   /**
+   * Output only. The end time for eligibility criteria support. If not
+   * specified, no planned end time is set.
+   *
    * @var string
    */
   public $supportEndTime;
 
   /**
-   * @param string
+   * Output only. The eligibility criteria for the service.
+   *
+   * Accepted values: ELIGIBILITY_CRITERIA_UNSPECIFIED,
+   * NETWORK_SERVICE_TIER_PREMIUM_ONLY, NETWORK_SERVICE_TIER_STANDARD_ONLY,
+   * REQUEST_ENDPOINT_REGIONAL_ENDPOINT_ONLY
+   *
+   * @param self::ELIGIBILITY_CRITERIA_* $eligibilityCriteria
    */
   public function setEligibilityCriteria($eligibilityCriteria)
   {
     $this->eligibilityCriteria = $eligibilityCriteria;
   }
   /**
-   * @return string
+   * @return self::ELIGIBILITY_CRITERIA_*
    */
   public function getEligibilityCriteria()
   {
     return $this->eligibilityCriteria;
   }
   /**
-   * @param string
+   * Output only. The end time for eligibility criteria support. If not
+   * specified, no planned end time is set.
+   *
+   * @param string $supportEndTime
    */
   public function setSupportEndTime($supportEndTime)
   {

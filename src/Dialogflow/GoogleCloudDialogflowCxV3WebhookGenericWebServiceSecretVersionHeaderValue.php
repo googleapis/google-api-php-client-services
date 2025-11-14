@@ -20,12 +20,18 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3WebhookGenericWebServiceSecretVersionHeaderValue extends \Google\Model
 {
   /**
+   * Required. The SecretManager secret version resource storing the header
+   * value. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   *
    * @var string
    */
   public $secretVersion;
 
   /**
-   * @param string
+   * Required. The SecretManager secret version resource storing the header
+   * value. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   *
+   * @param string $secretVersion
    */
   public function setSecretVersion($secretVersion)
   {

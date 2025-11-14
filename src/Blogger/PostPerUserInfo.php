@@ -20,28 +20,40 @@ namespace Google\Service\Blogger;
 class PostPerUserInfo extends \Google\Model
 {
   /**
+   * ID of the Blog that the post resource belongs to.
+   *
    * @var string
    */
   public $blogId;
   /**
+   * True if the user has Author level access to the post.
+   *
    * @var bool
    */
   public $hasEditAccess;
   /**
+   * The kind of this entity. Always blogger#postPerUserInfo.
+   *
    * @var string
    */
   public $kind;
   /**
+   * ID of the Post resource.
+   *
    * @var string
    */
   public $postId;
   /**
+   * ID of the User.
+   *
    * @var string
    */
   public $userId;
 
   /**
-   * @param string
+   * ID of the Blog that the post resource belongs to.
+   *
+   * @param string $blogId
    */
   public function setBlogId($blogId)
   {
@@ -55,7 +67,9 @@ class PostPerUserInfo extends \Google\Model
     return $this->blogId;
   }
   /**
-   * @param bool
+   * True if the user has Author level access to the post.
+   *
+   * @param bool $hasEditAccess
    */
   public function setHasEditAccess($hasEditAccess)
   {
@@ -69,7 +83,9 @@ class PostPerUserInfo extends \Google\Model
     return $this->hasEditAccess;
   }
   /**
-   * @param string
+   * The kind of this entity. Always blogger#postPerUserInfo.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -83,7 +99,9 @@ class PostPerUserInfo extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * ID of the Post resource.
+   *
+   * @param string $postId
    */
   public function setPostId($postId)
   {
@@ -97,7 +115,9 @@ class PostPerUserInfo extends \Google\Model
     return $this->postId;
   }
   /**
-   * @param string
+   * ID of the User.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {

@@ -23,7 +23,9 @@ class GoogleBigtableAdminV2TypeInt64 extends \Google\Model
   protected $encodingDataType = '';
 
   /**
-   * @param GoogleBigtableAdminV2TypeInt64Encoding
+   * The encoding to use when converting to or from lower level types.
+   *
+   * @param GoogleBigtableAdminV2TypeInt64Encoding $encoding
    */
   public function setEncoding(GoogleBigtableAdminV2TypeInt64Encoding $encoding)
   {

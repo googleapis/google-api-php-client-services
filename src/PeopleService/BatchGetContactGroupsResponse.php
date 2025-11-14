@@ -24,7 +24,9 @@ class BatchGetContactGroupsResponse extends \Google\Collection
   protected $responsesDataType = 'array';
 
   /**
-   * @param ContactGroupResponse[]
+   * The list of responses for each requested contact group resource.
+   *
+   * @param ContactGroupResponse[] $responses
    */
   public function setResponses($responses)
   {

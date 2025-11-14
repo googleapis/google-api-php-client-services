@@ -20,12 +20,16 @@ namespace Google\Service\Backupdr;
 class CloudSqlInstanceBackupPlanAssociationProperties extends \Google\Model
 {
   /**
+   * Output only. The time when the instance was created.
+   *
    * @var string
    */
   public $instanceCreateTime;
 
   /**
-   * @param string
+   * Output only. The time when the instance was created.
+   *
+   * @param string $instanceCreateTime
    */
   public function setInstanceCreateTime($instanceCreateTime)
   {

@@ -26,7 +26,10 @@ class ProductDeliveryTime extends \Google\Collection
   protected $productIdDataType = '';
 
   /**
-   * @param ProductDeliveryTimeAreaDeliveryTime[]
+   * Required. A set of associations between `DeliveryArea` and `DeliveryTime`
+   * entries. The total number of `areaDeliveryTimes` can be at most 100.
+   *
+   * @param ProductDeliveryTimeAreaDeliveryTime[] $areaDeliveryTimes
    */
   public function setAreaDeliveryTimes($areaDeliveryTimes)
   {
@@ -40,7 +43,9 @@ class ProductDeliveryTime extends \Google\Collection
     return $this->areaDeliveryTimes;
   }
   /**
-   * @param ProductId
+   * Required. The `id` of the product.
+   *
+   * @param ProductId $productId
    */
   public function setProductId(ProductId $productId)
   {

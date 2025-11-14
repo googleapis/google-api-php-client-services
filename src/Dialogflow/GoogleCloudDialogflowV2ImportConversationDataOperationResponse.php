@@ -20,16 +20,24 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2ImportConversationDataOperationResponse extends \Google\Model
 {
   /**
+   * The resource name of the imported conversation dataset. Format:
+   * `projects//locations//conversationDatasets/`
+   *
    * @var string
    */
   public $conversationDataset;
   /**
+   * Number of conversations imported successfully.
+   *
    * @var int
    */
   public $importCount;
 
   /**
-   * @param string
+   * The resource name of the imported conversation dataset. Format:
+   * `projects//locations//conversationDatasets/`
+   *
+   * @param string $conversationDataset
    */
   public function setConversationDataset($conversationDataset)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDialogflowV2ImportConversationDataOperationResponse extends \Go
     return $this->conversationDataset;
   }
   /**
-   * @param int
+   * Number of conversations imported successfully.
+   *
+   * @param int $importCount
    */
   public function setImportCount($importCount)
   {

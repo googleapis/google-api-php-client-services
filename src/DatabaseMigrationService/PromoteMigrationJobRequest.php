@@ -23,7 +23,9 @@ class PromoteMigrationJobRequest extends \Google\Model
   protected $objectsFilterDataType = '';
 
   /**
-   * @param MigrationJobObjectsConfig
+   * Optional. The object filter to apply to the migration job.
+   *
+   * @param MigrationJobObjectsConfig $objectsFilter
    */
   public function setObjectsFilter(MigrationJobObjectsConfig $objectsFilter)
   {

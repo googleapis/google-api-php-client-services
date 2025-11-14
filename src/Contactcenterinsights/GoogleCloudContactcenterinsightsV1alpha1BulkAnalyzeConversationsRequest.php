@@ -20,22 +20,30 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsRequest extends \Google\Model
 {
   /**
+   * Required. Percentage of selected conversation to analyze, between [0, 100].
+   *
    * @var float
    */
   public $analysisPercentage;
   protected $annotatorSelectorType = GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelector::class;
   protected $annotatorSelectorDataType = '';
   /**
+   * Required. Filter used to select the subset of conversations to analyze.
+   *
    * @var string
    */
   public $filter;
   /**
+   * Required. The parent resource to create analyses in.
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param float
+   * Required. Percentage of selected conversation to analyze, between [0, 100].
+   *
+   * @param float $analysisPercentage
    */
   public function setAnalysisPercentage($analysisPercentage)
   {
@@ -49,7 +57,10 @@ class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsRequest ex
     return $this->analysisPercentage;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelector
+   * To select the annotators to run and the phrase matchers to use (if any). If
+   * not specified, all annotators will be run.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelector $annotatorSelector
    */
   public function setAnnotatorSelector(GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelector $annotatorSelector)
   {
@@ -63,7 +74,9 @@ class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsRequest ex
     return $this->annotatorSelector;
   }
   /**
-   * @param string
+   * Required. Filter used to select the subset of conversations to analyze.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -77,7 +90,9 @@ class GoogleCloudContactcenterinsightsV1alpha1BulkAnalyzeConversationsRequest ex
     return $this->filter;
   }
   /**
-   * @param string
+   * Required. The parent resource to create analyses in.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {

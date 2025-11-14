@@ -21,6 +21,8 @@ class LinkedAccount extends \Google\Collection
 {
   protected $collection_key = 'services';
   /**
+   * The ID of the linked account.
+   *
    * @var string
    */
   public $linkedAccountId;
@@ -28,7 +30,9 @@ class LinkedAccount extends \Google\Collection
   protected $servicesDataType = 'array';
 
   /**
-   * @param string
+   * The ID of the linked account.
+   *
+   * @param string $linkedAccountId
    */
   public function setLinkedAccountId($linkedAccountId)
   {
@@ -42,7 +46,9 @@ class LinkedAccount extends \Google\Collection
     return $this->linkedAccountId;
   }
   /**
-   * @param LinkService[]
+   * List of provided services.
+   *
+   * @param LinkService[] $services
    */
   public function setServices($services)
   {

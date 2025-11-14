@@ -19,15 +19,28 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2Expressions extends \Google\Model
 {
+  /**
+   * Unused
+   */
+  public const LOGICAL_OPERATOR_LOGICAL_OPERATOR_UNSPECIFIED = 'LOGICAL_OPERATOR_UNSPECIFIED';
+  /**
+   * Conditional AND
+   */
+  public const LOGICAL_OPERATOR_AND = 'AND';
   protected $conditionsType = GooglePrivacyDlpV2Conditions::class;
   protected $conditionsDataType = '';
   /**
+   * The operator to apply to the result of conditions. Default and currently
+   * only supported value is `AND`.
+   *
    * @var string
    */
   public $logicalOperator;
 
   /**
-   * @param GooglePrivacyDlpV2Conditions
+   * Conditions to apply to the expression.
+   *
+   * @param GooglePrivacyDlpV2Conditions $conditions
    */
   public function setConditions(GooglePrivacyDlpV2Conditions $conditions)
   {
@@ -41,14 +54,19 @@ class GooglePrivacyDlpV2Expressions extends \Google\Model
     return $this->conditions;
   }
   /**
-   * @param string
+   * The operator to apply to the result of conditions. Default and currently
+   * only supported value is `AND`.
+   *
+   * Accepted values: LOGICAL_OPERATOR_UNSPECIFIED, AND
+   *
+   * @param self::LOGICAL_OPERATOR_* $logicalOperator
    */
   public function setLogicalOperator($logicalOperator)
   {
     $this->logicalOperator = $logicalOperator;
   }
   /**
-   * @return string
+   * @return self::LOGICAL_OPERATOR_*
    */
   public function getLogicalOperator()
   {

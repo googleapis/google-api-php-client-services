@@ -20,20 +20,31 @@ namespace Google\Service\StreetViewPublish;
 class Place extends \Google\Model
 {
   /**
+   * Output only. The language_code that the name is localized with. This should
+   * be the language_code specified in the request, but may be a fallback.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Output only. The name of the place, localized to the language_code.
+   *
    * @var string
    */
   public $name;
   /**
+   * Place identifier, as described in
+   * https://developers.google.com/places/place-id.
+   *
    * @var string
    */
   public $placeId;
 
   /**
-   * @param string
+   * Output only. The language_code that the name is localized with. This should
+   * be the language_code specified in the request, but may be a fallback.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -47,7 +58,9 @@ class Place extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Output only. The name of the place, localized to the language_code.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +74,10 @@ class Place extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Place identifier, as described in
+   * https://developers.google.com/places/place-id.
+   *
+   * @param string $placeId
    */
   public function setPlaceId($placeId)
   {

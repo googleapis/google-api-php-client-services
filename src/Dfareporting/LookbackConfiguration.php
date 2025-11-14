@@ -20,16 +20,34 @@ namespace Google\Service\Dfareporting;
 class LookbackConfiguration extends \Google\Model
 {
   /**
+   * Lookback window, in days, from the last time a given user clicked on one of
+   * your ads. If you enter 0, clicks will not be considered as triggering
+   * events for floodlight tracking. If you leave this field blank, the default
+   * value for your account will be used. Acceptable values are 0 to 90,
+   * inclusive.
+   *
    * @var int
    */
   public $clickDuration;
   /**
+   * Lookback window, in days, from the last time a given user viewed one of
+   * your ads. If you enter 0, impressions will not be considered as triggering
+   * events for floodlight tracking. If you leave this field blank, the default
+   * value for your account will be used. Acceptable values are 0 to 90,
+   * inclusive.
+   *
    * @var int
    */
   public $postImpressionActivitiesDuration;
 
   /**
-   * @param int
+   * Lookback window, in days, from the last time a given user clicked on one of
+   * your ads. If you enter 0, clicks will not be considered as triggering
+   * events for floodlight tracking. If you leave this field blank, the default
+   * value for your account will be used. Acceptable values are 0 to 90,
+   * inclusive.
+   *
+   * @param int $clickDuration
    */
   public function setClickDuration($clickDuration)
   {
@@ -43,7 +61,13 @@ class LookbackConfiguration extends \Google\Model
     return $this->clickDuration;
   }
   /**
-   * @param int
+   * Lookback window, in days, from the last time a given user viewed one of
+   * your ads. If you enter 0, impressions will not be considered as triggering
+   * events for floodlight tracking. If you leave this field blank, the default
+   * value for your account will be used. Acceptable values are 0 to 90,
+   * inclusive.
+   *
+   * @param int $postImpressionActivitiesDuration
    */
   public function setPostImpressionActivitiesDuration($postImpressionActivitiesDuration)
   {

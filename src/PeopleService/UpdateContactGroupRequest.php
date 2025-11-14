@@ -22,16 +22,27 @@ class UpdateContactGroupRequest extends \Google\Model
   protected $contactGroupType = ContactGroup::class;
   protected $contactGroupDataType = '';
   /**
+   * Optional. A field mask to restrict which fields on the group are returned.
+   * Defaults to `metadata`, `groupType`, and `name` if not set or set to empty.
+   * Valid fields are: * clientData * groupType * memberCount * metadata * name
+   *
    * @var string
    */
   public $readGroupFields;
   /**
+   * Optional. A field mask to restrict which fields on the group are updated.
+   * Multiple fields can be specified by separating them with commas. Defaults
+   * to `name` if not set or set to empty. Updated fields are replaced. Valid
+   * values are: * clientData * name
+   *
    * @var string
    */
   public $updateGroupFields;
 
   /**
-   * @param ContactGroup
+   * Required. The contact group to update.
+   *
+   * @param ContactGroup $contactGroup
    */
   public function setContactGroup(ContactGroup $contactGroup)
   {
@@ -45,7 +56,11 @@ class UpdateContactGroupRequest extends \Google\Model
     return $this->contactGroup;
   }
   /**
-   * @param string
+   * Optional. A field mask to restrict which fields on the group are returned.
+   * Defaults to `metadata`, `groupType`, and `name` if not set or set to empty.
+   * Valid fields are: * clientData * groupType * memberCount * metadata * name
+   *
+   * @param string $readGroupFields
    */
   public function setReadGroupFields($readGroupFields)
   {
@@ -59,7 +74,12 @@ class UpdateContactGroupRequest extends \Google\Model
     return $this->readGroupFields;
   }
   /**
-   * @param string
+   * Optional. A field mask to restrict which fields on the group are updated.
+   * Multiple fields can be specified by separating them with commas. Defaults
+   * to `name` if not set or set to empty. Updated fields are replaced. Valid
+   * values are: * clientData * name
+   *
+   * @param string $updateGroupFields
    */
   public function setUpdateGroupFields($updateGroupFields)
   {

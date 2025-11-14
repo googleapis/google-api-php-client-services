@@ -23,12 +23,17 @@ class GoogleCloudContentwarehouseV1ListDocumentSchemasResponse extends \Google\C
   protected $documentSchemasType = GoogleCloudContentwarehouseV1DocumentSchema::class;
   protected $documentSchemasDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudContentwarehouseV1DocumentSchema[]
+   * The document schemas from the specified parent.
+   *
+   * @param GoogleCloudContentwarehouseV1DocumentSchema[] $documentSchemas
    */
   public function setDocumentSchemas($documentSchemas)
   {
@@ -42,7 +47,10 @@ class GoogleCloudContentwarehouseV1ListDocumentSchemasResponse extends \Google\C
     return $this->documentSchemas;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

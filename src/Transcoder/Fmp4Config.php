@@ -20,12 +20,20 @@ namespace Google\Service\Transcoder;
 class Fmp4Config extends \Google\Model
 {
   /**
+   * Optional. Specify the codec tag string that will be used in the media
+   * bitstream. When not specified, the codec appropriate value is used.
+   * Supported H265 codec tags: - `hvc1` (default) - `hev1`
+   *
    * @var string
    */
   public $codecTag;
 
   /**
-   * @param string
+   * Optional. Specify the codec tag string that will be used in the media
+   * bitstream. When not specified, the codec appropriate value is used.
+   * Supported H265 codec tags: - `hvc1` (default) - `hev1`
+   *
+   * @param string $codecTag
    */
   public function setCodecTag($codecTag)
   {

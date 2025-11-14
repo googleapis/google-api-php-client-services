@@ -23,7 +23,9 @@ class GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimImageSearchRespons
   protected $claimDataType = '';
 
   /**
-   * @param GoogleFactcheckingFactchecktoolsV1alpha1Claim
+   * A claim which matched the query.
+   *
+   * @param GoogleFactcheckingFactchecktoolsV1alpha1Claim $claim
    */
   public function setClaim(GoogleFactcheckingFactchecktoolsV1alpha1Claim $claim)
   {

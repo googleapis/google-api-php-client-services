@@ -23,16 +23,22 @@ class ListLbRouteExtensionsResponse extends \Google\Collection
   protected $lbRouteExtensionsType = LbRouteExtension::class;
   protected $lbRouteExtensionsDataType = 'array';
   /**
+   * A token identifying a page of results that the server returns.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param LbRouteExtension[]
+   * The list of `LbRouteExtension` resources.
+   *
+   * @param LbRouteExtension[] $lbRouteExtensions
    */
   public function setLbRouteExtensions($lbRouteExtensions)
   {
@@ -46,7 +52,9 @@ class ListLbRouteExtensionsResponse extends \Google\Collection
     return $this->lbRouteExtensions;
   }
   /**
-   * @param string
+   * A token identifying a page of results that the server returns.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListLbRouteExtensionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

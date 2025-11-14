@@ -33,7 +33,9 @@ class IngestionDataSourceSettings extends \Google\Model
   protected $platformLogsSettingsDataType = '';
 
   /**
-   * @param AwsKinesis
+   * Optional. Amazon Kinesis Data Streams.
+   *
+   * @param AwsKinesis $awsKinesis
    */
   public function setAwsKinesis(AwsKinesis $awsKinesis)
   {
@@ -47,7 +49,9 @@ class IngestionDataSourceSettings extends \Google\Model
     return $this->awsKinesis;
   }
   /**
-   * @param AwsMsk
+   * Optional. Amazon MSK.
+   *
+   * @param AwsMsk $awsMsk
    */
   public function setAwsMsk(AwsMsk $awsMsk)
   {
@@ -61,7 +65,9 @@ class IngestionDataSourceSettings extends \Google\Model
     return $this->awsMsk;
   }
   /**
-   * @param AzureEventHubs
+   * Optional. Azure Event Hubs.
+   *
+   * @param AzureEventHubs $azureEventHubs
    */
   public function setAzureEventHubs(AzureEventHubs $azureEventHubs)
   {
@@ -75,7 +81,9 @@ class IngestionDataSourceSettings extends \Google\Model
     return $this->azureEventHubs;
   }
   /**
-   * @param CloudStorage
+   * Optional. Cloud Storage.
+   *
+   * @param CloudStorage $cloudStorage
    */
   public function setCloudStorage(CloudStorage $cloudStorage)
   {
@@ -89,7 +97,9 @@ class IngestionDataSourceSettings extends \Google\Model
     return $this->cloudStorage;
   }
   /**
-   * @param ConfluentCloud
+   * Optional. Confluent Cloud.
+   *
+   * @param ConfluentCloud $confluentCloud
    */
   public function setConfluentCloud(ConfluentCloud $confluentCloud)
   {
@@ -103,7 +113,10 @@ class IngestionDataSourceSettings extends \Google\Model
     return $this->confluentCloud;
   }
   /**
-   * @param PlatformLogsSettings
+   * Optional. Platform Logs settings. If unset, no Platform Logs will be
+   * generated.
+   *
+   * @param PlatformLogsSettings $platformLogsSettings
    */
   public function setPlatformLogsSettings(PlatformLogsSettings $platformLogsSettings)
   {

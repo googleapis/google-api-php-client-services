@@ -20,28 +20,64 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1CommonOperationMetadata extends \Google\Model
 {
   /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Operation is still running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * Operation is being cancelled.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * Operation succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Operation failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Operation is cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * The creation time of the operation.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * A related resource to this operation.
+   *
    * @var string
    */
   public $resource;
   /**
+   * The state of the operation.
+   *
    * @var string
    */
   public $state;
   /**
+   * A message providing more details about the current state of processing.
+   *
    * @var string
    */
   public $stateMessage;
   /**
+   * The last update time of the operation.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The creation time of the operation.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -55,7 +91,9 @@ class GoogleCloudDocumentaiV1CommonOperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * A related resource to this operation.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -69,21 +107,28 @@ class GoogleCloudDocumentaiV1CommonOperationMetadata extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * The state of the operation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, CANCELLING, SUCCEEDED, FAILED,
+   * CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * A message providing more details about the current state of processing.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {
@@ -97,7 +142,9 @@ class GoogleCloudDocumentaiV1CommonOperationMetadata extends \Google\Model
     return $this->stateMessage;
   }
   /**
-   * @param string
+   * The last update time of the operation.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

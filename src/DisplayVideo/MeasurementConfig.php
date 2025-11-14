@@ -20,16 +20,22 @@ namespace Google\Service\DisplayVideo;
 class MeasurementConfig extends \Google\Model
 {
   /**
+   * Whether or not to report DV360 cost to CM360.
+   *
    * @var bool
    */
   public $dv360ToCmCostReportingEnabled;
   /**
+   * Whether or not to include DV360 data in CM360 data transfer reports.
+   *
    * @var bool
    */
   public $dv360ToCmDataSharingEnabled;
 
   /**
-   * @param bool
+   * Whether or not to report DV360 cost to CM360.
+   *
+   * @param bool $dv360ToCmCostReportingEnabled
    */
   public function setDv360ToCmCostReportingEnabled($dv360ToCmCostReportingEnabled)
   {
@@ -43,7 +49,9 @@ class MeasurementConfig extends \Google\Model
     return $this->dv360ToCmCostReportingEnabled;
   }
   /**
-   * @param bool
+   * Whether or not to include DV360 data in CM360 data transfer reports.
+   *
+   * @param bool $dv360ToCmDataSharingEnabled
    */
   public function setDv360ToCmDataSharingEnabled($dv360ToCmDataSharingEnabled)
   {

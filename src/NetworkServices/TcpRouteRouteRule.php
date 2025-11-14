@@ -26,7 +26,9 @@ class TcpRouteRouteRule extends \Google\Collection
   protected $matchesDataType = 'array';
 
   /**
-   * @param TcpRouteRouteAction
+   * Required. The detailed rule defining how to route matched traffic.
+   *
+   * @param TcpRouteRouteAction $action
    */
   public function setAction(TcpRouteRouteAction $action)
   {
@@ -40,7 +42,12 @@ class TcpRouteRouteRule extends \Google\Collection
     return $this->action;
   }
   /**
-   * @param TcpRouteRouteMatch[]
+   * Optional. RouteMatch defines the predicate used to match requests to a
+   * given action. Multiple match types are "OR"ed for evaluation. If no
+   * routeMatch field is specified, this rule will unconditionally match
+   * traffic.
+   *
+   * @param TcpRouteRouteMatch[] $matches
    */
   public function setMatches($matches)
   {

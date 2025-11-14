@@ -20,22 +20,35 @@ namespace Google\Service\PeopleService;
 class Gender extends \Google\Model
 {
   /**
+   * Free form text field for pronouns that should be used to address the
+   * person. Common values are: * `he`/`him` * `she`/`her` * `they`/`them`
+   *
    * @var string
    */
   public $addressMeAs;
   /**
+   * Output only. The value of the gender translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   * Unspecified or custom value are not localized.
+   *
    * @var string
    */
   public $formattedValue;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The gender for the person. The gender can be custom or one of these
+   * predefined values: * `male` * `female` * `unspecified`
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Free form text field for pronouns that should be used to address the
+   * person. Common values are: * `he`/`him` * `she`/`her` * `they`/`them`
+   *
+   * @param string $addressMeAs
    */
   public function setAddressMeAs($addressMeAs)
   {
@@ -49,7 +62,11 @@ class Gender extends \Google\Model
     return $this->addressMeAs;
   }
   /**
-   * @param string
+   * Output only. The value of the gender translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   * Unspecified or custom value are not localized.
+   *
+   * @param string $formattedValue
    */
   public function setFormattedValue($formattedValue)
   {
@@ -63,7 +80,9 @@ class Gender extends \Google\Model
     return $this->formattedValue;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the gender.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -77,7 +96,10 @@ class Gender extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The gender for the person. The gender can be custom or one of these
+   * predefined values: * `male` * `female` * `unspecified`
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

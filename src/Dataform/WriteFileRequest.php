@@ -20,16 +20,22 @@ namespace Google\Service\Dataform;
 class WriteFileRequest extends \Google\Model
 {
   /**
+   * Required. The file's contents.
+   *
    * @var string
    */
   public $contents;
   /**
+   * Required. The file.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Required. The file's contents.
+   *
+   * @param string $contents
    */
   public function setContents($contents)
   {
@@ -43,7 +49,9 @@ class WriteFileRequest extends \Google\Model
     return $this->contents;
   }
   /**
-   * @param string
+   * Required. The file.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

@@ -19,18 +19,38 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2LocationSupport extends \Google\Collection
 {
+  /**
+   * Invalid.
+   */
+  public const REGIONALIZATION_SCOPE_REGIONALIZATION_SCOPE_UNSPECIFIED = 'REGIONALIZATION_SCOPE_UNSPECIFIED';
+  /**
+   * Feature may be used with one or more regions. See locations for details.
+   */
+  public const REGIONALIZATION_SCOPE_REGIONAL = 'REGIONAL';
+  /**
+   * Feature may be used anywhere. Default value.
+   */
+  public const REGIONALIZATION_SCOPE_ANY_LOCATION = 'ANY_LOCATION';
   protected $collection_key = 'locations';
   /**
+   * Specific locations where the feature may be used. Examples: us-central1,
+   * us, asia, global If scope is ANY_LOCATION, no regions will be listed.
+   *
    * @var string[]
    */
   public $locations;
   /**
+   * The current scope for location on this feature. This may expand over time.
+   *
    * @var string
    */
   public $regionalizationScope;
 
   /**
-   * @param string[]
+   * Specific locations where the feature may be used. Examples: us-central1,
+   * us, asia, global If scope is ANY_LOCATION, no regions will be listed.
+   *
+   * @param string[] $locations
    */
   public function setLocations($locations)
   {
@@ -44,14 +64,18 @@ class GooglePrivacyDlpV2LocationSupport extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param string
+   * The current scope for location on this feature. This may expand over time.
+   *
+   * Accepted values: REGIONALIZATION_SCOPE_UNSPECIFIED, REGIONAL, ANY_LOCATION
+   *
+   * @param self::REGIONALIZATION_SCOPE_* $regionalizationScope
    */
   public function setRegionalizationScope($regionalizationScope)
   {
     $this->regionalizationScope = $regionalizationScope;
   }
   /**
-   * @return string
+   * @return self::REGIONALIZATION_SCOPE_*
    */
   public function getRegionalizationScope()
   {

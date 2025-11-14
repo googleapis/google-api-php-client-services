@@ -20,16 +20,23 @@ namespace Google\Service\SQLAdmin;
 class DemoteContext extends \Google\Model
 {
   /**
+   * This is always `sql#demoteContext`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Required. The name of the instance which acts as the on-premises primary
+   * instance in the replication setup.
+   *
    * @var string
    */
   public $sourceRepresentativeInstanceName;
 
   /**
-   * @param string
+   * This is always `sql#demoteContext`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -43,7 +50,10 @@ class DemoteContext extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Required. The name of the instance which acts as the on-premises primary
+   * instance in the replication setup.
+   *
+   * @param string $sourceRepresentativeInstanceName
    */
   public function setSourceRepresentativeInstanceName($sourceRepresentativeInstanceName)
   {

@@ -19,24 +19,40 @@ namespace Google\Service\Dfareporting;
 
 class CreativeOptimizationConfiguration extends \Google\Collection
 {
+  public const OPTIMIZATION_MODEL_CLICK = 'CLICK';
+  public const OPTIMIZATION_MODEL_POST_CLICK = 'POST_CLICK';
+  public const OPTIMIZATION_MODEL_POST_IMPRESSION = 'POST_IMPRESSION';
+  public const OPTIMIZATION_MODEL_POST_CLICK_AND_IMPRESSION = 'POST_CLICK_AND_IMPRESSION';
+  public const OPTIMIZATION_MODEL_VIDEO_COMPLETION = 'VIDEO_COMPLETION';
   protected $collection_key = 'optimizationActivitys';
   /**
+   * ID of this creative optimization config. This field is auto-generated when
+   * the campaign is inserted or updated. It can be null for existing campaigns.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of this creative optimization config. This is a required field and
+   * must be less than 129 characters long.
+   *
    * @var string
    */
   public $name;
   protected $optimizationActivitysType = OptimizationActivity::class;
   protected $optimizationActivitysDataType = 'array';
   /**
+   * Optimization model for this configuration.
+   *
    * @var string
    */
   public $optimizationModel;
 
   /**
-   * @param string
+   * ID of this creative optimization config. This field is auto-generated when
+   * the campaign is inserted or updated. It can be null for existing campaigns.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -50,7 +66,10 @@ class CreativeOptimizationConfiguration extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Name of this creative optimization config. This is a required field and
+   * must be less than 129 characters long.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -64,7 +83,9 @@ class CreativeOptimizationConfiguration extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param OptimizationActivity[]
+   * List of optimization activities associated with this configuration.
+   *
+   * @param OptimizationActivity[] $optimizationActivitys
    */
   public function setOptimizationActivitys($optimizationActivitys)
   {
@@ -78,14 +99,19 @@ class CreativeOptimizationConfiguration extends \Google\Collection
     return $this->optimizationActivitys;
   }
   /**
-   * @param string
+   * Optimization model for this configuration.
+   *
+   * Accepted values: CLICK, POST_CLICK, POST_IMPRESSION,
+   * POST_CLICK_AND_IMPRESSION, VIDEO_COMPLETION
+   *
+   * @param self::OPTIMIZATION_MODEL_* $optimizationModel
    */
   public function setOptimizationModel($optimizationModel)
   {
     $this->optimizationModel = $optimizationModel;
   }
   /**
-   * @return string
+   * @return self::OPTIMIZATION_MODEL_*
    */
   public function getOptimizationModel()
   {

@@ -20,18 +20,29 @@ namespace Google\Service\CertificateAuthorityService;
 class SubjectDescription extends \Google\Model
 {
   /**
+   * The serial number encoded in lowercase hexadecimal.
+   *
    * @var string
    */
   public $hexSerialNumber;
   /**
+   * For convenience, the actual lifetime of an issued certificate.
+   *
    * @var string
    */
   public $lifetime;
   /**
+   * The time after which the certificate is expired. Per RFC 5280, the validity
+   * period for a certificate is the period of time from not_before_time through
+   * not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' -
+   * 1 second.
+   *
    * @var string
    */
   public $notAfterTime;
   /**
+   * The time at which the certificate becomes valid.
+   *
    * @var string
    */
   public $notBeforeTime;
@@ -41,7 +52,9 @@ class SubjectDescription extends \Google\Model
   protected $subjectAltNameDataType = '';
 
   /**
-   * @param string
+   * The serial number encoded in lowercase hexadecimal.
+   *
+   * @param string $hexSerialNumber
    */
   public function setHexSerialNumber($hexSerialNumber)
   {
@@ -55,7 +68,9 @@ class SubjectDescription extends \Google\Model
     return $this->hexSerialNumber;
   }
   /**
-   * @param string
+   * For convenience, the actual lifetime of an issued certificate.
+   *
+   * @param string $lifetime
    */
   public function setLifetime($lifetime)
   {
@@ -69,7 +84,12 @@ class SubjectDescription extends \Google\Model
     return $this->lifetime;
   }
   /**
-   * @param string
+   * The time after which the certificate is expired. Per RFC 5280, the validity
+   * period for a certificate is the period of time from not_before_time through
+   * not_after_time, inclusive. Corresponds to 'not_before_time' + 'lifetime' -
+   * 1 second.
+   *
+   * @param string $notAfterTime
    */
   public function setNotAfterTime($notAfterTime)
   {
@@ -83,7 +103,9 @@ class SubjectDescription extends \Google\Model
     return $this->notAfterTime;
   }
   /**
-   * @param string
+   * The time at which the certificate becomes valid.
+   *
+   * @param string $notBeforeTime
    */
   public function setNotBeforeTime($notBeforeTime)
   {
@@ -97,7 +119,10 @@ class SubjectDescription extends \Google\Model
     return $this->notBeforeTime;
   }
   /**
-   * @param Subject
+   * Contains distinguished name fields such as the common name, location and /
+   * organization.
+   *
+   * @param Subject $subject
    */
   public function setSubject(Subject $subject)
   {
@@ -111,7 +136,9 @@ class SubjectDescription extends \Google\Model
     return $this->subject;
   }
   /**
-   * @param SubjectAltNames
+   * The subject alternative name fields.
+   *
+   * @param SubjectAltNames $subjectAltName
    */
   public function setSubjectAltName(SubjectAltNames $subjectAltName)
   {

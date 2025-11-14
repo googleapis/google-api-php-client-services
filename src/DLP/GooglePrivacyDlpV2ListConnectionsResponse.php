@@ -23,12 +23,17 @@ class GooglePrivacyDlpV2ListConnectionsResponse extends \Google\Collection
   protected $connectionsType = GooglePrivacyDlpV2Connection::class;
   protected $connectionsDataType = 'array';
   /**
+   * Token to retrieve the next page of results. An empty value means there are
+   * no more results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GooglePrivacyDlpV2Connection[]
+   * List of connections.
+   *
+   * @param GooglePrivacyDlpV2Connection[] $connections
    */
   public function setConnections($connections)
   {
@@ -42,7 +47,10 @@ class GooglePrivacyDlpV2ListConnectionsResponse extends \Google\Collection
     return $this->connections;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results. An empty value means there are
+   * no more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

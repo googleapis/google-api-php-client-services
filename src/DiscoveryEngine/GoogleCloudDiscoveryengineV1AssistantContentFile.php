@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AssistantContentFile extends \Google\Model
 {
   /**
+   * Required. The file ID.
+   *
    * @var string
    */
   public $fileId;
   /**
+   * Required. The media type (MIME type) of the file.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * Required. The file ID.
+   *
+   * @param string $fileId
    */
   public function setFileId($fileId)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1AssistantContentFile extends \Google\Model
     return $this->fileId;
   }
   /**
-   * @param string
+   * Required. The media type (MIME type) of the file.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

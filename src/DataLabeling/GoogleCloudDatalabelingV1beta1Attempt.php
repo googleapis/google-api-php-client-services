@@ -28,7 +28,7 @@ class GoogleCloudDatalabelingV1beta1Attempt extends \Google\Collection
   protected $partialFailuresDataType = 'array';
 
   /**
-   * @param string
+   * @param string $attemptTime
    */
   public function setAttemptTime($attemptTime)
   {
@@ -42,7 +42,9 @@ class GoogleCloudDatalabelingV1beta1Attempt extends \Google\Collection
     return $this->attemptTime;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Details of errors that occurred.
+   *
+   * @param GoogleRpcStatus[] $partialFailures
    */
   public function setPartialFailures($partialFailures)
   {

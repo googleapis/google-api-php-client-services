@@ -20,12 +20,24 @@ namespace Google\Service\Script;
 class ExecutionResponse extends \Google\Model
 {
   /**
+   * The return value of the script function. The type matches the object type
+   * returned in Apps Script. Functions called using the Apps Script API cannot
+   * return Apps Script-specific objects (such as a `Document` or a `Calendar`);
+   * they can only return primitive types such as a `string`, `number`, `array`,
+   * `object`, or `boolean`.
+   *
    * @var array
    */
   public $result;
 
   /**
-   * @param array
+   * The return value of the script function. The type matches the object type
+   * returned in Apps Script. Functions called using the Apps Script API cannot
+   * return Apps Script-specific objects (such as a `Document` or a `Calendar`);
+   * they can only return primitive types such as a `string`, `number`, `array`,
+   * `object`, or `boolean`.
+   *
+   * @param array $result
    */
   public function setResult($result)
   {

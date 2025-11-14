@@ -20,12 +20,16 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1DeployIssueModelRequest extends \Google\Model
 {
   /**
+   * Required. The issue model to deploy.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The issue model to deploy.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -19,17 +19,29 @@ namespace Google\Service\TagManager;
 
 class ContainerAccess extends \Google\Model
 {
+  public const PERMISSION_containerPermissionUnspecified = 'containerPermissionUnspecified';
+  public const PERMISSION_noAccess = 'noAccess';
+  public const PERMISSION_read = 'read';
+  public const PERMISSION_edit = 'edit';
+  public const PERMISSION_approve = 'approve';
+  public const PERMISSION_publish = 'publish';
   /**
+   * GTM Container ID.
+   *
    * @var string
    */
   public $containerId;
   /**
+   * List of Container permissions.
+   *
    * @var string
    */
   public $permission;
 
   /**
-   * @param string
+   * GTM Container ID.
+   *
+   * @param string $containerId
    */
   public function setContainerId($containerId)
   {
@@ -43,14 +55,19 @@ class ContainerAccess extends \Google\Model
     return $this->containerId;
   }
   /**
-   * @param string
+   * List of Container permissions.
+   *
+   * Accepted values: containerPermissionUnspecified, noAccess, read, edit,
+   * approve, publish
+   *
+   * @param self::PERMISSION_* $permission
    */
   public function setPermission($permission)
   {
     $this->permission = $permission;
   }
   /**
-   * @return string
+   * @return self::PERMISSION_*
    */
   public function getPermission()
   {

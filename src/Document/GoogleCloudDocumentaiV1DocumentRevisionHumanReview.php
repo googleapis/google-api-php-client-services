@@ -20,16 +20,23 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1DocumentRevisionHumanReview extends \Google\Model
 {
   /**
+   * Human review state. e.g. `requested`, `succeeded`, `rejected`.
+   *
    * @var string
    */
   public $state;
   /**
+   * A message providing more details about the current state of processing. For
+   * example, the rejection reason when the state is `rejected`.
+   *
    * @var string
    */
   public $stateMessage;
 
   /**
-   * @param string
+   * Human review state. e.g. `requested`, `succeeded`, `rejected`.
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -43,7 +50,10 @@ class GoogleCloudDocumentaiV1DocumentRevisionHumanReview extends \Google\Model
     return $this->state;
   }
   /**
-   * @param string
+   * A message providing more details about the current state of processing. For
+   * example, the rejection reason when the state is `rejected`.
+   *
+   * @param string $stateMessage
    */
   public function setStateMessage($stateMessage)
   {

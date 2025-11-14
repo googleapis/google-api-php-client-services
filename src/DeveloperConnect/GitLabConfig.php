@@ -24,12 +24,21 @@ class GitLabConfig extends \Google\Model
   protected $readAuthorizerCredentialType = UserCredential::class;
   protected $readAuthorizerCredentialDataType = '';
   /**
+   * Required. Immutable. SecretManager resource containing the webhook secret
+   * of a GitLab project, formatted as `projects/secrets/versions`. This is used
+   * to validate webhooks.
+   *
    * @var string
    */
   public $webhookSecretSecretVersion;
 
   /**
-   * @param UserCredential
+   * Required. A GitLab personal access token with the minimum `api` scope
+   * access and a minimum role of `maintainer`. The GitLab Projects visible to
+   * this Personal Access Token will control which Projects Developer Connect
+   * has access to.
+   *
+   * @param UserCredential $authorizerCredential
    */
   public function setAuthorizerCredential(UserCredential $authorizerCredential)
   {
@@ -43,7 +52,12 @@ class GitLabConfig extends \Google\Model
     return $this->authorizerCredential;
   }
   /**
-   * @param UserCredential
+   * Required. A GitLab personal access token with the minimum `read_api` scope
+   * access and a minimum role of `reporter`. The GitLab Projects visible to
+   * this Personal Access Token will control which Projects Developer Connect
+   * has access to.
+   *
+   * @param UserCredential $readAuthorizerCredential
    */
   public function setReadAuthorizerCredential(UserCredential $readAuthorizerCredential)
   {
@@ -57,7 +71,11 @@ class GitLabConfig extends \Google\Model
     return $this->readAuthorizerCredential;
   }
   /**
-   * @param string
+   * Required. Immutable. SecretManager resource containing the webhook secret
+   * of a GitLab project, formatted as `projects/secrets/versions`. This is used
+   * to validate webhooks.
+   *
+   * @param string $webhookSecretSecretVersion
    */
   public function setWebhookSecretSecretVersion($webhookSecretSecretVersion)
   {

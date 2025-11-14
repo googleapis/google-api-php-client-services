@@ -20,16 +20,25 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary extends \Google\Model
 {
   /**
+   * The index in the sequence of transcribed pieces of the conversation where
+   * the boundary is located. This index starts at zero.
+   *
    * @var int
    */
   public $transcriptIndex;
   /**
+   * The word index of this boundary with respect to the first word in the
+   * transcript piece. This index starts at zero.
+   *
    * @var int
    */
   public $wordIndex;
 
   /**
-   * @param int
+   * The index in the sequence of transcribed pieces of the conversation where
+   * the boundary is located. This index starts at zero.
+   *
+   * @param int $transcriptIndex
    */
   public function setTranscriptIndex($transcriptIndex)
   {
@@ -43,7 +52,10 @@ class GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary extends \Google
     return $this->transcriptIndex;
   }
   /**
-   * @param int
+   * The word index of this boundary with respect to the first word in the
+   * transcript piece. This index starts at zero.
+   *
+   * @param int $wordIndex
    */
   public function setWordIndex($wordIndex)
   {

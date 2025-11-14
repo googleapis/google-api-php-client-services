@@ -21,10 +21,16 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
 {
   protected $collection_key = 'operations';
   /**
+   * The kind of item this is. For lists of operations, this is always
+   * storage#operations.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +38,10 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
   protected $operationsDataType = 'array';
 
   /**
-   * @param string
+   * The kind of item this is. For lists of operations, this is always
+   * storage#operations.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +55,10 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleLongrunningOperation[]
+   * A list of operations that matches the specified filter in the request.
+   *
+   * @param GoogleLongrunningOperation[] $operations
    */
   public function setOperations($operations)
   {

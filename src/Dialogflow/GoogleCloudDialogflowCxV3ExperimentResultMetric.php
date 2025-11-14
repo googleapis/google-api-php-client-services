@@ -19,21 +19,80 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3ExperimentResultMetric extends \Google\Model
 {
+  /**
+   * Count type unspecified.
+   */
+  public const COUNT_TYPE_COUNT_TYPE_UNSPECIFIED = 'COUNT_TYPE_UNSPECIFIED';
+  /**
+   * Total number of occurrences of a 'NO_MATCH'.
+   */
+  public const COUNT_TYPE_TOTAL_NO_MATCH_COUNT = 'TOTAL_NO_MATCH_COUNT';
+  /**
+   * Total number of turn counts.
+   */
+  public const COUNT_TYPE_TOTAL_TURN_COUNT = 'TOTAL_TURN_COUNT';
+  /**
+   * Average turn count in a session.
+   */
+  public const COUNT_TYPE_AVERAGE_TURN_COUNT = 'AVERAGE_TURN_COUNT';
+  /**
+   * Metric unspecified.
+   */
+  public const TYPE_METRIC_UNSPECIFIED = 'METRIC_UNSPECIFIED';
+  /**
+   * Percentage of contained sessions without user calling back in 24 hours.
+   */
+  public const TYPE_CONTAINED_SESSION_NO_CALLBACK_RATE = 'CONTAINED_SESSION_NO_CALLBACK_RATE';
+  /**
+   * Percentage of sessions that were handed to a human agent.
+   */
+  public const TYPE_LIVE_AGENT_HANDOFF_RATE = 'LIVE_AGENT_HANDOFF_RATE';
+  /**
+   * Percentage of sessions with the same user calling back.
+   */
+  public const TYPE_CALLBACK_SESSION_RATE = 'CALLBACK_SESSION_RATE';
+  /**
+   * Percentage of sessions where user hung up.
+   */
+  public const TYPE_ABANDONED_SESSION_RATE = 'ABANDONED_SESSION_RATE';
+  /**
+   * Percentage of sessions reached Dialogflow 'END_PAGE' or 'END_SESSION'.
+   */
+  public const TYPE_SESSION_END_RATE = 'SESSION_END_RATE';
   protected $confidenceIntervalType = GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval::class;
   protected $confidenceIntervalDataType = '';
+  /**
+   * Count value of a metric.
+   *
+   * @var 
+   */
   public $count;
   /**
+   * Count-based metric type. Only one of type or count_type is specified in
+   * each Metric.
+   *
    * @var string
    */
   public $countType;
+  /**
+   * Ratio value of a metric.
+   *
+   * @var 
+   */
   public $ratio;
   /**
+   * Ratio-based metric type. Only one of type or count_type is specified in
+   * each Metric.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval
+   * The probability that the treatment is better than all other treatments in
+   * the experiment
+   *
+   * @param GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval $confidenceInterval
    */
   public function setConfidenceInterval(GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval $confidenceInterval)
   {
@@ -55,14 +114,20 @@ class GoogleCloudDialogflowCxV3ExperimentResultMetric extends \Google\Model
     return $this->count;
   }
   /**
-   * @param string
+   * Count-based metric type. Only one of type or count_type is specified in
+   * each Metric.
+   *
+   * Accepted values: COUNT_TYPE_UNSPECIFIED, TOTAL_NO_MATCH_COUNT,
+   * TOTAL_TURN_COUNT, AVERAGE_TURN_COUNT
+   *
+   * @param self::COUNT_TYPE_* $countType
    */
   public function setCountType($countType)
   {
     $this->countType = $countType;
   }
   /**
-   * @return string
+   * @return self::COUNT_TYPE_*
    */
   public function getCountType()
   {
@@ -77,14 +142,21 @@ class GoogleCloudDialogflowCxV3ExperimentResultMetric extends \Google\Model
     return $this->ratio;
   }
   /**
-   * @param string
+   * Ratio-based metric type. Only one of type or count_type is specified in
+   * each Metric.
+   *
+   * Accepted values: METRIC_UNSPECIFIED, CONTAINED_SESSION_NO_CALLBACK_RATE,
+   * LIVE_AGENT_HANDOFF_RATE, CALLBACK_SESSION_RATE, ABANDONED_SESSION_RATE,
+   * SESSION_END_RATE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

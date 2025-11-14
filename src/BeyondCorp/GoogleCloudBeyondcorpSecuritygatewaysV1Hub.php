@@ -23,7 +23,9 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1Hub extends \Google\Model
   protected $internetGatewayDataType = '';
 
   /**
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway
+   * Optional. Internet Gateway configuration.
+   *
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway $internetGateway
    */
   public function setInternetGateway(GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway $internetGateway)
   {

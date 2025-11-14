@@ -20,12 +20,20 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1SearchResponseSummaryCitationSource extends \Google\Model
 {
   /**
+   * Document reference index from SummaryWithMetadata.references. It is
+   * 0-indexed and the value will be zero if the reference_index is not set
+   * explicitly.
+   *
    * @var string
    */
   public $referenceIndex;
 
   /**
-   * @param string
+   * Document reference index from SummaryWithMetadata.references. It is
+   * 0-indexed and the value will be zero if the reference_index is not set
+   * explicitly.
+   *
+   * @param string $referenceIndex
    */
   public function setReferenceIndex($referenceIndex)
   {

@@ -20,16 +20,24 @@ namespace Google\Service\SQLAdmin;
 class ConnectionPoolFlags extends \Google\Model
 {
   /**
+   * Required. The name of the flag.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The value of the flag. Boolean flags are set to `on` for true and
+   * `off` for false. This field must be omitted if the flag doesn't take a
+   * value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The name of the flag.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,11 @@ class ConnectionPoolFlags extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The value of the flag. Boolean flags are set to `on` for true and
+   * `off` for false. This field must be omitted if the flag doesn't take a
+   * value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

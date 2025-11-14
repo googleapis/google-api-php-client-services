@@ -21,16 +21,22 @@ class RepeatedEnumAttributeValue extends \Google\Collection
 {
   protected $collection_key = 'unsetValues';
   /**
+   * Enum values that are set.
+   *
    * @var string[]
    */
   public $setValues;
   /**
+   * Enum values that are unset.
+   *
    * @var string[]
    */
   public $unsetValues;
 
   /**
-   * @param string[]
+   * Enum values that are set.
+   *
+   * @param string[] $setValues
    */
   public function setSetValues($setValues)
   {
@@ -44,7 +50,9 @@ class RepeatedEnumAttributeValue extends \Google\Collection
     return $this->setValues;
   }
   /**
-   * @param string[]
+   * Enum values that are unset.
+   *
+   * @param string[] $unsetValues
    */
   public function setUnsetValues($unsetValues)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1ReconcileTagsResponse extends \Google\Model
 {
   /**
+   * Number of tags created in the request.
+   *
    * @var string
    */
   public $createdTagsCount;
   /**
+   * Number of tags deleted in the request.
+   *
    * @var string
    */
   public $deletedTagsCount;
   /**
+   * Number of tags updated in the request.
+   *
    * @var string
    */
   public $updatedTagsCount;
 
   /**
-   * @param string
+   * Number of tags created in the request.
+   *
+   * @param string $createdTagsCount
    */
   public function setCreatedTagsCount($createdTagsCount)
   {
@@ -47,7 +55,9 @@ class GoogleCloudDatacatalogV1ReconcileTagsResponse extends \Google\Model
     return $this->createdTagsCount;
   }
   /**
-   * @param string
+   * Number of tags deleted in the request.
+   *
+   * @param string $deletedTagsCount
    */
   public function setDeletedTagsCount($deletedTagsCount)
   {
@@ -61,7 +71,9 @@ class GoogleCloudDatacatalogV1ReconcileTagsResponse extends \Google\Model
     return $this->deletedTagsCount;
   }
   /**
-   * @param string
+   * Number of tags updated in the request.
+   *
+   * @param string $updatedTagsCount
    */
   public function setUpdatedTagsCount($updatedTagsCount)
   {

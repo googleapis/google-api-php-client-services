@@ -25,16 +25,24 @@ class GoogleCloudDiscoveryengineV1betaImportUserEventsResponse extends \Google\C
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
   /**
+   * Count of user events imported with complete existing Documents.
+   *
    * @var string
    */
   public $joinedEventsCount;
   /**
+   * Count of user events imported, but with Document information not found in
+   * the existing Branch.
+   *
    * @var string
    */
   public $unjoinedEventsCount;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig
+   * Echoes the destination for the complete errors if this field was set in the
+   * request.
+   *
+   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig)
   {
@@ -48,7 +56,9 @@ class GoogleCloudDiscoveryengineV1betaImportUserEventsResponse extends \Google\C
     return $this->errorConfig;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {
@@ -62,7 +72,9 @@ class GoogleCloudDiscoveryengineV1betaImportUserEventsResponse extends \Google\C
     return $this->errorSamples;
   }
   /**
-   * @param string
+   * Count of user events imported with complete existing Documents.
+   *
+   * @param string $joinedEventsCount
    */
   public function setJoinedEventsCount($joinedEventsCount)
   {
@@ -76,7 +88,10 @@ class GoogleCloudDiscoveryengineV1betaImportUserEventsResponse extends \Google\C
     return $this->joinedEventsCount;
   }
   /**
-   * @param string
+   * Count of user events imported, but with Document information not found in
+   * the existing Branch.
+   *
+   * @param string $unjoinedEventsCount
    */
   public function setUnjoinedEventsCount($unjoinedEventsCount)
   {

@@ -20,12 +20,22 @@ namespace Google\Service\Container;
 class ResourceManagerTags extends \Google\Model
 {
   /**
+   * TagKeyValue must be in one of the following formats ([KEY]=[VALUE]) 1.
+   * `tagKeys/{tag_key_id}=tagValues/{tag_value_id}` 2.
+   * `{org_id}/{tag_key_name}={tag_value_name}` 3.
+   * `{project_id}/{tag_key_name}={tag_value_name}`
+   *
    * @var string[]
    */
   public $tags;
 
   /**
-   * @param string[]
+   * TagKeyValue must be in one of the following formats ([KEY]=[VALUE]) 1.
+   * `tagKeys/{tag_key_id}=tagValues/{tag_value_id}` 2.
+   * `{org_id}/{tag_key_name}={tag_value_name}` 3.
+   * `{project_id}/{tag_key_name}={tag_value_name}`
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {

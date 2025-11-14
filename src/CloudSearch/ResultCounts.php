@@ -24,7 +24,9 @@ class ResultCounts extends \Google\Collection
   protected $sourceResultCountsDataType = 'array';
 
   /**
-   * @param SourceResultCount[]
+   * Result count information for each source with results.
+   *
+   * @param SourceResultCount[] $sourceResultCounts
    */
   public function setSourceResultCounts($sourceResultCounts)
   {

@@ -21,16 +21,28 @@ class GoogleCloudDialogflowCxV3FlowMultiLanguageSettings extends \Google\Collect
 {
   protected $collection_key = 'supportedResponseLanguageCodes';
   /**
+   * Optional. Enable multi-language detection for this flow. This can be set
+   * only if agent level multi language setting is enabled.
+   *
    * @var bool
    */
   public $enableMultiLanguageDetection;
   /**
+   * Optional. Agent will respond in the detected language if the detected
+   * language code is in the supported resolved languages for this flow. This
+   * will be used only if multi-language training is enabled in the agent and
+   * multi-language detection is enabled in the flow. The supported languages
+   * must be a subset of the languages supported by the agent.
+   *
    * @var string[]
    */
   public $supportedResponseLanguageCodes;
 
   /**
-   * @param bool
+   * Optional. Enable multi-language detection for this flow. This can be set
+   * only if agent level multi language setting is enabled.
+   *
+   * @param bool $enableMultiLanguageDetection
    */
   public function setEnableMultiLanguageDetection($enableMultiLanguageDetection)
   {
@@ -44,7 +56,13 @@ class GoogleCloudDialogflowCxV3FlowMultiLanguageSettings extends \Google\Collect
     return $this->enableMultiLanguageDetection;
   }
   /**
-   * @param string[]
+   * Optional. Agent will respond in the detected language if the detected
+   * language code is in the supported resolved languages for this flow. This
+   * will be used only if multi-language training is enabled in the agent and
+   * multi-language detection is enabled in the flow. The supported languages
+   * must be a subset of the languages supported by the agent.
+   *
+   * @param string[] $supportedResponseLanguageCodes
    */
   public function setSupportedResponseLanguageCodes($supportedResponseLanguageCodes)
   {

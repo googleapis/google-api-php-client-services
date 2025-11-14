@@ -20,12 +20,18 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2OrgPolicy extends \Google\Model
 {
   /**
+   * Identifier. The resource name of the org policy. Example:
+   * "organizations/{organization_id}/policies/{constraint_name}"
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Identifier. The resource name of the org policy. Example:
+   * "organizations/{organization_id}/policies/{constraint_name}"
+   *
+   * @param string $name
    */
   public function setName($name)
   {

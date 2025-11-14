@@ -20,12 +20,16 @@ namespace Google\Service\Blogger;
 class PageBlog extends \Google\Model
 {
   /**
+   * The identifier of the blog containing this page.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * The identifier of the blog containing this page.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

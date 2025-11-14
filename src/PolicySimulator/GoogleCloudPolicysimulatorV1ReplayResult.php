@@ -28,16 +28,29 @@ class GoogleCloudPolicysimulatorV1ReplayResult extends \Google\Model
   protected $lastSeenDateType = GoogleTypeDate::class;
   protected $lastSeenDateDataType = '';
   /**
+   * The resource name of the `ReplayResult`, in the following format:
+   * `{projects|folders|organizations}/{resource-
+   * id}/locations/global/replays/{replay-id}/results/{replay-result-id}`, where
+   * `{resource-id}` is the ID of the project, folder, or organization that owns
+   * the Replay. Example: `projects/my-example-project/locations/global/replays/
+   * 506a5f7f-38ce-4d7d-8e03-479ce1833c36/results/1234`
+   *
    * @var string
    */
   public $name;
   /**
+   * The Replay that the access tuple was included in.
+   *
    * @var string
    */
   public $parent;
 
   /**
-   * @param GoogleCloudPolicysimulatorV1AccessTuple
+   * The access tuple that was replayed. This field includes information about
+   * the principal, resource, and permission that were involved in the access
+   * attempt.
+   *
+   * @param GoogleCloudPolicysimulatorV1AccessTuple $accessTuple
    */
   public function setAccessTuple(GoogleCloudPolicysimulatorV1AccessTuple $accessTuple)
   {
@@ -51,7 +64,13 @@ class GoogleCloudPolicysimulatorV1ReplayResult extends \Google\Model
     return $this->accessTuple;
   }
   /**
-   * @param GoogleCloudPolicysimulatorV1ReplayDiff
+   * The difference between the principal's access under the current (baseline)
+   * policies and the principal's access under the proposed (simulated)
+   * policies. This field is only included for access tuples that were
+   * successfully replayed and had different results under the current policies
+   * and the proposed policies.
+   *
+   * @param GoogleCloudPolicysimulatorV1ReplayDiff $diff
    */
   public function setDiff(GoogleCloudPolicysimulatorV1ReplayDiff $diff)
   {
@@ -65,7 +84,10 @@ class GoogleCloudPolicysimulatorV1ReplayResult extends \Google\Model
     return $this->diff;
   }
   /**
-   * @param GoogleRpcStatus
+   * The error that caused the access tuple replay to fail. This field is only
+   * included for access tuples that were not replayed successfully.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -79,7 +101,9 @@ class GoogleCloudPolicysimulatorV1ReplayResult extends \Google\Model
     return $this->error;
   }
   /**
-   * @param GoogleTypeDate
+   * The latest date this access tuple was seen in the logs.
+   *
+   * @param GoogleTypeDate $lastSeenDate
    */
   public function setLastSeenDate(GoogleTypeDate $lastSeenDate)
   {
@@ -93,7 +117,14 @@ class GoogleCloudPolicysimulatorV1ReplayResult extends \Google\Model
     return $this->lastSeenDate;
   }
   /**
-   * @param string
+   * The resource name of the `ReplayResult`, in the following format:
+   * `{projects|folders|organizations}/{resource-
+   * id}/locations/global/replays/{replay-id}/results/{replay-result-id}`, where
+   * `{resource-id}` is the ID of the project, folder, or organization that owns
+   * the Replay. Example: `projects/my-example-project/locations/global/replays/
+   * 506a5f7f-38ce-4d7d-8e03-479ce1833c36/results/1234`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -107,7 +138,9 @@ class GoogleCloudPolicysimulatorV1ReplayResult extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The Replay that the access tuple was included in.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {

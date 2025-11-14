@@ -23,7 +23,9 @@ class RetrieveTransferParametersResponse extends \Google\Model
   protected $transferParametersDataType = '';
 
   /**
-   * @param TransferParameters
+   * Parameters to use when calling the `TransferDomain` method.
+   *
+   * @param TransferParameters $transferParameters
    */
   public function setTransferParameters(TransferParameters $transferParameters)
   {

@@ -21,16 +21,24 @@ class GoogleCloudContentwarehouseV1EnumTypeOptions extends \Google\Collection
 {
   protected $collection_key = 'possibleValues';
   /**
+   * Required. List of possible enum values.
+   *
    * @var string[]
    */
   public $possibleValues;
   /**
+   * Make sure the Enum property value provided in the document is in the
+   * possile value list during document creation. The validation check runs by
+   * default.
+   *
    * @var bool
    */
   public $validationCheckDisabled;
 
   /**
-   * @param string[]
+   * Required. List of possible enum values.
+   *
+   * @param string[] $possibleValues
    */
   public function setPossibleValues($possibleValues)
   {
@@ -44,7 +52,11 @@ class GoogleCloudContentwarehouseV1EnumTypeOptions extends \Google\Collection
     return $this->possibleValues;
   }
   /**
-   * @param bool
+   * Make sure the Enum property value provided in the document is in the
+   * possile value list during document creation. The validation check runs by
+   * default.
+   *
+   * @param bool $validationCheckDisabled
    */
   public function setValidationCheckDisabled($validationCheckDisabled)
   {

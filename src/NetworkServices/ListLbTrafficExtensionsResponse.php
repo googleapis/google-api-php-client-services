@@ -23,16 +23,22 @@ class ListLbTrafficExtensionsResponse extends \Google\Collection
   protected $lbTrafficExtensionsType = LbTrafficExtension::class;
   protected $lbTrafficExtensionsDataType = 'array';
   /**
+   * A token identifying a page of results that the server returns.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param LbTrafficExtension[]
+   * The list of `LbTrafficExtension` resources.
+   *
+   * @param LbTrafficExtension[] $lbTrafficExtensions
    */
   public function setLbTrafficExtensions($lbTrafficExtensions)
   {
@@ -46,7 +52,9 @@ class ListLbTrafficExtensionsResponse extends \Google\Collection
     return $this->lbTrafficExtensions;
   }
   /**
-   * @param string
+   * A token identifying a page of results that the server returns.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListLbTrafficExtensionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

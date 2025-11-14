@@ -22,12 +22,16 @@ class NonSkippableAd extends \Google\Model
   protected $commonInStreamAttributeType = CommonInStreamAttribute::class;
   protected $commonInStreamAttributeDataType = '';
   /**
+   * The custom parameters to pass custom values to tracking URL template.
+   *
    * @var string[]
    */
   public $customParameters;
 
   /**
-   * @param CommonInStreamAttribute
+   * Common ad attributes.
+   *
+   * @param CommonInStreamAttribute $commonInStreamAttribute
    */
   public function setCommonInStreamAttribute(CommonInStreamAttribute $commonInStreamAttribute)
   {
@@ -41,7 +45,9 @@ class NonSkippableAd extends \Google\Model
     return $this->commonInStreamAttribute;
   }
   /**
-   * @param string[]
+   * The custom parameters to pass custom values to tracking URL template.
+   *
+   * @param string[] $customParameters
    */
   public function setCustomParameters($customParameters)
   {

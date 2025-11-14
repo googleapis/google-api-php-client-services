@@ -23,12 +23,18 @@ class ListInventorySourcesResponse extends \Google\Collection
   protected $inventorySourcesType = InventorySource::class;
   protected $inventorySourcesDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListInventorySources` method to
+   * retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param InventorySource[]
+   * The list of inventory sources. This list will be absent if empty.
+   *
+   * @param InventorySource[] $inventorySources
    */
   public function setInventorySources($inventorySources)
   {
@@ -42,7 +48,11 @@ class ListInventorySourcesResponse extends \Google\Collection
     return $this->inventorySources;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListInventorySources` method to
+   * retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

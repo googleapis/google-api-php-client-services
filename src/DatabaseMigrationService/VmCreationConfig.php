@@ -20,20 +20,28 @@ namespace Google\Service\DatabaseMigrationService;
 class VmCreationConfig extends \Google\Model
 {
   /**
+   * The subnet name the vm needs to be created in.
+   *
    * @var string
    */
   public $subnet;
   /**
+   * Required. VM instance machine type to create.
+   *
    * @var string
    */
   public $vmMachineType;
   /**
+   * The Google Cloud Platform zone to create the VM in.
+   *
    * @var string
    */
   public $vmZone;
 
   /**
-   * @param string
+   * The subnet name the vm needs to be created in.
+   *
+   * @param string $subnet
    */
   public function setSubnet($subnet)
   {
@@ -47,7 +55,9 @@ class VmCreationConfig extends \Google\Model
     return $this->subnet;
   }
   /**
-   * @param string
+   * Required. VM instance machine type to create.
+   *
+   * @param string $vmMachineType
    */
   public function setVmMachineType($vmMachineType)
   {
@@ -61,7 +71,9 @@ class VmCreationConfig extends \Google\Model
     return $this->vmMachineType;
   }
   /**
-   * @param string
+   * The Google Cloud Platform zone to create the VM in.
+   *
+   * @param string $vmZone
    */
   public function setVmZone($vmZone)
   {

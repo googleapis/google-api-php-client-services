@@ -19,25 +19,50 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1Annotation extends \Google\Model
 {
+  public const ANNOTATION_SENTIMENT_ANNOTATION_SENTIMENT_UNSPECIFIED = 'ANNOTATION_SENTIMENT_UNSPECIFIED';
+  /**
+   * This annotation describes negatively about the data.
+   */
+  public const ANNOTATION_SENTIMENT_NEGATIVE = 'NEGATIVE';
+  /**
+   * This label describes positively about the data.
+   */
+  public const ANNOTATION_SENTIMENT_POSITIVE = 'POSITIVE';
+  public const ANNOTATION_SOURCE_ANNOTATION_SOURCE_UNSPECIFIED = 'ANNOTATION_SOURCE_UNSPECIFIED';
+  /**
+   * Answer is provided by a human contributor.
+   */
+  public const ANNOTATION_SOURCE_OPERATOR = 'OPERATOR';
   protected $annotationMetadataType = GoogleCloudDatalabelingV1beta1AnnotationMetadata::class;
   protected $annotationMetadataDataType = '';
   /**
+   * Output only. Sentiment for this annotation.
+   *
    * @var string
    */
   public $annotationSentiment;
   /**
+   * Output only. The source of the annotation.
+   *
    * @var string
    */
   public $annotationSource;
   protected $annotationValueType = GoogleCloudDatalabelingV1beta1AnnotationValue::class;
   protected $annotationValueDataType = '';
   /**
+   * Output only. Unique name of this annotation, format is: projects/{project_i
+   * d}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset}/examples/{ex
+   * ample_id}/annotations/{annotation_id}
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationMetadata
+   * Output only. Annotation metadata, including information like votes for
+   * labels.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationMetadata $annotationMetadata
    */
   public function setAnnotationMetadata(GoogleCloudDatalabelingV1beta1AnnotationMetadata $annotationMetadata)
   {
@@ -51,35 +76,46 @@ class GoogleCloudDatalabelingV1beta1Annotation extends \Google\Model
     return $this->annotationMetadata;
   }
   /**
-   * @param string
+   * Output only. Sentiment for this annotation.
+   *
+   * Accepted values: ANNOTATION_SENTIMENT_UNSPECIFIED, NEGATIVE, POSITIVE
+   *
+   * @param self::ANNOTATION_SENTIMENT_* $annotationSentiment
    */
   public function setAnnotationSentiment($annotationSentiment)
   {
     $this->annotationSentiment = $annotationSentiment;
   }
   /**
-   * @return string
+   * @return self::ANNOTATION_SENTIMENT_*
    */
   public function getAnnotationSentiment()
   {
     return $this->annotationSentiment;
   }
   /**
-   * @param string
+   * Output only. The source of the annotation.
+   *
+   * Accepted values: ANNOTATION_SOURCE_UNSPECIFIED, OPERATOR
+   *
+   * @param self::ANNOTATION_SOURCE_* $annotationSource
    */
   public function setAnnotationSource($annotationSource)
   {
     $this->annotationSource = $annotationSource;
   }
   /**
-   * @return string
+   * @return self::ANNOTATION_SOURCE_*
    */
   public function getAnnotationSource()
   {
     return $this->annotationSource;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationValue
+   * Output only. This is the actual annotation value, e.g classification,
+   * bounding box values are stored here.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationValue $annotationValue
    */
   public function setAnnotationValue(GoogleCloudDatalabelingV1beta1AnnotationValue $annotationValue)
   {
@@ -93,7 +129,11 @@ class GoogleCloudDatalabelingV1beta1Annotation extends \Google\Model
     return $this->annotationValue;
   }
   /**
-   * @param string
+   * Output only. Unique name of this annotation, format is: projects/{project_i
+   * d}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset}/examples/{ex
+   * ample_id}/annotations/{annotation_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {

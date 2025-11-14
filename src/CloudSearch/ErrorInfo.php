@@ -24,7 +24,7 @@ class ErrorInfo extends \Google\Collection
   protected $errorMessagesDataType = 'array';
 
   /**
-   * @param ErrorMessage[]
+   * @param ErrorMessage[] $errorMessages
    */
   public function setErrorMessages($errorMessages)
   {

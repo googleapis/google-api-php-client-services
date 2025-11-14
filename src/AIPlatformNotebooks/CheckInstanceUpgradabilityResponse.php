@@ -20,24 +20,39 @@ namespace Google\Service\AIPlatformNotebooks;
 class CheckInstanceUpgradabilityResponse extends \Google\Model
 {
   /**
+   * The new image self link this instance will be upgraded to if calling the
+   * upgrade endpoint. This field will only be populated if field upgradeable is
+   * true.
+   *
    * @var string
    */
   public $upgradeImage;
   /**
+   * Additional information about upgrade.
+   *
    * @var string
    */
   public $upgradeInfo;
   /**
+   * The version this instance will be upgraded to if calling the upgrade
+   * endpoint. This field will only be populated if field upgradeable is true.
+   *
    * @var string
    */
   public $upgradeVersion;
   /**
+   * If an instance is upgradeable.
+   *
    * @var bool
    */
   public $upgradeable;
 
   /**
-   * @param string
+   * The new image self link this instance will be upgraded to if calling the
+   * upgrade endpoint. This field will only be populated if field upgradeable is
+   * true.
+   *
+   * @param string $upgradeImage
    */
   public function setUpgradeImage($upgradeImage)
   {
@@ -51,7 +66,9 @@ class CheckInstanceUpgradabilityResponse extends \Google\Model
     return $this->upgradeImage;
   }
   /**
-   * @param string
+   * Additional information about upgrade.
+   *
+   * @param string $upgradeInfo
    */
   public function setUpgradeInfo($upgradeInfo)
   {
@@ -65,7 +82,10 @@ class CheckInstanceUpgradabilityResponse extends \Google\Model
     return $this->upgradeInfo;
   }
   /**
-   * @param string
+   * The version this instance will be upgraded to if calling the upgrade
+   * endpoint. This field will only be populated if field upgradeable is true.
+   *
+   * @param string $upgradeVersion
    */
   public function setUpgradeVersion($upgradeVersion)
   {
@@ -79,7 +99,9 @@ class CheckInstanceUpgradabilityResponse extends \Google\Model
     return $this->upgradeVersion;
   }
   /**
-   * @param bool
+   * If an instance is upgradeable.
+   *
+   * @param bool $upgradeable
    */
   public function setUpgradeable($upgradeable)
   {

@@ -19,22 +19,42 @@ namespace Google\Service\Container;
 
 class NodeAffinity extends \Google\Collection
 {
+  /**
+   * Invalid or unspecified affinity operator.
+   */
+  public const OPERATOR_OPERATOR_UNSPECIFIED = 'OPERATOR_UNSPECIFIED';
+  /**
+   * Affinity operator.
+   */
+  public const OPERATOR_IN = 'IN';
+  /**
+   * Anti-affinity operator.
+   */
+  public const OPERATOR_NOT_IN = 'NOT_IN';
   protected $collection_key = 'values';
   /**
+   * Key for NodeAffinity.
+   *
    * @var string
    */
   public $key;
   /**
+   * Operator for NodeAffinity.
+   *
    * @var string
    */
   public $operator;
   /**
+   * Values for NodeAffinity.
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param string
+   * Key for NodeAffinity.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -48,21 +68,27 @@ class NodeAffinity extends \Google\Collection
     return $this->key;
   }
   /**
-   * @param string
+   * Operator for NodeAffinity.
+   *
+   * Accepted values: OPERATOR_UNSPECIFIED, IN, NOT_IN
+   *
+   * @param self::OPERATOR_* $operator
    */
   public function setOperator($operator)
   {
     $this->operator = $operator;
   }
   /**
-   * @return string
+   * @return self::OPERATOR_*
    */
   public function getOperator()
   {
     return $this->operator;
   }
   /**
-   * @param string[]
+   * Values for NodeAffinity.
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

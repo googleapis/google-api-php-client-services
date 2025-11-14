@@ -19,16 +19,77 @@ namespace Google\Service\CloudSupport;
 
 class Media extends \Google\Collection
 {
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_PATH = 'PATH';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_BLOB_REF = 'BLOB_REF';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_INLINE = 'INLINE';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_GET_MEDIA = 'GET_MEDIA';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_COMPOSITE_MEDIA = 'COMPOSITE_MEDIA';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_BIGSTORE_REF = 'BIGSTORE_REF';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_DIFF_VERSION_RESPONSE = 'DIFF_VERSION_RESPONSE';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_DIFF_CHECKSUMS_RESPONSE = 'DIFF_CHECKSUMS_RESPONSE';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_DIFF_DOWNLOAD_RESPONSE = 'DIFF_DOWNLOAD_RESPONSE';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_DIFF_UPLOAD_REQUEST = 'DIFF_UPLOAD_REQUEST';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_DIFF_UPLOAD_RESPONSE = 'DIFF_UPLOAD_RESPONSE';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_COSMO_BINARY_REFERENCE = 'COSMO_BINARY_REFERENCE';
+  /**
+   * # gdata.* are outside protos with mising documentation
+   */
+  public const REFERENCE_TYPE_ARBITRARY_BYTES = 'ARBITRARY_BYTES';
   protected $collection_key = 'compositeMedia';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
    * @var string
    */
   public $algorithm;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
    * @var string
    */
   public $bigstoreObjectRef;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
    * @var string
    */
   public $blobRef;
@@ -37,16 +98,22 @@ class Media extends \Google\Collection
   protected $compositeMediaType = CompositeMedia::class;
   protected $compositeMediaDataType = 'array';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $contentType;
   protected $contentTypeInfoType = ContentTypeInfo::class;
   protected $contentTypeInfoDataType = '';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $cosmoBinaryReference;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $crc32cHash;
@@ -63,72 +130,105 @@ class Media extends \Google\Collection
   protected $downloadParametersType = DownloadParameters::class;
   protected $downloadParametersDataType = '';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $filename;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
    * @var string
    */
   public $hash;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var bool
    */
   public $hashVerified;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $inline;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var bool
    */
   public $isPotentialRetry;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $length;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $md5Hash;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $mediaId;
   protected $objectIdType = ObjectId::class;
   protected $objectIdDataType = '';
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $path;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $referenceType;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $sha1Hash;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $sha256Hash;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $timestamp;
   /**
+   * # gdata.* are outside protos with mising documentation
+   *
    * @var string
    */
   public $token;
 
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
+   * @param string $algorithm
    */
   public function setAlgorithm($algorithm)
   {
     $this->algorithm = $algorithm;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getAlgorithm()
@@ -136,13 +236,17 @@ class Media extends \Google\Collection
     return $this->algorithm;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
+   * @param string $bigstoreObjectRef
    */
   public function setBigstoreObjectRef($bigstoreObjectRef)
   {
     $this->bigstoreObjectRef = $bigstoreObjectRef;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getBigstoreObjectRef()
@@ -150,13 +254,17 @@ class Media extends \Google\Collection
     return $this->bigstoreObjectRef;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
+   * @param string $blobRef
    */
   public function setBlobRef($blobRef)
   {
     $this->blobRef = $blobRef;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getBlobRef()
@@ -164,7 +272,9 @@ class Media extends \Google\Collection
     return $this->blobRef;
   }
   /**
-   * @param Blobstore2Info
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param Blobstore2Info $blobstore2Info
    */
   public function setBlobstore2Info(Blobstore2Info $blobstore2Info)
   {
@@ -178,7 +288,9 @@ class Media extends \Google\Collection
     return $this->blobstore2Info;
   }
   /**
-   * @param CompositeMedia[]
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param CompositeMedia[] $compositeMedia
    */
   public function setCompositeMedia($compositeMedia)
   {
@@ -192,7 +304,9 @@ class Media extends \Google\Collection
     return $this->compositeMedia;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $contentType
    */
   public function setContentType($contentType)
   {
@@ -206,7 +320,9 @@ class Media extends \Google\Collection
     return $this->contentType;
   }
   /**
-   * @param ContentTypeInfo
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param ContentTypeInfo $contentTypeInfo
    */
   public function setContentTypeInfo(ContentTypeInfo $contentTypeInfo)
   {
@@ -220,7 +336,9 @@ class Media extends \Google\Collection
     return $this->contentTypeInfo;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $cosmoBinaryReference
    */
   public function setCosmoBinaryReference($cosmoBinaryReference)
   {
@@ -234,7 +352,9 @@ class Media extends \Google\Collection
     return $this->cosmoBinaryReference;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $crc32cHash
    */
   public function setCrc32cHash($crc32cHash)
   {
@@ -248,7 +368,9 @@ class Media extends \Google\Collection
     return $this->crc32cHash;
   }
   /**
-   * @param DiffChecksumsResponse
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param DiffChecksumsResponse $diffChecksumsResponse
    */
   public function setDiffChecksumsResponse(DiffChecksumsResponse $diffChecksumsResponse)
   {
@@ -262,7 +384,9 @@ class Media extends \Google\Collection
     return $this->diffChecksumsResponse;
   }
   /**
-   * @param DiffDownloadResponse
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param DiffDownloadResponse $diffDownloadResponse
    */
   public function setDiffDownloadResponse(DiffDownloadResponse $diffDownloadResponse)
   {
@@ -276,7 +400,9 @@ class Media extends \Google\Collection
     return $this->diffDownloadResponse;
   }
   /**
-   * @param DiffUploadRequest
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param DiffUploadRequest $diffUploadRequest
    */
   public function setDiffUploadRequest(DiffUploadRequest $diffUploadRequest)
   {
@@ -290,7 +416,9 @@ class Media extends \Google\Collection
     return $this->diffUploadRequest;
   }
   /**
-   * @param DiffUploadResponse
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param DiffUploadResponse $diffUploadResponse
    */
   public function setDiffUploadResponse(DiffUploadResponse $diffUploadResponse)
   {
@@ -304,7 +432,9 @@ class Media extends \Google\Collection
     return $this->diffUploadResponse;
   }
   /**
-   * @param DiffVersionResponse
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param DiffVersionResponse $diffVersionResponse
    */
   public function setDiffVersionResponse(DiffVersionResponse $diffVersionResponse)
   {
@@ -318,7 +448,9 @@ class Media extends \Google\Collection
     return $this->diffVersionResponse;
   }
   /**
-   * @param DownloadParameters
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param DownloadParameters $downloadParameters
    */
   public function setDownloadParameters(DownloadParameters $downloadParameters)
   {
@@ -332,7 +464,9 @@ class Media extends \Google\Collection
     return $this->downloadParameters;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $filename
    */
   public function setFilename($filename)
   {
@@ -346,13 +480,17 @@ class Media extends \Google\Collection
     return $this->filename;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @deprecated
+   * @param string $hash
    */
   public function setHash($hash)
   {
     $this->hash = $hash;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getHash()
@@ -360,7 +498,9 @@ class Media extends \Google\Collection
     return $this->hash;
   }
   /**
-   * @param bool
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param bool $hashVerified
    */
   public function setHashVerified($hashVerified)
   {
@@ -374,7 +514,9 @@ class Media extends \Google\Collection
     return $this->hashVerified;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $inline
    */
   public function setInline($inline)
   {
@@ -388,7 +530,9 @@ class Media extends \Google\Collection
     return $this->inline;
   }
   /**
-   * @param bool
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param bool $isPotentialRetry
    */
   public function setIsPotentialRetry($isPotentialRetry)
   {
@@ -402,7 +546,9 @@ class Media extends \Google\Collection
     return $this->isPotentialRetry;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $length
    */
   public function setLength($length)
   {
@@ -416,7 +562,9 @@ class Media extends \Google\Collection
     return $this->length;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $md5Hash
    */
   public function setMd5Hash($md5Hash)
   {
@@ -430,7 +578,9 @@ class Media extends \Google\Collection
     return $this->md5Hash;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $mediaId
    */
   public function setMediaId($mediaId)
   {
@@ -444,7 +594,9 @@ class Media extends \Google\Collection
     return $this->mediaId;
   }
   /**
-   * @param ObjectId
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param ObjectId $objectId
    */
   public function setObjectId(ObjectId $objectId)
   {
@@ -458,7 +610,9 @@ class Media extends \Google\Collection
     return $this->objectId;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -472,21 +626,30 @@ class Media extends \Google\Collection
     return $this->path;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * Accepted values: PATH, BLOB_REF, INLINE, GET_MEDIA, COMPOSITE_MEDIA,
+   * BIGSTORE_REF, DIFF_VERSION_RESPONSE, DIFF_CHECKSUMS_RESPONSE,
+   * DIFF_DOWNLOAD_RESPONSE, DIFF_UPLOAD_REQUEST, DIFF_UPLOAD_RESPONSE,
+   * COSMO_BINARY_REFERENCE, ARBITRARY_BYTES
+   *
+   * @param self::REFERENCE_TYPE_* $referenceType
    */
   public function setReferenceType($referenceType)
   {
     $this->referenceType = $referenceType;
   }
   /**
-   * @return string
+   * @return self::REFERENCE_TYPE_*
    */
   public function getReferenceType()
   {
     return $this->referenceType;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $sha1Hash
    */
   public function setSha1Hash($sha1Hash)
   {
@@ -500,7 +663,9 @@ class Media extends \Google\Collection
     return $this->sha1Hash;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $sha256Hash
    */
   public function setSha256Hash($sha256Hash)
   {
@@ -514,7 +679,9 @@ class Media extends \Google\Collection
     return $this->sha256Hash;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $timestamp
    */
   public function setTimestamp($timestamp)
   {
@@ -528,7 +695,9 @@ class Media extends \Google\Collection
     return $this->timestamp;
   }
   /**
-   * @param string
+   * # gdata.* are outside protos with mising documentation
+   *
+   * @param string $token
    */
   public function setToken($token)
   {

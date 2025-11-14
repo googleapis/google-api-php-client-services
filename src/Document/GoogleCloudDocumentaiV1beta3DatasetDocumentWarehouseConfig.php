@@ -20,16 +20,25 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig extends \Google\Model
 {
   /**
+   * Output only. The collection in Document AI Warehouse associated with the
+   * dataset.
+   *
    * @var string
    */
   public $collection;
   /**
+   * Output only. The schema in Document AI Warehouse associated with the
+   * dataset.
+   *
    * @var string
    */
   public $schema;
 
   /**
-   * @param string
+   * Output only. The collection in Document AI Warehouse associated with the
+   * dataset.
+   *
+   * @param string $collection
    */
   public function setCollection($collection)
   {
@@ -43,7 +52,10 @@ class GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig extends \Google
     return $this->collection;
   }
   /**
-   * @param string
+   * Output only. The schema in Document AI Warehouse associated with the
+   * dataset.
+   *
+   * @param string $schema
    */
   public function setSchema($schema)
   {

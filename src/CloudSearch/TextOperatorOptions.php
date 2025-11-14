@@ -20,16 +20,43 @@ namespace Google\Service\CloudSearch;
 class TextOperatorOptions extends \Google\Model
 {
   /**
+   * If true, the text value is tokenized as one atomic value in operator
+   * searches and facet matches. For example, if the operator name is "genre"
+   * and the value is "science-fiction" the query restrictions "genre:science"
+   * and "genre:fiction" doesn't match the item; "genre:science-fiction" does.
+   * Text value matching is case-sensitive and does not remove special
+   * characters. If false, the text is tokenized. For example, if the value is
+   * "science-fiction" the queries "genre:science" and "genre:fiction" matches
+   * the item.
+   *
    * @var bool
    */
   public $exactMatchWithOperator;
   /**
+   * Indicates the operator name required in the query in order to isolate the
+   * text property. For example, if operatorName is *subject* and the property's
+   * name is *subjectLine*, then queries like *subject:* show results only where
+   * the value of the property named *subjectLine* matches **. By contrast, a
+   * search that uses the same ** without an operator returns all items where **
+   * matches the value of any text properties or text within the content field
+   * for the item. The operator name can only contain lowercase letters (a-z).
+   * The maximum length is 32 characters.
+   *
    * @var string
    */
   public $operatorName;
 
   /**
-   * @param bool
+   * If true, the text value is tokenized as one atomic value in operator
+   * searches and facet matches. For example, if the operator name is "genre"
+   * and the value is "science-fiction" the query restrictions "genre:science"
+   * and "genre:fiction" doesn't match the item; "genre:science-fiction" does.
+   * Text value matching is case-sensitive and does not remove special
+   * characters. If false, the text is tokenized. For example, if the value is
+   * "science-fiction" the queries "genre:science" and "genre:fiction" matches
+   * the item.
+   *
+   * @param bool $exactMatchWithOperator
    */
   public function setExactMatchWithOperator($exactMatchWithOperator)
   {
@@ -43,7 +70,16 @@ class TextOperatorOptions extends \Google\Model
     return $this->exactMatchWithOperator;
   }
   /**
-   * @param string
+   * Indicates the operator name required in the query in order to isolate the
+   * text property. For example, if operatorName is *subject* and the property's
+   * name is *subjectLine*, then queries like *subject:* show results only where
+   * the value of the property named *subjectLine* matches **. By contrast, a
+   * search that uses the same ** without an operator returns all items where **
+   * matches the value of any text properties or text within the content field
+   * for the item. The operator name can only contain lowercase letters (a-z).
+   * The maximum length is 32 characters.
+   *
+   * @param string $operatorName
    */
   public function setOperatorName($operatorName)
   {

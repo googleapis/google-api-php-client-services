@@ -20,22 +20,30 @@ namespace Google\Service\Blogger;
 class PostAuthor extends \Google\Model
 {
   /**
+   * The display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The identifier of the creator.
+   *
    * @var string
    */
   public $id;
   protected $imageType = PostAuthorImage::class;
   protected $imageDataType = '';
   /**
+   * The URL of the creator's Profile page.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -49,7 +57,9 @@ class PostAuthor extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The identifier of the creator.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +73,9 @@ class PostAuthor extends \Google\Model
     return $this->id;
   }
   /**
-   * @param PostAuthorImage
+   * The creator's avatar.
+   *
+   * @param PostAuthorImage $image
    */
   public function setImage(PostAuthorImage $image)
   {
@@ -77,7 +89,9 @@ class PostAuthor extends \Google\Model
     return $this->image;
   }
   /**
-   * @param string
+   * The URL of the creator's Profile page.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

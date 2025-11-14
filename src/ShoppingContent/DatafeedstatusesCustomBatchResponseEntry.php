@@ -20,6 +20,8 @@ namespace Google\Service\ShoppingContent;
 class DatafeedstatusesCustomBatchResponseEntry extends \Google\Model
 {
   /**
+   * The ID of the request entry this entry responds to.
+   *
    * @var string
    */
   public $batchId;
@@ -29,7 +31,9 @@ class DatafeedstatusesCustomBatchResponseEntry extends \Google\Model
   protected $errorsDataType = '';
 
   /**
-   * @param string
+   * The ID of the request entry this entry responds to.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -43,7 +47,10 @@ class DatafeedstatusesCustomBatchResponseEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param DatafeedStatus
+   * The requested data feed status. Defined if and only if the request was
+   * successful.
+   *
+   * @param DatafeedStatus $datafeedStatus
    */
   public function setDatafeedStatus(DatafeedStatus $datafeedStatus)
   {
@@ -57,7 +64,10 @@ class DatafeedstatusesCustomBatchResponseEntry extends \Google\Model
     return $this->datafeedStatus;
   }
   /**
-   * @param Errors
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail
+   * the whole request.
+   *
+   * @param Errors $errors
    */
   public function setErrors(Errors $errors)
   {

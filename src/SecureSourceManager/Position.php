@@ -20,16 +20,24 @@ namespace Google\Service\SecureSourceManager;
 class Position extends \Google\Model
 {
   /**
+   * Required. The line number of the comment. Positive value means it's on the
+   * new side of the diff, negative value means it's on the old side.
+   *
    * @var string
    */
   public $line;
   /**
+   * Required. The path of the file.
+   *
    * @var string
    */
   public $path;
 
   /**
-   * @param string
+   * Required. The line number of the comment. Positive value means it's on the
+   * new side of the diff, negative value means it's on the old side.
+   *
+   * @param string $line
    */
   public function setLine($line)
   {
@@ -43,7 +51,9 @@ class Position extends \Google\Model
     return $this->line;
   }
   /**
-   * @param string
+   * Required. The path of the file.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {

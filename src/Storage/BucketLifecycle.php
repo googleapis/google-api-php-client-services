@@ -24,7 +24,10 @@ class BucketLifecycle extends \Google\Collection
   protected $ruleDataType = 'array';
 
   /**
-   * @param BucketLifecycleRule[]
+   * A lifecycle management rule, which is made of an action to take and the
+   * condition(s) under which the action will be taken.
+   *
+   * @param BucketLifecycleRule[] $rule
    */
   public function setRule($rule)
   {

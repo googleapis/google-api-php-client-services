@@ -20,16 +20,22 @@ namespace Google\Service\ContainerAnalysis;
 class Hash extends \Google\Model
 {
   /**
+   * Required. The type of hash that was performed, e.g. "SHA-256".
+   *
    * @var string
    */
   public $type;
   /**
+   * Required. The hash value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The type of hash that was performed, e.g. "SHA-256".
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -43,7 +49,9 @@ class Hash extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * Required. The hash value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

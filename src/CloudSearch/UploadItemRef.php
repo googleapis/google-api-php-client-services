@@ -20,12 +20,16 @@ namespace Google\Service\CloudSearch;
 class UploadItemRef extends \Google\Model
 {
   /**
+   * The name of the content reference. The maximum length is 2048 characters.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The name of the content reference. The maximum length is 2048 characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

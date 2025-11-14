@@ -26,7 +26,9 @@ class PointData extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param TimeInterval
+   * The time interval associated with the point.
+   *
+   * @param TimeInterval $timeInterval
    */
   public function setTimeInterval(TimeInterval $timeInterval)
   {
@@ -40,7 +42,9 @@ class PointData extends \Google\Collection
     return $this->timeInterval;
   }
   /**
-   * @param TypedValue[]
+   * The values that make up the point.
+   *
+   * @param TypedValue[] $values
    */
   public function setValues($values)
   {

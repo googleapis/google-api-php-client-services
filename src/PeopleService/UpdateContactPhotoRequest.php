@@ -21,20 +21,45 @@ class UpdateContactPhotoRequest extends \Google\Collection
 {
   protected $collection_key = 'sources';
   /**
+   * Optional. A field mask to restrict which fields on the person are returned.
+   * Multiple fields can be specified by separating them with commas. Defaults
+   * to empty if not set, which will skip the post mutate get. Valid values are:
+   * * addresses * ageRanges * biographies * birthdays * calendarUrls *
+   * clientData * coverPhotos * emailAddresses * events * externalIds * genders
+   * * imClients * interests * locales * locations * memberships * metadata *
+   * miscKeywords * names * nicknames * occupations * organizations *
+   * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+   * userDefined
+   *
    * @var string
    */
   public $personFields;
   /**
+   * Required. Raw photo bytes
+   *
    * @var string
    */
   public $photoBytes;
   /**
+   * Optional. A mask of what source types to return. Defaults to
+   * READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
+   *
    * @var string[]
    */
   public $sources;
 
   /**
-   * @param string
+   * Optional. A field mask to restrict which fields on the person are returned.
+   * Multiple fields can be specified by separating them with commas. Defaults
+   * to empty if not set, which will skip the post mutate get. Valid values are:
+   * * addresses * ageRanges * biographies * birthdays * calendarUrls *
+   * clientData * coverPhotos * emailAddresses * events * externalIds * genders
+   * * imClients * interests * locales * locations * memberships * metadata *
+   * miscKeywords * names * nicknames * occupations * organizations *
+   * phoneNumbers * photos * relations * sipAddresses * skills * urls *
+   * userDefined
+   *
+   * @param string $personFields
    */
   public function setPersonFields($personFields)
   {
@@ -48,7 +73,9 @@ class UpdateContactPhotoRequest extends \Google\Collection
     return $this->personFields;
   }
   /**
-   * @param string
+   * Required. Raw photo bytes
+   *
+   * @param string $photoBytes
    */
   public function setPhotoBytes($photoBytes)
   {
@@ -62,7 +89,10 @@ class UpdateContactPhotoRequest extends \Google\Collection
     return $this->photoBytes;
   }
   /**
-   * @param string[]
+   * Optional. A mask of what source types to return. Defaults to
+   * READ_SOURCE_TYPE_CONTACT and READ_SOURCE_TYPE_PROFILE if not set.
+   *
+   * @param string[] $sources
    */
   public function setSources($sources)
   {

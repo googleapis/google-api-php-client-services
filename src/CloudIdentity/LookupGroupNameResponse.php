@@ -20,12 +20,18 @@ namespace Google\Service\CloudIdentity;
 class LookupGroupNameResponse extends \Google\Model
 {
   /**
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the looked-up `Group`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the looked-up `Group`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

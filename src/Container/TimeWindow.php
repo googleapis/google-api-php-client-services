@@ -20,18 +20,26 @@ namespace Google\Service\Container;
 class TimeWindow extends \Google\Model
 {
   /**
+   * The time that the window ends. The end time should take place after the
+   * start time.
+   *
    * @var string
    */
   public $endTime;
   protected $maintenanceExclusionOptionsType = MaintenanceExclusionOptions::class;
   protected $maintenanceExclusionOptionsDataType = '';
   /**
+   * The time that the window first starts.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The time that the window ends. The end time should take place after the
+   * start time.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -45,7 +53,9 @@ class TimeWindow extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param MaintenanceExclusionOptions
+   * MaintenanceExclusionOptions provides maintenance exclusion related options.
+   *
+   * @param MaintenanceExclusionOptions $maintenanceExclusionOptions
    */
   public function setMaintenanceExclusionOptions(MaintenanceExclusionOptions $maintenanceExclusionOptions)
   {
@@ -59,7 +69,9 @@ class TimeWindow extends \Google\Model
     return $this->maintenanceExclusionOptions;
   }
   /**
-   * @param string
+   * The time that the window first starts.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

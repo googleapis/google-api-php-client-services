@@ -20,12 +20,20 @@ namespace Google\Service\SecretManager;
 class DisableSecretVersionRequest extends \Google\Model
 {
   /**
+   * Optional. Etag of the SecretVersion. The request succeeds if it matches the
+   * etag of the currently stored secret version object. If the etag is omitted,
+   * the request succeeds.
+   *
    * @var string
    */
   public $etag;
 
   /**
-   * @param string
+   * Optional. Etag of the SecretVersion. The request succeeds if it matches the
+   * etag of the currently stored secret version object. If the etag is omitted,
+   * the request succeeds.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {

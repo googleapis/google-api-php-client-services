@@ -21,18 +21,25 @@ class SideInputInfo extends \Google\Collection
 {
   protected $collection_key = 'sources';
   /**
+   * How to interpret the source element(s) as a side input value.
+   *
    * @var array[]
    */
   public $kind;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
   /**
+   * The id of the tag the user code will access this side input by; this should
+   * correspond to the tag of some MultiOutputInfo.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param array[]
+   * How to interpret the source element(s) as a side input value.
+   *
+   * @param array[] $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +53,11 @@ class SideInputInfo extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Source[]
+   * The source(s) to read element(s) from to get the value of this side input.
+   * If more than one source, then the elements are taken from the sources, in
+   * the specified order if order matters. At least one source is required.
+   *
+   * @param Source[] $sources
    */
   public function setSources($sources)
   {
@@ -60,7 +71,10 @@ class SideInputInfo extends \Google\Collection
     return $this->sources;
   }
   /**
-   * @param string
+   * The id of the tag the user code will access this side input by; this should
+   * correspond to the tag of some MultiOutputInfo.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

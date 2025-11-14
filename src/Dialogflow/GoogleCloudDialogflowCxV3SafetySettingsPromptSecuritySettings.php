@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3SafetySettingsPromptSecuritySettings extends \Google\Model
 {
   /**
+   * Optional. Enable prompt security checks.
+   *
    * @var bool
    */
   public $enablePromptSecurity;
 
   /**
-   * @param bool
+   * Optional. Enable prompt security checks.
+   *
+   * @param bool $enablePromptSecurity
    */
   public function setEnablePromptSecurity($enablePromptSecurity)
   {

@@ -21,20 +21,36 @@ class DayPartTargeting extends \Google\Collection
 {
   protected $collection_key = 'hoursOfDay';
   /**
+   * Days of the week when the ad will serve. Acceptable values are: - "SUNDAY"
+   * - "MONDAY" - "TUESDAY" - "WEDNESDAY" - "THURSDAY" - "FRIDAY" - "SATURDAY"
+   *
    * @var string[]
    */
   public $daysOfWeek;
   /**
+   * Hours of the day when the ad will serve, where 0 is midnight to 1 AM and 23
+   * is 11 PM to midnight. Can be specified with days of week, in which case the
+   * ad would serve during these hours on the specified days. For example if
+   * Monday, Wednesday, Friday are the days of week specified and 9-10am, 3-5pm
+   * (hours 9, 15, and 16) is specified, the ad would serve Monday, Wednesdays,
+   * and Fridays at 9-10am and 3-5pm. Acceptable values are 0 to 23, inclusive.
+   *
    * @var int[]
    */
   public $hoursOfDay;
   /**
+   * Whether or not to use the user's local time. If false, the America/New York
+   * time zone applies.
+   *
    * @var bool
    */
   public $userLocalTime;
 
   /**
-   * @param string[]
+   * Days of the week when the ad will serve. Acceptable values are: - "SUNDAY"
+   * - "MONDAY" - "TUESDAY" - "WEDNESDAY" - "THURSDAY" - "FRIDAY" - "SATURDAY"
+   *
+   * @param string[] $daysOfWeek
    */
   public function setDaysOfWeek($daysOfWeek)
   {
@@ -48,7 +64,14 @@ class DayPartTargeting extends \Google\Collection
     return $this->daysOfWeek;
   }
   /**
-   * @param int[]
+   * Hours of the day when the ad will serve, where 0 is midnight to 1 AM and 23
+   * is 11 PM to midnight. Can be specified with days of week, in which case the
+   * ad would serve during these hours on the specified days. For example if
+   * Monday, Wednesday, Friday are the days of week specified and 9-10am, 3-5pm
+   * (hours 9, 15, and 16) is specified, the ad would serve Monday, Wednesdays,
+   * and Fridays at 9-10am and 3-5pm. Acceptable values are 0 to 23, inclusive.
+   *
+   * @param int[] $hoursOfDay
    */
   public function setHoursOfDay($hoursOfDay)
   {
@@ -62,7 +85,10 @@ class DayPartTargeting extends \Google\Collection
     return $this->hoursOfDay;
   }
   /**
-   * @param bool
+   * Whether or not to use the user's local time. If false, the America/New York
+   * time zone applies.
+   *
+   * @param bool $userLocalTime
    */
   public function setUserLocalTime($userLocalTime)
   {

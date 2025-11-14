@@ -20,10 +20,33 @@ namespace Google\Service\Digitalassetlinks;
 class Statement extends \Google\Model
 {
   /**
+   * The relation identifies the use of the statement as intended by the source
+   * asset's owner (that is, the person or entity who issued the statement).
+   * Every complete statement has a relation. We identify relations with strings
+   * of the format `/`, where `` must be one of a set of pre-defined purpose
+   * categories, and `` is a free-form lowercase alphanumeric string that
+   * describes the specific use case of the statement. Refer to [our API
+   * documentation](/digital-asset-links/v1/relation-strings) for the current
+   * list of supported relations. Example:
+   * `delegate_permission/common.handle_all_urls` REQUIRED
+   *
    * @var string
    */
   public $relation;
   /**
+   * Statements may specify relation level extensions/payloads to express more
+   * details when declaring permissions to grant from the source asset to the
+   * target asset. These relation extensions should be specified in the
+   * `relation_extensions` object, keyed by the relation type they're associated
+   * with. { relation: ["delegate_permission/common.handle_all_urls"], target:
+   * {...}, relation_extensions: { "delegate_permission/common.handle_all_urls":
+   * { ...handle_all_urls specific payload specified here... } } } When
+   * requested, and specified in the statement file, the API will return
+   * relation_extensions associated with the statement's relation type. i.e. the
+   * API will only return relation_extensions specified for
+   * "delegate_permission/common.handle_all_urls" if this statement object's
+   * relation type is "delegate_permission/common.handle_all_urls".
+   *
    * @var array[]
    */
   public $relationExtensions;
@@ -33,7 +56,17 @@ class Statement extends \Google\Model
   protected $targetDataType = '';
 
   /**
-   * @param string
+   * The relation identifies the use of the statement as intended by the source
+   * asset's owner (that is, the person or entity who issued the statement).
+   * Every complete statement has a relation. We identify relations with strings
+   * of the format `/`, where `` must be one of a set of pre-defined purpose
+   * categories, and `` is a free-form lowercase alphanumeric string that
+   * describes the specific use case of the statement. Refer to [our API
+   * documentation](/digital-asset-links/v1/relation-strings) for the current
+   * list of supported relations. Example:
+   * `delegate_permission/common.handle_all_urls` REQUIRED
+   *
+   * @param string $relation
    */
   public function setRelation($relation)
   {
@@ -47,7 +80,20 @@ class Statement extends \Google\Model
     return $this->relation;
   }
   /**
-   * @param array[]
+   * Statements may specify relation level extensions/payloads to express more
+   * details when declaring permissions to grant from the source asset to the
+   * target asset. These relation extensions should be specified in the
+   * `relation_extensions` object, keyed by the relation type they're associated
+   * with. { relation: ["delegate_permission/common.handle_all_urls"], target:
+   * {...}, relation_extensions: { "delegate_permission/common.handle_all_urls":
+   * { ...handle_all_urls specific payload specified here... } } } When
+   * requested, and specified in the statement file, the API will return
+   * relation_extensions associated with the statement's relation type. i.e. the
+   * API will only return relation_extensions specified for
+   * "delegate_permission/common.handle_all_urls" if this statement object's
+   * relation type is "delegate_permission/common.handle_all_urls".
+   *
+   * @param array[] $relationExtensions
    */
   public function setRelationExtensions($relationExtensions)
   {
@@ -61,7 +107,9 @@ class Statement extends \Google\Model
     return $this->relationExtensions;
   }
   /**
-   * @param Asset
+   * Every statement has a source asset. REQUIRED
+   *
+   * @param Asset $source
    */
   public function setSource(Asset $source)
   {
@@ -75,7 +123,9 @@ class Statement extends \Google\Model
     return $this->source;
   }
   /**
-   * @param Asset
+   * Every statement has a target asset. REQUIRED
+   *
+   * @param Asset $target
    */
   public function setTarget(Asset $target)
   {

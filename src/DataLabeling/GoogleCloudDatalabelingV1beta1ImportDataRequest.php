@@ -22,12 +22,17 @@ class GoogleCloudDatalabelingV1beta1ImportDataRequest extends \Google\Model
   protected $inputConfigType = GoogleCloudDatalabelingV1beta1InputConfig::class;
   protected $inputConfigDataType = '';
   /**
+   * Email of the user who started the import task and should be notified by
+   * email. If empty no notification will be sent.
+   *
    * @var string
    */
   public $userEmailAddress;
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1InputConfig
+   * Required. Specify the input source of the data.
+   *
+   * @param GoogleCloudDatalabelingV1beta1InputConfig $inputConfig
    */
   public function setInputConfig(GoogleCloudDatalabelingV1beta1InputConfig $inputConfig)
   {
@@ -41,7 +46,10 @@ class GoogleCloudDatalabelingV1beta1ImportDataRequest extends \Google\Model
     return $this->inputConfig;
   }
   /**
-   * @param string
+   * Email of the user who started the import task and should be notified by
+   * email. If empty no notification will be sent.
+   *
+   * @param string $userEmailAddress
    */
   public function setUserEmailAddress($userEmailAddress)
   {

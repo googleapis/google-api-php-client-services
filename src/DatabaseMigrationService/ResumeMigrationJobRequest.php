@@ -20,12 +20,18 @@ namespace Google\Service\DatabaseMigrationService;
 class ResumeMigrationJobRequest extends \Google\Model
 {
   /**
+   * Optional. Resume the migration job without running prior configuration
+   * verification. Defaults to `false`.
+   *
    * @var bool
    */
   public $skipValidation;
 
   /**
-   * @param bool
+   * Optional. Resume the migration job without running prior configuration
+   * verification. Defaults to `false`.
+   *
+   * @param bool $skipValidation
    */
   public function setSkipValidation($skipValidation)
   {

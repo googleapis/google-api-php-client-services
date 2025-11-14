@@ -23,7 +23,9 @@ class CreateAssetResponse extends \Google\Model
   protected $assetDataType = '';
 
   /**
-   * @param Asset
+   * The uploaded asset, if successful.
+   *
+   * @param Asset $asset
    */
   public function setAsset(Asset $asset)
   {

@@ -23,7 +23,10 @@ class InventorySourceDisplayCreativeConfig extends \Google\Model
   protected $creativeSizeDataType = '';
 
   /**
-   * @param Dimensions
+   * The size requirements for display creatives that can be assigned to the
+   * inventory source.
+   *
+   * @param Dimensions $creativeSize
    */
   public function setCreativeSize(Dimensions $creativeSize)
   {

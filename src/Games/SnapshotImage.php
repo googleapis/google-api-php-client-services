@@ -23,28 +23,42 @@ class SnapshotImage extends \Google\Model
         "mimeType" => "mime_type",
   ];
   /**
+   * The height of the image.
+   *
    * @var int
    */
   public $height;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#snapshotImage`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The MIME type of the image.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * The URL of the image. This URL may be invalidated at any time and should
+   * not be cached.
+   *
    * @var string
    */
   public $url;
   /**
+   * The width of the image.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * The height of the image.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -58,7 +72,10 @@ class SnapshotImage extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#snapshotImage`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -72,7 +89,9 @@ class SnapshotImage extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The MIME type of the image.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -86,7 +105,10 @@ class SnapshotImage extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * The URL of the image. This URL may be invalidated at any time and should
+   * not be cached.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {
@@ -100,7 +122,9 @@ class SnapshotImage extends \Google\Model
     return $this->url;
   }
   /**
-   * @param int
+   * The width of the image.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

@@ -22,12 +22,16 @@ class GoogleCloudDocumentaiV1beta3PropertyMetadata extends \Google\Model
   protected $fieldExtractionMetadataType = GoogleCloudDocumentaiV1beta3FieldExtractionMetadata::class;
   protected $fieldExtractionMetadataDataType = '';
   /**
+   * Whether the property should be considered as "inactive".
+   *
    * @var bool
    */
   public $inactive;
 
   /**
-   * @param GoogleCloudDocumentaiV1beta3FieldExtractionMetadata
+   * Field extraction metadata on the property.
+   *
+   * @param GoogleCloudDocumentaiV1beta3FieldExtractionMetadata $fieldExtractionMetadata
    */
   public function setFieldExtractionMetadata(GoogleCloudDocumentaiV1beta3FieldExtractionMetadata $fieldExtractionMetadata)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDocumentaiV1beta3PropertyMetadata extends \Google\Model
     return $this->fieldExtractionMetadata;
   }
   /**
-   * @param bool
+   * Whether the property should be considered as "inactive".
+   *
+   * @param bool $inactive
    */
   public function setInactive($inactive)
   {

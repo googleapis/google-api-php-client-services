@@ -20,12 +20,18 @@ namespace Google\Service\CloudSearch;
 class Name extends \Google\Model
 {
   /**
+   * The read-only display name formatted according to the locale specified by
+   * the viewer's account or the `Accept-Language` HTTP header.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * The read-only display name formatted according to the locale specified by
+   * the viewer's account or the `Accept-Language` HTTP header.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

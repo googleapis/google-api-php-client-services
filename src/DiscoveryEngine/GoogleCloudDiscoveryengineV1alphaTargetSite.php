@@ -20,44 +20,122 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
 {
   /**
+   * Defaults to SUCCEEDED.
+   */
+  public const INDEXING_STATUS_INDEXING_STATUS_UNSPECIFIED = 'INDEXING_STATUS_UNSPECIFIED';
+  /**
+   * The target site is in the update queue and will be picked up by indexing
+   * pipeline.
+   */
+  public const INDEXING_STATUS_PENDING = 'PENDING';
+  /**
+   * The target site fails to be indexed.
+   */
+  public const INDEXING_STATUS_FAILED = 'FAILED';
+  /**
+   * The target site has been indexed.
+   */
+  public const INDEXING_STATUS_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The previously indexed target site has been marked to be deleted. This is a
+   * transitioning state which will resulted in either: 1. target site deleted
+   * if unindexing is successful; 2. state reverts to SUCCEEDED if the
+   * unindexing fails.
+   */
+  public const INDEXING_STATUS_DELETING = 'DELETING';
+  /**
+   * The target site change is pending but cancellable.
+   */
+  public const INDEXING_STATUS_CANCELLABLE = 'CANCELLABLE';
+  /**
+   * The target site change is cancelled.
+   */
+  public const INDEXING_STATUS_CANCELLED = 'CANCELLED';
+  /**
+   * This value is unused. In this case, server behavior defaults to
+   * Type.INCLUDE.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Include the target site.
+   */
+  public const TYPE_INCLUDE = 'INCLUDE';
+  /**
+   * Exclude the target site.
+   */
+  public const TYPE_EXCLUDE = 'EXCLUDE';
+  /**
+   * Immutable. If set to false, a uri_pattern is generated to include all pages
+   * whose address contains the provided_uri_pattern. If set to true, an
+   * uri_pattern is generated to try to be an exact match of the
+   * provided_uri_pattern or just the specific page if the provided_uri_pattern
+   * is a specific one. provided_uri_pattern is always normalized to generate
+   * the URI pattern to be used by the search engine.
+   *
    * @var bool
    */
   public $exactMatch;
   protected $failureReasonType = GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason::class;
   protected $failureReasonDataType = '';
   /**
+   * Output only. This is system-generated based on the provided_uri_pattern.
+   *
    * @var string
    */
   public $generatedUriPattern;
   /**
+   * Output only. Indexing status.
+   *
    * @var string
    */
   public $indexingStatus;
   /**
+   * Output only. The fully qualified resource name of the target site. `project
+   * s/{project}/locations/{location}/collections/{collection}/dataStores/{data_
+   * store}/siteSearchEngine/targetSites/{target_site}` The `target_site_id` is
+   * system-generated.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Input only. The user provided URI pattern from which the
+   * `generated_uri_pattern` is generated.
+   *
    * @var string
    */
   public $providedUriPattern;
   /**
+   * Output only. Root domain of the provided_uri_pattern.
+   *
    * @var string
    */
   public $rootDomainUri;
   protected $siteVerificationInfoType = GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo::class;
   protected $siteVerificationInfoDataType = '';
   /**
+   * The type of the target site, e.g., whether the site is to be included or
+   * excluded.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. The target site's last updated time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * Immutable. If set to false, a uri_pattern is generated to include all pages
+   * whose address contains the provided_uri_pattern. If set to true, an
+   * uri_pattern is generated to try to be an exact match of the
+   * provided_uri_pattern or just the specific page if the provided_uri_pattern
+   * is a specific one. provided_uri_pattern is always normalized to generate
+   * the URI pattern to be used by the search engine.
+   *
+   * @param bool $exactMatch
    */
   public function setExactMatch($exactMatch)
   {
@@ -71,7 +149,9 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->exactMatch;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason
+   * Output only. Failure reason.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason $failureReason
    */
   public function setFailureReason(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason $failureReason)
   {
@@ -85,7 +165,9 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->failureReason;
   }
   /**
-   * @param string
+   * Output only. This is system-generated based on the provided_uri_pattern.
+   *
+   * @param string $generatedUriPattern
    */
   public function setGeneratedUriPattern($generatedUriPattern)
   {
@@ -99,21 +181,31 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->generatedUriPattern;
   }
   /**
-   * @param string
+   * Output only. Indexing status.
+   *
+   * Accepted values: INDEXING_STATUS_UNSPECIFIED, PENDING, FAILED, SUCCEEDED,
+   * DELETING, CANCELLABLE, CANCELLED
+   *
+   * @param self::INDEXING_STATUS_* $indexingStatus
    */
   public function setIndexingStatus($indexingStatus)
   {
     $this->indexingStatus = $indexingStatus;
   }
   /**
-   * @return string
+   * @return self::INDEXING_STATUS_*
    */
   public function getIndexingStatus()
   {
     return $this->indexingStatus;
   }
   /**
-   * @param string
+   * Output only. The fully qualified resource name of the target site. `project
+   * s/{project}/locations/{location}/collections/{collection}/dataStores/{data_
+   * store}/siteSearchEngine/targetSites/{target_site}` The `target_site_id` is
+   * system-generated.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -127,7 +219,10 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Input only. The user provided URI pattern from which the
+   * `generated_uri_pattern` is generated.
+   *
+   * @param string $providedUriPattern
    */
   public function setProvidedUriPattern($providedUriPattern)
   {
@@ -141,7 +236,9 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->providedUriPattern;
   }
   /**
-   * @param string
+   * Output only. Root domain of the provided_uri_pattern.
+   *
+   * @param string $rootDomainUri
    */
   public function setRootDomainUri($rootDomainUri)
   {
@@ -155,7 +252,9 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->rootDomainUri;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo
+   * Output only. Site ownership and validity verification status.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo $siteVerificationInfo
    */
   public function setSiteVerificationInfo(GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo $siteVerificationInfo)
   {
@@ -169,21 +268,28 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
     return $this->siteVerificationInfo;
   }
   /**
-   * @param string
+   * The type of the target site, e.g., whether the site is to be included or
+   * excluded.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, INCLUDE, EXCLUDE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. The target site's last updated time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

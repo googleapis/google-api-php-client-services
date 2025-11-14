@@ -21,6 +21,8 @@ class ListTemplatesResponse extends \Google\Collection
 {
   protected $collection_key = 'template';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListTemplatesResponse extends \Google\Collection
   protected $templateDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListTemplatesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param CustomTemplate[]
+   * All GTM Custom Templates of a GTM Container.
+   *
+   * @param CustomTemplate[] $template
    */
   public function setTemplate($template)
   {

@@ -20,32 +20,55 @@ namespace Google\Service\Container;
 class UpdateClusterRequest extends \Google\Model
 {
   /**
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $clusterId;
   /**
+   * The name (project, location, cluster) of the cluster to update. Specified
+   * in the format `projects/locations/clusters`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
    * @var string
    */
   public $projectId;
   protected $updateType = ClusterUpdate::class;
   protected $updateDataType = '';
   /**
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * Deprecated. The name of the cluster to upgrade. This field has been
+   * deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $clusterId
    */
   public function setClusterId($clusterId)
   {
     $this->clusterId = $clusterId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getClusterId()
@@ -53,7 +76,10 @@ class UpdateClusterRequest extends \Google\Model
     return $this->clusterId;
   }
   /**
-   * @param string
+   * The name (project, location, cluster) of the cluster to update. Specified
+   * in the format `projects/locations/clusters`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -67,13 +93,19 @@ class UpdateClusterRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Deprecated. The Google Developers Console [project ID or project
+   * number](https://cloud.google.com/resource-manager/docs/creating-managing-
+   * projects). This field has been deprecated and replaced by the name field.
+   *
+   * @deprecated
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
     $this->projectId = $projectId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProjectId()
@@ -81,7 +113,9 @@ class UpdateClusterRequest extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param ClusterUpdate
+   * Required. A description of the update.
+   *
+   * @param ClusterUpdate $update
    */
   public function setUpdate(ClusterUpdate $update)
   {
@@ -95,13 +129,20 @@ class UpdateClusterRequest extends \Google\Model
     return $this->update;
   }
   /**
-   * @param string
+   * Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
+   *
+   * @deprecated
+   * @param string $zone
    */
   public function setZone($zone)
   {
     $this->zone = $zone;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getZone()

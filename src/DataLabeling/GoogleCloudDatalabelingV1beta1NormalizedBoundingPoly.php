@@ -24,7 +24,9 @@ class GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly extends \Google\Colle
   protected $normalizedVerticesDataType = 'array';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1NormalizedVertex[]
+   * The bounding polygon normalized vertices.
+   *
+   * @param GoogleCloudDatalabelingV1beta1NormalizedVertex[] $normalizedVertices
    */
   public function setNormalizedVertices($normalizedVertices)
   {

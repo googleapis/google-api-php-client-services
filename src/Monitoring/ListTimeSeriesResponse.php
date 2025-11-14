@@ -23,22 +23,38 @@ class ListTimeSeriesResponse extends \Google\Collection
   protected $executionErrorsType = Status::class;
   protected $executionErrorsDataType = 'array';
   /**
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $timeSeriesType = TimeSeries::class;
   protected $timeSeriesDataType = 'array';
   /**
+   * The unit in which all time_series point values are reported. unit follows
+   * the UCUM format for units as seen in https://unitsofmeasure.org/ucum.html.
+   * If different time_series have different units (for example, because they
+   * come from different metric types, or a unit is absent), then unit will be
+   * "{not_a_unit}".
+   *
    * @var string
    */
   public $unit;
   /**
+   * Cloud regions that were unreachable which may have caused incomplete data
+   * to be returned.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Status[]
+   * Query execution errors that may have caused the time series data returned
+   * to be incomplete.
+   *
+   * @param Status[] $executionErrors
    */
   public function setExecutionErrors($executionErrors)
   {
@@ -52,7 +68,11 @@ class ListTimeSeriesResponse extends \Google\Collection
     return $this->executionErrors;
   }
   /**
-   * @param string
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -66,7 +86,9 @@ class ListTimeSeriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TimeSeries[]
+   * One or more time series that match the filter included in the request.
+   *
+   * @param TimeSeries[] $timeSeries
    */
   public function setTimeSeries($timeSeries)
   {
@@ -80,7 +102,13 @@ class ListTimeSeriesResponse extends \Google\Collection
     return $this->timeSeries;
   }
   /**
-   * @param string
+   * The unit in which all time_series point values are reported. unit follows
+   * the UCUM format for units as seen in https://unitsofmeasure.org/ucum.html.
+   * If different time_series have different units (for example, because they
+   * come from different metric types, or a unit is absent), then unit will be
+   * "{not_a_unit}".
+   *
+   * @param string $unit
    */
   public function setUnit($unit)
   {
@@ -94,7 +122,10 @@ class ListTimeSeriesResponse extends \Google\Collection
     return $this->unit;
   }
   /**
-   * @param string[]
+   * Cloud regions that were unreachable which may have caused incomplete data
+   * to be returned.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -30,7 +30,10 @@ class AzureMetadata extends \Google\Collection
   protected $tenantDataType = '';
 
   /**
-   * @param AzureManagementGroup[]
+   * A list of Azure management groups associated with the resource, ordered
+   * from lowest level (closest to the subscription) to highest level.
+   *
+   * @param AzureManagementGroup[] $managementGroups
    */
   public function setManagementGroups($managementGroups)
   {
@@ -44,7 +47,9 @@ class AzureMetadata extends \Google\Collection
     return $this->managementGroups;
   }
   /**
-   * @param AzureResourceGroup
+   * The Azure resource group associated with the resource.
+   *
+   * @param AzureResourceGroup $resourceGroup
    */
   public function setResourceGroup(AzureResourceGroup $resourceGroup)
   {
@@ -58,7 +63,9 @@ class AzureMetadata extends \Google\Collection
     return $this->resourceGroup;
   }
   /**
-   * @param AzureSubscription
+   * The Azure subscription associated with the resource.
+   *
+   * @param AzureSubscription $subscription
    */
   public function setSubscription(AzureSubscription $subscription)
   {
@@ -72,7 +79,9 @@ class AzureMetadata extends \Google\Collection
     return $this->subscription;
   }
   /**
-   * @param AzureTenant
+   * The Azure Entra tenant associated with the resource.
+   *
+   * @param AzureTenant $tenant
    */
   public function setTenant(AzureTenant $tenant)
   {

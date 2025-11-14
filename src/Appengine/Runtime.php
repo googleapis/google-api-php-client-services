@@ -19,40 +19,98 @@ namespace Google\Service\Appengine;
 
 class Runtime extends \Google\Collection
 {
+  /**
+   * Default value.
+   */
+  public const ENVIRONMENT_ENVIRONMENT_UNSPECIFIED = 'ENVIRONMENT_UNSPECIFIED';
+  /**
+   * App Engine Standard.
+   */
+  public const ENVIRONMENT_STANDARD = 'STANDARD';
+  /**
+   * App Engine Flexible
+   */
+  public const ENVIRONMENT_FLEXIBLE = 'FLEXIBLE';
+  /**
+   * Not specified.
+   */
+  public const STAGE_RUNTIME_STAGE_UNSPECIFIED = 'RUNTIME_STAGE_UNSPECIFIED';
+  /**
+   * The runtime is in development.
+   */
+  public const STAGE_DEVELOPMENT = 'DEVELOPMENT';
+  /**
+   * The runtime is in the Alpha stage.
+   */
+  public const STAGE_ALPHA = 'ALPHA';
+  /**
+   * The runtime is in the Beta stage.
+   */
+  public const STAGE_BETA = 'BETA';
+  /**
+   * The runtime is generally available.
+   */
+  public const STAGE_GA = 'GA';
+  /**
+   * The runtime is deprecated.
+   */
+  public const STAGE_DEPRECATED = 'DEPRECATED';
+  /**
+   * The runtime is no longer supported.
+   */
+  public const STAGE_DECOMMISSIONED = 'DECOMMISSIONED';
+  /**
+   * The runtime is end of support.
+   */
+  public const STAGE_END_OF_SUPPORT = 'END_OF_SUPPORT';
   protected $collection_key = 'warnings';
   protected $decommissionedDateType = Date::class;
   protected $decommissionedDateDataType = '';
   protected $deprecationDateType = Date::class;
   protected $deprecationDateDataType = '';
   /**
+   * User-friendly display name, e.g. 'Node.js 12', etc.
+   *
    * @var string
    */
   public $displayName;
   protected $endOfSupportDateType = Date::class;
   protected $endOfSupportDateDataType = '';
   /**
+   * The environment of the runtime.
+   *
    * @var string
    */
   public $environment;
   /**
+   * The name of the runtime, e.g., 'go113', 'nodejs12', etc.
+   *
    * @var string
    */
   public $name;
   /**
+   * The stage of life this runtime is in, e.g., BETA, GA, etc.
+   *
    * @var string
    */
   public $stage;
   /**
+   * Supported operating systems for the runtime, e.g., 'ubuntu22', etc.
+   *
    * @var string[]
    */
   public $supportedOperatingSystems;
   /**
+   * Warning messages, e.g., a deprecation warning.
+   *
    * @var string[]
    */
   public $warnings;
 
   /**
-   * @param Date
+   * Date when Runtime is decommissioned.
+   *
+   * @param Date $decommissionedDate
    */
   public function setDecommissionedDate(Date $decommissionedDate)
   {
@@ -66,7 +124,9 @@ class Runtime extends \Google\Collection
     return $this->decommissionedDate;
   }
   /**
-   * @param Date
+   * Date when Runtime is deprecated.
+   *
+   * @param Date $deprecationDate
    */
   public function setDeprecationDate(Date $deprecationDate)
   {
@@ -80,7 +140,9 @@ class Runtime extends \Google\Collection
     return $this->deprecationDate;
   }
   /**
-   * @param string
+   * User-friendly display name, e.g. 'Node.js 12', etc.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -94,7 +156,9 @@ class Runtime extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param Date
+   * Date when Runtime is end of support.
+   *
+   * @param Date $endOfSupportDate
    */
   public function setEndOfSupportDate(Date $endOfSupportDate)
   {
@@ -108,21 +172,27 @@ class Runtime extends \Google\Collection
     return $this->endOfSupportDate;
   }
   /**
-   * @param string
+   * The environment of the runtime.
+   *
+   * Accepted values: ENVIRONMENT_UNSPECIFIED, STANDARD, FLEXIBLE
+   *
+   * @param self::ENVIRONMENT_* $environment
    */
   public function setEnvironment($environment)
   {
     $this->environment = $environment;
   }
   /**
-   * @return string
+   * @return self::ENVIRONMENT_*
    */
   public function getEnvironment()
   {
     return $this->environment;
   }
   /**
-   * @param string
+   * The name of the runtime, e.g., 'go113', 'nodejs12', etc.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -136,21 +206,28 @@ class Runtime extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The stage of life this runtime is in, e.g., BETA, GA, etc.
+   *
+   * Accepted values: RUNTIME_STAGE_UNSPECIFIED, DEVELOPMENT, ALPHA, BETA, GA,
+   * DEPRECATED, DECOMMISSIONED, END_OF_SUPPORT
+   *
+   * @param self::STAGE_* $stage
    */
   public function setStage($stage)
   {
     $this->stage = $stage;
   }
   /**
-   * @return string
+   * @return self::STAGE_*
    */
   public function getStage()
   {
     return $this->stage;
   }
   /**
-   * @param string[]
+   * Supported operating systems for the runtime, e.g., 'ubuntu22', etc.
+   *
+   * @param string[] $supportedOperatingSystems
    */
   public function setSupportedOperatingSystems($supportedOperatingSystems)
   {
@@ -164,7 +241,9 @@ class Runtime extends \Google\Collection
     return $this->supportedOperatingSystems;
   }
   /**
-   * @param string[]
+   * Warning messages, e.g., a deprecation warning.
+   *
+   * @param string[] $warnings
    */
   public function setWarnings($warnings)
   {

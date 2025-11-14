@@ -22,12 +22,16 @@ class ExportFindingsMetadata extends \Google\Model
   protected $bigQueryDestinationType = BigQueryDestination::class;
   protected $bigQueryDestinationDataType = '';
   /**
+   * Optional. Timestamp at which export was started
+   *
    * @var string
    */
   public $exportStartTime;
 
   /**
-   * @param BigQueryDestination
+   * Required. The destination BigQuery dataset to export findings to.
+   *
+   * @param BigQueryDestination $bigQueryDestination
    */
   public function setBigQueryDestination(BigQueryDestination $bigQueryDestination)
   {
@@ -41,7 +45,9 @@ class ExportFindingsMetadata extends \Google\Model
     return $this->bigQueryDestination;
   }
   /**
-   * @param string
+   * Optional. Timestamp at which export was started
+   *
+   * @param string $exportStartTime
    */
   public function setExportStartTime($exportStartTime)
   {

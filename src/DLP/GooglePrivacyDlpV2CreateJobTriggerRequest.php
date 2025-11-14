@@ -22,16 +22,25 @@ class GooglePrivacyDlpV2CreateJobTriggerRequest extends \Google\Model
   protected $jobTriggerType = GooglePrivacyDlpV2JobTrigger::class;
   protected $jobTriggerDataType = '';
   /**
+   * Deprecated. This field has no effect.
+   *
    * @var string
    */
   public $locationId;
   /**
+   * The trigger id can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
    * @var string
    */
   public $triggerId;
 
   /**
-   * @param GooglePrivacyDlpV2JobTrigger
+   * Required. The JobTrigger to create.
+   *
+   * @param GooglePrivacyDlpV2JobTrigger $jobTrigger
    */
   public function setJobTrigger(GooglePrivacyDlpV2JobTrigger $jobTrigger)
   {
@@ -45,7 +54,9 @@ class GooglePrivacyDlpV2CreateJobTriggerRequest extends \Google\Model
     return $this->jobTrigger;
   }
   /**
-   * @param string
+   * Deprecated. This field has no effect.
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -59,7 +70,12 @@ class GooglePrivacyDlpV2CreateJobTriggerRequest extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param string
+   * The trigger id can contain uppercase and lowercase letters, numbers, and
+   * hyphens; that is, it must match the regular expression: `[a-zA-Z\d-_]+`.
+   * The maximum length is 100 characters. Can be empty to allow the system to
+   * generate one.
+   *
+   * @param string $triggerId
    */
   public function setTriggerId($triggerId)
   {

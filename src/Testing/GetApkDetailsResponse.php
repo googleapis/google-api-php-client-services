@@ -23,7 +23,9 @@ class GetApkDetailsResponse extends \Google\Model
   protected $apkDetailDataType = '';
 
   /**
-   * @param ApkDetail
+   * Details of the Android App.
+   *
+   * @param ApkDetail $apkDetail
    */
   public function setApkDetail(ApkDetail $apkDetail)
   {

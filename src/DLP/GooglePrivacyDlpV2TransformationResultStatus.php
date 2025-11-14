@@ -19,15 +19,45 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2TransformationResultStatus extends \Google\Model
 {
+  /**
+   * Unused.
+   */
+  public const RESULT_STATUS_TYPE_STATE_TYPE_UNSPECIFIED = 'STATE_TYPE_UNSPECIFIED';
+  /**
+   * This will be set when a finding could not be transformed (i.e. outside user
+   * set bucket range).
+   */
+  public const RESULT_STATUS_TYPE_INVALID_TRANSFORM = 'INVALID_TRANSFORM';
+  /**
+   * This will be set when a BigQuery transformation was successful but could
+   * not be stored back in BigQuery because the transformed row exceeds
+   * BigQuery's max row size.
+   */
+  public const RESULT_STATUS_TYPE_BIGQUERY_MAX_ROW_SIZE_EXCEEDED = 'BIGQUERY_MAX_ROW_SIZE_EXCEEDED';
+  /**
+   * This will be set when there is a finding in the custom metadata of a file,
+   * but at the write time of the transformed file, this key / value pair is
+   * unretrievable.
+   */
+  public const RESULT_STATUS_TYPE_METADATA_UNRETRIEVABLE = 'METADATA_UNRETRIEVABLE';
+  /**
+   * This will be set when the transformation and storing of it is successful.
+   */
+  public const RESULT_STATUS_TYPE_SUCCESS = 'SUCCESS';
   protected $detailsType = GoogleRpcStatus::class;
   protected $detailsDataType = '';
   /**
+   * Transformation result status type, this will be either SUCCESS, or it will
+   * be the reason for why the transformation was not completely successful.
+   *
    * @var string
    */
   public $resultStatusType;
 
   /**
-   * @param GoogleRpcStatus
+   * Detailed error codes and messages
+   *
+   * @param GoogleRpcStatus $details
    */
   public function setDetails(GoogleRpcStatus $details)
   {
@@ -41,14 +71,20 @@ class GooglePrivacyDlpV2TransformationResultStatus extends \Google\Model
     return $this->details;
   }
   /**
-   * @param string
+   * Transformation result status type, this will be either SUCCESS, or it will
+   * be the reason for why the transformation was not completely successful.
+   *
+   * Accepted values: STATE_TYPE_UNSPECIFIED, INVALID_TRANSFORM,
+   * BIGQUERY_MAX_ROW_SIZE_EXCEEDED, METADATA_UNRETRIEVABLE, SUCCESS
+   *
+   * @param self::RESULT_STATUS_TYPE_* $resultStatusType
    */
   public function setResultStatusType($resultStatusType)
   {
     $this->resultStatusType = $resultStatusType;
   }
   /**
-   * @return string
+   * @return self::RESULT_STATUS_TYPE_*
    */
   public function getResultStatusType()
   {

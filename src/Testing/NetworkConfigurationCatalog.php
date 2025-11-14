@@ -24,7 +24,7 @@ class NetworkConfigurationCatalog extends \Google\Collection
   protected $configurationsDataType = 'array';
 
   /**
-   * @param NetworkConfiguration[]
+   * @param NetworkConfiguration[] $configurations
    */
   public function setConfigurations($configurations)
   {

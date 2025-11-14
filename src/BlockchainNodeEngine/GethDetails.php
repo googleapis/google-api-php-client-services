@@ -20,19 +20,43 @@ namespace Google\Service\BlockchainNodeEngine;
 class GethDetails extends \Google\Model
 {
   /**
+   * The garbage collection has not been specified.
+   */
+  public const GARBAGE_COLLECTION_MODE_GARBAGE_COLLECTION_MODE_UNSPECIFIED = 'GARBAGE_COLLECTION_MODE_UNSPECIFIED';
+  /**
+   * Configures Geth's garbage collection so that older data not needed for a
+   * full node is deleted. This is the default mode when creating a full node.
+   */
+  public const GARBAGE_COLLECTION_MODE_FULL = 'FULL';
+  /**
+   * Configures Geth's garbage collection so that old data is never deleted.
+   * This is the default mode when creating an archive node. This value can also
+   * be chosen when creating a full node in order to create a partial/recent
+   * archive node. See [Sync
+   * modes](https://geth.ethereum.org/docs/fundamentals/sync-modes) for more
+   * details.
+   */
+  public const GARBAGE_COLLECTION_MODE_ARCHIVE = 'ARCHIVE';
+  /**
+   * Immutable. Blockchain garbage collection mode.
+   *
    * @var string
    */
   public $garbageCollectionMode;
 
   /**
-   * @param string
+   * Immutable. Blockchain garbage collection mode.
+   *
+   * Accepted values: GARBAGE_COLLECTION_MODE_UNSPECIFIED, FULL, ARCHIVE
+   *
+   * @param self::GARBAGE_COLLECTION_MODE_* $garbageCollectionMode
    */
   public function setGarbageCollectionMode($garbageCollectionMode)
   {
     $this->garbageCollectionMode = $garbageCollectionMode;
   }
   /**
-   * @return string
+   * @return self::GARBAGE_COLLECTION_MODE_*
    */
   public function getGarbageCollectionMode()
   {

@@ -20,20 +20,29 @@ namespace Google\Service\Backupdr;
 class InitiateBackupResponse extends \Google\Model
 {
   /**
+   * The name of the backup that was created.
+   *
    * @var string
    */
   public $backup;
   /**
+   * The generation id of the base backup. It is needed for the incremental
+   * backups.
+   *
    * @var int
    */
   public $baseBackupGenerationId;
   /**
+   * The generation id of the new backup.
+   *
    * @var int
    */
   public $newBackupGenerationId;
 
   /**
-   * @param string
+   * The name of the backup that was created.
+   *
+   * @param string $backup
    */
   public function setBackup($backup)
   {
@@ -47,7 +56,10 @@ class InitiateBackupResponse extends \Google\Model
     return $this->backup;
   }
   /**
-   * @param int
+   * The generation id of the base backup. It is needed for the incremental
+   * backups.
+   *
+   * @param int $baseBackupGenerationId
    */
   public function setBaseBackupGenerationId($baseBackupGenerationId)
   {
@@ -61,7 +73,9 @@ class InitiateBackupResponse extends \Google\Model
     return $this->baseBackupGenerationId;
   }
   /**
-   * @param int
+   * The generation id of the new backup.
+   *
+   * @param int $newBackupGenerationId
    */
   public function setNewBackupGenerationId($newBackupGenerationId)
   {

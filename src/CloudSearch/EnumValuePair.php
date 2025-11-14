@@ -20,16 +20,24 @@ namespace Google\Service\CloudSearch;
 class EnumValuePair extends \Google\Model
 {
   /**
+   * The integer value of the EnumValuePair which must be non-negative.
+   * Optional.
+   *
    * @var int
    */
   public $integerValue;
   /**
+   * The string value of the EnumValuePair. The maximum length is 32 characters.
+   *
    * @var string
    */
   public $stringValue;
 
   /**
-   * @param int
+   * The integer value of the EnumValuePair which must be non-negative.
+   * Optional.
+   *
+   * @param int $integerValue
    */
   public function setIntegerValue($integerValue)
   {
@@ -43,7 +51,9 @@ class EnumValuePair extends \Google\Model
     return $this->integerValue;
   }
   /**
-   * @param string
+   * The string value of the EnumValuePair. The maximum length is 32 characters.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

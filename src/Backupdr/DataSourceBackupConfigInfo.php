@@ -20,30 +20,62 @@ namespace Google\Service\Backupdr;
 class DataSourceBackupConfigInfo extends \Google\Model
 {
   /**
+   * Status not set.
+   */
+  public const LAST_BACKUP_STATE_LAST_BACKUP_STATE_UNSPECIFIED = 'LAST_BACKUP_STATE_UNSPECIFIED';
+  /**
+   * The first backup has not yet completed
+   */
+  public const LAST_BACKUP_STATE_FIRST_BACKUP_PENDING = 'FIRST_BACKUP_PENDING';
+  /**
+   * The most recent backup was successful
+   */
+  public const LAST_BACKUP_STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The most recent backup failed
+   */
+  public const LAST_BACKUP_STATE_FAILED = 'FAILED';
+  /**
+   * The most recent backup could not be run/failed because of the lack of
+   * permissions
+   */
+  public const LAST_BACKUP_STATE_PERMISSION_DENIED = 'PERMISSION_DENIED';
+  /**
+   * Output only. The status of the last backup in this DataSource
+   *
    * @var string
    */
   public $lastBackupState;
   /**
+   * Output only. Timestamp of the last successful backup to this DataSource.
+   *
    * @var string
    */
   public $lastSuccessfulBackupConsistencyTime;
 
   /**
-   * @param string
+   * Output only. The status of the last backup in this DataSource
+   *
+   * Accepted values: LAST_BACKUP_STATE_UNSPECIFIED, FIRST_BACKUP_PENDING,
+   * SUCCEEDED, FAILED, PERMISSION_DENIED
+   *
+   * @param self::LAST_BACKUP_STATE_* $lastBackupState
    */
   public function setLastBackupState($lastBackupState)
   {
     $this->lastBackupState = $lastBackupState;
   }
   /**
-   * @return string
+   * @return self::LAST_BACKUP_STATE_*
    */
   public function getLastBackupState()
   {
     return $this->lastBackupState;
   }
   /**
-   * @param string
+   * Output only. Timestamp of the last successful backup to this DataSource.
+   *
+   * @param string $lastSuccessfulBackupConsistencyTime
    */
   public function setLastSuccessfulBackupConsistencyTime($lastSuccessfulBackupConsistencyTime)
   {

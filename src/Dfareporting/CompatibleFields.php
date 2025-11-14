@@ -26,6 +26,8 @@ class CompatibleFields extends \Google\Model
   protected $floodlightReportCompatibleFieldsType = FloodlightReportCompatibleFields::class;
   protected $floodlightReportCompatibleFieldsDataType = '';
   /**
+   * The kind of resource this is, in this case dfareporting#compatibleFields.
+   *
    * @var string
    */
   public $kind;
@@ -37,7 +39,10 @@ class CompatibleFields extends \Google\Model
   protected $reportCompatibleFieldsDataType = '';
 
   /**
-   * @param CrossDimensionReachReportCompatibleFields
+   * Contains items that are compatible to be selected for a report of type
+   * "CROSS_DIMENSION_REACH".
+   *
+   * @param CrossDimensionReachReportCompatibleFields $crossDimensionReachReportCompatibleFields
    */
   public function setCrossDimensionReachReportCompatibleFields(CrossDimensionReachReportCompatibleFields $crossDimensionReachReportCompatibleFields)
   {
@@ -51,7 +56,10 @@ class CompatibleFields extends \Google\Model
     return $this->crossDimensionReachReportCompatibleFields;
   }
   /**
-   * @param CrossMediaReachReportCompatibleFields
+   * Contains items that are compatible to be selected for a report of type
+   * "CROSS_MEDIA_REACH".
+   *
+   * @param CrossMediaReachReportCompatibleFields $crossMediaReachReportCompatibleFields
    */
   public function setCrossMediaReachReportCompatibleFields(CrossMediaReachReportCompatibleFields $crossMediaReachReportCompatibleFields)
   {
@@ -65,7 +73,10 @@ class CompatibleFields extends \Google\Model
     return $this->crossMediaReachReportCompatibleFields;
   }
   /**
-   * @param FloodlightReportCompatibleFields
+   * Contains items that are compatible to be selected for a report of type
+   * "FLOODLIGHT".
+   *
+   * @param FloodlightReportCompatibleFields $floodlightReportCompatibleFields
    */
   public function setFloodlightReportCompatibleFields(FloodlightReportCompatibleFields $floodlightReportCompatibleFields)
   {
@@ -79,7 +90,9 @@ class CompatibleFields extends \Google\Model
     return $this->floodlightReportCompatibleFields;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case dfareporting#compatibleFields.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -93,7 +106,10 @@ class CompatibleFields extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param PathToConversionReportCompatibleFields
+   * Contains items that are compatible to be selected for a report of type
+   * "PATH_TO_CONVERSION".
+   *
+   * @param PathToConversionReportCompatibleFields $pathToConversionReportCompatibleFields
    */
   public function setPathToConversionReportCompatibleFields(PathToConversionReportCompatibleFields $pathToConversionReportCompatibleFields)
   {
@@ -107,7 +123,10 @@ class CompatibleFields extends \Google\Model
     return $this->pathToConversionReportCompatibleFields;
   }
   /**
-   * @param ReachReportCompatibleFields
+   * Contains items that are compatible to be selected for a report of type
+   * "REACH".
+   *
+   * @param ReachReportCompatibleFields $reachReportCompatibleFields
    */
   public function setReachReportCompatibleFields(ReachReportCompatibleFields $reachReportCompatibleFields)
   {
@@ -121,7 +140,10 @@ class CompatibleFields extends \Google\Model
     return $this->reachReportCompatibleFields;
   }
   /**
-   * @param ReportCompatibleFields
+   * Contains items that are compatible to be selected for a report of type
+   * "STANDARD".
+   *
+   * @param ReportCompatibleFields $reportCompatibleFields
    */
   public function setReportCompatibleFields(ReportCompatibleFields $reportCompatibleFields)
   {

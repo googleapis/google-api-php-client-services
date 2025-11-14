@@ -20,16 +20,22 @@ namespace Google\Service\SQLAdmin;
 class SqlServerDatabaseDetails extends \Google\Model
 {
   /**
+   * The version of SQL Server with which the database is to be made compatible
+   *
    * @var int
    */
   public $compatibilityLevel;
   /**
+   * The recovery model of a SQL Server database
+   *
    * @var string
    */
   public $recoveryModel;
 
   /**
-   * @param int
+   * The version of SQL Server with which the database is to be made compatible
+   *
+   * @param int $compatibilityLevel
    */
   public function setCompatibilityLevel($compatibilityLevel)
   {
@@ -43,7 +49,9 @@ class SqlServerDatabaseDetails extends \Google\Model
     return $this->compatibilityLevel;
   }
   /**
-   * @param string
+   * The recovery model of a SQL Server database
+   *
+   * @param string $recoveryModel
    */
   public function setRecoveryModel($recoveryModel)
   {

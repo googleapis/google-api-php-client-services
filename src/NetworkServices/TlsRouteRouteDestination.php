@@ -20,16 +20,25 @@ namespace Google\Service\NetworkServices;
 class TlsRouteRouteDestination extends \Google\Model
 {
   /**
+   * Required. The URL of a BackendService to route traffic to.
+   *
    * @var string
    */
   public $serviceName;
   /**
+   * Optional. Specifies the proportion of requests forwarded to the backend
+   * referenced by the service_name field. This is computed as: -
+   * weight/Sum(weights in destinations) Weights in all destinations does not
+   * need to sum up to 100.
+   *
    * @var int
    */
   public $weight;
 
   /**
-   * @param string
+   * Required. The URL of a BackendService to route traffic to.
+   *
+   * @param string $serviceName
    */
   public function setServiceName($serviceName)
   {
@@ -43,7 +52,12 @@ class TlsRouteRouteDestination extends \Google\Model
     return $this->serviceName;
   }
   /**
-   * @param int
+   * Optional. Specifies the proportion of requests forwarded to the backend
+   * referenced by the service_name field. This is computed as: -
+   * weight/Sum(weights in destinations) Weights in all destinations does not
+   * need to sum up to 100.
+   *
+   * @param int $weight
    */
   public function setWeight($weight)
   {

@@ -20,16 +20,42 @@ namespace Google\Service\Dataform;
 class UncommittedFileChange extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The file has been newly added.
+   */
+  public const STATE_ADDED = 'ADDED';
+  /**
+   * The file has been deleted.
+   */
+  public const STATE_DELETED = 'DELETED';
+  /**
+   * The file has been modified.
+   */
+  public const STATE_MODIFIED = 'MODIFIED';
+  /**
+   * The file contains merge conflicts.
+   */
+  public const STATE_HAS_CONFLICTS = 'HAS_CONFLICTS';
+  /**
+   * The file's full path including filename, relative to the workspace root.
+   *
    * @var string
    */
   public $path;
   /**
+   * Output only. Indicates the status of the file.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The file's full path including filename, relative to the workspace root.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -43,14 +69,18 @@ class UncommittedFileChange extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Output only. Indicates the status of the file.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ADDED, DELETED, MODIFIED, HAS_CONFLICTS
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

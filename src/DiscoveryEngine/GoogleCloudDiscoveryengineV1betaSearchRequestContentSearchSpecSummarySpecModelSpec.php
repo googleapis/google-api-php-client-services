@@ -20,12 +20,32 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec extends \Google\Model
 {
   /**
+   * The model version used to generate the summary. Supported values are: *
+   * `stable`: string. Default value when no value is specified. Uses a
+   * generally available, fine-tuned model. For more information, see [Answer
+   * generation model versions and
+   * lifecycle](https://cloud.google.com/generative-ai-app-builder/docs/answer-
+   * generation-models). * `preview`: string. (Public preview) Uses a preview
+   * model. For more information, see [Answer generation model versions and
+   * lifecycle](https://cloud.google.com/generative-ai-app-builder/docs/answer-
+   * generation-models).
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The model version used to generate the summary. Supported values are: *
+   * `stable`: string. Default value when no value is specified. Uses a
+   * generally available, fine-tuned model. For more information, see [Answer
+   * generation model versions and
+   * lifecycle](https://cloud.google.com/generative-ai-app-builder/docs/answer-
+   * generation-models). * `preview`: string. (Public preview) Uses a preview
+   * model. For more information, see [Answer generation model versions and
+   * lifecycle](https://cloud.google.com/generative-ai-app-builder/docs/answer-
+   * generation-models).
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

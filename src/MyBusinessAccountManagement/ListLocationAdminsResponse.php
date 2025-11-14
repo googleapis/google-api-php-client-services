@@ -24,7 +24,9 @@ class ListLocationAdminsResponse extends \Google\Collection
   protected $adminsDataType = 'array';
 
   /**
-   * @param Admin[]
+   * A collection of Admins.
+   *
+   * @param Admin[] $admins
    */
   public function setAdmins($admins)
   {

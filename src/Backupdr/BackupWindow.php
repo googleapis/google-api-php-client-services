@@ -20,16 +20,31 @@ namespace Google\Service\Backupdr;
 class BackupWindow extends \Google\Model
 {
   /**
+   * Required. The hour of day (1-24) when the window end for e.g. if value of
+   * end hour of day is 10 that mean backup window end time is 10:00. End hour
+   * of day should be greater than start hour of day. 0 <= start_hour_of_day <
+   * end_hour_of_day <= 24 End hour of day is not include in backup window that
+   * mean if end_hour_of_day= 10 jobs should start before 10:00.
+   *
    * @var int
    */
   public $endHourOfDay;
   /**
+   * Required. The hour of day (0-23) when the window starts for e.g. if value
+   * of start hour of day is 6 that mean backup window start at 6:00.
+   *
    * @var int
    */
   public $startHourOfDay;
 
   /**
-   * @param int
+   * Required. The hour of day (1-24) when the window end for e.g. if value of
+   * end hour of day is 10 that mean backup window end time is 10:00. End hour
+   * of day should be greater than start hour of day. 0 <= start_hour_of_day <
+   * end_hour_of_day <= 24 End hour of day is not include in backup window that
+   * mean if end_hour_of_day= 10 jobs should start before 10:00.
+   *
+   * @param int $endHourOfDay
    */
   public function setEndHourOfDay($endHourOfDay)
   {
@@ -43,7 +58,10 @@ class BackupWindow extends \Google\Model
     return $this->endHourOfDay;
   }
   /**
-   * @param int
+   * Required. The hour of day (0-23) when the window starts for e.g. if value
+   * of start hour of day is 6 that mean backup window start at 6:00.
+   *
+   * @param int $startHourOfDay
    */
   public function setStartHourOfDay($startHourOfDay)
   {

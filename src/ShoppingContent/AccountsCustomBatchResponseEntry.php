@@ -22,18 +22,26 @@ class AccountsCustomBatchResponseEntry extends \Google\Model
   protected $accountType = Account::class;
   protected $accountDataType = '';
   /**
+   * The ID of the request entry this entry responds to.
+   *
    * @var string
    */
   public $batchId;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountsCustomBatchResponseEntry`"
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param Account
+   * The retrieved, created, or updated account. Not defined if the method was
+   * `delete`, `claimwebsite` or `link`.
+   *
+   * @param Account $account
    */
   public function setAccount(Account $account)
   {
@@ -47,7 +55,9 @@ class AccountsCustomBatchResponseEntry extends \Google\Model
     return $this->account;
   }
   /**
-   * @param string
+   * The ID of the request entry this entry responds to.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -61,7 +71,10 @@ class AccountsCustomBatchResponseEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param Errors
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail
+   * the whole request.
+   *
+   * @param Errors $errors
    */
   public function setErrors(Errors $errors)
   {
@@ -75,7 +88,10 @@ class AccountsCustomBatchResponseEntry extends \Google\Model
     return $this->errors;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountsCustomBatchResponseEntry`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

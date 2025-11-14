@@ -23,6 +23,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   protected $chunkedDocumentType = GoogleCloudDocumentaiV1DocumentChunkedDocument::class;
   protected $chunkedDocumentDataType = '';
   /**
+   * Optional. Inline document content, represented as a stream of bytes. Note:
+   * As with all `bytes` fields, protobuffers use a pure binary representation,
+   * whereas JSON representations use base64.
+   *
    * @var string
    */
   public $content;
@@ -35,6 +39,9 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
+   * An IANA published [media type (MIME
+   * type)](https://www.iana.org/assignments/media-types/media-types.xhtml).
+   *
    * @var string
    */
   public $mimeType;
@@ -45,6 +52,8 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   protected $shardInfoType = GoogleCloudDocumentaiV1DocumentShardInfo::class;
   protected $shardInfoDataType = '';
   /**
+   * Optional. UTF-8 encoded text in reading order from the document.
+   *
    * @var string
    */
   public $text;
@@ -53,12 +62,19 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
   protected $textStylesType = GoogleCloudDocumentaiV1DocumentStyle::class;
   protected $textStylesDataType = 'array';
   /**
+   * Optional. Currently supports Google Cloud Storage URI of the form
+   * `gs://bucket_name/object_name`. Object versioning is not supported. For
+   * more information, refer to [Google Cloud Storage Request
+   * URIs](https://cloud.google.com/storage/docs/reference-uris).
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentChunkedDocument
+   * Document chunked based on chunking config.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentChunkedDocument $chunkedDocument
    */
   public function setChunkedDocument(GoogleCloudDocumentaiV1DocumentChunkedDocument $chunkedDocument)
   {
@@ -72,7 +88,11 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->chunkedDocument;
   }
   /**
-   * @param string
+   * Optional. Inline document content, represented as a stream of bytes. Note:
+   * As with all `bytes` fields, protobuffers use a pure binary representation,
+   * whereas JSON representations use base64.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -86,7 +106,9 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->content;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentDocumentLayout
+   * Parsed layout of the document.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentDocumentLayout $documentLayout
    */
   public function setDocumentLayout(GoogleCloudDocumentaiV1DocumentDocumentLayout $documentLayout)
   {
@@ -100,7 +122,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->documentLayout;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentEntity[]
+   * A list of entities detected on Document.text. For document shards, entities
+   * in this list may cross shard boundaries.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentEntity[] $entities
    */
   public function setEntities($entities)
   {
@@ -114,7 +139,9 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentEntityRelation[]
+   * Placeholder. Relationship among Document.entities.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentEntityRelation[] $entityRelations
    */
   public function setEntityRelations($entityRelations)
   {
@@ -128,7 +155,9 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->entityRelations;
   }
   /**
-   * @param GoogleRpcStatus
+   * Any error that occurred while processing this document.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -142,7 +171,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param string
+   * An IANA published [media type (MIME
+   * type)](https://www.iana.org/assignments/media-types/media-types.xhtml).
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -156,7 +188,9 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->mimeType;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentPage[]
+   * Visual page layout for the Document.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentPage[] $pages
    */
   public function setPages($pages)
   {
@@ -170,7 +204,9 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->pages;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentRevision[]
+   * Placeholder. Revision history of this document.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentRevision[] $revisions
    */
   public function setRevisions($revisions)
   {
@@ -184,7 +220,10 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->revisions;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentShardInfo
+   * Information about the sharding if this document is sharded part of a larger
+   * document. If the document is not sharded, this message is not specified.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentShardInfo $shardInfo
    */
   public function setShardInfo(GoogleCloudDocumentaiV1DocumentShardInfo $shardInfo)
   {
@@ -198,7 +237,9 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->shardInfo;
   }
   /**
-   * @param string
+   * Optional. UTF-8 encoded text in reading order from the document.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
@@ -212,7 +253,11 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->text;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentTextChange[]
+   * Placeholder. A list of text corrections made to Document.text. This is
+   * usually used for annotating corrections to OCR mistakes. Text changes for a
+   * given revision may not overlap with each other.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentTextChange[] $textChanges
    */
   public function setTextChanges($textChanges)
   {
@@ -226,13 +271,17 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->textChanges;
   }
   /**
-   * @param GoogleCloudDocumentaiV1DocumentStyle[]
+   * Styles for the Document.text.
+   *
+   * @deprecated
+   * @param GoogleCloudDocumentaiV1DocumentStyle[] $textStyles
    */
   public function setTextStyles($textStyles)
   {
     $this->textStyles = $textStyles;
   }
   /**
+   * @deprecated
    * @return GoogleCloudDocumentaiV1DocumentStyle[]
    */
   public function getTextStyles()
@@ -240,7 +289,12 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
     return $this->textStyles;
   }
   /**
-   * @param string
+   * Optional. Currently supports Google Cloud Storage URI of the form
+   * `gs://bucket_name/object_name`. Object versioning is not supported. For
+   * more information, refer to [Google Cloud Storage Request
+   * URIs](https://cloud.google.com/storage/docs/reference-uris).
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

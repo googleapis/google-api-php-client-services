@@ -20,18 +20,27 @@ namespace Google\Service\Testing;
 class SystraceSetup extends \Google\Model
 {
   /**
+   * Systrace duration in seconds. Should be between 1 and 30 seconds. 0
+   * disables systrace.
+   *
+   * @deprecated
    * @var int
    */
   public $durationSeconds;
 
   /**
-   * @param int
+   * Systrace duration in seconds. Should be between 1 and 30 seconds. 0
+   * disables systrace.
+   *
+   * @deprecated
+   * @param int $durationSeconds
    */
   public function setDurationSeconds($durationSeconds)
   {
     $this->durationSeconds = $durationSeconds;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getDurationSeconds()

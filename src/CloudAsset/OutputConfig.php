@@ -25,7 +25,10 @@ class OutputConfig extends \Google\Model
   protected $gcsDestinationDataType = '';
 
   /**
-   * @param BigQueryDestination
+   * Destination on BigQuery. The output table stores the fields in asset
+   * Protobuf as columns in BigQuery.
+   *
+   * @param BigQueryDestination $bigqueryDestination
    */
   public function setBigqueryDestination(BigQueryDestination $bigqueryDestination)
   {
@@ -39,7 +42,9 @@ class OutputConfig extends \Google\Model
     return $this->bigqueryDestination;
   }
   /**
-   * @param GcsDestination
+   * Destination on Cloud Storage.
+   *
+   * @param GcsDestination $gcsDestination
    */
   public function setGcsDestination(GcsDestination $gcsDestination)
   {

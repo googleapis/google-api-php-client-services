@@ -21,6 +21,8 @@ class ListPullRequestsResponse extends \Google\Collection
 {
   protected $collection_key = 'pullRequests';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListPullRequestsResponse extends \Google\Collection
   protected $pullRequestsDataType = 'array';
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListPullRequestsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PullRequest[]
+   * The list of pull requests.
+   *
+   * @param PullRequest[] $pullRequests
    */
   public function setPullRequests($pullRequests)
   {

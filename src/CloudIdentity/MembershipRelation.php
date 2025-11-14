@@ -21,24 +21,38 @@ class MembershipRelation extends \Google\Collection
 {
   protected $collection_key = 'roles';
   /**
+   * An extended description to help users determine the purpose of a `Group`.
+   *
    * @var string
    */
   public $description;
   /**
+   * The display name of the `Group`.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the `Group`. Shall be of the form `groups/{group_id}`.
+   *
    * @var string
    */
   public $group;
   protected $groupKeyType = EntityKey::class;
   protected $groupKeyDataType = '';
   /**
+   * One or more label entries that apply to the Group. Currently supported
+   * labels contain a key with an empty value.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the `Membership`. Shall be of the form
+   * `groups/{group_id}/memberships/{membership_id}`.
+   *
    * @var string
    */
   public $membership;
@@ -46,7 +60,9 @@ class MembershipRelation extends \Google\Collection
   protected $rolesDataType = 'array';
 
   /**
-   * @param string
+   * An extended description to help users determine the purpose of a `Group`.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -60,7 +76,9 @@ class MembershipRelation extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The display name of the `Group`.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -74,7 +92,10 @@ class MembershipRelation extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the `Group`. Shall be of the form `groups/{group_id}`.
+   *
+   * @param string $group
    */
   public function setGroup($group)
   {
@@ -88,7 +109,9 @@ class MembershipRelation extends \Google\Collection
     return $this->group;
   }
   /**
-   * @param EntityKey
+   * The `EntityKey` of the `Group`.
+   *
+   * @param EntityKey $groupKey
    */
   public function setGroupKey(EntityKey $groupKey)
   {
@@ -102,7 +125,10 @@ class MembershipRelation extends \Google\Collection
     return $this->groupKey;
   }
   /**
-   * @param string[]
+   * One or more label entries that apply to the Group. Currently supported
+   * labels contain a key with an empty value.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -116,7 +142,11 @@ class MembershipRelation extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the `Membership`. Shall be of the form
+   * `groups/{group_id}/memberships/{membership_id}`.
+   *
+   * @param string $membership
    */
   public function setMembership($membership)
   {
@@ -130,7 +160,9 @@ class MembershipRelation extends \Google\Collection
     return $this->membership;
   }
   /**
-   * @param MembershipRole[]
+   * The `MembershipRole`s that apply to the `Membership`.
+   *
+   * @param MembershipRole[] $roles
    */
   public function setRoles($roles)
   {

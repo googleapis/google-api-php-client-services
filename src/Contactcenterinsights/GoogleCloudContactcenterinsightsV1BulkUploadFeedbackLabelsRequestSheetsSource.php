@@ -20,12 +20,22 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1BulkUploadFeedbackLabelsRequestSheetsSource extends \Google\Model
 {
   /**
+   * Required. The Google Sheets document to write the feedback labels to.
+   * Retrieved from Google Sheets URI. E.g.
+   * `https://docs.google.com/spreadsheets/d/1234567890` The spreadsheet must be
+   * shared with the Insights P4SA.
+   *
    * @var string
    */
   public $spreadsheetUri;
 
   /**
-   * @param string
+   * Required. The Google Sheets document to write the feedback labels to.
+   * Retrieved from Google Sheets URI. E.g.
+   * `https://docs.google.com/spreadsheets/d/1234567890` The spreadsheet must be
+   * shared with the Insights P4SA.
+   *
+   * @param string $spreadsheetUri
    */
   public function setSpreadsheetUri($spreadsheetUri)
   {

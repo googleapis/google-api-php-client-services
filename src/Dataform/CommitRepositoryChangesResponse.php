@@ -20,12 +20,16 @@ namespace Google\Service\Dataform;
 class CommitRepositoryChangesResponse extends \Google\Model
 {
   /**
+   * The commit SHA of the current commit.
+   *
    * @var string
    */
   public $commitSha;
 
   /**
-   * @param string
+   * The commit SHA of the current commit.
+   *
+   * @param string $commitSha
    */
   public function setCommitSha($commitSha)
   {

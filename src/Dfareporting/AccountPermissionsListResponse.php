@@ -23,12 +23,17 @@ class AccountPermissionsListResponse extends \Google\Collection
   protected $accountPermissionsType = AccountPermission::class;
   protected $accountPermissionsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountPermissionsListResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param AccountPermission[]
+   * Account permission collection.
+   *
+   * @param AccountPermission[] $accountPermissions
    */
   public function setAccountPermissions($accountPermissions)
   {
@@ -42,7 +47,10 @@ class AccountPermissionsListResponse extends \Google\Collection
     return $this->accountPermissions;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#accountPermissionsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

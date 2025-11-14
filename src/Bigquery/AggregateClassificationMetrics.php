@@ -19,12 +19,54 @@ namespace Google\Service\Bigquery;
 
 class AggregateClassificationMetrics extends \Google\Model
 {
+  /**
+   * Accuracy is the fraction of predictions given the correct label. For
+   * multiclass this is a micro-averaged metric.
+   *
+   * @var 
+   */
   public $accuracy;
+  /**
+   * The F1 score is an average of recall and precision. For multiclass this is
+   * a macro-averaged metric.
+   *
+   * @var 
+   */
   public $f1Score;
+  /**
+   * Logarithmic Loss. For multiclass this is a macro-averaged metric.
+   *
+   * @var 
+   */
   public $logLoss;
+  /**
+   * Precision is the fraction of actual positive predictions that had positive
+   * actual labels. For multiclass this is a macro-averaged metric treating each
+   * class as a binary classifier.
+   *
+   * @var 
+   */
   public $precision;
+  /**
+   * Recall is the fraction of actual positive labels that were given a positive
+   * prediction. For multiclass this is a macro-averaged metric.
+   *
+   * @var 
+   */
   public $recall;
+  /**
+   * Area Under a ROC Curve. For multiclass this is a macro-averaged metric.
+   *
+   * @var 
+   */
   public $rocAuc;
+  /**
+   * Threshold at which the metrics are computed. For binary classification
+   * models this is the positive class threshold. For multi-class classification
+   * models this is the confidence threshold.
+   *
+   * @var 
+   */
   public $threshold;
 
   public function setAccuracy($accuracy)

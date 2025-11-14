@@ -20,18 +20,35 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalDeviceMetadata extends \Google\Model
 {
   /**
+   * If populated, the Antenna Model Pattern to use. Format is:
+   * `RecordCreatorId:PatternId`
+   *
    * @var string
    */
   public $antennaModel;
   /**
+   * Common Channel Group (CCG). A group of CBSDs in the same ICG requesting a
+   * common primary channel assignment. For more details, see [CBRSA-TS-2001
+   * V3.0.0](https://ongoalliance.org/wp-content/uploads/2020/02/CBRSA-
+   * TS-2001-V3.0.0_Approved-for-publication.pdf).
+   *
    * @var string
    */
   public $commonChannelGroup;
   /**
+   * Interference Coordination Group (ICG). A group of CBSDs that manage their
+   * own interference with the group. For more details, see [CBRSA-TS-2001
+   * V3.0.0](https://ongoalliance.org/wp-content/uploads/2020/02/CBRSA-
+   * TS-2001-V3.0.0_Approved-for-publication.pdf).
+   *
    * @var string
    */
   public $interferenceCoordinationGroup;
   /**
+   * Output only. Set to `true` if a CPI has validated that they have
+   * coordinated with the National Quiet Zone office.
+   *
+   * @deprecated
    * @var bool
    */
   public $nrqzValidated;
@@ -39,7 +56,10 @@ class SasPortalDeviceMetadata extends \Google\Model
   protected $nrqzValidationDataType = '';
 
   /**
-   * @param string
+   * If populated, the Antenna Model Pattern to use. Format is:
+   * `RecordCreatorId:PatternId`
+   *
+   * @param string $antennaModel
    */
   public function setAntennaModel($antennaModel)
   {
@@ -53,7 +73,12 @@ class SasPortalDeviceMetadata extends \Google\Model
     return $this->antennaModel;
   }
   /**
-   * @param string
+   * Common Channel Group (CCG). A group of CBSDs in the same ICG requesting a
+   * common primary channel assignment. For more details, see [CBRSA-TS-2001
+   * V3.0.0](https://ongoalliance.org/wp-content/uploads/2020/02/CBRSA-
+   * TS-2001-V3.0.0_Approved-for-publication.pdf).
+   *
+   * @param string $commonChannelGroup
    */
   public function setCommonChannelGroup($commonChannelGroup)
   {
@@ -67,7 +92,12 @@ class SasPortalDeviceMetadata extends \Google\Model
     return $this->commonChannelGroup;
   }
   /**
-   * @param string
+   * Interference Coordination Group (ICG). A group of CBSDs that manage their
+   * own interference with the group. For more details, see [CBRSA-TS-2001
+   * V3.0.0](https://ongoalliance.org/wp-content/uploads/2020/02/CBRSA-
+   * TS-2001-V3.0.0_Approved-for-publication.pdf).
+   *
+   * @param string $interferenceCoordinationGroup
    */
   public function setInterferenceCoordinationGroup($interferenceCoordinationGroup)
   {
@@ -81,13 +111,18 @@ class SasPortalDeviceMetadata extends \Google\Model
     return $this->interferenceCoordinationGroup;
   }
   /**
-   * @param bool
+   * Output only. Set to `true` if a CPI has validated that they have
+   * coordinated with the National Quiet Zone office.
+   *
+   * @deprecated
+   * @param bool $nrqzValidated
    */
   public function setNrqzValidated($nrqzValidated)
   {
     $this->nrqzValidated = $nrqzValidated;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getNrqzValidated()
@@ -95,7 +130,9 @@ class SasPortalDeviceMetadata extends \Google\Model
     return $this->nrqzValidated;
   }
   /**
-   * @param SasPortalNrqzValidation
+   * Output only. National Radio Quiet Zone validation info.
+   *
+   * @param SasPortalNrqzValidation $nrqzValidation
    */
   public function setNrqzValidation(SasPortalNrqzValidation $nrqzValidation)
   {

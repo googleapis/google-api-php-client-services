@@ -20,30 +20,60 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonKeywordInfo extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const MATCH_TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const MATCH_TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Exact match.
+   */
+  public const MATCH_TYPE_EXACT = 'EXACT';
+  /**
+   * Phrase match.
+   */
+  public const MATCH_TYPE_PHRASE = 'PHRASE';
+  /**
+   * Broad match.
+   */
+  public const MATCH_TYPE_BROAD = 'BROAD';
+  /**
+   * The match type of the keyword.
+   *
    * @var string
    */
   public $matchType;
   /**
+   * The text of the keyword (at most 80 characters and 10 words).
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * The match type of the keyword.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, EXACT, PHRASE, BROAD
+   *
+   * @param self::MATCH_TYPE_* $matchType
    */
   public function setMatchType($matchType)
   {
     $this->matchType = $matchType;
   }
   /**
-   * @return string
+   * @return self::MATCH_TYPE_*
    */
   public function getMatchType()
   {
     return $this->matchType;
   }
   /**
-   * @param string
+   * The text of the keyword (at most 80 characters and 10 words).
+   *
+   * @param string $text
    */
   public function setText($text)
   {

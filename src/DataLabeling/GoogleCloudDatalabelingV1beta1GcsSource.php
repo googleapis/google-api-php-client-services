@@ -20,16 +20,24 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1GcsSource extends \Google\Model
 {
   /**
+   * Required. The input URI of source file. This must be a Cloud Storage path
+   * (`gs://...`).
+   *
    * @var string
    */
   public $inputUri;
   /**
+   * Required. The format of the source file. Only "text/csv" is supported.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * Required. The input URI of source file. This must be a Cloud Storage path
+   * (`gs://...`).
+   *
+   * @param string $inputUri
    */
   public function setInputUri($inputUri)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDatalabelingV1beta1GcsSource extends \Google\Model
     return $this->inputUri;
   }
   /**
-   * @param string
+   * Required. The format of the source file. Only "text/csv" is supported.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

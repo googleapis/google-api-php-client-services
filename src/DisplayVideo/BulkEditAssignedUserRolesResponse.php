@@ -24,7 +24,10 @@ class BulkEditAssignedUserRolesResponse extends \Google\Collection
   protected $createdAssignedUserRolesDataType = 'array';
 
   /**
-   * @param AssignedUserRole[]
+   * The list of assigned user roles that have been successfully created. This
+   * list will be absent if empty.
+   *
+   * @param AssignedUserRole[] $createdAssignedUserRoles
    */
   public function setCreatedAssignedUserRoles($createdAssignedUserRoles)
   {

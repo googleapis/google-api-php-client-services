@@ -20,12 +20,18 @@ namespace Google\Service\CertificateAuthorityService;
 class EncryptionSpec extends \Google\Model
 {
   /**
+   * The resource name for a Cloud KMS key in the format
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
    * @var string
    */
   public $cloudKmsKey;
 
   /**
-   * @param string
+   * The resource name for a Cloud KMS key in the format
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
+   * @param string $cloudKmsKey
    */
   public function setCloudKmsKey($cloudKmsKey)
   {

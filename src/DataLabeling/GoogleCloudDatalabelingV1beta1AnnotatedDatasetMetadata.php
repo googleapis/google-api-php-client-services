@@ -43,7 +43,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
   protected $videoClassificationConfigDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1BoundingPolyConfig
+   * Configuration for image bounding box and bounding poly task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1BoundingPolyConfig $boundingPolyConfig
    */
   public function setBoundingPolyConfig(GoogleCloudDatalabelingV1beta1BoundingPolyConfig $boundingPolyConfig)
   {
@@ -57,7 +59,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->boundingPolyConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1EventConfig
+   * Configuration for video event labeling task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1EventConfig $eventConfig
    */
   public function setEventConfig(GoogleCloudDatalabelingV1beta1EventConfig $eventConfig)
   {
@@ -71,7 +75,10 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->eventConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   * HumanAnnotationConfig used when requesting the human labeling task for this
+   * AnnotatedDataset.
+   *
+   * @param GoogleCloudDatalabelingV1beta1HumanAnnotationConfig $humanAnnotationConfig
    */
   public function setHumanAnnotationConfig(GoogleCloudDatalabelingV1beta1HumanAnnotationConfig $humanAnnotationConfig)
   {
@@ -85,7 +92,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->humanAnnotationConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1ImageClassificationConfig
+   * Configuration for image classification task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1ImageClassificationConfig $imageClassificationConfig
    */
   public function setImageClassificationConfig(GoogleCloudDatalabelingV1beta1ImageClassificationConfig $imageClassificationConfig)
   {
@@ -99,7 +108,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->imageClassificationConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1ObjectDetectionConfig
+   * Configuration for video object detection task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1ObjectDetectionConfig $objectDetectionConfig
    */
   public function setObjectDetectionConfig(GoogleCloudDatalabelingV1beta1ObjectDetectionConfig $objectDetectionConfig)
   {
@@ -113,7 +124,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->objectDetectionConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1ObjectTrackingConfig
+   * Configuration for video object tracking task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1ObjectTrackingConfig $objectTrackingConfig
    */
   public function setObjectTrackingConfig(GoogleCloudDatalabelingV1beta1ObjectTrackingConfig $objectTrackingConfig)
   {
@@ -127,7 +140,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->objectTrackingConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1PolylineConfig
+   * Configuration for image polyline task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1PolylineConfig $polylineConfig
    */
   public function setPolylineConfig(GoogleCloudDatalabelingV1beta1PolylineConfig $polylineConfig)
   {
@@ -141,7 +156,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->polylineConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1SegmentationConfig
+   * Configuration for image segmentation task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1SegmentationConfig $segmentationConfig
    */
   public function setSegmentationConfig(GoogleCloudDatalabelingV1beta1SegmentationConfig $segmentationConfig)
   {
@@ -155,7 +172,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->segmentationConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1TextClassificationConfig
+   * Configuration for text classification task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1TextClassificationConfig $textClassificationConfig
    */
   public function setTextClassificationConfig(GoogleCloudDatalabelingV1beta1TextClassificationConfig $textClassificationConfig)
   {
@@ -169,7 +188,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->textClassificationConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig
+   * Configuration for text entity extraction task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig $textEntityExtractionConfig
    */
   public function setTextEntityExtractionConfig(GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig $textEntityExtractionConfig)
   {
@@ -183,7 +204,9 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Mod
     return $this->textEntityExtractionConfig;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1VideoClassificationConfig
+   * Configuration for video classification task.
+   *
+   * @param GoogleCloudDatalabelingV1beta1VideoClassificationConfig $videoClassificationConfig
    */
   public function setVideoClassificationConfig(GoogleCloudDatalabelingV1beta1VideoClassificationConfig $videoClassificationConfig)
   {

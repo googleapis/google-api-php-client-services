@@ -20,12 +20,20 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageV1EntityReference extends \Google\Model
 {
   /**
+   * Required. [Fully Qualified Name
+   * (FQN)](https://cloud.google.com/dataplex/docs/fully-qualified-names) of the
+   * entity.
+   *
    * @var string
    */
   public $fullyQualifiedName;
 
   /**
-   * @param string
+   * Required. [Fully Qualified Name
+   * (FQN)](https://cloud.google.com/dataplex/docs/fully-qualified-names) of the
+   * entity.
+   *
+   * @param string $fullyQualifiedName
    */
   public function setFullyQualifiedName($fullyQualifiedName)
   {

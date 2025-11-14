@@ -21,32 +21,49 @@ class ProductstatusesCustomBatchRequestEntry extends \Google\Collection
 {
   protected $collection_key = 'destinations';
   /**
+   * An entry ID, unique within the batch request.
+   *
    * @var string
    */
   public $batchId;
   /**
+   * If set, only issues for the specified destinations are returned, otherwise
+   * only issues for the Shopping destination.
+   *
    * @var string[]
    */
   public $destinations;
   /**
+   * Deprecated: Setting this field has no effect and attributes are never
+   * included.
+   *
+   * @deprecated
    * @var bool
    */
   public $includeAttributes;
   /**
+   * The ID of the managing account.
+   *
    * @var string
    */
   public $merchantId;
   /**
+   * The method of the batch entry. Acceptable values are: - "`get`"
+   *
    * @var string
    */
   public $method;
   /**
+   * The ID of the product whose status to get.
+   *
    * @var string
    */
   public $productId;
 
   /**
-   * @param string
+   * An entry ID, unique within the batch request.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -60,7 +77,10 @@ class ProductstatusesCustomBatchRequestEntry extends \Google\Collection
     return $this->batchId;
   }
   /**
-   * @param string[]
+   * If set, only issues for the specified destinations are returned, otherwise
+   * only issues for the Shopping destination.
+   *
+   * @param string[] $destinations
    */
   public function setDestinations($destinations)
   {
@@ -74,13 +94,18 @@ class ProductstatusesCustomBatchRequestEntry extends \Google\Collection
     return $this->destinations;
   }
   /**
-   * @param bool
+   * Deprecated: Setting this field has no effect and attributes are never
+   * included.
+   *
+   * @deprecated
+   * @param bool $includeAttributes
    */
   public function setIncludeAttributes($includeAttributes)
   {
     $this->includeAttributes = $includeAttributes;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getIncludeAttributes()
@@ -88,7 +113,9 @@ class ProductstatusesCustomBatchRequestEntry extends \Google\Collection
     return $this->includeAttributes;
   }
   /**
-   * @param string
+   * The ID of the managing account.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -102,7 +129,9 @@ class ProductstatusesCustomBatchRequestEntry extends \Google\Collection
     return $this->merchantId;
   }
   /**
-   * @param string
+   * The method of the batch entry. Acceptable values are: - "`get`"
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -116,7 +145,9 @@ class ProductstatusesCustomBatchRequestEntry extends \Google\Collection
     return $this->method;
   }
   /**
-   * @param string
+   * The ID of the product whose status to get.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {

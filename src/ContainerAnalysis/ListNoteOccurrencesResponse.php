@@ -21,6 +21,8 @@ class ListNoteOccurrencesResponse extends \Google\Collection
 {
   protected $collection_key = 'occurrences';
   /**
+   * Token to provide to skip to a particular spot in the list.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListNoteOccurrencesResponse extends \Google\Collection
   protected $occurrencesDataType = 'array';
 
   /**
-   * @param string
+   * Token to provide to skip to a particular spot in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListNoteOccurrencesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Occurrence[]
+   * The occurrences attached to the specified note.
+   *
+   * @param Occurrence[] $occurrences
    */
   public function setOccurrences($occurrences)
   {

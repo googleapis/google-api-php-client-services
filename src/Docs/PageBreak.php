@@ -21,10 +21,17 @@ class PageBreak extends \Google\Collection
 {
   protected $collection_key = 'suggestedInsertionIds';
   /**
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
    * @var string[]
    */
   public $suggestedDeletionIds;
   /**
+   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if
+   * it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
    * @var string[]
    */
   public $suggestedInsertionIds;
@@ -34,7 +41,10 @@ class PageBreak extends \Google\Collection
   protected $textStyleDataType = '';
 
   /**
-   * @param string[]
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
+   * @param string[] $suggestedDeletionIds
    */
   public function setSuggestedDeletionIds($suggestedDeletionIds)
   {
@@ -48,7 +58,11 @@ class PageBreak extends \Google\Collection
     return $this->suggestedDeletionIds;
   }
   /**
-   * @param string[]
+   * The suggested insertion IDs. A PageBreak may have multiple insertion IDs if
+   * it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
+   * @param string[] $suggestedInsertionIds
    */
   public function setSuggestedInsertionIds($suggestedInsertionIds)
   {
@@ -62,7 +76,9 @@ class PageBreak extends \Google\Collection
     return $this->suggestedInsertionIds;
   }
   /**
-   * @param SuggestedTextStyle[]
+   * The suggested text style changes to this PageBreak, keyed by suggestion ID.
+   *
+   * @param SuggestedTextStyle[] $suggestedTextStyleChanges
    */
   public function setSuggestedTextStyleChanges($suggestedTextStyleChanges)
   {
@@ -76,7 +92,11 @@ class PageBreak extends \Google\Collection
     return $this->suggestedTextStyleChanges;
   }
   /**
-   * @param TextStyle
+   * The text style of this PageBreak. Similar to text content, like text runs
+   * and footnote references, the text style of a page break can affect content
+   * layout as well as the styling of text inserted next to it.
+   *
+   * @param TextStyle $textStyle
    */
   public function setTextStyle(TextStyle $textStyle)
   {

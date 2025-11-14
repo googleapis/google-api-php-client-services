@@ -23,12 +23,17 @@ class LiasettingsCustomBatchResponse extends \Google\Collection
   protected $entriesType = LiasettingsCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsCustomBatchResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param LiasettingsCustomBatchResponseEntry[]
+   * The result of the execution of the batch requests.
+   *
+   * @param LiasettingsCustomBatchResponseEntry[] $entries
    */
   public function setEntries($entries)
   {
@@ -42,7 +47,10 @@ class LiasettingsCustomBatchResponse extends \Google\Collection
     return $this->entries;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsCustomBatchResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

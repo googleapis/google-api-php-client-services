@@ -20,28 +20,58 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1UserStore extends \Google\Model
 {
   /**
+   * Optional. The default subscription LicenseConfig for the UserStore, if
+   * UserStore.enable_license_auto_register is true, new users will
+   * automatically register under the default subscription. If default
+   * LicenseConfig doesn't have remaining license seats left, new users will not
+   * be assigned with license and will be blocked for Vertex AI Search features.
+   * This is used if `license_assignment_tier_rules` is not configured.
+   *
    * @var string
    */
   public $defaultLicenseConfig;
   /**
+   * The display name of the User Store.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Whether to enable license auto update for users in this User
+   * Store. If true, users with expired licenses will automatically be updated
+   * to use the default license config as long as the default license config has
+   * seats left.
+   *
    * @var bool
    */
   public $enableExpiredLicenseAutoUpdate;
   /**
+   * Optional. Whether to enable license auto register for users in this User
+   * Store. If true, new users will automatically register under the default
+   * license config as long as the default license config has seats left.
+   *
    * @var bool
    */
   public $enableLicenseAutoRegister;
   /**
+   * Immutable. The full resource name of the User Store, in the format of
+   * `projects/{project}/locations/{location}/userStores/{user_store}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Optional. The default subscription LicenseConfig for the UserStore, if
+   * UserStore.enable_license_auto_register is true, new users will
+   * automatically register under the default subscription. If default
+   * LicenseConfig doesn't have remaining license seats left, new users will not
+   * be assigned with license and will be blocked for Vertex AI Search features.
+   * This is used if `license_assignment_tier_rules` is not configured.
+   *
+   * @param string $defaultLicenseConfig
    */
   public function setDefaultLicenseConfig($defaultLicenseConfig)
   {
@@ -55,7 +85,9 @@ class GoogleCloudDiscoveryengineV1UserStore extends \Google\Model
     return $this->defaultLicenseConfig;
   }
   /**
-   * @param string
+   * The display name of the User Store.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -69,7 +101,12 @@ class GoogleCloudDiscoveryengineV1UserStore extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Optional. Whether to enable license auto update for users in this User
+   * Store. If true, users with expired licenses will automatically be updated
+   * to use the default license config as long as the default license config has
+   * seats left.
+   *
+   * @param bool $enableExpiredLicenseAutoUpdate
    */
   public function setEnableExpiredLicenseAutoUpdate($enableExpiredLicenseAutoUpdate)
   {
@@ -83,7 +120,11 @@ class GoogleCloudDiscoveryengineV1UserStore extends \Google\Model
     return $this->enableExpiredLicenseAutoUpdate;
   }
   /**
-   * @param bool
+   * Optional. Whether to enable license auto register for users in this User
+   * Store. If true, new users will automatically register under the default
+   * license config as long as the default license config has seats left.
+   *
+   * @param bool $enableLicenseAutoRegister
    */
   public function setEnableLicenseAutoRegister($enableLicenseAutoRegister)
   {
@@ -97,7 +138,12 @@ class GoogleCloudDiscoveryengineV1UserStore extends \Google\Model
     return $this->enableLicenseAutoRegister;
   }
   /**
-   * @param string
+   * Immutable. The full resource name of the User Store, in the format of
+   * `projects/{project}/locations/{location}/userStores/{user_store}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

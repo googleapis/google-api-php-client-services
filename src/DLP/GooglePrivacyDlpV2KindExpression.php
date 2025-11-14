@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2KindExpression extends \Google\Model
 {
   /**
+   * The name of the kind.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The name of the kind.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -20,20 +20,32 @@ namespace Google\Service\Monitoring;
 class QueryTimeSeriesRequest extends \Google\Model
 {
   /**
+   * A positive number that is the maximum number of time_series_data to return.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * If this field is not empty then it must contain the nextPageToken value
+   * returned by a previous call to this method. Using this field causes the
+   * method to return additional results from the previous method call.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Required. The query in the Monitoring Query Language
+   * (https://cloud.google.com/monitoring/mql/reference) format. The default
+   * time zone is in UTC.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param int
+   * A positive number that is the maximum number of time_series_data to return.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -47,7 +59,11 @@ class QueryTimeSeriesRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * If this field is not empty then it must contain the nextPageToken value
+   * returned by a previous call to this method. Using this field causes the
+   * method to return additional results from the previous method call.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -61,7 +77,11 @@ class QueryTimeSeriesRequest extends \Google\Model
     return $this->pageToken;
   }
   /**
-   * @param string
+   * Required. The query in the Monitoring Query Language
+   * (https://cloud.google.com/monitoring/mql/reference) format. The default
+   * time zone is in UTC.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

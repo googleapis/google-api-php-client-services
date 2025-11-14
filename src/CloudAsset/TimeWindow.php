@@ -20,16 +20,24 @@ namespace Google\Service\CloudAsset;
 class TimeWindow extends \Google\Model
 {
   /**
+   * End time of the time window (inclusive). If not specified, the current
+   * timestamp is used instead.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Start time of the time window (exclusive).
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * End time of the time window (inclusive). If not specified, the current
+   * timestamp is used instead.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +51,9 @@ class TimeWindow extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Start time of the time window (exclusive).
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

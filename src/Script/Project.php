@@ -20,6 +20,8 @@ namespace Google\Service\Script;
 class Project extends \Google\Model
 {
   /**
+   * When the script was created.
+   *
    * @var string
    */
   public $createTime;
@@ -28,24 +30,36 @@ class Project extends \Google\Model
   protected $lastModifyUserType = GoogleAppsScriptTypeUser::class;
   protected $lastModifyUserDataType = '';
   /**
+   * The parent's Drive ID that the script will be attached to. This is usually
+   * the ID of a Google Document or Google Sheet. This field is optional, and if
+   * not set, a stand-alone script will be created.
+   *
    * @var string
    */
   public $parentId;
   /**
+   * The script project's Drive ID.
+   *
    * @var string
    */
   public $scriptId;
   /**
+   * The title for the project.
+   *
    * @var string
    */
   public $title;
   /**
+   * When the script was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * When the script was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -59,7 +73,9 @@ class Project extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleAppsScriptTypeUser
+   * User who originally created the script.
+   *
+   * @param GoogleAppsScriptTypeUser $creator
    */
   public function setCreator(GoogleAppsScriptTypeUser $creator)
   {
@@ -73,7 +89,9 @@ class Project extends \Google\Model
     return $this->creator;
   }
   /**
-   * @param GoogleAppsScriptTypeUser
+   * User who last modified the script.
+   *
+   * @param GoogleAppsScriptTypeUser $lastModifyUser
    */
   public function setLastModifyUser(GoogleAppsScriptTypeUser $lastModifyUser)
   {
@@ -87,7 +105,11 @@ class Project extends \Google\Model
     return $this->lastModifyUser;
   }
   /**
-   * @param string
+   * The parent's Drive ID that the script will be attached to. This is usually
+   * the ID of a Google Document or Google Sheet. This field is optional, and if
+   * not set, a stand-alone script will be created.
+   *
+   * @param string $parentId
    */
   public function setParentId($parentId)
   {
@@ -101,7 +123,9 @@ class Project extends \Google\Model
     return $this->parentId;
   }
   /**
-   * @param string
+   * The script project's Drive ID.
+   *
+   * @param string $scriptId
    */
   public function setScriptId($scriptId)
   {
@@ -115,7 +139,9 @@ class Project extends \Google\Model
     return $this->scriptId;
   }
   /**
-   * @param string
+   * The title for the project.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -129,7 +155,9 @@ class Project extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * When the script was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

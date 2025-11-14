@@ -24,7 +24,9 @@ class ContactDetails extends \Google\Collection
   protected $contactsDataType = 'array';
 
   /**
-   * @param Contact[]
+   * A list of contacts
+   *
+   * @param Contact[] $contacts
    */
   public function setContacts($contacts)
   {

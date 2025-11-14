@@ -23,16 +23,23 @@ class BillingRatesListResponse extends \Google\Collection
   protected $billingRatesType = BillingRate::class;
   protected $billingRatesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#billingRatesListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param BillingRate[]
+   * Billing rates collection.
+   *
+   * @param BillingRate[] $billingRates
    */
   public function setBillingRates($billingRates)
   {
@@ -46,7 +53,10 @@ class BillingRatesListResponse extends \Google\Collection
     return $this->billingRates;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#billingRatesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class BillingRatesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

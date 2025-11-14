@@ -23,16 +23,25 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutText
   protected $blocksType = GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock::class;
   protected $blocksDataType = 'array';
   /**
+   * Text content stored in the block.
+   *
    * @var string
    */
   public $text;
   /**
+   * Type of the text in the block. Available options are: `paragraph`,
+   * `subtitle`, `heading-1`, `heading-2`, `heading-3`, `heading-4`,
+   * `heading-5`, `header`, `footer`.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock[]
+   * A text block could further have child blocks. Repeated blocks support
+   * further hierarchies and nested blocks.
+   *
+   * @param GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlock[] $blocks
    */
   public function setBlocks($blocks)
   {
@@ -46,7 +55,9 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutText
     return $this->blocks;
   }
   /**
-   * @param string
+   * Text content stored in the block.
+   *
+   * @param string $text
    */
   public function setText($text)
   {
@@ -60,7 +71,11 @@ class GoogleCloudDocumentaiV1DocumentDocumentLayoutDocumentLayoutBlockLayoutText
     return $this->text;
   }
   /**
-   * @param string
+   * Type of the text in the block. Available options are: `paragraph`,
+   * `subtitle`, `heading-1`, `heading-2`, `heading-3`, `heading-4`,
+   * `heading-5`, `header`, `footer`.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

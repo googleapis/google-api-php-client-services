@@ -22,56 +22,95 @@ class Request extends \Google\Model
   protected $authType = Auth::class;
   protected $authDataType = '';
   /**
+   * The HTTP request headers. If multiple headers share the same key, they must
+   * be merged according to the HTTP spec. All header keys must be lowercased,
+   * because HTTP header keys are case-insensitive.
+   *
    * @var string[]
    */
   public $headers;
   /**
+   * The HTTP request `Host` header value.
+   *
    * @var string
    */
   public $host;
   /**
+   * The unique ID for a request, which can be propagated to downstream systems.
+   * The ID should have low probability of collision within a single day for a
+   * specific service.
+   *
    * @var string
    */
   public $id;
   /**
+   * The HTTP request method, such as `GET`, `POST`.
+   *
    * @var string
    */
   public $method;
   /**
+   * The values from Origin header from the HTTP request, such as
+   * "https://console.cloud.google.com". Modern browsers can only have one
+   * origin. Special browsers and/or HTTP clients may require multiple origins.
+   *
    * @var string
    */
   public $origin;
   /**
+   * The HTTP URL path, excluding the query parameters.
+   *
    * @var string
    */
   public $path;
   /**
+   * The network protocol used with the request, such as "http/1.1", "spdy/3",
+   * "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
+   * https://www.iana.org/assignments/tls-extensiontype-values/tls-
+   * extensiontype-values.xhtml#alpn-protocol-ids for details.
+   *
    * @var string
    */
   public $protocol;
   /**
+   * The HTTP URL query in the format of `name1=value1&name2=value2`, as it
+   * appears in the first line of the HTTP request. No decoding is performed.
+   *
    * @var string
    */
   public $query;
   /**
+   * A special parameter for request reason. It is used by security systems to
+   * associate auditing information with a request.
+   *
    * @var string
    */
   public $reason;
   /**
+   * The HTTP URL scheme, such as `http` and `https`.
+   *
    * @var string
    */
   public $scheme;
   /**
+   * The HTTP request size in bytes. If unknown, it must be -1.
+   *
    * @var string
    */
   public $size;
   /**
+   * The timestamp when the `destination` service receives the last byte of the
+   * request.
+   *
    * @var string
    */
   public $time;
 
   /**
-   * @param Auth
+   * The request authentication. May be absent for unauthenticated requests.
+   * Derived from the HTTP request `Authorization` header or equivalent.
+   *
+   * @param Auth $auth
    */
   public function setAuth(Auth $auth)
   {
@@ -85,7 +124,11 @@ class Request extends \Google\Model
     return $this->auth;
   }
   /**
-   * @param string[]
+   * The HTTP request headers. If multiple headers share the same key, they must
+   * be merged according to the HTTP spec. All header keys must be lowercased,
+   * because HTTP header keys are case-insensitive.
+   *
+   * @param string[] $headers
    */
   public function setHeaders($headers)
   {
@@ -99,7 +142,9 @@ class Request extends \Google\Model
     return $this->headers;
   }
   /**
-   * @param string
+   * The HTTP request `Host` header value.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -113,7 +158,11 @@ class Request extends \Google\Model
     return $this->host;
   }
   /**
-   * @param string
+   * The unique ID for a request, which can be propagated to downstream systems.
+   * The ID should have low probability of collision within a single day for a
+   * specific service.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -127,7 +176,9 @@ class Request extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The HTTP request method, such as `GET`, `POST`.
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -141,7 +192,11 @@ class Request extends \Google\Model
     return $this->method;
   }
   /**
-   * @param string
+   * The values from Origin header from the HTTP request, such as
+   * "https://console.cloud.google.com". Modern browsers can only have one
+   * origin. Special browsers and/or HTTP clients may require multiple origins.
+   *
+   * @param string $origin
    */
   public function setOrigin($origin)
   {
@@ -155,7 +210,9 @@ class Request extends \Google\Model
     return $this->origin;
   }
   /**
-   * @param string
+   * The HTTP URL path, excluding the query parameters.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -169,7 +226,12 @@ class Request extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * The network protocol used with the request, such as "http/1.1", "spdy/3",
+   * "h2", "h2c", "webrtc", "tcp", "udp", "quic". See
+   * https://www.iana.org/assignments/tls-extensiontype-values/tls-
+   * extensiontype-values.xhtml#alpn-protocol-ids for details.
+   *
+   * @param string $protocol
    */
   public function setProtocol($protocol)
   {
@@ -183,7 +245,10 @@ class Request extends \Google\Model
     return $this->protocol;
   }
   /**
-   * @param string
+   * The HTTP URL query in the format of `name1=value1&name2=value2`, as it
+   * appears in the first line of the HTTP request. No decoding is performed.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -197,7 +262,10 @@ class Request extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * A special parameter for request reason. It is used by security systems to
+   * associate auditing information with a request.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {
@@ -211,7 +279,9 @@ class Request extends \Google\Model
     return $this->reason;
   }
   /**
-   * @param string
+   * The HTTP URL scheme, such as `http` and `https`.
+   *
+   * @param string $scheme
    */
   public function setScheme($scheme)
   {
@@ -225,7 +295,9 @@ class Request extends \Google\Model
     return $this->scheme;
   }
   /**
-   * @param string
+   * The HTTP request size in bytes. If unknown, it must be -1.
+   *
+   * @param string $size
    */
   public function setSize($size)
   {
@@ -239,7 +311,10 @@ class Request extends \Google\Model
     return $this->size;
   }
   /**
-   * @param string
+   * The timestamp when the `destination` service receives the last byte of the
+   * request.
+   *
+   * @param string $time
    */
   public function setTime($time)
   {

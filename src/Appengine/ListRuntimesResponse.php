@@ -21,6 +21,8 @@ class ListRuntimesResponse extends \Google\Collection
 {
   protected $collection_key = 'runtimes';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class ListRuntimesResponse extends \Google\Collection
   protected $runtimesDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class ListRuntimesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Runtime[]
+   * The runtimes available to the requested application.
+   *
+   * @param Runtime[] $runtimes
    */
   public function setRuntimes($runtimes)
   {

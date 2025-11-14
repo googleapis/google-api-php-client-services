@@ -21,6 +21,13 @@ class DriveFile extends \Google\Collection
 {
   protected $collection_key = 'spaces';
   /**
+   * A collection of arbitrary key-value pairs which are private to the
+   * requesting app. Entries with null values are cleared in update and copy
+   * requests. These properties can only be retrieved using an authenticated
+   * request. An authenticated request uses an access token obtained with a
+   * OAuth 2 client ID. You cannot use an API key to retrieve private
+   * properties.
+   *
    * @var string[]
    */
   public $appProperties;
@@ -31,74 +38,126 @@ class DriveFile extends \Google\Collection
   protected $contentRestrictionsType = ContentRestriction::class;
   protected $contentRestrictionsDataType = 'array';
   /**
+   * Whether the options to copy, print, or download this file should be
+   * disabled for readers and commenters.
+   *
    * @var bool
    */
   public $copyRequiresWriterPermission;
   /**
+   * The time at which the file was created (RFC 3339 date-time).
+   *
    * @var string
    */
   public $createdTime;
   /**
+   * A short description of the file.
+   *
    * @var string
    */
   public $description;
   protected $downloadRestrictionsType = DownloadRestrictionsMetadata::class;
   protected $downloadRestrictionsDataType = '';
   /**
+   * Output only. ID of the shared drive the file resides in. Only populated for
+   * items in shared drives.
+   *
    * @var string
    */
   public $driveId;
   /**
+   * Output only. Whether the file has been explicitly trashed, as opposed to
+   * recursively trashed from a parent folder.
+   *
    * @var bool
    */
   public $explicitlyTrashed;
   /**
+   * Output only. Links for exporting Docs Editors files to specific formats.
+   *
    * @var string[]
    */
   public $exportLinks;
   /**
+   * Output only. The final component of `fullFileExtension`. This is only
+   * available for files with binary content in Google Drive.
+   *
    * @var string
    */
   public $fileExtension;
   /**
+   * The color for a folder or a shortcut to a folder as an RGB hex string. The
+   * supported colors are published in the `folderColorPalette` field of the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource. If an
+   * unsupported color is specified, the closest color in the palette is used
+   * instead.
+   *
    * @var string
    */
   public $folderColorRgb;
   /**
+   * Output only. The full file extension extracted from the `name` field. May
+   * contain multiple concatenated extensions, such as "tar.gz". This is only
+   * available for files with binary content in Google Drive. This is
+   * automatically updated when the `name` field changes, however it's not
+   * cleared if the new name doesn't contain a valid extension.
+   *
    * @var string
    */
   public $fullFileExtension;
   /**
+   * Output only. Whether there are permissions directly on this file. This
+   * field is only populated for items in shared drives.
+   *
    * @var bool
    */
   public $hasAugmentedPermissions;
   /**
+   * Output only. Whether this file has a thumbnail. This doesn't indicate
+   * whether the requesting app has access to the thumbnail. To check access,
+   * look for the presence of the thumbnailLink field.
+   *
    * @var bool
    */
   public $hasThumbnail;
   /**
+   * Output only. The ID of the file's head revision. This is currently only
+   * available for files with binary content in Google Drive.
+   *
    * @var string
    */
   public $headRevisionId;
   /**
+   * Output only. A static, unauthenticated link to the file's icon.
+   *
    * @var string
    */
   public $iconLink;
   /**
+   * The ID of the file.
+   *
    * @var string
    */
   public $id;
   protected $imageMediaMetadataType = DriveFileImageMediaMetadata::class;
   protected $imageMediaMetadataDataType = '';
   /**
+   * Whether this file has inherited permissions disabled. Inherited permissions
+   * are enabled by default.
+   *
    * @var bool
    */
   public $inheritedPermissionsDisabled;
   /**
+   * Output only. Whether the file was created or opened by the requesting app.
+   *
    * @var bool
    */
   public $isAppAuthorized;
   /**
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string `"drive#file"`.
+   *
    * @var string
    */
   public $kind;
@@ -109,74 +168,136 @@ class DriveFile extends \Google\Collection
   protected $linkShareMetadataType = DriveFileLinkShareMetadata::class;
   protected $linkShareMetadataDataType = '';
   /**
+   * Output only. The MD5 checksum for the content of the file. This is only
+   * applicable to files with binary content in Google Drive.
+   *
    * @var string
    */
   public $md5Checksum;
   /**
+   * The MIME type of the file. Google Drive attempts to automatically detect an
+   * appropriate value from uploaded content, if no value is provided. The value
+   * cannot be changed unless a new revision is uploaded. If a file is created
+   * with a Google Doc MIME type, the uploaded content is imported, if possible.
+   * The supported import formats are published in the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * Output only. Whether the file has been modified by this user.
+   *
    * @var bool
    */
   public $modifiedByMe;
   /**
+   * The last time the file was modified by the user (RFC 3339 date-time).
+   *
    * @var string
    */
   public $modifiedByMeTime;
   /**
+   * he last time the file was modified by anyone (RFC 3339 date-time). Note
+   * that setting modifiedTime will also update modifiedByMeTime for the user.
+   *
    * @var string
    */
   public $modifiedTime;
   /**
+   * The name of the file. This isn't necessarily unique within a folder. Note
+   * that for immutable items such as the top-level folders of shared drives,
+   * the My Drive root folder, and the Application Data folder, the name is
+   * constant.
+   *
    * @var string
    */
   public $name;
   /**
+   * The original filename of the uploaded content if available, or else the
+   * original value of the `name` field. This is only available for files with
+   * binary content in Google Drive.
+   *
    * @var string
    */
   public $originalFilename;
   /**
+   * Output only. Whether the user owns the file. Not populated for items in
+   * shared drives.
+   *
    * @var bool
    */
   public $ownedByMe;
   protected $ownersType = User::class;
   protected $ownersDataType = 'array';
   /**
+   * The ID of the parent folder containing the file. A file can only have one
+   * parent folder; specifying multiple parents isn't supported. If not
+   * specified as part of a create request, the file is placed directly in the
+   * user's My Drive folder. If not specified as part of a copy request, the
+   * file inherits any discoverable parent of the source file. Update requests
+   * must use the `addParents` and `removeParents` parameters to modify the
+   * parents list.
+   *
    * @var string[]
    */
   public $parents;
   /**
+   * Output only. List of permission IDs for users with access to this file.
+   *
    * @var string[]
    */
   public $permissionIds;
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
   /**
+   * A collection of arbitrary key-value pairs which are visible to all apps.
+   * Entries with null values are cleared in update and copy requests.
+   *
    * @var string[]
    */
   public $properties;
   /**
+   * Output only. The number of storage quota bytes used by the file. This
+   * includes the head revision as well as previous revisions with `keepForever`
+   * enabled.
+   *
    * @var string
    */
   public $quotaBytesUsed;
   /**
+   * Output only. A key needed to access the item via a shared link.
+   *
    * @var string
    */
   public $resourceKey;
   /**
+   * Output only. The SHA1 checksum associated with this file, if available.
+   * This field is only populated for files with content stored in Google Drive;
+   * it's not populated for Docs Editors or shortcut files.
+   *
    * @var string
    */
   public $sha1Checksum;
   /**
+   * Output only. The SHA256 checksum associated with this file, if available.
+   * This field is only populated for files with content stored in Google Drive;
+   * it's not populated for Docs Editors or shortcut files.
+   *
    * @var string
    */
   public $sha256Checksum;
   /**
+   * Output only. Whether the file has been shared. Not populated for items in
+   * shared drives.
+   *
    * @var bool
    */
   public $shared;
   /**
+   * The time at which the file was shared with the user, if applicable (RFC
+   * 3339 date-time).
+   *
    * @var string
    */
   public $sharedWithMeTime;
@@ -185,72 +306,128 @@ class DriveFile extends \Google\Collection
   protected $shortcutDetailsType = DriveFileShortcutDetails::class;
   protected $shortcutDetailsDataType = '';
   /**
+   * Output only. Size in bytes of blobs and Google Workspace editor files.
+   * Won't be populated for files that have no size, like shortcuts and folders.
+   *
    * @var string
    */
   public $size;
   /**
+   * Output only. The list of spaces which contain the file. The currently
+   * supported values are `drive`, `appDataFolder`, and `photos`.
+   *
    * @var string[]
    */
   public $spaces;
   /**
+   * Whether the user has starred the file.
+   *
    * @var bool
    */
   public $starred;
   /**
+   * Deprecated: Output only. Use `driveId` instead.
+   *
+   * @deprecated
    * @var string
    */
   public $teamDriveId;
   /**
+   * Output only. A short-lived link to the file's thumbnail, if available.
+   * Typically lasts on the order of hours. Not intended for direct usage on web
+   * applications due to [Cross-Origin Resource Sharing
+   * (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies.
+   * Consider using a proxy server. Only populated when the requesting app can
+   * access the file's content. If the file isn't shared publicly, the URL
+   * returned in `files.thumbnailLink` must be fetched using a credentialed
+   * request.
+   *
    * @var string
    */
   public $thumbnailLink;
   /**
+   * Output only. The thumbnail version for use in thumbnail cache invalidation.
+   *
    * @var string
    */
   public $thumbnailVersion;
   /**
+   * Whether the file has been trashed, either explicitly or from a trashed
+   * parent folder. Only the owner may trash a file, and other users cannot see
+   * files in the owner's trash.
+   *
    * @var bool
    */
   public $trashed;
   /**
+   * The time that the item was trashed (RFC 3339 date-time). Only populated for
+   * items in shared drives.
+   *
    * @var string
    */
   public $trashedTime;
   protected $trashingUserType = User::class;
   protected $trashingUserDataType = '';
   /**
+   * Output only. A monotonically increasing version number for the file. This
+   * reflects every change made to the file on the server, even those not
+   * visible to the user.
+   *
    * @var string
    */
   public $version;
   protected $videoMediaMetadataType = DriveFileVideoMediaMetadata::class;
   protected $videoMediaMetadataDataType = '';
   /**
+   * Output only. Whether the file has been viewed by this user.
+   *
    * @var bool
    */
   public $viewedByMe;
   /**
+   * The last time the file was viewed by the user (RFC 3339 date-time).
+   *
    * @var string
    */
   public $viewedByMeTime;
   /**
+   * Deprecated: Use `copyRequiresWriterPermission` instead.
+   *
+   * @deprecated
    * @var bool
    */
   public $viewersCanCopyContent;
   /**
+   * Output only. A link for downloading the content of the file in a browser.
+   * This is only available for files with binary content in Google Drive.
+   *
    * @var string
    */
   public $webContentLink;
   /**
+   * Output only. A link for opening the file in a relevant Google editor or
+   * viewer in a browser.
+   *
    * @var string
    */
   public $webViewLink;
   /**
+   * Whether users with only `writer` permission can modify the file's
+   * permissions. Not populated for items in shared drives.
+   *
    * @var bool
    */
   public $writersCanShare;
 
   /**
-   * @param string[]
+   * A collection of arbitrary key-value pairs which are private to the
+   * requesting app. Entries with null values are cleared in update and copy
+   * requests. These properties can only be retrieved using an authenticated
+   * request. An authenticated request uses an access token obtained with a
+   * OAuth 2 client ID. You cannot use an API key to retrieve private
+   * properties.
+   *
+   * @param string[] $appProperties
    */
   public function setAppProperties($appProperties)
   {
@@ -264,7 +441,12 @@ class DriveFile extends \Google\Collection
     return $this->appProperties;
   }
   /**
-   * @param DriveFileCapabilities
+   * Output only. Capabilities the current user has on this file. Each
+   * capability corresponds to a fine-grained action that a user may take. For
+   * more information, see [Understand file capabilities](https://developers.goo
+   * gle.com/workspace/drive/api/guides/manage-sharing#capabilities).
+   *
+   * @param DriveFileCapabilities $capabilities
    */
   public function setCapabilities(DriveFileCapabilities $capabilities)
   {
@@ -278,7 +460,10 @@ class DriveFile extends \Google\Collection
     return $this->capabilities;
   }
   /**
-   * @param DriveFileContentHints
+   * Additional information about the content of the file. These fields are
+   * never populated in responses.
+   *
+   * @param DriveFileContentHints $contentHints
    */
   public function setContentHints(DriveFileContentHints $contentHints)
   {
@@ -292,7 +477,10 @@ class DriveFile extends \Google\Collection
     return $this->contentHints;
   }
   /**
-   * @param ContentRestriction[]
+   * Restrictions for accessing the content of the file. Only populated if such
+   * a restriction exists.
+   *
+   * @param ContentRestriction[] $contentRestrictions
    */
   public function setContentRestrictions($contentRestrictions)
   {
@@ -306,7 +494,10 @@ class DriveFile extends \Google\Collection
     return $this->contentRestrictions;
   }
   /**
-   * @param bool
+   * Whether the options to copy, print, or download this file should be
+   * disabled for readers and commenters.
+   *
+   * @param bool $copyRequiresWriterPermission
    */
   public function setCopyRequiresWriterPermission($copyRequiresWriterPermission)
   {
@@ -320,7 +511,9 @@ class DriveFile extends \Google\Collection
     return $this->copyRequiresWriterPermission;
   }
   /**
-   * @param string
+   * The time at which the file was created (RFC 3339 date-time).
+   *
+   * @param string $createdTime
    */
   public function setCreatedTime($createdTime)
   {
@@ -334,7 +527,9 @@ class DriveFile extends \Google\Collection
     return $this->createdTime;
   }
   /**
-   * @param string
+   * A short description of the file.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -348,7 +543,9 @@ class DriveFile extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param DownloadRestrictionsMetadata
+   * Download restrictions applied on the file.
+   *
+   * @param DownloadRestrictionsMetadata $downloadRestrictions
    */
   public function setDownloadRestrictions(DownloadRestrictionsMetadata $downloadRestrictions)
   {
@@ -362,7 +559,10 @@ class DriveFile extends \Google\Collection
     return $this->downloadRestrictions;
   }
   /**
-   * @param string
+   * Output only. ID of the shared drive the file resides in. Only populated for
+   * items in shared drives.
+   *
+   * @param string $driveId
    */
   public function setDriveId($driveId)
   {
@@ -376,7 +576,10 @@ class DriveFile extends \Google\Collection
     return $this->driveId;
   }
   /**
-   * @param bool
+   * Output only. Whether the file has been explicitly trashed, as opposed to
+   * recursively trashed from a parent folder.
+   *
+   * @param bool $explicitlyTrashed
    */
   public function setExplicitlyTrashed($explicitlyTrashed)
   {
@@ -390,7 +593,9 @@ class DriveFile extends \Google\Collection
     return $this->explicitlyTrashed;
   }
   /**
-   * @param string[]
+   * Output only. Links for exporting Docs Editors files to specific formats.
+   *
+   * @param string[] $exportLinks
    */
   public function setExportLinks($exportLinks)
   {
@@ -404,7 +609,10 @@ class DriveFile extends \Google\Collection
     return $this->exportLinks;
   }
   /**
-   * @param string
+   * Output only. The final component of `fullFileExtension`. This is only
+   * available for files with binary content in Google Drive.
+   *
+   * @param string $fileExtension
    */
   public function setFileExtension($fileExtension)
   {
@@ -418,7 +626,13 @@ class DriveFile extends \Google\Collection
     return $this->fileExtension;
   }
   /**
-   * @param string
+   * The color for a folder or a shortcut to a folder as an RGB hex string. The
+   * supported colors are published in the `folderColorPalette` field of the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource. If an
+   * unsupported color is specified, the closest color in the palette is used
+   * instead.
+   *
+   * @param string $folderColorRgb
    */
   public function setFolderColorRgb($folderColorRgb)
   {
@@ -432,7 +646,13 @@ class DriveFile extends \Google\Collection
     return $this->folderColorRgb;
   }
   /**
-   * @param string
+   * Output only. The full file extension extracted from the `name` field. May
+   * contain multiple concatenated extensions, such as "tar.gz". This is only
+   * available for files with binary content in Google Drive. This is
+   * automatically updated when the `name` field changes, however it's not
+   * cleared if the new name doesn't contain a valid extension.
+   *
+   * @param string $fullFileExtension
    */
   public function setFullFileExtension($fullFileExtension)
   {
@@ -446,7 +666,10 @@ class DriveFile extends \Google\Collection
     return $this->fullFileExtension;
   }
   /**
-   * @param bool
+   * Output only. Whether there are permissions directly on this file. This
+   * field is only populated for items in shared drives.
+   *
+   * @param bool $hasAugmentedPermissions
    */
   public function setHasAugmentedPermissions($hasAugmentedPermissions)
   {
@@ -460,7 +683,11 @@ class DriveFile extends \Google\Collection
     return $this->hasAugmentedPermissions;
   }
   /**
-   * @param bool
+   * Output only. Whether this file has a thumbnail. This doesn't indicate
+   * whether the requesting app has access to the thumbnail. To check access,
+   * look for the presence of the thumbnailLink field.
+   *
+   * @param bool $hasThumbnail
    */
   public function setHasThumbnail($hasThumbnail)
   {
@@ -474,7 +701,10 @@ class DriveFile extends \Google\Collection
     return $this->hasThumbnail;
   }
   /**
-   * @param string
+   * Output only. The ID of the file's head revision. This is currently only
+   * available for files with binary content in Google Drive.
+   *
+   * @param string $headRevisionId
    */
   public function setHeadRevisionId($headRevisionId)
   {
@@ -488,7 +718,9 @@ class DriveFile extends \Google\Collection
     return $this->headRevisionId;
   }
   /**
-   * @param string
+   * Output only. A static, unauthenticated link to the file's icon.
+   *
+   * @param string $iconLink
    */
   public function setIconLink($iconLink)
   {
@@ -502,7 +734,9 @@ class DriveFile extends \Google\Collection
     return $this->iconLink;
   }
   /**
-   * @param string
+   * The ID of the file.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -516,7 +750,9 @@ class DriveFile extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param DriveFileImageMediaMetadata
+   * Output only. Additional metadata about image media, if available.
+   *
+   * @param DriveFileImageMediaMetadata $imageMediaMetadata
    */
   public function setImageMediaMetadata(DriveFileImageMediaMetadata $imageMediaMetadata)
   {
@@ -530,7 +766,10 @@ class DriveFile extends \Google\Collection
     return $this->imageMediaMetadata;
   }
   /**
-   * @param bool
+   * Whether this file has inherited permissions disabled. Inherited permissions
+   * are enabled by default.
+   *
+   * @param bool $inheritedPermissionsDisabled
    */
   public function setInheritedPermissionsDisabled($inheritedPermissionsDisabled)
   {
@@ -544,7 +783,9 @@ class DriveFile extends \Google\Collection
     return $this->inheritedPermissionsDisabled;
   }
   /**
-   * @param bool
+   * Output only. Whether the file was created or opened by the requesting app.
+   *
+   * @param bool $isAppAuthorized
    */
   public function setIsAppAuthorized($isAppAuthorized)
   {
@@ -558,7 +799,10 @@ class DriveFile extends \Google\Collection
     return $this->isAppAuthorized;
   }
   /**
-   * @param string
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string `"drive#file"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -572,7 +816,9 @@ class DriveFile extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param DriveFileLabelInfo
+   * Output only. An overview of the labels on the file.
+   *
+   * @param DriveFileLabelInfo $labelInfo
    */
   public function setLabelInfo(DriveFileLabelInfo $labelInfo)
   {
@@ -586,7 +832,10 @@ class DriveFile extends \Google\Collection
     return $this->labelInfo;
   }
   /**
-   * @param User
+   * Output only. The last user to modify the file. This field is only populated
+   * when the last modification was performed by a signed-in user.
+   *
+   * @param User $lastModifyingUser
    */
   public function setLastModifyingUser(User $lastModifyingUser)
   {
@@ -600,7 +849,10 @@ class DriveFile extends \Google\Collection
     return $this->lastModifyingUser;
   }
   /**
-   * @param DriveFileLinkShareMetadata
+   * Contains details about the link URLs that clients are using to refer to
+   * this item.
+   *
+   * @param DriveFileLinkShareMetadata $linkShareMetadata
    */
   public function setLinkShareMetadata(DriveFileLinkShareMetadata $linkShareMetadata)
   {
@@ -614,7 +866,10 @@ class DriveFile extends \Google\Collection
     return $this->linkShareMetadata;
   }
   /**
-   * @param string
+   * Output only. The MD5 checksum for the content of the file. This is only
+   * applicable to files with binary content in Google Drive.
+   *
+   * @param string $md5Checksum
    */
   public function setMd5Checksum($md5Checksum)
   {
@@ -628,7 +883,14 @@ class DriveFile extends \Google\Collection
     return $this->md5Checksum;
   }
   /**
-   * @param string
+   * The MIME type of the file. Google Drive attempts to automatically detect an
+   * appropriate value from uploaded content, if no value is provided. The value
+   * cannot be changed unless a new revision is uploaded. If a file is created
+   * with a Google Doc MIME type, the uploaded content is imported, if possible.
+   * The supported import formats are published in the
+   * [`about`](/workspace/drive/api/reference/rest/v3/about) resource.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -642,7 +904,9 @@ class DriveFile extends \Google\Collection
     return $this->mimeType;
   }
   /**
-   * @param bool
+   * Output only. Whether the file has been modified by this user.
+   *
+   * @param bool $modifiedByMe
    */
   public function setModifiedByMe($modifiedByMe)
   {
@@ -656,7 +920,9 @@ class DriveFile extends \Google\Collection
     return $this->modifiedByMe;
   }
   /**
-   * @param string
+   * The last time the file was modified by the user (RFC 3339 date-time).
+   *
+   * @param string $modifiedByMeTime
    */
   public function setModifiedByMeTime($modifiedByMeTime)
   {
@@ -670,7 +936,10 @@ class DriveFile extends \Google\Collection
     return $this->modifiedByMeTime;
   }
   /**
-   * @param string
+   * he last time the file was modified by anyone (RFC 3339 date-time). Note
+   * that setting modifiedTime will also update modifiedByMeTime for the user.
+   *
+   * @param string $modifiedTime
    */
   public function setModifiedTime($modifiedTime)
   {
@@ -684,7 +953,12 @@ class DriveFile extends \Google\Collection
     return $this->modifiedTime;
   }
   /**
-   * @param string
+   * The name of the file. This isn't necessarily unique within a folder. Note
+   * that for immutable items such as the top-level folders of shared drives,
+   * the My Drive root folder, and the Application Data folder, the name is
+   * constant.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -698,7 +972,11 @@ class DriveFile extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The original filename of the uploaded content if available, or else the
+   * original value of the `name` field. This is only available for files with
+   * binary content in Google Drive.
+   *
+   * @param string $originalFilename
    */
   public function setOriginalFilename($originalFilename)
   {
@@ -712,7 +990,10 @@ class DriveFile extends \Google\Collection
     return $this->originalFilename;
   }
   /**
-   * @param bool
+   * Output only. Whether the user owns the file. Not populated for items in
+   * shared drives.
+   *
+   * @param bool $ownedByMe
    */
   public function setOwnedByMe($ownedByMe)
   {
@@ -726,7 +1007,10 @@ class DriveFile extends \Google\Collection
     return $this->ownedByMe;
   }
   /**
-   * @param User[]
+   * Output only. The owner of this file. Only certain legacy files may have
+   * more than one owner. This field isn't populated for items in shared drives.
+   *
+   * @param User[] $owners
    */
   public function setOwners($owners)
   {
@@ -740,7 +1024,15 @@ class DriveFile extends \Google\Collection
     return $this->owners;
   }
   /**
-   * @param string[]
+   * The ID of the parent folder containing the file. A file can only have one
+   * parent folder; specifying multiple parents isn't supported. If not
+   * specified as part of a create request, the file is placed directly in the
+   * user's My Drive folder. If not specified as part of a copy request, the
+   * file inherits any discoverable parent of the source file. Update requests
+   * must use the `addParents` and `removeParents` parameters to modify the
+   * parents list.
+   *
+   * @param string[] $parents
    */
   public function setParents($parents)
   {
@@ -754,7 +1046,9 @@ class DriveFile extends \Google\Collection
     return $this->parents;
   }
   /**
-   * @param string[]
+   * Output only. List of permission IDs for users with access to this file.
+   *
+   * @param string[] $permissionIds
    */
   public function setPermissionIds($permissionIds)
   {
@@ -768,7 +1062,11 @@ class DriveFile extends \Google\Collection
     return $this->permissionIds;
   }
   /**
-   * @param Permission[]
+   * Output only. The full list of permissions for the file. This is only
+   * available if the requesting user can share the file. Not populated for
+   * items in shared drives.
+   *
+   * @param Permission[] $permissions
    */
   public function setPermissions($permissions)
   {
@@ -782,7 +1080,10 @@ class DriveFile extends \Google\Collection
     return $this->permissions;
   }
   /**
-   * @param string[]
+   * A collection of arbitrary key-value pairs which are visible to all apps.
+   * Entries with null values are cleared in update and copy requests.
+   *
+   * @param string[] $properties
    */
   public function setProperties($properties)
   {
@@ -796,7 +1097,11 @@ class DriveFile extends \Google\Collection
     return $this->properties;
   }
   /**
-   * @param string
+   * Output only. The number of storage quota bytes used by the file. This
+   * includes the head revision as well as previous revisions with `keepForever`
+   * enabled.
+   *
+   * @param string $quotaBytesUsed
    */
   public function setQuotaBytesUsed($quotaBytesUsed)
   {
@@ -810,7 +1115,9 @@ class DriveFile extends \Google\Collection
     return $this->quotaBytesUsed;
   }
   /**
-   * @param string
+   * Output only. A key needed to access the item via a shared link.
+   *
+   * @param string $resourceKey
    */
   public function setResourceKey($resourceKey)
   {
@@ -824,7 +1131,11 @@ class DriveFile extends \Google\Collection
     return $this->resourceKey;
   }
   /**
-   * @param string
+   * Output only. The SHA1 checksum associated with this file, if available.
+   * This field is only populated for files with content stored in Google Drive;
+   * it's not populated for Docs Editors or shortcut files.
+   *
+   * @param string $sha1Checksum
    */
   public function setSha1Checksum($sha1Checksum)
   {
@@ -838,7 +1149,11 @@ class DriveFile extends \Google\Collection
     return $this->sha1Checksum;
   }
   /**
-   * @param string
+   * Output only. The SHA256 checksum associated with this file, if available.
+   * This field is only populated for files with content stored in Google Drive;
+   * it's not populated for Docs Editors or shortcut files.
+   *
+   * @param string $sha256Checksum
    */
   public function setSha256Checksum($sha256Checksum)
   {
@@ -852,7 +1167,10 @@ class DriveFile extends \Google\Collection
     return $this->sha256Checksum;
   }
   /**
-   * @param bool
+   * Output only. Whether the file has been shared. Not populated for items in
+   * shared drives.
+   *
+   * @param bool $shared
    */
   public function setShared($shared)
   {
@@ -866,7 +1184,10 @@ class DriveFile extends \Google\Collection
     return $this->shared;
   }
   /**
-   * @param string
+   * The time at which the file was shared with the user, if applicable (RFC
+   * 3339 date-time).
+   *
+   * @param string $sharedWithMeTime
    */
   public function setSharedWithMeTime($sharedWithMeTime)
   {
@@ -880,7 +1201,10 @@ class DriveFile extends \Google\Collection
     return $this->sharedWithMeTime;
   }
   /**
-   * @param User
+   * Output only. The user who shared the file with the requesting user, if
+   * applicable.
+   *
+   * @param User $sharingUser
    */
   public function setSharingUser(User $sharingUser)
   {
@@ -894,7 +1218,11 @@ class DriveFile extends \Google\Collection
     return $this->sharingUser;
   }
   /**
-   * @param DriveFileShortcutDetails
+   * Shortcut file details. Only populated for shortcut files, which have the
+   * mimeType field set to `application/vnd.google-apps.shortcut`. Can only be
+   * set on `files.create` requests.
+   *
+   * @param DriveFileShortcutDetails $shortcutDetails
    */
   public function setShortcutDetails(DriveFileShortcutDetails $shortcutDetails)
   {
@@ -908,7 +1236,10 @@ class DriveFile extends \Google\Collection
     return $this->shortcutDetails;
   }
   /**
-   * @param string
+   * Output only. Size in bytes of blobs and Google Workspace editor files.
+   * Won't be populated for files that have no size, like shortcuts and folders.
+   *
+   * @param string $size
    */
   public function setSize($size)
   {
@@ -922,7 +1253,10 @@ class DriveFile extends \Google\Collection
     return $this->size;
   }
   /**
-   * @param string[]
+   * Output only. The list of spaces which contain the file. The currently
+   * supported values are `drive`, `appDataFolder`, and `photos`.
+   *
+   * @param string[] $spaces
    */
   public function setSpaces($spaces)
   {
@@ -936,7 +1270,9 @@ class DriveFile extends \Google\Collection
     return $this->spaces;
   }
   /**
-   * @param bool
+   * Whether the user has starred the file.
+   *
+   * @param bool $starred
    */
   public function setStarred($starred)
   {
@@ -950,13 +1286,17 @@ class DriveFile extends \Google\Collection
     return $this->starred;
   }
   /**
-   * @param string
+   * Deprecated: Output only. Use `driveId` instead.
+   *
+   * @deprecated
+   * @param string $teamDriveId
    */
   public function setTeamDriveId($teamDriveId)
   {
     $this->teamDriveId = $teamDriveId;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTeamDriveId()
@@ -964,7 +1304,16 @@ class DriveFile extends \Google\Collection
     return $this->teamDriveId;
   }
   /**
-   * @param string
+   * Output only. A short-lived link to the file's thumbnail, if available.
+   * Typically lasts on the order of hours. Not intended for direct usage on web
+   * applications due to [Cross-Origin Resource Sharing
+   * (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) policies.
+   * Consider using a proxy server. Only populated when the requesting app can
+   * access the file's content. If the file isn't shared publicly, the URL
+   * returned in `files.thumbnailLink` must be fetched using a credentialed
+   * request.
+   *
+   * @param string $thumbnailLink
    */
   public function setThumbnailLink($thumbnailLink)
   {
@@ -978,7 +1327,9 @@ class DriveFile extends \Google\Collection
     return $this->thumbnailLink;
   }
   /**
-   * @param string
+   * Output only. The thumbnail version for use in thumbnail cache invalidation.
+   *
+   * @param string $thumbnailVersion
    */
   public function setThumbnailVersion($thumbnailVersion)
   {
@@ -992,7 +1343,11 @@ class DriveFile extends \Google\Collection
     return $this->thumbnailVersion;
   }
   /**
-   * @param bool
+   * Whether the file has been trashed, either explicitly or from a trashed
+   * parent folder. Only the owner may trash a file, and other users cannot see
+   * files in the owner's trash.
+   *
+   * @param bool $trashed
    */
   public function setTrashed($trashed)
   {
@@ -1006,7 +1361,10 @@ class DriveFile extends \Google\Collection
     return $this->trashed;
   }
   /**
-   * @param string
+   * The time that the item was trashed (RFC 3339 date-time). Only populated for
+   * items in shared drives.
+   *
+   * @param string $trashedTime
    */
   public function setTrashedTime($trashedTime)
   {
@@ -1020,7 +1378,10 @@ class DriveFile extends \Google\Collection
     return $this->trashedTime;
   }
   /**
-   * @param User
+   * Output only. If the file has been explicitly trashed, the user who trashed
+   * it. Only populated for items in shared drives.
+   *
+   * @param User $trashingUser
    */
   public function setTrashingUser(User $trashingUser)
   {
@@ -1034,7 +1395,11 @@ class DriveFile extends \Google\Collection
     return $this->trashingUser;
   }
   /**
-   * @param string
+   * Output only. A monotonically increasing version number for the file. This
+   * reflects every change made to the file on the server, even those not
+   * visible to the user.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {
@@ -1048,7 +1413,10 @@ class DriveFile extends \Google\Collection
     return $this->version;
   }
   /**
-   * @param DriveFileVideoMediaMetadata
+   * Output only. Additional metadata about video media. This may not be
+   * available immediately upon upload.
+   *
+   * @param DriveFileVideoMediaMetadata $videoMediaMetadata
    */
   public function setVideoMediaMetadata(DriveFileVideoMediaMetadata $videoMediaMetadata)
   {
@@ -1062,7 +1430,9 @@ class DriveFile extends \Google\Collection
     return $this->videoMediaMetadata;
   }
   /**
-   * @param bool
+   * Output only. Whether the file has been viewed by this user.
+   *
+   * @param bool $viewedByMe
    */
   public function setViewedByMe($viewedByMe)
   {
@@ -1076,7 +1446,9 @@ class DriveFile extends \Google\Collection
     return $this->viewedByMe;
   }
   /**
-   * @param string
+   * The last time the file was viewed by the user (RFC 3339 date-time).
+   *
+   * @param string $viewedByMeTime
    */
   public function setViewedByMeTime($viewedByMeTime)
   {
@@ -1090,13 +1462,17 @@ class DriveFile extends \Google\Collection
     return $this->viewedByMeTime;
   }
   /**
-   * @param bool
+   * Deprecated: Use `copyRequiresWriterPermission` instead.
+   *
+   * @deprecated
+   * @param bool $viewersCanCopyContent
    */
   public function setViewersCanCopyContent($viewersCanCopyContent)
   {
     $this->viewersCanCopyContent = $viewersCanCopyContent;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getViewersCanCopyContent()
@@ -1104,7 +1480,10 @@ class DriveFile extends \Google\Collection
     return $this->viewersCanCopyContent;
   }
   /**
-   * @param string
+   * Output only. A link for downloading the content of the file in a browser.
+   * This is only available for files with binary content in Google Drive.
+   *
+   * @param string $webContentLink
    */
   public function setWebContentLink($webContentLink)
   {
@@ -1118,7 +1497,10 @@ class DriveFile extends \Google\Collection
     return $this->webContentLink;
   }
   /**
-   * @param string
+   * Output only. A link for opening the file in a relevant Google editor or
+   * viewer in a browser.
+   *
+   * @param string $webViewLink
    */
   public function setWebViewLink($webViewLink)
   {
@@ -1132,7 +1514,10 @@ class DriveFile extends \Google\Collection
     return $this->webViewLink;
   }
   /**
-   * @param bool
+   * Whether users with only `writer` permission can modify the file's
+   * permissions. Not populated for items in shared drives.
+   *
+   * @param bool $writersCanShare
    */
   public function setWritersCanShare($writersCanShare)
   {

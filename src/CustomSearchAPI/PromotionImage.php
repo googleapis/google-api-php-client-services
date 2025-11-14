@@ -20,20 +20,28 @@ namespace Google\Service\CustomSearchAPI;
 class PromotionImage extends \Google\Model
 {
   /**
+   * Image height in pixels.
+   *
    * @var int
    */
   public $height;
   /**
+   * URL of the image for this promotion link.
+   *
    * @var string
    */
   public $source;
   /**
+   * Image width in pixels.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param int
+   * Image height in pixels.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -47,7 +55,9 @@ class PromotionImage extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * URL of the image for this promotion link.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {
@@ -61,7 +71,9 @@ class PromotionImage extends \Google\Model
     return $this->source;
   }
   /**
-   * @param int
+   * Image width in pixels.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

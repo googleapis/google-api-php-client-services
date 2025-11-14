@@ -27,12 +27,14 @@ class InstancesListServerCasResponse extends \Google\Collection
   protected $certsType = SslCert::class;
   protected $certsDataType = 'array';
   /**
+   * This is always `sql#instancesListServerCas`.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * @param string $activeVersion
    */
   public function setActiveVersion($activeVersion)
   {
@@ -46,7 +48,9 @@ class InstancesListServerCasResponse extends \Google\Collection
     return $this->activeVersion;
   }
   /**
-   * @param SslCert[]
+   * List of server CA certificates for the instance.
+   *
+   * @param SslCert[] $certs
    */
   public function setCerts($certs)
   {
@@ -60,7 +64,9 @@ class InstancesListServerCasResponse extends \Google\Collection
     return $this->certs;
   }
   /**
-   * @param string
+   * This is always `sql#instancesListServerCas`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

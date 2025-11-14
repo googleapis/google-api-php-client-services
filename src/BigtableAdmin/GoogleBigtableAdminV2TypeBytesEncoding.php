@@ -23,7 +23,9 @@ class GoogleBigtableAdminV2TypeBytesEncoding extends \Google\Model
   protected $rawDataType = '';
 
   /**
-   * @param GoogleBigtableAdminV2TypeBytesEncodingRaw
+   * Use `Raw` encoding.
+   *
+   * @param GoogleBigtableAdminV2TypeBytesEncodingRaw $raw
    */
   public function setRaw(GoogleBigtableAdminV2TypeBytesEncodingRaw $raw)
   {

@@ -23,7 +23,10 @@ class GoogleCloudDiscoveryengineV1ServingConfigGenericConfig extends \Google\Mod
   protected $contentSearchSpecDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec
+   * Specifies the expected behavior of content search. Only valid for content-
+   * search enabled data store.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec $contentSearchSpec
    */
   public function setContentSearchSpec(GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec $contentSearchSpec)
   {

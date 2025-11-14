@@ -23,16 +23,24 @@ class ListKeyRingsResponse extends \Google\Collection
   protected $keyRingsType = KeyRing::class;
   protected $keyRingsDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass this value in
+   * ListKeyRingsRequest.page_token to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The total number of KeyRings that matched the query. This field is not
+   * populated if ListKeyRingsRequest.filter is applied.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param KeyRing[]
+   * The list of KeyRings.
+   *
+   * @param KeyRing[] $keyRings
    */
   public function setKeyRings($keyRings)
   {
@@ -46,7 +54,10 @@ class ListKeyRingsResponse extends \Google\Collection
     return $this->keyRings;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass this value in
+   * ListKeyRingsRequest.page_token to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +71,10 @@ class ListKeyRingsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * The total number of KeyRings that matched the query. This field is not
+   * populated if ListKeyRingsRequest.filter is applied.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

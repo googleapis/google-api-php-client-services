@@ -20,12 +20,16 @@ namespace Google\Service\StreetViewPublish;
 class InsufficientGpsFailureDetails extends \Google\Model
 {
   /**
+   * The number of GPS points that were found in the video.
+   *
    * @var int
    */
   public $gpsPointsFound;
 
   /**
-   * @param int
+   * The number of GPS points that were found in the video.
+   *
+   * @param int $gpsPointsFound
    */
   public function setGpsPointsFound($gpsPointsFound)
   {

@@ -20,68 +20,120 @@ namespace Google\Service\TagManager;
 class Environment extends \Google\Model
 {
   /**
+   * Points to a user defined environment.
+   */
+  public const TYPE_user = 'user';
+  /**
+   * Points to the current live container version.
+   */
+  public const TYPE_live = 'live';
+  /**
+   * Points to the latest container version.
+   */
+  public const TYPE_latest = 'latest';
+  /**
+   * Automatically managed environment that points to a workspace preview or
+   * version created by a workspace.
+   */
+  public const TYPE_workspace = 'workspace';
+  /**
+   * GTM Account ID.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * The environment authorization code.
+   *
    * @var string
    */
   public $authorizationCode;
   /**
+   * The last update time-stamp for the authorization code.
+   *
    * @var string
    */
   public $authorizationTimestamp;
   /**
+   * GTM Container ID.
+   *
    * @var string
    */
   public $containerId;
   /**
+   * Represents a link to a container version.
+   *
    * @var string
    */
   public $containerVersionId;
   /**
+   * The environment description. Can be set or changed only on USER type
+   * environments.
+   *
    * @var string
    */
   public $description;
   /**
+   * Whether or not to enable debug by default for the environment.
+   *
    * @var bool
    */
   public $enableDebug;
   /**
+   * GTM Environment ID uniquely identifies the GTM Environment.
+   *
    * @var string
    */
   public $environmentId;
   /**
+   * The fingerprint of the GTM environment as computed at storage time. This
+   * value is recomputed whenever the environment is modified.
+   *
    * @var string
    */
   public $fingerprint;
   /**
+   * The environment display name. Can be set or changed only on USER type
+   * environments.
+   *
    * @var string
    */
   public $name;
   /**
+   * GTM Environment's API relative path.
+   *
    * @var string
    */
   public $path;
   /**
+   * Auto generated link to the tag manager UI
+   *
    * @var string
    */
   public $tagManagerUrl;
   /**
+   * The type of this environment.
+   *
    * @var string
    */
   public $type;
   /**
+   * Default preview page url for the environment.
+   *
    * @var string
    */
   public $url;
   /**
+   * Represents a link to a quick preview of a workspace.
+   *
    * @var string
    */
   public $workspaceId;
 
   /**
-   * @param string
+   * GTM Account ID.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -95,7 +147,9 @@ class Environment extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * The environment authorization code.
+   *
+   * @param string $authorizationCode
    */
   public function setAuthorizationCode($authorizationCode)
   {
@@ -109,7 +163,9 @@ class Environment extends \Google\Model
     return $this->authorizationCode;
   }
   /**
-   * @param string
+   * The last update time-stamp for the authorization code.
+   *
+   * @param string $authorizationTimestamp
    */
   public function setAuthorizationTimestamp($authorizationTimestamp)
   {
@@ -123,7 +179,9 @@ class Environment extends \Google\Model
     return $this->authorizationTimestamp;
   }
   /**
-   * @param string
+   * GTM Container ID.
+   *
+   * @param string $containerId
    */
   public function setContainerId($containerId)
   {
@@ -137,7 +195,9 @@ class Environment extends \Google\Model
     return $this->containerId;
   }
   /**
-   * @param string
+   * Represents a link to a container version.
+   *
+   * @param string $containerVersionId
    */
   public function setContainerVersionId($containerVersionId)
   {
@@ -151,7 +211,10 @@ class Environment extends \Google\Model
     return $this->containerVersionId;
   }
   /**
-   * @param string
+   * The environment description. Can be set or changed only on USER type
+   * environments.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -165,7 +228,9 @@ class Environment extends \Google\Model
     return $this->description;
   }
   /**
-   * @param bool
+   * Whether or not to enable debug by default for the environment.
+   *
+   * @param bool $enableDebug
    */
   public function setEnableDebug($enableDebug)
   {
@@ -179,7 +244,9 @@ class Environment extends \Google\Model
     return $this->enableDebug;
   }
   /**
-   * @param string
+   * GTM Environment ID uniquely identifies the GTM Environment.
+   *
+   * @param string $environmentId
    */
   public function setEnvironmentId($environmentId)
   {
@@ -193,7 +260,10 @@ class Environment extends \Google\Model
     return $this->environmentId;
   }
   /**
-   * @param string
+   * The fingerprint of the GTM environment as computed at storage time. This
+   * value is recomputed whenever the environment is modified.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -207,7 +277,10 @@ class Environment extends \Google\Model
     return $this->fingerprint;
   }
   /**
-   * @param string
+   * The environment display name. Can be set or changed only on USER type
+   * environments.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -221,7 +294,9 @@ class Environment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * GTM Environment's API relative path.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -235,7 +310,9 @@ class Environment extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Auto generated link to the tag manager UI
+   *
+   * @param string $tagManagerUrl
    */
   public function setTagManagerUrl($tagManagerUrl)
   {
@@ -249,21 +326,27 @@ class Environment extends \Google\Model
     return $this->tagManagerUrl;
   }
   /**
-   * @param string
+   * The type of this environment.
+   *
+   * Accepted values: user, live, latest, workspace
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Default preview page url for the environment.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {
@@ -277,7 +360,9 @@ class Environment extends \Google\Model
     return $this->url;
   }
   /**
-   * @param string
+   * Represents a link to a quick preview of a workspace.
+   *
+   * @param string $workspaceId
    */
   public function setWorkspaceId($workspaceId)
   {

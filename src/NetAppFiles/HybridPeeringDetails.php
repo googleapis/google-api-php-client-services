@@ -20,36 +20,59 @@ namespace Google\Service\NetAppFiles;
 class HybridPeeringDetails extends \Google\Model
 {
   /**
+   * Output only. Copy-paste-able commands to be used on user's ONTAP to accept
+   * peering requests.
+   *
    * @var string
    */
   public $command;
   /**
+   * Output only. Expiration time for the peering command to be executed on
+   * user's ONTAP.
+   *
    * @var string
    */
   public $commandExpiryTime;
   /**
+   * Output only. Temporary passphrase generated to accept cluster peering
+   * command.
+   *
    * @var string
    */
   public $passphrase;
   /**
+   * Output only. Name of the user's local source cluster to be peered with the
+   * destination cluster.
+   *
    * @var string
    */
   public $peerClusterName;
   /**
+   * Output only. Name of the user's local source vserver svm to be peered with
+   * the destination vserver svm.
+   *
    * @var string
    */
   public $peerSvmName;
   /**
+   * Output only. Name of the user's local source volume to be peered with the
+   * destination volume.
+   *
    * @var string
    */
   public $peerVolumeName;
   /**
+   * Output only. IP address of the subnet.
+   *
    * @var string
    */
   public $subnetIp;
 
   /**
-   * @param string
+   * Output only. Copy-paste-able commands to be used on user's ONTAP to accept
+   * peering requests.
+   *
+   * @param string $command
    */
   public function setCommand($command)
   {
@@ -63,7 +86,10 @@ class HybridPeeringDetails extends \Google\Model
     return $this->command;
   }
   /**
-   * @param string
+   * Output only. Expiration time for the peering command to be executed on
+   * user's ONTAP.
+   *
+   * @param string $commandExpiryTime
    */
   public function setCommandExpiryTime($commandExpiryTime)
   {
@@ -77,7 +103,10 @@ class HybridPeeringDetails extends \Google\Model
     return $this->commandExpiryTime;
   }
   /**
-   * @param string
+   * Output only. Temporary passphrase generated to accept cluster peering
+   * command.
+   *
+   * @param string $passphrase
    */
   public function setPassphrase($passphrase)
   {
@@ -91,7 +120,10 @@ class HybridPeeringDetails extends \Google\Model
     return $this->passphrase;
   }
   /**
-   * @param string
+   * Output only. Name of the user's local source cluster to be peered with the
+   * destination cluster.
+   *
+   * @param string $peerClusterName
    */
   public function setPeerClusterName($peerClusterName)
   {
@@ -105,7 +137,10 @@ class HybridPeeringDetails extends \Google\Model
     return $this->peerClusterName;
   }
   /**
-   * @param string
+   * Output only. Name of the user's local source vserver svm to be peered with
+   * the destination vserver svm.
+   *
+   * @param string $peerSvmName
    */
   public function setPeerSvmName($peerSvmName)
   {
@@ -119,7 +154,10 @@ class HybridPeeringDetails extends \Google\Model
     return $this->peerSvmName;
   }
   /**
-   * @param string
+   * Output only. Name of the user's local source volume to be peered with the
+   * destination volume.
+   *
+   * @param string $peerVolumeName
    */
   public function setPeerVolumeName($peerVolumeName)
   {
@@ -133,7 +171,9 @@ class HybridPeeringDetails extends \Google\Model
     return $this->peerVolumeName;
   }
   /**
-   * @param string
+   * Output only. IP address of the subnet.
+   *
+   * @param string $subnetIp
    */
   public function setSubnetIp($subnetIp)
   {

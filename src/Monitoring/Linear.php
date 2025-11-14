@@ -20,14 +20,28 @@ namespace Google\Service\Monitoring;
 class Linear extends \Google\Model
 {
   /**
+   * Must be greater than 0.
+   *
    * @var int
    */
   public $numFiniteBuckets;
+  /**
+   * Lower bound of the first bucket.
+   *
+   * @var 
+   */
   public $offset;
+  /**
+   * Must be greater than 0.
+   *
+   * @var 
+   */
   public $width;
 
   /**
-   * @param int
+   * Must be greater than 0.
+   *
+   * @param int $numFiniteBuckets
    */
   public function setNumFiniteBuckets($numFiniteBuckets)
   {

@@ -20,6 +20,8 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InfoTypeStats extends \Google\Model
 {
   /**
+   * Number of findings for this infoType.
+   *
    * @var string
    */
   public $count;
@@ -27,7 +29,9 @@ class GooglePrivacyDlpV2InfoTypeStats extends \Google\Model
   protected $infoTypeDataType = '';
 
   /**
-   * @param string
+   * Number of findings for this infoType.
+   *
+   * @param string $count
    */
   public function setCount($count)
   {
@@ -41,7 +45,9 @@ class GooglePrivacyDlpV2InfoTypeStats extends \Google\Model
     return $this->count;
   }
   /**
-   * @param GooglePrivacyDlpV2InfoType
+   * The type of finding this stat is for.
+   *
+   * @param GooglePrivacyDlpV2InfoType $infoType
    */
   public function setInfoType(GooglePrivacyDlpV2InfoType $infoType)
   {

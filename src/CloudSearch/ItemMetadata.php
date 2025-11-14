@@ -21,54 +21,98 @@ class ItemMetadata extends \Google\Collection
 {
   protected $collection_key = 'keywords';
   /**
+   * The name of the container for this item. Deletion of the container item
+   * leads to automatic deletion of this item. Note: ACLs are not inherited from
+   * a container item. To provide ACL inheritance for an item, use the
+   * inheritAclFrom field. The maximum length is 1536 characters.
+   *
    * @var string
    */
   public $containerName;
   /**
+   * The BCP-47 language code for the item, such as "en-US" or "sr-Latn". For
+   * more information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. The maximum
+   * length is 32 characters.
+   *
    * @var string
    */
   public $contentLanguage;
   protected $contextAttributesType = ContextAttribute::class;
   protected $contextAttributesDataType = 'array';
   /**
+   * The time when the item was created in the source repository.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Hashing value provided by the API caller. This can be used with the
+   * items.push method to calculate modified state. The maximum length is 2048
+   * characters.
+   *
    * @var string
    */
   public $hash;
   protected $interactionsType = Interaction::class;
   protected $interactionsDataType = 'array';
   /**
+   * Additional keywords or phrases that should match the item. Used internally
+   * for user generated content. The maximum number of elements is 100. The
+   * maximum length is 8192 characters.
+   *
    * @var string[]
    */
   public $keywords;
   /**
+   * The original mime-type of ItemContent.content in the source repository. The
+   * maximum length is 256 characters.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * The type of the item. This should correspond to the name of an object
+   * definition in the schema registered for the data source. For example, if
+   * the schema for the data source contains an object definition with name
+   * 'document', then item indexing requests for objects of that type should set
+   * objectType to 'document'. The maximum length is 256 characters.
+   *
    * @var string
    */
   public $objectType;
   protected $searchQualityMetadataType = SearchQualityMetadata::class;
   protected $searchQualityMetadataDataType = '';
   /**
+   * Link to the source repository serving the data. Seach results apply this
+   * link to the title. Whitespace or special characters may cause Cloud Seach
+   * result links to trigger a redirect notice; to avoid this, encode the URL.
+   * The maximum length is 2048 characters.
+   *
    * @var string
    */
   public $sourceRepositoryUrl;
   /**
+   * The title of the item. If given, this will be the displayed title of the
+   * Search result. The maximum length is 2048 characters.
+   *
    * @var string
    */
   public $title;
   /**
+   * The time when the item was last modified in the source repository.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The name of the container for this item. Deletion of the container item
+   * leads to automatic deletion of this item. Note: ACLs are not inherited from
+   * a container item. To provide ACL inheritance for an item, use the
+   * inheritAclFrom field. The maximum length is 1536 characters.
+   *
+   * @param string $containerName
    */
   public function setContainerName($containerName)
   {
@@ -82,7 +126,12 @@ class ItemMetadata extends \Google\Collection
     return $this->containerName;
   }
   /**
-   * @param string
+   * The BCP-47 language code for the item, such as "en-US" or "sr-Latn". For
+   * more information, see
+   * http://www.unicode.org/reports/tr35/#Unicode_locale_identifier. The maximum
+   * length is 32 characters.
+   *
+   * @param string $contentLanguage
    */
   public function setContentLanguage($contentLanguage)
   {
@@ -96,7 +145,11 @@ class ItemMetadata extends \Google\Collection
     return $this->contentLanguage;
   }
   /**
-   * @param ContextAttribute[]
+   * A set of named attributes associated with the item. This can be used for
+   * influencing the ranking of the item based on the context in the request.
+   * The maximum number of elements is 10.
+   *
+   * @param ContextAttribute[] $contextAttributes
    */
   public function setContextAttributes($contextAttributes)
   {
@@ -110,7 +163,9 @@ class ItemMetadata extends \Google\Collection
     return $this->contextAttributes;
   }
   /**
-   * @param string
+   * The time when the item was created in the source repository.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -124,7 +179,11 @@ class ItemMetadata extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Hashing value provided by the API caller. This can be used with the
+   * items.push method to calculate modified state. The maximum length is 2048
+   * characters.
+   *
+   * @param string $hash
    */
   public function setHash($hash)
   {
@@ -138,7 +197,11 @@ class ItemMetadata extends \Google\Collection
     return $this->hash;
   }
   /**
-   * @param Interaction[]
+   * A list of interactions for the item. Interactions are used to improve
+   * Search quality, but are not exposed to end users. The maximum number of
+   * elements is 1000.
+   *
+   * @param Interaction[] $interactions
    */
   public function setInteractions($interactions)
   {
@@ -152,7 +215,11 @@ class ItemMetadata extends \Google\Collection
     return $this->interactions;
   }
   /**
-   * @param string[]
+   * Additional keywords or phrases that should match the item. Used internally
+   * for user generated content. The maximum number of elements is 100. The
+   * maximum length is 8192 characters.
+   *
+   * @param string[] $keywords
    */
   public function setKeywords($keywords)
   {
@@ -166,7 +233,10 @@ class ItemMetadata extends \Google\Collection
     return $this->keywords;
   }
   /**
-   * @param string
+   * The original mime-type of ItemContent.content in the source repository. The
+   * maximum length is 256 characters.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -180,7 +250,13 @@ class ItemMetadata extends \Google\Collection
     return $this->mimeType;
   }
   /**
-   * @param string
+   * The type of the item. This should correspond to the name of an object
+   * definition in the schema registered for the data source. For example, if
+   * the schema for the data source contains an object definition with name
+   * 'document', then item indexing requests for objects of that type should set
+   * objectType to 'document'. The maximum length is 256 characters.
+   *
+   * @param string $objectType
    */
   public function setObjectType($objectType)
   {
@@ -194,7 +270,9 @@ class ItemMetadata extends \Google\Collection
     return $this->objectType;
   }
   /**
-   * @param SearchQualityMetadata
+   * Additional search quality metadata of the item
+   *
+   * @param SearchQualityMetadata $searchQualityMetadata
    */
   public function setSearchQualityMetadata(SearchQualityMetadata $searchQualityMetadata)
   {
@@ -208,7 +286,12 @@ class ItemMetadata extends \Google\Collection
     return $this->searchQualityMetadata;
   }
   /**
-   * @param string
+   * Link to the source repository serving the data. Seach results apply this
+   * link to the title. Whitespace or special characters may cause Cloud Seach
+   * result links to trigger a redirect notice; to avoid this, encode the URL.
+   * The maximum length is 2048 characters.
+   *
+   * @param string $sourceRepositoryUrl
    */
   public function setSourceRepositoryUrl($sourceRepositoryUrl)
   {
@@ -222,7 +305,10 @@ class ItemMetadata extends \Google\Collection
     return $this->sourceRepositoryUrl;
   }
   /**
-   * @param string
+   * The title of the item. If given, this will be the displayed title of the
+   * Search result. The maximum length is 2048 characters.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -236,7 +322,9 @@ class ItemMetadata extends \Google\Collection
     return $this->title;
   }
   /**
-   * @param string
+   * The time when the item was last modified in the source repository.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,16 +20,41 @@ namespace Google\Service\CloudSupport;
 class Escalation extends \Google\Model
 {
   /**
+   * The escalation reason is in an unknown state or has not been specified.
+   */
+  public const REASON_REASON_UNSPECIFIED = 'REASON_UNSPECIFIED';
+  /**
+   * The case is taking too long to resolve.
+   */
+  public const REASON_RESOLUTION_TIME = 'RESOLUTION_TIME';
+  /**
+   * The support agent does not have the expertise required to successfully
+   * resolve the issue.
+   */
+  public const REASON_TECHNICAL_EXPERTISE = 'TECHNICAL_EXPERTISE';
+  /**
+   * The issue is having a significant business impact.
+   */
+  public const REASON_BUSINESS_IMPACT = 'BUSINESS_IMPACT';
+  /**
+   * Required. A free text description to accompany the `reason` field above.
+   * Provides additional context on why the case is being escalated.
+   *
    * @var string
    */
   public $justification;
   /**
+   * Required. The reason why the Case is being escalated.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * Required. A free text description to accompany the `reason` field above.
+   * Provides additional context on why the case is being escalated.
+   *
+   * @param string $justification
    */
   public function setJustification($justification)
   {
@@ -43,14 +68,19 @@ class Escalation extends \Google\Model
     return $this->justification;
   }
   /**
-   * @param string
+   * Required. The reason why the Case is being escalated.
+   *
+   * Accepted values: REASON_UNSPECIFIED, RESOLUTION_TIME, TECHNICAL_EXPERTISE,
+   * BUSINESS_IMPACT
+   *
+   * @param self::REASON_* $reason
    */
   public function setReason($reason)
   {
     $this->reason = $reason;
   }
   /**
-   * @return string
+   * @return self::REASON_*
    */
   public function getReason()
   {

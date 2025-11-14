@@ -20,12 +20,22 @@ namespace Google\Service\Storagetransfer;
 class HttpData extends \Google\Model
 {
   /**
+   * Required. The URL that points to the file that stores the object list
+   * entries. This file must allow public access. The URL is either an
+   * HTTP/HTTPS address (e.g. `https://example.com/urllist.tsv`) or a Cloud
+   * Storage path (e.g. `gs://my-bucket/urllist.tsv`).
+   *
    * @var string
    */
   public $listUrl;
 
   /**
-   * @param string
+   * Required. The URL that points to the file that stores the object list
+   * entries. This file must allow public access. The URL is either an
+   * HTTP/HTTPS address (e.g. `https://example.com/urllist.tsv`) or a Cloud
+   * Storage path (e.g. `gs://my-bucket/urllist.tsv`).
+   *
+   * @param string $listUrl
    */
   public function setListUrl($listUrl)
   {

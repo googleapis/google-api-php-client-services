@@ -24,7 +24,9 @@ class BackupDrPlanConfig extends \Google\Collection
   protected $backupDrPlanRulesDataType = 'array';
 
   /**
-   * @param BackupDrPlanRule[]
+   * Backup rules of the backup plan resource.
+   *
+   * @param BackupDrPlanRule[] $backupDrPlanRules
    */
   public function setBackupDrPlanRules($backupDrPlanRules)
   {

@@ -23,12 +23,17 @@ class ListBackupsResponse extends \Google\Collection
   protected $backupsType = Backup::class;
   protected $backupsDataType = 'array';
   /**
+   * `next_page_token` can be sent in a subsequent ListBackups call to fetch
+   * more of the matching backups.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Backup[]
+   * The list of matching backups.
+   *
+   * @param Backup[] $backups
    */
   public function setBackups($backups)
   {
@@ -42,7 +47,10 @@ class ListBackupsResponse extends \Google\Collection
     return $this->backups;
   }
   /**
-   * @param string
+   * `next_page_token` can be sent in a subsequent ListBackups call to fetch
+   * more of the matching backups.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

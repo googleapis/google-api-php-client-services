@@ -21,6 +21,8 @@ class PlacementTag extends \Google\Collection
 {
   protected $collection_key = 'tagDatas';
   /**
+   * Placement ID
+   *
    * @var string
    */
   public $placementId;
@@ -28,7 +30,9 @@ class PlacementTag extends \Google\Collection
   protected $tagDatasDataType = 'array';
 
   /**
-   * @param string
+   * Placement ID
+   *
+   * @param string $placementId
    */
   public function setPlacementId($placementId)
   {
@@ -42,7 +46,9 @@ class PlacementTag extends \Google\Collection
     return $this->placementId;
   }
   /**
-   * @param TagData[]
+   * Tags generated for this placement.
+   *
+   * @param TagData[] $tagDatas
    */
   public function setTagDatas($tagDatas)
   {

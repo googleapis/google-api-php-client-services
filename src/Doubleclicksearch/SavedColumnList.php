@@ -23,12 +23,17 @@ class SavedColumnList extends \Google\Collection
   protected $itemsType = SavedColumn::class;
   protected $itemsDataType = 'array';
   /**
+   * Identifies this as a SavedColumnList resource. Value: the fixed string
+   * doubleclicksearch#savedColumnList.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param SavedColumn[]
+   * The saved columns being requested.
+   *
+   * @param SavedColumn[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +47,10 @@ class SavedColumnList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Identifies this as a SavedColumnList resource. Value: the fixed string
+   * doubleclicksearch#savedColumnList.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

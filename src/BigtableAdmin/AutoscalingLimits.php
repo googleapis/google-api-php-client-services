@@ -20,16 +20,22 @@ namespace Google\Service\BigtableAdmin;
 class AutoscalingLimits extends \Google\Model
 {
   /**
+   * Required. Maximum number of nodes to scale up to.
+   *
    * @var int
    */
   public $maxServeNodes;
   /**
+   * Required. Minimum number of nodes to scale down to.
+   *
    * @var int
    */
   public $minServeNodes;
 
   /**
-   * @param int
+   * Required. Maximum number of nodes to scale up to.
+   *
+   * @param int $maxServeNodes
    */
   public function setMaxServeNodes($maxServeNodes)
   {
@@ -43,7 +49,9 @@ class AutoscalingLimits extends \Google\Model
     return $this->maxServeNodes;
   }
   /**
-   * @param int
+   * Required. Minimum number of nodes to scale down to.
+   *
+   * @param int $minServeNodes
    */
   public function setMinServeNodes($minServeNodes)
   {

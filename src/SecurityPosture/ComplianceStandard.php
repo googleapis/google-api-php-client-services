@@ -20,16 +20,25 @@ namespace Google\Service\SecurityPosture;
 class ComplianceStandard extends \Google\Model
 {
   /**
+   * Optional. The control in the compliance standard that the policy helps
+   * enforce. For example, `AC-3`.
+   *
    * @var string
    */
   public $control;
   /**
+   * Optional. The compliance standard that the policy helps enforce. For
+   * example, `NIST SP 800-53`.
+   *
    * @var string
    */
   public $standard;
 
   /**
-   * @param string
+   * Optional. The control in the compliance standard that the policy helps
+   * enforce. For example, `AC-3`.
+   *
+   * @param string $control
    */
   public function setControl($control)
   {
@@ -43,7 +52,10 @@ class ComplianceStandard extends \Google\Model
     return $this->control;
   }
   /**
-   * @param string
+   * Optional. The compliance standard that the policy helps enforce. For
+   * example, `NIST SP 800-53`.
+   *
+   * @param string $standard
    */
   public function setStandard($standard)
   {

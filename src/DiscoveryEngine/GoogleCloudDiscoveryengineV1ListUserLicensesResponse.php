@@ -21,6 +21,9 @@ class GoogleCloudDiscoveryengineV1ListUserLicensesResponse extends \Google\Colle
 {
   protected $collection_key = 'userLicenses';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudDiscoveryengineV1ListUserLicensesResponse extends \Google\Colle
   protected $userLicensesDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudDiscoveryengineV1ListUserLicensesResponse extends \Google\Colle
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1UserLicense[]
+   * All the customer's UserLicenses.
+   *
+   * @param GoogleCloudDiscoveryengineV1UserLicense[] $userLicenses
    */
   public function setUserLicenses($userLicenses)
   {

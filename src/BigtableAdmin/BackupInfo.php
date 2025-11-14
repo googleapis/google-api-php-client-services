@@ -20,28 +20,44 @@ namespace Google\Service\BigtableAdmin;
 class BackupInfo extends \Google\Model
 {
   /**
+   * Output only. Name of the backup.
+   *
    * @var string
    */
   public $backup;
   /**
+   * Output only. This time that the backup was finished. Row data in the backup
+   * will be no newer than this timestamp.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. Name of the backup from which this backup was copied. If a
+   * backup is not created by copying a backup, this field will be empty. Values
+   * are of the form: projects//instances//clusters//backups/
+   *
    * @var string
    */
   public $sourceBackup;
   /**
+   * Output only. Name of the table the backup was created from.
+   *
    * @var string
    */
   public $sourceTable;
   /**
+   * Output only. The time that the backup was started. Row data in the backup
+   * will be no older than this timestamp.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Output only. Name of the backup.
+   *
+   * @param string $backup
    */
   public function setBackup($backup)
   {
@@ -55,7 +71,10 @@ class BackupInfo extends \Google\Model
     return $this->backup;
   }
   /**
-   * @param string
+   * Output only. This time that the backup was finished. Row data in the backup
+   * will be no newer than this timestamp.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -69,7 +88,11 @@ class BackupInfo extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. Name of the backup from which this backup was copied. If a
+   * backup is not created by copying a backup, this field will be empty. Values
+   * are of the form: projects//instances//clusters//backups/
+   *
+   * @param string $sourceBackup
    */
   public function setSourceBackup($sourceBackup)
   {
@@ -83,7 +106,9 @@ class BackupInfo extends \Google\Model
     return $this->sourceBackup;
   }
   /**
-   * @param string
+   * Output only. Name of the table the backup was created from.
+   *
+   * @param string $sourceTable
    */
   public function setSourceTable($sourceTable)
   {
@@ -97,7 +122,10 @@ class BackupInfo extends \Google\Model
     return $this->sourceTable;
   }
   /**
-   * @param string
+   * Output only. The time that the backup was started. Row data in the backup
+   * will be no older than this timestamp.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

@@ -21,16 +21,24 @@ class AdvanceRolloutRequest extends \Google\Collection
 {
   protected $collection_key = 'overrideDeployPolicy';
   /**
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   *
    * @var string[]
    */
   public $overrideDeployPolicy;
   /**
+   * Required. The phase ID to advance the `Rollout` to.
+   *
    * @var string
    */
   public $phaseId;
 
   /**
-   * @param string[]
+   * Optional. Deploy policies to override. Format is
+   * `projects/{project}/locations/{location}/deployPolicies/{deployPolicy}`.
+   *
+   * @param string[] $overrideDeployPolicy
    */
   public function setOverrideDeployPolicy($overrideDeployPolicy)
   {
@@ -44,7 +52,9 @@ class AdvanceRolloutRequest extends \Google\Collection
     return $this->overrideDeployPolicy;
   }
   /**
-   * @param string
+   * Required. The phase ID to advance the `Rollout` to.
+   *
+   * @param string $phaseId
    */
   public function setPhaseId($phaseId)
   {

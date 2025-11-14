@@ -21,12 +21,22 @@ class AttestationSource extends \Google\Collection
 {
   protected $collection_key = 'containerAnalysisAttestationProjects';
   /**
+   * The IDs of the Google Cloud projects that store the SLSA attestations as
+   * Container Analysis Occurrences, in the format `projects/[PROJECT_ID]`.
+   * Maximum number of `container_analysis_attestation_projects` allowed in each
+   * `AttestationSource` is 10.
+   *
    * @var string[]
    */
   public $containerAnalysisAttestationProjects;
 
   /**
-   * @param string[]
+   * The IDs of the Google Cloud projects that store the SLSA attestations as
+   * Container Analysis Occurrences, in the format `projects/[PROJECT_ID]`.
+   * Maximum number of `container_analysis_attestation_projects` allowed in each
+   * `AttestationSource` is 10.
+   *
+   * @param string[] $containerAnalysisAttestationProjects
    */
   public function setContainerAnalysisAttestationProjects($containerAnalysisAttestationProjects)
   {

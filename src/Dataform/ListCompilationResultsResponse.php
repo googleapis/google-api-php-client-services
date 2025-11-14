@@ -23,16 +23,23 @@ class ListCompilationResultsResponse extends \Google\Collection
   protected $compilationResultsType = CompilationResult::class;
   protected $compilationResultsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations which could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param CompilationResult[]
+   * List of compilation results.
+   *
+   * @param CompilationResult[] $compilationResults
    */
   public function setCompilationResults($compilationResults)
   {
@@ -46,7 +53,10 @@ class ListCompilationResultsResponse extends \Google\Collection
     return $this->compilationResults;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListCompilationResultsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations which could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

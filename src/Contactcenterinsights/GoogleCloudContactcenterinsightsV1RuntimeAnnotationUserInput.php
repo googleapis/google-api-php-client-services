@@ -20,20 +20,44 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1RuntimeAnnotationUserInput extends \Google\Model
 {
   /**
+   * Unknown query source.
+   */
+  public const QUERY_SOURCE_QUERY_SOURCE_UNSPECIFIED = 'QUERY_SOURCE_UNSPECIFIED';
+  /**
+   * The query is from agents.
+   */
+  public const QUERY_SOURCE_AGENT_QUERY = 'AGENT_QUERY';
+  /**
+   * The query is a query from previous suggestions, e.g. from a preceding
+   * SuggestKnowledgeAssist response.
+   */
+  public const QUERY_SOURCE_SUGGESTED_QUERY = 'SUGGESTED_QUERY';
+  /**
+   * The resource name of associated generator. Format:
+   * `projects//locations//generators/`
+   *
    * @var string
    */
   public $generatorName;
   /**
+   * Query text. Article Search uses this to store the input query used to
+   * generate the search results.
+   *
    * @var string
    */
   public $query;
   /**
+   * Query source for the answer.
+   *
    * @var string
    */
   public $querySource;
 
   /**
-   * @param string
+   * The resource name of associated generator. Format:
+   * `projects//locations//generators/`
+   *
+   * @param string $generatorName
    */
   public function setGeneratorName($generatorName)
   {
@@ -47,7 +71,10 @@ class GoogleCloudContactcenterinsightsV1RuntimeAnnotationUserInput extends \Goog
     return $this->generatorName;
   }
   /**
-   * @param string
+   * Query text. Article Search uses this to store the input query used to
+   * generate the search results.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -61,14 +88,18 @@ class GoogleCloudContactcenterinsightsV1RuntimeAnnotationUserInput extends \Goog
     return $this->query;
   }
   /**
-   * @param string
+   * Query source for the answer.
+   *
+   * Accepted values: QUERY_SOURCE_UNSPECIFIED, AGENT_QUERY, SUGGESTED_QUERY
+   *
+   * @param self::QUERY_SOURCE_* $querySource
    */
   public function setQuerySource($querySource)
   {
     $this->querySource = $querySource;
   }
   /**
-   * @return string
+   * @return self::QUERY_SOURCE_*
    */
   public function getQuerySource()
   {

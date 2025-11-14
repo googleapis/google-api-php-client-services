@@ -24,7 +24,13 @@ class BatchGetEffectiveIamPoliciesResponse extends \Google\Collection
   protected $policyResultsDataType = 'array';
 
   /**
-   * @param EffectiveIamPolicy[]
+   * The effective policies for a batch of resources. Note that the results
+   * order is the same as the order of
+   * BatchGetEffectiveIamPoliciesRequest.names. When a resource does not have
+   * any effective IAM policies, its corresponding policy_result will contain
+   * empty EffectiveIamPolicy.policies.
+   *
+   * @param EffectiveIamPolicy[] $policyResults
    */
   public function setPolicyResults($policyResults)
   {

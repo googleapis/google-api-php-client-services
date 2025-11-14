@@ -23,16 +23,23 @@ class OperationsListResponse extends \Google\Collection
   protected $itemsType = Operation::class;
   protected $itemsDataType = 'array';
   /**
+   * This is always `sql#operationsList`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Operation[]
+   * List of operation resources.
+   *
+   * @param Operation[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +53,9 @@ class OperationsListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * This is always `sql#operationsList`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +69,10 @@ class OperationsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

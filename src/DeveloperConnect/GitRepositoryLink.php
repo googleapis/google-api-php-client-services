@@ -20,56 +20,88 @@ namespace Google\Service\DeveloperConnect;
 class GitRepositoryLink extends \Google\Model
 {
   /**
+   * Optional. Allows clients to store small amounts of arbitrary data.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Required. Git Clone URI.
+   *
    * @var string
    */
   public $cloneUri;
   /**
+   * Output only. [Output only] Create timestamp
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. [Output only] Delete timestamp
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * Optional. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. URI to access the linked repository through the Git Proxy.
+   * This field is only populated if the git proxy is enabled for the
+   * connection.
+   *
    * @var string
    */
   public $gitProxyUri;
   /**
+   * Optional. Labels as key value pairs
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. Resource name of the repository, in the format
+   * `projects/locations/connections/gitRepositoryLinks`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Set to true when the connection is being set up or updated in
+   * the background.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. A system-assigned unique identifier for the GitRepositoryLink.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. [Output only] Update timestamp
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Output only. External ID of the webhook created for the repository.
+   *
    * @var string
    */
   public $webhookId;
 
   /**
-   * @param string[]
+   * Optional. Allows clients to store small amounts of arbitrary data.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -83,7 +115,9 @@ class GitRepositoryLink extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * Required. Git Clone URI.
+   *
+   * @param string $cloneUri
    */
   public function setCloneUri($cloneUri)
   {
@@ -97,7 +131,9 @@ class GitRepositoryLink extends \Google\Model
     return $this->cloneUri;
   }
   /**
-   * @param string
+   * Output only. [Output only] Create timestamp
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -111,7 +147,9 @@ class GitRepositoryLink extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. [Output only] Delete timestamp
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -125,7 +163,11 @@ class GitRepositoryLink extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * Optional. This checksum is computed by the server based on the value of
+   * other fields, and may be sent on update and delete requests to ensure the
+   * client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -139,7 +181,11 @@ class GitRepositoryLink extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. URI to access the linked repository through the Git Proxy.
+   * This field is only populated if the git proxy is enabled for the
+   * connection.
+   *
+   * @param string $gitProxyUri
    */
   public function setGitProxyUri($gitProxyUri)
   {
@@ -153,7 +199,9 @@ class GitRepositoryLink extends \Google\Model
     return $this->gitProxyUri;
   }
   /**
-   * @param string[]
+   * Optional. Labels as key value pairs
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -167,7 +215,10 @@ class GitRepositoryLink extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the repository, in the format
+   * `projects/locations/connections/gitRepositoryLinks`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -181,7 +232,10 @@ class GitRepositoryLink extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. Set to true when the connection is being set up or updated in
+   * the background.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -195,7 +249,9 @@ class GitRepositoryLink extends \Google\Model
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. A system-assigned unique identifier for the GitRepositoryLink.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -209,7 +265,9 @@ class GitRepositoryLink extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. [Output only] Update timestamp
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -223,7 +281,9 @@ class GitRepositoryLink extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Output only. External ID of the webhook created for the repository.
+   *
+   * @param string $webhookId
    */
   public function setWebhookId($webhookId)
   {

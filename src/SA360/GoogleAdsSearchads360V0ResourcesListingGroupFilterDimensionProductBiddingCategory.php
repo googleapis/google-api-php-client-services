@@ -20,16 +20,54 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductBiddingCategory extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const LEVEL_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const LEVEL_UNKNOWN = 'UNKNOWN';
+  /**
+   * Level 1.
+   */
+  public const LEVEL_LEVEL1 = 'LEVEL1';
+  /**
+   * Level 2.
+   */
+  public const LEVEL_LEVEL2 = 'LEVEL2';
+  /**
+   * Level 3.
+   */
+  public const LEVEL_LEVEL3 = 'LEVEL3';
+  /**
+   * Level 4.
+   */
+  public const LEVEL_LEVEL4 = 'LEVEL4';
+  /**
+   * Level 5.
+   */
+  public const LEVEL_LEVEL5 = 'LEVEL5';
+  /**
+   * ID of the product bidding category. This ID is equivalent to the
+   * google_product_category ID as described in this article:
+   * https://support.google.com/merchants/answer/6324436
+   *
    * @var string
    */
   public $id;
   /**
+   * Indicates the level of the category in the taxonomy.
+   *
    * @var string
    */
   public $level;
 
   /**
-   * @param string
+   * ID of the product bidding category. This ID is equivalent to the
+   * google_product_category ID as described in this article:
+   * https://support.google.com/merchants/answer/6324436
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,14 +81,19 @@ class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductBiddingC
     return $this->id;
   }
   /**
-   * @param string
+   * Indicates the level of the category in the taxonomy.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, LEVEL1, LEVEL2, LEVEL3, LEVEL4,
+   * LEVEL5
+   *
+   * @param self::LEVEL_* $level
    */
   public function setLevel($level)
   {
     $this->level = $level;
   }
   /**
-   * @return string
+   * @return self::LEVEL_*
    */
   public function getLevel()
   {

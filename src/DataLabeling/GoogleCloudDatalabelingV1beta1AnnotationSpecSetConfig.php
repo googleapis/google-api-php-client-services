@@ -20,16 +20,24 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig extends \Google\Model
 {
   /**
+   * Optional. If allow_multi_label is true, contributors are able to choose
+   * multiple labels from one annotation spec set.
+   *
    * @var bool
    */
   public $allowMultiLabel;
   /**
+   * Required. Annotation spec set resource name.
+   *
    * @var string
    */
   public $annotationSpecSet;
 
   /**
-   * @param bool
+   * Optional. If allow_multi_label is true, contributors are able to choose
+   * multiple labels from one annotation spec set.
+   *
+   * @param bool $allowMultiLabel
    */
   public function setAllowMultiLabel($allowMultiLabel)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig extends \Google\Mode
     return $this->allowMultiLabel;
   }
   /**
-   * @param string
+   * Required. Annotation spec set resource name.
+   *
+   * @param string $annotationSpecSet
    */
   public function setAnnotationSpecSet($annotationSpecSet)
   {

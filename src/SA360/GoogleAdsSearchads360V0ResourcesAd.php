@@ -19,8 +19,152 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
 {
+  /**
+   * No value has been specified.
+   */
+  public const TYPE_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * The received value is not known in this version. This is a response-only
+   * value.
+   */
+  public const TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * The ad is a text ad.
+   */
+  public const TYPE_TEXT_AD = 'TEXT_AD';
+  /**
+   * The ad is an expanded text ad.
+   */
+  public const TYPE_EXPANDED_TEXT_AD = 'EXPANDED_TEXT_AD';
+  /**
+   * The ad is a call only ad.
+   */
+  public const TYPE_CALL_ONLY_AD = 'CALL_ONLY_AD';
+  /**
+   * The ad is an expanded dynamic search ad.
+   */
+  public const TYPE_EXPANDED_DYNAMIC_SEARCH_AD = 'EXPANDED_DYNAMIC_SEARCH_AD';
+  /**
+   * The ad is a hotel ad.
+   */
+  public const TYPE_HOTEL_AD = 'HOTEL_AD';
+  /**
+   * The ad is a Smart Shopping ad.
+   */
+  public const TYPE_SHOPPING_SMART_AD = 'SHOPPING_SMART_AD';
+  /**
+   * The ad is a standard Shopping ad.
+   */
+  public const TYPE_SHOPPING_PRODUCT_AD = 'SHOPPING_PRODUCT_AD';
+  /**
+   * The ad is a video ad.
+   */
+  public const TYPE_VIDEO_AD = 'VIDEO_AD';
+  /**
+   * This ad is a Gmail ad.
+   */
+  public const TYPE_GMAIL_AD = 'GMAIL_AD';
+  /**
+   * This ad is an Image ad.
+   */
+  public const TYPE_IMAGE_AD = 'IMAGE_AD';
+  /**
+   * The ad is a responsive search ad.
+   */
+  public const TYPE_RESPONSIVE_SEARCH_AD = 'RESPONSIVE_SEARCH_AD';
+  /**
+   * The ad is a legacy responsive display ad.
+   */
+  public const TYPE_LEGACY_RESPONSIVE_DISPLAY_AD = 'LEGACY_RESPONSIVE_DISPLAY_AD';
+  /**
+   * The ad is an app ad.
+   */
+  public const TYPE_APP_AD = 'APP_AD';
+  /**
+   * The ad is a legacy app install ad.
+   */
+  public const TYPE_LEGACY_APP_INSTALL_AD = 'LEGACY_APP_INSTALL_AD';
+  /**
+   * The ad is a responsive display ad.
+   */
+  public const TYPE_RESPONSIVE_DISPLAY_AD = 'RESPONSIVE_DISPLAY_AD';
+  /**
+   * The ad is a local ad.
+   */
+  public const TYPE_LOCAL_AD = 'LOCAL_AD';
+  /**
+   * The ad is a display upload ad with the HTML5_UPLOAD_AD product type.
+   */
+  public const TYPE_HTML5_UPLOAD_AD = 'HTML5_UPLOAD_AD';
+  /**
+   * The ad is a display upload ad with one of the DYNAMIC_HTML5_* product
+   * types.
+   */
+  public const TYPE_DYNAMIC_HTML5_AD = 'DYNAMIC_HTML5_AD';
+  /**
+   * The ad is an app engagement ad.
+   */
+  public const TYPE_APP_ENGAGEMENT_AD = 'APP_ENGAGEMENT_AD';
+  /**
+   * The ad is a Shopping Comparison Listing ad.
+   */
+  public const TYPE_SHOPPING_COMPARISON_LISTING_AD = 'SHOPPING_COMPARISON_LISTING_AD';
+  /**
+   * Video bumper ad.
+   */
+  public const TYPE_VIDEO_BUMPER_AD = 'VIDEO_BUMPER_AD';
+  /**
+   * Video non-skippable in-stream ad.
+   */
+  public const TYPE_VIDEO_NON_SKIPPABLE_IN_STREAM_AD = 'VIDEO_NON_SKIPPABLE_IN_STREAM_AD';
+  /**
+   * Video outstream ad.
+   */
+  public const TYPE_VIDEO_OUTSTREAM_AD = 'VIDEO_OUTSTREAM_AD';
+  /**
+   * Video TrueView in-display ad.
+   */
+  public const TYPE_VIDEO_TRUEVIEW_DISCOVERY_AD = 'VIDEO_TRUEVIEW_DISCOVERY_AD';
+  /**
+   * Video TrueView in-stream ad.
+   */
+  public const TYPE_VIDEO_TRUEVIEW_IN_STREAM_AD = 'VIDEO_TRUEVIEW_IN_STREAM_AD';
+  /**
+   * Video responsive ad.
+   */
+  public const TYPE_VIDEO_RESPONSIVE_AD = 'VIDEO_RESPONSIVE_AD';
+  /**
+   * Smart campaign ad.
+   */
+  public const TYPE_SMART_CAMPAIGN_AD = 'SMART_CAMPAIGN_AD';
+  /**
+   * Universal app pre-registration ad.
+   */
+  public const TYPE_APP_PRE_REGISTRATION_AD = 'APP_PRE_REGISTRATION_AD';
+  /**
+   * Discovery multi asset ad.
+   */
+  public const TYPE_DISCOVERY_MULTI_ASSET_AD = 'DISCOVERY_MULTI_ASSET_AD';
+  /**
+   * Discovery carousel ad.
+   */
+  public const TYPE_DISCOVERY_CAROUSEL_AD = 'DISCOVERY_CAROUSEL_AD';
+  /**
+   * Travel ad.
+   */
+  public const TYPE_TRAVEL_AD = 'TRAVEL_AD';
+  /**
+   * Discovery video responsive ad.
+   */
+  public const TYPE_DISCOVERY_VIDEO_RESPONSIVE_AD = 'DISCOVERY_VIDEO_RESPONSIVE_AD';
+  /**
+   * Multimedia ad.
+   */
+  public const TYPE_MULTIMEDIA_AD = 'MULTIMEDIA_AD';
   protected $collection_key = 'finalUrls';
   /**
+   * The URL that appears in the ad description for some ad formats.
+   *
    * @var string
    */
   public $displayUrl;
@@ -29,20 +173,31 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   protected $expandedTextAdType = GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo::class;
   protected $expandedTextAdDataType = '';
   /**
+   * The list of possible final URLs after all cross-domain redirects for the
+   * ad.
+   *
    * @var string[]
    */
   public $finalUrls;
   /**
+   * Output only. The ID of the ad.
+   *
    * @var string
    */
   public $id;
   /**
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad.
+   *
    * @var string
    */
   public $name;
   protected $productAdType = GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo::class;
   protected $productAdDataType = '';
   /**
+   * Immutable. The resource name of the ad. Ad resource names have the form:
+   * `customers/{customer_id}/ads/{ad_id}`
+   *
    * @var string
    */
   public $resourceName;
@@ -51,12 +206,16 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
   protected $textAdType = GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo::class;
   protected $textAdDataType = '';
   /**
+   * Output only. The type of ad.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The URL that appears in the ad description for some ad formats.
+   *
+   * @param string $displayUrl
    */
   public function setDisplayUrl($displayUrl)
   {
@@ -70,7 +229,9 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->displayUrl;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo
+   * Immutable. Details pertaining to an expanded dynamic search ad.
+   *
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo $expandedDynamicSearchAd
    */
   public function setExpandedDynamicSearchAd(GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo $expandedDynamicSearchAd)
   {
@@ -84,7 +245,9 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->expandedDynamicSearchAd;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo
+   * Immutable. Details pertaining to an expanded text ad.
+   *
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo $expandedTextAd
    */
   public function setExpandedTextAd(GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo $expandedTextAd)
   {
@@ -98,7 +261,10 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->expandedTextAd;
   }
   /**
-   * @param string[]
+   * The list of possible final URLs after all cross-domain redirects for the
+   * ad.
+   *
+   * @param string[] $finalUrls
    */
   public function setFinalUrls($finalUrls)
   {
@@ -112,7 +278,9 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->finalUrls;
   }
   /**
-   * @param string
+   * Output only. The ID of the ad.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -126,7 +294,10 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Immutable. The name of the ad. This is only used to be able to identify the
+   * ad. It does not need to be unique and does not affect the served ad.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -140,7 +311,9 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo
+   * Immutable. Details pertaining to a product ad.
+   *
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo $productAd
    */
   public function setProductAd(GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo $productAd)
   {
@@ -154,7 +327,10 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->productAd;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the ad. Ad resource names have the form:
+   * `customers/{customer_id}/ads/{ad_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -168,7 +344,9 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->resourceName;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo
+   * Immutable. Details pertaining to a responsive search ad.
+   *
+   * @param GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo $responsiveSearchAd
    */
   public function setResponsiveSearchAd(GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo $responsiveSearchAd)
   {
@@ -182,7 +360,9 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->responsiveSearchAd;
   }
   /**
-   * @param GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo
+   * Immutable. Details pertaining to a text ad.
+   *
+   * @param GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo $textAd
    */
   public function setTextAd(GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo $textAd)
   {
@@ -196,14 +376,28 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
     return $this->textAd;
   }
   /**
-   * @param string
+   * Output only. The type of ad.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, TEXT_AD, EXPANDED_TEXT_AD,
+   * CALL_ONLY_AD, EXPANDED_DYNAMIC_SEARCH_AD, HOTEL_AD, SHOPPING_SMART_AD,
+   * SHOPPING_PRODUCT_AD, VIDEO_AD, GMAIL_AD, IMAGE_AD, RESPONSIVE_SEARCH_AD,
+   * LEGACY_RESPONSIVE_DISPLAY_AD, APP_AD, LEGACY_APP_INSTALL_AD,
+   * RESPONSIVE_DISPLAY_AD, LOCAL_AD, HTML5_UPLOAD_AD, DYNAMIC_HTML5_AD,
+   * APP_ENGAGEMENT_AD, SHOPPING_COMPARISON_LISTING_AD, VIDEO_BUMPER_AD,
+   * VIDEO_NON_SKIPPABLE_IN_STREAM_AD, VIDEO_OUTSTREAM_AD,
+   * VIDEO_TRUEVIEW_DISCOVERY_AD, VIDEO_TRUEVIEW_IN_STREAM_AD,
+   * VIDEO_RESPONSIVE_AD, SMART_CAMPAIGN_AD, APP_PRE_REGISTRATION_AD,
+   * DISCOVERY_MULTI_ASSET_AD, DISCOVERY_CAROUSEL_AD, TRAVEL_AD,
+   * DISCOVERY_VIDEO_RESPONSIVE_AD, MULTIMEDIA_AD
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

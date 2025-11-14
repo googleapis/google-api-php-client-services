@@ -20,34 +20,58 @@ namespace Google\Service\SecurityCommandCenter;
 class Role extends \Google\Model
 {
   /**
+   * Role type is not specified.
+   */
+  public const KIND_KIND_UNSPECIFIED = 'KIND_UNSPECIFIED';
+  /**
+   * Kubernetes Role.
+   */
+  public const KIND_ROLE = 'ROLE';
+  /**
+   * Kubernetes ClusterRole.
+   */
+  public const KIND_CLUSTER_ROLE = 'CLUSTER_ROLE';
+  /**
+   * Role type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Role name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Role namespace.
+   *
    * @var string
    */
   public $ns;
 
   /**
-   * @param string
+   * Role type.
+   *
+   * Accepted values: KIND_UNSPECIFIED, ROLE, CLUSTER_ROLE
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * Role name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +85,9 @@ class Role extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Role namespace.
+   *
+   * @param string $ns
    */
   public function setNs($ns)
   {

@@ -35,12 +35,16 @@ class JobMetadata extends \Google\Collection
   protected $spannerDetailsType = SpannerIODetails::class;
   protected $spannerDetailsDataType = 'array';
   /**
+   * List of display properties to help UI filter jobs.
+   *
    * @var string[]
    */
   public $userDisplayProperties;
 
   /**
-   * @param BigTableIODetails[]
+   * Identification of a Cloud Bigtable source used in the Dataflow job.
+   *
+   * @param BigTableIODetails[] $bigTableDetails
    */
   public function setBigTableDetails($bigTableDetails)
   {
@@ -54,7 +58,9 @@ class JobMetadata extends \Google\Collection
     return $this->bigTableDetails;
   }
   /**
-   * @param BigQueryIODetails[]
+   * Identification of a BigQuery source used in the Dataflow job.
+   *
+   * @param BigQueryIODetails[] $bigqueryDetails
    */
   public function setBigqueryDetails($bigqueryDetails)
   {
@@ -68,7 +74,9 @@ class JobMetadata extends \Google\Collection
     return $this->bigqueryDetails;
   }
   /**
-   * @param DatastoreIODetails[]
+   * Identification of a Datastore source used in the Dataflow job.
+   *
+   * @param DatastoreIODetails[] $datastoreDetails
    */
   public function setDatastoreDetails($datastoreDetails)
   {
@@ -82,7 +90,9 @@ class JobMetadata extends \Google\Collection
     return $this->datastoreDetails;
   }
   /**
-   * @param FileIODetails[]
+   * Identification of a File source used in the Dataflow job.
+   *
+   * @param FileIODetails[] $fileDetails
    */
   public function setFileDetails($fileDetails)
   {
@@ -96,7 +106,9 @@ class JobMetadata extends \Google\Collection
     return $this->fileDetails;
   }
   /**
-   * @param PubSubIODetails[]
+   * Identification of a Pub/Sub source used in the Dataflow job.
+   *
+   * @param PubSubIODetails[] $pubsubDetails
    */
   public function setPubsubDetails($pubsubDetails)
   {
@@ -110,7 +122,9 @@ class JobMetadata extends \Google\Collection
     return $this->pubsubDetails;
   }
   /**
-   * @param SdkVersion
+   * The SDK version used to run the job.
+   *
+   * @param SdkVersion $sdkVersion
    */
   public function setSdkVersion(SdkVersion $sdkVersion)
   {
@@ -124,7 +138,9 @@ class JobMetadata extends \Google\Collection
     return $this->sdkVersion;
   }
   /**
-   * @param SpannerIODetails[]
+   * Identification of a Spanner source used in the Dataflow job.
+   *
+   * @param SpannerIODetails[] $spannerDetails
    */
   public function setSpannerDetails($spannerDetails)
   {
@@ -138,7 +154,9 @@ class JobMetadata extends \Google\Collection
     return $this->spannerDetails;
   }
   /**
-   * @param string[]
+   * List of display properties to help UI filter jobs.
+   *
+   * @param string[] $userDisplayProperties
    */
   public function setUserDisplayProperties($userDisplayProperties)
   {

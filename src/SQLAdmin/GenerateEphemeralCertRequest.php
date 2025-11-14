@@ -24,24 +24,35 @@ class GenerateEphemeralCertRequest extends \Google\Model
         "publicKey" => "public_key",
   ];
   /**
+   * Optional. Access token to include in the signed certificate.
+   *
    * @var string
    */
   public $accessToken;
   /**
+   * PEM encoded public key to include in the signed certificate.
+   *
    * @var string
    */
   public $publicKey;
   /**
+   * Optional. Optional snapshot read timestamp to trade freshness for
+   * performance.
+   *
    * @var string
    */
   public $readTime;
   /**
+   * Optional. If set, it will contain the cert valid duration.
+   *
    * @var string
    */
   public $validDuration;
 
   /**
-   * @param string
+   * Optional. Access token to include in the signed certificate.
+   *
+   * @param string $accessToken
    */
   public function setAccessToken($accessToken)
   {
@@ -55,7 +66,9 @@ class GenerateEphemeralCertRequest extends \Google\Model
     return $this->accessToken;
   }
   /**
-   * @param string
+   * PEM encoded public key to include in the signed certificate.
+   *
+   * @param string $publicKey
    */
   public function setPublicKey($publicKey)
   {
@@ -69,7 +82,10 @@ class GenerateEphemeralCertRequest extends \Google\Model
     return $this->publicKey;
   }
   /**
-   * @param string
+   * Optional. Optional snapshot read timestamp to trade freshness for
+   * performance.
+   *
+   * @param string $readTime
    */
   public function setReadTime($readTime)
   {
@@ -83,7 +99,9 @@ class GenerateEphemeralCertRequest extends \Google\Model
     return $this->readTime;
   }
   /**
-   * @param string
+   * Optional. If set, it will contain the cert valid duration.
+   *
+   * @param string $validDuration
    */
   public function setValidDuration($validDuration)
   {

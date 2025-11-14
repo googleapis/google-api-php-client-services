@@ -20,16 +20,36 @@ namespace Google\Service\Vault;
 class MatterPermission extends \Google\Model
 {
   /**
+   * No role assigned.
+   */
+  public const ROLE_ROLE_UNSPECIFIED = 'ROLE_UNSPECIFIED';
+  /**
+   * A collaborator on the matter.
+   */
+  public const ROLE_COLLABORATOR = 'COLLABORATOR';
+  /**
+   * The owner of the matter.
+   */
+  public const ROLE_OWNER = 'OWNER';
+  /**
+   * The account ID, as provided by the [Admin
+   * SDK](https://developers.google.com/admin-sdk/).
+   *
    * @var string
    */
   public $accountId;
   /**
+   * The user's role for the matter.
+   *
    * @var string
    */
   public $role;
 
   /**
-   * @param string
+   * The account ID, as provided by the [Admin
+   * SDK](https://developers.google.com/admin-sdk/).
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -43,14 +63,18 @@ class MatterPermission extends \Google\Model
     return $this->accountId;
   }
   /**
-   * @param string
+   * The user's role for the matter.
+   *
+   * Accepted values: ROLE_UNSPECIFIED, COLLABORATOR, OWNER
+   *
+   * @param self::ROLE_* $role
    */
   public function setRole($role)
   {
     $this->role = $role;
   }
   /**
-   * @return string
+   * @return self::ROLE_*
    */
   public function getRole()
   {

@@ -20,16 +20,25 @@ namespace Google\Service\Drive;
 class StartPageToken extends \Google\Model
 {
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#startPageToken"`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The starting page token for listing future changes. The page token doesn't
+   * expire.
+   *
    * @var string
    */
   public $startPageToken;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#startPageToken"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -43,7 +52,10 @@ class StartPageToken extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The starting page token for listing future changes. The page token doesn't
+   * expire.
+   *
+   * @param string $startPageToken
    */
   public function setStartPageToken($startPageToken)
   {

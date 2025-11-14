@@ -20,12 +20,16 @@ namespace Google\Service\Bigquery;
 class RowLevelSecurityStatistics extends \Google\Model
 {
   /**
+   * Whether any accessed data was protected by row access policies.
+   *
    * @var bool
    */
   public $rowLevelSecurityApplied;
 
   /**
-   * @param bool
+   * Whether any accessed data was protected by row access policies.
+   *
+   * @param bool $rowLevelSecurityApplied
    */
   public function setRowLevelSecurityApplied($rowLevelSecurityApplied)
   {

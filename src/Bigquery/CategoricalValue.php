@@ -24,7 +24,12 @@ class CategoricalValue extends \Google\Collection
   protected $categoryCountsDataType = 'array';
 
   /**
-   * @param CategoryCount[]
+   * Counts of all categories for the categorical feature. If there are more
+   * than ten categories, we return top ten (by count) and return one more
+   * CategoryCount with category "_OTHER_" and count as aggregate counts of
+   * remaining categories.
+   *
+   * @param CategoryCount[] $categoryCounts
    */
   public function setCategoryCounts($categoryCounts)
   {

@@ -19,6 +19,18 @@ namespace Google\Service\DeveloperConnect;
 
 class RuntimeConfig extends \Google\Model
 {
+  /**
+   * No state specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The runtime configuration has been linked to the InsightsConfig.
+   */
+  public const STATE_LINKED = 'LINKED';
+  /**
+   * The runtime configuration has been unlinked to the InsightsConfig.
+   */
+  public const STATE_UNLINKED = 'UNLINKED';
   protected $appHubServiceType = AppHubService::class;
   protected $appHubServiceDataType = '';
   protected $appHubWorkloadType = AppHubWorkload::class;
@@ -28,16 +40,23 @@ class RuntimeConfig extends \Google\Model
   protected $googleCloudRunType = GoogleCloudRun::class;
   protected $googleCloudRunDataType = '';
   /**
+   * Output only. The state of the Runtime.
+   *
    * @var string
    */
   public $state;
   /**
+   * Required. Immutable. The URI of the runtime configuration. For GKE, this is
+   * the cluster name. For Cloud Run, this is the service name.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param AppHubService
+   * Output only. App Hub Service.
+   *
+   * @param AppHubService $appHubService
    */
   public function setAppHubService(AppHubService $appHubService)
   {
@@ -51,7 +70,9 @@ class RuntimeConfig extends \Google\Model
     return $this->appHubService;
   }
   /**
-   * @param AppHubWorkload
+   * Output only. App Hub Workload.
+   *
+   * @param AppHubWorkload $appHubWorkload
    */
   public function setAppHubWorkload(AppHubWorkload $appHubWorkload)
   {
@@ -65,7 +86,9 @@ class RuntimeConfig extends \Google\Model
     return $this->appHubWorkload;
   }
   /**
-   * @param GKEWorkload
+   * Output only. Google Kubernetes Engine runtime.
+   *
+   * @param GKEWorkload $gkeWorkload
    */
   public function setGkeWorkload(GKEWorkload $gkeWorkload)
   {
@@ -79,7 +102,9 @@ class RuntimeConfig extends \Google\Model
     return $this->gkeWorkload;
   }
   /**
-   * @param GoogleCloudRun
+   * Output only. Cloud Run runtime.
+   *
+   * @param GoogleCloudRun $googleCloudRun
    */
   public function setGoogleCloudRun(GoogleCloudRun $googleCloudRun)
   {
@@ -93,21 +118,28 @@ class RuntimeConfig extends \Google\Model
     return $this->googleCloudRun;
   }
   /**
-   * @param string
+   * Output only. The state of the Runtime.
+   *
+   * Accepted values: STATE_UNSPECIFIED, LINKED, UNLINKED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Required. Immutable. The URI of the runtime configuration. For GKE, this is
+   * the cluster name. For Cloud Run, this is the service name.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

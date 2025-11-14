@@ -20,12 +20,16 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1CrossRegionalSource extends \Google\Model
 {
   /**
+   * Required. The resource name of the source taxonomy to import.
+   *
    * @var string
    */
   public $taxonomy;
 
   /**
-   * @param string
+   * Required. The resource name of the source taxonomy to import.
+   *
+   * @param string $taxonomy
    */
   public function setTaxonomy($taxonomy)
   {

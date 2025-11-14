@@ -23,24 +23,35 @@ class SubjectAltNames extends \Google\Collection
   protected $customSansType = X509Extension::class;
   protected $customSansDataType = 'array';
   /**
+   * Contains only valid, fully-qualified host names.
+   *
    * @var string[]
    */
   public $dnsNames;
   /**
+   * Contains only valid RFC 2822 E-mail addresses.
+   *
    * @var string[]
    */
   public $emailAddresses;
   /**
+   * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+   *
    * @var string[]
    */
   public $ipAddresses;
   /**
+   * Contains only valid RFC 3986 URIs.
+   *
    * @var string[]
    */
   public $uris;
 
   /**
-   * @param X509Extension[]
+   * Contains additional subject alternative name values. For each custom_san,
+   * the `value` field must contain an ASN.1 encoded UTF8String.
+   *
+   * @param X509Extension[] $customSans
    */
   public function setCustomSans($customSans)
   {
@@ -54,7 +65,9 @@ class SubjectAltNames extends \Google\Collection
     return $this->customSans;
   }
   /**
-   * @param string[]
+   * Contains only valid, fully-qualified host names.
+   *
+   * @param string[] $dnsNames
    */
   public function setDnsNames($dnsNames)
   {
@@ -68,7 +81,9 @@ class SubjectAltNames extends \Google\Collection
     return $this->dnsNames;
   }
   /**
-   * @param string[]
+   * Contains only valid RFC 2822 E-mail addresses.
+   *
+   * @param string[] $emailAddresses
    */
   public function setEmailAddresses($emailAddresses)
   {
@@ -82,7 +97,9 @@ class SubjectAltNames extends \Google\Collection
     return $this->emailAddresses;
   }
   /**
-   * @param string[]
+   * Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+   *
+   * @param string[] $ipAddresses
    */
   public function setIpAddresses($ipAddresses)
   {
@@ -96,7 +113,9 @@ class SubjectAltNames extends \Google\Collection
     return $this->ipAddresses;
   }
   /**
-   * @param string[]
+   * Contains only valid RFC 3986 URIs.
+   *
+   * @param string[] $uris
    */
   public function setUris($uris)
   {

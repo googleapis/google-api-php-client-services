@@ -19,54 +19,125 @@ namespace Google\Service\Baremetalsolution;
 
 class VolumeConfig extends \Google\Collection
 {
+  /**
+   * Value is not specified.
+   */
+  public const PERFORMANCE_TIER_VOLUME_PERFORMANCE_TIER_UNSPECIFIED = 'VOLUME_PERFORMANCE_TIER_UNSPECIFIED';
+  /**
+   * Regular volumes, shared aggregates.
+   */
+  public const PERFORMANCE_TIER_VOLUME_PERFORMANCE_TIER_SHARED = 'VOLUME_PERFORMANCE_TIER_SHARED';
+  /**
+   * Assigned aggregates.
+   */
+  public const PERFORMANCE_TIER_VOLUME_PERFORMANCE_TIER_ASSIGNED = 'VOLUME_PERFORMANCE_TIER_ASSIGNED';
+  /**
+   * High throughput aggregates.
+   */
+  public const PERFORMANCE_TIER_VOLUME_PERFORMANCE_TIER_HT = 'VOLUME_PERFORMANCE_TIER_HT';
+  /**
+   * QoS 2.0 high performance storage.
+   */
+  public const PERFORMANCE_TIER_VOLUME_PERFORMANCE_TIER_QOS2_PERFORMANCE = 'VOLUME_PERFORMANCE_TIER_QOS2_PERFORMANCE';
+  /**
+   * Unspecified value.
+   */
+  public const PROTOCOL_PROTOCOL_UNSPECIFIED = 'PROTOCOL_UNSPECIFIED';
+  /**
+   * Fibre channel.
+   */
+  public const PROTOCOL_PROTOCOL_FC = 'PROTOCOL_FC';
+  /**
+   * Network file system.
+   */
+  public const PROTOCOL_PROTOCOL_NFS = 'PROTOCOL_NFS';
+  /**
+   * The unspecified type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * This Volume is on flash.
+   */
+  public const TYPE_FLASH = 'FLASH';
+  /**
+   * This Volume is on disk.
+   */
+  public const TYPE_DISK = 'DISK';
   protected $collection_key = 'nfsExports';
   /**
+   * The GCP service of the storage volume. Available gcp_service are in
+   * https://cloud.google.com/bare-metal/docs/bms-planning.
+   *
    * @var string
    */
   public $gcpService;
   /**
+   * A transient unique identifier to identify a volume within an
+   * ProvisioningConfig request.
+   *
    * @var string
    */
   public $id;
   protected $lunRangesType = LunRange::class;
   protected $lunRangesDataType = 'array';
   /**
+   * Machine ids connected to this volume. Set only when protocol is
+   * PROTOCOL_FC.
+   *
    * @var string[]
    */
   public $machineIds;
   /**
+   * Output only. The name of the volume config.
+   *
    * @var string
    */
   public $name;
   protected $nfsExportsType = NfsExport::class;
   protected $nfsExportsDataType = 'array';
   /**
+   * Performance tier of the Volume. Default is SHARED.
+   *
    * @var string
    */
   public $performanceTier;
   /**
+   * Volume protocol.
+   *
    * @var string
    */
   public $protocol;
   /**
+   * The requested size of this volume, in GB.
+   *
    * @var int
    */
   public $sizeGb;
   /**
+   * Whether snapshots should be enabled.
+   *
    * @var bool
    */
   public $snapshotsEnabled;
   /**
+   * The type of this Volume.
+   *
    * @var string
    */
   public $type;
   /**
+   * User note field, it can be used by customers to add additional information
+   * for the BMS Ops team .
+   *
    * @var string
    */
   public $userNote;
 
   /**
-   * @param string
+   * The GCP service of the storage volume. Available gcp_service are in
+   * https://cloud.google.com/bare-metal/docs/bms-planning.
+   *
+   * @param string $gcpService
    */
   public function setGcpService($gcpService)
   {
@@ -80,7 +151,10 @@ class VolumeConfig extends \Google\Collection
     return $this->gcpService;
   }
   /**
-   * @param string
+   * A transient unique identifier to identify a volume within an
+   * ProvisioningConfig request.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -94,7 +168,9 @@ class VolumeConfig extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param LunRange[]
+   * LUN ranges to be configured. Set only when protocol is PROTOCOL_FC.
+   *
+   * @param LunRange[] $lunRanges
    */
   public function setLunRanges($lunRanges)
   {
@@ -108,7 +184,10 @@ class VolumeConfig extends \Google\Collection
     return $this->lunRanges;
   }
   /**
-   * @param string[]
+   * Machine ids connected to this volume. Set only when protocol is
+   * PROTOCOL_FC.
+   *
+   * @param string[] $machineIds
    */
   public function setMachineIds($machineIds)
   {
@@ -122,7 +201,9 @@ class VolumeConfig extends \Google\Collection
     return $this->machineIds;
   }
   /**
-   * @param string
+   * Output only. The name of the volume config.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -136,7 +217,9 @@ class VolumeConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param NfsExport[]
+   * NFS exports. Set only when protocol is PROTOCOL_NFS.
+   *
+   * @param NfsExport[] $nfsExports
    */
   public function setNfsExports($nfsExports)
   {
@@ -150,35 +233,47 @@ class VolumeConfig extends \Google\Collection
     return $this->nfsExports;
   }
   /**
-   * @param string
+   * Performance tier of the Volume. Default is SHARED.
+   *
+   * Accepted values: VOLUME_PERFORMANCE_TIER_UNSPECIFIED,
+   * VOLUME_PERFORMANCE_TIER_SHARED, VOLUME_PERFORMANCE_TIER_ASSIGNED,
+   * VOLUME_PERFORMANCE_TIER_HT, VOLUME_PERFORMANCE_TIER_QOS2_PERFORMANCE
+   *
+   * @param self::PERFORMANCE_TIER_* $performanceTier
    */
   public function setPerformanceTier($performanceTier)
   {
     $this->performanceTier = $performanceTier;
   }
   /**
-   * @return string
+   * @return self::PERFORMANCE_TIER_*
    */
   public function getPerformanceTier()
   {
     return $this->performanceTier;
   }
   /**
-   * @param string
+   * Volume protocol.
+   *
+   * Accepted values: PROTOCOL_UNSPECIFIED, PROTOCOL_FC, PROTOCOL_NFS
+   *
+   * @param self::PROTOCOL_* $protocol
    */
   public function setProtocol($protocol)
   {
     $this->protocol = $protocol;
   }
   /**
-   * @return string
+   * @return self::PROTOCOL_*
    */
   public function getProtocol()
   {
     return $this->protocol;
   }
   /**
-   * @param int
+   * The requested size of this volume, in GB.
+   *
+   * @param int $sizeGb
    */
   public function setSizeGb($sizeGb)
   {
@@ -192,7 +287,9 @@ class VolumeConfig extends \Google\Collection
     return $this->sizeGb;
   }
   /**
-   * @param bool
+   * Whether snapshots should be enabled.
+   *
+   * @param bool $snapshotsEnabled
    */
   public function setSnapshotsEnabled($snapshotsEnabled)
   {
@@ -206,21 +303,28 @@ class VolumeConfig extends \Google\Collection
     return $this->snapshotsEnabled;
   }
   /**
-   * @param string
+   * The type of this Volume.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, FLASH, DISK
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * User note field, it can be used by customers to add additional information
+   * for the BMS Ops team .
+   *
+   * @param string $userNote
    */
   public function setUserNote($userNote)
   {

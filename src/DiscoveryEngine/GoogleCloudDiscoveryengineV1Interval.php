@@ -19,9 +19,29 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1Interval extends \Google\Model
 {
+  /**
+   * Exclusive upper bound.
+   *
+   * @var 
+   */
   public $exclusiveMaximum;
+  /**
+   * Exclusive lower bound.
+   *
+   * @var 
+   */
   public $exclusiveMinimum;
+  /**
+   * Inclusive upper bound.
+   *
+   * @var 
+   */
   public $maximum;
+  /**
+   * Inclusive lower bound.
+   *
+   * @var 
+   */
   public $minimum;
 
   public function setExclusiveMaximum($exclusiveMaximum)

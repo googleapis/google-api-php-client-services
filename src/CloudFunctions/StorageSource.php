@@ -20,24 +20,42 @@ namespace Google\Service\CloudFunctions;
 class StorageSource extends \Google\Model
 {
   /**
+   * Google Cloud Storage bucket containing the source (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/bucket-
+   * naming#requirements)).
+   *
    * @var string
    */
   public $bucket;
   /**
+   * Google Cloud Storage generation for the object. If the generation is
+   * omitted, the latest generation will be used.
+   *
    * @var string
    */
   public $generation;
   /**
+   * Google Cloud Storage object containing the source. This object must be a
+   * gzipped archive file (`.tar.gz`) containing source to build.
+   *
    * @var string
    */
   public $object;
   /**
+   * When the specified storage bucket is a 1st gen function uploard url bucket,
+   * this field should be set as the generated upload url for 1st gen
+   * deployment.
+   *
    * @var string
    */
   public $sourceUploadUrl;
 
   /**
-   * @param string
+   * Google Cloud Storage bucket containing the source (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/bucket-
+   * naming#requirements)).
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -51,7 +69,10 @@ class StorageSource extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * Google Cloud Storage generation for the object. If the generation is
+   * omitted, the latest generation will be used.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -65,7 +86,10 @@ class StorageSource extends \Google\Model
     return $this->generation;
   }
   /**
-   * @param string
+   * Google Cloud Storage object containing the source. This object must be a
+   * gzipped archive file (`.tar.gz`) containing source to build.
+   *
+   * @param string $object
    */
   public function setObject($object)
   {
@@ -79,7 +103,11 @@ class StorageSource extends \Google\Model
     return $this->object;
   }
   /**
-   * @param string
+   * When the specified storage bucket is a 1st gen function uploard url bucket,
+   * this field should be set as the generated upload url for 1st gen
+   * deployment.
+   *
+   * @param string $sourceUploadUrl
    */
   public function setSourceUploadUrl($sourceUploadUrl)
   {

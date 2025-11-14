@@ -19,23 +19,45 @@ namespace Google\Service\Container;
 
 class UpgradeAvailableEvent extends \Google\Model
 {
+  /**
+   * Default value. This shouldn't be used.
+   */
+  public const RESOURCE_TYPE_UPGRADE_RESOURCE_TYPE_UNSPECIFIED = 'UPGRADE_RESOURCE_TYPE_UNSPECIFIED';
+  /**
+   * Master / control plane
+   */
+  public const RESOURCE_TYPE_MASTER = 'MASTER';
+  /**
+   * Node pool
+   */
+  public const RESOURCE_TYPE_NODE_POOL = 'NODE_POOL';
   protected $releaseChannelType = ReleaseChannel::class;
   protected $releaseChannelDataType = '';
   /**
+   * Optional relative path to the resource. For example, the relative path of
+   * the node pool.
+   *
    * @var string
    */
   public $resource;
   /**
+   * The resource type of the release version.
+   *
    * @var string
    */
   public $resourceType;
   /**
+   * The release version available for upgrade.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param ReleaseChannel
+   * The release channel of the version. If empty, it means a non-channel
+   * release.
+   *
+   * @param ReleaseChannel $releaseChannel
    */
   public function setReleaseChannel(ReleaseChannel $releaseChannel)
   {
@@ -49,7 +71,10 @@ class UpgradeAvailableEvent extends \Google\Model
     return $this->releaseChannel;
   }
   /**
-   * @param string
+   * Optional relative path to the resource. For example, the relative path of
+   * the node pool.
+   *
+   * @param string $resource
    */
   public function setResource($resource)
   {
@@ -63,21 +88,27 @@ class UpgradeAvailableEvent extends \Google\Model
     return $this->resource;
   }
   /**
-   * @param string
+   * The resource type of the release version.
+   *
+   * Accepted values: UPGRADE_RESOURCE_TYPE_UNSPECIFIED, MASTER, NODE_POOL
+   *
+   * @param self::RESOURCE_TYPE_* $resourceType
    */
   public function setResourceType($resourceType)
   {
     $this->resourceType = $resourceType;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_TYPE_*
    */
   public function getResourceType()
   {
     return $this->resourceType;
   }
   /**
-   * @param string
+   * The release version available for upgrade.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

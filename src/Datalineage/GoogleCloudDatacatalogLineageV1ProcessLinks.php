@@ -23,12 +23,20 @@ class GoogleCloudDatacatalogLineageV1ProcessLinks extends \Google\Collection
   protected $linksType = GoogleCloudDatacatalogLineageV1ProcessLinkInfo::class;
   protected $linksDataType = 'array';
   /**
+   * The process name in the format of
+   * `projects/{project}/locations/{location}/processes/{process}`.
+   *
    * @var string
    */
   public $process;
 
   /**
-   * @param GoogleCloudDatacatalogLineageV1ProcessLinkInfo[]
+   * An array containing link details objects of the links provided in the
+   * original request. A single process can result in creating multiple links.
+   * If any of the links you provide in the request are created by the same
+   * process, they all are included in this array.
+   *
+   * @param GoogleCloudDatacatalogLineageV1ProcessLinkInfo[] $links
    */
   public function setLinks($links)
   {
@@ -42,7 +50,10 @@ class GoogleCloudDatacatalogLineageV1ProcessLinks extends \Google\Collection
     return $this->links;
   }
   /**
-   * @param string
+   * The process name in the format of
+   * `projects/{project}/locations/{location}/processes/{process}`.
+   *
+   * @param string $process
    */
   public function setProcess($process)
   {

@@ -20,16 +20,25 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1TimeSegment extends \Google\Model
 {
   /**
+   * End of the time segment (exclusive), represented as the duration since the
+   * example start.
+   *
    * @var string
    */
   public $endTimeOffset;
   /**
+   * Start of the time segment (inclusive), represented as the duration since
+   * the example start.
+   *
    * @var string
    */
   public $startTimeOffset;
 
   /**
-   * @param string
+   * End of the time segment (exclusive), represented as the duration since the
+   * example start.
+   *
+   * @param string $endTimeOffset
    */
   public function setEndTimeOffset($endTimeOffset)
   {
@@ -43,7 +52,10 @@ class GoogleCloudDatalabelingV1beta1TimeSegment extends \Google\Model
     return $this->endTimeOffset;
   }
   /**
-   * @param string
+   * Start of the time segment (inclusive), represented as the duration since
+   * the example start.
+   *
+   * @param string $startTimeOffset
    */
   public function setStartTimeOffset($startTimeOffset)
   {
