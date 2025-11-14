@@ -20,17 +20,28 @@ namespace Google\Service\PagespeedInsights;
 class Bucket extends \Google\Model
 {
   /**
+   * Upper bound for a bucket's range.
+   *
    * @var int
    */
   public $max;
   /**
+   * Lower bound for a bucket's range.
+   *
    * @var int
    */
   public $min;
+  /**
+   * The proportion of data in this bucket.
+   *
+   * @var 
+   */
   public $proportion;
 
   /**
-   * @param int
+   * Upper bound for a bucket's range.
+   *
+   * @param int $max
    */
   public function setMax($max)
   {
@@ -44,7 +55,9 @@ class Bucket extends \Google\Model
     return $this->max;
   }
   /**
-   * @param int
+   * Lower bound for a bucket's range.
+   *
+   * @param int $min
    */
   public function setMin($min)
   {

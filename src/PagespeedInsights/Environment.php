@@ -19,16 +19,28 @@ namespace Google\Service\PagespeedInsights;
 
 class Environment extends \Google\Model
 {
+  /**
+   * The benchmark index number that indicates rough device class.
+   *
+   * @var 
+   */
   public $benchmarkIndex;
   /**
+   * The version of libraries with which these results were generated. Ex: axe-
+   * core.
+   *
    * @var string[]
    */
   public $credits;
   /**
+   * The user agent string of the version of Chrome used.
+   *
    * @var string
    */
   public $hostUserAgent;
   /**
+   * The user agent string that was sent over the network.
+   *
    * @var string
    */
   public $networkUserAgent;
@@ -42,7 +54,10 @@ class Environment extends \Google\Model
     return $this->benchmarkIndex;
   }
   /**
-   * @param string[]
+   * The version of libraries with which these results were generated. Ex: axe-
+   * core.
+   *
+   * @param string[] $credits
    */
   public function setCredits($credits)
   {
@@ -56,7 +71,9 @@ class Environment extends \Google\Model
     return $this->credits;
   }
   /**
-   * @param string
+   * The user agent string of the version of Chrome used.
+   *
+   * @param string $hostUserAgent
    */
   public function setHostUserAgent($hostUserAgent)
   {
@@ -70,7 +87,9 @@ class Environment extends \Google\Model
     return $this->hostUserAgent;
   }
   /**
-   * @param string
+   * The user agent string that was sent over the network.
+   *
+   * @param string $networkUserAgent
    */
   public function setNetworkUserAgent($networkUserAgent)
   {

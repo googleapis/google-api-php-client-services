@@ -20,16 +20,22 @@ namespace Google\Service\PagespeedInsights;
 class RuntimeError extends \Google\Model
 {
   /**
+   * The enumerated Lighthouse Error code.
+   *
    * @var string
    */
   public $code;
   /**
+   * A human readable message explaining the error code.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * The enumerated Lighthouse Error code.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -43,7 +49,9 @@ class RuntimeError extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * A human readable message explaining the error code.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

@@ -20,28 +20,45 @@ namespace Google\Service\PagespeedInsights;
 class ConfigSettings extends \Google\Model
 {
   /**
+   * How Lighthouse was run, e.g. from the Chrome extension or from the npm
+   * module.
+   *
    * @var string
    */
   public $channel;
   /**
+   * The form factor the emulation should use. This field is deprecated,
+   * form_factor should be used instead.
+   *
+   * @deprecated
    * @var string
    */
   public $emulatedFormFactor;
   /**
+   * How Lighthouse should interpret this run in regards to scoring performance
+   * metrics and skipping mobile-only tests in desktop.
+   *
    * @var string
    */
   public $formFactor;
   /**
+   * The locale setting.
+   *
    * @var string
    */
   public $locale;
   /**
+   * List of categories of audits the run should conduct.
+   *
    * @var array
    */
   public $onlyCategories;
 
   /**
-   * @param string
+   * How Lighthouse was run, e.g. from the Chrome extension or from the npm
+   * module.
+   *
+   * @param string $channel
    */
   public function setChannel($channel)
   {
@@ -55,13 +72,18 @@ class ConfigSettings extends \Google\Model
     return $this->channel;
   }
   /**
-   * @param string
+   * The form factor the emulation should use. This field is deprecated,
+   * form_factor should be used instead.
+   *
+   * @deprecated
+   * @param string $emulatedFormFactor
    */
   public function setEmulatedFormFactor($emulatedFormFactor)
   {
     $this->emulatedFormFactor = $emulatedFormFactor;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getEmulatedFormFactor()
@@ -69,7 +91,10 @@ class ConfigSettings extends \Google\Model
     return $this->emulatedFormFactor;
   }
   /**
-   * @param string
+   * How Lighthouse should interpret this run in regards to scoring performance
+   * metrics and skipping mobile-only tests in desktop.
+   *
+   * @param string $formFactor
    */
   public function setFormFactor($formFactor)
   {
@@ -83,7 +108,9 @@ class ConfigSettings extends \Google\Model
     return $this->formFactor;
   }
   /**
-   * @param string
+   * The locale setting.
+   *
+   * @param string $locale
    */
   public function setLocale($locale)
   {
@@ -97,7 +124,9 @@ class ConfigSettings extends \Google\Model
     return $this->locale;
   }
   /**
-   * @param array
+   * List of categories of audits the run should conduct.
+   *
+   * @param array $onlyCategories
    */
   public function setOnlyCategories($onlyCategories)
   {

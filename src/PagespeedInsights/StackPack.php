@@ -20,24 +20,34 @@ namespace Google\Service\PagespeedInsights;
 class StackPack extends \Google\Model
 {
   /**
+   * The stack pack advice strings.
+   *
    * @var string[]
    */
   public $descriptions;
   /**
+   * The stack pack icon data uri.
+   *
    * @var string
    */
   public $iconDataURL;
   /**
+   * The stack pack id.
+   *
    * @var string
    */
   public $id;
   /**
+   * The stack pack title.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string[]
+   * The stack pack advice strings.
+   *
+   * @param string[] $descriptions
    */
   public function setDescriptions($descriptions)
   {
@@ -51,7 +61,9 @@ class StackPack extends \Google\Model
     return $this->descriptions;
   }
   /**
-   * @param string
+   * The stack pack icon data uri.
+   *
+   * @param string $iconDataURL
    */
   public function setIconDataURL($iconDataURL)
   {
@@ -65,7 +77,9 @@ class StackPack extends \Google\Model
     return $this->iconDataURL;
   }
   /**
-   * @param string
+   * The stack pack id.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -79,7 +93,9 @@ class StackPack extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The stack pack title.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

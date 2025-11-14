@@ -23,28 +23,41 @@ class LighthouseCategoryV5 extends \Google\Collection
   protected $auditRefsType = AuditRefs::class;
   protected $auditRefsDataType = 'array';
   /**
+   * A more detailed description of the category and its importance.
+   *
    * @var string
    */
   public $description;
   /**
+   * The string identifier of the category.
+   *
    * @var string
    */
   public $id;
   /**
+   * A description for the manual audits in the category.
+   *
    * @var string
    */
   public $manualDescription;
   /**
+   * The overall score of the category, the weighted average of all its audits.
+   * (The category's score, can be null.)
+   *
    * @var array
    */
   public $score;
   /**
+   * The human-friendly name of the category.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param AuditRefs[]
+   * An array of references to all the audit members of this category.
+   *
+   * @param AuditRefs[] $auditRefs
    */
   public function setAuditRefs($auditRefs)
   {
@@ -58,7 +71,9 @@ class LighthouseCategoryV5 extends \Google\Collection
     return $this->auditRefs;
   }
   /**
-   * @param string
+   * A more detailed description of the category and its importance.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -72,7 +87,9 @@ class LighthouseCategoryV5 extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The string identifier of the category.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -86,7 +103,9 @@ class LighthouseCategoryV5 extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * A description for the manual audits in the category.
+   *
+   * @param string $manualDescription
    */
   public function setManualDescription($manualDescription)
   {
@@ -100,7 +119,10 @@ class LighthouseCategoryV5 extends \Google\Collection
     return $this->manualDescription;
   }
   /**
-   * @param array
+   * The overall score of the category, the weighted average of all its audits.
+   * (The category's score, can be null.)
+   *
+   * @param array $score
    */
   public function setScore($score)
   {
@@ -114,7 +136,9 @@ class LighthouseCategoryV5 extends \Google\Collection
     return $this->score;
   }
   /**
-   * @param string
+   * The human-friendly name of the category.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

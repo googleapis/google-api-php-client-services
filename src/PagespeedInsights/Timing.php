@@ -19,6 +19,11 @@ namespace Google\Service\PagespeedInsights;
 
 class Timing extends \Google\Model
 {
+  /**
+   * The total duration of Lighthouse's run.
+   *
+   * @var 
+   */
   public $total;
 
   public function setTotal($total)

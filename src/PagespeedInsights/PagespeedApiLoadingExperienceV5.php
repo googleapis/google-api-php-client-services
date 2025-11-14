@@ -25,26 +25,36 @@ class PagespeedApiLoadingExperienceV5 extends \Google\Model
         "overallCategory" => "overall_category",
   ];
   /**
+   * The url, pattern or origin which the metrics are on.
+   *
    * @var string
    */
   public $id;
   /**
+   * The requested URL, which may differ from the resolved "id".
+   *
    * @var string
    */
   public $initialUrl;
   protected $metricsType = UserPageLoadMetricV5::class;
   protected $metricsDataType = 'map';
   /**
+   * True if the result is an origin fallback from a page, false otherwise.
+   *
    * @var bool
    */
   public $originFallback;
   /**
+   * The human readable speed "category" of the id.
+   *
    * @var string
    */
   public $overallCategory;
 
   /**
-   * @param string
+   * The url, pattern or origin which the metrics are on.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -58,7 +68,9 @@ class PagespeedApiLoadingExperienceV5 extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The requested URL, which may differ from the resolved "id".
+   *
+   * @param string $initialUrl
    */
   public function setInitialUrl($initialUrl)
   {
@@ -72,7 +84,9 @@ class PagespeedApiLoadingExperienceV5 extends \Google\Model
     return $this->initialUrl;
   }
   /**
-   * @param UserPageLoadMetricV5[]
+   * The map of .
+   *
+   * @param UserPageLoadMetricV5[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -86,7 +100,9 @@ class PagespeedApiLoadingExperienceV5 extends \Google\Model
     return $this->metrics;
   }
   /**
-   * @param bool
+   * True if the result is an origin fallback from a page, false otherwise.
+   *
+   * @param bool $originFallback
    */
   public function setOriginFallback($originFallback)
   {
@@ -100,7 +116,9 @@ class PagespeedApiLoadingExperienceV5 extends \Google\Model
     return $this->originFallback;
   }
   /**
-   * @param string
+   * The human readable speed "category" of the id.
+   *
+   * @param string $overallCategory
    */
   public function setOverallCategory($overallCategory)
   {

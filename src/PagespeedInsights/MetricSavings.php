@@ -26,10 +26,40 @@ class MetricSavings extends \Google\Model
         "lCP" => "LCP",
         "tBT" => "TBT",
   ];
+  /**
+   * Optional. Optional numeric value representing the audit's savings for the
+   * CLS metric.
+   *
+   * @var 
+   */
   public $cLS;
+  /**
+   * Optional. Optional numeric value representing the audit's savings for the
+   * FCP metric.
+   *
+   * @var 
+   */
   public $fCP;
+  /**
+   * Optional. Optional numeric value representing the audit's savings for the
+   * INP metric.
+   *
+   * @var 
+   */
   public $iNP;
+  /**
+   * Optional. Optional numeric value representing the audit's savings for the
+   * LCP metric.
+   *
+   * @var 
+   */
   public $lCP;
+  /**
+   * Optional. Optional numeric value representing the audit's savings for the
+   * TBT metric.
+   *
+   * @var 
+   */
   public $tBT;
 
   public function setCLS($cLS)
