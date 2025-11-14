@@ -20,24 +20,35 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesCampaignLabel extends \Google\Model
 {
   /**
+   * Immutable. The campaign to which the label is attached.
+   *
    * @var string
    */
   public $campaign;
   /**
+   * Immutable. The label assigned to the campaign.
+   *
    * @var string
    */
   public $label;
   /**
+   * Output only. The ID of the Customer which owns the label.
+   *
    * @var string
    */
   public $ownerCustomerId;
   /**
+   * Immutable. Name of the resource. Campaign label resource names have the
+   * form: `customers/{customer_id}/campaignLabels/{campaign_id}~{label_id}`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Immutable. The campaign to which the label is attached.
+   *
+   * @param string $campaign
    */
   public function setCampaign($campaign)
   {
@@ -51,7 +62,9 @@ class GoogleAdsSearchads360V0ResourcesCampaignLabel extends \Google\Model
     return $this->campaign;
   }
   /**
-   * @param string
+   * Immutable. The label assigned to the campaign.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -65,7 +78,9 @@ class GoogleAdsSearchads360V0ResourcesCampaignLabel extends \Google\Model
     return $this->label;
   }
   /**
-   * @param string
+   * Output only. The ID of the Customer which owns the label.
+   *
+   * @param string $ownerCustomerId
    */
   public function setOwnerCustomerId($ownerCustomerId)
   {
@@ -79,7 +94,10 @@ class GoogleAdsSearchads360V0ResourcesCampaignLabel extends \Google\Model
     return $this->ownerCustomerId;
   }
   /**
-   * @param string
+   * Immutable. Name of the resource. Campaign label resource names have the
+   * form: `customers/{customer_id}/campaignLabels/{campaign_id}~{label_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

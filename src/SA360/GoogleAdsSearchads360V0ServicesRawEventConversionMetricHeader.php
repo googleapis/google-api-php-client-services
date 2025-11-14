@@ -20,16 +20,22 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ServicesRawEventConversionMetricHeader extends \Google\Model
 {
   /**
+   * The conversion custom variable ID.
+   *
    * @var string
    */
   public $id;
   /**
+   * The user defined name of the raw event metric.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The conversion custom variable ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class GoogleAdsSearchads360V0ServicesRawEventConversionMetricHeader extends \Goo
     return $this->id;
   }
   /**
-   * @param string
+   * The user defined name of the raw event metric.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
