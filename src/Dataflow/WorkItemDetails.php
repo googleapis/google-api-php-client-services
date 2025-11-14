@@ -19,12 +19,42 @@ namespace Google\Service\Dataflow;
 
 class WorkItemDetails extends \Google\Collection
 {
+  /**
+   * The component state is unknown or unspecified.
+   */
+  public const STATE_EXECUTION_STATE_UNKNOWN = 'EXECUTION_STATE_UNKNOWN';
+  /**
+   * The component is not yet running.
+   */
+  public const STATE_EXECUTION_STATE_NOT_STARTED = 'EXECUTION_STATE_NOT_STARTED';
+  /**
+   * The component is currently running.
+   */
+  public const STATE_EXECUTION_STATE_RUNNING = 'EXECUTION_STATE_RUNNING';
+  /**
+   * The component succeeded.
+   */
+  public const STATE_EXECUTION_STATE_SUCCEEDED = 'EXECUTION_STATE_SUCCEEDED';
+  /**
+   * The component failed.
+   */
+  public const STATE_EXECUTION_STATE_FAILED = 'EXECUTION_STATE_FAILED';
+  /**
+   * Execution of the component was cancelled.
+   */
+  public const STATE_EXECUTION_STATE_CANCELLED = 'EXECUTION_STATE_CANCELLED';
   protected $collection_key = 'metrics';
   /**
+   * Attempt ID of this work item
+   *
    * @var string
    */
   public $attemptId;
   /**
+   * End time of this work item attempt. If the work item is completed, this is
+   * the actual end time of the work item. Otherwise, it is the predicted end
+   * time.
+   *
    * @var string
    */
   public $endTime;
@@ -33,22 +63,30 @@ class WorkItemDetails extends \Google\Collection
   protected $progressType = ProgressTimeseries::class;
   protected $progressDataType = '';
   /**
+   * Start time of this work item attempt.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * State of this work item.
+   *
    * @var string
    */
   public $state;
   protected $stragglerInfoType = StragglerInfo::class;
   protected $stragglerInfoDataType = '';
   /**
+   * Name of this work item.
+   *
    * @var string
    */
   public $taskId;
 
   /**
-   * @param string
+   * Attempt ID of this work item
+   *
+   * @param string $attemptId
    */
   public function setAttemptId($attemptId)
   {
@@ -62,7 +100,11 @@ class WorkItemDetails extends \Google\Collection
     return $this->attemptId;
   }
   /**
-   * @param string
+   * End time of this work item attempt. If the work item is completed, this is
+   * the actual end time of the work item. Otherwise, it is the predicted end
+   * time.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -76,7 +118,9 @@ class WorkItemDetails extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param MetricUpdate[]
+   * Metrics for this work item.
+   *
+   * @param MetricUpdate[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -90,7 +134,9 @@ class WorkItemDetails extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param ProgressTimeseries
+   * Progress of this work item.
+   *
+   * @param ProgressTimeseries $progress
    */
   public function setProgress(ProgressTimeseries $progress)
   {
@@ -104,7 +150,9 @@ class WorkItemDetails extends \Google\Collection
     return $this->progress;
   }
   /**
-   * @param string
+   * Start time of this work item attempt.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -118,21 +166,29 @@ class WorkItemDetails extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * State of this work item.
+   *
+   * Accepted values: EXECUTION_STATE_UNKNOWN, EXECUTION_STATE_NOT_STARTED,
+   * EXECUTION_STATE_RUNNING, EXECUTION_STATE_SUCCEEDED, EXECUTION_STATE_FAILED,
+   * EXECUTION_STATE_CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param StragglerInfo
+   * Information about straggler detections for this work item.
+   *
+   * @param StragglerInfo $stragglerInfo
    */
   public function setStragglerInfo(StragglerInfo $stragglerInfo)
   {
@@ -146,7 +202,9 @@ class WorkItemDetails extends \Google\Collection
     return $this->stragglerInfo;
   }
   /**
-   * @param string
+   * Name of this work item.
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {
