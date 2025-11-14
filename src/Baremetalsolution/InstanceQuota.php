@@ -20,28 +20,43 @@ namespace Google\Service\Baremetalsolution;
 class InstanceQuota extends \Google\Model
 {
   /**
+   * Number of machines than can be created for the given location and
+   * instance_type.
+   *
    * @var int
    */
   public $availableMachineCount;
   /**
+   * The gcp service of the provisioning quota.
+   *
    * @var string
    */
   public $gcpService;
   /**
+   * Instance type. Deprecated: use gcp_service.
+   *
+   * @deprecated
    * @var string
    */
   public $instanceType;
   /**
+   * Location where the quota applies.
+   *
    * @var string
    */
   public $location;
   /**
+   * Output only. The name of the instance quota.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param int
+   * Number of machines than can be created for the given location and
+   * instance_type.
+   *
+   * @param int $availableMachineCount
    */
   public function setAvailableMachineCount($availableMachineCount)
   {
@@ -55,7 +70,9 @@ class InstanceQuota extends \Google\Model
     return $this->availableMachineCount;
   }
   /**
-   * @param string
+   * The gcp service of the provisioning quota.
+   *
+   * @param string $gcpService
    */
   public function setGcpService($gcpService)
   {
@@ -69,13 +86,17 @@ class InstanceQuota extends \Google\Model
     return $this->gcpService;
   }
   /**
-   * @param string
+   * Instance type. Deprecated: use gcp_service.
+   *
+   * @deprecated
+   * @param string $instanceType
    */
   public function setInstanceType($instanceType)
   {
     $this->instanceType = $instanceType;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getInstanceType()
@@ -83,7 +104,9 @@ class InstanceQuota extends \Google\Model
     return $this->instanceType;
   }
   /**
-   * @param string
+   * Location where the quota applies.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -97,7 +120,9 @@ class InstanceQuota extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Output only. The name of the instance quota.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

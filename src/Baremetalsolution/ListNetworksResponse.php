@@ -23,16 +23,22 @@ class ListNetworksResponse extends \Google\Collection
   protected $networksType = Network::class;
   protected $networksDataType = 'array';
   /**
+   * A token identifying a page of results from the server.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Network[]
+   * The list of networks.
+   *
+   * @param Network[] $networks
    */
   public function setNetworks($networks)
   {
@@ -46,7 +52,9 @@ class ListNetworksResponse extends \Google\Collection
     return $this->networks;
   }
   /**
-   * @param string
+   * A token identifying a page of results from the server.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListNetworksResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

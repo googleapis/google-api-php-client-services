@@ -20,20 +20,44 @@ namespace Google\Service\Baremetalsolution;
 class GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface extends \Google\Model
 {
   /**
+   * Unspecified value.
+   */
+  public const TYPE_INTERFACE_TYPE_UNSPECIFIED = 'INTERFACE_TYPE_UNSPECIFIED';
+  /**
+   * Bond interface type.
+   */
+  public const TYPE_BOND = 'BOND';
+  /**
+   * NIC interface type.
+   */
+  public const TYPE_NIC = 'NIC';
+  /**
+   * Interface name. This is not a globally unique identifier. Name is unique
+   * only inside the ServerNetworkTemplate. This is of syntax or and forms part
+   * of the network template name.
+   *
    * @var string
    */
   public $name;
   /**
+   * If true, interface must have network connected.
+   *
    * @var bool
    */
   public $required;
   /**
+   * Interface type.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Interface name. This is not a globally unique identifier. Name is unique
+   * only inside the ServerNetworkTemplate. This is of syntax or and forms part
+   * of the network template name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -47,7 +71,9 @@ class GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface extend
     return $this->name;
   }
   /**
-   * @param bool
+   * If true, interface must have network connected.
+   *
+   * @param bool $required
    */
   public function setRequired($required)
   {
@@ -61,14 +87,18 @@ class GoogleCloudBaremetalsolutionV2ServerNetworkTemplateLogicalInterface extend
     return $this->required;
   }
   /**
-   * @param string
+   * Interface type.
+   *
+   * Accepted values: INTERFACE_TYPE_UNSPECIFIED, BOND, NIC
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

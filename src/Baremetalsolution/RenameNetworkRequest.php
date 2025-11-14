@@ -20,12 +20,16 @@ namespace Google\Service\Baremetalsolution;
 class RenameNetworkRequest extends \Google\Model
 {
   /**
+   * Required. The new `id` of the network.
+   *
    * @var string
    */
   public $newNetworkId;
 
   /**
-   * @param string
+   * Required. The new `id` of the network.
+   *
+   * @param string $newNetworkId
    */
   public function setNewNetworkId($newNetworkId)
   {

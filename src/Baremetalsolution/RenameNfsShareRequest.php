@@ -20,12 +20,16 @@ namespace Google\Service\Baremetalsolution;
 class RenameNfsShareRequest extends \Google\Model
 {
   /**
+   * Required. The new `id` of the nfsshare.
+   *
    * @var string
    */
   public $newNfsshareId;
 
   /**
-   * @param string
+   * Required. The new `id` of the nfsshare.
+   *
+   * @param string $newNfsshareId
    */
   public function setNewNfsshareId($newNfsshareId)
   {
