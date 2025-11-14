@@ -24,7 +24,9 @@ class AutomationResourceSelector extends \Google\Collection
   protected $targetsDataType = 'array';
 
   /**
-   * @param TargetAttribute[]
+   * Optional. Contains attributes about a target.
+   *
+   * @param TargetAttribute[] $targets
    */
   public function setTargets($targets)
   {

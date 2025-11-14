@@ -21,36 +21,64 @@ class ExecutionConfig extends \Google\Collection
 {
   protected $collection_key = 'usages';
   /**
+   * Optional. Cloud Storage location in which to store execution outputs. This
+   * can either be a bucket ("gs://my-bucket") or a path within a bucket
+   * ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the
+   * same region will be used.
+   *
    * @var string
    */
   public $artifactStorage;
   protected $defaultPoolType = DefaultPool::class;
   protected $defaultPoolDataType = '';
   /**
+   * Optional. Execution timeout for a Cloud Build Execution. This must be
+   * between 10m and 24h in seconds format. If unspecified, a default timeout of
+   * 1h is used.
+   *
    * @var string
    */
   public $executionTimeout;
   protected $privatePoolType = PrivatePool::class;
   protected $privatePoolDataType = '';
   /**
+   * Optional. Google service account to use for execution. If unspecified, the
+   * project execution service account (-compute@developer.gserviceaccount.com)
+   * is used.
+   *
    * @var string
    */
   public $serviceAccount;
   /**
+   * Required. Usages when this configuration should be applied.
+   *
    * @var string[]
    */
   public $usages;
   /**
+   * Optional. If true, additional logging will be enabled when running builds
+   * in this execution environment.
+   *
    * @var bool
    */
   public $verbose;
   /**
+   * Optional. The resource name of the `WorkerPool`, with the format
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If
+   * this optional field is unspecified, the default Cloud Build pool will be
+   * used.
+   *
    * @var string
    */
   public $workerPool;
 
   /**
-   * @param string
+   * Optional. Cloud Storage location in which to store execution outputs. This
+   * can either be a bucket ("gs://my-bucket") or a path within a bucket
+   * ("gs://my-bucket/my-dir"). If unspecified, a default bucket located in the
+   * same region will be used.
+   *
+   * @param string $artifactStorage
    */
   public function setArtifactStorage($artifactStorage)
   {
@@ -64,7 +92,9 @@ class ExecutionConfig extends \Google\Collection
     return $this->artifactStorage;
   }
   /**
-   * @param DefaultPool
+   * Optional. Use default Cloud Build pool.
+   *
+   * @param DefaultPool $defaultPool
    */
   public function setDefaultPool(DefaultPool $defaultPool)
   {
@@ -78,7 +108,11 @@ class ExecutionConfig extends \Google\Collection
     return $this->defaultPool;
   }
   /**
-   * @param string
+   * Optional. Execution timeout for a Cloud Build Execution. This must be
+   * between 10m and 24h in seconds format. If unspecified, a default timeout of
+   * 1h is used.
+   *
+   * @param string $executionTimeout
    */
   public function setExecutionTimeout($executionTimeout)
   {
@@ -92,7 +126,9 @@ class ExecutionConfig extends \Google\Collection
     return $this->executionTimeout;
   }
   /**
-   * @param PrivatePool
+   * Optional. Use private Cloud Build pool.
+   *
+   * @param PrivatePool $privatePool
    */
   public function setPrivatePool(PrivatePool $privatePool)
   {
@@ -106,7 +142,11 @@ class ExecutionConfig extends \Google\Collection
     return $this->privatePool;
   }
   /**
-   * @param string
+   * Optional. Google service account to use for execution. If unspecified, the
+   * project execution service account (-compute@developer.gserviceaccount.com)
+   * is used.
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {
@@ -120,7 +160,9 @@ class ExecutionConfig extends \Google\Collection
     return $this->serviceAccount;
   }
   /**
-   * @param string[]
+   * Required. Usages when this configuration should be applied.
+   *
+   * @param string[] $usages
    */
   public function setUsages($usages)
   {
@@ -134,7 +176,10 @@ class ExecutionConfig extends \Google\Collection
     return $this->usages;
   }
   /**
-   * @param bool
+   * Optional. If true, additional logging will be enabled when running builds
+   * in this execution environment.
+   *
+   * @param bool $verbose
    */
   public function setVerbose($verbose)
   {
@@ -148,7 +193,12 @@ class ExecutionConfig extends \Google\Collection
     return $this->verbose;
   }
   /**
-   * @param string
+   * Optional. The resource name of the `WorkerPool`, with the format
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`. If
+   * this optional field is unspecified, the default Cloud Build pool will be
+   * used.
+   *
+   * @param string $workerPool
    */
   public function setWorkerPool($workerPool)
   {
