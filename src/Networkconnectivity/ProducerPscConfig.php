@@ -22,12 +22,18 @@ class ProducerPscConfig extends \Google\Model
   protected $automatedDnsCreationSpecType = AutomatedDnsCreationSpec::class;
   protected $automatedDnsCreationSpecDataType = '';
   /**
+   * The resource path of a service attachment. Example:
+   * projects/{projectNumOrId}/regions/{region}/serviceAttachments/{resourceId}.
+   *
    * @var string
    */
   public $serviceAttachmentUri;
 
   /**
-   * @param AutomatedDnsCreationSpec
+   * Optional. The specification for automatically creating a DNS record for
+   * this PSC connection.
+   *
+   * @param AutomatedDnsCreationSpec $automatedDnsCreationSpec
    */
   public function setAutomatedDnsCreationSpec(AutomatedDnsCreationSpec $automatedDnsCreationSpec)
   {
@@ -41,7 +47,10 @@ class ProducerPscConfig extends \Google\Model
     return $this->automatedDnsCreationSpec;
   }
   /**
-   * @param string
+   * The resource path of a service attachment. Example:
+   * projects/{projectNumOrId}/regions/{region}/serviceAttachments/{resourceId}.
+   *
+   * @param string $serviceAttachmentUri
    */
   public function setServiceAttachmentUri($serviceAttachmentUri)
   {

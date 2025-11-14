@@ -21,18 +21,26 @@ class ListRegionalEndpointsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * The next pagination token in the List response. It should be used as
+   * page_token for the following request. An empty value means no more result.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $regionalEndpointsType = RegionalEndpoint::class;
   protected $regionalEndpointsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * The next pagination token in the List response. It should be used as
+   * page_token for the following request. An empty value means no more result.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListRegionalEndpointsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param RegionalEndpoint[]
+   * Regional endpoints to be returned.
+   *
+   * @param RegionalEndpoint[] $regionalEndpoints
    */
   public function setRegionalEndpoints($regionalEndpoints)
   {
@@ -60,7 +70,9 @@ class ListRegionalEndpointsResponse extends \Google\Collection
     return $this->regionalEndpoints;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
