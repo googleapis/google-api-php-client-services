@@ -19,29 +19,67 @@ namespace Google\Service\NetworkManagement;
 
 class SingleEdgeResponse extends \Google\Model
 {
+  /**
+   * No result was specified.
+   */
+  public const RESULT_PROBING_RESULT_UNSPECIFIED = 'PROBING_RESULT_UNSPECIFIED';
+  /**
+   * At least 95% of packets reached the destination.
+   */
+  public const RESULT_REACHABLE = 'REACHABLE';
+  /**
+   * No packets reached the destination.
+   */
+  public const RESULT_UNREACHABLE = 'UNREACHABLE';
+  /**
+   * Less than 95% of packets reached the destination.
+   */
+  public const RESULT_REACHABILITY_INCONSISTENT = 'REACHABILITY_INCONSISTENT';
+  /**
+   * Reachability could not be determined. Possible reasons are: * The user
+   * lacks permission to access some of the network resources required to run
+   * the test. * No valid source endpoint could be derived from the request. *
+   * An internal error occurred.
+   */
+  public const RESULT_UNDETERMINED = 'UNDETERMINED';
   protected $destinationEgressLocationType = EdgeLocation::class;
   protected $destinationEgressLocationDataType = '';
   /**
+   * Router name in the format '{router}.{metroshard}'. For example: pf01.aaa01,
+   * pr02.aaa01.
+   *
    * @var string
    */
   public $destinationRouter;
   protected $probingLatencyType = LatencyDistribution::class;
   protected $probingLatencyDataType = '';
   /**
+   * The overall result of active probing for this egress device.
+   *
    * @var string
    */
   public $result;
   /**
+   * Number of probes sent.
+   *
    * @var int
    */
   public $sentProbeCount;
   /**
+   * Number of probes that reached the destination.
+   *
    * @var int
    */
   public $successfulProbeCount;
 
   /**
-   * @param EdgeLocation
+   * The EdgeLocation from which a packet, destined to the internet, will egress
+   * the Google network. This will only be populated for a connectivity test
+   * which has an internet destination address. The absence of this field *must
+   * not* be used as an indication that the destination is part of the Google
+   * network.
+   *
+   * @param EdgeLocation $destinationEgressLocation
    */
   public function setDestinationEgressLocation(EdgeLocation $destinationEgressLocation)
   {
@@ -55,7 +93,10 @@ class SingleEdgeResponse extends \Google\Model
     return $this->destinationEgressLocation;
   }
   /**
-   * @param string
+   * Router name in the format '{router}.{metroshard}'. For example: pf01.aaa01,
+   * pr02.aaa01.
+   *
+   * @param string $destinationRouter
    */
   public function setDestinationRouter($destinationRouter)
   {
@@ -69,7 +110,10 @@ class SingleEdgeResponse extends \Google\Model
     return $this->destinationRouter;
   }
   /**
-   * @param LatencyDistribution
+   * Latency as measured by active probing in one direction: from the source to
+   * the destination endpoint.
+   *
+   * @param LatencyDistribution $probingLatency
    */
   public function setProbingLatency(LatencyDistribution $probingLatency)
   {
@@ -83,21 +127,28 @@ class SingleEdgeResponse extends \Google\Model
     return $this->probingLatency;
   }
   /**
-   * @param string
+   * The overall result of active probing for this egress device.
+   *
+   * Accepted values: PROBING_RESULT_UNSPECIFIED, REACHABLE, UNREACHABLE,
+   * REACHABILITY_INCONSISTENT, UNDETERMINED
+   *
+   * @param self::RESULT_* $result
    */
   public function setResult($result)
   {
     $this->result = $result;
   }
   /**
-   * @return string
+   * @return self::RESULT_*
    */
   public function getResult()
   {
     return $this->result;
   }
   /**
-   * @param int
+   * Number of probes sent.
+   *
+   * @param int $sentProbeCount
    */
   public function setSentProbeCount($sentProbeCount)
   {
@@ -111,7 +162,9 @@ class SingleEdgeResponse extends \Google\Model
     return $this->sentProbeCount;
   }
   /**
-   * @param int
+   * Number of probes that reached the destination.
+   *
+   * @param int $successfulProbeCount
    */
   public function setSuccessfulProbeCount($successfulProbeCount)
   {

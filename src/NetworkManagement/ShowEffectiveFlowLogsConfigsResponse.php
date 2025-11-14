@@ -23,16 +23,22 @@ class ShowEffectiveFlowLogsConfigsResponse extends \Google\Collection
   protected $effectiveFlowLogsConfigsType = EffectiveVpcFlowLogsConfig::class;
   protected $effectiveFlowLogsConfigsDataType = 'array';
   /**
+   * Page token to fetch the next set of configurations.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached (when querying all locations with `-`).
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param EffectiveVpcFlowLogsConfig[]
+   * List of Effective Vpc Flow Logs configurations.
+   *
+   * @param EffectiveVpcFlowLogsConfig[] $effectiveFlowLogsConfigs
    */
   public function setEffectiveFlowLogsConfigs($effectiveFlowLogsConfigs)
   {
@@ -46,7 +52,9 @@ class ShowEffectiveFlowLogsConfigsResponse extends \Google\Collection
     return $this->effectiveFlowLogsConfigs;
   }
   /**
-   * @param string
+   * Page token to fetch the next set of configurations.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ShowEffectiveFlowLogsConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached (when querying all locations with `-`).
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

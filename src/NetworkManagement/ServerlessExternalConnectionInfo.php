@@ -20,12 +20,16 @@ namespace Google\Service\NetworkManagement;
 class ServerlessExternalConnectionInfo extends \Google\Model
 {
   /**
+   * Selected starting IP address, from the Google dynamic address pool.
+   *
    * @var string
    */
   public $selectedIpAddress;
 
   /**
-   * @param string
+   * Selected starting IP address, from the Google dynamic address pool.
+   *
+   * @param string $selectedIpAddress
    */
   public function setSelectedIpAddress($selectedIpAddress)
   {
