@@ -19,22 +19,45 @@ namespace Google\Service\DatabaseMigrationService;
 
 class ValueListFilter extends \Google\Collection
 {
+  /**
+   * Value present in list unspecified
+   */
+  public const VALUE_PRESENT_LIST_VALUE_PRESENT_IN_LIST_UNSPECIFIED = 'VALUE_PRESENT_IN_LIST_UNSPECIFIED';
+  /**
+   * If the source value is in the supplied list at value_list
+   */
+  public const VALUE_PRESENT_LIST_VALUE_PRESENT_IN_LIST_IF_VALUE_LIST = 'VALUE_PRESENT_IN_LIST_IF_VALUE_LIST';
+  /**
+   * If the source value is not in the supplied list at value_list
+   */
+  public const VALUE_PRESENT_LIST_VALUE_PRESENT_IN_LIST_IF_VALUE_NOT_LIST = 'VALUE_PRESENT_IN_LIST_IF_VALUE_NOT_LIST';
   protected $collection_key = 'values';
   /**
+   * Required. Whether to ignore case when filtering by values. Defaults to
+   * false
+   *
    * @var bool
    */
   public $ignoreCase;
   /**
+   * Required. Indicates whether the filter matches rows with values that are
+   * present in the list or those with values not present in it.
+   *
    * @var string
    */
   public $valuePresentList;
   /**
+   * Required. The list to be used to filter by
+   *
    * @var string[]
    */
   public $values;
 
   /**
-   * @param bool
+   * Required. Whether to ignore case when filtering by values. Defaults to
+   * false
+   *
+   * @param bool $ignoreCase
    */
   public function setIgnoreCase($ignoreCase)
   {
@@ -48,21 +71,30 @@ class ValueListFilter extends \Google\Collection
     return $this->ignoreCase;
   }
   /**
-   * @param string
+   * Required. Indicates whether the filter matches rows with values that are
+   * present in the list or those with values not present in it.
+   *
+   * Accepted values: VALUE_PRESENT_IN_LIST_UNSPECIFIED,
+   * VALUE_PRESENT_IN_LIST_IF_VALUE_LIST,
+   * VALUE_PRESENT_IN_LIST_IF_VALUE_NOT_LIST
+   *
+   * @param self::VALUE_PRESENT_LIST_* $valuePresentList
    */
   public function setValuePresentList($valuePresentList)
   {
     $this->valuePresentList = $valuePresentList;
   }
   /**
-   * @return string
+   * @return self::VALUE_PRESENT_LIST_*
    */
   public function getValuePresentList()
   {
     return $this->valuePresentList;
   }
   /**
-   * @param string[]
+   * Required. The list to be used to filter by
+   *
+   * @param string[] $values
    */
   public function setValues($values)
   {

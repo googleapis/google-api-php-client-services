@@ -19,16 +19,33 @@ namespace Google\Service\DatabaseMigrationService;
 
 class SourceObjectsConfig extends \Google\Collection
 {
+  /**
+   * The type of the objects selection is unknown, indicating that the migration
+   * job is at instance level.
+   */
+  public const OBJECTS_SELECTION_TYPE_OBJECTS_SELECTION_TYPE_UNSPECIFIED = 'OBJECTS_SELECTION_TYPE_UNSPECIFIED';
+  /**
+   * Migrate all of the objects.
+   */
+  public const OBJECTS_SELECTION_TYPE_ALL_OBJECTS = 'ALL_OBJECTS';
+  /**
+   * Migrate specific objects.
+   */
+  public const OBJECTS_SELECTION_TYPE_SPECIFIED_OBJECTS = 'SPECIFIED_OBJECTS';
   protected $collection_key = 'objectConfigs';
   protected $objectConfigsType = SourceObjectConfig::class;
   protected $objectConfigsDataType = 'array';
   /**
+   * Optional. The objects selection type of the migration job.
+   *
    * @var string
    */
   public $objectsSelectionType;
 
   /**
-   * @param SourceObjectConfig[]
+   * Optional. The list of the objects to be migrated.
+   *
+   * @param SourceObjectConfig[] $objectConfigs
    */
   public function setObjectConfigs($objectConfigs)
   {
@@ -42,14 +59,19 @@ class SourceObjectsConfig extends \Google\Collection
     return $this->objectConfigs;
   }
   /**
-   * @param string
+   * Optional. The objects selection type of the migration job.
+   *
+   * Accepted values: OBJECTS_SELECTION_TYPE_UNSPECIFIED, ALL_OBJECTS,
+   * SPECIFIED_OBJECTS
+   *
+   * @param self::OBJECTS_SELECTION_TYPE_* $objectsSelectionType
    */
   public function setObjectsSelectionType($objectsSelectionType)
   {
     $this->objectsSelectionType = $objectsSelectionType;
   }
   /**
-   * @return string
+   * @return self::OBJECTS_SELECTION_TYPE_*
    */
   public function getObjectsSelectionType()
   {

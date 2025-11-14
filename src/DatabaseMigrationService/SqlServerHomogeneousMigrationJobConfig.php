@@ -21,6 +21,16 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
 {
   protected $collection_key = 'databaseBackups';
   /**
+   * Required. Pattern that describes the default backup naming strategy. The
+   * specified pattern should ensure lexicographical order of backups. The
+   * pattern must define one of the following capture group sets: Capture group
+   * set #1 yy/yyyy - year, 2 or 4 digits mm - month number, 1-12 dd - day of
+   * month, 1-31 hh - hour of day, 00-23 mi - minutes, 00-59 ss - seconds, 00-59
+   * Example: For backup file TestDB_20230802_155400.trn, use pattern:
+   * (?.*)_backup_(?\d{4})(?\d{2})(?\d{2})_(?\d{2})(?\d{2})(?\d{2}).trn Capture
+   * group set #2 timestamp - unix timestamp Example: For backup file
+   * TestDB.1691448254.trn, use pattern: (?.*)\.(?\d*).trn or (?.*)\.(?\d*).trn
+   *
    * @var string
    */
   public $backupFilePattern;
@@ -29,16 +39,30 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
   protected $databaseBackupsType = SqlServerDatabaseBackup::class;
   protected $databaseBackupsDataType = 'array';
   /**
+   * Optional. Promote databases when ready.
+   *
    * @var bool
    */
   public $promoteWhenReady;
   /**
+   * Optional. Enable differential backups.
+   *
    * @var bool
    */
   public $useDiffBackup;
 
   /**
-   * @param string
+   * Required. Pattern that describes the default backup naming strategy. The
+   * specified pattern should ensure lexicographical order of backups. The
+   * pattern must define one of the following capture group sets: Capture group
+   * set #1 yy/yyyy - year, 2 or 4 digits mm - month number, 1-12 dd - day of
+   * month, 1-31 hh - hour of day, 00-23 mi - minutes, 00-59 ss - seconds, 00-59
+   * Example: For backup file TestDB_20230802_155400.trn, use pattern:
+   * (?.*)_backup_(?\d{4})(?\d{2})(?\d{2})_(?\d{2})(?\d{2})(?\d{2}).trn Capture
+   * group set #2 timestamp - unix timestamp Example: For backup file
+   * TestDB.1691448254.trn, use pattern: (?.*)\.(?\d*).trn or (?.*)\.(?\d*).trn
+   *
+   * @param string $backupFilePattern
    */
   public function setBackupFilePattern($backupFilePattern)
   {
@@ -52,7 +76,10 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
     return $this->backupFilePattern;
   }
   /**
-   * @param SqlServerDagConfig
+   * Optional. Configuration for distributed availability group (DAG) for the
+   * SQL Server homogeneous migration.
+   *
+   * @param SqlServerDagConfig $dagConfig
    */
   public function setDagConfig(SqlServerDagConfig $dagConfig)
   {
@@ -66,7 +93,9 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
     return $this->dagConfig;
   }
   /**
-   * @param SqlServerDatabaseBackup[]
+   * Required. Backup details per database in Cloud Storage.
+   *
+   * @param SqlServerDatabaseBackup[] $databaseBackups
    */
   public function setDatabaseBackups($databaseBackups)
   {
@@ -80,7 +109,9 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
     return $this->databaseBackups;
   }
   /**
-   * @param bool
+   * Optional. Promote databases when ready.
+   *
+   * @param bool $promoteWhenReady
    */
   public function setPromoteWhenReady($promoteWhenReady)
   {
@@ -94,7 +125,9 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
     return $this->promoteWhenReady;
   }
   /**
-   * @param bool
+   * Optional. Enable differential backups.
+   *
+   * @param bool $useDiffBackup
    */
   public function setUseDiffBackup($useDiffBackup)
   {
