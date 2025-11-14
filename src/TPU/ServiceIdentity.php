@@ -20,12 +20,16 @@ namespace Google\Service\TPU;
 class ServiceIdentity extends \Google\Model
 {
   /**
+   * The email address of the service identity.
+   *
    * @var string
    */
   public $email;
 
   /**
-   * @param string
+   * The email address of the service identity.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {

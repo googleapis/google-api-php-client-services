@@ -21,18 +21,24 @@ class ListNodesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * The next page token or empty if none.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $nodesType = Node::class;
   protected $nodesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * The next page token or empty if none.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListNodesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Node[]
+   * The listed nodes.
+   *
+   * @param Node[] $nodes
    */
   public function setNodes($nodes)
   {
@@ -60,7 +68,9 @@ class ListNodesResponse extends \Google\Collection
     return $this->nodes;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
