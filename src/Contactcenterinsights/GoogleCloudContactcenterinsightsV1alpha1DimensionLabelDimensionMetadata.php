@@ -17,54 +17,54 @@
 
 namespace Google\Service\Contactcenterinsights;
 
-class GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData extends \Google\Model
+class GoogleCloudContactcenterinsightsV1alpha1DimensionLabelDimensionMetadata extends \Google\Model
 {
   /**
-   * The human-readable name of the phrase matcher.
+   * Optional. The label key.
    *
    * @var string
    */
-  public $displayName;
+  public $labelKey;
   /**
-   * The unique identifier (the resource name) of the phrase matcher.
+   * Optional. The label value.
    *
    * @var string
    */
-  public $phraseMatcher;
+  public $labelValue;
 
   /**
-   * The human-readable name of the phrase matcher.
+   * Optional. The label key.
    *
-   * @param string $displayName
+   * @param string $labelKey
    */
-  public function setDisplayName($displayName)
+  public function setLabelKey($labelKey)
   {
-    $this->displayName = $displayName;
+    $this->labelKey = $labelKey;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getLabelKey()
   {
-    return $this->displayName;
+    return $this->labelKey;
   }
   /**
-   * The unique identifier (the resource name) of the phrase matcher.
+   * Optional. The label value.
    *
-   * @param string $phraseMatcher
+   * @param string $labelValue
    */
-  public function setPhraseMatcher($phraseMatcher)
+  public function setLabelValue($labelValue)
   {
-    $this->phraseMatcher = $phraseMatcher;
+    $this->labelValue = $labelValue;
   }
   /**
    * @return string
    */
-  public function getPhraseMatcher()
+  public function getLabelValue()
   {
-    return $this->phraseMatcher;
+    return $this->labelValue;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData');
+class_alias(GoogleCloudContactcenterinsightsV1alpha1DimensionLabelDimensionMetadata::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1alpha1DimensionLabelDimensionMetadata');

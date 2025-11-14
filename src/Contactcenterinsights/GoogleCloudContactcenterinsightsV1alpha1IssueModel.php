@@ -20,44 +20,100 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
 {
   /**
+   * Unspecified model type.
+   */
+  public const MODEL_TYPE_MODEL_TYPE_UNSPECIFIED = 'MODEL_TYPE_UNSPECIFIED';
+  /**
+   * Type V1.
+   */
+  public const MODEL_TYPE_TYPE_V1 = 'TYPE_V1';
+  /**
+   * Type V2.
+   */
+  public const MODEL_TYPE_TYPE_V2 = 'TYPE_V2';
+  /**
+   * Unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Model is not deployed but is ready to deploy.
+   */
+  public const STATE_UNDEPLOYED = 'UNDEPLOYED';
+  /**
+   * Model is being deployed.
+   */
+  public const STATE_DEPLOYING = 'DEPLOYING';
+  /**
+   * Model is deployed and is ready to be used. A model can only be used in
+   * analysis if it's in this state.
+   */
+  public const STATE_DEPLOYED = 'DEPLOYED';
+  /**
+   * Model is being undeployed.
+   */
+  public const STATE_UNDEPLOYING = 'UNDEPLOYING';
+  /**
+   * Model is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Output only. The time at which this issue model was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The representative name for the issue model.
+   *
    * @var string
    */
   public $displayName;
   protected $inputDataConfigType = GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig::class;
   protected $inputDataConfigDataType = '';
   /**
+   * Output only. Number of issues in this issue model.
+   *
    * @var string
    */
   public $issueCount;
   /**
+   * Language of the model.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Type of the model.
+   *
    * @var string
    */
   public $modelType;
   /**
+   * Immutable. The resource name of the issue model. Format:
+   * projects/{project}/locations/{location}/issueModels/{issue_model}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. State of the model.
+   *
    * @var string
    */
   public $state;
   protected $trainingStatsType = GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStats::class;
   protected $trainingStatsDataType = '';
   /**
+   * Output only. The most recent time at which the issue model was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time at which this issue model was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +127,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * The representative name for the issue model.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -85,7 +143,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig
+   * Configs for the input data that used to create the issue model.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig $inputDataConfig
    */
   public function setInputDataConfig(GoogleCloudContactcenterinsightsV1alpha1IssueModelInputDataConfig $inputDataConfig)
   {
@@ -99,7 +159,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
     return $this->inputDataConfig;
   }
   /**
-   * @param string
+   * Output only. Number of issues in this issue model.
+   *
+   * @param string $issueCount
    */
   public function setIssueCount($issueCount)
   {
@@ -113,7 +175,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
     return $this->issueCount;
   }
   /**
-   * @param string
+   * Language of the model.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -127,21 +191,28 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Type of the model.
+   *
+   * Accepted values: MODEL_TYPE_UNSPECIFIED, TYPE_V1, TYPE_V2
+   *
+   * @param self::MODEL_TYPE_* $modelType
    */
   public function setModelType($modelType)
   {
     $this->modelType = $modelType;
   }
   /**
-   * @return string
+   * @return self::MODEL_TYPE_*
    */
   public function getModelType()
   {
     return $this->modelType;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the issue model. Format:
+   * projects/{project}/locations/{location}/issueModels/{issue_model}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -155,21 +226,29 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. State of the model.
+   *
+   * Accepted values: STATE_UNSPECIFIED, UNDEPLOYED, DEPLOYING, DEPLOYED,
+   * UNDEPLOYING, DELETING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStats
+   * Output only. Immutable. The issue model's label statistics on its training
+   * data.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStats $trainingStats
    */
   public function setTrainingStats(GoogleCloudContactcenterinsightsV1alpha1IssueModelLabelStats $trainingStats)
   {
@@ -183,7 +262,9 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModel extends \Google\Model
     return $this->trainingStats;
   }
   /**
-   * @param string
+   * Output only. The most recent time at which the issue model was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
