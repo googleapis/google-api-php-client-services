@@ -24,6 +24,9 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfig extends \Google\Model
   protected $defaultParsingConfigType = GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig::class;
   protected $defaultParsingConfigDataType = '';
   /**
+   * The full resource name of the Document Processing Config. Format:
+   * `projects/locations/collections/dataStores/documentProcessingConfig`.
+   *
    * @var string
    */
   public $name;
@@ -31,7 +34,9 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfig extends \Google\Model
   protected $parsingConfigOverridesDataType = 'map';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigChunkingConfig
+   * Whether chunking mode is enabled.
+   *
+   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigChunkingConfig $chunkingConfig
    */
   public function setChunkingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigChunkingConfig $chunkingConfig)
   {
@@ -45,7 +50,11 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfig extends \Google\Model
     return $this->chunkingConfig;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig
+   * Configurations for default Document parser. If not specified, we will
+   * configure it as default DigitalParsingConfig, and the default parsing
+   * config will be applied to all file types for Document parsing.
+   *
+   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig $defaultParsingConfig
    */
   public function setDefaultParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig $defaultParsingConfig)
   {
@@ -59,7 +68,10 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfig extends \Google\Model
     return $this->defaultParsingConfig;
   }
   /**
-   * @param string
+   * The full resource name of the Document Processing Config. Format:
+   * `projects/locations/collections/dataStores/documentProcessingConfig`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -73,7 +85,19 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig[]
+   * Map from file type to override the default parsing configuration based on
+   * the file type. Supported keys: * `pdf`: Override parsing config for PDF
+   * files, either digital parsing, ocr parsing or layout parsing is supported.
+   * * `html`: Override parsing config for HTML files, only digital parsing and
+   * layout parsing are supported. * `docx`: Override parsing config for DOCX
+   * files, only digital parsing and layout parsing are supported. * `pptx`:
+   * Override parsing config for PPTX files, only digital parsing and layout
+   * parsing are supported. * `xlsm`: Override parsing config for XLSM files,
+   * only digital parsing and layout parsing are supported. * `xlsx`: Override
+   * parsing config for XLSX files, only digital parsing and layout parsing are
+   * supported.
+   *
+   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig[] $parsingConfigOverrides
    */
   public function setParsingConfigOverrides($parsingConfigOverrides)
   {
