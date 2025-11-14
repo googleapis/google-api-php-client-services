@@ -20,46 +20,71 @@ namespace Google\Service\Dataform;
 class CodeCompilationConfig extends \Google\Model
 {
   /**
+   * Optional. The default schema (BigQuery dataset ID) for assertions.
+   *
    * @var string
    */
   public $assertionSchema;
   /**
+   * Optional. The prefix to prepend to built-in assertion names.
+   *
    * @var string
    */
   public $builtinAssertionNamePrefix;
   /**
+   * Optional. The suffix that should be appended to all database (Google Cloud
+   * project ID) names.
+   *
    * @var string
    */
   public $databaseSuffix;
   /**
+   * Optional. The default database (Google Cloud project ID).
+   *
    * @var string
    */
   public $defaultDatabase;
   /**
+   * Optional. The default BigQuery location to use. Defaults to "US". See the
+   * BigQuery docs for a full list of locations:
+   * https://cloud.google.com/bigquery/docs/locations.
+   *
    * @var string
    */
   public $defaultLocation;
   protected $defaultNotebookRuntimeOptionsType = NotebookRuntimeOptions::class;
   protected $defaultNotebookRuntimeOptionsDataType = '';
   /**
+   * Optional. The default schema (BigQuery dataset ID).
+   *
    * @var string
    */
   public $defaultSchema;
   /**
+   * Optional. The suffix that should be appended to all schema (BigQuery
+   * dataset ID) names.
+   *
    * @var string
    */
   public $schemaSuffix;
   /**
+   * Optional. The prefix that should be prepended to all table names.
+   *
    * @var string
    */
   public $tablePrefix;
   /**
+   * Optional. User-defined variables that are made available to project code
+   * during compilation.
+   *
    * @var string[]
    */
   public $vars;
 
   /**
-   * @param string
+   * Optional. The default schema (BigQuery dataset ID) for assertions.
+   *
+   * @param string $assertionSchema
    */
   public function setAssertionSchema($assertionSchema)
   {
@@ -73,7 +98,9 @@ class CodeCompilationConfig extends \Google\Model
     return $this->assertionSchema;
   }
   /**
-   * @param string
+   * Optional. The prefix to prepend to built-in assertion names.
+   *
+   * @param string $builtinAssertionNamePrefix
    */
   public function setBuiltinAssertionNamePrefix($builtinAssertionNamePrefix)
   {
@@ -87,7 +114,10 @@ class CodeCompilationConfig extends \Google\Model
     return $this->builtinAssertionNamePrefix;
   }
   /**
-   * @param string
+   * Optional. The suffix that should be appended to all database (Google Cloud
+   * project ID) names.
+   *
+   * @param string $databaseSuffix
    */
   public function setDatabaseSuffix($databaseSuffix)
   {
@@ -101,7 +131,9 @@ class CodeCompilationConfig extends \Google\Model
     return $this->databaseSuffix;
   }
   /**
-   * @param string
+   * Optional. The default database (Google Cloud project ID).
+   *
+   * @param string $defaultDatabase
    */
   public function setDefaultDatabase($defaultDatabase)
   {
@@ -115,7 +147,11 @@ class CodeCompilationConfig extends \Google\Model
     return $this->defaultDatabase;
   }
   /**
-   * @param string
+   * Optional. The default BigQuery location to use. Defaults to "US". See the
+   * BigQuery docs for a full list of locations:
+   * https://cloud.google.com/bigquery/docs/locations.
+   *
+   * @param string $defaultLocation
    */
   public function setDefaultLocation($defaultLocation)
   {
@@ -129,7 +165,9 @@ class CodeCompilationConfig extends \Google\Model
     return $this->defaultLocation;
   }
   /**
-   * @param NotebookRuntimeOptions
+   * Optional. The default notebook runtime options.
+   *
+   * @param NotebookRuntimeOptions $defaultNotebookRuntimeOptions
    */
   public function setDefaultNotebookRuntimeOptions(NotebookRuntimeOptions $defaultNotebookRuntimeOptions)
   {
@@ -143,7 +181,9 @@ class CodeCompilationConfig extends \Google\Model
     return $this->defaultNotebookRuntimeOptions;
   }
   /**
-   * @param string
+   * Optional. The default schema (BigQuery dataset ID).
+   *
+   * @param string $defaultSchema
    */
   public function setDefaultSchema($defaultSchema)
   {
@@ -157,7 +197,10 @@ class CodeCompilationConfig extends \Google\Model
     return $this->defaultSchema;
   }
   /**
-   * @param string
+   * Optional. The suffix that should be appended to all schema (BigQuery
+   * dataset ID) names.
+   *
+   * @param string $schemaSuffix
    */
   public function setSchemaSuffix($schemaSuffix)
   {
@@ -171,7 +214,9 @@ class CodeCompilationConfig extends \Google\Model
     return $this->schemaSuffix;
   }
   /**
-   * @param string
+   * Optional. The prefix that should be prepended to all table names.
+   *
+   * @param string $tablePrefix
    */
   public function setTablePrefix($tablePrefix)
   {
@@ -185,7 +230,10 @@ class CodeCompilationConfig extends \Google\Model
     return $this->tablePrefix;
   }
   /**
-   * @param string[]
+   * Optional. User-defined variables that are made available to project code
+   * during compilation.
+   *
+   * @param string[] $vars
    */
   public function setVars($vars)
   {

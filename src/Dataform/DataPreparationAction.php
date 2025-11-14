@@ -22,20 +22,32 @@ class DataPreparationAction extends \Google\Model
   protected $contentsSqlType = ActionSqlDefinition::class;
   protected $contentsSqlDataType = '';
   /**
+   * Output only. YAML representing the contents of the data preparation. Can be
+   * used to show the customer what the input was to their workflow.
+   *
    * @var string
    */
   public $contentsYaml;
   /**
+   * Output only. The generated BigQuery SQL script that will be executed. For
+   * reference only.
+   *
    * @var string
    */
   public $generatedSql;
   /**
+   * Output only. The ID of the BigQuery job that executed the SQL in
+   * sql_script. Only set once the job has started to run.
+   *
    * @var string
    */
   public $jobId;
 
   /**
-   * @param ActionSqlDefinition
+   * SQL definition for a Data Preparation. Contains a SQL query and additional
+   * context information.
+   *
+   * @param ActionSqlDefinition $contentsSql
    */
   public function setContentsSql(ActionSqlDefinition $contentsSql)
   {
@@ -49,7 +61,10 @@ class DataPreparationAction extends \Google\Model
     return $this->contentsSql;
   }
   /**
-   * @param string
+   * Output only. YAML representing the contents of the data preparation. Can be
+   * used to show the customer what the input was to their workflow.
+   *
+   * @param string $contentsYaml
    */
   public function setContentsYaml($contentsYaml)
   {
@@ -63,7 +78,10 @@ class DataPreparationAction extends \Google\Model
     return $this->contentsYaml;
   }
   /**
-   * @param string
+   * Output only. The generated BigQuery SQL script that will be executed. For
+   * reference only.
+   *
+   * @param string $generatedSql
    */
   public function setGeneratedSql($generatedSql)
   {
@@ -77,7 +95,10 @@ class DataPreparationAction extends \Google\Model
     return $this->generatedSql;
   }
   /**
-   * @param string
+   * Output only. The ID of the BigQuery job that executed the SQL in
+   * sql_script. Only set once the job has started to run.
+   *
+   * @param string $jobId
    */
   public function setJobId($jobId)
   {

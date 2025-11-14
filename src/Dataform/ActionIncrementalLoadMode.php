@@ -20,12 +20,16 @@ namespace Google\Service\Dataform;
 class ActionIncrementalLoadMode extends \Google\Model
 {
   /**
+   * Column name for incremental load modes
+   *
    * @var string
    */
   public $column;
 
   /**
-   * @param string
+   * Column name for incremental load modes
+   *
+   * @param string $column
    */
   public function setColumn($column)
   {
