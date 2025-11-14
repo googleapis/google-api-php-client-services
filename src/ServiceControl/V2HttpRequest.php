@@ -20,68 +20,115 @@ namespace Google\Service\ServiceControl;
 class V2HttpRequest extends \Google\Model
 {
   /**
+   * The number of HTTP response bytes inserted into cache. Set only when a
+   * cache fill was attempted.
+   *
    * @var string
    */
   public $cacheFillBytes;
   /**
+   * Whether or not an entity was served from cache (with or without
+   * validation).
+   *
    * @var bool
    */
   public $cacheHit;
   /**
+   * Whether or not a cache lookup was attempted.
+   *
    * @var bool
    */
   public $cacheLookup;
   /**
+   * Whether or not the response was validated with the origin server before
+   * being served from cache. This field is only meaningful if `cache_hit` is
+   * True.
+   *
    * @var bool
    */
   public $cacheValidatedWithOriginServer;
   /**
+   * The request processing latency on the server, from the time the request was
+   * received until the response was sent.
+   *
    * @var string
    */
   public $latency;
   /**
+   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+   *
    * @var string
    */
   public $protocol;
   /**
+   * The referer URL of the request, as defined in [HTTP/1.1 Header Field
+   * Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   *
    * @var string
    */
   public $referer;
   /**
+   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request.
+   * Examples: `"192.168.1.1"`, `"FE80::0202:B3FF:FE1E:8329"`.
+   *
    * @var string
    */
   public $remoteIp;
   /**
+   * The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
+   *
    * @var string
    */
   public $requestMethod;
   /**
+   * The size of the HTTP request message in bytes, including the request
+   * headers and the request body.
+   *
    * @var string
    */
   public $requestSize;
   /**
+   * The scheme (http, https), the host name, the path, and the query portion of
+   * the URL that was requested. Example:
+   * `"http://example.com/some/info?color=red"`.
+   *
    * @var string
    */
   public $requestUrl;
   /**
+   * The size of the HTTP response message sent back to the client, in bytes,
+   * including the response headers and the response body.
+   *
    * @var string
    */
   public $responseSize;
   /**
+   * The IP address (IPv4 or IPv6) of the origin server that the request was
+   * sent to.
+   *
    * @var string
    */
   public $serverIp;
   /**
+   * The response code indicating the status of the response. Examples: 200,
+   * 404.
+   *
    * @var int
    */
   public $status;
   /**
+   * The user agent sent by the client. Example: `"Mozilla/4.0 (compatible; MSIE
+   * 6.0; Windows 98; Q312461; .NET CLR 1.0.3705)"`.
+   *
    * @var string
    */
   public $userAgent;
 
   /**
-   * @param string
+   * The number of HTTP response bytes inserted into cache. Set only when a
+   * cache fill was attempted.
+   *
+   * @param string $cacheFillBytes
    */
   public function setCacheFillBytes($cacheFillBytes)
   {
@@ -95,7 +142,10 @@ class V2HttpRequest extends \Google\Model
     return $this->cacheFillBytes;
   }
   /**
-   * @param bool
+   * Whether or not an entity was served from cache (with or without
+   * validation).
+   *
+   * @param bool $cacheHit
    */
   public function setCacheHit($cacheHit)
   {
@@ -109,7 +159,9 @@ class V2HttpRequest extends \Google\Model
     return $this->cacheHit;
   }
   /**
-   * @param bool
+   * Whether or not a cache lookup was attempted.
+   *
+   * @param bool $cacheLookup
    */
   public function setCacheLookup($cacheLookup)
   {
@@ -123,7 +175,11 @@ class V2HttpRequest extends \Google\Model
     return $this->cacheLookup;
   }
   /**
-   * @param bool
+   * Whether or not the response was validated with the origin server before
+   * being served from cache. This field is only meaningful if `cache_hit` is
+   * True.
+   *
+   * @param bool $cacheValidatedWithOriginServer
    */
   public function setCacheValidatedWithOriginServer($cacheValidatedWithOriginServer)
   {
@@ -137,7 +193,10 @@ class V2HttpRequest extends \Google\Model
     return $this->cacheValidatedWithOriginServer;
   }
   /**
-   * @param string
+   * The request processing latency on the server, from the time the request was
+   * received until the response was sent.
+   *
+   * @param string $latency
    */
   public function setLatency($latency)
   {
@@ -151,7 +210,9 @@ class V2HttpRequest extends \Google\Model
     return $this->latency;
   }
   /**
-   * @param string
+   * Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
+   *
+   * @param string $protocol
    */
   public function setProtocol($protocol)
   {
@@ -165,7 +226,10 @@ class V2HttpRequest extends \Google\Model
     return $this->protocol;
   }
   /**
-   * @param string
+   * The referer URL of the request, as defined in [HTTP/1.1 Header Field
+   * Definitions](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
+   *
+   * @param string $referer
    */
   public function setReferer($referer)
   {
@@ -179,7 +243,10 @@ class V2HttpRequest extends \Google\Model
     return $this->referer;
   }
   /**
-   * @param string
+   * The IP address (IPv4 or IPv6) of the client that issued the HTTP request.
+   * Examples: `"192.168.1.1"`, `"FE80::0202:B3FF:FE1E:8329"`.
+   *
+   * @param string $remoteIp
    */
   public function setRemoteIp($remoteIp)
   {
@@ -193,7 +260,9 @@ class V2HttpRequest extends \Google\Model
     return $this->remoteIp;
   }
   /**
-   * @param string
+   * The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
+   *
+   * @param string $requestMethod
    */
   public function setRequestMethod($requestMethod)
   {
@@ -207,7 +276,10 @@ class V2HttpRequest extends \Google\Model
     return $this->requestMethod;
   }
   /**
-   * @param string
+   * The size of the HTTP request message in bytes, including the request
+   * headers and the request body.
+   *
+   * @param string $requestSize
    */
   public function setRequestSize($requestSize)
   {
@@ -221,7 +293,11 @@ class V2HttpRequest extends \Google\Model
     return $this->requestSize;
   }
   /**
-   * @param string
+   * The scheme (http, https), the host name, the path, and the query portion of
+   * the URL that was requested. Example:
+   * `"http://example.com/some/info?color=red"`.
+   *
+   * @param string $requestUrl
    */
   public function setRequestUrl($requestUrl)
   {
@@ -235,7 +311,10 @@ class V2HttpRequest extends \Google\Model
     return $this->requestUrl;
   }
   /**
-   * @param string
+   * The size of the HTTP response message sent back to the client, in bytes,
+   * including the response headers and the response body.
+   *
+   * @param string $responseSize
    */
   public function setResponseSize($responseSize)
   {
@@ -249,7 +328,10 @@ class V2HttpRequest extends \Google\Model
     return $this->responseSize;
   }
   /**
-   * @param string
+   * The IP address (IPv4 or IPv6) of the origin server that the request was
+   * sent to.
+   *
+   * @param string $serverIp
    */
   public function setServerIp($serverIp)
   {
@@ -263,7 +345,10 @@ class V2HttpRequest extends \Google\Model
     return $this->serverIp;
   }
   /**
-   * @param int
+   * The response code indicating the status of the response. Examples: 200,
+   * 404.
+   *
+   * @param int $status
    */
   public function setStatus($status)
   {
@@ -277,7 +362,10 @@ class V2HttpRequest extends \Google\Model
     return $this->status;
   }
   /**
-   * @param string
+   * The user agent sent by the client. Example: `"Mozilla/4.0 (compatible; MSIE
+   * 6.0; Windows 98; Q312461; .NET CLR 1.0.3705)"`.
+   *
+   * @param string $userAgent
    */
   public function setUserAgent($userAgent)
   {

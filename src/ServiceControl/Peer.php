@@ -20,28 +20,44 @@ namespace Google\Service\ServiceControl;
 class Peer extends \Google\Model
 {
   /**
+   * The IP address of the peer.
+   *
    * @var string
    */
   public $ip;
   /**
+   * The labels associated with the peer.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The network port of the peer.
+   *
    * @var string
    */
   public $port;
   /**
+   * The identity of this peer. Similar to `Request.auth.principal`, but
+   * relative to the peer instead of the request. For example, the identity
+   * associated with a load balancer that forwarded the request.
+   *
    * @var string
    */
   public $principal;
   /**
+   * The CLDR country/region code associated with the above IP address. If the
+   * IP address is private, the `region_code` should reflect the physical
+   * location where this peer is running.
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param string
+   * The IP address of the peer.
+   *
+   * @param string $ip
    */
   public function setIp($ip)
   {
@@ -55,7 +71,9 @@ class Peer extends \Google\Model
     return $this->ip;
   }
   /**
-   * @param string[]
+   * The labels associated with the peer.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -69,7 +87,9 @@ class Peer extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * The network port of the peer.
+   *
+   * @param string $port
    */
   public function setPort($port)
   {
@@ -83,7 +103,11 @@ class Peer extends \Google\Model
     return $this->port;
   }
   /**
-   * @param string
+   * The identity of this peer. Similar to `Request.auth.principal`, but
+   * relative to the peer instead of the request. For example, the identity
+   * associated with a load balancer that forwarded the request.
+   *
+   * @param string $principal
    */
   public function setPrincipal($principal)
   {
@@ -97,7 +121,11 @@ class Peer extends \Google\Model
     return $this->principal;
   }
   /**
-   * @param string
+   * The CLDR country/region code associated with the above IP address. If the
+   * IP address is private, the `region_code` should reflect the physical
+   * location where this peer is running.
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

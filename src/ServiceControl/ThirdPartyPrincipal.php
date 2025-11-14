@@ -20,12 +20,16 @@ namespace Google\Service\ServiceControl;
 class ThirdPartyPrincipal extends \Google\Model
 {
   /**
+   * Metadata about third party identity.
+   *
    * @var array[]
    */
   public $thirdPartyClaims;
 
   /**
-   * @param array[]
+   * Metadata about third party identity.
+   *
+   * @param array[] $thirdPartyClaims
    */
   public function setThirdPartyClaims($thirdPartyClaims)
   {

@@ -20,12 +20,22 @@ namespace Google\Service\ServiceControl;
 class Oauth extends \Google\Model
 {
   /**
+   * The optional OAuth client ID. This is the unique public identifier issued
+   * by an authorization server to a registered client application. Empty string
+   * is equivalent to no oauth client id. WARNING: This is for MCP tools/call
+   * and tools/list authorization and not for general use.
+   *
    * @var string
    */
   public $clientId;
 
   /**
-   * @param string
+   * The optional OAuth client ID. This is the unique public identifier issued
+   * by an authorization server to a registered client application. Empty string
+   * is equivalent to no oauth client id. WARNING: This is for MCP tools/call
+   * and tools/list authorization and not for general use.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
