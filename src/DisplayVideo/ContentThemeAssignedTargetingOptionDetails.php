@@ -20,48 +20,154 @@ namespace Google\Service\DisplayVideo;
 class ContentThemeAssignedTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Content theme is not specified or is unknown in this version.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_UNSPECIFIED = 'CONTENT_THEME_UNSPECIFIED';
+  /**
+   * Fighting video games.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_FIGHTING_VIDEO_GAMES = 'CONTENT_THEME_FIGHTING_VIDEO_GAMES';
+  /**
+   * Mature games.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_MATURE_GAMES = 'CONTENT_THEME_MATURE_GAMES';
+  /**
+   * Not yet determined health sources.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES = 'CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES';
+  /**
+   * Not yet determined news sources.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES = 'CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES';
+  /**
+   * Politics.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_POLITICS = 'CONTENT_THEME_POLITICS';
+  /**
+   * Recent news.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_RECENT_NEWS = 'CONTENT_THEME_RECENT_NEWS';
+  /**
+   * Religion.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_RELIGION = 'CONTENT_THEME_RELIGION';
+  /**
+   * Unpleasant health content.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT = 'CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT';
+  /**
+   * Unpleasant news.
+   */
+  public const CONTENT_THEME_CONTENT_THEME_UNPLEASANT_NEWS = 'CONTENT_THEME_UNPLEASANT_NEWS';
+  /**
+   * Content theme is not specified or is unknown in this version.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_UNSPECIFIED = 'CONTENT_THEME_UNSPECIFIED';
+  /**
+   * Fighting video games.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_FIGHTING_VIDEO_GAMES = 'CONTENT_THEME_FIGHTING_VIDEO_GAMES';
+  /**
+   * Mature games.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_MATURE_GAMES = 'CONTENT_THEME_MATURE_GAMES';
+  /**
+   * Not yet determined health sources.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES = 'CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES';
+  /**
+   * Not yet determined news sources.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES = 'CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES';
+  /**
+   * Politics.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_POLITICS = 'CONTENT_THEME_POLITICS';
+  /**
+   * Recent news.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_RECENT_NEWS = 'CONTENT_THEME_RECENT_NEWS';
+  /**
+   * Religion.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_RELIGION = 'CONTENT_THEME_RELIGION';
+  /**
+   * Unpleasant health content.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT = 'CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT';
+  /**
+   * Unpleasant news.
+   */
+  public const EXCLUDED_CONTENT_THEME_CONTENT_THEME_UNPLEASANT_NEWS = 'CONTENT_THEME_UNPLEASANT_NEWS';
+  /**
+   * Output only. An enum for the DV360 content theme classifier.
+   *
    * @var string
    */
   public $contentTheme;
   /**
+   * Required. An enum for the DV360 content theme classified to be EXCLUDED.
+   *
    * @var string
    */
   public $excludedContentTheme;
   /**
+   * Required. ID of the content theme to be EXCLUDED.
+   *
    * @var string
    */
   public $excludedTargetingOptionId;
 
   /**
-   * @param string
+   * Output only. An enum for the DV360 content theme classifier.
+   *
+   * Accepted values: CONTENT_THEME_UNSPECIFIED,
+   * CONTENT_THEME_FIGHTING_VIDEO_GAMES, CONTENT_THEME_MATURE_GAMES,
+   * CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES,
+   * CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES, CONTENT_THEME_POLITICS,
+   * CONTENT_THEME_RECENT_NEWS, CONTENT_THEME_RELIGION,
+   * CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT, CONTENT_THEME_UNPLEASANT_NEWS
+   *
+   * @param self::CONTENT_THEME_* $contentTheme
    */
   public function setContentTheme($contentTheme)
   {
     $this->contentTheme = $contentTheme;
   }
   /**
-   * @return string
+   * @return self::CONTENT_THEME_*
    */
   public function getContentTheme()
   {
     return $this->contentTheme;
   }
   /**
-   * @param string
+   * Required. An enum for the DV360 content theme classified to be EXCLUDED.
+   *
+   * Accepted values: CONTENT_THEME_UNSPECIFIED,
+   * CONTENT_THEME_FIGHTING_VIDEO_GAMES, CONTENT_THEME_MATURE_GAMES,
+   * CONTENT_THEME_NOT_YET_DETERMINED_HEALTH_SOURCES,
+   * CONTENT_THEME_NOT_YET_DETERMINED_NEWS_SOURCES, CONTENT_THEME_POLITICS,
+   * CONTENT_THEME_RECENT_NEWS, CONTENT_THEME_RELIGION,
+   * CONTENT_THEME_UNPLEASANT_HEALTH_CONTENT, CONTENT_THEME_UNPLEASANT_NEWS
+   *
+   * @param self::EXCLUDED_CONTENT_THEME_* $excludedContentTheme
    */
   public function setExcludedContentTheme($excludedContentTheme)
   {
     $this->excludedContentTheme = $excludedContentTheme;
   }
   /**
-   * @return string
+   * @return self::EXCLUDED_CONTENT_THEME_*
    */
   public function getExcludedContentTheme()
   {
     return $this->excludedContentTheme;
   }
   /**
-   * @param string
+   * Required. ID of the content theme to be EXCLUDED.
+   *
+   * @param string $excludedTargetingOptionId
    */
   public function setExcludedTargetingOptionId($excludedTargetingOptionId)
   {

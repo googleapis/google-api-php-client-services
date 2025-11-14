@@ -20,19 +20,43 @@ namespace Google\Service\DisplayVideo;
 class GenderAssignedTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Default value when gender is not specified in this version. This enum is a
+   * place holder for default value and does not represent a real gender option.
+   */
+  public const GENDER_GENDER_UNSPECIFIED = 'GENDER_UNSPECIFIED';
+  /**
+   * The audience gender is male.
+   */
+  public const GENDER_GENDER_MALE = 'GENDER_MALE';
+  /**
+   * The audience gender is female.
+   */
+  public const GENDER_GENDER_FEMALE = 'GENDER_FEMALE';
+  /**
+   * The audience gender is unknown.
+   */
+  public const GENDER_GENDER_UNKNOWN = 'GENDER_UNKNOWN';
+  /**
+   * Required. The gender of the audience.
+   *
    * @var string
    */
   public $gender;
 
   /**
-   * @param string
+   * Required. The gender of the audience.
+   *
+   * Accepted values: GENDER_UNSPECIFIED, GENDER_MALE, GENDER_FEMALE,
+   * GENDER_UNKNOWN
+   *
+   * @param self::GENDER_* $gender
    */
   public function setGender($gender)
   {
     $this->gender = $gender;
   }
   /**
-   * @return string
+   * @return self::GENDER_*
    */
   public function getGender()
   {

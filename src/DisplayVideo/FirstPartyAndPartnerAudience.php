@@ -20,76 +20,242 @@ namespace Google\Service\DisplayVideo;
 class FirstPartyAndPartnerAudience extends \Google\Model
 {
   /**
+   * Default value when audience source is not specified or is unknown.
+   */
+  public const AUDIENCE_SOURCE_AUDIENCE_SOURCE_UNSPECIFIED = 'AUDIENCE_SOURCE_UNSPECIFIED';
+  /**
+   * Originated from Display & Video 360.
+   */
+  public const AUDIENCE_SOURCE_DISPLAY_VIDEO_360 = 'DISPLAY_VIDEO_360';
+  /**
+   * Originated from Campaign Manager 360.
+   */
+  public const AUDIENCE_SOURCE_CAMPAIGN_MANAGER = 'CAMPAIGN_MANAGER';
+  /**
+   * Originated from Google Ad Manager.
+   */
+  public const AUDIENCE_SOURCE_AD_MANAGER = 'AD_MANAGER';
+  /**
+   * Originated from Search Ads 360.
+   */
+  public const AUDIENCE_SOURCE_SEARCH_ADS_360 = 'SEARCH_ADS_360';
+  /**
+   * Originated from Youtube.
+   */
+  public const AUDIENCE_SOURCE_YOUTUBE = 'YOUTUBE';
+  /**
+   * Originated from Ads Data Hub.
+   */
+  public const AUDIENCE_SOURCE_ADS_DATA_HUB = 'ADS_DATA_HUB';
+  /**
+   * Default value when type is not specified or is unknown.
+   */
+  public const AUDIENCE_TYPE_AUDIENCE_TYPE_UNSPECIFIED = 'AUDIENCE_TYPE_UNSPECIFIED';
+  /**
+   * Audience was generated through matching customers to known contact
+   * information.
+   */
+  public const AUDIENCE_TYPE_CUSTOMER_MATCH_CONTACT_INFO = 'CUSTOMER_MATCH_CONTACT_INFO';
+  /**
+   * Audience was generated through matching customers to known Mobile device
+   * IDs.
+   */
+  public const AUDIENCE_TYPE_CUSTOMER_MATCH_DEVICE_ID = 'CUSTOMER_MATCH_DEVICE_ID';
+  /**
+   * Audience was generated through matching customers to known User IDs.
+   */
+  public const AUDIENCE_TYPE_CUSTOMER_MATCH_USER_ID = 'CUSTOMER_MATCH_USER_ID';
+  /**
+   * Audience was created based on campaign activity.
+   *
+   * @deprecated
+   */
+  public const AUDIENCE_TYPE_ACTIVITY_BASED = 'ACTIVITY_BASED';
+  /**
+   * Audience was created based on excluding the number of impressions they were
+   * served.
+   *
+   * @deprecated
+   */
+  public const AUDIENCE_TYPE_FREQUENCY_CAP = 'FREQUENCY_CAP';
+  /**
+   * Audience was created based on custom variables attached to pixel.
+   */
+  public const AUDIENCE_TYPE_TAG_BASED = 'TAG_BASED';
+  /**
+   * Audience was created based on past interactions with videos, YouTube ads,
+   * or YouTube channel.
+   */
+  public const AUDIENCE_TYPE_YOUTUBE_USERS = 'YOUTUBE_USERS';
+  /**
+   * Audience has been licensed for use from a third party.
+   */
+  public const AUDIENCE_TYPE_THIRD_PARTY = 'THIRD_PARTY';
+  /**
+   * Audience provided by commerce partners for a fee.
+   */
+  public const AUDIENCE_TYPE_COMMERCE = 'COMMERCE';
+  /**
+   * Audience for Linear TV content.
+   */
+  public const AUDIENCE_TYPE_LINEAR = 'LINEAR';
+  /**
+   * Audience provided by an agency.
+   */
+  public const AUDIENCE_TYPE_AGENCY = 'AGENCY';
+  /**
+   * Default value when type is not specified or is unknown.
+   */
+  public const FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_UNSPECIFIED = 'FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_UNSPECIFIED';
+  /**
+   * Audience that is created via usage of client data.
+   */
+  public const FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_TYPE_FIRST_PARTY = 'TYPE_FIRST_PARTY';
+  /**
+   * Audience that is provided by Third Party data providers.
+   */
+  public const FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_TYPE_PARTNER = 'TYPE_PARTNER';
+  /**
+   * Output only. The estimated audience size for the Display network in the
+   * past month. If the size is less than 1000, the number will be hidden and 0
+   * will be returned due to privacy reasons. Otherwise, the number will be
+   * rounded off to two significant digits. Only returned in GET request.
+   *
    * @var string
    */
   public $activeDisplayAudienceSize;
   /**
+   * Optional. The app_id matches with the type of the mobile_device_ids being
+   * uploaded. Only applicable to audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   *
    * @var string
    */
   public $appId;
   /**
+   * Output only. The source of the audience.
+   *
    * @var string
    */
   public $audienceSource;
   /**
+   * Output only. The type of the audience.
+   *
    * @var string
    */
   public $audienceType;
   protected $contactInfoListType = ContactInfoList::class;
   protected $contactInfoListDataType = '';
   /**
+   * Output only. The user-provided description of the audience. Only applicable
+   * to first party audiences.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The estimated audience size for the Display network. If the
+   * size is less than 1000, the number will be hidden and 0 will be returned
+   * due to privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only returned in GET request.
+   *
    * @var string
    */
   public $displayAudienceSize;
   /**
+   * Output only. The estimated desktop audience size in Display network. If the
+   * size is less than 1000, the number will be hidden and 0 will be returned
+   * due to privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only applicable to first party audiences. Only returned
+   * in GET request.
+   *
    * @var string
    */
   public $displayDesktopAudienceSize;
   /**
+   * Output only. The estimated mobile app audience size in Display network. If
+   * the size is less than 1000, the number will be hidden and 0 will be
+   * returned due to privacy reasons. Otherwise, the number will be rounded off
+   * to two significant digits. Only applicable to first party audiences. Only
+   * returned in GET request.
+   *
    * @var string
    */
   public $displayMobileAppAudienceSize;
   /**
+   * Output only. The estimated mobile web audience size in Display network. If
+   * the size is less than 1000, the number will be hidden and 0 will be
+   * returned due to privacy reasons. Otherwise, the number will be rounded off
+   * to two significant digits. Only applicable to first party audiences. Only
+   * returned in GET request.
+   *
    * @var string
    */
   public $displayMobileWebAudienceSize;
   /**
+   * Output only. The display name of the first party and partner audience.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. The unique ID of the first party and partner audience. Assigned
+   * by the system.
+   *
    * @var string
    */
   public $firstPartyAndPartnerAudienceId;
   /**
+   * Output only. Whether the audience is a first party and partner audience.
+   *
    * @var string
    */
   public $firstPartyAndPartnerAudienceType;
   /**
+   * Output only. The estimated audience size for Gmail network. If the size is
+   * less than 1000, the number will be hidden and 0 will be returned due to
+   * privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only applicable to first party audiences. Only returned
+   * in GET request.
+   *
    * @var string
    */
   public $gmailAudienceSize;
   /**
+   * Output only. The duration in days that an entry remains in the audience
+   * after the qualifying event. The set value must be greater than 0 and less
+   * than or equal to 540. Only applicable to first party audiences. This field
+   * is required if one of the following audience_type is used: *
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+   *
    * @var string
    */
   public $membershipDurationDays;
   protected $mobileDeviceIdListType = MobileDeviceIdList::class;
   protected $mobileDeviceIdListDataType = '';
   /**
+   * Output only. The resource name of the first party and partner audience.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The estimated audience size for YouTube network. If the size
+   * is less than 1000, the number will be hidden and 0 will be returned due to
+   * privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only applicable to first party audiences. Only returned
+   * in GET request.
+   *
    * @var string
    */
   public $youtubeAudienceSize;
 
   /**
-   * @param string
+   * Output only. The estimated audience size for the Display network in the
+   * past month. If the size is less than 1000, the number will be hidden and 0
+   * will be returned due to privacy reasons. Otherwise, the number will be
+   * rounded off to two significant digits. Only returned in GET request.
+   *
+   * @param string $activeDisplayAudienceSize
    */
   public function setActiveDisplayAudienceSize($activeDisplayAudienceSize)
   {
@@ -103,7 +269,10 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->activeDisplayAudienceSize;
   }
   /**
-   * @param string
+   * Optional. The app_id matches with the type of the mobile_device_ids being
+   * uploaded. Only applicable to audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   *
+   * @param string $appId
    */
   public function setAppId($appId)
   {
@@ -117,35 +286,50 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->appId;
   }
   /**
-   * @param string
+   * Output only. The source of the audience.
+   *
+   * Accepted values: AUDIENCE_SOURCE_UNSPECIFIED, DISPLAY_VIDEO_360,
+   * CAMPAIGN_MANAGER, AD_MANAGER, SEARCH_ADS_360, YOUTUBE, ADS_DATA_HUB
+   *
+   * @param self::AUDIENCE_SOURCE_* $audienceSource
    */
   public function setAudienceSource($audienceSource)
   {
     $this->audienceSource = $audienceSource;
   }
   /**
-   * @return string
+   * @return self::AUDIENCE_SOURCE_*
    */
   public function getAudienceSource()
   {
     return $this->audienceSource;
   }
   /**
-   * @param string
+   * Output only. The type of the audience.
+   *
+   * Accepted values: AUDIENCE_TYPE_UNSPECIFIED, CUSTOMER_MATCH_CONTACT_INFO,
+   * CUSTOMER_MATCH_DEVICE_ID, CUSTOMER_MATCH_USER_ID, ACTIVITY_BASED,
+   * FREQUENCY_CAP, TAG_BASED, YOUTUBE_USERS, THIRD_PARTY, COMMERCE, LINEAR,
+   * AGENCY
+   *
+   * @param self::AUDIENCE_TYPE_* $audienceType
    */
   public function setAudienceType($audienceType)
   {
     $this->audienceType = $audienceType;
   }
   /**
-   * @return string
+   * @return self::AUDIENCE_TYPE_*
    */
   public function getAudienceType()
   {
     return $this->audienceType;
   }
   /**
-   * @param ContactInfoList
+   * Input only. A list of contact information to define the initial audience
+   * members. Only applicable to audience_type `CUSTOMER_MATCH_CONTACT_INFO`
+   *
+   * @param ContactInfoList $contactInfoList
    */
   public function setContactInfoList(ContactInfoList $contactInfoList)
   {
@@ -159,7 +343,10 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->contactInfoList;
   }
   /**
-   * @param string
+   * Output only. The user-provided description of the audience. Only applicable
+   * to first party audiences.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -173,7 +360,12 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The estimated audience size for the Display network. If the
+   * size is less than 1000, the number will be hidden and 0 will be returned
+   * due to privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only returned in GET request.
+   *
+   * @param string $displayAudienceSize
    */
   public function setDisplayAudienceSize($displayAudienceSize)
   {
@@ -187,7 +379,13 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->displayAudienceSize;
   }
   /**
-   * @param string
+   * Output only. The estimated desktop audience size in Display network. If the
+   * size is less than 1000, the number will be hidden and 0 will be returned
+   * due to privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only applicable to first party audiences. Only returned
+   * in GET request.
+   *
+   * @param string $displayDesktopAudienceSize
    */
   public function setDisplayDesktopAudienceSize($displayDesktopAudienceSize)
   {
@@ -201,7 +399,13 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->displayDesktopAudienceSize;
   }
   /**
-   * @param string
+   * Output only. The estimated mobile app audience size in Display network. If
+   * the size is less than 1000, the number will be hidden and 0 will be
+   * returned due to privacy reasons. Otherwise, the number will be rounded off
+   * to two significant digits. Only applicable to first party audiences. Only
+   * returned in GET request.
+   *
+   * @param string $displayMobileAppAudienceSize
    */
   public function setDisplayMobileAppAudienceSize($displayMobileAppAudienceSize)
   {
@@ -215,7 +419,13 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->displayMobileAppAudienceSize;
   }
   /**
-   * @param string
+   * Output only. The estimated mobile web audience size in Display network. If
+   * the size is less than 1000, the number will be hidden and 0 will be
+   * returned due to privacy reasons. Otherwise, the number will be rounded off
+   * to two significant digits. Only applicable to first party audiences. Only
+   * returned in GET request.
+   *
+   * @param string $displayMobileWebAudienceSize
    */
   public function setDisplayMobileWebAudienceSize($displayMobileWebAudienceSize)
   {
@@ -229,7 +439,9 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->displayMobileWebAudienceSize;
   }
   /**
-   * @param string
+   * Output only. The display name of the first party and partner audience.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -243,7 +455,10 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. The unique ID of the first party and partner audience. Assigned
+   * by the system.
+   *
+   * @param string $firstPartyAndPartnerAudienceId
    */
   public function setFirstPartyAndPartnerAudienceId($firstPartyAndPartnerAudienceId)
   {
@@ -257,21 +472,32 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->firstPartyAndPartnerAudienceId;
   }
   /**
-   * @param string
+   * Output only. Whether the audience is a first party and partner audience.
+   *
+   * Accepted values: FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_UNSPECIFIED,
+   * TYPE_FIRST_PARTY, TYPE_PARTNER
+   *
+   * @param self::FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_* $firstPartyAndPartnerAudienceType
    */
   public function setFirstPartyAndPartnerAudienceType($firstPartyAndPartnerAudienceType)
   {
     $this->firstPartyAndPartnerAudienceType = $firstPartyAndPartnerAudienceType;
   }
   /**
-   * @return string
+   * @return self::FIRST_PARTY_AND_PARTNER_AUDIENCE_TYPE_*
    */
   public function getFirstPartyAndPartnerAudienceType()
   {
     return $this->firstPartyAndPartnerAudienceType;
   }
   /**
-   * @param string
+   * Output only. The estimated audience size for Gmail network. If the size is
+   * less than 1000, the number will be hidden and 0 will be returned due to
+   * privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only applicable to first party audiences. Only returned
+   * in GET request.
+   *
+   * @param string $gmailAudienceSize
    */
   public function setGmailAudienceSize($gmailAudienceSize)
   {
@@ -285,7 +511,13 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->gmailAudienceSize;
   }
   /**
-   * @param string
+   * Output only. The duration in days that an entry remains in the audience
+   * after the qualifying event. The set value must be greater than 0 and less
+   * than or equal to 540. Only applicable to first party audiences. This field
+   * is required if one of the following audience_type is used: *
+   * `CUSTOMER_MATCH_CONTACT_INFO` * `CUSTOMER_MATCH_DEVICE_ID`
+   *
+   * @param string $membershipDurationDays
    */
   public function setMembershipDurationDays($membershipDurationDays)
   {
@@ -299,7 +531,10 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->membershipDurationDays;
   }
   /**
-   * @param MobileDeviceIdList
+   * Input only. A list of mobile device IDs to define the initial audience
+   * members. Only applicable to audience_type `CUSTOMER_MATCH_DEVICE_ID`
+   *
+   * @param MobileDeviceIdList $mobileDeviceIdList
    */
   public function setMobileDeviceIdList(MobileDeviceIdList $mobileDeviceIdList)
   {
@@ -313,7 +548,9 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->mobileDeviceIdList;
   }
   /**
-   * @param string
+   * Output only. The resource name of the first party and partner audience.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -327,7 +564,13 @@ class FirstPartyAndPartnerAudience extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The estimated audience size for YouTube network. If the size
+   * is less than 1000, the number will be hidden and 0 will be returned due to
+   * privacy reasons. Otherwise, the number will be rounded off to two
+   * significant digits. Only applicable to first party audiences. Only returned
+   * in GET request.
+   *
+   * @param string $youtubeAudienceSize
    */
   public function setYoutubeAudienceSize($youtubeAudienceSize)
   {
