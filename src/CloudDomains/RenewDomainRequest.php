@@ -20,6 +20,10 @@ namespace Google\Service\CloudDomains;
 class RenewDomainRequest extends \Google\Model
 {
   /**
+   * Optional. When true, only validation is performed, without actually
+   * renewing the domain. For more information, see [Request validation](https:/
+   * /cloud.google.com/apis/design/design_patterns#request_validation)
+   *
    * @var bool
    */
   public $validateOnly;
@@ -27,7 +31,11 @@ class RenewDomainRequest extends \Google\Model
   protected $yearlyPriceDataType = '';
 
   /**
-   * @param bool
+   * Optional. When true, only validation is performed, without actually
+   * renewing the domain. For more information, see [Request validation](https:/
+   * /cloud.google.com/apis/design/design_patterns#request_validation)
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {
@@ -41,7 +49,12 @@ class RenewDomainRequest extends \Google\Model
     return $this->validateOnly;
   }
   /**
-   * @param Money
+   * Required. Acknowledgement of the price to renew the domain for one year. To
+   * get the price, see [Cloud Domains
+   * pricing](https://cloud.google.com/domains/pricing). If not provided, the
+   * expected price is returned in the error message.
+   *
+   * @param Money $yearlyPrice
    */
   public function setYearlyPrice(Money $yearlyPrice)
   {
