@@ -20,24 +20,80 @@ namespace Google\Service\DisplayVideo;
 class MaximizeSpendBidStrategy extends \Google\Model
 {
   /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_UNSPECIFIED = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_UNSPECIFIED';
+  /**
+   * Cost per action.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA';
+  /**
+   * Cost per click.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC';
+  /**
+   * Viewable CPM.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM';
+  /**
+   * Custom bidding algorithm.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO';
+  /**
+   * Completed inview and audible views.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA';
+  /**
+   * Inview time over 10 secs views.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN';
+  /**
+   * Viewable impressions.
+   */
+  public const PERFORMANCE_GOAL_TYPE_BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED = 'BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED';
+  /**
+   * The ID of the Custom Bidding Algorithm used by this strategy. Only
+   * applicable when performance_goal_type is set to
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`. Assigning a custom
+   * bidding algorithm that uses floodlight activities not identified in
+   * floodlightActivityConfigs will return an error.
+   *
    * @var string
    */
   public $customBiddingAlgorithmId;
   /**
+   * The maximum average CPM that may be bid, in micros of the advertiser's
+   * currency. Must be greater than or equal to a billable unit of the given
+   * currency. For example, 1500000 represents 1.5 standard units of the
+   * currency.
+   *
    * @var string
    */
   public $maxAverageCpmBidAmountMicros;
   /**
+   * Required. The type of the performance goal that the bidding strategy tries
+   * to minimize while spending the full budget.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` is not supported for
+   * this strategy.
+   *
    * @var string
    */
   public $performanceGoalType;
   /**
+   * Whether the strategy takes deal floor prices into account.
+   *
    * @var bool
    */
   public $raiseBidForDeals;
 
   /**
-   * @param string
+   * The ID of the Custom Bidding Algorithm used by this strategy. Only
+   * applicable when performance_goal_type is set to
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO`. Assigning a custom
+   * bidding algorithm that uses floodlight activities not identified in
+   * floodlightActivityConfigs will return an error.
+   *
+   * @param string $customBiddingAlgorithmId
    */
   public function setCustomBiddingAlgorithmId($customBiddingAlgorithmId)
   {
@@ -51,7 +107,12 @@ class MaximizeSpendBidStrategy extends \Google\Model
     return $this->customBiddingAlgorithmId;
   }
   /**
-   * @param string
+   * The maximum average CPM that may be bid, in micros of the advertiser's
+   * currency. Must be greater than or equal to a billable unit of the given
+   * currency. For example, 1500000 represents 1.5 standard units of the
+   * currency.
+   *
+   * @param string $maxAverageCpmBidAmountMicros
    */
   public function setMaxAverageCpmBidAmountMicros($maxAverageCpmBidAmountMicros)
   {
@@ -65,21 +126,37 @@ class MaximizeSpendBidStrategy extends \Google\Model
     return $this->maxAverageCpmBidAmountMicros;
   }
   /**
-   * @param string
+   * Required. The type of the performance goal that the bidding strategy tries
+   * to minimize while spending the full budget.
+   * `BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM` is not supported for
+   * this strategy.
+   *
+   * Accepted values: BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_UNSPECIFIED,
+   * BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPA,
+   * BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CPC,
+   * BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_VIEWABLE_CPM,
+   * BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CUSTOM_ALGO,
+   * BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_CIVA,
+   * BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_IVO_TEN,
+   * BIDDING_STRATEGY_PERFORMANCE_GOAL_TYPE_AV_VIEWED
+   *
+   * @param self::PERFORMANCE_GOAL_TYPE_* $performanceGoalType
    */
   public function setPerformanceGoalType($performanceGoalType)
   {
     $this->performanceGoalType = $performanceGoalType;
   }
   /**
-   * @return string
+   * @return self::PERFORMANCE_GOAL_TYPE_*
    */
   public function getPerformanceGoalType()
   {
     return $this->performanceGoalType;
   }
   /**
-   * @param bool
+   * Whether the strategy takes deal floor prices into account.
+   *
+   * @param bool $raiseBidForDeals
    */
   public function setRaiseBidForDeals($raiseBidForDeals)
   {

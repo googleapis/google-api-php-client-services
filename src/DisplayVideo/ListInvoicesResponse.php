@@ -23,12 +23,19 @@ class ListInvoicesResponse extends \Google\Collection
   protected $invoicesType = Invoice::class;
   protected $invoicesDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListInvoices` method to
+   * retrieve the next page of results. This token will be absent if there are
+   * no more invoices to return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Invoice[]
+   * The list of invoices. This list will be absent if empty.
+   *
+   * @param Invoice[] $invoices
    */
   public function setInvoices($invoices)
   {
@@ -42,7 +49,12 @@ class ListInvoicesResponse extends \Google\Collection
     return $this->invoices;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListInvoices` method to
+   * retrieve the next page of results. This token will be absent if there are
+   * no more invoices to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
