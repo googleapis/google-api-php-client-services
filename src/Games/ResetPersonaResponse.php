@@ -20,12 +20,16 @@ namespace Google\Service\Games;
 class ResetPersonaResponse extends \Google\Model
 {
   /**
+   * Required. Whether any tokens were unlinked as a result of this request.
+   *
    * @var bool
    */
   public $unlinked;
 
   /**
-   * @param bool
+   * Required. Whether any tokens were unlinked as a result of this request.
+   *
+   * @param bool $unlinked
    */
   public function setUnlinked($unlinked)
   {

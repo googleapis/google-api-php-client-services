@@ -20,20 +20,30 @@ namespace Google\Service\Games;
 class ApplicationCategory extends \Google\Model
 {
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#applicationCategory`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The primary category.
+   *
    * @var string
    */
   public $primary;
   /**
+   * The secondary category.
+   *
    * @var string
    */
   public $secondary;
 
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#applicationCategory`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -47,7 +57,9 @@ class ApplicationCategory extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The primary category.
+   *
+   * @param string $primary
    */
   public function setPrimary($primary)
   {
@@ -61,7 +73,9 @@ class ApplicationCategory extends \Google\Model
     return $this->primary;
   }
   /**
-   * @param string
+   * The secondary category.
+   *
+   * @param string $secondary
    */
   public function setSecondary($secondary)
   {

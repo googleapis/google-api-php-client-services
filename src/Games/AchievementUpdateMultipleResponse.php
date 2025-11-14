@@ -21,6 +21,9 @@ class AchievementUpdateMultipleResponse extends \Google\Collection
 {
   protected $collection_key = 'updatedAchievements';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#achievementUpdateMultipleResponse`.
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class AchievementUpdateMultipleResponse extends \Google\Collection
   protected $updatedAchievementsDataType = 'array';
 
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#achievementUpdateMultipleResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class AchievementUpdateMultipleResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param AchievementUpdateResponse[]
+   * The updated state of the achievements.
+   *
+   * @param AchievementUpdateResponse[] $updatedAchievements
    */
   public function setUpdatedAchievements($updatedAchievements)
   {

@@ -20,19 +20,35 @@ namespace Google\Service\Games;
 class LinkPersonaResponse extends \Google\Model
 {
   /**
+   * The link specified in the request was created.
+   */
+  public const STATE_LINK_CREATED = 'LINK_CREATED';
+  /**
+   * The link specified in the request was not created because already existing
+   * links would result in the new link violating the specified
+   * `RecallTokensCardinalityConstraint` if created.
+   */
+  public const STATE_PERSONA_OR_PLAYER_ALREADY_LINKED = 'PERSONA_OR_PLAYER_ALREADY_LINKED';
+  /**
+   * Output only. State of a persona linking attempt.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. State of a persona linking attempt.
+   *
+   * Accepted values: LINK_CREATED, PERSONA_OR_PLAYER_ALREADY_LINKED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

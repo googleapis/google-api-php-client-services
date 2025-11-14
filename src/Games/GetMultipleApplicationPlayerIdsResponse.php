@@ -24,7 +24,11 @@ class GetMultipleApplicationPlayerIdsResponse extends \Google\Collection
   protected $playerIdsDataType = 'array';
 
   /**
-   * @param ApplicationPlayerId[]
+   * Output only. The requested applications along with the scoped ids for tha
+   * player, if that player has an id for the application. If not, the
+   * application is not included in the response.
+   *
+   * @param ApplicationPlayerId[] $playerIds
    */
   public function setPlayerIds($playerIds)
   {

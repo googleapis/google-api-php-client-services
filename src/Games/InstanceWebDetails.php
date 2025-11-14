@@ -20,20 +20,30 @@ namespace Google\Service\Games;
 class InstanceWebDetails extends \Google\Model
 {
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#instanceWebDetails`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Launch URL for the game.
+   *
    * @var string
    */
   public $launchUrl;
   /**
+   * Indicates that this instance is the default for new installations.
+   *
    * @var bool
    */
   public $preferred;
 
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#instanceWebDetails`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -47,7 +57,9 @@ class InstanceWebDetails extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Launch URL for the game.
+   *
+   * @param string $launchUrl
    */
   public function setLaunchUrl($launchUrl)
   {
@@ -61,7 +73,9 @@ class InstanceWebDetails extends \Google\Model
     return $this->launchUrl;
   }
   /**
-   * @param bool
+   * Indicates that this instance is the default for new installations.
+   *
+   * @param bool $preferred
    */
   public function setPreferred($preferred)
   {
