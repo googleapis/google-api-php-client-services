@@ -20,62 +20,102 @@ namespace Google\Service\Drive;
 class Revision extends \Google\Model
 {
   /**
+   * Output only. Links for exporting Docs Editors files to specific formats.
+   *
    * @var string[]
    */
   public $exportLinks;
   /**
+   * Output only. The ID of the revision.
+   *
    * @var string
    */
   public $id;
   /**
+   * Whether to keep this revision forever, even if it is no longer the head
+   * revision. If not set, the revision will be automatically purged 30 days
+   * after newer content is uploaded. This can be set on a maximum of 200
+   * revisions for a file. This field is only applicable to files with binary
+   * content in Drive.
+   *
    * @var bool
    */
   public $keepForever;
   /**
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string `"drive#revision"`.
+   *
    * @var string
    */
   public $kind;
   protected $lastModifyingUserType = User::class;
   protected $lastModifyingUserDataType = '';
   /**
+   * Output only. The MD5 checksum of the revision's content. This is only
+   * applicable to files with binary content in Drive.
+   *
    * @var string
    */
   public $md5Checksum;
   /**
+   * Output only. The MIME type of the revision.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * The last time the revision was modified (RFC 3339 date-time).
+   *
    * @var string
    */
   public $modifiedTime;
   /**
+   * Output only. The original filename used to create this revision. This is
+   * only applicable to files with binary content in Drive.
+   *
    * @var string
    */
   public $originalFilename;
   /**
+   * Whether subsequent revisions will be automatically republished. This is
+   * only applicable to Docs Editors files.
+   *
    * @var bool
    */
   public $publishAuto;
   /**
+   * Whether this revision is published. This is only applicable to Docs Editors
+   * files.
+   *
    * @var bool
    */
   public $published;
   /**
+   * Output only. A link to the published revision. This is only populated for
+   * Docs Editors files.
+   *
    * @var string
    */
   public $publishedLink;
   /**
+   * Whether this revision is published outside the domain. This is only
+   * applicable to Docs Editors files.
+   *
    * @var bool
    */
   public $publishedOutsideDomain;
   /**
+   * Output only. The size of the revision's content in bytes. This is only
+   * applicable to files with binary content in Drive.
+   *
    * @var string
    */
   public $size;
 
   /**
-   * @param string[]
+   * Output only. Links for exporting Docs Editors files to specific formats.
+   *
+   * @param string[] $exportLinks
    */
   public function setExportLinks($exportLinks)
   {
@@ -89,7 +129,9 @@ class Revision extends \Google\Model
     return $this->exportLinks;
   }
   /**
-   * @param string
+   * Output only. The ID of the revision.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -103,7 +145,13 @@ class Revision extends \Google\Model
     return $this->id;
   }
   /**
-   * @param bool
+   * Whether to keep this revision forever, even if it is no longer the head
+   * revision. If not set, the revision will be automatically purged 30 days
+   * after newer content is uploaded. This can be set on a maximum of 200
+   * revisions for a file. This field is only applicable to files with binary
+   * content in Drive.
+   *
+   * @param bool $keepForever
    */
   public function setKeepForever($keepForever)
   {
@@ -117,7 +165,10 @@ class Revision extends \Google\Model
     return $this->keepForever;
   }
   /**
-   * @param string
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string `"drive#revision"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -131,7 +182,10 @@ class Revision extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param User
+   * Output only. The last user to modify this revision. This field is only
+   * populated when the last modification was performed by a signed-in user.
+   *
+   * @param User $lastModifyingUser
    */
   public function setLastModifyingUser(User $lastModifyingUser)
   {
@@ -145,7 +199,10 @@ class Revision extends \Google\Model
     return $this->lastModifyingUser;
   }
   /**
-   * @param string
+   * Output only. The MD5 checksum of the revision's content. This is only
+   * applicable to files with binary content in Drive.
+   *
+   * @param string $md5Checksum
    */
   public function setMd5Checksum($md5Checksum)
   {
@@ -159,7 +216,9 @@ class Revision extends \Google\Model
     return $this->md5Checksum;
   }
   /**
-   * @param string
+   * Output only. The MIME type of the revision.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -173,7 +232,9 @@ class Revision extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * The last time the revision was modified (RFC 3339 date-time).
+   *
+   * @param string $modifiedTime
    */
   public function setModifiedTime($modifiedTime)
   {
@@ -187,7 +248,10 @@ class Revision extends \Google\Model
     return $this->modifiedTime;
   }
   /**
-   * @param string
+   * Output only. The original filename used to create this revision. This is
+   * only applicable to files with binary content in Drive.
+   *
+   * @param string $originalFilename
    */
   public function setOriginalFilename($originalFilename)
   {
@@ -201,7 +265,10 @@ class Revision extends \Google\Model
     return $this->originalFilename;
   }
   /**
-   * @param bool
+   * Whether subsequent revisions will be automatically republished. This is
+   * only applicable to Docs Editors files.
+   *
+   * @param bool $publishAuto
    */
   public function setPublishAuto($publishAuto)
   {
@@ -215,7 +282,10 @@ class Revision extends \Google\Model
     return $this->publishAuto;
   }
   /**
-   * @param bool
+   * Whether this revision is published. This is only applicable to Docs Editors
+   * files.
+   *
+   * @param bool $published
    */
   public function setPublished($published)
   {
@@ -229,7 +299,10 @@ class Revision extends \Google\Model
     return $this->published;
   }
   /**
-   * @param string
+   * Output only. A link to the published revision. This is only populated for
+   * Docs Editors files.
+   *
+   * @param string $publishedLink
    */
   public function setPublishedLink($publishedLink)
   {
@@ -243,7 +316,10 @@ class Revision extends \Google\Model
     return $this->publishedLink;
   }
   /**
-   * @param bool
+   * Whether this revision is published outside the domain. This is only
+   * applicable to Docs Editors files.
+   *
+   * @param bool $publishedOutsideDomain
    */
   public function setPublishedOutsideDomain($publishedOutsideDomain)
   {
@@ -257,7 +333,10 @@ class Revision extends \Google\Model
     return $this->publishedOutsideDomain;
   }
   /**
-   * @param string
+   * Output only. The size of the revision's content in bytes. This is only
+   * applicable to files with binary content in Drive.
+   *
+   * @param string $size
    */
   public function setSize($size)
   {
