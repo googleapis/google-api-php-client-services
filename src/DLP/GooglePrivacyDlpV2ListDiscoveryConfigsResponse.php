@@ -23,12 +23,17 @@ class GooglePrivacyDlpV2ListDiscoveryConfigsResponse extends \Google\Collection
   protected $discoveryConfigsType = GooglePrivacyDlpV2DiscoveryConfig::class;
   protected $discoveryConfigsDataType = 'array';
   /**
+   * If the next page is available then this value is the next page token to be
+   * used in the following ListDiscoveryConfigs request.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GooglePrivacyDlpV2DiscoveryConfig[]
+   * List of configs, up to page_size in ListDiscoveryConfigsRequest.
+   *
+   * @param GooglePrivacyDlpV2DiscoveryConfig[] $discoveryConfigs
    */
   public function setDiscoveryConfigs($discoveryConfigs)
   {
@@ -42,7 +47,10 @@ class GooglePrivacyDlpV2ListDiscoveryConfigsResponse extends \Google\Collection
     return $this->discoveryConfigs;
   }
   /**
-   * @param string
+   * If the next page is available then this value is the next page token to be
+   * used in the following ListDiscoveryConfigs request.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
