@@ -98,6 +98,8 @@ class ProjectsLocationsBackups extends \Google\Service\Resource
    *
    * @param string $name Required. Name of the resource
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. The view of the backup to return.
    * @return Backup
    * @throws \Google\Service\Exception
    */
@@ -120,6 +122,7 @@ class ProjectsLocationsBackups extends \Google\Service\Resource
    * than requested. If unspecified, server will pick an appropriate default.
    * @opt_param string pageToken A token identifying a page of results the server
    * should return.
+   * @opt_param string view Optional. The view of the backup to return.
    * @return ListBackupsResponse
    * @throws \Google\Service\Exception
    */
