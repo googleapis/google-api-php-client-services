@@ -19,16 +19,32 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2PubSubExpressions extends \Google\Collection
 {
+  /**
+   * Unused.
+   */
+  public const LOGICAL_OPERATOR_LOGICAL_OPERATOR_UNSPECIFIED = 'LOGICAL_OPERATOR_UNSPECIFIED';
+  /**
+   * Conditional OR.
+   */
+  public const LOGICAL_OPERATOR_OR = 'OR';
+  /**
+   * Conditional AND.
+   */
+  public const LOGICAL_OPERATOR_AND = 'AND';
   protected $collection_key = 'conditions';
   protected $conditionsType = GooglePrivacyDlpV2PubSubCondition::class;
   protected $conditionsDataType = 'array';
   /**
+   * The operator to apply to the collection of conditions.
+   *
    * @var string
    */
   public $logicalOperator;
 
   /**
-   * @param GooglePrivacyDlpV2PubSubCondition[]
+   * Conditions to apply to the expression.
+   *
+   * @param GooglePrivacyDlpV2PubSubCondition[] $conditions
    */
   public function setConditions($conditions)
   {
@@ -42,14 +58,18 @@ class GooglePrivacyDlpV2PubSubExpressions extends \Google\Collection
     return $this->conditions;
   }
   /**
-   * @param string
+   * The operator to apply to the collection of conditions.
+   *
+   * Accepted values: LOGICAL_OPERATOR_UNSPECIFIED, OR, AND
+   *
+   * @param self::LOGICAL_OPERATOR_* $logicalOperator
    */
   public function setLogicalOperator($logicalOperator)
   {
     $this->logicalOperator = $logicalOperator;
   }
   /**
-   * @return string
+   * @return self::LOGICAL_OPERATOR_*
    */
   public function getLogicalOperator()
   {

@@ -25,20 +25,29 @@ class GooglePrivacyDlpV2Result extends \Google\Collection
   protected $infoTypeStatsType = GooglePrivacyDlpV2InfoTypeStats::class;
   protected $infoTypeStatsDataType = 'array';
   /**
+   * Number of rows scanned after sampling and time filtering (applicable for
+   * row based stores such as BigQuery).
+   *
    * @var string
    */
   public $numRowsProcessed;
   /**
+   * Total size in bytes that were processed.
+   *
    * @var string
    */
   public $processedBytes;
   /**
+   * Estimate of the number of bytes to process.
+   *
    * @var string
    */
   public $totalEstimatedBytes;
 
   /**
-   * @param GooglePrivacyDlpV2HybridInspectStatistics
+   * Statistics related to the processing of hybrid inspect.
+   *
+   * @param GooglePrivacyDlpV2HybridInspectStatistics $hybridStats
    */
   public function setHybridStats(GooglePrivacyDlpV2HybridInspectStatistics $hybridStats)
   {
@@ -52,7 +61,10 @@ class GooglePrivacyDlpV2Result extends \Google\Collection
     return $this->hybridStats;
   }
   /**
-   * @param GooglePrivacyDlpV2InfoTypeStats[]
+   * Statistics of how many instances of each info type were found during
+   * inspect job.
+   *
+   * @param GooglePrivacyDlpV2InfoTypeStats[] $infoTypeStats
    */
   public function setInfoTypeStats($infoTypeStats)
   {
@@ -66,7 +78,10 @@ class GooglePrivacyDlpV2Result extends \Google\Collection
     return $this->infoTypeStats;
   }
   /**
-   * @param string
+   * Number of rows scanned after sampling and time filtering (applicable for
+   * row based stores such as BigQuery).
+   *
+   * @param string $numRowsProcessed
    */
   public function setNumRowsProcessed($numRowsProcessed)
   {
@@ -80,7 +95,9 @@ class GooglePrivacyDlpV2Result extends \Google\Collection
     return $this->numRowsProcessed;
   }
   /**
-   * @param string
+   * Total size in bytes that were processed.
+   *
+   * @param string $processedBytes
    */
   public function setProcessedBytes($processedBytes)
   {
@@ -94,7 +111,9 @@ class GooglePrivacyDlpV2Result extends \Google\Collection
     return $this->processedBytes;
   }
   /**
-   * @param string
+   * Estimate of the number of bytes to process.
+   *
+   * @param string $totalEstimatedBytes
    */
   public function setTotalEstimatedBytes($totalEstimatedBytes)
   {

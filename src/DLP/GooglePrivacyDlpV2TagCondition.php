@@ -25,7 +25,10 @@ class GooglePrivacyDlpV2TagCondition extends \Google\Model
   protected $tagDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2SensitivityScore
+   * Conditions attaching the tag to a resource on its profile having this
+   * sensitivity score.
+   *
+   * @param GooglePrivacyDlpV2SensitivityScore $sensitivityScore
    */
   public function setSensitivityScore(GooglePrivacyDlpV2SensitivityScore $sensitivityScore)
   {
@@ -39,7 +42,9 @@ class GooglePrivacyDlpV2TagCondition extends \Google\Model
     return $this->sensitivityScore;
   }
   /**
-   * @param GooglePrivacyDlpV2TagValue
+   * The tag value to attach to resources.
+   *
+   * @param GooglePrivacyDlpV2TagValue $tag
    */
   public function setTag(GooglePrivacyDlpV2TagValue $tag)
   {

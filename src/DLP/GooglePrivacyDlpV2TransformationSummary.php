@@ -33,12 +33,16 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
   protected $transformationType = GooglePrivacyDlpV2PrimitiveTransformation::class;
   protected $transformationDataType = '';
   /**
+   * Total size in bytes that were transformed in some way.
+   *
    * @var string
    */
   public $transformedBytes;
 
   /**
-   * @param GooglePrivacyDlpV2FieldId
+   * Set if the transformation was limited to a specific FieldId.
+   *
+   * @param GooglePrivacyDlpV2FieldId $field
    */
   public function setField(GooglePrivacyDlpV2FieldId $field)
   {
@@ -52,7 +56,11 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
     return $this->field;
   }
   /**
-   * @param GooglePrivacyDlpV2FieldTransformation[]
+   * The field transformation that was applied. If multiple field
+   * transformations are requested for a single field, this list will contain
+   * all of them; otherwise, only one is supplied.
+   *
+   * @param GooglePrivacyDlpV2FieldTransformation[] $fieldTransformations
    */
   public function setFieldTransformations($fieldTransformations)
   {
@@ -66,7 +74,9 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
     return $this->fieldTransformations;
   }
   /**
-   * @param GooglePrivacyDlpV2InfoType
+   * Set if the transformation was limited to a specific InfoType.
+   *
+   * @param GooglePrivacyDlpV2InfoType $infoType
    */
   public function setInfoType(GooglePrivacyDlpV2InfoType $infoType)
   {
@@ -80,7 +90,9 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
     return $this->infoType;
   }
   /**
-   * @param GooglePrivacyDlpV2RecordSuppression
+   * The specific suppression option these stats apply to.
+   *
+   * @param GooglePrivacyDlpV2RecordSuppression $recordSuppress
    */
   public function setRecordSuppress(GooglePrivacyDlpV2RecordSuppression $recordSuppress)
   {
@@ -94,7 +106,9 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
     return $this->recordSuppress;
   }
   /**
-   * @param GooglePrivacyDlpV2SummaryResult[]
+   * Collection of all transformations that took place or had an error.
+   *
+   * @param GooglePrivacyDlpV2SummaryResult[] $results
    */
   public function setResults($results)
   {
@@ -108,7 +122,9 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
     return $this->results;
   }
   /**
-   * @param GooglePrivacyDlpV2PrimitiveTransformation
+   * The specific transformation these stats apply to.
+   *
+   * @param GooglePrivacyDlpV2PrimitiveTransformation $transformation
    */
   public function setTransformation(GooglePrivacyDlpV2PrimitiveTransformation $transformation)
   {
@@ -122,7 +138,9 @@ class GooglePrivacyDlpV2TransformationSummary extends \Google\Collection
     return $this->transformation;
   }
   /**
-   * @param string
+   * Total size in bytes that were transformed in some way.
+   *
+   * @param string $transformedBytes
    */
   public function setTransformedBytes($transformedBytes)
   {

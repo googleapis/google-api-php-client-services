@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2QuasiIdentifierField extends \Google\Model
 {
   /**
+   * A column can be tagged with a custom tag. In this case, the user must
+   * indicate an auxiliary table that contains statistical information on the
+   * possible values of this column.
+   *
    * @var string
    */
   public $customTag;
@@ -27,7 +31,11 @@ class GooglePrivacyDlpV2QuasiIdentifierField extends \Google\Model
   protected $fieldDataType = '';
 
   /**
-   * @param string
+   * A column can be tagged with a custom tag. In this case, the user must
+   * indicate an auxiliary table that contains statistical information on the
+   * possible values of this column.
+   *
+   * @param string $customTag
    */
   public function setCustomTag($customTag)
   {
@@ -41,7 +49,9 @@ class GooglePrivacyDlpV2QuasiIdentifierField extends \Google\Model
     return $this->customTag;
   }
   /**
-   * @param GooglePrivacyDlpV2FieldId
+   * Identifies the column.
+   *
+   * @param GooglePrivacyDlpV2FieldId $field
    */
   public function setField(GooglePrivacyDlpV2FieldId $field)
   {

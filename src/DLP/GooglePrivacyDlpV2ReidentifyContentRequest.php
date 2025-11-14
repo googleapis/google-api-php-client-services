@@ -22,24 +22,42 @@ class GooglePrivacyDlpV2ReidentifyContentRequest extends \Google\Model
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   /**
+   * Template to use. Any configuration directly specified in `inspect_config`
+   * will override those set in the template. Singular fields that are set in
+   * this request will replace their corresponding fields in the template.
+   * Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
+   *
    * @var string
    */
   public $inspectTemplateName;
   protected $itemType = GooglePrivacyDlpV2ContentItem::class;
   protected $itemDataType = '';
   /**
+   * Deprecated. This field has no effect.
+   *
    * @var string
    */
   public $locationId;
   protected $reidentifyConfigType = GooglePrivacyDlpV2DeidentifyConfig::class;
   protected $reidentifyConfigDataType = '';
   /**
+   * Template to use. References an instance of `DeidentifyTemplate`. Any
+   * configuration directly specified in `reidentify_config` or `inspect_config`
+   * will override those set in the template. The `DeidentifyTemplate` used must
+   * include only reversible transformations. Singular fields that are set in
+   * this request will replace their corresponding fields in the template.
+   * Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
+   *
    * @var string
    */
   public $reidentifyTemplateName;
 
   /**
-   * @param GooglePrivacyDlpV2InspectConfig
+   * Configuration for the inspector.
+   *
+   * @param GooglePrivacyDlpV2InspectConfig $inspectConfig
    */
   public function setInspectConfig(GooglePrivacyDlpV2InspectConfig $inspectConfig)
   {
@@ -53,7 +71,13 @@ class GooglePrivacyDlpV2ReidentifyContentRequest extends \Google\Model
     return $this->inspectConfig;
   }
   /**
-   * @param string
+   * Template to use. Any configuration directly specified in `inspect_config`
+   * will override those set in the template. Singular fields that are set in
+   * this request will replace their corresponding fields in the template.
+   * Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
+   *
+   * @param string $inspectTemplateName
    */
   public function setInspectTemplateName($inspectTemplateName)
   {
@@ -67,7 +91,9 @@ class GooglePrivacyDlpV2ReidentifyContentRequest extends \Google\Model
     return $this->inspectTemplateName;
   }
   /**
-   * @param GooglePrivacyDlpV2ContentItem
+   * The item to re-identify. Will be treated as text.
+   *
+   * @param GooglePrivacyDlpV2ContentItem $item
    */
   public function setItem(GooglePrivacyDlpV2ContentItem $item)
   {
@@ -81,7 +107,9 @@ class GooglePrivacyDlpV2ReidentifyContentRequest extends \Google\Model
     return $this->item;
   }
   /**
-   * @param string
+   * Deprecated. This field has no effect.
+   *
+   * @param string $locationId
    */
   public function setLocationId($locationId)
   {
@@ -95,7 +123,16 @@ class GooglePrivacyDlpV2ReidentifyContentRequest extends \Google\Model
     return $this->locationId;
   }
   /**
-   * @param GooglePrivacyDlpV2DeidentifyConfig
+   * Configuration for the re-identification of the content item. This field
+   * shares the same proto message type that is used for de-identification,
+   * however its usage here is for the reversal of the previous de-
+   * identification. Re-identification is performed by examining the
+   * transformations used to de-identify the items and executing the reverse.
+   * This requires that only reversible transformations be provided here. The
+   * reversible transformations are: - `CryptoDeterministicConfig` -
+   * `CryptoReplaceFfxFpeConfig`
+   *
+   * @param GooglePrivacyDlpV2DeidentifyConfig $reidentifyConfig
    */
   public function setReidentifyConfig(GooglePrivacyDlpV2DeidentifyConfig $reidentifyConfig)
   {
@@ -109,7 +146,15 @@ class GooglePrivacyDlpV2ReidentifyContentRequest extends \Google\Model
     return $this->reidentifyConfig;
   }
   /**
-   * @param string
+   * Template to use. References an instance of `DeidentifyTemplate`. Any
+   * configuration directly specified in `reidentify_config` or `inspect_config`
+   * will override those set in the template. The `DeidentifyTemplate` used must
+   * include only reversible transformations. Singular fields that are set in
+   * this request will replace their corresponding fields in the template.
+   * Repeated fields are appended. Singular sub-messages and groups are
+   * recursively merged.
+   *
+   * @param string $reidentifyTemplateName
    */
   public function setReidentifyTemplateName($reidentifyTemplateName)
   {
