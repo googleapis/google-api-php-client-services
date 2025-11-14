@@ -25,7 +25,9 @@ class GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsMetadataIndividualBatchDel
   protected $statusDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1beta3DocumentId
+   * The document id of the document.
+   *
+   * @param GoogleCloudDocumentaiV1beta3DocumentId $documentId
    */
   public function setDocumentId(GoogleCloudDocumentaiV1beta3DocumentId $documentId)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsMetadataIndividualBatchDel
     return $this->documentId;
   }
   /**
-   * @param GoogleRpcStatus
+   * The status of deleting the document in storage.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {
