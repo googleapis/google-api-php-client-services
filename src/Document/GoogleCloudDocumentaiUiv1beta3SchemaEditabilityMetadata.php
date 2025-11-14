@@ -21,16 +21,24 @@ class GoogleCloudDocumentaiUiv1beta3SchemaEditabilityMetadata extends \Google\Co
 {
   protected $collection_key = 'processorVersions';
   /**
+   * Explicit flag that controls whether the label is editable.
+   *
    * @var bool
    */
   public $editable;
   /**
+   * Full resource name of processor versions that contain this label. e.g. `pro
+   * jects/{project}/locations/{location}/processors/{processor}/processorVersio
+   * ns/{processorVersion}`
+   *
    * @var string[]
    */
   public $processorVersions;
 
   /**
-   * @param bool
+   * Explicit flag that controls whether the label is editable.
+   *
+   * @param bool $editable
    */
   public function setEditable($editable)
   {
@@ -44,7 +52,11 @@ class GoogleCloudDocumentaiUiv1beta3SchemaEditabilityMetadata extends \Google\Co
     return $this->editable;
   }
   /**
-   * @param string[]
+   * Full resource name of processor versions that contain this label. e.g. `pro
+   * jects/{project}/locations/{location}/processors/{processor}/processorVersio
+   * ns/{processorVersion}`
+   *
+   * @param string[] $processorVersions
    */
   public function setProcessorVersions($processorVersions)
   {
