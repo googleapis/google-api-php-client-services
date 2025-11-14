@@ -17,45 +17,45 @@
 
 namespace Google\Service\SQLAdmin;
 
-class SqlInstancesGetLatestRecoveryTimeResponse extends \Google\Model
+class SqlServerEntraIdConfig extends \Google\Model
 {
   /**
-   * Timestamp, identifies the earliest recovery time of the source instance.
+   * Optional. The application ID for the Entra ID configuration.
    *
    * @var string
    */
-  public $earliestRecoveryTime;
+  public $applicationId;
   /**
-   * This is always `sql#getLatestRecoveryTime`.
+   * Output only. This is always sql#sqlServerEntraIdConfig
    *
    * @var string
    */
   public $kind;
   /**
-   * Timestamp, identifies the latest recovery time of the source instance.
+   * Optional. The tenant ID for the Entra ID configuration.
    *
    * @var string
    */
-  public $latestRecoveryTime;
+  public $tenantId;
 
   /**
-   * Timestamp, identifies the earliest recovery time of the source instance.
+   * Optional. The application ID for the Entra ID configuration.
    *
-   * @param string $earliestRecoveryTime
+   * @param string $applicationId
    */
-  public function setEarliestRecoveryTime($earliestRecoveryTime)
+  public function setApplicationId($applicationId)
   {
-    $this->earliestRecoveryTime = $earliestRecoveryTime;
+    $this->applicationId = $applicationId;
   }
   /**
    * @return string
    */
-  public function getEarliestRecoveryTime()
+  public function getApplicationId()
   {
-    return $this->earliestRecoveryTime;
+    return $this->applicationId;
   }
   /**
-   * This is always `sql#getLatestRecoveryTime`.
+   * Output only. This is always sql#sqlServerEntraIdConfig
    *
    * @param string $kind
    */
@@ -71,22 +71,22 @@ class SqlInstancesGetLatestRecoveryTimeResponse extends \Google\Model
     return $this->kind;
   }
   /**
-   * Timestamp, identifies the latest recovery time of the source instance.
+   * Optional. The tenant ID for the Entra ID configuration.
    *
-   * @param string $latestRecoveryTime
+   * @param string $tenantId
    */
-  public function setLatestRecoveryTime($latestRecoveryTime)
+  public function setTenantId($tenantId)
   {
-    $this->latestRecoveryTime = $latestRecoveryTime;
+    $this->tenantId = $tenantId;
   }
   /**
    * @return string
    */
-  public function getLatestRecoveryTime()
+  public function getTenantId()
   {
-    return $this->latestRecoveryTime;
+    return $this->tenantId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SqlInstancesGetLatestRecoveryTimeResponse::class, 'Google_Service_SQLAdmin_SqlInstancesGetLatestRecoveryTimeResponse');
+class_alias(SqlServerEntraIdConfig::class, 'Google_Service_SQLAdmin_SqlServerEntraIdConfig');

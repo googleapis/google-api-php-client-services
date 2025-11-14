@@ -17,24 +17,25 @@
 
 namespace Google\Service\SQLAdmin;
 
-class RotateServerCaContext extends \Google\Model
+class RotateEntraIdCertificateContext extends \Google\Model
 {
   /**
-   * This is always `sql#rotateServerCaContext`.
+   * Optional. This is always `sql#rotateEntraIdCertificateContext`.
    *
    * @var string
    */
   public $kind;
   /**
-   * The fingerprint of the next version to be rotated to. If left unspecified,
-   * will be rotated to the most recently added server CA version.
+   * Optional. The fingerprint of the next version to be rotated to. If left
+   * unspecified, will be rotated to the most recently added server certificate
+   * version.
    *
    * @var string
    */
   public $nextVersion;
 
   /**
-   * This is always `sql#rotateServerCaContext`.
+   * Optional. This is always `sql#rotateEntraIdCertificateContext`.
    *
    * @param string $kind
    */
@@ -50,8 +51,9 @@ class RotateServerCaContext extends \Google\Model
     return $this->kind;
   }
   /**
-   * The fingerprint of the next version to be rotated to. If left unspecified,
-   * will be rotated to the most recently added server CA version.
+   * Optional. The fingerprint of the next version to be rotated to. If left
+   * unspecified, will be rotated to the most recently added server certificate
+   * version.
    *
    * @param string $nextVersion
    */
@@ -69,4 +71,4 @@ class RotateServerCaContext extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RotateServerCaContext::class, 'Google_Service_SQLAdmin_RotateServerCaContext');
+class_alias(RotateEntraIdCertificateContext::class, 'Google_Service_SQLAdmin_RotateEntraIdCertificateContext');

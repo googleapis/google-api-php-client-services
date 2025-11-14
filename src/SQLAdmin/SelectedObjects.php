@@ -20,12 +20,16 @@ namespace Google\Service\SQLAdmin;
 class SelectedObjects extends \Google\Model
 {
   /**
+   * Required. The name of the database to migrate.
+   *
    * @var string
    */
   public $database;
 
   /**
-   * @param string
+   * Required. The name of the database to migrate.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\SQLAdmin;
 class SqlInstancesReleaseSsrsLeaseResponse extends \Google\Model
 {
   /**
+   * The unique identifier for this operation.
+   *
    * @var string
    */
   public $operationId;
 
   /**
-   * @param string
+   * The unique identifier for this operation.
+   *
+   * @param string $operationId
    */
   public function setOperationId($operationId)
   {
