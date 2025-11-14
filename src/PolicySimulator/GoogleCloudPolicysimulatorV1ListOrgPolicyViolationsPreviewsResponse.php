@@ -21,6 +21,9 @@ class GoogleCloudPolicysimulatorV1ListOrgPolicyViolationsPreviewsResponse extend
 {
   protected $collection_key = 'orgPolicyViolationsPreviews';
   /**
+   * A token that you can use to retrieve the next page of results. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudPolicysimulatorV1ListOrgPolicyViolationsPreviewsResponse extend
   protected $orgPolicyViolationsPreviewsDataType = 'array';
 
   /**
-   * @param string
+   * A token that you can use to retrieve the next page of results. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudPolicysimulatorV1ListOrgPolicyViolationsPreviewsResponse extend
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudPolicysimulatorV1OrgPolicyViolationsPreview[]
+   * The list of OrgPolicyViolationsPreview
+   *
+   * @param GoogleCloudPolicysimulatorV1OrgPolicyViolationsPreview[] $orgPolicyViolationsPreviews
    */
   public function setOrgPolicyViolationsPreviews($orgPolicyViolationsPreviews)
   {

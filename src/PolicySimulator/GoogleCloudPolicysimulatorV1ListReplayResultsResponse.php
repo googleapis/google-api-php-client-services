@@ -21,6 +21,9 @@ class GoogleCloudPolicysimulatorV1ListReplayResultsResponse extends \Google\Coll
 {
   protected $collection_key = 'replayResults';
   /**
+   * A token that you can use to retrieve the next page of ReplayResult objects.
+   * If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudPolicysimulatorV1ListReplayResultsResponse extends \Google\Coll
   protected $replayResultsDataType = 'array';
 
   /**
-   * @param string
+   * A token that you can use to retrieve the next page of ReplayResult objects.
+   * If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudPolicysimulatorV1ListReplayResultsResponse extends \Google\Coll
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudPolicysimulatorV1ReplayResult[]
+   * The results of running a Replay.
+   *
+   * @param GoogleCloudPolicysimulatorV1ReplayResult[] $replayResults
    */
   public function setReplayResults($replayResults)
   {
