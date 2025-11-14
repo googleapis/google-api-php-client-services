@@ -19,11 +19,24 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata extends \Google\Model
 {
+  public const STATUS_FEEDBACK_THREAD_STATUS_UNSPECIFIED = 'FEEDBACK_THREAD_STATUS_UNSPECIFIED';
   /**
+   * Feedback thread is created with no reply;
+   */
+  public const STATUS_NEW = 'NEW';
+  /**
+   * Feedback thread is replied at least once;
+   */
+  public const STATUS_REPLIED = 'REPLIED';
+  /**
+   * When the thread is created
+   *
    * @var string
    */
   public $createTime;
   /**
+   * When the thread is last updated.
+   *
    * @var string
    */
   public $lastUpdateTime;
@@ -32,12 +45,16 @@ class GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata extends \Google\Model
    */
   public $status;
   /**
+   * An image thumbnail of this thread.
+   *
    * @var string
    */
   public $thumbnail;
 
   /**
-   * @param string
+   * When the thread is created
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -51,7 +68,9 @@ class GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * When the thread is last updated.
+   *
+   * @param string $lastUpdateTime
    */
   public function setLastUpdateTime($lastUpdateTime)
   {
@@ -65,21 +84,23 @@ class GoogleCloudDatalabelingV1beta1FeedbackThreadMetadata extends \Google\Model
     return $this->lastUpdateTime;
   }
   /**
-   * @param string
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * An image thumbnail of this thread.
+   *
+   * @param string $thumbnail
    */
   public function setThumbnail($thumbnail)
   {
