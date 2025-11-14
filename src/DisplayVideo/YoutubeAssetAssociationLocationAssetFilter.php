@@ -20,18 +20,47 @@ namespace Google\Service\DisplayVideo;
 class YoutubeAssetAssociationLocationAssetFilter extends \Google\Model
 {
   /**
+   * Location matching type is not specified or is unknown in this version.
+   */
+  public const LOCATION_MATCHING_TYPE_LOCATION_MATCHING_TYPE_UNSPECIFIED = 'LOCATION_MATCHING_TYPE_UNSPECIFIED';
+  /**
+   * All available location assets are eligible for serving.
+   */
+  public const LOCATION_MATCHING_TYPE_SELECT_ALL = 'SELECT_ALL';
+  /**
+   * The location assets that match a provided business name and/or label
+   * filters can serve.
+   */
+  public const LOCATION_MATCHING_TYPE_FILTER = 'FILTER';
+  /**
+   * Only the selected location assets can serve.
+   */
+  public const LOCATION_MATCHING_TYPE_SELECTED_ASSETS = 'SELECTED_ASSETS';
+  /**
+   * No location assets can serve.
+   */
+  public const LOCATION_MATCHING_TYPE_DISABLED = 'DISABLED';
+  /**
+   * Output only. The ID of the asset set that matches the location assets
+   * eligible for serving.
+   *
    * @var string
    */
   public $assetSetId;
   protected $locationMatchingFunctionType = YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction::class;
   protected $locationMatchingFunctionDataType = '';
   /**
+   * Required. The matching type of this location asset filter.
+   *
    * @var string
    */
   public $locationMatchingType;
 
   /**
-   * @param string
+   * Output only. The ID of the asset set that matches the location assets
+   * eligible for serving.
+   *
+   * @param string $assetSetId
    */
   public function setAssetSetId($assetSetId)
   {
@@ -45,7 +74,11 @@ class YoutubeAssetAssociationLocationAssetFilter extends \Google\Model
     return $this->assetSetId;
   }
   /**
-   * @param YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction
+   * Optional. The matching function that determines how the location asset
+   * filter matches location assets. This field is required and can only be set
+   * for if location_matching_type is `FILTER` or `SELECTED_ASSETS`.
+   *
+   * @param YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction $locationMatchingFunction
    */
   public function setLocationMatchingFunction(YoutubeAssetAssociationLocationAssetFilterLocationMatchingFunction $locationMatchingFunction)
   {
@@ -59,14 +92,19 @@ class YoutubeAssetAssociationLocationAssetFilter extends \Google\Model
     return $this->locationMatchingFunction;
   }
   /**
-   * @param string
+   * Required. The matching type of this location asset filter.
+   *
+   * Accepted values: LOCATION_MATCHING_TYPE_UNSPECIFIED, SELECT_ALL, FILTER,
+   * SELECTED_ASSETS, DISABLED
+   *
+   * @param self::LOCATION_MATCHING_TYPE_* $locationMatchingType
    */
   public function setLocationMatchingType($locationMatchingType)
   {
     $this->locationMatchingType = $locationMatchingType;
   }
   /**
-   * @return string
+   * @return self::LOCATION_MATCHING_TYPE_*
    */
   public function getLocationMatchingType()
   {

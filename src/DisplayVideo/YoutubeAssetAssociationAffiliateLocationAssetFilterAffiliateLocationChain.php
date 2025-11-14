@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class YoutubeAssetAssociationAffiliateLocationAssetFilterAffiliateLocationChain extends \Google\Model
 {
   /**
+   * Required. ID of the affiliate location chain.
+   *
    * @var string
    */
   public $chainId;
 
   /**
-   * @param string
+   * Required. ID of the affiliate location chain.
+   *
+   * @param string $chainId
    */
   public function setChainId($chainId)
   {

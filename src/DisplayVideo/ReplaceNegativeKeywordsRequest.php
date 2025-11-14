@@ -24,7 +24,10 @@ class ReplaceNegativeKeywordsRequest extends \Google\Collection
   protected $newNegativeKeywordsDataType = 'array';
 
   /**
-   * @param NegativeKeyword[]
+   * The negative keywords that will replace the existing keywords in the
+   * negative keyword list, specified as a list of NegativeKeywords.
+   *
+   * @param NegativeKeyword[] $newNegativeKeywords
    */
   public function setNewNegativeKeywords($newNegativeKeywords)
   {
