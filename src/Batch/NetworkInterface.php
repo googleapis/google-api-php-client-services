@@ -20,20 +20,46 @@ namespace Google\Service\Batch;
 class NetworkInterface extends \Google\Model
 {
   /**
+   * The URL of an existing network resource. You can specify the network as a
+   * full or partial URL. For example, the following are all valid URLs: * https
+   * ://www.googleapis.com/compute/v1/projects/{project}/global/networks/{networ
+   * k} * projects/{project}/global/networks/{network} *
+   * global/networks/{network}
+   *
    * @var string
    */
   public $network;
   /**
+   * Default is false (with an external IP address). Required if no external
+   * public IP address is attached to the VM. If no external public IP address,
+   * additional configuration is required to allow the VM to access Google
+   * Services. See https://cloud.google.com/vpc/docs/configure-private-google-
+   * access and https://cloud.google.com/nat/docs/gce-example#create-nat for
+   * more information.
+   *
    * @var bool
    */
   public $noExternalIpAddress;
   /**
+   * The URL of an existing subnetwork resource in the network. You can specify
+   * the subnetwork as a full or partial URL. For example, the following are all
+   * valid URLs: * https://www.googleapis.com/compute/v1/projects/{project}/regi
+   * ons/{region}/subnetworks/{subnetwork} *
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} *
+   * regions/{region}/subnetworks/{subnetwork}
+   *
    * @var string
    */
   public $subnetwork;
 
   /**
-   * @param string
+   * The URL of an existing network resource. You can specify the network as a
+   * full or partial URL. For example, the following are all valid URLs: * https
+   * ://www.googleapis.com/compute/v1/projects/{project}/global/networks/{networ
+   * k} * projects/{project}/global/networks/{network} *
+   * global/networks/{network}
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -47,7 +73,14 @@ class NetworkInterface extends \Google\Model
     return $this->network;
   }
   /**
-   * @param bool
+   * Default is false (with an external IP address). Required if no external
+   * public IP address is attached to the VM. If no external public IP address,
+   * additional configuration is required to allow the VM to access Google
+   * Services. See https://cloud.google.com/vpc/docs/configure-private-google-
+   * access and https://cloud.google.com/nat/docs/gce-example#create-nat for
+   * more information.
+   *
+   * @param bool $noExternalIpAddress
    */
   public function setNoExternalIpAddress($noExternalIpAddress)
   {
@@ -61,7 +94,14 @@ class NetworkInterface extends \Google\Model
     return $this->noExternalIpAddress;
   }
   /**
-   * @param string
+   * The URL of an existing subnetwork resource in the network. You can specify
+   * the subnetwork as a full or partial URL. For example, the following are all
+   * valid URLs: * https://www.googleapis.com/compute/v1/projects/{project}/regi
+   * ons/{region}/subnetworks/{subnetwork} *
+   * projects/{project}/regions/{region}/subnetworks/{subnetwork} *
+   * regions/{region}/subnetworks/{subnetwork}
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {

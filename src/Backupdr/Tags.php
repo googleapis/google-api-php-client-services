@@ -21,12 +21,18 @@ class Tags extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * Optional. An array of tags. Each tag must be 1-63 characters long, and
+   * comply with RFC1035.
+   *
    * @var string[]
    */
   public $items;
 
   /**
-   * @param string[]
+   * Optional. An array of tags. Each tag must be 1-63 characters long, and
+   * comply with RFC1035.
+   *
+   * @param string[] $items
    */
   public function setItems($items)
   {

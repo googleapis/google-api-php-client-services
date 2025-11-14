@@ -23,6 +23,10 @@ class CssProduct extends \Google\Collection
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
   /**
+   * Output only. The two-letter [ISO
+   * 639-1](http://en.wikipedia.org/wiki/ISO_639-1) language code for the
+   * product.
+   *
    * @var string
    */
   public $contentLanguage;
@@ -31,20 +35,29 @@ class CssProduct extends \Google\Collection
   protected $customAttributesType = CustomAttribute::class;
   protected $customAttributesDataType = 'array';
   /**
+   * Output only. The feed label for the product.
+   *
    * @var string
    */
   public $feedLabel;
   /**
+   * The name of the CSS Product. Format:
+   * `"accounts/{account}/cssProducts/{css_product}"`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Your unique raw identifier for the product.
+   *
    * @var string
    */
   public $rawProvidedId;
 
   /**
-   * @param Attributes
+   * Output only. A list of product attributes.
+   *
+   * @param Attributes $attributes
    */
   public function setAttributes(Attributes $attributes)
   {
@@ -58,7 +71,11 @@ class CssProduct extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Output only. The two-letter [ISO
+   * 639-1](http://en.wikipedia.org/wiki/ISO_639-1) language code for the
+   * product.
+   *
+   * @param string $contentLanguage
    */
   public function setContentLanguage($contentLanguage)
   {
@@ -72,7 +89,10 @@ class CssProduct extends \Google\Collection
     return $this->contentLanguage;
   }
   /**
-   * @param CssProductStatus
+   * Output only. The status of a product, data validation issues, that is,
+   * information about a product computed asynchronously.
+   *
+   * @param CssProductStatus $cssProductStatus
    */
   public function setCssProductStatus(CssProductStatus $cssProductStatus)
   {
@@ -86,7 +106,13 @@ class CssProduct extends \Google\Collection
     return $this->cssProductStatus;
   }
   /**
-   * @param CustomAttribute[]
+   * Output only. A list of custom (CSS-provided) attributes. It can also be
+   * used to submit any attribute of the feed specification in its generic form
+   * (for example, `{ "name": "size type", "value": "regular" }`). This is
+   * useful for submitting attributes not explicitly exposed by the API, such as
+   * additional attributes used for Buy on Google.
+   *
+   * @param CustomAttribute[] $customAttributes
    */
   public function setCustomAttributes($customAttributes)
   {
@@ -100,7 +126,9 @@ class CssProduct extends \Google\Collection
     return $this->customAttributes;
   }
   /**
-   * @param string
+   * Output only. The feed label for the product.
+   *
+   * @param string $feedLabel
    */
   public function setFeedLabel($feedLabel)
   {
@@ -114,7 +142,10 @@ class CssProduct extends \Google\Collection
     return $this->feedLabel;
   }
   /**
-   * @param string
+   * The name of the CSS Product. Format:
+   * `"accounts/{account}/cssProducts/{css_product}"`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -128,7 +159,9 @@ class CssProduct extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Your unique raw identifier for the product.
+   *
+   * @param string $rawProvidedId
    */
   public function setRawProvidedId($rawProvidedId)
   {

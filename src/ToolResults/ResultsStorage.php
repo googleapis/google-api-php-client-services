@@ -25,7 +25,9 @@ class ResultsStorage extends \Google\Model
   protected $xunitXmlFileDataType = '';
 
   /**
-   * @param FileReference
+   * The root directory for test results.
+   *
+   * @param FileReference $resultsStoragePath
    */
   public function setResultsStoragePath(FileReference $resultsStoragePath)
   {
@@ -39,7 +41,9 @@ class ResultsStorage extends \Google\Model
     return $this->resultsStoragePath;
   }
   /**
-   * @param FileReference
+   * The path to the Xunit XML file.
+   *
+   * @param FileReference $xunitXmlFile
    */
   public function setXunitXmlFile(FileReference $xunitXmlFile)
   {

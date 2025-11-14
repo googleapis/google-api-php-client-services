@@ -20,12 +20,18 @@ namespace Google\Service\ShoppingContent;
 class LiasettingsSetPosDataProviderResponse extends \Google\Model
 {
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsSetPosDataProviderResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsSetPosDataProviderResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

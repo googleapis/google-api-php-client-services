@@ -20,16 +20,34 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoCustomGenAiModelInfo extends \Google\Model
 {
   /**
+   * The model type is unspecified.
+   */
+  public const CUSTOM_MODEL_TYPE_CUSTOM_MODEL_TYPE_UNSPECIFIED = 'CUSTOM_MODEL_TYPE_UNSPECIFIED';
+  /**
+   * The model is a versioned foundation model.
+   */
+  public const CUSTOM_MODEL_TYPE_VERSIONED_FOUNDATION = 'VERSIONED_FOUNDATION';
+  /**
+   * The model is a finetuned foundation model.
+   */
+  public const CUSTOM_MODEL_TYPE_FINE_TUNED = 'FINE_TUNED';
+  /**
+   * The base processor version ID for the custom model.
+   *
    * @var string
    */
   public $baseProcessorVersionId;
   /**
+   * The type of custom model created by the user.
+   *
    * @var string
    */
   public $customModelType;
 
   /**
-   * @param string
+   * The base processor version ID for the custom model.
+   *
+   * @param string $baseProcessorVersionId
    */
   public function setBaseProcessorVersionId($baseProcessorVersionId)
   {
@@ -43,14 +61,19 @@ class GoogleCloudDocumentaiV1ProcessorVersionGenAiModelInfoCustomGenAiModelInfo 
     return $this->baseProcessorVersionId;
   }
   /**
-   * @param string
+   * The type of custom model created by the user.
+   *
+   * Accepted values: CUSTOM_MODEL_TYPE_UNSPECIFIED, VERSIONED_FOUNDATION,
+   * FINE_TUNED
+   *
+   * @param self::CUSTOM_MODEL_TYPE_* $customModelType
    */
   public function setCustomModelType($customModelType)
   {
     $this->customModelType = $customModelType;
   }
   /**
-   * @return string
+   * @return self::CUSTOM_MODEL_TYPE_*
    */
   public function getCustomModelType()
   {

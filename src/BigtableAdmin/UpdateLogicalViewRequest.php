@@ -22,12 +22,18 @@ class UpdateLogicalViewRequest extends \Google\Model
   protected $logicalViewType = LogicalView::class;
   protected $logicalViewDataType = '';
   /**
+   * Optional. The list of fields to update.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param LogicalView
+   * Required. The logical view to update. The logical view's `name` field is
+   * used to identify the view to update. Format:
+   * `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+   *
+   * @param LogicalView $logicalView
    */
   public function setLogicalView(LogicalView $logicalView)
   {
@@ -41,7 +47,9 @@ class UpdateLogicalViewRequest extends \Google\Model
     return $this->logicalView;
   }
   /**
-   * @param string
+   * Optional. The list of fields to update.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

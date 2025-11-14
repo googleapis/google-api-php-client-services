@@ -20,24 +20,34 @@ namespace Google\Service\CloudAsset;
 class ZypperPatch extends \Google\Model
 {
   /**
+   * The category of the patch.
+   *
    * @var string
    */
   public $category;
   /**
+   * The name of the patch.
+   *
    * @var string
    */
   public $patchName;
   /**
+   * The severity specified for this patch
+   *
    * @var string
    */
   public $severity;
   /**
+   * Any summary information provided about this patch.
+   *
    * @var string
    */
   public $summary;
 
   /**
-   * @param string
+   * The category of the patch.
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -51,7 +61,9 @@ class ZypperPatch extends \Google\Model
     return $this->category;
   }
   /**
-   * @param string
+   * The name of the patch.
+   *
+   * @param string $patchName
    */
   public function setPatchName($patchName)
   {
@@ -65,7 +77,9 @@ class ZypperPatch extends \Google\Model
     return $this->patchName;
   }
   /**
-   * @param string
+   * The severity specified for this patch
+   *
+   * @param string $severity
    */
   public function setSeverity($severity)
   {
@@ -79,7 +93,9 @@ class ZypperPatch extends \Google\Model
     return $this->severity;
   }
   /**
-   * @param string
+   * Any summary information provided about this patch.
+   *
+   * @param string $summary
    */
   public function setSummary($summary)
   {

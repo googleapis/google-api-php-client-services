@@ -23,7 +23,9 @@ class GoogleCloudDialogflowCxV3AgentGitIntegrationSettings extends \Google\Model
   protected $githubSettingsDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings
+   * GitHub settings.
+   *
+   * @param GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings $githubSettings
    */
   public function setGithubSettings(GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings $githubSettings)
   {

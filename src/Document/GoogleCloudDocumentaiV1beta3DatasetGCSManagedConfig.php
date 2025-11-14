@@ -23,7 +23,10 @@ class GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig extends \Google\Model
   protected $gcsPrefixDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1beta3GcsPrefix
+   * Required. The Cloud Storage URI (a directory) where the documents belonging
+   * to the dataset must be stored.
+   *
+   * @param GoogleCloudDocumentaiV1beta3GcsPrefix $gcsPrefix
    */
   public function setGcsPrefix(GoogleCloudDocumentaiV1beta3GcsPrefix $gcsPrefix)
   {

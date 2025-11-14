@@ -20,16 +20,28 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpAppconnectorsV1ImageConfig extends \Google\Model
 {
   /**
+   * The stable image that the remote agent will fallback to if the target image
+   * fails. Format would be a gcr image path, e.g.: gcr.io/PROJECT-ID/my-
+   * image:tag1
+   *
    * @var string
    */
   public $stableImage;
   /**
+   * The initial image the remote agent will attempt to run for the control
+   * plane. Format would be a gcr image path, e.g.: gcr.io/PROJECT-ID/my-
+   * image:tag1
+   *
    * @var string
    */
   public $targetImage;
 
   /**
-   * @param string
+   * The stable image that the remote agent will fallback to if the target image
+   * fails. Format would be a gcr image path, e.g.: gcr.io/PROJECT-ID/my-
+   * image:tag1
+   *
+   * @param string $stableImage
    */
   public function setStableImage($stableImage)
   {
@@ -43,7 +55,11 @@ class GoogleCloudBeyondcorpAppconnectorsV1ImageConfig extends \Google\Model
     return $this->stableImage;
   }
   /**
-   * @param string
+   * The initial image the remote agent will attempt to run for the control
+   * plane. Format would be a gcr image path, e.g.: gcr.io/PROJECT-ID/my-
+   * image:tag1
+   *
+   * @param string $targetImage
    */
   public function setTargetImage($targetImage)
   {

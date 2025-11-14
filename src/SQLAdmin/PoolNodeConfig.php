@@ -19,30 +19,81 @@ namespace Google\Service\SQLAdmin;
 
 class PoolNodeConfig extends \Google\Collection
 {
+  /**
+   * The state of the instance is unknown.
+   */
+  public const STATE_SQL_INSTANCE_STATE_UNSPECIFIED = 'SQL_INSTANCE_STATE_UNSPECIFIED';
+  /**
+   * The instance is running, or has been stopped by owner.
+   */
+  public const STATE_RUNNABLE = 'RUNNABLE';
+  /**
+   * The instance is not available, for example due to problems with billing.
+   */
+  public const STATE_SUSPENDED = 'SUSPENDED';
+  /**
+   * The instance is being deleted.
+   */
+  public const STATE_PENDING_DELETE = 'PENDING_DELETE';
+  /**
+   * The instance is being created.
+   */
+  public const STATE_PENDING_CREATE = 'PENDING_CREATE';
+  /**
+   * The instance is down for maintenance.
+   */
+  public const STATE_MAINTENANCE = 'MAINTENANCE';
+  /**
+   * The creation of the instance failed or a fatal error occurred during
+   * maintenance.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Deprecated
+   *
+   * @deprecated
+   */
+  public const STATE_ONLINE_MAINTENANCE = 'ONLINE_MAINTENANCE';
+  /**
+   * (Applicable to read pool nodes only.) The read pool node needs to be
+   * repaired. The database might be unavailable.
+   */
+  public const STATE_REPAIRING = 'REPAIRING';
   protected $collection_key = 'ipAddresses';
   /**
+   * Output only. The DNS name of the read pool node.
+   *
    * @var string
    */
   public $dnsName;
   protected $dnsNamesType = DnsNameMapping::class;
   protected $dnsNamesDataType = 'array';
   /**
+   * Output only. The zone of the read pool node.
+   *
    * @var string
    */
   public $gceZone;
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   /**
+   * Output only. The name of the read pool node, to be used for retrieving
+   * metrics and logs.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The current state of the read pool node.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The DNS name of the read pool node.
+   *
+   * @param string $dnsName
    */
   public function setDnsName($dnsName)
   {
@@ -56,7 +107,9 @@ class PoolNodeConfig extends \Google\Collection
     return $this->dnsName;
   }
   /**
-   * @param DnsNameMapping[]
+   * Output only. The list of DNS names used by this read pool node.
+   *
+   * @param DnsNameMapping[] $dnsNames
    */
   public function setDnsNames($dnsNames)
   {
@@ -70,7 +123,9 @@ class PoolNodeConfig extends \Google\Collection
     return $this->dnsNames;
   }
   /**
-   * @param string
+   * Output only. The zone of the read pool node.
+   *
+   * @param string $gceZone
    */
   public function setGceZone($gceZone)
   {
@@ -84,7 +139,10 @@ class PoolNodeConfig extends \Google\Collection
     return $this->gceZone;
   }
   /**
-   * @param IpMapping[]
+   * Output only. Mappings containing IP addresses that can be used to connect
+   * to the read pool node.
+   *
+   * @param IpMapping[] $ipAddresses
    */
   public function setIpAddresses($ipAddresses)
   {
@@ -98,7 +156,10 @@ class PoolNodeConfig extends \Google\Collection
     return $this->ipAddresses;
   }
   /**
-   * @param string
+   * Output only. The name of the read pool node, to be used for retrieving
+   * metrics and logs.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -112,14 +173,20 @@ class PoolNodeConfig extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The current state of the read pool node.
+   *
+   * Accepted values: SQL_INSTANCE_STATE_UNSPECIFIED, RUNNABLE, SUSPENDED,
+   * PENDING_DELETE, PENDING_CREATE, MAINTENANCE, FAILED, ONLINE_MAINTENANCE,
+   * REPAIRING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

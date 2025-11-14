@@ -21,12 +21,18 @@ class GoogleFirebaseAppdistroV1BatchRemoveTestersRequest extends \Google\Collect
 {
   protected $collection_key = 'emails';
   /**
+   * Required. The email addresses of the tester resources to removed. A maximum
+   * of 999 and a minimum of 1 testers can be deleted in a batch.
+   *
    * @var string[]
    */
   public $emails;
 
   /**
-   * @param string[]
+   * Required. The email addresses of the tester resources to removed. A maximum
+   * of 999 and a minimum of 1 testers can be deleted in a batch.
+   *
+   * @param string[] $emails
    */
   public function setEmails($emails)
   {

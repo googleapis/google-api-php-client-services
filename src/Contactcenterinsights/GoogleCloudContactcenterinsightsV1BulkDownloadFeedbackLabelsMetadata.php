@@ -21,12 +21,16 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadata exten
 {
   protected $collection_key = 'partialErrors';
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   protected $downloadStatsType = GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownloadStats::class;
   protected $downloadStatsDataType = '';
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
@@ -36,7 +40,9 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadata exten
   protected $requestDataType = '';
 
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -50,7 +56,9 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadata exten
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownloadStats
+   * Output only. Statistics for BulkDownloadFeedbackLabels operation.
+   *
+   * @param GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownloadStats $downloadStats
    */
   public function setDownloadStats(GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadataDownloadStats $downloadStats)
   {
@@ -64,7 +72,9 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadata exten
     return $this->downloadStats;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -78,7 +88,10 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadata exten
     return $this->endTime;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Partial errors during ingest operation that might cause the operation
+   * output to be incomplete.
+   *
+   * @param GoogleRpcStatus[] $partialErrors
    */
   public function setPartialErrors($partialErrors)
   {
@@ -92,7 +105,9 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsMetadata exten
     return $this->partialErrors;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsRequest
+   * Output only. The original request for download.
+   *
+   * @param GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsRequest $request
    */
   public function setRequest(GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsRequest $request)
   {

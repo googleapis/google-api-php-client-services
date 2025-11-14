@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class OffsetPosition extends \Google\Model
 {
   /**
+   * Offset distance from left side of an asset or a window.
+   *
    * @var int
    */
   public $left;
   /**
+   * Offset distance from top side of an asset or a window.
+   *
    * @var int
    */
   public $top;
 
   /**
-   * @param int
+   * Offset distance from left side of an asset or a window.
+   *
+   * @param int $left
    */
   public function setLeft($left)
   {
@@ -43,7 +49,9 @@ class OffsetPosition extends \Google\Model
     return $this->left;
   }
   /**
-   * @param int
+   * Offset distance from top side of an asset or a window.
+   *
+   * @param int $top
    */
   public function setTop($top)
   {

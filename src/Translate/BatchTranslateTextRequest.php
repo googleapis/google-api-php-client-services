@@ -25,26 +25,50 @@ class BatchTranslateTextRequest extends \Google\Collection
   protected $inputConfigsType = InputConfig::class;
   protected $inputConfigsDataType = 'array';
   /**
+   * Optional. The labels with user-defined metadata for the request. Label keys
+   * and values can be no longer than 63 characters (Unicode codepoints), can
+   * only contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. Label values are optional. Label keys
+   * must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more
+   * information.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. The models to use for translation. Map's key is target language
+   * code. Map's value is model name. Value can be a built-in general model, or
+   * an AutoML Translation model. The value format depends on model type: -
+   * AutoML Translation models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/{model-id}` - General (built-in) models:
+   * `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, If the map is empty or a specific model is not
+   * requested for a language pair, then default google model (nmt) is used.
+   *
    * @var string[]
    */
   public $models;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
   /**
+   * Required. Source language code.
+   *
    * @var string
    */
   public $sourceLanguageCode;
   /**
+   * Required. Specify up to 10 language codes here.
+   *
    * @var string[]
    */
   public $targetLanguageCodes;
 
   /**
-   * @param TranslateTextGlossaryConfig[]
+   * Optional. Glossaries to be applied for translation. It's keyed by target
+   * language code.
+   *
+   * @param TranslateTextGlossaryConfig[] $glossaries
    */
   public function setGlossaries($glossaries)
   {
@@ -58,7 +82,11 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->glossaries;
   }
   /**
-   * @param InputConfig[]
+   * Required. Input configurations. The total number of files matched should be
+   * <= 100. The total content size should be <= 100M Unicode codepoints. The
+   * files must use UTF-8 encoding.
+   *
+   * @param InputConfig[] $inputConfigs
    */
   public function setInputConfigs($inputConfigs)
   {
@@ -72,7 +100,15 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->inputConfigs;
   }
   /**
-   * @param string[]
+   * Optional. The labels with user-defined metadata for the request. Label keys
+   * and values can be no longer than 63 characters (Unicode codepoints), can
+   * only contain lowercase letters, numeric characters, underscores and dashes.
+   * International characters are allowed. Label values are optional. Label keys
+   * must start with a letter. See
+   * https://cloud.google.com/translate/docs/advanced/labels for more
+   * information.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -86,7 +122,16 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string[]
+   * Optional. The models to use for translation. Map's key is target language
+   * code. Map's value is model name. Value can be a built-in general model, or
+   * an AutoML Translation model. The value format depends on model type: -
+   * AutoML Translation models: `projects/{project-number-or-
+   * id}/locations/{location-id}/models/{model-id}` - General (built-in) models:
+   * `projects/{project-number-or-id}/locations/{location-
+   * id}/models/general/nmt`, If the map is empty or a specific model is not
+   * requested for a language pair, then default google model (nmt) is used.
+   *
+   * @param string[] $models
    */
   public function setModels($models)
   {
@@ -100,7 +145,10 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->models;
   }
   /**
-   * @param OutputConfig
+   * Required. Output configuration. If 2 input configs match to the same file
+   * (that is, same input path), we don't generate output for duplicate inputs.
+   *
+   * @param OutputConfig $outputConfig
    */
   public function setOutputConfig(OutputConfig $outputConfig)
   {
@@ -114,7 +162,9 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->outputConfig;
   }
   /**
-   * @param string
+   * Required. Source language code.
+   *
+   * @param string $sourceLanguageCode
    */
   public function setSourceLanguageCode($sourceLanguageCode)
   {
@@ -128,7 +178,9 @@ class BatchTranslateTextRequest extends \Google\Collection
     return $this->sourceLanguageCode;
   }
   /**
-   * @param string[]
+   * Required. Specify up to 10 language codes here.
+   *
+   * @param string[] $targetLanguageCodes
    */
   public function setTargetLanguageCodes($targetLanguageCodes)
   {

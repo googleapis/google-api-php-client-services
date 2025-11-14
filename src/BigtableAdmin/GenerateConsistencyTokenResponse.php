@@ -20,12 +20,16 @@ namespace Google\Service\BigtableAdmin;
 class GenerateConsistencyTokenResponse extends \Google\Model
 {
   /**
+   * The generated consistency token.
+   *
    * @var string
    */
   public $consistencyToken;
 
   /**
-   * @param string
+   * The generated consistency token.
+   *
+   * @param string $consistencyToken
    */
   public function setConsistencyToken($consistencyToken)
   {

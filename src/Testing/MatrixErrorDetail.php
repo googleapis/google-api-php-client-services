@@ -20,16 +20,27 @@ namespace Google\Service\Testing;
 class MatrixErrorDetail extends \Google\Model
 {
   /**
+   * Output only. A human-readable message about how the error in the
+   * TestMatrix. Expands on the `reason` field with additional details and
+   * possible options to fix the issue.
+   *
    * @var string
    */
   public $message;
   /**
+   * Output only. The reason for the error. This is a constant value in
+   * UPPER_SNAKE_CASE that identifies the cause of the error.
+   *
    * @var string
    */
   public $reason;
 
   /**
-   * @param string
+   * Output only. A human-readable message about how the error in the
+   * TestMatrix. Expands on the `reason` field with additional details and
+   * possible options to fix the issue.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -43,7 +54,10 @@ class MatrixErrorDetail extends \Google\Model
     return $this->message;
   }
   /**
-   * @param string
+   * Output only. The reason for the error. This is a constant value in
+   * UPPER_SNAKE_CASE that identifies the cause of the error.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {

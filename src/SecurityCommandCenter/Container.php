@@ -21,26 +21,38 @@ class Container extends \Google\Collection
 {
   protected $collection_key = 'labels';
   /**
+   * The time that the container was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional container image ID, if provided by the container runtime. Uniquely
+   * identifies the container image launched using a container image digest.
+   *
    * @var string
    */
   public $imageId;
   protected $labelsType = Label::class;
   protected $labelsDataType = 'array';
   /**
+   * Name of the container.
+   *
    * @var string
    */
   public $name;
   /**
+   * Container image URI provided when configuring a pod or container. This
+   * string can identify a container image version using mutable tags.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The time that the container was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -54,7 +66,10 @@ class Container extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional container image ID, if provided by the container runtime. Uniquely
+   * identifies the container image launched using a container image digest.
+   *
+   * @param string $imageId
    */
   public function setImageId($imageId)
   {
@@ -68,7 +83,9 @@ class Container extends \Google\Collection
     return $this->imageId;
   }
   /**
-   * @param Label[]
+   * Container labels, as provided by the container runtime.
+   *
+   * @param Label[] $labels
    */
   public function setLabels($labels)
   {
@@ -82,7 +99,9 @@ class Container extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Name of the container.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -96,7 +115,10 @@ class Container extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Container image URI provided when configuring a pod or container. This
+   * string can identify a container image version using mutable tags.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

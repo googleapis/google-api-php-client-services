@@ -20,50 +20,104 @@ namespace Google\Service\SecurityCommandCenter;
 class EffectiveEventThreatDetectionCustomModule extends \Google\Model
 {
   /**
+   * Unspecified cloud provider.
+   */
+  public const CLOUD_PROVIDER_CLOUD_PROVIDER_UNSPECIFIED = 'CLOUD_PROVIDER_UNSPECIFIED';
+  /**
+   * Google Cloud.
+   */
+  public const CLOUD_PROVIDER_GOOGLE_CLOUD_PLATFORM = 'GOOGLE_CLOUD_PLATFORM';
+  /**
+   * Amazon Web Services.
+   */
+  public const CLOUD_PROVIDER_AMAZON_WEB_SERVICES = 'AMAZON_WEB_SERVICES';
+  /**
+   * Microsoft Azure.
+   */
+  public const CLOUD_PROVIDER_MICROSOFT_AZURE = 'MICROSOFT_AZURE';
+  /**
+   * Unspecified enablement state.
+   */
+  public const ENABLEMENT_STATE_ENABLEMENT_STATE_UNSPECIFIED = 'ENABLEMENT_STATE_UNSPECIFIED';
+  /**
+   * The module is enabled at the given level.
+   */
+  public const ENABLEMENT_STATE_ENABLED = 'ENABLED';
+  /**
+   * The module is disabled at the given level.
+   */
+  public const ENABLEMENT_STATE_DISABLED = 'DISABLED';
+  /**
+   * The cloud provider of the custom module.
+   *
    * @var string
    */
   public $cloudProvider;
   /**
+   * Output only. Config for the effective module.
+   *
    * @var array[]
    */
   public $config;
   /**
+   * Output only. The description for the module.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The human readable name to be displayed for the module.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The effective state of enablement for the module at the given
+   * level of the hierarchy.
+   *
    * @var string
    */
   public $enablementState;
   /**
+   * Output only. The resource name of the effective ETD custom module. Its
+   * format is: * `organizations/{organization}/eventThreatDetectionSettings/eff
+   * ectiveCustomModules/{module}`. * `folders/{folder}/eventThreatDetectionSett
+   * ings/effectiveCustomModules/{module}`. * `projects/{project}/eventThreatDet
+   * ectionSettings/effectiveCustomModules/{module}`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Type for the module. e.g. CONFIGURABLE_BAD_IP.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The cloud provider of the custom module.
+   *
+   * Accepted values: CLOUD_PROVIDER_UNSPECIFIED, GOOGLE_CLOUD_PLATFORM,
+   * AMAZON_WEB_SERVICES, MICROSOFT_AZURE
+   *
+   * @param self::CLOUD_PROVIDER_* $cloudProvider
    */
   public function setCloudProvider($cloudProvider)
   {
     $this->cloudProvider = $cloudProvider;
   }
   /**
-   * @return string
+   * @return self::CLOUD_PROVIDER_*
    */
   public function getCloudProvider()
   {
     return $this->cloudProvider;
   }
   /**
-   * @param array[]
+   * Output only. Config for the effective module.
+   *
+   * @param array[] $config
    */
   public function setConfig($config)
   {
@@ -77,7 +131,9 @@ class EffectiveEventThreatDetectionCustomModule extends \Google\Model
     return $this->config;
   }
   /**
-   * @param string
+   * Output only. The description for the module.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -91,7 +147,9 @@ class EffectiveEventThreatDetectionCustomModule extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The human readable name to be displayed for the module.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -105,21 +163,32 @@ class EffectiveEventThreatDetectionCustomModule extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The effective state of enablement for the module at the given
+   * level of the hierarchy.
+   *
+   * Accepted values: ENABLEMENT_STATE_UNSPECIFIED, ENABLED, DISABLED
+   *
+   * @param self::ENABLEMENT_STATE_* $enablementState
    */
   public function setEnablementState($enablementState)
   {
     $this->enablementState = $enablementState;
   }
   /**
-   * @return string
+   * @return self::ENABLEMENT_STATE_*
    */
   public function getEnablementState()
   {
     return $this->enablementState;
   }
   /**
-   * @param string
+   * Output only. The resource name of the effective ETD custom module. Its
+   * format is: * `organizations/{organization}/eventThreatDetectionSettings/eff
+   * ectiveCustomModules/{module}`. * `folders/{folder}/eventThreatDetectionSett
+   * ings/effectiveCustomModules/{module}`. * `projects/{project}/eventThreatDet
+   * ectionSettings/effectiveCustomModules/{module}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -133,7 +202,9 @@ class EffectiveEventThreatDetectionCustomModule extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Type for the module. e.g. CONFIGURABLE_BAD_IP.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

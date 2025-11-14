@@ -21,12 +21,16 @@ class SourceInfo extends \Google\Collection
 {
   protected $collection_key = 'sourceFiles';
   /**
+   * All files used during config generation.
+   *
    * @var array[]
    */
   public $sourceFiles;
 
   /**
-   * @param array[]
+   * All files used during config generation.
+   *
+   * @param array[] $sourceFiles
    */
   public function setSourceFiles($sourceFiles)
   {

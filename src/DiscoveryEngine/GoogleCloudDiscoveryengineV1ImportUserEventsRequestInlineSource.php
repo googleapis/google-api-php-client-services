@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1ImportUserEventsRequestInlineSource extends \G
   protected $userEventsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1UserEvent[]
+   * Required. A list of user events to import. Recommended max of 10k items.
+   *
+   * @param GoogleCloudDiscoveryengineV1UserEvent[] $userEvents
    */
   public function setUserEvents($userEvents)
   {

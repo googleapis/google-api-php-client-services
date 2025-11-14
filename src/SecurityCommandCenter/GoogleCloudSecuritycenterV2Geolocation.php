@@ -20,12 +20,16 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Geolocation extends \Google\Model
 {
   /**
+   * A CLDR.
+   *
    * @var string
    */
   public $regionCode;
 
   /**
-   * @param string
+   * A CLDR.
+   *
+   * @param string $regionCode
    */
   public function setRegionCode($regionCode)
   {

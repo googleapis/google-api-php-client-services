@@ -20,12 +20,20 @@ namespace Google\Service\NetworkManagement;
 class AppEngineVersionEndpoint extends \Google\Model
 {
   /**
+   * An [App Engine](https://cloud.google.com/appengine) [service
+   * version](https://cloud.google.com/appengine/docs/admin-
+   * api/reference/rest/v1/apps.services.versions) name.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * An [App Engine](https://cloud.google.com/appengine) [service
+   * version](https://cloud.google.com/appengine/docs/admin-
+   * api/reference/rest/v1/apps.services.versions) name.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

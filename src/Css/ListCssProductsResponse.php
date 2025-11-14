@@ -23,12 +23,18 @@ class ListCssProductsResponse extends \Google\Collection
   protected $cssProductsType = CssProduct::class;
   protected $cssProductsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CssProduct[]
+   * The processed CSS products from the specified account. These are your
+   * processed CSS products after applying rules and supplemental feeds.
+   *
+   * @param CssProduct[] $cssProducts
    */
   public function setCssProducts($cssProducts)
   {
@@ -42,7 +48,10 @@ class ListCssProductsResponse extends \Google\Collection
     return $this->cssProducts;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

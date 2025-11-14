@@ -23,12 +23,18 @@ class ListMirroringEndpointGroupAssociationsResponse extends \Google\Collection
   protected $mirroringEndpointGroupAssociationsType = MirroringEndpointGroupAssociation::class;
   protected $mirroringEndpointGroupAssociationsDataType = 'array';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages. See
+   * https://google.aip.dev/158 for more details.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param MirroringEndpointGroupAssociation[]
+   * The associations from the specified parent.
+   *
+   * @param MirroringEndpointGroupAssociation[] $mirroringEndpointGroupAssociations
    */
   public function setMirroringEndpointGroupAssociations($mirroringEndpointGroupAssociations)
   {
@@ -42,7 +48,11 @@ class ListMirroringEndpointGroupAssociationsResponse extends \Google\Collection
     return $this->mirroringEndpointGroupAssociations;
   }
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages. See
+   * https://google.aip.dev/158 for more details.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

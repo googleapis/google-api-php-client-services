@@ -27,12 +27,19 @@ class ClustersConfigDump extends \Google\Collection
   protected $staticClustersType = StaticCluster::class;
   protected $staticClustersDataType = 'array';
   /**
+   * This is the :ref:`version_info ` in the last processed CDS discovery
+   * response. If there are only static bootstrap clusters, this field will be
+   * "".
+   *
    * @var string
    */
   public $versionInfo;
 
   /**
-   * @param DynamicCluster[]
+   * The dynamically loaded active clusters. These are clusters that are
+   * available to service data plane traffic.
+   *
+   * @param DynamicCluster[] $dynamicActiveClusters
    */
   public function setDynamicActiveClusters($dynamicActiveClusters)
   {
@@ -46,7 +53,12 @@ class ClustersConfigDump extends \Google\Collection
     return $this->dynamicActiveClusters;
   }
   /**
-   * @param DynamicCluster[]
+   * The dynamically loaded warming clusters. These are clusters that are
+   * currently undergoing warming in preparation to service data plane traffic.
+   * Note that if attempting to recreate an Envoy configuration from a
+   * configuration dump, the warming clusters should generally be discarded.
+   *
+   * @param DynamicCluster[] $dynamicWarmingClusters
    */
   public function setDynamicWarmingClusters($dynamicWarmingClusters)
   {
@@ -60,7 +72,9 @@ class ClustersConfigDump extends \Google\Collection
     return $this->dynamicWarmingClusters;
   }
   /**
-   * @param StaticCluster[]
+   * The statically loaded cluster configs.
+   *
+   * @param StaticCluster[] $staticClusters
    */
   public function setStaticClusters($staticClusters)
   {
@@ -74,7 +88,11 @@ class ClustersConfigDump extends \Google\Collection
     return $this->staticClusters;
   }
   /**
-   * @param string
+   * This is the :ref:`version_info ` in the last processed CDS discovery
+   * response. If there are only static bootstrap clusters, this field will be
+   * "".
+   *
+   * @param string $versionInfo
    */
   public function setVersionInfo($versionInfo)
   {

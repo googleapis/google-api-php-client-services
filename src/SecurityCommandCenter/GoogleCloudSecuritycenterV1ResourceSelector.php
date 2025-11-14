@@ -21,12 +21,16 @@ class GoogleCloudSecuritycenterV1ResourceSelector extends \Google\Collection
 {
   protected $collection_key = 'resourceTypes';
   /**
+   * The resource types to run the detector on.
+   *
    * @var string[]
    */
   public $resourceTypes;
 
   /**
-   * @param string[]
+   * The resource types to run the detector on.
+   *
+   * @param string[] $resourceTypes
    */
   public function setResourceTypes($resourceTypes)
   {

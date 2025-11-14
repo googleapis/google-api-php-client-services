@@ -21,6 +21,10 @@ class ListSkusResponse extends \Google\Collection
 {
   protected $collection_key = 'skus';
   /**
+   * A token to retrieve the next page of results. To retrieve the next page,
+   * call `ListSkus` again with the `page_token` field set to this value. This
+   * field is empty if there are no more results to retrieve.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListSkusResponse extends \Google\Collection
   protected $skusDataType = 'array';
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. To retrieve the next page,
+   * call `ListSkus` again with the `page_token` field set to this value. This
+   * field is empty if there are no more results to retrieve.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListSkusResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Sku[]
+   * The list of public SKUs of the given service.
+   *
+   * @param Sku[] $skus
    */
   public function setSkus($skus)
   {

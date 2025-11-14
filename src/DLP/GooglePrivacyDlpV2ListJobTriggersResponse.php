@@ -23,12 +23,17 @@ class GooglePrivacyDlpV2ListJobTriggersResponse extends \Google\Collection
   protected $jobTriggersType = GooglePrivacyDlpV2JobTrigger::class;
   protected $jobTriggersDataType = 'array';
   /**
+   * If the next page is available then this value is the next page token to be
+   * used in the following ListJobTriggers request.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GooglePrivacyDlpV2JobTrigger[]
+   * List of triggeredJobs, up to page_size in ListJobTriggersRequest.
+   *
+   * @param GooglePrivacyDlpV2JobTrigger[] $jobTriggers
    */
   public function setJobTriggers($jobTriggers)
   {
@@ -42,7 +47,10 @@ class GooglePrivacyDlpV2ListJobTriggersResponse extends \Google\Collection
     return $this->jobTriggers;
   }
   /**
-   * @param string
+   * If the next page is available then this value is the next page token to be
+   * used in the following ListJobTriggers request.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -24,7 +24,9 @@ class GooglePrivacyDlpV2ListInfoTypesResponse extends \Google\Collection
   protected $infoTypesDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2InfoTypeDescription[]
+   * Set of sensitive infoTypes.
+   *
+   * @param GooglePrivacyDlpV2InfoTypeDescription[] $infoTypes
    */
   public function setInfoTypes($infoTypes)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\DataFusion;
 class LoggingConfig extends \Google\Model
 {
   /**
+   * Optional. Option to determine whether instance logs should be written to
+   * Cloud Logging. By default, instance logs are written to Cloud Logging.
+   *
    * @var bool
    */
   public $instanceCloudLoggingDisabled;
 
   /**
-   * @param bool
+   * Optional. Option to determine whether instance logs should be written to
+   * Cloud Logging. By default, instance logs are written to Cloud Logging.
+   *
+   * @param bool $instanceCloudLoggingDisabled
    */
   public function setInstanceCloudLoggingDisabled($instanceCloudLoggingDisabled)
   {

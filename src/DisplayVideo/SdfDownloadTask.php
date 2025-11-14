@@ -20,12 +20,24 @@ namespace Google\Service\DisplayVideo;
 class SdfDownloadTask extends \Google\Model
 {
   /**
+   * A resource name to be used in media.download to Download the prepared
+   * files. Resource names have the format
+   * `download/sdfdownloadtasks/media/{media_id}`. `media_id` will be made
+   * available by the long running operation service once the task status is
+   * done.
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * A resource name to be used in media.download to Download the prepared
+   * files. Resource names have the format
+   * `download/sdfdownloadtasks/media/{media_id}`. `media_id` will be made
+   * available by the long running operation service once the task status is
+   * done.
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

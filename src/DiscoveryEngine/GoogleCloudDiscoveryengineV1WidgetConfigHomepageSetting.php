@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigHomepageSetting extends \Google\Co
   protected $shortcutsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigHomepageSettingShortcut[]
+   * Optional. The shortcuts to display on the homepage.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigHomepageSettingShortcut[] $shortcuts
    */
   public function setShortcuts($shortcuts)
   {

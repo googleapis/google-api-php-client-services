@@ -20,12 +20,20 @@ namespace Google\Service\BigtableAdmin;
 class GoogleBigtableAdminV2TypeBytesEncodingRaw extends \Google\Model
 {
   /**
+   * If set, allows NULL values to be encoded as the empty string "". The actual
+   * empty string, or any value which only contains the null byte `0x00`, has
+   * one more null byte appended.
+   *
    * @var bool
    */
   public $escapeNulls;
 
   /**
-   * @param bool
+   * If set, allows NULL values to be encoded as the empty string "". The actual
+   * empty string, or any value which only contains the null byte `0x00`, has
+   * one more null byte appended.
+   *
+   * @param bool $escapeNulls
    */
   public function setEscapeNulls($escapeNulls)
   {

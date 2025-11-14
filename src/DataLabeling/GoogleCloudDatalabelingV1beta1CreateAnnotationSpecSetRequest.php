@@ -23,7 +23,11 @@ class GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest extends \Goog
   protected $annotationSpecSetDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationSpecSet
+   * Required. Annotation spec set to create. Annotation specs must be included.
+   * Only one annotation spec will be accepted for annotation specs with same
+   * display_name.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationSpecSet $annotationSpecSet
    */
   public function setAnnotationSpecSet(GoogleCloudDatalabelingV1beta1AnnotationSpecSet $annotationSpecSet)
   {

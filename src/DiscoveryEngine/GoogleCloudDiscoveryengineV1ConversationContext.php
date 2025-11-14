@@ -21,16 +21,25 @@ class GoogleCloudDiscoveryengineV1ConversationContext extends \Google\Collection
 {
   protected $collection_key = 'contextDocuments';
   /**
+   * The current active document the user opened. It contains the document
+   * resource reference.
+   *
    * @var string
    */
   public $activeDocument;
   /**
+   * The current list of documents the user is seeing. It contains the document
+   * resource references.
+   *
    * @var string[]
    */
   public $contextDocuments;
 
   /**
-   * @param string
+   * The current active document the user opened. It contains the document
+   * resource reference.
+   *
+   * @param string $activeDocument
    */
   public function setActiveDocument($activeDocument)
   {
@@ -44,7 +53,10 @@ class GoogleCloudDiscoveryengineV1ConversationContext extends \Google\Collection
     return $this->activeDocument;
   }
   /**
-   * @param string[]
+   * The current list of documents the user is seeing. It contains the document
+   * resource references.
+   *
+   * @param string[] $contextDocuments
    */
   public function setContextDocuments($contextDocuments)
   {

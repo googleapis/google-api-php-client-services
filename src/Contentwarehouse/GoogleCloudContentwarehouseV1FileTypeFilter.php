@@ -20,19 +20,45 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1FileTypeFilter extends \Google\Model
 {
   /**
+   * Default document type. If set, disables the filter.
+   */
+  public const FILE_TYPE_FILE_TYPE_UNSPECIFIED = 'FILE_TYPE_UNSPECIFIED';
+  /**
+   * Returns all document types, including folders.
+   */
+  public const FILE_TYPE_ALL = 'ALL';
+  /**
+   * Returns only folders.
+   */
+  public const FILE_TYPE_FOLDER = 'FOLDER';
+  /**
+   * Returns only non-folder documents.
+   */
+  public const FILE_TYPE_DOCUMENT = 'DOCUMENT';
+  /**
+   * Returns only root folders
+   */
+  public const FILE_TYPE_ROOT_FOLDER = 'ROOT_FOLDER';
+  /**
+   * The type of files to return.
+   *
    * @var string
    */
   public $fileType;
 
   /**
-   * @param string
+   * The type of files to return.
+   *
+   * Accepted values: FILE_TYPE_UNSPECIFIED, ALL, FOLDER, DOCUMENT, ROOT_FOLDER
+   *
+   * @param self::FILE_TYPE_* $fileType
    */
   public function setFileType($fileType)
   {
     $this->fileType = $fileType;
   }
   /**
-   * @return string
+   * @return self::FILE_TYPE_*
    */
   public function getFileType()
   {

@@ -20,48 +20,90 @@ namespace Google\Service\SQLAdmin;
 class ImportContextBakImportOptions extends \Google\Model
 {
   /**
+   * Default type.
+   */
+  public const BAK_TYPE_BAK_TYPE_UNSPECIFIED = 'BAK_TYPE_UNSPECIFIED';
+  /**
+   * Full backup.
+   */
+  public const BAK_TYPE_FULL = 'FULL';
+  /**
+   * Differential backup.
+   */
+  public const BAK_TYPE_DIFF = 'DIFF';
+  /**
+   * Transaction Log backup
+   */
+  public const BAK_TYPE_TLOG = 'TLOG';
+  /**
+   * Type of the bak content, FULL or DIFF
+   *
    * @var string
    */
   public $bakType;
   protected $encryptionOptionsType = ImportContextBakImportOptionsEncryptionOptions::class;
   protected $encryptionOptionsDataType = '';
   /**
+   * Whether or not the backup importing will restore database with NORECOVERY
+   * option. Applies only to Cloud SQL for SQL Server.
+   *
    * @var bool
    */
   public $noRecovery;
   /**
+   * Whether or not the backup importing request will just bring database online
+   * without downloading Bak content only one of "no_recovery" and
+   * "recovery_only" can be true otherwise error will return. Applies only to
+   * Cloud SQL for SQL Server.
+   *
    * @var bool
    */
   public $recoveryOnly;
   /**
+   * Optional. The timestamp when the import should stop. This timestamp is in
+   * the [RFC 3339](https://tools.ietf.org/html/rfc3339) format (for example,
+   * `2023-10-01T16:19:00.094`). This field is equivalent to the STOPAT keyword
+   * and applies to Cloud SQL for SQL Server only.
+   *
    * @var string
    */
   public $stopAt;
   /**
+   * Optional. The marked transaction where the import should stop. This field
+   * is equivalent to the STOPATMARK keyword and applies to Cloud SQL for SQL
+   * Server only.
+   *
    * @var string
    */
   public $stopAtMark;
   /**
+   * Whether or not the backup set being restored is striped. Applies only to
+   * Cloud SQL for SQL Server.
+   *
    * @var bool
    */
   public $striped;
 
   /**
-   * @param string
+   * Type of the bak content, FULL or DIFF
+   *
+   * Accepted values: BAK_TYPE_UNSPECIFIED, FULL, DIFF, TLOG
+   *
+   * @param self::BAK_TYPE_* $bakType
    */
   public function setBakType($bakType)
   {
     $this->bakType = $bakType;
   }
   /**
-   * @return string
+   * @return self::BAK_TYPE_*
    */
   public function getBakType()
   {
     return $this->bakType;
   }
   /**
-   * @param ImportContextBakImportOptionsEncryptionOptions
+   * @param ImportContextBakImportOptionsEncryptionOptions $encryptionOptions
    */
   public function setEncryptionOptions(ImportContextBakImportOptionsEncryptionOptions $encryptionOptions)
   {
@@ -75,7 +117,10 @@ class ImportContextBakImportOptions extends \Google\Model
     return $this->encryptionOptions;
   }
   /**
-   * @param bool
+   * Whether or not the backup importing will restore database with NORECOVERY
+   * option. Applies only to Cloud SQL for SQL Server.
+   *
+   * @param bool $noRecovery
    */
   public function setNoRecovery($noRecovery)
   {
@@ -89,7 +134,12 @@ class ImportContextBakImportOptions extends \Google\Model
     return $this->noRecovery;
   }
   /**
-   * @param bool
+   * Whether or not the backup importing request will just bring database online
+   * without downloading Bak content only one of "no_recovery" and
+   * "recovery_only" can be true otherwise error will return. Applies only to
+   * Cloud SQL for SQL Server.
+   *
+   * @param bool $recoveryOnly
    */
   public function setRecoveryOnly($recoveryOnly)
   {
@@ -103,7 +153,12 @@ class ImportContextBakImportOptions extends \Google\Model
     return $this->recoveryOnly;
   }
   /**
-   * @param string
+   * Optional. The timestamp when the import should stop. This timestamp is in
+   * the [RFC 3339](https://tools.ietf.org/html/rfc3339) format (for example,
+   * `2023-10-01T16:19:00.094`). This field is equivalent to the STOPAT keyword
+   * and applies to Cloud SQL for SQL Server only.
+   *
+   * @param string $stopAt
    */
   public function setStopAt($stopAt)
   {
@@ -117,7 +172,11 @@ class ImportContextBakImportOptions extends \Google\Model
     return $this->stopAt;
   }
   /**
-   * @param string
+   * Optional. The marked transaction where the import should stop. This field
+   * is equivalent to the STOPATMARK keyword and applies to Cloud SQL for SQL
+   * Server only.
+   *
+   * @param string $stopAtMark
    */
   public function setStopAtMark($stopAtMark)
   {
@@ -131,7 +190,10 @@ class ImportContextBakImportOptions extends \Google\Model
     return $this->stopAtMark;
   }
   /**
-   * @param bool
+   * Whether or not the backup set being restored is striped. Applies only to
+   * Cloud SQL for SQL Server.
+   *
+   * @param bool $striped
    */
   public function setStriped($striped)
   {

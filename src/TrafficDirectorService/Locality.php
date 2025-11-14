@@ -20,20 +20,34 @@ namespace Google\Service\TrafficDirectorService;
 class Locality extends \Google\Model
 {
   /**
+   * Region this :ref:`zone ` belongs to.
+   *
    * @var string
    */
   public $region;
   /**
+   * When used for locality of upstream hosts, this field further splits zone
+   * into smaller chunks of sub-zones so they can be load balanced
+   * independently.
+   *
    * @var string
    */
   public $subZone;
   /**
+   * Defines the local service zone where Envoy is running. Though optional, it
+   * should be set if discovery service routing is used and the discovery
+   * service exposes :ref:`zone data `, either in this message or via
+   * :option:`--service-zone`. The meaning of zone is context dependent, e.g.
+   * `Availability Zone (AZ) `_ on AWS, `Zone `_ on GCP, etc.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * Region this :ref:`zone ` belongs to.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -47,7 +61,11 @@ class Locality extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * When used for locality of upstream hosts, this field further splits zone
+   * into smaller chunks of sub-zones so they can be load balanced
+   * independently.
+   *
+   * @param string $subZone
    */
   public function setSubZone($subZone)
   {
@@ -61,7 +79,13 @@ class Locality extends \Google\Model
     return $this->subZone;
   }
   /**
-   * @param string
+   * Defines the local service zone where Envoy is running. Though optional, it
+   * should be set if discovery service routing is used and the discovery
+   * service exposes :ref:`zone data `, either in this message or via
+   * :option:`--service-zone`. The meaning of zone is context dependent, e.g.
+   * `Availability Zone (AZ) `_ on AWS, `Zone `_ on GCP, etc.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

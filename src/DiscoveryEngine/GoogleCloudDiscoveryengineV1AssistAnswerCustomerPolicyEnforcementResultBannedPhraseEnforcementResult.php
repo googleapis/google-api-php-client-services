@@ -21,12 +21,16 @@ class GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultBan
 {
   protected $collection_key = 'bannedPhrases';
   /**
+   * The banned phrases that were found in the query or the answer.
+   *
    * @var string[]
    */
   public $bannedPhrases;
 
   /**
-   * @param string[]
+   * The banned phrases that were found in the query or the answer.
+   *
+   * @param string[] $bannedPhrases
    */
   public function setBannedPhrases($bannedPhrases)
   {

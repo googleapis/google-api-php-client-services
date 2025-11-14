@@ -25,7 +25,9 @@ class ControlPlaneEndpointsConfig extends \Google\Model
   protected $ipEndpointsConfigDataType = '';
 
   /**
-   * @param DNSEndpointConfig
+   * DNS endpoint configuration.
+   *
+   * @param DNSEndpointConfig $dnsEndpointConfig
    */
   public function setDnsEndpointConfig(DNSEndpointConfig $dnsEndpointConfig)
   {
@@ -39,7 +41,9 @@ class ControlPlaneEndpointsConfig extends \Google\Model
     return $this->dnsEndpointConfig;
   }
   /**
-   * @param IPEndpointsConfig
+   * IP endpoints configuration.
+   *
+   * @param IPEndpointsConfig $ipEndpointsConfig
    */
   public function setIpEndpointsConfig(IPEndpointsConfig $ipEndpointsConfig)
   {

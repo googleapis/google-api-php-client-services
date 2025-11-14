@@ -19,15 +19,35 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ListAssetsResult extends \Google\Model
 {
+  /**
+   * State change is unused, this is the canonical default for this enum.
+   */
+  public const STATE_CHANGE_UNUSED = 'UNUSED';
+  /**
+   * Asset was added between the points in time.
+   */
+  public const STATE_CHANGE_ADDED = 'ADDED';
+  /**
+   * Asset was removed between the points in time.
+   */
+  public const STATE_CHANGE_REMOVED = 'REMOVED';
+  /**
+   * Asset was present at both point(s) in time.
+   */
+  public const STATE_CHANGE_ACTIVE = 'ACTIVE';
   protected $assetType = Asset::class;
   protected $assetDataType = '';
   /**
+   * State change of the asset between the points in time.
+   *
    * @var string
    */
   public $stateChange;
 
   /**
-   * @param Asset
+   * Asset matching the search request.
+   *
+   * @param Asset $asset
    */
   public function setAsset(Asset $asset)
   {
@@ -41,14 +61,18 @@ class ListAssetsResult extends \Google\Model
     return $this->asset;
   }
   /**
-   * @param string
+   * State change of the asset between the points in time.
+   *
+   * Accepted values: UNUSED, ADDED, REMOVED, ACTIVE
+   *
+   * @param self::STATE_CHANGE_* $stateChange
    */
   public function setStateChange($stateChange)
   {
     $this->stateChange = $stateChange;
   }
   /**
-   * @return string
+   * @return self::STATE_CHANGE_*
    */
   public function getStateChange()
   {

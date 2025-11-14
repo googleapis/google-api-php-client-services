@@ -20,16 +20,22 @@ namespace Google\Service\SQLAdmin;
 class DiskEncryptionStatus extends \Google\Model
 {
   /**
+   * This is always `sql#diskEncryptionStatus`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * KMS key version used to encrypt the Cloud SQL instance resource
+   *
    * @var string
    */
   public $kmsKeyVersionName;
 
   /**
-   * @param string
+   * This is always `sql#diskEncryptionStatus`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -43,7 +49,9 @@ class DiskEncryptionStatus extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * KMS key version used to encrypt the Cloud SQL instance resource
+   *
+   * @param string $kmsKeyVersionName
    */
   public function setKmsKeyVersionName($kmsKeyVersionName)
   {

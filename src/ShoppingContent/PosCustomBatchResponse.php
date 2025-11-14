@@ -23,12 +23,17 @@ class PosCustomBatchResponse extends \Google\Collection
   protected $entriesType = PosCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#posCustomBatchResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param PosCustomBatchResponseEntry[]
+   * The result of the execution of the batch requests.
+   *
+   * @param PosCustomBatchResponseEntry[] $entries
    */
   public function setEntries($entries)
   {
@@ -42,7 +47,10 @@ class PosCustomBatchResponse extends \Google\Collection
     return $this->entries;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#posCustomBatchResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

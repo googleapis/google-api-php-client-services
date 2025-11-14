@@ -23,7 +23,9 @@ class LinkedDatasetSource extends \Google\Model
   protected $sourceDatasetDataType = '';
 
   /**
-   * @param DatasetReference
+   * The source dataset reference contains project numbers and not project ids.
+   *
+   * @param DatasetReference $sourceDataset
    */
   public function setSourceDataset(DatasetReference $sourceDataset)
   {

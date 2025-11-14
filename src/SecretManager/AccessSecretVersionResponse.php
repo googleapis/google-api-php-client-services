@@ -20,6 +20,9 @@ namespace Google\Service\SecretManager;
 class AccessSecretVersionResponse extends \Google\Model
 {
   /**
+   * The resource name of the SecretVersion in the format
+   * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+   *
    * @var string
    */
   public $name;
@@ -27,7 +30,10 @@ class AccessSecretVersionResponse extends \Google\Model
   protected $payloadDataType = '';
 
   /**
-   * @param string
+   * The resource name of the SecretVersion in the format
+   * `projects/secrets/versions` or `projects/locations/secrets/versions`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -41,7 +47,9 @@ class AccessSecretVersionResponse extends \Google\Model
     return $this->name;
   }
   /**
-   * @param SecretPayload
+   * Secret payload
+   *
+   * @param SecretPayload $payload
    */
   public function setPayload(SecretPayload $payload)
   {

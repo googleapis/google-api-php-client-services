@@ -20,24 +20,54 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource extends \Google\Model
 {
   /**
+   * Unspecified defaults to GSUTIL.
+   */
+  public const SOURCE_FETCHER_SOURCE_FETCHER_UNSPECIFIED = 'SOURCE_FETCHER_UNSPECIFIED';
+  /**
+   * Use the "gsutil" tool to download the source file.
+   */
+  public const SOURCE_FETCHER_GSUTIL = 'GSUTIL';
+  /**
+   * Use the Cloud Storage Fetcher tool to download the source file.
+   */
+  public const SOURCE_FETCHER_GCS_FETCHER = 'GCS_FETCHER';
+  /**
+   * Cloud Storage bucket containing the source (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/bucket-
+   * naming#requirements)).
+   *
    * @var string
    */
   public $bucket;
   /**
+   * Optional. Cloud Storage generation for the object. If the generation is
+   * omitted, the latest generation will be used.
+   *
    * @var string
    */
   public $generation;
   /**
+   * Required. Cloud Storage object containing the source. This object must be a
+   * zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to
+   * build.
+   *
    * @var string
    */
   public $object;
   /**
+   * Optional. Option to specify the tool to fetch the source file for the
+   * build.
+   *
    * @var string
    */
   public $sourceFetcher;
 
   /**
-   * @param string
+   * Cloud Storage bucket containing the source (see [Bucket Name
+   * Requirements](https://cloud.google.com/storage/docs/bucket-
+   * naming#requirements)).
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -51,7 +81,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource extends \Google\M
     return $this->bucket;
   }
   /**
-   * @param string
+   * Optional. Cloud Storage generation for the object. If the generation is
+   * omitted, the latest generation will be used.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -65,7 +98,11 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource extends \Google\M
     return $this->generation;
   }
   /**
-   * @param string
+   * Required. Cloud Storage object containing the source. This object must be a
+   * zipped (`.zip`) or gzipped archive file (`.tar.gz`) containing source to
+   * build.
+   *
+   * @param string $object
    */
   public function setObject($object)
   {
@@ -79,14 +116,19 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource extends \Google\M
     return $this->object;
   }
   /**
-   * @param string
+   * Optional. Option to specify the tool to fetch the source file for the
+   * build.
+   *
+   * Accepted values: SOURCE_FETCHER_UNSPECIFIED, GSUTIL, GCS_FETCHER
+   *
+   * @param self::SOURCE_FETCHER_* $sourceFetcher
    */
   public function setSourceFetcher($sourceFetcher)
   {
     $this->sourceFetcher = $sourceFetcher;
   }
   /**
-   * @return string
+   * @return self::SOURCE_FETCHER_*
    */
   public function getSourceFetcher()
   {

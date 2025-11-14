@@ -21,6 +21,8 @@ class MinimumOrderValueTableStoreCodeSetWithMov extends \Google\Collection
 {
   protected $collection_key = 'storeCodes';
   /**
+   * A list of unique store codes or empty for the catch all.
+   *
    * @var string[]
    */
   public $storeCodes;
@@ -28,7 +30,9 @@ class MinimumOrderValueTableStoreCodeSetWithMov extends \Google\Collection
   protected $valueDataType = '';
 
   /**
-   * @param string[]
+   * A list of unique store codes or empty for the catch all.
+   *
+   * @param string[] $storeCodes
    */
   public function setStoreCodes($storeCodes)
   {
@@ -42,7 +46,9 @@ class MinimumOrderValueTableStoreCodeSetWithMov extends \Google\Collection
     return $this->storeCodes;
   }
   /**
-   * @param Price
+   * The minimum order value for the given stores.
+   *
+   * @param Price $value
    */
   public function setValue(Price $value)
   {

@@ -27,7 +27,9 @@ class Animation extends \Google\Model
   protected $animationStaticDataType = '';
 
   /**
-   * @param AnimationEnd
+   * End previous animation.
+   *
+   * @param AnimationEnd $animationEnd
    */
   public function setAnimationEnd(AnimationEnd $animationEnd)
   {
@@ -41,7 +43,9 @@ class Animation extends \Google\Model
     return $this->animationEnd;
   }
   /**
-   * @param AnimationFade
+   * Display overlay object with fade animation.
+   *
+   * @param AnimationFade $animationFade
    */
   public function setAnimationFade(AnimationFade $animationFade)
   {
@@ -55,7 +59,9 @@ class Animation extends \Google\Model
     return $this->animationFade;
   }
   /**
-   * @param AnimationStatic
+   * Display static overlay object.
+   *
+   * @param AnimationStatic $animationStatic
    */
   public function setAnimationStatic(AnimationStatic $animationStatic)
   {

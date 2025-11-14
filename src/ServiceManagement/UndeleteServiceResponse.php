@@ -23,7 +23,9 @@ class UndeleteServiceResponse extends \Google\Model
   protected $serviceDataType = '';
 
   /**
-   * @param ManagedService
+   * Revived service resource.
+   *
+   * @param ManagedService $service
    */
   public function setService(ManagedService $service)
   {

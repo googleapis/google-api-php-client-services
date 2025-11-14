@@ -20,36 +20,60 @@ namespace Google\Service\Eventarc;
 class GoogleApiSource extends \Google\Model
 {
   /**
+   * Optional. Resource annotations.
+   *
    * @var string[]
    */
   public $annotations;
   /**
+   * Output only. The creation time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Resource name of a KMS crypto key (managed by the user) used to
+   * encrypt/decrypt their event data. It must match the pattern
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
    * @var string
    */
   public $cryptoKeyName;
   /**
+   * Required. Destination is the message bus that the GoogleApiSource is
+   * delivering to. It must be point to the full resource name of a MessageBus.
+   * Format:
+   * "projects/{PROJECT_ID}/locations/{region}/messagesBuses/{MESSAGE_BUS_ID)
+   *
    * @var string
    */
   public $destination;
   /**
+   * Optional. Resource display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and might be sent only on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Optional. Resource labels.
+   *
    * @var string[]
    */
   public $labels;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
+   * Identifier. Resource name of the form projects/{project}/locations/{locatio
+   * n}/googleApiSources/{google_api_source}
+   *
    * @var string
    */
   public $name;
@@ -58,16 +82,24 @@ class GoogleApiSource extends \Google\Model
   protected $projectSubscriptionsType = ProjectSubscriptions::class;
   protected $projectSubscriptionsDataType = '';
   /**
+   * Output only. Server assigned unique identifier for the channel. The value
+   * is a UUID4 string and guaranteed to remain unchanged until the resource is
+   * deleted.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. The last-modified time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Optional. Resource annotations.
+   *
+   * @param string[] $annotations
    */
   public function setAnnotations($annotations)
   {
@@ -81,7 +113,9 @@ class GoogleApiSource extends \Google\Model
     return $this->annotations;
   }
   /**
-   * @param string
+   * Output only. The creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -95,7 +129,11 @@ class GoogleApiSource extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Resource name of a KMS crypto key (managed by the user) used to
+   * encrypt/decrypt their event data. It must match the pattern
+   * `projects/locations/keyRings/cryptoKeys`.
+   *
+   * @param string $cryptoKeyName
    */
   public function setCryptoKeyName($cryptoKeyName)
   {
@@ -109,7 +147,12 @@ class GoogleApiSource extends \Google\Model
     return $this->cryptoKeyName;
   }
   /**
-   * @param string
+   * Required. Destination is the message bus that the GoogleApiSource is
+   * delivering to. It must be point to the full resource name of a MessageBus.
+   * Format:
+   * "projects/{PROJECT_ID}/locations/{region}/messagesBuses/{MESSAGE_BUS_ID)
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -123,7 +166,9 @@ class GoogleApiSource extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * Optional. Resource display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -137,7 +182,11 @@ class GoogleApiSource extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. This checksum is computed by the server based on the value of
+   * other fields, and might be sent only on update and delete requests to
+   * ensure that the client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -151,7 +200,9 @@ class GoogleApiSource extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Optional. Resource labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -165,7 +216,9 @@ class GoogleApiSource extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param LoggingConfig
+   * Optional. Config to control Platform logging for the GoogleApiSource.
+   *
+   * @param LoggingConfig $loggingConfig
    */
   public function setLoggingConfig(LoggingConfig $loggingConfig)
   {
@@ -179,7 +232,10 @@ class GoogleApiSource extends \Google\Model
     return $this->loggingConfig;
   }
   /**
-   * @param string
+   * Identifier. Resource name of the form projects/{project}/locations/{locatio
+   * n}/googleApiSources/{google_api_source}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -193,7 +249,10 @@ class GoogleApiSource extends \Google\Model
     return $this->name;
   }
   /**
-   * @param OrganizationSubscription
+   * Optional. Config to enable subscribing to events from all projects in the
+   * GoogleApiSource's org.
+   *
+   * @param OrganizationSubscription $organizationSubscription
    */
   public function setOrganizationSubscription(OrganizationSubscription $organizationSubscription)
   {
@@ -207,7 +266,10 @@ class GoogleApiSource extends \Google\Model
     return $this->organizationSubscription;
   }
   /**
-   * @param ProjectSubscriptions
+   * Optional. Config to enable subscribing to all events from a list of
+   * projects. All the projects must be in the same org as the GoogleApiSource.
+   *
+   * @param ProjectSubscriptions $projectSubscriptions
    */
   public function setProjectSubscriptions(ProjectSubscriptions $projectSubscriptions)
   {
@@ -221,7 +283,11 @@ class GoogleApiSource extends \Google\Model
     return $this->projectSubscriptions;
   }
   /**
-   * @param string
+   * Output only. Server assigned unique identifier for the channel. The value
+   * is a UUID4 string and guaranteed to remain unchanged until the resource is
+   * deleted.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -235,7 +301,9 @@ class GoogleApiSource extends \Google\Model
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. The last-modified time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

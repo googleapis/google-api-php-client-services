@@ -20,19 +20,54 @@ namespace Google\Service\CloudShell;
 class StartEnvironmentMetadata extends \Google\Model
 {
   /**
+   * The environment's start state is unknown.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The environment is in the process of being started, but no additional
+   * details are available.
+   */
+  public const STATE_STARTING = 'STARTING';
+  /**
+   * Startup is waiting for the user's disk to be unarchived. This can happen
+   * when the user returns to Cloud Shell after not having used it for a while,
+   * and suggests that startup will take longer than normal.
+   */
+  public const STATE_UNARCHIVING_DISK = 'UNARCHIVING_DISK';
+  /**
+   * Startup is waiting for compute resources to be assigned to the environment.
+   * This should normally happen very quickly, but an environment might stay in
+   * this state for an extended period of time if the system is experiencing
+   * heavy load.
+   */
+  public const STATE_AWAITING_COMPUTE_RESOURCES = 'AWAITING_COMPUTE_RESOURCES';
+  /**
+   * Startup has completed. If the start operation was successful, the user
+   * should be able to establish an SSH connection to their environment.
+   * Otherwise, the operation will contain details of the failure.
+   */
+  public const STATE_FINISHED = 'FINISHED';
+  /**
+   * Current state of the environment being started.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Current state of the environment being started.
+   *
+   * Accepted values: STATE_UNSPECIFIED, STARTING, UNARCHIVING_DISK,
+   * AWAITING_COMPUTE_RESOURCES, FINISHED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

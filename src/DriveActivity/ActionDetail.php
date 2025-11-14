@@ -45,7 +45,9 @@ class ActionDetail extends \Google\Model
   protected $settingsChangeDataType = '';
 
   /**
-   * @param AppliedLabelChange
+   * Label was changed.
+   *
+   * @param AppliedLabelChange $appliedLabelChange
    */
   public function setAppliedLabelChange(AppliedLabelChange $appliedLabelChange)
   {
@@ -59,7 +61,9 @@ class ActionDetail extends \Google\Model
     return $this->appliedLabelChange;
   }
   /**
-   * @param Comment
+   * A change about comments was made.
+   *
+   * @param Comment $comment
    */
   public function setComment(Comment $comment)
   {
@@ -73,7 +77,9 @@ class ActionDetail extends \Google\Model
     return $this->comment;
   }
   /**
-   * @param Create
+   * An object was created.
+   *
+   * @param Create $create
    */
   public function setCreate(Create $create)
   {
@@ -87,7 +93,9 @@ class ActionDetail extends \Google\Model
     return $this->create;
   }
   /**
-   * @param Delete
+   * An object was deleted.
+   *
+   * @param Delete $delete
    */
   public function setDelete(Delete $delete)
   {
@@ -101,7 +109,9 @@ class ActionDetail extends \Google\Model
     return $this->delete;
   }
   /**
-   * @param DataLeakPreventionChange
+   * A change happened in data leak prevention status.
+   *
+   * @param DataLeakPreventionChange $dlpChange
    */
   public function setDlpChange(DataLeakPreventionChange $dlpChange)
   {
@@ -115,7 +125,9 @@ class ActionDetail extends \Google\Model
     return $this->dlpChange;
   }
   /**
-   * @param Edit
+   * An object was edited.
+   *
+   * @param Edit $edit
    */
   public function setEdit(Edit $edit)
   {
@@ -129,7 +141,9 @@ class ActionDetail extends \Google\Model
     return $this->edit;
   }
   /**
-   * @param Move
+   * An object was moved.
+   *
+   * @param Move $move
    */
   public function setMove(Move $move)
   {
@@ -143,7 +157,9 @@ class ActionDetail extends \Google\Model
     return $this->move;
   }
   /**
-   * @param PermissionChange
+   * The permission on an object was changed.
+   *
+   * @param PermissionChange $permissionChange
    */
   public function setPermissionChange(PermissionChange $permissionChange)
   {
@@ -157,7 +173,9 @@ class ActionDetail extends \Google\Model
     return $this->permissionChange;
   }
   /**
-   * @param ApplicationReference
+   * An object was referenced in an application outside of Drive/Docs.
+   *
+   * @param ApplicationReference $reference
    */
   public function setReference(ApplicationReference $reference)
   {
@@ -171,7 +189,9 @@ class ActionDetail extends \Google\Model
     return $this->reference;
   }
   /**
-   * @param Rename
+   * An object was renamed.
+   *
+   * @param Rename $rename
    */
   public function setRename(Rename $rename)
   {
@@ -185,7 +205,9 @@ class ActionDetail extends \Google\Model
     return $this->rename;
   }
   /**
-   * @param Restore
+   * A deleted object was restored.
+   *
+   * @param Restore $restore
    */
   public function setRestore(Restore $restore)
   {
@@ -199,7 +221,9 @@ class ActionDetail extends \Google\Model
     return $this->restore;
   }
   /**
-   * @param SettingsChange
+   * Settings were changed.
+   *
+   * @param SettingsChange $settingsChange
    */
   public function setSettingsChange(SettingsChange $settingsChange)
   {

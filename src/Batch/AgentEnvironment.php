@@ -22,16 +22,25 @@ class AgentEnvironment extends \Google\Model
   protected $encryptedVariablesType = AgentKMSEnvMap::class;
   protected $encryptedVariablesDataType = '';
   /**
+   * A map of environment variable names to Secret Manager secret names. The VM
+   * will access the named secrets to set the value of each environment
+   * variable.
+   *
    * @var string[]
    */
   public $secretVariables;
   /**
+   * A map of environment variable names to values.
+   *
    * @var string[]
    */
   public $variables;
 
   /**
-   * @param AgentKMSEnvMap
+   * An encrypted JSON dictionary where the key/value pairs correspond to
+   * environment variable names and their values.
+   *
+   * @param AgentKMSEnvMap $encryptedVariables
    */
   public function setEncryptedVariables(AgentKMSEnvMap $encryptedVariables)
   {
@@ -45,7 +54,11 @@ class AgentEnvironment extends \Google\Model
     return $this->encryptedVariables;
   }
   /**
-   * @param string[]
+   * A map of environment variable names to Secret Manager secret names. The VM
+   * will access the named secrets to set the value of each environment
+   * variable.
+   *
+   * @param string[] $secretVariables
    */
   public function setSecretVariables($secretVariables)
   {
@@ -59,7 +72,9 @@ class AgentEnvironment extends \Google\Model
     return $this->secretVariables;
   }
   /**
-   * @param string[]
+   * A map of environment variable names to values.
+   *
+   * @param string[] $variables
    */
   public function setVariables($variables)
   {

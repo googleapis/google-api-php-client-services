@@ -20,20 +20,31 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting extends \Google\Model
 {
   /**
+   * Required. The Internet domain name that this setting represents, for
+   * example, "google.com" or "www.google.com".
+   *
    * @var string
    */
   public $domainName;
   /**
+   * Required. The language code specifying the language of the domain, for
+   * example, "en".
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Whether the campaign uses advertiser supplied URLs exclusively.
+   *
    * @var bool
    */
   public $useSuppliedUrlsOnly;
 
   /**
-   * @param string
+   * Required. The Internet domain name that this setting represents, for
+   * example, "google.com" or "www.google.com".
+   *
+   * @param string $domainName
    */
   public function setDomainName($domainName)
   {
@@ -47,7 +58,10 @@ class GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting extends \G
     return $this->domainName;
   }
   /**
-   * @param string
+   * Required. The language code specifying the language of the domain, for
+   * example, "en".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -61,7 +75,9 @@ class GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting extends \G
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Whether the campaign uses advertiser supplied URLs exclusively.
+   *
+   * @param bool $useSuppliedUrlsOnly
    */
   public function setUseSuppliedUrlsOnly($useSuppliedUrlsOnly)
   {

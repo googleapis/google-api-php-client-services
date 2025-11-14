@@ -20,12 +20,20 @@ namespace Google\Service\CloudSearch;
 class SafeUrlProto extends \Google\Model
 {
   /**
+   * IMPORTANT: Never set or read this field, even from tests, it is private.
+   * See documentation at the top of .proto file for programming language
+   * packages with which to create or read this message.
+   *
    * @var string
    */
   public $privateDoNotAccessOrElseSafeUrlWrappedValue;
 
   /**
-   * @param string
+   * IMPORTANT: Never set or read this field, even from tests, it is private.
+   * See documentation at the top of .proto file for programming language
+   * packages with which to create or read this message.
+   *
+   * @param string $privateDoNotAccessOrElseSafeUrlWrappedValue
    */
   public function setPrivateDoNotAccessOrElseSafeUrlWrappedValue($privateDoNotAccessOrElseSafeUrlWrappedValue)
   {

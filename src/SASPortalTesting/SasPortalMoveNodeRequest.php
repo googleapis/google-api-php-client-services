@@ -20,12 +20,18 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalMoveNodeRequest extends \Google\Model
 {
   /**
+   * Required. The name of the new parent resource node or customer to reparent
+   * the node under.
+   *
    * @var string
    */
   public $destination;
 
   /**
-   * @param string
+   * Required. The name of the new parent resource node or customer to reparent
+   * the node under.
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {

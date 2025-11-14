@@ -20,12 +20,24 @@ namespace Google\Service\Testing;
 class UniformSharding extends \Google\Model
 {
   /**
+   * Required. The total number of shards to create. This must always be a
+   * positive number that is no greater than the total number of test cases.
+   * When you select one or more physical devices, the number of shards must be
+   * <= 50. When you select one or more ARM virtual devices, it must be <= 200.
+   * When you select only x86 virtual devices, it must be <= 500.
+   *
    * @var int
    */
   public $numShards;
 
   /**
-   * @param int
+   * Required. The total number of shards to create. This must always be a
+   * positive number that is no greater than the total number of test cases.
+   * When you select one or more physical devices, the number of shards must be
+   * <= 50. When you select one or more ARM virtual devices, it must be <= 200.
+   * When you select only x86 virtual devices, it must be <= 500.
+   *
+   * @param int $numShards
    */
   public function setNumShards($numShards)
   {

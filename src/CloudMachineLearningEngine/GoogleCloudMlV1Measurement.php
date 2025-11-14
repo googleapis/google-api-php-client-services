@@ -21,18 +21,27 @@ class GoogleCloudMlV1Measurement extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
+   * Output only. Time that the trial has been running at the point of this
+   * measurement.
+   *
    * @var string
    */
   public $elapsedTime;
   protected $metricsType = GoogleCloudMlV1MeasurementMetric::class;
   protected $metricsDataType = 'array';
   /**
+   * The number of steps a machine learning model has been trained for. Must be
+   * non-negative.
+   *
    * @var string
    */
   public $stepCount;
 
   /**
-   * @param string
+   * Output only. Time that the trial has been running at the point of this
+   * measurement.
+   *
+   * @param string $elapsedTime
    */
   public function setElapsedTime($elapsedTime)
   {
@@ -46,7 +55,9 @@ class GoogleCloudMlV1Measurement extends \Google\Collection
     return $this->elapsedTime;
   }
   /**
-   * @param GoogleCloudMlV1MeasurementMetric[]
+   * Provides a list of metrics that act as inputs into the objective function.
+   *
+   * @param GoogleCloudMlV1MeasurementMetric[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -60,7 +71,10 @@ class GoogleCloudMlV1Measurement extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * The number of steps a machine learning model has been trained for. Must be
+   * non-negative.
+   *
+   * @param string $stepCount
    */
   public function setStepCount($stepCount)
   {

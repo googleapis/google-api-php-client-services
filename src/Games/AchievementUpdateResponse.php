@@ -20,32 +20,60 @@ namespace Google\Service\Games;
 class AchievementUpdateResponse extends \Google\Model
 {
   /**
+   * Achievement is hidden.
+   */
+  public const CURRENT_STATE_HIDDEN = 'HIDDEN';
+  /**
+   * Achievement is revealed.
+   */
+  public const CURRENT_STATE_REVEALED = 'REVEALED';
+  /**
+   * Achievement is unlocked.
+   */
+  public const CURRENT_STATE_UNLOCKED = 'UNLOCKED';
+  /**
+   * The achievement this update is was applied to.
+   *
    * @var string
    */
   public $achievementId;
   /**
+   * The current state of the achievement.
+   *
    * @var string
    */
   public $currentState;
   /**
+   * The current steps recorded for this achievement if it is incremental.
+   *
    * @var int
    */
   public $currentSteps;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#achievementUpdateResponse`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Whether this achievement was newly unlocked (that is, whether the unlock
+   * request for the achievement was the first for the player).
+   *
    * @var bool
    */
   public $newlyUnlocked;
   /**
+   * Whether the requested updates actually affected the achievement.
+   *
    * @var bool
    */
   public $updateOccurred;
 
   /**
-   * @param string
+   * The achievement this update is was applied to.
+   *
+   * @param string $achievementId
    */
   public function setAchievementId($achievementId)
   {
@@ -59,21 +87,27 @@ class AchievementUpdateResponse extends \Google\Model
     return $this->achievementId;
   }
   /**
-   * @param string
+   * The current state of the achievement.
+   *
+   * Accepted values: HIDDEN, REVEALED, UNLOCKED
+   *
+   * @param self::CURRENT_STATE_* $currentState
    */
   public function setCurrentState($currentState)
   {
     $this->currentState = $currentState;
   }
   /**
-   * @return string
+   * @return self::CURRENT_STATE_*
    */
   public function getCurrentState()
   {
     return $this->currentState;
   }
   /**
-   * @param int
+   * The current steps recorded for this achievement if it is incremental.
+   *
+   * @param int $currentSteps
    */
   public function setCurrentSteps($currentSteps)
   {
@@ -87,7 +121,10 @@ class AchievementUpdateResponse extends \Google\Model
     return $this->currentSteps;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#achievementUpdateResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -101,7 +138,10 @@ class AchievementUpdateResponse extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param bool
+   * Whether this achievement was newly unlocked (that is, whether the unlock
+   * request for the achievement was the first for the player).
+   *
+   * @param bool $newlyUnlocked
    */
   public function setNewlyUnlocked($newlyUnlocked)
   {
@@ -115,7 +155,9 @@ class AchievementUpdateResponse extends \Google\Model
     return $this->newlyUnlocked;
   }
   /**
-   * @param bool
+   * Whether the requested updates actually affected the achievement.
+   *
+   * @param bool $updateOccurred
    */
   public function setUpdateOccurred($updateOccurred)
   {

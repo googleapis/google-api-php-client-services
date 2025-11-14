@@ -19,62 +19,126 @@ namespace Google\Service\CloudDeploy;
 
 class DeployPolicyEvaluationEvent extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const INVOKER_INVOKER_UNSPECIFIED = 'INVOKER_UNSPECIFIED';
+  /**
+   * The action is user-driven. For example, creating a rollout manually via a
+   * gcloud create command.
+   */
+  public const INVOKER_USER = 'USER';
+  /**
+   * Automated action by Cloud Deploy.
+   */
+  public const INVOKER_DEPLOY_AUTOMATION = 'DEPLOY_AUTOMATION';
+  /**
+   * This should never happen.
+   */
+  public const VERDICT_POLICY_VERDICT_UNSPECIFIED = 'POLICY_VERDICT_UNSPECIFIED';
+  /**
+   * Allowed by policy. This enum value is not currently used but may be used in
+   * the future. Currently logs are only generated when a request is denied by
+   * policy.
+   */
+  public const VERDICT_ALLOWED_BY_POLICY = 'ALLOWED_BY_POLICY';
+  /**
+   * Denied by policy.
+   */
+  public const VERDICT_DENIED_BY_POLICY = 'DENIED_BY_POLICY';
   protected $collection_key = 'overrides';
   /**
+   * Whether the request is allowed. Allowed is set as true if: (1) the request
+   * complies with the policy; or (2) the request doesn't comply with the policy
+   * but the policy was overridden; or (3) the request doesn't comply with the
+   * policy but the policy was suspended
+   *
    * @var bool
    */
   public $allowed;
   /**
+   * The name of the `Delivery Pipeline`.
+   *
    * @var string
    */
   public $deliveryPipeline;
   /**
+   * The name of the `DeployPolicy`.
+   *
    * @var string
    */
   public $deployPolicy;
   /**
+   * Unique identifier of the `DeployPolicy`.
+   *
    * @var string
    */
   public $deployPolicyUid;
   /**
+   * What invoked the action (e.g. a user or automation).
+   *
    * @var string
    */
   public $invoker;
   /**
+   * Debug message for when a deploy policy event occurs.
+   *
    * @var string
    */
   public $message;
   /**
+   * Things that could have overridden the policy verdict. Overrides together
+   * with verdict decide whether the request is allowed.
+   *
    * @var string[]
    */
   public $overrides;
   /**
+   * Unique identifier of the `Delivery Pipeline`.
+   *
    * @var string
    */
   public $pipelineUid;
   /**
+   * Rule id.
+   *
    * @var string
    */
   public $rule;
   /**
+   * Rule type (e.g. Restrict Rollouts).
+   *
    * @var string
    */
   public $ruleType;
   /**
+   * The name of the `Target`. This is an optional field, as a `Target` may not
+   * always be applicable to a policy.
+   *
    * @var string
    */
   public $target;
   /**
+   * Unique identifier of the `Target`. This is an optional field, as a `Target`
+   * may not always be applicable to a policy.
+   *
    * @var string
    */
   public $targetUid;
   /**
+   * The policy verdict of the request.
+   *
    * @var string
    */
   public $verdict;
 
   /**
-   * @param bool
+   * Whether the request is allowed. Allowed is set as true if: (1) the request
+   * complies with the policy; or (2) the request doesn't comply with the policy
+   * but the policy was overridden; or (3) the request doesn't comply with the
+   * policy but the policy was suspended
+   *
+   * @param bool $allowed
    */
   public function setAllowed($allowed)
   {
@@ -88,7 +152,9 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->allowed;
   }
   /**
-   * @param string
+   * The name of the `Delivery Pipeline`.
+   *
+   * @param string $deliveryPipeline
    */
   public function setDeliveryPipeline($deliveryPipeline)
   {
@@ -102,7 +168,9 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->deliveryPipeline;
   }
   /**
-   * @param string
+   * The name of the `DeployPolicy`.
+   *
+   * @param string $deployPolicy
    */
   public function setDeployPolicy($deployPolicy)
   {
@@ -116,7 +184,9 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->deployPolicy;
   }
   /**
-   * @param string
+   * Unique identifier of the `DeployPolicy`.
+   *
+   * @param string $deployPolicyUid
    */
   public function setDeployPolicyUid($deployPolicyUid)
   {
@@ -130,21 +200,27 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->deployPolicyUid;
   }
   /**
-   * @param string
+   * What invoked the action (e.g. a user or automation).
+   *
+   * Accepted values: INVOKER_UNSPECIFIED, USER, DEPLOY_AUTOMATION
+   *
+   * @param self::INVOKER_* $invoker
    */
   public function setInvoker($invoker)
   {
     $this->invoker = $invoker;
   }
   /**
-   * @return string
+   * @return self::INVOKER_*
    */
   public function getInvoker()
   {
     return $this->invoker;
   }
   /**
-   * @param string
+   * Debug message for when a deploy policy event occurs.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -158,7 +234,10 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->message;
   }
   /**
-   * @param string[]
+   * Things that could have overridden the policy verdict. Overrides together
+   * with verdict decide whether the request is allowed.
+   *
+   * @param string[] $overrides
    */
   public function setOverrides($overrides)
   {
@@ -172,7 +251,9 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->overrides;
   }
   /**
-   * @param string
+   * Unique identifier of the `Delivery Pipeline`.
+   *
+   * @param string $pipelineUid
    */
   public function setPipelineUid($pipelineUid)
   {
@@ -186,7 +267,9 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->pipelineUid;
   }
   /**
-   * @param string
+   * Rule id.
+   *
+   * @param string $rule
    */
   public function setRule($rule)
   {
@@ -200,7 +283,9 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->rule;
   }
   /**
-   * @param string
+   * Rule type (e.g. Restrict Rollouts).
+   *
+   * @param string $ruleType
    */
   public function setRuleType($ruleType)
   {
@@ -214,7 +299,10 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->ruleType;
   }
   /**
-   * @param string
+   * The name of the `Target`. This is an optional field, as a `Target` may not
+   * always be applicable to a policy.
+   *
+   * @param string $target
    */
   public function setTarget($target)
   {
@@ -228,7 +316,10 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->target;
   }
   /**
-   * @param string
+   * Unique identifier of the `Target`. This is an optional field, as a `Target`
+   * may not always be applicable to a policy.
+   *
+   * @param string $targetUid
    */
   public function setTargetUid($targetUid)
   {
@@ -242,14 +333,19 @@ class DeployPolicyEvaluationEvent extends \Google\Collection
     return $this->targetUid;
   }
   /**
-   * @param string
+   * The policy verdict of the request.
+   *
+   * Accepted values: POLICY_VERDICT_UNSPECIFIED, ALLOWED_BY_POLICY,
+   * DENIED_BY_POLICY
+   *
+   * @param self::VERDICT_* $verdict
    */
   public function setVerdict($verdict)
   {
     $this->verdict = $verdict;
   }
   /**
-   * @return string
+   * @return self::VERDICT_*
    */
   public function getVerdict()
   {

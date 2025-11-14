@@ -20,24 +20,58 @@ namespace Google\Service\Bigquery;
 class BigLakeConfiguration extends \Google\Model
 {
   /**
+   * Default Value.
+   */
+  public const FILE_FORMAT_FILE_FORMAT_UNSPECIFIED = 'FILE_FORMAT_UNSPECIFIED';
+  /**
+   * Apache Parquet format.
+   */
+  public const FILE_FORMAT_PARQUET = 'PARQUET';
+  /**
+   * Default Value.
+   */
+  public const TABLE_FORMAT_TABLE_FORMAT_UNSPECIFIED = 'TABLE_FORMAT_UNSPECIFIED';
+  /**
+   * Apache Iceberg format.
+   */
+  public const TABLE_FORMAT_ICEBERG = 'ICEBERG';
+  /**
+   * Optional. The connection specifying the credentials to be used to read and
+   * write to external storage, such as Cloud Storage. The connection_id can
+   * have the form `{project}.{location}.{connection_id}` or
+   * `projects/{project}/locations/{location}/connections/{connection_id}".
+   *
    * @var string
    */
   public $connectionId;
   /**
+   * Optional. The file format the table data is stored in.
+   *
    * @var string
    */
   public $fileFormat;
   /**
+   * Optional. The fully qualified location prefix of the external folder where
+   * table data is stored. The '*' wildcard character is not allowed. The URI
+   * should be in the format `gs://bucket/path_to_table/`
+   *
    * @var string
    */
   public $storageUri;
   /**
+   * Optional. The table format the metadata only snapshots are stored in.
+   *
    * @var string
    */
   public $tableFormat;
 
   /**
-   * @param string
+   * Optional. The connection specifying the credentials to be used to read and
+   * write to external storage, such as Cloud Storage. The connection_id can
+   * have the form `{project}.{location}.{connection_id}` or
+   * `projects/{project}/locations/{location}/connections/{connection_id}".
+   *
+   * @param string $connectionId
    */
   public function setConnectionId($connectionId)
   {
@@ -51,21 +85,29 @@ class BigLakeConfiguration extends \Google\Model
     return $this->connectionId;
   }
   /**
-   * @param string
+   * Optional. The file format the table data is stored in.
+   *
+   * Accepted values: FILE_FORMAT_UNSPECIFIED, PARQUET
+   *
+   * @param self::FILE_FORMAT_* $fileFormat
    */
   public function setFileFormat($fileFormat)
   {
     $this->fileFormat = $fileFormat;
   }
   /**
-   * @return string
+   * @return self::FILE_FORMAT_*
    */
   public function getFileFormat()
   {
     return $this->fileFormat;
   }
   /**
-   * @param string
+   * Optional. The fully qualified location prefix of the external folder where
+   * table data is stored. The '*' wildcard character is not allowed. The URI
+   * should be in the format `gs://bucket/path_to_table/`
+   *
+   * @param string $storageUri
    */
   public function setStorageUri($storageUri)
   {
@@ -79,14 +121,18 @@ class BigLakeConfiguration extends \Google\Model
     return $this->storageUri;
   }
   /**
-   * @param string
+   * Optional. The table format the metadata only snapshots are stored in.
+   *
+   * Accepted values: TABLE_FORMAT_UNSPECIFIED, ICEBERG
+   *
+   * @param self::TABLE_FORMAT_* $tableFormat
    */
   public function setTableFormat($tableFormat)
   {
     $this->tableFormat = $tableFormat;
   }
   /**
-   * @return string
+   * @return self::TABLE_FORMAT_*
    */
   public function getTableFormat()
   {

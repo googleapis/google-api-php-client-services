@@ -20,10 +20,15 @@ namespace Google\Service\Batch;
 class AgentTaskInfo extends \Google\Model
 {
   /**
+   * The highest index of a runnable started by the agent for this task. The
+   * runnables are indexed from 1. Value 0 is undefined.
+   *
    * @var string
    */
   public $runnable;
   /**
+   * ID of the Task
+   *
    * @var string
    */
   public $taskId;
@@ -31,7 +36,10 @@ class AgentTaskInfo extends \Google\Model
   protected $taskStatusDataType = '';
 
   /**
-   * @param string
+   * The highest index of a runnable started by the agent for this task. The
+   * runnables are indexed from 1. Value 0 is undefined.
+   *
+   * @param string $runnable
    */
   public function setRunnable($runnable)
   {
@@ -45,7 +53,9 @@ class AgentTaskInfo extends \Google\Model
     return $this->runnable;
   }
   /**
-   * @param string
+   * ID of the Task
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {
@@ -59,7 +69,10 @@ class AgentTaskInfo extends \Google\Model
     return $this->taskId;
   }
   /**
-   * @param TaskStatus
+   * The status of the Task. If we need agent specific fields we should fork the
+   * public TaskStatus into an agent specific one. Or add them below.
+   *
+   * @param TaskStatus $taskStatus
    */
   public function setTaskStatus(TaskStatus $taskStatus)
   {

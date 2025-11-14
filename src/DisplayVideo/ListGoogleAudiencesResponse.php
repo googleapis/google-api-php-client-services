@@ -23,12 +23,18 @@ class ListGoogleAudiencesResponse extends \Google\Collection
   protected $googleAudiencesType = GoogleAudience::class;
   protected $googleAudiencesDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListGoogleAudiences` method to
+   * retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleAudience[]
+   * The list of Google audiences. This list will be absent if empty.
+   *
+   * @param GoogleAudience[] $googleAudiences
    */
   public function setGoogleAudiences($googleAudiences)
   {
@@ -42,7 +48,11 @@ class ListGoogleAudiencesResponse extends \Google\Collection
     return $this->googleAudiences;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListGoogleAudiences` method to
+   * retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

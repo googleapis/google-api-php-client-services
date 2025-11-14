@@ -20,12 +20,20 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAdGroupAudienceView extends \Google\Model
 {
   /**
+   * Output only. The resource name of the ad group audience view. Ad group
+   * audience view resource names have the form:
+   * `customers/{customer_id}/adGroupAudienceViews/{ad_group_id}~{criterion_id}`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Output only. The resource name of the ad group audience view. Ad group
+   * audience view resource names have the form:
+   * `customers/{customer_id}/adGroupAudienceViews/{ad_group_id}~{criterion_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

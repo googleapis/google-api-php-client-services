@@ -20,6 +20,8 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataImportConfigValidationResult extends \Google\Model
 {
   /**
+   * The source Cloud Storage URI specified in the import config.
+   *
    * @var string
    */
   public $inputGcsSource;
@@ -27,7 +29,9 @@ class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataImportConfigValidationR
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * The source Cloud Storage URI specified in the import config.
+   *
+   * @param string $inputGcsSource
    */
   public function setInputGcsSource($inputGcsSource)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataImportConfigValidationR
     return $this->inputGcsSource;
   }
   /**
-   * @param GoogleRpcStatus
+   * The validation status of import config.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {

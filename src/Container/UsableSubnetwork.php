@@ -21,26 +21,40 @@ class UsableSubnetwork extends \Google\Collection
 {
   protected $collection_key = 'secondaryIpRanges';
   /**
+   * The range of internal addresses that are owned by this subnetwork.
+   *
    * @var string
    */
   public $ipCidrRange;
   /**
+   * Network Name. Example: projects/my-project/global/networks/my-network
+   *
    * @var string
    */
   public $network;
   protected $secondaryIpRangesType = UsableSubnetworkSecondaryRange::class;
   protected $secondaryIpRangesDataType = 'array';
   /**
+   * A human readable status message representing the reasons for cases where
+   * the caller cannot use the secondary ranges under the subnet. For example if
+   * the secondary_ip_ranges is empty due to a permission issue, an insufficient
+   * permission message will be given by status_message.
+   *
    * @var string
    */
   public $statusMessage;
   /**
+   * Subnetwork Name. Example: projects/my-project/regions/us-
+   * central1/subnetworks/my-subnet
+   *
    * @var string
    */
   public $subnetwork;
 
   /**
-   * @param string
+   * The range of internal addresses that are owned by this subnetwork.
+   *
+   * @param string $ipCidrRange
    */
   public function setIpCidrRange($ipCidrRange)
   {
@@ -54,7 +68,9 @@ class UsableSubnetwork extends \Google\Collection
     return $this->ipCidrRange;
   }
   /**
-   * @param string
+   * Network Name. Example: projects/my-project/global/networks/my-network
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -68,7 +84,9 @@ class UsableSubnetwork extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param UsableSubnetworkSecondaryRange[]
+   * Secondary IP ranges.
+   *
+   * @param UsableSubnetworkSecondaryRange[] $secondaryIpRanges
    */
   public function setSecondaryIpRanges($secondaryIpRanges)
   {
@@ -82,7 +100,12 @@ class UsableSubnetwork extends \Google\Collection
     return $this->secondaryIpRanges;
   }
   /**
-   * @param string
+   * A human readable status message representing the reasons for cases where
+   * the caller cannot use the secondary ranges under the subnet. For example if
+   * the secondary_ip_ranges is empty due to a permission issue, an insufficient
+   * permission message will be given by status_message.
+   *
+   * @param string $statusMessage
    */
   public function setStatusMessage($statusMessage)
   {
@@ -96,7 +119,10 @@ class UsableSubnetwork extends \Google\Collection
     return $this->statusMessage;
   }
   /**
-   * @param string
+   * Subnetwork Name. Example: projects/my-project/regions/us-
+   * central1/subnetworks/my-subnet
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {

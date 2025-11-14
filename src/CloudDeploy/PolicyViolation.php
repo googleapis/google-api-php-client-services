@@ -24,7 +24,9 @@ class PolicyViolation extends \Google\Collection
   protected $policyViolationDetailsDataType = 'array';
 
   /**
-   * @param PolicyViolationDetails[]
+   * Policy violation details.
+   *
+   * @param PolicyViolationDetails[] $policyViolationDetails
    */
   public function setPolicyViolationDetails($policyViolationDetails)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class WorkloadIdentityConfig extends \Google\Model
 {
   /**
+   * The workload pool to attach all Kubernetes service accounts to.
+   *
    * @var string
    */
   public $workloadPool;
 
   /**
-   * @param string
+   * The workload pool to attach all Kubernetes service accounts to.
+   *
+   * @param string $workloadPool
    */
   public function setWorkloadPool($workloadPool)
   {

@@ -24,7 +24,9 @@ class CloudStorageSink extends \Google\Collection
   protected $filesDataType = 'array';
 
   /**
-   * @param CloudStorageFile[]
+   * Output only. The exported files in Cloud Storage.
+   *
+   * @param CloudStorageFile[] $files
    */
   public function setFiles($files)
   {

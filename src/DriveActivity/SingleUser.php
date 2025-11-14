@@ -20,12 +20,16 @@ namespace Google\Service\DriveActivity;
 class SingleUser extends \Google\Model
 {
   /**
+   * User value as email.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * User value as email.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

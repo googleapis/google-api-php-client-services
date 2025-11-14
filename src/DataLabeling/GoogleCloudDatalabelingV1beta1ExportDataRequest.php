@@ -20,22 +20,37 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ExportDataRequest extends \Google\Model
 {
   /**
+   * Required. Annotated dataset resource name. DataItem in Dataset and their
+   * annotations in specified annotated dataset will be exported. It's in format
+   * of projects/{project_id}/datasets/{dataset_id}/annotatedDatasets/
+   * {annotated_dataset_id}
+   *
    * @var string
    */
   public $annotatedDataset;
   /**
+   * Optional. Filter is not supported at this moment.
+   *
    * @var string
    */
   public $filter;
   protected $outputConfigType = GoogleCloudDatalabelingV1beta1OutputConfig::class;
   protected $outputConfigDataType = '';
   /**
+   * Email of the user who started the export task and should be notified by
+   * email. If empty no notification will be sent.
+   *
    * @var string
    */
   public $userEmailAddress;
 
   /**
-   * @param string
+   * Required. Annotated dataset resource name. DataItem in Dataset and their
+   * annotations in specified annotated dataset will be exported. It's in format
+   * of projects/{project_id}/datasets/{dataset_id}/annotatedDatasets/
+   * {annotated_dataset_id}
+   *
+   * @param string $annotatedDataset
    */
   public function setAnnotatedDataset($annotatedDataset)
   {
@@ -49,7 +64,9 @@ class GoogleCloudDatalabelingV1beta1ExportDataRequest extends \Google\Model
     return $this->annotatedDataset;
   }
   /**
-   * @param string
+   * Optional. Filter is not supported at this moment.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -63,7 +80,9 @@ class GoogleCloudDatalabelingV1beta1ExportDataRequest extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1OutputConfig
+   * Required. Specify the output destination.
+   *
+   * @param GoogleCloudDatalabelingV1beta1OutputConfig $outputConfig
    */
   public function setOutputConfig(GoogleCloudDatalabelingV1beta1OutputConfig $outputConfig)
   {
@@ -77,7 +96,10 @@ class GoogleCloudDatalabelingV1beta1ExportDataRequest extends \Google\Model
     return $this->outputConfig;
   }
   /**
-   * @param string
+   * Email of the user who started the export task and should be notified by
+   * email. If empty no notification will be sent.
+   *
+   * @param string $userEmailAddress
    */
   public function setUserEmailAddress($userEmailAddress)
   {

@@ -19,23 +19,70 @@ namespace Google\Service\Pubsub;
 
 class CloudStorage extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Ingestion is active.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Permission denied encountered while calling the Cloud Storage API. This can
+   * happen if the Pub/Sub SA has not been granted the [appropriate
+   * permissions](https://cloud.google.com/storage/docs/access-control/iam-
+   * permissions): - storage.objects.list: to list the objects in a bucket. -
+   * storage.objects.get: to read the objects in a bucket. -
+   * storage.buckets.get: to verify the bucket exists.
+   */
+  public const STATE_CLOUD_STORAGE_PERMISSION_DENIED = 'CLOUD_STORAGE_PERMISSION_DENIED';
+  /**
+   * Permission denied encountered while publishing to the topic. This can
+   * happen if the Pub/Sub SA has not been granted the [appropriate publish
+   * permissions](https://cloud.google.com/pubsub/docs/access-
+   * control#pubsub.publisher)
+   */
+  public const STATE_PUBLISH_PERMISSION_DENIED = 'PUBLISH_PERMISSION_DENIED';
+  /**
+   * The provided Cloud Storage bucket doesn't exist.
+   */
+  public const STATE_BUCKET_NOT_FOUND = 'BUCKET_NOT_FOUND';
+  /**
+   * The Cloud Storage bucket has too many objects, ingestion will be paused.
+   */
+  public const STATE_TOO_MANY_OBJECTS = 'TOO_MANY_OBJECTS';
   protected $avroFormatType = AvroFormat::class;
   protected $avroFormatDataType = '';
   /**
+   * Optional. Cloud Storage bucket. The bucket name must be without any prefix
+   * like "gs://". See the [bucket naming requirements]
+   * (https://cloud.google.com/storage/docs/buckets#naming).
+   *
    * @var string
    */
   public $bucket;
   /**
+   * Optional. Glob pattern used to match objects that will be ingested. If
+   * unset, all objects will be ingested. See the [supported patterns](https://c
+   * loud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-
+   * prefixes-using-glob).
+   *
    * @var string
    */
   public $matchGlob;
   /**
+   * Optional. Only objects with a larger or equal creation timestamp will be
+   * ingested.
+   *
    * @var string
    */
   public $minimumObjectCreateTime;
   protected $pubsubAvroFormatType = PubSubAvroFormat::class;
   protected $pubsubAvroFormatDataType = '';
   /**
+   * Output only. An output-only field that indicates the state of the Cloud
+   * Storage ingestion source.
+   *
    * @var string
    */
   public $state;
@@ -43,7 +90,9 @@ class CloudStorage extends \Google\Model
   protected $textFormatDataType = '';
 
   /**
-   * @param AvroFormat
+   * Optional. Data from Cloud Storage will be interpreted in Avro format.
+   *
+   * @param AvroFormat $avroFormat
    */
   public function setAvroFormat(AvroFormat $avroFormat)
   {
@@ -57,7 +106,11 @@ class CloudStorage extends \Google\Model
     return $this->avroFormat;
   }
   /**
-   * @param string
+   * Optional. Cloud Storage bucket. The bucket name must be without any prefix
+   * like "gs://". See the [bucket naming requirements]
+   * (https://cloud.google.com/storage/docs/buckets#naming).
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -71,7 +124,12 @@ class CloudStorage extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * Optional. Glob pattern used to match objects that will be ingested. If
+   * unset, all objects will be ingested. See the [supported patterns](https://c
+   * loud.google.com/storage/docs/json_api/v1/objects/list#list-objects-and-
+   * prefixes-using-glob).
+   *
+   * @param string $matchGlob
    */
   public function setMatchGlob($matchGlob)
   {
@@ -85,7 +143,10 @@ class CloudStorage extends \Google\Model
     return $this->matchGlob;
   }
   /**
-   * @param string
+   * Optional. Only objects with a larger or equal creation timestamp will be
+   * ingested.
+   *
+   * @param string $minimumObjectCreateTime
    */
   public function setMinimumObjectCreateTime($minimumObjectCreateTime)
   {
@@ -99,7 +160,10 @@ class CloudStorage extends \Google\Model
     return $this->minimumObjectCreateTime;
   }
   /**
-   * @param PubSubAvroFormat
+   * Optional. It will be assumed data from Cloud Storage was written via [Cloud
+   * Storage subscriptions](https://cloud.google.com/pubsub/docs/cloudstorage).
+   *
+   * @param PubSubAvroFormat $pubsubAvroFormat
    */
   public function setPubsubAvroFormat(PubSubAvroFormat $pubsubAvroFormat)
   {
@@ -113,21 +177,30 @@ class CloudStorage extends \Google\Model
     return $this->pubsubAvroFormat;
   }
   /**
-   * @param string
+   * Output only. An output-only field that indicates the state of the Cloud
+   * Storage ingestion source.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE,
+   * CLOUD_STORAGE_PERMISSION_DENIED, PUBLISH_PERMISSION_DENIED,
+   * BUCKET_NOT_FOUND, TOO_MANY_OBJECTS
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param TextFormat
+   * Optional. Data from Cloud Storage will be interpreted as text.
+   *
+   * @param TextFormat $textFormat
    */
   public function setTextFormat(TextFormat $textFormat)
   {

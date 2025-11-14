@@ -19,76 +19,125 @@ namespace Google\Service\Backupdr;
 
 class DiskBackupProperties extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const ARCHITECTURE_ARCHITECTURE_UNSPECIFIED = 'ARCHITECTURE_UNSPECIFIED';
+  /**
+   * Disks with architecture X86_64
+   */
+  public const ARCHITECTURE_X86_64 = 'X86_64';
+  /**
+   * Disks with architecture ARM64
+   */
+  public const ARCHITECTURE_ARM64 = 'ARM64';
   protected $collection_key = 'replicaZones';
   /**
+   * The access mode of the source disk.
+   *
    * @var string
    */
   public $accessMode;
   /**
+   * The architecture of the source disk. Valid values are ARM64 or X86_64.
+   *
    * @var string
    */
   public $architecture;
   /**
+   * A description of the source disk.
+   *
    * @var string
    */
   public $description;
   /**
+   * Indicates whether the source disk is using confidential compute mode.
+   *
    * @var bool
    */
   public $enableConfidentialCompute;
   protected $guestOsFeatureType = GuestOsFeature::class;
   protected $guestOsFeatureDataType = 'array';
   /**
+   * The labels of the source disk.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * A list of publicly available licenses that are applicable to this backup.
+   * This is applicable if the original image had licenses attached, e.g.
+   * Windows image.
+   *
    * @var string[]
    */
   public $licenses;
   /**
+   * The physical block size of the source disk.
+   *
    * @var string
    */
   public $physicalBlockSizeBytes;
   /**
+   * The number of IOPS provisioned for the source disk.
+   *
    * @var string
    */
   public $provisionedIops;
   /**
+   * The number of throughput provisioned for the source disk.
+   *
    * @var string
    */
   public $provisionedThroughput;
   /**
+   * Region and zone are mutually exclusive fields. The URL of the region of the
+   * source disk.
+   *
    * @var string
    */
   public $region;
   /**
+   * The URL of the Zones where the source disk should be replicated.
+   *
    * @var string[]
    */
   public $replicaZones;
   /**
+   * Size(in GB) of the source disk.
+   *
    * @var string
    */
   public $sizeGb;
   /**
+   * The source disk used to create this backup.
+   *
    * @var string
    */
   public $sourceDisk;
   /**
+   * The storage pool of the source disk.
+   *
    * @var string
    */
   public $storagePool;
   /**
+   * The URL of the type of the disk.
+   *
    * @var string
    */
   public $type;
   /**
+   * The URL of the Zone where the source disk.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param string
+   * The access mode of the source disk.
+   *
+   * @param string $accessMode
    */
   public function setAccessMode($accessMode)
   {
@@ -102,21 +151,27 @@ class DiskBackupProperties extends \Google\Collection
     return $this->accessMode;
   }
   /**
-   * @param string
+   * The architecture of the source disk. Valid values are ARM64 or X86_64.
+   *
+   * Accepted values: ARCHITECTURE_UNSPECIFIED, X86_64, ARM64
+   *
+   * @param self::ARCHITECTURE_* $architecture
    */
   public function setArchitecture($architecture)
   {
     $this->architecture = $architecture;
   }
   /**
-   * @return string
+   * @return self::ARCHITECTURE_*
    */
   public function getArchitecture()
   {
     return $this->architecture;
   }
   /**
-   * @param string
+   * A description of the source disk.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -130,7 +185,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param bool
+   * Indicates whether the source disk is using confidential compute mode.
+   *
+   * @param bool $enableConfidentialCompute
    */
   public function setEnableConfidentialCompute($enableConfidentialCompute)
   {
@@ -144,7 +201,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->enableConfidentialCompute;
   }
   /**
-   * @param GuestOsFeature[]
+   * A list of guest OS features that are applicable to this backup.
+   *
+   * @param GuestOsFeature[] $guestOsFeature
    */
   public function setGuestOsFeature($guestOsFeature)
   {
@@ -158,7 +217,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->guestOsFeature;
   }
   /**
-   * @param string[]
+   * The labels of the source disk.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -172,7 +233,11 @@ class DiskBackupProperties extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string[]
+   * A list of publicly available licenses that are applicable to this backup.
+   * This is applicable if the original image had licenses attached, e.g.
+   * Windows image.
+   *
+   * @param string[] $licenses
    */
   public function setLicenses($licenses)
   {
@@ -186,7 +251,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->licenses;
   }
   /**
-   * @param string
+   * The physical block size of the source disk.
+   *
+   * @param string $physicalBlockSizeBytes
    */
   public function setPhysicalBlockSizeBytes($physicalBlockSizeBytes)
   {
@@ -200,7 +267,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->physicalBlockSizeBytes;
   }
   /**
-   * @param string
+   * The number of IOPS provisioned for the source disk.
+   *
+   * @param string $provisionedIops
    */
   public function setProvisionedIops($provisionedIops)
   {
@@ -214,7 +283,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->provisionedIops;
   }
   /**
-   * @param string
+   * The number of throughput provisioned for the source disk.
+   *
+   * @param string $provisionedThroughput
    */
   public function setProvisionedThroughput($provisionedThroughput)
   {
@@ -228,7 +299,10 @@ class DiskBackupProperties extends \Google\Collection
     return $this->provisionedThroughput;
   }
   /**
-   * @param string
+   * Region and zone are mutually exclusive fields. The URL of the region of the
+   * source disk.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -242,7 +316,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param string[]
+   * The URL of the Zones where the source disk should be replicated.
+   *
+   * @param string[] $replicaZones
    */
   public function setReplicaZones($replicaZones)
   {
@@ -256,7 +332,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->replicaZones;
   }
   /**
-   * @param string
+   * Size(in GB) of the source disk.
+   *
+   * @param string $sizeGb
    */
   public function setSizeGb($sizeGb)
   {
@@ -270,7 +348,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->sizeGb;
   }
   /**
-   * @param string
+   * The source disk used to create this backup.
+   *
+   * @param string $sourceDisk
    */
   public function setSourceDisk($sourceDisk)
   {
@@ -284,7 +364,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->sourceDisk;
   }
   /**
-   * @param string
+   * The storage pool of the source disk.
+   *
+   * @param string $storagePool
    */
   public function setStoragePool($storagePool)
   {
@@ -298,7 +380,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->storagePool;
   }
   /**
-   * @param string
+   * The URL of the type of the disk.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -312,7 +396,9 @@ class DiskBackupProperties extends \Google\Collection
     return $this->type;
   }
   /**
-   * @param string
+   * The URL of the Zone where the source disk.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

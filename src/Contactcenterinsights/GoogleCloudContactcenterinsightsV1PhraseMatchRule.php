@@ -22,16 +22,24 @@ class GoogleCloudContactcenterinsightsV1PhraseMatchRule extends \Google\Model
   protected $configType = GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig::class;
   protected $configDataType = '';
   /**
+   * Specifies whether the phrase must be missing from the transcript segment or
+   * present in the transcript segment.
+   *
    * @var bool
    */
   public $negated;
   /**
+   * Required. The phrase to be matched.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig
+   * Provides additional information about the rule that specifies how to apply
+   * the rule.
+   *
+   * @param GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig $config
    */
   public function setConfig(GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig $config)
   {
@@ -45,7 +53,10 @@ class GoogleCloudContactcenterinsightsV1PhraseMatchRule extends \Google\Model
     return $this->config;
   }
   /**
-   * @param bool
+   * Specifies whether the phrase must be missing from the transcript segment or
+   * present in the transcript segment.
+   *
+   * @param bool $negated
    */
   public function setNegated($negated)
   {
@@ -59,7 +70,9 @@ class GoogleCloudContactcenterinsightsV1PhraseMatchRule extends \Google\Model
     return $this->negated;
   }
   /**
-   * @param string
+   * Required. The phrase to be matched.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

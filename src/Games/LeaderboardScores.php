@@ -23,26 +23,37 @@ class LeaderboardScores extends \Google\Collection
   protected $itemsType = LeaderboardEntry::class;
   protected $itemsDataType = 'array';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#leaderboardScores`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The pagination token for the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The total number of scores in the leaderboard.
+   *
    * @var string
    */
   public $numScores;
   protected $playerScoreType = LeaderboardEntry::class;
   protected $playerScoreDataType = '';
   /**
+   * The pagination token for the previous page of results.
+   *
    * @var string
    */
   public $prevPageToken;
 
   /**
-   * @param LeaderboardEntry[]
+   * The scores in the leaderboard.
+   *
+   * @param LeaderboardEntry[] $items
    */
   public function setItems($items)
   {
@@ -56,7 +67,10 @@ class LeaderboardScores extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#leaderboardScores`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -70,7 +84,9 @@ class LeaderboardScores extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The pagination token for the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -84,7 +100,9 @@ class LeaderboardScores extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * The total number of scores in the leaderboard.
+   *
+   * @param string $numScores
    */
   public function setNumScores($numScores)
   {
@@ -98,7 +116,13 @@ class LeaderboardScores extends \Google\Collection
     return $this->numScores;
   }
   /**
-   * @param LeaderboardEntry
+   * The score of the requesting player on the leaderboard. The player's score
+   * may appear both here and in the list of scores above. If you are viewing a
+   * public leaderboard and the player is not sharing their gameplay information
+   * publicly, the `scoreRank`and `formattedScoreRank` values will not be
+   * present.
+   *
+   * @param LeaderboardEntry $playerScore
    */
   public function setPlayerScore(LeaderboardEntry $playerScore)
   {
@@ -112,7 +136,9 @@ class LeaderboardScores extends \Google\Collection
     return $this->playerScore;
   }
   /**
-   * @param string
+   * The pagination token for the previous page of results.
+   *
+   * @param string $prevPageToken
    */
   public function setPrevPageToken($prevPageToken)
   {

@@ -23,12 +23,19 @@ class ListJobsResponse extends \Google\Collection
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
   /**
+   * A token to retrieve next page of results. Pass this value in the page_token
+   * field in the subsequent call to ListJobs to retrieve the next page of
+   * results. If this is empty it indicates that there are no more results
+   * through which to paginate. The page token is valid for only 2 hours.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Job[]
+   * The list of jobs.
+   *
+   * @param Job[] $jobs
    */
   public function setJobs($jobs)
   {
@@ -42,7 +49,12 @@ class ListJobsResponse extends \Google\Collection
     return $this->jobs;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results. Pass this value in the page_token
+   * field in the subsequent call to ListJobs to retrieve the next page of
+   * results. If this is empty it indicates that there are no more results
+   * through which to paginate. The page token is valid for only 2 hours.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

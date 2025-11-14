@@ -20,17 +20,36 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesConversionActionValueSettings extends \Google\Model
 {
   /**
+   * Controls whether the default value and default currency code are used in
+   * place of the value and currency code specified in conversion events for
+   * this conversion action.
+   *
    * @var bool
    */
   public $alwaysUseDefaultValue;
   /**
+   * The currency code to use when conversion events for this conversion action
+   * are sent with an invalid or missing currency code, or when this conversion
+   * action is configured to always use the default value.
+   *
    * @var string
    */
   public $defaultCurrencyCode;
+  /**
+   * The value to use when conversion events for this conversion action are sent
+   * with an invalid, disallowed or missing value, or when this conversion
+   * action is configured to always use the default value.
+   *
+   * @var 
+   */
   public $defaultValue;
 
   /**
-   * @param bool
+   * Controls whether the default value and default currency code are used in
+   * place of the value and currency code specified in conversion events for
+   * this conversion action.
+   *
+   * @param bool $alwaysUseDefaultValue
    */
   public function setAlwaysUseDefaultValue($alwaysUseDefaultValue)
   {
@@ -44,7 +63,11 @@ class GoogleAdsSearchads360V0ResourcesConversionActionValueSettings extends \Goo
     return $this->alwaysUseDefaultValue;
   }
   /**
-   * @param string
+   * The currency code to use when conversion events for this conversion action
+   * are sent with an invalid or missing currency code, or when this conversion
+   * action is configured to always use the default value.
+   *
+   * @param string $defaultCurrencyCode
    */
   public function setDefaultCurrencyCode($defaultCurrencyCode)
   {

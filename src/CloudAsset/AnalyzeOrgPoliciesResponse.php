@@ -23,6 +23,9 @@ class AnalyzeOrgPoliciesResponse extends \Google\Collection
   protected $constraintType = AnalyzerOrgPolicyConstraint::class;
   protected $constraintDataType = '';
   /**
+   * The page token to fetch the next page for
+   * AnalyzeOrgPoliciesResponse.org_policy_results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -30,7 +33,9 @@ class AnalyzeOrgPoliciesResponse extends \Google\Collection
   protected $orgPolicyResultsDataType = 'array';
 
   /**
-   * @param AnalyzerOrgPolicyConstraint
+   * The definition of the constraint in the request.
+   *
+   * @param AnalyzerOrgPolicyConstraint $constraint
    */
   public function setConstraint(AnalyzerOrgPolicyConstraint $constraint)
   {
@@ -44,7 +49,10 @@ class AnalyzeOrgPoliciesResponse extends \Google\Collection
     return $this->constraint;
   }
   /**
-   * @param string
+   * The page token to fetch the next page for
+   * AnalyzeOrgPoliciesResponse.org_policy_results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -58,7 +66,10 @@ class AnalyzeOrgPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param OrgPolicyResult[]
+   * The organization policies under the AnalyzeOrgPoliciesRequest.scope with
+   * the AnalyzeOrgPoliciesRequest.constraint.
+   *
+   * @param OrgPolicyResult[] $orgPolicyResults
    */
   public function setOrgPolicyResults($orgPolicyResults)
   {

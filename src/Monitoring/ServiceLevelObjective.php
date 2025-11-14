@@ -20,45 +20,114 @@ namespace Google\Service\Monitoring;
 class ServiceLevelObjective extends \Google\Model
 {
   /**
+   * Undefined period, raises an error.
+   */
+  public const CALENDAR_PERIOD_CALENDAR_PERIOD_UNSPECIFIED = 'CALENDAR_PERIOD_UNSPECIFIED';
+  /**
+   * A day.
+   */
+  public const CALENDAR_PERIOD_DAY = 'DAY';
+  /**
+   * A week. Weeks begin on Monday, following ISO 8601
+   * (https://en.wikipedia.org/wiki/ISO_week_date).
+   */
+  public const CALENDAR_PERIOD_WEEK = 'WEEK';
+  /**
+   * A fortnight. The first calendar fortnight of the year begins at the start
+   * of week 1 according to ISO 8601
+   * (https://en.wikipedia.org/wiki/ISO_week_date).
+   */
+  public const CALENDAR_PERIOD_FORTNIGHT = 'FORTNIGHT';
+  /**
+   * A month.
+   */
+  public const CALENDAR_PERIOD_MONTH = 'MONTH';
+  /**
+   * A quarter. Quarters start on dates 1-Jan, 1-Apr, 1-Jul, and 1-Oct of each
+   * year.
+   */
+  public const CALENDAR_PERIOD_QUARTER = 'QUARTER';
+  /**
+   * A half-year. Half-years start on dates 1-Jan and 1-Jul.
+   */
+  public const CALENDAR_PERIOD_HALF = 'HALF';
+  /**
+   * A year.
+   */
+  public const CALENDAR_PERIOD_YEAR = 'YEAR';
+  /**
+   * A calendar period, semantically "since the start of the current ". At this
+   * time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+   *
    * @var string
    */
   public $calendarPeriod;
   /**
+   * Name used for UI elements listing this SLO.
+   *
    * @var string
    */
   public $displayName;
+  /**
+   * The fraction of service that must be good in order for this objective to be
+   * met. 0 < goal <= 0.9999.
+   *
+   * @var 
+   */
   public $goal;
   /**
+   * Identifier. Resource name for this ServiceLevelObjective. The format is: pr
+   * ojects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/
+   * [SLO_NAME]
+   *
    * @var string
    */
   public $name;
   /**
+   * A rolling time period, semantically "in the past ". Must be an integer
+   * multiple of 1 day no larger than 30 days.
+   *
    * @var string
    */
   public $rollingPeriod;
   protected $serviceLevelIndicatorType = ServiceLevelIndicator::class;
   protected $serviceLevelIndicatorDataType = '';
   /**
+   * Labels which have been used to annotate the service-level objective. Label
+   * keys must start with a letter. Label keys and values may contain lowercase
+   * letters, numbers, underscores, and dashes. Label keys and values have a
+   * maximum length of 63 characters, and must be less than 128 bytes in size.
+   * Up to 64 label entries may be stored. For labels which do not have a
+   * semantic value, the empty string may be supplied for the label value.
+   *
    * @var string[]
    */
   public $userLabels;
 
   /**
-   * @param string
+   * A calendar period, semantically "since the start of the current ". At this
+   * time, only DAY, WEEK, FORTNIGHT, and MONTH are supported.
+   *
+   * Accepted values: CALENDAR_PERIOD_UNSPECIFIED, DAY, WEEK, FORTNIGHT, MONTH,
+   * QUARTER, HALF, YEAR
+   *
+   * @param self::CALENDAR_PERIOD_* $calendarPeriod
    */
   public function setCalendarPeriod($calendarPeriod)
   {
     $this->calendarPeriod = $calendarPeriod;
   }
   /**
-   * @return string
+   * @return self::CALENDAR_PERIOD_*
    */
   public function getCalendarPeriod()
   {
     return $this->calendarPeriod;
   }
   /**
-   * @param string
+   * Name used for UI elements listing this SLO.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -80,7 +149,11 @@ class ServiceLevelObjective extends \Google\Model
     return $this->goal;
   }
   /**
-   * @param string
+   * Identifier. Resource name for this ServiceLevelObjective. The format is: pr
+   * ojects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/
+   * [SLO_NAME]
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -94,7 +167,10 @@ class ServiceLevelObjective extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * A rolling time period, semantically "in the past ". Must be an integer
+   * multiple of 1 day no larger than 30 days.
+   *
+   * @param string $rollingPeriod
    */
   public function setRollingPeriod($rollingPeriod)
   {
@@ -108,7 +184,11 @@ class ServiceLevelObjective extends \Google\Model
     return $this->rollingPeriod;
   }
   /**
-   * @param ServiceLevelIndicator
+   * The definition of good service, used to measure and calculate the quality
+   * of the Service's performance with respect to a single aspect of service
+   * quality.
+   *
+   * @param ServiceLevelIndicator $serviceLevelIndicator
    */
   public function setServiceLevelIndicator(ServiceLevelIndicator $serviceLevelIndicator)
   {
@@ -122,7 +202,14 @@ class ServiceLevelObjective extends \Google\Model
     return $this->serviceLevelIndicator;
   }
   /**
-   * @param string[]
+   * Labels which have been used to annotate the service-level objective. Label
+   * keys must start with a letter. Label keys and values may contain lowercase
+   * letters, numbers, underscores, and dashes. Label keys and values have a
+   * maximum length of 63 characters, and must be less than 128 bytes in size.
+   * Up to 64 label entries may be stored. For labels which do not have a
+   * semantic value, the empty string may be supplied for the label value.
+   *
+   * @param string[] $userLabels
    */
   public function setUserLabels($userLabels)
   {

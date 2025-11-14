@@ -20,16 +20,22 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2LabelProperties extends \Google\Model
 {
   /**
+   * The description of the label.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Title of the label.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The description of the label.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +49,9 @@ class GoogleAppsDriveLabelsV2LabelProperties extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Title of the label.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

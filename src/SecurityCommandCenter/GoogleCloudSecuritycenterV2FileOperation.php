@@ -20,19 +20,50 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2FileOperation extends \Google\Model
 {
   /**
+   * The operation is unspecified.
+   */
+  public const TYPE_OPERATION_TYPE_UNSPECIFIED = 'OPERATION_TYPE_UNSPECIFIED';
+  /**
+   * Represents an open operation.
+   */
+  public const TYPE_OPEN = 'OPEN';
+  /**
+   * Represents a read operation.
+   */
+  public const TYPE_READ = 'READ';
+  /**
+   * Represents a rename operation.
+   */
+  public const TYPE_RENAME = 'RENAME';
+  /**
+   * Represents a write operation.
+   */
+  public const TYPE_WRITE = 'WRITE';
+  /**
+   * Represents an execute operation.
+   */
+  public const TYPE_EXECUTE = 'EXECUTE';
+  /**
+   * The type of the operation
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The type of the operation
+   *
+   * Accepted values: OPERATION_TYPE_UNSPECIFIED, OPEN, READ, RENAME, WRITE,
+   * EXECUTE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

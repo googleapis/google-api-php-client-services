@@ -20,12 +20,17 @@ namespace Google\Service\ShoppingContent;
 class RegionalinventoryCustomBatchResponseEntry extends \Google\Model
 {
   /**
+   * The ID of the request entry this entry responds to.
+   *
    * @var string
    */
   public $batchId;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#regionalinventoryCustomBatchResponseEntry`".
+   *
    * @var string
    */
   public $kind;
@@ -33,7 +38,9 @@ class RegionalinventoryCustomBatchResponseEntry extends \Google\Model
   protected $regionalInventoryDataType = '';
 
   /**
-   * @param string
+   * The ID of the request entry this entry responds to.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -47,7 +54,10 @@ class RegionalinventoryCustomBatchResponseEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param Errors
+   * A list of errors for failed custombatch entries. *Note:* Schema errors fail
+   * the whole request.
+   *
+   * @param Errors $errors
    */
   public function setErrors(Errors $errors)
   {
@@ -61,7 +71,10 @@ class RegionalinventoryCustomBatchResponseEntry extends \Google\Model
     return $this->errors;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#regionalinventoryCustomBatchResponseEntry`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -75,7 +88,9 @@ class RegionalinventoryCustomBatchResponseEntry extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param RegionalInventory
+   * Price and availability of the product.
+   *
+   * @param RegionalInventory $regionalInventory
    */
   public function setRegionalInventory(RegionalInventory $regionalInventory)
   {

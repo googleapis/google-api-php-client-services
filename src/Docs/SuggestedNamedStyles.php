@@ -25,7 +25,11 @@ class SuggestedNamedStyles extends \Google\Model
   protected $namedStylesSuggestionStateDataType = '';
 
   /**
-   * @param NamedStyles
+   * A NamedStyles that only includes the changes made in this suggestion. This
+   * can be used along with the named_styles_suggestion_state to see which
+   * fields have changed and their new values.
+   *
+   * @param NamedStyles $namedStyles
    */
   public function setNamedStyles(NamedStyles $namedStyles)
   {
@@ -39,7 +43,10 @@ class SuggestedNamedStyles extends \Google\Model
     return $this->namedStyles;
   }
   /**
-   * @param NamedStylesSuggestionState
+   * A mask that indicates which of the fields on the base NamedStyles have been
+   * changed in this suggestion.
+   *
+   * @param NamedStylesSuggestionState $namedStylesSuggestionState
    */
   public function setNamedStylesSuggestionState(NamedStylesSuggestionState $namedStylesSuggestionState)
   {

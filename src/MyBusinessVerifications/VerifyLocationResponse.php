@@ -23,7 +23,9 @@ class VerifyLocationResponse extends \Google\Model
   protected $verificationDataType = '';
 
   /**
-   * @param Verification
+   * The created verification request.
+   *
+   * @param Verification $verification
    */
   public function setVerification(Verification $verification)
   {

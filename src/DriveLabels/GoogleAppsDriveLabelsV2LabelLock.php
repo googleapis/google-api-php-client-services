@@ -19,37 +19,67 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
 {
+  /**
+   * Unknown state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The label lock is active and is being enforced by the server.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The label lock is being deleted. The label lock will continue to be
+   * enforced by the server until it has been fully removed.
+   */
+  public const STATE_DELETING = 'DELETING';
   protected $capabilitiesType = GoogleAppsDriveLabelsV2LabelLockCapabilities::class;
   protected $capabilitiesDataType = '';
   /**
+   * The ID of the selection field choice that should be locked. If present,
+   * `field_id` must also be present.
+   *
    * @var string
    */
   public $choiceId;
   /**
+   * Output only. The time this label lock was created.
+   *
    * @var string
    */
   public $createTime;
   protected $creatorType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $creatorDataType = '';
   /**
+   * Output only. A timestamp indicating when this label lock was scheduled for
+   * deletion. Present only if this label lock is in the `DELETING` state.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * The ID of the field that should be locked. Empty if the whole label should
+   * be locked.
+   *
    * @var string
    */
   public $fieldId;
   /**
+   * Output only. Resource name of this label lock.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. This label lock's state.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param GoogleAppsDriveLabelsV2LabelLockCapabilities
+   * Output only. The user's capabilities on this label lock.
+   *
+   * @param GoogleAppsDriveLabelsV2LabelLockCapabilities $capabilities
    */
   public function setCapabilities(GoogleAppsDriveLabelsV2LabelLockCapabilities $capabilities)
   {
@@ -63,7 +93,10 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
     return $this->capabilities;
   }
   /**
-   * @param string
+   * The ID of the selection field choice that should be locked. If present,
+   * `field_id` must also be present.
+   *
+   * @param string $choiceId
    */
   public function setChoiceId($choiceId)
   {
@@ -77,7 +110,9 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
     return $this->choiceId;
   }
   /**
-   * @param string
+   * Output only. The time this label lock was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -91,7 +126,10 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2UserInfo
+   * Output only. The user whose credentials were used to create the label lock.
+   * Not present if no user was responsible for creating the label lock.
+   *
+   * @param GoogleAppsDriveLabelsV2UserInfo $creator
    */
   public function setCreator(GoogleAppsDriveLabelsV2UserInfo $creator)
   {
@@ -105,7 +143,10 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
     return $this->creator;
   }
   /**
-   * @param string
+   * Output only. A timestamp indicating when this label lock was scheduled for
+   * deletion. Present only if this label lock is in the `DELETING` state.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -119,7 +160,10 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * The ID of the field that should be locked. Empty if the whole label should
+   * be locked.
+   *
+   * @param string $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -133,7 +177,9 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
     return $this->fieldId;
   }
   /**
-   * @param string
+   * Output only. Resource name of this label lock.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -147,14 +193,18 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. This label lock's state.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, DELETING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

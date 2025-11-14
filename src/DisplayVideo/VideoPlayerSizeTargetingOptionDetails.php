@@ -20,19 +20,50 @@ namespace Google\Service\DisplayVideo;
 class VideoPlayerSizeTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Video player size is not specified in this version. This enum is a place
+   * holder for a default value and does not represent a real video player size.
+   */
+  public const VIDEO_PLAYER_SIZE_VIDEO_PLAYER_SIZE_UNSPECIFIED = 'VIDEO_PLAYER_SIZE_UNSPECIFIED';
+  /**
+   * The dimensions of the video player are less than 400×300 (desktop), or up
+   * to 20% of screen covered (mobile).
+   */
+  public const VIDEO_PLAYER_SIZE_VIDEO_PLAYER_SIZE_SMALL = 'VIDEO_PLAYER_SIZE_SMALL';
+  /**
+   * The dimensions of the video player are between 400x300 and 1280x720 pixels
+   * (desktop), or 20% to 90% of the screen covered (mobile).
+   */
+  public const VIDEO_PLAYER_SIZE_VIDEO_PLAYER_SIZE_LARGE = 'VIDEO_PLAYER_SIZE_LARGE';
+  /**
+   * The dimensions of the video player are 1280×720 or greater (desktop), or
+   * over 90% of the screen covered (mobile).
+   */
+  public const VIDEO_PLAYER_SIZE_VIDEO_PLAYER_SIZE_HD = 'VIDEO_PLAYER_SIZE_HD';
+  /**
+   * The dimensions of the video player are unknown.
+   */
+  public const VIDEO_PLAYER_SIZE_VIDEO_PLAYER_SIZE_UNKNOWN = 'VIDEO_PLAYER_SIZE_UNKNOWN';
+  /**
+   * Output only. The video player size.
+   *
    * @var string
    */
   public $videoPlayerSize;
 
   /**
-   * @param string
+   * Output only. The video player size.
+   *
+   * Accepted values: VIDEO_PLAYER_SIZE_UNSPECIFIED, VIDEO_PLAYER_SIZE_SMALL,
+   * VIDEO_PLAYER_SIZE_LARGE, VIDEO_PLAYER_SIZE_HD, VIDEO_PLAYER_SIZE_UNKNOWN
+   *
+   * @param self::VIDEO_PLAYER_SIZE_* $videoPlayerSize
    */
   public function setVideoPlayerSize($videoPlayerSize)
   {
     $this->videoPlayerSize = $videoPlayerSize;
   }
   /**
-   * @return string
+   * @return self::VIDEO_PLAYER_SIZE_*
    */
   public function getVideoPlayerSize()
   {

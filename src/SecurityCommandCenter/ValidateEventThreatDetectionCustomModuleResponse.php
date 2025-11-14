@@ -23,7 +23,10 @@ class ValidateEventThreatDetectionCustomModuleResponse extends \Google\Model
   protected $errorsDataType = '';
 
   /**
-   * @param CustomModuleValidationErrors
+   * A list of errors returned by the validator. If the list is empty, there
+   * were no errors.
+   *
+   * @param CustomModuleValidationErrors $errors
    */
   public function setErrors(CustomModuleValidationErrors $errors)
   {

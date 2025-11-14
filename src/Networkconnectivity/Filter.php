@@ -20,24 +20,54 @@ namespace Google\Service\Networkconnectivity;
 class Filter extends \Google\Model
 {
   /**
+   * Default value.
+   */
+  public const PROTOCOL_VERSION_PROTOCOL_VERSION_UNSPECIFIED = 'PROTOCOL_VERSION_UNSPECIFIED';
+  /**
+   * The PBR is for IPv4 internet protocol traffic.
+   */
+  public const PROTOCOL_VERSION_IPV4 = 'IPV4';
+  /**
+   * The PBR is for IPv6 internet protocol traffic.
+   */
+  public const PROTOCOL_VERSION_IPV6 = 'IPV6';
+  /**
+   * Optional. The destination IP range of outgoing packets that this policy-
+   * based route applies to. Default is "0.0.0.0/0" if protocol version is IPv4
+   * and "::/0" if protocol version is IPv6.
+   *
    * @var string
    */
   public $destRange;
   /**
+   * Optional. The IP protocol that this policy-based route applies to. Valid
+   * values are 'TCP', 'UDP', and 'ALL'. Default is 'ALL'.
+   *
    * @var string
    */
   public $ipProtocol;
   /**
+   * Required. Internet protocol versions this policy-based route applies to.
+   * IPV4 and IPV6 is supported.
+   *
    * @var string
    */
   public $protocolVersion;
   /**
+   * Optional. The source IP range of outgoing packets that this policy-based
+   * route applies to. Default is "0.0.0.0/0" if protocol version is IPv4 and
+   * "::/0" if protocol version is IPv6.
+   *
    * @var string
    */
   public $srcRange;
 
   /**
-   * @param string
+   * Optional. The destination IP range of outgoing packets that this policy-
+   * based route applies to. Default is "0.0.0.0/0" if protocol version is IPv4
+   * and "::/0" if protocol version is IPv6.
+   *
+   * @param string $destRange
    */
   public function setDestRange($destRange)
   {
@@ -51,7 +81,10 @@ class Filter extends \Google\Model
     return $this->destRange;
   }
   /**
-   * @param string
+   * Optional. The IP protocol that this policy-based route applies to. Valid
+   * values are 'TCP', 'UDP', and 'ALL'. Default is 'ALL'.
+   *
+   * @param string $ipProtocol
    */
   public function setIpProtocol($ipProtocol)
   {
@@ -65,21 +98,30 @@ class Filter extends \Google\Model
     return $this->ipProtocol;
   }
   /**
-   * @param string
+   * Required. Internet protocol versions this policy-based route applies to.
+   * IPV4 and IPV6 is supported.
+   *
+   * Accepted values: PROTOCOL_VERSION_UNSPECIFIED, IPV4, IPV6
+   *
+   * @param self::PROTOCOL_VERSION_* $protocolVersion
    */
   public function setProtocolVersion($protocolVersion)
   {
     $this->protocolVersion = $protocolVersion;
   }
   /**
-   * @return string
+   * @return self::PROTOCOL_VERSION_*
    */
   public function getProtocolVersion()
   {
     return $this->protocolVersion;
   }
   /**
-   * @param string
+   * Optional. The source IP range of outgoing packets that this policy-based
+   * route applies to. Default is "0.0.0.0/0" if protocol version is IPv4 and
+   * "::/0" if protocol version is IPv6.
+   *
+   * @param string $srcRange
    */
   public function setSrcRange($srcRange)
   {

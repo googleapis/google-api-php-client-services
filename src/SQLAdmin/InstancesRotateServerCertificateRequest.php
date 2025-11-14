@@ -23,7 +23,9 @@ class InstancesRotateServerCertificateRequest extends \Google\Model
   protected $rotateServerCertificateContextDataType = '';
 
   /**
-   * @param RotateServerCertificateContext
+   * Optional. Contains details about the rotate server certificate operation.
+   *
+   * @param RotateServerCertificateContext $rotateServerCertificateContext
    */
   public function setRotateServerCertificateContext(RotateServerCertificateContext $rotateServerCertificateContext)
   {

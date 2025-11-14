@@ -21,14 +21,26 @@ class OrgPolicyViolationInfo extends \Google\Collection
 {
   protected $collection_key = 'violationInfo';
   /**
+   * Optional. Deprecated. Resource payload that is currently in scope and is
+   * subjected to orgpolicy conditions. This payload may be the subset of the
+   * actual Resource that may come in the request.
+   *
+   * @deprecated
    * @var array[]
    */
   public $payload;
   /**
+   * Optional. Deprecated. Tags referenced on the resource at the time of
+   * evaluation.
+   *
+   * @deprecated
    * @var string[]
    */
   public $resourceTags;
   /**
+   * Optional. Resource type that the orgpolicy is checked against. Example:
+   * compute.googleapis.com/Instance, store.googleapis.com/bucket
+   *
    * @var string
    */
   public $resourceType;
@@ -36,13 +48,19 @@ class OrgPolicyViolationInfo extends \Google\Collection
   protected $violationInfoDataType = 'array';
 
   /**
-   * @param array[]
+   * Optional. Deprecated. Resource payload that is currently in scope and is
+   * subjected to orgpolicy conditions. This payload may be the subset of the
+   * actual Resource that may come in the request.
+   *
+   * @deprecated
+   * @param array[] $payload
    */
   public function setPayload($payload)
   {
     $this->payload = $payload;
   }
   /**
+   * @deprecated
    * @return array[]
    */
   public function getPayload()
@@ -50,13 +68,18 @@ class OrgPolicyViolationInfo extends \Google\Collection
     return $this->payload;
   }
   /**
-   * @param string[]
+   * Optional. Deprecated. Tags referenced on the resource at the time of
+   * evaluation.
+   *
+   * @deprecated
+   * @param string[] $resourceTags
    */
   public function setResourceTags($resourceTags)
   {
     $this->resourceTags = $resourceTags;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getResourceTags()
@@ -64,7 +87,10 @@ class OrgPolicyViolationInfo extends \Google\Collection
     return $this->resourceTags;
   }
   /**
-   * @param string
+   * Optional. Resource type that the orgpolicy is checked against. Example:
+   * compute.googleapis.com/Instance, store.googleapis.com/bucket
+   *
+   * @param string $resourceType
    */
   public function setResourceType($resourceType)
   {
@@ -78,7 +104,9 @@ class OrgPolicyViolationInfo extends \Google\Collection
     return $this->resourceType;
   }
   /**
-   * @param ViolationInfo[]
+   * Optional. Policy violations
+   *
+   * @param ViolationInfo[] $violationInfo
    */
   public function setViolationInfo($violationInfo)
   {

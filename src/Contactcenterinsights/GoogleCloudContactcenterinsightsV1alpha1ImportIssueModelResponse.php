@@ -23,7 +23,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ImportIssueModelResponse extends \
   protected $issueModelDataType = '';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModel
+   * The issue model that was imported.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1IssueModel $issueModel
    */
   public function setIssueModel(GoogleCloudContactcenterinsightsV1alpha1IssueModel $issueModel)
   {

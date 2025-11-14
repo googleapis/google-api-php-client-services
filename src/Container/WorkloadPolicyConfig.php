@@ -20,16 +20,23 @@ namespace Google\Service\Container;
 class WorkloadPolicyConfig extends \Google\Model
 {
   /**
+   * If true, workloads can use NET_ADMIN capability.
+   *
    * @var bool
    */
   public $allowNetAdmin;
   /**
+   * If true, enables the GCW Auditor that audits workloads on standard
+   * clusters.
+   *
    * @var bool
    */
   public $autopilotCompatibilityAuditingEnabled;
 
   /**
-   * @param bool
+   * If true, workloads can use NET_ADMIN capability.
+   *
+   * @param bool $allowNetAdmin
    */
   public function setAllowNetAdmin($allowNetAdmin)
   {
@@ -43,7 +50,10 @@ class WorkloadPolicyConfig extends \Google\Model
     return $this->allowNetAdmin;
   }
   /**
-   * @param bool
+   * If true, enables the GCW Auditor that audits workloads on standard
+   * clusters.
+   *
+   * @param bool $autopilotCompatibilityAuditingEnabled
    */
   public function setAutopilotCompatibilityAuditingEnabled($autopilotCompatibilityAuditingEnabled)
   {

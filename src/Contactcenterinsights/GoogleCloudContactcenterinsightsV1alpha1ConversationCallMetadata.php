@@ -20,16 +20,22 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1ConversationCallMetadata extends \Google\Model
 {
   /**
+   * The audio channel that contains the agent.
+   *
    * @var int
    */
   public $agentChannel;
   /**
+   * The audio channel that contains the customer.
+   *
    * @var int
    */
   public $customerChannel;
 
   /**
-   * @param int
+   * The audio channel that contains the agent.
+   *
+   * @param int $agentChannel
    */
   public function setAgentChannel($agentChannel)
   {
@@ -43,7 +49,9 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationCallMetadata extends \
     return $this->agentChannel;
   }
   /**
-   * @param int
+   * The audio channel that contains the customer.
+   *
+   * @param int $customerChannel
    */
   public function setCustomerChannel($customerChannel)
   {

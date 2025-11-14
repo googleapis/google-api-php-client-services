@@ -20,33 +20,82 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Value extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const DAY_OF_WEEK_VALUE_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_OF_WEEK_VALUE_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_OF_WEEK_VALUE_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_OF_WEEK_VALUE_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_OF_WEEK_VALUE_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_OF_WEEK_VALUE_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_OF_WEEK_VALUE_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_OF_WEEK_VALUE_SUNDAY = 'SUNDAY';
+  /**
+   * boolean
+   *
    * @var bool
    */
   public $booleanValue;
   protected $dateValueType = GoogleTypeDate::class;
   protected $dateValueDataType = '';
   /**
+   * day of week
+   *
    * @var string
    */
   public $dayOfWeekValue;
+  /**
+   * float
+   *
+   * @var 
+   */
   public $floatValue;
   /**
+   * integer
+   *
    * @var string
    */
   public $integerValue;
   /**
+   * string
+   *
    * @var string
    */
   public $stringValue;
   protected $timeValueType = GoogleTypeTimeOfDay::class;
   protected $timeValueDataType = '';
   /**
+   * timestamp
+   *
    * @var string
    */
   public $timestampValue;
 
   /**
-   * @param bool
+   * boolean
+   *
+   * @param bool $booleanValue
    */
   public function setBooleanValue($booleanValue)
   {
@@ -60,7 +109,9 @@ class GooglePrivacyDlpV2Value extends \Google\Model
     return $this->booleanValue;
   }
   /**
-   * @param GoogleTypeDate
+   * date
+   *
+   * @param GoogleTypeDate $dateValue
    */
   public function setDateValue(GoogleTypeDate $dateValue)
   {
@@ -74,14 +125,19 @@ class GooglePrivacyDlpV2Value extends \Google\Model
     return $this->dateValue;
   }
   /**
-   * @param string
+   * day of week
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_OF_WEEK_VALUE_* $dayOfWeekValue
    */
   public function setDayOfWeekValue($dayOfWeekValue)
   {
     $this->dayOfWeekValue = $dayOfWeekValue;
   }
   /**
-   * @return string
+   * @return self::DAY_OF_WEEK_VALUE_*
    */
   public function getDayOfWeekValue()
   {
@@ -96,7 +152,9 @@ class GooglePrivacyDlpV2Value extends \Google\Model
     return $this->floatValue;
   }
   /**
-   * @param string
+   * integer
+   *
+   * @param string $integerValue
    */
   public function setIntegerValue($integerValue)
   {
@@ -110,7 +168,9 @@ class GooglePrivacyDlpV2Value extends \Google\Model
     return $this->integerValue;
   }
   /**
-   * @param string
+   * string
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {
@@ -124,7 +184,9 @@ class GooglePrivacyDlpV2Value extends \Google\Model
     return $this->stringValue;
   }
   /**
-   * @param GoogleTypeTimeOfDay
+   * time of day
+   *
+   * @param GoogleTypeTimeOfDay $timeValue
    */
   public function setTimeValue(GoogleTypeTimeOfDay $timeValue)
   {
@@ -138,7 +200,9 @@ class GooglePrivacyDlpV2Value extends \Google\Model
     return $this->timeValue;
   }
   /**
-   * @param string
+   * timestamp
+   *
+   * @param string $timestampValue
    */
   public function setTimestampValue($timestampValue)
   {

@@ -20,19 +20,47 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2LabelAppliedLabelPolicy extends \Google\Model
 {
   /**
+   * Copy mode unspecified.
+   */
+  public const COPY_MODE_COPY_MODE_UNSPECIFIED = 'COPY_MODE_UNSPECIFIED';
+  /**
+   * The applied label and field values aren't copied by default when the Drive
+   * item it's applied to is copied.
+   */
+  public const COPY_MODE_DO_NOT_COPY = 'DO_NOT_COPY';
+  /**
+   * The applied label and field values are always copied when the Drive item
+   * it's applied to is copied. Only admins can use this mode.
+   */
+  public const COPY_MODE_ALWAYS_COPY = 'ALWAYS_COPY';
+  /**
+   * The applied label and field values are copied if the label is appliable by
+   * the user making the copy.
+   */
+  public const COPY_MODE_COPY_APPLIABLE = 'COPY_APPLIABLE';
+  /**
+   * Indicates how the applied label and field values should be copied when a
+   * Drive item is copied.
+   *
    * @var string
    */
   public $copyMode;
 
   /**
-   * @param string
+   * Indicates how the applied label and field values should be copied when a
+   * Drive item is copied.
+   *
+   * Accepted values: COPY_MODE_UNSPECIFIED, DO_NOT_COPY, ALWAYS_COPY,
+   * COPY_APPLIABLE
+   *
+   * @param self::COPY_MODE_* $copyMode
    */
   public function setCopyMode($copyMode)
   {
     $this->copyMode = $copyMode;
   }
   /**
-   * @return string
+   * @return self::COPY_MODE_*
    */
   public function getCopyMode()
   {

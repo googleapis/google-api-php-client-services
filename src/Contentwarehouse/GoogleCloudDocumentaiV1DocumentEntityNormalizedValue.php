@@ -22,6 +22,9 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
   protected $addressValueType = GoogleTypePostalAddress::class;
   protected $addressValueDataType = '';
   /**
+   * Boolean value. Can be used for entities with binary values, or for
+   * checkboxes.
+   *
    * @var bool
    */
   public $booleanValue;
@@ -30,22 +33,38 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
   protected $datetimeValueType = GoogleTypeDateTime::class;
   protected $datetimeValueDataType = '';
   /**
+   * Float value.
+   *
    * @var float
    */
   public $floatValue;
   /**
+   * Integer value.
+   *
    * @var int
    */
   public $integerValue;
   protected $moneyValueType = GoogleTypeMoney::class;
   protected $moneyValueDataType = '';
   /**
+   * Optional. An optional field to store a normalized string. For some entity
+   * types, one of respective `structured_value` fields may also be populated.
+   * Also not all the types of `structured_value` will be normalized. For
+   * example, some processors may not generate `float` or `integer` normalized
+   * text by default. Below are sample formats mapped to structured values. -
+   * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date
+   * type (`date_value`) is in the ISO 8601 text format. - Datetime type
+   * (`datetime_value`) is in the ISO 8601 text format.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param GoogleTypePostalAddress
+   * Postal address. See also: https://github.com/googleapis/googleapis/blob/mas
+   * ter/google/type/postal_address.proto
+   *
+   * @param GoogleTypePostalAddress $addressValue
    */
   public function setAddressValue(GoogleTypePostalAddress $addressValue)
   {
@@ -59,7 +78,10 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
     return $this->addressValue;
   }
   /**
-   * @param bool
+   * Boolean value. Can be used for entities with binary values, or for
+   * checkboxes.
+   *
+   * @param bool $booleanValue
    */
   public function setBooleanValue($booleanValue)
   {
@@ -73,7 +95,10 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
     return $this->booleanValue;
   }
   /**
-   * @param GoogleTypeDate
+   * Date value. Includes year, month, day. See also:
+   * https://github.com/googleapis/googleapis/blob/master/google/type/date.proto
+   *
+   * @param GoogleTypeDate $dateValue
    */
   public function setDateValue(GoogleTypeDate $dateValue)
   {
@@ -87,7 +112,10 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
     return $this->dateValue;
   }
   /**
-   * @param GoogleTypeDateTime
+   * DateTime value. Includes date, time, and timezone. See also: https://github
+   * .com/googleapis/googleapis/blob/master/google/type/datetime.proto
+   *
+   * @param GoogleTypeDateTime $datetimeValue
    */
   public function setDatetimeValue(GoogleTypeDateTime $datetimeValue)
   {
@@ -101,7 +129,9 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
     return $this->datetimeValue;
   }
   /**
-   * @param float
+   * Float value.
+   *
+   * @param float $floatValue
    */
   public function setFloatValue($floatValue)
   {
@@ -115,7 +145,9 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
     return $this->floatValue;
   }
   /**
-   * @param int
+   * Integer value.
+   *
+   * @param int $integerValue
    */
   public function setIntegerValue($integerValue)
   {
@@ -129,7 +161,10 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
     return $this->integerValue;
   }
   /**
-   * @param GoogleTypeMoney
+   * Money value. See also: https://github.com/googleapis/googleapis/blob/master
+   * /google/type/money.proto
+   *
+   * @param GoogleTypeMoney $moneyValue
    */
   public function setMoneyValue(GoogleTypeMoney $moneyValue)
   {
@@ -143,7 +178,16 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
     return $this->moneyValue;
   }
   /**
-   * @param string
+   * Optional. An optional field to store a normalized string. For some entity
+   * types, one of respective `structured_value` fields may also be populated.
+   * Also not all the types of `structured_value` will be normalized. For
+   * example, some processors may not generate `float` or `integer` normalized
+   * text by default. Below are sample formats mapped to structured values. -
+   * Money/Currency type (`money_value`) is in the ISO 4217 text format. - Date
+   * type (`date_value`) is in the ISO 8601 text format. - Datetime type
+   * (`datetime_value`) is in the ISO 8601 text format.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

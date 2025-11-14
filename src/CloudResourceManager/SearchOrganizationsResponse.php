@@ -21,6 +21,12 @@ class SearchOrganizationsResponse extends \Google\Collection
 {
   protected $collection_key = 'organizations';
   /**
+   * A pagination token to be used to retrieve the next page of results. If the
+   * result is too large to fit within the page size specified in the request,
+   * this field will be set with a token that can be used to fetch the next page
+   * of results. If this field is empty, it indicates that this response
+   * contains the last page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +34,13 @@ class SearchOrganizationsResponse extends \Google\Collection
   protected $organizationsDataType = 'array';
 
   /**
-   * @param string
+   * A pagination token to be used to retrieve the next page of results. If the
+   * result is too large to fit within the page size specified in the request,
+   * this field will be set with a token that can be used to fetch the next page
+   * of results. If this field is empty, it indicates that this response
+   * contains the last page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +54,10 @@ class SearchOrganizationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Organization[]
+   * The list of Organizations that matched the search query, possibly
+   * paginated.
+   *
+   * @param Organization[] $organizations
    */
   public function setOrganizations($organizations)
   {

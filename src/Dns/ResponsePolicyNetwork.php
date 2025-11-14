@@ -24,12 +24,16 @@ class ResponsePolicyNetwork extends \Google\Model
    */
   public $kind;
   /**
+   * The fully qualified URL of the VPC network to bind to. This should be
+   * formatted like `https://www.googleapis.com/compute/v1/projects/{project}/gl
+   * obal/networks/{network}`
+   *
    * @var string
    */
   public $networkUrl;
 
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -43,7 +47,11 @@ class ResponsePolicyNetwork extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The fully qualified URL of the VPC network to bind to. This should be
+   * formatted like `https://www.googleapis.com/compute/v1/projects/{project}/gl
+   * obal/networks/{network}`
+   *
+   * @param string $networkUrl
    */
   public function setNetworkUrl($networkUrl)
   {

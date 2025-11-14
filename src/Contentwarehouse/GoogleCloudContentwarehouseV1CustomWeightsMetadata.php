@@ -24,7 +24,10 @@ class GoogleCloudContentwarehouseV1CustomWeightsMetadata extends \Google\Collect
   protected $weightedSchemaPropertiesDataType = 'array';
 
   /**
-   * @param GoogleCloudContentwarehouseV1WeightedSchemaProperty[]
+   * List of schema and property name. Allows a maximum of 10 schemas to be
+   * specified for relevance boosting.
+   *
+   * @param GoogleCloudContentwarehouseV1WeightedSchemaProperty[] $weightedSchemaProperties
    */
   public function setWeightedSchemaProperties($weightedSchemaProperties)
   {

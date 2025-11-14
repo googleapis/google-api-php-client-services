@@ -34,7 +34,7 @@ class ModelDefinitionModelOptions extends \Google\Collection
   public $modelType;
 
   /**
-   * @param string[]
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -48,7 +48,7 @@ class ModelDefinitionModelOptions extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * @param string $lossType
    */
   public function setLossType($lossType)
   {
@@ -62,7 +62,7 @@ class ModelDefinitionModelOptions extends \Google\Collection
     return $this->lossType;
   }
   /**
-   * @param string
+   * @param string $modelType
    */
   public function setModelType($modelType)
   {

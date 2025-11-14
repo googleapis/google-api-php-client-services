@@ -19,46 +19,112 @@ namespace Google\Service\NetworkSecurity;
 
 class MirroringEndpointGroup extends \Google\Collection
 {
+  /**
+   * State not set (this is not a valid state).
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The endpoint group is ready and in sync with the target deployment group.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The deployment group backing this endpoint group has been force-deleted.
+   * This endpoint group cannot be used and mirroring is effectively disabled.
+   */
+  public const STATE_CLOSED = 'CLOSED';
+  /**
+   * The endpoint group is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The endpoint group is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * The endpoint group is out of sync with the backing deployment group. In
+   * most cases, this is a result of a transient issue within the system (e.g.
+   * an inaccessible location) and the system is expected to recover
+   * automatically. See the associations field for details per network and
+   * location.
+   */
+  public const STATE_OUT_OF_SYNC = 'OUT_OF_SYNC';
+  /**
+   * An attempt to delete the endpoint group has failed. This is a terminal
+   * state and the endpoint group is not expected to recover. The only permitted
+   * operation is to retry deleting the endpoint group.
+   */
+  public const STATE_DELETE_FAILED = 'DELETE_FAILED';
   protected $collection_key = 'connectedDeploymentGroups';
   protected $associationsType = MirroringEndpointGroupAssociationDetails::class;
   protected $associationsDataType = 'array';
   protected $connectedDeploymentGroupsType = MirroringEndpointGroupConnectedDeploymentGroup::class;
   protected $connectedDeploymentGroupsDataType = 'array';
   /**
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. User-provided description of the endpoint group. Used as
+   * additional context for the endpoint group.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. Labels are key/value pairs that help to organize and filter
+   * resources.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Immutable. The deployment group that this DIRECT endpoint group is
+   * connected to, for example:
+   * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+   * https://google.aip.dev/124.
+   *
    * @var string
    */
   public $mirroringDeploymentGroup;
   /**
+   * Immutable. Identifier. The resource name of this endpoint group, for
+   * example: `projects/123456789/locations/global/mirroringEndpointGroups/my-
+   * eg`. See https://google.aip.dev/122 for more details.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The current state of the resource does not match the user's
+   * intended state, and the system is working to reconcile them. This is part
+   * of the normal operation (e.g. adding a new association to the group). See
+   * https://google.aip.dev/128.
+   *
    * @var bool
    */
   public $reconciling;
   /**
+   * Output only. The current state of the endpoint group. See
+   * https://google.aip.dev/216.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param MirroringEndpointGroupAssociationDetails[]
+   * Output only. List of associations to this endpoint group.
+   *
+   * @param MirroringEndpointGroupAssociationDetails[] $associations
    */
   public function setAssociations($associations)
   {
@@ -72,7 +138,10 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->associations;
   }
   /**
-   * @param MirroringEndpointGroupConnectedDeploymentGroup[]
+   * Output only. List of details about the connected deployment groups to this
+   * endpoint group.
+   *
+   * @param MirroringEndpointGroupConnectedDeploymentGroup[] $connectedDeploymentGroups
    */
   public function setConnectedDeploymentGroups($connectedDeploymentGroups)
   {
@@ -86,7 +155,10 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->connectedDeploymentGroups;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created. See
+   * https://google.aip.dev/148#timestamps.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -100,7 +172,10 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. User-provided description of the endpoint group. Used as
+   * additional context for the endpoint group.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -114,7 +189,10 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string[]
+   * Optional. Labels are key/value pairs that help to organize and filter
+   * resources.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -128,7 +206,12 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Immutable. The deployment group that this DIRECT endpoint group is
+   * connected to, for example:
+   * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+   * https://google.aip.dev/124.
+   *
+   * @param string $mirroringDeploymentGroup
    */
   public function setMirroringDeploymentGroup($mirroringDeploymentGroup)
   {
@@ -142,7 +225,11 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->mirroringDeploymentGroup;
   }
   /**
-   * @param string
+   * Immutable. Identifier. The resource name of this endpoint group, for
+   * example: `projects/123456789/locations/global/mirroringEndpointGroups/my-
+   * eg`. See https://google.aip.dev/122 for more details.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -156,7 +243,12 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * Output only. The current state of the resource does not match the user's
+   * intended state, and the system is working to reconcile them. This is part
+   * of the normal operation (e.g. adding a new association to the group). See
+   * https://google.aip.dev/128.
+   *
+   * @param bool $reconciling
    */
   public function setReconciling($reconciling)
   {
@@ -170,21 +262,30 @@ class MirroringEndpointGroup extends \Google\Collection
     return $this->reconciling;
   }
   /**
-   * @param string
+   * Output only. The current state of the endpoint group. See
+   * https://google.aip.dev/216.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CLOSED, CREATING, DELETING,
+   * OUT_OF_SYNC, DELETE_FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was most recently updated. See
+   * https://google.aip.dev/148#timestamps.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

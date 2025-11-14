@@ -24,7 +24,9 @@ class SasPortalListLegacyOrganizationsResponse extends \Google\Collection
   protected $organizationsDataType = 'array';
 
   /**
-   * @param SasPortalOrganization[]
+   * Optional. Legacy SAS organizations.
+   *
+   * @param SasPortalOrganization[] $organizations
    */
   public function setOrganizations($organizations)
   {

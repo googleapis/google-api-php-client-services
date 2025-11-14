@@ -21,18 +21,27 @@ class Provider extends \Google\Collection
 {
   protected $collection_key = 'eventTypes';
   /**
+   * Output only. Human friendly name for the Provider. For example "Cloud
+   * Storage".
+   *
    * @var string
    */
   public $displayName;
   protected $eventTypesType = EventType::class;
   protected $eventTypesDataType = 'array';
   /**
+   * Output only. In
+   * `projects/{project}/locations/{location}/providers/{provider_id}` format.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. Human friendly name for the Provider. For example "Cloud
+   * Storage".
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -46,7 +55,9 @@ class Provider extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param EventType[]
+   * Output only. Event types for this provider.
+   *
+   * @param EventType[] $eventTypes
    */
   public function setEventTypes($eventTypes)
   {
@@ -60,7 +71,10 @@ class Provider extends \Google\Collection
     return $this->eventTypes;
   }
   /**
-   * @param string
+   * Output only. In
+   * `projects/{project}/locations/{location}/providers/{provider_id}` format.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

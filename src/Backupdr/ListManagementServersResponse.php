@@ -23,16 +23,27 @@ class ListManagementServersResponse extends \Google\Collection
   protected $managementServersType = ManagementServer::class;
   protected $managementServersDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ManagementServer[]
+   * The list of ManagementServer instances in the project for the specified
+   * location. If the '{location}' value in the request is "-", the response
+   * contains a list of instances from all locations. In case any location is
+   * unreachable, the response will only return management servers in reachable
+   * locations and the 'unreachable' field will be populated with a list of
+   * unreachable locations.
+   *
+   * @param ManagementServer[] $managementServers
    */
   public function setManagementServers($managementServers)
   {
@@ -46,7 +57,9 @@ class ListManagementServersResponse extends \Google\Collection
     return $this->managementServers;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +73,9 @@ class ListManagementServersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -20,6 +20,8 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalDpaMoveList extends \Google\Model
 {
   /**
+   * The ID of the DPA.
+   *
    * @var string
    */
   public $dpaId;
@@ -27,7 +29,9 @@ class SasPortalDpaMoveList extends \Google\Model
   protected $frequencyRangeDataType = '';
 
   /**
-   * @param string
+   * The ID of the DPA.
+   *
+   * @param string $dpaId
    */
   public function setDpaId($dpaId)
   {
@@ -41,7 +45,9 @@ class SasPortalDpaMoveList extends \Google\Model
     return $this->dpaId;
   }
   /**
-   * @param SasPortalFrequencyRange
+   * The frequency range that the move list affects.
+   *
+   * @param SasPortalFrequencyRange $frequencyRange
    */
   public function setFrequencyRange(SasPortalFrequencyRange $frequencyRange)
   {

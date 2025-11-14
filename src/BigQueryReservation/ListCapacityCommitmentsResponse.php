@@ -23,12 +23,17 @@ class ListCapacityCommitmentsResponse extends \Google\Collection
   protected $capacityCommitmentsType = CapacityCommitment::class;
   protected $capacityCommitmentsDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CapacityCommitment[]
+   * List of capacity commitments visible to the user.
+   *
+   * @param CapacityCommitment[] $capacityCommitments
    */
   public function setCapacityCommitments($capacityCommitments)
   {
@@ -42,7 +47,10 @@ class ListCapacityCommitmentsResponse extends \Google\Collection
     return $this->capacityCommitments;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

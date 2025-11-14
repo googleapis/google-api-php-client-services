@@ -20,16 +20,22 @@ namespace Google\Service\Docs;
 class HeadingLink extends \Google\Model
 {
   /**
+   * The ID of a heading in this document.
+   *
    * @var string
    */
   public $id;
   /**
+   * The ID of the tab containing this heading.
+   *
    * @var string
    */
   public $tabId;
 
   /**
-   * @param string
+   * The ID of a heading in this document.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class HeadingLink extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The ID of the tab containing this heading.
+   *
+   * @param string $tabId
    */
   public function setTabId($tabId)
   {

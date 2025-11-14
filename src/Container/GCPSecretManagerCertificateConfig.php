@@ -20,12 +20,20 @@ namespace Google\Service\Container;
 class GCPSecretManagerCertificateConfig extends \Google\Model
 {
   /**
+   * Secret URI, in the form
+   * "projects/$PROJECT_ID/secrets/$SECRET_NAME/versions/$VERSION". Version can
+   * be fixed (e.g. "2") or "latest"
+   *
    * @var string
    */
   public $secretUri;
 
   /**
-   * @param string
+   * Secret URI, in the form
+   * "projects/$PROJECT_ID/secrets/$SECRET_NAME/versions/$VERSION". Version can
+   * be fixed (e.g. "2") or "latest"
+   *
+   * @param string $secretUri
    */
   public function setSecretUri($secretUri)
   {

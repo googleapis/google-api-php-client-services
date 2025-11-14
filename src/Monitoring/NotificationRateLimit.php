@@ -20,12 +20,16 @@ namespace Google\Service\Monitoring;
 class NotificationRateLimit extends \Google\Model
 {
   /**
+   * Not more than one notification per period.
+   *
    * @var string
    */
   public $period;
 
   /**
-   * @param string
+   * Not more than one notification per period.
+   *
+   * @param string $period
    */
   public function setPeriod($period)
   {

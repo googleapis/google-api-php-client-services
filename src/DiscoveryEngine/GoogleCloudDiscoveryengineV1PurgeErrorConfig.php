@@ -20,12 +20,20 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1PurgeErrorConfig extends \Google\Model
 {
   /**
+   * Cloud Storage prefix for purge errors. This must be an empty, existing
+   * Cloud Storage directory. Purge errors are written to sharded files in this
+   * directory, one per line, as a JSON-encoded `google.rpc.Status` message.
+   *
    * @var string
    */
   public $gcsPrefix;
 
   /**
-   * @param string
+   * Cloud Storage prefix for purge errors. This must be an empty, existing
+   * Cloud Storage directory. Purge errors are written to sharded files in this
+   * directory, one per line, as a JSON-encoded `google.rpc.Status` message.
+   *
+   * @param string $gcsPrefix
    */
   public function setGcsPrefix($gcsPrefix)
   {

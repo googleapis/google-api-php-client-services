@@ -21,12 +21,18 @@ class JobExecutionStageInfo extends \Google\Collection
 {
   protected $collection_key = 'stepName';
   /**
+   * The steps associated with the execution stage. Note that stages may have
+   * several steps, and that a given step might be run by more than one stage.
+   *
    * @var string[]
    */
   public $stepName;
 
   /**
-   * @param string[]
+   * The steps associated with the execution stage. Note that stages may have
+   * several steps, and that a given step might be run by more than one stage.
+   *
+   * @param string[] $stepName
    */
   public function setStepName($stepName)
   {

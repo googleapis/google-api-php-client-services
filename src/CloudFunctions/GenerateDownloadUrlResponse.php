@@ -20,12 +20,18 @@ namespace Google\Service\CloudFunctions;
 class GenerateDownloadUrlResponse extends \Google\Model
 {
   /**
+   * The generated Google Cloud Storage signed URL that should be used for
+   * function source code download.
+   *
    * @var string
    */
   public $downloadUrl;
 
   /**
-   * @param string
+   * The generated Google Cloud Storage signed URL that should be used for
+   * function source code download.
+   *
+   * @param string $downloadUrl
    */
   public function setDownloadUrl($downloadUrl)
   {

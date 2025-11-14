@@ -21,12 +21,16 @@ class TableConstraintsPrimaryKey extends \Google\Collection
 {
   protected $collection_key = 'columns';
   /**
+   * Required. The columns that are composed of the primary key constraint.
+   *
    * @var string[]
    */
   public $columns;
 
   /**
-   * @param string[]
+   * Required. The columns that are composed of the primary key constraint.
+   *
+   * @param string[] $columns
    */
   public function setColumns($columns)
   {

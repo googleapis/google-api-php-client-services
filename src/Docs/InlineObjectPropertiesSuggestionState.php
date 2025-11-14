@@ -23,7 +23,10 @@ class InlineObjectPropertiesSuggestionState extends \Google\Model
   protected $embeddedObjectSuggestionStateDataType = '';
 
   /**
-   * @param EmbeddedObjectSuggestionState
+   * A mask that indicates which of the fields in embedded_object have been
+   * changed in this suggestion.
+   *
+   * @param EmbeddedObjectSuggestionState $embeddedObjectSuggestionState
    */
   public function setEmbeddedObjectSuggestionState(EmbeddedObjectSuggestionState $embeddedObjectSuggestionState)
   {

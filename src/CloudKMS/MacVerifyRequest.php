@@ -20,24 +20,56 @@ namespace Google\Service\CloudKMS;
 class MacVerifyRequest extends \Google\Model
 {
   /**
+   * Required. The data used previously as a MacSignRequest.data to generate the
+   * MAC tag.
+   *
    * @var string
    */
   public $data;
   /**
+   * Optional. An optional CRC32C checksum of the MacVerifyRequest.data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * MacVerifyRequest.data using this checksum. KeyManagementService will report
+   * an error if the checksum verification fails. If you receive a checksum
+   * error, your client should verify that CRC32C(MacVerifyRequest.data) is
+   * equal to MacVerifyRequest.data_crc32c, and if so, perform a limited number
+   * of retries. A persistent mismatch may indicate an issue in your computation
+   * of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
    * @var string
    */
   public $dataCrc32c;
   /**
+   * Required. The signature to verify.
+   *
    * @var string
    */
   public $mac;
   /**
+   * Optional. An optional CRC32C checksum of the MacVerifyRequest.mac. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * MacVerifyRequest.mac using this checksum. KeyManagementService will report
+   * an error if the checksum verification fails. If you receive a checksum
+   * error, your client should verify that CRC32C(MacVerifyRequest.mac) is equal
+   * to MacVerifyRequest.mac_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of
+   * the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
    * @var string
    */
   public $macCrc32c;
 
   /**
-   * @param string
+   * Required. The data used previously as a MacSignRequest.data to generate the
+   * MAC tag.
+   *
+   * @param string $data
    */
   public function setData($data)
   {
@@ -51,7 +83,19 @@ class MacVerifyRequest extends \Google\Model
     return $this->data;
   }
   /**
-   * @param string
+   * Optional. An optional CRC32C checksum of the MacVerifyRequest.data. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * MacVerifyRequest.data using this checksum. KeyManagementService will report
+   * an error if the checksum verification fails. If you receive a checksum
+   * error, your client should verify that CRC32C(MacVerifyRequest.data) is
+   * equal to MacVerifyRequest.data_crc32c, and if so, perform a limited number
+   * of retries. A persistent mismatch may indicate an issue in your computation
+   * of the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
+   * @param string $dataCrc32c
    */
   public function setDataCrc32c($dataCrc32c)
   {
@@ -65,7 +109,9 @@ class MacVerifyRequest extends \Google\Model
     return $this->dataCrc32c;
   }
   /**
-   * @param string
+   * Required. The signature to verify.
+   *
+   * @param string $mac
    */
   public function setMac($mac)
   {
@@ -79,7 +125,19 @@ class MacVerifyRequest extends \Google\Model
     return $this->mac;
   }
   /**
-   * @param string
+   * Optional. An optional CRC32C checksum of the MacVerifyRequest.mac. If
+   * specified, KeyManagementService will verify the integrity of the received
+   * MacVerifyRequest.mac using this checksum. KeyManagementService will report
+   * an error if the checksum verification fails. If you receive a checksum
+   * error, your client should verify that CRC32C(MacVerifyRequest.mac) is equal
+   * to MacVerifyRequest.mac_crc32c, and if so, perform a limited number of
+   * retries. A persistent mismatch may indicate an issue in your computation of
+   * the CRC32C checksum. Note: This field is defined as int64 for reasons of
+   * compatibility across different languages. However, it is a non-negative
+   * integer, which will never exceed 2^32-1, and can be safely downconverted to
+   * uint32 in languages that support this type.
+   *
+   * @param string $macCrc32c
    */
   public function setMacCrc32c($macCrc32c)
   {

@@ -21,18 +21,24 @@ class ListQueuedResourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * The next page token or empty if none.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $queuedResourcesType = QueuedResource::class;
   protected $queuedResourcesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * The next page token or empty if none.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListQueuedResourcesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param QueuedResource[]
+   * The listed queued resources.
+   *
+   * @param QueuedResource[] $queuedResources
    */
   public function setQueuedResources($queuedResources)
   {
@@ -60,7 +68,9 @@ class ListQueuedResourcesResponse extends \Google\Collection
     return $this->queuedResources;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

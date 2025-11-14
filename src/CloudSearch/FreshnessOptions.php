@@ -20,16 +20,29 @@ namespace Google\Service\CloudSearch;
 class FreshnessOptions extends \Google\Model
 {
   /**
+   * The duration after which an object should be considered stale. The default
+   * value is 180 days (in seconds).
+   *
    * @var string
    */
   public $freshnessDuration;
   /**
+   * This property indicates the freshness level of the object in the index. If
+   * set, this property must be a top-level property within the property
+   * definitions and it must be a timestamp type or date type. Otherwise, the
+   * Indexing API uses updateTime as the freshness indicator. The maximum length
+   * is 256 characters. When a property is used to calculate freshness, the
+   * value defaults to 2 years from the current time.
+   *
    * @var string
    */
   public $freshnessProperty;
 
   /**
-   * @param string
+   * The duration after which an object should be considered stale. The default
+   * value is 180 days (in seconds).
+   *
+   * @param string $freshnessDuration
    */
   public function setFreshnessDuration($freshnessDuration)
   {
@@ -43,7 +56,14 @@ class FreshnessOptions extends \Google\Model
     return $this->freshnessDuration;
   }
   /**
-   * @param string
+   * This property indicates the freshness level of the object in the index. If
+   * set, this property must be a top-level property within the property
+   * definitions and it must be a timestamp type or date type. Otherwise, the
+   * Indexing API uses updateTime as the freshness indicator. The maximum length
+   * is 256 characters. When a property is used to calculate freshness, the
+   * value defaults to 2 years from the current time.
+   *
+   * @param string $freshnessProperty
    */
   public function setFreshnessProperty($freshnessProperty)
   {

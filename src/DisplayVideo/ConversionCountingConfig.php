@@ -23,12 +23,24 @@ class ConversionCountingConfig extends \Google\Collection
   protected $floodlightActivityConfigsType = TrackingFloodlightActivityConfig::class;
   protected $floodlightActivityConfigsDataType = 'array';
   /**
+   * The percentage of post-view conversions to count, in millis (1/1000 of a
+   * percent). Must be between 0 and 100000 inclusive. For example, to track 50%
+   * of the post-click conversions, set a value of 50000.
+   *
    * @var string
    */
   public $postViewCountPercentageMillis;
 
   /**
-   * @param TrackingFloodlightActivityConfig[]
+   * The Floodlight activity configs used to track conversions. The number of
+   * conversions counted is the sum of all of the conversions counted by all of
+   * the Floodlight activity IDs specified in this field. This field can't be
+   * updated if a custom bidding algorithm is assigned to the line item. If you
+   * set this field and assign a custom bidding algorithm in the same request,
+   * the floodlight activities must match the ones used by the custom bidding
+   * algorithm.
+   *
+   * @param TrackingFloodlightActivityConfig[] $floodlightActivityConfigs
    */
   public function setFloodlightActivityConfigs($floodlightActivityConfigs)
   {
@@ -42,7 +54,11 @@ class ConversionCountingConfig extends \Google\Collection
     return $this->floodlightActivityConfigs;
   }
   /**
-   * @param string
+   * The percentage of post-view conversions to count, in millis (1/1000 of a
+   * percent). Must be between 0 and 100000 inclusive. For example, to track 50%
+   * of the post-click conversions, set a value of 50000.
+   *
+   * @param string $postViewCountPercentageMillis
    */
   public function setPostViewCountPercentageMillis($postViewCountPercentageMillis)
   {

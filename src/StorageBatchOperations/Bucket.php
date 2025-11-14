@@ -20,6 +20,8 @@ namespace Google\Service\StorageBatchOperations;
 class Bucket extends \Google\Model
 {
   /**
+   * Required. Bucket name for the objects to be transformed.
+   *
    * @var string
    */
   public $bucket;
@@ -29,7 +31,9 @@ class Bucket extends \Google\Model
   protected $prefixListDataType = '';
 
   /**
-   * @param string
+   * Required. Bucket name for the objects to be transformed.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -43,7 +47,9 @@ class Bucket extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param Manifest
+   * Specifies objects in a manifest file.
+   *
+   * @param Manifest $manifest
    */
   public function setManifest(Manifest $manifest)
   {
@@ -57,7 +63,9 @@ class Bucket extends \Google\Model
     return $this->manifest;
   }
   /**
-   * @param PrefixList
+   * Specifies objects matching a prefix set.
+   *
+   * @param PrefixList $prefixList
    */
   public function setPrefixList(PrefixList $prefixList)
   {

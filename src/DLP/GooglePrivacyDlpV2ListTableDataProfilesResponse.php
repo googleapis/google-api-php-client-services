@@ -21,6 +21,8 @@ class GooglePrivacyDlpV2ListTableDataProfilesResponse extends \Google\Collection
 {
   protected $collection_key = 'tableDataProfiles';
   /**
+   * The next page token.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GooglePrivacyDlpV2ListTableDataProfilesResponse extends \Google\Collection
   protected $tableDataProfilesDataType = 'array';
 
   /**
-   * @param string
+   * The next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GooglePrivacyDlpV2ListTableDataProfilesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GooglePrivacyDlpV2TableDataProfile[]
+   * List of data profiles.
+   *
+   * @param GooglePrivacyDlpV2TableDataProfile[] $tableDataProfiles
    */
   public function setTableDataProfiles($tableDataProfiles)
   {

@@ -24,7 +24,9 @@ class GoogleCloudDatalabelingV1beta1Polyline extends \Google\Collection
   protected $verticesDataType = 'array';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1Vertex[]
+   * The polyline vertices.
+   *
+   * @param GoogleCloudDatalabelingV1beta1Vertex[] $vertices
    */
   public function setVertices($vertices)
   {

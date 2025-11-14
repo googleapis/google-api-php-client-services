@@ -23,26 +23,45 @@ class OrderTrackingSignal extends \Google\Collection
   protected $customerShippingFeeType = PriceAmount::class;
   protected $customerShippingFeeDataType = '';
   /**
+   * Required. The delivery postal code, as a continuous string without spaces
+   * or dashes, e.g. "95016". This field will be anonymized in returned
+   * OrderTrackingSignal creation response.
+   *
    * @var string
    */
   public $deliveryPostalCode;
   /**
+   * Required. The [CLDR territory code]
+   * (http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) for the
+   * shipping destination.
+   *
    * @var string
    */
   public $deliveryRegionCode;
   protected $lineItemsType = OrderTrackingSignalLineItemDetails::class;
   protected $lineItemsDataType = 'array';
   /**
+   * The Google merchant ID of this order tracking signal. This value is
+   * optional. If left unset, the caller's merchant ID is used. You must request
+   * access in order to provide data on behalf of another merchant. For more
+   * information, see [Submitting Order Tracking Signals](/shopping-
+   * content/guides/order-tracking-signals).
+   *
    * @var string
    */
   public $merchantId;
   protected $orderCreatedTimeType = DateTime::class;
   protected $orderCreatedTimeDataType = '';
   /**
+   * Required. The ID of the order on the merchant side. This field will be
+   * hashed in returned OrderTrackingSignal creation response.
+   *
    * @var string
    */
   public $orderId;
   /**
+   * Output only. The ID that uniquely identifies this order tracking signal.
+   *
    * @var string
    */
   public $orderTrackingSignalId;
@@ -52,7 +71,10 @@ class OrderTrackingSignal extends \Google\Collection
   protected $shippingInfoDataType = 'array';
 
   /**
-   * @param PriceAmount
+   * The shipping fee of the order; this value should be set to zero in the case
+   * of free shipping.
+   *
+   * @param PriceAmount $customerShippingFee
    */
   public function setCustomerShippingFee(PriceAmount $customerShippingFee)
   {
@@ -66,7 +88,11 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->customerShippingFee;
   }
   /**
-   * @param string
+   * Required. The delivery postal code, as a continuous string without spaces
+   * or dashes, e.g. "95016". This field will be anonymized in returned
+   * OrderTrackingSignal creation response.
+   *
+   * @param string $deliveryPostalCode
    */
   public function setDeliveryPostalCode($deliveryPostalCode)
   {
@@ -80,7 +106,11 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->deliveryPostalCode;
   }
   /**
-   * @param string
+   * Required. The [CLDR territory code]
+   * (http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml) for the
+   * shipping destination.
+   *
+   * @param string $deliveryRegionCode
    */
   public function setDeliveryRegionCode($deliveryRegionCode)
   {
@@ -94,7 +124,9 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->deliveryRegionCode;
   }
   /**
-   * @param OrderTrackingSignalLineItemDetails[]
+   * Information about line items in the order.
+   *
+   * @param OrderTrackingSignalLineItemDetails[] $lineItems
    */
   public function setLineItems($lineItems)
   {
@@ -108,7 +140,13 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->lineItems;
   }
   /**
-   * @param string
+   * The Google merchant ID of this order tracking signal. This value is
+   * optional. If left unset, the caller's merchant ID is used. You must request
+   * access in order to provide data on behalf of another merchant. For more
+   * information, see [Submitting Order Tracking Signals](/shopping-
+   * content/guides/order-tracking-signals).
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -122,7 +160,10 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->merchantId;
   }
   /**
-   * @param DateTime
+   * Required. The time when the order was created on the merchant side. Include
+   * the year and timezone string, if available.
+   *
+   * @param DateTime $orderCreatedTime
    */
   public function setOrderCreatedTime(DateTime $orderCreatedTime)
   {
@@ -136,7 +177,10 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->orderCreatedTime;
   }
   /**
-   * @param string
+   * Required. The ID of the order on the merchant side. This field will be
+   * hashed in returned OrderTrackingSignal creation response.
+   *
+   * @param string $orderId
    */
   public function setOrderId($orderId)
   {
@@ -150,7 +194,9 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->orderId;
   }
   /**
-   * @param string
+   * Output only. The ID that uniquely identifies this order tracking signal.
+   *
+   * @param string $orderTrackingSignalId
    */
   public function setOrderTrackingSignalId($orderTrackingSignalId)
   {
@@ -164,7 +210,9 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->orderTrackingSignalId;
   }
   /**
-   * @param OrderTrackingSignalShipmentLineItemMapping[]
+   * The mapping of the line items to the shipment information.
+   *
+   * @param OrderTrackingSignalShipmentLineItemMapping[] $shipmentLineItemMapping
    */
   public function setShipmentLineItemMapping($shipmentLineItemMapping)
   {
@@ -178,7 +226,9 @@ class OrderTrackingSignal extends \Google\Collection
     return $this->shipmentLineItemMapping;
   }
   /**
-   * @param OrderTrackingSignalShippingInfo[]
+   * The shipping information for the order.
+   *
+   * @param OrderTrackingSignalShippingInfo[] $shippingInfo
    */
   public function setShippingInfo($shippingInfo)
   {

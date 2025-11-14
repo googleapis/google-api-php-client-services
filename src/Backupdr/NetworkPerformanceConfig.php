@@ -20,19 +20,37 @@ namespace Google\Service\Backupdr;
 class NetworkPerformanceConfig extends \Google\Model
 {
   /**
+   * This value is unused.
+   */
+  public const TOTAL_EGRESS_BANDWIDTH_TIER_TIER_UNSPECIFIED = 'TIER_UNSPECIFIED';
+  /**
+   * Default network performance config.
+   */
+  public const TOTAL_EGRESS_BANDWIDTH_TIER_DEFAULT = 'DEFAULT';
+  /**
+   * Tier 1 network performance config.
+   */
+  public const TOTAL_EGRESS_BANDWIDTH_TIER_TIER_1 = 'TIER_1';
+  /**
+   * Optional. The tier of the total egress bandwidth.
+   *
    * @var string
    */
   public $totalEgressBandwidthTier;
 
   /**
-   * @param string
+   * Optional. The tier of the total egress bandwidth.
+   *
+   * Accepted values: TIER_UNSPECIFIED, DEFAULT, TIER_1
+   *
+   * @param self::TOTAL_EGRESS_BANDWIDTH_TIER_* $totalEgressBandwidthTier
    */
   public function setTotalEgressBandwidthTier($totalEgressBandwidthTier)
   {
     $this->totalEgressBandwidthTier = $totalEgressBandwidthTier;
   }
   /**
-   * @return string
+   * @return self::TOTAL_EGRESS_BANDWIDTH_TIER_*
    */
   public function getTotalEgressBandwidthTier()
   {

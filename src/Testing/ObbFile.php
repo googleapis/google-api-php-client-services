@@ -22,12 +22,18 @@ class ObbFile extends \Google\Model
   protected $obbType = FileReference::class;
   protected $obbDataType = '';
   /**
+   * Required. OBB file name which must conform to the format as specified by
+   * Android e.g. [main|patch].0300110.com.example.android.obb which will be
+   * installed into \/Android/obb/\/ on the device.
+   *
    * @var string
    */
   public $obbFileName;
 
   /**
-   * @param FileReference
+   * Required. Opaque Binary Blob (OBB) file(s) to install on the device.
+   *
+   * @param FileReference $obb
    */
   public function setObb(FileReference $obb)
   {
@@ -41,7 +47,11 @@ class ObbFile extends \Google\Model
     return $this->obb;
   }
   /**
-   * @param string
+   * Required. OBB file name which must conform to the format as specified by
+   * Android e.g. [main|patch].0300110.com.example.android.obb which will be
+   * installed into \/Android/obb/\/ on the device.
+   *
+   * @param string $obbFileName
    */
   public function setObbFileName($obbFileName)
   {

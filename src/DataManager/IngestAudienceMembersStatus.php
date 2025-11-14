@@ -27,7 +27,9 @@ class IngestAudienceMembersStatus extends \Google\Model
   protected $userDataIngestionStatusDataType = '';
 
   /**
-   * @param IngestMobileDataStatus
+   * The status of the mobile data ingestion to the destination.
+   *
+   * @param IngestMobileDataStatus $mobileDataIngestionStatus
    */
   public function setMobileDataIngestionStatus(IngestMobileDataStatus $mobileDataIngestionStatus)
   {
@@ -41,7 +43,9 @@ class IngestAudienceMembersStatus extends \Google\Model
     return $this->mobileDataIngestionStatus;
   }
   /**
-   * @param IngestPairDataStatus
+   * The status of the pair data ingestion to the destination.
+   *
+   * @param IngestPairDataStatus $pairDataIngestionStatus
    */
   public function setPairDataIngestionStatus(IngestPairDataStatus $pairDataIngestionStatus)
   {
@@ -55,7 +59,9 @@ class IngestAudienceMembersStatus extends \Google\Model
     return $this->pairDataIngestionStatus;
   }
   /**
-   * @param IngestUserDataStatus
+   * The status of the user data ingestion to the destination.
+   *
+   * @param IngestUserDataStatus $userDataIngestionStatus
    */
   public function setUserDataIngestionStatus(IngestUserDataStatus $userDataIngestionStatus)
   {

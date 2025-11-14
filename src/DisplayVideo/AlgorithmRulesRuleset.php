@@ -19,24 +19,52 @@ namespace Google\Service\DisplayVideo;
 
 class AlgorithmRulesRuleset extends \Google\Collection
 {
+  /**
+   * Unknown aggregation type.
+   */
+  public const AGGREGATION_TYPE_RULE_AGGREGATION_TYPE_UNSPECIFIED = 'RULE_AGGREGATION_TYPE_UNSPECIFIED';
+  /**
+   * The sum of rule values.
+   */
+  public const AGGREGATION_TYPE_SUM_OF_VALUES = 'SUM_OF_VALUES';
+  /**
+   * The product of rule values.
+   */
+  public const AGGREGATION_TYPE_PRODUCT_OF_VALUES = 'PRODUCT_OF_VALUES';
+  /**
+   * The maximum rule value.
+   */
+  public const AGGREGATION_TYPE_MAXIMUM_VALUE = 'MAXIMUM_VALUE';
   protected $collection_key = 'rules';
   /**
+   * How to aggregate values of evaluated rules.
+   *
    * @var string
    */
   public $aggregationType;
+  /**
+   * Maximum value the ruleset can evaluate to.
+   *
+   * @var 
+   */
   public $maxValue;
   protected $rulesType = AlgorithmRulesRule::class;
   protected $rulesDataType = 'array';
 
   /**
-   * @param string
+   * How to aggregate values of evaluated rules.
+   *
+   * Accepted values: RULE_AGGREGATION_TYPE_UNSPECIFIED, SUM_OF_VALUES,
+   * PRODUCT_OF_VALUES, MAXIMUM_VALUE
+   *
+   * @param self::AGGREGATION_TYPE_* $aggregationType
    */
   public function setAggregationType($aggregationType)
   {
     $this->aggregationType = $aggregationType;
   }
   /**
-   * @return string
+   * @return self::AGGREGATION_TYPE_*
    */
   public function getAggregationType()
   {
@@ -51,7 +79,9 @@ class AlgorithmRulesRuleset extends \Google\Collection
     return $this->maxValue;
   }
   /**
-   * @param AlgorithmRulesRule[]
+   * List of rules to generate the impression value.
+   *
+   * @param AlgorithmRulesRule[] $rules
    */
   public function setRules($rules)
   {

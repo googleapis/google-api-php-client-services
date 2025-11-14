@@ -20,12 +20,16 @@ namespace Google\Service\DeveloperConnect;
 class LinkableGitRepository extends \Google\Model
 {
   /**
+   * The clone uri of the repository.
+   *
    * @var string
    */
   public $cloneUri;
 
   /**
-   * @param string
+   * The clone uri of the repository.
+   *
+   * @param string $cloneUri
    */
   public function setCloneUri($cloneUri)
   {

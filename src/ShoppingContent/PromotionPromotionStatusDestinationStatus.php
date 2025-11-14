@@ -20,16 +20,51 @@ namespace Google\Service\ShoppingContent;
 class PromotionPromotionStatusDestinationStatus extends \Google\Model
 {
   /**
+   * Unknown promotion state.
+   */
+  public const STATUS_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The promotion is under review.
+   */
+  public const STATUS_IN_REVIEW = 'IN_REVIEW';
+  /**
+   * The promotion is disapproved
+   */
+  public const STATUS_REJECTED = 'REJECTED';
+  /**
+   * The promotion is approved and active.
+   */
+  public const STATUS_LIVE = 'LIVE';
+  /**
+   * The promotion is stopped by merchant.
+   */
+  public const STATUS_STOPPED = 'STOPPED';
+  /**
+   * The promotion is no longer active.
+   */
+  public const STATUS_EXPIRED = 'EXPIRED';
+  /**
+   * The promotion is not stopped, and all reviews are approved, but the active
+   * date is in the future.
+   */
+  public const STATUS_PENDING = 'PENDING';
+  /**
+   * The name of the destination.
+   *
    * @var string
    */
   public $destination;
   /**
+   * The status for the specified destination.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * The name of the destination.
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -43,14 +78,19 @@ class PromotionPromotionStatusDestinationStatus extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * The status for the specified destination.
+   *
+   * Accepted values: STATE_UNSPECIFIED, IN_REVIEW, REJECTED, LIVE, STOPPED,
+   * EXPIRED, PENDING
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

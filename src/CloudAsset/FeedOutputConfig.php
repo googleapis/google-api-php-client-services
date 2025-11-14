@@ -23,7 +23,9 @@ class FeedOutputConfig extends \Google\Model
   protected $pubsubDestinationDataType = '';
 
   /**
-   * @param PubsubDestination
+   * Destination on Pub/Sub.
+   *
+   * @param PubsubDestination $pubsubDestination
    */
   public function setPubsubDestination(PubsubDestination $pubsubDestination)
   {

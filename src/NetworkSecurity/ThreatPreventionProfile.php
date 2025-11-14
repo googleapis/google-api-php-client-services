@@ -28,7 +28,9 @@ class ThreatPreventionProfile extends \Google\Collection
   protected $threatOverridesDataType = 'array';
 
   /**
-   * @param AntivirusOverride[]
+   * Optional. Configuration for overriding antivirus actions per protocol.
+   *
+   * @param AntivirusOverride[] $antivirusOverrides
    */
   public function setAntivirusOverrides($antivirusOverrides)
   {
@@ -42,7 +44,9 @@ class ThreatPreventionProfile extends \Google\Collection
     return $this->antivirusOverrides;
   }
   /**
-   * @param SeverityOverride[]
+   * Optional. Configuration for overriding threats actions by severity match.
+   *
+   * @param SeverityOverride[] $severityOverrides
    */
   public function setSeverityOverrides($severityOverrides)
   {
@@ -56,7 +60,11 @@ class ThreatPreventionProfile extends \Google\Collection
     return $this->severityOverrides;
   }
   /**
-   * @param ThreatOverride[]
+   * Optional. Configuration for overriding threats actions by threat_id match.
+   * If a threat is matched both by configuration provided in severity_overrides
+   * and threat_overrides, the threat_overrides action is applied.
+   *
+   * @param ThreatOverride[] $threatOverrides
    */
   public function setThreatOverrides($threatOverrides)
   {

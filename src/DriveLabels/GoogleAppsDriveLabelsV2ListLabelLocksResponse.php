@@ -23,12 +23,16 @@ class GoogleAppsDriveLabelsV2ListLabelLocksResponse extends \Google\Collection
   protected $labelLocksType = GoogleAppsDriveLabelsV2LabelLock::class;
   protected $labelLocksDataType = 'array';
   /**
+   * The token of the next page in the response.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleAppsDriveLabelsV2LabelLock[]
+   * Label locks.
+   *
+   * @param GoogleAppsDriveLabelsV2LabelLock[] $labelLocks
    */
   public function setLabelLocks($labelLocks)
   {
@@ -42,7 +46,9 @@ class GoogleAppsDriveLabelsV2ListLabelLocksResponse extends \Google\Collection
     return $this->labelLocks;
   }
   /**
-   * @param string
+   * The token of the next page in the response.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

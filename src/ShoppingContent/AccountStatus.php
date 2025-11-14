@@ -21,28 +21,40 @@ class AccountStatus extends \Google\Collection
 {
   protected $collection_key = 'products';
   /**
+   * The ID of the account for which the status is reported.
+   *
    * @var string
    */
   public $accountId;
   protected $accountLevelIssuesType = AccountStatusAccountLevelIssue::class;
   protected $accountLevelIssuesDataType = 'array';
   /**
+   * How the account is managed. Acceptable values are: - "`manual`" -
+   * "`automatic`"
+   *
    * @var string
    */
   public $accountManagement;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountStatus`"
+   *
    * @var string
    */
   public $kind;
   protected $productsType = AccountStatusProducts::class;
   protected $productsDataType = 'array';
   /**
+   * Whether the account's website is claimed or not.
+   *
    * @var bool
    */
   public $websiteClaimed;
 
   /**
-   * @param string
+   * The ID of the account for which the status is reported.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -56,7 +68,9 @@ class AccountStatus extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param AccountStatusAccountLevelIssue[]
+   * A list of account level issues.
+   *
+   * @param AccountStatusAccountLevelIssue[] $accountLevelIssues
    */
   public function setAccountLevelIssues($accountLevelIssues)
   {
@@ -70,7 +84,10 @@ class AccountStatus extends \Google\Collection
     return $this->accountLevelIssues;
   }
   /**
-   * @param string
+   * How the account is managed. Acceptable values are: - "`manual`" -
+   * "`automatic`"
+   *
+   * @param string $accountManagement
    */
   public function setAccountManagement($accountManagement)
   {
@@ -84,7 +101,10 @@ class AccountStatus extends \Google\Collection
     return $this->accountManagement;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#accountStatus`"
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -98,7 +118,10 @@ class AccountStatus extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param AccountStatusProducts[]
+   * List of product-related data by channel, destination, and country. Data in
+   * this field may be delayed by up to 30 minutes.
+   *
+   * @param AccountStatusProducts[] $products
    */
   public function setProducts($products)
   {
@@ -112,7 +135,9 @@ class AccountStatus extends \Google\Collection
     return $this->products;
   }
   /**
-   * @param bool
+   * Whether the account's website is claimed or not.
+   *
+   * @param bool $websiteClaimed
    */
   public function setWebsiteClaimed($websiteClaimed)
   {

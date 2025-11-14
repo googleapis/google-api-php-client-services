@@ -21,6 +21,10 @@ class ListTransferConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'transferConfigs';
   /**
+   * Output only. The next-pagination token. For multiple-page list results,
+   * this token can be used as the `ListTransferConfigsRequest.page_token` to
+   * request the next page of list results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class ListTransferConfigsResponse extends \Google\Collection
   protected $transferConfigsDataType = 'array';
 
   /**
-   * @param string
+   * Output only. The next-pagination token. For multiple-page list results,
+   * this token can be used as the `ListTransferConfigsRequest.page_token` to
+   * request the next page of list results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,9 @@ class ListTransferConfigsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TransferConfig[]
+   * Output only. The stored pipeline transfer configurations.
+   *
+   * @param TransferConfig[] $transferConfigs
    */
   public function setTransferConfigs($transferConfigs)
   {

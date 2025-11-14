@@ -20,16 +20,32 @@ namespace Google\Service\CloudSupport;
 class CaseClassification extends \Google\Model
 {
   /**
+   * A display name for the classification. The display name is not static and
+   * can change. To uniquely and consistently identify classifications, use the
+   * `CaseClassification.id` field.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The unique ID for a classification. Must be specified for case creation. To
+   * retrieve valid classification IDs for case creation, use
+   * `caseClassifications.search`. Classification IDs returned by
+   * `caseClassifications.search` are guaranteed to be valid for at least 6
+   * months. If a given classification is deactiveated, it will immediately stop
+   * being returned. After 6 months, `case.create` requests using the
+   * classification ID will fail.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * A display name for the classification. The display name is not static and
+   * can change. To uniquely and consistently identify classifications, use the
+   * `CaseClassification.id` field.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +59,15 @@ class CaseClassification extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The unique ID for a classification. Must be specified for case creation. To
+   * retrieve valid classification IDs for case creation, use
+   * `caseClassifications.search`. Classification IDs returned by
+   * `caseClassifications.search` are guaranteed to be valid for at least 6
+   * months. If a given classification is deactiveated, it will immediately stop
+   * being returned. After 6 months, `case.create` requests using the
+   * classification ID will fail.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

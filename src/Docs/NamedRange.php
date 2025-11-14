@@ -21,10 +21,14 @@ class NamedRange extends \Google\Collection
 {
   protected $collection_key = 'ranges';
   /**
+   * The name of the named range.
+   *
    * @var string
    */
   public $name;
   /**
+   * The ID of the named range.
+   *
    * @var string
    */
   public $namedRangeId;
@@ -32,7 +36,9 @@ class NamedRange extends \Google\Collection
   protected $rangesDataType = 'array';
 
   /**
-   * @param string
+   * The name of the named range.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -46,7 +52,9 @@ class NamedRange extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The ID of the named range.
+   *
+   * @param string $namedRangeId
    */
   public function setNamedRangeId($namedRangeId)
   {
@@ -60,7 +68,9 @@ class NamedRange extends \Google\Collection
     return $this->namedRangeId;
   }
   /**
-   * @param Range[]
+   * The ranges that belong to this named range.
+   *
+   * @param Range[] $ranges
    */
   public function setRanges($ranges)
   {

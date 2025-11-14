@@ -20,12 +20,16 @@ namespace Google\Service\Dfareporting;
 class KeyValueTargetingExpression extends \Google\Model
 {
   /**
+   * Keyword expression being targeted by the ad.
+   *
    * @var string
    */
   public $expression;
 
   /**
-   * @param string
+   * Keyword expression being targeted by the ad.
+   *
+   * @param string $expression
    */
   public function setExpression($expression)
   {

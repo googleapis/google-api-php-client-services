@@ -19,16 +19,31 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData extends \Google\Model
 {
+  /**
+   * The system's confidence score that this suggestion is a good match for this
+   * conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely
+   * certain).
+   *
+   * @var 
+   */
   public $confidenceScore;
   /**
+   * Map that contains metadata about the Smart Compose suggestion and the
+   * document from which it originates.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
+   *
    * @var string
    */
   public $queryRecord;
   /**
+   * The content of the suggestion.
+   *
    * @var string
    */
   public $suggestion;
@@ -42,7 +57,10 @@ class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData extends \Goog
     return $this->confidenceScore;
   }
   /**
-   * @param string[]
+   * Map that contains metadata about the Smart Compose suggestion and the
+   * document from which it originates.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -56,7 +74,10 @@ class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData extends \Goog
     return $this->metadata;
   }
   /**
-   * @param string
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
+   *
+   * @param string $queryRecord
    */
   public function setQueryRecord($queryRecord)
   {
@@ -70,7 +91,9 @@ class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionData extends \Goog
     return $this->queryRecord;
   }
   /**
-   * @param string
+   * The content of the suggestion.
+   *
+   * @param string $suggestion
    */
   public function setSuggestion($suggestion)
   {

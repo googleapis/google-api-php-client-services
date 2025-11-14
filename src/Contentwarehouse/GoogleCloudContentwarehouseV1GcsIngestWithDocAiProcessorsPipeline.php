@@ -23,16 +23,26 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
   protected $extractProcessorInfosType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $extractProcessorInfosDataType = 'array';
   /**
+   * The input Cloud Storage folder. All files under this folder will be
+   * imported to Document Warehouse. Format: `gs:`.
+   *
    * @var string
    */
   public $inputPath;
   protected $pipelineConfigType = GoogleCloudContentwarehouseV1IngestPipelineConfig::class;
   protected $pipelineConfigDataType = '';
   /**
+   * The Cloud Storage folder path used to store the raw results from
+   * processors. Format: `gs:`.
+   *
    * @var string
    */
   public $processorResultsFolderPath;
   /**
+   * The flag whether to skip ingested documents. If it is set to true,
+   * documents in Cloud Storage contains key "status" with value
+   * "status=ingested" in custom metadata will be skipped to ingest.
+   *
    * @var bool
    */
   public $skipIngestedDocuments;
@@ -40,7 +50,11 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
   protected $splitClassifyProcessorInfoDataType = '';
 
   /**
-   * @param GoogleCloudContentwarehouseV1ProcessorInfo[]
+   * The extract processors information. One matched extract processor will be
+   * used to process documents based on the classify processor result. If no
+   * classify processor is specified, the first extract processor will be used.
+   *
+   * @param GoogleCloudContentwarehouseV1ProcessorInfo[] $extractProcessorInfos
    */
   public function setExtractProcessorInfos($extractProcessorInfos)
   {
@@ -54,7 +68,10 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
     return $this->extractProcessorInfos;
   }
   /**
-   * @param string
+   * The input Cloud Storage folder. All files under this folder will be
+   * imported to Document Warehouse. Format: `gs:`.
+   *
+   * @param string $inputPath
    */
   public function setInputPath($inputPath)
   {
@@ -68,7 +85,11 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
     return $this->inputPath;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1IngestPipelineConfig
+   * Optional. The config for the Cloud Storage Ingestion with DocAI Processors
+   * pipeline. It provides additional customization options to run the pipeline
+   * and can be skipped if it is not applicable.
+   *
+   * @param GoogleCloudContentwarehouseV1IngestPipelineConfig $pipelineConfig
    */
   public function setPipelineConfig(GoogleCloudContentwarehouseV1IngestPipelineConfig $pipelineConfig)
   {
@@ -82,7 +103,10 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
     return $this->pipelineConfig;
   }
   /**
-   * @param string
+   * The Cloud Storage folder path used to store the raw results from
+   * processors. Format: `gs:`.
+   *
+   * @param string $processorResultsFolderPath
    */
   public function setProcessorResultsFolderPath($processorResultsFolderPath)
   {
@@ -96,7 +120,11 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
     return $this->processorResultsFolderPath;
   }
   /**
-   * @param bool
+   * The flag whether to skip ingested documents. If it is set to true,
+   * documents in Cloud Storage contains key "status" with value
+   * "status=ingested" in custom metadata will be skipped to ingest.
+   *
+   * @param bool $skipIngestedDocuments
    */
   public function setSkipIngestedDocuments($skipIngestedDocuments)
   {
@@ -110,7 +138,10 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
     return $this->skipIngestedDocuments;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1ProcessorInfo
+   * The split and classify processor information. The split and classify result
+   * will be used to find a matched extract processor.
+   *
+   * @param GoogleCloudContentwarehouseV1ProcessorInfo $splitClassifyProcessorInfo
    */
   public function setSplitClassifyProcessorInfo(GoogleCloudContentwarehouseV1ProcessorInfo $splitClassifyProcessorInfo)
   {

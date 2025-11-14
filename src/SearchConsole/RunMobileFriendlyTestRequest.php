@@ -20,16 +20,22 @@ namespace Google\Service\SearchConsole;
 class RunMobileFriendlyTestRequest extends \Google\Model
 {
   /**
+   * Whether or not screenshot is requested. Default is false.
+   *
    * @var bool
    */
   public $requestScreenshot;
   /**
+   * URL for inspection.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param bool
+   * Whether or not screenshot is requested. Default is false.
+   *
+   * @param bool $requestScreenshot
    */
   public function setRequestScreenshot($requestScreenshot)
   {
@@ -43,7 +49,9 @@ class RunMobileFriendlyTestRequest extends \Google\Model
     return $this->requestScreenshot;
   }
   /**
-   * @param string
+   * URL for inspection.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

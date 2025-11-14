@@ -23,6 +23,8 @@ class StoredColumnsUsage extends \Google\Collection
   protected $baseTableType = TableReference::class;
   protected $baseTableDataType = '';
   /**
+   * Specifies whether the query was accelerated with stored columns.
+   *
    * @var bool
    */
   public $isQueryAccelerated;
@@ -30,7 +32,9 @@ class StoredColumnsUsage extends \Google\Collection
   protected $storedColumnsUnusedReasonsDataType = 'array';
 
   /**
-   * @param TableReference
+   * Specifies the base table.
+   *
+   * @param TableReference $baseTable
    */
   public function setBaseTable(TableReference $baseTable)
   {
@@ -44,7 +48,9 @@ class StoredColumnsUsage extends \Google\Collection
     return $this->baseTable;
   }
   /**
-   * @param bool
+   * Specifies whether the query was accelerated with stored columns.
+   *
+   * @param bool $isQueryAccelerated
    */
   public function setIsQueryAccelerated($isQueryAccelerated)
   {
@@ -58,7 +64,9 @@ class StoredColumnsUsage extends \Google\Collection
     return $this->isQueryAccelerated;
   }
   /**
-   * @param StoredColumnsUnusedReason[]
+   * If stored columns were not used, explain why.
+   *
+   * @param StoredColumnsUnusedReason[] $storedColumnsUnusedReasons
    */
   public function setStoredColumnsUnusedReasons($storedColumnsUnusedReasons)
   {

@@ -20,20 +20,32 @@ namespace Google\Service\Dataform;
 class Config extends \Google\Model
 {
   /**
+   * Optional. The default KMS key that is used if no encryption key is provided
+   * when a repository is created.
+   *
    * @var string
    */
   public $defaultKmsKeyName;
   /**
+   * Output only. All the metadata information that is used internally to serve
+   * the resource. For example: timestamps, flags, status fields, etc. The
+   * format of this field is a JSON string.
+   *
    * @var string
    */
   public $internalMetadata;
   /**
+   * Identifier. The config name.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Optional. The default KMS key that is used if no encryption key is provided
+   * when a repository is created.
+   *
+   * @param string $defaultKmsKeyName
    */
   public function setDefaultKmsKeyName($defaultKmsKeyName)
   {
@@ -47,7 +59,11 @@ class Config extends \Google\Model
     return $this->defaultKmsKeyName;
   }
   /**
-   * @param string
+   * Output only. All the metadata information that is used internally to serve
+   * the resource. For example: timestamps, flags, status fields, etc. The
+   * format of this field is a JSON string.
+   *
+   * @param string $internalMetadata
    */
   public function setInternalMetadata($internalMetadata)
   {
@@ -61,7 +77,9 @@ class Config extends \Google\Model
     return $this->internalMetadata;
   }
   /**
-   * @param string
+   * Identifier. The config name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

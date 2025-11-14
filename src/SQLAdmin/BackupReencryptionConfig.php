@@ -20,16 +20,34 @@ namespace Google\Service\SQLAdmin;
 class BackupReencryptionConfig extends \Google\Model
 {
   /**
+   * Unknown backup type, will be defaulted to AUTOMATIC backup type
+   */
+  public const BACKUP_TYPE_BACKUP_TYPE_UNSPECIFIED = 'BACKUP_TYPE_UNSPECIFIED';
+  /**
+   * Reencrypt automatic backups
+   */
+  public const BACKUP_TYPE_AUTOMATED = 'AUTOMATED';
+  /**
+   * Reencrypt on-demand backups
+   */
+  public const BACKUP_TYPE_ON_DEMAND = 'ON_DEMAND';
+  /**
+   * Backup re-encryption limit
+   *
    * @var int
    */
   public $backupLimit;
   /**
+   * Type of backups users want to re-encrypt.
+   *
    * @var string
    */
   public $backupType;
 
   /**
-   * @param int
+   * Backup re-encryption limit
+   *
+   * @param int $backupLimit
    */
   public function setBackupLimit($backupLimit)
   {
@@ -43,14 +61,18 @@ class BackupReencryptionConfig extends \Google\Model
     return $this->backupLimit;
   }
   /**
-   * @param string
+   * Type of backups users want to re-encrypt.
+   *
+   * Accepted values: BACKUP_TYPE_UNSPECIFIED, AUTOMATED, ON_DEMAND
+   *
+   * @param self::BACKUP_TYPE_* $backupType
    */
   public function setBackupType($backupType)
   {
     $this->backupType = $backupType;
   }
   /**
-   * @return string
+   * @return self::BACKUP_TYPE_*
    */
   public function getBackupType()
   {

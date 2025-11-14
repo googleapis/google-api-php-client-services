@@ -20,20 +20,64 @@ namespace Google\Service\DoubleClickBidManager;
 class ReportStatus extends \Google\Model
 {
   /**
+   * Default value when format is not specified or is unknown in this version.
+   */
+  public const FORMAT_FORMAT_UNSPECIFIED = 'FORMAT_UNSPECIFIED';
+  /**
+   * CSV.
+   */
+  public const FORMAT_CSV = 'CSV';
+  /**
+   * Excel.
+   */
+  public const FORMAT_XLSX = 'XLSX';
+  /**
+   * Default value when state is not specified or is unknown in this version.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The report is queued to run.
+   */
+  public const STATE_QUEUED = 'QUEUED';
+  /**
+   * The report is currently running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The report has finished running successfully.
+   */
+  public const STATE_DONE = 'DONE';
+  /**
+   * The report has finished running in failure.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Output only. The timestamp of when report generation finished successfully
+   * or in failure. This field will not be set unless state is `DONE` or
+   * `FAILED`.
+   *
    * @var string
    */
   public $finishTime;
   /**
+   * The format of the generated report file.
+   *
    * @var string
    */
   public $format;
   /**
+   * Output only. The state of the report generation.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The timestamp of when report generation finished successfully
+   * or in failure. This field will not be set unless state is `DONE` or
+   * `FAILED`.
+   *
+   * @param string $finishTime
    */
   public function setFinishTime($finishTime)
   {
@@ -47,28 +91,36 @@ class ReportStatus extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * @param string
+   * The format of the generated report file.
+   *
+   * Accepted values: FORMAT_UNSPECIFIED, CSV, XLSX
+   *
+   * @param self::FORMAT_* $format
    */
   public function setFormat($format)
   {
     $this->format = $format;
   }
   /**
-   * @return string
+   * @return self::FORMAT_*
    */
   public function getFormat()
   {
     return $this->format;
   }
   /**
-   * @param string
+   * Output only. The state of the report generation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, QUEUED, RUNNING, DONE, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

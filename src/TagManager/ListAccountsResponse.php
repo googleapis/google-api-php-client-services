@@ -23,12 +23,16 @@ class ListAccountsResponse extends \Google\Collection
   protected $accountType = Account::class;
   protected $accountDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Account[]
+   * List of GTM Accounts that a user has access to.
+   *
+   * @param Account[] $account
    */
   public function setAccount($account)
   {
@@ -42,7 +46,9 @@ class ListAccountsResponse extends \Google\Collection
     return $this->account;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

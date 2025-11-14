@@ -21,36 +21,67 @@ class BulkRestoreObjectsRequest extends \Google\Collection
 {
   protected $collection_key = 'matchGlobs';
   /**
+   * If false (default), the restore will not overwrite live objects with the
+   * same name at the destination. This means some deleted objects may be
+   * skipped. If true, live objects will be overwritten resulting in a
+   * noncurrent object (if versioning is enabled). If versioning is not enabled,
+   * overwriting the object will result in a soft-deleted object. In either
+   * case, if a noncurrent object already exists with the same name, a live
+   * version can be written without issue.
+   *
    * @var bool
    */
   public $allowOverwrite;
   /**
+   * If true, copies the source object's ACL; otherwise, uses the bucket's
+   * default object ACL. The default is false.
+   *
    * @var bool
    */
   public $copySourceAcl;
   /**
+   * Restores only the objects that were created after this time.
+   *
    * @var string
    */
   public $createdAfterTime;
   /**
+   * Restores only the objects that were created before this time.
+   *
    * @var string
    */
   public $createdBeforeTime;
   /**
+   * Restores only the objects matching any of the specified glob(s). If this
+   * parameter is not specified, all objects will be restored within the
+   * specified time range.
+   *
    * @var string[]
    */
   public $matchGlobs;
   /**
+   * Restores only the objects that were soft-deleted after this time.
+   *
    * @var string
    */
   public $softDeletedAfterTime;
   /**
+   * Restores only the objects that were soft-deleted before this time.
+   *
    * @var string
    */
   public $softDeletedBeforeTime;
 
   /**
-   * @param bool
+   * If false (default), the restore will not overwrite live objects with the
+   * same name at the destination. This means some deleted objects may be
+   * skipped. If true, live objects will be overwritten resulting in a
+   * noncurrent object (if versioning is enabled). If versioning is not enabled,
+   * overwriting the object will result in a soft-deleted object. In either
+   * case, if a noncurrent object already exists with the same name, a live
+   * version can be written without issue.
+   *
+   * @param bool $allowOverwrite
    */
   public function setAllowOverwrite($allowOverwrite)
   {
@@ -64,7 +95,10 @@ class BulkRestoreObjectsRequest extends \Google\Collection
     return $this->allowOverwrite;
   }
   /**
-   * @param bool
+   * If true, copies the source object's ACL; otherwise, uses the bucket's
+   * default object ACL. The default is false.
+   *
+   * @param bool $copySourceAcl
    */
   public function setCopySourceAcl($copySourceAcl)
   {
@@ -78,7 +112,9 @@ class BulkRestoreObjectsRequest extends \Google\Collection
     return $this->copySourceAcl;
   }
   /**
-   * @param string
+   * Restores only the objects that were created after this time.
+   *
+   * @param string $createdAfterTime
    */
   public function setCreatedAfterTime($createdAfterTime)
   {
@@ -92,7 +128,9 @@ class BulkRestoreObjectsRequest extends \Google\Collection
     return $this->createdAfterTime;
   }
   /**
-   * @param string
+   * Restores only the objects that were created before this time.
+   *
+   * @param string $createdBeforeTime
    */
   public function setCreatedBeforeTime($createdBeforeTime)
   {
@@ -106,7 +144,11 @@ class BulkRestoreObjectsRequest extends \Google\Collection
     return $this->createdBeforeTime;
   }
   /**
-   * @param string[]
+   * Restores only the objects matching any of the specified glob(s). If this
+   * parameter is not specified, all objects will be restored within the
+   * specified time range.
+   *
+   * @param string[] $matchGlobs
    */
   public function setMatchGlobs($matchGlobs)
   {
@@ -120,7 +162,9 @@ class BulkRestoreObjectsRequest extends \Google\Collection
     return $this->matchGlobs;
   }
   /**
-   * @param string
+   * Restores only the objects that were soft-deleted after this time.
+   *
+   * @param string $softDeletedAfterTime
    */
   public function setSoftDeletedAfterTime($softDeletedAfterTime)
   {
@@ -134,7 +178,9 @@ class BulkRestoreObjectsRequest extends \Google\Collection
     return $this->softDeletedAfterTime;
   }
   /**
-   * @param string
+   * Restores only the objects that were soft-deleted before this time.
+   *
+   * @param string $softDeletedBeforeTime
    */
   public function setSoftDeletedBeforeTime($softDeletedBeforeTime)
   {

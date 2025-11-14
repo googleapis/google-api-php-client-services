@@ -20,32 +20,56 @@ namespace Google\Service\Docs;
 class TabProperties extends \Google\Model
 {
   /**
+   * Optional. The emoji icon displayed with the tab. A valid emoji icon is
+   * represented by a non-empty Unicode string. Any set of characters that don't
+   * represent a single emoji is invalid. If an emoji is invalid, a 400 bad
+   * request error is returned. If this value is unset or empty, the tab will
+   * display the default tab icon.
+   *
    * @var string
    */
   public $iconEmoji;
   /**
+   * The zero-based index of the tab within the parent.
+   *
    * @var int
    */
   public $index;
   /**
+   * Output only. The depth of the tab within the document. Root-level tabs
+   * start at 0.
+   *
    * @var int
    */
   public $nestingLevel;
   /**
+   * Optional. The ID of the parent tab. Empty when the current tab is a root-
+   * level tab, which means it doesn't have any parents.
+   *
    * @var string
    */
   public $parentTabId;
   /**
+   * Output only. The ID of the tab. This field can't be changed.
+   *
    * @var string
    */
   public $tabId;
   /**
+   * The user-visible name of the tab.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Optional. The emoji icon displayed with the tab. A valid emoji icon is
+   * represented by a non-empty Unicode string. Any set of characters that don't
+   * represent a single emoji is invalid. If an emoji is invalid, a 400 bad
+   * request error is returned. If this value is unset or empty, the tab will
+   * display the default tab icon.
+   *
+   * @param string $iconEmoji
    */
   public function setIconEmoji($iconEmoji)
   {
@@ -59,7 +83,9 @@ class TabProperties extends \Google\Model
     return $this->iconEmoji;
   }
   /**
-   * @param int
+   * The zero-based index of the tab within the parent.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -73,7 +99,10 @@ class TabProperties extends \Google\Model
     return $this->index;
   }
   /**
-   * @param int
+   * Output only. The depth of the tab within the document. Root-level tabs
+   * start at 0.
+   *
+   * @param int $nestingLevel
    */
   public function setNestingLevel($nestingLevel)
   {
@@ -87,7 +116,10 @@ class TabProperties extends \Google\Model
     return $this->nestingLevel;
   }
   /**
-   * @param string
+   * Optional. The ID of the parent tab. Empty when the current tab is a root-
+   * level tab, which means it doesn't have any parents.
+   *
+   * @param string $parentTabId
    */
   public function setParentTabId($parentTabId)
   {
@@ -101,7 +133,9 @@ class TabProperties extends \Google\Model
     return $this->parentTabId;
   }
   /**
-   * @param string
+   * Output only. The ID of the tab. This field can't be changed.
+   *
+   * @param string $tabId
    */
   public function setTabId($tabId)
   {
@@ -115,7 +149,9 @@ class TabProperties extends \Google\Model
     return $this->tabId;
   }
   /**
-   * @param string
+   * The user-visible name of the tab.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

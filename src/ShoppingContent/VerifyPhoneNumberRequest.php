@@ -20,34 +20,58 @@ namespace Google\Service\ShoppingContent;
 class VerifyPhoneNumberRequest extends \Google\Model
 {
   /**
+   * Unknown method.
+   */
+  public const PHONE_VERIFICATION_METHOD_PHONE_VERIFICATION_METHOD_UNSPECIFIED = 'PHONE_VERIFICATION_METHOD_UNSPECIFIED';
+  /**
+   * Receive verification code by SMS.
+   */
+  public const PHONE_VERIFICATION_METHOD_SMS = 'SMS';
+  /**
+   * Receive verification code by phone call.
+   */
+  public const PHONE_VERIFICATION_METHOD_PHONE_CALL = 'PHONE_CALL';
+  /**
+   * Verification method used to receive verification code.
+   *
    * @var string
    */
   public $phoneVerificationMethod;
   /**
+   * The verification code that was sent to the phone number for validation.
+   *
    * @var string
    */
   public $verificationCode;
   /**
+   * The verification ID returned by `requestphoneverification`.
+   *
    * @var string
    */
   public $verificationId;
 
   /**
-   * @param string
+   * Verification method used to receive verification code.
+   *
+   * Accepted values: PHONE_VERIFICATION_METHOD_UNSPECIFIED, SMS, PHONE_CALL
+   *
+   * @param self::PHONE_VERIFICATION_METHOD_* $phoneVerificationMethod
    */
   public function setPhoneVerificationMethod($phoneVerificationMethod)
   {
     $this->phoneVerificationMethod = $phoneVerificationMethod;
   }
   /**
-   * @return string
+   * @return self::PHONE_VERIFICATION_METHOD_*
    */
   public function getPhoneVerificationMethod()
   {
     return $this->phoneVerificationMethod;
   }
   /**
-   * @param string
+   * The verification code that was sent to the phone number for validation.
+   *
+   * @param string $verificationCode
    */
   public function setVerificationCode($verificationCode)
   {
@@ -61,7 +85,9 @@ class VerifyPhoneNumberRequest extends \Google\Model
     return $this->verificationCode;
   }
   /**
-   * @param string
+   * The verification ID returned by `requestphoneverification`.
+   *
+   * @param string $verificationId
    */
   public function setVerificationId($verificationId)
   {

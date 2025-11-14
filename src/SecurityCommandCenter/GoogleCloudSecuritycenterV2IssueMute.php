@@ -20,24 +20,46 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueMute extends \Google\Model
 {
   /**
+   * Unspecified mute state.
+   */
+  public const MUTE_STATE_MUTE_STATE_UNSPECIFIED = 'MUTE_STATE_UNSPECIFIED';
+  /**
+   * Not muted.
+   */
+  public const MUTE_STATE_NOT_MUTED = 'NOT_MUTED';
+  /**
+   * Muted.
+   */
+  public const MUTE_STATE_MUTED = 'MUTED';
+  /**
+   * The email address of the user who last changed the mute state of the issue.
+   *
    * @var string
    */
   public $muteInitiator;
   /**
+   * The user-provided reason for muting the issue.
+   *
    * @var string
    */
   public $muteReason;
   /**
+   * Output only. The mute state of the issue.
+   *
    * @var string
    */
   public $muteState;
   /**
+   * The time the issue was muted.
+   *
    * @var string
    */
   public $muteUpdateTime;
 
   /**
-   * @param string
+   * The email address of the user who last changed the mute state of the issue.
+   *
+   * @param string $muteInitiator
    */
   public function setMuteInitiator($muteInitiator)
   {
@@ -51,7 +73,9 @@ class GoogleCloudSecuritycenterV2IssueMute extends \Google\Model
     return $this->muteInitiator;
   }
   /**
-   * @param string
+   * The user-provided reason for muting the issue.
+   *
+   * @param string $muteReason
    */
   public function setMuteReason($muteReason)
   {
@@ -65,21 +89,27 @@ class GoogleCloudSecuritycenterV2IssueMute extends \Google\Model
     return $this->muteReason;
   }
   /**
-   * @param string
+   * Output only. The mute state of the issue.
+   *
+   * Accepted values: MUTE_STATE_UNSPECIFIED, NOT_MUTED, MUTED
+   *
+   * @param self::MUTE_STATE_* $muteState
    */
   public function setMuteState($muteState)
   {
     $this->muteState = $muteState;
   }
   /**
-   * @return string
+   * @return self::MUTE_STATE_*
    */
   public function getMuteState()
   {
     return $this->muteState;
   }
   /**
-   * @param string
+   * The time the issue was muted.
+   *
+   * @param string $muteUpdateTime
    */
   public function setMuteUpdateTime($muteUpdateTime)
   {

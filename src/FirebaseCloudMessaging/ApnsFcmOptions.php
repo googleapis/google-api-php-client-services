@@ -20,16 +20,24 @@ namespace Google\Service\FirebaseCloudMessaging;
 class ApnsFcmOptions extends \Google\Model
 {
   /**
+   * Label associated with the message's analytics data.
+   *
    * @var string
    */
   public $analyticsLabel;
   /**
+   * Contains the URL of an image that is going to be displayed in a
+   * notification. If present, it will override
+   * google.firebase.fcm.v1.Notification.image.
+   *
    * @var string
    */
   public $image;
 
   /**
-   * @param string
+   * Label associated with the message's analytics data.
+   *
+   * @param string $analyticsLabel
    */
   public function setAnalyticsLabel($analyticsLabel)
   {
@@ -43,7 +51,11 @@ class ApnsFcmOptions extends \Google\Model
     return $this->analyticsLabel;
   }
   /**
-   * @param string
+   * Contains the URL of an image that is going to be displayed in a
+   * notification. If present, it will override
+   * google.firebase.fcm.v1.Notification.image.
+   *
+   * @param string $image
    */
   public function setImage($image)
   {

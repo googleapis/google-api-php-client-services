@@ -20,19 +20,43 @@ namespace Google\Service\Appengine;
 class NetworkSettings extends \Google\Model
 {
   /**
+   * Unspecified
+   */
+  public const INGRESS_TRAFFIC_ALLOWED_INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED = 'INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED';
+  /**
+   * Allow HTTP traffic from public and private sources.
+   */
+  public const INGRESS_TRAFFIC_ALLOWED_INGRESS_TRAFFIC_ALLOWED_ALL = 'INGRESS_TRAFFIC_ALLOWED_ALL';
+  /**
+   * Allow HTTP traffic from only private VPC sources.
+   */
+  public const INGRESS_TRAFFIC_ALLOWED_INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY = 'INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY';
+  /**
+   * Allow HTTP traffic from private VPC sources and through load balancers.
+   */
+  public const INGRESS_TRAFFIC_ALLOWED_INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB = 'INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB';
+  /**
+   * The ingress settings for version or service.
+   *
    * @var string
    */
   public $ingressTrafficAllowed;
 
   /**
-   * @param string
+   * The ingress settings for version or service.
+   *
+   * Accepted values: INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED,
+   * INGRESS_TRAFFIC_ALLOWED_ALL, INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY,
+   * INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB
+   *
+   * @param self::INGRESS_TRAFFIC_ALLOWED_* $ingressTrafficAllowed
    */
   public function setIngressTrafficAllowed($ingressTrafficAllowed)
   {
     $this->ingressTrafficAllowed = $ingressTrafficAllowed;
   }
   /**
-   * @return string
+   * @return self::INGRESS_TRAFFIC_ALLOWED_*
    */
   public function getIngressTrafficAllowed()
   {

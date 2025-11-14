@@ -19,7 +19,17 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1StudyConfigParameterSpecDoubleValueSpec extends \Google\Model
 {
+  /**
+   * Must be specified if type is `DOUBLE`. Maximum value of the parameter.
+   *
+   * @var 
+   */
   public $maxValue;
+  /**
+   * Must be specified if type is `DOUBLE`. Minimum value of the parameter.
+   *
+   * @var 
+   */
   public $minValue;
 
   public function setMaxValue($maxValue)

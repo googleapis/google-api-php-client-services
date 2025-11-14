@@ -23,16 +23,25 @@ class ListGatewayRouteViewsResponse extends \Google\Collection
   protected $gatewayRouteViewsType = GatewayRouteView::class;
   protected $gatewayRouteViewsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unreachable resources. Populated when the request attempts to list all
+   * resources across all supported locations, while some locations are
+   * temporarily unavailable.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param GatewayRouteView[]
+   * List of GatewayRouteView resources.
+   *
+   * @param GatewayRouteView[] $gatewayRouteViews
    */
   public function setGatewayRouteViews($gatewayRouteViews)
   {
@@ -46,7 +55,10 @@ class ListGatewayRouteViewsResponse extends \Google\Collection
     return $this->gatewayRouteViews;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,11 @@ class ListGatewayRouteViewsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Unreachable resources. Populated when the request attempts to list all
+   * resources across all supported locations, while some locations are
+   * temporarily unavailable.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

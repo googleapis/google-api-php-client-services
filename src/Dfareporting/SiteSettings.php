@@ -20,30 +20,63 @@ namespace Google\Service\Dfareporting;
 class SiteSettings extends \Google\Model
 {
   /**
+   * DEFAULT means Google chooses which adapter, if any, to serve.
+   */
+  public const VPAID_ADAPTER_CHOICE_TEMPLATE_DEFAULT = 'DEFAULT';
+  public const VPAID_ADAPTER_CHOICE_TEMPLATE_FLASH = 'FLASH';
+  public const VPAID_ADAPTER_CHOICE_TEMPLATE_HTML5 = 'HTML5';
+  public const VPAID_ADAPTER_CHOICE_TEMPLATE_BOTH = 'BOTH';
+  /**
+   * Whether active view creatives are disabled for this site.
+   *
    * @var bool
    */
   public $activeViewOptOut;
   /**
+   * Whether this site opts out of ad blocking. When true, ad blocking is
+   * disabled for all placements under the site, regardless of the individual
+   * placement settings. When false, the campaign and placement settings take
+   * effect.
+   *
    * @var bool
    */
   public $adBlockingOptOut;
   /**
+   * Whether new cookies are disabled for this site.
+   *
    * @var bool
    */
   public $disableNewCookie;
   protected $tagSettingType = TagSetting::class;
   protected $tagSettingDataType = '';
   /**
+   * Whether Verification and ActiveView for in-stream video creatives are
+   * disabled by default for new placements created under this site. This value
+   * will be used to populate the placement.videoActiveViewOptOut field, when no
+   * value is specified for the new placement.
+   *
    * @var bool
    */
   public $videoActiveViewOptOutTemplate;
   /**
+   * Default VPAID adapter setting for new placements created under this site.
+   * This value will be used to populate the placements.vpaidAdapterChoice
+   * field, when no value is specified for the new placement. Controls which
+   * VPAID format the measurement adapter will use for in-stream video creatives
+   * assigned to the placement. The publisher's specifications will typically
+   * determine this setting. For VPAID creatives, the adapter format will match
+   * the VPAID format (HTML5 VPAID creatives use the HTML5 adapter). *Note:*
+   * Flash is no longer supported. This field now defaults to HTML5 when the
+   * following values are provided: FLASH, BOTH.
+   *
    * @var string
    */
   public $vpaidAdapterChoiceTemplate;
 
   /**
-   * @param bool
+   * Whether active view creatives are disabled for this site.
+   *
+   * @param bool $activeViewOptOut
    */
   public function setActiveViewOptOut($activeViewOptOut)
   {
@@ -57,7 +90,12 @@ class SiteSettings extends \Google\Model
     return $this->activeViewOptOut;
   }
   /**
-   * @param bool
+   * Whether this site opts out of ad blocking. When true, ad blocking is
+   * disabled for all placements under the site, regardless of the individual
+   * placement settings. When false, the campaign and placement settings take
+   * effect.
+   *
+   * @param bool $adBlockingOptOut
    */
   public function setAdBlockingOptOut($adBlockingOptOut)
   {
@@ -71,7 +109,9 @@ class SiteSettings extends \Google\Model
     return $this->adBlockingOptOut;
   }
   /**
-   * @param bool
+   * Whether new cookies are disabled for this site.
+   *
+   * @param bool $disableNewCookie
    */
   public function setDisableNewCookie($disableNewCookie)
   {
@@ -85,7 +125,9 @@ class SiteSettings extends \Google\Model
     return $this->disableNewCookie;
   }
   /**
-   * @param TagSetting
+   * Configuration settings for dynamic and image floodlight tags.
+   *
+   * @param TagSetting $tagSetting
    */
   public function setTagSetting(TagSetting $tagSetting)
   {
@@ -99,7 +141,12 @@ class SiteSettings extends \Google\Model
     return $this->tagSetting;
   }
   /**
-   * @param bool
+   * Whether Verification and ActiveView for in-stream video creatives are
+   * disabled by default for new placements created under this site. This value
+   * will be used to populate the placement.videoActiveViewOptOut field, when no
+   * value is specified for the new placement.
+   *
+   * @param bool $videoActiveViewOptOutTemplate
    */
   public function setVideoActiveViewOptOutTemplate($videoActiveViewOptOutTemplate)
   {
@@ -113,14 +160,26 @@ class SiteSettings extends \Google\Model
     return $this->videoActiveViewOptOutTemplate;
   }
   /**
-   * @param string
+   * Default VPAID adapter setting for new placements created under this site.
+   * This value will be used to populate the placements.vpaidAdapterChoice
+   * field, when no value is specified for the new placement. Controls which
+   * VPAID format the measurement adapter will use for in-stream video creatives
+   * assigned to the placement. The publisher's specifications will typically
+   * determine this setting. For VPAID creatives, the adapter format will match
+   * the VPAID format (HTML5 VPAID creatives use the HTML5 adapter). *Note:*
+   * Flash is no longer supported. This field now defaults to HTML5 when the
+   * following values are provided: FLASH, BOTH.
+   *
+   * Accepted values: DEFAULT, FLASH, HTML5, BOTH
+   *
+   * @param self::VPAID_ADAPTER_CHOICE_TEMPLATE_* $vpaidAdapterChoiceTemplate
    */
   public function setVpaidAdapterChoiceTemplate($vpaidAdapterChoiceTemplate)
   {
     $this->vpaidAdapterChoiceTemplate = $vpaidAdapterChoiceTemplate;
   }
   /**
-   * @return string
+   * @return self::VPAID_ADAPTER_CHOICE_TEMPLATE_*
    */
   public function getVpaidAdapterChoiceTemplate()
   {

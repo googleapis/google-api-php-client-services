@@ -20,16 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingConfig extends \Google\Model
 {
   /**
+   * The number of overlapping pages between consecutive shards.
+   *
    * @var int
    */
   public $pagesOverlap;
   /**
+   * The number of pages per shard.
+   *
    * @var int
    */
   public $pagesPerShard;
 
   /**
-   * @param int
+   * The number of overlapping pages between consecutive shards.
+   *
+   * @param int $pagesOverlap
    */
   public function setPagesOverlap($pagesOverlap)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfigShardingConfig e
     return $this->pagesOverlap;
   }
   /**
-   * @param int
+   * The number of pages per shard.
+   *
+   * @param int $pagesPerShard
    */
   public function setPagesPerShard($pagesPerShard)
   {

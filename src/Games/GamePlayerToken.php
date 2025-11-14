@@ -20,6 +20,8 @@ namespace Google\Service\Games;
 class GamePlayerToken extends \Google\Model
 {
   /**
+   * The application that this player identifier is for.
+   *
    * @var string
    */
   public $applicationId;
@@ -27,7 +29,9 @@ class GamePlayerToken extends \Google\Model
   protected $recallTokenDataType = '';
 
   /**
-   * @param string
+   * The application that this player identifier is for.
+   *
+   * @param string $applicationId
    */
   public function setApplicationId($applicationId)
   {
@@ -41,7 +45,9 @@ class GamePlayerToken extends \Google\Model
     return $this->applicationId;
   }
   /**
-   * @param RecallToken
+   * Recall token data.
+   *
+   * @param RecallToken $recallToken
    */
   public function setRecallToken(RecallToken $recallToken)
   {

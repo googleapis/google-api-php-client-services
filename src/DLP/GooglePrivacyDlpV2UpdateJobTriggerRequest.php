@@ -22,12 +22,16 @@ class GooglePrivacyDlpV2UpdateJobTriggerRequest extends \Google\Model
   protected $jobTriggerType = GooglePrivacyDlpV2JobTrigger::class;
   protected $jobTriggerDataType = '';
   /**
+   * Mask to control which fields get updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GooglePrivacyDlpV2JobTrigger
+   * New JobTrigger value.
+   *
+   * @param GooglePrivacyDlpV2JobTrigger $jobTrigger
    */
   public function setJobTrigger(GooglePrivacyDlpV2JobTrigger $jobTrigger)
   {
@@ -41,7 +45,9 @@ class GooglePrivacyDlpV2UpdateJobTriggerRequest extends \Google\Model
     return $this->jobTrigger;
   }
   /**
-   * @param string
+   * Mask to control which fields get updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

@@ -23,12 +23,18 @@ class SasPortalListDevicesResponse extends \Google\Collection
   protected $devicesType = SasPortalDevice::class;
   protected $devicesDataType = 'array';
   /**
+   * A pagination token returned from a previous call to ListDevices that
+   * indicates from where listing should continue. If the field is missing or
+   * empty, it means there is no more devices.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param SasPortalDevice[]
+   * The devices that match the request.
+   *
+   * @param SasPortalDevice[] $devices
    */
   public function setDevices($devices)
   {
@@ -42,7 +48,11 @@ class SasPortalListDevicesResponse extends \Google\Collection
     return $this->devices;
   }
   /**
-   * @param string
+   * A pagination token returned from a previous call to ListDevices that
+   * indicates from where listing should continue. If the field is missing or
+   * empty, it means there is no more devices.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -29,7 +29,9 @@ class GoogleCloudDiscoveryengineV1ImportUserEventsRequest extends \Google\Model
   protected $inlineSourceDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1BigQuerySource
+   * BigQuery input source.
+   *
+   * @param GoogleCloudDiscoveryengineV1BigQuerySource $bigquerySource
    */
   public function setBigquerySource(GoogleCloudDiscoveryengineV1BigQuerySource $bigquerySource)
   {
@@ -43,7 +45,10 @@ class GoogleCloudDiscoveryengineV1ImportUserEventsRequest extends \Google\Model
     return $this->bigquerySource;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ImportErrorConfig
+   * The desired location of errors incurred during the Import. Cannot be set
+   * for inline user event imports.
+   *
+   * @param GoogleCloudDiscoveryengineV1ImportErrorConfig $errorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1ImportErrorConfig $errorConfig)
   {
@@ -57,7 +62,9 @@ class GoogleCloudDiscoveryengineV1ImportUserEventsRequest extends \Google\Model
     return $this->errorConfig;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1GcsSource
+   * Cloud Storage location for the input content.
+   *
+   * @param GoogleCloudDiscoveryengineV1GcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudDiscoveryengineV1GcsSource $gcsSource)
   {
@@ -71,7 +78,9 @@ class GoogleCloudDiscoveryengineV1ImportUserEventsRequest extends \Google\Model
     return $this->gcsSource;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1ImportUserEventsRequestInlineSource
+   * The Inline source for the input content for UserEvents.
+   *
+   * @param GoogleCloudDiscoveryengineV1ImportUserEventsRequestInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudDiscoveryengineV1ImportUserEventsRequestInlineSource $inlineSource)
   {

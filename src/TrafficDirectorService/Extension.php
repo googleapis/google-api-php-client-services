@@ -21,22 +21,39 @@ class Extension extends \Google\Collection
 {
   protected $collection_key = 'typeUrls';
   /**
+   * Category of the extension. Extension category names use reverse DNS
+   * notation. For instance "envoy.filters.listener" for Envoy's built-in
+   * listener filters or "com.acme.filters.http" for HTTP filters from acme.com
+   * vendor. [#comment:
+   *
    * @var string
    */
   public $category;
   /**
+   * Indicates that the extension is present but was disabled via dynamic
+   * configuration.
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * This is the name of the Envoy filter as specified in the Envoy
+   * configuration, e.g. envoy.filters.http.router, com.acme.widget.
+   *
    * @var string
    */
   public $name;
   /**
+   * [#not-implemented-hide:] Type descriptor of extension configuration proto.
+   * [#comment:
+   *
+   * @deprecated
    * @var string
    */
   public $typeDescriptor;
   /**
+   * Type URLs of extension configuration protos.
+   *
    * @var string[]
    */
   public $typeUrls;
@@ -44,7 +61,12 @@ class Extension extends \Google\Collection
   protected $versionDataType = '';
 
   /**
-   * @param string
+   * Category of the extension. Extension category names use reverse DNS
+   * notation. For instance "envoy.filters.listener" for Envoy's built-in
+   * listener filters or "com.acme.filters.http" for HTTP filters from acme.com
+   * vendor. [#comment:
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -58,7 +80,10 @@ class Extension extends \Google\Collection
     return $this->category;
   }
   /**
-   * @param bool
+   * Indicates that the extension is present but was disabled via dynamic
+   * configuration.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -72,7 +97,10 @@ class Extension extends \Google\Collection
     return $this->disabled;
   }
   /**
-   * @param string
+   * This is the name of the Envoy filter as specified in the Envoy
+   * configuration, e.g. envoy.filters.http.router, com.acme.widget.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -86,13 +114,18 @@ class Extension extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * [#not-implemented-hide:] Type descriptor of extension configuration proto.
+   * [#comment:
+   *
+   * @deprecated
+   * @param string $typeDescriptor
    */
   public function setTypeDescriptor($typeDescriptor)
   {
     $this->typeDescriptor = $typeDescriptor;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getTypeDescriptor()
@@ -100,7 +133,9 @@ class Extension extends \Google\Collection
     return $this->typeDescriptor;
   }
   /**
-   * @param string[]
+   * Type URLs of extension configuration protos.
+   *
+   * @param string[] $typeUrls
    */
   public function setTypeUrls($typeUrls)
   {
@@ -114,7 +149,11 @@ class Extension extends \Google\Collection
     return $this->typeUrls;
   }
   /**
-   * @param BuildVersion
+   * The version is a property of the extension and maintained independently of
+   * other extensions and the Envoy API. This field is not set when extension
+   * did not provide version information.
+   *
+   * @param BuildVersion $version
    */
   public function setVersion(BuildVersion $version)
   {

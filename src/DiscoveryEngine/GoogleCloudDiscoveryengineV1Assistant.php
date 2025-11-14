@@ -19,6 +19,22 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
 {
+  /**
+   * Default, unspecified setting. This is the same as disabled.
+   */
+  public const WEB_GROUNDING_TYPE_WEB_GROUNDING_TYPE_UNSPECIFIED = 'WEB_GROUNDING_TYPE_UNSPECIFIED';
+  /**
+   * Web grounding is disabled.
+   */
+  public const WEB_GROUNDING_TYPE_WEB_GROUNDING_TYPE_DISABLED = 'WEB_GROUNDING_TYPE_DISABLED';
+  /**
+   * Grounding with Google Search is enabled.
+   */
+  public const WEB_GROUNDING_TYPE_WEB_GROUNDING_TYPE_GOOGLE_SEARCH = 'WEB_GROUNDING_TYPE_GOOGLE_SEARCH';
+  /**
+   * Grounding with Enterprise Web Search is enabled.
+   */
+  public const WEB_GROUNDING_TYPE_WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH = 'WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH';
   protected $customerPolicyType = GoogleCloudDiscoveryengineV1AssistantCustomerPolicy::class;
   protected $customerPolicyDataType = '';
   protected $enabledToolsType = GoogleCloudDiscoveryengineV1AssistantToolList::class;
@@ -26,16 +42,25 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
   protected $generationConfigType = GoogleCloudDiscoveryengineV1AssistantGenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
+   * Immutable. Resource name of the assistant. Format: `projects/{project}/loca
+   * tions/{location}/collections/{collection}/engines/{engine}/assistants/{assi
+   * stant}` It must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The type of web grounding to use.
+   *
    * @var string
    */
   public $webGroundingType;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantCustomerPolicy
+   * Optional. Customer policy for the assistant.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantCustomerPolicy $customerPolicy
    */
   public function setCustomerPolicy(GoogleCloudDiscoveryengineV1AssistantCustomerPolicy $customerPolicy)
   {
@@ -49,7 +74,16 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
     return $this->customerPolicy;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantToolList[]
+   * Optional. Note: not implemented yet. Use enabled_actions instead. The
+   * enabled tools on this assistant. The keys are connector name, for example "
+   * projects/{projectId}/locations/{locationId}/collections/{collectionId}/data
+   * connector The values consist of admin enabled tools towards the connector
+   * instance. Admin can selectively enable multiple tools on any of the
+   * connector instances that they created in the project. For example
+   * {"jira1ConnectorName": [(toolId1, "createTicket"), (toolId2,
+   * "transferTicket")], "gmail1ConnectorName": [(toolId3, "sendEmail"),..] }
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantToolList[] $enabledTools
    */
   public function setEnabledTools($enabledTools)
   {
@@ -63,7 +97,9 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
     return $this->enabledTools;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantGenerationConfig
+   * Optional. Configuration for the generation of the assistant response.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantGenerationConfig $generationConfig
    */
   public function setGenerationConfig(GoogleCloudDiscoveryengineV1AssistantGenerationConfig $generationConfig)
   {
@@ -77,7 +113,12 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
     return $this->generationConfig;
   }
   /**
-   * @param string
+   * Immutable. Resource name of the assistant. Format: `projects/{project}/loca
+   * tions/{location}/collections/{collection}/engines/{engine}/assistants/{assi
+   * stant}` It must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -91,14 +132,20 @@ class GoogleCloudDiscoveryengineV1Assistant extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The type of web grounding to use.
+   *
+   * Accepted values: WEB_GROUNDING_TYPE_UNSPECIFIED,
+   * WEB_GROUNDING_TYPE_DISABLED, WEB_GROUNDING_TYPE_GOOGLE_SEARCH,
+   * WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH
+   *
+   * @param self::WEB_GROUNDING_TYPE_* $webGroundingType
    */
   public function setWebGroundingType($webGroundingType)
   {
     $this->webGroundingType = $webGroundingType;
   }
   /**
-   * @return string
+   * @return self::WEB_GROUNDING_TYPE_*
    */
   public function getWebGroundingType()
   {

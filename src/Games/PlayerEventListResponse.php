@@ -23,16 +23,23 @@ class PlayerEventListResponse extends \Google\Collection
   protected $itemsType = PlayerEvent::class;
   protected $itemsDataType = 'array';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerEventListResponse`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The pagination token for the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param PlayerEvent[]
+   * The player events.
+   *
+   * @param PlayerEvent[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +53,10 @@ class PlayerEventListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerEventListResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class PlayerEventListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The pagination token for the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

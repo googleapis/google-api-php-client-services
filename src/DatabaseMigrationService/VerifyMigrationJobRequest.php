@@ -22,12 +22,18 @@ class VerifyMigrationJobRequest extends \Google\Model
   protected $migrationJobType = MigrationJob::class;
   protected $migrationJobDataType = '';
   /**
+   * Optional. Field mask is used to specify the changed fields to be verified.
+   * It will not update the migration job.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param MigrationJob
+   * Optional. The changed migration job parameters to verify. It will not
+   * update the migration job.
+   *
+   * @param MigrationJob $migrationJob
    */
   public function setMigrationJob(MigrationJob $migrationJob)
   {
@@ -41,7 +47,10 @@ class VerifyMigrationJobRequest extends \Google\Model
     return $this->migrationJob;
   }
   /**
-   * @param string
+   * Optional. Field mask is used to specify the changed fields to be verified.
+   * It will not update the migration job.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

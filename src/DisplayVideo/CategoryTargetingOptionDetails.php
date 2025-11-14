@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class CategoryTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The display name of the category.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * Output only. The display name of the category.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

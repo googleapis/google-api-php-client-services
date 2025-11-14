@@ -21,6 +21,8 @@ class Metadata extends \Google\Collection
 {
   protected $collection_key = 'fields';
   /**
+   * The creation time for this document or object in the search result.
+   *
    * @var string
    */
   public $createTime;
@@ -29,10 +31,14 @@ class Metadata extends \Google\Collection
   protected $fieldsType = NamedProperty::class;
   protected $fieldsDataType = 'array';
   /**
+   * Mime type of the search result.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * Object type of the search result.
+   *
    * @var string
    */
   public $objectType;
@@ -41,16 +47,25 @@ class Metadata extends \Google\Collection
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
   /**
+   * The thumbnail URL of the result.
+   *
    * @var string
    */
   public $thumbnailUrl;
   /**
+   * The last modified date for the object in the search result. If not set in
+   * the item, the value returned here is empty. When `updateTime` is used for
+   * calculating freshness and is not set, this value defaults to 2 years from
+   * the current time.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The creation time for this document or object in the search result.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -64,7 +79,9 @@ class Metadata extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param ResultDisplayMetadata
+   * Options that specify how to display a structured data search result.
+   *
+   * @param ResultDisplayMetadata $displayOptions
    */
   public function setDisplayOptions(ResultDisplayMetadata $displayOptions)
   {
@@ -78,7 +95,9 @@ class Metadata extends \Google\Collection
     return $this->displayOptions;
   }
   /**
-   * @param NamedProperty[]
+   * Indexed fields in structured data, returned as a generic named property.
+   *
+   * @param NamedProperty[] $fields
    */
   public function setFields($fields)
   {
@@ -92,7 +111,9 @@ class Metadata extends \Google\Collection
     return $this->fields;
   }
   /**
-   * @param string
+   * Mime type of the search result.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -106,7 +127,9 @@ class Metadata extends \Google\Collection
     return $this->mimeType;
   }
   /**
-   * @param string
+   * Object type of the search result.
+   *
+   * @param string $objectType
    */
   public function setObjectType($objectType)
   {
@@ -120,7 +143,9 @@ class Metadata extends \Google\Collection
     return $this->objectType;
   }
   /**
-   * @param Person
+   * Owner (usually creator) of the document or object of the search result.
+   *
+   * @param Person $owner
    */
   public function setOwner(Person $owner)
   {
@@ -134,7 +159,9 @@ class Metadata extends \Google\Collection
     return $this->owner;
   }
   /**
-   * @param Source
+   * The named source for the result, such as Gmail.
+   *
+   * @param Source $source
    */
   public function setSource(Source $source)
   {
@@ -148,7 +175,9 @@ class Metadata extends \Google\Collection
     return $this->source;
   }
   /**
-   * @param string
+   * The thumbnail URL of the result.
+   *
+   * @param string $thumbnailUrl
    */
   public function setThumbnailUrl($thumbnailUrl)
   {
@@ -162,7 +191,12 @@ class Metadata extends \Google\Collection
     return $this->thumbnailUrl;
   }
   /**
-   * @param string
+   * The last modified date for the object in the search result. If not set in
+   * the item, the value returned here is empty. When `updateTime` is used for
+   * calculating freshness and is not set, this value defaults to 2 years from
+   * the current time.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

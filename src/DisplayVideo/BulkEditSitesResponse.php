@@ -24,7 +24,10 @@ class BulkEditSitesResponse extends \Google\Collection
   protected $sitesDataType = 'array';
 
   /**
-   * @param Site[]
+   * The list of sites that have been successfully created. This list will be
+   * absent if empty.
+   *
+   * @param Site[] $sites
    */
   public function setSites($sites)
   {

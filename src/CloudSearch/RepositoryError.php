@@ -20,20 +20,71 @@ namespace Google\Service\CloudSearch;
 class RepositoryError extends \Google\Model
 {
   /**
+   * Unknown error.
+   */
+  public const TYPE_UNKNOWN = 'UNKNOWN';
+  /**
+   * Unknown or unreachable host.
+   */
+  public const TYPE_NETWORK_ERROR = 'NETWORK_ERROR';
+  /**
+   * DNS problem, such as the DNS server is not responding.
+   */
+  public const TYPE_DNS_ERROR = 'DNS_ERROR';
+  /**
+   * Cannot connect to the repository server.
+   */
+  public const TYPE_CONNECTION_ERROR = 'CONNECTION_ERROR';
+  /**
+   * Failed authentication due to incorrect credentials.
+   */
+  public const TYPE_AUTHENTICATION_ERROR = 'AUTHENTICATION_ERROR';
+  /**
+   * Service account is not authorized for the repository.
+   */
+  public const TYPE_AUTHORIZATION_ERROR = 'AUTHORIZATION_ERROR';
+  /**
+   * Repository server error.
+   */
+  public const TYPE_SERVER_ERROR = 'SERVER_ERROR';
+  /**
+   * Quota exceeded.
+   */
+  public const TYPE_QUOTA_EXCEEDED = 'QUOTA_EXCEEDED';
+  /**
+   * Server temporarily unavailable.
+   */
+  public const TYPE_SERVICE_UNAVAILABLE = 'SERVICE_UNAVAILABLE';
+  /**
+   * Client-related error, such as an invalid request from the connector to the
+   * repository server.
+   */
+  public const TYPE_CLIENT_ERROR = 'CLIENT_ERROR';
+  /**
+   * Message that describes the error. The maximum allowable length of the
+   * message is 8192 characters.
+   *
    * @var string
    */
   public $errorMessage;
   /**
+   * Error codes. Matches the definition of HTTP status codes.
+   *
    * @var int
    */
   public $httpStatusCode;
   /**
+   * The type of error.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Message that describes the error. The maximum allowable length of the
+   * message is 8192 characters.
+   *
+   * @param string $errorMessage
    */
   public function setErrorMessage($errorMessage)
   {
@@ -47,7 +98,9 @@ class RepositoryError extends \Google\Model
     return $this->errorMessage;
   }
   /**
-   * @param int
+   * Error codes. Matches the definition of HTTP status codes.
+   *
+   * @param int $httpStatusCode
    */
   public function setHttpStatusCode($httpStatusCode)
   {
@@ -61,14 +114,20 @@ class RepositoryError extends \Google\Model
     return $this->httpStatusCode;
   }
   /**
-   * @param string
+   * The type of error.
+   *
+   * Accepted values: UNKNOWN, NETWORK_ERROR, DNS_ERROR, CONNECTION_ERROR,
+   * AUTHENTICATION_ERROR, AUTHORIZATION_ERROR, SERVER_ERROR, QUOTA_EXCEEDED,
+   * SERVICE_UNAVAILABLE, CLIENT_ERROR
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

@@ -23,16 +23,23 @@ class ListBackupVaultsResponse extends \Google\Collection
   protected $backupVaultsType = BackupVault::class;
   protected $backupVaultsDataType = 'array';
   /**
+   * The token you can use to retrieve the next page of results. Not returned if
+   * there are no more results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param BackupVault[]
+   * A list of backupVaults in the project for the specified location.
+   *
+   * @param BackupVault[] $backupVaults
    */
   public function setBackupVaults($backupVaults)
   {
@@ -46,7 +53,10 @@ class ListBackupVaultsResponse extends \Google\Collection
     return $this->backupVaults;
   }
   /**
-   * @param string
+   * The token you can use to retrieve the next page of results. Not returned if
+   * there are no more results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListBackupVaultsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

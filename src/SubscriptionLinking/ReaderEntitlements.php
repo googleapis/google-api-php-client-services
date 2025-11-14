@@ -23,12 +23,16 @@ class ReaderEntitlements extends \Google\Collection
   protected $entitlementsType = Entitlement::class;
   protected $entitlementsDataType = 'array';
   /**
+   * Output only. The resource name of the singleton.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param Entitlement[]
+   * All of the entitlements for a publication reader.
+   *
+   * @param Entitlement[] $entitlements
    */
   public function setEntitlements($entitlements)
   {
@@ -42,7 +46,9 @@ class ReaderEntitlements extends \Google\Collection
     return $this->entitlements;
   }
   /**
-   * @param string
+   * Output only. The resource name of the singleton.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

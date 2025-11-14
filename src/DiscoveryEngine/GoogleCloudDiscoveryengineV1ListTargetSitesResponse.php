@@ -21,18 +21,27 @@ class GoogleCloudDiscoveryengineV1ListTargetSitesResponse extends \Google\Collec
 {
   protected $collection_key = 'targetSites';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $targetSitesType = GoogleCloudDiscoveryengineV1TargetSite::class;
   protected $targetSitesDataType = 'array';
   /**
+   * The total number of items matching the request. This will always be
+   * populated in the response.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +55,9 @@ class GoogleCloudDiscoveryengineV1ListTargetSitesResponse extends \Google\Collec
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1TargetSite[]
+   * List of TargetSites.
+   *
+   * @param GoogleCloudDiscoveryengineV1TargetSite[] $targetSites
    */
   public function setTargetSites($targetSites)
   {
@@ -60,7 +71,10 @@ class GoogleCloudDiscoveryengineV1ListTargetSitesResponse extends \Google\Collec
     return $this->targetSites;
   }
   /**
-   * @param int
+   * The total number of items matching the request. This will always be
+   * populated in the response.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

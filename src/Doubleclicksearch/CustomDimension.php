@@ -20,16 +20,22 @@ namespace Google\Service\Doubleclicksearch;
 class CustomDimension extends \Google\Model
 {
   /**
+   * Custom dimension name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Custom dimension value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Custom dimension name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class CustomDimension extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Custom dimension value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

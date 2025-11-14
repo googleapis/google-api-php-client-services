@@ -23,16 +23,23 @@ class ListEnrollmentsResponse extends \Google\Collection
   protected $enrollmentsType = Enrollment::class;
   protected $enrollmentsDataType = 'array';
   /**
+   * A page token that can be sent to `ListEnrollments` to request the next
+   * page. If this is empty, then there are no more pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unreachable resources, if any.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Enrollment[]
+   * The requested Enrollments, up to the number specified in `page_size`.
+   *
+   * @param Enrollment[] $enrollments
    */
   public function setEnrollments($enrollments)
   {
@@ -46,7 +53,10 @@ class ListEnrollmentsResponse extends \Google\Collection
     return $this->enrollments;
   }
   /**
-   * @param string
+   * A page token that can be sent to `ListEnrollments` to request the next
+   * page. If this is empty, then there are no more pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListEnrollmentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Unreachable resources, if any.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

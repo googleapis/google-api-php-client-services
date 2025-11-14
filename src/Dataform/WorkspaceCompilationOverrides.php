@@ -20,20 +20,29 @@ namespace Google\Service\Dataform;
 class WorkspaceCompilationOverrides extends \Google\Model
 {
   /**
+   * Optional. The default database (Google Cloud project ID).
+   *
    * @var string
    */
   public $defaultDatabase;
   /**
+   * Optional. The suffix that should be appended to all schema (BigQuery
+   * dataset ID) names.
+   *
    * @var string
    */
   public $schemaSuffix;
   /**
+   * Optional. The prefix that should be prepended to all table names.
+   *
    * @var string
    */
   public $tablePrefix;
 
   /**
-   * @param string
+   * Optional. The default database (Google Cloud project ID).
+   *
+   * @param string $defaultDatabase
    */
   public function setDefaultDatabase($defaultDatabase)
   {
@@ -47,7 +56,10 @@ class WorkspaceCompilationOverrides extends \Google\Model
     return $this->defaultDatabase;
   }
   /**
-   * @param string
+   * Optional. The suffix that should be appended to all schema (BigQuery
+   * dataset ID) names.
+   *
+   * @param string $schemaSuffix
    */
   public function setSchemaSuffix($schemaSuffix)
   {
@@ -61,7 +73,9 @@ class WorkspaceCompilationOverrides extends \Google\Model
     return $this->schemaSuffix;
   }
   /**
-   * @param string
+   * Optional. The prefix that should be prepended to all table names.
+   *
+   * @param string $tablePrefix
    */
   public function setTablePrefix($tablePrefix)
   {

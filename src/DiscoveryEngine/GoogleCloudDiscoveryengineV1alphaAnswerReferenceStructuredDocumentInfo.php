@@ -20,24 +20,34 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo extends \Google\Model
 {
   /**
+   * Document resource name.
+   *
    * @var string
    */
   public $document;
   /**
+   * Structured search data.
+   *
    * @var array[]
    */
   public $structData;
   /**
+   * Output only. The title of the document.
+   *
    * @var string
    */
   public $title;
   /**
+   * Output only. The URI of the document.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Document resource name.
+   *
+   * @param string $document
    */
   public function setDocument($document)
   {
@@ -51,7 +61,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo ext
     return $this->document;
   }
   /**
-   * @param array[]
+   * Structured search data.
+   *
+   * @param array[] $structData
    */
   public function setStructData($structData)
   {
@@ -65,7 +77,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo ext
     return $this->structData;
   }
   /**
-   * @param string
+   * Output only. The title of the document.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -79,7 +93,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReferenceStructuredDocumentInfo ext
     return $this->title;
   }
   /**
-   * @param string
+   * Output only. The URI of the document.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

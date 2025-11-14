@@ -20,12 +20,18 @@ namespace Google\Service\Sasportal;
 class SasPortalMoveDeviceRequest extends \Google\Model
 {
   /**
+   * Required. The name of the new parent resource node or customer to reparent
+   * the device under.
+   *
    * @var string
    */
   public $destination;
 
   /**
-   * @param string
+   * Required. The name of the new parent resource node or customer to reparent
+   * the device under.
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {

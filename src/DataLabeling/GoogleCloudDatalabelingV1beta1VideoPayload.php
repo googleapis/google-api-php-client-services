@@ -21,26 +21,36 @@ class GoogleCloudDatalabelingV1beta1VideoPayload extends \Google\Collection
 {
   protected $collection_key = 'videoThumbnails';
   /**
+   * FPS of the video.
+   *
    * @var float
    */
   public $frameRate;
   /**
+   * Video format.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * Signed uri of the video file in the service bucket.
+   *
    * @var string
    */
   public $signedUri;
   protected $videoThumbnailsType = GoogleCloudDatalabelingV1beta1VideoThumbnail::class;
   protected $videoThumbnailsDataType = 'array';
   /**
+   * Video uri from the user bucket.
+   *
    * @var string
    */
   public $videoUri;
 
   /**
-   * @param float
+   * FPS of the video.
+   *
+   * @param float $frameRate
    */
   public function setFrameRate($frameRate)
   {
@@ -54,7 +64,9 @@ class GoogleCloudDatalabelingV1beta1VideoPayload extends \Google\Collection
     return $this->frameRate;
   }
   /**
-   * @param string
+   * Video format.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -68,7 +80,9 @@ class GoogleCloudDatalabelingV1beta1VideoPayload extends \Google\Collection
     return $this->mimeType;
   }
   /**
-   * @param string
+   * Signed uri of the video file in the service bucket.
+   *
+   * @param string $signedUri
    */
   public function setSignedUri($signedUri)
   {
@@ -82,7 +96,9 @@ class GoogleCloudDatalabelingV1beta1VideoPayload extends \Google\Collection
     return $this->signedUri;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1VideoThumbnail[]
+   * The list of video thumbnails.
+   *
+   * @param GoogleCloudDatalabelingV1beta1VideoThumbnail[] $videoThumbnails
    */
   public function setVideoThumbnails($videoThumbnails)
   {
@@ -96,7 +112,9 @@ class GoogleCloudDatalabelingV1beta1VideoPayload extends \Google\Collection
     return $this->videoThumbnails;
   }
   /**
-   * @param string
+   * Video uri from the user bucket.
+   *
+   * @param string $videoUri
    */
   public function setVideoUri($videoUri)
   {

@@ -22,16 +22,22 @@ class NetworkEndpoint extends \Google\Model
   protected $accessConfigType = AccessConfig::class;
   protected $accessConfigDataType = '';
   /**
+   * The internal IP address of this network endpoint.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * The port of this network endpoint.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param AccessConfig
+   * The access config for the TPU worker.
+   *
+   * @param AccessConfig $accessConfig
    */
   public function setAccessConfig(AccessConfig $accessConfig)
   {
@@ -45,7 +51,9 @@ class NetworkEndpoint extends \Google\Model
     return $this->accessConfig;
   }
   /**
-   * @param string
+   * The internal IP address of this network endpoint.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -59,7 +67,9 @@ class NetworkEndpoint extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param int
+   * The port of this network endpoint.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {

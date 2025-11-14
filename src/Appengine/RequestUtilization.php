@@ -20,16 +20,22 @@ namespace Google\Service\Appengine;
 class RequestUtilization extends \Google\Model
 {
   /**
+   * Target number of concurrent requests.
+   *
    * @var int
    */
   public $targetConcurrentRequests;
   /**
+   * Target requests per second.
+   *
    * @var int
    */
   public $targetRequestCountPerSecond;
 
   /**
-   * @param int
+   * Target number of concurrent requests.
+   *
+   * @param int $targetConcurrentRequests
    */
   public function setTargetConcurrentRequests($targetConcurrentRequests)
   {
@@ -43,7 +49,9 @@ class RequestUtilization extends \Google\Model
     return $this->targetConcurrentRequests;
   }
   /**
-   * @param int
+   * Target requests per second.
+   *
+   * @param int $targetRequestCountPerSecond
    */
   public function setTargetRequestCountPerSecond($targetRequestCountPerSecond)
   {

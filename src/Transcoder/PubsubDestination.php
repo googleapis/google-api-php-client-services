@@ -20,12 +20,18 @@ namespace Google\Service\Transcoder;
 class PubsubDestination extends \Google\Model
 {
   /**
+   * The name of the Pub/Sub topic to publish job completion notification to.
+   * For example: `projects/{project}/topics/{topic}`.
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param string
+   * The name of the Pub/Sub topic to publish job completion notification to.
+   * For example: `projects/{project}/topics/{topic}`.
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {

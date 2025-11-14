@@ -21,12 +21,16 @@ class DeploymentNote extends \Google\Collection
 {
   protected $collection_key = 'resourceUri';
   /**
+   * Required. Resource URI for the artifact being deployed.
+   *
    * @var string[]
    */
   public $resourceUri;
 
   /**
-   * @param string[]
+   * Required. Resource URI for the artifact being deployed.
+   *
+   * @param string[] $resourceUri
    */
   public function setResourceUri($resourceUri)
   {

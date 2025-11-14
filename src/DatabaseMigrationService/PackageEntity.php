@@ -20,20 +20,29 @@ namespace Google\Service\DatabaseMigrationService;
 class PackageEntity extends \Google\Model
 {
   /**
+   * Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
   /**
+   * The SQL code which creates the package body. If the package specification
+   * has cursors or subprograms, then the package body is mandatory.
+   *
    * @var string
    */
   public $packageBody;
   /**
+   * The SQL code which creates the package.
+   *
    * @var string
    */
   public $packageSqlCode;
 
   /**
-   * @param array[]
+   * Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {
@@ -47,7 +56,10 @@ class PackageEntity extends \Google\Model
     return $this->customFeatures;
   }
   /**
-   * @param string
+   * The SQL code which creates the package body. If the package specification
+   * has cursors or subprograms, then the package body is mandatory.
+   *
+   * @param string $packageBody
    */
   public function setPackageBody($packageBody)
   {
@@ -61,7 +73,9 @@ class PackageEntity extends \Google\Model
     return $this->packageBody;
   }
   /**
-   * @param string
+   * The SQL code which creates the package.
+   *
+   * @param string $packageSqlCode
    */
   public function setPackageSqlCode($packageSqlCode)
   {

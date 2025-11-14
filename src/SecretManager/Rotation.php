@@ -20,16 +20,32 @@ namespace Google\Service\SecretManager;
 class Rotation extends \Google\Model
 {
   /**
+   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate.
+   * Cannot be set to less than 300s (5 min) in the future and at most
+   * 3153600000s (100 years). next_rotation_time MUST be set if rotation_period
+   * is set.
+   *
    * @var string
    */
   public $nextRotationTime;
   /**
+   * Input only. The Duration between rotation notifications. Must be in seconds
+   * and at least 3600s (1h) and at most 3153600000s (100 years). If
+   * rotation_period is set, next_rotation_time must be set. next_rotation_time
+   * will be advanced by this period when the service automatically sends
+   * rotation notifications.
+   *
    * @var string
    */
   public $rotationPeriod;
 
   /**
-   * @param string
+   * Optional. Timestamp in UTC at which the Secret is scheduled to rotate.
+   * Cannot be set to less than 300s (5 min) in the future and at most
+   * 3153600000s (100 years). next_rotation_time MUST be set if rotation_period
+   * is set.
+   *
+   * @param string $nextRotationTime
    */
   public function setNextRotationTime($nextRotationTime)
   {
@@ -43,7 +59,13 @@ class Rotation extends \Google\Model
     return $this->nextRotationTime;
   }
   /**
-   * @param string
+   * Input only. The Duration between rotation notifications. Must be in seconds
+   * and at least 3600s (1h) and at most 3153600000s (100 years). If
+   * rotation_period is set, next_rotation_time must be set. next_rotation_time
+   * will be advanced by this period when the service automatically sends
+   * rotation notifications.
+   *
+   * @param string $rotationPeriod
    */
   public function setRotationPeriod($rotationPeriod)
   {

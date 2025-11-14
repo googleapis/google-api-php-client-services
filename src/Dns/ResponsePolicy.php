@@ -21,12 +21,16 @@ class ResponsePolicy extends \Google\Collection
 {
   protected $collection_key = 'networks';
   /**
+   * User-provided description for this Response Policy.
+   *
    * @var string
    */
   public $description;
   protected $gkeClustersType = ResponsePolicyGKECluster::class;
   protected $gkeClustersDataType = 'array';
   /**
+   * Unique identifier for the resource; defined by the server (output only).
+   *
    * @var string
    */
   public $id;
@@ -35,18 +39,24 @@ class ResponsePolicy extends \Google\Collection
    */
   public $kind;
   /**
+   * User labels.
+   *
    * @var string[]
    */
   public $labels;
   protected $networksType = ResponsePolicyNetwork::class;
   protected $networksDataType = 'array';
   /**
+   * User assigned name for this Response Policy.
+   *
    * @var string
    */
   public $responsePolicyName;
 
   /**
-   * @param string
+   * User-provided description for this Response Policy.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -60,7 +70,10 @@ class ResponsePolicy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param ResponsePolicyGKECluster[]
+   * The list of Google Kubernetes Engine clusters to which this response policy
+   * is applied.
+   *
+   * @param ResponsePolicyGKECluster[] $gkeClusters
    */
   public function setGkeClusters($gkeClusters)
   {
@@ -74,7 +87,9 @@ class ResponsePolicy extends \Google\Collection
     return $this->gkeClusters;
   }
   /**
-   * @param string
+   * Unique identifier for the resource; defined by the server (output only).
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -88,7 +103,7 @@ class ResponsePolicy extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -102,7 +117,9 @@ class ResponsePolicy extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * User labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -116,7 +133,9 @@ class ResponsePolicy extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param ResponsePolicyNetwork[]
+   * List of network names specifying networks to which this policy is applied.
+   *
+   * @param ResponsePolicyNetwork[] $networks
    */
   public function setNetworks($networks)
   {
@@ -130,7 +149,9 @@ class ResponsePolicy extends \Google\Collection
     return $this->networks;
   }
   /**
-   * @param string
+   * User assigned name for this Response Policy.
+   *
+   * @param string $responsePolicyName
    */
   public function setResponsePolicyName($responsePolicyName)
   {

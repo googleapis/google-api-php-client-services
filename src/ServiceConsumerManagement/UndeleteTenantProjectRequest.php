@@ -20,12 +20,16 @@ namespace Google\Service\ServiceConsumerManagement;
 class UndeleteTenantProjectRequest extends \Google\Model
 {
   /**
+   * Required. Tag of the resource within the tenancy unit.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * Required. Tag of the resource within the tenancy unit.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

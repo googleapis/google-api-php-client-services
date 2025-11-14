@@ -19,66 +19,141 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collection
 {
+  /**
+   * Not specified. Defaults to SEARCH_ONLY.
+   */
+  public const INTERACTION_TYPE_INTERACTION_TYPE_UNSPECIFIED = 'INTERACTION_TYPE_UNSPECIFIED';
+  /**
+   * Search without a generative answer.
+   */
+  public const INTERACTION_TYPE_SEARCH_ONLY = 'SEARCH_ONLY';
+  /**
+   * Search with the generative answer.
+   */
+  public const INTERACTION_TYPE_SEARCH_WITH_ANSWER = 'SEARCH_WITH_ANSWER';
+  /**
+   * Search with the generative answer that supports follow up questions. Also
+   * known as multi-turn search.
+   */
+  public const INTERACTION_TYPE_SEARCH_WITH_FOLLOW_UPS = 'SEARCH_WITH_FOLLOW_UPS';
+  /**
+   * Unspecified display type (default to showing snippet).
+   */
+  public const RESULT_DESCRIPTION_TYPE_RESULT_DISPLAY_TYPE_UNSPECIFIED = 'RESULT_DISPLAY_TYPE_UNSPECIFIED';
+  /**
+   * Display results from the snippet field.
+   */
+  public const RESULT_DESCRIPTION_TYPE_SNIPPET = 'SNIPPET';
+  /**
+   * Display results from extractive answers field.
+   */
+  public const RESULT_DESCRIPTION_TYPE_EXTRACTIVE_ANSWER = 'EXTRACTIVE_ANSWER';
   protected $collection_key = 'dataStoreUiConfigs';
   protected $dataStoreUiConfigsType = GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig::class;
   protected $dataStoreUiConfigsDataType = 'array';
   /**
+   * The default ordering for search results if specified. Used to set
+   * SearchRequest#order_by on applicable requests.
+   * https://cloud.google.com/generative-ai-app-builder/docs/reference/rest/v1al
+   * pha/projects.locations.dataStores.servingConfigs/search#request-body
+   *
    * @var string
    */
   public $defaultSearchRequestOrderBy;
   /**
+   * If set to true, the widget will not collect user events.
+   *
    * @var bool
    */
   public $disableUserEventsCollection;
   /**
+   * Whether or not to enable autocomplete.
+   *
    * @var bool
    */
   public $enableAutocomplete;
   /**
+   * Optional. If set to true, the widget will enable the create agent button.
+   *
    * @var bool
    */
   public $enableCreateAgentButton;
   /**
+   * Optional. If set to true, the widget will enable people search.
+   *
    * @var bool
    */
   public $enablePeopleSearch;
   /**
+   * Turn on or off collecting the search result quality feedback from end
+   * users.
+   *
    * @var bool
    */
   public $enableQualityFeedback;
   /**
+   * Whether to enable safe search.
+   *
    * @var bool
    */
   public $enableSafeSearch;
   /**
+   * Whether to enable search-as-you-type behavior for the search widget.
+   *
    * @var bool
    */
   public $enableSearchAsYouType;
   /**
+   * If set to true, the widget will enable visual content summary on applicable
+   * search requests. Only used by healthcare search.
+   *
    * @var bool
    */
   public $enableVisualContentSummary;
   /**
+   * Output only. Feature config for the engine to opt in or opt out of
+   * features. Supported keys: * `agent-gallery` * `no-code-agent-builder` *
+   * `prompt-gallery` * `model-selector` * `notebook-lm` * `people-search` *
+   * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
+   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-
+   * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
+   * * `disable-talk-to-content` * `disable-google-drive-upload`
+   *
    * @var string[]
    */
   public $features;
   protected $generativeAnswerConfigType = GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig::class;
   protected $generativeAnswerConfigDataType = '';
   /**
+   * Describes widget (or web app) interaction type
+   *
    * @var string
    */
   public $interactionType;
   /**
+   * Output only. Maps a model name to its specific configuration for this
+   * engine. This allows admin users to turn on/off individual models. This only
+   * stores models whose states are overridden by the admin. When the state is
+   * unspecified, or model_configs is empty for this model, the system will
+   * decide if this model should be available or not based on the default
+   * configuration. For example, a preview model should be disabled by default
+   * if the admin has not chosen to enable it.
+   *
    * @var string[]
    */
   public $modelConfigs;
   /**
+   * Controls whether result extract is display and how (snippet or extractive
+   * answer). Default to no result if unspecified.
+   *
    * @var string
    */
   public $resultDescriptionType;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig[]
+   * Per data store configuration.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigDataStoreUiConfig[] $dataStoreUiConfigs
    */
   public function setDataStoreUiConfigs($dataStoreUiConfigs)
   {
@@ -92,7 +167,12 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->dataStoreUiConfigs;
   }
   /**
-   * @param string
+   * The default ordering for search results if specified. Used to set
+   * SearchRequest#order_by on applicable requests.
+   * https://cloud.google.com/generative-ai-app-builder/docs/reference/rest/v1al
+   * pha/projects.locations.dataStores.servingConfigs/search#request-body
+   *
+   * @param string $defaultSearchRequestOrderBy
    */
   public function setDefaultSearchRequestOrderBy($defaultSearchRequestOrderBy)
   {
@@ -106,7 +186,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->defaultSearchRequestOrderBy;
   }
   /**
-   * @param bool
+   * If set to true, the widget will not collect user events.
+   *
+   * @param bool $disableUserEventsCollection
    */
   public function setDisableUserEventsCollection($disableUserEventsCollection)
   {
@@ -120,7 +202,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->disableUserEventsCollection;
   }
   /**
-   * @param bool
+   * Whether or not to enable autocomplete.
+   *
+   * @param bool $enableAutocomplete
    */
   public function setEnableAutocomplete($enableAutocomplete)
   {
@@ -134,7 +218,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enableAutocomplete;
   }
   /**
-   * @param bool
+   * Optional. If set to true, the widget will enable the create agent button.
+   *
+   * @param bool $enableCreateAgentButton
    */
   public function setEnableCreateAgentButton($enableCreateAgentButton)
   {
@@ -148,7 +234,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enableCreateAgentButton;
   }
   /**
-   * @param bool
+   * Optional. If set to true, the widget will enable people search.
+   *
+   * @param bool $enablePeopleSearch
    */
   public function setEnablePeopleSearch($enablePeopleSearch)
   {
@@ -162,7 +250,10 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enablePeopleSearch;
   }
   /**
-   * @param bool
+   * Turn on or off collecting the search result quality feedback from end
+   * users.
+   *
+   * @param bool $enableQualityFeedback
    */
   public function setEnableQualityFeedback($enableQualityFeedback)
   {
@@ -176,7 +267,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enableQualityFeedback;
   }
   /**
-   * @param bool
+   * Whether to enable safe search.
+   *
+   * @param bool $enableSafeSearch
    */
   public function setEnableSafeSearch($enableSafeSearch)
   {
@@ -190,7 +283,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enableSafeSearch;
   }
   /**
-   * @param bool
+   * Whether to enable search-as-you-type behavior for the search widget.
+   *
+   * @param bool $enableSearchAsYouType
    */
   public function setEnableSearchAsYouType($enableSearchAsYouType)
   {
@@ -204,7 +299,10 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enableSearchAsYouType;
   }
   /**
-   * @param bool
+   * If set to true, the widget will enable visual content summary on applicable
+   * search requests. Only used by healthcare search.
+   *
+   * @param bool $enableVisualContentSummary
    */
   public function setEnableVisualContentSummary($enableVisualContentSummary)
   {
@@ -218,7 +316,15 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->enableVisualContentSummary;
   }
   /**
-   * @param string[]
+   * Output only. Feature config for the engine to opt in or opt out of
+   * features. Supported keys: * `agent-gallery` * `no-code-agent-builder` *
+   * `prompt-gallery` * `model-selector` * `notebook-lm` * `people-search` *
+   * `people-search-org-chart` * `bi-directional-audio` * `feedback` * `session-
+   * sharing` * `personalization-memory` * `disable-agent-sharing` * `disable-
+   * image-generation` * `disable-video-generation` * `disable-onedrive-upload`
+   * * `disable-talk-to-content` * `disable-google-drive-upload`
+   *
+   * @param string[] $features
    */
   public function setFeatures($features)
   {
@@ -232,7 +338,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->features;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig
+   * Describes generative answer configuration.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig $generativeAnswerConfig
    */
   public function setGenerativeAnswerConfig(GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsGenerativeAnswerConfig $generativeAnswerConfig)
   {
@@ -246,21 +354,34 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->generativeAnswerConfig;
   }
   /**
-   * @param string
+   * Describes widget (or web app) interaction type
+   *
+   * Accepted values: INTERACTION_TYPE_UNSPECIFIED, SEARCH_ONLY,
+   * SEARCH_WITH_ANSWER, SEARCH_WITH_FOLLOW_UPS
+   *
+   * @param self::INTERACTION_TYPE_* $interactionType
    */
   public function setInteractionType($interactionType)
   {
     $this->interactionType = $interactionType;
   }
   /**
-   * @return string
+   * @return self::INTERACTION_TYPE_*
    */
   public function getInteractionType()
   {
     return $this->interactionType;
   }
   /**
-   * @param string[]
+   * Output only. Maps a model name to its specific configuration for this
+   * engine. This allows admin users to turn on/off individual models. This only
+   * stores models whose states are overridden by the admin. When the state is
+   * unspecified, or model_configs is empty for this model, the system will
+   * decide if this model should be available or not based on the default
+   * configuration. For example, a preview model should be disabled by default
+   * if the admin has not chosen to enable it.
+   *
+   * @param string[] $modelConfigs
    */
   public function setModelConfigs($modelConfigs)
   {
@@ -274,14 +395,20 @@ class GoogleCloudDiscoveryengineV1WidgetConfigUiSettings extends \Google\Collect
     return $this->modelConfigs;
   }
   /**
-   * @param string
+   * Controls whether result extract is display and how (snippet or extractive
+   * answer). Default to no result if unspecified.
+   *
+   * Accepted values: RESULT_DISPLAY_TYPE_UNSPECIFIED, SNIPPET,
+   * EXTRACTIVE_ANSWER
+   *
+   * @param self::RESULT_DESCRIPTION_TYPE_* $resultDescriptionType
    */
   public function setResultDescriptionType($resultDescriptionType)
   {
     $this->resultDescriptionType = $resultDescriptionType;
   }
   /**
-   * @return string
+   * @return self::RESULT_DESCRIPTION_TYPE_*
    */
   public function getResultDescriptionType()
   {

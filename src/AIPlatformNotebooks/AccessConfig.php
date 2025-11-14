@@ -20,12 +20,24 @@ namespace Google\Service\AIPlatformNotebooks;
 class AccessConfig extends \Google\Model
 {
   /**
+   * An external IP address associated with this instance. Specify an unused
+   * static external IP address available to the project or leave this field
+   * undefined to use an IP from a shared ephemeral IP address pool. If you
+   * specify a static external IP address, it must live in the same region as
+   * the zone of the instance.
+   *
    * @var string
    */
   public $externalIp;
 
   /**
-   * @param string
+   * An external IP address associated with this instance. Specify an unused
+   * static external IP address available to the project or leave this field
+   * undefined to use an IP from a shared ephemeral IP address pool. If you
+   * specify a static external IP address, it must live in the same region as
+   * the zone of the instance.
+   *
+   * @param string $externalIp
    */
   public function setExternalIp($externalIp)
   {

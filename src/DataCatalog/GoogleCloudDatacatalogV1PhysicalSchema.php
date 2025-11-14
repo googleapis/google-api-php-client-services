@@ -33,7 +33,9 @@ class GoogleCloudDatacatalogV1PhysicalSchema extends \Google\Model
   protected $thriftDataType = '';
 
   /**
-   * @param GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema
+   * Schema in Avro JSON format.
+   *
+   * @param GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema $avro
    */
   public function setAvro(GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema $avro)
   {
@@ -47,7 +49,9 @@ class GoogleCloudDatacatalogV1PhysicalSchema extends \Google\Model
     return $this->avro;
   }
   /**
-   * @param GoogleCloudDatacatalogV1PhysicalSchemaCsvSchema
+   * Marks a CSV-encoded data source.
+   *
+   * @param GoogleCloudDatacatalogV1PhysicalSchemaCsvSchema $csv
    */
   public function setCsv(GoogleCloudDatacatalogV1PhysicalSchemaCsvSchema $csv)
   {
@@ -61,7 +65,9 @@ class GoogleCloudDatacatalogV1PhysicalSchema extends \Google\Model
     return $this->csv;
   }
   /**
-   * @param GoogleCloudDatacatalogV1PhysicalSchemaOrcSchema
+   * Marks an ORC-encoded data source.
+   *
+   * @param GoogleCloudDatacatalogV1PhysicalSchemaOrcSchema $orc
    */
   public function setOrc(GoogleCloudDatacatalogV1PhysicalSchemaOrcSchema $orc)
   {
@@ -75,7 +81,9 @@ class GoogleCloudDatacatalogV1PhysicalSchema extends \Google\Model
     return $this->orc;
   }
   /**
-   * @param GoogleCloudDatacatalogV1PhysicalSchemaParquetSchema
+   * Marks a Parquet-encoded data source.
+   *
+   * @param GoogleCloudDatacatalogV1PhysicalSchemaParquetSchema $parquet
    */
   public function setParquet(GoogleCloudDatacatalogV1PhysicalSchemaParquetSchema $parquet)
   {
@@ -89,7 +97,9 @@ class GoogleCloudDatacatalogV1PhysicalSchema extends \Google\Model
     return $this->parquet;
   }
   /**
-   * @param GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema
+   * Schema in protocol buffer format.
+   *
+   * @param GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema $protobuf
    */
   public function setProtobuf(GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema $protobuf)
   {
@@ -103,7 +113,9 @@ class GoogleCloudDatacatalogV1PhysicalSchema extends \Google\Model
     return $this->protobuf;
   }
   /**
-   * @param GoogleCloudDatacatalogV1PhysicalSchemaThriftSchema
+   * Schema in Thrift format.
+   *
+   * @param GoogleCloudDatacatalogV1PhysicalSchemaThriftSchema $thrift
    */
   public function setThrift(GoogleCloudDatacatalogV1PhysicalSchemaThriftSchema $thrift)
   {

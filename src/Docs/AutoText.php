@@ -19,12 +19,32 @@ namespace Google\Service\Docs;
 
 class AutoText extends \Google\Collection
 {
+  /**
+   * An unspecified auto text type.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Type for auto text that represents the current page number.
+   */
+  public const TYPE_PAGE_NUMBER = 'PAGE_NUMBER';
+  /**
+   * Type for auto text that represents the total number of pages in the
+   * document.
+   */
+  public const TYPE_PAGE_COUNT = 'PAGE_COUNT';
   protected $collection_key = 'suggestedInsertionIds';
   /**
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
    * @var string[]
    */
   public $suggestedDeletionIds;
   /**
+   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if
+   * it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
    * @var string[]
    */
   public $suggestedInsertionIds;
@@ -33,12 +53,17 @@ class AutoText extends \Google\Collection
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
   /**
+   * The type of this auto text.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string[]
+   * The suggested deletion IDs. If empty, then there are no suggested deletions
+   * of this content.
+   *
+   * @param string[] $suggestedDeletionIds
    */
   public function setSuggestedDeletionIds($suggestedDeletionIds)
   {
@@ -52,7 +77,11 @@ class AutoText extends \Google\Collection
     return $this->suggestedDeletionIds;
   }
   /**
-   * @param string[]
+   * The suggested insertion IDs. An AutoText may have multiple insertion IDs if
+   * it's a nested suggested change. If empty, then this is not a suggested
+   * insertion.
+   *
+   * @param string[] $suggestedInsertionIds
    */
   public function setSuggestedInsertionIds($suggestedInsertionIds)
   {
@@ -66,7 +95,9 @@ class AutoText extends \Google\Collection
     return $this->suggestedInsertionIds;
   }
   /**
-   * @param SuggestedTextStyle[]
+   * The suggested text style changes to this AutoText, keyed by suggestion ID.
+   *
+   * @param SuggestedTextStyle[] $suggestedTextStyleChanges
    */
   public function setSuggestedTextStyleChanges($suggestedTextStyleChanges)
   {
@@ -80,7 +111,9 @@ class AutoText extends \Google\Collection
     return $this->suggestedTextStyleChanges;
   }
   /**
-   * @param TextStyle
+   * The text style of this AutoText.
+   *
+   * @param TextStyle $textStyle
    */
   public function setTextStyle(TextStyle $textStyle)
   {
@@ -94,14 +127,18 @@ class AutoText extends \Google\Collection
     return $this->textStyle;
   }
   /**
-   * @param string
+   * The type of this auto text.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, PAGE_NUMBER, PAGE_COUNT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

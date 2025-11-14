@@ -21,12 +21,16 @@ class FetchRemoteBranchesResponse extends \Google\Collection
 {
   protected $collection_key = 'branches';
   /**
+   * The remote repository's branch names.
+   *
    * @var string[]
    */
   public $branches;
 
   /**
-   * @param string[]
+   * The remote repository's branch names.
+   *
+   * @param string[] $branches
    */
   public function setBranches($branches)
   {

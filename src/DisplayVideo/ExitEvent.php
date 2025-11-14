@@ -20,24 +20,53 @@ namespace Google\Service\DisplayVideo;
 class ExitEvent extends \Google\Model
 {
   /**
+   * Exit event type is not specified or is unknown in this version.
+   */
+  public const TYPE_EXIT_EVENT_TYPE_UNSPECIFIED = 'EXIT_EVENT_TYPE_UNSPECIFIED';
+  /**
+   * The exit event is the default one.
+   */
+  public const TYPE_EXIT_EVENT_TYPE_DEFAULT = 'EXIT_EVENT_TYPE_DEFAULT';
+  /**
+   * The exit event is a backup exit event. There could be multiple backup exit
+   * events in a creative.
+   */
+  public const TYPE_EXIT_EVENT_TYPE_BACKUP = 'EXIT_EVENT_TYPE_BACKUP';
+  /**
+   * Optional. The name of the click tag of the exit event. The name must be
+   * unique within one creative. Leave it empty or unset for creatives
+   * containing image assets only.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The name used to identify this event in reports. Leave it empty
+   * or unset for creatives containing image assets only.
+   *
    * @var string
    */
   public $reportingName;
   /**
+   * Required. The type of the exit event.
+   *
    * @var string
    */
   public $type;
   /**
+   * Required. The click through URL of the exit event. This is required when
+   * type is: * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Optional. The name of the click tag of the exit event. The name must be
+   * unique within one creative. Leave it empty or unset for creatives
+   * containing image assets only.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -51,7 +80,10 @@ class ExitEvent extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The name used to identify this event in reports. Leave it empty
+   * or unset for creatives containing image assets only.
+   *
+   * @param string $reportingName
    */
   public function setReportingName($reportingName)
   {
@@ -65,21 +97,29 @@ class ExitEvent extends \Google\Model
     return $this->reportingName;
   }
   /**
-   * @param string
+   * Required. The type of the exit event.
+   *
+   * Accepted values: EXIT_EVENT_TYPE_UNSPECIFIED, EXIT_EVENT_TYPE_DEFAULT,
+   * EXIT_EVENT_TYPE_BACKUP
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Required. The click through URL of the exit event. This is required when
+   * type is: * `EXIT_EVENT_TYPE_DEFAULT` * `EXIT_EVENT_TYPE_BACKUP`
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

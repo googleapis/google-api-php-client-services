@@ -24,7 +24,10 @@ class ResourcePath extends \Google\Collection
   protected $nodesDataType = 'array';
 
   /**
-   * @param ResourcePathNode[]
+   * The list of nodes that make the up resource path, ordered from lowest level
+   * to highest level.
+   *
+   * @param ResourcePathNode[] $nodes
    */
   public function setNodes($nodes)
   {

@@ -25,7 +25,10 @@ class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabe
   protected $statusDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3DocumentId
+   * The document id of the auto-labeled document. This will replace the
+   * gcs_uri.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3DocumentId $documentId
    */
   public function setDocumentId(GoogleCloudDocumentaiUiv1beta3DocumentId $documentId)
   {
@@ -39,7 +42,9 @@ class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabe
     return $this->documentId;
   }
   /**
-   * @param GoogleRpcStatus
+   * The status of the document auto-labeling.
+   *
+   * @param GoogleRpcStatus $status
    */
   public function setStatus(GoogleRpcStatus $status)
   {

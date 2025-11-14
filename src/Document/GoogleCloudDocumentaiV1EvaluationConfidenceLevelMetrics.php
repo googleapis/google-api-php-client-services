@@ -20,6 +20,8 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics extends \Google\Model
 {
   /**
+   * The confidence level.
+   *
    * @var float
    */
   public $confidenceLevel;
@@ -27,7 +29,9 @@ class GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics extends \Google\Mo
   protected $metricsDataType = '';
 
   /**
-   * @param float
+   * The confidence level.
+   *
+   * @param float $confidenceLevel
    */
   public function setConfidenceLevel($confidenceLevel)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics extends \Google\Mo
     return $this->confidenceLevel;
   }
   /**
-   * @param GoogleCloudDocumentaiV1EvaluationMetrics
+   * The metrics at the specific confidence level.
+   *
+   * @param GoogleCloudDocumentaiV1EvaluationMetrics $metrics
    */
   public function setMetrics(GoogleCloudDocumentaiV1EvaluationMetrics $metrics)
   {

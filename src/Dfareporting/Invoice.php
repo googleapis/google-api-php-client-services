@@ -19,6 +19,9 @@ namespace Google\Service\Dfareporting;
 
 class Invoice extends \Google\Collection
 {
+  public const INVOICE_TYPE_INVOICE_TYPE_UNSPECIFIED = 'INVOICE_TYPE_UNSPECIFIED';
+  public const INVOICE_TYPE_INVOICE_TYPE_CREDIT = 'INVOICE_TYPE_CREDIT';
+  public const INVOICE_TYPE_INVOICE_TYPE_INVOICE = 'INVOICE_TYPE_INVOICE';
   protected $collection_key = 'replacedInvoiceIds';
   protected $internal_gapi_mappings = [
         "campaignSummaries" => "campaign_summaries",
@@ -26,76 +29,122 @@ class Invoice extends \Google\Collection
   protected $campaignSummariesType = CampaignSummary::class;
   protected $campaignSummariesDataType = 'array';
   /**
+   * The originally issued invoice that is being adjusted by this invoice, if
+   * applicable. May appear on invoice PDF as *Reference invoice number*.
+   *
    * @var string
    */
   public $correctedInvoiceId;
   /**
+   * Invoice currency code in ISO 4217 format.
+   *
    * @var string
    */
   public $currencyCode;
   /**
+   * The invoice due date.
+   *
    * @var string
    */
   public $dueDate;
   /**
+   * ID of this invoice.
+   *
    * @var string
    */
   public $id;
   /**
+   * The type of invoice document.
+   *
    * @var string
    */
   public $invoiceType;
   /**
+   * The date when the invoice was issued.
+   *
    * @var string
    */
   public $issueDate;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#invoice".
+   *
    * @var string
    */
   public $kind;
   /**
+   * The ID of the payments account the invoice belongs to. Appears on the
+   * invoice PDF as *Billing Account Number*.
+   *
    * @var string
    */
   public $paymentsAccountId;
   /**
+   * The ID of the payments profile the invoice belongs to. Appears on the
+   * invoice PDF as *Billing ID*.
+   *
    * @var string
    */
   public $paymentsProfileId;
   /**
+   * The URL to download a PDF copy of the invoice. Note that this URL is user
+   * specific and requires a valid OAuth 2.0 access token to access. The access
+   * token must be provided in an *Authorization: Bearer* HTTP header. The URL
+   * will only be usable for 7 days from when the api is called.
+   *
    * @var string
    */
   public $pdfUrl;
   /**
+   * Purchase order number associated with the invoice.
+   *
    * @var string
    */
   public $purchaseOrderNumber;
   /**
+   * The originally issued invoice(s) that is being cancelled by this invoice,
+   * if applicable. May appear on invoice PDF as *Replaced invoice numbers*.
+   * Note: There may be multiple replaced invoices due to consolidation of
+   * multiple invoices into a single invoice.
+   *
    * @var string[]
    */
   public $replacedInvoiceIds;
   /**
+   * The invoice service end date.
+   *
    * @var string
    */
   public $serviceEndDate;
   /**
+   * The invoice service start date.
+   *
    * @var string
    */
   public $serviceStartDate;
   /**
+   * The pre-tax subtotal amount, in micros of the invoice's currency.
+   *
    * @var string
    */
   public $subtotalAmountMicros;
   /**
+   * The invoice total amount, in micros of the invoice's currency.
+   *
    * @var string
    */
   public $totalAmountMicros;
   /**
+   * The sum of all taxes in invoice, in micros of the invoice's currency.
+   *
    * @var string
    */
   public $totalTaxAmountMicros;
 
   /**
-   * @param CampaignSummary[]
+   * The list of summarized campaign information associated with this invoice.
+   *
+   * @param CampaignSummary[] $campaignSummaries
    */
   public function setCampaignSummaries($campaignSummaries)
   {
@@ -109,7 +158,10 @@ class Invoice extends \Google\Collection
     return $this->campaignSummaries;
   }
   /**
-   * @param string
+   * The originally issued invoice that is being adjusted by this invoice, if
+   * applicable. May appear on invoice PDF as *Reference invoice number*.
+   *
+   * @param string $correctedInvoiceId
    */
   public function setCorrectedInvoiceId($correctedInvoiceId)
   {
@@ -123,7 +175,9 @@ class Invoice extends \Google\Collection
     return $this->correctedInvoiceId;
   }
   /**
-   * @param string
+   * Invoice currency code in ISO 4217 format.
+   *
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {
@@ -137,7 +191,9 @@ class Invoice extends \Google\Collection
     return $this->currencyCode;
   }
   /**
-   * @param string
+   * The invoice due date.
+   *
+   * @param string $dueDate
    */
   public function setDueDate($dueDate)
   {
@@ -151,7 +207,9 @@ class Invoice extends \Google\Collection
     return $this->dueDate;
   }
   /**
-   * @param string
+   * ID of this invoice.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -165,21 +223,28 @@ class Invoice extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * The type of invoice document.
+   *
+   * Accepted values: INVOICE_TYPE_UNSPECIFIED, INVOICE_TYPE_CREDIT,
+   * INVOICE_TYPE_INVOICE
+   *
+   * @param self::INVOICE_TYPE_* $invoiceType
    */
   public function setInvoiceType($invoiceType)
   {
     $this->invoiceType = $invoiceType;
   }
   /**
-   * @return string
+   * @return self::INVOICE_TYPE_*
    */
   public function getInvoiceType()
   {
     return $this->invoiceType;
   }
   /**
-   * @param string
+   * The date when the invoice was issued.
+   *
+   * @param string $issueDate
    */
   public function setIssueDate($issueDate)
   {
@@ -193,7 +258,10 @@ class Invoice extends \Google\Collection
     return $this->issueDate;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#invoice".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -207,7 +275,10 @@ class Invoice extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The ID of the payments account the invoice belongs to. Appears on the
+   * invoice PDF as *Billing Account Number*.
+   *
+   * @param string $paymentsAccountId
    */
   public function setPaymentsAccountId($paymentsAccountId)
   {
@@ -221,7 +292,10 @@ class Invoice extends \Google\Collection
     return $this->paymentsAccountId;
   }
   /**
-   * @param string
+   * The ID of the payments profile the invoice belongs to. Appears on the
+   * invoice PDF as *Billing ID*.
+   *
+   * @param string $paymentsProfileId
    */
   public function setPaymentsProfileId($paymentsProfileId)
   {
@@ -235,7 +309,12 @@ class Invoice extends \Google\Collection
     return $this->paymentsProfileId;
   }
   /**
-   * @param string
+   * The URL to download a PDF copy of the invoice. Note that this URL is user
+   * specific and requires a valid OAuth 2.0 access token to access. The access
+   * token must be provided in an *Authorization: Bearer* HTTP header. The URL
+   * will only be usable for 7 days from when the api is called.
+   *
+   * @param string $pdfUrl
    */
   public function setPdfUrl($pdfUrl)
   {
@@ -249,7 +328,9 @@ class Invoice extends \Google\Collection
     return $this->pdfUrl;
   }
   /**
-   * @param string
+   * Purchase order number associated with the invoice.
+   *
+   * @param string $purchaseOrderNumber
    */
   public function setPurchaseOrderNumber($purchaseOrderNumber)
   {
@@ -263,7 +344,12 @@ class Invoice extends \Google\Collection
     return $this->purchaseOrderNumber;
   }
   /**
-   * @param string[]
+   * The originally issued invoice(s) that is being cancelled by this invoice,
+   * if applicable. May appear on invoice PDF as *Replaced invoice numbers*.
+   * Note: There may be multiple replaced invoices due to consolidation of
+   * multiple invoices into a single invoice.
+   *
+   * @param string[] $replacedInvoiceIds
    */
   public function setReplacedInvoiceIds($replacedInvoiceIds)
   {
@@ -277,7 +363,9 @@ class Invoice extends \Google\Collection
     return $this->replacedInvoiceIds;
   }
   /**
-   * @param string
+   * The invoice service end date.
+   *
+   * @param string $serviceEndDate
    */
   public function setServiceEndDate($serviceEndDate)
   {
@@ -291,7 +379,9 @@ class Invoice extends \Google\Collection
     return $this->serviceEndDate;
   }
   /**
-   * @param string
+   * The invoice service start date.
+   *
+   * @param string $serviceStartDate
    */
   public function setServiceStartDate($serviceStartDate)
   {
@@ -305,7 +395,9 @@ class Invoice extends \Google\Collection
     return $this->serviceStartDate;
   }
   /**
-   * @param string
+   * The pre-tax subtotal amount, in micros of the invoice's currency.
+   *
+   * @param string $subtotalAmountMicros
    */
   public function setSubtotalAmountMicros($subtotalAmountMicros)
   {
@@ -319,7 +411,9 @@ class Invoice extends \Google\Collection
     return $this->subtotalAmountMicros;
   }
   /**
-   * @param string
+   * The invoice total amount, in micros of the invoice's currency.
+   *
+   * @param string $totalAmountMicros
    */
   public function setTotalAmountMicros($totalAmountMicros)
   {
@@ -333,7 +427,9 @@ class Invoice extends \Google\Collection
     return $this->totalAmountMicros;
   }
   /**
-   * @param string
+   * The sum of all taxes in invoice, in micros of the invoice's currency.
+   *
+   * @param string $totalTaxAmountMicros
    */
   public function setTotalTaxAmountMicros($totalTaxAmountMicros)
   {

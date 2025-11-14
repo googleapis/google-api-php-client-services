@@ -20,10 +20,17 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1PageInfo extends \Google\Model
 {
   /**
+   * Always present for WebhookRequest. Ignored for WebhookResponse. The unique
+   * identifier of the current page. Format:
+   * `projects//locations//agents//flows//pages/`.
+   *
    * @var string
    */
   public $currentPage;
   /**
+   * Always present for WebhookRequest. Ignored for WebhookResponse. The display
+   * name of the current page.
+   *
    * @var string
    */
   public $displayName;
@@ -31,7 +38,11 @@ class GoogleCloudDialogflowCxV3beta1PageInfo extends \Google\Model
   protected $formInfoDataType = '';
 
   /**
-   * @param string
+   * Always present for WebhookRequest. Ignored for WebhookResponse. The unique
+   * identifier of the current page. Format:
+   * `projects//locations//agents//flows//pages/`.
+   *
+   * @param string $currentPage
    */
   public function setCurrentPage($currentPage)
   {
@@ -45,7 +56,10 @@ class GoogleCloudDialogflowCxV3beta1PageInfo extends \Google\Model
     return $this->currentPage;
   }
   /**
-   * @param string
+   * Always present for WebhookRequest. Ignored for WebhookResponse. The display
+   * name of the current page.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -59,7 +73,10 @@ class GoogleCloudDialogflowCxV3beta1PageInfo extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1PageInfoFormInfo
+   * Optional for both WebhookRequest and WebhookResponse. Information about the
+   * form.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1PageInfoFormInfo $formInfo
    */
   public function setFormInfo(GoogleCloudDialogflowCxV3beta1PageInfoFormInfo $formInfo)
   {

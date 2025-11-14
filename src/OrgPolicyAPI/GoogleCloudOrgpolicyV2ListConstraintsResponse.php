@@ -23,12 +23,16 @@ class GoogleCloudOrgpolicyV2ListConstraintsResponse extends \Google\Collection
   protected $constraintsType = GoogleCloudOrgpolicyV2Constraint::class;
   protected $constraintsDataType = 'array';
   /**
+   * Page token used to retrieve the next page. This is currently not used.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudOrgpolicyV2Constraint[]
+   * The collection of constraints that are available on the targeted resource.
+   *
+   * @param GoogleCloudOrgpolicyV2Constraint[] $constraints
    */
   public function setConstraints($constraints)
   {
@@ -42,7 +46,9 @@ class GoogleCloudOrgpolicyV2ListConstraintsResponse extends \Google\Collection
     return $this->constraints;
   }
   /**
-   * @param string
+   * Page token used to retrieve the next page. This is currently not used.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

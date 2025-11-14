@@ -45,7 +45,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
   protected $timePartConfigDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2BucketingConfig
+   * Bucketing
+   *
+   * @param GooglePrivacyDlpV2BucketingConfig $bucketingConfig
    */
   public function setBucketingConfig(GooglePrivacyDlpV2BucketingConfig $bucketingConfig)
   {
@@ -59,7 +61,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->bucketingConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2CharacterMaskConfig
+   * Mask
+   *
+   * @param GooglePrivacyDlpV2CharacterMaskConfig $characterMaskConfig
    */
   public function setCharacterMaskConfig(GooglePrivacyDlpV2CharacterMaskConfig $characterMaskConfig)
   {
@@ -73,7 +77,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->characterMaskConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2CryptoDeterministicConfig
+   * Deterministic Crypto
+   *
+   * @param GooglePrivacyDlpV2CryptoDeterministicConfig $cryptoDeterministicConfig
    */
   public function setCryptoDeterministicConfig(GooglePrivacyDlpV2CryptoDeterministicConfig $cryptoDeterministicConfig)
   {
@@ -87,7 +93,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->cryptoDeterministicConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2CryptoHashConfig
+   * Crypto
+   *
+   * @param GooglePrivacyDlpV2CryptoHashConfig $cryptoHashConfig
    */
   public function setCryptoHashConfig(GooglePrivacyDlpV2CryptoHashConfig $cryptoHashConfig)
   {
@@ -101,7 +109,10 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->cryptoHashConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig
+   * Ffx-Fpe. Strongly discouraged, consider using CryptoDeterministicConfig
+   * instead. Fpe is computationally expensive incurring latency costs.
+   *
+   * @param GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig $cryptoReplaceFfxFpeConfig
    */
   public function setCryptoReplaceFfxFpeConfig(GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig $cryptoReplaceFfxFpeConfig)
   {
@@ -115,7 +126,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->cryptoReplaceFfxFpeConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2DateShiftConfig
+   * Date Shift
+   *
+   * @param GooglePrivacyDlpV2DateShiftConfig $dateShiftConfig
    */
   public function setDateShiftConfig(GooglePrivacyDlpV2DateShiftConfig $dateShiftConfig)
   {
@@ -129,7 +142,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->dateShiftConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2FixedSizeBucketingConfig
+   * Fixed size bucketing
+   *
+   * @param GooglePrivacyDlpV2FixedSizeBucketingConfig $fixedSizeBucketingConfig
    */
   public function setFixedSizeBucketingConfig(GooglePrivacyDlpV2FixedSizeBucketingConfig $fixedSizeBucketingConfig)
   {
@@ -143,7 +158,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->fixedSizeBucketingConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2RedactConfig
+   * Redact
+   *
+   * @param GooglePrivacyDlpV2RedactConfig $redactConfig
    */
   public function setRedactConfig(GooglePrivacyDlpV2RedactConfig $redactConfig)
   {
@@ -157,7 +174,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->redactConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2ReplaceValueConfig
+   * Replace with a specified value.
+   *
+   * @param GooglePrivacyDlpV2ReplaceValueConfig $replaceConfig
    */
   public function setReplaceConfig(GooglePrivacyDlpV2ReplaceValueConfig $replaceConfig)
   {
@@ -171,7 +190,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->replaceConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2ReplaceDictionaryConfig
+   * Replace with a value randomly drawn (with replacement) from a dictionary.
+   *
+   * @param GooglePrivacyDlpV2ReplaceDictionaryConfig $replaceDictionaryConfig
    */
   public function setReplaceDictionaryConfig(GooglePrivacyDlpV2ReplaceDictionaryConfig $replaceDictionaryConfig)
   {
@@ -185,7 +206,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->replaceDictionaryConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2ReplaceWithInfoTypeConfig
+   * Replace with infotype
+   *
+   * @param GooglePrivacyDlpV2ReplaceWithInfoTypeConfig $replaceWithInfoTypeConfig
    */
   public function setReplaceWithInfoTypeConfig(GooglePrivacyDlpV2ReplaceWithInfoTypeConfig $replaceWithInfoTypeConfig)
   {
@@ -199,7 +222,9 @@ class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
     return $this->replaceWithInfoTypeConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2TimePartConfig
+   * Time extraction
+   *
+   * @param GooglePrivacyDlpV2TimePartConfig $timePartConfig
    */
   public function setTimePartConfig(GooglePrivacyDlpV2TimePartConfig $timePartConfig)
   {

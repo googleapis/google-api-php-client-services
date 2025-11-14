@@ -20,32 +20,51 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData extends \Google\Model
 {
   /**
+   * The piece of text from the `source` knowledge base document.
+   *
    * @var string
    */
   public $answer;
   /**
+   * The system's confidence score that this answer is a good match for this
+   * conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely
+   * certain).
+   *
    * @var float
    */
   public $confidenceScore;
   /**
+   * Map that contains metadata about the FAQ answer and the document that it
+   * originates from.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
+   *
    * @var string
    */
   public $queryRecord;
   /**
+   * The corresponding FAQ question.
+   *
    * @var string
    */
   public $question;
   /**
+   * The knowledge document that this answer was extracted from. Format:
+   * projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}.
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param string
+   * The piece of text from the `source` knowledge base document.
+   *
+   * @param string $answer
    */
   public function setAnswer($answer)
   {
@@ -59,7 +78,11 @@ class GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData extends \Google\Mode
     return $this->answer;
   }
   /**
-   * @param float
+   * The system's confidence score that this answer is a good match for this
+   * conversation, ranging from 0.0 (completely uncertain) to 1.0 (completely
+   * certain).
+   *
+   * @param float $confidenceScore
    */
   public function setConfidenceScore($confidenceScore)
   {
@@ -73,7 +96,10 @@ class GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData extends \Google\Mode
     return $this->confidenceScore;
   }
   /**
-   * @param string[]
+   * Map that contains metadata about the FAQ answer and the document that it
+   * originates from.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -87,7 +113,10 @@ class GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData extends \Google\Mode
     return $this->metadata;
   }
   /**
-   * @param string
+   * The name of the answer record. Format:
+   * projects/{project}/locations/{location}/answerRecords/{answer_record}
+   *
+   * @param string $queryRecord
    */
   public function setQueryRecord($queryRecord)
   {
@@ -101,7 +130,9 @@ class GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData extends \Google\Mode
     return $this->queryRecord;
   }
   /**
-   * @param string
+   * The corresponding FAQ question.
+   *
+   * @param string $question
    */
   public function setQuestion($question)
   {
@@ -115,7 +146,10 @@ class GoogleCloudContactcenterinsightsV1alpha1FaqAnswerData extends \Google\Mode
     return $this->question;
   }
   /**
-   * @param string
+   * The knowledge document that this answer was extracted from. Format:
+   * projects/{project}/knowledgeBases/{knowledge_base}/documents/{document}.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {

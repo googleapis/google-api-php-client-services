@@ -22,24 +22,45 @@ class MaterializedView extends \Google\Model
   protected $clusterStatesType = GoogleBigtableAdminV2MaterializedViewClusterState::class;
   protected $clusterStatesDataType = 'map';
   /**
+   * Set to true to make the MaterializedView protected against deletion. Views:
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
+   *
    * @var bool
    */
   public $deletionProtection;
   /**
+   * Optional. The etag for this materialized view. This may be sent on update
+   * requests to ensure that the client has an up-to-date value before
+   * proceeding. The server returns an ABORTED error on a mismatched etag.
+   * Views: `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Identifier. The unique name of the materialized view. Format: `projects/{pr
+   * oject}/instances/{instance}/materializedViews/{materialized_view}` Views:
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Immutable. The materialized view's select query. Views:
+   * `SCHEMA_VIEW`, `FULL`.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param GoogleBigtableAdminV2MaterializedViewClusterState[]
+   * Output only. Map from cluster ID to per-cluster materialized view state. If
+   * it could not be determined whether or not the materialized view has data in
+   * a particular cluster (for example, if its zone is unavailable), then there
+   * will be an entry for the cluster with `STATE_NOT_KNOWN` state. Views:
+   * `REPLICATION_VIEW`, `FULL`.
+   *
+   * @param GoogleBigtableAdminV2MaterializedViewClusterState[] $clusterStates
    */
   public function setClusterStates($clusterStates)
   {
@@ -53,7 +74,10 @@ class MaterializedView extends \Google\Model
     return $this->clusterStates;
   }
   /**
-   * @param bool
+   * Set to true to make the MaterializedView protected against deletion. Views:
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
+   *
+   * @param bool $deletionProtection
    */
   public function setDeletionProtection($deletionProtection)
   {
@@ -67,7 +91,12 @@ class MaterializedView extends \Google\Model
     return $this->deletionProtection;
   }
   /**
-   * @param string
+   * Optional. The etag for this materialized view. This may be sent on update
+   * requests to ensure that the client has an up-to-date value before
+   * proceeding. The server returns an ABORTED error on a mismatched etag.
+   * Views: `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -81,7 +110,11 @@ class MaterializedView extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Identifier. The unique name of the materialized view. Format: `projects/{pr
+   * oject}/instances/{instance}/materializedViews/{materialized_view}` Views:
+   * `SCHEMA_VIEW`, `REPLICATION_VIEW`, `FULL`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,7 +128,10 @@ class MaterializedView extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Immutable. The materialized view's select query. Views:
+   * `SCHEMA_VIEW`, `FULL`.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

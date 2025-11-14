@@ -21,16 +21,28 @@ class Person extends \Google\Collection
 {
   protected $collection_key = 'suggestedInsertionIds';
   /**
+   * Output only. The unique ID of this link.
+   *
    * @var string
    */
   public $personId;
   protected $personPropertiesType = PersonProperties::class;
   protected $personPropertiesDataType = '';
   /**
+   * IDs for suggestions that remove this person link from the document. A
+   * Person might have multiple deletion IDs if, for example, multiple users
+   * suggest deleting it. If empty, then this person link isn't suggested for
+   * deletion.
+   *
    * @var string[]
    */
   public $suggestedDeletionIds;
   /**
+   * IDs for suggestions that insert this person link into the document. A
+   * Person might have multiple insertion IDs if it's a nested suggested change
+   * (a suggestion within a suggestion made by a different user, for example).
+   * If empty, then this person link isn't a suggested insertion.
+   *
    * @var string[]
    */
   public $suggestedInsertionIds;
@@ -40,7 +52,9 @@ class Person extends \Google\Collection
   protected $textStyleDataType = '';
 
   /**
-   * @param string
+   * Output only. The unique ID of this link.
+   *
+   * @param string $personId
    */
   public function setPersonId($personId)
   {
@@ -54,7 +68,9 @@ class Person extends \Google\Collection
     return $this->personId;
   }
   /**
-   * @param PersonProperties
+   * Output only. The properties of this Person. This field is always present.
+   *
+   * @param PersonProperties $personProperties
    */
   public function setPersonProperties(PersonProperties $personProperties)
   {
@@ -68,7 +84,12 @@ class Person extends \Google\Collection
     return $this->personProperties;
   }
   /**
-   * @param string[]
+   * IDs for suggestions that remove this person link from the document. A
+   * Person might have multiple deletion IDs if, for example, multiple users
+   * suggest deleting it. If empty, then this person link isn't suggested for
+   * deletion.
+   *
+   * @param string[] $suggestedDeletionIds
    */
   public function setSuggestedDeletionIds($suggestedDeletionIds)
   {
@@ -82,7 +103,12 @@ class Person extends \Google\Collection
     return $this->suggestedDeletionIds;
   }
   /**
-   * @param string[]
+   * IDs for suggestions that insert this person link into the document. A
+   * Person might have multiple insertion IDs if it's a nested suggested change
+   * (a suggestion within a suggestion made by a different user, for example).
+   * If empty, then this person link isn't a suggested insertion.
+   *
+   * @param string[] $suggestedInsertionIds
    */
   public function setSuggestedInsertionIds($suggestedInsertionIds)
   {
@@ -96,7 +122,9 @@ class Person extends \Google\Collection
     return $this->suggestedInsertionIds;
   }
   /**
-   * @param SuggestedTextStyle[]
+   * The suggested text style changes to this Person, keyed by suggestion ID.
+   *
+   * @param SuggestedTextStyle[] $suggestedTextStyleChanges
    */
   public function setSuggestedTextStyleChanges($suggestedTextStyleChanges)
   {
@@ -110,7 +138,9 @@ class Person extends \Google\Collection
     return $this->suggestedTextStyleChanges;
   }
   /**
-   * @param TextStyle
+   * The text style of this Person.
+   *
+   * @param TextStyle $textStyle
    */
   public function setTextStyle(TextStyle $textStyle)
   {

@@ -20,28 +20,40 @@ namespace Google\Service\Dfareporting;
 class FloodlightActivityPublisherDynamicTag extends \Google\Model
 {
   /**
+   * Whether this tag is applicable only for click-throughs.
+   *
    * @var bool
    */
   public $clickThrough;
   /**
+   * Directory site ID of this dynamic tag. This is a write-only field that can
+   * be used as an alternative to the siteId field. When this resource is
+   * retrieved, only the siteId field will be populated.
+   *
    * @var string
    */
   public $directorySiteId;
   protected $dynamicTagType = FloodlightActivityDynamicTag::class;
   protected $dynamicTagDataType = '';
   /**
+   * Site ID of this dynamic tag.
+   *
    * @var string
    */
   public $siteId;
   protected $siteIdDimensionValueType = DimensionValue::class;
   protected $siteIdDimensionValueDataType = '';
   /**
+   * Whether this tag is applicable only for view-throughs.
+   *
    * @var bool
    */
   public $viewThrough;
 
   /**
-   * @param bool
+   * Whether this tag is applicable only for click-throughs.
+   *
+   * @param bool $clickThrough
    */
   public function setClickThrough($clickThrough)
   {
@@ -55,7 +67,11 @@ class FloodlightActivityPublisherDynamicTag extends \Google\Model
     return $this->clickThrough;
   }
   /**
-   * @param string
+   * Directory site ID of this dynamic tag. This is a write-only field that can
+   * be used as an alternative to the siteId field. When this resource is
+   * retrieved, only the siteId field will be populated.
+   *
+   * @param string $directorySiteId
    */
   public function setDirectorySiteId($directorySiteId)
   {
@@ -69,7 +85,9 @@ class FloodlightActivityPublisherDynamicTag extends \Google\Model
     return $this->directorySiteId;
   }
   /**
-   * @param FloodlightActivityDynamicTag
+   * Dynamic floodlight tag.
+   *
+   * @param FloodlightActivityDynamicTag $dynamicTag
    */
   public function setDynamicTag(FloodlightActivityDynamicTag $dynamicTag)
   {
@@ -83,7 +101,9 @@ class FloodlightActivityPublisherDynamicTag extends \Google\Model
     return $this->dynamicTag;
   }
   /**
-   * @param string
+   * Site ID of this dynamic tag.
+   *
+   * @param string $siteId
    */
   public function setSiteId($siteId)
   {
@@ -97,7 +117,10 @@ class FloodlightActivityPublisherDynamicTag extends \Google\Model
     return $this->siteId;
   }
   /**
-   * @param DimensionValue
+   * Dimension value for the ID of the site. This is a read-only, auto-generated
+   * field.
+   *
+   * @param DimensionValue $siteIdDimensionValue
    */
   public function setSiteIdDimensionValue(DimensionValue $siteIdDimensionValue)
   {
@@ -111,7 +134,9 @@ class FloodlightActivityPublisherDynamicTag extends \Google\Model
     return $this->siteIdDimensionValue;
   }
   /**
-   * @param bool
+   * Whether this tag is applicable only for view-throughs.
+   *
+   * @param bool $viewThrough
    */
   public function setViewThrough($viewThrough)
   {

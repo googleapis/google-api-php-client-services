@@ -26,7 +26,9 @@ class BatchUpdateDocumentRequest extends \Google\Collection
   protected $writeControlDataType = '';
 
   /**
-   * @param Request[]
+   * A list of updates to apply to the document.
+   *
+   * @param Request[] $requests
    */
   public function setRequests($requests)
   {
@@ -40,7 +42,9 @@ class BatchUpdateDocumentRequest extends \Google\Collection
     return $this->requests;
   }
   /**
-   * @param WriteControl
+   * Provides control over how write requests are executed.
+   *
+   * @param WriteControl $writeControl
    */
   public function setWriteControl(WriteControl $writeControl)
   {

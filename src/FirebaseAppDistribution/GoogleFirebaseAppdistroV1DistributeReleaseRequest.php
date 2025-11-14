@@ -21,16 +21,28 @@ class GoogleFirebaseAppdistroV1DistributeReleaseRequest extends \Google\Collecti
 {
   protected $collection_key = 'testerEmails';
   /**
+   * Optional. A list of group aliases (IDs) to be given access to this release.
+   * A combined maximum of 999 `testerEmails` and `groupAliases` can be
+   * specified in a single request.
+   *
    * @var string[]
    */
   public $groupAliases;
   /**
+   * Optional. A list of tester email addresses to be given access to this
+   * release. A combined maximum of 999 `testerEmails` and `groupAliases` can be
+   * specified in a single request.
+   *
    * @var string[]
    */
   public $testerEmails;
 
   /**
-   * @param string[]
+   * Optional. A list of group aliases (IDs) to be given access to this release.
+   * A combined maximum of 999 `testerEmails` and `groupAliases` can be
+   * specified in a single request.
+   *
+   * @param string[] $groupAliases
    */
   public function setGroupAliases($groupAliases)
   {
@@ -44,7 +56,11 @@ class GoogleFirebaseAppdistroV1DistributeReleaseRequest extends \Google\Collecti
     return $this->groupAliases;
   }
   /**
-   * @param string[]
+   * Optional. A list of tester email addresses to be given access to this
+   * release. A combined maximum of 999 `testerEmails` and `groupAliases` can be
+   * specified in a single request.
+   *
+   * @param string[] $testerEmails
    */
   public function setTesterEmails($testerEmails)
   {

@@ -23,10 +23,17 @@ class IamPolicyAnalysisResult extends \Google\Collection
   protected $accessControlListsType = GoogleCloudAssetV1AccessControlList::class;
   protected $accessControlListsDataType = 'array';
   /**
+   * The [full resource name](https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format) of the resource to which the
+   * iam_binding policy attaches.
+   *
    * @var string
    */
   public $attachedResourceFullName;
   /**
+   * Represents whether all analyses on the iam_binding have successfully
+   * finished.
+   *
    * @var bool
    */
   public $fullyExplored;
@@ -36,7 +43,10 @@ class IamPolicyAnalysisResult extends \Google\Collection
   protected $identityListDataType = '';
 
   /**
-   * @param GoogleCloudAssetV1AccessControlList[]
+   * The access control lists derived from the iam_binding that match or
+   * potentially match resource and access selectors specified in the request.
+   *
+   * @param GoogleCloudAssetV1AccessControlList[] $accessControlLists
    */
   public function setAccessControlLists($accessControlLists)
   {
@@ -50,7 +60,11 @@ class IamPolicyAnalysisResult extends \Google\Collection
     return $this->accessControlLists;
   }
   /**
-   * @param string
+   * The [full resource name](https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format) of the resource to which the
+   * iam_binding policy attaches.
+   *
+   * @param string $attachedResourceFullName
    */
   public function setAttachedResourceFullName($attachedResourceFullName)
   {
@@ -64,7 +78,10 @@ class IamPolicyAnalysisResult extends \Google\Collection
     return $this->attachedResourceFullName;
   }
   /**
-   * @param bool
+   * Represents whether all analyses on the iam_binding have successfully
+   * finished.
+   *
+   * @param bool $fullyExplored
    */
   public function setFullyExplored($fullyExplored)
   {
@@ -78,7 +95,9 @@ class IamPolicyAnalysisResult extends \Google\Collection
     return $this->fullyExplored;
   }
   /**
-   * @param Binding
+   * The IAM policy binding under analysis.
+   *
+   * @param Binding $iamBinding
    */
   public function setIamBinding(Binding $iamBinding)
   {
@@ -92,7 +111,10 @@ class IamPolicyAnalysisResult extends \Google\Collection
     return $this->iamBinding;
   }
   /**
-   * @param GoogleCloudAssetV1IdentityList
+   * The identity list derived from members of the iam_binding that match or
+   * potentially match identity selector specified in the request.
+   *
+   * @param GoogleCloudAssetV1IdentityList $identityList
    */
   public function setIdentityList(GoogleCloudAssetV1IdentityList $identityList)
   {

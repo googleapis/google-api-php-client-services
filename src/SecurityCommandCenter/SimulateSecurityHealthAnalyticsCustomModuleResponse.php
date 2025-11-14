@@ -23,7 +23,9 @@ class SimulateSecurityHealthAnalyticsCustomModuleResponse extends \Google\Model
   protected $resultDataType = '';
 
   /**
-   * @param SimulatedResult
+   * Result for test case in the corresponding request.
+   *
+   * @param SimulatedResult $result
    */
   public function setResult(SimulatedResult $result)
   {

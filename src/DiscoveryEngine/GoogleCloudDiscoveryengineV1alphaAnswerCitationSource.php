@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaAnswerCitationSource extends \Google\Model
 {
   /**
+   * ID of the citation source.
+   *
    * @var string
    */
   public $referenceId;
 
   /**
-   * @param string
+   * ID of the citation source.
+   *
+   * @param string $referenceId
    */
   public function setReferenceId($referenceId)
   {

@@ -24,7 +24,9 @@ class Allowed extends \Google\Collection
   protected $ipRulesDataType = 'array';
 
   /**
-   * @param IpRule[]
+   * Optional. Optional list of allowed IP rules.
+   *
+   * @param IpRule[] $ipRules
    */
   public function setIpRules($ipRules)
   {

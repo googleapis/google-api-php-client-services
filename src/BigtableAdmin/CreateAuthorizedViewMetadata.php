@@ -20,18 +20,24 @@ namespace Google\Service\BigtableAdmin;
 class CreateAuthorizedViewMetadata extends \Google\Model
 {
   /**
+   * The time at which the operation failed or was completed successfully.
+   *
    * @var string
    */
   public $finishTime;
   protected $originalRequestType = CreateAuthorizedViewRequest::class;
   protected $originalRequestDataType = '';
   /**
+   * The time at which the original request was received.
+   *
    * @var string
    */
   public $requestTime;
 
   /**
-   * @param string
+   * The time at which the operation failed or was completed successfully.
+   *
+   * @param string $finishTime
    */
   public function setFinishTime($finishTime)
   {
@@ -45,7 +51,10 @@ class CreateAuthorizedViewMetadata extends \Google\Model
     return $this->finishTime;
   }
   /**
-   * @param CreateAuthorizedViewRequest
+   * The request that prompted the initiation of this CreateAuthorizedView
+   * operation.
+   *
+   * @param CreateAuthorizedViewRequest $originalRequest
    */
   public function setOriginalRequest(CreateAuthorizedViewRequest $originalRequest)
   {
@@ -59,7 +68,9 @@ class CreateAuthorizedViewMetadata extends \Google\Model
     return $this->originalRequest;
   }
   /**
-   * @param string
+   * The time at which the original request was received.
+   *
+   * @param string $requestTime
    */
   public function setRequestTime($requestTime)
   {

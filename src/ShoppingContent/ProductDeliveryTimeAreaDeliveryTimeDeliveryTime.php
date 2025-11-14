@@ -20,24 +20,42 @@ namespace Google\Service\ShoppingContent;
 class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime extends \Google\Model
 {
   /**
+   * Required. The maximum number of business days (inclusive) between when an
+   * order is placed and when the product ships. If a product ships in the same
+   * day, set this value to 0.
+   *
    * @var int
    */
   public $maxHandlingTimeDays;
   /**
+   * Required. The maximum number of business days (inclusive) between when the
+   * product ships and when the product is delivered.
+   *
    * @var int
    */
   public $maxTransitTimeDays;
   /**
+   * Required. The minimum number of business days (inclusive) between when an
+   * order is placed and when the product ships. If a product ships in the same
+   * day, set this value to 0.
+   *
    * @var int
    */
   public $minHandlingTimeDays;
   /**
+   * Required. The minimum number of business days (inclusive) between when the
+   * product ships and when the product is delivered.
+   *
    * @var int
    */
   public $minTransitTimeDays;
 
   /**
-   * @param int
+   * Required. The maximum number of business days (inclusive) between when an
+   * order is placed and when the product ships. If a product ships in the same
+   * day, set this value to 0.
+   *
+   * @param int $maxHandlingTimeDays
    */
   public function setMaxHandlingTimeDays($maxHandlingTimeDays)
   {
@@ -51,7 +69,10 @@ class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime extends \Google\Model
     return $this->maxHandlingTimeDays;
   }
   /**
-   * @param int
+   * Required. The maximum number of business days (inclusive) between when the
+   * product ships and when the product is delivered.
+   *
+   * @param int $maxTransitTimeDays
    */
   public function setMaxTransitTimeDays($maxTransitTimeDays)
   {
@@ -65,7 +86,11 @@ class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime extends \Google\Model
     return $this->maxTransitTimeDays;
   }
   /**
-   * @param int
+   * Required. The minimum number of business days (inclusive) between when an
+   * order is placed and when the product ships. If a product ships in the same
+   * day, set this value to 0.
+   *
+   * @param int $minHandlingTimeDays
    */
   public function setMinHandlingTimeDays($minHandlingTimeDays)
   {
@@ -79,7 +104,10 @@ class ProductDeliveryTimeAreaDeliveryTimeDeliveryTime extends \Google\Model
     return $this->minHandlingTimeDays;
   }
   /**
-   * @param int
+   * Required. The minimum number of business days (inclusive) between when the
+   * product ships and when the product is delivered.
+   *
+   * @param int $minTransitTimeDays
    */
   public function setMinTransitTimeDays($minTransitTimeDays)
   {

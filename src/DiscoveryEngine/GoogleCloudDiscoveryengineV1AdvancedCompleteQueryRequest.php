@@ -23,36 +23,77 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
   protected $boostSpecType = GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestBoostSpec::class;
   protected $boostSpecDataType = '';
   /**
+   * Optional. Experiment ids for this request.
+   *
    * @var string[]
    */
   public $experimentIds;
   /**
+   * Indicates if tail suggestions should be returned if there are no
+   * suggestions that match the full query. Even if set to true, if there are
+   * suggestions that match the full query, those are returned and no tail
+   * suggestions are returned.
+   *
    * @var bool
    */
   public $includeTailSuggestions;
   /**
+   * Required. The typeahead input used to fetch suggestions. Maximum length is
+   * 128 characters. The query can not be empty for most of the suggestion
+   * types. If it is empty, an `INVALID_ARGUMENT` error is returned. The
+   * exception is when the suggestion_types contains only the type
+   * `RECENT_SEARCH`, the query can be an empty string. The is called "zero
+   * prefix" feature, which returns user's recently searched queries given the
+   * empty query.
+   *
    * @var string
    */
   public $query;
   /**
+   * Specifies the autocomplete query model, which only applies to the QUERY
+   * SuggestionType. This overrides any model specified in the Configuration >
+   * Autocomplete section of the Cloud console. Currently supported values: *
+   * `document` - Using suggestions generated from user-imported documents. *
+   * `search-history` - Using suggestions generated from the past history of
+   * SearchService.Search API calls. Do not use it when there is no traffic for
+   * Search API. * `user-event` - Using suggestions generated from user-imported
+   * search events. * `document-completable` - Using suggestions taken directly
+   * from user-imported document fields marked as completable. Default values: *
+   * `document` is the default model for regular dataStores. * `search-history`
+   * is the default model for site search dataStores.
+   *
    * @var string
    */
   public $queryModel;
   protected $suggestionTypeSpecsType = GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestSuggestionTypeSpec::class;
   protected $suggestionTypeSpecsDataType = 'array';
   /**
+   * Optional. Suggestion types to return. If empty or unspecified, query
+   * suggestions are returned. Only one suggestion type is supported at the
+   * moment.
+   *
    * @var string[]
    */
   public $suggestionTypes;
   protected $userInfoType = GoogleCloudDiscoveryengineV1UserInfo::class;
   protected $userInfoDataType = '';
   /**
+   * Optional. A unique identifier for tracking visitors. For example, this
+   * could be implemented with an HTTP cookie, which should be able to uniquely
+   * identify a visitor on a single device. This unique identifier should not
+   * change if the visitor logs in or out of the website. This field should NOT
+   * have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id.
+   * The field must be a UTF-8 encoded string with a length limit of 128
+   *
    * @var string
    */
   public $userPseudoId;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestBoostSpec
+   * Optional. Specification to boost suggestions matching the condition.
+   *
+   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestBoostSpec $boostSpec
    */
   public function setBoostSpec(GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestBoostSpec $boostSpec)
   {
@@ -66,7 +107,9 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->boostSpec;
   }
   /**
-   * @param string[]
+   * Optional. Experiment ids for this request.
+   *
+   * @param string[] $experimentIds
    */
   public function setExperimentIds($experimentIds)
   {
@@ -80,7 +123,12 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->experimentIds;
   }
   /**
-   * @param bool
+   * Indicates if tail suggestions should be returned if there are no
+   * suggestions that match the full query. Even if set to true, if there are
+   * suggestions that match the full query, those are returned and no tail
+   * suggestions are returned.
+   *
+   * @param bool $includeTailSuggestions
    */
   public function setIncludeTailSuggestions($includeTailSuggestions)
   {
@@ -94,7 +142,15 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->includeTailSuggestions;
   }
   /**
-   * @param string
+   * Required. The typeahead input used to fetch suggestions. Maximum length is
+   * 128 characters. The query can not be empty for most of the suggestion
+   * types. If it is empty, an `INVALID_ARGUMENT` error is returned. The
+   * exception is when the suggestion_types contains only the type
+   * `RECENT_SEARCH`, the query can be an empty string. The is called "zero
+   * prefix" feature, which returns user's recently searched queries given the
+   * empty query.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -108,7 +164,19 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->query;
   }
   /**
-   * @param string
+   * Specifies the autocomplete query model, which only applies to the QUERY
+   * SuggestionType. This overrides any model specified in the Configuration >
+   * Autocomplete section of the Cloud console. Currently supported values: *
+   * `document` - Using suggestions generated from user-imported documents. *
+   * `search-history` - Using suggestions generated from the past history of
+   * SearchService.Search API calls. Do not use it when there is no traffic for
+   * Search API. * `user-event` - Using suggestions generated from user-imported
+   * search events. * `document-completable` - Using suggestions taken directly
+   * from user-imported document fields marked as completable. Default values: *
+   * `document` is the default model for regular dataStores. * `search-history`
+   * is the default model for site search dataStores.
+   *
+   * @param string $queryModel
    */
   public function setQueryModel($queryModel)
   {
@@ -122,7 +190,9 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->queryModel;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestSuggestionTypeSpec[]
+   * Optional. Specification of each suggestion type.
+   *
+   * @param GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequestSuggestionTypeSpec[] $suggestionTypeSpecs
    */
   public function setSuggestionTypeSpecs($suggestionTypeSpecs)
   {
@@ -136,7 +206,11 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->suggestionTypeSpecs;
   }
   /**
-   * @param string[]
+   * Optional. Suggestion types to return. If empty or unspecified, query
+   * suggestions are returned. Only one suggestion type is supported at the
+   * moment.
+   *
+   * @param string[] $suggestionTypes
    */
   public function setSuggestionTypes($suggestionTypes)
   {
@@ -150,7 +224,10 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->suggestionTypes;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1UserInfo
+   * Optional. Information about the end user. This should be the same
+   * identifier information as UserEvent.user_info and SearchRequest.user_info.
+   *
+   * @param GoogleCloudDiscoveryengineV1UserInfo $userInfo
    */
   public function setUserInfo(GoogleCloudDiscoveryengineV1UserInfo $userInfo)
   {
@@ -164,7 +241,15 @@ class GoogleCloudDiscoveryengineV1AdvancedCompleteQueryRequest extends \Google\C
     return $this->userInfo;
   }
   /**
-   * @param string
+   * Optional. A unique identifier for tracking visitors. For example, this
+   * could be implemented with an HTTP cookie, which should be able to uniquely
+   * identify a visitor on a single device. This unique identifier should not
+   * change if the visitor logs in or out of the website. This field should NOT
+   * have a fixed value such as `unknown_visitor`. This should be the same
+   * identifier as UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id.
+   * The field must be a UTF-8 encoded string with a length limit of 128
+   *
+   * @param string $userPseudoId
    */
   public function setUserPseudoId($userPseudoId)
   {

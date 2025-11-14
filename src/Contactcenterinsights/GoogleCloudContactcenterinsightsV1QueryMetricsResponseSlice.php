@@ -28,7 +28,9 @@ class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSlice extends \Googl
   protected $totalDataType = '';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1Dimension[]
+   * A unique combination of dimensions that this slice represents.
+   *
+   * @param GoogleCloudContactcenterinsightsV1Dimension[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -42,7 +44,10 @@ class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSlice extends \Googl
     return $this->dimensions;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceTimeSeries
+   * A time series of metric values. This is only populated if the request
+   * specifies a time granularity other than NONE.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceTimeSeries $timeSeries
    */
   public function setTimeSeries(GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceTimeSeries $timeSeries)
   {
@@ -56,7 +61,10 @@ class GoogleCloudContactcenterinsightsV1QueryMetricsResponseSlice extends \Googl
     return $this->timeSeries;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPoint
+   * The total metric value. The interval of this data point is [starting create
+   * time, ending create time) from the request.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPoint $total
    */
   public function setTotal(GoogleCloudContactcenterinsightsV1QueryMetricsResponseSliceDataPoint $total)
   {

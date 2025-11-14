@@ -23,16 +23,23 @@ class CreativesListResponse extends \Google\Collection
   protected $creativesType = Creative::class;
   protected $creativesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#creativesListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Creative[]
+   * Creative collection.
+   *
+   * @param Creative[] $creatives
    */
   public function setCreatives($creatives)
   {
@@ -46,7 +53,10 @@ class CreativesListResponse extends \Google\Collection
     return $this->creatives;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#creativesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class CreativesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

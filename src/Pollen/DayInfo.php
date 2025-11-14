@@ -28,7 +28,9 @@ class DayInfo extends \Google\Collection
   protected $pollenTypeInfoDataType = 'array';
 
   /**
-   * @param Date
+   * The date in UTC at which the pollen forecast data is represented.
+   *
+   * @param Date $date
    */
   public function setDate(Date $date)
   {
@@ -42,7 +44,10 @@ class DayInfo extends \Google\Collection
     return $this->date;
   }
   /**
-   * @param PlantInfo[]
+   * This list will include up to 15 pollen species affecting the location
+   * specified in the request.
+   *
+   * @param PlantInfo[] $plantInfo
    */
   public function setPlantInfo($plantInfo)
   {
@@ -56,7 +61,10 @@ class DayInfo extends \Google\Collection
     return $this->plantInfo;
   }
   /**
-   * @param PollenTypeInfo[]
+   * This list will include up to three pollen types (GRASS, WEED, TREE)
+   * affecting the location specified in the request.
+   *
+   * @param PollenTypeInfo[] $pollenTypeInfo
    */
   public function setPollenTypeInfo($pollenTypeInfo)
   {

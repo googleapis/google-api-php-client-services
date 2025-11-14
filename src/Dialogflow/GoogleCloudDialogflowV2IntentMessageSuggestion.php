@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2IntentMessageSuggestion extends \Google\Model
 {
   /**
+   * Required. The text shown the in the suggestion chip.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Required. The text shown the in the suggestion chip.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

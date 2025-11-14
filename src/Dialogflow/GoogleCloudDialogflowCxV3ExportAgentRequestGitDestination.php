@@ -20,16 +20,22 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination extends \Google\Model
 {
   /**
+   * Commit message for the git push.
+   *
    * @var string
    */
   public $commitMessage;
   /**
+   * Tracking branch for the git push.
+   *
    * @var string
    */
   public $trackingBranch;
 
   /**
-   * @param string
+   * Commit message for the git push.
+   *
+   * @param string $commitMessage
    */
   public function setCommitMessage($commitMessage)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination extends \Google\
     return $this->commitMessage;
   }
   /**
-   * @param string
+   * Tracking branch for the git push.
+   *
+   * @param string $trackingBranch
    */
   public function setTrackingBranch($trackingBranch)
   {

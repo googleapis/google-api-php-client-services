@@ -21,24 +21,36 @@ class SasPortalDeployment extends \Google\Collection
 {
   protected $collection_key = 'sasUserIds';
   /**
+   * The deployment's display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The FCC Registration Numbers (FRNs) copied from its direct
+   * parent.
+   *
    * @var string[]
    */
   public $frns;
   /**
+   * Output only. Resource name.
+   *
    * @var string
    */
   public $name;
   /**
+   * User ID used by the devices belonging to this deployment. Each deployment
+   * should be associated with one unique user ID.
+   *
    * @var string[]
    */
   public $sasUserIds;
 
   /**
-   * @param string
+   * The deployment's display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -52,7 +64,10 @@ class SasPortalDeployment extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * Output only. The FCC Registration Numbers (FRNs) copied from its direct
+   * parent.
+   *
+   * @param string[] $frns
    */
   public function setFrns($frns)
   {
@@ -66,7 +81,9 @@ class SasPortalDeployment extends \Google\Collection
     return $this->frns;
   }
   /**
-   * @param string
+   * Output only. Resource name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +97,10 @@ class SasPortalDeployment extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * User ID used by the devices belonging to this deployment. Each deployment
+   * should be associated with one unique user ID.
+   *
+   * @param string[] $sasUserIds
    */
   public function setSasUserIds($sasUserIds)
   {

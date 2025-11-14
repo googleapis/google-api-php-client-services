@@ -20,16 +20,46 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec extends \Google\Model
 {
   /**
+   * If set, the search result gets stored to the "turn" specified by this query
+   * ID. Example: Let's say the session looks like this: session { name:
+   * ".../sessions/xxx" turns { query { text: "What is foo?" query_id:
+   * ".../questions/yyy" } answer: "Foo is ..." } turns { query { text: "How
+   * about bar then?" query_id: ".../questions/zzz" } } } The user can call
+   * /search API with a request like this: session: ".../sessions/xxx"
+   * session_spec { query_id: ".../questions/zzz" } Then, the API stores the
+   * search result, associated with the last turn. The stored search result can
+   * be used by a subsequent /answer API call (with the session ID and the query
+   * ID specified). Also, it is possible to call /search and /answer in parallel
+   * with the same session ID & query ID.
+   *
    * @var string
    */
   public $queryId;
   /**
+   * The number of top search results to persist. The persisted search results
+   * can be used for the subsequent /answer api call. This field is similar to
+   * the `summary_result_count` field in
+   * SearchRequest.ContentSearchSpec.SummarySpec.summary_result_count. At most
+   * 10 results for documents mode, or 50 for chunks mode.
+   *
    * @var int
    */
   public $searchResultPersistenceCount;
 
   /**
-   * @param string
+   * If set, the search result gets stored to the "turn" specified by this query
+   * ID. Example: Let's say the session looks like this: session { name:
+   * ".../sessions/xxx" turns { query { text: "What is foo?" query_id:
+   * ".../questions/yyy" } answer: "Foo is ..." } turns { query { text: "How
+   * about bar then?" query_id: ".../questions/zzz" } } } The user can call
+   * /search API with a request like this: session: ".../sessions/xxx"
+   * session_spec { query_id: ".../questions/zzz" } Then, the API stores the
+   * search result, associated with the last turn. The stored search result can
+   * be used by a subsequent /answer API call (with the session ID and the query
+   * ID specified). Also, it is possible to call /search and /answer in parallel
+   * with the same session ID & query ID.
+   *
+   * @param string $queryId
    */
   public function setQueryId($queryId)
   {
@@ -43,7 +73,13 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec extends \Google\
     return $this->queryId;
   }
   /**
-   * @param int
+   * The number of top search results to persist. The persisted search results
+   * can be used for the subsequent /answer api call. This field is similar to
+   * the `summary_result_count` field in
+   * SearchRequest.ContentSearchSpec.SummarySpec.summary_result_count. At most
+   * 10 results for documents mode, or 50 for chunks mode.
+   *
+   * @param int $searchResultPersistenceCount
    */
   public function setSearchResultPersistenceCount($searchResultPersistenceCount)
   {

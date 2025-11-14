@@ -20,20 +20,42 @@ namespace Google\Service\ShoppingContent;
 class TextWithTooltip extends \Google\Model
 {
   /**
+   * Default value. Will never be provided by the API.
+   */
+  public const TOOLTIP_ICON_STYLE_TOOLTIP_ICON_STYLE_UNSPECIFIED = 'TOOLTIP_ICON_STYLE_UNSPECIFIED';
+  /**
+   * Used when the tooltip adds additional information to the context, the 'i'
+   * can be used as an icon.
+   */
+  public const TOOLTIP_ICON_STYLE_INFO = 'INFO';
+  /**
+   * Used when the tooltip shows helpful information, the '?' can be used as an
+   * icon.
+   */
+  public const TOOLTIP_ICON_STYLE_QUESTION = 'QUESTION';
+  /**
+   * Value of the tooltip as a simple text.
+   *
    * @var string
    */
   public $simpleTooltipValue;
   /**
+   * Value of the message as a simple text.
+   *
    * @var string
    */
   public $simpleValue;
   /**
+   * The suggested type of an icon for tooltip, if a tooltip is present.
+   *
    * @var string
    */
   public $tooltipIconStyle;
 
   /**
-   * @param string
+   * Value of the tooltip as a simple text.
+   *
+   * @param string $simpleTooltipValue
    */
   public function setSimpleTooltipValue($simpleTooltipValue)
   {
@@ -47,7 +69,9 @@ class TextWithTooltip extends \Google\Model
     return $this->simpleTooltipValue;
   }
   /**
-   * @param string
+   * Value of the message as a simple text.
+   *
+   * @param string $simpleValue
    */
   public function setSimpleValue($simpleValue)
   {
@@ -61,14 +85,18 @@ class TextWithTooltip extends \Google\Model
     return $this->simpleValue;
   }
   /**
-   * @param string
+   * The suggested type of an icon for tooltip, if a tooltip is present.
+   *
+   * Accepted values: TOOLTIP_ICON_STYLE_UNSPECIFIED, INFO, QUESTION
+   *
+   * @param self::TOOLTIP_ICON_STYLE_* $tooltipIconStyle
    */
   public function setTooltipIconStyle($tooltipIconStyle)
   {
     $this->tooltipIconStyle = $tooltipIconStyle;
   }
   /**
-   * @return string
+   * @return self::TOOLTIP_ICON_STYLE_*
    */
   public function getTooltipIconStyle()
   {

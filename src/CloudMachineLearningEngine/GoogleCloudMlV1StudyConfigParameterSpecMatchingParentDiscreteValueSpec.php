@@ -20,6 +20,12 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1StudyConfigParameterSpecMatchingParentDiscreteValueSpec extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * Matches values of the parent parameter with type 'DISCRETE'. All values
+   * must exist in `discrete_value_spec` of parent parameter.
+   *
+   * @var []
+   */
   public $values;
 
   public function setValues($values)

@@ -20,30 +20,58 @@ namespace Google\Service\SecurityPosture;
 class SecurityHealthAnalyticsModule extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const MODULE_ENABLEMENT_STATE_ENABLEMENT_STATE_UNSPECIFIED = 'ENABLEMENT_STATE_UNSPECIFIED';
+  /**
+   * The detector or custom module is enabled.
+   */
+  public const MODULE_ENABLEMENT_STATE_ENABLED = 'ENABLED';
+  /**
+   * The detector or custom module is disabled.
+   */
+  public const MODULE_ENABLEMENT_STATE_DISABLED = 'DISABLED';
+  /**
+   * Whether the detector is enabled at a specified level of the resource
+   * hierarchy.
+   *
    * @var string
    */
   public $moduleEnablementState;
   /**
+   * Required. The name of the detector. For example,
+   * `BIGQUERY_TABLE_CMEK_DISABLED`. This field is also used as the finding
+   * category for all the asset violation findings that the detector returns.
+   *
    * @var string
    */
   public $moduleName;
 
   /**
-   * @param string
+   * Whether the detector is enabled at a specified level of the resource
+   * hierarchy.
+   *
+   * Accepted values: ENABLEMENT_STATE_UNSPECIFIED, ENABLED, DISABLED
+   *
+   * @param self::MODULE_ENABLEMENT_STATE_* $moduleEnablementState
    */
   public function setModuleEnablementState($moduleEnablementState)
   {
     $this->moduleEnablementState = $moduleEnablementState;
   }
   /**
-   * @return string
+   * @return self::MODULE_ENABLEMENT_STATE_*
    */
   public function getModuleEnablementState()
   {
     return $this->moduleEnablementState;
   }
   /**
-   * @param string
+   * Required. The name of the detector. For example,
+   * `BIGQUERY_TABLE_CMEK_DISABLED`. This field is also used as the finding
+   * category for all the asset violation findings that the detector returns.
+   *
+   * @param string $moduleName
    */
   public function setModuleName($moduleName)
   {

@@ -23,7 +23,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequest extends \
   protected $fieldDataType = '';
 
   /**
-   * @param GoogleAppsDriveLabelsV2Field
+   * Required. Field to create.
+   *
+   * @param GoogleAppsDriveLabelsV2Field $field
    */
   public function setField(GoogleAppsDriveLabelsV2Field $field)
   {

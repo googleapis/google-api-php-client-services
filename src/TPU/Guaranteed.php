@@ -20,12 +20,20 @@ namespace Google\Service\TPU;
 class Guaranteed extends \Google\Model
 {
   /**
+   * Optional. Defines the minimum duration of the guarantee. If specified, the
+   * requested resources will only be provisioned if they can be allocated for
+   * at least the given duration.
+   *
    * @var string
    */
   public $minDuration;
 
   /**
-   * @param string
+   * Optional. Defines the minimum duration of the guarantee. If specified, the
+   * requested resources will only be provisioned if they can be allocated for
+   * at least the given duration.
+   *
+   * @param string $minDuration
    */
   public function setMinDuration($minDuration)
   {

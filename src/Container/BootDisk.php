@@ -20,24 +20,34 @@ namespace Google\Service\Container;
 class BootDisk extends \Google\Model
 {
   /**
+   * Disk type of the boot disk. (i.e. Hyperdisk-Balanced, PD-Balanced, etc.)
+   *
    * @var string
    */
   public $diskType;
   /**
+   * For Hyperdisk-Balanced only, the provisioned IOPS config value.
+   *
    * @var string
    */
   public $provisionedIops;
   /**
+   * For Hyperdisk-Balanced only, the provisioned throughput config value.
+   *
    * @var string
    */
   public $provisionedThroughput;
   /**
+   * Disk size in GB. Replaces NodeConfig.disk_size_gb
+   *
    * @var string
    */
   public $sizeGb;
 
   /**
-   * @param string
+   * Disk type of the boot disk. (i.e. Hyperdisk-Balanced, PD-Balanced, etc.)
+   *
+   * @param string $diskType
    */
   public function setDiskType($diskType)
   {
@@ -51,7 +61,9 @@ class BootDisk extends \Google\Model
     return $this->diskType;
   }
   /**
-   * @param string
+   * For Hyperdisk-Balanced only, the provisioned IOPS config value.
+   *
+   * @param string $provisionedIops
    */
   public function setProvisionedIops($provisionedIops)
   {
@@ -65,7 +77,9 @@ class BootDisk extends \Google\Model
     return $this->provisionedIops;
   }
   /**
-   * @param string
+   * For Hyperdisk-Balanced only, the provisioned throughput config value.
+   *
+   * @param string $provisionedThroughput
    */
   public function setProvisionedThroughput($provisionedThroughput)
   {
@@ -79,7 +93,9 @@ class BootDisk extends \Google\Model
     return $this->provisionedThroughput;
   }
   /**
-   * @param string
+   * Disk size in GB. Replaces NodeConfig.disk_size_gb
+   *
+   * @param string $sizeGb
    */
   public function setSizeGb($sizeGb)
   {

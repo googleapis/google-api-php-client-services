@@ -20,58 +20,142 @@ namespace Google\Service\Verifiedaccess;
 class VerifyChallengeResponseResult extends \Google\Model
 {
   /**
+   * UNSPECIFIED.
+   */
+  public const KEY_TRUST_LEVEL_KEY_TRUST_LEVEL_UNSPECIFIED = 'KEY_TRUST_LEVEL_UNSPECIFIED';
+  /**
+   * ChromeOS device in verified mode.
+   */
+  public const KEY_TRUST_LEVEL_CHROME_OS_VERIFIED_MODE = 'CHROME_OS_VERIFIED_MODE';
+  /**
+   * ChromeOS device in developer mode.
+   */
+  public const KEY_TRUST_LEVEL_CHROME_OS_DEVELOPER_MODE = 'CHROME_OS_DEVELOPER_MODE';
+  /**
+   * Chrome Browser with the key stored in the device hardware.
+   */
+  public const KEY_TRUST_LEVEL_CHROME_BROWSER_HW_KEY = 'CHROME_BROWSER_HW_KEY';
+  /**
+   * Chrome Browser with the key stored at OS level.
+   */
+  public const KEY_TRUST_LEVEL_CHROME_BROWSER_OS_KEY = 'CHROME_BROWSER_OS_KEY';
+  /**
+   * Chrome Browser without an attestation key.
+   */
+  public const KEY_TRUST_LEVEL_CHROME_BROWSER_NO_KEY = 'CHROME_BROWSER_NO_KEY';
+  /**
+   * UNSPECIFIED.
+   */
+  public const PROFILE_KEY_TRUST_LEVEL_KEY_TRUST_LEVEL_UNSPECIFIED = 'KEY_TRUST_LEVEL_UNSPECIFIED';
+  /**
+   * ChromeOS device in verified mode.
+   */
+  public const PROFILE_KEY_TRUST_LEVEL_CHROME_OS_VERIFIED_MODE = 'CHROME_OS_VERIFIED_MODE';
+  /**
+   * ChromeOS device in developer mode.
+   */
+  public const PROFILE_KEY_TRUST_LEVEL_CHROME_OS_DEVELOPER_MODE = 'CHROME_OS_DEVELOPER_MODE';
+  /**
+   * Chrome Browser with the key stored in the device hardware.
+   */
+  public const PROFILE_KEY_TRUST_LEVEL_CHROME_BROWSER_HW_KEY = 'CHROME_BROWSER_HW_KEY';
+  /**
+   * Chrome Browser with the key stored at OS level.
+   */
+  public const PROFILE_KEY_TRUST_LEVEL_CHROME_BROWSER_OS_KEY = 'CHROME_BROWSER_OS_KEY';
+  /**
+   * Chrome Browser without an attestation key.
+   */
+  public const PROFILE_KEY_TRUST_LEVEL_CHROME_BROWSER_NO_KEY = 'CHROME_BROWSER_NO_KEY';
+  /**
+   * Output only. Attested device ID (ADID).
+   *
    * @var string
    */
   public $attestedDeviceId;
   /**
+   * Output only. Unique customer id that this device belongs to, as defined by
+   * the Google Admin SDK at https://developers.google.com/admin-
+   * sdk/directory/v1/guides/manage-customers
+   *
    * @var string
    */
   public $customerId;
   /**
+   * Output only. Device enrollment id for ChromeOS devices.
+   *
    * @var string
    */
   public $deviceEnrollmentId;
   /**
+   * Output only. Device permanent id is returned in this field (for the machine
+   * response only).
+   *
    * @var string
    */
   public $devicePermanentId;
   /**
+   * Output only. Deprecated. Device signal in json string representation.
+   * Prefer using `device_signals` instead.
+   *
    * @var string
    */
   public $deviceSignal;
   protected $deviceSignalsType = DeviceSignals::class;
   protected $deviceSignalsDataType = '';
   /**
+   * Output only. Device attested key trust level.
+   *
    * @var string
    */
   public $keyTrustLevel;
   /**
+   * Output only. Unique customer id that this profile belongs to, as defined by
+   * the Google Admin SDK at https://developers.google.com/admin-
+   * sdk/directory/v1/guides/manage-customers
+   *
    * @var string
    */
   public $profileCustomerId;
   /**
+   * Output only. Profile attested key trust level.
+   *
    * @var string
    */
   public $profileKeyTrustLevel;
   /**
+   * Output only. The unique server-side ID of a profile on the device.
+   *
    * @var string
    */
   public $profilePermanentId;
   /**
+   * Output only. Certificate Signing Request (in the SPKAC format, base64
+   * encoded) is returned in this field. This field will be set only if device
+   * has included CSR in its challenge response. (the option to include CSR is
+   * now available for both user and machine responses)
+   *
    * @var string
    */
   public $signedPublicKeyAndChallenge;
   /**
+   * Output only. Virtual device id of the device. The definition of virtual
+   * device id is platform-specific.
+   *
    * @var string
    */
   public $virtualDeviceId;
   /**
+   * Output only. The client-provided ID of a profile on the device.
+   *
    * @var string
    */
   public $virtualProfileId;
 
   /**
-   * @param string
+   * Output only. Attested device ID (ADID).
+   *
+   * @param string $attestedDeviceId
    */
   public function setAttestedDeviceId($attestedDeviceId)
   {
@@ -85,7 +169,11 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->attestedDeviceId;
   }
   /**
-   * @param string
+   * Output only. Unique customer id that this device belongs to, as defined by
+   * the Google Admin SDK at https://developers.google.com/admin-
+   * sdk/directory/v1/guides/manage-customers
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {
@@ -99,7 +187,9 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->customerId;
   }
   /**
-   * @param string
+   * Output only. Device enrollment id for ChromeOS devices.
+   *
+   * @param string $deviceEnrollmentId
    */
   public function setDeviceEnrollmentId($deviceEnrollmentId)
   {
@@ -113,7 +203,10 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->deviceEnrollmentId;
   }
   /**
-   * @param string
+   * Output only. Device permanent id is returned in this field (for the machine
+   * response only).
+   *
+   * @param string $devicePermanentId
    */
   public function setDevicePermanentId($devicePermanentId)
   {
@@ -127,7 +220,10 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->devicePermanentId;
   }
   /**
-   * @param string
+   * Output only. Deprecated. Device signal in json string representation.
+   * Prefer using `device_signals` instead.
+   *
+   * @param string $deviceSignal
    */
   public function setDeviceSignal($deviceSignal)
   {
@@ -141,7 +237,9 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->deviceSignal;
   }
   /**
-   * @param DeviceSignals
+   * Output only. Device signals.
+   *
+   * @param DeviceSignals $deviceSignals
    */
   public function setDeviceSignals(DeviceSignals $deviceSignals)
   {
@@ -155,21 +253,31 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->deviceSignals;
   }
   /**
-   * @param string
+   * Output only. Device attested key trust level.
+   *
+   * Accepted values: KEY_TRUST_LEVEL_UNSPECIFIED, CHROME_OS_VERIFIED_MODE,
+   * CHROME_OS_DEVELOPER_MODE, CHROME_BROWSER_HW_KEY, CHROME_BROWSER_OS_KEY,
+   * CHROME_BROWSER_NO_KEY
+   *
+   * @param self::KEY_TRUST_LEVEL_* $keyTrustLevel
    */
   public function setKeyTrustLevel($keyTrustLevel)
   {
     $this->keyTrustLevel = $keyTrustLevel;
   }
   /**
-   * @return string
+   * @return self::KEY_TRUST_LEVEL_*
    */
   public function getKeyTrustLevel()
   {
     return $this->keyTrustLevel;
   }
   /**
-   * @param string
+   * Output only. Unique customer id that this profile belongs to, as defined by
+   * the Google Admin SDK at https://developers.google.com/admin-
+   * sdk/directory/v1/guides/manage-customers
+   *
+   * @param string $profileCustomerId
    */
   public function setProfileCustomerId($profileCustomerId)
   {
@@ -183,21 +291,29 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->profileCustomerId;
   }
   /**
-   * @param string
+   * Output only. Profile attested key trust level.
+   *
+   * Accepted values: KEY_TRUST_LEVEL_UNSPECIFIED, CHROME_OS_VERIFIED_MODE,
+   * CHROME_OS_DEVELOPER_MODE, CHROME_BROWSER_HW_KEY, CHROME_BROWSER_OS_KEY,
+   * CHROME_BROWSER_NO_KEY
+   *
+   * @param self::PROFILE_KEY_TRUST_LEVEL_* $profileKeyTrustLevel
    */
   public function setProfileKeyTrustLevel($profileKeyTrustLevel)
   {
     $this->profileKeyTrustLevel = $profileKeyTrustLevel;
   }
   /**
-   * @return string
+   * @return self::PROFILE_KEY_TRUST_LEVEL_*
    */
   public function getProfileKeyTrustLevel()
   {
     return $this->profileKeyTrustLevel;
   }
   /**
-   * @param string
+   * Output only. The unique server-side ID of a profile on the device.
+   *
+   * @param string $profilePermanentId
    */
   public function setProfilePermanentId($profilePermanentId)
   {
@@ -211,7 +327,12 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->profilePermanentId;
   }
   /**
-   * @param string
+   * Output only. Certificate Signing Request (in the SPKAC format, base64
+   * encoded) is returned in this field. This field will be set only if device
+   * has included CSR in its challenge response. (the option to include CSR is
+   * now available for both user and machine responses)
+   *
+   * @param string $signedPublicKeyAndChallenge
    */
   public function setSignedPublicKeyAndChallenge($signedPublicKeyAndChallenge)
   {
@@ -225,7 +346,10 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->signedPublicKeyAndChallenge;
   }
   /**
-   * @param string
+   * Output only. Virtual device id of the device. The definition of virtual
+   * device id is platform-specific.
+   *
+   * @param string $virtualDeviceId
    */
   public function setVirtualDeviceId($virtualDeviceId)
   {
@@ -239,7 +363,9 @@ class VerifyChallengeResponseResult extends \Google\Model
     return $this->virtualDeviceId;
   }
   /**
-   * @param string
+   * Output only. The client-provided ID of a profile on the device.
+   *
+   * @param string $virtualProfileId
    */
   public function setVirtualProfileId($virtualProfileId)
   {

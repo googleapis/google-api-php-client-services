@@ -20,10 +20,15 @@ namespace Google\Service\Translate;
 class GlossaryEntry extends \Google\Model
 {
   /**
+   * Describes the glossary entry.
+   *
    * @var string
    */
   public $description;
   /**
+   * Identifier. The resource name of the entry. Format:
+   * `projects/locations/glossaries/glossaryEntries`
+   *
    * @var string
    */
   public $name;
@@ -33,7 +38,9 @@ class GlossaryEntry extends \Google\Model
   protected $termsSetDataType = '';
 
   /**
-   * @param string
+   * Describes the glossary entry.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +54,10 @@ class GlossaryEntry extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the entry. Format:
+   * `projects/locations/glossaries/glossaryEntries`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +71,9 @@ class GlossaryEntry extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GlossaryTermsPair
+   * Used for an unidirectional glossary.
+   *
+   * @param GlossaryTermsPair $termsPair
    */
   public function setTermsPair(GlossaryTermsPair $termsPair)
   {
@@ -75,7 +87,9 @@ class GlossaryEntry extends \Google\Model
     return $this->termsPair;
   }
   /**
-   * @param GlossaryTermsSet
+   * Used for an equivalent term sets glossary.
+   *
+   * @param GlossaryTermsSet $termsSet
    */
   public function setTermsSet(GlossaryTermsSet $termsSet)
   {

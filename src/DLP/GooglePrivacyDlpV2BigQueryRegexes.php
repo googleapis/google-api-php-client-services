@@ -24,7 +24,10 @@ class GooglePrivacyDlpV2BigQueryRegexes extends \Google\Collection
   protected $patternsDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2BigQueryRegex[]
+   * A single BigQuery regular expression pattern to match against one or more
+   * tables, datasets, or projects that contain BigQuery tables.
+   *
+   * @param GooglePrivacyDlpV2BigQueryRegex[] $patterns
    */
   public function setPatterns($patterns)
   {

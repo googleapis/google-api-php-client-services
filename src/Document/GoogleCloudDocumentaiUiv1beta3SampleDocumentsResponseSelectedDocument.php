@@ -20,12 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponseSelectedDocument extends \Google\Model
 {
   /**
+   * An internal identifier for document.
+   *
    * @var string
    */
   public $documentId;
 
   /**
-   * @param string
+   * An internal identifier for document.
+   *
+   * @param string $documentId
    */
   public function setDocumentId($documentId)
   {

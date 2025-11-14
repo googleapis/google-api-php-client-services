@@ -20,12 +20,20 @@ namespace Google\Service\DisplayVideo;
 class PoiSearchTerms extends \Google\Model
 {
   /**
+   * The search query for the desired POI name, street address, or coordinate of
+   * the desired POI. The query can be a prefix, e.g. "Times squar",
+   * "40.7505045,-73.99562", "315 W 44th St", etc.
+   *
    * @var string
    */
   public $poiQuery;
 
   /**
-   * @param string
+   * The search query for the desired POI name, street address, or coordinate of
+   * the desired POI. The query can be a prefix, e.g. "Times squar",
+   * "40.7505045,-73.99562", "315 W 44th St", etc.
+   *
+   * @param string $poiQuery
    */
   public function setPoiQuery($poiQuery)
   {

@@ -20,16 +20,24 @@ namespace Google\Service\CloudDomains;
 class ImportDomainRequest extends \Google\Model
 {
   /**
+   * Required. The domain name. Unicode domain names must be expressed in
+   * Punycode format.
+   *
    * @var string
    */
   public $domainName;
   /**
+   * Set of labels associated with the `Registration`.
+   *
    * @var string[]
    */
   public $labels;
 
   /**
-   * @param string
+   * Required. The domain name. Unicode domain names must be expressed in
+   * Punycode format.
+   *
+   * @param string $domainName
    */
   public function setDomainName($domainName)
   {
@@ -43,7 +51,9 @@ class ImportDomainRequest extends \Google\Model
     return $this->domainName;
   }
   /**
-   * @param string[]
+   * Set of labels associated with the `Registration`.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {

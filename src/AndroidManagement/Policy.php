@@ -755,8 +755,8 @@ class Policy extends \Google\Collection
    */
   public $screenCaptureDisabled;
   /**
-   * Whether changing the user icon is disabled. The setting has effect only on
-   * fully managed devices.
+   * Whether changing the user icon is disabled. This applies only on devices
+   * running Android 7 and above.
    *
    * @var bool
    */
@@ -770,8 +770,7 @@ class Policy extends \Google\Collection
   protected $setupActionsType = SetupAction::class;
   protected $setupActionsDataType = 'array';
   /**
-   * Whether location sharing is disabled. share_location_disabled is supported
-   * for both fully managed devices and personally owned work profiles.
+   * Whether location sharing is disabled.
    *
    * @var bool
    */
@@ -2293,8 +2292,8 @@ class Policy extends \Google\Collection
     return $this->screenCaptureDisabled;
   }
   /**
-   * Whether changing the user icon is disabled. The setting has effect only on
-   * fully managed devices.
+   * Whether changing the user icon is disabled. This applies only on devices
+   * running Android 7 and above.
    *
    * @param bool $setUserIconDisabled
    */
@@ -2343,8 +2342,7 @@ class Policy extends \Google\Collection
     return $this->setupActions;
   }
   /**
-   * Whether location sharing is disabled. share_location_disabled is supported
-   * for both fully managed devices and personally owned work profiles.
+   * Whether location sharing is disabled.
    *
    * @param bool $shareLocationDisabled
    */

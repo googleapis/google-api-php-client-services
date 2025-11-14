@@ -20,20 +20,28 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo extends \Google\Model
 {
   /**
+   * The tracking id of the ad.
+   *
    * @var string
    */
   public $adTrackingId;
   /**
+   * The first line of the ad's description.
+   *
    * @var string
    */
   public $description1;
   /**
+   * The second line of the ad's description.
+   *
    * @var string
    */
   public $description2;
 
   /**
-   * @param string
+   * The tracking id of the ad.
+   *
+   * @param string $adTrackingId
    */
   public function setAdTrackingId($adTrackingId)
   {
@@ -47,7 +55,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo exten
     return $this->adTrackingId;
   }
   /**
-   * @param string
+   * The first line of the ad's description.
+   *
+   * @param string $description1
    */
   public function setDescription1($description1)
   {
@@ -61,7 +71,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo exten
     return $this->description1;
   }
   /**
-   * @param string
+   * The second line of the ad's description.
+   *
+   * @param string $description2
    */
   public function setDescription2($description2)
   {

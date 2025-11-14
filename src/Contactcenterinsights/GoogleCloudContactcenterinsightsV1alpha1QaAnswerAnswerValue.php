@@ -20,32 +20,68 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue extends \Google\Model
 {
   /**
+   * Boolean value.
+   *
    * @var bool
    */
   public $boolValue;
   /**
+   * A short string used as an identifier. Matches the value used in
+   * QaQuestion.AnswerChoice.key.
+   *
    * @var string
    */
   public $key;
   /**
+   * A value of "Not Applicable (N/A)". Should only ever be `true`.
+   *
    * @var bool
    */
   public $naValue;
+  /**
+   * Output only. Normalized score of the questions. Calculated as score /
+   * potential_score.
+   *
+   * @var 
+   */
   public $normalizedScore;
+  /**
+   * Numerical value.
+   *
+   * @var 
+   */
   public $numValue;
+  /**
+   * Output only. The maximum potential score of the question.
+   *
+   * @var 
+   */
   public $potentialScore;
+  /**
+   * Output only. Numerical score of the answer.
+   *
+   * @var 
+   */
   public $score;
   /**
+   * Output only. A value of "Skip". If provided, this field may only be set to
+   * `true`. If a question receives this answer, it will be excluded from any
+   * score calculations. This would mean that the question was not evaluated.
+   *
    * @var bool
    */
   public $skipValue;
   /**
+   * String value.
+   *
    * @var string
    */
   public $strValue;
 
   /**
-   * @param bool
+   * Boolean value.
+   *
+   * @param bool $boolValue
    */
   public function setBoolValue($boolValue)
   {
@@ -59,7 +95,10 @@ class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue extends \Googl
     return $this->boolValue;
   }
   /**
-   * @param string
+   * A short string used as an identifier. Matches the value used in
+   * QaQuestion.AnswerChoice.key.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -73,7 +112,9 @@ class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue extends \Googl
     return $this->key;
   }
   /**
-   * @param bool
+   * A value of "Not Applicable (N/A)". Should only ever be `true`.
+   *
+   * @param bool $naValue
    */
   public function setNaValue($naValue)
   {
@@ -119,7 +160,11 @@ class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue extends \Googl
     return $this->score;
   }
   /**
-   * @param bool
+   * Output only. A value of "Skip". If provided, this field may only be set to
+   * `true`. If a question receives this answer, it will be excluded from any
+   * score calculations. This would mean that the question was not evaluated.
+   *
+   * @param bool $skipValue
    */
   public function setSkipValue($skipValue)
   {
@@ -133,7 +178,9 @@ class GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue extends \Googl
     return $this->skipValue;
   }
   /**
-   * @param string
+   * String value.
+   *
+   * @param string $strValue
    */
   public function setStrValue($strValue)
   {

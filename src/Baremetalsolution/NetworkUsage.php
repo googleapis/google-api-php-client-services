@@ -23,12 +23,16 @@ class NetworkUsage extends \Google\Collection
   protected $networkType = Network::class;
   protected $networkDataType = '';
   /**
+   * All used IP addresses in this network.
+   *
    * @var string[]
    */
   public $usedIps;
 
   /**
-   * @param Network
+   * Network.
+   *
+   * @param Network $network
    */
   public function setNetwork(Network $network)
   {
@@ -42,7 +46,9 @@ class NetworkUsage extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param string[]
+   * All used IP addresses in this network.
+   *
+   * @param string[] $usedIps
    */
   public function setUsedIps($usedIps)
   {

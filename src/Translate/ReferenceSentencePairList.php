@@ -24,7 +24,9 @@ class ReferenceSentencePairList extends \Google\Collection
   protected $referenceSentencePairsDataType = 'array';
 
   /**
-   * @param ReferenceSentencePair[]
+   * Reference sentence pairs.
+   *
+   * @param ReferenceSentencePair[] $referenceSentencePairs
    */
   public function setReferenceSentencePairs($referenceSentencePairs)
   {

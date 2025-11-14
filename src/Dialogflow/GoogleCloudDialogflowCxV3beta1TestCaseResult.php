@@ -19,28 +19,53 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3beta1TestCaseResult extends \Google\Collection
 {
+  /**
+   * Not specified. Should never be used.
+   */
+  public const TEST_RESULT_TEST_RESULT_UNSPECIFIED = 'TEST_RESULT_UNSPECIFIED';
+  /**
+   * The test passed.
+   */
+  public const TEST_RESULT_PASSED = 'PASSED';
+  /**
+   * The test did not pass.
+   */
+  public const TEST_RESULT_FAILED = 'FAILED';
   protected $collection_key = 'conversationTurns';
   protected $conversationTurnsType = GoogleCloudDialogflowCxV3beta1ConversationTurn::class;
   protected $conversationTurnsDataType = 'array';
   /**
+   * Environment where the test was run. If not set, it indicates the draft
+   * environment.
+   *
    * @var string
    */
   public $environment;
   /**
+   * The resource name for the test case result. Format:
+   * `projects//locations//agents//testCases//results/`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Whether the test case passed in the agent environment.
+   *
    * @var string
    */
   public $testResult;
   /**
+   * The time that the test was run.
+   *
    * @var string
    */
   public $testTime;
 
   /**
-   * @param GoogleCloudDialogflowCxV3beta1ConversationTurn[]
+   * The conversation turns uttered during the test case replay in chronological
+   * order.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1ConversationTurn[] $conversationTurns
    */
   public function setConversationTurns($conversationTurns)
   {
@@ -54,7 +79,10 @@ class GoogleCloudDialogflowCxV3beta1TestCaseResult extends \Google\Collection
     return $this->conversationTurns;
   }
   /**
-   * @param string
+   * Environment where the test was run. If not set, it indicates the draft
+   * environment.
+   *
+   * @param string $environment
    */
   public function setEnvironment($environment)
   {
@@ -68,7 +96,10 @@ class GoogleCloudDialogflowCxV3beta1TestCaseResult extends \Google\Collection
     return $this->environment;
   }
   /**
-   * @param string
+   * The resource name for the test case result. Format:
+   * `projects//locations//agents//testCases//results/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -82,21 +113,27 @@ class GoogleCloudDialogflowCxV3beta1TestCaseResult extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Whether the test case passed in the agent environment.
+   *
+   * Accepted values: TEST_RESULT_UNSPECIFIED, PASSED, FAILED
+   *
+   * @param self::TEST_RESULT_* $testResult
    */
   public function setTestResult($testResult)
   {
     $this->testResult = $testResult;
   }
   /**
-   * @return string
+   * @return self::TEST_RESULT_*
    */
   public function getTestResult()
   {
     return $this->testResult;
   }
   /**
-   * @param string
+   * The time that the test was run.
+   *
+   * @param string $testTime
    */
   public function setTestTime($testTime)
   {

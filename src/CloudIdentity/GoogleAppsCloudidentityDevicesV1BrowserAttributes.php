@@ -22,16 +22,28 @@ class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends \Google\Model
   protected $chromeBrowserInfoType = GoogleAppsCloudidentityDevicesV1BrowserInfo::class;
   protected $chromeBrowserInfoDataType = '';
   /**
+   * Chrome profile ID that is exposed by the Chrome API. It is unique for each
+   * device.
+   *
    * @var string
    */
   public $chromeProfileId;
   /**
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was
+   * last synced.
+   *
    * @var string
    */
   public $lastProfileSyncTime;
 
   /**
-   * @param GoogleAppsCloudidentityDevicesV1BrowserInfo
+   * Represents the current state of the [Chrome browser
+   * attributes](https://cloud.google.com/access-context-manager/docs/browser-
+   * attributes) sent by the [Endpoint Verification
+   * extension](https://chromewebstore.google.com/detail/endpoint-
+   * verification/callobklhcbilhphinckomhgkigmfocg?pli=1).
+   *
+   * @param GoogleAppsCloudidentityDevicesV1BrowserInfo $chromeBrowserInfo
    */
   public function setChromeBrowserInfo(GoogleAppsCloudidentityDevicesV1BrowserInfo $chromeBrowserInfo)
   {
@@ -45,7 +57,10 @@ class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends \Google\Model
     return $this->chromeBrowserInfo;
   }
   /**
-   * @param string
+   * Chrome profile ID that is exposed by the Chrome API. It is unique for each
+   * device.
+   *
+   * @param string $chromeProfileId
    */
   public function setChromeProfileId($chromeProfileId)
   {
@@ -59,7 +74,10 @@ class GoogleAppsCloudidentityDevicesV1BrowserAttributes extends \Google\Model
     return $this->chromeProfileId;
   }
   /**
-   * @param string
+   * Timestamp in milliseconds since the Unix epoch when the profile/gcm id was
+   * last synced.
+   *
+   * @param string $lastProfileSyncTime
    */
   public function setLastProfileSyncTime($lastProfileSyncTime)
   {

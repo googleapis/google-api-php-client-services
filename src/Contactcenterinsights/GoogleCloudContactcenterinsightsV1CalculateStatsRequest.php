@@ -20,12 +20,18 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1CalculateStatsRequest extends \Google\Model
 {
   /**
+   * A filter to reduce results to a specific subset. This field is useful for
+   * getting statistics about conversations with specific properties.
+   *
    * @var string
    */
   public $filter;
 
   /**
-   * @param string
+   * A filter to reduce results to a specific subset. This field is useful for
+   * getting statistics about conversations with specific properties.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {

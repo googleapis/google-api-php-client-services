@@ -19,28 +19,70 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1QaScorecardRevision extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The scorecard revision can be edited.
+   */
+  public const STATE_EDITABLE = 'EDITABLE';
+  /**
+   * Scorecard model training is in progress.
+   */
+  public const STATE_TRAINING = 'TRAINING';
+  /**
+   * Scorecard revision model training failed.
+   */
+  public const STATE_TRAINING_FAILED = 'TRAINING_FAILED';
+  /**
+   * The revision can be used in analysis.
+   */
+  public const STATE_READY = 'READY';
+  /**
+   * Scorecard is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
+  /**
+   * Scorecard model training was explicitly cancelled by the user.
+   */
+  public const STATE_TRAINING_CANCELLED = 'TRAINING_CANCELLED';
   protected $collection_key = 'alternateIds';
   /**
+   * Output only. Alternative IDs for this revision of the scorecard, e.g.,
+   * `latest`.
+   *
    * @var string[]
    */
   public $alternateIds;
   /**
+   * Output only. The timestamp that the revision was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Identifier. The name of the scorecard revision. Format: projects/{project}/
+   * locations/{location}/qaScorecards/{qa_scorecard}/revisions/{revision}
+   *
    * @var string
    */
   public $name;
   protected $snapshotType = GoogleCloudContactcenterinsightsV1QaScorecard::class;
   protected $snapshotDataType = '';
   /**
+   * Output only. State of the scorecard revision, indicating whether it's ready
+   * to be used in analysis.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string[]
+   * Output only. Alternative IDs for this revision of the scorecard, e.g.,
+   * `latest`.
+   *
+   * @param string[] $alternateIds
    */
   public function setAlternateIds($alternateIds)
   {
@@ -54,7 +96,9 @@ class GoogleCloudContactcenterinsightsV1QaScorecardRevision extends \Google\Coll
     return $this->alternateIds;
   }
   /**
-   * @param string
+   * Output only. The timestamp that the revision was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -68,7 +112,10 @@ class GoogleCloudContactcenterinsightsV1QaScorecardRevision extends \Google\Coll
     return $this->createTime;
   }
   /**
-   * @param string
+   * Identifier. The name of the scorecard revision. Format: projects/{project}/
+   * locations/{location}/qaScorecards/{qa_scorecard}/revisions/{revision}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -82,7 +129,9 @@ class GoogleCloudContactcenterinsightsV1QaScorecardRevision extends \Google\Coll
     return $this->name;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1QaScorecard
+   * The snapshot of the scorecard at the time of this revision's creation.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QaScorecard $snapshot
    */
   public function setSnapshot(GoogleCloudContactcenterinsightsV1QaScorecard $snapshot)
   {
@@ -96,14 +145,20 @@ class GoogleCloudContactcenterinsightsV1QaScorecardRevision extends \Google\Coll
     return $this->snapshot;
   }
   /**
-   * @param string
+   * Output only. State of the scorecard revision, indicating whether it's ready
+   * to be used in analysis.
+   *
+   * Accepted values: STATE_UNSPECIFIED, EDITABLE, TRAINING, TRAINING_FAILED,
+   * READY, DELETING, TRAINING_CANCELLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

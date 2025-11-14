@@ -56,6 +56,7 @@ class Commitment extends \Google\Collection
   public const TYPE_GENERAL_PURPOSE_N4D = 'GENERAL_PURPOSE_N4D';
   public const TYPE_GENERAL_PURPOSE_T2D = 'GENERAL_PURPOSE_T2D';
   public const TYPE_GRAPHICS_OPTIMIZED = 'GRAPHICS_OPTIMIZED';
+  public const TYPE_GRAPHICS_OPTIMIZED_G4 = 'GRAPHICS_OPTIMIZED_G4';
   public const TYPE_MEMORY_OPTIMIZED = 'MEMORY_OPTIMIZED';
   public const TYPE_MEMORY_OPTIMIZED_M3 = 'MEMORY_OPTIMIZED_M3';
   public const TYPE_MEMORY_OPTIMIZED_M4 = 'MEMORY_OPTIMIZED_M4';
@@ -230,9 +231,9 @@ class Commitment extends \Google\Collection
    * GENERAL_PURPOSE,GENERAL_PURPOSE_C4, GENERAL_PURPOSE_E2,GENERAL_PURPOSE_N2,
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4,
    * GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
-   * MEMORY_OPTIMIZED,MEMORY_OPTIMIZED_M3,
-   * MEMORY_OPTIMIZED_X4,STORAGE_OPTIMIZED_Z3. For example, type
-   * MEMORY_OPTIMIZED specifies a commitment that applies only to eligible
+   * GRAPHICS_OPTIMIZED_G4,MEMORY_OPTIMIZED,
+   * MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3. For example,
+   * type MEMORY_OPTIMIZED specifies a commitment that applies only to eligible
    * resources of memory optimized M1 and M2 machine series. Type
    * GENERAL_PURPOSE specifies a commitment that applies only to eligible
    * resources of general purpose N1 machine series.
@@ -653,9 +654,9 @@ class Commitment extends \Google\Collection
    * GENERAL_PURPOSE,GENERAL_PURPOSE_C4, GENERAL_PURPOSE_E2,GENERAL_PURPOSE_N2,
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4,
    * GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
-   * MEMORY_OPTIMIZED,MEMORY_OPTIMIZED_M3,
-   * MEMORY_OPTIMIZED_X4,STORAGE_OPTIMIZED_Z3. For example, type
-   * MEMORY_OPTIMIZED specifies a commitment that applies only to eligible
+   * GRAPHICS_OPTIMIZED_G4,MEMORY_OPTIMIZED,
+   * MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3. For example,
+   * type MEMORY_OPTIMIZED specifies a commitment that applies only to eligible
    * resources of memory optimized M1 and M2 machine series. Type
    * GENERAL_PURPOSE specifies a commitment that applies only to eligible
    * resources of general purpose N1 machine series.
@@ -668,8 +669,8 @@ class Commitment extends \Google\Collection
    * GENERAL_PURPOSE_C4A, GENERAL_PURPOSE_C4D, GENERAL_PURPOSE_E2,
    * GENERAL_PURPOSE_N2, GENERAL_PURPOSE_N2D, GENERAL_PURPOSE_N4,
    * GENERAL_PURPOSE_N4D, GENERAL_PURPOSE_T2D, GRAPHICS_OPTIMIZED,
-   * MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3, MEMORY_OPTIMIZED_M4,
-   * MEMORY_OPTIMIZED_M4_6TB, MEMORY_OPTIMIZED_X4_16TB,
+   * GRAPHICS_OPTIMIZED_G4, MEMORY_OPTIMIZED, MEMORY_OPTIMIZED_M3,
+   * MEMORY_OPTIMIZED_M4, MEMORY_OPTIMIZED_M4_6TB, MEMORY_OPTIMIZED_X4_16TB,
    * MEMORY_OPTIMIZED_X4_24TB, MEMORY_OPTIMIZED_X4_32TB, STORAGE_OPTIMIZED_Z3,
    * TYPE_UNSPECIFIED
    *

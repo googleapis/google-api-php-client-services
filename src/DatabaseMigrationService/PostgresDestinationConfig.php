@@ -20,16 +20,24 @@ namespace Google\Service\DatabaseMigrationService;
 class PostgresDestinationConfig extends \Google\Model
 {
   /**
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the destination for data migration.
+   *
    * @var int
    */
   public $maxConcurrentConnections;
   /**
+   * Optional. Timeout for data migration transactions.
+   *
    * @var string
    */
   public $transactionTimeout;
 
   /**
-   * @param int
+   * Optional. Maximum number of connections Database Migration Service will
+   * open to the destination for data migration.
+   *
+   * @param int $maxConcurrentConnections
    */
   public function setMaxConcurrentConnections($maxConcurrentConnections)
   {
@@ -43,7 +51,9 @@ class PostgresDestinationConfig extends \Google\Model
     return $this->maxConcurrentConnections;
   }
   /**
-   * @param string
+   * Optional. Timeout for data migration transactions.
+   *
+   * @param string $transactionTimeout
    */
   public function setTransactionTimeout($transactionTimeout)
   {

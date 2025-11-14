@@ -20,18 +20,67 @@ namespace Google\Service\Monitoring;
 class ContentMatcher extends \Google\Model
 {
   /**
+   * No content matcher type specified (maintained for backward compatibility,
+   * but deprecated for future use). Treated as CONTAINS_STRING.
+   */
+  public const MATCHER_CONTENT_MATCHER_OPTION_UNSPECIFIED = 'CONTENT_MATCHER_OPTION_UNSPECIFIED';
+  /**
+   * Selects substring matching. The match succeeds if the output contains the
+   * content string. This is the default value for checks without a matcher
+   * option, or where the value of matcher is
+   * CONTENT_MATCHER_OPTION_UNSPECIFIED.
+   */
+  public const MATCHER_CONTAINS_STRING = 'CONTAINS_STRING';
+  /**
+   * Selects negation of substring matching. The match succeeds if the output
+   * does NOT contain the content string.
+   */
+  public const MATCHER_NOT_CONTAINS_STRING = 'NOT_CONTAINS_STRING';
+  /**
+   * Selects regular-expression matching. The match succeeds if the output
+   * matches the regular expression specified in the content string. Regex
+   * matching is only supported for HTTP/HTTPS checks.
+   */
+  public const MATCHER_MATCHES_REGEX = 'MATCHES_REGEX';
+  /**
+   * Selects negation of regular-expression matching. The match succeeds if the
+   * output does NOT match the regular expression specified in the content
+   * string. Regex matching is only supported for HTTP/HTTPS checks.
+   */
+  public const MATCHER_NOT_MATCHES_REGEX = 'NOT_MATCHES_REGEX';
+  /**
+   * Selects JSONPath matching. See JsonPathMatcher for details on when the
+   * match succeeds. JSONPath matching is only supported for HTTP/HTTPS checks.
+   */
+  public const MATCHER_MATCHES_JSON_PATH = 'MATCHES_JSON_PATH';
+  /**
+   * Selects JSONPath matching. See JsonPathMatcher for details on when the
+   * match succeeds. Succeeds when output does NOT match as specified. JSONPath
+   * is only supported for HTTP/HTTPS checks.
+   */
+  public const MATCHER_NOT_MATCHES_JSON_PATH = 'NOT_MATCHES_JSON_PATH';
+  /**
+   * String, regex or JSON content to match. Maximum 1024 bytes. An empty
+   * content string indicates no content matching is to be performed.
+   *
    * @var string
    */
   public $content;
   protected $jsonPathMatcherType = JsonPathMatcher::class;
   protected $jsonPathMatcherDataType = '';
   /**
+   * The type of content matcher that will be applied to the server output,
+   * compared to the content string when the check is run.
+   *
    * @var string
    */
   public $matcher;
 
   /**
-   * @param string
+   * String, regex or JSON content to match. Maximum 1024 bytes. An empty
+   * content string indicates no content matching is to be performed.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -45,7 +94,9 @@ class ContentMatcher extends \Google\Model
     return $this->content;
   }
   /**
-   * @param JsonPathMatcher
+   * Matcher information for MATCHES_JSON_PATH and NOT_MATCHES_JSON_PATH
+   *
+   * @param JsonPathMatcher $jsonPathMatcher
    */
   public function setJsonPathMatcher(JsonPathMatcher $jsonPathMatcher)
   {
@@ -59,14 +110,21 @@ class ContentMatcher extends \Google\Model
     return $this->jsonPathMatcher;
   }
   /**
-   * @param string
+   * The type of content matcher that will be applied to the server output,
+   * compared to the content string when the check is run.
+   *
+   * Accepted values: CONTENT_MATCHER_OPTION_UNSPECIFIED, CONTAINS_STRING,
+   * NOT_CONTAINS_STRING, MATCHES_REGEX, NOT_MATCHES_REGEX, MATCHES_JSON_PATH,
+   * NOT_MATCHES_JSON_PATH
+   *
+   * @param self::MATCHER_* $matcher
    */
   public function setMatcher($matcher)
   {
     $this->matcher = $matcher;
   }
   /**
-   * @return string
+   * @return self::MATCHER_*
    */
   public function getMatcher()
   {

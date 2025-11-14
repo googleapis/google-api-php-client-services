@@ -21,16 +21,29 @@ class DataDiskAssignment extends \Google\Collection
 {
   protected $collection_key = 'dataDisks';
   /**
+   * Mounted data disks. The order is important a data disk's 0-based index in
+   * this list defines which persistent directory the disk is mounted to, for
+   * example the list of { "myproject-1014-104817-4c2-harness-0-disk-0" }, {
+   * "myproject-1014-104817-4c2-harness-0-disk-1" }.
+   *
    * @var string[]
    */
   public $dataDisks;
   /**
+   * VM instance name the data disks mounted to, for example
+   * "myproject-1014-104817-4c2-harness-0".
+   *
    * @var string
    */
   public $vmInstance;
 
   /**
-   * @param string[]
+   * Mounted data disks. The order is important a data disk's 0-based index in
+   * this list defines which persistent directory the disk is mounted to, for
+   * example the list of { "myproject-1014-104817-4c2-harness-0-disk-0" }, {
+   * "myproject-1014-104817-4c2-harness-0-disk-1" }.
+   *
+   * @param string[] $dataDisks
    */
   public function setDataDisks($dataDisks)
   {
@@ -44,7 +57,10 @@ class DataDiskAssignment extends \Google\Collection
     return $this->dataDisks;
   }
   /**
-   * @param string
+   * VM instance name the data disks mounted to, for example
+   * "myproject-1014-104817-4c2-harness-0".
+   *
+   * @param string $vmInstance
    */
   public function setVmInstance($vmInstance)
   {

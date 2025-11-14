@@ -22,12 +22,17 @@ class GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultMod
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
+   * The Model Armor violation that was found.
+   *
    * @var string
    */
   public $modelArmorViolation;
 
   /**
-   * @param GoogleRpcStatus
+   * The error returned by Model Armor if the policy enforcement failed for some
+   * reason.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -41,7 +46,9 @@ class GoogleCloudDiscoveryengineV1AssistAnswerCustomerPolicyEnforcementResultMod
     return $this->error;
   }
   /**
-   * @param string
+   * The Model Armor violation that was found.
+   *
+   * @param string $modelArmorViolation
    */
   public function setModelArmorViolation($modelArmorViolation)
   {

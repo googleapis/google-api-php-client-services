@@ -23,7 +23,9 @@ class GoogleCloudDialogflowCxV3RestoreToolVersionResponse extends \Google\Model
   protected $toolDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3Tool
+   * The updated tool.
+   *
+   * @param GoogleCloudDialogflowCxV3Tool $tool
    */
   public function setTool(GoogleCloudDialogflowCxV3Tool $tool)
   {

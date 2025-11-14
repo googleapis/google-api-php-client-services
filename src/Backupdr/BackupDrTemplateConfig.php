@@ -20,16 +20,25 @@ namespace Google\Service\Backupdr;
 class BackupDrTemplateConfig extends \Google\Model
 {
   /**
+   * Output only. The URI of the BackupDr template resource for the first party
+   * identity users.
+   *
    * @var string
    */
   public $firstPartyManagementUri;
   /**
+   * Output only. The URI of the BackupDr template resource for the third party
+   * identity users.
+   *
    * @var string
    */
   public $thirdPartyManagementUri;
 
   /**
-   * @param string
+   * Output only. The URI of the BackupDr template resource for the first party
+   * identity users.
+   *
+   * @param string $firstPartyManagementUri
    */
   public function setFirstPartyManagementUri($firstPartyManagementUri)
   {
@@ -43,7 +52,10 @@ class BackupDrTemplateConfig extends \Google\Model
     return $this->firstPartyManagementUri;
   }
   /**
-   * @param string
+   * Output only. The URI of the BackupDr template resource for the third party
+   * identity users.
+   *
+   * @param string $thirdPartyManagementUri
    */
   public function setThirdPartyManagementUri($thirdPartyManagementUri)
   {

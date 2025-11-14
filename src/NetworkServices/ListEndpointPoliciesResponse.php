@@ -23,16 +23,26 @@ class ListEndpointPoliciesResponse extends \Google\Collection
   protected $endpointPoliciesType = EndpointPolicy::class;
   protected $endpointPoliciesDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Unreachable resources. Populated when the request opts into
+   * return_partial_success and reading across collections e.g. when attempting
+   * to list all resources across all supported locations.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param EndpointPolicy[]
+   * List of EndpointPolicy resources.
+   *
+   * @param EndpointPolicy[] $endpointPolicies
    */
   public function setEndpointPolicies($endpointPolicies)
   {
@@ -46,7 +56,11 @@ class ListEndpointPoliciesResponse extends \Google\Collection
     return $this->endpointPolicies;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +74,11 @@ class ListEndpointPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Unreachable resources. Populated when the request opts into
+   * return_partial_success and reading across collections e.g. when attempting
+   * to list all resources across all supported locations.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

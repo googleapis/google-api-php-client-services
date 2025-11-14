@@ -31,6 +31,8 @@ class ReportFloodlightCriteria extends \Google\Collection
   protected $floodlightConfigIdType = DimensionValue::class;
   protected $floodlightConfigIdDataType = '';
   /**
+   * The list of names of metrics the report should include.
+   *
    * @var string[]
    */
   public $metricNames;
@@ -38,7 +40,9 @@ class ReportFloodlightCriteria extends \Google\Collection
   protected $reportPropertiesDataType = '';
 
   /**
-   * @param DimensionValue[]
+   * The list of custom rich media events to include.
+   *
+   * @param DimensionValue[] $customRichMediaEvents
    */
   public function setCustomRichMediaEvents($customRichMediaEvents)
   {
@@ -52,7 +56,9 @@ class ReportFloodlightCriteria extends \Google\Collection
     return $this->customRichMediaEvents;
   }
   /**
-   * @param DateRange
+   * The date range this report should be run for.
+   *
+   * @param DateRange $dateRange
    */
   public function setDateRange(DateRange $dateRange)
   {
@@ -66,7 +72,11 @@ class ReportFloodlightCriteria extends \Google\Collection
     return $this->dateRange;
   }
   /**
-   * @param DimensionValue[]
+   * The list of filters on which dimensions are filtered. Filters for different
+   * dimensions are ANDed, filters for the same dimension are grouped together
+   * and ORed.
+   *
+   * @param DimensionValue[] $dimensionFilters
    */
   public function setDimensionFilters($dimensionFilters)
   {
@@ -80,7 +90,9 @@ class ReportFloodlightCriteria extends \Google\Collection
     return $this->dimensionFilters;
   }
   /**
-   * @param SortedDimension[]
+   * The list of dimensions the report should include.
+   *
+   * @param SortedDimension[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -94,7 +106,11 @@ class ReportFloodlightCriteria extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param DimensionValue
+   * The floodlight ID for which to show data in this report. All advertisers
+   * associated with that ID will automatically be added. The dimension of the
+   * value needs to be 'dfa:floodlightConfigId'.
+   *
+   * @param DimensionValue $floodlightConfigId
    */
   public function setFloodlightConfigId(DimensionValue $floodlightConfigId)
   {
@@ -108,7 +124,9 @@ class ReportFloodlightCriteria extends \Google\Collection
     return $this->floodlightConfigId;
   }
   /**
-   * @param string[]
+   * The list of names of metrics the report should include.
+   *
+   * @param string[] $metricNames
    */
   public function setMetricNames($metricNames)
   {
@@ -122,7 +140,9 @@ class ReportFloodlightCriteria extends \Google\Collection
     return $this->metricNames;
   }
   /**
-   * @param ReportFloodlightCriteriaReportProperties
+   * The properties of the report.
+   *
+   * @param ReportFloodlightCriteriaReportProperties $reportProperties
    */
   public function setReportProperties(ReportFloodlightCriteriaReportProperties $reportProperties)
   {

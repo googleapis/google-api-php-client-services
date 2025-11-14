@@ -23,20 +23,28 @@ class NonSdkApiUsageViolationReport extends \Google\Collection
   protected $exampleApisType = NonSdkApi::class;
   protected $exampleApisDataType = 'array';
   /**
+   * Minimum API level required for the application to run.
+   *
    * @var int
    */
   public $minSdkVersion;
   /**
+   * Specifies the API Level on which the application is designed to run.
+   *
    * @var int
    */
   public $targetSdkVersion;
   /**
+   * Total number of unique Non-SDK API's accessed.
+   *
    * @var int
    */
   public $uniqueApis;
 
   /**
-   * @param NonSdkApi[]
+   * Examples of the detected API usages.
+   *
+   * @param NonSdkApi[] $exampleApis
    */
   public function setExampleApis($exampleApis)
   {
@@ -50,7 +58,9 @@ class NonSdkApiUsageViolationReport extends \Google\Collection
     return $this->exampleApis;
   }
   /**
-   * @param int
+   * Minimum API level required for the application to run.
+   *
+   * @param int $minSdkVersion
    */
   public function setMinSdkVersion($minSdkVersion)
   {
@@ -64,7 +74,9 @@ class NonSdkApiUsageViolationReport extends \Google\Collection
     return $this->minSdkVersion;
   }
   /**
-   * @param int
+   * Specifies the API Level on which the application is designed to run.
+   *
+   * @param int $targetSdkVersion
    */
   public function setTargetSdkVersion($targetSdkVersion)
   {
@@ -78,7 +90,9 @@ class NonSdkApiUsageViolationReport extends \Google\Collection
     return $this->targetSdkVersion;
   }
   /**
-   * @param int
+   * Total number of unique Non-SDK API's accessed.
+   *
+   * @param int $uniqueApis
    */
   public function setUniqueApis($uniqueApis)
   {

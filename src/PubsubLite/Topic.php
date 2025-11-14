@@ -20,6 +20,9 @@ namespace Google\Service\PubsubLite;
 class Topic extends \Google\Model
 {
   /**
+   * The name of the topic. Structured like:
+   * projects/{project_number}/locations/{location}/topics/{topic_id}
+   *
    * @var string
    */
   public $name;
@@ -31,7 +34,10 @@ class Topic extends \Google\Model
   protected $retentionConfigDataType = '';
 
   /**
-   * @param string
+   * The name of the topic. Structured like:
+   * projects/{project_number}/locations/{location}/topics/{topic_id}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -45,7 +51,9 @@ class Topic extends \Google\Model
     return $this->name;
   }
   /**
-   * @param PartitionConfig
+   * The settings for this topic's partitions.
+   *
+   * @param PartitionConfig $partitionConfig
    */
   public function setPartitionConfig(PartitionConfig $partitionConfig)
   {
@@ -59,7 +67,9 @@ class Topic extends \Google\Model
     return $this->partitionConfig;
   }
   /**
-   * @param ReservationConfig
+   * The settings for this topic's Reservation usage.
+   *
+   * @param ReservationConfig $reservationConfig
    */
   public function setReservationConfig(ReservationConfig $reservationConfig)
   {
@@ -73,7 +83,9 @@ class Topic extends \Google\Model
     return $this->reservationConfig;
   }
   /**
-   * @param RetentionConfig
+   * The settings for this topic's message retention.
+   *
+   * @param RetentionConfig $retentionConfig
    */
   public function setRetentionConfig(RetentionConfig $retentionConfig)
   {

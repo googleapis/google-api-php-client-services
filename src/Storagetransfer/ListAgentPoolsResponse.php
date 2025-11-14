@@ -23,12 +23,16 @@ class ListAgentPoolsResponse extends \Google\Collection
   protected $agentPoolsType = AgentPool::class;
   protected $agentPoolsDataType = 'array';
   /**
+   * The list next page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AgentPool[]
+   * A list of agent pools.
+   *
+   * @param AgentPool[] $agentPools
    */
   public function setAgentPools($agentPools)
   {
@@ -42,7 +46,9 @@ class ListAgentPoolsResponse extends \Google\Collection
     return $this->agentPools;
   }
   /**
-   * @param string
+   * The list next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

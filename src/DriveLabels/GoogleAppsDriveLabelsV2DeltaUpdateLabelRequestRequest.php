@@ -44,7 +44,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
   protected $updateSelectionChoicePropertiesDataType = '';
 
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequest
+   * Creates a field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequest $createField
    */
   public function setCreateField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequest $createField)
   {
@@ -58,7 +60,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->createField;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequest
+   * Create a choice within a selection field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequest $createSelectionChoice
    */
   public function setCreateSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateSelectionChoiceRequest $createSelectionChoice)
   {
@@ -72,7 +76,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->createSelectionChoice;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteFieldRequest
+   * Deletes a field from the label.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteFieldRequest $deleteField
    */
   public function setDeleteField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteFieldRequest $deleteField)
   {
@@ -86,7 +92,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->deleteField;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest
+   * Delete a choice within a selection field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest $deleteSelectionChoice
    */
   public function setDeleteSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDeleteSelectionChoiceRequest $deleteSelectionChoice)
   {
@@ -100,7 +108,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->deleteSelectionChoice;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest
+   * Disables the field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest $disableField
    */
   public function setDisableField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableFieldRequest $disableField)
   {
@@ -114,7 +124,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->disableField;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableSelectionChoiceRequest
+   * Disable a choice within a selection field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableSelectionChoiceRequest $disableSelectionChoice
    */
   public function setDisableSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestDisableSelectionChoiceRequest $disableSelectionChoice)
   {
@@ -128,7 +140,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->disableSelectionChoice;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableFieldRequest
+   * Enables the field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableFieldRequest $enableField
    */
   public function setEnableField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableFieldRequest $enableField)
   {
@@ -142,7 +156,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->enableField;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableSelectionChoiceRequest
+   * Enable a choice within a selection field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableSelectionChoiceRequest $enableSelectionChoice
    */
   public function setEnableSelectionChoice(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestEnableSelectionChoiceRequest $enableSelectionChoice)
   {
@@ -156,7 +172,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->enableSelectionChoice;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest
+   * Updates basic properties of a field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest $updateField
    */
   public function setUpdateField(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldPropertiesRequest $updateField)
   {
@@ -170,7 +188,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->updateField;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequest
+   * Update field type and/or type options.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequest $updateFieldType
    */
   public function setUpdateFieldType(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateFieldTypeRequest $updateFieldType)
   {
@@ -184,7 +204,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->updateFieldType;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelPropertiesRequest
+   * Updates the label properties.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelPropertiesRequest $updateLabel
    */
   public function setUpdateLabel(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelPropertiesRequest $updateLabel)
   {
@@ -198,7 +220,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest extends \Google\Mode
     return $this->updateLabel;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest
+   * Update a choice property within a selection field.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest $updateSelectionChoiceProperties
    */
   public function setUpdateSelectionChoiceProperties(GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateSelectionChoicePropertiesRequest $updateSelectionChoiceProperties)
   {

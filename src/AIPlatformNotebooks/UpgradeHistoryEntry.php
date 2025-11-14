@@ -20,58 +20,111 @@ namespace Google\Service\AIPlatformNotebooks;
 class UpgradeHistoryEntry extends \Google\Model
 {
   /**
+   * Operation is not specified.
+   */
+  public const ACTION_ACTION_UNSPECIFIED = 'ACTION_UNSPECIFIED';
+  /**
+   * Upgrade.
+   */
+  public const ACTION_UPGRADE = 'UPGRADE';
+  /**
+   * Rollback.
+   */
+  public const ACTION_ROLLBACK = 'ROLLBACK';
+  /**
+   * State is not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The instance upgrade is started.
+   */
+  public const STATE_STARTED = 'STARTED';
+  /**
+   * The instance upgrade is succeeded.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The instance upgrade is failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Optional. Action. Rolloback or Upgrade.
+   *
    * @var string
    */
   public $action;
   /**
+   * Optional. The container image before this instance upgrade.
+   *
    * @var string
    */
   public $containerImage;
   /**
+   * Immutable. The time that this instance upgrade history entry is created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The framework of this notebook instance.
+   *
    * @var string
    */
   public $framework;
   /**
+   * Optional. The snapshot of the boot disk of this notebook instance before
+   * upgrade.
+   *
    * @var string
    */
   public $snapshot;
   /**
+   * Output only. The state of this instance upgrade history entry.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. Target VM Version, like m63.
+   *
    * @var string
    */
   public $targetVersion;
   /**
+   * Optional. The version of the notebook instance before this upgrade.
+   *
    * @var string
    */
   public $version;
   /**
+   * Optional. The VM image before this instance upgrade.
+   *
    * @var string
    */
   public $vmImage;
 
   /**
-   * @param string
+   * Optional. Action. Rolloback or Upgrade.
+   *
+   * Accepted values: ACTION_UNSPECIFIED, UPGRADE, ROLLBACK
+   *
+   * @param self::ACTION_* $action
    */
   public function setAction($action)
   {
     $this->action = $action;
   }
   /**
-   * @return string
+   * @return self::ACTION_*
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param string
+   * Optional. The container image before this instance upgrade.
+   *
+   * @param string $containerImage
    */
   public function setContainerImage($containerImage)
   {
@@ -85,7 +138,9 @@ class UpgradeHistoryEntry extends \Google\Model
     return $this->containerImage;
   }
   /**
-   * @param string
+   * Immutable. The time that this instance upgrade history entry is created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -99,7 +154,9 @@ class UpgradeHistoryEntry extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The framework of this notebook instance.
+   *
+   * @param string $framework
    */
   public function setFramework($framework)
   {
@@ -113,7 +170,10 @@ class UpgradeHistoryEntry extends \Google\Model
     return $this->framework;
   }
   /**
-   * @param string
+   * Optional. The snapshot of the boot disk of this notebook instance before
+   * upgrade.
+   *
+   * @param string $snapshot
    */
   public function setSnapshot($snapshot)
   {
@@ -127,21 +187,27 @@ class UpgradeHistoryEntry extends \Google\Model
     return $this->snapshot;
   }
   /**
-   * @param string
+   * Output only. The state of this instance upgrade history entry.
+   *
+   * Accepted values: STATE_UNSPECIFIED, STARTED, SUCCEEDED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Optional. Target VM Version, like m63.
+   *
+   * @param string $targetVersion
    */
   public function setTargetVersion($targetVersion)
   {
@@ -155,7 +221,9 @@ class UpgradeHistoryEntry extends \Google\Model
     return $this->targetVersion;
   }
   /**
-   * @param string
+   * Optional. The version of the notebook instance before this upgrade.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {
@@ -169,7 +237,9 @@ class UpgradeHistoryEntry extends \Google\Model
     return $this->version;
   }
   /**
-   * @param string
+   * Optional. The VM image before this instance upgrade.
+   *
+   * @param string $vmImage
    */
   public function setVmImage($vmImage)
   {

@@ -20,28 +20,42 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1Webhook extends \Google\Model
 {
   /**
+   * Indicates whether the webhook is disabled.
+   *
    * @var bool
    */
   public $disabled;
   /**
+   * Required. The human-readable name of the webhook, unique within the agent.
+   *
    * @var string
    */
   public $displayName;
   protected $genericWebServiceType = GoogleCloudDialogflowCxV3beta1WebhookGenericWebService::class;
   protected $genericWebServiceDataType = '';
   /**
+   * The unique identifier of the webhook. Required for the
+   * Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name
+   * automatically. Format: `projects//locations//agents//webhooks/`.
+   *
    * @var string
    */
   public $name;
   protected $serviceDirectoryType = GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig::class;
   protected $serviceDirectoryDataType = '';
   /**
+   * Webhook execution timeout. Execution is considered failed if Dialogflow
+   * doesn't receive a response from webhook at the end of the timeout period.
+   * Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param bool
+   * Indicates whether the webhook is disabled.
+   *
+   * @param bool $disabled
    */
   public function setDisabled($disabled)
   {
@@ -55,7 +69,9 @@ class GoogleCloudDialogflowCxV3beta1Webhook extends \Google\Model
     return $this->disabled;
   }
   /**
-   * @param string
+   * Required. The human-readable name of the webhook, unique within the agent.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -69,7 +85,9 @@ class GoogleCloudDialogflowCxV3beta1Webhook extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1WebhookGenericWebService
+   * Configuration for a generic web service.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1WebhookGenericWebService $genericWebService
    */
   public function setGenericWebService(GoogleCloudDialogflowCxV3beta1WebhookGenericWebService $genericWebService)
   {
@@ -83,7 +101,11 @@ class GoogleCloudDialogflowCxV3beta1Webhook extends \Google\Model
     return $this->genericWebService;
   }
   /**
-   * @param string
+   * The unique identifier of the webhook. Required for the
+   * Webhooks.UpdateWebhook method. Webhooks.CreateWebhook populates the name
+   * automatically. Format: `projects//locations//agents//webhooks/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -97,7 +119,10 @@ class GoogleCloudDialogflowCxV3beta1Webhook extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig
+   * Configuration for a [Service Directory](https://cloud.google.com/service-
+   * directory) service.
+   *
+   * @param GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig $serviceDirectory
    */
   public function setServiceDirectory(GoogleCloudDialogflowCxV3beta1WebhookServiceDirectoryConfig $serviceDirectory)
   {
@@ -111,7 +136,11 @@ class GoogleCloudDialogflowCxV3beta1Webhook extends \Google\Model
     return $this->serviceDirectory;
   }
   /**
-   * @param string
+   * Webhook execution timeout. Execution is considered failed if Dialogflow
+   * doesn't receive a response from webhook at the end of the timeout period.
+   * Defaults to 5 seconds, maximum allowed timeout is 30 seconds.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {

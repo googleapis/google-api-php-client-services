@@ -20,19 +20,37 @@ namespace Google\Service\Container;
 class AutoMonitoringConfig extends \Google\Model
 {
   /**
+   * Not set.
+   */
+  public const SCOPE_SCOPE_UNSPECIFIED = 'SCOPE_UNSPECIFIED';
+  /**
+   * Auto-Monitoring is enabled for all supported applications.
+   */
+  public const SCOPE_ALL = 'ALL';
+  /**
+   * Disable Auto-Monitoring.
+   */
+  public const SCOPE_NONE = 'NONE';
+  /**
+   * Scope for GKE Workload Auto-Monitoring.
+   *
    * @var string
    */
   public $scope;
 
   /**
-   * @param string
+   * Scope for GKE Workload Auto-Monitoring.
+   *
+   * Accepted values: SCOPE_UNSPECIFIED, ALL, NONE
+   *
+   * @param self::SCOPE_* $scope
    */
   public function setScope($scope)
   {
     $this->scope = $scope;
   }
   /**
-   * @return string
+   * @return self::SCOPE_*
    */
   public function getScope()
   {

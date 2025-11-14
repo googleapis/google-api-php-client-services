@@ -20,16 +20,22 @@ namespace Google\Service\ToolResults;
 class GraphicsStatsBucket extends \Google\Model
 {
   /**
+   * Number of frames in the bucket.
+   *
    * @var string
    */
   public $frameCount;
   /**
+   * Lower bound of render time in milliseconds.
+   *
    * @var string
    */
   public $renderMillis;
 
   /**
-   * @param string
+   * Number of frames in the bucket.
+   *
+   * @param string $frameCount
    */
   public function setFrameCount($frameCount)
   {
@@ -43,7 +49,9 @@ class GraphicsStatsBucket extends \Google\Model
     return $this->frameCount;
   }
   /**
-   * @param string
+   * Lower bound of render time in milliseconds.
+   *
+   * @param string $renderMillis
    */
   public function setRenderMillis($renderMillis)
   {

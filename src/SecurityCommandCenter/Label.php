@@ -20,16 +20,22 @@ namespace Google\Service\SecurityCommandCenter;
 class Label extends \Google\Model
 {
   /**
+   * Name of the label.
+   *
    * @var string
    */
   public $name;
   /**
+   * Value that corresponds to the label's name.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Name of the label.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class Label extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Value that corresponds to the label's name.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

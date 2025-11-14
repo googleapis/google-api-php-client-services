@@ -19,56 +19,112 @@ namespace Google\Service\SecurityPosture;
 
 class GoogleCloudSecuritypostureV1CustomConstraint extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const ACTION_TYPE_ACTION_TYPE_UNSPECIFIED = 'ACTION_TYPE_UNSPECIFIED';
+  /**
+   * Allow the action.
+   */
+  public const ACTION_TYPE_ALLOW = 'ALLOW';
+  /**
+   * Deny the action.
+   */
+  public const ACTION_TYPE_DENY = 'DENY';
   protected $collection_key = 'resourceTypes';
   /**
+   * Whether to allow or deny the action.
+   *
    * @var string
    */
   public $actionType;
   /**
+   * A Common Expression Language (CEL) condition expression that must evaluate
+   * to `true` for the constraint to be enforced. The maximum length is 1000
+   * characters. For example: +
+   * `resource.instanceName.matches('(production|test)_(.+_)?[\d]+')`: Evaluates
+   * to `true` if the resource's `instanceName` attribute contains the
+   * following: + The prefix `production` or `test` + An underscore (`_`) +
+   * Optional: One or more characters, followed by an underscore (`_`) + One or
+   * more digits + `resource.management.auto_upgrade == true`: Evaluates to
+   * `true` if the resource's `management.auto_upgrade` attribute is `true`.
+   *
    * @var string
    */
   public $condition;
   /**
+   * A description of the constraint. The maximum length is 2000 characters.
+   *
    * @var string
    */
   public $description;
   /**
+   * A display name for the constraint. The maximum length is 200 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The types of operations that the constraint applies to.
+   *
    * @var string[]
    */
   public $methodTypes;
   /**
+   * Immutable. The name of the constraint, in the format `organizations/{organi
+   * zation_id}/customConstraints/custom.{custom_constraint_id}`. For example,
+   * `organizations/123456789012/customConstraints/custom.createOnlyE2TypeVms`.
+   * Must contain 1 to 62 characters, excluding the prefix
+   * `organizations/{organization_id}/customConstraints/custom.`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Immutable. The resource type that the constraint applies to, in the format
+   * `{canonical_service_name}/{resource_type_name}`. For example,
+   * `compute.googleapis.com/Instance`.
+   *
    * @var string[]
    */
   public $resourceTypes;
   /**
+   * Output only. The last time at which the constraint was updated or created.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Whether to allow or deny the action.
+   *
+   * Accepted values: ACTION_TYPE_UNSPECIFIED, ALLOW, DENY
+   *
+   * @param self::ACTION_TYPE_* $actionType
    */
   public function setActionType($actionType)
   {
     $this->actionType = $actionType;
   }
   /**
-   * @return string
+   * @return self::ACTION_TYPE_*
    */
   public function getActionType()
   {
     return $this->actionType;
   }
   /**
-   * @param string
+   * A Common Expression Language (CEL) condition expression that must evaluate
+   * to `true` for the constraint to be enforced. The maximum length is 1000
+   * characters. For example: +
+   * `resource.instanceName.matches('(production|test)_(.+_)?[\d]+')`: Evaluates
+   * to `true` if the resource's `instanceName` attribute contains the
+   * following: + The prefix `production` or `test` + An underscore (`_`) +
+   * Optional: One or more characters, followed by an underscore (`_`) + One or
+   * more digits + `resource.management.auto_upgrade == true`: Evaluates to
+   * `true` if the resource's `management.auto_upgrade` attribute is `true`.
+   *
+   * @param string $condition
    */
   public function setCondition($condition)
   {
@@ -82,7 +138,9 @@ class GoogleCloudSecuritypostureV1CustomConstraint extends \Google\Collection
     return $this->condition;
   }
   /**
-   * @param string
+   * A description of the constraint. The maximum length is 2000 characters.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -96,7 +154,9 @@ class GoogleCloudSecuritypostureV1CustomConstraint extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * A display name for the constraint. The maximum length is 200 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -110,7 +170,9 @@ class GoogleCloudSecuritypostureV1CustomConstraint extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string[]
+   * The types of operations that the constraint applies to.
+   *
+   * @param string[] $methodTypes
    */
   public function setMethodTypes($methodTypes)
   {
@@ -124,7 +186,13 @@ class GoogleCloudSecuritypostureV1CustomConstraint extends \Google\Collection
     return $this->methodTypes;
   }
   /**
-   * @param string
+   * Immutable. The name of the constraint, in the format `organizations/{organi
+   * zation_id}/customConstraints/custom.{custom_constraint_id}`. For example,
+   * `organizations/123456789012/customConstraints/custom.createOnlyE2TypeVms`.
+   * Must contain 1 to 62 characters, excluding the prefix
+   * `organizations/{organization_id}/customConstraints/custom.`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -138,7 +206,11 @@ class GoogleCloudSecuritypostureV1CustomConstraint extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Immutable. The resource type that the constraint applies to, in the format
+   * `{canonical_service_name}/{resource_type_name}`. For example,
+   * `compute.googleapis.com/Instance`.
+   *
+   * @param string[] $resourceTypes
    */
   public function setResourceTypes($resourceTypes)
   {
@@ -152,7 +224,9 @@ class GoogleCloudSecuritypostureV1CustomConstraint extends \Google\Collection
     return $this->resourceTypes;
   }
   /**
-   * @param string
+   * Output only. The last time at which the constraint was updated or created.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\Eventarc;
 class GoogleCloudEventarcV1PipelineDestinationNetworkConfig extends \Google\Model
 {
   /**
+   * Required. Name of the NetworkAttachment that allows access to the consumer
+   * VPC. Format: `projects/{PROJECT_ID}/regions/{REGION}/networkAttachments/{NE
+   * TWORK_ATTACHMENT_NAME}`
+   *
    * @var string
    */
   public $networkAttachment;
 
   /**
-   * @param string
+   * Required. Name of the NetworkAttachment that allows access to the consumer
+   * VPC. Format: `projects/{PROJECT_ID}/regions/{REGION}/networkAttachments/{NE
+   * TWORK_ATTACHMENT_NAME}`
+   *
+   * @param string $networkAttachment
    */
   public function setNetworkAttachment($networkAttachment)
   {

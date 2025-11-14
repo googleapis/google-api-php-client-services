@@ -20,18 +20,30 @@ namespace Google\Service\BinaryAuthorization;
 class Attestor extends \Google\Model
 {
   /**
+   * Optional. A descriptive comment. This field may be updated. The field may
+   * be displayed in chooser dialogs.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. A checksum, returned by the server, that can be sent on update
+   * requests to ensure the attestor has an up-to-date value before attempting
+   * to update it. See https://google.aip.dev/154.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Required. The resource name, in the format: `projects/attestors`. This
+   * field may not be updated.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Time when the attestor was last updated.
+   *
    * @var string
    */
   public $updateTime;
@@ -39,7 +51,10 @@ class Attestor extends \Google\Model
   protected $userOwnedGrafeasNoteDataType = '';
 
   /**
-   * @param string
+   * Optional. A descriptive comment. This field may be updated. The field may
+   * be displayed in chooser dialogs.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -53,7 +68,11 @@ class Attestor extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. A checksum, returned by the server, that can be sent on update
+   * requests to ensure the attestor has an up-to-date value before attempting
+   * to update it. See https://google.aip.dev/154.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -67,7 +86,10 @@ class Attestor extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * Required. The resource name, in the format: `projects/attestors`. This
+   * field may not be updated.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -81,7 +103,9 @@ class Attestor extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Time when the attestor was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -95,7 +119,10 @@ class Attestor extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param UserOwnedGrafeasNote
+   * This specifies how an attestation will be read, and how it will be used
+   * during policy enforcement.
+   *
+   * @param UserOwnedGrafeasNote $userOwnedGrafeasNote
    */
   public function setUserOwnedGrafeasNote(UserOwnedGrafeasNote $userOwnedGrafeasNote)
   {

@@ -23,12 +23,17 @@ class GoogleCloudBillingBudgetsV1ListBudgetsResponse extends \Google\Collection
   protected $budgetsType = GoogleCloudBillingBudgetsV1Budget::class;
   protected $budgetsDataType = 'array';
   /**
+   * If not empty, indicates that there may be more budgets that match the
+   * request; this value should be passed in a new `ListBudgetsRequest`.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudBillingBudgetsV1Budget[]
+   * List of the budgets owned by the requested billing account.
+   *
+   * @param GoogleCloudBillingBudgetsV1Budget[] $budgets
    */
   public function setBudgets($budgets)
   {
@@ -42,7 +47,10 @@ class GoogleCloudBillingBudgetsV1ListBudgetsResponse extends \Google\Collection
     return $this->budgets;
   }
   /**
-   * @param string
+   * If not empty, indicates that there may be more budgets that match the
+   * request; this value should be passed in a new `ListBudgetsRequest`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

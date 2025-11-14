@@ -20,48 +20,109 @@ namespace Google\Service\Dfareporting;
 class MeasurementPartnerCampaignLink extends \Google\Model
 {
   /**
+   * Unlinked.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_UNLINKED = 'MEASUREMENT_PARTNER_UNLINKED';
+  /**
+   * Linked successfully
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_LINKED = 'MEASUREMENT_PARTNER_LINKED';
+  /**
+   * Link pending for wrapping.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_LINK_PENDING = 'MEASUREMENT_PARTNER_LINK_PENDING';
+  /**
+   * Linking failure.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_LINK_FAILURE = 'MEASUREMENT_PARTNER_LINK_FAILURE';
+  /**
+   * Link opt-out by user.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_LINK_OPT_OUT = 'MEASUREMENT_PARTNER_LINK_OPT_OUT';
+  /**
+   * Link opt-out pending sync.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_LINK_OPT_OUT_PENDING = 'MEASUREMENT_PARTNER_LINK_OPT_OUT_PENDING';
+  /**
+   * Link wrap answer pending.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_LINK_WRAPPING_PENDING = 'MEASUREMENT_PARTNER_LINK_WRAPPING_PENDING';
+  /**
+   * Mode change pending.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_MODE_CHANGE_PENDING = 'MEASUREMENT_PARTNER_MODE_CHANGE_PENDING';
+  /**
+   * Partner unlink pending.
+   */
+  public const LINK_STATUS_MEASUREMENT_PARTNER_UNLINK_PENDING = 'MEASUREMENT_PARTNER_UNLINK_PENDING';
+  public const MEASUREMENT_PARTNER_NONE = 'NONE';
+  public const MEASUREMENT_PARTNER_INTEGRAL_AD_SCIENCE = 'INTEGRAL_AD_SCIENCE';
+  public const MEASUREMENT_PARTNER_DOUBLE_VERIFY = 'DOUBLE_VERIFY';
+  /**
+   * .
+   *
    * @var string
    */
   public $linkStatus;
   /**
+   * Measurement partner used for tag wrapping.
+   *
    * @var string
    */
   public $measurementPartner;
   /**
+   * Partner campaign ID needed for establishing linking with Measurement
+   * partner.
+   *
    * @var string
    */
   public $partnerCampaignId;
 
   /**
-   * @param string
+   * .
+   *
+   * Accepted values: MEASUREMENT_PARTNER_UNLINKED, MEASUREMENT_PARTNER_LINKED,
+   * MEASUREMENT_PARTNER_LINK_PENDING, MEASUREMENT_PARTNER_LINK_FAILURE,
+   * MEASUREMENT_PARTNER_LINK_OPT_OUT, MEASUREMENT_PARTNER_LINK_OPT_OUT_PENDING,
+   * MEASUREMENT_PARTNER_LINK_WRAPPING_PENDING,
+   * MEASUREMENT_PARTNER_MODE_CHANGE_PENDING, MEASUREMENT_PARTNER_UNLINK_PENDING
+   *
+   * @param self::LINK_STATUS_* $linkStatus
    */
   public function setLinkStatus($linkStatus)
   {
     $this->linkStatus = $linkStatus;
   }
   /**
-   * @return string
+   * @return self::LINK_STATUS_*
    */
   public function getLinkStatus()
   {
     return $this->linkStatus;
   }
   /**
-   * @param string
+   * Measurement partner used for tag wrapping.
+   *
+   * Accepted values: NONE, INTEGRAL_AD_SCIENCE, DOUBLE_VERIFY
+   *
+   * @param self::MEASUREMENT_PARTNER_* $measurementPartner
    */
   public function setMeasurementPartner($measurementPartner)
   {
     $this->measurementPartner = $measurementPartner;
   }
   /**
-   * @return string
+   * @return self::MEASUREMENT_PARTNER_*
    */
   public function getMeasurementPartner()
   {
     return $this->measurementPartner;
   }
   /**
-   * @param string
+   * Partner campaign ID needed for establishing linking with Measurement
+   * partner.
+   *
+   * @param string $partnerCampaignId
    */
   public function setPartnerCampaignId($partnerCampaignId)
   {

@@ -23,7 +23,10 @@ class Declaration extends \Google\Model
   protected $relationDescriptorDataType = '';
 
   /**
-   * @param RelationDescriptor
+   * Descriptor for the relation and its columns. Used as documentation only,
+   * i.e. values here will result in no changes to the relation's metadata.
+   *
+   * @param RelationDescriptor $relationDescriptor
    */
   public function setRelationDescriptor(RelationDescriptor $relationDescriptor)
   {

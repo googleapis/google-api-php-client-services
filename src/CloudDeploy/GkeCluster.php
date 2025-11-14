@@ -20,24 +20,46 @@ namespace Google\Service\CloudDeploy;
 class GkeCluster extends \Google\Model
 {
   /**
+   * Optional. Information specifying a GKE Cluster. Format is
+   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * Optional. If set, the cluster will be accessed using the DNS endpoint. Note
+   * that both `dns_endpoint` and `internal_ip` cannot be set to true.
+   *
    * @var bool
    */
   public $dnsEndpoint;
   /**
+   * Optional. If true, `cluster` is accessed using the private IP address of
+   * the control plane endpoint. Otherwise, the default IP address of the
+   * control plane endpoint is used. The default IP address is the private IP
+   * address for clusters with private control-plane endpoints and the public IP
+   * address otherwise. Only specify this option when `cluster` is a [private
+   * GKE cluster](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/private-cluster-concept). Note that `internal_ip` and
+   * `dns_endpoint` cannot both be set to true.
+   *
    * @var bool
    */
   public $internalIp;
   /**
+   * Optional. If set, used to configure a
+   * [proxy](https://kubernetes.io/docs/concepts/configuration/organize-cluster-
+   * access-kubeconfig/#proxy) to the Kubernetes server.
+   *
    * @var string
    */
   public $proxyUrl;
 
   /**
-   * @param string
+   * Optional. Information specifying a GKE Cluster. Format is
+   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -51,7 +73,10 @@ class GkeCluster extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param bool
+   * Optional. If set, the cluster will be accessed using the DNS endpoint. Note
+   * that both `dns_endpoint` and `internal_ip` cannot be set to true.
+   *
+   * @param bool $dnsEndpoint
    */
   public function setDnsEndpoint($dnsEndpoint)
   {
@@ -65,7 +90,16 @@ class GkeCluster extends \Google\Model
     return $this->dnsEndpoint;
   }
   /**
-   * @param bool
+   * Optional. If true, `cluster` is accessed using the private IP address of
+   * the control plane endpoint. Otherwise, the default IP address of the
+   * control plane endpoint is used. The default IP address is the private IP
+   * address for clusters with private control-plane endpoints and the public IP
+   * address otherwise. Only specify this option when `cluster` is a [private
+   * GKE cluster](https://cloud.google.com/kubernetes-
+   * engine/docs/concepts/private-cluster-concept). Note that `internal_ip` and
+   * `dns_endpoint` cannot both be set to true.
+   *
+   * @param bool $internalIp
    */
   public function setInternalIp($internalIp)
   {
@@ -79,7 +113,11 @@ class GkeCluster extends \Google\Model
     return $this->internalIp;
   }
   /**
-   * @param string
+   * Optional. If set, used to configure a
+   * [proxy](https://kubernetes.io/docs/concepts/configuration/organize-cluster-
+   * access-kubeconfig/#proxy) to the Kubernetes server.
+   *
+   * @param string $proxyUrl
    */
   public function setProxyUrl($proxyUrl)
   {

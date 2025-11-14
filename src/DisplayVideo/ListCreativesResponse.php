@@ -23,12 +23,19 @@ class ListCreativesResponse extends \Google\Collection
   protected $creativesType = Creative::class;
   protected $creativesDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListCreativesRequest` method to
+   * retrieve the next page of results. If this field is null, it means this is
+   * the last page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Creative[]
+   * The list of creatives. This list will be absent if empty.
+   *
+   * @param Creative[] $creatives
    */
   public function setCreatives($creatives)
   {
@@ -42,7 +49,12 @@ class ListCreativesResponse extends \Google\Collection
     return $this->creatives;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to `ListCreativesRequest` method to
+   * retrieve the next page of results. If this field is null, it means this is
+   * the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

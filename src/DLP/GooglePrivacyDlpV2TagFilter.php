@@ -20,16 +20,29 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2TagFilter extends \Google\Model
 {
   /**
+   * The namespaced name for the tag key. Must be in the format
+   * `{parent_id}/{tag_key_short_name}`, for example, "123456/sensitive" for an
+   * organization parent, or "my-project/sensitive" for a project parent.
+   *
    * @var string
    */
   public $namespacedTagKey;
   /**
+   * The namespaced name for the tag value. Must be in the format
+   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example,
+   * "123456/environment/prod" for an organization parent, or "my-
+   * project/environment/prod" for a project parent.
+   *
    * @var string
    */
   public $namespacedTagValue;
 
   /**
-   * @param string
+   * The namespaced name for the tag key. Must be in the format
+   * `{parent_id}/{tag_key_short_name}`, for example, "123456/sensitive" for an
+   * organization parent, or "my-project/sensitive" for a project parent.
+   *
+   * @param string $namespacedTagKey
    */
   public function setNamespacedTagKey($namespacedTagKey)
   {
@@ -43,7 +56,12 @@ class GooglePrivacyDlpV2TagFilter extends \Google\Model
     return $this->namespacedTagKey;
   }
   /**
-   * @param string
+   * The namespaced name for the tag value. Must be in the format
+   * `{parent_id}/{tag_key_short_name}/{short_name}`, for example,
+   * "123456/environment/prod" for an organization parent, or "my-
+   * project/environment/prod" for a project parent.
+   *
+   * @param string $namespacedTagValue
    */
   public function setNamespacedTagValue($namespacedTagValue)
   {

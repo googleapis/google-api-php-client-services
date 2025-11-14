@@ -20,48 +20,107 @@ namespace Google\Service\DisplayVideo;
 class AlgorithmRulesFloodlightActivityConversionSignal extends \Google\Model
 {
   /**
+   * The action is not specified.
+   */
+  public const CONVERSION_COUNTING_CONVERSION_COUNTING_UNSPECIFIED = 'CONVERSION_COUNTING_UNSPECIFIED';
+  /**
+   * All conversions.
+   */
+  public const CONVERSION_COUNTING_ALL_CONVERSIONS = 'ALL_CONVERSIONS';
+  /**
+   * Post-click conversions.
+   */
+  public const CONVERSION_COUNTING_POST_CLICK = 'POST_CLICK';
+  /**
+   * Post-view conversions.
+   */
+  public const CONVERSION_COUNTING_POST_VIEW = 'POST_VIEW';
+  /**
+   * The action is not specified.
+   */
+  public const COUNTING_METHOD_COUNTING_METHOD_UNSPECIFIED = 'COUNTING_METHOD_UNSPECIFIED';
+  /**
+   * The count of conversions associated with the conversion activity.
+   */
+  public const COUNTING_METHOD_CONVERSIONS_COUNT = 'CONVERSIONS_COUNT';
+  /**
+   * The number of sales items associated with the conversion activity.
+   */
+  public const COUNTING_METHOD_SALES_QUANTITY = 'SALES_QUANTITY';
+  /**
+   * The sales revenue associated with the conversion activity.
+   */
+  public const COUNTING_METHOD_SALES_VALUE = 'SALES_VALUE';
+  /**
+   * The count of unique conversions associated with the conversion activity.
+   * Only one conversion can be counted per impression.
+   */
+  public const COUNTING_METHOD_UNIQUE_COUNT = 'UNIQUE_COUNT';
+  /**
+   * Required. The type of conversions to be used in impression value
+   * computation, for example, post-click conversions.
+   *
    * @var string
    */
   public $conversionCounting;
   /**
+   * Required. The way to acquire value from the floodlight activity, for
+   * example, count of the conversion.
+   *
    * @var string
    */
   public $countingMethod;
   /**
+   * Required. Id of the floodlight activity.
+   *
    * @var string
    */
   public $floodlightActivityId;
 
   /**
-   * @param string
+   * Required. The type of conversions to be used in impression value
+   * computation, for example, post-click conversions.
+   *
+   * Accepted values: CONVERSION_COUNTING_UNSPECIFIED, ALL_CONVERSIONS,
+   * POST_CLICK, POST_VIEW
+   *
+   * @param self::CONVERSION_COUNTING_* $conversionCounting
    */
   public function setConversionCounting($conversionCounting)
   {
     $this->conversionCounting = $conversionCounting;
   }
   /**
-   * @return string
+   * @return self::CONVERSION_COUNTING_*
    */
   public function getConversionCounting()
   {
     return $this->conversionCounting;
   }
   /**
-   * @param string
+   * Required. The way to acquire value from the floodlight activity, for
+   * example, count of the conversion.
+   *
+   * Accepted values: COUNTING_METHOD_UNSPECIFIED, CONVERSIONS_COUNT,
+   * SALES_QUANTITY, SALES_VALUE, UNIQUE_COUNT
+   *
+   * @param self::COUNTING_METHOD_* $countingMethod
    */
   public function setCountingMethod($countingMethod)
   {
     $this->countingMethod = $countingMethod;
   }
   /**
-   * @return string
+   * @return self::COUNTING_METHOD_*
    */
   public function getCountingMethod()
   {
     return $this->countingMethod;
   }
   /**
-   * @param string
+   * Required. Id of the floodlight activity.
+   *
+   * @param string $floodlightActivityId
    */
   public function setFloodlightActivityId($floodlightActivityId)
   {

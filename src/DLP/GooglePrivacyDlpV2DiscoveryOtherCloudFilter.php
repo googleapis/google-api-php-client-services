@@ -27,7 +27,9 @@ class GooglePrivacyDlpV2DiscoveryOtherCloudFilter extends \Google\Model
   protected $singleResourceDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2OtherCloudResourceCollection
+   * A collection of resources for this filter to apply to.
+   *
+   * @param GooglePrivacyDlpV2OtherCloudResourceCollection $collection
    */
   public function setCollection(GooglePrivacyDlpV2OtherCloudResourceCollection $collection)
   {
@@ -41,7 +43,12 @@ class GooglePrivacyDlpV2DiscoveryOtherCloudFilter extends \Google\Model
     return $this->collection;
   }
   /**
-   * @param GooglePrivacyDlpV2AllOtherResources
+   * Optional. Catch-all. This should always be the last target in the list
+   * because anything above it will apply first. Should only appear once in a
+   * configuration. If none is specified, a default one will be added
+   * automatically.
+   *
+   * @param GooglePrivacyDlpV2AllOtherResources $others
    */
   public function setOthers(GooglePrivacyDlpV2AllOtherResources $others)
   {
@@ -55,7 +62,10 @@ class GooglePrivacyDlpV2DiscoveryOtherCloudFilter extends \Google\Model
     return $this->others;
   }
   /**
-   * @param GooglePrivacyDlpV2OtherCloudSingleResourceReference
+   * The resource to scan. Configs using this filter can only have one target
+   * (the target with this single resource reference).
+   *
+   * @param GooglePrivacyDlpV2OtherCloudSingleResourceReference $singleResource
    */
   public function setSingleResource(GooglePrivacyDlpV2OtherCloudSingleResourceReference $singleResource)
   {

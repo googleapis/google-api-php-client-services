@@ -23,12 +23,19 @@ class ListCustomBiddingScriptsResponse extends \Google\Collection
   protected $customBiddingScriptsType = CustomBiddingScript::class;
   protected $customBiddingScriptsDataType = 'array';
   /**
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to
+   * `ListCustomBiddingScriptsRequest` method to retrieve the next page of
+   * results. If this field is null, it means this is the last page.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CustomBiddingScript[]
+   * The list of custom bidding scripts. This list will be absent if empty.
+   *
+   * @param CustomBiddingScript[] $customBiddingScripts
    */
   public function setCustomBiddingScripts($customBiddingScripts)
   {
@@ -42,7 +49,12 @@ class ListCustomBiddingScriptsResponse extends \Google\Collection
     return $this->customBiddingScripts;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in the
+   * page_token field in the subsequent call to
+   * `ListCustomBiddingScriptsRequest` method to retrieve the next page of
+   * results. If this field is null, it means this is the last page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
