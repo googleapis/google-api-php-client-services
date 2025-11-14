@@ -20,36 +20,55 @@ namespace Google\Service\Appengine;
 class LivenessCheck extends \Google\Model
 {
   /**
+   * Interval between health checks.
+   *
    * @var string
    */
   public $checkInterval;
   /**
+   * Number of consecutive failed checks required before considering the VM
+   * unhealthy.
+   *
    * @var string
    */
   public $failureThreshold;
   /**
+   * Host header to send when performing a HTTP Liveness check. Example:
+   * "myapp.appspot.com"
+   *
    * @var string
    */
   public $host;
   /**
+   * The initial delay before starting to execute the checks.
+   *
    * @var string
    */
   public $initialDelay;
   /**
+   * The request path.
+   *
    * @var string
    */
   public $path;
   /**
+   * Number of consecutive successful checks required before considering the VM
+   * healthy.
+   *
    * @var string
    */
   public $successThreshold;
   /**
+   * Time before the check is considered failed.
+   *
    * @var string
    */
   public $timeout;
 
   /**
-   * @param string
+   * Interval between health checks.
+   *
+   * @param string $checkInterval
    */
   public function setCheckInterval($checkInterval)
   {
@@ -63,7 +82,10 @@ class LivenessCheck extends \Google\Model
     return $this->checkInterval;
   }
   /**
-   * @param string
+   * Number of consecutive failed checks required before considering the VM
+   * unhealthy.
+   *
+   * @param string $failureThreshold
    */
   public function setFailureThreshold($failureThreshold)
   {
@@ -77,7 +99,10 @@ class LivenessCheck extends \Google\Model
     return $this->failureThreshold;
   }
   /**
-   * @param string
+   * Host header to send when performing a HTTP Liveness check. Example:
+   * "myapp.appspot.com"
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -91,7 +116,9 @@ class LivenessCheck extends \Google\Model
     return $this->host;
   }
   /**
-   * @param string
+   * The initial delay before starting to execute the checks.
+   *
+   * @param string $initialDelay
    */
   public function setInitialDelay($initialDelay)
   {
@@ -105,7 +132,9 @@ class LivenessCheck extends \Google\Model
     return $this->initialDelay;
   }
   /**
-   * @param string
+   * The request path.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -119,7 +148,10 @@ class LivenessCheck extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Number of consecutive successful checks required before considering the VM
+   * healthy.
+   *
+   * @param string $successThreshold
    */
   public function setSuccessThreshold($successThreshold)
   {
@@ -133,7 +165,9 @@ class LivenessCheck extends \Google\Model
     return $this->successThreshold;
   }
   /**
-   * @param string
+   * Time before the check is considered failed.
+   *
+   * @param string $timeout
    */
   public function setTimeout($timeout)
   {

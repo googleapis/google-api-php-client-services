@@ -23,12 +23,16 @@ class ListAuthorizedDomainsResponse extends \Google\Collection
   protected $domainsType = AuthorizedDomain::class;
   protected $domainsDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AuthorizedDomain[]
+   * The authorized domains belonging to the user.
+   *
+   * @param AuthorizedDomain[] $domains
    */
   public function setDomains($domains)
   {
@@ -42,7 +46,9 @@ class ListAuthorizedDomainsResponse extends \Google\Collection
     return $this->domains;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
