@@ -21,12 +21,16 @@ class ObjectReferences extends \Google\Collection
 {
   protected $collection_key = 'objectIds';
   /**
+   * The object IDs.
+   *
    * @var string[]
    */
   public $objectIds;
 
   /**
-   * @param string[]
+   * The object IDs.
+   *
+   * @param string[] $objectIds
    */
   public function setObjectIds($objectIds)
   {

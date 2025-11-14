@@ -20,20 +20,28 @@ namespace Google\Service\Docs;
 class PositionedObjectPositioningSuggestionState extends \Google\Model
 {
   /**
+   * Indicates if there was a suggested change to layout.
+   *
    * @var bool
    */
   public $layoutSuggested;
   /**
+   * Indicates if there was a suggested change to left_offset.
+   *
    * @var bool
    */
   public $leftOffsetSuggested;
   /**
+   * Indicates if there was a suggested change to top_offset.
+   *
    * @var bool
    */
   public $topOffsetSuggested;
 
   /**
-   * @param bool
+   * Indicates if there was a suggested change to layout.
+   *
+   * @param bool $layoutSuggested
    */
   public function setLayoutSuggested($layoutSuggested)
   {
@@ -47,7 +55,9 @@ class PositionedObjectPositioningSuggestionState extends \Google\Model
     return $this->layoutSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to left_offset.
+   *
+   * @param bool $leftOffsetSuggested
    */
   public function setLeftOffsetSuggested($leftOffsetSuggested)
   {
@@ -61,7 +71,9 @@ class PositionedObjectPositioningSuggestionState extends \Google\Model
     return $this->leftOffsetSuggested;
   }
   /**
-   * @param bool
+   * Indicates if there was a suggested change to top_offset.
+   *
+   * @param bool $topOffsetSuggested
    */
   public function setTopOffsetSuggested($topOffsetSuggested)
   {

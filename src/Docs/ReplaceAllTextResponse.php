@@ -20,12 +20,16 @@ namespace Google\Service\Docs;
 class ReplaceAllTextResponse extends \Google\Model
 {
   /**
+   * The number of occurrences changed by replacing all text.
+   *
    * @var int
    */
   public $occurrencesChanged;
 
   /**
-   * @param int
+   * The number of occurrences changed by replacing all text.
+   *
+   * @param int $occurrencesChanged
    */
   public function setOccurrencesChanged($occurrencesChanged)
   {
