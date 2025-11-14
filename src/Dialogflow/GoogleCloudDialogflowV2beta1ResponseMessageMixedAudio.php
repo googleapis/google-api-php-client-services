@@ -24,7 +24,9 @@ class GoogleCloudDialogflowV2beta1ResponseMessageMixedAudio extends \Google\Coll
   protected $segmentsDataType = 'array';
 
   /**
-   * @param GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment[]
+   * Segments this audio response is composed of.
+   *
+   * @param GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment[] $segments
    */
   public function setSegments($segments)
   {
