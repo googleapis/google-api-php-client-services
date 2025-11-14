@@ -20,12 +20,20 @@ namespace Google\Service\Chromewebstore;
 class SetPublishedDeployPercentageRequest extends \Google\Model
 {
   /**
+   * Required. Unscaled percentage value for the publised revision (nonnegative
+   * number between 0 and 100). It must be larger than the existing target
+   * percentage.
+   *
    * @var int
    */
   public $deployPercentage;
 
   /**
-   * @param int
+   * Required. Unscaled percentage value for the publised revision (nonnegative
+   * number between 0 and 100). It must be larger than the existing target
+   * percentage.
+   *
+   * @param int $deployPercentage
    */
   public function setDeployPercentage($deployPercentage)
   {
