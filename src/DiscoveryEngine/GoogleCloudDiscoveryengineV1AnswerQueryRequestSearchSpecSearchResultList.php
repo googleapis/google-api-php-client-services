@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultList e
   protected $searchResultsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResult[]
+   * Search results.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResult[] $searchResults
    */
   public function setSearchResults($searchResults)
   {

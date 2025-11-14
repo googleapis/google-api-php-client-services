@@ -20,36 +20,57 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext extends \Google\Model
 {
   /**
+   * The full resource name of the Connector Run. Format:
+   * `projects/locations/collections/dataConnector/connectorRuns`. The
+   * `connector_run_id` is system-generated.
+   *
    * @var string
    */
   public $connectorRun;
   /**
+   * The full resource name of the DataConnector. Format:
+   * `projects/locations/collections/dataConnector`.
+   *
    * @var string
    */
   public $dataConnector;
   /**
+   * The time when the connector run ended.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The entity to sync for the connector run.
+   *
    * @var string
    */
   public $entity;
   /**
+   * The operation resource name of the LRO to sync the connector.
+   *
    * @var string
    */
   public $operation;
   /**
+   * The time when the connector run started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * The type of sync run. Can be one of the following: * `FULL` * `INCREMENTAL`
+   *
    * @var string
    */
   public $syncType;
 
   /**
-   * @param string
+   * The full resource name of the Connector Run. Format:
+   * `projects/locations/collections/dataConnector/connectorRuns`. The
+   * `connector_run_id` is system-generated.
+   *
+   * @param string $connectorRun
    */
   public function setConnectorRun($connectorRun)
   {
@@ -63,7 +84,10 @@ class GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext extends \Google\
     return $this->connectorRun;
   }
   /**
-   * @param string
+   * The full resource name of the DataConnector. Format:
+   * `projects/locations/collections/dataConnector`.
+   *
+   * @param string $dataConnector
    */
   public function setDataConnector($dataConnector)
   {
@@ -77,7 +101,9 @@ class GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext extends \Google\
     return $this->dataConnector;
   }
   /**
-   * @param string
+   * The time when the connector run ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -91,7 +117,9 @@ class GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext extends \Google\
     return $this->endTime;
   }
   /**
-   * @param string
+   * The entity to sync for the connector run.
+   *
+   * @param string $entity
    */
   public function setEntity($entity)
   {
@@ -105,7 +133,9 @@ class GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext extends \Google\
     return $this->entity;
   }
   /**
-   * @param string
+   * The operation resource name of the LRO to sync the connector.
+   *
+   * @param string $operation
    */
   public function setOperation($operation)
   {
@@ -119,7 +149,9 @@ class GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext extends \Google\
     return $this->operation;
   }
   /**
-   * @param string
+   * The time when the connector run started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -133,7 +165,9 @@ class GoogleCloudDiscoveryengineLoggingConnectorRunErrorContext extends \Google\
     return $this->startTime;
   }
   /**
-   * @param string
+   * The type of sync run. Can be one of the following: * `FULL` * `INCREMENTAL`
+   *
+   * @param string $syncType
    */
   public function setSyncType($syncType)
   {

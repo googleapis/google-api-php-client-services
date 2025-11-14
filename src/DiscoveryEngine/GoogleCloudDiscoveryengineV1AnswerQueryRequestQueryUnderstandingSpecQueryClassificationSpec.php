@@ -21,12 +21,16 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryC
 {
   protected $collection_key = 'types';
   /**
+   * Enabled query classification types.
+   *
    * @var string[]
    */
   public $types;
 
   /**
-   * @param string[]
+   * Enabled query classification types.
+   *
+   * @param string[] $types
    */
   public function setTypes($types)
   {

@@ -20,30 +20,61 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AnswerQueryRequestGroundingSpec extends \Google\Model
 {
   /**
+   * Default is no filter
+   */
+  public const FILTERING_LEVEL_FILTERING_LEVEL_UNSPECIFIED = 'FILTERING_LEVEL_UNSPECIFIED';
+  /**
+   * Filter answers based on a low threshold.
+   */
+  public const FILTERING_LEVEL_FILTERING_LEVEL_LOW = 'FILTERING_LEVEL_LOW';
+  /**
+   * Filter answers based on a high threshold.
+   */
+  public const FILTERING_LEVEL_FILTERING_LEVEL_HIGH = 'FILTERING_LEVEL_HIGH';
+  /**
+   * Optional. Specifies whether to enable the filtering based on grounding
+   * score and at what level.
+   *
    * @var string
    */
   public $filteringLevel;
   /**
+   * Optional. Specifies whether to include grounding_supports in the answer.
+   * The default value is `false`. When this field is set to `true`, returned
+   * answer will have `grounding_score` and will contain GroundingSupports for
+   * each claim.
+   *
    * @var bool
    */
   public $includeGroundingSupports;
 
   /**
-   * @param string
+   * Optional. Specifies whether to enable the filtering based on grounding
+   * score and at what level.
+   *
+   * Accepted values: FILTERING_LEVEL_UNSPECIFIED, FILTERING_LEVEL_LOW,
+   * FILTERING_LEVEL_HIGH
+   *
+   * @param self::FILTERING_LEVEL_* $filteringLevel
    */
   public function setFilteringLevel($filteringLevel)
   {
     $this->filteringLevel = $filteringLevel;
   }
   /**
-   * @return string
+   * @return self::FILTERING_LEVEL_*
    */
   public function getFilteringLevel()
   {
     return $this->filteringLevel;
   }
   /**
-   * @param bool
+   * Optional. Specifies whether to include grounding_supports in the answer.
+   * The default value is `false`. When this field is set to `true`, returned
+   * answer will have `grounding_score` and will contain GroundingSupports for
+   * each claim.
+   *
+   * @param bool $includeGroundingSupports
    */
   public function setIncludeGroundingSupports($includeGroundingSupports)
   {
