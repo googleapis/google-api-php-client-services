@@ -22,24 +22,37 @@ class LaunchTemplateParameters extends \Google\Model
   protected $environmentType = RuntimeEnvironment::class;
   protected $environmentDataType = '';
   /**
+   * Required. The job name to use for the created job. The name must match the
+   * regular expression `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
+   *
    * @var string
    */
   public $jobName;
   /**
+   * The runtime parameters to pass to the job.
+   *
    * @var string[]
    */
   public $parameters;
   /**
+   * Only applicable when updating a pipeline. Map of transform name prefixes of
+   * the job to be replaced to the corresponding name prefixes of the new job.
+   *
    * @var string[]
    */
   public $transformNameMapping;
   /**
+   * If set, replace the existing pipeline with the name specified by jobName
+   * with this pipeline, preserving state.
+   *
    * @var bool
    */
   public $update;
 
   /**
-   * @param RuntimeEnvironment
+   * The runtime environment for the job.
+   *
+   * @param RuntimeEnvironment $environment
    */
   public function setEnvironment(RuntimeEnvironment $environment)
   {
@@ -53,7 +66,10 @@ class LaunchTemplateParameters extends \Google\Model
     return $this->environment;
   }
   /**
-   * @param string
+   * Required. The job name to use for the created job. The name must match the
+   * regular expression `[a-z]([-a-z0-9]{0,1022}[a-z0-9])?`
+   *
+   * @param string $jobName
    */
   public function setJobName($jobName)
   {
@@ -67,7 +83,9 @@ class LaunchTemplateParameters extends \Google\Model
     return $this->jobName;
   }
   /**
-   * @param string[]
+   * The runtime parameters to pass to the job.
+   *
+   * @param string[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -81,7 +99,10 @@ class LaunchTemplateParameters extends \Google\Model
     return $this->parameters;
   }
   /**
-   * @param string[]
+   * Only applicable when updating a pipeline. Map of transform name prefixes of
+   * the job to be replaced to the corresponding name prefixes of the new job.
+   *
+   * @param string[] $transformNameMapping
    */
   public function setTransformNameMapping($transformNameMapping)
   {
@@ -95,7 +116,10 @@ class LaunchTemplateParameters extends \Google\Model
     return $this->transformNameMapping;
   }
   /**
-   * @param bool
+   * If set, replace the existing pipeline with the name specified by jobName
+   * with this pipeline, preserving state.
+   *
+   * @param bool $update
    */
   public function setUpdate($update)
   {

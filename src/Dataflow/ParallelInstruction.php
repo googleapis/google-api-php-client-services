@@ -23,10 +23,14 @@ class ParallelInstruction extends \Google\Collection
   protected $flattenType = FlattenInstruction::class;
   protected $flattenDataType = '';
   /**
+   * User-provided name of this operation.
+   *
    * @var string
    */
   public $name;
   /**
+   * System-defined name for the operation in the original workflow graph.
+   *
    * @var string
    */
   public $originalName;
@@ -39,6 +43,8 @@ class ParallelInstruction extends \Google\Collection
   protected $readType = ReadInstruction::class;
   protected $readDataType = '';
   /**
+   * System-defined name of this operation. Unique across the workflow.
+   *
    * @var string
    */
   public $systemName;
@@ -46,7 +52,9 @@ class ParallelInstruction extends \Google\Collection
   protected $writeDataType = '';
 
   /**
-   * @param FlattenInstruction
+   * Additional information for Flatten instructions.
+   *
+   * @param FlattenInstruction $flatten
    */
   public function setFlatten(FlattenInstruction $flatten)
   {
@@ -60,7 +68,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->flatten;
   }
   /**
-   * @param string
+   * User-provided name of this operation.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -74,7 +84,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * System-defined name for the operation in the original workflow graph.
+   *
+   * @param string $originalName
    */
   public function setOriginalName($originalName)
   {
@@ -88,7 +100,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->originalName;
   }
   /**
-   * @param InstructionOutput[]
+   * Describes the outputs of the instruction.
+   *
+   * @param InstructionOutput[] $outputs
    */
   public function setOutputs($outputs)
   {
@@ -102,7 +116,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->outputs;
   }
   /**
-   * @param ParDoInstruction
+   * Additional information for ParDo instructions.
+   *
+   * @param ParDoInstruction $parDo
    */
   public function setParDo(ParDoInstruction $parDo)
   {
@@ -116,7 +132,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->parDo;
   }
   /**
-   * @param PartialGroupByKeyInstruction
+   * Additional information for PartialGroupByKey instructions.
+   *
+   * @param PartialGroupByKeyInstruction $partialGroupByKey
    */
   public function setPartialGroupByKey(PartialGroupByKeyInstruction $partialGroupByKey)
   {
@@ -130,7 +148,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->partialGroupByKey;
   }
   /**
-   * @param ReadInstruction
+   * Additional information for Read instructions.
+   *
+   * @param ReadInstruction $read
    */
   public function setRead(ReadInstruction $read)
   {
@@ -144,7 +164,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->read;
   }
   /**
-   * @param string
+   * System-defined name of this operation. Unique across the workflow.
+   *
+   * @param string $systemName
    */
   public function setSystemName($systemName)
   {
@@ -158,7 +180,9 @@ class ParallelInstruction extends \Google\Collection
     return $this->systemName;
   }
   /**
-   * @param WriteInstruction
+   * Additional information for Write instructions.
+   *
+   * @param WriteInstruction $write
    */
   public function setWrite(WriteInstruction $write)
   {

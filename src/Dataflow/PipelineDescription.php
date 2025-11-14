@@ -27,12 +27,16 @@ class PipelineDescription extends \Google\Collection
   protected $originalPipelineTransformType = TransformSummary::class;
   protected $originalPipelineTransformDataType = 'array';
   /**
+   * A hash value of the submitted pipeline portable graph step names if exists.
+   *
    * @var string
    */
   public $stepNamesHash;
 
   /**
-   * @param DisplayData[]
+   * Pipeline level display data.
+   *
+   * @param DisplayData[] $displayData
    */
   public function setDisplayData($displayData)
   {
@@ -46,7 +50,9 @@ class PipelineDescription extends \Google\Collection
     return $this->displayData;
   }
   /**
-   * @param ExecutionStageSummary[]
+   * Description of each stage of execution of the pipeline.
+   *
+   * @param ExecutionStageSummary[] $executionPipelineStage
    */
   public function setExecutionPipelineStage($executionPipelineStage)
   {
@@ -60,7 +66,9 @@ class PipelineDescription extends \Google\Collection
     return $this->executionPipelineStage;
   }
   /**
-   * @param TransformSummary[]
+   * Description of each transform in the pipeline and collections between them.
+   *
+   * @param TransformSummary[] $originalPipelineTransform
    */
   public function setOriginalPipelineTransform($originalPipelineTransform)
   {
@@ -74,7 +82,9 @@ class PipelineDescription extends \Google\Collection
     return $this->originalPipelineTransform;
   }
   /**
-   * @param string
+   * A hash value of the submitted pipeline portable graph step names if exists.
+   *
+   * @param string $stepNamesHash
    */
   public function setStepNamesHash($stepNamesHash)
   {

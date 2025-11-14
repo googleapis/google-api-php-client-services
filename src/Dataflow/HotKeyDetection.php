@@ -20,20 +20,29 @@ namespace Google\Service\Dataflow;
 class HotKeyDetection extends \Google\Model
 {
   /**
+   * The age of the hot key measured from when it was first detected.
+   *
    * @var string
    */
   public $hotKeyAge;
   /**
+   * System-defined name of the step containing this hot key. Unique across the
+   * workflow.
+   *
    * @var string
    */
   public $systemName;
   /**
+   * User-provided name of the step that contains this hot key.
+   *
    * @var string
    */
   public $userStepName;
 
   /**
-   * @param string
+   * The age of the hot key measured from when it was first detected.
+   *
+   * @param string $hotKeyAge
    */
   public function setHotKeyAge($hotKeyAge)
   {
@@ -47,7 +56,10 @@ class HotKeyDetection extends \Google\Model
     return $this->hotKeyAge;
   }
   /**
-   * @param string
+   * System-defined name of the step containing this hot key. Unique across the
+   * workflow.
+   *
+   * @param string $systemName
    */
   public function setSystemName($systemName)
   {
@@ -61,7 +73,9 @@ class HotKeyDetection extends \Google\Model
     return $this->systemName;
   }
   /**
-   * @param string
+   * User-provided name of the step that contains this hot key.
+   *
+   * @param string $userStepName
    */
   public function setUserStepName($userStepName)
   {

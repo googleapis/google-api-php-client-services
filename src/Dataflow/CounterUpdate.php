@@ -20,17 +20,28 @@ namespace Google\Service\Dataflow;
 class CounterUpdate extends \Google\Model
 {
   /**
+   * Boolean value for And, Or.
+   *
    * @var bool
    */
   public $boolean;
   protected $boundedTrieType = BoundedTrie::class;
   protected $boundedTrieDataType = '';
   /**
+   * True if this counter is reported as the total cumulative aggregate value
+   * accumulated since the worker started working on this WorkItem. By default
+   * this is false, indicating that this counter is reported as a delta.
+   *
    * @var bool
    */
   public $cumulative;
   protected $distributionType = DistributionUpdate::class;
   protected $distributionDataType = '';
+  /**
+   * Floating point value for Sum, Max, Min.
+   *
+   * @var 
+   */
   public $floatingPoint;
   protected $floatingPointListType = FloatingPointList::class;
   protected $floatingPointListDataType = '';
@@ -45,12 +56,17 @@ class CounterUpdate extends \Google\Model
   protected $integerMeanType = IntegerMean::class;
   protected $integerMeanDataType = '';
   /**
+   * Value for internally-defined counters used by the Dataflow service.
+   *
    * @var array
    */
   public $internal;
   protected $nameAndKindType = NameAndKind::class;
   protected $nameAndKindDataType = '';
   /**
+   * The service-generated short identifier for this counter. The short_id ->
+   * (name, metadata) mapping is constant for the lifetime of a job.
+   *
    * @var string
    */
   public $shortId;
@@ -60,7 +76,9 @@ class CounterUpdate extends \Google\Model
   protected $structuredNameAndMetadataDataType = '';
 
   /**
-   * @param bool
+   * Boolean value for And, Or.
+   *
+   * @param bool $boolean
    */
   public function setBoolean($boolean)
   {
@@ -74,7 +92,9 @@ class CounterUpdate extends \Google\Model
     return $this->boolean;
   }
   /**
-   * @param BoundedTrie
+   * Bounded trie data
+   *
+   * @param BoundedTrie $boundedTrie
    */
   public function setBoundedTrie(BoundedTrie $boundedTrie)
   {
@@ -88,7 +108,11 @@ class CounterUpdate extends \Google\Model
     return $this->boundedTrie;
   }
   /**
-   * @param bool
+   * True if this counter is reported as the total cumulative aggregate value
+   * accumulated since the worker started working on this WorkItem. By default
+   * this is false, indicating that this counter is reported as a delta.
+   *
+   * @param bool $cumulative
    */
   public function setCumulative($cumulative)
   {
@@ -102,7 +126,9 @@ class CounterUpdate extends \Google\Model
     return $this->cumulative;
   }
   /**
-   * @param DistributionUpdate
+   * Distribution data
+   *
+   * @param DistributionUpdate $distribution
    */
   public function setDistribution(DistributionUpdate $distribution)
   {
@@ -124,7 +150,9 @@ class CounterUpdate extends \Google\Model
     return $this->floatingPoint;
   }
   /**
-   * @param FloatingPointList
+   * List of floating point numbers, for Set.
+   *
+   * @param FloatingPointList $floatingPointList
    */
   public function setFloatingPointList(FloatingPointList $floatingPointList)
   {
@@ -138,7 +166,9 @@ class CounterUpdate extends \Google\Model
     return $this->floatingPointList;
   }
   /**
-   * @param FloatingPointMean
+   * Floating point mean aggregation value for Mean.
+   *
+   * @param FloatingPointMean $floatingPointMean
    */
   public function setFloatingPointMean(FloatingPointMean $floatingPointMean)
   {
@@ -152,7 +182,9 @@ class CounterUpdate extends \Google\Model
     return $this->floatingPointMean;
   }
   /**
-   * @param SplitInt64
+   * Integer value for Sum, Max, Min.
+   *
+   * @param SplitInt64 $integer
    */
   public function setInteger(SplitInt64 $integer)
   {
@@ -166,7 +198,9 @@ class CounterUpdate extends \Google\Model
     return $this->integer;
   }
   /**
-   * @param IntegerGauge
+   * Gauge data
+   *
+   * @param IntegerGauge $integerGauge
    */
   public function setIntegerGauge(IntegerGauge $integerGauge)
   {
@@ -180,7 +214,9 @@ class CounterUpdate extends \Google\Model
     return $this->integerGauge;
   }
   /**
-   * @param IntegerList
+   * List of integers, for Set.
+   *
+   * @param IntegerList $integerList
    */
   public function setIntegerList(IntegerList $integerList)
   {
@@ -194,7 +230,9 @@ class CounterUpdate extends \Google\Model
     return $this->integerList;
   }
   /**
-   * @param IntegerMean
+   * Integer mean aggregation value for Mean.
+   *
+   * @param IntegerMean $integerMean
    */
   public function setIntegerMean(IntegerMean $integerMean)
   {
@@ -208,7 +246,9 @@ class CounterUpdate extends \Google\Model
     return $this->integerMean;
   }
   /**
-   * @param array
+   * Value for internally-defined counters used by the Dataflow service.
+   *
+   * @param array $internal
    */
   public function setInternal($internal)
   {
@@ -222,7 +262,9 @@ class CounterUpdate extends \Google\Model
     return $this->internal;
   }
   /**
-   * @param NameAndKind
+   * Counter name and aggregation type.
+   *
+   * @param NameAndKind $nameAndKind
    */
   public function setNameAndKind(NameAndKind $nameAndKind)
   {
@@ -236,7 +278,10 @@ class CounterUpdate extends \Google\Model
     return $this->nameAndKind;
   }
   /**
-   * @param string
+   * The service-generated short identifier for this counter. The short_id ->
+   * (name, metadata) mapping is constant for the lifetime of a job.
+   *
+   * @param string $shortId
    */
   public function setShortId($shortId)
   {
@@ -250,7 +295,9 @@ class CounterUpdate extends \Google\Model
     return $this->shortId;
   }
   /**
-   * @param StringList
+   * List of strings, for Set.
+   *
+   * @param StringList $stringList
    */
   public function setStringList(StringList $stringList)
   {
@@ -264,7 +311,9 @@ class CounterUpdate extends \Google\Model
     return $this->stringList;
   }
   /**
-   * @param CounterStructuredNameAndMetadata
+   * Counter structured name and metadata.
+   *
+   * @param CounterStructuredNameAndMetadata $structuredNameAndMetadata
    */
   public function setStructuredNameAndMetadata(CounterStructuredNameAndMetadata $structuredNameAndMetadata)
   {
