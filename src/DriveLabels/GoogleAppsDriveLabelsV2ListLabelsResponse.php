@@ -23,12 +23,16 @@ class GoogleAppsDriveLabelsV2ListLabelsResponse extends \Google\Collection
   protected $labelsType = GoogleAppsDriveLabelsV2Label::class;
   protected $labelsDataType = 'array';
   /**
+   * The token of the next page in the response.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleAppsDriveLabelsV2Label[]
+   * Labels.
+   *
+   * @param GoogleAppsDriveLabelsV2Label[] $labels
    */
   public function setLabels($labels)
   {
@@ -42,7 +46,9 @@ class GoogleAppsDriveLabelsV2ListLabelsResponse extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * The token of the next page in the response.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

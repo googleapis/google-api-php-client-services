@@ -20,12 +20,20 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2WriteControl extends \Google\Model
 {
   /**
+   * The revision ID of the label that the write request will be applied to. If
+   * this isn't the latest revision of the label, the request will not be
+   * processed and will return a 400 Bad Request error.
+   *
    * @var string
    */
   public $requiredRevisionId;
 
   /**
-   * @param string
+   * The revision ID of the label that the write request will be applied to. If
+   * this isn't the latest revision of the label, the request will not be
+   * processed and will return a 400 Bad Request error.
+   *
+   * @param string $requiredRevisionId
    */
   public function setRequiredRevisionId($requiredRevisionId)
   {

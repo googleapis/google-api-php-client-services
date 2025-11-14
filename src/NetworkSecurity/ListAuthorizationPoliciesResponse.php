@@ -23,12 +23,18 @@ class ListAuthorizationPoliciesResponse extends \Google\Collection
   protected $authorizationPoliciesType = AuthorizationPolicy::class;
   protected $authorizationPoliciesDataType = 'array';
   /**
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AuthorizationPolicy[]
+   * List of AuthorizationPolicies resources.
+   *
+   * @param AuthorizationPolicy[] $authorizationPolicies
    */
   public function setAuthorizationPolicies($authorizationPolicies)
   {
@@ -42,7 +48,11 @@ class ListAuthorizationPoliciesResponse extends \Google\Collection
     return $this->authorizationPolicies;
   }
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,20 +20,40 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec extends \Google\Model
 {
   /**
+   * Default unknown view type.
+   */
+  public const VIEW_TYPE_VIEW_TYPE_UNSPECIFIED = 'VIEW_TYPE_UNSPECIFIED';
+  /**
+   * Standard view.
+   */
+  public const VIEW_TYPE_STANDARD_VIEW = 'STANDARD_VIEW';
+  /**
+   * Materialized view.
+   */
+  public const VIEW_TYPE_MATERIALIZED_VIEW = 'MATERIALIZED_VIEW';
+  /**
+   * Name of a singular table this view reflects one to one.
+   *
    * @var string
    */
   public $baseTable;
   /**
+   * SQL query used to generate this view.
+   *
    * @var string
    */
   public $sqlQuery;
   /**
+   * Type of this view.
+   *
    * @var string
    */
   public $viewType;
 
   /**
-   * @param string
+   * Name of a singular table this view reflects one to one.
+   *
+   * @param string $baseTable
    */
   public function setBaseTable($baseTable)
   {
@@ -47,7 +67,9 @@ class GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec extends \Google\
     return $this->baseTable;
   }
   /**
-   * @param string
+   * SQL query used to generate this view.
+   *
+   * @param string $sqlQuery
    */
   public function setSqlQuery($sqlQuery)
   {
@@ -61,14 +83,18 @@ class GoogleCloudDatacatalogV1DatabaseTableSpecDatabaseViewSpec extends \Google\
     return $this->sqlQuery;
   }
   /**
-   * @param string
+   * Type of this view.
+   *
+   * Accepted values: VIEW_TYPE_UNSPECIFIED, STANDARD_VIEW, MATERIALIZED_VIEW
+   *
+   * @param self::VIEW_TYPE_* $viewType
    */
   public function setViewType($viewType)
   {
     $this->viewType = $viewType;
   }
   /**
-   * @return string
+   * @return self::VIEW_TYPE_*
    */
   public function getViewType()
   {

@@ -20,20 +20,44 @@ namespace Google\Service\MyBusinessQA;
 class Author extends \Google\Model
 {
   /**
+   * This should not be used.
+   */
+  public const TYPE_AUTHOR_TYPE_UNSPECIFIED = 'AUTHOR_TYPE_UNSPECIFIED';
+  /**
+   * A regular user.
+   */
+  public const TYPE_REGULAR_USER = 'REGULAR_USER';
+  /**
+   * A Local Guide
+   */
+  public const TYPE_LOCAL_GUIDE = 'LOCAL_GUIDE';
+  /**
+   * The owner/manager of the location
+   */
+  public const TYPE_MERCHANT = 'MERCHANT';
+  /**
+   * The display name of the user
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The profile photo URI of the user.
+   *
    * @var string
    */
   public $profilePhotoUri;
   /**
+   * The type of user the author is.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The display name of the user
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +71,9 @@ class Author extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The profile photo URI of the user.
+   *
+   * @param string $profilePhotoUri
    */
   public function setProfilePhotoUri($profilePhotoUri)
   {
@@ -61,14 +87,19 @@ class Author extends \Google\Model
     return $this->profilePhotoUri;
   }
   /**
-   * @param string
+   * The type of user the author is.
+   *
+   * Accepted values: AUTHOR_TYPE_UNSPECIFIED, REGULAR_USER, LOCAL_GUIDE,
+   * MERCHANT
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

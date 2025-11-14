@@ -20,10 +20,38 @@ namespace Google\Service\ContainerAnalysis;
 class Remediation extends \Google\Model
 {
   /**
+   * No remediation type specified.
+   */
+  public const REMEDIATION_TYPE_REMEDIATION_TYPE_UNSPECIFIED = 'REMEDIATION_TYPE_UNSPECIFIED';
+  /**
+   * A MITIGATION is available.
+   */
+  public const REMEDIATION_TYPE_MITIGATION = 'MITIGATION';
+  /**
+   * No fix is planned.
+   */
+  public const REMEDIATION_TYPE_NO_FIX_PLANNED = 'NO_FIX_PLANNED';
+  /**
+   * Not available.
+   */
+  public const REMEDIATION_TYPE_NONE_AVAILABLE = 'NONE_AVAILABLE';
+  /**
+   * A vendor fix is available.
+   */
+  public const REMEDIATION_TYPE_VENDOR_FIX = 'VENDOR_FIX';
+  /**
+   * A workaround is available.
+   */
+  public const REMEDIATION_TYPE_WORKAROUND = 'WORKAROUND';
+  /**
+   * Contains a comprehensive human-readable discussion of the remediation.
+   *
    * @var string
    */
   public $details;
   /**
+   * The type of remediation that can be applied.
+   *
    * @var string
    */
   public $remediationType;
@@ -31,7 +59,9 @@ class Remediation extends \Google\Model
   protected $remediationUriDataType = '';
 
   /**
-   * @param string
+   * Contains a comprehensive human-readable discussion of the remediation.
+   *
+   * @param string $details
    */
   public function setDetails($details)
   {
@@ -45,21 +75,28 @@ class Remediation extends \Google\Model
     return $this->details;
   }
   /**
-   * @param string
+   * The type of remediation that can be applied.
+   *
+   * Accepted values: REMEDIATION_TYPE_UNSPECIFIED, MITIGATION, NO_FIX_PLANNED,
+   * NONE_AVAILABLE, VENDOR_FIX, WORKAROUND
+   *
+   * @param self::REMEDIATION_TYPE_* $remediationType
    */
   public function setRemediationType($remediationType)
   {
     $this->remediationType = $remediationType;
   }
   /**
-   * @return string
+   * @return self::REMEDIATION_TYPE_*
    */
   public function getRemediationType()
   {
     return $this->remediationType;
   }
   /**
-   * @param RelatedUrl
+   * Contains the URL where to obtain the remediation.
+   *
+   * @param RelatedUrl $remediationUri
    */
   public function setRemediationUri(RelatedUrl $remediationUri)
   {

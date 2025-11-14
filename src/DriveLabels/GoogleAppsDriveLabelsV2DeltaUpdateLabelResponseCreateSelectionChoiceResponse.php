@@ -20,16 +20,22 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse extends \Google\Model
 {
   /**
+   * The server-generated ID of the field.
+   *
    * @var string
    */
   public $fieldId;
   /**
+   * The server-generated ID of the created choice within the field.
+   *
    * @var string
    */
   public $id;
 
   /**
-   * @param string
+   * The server-generated ID of the field.
+   *
+   * @param string $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -43,7 +49,9 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceRespon
     return $this->fieldId;
   }
   /**
-   * @param string
+   * The server-generated ID of the created choice within the field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {

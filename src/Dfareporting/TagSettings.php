@@ -20,16 +20,22 @@ namespace Google\Service\Dfareporting;
 class TagSettings extends \Google\Model
 {
   /**
+   * Whether dynamic floodlight tags are enabled.
+   *
    * @var bool
    */
   public $dynamicTagEnabled;
   /**
+   * Whether image tags are enabled.
+   *
    * @var bool
    */
   public $imageTagEnabled;
 
   /**
-   * @param bool
+   * Whether dynamic floodlight tags are enabled.
+   *
+   * @param bool $dynamicTagEnabled
    */
   public function setDynamicTagEnabled($dynamicTagEnabled)
   {
@@ -43,7 +49,9 @@ class TagSettings extends \Google\Model
     return $this->dynamicTagEnabled;
   }
   /**
-   * @param bool
+   * Whether image tags are enabled.
+   *
+   * @param bool $imageTagEnabled
    */
   public function setImageTagEnabled($imageTagEnabled)
   {

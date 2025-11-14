@@ -20,10 +20,20 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
 {
   /**
+   * Optional. The maximum number of links to return in a single page of the
+   * response. A page may contain fewer links than this value. If unspecified,
+   * at most 10 links are returned. Maximum value is 100; values greater than
+   * 100 are reduced to 100.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * Optional. The page token received from a previous `SearchLinksRequest`
+   * call. Use it to get the next page. When requesting subsequent pages of a
+   * response, remember that all parameters must match the values you provided
+   * in the original request.
+   *
    * @var string
    */
   public $pageToken;
@@ -33,7 +43,12 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
   protected $targetDataType = '';
 
   /**
-   * @param int
+   * Optional. The maximum number of links to return in a single page of the
+   * response. A page may contain fewer links than this value. If unspecified,
+   * at most 10 links are returned. Maximum value is 100; values greater than
+   * 100 are reduced to 100.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -47,7 +62,12 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
     return $this->pageSize;
   }
   /**
-   * @param string
+   * Optional. The page token received from a previous `SearchLinksRequest`
+   * call. Use it to get the next page. When requesting subsequent pages of a
+   * response, remember that all parameters must match the values you provided
+   * in the original request.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -61,7 +81,10 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
     return $this->pageToken;
   }
   /**
-   * @param GoogleCloudDatacatalogLineageV1EntityReference
+   * Optional. Send asset information in the **source** field to retrieve all
+   * links that lead from the specified asset to downstream assets.
+   *
+   * @param GoogleCloudDatacatalogLineageV1EntityReference $source
    */
   public function setSource(GoogleCloudDatacatalogLineageV1EntityReference $source)
   {
@@ -75,7 +98,10 @@ class GoogleCloudDatacatalogLineageV1SearchLinksRequest extends \Google\Model
     return $this->source;
   }
   /**
-   * @param GoogleCloudDatacatalogLineageV1EntityReference
+   * Optional. Send asset information in the **target** field to retrieve all
+   * links that lead from upstream assets to the specified asset.
+   *
+   * @param GoogleCloudDatacatalogLineageV1EntityReference $target
    */
   public function setTarget(GoogleCloudDatacatalogLineageV1EntityReference $target)
   {

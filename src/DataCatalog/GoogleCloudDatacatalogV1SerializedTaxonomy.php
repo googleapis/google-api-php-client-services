@@ -21,14 +21,22 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
 {
   protected $collection_key = 'policyTags';
   /**
+   * A list of policy types that are activated per taxonomy.
+   *
    * @var string[]
    */
   public $activatedPolicyTypes;
   /**
+   * Description of the serialized taxonomy. At most 2000 bytes when encoded in
+   * UTF-8. If not set, defaults to an empty description.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. Display name of the taxonomy. At most 200 bytes when encoded in
+   * UTF-8.
+   *
    * @var string
    */
   public $displayName;
@@ -36,7 +44,9 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
   protected $policyTagsDataType = 'array';
 
   /**
-   * @param string[]
+   * A list of policy types that are activated per taxonomy.
+   *
+   * @param string[] $activatedPolicyTypes
    */
   public function setActivatedPolicyTypes($activatedPolicyTypes)
   {
@@ -50,7 +60,10 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
     return $this->activatedPolicyTypes;
   }
   /**
-   * @param string
+   * Description of the serialized taxonomy. At most 2000 bytes when encoded in
+   * UTF-8. If not set, defaults to an empty description.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -64,7 +77,10 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Required. Display name of the taxonomy. At most 200 bytes when encoded in
+   * UTF-8.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -78,7 +94,9 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDatacatalogV1SerializedPolicyTag[]
+   * Top level policy tags associated with the taxonomy, if any.
+   *
+   * @param GoogleCloudDatacatalogV1SerializedPolicyTag[] $policyTags
    */
   public function setPolicyTags($policyTags)
   {

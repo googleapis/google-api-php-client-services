@@ -19,27 +19,52 @@ namespace Google\Service\BigQueryConnectionService;
 
 class CloudSqlProperties extends \Google\Model
 {
+  /**
+   * Unspecified database type.
+   */
+  public const TYPE_DATABASE_TYPE_UNSPECIFIED = 'DATABASE_TYPE_UNSPECIFIED';
+  /**
+   * Cloud SQL for PostgreSQL.
+   */
+  public const TYPE_POSTGRES = 'POSTGRES';
+  /**
+   * Cloud SQL for MySQL.
+   */
+  public const TYPE_MYSQL = 'MYSQL';
   protected $credentialType = CloudSqlCredential::class;
   protected $credentialDataType = '';
   /**
+   * Database name.
+   *
    * @var string
    */
   public $database;
   /**
+   * Cloud SQL instance ID in the form `project:location:instance`.
+   *
    * @var string
    */
   public $instanceId;
   /**
+   * Output only. The account ID of the service used for the purpose of this
+   * connection. When the connection is used in the context of an operation in
+   * BigQuery, this service account will serve as the identity being used for
+   * connecting to the CloudSQL instance specified in this connection.
+   *
    * @var string
    */
   public $serviceAccountId;
   /**
+   * Type of the Cloud SQL database.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param CloudSqlCredential
+   * Input only. Cloud SQL credential.
+   *
+   * @param CloudSqlCredential $credential
    */
   public function setCredential(CloudSqlCredential $credential)
   {
@@ -53,7 +78,9 @@ class CloudSqlProperties extends \Google\Model
     return $this->credential;
   }
   /**
-   * @param string
+   * Database name.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -67,7 +94,9 @@ class CloudSqlProperties extends \Google\Model
     return $this->database;
   }
   /**
-   * @param string
+   * Cloud SQL instance ID in the form `project:location:instance`.
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -81,7 +110,12 @@ class CloudSqlProperties extends \Google\Model
     return $this->instanceId;
   }
   /**
-   * @param string
+   * Output only. The account ID of the service used for the purpose of this
+   * connection. When the connection is used in the context of an operation in
+   * BigQuery, this service account will serve as the identity being used for
+   * connecting to the CloudSQL instance specified in this connection.
+   *
+   * @param string $serviceAccountId
    */
   public function setServiceAccountId($serviceAccountId)
   {
@@ -95,14 +129,18 @@ class CloudSqlProperties extends \Google\Model
     return $this->serviceAccountId;
   }
   /**
-   * @param string
+   * Type of the Cloud SQL database.
+   *
+   * Accepted values: DATABASE_TYPE_UNSPECIFIED, POSTGRES, MYSQL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

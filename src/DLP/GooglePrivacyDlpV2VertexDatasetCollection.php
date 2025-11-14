@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2VertexDatasetCollection extends \Google\Model
   protected $vertexDatasetRegexesDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2VertexDatasetRegexes
+   * The regex used to filter dataset resources.
+   *
+   * @param GooglePrivacyDlpV2VertexDatasetRegexes $vertexDatasetRegexes
    */
   public function setVertexDatasetRegexes(GooglePrivacyDlpV2VertexDatasetRegexes $vertexDatasetRegexes)
   {

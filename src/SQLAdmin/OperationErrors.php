@@ -23,12 +23,16 @@ class OperationErrors extends \Google\Collection
   protected $errorsType = OperationError::class;
   protected $errorsDataType = 'array';
   /**
+   * This is always `sql#operationErrors`.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param OperationError[]
+   * The list of errors encountered while processing this operation.
+   *
+   * @param OperationError[] $errors
    */
   public function setErrors($errors)
   {
@@ -42,7 +46,9 @@ class OperationErrors extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * This is always `sql#operationErrors`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

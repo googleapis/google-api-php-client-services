@@ -23,7 +23,11 @@ class RevertTransformationResponse extends \Google\Model
   protected $transformationDataType = '';
 
   /**
-   * @param Transformation
+   * Transformation as it appears in the latest container version since the last
+   * workspace synchronization operation. If no transformation is present, that
+   * means the transformation was deleted in the latest container version.
+   *
+   * @param Transformation $transformation
    */
   public function setTransformation(Transformation $transformation)
   {

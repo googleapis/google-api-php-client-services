@@ -21,16 +21,22 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsAnswerPart extends \Goo
 {
   protected $collection_key = 'supportingIndices';
   /**
+   * Citations for this answer part. Indices of `search_snippets`.
+   *
    * @var int[]
    */
   public $supportingIndices;
   /**
+   * Substring of the answer.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param int[]
+   * Citations for this answer part. Indices of `search_snippets`.
+   *
+   * @param int[] $supportingIndices
    */
   public function setSupportingIndices($supportingIndices)
   {
@@ -44,7 +50,9 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsAnswerPart extends \Goo
     return $this->supportingIndices;
   }
   /**
-   * @param string
+   * Substring of the answer.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

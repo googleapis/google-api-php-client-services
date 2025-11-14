@@ -21,34 +21,50 @@ class LandingPage extends \Google\Collection
 {
   protected $collection_key = 'deepLinks';
   /**
+   * Advertiser ID of this landing page. This is a required field.
+   *
    * @var string
    */
   public $advertiserId;
   /**
+   * Whether this landing page has been archived.
+   *
    * @var bool
    */
   public $archived;
   protected $deepLinksType = DeepLink::class;
   protected $deepLinksDataType = 'array';
   /**
+   * ID of this landing page. This is a read-only, auto-generated field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#landingPage".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of this landing page. This is a required field. It must be less than
+   * 256 characters long.
+   *
    * @var string
    */
   public $name;
   /**
+   * URL of this landing page. This is a required field.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Advertiser ID of this landing page. This is a required field.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -62,7 +78,9 @@ class LandingPage extends \Google\Collection
     return $this->advertiserId;
   }
   /**
-   * @param bool
+   * Whether this landing page has been archived.
+   *
+   * @param bool $archived
    */
   public function setArchived($archived)
   {
@@ -76,7 +94,9 @@ class LandingPage extends \Google\Collection
     return $this->archived;
   }
   /**
-   * @param DeepLink[]
+   * Links that will direct the user to a mobile app, if installed.
+   *
+   * @param DeepLink[] $deepLinks
    */
   public function setDeepLinks($deepLinks)
   {
@@ -90,7 +110,9 @@ class LandingPage extends \Google\Collection
     return $this->deepLinks;
   }
   /**
-   * @param string
+   * ID of this landing page. This is a read-only, auto-generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -104,7 +126,10 @@ class LandingPage extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#landingPage".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -118,7 +143,10 @@ class LandingPage extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of this landing page. This is a required field. It must be less than
+   * 256 characters long.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -132,7 +160,9 @@ class LandingPage extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * URL of this landing page. This is a required field.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

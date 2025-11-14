@@ -20,20 +20,53 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3FlowInvocation extends \Google\Model
 {
   /**
+   * Unspecified output.
+   */
+  public const FLOW_STATE_OUTPUT_STATE_UNSPECIFIED = 'OUTPUT_STATE_UNSPECIFIED';
+  /**
+   * Succeeded.
+   */
+  public const FLOW_STATE_OUTPUT_STATE_OK = 'OUTPUT_STATE_OK';
+  /**
+   * Cancelled.
+   */
+  public const FLOW_STATE_OUTPUT_STATE_CANCELLED = 'OUTPUT_STATE_CANCELLED';
+  /**
+   * Failed.
+   */
+  public const FLOW_STATE_OUTPUT_STATE_FAILED = 'OUTPUT_STATE_FAILED';
+  /**
+   * Escalated.
+   */
+  public const FLOW_STATE_OUTPUT_STATE_ESCALATED = 'OUTPUT_STATE_ESCALATED';
+  /**
+   * Pending.
+   */
+  public const FLOW_STATE_OUTPUT_STATE_PENDING = 'OUTPUT_STATE_PENDING';
+  /**
+   * Output only. The display name of the flow.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. The unique identifier of the flow. Format:
+   * `projects//locations//agents//flows/`.
+   *
    * @var string
    */
   public $flow;
   /**
+   * Required. Flow invocation's output state.
+   *
    * @var string
    */
   public $flowState;
 
   /**
-   * @param string
+   * Output only. The display name of the flow.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +80,10 @@ class GoogleCloudDialogflowCxV3FlowInvocation extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. The unique identifier of the flow. Format:
+   * `projects//locations//agents//flows/`.
+   *
+   * @param string $flow
    */
   public function setFlow($flow)
   {
@@ -61,14 +97,20 @@ class GoogleCloudDialogflowCxV3FlowInvocation extends \Google\Model
     return $this->flow;
   }
   /**
-   * @param string
+   * Required. Flow invocation's output state.
+   *
+   * Accepted values: OUTPUT_STATE_UNSPECIFIED, OUTPUT_STATE_OK,
+   * OUTPUT_STATE_CANCELLED, OUTPUT_STATE_FAILED, OUTPUT_STATE_ESCALATED,
+   * OUTPUT_STATE_PENDING
+   *
+   * @param self::FLOW_STATE_* $flowState
    */
   public function setFlowState($flowState)
   {
     $this->flowState = $flowState;
   }
   /**
-   * @return string
+   * @return self::FLOW_STATE_*
    */
   public function getFlowState()
   {

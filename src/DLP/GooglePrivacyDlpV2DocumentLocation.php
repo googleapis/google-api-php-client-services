@@ -20,12 +20,18 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DocumentLocation extends \Google\Model
 {
   /**
+   * Offset of the line, from the beginning of the file, where the finding is
+   * located.
+   *
    * @var string
    */
   public $fileOffset;
 
   /**
-   * @param string
+   * Offset of the line, from the beginning of the file, where the finding is
+   * located.
+   *
+   * @param string $fileOffset
    */
   public function setFileOffset($fileOffset)
   {

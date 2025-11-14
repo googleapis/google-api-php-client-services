@@ -23,7 +23,9 @@ class GoogleCloudDialogflowCxV3ConversationSignals extends \Google\Model
   protected $turnSignalsDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowCxV3TurnSignals
+   * Required. Turn signals for the current turn.
+   *
+   * @param GoogleCloudDialogflowCxV3TurnSignals $turnSignals
    */
   public function setTurnSignals(GoogleCloudDialogflowCxV3TurnSignals $turnSignals)
   {

@@ -23,12 +23,21 @@ class BulkListAssignedTargetingOptionsResponse extends \Google\Collection
   protected $lineItemAssignedTargetingOptionsType = LineItemAssignedTargetingOption::class;
   protected $lineItemAssignedTargetingOptionsDataType = 'array';
   /**
+   * A token identifying the next page of results. This value should be
+   * specified as the pageToken in a subsequent call to
+   * `BulkListAssignedTargetingOptions` to fetch the next page of results. This
+   * token will be absent if there are no more
+   * line_item_assigned_targeting_options to return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param LineItemAssignedTargetingOption[]
+   * The list of wrapper objects, each providing an assigned targeting option
+   * and the line item it is assigned to. This list will be absent if empty.
+   *
+   * @param LineItemAssignedTargetingOption[] $lineItemAssignedTargetingOptions
    */
   public function setLineItemAssignedTargetingOptions($lineItemAssignedTargetingOptions)
   {
@@ -42,7 +51,13 @@ class BulkListAssignedTargetingOptionsResponse extends \Google\Collection
     return $this->lineItemAssignedTargetingOptions;
   }
   /**
-   * @param string
+   * A token identifying the next page of results. This value should be
+   * specified as the pageToken in a subsequent call to
+   * `BulkListAssignedTargetingOptions` to fetch the next page of results. This
+   * token will be absent if there are no more
+   * line_item_assigned_targeting_options to return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,22 +20,35 @@ namespace Google\Service\Docs;
 class ReplaceNamedRangeContentRequest extends \Google\Model
 {
   /**
+   * The ID of the named range whose content will be replaced. If there is no
+   * named range with the given ID a 400 bad request error is returned.
+   *
    * @var string
    */
   public $namedRangeId;
   /**
+   * The name of the NamedRanges whose content will be replaced. If there are
+   * multiple named ranges with the given name, then the content of each one
+   * will be replaced. If there are no named ranges with the given name, then
+   * the request will be a no-op.
+   *
    * @var string
    */
   public $namedRangeName;
   protected $tabsCriteriaType = TabsCriteria::class;
   protected $tabsCriteriaDataType = '';
   /**
+   * Replaces the content of the specified named range(s) with the given text.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * The ID of the named range whose content will be replaced. If there is no
+   * named range with the given ID a 400 bad request error is returned.
+   *
+   * @param string $namedRangeId
    */
   public function setNamedRangeId($namedRangeId)
   {
@@ -49,7 +62,12 @@ class ReplaceNamedRangeContentRequest extends \Google\Model
     return $this->namedRangeId;
   }
   /**
-   * @param string
+   * The name of the NamedRanges whose content will be replaced. If there are
+   * multiple named ranges with the given name, then the content of each one
+   * will be replaced. If there are no named ranges with the given name, then
+   * the request will be a no-op.
+   *
+   * @param string $namedRangeName
    */
   public function setNamedRangeName($namedRangeName)
   {
@@ -63,7 +81,14 @@ class ReplaceNamedRangeContentRequest extends \Google\Model
     return $this->namedRangeName;
   }
   /**
-   * @param TabsCriteria
+   * Optional. The criteria used to specify in which tabs the replacement
+   * occurs. When omitted, the replacement applies to all tabs. In a document
+   * containing a single tab: - If provided, must match the singular tab's ID. -
+   * If omitted, the replacement applies to the singular tab. In a document
+   * containing multiple tabs: - If provided, the replacement applies to the
+   * specified tabs. - If omitted, the replacement applies to all tabs.
+   *
+   * @param TabsCriteria $tabsCriteria
    */
   public function setTabsCriteria(TabsCriteria $tabsCriteria)
   {
@@ -77,7 +102,9 @@ class ReplaceNamedRangeContentRequest extends \Google\Model
     return $this->tabsCriteria;
   }
   /**
-   * @param string
+   * Replaces the content of the specified named range(s) with the given text.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

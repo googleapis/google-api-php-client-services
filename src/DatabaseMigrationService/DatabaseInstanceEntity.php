@@ -20,12 +20,16 @@ namespace Google\Service\DatabaseMigrationService;
 class DatabaseInstanceEntity extends \Google\Model
 {
   /**
+   * Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
 
   /**
-   * @param array[]
+   * Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {

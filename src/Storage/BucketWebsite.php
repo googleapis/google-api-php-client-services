@@ -20,16 +20,30 @@ namespace Google\Service\Storage;
 class BucketWebsite extends \Google\Model
 {
   /**
+   * If the requested object path is missing, the service will ensure the path
+   * has a trailing '/', append this suffix, and attempt to retrieve the
+   * resulting object. This allows the creation of index.html objects to
+   * represent directory pages.
+   *
    * @var string
    */
   public $mainPageSuffix;
   /**
+   * If the requested object path is missing, and any mainPageSuffix object is
+   * missing, if applicable, the service will return the named object from this
+   * bucket as the content for a 404 Not Found result.
+   *
    * @var string
    */
   public $notFoundPage;
 
   /**
-   * @param string
+   * If the requested object path is missing, the service will ensure the path
+   * has a trailing '/', append this suffix, and attempt to retrieve the
+   * resulting object. This allows the creation of index.html objects to
+   * represent directory pages.
+   *
+   * @param string $mainPageSuffix
    */
   public function setMainPageSuffix($mainPageSuffix)
   {
@@ -43,7 +57,11 @@ class BucketWebsite extends \Google\Model
     return $this->mainPageSuffix;
   }
   /**
-   * @param string
+   * If the requested object path is missing, and any mainPageSuffix object is
+   * missing, if applicable, the service will return the named object from this
+   * bucket as the content for a 404 Not Found result.
+   *
+   * @param string $notFoundPage
    */
   public function setNotFoundPage($notFoundPage)
   {

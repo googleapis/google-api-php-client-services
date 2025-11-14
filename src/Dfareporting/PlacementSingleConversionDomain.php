@@ -29,7 +29,7 @@ class PlacementSingleConversionDomain extends \Google\Model
   public $conversionDomainValue;
 
   /**
-   * @param string
+   * @param string $conversionDomainId
    */
   public function setConversionDomainId($conversionDomainId)
   {
@@ -43,7 +43,7 @@ class PlacementSingleConversionDomain extends \Google\Model
     return $this->conversionDomainId;
   }
   /**
-   * @param string
+   * @param string $conversionDomainValue
    */
   public function setConversionDomainValue($conversionDomainValue)
   {

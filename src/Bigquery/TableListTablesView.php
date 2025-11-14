@@ -22,12 +22,16 @@ class TableListTablesView extends \Google\Model
   protected $privacyPolicyType = PrivacyPolicy::class;
   protected $privacyPolicyDataType = '';
   /**
+   * True if view is defined in legacy SQL dialect, false if in GoogleSQL.
+   *
    * @var bool
    */
   public $useLegacySql;
 
   /**
-   * @param PrivacyPolicy
+   * Specifies the privacy policy for the view.
+   *
+   * @param PrivacyPolicy $privacyPolicy
    */
   public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
   {
@@ -41,7 +45,9 @@ class TableListTablesView extends \Google\Model
     return $this->privacyPolicy;
   }
   /**
-   * @param bool
+   * True if view is defined in legacy SQL dialect, false if in GoogleSQL.
+   *
+   * @param bool $useLegacySql
    */
   public function setUseLegacySql($useLegacySql)
   {

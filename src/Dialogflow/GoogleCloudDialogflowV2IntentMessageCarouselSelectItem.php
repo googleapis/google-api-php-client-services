@@ -20,6 +20,8 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extends \Google\Model
 {
   /**
+   * Optional. The body text of the card.
+   *
    * @var string
    */
   public $description;
@@ -28,12 +30,16 @@ class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extends \Google\Mod
   protected $infoType = GoogleCloudDialogflowV2IntentMessageSelectItemInfo::class;
   protected $infoDataType = '';
   /**
+   * Required. Title of the carousel item.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Optional. The body text of the card.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -47,7 +53,9 @@ class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extends \Google\Mod
     return $this->description;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentMessageImage
+   * Optional. The image to display.
+   *
+   * @param GoogleCloudDialogflowV2IntentMessageImage $image
    */
   public function setImage(GoogleCloudDialogflowV2IntentMessageImage $image)
   {
@@ -61,7 +69,9 @@ class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extends \Google\Mod
     return $this->image;
   }
   /**
-   * @param GoogleCloudDialogflowV2IntentMessageSelectItemInfo
+   * Required. Additional info about the option item.
+   *
+   * @param GoogleCloudDialogflowV2IntentMessageSelectItemInfo $info
    */
   public function setInfo(GoogleCloudDialogflowV2IntentMessageSelectItemInfo $info)
   {
@@ -75,7 +85,9 @@ class GoogleCloudDialogflowV2IntentMessageCarouselSelectItem extends \Google\Mod
     return $this->info;
   }
   /**
-   * @param string
+   * Required. Title of the carousel item.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

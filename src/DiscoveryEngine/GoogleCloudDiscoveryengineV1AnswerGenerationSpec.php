@@ -23,7 +23,9 @@ class GoogleCloudDiscoveryengineV1AnswerGenerationSpec extends \Google\Model
   protected $userDefinedClassifierSpecDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec
+   * Optional. The specification for user specified classifier spec.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec $userDefinedClassifierSpec
    */
   public function setUserDefinedClassifierSpec(GoogleCloudDiscoveryengineV1AnswerGenerationSpecUserDefinedClassifierSpec $userDefinedClassifierSpec)
   {

@@ -20,24 +20,40 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends \Google\Model
 {
   /**
+   * If true, on a given page, there can be multiple `document` annotations
+   * covering it.
+   *
    * @var bool
    */
   public $documentAllowMultipleLabels;
   /**
+   * If true, a `document` entity type can be applied to subdocument
+   * (splitting). Otherwise, it can only be applied to the entire document
+   * (classification).
+   *
    * @var bool
    */
   public $documentSplitter;
   /**
+   * If set, all the nested entities must be prefixed with the parents.
+   *
    * @var bool
    */
   public $prefixedNamingOnProperties;
   /**
+   * If set, we will skip the naming format validation in the schema. So the
+   * string values in `DocumentSchema.EntityType.name` and
+   * `DocumentSchema.EntityType.Property.name` will not be checked.
+   *
    * @var bool
    */
   public $skipNamingValidation;
 
   /**
-   * @param bool
+   * If true, on a given page, there can be multiple `document` annotations
+   * covering it.
+   *
+   * @param bool $documentAllowMultipleLabels
    */
   public function setDocumentAllowMultipleLabels($documentAllowMultipleLabels)
   {
@@ -51,7 +67,11 @@ class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends \Google\Model
     return $this->documentAllowMultipleLabels;
   }
   /**
-   * @param bool
+   * If true, a `document` entity type can be applied to subdocument
+   * (splitting). Otherwise, it can only be applied to the entire document
+   * (classification).
+   *
+   * @param bool $documentSplitter
    */
   public function setDocumentSplitter($documentSplitter)
   {
@@ -65,7 +85,9 @@ class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends \Google\Model
     return $this->documentSplitter;
   }
   /**
-   * @param bool
+   * If set, all the nested entities must be prefixed with the parents.
+   *
+   * @param bool $prefixedNamingOnProperties
    */
   public function setPrefixedNamingOnProperties($prefixedNamingOnProperties)
   {
@@ -79,7 +101,11 @@ class GoogleCloudDocumentaiV1DocumentSchemaMetadata extends \Google\Model
     return $this->prefixedNamingOnProperties;
   }
   /**
-   * @param bool
+   * If set, we will skip the naming format validation in the schema. So the
+   * string values in `DocumentSchema.EntityType.name` and
+   * `DocumentSchema.EntityType.Property.name` will not be checked.
+   *
+   * @param bool $skipNamingValidation
    */
   public function setSkipNamingValidation($skipNamingValidation)
   {

@@ -20,6 +20,8 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage extends \Google\Model
 {
   /**
+   * Output only. Path to the artifact in Artifact Registry.
+   *
    * @var string
    */
   public $artifactRegistryPackage;
@@ -28,12 +30,16 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage extends \Goo
   protected $pushTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $pushTimingDataType = '';
   /**
+   * URI of the uploaded npm package.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Output only. Path to the artifact in Artifact Registry.
+   *
+   * @param string $artifactRegistryPackage
    */
   public function setArtifactRegistryPackage($artifactRegistryPackage)
   {
@@ -47,7 +53,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage extends \Goo
     return $this->artifactRegistryPackage;
   }
   /**
-   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes
+   * Hash types and values of the npm package.
+   *
+   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes $fileHashes
    */
   public function setFileHashes(ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes $fileHashes)
   {
@@ -61,7 +69,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage extends \Goo
     return $this->fileHashes;
   }
   /**
-   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan
+   * Output only. Stores timing information for pushing the specified artifact.
+   *
+   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan $pushTiming
    */
   public function setPushTiming(ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan $pushTiming)
   {
@@ -75,7 +85,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage extends \Goo
     return $this->pushTiming;
   }
   /**
-   * @param string
+   * URI of the uploaded npm package.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

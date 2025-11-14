@@ -23,12 +23,16 @@ class ListDestinationsResponse extends \Google\Collection
   protected $destinationType = Destination::class;
   protected $destinationDataType = 'array';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Destination[]
+   * All Destinations linked to a GTM Container.
+   *
+   * @param Destination[] $destination
    */
   public function setDestination($destination)
   {
@@ -42,7 +46,9 @@ class ListDestinationsResponse extends \Google\Collection
     return $this->destination;
   }
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

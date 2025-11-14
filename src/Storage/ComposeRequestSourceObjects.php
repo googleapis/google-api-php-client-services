@@ -20,10 +20,15 @@ namespace Google\Service\Storage;
 class ComposeRequestSourceObjects extends \Google\Model
 {
   /**
+   * The generation of this object to use as the source.
+   *
    * @var string
    */
   public $generation;
   /**
+   * The source object's name. All source objects must reside in the same
+   * bucket.
+   *
    * @var string
    */
   public $name;
@@ -31,7 +36,9 @@ class ComposeRequestSourceObjects extends \Google\Model
   protected $objectPreconditionsDataType = '';
 
   /**
-   * @param string
+   * The generation of this object to use as the source.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -45,7 +52,10 @@ class ComposeRequestSourceObjects extends \Google\Model
     return $this->generation;
   }
   /**
-   * @param string
+   * The source object's name. All source objects must reside in the same
+   * bucket.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -59,7 +69,9 @@ class ComposeRequestSourceObjects extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ComposeRequestSourceObjectsObjectPreconditions
+   * Conditions that must be met for this operation to execute.
+   *
+   * @param ComposeRequestSourceObjectsObjectPreconditions $objectPreconditions
    */
   public function setObjectPreconditions(ComposeRequestSourceObjectsObjectPreconditions $objectPreconditions)
   {

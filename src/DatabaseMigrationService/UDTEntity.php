@@ -20,20 +20,28 @@ namespace Google\Service\DatabaseMigrationService;
 class UDTEntity extends \Google\Model
 {
   /**
+   * Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
   /**
+   * The SQL code which creates the udt body.
+   *
    * @var string
    */
   public $udtBody;
   /**
+   * The SQL code which creates the udt.
+   *
    * @var string
    */
   public $udtSqlCode;
 
   /**
-   * @param array[]
+   * Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {
@@ -47,7 +55,9 @@ class UDTEntity extends \Google\Model
     return $this->customFeatures;
   }
   /**
-   * @param string
+   * The SQL code which creates the udt body.
+   *
+   * @param string $udtBody
    */
   public function setUdtBody($udtBody)
   {
@@ -61,7 +71,9 @@ class UDTEntity extends \Google\Model
     return $this->udtBody;
   }
   /**
-   * @param string
+   * The SQL code which creates the udt.
+   *
+   * @param string $udtSqlCode
    */
   public function setUdtSqlCode($udtSqlCode)
   {

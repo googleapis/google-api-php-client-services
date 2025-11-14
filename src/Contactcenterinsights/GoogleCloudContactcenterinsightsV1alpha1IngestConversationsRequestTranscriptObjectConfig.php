@@ -20,19 +20,37 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestTranscriptObjectConfig extends \Google\Model
 {
   /**
+   * Default value, if unspecified will default to PHONE_CALL.
+   */
+  public const MEDIUM_MEDIUM_UNSPECIFIED = 'MEDIUM_UNSPECIFIED';
+  /**
+   * The format for conversations that took place over the phone.
+   */
+  public const MEDIUM_PHONE_CALL = 'PHONE_CALL';
+  /**
+   * The format for conversations that took place over chat.
+   */
+  public const MEDIUM_CHAT = 'CHAT';
+  /**
+   * Required. The medium transcript objects represent.
+   *
    * @var string
    */
   public $medium;
 
   /**
-   * @param string
+   * Required. The medium transcript objects represent.
+   *
+   * Accepted values: MEDIUM_UNSPECIFIED, PHONE_CALL, CHAT
+   *
+   * @param self::MEDIUM_* $medium
    */
   public function setMedium($medium)
   {
     $this->medium = $medium;
   }
   /**
-   * @return string
+   * @return self::MEDIUM_*
    */
   public function getMedium()
   {

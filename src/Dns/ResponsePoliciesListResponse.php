@@ -21,6 +21,15 @@ class ResponsePoliciesListResponse extends \Google\Collection
 {
   protected $collection_key = 'responsePolicies';
   /**
+   * This field indicates that more results are available beyond the last page
+   * displayed. To fetch the results, make another list request and use this
+   * value as your page token. This lets you retrieve the complete contents of a
+   * very large collection one page at a time. However, if the contents of the
+   * collection change between the first and last paginated list request, the
+   * set of all elements returned are an inconsistent view of the collection.
+   * You can't retrieve a consistent snapshot of a collection larger than the
+   * maximum page size.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +37,16 @@ class ResponsePoliciesListResponse extends \Google\Collection
   protected $responsePoliciesDataType = 'array';
 
   /**
-   * @param string
+   * This field indicates that more results are available beyond the last page
+   * displayed. To fetch the results, make another list request and use this
+   * value as your page token. This lets you retrieve the complete contents of a
+   * very large collection one page at a time. However, if the contents of the
+   * collection change between the first and last paginated list request, the
+   * set of all elements returned are an inconsistent view of the collection.
+   * You can't retrieve a consistent snapshot of a collection larger than the
+   * maximum page size.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +60,9 @@ class ResponsePoliciesListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ResponsePolicy[]
+   * The Response Policy resources.
+   *
+   * @param ResponsePolicy[] $responsePolicies
    */
   public function setResponsePolicies($responsePolicies)
   {

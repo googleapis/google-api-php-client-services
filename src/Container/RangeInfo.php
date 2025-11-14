@@ -20,13 +20,22 @@ namespace Google\Service\Container;
 class RangeInfo extends \Google\Model
 {
   /**
+   * Output only. Name of a range.
+   *
    * @var string
    */
   public $rangeName;
+  /**
+   * Output only. The utilization of the range.
+   *
+   * @var 
+   */
   public $utilization;
 
   /**
-   * @param string
+   * Output only. Name of a range.
+   *
+   * @param string $rangeName
    */
   public function setRangeName($rangeName)
   {

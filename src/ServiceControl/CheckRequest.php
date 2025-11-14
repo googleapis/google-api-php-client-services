@@ -23,18 +23,26 @@ class CheckRequest extends \Google\Collection
   protected $attributesType = AttributeContext::class;
   protected $attributesDataType = '';
   /**
+   * Optional. Contains a comma-separated list of flags.
+   *
    * @var string
    */
   public $flags;
   protected $resourcesType = ResourceInfo::class;
   protected $resourcesDataType = 'array';
   /**
+   * Specifies the version of the service configuration that should be used to
+   * process the request. Must not be empty. Set this field to 'latest' to
+   * specify using the latest configuration.
+   *
    * @var string
    */
   public $serviceConfigId;
 
   /**
-   * @param AttributeContext
+   * Describes attributes about the operation being executed by the service.
+   *
+   * @param AttributeContext $attributes
    */
   public function setAttributes(AttributeContext $attributes)
   {
@@ -48,7 +56,9 @@ class CheckRequest extends \Google\Collection
     return $this->attributes;
   }
   /**
-   * @param string
+   * Optional. Contains a comma-separated list of flags.
+   *
+   * @param string $flags
    */
   public function setFlags($flags)
   {
@@ -62,7 +72,9 @@ class CheckRequest extends \Google\Collection
     return $this->flags;
   }
   /**
-   * @param ResourceInfo[]
+   * Describes the resources and the policies applied to each resource.
+   *
+   * @param ResourceInfo[] $resources
    */
   public function setResources($resources)
   {
@@ -76,7 +88,11 @@ class CheckRequest extends \Google\Collection
     return $this->resources;
   }
   /**
-   * @param string
+   * Specifies the version of the service configuration that should be used to
+   * process the request. Must not be empty. Set this field to 'latest' to
+   * specify using the latest configuration.
+   *
+   * @param string $serviceConfigId
    */
   public function setServiceConfigId($serviceConfigId)
   {

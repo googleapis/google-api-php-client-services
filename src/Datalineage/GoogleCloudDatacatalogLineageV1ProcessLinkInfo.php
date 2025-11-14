@@ -20,20 +20,29 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageV1ProcessLinkInfo extends \Google\Model
 {
   /**
+   * The end of the last event establishing this link-process tuple.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The name of the link in the format of
+   * `projects/{project}/locations/{location}/links/{link}`.
+   *
    * @var string
    */
   public $link;
   /**
+   * The start of the first event establishing this link-process tuple.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * The end of the last event establishing this link-process tuple.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -47,7 +56,10 @@ class GoogleCloudDatacatalogLineageV1ProcessLinkInfo extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * The name of the link in the format of
+   * `projects/{project}/locations/{location}/links/{link}`.
+   *
+   * @param string $link
    */
   public function setLink($link)
   {
@@ -61,7 +73,9 @@ class GoogleCloudDatacatalogLineageV1ProcessLinkInfo extends \Google\Model
     return $this->link;
   }
   /**
-   * @param string
+   * The start of the first event establishing this link-process tuple.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

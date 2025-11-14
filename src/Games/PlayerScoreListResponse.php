@@ -21,6 +21,9 @@ class PlayerScoreListResponse extends \Google\Collection
 {
   protected $collection_key = 'submittedScores';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerScoreListResponse`.
+   *
    * @var string
    */
   public $kind;
@@ -28,7 +31,10 @@ class PlayerScoreListResponse extends \Google\Collection
   protected $submittedScoresDataType = 'array';
 
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#playerScoreListResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -42,7 +48,9 @@ class PlayerScoreListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param PlayerScoreResponse[]
+   * The score submissions statuses.
+   *
+   * @param PlayerScoreResponse[] $submittedScores
    */
   public function setSubmittedScores($submittedScores)
   {

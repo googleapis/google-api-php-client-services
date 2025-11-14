@@ -20,24 +20,54 @@ namespace Google\Service\CloudCommercePartnerProcurementService;
 class Approval extends \Google\Model
 {
   /**
+   * Sentinel value; do not use.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The approval is pending response from the provider. The approval state can
+   * transition to Account.Approval.State.APPROVED or
+   * Account.Approval.State.REJECTED.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The approval has been granted by the provider.
+   */
+  public const STATE_APPROVED = 'APPROVED';
+  /**
+   * The approval has been rejected by the provider. A provider may choose to
+   * approve a previously rejected approval, so is it possible to transition to
+   * Account.Approval.State.APPROVED.
+   */
+  public const STATE_REJECTED = 'REJECTED';
+  /**
+   * Output only. The name of the approval.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. An explanation for the state of the approval.
+   *
    * @var string
    */
   public $reason;
   /**
+   * Output only. The state of the approval.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. The last update timestamp of the approval.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The name of the approval.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -51,7 +81,9 @@ class Approval extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. An explanation for the state of the approval.
+   *
+   * @param string $reason
    */
   public function setReason($reason)
   {
@@ -65,21 +97,27 @@ class Approval extends \Google\Model
     return $this->reason;
   }
   /**
-   * @param string
+   * Output only. The state of the approval.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, APPROVED, REJECTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Optional. The last update timestamp of the approval.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

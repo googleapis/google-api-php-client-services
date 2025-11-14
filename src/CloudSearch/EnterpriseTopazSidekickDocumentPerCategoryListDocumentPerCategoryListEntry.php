@@ -19,6 +19,42 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry extends \Google\Model
 {
+  public const CATEGORY_UNKNOWN_DOCUMENT = 'UNKNOWN_DOCUMENT';
+  /**
+   * @deprecated
+   */
+  public const CATEGORY_ACTIONABLE = 'ACTIONABLE';
+  public const CATEGORY_VIEWED = 'VIEWED';
+  /**
+   * @deprecated
+   */
+  public const CATEGORY_REPLIED = 'REPLIED';
+  /**
+   * Mention categories. The mention has been viewed by the user, but the user
+   * has not replied.
+   */
+  public const CATEGORY_MENTION_VIEWED = 'MENTION_VIEWED';
+  /**
+   * The user has replied to the mention.
+   */
+  public const CATEGORY_MENTION_REPLIED = 'MENTION_REPLIED';
+  /**
+   * The mention has not been viewed by the user.
+   */
+  public const CATEGORY_MENTION_NOT_VIEWED = 'MENTION_NOT_VIEWED';
+  /**
+   * Share categories. Consists of documents that have been explicitly shared
+   * with the user. Document has been viewed.
+   */
+  public const CATEGORY_SHARED_AND_VIEWED = 'SHARED_AND_VIEWED';
+  /**
+   * Document has not been viewed.
+   */
+  public const CATEGORY_SHARED_NOT_VIEWED = 'SHARED_NOT_VIEWED';
+  /**
+   * Document has been edited.
+   */
+  public const CATEGORY_EDITED = 'EDITED';
   /**
    * @var string
    */
@@ -26,26 +62,28 @@ class EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry
   protected $documentType = EnterpriseTopazSidekickCommonDocument::class;
   protected $documentDataType = '';
   /**
+   * Reason this document was selected.
+   *
    * @var string
    */
   public $rationale;
 
   /**
-   * @param string
+   * @param self::CATEGORY_* $category
    */
   public function setCategory($category)
   {
     $this->category = $category;
   }
   /**
-   * @return string
+   * @return self::CATEGORY_*
    */
   public function getCategory()
   {
     return $this->category;
   }
   /**
-   * @param EnterpriseTopazSidekickCommonDocument
+   * @param EnterpriseTopazSidekickCommonDocument $document
    */
   public function setDocument(EnterpriseTopazSidekickCommonDocument $document)
   {
@@ -59,7 +97,9 @@ class EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry
     return $this->document;
   }
   /**
-   * @param string
+   * Reason this document was selected.
+   *
+   * @param string $rationale
    */
   public function setRationale($rationale)
   {

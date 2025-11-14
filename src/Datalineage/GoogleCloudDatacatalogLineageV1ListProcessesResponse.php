@@ -21,6 +21,9 @@ class GoogleCloudDatacatalogLineageV1ListProcessesResponse extends \Google\Colle
 {
   protected $collection_key = 'processes';
   /**
+   * The token to specify as `page_token` in the next call to get the next page.
+   * If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudDatacatalogLineageV1ListProcessesResponse extends \Google\Colle
   protected $processesDataType = 'array';
 
   /**
-   * @param string
+   * The token to specify as `page_token` in the next call to get the next page.
+   * If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudDatacatalogLineageV1ListProcessesResponse extends \Google\Colle
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDatacatalogLineageV1Process[]
+   * The processes from the specified project and location.
+   *
+   * @param GoogleCloudDatacatalogLineageV1Process[] $processes
    */
   public function setProcesses($processes)
   {

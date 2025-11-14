@@ -21,10 +21,14 @@ class EnumValue extends \Google\Collection
 {
   protected $collection_key = 'options';
   /**
+   * Enum value name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Enum value number.
+   *
    * @var int
    */
   public $number;
@@ -32,7 +36,9 @@ class EnumValue extends \Google\Collection
   protected $optionsDataType = 'array';
 
   /**
-   * @param string
+   * Enum value name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -46,7 +52,9 @@ class EnumValue extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * Enum value number.
+   *
+   * @param int $number
    */
   public function setNumber($number)
   {
@@ -60,7 +68,9 @@ class EnumValue extends \Google\Collection
     return $this->number;
   }
   /**
-   * @param Option[]
+   * Protocol buffer options.
+   *
+   * @param Option[] $options
    */
   public function setOptions($options)
   {

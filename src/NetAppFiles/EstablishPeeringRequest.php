@@ -21,24 +21,38 @@ class EstablishPeeringRequest extends \Google\Collection
 {
   protected $collection_key = 'peerIpAddresses';
   /**
+   * Required. Name of the user's local source cluster to be peered with the
+   * destination cluster.
+   *
    * @var string
    */
   public $peerClusterName;
   /**
+   * Optional. List of IPv4 ip addresses to be used for peering.
+   *
    * @var string[]
    */
   public $peerIpAddresses;
   /**
+   * Required. Name of the user's local source vserver svm to be peered with the
+   * destination vserver svm.
+   *
    * @var string
    */
   public $peerSvmName;
   /**
+   * Required. Name of the user's local source volume to be peered with the
+   * destination volume.
+   *
    * @var string
    */
   public $peerVolumeName;
 
   /**
-   * @param string
+   * Required. Name of the user's local source cluster to be peered with the
+   * destination cluster.
+   *
+   * @param string $peerClusterName
    */
   public function setPeerClusterName($peerClusterName)
   {
@@ -52,7 +66,9 @@ class EstablishPeeringRequest extends \Google\Collection
     return $this->peerClusterName;
   }
   /**
-   * @param string[]
+   * Optional. List of IPv4 ip addresses to be used for peering.
+   *
+   * @param string[] $peerIpAddresses
    */
   public function setPeerIpAddresses($peerIpAddresses)
   {
@@ -66,7 +82,10 @@ class EstablishPeeringRequest extends \Google\Collection
     return $this->peerIpAddresses;
   }
   /**
-   * @param string
+   * Required. Name of the user's local source vserver svm to be peered with the
+   * destination vserver svm.
+   *
+   * @param string $peerSvmName
    */
   public function setPeerSvmName($peerSvmName)
   {
@@ -80,7 +99,10 @@ class EstablishPeeringRequest extends \Google\Collection
     return $this->peerSvmName;
   }
   /**
-   * @param string
+   * Required. Name of the user's local source volume to be peered with the
+   * destination volume.
+   *
+   * @param string $peerVolumeName
    */
   public function setPeerVolumeName($peerVolumeName)
   {

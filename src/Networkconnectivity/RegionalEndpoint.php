@@ -20,70 +20,134 @@ namespace Google\Service\Networkconnectivity;
 class RegionalEndpoint extends \Google\Model
 {
   /**
+   * An invalid type as the default case.
+   */
+  public const ACCESS_TYPE_ACCESS_TYPE_UNSPECIFIED = 'ACCESS_TYPE_UNSPECIFIED';
+  /**
+   * This regional endpoint is accessible from all regions.
+   */
+  public const ACCESS_TYPE_GLOBAL = 'GLOBAL';
+  /**
+   * This regional endpoint is only accessible from the same region where it
+   * resides.
+   */
+  public const ACCESS_TYPE_REGIONAL = 'REGIONAL';
+  /**
+   * Required. The access type of this regional endpoint. This field is
+   * reflected in the PSC Forwarding Rule configuration to enable global access.
+   *
    * @var string
    */
   public $accessType;
   /**
+   * Optional. The IP Address of the Regional Endpoint. When no address is
+   * provided, an IP from the subnetwork is allocated. Use one of the following
+   * formats: * IPv4 address as in `10.0.0.1` * Address resource URI as in
+   * `projects/{project}/regions/{region}/addresses/{address_name}` for an IPv4
+   * or IPv6 address.
+   *
    * @var string
    */
   public $address;
   /**
+   * Output only. Time when the RegionalEndpoint was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. A description of this resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. The literal IP address of the PSC Forwarding Rule created on
+   * behalf of the customer. This field is deprecated. Use address instead.
+   *
+   * @deprecated
    * @var string
    */
   public $ipAddress;
   /**
+   * User-defined labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Output only. The name of a RegionalEndpoint. Pattern: `projects/{project}/l
+   * ocations/{location}/regionalEndpoints/^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-
+   * 9]$`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The name of the VPC network for this private regional endpoint.
+   * Format: `projects/{project}/global/networks/{network}`
+   *
    * @var string
    */
   public $network;
   /**
+   * Output only. The resource reference of the PSC Forwarding Rule created on
+   * behalf of the customer. Format: `//compute.googleapis.com/projects/{project
+   * }/regions/{region}/forwardingRules/{forwarding_rule_name}`
+   *
    * @var string
    */
   public $pscForwardingRule;
   /**
+   * Optional. The name of the subnetwork from which the IP address will be
+   * allocated. Format:
+   * `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
+   *
    * @var string
    */
   public $subnetwork;
   /**
+   * Required. The service endpoint this private regional endpoint connects to.
+   * Format: `{apiname}.{region}.p.rep.googleapis.com` Example: "cloudkms.us-
+   * central1.p.rep.googleapis.com".
+   *
    * @var string
    */
   public $targetGoogleApi;
   /**
+   * Output only. Time when the RegionalEndpoint was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Required. The access type of this regional endpoint. This field is
+   * reflected in the PSC Forwarding Rule configuration to enable global access.
+   *
+   * Accepted values: ACCESS_TYPE_UNSPECIFIED, GLOBAL, REGIONAL
+   *
+   * @param self::ACCESS_TYPE_* $accessType
    */
   public function setAccessType($accessType)
   {
     $this->accessType = $accessType;
   }
   /**
-   * @return string
+   * @return self::ACCESS_TYPE_*
    */
   public function getAccessType()
   {
     return $this->accessType;
   }
   /**
-   * @param string
+   * Optional. The IP Address of the Regional Endpoint. When no address is
+   * provided, an IP from the subnetwork is allocated. Use one of the following
+   * formats: * IPv4 address as in `10.0.0.1` * Address resource URI as in
+   * `projects/{project}/regions/{region}/addresses/{address_name}` for an IPv4
+   * or IPv6 address.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -97,7 +161,9 @@ class RegionalEndpoint extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * Output only. Time when the RegionalEndpoint was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -111,7 +177,9 @@ class RegionalEndpoint extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. A description of this resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -125,13 +193,18 @@ class RegionalEndpoint extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. The literal IP address of the PSC Forwarding Rule created on
+   * behalf of the customer. This field is deprecated. Use address instead.
+   *
+   * @deprecated
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
     $this->ipAddress = $ipAddress;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getIpAddress()
@@ -139,7 +212,9 @@ class RegionalEndpoint extends \Google\Model
     return $this->ipAddress;
   }
   /**
-   * @param string[]
+   * User-defined labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -153,7 +228,11 @@ class RegionalEndpoint extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Output only. The name of a RegionalEndpoint. Pattern: `projects/{project}/l
+   * ocations/{location}/regionalEndpoints/^[-a-z0-9](?:[-a-z0-9]{0,44})[a-z0-
+   * 9]$`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -167,7 +246,10 @@ class RegionalEndpoint extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The name of the VPC network for this private regional endpoint.
+   * Format: `projects/{project}/global/networks/{network}`
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -181,7 +263,11 @@ class RegionalEndpoint extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * Output only. The resource reference of the PSC Forwarding Rule created on
+   * behalf of the customer. Format: `//compute.googleapis.com/projects/{project
+   * }/regions/{region}/forwardingRules/{forwarding_rule_name}`
+   *
+   * @param string $pscForwardingRule
    */
   public function setPscForwardingRule($pscForwardingRule)
   {
@@ -195,7 +281,11 @@ class RegionalEndpoint extends \Google\Model
     return $this->pscForwardingRule;
   }
   /**
-   * @param string
+   * Optional. The name of the subnetwork from which the IP address will be
+   * allocated. Format:
+   * `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
+   *
+   * @param string $subnetwork
    */
   public function setSubnetwork($subnetwork)
   {
@@ -209,7 +299,11 @@ class RegionalEndpoint extends \Google\Model
     return $this->subnetwork;
   }
   /**
-   * @param string
+   * Required. The service endpoint this private regional endpoint connects to.
+   * Format: `{apiname}.{region}.p.rep.googleapis.com` Example: "cloudkms.us-
+   * central1.p.rep.googleapis.com".
+   *
+   * @param string $targetGoogleApi
    */
   public function setTargetGoogleApi($targetGoogleApi)
   {
@@ -223,7 +317,9 @@ class RegionalEndpoint extends \Google\Model
     return $this->targetGoogleApi;
   }
   /**
-   * @param string
+   * Output only. Time when the RegionalEndpoint was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

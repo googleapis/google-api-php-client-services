@@ -20,19 +20,54 @@ namespace Google\Service\SQLAdmin;
 class SqlSubOperationType extends \Google\Model
 {
   /**
+   * Maintenance type is unspecified.
+   */
+  public const MAINTENANCE_TYPE_SQL_MAINTENANCE_TYPE_UNSPECIFIED = 'SQL_MAINTENANCE_TYPE_UNSPECIFIED';
+  /**
+   * Indicates that a standalone instance is undergoing maintenance. The
+   * instance can be either a primary instance or a replica.
+   */
+  public const MAINTENANCE_TYPE_INSTANCE_MAINTENANCE = 'INSTANCE_MAINTENANCE';
+  /**
+   * Indicates that the primary instance and all of its replicas, including
+   * cascading replicas, are undergoing maintenance. Maintenance is performed on
+   * groups of replicas first, followed by the primary instance.
+   */
+  public const MAINTENANCE_TYPE_REPLICA_INCLUDED_MAINTENANCE = 'REPLICA_INCLUDED_MAINTENANCE';
+  /**
+   * Indicates that the standalone instance is undergoing maintenance, initiated
+   * by self-service. The instance can be either a primary instance or a
+   * replica.
+   */
+  public const MAINTENANCE_TYPE_INSTANCE_SELF_SERVICE_MAINTENANCE = 'INSTANCE_SELF_SERVICE_MAINTENANCE';
+  /**
+   * Indicates that the primary instance and all of its replicas are undergoing
+   * maintenance, initiated by self-service. Maintenance is performed on groups
+   * of replicas first, followed by the primary instance.
+   */
+  public const MAINTENANCE_TYPE_REPLICA_INCLUDED_SELF_SERVICE_MAINTENANCE = 'REPLICA_INCLUDED_SELF_SERVICE_MAINTENANCE';
+  /**
+   * The type of maintenance to be performed on the instance.
+   *
    * @var string
    */
   public $maintenanceType;
 
   /**
-   * @param string
+   * The type of maintenance to be performed on the instance.
+   *
+   * Accepted values: SQL_MAINTENANCE_TYPE_UNSPECIFIED, INSTANCE_MAINTENANCE,
+   * REPLICA_INCLUDED_MAINTENANCE, INSTANCE_SELF_SERVICE_MAINTENANCE,
+   * REPLICA_INCLUDED_SELF_SERVICE_MAINTENANCE
+   *
+   * @param self::MAINTENANCE_TYPE_* $maintenanceType
    */
   public function setMaintenanceType($maintenanceType)
   {
     $this->maintenanceType = $maintenanceType;
   }
   /**
-   * @return string
+   * @return self::MAINTENANCE_TYPE_*
    */
   public function getMaintenanceType()
   {

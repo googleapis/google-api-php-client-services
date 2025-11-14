@@ -20,37 +20,71 @@ namespace Google\Service\NetworkServices;
 class ServiceLbPolicyIsolationConfig extends \Google\Model
 {
   /**
+   * No isolation is configured for the backend service. Traffic can overflow
+   * based on the load balancing algorithm.
+   */
+  public const ISOLATION_GRANULARITY_ISOLATION_GRANULARITY_UNSPECIFIED = 'ISOLATION_GRANULARITY_UNSPECIFIED';
+  /**
+   * Traffic for this service will be isolated at the cloud region level.
+   */
+  public const ISOLATION_GRANULARITY_REGION = 'REGION';
+  /**
+   * No isolation mode is configured for the backend service.
+   */
+  public const ISOLATION_MODE_ISOLATION_MODE_UNSPECIFIED = 'ISOLATION_MODE_UNSPECIFIED';
+  /**
+   * Traffic will be sent to the nearest region.
+   */
+  public const ISOLATION_MODE_NEAREST = 'NEAREST';
+  /**
+   * Traffic will fail if no serving backends are available in the same region
+   * as the load balancer.
+   */
+  public const ISOLATION_MODE_STRICT = 'STRICT';
+  /**
+   * Optional. The isolation granularity of the load balancer.
+   *
    * @var string
    */
   public $isolationGranularity;
   /**
+   * Optional. The isolation mode of the load balancer.
+   *
    * @var string
    */
   public $isolationMode;
 
   /**
-   * @param string
+   * Optional. The isolation granularity of the load balancer.
+   *
+   * Accepted values: ISOLATION_GRANULARITY_UNSPECIFIED, REGION
+   *
+   * @param self::ISOLATION_GRANULARITY_* $isolationGranularity
    */
   public function setIsolationGranularity($isolationGranularity)
   {
     $this->isolationGranularity = $isolationGranularity;
   }
   /**
-   * @return string
+   * @return self::ISOLATION_GRANULARITY_*
    */
   public function getIsolationGranularity()
   {
     return $this->isolationGranularity;
   }
   /**
-   * @param string
+   * Optional. The isolation mode of the load balancer.
+   *
+   * Accepted values: ISOLATION_MODE_UNSPECIFIED, NEAREST, STRICT
+   *
+   * @param self::ISOLATION_MODE_* $isolationMode
    */
   public function setIsolationMode($isolationMode)
   {
     $this->isolationMode = $isolationMode;
   }
   /**
-   * @return string
+   * @return self::ISOLATION_MODE_*
    */
   public function getIsolationMode()
   {

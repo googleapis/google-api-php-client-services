@@ -20,12 +20,16 @@ namespace Google\Service\Dfareporting;
 class LastModifiedInfo extends \Google\Model
 {
   /**
+   * Timestamp of the last change in milliseconds since epoch.
+   *
    * @var string
    */
   public $time;
 
   /**
-   * @param string
+   * Timestamp of the last change in milliseconds since epoch.
+   *
+   * @param string $time
    */
   public function setTime($time)
   {

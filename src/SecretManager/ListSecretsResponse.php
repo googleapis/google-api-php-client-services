@@ -21,18 +21,27 @@ class ListSecretsResponse extends \Google\Collection
 {
   protected $collection_key = 'secrets';
   /**
+   * A token to retrieve the next page of results. Pass this value in
+   * ListSecretsRequest.page_token to retrieve the next page.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $secretsType = Secret::class;
   protected $secretsDataType = 'array';
   /**
+   * The total number of Secrets but 0 when the ListSecretsRequest.filter field
+   * is set.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param string
+   * A token to retrieve the next page of results. Pass this value in
+   * ListSecretsRequest.page_token to retrieve the next page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +55,9 @@ class ListSecretsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Secret[]
+   * The list of Secrets sorted in reverse by create_time (newest first).
+   *
+   * @param Secret[] $secrets
    */
   public function setSecrets($secrets)
   {
@@ -60,7 +71,10 @@ class ListSecretsResponse extends \Google\Collection
     return $this->secrets;
   }
   /**
-   * @param int
+   * The total number of Secrets but 0 when the ListSecretsRequest.filter field
+   * is set.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

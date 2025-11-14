@@ -428,9 +428,39 @@ class SQLAdmin extends \Google\Service
         'instances',
         [
           'methods' => [
-            'ListServerCertificates' => [
+            'ListEntraIdCertificates' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/listEntraIdCertificates',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'ListServerCertificates' => [
               'path' => 'v1/projects/{project}/instances/{instance}/listServerCertificates',
               'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'RotateEntraIdCertificate' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/rotateEntraIdCertificate',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
                   'location' => 'path',
@@ -1329,6 +1359,11 @@ class SQLAdmin extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'databaseRoles' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
                 'host' => [
                   'location' => 'query',

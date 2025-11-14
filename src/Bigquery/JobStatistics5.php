@@ -20,16 +20,22 @@ namespace Google\Service\Bigquery;
 class JobStatistics5 extends \Google\Model
 {
   /**
+   * Output only. Number of logical bytes copied to the destination table.
+   *
    * @var string
    */
   public $copiedLogicalBytes;
   /**
+   * Output only. Number of rows copied to the destination table.
+   *
    * @var string
    */
   public $copiedRows;
 
   /**
-   * @param string
+   * Output only. Number of logical bytes copied to the destination table.
+   *
+   * @param string $copiedLogicalBytes
    */
   public function setCopiedLogicalBytes($copiedLogicalBytes)
   {
@@ -43,7 +49,9 @@ class JobStatistics5 extends \Google\Model
     return $this->copiedLogicalBytes;
   }
   /**
-   * @param string
+   * Output only. Number of rows copied to the destination table.
+   *
+   * @param string $copiedRows
    */
   public function setCopiedRows($copiedRows)
   {

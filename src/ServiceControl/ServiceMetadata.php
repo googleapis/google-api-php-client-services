@@ -20,20 +20,40 @@ namespace Google\Service\ServiceControl;
 class ServiceMetadata extends \Google\Model
 {
   /**
+   * Additional metadata provided by service teams to describe service specific
+   * job information that was triggered by the original principal.
+   *
    * @var array[]
    */
   public $jobMetadata;
   /**
+   * A string representing the principal_subject associated with the identity.
+   * For most identities, the format will be
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)`
+   * except for some GKE identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD)
+   * that are still in the legacy format `serviceAccount:{identity pool
+   * name}[{subject}]` If the identity is a Google account (e.g. workspace user
+   * account or service account), this will be the email of the prefixed by
+   * `serviceAccount:`. For example: `serviceAccount:my-service-
+   * account@project-1.iam.gserviceaccount.com`. If the identity is an
+   * individual user, the identity will be formatted as:
+   * `user:user_ABC@email.com`.
+   *
    * @var string
    */
   public $principalSubject;
   /**
+   * The service's fully qualified domain name, e.g. "dataproc.googleapis.com".
+   *
    * @var string
    */
   public $serviceDomain;
 
   /**
-   * @param array[]
+   * Additional metadata provided by service teams to describe service specific
+   * job information that was triggered by the original principal.
+   *
+   * @param array[] $jobMetadata
    */
   public function setJobMetadata($jobMetadata)
   {
@@ -47,7 +67,19 @@ class ServiceMetadata extends \Google\Model
     return $this->jobMetadata;
   }
   /**
-   * @param string
+   * A string representing the principal_subject associated with the identity.
+   * For most identities, the format will be
+   * `principal://iam.googleapis.com/{identity pool name}/subject/{subject)`
+   * except for some GKE identities (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD)
+   * that are still in the legacy format `serviceAccount:{identity pool
+   * name}[{subject}]` If the identity is a Google account (e.g. workspace user
+   * account or service account), this will be the email of the prefixed by
+   * `serviceAccount:`. For example: `serviceAccount:my-service-
+   * account@project-1.iam.gserviceaccount.com`. If the identity is an
+   * individual user, the identity will be formatted as:
+   * `user:user_ABC@email.com`.
+   *
+   * @param string $principalSubject
    */
   public function setPrincipalSubject($principalSubject)
   {
@@ -61,7 +93,9 @@ class ServiceMetadata extends \Google\Model
     return $this->principalSubject;
   }
   /**
-   * @param string
+   * The service's fully qualified domain name, e.g. "dataproc.googleapis.com".
+   *
+   * @param string $serviceDomain
    */
   public function setServiceDomain($serviceDomain)
   {

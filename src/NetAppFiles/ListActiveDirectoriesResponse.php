@@ -23,16 +23,22 @@ class ListActiveDirectoriesResponse extends \Google\Collection
   protected $activeDirectoriesType = ActiveDirectory::class;
   protected $activeDirectoriesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param ActiveDirectory[]
+   * The list of active directories.
+   *
+   * @param ActiveDirectory[] $activeDirectories
    */
   public function setActiveDirectories($activeDirectories)
   {
@@ -46,7 +52,9 @@ class ListActiveDirectoriesResponse extends \Google\Collection
     return $this->activeDirectories;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListActiveDirectoriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

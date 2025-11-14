@@ -21,12 +21,18 @@ class ResourceSelector extends \Google\Collection
 {
   protected $collection_key = 'resourceTypes';
   /**
+   * Required. The resource types to run the detector on. Each custom module can
+   * specify up to 5 resource types.
+   *
    * @var string[]
    */
   public $resourceTypes;
 
   /**
-   * @param string[]
+   * Required. The resource types to run the detector on. Each custom module can
+   * specify up to 5 resource types.
+   *
+   * @param string[] $resourceTypes
    */
   public function setResourceTypes($resourceTypes)
   {

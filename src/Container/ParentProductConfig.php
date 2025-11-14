@@ -20,16 +20,22 @@ namespace Google\Service\Container;
 class ParentProductConfig extends \Google\Model
 {
   /**
+   * Labels contain the configuration of the parent product.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Name of the parent product associated with the cluster.
+   *
    * @var string
    */
   public $productName;
 
   /**
-   * @param string[]
+   * Labels contain the configuration of the parent product.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -43,7 +49,9 @@ class ParentProductConfig extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Name of the parent product associated with the cluster.
+   *
+   * @param string $productName
    */
   public function setProductName($productName)
   {

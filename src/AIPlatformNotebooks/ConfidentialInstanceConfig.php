@@ -20,19 +20,33 @@ namespace Google\Service\AIPlatformNotebooks;
 class ConfidentialInstanceConfig extends \Google\Model
 {
   /**
+   * No type specified. Do not use this value.
+   */
+  public const CONFIDENTIAL_INSTANCE_TYPE_CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED = 'CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED';
+  /**
+   * AMD Secure Encrypted Virtualization.
+   */
+  public const CONFIDENTIAL_INSTANCE_TYPE_SEV = 'SEV';
+  /**
+   * Optional. Defines the type of technology used by the confidential instance.
+   *
    * @var string
    */
   public $confidentialInstanceType;
 
   /**
-   * @param string
+   * Optional. Defines the type of technology used by the confidential instance.
+   *
+   * Accepted values: CONFIDENTIAL_INSTANCE_TYPE_UNSPECIFIED, SEV
+   *
+   * @param self::CONFIDENTIAL_INSTANCE_TYPE_* $confidentialInstanceType
    */
   public function setConfidentialInstanceType($confidentialInstanceType)
   {
     $this->confidentialInstanceType = $confidentialInstanceType;
   }
   /**
-   * @return string
+   * @return self::CONFIDENTIAL_INSTANCE_TYPE_*
    */
   public function getConfidentialInstanceType()
   {

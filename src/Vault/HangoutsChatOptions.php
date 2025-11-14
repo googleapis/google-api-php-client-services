@@ -20,12 +20,18 @@ namespace Google\Service\Vault;
 class HangoutsChatOptions extends \Google\Model
 {
   /**
+   * For searches by account or organizational unit, set to **true** to include
+   * rooms.
+   *
    * @var bool
    */
   public $includeRooms;
 
   /**
-   * @param bool
+   * For searches by account or organizational unit, set to **true** to include
+   * rooms.
+   *
+   * @param bool $includeRooms
    */
   public function setIncludeRooms($includeRooms)
   {

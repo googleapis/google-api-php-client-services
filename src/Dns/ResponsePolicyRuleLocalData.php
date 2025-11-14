@@ -24,7 +24,10 @@ class ResponsePolicyRuleLocalData extends \Google\Collection
   protected $localDatasDataType = 'array';
 
   /**
-   * @param ResourceRecordSet[]
+   * All resource record sets for this selector, one per resource record type.
+   * The name must match the dns_name.
+   *
+   * @param ResourceRecordSet[] $localDatas
    */
   public function setLocalDatas($localDatas)
   {

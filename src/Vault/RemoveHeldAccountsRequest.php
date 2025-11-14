@@ -21,12 +21,16 @@ class RemoveHeldAccountsRequest extends \Google\Collection
 {
   protected $collection_key = 'accountIds';
   /**
+   * The account IDs of the accounts to remove from the hold.
+   *
    * @var string[]
    */
   public $accountIds;
 
   /**
-   * @param string[]
+   * The account IDs of the accounts to remove from the hold.
+   *
+   * @param string[] $accountIds
    */
   public function setAccountIds($accountIds)
   {

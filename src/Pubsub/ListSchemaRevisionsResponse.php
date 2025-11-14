@@ -21,6 +21,9 @@ class ListSchemaRevisionsResponse extends \Google\Collection
 {
   protected $collection_key = 'schemas';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is empty, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListSchemaRevisionsResponse extends \Google\Collection
   protected $schemasDataType = 'array';
 
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is empty, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListSchemaRevisionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Schema[]
+   * The revisions of the schema.
+   *
+   * @param Schema[] $schemas
    */
   public function setSchemas($schemas)
   {

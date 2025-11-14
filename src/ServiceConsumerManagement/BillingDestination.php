@@ -21,16 +21,25 @@ class BillingDestination extends \Google\Collection
 {
   protected $collection_key = 'metrics';
   /**
+   * Names of the metrics to report to this billing destination. Each name must
+   * be defined in Service.metrics section.
+   *
    * @var string[]
    */
   public $metrics;
   /**
+   * The monitored resource type. The type must be defined in
+   * Service.monitored_resources section.
+   *
    * @var string
    */
   public $monitoredResource;
 
   /**
-   * @param string[]
+   * Names of the metrics to report to this billing destination. Each name must
+   * be defined in Service.metrics section.
+   *
+   * @param string[] $metrics
    */
   public function setMetrics($metrics)
   {
@@ -44,7 +53,10 @@ class BillingDestination extends \Google\Collection
     return $this->metrics;
   }
   /**
-   * @param string
+   * The monitored resource type. The type must be defined in
+   * Service.monitored_resources section.
+   *
+   * @param string $monitoredResource
    */
   public function setMonitoredResource($monitoredResource)
   {

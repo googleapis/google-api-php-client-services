@@ -20,28 +20,40 @@ namespace Google\Service\Dfareporting;
 class DfpSettings extends \Google\Model
 {
   /**
+   * Ad Manager network code for this directory site.
+   *
    * @var string
    */
   public $dfpNetworkCode;
   /**
+   * Ad Manager network name for this directory site.
+   *
    * @var string
    */
   public $dfpNetworkName;
   /**
+   * Whether this directory site accepts programmatic placements.
+   *
    * @var bool
    */
   public $programmaticPlacementAccepted;
   /**
+   * Whether this directory site accepts publisher-paid tags.
+   *
    * @var bool
    */
   public $pubPaidPlacementAccepted;
   /**
+   * Whether this directory site is available only via Publisher Portal.
+   *
    * @var bool
    */
   public $publisherPortalOnly;
 
   /**
-   * @param string
+   * Ad Manager network code for this directory site.
+   *
+   * @param string $dfpNetworkCode
    */
   public function setDfpNetworkCode($dfpNetworkCode)
   {
@@ -55,7 +67,9 @@ class DfpSettings extends \Google\Model
     return $this->dfpNetworkCode;
   }
   /**
-   * @param string
+   * Ad Manager network name for this directory site.
+   *
+   * @param string $dfpNetworkName
    */
   public function setDfpNetworkName($dfpNetworkName)
   {
@@ -69,7 +83,9 @@ class DfpSettings extends \Google\Model
     return $this->dfpNetworkName;
   }
   /**
-   * @param bool
+   * Whether this directory site accepts programmatic placements.
+   *
+   * @param bool $programmaticPlacementAccepted
    */
   public function setProgrammaticPlacementAccepted($programmaticPlacementAccepted)
   {
@@ -83,7 +99,9 @@ class DfpSettings extends \Google\Model
     return $this->programmaticPlacementAccepted;
   }
   /**
-   * @param bool
+   * Whether this directory site accepts publisher-paid tags.
+   *
+   * @param bool $pubPaidPlacementAccepted
    */
   public function setPubPaidPlacementAccepted($pubPaidPlacementAccepted)
   {
@@ -97,7 +115,9 @@ class DfpSettings extends \Google\Model
     return $this->pubPaidPlacementAccepted;
   }
   /**
-   * @param bool
+   * Whether this directory site is available only via Publisher Portal.
+   *
+   * @param bool $publisherPortalOnly
    */
   public function setPublisherPortalOnly($publisherPortalOnly)
   {

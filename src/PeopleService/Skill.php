@@ -22,12 +22,16 @@ class Skill extends \Google\Model
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The skill; for example, `underwater basket weaving`.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param FieldMetadata
+   * Metadata about the skill.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -41,7 +45,9 @@ class Skill extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The skill; for example, `underwater basket weaving`.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

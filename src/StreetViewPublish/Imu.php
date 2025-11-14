@@ -28,7 +28,10 @@ class Imu extends \Google\Collection
   protected $magUtDataType = 'array';
 
   /**
-   * @param Measurement3d[]
+   * The accelerometer measurements in meters/sec^2 with increasing timestamps
+   * from devices.
+   *
+   * @param Measurement3d[] $accelMpsps
    */
   public function setAccelMpsps($accelMpsps)
   {
@@ -42,7 +45,10 @@ class Imu extends \Google\Collection
     return $this->accelMpsps;
   }
   /**
-   * @param Measurement3d[]
+   * The gyroscope measurements in radians/sec with increasing timestamps from
+   * devices.
+   *
+   * @param Measurement3d[] $gyroRps
    */
   public function setGyroRps($gyroRps)
   {
@@ -56,7 +62,10 @@ class Imu extends \Google\Collection
     return $this->gyroRps;
   }
   /**
-   * @param Measurement3d[]
+   * The magnetometer measurements of the magnetic field in microtesla (uT) with
+   * increasing timestamps from devices.
+   *
+   * @param Measurement3d[] $magUt
    */
   public function setMagUt($magUt)
   {

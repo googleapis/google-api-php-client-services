@@ -20,16 +20,22 @@ namespace Google\Service\Backupdr;
 class WorkforceIdentityBasedOAuth2ClientID extends \Google\Model
 {
   /**
+   * Output only. First party OAuth Client ID for Google Identities.
+   *
    * @var string
    */
   public $firstPartyOauth2ClientId;
   /**
+   * Output only. Third party OAuth Client ID for External Identity Providers.
+   *
    * @var string
    */
   public $thirdPartyOauth2ClientId;
 
   /**
-   * @param string
+   * Output only. First party OAuth Client ID for Google Identities.
+   *
+   * @param string $firstPartyOauth2ClientId
    */
   public function setFirstPartyOauth2ClientId($firstPartyOauth2ClientId)
   {
@@ -43,7 +49,9 @@ class WorkforceIdentityBasedOAuth2ClientID extends \Google\Model
     return $this->firstPartyOauth2ClientId;
   }
   /**
-   * @param string
+   * Output only. Third party OAuth Client ID for External Identity Providers.
+   *
+   * @param string $thirdPartyOauth2ClientId
    */
   public function setThirdPartyOauth2ClientId($thirdPartyOauth2ClientId)
   {

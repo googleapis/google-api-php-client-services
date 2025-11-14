@@ -20,44 +20,150 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
 {
   /**
+   * Default value. The license config does not exist.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The license config is effective and being used.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The license config has expired.
+   */
+  public const STATE_EXPIRED = 'EXPIRED';
+  /**
+   * The license config has not started yet, and its start date is in the
+   * future.
+   */
+  public const STATE_NOT_STARTED = 'NOT_STARTED';
+  /**
+   * Default value, do not use.
+   */
+  public const SUBSCRIPTION_TERM_SUBSCRIPTION_TERM_UNSPECIFIED = 'SUBSCRIPTION_TERM_UNSPECIFIED';
+  /**
+   * 1 month.
+   */
+  public const SUBSCRIPTION_TERM_SUBSCRIPTION_TERM_ONE_MONTH = 'SUBSCRIPTION_TERM_ONE_MONTH';
+  /**
+   * 1 year.
+   */
+  public const SUBSCRIPTION_TERM_SUBSCRIPTION_TERM_ONE_YEAR = 'SUBSCRIPTION_TERM_ONE_YEAR';
+  /**
+   * 3 years.
+   */
+  public const SUBSCRIPTION_TERM_SUBSCRIPTION_TERM_THREE_YEARS = 'SUBSCRIPTION_TERM_THREE_YEARS';
+  /**
+   * Default value.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_UNSPECIFIED = 'SUBSCRIPTION_TIER_UNSPECIFIED';
+  /**
+   * Search tier. Search tier can access VAIS search features and NotebookLM
+   * features.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_SEARCH = 'SUBSCRIPTION_TIER_SEARCH';
+  /**
+   * Search + assistant tier. Search + assistant tier can access VAIS search
+   * features, NotebookLM features and assistant features.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT = 'SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT';
+  /**
+   * NotebookLM tier. NotebookLM is a subscription tier can only access
+   * NotebookLM features.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_NOTEBOOK_LM = 'SUBSCRIPTION_TIER_NOTEBOOK_LM';
+  /**
+   * Frontline worker tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_FRONTLINE_WORKER = 'SUBSCRIPTION_TIER_FRONTLINE_WORKER';
+  /**
+   * Agentspace Starter tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_AGENTSPACE_STARTER = 'SUBSCRIPTION_TIER_AGENTSPACE_STARTER';
+  /**
+   * Agentspace Business tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS = 'SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS';
+  /**
+   * Enterprise tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_ENTERPRISE = 'SUBSCRIPTION_TIER_ENTERPRISE';
+  /**
+   * EDU tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU = 'SUBSCRIPTION_TIER_EDU';
+  /**
+   * EDU Pro tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO = 'SUBSCRIPTION_TIER_EDU_PRO';
+  /**
+   * EDU emerging market tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_EMERGING = 'SUBSCRIPTION_TIER_EDU_EMERGING';
+  /**
+   * EDU Pro emerging market tier.
+   */
+  public const SUBSCRIPTION_TIER_SUBSCRIPTION_TIER_EDU_PRO_EMERGING = 'SUBSCRIPTION_TIER_EDU_PRO_EMERGING';
+  /**
+   * Optional. Whether the license config should be auto renewed when it reaches
+   * the end date.
+   *
    * @var bool
    */
   public $autoRenew;
   protected $endDateType = GoogleTypeDate::class;
   protected $endDateDataType = '';
   /**
+   * Optional. Whether the license config is for free trial.
+   *
    * @var bool
    */
   public $freeTrial;
   /**
+   * Output only. Whether the license config is for Gemini bundle.
+   *
    * @var bool
    */
   public $geminiBundle;
   /**
+   * Required. Number of licenses purchased.
+   *
    * @var string
    */
   public $licenseCount;
   /**
+   * Immutable. Identifier. The fully qualified resource name of the license
+   * config. Format:
+   * `projects/{project}/locations/{location}/licenseConfigs/{license_config}`
+   *
    * @var string
    */
   public $name;
   protected $startDateType = GoogleTypeDate::class;
   protected $startDateDataType = '';
   /**
+   * Output only. The state of the license config.
+   *
    * @var string
    */
   public $state;
   /**
+   * Required. Subscription term.
+   *
    * @var string
    */
   public $subscriptionTerm;
   /**
+   * Required. Subscription tier information for the license config.
+   *
    * @var string
    */
   public $subscriptionTier;
 
   /**
-   * @param bool
+   * Optional. Whether the license config should be auto renewed when it reaches
+   * the end date.
+   *
+   * @param bool $autoRenew
    */
   public function setAutoRenew($autoRenew)
   {
@@ -71,7 +177,9 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
     return $this->autoRenew;
   }
   /**
-   * @param GoogleTypeDate
+   * Optional. The planed end date.
+   *
+   * @param GoogleTypeDate $endDate
    */
   public function setEndDate(GoogleTypeDate $endDate)
   {
@@ -85,7 +193,9 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param bool
+   * Optional. Whether the license config is for free trial.
+   *
+   * @param bool $freeTrial
    */
   public function setFreeTrial($freeTrial)
   {
@@ -99,7 +209,9 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
     return $this->freeTrial;
   }
   /**
-   * @param bool
+   * Output only. Whether the license config is for Gemini bundle.
+   *
+   * @param bool $geminiBundle
    */
   public function setGeminiBundle($geminiBundle)
   {
@@ -113,7 +225,9 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
     return $this->geminiBundle;
   }
   /**
-   * @param string
+   * Required. Number of licenses purchased.
+   *
+   * @param string $licenseCount
    */
   public function setLicenseCount($licenseCount)
   {
@@ -127,7 +241,11 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
     return $this->licenseCount;
   }
   /**
-   * @param string
+   * Immutable. Identifier. The fully qualified resource name of the license
+   * config. Format:
+   * `projects/{project}/locations/{location}/licenseConfigs/{license_config}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -141,7 +259,9 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleTypeDate
+   * Required. The start date.
+   *
+   * @param GoogleTypeDate $startDate
    */
   public function setStartDate(GoogleTypeDate $startDate)
   {
@@ -155,42 +275,61 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
     return $this->startDate;
   }
   /**
-   * @param string
+   * Output only. The state of the license config.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, EXPIRED, NOT_STARTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Required. Subscription term.
+   *
+   * Accepted values: SUBSCRIPTION_TERM_UNSPECIFIED,
+   * SUBSCRIPTION_TERM_ONE_MONTH, SUBSCRIPTION_TERM_ONE_YEAR,
+   * SUBSCRIPTION_TERM_THREE_YEARS
+   *
+   * @param self::SUBSCRIPTION_TERM_* $subscriptionTerm
    */
   public function setSubscriptionTerm($subscriptionTerm)
   {
     $this->subscriptionTerm = $subscriptionTerm;
   }
   /**
-   * @return string
+   * @return self::SUBSCRIPTION_TERM_*
    */
   public function getSubscriptionTerm()
   {
     return $this->subscriptionTerm;
   }
   /**
-   * @param string
+   * Required. Subscription tier information for the license config.
+   *
+   * Accepted values: SUBSCRIPTION_TIER_UNSPECIFIED, SUBSCRIPTION_TIER_SEARCH,
+   * SUBSCRIPTION_TIER_SEARCH_AND_ASSISTANT, SUBSCRIPTION_TIER_NOTEBOOK_LM,
+   * SUBSCRIPTION_TIER_FRONTLINE_WORKER, SUBSCRIPTION_TIER_AGENTSPACE_STARTER,
+   * SUBSCRIPTION_TIER_AGENTSPACE_BUSINESS, SUBSCRIPTION_TIER_ENTERPRISE,
+   * SUBSCRIPTION_TIER_EDU, SUBSCRIPTION_TIER_EDU_PRO,
+   * SUBSCRIPTION_TIER_EDU_EMERGING, SUBSCRIPTION_TIER_EDU_PRO_EMERGING
+   *
+   * @param self::SUBSCRIPTION_TIER_* $subscriptionTier
    */
   public function setSubscriptionTier($subscriptionTier)
   {
     $this->subscriptionTier = $subscriptionTier;
   }
   /**
-   * @return string
+   * @return self::SUBSCRIPTION_TIER_*
    */
   public function getSubscriptionTier()
   {

@@ -20,26 +20,38 @@ namespace Google\Service\TPU;
 class QueueingPolicy extends \Google\Model
 {
   /**
+   * Optional. A relative time after which resources may be created.
+   *
    * @var string
    */
   public $validAfterDuration;
   /**
+   * Optional. An absolute time after which resources may be created.
+   *
    * @var string
    */
   public $validAfterTime;
   protected $validIntervalType = Interval::class;
   protected $validIntervalDataType = '';
   /**
+   * Optional. A relative time after which resources should not be created. If
+   * the request cannot be fulfilled by this time the request will be failed.
+   *
    * @var string
    */
   public $validUntilDuration;
   /**
+   * Optional. An absolute time after which resources should not be created. If
+   * the request cannot be fulfilled by this time the request will be failed.
+   *
    * @var string
    */
   public $validUntilTime;
 
   /**
-   * @param string
+   * Optional. A relative time after which resources may be created.
+   *
+   * @param string $validAfterDuration
    */
   public function setValidAfterDuration($validAfterDuration)
   {
@@ -53,7 +65,9 @@ class QueueingPolicy extends \Google\Model
     return $this->validAfterDuration;
   }
   /**
-   * @param string
+   * Optional. An absolute time after which resources may be created.
+   *
+   * @param string $validAfterTime
    */
   public function setValidAfterTime($validAfterTime)
   {
@@ -67,7 +81,9 @@ class QueueingPolicy extends \Google\Model
     return $this->validAfterTime;
   }
   /**
-   * @param Interval
+   * Optional. An absolute time interval within which resources may be created.
+   *
+   * @param Interval $validInterval
    */
   public function setValidInterval(Interval $validInterval)
   {
@@ -81,7 +97,10 @@ class QueueingPolicy extends \Google\Model
     return $this->validInterval;
   }
   /**
-   * @param string
+   * Optional. A relative time after which resources should not be created. If
+   * the request cannot be fulfilled by this time the request will be failed.
+   *
+   * @param string $validUntilDuration
    */
   public function setValidUntilDuration($validUntilDuration)
   {
@@ -95,7 +114,10 @@ class QueueingPolicy extends \Google\Model
     return $this->validUntilDuration;
   }
   /**
-   * @param string
+   * Optional. An absolute time after which resources should not be created. If
+   * the request cannot be fulfilled by this time the request will be failed.
+   *
+   * @param string $validUntilTime
    */
   public function setValidUntilTime($validUntilTime)
   {

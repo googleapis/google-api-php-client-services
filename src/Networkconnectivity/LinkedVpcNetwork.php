@@ -21,32 +21,54 @@ class LinkedVpcNetwork extends \Google\Collection
 {
   protected $collection_key = 'proposedIncludeExportRanges';
   /**
+   * Optional. IP ranges encompassing the subnets to be excluded from peering.
+   *
    * @var string[]
    */
   public $excludeExportRanges;
   /**
+   * Optional. IP ranges allowed to be included from peering.
+   *
    * @var string[]
    */
   public $includeExportRanges;
   /**
+   * Output only. The list of Producer VPC spokes that this VPC spoke is a
+   * service consumer VPC spoke for. These producer VPCs are connected through
+   * VPC peering to this spoke's backing VPC network. Because they are directly
+   * connected through VPC peering, NCC export filters do not apply between the
+   * service consumer VPC spoke and any of its producer VPC spokes. This VPC
+   * spoke cannot be deleted as long as any of these producer VPC spokes are
+   * connected to the NCC Hub.
+   *
    * @var string[]
    */
   public $producerVpcSpokes;
   /**
+   * Output only. The proposed exclude export IP ranges waiting for hub
+   * administration's approval.
+   *
    * @var string[]
    */
   public $proposedExcludeExportRanges;
   /**
+   * Output only. The proposed include export IP ranges waiting for hub
+   * administration's approval.
+   *
    * @var string[]
    */
   public $proposedIncludeExportRanges;
   /**
+   * Required. The URI of the VPC network resource.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string[]
+   * Optional. IP ranges encompassing the subnets to be excluded from peering.
+   *
+   * @param string[] $excludeExportRanges
    */
   public function setExcludeExportRanges($excludeExportRanges)
   {
@@ -60,7 +82,9 @@ class LinkedVpcNetwork extends \Google\Collection
     return $this->excludeExportRanges;
   }
   /**
-   * @param string[]
+   * Optional. IP ranges allowed to be included from peering.
+   *
+   * @param string[] $includeExportRanges
    */
   public function setIncludeExportRanges($includeExportRanges)
   {
@@ -74,7 +98,15 @@ class LinkedVpcNetwork extends \Google\Collection
     return $this->includeExportRanges;
   }
   /**
-   * @param string[]
+   * Output only. The list of Producer VPC spokes that this VPC spoke is a
+   * service consumer VPC spoke for. These producer VPCs are connected through
+   * VPC peering to this spoke's backing VPC network. Because they are directly
+   * connected through VPC peering, NCC export filters do not apply between the
+   * service consumer VPC spoke and any of its producer VPC spokes. This VPC
+   * spoke cannot be deleted as long as any of these producer VPC spokes are
+   * connected to the NCC Hub.
+   *
+   * @param string[] $producerVpcSpokes
    */
   public function setProducerVpcSpokes($producerVpcSpokes)
   {
@@ -88,7 +120,10 @@ class LinkedVpcNetwork extends \Google\Collection
     return $this->producerVpcSpokes;
   }
   /**
-   * @param string[]
+   * Output only. The proposed exclude export IP ranges waiting for hub
+   * administration's approval.
+   *
+   * @param string[] $proposedExcludeExportRanges
    */
   public function setProposedExcludeExportRanges($proposedExcludeExportRanges)
   {
@@ -102,7 +137,10 @@ class LinkedVpcNetwork extends \Google\Collection
     return $this->proposedExcludeExportRanges;
   }
   /**
-   * @param string[]
+   * Output only. The proposed include export IP ranges waiting for hub
+   * administration's approval.
+   *
+   * @param string[] $proposedIncludeExportRanges
    */
   public function setProposedIncludeExportRanges($proposedIncludeExportRanges)
   {
@@ -116,7 +154,9 @@ class LinkedVpcNetwork extends \Google\Collection
     return $this->proposedIncludeExportRanges;
   }
   /**
-   * @param string
+   * Required. The URI of the VPC network resource.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

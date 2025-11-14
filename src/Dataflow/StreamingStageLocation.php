@@ -20,12 +20,16 @@ namespace Google\Service\Dataflow;
 class StreamingStageLocation extends \Google\Model
 {
   /**
+   * Identifies the particular stream within the streaming Dataflow job.
+   *
    * @var string
    */
   public $streamId;
 
   /**
-   * @param string
+   * Identifies the particular stream within the streaming Dataflow job.
+   *
+   * @param string $streamId
    */
   public function setStreamId($streamId)
   {

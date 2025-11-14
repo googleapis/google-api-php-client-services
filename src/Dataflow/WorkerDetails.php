@@ -23,12 +23,16 @@ class WorkerDetails extends \Google\Collection
   protected $workItemsType = WorkItemDetails::class;
   protected $workItemsDataType = 'array';
   /**
+   * Name of this worker
+   *
    * @var string
    */
   public $workerName;
 
   /**
-   * @param WorkItemDetails[]
+   * Work items processed by this worker, sorted by time.
+   *
+   * @param WorkItemDetails[] $workItems
    */
   public function setWorkItems($workItems)
   {
@@ -42,7 +46,9 @@ class WorkerDetails extends \Google\Collection
     return $this->workItems;
   }
   /**
-   * @param string
+   * Name of this worker
+   *
+   * @param string $workerName
    */
   public function setWorkerName($workerName)
   {

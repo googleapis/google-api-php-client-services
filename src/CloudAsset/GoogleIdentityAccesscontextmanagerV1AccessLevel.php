@@ -24,20 +24,32 @@ class GoogleIdentityAccesscontextmanagerV1AccessLevel extends \Google\Model
   protected $customType = GoogleIdentityAccesscontextmanagerV1CustomLevel::class;
   protected $customDataType = '';
   /**
+   * Description of the `AccessLevel` and its use. Does not affect behavior.
+   *
    * @var string
    */
   public $description;
   /**
+   * Identifier. Resource name for the `AccessLevel`. Format:
+   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The
+   * `access_level` component must begin with a letter, followed by alphanumeric
+   * characters or `_`. Its maximum length is 50 characters. After you create an
+   * `AccessLevel`, you cannot change its `name`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Human readable title. Must be unique within the Policy.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param GoogleIdentityAccesscontextmanagerV1BasicLevel
+   * A `BasicLevel` composed of `Conditions`.
+   *
+   * @param GoogleIdentityAccesscontextmanagerV1BasicLevel $basic
    */
   public function setBasic(GoogleIdentityAccesscontextmanagerV1BasicLevel $basic)
   {
@@ -51,7 +63,9 @@ class GoogleIdentityAccesscontextmanagerV1AccessLevel extends \Google\Model
     return $this->basic;
   }
   /**
-   * @param GoogleIdentityAccesscontextmanagerV1CustomLevel
+   * A `CustomLevel` written in the Common Expression Language.
+   *
+   * @param GoogleIdentityAccesscontextmanagerV1CustomLevel $custom
    */
   public function setCustom(GoogleIdentityAccesscontextmanagerV1CustomLevel $custom)
   {
@@ -65,7 +79,9 @@ class GoogleIdentityAccesscontextmanagerV1AccessLevel extends \Google\Model
     return $this->custom;
   }
   /**
-   * @param string
+   * Description of the `AccessLevel` and its use. Does not affect behavior.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -79,7 +95,13 @@ class GoogleIdentityAccesscontextmanagerV1AccessLevel extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Identifier. Resource name for the `AccessLevel`. Format:
+   * `accessPolicies/{access_policy}/accessLevels/{access_level}`. The
+   * `access_level` component must begin with a letter, followed by alphanumeric
+   * characters or `_`. Its maximum length is 50 characters. After you create an
+   * `AccessLevel`, you cannot change its `name`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -93,7 +115,9 @@ class GoogleIdentityAccesscontextmanagerV1AccessLevel extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Human readable title. Must be unique within the Policy.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

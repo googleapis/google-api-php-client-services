@@ -20,34 +20,75 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends \Google\Model
 {
   /**
+   * Unspecified format.
+   */
+  public const DATA_FORMAT_DATA_FORMAT_UNSPECIFIED = 'DATA_FORMAT_UNSPECIFIED';
+  /**
+   * Raw bytes.
+   */
+  public const DATA_FORMAT_BLOB = 'BLOB';
+  /**
+   * JSON format.
+   */
+  public const DATA_FORMAT_JSON = 'JSON';
+  /**
+   * The data format of the exported test cases. If not specified, `BLOB` is
+   * assumed.
+   *
    * @var string
    */
   public $dataFormat;
   /**
+   * The filter expression used to filter exported test cases, see [API
+   * Filtering](https://aip.dev/160). The expression is case insensitive and
+   * supports the following syntax: name = [OR name = ] ... For example: * "name
+   * = t1 OR name = t2" matches the test case with the exact resource name "t1"
+   * or "t2".
+   *
    * @var string
    */
   public $filter;
   /**
+   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to
+   * export the test cases to. The format of this URI must be `gs:`. If
+   * unspecified, the serialized test cases is returned inline. Dialogflow
+   * performs a write operation for the Cloud Storage object on the caller's
+   * behalf, so your request authentication must have write permissions for the
+   * object. For more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-
+   * control#storage).
+   *
    * @var string
    */
   public $gcsUri;
 
   /**
-   * @param string
+   * The data format of the exported test cases. If not specified, `BLOB` is
+   * assumed.
+   *
+   * Accepted values: DATA_FORMAT_UNSPECIFIED, BLOB, JSON
+   *
+   * @param self::DATA_FORMAT_* $dataFormat
    */
   public function setDataFormat($dataFormat)
   {
     $this->dataFormat = $dataFormat;
   }
   /**
-   * @return string
+   * @return self::DATA_FORMAT_*
    */
   public function getDataFormat()
   {
     return $this->dataFormat;
   }
   /**
-   * @param string
+   * The filter expression used to filter exported test cases, see [API
+   * Filtering](https://aip.dev/160). The expression is case insensitive and
+   * supports the following syntax: name = [OR name = ] ... For example: * "name
+   * = t1 OR name = t2" matches the test case with the exact resource name "t1"
+   * or "t2".
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -61,7 +102,16 @@ class GoogleCloudDialogflowCxV3ExportTestCasesRequest extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param string
+   * The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to
+   * export the test cases to. The format of this URI must be `gs:`. If
+   * unspecified, the serialized test cases is returned inline. Dialogflow
+   * performs a write operation for the Cloud Storage object on the caller's
+   * behalf, so your request authentication must have write permissions for the
+   * object. For more information, see [Dialogflow access
+   * control](https://cloud.google.com/dialogflow/cx/docs/concept/access-
+   * control#storage).
+   *
+   * @param string $gcsUri
    */
   public function setGcsUri($gcsUri)
   {

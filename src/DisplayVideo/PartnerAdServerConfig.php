@@ -23,7 +23,9 @@ class PartnerAdServerConfig extends \Google\Model
   protected $measurementConfigDataType = '';
 
   /**
-   * @param MeasurementConfig
+   * Measurement settings of a partner.
+   *
+   * @param MeasurementConfig $measurementConfig
    */
   public function setMeasurementConfig(MeasurementConfig $measurementConfig)
   {

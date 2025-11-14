@@ -19,54 +19,116 @@ namespace Google\Service\NetworkSecurity;
 
 class AuthzPolicy extends \Google\Collection
 {
+  /**
+   * Unspecified action.
+   */
+  public const ACTION_AUTHZ_ACTION_UNSPECIFIED = 'AUTHZ_ACTION_UNSPECIFIED';
+  /**
+   * Allow request to pass through to the backend.
+   */
+  public const ACTION_ALLOW = 'ALLOW';
+  /**
+   * Deny the request and return a HTTP 404 to the client.
+   */
+  public const ACTION_DENY = 'DENY';
+  /**
+   * Delegate the authorization decision to an external authorization engine.
+   */
+  public const ACTION_CUSTOM = 'CUSTOM';
   protected $collection_key = 'httpRules';
   /**
+   * Required. Can be one of `ALLOW`, `DENY`, `CUSTOM`. When the action is
+   * `CUSTOM`, `customProvider` must be specified. When the action is `ALLOW`,
+   * only requests matching the policy will be allowed. When the action is
+   * `DENY`, only requests matching the policy will be denied. When a request
+   * arrives, the policies are evaluated in the following order: 1. If there is
+   * a `CUSTOM` policy that matches the request, the `CUSTOM` policy is
+   * evaluated using the custom authorization providers and the request is
+   * denied if the provider rejects the request. 2. If there are any `DENY`
+   * policies that match the request, the request is denied. 3. If there are no
+   * `ALLOW` policies for the resource or if any of the `ALLOW` policies match
+   * the request, the request is allowed. 4. Else the request is denied by
+   * default if none of the configured AuthzPolicies with `ALLOW` action match
+   * the request.
+   *
    * @var string
    */
   public $action;
   /**
+   * Output only. The timestamp when the resource was created.
+   *
    * @var string
    */
   public $createTime;
   protected $customProviderType = AuthzPolicyCustomProvider::class;
   protected $customProviderDataType = '';
   /**
+   * Optional. A human-readable description of the resource.
+   *
    * @var string
    */
   public $description;
   protected $httpRulesType = AuthzPolicyAuthzRule::class;
   protected $httpRulesDataType = 'array';
   /**
+   * Optional. Set of labels associated with the `AuthzPolicy` resource. The
+   * format must comply with [the following
+   * requirements](/compute/docs/labeling-resources#requirements).
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. Identifier. Name of the `AuthzPolicy` resource in the following
+   * format:
+   * `projects/{project}/locations/{location}/authzPolicies/{authz_policy}`.
+   *
    * @var string
    */
   public $name;
   protected $targetType = AuthzPolicyTarget::class;
   protected $targetDataType = '';
   /**
+   * Output only. The timestamp when the resource was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Required. Can be one of `ALLOW`, `DENY`, `CUSTOM`. When the action is
+   * `CUSTOM`, `customProvider` must be specified. When the action is `ALLOW`,
+   * only requests matching the policy will be allowed. When the action is
+   * `DENY`, only requests matching the policy will be denied. When a request
+   * arrives, the policies are evaluated in the following order: 1. If there is
+   * a `CUSTOM` policy that matches the request, the `CUSTOM` policy is
+   * evaluated using the custom authorization providers and the request is
+   * denied if the provider rejects the request. 2. If there are any `DENY`
+   * policies that match the request, the request is denied. 3. If there are no
+   * `ALLOW` policies for the resource or if any of the `ALLOW` policies match
+   * the request, the request is allowed. 4. Else the request is denied by
+   * default if none of the configured AuthzPolicies with `ALLOW` action match
+   * the request.
+   *
+   * Accepted values: AUTHZ_ACTION_UNSPECIFIED, ALLOW, DENY, CUSTOM
+   *
+   * @param self::ACTION_* $action
    */
   public function setAction($action)
   {
     $this->action = $action;
   }
   /**
-   * @return string
+   * @return self::ACTION_*
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -80,7 +142,11 @@ class AuthzPolicy extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param AuthzPolicyCustomProvider
+   * Optional. Required if the action is `CUSTOM`. Allows delegating
+   * authorization decisions to Cloud IAP or to Service Extensions. One of
+   * `cloudIap` or `authzExtension` must be specified.
+   *
+   * @param AuthzPolicyCustomProvider $customProvider
    */
   public function setCustomProvider(AuthzPolicyCustomProvider $customProvider)
   {
@@ -94,7 +160,9 @@ class AuthzPolicy extends \Google\Collection
     return $this->customProvider;
   }
   /**
-   * @param string
+   * Optional. A human-readable description of the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -108,7 +176,12 @@ class AuthzPolicy extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param AuthzPolicyAuthzRule[]
+   * Optional. A list of authorization HTTP rules to match against the incoming
+   * request. A policy match occurs when at least one HTTP rule matches the
+   * request or when no HTTP rules are specified in the policy. At least one
+   * HTTP Rule is required for Allow or Deny Action. Limited to 5 rules.
+   *
+   * @param AuthzPolicyAuthzRule[] $httpRules
    */
   public function setHttpRules($httpRules)
   {
@@ -122,7 +195,11 @@ class AuthzPolicy extends \Google\Collection
     return $this->httpRules;
   }
   /**
-   * @param string[]
+   * Optional. Set of labels associated with the `AuthzPolicy` resource. The
+   * format must comply with [the following
+   * requirements](/compute/docs/labeling-resources#requirements).
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -136,7 +213,11 @@ class AuthzPolicy extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. Identifier. Name of the `AuthzPolicy` resource in the following
+   * format:
+   * `projects/{project}/locations/{location}/authzPolicies/{authz_policy}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -150,7 +231,10 @@ class AuthzPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param AuthzPolicyTarget
+   * Required. Specifies the set of resources to which this policy should be
+   * applied to.
+   *
+   * @param AuthzPolicyTarget $target
    */
   public function setTarget(AuthzPolicyTarget $target)
   {
@@ -164,7 +248,9 @@ class AuthzPolicy extends \Google\Collection
     return $this->target;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

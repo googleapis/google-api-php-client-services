@@ -22,20 +22,28 @@ class Label extends \Google\Model
   protected $fieldsType = LabelField::class;
   protected $fieldsDataType = 'map';
   /**
+   * The ID of the label.
+   *
    * @var string
    */
   public $id;
   /**
+   * This is always drive#label
+   *
    * @var string
    */
   public $kind;
   /**
+   * The revision ID of the label.
+   *
    * @var string
    */
   public $revisionId;
 
   /**
-   * @param LabelField[]
+   * A map of the fields on the label, keyed by the field's ID.
+   *
+   * @param LabelField[] $fields
    */
   public function setFields($fields)
   {
@@ -49,7 +57,9 @@ class Label extends \Google\Model
     return $this->fields;
   }
   /**
-   * @param string
+   * The ID of the label.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -63,7 +73,9 @@ class Label extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * This is always drive#label
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -77,7 +89,9 @@ class Label extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The revision ID of the label.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {

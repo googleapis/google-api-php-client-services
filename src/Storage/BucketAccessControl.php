@@ -20,50 +20,79 @@ namespace Google\Service\Storage;
 class BucketAccessControl extends \Google\Model
 {
   /**
+   * The name of the bucket.
+   *
    * @var string
    */
   public $bucket;
   /**
+   * The domain associated with the entity, if any.
+   *
    * @var string
    */
   public $domain;
   /**
+   * The email address associated with the entity, if any.
+   *
    * @var string
    */
   public $email;
   /**
+   * The entity holding the permission, in one of the following forms: - user-
+   * userId  - user-email  - group-groupId  - group-email  - domain-domain  -
+   * project-team-projectId  - allUsers  - allAuthenticatedUsers Examples:  -
+   * The user liz@example.com would be user-liz@example.com.  - The group
+   * example@googlegroups.com would be group-example@googlegroups.com.  - To
+   * refer to all members of the Google Apps for Business domain example.com,
+   * the entity would be domain-example.com.
+   *
    * @var string
    */
   public $entity;
   /**
+   * The ID for the entity, if any.
+   *
    * @var string
    */
   public $entityId;
   /**
+   * HTTP 1.1 Entity tag for the access-control entry.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID of the access-control entry.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of item this is. For bucket access control entries, this is always
+   * storage#bucketAccessControl.
+   *
    * @var string
    */
   public $kind;
   protected $projectTeamType = BucketAccessControlProjectTeam::class;
   protected $projectTeamDataType = '';
   /**
+   * The access permission for the entity.
+   *
    * @var string
    */
   public $role;
   /**
+   * The link to this access-control entry.
+   *
    * @var string
    */
   public $selfLink;
 
   /**
-   * @param string
+   * The name of the bucket.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -77,7 +106,9 @@ class BucketAccessControl extends \Google\Model
     return $this->bucket;
   }
   /**
-   * @param string
+   * The domain associated with the entity, if any.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -91,7 +122,9 @@ class BucketAccessControl extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * The email address associated with the entity, if any.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -105,7 +138,15 @@ class BucketAccessControl extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The entity holding the permission, in one of the following forms: - user-
+   * userId  - user-email  - group-groupId  - group-email  - domain-domain  -
+   * project-team-projectId  - allUsers  - allAuthenticatedUsers Examples:  -
+   * The user liz@example.com would be user-liz@example.com.  - The group
+   * example@googlegroups.com would be group-example@googlegroups.com.  - To
+   * refer to all members of the Google Apps for Business domain example.com,
+   * the entity would be domain-example.com.
+   *
+   * @param string $entity
    */
   public function setEntity($entity)
   {
@@ -119,7 +160,9 @@ class BucketAccessControl extends \Google\Model
     return $this->entity;
   }
   /**
-   * @param string
+   * The ID for the entity, if any.
+   *
+   * @param string $entityId
    */
   public function setEntityId($entityId)
   {
@@ -133,7 +176,9 @@ class BucketAccessControl extends \Google\Model
     return $this->entityId;
   }
   /**
-   * @param string
+   * HTTP 1.1 Entity tag for the access-control entry.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -147,7 +192,9 @@ class BucketAccessControl extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID of the access-control entry.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -161,7 +208,10 @@ class BucketAccessControl extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of item this is. For bucket access control entries, this is always
+   * storage#bucketAccessControl.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -175,7 +225,9 @@ class BucketAccessControl extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param BucketAccessControlProjectTeam
+   * The project team associated with the entity, if any.
+   *
+   * @param BucketAccessControlProjectTeam $projectTeam
    */
   public function setProjectTeam(BucketAccessControlProjectTeam $projectTeam)
   {
@@ -189,7 +241,9 @@ class BucketAccessControl extends \Google\Model
     return $this->projectTeam;
   }
   /**
-   * @param string
+   * The access permission for the entity.
+   *
+   * @param string $role
    */
   public function setRole($role)
   {
@@ -203,7 +257,9 @@ class BucketAccessControl extends \Google\Model
     return $this->role;
   }
   /**
-   * @param string
+   * The link to this access-control entry.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {

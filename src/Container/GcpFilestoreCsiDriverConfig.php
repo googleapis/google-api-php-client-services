@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class GcpFilestoreCsiDriverConfig extends \Google\Model
 {
   /**
+   * Whether the Filestore CSI driver is enabled for this cluster.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether the Filestore CSI driver is enabled for this cluster.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

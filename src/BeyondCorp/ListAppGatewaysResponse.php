@@ -23,16 +23,23 @@ class ListAppGatewaysResponse extends \Google\Collection
   protected $appGatewaysType = AppGateway::class;
   protected $appGatewaysDataType = 'array';
   /**
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * A list of locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param AppGateway[]
+   * A list of BeyondCorp AppGateways in the project.
+   *
+   * @param AppGateway[] $appGateways
    */
   public function setAppGateways($appGateways)
   {
@@ -46,7 +53,10 @@ class ListAppGatewaysResponse extends \Google\Collection
     return $this->appGateways;
   }
   /**
-   * @param string
+   * A token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListAppGatewaysResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * A list of locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

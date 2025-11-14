@@ -20,16 +20,23 @@ namespace Google\Service\Dataflow;
 class Base2Exponent extends \Google\Model
 {
   /**
+   * Must be greater than 0.
+   *
    * @var int
    */
   public $numberOfBuckets;
   /**
+   * Must be between -3 and 3. This forces the growth factor of the bucket
+   * boundaries to be between `2^(1/8)` and `256`.
+   *
    * @var int
    */
   public $scale;
 
   /**
-   * @param int
+   * Must be greater than 0.
+   *
+   * @param int $numberOfBuckets
    */
   public function setNumberOfBuckets($numberOfBuckets)
   {
@@ -43,7 +50,10 @@ class Base2Exponent extends \Google\Model
     return $this->numberOfBuckets;
   }
   /**
-   * @param int
+   * Must be between -3 and 3. This forces the growth factor of the bucket
+   * boundaries to be between `2^(1/8)` and `256`.
+   *
+   * @param int $scale
    */
   public function setScale($scale)
   {

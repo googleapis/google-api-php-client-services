@@ -21,22 +21,30 @@ class TaskLists extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = TaskList::class;
   protected $itemsDataType = 'array';
   /**
+   * Type of the resource. This is always "tasks#taskLists".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token that can be used to request the next page of this result.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +58,9 @@ class TaskLists extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param TaskList[]
+   * Collection of task lists.
+   *
+   * @param TaskList[] $items
    */
   public function setItems($items)
   {
@@ -64,7 +74,9 @@ class TaskLists extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Type of the resource. This is always "tasks#taskLists".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +90,9 @@ class TaskLists extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token that can be used to request the next page of this result.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2LabelLockCapabilities extends \Google\Model
 {
   /**
+   * True if the user is authorized to view the policy.
+   *
    * @var bool
    */
   public $canViewPolicy;
 
   /**
-   * @param bool
+   * True if the user is authorized to view the policy.
+   *
+   * @param bool $canViewPolicy
    */
   public function setCanViewPolicy($canViewPolicy)
   {

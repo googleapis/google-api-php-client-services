@@ -20,20 +20,34 @@ namespace Google\Service\Drive;
 class AppIcons extends \Google\Model
 {
   /**
+   * Category of the icon. Allowed values are: * `application` - The icon for
+   * the application. * `document` - The icon for a file associated with the
+   * app. * `documentShared` - The icon for a shared file associated with the
+   * app.
+   *
    * @var string
    */
   public $category;
   /**
+   * URL for the icon.
+   *
    * @var string
    */
   public $iconUrl;
   /**
+   * Size of the icon. Represented as the maximum of the width and height.
+   *
    * @var int
    */
   public $size;
 
   /**
-   * @param string
+   * Category of the icon. Allowed values are: * `application` - The icon for
+   * the application. * `document` - The icon for a file associated with the
+   * app. * `documentShared` - The icon for a shared file associated with the
+   * app.
+   *
+   * @param string $category
    */
   public function setCategory($category)
   {
@@ -47,7 +61,9 @@ class AppIcons extends \Google\Model
     return $this->category;
   }
   /**
-   * @param string
+   * URL for the icon.
+   *
+   * @param string $iconUrl
    */
   public function setIconUrl($iconUrl)
   {
@@ -61,7 +77,9 @@ class AppIcons extends \Google\Model
     return $this->iconUrl;
   }
   /**
-   * @param int
+   * Size of the icon. Represented as the maximum of the width and height.
+   *
+   * @param int $size
    */
   public function setSize($size)
   {

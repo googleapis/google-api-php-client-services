@@ -28,7 +28,7 @@ class EnterpriseTopazSidekickAgendaGroupCardProto extends \Google\Collection
   protected $currentAgendaItemDataType = '';
 
   /**
-   * @param EnterpriseTopazSidekickAgendaItem[]
+   * @param EnterpriseTopazSidekickAgendaItem[] $agendaItem
    */
   public function setAgendaItem($agendaItem)
   {
@@ -42,7 +42,7 @@ class EnterpriseTopazSidekickAgendaGroupCardProto extends \Google\Collection
     return $this->agendaItem;
   }
   /**
-   * @param EnterpriseTopazSidekickAgendaGroupCardProtoContext
+   * @param EnterpriseTopazSidekickAgendaGroupCardProtoContext $context
    */
   public function setContext(EnterpriseTopazSidekickAgendaGroupCardProtoContext $context)
   {
@@ -56,7 +56,7 @@ class EnterpriseTopazSidekickAgendaGroupCardProto extends \Google\Collection
     return $this->context;
   }
   /**
-   * @param EnterpriseTopazSidekickAgendaItem
+   * @param EnterpriseTopazSidekickAgendaItem $currentAgendaItem
    */
   public function setCurrentAgendaItem(EnterpriseTopazSidekickAgendaItem $currentAgendaItem)
   {

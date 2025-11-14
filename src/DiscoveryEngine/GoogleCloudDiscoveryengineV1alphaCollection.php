@@ -20,22 +20,35 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaCollection extends \Google\Model
 {
   /**
+   * Output only. Timestamp the Collection was created at.
+   *
    * @var string
    */
   public $createTime;
   protected $dataConnectorType = GoogleCloudDiscoveryengineV1alphaDataConnector::class;
   protected $dataConnectorDataType = '';
   /**
+   * Required. The Collection display name. This field must be a UTF-8 encoded
+   * string with a length limit of 128 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Immutable. The full resource name of the Collection. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. Timestamp the Collection was created at.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -49,7 +62,17 @@ class GoogleCloudDiscoveryengineV1alphaCollection extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaDataConnector
+   * Output only. The data connector, if present, manages the connection for
+   * data stores in the Collection. To set up the connector, use
+   * DataConnectorService.SetUpDataConnector method, which creates a new
+   * Collection while setting up the DataConnector singleton resource. Setting
+   * up connector on an existing Collection is not supported. This output only
+   * field contains a subset of the DataConnector fields, including `name`,
+   * `data_source`, `entities.entity_name` and `entities.data_store`. To get
+   * more details about a data connector, use the
+   * DataConnectorService.GetDataConnector method.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnector $dataConnector
    */
   public function setDataConnector(GoogleCloudDiscoveryengineV1alphaDataConnector $dataConnector)
   {
@@ -63,7 +86,11 @@ class GoogleCloudDiscoveryengineV1alphaCollection extends \Google\Model
     return $this->dataConnector;
   }
   /**
-   * @param string
+   * Required. The Collection display name. This field must be a UTF-8 encoded
+   * string with a length limit of 128 characters. Otherwise, an
+   * INVALID_ARGUMENT error is returned.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -77,7 +104,12 @@ class GoogleCloudDiscoveryengineV1alphaCollection extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Immutable. The full resource name of the Collection. Format:
+   * `projects/{project}/locations/{location}/collections/{collection_id}`. This
+   * field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

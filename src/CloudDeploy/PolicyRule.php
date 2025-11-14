@@ -23,7 +23,9 @@ class PolicyRule extends \Google\Model
   protected $rolloutRestrictionDataType = '';
 
   /**
-   * @param RolloutRestriction
+   * Optional. Rollout restrictions.
+   *
+   * @param RolloutRestriction $rolloutRestriction
    */
   public function setRolloutRestriction(RolloutRestriction $rolloutRestriction)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2KmsWrappedCryptoKey extends \Google\Model
 {
   /**
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
+   *
    * @var string
    */
   public $cryptoKeyName;
   /**
+   * Required. The wrapped data crypto key.
+   *
    * @var string
    */
   public $wrappedKey;
 
   /**
-   * @param string
+   * Required. The resource name of the KMS CryptoKey to use for unwrapping.
+   *
+   * @param string $cryptoKeyName
    */
   public function setCryptoKeyName($cryptoKeyName)
   {
@@ -43,7 +49,9 @@ class GooglePrivacyDlpV2KmsWrappedCryptoKey extends \Google\Model
     return $this->cryptoKeyName;
   }
   /**
-   * @param string
+   * Required. The wrapped data crypto key.
+   *
+   * @param string $wrappedKey
    */
   public function setWrappedKey($wrappedKey)
   {

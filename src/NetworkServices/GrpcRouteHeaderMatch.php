@@ -20,20 +20,42 @@ namespace Google\Service\NetworkServices;
 class GrpcRouteHeaderMatch extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Will only match the exact value provided.
+   */
+  public const TYPE_EXACT = 'EXACT';
+  /**
+   * Will match paths conforming to the prefix specified by value. RE2 syntax is
+   * supported.
+   */
+  public const TYPE_REGULAR_EXPRESSION = 'REGULAR_EXPRESSION';
+  /**
+   * Required. The key of the header.
+   *
    * @var string
    */
   public $key;
   /**
+   * Optional. Specifies how to match against the value of the header. If not
+   * specified, a default value of EXACT is used.
+   *
    * @var string
    */
   public $type;
   /**
+   * Required. The value of the header.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The key of the header.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -47,21 +69,28 @@ class GrpcRouteHeaderMatch extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Optional. Specifies how to match against the value of the header. If not
+   * specified, a default value of EXACT is used.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, EXACT, REGULAR_EXPRESSION
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * Required. The value of the header.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

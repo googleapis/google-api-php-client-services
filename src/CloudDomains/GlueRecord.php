@@ -21,20 +21,32 @@ class GlueRecord extends \Google\Collection
 {
   protected $collection_key = 'ipv6Addresses';
   /**
+   * Required. Domain name of the host in Punycode format.
+   *
    * @var string
    */
   public $hostName;
   /**
+   * List of IPv4 addresses corresponding to this host in the standard decimal
+   * format (e.g. `198.51.100.1`). At least one of `ipv4_address` and
+   * `ipv6_address` must be set.
+   *
    * @var string[]
    */
   public $ipv4Addresses;
   /**
+   * List of IPv6 addresses corresponding to this host in the standard
+   * hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and
+   * `ipv6_address` must be set.
+   *
    * @var string[]
    */
   public $ipv6Addresses;
 
   /**
-   * @param string
+   * Required. Domain name of the host in Punycode format.
+   *
+   * @param string $hostName
    */
   public function setHostName($hostName)
   {
@@ -48,7 +60,11 @@ class GlueRecord extends \Google\Collection
     return $this->hostName;
   }
   /**
-   * @param string[]
+   * List of IPv4 addresses corresponding to this host in the standard decimal
+   * format (e.g. `198.51.100.1`). At least one of `ipv4_address` and
+   * `ipv6_address` must be set.
+   *
+   * @param string[] $ipv4Addresses
    */
   public function setIpv4Addresses($ipv4Addresses)
   {
@@ -62,7 +78,11 @@ class GlueRecord extends \Google\Collection
     return $this->ipv4Addresses;
   }
   /**
-   * @param string[]
+   * List of IPv6 addresses corresponding to this host in the standard
+   * hexadecimal format (e.g. `2001:db8::`). At least one of `ipv4_address` and
+   * `ipv6_address` must be set.
+   *
+   * @param string[] $ipv6Addresses
    */
   public function setIpv6Addresses($ipv6Addresses)
   {

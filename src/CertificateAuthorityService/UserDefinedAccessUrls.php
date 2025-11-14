@@ -21,16 +21,29 @@ class UserDefinedAccessUrls extends \Google\Collection
 {
   protected $collection_key = 'crlAccessUrls';
   /**
+   * Optional. A list of URLs where the issuer CA certificate may be downloaded,
+   * which appears in the "Authority Information Access" extension in the
+   * certificate. If specified, the default Cloud Storage URLs will be omitted.
+   *
    * @var string[]
    */
   public $aiaIssuingCertificateUrls;
   /**
+   * Optional. A list of URLs where to obtain CRL information, i.e. the
+   * DistributionPoint.fullName described by
+   * https://tools.ietf.org/html/rfc5280#section-4.2.1.13. If specified, the
+   * default Cloud Storage URLs will be omitted.
+   *
    * @var string[]
    */
   public $crlAccessUrls;
 
   /**
-   * @param string[]
+   * Optional. A list of URLs where the issuer CA certificate may be downloaded,
+   * which appears in the "Authority Information Access" extension in the
+   * certificate. If specified, the default Cloud Storage URLs will be omitted.
+   *
+   * @param string[] $aiaIssuingCertificateUrls
    */
   public function setAiaIssuingCertificateUrls($aiaIssuingCertificateUrls)
   {
@@ -44,7 +57,12 @@ class UserDefinedAccessUrls extends \Google\Collection
     return $this->aiaIssuingCertificateUrls;
   }
   /**
-   * @param string[]
+   * Optional. A list of URLs where to obtain CRL information, i.e. the
+   * DistributionPoint.fullName described by
+   * https://tools.ietf.org/html/rfc5280#section-4.2.1.13. If specified, the
+   * default Cloud Storage URLs will be omitted.
+   *
+   * @param string[] $crlAccessUrls
    */
   public function setCrlAccessUrls($crlAccessUrls)
   {

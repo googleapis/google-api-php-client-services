@@ -21,12 +21,17 @@ class QuerySource extends \Google\Collection
 {
   protected $collection_key = 'operators';
   /**
+   * Display name of the data source.
+   *
    * @var string
    */
   public $displayName;
   protected $operatorsType = QueryOperator::class;
   protected $operatorsDataType = 'array';
   /**
+   * A short name or alias for the source. This value can be used with the
+   * 'source' operator.
+   *
    * @var string
    */
   public $shortName;
@@ -34,7 +39,9 @@ class QuerySource extends \Google\Collection
   protected $sourceDataType = '';
 
   /**
-   * @param string
+   * Display name of the data source.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -48,7 +55,9 @@ class QuerySource extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param QueryOperator[]
+   * List of all operators applicable for this source.
+   *
+   * @param QueryOperator[] $operators
    */
   public function setOperators($operators)
   {
@@ -62,7 +71,10 @@ class QuerySource extends \Google\Collection
     return $this->operators;
   }
   /**
-   * @param string
+   * A short name or alias for the source. This value can be used with the
+   * 'source' operator.
+   *
+   * @param string $shortName
    */
   public function setShortName($shortName)
   {
@@ -76,7 +88,9 @@ class QuerySource extends \Google\Collection
     return $this->shortName;
   }
   /**
-   * @param Source
+   * The name of the source
+   *
+   * @param Source $source
    */
   public function setSource(Source $source)
   {

@@ -20,28 +20,46 @@ namespace Google\Service\ShoppingContent;
 class HolidayCutoff extends \Google\Model
 {
   /**
+   * Date of the order deadline, in ISO 8601 format. For example, "2016-11-29"
+   * for 29th November 2016. Required.
+   *
    * @var string
    */
   public $deadlineDate;
   /**
+   * Hour of the day on the deadline date until which the order has to be placed
+   * to qualify for the delivery guarantee. Possible values are: 0 (midnight),
+   * 1, ..., 12 (noon), 13, ..., 23. Required.
+   *
    * @var string
    */
   public $deadlineHour;
   /**
+   * Timezone identifier for the deadline hour (for example, "Europe/Zurich").
+   * List of identifiers. Required.
+   *
    * @var string
    */
   public $deadlineTimezone;
   /**
+   * Unique identifier for the holiday. Required.
+   *
    * @var string
    */
   public $holidayId;
   /**
+   * Date on which the deadline will become visible to consumers in ISO 8601
+   * format. For example, "2016-10-31" for 31st October 2016. Required.
+   *
    * @var string
    */
   public $visibleFromDate;
 
   /**
-   * @param string
+   * Date of the order deadline, in ISO 8601 format. For example, "2016-11-29"
+   * for 29th November 2016. Required.
+   *
+   * @param string $deadlineDate
    */
   public function setDeadlineDate($deadlineDate)
   {
@@ -55,7 +73,11 @@ class HolidayCutoff extends \Google\Model
     return $this->deadlineDate;
   }
   /**
-   * @param string
+   * Hour of the day on the deadline date until which the order has to be placed
+   * to qualify for the delivery guarantee. Possible values are: 0 (midnight),
+   * 1, ..., 12 (noon), 13, ..., 23. Required.
+   *
+   * @param string $deadlineHour
    */
   public function setDeadlineHour($deadlineHour)
   {
@@ -69,7 +91,10 @@ class HolidayCutoff extends \Google\Model
     return $this->deadlineHour;
   }
   /**
-   * @param string
+   * Timezone identifier for the deadline hour (for example, "Europe/Zurich").
+   * List of identifiers. Required.
+   *
+   * @param string $deadlineTimezone
    */
   public function setDeadlineTimezone($deadlineTimezone)
   {
@@ -83,7 +108,9 @@ class HolidayCutoff extends \Google\Model
     return $this->deadlineTimezone;
   }
   /**
-   * @param string
+   * Unique identifier for the holiday. Required.
+   *
+   * @param string $holidayId
    */
   public function setHolidayId($holidayId)
   {
@@ -97,7 +124,10 @@ class HolidayCutoff extends \Google\Model
     return $this->holidayId;
   }
   /**
-   * @param string
+   * Date on which the deadline will become visible to consumers in ISO 8601
+   * format. For example, "2016-10-31" for 31st October 2016. Required.
+   *
+   * @param string $visibleFromDate
    */
   public function setVisibleFromDate($visibleFromDate)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\DriveActivity;
 class Rename extends \Google\Model
 {
   /**
+   * The new title of the drive object.
+   *
    * @var string
    */
   public $newTitle;
   /**
+   * The previous title of the drive object.
+   *
    * @var string
    */
   public $oldTitle;
 
   /**
-   * @param string
+   * The new title of the drive object.
+   *
+   * @param string $newTitle
    */
   public function setNewTitle($newTitle)
   {
@@ -43,7 +49,9 @@ class Rename extends \Google\Model
     return $this->newTitle;
   }
   /**
-   * @param string
+   * The previous title of the drive object.
+   *
+   * @param string $oldTitle
    */
   public function setOldTitle($oldTitle)
   {

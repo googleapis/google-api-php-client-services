@@ -19,45 +19,65 @@ namespace Google\Service\Blogger;
 
 class Comment extends \Google\Model
 {
+  public const STATUS_LIVE = 'LIVE';
+  public const STATUS_EMPTIED = 'EMPTIED';
+  public const STATUS_PENDING = 'PENDING';
+  public const STATUS_SPAM = 'SPAM';
   protected $authorType = CommentAuthor::class;
   protected $authorDataType = '';
   protected $blogType = CommentBlog::class;
   protected $blogDataType = '';
   /**
+   * The actual content of the comment. May include HTML markup.
+   *
    * @var string
    */
   public $content;
   /**
+   * The identifier for this resource.
+   *
    * @var string
    */
   public $id;
   protected $inReplyToType = CommentInReplyTo::class;
   protected $inReplyToDataType = '';
   /**
+   * The kind of this entry. Always blogger#comment.
+   *
    * @var string
    */
   public $kind;
   protected $postType = CommentPost::class;
   protected $postDataType = '';
   /**
+   * RFC 3339 date-time when this comment was published.
+   *
    * @var string
    */
   public $published;
   /**
+   * The API REST URL to fetch this resource from.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The status of the comment (only populated for admin users).
+   *
    * @var string
    */
   public $status;
   /**
+   * RFC 3339 date-time when this comment was last updated.
+   *
    * @var string
    */
   public $updated;
 
   /**
-   * @param CommentAuthor
+   * The author of this Comment.
+   *
+   * @param CommentAuthor $author
    */
   public function setAuthor(CommentAuthor $author)
   {
@@ -71,7 +91,9 @@ class Comment extends \Google\Model
     return $this->author;
   }
   /**
-   * @param CommentBlog
+   * Data about the blog containing this comment.
+   *
+   * @param CommentBlog $blog
    */
   public function setBlog(CommentBlog $blog)
   {
@@ -85,7 +107,9 @@ class Comment extends \Google\Model
     return $this->blog;
   }
   /**
-   * @param string
+   * The actual content of the comment. May include HTML markup.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -99,7 +123,9 @@ class Comment extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * The identifier for this resource.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -113,7 +139,9 @@ class Comment extends \Google\Model
     return $this->id;
   }
   /**
-   * @param CommentInReplyTo
+   * Data about the comment this is in reply to.
+   *
+   * @param CommentInReplyTo $inReplyTo
    */
   public function setInReplyTo(CommentInReplyTo $inReplyTo)
   {
@@ -127,7 +155,9 @@ class Comment extends \Google\Model
     return $this->inReplyTo;
   }
   /**
-   * @param string
+   * The kind of this entry. Always blogger#comment.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -141,7 +171,9 @@ class Comment extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param CommentPost
+   * Data about the post containing this comment.
+   *
+   * @param CommentPost $post
    */
   public function setPost(CommentPost $post)
   {
@@ -155,7 +187,9 @@ class Comment extends \Google\Model
     return $this->post;
   }
   /**
-   * @param string
+   * RFC 3339 date-time when this comment was published.
+   *
+   * @param string $published
    */
   public function setPublished($published)
   {
@@ -169,7 +203,9 @@ class Comment extends \Google\Model
     return $this->published;
   }
   /**
-   * @param string
+   * The API REST URL to fetch this resource from.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -183,21 +219,27 @@ class Comment extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The status of the comment (only populated for admin users).
+   *
+   * Accepted values: LIVE, EMPTIED, PENDING, SPAM
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * RFC 3339 date-time when this comment was last updated.
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {

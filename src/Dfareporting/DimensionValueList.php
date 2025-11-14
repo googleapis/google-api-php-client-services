@@ -21,22 +21,33 @@ class DimensionValueList extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * The eTag of this response for caching purposes.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = DimensionValue::class;
   protected $itemsDataType = 'array';
   /**
+   * The kind of list this is, in this case dfareporting#dimensionValueList.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Continuation token used to page through dimension values. To retrieve the
+   * next page of results, set the next request's "pageToken" to the value of
+   * this field. The page token is only valid for a limited amount of time and
+   * should not be persisted.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * The eTag of this response for caching purposes.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -50,7 +61,9 @@ class DimensionValueList extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param DimensionValue[]
+   * The dimension values returned in this response.
+   *
+   * @param DimensionValue[] $items
    */
   public function setItems($items)
   {
@@ -64,7 +77,9 @@ class DimensionValueList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The kind of list this is, in this case dfareporting#dimensionValueList.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -78,7 +93,12 @@ class DimensionValueList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Continuation token used to page through dimension values. To retrieve the
+   * next page of results, set the next request's "pageToken" to the value of
+   * this field. The page token is only valid for a limited amount of time and
+   * should not be persisted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

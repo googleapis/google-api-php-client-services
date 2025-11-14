@@ -20,12 +20,16 @@ namespace Google\Service\Appengine;
 class Entrypoint extends \Google\Model
 {
   /**
+   * The format should be a shell command that can be fed to bash -c.
+   *
    * @var string
    */
   public $shell;
 
   /**
-   * @param string
+   * The format should be a shell command that can be fed to bash -c.
+   *
+   * @param string $shell
    */
   public function setShell($shell)
   {

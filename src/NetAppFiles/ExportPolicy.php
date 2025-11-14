@@ -24,7 +24,9 @@ class ExportPolicy extends \Google\Collection
   protected $rulesDataType = 'array';
 
   /**
-   * @param SimpleExportPolicyRule[]
+   * Required. List of export policy rules
+   *
+   * @param SimpleExportPolicyRule[] $rules
    */
   public function setRules($rules)
   {

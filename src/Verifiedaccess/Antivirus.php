@@ -20,19 +20,43 @@ namespace Google\Service\Verifiedaccess;
 class Antivirus extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * No antivirus was detected on the device.
+   */
+  public const STATE_MISSING = 'MISSING';
+  /**
+   * At least one antivirus was installed on the device but none was enabled.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * At least one antivirus was enabled on the device.
+   */
+  public const STATE_ENABLED = 'ENABLED';
+  /**
+   * Output only. The state of the antivirus on the device. Introduced in Chrome
+   * M136.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The state of the antivirus on the device. Introduced in Chrome
+   * M136.
+   *
+   * Accepted values: STATE_UNSPECIFIED, MISSING, DISABLED, ENABLED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

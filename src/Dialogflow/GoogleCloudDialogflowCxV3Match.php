@@ -20,30 +20,97 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3Match extends \Google\Model
 {
   /**
+   * Not specified. Should never be used.
+   */
+  public const MATCH_TYPE_MATCH_TYPE_UNSPECIFIED = 'MATCH_TYPE_UNSPECIFIED';
+  /**
+   * The query was matched to an intent.
+   */
+  public const MATCH_TYPE_INTENT = 'INTENT';
+  /**
+   * The query directly triggered an intent.
+   */
+  public const MATCH_TYPE_DIRECT_INTENT = 'DIRECT_INTENT';
+  /**
+   * The query was used for parameter filling.
+   */
+  public const MATCH_TYPE_PARAMETER_FILLING = 'PARAMETER_FILLING';
+  /**
+   * No match was found for the query.
+   */
+  public const MATCH_TYPE_NO_MATCH = 'NO_MATCH';
+  /**
+   * Indicates an empty query.
+   */
+  public const MATCH_TYPE_NO_INPUT = 'NO_INPUT';
+  /**
+   * The query directly triggered an event.
+   */
+  public const MATCH_TYPE_EVENT = 'EVENT';
+  /**
+   * The query was matched to a Knowledge Connector answer.
+   */
+  public const MATCH_TYPE_KNOWLEDGE_CONNECTOR = 'KNOWLEDGE_CONNECTOR';
+  /**
+   * The query was handled by a `Playbook`.
+   */
+  public const MATCH_TYPE_PLAYBOOK = 'PLAYBOOK';
+  /**
+   * The confidence of this match. Values range from 0.0 (completely uncertain)
+   * to 1.0 (completely certain). This value is for informational purpose only
+   * and is only used to help match the best intent within the classification
+   * threshold. This value may change for the same end-user expression at any
+   * time due to a model retraining or change in implementation.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and
+   * `NO_INPUT` match types.
+   *
    * @var string
    */
   public $event;
   protected $intentType = GoogleCloudDialogflowCxV3Intent::class;
   protected $intentDataType = '';
   /**
+   * Type of this Match.
+   *
    * @var string
    */
   public $matchType;
   /**
+   * The collection of parameters extracted from the query. Depending on your
+   * protocol or client library language, this is a map, associative array,
+   * symbol table, dictionary, or JSON object composed of a collection of
+   * (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter
+   * name * MapValue type: If parameter's entity type is a composite entity then
+   * use map, otherwise, depending on the parameter value type, it could be one
+   * of string, number, boolean, null, list or map. * MapValue value: If
+   * parameter's entity type is a composite entity then use map from composite
+   * entity property names to property values, otherwise, use parameter value.
+   *
    * @var array[]
    */
   public $parameters;
   /**
+   * Final text input which was matched during MatchIntent. This value can be
+   * different from original input sent in request because of spelling
+   * correction or other processing.
+   *
    * @var string
    */
   public $resolvedInput;
 
   /**
-   * @param float
+   * The confidence of this match. Values range from 0.0 (completely uncertain)
+   * to 1.0 (completely certain). This value is for informational purpose only
+   * and is only used to help match the best intent within the classification
+   * threshold. This value may change for the same end-user expression at any
+   * time due to a model retraining or change in implementation.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -57,7 +124,10 @@ class GoogleCloudDialogflowCxV3Match extends \Google\Model
     return $this->confidence;
   }
   /**
-   * @param string
+   * The event that matched the query. Filled for `EVENT`, `NO_MATCH` and
+   * `NO_INPUT` match types.
+   *
+   * @param string $event
    */
   public function setEvent($event)
   {
@@ -71,7 +141,11 @@ class GoogleCloudDialogflowCxV3Match extends \Google\Model
     return $this->event;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3Intent
+   * The Intent that matched the query. Some, not all fields are filled in this
+   * message, including but not limited to: `name` and `display_name`. Only
+   * filled for `INTENT` match type.
+   *
+   * @param GoogleCloudDialogflowCxV3Intent $intent
    */
   public function setIntent(GoogleCloudDialogflowCxV3Intent $intent)
   {
@@ -85,21 +159,36 @@ class GoogleCloudDialogflowCxV3Match extends \Google\Model
     return $this->intent;
   }
   /**
-   * @param string
+   * Type of this Match.
+   *
+   * Accepted values: MATCH_TYPE_UNSPECIFIED, INTENT, DIRECT_INTENT,
+   * PARAMETER_FILLING, NO_MATCH, NO_INPUT, EVENT, KNOWLEDGE_CONNECTOR, PLAYBOOK
+   *
+   * @param self::MATCH_TYPE_* $matchType
    */
   public function setMatchType($matchType)
   {
     $this->matchType = $matchType;
   }
   /**
-   * @return string
+   * @return self::MATCH_TYPE_*
    */
   public function getMatchType()
   {
     return $this->matchType;
   }
   /**
-   * @param array[]
+   * The collection of parameters extracted from the query. Depending on your
+   * protocol or client library language, this is a map, associative array,
+   * symbol table, dictionary, or JSON object composed of a collection of
+   * (MapKey, MapValue) pairs: * MapKey type: string * MapKey value: parameter
+   * name * MapValue type: If parameter's entity type is a composite entity then
+   * use map, otherwise, depending on the parameter value type, it could be one
+   * of string, number, boolean, null, list or map. * MapValue value: If
+   * parameter's entity type is a composite entity then use map from composite
+   * entity property names to property values, otherwise, use parameter value.
+   *
+   * @param array[] $parameters
    */
   public function setParameters($parameters)
   {
@@ -113,7 +202,11 @@ class GoogleCloudDialogflowCxV3Match extends \Google\Model
     return $this->parameters;
   }
   /**
-   * @param string
+   * Final text input which was matched during MatchIntent. This value can be
+   * different from original input sent in request because of spelling
+   * correction or other processing.
+   *
+   * @param string $resolvedInput
    */
   public function setResolvedInput($resolvedInput)
   {

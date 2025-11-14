@@ -25,6 +25,9 @@ class CrossMediaReachReportCompatibleFields extends \Google\Collection
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
+   * The kind of resource this is, in this case
+   * dfareporting#crossMediaReachReportCompatibleFields.
+   *
    * @var string
    */
   public $kind;
@@ -32,7 +35,10 @@ class CrossMediaReachReportCompatibleFields extends \Google\Collection
   protected $metricsDataType = 'array';
 
   /**
-   * @param Dimension[]
+   * Dimensions which are compatible to be selected in the "dimensionFilters"
+   * section of the report.
+   *
+   * @param Dimension[] $dimensionFilters
    */
   public function setDimensionFilters($dimensionFilters)
   {
@@ -46,7 +52,10 @@ class CrossMediaReachReportCompatibleFields extends \Google\Collection
     return $this->dimensionFilters;
   }
   /**
-   * @param Dimension[]
+   * Dimensions which are compatible to be selected in the "dimensions" section
+   * of the report.
+   *
+   * @param Dimension[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -60,7 +69,10 @@ class CrossMediaReachReportCompatibleFields extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case
+   * dfareporting#crossMediaReachReportCompatibleFields.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -74,7 +86,10 @@ class CrossMediaReachReportCompatibleFields extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Metric[]
+   * Metrics which are compatible to be selected in the "metricNames" section of
+   * the report.
+   *
+   * @param Metric[] $metrics
    */
   public function setMetrics($metrics)
   {

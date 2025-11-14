@@ -22,12 +22,17 @@ class DebugOptions extends \Google\Model
   protected $dataSamplingType = DataSamplingConfig::class;
   protected $dataSamplingDataType = '';
   /**
+   * Optional. When true, enables the logging of the literal hot key to the
+   * user's Cloud Logging.
+   *
    * @var bool
    */
   public $enableHotKeyLogging;
 
   /**
-   * @param DataSamplingConfig
+   * Configuration options for sampling elements from a running pipeline.
+   *
+   * @param DataSamplingConfig $dataSampling
    */
   public function setDataSampling(DataSamplingConfig $dataSampling)
   {
@@ -41,7 +46,10 @@ class DebugOptions extends \Google\Model
     return $this->dataSampling;
   }
   /**
-   * @param bool
+   * Optional. When true, enables the logging of the literal hot key to the
+   * user's Cloud Logging.
+   *
+   * @param bool $enableHotKeyLogging
    */
   public function setEnableHotKeyLogging($enableHotKeyLogging)
   {

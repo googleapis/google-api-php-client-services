@@ -25,7 +25,10 @@ class DSSEAttestationOccurrence extends \Google\Model
   protected $statementDataType = '';
 
   /**
-   * @param Envelope
+   * If doing something security critical, make sure to verify the signatures in
+   * this metadata.
+   *
+   * @param Envelope $envelope
    */
   public function setEnvelope(Envelope $envelope)
   {
@@ -39,7 +42,7 @@ class DSSEAttestationOccurrence extends \Google\Model
     return $this->envelope;
   }
   /**
-   * @param InTotoStatement
+   * @param InTotoStatement $statement
    */
   public function setStatement(InTotoStatement $statement)
   {

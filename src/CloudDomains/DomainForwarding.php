@@ -20,32 +20,65 @@ namespace Google\Service\CloudDomains;
 class DomainForwarding extends \Google\Model
 {
   /**
+   * Redirect Type is unspecified.
+   */
+  public const REDIRECT_TYPE_REDIRECT_TYPE_UNSPECIFIED = 'REDIRECT_TYPE_UNSPECIFIED';
+  /**
+   * 301 redirect. Allows to propagate changes to the forwarding address
+   * quickly.
+   */
+  public const REDIRECT_TYPE_TEMPORARY = 'TEMPORARY';
+  /**
+   * 302 redirect. Allows browsers to cache the forwarding address. This may
+   * help the address resolve more quickly. Changes may take longer to propagate
+   */
+  public const REDIRECT_TYPE_PERMANENT = 'PERMANENT';
+  /**
+   * If true, forwards the path after the domain name to the same path at the
+   * new address.
+   *
    * @var bool
    */
   public $pathForwarding;
   /**
+   * The PEM-encoded certificate chain.
+   *
    * @var string
    */
   public $pemCertificate;
   /**
+   * The redirect type.
+   *
    * @var string
    */
   public $redirectType;
   /**
+   * If true, the forwarding works also over HTTPS.
+   *
    * @var bool
    */
   public $sslEnabled;
   /**
+   * The subdomain of the registered domain that is being forwarded. E.g.
+   * `www.example.com`, `example.com` (i.e. the registered domain itself) or
+   * `*.example.com` (i.e. all subdomains).
+   *
    * @var string
    */
   public $subdomain;
   /**
+   * The target of the domain forwarding, i.e. the path to redirect the
+   * `subdomain` to.
+   *
    * @var string
    */
   public $targetUri;
 
   /**
-   * @param bool
+   * If true, forwards the path after the domain name to the same path at the
+   * new address.
+   *
+   * @param bool $pathForwarding
    */
   public function setPathForwarding($pathForwarding)
   {
@@ -59,7 +92,9 @@ class DomainForwarding extends \Google\Model
     return $this->pathForwarding;
   }
   /**
-   * @param string
+   * The PEM-encoded certificate chain.
+   *
+   * @param string $pemCertificate
    */
   public function setPemCertificate($pemCertificate)
   {
@@ -73,21 +108,27 @@ class DomainForwarding extends \Google\Model
     return $this->pemCertificate;
   }
   /**
-   * @param string
+   * The redirect type.
+   *
+   * Accepted values: REDIRECT_TYPE_UNSPECIFIED, TEMPORARY, PERMANENT
+   *
+   * @param self::REDIRECT_TYPE_* $redirectType
    */
   public function setRedirectType($redirectType)
   {
     $this->redirectType = $redirectType;
   }
   /**
-   * @return string
+   * @return self::REDIRECT_TYPE_*
    */
   public function getRedirectType()
   {
     return $this->redirectType;
   }
   /**
-   * @param bool
+   * If true, the forwarding works also over HTTPS.
+   *
+   * @param bool $sslEnabled
    */
   public function setSslEnabled($sslEnabled)
   {
@@ -101,7 +142,11 @@ class DomainForwarding extends \Google\Model
     return $this->sslEnabled;
   }
   /**
-   * @param string
+   * The subdomain of the registered domain that is being forwarded. E.g.
+   * `www.example.com`, `example.com` (i.e. the registered domain itself) or
+   * `*.example.com` (i.e. all subdomains).
+   *
+   * @param string $subdomain
    */
   public function setSubdomain($subdomain)
   {
@@ -115,7 +160,10 @@ class DomainForwarding extends \Google\Model
     return $this->subdomain;
   }
   /**
-   * @param string
+   * The target of the domain forwarding, i.e. the path to redirect the
+   * `subdomain` to.
+   *
+   * @param string $targetUri
    */
   public function setTargetUri($targetUri)
   {

@@ -30,7 +30,9 @@ class ResourceUtilizationReport extends \Google\Collection
   protected $memoryInfoDataType = 'array';
 
   /**
-   * @param ResourceUtilizationReport[]
+   * Per container information. Key: container name.
+   *
+   * @param ResourceUtilizationReport[] $containers
    */
   public function setContainers($containers)
   {
@@ -44,7 +46,9 @@ class ResourceUtilizationReport extends \Google\Collection
     return $this->containers;
   }
   /**
-   * @param CPUTime[]
+   * CPU utilization samples.
+   *
+   * @param CPUTime[] $cpuTime
    */
   public function setCpuTime($cpuTime)
   {
@@ -58,7 +62,9 @@ class ResourceUtilizationReport extends \Google\Collection
     return $this->cpuTime;
   }
   /**
-   * @param GPUUsage[]
+   * Optional. GPU usage samples.
+   *
+   * @param GPUUsage[] $gpuUsage
    */
   public function setGpuUsage($gpuUsage)
   {
@@ -72,7 +78,9 @@ class ResourceUtilizationReport extends \Google\Collection
     return $this->gpuUsage;
   }
   /**
-   * @param MemInfo[]
+   * Memory utilization samples.
+   *
+   * @param MemInfo[] $memoryInfo
    */
   public function setMemoryInfo($memoryInfo)
   {

@@ -19,34 +19,62 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const OAUTH_GRANT_TYPE_OAUTH_GRANT_TYPE_UNSPECIFIED = 'OAUTH_GRANT_TYPE_UNSPECIFIED';
+  /**
+   * Represents the [client credential flow](https://oauth.net/2/grant-
+   * types/client-credentials).
+   */
+  public const OAUTH_GRANT_TYPE_CLIENT_CREDENTIAL = 'CLIENT_CREDENTIAL';
   protected $collection_key = 'scopes';
   /**
+   * Required. The client ID from the OAuth provider.
+   *
    * @var string
    */
   public $clientId;
   /**
+   * Optional. The client secret from the OAuth provider. If the
+   * `secret_version_for_client_secret` field is set, this field will be
+   * ignored.
+   *
    * @var string
    */
   public $clientSecret;
   /**
+   * Required. OAuth grant types.
+   *
    * @var string
    */
   public $oauthGrantType;
   /**
+   * Optional. The OAuth scopes to grant.
+   *
    * @var string[]
    */
   public $scopes;
   /**
+   * Optional. The name of the SecretManager secret version resource storing the
+   * client secret. If this field is set, the `client_secret` field will be
+   * ignored. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   *
    * @var string
    */
   public $secretVersionForClientSecret;
   /**
+   * Required. The token endpoint in the OAuth provider to exchange for an
+   * access token.
+   *
    * @var string
    */
   public $tokenEndpoint;
 
   /**
-   * @param string
+   * Required. The client ID from the OAuth provider.
+   *
+   * @param string $clientId
    */
   public function setClientId($clientId)
   {
@@ -60,7 +88,11 @@ class GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig extends \Google\Col
     return $this->clientId;
   }
   /**
-   * @param string
+   * Optional. The client secret from the OAuth provider. If the
+   * `secret_version_for_client_secret` field is set, this field will be
+   * ignored.
+   *
+   * @param string $clientSecret
    */
   public function setClientSecret($clientSecret)
   {
@@ -74,21 +106,27 @@ class GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig extends \Google\Col
     return $this->clientSecret;
   }
   /**
-   * @param string
+   * Required. OAuth grant types.
+   *
+   * Accepted values: OAUTH_GRANT_TYPE_UNSPECIFIED, CLIENT_CREDENTIAL
+   *
+   * @param self::OAUTH_GRANT_TYPE_* $oauthGrantType
    */
   public function setOauthGrantType($oauthGrantType)
   {
     $this->oauthGrantType = $oauthGrantType;
   }
   /**
-   * @return string
+   * @return self::OAUTH_GRANT_TYPE_*
    */
   public function getOauthGrantType()
   {
     return $this->oauthGrantType;
   }
   /**
-   * @param string[]
+   * Optional. The OAuth scopes to grant.
+   *
+   * @param string[] $scopes
    */
   public function setScopes($scopes)
   {
@@ -102,7 +140,11 @@ class GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig extends \Google\Col
     return $this->scopes;
   }
   /**
-   * @param string
+   * Optional. The name of the SecretManager secret version resource storing the
+   * client secret. If this field is set, the `client_secret` field will be
+   * ignored. Format: `projects/{project}/secrets/{secret}/versions/{version}`
+   *
+   * @param string $secretVersionForClientSecret
    */
   public function setSecretVersionForClientSecret($secretVersionForClientSecret)
   {
@@ -116,7 +158,10 @@ class GoogleCloudDialogflowCxV3ToolAuthenticationOAuthConfig extends \Google\Col
     return $this->secretVersionForClientSecret;
   }
   /**
-   * @param string
+   * Required. The token endpoint in the OAuth provider to exchange for an
+   * access token.
+   *
+   * @param string $tokenEndpoint
    */
   public function setTokenEndpoint($tokenEndpoint)
   {

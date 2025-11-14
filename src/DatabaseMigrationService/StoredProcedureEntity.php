@@ -20,16 +20,22 @@ namespace Google\Service\DatabaseMigrationService;
 class StoredProcedureEntity extends \Google\Model
 {
   /**
+   * Custom engine specific features.
+   *
    * @var array[]
    */
   public $customFeatures;
   /**
+   * The SQL code which creates the stored procedure.
+   *
    * @var string
    */
   public $sqlCode;
 
   /**
-   * @param array[]
+   * Custom engine specific features.
+   *
+   * @param array[] $customFeatures
    */
   public function setCustomFeatures($customFeatures)
   {
@@ -43,7 +49,9 @@ class StoredProcedureEntity extends \Google\Model
     return $this->customFeatures;
   }
   /**
-   * @param string
+   * The SQL code which creates the stored procedure.
+   *
+   * @param string $sqlCode
    */
   public function setSqlCode($sqlCode)
   {

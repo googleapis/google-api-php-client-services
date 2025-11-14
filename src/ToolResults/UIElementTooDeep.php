@@ -20,20 +20,28 @@ namespace Google\Service\ToolResults;
 class UIElementTooDeep extends \Google\Model
 {
   /**
+   * The depth of the screen element
+   *
    * @var int
    */
   public $depth;
   /**
+   * The screen id of the element
+   *
    * @var string
    */
   public $screenId;
   /**
+   * The screen state id of the element
+   *
    * @var string
    */
   public $screenStateId;
 
   /**
-   * @param int
+   * The depth of the screen element
+   *
+   * @param int $depth
    */
   public function setDepth($depth)
   {
@@ -47,7 +55,9 @@ class UIElementTooDeep extends \Google\Model
     return $this->depth;
   }
   /**
-   * @param string
+   * The screen id of the element
+   *
+   * @param string $screenId
    */
   public function setScreenId($screenId)
   {
@@ -61,7 +71,9 @@ class UIElementTooDeep extends \Google\Model
     return $this->screenId;
   }
   /**
-   * @param string
+   * The screen state id of the element
+   *
+   * @param string $screenStateId
    */
   public function setScreenStateId($screenStateId)
   {

@@ -20,20 +20,32 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository extends \Google\Model
 {
   /**
+   * Optional. Directory, relative to the source root, in which to run the
+   * build.
+   *
    * @var string
    */
   public $dir;
   /**
+   * Required. Name of the Google Cloud Build repository, formatted as
+   * `projects/locations/connections/repositories`.
+   *
    * @var string
    */
   public $repository;
   /**
+   * Required. The revision to fetch from the Git repository such as a branch, a
+   * tag, a commit SHA, or any Git ref.
+   *
    * @var string
    */
   public $revision;
 
   /**
-   * @param string
+   * Optional. Directory, relative to the source root, in which to run the
+   * build.
+   *
+   * @param string $dir
    */
   public function setDir($dir)
   {
@@ -47,7 +59,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository extends \Go
     return $this->dir;
   }
   /**
-   * @param string
+   * Required. Name of the Google Cloud Build repository, formatted as
+   * `projects/locations/connections/repositories`.
+   *
+   * @param string $repository
    */
   public function setRepository($repository)
   {
@@ -61,7 +76,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository extends \Go
     return $this->repository;
   }
   /**
-   * @param string
+   * Required. The revision to fetch from the Git repository such as a branch, a
+   * tag, a commit SHA, or any Git ref.
+   *
+   * @param string $revision
    */
   public function setRevision($revision)
   {

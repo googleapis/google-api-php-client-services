@@ -20,21 +20,39 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1SampleRule extends \Google\Model
 {
   /**
+   * To specify the filter for the conversions that should apply this sample
+   * rule. An empty filter means this sample rule applies to all conversations.
+   *
    * @var string
    */
   public $conversationFilter;
   /**
+   * Optional. Group by dimension to sample the conversation. If no dimension is
+   * provided, the sampling will be applied to the project level. Current
+   * supported dimensions is 'quality_metadata.agent_info.agent_id'.
+   *
    * @var string
    */
   public $dimension;
+  /**
+   * Percentage of conversations that we should sample based on the dimension
+   * between [0, 100].
+   *
+   * @var 
+   */
   public $samplePercentage;
   /**
+   * Number of the conversations that we should sample based on the dimension.
+   *
    * @var string
    */
   public $sampleRow;
 
   /**
-   * @param string
+   * To specify the filter for the conversions that should apply this sample
+   * rule. An empty filter means this sample rule applies to all conversations.
+   *
+   * @param string $conversationFilter
    */
   public function setConversationFilter($conversationFilter)
   {
@@ -48,7 +66,11 @@ class GoogleCloudContactcenterinsightsV1SampleRule extends \Google\Model
     return $this->conversationFilter;
   }
   /**
-   * @param string
+   * Optional. Group by dimension to sample the conversation. If no dimension is
+   * provided, the sampling will be applied to the project level. Current
+   * supported dimensions is 'quality_metadata.agent_info.agent_id'.
+   *
+   * @param string $dimension
    */
   public function setDimension($dimension)
   {
@@ -70,7 +92,9 @@ class GoogleCloudContactcenterinsightsV1SampleRule extends \Google\Model
     return $this->samplePercentage;
   }
   /**
-   * @param string
+   * Number of the conversations that we should sample based on the dimension.
+   *
+   * @param string $sampleRow
    */
   public function setSampleRow($sampleRow)
   {

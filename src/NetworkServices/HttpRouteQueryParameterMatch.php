@@ -20,24 +20,43 @@ namespace Google\Service\NetworkServices;
 class HttpRouteQueryParameterMatch extends \Google\Model
 {
   /**
+   * The value of the query parameter must exactly match the contents of
+   * exact_match. Only one of exact_match, regex_match, or present_match must be
+   * set.
+   *
    * @var string
    */
   public $exactMatch;
   /**
+   * Specifies that the QueryParameterMatcher matches if request contains query
+   * parameter, irrespective of whether the parameter has a value or not. Only
+   * one of exact_match, regex_match, or present_match must be set.
+   *
    * @var bool
    */
   public $presentMatch;
   /**
+   * The name of the query parameter to match.
+   *
    * @var string
    */
   public $queryParameter;
   /**
+   * The value of the query parameter must match the regular expression
+   * specified by regex_match. For regular expression grammar, please see
+   * https://github.com/google/re2/wiki/Syntax Only one of exact_match,
+   * regex_match, or present_match must be set.
+   *
    * @var string
    */
   public $regexMatch;
 
   /**
-   * @param string
+   * The value of the query parameter must exactly match the contents of
+   * exact_match. Only one of exact_match, regex_match, or present_match must be
+   * set.
+   *
+   * @param string $exactMatch
    */
   public function setExactMatch($exactMatch)
   {
@@ -51,7 +70,11 @@ class HttpRouteQueryParameterMatch extends \Google\Model
     return $this->exactMatch;
   }
   /**
-   * @param bool
+   * Specifies that the QueryParameterMatcher matches if request contains query
+   * parameter, irrespective of whether the parameter has a value or not. Only
+   * one of exact_match, regex_match, or present_match must be set.
+   *
+   * @param bool $presentMatch
    */
   public function setPresentMatch($presentMatch)
   {
@@ -65,7 +88,9 @@ class HttpRouteQueryParameterMatch extends \Google\Model
     return $this->presentMatch;
   }
   /**
-   * @param string
+   * The name of the query parameter to match.
+   *
+   * @param string $queryParameter
    */
   public function setQueryParameter($queryParameter)
   {
@@ -79,7 +104,12 @@ class HttpRouteQueryParameterMatch extends \Google\Model
     return $this->queryParameter;
   }
   /**
-   * @param string
+   * The value of the query parameter must match the regular expression
+   * specified by regex_match. For regular expression grammar, please see
+   * https://github.com/google/re2/wiki/Syntax Only one of exact_match,
+   * regex_match, or present_match must be set.
+   *
+   * @param string $regexMatch
    */
   public function setRegexMatch($regexMatch)
   {

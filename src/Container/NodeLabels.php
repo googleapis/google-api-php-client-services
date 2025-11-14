@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class NodeLabels extends \Google\Model
 {
   /**
+   * Map of node label keys and node label values.
+   *
    * @var string[]
    */
   public $labels;
 
   /**
-   * @param string[]
+   * Map of node label keys and node label values.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {

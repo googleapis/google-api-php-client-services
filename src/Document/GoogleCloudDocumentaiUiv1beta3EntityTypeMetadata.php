@@ -26,6 +26,8 @@ class GoogleCloudDocumentaiUiv1beta3EntityTypeMetadata extends \Google\Model
   protected $humanReviewMetadataType = GoogleCloudDocumentaiUiv1beta3HumanReviewValidationMetadata::class;
   protected $humanReviewMetadataDataType = '';
   /**
+   * Whether the entity type should be considered inactive.
+   *
    * @var bool
    */
   public $inactive;
@@ -35,7 +37,9 @@ class GoogleCloudDocumentaiUiv1beta3EntityTypeMetadata extends \Google\Model
   protected $schemaInferenceMetadataDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3FieldTierMetadata
+   * Field tier metadata on the property
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3FieldTierMetadata $fieldTierMetadata
    */
   public function setFieldTierMetadata(GoogleCloudDocumentaiUiv1beta3FieldTierMetadata $fieldTierMetadata)
   {
@@ -49,7 +53,9 @@ class GoogleCloudDocumentaiUiv1beta3EntityTypeMetadata extends \Google\Model
     return $this->fieldTierMetadata;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3HumanReviewLabelingMetadata
+   * Human review labeling config on the entity.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3HumanReviewLabelingMetadata $humanReviewLabelingMetadata
    */
   public function setHumanReviewLabelingMetadata(GoogleCloudDocumentaiUiv1beta3HumanReviewLabelingMetadata $humanReviewLabelingMetadata)
   {
@@ -63,7 +69,9 @@ class GoogleCloudDocumentaiUiv1beta3EntityTypeMetadata extends \Google\Model
     return $this->humanReviewLabelingMetadata;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3HumanReviewValidationMetadata
+   * Human review config on the entity.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3HumanReviewValidationMetadata $humanReviewMetadata
    */
   public function setHumanReviewMetadata(GoogleCloudDocumentaiUiv1beta3HumanReviewValidationMetadata $humanReviewMetadata)
   {
@@ -77,7 +85,9 @@ class GoogleCloudDocumentaiUiv1beta3EntityTypeMetadata extends \Google\Model
     return $this->humanReviewMetadata;
   }
   /**
-   * @param bool
+   * Whether the entity type should be considered inactive.
+   *
+   * @param bool $inactive
    */
   public function setInactive($inactive)
   {
@@ -91,7 +101,9 @@ class GoogleCloudDocumentaiUiv1beta3EntityTypeMetadata extends \Google\Model
     return $this->inactive;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3SchemaEditabilityMetadata
+   * Schema editability metadata on the entity.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3SchemaEditabilityMetadata $schemaEditabilityMetadata
    */
   public function setSchemaEditabilityMetadata(GoogleCloudDocumentaiUiv1beta3SchemaEditabilityMetadata $schemaEditabilityMetadata)
   {
@@ -105,7 +117,9 @@ class GoogleCloudDocumentaiUiv1beta3EntityTypeMetadata extends \Google\Model
     return $this->schemaEditabilityMetadata;
   }
   /**
-   * @param GoogleCloudDocumentaiUiv1beta3SchemaInferenceMetadata
+   * Schema inference metadata on the entity.
+   *
+   * @param GoogleCloudDocumentaiUiv1beta3SchemaInferenceMetadata $schemaInferenceMetadata
    */
   public function setSchemaInferenceMetadata(GoogleCloudDocumentaiUiv1beta3SchemaInferenceMetadata $schemaInferenceMetadata)
   {

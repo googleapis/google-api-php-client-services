@@ -21,10 +21,17 @@ class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends \Google\Collection
 {
   protected $collection_key = 'suggestionResults';
   /**
+   * The conversation this notification refers to. Format:
+   * `projects//conversations/`.
+   *
    * @var string
    */
   public $conversation;
   /**
+   * The participant that the suggestion is compiled for. Format:
+   * `projects//conversations//participants/`. It will not be set in legacy
+   * workflow.
+   *
    * @var string
    */
   public $participant;
@@ -32,7 +39,10 @@ class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends \Google\Collection
   protected $suggestionResultsDataType = 'array';
 
   /**
-   * @param string
+   * The conversation this notification refers to. Format:
+   * `projects//conversations/`.
+   *
+   * @param string $conversation
    */
   public function setConversation($conversation)
   {
@@ -46,7 +56,11 @@ class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends \Google\Collection
     return $this->conversation;
   }
   /**
-   * @param string
+   * The participant that the suggestion is compiled for. Format:
+   * `projects//conversations//participants/`. It will not be set in legacy
+   * workflow.
+   *
+   * @param string $participant
    */
   public function setParticipant($participant)
   {
@@ -60,7 +74,9 @@ class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends \Google\Collection
     return $this->participant;
   }
   /**
-   * @param GoogleCloudDialogflowV2SuggestionResult[]
+   * The suggestion results payload that this notification refers to.
+   *
+   * @param GoogleCloudDialogflowV2SuggestionResult[] $suggestionResults
    */
   public function setSuggestionResults($suggestionResults)
   {

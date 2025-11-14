@@ -21,6 +21,10 @@ class SearchAllIamPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
   /**
+   * Set if there are more results than those appearing in this response; to get
+   * the next set of results, call this method again, using this value as the
+   * `page_token`.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +32,11 @@ class SearchAllIamPoliciesResponse extends \Google\Collection
   protected $resultsDataType = 'array';
 
   /**
-   * @param string
+   * Set if there are more results than those appearing in this response; to get
+   * the next set of results, call this method again, using this value as the
+   * `page_token`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +50,10 @@ class SearchAllIamPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param IamPolicySearchResult[]
+   * A list of IAM policies that match the search query. Related information
+   * such as the associated resource is returned along with the policy.
+   *
+   * @param IamPolicySearchResult[] $results
    */
   public function setResults($results)
   {

@@ -25,7 +25,7 @@ class Filter extends \Google\Model
   protected $valueFilterDataType = '';
 
   /**
-   * @param CompositeFilter
+   * @param CompositeFilter $compositeFilter
    */
   public function setCompositeFilter(CompositeFilter $compositeFilter)
   {
@@ -39,7 +39,7 @@ class Filter extends \Google\Model
     return $this->compositeFilter;
   }
   /**
-   * @param ValueFilter
+   * @param ValueFilter $valueFilter
    */
   public function setValueFilter(ValueFilter $valueFilter)
   {

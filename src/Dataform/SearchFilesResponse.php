@@ -21,6 +21,9 @@ class SearchFilesResponse extends \Google\Collection
 {
   protected $collection_key = 'searchResults';
   /**
+   * Optional. A token, which can be sent as `page_token` to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class SearchFilesResponse extends \Google\Collection
   protected $searchResultsDataType = 'array';
 
   /**
-   * @param string
+   * Optional. A token, which can be sent as `page_token` to retrieve the next
+   * page. If this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class SearchFilesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param SearchResult[]
+   * List of matched results.
+   *
+   * @param SearchResult[] $searchResults
    */
   public function setSearchResults($searchResults)
   {

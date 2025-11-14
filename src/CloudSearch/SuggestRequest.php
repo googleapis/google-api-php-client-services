@@ -23,6 +23,10 @@ class SuggestRequest extends \Google\Collection
   protected $dataSourceRestrictionsType = DataSourceRestriction::class;
   protected $dataSourceRestrictionsDataType = 'array';
   /**
+   * Partial query for which autocomplete suggestions will be shown. For
+   * example, if the query is "sea", then the server might return "season",
+   * "search", "seagull" and so on.
+   *
    * @var string
    */
   public $query;
@@ -30,7 +34,12 @@ class SuggestRequest extends \Google\Collection
   protected $requestOptionsDataType = '';
 
   /**
-   * @param DataSourceRestriction[]
+   * The sources to use for suggestions. If not specified, the data sources are
+   * taken from the current search application. NOTE: Suggestions are only
+   * supported for the following sources: * Third-party data sources *
+   * PredefinedSource.PERSON * PredefinedSource.GOOGLE_DRIVE
+   *
+   * @param DataSourceRestriction[] $dataSourceRestrictions
    */
   public function setDataSourceRestrictions($dataSourceRestrictions)
   {
@@ -44,7 +53,11 @@ class SuggestRequest extends \Google\Collection
     return $this->dataSourceRestrictions;
   }
   /**
-   * @param string
+   * Partial query for which autocomplete suggestions will be shown. For
+   * example, if the query is "sea", then the server might return "season",
+   * "search", "seagull" and so on.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {
@@ -58,7 +71,9 @@ class SuggestRequest extends \Google\Collection
     return $this->query;
   }
   /**
-   * @param RequestOptions
+   * Request options, such as the search application and user timezone.
+   *
+   * @param RequestOptions $requestOptions
    */
   public function setRequestOptions(RequestOptions $requestOptions)
   {

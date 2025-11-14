@@ -21,18 +21,28 @@ class GoogleCloudDatacatalogV1VertexModelSpec extends \Google\Collection
 {
   protected $collection_key = 'versionAliases';
   /**
+   * URI of the Docker image to be used as the custom container for serving
+   * predictions.
+   *
    * @var string
    */
   public $containerImageUri;
   /**
+   * User provided version aliases so that a model version can be referenced via
+   * alias
+   *
    * @var string[]
    */
   public $versionAliases;
   /**
+   * The description of this version.
+   *
    * @var string
    */
   public $versionDescription;
   /**
+   * The version ID of the model.
+   *
    * @var string
    */
   public $versionId;
@@ -40,7 +50,10 @@ class GoogleCloudDatacatalogV1VertexModelSpec extends \Google\Collection
   protected $vertexModelSourceInfoDataType = '';
 
   /**
-   * @param string
+   * URI of the Docker image to be used as the custom container for serving
+   * predictions.
+   *
+   * @param string $containerImageUri
    */
   public function setContainerImageUri($containerImageUri)
   {
@@ -54,7 +67,10 @@ class GoogleCloudDatacatalogV1VertexModelSpec extends \Google\Collection
     return $this->containerImageUri;
   }
   /**
-   * @param string[]
+   * User provided version aliases so that a model version can be referenced via
+   * alias
+   *
+   * @param string[] $versionAliases
    */
   public function setVersionAliases($versionAliases)
   {
@@ -68,7 +84,9 @@ class GoogleCloudDatacatalogV1VertexModelSpec extends \Google\Collection
     return $this->versionAliases;
   }
   /**
-   * @param string
+   * The description of this version.
+   *
+   * @param string $versionDescription
    */
   public function setVersionDescription($versionDescription)
   {
@@ -82,7 +100,9 @@ class GoogleCloudDatacatalogV1VertexModelSpec extends \Google\Collection
     return $this->versionDescription;
   }
   /**
-   * @param string
+   * The version ID of the model.
+   *
+   * @param string $versionId
    */
   public function setVersionId($versionId)
   {
@@ -96,7 +116,9 @@ class GoogleCloudDatacatalogV1VertexModelSpec extends \Google\Collection
     return $this->versionId;
   }
   /**
-   * @param GoogleCloudDatacatalogV1VertexModelSourceInfo
+   * Source of a Vertex model.
+   *
+   * @param GoogleCloudDatacatalogV1VertexModelSourceInfo $vertexModelSourceInfo
    */
   public function setVertexModelSourceInfo(GoogleCloudDatacatalogV1VertexModelSourceInfo $vertexModelSourceInfo)
   {

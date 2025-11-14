@@ -20,16 +20,22 @@ namespace Google\Service\ShoppingContent;
 class Distance extends \Google\Model
 {
   /**
+   * The distance unit. Acceptable values are `None`, `Miles`, and `Kilometers`.
+   *
    * @var string
    */
   public $unit;
   /**
+   * The distance represented as a number.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The distance unit. Acceptable values are `None`, `Miles`, and `Kilometers`.
+   *
+   * @param string $unit
    */
   public function setUnit($unit)
   {
@@ -43,7 +49,9 @@ class Distance extends \Google\Model
     return $this->unit;
   }
   /**
-   * @param string
+   * The distance represented as a number.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

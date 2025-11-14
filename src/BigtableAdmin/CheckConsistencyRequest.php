@@ -20,6 +20,8 @@ namespace Google\Service\BigtableAdmin;
 class CheckConsistencyRequest extends \Google\Model
 {
   /**
+   * Required. The token created using GenerateConsistencyToken for the Table.
+   *
    * @var string
    */
   public $consistencyToken;
@@ -29,7 +31,9 @@ class CheckConsistencyRequest extends \Google\Model
   protected $standardReadRemoteWritesDataType = '';
 
   /**
-   * @param string
+   * Required. The token created using GenerateConsistencyToken for the Table.
+   *
+   * @param string $consistencyToken
    */
   public function setConsistencyToken($consistencyToken)
   {
@@ -43,7 +47,11 @@ class CheckConsistencyRequest extends \Google\Model
     return $this->consistencyToken;
   }
   /**
-   * @param DataBoostReadLocalWrites
+   * Checks that reads using an app profile with `DataBoostIsolationReadOnly`
+   * can see all writes committed before the token was created, but only if the
+   * read and write target the same cluster.
+   *
+   * @param DataBoostReadLocalWrites $dataBoostReadLocalWrites
    */
   public function setDataBoostReadLocalWrites(DataBoostReadLocalWrites $dataBoostReadLocalWrites)
   {
@@ -57,7 +65,11 @@ class CheckConsistencyRequest extends \Google\Model
     return $this->dataBoostReadLocalWrites;
   }
   /**
-   * @param StandardReadRemoteWrites
+   * Checks that reads using an app profile with `StandardIsolation` can see all
+   * writes committed before the token was created, even if the read and write
+   * target different clusters.
+   *
+   * @param StandardReadRemoteWrites $standardReadRemoteWrites
    */
   public function setStandardReadRemoteWrites(StandardReadRemoteWrites $standardReadRemoteWrites)
   {

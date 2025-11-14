@@ -21,36 +21,65 @@ class GoogleCloudDiscoveryengineV1DocumentInfo extends \Google\Collection
 {
   protected $collection_key = 'promotionIds';
   /**
+   * Optional. The conversion value associated with this Document. Must be set
+   * if UserEvent.event_type is "conversion". For example, a value of 1000
+   * signifies that 1000 seconds were spent viewing a Document for the `watch`
+   * conversion type.
+   *
    * @var float
    */
   public $conversionValue;
   /**
+   * The Document resource ID.
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. Whether the referenced Document can be found in the data
+   * store.
+   *
    * @var bool
    */
   public $joined;
   /**
+   * The Document resource full name, of the form: `projects/{project}/locations
+   * /{location}/collections/{collection_id}/dataStores/{data_store_id}/branches
+   * /{branch_id}/documents/{document_id}`
+   *
    * @var string
    */
   public $name;
   /**
+   * The promotion IDs associated with this Document. Currently, this field is
+   * restricted to at most one ID.
+   *
    * @var string[]
    */
   public $promotionIds;
   /**
+   * Quantity of the Document associated with the user event. Defaults to 1. For
+   * example, this field is 2 if two quantities of the same Document are
+   * involved in a `add-to-cart` event. Required for events of the following
+   * event types: * `add-to-cart` * `purchase`
+   *
    * @var int
    */
   public $quantity;
   /**
+   * The Document URI - only allowed for website data stores.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param float
+   * Optional. The conversion value associated with this Document. Must be set
+   * if UserEvent.event_type is "conversion". For example, a value of 1000
+   * signifies that 1000 seconds were spent viewing a Document for the `watch`
+   * conversion type.
+   *
+   * @param float $conversionValue
    */
   public function setConversionValue($conversionValue)
   {
@@ -64,7 +93,9 @@ class GoogleCloudDiscoveryengineV1DocumentInfo extends \Google\Collection
     return $this->conversionValue;
   }
   /**
-   * @param string
+   * The Document resource ID.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -78,7 +109,10 @@ class GoogleCloudDiscoveryengineV1DocumentInfo extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param bool
+   * Output only. Whether the referenced Document can be found in the data
+   * store.
+   *
+   * @param bool $joined
    */
   public function setJoined($joined)
   {
@@ -92,7 +126,11 @@ class GoogleCloudDiscoveryengineV1DocumentInfo extends \Google\Collection
     return $this->joined;
   }
   /**
-   * @param string
+   * The Document resource full name, of the form: `projects/{project}/locations
+   * /{location}/collections/{collection_id}/dataStores/{data_store_id}/branches
+   * /{branch_id}/documents/{document_id}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -106,7 +144,10 @@ class GoogleCloudDiscoveryengineV1DocumentInfo extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * The promotion IDs associated with this Document. Currently, this field is
+   * restricted to at most one ID.
+   *
+   * @param string[] $promotionIds
    */
   public function setPromotionIds($promotionIds)
   {
@@ -120,7 +161,12 @@ class GoogleCloudDiscoveryengineV1DocumentInfo extends \Google\Collection
     return $this->promotionIds;
   }
   /**
-   * @param int
+   * Quantity of the Document associated with the user event. Defaults to 1. For
+   * example, this field is 2 if two quantities of the same Document are
+   * involved in a `add-to-cart` event. Required for events of the following
+   * event types: * `add-to-cart` * `purchase`
+   *
+   * @param int $quantity
    */
   public function setQuantity($quantity)
   {
@@ -134,7 +180,9 @@ class GoogleCloudDiscoveryengineV1DocumentInfo extends \Google\Collection
     return $this->quantity;
   }
   /**
-   * @param string
+   * The Document URI - only allowed for website data stores.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

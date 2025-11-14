@@ -20,12 +20,20 @@ namespace Google\Service\Translate;
 class GcsOutputDestination extends \Google\Model
 {
   /**
+   * Required. Google Cloud Storage URI to output directory. For example,
+   * `gs://bucket/directory`. The requesting user must have write permission to
+   * the bucket. The directory will be created if it doesn't exist.
+   *
    * @var string
    */
   public $outputUriPrefix;
 
   /**
-   * @param string
+   * Required. Google Cloud Storage URI to output directory. For example,
+   * `gs://bucket/directory`. The requesting user must have write permission to
+   * the bucket. The directory will be created if it doesn't exist.
+   *
+   * @param string $outputUriPrefix
    */
   public function setOutputUriPrefix($outputUriPrefix)
   {

@@ -21,28 +21,44 @@ class Subaccount extends \Google\Collection
 {
   protected $collection_key = 'availablePermissionIds';
   /**
+   * ID of the account that contains this subaccount. This is a read-only field
+   * that can be left blank.
+   *
    * @var string
    */
   public $accountId;
   /**
+   * IDs of the available user role permissions for this subaccount.
+   *
    * @var string[]
    */
   public $availablePermissionIds;
   /**
+   * ID of this subaccount. This is a read-only, auto-generated field.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#subaccount".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of this subaccount. This is a required field. Must be less than 128
+   * characters long and be unique among subaccounts of the same account.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * ID of the account that contains this subaccount. This is a read-only field
+   * that can be left blank.
+   *
+   * @param string $accountId
    */
   public function setAccountId($accountId)
   {
@@ -56,7 +72,9 @@ class Subaccount extends \Google\Collection
     return $this->accountId;
   }
   /**
-   * @param string[]
+   * IDs of the available user role permissions for this subaccount.
+   *
+   * @param string[] $availablePermissionIds
    */
   public function setAvailablePermissionIds($availablePermissionIds)
   {
@@ -70,7 +88,9 @@ class Subaccount extends \Google\Collection
     return $this->availablePermissionIds;
   }
   /**
-   * @param string
+   * ID of this subaccount. This is a read-only, auto-generated field.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -84,7 +104,10 @@ class Subaccount extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#subaccount".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -98,7 +121,10 @@ class Subaccount extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of this subaccount. This is a required field. Must be less than 128
+   * characters long and be unique among subaccounts of the same account.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2RelatedResource extends \Google\Model
 {
   /**
+   * The full resource name of the related resource.
+   *
    * @var string
    */
   public $fullResource;
 
   /**
-   * @param string
+   * The full resource name of the related resource.
+   *
+   * @param string $fullResource
    */
   public function setFullResource($fullResource)
   {

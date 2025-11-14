@@ -20,16 +20,27 @@ namespace Google\Service\DisplayVideo;
 class IntegrationDetails extends \Google\Model
 {
   /**
+   * Additional details of the entry in string format. Must be UTF-8 encoded
+   * with a length of no more than 1000 characters.
+   *
    * @var string
    */
   public $details;
   /**
+   * An external identifier to be associated with the entry. The integration
+   * code will show up together with the entry in many places in the system, for
+   * example, reporting. Must be UTF-8 encoded with a length of no more than 500
+   * characters.
+   *
    * @var string
    */
   public $integrationCode;
 
   /**
-   * @param string
+   * Additional details of the entry in string format. Must be UTF-8 encoded
+   * with a length of no more than 1000 characters.
+   *
+   * @param string $details
    */
   public function setDetails($details)
   {
@@ -43,7 +54,12 @@ class IntegrationDetails extends \Google\Model
     return $this->details;
   }
   /**
-   * @param string
+   * An external identifier to be associated with the entry. The integration
+   * code will show up together with the entry in many places in the system, for
+   * example, reporting. Must be UTF-8 encoded with a length of no more than 500
+   * characters.
+   *
+   * @param string $integrationCode
    */
   public function setIntegrationCode($integrationCode)
   {

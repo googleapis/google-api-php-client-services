@@ -21,28 +21,49 @@ class MappingRuleFilter extends \Google\Collection
 {
   protected $collection_key = 'entities';
   /**
+   * Optional. The rule should be applied to specific entities defined by their
+   * fully qualified names.
+   *
    * @var string[]
    */
   public $entities;
   /**
+   * Optional. The rule should be applied to entities whose non-qualified name
+   * contains the given string.
+   *
    * @var string
    */
   public $entityNameContains;
   /**
+   * Optional. The rule should be applied to entities whose non-qualified name
+   * starts with the given prefix.
+   *
    * @var string
    */
   public $entityNamePrefix;
   /**
+   * Optional. The rule should be applied to entities whose non-qualified name
+   * ends with the given suffix.
+   *
    * @var string
    */
   public $entityNameSuffix;
   /**
+   * Optional. The rule should be applied to entities whose parent entity (fully
+   * qualified name) matches the given value. For example, if the rule applies
+   * to a table entity, the expected value should be a schema (schema). If the
+   * rule applies to a column or index entity, the expected value can be either
+   * a schema (schema) or a table (schema.table)
+   *
    * @var string
    */
   public $parentEntity;
 
   /**
-   * @param string[]
+   * Optional. The rule should be applied to specific entities defined by their
+   * fully qualified names.
+   *
+   * @param string[] $entities
    */
   public function setEntities($entities)
   {
@@ -56,7 +77,10 @@ class MappingRuleFilter extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param string
+   * Optional. The rule should be applied to entities whose non-qualified name
+   * contains the given string.
+   *
+   * @param string $entityNameContains
    */
   public function setEntityNameContains($entityNameContains)
   {
@@ -70,7 +94,10 @@ class MappingRuleFilter extends \Google\Collection
     return $this->entityNameContains;
   }
   /**
-   * @param string
+   * Optional. The rule should be applied to entities whose non-qualified name
+   * starts with the given prefix.
+   *
+   * @param string $entityNamePrefix
    */
   public function setEntityNamePrefix($entityNamePrefix)
   {
@@ -84,7 +111,10 @@ class MappingRuleFilter extends \Google\Collection
     return $this->entityNamePrefix;
   }
   /**
-   * @param string
+   * Optional. The rule should be applied to entities whose non-qualified name
+   * ends with the given suffix.
+   *
+   * @param string $entityNameSuffix
    */
   public function setEntityNameSuffix($entityNameSuffix)
   {
@@ -98,7 +128,13 @@ class MappingRuleFilter extends \Google\Collection
     return $this->entityNameSuffix;
   }
   /**
-   * @param string
+   * Optional. The rule should be applied to entities whose parent entity (fully
+   * qualified name) matches the given value. For example, if the rule applies
+   * to a table entity, the expected value should be a schema (schema). If the
+   * rule applies to a column or index entity, the expected value can be either
+   * a schema (schema) or a table (schema.table)
+   *
+   * @param string $parentEntity
    */
   public function setParentEntity($parentEntity)
   {

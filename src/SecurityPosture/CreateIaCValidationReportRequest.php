@@ -23,7 +23,9 @@ class CreateIaCValidationReportRequest extends \Google\Model
   protected $iacDataType = '';
 
   /**
-   * @param IaC
+   * Required. The infrastructure-as-code (IaC) configuration to validate.
+   *
+   * @param IaC $iac
    */
   public function setIac(IaC $iac)
   {

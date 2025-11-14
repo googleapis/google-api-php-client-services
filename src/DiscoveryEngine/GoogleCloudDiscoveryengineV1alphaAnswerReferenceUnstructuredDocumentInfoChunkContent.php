@@ -21,24 +21,37 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfoCh
 {
   protected $collection_key = 'blobAttachmentIndexes';
   /**
+   * Output only. Stores indexes of blobattachments linked to this chunk.
+   *
    * @var string[]
    */
   public $blobAttachmentIndexes;
   /**
+   * Chunk textual content.
+   *
    * @var string
    */
   public $content;
   /**
+   * Page identifier.
+   *
    * @var string
    */
   public $pageIdentifier;
   /**
+   * The relevance of the chunk for a given query. Values range from 0.0
+   * (completely irrelevant) to 1.0 (completely relevant). This value is for
+   * informational purpose only. It may change for the same query and chunk at
+   * any time due to a model retraining or change in implementation.
+   *
    * @var float
    */
   public $relevanceScore;
 
   /**
-   * @param string[]
+   * Output only. Stores indexes of blobattachments linked to this chunk.
+   *
+   * @param string[] $blobAttachmentIndexes
    */
   public function setBlobAttachmentIndexes($blobAttachmentIndexes)
   {
@@ -52,7 +65,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfoCh
     return $this->blobAttachmentIndexes;
   }
   /**
-   * @param string
+   * Chunk textual content.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -66,7 +81,9 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfoCh
     return $this->content;
   }
   /**
-   * @param string
+   * Page identifier.
+   *
+   * @param string $pageIdentifier
    */
   public function setPageIdentifier($pageIdentifier)
   {
@@ -80,7 +97,12 @@ class GoogleCloudDiscoveryengineV1alphaAnswerReferenceUnstructuredDocumentInfoCh
     return $this->pageIdentifier;
   }
   /**
-   * @param float
+   * The relevance of the chunk for a given query. Values range from 0.0
+   * (completely irrelevant) to 1.0 (completely relevant). This value is for
+   * informational purpose only. It may change for the same query and chunk at
+   * any time due to a model retraining or change in implementation.
+   *
+   * @param float $relevanceScore
    */
   public function setRelevanceScore($relevanceScore)
   {

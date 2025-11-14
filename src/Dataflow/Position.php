@@ -20,30 +20,44 @@ namespace Google\Service\Dataflow;
 class Position extends \Google\Model
 {
   /**
+   * Position is a byte offset.
+   *
    * @var string
    */
   public $byteOffset;
   protected $concatPositionType = ConcatPosition::class;
   protected $concatPositionDataType = '';
   /**
+   * Position is past all other positions. Also useful for the end position of
+   * an unbounded range.
+   *
    * @var bool
    */
   public $end;
   /**
+   * Position is a string key, ordered lexicographically.
+   *
    * @var string
    */
   public $key;
   /**
+   * Position is a record index.
+   *
    * @var string
    */
   public $recordIndex;
   /**
+   * CloudPosition is a base64 encoded BatchShufflePosition (with FIXED
+   * sharding).
+   *
    * @var string
    */
   public $shufflePosition;
 
   /**
-   * @param string
+   * Position is a byte offset.
+   *
+   * @param string $byteOffset
    */
   public function setByteOffset($byteOffset)
   {
@@ -57,7 +71,9 @@ class Position extends \Google\Model
     return $this->byteOffset;
   }
   /**
-   * @param ConcatPosition
+   * CloudPosition is a concat position.
+   *
+   * @param ConcatPosition $concatPosition
    */
   public function setConcatPosition(ConcatPosition $concatPosition)
   {
@@ -71,7 +87,10 @@ class Position extends \Google\Model
     return $this->concatPosition;
   }
   /**
-   * @param bool
+   * Position is past all other positions. Also useful for the end position of
+   * an unbounded range.
+   *
+   * @param bool $end
    */
   public function setEnd($end)
   {
@@ -85,7 +104,9 @@ class Position extends \Google\Model
     return $this->end;
   }
   /**
-   * @param string
+   * Position is a string key, ordered lexicographically.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -99,7 +120,9 @@ class Position extends \Google\Model
     return $this->key;
   }
   /**
-   * @param string
+   * Position is a record index.
+   *
+   * @param string $recordIndex
    */
   public function setRecordIndex($recordIndex)
   {
@@ -113,7 +136,10 @@ class Position extends \Google\Model
     return $this->recordIndex;
   }
   /**
-   * @param string
+   * CloudPosition is a base64 encoded BatchShufflePosition (with FIXED
+   * sharding).
+   *
+   * @param string $shufflePosition
    */
   public function setShufflePosition($shufflePosition)
   {

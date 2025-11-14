@@ -19,16 +19,24 @@ namespace Google\Service\Dfareporting;
 
 class ReportDelivery extends \Google\Collection
 {
+  public const EMAIL_OWNER_DELIVERY_TYPE_LINK = 'LINK';
+  public const EMAIL_OWNER_DELIVERY_TYPE_ATTACHMENT = 'ATTACHMENT';
   protected $collection_key = 'recipients';
   /**
+   * Whether the report should be emailed to the report owner.
+   *
    * @var bool
    */
   public $emailOwner;
   /**
+   * The type of delivery for the owner to receive, if enabled.
+   *
    * @var string
    */
   public $emailOwnerDeliveryType;
   /**
+   * The message to be sent with each email.
+   *
    * @var string
    */
   public $message;
@@ -36,7 +44,9 @@ class ReportDelivery extends \Google\Collection
   protected $recipientsDataType = 'array';
 
   /**
-   * @param bool
+   * Whether the report should be emailed to the report owner.
+   *
+   * @param bool $emailOwner
    */
   public function setEmailOwner($emailOwner)
   {
@@ -50,21 +60,27 @@ class ReportDelivery extends \Google\Collection
     return $this->emailOwner;
   }
   /**
-   * @param string
+   * The type of delivery for the owner to receive, if enabled.
+   *
+   * Accepted values: LINK, ATTACHMENT
+   *
+   * @param self::EMAIL_OWNER_DELIVERY_TYPE_* $emailOwnerDeliveryType
    */
   public function setEmailOwnerDeliveryType($emailOwnerDeliveryType)
   {
     $this->emailOwnerDeliveryType = $emailOwnerDeliveryType;
   }
   /**
-   * @return string
+   * @return self::EMAIL_OWNER_DELIVERY_TYPE_*
    */
   public function getEmailOwnerDeliveryType()
   {
     return $this->emailOwnerDeliveryType;
   }
   /**
-   * @param string
+   * The message to be sent with each email.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -78,7 +94,9 @@ class ReportDelivery extends \Google\Collection
     return $this->message;
   }
   /**
-   * @param Recipient[]
+   * The list of recipients to which to email the report.
+   *
+   * @param Recipient[] $recipients
    */
   public function setRecipients($recipients)
   {

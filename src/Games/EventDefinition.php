@@ -19,40 +19,67 @@ namespace Google\Service\Games;
 
 class EventDefinition extends \Google\Collection
 {
+  /**
+   * This event should be visible to all users.
+   */
+  public const VISIBILITY_REVEALED = 'REVEALED';
+  /**
+   * This event should only be shown to users that have recorded this event at
+   * least once.
+   */
+  public const VISIBILITY_HIDDEN = 'HIDDEN';
   protected $collection_key = 'childEvents';
   protected $childEventsType = EventChild::class;
   protected $childEventsDataType = 'array';
   /**
+   * Description of what this event represents.
+   *
    * @var string
    */
   public $description;
   /**
+   * The name to display for the event.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The ID of the event.
+   *
    * @var string
    */
   public $id;
   /**
+   * The base URL for the image that represents the event.
+   *
    * @var string
    */
   public $imageUrl;
   /**
+   * Indicates whether the icon image being returned is a default image, or is
+   * game-provided.
+   *
    * @var bool
    */
   public $isDefaultImageUrl;
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventDefinition`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The visibility of event being tracked in this definition.
+   *
    * @var string
    */
   public $visibility;
 
   /**
-   * @param EventChild[]
+   * A list of events that are a child of this event.
+   *
+   * @param EventChild[] $childEvents
    */
   public function setChildEvents($childEvents)
   {
@@ -66,7 +93,9 @@ class EventDefinition extends \Google\Collection
     return $this->childEvents;
   }
   /**
-   * @param string
+   * Description of what this event represents.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -80,7 +109,9 @@ class EventDefinition extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * The name to display for the event.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -94,7 +125,9 @@ class EventDefinition extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * The ID of the event.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -108,7 +141,9 @@ class EventDefinition extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * The base URL for the image that represents the event.
+   *
+   * @param string $imageUrl
    */
   public function setImageUrl($imageUrl)
   {
@@ -122,7 +157,10 @@ class EventDefinition extends \Google\Collection
     return $this->imageUrl;
   }
   /**
-   * @param bool
+   * Indicates whether the icon image being returned is a default image, or is
+   * game-provided.
+   *
+   * @param bool $isDefaultImageUrl
    */
   public function setIsDefaultImageUrl($isDefaultImageUrl)
   {
@@ -136,7 +174,10 @@ class EventDefinition extends \Google\Collection
     return $this->isDefaultImageUrl;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#eventDefinition`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -150,14 +191,18 @@ class EventDefinition extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The visibility of event being tracked in this definition.
+   *
+   * Accepted values: REVEALED, HIDDEN
+   *
+   * @param self::VISIBILITY_* $visibility
    */
   public function setVisibility($visibility)
   {
     $this->visibility = $visibility;
   }
   /**
-   * @return string
+   * @return self::VISIBILITY_*
    */
   public function getVisibility()
   {

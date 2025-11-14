@@ -24,7 +24,9 @@ class GoogleCloudDatacatalogV1ExportTaxonomiesResponse extends \Google\Collectio
   protected $taxonomiesDataType = 'array';
 
   /**
-   * @param GoogleCloudDatacatalogV1SerializedTaxonomy[]
+   * List of taxonomies and policy tags as nested protocol buffers.
+   *
+   * @param GoogleCloudDatacatalogV1SerializedTaxonomy[] $taxonomies
    */
   public function setTaxonomies($taxonomies)
   {

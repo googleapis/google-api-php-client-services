@@ -21,18 +21,26 @@ class ListTargetsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $targetsType = Target::class;
   protected $targetsDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,9 @@ class ListTargetsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Target[]
+   * The `Target` objects.
+   *
+   * @param Target[] $targets
    */
   public function setTargets($targets)
   {
@@ -60,7 +70,9 @@ class ListTargetsResponse extends \Google\Collection
     return $this->targets;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

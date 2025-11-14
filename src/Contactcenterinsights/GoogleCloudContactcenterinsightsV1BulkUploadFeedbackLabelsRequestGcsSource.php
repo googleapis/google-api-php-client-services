@@ -20,30 +20,54 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1BulkUploadFeedbackLabelsRequestGcsSource extends \Google\Model
 {
   /**
+   * Unspecified format.
+   */
+  public const FORMAT_FORMAT_UNSPECIFIED = 'FORMAT_UNSPECIFIED';
+  /**
+   * CSV format.
+   */
+  public const FORMAT_CSV = 'CSV';
+  /**
+   * JSON format.
+   */
+  public const FORMAT_JSON = 'JSON';
+  /**
+   * Required. File format which will be ingested.
+   *
    * @var string
    */
   public $format;
   /**
+   * Required. The Google Cloud Storage URI of the file to import. Format:
+   * `gs://bucket_name/object_name`
+   *
    * @var string
    */
   public $objectUri;
 
   /**
-   * @param string
+   * Required. File format which will be ingested.
+   *
+   * Accepted values: FORMAT_UNSPECIFIED, CSV, JSON
+   *
+   * @param self::FORMAT_* $format
    */
   public function setFormat($format)
   {
     $this->format = $format;
   }
   /**
-   * @return string
+   * @return self::FORMAT_*
    */
   public function getFormat()
   {
     return $this->format;
   }
   /**
-   * @param string
+   * Required. The Google Cloud Storage URI of the file to import. Format:
+   * `gs://bucket_name/object_name`
+   *
+   * @param string $objectUri
    */
   public function setObjectUri($objectUri)
   {

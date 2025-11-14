@@ -20,18 +20,29 @@ namespace Google\Service\DatabaseMigrationService;
 class CloudSqlConnectionProfile extends \Google\Model
 {
   /**
+   * Output only. The Cloud SQL database instance's additional (outgoing) public
+   * IP. Used when the Cloud SQL database availability type is REGIONAL (i.e.
+   * multiple zones / highly available).
+   *
    * @var string
    */
   public $additionalPublicIp;
   /**
+   * Output only. The Cloud SQL instance ID that this connection profile is
+   * associated with.
+   *
    * @var string
    */
   public $cloudSqlId;
   /**
+   * Output only. The Cloud SQL database instance's private IP.
+   *
    * @var string
    */
   public $privateIp;
   /**
+   * Output only. The Cloud SQL database instance's public IP.
+   *
    * @var string
    */
   public $publicIp;
@@ -39,7 +50,11 @@ class CloudSqlConnectionProfile extends \Google\Model
   protected $settingsDataType = '';
 
   /**
-   * @param string
+   * Output only. The Cloud SQL database instance's additional (outgoing) public
+   * IP. Used when the Cloud SQL database availability type is REGIONAL (i.e.
+   * multiple zones / highly available).
+   *
+   * @param string $additionalPublicIp
    */
   public function setAdditionalPublicIp($additionalPublicIp)
   {
@@ -53,7 +68,10 @@ class CloudSqlConnectionProfile extends \Google\Model
     return $this->additionalPublicIp;
   }
   /**
-   * @param string
+   * Output only. The Cloud SQL instance ID that this connection profile is
+   * associated with.
+   *
+   * @param string $cloudSqlId
    */
   public function setCloudSqlId($cloudSqlId)
   {
@@ -67,7 +85,9 @@ class CloudSqlConnectionProfile extends \Google\Model
     return $this->cloudSqlId;
   }
   /**
-   * @param string
+   * Output only. The Cloud SQL database instance's private IP.
+   *
+   * @param string $privateIp
    */
   public function setPrivateIp($privateIp)
   {
@@ -81,7 +101,9 @@ class CloudSqlConnectionProfile extends \Google\Model
     return $this->privateIp;
   }
   /**
-   * @param string
+   * Output only. The Cloud SQL database instance's public IP.
+   *
+   * @param string $publicIp
    */
   public function setPublicIp($publicIp)
   {
@@ -95,7 +117,9 @@ class CloudSqlConnectionProfile extends \Google\Model
     return $this->publicIp;
   }
   /**
-   * @param CloudSqlSettings
+   * Immutable. Metadata used to create the destination Cloud SQL database.
+   *
+   * @param CloudSqlSettings $settings
    */
   public function setSettings(CloudSqlSettings $settings)
   {

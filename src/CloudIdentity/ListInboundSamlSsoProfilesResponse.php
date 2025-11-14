@@ -23,12 +23,17 @@ class ListInboundSamlSsoProfilesResponse extends \Google\Collection
   protected $inboundSamlSsoProfilesType = InboundSamlSsoProfile::class;
   protected $inboundSamlSsoProfilesDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param InboundSamlSsoProfile[]
+   * List of InboundSamlSsoProfiles.
+   *
+   * @param InboundSamlSsoProfile[] $inboundSamlSsoProfiles
    */
   public function setInboundSamlSsoProfiles($inboundSamlSsoProfiles)
   {
@@ -42,7 +47,10 @@ class ListInboundSamlSsoProfilesResponse extends \Google\Collection
     return $this->inboundSamlSsoProfiles;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

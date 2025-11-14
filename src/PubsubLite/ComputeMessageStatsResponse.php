@@ -20,24 +20,38 @@ namespace Google\Service\PubsubLite;
 class ComputeMessageStatsResponse extends \Google\Model
 {
   /**
+   * The number of quota bytes accounted to these messages.
+   *
    * @var string
    */
   public $messageBytes;
   /**
+   * The count of messages.
+   *
    * @var string
    */
   public $messageCount;
   /**
+   * The minimum event timestamp across these messages. For the purposes of this
+   * computation, if a message does not have an event time, we use the publish
+   * time. The timestamp will be unset if there are no messages.
+   *
    * @var string
    */
   public $minimumEventTime;
   /**
+   * The minimum publish timestamp across these messages. Note that publish
+   * timestamps within a partition are not guaranteed to be non-decreasing. The
+   * timestamp will be unset if there are no messages.
+   *
    * @var string
    */
   public $minimumPublishTime;
 
   /**
-   * @param string
+   * The number of quota bytes accounted to these messages.
+   *
+   * @param string $messageBytes
    */
   public function setMessageBytes($messageBytes)
   {
@@ -51,7 +65,9 @@ class ComputeMessageStatsResponse extends \Google\Model
     return $this->messageBytes;
   }
   /**
-   * @param string
+   * The count of messages.
+   *
+   * @param string $messageCount
    */
   public function setMessageCount($messageCount)
   {
@@ -65,7 +81,11 @@ class ComputeMessageStatsResponse extends \Google\Model
     return $this->messageCount;
   }
   /**
-   * @param string
+   * The minimum event timestamp across these messages. For the purposes of this
+   * computation, if a message does not have an event time, we use the publish
+   * time. The timestamp will be unset if there are no messages.
+   *
+   * @param string $minimumEventTime
    */
   public function setMinimumEventTime($minimumEventTime)
   {
@@ -79,7 +99,11 @@ class ComputeMessageStatsResponse extends \Google\Model
     return $this->minimumEventTime;
   }
   /**
-   * @param string
+   * The minimum publish timestamp across these messages. Note that publish
+   * timestamps within a partition are not guaranteed to be non-decreasing. The
+   * timestamp will be unset if there are no messages.
+   *
+   * @param string $minimumPublishTime
    */
   public function setMinimumPublishTime($minimumPublishTime)
   {

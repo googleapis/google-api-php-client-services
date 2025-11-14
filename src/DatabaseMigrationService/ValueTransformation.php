@@ -41,7 +41,9 @@ class ValueTransformation extends \Google\Model
   protected $valueListDataType = '';
 
   /**
-   * @param ApplyHash
+   * Optional. Applies a hash function on the data
+   *
+   * @param ApplyHash $applyHash
    */
   public function setApplyHash(ApplyHash $applyHash)
   {
@@ -55,7 +57,10 @@ class ValueTransformation extends \Google\Model
     return $this->applyHash;
   }
   /**
-   * @param DatamigrationEmpty
+   * Optional. Set to max_value - if integer or numeric, will use int.maxvalue,
+   * etc
+   *
+   * @param DatamigrationEmpty $assignMaxValue
    */
   public function setAssignMaxValue(DatamigrationEmpty $assignMaxValue)
   {
@@ -69,7 +74,10 @@ class ValueTransformation extends \Google\Model
     return $this->assignMaxValue;
   }
   /**
-   * @param DatamigrationEmpty
+   * Optional. Set to min_value - if integer or numeric, will use int.minvalue,
+   * etc
+   *
+   * @param DatamigrationEmpty $assignMinValue
    */
   public function setAssignMinValue(DatamigrationEmpty $assignMinValue)
   {
@@ -83,7 +91,9 @@ class ValueTransformation extends \Google\Model
     return $this->assignMinValue;
   }
   /**
-   * @param DatamigrationEmpty
+   * Optional. Set to null
+   *
+   * @param DatamigrationEmpty $assignNull
    */
   public function setAssignNull(DatamigrationEmpty $assignNull)
   {
@@ -97,7 +107,10 @@ class ValueTransformation extends \Google\Model
     return $this->assignNull;
   }
   /**
-   * @param AssignSpecificValue
+   * Optional. Set to a specific value (value is converted to fit the target
+   * data type)
+   *
+   * @param AssignSpecificValue $assignSpecificValue
    */
   public function setAssignSpecificValue(AssignSpecificValue $assignSpecificValue)
   {
@@ -111,7 +124,10 @@ class ValueTransformation extends \Google\Model
     return $this->assignSpecificValue;
   }
   /**
-   * @param DoubleComparisonFilter
+   * Optional. Filter on relation between source value and compare value of type
+   * double.
+   *
+   * @param DoubleComparisonFilter $doubleComparison
    */
   public function setDoubleComparison(DoubleComparisonFilter $doubleComparison)
   {
@@ -125,7 +141,10 @@ class ValueTransformation extends \Google\Model
     return $this->doubleComparison;
   }
   /**
-   * @param IntComparisonFilter
+   * Optional. Filter on relation between source value and compare value of type
+   * integer.
+   *
+   * @param IntComparisonFilter $intComparison
    */
   public function setIntComparison(IntComparisonFilter $intComparison)
   {
@@ -139,7 +158,9 @@ class ValueTransformation extends \Google\Model
     return $this->intComparison;
   }
   /**
-   * @param DatamigrationEmpty
+   * Optional. Value is null
+   *
+   * @param DatamigrationEmpty $isNull
    */
   public function setIsNull(DatamigrationEmpty $isNull)
   {
@@ -153,7 +174,9 @@ class ValueTransformation extends \Google\Model
     return $this->isNull;
   }
   /**
-   * @param RoundToScale
+   * Optional. Allows the data to change scale
+   *
+   * @param RoundToScale $roundScale
    */
   public function setRoundScale(RoundToScale $roundScale)
   {
@@ -167,7 +190,9 @@ class ValueTransformation extends \Google\Model
     return $this->roundScale;
   }
   /**
-   * @param ValueListFilter
+   * Optional. Value is found in the specified list.
+   *
+   * @param ValueListFilter $valueList
    */
   public function setValueList(ValueListFilter $valueList)
   {

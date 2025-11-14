@@ -23,12 +23,16 @@ class GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse extends \Google\C
   protected $evaluationJobsType = GoogleCloudDatalabelingV1beta1EvaluationJob::class;
   protected $evaluationJobsDataType = 'array';
   /**
+   * A token to retrieve next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1EvaluationJob[]
+   * The list of evaluation jobs to return.
+   *
+   * @param GoogleCloudDatalabelingV1beta1EvaluationJob[] $evaluationJobs
    */
   public function setEvaluationJobs($evaluationJobs)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse extends \Google\C
     return $this->evaluationJobs;
   }
   /**
-   * @param string
+   * A token to retrieve next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

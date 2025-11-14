@@ -25,12 +25,17 @@ class AnalyzeOrgPolicyGovernedContainersResponse extends \Google\Collection
   protected $governedContainersType = GoogleCloudAssetV1GovernedContainer::class;
   protected $governedContainersDataType = 'array';
   /**
+   * The page token to fetch the next page for
+   * AnalyzeOrgPolicyGovernedContainersResponse.governed_containers.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AnalyzerOrgPolicyConstraint
+   * The definition of the constraint in the request.
+   *
+   * @param AnalyzerOrgPolicyConstraint $constraint
    */
   public function setConstraint(AnalyzerOrgPolicyConstraint $constraint)
   {
@@ -44,7 +49,9 @@ class AnalyzeOrgPolicyGovernedContainersResponse extends \Google\Collection
     return $this->constraint;
   }
   /**
-   * @param GoogleCloudAssetV1GovernedContainer[]
+   * The list of the analyzed governed containers.
+   *
+   * @param GoogleCloudAssetV1GovernedContainer[] $governedContainers
    */
   public function setGovernedContainers($governedContainers)
   {
@@ -58,7 +65,10 @@ class AnalyzeOrgPolicyGovernedContainersResponse extends \Google\Collection
     return $this->governedContainers;
   }
   /**
-   * @param string
+   * The page token to fetch the next page for
+   * AnalyzeOrgPolicyGovernedContainersResponse.governed_containers.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

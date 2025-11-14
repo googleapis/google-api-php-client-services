@@ -21,18 +21,28 @@ class ListTlsInspectionPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * If there might be more results than those appearing in this response, then
+   * 'next_page_token' is included. To get the next set of results, call this
+   * method again using the value of 'next_page_token' as 'page_token'.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $tlsInspectionPoliciesType = TlsInspectionPolicy::class;
   protected $tlsInspectionPoliciesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * If there might be more results than those appearing in this response, then
+   * 'next_page_token' is included. To get the next set of results, call this
+   * method again using the value of 'next_page_token' as 'page_token'.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,9 @@ class ListTlsInspectionPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TlsInspectionPolicy[]
+   * List of TlsInspectionPolicies resources.
+   *
+   * @param TlsInspectionPolicy[] $tlsInspectionPolicies
    */
   public function setTlsInspectionPolicies($tlsInspectionPolicies)
   {
@@ -60,7 +72,9 @@ class ListTlsInspectionPoliciesResponse extends \Google\Collection
     return $this->tlsInspectionPolicies;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

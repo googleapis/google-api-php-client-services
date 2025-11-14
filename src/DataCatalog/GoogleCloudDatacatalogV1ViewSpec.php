@@ -20,12 +20,16 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1ViewSpec extends \Google\Model
 {
   /**
+   * Output only. The query that defines the table view.
+   *
    * @var string
    */
   public $viewQuery;
 
   /**
-   * @param string
+   * Output only. The query that defines the table view.
+   *
+   * @param string $viewQuery
    */
   public function setViewQuery($viewQuery)
   {

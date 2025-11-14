@@ -23,20 +23,28 @@ class GoogleCloudDialogflowV2IntentMessageCard extends \Google\Collection
   protected $buttonsType = GoogleCloudDialogflowV2IntentMessageCardButton::class;
   protected $buttonsDataType = 'array';
   /**
+   * Optional. The public URI to an image file for the card.
+   *
    * @var string
    */
   public $imageUri;
   /**
+   * Optional. The subtitle of the card.
+   *
    * @var string
    */
   public $subtitle;
   /**
+   * Optional. The title of the card.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param GoogleCloudDialogflowV2IntentMessageCardButton[]
+   * Optional. The collection of card buttons.
+   *
+   * @param GoogleCloudDialogflowV2IntentMessageCardButton[] $buttons
    */
   public function setButtons($buttons)
   {
@@ -50,7 +58,9 @@ class GoogleCloudDialogflowV2IntentMessageCard extends \Google\Collection
     return $this->buttons;
   }
   /**
-   * @param string
+   * Optional. The public URI to an image file for the card.
+   *
+   * @param string $imageUri
    */
   public function setImageUri($imageUri)
   {
@@ -64,7 +74,9 @@ class GoogleCloudDialogflowV2IntentMessageCard extends \Google\Collection
     return $this->imageUri;
   }
   /**
-   * @param string
+   * Optional. The subtitle of the card.
+   *
+   * @param string $subtitle
    */
   public function setSubtitle($subtitle)
   {
@@ -78,7 +90,9 @@ class GoogleCloudDialogflowV2IntentMessageCard extends \Google\Collection
     return $this->subtitle;
   }
   /**
-   * @param string
+   * Optional. The title of the card.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

@@ -25,7 +25,9 @@ class AutomationRuleCondition extends \Google\Model
   protected $timedPromoteReleaseConditionDataType = '';
 
   /**
-   * @param TargetsPresentCondition
+   * Optional. Details around targets enumerated in the rule.
+   *
+   * @param TargetsPresentCondition $targetsPresentCondition
    */
   public function setTargetsPresentCondition(TargetsPresentCondition $targetsPresentCondition)
   {
@@ -39,7 +41,10 @@ class AutomationRuleCondition extends \Google\Model
     return $this->targetsPresentCondition;
   }
   /**
-   * @param TimedPromoteReleaseCondition
+   * Optional. TimedPromoteReleaseCondition contains rule conditions specific to
+   * a an Automation with a timed promote release rule defined.
+   *
+   * @param TimedPromoteReleaseCondition $timedPromoteReleaseCondition
    */
   public function setTimedPromoteReleaseCondition(TimedPromoteReleaseCondition $timedPromoteReleaseCondition)
   {

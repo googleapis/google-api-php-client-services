@@ -21,22 +21,32 @@ class WindowsDetail extends \Google\Collection
 {
   protected $collection_key = 'fixingKbs';
   /**
+   * Required. The [CPE URI](https://cpe.mitre.org/specification/) this
+   * vulnerability affects.
+   *
    * @var string
    */
   public $cpeUri;
   /**
+   * The description of this vulnerability.
+   *
    * @var string
    */
   public $description;
   protected $fixingKbsType = KnowledgeBase::class;
   protected $fixingKbsDataType = 'array';
   /**
+   * Required. The name of this vulnerability.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Required. The [CPE URI](https://cpe.mitre.org/specification/) this
+   * vulnerability affects.
+   *
+   * @param string $cpeUri
    */
   public function setCpeUri($cpeUri)
   {
@@ -50,7 +60,9 @@ class WindowsDetail extends \Google\Collection
     return $this->cpeUri;
   }
   /**
-   * @param string
+   * The description of this vulnerability.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -64,7 +76,12 @@ class WindowsDetail extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param KnowledgeBase[]
+   * Required. The names of the KBs which have hotfixes to mitigate this
+   * vulnerability. Note that there may be multiple hotfixes (and thus multiple
+   * KBs) that mitigate a given vulnerability. Currently any listed KBs presence
+   * is considered a fix.
+   *
+   * @param KnowledgeBase[] $fixingKbs
    */
   public function setFixingKbs($fixingKbs)
   {
@@ -78,7 +95,9 @@ class WindowsDetail extends \Google\Collection
     return $this->fixingKbs;
   }
   /**
-   * @param string
+   * Required. The name of this vulnerability.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

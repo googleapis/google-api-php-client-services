@@ -20,16 +20,36 @@ namespace Google\Service\NetworkSecurity;
 class InterceptEndpointGroupAssociationLocationDetails extends \Google\Model
 {
   /**
+   * Not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The association is ready and in sync with the linked endpoint group.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The association is out of sync with the linked endpoint group. In most
+   * cases, this is a result of a transient issue within the system (e.g. an
+   * inaccessible location) and the system is expected to recover automatically.
+   */
+  public const STATE_OUT_OF_SYNC = 'OUT_OF_SYNC';
+  /**
+   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
+   *
    * @var string
    */
   public $location;
   /**
+   * Output only. The current state of the association in this location.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Output only. The cloud location, e.g. "us-central1-a" or "asia-south1".
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -43,14 +63,18 @@ class InterceptEndpointGroupAssociationLocationDetails extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Output only. The current state of the association in this location.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, OUT_OF_SYNC
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

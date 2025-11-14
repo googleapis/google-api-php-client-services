@@ -19,33 +19,55 @@ namespace Google\Service\Dfareporting;
 
 class DimensionValue extends \Google\Model
 {
+  public const MATCH_TYPE_EXACT = 'EXACT';
+  public const MATCH_TYPE_BEGINS_WITH = 'BEGINS_WITH';
+  public const MATCH_TYPE_CONTAINS = 'CONTAINS';
+  public const MATCH_TYPE_WILDCARD_EXPRESSION = 'WILDCARD_EXPRESSION';
   /**
+   * The name of the dimension.
+   *
    * @var string
    */
   public $dimensionName;
   /**
+   * The eTag of this response for caching purposes.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The ID associated with the value if available.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of resource this is, in this case dfareporting#dimensionValue.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Determines how the 'value' field is matched when filtering. If not
+   * specified, defaults to EXACT. If set to WILDCARD_EXPRESSION, '*' is allowed
+   * as a placeholder for variable length character sequences, and it can be
+   * escaped with a backslash. Note, only paid search dimensions
+   * ('dfa:paidSearch*') allow a matchType other than EXACT.
+   *
    * @var string
    */
   public $matchType;
   /**
+   * The value of the dimension.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The name of the dimension.
+   *
+   * @param string $dimensionName
    */
   public function setDimensionName($dimensionName)
   {
@@ -59,7 +81,9 @@ class DimensionValue extends \Google\Model
     return $this->dimensionName;
   }
   /**
-   * @param string
+   * The eTag of this response for caching purposes.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -73,7 +97,9 @@ class DimensionValue extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string
+   * The ID associated with the value if available.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -87,7 +113,9 @@ class DimensionValue extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of resource this is, in this case dfareporting#dimensionValue.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -101,21 +129,31 @@ class DimensionValue extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Determines how the 'value' field is matched when filtering. If not
+   * specified, defaults to EXACT. If set to WILDCARD_EXPRESSION, '*' is allowed
+   * as a placeholder for variable length character sequences, and it can be
+   * escaped with a backslash. Note, only paid search dimensions
+   * ('dfa:paidSearch*') allow a matchType other than EXACT.
+   *
+   * Accepted values: EXACT, BEGINS_WITH, CONTAINS, WILDCARD_EXPRESSION
+   *
+   * @param self::MATCH_TYPE_* $matchType
    */
   public function setMatchType($matchType)
   {
     $this->matchType = $matchType;
   }
   /**
-   * @return string
+   * @return self::MATCH_TYPE_*
    */
   public function getMatchType()
   {
     return $this->matchType;
   }
   /**
-   * @param string
+   * The value of the dimension.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

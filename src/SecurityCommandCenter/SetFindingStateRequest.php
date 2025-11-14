@@ -20,22 +20,46 @@ namespace Google\Service\SecurityCommandCenter;
 class SetFindingStateRequest extends \Google\Model
 {
   /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The finding requires attention and has not been addressed yet.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The finding has been fixed, triaged as a non-issue or otherwise addressed
+   * and is no longer active.
+   */
+  public const STATE_INACTIVE = 'INACTIVE';
+  /**
+   * Optional. The time at which the updated state takes effect. If unset,
+   * defaults to the request time.
+   *
+   * @deprecated
    * @var string
    */
   public $startTime;
   /**
+   * Required. The desired State of the finding.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Optional. The time at which the updated state takes effect. If unset,
+   * defaults to the request time.
+   *
+   * @deprecated
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getStartTime()
@@ -43,14 +67,18 @@ class SetFindingStateRequest extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Required. The desired State of the finding.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, INACTIVE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

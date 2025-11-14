@@ -22,12 +22,18 @@ class ReplicaStatus extends \Google\Model
   protected $customerManagedEncryptionType = CustomerManagedEncryptionStatus::class;
   protected $customerManagedEncryptionDataType = '';
   /**
+   * Output only. The canonical ID of the replica location. For example: `"us-
+   * east1"`.
+   *
    * @var string
    */
   public $location;
 
   /**
-   * @param CustomerManagedEncryptionStatus
+   * Output only. The customer-managed encryption status of the SecretVersion.
+   * Only populated if customer-managed encryption is used.
+   *
+   * @param CustomerManagedEncryptionStatus $customerManagedEncryption
    */
   public function setCustomerManagedEncryption(CustomerManagedEncryptionStatus $customerManagedEncryption)
   {
@@ -41,7 +47,10 @@ class ReplicaStatus extends \Google\Model
     return $this->customerManagedEncryption;
   }
   /**
-   * @param string
+   * Output only. The canonical ID of the replica location. For example: `"us-
+   * east1"`.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {

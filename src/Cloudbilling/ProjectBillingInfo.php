@@ -20,24 +20,44 @@ namespace Google\Service\Cloudbilling;
 class ProjectBillingInfo extends \Google\Model
 {
   /**
+   * The resource name of the billing account associated with the project, if
+   * any. For example, `billingAccounts/012345-567890-ABCDEF`.
+   *
    * @var string
    */
   public $billingAccountName;
   /**
+   * Output only. True if the project is associated with an open billing
+   * account, to which usage on the project is charged. False if the project is
+   * associated with a closed billing account, or no billing account at all, and
+   * therefore cannot use paid services.
+   *
    * @var bool
    */
   public $billingEnabled;
   /**
+   * Output only. The resource name for the `ProjectBillingInfo`; has the form
+   * `projects/{project_id}/billingInfo`. For example, the resource name for the
+   * billing information for project `tokyo-rain-123` would be `projects/tokyo-
+   * rain-123/billingInfo`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The ID of the project that this `ProjectBillingInfo`
+   * represents, such as `tokyo-rain-123`. This is a convenience field so that
+   * you don't need to parse the `name` field to obtain a project ID.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param string
+   * The resource name of the billing account associated with the project, if
+   * any. For example, `billingAccounts/012345-567890-ABCDEF`.
+   *
+   * @param string $billingAccountName
    */
   public function setBillingAccountName($billingAccountName)
   {
@@ -51,7 +71,12 @@ class ProjectBillingInfo extends \Google\Model
     return $this->billingAccountName;
   }
   /**
-   * @param bool
+   * Output only. True if the project is associated with an open billing
+   * account, to which usage on the project is charged. False if the project is
+   * associated with a closed billing account, or no billing account at all, and
+   * therefore cannot use paid services.
+   *
+   * @param bool $billingEnabled
    */
   public function setBillingEnabled($billingEnabled)
   {
@@ -65,7 +90,12 @@ class ProjectBillingInfo extends \Google\Model
     return $this->billingEnabled;
   }
   /**
-   * @param string
+   * Output only. The resource name for the `ProjectBillingInfo`; has the form
+   * `projects/{project_id}/billingInfo`. For example, the resource name for the
+   * billing information for project `tokyo-rain-123` would be `projects/tokyo-
+   * rain-123/billingInfo`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +109,11 @@ class ProjectBillingInfo extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The ID of the project that this `ProjectBillingInfo`
+   * represents, such as `tokyo-rain-123`. This is a convenience field so that
+   * you don't need to parse the `name` field to obtain a project ID.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

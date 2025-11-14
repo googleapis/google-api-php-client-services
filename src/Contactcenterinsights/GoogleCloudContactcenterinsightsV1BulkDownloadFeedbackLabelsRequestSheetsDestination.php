@@ -20,16 +20,26 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsRequestSheetsDestination extends \Google\Model
 {
   /**
+   * Optional. The title of the new sheet to write the feedback labels to.
+   *
    * @var string
    */
   public $sheetTitle;
   /**
+   * Required. The Google Sheets document to write the feedback labels to.
+   * Retrieved from Google Sheets URI. E.g.
+   * `https://docs.google.com/spreadsheets/d/1234567890` The spreadsheet must be
+   * shared with the Insights P4SA. The spreadsheet ID written to will be
+   * returned as `file_names` in the BulkDownloadFeedbackLabelsMetadata.
+   *
    * @var string
    */
   public $spreadsheetUri;
 
   /**
-   * @param string
+   * Optional. The title of the new sheet to write the feedback labels to.
+   *
+   * @param string $sheetTitle
    */
   public function setSheetTitle($sheetTitle)
   {
@@ -43,7 +53,13 @@ class GoogleCloudContactcenterinsightsV1BulkDownloadFeedbackLabelsRequestSheetsD
     return $this->sheetTitle;
   }
   /**
-   * @param string
+   * Required. The Google Sheets document to write the feedback labels to.
+   * Retrieved from Google Sheets URI. E.g.
+   * `https://docs.google.com/spreadsheets/d/1234567890` The spreadsheet must be
+   * shared with the Insights P4SA. The spreadsheet ID written to will be
+   * returned as `file_names` in the BulkDownloadFeedbackLabelsMetadata.
+   *
+   * @param string $spreadsheetUri
    */
   public function setSpreadsheetUri($spreadsheetUri)
   {

@@ -20,19 +20,46 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalMigrateOrganizationMetadata extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const OPERATION_STATE_OPERATION_STATE_UNSPECIFIED = 'OPERATION_STATE_UNSPECIFIED';
+  /**
+   * Pending (Not started).
+   */
+  public const OPERATION_STATE_OPERATION_STATE_PENDING = 'OPERATION_STATE_PENDING';
+  /**
+   * In-progress.
+   */
+  public const OPERATION_STATE_OPERATION_STATE_RUNNING = 'OPERATION_STATE_RUNNING';
+  /**
+   * Done successfully.
+   */
+  public const OPERATION_STATE_OPERATION_STATE_SUCCEEDED = 'OPERATION_STATE_SUCCEEDED';
+  /**
+   * Done with errors.
+   */
+  public const OPERATION_STATE_OPERATION_STATE_FAILED = 'OPERATION_STATE_FAILED';
+  /**
+   * Output only. Current operation state
+   *
    * @var string
    */
   public $operationState;
 
   /**
-   * @param string
+   * Output only. Current operation state
+   *
+   * Accepted values: OPERATION_STATE_UNSPECIFIED, OPERATION_STATE_PENDING,
+   * OPERATION_STATE_RUNNING, OPERATION_STATE_SUCCEEDED, OPERATION_STATE_FAILED
+   *
+   * @param self::OPERATION_STATE_* $operationState
    */
   public function setOperationState($operationState)
   {
     $this->operationState = $operationState;
   }
   /**
-   * @return string
+   * @return self::OPERATION_STATE_*
    */
   public function getOperationState()
   {

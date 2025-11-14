@@ -19,14 +19,62 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DlpJob extends \Google\Collection
 {
+  /**
+   * Unused.
+   */
+  public const STATE_JOB_STATE_UNSPECIFIED = 'JOB_STATE_UNSPECIFIED';
+  /**
+   * The job has not yet started.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The job is currently running. Once a job has finished it will transition to
+   * FAILED or DONE.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The job is no longer running.
+   */
+  public const STATE_DONE = 'DONE';
+  /**
+   * The job was canceled before it could be completed.
+   */
+  public const STATE_CANCELED = 'CANCELED';
+  /**
+   * The job had an error and did not complete.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * The job is currently accepting findings via hybridInspect. A hybrid job in
+   * ACTIVE state may continue to have findings added to it through the calling
+   * of hybridInspect. After the job has finished no more calls to hybridInspect
+   * may be made. ACTIVE jobs can transition to DONE.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Defaults to INSPECT_JOB.
+   */
+  public const TYPE_DLP_JOB_TYPE_UNSPECIFIED = 'DLP_JOB_TYPE_UNSPECIFIED';
+  /**
+   * The job inspected Google Cloud for sensitive data.
+   */
+  public const TYPE_INSPECT_JOB = 'INSPECT_JOB';
+  /**
+   * The job executed a Risk Analysis computation.
+   */
+  public const TYPE_RISK_ANALYSIS_JOB = 'RISK_ANALYSIS_JOB';
   protected $collection_key = 'errors';
   protected $actionDetailsType = GooglePrivacyDlpV2ActionDetails::class;
   protected $actionDetailsDataType = 'array';
   /**
+   * Time when the job was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Time when the job finished.
+   *
    * @var string
    */
   public $endTime;
@@ -35,34 +83,49 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
   protected $inspectDetailsType = GooglePrivacyDlpV2InspectDataSourceDetails::class;
   protected $inspectDetailsDataType = '';
   /**
+   * If created by a job trigger, the resource name of the trigger that
+   * instantiated the job.
+   *
    * @var string
    */
   public $jobTriggerName;
   /**
+   * Time when the job was last modified by the system.
+   *
    * @var string
    */
   public $lastModified;
   /**
+   * The server-assigned name.
+   *
    * @var string
    */
   public $name;
   protected $riskDetailsType = GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails::class;
   protected $riskDetailsDataType = '';
   /**
+   * Time when the job started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * State of a job.
+   *
    * @var string
    */
   public $state;
   /**
+   * The type of job.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param GooglePrivacyDlpV2ActionDetails[]
+   * Events that should occur after the job has completed.
+   *
+   * @param GooglePrivacyDlpV2ActionDetails[] $actionDetails
    */
   public function setActionDetails($actionDetails)
   {
@@ -76,7 +139,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->actionDetails;
   }
   /**
-   * @param string
+   * Time when the job was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -90,7 +155,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Time when the job finished.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -104,7 +171,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param GooglePrivacyDlpV2Error[]
+   * A stream of errors encountered running the job.
+   *
+   * @param GooglePrivacyDlpV2Error[] $errors
    */
   public function setErrors($errors)
   {
@@ -118,7 +187,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param GooglePrivacyDlpV2InspectDataSourceDetails
+   * Results from inspecting a data source.
+   *
+   * @param GooglePrivacyDlpV2InspectDataSourceDetails $inspectDetails
    */
   public function setInspectDetails(GooglePrivacyDlpV2InspectDataSourceDetails $inspectDetails)
   {
@@ -132,7 +203,10 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->inspectDetails;
   }
   /**
-   * @param string
+   * If created by a job trigger, the resource name of the trigger that
+   * instantiated the job.
+   *
+   * @param string $jobTriggerName
    */
   public function setJobTriggerName($jobTriggerName)
   {
@@ -146,7 +220,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->jobTriggerName;
   }
   /**
-   * @param string
+   * Time when the job was last modified by the system.
+   *
+   * @param string $lastModified
    */
   public function setLastModified($lastModified)
   {
@@ -160,7 +236,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->lastModified;
   }
   /**
-   * @param string
+   * The server-assigned name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -174,7 +252,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails
+   * Results from analyzing risk of a data source.
+   *
+   * @param GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails $riskDetails
    */
   public function setRiskDetails(GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails $riskDetails)
   {
@@ -188,7 +268,9 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->riskDetails;
   }
   /**
-   * @param string
+   * Time when the job started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -202,28 +284,37 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * State of a job.
+   *
+   * Accepted values: JOB_STATE_UNSPECIFIED, PENDING, RUNNING, DONE, CANCELED,
+   * FAILED, ACTIVE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The type of job.
+   *
+   * Accepted values: DLP_JOB_TYPE_UNSPECIFIED, INSPECT_JOB, RISK_ANALYSIS_JOB
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

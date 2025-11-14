@@ -20,19 +20,35 @@ namespace Google\Service\Container;
 class GkeAutoUpgradeConfig extends \Google\Model
 {
   /**
+   * PATCH_MODE_UNSPECIFIED defaults to using the upgrade target from the
+   * channel's patch upgrade targets as the upgrade target for the version.
+   */
+  public const PATCH_MODE_PATCH_MODE_UNSPECIFIED = 'PATCH_MODE_UNSPECIFIED';
+  /**
+   * ACCELERATED denotes that the latest patch build in the channel should be
+   * used as the upgrade target for the version.
+   */
+  public const PATCH_MODE_ACCELERATED = 'ACCELERATED';
+  /**
+   * PatchMode specifies how auto upgrade patch builds should be selected.
+   *
    * @var string
    */
   public $patchMode;
 
   /**
-   * @param string
+   * PatchMode specifies how auto upgrade patch builds should be selected.
+   *
+   * Accepted values: PATCH_MODE_UNSPECIFIED, ACCELERATED
+   *
+   * @param self::PATCH_MODE_* $patchMode
    */
   public function setPatchMode($patchMode)
   {
     $this->patchMode = $patchMode;
   }
   /**
-   * @return string
+   * @return self::PATCH_MODE_*
    */
   public function getPatchMode()
   {

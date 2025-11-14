@@ -20,37 +20,107 @@ namespace Google\Service\Backupdr;
 class WeekDayOfMonth extends \Google\Model
 {
   /**
+   * The day of the week is unspecified.
+   */
+  public const DAY_OF_WEEK_DAY_OF_WEEK_UNSPECIFIED = 'DAY_OF_WEEK_UNSPECIFIED';
+  /**
+   * Monday
+   */
+  public const DAY_OF_WEEK_MONDAY = 'MONDAY';
+  /**
+   * Tuesday
+   */
+  public const DAY_OF_WEEK_TUESDAY = 'TUESDAY';
+  /**
+   * Wednesday
+   */
+  public const DAY_OF_WEEK_WEDNESDAY = 'WEDNESDAY';
+  /**
+   * Thursday
+   */
+  public const DAY_OF_WEEK_THURSDAY = 'THURSDAY';
+  /**
+   * Friday
+   */
+  public const DAY_OF_WEEK_FRIDAY = 'FRIDAY';
+  /**
+   * Saturday
+   */
+  public const DAY_OF_WEEK_SATURDAY = 'SATURDAY';
+  /**
+   * Sunday
+   */
+  public const DAY_OF_WEEK_SUNDAY = 'SUNDAY';
+  /**
+   * The zero value. Do not use.
+   */
+  public const WEEK_OF_MONTH_WEEK_OF_MONTH_UNSPECIFIED = 'WEEK_OF_MONTH_UNSPECIFIED';
+  /**
+   * The first week of the month.
+   */
+  public const WEEK_OF_MONTH_FIRST = 'FIRST';
+  /**
+   * The second week of the month.
+   */
+  public const WEEK_OF_MONTH_SECOND = 'SECOND';
+  /**
+   * The third week of the month.
+   */
+  public const WEEK_OF_MONTH_THIRD = 'THIRD';
+  /**
+   * The fourth week of the month.
+   */
+  public const WEEK_OF_MONTH_FOURTH = 'FOURTH';
+  /**
+   * The last week of the month.
+   */
+  public const WEEK_OF_MONTH_LAST = 'LAST';
+  /**
+   * Required. Specifies the day of the week.
+   *
    * @var string
    */
   public $dayOfWeek;
   /**
+   * Required. Specifies the week of the month.
+   *
    * @var string
    */
   public $weekOfMonth;
 
   /**
-   * @param string
+   * Required. Specifies the day of the week.
+   *
+   * Accepted values: DAY_OF_WEEK_UNSPECIFIED, MONDAY, TUESDAY, WEDNESDAY,
+   * THURSDAY, FRIDAY, SATURDAY, SUNDAY
+   *
+   * @param self::DAY_OF_WEEK_* $dayOfWeek
    */
   public function setDayOfWeek($dayOfWeek)
   {
     $this->dayOfWeek = $dayOfWeek;
   }
   /**
-   * @return string
+   * @return self::DAY_OF_WEEK_*
    */
   public function getDayOfWeek()
   {
     return $this->dayOfWeek;
   }
   /**
-   * @param string
+   * Required. Specifies the week of the month.
+   *
+   * Accepted values: WEEK_OF_MONTH_UNSPECIFIED, FIRST, SECOND, THIRD, FOURTH,
+   * LAST
+   *
+   * @param self::WEEK_OF_MONTH_* $weekOfMonth
    */
   public function setWeekOfMonth($weekOfMonth)
   {
     $this->weekOfMonth = $weekOfMonth;
   }
   /**
-   * @return string
+   * @return self::WEEK_OF_MONTH_*
    */
   public function getWeekOfMonth()
   {

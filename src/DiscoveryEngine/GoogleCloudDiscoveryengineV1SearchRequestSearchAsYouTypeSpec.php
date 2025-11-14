@@ -20,19 +20,44 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1SearchRequestSearchAsYouTypeSpec extends \Google\Model
 {
   /**
+   * Server behavior defaults to Condition.DISABLED.
+   */
+  public const CONDITION_CONDITION_UNSPECIFIED = 'CONDITION_UNSPECIFIED';
+  /**
+   * Disables Search As You Type.
+   */
+  public const CONDITION_DISABLED = 'DISABLED';
+  /**
+   * Enables Search As You Type.
+   */
+  public const CONDITION_ENABLED = 'ENABLED';
+  /**
+   * Automatic switching between search-as-you-type and standard search modes,
+   * ideal for single-API implementations (e.g., debouncing).
+   */
+  public const CONDITION_AUTO = 'AUTO';
+  /**
+   * The condition under which search as you type should occur. Default to
+   * Condition.DISABLED.
+   *
    * @var string
    */
   public $condition;
 
   /**
-   * @param string
+   * The condition under which search as you type should occur. Default to
+   * Condition.DISABLED.
+   *
+   * Accepted values: CONDITION_UNSPECIFIED, DISABLED, ENABLED, AUTO
+   *
+   * @param self::CONDITION_* $condition
    */
   public function setCondition($condition)
   {
     $this->condition = $condition;
   }
   /**
-   * @return string
+   * @return self::CONDITION_*
    */
   public function getCondition()
   {

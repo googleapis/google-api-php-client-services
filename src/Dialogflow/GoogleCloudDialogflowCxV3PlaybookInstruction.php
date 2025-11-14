@@ -21,6 +21,10 @@ class GoogleCloudDialogflowCxV3PlaybookInstruction extends \Google\Collection
 {
   protected $collection_key = 'steps';
   /**
+   * General guidelines for the playbook. These are unstructured instructions
+   * that are not directly part of the goal, e.g. "Always be polite". It's valid
+   * for this text to be long and used instead of steps altogether.
+   *
    * @var string
    */
   public $guidelines;
@@ -28,7 +32,11 @@ class GoogleCloudDialogflowCxV3PlaybookInstruction extends \Google\Collection
   protected $stepsDataType = 'array';
 
   /**
-   * @param string
+   * General guidelines for the playbook. These are unstructured instructions
+   * that are not directly part of the goal, e.g. "Always be polite". It's valid
+   * for this text to be long and used instead of steps altogether.
+   *
+   * @param string $guidelines
    */
   public function setGuidelines($guidelines)
   {
@@ -42,7 +50,10 @@ class GoogleCloudDialogflowCxV3PlaybookInstruction extends \Google\Collection
     return $this->guidelines;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3PlaybookStep[]
+   * Ordered list of step by step execution instructions to accomplish target
+   * goal.
+   *
+   * @param GoogleCloudDialogflowCxV3PlaybookStep[] $steps
    */
   public function setSteps($steps)
   {

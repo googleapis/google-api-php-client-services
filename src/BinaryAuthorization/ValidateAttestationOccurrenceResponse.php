@@ -20,16 +20,34 @@ namespace Google\Service\BinaryAuthorization;
 class ValidateAttestationOccurrenceResponse extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const RESULT_RESULT_UNSPECIFIED = 'RESULT_UNSPECIFIED';
+  /**
+   * The Attestation was able to verified by the Attestor.
+   */
+  public const RESULT_VERIFIED = 'VERIFIED';
+  /**
+   * The Attestation was not able to verified by the Attestor.
+   */
+  public const RESULT_ATTESTATION_NOT_VERIFIABLE = 'ATTESTATION_NOT_VERIFIABLE';
+  /**
+   * The reason for denial if the Attestation couldn't be validated.
+   *
    * @var string
    */
   public $denialReason;
   /**
+   * The result of the Attestation validation.
+   *
    * @var string
    */
   public $result;
 
   /**
-   * @param string
+   * The reason for denial if the Attestation couldn't be validated.
+   *
+   * @param string $denialReason
    */
   public function setDenialReason($denialReason)
   {
@@ -43,14 +61,18 @@ class ValidateAttestationOccurrenceResponse extends \Google\Model
     return $this->denialReason;
   }
   /**
-   * @param string
+   * The result of the Attestation validation.
+   *
+   * Accepted values: RESULT_UNSPECIFIED, VERIFIED, ATTESTATION_NOT_VERIFIABLE
+   *
+   * @param self::RESULT_* $result
    */
   public function setResult($result)
   {
     $this->result = $result;
   }
   /**
-   * @return string
+   * @return self::RESULT_*
    */
   public function getResult()
   {

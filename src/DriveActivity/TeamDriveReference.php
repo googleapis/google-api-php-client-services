@@ -20,16 +20,22 @@ namespace Google\Service\DriveActivity;
 class TeamDriveReference extends \Google\Model
 {
   /**
+   * This field is deprecated; please see `DriveReference.name` instead.
+   *
    * @var string
    */
   public $name;
   /**
+   * This field is deprecated; please see `DriveReference.title` instead.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * This field is deprecated; please see `DriveReference.name` instead.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class TeamDriveReference extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * This field is deprecated; please see `DriveReference.title` instead.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

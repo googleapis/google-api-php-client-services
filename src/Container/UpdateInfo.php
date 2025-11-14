@@ -23,7 +23,9 @@ class UpdateInfo extends \Google\Model
   protected $blueGreenInfoDataType = '';
 
   /**
-   * @param BlueGreenInfo
+   * Information of a blue-green upgrade.
+   *
+   * @param BlueGreenInfo $blueGreenInfo
    */
   public function setBlueGreenInfo(BlueGreenInfo $blueGreenInfo)
   {

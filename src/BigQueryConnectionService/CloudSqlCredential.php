@@ -20,16 +20,22 @@ namespace Google\Service\BigQueryConnectionService;
 class CloudSqlCredential extends \Google\Model
 {
   /**
+   * The password for the credential.
+   *
    * @var string
    */
   public $password;
   /**
+   * The username for the credential.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * The password for the credential.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -43,7 +49,9 @@ class CloudSqlCredential extends \Google\Model
     return $this->password;
   }
   /**
-   * @param string
+   * The username for the credential.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

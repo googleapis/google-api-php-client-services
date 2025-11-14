@@ -20,24 +20,56 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesCampaignAsset extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const STATUS_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const STATUS_UNKNOWN = 'UNKNOWN';
+  /**
+   * Asset link is enabled.
+   */
+  public const STATUS_ENABLED = 'ENABLED';
+  /**
+   * Asset link has been removed.
+   */
+  public const STATUS_REMOVED = 'REMOVED';
+  /**
+   * Asset link is paused.
+   */
+  public const STATUS_PAUSED = 'PAUSED';
+  /**
+   * Immutable. The asset which is linked to the campaign.
+   *
    * @var string
    */
   public $asset;
   /**
+   * Immutable. The campaign to which the asset is linked.
+   *
    * @var string
    */
   public $campaign;
   /**
+   * Immutable. The resource name of the campaign asset. CampaignAsset resource
+   * names have the form: `customers/{customer_id}/campaignAssets/{campaign_id}~
+   * {asset_id}~{field_type}`
+   *
    * @var string
    */
   public $resourceName;
   /**
+   * Output only. Status of the campaign asset.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param string
+   * Immutable. The asset which is linked to the campaign.
+   *
+   * @param string $asset
    */
   public function setAsset($asset)
   {
@@ -51,7 +83,9 @@ class GoogleAdsSearchads360V0ResourcesCampaignAsset extends \Google\Model
     return $this->asset;
   }
   /**
-   * @param string
+   * Immutable. The campaign to which the asset is linked.
+   *
+   * @param string $campaign
    */
   public function setCampaign($campaign)
   {
@@ -65,7 +99,11 @@ class GoogleAdsSearchads360V0ResourcesCampaignAsset extends \Google\Model
     return $this->campaign;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the campaign asset. CampaignAsset resource
+   * names have the form: `customers/{customer_id}/campaignAssets/{campaign_id}~
+   * {asset_id}~{field_type}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -79,14 +117,18 @@ class GoogleAdsSearchads360V0ResourcesCampaignAsset extends \Google\Model
     return $this->resourceName;
   }
   /**
-   * @param string
+   * Output only. Status of the campaign asset.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, ENABLED, REMOVED, PAUSED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

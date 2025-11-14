@@ -26,7 +26,9 @@ class GoogleCloudDatalabelingV1beta1Row extends \Google\Collection
   protected $entriesDataType = 'array';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec
+   * The annotation spec of the ground truth label for this row.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec
    */
   public function setAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec)
   {
@@ -40,7 +42,10 @@ class GoogleCloudDatalabelingV1beta1Row extends \Google\Collection
     return $this->annotationSpec;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry[]
+   * A list of the confusion matrix entries. One entry for each possible
+   * predicted label.
+   *
+   * @param GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry[] $entries
    */
   public function setEntries($entries)
   {

@@ -23,12 +23,17 @@ class FetchRepositoryHistoryResponse extends \Google\Collection
   protected $commitsType = CommitLogEntry::class;
   protected $commitsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param CommitLogEntry[]
+   * A list of commit logs, ordered by 'git log' default order.
+   *
+   * @param CommitLogEntry[] $commits
    */
   public function setCommits($commits)
   {
@@ -42,7 +47,10 @@ class FetchRepositoryHistoryResponse extends \Google\Collection
     return $this->commits;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

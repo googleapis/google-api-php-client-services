@@ -20,21 +20,34 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1PredictionOutput extends \Google\Model
 {
   /**
+   * The number of data instances which resulted in errors.
+   *
    * @var string
    */
   public $errorCount;
+  /**
+   * Node hours used by the batch prediction job.
+   *
+   * @var 
+   */
   public $nodeHours;
   /**
+   * The output Google Cloud Storage location provided at the job creation time.
+   *
    * @var string
    */
   public $outputPath;
   /**
+   * The number of generated predictions.
+   *
    * @var string
    */
   public $predictionCount;
 
   /**
-   * @param string
+   * The number of data instances which resulted in errors.
+   *
+   * @param string $errorCount
    */
   public function setErrorCount($errorCount)
   {
@@ -56,7 +69,9 @@ class GoogleCloudMlV1PredictionOutput extends \Google\Model
     return $this->nodeHours;
   }
   /**
-   * @param string
+   * The output Google Cloud Storage location provided at the job creation time.
+   *
+   * @param string $outputPath
    */
   public function setOutputPath($outputPath)
   {
@@ -70,7 +85,9 @@ class GoogleCloudMlV1PredictionOutput extends \Google\Model
     return $this->outputPath;
   }
   /**
-   * @param string
+   * The number of generated predictions.
+   *
+   * @param string $predictionCount
    */
   public function setPredictionCount($predictionCount)
   {

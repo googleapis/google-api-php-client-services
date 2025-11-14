@@ -20,26 +20,38 @@ namespace Google\Service\CloudSupport;
 class Comment extends \Google\Model
 {
   /**
+   * The full comment body. Maximum of 12800 characters.
+   *
    * @var string
    */
   public $body;
   /**
+   * Output only. The time when the comment was created.
+   *
    * @var string
    */
   public $createTime;
   protected $creatorType = Actor::class;
   protected $creatorDataType = '';
   /**
+   * Output only. Identifier. The resource name of the comment.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. DEPRECATED. DO NOT USE. A duplicate of the `body` field. This
+   * field is only present for legacy reasons.
+   *
+   * @deprecated
    * @var string
    */
   public $plainTextBody;
 
   /**
-   * @param string
+   * The full comment body. Maximum of 12800 characters.
+   *
+   * @param string $body
    */
   public function setBody($body)
   {
@@ -53,7 +65,9 @@ class Comment extends \Google\Model
     return $this->body;
   }
   /**
-   * @param string
+   * Output only. The time when the comment was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -67,7 +81,9 @@ class Comment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param Actor
+   * Output only. The user or Google Support agent who created the comment.
+   *
+   * @param Actor $creator
    */
   public function setCreator(Actor $creator)
   {
@@ -81,7 +97,9 @@ class Comment extends \Google\Model
     return $this->creator;
   }
   /**
-   * @param string
+   * Output only. Identifier. The resource name of the comment.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,13 +113,18 @@ class Comment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. DEPRECATED. DO NOT USE. A duplicate of the `body` field. This
+   * field is only present for legacy reasons.
+   *
+   * @deprecated
+   * @param string $plainTextBody
    */
   public function setPlainTextBody($plainTextBody)
   {
     $this->plainTextBody = $plainTextBody;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getPlainTextBody()

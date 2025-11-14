@@ -35,7 +35,9 @@ class PolicyTopicEvidence extends \Google\Model
   protected $httpCookieDataType = '';
 
   /**
-   * @param DestinationNotCrawlableEvidence
+   * The creative's destination URL was not crawlable by Google.
+   *
+   * @param DestinationNotCrawlableEvidence $destinationNotCrawlable
    */
   public function setDestinationNotCrawlable(DestinationNotCrawlableEvidence $destinationNotCrawlable)
   {
@@ -49,7 +51,10 @@ class PolicyTopicEvidence extends \Google\Model
     return $this->destinationNotCrawlable;
   }
   /**
-   * @param DestinationNotWorkingEvidence
+   * The creative's destination URL did not function properly or was incorrectly
+   * set up.
+   *
+   * @param DestinationNotWorkingEvidence $destinationNotWorking
    */
   public function setDestinationNotWorking(DestinationNotWorkingEvidence $destinationNotWorking)
   {
@@ -63,7 +68,9 @@ class PolicyTopicEvidence extends \Google\Model
     return $this->destinationNotWorking;
   }
   /**
-   * @param DestinationUrlEvidence
+   * URL of the actual landing page.
+   *
+   * @param DestinationUrlEvidence $destinationUrl
    */
   public function setDestinationUrl(DestinationUrlEvidence $destinationUrl)
   {
@@ -77,7 +84,9 @@ class PolicyTopicEvidence extends \Google\Model
     return $this->destinationUrl;
   }
   /**
-   * @param DomainCallEvidence
+   * Number of HTTP calls made by the creative, broken down by domain.
+   *
+   * @param DomainCallEvidence $domainCall
    */
   public function setDomainCall(DomainCallEvidence $domainCall)
   {
@@ -91,7 +100,10 @@ class PolicyTopicEvidence extends \Google\Model
     return $this->domainCall;
   }
   /**
-   * @param DownloadSizeEvidence
+   * Total download size and URL-level download size breakdown for resources in
+   * a creative.
+   *
+   * @param DownloadSizeEvidence $downloadSize
    */
   public function setDownloadSize(DownloadSizeEvidence $downloadSize)
   {
@@ -105,7 +117,9 @@ class PolicyTopicEvidence extends \Google\Model
     return $this->downloadSize;
   }
   /**
-   * @param HttpCallEvidence
+   * HTTP calls made by the creative that resulted in policy violations.
+   *
+   * @param HttpCallEvidence $httpCall
    */
   public function setHttpCall(HttpCallEvidence $httpCall)
   {
@@ -119,7 +133,9 @@ class PolicyTopicEvidence extends \Google\Model
     return $this->httpCall;
   }
   /**
-   * @param HttpCookieEvidence
+   * Evidence for HTTP cookie-related policy violations.
+   *
+   * @param HttpCookieEvidence $httpCookie
    */
   public function setHttpCookie(HttpCookieEvidence $httpCookie)
   {

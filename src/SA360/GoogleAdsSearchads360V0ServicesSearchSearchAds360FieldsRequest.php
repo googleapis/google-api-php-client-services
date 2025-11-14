@@ -20,20 +20,34 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest extends \Google\Model
 {
   /**
+   * Number of elements to retrieve in a single page. When too large a page is
+   * requested, the server may decide to further limit the number of returned
+   * resources.
+   *
    * @var int
    */
   public $pageSize;
   /**
+   * Token of the page to retrieve. If not specified, the first page of results
+   * will be returned. Use the value obtained from `next_page_token` in the
+   * previous response in order to request the next page of results.
+   *
    * @var string
    */
   public $pageToken;
   /**
+   * Required. The query string.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param int
+   * Number of elements to retrieve in a single page. When too large a page is
+   * requested, the server may decide to further limit the number of returned
+   * resources.
+   *
+   * @param int $pageSize
    */
   public function setPageSize($pageSize)
   {
@@ -47,7 +61,11 @@ class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest extends \Go
     return $this->pageSize;
   }
   /**
-   * @param string
+   * Token of the page to retrieve. If not specified, the first page of results
+   * will be returned. Use the value obtained from `next_page_token` in the
+   * previous response in order to request the next page of results.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -61,7 +79,9 @@ class GoogleAdsSearchads360V0ServicesSearchSearchAds360FieldsRequest extends \Go
     return $this->pageToken;
   }
   /**
-   * @param string
+   * Required. The query string.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

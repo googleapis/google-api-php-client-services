@@ -20,16 +20,28 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ToolFunctionTool extends \Google\Model
 {
   /**
+   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to
+   * describe the input of the function. This input is a JSON object that
+   * contains the function's parameters as properties of the object.
+   *
    * @var array[]
    */
   public $inputSchema;
   /**
+   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to
+   * describe the output of the function. This output is a JSON object that
+   * contains the function's parameters as properties of the object.
+   *
    * @var array[]
    */
   public $outputSchema;
 
   /**
-   * @param array[]
+   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to
+   * describe the input of the function. This input is a JSON object that
+   * contains the function's parameters as properties of the object.
+   *
+   * @param array[] $inputSchema
    */
   public function setInputSchema($inputSchema)
   {
@@ -43,7 +55,11 @@ class GoogleCloudDialogflowCxV3ToolFunctionTool extends \Google\Model
     return $this->inputSchema;
   }
   /**
-   * @param array[]
+   * Optional. The JSON schema is encapsulated in a google.protobuf.Struct to
+   * describe the output of the function. This output is a JSON object that
+   * contains the function's parameters as properties of the object.
+   *
+   * @param array[] $outputSchema
    */
   public function setOutputSchema($outputSchema)
   {

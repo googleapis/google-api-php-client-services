@@ -20,16 +20,22 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1StudyConfigParameterSpecIntegerValueSpec extends \Google\Model
 {
   /**
+   * Must be specified if type is `INTEGER`. Maximum value of the parameter.
+   *
    * @var string
    */
   public $maxValue;
   /**
+   * Must be specified if type is `INTEGER`. Minimum value of the parameter.
+   *
    * @var string
    */
   public $minValue;
 
   /**
-   * @param string
+   * Must be specified if type is `INTEGER`. Maximum value of the parameter.
+   *
+   * @param string $maxValue
    */
   public function setMaxValue($maxValue)
   {
@@ -43,7 +49,9 @@ class GoogleCloudMlV1StudyConfigParameterSpecIntegerValueSpec extends \Google\Mo
     return $this->maxValue;
   }
   /**
-   * @param string
+   * Must be specified if type is `INTEGER`. Minimum value of the parameter.
+   *
+   * @param string $minValue
    */
   public function setMinValue($minValue)
   {

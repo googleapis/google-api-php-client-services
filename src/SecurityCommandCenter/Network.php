@@ -20,12 +20,18 @@ namespace Google\Service\SecurityCommandCenter;
 class Network extends \Google\Model
 {
   /**
+   * The name of the VPC network resource, for example,
+   * `//compute.googleapis.com/projects/my-project/global/networks/my-network`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The name of the VPC network resource, for example,
+   * `//compute.googleapis.com/projects/my-project/global/networks/my-network`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

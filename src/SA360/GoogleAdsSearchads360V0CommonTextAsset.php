@@ -20,12 +20,16 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonTextAsset extends \Google\Model
 {
   /**
+   * Text content of the text asset.
+   *
    * @var string
    */
   public $text;
 
   /**
-   * @param string
+   * Text content of the text asset.
+   *
+   * @param string $text
    */
   public function setText($text)
   {

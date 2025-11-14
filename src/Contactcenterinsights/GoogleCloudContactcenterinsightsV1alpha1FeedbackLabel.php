@@ -20,30 +20,48 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel extends \Google\Model
 {
   /**
+   * Output only. Create time of the label.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * String label used for Topic Modeling.
+   *
    * @var string
    */
   public $label;
   /**
+   * Name of the resource to be labeled. Supported resources are: * `projects/{p
+   * roject}/locations/{location}/qaScorecards/{scorecard}/revisions/{revision}/
+   * qaQuestions/{question}` *
+   * `projects/{project}/locations/{location}/issueModels/{issue_model}` *
+   * `projects/{project}/locations/{location}/generators/{generator_id}`
+   *
    * @var string
    */
   public $labeledResource;
   /**
+   * Immutable. Resource name of the FeedbackLabel. Format: projects/{project}/l
+   * ocations/{location}/conversations/{conversation}/feedbackLabels/{feedback_l
+   * abel}
+   *
    * @var string
    */
   public $name;
   protected $qaAnswerLabelType = GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue::class;
   protected $qaAnswerLabelDataType = '';
   /**
+   * Output only. Update time of the label.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Create time of the label.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -57,7 +75,9 @@ class GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel extends \Google\Mode
     return $this->createTime;
   }
   /**
-   * @param string
+   * String label used for Topic Modeling.
+   *
+   * @param string $label
    */
   public function setLabel($label)
   {
@@ -71,7 +91,13 @@ class GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel extends \Google\Mode
     return $this->label;
   }
   /**
-   * @param string
+   * Name of the resource to be labeled. Supported resources are: * `projects/{p
+   * roject}/locations/{location}/qaScorecards/{scorecard}/revisions/{revision}/
+   * qaQuestions/{question}` *
+   * `projects/{project}/locations/{location}/issueModels/{issue_model}` *
+   * `projects/{project}/locations/{location}/generators/{generator_id}`
+   *
+   * @param string $labeledResource
    */
   public function setLabeledResource($labeledResource)
   {
@@ -85,7 +111,11 @@ class GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel extends \Google\Mode
     return $this->labeledResource;
   }
   /**
-   * @param string
+   * Immutable. Resource name of the FeedbackLabel. Format: projects/{project}/l
+   * ocations/{location}/conversations/{conversation}/feedbackLabels/{feedback_l
+   * abel}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -99,7 +129,9 @@ class GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel extends \Google\Mode
     return $this->name;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue
+   * QaAnswer label used for Quality AI example conversations.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue $qaAnswerLabel
    */
   public function setQaAnswerLabel(GoogleCloudContactcenterinsightsV1alpha1QaAnswerAnswerValue $qaAnswerLabel)
   {
@@ -113,7 +145,9 @@ class GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel extends \Google\Mode
     return $this->qaAnswerLabel;
   }
   /**
-   * @param string
+   * Output only. Update time of the label.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

@@ -21,24 +21,40 @@ class EditAtom extends \Google\Collection
 {
   protected $collection_key = 'inputs';
   /**
+   * End time in seconds for the atom, relative to the input file timeline. When
+   * `end_time_offset` is not specified, the `inputs` are used until the end of
+   * the atom.
+   *
    * @var string
    */
   public $endTimeOffset;
   /**
+   * List of Input.key values identifying files that should be used in this
+   * atom. The listed `inputs` must have the same timeline.
+   *
    * @var string[]
    */
   public $inputs;
   /**
+   * A unique key for this atom. Must be specified when using advanced mapping.
+   *
    * @var string
    */
   public $key;
   /**
+   * Start time in seconds for the atom, relative to the input file timeline.
+   * The default is `0s`.
+   *
    * @var string
    */
   public $startTimeOffset;
 
   /**
-   * @param string
+   * End time in seconds for the atom, relative to the input file timeline. When
+   * `end_time_offset` is not specified, the `inputs` are used until the end of
+   * the atom.
+   *
+   * @param string $endTimeOffset
    */
   public function setEndTimeOffset($endTimeOffset)
   {
@@ -52,7 +68,10 @@ class EditAtom extends \Google\Collection
     return $this->endTimeOffset;
   }
   /**
-   * @param string[]
+   * List of Input.key values identifying files that should be used in this
+   * atom. The listed `inputs` must have the same timeline.
+   *
+   * @param string[] $inputs
    */
   public function setInputs($inputs)
   {
@@ -66,7 +85,9 @@ class EditAtom extends \Google\Collection
     return $this->inputs;
   }
   /**
-   * @param string
+   * A unique key for this atom. Must be specified when using advanced mapping.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {
@@ -80,7 +101,10 @@ class EditAtom extends \Google\Collection
     return $this->key;
   }
   /**
-   * @param string
+   * Start time in seconds for the atom, relative to the input file timeline.
+   * The default is `0s`.
+   *
+   * @param string $startTimeOffset
    */
   public function setStartTimeOffset($startTimeOffset)
   {

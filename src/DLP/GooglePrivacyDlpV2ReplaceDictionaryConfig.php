@@ -23,7 +23,11 @@ class GooglePrivacyDlpV2ReplaceDictionaryConfig extends \Google\Model
   protected $wordListDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2WordList
+   * A list of words to select from for random replacement. The
+   * [limits](https://cloud.google.com/sensitive-data-protection/limits) page
+   * contains details about the size limits of dictionaries.
+   *
+   * @param GooglePrivacyDlpV2WordList $wordList
    */
   public function setWordList(GooglePrivacyDlpV2WordList $wordList)
   {

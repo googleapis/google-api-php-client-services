@@ -19,24 +19,50 @@ namespace Google\Service\AIPlatformNotebooks;
 
 class NetworkInterface extends \Google\Collection
 {
+  /**
+   * No type specified.
+   */
+  public const NIC_TYPE_NIC_TYPE_UNSPECIFIED = 'NIC_TYPE_UNSPECIFIED';
+  /**
+   * VIRTIO
+   */
+  public const NIC_TYPE_VIRTIO_NET = 'VIRTIO_NET';
+  /**
+   * GVNIC
+   */
+  public const NIC_TYPE_GVNIC = 'GVNIC';
   protected $collection_key = 'accessConfigs';
   protected $accessConfigsType = AccessConfig::class;
   protected $accessConfigsDataType = 'array';
   /**
+   * Optional. The name of the VPC that this VM instance is in. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
+   *
    * @var string
    */
   public $network;
   /**
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC
+   * or VirtioNet.
+   *
    * @var string
    */
   public $nicType;
   /**
+   * Optional. The name of the subnet that this VM instance is in. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+   *
    * @var string
    */
   public $subnet;
 
   /**
-   * @param AccessConfig[]
+   * Optional. An array of configurations for this interface. Currently, only
+   * one access config, ONE_TO_ONE_NAT, is supported. If no accessConfigs
+   * specified, the instance will have an external internet access through an
+   * ephemeral external IP address.
+   *
+   * @param AccessConfig[] $accessConfigs
    */
   public function setAccessConfigs($accessConfigs)
   {
@@ -50,7 +76,10 @@ class NetworkInterface extends \Google\Collection
     return $this->accessConfigs;
   }
   /**
-   * @param string
+   * Optional. The name of the VPC that this VM instance is in. Format:
+   * `projects/{project_id}/global/networks/{network_id}`
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -64,21 +93,29 @@ class NetworkInterface extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param string
+   * Optional. The type of vNIC to be used on this interface. This may be gVNIC
+   * or VirtioNet.
+   *
+   * Accepted values: NIC_TYPE_UNSPECIFIED, VIRTIO_NET, GVNIC
+   *
+   * @param self::NIC_TYPE_* $nicType
    */
   public function setNicType($nicType)
   {
     $this->nicType = $nicType;
   }
   /**
-   * @return string
+   * @return self::NIC_TYPE_*
    */
   public function getNicType()
   {
     return $this->nicType;
   }
   /**
-   * @param string
+   * Optional. The name of the subnet that this VM instance is in. Format:
+   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+   *
+   * @param string $subnet
    */
   public function setSubnet($subnet)
   {

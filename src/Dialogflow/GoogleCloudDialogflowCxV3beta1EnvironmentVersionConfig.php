@@ -20,12 +20,22 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfig extends \Google\Model
 {
   /**
+   * Required. Flow, playbook and tool versions are supported. Format for flow
+   * version: projects//locations//agents//flows//versions/. Format for playbook
+   * version: projects//locations//agents//playbooks//versions/. Format for tool
+   * version: projects//locations//agents//tools//versions/.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Required. Flow, playbook and tool versions are supported. Format for flow
+   * version: projects//locations//agents//flows//versions/. Format for playbook
+   * version: projects//locations//agents//playbooks//versions/. Format for tool
+   * version: projects//locations//agents//tools//versions/.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

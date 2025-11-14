@@ -23,7 +23,9 @@ class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig extends \Google\Mo
   protected $exactMatchConfigDataType = '';
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1ExactMatchConfig
+   * The configuration for the exact match rule.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ExactMatchConfig $exactMatchConfig
    */
   public function setExactMatchConfig(GoogleCloudContactcenterinsightsV1ExactMatchConfig $exactMatchConfig)
   {

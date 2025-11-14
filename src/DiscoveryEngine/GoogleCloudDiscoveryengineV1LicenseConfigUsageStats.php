@@ -20,16 +20,22 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1LicenseConfigUsageStats extends \Google\Model
 {
   /**
+   * Required. The LicenseConfig name.
+   *
    * @var string
    */
   public $licenseConfig;
   /**
+   * Required. The number of licenses used.
+   *
    * @var string
    */
   public $usedLicenseCount;
 
   /**
-   * @param string
+   * Required. The LicenseConfig name.
+   *
+   * @param string $licenseConfig
    */
   public function setLicenseConfig($licenseConfig)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDiscoveryengineV1LicenseConfigUsageStats extends \Google\Model
     return $this->licenseConfig;
   }
   /**
-   * @param string
+   * Required. The number of licenses used.
+   *
+   * @param string $usedLicenseCount
    */
   public function setUsedLicenseCount($usedLicenseCount)
   {

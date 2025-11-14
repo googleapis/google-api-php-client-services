@@ -23,7 +23,7 @@ class ApkDetail extends \Google\Model
   protected $apkManifestDataType = '';
 
   /**
-   * @param ApkManifest
+   * @param ApkManifest $apkManifest
    */
   public function setApkManifest(ApkManifest $apkManifest)
   {

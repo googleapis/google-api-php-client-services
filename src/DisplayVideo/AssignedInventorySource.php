@@ -20,20 +20,32 @@ namespace Google\Service\DisplayVideo;
 class AssignedInventorySource extends \Google\Model
 {
   /**
+   * Output only. The unique ID of the assigned inventory source. The ID is only
+   * unique within a given inventory source group. It may be reused in other
+   * contexts.
+   *
    * @var string
    */
   public $assignedInventorySourceId;
   /**
+   * Required. The ID of the inventory source entity being targeted.
+   *
    * @var string
    */
   public $inventorySourceId;
   /**
+   * Output only. The resource name of the assigned inventory source.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The unique ID of the assigned inventory source. The ID is only
+   * unique within a given inventory source group. It may be reused in other
+   * contexts.
+   *
+   * @param string $assignedInventorySourceId
    */
   public function setAssignedInventorySourceId($assignedInventorySourceId)
   {
@@ -47,7 +59,9 @@ class AssignedInventorySource extends \Google\Model
     return $this->assignedInventorySourceId;
   }
   /**
-   * @param string
+   * Required. The ID of the inventory source entity being targeted.
+   *
+   * @param string $inventorySourceId
    */
   public function setInventorySourceId($inventorySourceId)
   {
@@ -61,7 +75,9 @@ class AssignedInventorySource extends \Google\Model
     return $this->inventorySourceId;
   }
   /**
-   * @param string
+   * Output only. The resource name of the assigned inventory source.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

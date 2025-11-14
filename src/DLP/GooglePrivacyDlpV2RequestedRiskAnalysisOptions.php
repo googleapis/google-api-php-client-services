@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2RequestedRiskAnalysisOptions extends \Google\Model
   protected $jobConfigDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2RiskAnalysisJobConfig
+   * The job config for the risk job.
+   *
+   * @param GooglePrivacyDlpV2RiskAnalysisJobConfig $jobConfig
    */
   public function setJobConfig(GooglePrivacyDlpV2RiskAnalysisJobConfig $jobConfig)
   {

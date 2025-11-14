@@ -23,7 +23,9 @@ class GooglePrivacyDlpV2QuoteInfo extends \Google\Model
   protected $dateTimeDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2DateTime
+   * The date time indicated by the quote.
+   *
+   * @param GooglePrivacyDlpV2DateTime $dateTime
    */
   public function setDateTime(GooglePrivacyDlpV2DateTime $dateTime)
   {

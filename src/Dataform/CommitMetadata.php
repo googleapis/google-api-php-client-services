@@ -22,12 +22,16 @@ class CommitMetadata extends \Google\Model
   protected $authorType = CommitAuthor::class;
   protected $authorDataType = '';
   /**
+   * Optional. The commit's message.
+   *
    * @var string
    */
   public $commitMessage;
 
   /**
-   * @param CommitAuthor
+   * Required. The commit's author.
+   *
+   * @param CommitAuthor $author
    */
   public function setAuthor(CommitAuthor $author)
   {
@@ -41,7 +45,9 @@ class CommitMetadata extends \Google\Model
     return $this->author;
   }
   /**
-   * @param string
+   * Optional. The commit's message.
+   *
+   * @param string $commitMessage
    */
   public function setCommitMessage($commitMessage)
   {

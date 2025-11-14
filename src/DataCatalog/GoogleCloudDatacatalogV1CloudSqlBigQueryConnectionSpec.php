@@ -20,20 +20,40 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec extends \Google\Model
 {
   /**
+   * Unspecified database type.
+   */
+  public const TYPE_DATABASE_TYPE_UNSPECIFIED = 'DATABASE_TYPE_UNSPECIFIED';
+  /**
+   * Cloud SQL for PostgreSQL.
+   */
+  public const TYPE_POSTGRES = 'POSTGRES';
+  /**
+   * Cloud SQL for MySQL.
+   */
+  public const TYPE_MYSQL = 'MYSQL';
+  /**
+   * Database name.
+   *
    * @var string
    */
   public $database;
   /**
+   * Cloud SQL instance ID in the format of `project:location:instance`.
+   *
    * @var string
    */
   public $instanceId;
   /**
+   * Type of the Cloud SQL database.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Database name.
+   *
+   * @param string $database
    */
   public function setDatabase($database)
   {
@@ -47,7 +67,9 @@ class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec extends \Google\Mod
     return $this->database;
   }
   /**
-   * @param string
+   * Cloud SQL instance ID in the format of `project:location:instance`.
+   *
+   * @param string $instanceId
    */
   public function setInstanceId($instanceId)
   {
@@ -61,14 +83,18 @@ class GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpec extends \Google\Mod
     return $this->instanceId;
   }
   /**
-   * @param string
+   * Type of the Cloud SQL database.
+   *
+   * Accepted values: DATABASE_TYPE_UNSPECIFIED, POSTGRES, MYSQL
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

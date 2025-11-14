@@ -20,16 +20,23 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion extends \Google\Model
 {
   /**
+   * Required. The name of the app or site this chip is linking to.
+   *
    * @var string
    */
   public $destinationName;
   /**
+   * Required. The URI of the app or site to open when the user taps the
+   * suggestion chip.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Required. The name of the app or site this chip is linking to.
+   *
+   * @param string $destinationName
    */
   public function setDestinationName($destinationName)
   {
@@ -43,7 +50,10 @@ class GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion extends \Google
     return $this->destinationName;
   }
   /**
-   * @param string
+   * Required. The URI of the app or site to open when the user taps the
+   * suggestion chip.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

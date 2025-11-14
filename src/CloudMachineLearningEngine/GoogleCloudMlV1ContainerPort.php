@@ -20,12 +20,18 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ContainerPort extends \Google\Model
 {
   /**
+   * Number of the port to expose on the container. This must be a valid port
+   * number: 0 < PORT_NUMBER < 65536.
+   *
    * @var int
    */
   public $containerPort;
 
   /**
-   * @param int
+   * Number of the port to expose on the container. This must be a valid port
+   * number: 0 < PORT_NUMBER < 65536.
+   *
+   * @param int $containerPort
    */
   public function setContainerPort($containerPort)
   {

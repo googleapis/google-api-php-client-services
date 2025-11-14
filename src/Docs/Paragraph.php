@@ -27,6 +27,8 @@ class Paragraph extends \Google\Collection
   protected $paragraphStyleType = ParagraphStyle::class;
   protected $paragraphStyleDataType = '';
   /**
+   * The IDs of the positioned objects tethered to this paragraph.
+   *
    * @var string[]
    */
   public $positionedObjectIds;
@@ -38,7 +40,10 @@ class Paragraph extends \Google\Collection
   protected $suggestedPositionedObjectIdsDataType = 'map';
 
   /**
-   * @param Bullet
+   * The bullet for this paragraph. If not present, the paragraph does not
+   * belong to a list.
+   *
+   * @param Bullet $bullet
    */
   public function setBullet(Bullet $bullet)
   {
@@ -52,7 +57,9 @@ class Paragraph extends \Google\Collection
     return $this->bullet;
   }
   /**
-   * @param ParagraphElement[]
+   * The content of the paragraph, broken down into its component parts.
+   *
+   * @param ParagraphElement[] $elements
    */
   public function setElements($elements)
   {
@@ -66,7 +73,9 @@ class Paragraph extends \Google\Collection
     return $this->elements;
   }
   /**
-   * @param ParagraphStyle
+   * The style of this paragraph.
+   *
+   * @param ParagraphStyle $paragraphStyle
    */
   public function setParagraphStyle(ParagraphStyle $paragraphStyle)
   {
@@ -80,7 +89,9 @@ class Paragraph extends \Google\Collection
     return $this->paragraphStyle;
   }
   /**
-   * @param string[]
+   * The IDs of the positioned objects tethered to this paragraph.
+   *
+   * @param string[] $positionedObjectIds
    */
   public function setPositionedObjectIds($positionedObjectIds)
   {
@@ -94,7 +105,9 @@ class Paragraph extends \Google\Collection
     return $this->positionedObjectIds;
   }
   /**
-   * @param SuggestedBullet[]
+   * The suggested changes to this paragraph's bullet.
+   *
+   * @param SuggestedBullet[] $suggestedBulletChanges
    */
   public function setSuggestedBulletChanges($suggestedBulletChanges)
   {
@@ -108,7 +121,10 @@ class Paragraph extends \Google\Collection
     return $this->suggestedBulletChanges;
   }
   /**
-   * @param SuggestedParagraphStyle[]
+   * The suggested paragraph style changes to this paragraph, keyed by
+   * suggestion ID.
+   *
+   * @param SuggestedParagraphStyle[] $suggestedParagraphStyleChanges
    */
   public function setSuggestedParagraphStyleChanges($suggestedParagraphStyleChanges)
   {
@@ -122,7 +138,10 @@ class Paragraph extends \Google\Collection
     return $this->suggestedParagraphStyleChanges;
   }
   /**
-   * @param ObjectReferences[]
+   * The IDs of the positioned objects suggested to be attached to this
+   * paragraph, keyed by suggestion ID.
+   *
+   * @param ObjectReferences[] $suggestedPositionedObjectIds
    */
   public function setSuggestedPositionedObjectIds($suggestedPositionedObjectIds)
   {

@@ -20,20 +20,68 @@ namespace Google\Service\SecurityCommandCenter;
 class ResourcePathNode extends \Google\Model
 {
   /**
+   * Node type is unspecified.
+   */
+  public const NODE_TYPE_RESOURCE_PATH_NODE_TYPE_UNSPECIFIED = 'RESOURCE_PATH_NODE_TYPE_UNSPECIFIED';
+  /**
+   * The node represents a Google Cloud organization.
+   */
+  public const NODE_TYPE_GCP_ORGANIZATION = 'GCP_ORGANIZATION';
+  /**
+   * The node represents a Google Cloud folder.
+   */
+  public const NODE_TYPE_GCP_FOLDER = 'GCP_FOLDER';
+  /**
+   * The node represents a Google Cloud project.
+   */
+  public const NODE_TYPE_GCP_PROJECT = 'GCP_PROJECT';
+  /**
+   * The node represents an AWS organization.
+   */
+  public const NODE_TYPE_AWS_ORGANIZATION = 'AWS_ORGANIZATION';
+  /**
+   * The node represents an AWS organizational unit.
+   */
+  public const NODE_TYPE_AWS_ORGANIZATIONAL_UNIT = 'AWS_ORGANIZATIONAL_UNIT';
+  /**
+   * The node represents an AWS account.
+   */
+  public const NODE_TYPE_AWS_ACCOUNT = 'AWS_ACCOUNT';
+  /**
+   * The node represents an Azure management group.
+   */
+  public const NODE_TYPE_AZURE_MANAGEMENT_GROUP = 'AZURE_MANAGEMENT_GROUP';
+  /**
+   * The node represents an Azure subscription.
+   */
+  public const NODE_TYPE_AZURE_SUBSCRIPTION = 'AZURE_SUBSCRIPTION';
+  /**
+   * The node represents an Azure resource group.
+   */
+  public const NODE_TYPE_AZURE_RESOURCE_GROUP = 'AZURE_RESOURCE_GROUP';
+  /**
+   * The display name of the resource this node represents.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The ID of the resource this node represents.
+   *
    * @var string
    */
   public $id;
   /**
+   * The type of resource this node represents.
+   *
    * @var string
    */
   public $nodeType;
 
   /**
-   * @param string
+   * The display name of the resource this node represents.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +95,9 @@ class ResourcePathNode extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The ID of the resource this node represents.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -61,14 +111,21 @@ class ResourcePathNode extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The type of resource this node represents.
+   *
+   * Accepted values: RESOURCE_PATH_NODE_TYPE_UNSPECIFIED, GCP_ORGANIZATION,
+   * GCP_FOLDER, GCP_PROJECT, AWS_ORGANIZATION, AWS_ORGANIZATIONAL_UNIT,
+   * AWS_ACCOUNT, AZURE_MANAGEMENT_GROUP, AZURE_SUBSCRIPTION,
+   * AZURE_RESOURCE_GROUP
+   *
+   * @param self::NODE_TYPE_* $nodeType
    */
   public function setNodeType($nodeType)
   {
     $this->nodeType = $nodeType;
   }
   /**
-   * @return string
+   * @return self::NODE_TYPE_*
    */
   public function getNodeType()
   {

@@ -21,6 +21,9 @@ class ListPullRequestCommentsResponse extends \Google\Collection
 {
   protected $collection_key = 'pullRequestComments';
   /**
+   * A token to set as page_token to retrieve the next page. If this field is
+   * omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListPullRequestCommentsResponse extends \Google\Collection
   protected $pullRequestCommentsDataType = 'array';
 
   /**
-   * @param string
+   * A token to set as page_token to retrieve the next page. If this field is
+   * omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListPullRequestCommentsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PullRequestComment[]
+   * The list of pull request comments.
+   *
+   * @param PullRequestComment[] $pullRequestComments
    */
   public function setPullRequestComments($pullRequestComments)
   {

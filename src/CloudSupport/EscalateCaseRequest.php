@@ -23,7 +23,9 @@ class EscalateCaseRequest extends \Google\Model
   protected $escalationDataType = '';
 
   /**
-   * @param Escalation
+   * The escalation information to be sent with the escalation request.
+   *
+   * @param Escalation $escalation
    */
   public function setEscalation(Escalation $escalation)
   {

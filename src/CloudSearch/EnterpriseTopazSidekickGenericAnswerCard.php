@@ -20,16 +20,22 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickGenericAnswerCard extends \Google\Model
 {
   /**
+   * The answer.
+   *
    * @var string
    */
   public $answer;
   /**
+   * Title or header of the card.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * The answer.
+   *
+   * @param string $answer
    */
   public function setAnswer($answer)
   {
@@ -43,7 +49,9 @@ class EnterpriseTopazSidekickGenericAnswerCard extends \Google\Model
     return $this->answer;
   }
   /**
-   * @param string
+   * Title or header of the card.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

@@ -21,6 +21,9 @@ class GoogleCloudContentwarehouseV1ListSynonymSetsResponse extends \Google\Colle
 {
   protected $collection_key = 'synonymSets';
   /**
+   * A page token, received from a previous `ListSynonymSets` call. Provide this
+   * to retrieve the subsequent page.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudContentwarehouseV1ListSynonymSetsResponse extends \Google\Colle
   protected $synonymSetsDataType = 'array';
 
   /**
-   * @param string
+   * A page token, received from a previous `ListSynonymSets` call. Provide this
+   * to retrieve the subsequent page.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudContentwarehouseV1ListSynonymSetsResponse extends \Google\Colle
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1SynonymSet[]
+   * The synonymSets from the specified parent.
+   *
+   * @param GoogleCloudContentwarehouseV1SynonymSet[] $synonymSets
    */
   public function setSynonymSets($synonymSets)
   {

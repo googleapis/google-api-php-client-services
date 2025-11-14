@@ -20,37 +20,92 @@ namespace Google\Service\PolicyTroubleshooter;
 class GoogleCloudPolicytroubleshooterV1BindingExplanationAnnotatedMembership extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const MEMBERSHIP_MEMBERSHIP_UNSPECIFIED = 'MEMBERSHIP_UNSPECIFIED';
+  /**
+   * The binding includes the principal. The principal can be included directly
+   * or indirectly. For example: * A principal is included directly if that
+   * principal is listed in the binding. * A principal is included indirectly if
+   * that principal is in a Google group or Google Workspace domain that is
+   * listed in the binding.
+   */
+  public const MEMBERSHIP_MEMBERSHIP_INCLUDED = 'MEMBERSHIP_INCLUDED';
+  /**
+   * The binding does not include the principal.
+   */
+  public const MEMBERSHIP_MEMBERSHIP_NOT_INCLUDED = 'MEMBERSHIP_NOT_INCLUDED';
+  /**
+   * The sender of the request is not allowed to access the binding.
+   */
+  public const MEMBERSHIP_MEMBERSHIP_UNKNOWN_INFO_DENIED = 'MEMBERSHIP_UNKNOWN_INFO_DENIED';
+  /**
+   * The principal is an unsupported type. Only Google Accounts and service
+   * accounts are supported.
+   */
+  public const MEMBERSHIP_MEMBERSHIP_UNKNOWN_UNSUPPORTED = 'MEMBERSHIP_UNKNOWN_UNSUPPORTED';
+  /**
+   * Default value. This value is unused.
+   */
+  public const RELEVANCE_HEURISTIC_RELEVANCE_UNSPECIFIED = 'HEURISTIC_RELEVANCE_UNSPECIFIED';
+  /**
+   * The data point has a limited effect on the result. Changing the data point
+   * is unlikely to affect the overall determination.
+   */
+  public const RELEVANCE_NORMAL = 'NORMAL';
+  /**
+   * The data point has a strong effect on the result. Changing the data point
+   * is likely to affect the overall determination.
+   */
+  public const RELEVANCE_HIGH = 'HIGH';
+  /**
+   * Indicates whether the binding includes the principal.
+   *
    * @var string
    */
   public $membership;
   /**
+   * The relevance of the principal's status to the overall determination for
+   * the binding.
+   *
    * @var string
    */
   public $relevance;
 
   /**
-   * @param string
+   * Indicates whether the binding includes the principal.
+   *
+   * Accepted values: MEMBERSHIP_UNSPECIFIED, MEMBERSHIP_INCLUDED,
+   * MEMBERSHIP_NOT_INCLUDED, MEMBERSHIP_UNKNOWN_INFO_DENIED,
+   * MEMBERSHIP_UNKNOWN_UNSUPPORTED
+   *
+   * @param self::MEMBERSHIP_* $membership
    */
   public function setMembership($membership)
   {
     $this->membership = $membership;
   }
   /**
-   * @return string
+   * @return self::MEMBERSHIP_*
    */
   public function getMembership()
   {
     return $this->membership;
   }
   /**
-   * @param string
+   * The relevance of the principal's status to the overall determination for
+   * the binding.
+   *
+   * Accepted values: HEURISTIC_RELEVANCE_UNSPECIFIED, NORMAL, HIGH
+   *
+   * @param self::RELEVANCE_* $relevance
    */
   public function setRelevance($relevance)
   {
     $this->relevance = $relevance;
   }
   /**
-   * @return string
+   * @return self::RELEVANCE_*
    */
   public function getRelevance()
   {

@@ -23,7 +23,13 @@ class ModifyPushConfigRequest extends \Google\Model
   protected $pushConfigDataType = '';
 
   /**
-   * @param PushConfig
+   * Required. The push configuration for future deliveries. An empty
+   * `pushConfig` indicates that the Pub/Sub system should stop pushing messages
+   * from the given subscription and allow messages to be pulled and
+   * acknowledged - effectively pausing the subscription if `Pull` or
+   * `StreamingPull` is not called.
+   *
+   * @param PushConfig $pushConfig
    */
   public function setPushConfig(PushConfig $pushConfig)
   {

@@ -20,19 +20,41 @@ namespace Google\Service\PubsubLite;
 class DeliveryConfig extends \Google\Model
 {
   /**
+   * Default value. This value is unused.
+   */
+  public const DELIVERY_REQUIREMENT_DELIVERY_REQUIREMENT_UNSPECIFIED = 'DELIVERY_REQUIREMENT_UNSPECIFIED';
+  /**
+   * The server does not wait for a published message to be successfully written
+   * to storage before delivering it to subscribers.
+   */
+  public const DELIVERY_REQUIREMENT_DELIVER_IMMEDIATELY = 'DELIVER_IMMEDIATELY';
+  /**
+   * The server will not deliver a published message to subscribers until the
+   * message has been successfully written to storage. This will result in
+   * higher end-to-end latency, but consistent delivery.
+   */
+  public const DELIVERY_REQUIREMENT_DELIVER_AFTER_STORED = 'DELIVER_AFTER_STORED';
+  /**
+   * The DeliveryRequirement for this subscription.
+   *
    * @var string
    */
   public $deliveryRequirement;
 
   /**
-   * @param string
+   * The DeliveryRequirement for this subscription.
+   *
+   * Accepted values: DELIVERY_REQUIREMENT_UNSPECIFIED, DELIVER_IMMEDIATELY,
+   * DELIVER_AFTER_STORED
+   *
+   * @param self::DELIVERY_REQUIREMENT_* $deliveryRequirement
    */
   public function setDeliveryRequirement($deliveryRequirement)
   {
     $this->deliveryRequirement = $deliveryRequirement;
   }
   /**
-   * @return string
+   * @return self::DELIVERY_REQUIREMENT_*
    */
   public function getDeliveryRequirement()
   {

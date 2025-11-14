@@ -19,23 +19,53 @@ namespace Google\Service\Backupdr;
 
 class RuleConfigInfo extends \Google\Model
 {
+  /**
+   * State not set.
+   */
+  public const LAST_BACKUP_STATE_LAST_BACKUP_STATE_UNSPECIFIED = 'LAST_BACKUP_STATE_UNSPECIFIED';
+  /**
+   * The first backup is pending.
+   */
+  public const LAST_BACKUP_STATE_FIRST_BACKUP_PENDING = 'FIRST_BACKUP_PENDING';
+  /**
+   * The most recent backup could not be run/failed because of the lack of
+   * permissions.
+   */
+  public const LAST_BACKUP_STATE_PERMISSION_DENIED = 'PERMISSION_DENIED';
+  /**
+   * The last backup operation succeeded.
+   */
+  public const LAST_BACKUP_STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The last backup operation failed.
+   */
+  public const LAST_BACKUP_STATE_FAILED = 'FAILED';
   protected $lastBackupErrorType = Status::class;
   protected $lastBackupErrorDataType = '';
   /**
+   * Output only. The last backup state for rule.
+   *
    * @var string
    */
   public $lastBackupState;
   /**
+   * Output only. The point in time when the last successful backup was captured
+   * from the source.
+   *
    * @var string
    */
   public $lastSuccessfulBackupConsistencyTime;
   /**
+   * Output only. Backup Rule id fetched from backup plan.
+   *
    * @var string
    */
   public $ruleId;
 
   /**
-   * @param Status
+   * Output only. google.rpc.Status object to store the last backup error.
+   *
+   * @param Status $lastBackupError
    */
   public function setLastBackupError(Status $lastBackupError)
   {
@@ -49,21 +79,29 @@ class RuleConfigInfo extends \Google\Model
     return $this->lastBackupError;
   }
   /**
-   * @param string
+   * Output only. The last backup state for rule.
+   *
+   * Accepted values: LAST_BACKUP_STATE_UNSPECIFIED, FIRST_BACKUP_PENDING,
+   * PERMISSION_DENIED, SUCCEEDED, FAILED
+   *
+   * @param self::LAST_BACKUP_STATE_* $lastBackupState
    */
   public function setLastBackupState($lastBackupState)
   {
     $this->lastBackupState = $lastBackupState;
   }
   /**
-   * @return string
+   * @return self::LAST_BACKUP_STATE_*
    */
   public function getLastBackupState()
   {
     return $this->lastBackupState;
   }
   /**
-   * @param string
+   * Output only. The point in time when the last successful backup was captured
+   * from the source.
+   *
+   * @param string $lastSuccessfulBackupConsistencyTime
    */
   public function setLastSuccessfulBackupConsistencyTime($lastSuccessfulBackupConsistencyTime)
   {
@@ -77,7 +115,9 @@ class RuleConfigInfo extends \Google\Model
     return $this->lastSuccessfulBackupConsistencyTime;
   }
   /**
-   * @param string
+   * Output only. Backup Rule id fetched from backup plan.
+   *
+   * @param string $ruleId
    */
   public function setRuleId($ruleId)
   {

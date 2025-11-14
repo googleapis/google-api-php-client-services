@@ -25,7 +25,9 @@ class GoogleCloudDocumentaiV1BatchDocumentsInputConfig extends \Google\Model
   protected $gcsPrefixDataType = '';
 
   /**
-   * @param GoogleCloudDocumentaiV1GcsDocuments
+   * The set of documents individually specified on Cloud Storage.
+   *
+   * @param GoogleCloudDocumentaiV1GcsDocuments $gcsDocuments
    */
   public function setGcsDocuments(GoogleCloudDocumentaiV1GcsDocuments $gcsDocuments)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDocumentaiV1BatchDocumentsInputConfig extends \Google\Model
     return $this->gcsDocuments;
   }
   /**
-   * @param GoogleCloudDocumentaiV1GcsPrefix
+   * The set of documents that match the specified Cloud Storage `gcs_prefix`.
+   *
+   * @param GoogleCloudDocumentaiV1GcsPrefix $gcsPrefix
    */
   public function setGcsPrefix(GoogleCloudDocumentaiV1GcsPrefix $gcsPrefix)
   {

@@ -20,42 +20,96 @@ namespace Google\Service\RealTimeBidding;
 class PublisherConnection extends \Google\Model
 {
   /**
+   * An unspecified bidding status.
+   */
+  public const BIDDING_STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Indicates a request for connection from the publisher that the bidder needs
+   * to review.
+   */
+  public const BIDDING_STATE_PENDING = 'PENDING';
+  /**
+   * Indicates that the publisher was rejected.
+   */
+  public const BIDDING_STATE_REJECTED = 'REJECTED';
+  /**
+   * Indicates that the publisher was approved.
+   */
+  public const BIDDING_STATE_APPROVED = 'APPROVED';
+  /**
+   * An unspecified publisher platform.
+   */
+  public const PUBLISHER_PLATFORM_PUBLISHER_PLATFORM_UNSPECIFIED = 'PUBLISHER_PLATFORM_UNSPECIFIED';
+  /**
+   * A Google Ad Manager publisher.
+   */
+  public const PUBLISHER_PLATFORM_GOOGLE_AD_MANAGER = 'GOOGLE_AD_MANAGER';
+  /**
+   * An AdMob publisher.
+   */
+  public const PUBLISHER_PLATFORM_ADMOB = 'ADMOB';
+  /**
+   * Whether the publisher has been approved by the bidder.
+   *
    * @var string
    */
   public $biddingState;
   /**
+   * Output only. The time at which the publisher initiated a connection with
+   * the bidder (irrespective of if or when the bidder approves it). This is
+   * subsequently updated if the publisher revokes and re-initiates the
+   * connection.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Publisher display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Name of the publisher connection. This follows the pattern
+   * `bidders/{bidder}/publisherConnections/{publisher}`, where `{bidder}`
+   * represents the account ID of the bidder, and `{publisher}` is the
+   * ads.txt/app-ads.txt publisher ID.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Whether the publisher is an Ad Manager or AdMob publisher.
+   *
    * @var string
    */
   public $publisherPlatform;
 
   /**
-   * @param string
+   * Whether the publisher has been approved by the bidder.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, REJECTED, APPROVED
+   *
+   * @param self::BIDDING_STATE_* $biddingState
    */
   public function setBiddingState($biddingState)
   {
     $this->biddingState = $biddingState;
   }
   /**
-   * @return string
+   * @return self::BIDDING_STATE_*
    */
   public function getBiddingState()
   {
     return $this->biddingState;
   }
   /**
-   * @param string
+   * Output only. The time at which the publisher initiated a connection with
+   * the bidder (irrespective of if or when the bidder approves it). This is
+   * subsequently updated if the publisher revokes and re-initiates the
+   * connection.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -69,7 +123,9 @@ class PublisherConnection extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Publisher display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -83,7 +139,12 @@ class PublisherConnection extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Name of the publisher connection. This follows the pattern
+   * `bidders/{bidder}/publisherConnections/{publisher}`, where `{bidder}`
+   * represents the account ID of the bidder, and `{publisher}` is the
+   * ads.txt/app-ads.txt publisher ID.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -97,14 +158,18 @@ class PublisherConnection extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Whether the publisher is an Ad Manager or AdMob publisher.
+   *
+   * Accepted values: PUBLISHER_PLATFORM_UNSPECIFIED, GOOGLE_AD_MANAGER, ADMOB
+   *
+   * @param self::PUBLISHER_PLATFORM_* $publisherPlatform
    */
   public function setPublisherPlatform($publisherPlatform)
   {
     $this->publisherPlatform = $publisherPlatform;
   }
   /**
-   * @return string
+   * @return self::PUBLISHER_PLATFORM_*
    */
   public function getPublisherPlatform()
   {

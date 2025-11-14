@@ -20,18 +20,41 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class OpenInfo extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const STATUS_OPEN_FOR_BUSINESS_UNSPECIFIED = 'OPEN_FOR_BUSINESS_UNSPECIFIED';
+  /**
+   * Indicates that the location is open.
+   */
+  public const STATUS_OPEN = 'OPEN';
+  /**
+   * Indicates that the location has been permanently closed.
+   */
+  public const STATUS_CLOSED_PERMANENTLY = 'CLOSED_PERMANENTLY';
+  /**
+   * Indicates that the location has been temporarily closed.
+   */
+  public const STATUS_CLOSED_TEMPORARILY = 'CLOSED_TEMPORARILY';
+  /**
+   * Output only. Indicates whether this business is eligible for re-open.
+   *
    * @var bool
    */
   public $canReopen;
   protected $openingDateType = Date::class;
   protected $openingDateDataType = '';
   /**
+   * Required. Indicates whether or not the Location is currently open for
+   * business. All locations are open by default, unless updated to be closed.
+   *
    * @var string
    */
   public $status;
 
   /**
-   * @param bool
+   * Output only. Indicates whether this business is eligible for re-open.
+   *
+   * @param bool $canReopen
    */
   public function setCanReopen($canReopen)
   {
@@ -45,7 +68,11 @@ class OpenInfo extends \Google\Model
     return $this->canReopen;
   }
   /**
-   * @param Date
+   * Optional. The date on which the location first opened. If the exact day is
+   * not known, month and year only can be provided. The date must be in the
+   * past or be no more than one year in the future.
+   *
+   * @param Date $openingDate
    */
   public function setOpeningDate(Date $openingDate)
   {
@@ -59,14 +86,20 @@ class OpenInfo extends \Google\Model
     return $this->openingDate;
   }
   /**
-   * @param string
+   * Required. Indicates whether or not the Location is currently open for
+   * business. All locations are open by default, unless updated to be closed.
+   *
+   * Accepted values: OPEN_FOR_BUSINESS_UNSPECIFIED, OPEN, CLOSED_PERMANENTLY,
+   * CLOSED_TEMPORARILY
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {

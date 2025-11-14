@@ -20,16 +20,26 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class StructuredServiceItem extends \Google\Model
 {
   /**
+   * Optional. Description of structured service item. The character limit is
+   * 300.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The `service_type_id` field is a Google provided unique ID that
+   * can be found in `ServiceType`. This information is provided by
+   * `BatchGetCategories` rpc service.
+   *
    * @var string
    */
   public $serviceTypeId;
 
   /**
-   * @param string
+   * Optional. Description of structured service item. The character limit is
+   * 300.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -43,7 +53,11 @@ class StructuredServiceItem extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The `service_type_id` field is a Google provided unique ID that
+   * can be found in `ServiceType`. This information is provided by
+   * `BatchGetCategories` rpc service.
+   *
+   * @param string $serviceTypeId
    */
   public function setServiceTypeId($serviceTypeId)
   {

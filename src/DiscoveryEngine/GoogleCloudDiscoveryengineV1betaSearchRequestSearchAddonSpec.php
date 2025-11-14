@@ -20,20 +20,32 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestSearchAddonSpec extends \Google\Model
 {
   /**
+   * Optional. If true, generative answer add-on is disabled. Generative answer
+   * add-on includes natural language to filters and simple answers.
+   *
    * @var bool
    */
   public $disableGenerativeAnswerAddOn;
   /**
+   * Optional. If true, disables event re-ranking and personalization to
+   * optimize KPIs & personalize results.
+   *
    * @var bool
    */
   public $disableKpiPersonalizationAddOn;
   /**
+   * Optional. If true, semantic add-on is disabled. Semantic add-on includes
+   * embeddings and jetstream.
+   *
    * @var bool
    */
   public $disableSemanticAddOn;
 
   /**
-   * @param bool
+   * Optional. If true, generative answer add-on is disabled. Generative answer
+   * add-on includes natural language to filters and simple answers.
+   *
+   * @param bool $disableGenerativeAnswerAddOn
    */
   public function setDisableGenerativeAnswerAddOn($disableGenerativeAnswerAddOn)
   {
@@ -47,7 +59,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestSearchAddonSpec extends \Goog
     return $this->disableGenerativeAnswerAddOn;
   }
   /**
-   * @param bool
+   * Optional. If true, disables event re-ranking and personalization to
+   * optimize KPIs & personalize results.
+   *
+   * @param bool $disableKpiPersonalizationAddOn
    */
   public function setDisableKpiPersonalizationAddOn($disableKpiPersonalizationAddOn)
   {
@@ -61,7 +76,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestSearchAddonSpec extends \Goog
     return $this->disableKpiPersonalizationAddOn;
   }
   /**
-   * @param bool
+   * Optional. If true, semantic add-on is disabled. Semantic add-on includes
+   * embeddings and jetstream.
+   *
+   * @param bool $disableSemanticAddOn
    */
   public function setDisableSemanticAddOn($disableSemanticAddOn)
   {

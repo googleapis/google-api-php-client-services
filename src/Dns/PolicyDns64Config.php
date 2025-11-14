@@ -27,7 +27,7 @@ class PolicyDns64Config extends \Google\Model
   protected $scopeDataType = '';
 
   /**
-   * @param string
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -41,7 +41,9 @@ class PolicyDns64Config extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param PolicyDns64ConfigScope
+   * The scope to which DNS64 config will be applied to.
+   *
+   * @param PolicyDns64ConfigScope $scope
    */
   public function setScope(PolicyDns64ConfigScope $scope)
   {

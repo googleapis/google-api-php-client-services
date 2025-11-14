@@ -23,20 +23,30 @@ class CheckAuthorizationResponse extends \Google\Model
         "oauthUri" => "oauth_uri",
   ];
   /**
+   * Output only. Timestamp when this Authorization request was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * If the user has not completed OAuth consent, then the oauth_url is
+   * returned. Otherwise, this field is not set.
+   *
    * @var string
    */
   public $oauthUri;
   /**
+   * Success indicates that the user completed OAuth consent and access tokens
+   * can be generated.
+   *
    * @var bool
    */
   public $success;
 
   /**
-   * @param string
+   * Output only. Timestamp when this Authorization request was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -50,7 +60,10 @@ class CheckAuthorizationResponse extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * If the user has not completed OAuth consent, then the oauth_url is
+   * returned. Otherwise, this field is not set.
+   *
+   * @param string $oauthUri
    */
   public function setOauthUri($oauthUri)
   {
@@ -64,7 +77,10 @@ class CheckAuthorizationResponse extends \Google\Model
     return $this->oauthUri;
   }
   /**
-   * @param bool
+   * Success indicates that the user completed OAuth consent and access tokens
+   * can be generated.
+   *
+   * @param bool $success
    */
   public function setSuccess($success)
   {

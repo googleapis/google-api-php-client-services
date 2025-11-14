@@ -22,12 +22,16 @@ class SystemVariables extends \Google\Model
   protected $typesType = StandardSqlDataType::class;
   protected $typesDataType = 'map';
   /**
+   * Output only. Value for each system variable.
+   *
    * @var array[]
    */
   public $values;
 
   /**
-   * @param StandardSqlDataType[]
+   * Output only. Data type for each system variable.
+   *
+   * @param StandardSqlDataType[] $types
    */
   public function setTypes($types)
   {
@@ -41,7 +45,9 @@ class SystemVariables extends \Google\Model
     return $this->types;
   }
   /**
-   * @param array[]
+   * Output only. Value for each system variable.
+   *
+   * @param array[] $values
    */
   public function setValues($values)
   {

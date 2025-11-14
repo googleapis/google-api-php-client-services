@@ -19,23 +19,61 @@ namespace Google\Service\Batch;
 
 class InstanceStatus extends \Google\Model
 {
+  /**
+   * Unspecified.
+   */
+  public const PROVISIONING_MODEL_PROVISIONING_MODEL_UNSPECIFIED = 'PROVISIONING_MODEL_UNSPECIFIED';
+  /**
+   * Standard VM.
+   */
+  public const PROVISIONING_MODEL_STANDARD = 'STANDARD';
+  /**
+   * SPOT VM.
+   */
+  public const PROVISIONING_MODEL_SPOT = 'SPOT';
+  /**
+   * Preemptible VM (PVM). Above SPOT VM is the preferable model for preemptible
+   * VM instances: the old preemptible VM model (indicated by this field) is the
+   * older model, and has been migrated to use the SPOT model as the underlying
+   * technology. This old model will still be supported.
+   *
+   * @deprecated
+   */
+  public const PROVISIONING_MODEL_PREEMPTIBLE = 'PREEMPTIBLE';
+  /**
+   * Bound to the lifecycle of the reservation in which it is provisioned.
+   */
+  public const PROVISIONING_MODEL_RESERVATION_BOUND = 'RESERVATION_BOUND';
+  /**
+   * Instance is provisioned with DWS Flex Start and has limited max run
+   * duration.
+   */
+  public const PROVISIONING_MODEL_FLEX_START = 'FLEX_START';
   protected $bootDiskType = Disk::class;
   protected $bootDiskDataType = '';
   /**
+   * The Compute Engine machine type.
+   *
    * @var string
    */
   public $machineType;
   /**
+   * The VM instance provisioning model.
+   *
    * @var string
    */
   public $provisioningModel;
   /**
+   * The max number of tasks can be assigned to this instance type.
+   *
    * @var string
    */
   public $taskPack;
 
   /**
-   * @param Disk
+   * The VM boot disk.
+   *
+   * @param Disk $bootDisk
    */
   public function setBootDisk(Disk $bootDisk)
   {
@@ -49,7 +87,9 @@ class InstanceStatus extends \Google\Model
     return $this->bootDisk;
   }
   /**
-   * @param string
+   * The Compute Engine machine type.
+   *
+   * @param string $machineType
    */
   public function setMachineType($machineType)
   {
@@ -63,21 +103,28 @@ class InstanceStatus extends \Google\Model
     return $this->machineType;
   }
   /**
-   * @param string
+   * The VM instance provisioning model.
+   *
+   * Accepted values: PROVISIONING_MODEL_UNSPECIFIED, STANDARD, SPOT,
+   * PREEMPTIBLE, RESERVATION_BOUND, FLEX_START
+   *
+   * @param self::PROVISIONING_MODEL_* $provisioningModel
    */
   public function setProvisioningModel($provisioningModel)
   {
     $this->provisioningModel = $provisioningModel;
   }
   /**
-   * @return string
+   * @return self::PROVISIONING_MODEL_*
    */
   public function getProvisioningModel()
   {
     return $this->provisioningModel;
   }
   /**
-   * @param string
+   * The max number of tasks can be assigned to this instance type.
+   *
+   * @param string $taskPack
    */
   public function setTaskPack($taskPack)
   {

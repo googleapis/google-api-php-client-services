@@ -21,14 +21,21 @@ class GoogleCloudDatalabelingV1alpha1ExportDataOperationMetadata extends \Google
 {
   protected $collection_key = 'partialFailures';
   /**
+   * Output only. The name of annotated dataset in format
+   * "projects/datasets/annotatedDatasets".
+   *
    * @var string
    */
   public $annotatedDataset;
   /**
+   * Output only. Timestamp when export dataset request was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The name of dataset to be exported. "projects/datasets"
+   *
    * @var string
    */
   public $dataset;
@@ -36,7 +43,10 @@ class GoogleCloudDatalabelingV1alpha1ExportDataOperationMetadata extends \Google
   protected $partialFailuresDataType = 'array';
 
   /**
-   * @param string
+   * Output only. The name of annotated dataset in format
+   * "projects/datasets/annotatedDatasets".
+   *
+   * @param string $annotatedDataset
    */
   public function setAnnotatedDataset($annotatedDataset)
   {
@@ -50,7 +60,9 @@ class GoogleCloudDatalabelingV1alpha1ExportDataOperationMetadata extends \Google
     return $this->annotatedDataset;
   }
   /**
-   * @param string
+   * Output only. Timestamp when export dataset request was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -64,7 +76,9 @@ class GoogleCloudDatalabelingV1alpha1ExportDataOperationMetadata extends \Google
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The name of dataset to be exported. "projects/datasets"
+   *
+   * @param string $dataset
    */
   public function setDataset($dataset)
   {
@@ -78,7 +92,10 @@ class GoogleCloudDatalabelingV1alpha1ExportDataOperationMetadata extends \Google
     return $this->dataset;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Output only. Partial failures encountered. E.g. single files that couldn't
+   * be read. Status details field will contain standard GCP error details.
+   *
+   * @param GoogleRpcStatus[] $partialFailures
    */
   public function setPartialFailures($partialFailures)
   {

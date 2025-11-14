@@ -19,10 +19,44 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
 {
+  /**
+   * Unused.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_UNSPECIFIED = 'RESOURCE_VISIBILITY_UNSPECIFIED';
+  /**
+   * Visible to any user.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_PUBLIC = 'RESOURCE_VISIBILITY_PUBLIC';
+  /**
+   * May contain public items. For example, if a Cloud Storage bucket has
+   * uniform bucket level access disabled, some objects inside it may be public,
+   * but none are known yet.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_INCONCLUSIVE = 'RESOURCE_VISIBILITY_INCONCLUSIVE';
+  /**
+   * Visible only to specific users.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_RESTRICTED = 'RESOURCE_VISIBILITY_RESTRICTED';
+  /**
+   * Unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The profile is currently running. Once a profile has finished it will
+   * transition to DONE.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The profile is no longer generating. If profile_status.status.code is 0,
+   * the profile succeeded, otherwise, it failed.
+   */
+  public const STATE_DONE = 'DONE';
   protected $collection_key = 'tags';
   protected $configSnapshotType = GooglePrivacyDlpV2DataProfileConfigSnapshot::class;
   protected $configSnapshotDataType = '';
   /**
+   * The time the file store was first created.
+   *
    * @var string
    */
   public $createTime;
@@ -31,6 +65,12 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
   protected $dataSourceTypeType = GooglePrivacyDlpV2DataSourceType::class;
   protected $dataSourceTypeDataType = '';
   /**
+   * For resources that have multiple storage locations, these are those
+   * regions. For Cloud Storage this is the list of regions chosen for dual-
+   * region storage. `file_store_location` will normally be the corresponding
+   * multi-region for the list of individual locations. The first region is
+   * always picked as the processing and storage location for the data profile.
+   *
    * @var string[]
    */
   public $dataStorageLocations;
@@ -41,44 +81,76 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
   protected $fileStoreInfoTypeSummariesType = GooglePrivacyDlpV2FileStoreInfoTypeSummary::class;
   protected $fileStoreInfoTypeSummariesDataType = 'array';
   /**
+   * The file store does not have any files. If the profiling operation failed,
+   * this is false.
+   *
    * @var bool
    */
   public $fileStoreIsEmpty;
   /**
+   * The location of the file store. * Cloud Storage:
+   * https://cloud.google.com/storage/docs/locations#available-locations *
+   * Amazon S3:
+   * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
+   *
    * @var string
    */
   public $fileStoreLocation;
   /**
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3:
+   * `s3://{bucket}` * Vertex AI dataset:
+   * `projects/{project_number}/locations/{location}/datasets/{dataset_id}`
+   *
    * @var string
    */
   public $fileStorePath;
   /**
+   * The resource name of the resource profiled.
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * Example format of an S3 bucket full resource name: `//cloudasset.googleapis
+   * .com/organizations/{org_id}/otherCloudConnections/aws/arn:aws:s3:::{bucket_
+   * name}`
+   *
    * @var string
    */
   public $fullResource;
   /**
+   * The time the file store was last modified.
+   *
    * @var string
    */
   public $lastModifiedTime;
   /**
+   * The location type of the file store (region, dual-region, multi-region,
+   * etc). If dual-region, expect data_storage_locations to be populated.
+   *
    * @var string
    */
   public $locationType;
   /**
+   * The name of the profile.
+   *
    * @var string
    */
   public $name;
   /**
+   * The last time the profile was generated.
+   *
    * @var string
    */
   public $profileLastGenerated;
   protected $profileStatusType = GooglePrivacyDlpV2ProfileStatus::class;
   protected $profileStatusDataType = '';
   /**
+   * The resource name of the project data profile for this file store.
+   *
    * @var string
    */
   public $projectDataProfile;
   /**
+   * The Google Cloud project ID that owns the resource. For Amazon S3 buckets,
+   * this is the AWS Account Id.
+   *
    * @var string
    */
   public $projectId;
@@ -87,10 +159,14 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
   protected $resourceAttributesType = GooglePrivacyDlpV2Value::class;
   protected $resourceAttributesDataType = 'map';
   /**
+   * The labels applied to the resource at the time the profile was generated.
+   *
    * @var string[]
    */
   public $resourceLabels;
   /**
+   * How broadly a resource has been shared.
+   *
    * @var string
    */
   public $resourceVisibility;
@@ -99,6 +175,8 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**
+   * State of a profile.
+   *
    * @var string
    */
   public $state;
@@ -106,7 +184,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
   protected $tagsDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2DataProfileConfigSnapshot
+   * The snapshot of the configurations used to generate the profile.
+   *
+   * @param GooglePrivacyDlpV2DataProfileConfigSnapshot $configSnapshot
    */
   public function setConfigSnapshot(GooglePrivacyDlpV2DataProfileConfigSnapshot $configSnapshot)
   {
@@ -120,7 +200,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->configSnapshot;
   }
   /**
-   * @param string
+   * The time the file store was first created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -134,7 +216,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GooglePrivacyDlpV2DataRiskLevel
+   * The data risk level of this resource.
+   *
+   * @param GooglePrivacyDlpV2DataRiskLevel $dataRiskLevel
    */
   public function setDataRiskLevel(GooglePrivacyDlpV2DataRiskLevel $dataRiskLevel)
   {
@@ -148,7 +232,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->dataRiskLevel;
   }
   /**
-   * @param GooglePrivacyDlpV2DataSourceType
+   * The resource type that was profiled.
+   *
+   * @param GooglePrivacyDlpV2DataSourceType $dataSourceType
    */
   public function setDataSourceType(GooglePrivacyDlpV2DataSourceType $dataSourceType)
   {
@@ -162,7 +248,13 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->dataSourceType;
   }
   /**
-   * @param string[]
+   * For resources that have multiple storage locations, these are those
+   * regions. For Cloud Storage this is the list of regions chosen for dual-
+   * region storage. `file_store_location` will normally be the corresponding
+   * multi-region for the list of individual locations. The first region is
+   * always picked as the processing and storage location for the data profile.
+   *
+   * @param string[] $dataStorageLocations
    */
   public function setDataStorageLocations($dataStorageLocations)
   {
@@ -176,7 +268,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->dataStorageLocations;
   }
   /**
-   * @param GooglePrivacyDlpV2Domain[]
+   * Domains associated with the profile.
+   *
+   * @param GooglePrivacyDlpV2Domain[] $domains
    */
   public function setDomains($domains)
   {
@@ -190,7 +284,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->domains;
   }
   /**
-   * @param GooglePrivacyDlpV2FileClusterSummary[]
+   * FileClusterSummary per each cluster.
+   *
+   * @param GooglePrivacyDlpV2FileClusterSummary[] $fileClusterSummaries
    */
   public function setFileClusterSummaries($fileClusterSummaries)
   {
@@ -204,7 +300,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->fileClusterSummaries;
   }
   /**
-   * @param GooglePrivacyDlpV2FileStoreInfoTypeSummary[]
+   * InfoTypes detected in this file store.
+   *
+   * @param GooglePrivacyDlpV2FileStoreInfoTypeSummary[] $fileStoreInfoTypeSummaries
    */
   public function setFileStoreInfoTypeSummaries($fileStoreInfoTypeSummaries)
   {
@@ -218,7 +316,10 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->fileStoreInfoTypeSummaries;
   }
   /**
-   * @param bool
+   * The file store does not have any files. If the profiling operation failed,
+   * this is false.
+   *
+   * @param bool $fileStoreIsEmpty
    */
   public function setFileStoreIsEmpty($fileStoreIsEmpty)
   {
@@ -232,7 +333,12 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->fileStoreIsEmpty;
   }
   /**
-   * @param string
+   * The location of the file store. * Cloud Storage:
+   * https://cloud.google.com/storage/docs/locations#available-locations *
+   * Amazon S3:
+   * https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints
+   *
+   * @param string $fileStoreLocation
    */
   public function setFileStoreLocation($fileStoreLocation)
   {
@@ -246,7 +352,11 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->fileStoreLocation;
   }
   /**
-   * @param string
+   * The file store path. * Cloud Storage: `gs://{bucket}` * Amazon S3:
+   * `s3://{bucket}` * Vertex AI dataset:
+   * `projects/{project_number}/locations/{location}/datasets/{dataset_id}`
+   *
+   * @param string $fileStorePath
    */
   public function setFileStorePath($fileStorePath)
   {
@@ -260,7 +370,13 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->fileStorePath;
   }
   /**
-   * @param string
+   * The resource name of the resource profiled.
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   * Example format of an S3 bucket full resource name: `//cloudasset.googleapis
+   * .com/organizations/{org_id}/otherCloudConnections/aws/arn:aws:s3:::{bucket_
+   * name}`
+   *
+   * @param string $fullResource
    */
   public function setFullResource($fullResource)
   {
@@ -274,7 +390,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->fullResource;
   }
   /**
-   * @param string
+   * The time the file store was last modified.
+   *
+   * @param string $lastModifiedTime
    */
   public function setLastModifiedTime($lastModifiedTime)
   {
@@ -288,7 +406,10 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->lastModifiedTime;
   }
   /**
-   * @param string
+   * The location type of the file store (region, dual-region, multi-region,
+   * etc). If dual-region, expect data_storage_locations to be populated.
+   *
+   * @param string $locationType
    */
   public function setLocationType($locationType)
   {
@@ -302,7 +423,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->locationType;
   }
   /**
-   * @param string
+   * The name of the profile.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -316,7 +439,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * The last time the profile was generated.
+   *
+   * @param string $profileLastGenerated
    */
   public function setProfileLastGenerated($profileLastGenerated)
   {
@@ -330,7 +455,10 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->profileLastGenerated;
   }
   /**
-   * @param GooglePrivacyDlpV2ProfileStatus
+   * Success or error status from the most recent profile generation attempt.
+   * May be empty if the profile is still being generated.
+   *
+   * @param GooglePrivacyDlpV2ProfileStatus $profileStatus
    */
   public function setProfileStatus(GooglePrivacyDlpV2ProfileStatus $profileStatus)
   {
@@ -344,7 +472,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->profileStatus;
   }
   /**
-   * @param string
+   * The resource name of the project data profile for this file store.
+   *
+   * @param string $projectDataProfile
    */
   public function setProjectDataProfile($projectDataProfile)
   {
@@ -358,7 +488,10 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->projectDataProfile;
   }
   /**
-   * @param string
+   * The Google Cloud project ID that owns the resource. For Amazon S3 buckets,
+   * this is the AWS Account Id.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -372,7 +505,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->projectId;
   }
   /**
-   * @param GooglePrivacyDlpV2RelatedResource[]
+   * Resources related to this profile.
+   *
+   * @param GooglePrivacyDlpV2RelatedResource[] $relatedResources
    */
   public function setRelatedResources($relatedResources)
   {
@@ -386,7 +521,12 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->relatedResources;
   }
   /**
-   * @param GooglePrivacyDlpV2Value[]
+   * Attributes of the resource being profiled. Currently used attributes: *
+   * customer_managed_encryption: boolean - true: the resource is encrypted with
+   * a customer-managed key. - false: the resource is encrypted with a provider-
+   * managed key.
+   *
+   * @param GooglePrivacyDlpV2Value[] $resourceAttributes
    */
   public function setResourceAttributes($resourceAttributes)
   {
@@ -400,7 +540,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->resourceAttributes;
   }
   /**
-   * @param string[]
+   * The labels applied to the resource at the time the profile was generated.
+   *
+   * @param string[] $resourceLabels
    */
   public function setResourceLabels($resourceLabels)
   {
@@ -414,21 +556,29 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->resourceLabels;
   }
   /**
-   * @param string
+   * How broadly a resource has been shared.
+   *
+   * Accepted values: RESOURCE_VISIBILITY_UNSPECIFIED,
+   * RESOURCE_VISIBILITY_PUBLIC, RESOURCE_VISIBILITY_INCONCLUSIVE,
+   * RESOURCE_VISIBILITY_RESTRICTED
+   *
+   * @param self::RESOURCE_VISIBILITY_* $resourceVisibility
    */
   public function setResourceVisibility($resourceVisibility)
   {
     $this->resourceVisibility = $resourceVisibility;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_VISIBILITY_*
    */
   public function getResourceVisibility()
   {
     return $this->resourceVisibility;
   }
   /**
-   * @param GooglePrivacyDlpV2BigQueryTable
+   * The BigQuery table to which the sample findings are written.
+   *
+   * @param GooglePrivacyDlpV2BigQueryTable $sampleFindingsTable
    */
   public function setSampleFindingsTable(GooglePrivacyDlpV2BigQueryTable $sampleFindingsTable)
   {
@@ -442,7 +592,9 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->sampleFindingsTable;
   }
   /**
-   * @param GooglePrivacyDlpV2SensitivityScore
+   * The sensitivity score of this resource.
+   *
+   * @param GooglePrivacyDlpV2SensitivityScore $sensitivityScore
    */
   public function setSensitivityScore(GooglePrivacyDlpV2SensitivityScore $sensitivityScore)
   {
@@ -456,21 +608,28 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
     return $this->sensitivityScore;
   }
   /**
-   * @param string
+   * State of a profile.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, DONE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param GooglePrivacyDlpV2Tag[]
+   * The tags attached to the resource, including any tags attached during
+   * profiling.
+   *
+   * @param GooglePrivacyDlpV2Tag[] $tags
    */
   public function setTags($tags)
   {

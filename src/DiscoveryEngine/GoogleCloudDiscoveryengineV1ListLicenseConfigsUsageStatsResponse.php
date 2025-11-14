@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1ListLicenseConfigsUsageStatsResponse extends \
   protected $licenseConfigUsageStatsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1LicenseConfigUsageStats[]
+   * All the customer's LicenseConfigUsageStats.
+   *
+   * @param GoogleCloudDiscoveryengineV1LicenseConfigUsageStats[] $licenseConfigUsageStats
    */
   public function setLicenseConfigUsageStats($licenseConfigUsageStats)
   {

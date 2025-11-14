@@ -23,6 +23,9 @@ class GoogleCloudSecuritycenterV2ComplianceDetails extends \Google\Collection
   protected $cloudControlType = GoogleCloudSecuritycenterV2CloudControl::class;
   protected $cloudControlDataType = '';
   /**
+   * Cloud Control Deployments associated with the finding. For example, organiz
+   * ations/123/locations/global/cloudControlDeployments/deploymentIdentifier
+   *
    * @var string[]
    */
   public $cloudControlDeploymentNames;
@@ -30,7 +33,9 @@ class GoogleCloudSecuritycenterV2ComplianceDetails extends \Google\Collection
   protected $frameworksDataType = 'array';
 
   /**
-   * @param GoogleCloudSecuritycenterV2CloudControl
+   * CloudControl associated with the finding
+   *
+   * @param GoogleCloudSecuritycenterV2CloudControl $cloudControl
    */
   public function setCloudControl(GoogleCloudSecuritycenterV2CloudControl $cloudControl)
   {
@@ -44,7 +49,10 @@ class GoogleCloudSecuritycenterV2ComplianceDetails extends \Google\Collection
     return $this->cloudControl;
   }
   /**
-   * @param string[]
+   * Cloud Control Deployments associated with the finding. For example, organiz
+   * ations/123/locations/global/cloudControlDeployments/deploymentIdentifier
+   *
+   * @param string[] $cloudControlDeploymentNames
    */
   public function setCloudControlDeploymentNames($cloudControlDeploymentNames)
   {
@@ -58,7 +66,9 @@ class GoogleCloudSecuritycenterV2ComplianceDetails extends \Google\Collection
     return $this->cloudControlDeploymentNames;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2Framework[]
+   * Details of Frameworks associated with the finding
+   *
+   * @param GoogleCloudSecuritycenterV2Framework[] $frameworks
    */
   public function setFrameworks($frameworks)
   {

@@ -20,16 +20,28 @@ namespace Google\Service\DataFusion;
 class TimeWindow extends \Google\Model
 {
   /**
+   * Required. The end time of the time window provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. The end time should
+   * take place after the start time. Example: "2024-01-02T12:04:06-06:00"
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Required. The start time of the time window provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. Example:
+   * "2024-01-01T12:04:06-04:00"
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * Required. The end time of the time window provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. The end time should
+   * take place after the start time. Example: "2024-01-02T12:04:06-06:00"
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -43,7 +55,11 @@ class TimeWindow extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Required. The start time of the time window provided in [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. Example:
+   * "2024-01-01T12:04:06-04:00"
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

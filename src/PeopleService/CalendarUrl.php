@@ -20,22 +20,33 @@ namespace Google\Service\PeopleService;
 class CalendarUrl extends \Google\Model
 {
   /**
+   * Output only. The type of the calendar URL translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
    * @var string
    */
   public $formattedType;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The type of the calendar URL. The type can be custom or one of these
+   * predefined values: * `home` * `freeBusy` * `work`
+   *
    * @var string
    */
   public $type;
   /**
+   * The calendar URL.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * Output only. The type of the calendar URL translated and formatted in the
+   * viewer's account locale or the `Accept-Language` HTTP header locale.
+   *
+   * @param string $formattedType
    */
   public function setFormattedType($formattedType)
   {
@@ -49,7 +60,9 @@ class CalendarUrl extends \Google\Model
     return $this->formattedType;
   }
   /**
-   * @param FieldMetadata
+   * Metadata about the calendar URL.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -63,7 +76,10 @@ class CalendarUrl extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The type of the calendar URL. The type can be custom or one of these
+   * predefined values: * `home` * `freeBusy` * `work`
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -77,7 +93,9 @@ class CalendarUrl extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The calendar URL.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

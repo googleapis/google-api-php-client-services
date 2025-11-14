@@ -20,20 +20,28 @@ namespace Google\Service\NetworkSecurity;
 class ListAddressGroupReferencesResponseAddressGroupReference extends \Google\Model
 {
   /**
+   * FirewallPolicy that is using the Address Group.
+   *
    * @var string
    */
   public $firewallPolicy;
   /**
+   * Rule priority of the FirewallPolicy that is using the Address Group.
+   *
    * @var int
    */
   public $rulePriority;
   /**
+   * Cloud Armor SecurityPolicy that is using the Address Group.
+   *
    * @var string
    */
   public $securityPolicy;
 
   /**
-   * @param string
+   * FirewallPolicy that is using the Address Group.
+   *
+   * @param string $firewallPolicy
    */
   public function setFirewallPolicy($firewallPolicy)
   {
@@ -47,7 +55,9 @@ class ListAddressGroupReferencesResponseAddressGroupReference extends \Google\Mo
     return $this->firewallPolicy;
   }
   /**
-   * @param int
+   * Rule priority of the FirewallPolicy that is using the Address Group.
+   *
+   * @param int $rulePriority
    */
   public function setRulePriority($rulePriority)
   {
@@ -61,7 +71,9 @@ class ListAddressGroupReferencesResponseAddressGroupReference extends \Google\Mo
     return $this->rulePriority;
   }
   /**
-   * @param string
+   * Cloud Armor SecurityPolicy that is using the Address Group.
+   *
+   * @param string $securityPolicy
    */
   public function setSecurityPolicy($securityPolicy)
   {

@@ -20,20 +20,28 @@ namespace Google\Service\Container;
 class HttpCacheControlResponseHeader extends \Google\Model
 {
   /**
+   * 14.6 response cache age, in seconds since the response is generated
+   *
    * @var string
    */
   public $age;
   /**
+   * 14.9 request and response directives
+   *
    * @var string
    */
   public $directive;
   /**
+   * 14.21 response cache expires, in RFC 1123 date format
+   *
    * @var string
    */
   public $expires;
 
   /**
-   * @param string
+   * 14.6 response cache age, in seconds since the response is generated
+   *
+   * @param string $age
    */
   public function setAge($age)
   {
@@ -47,7 +55,9 @@ class HttpCacheControlResponseHeader extends \Google\Model
     return $this->age;
   }
   /**
-   * @param string
+   * 14.9 request and response directives
+   *
+   * @param string $directive
    */
   public function setDirective($directive)
   {
@@ -61,7 +71,9 @@ class HttpCacheControlResponseHeader extends \Google\Model
     return $this->directive;
   }
   /**
-   * @param string
+   * 14.21 response cache expires, in RFC 1123 date format
+   *
+   * @param string $expires
    */
   public function setExpires($expires)
   {

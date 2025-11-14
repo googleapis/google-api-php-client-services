@@ -27,12 +27,16 @@ class QueryParameterValue extends \Google\Collection
   protected $structValuesType = QueryParameterValue::class;
   protected $structValuesDataType = 'map';
   /**
+   * Optional. The value of this value, if a simple scalar type.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param QueryParameterValue[]
+   * Optional. The array values, if this is an array type.
+   *
+   * @param QueryParameterValue[] $arrayValues
    */
   public function setArrayValues($arrayValues)
   {
@@ -46,7 +50,9 @@ class QueryParameterValue extends \Google\Collection
     return $this->arrayValues;
   }
   /**
-   * @param RangeValue
+   * Optional. The range value, if this is a range type.
+   *
+   * @param RangeValue $rangeValue
    */
   public function setRangeValue(RangeValue $rangeValue)
   {
@@ -60,7 +66,9 @@ class QueryParameterValue extends \Google\Collection
     return $this->rangeValue;
   }
   /**
-   * @param QueryParameterValue[]
+   * The struct field values.
+   *
+   * @param QueryParameterValue[] $structValues
    */
   public function setStructValues($structValues)
   {
@@ -74,7 +82,9 @@ class QueryParameterValue extends \Google\Collection
     return $this->structValues;
   }
   /**
-   * @param string
+   * Optional. The value of this value, if a simple scalar type.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

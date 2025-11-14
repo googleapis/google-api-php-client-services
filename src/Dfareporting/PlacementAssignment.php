@@ -20,22 +20,33 @@ namespace Google\Service\Dfareporting;
 class PlacementAssignment extends \Google\Model
 {
   /**
+   * Whether this placement assignment is active. When true, the placement will
+   * be included in the ad's rotation.
+   *
    * @var bool
    */
   public $active;
   /**
+   * ID of the placement to be assigned. This is a required field.
+   *
    * @var string
    */
   public $placementId;
   protected $placementIdDimensionValueType = DimensionValue::class;
   protected $placementIdDimensionValueDataType = '';
   /**
+   * Whether the placement to be assigned requires SSL. This is a read-only
+   * field that is auto-generated when the ad is inserted or updated.
+   *
    * @var bool
    */
   public $sslRequired;
 
   /**
-   * @param bool
+   * Whether this placement assignment is active. When true, the placement will
+   * be included in the ad's rotation.
+   *
+   * @param bool $active
    */
   public function setActive($active)
   {
@@ -49,7 +60,9 @@ class PlacementAssignment extends \Google\Model
     return $this->active;
   }
   /**
-   * @param string
+   * ID of the placement to be assigned. This is a required field.
+   *
+   * @param string $placementId
    */
   public function setPlacementId($placementId)
   {
@@ -63,7 +76,10 @@ class PlacementAssignment extends \Google\Model
     return $this->placementId;
   }
   /**
-   * @param DimensionValue
+   * Dimension value for the ID of the placement. This is a read-only, auto-
+   * generated field.
+   *
+   * @param DimensionValue $placementIdDimensionValue
    */
   public function setPlacementIdDimensionValue(DimensionValue $placementIdDimensionValue)
   {
@@ -77,7 +93,10 @@ class PlacementAssignment extends \Google\Model
     return $this->placementIdDimensionValue;
   }
   /**
-   * @param bool
+   * Whether the placement to be assigned requires SSL. This is a read-only
+   * field that is auto-generated when the ad is inserted or updated.
+   *
+   * @param bool $sslRequired
    */
   public function setSslRequired($sslRequired)
   {

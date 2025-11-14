@@ -20,30 +20,70 @@ namespace Google\Service\Monitoring;
 class ResponseStatusCode extends \Google\Model
 {
   /**
+   * Default value that matches no status codes.
+   */
+  public const STATUS_CLASS_STATUS_CLASS_UNSPECIFIED = 'STATUS_CLASS_UNSPECIFIED';
+  /**
+   * The class of status codes between 100 and 199.
+   */
+  public const STATUS_CLASS_STATUS_CLASS_1XX = 'STATUS_CLASS_1XX';
+  /**
+   * The class of status codes between 200 and 299.
+   */
+  public const STATUS_CLASS_STATUS_CLASS_2XX = 'STATUS_CLASS_2XX';
+  /**
+   * The class of status codes between 300 and 399.
+   */
+  public const STATUS_CLASS_STATUS_CLASS_3XX = 'STATUS_CLASS_3XX';
+  /**
+   * The class of status codes between 400 and 499.
+   */
+  public const STATUS_CLASS_STATUS_CLASS_4XX = 'STATUS_CLASS_4XX';
+  /**
+   * The class of status codes between 500 and 599.
+   */
+  public const STATUS_CLASS_STATUS_CLASS_5XX = 'STATUS_CLASS_5XX';
+  /**
+   * The class of all status codes.
+   */
+  public const STATUS_CLASS_STATUS_CLASS_ANY = 'STATUS_CLASS_ANY';
+  /**
+   * A class of status codes to accept.
+   *
    * @var string
    */
   public $statusClass;
   /**
+   * A status code to accept.
+   *
    * @var int
    */
   public $statusValue;
 
   /**
-   * @param string
+   * A class of status codes to accept.
+   *
+   * Accepted values: STATUS_CLASS_UNSPECIFIED, STATUS_CLASS_1XX,
+   * STATUS_CLASS_2XX, STATUS_CLASS_3XX, STATUS_CLASS_4XX, STATUS_CLASS_5XX,
+   * STATUS_CLASS_ANY
+   *
+   * @param self::STATUS_CLASS_* $statusClass
    */
   public function setStatusClass($statusClass)
   {
     $this->statusClass = $statusClass;
   }
   /**
-   * @return string
+   * @return self::STATUS_CLASS_*
    */
   public function getStatusClass()
   {
     return $this->statusClass;
   }
   /**
-   * @param int
+   * A status code to accept.
+   *
+   * @param int $statusValue
    */
   public function setStatusValue($statusValue)
   {

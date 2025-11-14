@@ -20,6 +20,48 @@ namespace Google\Service\Docs;
 class NamedStyle extends \Google\Model
 {
   /**
+   * The type of named style is unspecified.
+   */
+  public const NAMED_STYLE_TYPE_NAMED_STYLE_TYPE_UNSPECIFIED = 'NAMED_STYLE_TYPE_UNSPECIFIED';
+  /**
+   * Normal text.
+   */
+  public const NAMED_STYLE_TYPE_NORMAL_TEXT = 'NORMAL_TEXT';
+  /**
+   * Title.
+   */
+  public const NAMED_STYLE_TYPE_TITLE = 'TITLE';
+  /**
+   * Subtitle.
+   */
+  public const NAMED_STYLE_TYPE_SUBTITLE = 'SUBTITLE';
+  /**
+   * Heading 1.
+   */
+  public const NAMED_STYLE_TYPE_HEADING_1 = 'HEADING_1';
+  /**
+   * Heading 2.
+   */
+  public const NAMED_STYLE_TYPE_HEADING_2 = 'HEADING_2';
+  /**
+   * Heading 3.
+   */
+  public const NAMED_STYLE_TYPE_HEADING_3 = 'HEADING_3';
+  /**
+   * Heading 4.
+   */
+  public const NAMED_STYLE_TYPE_HEADING_4 = 'HEADING_4';
+  /**
+   * Heading 5.
+   */
+  public const NAMED_STYLE_TYPE_HEADING_5 = 'HEADING_5';
+  /**
+   * Heading 6.
+   */
+  public const NAMED_STYLE_TYPE_HEADING_6 = 'HEADING_6';
+  /**
+   * The type of this named style.
+   *
    * @var string
    */
   public $namedStyleType;
@@ -29,21 +71,28 @@ class NamedStyle extends \Google\Model
   protected $textStyleDataType = '';
 
   /**
-   * @param string
+   * The type of this named style.
+   *
+   * Accepted values: NAMED_STYLE_TYPE_UNSPECIFIED, NORMAL_TEXT, TITLE,
+   * SUBTITLE, HEADING_1, HEADING_2, HEADING_3, HEADING_4, HEADING_5, HEADING_6
+   *
+   * @param self::NAMED_STYLE_TYPE_* $namedStyleType
    */
   public function setNamedStyleType($namedStyleType)
   {
     $this->namedStyleType = $namedStyleType;
   }
   /**
-   * @return string
+   * @return self::NAMED_STYLE_TYPE_*
    */
   public function getNamedStyleType()
   {
     return $this->namedStyleType;
   }
   /**
-   * @param ParagraphStyle
+   * The paragraph style of this named style.
+   *
+   * @param ParagraphStyle $paragraphStyle
    */
   public function setParagraphStyle(ParagraphStyle $paragraphStyle)
   {
@@ -57,7 +106,9 @@ class NamedStyle extends \Google\Model
     return $this->paragraphStyle;
   }
   /**
-   * @param TextStyle
+   * The text style of this named style.
+   *
+   * @param TextStyle $textStyle
    */
   public function setTextStyle(TextStyle $textStyle)
   {

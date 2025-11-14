@@ -20,24 +20,55 @@ namespace Google\Service\Docs;
 class ReplaceImageRequest extends \Google\Model
 {
   /**
+   * Unspecified image replace method. This value must not be used.
+   */
+  public const IMAGE_REPLACE_METHOD_IMAGE_REPLACE_METHOD_UNSPECIFIED = 'IMAGE_REPLACE_METHOD_UNSPECIFIED';
+  /**
+   * Scales and centers the image to fill the bounds of the original image. The
+   * image may be cropped in order to fill the original image's bounds. The
+   * rendered size of the image will be the same as the original image.
+   */
+  public const IMAGE_REPLACE_METHOD_CENTER_CROP = 'CENTER_CROP';
+  /**
+   * The ID of the existing image that will be replaced. The ID can be retrieved
+   * from the response of a get request.
+   *
    * @var string
    */
   public $imageObjectId;
   /**
+   * The replacement method.
+   *
    * @var string
    */
   public $imageReplaceMethod;
   /**
+   * The tab that the image to be replaced is in. When omitted, the request is
+   * applied to the first tab. In a document containing a single tab: - If
+   * provided, must match the singular tab's ID. - If omitted, the request
+   * applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the
+   * request applies to the first tab in the document.
+   *
    * @var string
    */
   public $tabId;
   /**
+   * The URI of the new image. The image is fetched once at insertion time and a
+   * copy is stored for display inside the document. Images must be less than
+   * 50MB, cannot exceed 25 megapixels, and must be in PNG, JPEG, or GIF format.
+   * The provided URI can't surpass 2 KB in length. The URI is saved with the
+   * image, and exposed through the ImageProperties.source_uri field.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The ID of the existing image that will be replaced. The ID can be retrieved
+   * from the response of a get request.
+   *
+   * @param string $imageObjectId
    */
   public function setImageObjectId($imageObjectId)
   {
@@ -51,21 +82,32 @@ class ReplaceImageRequest extends \Google\Model
     return $this->imageObjectId;
   }
   /**
-   * @param string
+   * The replacement method.
+   *
+   * Accepted values: IMAGE_REPLACE_METHOD_UNSPECIFIED, CENTER_CROP
+   *
+   * @param self::IMAGE_REPLACE_METHOD_* $imageReplaceMethod
    */
   public function setImageReplaceMethod($imageReplaceMethod)
   {
     $this->imageReplaceMethod = $imageReplaceMethod;
   }
   /**
-   * @return string
+   * @return self::IMAGE_REPLACE_METHOD_*
    */
   public function getImageReplaceMethod()
   {
     return $this->imageReplaceMethod;
   }
   /**
-   * @param string
+   * The tab that the image to be replaced is in. When omitted, the request is
+   * applied to the first tab. In a document containing a single tab: - If
+   * provided, must match the singular tab's ID. - If omitted, the request
+   * applies to the singular tab. In a document containing multiple tabs: - If
+   * provided, the request applies to the specified tab. - If omitted, the
+   * request applies to the first tab in the document.
+   *
+   * @param string $tabId
    */
   public function setTabId($tabId)
   {
@@ -79,7 +121,13 @@ class ReplaceImageRequest extends \Google\Model
     return $this->tabId;
   }
   /**
-   * @param string
+   * The URI of the new image. The image is fetched once at insertion time and a
+   * copy is stored for display inside the document. Images must be less than
+   * 50MB, cannot exceed 25 megapixels, and must be in PNG, JPEG, or GIF format.
+   * The provided URI can't surpass 2 KB in length. The URI is saved with the
+   * image, and exposed through the ImageProperties.source_uri field.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

@@ -23,12 +23,16 @@ class ListBranchRulesResponse extends \Google\Collection
   protected $branchRulesType = BranchRule::class;
   protected $branchRulesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param BranchRule[]
+   * The list of branch rules.
+   *
+   * @param BranchRule[] $branchRules
    */
   public function setBranchRules($branchRules)
   {
@@ -42,7 +46,9 @@ class ListBranchRulesResponse extends \Google\Collection
     return $this->branchRules;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

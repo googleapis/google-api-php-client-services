@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAction extends \Google\Model
 {
   /**
+   * Required. The HTTP or HTTPS scheme URI.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Required. The HTTP or HTTPS scheme URI.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

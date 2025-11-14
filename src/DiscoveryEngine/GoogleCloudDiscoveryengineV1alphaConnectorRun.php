@@ -19,8 +19,68 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
 {
+  /**
+   * Default value.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The data sync is ongoing.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The data sync is finished.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * The data sync is failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Data sync has been running longer than expected and is still running at the
+   * time the next run is supposed to start.
+   */
+  public const STATE_OVERRUN = 'OVERRUN';
+  /**
+   * Data sync was scheduled but has been cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Data sync is about to start.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The data sync completed with non-fatal errors.
+   */
+  public const STATE_WARNING = 'WARNING';
+  /**
+   * An ongoing connector run has been running longer than expected, causing
+   * this run to be skipped.
+   */
+  public const STATE_SKIPPED = 'SKIPPED';
+  /**
+   * Default value.
+   */
+  public const TRIGGER_TRIGGER_UNSPECIFIED = 'TRIGGER_UNSPECIFIED';
+  /**
+   * ConnectorRun triggered by scheduler if connector has PERIODIC sync mode.
+   */
+  public const TRIGGER_SCHEDULER = 'SCHEDULER';
+  /**
+   * ConnectorRun auto triggered by connector initialization.
+   */
+  public const TRIGGER_INITIALIZATION = 'INITIALIZATION';
+  /**
+   * ConnectorRun auto triggered by resuming connector.
+   */
+  public const TRIGGER_RESUME = 'RESUME';
+  /**
+   * ConnectorRun triggered by user manually.
+   */
+  public const TRIGGER_MANUAL = 'MANUAL';
   protected $collection_key = 'errors';
   /**
+   * Output only. The time when the connector run ended.
+   *
    * @var string
    */
   public $endTime;
@@ -29,32 +89,48 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
   protected $errorsType = GoogleRpcStatus::class;
   protected $errorsDataType = 'array';
   /**
+   * Output only. The time when the connector run was most recently paused.
+   *
    * @var string
    */
   public $latestPauseTime;
   /**
+   * Output only. The full resource name of the Connector Run. Format:
+   * `projects/locations/collections/dataConnector/connectorRuns`. The
+   * `connector_run_id` is system-generated.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The time when the connector run started.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The state of the sync run.
+   *
    * @var string
    */
   public $state;
   /**
+   * Timestamp at which the connector run sync state was last updated.
+   *
    * @var string
    */
   public $stateUpdateTime;
   /**
+   * Output only. The trigger for this ConnectorRun.
+   *
    * @var string
    */
   public $trigger;
 
   /**
-   * @param string
+   * Output only. The time when the connector run ended.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -68,7 +144,10 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun[]
+   * Output only. The details of the entities synced at the ConnectorRun. Each
+   * ConnectorRun consists of syncing one or more entities.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun[] $entityRuns
    */
   public function setEntityRuns($entityRuns)
   {
@@ -82,7 +161,11 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
     return $this->entityRuns;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Contains info about errors incurred during the sync. Only exist if running
+   * into an error state. Contains error code and error message. Use with the
+   * `state` field.
+   *
+   * @param GoogleRpcStatus[] $errors
    */
   public function setErrors($errors)
   {
@@ -96,7 +179,9 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * Output only. The time when the connector run was most recently paused.
+   *
+   * @param string $latestPauseTime
    */
   public function setLatestPauseTime($latestPauseTime)
   {
@@ -110,7 +195,11 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
     return $this->latestPauseTime;
   }
   /**
-   * @param string
+   * Output only. The full resource name of the Connector Run. Format:
+   * `projects/locations/collections/dataConnector/connectorRuns`. The
+   * `connector_run_id` is system-generated.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -124,7 +213,9 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The time when the connector run started.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -138,21 +229,28 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The state of the sync run.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, SUCCEEDED, FAILED, OVERRUN,
+   * CANCELLED, PENDING, WARNING, SKIPPED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Timestamp at which the connector run sync state was last updated.
+   *
+   * @param string $stateUpdateTime
    */
   public function setStateUpdateTime($stateUpdateTime)
   {
@@ -166,14 +264,19 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRun extends \Google\Collection
     return $this->stateUpdateTime;
   }
   /**
-   * @param string
+   * Output only. The trigger for this ConnectorRun.
+   *
+   * Accepted values: TRIGGER_UNSPECIFIED, SCHEDULER, INITIALIZATION, RESUME,
+   * MANUAL
+   *
+   * @param self::TRIGGER_* $trigger
    */
   public function setTrigger($trigger)
   {
     $this->trigger = $trigger;
   }
   /**
-   * @return string
+   * @return self::TRIGGER_*
    */
   public function getTrigger()
   {

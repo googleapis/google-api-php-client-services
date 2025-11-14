@@ -21,40 +21,60 @@ class LabelFieldModification extends \Google\Collection
 {
   protected $collection_key = 'setUserValues';
   /**
+   * The ID of the field to be modified.
+   *
    * @var string
    */
   public $fieldId;
   /**
+   * This is always `"drive#labelFieldModification"`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Replaces the value of a dateString Field with these new values. The string
+   * must be in the RFC 3339 full-date format: YYYY-MM-DD.
+   *
    * @var string[]
    */
   public $setDateValues;
   /**
+   * Replaces the value of an `integer` field with these new values.
+   *
    * @var string[]
    */
   public $setIntegerValues;
   /**
+   * Replaces a `selection` field with these new values.
+   *
    * @var string[]
    */
   public $setSelectionValues;
   /**
+   * Sets the value of a `text` field.
+   *
    * @var string[]
    */
   public $setTextValues;
   /**
+   * Replaces a `user` field with these new values. The values must be a valid
+   * email addresses.
+   *
    * @var string[]
    */
   public $setUserValues;
   /**
+   * Unsets the values for this field.
+   *
    * @var bool
    */
   public $unsetValues;
 
   /**
-   * @param string
+   * The ID of the field to be modified.
+   *
+   * @param string $fieldId
    */
   public function setFieldId($fieldId)
   {
@@ -68,7 +88,9 @@ class LabelFieldModification extends \Google\Collection
     return $this->fieldId;
   }
   /**
-   * @param string
+   * This is always `"drive#labelFieldModification"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -82,7 +104,10 @@ class LabelFieldModification extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * Replaces the value of a dateString Field with these new values. The string
+   * must be in the RFC 3339 full-date format: YYYY-MM-DD.
+   *
+   * @param string[] $setDateValues
    */
   public function setSetDateValues($setDateValues)
   {
@@ -96,7 +121,9 @@ class LabelFieldModification extends \Google\Collection
     return $this->setDateValues;
   }
   /**
-   * @param string[]
+   * Replaces the value of an `integer` field with these new values.
+   *
+   * @param string[] $setIntegerValues
    */
   public function setSetIntegerValues($setIntegerValues)
   {
@@ -110,7 +137,9 @@ class LabelFieldModification extends \Google\Collection
     return $this->setIntegerValues;
   }
   /**
-   * @param string[]
+   * Replaces a `selection` field with these new values.
+   *
+   * @param string[] $setSelectionValues
    */
   public function setSetSelectionValues($setSelectionValues)
   {
@@ -124,7 +153,9 @@ class LabelFieldModification extends \Google\Collection
     return $this->setSelectionValues;
   }
   /**
-   * @param string[]
+   * Sets the value of a `text` field.
+   *
+   * @param string[] $setTextValues
    */
   public function setSetTextValues($setTextValues)
   {
@@ -138,7 +169,10 @@ class LabelFieldModification extends \Google\Collection
     return $this->setTextValues;
   }
   /**
-   * @param string[]
+   * Replaces a `user` field with these new values. The values must be a valid
+   * email addresses.
+   *
+   * @param string[] $setUserValues
    */
   public function setSetUserValues($setUserValues)
   {
@@ -152,7 +186,9 @@ class LabelFieldModification extends \Google\Collection
     return $this->setUserValues;
   }
   /**
-   * @param bool
+   * Unsets the values for this field.
+   *
+   * @param bool $unsetValues
    */
   public function setUnsetValues($unsetValues)
   {

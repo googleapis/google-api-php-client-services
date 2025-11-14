@@ -19,10 +19,56 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
 {
+  /**
+   * Unused.
+   */
+  public const ENCRYPTION_STATUS_ENCRYPTION_STATUS_UNSPECIFIED = 'ENCRYPTION_STATUS_UNSPECIFIED';
+  /**
+   * Google manages server-side encryption keys on your behalf.
+   */
+  public const ENCRYPTION_STATUS_ENCRYPTION_GOOGLE_MANAGED = 'ENCRYPTION_GOOGLE_MANAGED';
+  /**
+   * Customer provides the key.
+   */
+  public const ENCRYPTION_STATUS_ENCRYPTION_CUSTOMER_MANAGED = 'ENCRYPTION_CUSTOMER_MANAGED';
+  /**
+   * Unused.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_UNSPECIFIED = 'RESOURCE_VISIBILITY_UNSPECIFIED';
+  /**
+   * Visible to any user.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_PUBLIC = 'RESOURCE_VISIBILITY_PUBLIC';
+  /**
+   * May contain public items. For example, if a Cloud Storage bucket has
+   * uniform bucket level access disabled, some objects inside it may be public,
+   * but none are known yet.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_INCONCLUSIVE = 'RESOURCE_VISIBILITY_INCONCLUSIVE';
+  /**
+   * Visible only to specific users.
+   */
+  public const RESOURCE_VISIBILITY_RESOURCE_VISIBILITY_RESTRICTED = 'RESOURCE_VISIBILITY_RESTRICTED';
+  /**
+   * Unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The profile is currently running. Once a profile has finished it will
+   * transition to DONE.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The profile is no longer generating. If profile_status.status.code is 0,
+   * the profile succeeded, otherwise, it failed.
+   */
+  public const STATE_DONE = 'DONE';
   protected $collection_key = 'tags';
   protected $configSnapshotType = GooglePrivacyDlpV2DataProfileConfigSnapshot::class;
   protected $configSnapshotDataType = '';
   /**
+   * The time at which the table was created.
+   *
    * @var string
    */
   public $createTime;
@@ -31,40 +77,61 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   protected $dataSourceTypeType = GooglePrivacyDlpV2DataSourceType::class;
   protected $dataSourceTypeDataType = '';
   /**
+   * If the resource is BigQuery, the dataset ID.
+   *
    * @var string
    */
   public $datasetId;
   /**
+   * If supported, the location where the dataset's data is stored. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
+   *
    * @var string
    */
   public $datasetLocation;
   /**
+   * The Google Cloud project ID that owns the resource.
+   *
    * @var string
    */
   public $datasetProjectId;
   protected $domainsType = GooglePrivacyDlpV2Domain::class;
   protected $domainsDataType = 'array';
   /**
+   * How the table is encrypted.
+   *
    * @var string
    */
   public $encryptionStatus;
   /**
+   * Optional. The time when this table expires.
+   *
    * @var string
    */
   public $expirationTime;
   /**
+   * The number of columns skipped in the table because of an error.
+   *
    * @var string
    */
   public $failedColumnCount;
   /**
+   * The Cloud Asset Inventory resource that was profiled in order to generate
+   * this TableDataProfile.
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   *
    * @var string
    */
   public $fullResource;
   /**
+   * The time when this table was last modified
+   *
    * @var string
    */
   public $lastModifiedTime;
   /**
+   * The name of the profile.
+   *
    * @var string
    */
   public $name;
@@ -73,46 +140,66 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   protected $predictedInfoTypesType = GooglePrivacyDlpV2InfoTypeSummary::class;
   protected $predictedInfoTypesDataType = 'array';
   /**
+   * The last time the profile was generated.
+   *
    * @var string
    */
   public $profileLastGenerated;
   protected $profileStatusType = GooglePrivacyDlpV2ProfileStatus::class;
   protected $profileStatusDataType = '';
   /**
+   * The resource name of the project data profile for this table.
+   *
    * @var string
    */
   public $projectDataProfile;
   protected $relatedResourcesType = GooglePrivacyDlpV2RelatedResource::class;
   protected $relatedResourcesDataType = 'array';
   /**
+   * The labels applied to the resource at the time the profile was generated.
+   *
    * @var string[]
    */
   public $resourceLabels;
   /**
+   * How broadly a resource has been shared.
+   *
    * @var string
    */
   public $resourceVisibility;
   /**
+   * Number of rows in the table when the profile was generated. This will not
+   * be populated for BigLake tables.
+   *
    * @var string
    */
   public $rowCount;
   protected $sampleFindingsTableType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $sampleFindingsTableDataType = '';
   /**
+   * The number of columns profiled in the table.
+   *
    * @var string
    */
   public $scannedColumnCount;
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**
+   * State of a profile. This will always be set to DONE when the table data
+   * profile is written to another service like BigQuery or Pub/Sub.
+   *
    * @var string
    */
   public $state;
   /**
+   * The table ID.
+   *
    * @var string
    */
   public $tableId;
   /**
+   * The size of the table when the profile was generated.
+   *
    * @var string
    */
   public $tableSizeBytes;
@@ -120,7 +207,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   protected $tagsDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2DataProfileConfigSnapshot
+   * The snapshot of the configurations used to generate the profile.
+   *
+   * @param GooglePrivacyDlpV2DataProfileConfigSnapshot $configSnapshot
    */
   public function setConfigSnapshot(GooglePrivacyDlpV2DataProfileConfigSnapshot $configSnapshot)
   {
@@ -134,7 +223,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->configSnapshot;
   }
   /**
-   * @param string
+   * The time at which the table was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -148,7 +239,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param GooglePrivacyDlpV2DataRiskLevel
+   * The data risk level of this table.
+   *
+   * @param GooglePrivacyDlpV2DataRiskLevel $dataRiskLevel
    */
   public function setDataRiskLevel(GooglePrivacyDlpV2DataRiskLevel $dataRiskLevel)
   {
@@ -162,7 +255,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->dataRiskLevel;
   }
   /**
-   * @param GooglePrivacyDlpV2DataSourceType
+   * The resource type that was profiled.
+   *
+   * @param GooglePrivacyDlpV2DataSourceType $dataSourceType
    */
   public function setDataSourceType(GooglePrivacyDlpV2DataSourceType $dataSourceType)
   {
@@ -176,7 +271,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->dataSourceType;
   }
   /**
-   * @param string
+   * If the resource is BigQuery, the dataset ID.
+   *
+   * @param string $datasetId
    */
   public function setDatasetId($datasetId)
   {
@@ -190,7 +287,10 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->datasetId;
   }
   /**
-   * @param string
+   * If supported, the location where the dataset's data is stored. See
+   * https://cloud.google.com/bigquery/docs/locations for supported locations.
+   *
+   * @param string $datasetLocation
    */
   public function setDatasetLocation($datasetLocation)
   {
@@ -204,7 +304,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->datasetLocation;
   }
   /**
-   * @param string
+   * The Google Cloud project ID that owns the resource.
+   *
+   * @param string $datasetProjectId
    */
   public function setDatasetProjectId($datasetProjectId)
   {
@@ -218,7 +320,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->datasetProjectId;
   }
   /**
-   * @param GooglePrivacyDlpV2Domain[]
+   * Domains associated with the profile.
+   *
+   * @param GooglePrivacyDlpV2Domain[] $domains
    */
   public function setDomains($domains)
   {
@@ -232,21 +336,28 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->domains;
   }
   /**
-   * @param string
+   * How the table is encrypted.
+   *
+   * Accepted values: ENCRYPTION_STATUS_UNSPECIFIED, ENCRYPTION_GOOGLE_MANAGED,
+   * ENCRYPTION_CUSTOMER_MANAGED
+   *
+   * @param self::ENCRYPTION_STATUS_* $encryptionStatus
    */
   public function setEncryptionStatus($encryptionStatus)
   {
     $this->encryptionStatus = $encryptionStatus;
   }
   /**
-   * @return string
+   * @return self::ENCRYPTION_STATUS_*
    */
   public function getEncryptionStatus()
   {
     return $this->encryptionStatus;
   }
   /**
-   * @param string
+   * Optional. The time when this table expires.
+   *
+   * @param string $expirationTime
    */
   public function setExpirationTime($expirationTime)
   {
@@ -260,7 +371,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->expirationTime;
   }
   /**
-   * @param string
+   * The number of columns skipped in the table because of an error.
+   *
+   * @param string $failedColumnCount
    */
   public function setFailedColumnCount($failedColumnCount)
   {
@@ -274,7 +387,11 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->failedColumnCount;
   }
   /**
-   * @param string
+   * The Cloud Asset Inventory resource that was profiled in order to generate
+   * this TableDataProfile.
+   * https://cloud.google.com/apis/design/resource_names#full_resource_name
+   *
+   * @param string $fullResource
    */
   public function setFullResource($fullResource)
   {
@@ -288,7 +405,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->fullResource;
   }
   /**
-   * @param string
+   * The time when this table was last modified
+   *
+   * @param string $lastModifiedTime
    */
   public function setLastModifiedTime($lastModifiedTime)
   {
@@ -302,7 +421,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->lastModifiedTime;
   }
   /**
-   * @param string
+   * The name of the profile.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -316,7 +437,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GooglePrivacyDlpV2OtherInfoTypeSummary[]
+   * Other infoTypes found in this table's data.
+   *
+   * @param GooglePrivacyDlpV2OtherInfoTypeSummary[] $otherInfoTypes
    */
   public function setOtherInfoTypes($otherInfoTypes)
   {
@@ -330,7 +453,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->otherInfoTypes;
   }
   /**
-   * @param GooglePrivacyDlpV2InfoTypeSummary[]
+   * The infoTypes predicted from this table's data.
+   *
+   * @param GooglePrivacyDlpV2InfoTypeSummary[] $predictedInfoTypes
    */
   public function setPredictedInfoTypes($predictedInfoTypes)
   {
@@ -344,7 +469,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->predictedInfoTypes;
   }
   /**
-   * @param string
+   * The last time the profile was generated.
+   *
+   * @param string $profileLastGenerated
    */
   public function setProfileLastGenerated($profileLastGenerated)
   {
@@ -358,7 +485,10 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->profileLastGenerated;
   }
   /**
-   * @param GooglePrivacyDlpV2ProfileStatus
+   * Success or error status from the most recent profile generation attempt.
+   * May be empty if the profile is still being generated.
+   *
+   * @param GooglePrivacyDlpV2ProfileStatus $profileStatus
    */
   public function setProfileStatus(GooglePrivacyDlpV2ProfileStatus $profileStatus)
   {
@@ -372,7 +502,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->profileStatus;
   }
   /**
-   * @param string
+   * The resource name of the project data profile for this table.
+   *
+   * @param string $projectDataProfile
    */
   public function setProjectDataProfile($projectDataProfile)
   {
@@ -386,7 +518,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->projectDataProfile;
   }
   /**
-   * @param GooglePrivacyDlpV2RelatedResource[]
+   * Resources related to this profile.
+   *
+   * @param GooglePrivacyDlpV2RelatedResource[] $relatedResources
    */
   public function setRelatedResources($relatedResources)
   {
@@ -400,7 +534,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->relatedResources;
   }
   /**
-   * @param string[]
+   * The labels applied to the resource at the time the profile was generated.
+   *
+   * @param string[] $resourceLabels
    */
   public function setResourceLabels($resourceLabels)
   {
@@ -414,21 +550,30 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->resourceLabels;
   }
   /**
-   * @param string
+   * How broadly a resource has been shared.
+   *
+   * Accepted values: RESOURCE_VISIBILITY_UNSPECIFIED,
+   * RESOURCE_VISIBILITY_PUBLIC, RESOURCE_VISIBILITY_INCONCLUSIVE,
+   * RESOURCE_VISIBILITY_RESTRICTED
+   *
+   * @param self::RESOURCE_VISIBILITY_* $resourceVisibility
    */
   public function setResourceVisibility($resourceVisibility)
   {
     $this->resourceVisibility = $resourceVisibility;
   }
   /**
-   * @return string
+   * @return self::RESOURCE_VISIBILITY_*
    */
   public function getResourceVisibility()
   {
     return $this->resourceVisibility;
   }
   /**
-   * @param string
+   * Number of rows in the table when the profile was generated. This will not
+   * be populated for BigLake tables.
+   *
+   * @param string $rowCount
    */
   public function setRowCount($rowCount)
   {
@@ -442,7 +587,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->rowCount;
   }
   /**
-   * @param GooglePrivacyDlpV2BigQueryTable
+   * The BigQuery table to which the sample findings are written.
+   *
+   * @param GooglePrivacyDlpV2BigQueryTable $sampleFindingsTable
    */
   public function setSampleFindingsTable(GooglePrivacyDlpV2BigQueryTable $sampleFindingsTable)
   {
@@ -456,7 +603,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->sampleFindingsTable;
   }
   /**
-   * @param string
+   * The number of columns profiled in the table.
+   *
+   * @param string $scannedColumnCount
    */
   public function setScannedColumnCount($scannedColumnCount)
   {
@@ -470,7 +619,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->scannedColumnCount;
   }
   /**
-   * @param GooglePrivacyDlpV2SensitivityScore
+   * The sensitivity score of this table.
+   *
+   * @param GooglePrivacyDlpV2SensitivityScore $sensitivityScore
    */
   public function setSensitivityScore(GooglePrivacyDlpV2SensitivityScore $sensitivityScore)
   {
@@ -484,21 +635,28 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->sensitivityScore;
   }
   /**
-   * @param string
+   * State of a profile. This will always be set to DONE when the table data
+   * profile is written to another service like BigQuery or Pub/Sub.
+   *
+   * Accepted values: STATE_UNSPECIFIED, RUNNING, DONE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * The table ID.
+   *
+   * @param string $tableId
    */
   public function setTableId($tableId)
   {
@@ -512,7 +670,9 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->tableId;
   }
   /**
-   * @param string
+   * The size of the table when the profile was generated.
+   *
+   * @param string $tableSizeBytes
    */
   public function setTableSizeBytes($tableSizeBytes)
   {
@@ -526,7 +686,11 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
     return $this->tableSizeBytes;
   }
   /**
-   * @param GooglePrivacyDlpV2Tag[]
+   * The tags attached to the table, including any tags attached during
+   * profiling. Because tags are attached to Cloud SQL instances rather than
+   * Cloud SQL tables, this field is empty for Cloud SQL table profiles.
+   *
+   * @param GooglePrivacyDlpV2Tag[] $tags
    */
   public function setTags($tags)
   {

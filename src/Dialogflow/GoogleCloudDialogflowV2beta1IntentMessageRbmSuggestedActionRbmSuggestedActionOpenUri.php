@@ -20,12 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri extends \Google\Model
 {
   /**
+   * Required. The uri to open on the user device
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Required. The uri to open on the user device
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

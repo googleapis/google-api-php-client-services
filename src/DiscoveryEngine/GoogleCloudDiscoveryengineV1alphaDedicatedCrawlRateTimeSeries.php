@@ -29,7 +29,9 @@ class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries extends \Goo
   protected $userTriggeredCrawlRateDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries
+   * Vertex AI's error rate time series of auto-refresh dedicated crawl.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $autoRefreshCrawlErrorRate
    */
   public function setAutoRefreshCrawlErrorRate(GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $autoRefreshCrawlErrorRate)
   {
@@ -43,7 +45,11 @@ class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries extends \Goo
     return $this->autoRefreshCrawlErrorRate;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries
+   * Vertex AI's dedicated crawl rate time series of auto-refresh, which is the
+   * crawl rate of Google-CloudVertexBot when dedicate crawl is set, and the
+   * crawl rate is for best effort use cases like refreshing urls periodically.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $autoRefreshCrawlRate
    */
   public function setAutoRefreshCrawlRate(GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $autoRefreshCrawlRate)
   {
@@ -57,7 +63,9 @@ class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries extends \Goo
     return $this->autoRefreshCrawlRate;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries
+   * Vertex AI's error rate time series of user triggered dedicated crawl.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $userTriggeredCrawlErrorRate
    */
   public function setUserTriggeredCrawlErrorRate(GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $userTriggeredCrawlErrorRate)
   {
@@ -71,7 +79,12 @@ class GoogleCloudDiscoveryengineV1alphaDedicatedCrawlRateTimeSeries extends \Goo
     return $this->userTriggeredCrawlErrorRate;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries
+   * Vertex AI's dedicated crawl rate time series of user triggered crawl, which
+   * is the crawl rate of Google-CloudVertexBot when dedicate crawl is set, and
+   * user triggered crawl rate is for deterministic use cases like crawling urls
+   * or sitemaps specified by users.
+   *
+   * @param GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $userTriggeredCrawlRate
    */
   public function setUserTriggeredCrawlRate(GoogleCloudDiscoveryengineV1alphaCrawlRateTimeSeries $userTriggeredCrawlRate)
   {

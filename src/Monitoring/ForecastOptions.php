@@ -20,12 +20,24 @@ namespace Google\Service\Monitoring;
 class ForecastOptions extends \Google\Model
 {
   /**
+   * Required. The length of time into the future to forecast whether a time
+   * series will violate the threshold. If the predicted value is found to
+   * violate the threshold, and the violation is observed in all forecasts made
+   * for the configured duration, then the time series is considered to be
+   * failing. The forecast horizon can range from 1 hour to 60 hours.
+   *
    * @var string
    */
   public $forecastHorizon;
 
   /**
-   * @param string
+   * Required. The length of time into the future to forecast whether a time
+   * series will violate the threshold. If the predicted value is found to
+   * violate the threshold, and the violation is observed in all forecasts made
+   * for the configured duration, then the time series is considered to be
+   * failing. The forecast horizon can range from 1 hour to 60 hours.
+   *
+   * @param string $forecastHorizon
    */
   public function setForecastHorizon($forecastHorizon)
   {

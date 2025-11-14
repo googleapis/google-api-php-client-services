@@ -20,16 +20,25 @@ namespace Google\Service\CertificateAuthorityService;
 class IssuanceModes extends \Google\Model
 {
   /**
+   * Optional. When true, allows callers to create Certificates by specifying a
+   * CertificateConfig.
+   *
    * @var bool
    */
   public $allowConfigBasedIssuance;
   /**
+   * Optional. When true, allows callers to create Certificates by specifying a
+   * CSR.
+   *
    * @var bool
    */
   public $allowCsrBasedIssuance;
 
   /**
-   * @param bool
+   * Optional. When true, allows callers to create Certificates by specifying a
+   * CertificateConfig.
+   *
+   * @param bool $allowConfigBasedIssuance
    */
   public function setAllowConfigBasedIssuance($allowConfigBasedIssuance)
   {
@@ -43,7 +52,10 @@ class IssuanceModes extends \Google\Model
     return $this->allowConfigBasedIssuance;
   }
   /**
-   * @param bool
+   * Optional. When true, allows callers to create Certificates by specifying a
+   * CSR.
+   *
+   * @param bool $allowCsrBasedIssuance
    */
   public function setAllowCsrBasedIssuance($allowCsrBasedIssuance)
   {

@@ -21,6 +21,9 @@ class RetrieveGoogleDomainsDnsRecordsResponse extends \Google\Collection
 {
   protected $collection_key = 'rrset';
   /**
+   * When present, there are more results to retrieve. Set `page_token` to this
+   * value on a subsequent call to get the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class RetrieveGoogleDomainsDnsRecordsResponse extends \Google\Collection
   protected $rrsetDataType = 'array';
 
   /**
-   * @param string
+   * When present, there are more results to retrieve. Set `page_token` to this
+   * value on a subsequent call to get the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class RetrieveGoogleDomainsDnsRecordsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ResourceRecordSet[]
+   * The resource record set resources (DNS Zone records).
+   *
+   * @param ResourceRecordSet[] $rrset
    */
   public function setRrset($rrset)
   {

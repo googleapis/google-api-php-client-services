@@ -20,16 +20,22 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ResourceName extends \Google\Model
 {
   /**
+   * Display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Name.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +49,9 @@ class GoogleCloudDialogflowCxV3ResourceName extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

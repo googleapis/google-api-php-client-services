@@ -20,12 +20,18 @@ namespace Google\Service\Batch;
 class GCS extends \Google\Model
 {
   /**
+   * Remote path, either a bucket name or a subdirectory of a bucket, e.g.:
+   * bucket_name, bucket_name/subdirectory/
+   *
    * @var string
    */
   public $remotePath;
 
   /**
-   * @param string
+   * Remote path, either a bucket name or a subdirectory of a bucket, e.g.:
+   * bucket_name, bucket_name/subdirectory/
+   *
+   * @param string $remotePath
    */
   public function setRemotePath($remotePath)
   {

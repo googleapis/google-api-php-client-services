@@ -23,12 +23,17 @@ class ShippingsettingsGetSupportedHolidaysResponse extends \Google\Collection
   protected $holidaysType = HolidaysHoliday::class;
   protected $holidaysDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsGetSupportedHolidaysResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param HolidaysHoliday[]
+   * A list of holidays applicable for delivery guarantees. May be empty.
+   *
+   * @param HolidaysHoliday[] $holidays
    */
   public function setHolidays($holidays)
   {
@@ -42,7 +47,10 @@ class ShippingsettingsGetSupportedHolidaysResponse extends \Google\Collection
     return $this->holidays;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsGetSupportedHolidaysResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

@@ -21,6 +21,8 @@ class IaCValidationReport extends \Google\Collection
 {
   protected $collection_key = 'violations';
   /**
+   * Additional information about the report.
+   *
    * @var string
    */
   public $note;
@@ -28,7 +30,9 @@ class IaCValidationReport extends \Google\Collection
   protected $violationsDataType = 'array';
 
   /**
-   * @param string
+   * Additional information about the report.
+   *
+   * @param string $note
    */
   public function setNote($note)
   {
@@ -42,7 +46,9 @@ class IaCValidationReport extends \Google\Collection
     return $this->note;
   }
   /**
-   * @param Violation[]
+   * A list of every Violation found in the IaC configuration.
+   *
+   * @param Violation[] $violations
    */
   public function setViolations($violations)
   {

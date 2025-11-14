@@ -20,12 +20,18 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestRelevanceScoreSpec extends \Google\Model
 {
   /**
+   * Optional. Whether to return the relevance score for search results. The
+   * higher the score, the more relevant the document is to the query.
+   *
    * @var bool
    */
   public $returnRelevanceScore;
 
   /**
-   * @param bool
+   * Optional. Whether to return the relevance score for search results. The
+   * higher the score, the more relevant the document is to the query.
+   *
+   * @param bool $returnRelevanceScore
    */
   public function setReturnRelevanceScore($returnRelevanceScore)
   {

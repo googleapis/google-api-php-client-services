@@ -21,12 +21,22 @@ class AuthzPolicyAuthzRuleRequestResourceTagValueIdSet extends \Google\Collectio
 {
   protected $collection_key = 'ids';
   /**
+   * Required. A list of resource tag value permanent IDs to match against the
+   * resource manager tags value associated with the source VM of a request. The
+   * match follows AND semantics which means all the ids must match. Limited to
+   * 5 ids in the Tag value id set.
+   *
    * @var string[]
    */
   public $ids;
 
   /**
-   * @param string[]
+   * Required. A list of resource tag value permanent IDs to match against the
+   * resource manager tags value associated with the source VM of a request. The
+   * match follows AND semantics which means all the ids must match. Limited to
+   * 5 ids in the Tag value id set.
+   *
+   * @param string[] $ids
    */
   public function setIds($ids)
   {

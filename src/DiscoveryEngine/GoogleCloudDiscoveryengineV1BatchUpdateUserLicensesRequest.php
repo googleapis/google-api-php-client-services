@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest extends \Google\Model
 {
   /**
+   * Optional. If true, if user licenses removed associated license config, the
+   * user license will be deleted. By default which is false, the user license
+   * will be updated to unassigned state.
+   *
    * @var bool
    */
   public $deleteUnassignedUserLicenses;
@@ -27,7 +31,11 @@ class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest extends \Google
   protected $inlineSourceDataType = '';
 
   /**
-   * @param bool
+   * Optional. If true, if user licenses removed associated license config, the
+   * user license will be deleted. By default which is false, the user license
+   * will be updated to unassigned state.
+   *
+   * @param bool $deleteUnassignedUserLicenses
    */
   public function setDeleteUnassignedUserLicenses($deleteUnassignedUserLicenses)
   {
@@ -41,7 +49,9 @@ class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest extends \Google
     return $this->deleteUnassignedUserLicenses;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequestInlineSource
+   * The inline source for the input content for document embeddings.
+   *
+   * @param GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequestInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequestInlineSource $inlineSource)
   {

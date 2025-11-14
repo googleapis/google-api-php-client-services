@@ -20,24 +20,42 @@ namespace Google\Service\CertificateAuthorityService;
 class CertificateTemplate extends \Google\Model
 {
   /**
+   * Output only. The time at which this CertificateTemplate was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. A human-readable description of scenarios this template is
+   * intended for.
+   *
    * @var string
    */
   public $description;
   protected $identityConstraintsType = CertificateIdentityConstraints::class;
   protected $identityConstraintsDataType = '';
   /**
+   * Optional. Labels with user-defined metadata.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. The maximum lifetime allowed for issued Certificates that use
+   * this template. If the issuing CaPool resource's IssuancePolicy specifies a
+   * maximum_lifetime the minimum of the two durations will be the maximum
+   * lifetime for issued Certificates. Note that if the issuing
+   * CertificateAuthority expires before a Certificate's requested
+   * maximum_lifetime, the effective lifetime will be explicitly truncated to
+   * match it.
+   *
    * @var string
    */
   public $maximumLifetime;
   /**
+   * Identifier. The resource name for this CertificateTemplate in the format
+   * `projects/locations/certificateTemplates`.
+   *
    * @var string
    */
   public $name;
@@ -46,12 +64,16 @@ class CertificateTemplate extends \Google\Model
   protected $predefinedValuesType = X509Parameters::class;
   protected $predefinedValuesDataType = '';
   /**
+   * Output only. The time at which this CertificateTemplate was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time at which this CertificateTemplate was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -65,7 +87,10 @@ class CertificateTemplate extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. A human-readable description of scenarios this template is
+   * intended for.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -79,7 +104,11 @@ class CertificateTemplate extends \Google\Model
     return $this->description;
   }
   /**
-   * @param CertificateIdentityConstraints
+   * Optional. Describes constraints on identities that may be appear in
+   * Certificates issued using this template. If this is omitted, then this
+   * template will not add restrictions on a certificate's identity.
+   *
+   * @param CertificateIdentityConstraints $identityConstraints
    */
   public function setIdentityConstraints(CertificateIdentityConstraints $identityConstraints)
   {
@@ -93,7 +122,9 @@ class CertificateTemplate extends \Google\Model
     return $this->identityConstraints;
   }
   /**
-   * @param string[]
+   * Optional. Labels with user-defined metadata.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -107,7 +138,15 @@ class CertificateTemplate extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Optional. The maximum lifetime allowed for issued Certificates that use
+   * this template. If the issuing CaPool resource's IssuancePolicy specifies a
+   * maximum_lifetime the minimum of the two durations will be the maximum
+   * lifetime for issued Certificates. Note that if the issuing
+   * CertificateAuthority expires before a Certificate's requested
+   * maximum_lifetime, the effective lifetime will be explicitly truncated to
+   * match it.
+   *
+   * @param string $maximumLifetime
    */
   public function setMaximumLifetime($maximumLifetime)
   {
@@ -121,7 +160,10 @@ class CertificateTemplate extends \Google\Model
     return $this->maximumLifetime;
   }
   /**
-   * @param string
+   * Identifier. The resource name for this CertificateTemplate in the format
+   * `projects/locations/certificateTemplates`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -135,7 +177,16 @@ class CertificateTemplate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param CertificateExtensionConstraints
+   * Optional. Describes the set of X.509 extensions that may appear in a
+   * Certificate issued using this CertificateTemplate. If a certificate request
+   * sets extensions that don't appear in the passthrough_extensions, those
+   * extensions will be dropped. If the issuing CaPool's IssuancePolicy defines
+   * baseline_values that don't appear here, the certificate issuance request
+   * will fail. If this is omitted, then this template will not add restrictions
+   * on a certificate's X.509 extensions. These constraints do not apply to
+   * X.509 extensions set in this CertificateTemplate's predefined_values.
+   *
+   * @param CertificateExtensionConstraints $passthroughExtensions
    */
   public function setPassthroughExtensions(CertificateExtensionConstraints $passthroughExtensions)
   {
@@ -149,7 +200,14 @@ class CertificateTemplate extends \Google\Model
     return $this->passthroughExtensions;
   }
   /**
-   * @param X509Parameters
+   * Optional. A set of X.509 values that will be applied to all issued
+   * certificates that use this template. If the certificate request includes
+   * conflicting values for the same properties, they will be overwritten by the
+   * values defined here. If the issuing CaPool's IssuancePolicy defines
+   * conflicting baseline_values for the same properties, the certificate
+   * issuance request will fail.
+   *
+   * @param X509Parameters $predefinedValues
    */
   public function setPredefinedValues(X509Parameters $predefinedValues)
   {
@@ -163,7 +221,9 @@ class CertificateTemplate extends \Google\Model
     return $this->predefinedValues;
   }
   /**
-   * @param string
+   * Output only. The time at which this CertificateTemplate was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

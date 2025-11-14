@@ -23,12 +23,17 @@ class ListNamespacesResponse extends \Google\Collection
   protected $namespacesType = ServicedirectoryNamespace::class;
   protected $namespacesDataType = 'array';
   /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param ServicedirectoryNamespace[]
+   * The list of namespaces.
+   *
+   * @param ServicedirectoryNamespace[] $namespaces
    */
   public function setNamespaces($namespaces)
   {
@@ -42,7 +47,10 @@ class ListNamespacesResponse extends \Google\Collection
     return $this->namespaces;
   }
   /**
-   * @param string
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

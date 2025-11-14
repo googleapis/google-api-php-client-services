@@ -20,6 +20,8 @@ namespace Google\Service\CloudAsset;
 class PolicyInfo extends \Google\Model
 {
   /**
+   * The full resource name the policy is directly attached to.
+   *
    * @var string
    */
   public $attachedResource;
@@ -27,7 +29,9 @@ class PolicyInfo extends \Google\Model
   protected $policyDataType = '';
 
   /**
-   * @param string
+   * The full resource name the policy is directly attached to.
+   *
+   * @param string $attachedResource
    */
   public function setAttachedResource($attachedResource)
   {
@@ -41,7 +45,9 @@ class PolicyInfo extends \Google\Model
     return $this->attachedResource;
   }
   /**
-   * @param Policy
+   * The IAM policy that's directly attached to the attached_resource.
+   *
+   * @param Policy $policy
    */
   public function setPolicy(Policy $policy)
   {

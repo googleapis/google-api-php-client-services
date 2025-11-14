@@ -20,20 +20,31 @@ namespace Google\Service\DisplayVideo;
 class BrowserAssignedTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The display name of the browser.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Indicates if this option is being negatively targeted. All assigned browser
+   * targeting options on the same resource must have the same value for this
+   * field.
+   *
    * @var bool
    */
   public $negative;
   /**
+   * Required. The targeting_option_id of a TargetingOption of type
+   * `TARGETING_TYPE_BROWSER`.
+   *
    * @var string
    */
   public $targetingOptionId;
 
   /**
-   * @param string
+   * Output only. The display name of the browser.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -47,7 +58,11 @@ class BrowserAssignedTargetingOptionDetails extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Indicates if this option is being negatively targeted. All assigned browser
+   * targeting options on the same resource must have the same value for this
+   * field.
+   *
+   * @param bool $negative
    */
   public function setNegative($negative)
   {
@@ -61,7 +76,10 @@ class BrowserAssignedTargetingOptionDetails extends \Google\Model
     return $this->negative;
   }
   /**
-   * @param string
+   * Required. The targeting_option_id of a TargetingOption of type
+   * `TARGETING_TYPE_BROWSER`.
+   *
+   * @param string $targetingOptionId
    */
   public function setTargetingOptionId($targetingOptionId)
   {

@@ -20,16 +20,24 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1DiskConfig extends \Google\Model
 {
   /**
+   * Size in GB of the boot disk (default is 100GB).
+   *
    * @var int
    */
   public $bootDiskSizeGb;
   /**
+   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd"
+   * (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard
+   * Disk Drive).
+   *
    * @var string
    */
   public $bootDiskType;
 
   /**
-   * @param int
+   * Size in GB of the boot disk (default is 100GB).
+   *
+   * @param int $bootDiskSizeGb
    */
   public function setBootDiskSizeGb($bootDiskSizeGb)
   {
@@ -43,7 +51,11 @@ class GoogleCloudMlV1DiskConfig extends \Google\Model
     return $this->bootDiskSizeGb;
   }
   /**
-   * @param string
+   * Type of the boot disk (default is "pd-ssd"). Valid values: "pd-ssd"
+   * (Persistent Disk Solid State Drive) or "pd-standard" (Persistent Disk Hard
+   * Disk Drive).
+   *
+   * @param string $bootDiskType
    */
   public function setBootDiskType($bootDiskType)
   {

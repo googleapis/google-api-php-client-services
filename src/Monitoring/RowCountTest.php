@@ -20,30 +20,71 @@ namespace Google\Service\Monitoring;
 class RowCountTest extends \Google\Model
 {
   /**
+   * No ordering relationship is specified.
+   */
+  public const COMPARISON_COMPARISON_UNSPECIFIED = 'COMPARISON_UNSPECIFIED';
+  /**
+   * True if the left argument is greater than the right argument.
+   */
+  public const COMPARISON_COMPARISON_GT = 'COMPARISON_GT';
+  /**
+   * True if the left argument is greater than or equal to the right argument.
+   */
+  public const COMPARISON_COMPARISON_GE = 'COMPARISON_GE';
+  /**
+   * True if the left argument is less than the right argument.
+   */
+  public const COMPARISON_COMPARISON_LT = 'COMPARISON_LT';
+  /**
+   * True if the left argument is less than or equal to the right argument.
+   */
+  public const COMPARISON_COMPARISON_LE = 'COMPARISON_LE';
+  /**
+   * True if the left argument is equal to the right argument.
+   */
+  public const COMPARISON_COMPARISON_EQ = 'COMPARISON_EQ';
+  /**
+   * True if the left argument is not equal to the right argument.
+   */
+  public const COMPARISON_COMPARISON_NE = 'COMPARISON_NE';
+  /**
+   * Required. The comparison to apply between the number of rows returned by
+   * the query and the threshold.
+   *
    * @var string
    */
   public $comparison;
   /**
+   * Required. The value against which to compare the row count.
+   *
    * @var string
    */
   public $threshold;
 
   /**
-   * @param string
+   * Required. The comparison to apply between the number of rows returned by
+   * the query and the threshold.
+   *
+   * Accepted values: COMPARISON_UNSPECIFIED, COMPARISON_GT, COMPARISON_GE,
+   * COMPARISON_LT, COMPARISON_LE, COMPARISON_EQ, COMPARISON_NE
+   *
+   * @param self::COMPARISON_* $comparison
    */
   public function setComparison($comparison)
   {
     $this->comparison = $comparison;
   }
   /**
-   * @return string
+   * @return self::COMPARISON_*
    */
   public function getComparison()
   {
     return $this->comparison;
   }
   /**
-   * @param string
+   * Required. The value against which to compare the row count.
+   *
+   * @param string $threshold
    */
   public function setThreshold($threshold)
   {

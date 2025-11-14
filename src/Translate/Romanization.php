@@ -20,16 +20,29 @@ namespace Google\Service\Translate;
 class Romanization extends \Google\Model
 {
   /**
+   * The ISO-639 language code of source text in the initial request, detected
+   * automatically, if no source language was passed within the initial request.
+   * If the source language was passed, auto-detection of the language does not
+   * occur and this field is empty.
+   *
    * @var string
    */
   public $detectedLanguageCode;
   /**
+   * Romanized text. If an error occurs during romanization, this field might be
+   * excluded from the response.
+   *
    * @var string
    */
   public $romanizedText;
 
   /**
-   * @param string
+   * The ISO-639 language code of source text in the initial request, detected
+   * automatically, if no source language was passed within the initial request.
+   * If the source language was passed, auto-detection of the language does not
+   * occur and this field is empty.
+   *
+   * @param string $detectedLanguageCode
    */
   public function setDetectedLanguageCode($detectedLanguageCode)
   {
@@ -43,7 +56,10 @@ class Romanization extends \Google\Model
     return $this->detectedLanguageCode;
   }
   /**
-   * @param string
+   * Romanized text. If an error occurs during romanization, this field might be
+   * excluded from the response.
+   *
+   * @param string $romanizedText
    */
   public function setRomanizedText($romanizedText)
   {

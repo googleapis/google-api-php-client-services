@@ -22,12 +22,16 @@ class Interest extends \Google\Model
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
+   * The interest; for example, `stargazing`.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param FieldMetadata
+   * Metadata about the interest.
+   *
+   * @param FieldMetadata $metadata
    */
   public function setMetadata(FieldMetadata $metadata)
   {
@@ -41,7 +45,9 @@ class Interest extends \Google\Model
     return $this->metadata;
   }
   /**
-   * @param string
+   * The interest; for example, `stargazing`.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

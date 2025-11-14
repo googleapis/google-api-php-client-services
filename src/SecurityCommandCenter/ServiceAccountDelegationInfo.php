@@ -20,16 +20,28 @@ namespace Google\Service\SecurityCommandCenter;
 class ServiceAccountDelegationInfo extends \Google\Model
 {
   /**
+   * The email address of a Google account.
+   *
    * @var string
    */
   public $principalEmail;
   /**
+   * A string representing the principal_subject associated with the identity.
+   * As compared to `principal_email`, supports principals that aren't
+   * associated with email addresses, such as third party principals. For most
+   * identities, the format will be `principal://iam.googleapis.com/{identity
+   * pool name}/subjects/{subject}` except for some GKE identities
+   * (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy
+   * format `serviceAccount:{identity pool name}[{subject}]`
+   *
    * @var string
    */
   public $principalSubject;
 
   /**
-   * @param string
+   * The email address of a Google account.
+   *
+   * @param string $principalEmail
    */
   public function setPrincipalEmail($principalEmail)
   {
@@ -43,7 +55,15 @@ class ServiceAccountDelegationInfo extends \Google\Model
     return $this->principalEmail;
   }
   /**
-   * @param string
+   * A string representing the principal_subject associated with the identity.
+   * As compared to `principal_email`, supports principals that aren't
+   * associated with email addresses, such as third party principals. For most
+   * identities, the format will be `principal://iam.googleapis.com/{identity
+   * pool name}/subjects/{subject}` except for some GKE identities
+   * (GKE_WORKLOAD, FREEFORM, GKE_HUB_WORKLOAD) that are still in the legacy
+   * format `serviceAccount:{identity pool name}[{subject}]`
+   *
+   * @param string $principalSubject
    */
   public function setPrincipalSubject($principalSubject)
   {

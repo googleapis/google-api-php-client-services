@@ -20,20 +20,32 @@ namespace Google\Service\ShoppingContent;
 class CutoffTime extends \Google\Model
 {
   /**
+   * Hour of the cutoff time until which an order has to be placed to be
+   * processed in the same day. Required.
+   *
    * @var string
    */
   public $hour;
   /**
+   * Minute of the cutoff time until which an order has to be placed to be
+   * processed in the same day. Required.
+   *
    * @var string
    */
   public $minute;
   /**
+   * Timezone identifier for the cutoff time (for example, "Europe/Zurich").
+   * List of identifiers. Required.
+   *
    * @var string
    */
   public $timezone;
 
   /**
-   * @param string
+   * Hour of the cutoff time until which an order has to be placed to be
+   * processed in the same day. Required.
+   *
+   * @param string $hour
    */
   public function setHour($hour)
   {
@@ -47,7 +59,10 @@ class CutoffTime extends \Google\Model
     return $this->hour;
   }
   /**
-   * @param string
+   * Minute of the cutoff time until which an order has to be placed to be
+   * processed in the same day. Required.
+   *
+   * @param string $minute
    */
   public function setMinute($minute)
   {
@@ -61,7 +76,10 @@ class CutoffTime extends \Google\Model
     return $this->minute;
   }
   /**
-   * @param string
+   * Timezone identifier for the cutoff time (for example, "Europe/Zurich").
+   * List of identifiers. Required.
+   *
+   * @param string $timezone
    */
   public function setTimezone($timezone)
   {

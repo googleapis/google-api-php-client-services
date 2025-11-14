@@ -20,24 +20,49 @@ namespace Google\Service\CloudResourceManager;
 class FolderOperation extends \Google\Model
 {
   /**
+   * Operation type not specified.
+   */
+  public const OPERATION_TYPE_OPERATION_TYPE_UNSPECIFIED = 'OPERATION_TYPE_UNSPECIFIED';
+  /**
+   * A create folder operation.
+   */
+  public const OPERATION_TYPE_CREATE = 'CREATE';
+  /**
+   * A move folder operation.
+   */
+  public const OPERATION_TYPE_MOVE = 'MOVE';
+  /**
+   * The resource name of the folder or organization we are either creating the
+   * folder under or moving the folder to.
+   *
    * @var string
    */
   public $destinationParent;
   /**
+   * The display name of the folder.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The type of this operation.
+   *
    * @var string
    */
   public $operationType;
   /**
+   * The resource name of the folder's parent. Only applicable when the
+   * operation_type is MOVE.
+   *
    * @var string
    */
   public $sourceParent;
 
   /**
-   * @param string
+   * The resource name of the folder or organization we are either creating the
+   * folder under or moving the folder to.
+   *
+   * @param string $destinationParent
    */
   public function setDestinationParent($destinationParent)
   {
@@ -51,7 +76,9 @@ class FolderOperation extends \Google\Model
     return $this->destinationParent;
   }
   /**
-   * @param string
+   * The display name of the folder.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -65,21 +92,28 @@ class FolderOperation extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The type of this operation.
+   *
+   * Accepted values: OPERATION_TYPE_UNSPECIFIED, CREATE, MOVE
+   *
+   * @param self::OPERATION_TYPE_* $operationType
    */
   public function setOperationType($operationType)
   {
     $this->operationType = $operationType;
   }
   /**
-   * @return string
+   * @return self::OPERATION_TYPE_*
    */
   public function getOperationType()
   {
     return $this->operationType;
   }
   /**
-   * @param string
+   * The resource name of the folder's parent. Only applicable when the
+   * operation_type is MOVE.
+   *
+   * @param string $sourceParent
    */
   public function setSourceParent($sourceParent)
   {

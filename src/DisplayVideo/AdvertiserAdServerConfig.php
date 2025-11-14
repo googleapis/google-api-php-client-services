@@ -25,7 +25,10 @@ class AdvertiserAdServerConfig extends \Google\Model
   protected $thirdPartyOnlyConfigDataType = '';
 
   /**
-   * @param CmHybridConfig
+   * The configuration for advertisers that use both Campaign Manager 360
+   * (CM360) and third-party ad servers.
+   *
+   * @param CmHybridConfig $cmHybridConfig
    */
   public function setCmHybridConfig(CmHybridConfig $cmHybridConfig)
   {
@@ -39,7 +42,9 @@ class AdvertiserAdServerConfig extends \Google\Model
     return $this->cmHybridConfig;
   }
   /**
-   * @param ThirdPartyOnlyConfig
+   * The configuration for advertisers that use third-party ad servers only.
+   *
+   * @param ThirdPartyOnlyConfig $thirdPartyOnlyConfig
    */
   public function setThirdPartyOnlyConfig(ThirdPartyOnlyConfig $thirdPartyOnlyConfig)
   {

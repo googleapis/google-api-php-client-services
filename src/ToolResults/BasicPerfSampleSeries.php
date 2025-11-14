@@ -19,6 +19,42 @@ namespace Google\Service\ToolResults;
 
 class BasicPerfSampleSeries extends \Google\Model
 {
+  public const PERF_METRIC_TYPE_perfMetricTypeUnspecified = 'perfMetricTypeUnspecified';
+  public const PERF_METRIC_TYPE_memory = 'memory';
+  public const PERF_METRIC_TYPE_cpu = 'cpu';
+  public const PERF_METRIC_TYPE_network = 'network';
+  public const PERF_METRIC_TYPE_graphics = 'graphics';
+  public const PERF_UNIT_perfUnitUnspecified = 'perfUnitUnspecified';
+  public const PERF_UNIT_kibibyte = 'kibibyte';
+  public const PERF_UNIT_percent = 'percent';
+  public const PERF_UNIT_bytesPerSecond = 'bytesPerSecond';
+  public const PERF_UNIT_framesPerSecond = 'framesPerSecond';
+  public const PERF_UNIT_byte = 'byte';
+  public const SAMPLE_SERIES_LABEL_sampleSeriesTypeUnspecified = 'sampleSeriesTypeUnspecified';
+  /**
+   * Memory sample series
+   */
+  public const SAMPLE_SERIES_LABEL_memoryRssPrivate = 'memoryRssPrivate';
+  public const SAMPLE_SERIES_LABEL_memoryRssShared = 'memoryRssShared';
+  public const SAMPLE_SERIES_LABEL_memoryRssTotal = 'memoryRssTotal';
+  public const SAMPLE_SERIES_LABEL_memoryTotal = 'memoryTotal';
+  /**
+   * CPU sample series
+   */
+  public const SAMPLE_SERIES_LABEL_cpuUser = 'cpuUser';
+  public const SAMPLE_SERIES_LABEL_cpuKernel = 'cpuKernel';
+  public const SAMPLE_SERIES_LABEL_cpuTotal = 'cpuTotal';
+  /**
+   * Network sample series
+   */
+  public const SAMPLE_SERIES_LABEL_ntBytesTransferred = 'ntBytesTransferred';
+  public const SAMPLE_SERIES_LABEL_ntBytesReceived = 'ntBytesReceived';
+  public const SAMPLE_SERIES_LABEL_networkSent = 'networkSent';
+  public const SAMPLE_SERIES_LABEL_networkReceived = 'networkReceived';
+  /**
+   * Graphics sample series
+   */
+  public const SAMPLE_SERIES_LABEL_graphicsFrameRate = 'graphicsFrameRate';
   /**
    * @var string
    */
@@ -33,42 +69,42 @@ class BasicPerfSampleSeries extends \Google\Model
   public $sampleSeriesLabel;
 
   /**
-   * @param string
+   * @param self::PERF_METRIC_TYPE_* $perfMetricType
    */
   public function setPerfMetricType($perfMetricType)
   {
     $this->perfMetricType = $perfMetricType;
   }
   /**
-   * @return string
+   * @return self::PERF_METRIC_TYPE_*
    */
   public function getPerfMetricType()
   {
     return $this->perfMetricType;
   }
   /**
-   * @param string
+   * @param self::PERF_UNIT_* $perfUnit
    */
   public function setPerfUnit($perfUnit)
   {
     $this->perfUnit = $perfUnit;
   }
   /**
-   * @return string
+   * @return self::PERF_UNIT_*
    */
   public function getPerfUnit()
   {
     return $this->perfUnit;
   }
   /**
-   * @param string
+   * @param self::SAMPLE_SERIES_LABEL_* $sampleSeriesLabel
    */
   public function setSampleSeriesLabel($sampleSeriesLabel)
   {
     $this->sampleSeriesLabel = $sampleSeriesLabel;
   }
   /**
-   * @return string
+   * @return self::SAMPLE_SERIES_LABEL_*
    */
   public function getSampleSeriesLabel()
   {

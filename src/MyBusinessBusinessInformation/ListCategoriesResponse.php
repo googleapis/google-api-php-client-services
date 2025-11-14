@@ -23,12 +23,18 @@ class ListCategoriesResponse extends \Google\Collection
   protected $categoriesType = Category::class;
   protected $categoriesDataType = 'array';
   /**
+   * If the number of categories exceeded the requested page size, this field
+   * will be populated with a token to fetch the next page of categories on a
+   * subsequent call to `ListCategories`.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Category[]
+   * The matching categories based on the requested parameters.
+   *
+   * @param Category[] $categories
    */
   public function setCategories($categories)
   {
@@ -42,7 +48,11 @@ class ListCategoriesResponse extends \Google\Collection
     return $this->categories;
   }
   /**
-   * @param string
+   * If the number of categories exceeded the requested page size, this field
+   * will be populated with a token to fetch the next page of categories on a
+   * subsequent call to `ListCategories`.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

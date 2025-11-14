@@ -20,20 +20,31 @@ namespace Google\Service\CloudDeploy;
 class PhaseArtifact extends \Google\Model
 {
   /**
+   * Output only. File path of the directory of rendered job manifests relative
+   * to the URI. This is only set if it is applicable.
+   *
    * @var string
    */
   public $jobManifestsPath;
   /**
+   * Output only. File path of the rendered manifest relative to the URI.
+   *
    * @var string
    */
   public $manifestPath;
   /**
+   * Output only. File path of the resolved Skaffold configuration relative to
+   * the URI.
+   *
    * @var string
    */
   public $skaffoldConfigPath;
 
   /**
-   * @param string
+   * Output only. File path of the directory of rendered job manifests relative
+   * to the URI. This is only set if it is applicable.
+   *
+   * @param string $jobManifestsPath
    */
   public function setJobManifestsPath($jobManifestsPath)
   {
@@ -47,7 +58,9 @@ class PhaseArtifact extends \Google\Model
     return $this->jobManifestsPath;
   }
   /**
-   * @param string
+   * Output only. File path of the rendered manifest relative to the URI.
+   *
+   * @param string $manifestPath
    */
   public function setManifestPath($manifestPath)
   {
@@ -61,7 +74,10 @@ class PhaseArtifact extends \Google\Model
     return $this->manifestPath;
   }
   /**
-   * @param string
+   * Output only. File path of the resolved Skaffold configuration relative to
+   * the URI.
+   *
+   * @param string $skaffoldConfigPath
    */
   public function setSkaffoldConfigPath($skaffoldConfigPath)
   {

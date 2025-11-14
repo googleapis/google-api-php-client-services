@@ -19,7 +19,17 @@ namespace Google\Service\Monitoring;
 
 class GoogleMonitoringV3Range extends \Google\Model
 {
+  /**
+   * Range maximum.
+   *
+   * @var 
+   */
   public $max;
+  /**
+   * Range minimum.
+   *
+   * @var 
+   */
   public $min;
 
   public function setMax($max)

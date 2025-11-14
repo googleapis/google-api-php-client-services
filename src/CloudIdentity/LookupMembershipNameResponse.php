@@ -20,12 +20,20 @@ namespace Google\Service\CloudIdentity;
 class LookupMembershipNameResponse extends \Google\Model
 {
   /**
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the looked-up `Membership`. Must be of the form
+   * `groups/{group}/memberships/{membership}`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The [resource name](https://cloud.google.com/apis/design/resource_names) of
+   * the looked-up `Membership`. Must be of the form
+   * `groups/{group}/memberships/{membership}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

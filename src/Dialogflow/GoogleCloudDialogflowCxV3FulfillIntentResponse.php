@@ -20,6 +20,15 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3FulfillIntentResponse extends \Google\Model
 {
   /**
+   * The audio data bytes encoded as specified in the request. Note: The output
+   * audio is generated based on the values of default platform text responses
+   * found in the `query_result.response_messages` field. If multiple default
+   * text responses exist, they will be concatenated when generating audio. If
+   * no default platform text responses exist, the generated audio content will
+   * be empty. In some scenarios, multiple output audio fields may be present in
+   * the response structure. In these cases, only the top-most-level audio
+   * output has content.
+   *
    * @var string
    */
   public $outputAudio;
@@ -28,12 +37,24 @@ class GoogleCloudDialogflowCxV3FulfillIntentResponse extends \Google\Model
   protected $queryResultType = GoogleCloudDialogflowCxV3QueryResult::class;
   protected $queryResultDataType = '';
   /**
+   * Output only. The unique identifier of the response. It can be used to
+   * locate a response in the training example set or for reporting issues.
+   *
    * @var string
    */
   public $responseId;
 
   /**
-   * @param string
+   * The audio data bytes encoded as specified in the request. Note: The output
+   * audio is generated based on the values of default platform text responses
+   * found in the `query_result.response_messages` field. If multiple default
+   * text responses exist, they will be concatenated when generating audio. If
+   * no default platform text responses exist, the generated audio content will
+   * be empty. In some scenarios, multiple output audio fields may be present in
+   * the response structure. In these cases, only the top-most-level audio
+   * output has content.
+   *
+   * @param string $outputAudio
    */
   public function setOutputAudio($outputAudio)
   {
@@ -47,7 +68,9 @@ class GoogleCloudDialogflowCxV3FulfillIntentResponse extends \Google\Model
     return $this->outputAudio;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3OutputAudioConfig
+   * The config used by the speech synthesizer to generate the output audio.
+   *
+   * @param GoogleCloudDialogflowCxV3OutputAudioConfig $outputAudioConfig
    */
   public function setOutputAudioConfig(GoogleCloudDialogflowCxV3OutputAudioConfig $outputAudioConfig)
   {
@@ -61,7 +84,9 @@ class GoogleCloudDialogflowCxV3FulfillIntentResponse extends \Google\Model
     return $this->outputAudioConfig;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3QueryResult
+   * The result of the conversational query.
+   *
+   * @param GoogleCloudDialogflowCxV3QueryResult $queryResult
    */
   public function setQueryResult(GoogleCloudDialogflowCxV3QueryResult $queryResult)
   {
@@ -75,7 +100,10 @@ class GoogleCloudDialogflowCxV3FulfillIntentResponse extends \Google\Model
     return $this->queryResult;
   }
   /**
-   * @param string
+   * Output only. The unique identifier of the response. It can be used to
+   * locate a response in the training example set or for reporting issues.
+   *
+   * @param string $responseId
    */
   public function setResponseId($responseId)
   {

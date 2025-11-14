@@ -19,18 +19,45 @@ namespace Google\Service\RealTimeBidding;
 
 class AddTargetedAppsRequest extends \Google\Collection
 {
+  /**
+   * Placeholder for undefined targeting mode.
+   */
+  public const TARGETING_MODE_TARGETING_MODE_UNSPECIFIED = 'TARGETING_MODE_UNSPECIFIED';
+  /**
+   * The inclusive list type. Inventory must match an item in this list to be
+   * targeted.
+   */
+  public const TARGETING_MODE_INCLUSIVE = 'INCLUSIVE';
+  /**
+   * The exclusive list type. Inventory must not match any item in this list to
+   * be targeted.
+   */
+  public const TARGETING_MODE_EXCLUSIVE = 'EXCLUSIVE';
   protected $collection_key = 'appIds';
   /**
+   * A list of app IDs to target in the pretargeting configuration. These values
+   * will be added to the list of targeted app IDs in
+   * PretargetingConfig.appTargeting.mobileAppTargeting.values.
+   *
    * @var string[]
    */
   public $appIds;
   /**
+   * Required. The targeting mode that should be applied to the list of app IDs.
+   * If there are existing targeted app IDs, must be equal to the existing
+   * PretargetingConfig.appTargeting.mobileAppTargeting.targetingMode or a 400
+   * bad request error will be returned.
+   *
    * @var string
    */
   public $targetingMode;
 
   /**
-   * @param string[]
+   * A list of app IDs to target in the pretargeting configuration. These values
+   * will be added to the list of targeted app IDs in
+   * PretargetingConfig.appTargeting.mobileAppTargeting.values.
+   *
+   * @param string[] $appIds
    */
   public function setAppIds($appIds)
   {
@@ -44,14 +71,21 @@ class AddTargetedAppsRequest extends \Google\Collection
     return $this->appIds;
   }
   /**
-   * @param string
+   * Required. The targeting mode that should be applied to the list of app IDs.
+   * If there are existing targeted app IDs, must be equal to the existing
+   * PretargetingConfig.appTargeting.mobileAppTargeting.targetingMode or a 400
+   * bad request error will be returned.
+   *
+   * Accepted values: TARGETING_MODE_UNSPECIFIED, INCLUSIVE, EXCLUSIVE
+   *
+   * @param self::TARGETING_MODE_* $targetingMode
    */
   public function setTargetingMode($targetingMode)
   {
     $this->targetingMode = $targetingMode;
   }
   /**
-   * @return string
+   * @return self::TARGETING_MODE_*
    */
   public function getTargetingMode()
   {

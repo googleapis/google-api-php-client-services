@@ -20,16 +20,24 @@ namespace Google\Service\FactCheckTools;
 class GoogleFactcheckingFactchecktoolsV1alpha1Publisher extends \Google\Model
 {
   /**
+   * The name of this publisher. For instance, "Awesome Fact Checks".
+   *
    * @var string
    */
   public $name;
   /**
+   * Host-level site name, without the protocol or "www" prefix. For instance,
+   * "awesomefactchecks.com". This value of this field is based purely on the
+   * claim review URL.
+   *
    * @var string
    */
   public $site;
 
   /**
-   * @param string
+   * The name of this publisher. For instance, "Awesome Fact Checks".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,11 @@ class GoogleFactcheckingFactchecktoolsV1alpha1Publisher extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Host-level site name, without the protocol or "www" prefix. For instance,
+   * "awesomefactchecks.com". This value of this field is based purely on the
+   * claim review URL.
+   *
+   * @param string $site
    */
   public function setSite($site)
   {

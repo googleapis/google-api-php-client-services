@@ -20,12 +20,18 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2VertexDatasetRegex extends \Google\Model
 {
   /**
+   * For organizations, if unset, will match all projects. Has no effect for
+   * configurations created within a project.
+   *
    * @var string
    */
   public $projectIdRegex;
 
   /**
-   * @param string
+   * For organizations, if unset, will match all projects. Has no effect for
+   * configurations created within a project.
+   *
+   * @param string $projectIdRegex
    */
   public function setProjectIdRegex($projectIdRegex)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\SQLAdmin;
 class PasswordStatus extends \Google\Model
 {
   /**
+   * If true, user does not have login privileges.
+   *
    * @var bool
    */
   public $locked;
   /**
+   * The expiration time of the current password.
+   *
    * @var string
    */
   public $passwordExpirationTime;
 
   /**
-   * @param bool
+   * If true, user does not have login privileges.
+   *
+   * @param bool $locked
    */
   public function setLocked($locked)
   {
@@ -43,7 +49,9 @@ class PasswordStatus extends \Google\Model
     return $this->locked;
   }
   /**
-   * @param string
+   * The expiration time of the current password.
+   *
+   * @param string $passwordExpirationTime
    */
   public function setPasswordExpirationTime($passwordExpirationTime)
   {

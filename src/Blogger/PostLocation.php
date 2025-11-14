@@ -19,13 +19,27 @@ namespace Google\Service\Blogger;
 
 class PostLocation extends \Google\Model
 {
+  /**
+   * Location's latitude.
+   *
+   * @var 
+   */
   public $lat;
+  /**
+   * Location's longitude.
+   *
+   * @var 
+   */
   public $lng;
   /**
+   * Location name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Location's viewport span. Can be used when rendering a map preview.
+   *
    * @var string
    */
   public $span;
@@ -47,7 +61,9 @@ class PostLocation extends \Google\Model
     return $this->lng;
   }
   /**
-   * @param string
+   * Location name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +77,9 @@ class PostLocation extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Location's viewport span. Can be used when rendering a map preview.
+   *
+   * @param string $span
    */
   public function setSpan($span)
   {

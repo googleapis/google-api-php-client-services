@@ -23,7 +23,9 @@ class GenerateServiceIdentityResponse extends \Google\Model
   protected $identityDataType = '';
 
   /**
-   * @param ServiceIdentity
+   * ServiceIdentity that was created or retrieved.
+   *
+   * @param ServiceIdentity $identity
    */
   public function setIdentity(ServiceIdentity $identity)
   {

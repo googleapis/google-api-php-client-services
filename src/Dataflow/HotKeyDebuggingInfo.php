@@ -23,7 +23,10 @@ class HotKeyDebuggingInfo extends \Google\Model
   protected $detectedHotKeysDataType = 'map';
 
   /**
-   * @param HotKeyInfo[]
+   * Debugging information for each detected hot key. Keyed by a hash of the
+   * key.
+   *
+   * @param HotKeyInfo[] $detectedHotKeys
    */
   public function setDetectedHotKeys($detectedHotKeys)
   {

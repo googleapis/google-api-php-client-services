@@ -20,12 +20,18 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1EngineCommonConfig extends \Google\Model
 {
   /**
+   * The name of the company, business or entity that is associated with the
+   * engine. Setting this may help improve LLM related features.
+   *
    * @var string
    */
   public $companyName;
 
   /**
-   * @param string
+   * The name of the company, business or entity that is associated with the
+   * engine. Setting this may help improve LLM related features.
+   *
+   * @param string $companyName
    */
   public function setCompanyName($companyName)
   {

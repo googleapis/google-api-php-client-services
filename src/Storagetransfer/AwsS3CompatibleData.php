@@ -20,18 +20,29 @@ namespace Google\Service\Storagetransfer;
 class AwsS3CompatibleData extends \Google\Model
 {
   /**
+   * Required. Specifies the name of the bucket.
+   *
    * @var string
    */
   public $bucketName;
   /**
+   * Required. Specifies the endpoint of the storage service.
+   *
    * @var string
    */
   public $endpoint;
   /**
+   * Specifies the root path to transfer objects. Must be an empty string or
+   * full path name that ends with a '/'. This field is treated as an object
+   * prefix. As such, it should generally not begin with a '/'.
+   *
    * @var string
    */
   public $path;
   /**
+   * Specifies the region to sign requests with. This can be left blank if
+   * requests should be signed with an empty region.
+   *
    * @var string
    */
   public $region;
@@ -39,7 +50,9 @@ class AwsS3CompatibleData extends \Google\Model
   protected $s3MetadataDataType = '';
 
   /**
-   * @param string
+   * Required. Specifies the name of the bucket.
+   *
+   * @param string $bucketName
    */
   public function setBucketName($bucketName)
   {
@@ -53,7 +66,9 @@ class AwsS3CompatibleData extends \Google\Model
     return $this->bucketName;
   }
   /**
-   * @param string
+   * Required. Specifies the endpoint of the storage service.
+   *
+   * @param string $endpoint
    */
   public function setEndpoint($endpoint)
   {
@@ -67,7 +82,11 @@ class AwsS3CompatibleData extends \Google\Model
     return $this->endpoint;
   }
   /**
-   * @param string
+   * Specifies the root path to transfer objects. Must be an empty string or
+   * full path name that ends with a '/'. This field is treated as an object
+   * prefix. As such, it should generally not begin with a '/'.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -81,7 +100,10 @@ class AwsS3CompatibleData extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Specifies the region to sign requests with. This can be left blank if
+   * requests should be signed with an empty region.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -95,7 +117,9 @@ class AwsS3CompatibleData extends \Google\Model
     return $this->region;
   }
   /**
-   * @param S3CompatibleMetadata
+   * A S3 compatible metadata.
+   *
+   * @param S3CompatibleMetadata $s3Metadata
    */
   public function setS3Metadata(S3CompatibleMetadata $s3Metadata)
   {

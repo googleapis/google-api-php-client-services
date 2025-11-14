@@ -21,12 +21,16 @@ class SasPortalTestPermissionsResponse extends \Google\Collection
 {
   protected $collection_key = 'permissions';
   /**
+   * A set of permissions that the caller is allowed.
+   *
    * @var string[]
    */
   public $permissions;
 
   /**
-   * @param string[]
+   * A set of permissions that the caller is allowed.
+   *
+   * @param string[] $permissions
    */
   public function setPermissions($permissions)
   {

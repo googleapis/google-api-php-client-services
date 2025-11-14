@@ -20,6 +20,16 @@ namespace Google\Service\DataFusion;
 class RecurringTimeWindow extends \Google\Model
 {
   /**
+   * Required. An RRULE with format
+   * [RFC-5545](https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+   * this window reccurs. They go on for the span of time between the start and
+   * end time. The only supported FREQ value is "WEEKLY". To have something
+   * repeat every weekday, use: "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR". This
+   * specifies how frequently the window starts. To have a 9 am - 5 pm UTC-4
+   * window every weekday, use something like: ``` start time =
+   * 2019-01-01T09:00:00-0400 end time = 2019-01-01T17:00:00-0400 recurrence =
+   * FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR ```
+   *
    * @var string
    */
   public $recurrence;
@@ -27,7 +37,17 @@ class RecurringTimeWindow extends \Google\Model
   protected $windowDataType = '';
 
   /**
-   * @param string
+   * Required. An RRULE with format
+   * [RFC-5545](https://tools.ietf.org/html/rfc5545#section-3.8.5.3) for how
+   * this window reccurs. They go on for the span of time between the start and
+   * end time. The only supported FREQ value is "WEEKLY". To have something
+   * repeat every weekday, use: "FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR". This
+   * specifies how frequently the window starts. To have a 9 am - 5 pm UTC-4
+   * window every weekday, use something like: ``` start time =
+   * 2019-01-01T09:00:00-0400 end time = 2019-01-01T17:00:00-0400 recurrence =
+   * FREQ=WEEKLY;BYDAY=MO,TU,WE,TH,FR ```
+   *
+   * @param string $recurrence
    */
   public function setRecurrence($recurrence)
   {
@@ -41,7 +61,11 @@ class RecurringTimeWindow extends \Google\Model
     return $this->recurrence;
   }
   /**
-   * @param TimeWindow
+   * Required. The window representing the start and end time of recurrences.
+   * This field ignores the date components of the provided timestamps. Only the
+   * time of day and duration between start and end time are relevant.
+   *
+   * @param TimeWindow $window
    */
   public function setWindow(TimeWindow $window)
   {

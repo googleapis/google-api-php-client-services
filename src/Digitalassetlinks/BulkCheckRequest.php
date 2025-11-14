@@ -21,6 +21,9 @@ class BulkCheckRequest extends \Google\Collection
 {
   protected $collection_key = 'statements';
   /**
+   * If specified, will be used in any given template statement that doesn’t
+   * specify a relation.
+   *
    * @var string
    */
   public $defaultRelation;
@@ -29,6 +32,9 @@ class BulkCheckRequest extends \Google\Collection
   protected $defaultTargetType = Asset::class;
   protected $defaultTargetDataType = '';
   /**
+   * Same configuration as in CheckRequest; all statement checks will use the
+   * same configuration.
+   *
    * @var bool
    */
   public $returnRelationExtensions;
@@ -36,7 +42,10 @@ class BulkCheckRequest extends \Google\Collection
   protected $statementsDataType = 'array';
 
   /**
-   * @param string
+   * If specified, will be used in any given template statement that doesn’t
+   * specify a relation.
+   *
+   * @param string $defaultRelation
    */
   public function setDefaultRelation($defaultRelation)
   {
@@ -50,7 +59,10 @@ class BulkCheckRequest extends \Google\Collection
     return $this->defaultRelation;
   }
   /**
-   * @param Asset
+   * If specified, will be used in any given template statement that doesn’t
+   * specify a source.
+   *
+   * @param Asset $defaultSource
    */
   public function setDefaultSource(Asset $defaultSource)
   {
@@ -64,7 +76,10 @@ class BulkCheckRequest extends \Google\Collection
     return $this->defaultSource;
   }
   /**
-   * @param Asset
+   * If specified, will be used in any given template statement that doesn’t
+   * specify a target.
+   *
+   * @param Asset $defaultTarget
    */
   public function setDefaultTarget(Asset $defaultTarget)
   {
@@ -78,7 +93,10 @@ class BulkCheckRequest extends \Google\Collection
     return $this->defaultTarget;
   }
   /**
-   * @param bool
+   * Same configuration as in CheckRequest; all statement checks will use the
+   * same configuration.
+   *
+   * @param bool $returnRelationExtensions
    */
   public function setReturnRelationExtensions($returnRelationExtensions)
   {
@@ -92,7 +110,11 @@ class BulkCheckRequest extends \Google\Collection
     return $this->returnRelationExtensions;
   }
   /**
-   * @param StatementTemplate[]
+   * List of statements to check. For each statement, you can omit a field if
+   * the corresponding default_* field below was supplied. Minimum 1 statement;
+   * maximum 1,000 statements. Any additional statements will be ignored.
+   *
+   * @param StatementTemplate[] $statements
    */
   public function setStatements($statements)
   {

@@ -23,16 +23,23 @@ class LeaderboardListResponse extends \Google\Collection
   protected $itemsType = Leaderboard::class;
   protected $itemsDataType = 'array';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#leaderboardListResponse`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token corresponding to the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Leaderboard[]
+   * The leaderboards.
+   *
+   * @param Leaderboard[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +53,10 @@ class LeaderboardListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#leaderboardListResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class LeaderboardListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token corresponding to the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

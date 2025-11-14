@@ -24,7 +24,9 @@ class StudioCreativeAssetsResponse extends \Google\Collection
   protected $assetsDataType = 'array';
 
   /**
-   * @param StudioCreativeAsset[]
+   * The list of studio creative assets.
+   *
+   * @param StudioCreativeAsset[] $assets
    */
   public function setAssets($assets)
   {

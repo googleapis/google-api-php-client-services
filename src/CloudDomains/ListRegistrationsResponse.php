@@ -21,6 +21,9 @@ class ListRegistrationsResponse extends \Google\Collection
 {
   protected $collection_key = 'registrations';
   /**
+   * When present, there are more results to retrieve. Set `page_token` to this
+   * value on a subsequent call to get the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListRegistrationsResponse extends \Google\Collection
   protected $registrationsDataType = 'array';
 
   /**
-   * @param string
+   * When present, there are more results to retrieve. Set `page_token` to this
+   * value on a subsequent call to get the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListRegistrationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Registration[]
+   * A list of `Registration`s.
+   *
+   * @param Registration[] $registrations
    */
   public function setRegistrations($registrations)
   {

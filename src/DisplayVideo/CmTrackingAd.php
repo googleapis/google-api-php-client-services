@@ -20,20 +20,28 @@ namespace Google\Service\DisplayVideo;
 class CmTrackingAd extends \Google\Model
 {
   /**
+   * Optional. The ad ID of the campaign manager 360 tracking Ad.
+   *
    * @var string
    */
   public $cmAdId;
   /**
+   * Optional. The creative ID of the campaign manager 360 tracking Ad.
+   *
    * @var string
    */
   public $cmCreativeId;
   /**
+   * Optional. The placement ID of the campaign manager 360 tracking Ad.
+   *
    * @var string
    */
   public $cmPlacementId;
 
   /**
-   * @param string
+   * Optional. The ad ID of the campaign manager 360 tracking Ad.
+   *
+   * @param string $cmAdId
    */
   public function setCmAdId($cmAdId)
   {
@@ -47,7 +55,9 @@ class CmTrackingAd extends \Google\Model
     return $this->cmAdId;
   }
   /**
-   * @param string
+   * Optional. The creative ID of the campaign manager 360 tracking Ad.
+   *
+   * @param string $cmCreativeId
    */
   public function setCmCreativeId($cmCreativeId)
   {
@@ -61,7 +71,9 @@ class CmTrackingAd extends \Google\Model
     return $this->cmCreativeId;
   }
   /**
-   * @param string
+   * Optional. The placement ID of the campaign manager 360 tracking Ad.
+   *
+   * @param string $cmPlacementId
    */
   public function setCmPlacementId($cmPlacementId)
   {

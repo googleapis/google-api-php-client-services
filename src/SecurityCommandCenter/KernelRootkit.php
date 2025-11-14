@@ -20,44 +20,71 @@ namespace Google\Service\SecurityCommandCenter;
 class KernelRootkit extends \Google\Model
 {
   /**
+   * Rootkit name, when available.
+   *
    * @var string
    */
   public $name;
   /**
+   * True if unexpected modifications of kernel code memory are present.
+   *
    * @var bool
    */
   public $unexpectedCodeModification;
   /**
+   * True if `ftrace` points are present with callbacks pointing to regions that
+   * are not in the expected kernel or module code range.
+   *
    * @var bool
    */
   public $unexpectedFtraceHandler;
   /**
+   * True if interrupt handlers that are are not in the expected kernel or
+   * module code regions are present.
+   *
    * @var bool
    */
   public $unexpectedInterruptHandler;
   /**
+   * True if kernel code pages that are not in the expected kernel or module
+   * code regions are present.
+   *
    * @var bool
    */
   public $unexpectedKernelCodePages;
   /**
+   * True if `kprobe` points are present with callbacks pointing to regions that
+   * are not in the expected kernel or module code range.
+   *
    * @var bool
    */
   public $unexpectedKprobeHandler;
   /**
+   * True if unexpected processes in the scheduler run queue are present. Such
+   * processes are in the run queue, but not in the process task list.
+   *
    * @var bool
    */
   public $unexpectedProcessesInRunqueue;
   /**
+   * True if unexpected modifications of kernel read-only data memory are
+   * present.
+   *
    * @var bool
    */
   public $unexpectedReadOnlyDataModification;
   /**
+   * True if system call handlers that are are not in the expected kernel or
+   * module code regions are present.
+   *
    * @var bool
    */
   public $unexpectedSystemCallHandler;
 
   /**
-   * @param string
+   * Rootkit name, when available.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -71,7 +98,9 @@ class KernelRootkit extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * True if unexpected modifications of kernel code memory are present.
+   *
+   * @param bool $unexpectedCodeModification
    */
   public function setUnexpectedCodeModification($unexpectedCodeModification)
   {
@@ -85,7 +114,10 @@ class KernelRootkit extends \Google\Model
     return $this->unexpectedCodeModification;
   }
   /**
-   * @param bool
+   * True if `ftrace` points are present with callbacks pointing to regions that
+   * are not in the expected kernel or module code range.
+   *
+   * @param bool $unexpectedFtraceHandler
    */
   public function setUnexpectedFtraceHandler($unexpectedFtraceHandler)
   {
@@ -99,7 +131,10 @@ class KernelRootkit extends \Google\Model
     return $this->unexpectedFtraceHandler;
   }
   /**
-   * @param bool
+   * True if interrupt handlers that are are not in the expected kernel or
+   * module code regions are present.
+   *
+   * @param bool $unexpectedInterruptHandler
    */
   public function setUnexpectedInterruptHandler($unexpectedInterruptHandler)
   {
@@ -113,7 +148,10 @@ class KernelRootkit extends \Google\Model
     return $this->unexpectedInterruptHandler;
   }
   /**
-   * @param bool
+   * True if kernel code pages that are not in the expected kernel or module
+   * code regions are present.
+   *
+   * @param bool $unexpectedKernelCodePages
    */
   public function setUnexpectedKernelCodePages($unexpectedKernelCodePages)
   {
@@ -127,7 +165,10 @@ class KernelRootkit extends \Google\Model
     return $this->unexpectedKernelCodePages;
   }
   /**
-   * @param bool
+   * True if `kprobe` points are present with callbacks pointing to regions that
+   * are not in the expected kernel or module code range.
+   *
+   * @param bool $unexpectedKprobeHandler
    */
   public function setUnexpectedKprobeHandler($unexpectedKprobeHandler)
   {
@@ -141,7 +182,10 @@ class KernelRootkit extends \Google\Model
     return $this->unexpectedKprobeHandler;
   }
   /**
-   * @param bool
+   * True if unexpected processes in the scheduler run queue are present. Such
+   * processes are in the run queue, but not in the process task list.
+   *
+   * @param bool $unexpectedProcessesInRunqueue
    */
   public function setUnexpectedProcessesInRunqueue($unexpectedProcessesInRunqueue)
   {
@@ -155,7 +199,10 @@ class KernelRootkit extends \Google\Model
     return $this->unexpectedProcessesInRunqueue;
   }
   /**
-   * @param bool
+   * True if unexpected modifications of kernel read-only data memory are
+   * present.
+   *
+   * @param bool $unexpectedReadOnlyDataModification
    */
   public function setUnexpectedReadOnlyDataModification($unexpectedReadOnlyDataModification)
   {
@@ -169,7 +216,10 @@ class KernelRootkit extends \Google\Model
     return $this->unexpectedReadOnlyDataModification;
   }
   /**
-   * @param bool
+   * True if system call handlers that are are not in the expected kernel or
+   * module code regions are present.
+   *
+   * @param bool $unexpectedSystemCallHandler
    */
   public function setUnexpectedSystemCallHandler($unexpectedSystemCallHandler)
   {

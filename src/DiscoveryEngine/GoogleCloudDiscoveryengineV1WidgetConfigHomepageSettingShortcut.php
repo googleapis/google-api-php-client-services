@@ -20,18 +20,24 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1WidgetConfigHomepageSettingShortcut extends \Google\Model
 {
   /**
+   * Optional. Destination URL of shortcut.
+   *
    * @var string
    */
   public $destinationUri;
   protected $iconType = GoogleCloudDiscoveryengineV1WidgetConfigImage::class;
   protected $iconDataType = '';
   /**
+   * Optional. Title of the shortcut.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Optional. Destination URL of shortcut.
+   *
+   * @param string $destinationUri
    */
   public function setDestinationUri($destinationUri)
   {
@@ -45,7 +51,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigHomepageSettingShortcut extends \G
     return $this->destinationUri;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1WidgetConfigImage
+   * Optional. Icon URL of shortcut.
+   *
+   * @param GoogleCloudDiscoveryengineV1WidgetConfigImage $icon
    */
   public function setIcon(GoogleCloudDiscoveryengineV1WidgetConfigImage $icon)
   {
@@ -59,7 +67,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigHomepageSettingShortcut extends \G
     return $this->icon;
   }
   /**
-   * @param string
+   * Optional. Title of the shortcut.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

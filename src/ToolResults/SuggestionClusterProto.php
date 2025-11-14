@@ -19,8 +19,15 @@ namespace Google\Service\ToolResults;
 
 class SuggestionClusterProto extends \Google\Collection
 {
+  public const CATEGORY_unknownCategory = 'unknownCategory';
+  public const CATEGORY_contentLabeling = 'contentLabeling';
+  public const CATEGORY_touchTargetSize = 'touchTargetSize';
+  public const CATEGORY_lowContrast = 'lowContrast';
+  public const CATEGORY_implementation = 'implementation';
   protected $collection_key = 'suggestions';
   /**
+   * Category in which these types of suggestions should appear. Always set.
+   *
    * @var string
    */
   public $category;
@@ -28,21 +35,30 @@ class SuggestionClusterProto extends \Google\Collection
   protected $suggestionsDataType = 'array';
 
   /**
-   * @param string
+   * Category in which these types of suggestions should appear. Always set.
+   *
+   * Accepted values: unknownCategory, contentLabeling, touchTargetSize,
+   * lowContrast, implementation
+   *
+   * @param self::CATEGORY_* $category
    */
   public function setCategory($category)
   {
     $this->category = $category;
   }
   /**
-   * @return string
+   * @return self::CATEGORY_*
    */
   public function getCategory()
   {
     return $this->category;
   }
   /**
-   * @param SuggestionProto[]
+   * A sequence of suggestions. All of the suggestions within a cluster must
+   * have the same SuggestionPriority and belong to the same SuggestionCategory.
+   * Suggestions with the same screenshot URL should be adjacent.
+   *
+   * @param SuggestionProto[] $suggestions
    */
   public function setSuggestions($suggestions)
   {

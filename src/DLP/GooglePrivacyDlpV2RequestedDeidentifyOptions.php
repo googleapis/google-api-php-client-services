@@ -27,7 +27,10 @@ class GooglePrivacyDlpV2RequestedDeidentifyOptions extends \Google\Model
   protected $snapshotStructuredDeidentifyTemplateDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2DeidentifyTemplate
+   * Snapshot of the state of the `DeidentifyTemplate` from the Deidentify
+   * action at the time this job was run.
+   *
+   * @param GooglePrivacyDlpV2DeidentifyTemplate $snapshotDeidentifyTemplate
    */
   public function setSnapshotDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate $snapshotDeidentifyTemplate)
   {
@@ -41,7 +44,10 @@ class GooglePrivacyDlpV2RequestedDeidentifyOptions extends \Google\Model
     return $this->snapshotDeidentifyTemplate;
   }
   /**
-   * @param GooglePrivacyDlpV2DeidentifyTemplate
+   * Snapshot of the state of the image transformation `DeidentifyTemplate` from
+   * the `Deidentify` action at the time this job was run.
+   *
+   * @param GooglePrivacyDlpV2DeidentifyTemplate $snapshotImageRedactTemplate
    */
   public function setSnapshotImageRedactTemplate(GooglePrivacyDlpV2DeidentifyTemplate $snapshotImageRedactTemplate)
   {
@@ -55,7 +61,10 @@ class GooglePrivacyDlpV2RequestedDeidentifyOptions extends \Google\Model
     return $this->snapshotImageRedactTemplate;
   }
   /**
-   * @param GooglePrivacyDlpV2DeidentifyTemplate
+   * Snapshot of the state of the structured `DeidentifyTemplate` from the
+   * `Deidentify` action at the time this job was run.
+   *
+   * @param GooglePrivacyDlpV2DeidentifyTemplate $snapshotStructuredDeidentifyTemplate
    */
   public function setSnapshotStructuredDeidentifyTemplate(GooglePrivacyDlpV2DeidentifyTemplate $snapshotStructuredDeidentifyTemplate)
   {

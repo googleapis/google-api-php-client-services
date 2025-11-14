@@ -23,7 +23,9 @@ class GoogleCloudDatalabelingV1alpha1LabelImageSegmentationOperationMetadata ext
   protected $basicConfigDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1alpha1HumanAnnotationConfig
+   * Basic human annotation config.
+   *
+   * @param GoogleCloudDatalabelingV1alpha1HumanAnnotationConfig $basicConfig
    */
   public function setBasicConfig(GoogleCloudDatalabelingV1alpha1HumanAnnotationConfig $basicConfig)
   {

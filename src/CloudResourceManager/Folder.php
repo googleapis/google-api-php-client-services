@@ -19,54 +19,107 @@ namespace Google\Service\CloudResourceManager;
 
 class Folder extends \Google\Collection
 {
+  /**
+   * Unspecified state.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The normal and active state.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The folder has been marked for deletion by the user.
+   */
+  public const STATE_DELETE_REQUESTED = 'DELETE_REQUESTED';
   protected $collection_key = 'configuredCapabilities';
   /**
+   * Output only. Optional capabilities configured for this folder (via
+   * UpdateCapability API). Example: `folders/123/capabilities/app-management`.
+   *
    * @var string[]
    */
   public $configuredCapabilities;
   /**
+   * Output only. Timestamp when the folder was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Timestamp when the folder was requested to be deleted.
+   *
    * @var string
    */
   public $deleteTime;
   /**
+   * The folder's display name. A folder's display name must be unique amongst
+   * its siblings. For example, no two folders with the same parent can share
+   * the same display name. The display name must start and end with a letter or
+   * digit, may contain letters, digits, spaces, hyphens and underscores and can
+   * be no longer than 30 characters. This is captured by the regular
+   * expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. A checksum computed by the server based on the current value
+   * of the folder resource. This may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Output only. Management Project associated with this folder (if app-
+   * management capability is enabled). Example: `projects/google-mp-123` OUTPUT
+   * ONLY.
+   *
    * @var string
    */
   public $managementProject;
   /**
+   * Identifier. The resource name of the folder. Its format is
+   * `folders/{folder_id}`, for example: "folders/1234".
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The folder's parent's resource name. Updates to the folder's
+   * parent must be performed using MoveFolder.
+   *
    * @var string
    */
   public $parent;
   /**
+   * Output only. The lifecycle state of the folder. Updates to the state must
+   * be performed using DeleteFolder and UndeleteFolder.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * folder. Each item in the map must be expressed as " : ". For example:
+   * "123/environment" : "production", "123/costCenter" : "marketing" Note:
+   * Currently this field is in Preview.
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * Output only. Timestamp when the folder was last modified.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string[]
+   * Output only. Optional capabilities configured for this folder (via
+   * UpdateCapability API). Example: `folders/123/capabilities/app-management`.
+   *
+   * @param string[] $configuredCapabilities
    */
   public function setConfiguredCapabilities($configuredCapabilities)
   {
@@ -80,7 +133,9 @@ class Folder extends \Google\Collection
     return $this->configuredCapabilities;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the folder was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -94,7 +149,9 @@ class Folder extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the folder was requested to be deleted.
+   *
+   * @param string $deleteTime
    */
   public function setDeleteTime($deleteTime)
   {
@@ -108,7 +165,14 @@ class Folder extends \Google\Collection
     return $this->deleteTime;
   }
   /**
-   * @param string
+   * The folder's display name. A folder's display name must be unique amongst
+   * its siblings. For example, no two folders with the same parent can share
+   * the same display name. The display name must start and end with a letter or
+   * digit, may contain letters, digits, spaces, hyphens and underscores and can
+   * be no longer than 30 characters. This is captured by the regular
+   * expression: `[\p{L}\p{N}]([\p{L}\p{N}_- ]{0,28}[\p{L}\p{N}])?`.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -122,7 +186,11 @@ class Folder extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. A checksum computed by the server based on the current value
+   * of the folder resource. This may be sent on update and delete requests to
+   * ensure the client has an up-to-date value before proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -136,7 +204,11 @@ class Folder extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Output only. Management Project associated with this folder (if app-
+   * management capability is enabled). Example: `projects/google-mp-123` OUTPUT
+   * ONLY.
+   *
+   * @param string $managementProject
    */
   public function setManagementProject($managementProject)
   {
@@ -150,7 +222,10 @@ class Folder extends \Google\Collection
     return $this->managementProject;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the folder. Its format is
+   * `folders/{folder_id}`, for example: "folders/1234".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -164,7 +239,10 @@ class Folder extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. The folder's parent's resource name. Updates to the folder's
+   * parent must be performed using MoveFolder.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -178,21 +256,31 @@ class Folder extends \Google\Collection
     return $this->parent;
   }
   /**
-   * @param string
+   * Output only. The lifecycle state of the folder. Updates to the state must
+   * be performed using DeleteFolder and UndeleteFolder.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, DELETE_REQUESTED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string[]
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * folder. Each item in the map must be expressed as " : ". For example:
+   * "123/environment" : "production", "123/costCenter" : "marketing" Note:
+   * Currently this field is in Preview.
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -206,7 +294,9 @@ class Folder extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param string
+   * Output only. Timestamp when the folder was last modified.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

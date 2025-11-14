@@ -20,12 +20,16 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount extends \Google\Model
 {
   /**
+   * Email address of the service account.
+   *
    * @var string
    */
   public $email;
 
   /**
-   * @param string
+   * Email address of the service account.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {

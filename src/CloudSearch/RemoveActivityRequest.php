@@ -25,7 +25,9 @@ class RemoveActivityRequest extends \Google\Model
   protected $userActivityDataType = '';
 
   /**
-   * @param RequestOptions
+   * Request options, such as the search application and clientId.
+   *
+   * @param RequestOptions $requestOptions
    */
   public function setRequestOptions(RequestOptions $requestOptions)
   {
@@ -39,7 +41,9 @@ class RemoveActivityRequest extends \Google\Model
     return $this->requestOptions;
   }
   /**
-   * @param UserActivity
+   * User Activity containing the data to be deleted.
+   *
+   * @param UserActivity $userActivity
    */
   public function setUserActivity(UserActivity $userActivity)
   {

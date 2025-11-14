@@ -21,16 +21,24 @@ class EditGuaranteedOrderReadAccessorsResponse extends \Google\Collection
 {
   protected $collection_key = 'readAdvertiserIds';
   /**
+   * Whether all advertisers of read_write_partner_id have read access to the
+   * guaranteed order.
+   *
    * @var bool
    */
   public $readAccessInherited;
   /**
+   * The IDs of advertisers with read access to the guaranteed order.
+   *
    * @var string[]
    */
   public $readAdvertiserIds;
 
   /**
-   * @param bool
+   * Whether all advertisers of read_write_partner_id have read access to the
+   * guaranteed order.
+   *
+   * @param bool $readAccessInherited
    */
   public function setReadAccessInherited($readAccessInherited)
   {
@@ -44,7 +52,9 @@ class EditGuaranteedOrderReadAccessorsResponse extends \Google\Collection
     return $this->readAccessInherited;
   }
   /**
-   * @param string[]
+   * The IDs of advertisers with read access to the guaranteed order.
+   *
+   * @param string[] $readAdvertiserIds
    */
   public function setReadAdvertiserIds($readAdvertiserIds)
   {

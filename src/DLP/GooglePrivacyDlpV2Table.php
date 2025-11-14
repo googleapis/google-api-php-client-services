@@ -26,7 +26,9 @@ class GooglePrivacyDlpV2Table extends \Google\Collection
   protected $rowsDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2FieldId[]
+   * Headers of the table.
+   *
+   * @param GooglePrivacyDlpV2FieldId[] $headers
    */
   public function setHeaders($headers)
   {
@@ -40,7 +42,9 @@ class GooglePrivacyDlpV2Table extends \Google\Collection
     return $this->headers;
   }
   /**
-   * @param GooglePrivacyDlpV2Row[]
+   * Rows of the table.
+   *
+   * @param GooglePrivacyDlpV2Row[] $rows
    */
   public function setRows($rows)
   {

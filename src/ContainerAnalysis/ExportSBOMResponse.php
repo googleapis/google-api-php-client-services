@@ -20,12 +20,20 @@ namespace Google\Service\ContainerAnalysis;
 class ExportSBOMResponse extends \Google\Model
 {
   /**
+   * The name of the discovery occurrence in the form
+   * "projects/{project_id}/occurrences/{OCCURRENCE_ID} It can be used to track
+   * the progress of the SBOM export.
+   *
    * @var string
    */
   public $discoveryOccurrence;
 
   /**
-   * @param string
+   * The name of the discovery occurrence in the form
+   * "projects/{project_id}/occurrences/{OCCURRENCE_ID} It can be used to track
+   * the progress of the SBOM export.
+   *
+   * @param string $discoveryOccurrence
    */
   public function setDiscoveryOccurrence($discoveryOccurrence)
   {

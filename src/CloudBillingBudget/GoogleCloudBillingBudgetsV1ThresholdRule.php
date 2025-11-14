@@ -20,20 +20,49 @@ namespace Google\Service\CloudBillingBudget;
 class GoogleCloudBillingBudgetsV1ThresholdRule extends \Google\Model
 {
   /**
+   * Unspecified threshold basis.
+   */
+  public const SPEND_BASIS_BASIS_UNSPECIFIED = 'BASIS_UNSPECIFIED';
+  /**
+   * Use current spend as the basis for comparison against the threshold.
+   */
+  public const SPEND_BASIS_CURRENT_SPEND = 'CURRENT_SPEND';
+  /**
+   * Use forecasted spend for the period as the basis for comparison against the
+   * threshold. FORECASTED_SPEND can only be set when the budget's time period
+   * is a Filter.calendar_period. It cannot be set in combination with
+   * Filter.custom_period.
+   */
+  public const SPEND_BASIS_FORECASTED_SPEND = 'FORECASTED_SPEND';
+  /**
+   * Optional. The type of basis used to determine if spend has passed the
+   * threshold. Behavior defaults to CURRENT_SPEND if not set.
+   *
    * @var string
    */
   public $spendBasis;
+  /**
+   * Required. Send an alert when this threshold is exceeded. This is a
+   * 1.0-based percentage, so 0.5 = 50%. Validation: non-negative number.
+   *
+   * @var 
+   */
   public $thresholdPercent;
 
   /**
-   * @param string
+   * Optional. The type of basis used to determine if spend has passed the
+   * threshold. Behavior defaults to CURRENT_SPEND if not set.
+   *
+   * Accepted values: BASIS_UNSPECIFIED, CURRENT_SPEND, FORECASTED_SPEND
+   *
+   * @param self::SPEND_BASIS_* $spendBasis
    */
   public function setSpendBasis($spendBasis)
   {
     $this->spendBasis = $spendBasis;
   }
   /**
-   * @return string
+   * @return self::SPEND_BASIS_*
    */
   public function getSpendBasis()
   {

@@ -20,14 +20,23 @@ namespace Google\Service\CloudControlsPartnerService;
 class AccessApprovalRequest extends \Google\Model
 {
   /**
+   * Identifier. Format: `organizations/{organization}/locations/{location}/cust
+   * omers/{customer}/workloads/{workload}/accessApprovalRequests/{access_approv
+   * al_request}`
+   *
    * @var string
    */
   public $name;
   /**
+   * The time at which approval was requested.
+   *
    * @var string
    */
   public $requestTime;
   /**
+   * The requested expiration for the approval. If the request is approved,
+   * access will be granted from the time of approval until the expiration time.
+   *
    * @var string
    */
   public $requestedExpirationTime;
@@ -35,7 +44,11 @@ class AccessApprovalRequest extends \Google\Model
   protected $requestedReasonDataType = '';
 
   /**
-   * @param string
+   * Identifier. Format: `organizations/{organization}/locations/{location}/cust
+   * omers/{customer}/workloads/{workload}/accessApprovalRequests/{access_approv
+   * al_request}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -49,7 +62,9 @@ class AccessApprovalRequest extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The time at which approval was requested.
+   *
+   * @param string $requestTime
    */
   public function setRequestTime($requestTime)
   {
@@ -63,7 +78,10 @@ class AccessApprovalRequest extends \Google\Model
     return $this->requestTime;
   }
   /**
-   * @param string
+   * The requested expiration for the approval. If the request is approved,
+   * access will be granted from the time of approval until the expiration time.
+   *
+   * @param string $requestedExpirationTime
    */
   public function setRequestedExpirationTime($requestedExpirationTime)
   {
@@ -77,7 +95,9 @@ class AccessApprovalRequest extends \Google\Model
     return $this->requestedExpirationTime;
   }
   /**
-   * @param AccessReason
+   * The justification for which approval is being requested.
+   *
+   * @param AccessReason $requestedReason
    */
   public function setRequestedReason(AccessReason $requestedReason)
   {

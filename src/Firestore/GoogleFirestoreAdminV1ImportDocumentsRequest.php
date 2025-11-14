@@ -21,8 +21,9 @@ class GoogleFirestoreAdminV1ImportDocumentsRequest extends \Google\Collection
 {
   protected $collection_key = 'namespaceIds';
   /**
-   * Which collection IDs to import. Unspecified means all collections included
-   * in the import. Each collection ID in this list must be unique.
+   * IDs of the collection groups to import. Unspecified means all collection
+   * groups that were included in the export. Each collection group in this list
+   * must be unique.
    *
    * @var string[]
    */
@@ -47,8 +48,9 @@ class GoogleFirestoreAdminV1ImportDocumentsRequest extends \Google\Collection
   public $namespaceIds;
 
   /**
-   * Which collection IDs to import. Unspecified means all collections included
-   * in the import. Each collection ID in this list must be unique.
+   * IDs of the collection groups to import. Unspecified means all collection
+   * groups that were included in the export. Each collection group in this list
+   * must be unique.
    *
    * @param string[] $collectionIds
    */

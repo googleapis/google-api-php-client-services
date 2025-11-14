@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1AssistantToolList extends \Google\Collection
   protected $toolInfoDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistantToolInfo[]
+   * The list of tools with corresponding tool information.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistantToolInfo[] $toolInfo
    */
   public function setToolInfo($toolInfo)
   {

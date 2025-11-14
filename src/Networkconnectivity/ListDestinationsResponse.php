@@ -23,16 +23,22 @@ class ListDestinationsResponse extends \Google\Collection
   protected $destinationsType = Destination::class;
   protected $destinationsDataType = 'array';
   /**
+   * The next page token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Destination[]
+   * The list of `Destination` resources to be listed.
+   *
+   * @param Destination[] $destinations
    */
   public function setDestinations($destinations)
   {
@@ -46,7 +52,9 @@ class ListDestinationsResponse extends \Google\Collection
     return $this->destinations;
   }
   /**
-   * @param string
+   * The next page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListDestinationsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

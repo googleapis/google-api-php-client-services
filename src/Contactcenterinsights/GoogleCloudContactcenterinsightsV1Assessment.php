@@ -19,27 +19,58 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1Assessment extends \Google\Model
 {
+  /**
+   * The state is unspecified. This value should not be used.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The default state of all new assessments.
+   */
+  public const STATE_DRAFT = 'DRAFT';
+  /**
+   * The assessment has been published.
+   */
+  public const STATE_PUBLISHED = 'PUBLISHED';
+  /**
+   * The assessment has been appealed.
+   */
+  public const STATE_APPEALED = 'APPEALED';
+  /**
+   * The assessment has been finalized.
+   */
+  public const STATE_FINALIZED = 'FINALIZED';
   protected $agentInfoType = GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo::class;
   protected $agentInfoDataType = '';
   /**
+   * Output only. The time at which the assessment was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Identifier. The resource name of the assessment. Format: projects/{project}
+   * /locations/{location}/conversations/{conversation}/assessments/{assessment}
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The state of the assessment.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time at which the assessment was last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo
+   * Information about the agent the assessment is for.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo $agentInfo
    */
   public function setAgentInfo(GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo $agentInfo)
   {
@@ -53,7 +84,9 @@ class GoogleCloudContactcenterinsightsV1Assessment extends \Google\Model
     return $this->agentInfo;
   }
   /**
-   * @param string
+   * Output only. The time at which the assessment was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -67,7 +100,10 @@ class GoogleCloudContactcenterinsightsV1Assessment extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the assessment. Format: projects/{project}
+   * /locations/{location}/conversations/{conversation}/assessments/{assessment}
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -81,21 +117,27 @@ class GoogleCloudContactcenterinsightsV1Assessment extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The state of the assessment.
+   *
+   * Accepted values: STATE_UNSPECIFIED, DRAFT, PUBLISHED, APPEALED, FINALIZED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time at which the assessment was last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

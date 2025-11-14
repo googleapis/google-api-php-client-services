@@ -25,7 +25,10 @@ class SubjectConfig extends \Google\Model
   protected $subjectAltNameDataType = '';
 
   /**
-   * @param Subject
+   * Optional. Contains distinguished name fields such as the common name,
+   * location and organization.
+   *
+   * @param Subject $subject
    */
   public function setSubject(Subject $subject)
   {
@@ -39,7 +42,9 @@ class SubjectConfig extends \Google\Model
     return $this->subject;
   }
   /**
-   * @param SubjectAltNames
+   * Optional. The subject alternative name fields.
+   *
+   * @param SubjectAltNames $subjectAltName
    */
   public function setSubjectAltName(SubjectAltNames $subjectAltName)
   {

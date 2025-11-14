@@ -20,12 +20,20 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesKeywordView extends \Google\Model
 {
   /**
+   * Output only. The resource name of the keyword view. Keyword view resource
+   * names have the form:
+   * `customers/{customer_id}/keywordViews/{ad_group_id}~{criterion_id}`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Output only. The resource name of the keyword view. Keyword view resource
+   * names have the form:
+   * `customers/{customer_id}/keywordViews/{ad_group_id}~{criterion_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {
