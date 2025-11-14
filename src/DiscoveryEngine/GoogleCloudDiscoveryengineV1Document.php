@@ -24,42 +24,74 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
   protected $contentType = GoogleCloudDiscoveryengineV1DocumentContent::class;
   protected $contentDataType = '';
   /**
+   * Output only. This field is OUTPUT_ONLY. It contains derived data that are
+   * not in the original input document.
+   *
    * @var array[]
    */
   public $derivedStructData;
   /**
+   * Immutable. The identifier of the document. Id should conform to
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+   * limit of 128 characters.
+   *
    * @var string
    */
   public $id;
   protected $indexStatusType = GoogleCloudDiscoveryengineV1DocumentIndexStatus::class;
   protected $indexStatusDataType = '';
   /**
+   * Output only. The last time the document was indexed. If this field is set,
+   * the document could be returned in search results. This field is
+   * OUTPUT_ONLY. If this field is not populated, it means the document has
+   * never been indexed.
+   *
    * @var string
    */
   public $indexTime;
   /**
+   * The JSON string representation of the document. It should conform to the
+   * registered Schema or an `INVALID_ARGUMENT` error is thrown.
+   *
    * @var string
    */
   public $jsonData;
   /**
+   * Immutable. The full resource name of the document. Format: `projects/{proje
+   * ct}/locations/{location}/collections/{collection}/dataStores/{data_store}/b
+   * ranches/{branch}/documents/{document_id}`. This field must be a UTF-8
+   * encoded string with a length limit of 1024 characters.
+   *
    * @var string
    */
   public $name;
   /**
+   * The identifier of the parent document. Currently supports at most two level
+   * document hierarchy. Id should conform to
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+   * limit of 63 characters.
+   *
    * @var string
    */
   public $parentDocumentId;
   /**
+   * The identifier of the schema located in the same data store.
+   *
    * @var string
    */
   public $schemaId;
   /**
+   * The structured JSON data for the document. It should conform to the
+   * registered Schema or an `INVALID_ARGUMENT` error is thrown.
+   *
    * @var array[]
    */
   public $structData;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1DocumentAclInfo
+   * Access control information for the document.
+   *
+   * @param GoogleCloudDiscoveryengineV1DocumentAclInfo $aclInfo
    */
   public function setAclInfo(GoogleCloudDiscoveryengineV1DocumentAclInfo $aclInfo)
   {
@@ -73,7 +105,10 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->aclInfo;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1DocumentContent
+   * The unstructured data linked to this document. Content can only be set and
+   * must be set if this document is under a `CONTENT_REQUIRED` data store.
+   *
+   * @param GoogleCloudDiscoveryengineV1DocumentContent $content
    */
   public function setContent(GoogleCloudDiscoveryengineV1DocumentContent $content)
   {
@@ -87,7 +122,10 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->content;
   }
   /**
-   * @param array[]
+   * Output only. This field is OUTPUT_ONLY. It contains derived data that are
+   * not in the original input document.
+   *
+   * @param array[] $derivedStructData
    */
   public function setDerivedStructData($derivedStructData)
   {
@@ -101,7 +139,11 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->derivedStructData;
   }
   /**
-   * @param string
+   * Immutable. The identifier of the document. Id should conform to
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+   * limit of 128 characters.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -115,7 +157,13 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->id;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1DocumentIndexStatus
+   * Output only. The index status of the document. * If document is indexed
+   * successfully, the index_time field is populated. * Otherwise, if document
+   * is not indexed due to errors, the error_samples field is populated. *
+   * Otherwise, if document's index is in progress, the pending_message field is
+   * populated.
+   *
+   * @param GoogleCloudDiscoveryengineV1DocumentIndexStatus $indexStatus
    */
   public function setIndexStatus(GoogleCloudDiscoveryengineV1DocumentIndexStatus $indexStatus)
   {
@@ -129,7 +177,12 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->indexStatus;
   }
   /**
-   * @param string
+   * Output only. The last time the document was indexed. If this field is set,
+   * the document could be returned in search results. This field is
+   * OUTPUT_ONLY. If this field is not populated, it means the document has
+   * never been indexed.
+   *
+   * @param string $indexTime
    */
   public function setIndexTime($indexTime)
   {
@@ -143,7 +196,10 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->indexTime;
   }
   /**
-   * @param string
+   * The JSON string representation of the document. It should conform to the
+   * registered Schema or an `INVALID_ARGUMENT` error is thrown.
+   *
+   * @param string $jsonData
    */
   public function setJsonData($jsonData)
   {
@@ -157,7 +213,12 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->jsonData;
   }
   /**
-   * @param string
+   * Immutable. The full resource name of the document. Format: `projects/{proje
+   * ct}/locations/{location}/collections/{collection}/dataStores/{data_store}/b
+   * ranches/{branch}/documents/{document_id}`. This field must be a UTF-8
+   * encoded string with a length limit of 1024 characters.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -171,7 +232,12 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The identifier of the parent document. Currently supports at most two level
+   * document hierarchy. Id should conform to
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length
+   * limit of 63 characters.
+   *
+   * @param string $parentDocumentId
    */
   public function setParentDocumentId($parentDocumentId)
   {
@@ -185,7 +251,9 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->parentDocumentId;
   }
   /**
-   * @param string
+   * The identifier of the schema located in the same data store.
+   *
+   * @param string $schemaId
    */
   public function setSchemaId($schemaId)
   {
@@ -199,7 +267,10 @@ class GoogleCloudDiscoveryengineV1Document extends \Google\Model
     return $this->schemaId;
   }
   /**
-   * @param array[]
+   * The structured JSON data for the document. It should conform to the
+   * registered Schema or an `INVALID_ARGUMENT` error is thrown.
+   *
+   * @param array[] $structData
    */
   public function setStructData($structData)
   {

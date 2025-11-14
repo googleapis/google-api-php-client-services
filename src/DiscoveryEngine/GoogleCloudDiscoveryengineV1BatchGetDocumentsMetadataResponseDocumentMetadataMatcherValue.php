@@ -20,16 +20,24 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue extends \Google\Model
 {
   /**
+   * Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStor
+   * es/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
+   *
    * @var string
    */
   public $fhirResource;
   /**
+   * If match by URI, the URI of the Document.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * Format: projects/{project}/locations/{location}/datasets/{dataset}/fhirStor
+   * es/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
+   *
+   * @param string $fhirResource
    */
   public function setFhirResource($fhirResource)
   {
@@ -43,7 +51,9 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetad
     return $this->fhirResource;
   }
   /**
-   * @param string
+   * If match by URI, the URI of the Document.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

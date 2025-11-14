@@ -20,12 +20,20 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ControlRedirectAction extends \Google\Model
 {
   /**
+   * Required. The URI to which the shopper will be redirected. Required. URI
+   * must have length equal or less than 2000 characters. Otherwise an INVALID
+   * ARGUMENT error is thrown.
+   *
    * @var string
    */
   public $redirectUri;
 
   /**
-   * @param string
+   * Required. The URI to which the shopper will be redirected. Required. URI
+   * must have length equal or less than 2000 characters. Otherwise an INVALID
+   * ARGUMENT error is thrown.
+   *
+   * @param string $redirectUri
    */
   public function setRedirectUri($redirectUri)
   {

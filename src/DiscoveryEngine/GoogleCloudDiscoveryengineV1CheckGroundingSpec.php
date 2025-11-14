@@ -19,8 +19,19 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1CheckGroundingSpec extends \Google\Model
 {
+  /**
+   * The threshold (in [0,1]) used for determining whether a fact must be cited
+   * for a claim in the answer candidate. Choosing a higher threshold will lead
+   * to fewer but very strong citations, while choosing a lower threshold may
+   * lead to more but somewhat weaker citations. If unset, the threshold will
+   * default to 0.6.
+   *
+   * @var 
+   */
   public $citationThreshold;
   /**
+   * The control flag that enables claim-level grounding score in the response.
+   *
    * @var bool
    */
   public $enableClaimLevelScore;
@@ -34,7 +45,9 @@ class GoogleCloudDiscoveryengineV1CheckGroundingSpec extends \Google\Model
     return $this->citationThreshold;
   }
   /**
-   * @param bool
+   * The control flag that enables claim-level grounding score in the response.
+   *
+   * @param bool $enableClaimLevelScore
    */
   public function setEnableClaimLevelScore($enableClaimLevelScore)
   {
