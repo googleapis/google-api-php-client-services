@@ -20,16 +20,22 @@ namespace Google\Service\Appengine;
 class Library extends \Google\Model
 {
   /**
+   * Name of the library. Example: "django".
+   *
    * @var string
    */
   public $name;
   /**
+   * Version of the library to select, or "latest".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Name of the library. Example: "django".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +49,9 @@ class Library extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Version of the library to select, or "latest".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

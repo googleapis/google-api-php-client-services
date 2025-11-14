@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponse extends \Goo
   protected $documentsMetadataDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadata[]
+   * The metadata of the Documents.
+   *
+   * @param GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadata[] $documentsMetadata
    */
   public function setDocumentsMetadata($documentsMetadata)
   {

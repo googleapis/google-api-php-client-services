@@ -21,6 +21,13 @@ class ListUptimeCheckIpsResponse extends \Google\Collection
 {
   protected $collection_key = 'uptimeCheckIps';
   /**
+   * This field represents the pagination token to retrieve the next page of
+   * results. If the value is empty, it means no further results for the
+   * request. To retrieve the next page of results, the value of the
+   * next_page_token is passed to the subsequent List method call (in the
+   * request message's page_token field). NOTE: this field is not yet
+   * implemented
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +35,14 @@ class ListUptimeCheckIpsResponse extends \Google\Collection
   protected $uptimeCheckIpsDataType = 'array';
 
   /**
-   * @param string
+   * This field represents the pagination token to retrieve the next page of
+   * results. If the value is empty, it means no further results for the
+   * request. To retrieve the next page of results, the value of the
+   * next_page_token is passed to the subsequent List method call (in the
+   * request message's page_token field). NOTE: this field is not yet
+   * implemented
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +56,10 @@ class ListUptimeCheckIpsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param UptimeCheckIp[]
+   * The returned list of IP addresses (including region and location) that the
+   * checkers run from.
+   *
+   * @param UptimeCheckIp[] $uptimeCheckIps
    */
   public function setUptimeCheckIps($uptimeCheckIps)
   {

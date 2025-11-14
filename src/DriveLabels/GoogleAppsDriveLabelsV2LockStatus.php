@@ -20,12 +20,22 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2LockStatus extends \Google\Model
 {
   /**
+   * Output only. Indicates whether this label component is the (direct) target
+   * of a label lock. A label component can be implicitly locked even if it's
+   * not the direct target of a label lock, in which case this field is set to
+   * false.
+   *
    * @var bool
    */
   public $locked;
 
   /**
-   * @param bool
+   * Output only. Indicates whether this label component is the (direct) target
+   * of a label lock. A label component can be implicitly locked even if it's
+   * not the direct target of a label lock, in which case this field is set to
+   * false.
+   *
+   * @param bool $locked
    */
   public function setLocked($locked)
   {

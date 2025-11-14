@@ -29,7 +29,9 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec extends \Google\M
   protected $webGroundingSpecDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecImageGenerationSpec
+   * Optional. Specification of the image generation tool.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecImageGenerationSpec $imageGenerationSpec
    */
   public function setImageGenerationSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecImageGenerationSpec $imageGenerationSpec)
   {
@@ -43,7 +45,9 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec extends \Google\M
     return $this->imageGenerationSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecVertexAiSearchSpec
+   * Optional. Specification of the Vertex AI Search tool.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecVertexAiSearchSpec $vertexAiSearchSpec
    */
   public function setVertexAiSearchSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecVertexAiSearchSpec $vertexAiSearchSpec)
   {
@@ -57,7 +61,9 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec extends \Google\M
     return $this->vertexAiSearchSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecVideoGenerationSpec
+   * Optional. Specification of the video generation tool.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecVideoGenerationSpec $videoGenerationSpec
    */
   public function setVideoGenerationSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecVideoGenerationSpec $videoGenerationSpec)
   {
@@ -71,7 +77,12 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec extends \Google\M
     return $this->videoGenerationSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecWebGroundingSpec
+   * Optional. Specification of the web grounding tool. If field is present,
+   * enables grounding with web search. Works only if
+   * Assistant.web_grounding_type is WEB_GROUNDING_TYPE_GOOGLE_SEARCH or
+   * WEB_GROUNDING_TYPE_ENTERPRISE_WEB_SEARCH.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecWebGroundingSpec $webGroundingSpec
    */
   public function setWebGroundingSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpecWebGroundingSpec $webGroundingSpec)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\Dataflow;
 class MountedDataDisk extends \Google\Model
 {
   /**
+   * The name of the data disk. This name is local to the Google Cloud Platform
+   * project and uniquely identifies the disk within that project, for example
+   * "myproject-1014-104817-4c2-harness-0-disk-1".
+   *
    * @var string
    */
   public $dataDisk;
 
   /**
-   * @param string
+   * The name of the data disk. This name is local to the Google Cloud Platform
+   * project and uniquely identifies the disk within that project, for example
+   * "myproject-1014-104817-4c2-harness-0-disk-1".
+   *
+   * @param string $dataDisk
    */
   public function setDataDisk($dataDisk)
   {

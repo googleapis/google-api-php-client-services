@@ -20,12 +20,16 @@ namespace Google\Service\CloudSearch;
 class QueryActivity extends \Google\Model
 {
   /**
+   * User input query to be logged/removed.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param string
+   * User input query to be logged/removed.
+   *
+   * @param string $query
    */
   public function setQuery($query)
   {

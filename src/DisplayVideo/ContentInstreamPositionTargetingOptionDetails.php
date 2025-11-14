@@ -20,19 +20,49 @@ namespace Google\Service\DisplayVideo;
 class ContentInstreamPositionTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Content instream position is not specified in this version. This enum is a
+   * place holder for a default value and does not represent a real in stream ad
+   * position.
+   */
+  public const CONTENT_INSTREAM_POSITION_CONTENT_INSTREAM_POSITION_UNSPECIFIED = 'CONTENT_INSTREAM_POSITION_UNSPECIFIED';
+  /**
+   * Ads that play before streaming content.
+   */
+  public const CONTENT_INSTREAM_POSITION_CONTENT_INSTREAM_POSITION_PRE_ROLL = 'CONTENT_INSTREAM_POSITION_PRE_ROLL';
+  /**
+   * Ads that play between the beginning and end of streaming content.
+   */
+  public const CONTENT_INSTREAM_POSITION_CONTENT_INSTREAM_POSITION_MID_ROLL = 'CONTENT_INSTREAM_POSITION_MID_ROLL';
+  /**
+   * Ads that play at the end of streaming content.
+   */
+  public const CONTENT_INSTREAM_POSITION_CONTENT_INSTREAM_POSITION_POST_ROLL = 'CONTENT_INSTREAM_POSITION_POST_ROLL';
+  /**
+   * Ads instream position is unknown.
+   */
+  public const CONTENT_INSTREAM_POSITION_CONTENT_INSTREAM_POSITION_UNKNOWN = 'CONTENT_INSTREAM_POSITION_UNKNOWN';
+  /**
+   * Output only. The content instream position.
+   *
    * @var string
    */
   public $contentInstreamPosition;
 
   /**
-   * @param string
+   * Output only. The content instream position.
+   *
+   * Accepted values: CONTENT_INSTREAM_POSITION_UNSPECIFIED,
+   * CONTENT_INSTREAM_POSITION_PRE_ROLL, CONTENT_INSTREAM_POSITION_MID_ROLL,
+   * CONTENT_INSTREAM_POSITION_POST_ROLL, CONTENT_INSTREAM_POSITION_UNKNOWN
+   *
+   * @param self::CONTENT_INSTREAM_POSITION_* $contentInstreamPosition
    */
   public function setContentInstreamPosition($contentInstreamPosition)
   {
     $this->contentInstreamPosition = $contentInstreamPosition;
   }
   /**
-   * @return string
+   * @return self::CONTENT_INSTREAM_POSITION_*
    */
   public function getContentInstreamPosition()
   {

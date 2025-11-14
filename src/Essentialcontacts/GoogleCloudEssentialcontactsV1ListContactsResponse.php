@@ -23,12 +23,19 @@ class GoogleCloudEssentialcontactsV1ListContactsResponse extends \Google\Collect
   protected $contactsType = GoogleCloudEssentialcontactsV1Contact::class;
   protected $contactsDataType = 'array';
   /**
+   * If there are more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token` and the
+   * rest of the parameters the same as the original request.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudEssentialcontactsV1Contact[]
+   * The contacts for the specified resource.
+   *
+   * @param GoogleCloudEssentialcontactsV1Contact[] $contacts
    */
   public function setContacts($contacts)
   {
@@ -42,7 +49,12 @@ class GoogleCloudEssentialcontactsV1ListContactsResponse extends \Google\Collect
     return $this->contacts;
   }
   /**
-   * @param string
+   * If there are more results than those appearing in this response, then
+   * `next_page_token` is included. To get the next set of results, call this
+   * method again using the value of `next_page_token` as `page_token` and the
+   * rest of the parameters the same as the original request.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

@@ -21,20 +21,41 @@ class PricingInfo extends \Google\Model
 {
   protected $aggregationInfoType = AggregationInfo::class;
   protected $aggregationInfoDataType = '';
+  /**
+   * Conversion rate used for currency conversion, from USD to the currency
+   * specified in the request. This includes any surcharge collected for billing
+   * in non USD currency. If a currency is not specified in the request this
+   * defaults to 1.0. Example: USD * currency_conversion_rate = JPY
+   *
+   * @var 
+   */
   public $currencyConversionRate;
   /**
+   * The timestamp from which this pricing was effective within the requested
+   * time range. This is guaranteed to be greater than or equal to the
+   * start_time field in the request and less than the end_time field in the
+   * request. If a time range was not specified in the request this field will
+   * be equivalent to a time within the last 12 hours, indicating the latest
+   * pricing info.
+   *
    * @var string
    */
   public $effectiveTime;
   protected $pricingExpressionType = PricingExpression::class;
   protected $pricingExpressionDataType = '';
   /**
+   * An optional human readable summary of the pricing information, has a
+   * maximum length of 256 characters.
+   *
    * @var string
    */
   public $summary;
 
   /**
-   * @param AggregationInfo
+   * Aggregation Info. This can be left unspecified if the pricing expression
+   * doesn't require aggregation.
+   *
+   * @param AggregationInfo $aggregationInfo
    */
   public function setAggregationInfo(AggregationInfo $aggregationInfo)
   {
@@ -56,7 +77,14 @@ class PricingInfo extends \Google\Model
     return $this->currencyConversionRate;
   }
   /**
-   * @param string
+   * The timestamp from which this pricing was effective within the requested
+   * time range. This is guaranteed to be greater than or equal to the
+   * start_time field in the request and less than the end_time field in the
+   * request. If a time range was not specified in the request this field will
+   * be equivalent to a time within the last 12 hours, indicating the latest
+   * pricing info.
+   *
+   * @param string $effectiveTime
    */
   public function setEffectiveTime($effectiveTime)
   {
@@ -70,7 +98,9 @@ class PricingInfo extends \Google\Model
     return $this->effectiveTime;
   }
   /**
-   * @param PricingExpression
+   * Expresses the pricing formula. See `PricingExpression` for an example.
+   *
+   * @param PricingExpression $pricingExpression
    */
   public function setPricingExpression(PricingExpression $pricingExpression)
   {
@@ -84,7 +114,10 @@ class PricingInfo extends \Google\Model
     return $this->pricingExpression;
   }
   /**
-   * @param string
+   * An optional human readable summary of the pricing information, has a
+   * maximum length of 256 characters.
+   *
+   * @param string $summary
    */
   public function setSummary($summary)
   {

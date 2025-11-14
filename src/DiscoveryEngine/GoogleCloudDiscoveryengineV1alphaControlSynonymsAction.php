@@ -21,12 +21,18 @@ class GoogleCloudDiscoveryengineV1alphaControlSynonymsAction extends \Google\Col
 {
   protected $collection_key = 'synonyms';
   /**
+   * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at
+   * least 2 synonyms. Otherwise an INVALID ARGUMENT error is thrown.
+   *
    * @var string[]
    */
   public $synonyms;
 
   /**
-   * @param string[]
+   * Defines a set of synonyms. Can specify up to 100 synonyms. Must specify at
+   * least 2 synonyms. Otherwise an INVALID ARGUMENT error is thrown.
+   *
+   * @param string[] $synonyms
    */
   public function setSynonyms($synonyms)
   {

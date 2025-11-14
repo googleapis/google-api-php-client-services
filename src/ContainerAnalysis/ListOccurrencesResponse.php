@@ -21,18 +21,30 @@ class ListOccurrencesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * The next pagination token in the list response. It should be used as
+   * `page_token` for the following request. An empty value means no more
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $occurrencesType = Occurrence::class;
   protected $occurrencesDataType = 'array';
   /**
+   * Unordered list. Unreachable regions. Populated for requests from the global
+   * region when `return_partial_success` is set. Format:
+   * `projects/[PROJECT_ID]/locations/[LOCATION]`
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * The next pagination token in the list response. It should be used as
+   * `page_token` for the following request. An empty value means no more
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +58,9 @@ class ListOccurrencesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Occurrence[]
+   * The occurrences requested.
+   *
+   * @param Occurrence[] $occurrences
    */
   public function setOccurrences($occurrences)
   {
@@ -60,7 +74,11 @@ class ListOccurrencesResponse extends \Google\Collection
     return $this->occurrences;
   }
   /**
-   * @param string[]
+   * Unordered list. Unreachable regions. Populated for requests from the global
+   * region when `return_partial_success` is set. Format:
+   * `projects/[PROJECT_ID]/locations/[LOCATION]`
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -20,12 +20,20 @@ namespace Google\Service\ToolResults;
 class ToolExitCode extends \Google\Model
 {
   /**
+   * Tool execution exit code. A value of 0 means that the execution was
+   * successful. - In response: always set - In create/update request: always
+   * set
+   *
    * @var int
    */
   public $number;
 
   /**
-   * @param int
+   * Tool execution exit code. A value of 0 means that the execution was
+   * successful. - In response: always set - In create/update request: always
+   * set
+   *
+   * @param int $number
    */
   public function setNumber($number)
   {

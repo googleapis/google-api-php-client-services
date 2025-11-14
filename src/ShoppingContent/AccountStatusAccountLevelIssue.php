@@ -20,36 +20,54 @@ namespace Google\Service\ShoppingContent;
 class AccountStatusAccountLevelIssue extends \Google\Model
 {
   /**
+   * Country for which this issue is reported.
+   *
    * @var string
    */
   public $country;
   /**
+   * The destination the issue applies to. If this field is empty then the issue
+   * applies to all available destinations.
+   *
    * @var string
    */
   public $destination;
   /**
+   * Additional details about the issue.
+   *
    * @var string
    */
   public $detail;
   /**
+   * The URL of a web page to help resolving this issue.
+   *
    * @var string
    */
   public $documentation;
   /**
+   * Issue identifier.
+   *
    * @var string
    */
   public $id;
   /**
+   * Severity of the issue. Acceptable values are: - "`critical`" - "`error`" -
+   * "`suggestion`"
+   *
    * @var string
    */
   public $severity;
   /**
+   * Short description of the issue.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Country for which this issue is reported.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -63,7 +81,10 @@ class AccountStatusAccountLevelIssue extends \Google\Model
     return $this->country;
   }
   /**
-   * @param string
+   * The destination the issue applies to. If this field is empty then the issue
+   * applies to all available destinations.
+   *
+   * @param string $destination
    */
   public function setDestination($destination)
   {
@@ -77,7 +98,9 @@ class AccountStatusAccountLevelIssue extends \Google\Model
     return $this->destination;
   }
   /**
-   * @param string
+   * Additional details about the issue.
+   *
+   * @param string $detail
    */
   public function setDetail($detail)
   {
@@ -91,7 +114,9 @@ class AccountStatusAccountLevelIssue extends \Google\Model
     return $this->detail;
   }
   /**
-   * @param string
+   * The URL of a web page to help resolving this issue.
+   *
+   * @param string $documentation
    */
   public function setDocumentation($documentation)
   {
@@ -105,7 +130,9 @@ class AccountStatusAccountLevelIssue extends \Google\Model
     return $this->documentation;
   }
   /**
-   * @param string
+   * Issue identifier.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -119,7 +146,10 @@ class AccountStatusAccountLevelIssue extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Severity of the issue. Acceptable values are: - "`critical`" - "`error`" -
+   * "`suggestion`"
+   *
+   * @param string $severity
    */
   public function setSeverity($severity)
   {
@@ -133,7 +163,9 @@ class AccountStatusAccountLevelIssue extends \Google\Model
     return $this->severity;
   }
   /**
-   * @param string
+   * Short description of the issue.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

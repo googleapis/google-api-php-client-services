@@ -23,12 +23,16 @@ class ListLocationsResponse extends \Google\Collection
   protected $locationsType = Location::class;
   protected $locationsDataType = 'array';
   /**
+   * The standard List next-page token.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Location[]
+   * A list of locations that matches the specified filter in the request.
+   *
+   * @param Location[] $locations
    */
   public function setLocations($locations)
   {
@@ -42,7 +46,9 @@ class ListLocationsResponse extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param string
+   * The standard List next-page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

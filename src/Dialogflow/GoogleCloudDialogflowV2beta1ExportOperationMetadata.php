@@ -23,7 +23,9 @@ class GoogleCloudDialogflowV2beta1ExportOperationMetadata extends \Google\Model
   protected $exportedGcsDestinationDataType = '';
 
   /**
-   * @param GoogleCloudDialogflowV2beta1GcsDestination
+   * Cloud Storage file path of the exported data.
+   *
+   * @param GoogleCloudDialogflowV2beta1GcsDestination $exportedGcsDestination
    */
   public function setExportedGcsDestination(GoogleCloudDialogflowV2beta1GcsDestination $exportedGcsDestination)
   {

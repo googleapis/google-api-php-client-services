@@ -24,7 +24,9 @@ class GoogleCloudDiscoveryengineV1betaImportIdentityMappingsResponse extends \Go
   protected $errorSamplesDataType = 'array';
 
   /**
-   * @param GoogleRpcStatus[]
+   * A sample of errors encountered while processing the request.
+   *
+   * @param GoogleRpcStatus[] $errorSamples
    */
   public function setErrorSamples($errorSamples)
   {

@@ -23,7 +23,10 @@ class Transport extends \Google\Model
   protected $pubsubDataType = '';
 
   /**
-   * @param Pubsub
+   * The Pub/Sub topic and subscription used by Eventarc as a transport
+   * intermediary.
+   *
+   * @param Pubsub $pubsub
    */
   public function setPubsub(Pubsub $pubsub)
   {

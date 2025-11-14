@@ -25,7 +25,12 @@ class SuggestedPositionedObjectProperties extends \Google\Model
   protected $positionedObjectPropertiesSuggestionStateDataType = '';
 
   /**
-   * @param PositionedObjectProperties
+   * A PositionedObjectProperties that only includes the changes made in this
+   * suggestion. This can be used along with the
+   * positioned_object_properties_suggestion_state to see which fields have
+   * changed and their new values.
+   *
+   * @param PositionedObjectProperties $positionedObjectProperties
    */
   public function setPositionedObjectProperties(PositionedObjectProperties $positionedObjectProperties)
   {
@@ -39,7 +44,10 @@ class SuggestedPositionedObjectProperties extends \Google\Model
     return $this->positionedObjectProperties;
   }
   /**
-   * @param PositionedObjectPropertiesSuggestionState
+   * A mask that indicates which of the fields on the base
+   * PositionedObjectProperties have been changed in this suggestion.
+   *
+   * @param PositionedObjectPropertiesSuggestionState $positionedObjectPropertiesSuggestionState
    */
   public function setPositionedObjectPropertiesSuggestionState(PositionedObjectPropertiesSuggestionState $positionedObjectPropertiesSuggestionState)
   {

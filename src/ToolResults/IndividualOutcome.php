@@ -20,6 +20,39 @@ namespace Google\Service\ToolResults;
 class IndividualOutcome extends \Google\Model
 {
   /**
+   * Do not use. For proto versioning only.
+   */
+  public const OUTCOME_SUMMARY_unset = 'unset';
+  /**
+   * The test matrix run was successful, for instance: - All the test cases
+   * passed. - Robo did not detect a crash of the application under test.
+   */
+  public const OUTCOME_SUMMARY_success = 'success';
+  /**
+   * A run failed, for instance: - One or more test case failed. - A test timed
+   * out. - The application under test crashed.
+   */
+  public const OUTCOME_SUMMARY_failure = 'failure';
+  /**
+   * Something unexpected happened. The run should still be considered
+   * unsuccessful but this is likely a transient problem and re-running the test
+   * might be successful.
+   */
+  public const OUTCOME_SUMMARY_inconclusive = 'inconclusive';
+  /**
+   * All tests were skipped, for instance: - All device configurations were
+   * incompatible.
+   */
+  public const OUTCOME_SUMMARY_skipped = 'skipped';
+  /**
+   * A group of steps that were run with the same configuration had both failure
+   * and success outcomes.
+   */
+  public const OUTCOME_SUMMARY_flaky = 'flaky';
+  /**
+   * Unique int given to each step. Ranges from 0(inclusive) to total number of
+   * steps(exclusive). The primary step is 0.
+   *
    * @var int
    */
   public $multistepNumber;
@@ -35,7 +68,10 @@ class IndividualOutcome extends \Google\Model
   public $stepId;
 
   /**
-   * @param int
+   * Unique int given to each step. Ranges from 0(inclusive) to total number of
+   * steps(exclusive). The primary step is 0.
+   *
+   * @param int $multistepNumber
    */
   public function setMultistepNumber($multistepNumber)
   {
@@ -49,21 +85,23 @@ class IndividualOutcome extends \Google\Model
     return $this->multistepNumber;
   }
   /**
-   * @param string
+   * @param self::OUTCOME_SUMMARY_* $outcomeSummary
    */
   public function setOutcomeSummary($outcomeSummary)
   {
     $this->outcomeSummary = $outcomeSummary;
   }
   /**
-   * @return string
+   * @return self::OUTCOME_SUMMARY_*
    */
   public function getOutcomeSummary()
   {
     return $this->outcomeSummary;
   }
   /**
-   * @param Duration
+   * How long it took for this step to run.
+   *
+   * @param Duration $runDuration
    */
   public function setRunDuration(Duration $runDuration)
   {
@@ -77,7 +115,7 @@ class IndividualOutcome extends \Google\Model
     return $this->runDuration;
   }
   /**
-   * @param string
+   * @param string $stepId
    */
   public function setStepId($stepId)
   {

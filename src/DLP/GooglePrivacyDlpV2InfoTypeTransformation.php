@@ -26,7 +26,11 @@ class GooglePrivacyDlpV2InfoTypeTransformation extends \Google\Collection
   protected $primitiveTransformationDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2InfoType[]
+   * InfoTypes to apply the transformation to. An empty list will cause this
+   * transformation to apply to all findings that correspond to infoTypes that
+   * were requested in `InspectConfig`.
+   *
+   * @param GooglePrivacyDlpV2InfoType[] $infoTypes
    */
   public function setInfoTypes($infoTypes)
   {
@@ -40,7 +44,9 @@ class GooglePrivacyDlpV2InfoTypeTransformation extends \Google\Collection
     return $this->infoTypes;
   }
   /**
-   * @param GooglePrivacyDlpV2PrimitiveTransformation
+   * Required. Primitive transformation to apply to the infoType.
+   *
+   * @param GooglePrivacyDlpV2PrimitiveTransformation $primitiveTransformation
    */
   public function setPrimitiveTransformation(GooglePrivacyDlpV2PrimitiveTransformation $primitiveTransformation)
   {

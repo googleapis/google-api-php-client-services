@@ -23,12 +23,18 @@ class ListAdaptiveMtFilesResponse extends \Google\Collection
   protected $adaptiveMtFilesType = AdaptiveMtFile::class;
   protected $adaptiveMtFilesDataType = 'array';
   /**
+   * Optional. A token to retrieve a page of results. Pass this value in the
+   * ListAdaptiveMtFilesRequest.page_token field in the subsequent call to
+   * `ListAdaptiveMtFiles` method to retrieve the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AdaptiveMtFile[]
+   * Output only. The Adaptive MT files.
+   *
+   * @param AdaptiveMtFile[] $adaptiveMtFiles
    */
   public function setAdaptiveMtFiles($adaptiveMtFiles)
   {
@@ -42,7 +48,11 @@ class ListAdaptiveMtFilesResponse extends \Google\Collection
     return $this->adaptiveMtFiles;
   }
   /**
-   * @param string
+   * Optional. A token to retrieve a page of results. Pass this value in the
+   * ListAdaptiveMtFilesRequest.page_token field in the subsequent call to
+   * `ListAdaptiveMtFiles` method to retrieve the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

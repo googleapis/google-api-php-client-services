@@ -21,12 +21,16 @@ class ResourceTypes extends \Google\Collection
 {
   protected $collection_key = 'included';
   /**
+   * Optional. The resource types we currently support.
+   *
    * @var string[]
    */
   public $included;
 
   /**
-   * @param string[]
+   * Optional. The resource types we currently support.
+   *
+   * @param string[] $included
    */
   public function setIncluded($included)
   {

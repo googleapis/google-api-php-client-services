@@ -21,10 +21,15 @@ class PlacementStrategiesListResponse extends \Google\Collection
 {
   protected $collection_key = 'placementStrategies';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#placementStrategiesListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +37,10 @@ class PlacementStrategiesListResponse extends \Google\Collection
   protected $placementStrategiesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#placementStrategiesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +54,9 @@ class PlacementStrategiesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class PlacementStrategiesListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param PlacementStrategy[]
+   * Placement strategy collection.
+   *
+   * @param PlacementStrategy[] $placementStrategies
    */
   public function setPlacementStrategies($placementStrategies)
   {

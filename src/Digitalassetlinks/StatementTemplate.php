@@ -20,6 +20,9 @@ namespace Google\Service\Digitalassetlinks;
 class StatementTemplate extends \Google\Model
 {
   /**
+   * The relationship being asserted between the source and target. If omitted,
+   * you must specify a BulkCheckRequest.default_relation value to use here.
+   *
    * @var string
    */
   public $relation;
@@ -29,7 +32,10 @@ class StatementTemplate extends \Google\Model
   protected $targetDataType = '';
 
   /**
-   * @param string
+   * The relationship being asserted between the source and target. If omitted,
+   * you must specify a BulkCheckRequest.default_relation value to use here.
+   *
+   * @param string $relation
    */
   public function setRelation($relation)
   {
@@ -43,7 +49,10 @@ class StatementTemplate extends \Google\Model
     return $this->relation;
   }
   /**
-   * @param Asset
+   * The source asset that is asserting the statement. If omitted, you must
+   * specify a BulkCheckRequest.default_source value to use here.
+   *
+   * @param Asset $source
    */
   public function setSource(Asset $source)
   {
@@ -57,7 +66,10 @@ class StatementTemplate extends \Google\Model
     return $this->source;
   }
   /**
-   * @param Asset
+   * The target that the source is declaring the relationship with. If omitted,
+   * you must specify a BulkCheckRequest.default_target to use here.
+   *
+   * @param Asset $target
    */
   public function setTarget(Asset $target)
   {

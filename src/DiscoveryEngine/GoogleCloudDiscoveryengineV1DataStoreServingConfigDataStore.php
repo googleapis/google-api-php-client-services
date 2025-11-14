@@ -20,12 +20,18 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1DataStoreServingConfigDataStore extends \Google\Model
 {
   /**
+   * Optional. If set true, the DataStore will not be available for serving
+   * search requests.
+   *
    * @var bool
    */
   public $disabledForServing;
 
   /**
-   * @param bool
+   * Optional. If set true, the DataStore will not be available for serving
+   * search requests.
+   *
+   * @param bool $disabledForServing
    */
   public function setDisabledForServing($disabledForServing)
   {

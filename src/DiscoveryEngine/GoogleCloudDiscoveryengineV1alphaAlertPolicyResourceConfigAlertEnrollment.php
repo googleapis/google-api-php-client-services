@@ -20,20 +20,43 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfigAlertEnrollment extends \Google\Model
 {
   /**
+   * Default value. Used for customers who have not responded to the alert
+   * policy.
+   */
+  public const ENROLL_STATE_ENROLL_STATE_UNSPECIFIED = 'ENROLL_STATE_UNSPECIFIED';
+  /**
+   * Customer is enrolled in this policy.
+   */
+  public const ENROLL_STATE_ENROLLED = 'ENROLLED';
+  /**
+   * Customer declined this policy.
+   */
+  public const ENROLL_STATE_DECLINED = 'DECLINED';
+  /**
+   * Immutable. The id of an alert.
+   *
    * @var string
    */
   public $alertId;
   /**
+   * Required. The enrollment status of a customer.
+   *
    * @var string
    */
   public $enrollState;
   /**
+   * Optional. Parameters used to instantiate a notification. Used for
+   * notifications that are triggered when registered. Not stored. * Gemini
+   * Business welcome emails. * Gemini Business user invitation emails.
+   *
    * @var string[]
    */
   public $notificationParams;
 
   /**
-   * @param string
+   * Immutable. The id of an alert.
+   *
+   * @param string $alertId
    */
   public function setAlertId($alertId)
   {
@@ -47,21 +70,29 @@ class GoogleCloudDiscoveryengineV1alphaAlertPolicyResourceConfigAlertEnrollment 
     return $this->alertId;
   }
   /**
-   * @param string
+   * Required. The enrollment status of a customer.
+   *
+   * Accepted values: ENROLL_STATE_UNSPECIFIED, ENROLLED, DECLINED
+   *
+   * @param self::ENROLL_STATE_* $enrollState
    */
   public function setEnrollState($enrollState)
   {
     $this->enrollState = $enrollState;
   }
   /**
-   * @return string
+   * @return self::ENROLL_STATE_*
    */
   public function getEnrollState()
   {
     return $this->enrollState;
   }
   /**
-   * @param string[]
+   * Optional. Parameters used to instantiate a notification. Used for
+   * notifications that are triggered when registered. Not stored. * Gemini
+   * Business welcome emails. * Gemini Business user invitation emails.
+   *
+   * @param string[] $notificationParams
    */
   public function setNotificationParams($notificationParams)
   {

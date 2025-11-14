@@ -19,19 +19,43 @@ namespace Google\Service\Testing;
 
 class DeviceIpBlock extends \Google\Model
 {
+  /**
+   * Do not use. For proto versioning only.
+   */
+  public const FORM_DEVICE_FORM_UNSPECIFIED = 'DEVICE_FORM_UNSPECIFIED';
+  /**
+   * Android virtual device using Compute Engine native virtualization. Firebase
+   * Test Lab only.
+   */
+  public const FORM_VIRTUAL = 'VIRTUAL';
+  /**
+   * Actual hardware.
+   */
+  public const FORM_PHYSICAL = 'PHYSICAL';
+  /**
+   * Android virtual device using emulator in nested virtualization. Equivalent
+   * to Android Studio.
+   */
+  public const FORM_EMULATOR = 'EMULATOR';
   protected $addedDateType = Date::class;
   protected $addedDateDataType = '';
   /**
+   * An IP address block in CIDR notation eg: 34.68.194.64/29
+   *
    * @var string
    */
   public $block;
   /**
+   * Whether this block is used by physical or virtual devices
+   *
    * @var string
    */
   public $form;
 
   /**
-   * @param Date
+   * The date this block was added to Firebase Test Lab
+   *
+   * @param Date $addedDate
    */
   public function setAddedDate(Date $addedDate)
   {
@@ -45,7 +69,9 @@ class DeviceIpBlock extends \Google\Model
     return $this->addedDate;
   }
   /**
-   * @param string
+   * An IP address block in CIDR notation eg: 34.68.194.64/29
+   *
+   * @param string $block
    */
   public function setBlock($block)
   {
@@ -59,14 +85,18 @@ class DeviceIpBlock extends \Google\Model
     return $this->block;
   }
   /**
-   * @param string
+   * Whether this block is used by physical or virtual devices
+   *
+   * Accepted values: DEVICE_FORM_UNSPECIFIED, VIRTUAL, PHYSICAL, EMULATOR
+   *
+   * @param self::FORM_* $form
    */
   public function setForm($form)
   {
     $this->form = $form;
   }
   /**
-   * @return string
+   * @return self::FORM_*
    */
   public function getForm()
   {

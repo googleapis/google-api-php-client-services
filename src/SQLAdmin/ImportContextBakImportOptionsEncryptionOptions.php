@@ -20,24 +20,40 @@ namespace Google\Service\SQLAdmin;
 class ImportContextBakImportOptionsEncryptionOptions extends \Google\Model
 {
   /**
+   * Path to the Certificate (.cer) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the
+   * bucket and read access to the file.
+   *
    * @var string
    */
   public $certPath;
   /**
+   * Optional. Whether the imported file remains encrypted.
+   *
    * @var bool
    */
   public $keepEncrypted;
   /**
+   * Password that encrypts the private key
+   *
    * @var string
    */
   public $pvkPassword;
   /**
+   * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the
+   * bucket and read access to the file.
+   *
    * @var string
    */
   public $pvkPath;
 
   /**
-   * @param string
+   * Path to the Certificate (.cer) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the
+   * bucket and read access to the file.
+   *
+   * @param string $certPath
    */
   public function setCertPath($certPath)
   {
@@ -51,7 +67,9 @@ class ImportContextBakImportOptionsEncryptionOptions extends \Google\Model
     return $this->certPath;
   }
   /**
-   * @param bool
+   * Optional. Whether the imported file remains encrypted.
+   *
+   * @param bool $keepEncrypted
    */
   public function setKeepEncrypted($keepEncrypted)
   {
@@ -65,7 +83,9 @@ class ImportContextBakImportOptionsEncryptionOptions extends \Google\Model
     return $this->keepEncrypted;
   }
   /**
-   * @param string
+   * Password that encrypts the private key
+   *
+   * @param string $pvkPassword
    */
   public function setPvkPassword($pvkPassword)
   {
@@ -79,7 +99,11 @@ class ImportContextBakImportOptionsEncryptionOptions extends \Google\Model
     return $this->pvkPassword;
   }
   /**
-   * @param string
+   * Path to the Certificate Private Key (.pvk) in Cloud Storage, in the form
+   * `gs://bucketName/fileName`. The instance must have write permissions to the
+   * bucket and read access to the file.
+   *
+   * @param string $pvkPath
    */
   public function setPvkPath($pvkPath)
   {

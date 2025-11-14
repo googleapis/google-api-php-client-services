@@ -20,22 +20,48 @@ namespace Google\Service\DeveloperConnect;
 class GitHubConfig extends \Google\Model
 {
   /**
+   * GitHub App not specified.
+   */
+  public const GITHUB_APP_GIT_HUB_APP_UNSPECIFIED = 'GIT_HUB_APP_UNSPECIFIED';
+  /**
+   * The Developer Connect GitHub Application.
+   */
+  public const GITHUB_APP_DEVELOPER_CONNECT = 'DEVELOPER_CONNECT';
+  /**
+   * The Firebase GitHub Application.
+   */
+  public const GITHUB_APP_FIREBASE = 'FIREBASE';
+  /**
+   * The Gemini Code Assist Application.
+   */
+  public const GITHUB_APP_GEMINI_CODE_ASSIST = 'GEMINI_CODE_ASSIST';
+  /**
+   * Optional. GitHub App installation id.
+   *
    * @var string
    */
   public $appInstallationId;
   protected $authorizerCredentialType = OAuthCredential::class;
   protected $authorizerCredentialDataType = '';
   /**
+   * Required. Immutable. The GitHub Application that was installed to the
+   * GitHub user or organization.
+   *
    * @var string
    */
   public $githubApp;
   /**
+   * Output only. The URI to navigate to in order to manage the installation
+   * associated with this GitHubConfig.
+   *
    * @var string
    */
   public $installationUri;
 
   /**
-   * @param string
+   * Optional. GitHub App installation id.
+   *
+   * @param string $appInstallationId
    */
   public function setAppInstallationId($appInstallationId)
   {
@@ -49,7 +75,11 @@ class GitHubConfig extends \Google\Model
     return $this->appInstallationId;
   }
   /**
-   * @param OAuthCredential
+   * Optional. OAuth credential of the account that authorized the GitHub App.
+   * It is recommended to use a robot account instead of a human user account.
+   * The OAuth token must be tied to the GitHub App of this config.
+   *
+   * @param OAuthCredential $authorizerCredential
    */
   public function setAuthorizerCredential(OAuthCredential $authorizerCredential)
   {
@@ -63,21 +93,30 @@ class GitHubConfig extends \Google\Model
     return $this->authorizerCredential;
   }
   /**
-   * @param string
+   * Required. Immutable. The GitHub Application that was installed to the
+   * GitHub user or organization.
+   *
+   * Accepted values: GIT_HUB_APP_UNSPECIFIED, DEVELOPER_CONNECT, FIREBASE,
+   * GEMINI_CODE_ASSIST
+   *
+   * @param self::GITHUB_APP_* $githubApp
    */
   public function setGithubApp($githubApp)
   {
     $this->githubApp = $githubApp;
   }
   /**
-   * @return string
+   * @return self::GITHUB_APP_*
    */
   public function getGithubApp()
   {
     return $this->githubApp;
   }
   /**
-   * @param string
+   * Output only. The URI to navigate to in order to manage the installation
+   * associated with this GitHubConfig.
+   *
+   * @param string $installationUri
    */
   public function setInstallationUri($installationUri)
   {

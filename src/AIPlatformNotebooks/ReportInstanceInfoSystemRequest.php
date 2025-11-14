@@ -22,12 +22,17 @@ class ReportInstanceInfoSystemRequest extends \Google\Model
   protected $eventType = Event::class;
   protected $eventDataType = '';
   /**
+   * Required. The VM hardware token for authenticating the VM.
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+   *
    * @var string
    */
   public $vmId;
 
   /**
-   * @param Event
+   * Required. The Event to be reported.
+   *
+   * @param Event $event
    */
   public function setEvent(Event $event)
   {
@@ -41,7 +46,10 @@ class ReportInstanceInfoSystemRequest extends \Google\Model
     return $this->event;
   }
   /**
-   * @param string
+   * Required. The VM hardware token for authenticating the VM.
+   * https://cloud.google.com/compute/docs/instances/verifying-instance-identity
+   *
+   * @param string $vmId
    */
   public function setVmId($vmId)
   {

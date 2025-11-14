@@ -20,16 +20,22 @@ namespace Google\Service\Dataflow;
 class DataflowGaugeValue extends \Google\Model
 {
   /**
+   * The timestamp when the gauge was recorded.
+   *
    * @var string
    */
   public $measuredTime;
   /**
+   * The value of the gauge.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The timestamp when the gauge was recorded.
+   *
+   * @param string $measuredTime
    */
   public function setMeasuredTime($measuredTime)
   {
@@ -43,7 +49,9 @@ class DataflowGaugeValue extends \Google\Model
     return $this->measuredTime;
   }
   /**
-   * @param string
+   * The value of the gauge.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

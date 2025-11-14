@@ -24,7 +24,7 @@ class MinimumOrderValueTable extends \Google\Collection
   protected $storeCodeSetWithMovsDataType = 'array';
 
   /**
-   * @param MinimumOrderValueTableStoreCodeSetWithMov[]
+   * @param MinimumOrderValueTableStoreCodeSetWithMov[] $storeCodeSetWithMovs
    */
   public function setStoreCodeSetWithMovs($storeCodeSetWithMovs)
   {

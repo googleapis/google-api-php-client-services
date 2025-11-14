@@ -20,16 +20,22 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class ServiceType extends \Google\Model
 {
   /**
+   * Output only. The human-readable display name for the service type.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. A stable ID (provided by Google) for this service type.
+   *
    * @var string
    */
   public $serviceTypeId;
 
   /**
-   * @param string
+   * Output only. The human-readable display name for the service type.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -43,7 +49,9 @@ class ServiceType extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. A stable ID (provided by Google) for this service type.
+   *
+   * @param string $serviceTypeId
    */
   public function setServiceTypeId($serviceTypeId)
   {

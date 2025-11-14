@@ -20,12 +20,20 @@ namespace Google\Service\ContainerAnalysis;
 class Jwt extends \Google\Model
 {
   /**
+   * The compact encoding of a JWS, which is always three base64 encoded strings
+   * joined by periods. For details, see:
+   * https://tools.ietf.org/html/rfc7515.html#section-3.1
+   *
    * @var string
    */
   public $compactJwt;
 
   /**
-   * @param string
+   * The compact encoding of a JWS, which is always three base64 encoded strings
+   * joined by periods. For details, see:
+   * https://tools.ietf.org/html/rfc7515.html#section-3.1
+   *
+   * @param string $compactJwt
    */
   public function setCompactJwt($compactJwt)
   {

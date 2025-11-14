@@ -25,7 +25,9 @@ class GoogleAppsDriveLabelsV2DateLimits extends \Google\Model
   protected $minValueDataType = '';
 
   /**
-   * @param GoogleTypeDate
+   * Maximum value for the date field type.
+   *
+   * @param GoogleTypeDate $maxValue
    */
   public function setMaxValue(GoogleTypeDate $maxValue)
   {
@@ -39,7 +41,9 @@ class GoogleAppsDriveLabelsV2DateLimits extends \Google\Model
     return $this->maxValue;
   }
   /**
-   * @param GoogleTypeDate
+   * Minimum value for the date field type.
+   *
+   * @param GoogleTypeDate $minValue
    */
   public function setMinValue(GoogleTypeDate $minValue)
   {

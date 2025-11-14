@@ -20,28 +20,80 @@ namespace Google\Service\CloudTasks;
 class UriOverride extends \Google\Model
 {
   /**
+   * Scheme unspecified. Defaults to HTTPS.
+   */
+  public const SCHEME_SCHEME_UNSPECIFIED = 'SCHEME_UNSPECIFIED';
+  /**
+   * Convert the scheme to HTTP, e.g., "https://www.example.com" will change to
+   * "http://www.example.com".
+   */
+  public const SCHEME_HTTP = 'HTTP';
+  /**
+   * Convert the scheme to HTTPS, e.g., "http://www.example.com" will change to
+   * "https://www.example.com".
+   */
+  public const SCHEME_HTTPS = 'HTTPS';
+  /**
+   * UriOverrideEnforceMode Unspecified. Defaults to ALWAYS.
+   */
+  public const URI_OVERRIDE_ENFORCE_MODE_URI_OVERRIDE_ENFORCE_MODE_UNSPECIFIED = 'URI_OVERRIDE_ENFORCE_MODE_UNSPECIFIED';
+  /**
+   * In the IF_NOT_EXISTS mode, queue-level configuration is only applied where
+   * task-level configuration does not exist.
+   */
+  public const URI_OVERRIDE_ENFORCE_MODE_IF_NOT_EXISTS = 'IF_NOT_EXISTS';
+  /**
+   * In the ALWAYS mode, queue-level configuration overrides all task-level
+   * configuration
+   */
+  public const URI_OVERRIDE_ENFORCE_MODE_ALWAYS = 'ALWAYS';
+  /**
+   * Host override. When specified, replaces the host part of the task URL. For
+   * example, if the task URL is "https://www.google.com," and host value is set
+   * to "example.net", the overridden URI will be changed to
+   * "https://example.net." Host value cannot be an empty string
+   * (INVALID_ARGUMENT).
+   *
    * @var string
    */
   public $host;
   protected $pathOverrideType = PathOverride::class;
   protected $pathOverrideDataType = '';
   /**
+   * Port override. When specified, replaces the port part of the task URI. For
+   * instance, for a URI "https://www.example.com/example" and port=123, the
+   * overridden URI becomes "https://www.example.com:123/example". Note that the
+   * port value must be a positive integer. Setting the port to 0 (Zero) clears
+   * the URI port.
+   *
    * @var string
    */
   public $port;
   protected $queryOverrideType = QueryOverride::class;
   protected $queryOverrideDataType = '';
   /**
+   * Scheme override. When specified, the task URI scheme is replaced by the
+   * provided value (HTTP or HTTPS).
+   *
    * @var string
    */
   public $scheme;
   /**
+   * URI Override Enforce Mode When specified, determines the Target UriOverride
+   * mode. If not specified, it defaults to ALWAYS.
+   *
    * @var string
    */
   public $uriOverrideEnforceMode;
 
   /**
-   * @param string
+   * Host override. When specified, replaces the host part of the task URL. For
+   * example, if the task URL is "https://www.google.com," and host value is set
+   * to "example.net", the overridden URI will be changed to
+   * "https://example.net." Host value cannot be an empty string
+   * (INVALID_ARGUMENT).
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -55,7 +107,10 @@ class UriOverride extends \Google\Model
     return $this->host;
   }
   /**
-   * @param PathOverride
+   * URI path. When specified, replaces the existing path of the task URL.
+   * Setting the path value to an empty string clears the URI path segment.
+   *
+   * @param PathOverride $pathOverride
    */
   public function setPathOverride(PathOverride $pathOverride)
   {
@@ -69,7 +124,13 @@ class UriOverride extends \Google\Model
     return $this->pathOverride;
   }
   /**
-   * @param string
+   * Port override. When specified, replaces the port part of the task URI. For
+   * instance, for a URI "https://www.example.com/example" and port=123, the
+   * overridden URI becomes "https://www.example.com:123/example". Note that the
+   * port value must be a positive integer. Setting the port to 0 (Zero) clears
+   * the URI port.
+   *
+   * @param string $port
    */
   public function setPort($port)
   {
@@ -83,7 +144,10 @@ class UriOverride extends \Google\Model
     return $this->port;
   }
   /**
-   * @param QueryOverride
+   * URI query. When specified, replaces the query part of the task URI. Setting
+   * the query value to an empty string clears the URI query segment.
+   *
+   * @param QueryOverride $queryOverride
    */
   public function setQueryOverride(QueryOverride $queryOverride)
   {
@@ -97,28 +161,39 @@ class UriOverride extends \Google\Model
     return $this->queryOverride;
   }
   /**
-   * @param string
+   * Scheme override. When specified, the task URI scheme is replaced by the
+   * provided value (HTTP or HTTPS).
+   *
+   * Accepted values: SCHEME_UNSPECIFIED, HTTP, HTTPS
+   *
+   * @param self::SCHEME_* $scheme
    */
   public function setScheme($scheme)
   {
     $this->scheme = $scheme;
   }
   /**
-   * @return string
+   * @return self::SCHEME_*
    */
   public function getScheme()
   {
     return $this->scheme;
   }
   /**
-   * @param string
+   * URI Override Enforce Mode When specified, determines the Target UriOverride
+   * mode. If not specified, it defaults to ALWAYS.
+   *
+   * Accepted values: URI_OVERRIDE_ENFORCE_MODE_UNSPECIFIED, IF_NOT_EXISTS,
+   * ALWAYS
+   *
+   * @param self::URI_OVERRIDE_ENFORCE_MODE_* $uriOverrideEnforceMode
    */
   public function setUriOverrideEnforceMode($uriOverrideEnforceMode)
   {
     $this->uriOverrideEnforceMode = $uriOverrideEnforceMode;
   }
   /**
-   * @return string
+   * @return self::URI_OVERRIDE_ENFORCE_MODE_*
    */
   public function getUriOverrideEnforceMode()
   {

@@ -19,36 +19,83 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2StreamingRecognitionResult extends \Google\Collection
 {
+  /**
+   * Not specified. Should never be used.
+   */
+  public const MESSAGE_TYPE_MESSAGE_TYPE_UNSPECIFIED = 'MESSAGE_TYPE_UNSPECIFIED';
+  /**
+   * Message contains a (possibly partial) transcript.
+   */
+  public const MESSAGE_TYPE_TRANSCRIPT = 'TRANSCRIPT';
+  /**
+   * This event indicates that the server has detected the end of the user's
+   * speech utterance and expects no additional inputs. Therefore, the server
+   * will not process additional audio (although it may subsequently return
+   * additional results). The client should stop sending additional audio data,
+   * half-close the gRPC connection, and wait for any additional results until
+   * the server closes the gRPC connection. This message is only sent if
+   * `single_utterance` was set to `true`, and is not used otherwise.
+   */
+  public const MESSAGE_TYPE_END_OF_SINGLE_UTTERANCE = 'END_OF_SINGLE_UTTERANCE';
   protected $collection_key = 'speechWordInfo';
   /**
+   * The Speech confidence between 0.0 and 1.0 for the current portion of audio.
+   * A higher number indicates an estimated greater likelihood that the
+   * recognized words are correct. The default of 0.0 is a sentinel value
+   * indicating that confidence was not set. This field is typically only
+   * provided if `is_final` is true and you should not rely on it being accurate
+   * or even set.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * If `false`, the `StreamingRecognitionResult` represents an interim result
+   * that may change. If `true`, the recognizer will not return any further
+   * hypotheses about this piece of the audio. May only be populated for
+   * `message_type` = `TRANSCRIPT`.
+   *
    * @var bool
    */
   public $isFinal;
   /**
+   * Detected language code for the transcript.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Type of the result message.
+   *
    * @var string
    */
   public $messageType;
   /**
+   * Time offset of the end of this Speech recognition result relative to the
+   * beginning of the audio. Only populated for `message_type` = `TRANSCRIPT`.
+   *
    * @var string
    */
   public $speechEndOffset;
   protected $speechWordInfoType = GoogleCloudDialogflowV2SpeechWordInfo::class;
   protected $speechWordInfoDataType = 'array';
   /**
+   * Transcript text representing the words that the user spoke. Populated if
+   * and only if `message_type` = `TRANSCRIPT`.
+   *
    * @var string
    */
   public $transcript;
 
   /**
-   * @param float
+   * The Speech confidence between 0.0 and 1.0 for the current portion of audio.
+   * A higher number indicates an estimated greater likelihood that the
+   * recognized words are correct. The default of 0.0 is a sentinel value
+   * indicating that confidence was not set. This field is typically only
+   * provided if `is_final` is true and you should not rely on it being accurate
+   * or even set.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -62,7 +109,12 @@ class GoogleCloudDialogflowV2StreamingRecognitionResult extends \Google\Collecti
     return $this->confidence;
   }
   /**
-   * @param bool
+   * If `false`, the `StreamingRecognitionResult` represents an interim result
+   * that may change. If `true`, the recognizer will not return any further
+   * hypotheses about this piece of the audio. May only be populated for
+   * `message_type` = `TRANSCRIPT`.
+   *
+   * @param bool $isFinal
    */
   public function setIsFinal($isFinal)
   {
@@ -76,7 +128,9 @@ class GoogleCloudDialogflowV2StreamingRecognitionResult extends \Google\Collecti
     return $this->isFinal;
   }
   /**
-   * @param string
+   * Detected language code for the transcript.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -90,21 +144,29 @@ class GoogleCloudDialogflowV2StreamingRecognitionResult extends \Google\Collecti
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Type of the result message.
+   *
+   * Accepted values: MESSAGE_TYPE_UNSPECIFIED, TRANSCRIPT,
+   * END_OF_SINGLE_UTTERANCE
+   *
+   * @param self::MESSAGE_TYPE_* $messageType
    */
   public function setMessageType($messageType)
   {
     $this->messageType = $messageType;
   }
   /**
-   * @return string
+   * @return self::MESSAGE_TYPE_*
    */
   public function getMessageType()
   {
     return $this->messageType;
   }
   /**
-   * @param string
+   * Time offset of the end of this Speech recognition result relative to the
+   * beginning of the audio. Only populated for `message_type` = `TRANSCRIPT`.
+   *
+   * @param string $speechEndOffset
    */
   public function setSpeechEndOffset($speechEndOffset)
   {
@@ -118,7 +180,11 @@ class GoogleCloudDialogflowV2StreamingRecognitionResult extends \Google\Collecti
     return $this->speechEndOffset;
   }
   /**
-   * @param GoogleCloudDialogflowV2SpeechWordInfo[]
+   * Word-specific information for the words recognized by Speech in transcript.
+   * Populated if and only if `message_type` = `TRANSCRIPT` and
+   * [InputAudioConfig.enable_word_info] is set.
+   *
+   * @param GoogleCloudDialogflowV2SpeechWordInfo[] $speechWordInfo
    */
   public function setSpeechWordInfo($speechWordInfo)
   {
@@ -132,7 +198,10 @@ class GoogleCloudDialogflowV2StreamingRecognitionResult extends \Google\Collecti
     return $this->speechWordInfo;
   }
   /**
-   * @param string
+   * Transcript text representing the words that the user spoke. Populated if
+   * and only if `message_type` = `TRANSCRIPT`.
+   *
+   * @param string $transcript
    */
   public function setTranscript($transcript)
   {

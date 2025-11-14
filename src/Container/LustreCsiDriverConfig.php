@@ -20,22 +20,45 @@ namespace Google\Service\Container;
 class LustreCsiDriverConfig extends \Google\Model
 {
   /**
+   * If set to true, the Lustre CSI driver will install Lustre kernel modules
+   * using port 6988. This serves as a workaround for a port conflict with the
+   * gke-metadata-server. This field is required ONLY under the following
+   * conditions: 1. The GKE node version is older than 1.33.2-gke.4655000. 2.
+   * You're connecting to a Lustre instance that has the 'gke-support-enabled'
+   * flag. Deprecated: This flag is no longer required as of GKE node version
+   * 1.33.2-gke.4655000, unless you are connecting to a Lustre instance that has
+   * the `gke-support-enabled` flag.
+   *
+   * @deprecated
    * @var bool
    */
   public $enableLegacyLustrePort;
   /**
+   * Whether the Lustre CSI driver is enabled for this cluster.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * If set to true, the Lustre CSI driver will install Lustre kernel modules
+   * using port 6988. This serves as a workaround for a port conflict with the
+   * gke-metadata-server. This field is required ONLY under the following
+   * conditions: 1. The GKE node version is older than 1.33.2-gke.4655000. 2.
+   * You're connecting to a Lustre instance that has the 'gke-support-enabled'
+   * flag. Deprecated: This flag is no longer required as of GKE node version
+   * 1.33.2-gke.4655000, unless you are connecting to a Lustre instance that has
+   * the `gke-support-enabled` flag.
+   *
+   * @deprecated
+   * @param bool $enableLegacyLustrePort
    */
   public function setEnableLegacyLustrePort($enableLegacyLustrePort)
   {
     $this->enableLegacyLustrePort = $enableLegacyLustrePort;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getEnableLegacyLustrePort()
@@ -43,7 +66,9 @@ class LustreCsiDriverConfig extends \Google\Model
     return $this->enableLegacyLustrePort;
   }
   /**
-   * @param bool
+   * Whether the Lustre CSI driver is enabled for this cluster.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

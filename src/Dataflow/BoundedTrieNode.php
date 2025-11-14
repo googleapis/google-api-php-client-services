@@ -22,12 +22,17 @@ class BoundedTrieNode extends \Google\Model
   protected $childrenType = BoundedTrieNode::class;
   protected $childrenDataType = 'map';
   /**
+   * Whether this node has been truncated. A truncated leaf represents possibly
+   * many children with the same prefix.
+   *
    * @var bool
    */
   public $truncated;
 
   /**
-   * @param BoundedTrieNode[]
+   * Children of this node. Must be empty if truncated is true.
+   *
+   * @param BoundedTrieNode[] $children
    */
   public function setChildren($children)
   {
@@ -41,7 +46,10 @@ class BoundedTrieNode extends \Google\Model
     return $this->children;
   }
   /**
-   * @param bool
+   * Whether this node has been truncated. A truncated leaf represents possibly
+   * many children with the same prefix.
+   *
+   * @param bool $truncated
    */
   public function setTruncated($truncated)
   {

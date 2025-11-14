@@ -20,24 +20,34 @@ namespace Google\Service\Dataflow;
 class ApproximateProgress extends \Google\Model
 {
   /**
+   * Obsolete.
+   *
+   * @deprecated
    * @var float
    */
   public $percentComplete;
   protected $positionType = Position::class;
   protected $positionDataType = '';
   /**
+   * Obsolete.
+   *
+   * @deprecated
    * @var string
    */
   public $remainingTime;
 
   /**
-   * @param float
+   * Obsolete.
+   *
+   * @deprecated
+   * @param float $percentComplete
    */
   public function setPercentComplete($percentComplete)
   {
     $this->percentComplete = $percentComplete;
   }
   /**
+   * @deprecated
    * @return float
    */
   public function getPercentComplete()
@@ -45,13 +55,17 @@ class ApproximateProgress extends \Google\Model
     return $this->percentComplete;
   }
   /**
-   * @param Position
+   * Obsolete.
+   *
+   * @deprecated
+   * @param Position $position
    */
   public function setPosition(Position $position)
   {
     $this->position = $position;
   }
   /**
+   * @deprecated
    * @return Position
    */
   public function getPosition()
@@ -59,13 +73,17 @@ class ApproximateProgress extends \Google\Model
     return $this->position;
   }
   /**
-   * @param string
+   * Obsolete.
+   *
+   * @deprecated
+   * @param string $remainingTime
    */
   public function setRemainingTime($remainingTime)
   {
     $this->remainingTime = $remainingTime;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getRemainingTime()

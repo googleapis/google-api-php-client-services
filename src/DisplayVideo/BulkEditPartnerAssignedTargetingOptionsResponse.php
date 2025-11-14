@@ -24,7 +24,10 @@ class BulkEditPartnerAssignedTargetingOptionsResponse extends \Google\Collection
   protected $createdAssignedTargetingOptionsDataType = 'array';
 
   /**
-   * @param AssignedTargetingOption[]
+   * The list of assigned targeting options that have been successfully created.
+   * This list will be absent if empty.
+   *
+   * @param AssignedTargetingOption[] $createdAssignedTargetingOptions
    */
   public function setCreatedAssignedTargetingOptions($createdAssignedTargetingOptions)
   {

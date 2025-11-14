@@ -23,12 +23,17 @@ class EventTagsListResponse extends \Google\Collection
   protected $eventTagsType = EventTag::class;
   protected $eventTagsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#eventTagsListResponse".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param EventTag[]
+   * Event tag collection.
+   *
+   * @param EventTag[] $eventTags
    */
   public function setEventTags($eventTags)
   {
@@ -42,7 +47,10 @@ class EventTagsListResponse extends \Google\Collection
     return $this->eventTags;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#eventTagsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

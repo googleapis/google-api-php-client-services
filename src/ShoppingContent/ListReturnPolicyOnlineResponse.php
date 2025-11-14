@@ -24,7 +24,9 @@ class ListReturnPolicyOnlineResponse extends \Google\Collection
   protected $returnPoliciesDataType = 'array';
 
   /**
-   * @param ReturnPolicyOnline[]
+   * The retrieved return policies.
+   *
+   * @param ReturnPolicyOnline[] $returnPolicies
    */
   public function setReturnPolicies($returnPolicies)
   {

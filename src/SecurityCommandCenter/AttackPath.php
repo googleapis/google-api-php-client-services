@@ -23,6 +23,9 @@ class AttackPath extends \Google\Collection
   protected $edgesType = AttackPathEdge::class;
   protected $edgesDataType = 'array';
   /**
+   * The attack path name, for example,
+   * `organizations/12/simulation/34/valuedResources/56/attackPaths/78`
+   *
    * @var string
    */
   public $name;
@@ -30,7 +33,9 @@ class AttackPath extends \Google\Collection
   protected $pathNodesDataType = 'array';
 
   /**
-   * @param AttackPathEdge[]
+   * A list of the edges between nodes in this attack path.
+   *
+   * @param AttackPathEdge[] $edges
    */
   public function setEdges($edges)
   {
@@ -44,7 +49,10 @@ class AttackPath extends \Google\Collection
     return $this->edges;
   }
   /**
-   * @param string
+   * The attack path name, for example,
+   * `organizations/12/simulation/34/valuedResources/56/attackPaths/78`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -58,7 +66,9 @@ class AttackPath extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param AttackPathNode[]
+   * A list of nodes that exist in this attack path.
+   *
+   * @param AttackPathNode[] $pathNodes
    */
   public function setPathNodes($pathNodes)
   {

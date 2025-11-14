@@ -23,24 +23,37 @@ class GoogleCloudSecuritycenterV2Object extends \Google\Collection
   protected $containersType = GoogleCloudSecuritycenterV2Container::class;
   protected $containersDataType = 'array';
   /**
+   * Kubernetes object group, such as "policy.k8s.io/v1".
+   *
    * @var string
    */
   public $group;
   /**
+   * Kubernetes object kind, such as "Namespace".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Kubernetes object name. For details see
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/.
+   *
    * @var string
    */
   public $name;
   /**
+   * Kubernetes object namespace. Must be a valid DNS label. Named "ns" to avoid
+   * collision with C++ namespace keyword. For details see
+   * https://kubernetes.io/docs/tasks/administer-cluster/namespaces/.
+   *
    * @var string
    */
   public $ns;
 
   /**
-   * @param GoogleCloudSecuritycenterV2Container[]
+   * Pod containers associated with this finding, if any.
+   *
+   * @param GoogleCloudSecuritycenterV2Container[] $containers
    */
   public function setContainers($containers)
   {
@@ -54,7 +67,9 @@ class GoogleCloudSecuritycenterV2Object extends \Google\Collection
     return $this->containers;
   }
   /**
-   * @param string
+   * Kubernetes object group, such as "policy.k8s.io/v1".
+   *
+   * @param string $group
    */
   public function setGroup($group)
   {
@@ -68,7 +83,9 @@ class GoogleCloudSecuritycenterV2Object extends \Google\Collection
     return $this->group;
   }
   /**
-   * @param string
+   * Kubernetes object kind, such as "Namespace".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -82,7 +99,10 @@ class GoogleCloudSecuritycenterV2Object extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Kubernetes object name. For details see
+   * https://kubernetes.io/docs/concepts/overview/working-with-objects/names/.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -96,7 +116,11 @@ class GoogleCloudSecuritycenterV2Object extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Kubernetes object namespace. Must be a valid DNS label. Named "ns" to avoid
+   * collision with C++ namespace keyword. For details see
+   * https://kubernetes.io/docs/tasks/administer-cluster/namespaces/.
+   *
+   * @param string $ns
    */
   public function setNs($ns)
   {

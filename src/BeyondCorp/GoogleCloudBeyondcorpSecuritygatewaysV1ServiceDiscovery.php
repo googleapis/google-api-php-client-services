@@ -23,7 +23,9 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscovery extends \Google\Mo
   protected $apiGatewayDataType = '';
 
   /**
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway
+   * Required. External API configuration.
+   *
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway $apiGateway
    */
   public function setApiGateway(GoogleCloudBeyondcorpSecuritygatewaysV1ServiceDiscoveryApiGateway $apiGateway)
   {

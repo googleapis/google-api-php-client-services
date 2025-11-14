@@ -21,6 +21,8 @@ class GoogleCloudDocumentaiV1ListSchemasResponse extends \Google\Collection
 {
   protected $collection_key = 'schemas';
   /**
+   * Points to the next Schema, otherwise empty.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +30,9 @@ class GoogleCloudDocumentaiV1ListSchemasResponse extends \Google\Collection
   protected $schemasDataType = 'array';
 
   /**
-   * @param string
+   * Points to the next Schema, otherwise empty.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDocumentaiV1ListSchemasResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDocumentaiV1NextSchema[]
+   * The list of Schemas.
+   *
+   * @param GoogleCloudDocumentaiV1NextSchema[] $schemas
    */
   public function setSchemas($schemas)
   {

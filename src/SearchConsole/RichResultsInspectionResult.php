@@ -19,16 +19,41 @@ namespace Google\Service\SearchConsole;
 
 class RichResultsInspectionResult extends \Google\Collection
 {
+  /**
+   * Unknown verdict.
+   */
+  public const VERDICT_VERDICT_UNSPECIFIED = 'VERDICT_UNSPECIFIED';
+  /**
+   * Equivalent to "Valid" for the page or item in Search Console.
+   */
+  public const VERDICT_PASS = 'PASS';
+  /**
+   * Reserved, no longer in use.
+   */
+  public const VERDICT_PARTIAL = 'PARTIAL';
+  /**
+   * Equivalent to "Error" or "Invalid" for the page or item in Search Console.
+   */
+  public const VERDICT_FAIL = 'FAIL';
+  /**
+   * Equivalent to "Excluded" for the page or item in Search Console.
+   */
+  public const VERDICT_NEUTRAL = 'NEUTRAL';
   protected $collection_key = 'detectedItems';
   protected $detectedItemsType = DetectedItems::class;
   protected $detectedItemsDataType = 'array';
   /**
+   * High-level rich results inspection result for this URL.
+   *
    * @var string
    */
   public $verdict;
 
   /**
-   * @param DetectedItems[]
+   * A list of zero or more rich results detected on this page. Rich results
+   * that cannot even be parsed due to syntactic issues will not be listed here.
+   *
+   * @param DetectedItems[] $detectedItems
    */
   public function setDetectedItems($detectedItems)
   {
@@ -42,14 +67,18 @@ class RichResultsInspectionResult extends \Google\Collection
     return $this->detectedItems;
   }
   /**
-   * @param string
+   * High-level rich results inspection result for this URL.
+   *
+   * Accepted values: VERDICT_UNSPECIFIED, PASS, PARTIAL, FAIL, NEUTRAL
+   *
+   * @param self::VERDICT_* $verdict
    */
   public function setVerdict($verdict)
   {
     $this->verdict = $verdict;
   }
   /**
-   * @return string
+   * @return self::VERDICT_*
    */
   public function getVerdict()
   {

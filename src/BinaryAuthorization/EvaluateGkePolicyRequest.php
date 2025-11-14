@@ -20,12 +20,16 @@ namespace Google\Service\BinaryAuthorization;
 class EvaluateGkePolicyRequest extends \Google\Model
 {
   /**
+   * Required. JSON or YAML blob representing a Kubernetes resource.
+   *
    * @var array[]
    */
   public $resource;
 
   /**
-   * @param array[]
+   * Required. JSON or YAML blob representing a Kubernetes resource.
+   *
+   * @param array[] $resource
    */
   public function setResource($resource)
   {

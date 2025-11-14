@@ -20,20 +20,28 @@ namespace Google\Service\Translate;
 class FileInputSource extends \Google\Model
 {
   /**
+   * Required. The file's byte contents.
+   *
    * @var string
    */
   public $content;
   /**
+   * Required. The file's display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. The file's mime type.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * Required. The file's byte contents.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -47,7 +55,9 @@ class FileInputSource extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Required. The file's display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +71,9 @@ class FileInputSource extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. The file's mime type.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

@@ -20,16 +20,32 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2LifecycleDisabledPolicy extends \Google\Model
 {
   /**
+   * Whether to hide this disabled object in the search menu for Drive items. *
+   * When `false`, the object is generally shown in the UI as disabled but it
+   * appears in the search results when searching for Drive items. * When
+   * `true`, the object is generally hidden in the UI when searching for Drive
+   * items.
+   *
    * @var bool
    */
   public $hideInSearch;
   /**
+   * Whether to show this disabled object in the apply menu on Drive items. *
+   * When `true`, the object is generally shown in the UI as disabled and is
+   * unselectable. * When `false`, the object is generally hidden in the UI.
+   *
    * @var bool
    */
   public $showInApply;
 
   /**
-   * @param bool
+   * Whether to hide this disabled object in the search menu for Drive items. *
+   * When `false`, the object is generally shown in the UI as disabled but it
+   * appears in the search results when searching for Drive items. * When
+   * `true`, the object is generally hidden in the UI when searching for Drive
+   * items.
+   *
+   * @param bool $hideInSearch
    */
   public function setHideInSearch($hideInSearch)
   {
@@ -43,7 +59,11 @@ class GoogleAppsDriveLabelsV2LifecycleDisabledPolicy extends \Google\Model
     return $this->hideInSearch;
   }
   /**
-   * @param bool
+   * Whether to show this disabled object in the apply menu on Drive items. *
+   * When `true`, the object is generally shown in the UI as disabled and is
+   * unselectable. * When `false`, the object is generally hidden in the UI.
+   *
+   * @param bool $showInApply
    */
   public function setShowInApply($showInApply)
   {

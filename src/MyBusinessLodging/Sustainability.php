@@ -31,7 +31,9 @@ class Sustainability extends \Google\Model
   protected $waterConservationDataType = '';
 
   /**
-   * @param EnergyEfficiency
+   * Energy efficiency practices implemented at the hotel.
+   *
+   * @param EnergyEfficiency $energyEfficiency
    */
   public function setEnergyEfficiency(EnergyEfficiency $energyEfficiency)
   {
@@ -45,13 +47,19 @@ class Sustainability extends \Google\Model
     return $this->energyEfficiency;
   }
   /**
-   * @param SustainabilityCertifications
+   * Sustainability certifications the hotel has been awarded. Deprecated: this
+   * field is no longer populated. All certification data is now provided by
+   * BeCause.
+   *
+   * @deprecated
+   * @param SustainabilityCertifications $sustainabilityCertifications
    */
   public function setSustainabilityCertifications(SustainabilityCertifications $sustainabilityCertifications)
   {
     $this->sustainabilityCertifications = $sustainabilityCertifications;
   }
   /**
+   * @deprecated
    * @return SustainabilityCertifications
    */
   public function getSustainabilityCertifications()
@@ -59,7 +67,9 @@ class Sustainability extends \Google\Model
     return $this->sustainabilityCertifications;
   }
   /**
-   * @param SustainableSourcing
+   * Sustainable sourcing practices implemented at the hotel.
+   *
+   * @param SustainableSourcing $sustainableSourcing
    */
   public function setSustainableSourcing(SustainableSourcing $sustainableSourcing)
   {
@@ -73,7 +83,9 @@ class Sustainability extends \Google\Model
     return $this->sustainableSourcing;
   }
   /**
-   * @param WasteReduction
+   * Waste reduction practices implemented at the hotel.
+   *
+   * @param WasteReduction $wasteReduction
    */
   public function setWasteReduction(WasteReduction $wasteReduction)
   {
@@ -87,7 +99,9 @@ class Sustainability extends \Google\Model
     return $this->wasteReduction;
   }
   /**
-   * @param WaterConservation
+   * Water conservation practices implemented at the hotel.
+   *
+   * @param WaterConservation $waterConservation
    */
   public function setWaterConservation(WaterConservation $waterConservation)
   {

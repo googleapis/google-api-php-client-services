@@ -20,16 +20,22 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsResponse extends \Google\Model
 {
   /**
+   * Count of failed analyses.
+   *
    * @var int
    */
   public $failedAnalysisCount;
   /**
+   * Count of successful analyses.
+   *
    * @var int
    */
   public $successfulAnalysisCount;
 
   /**
-   * @param int
+   * Count of failed analyses.
+   *
+   * @param int $failedAnalysisCount
    */
   public function setFailedAnalysisCount($failedAnalysisCount)
   {
@@ -43,7 +49,9 @@ class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsResponse extends
     return $this->failedAnalysisCount;
   }
   /**
-   * @param int
+   * Count of successful analyses.
+   *
+   * @param int $successfulAnalysisCount
    */
   public function setSuccessfulAnalysisCount($successfulAnalysisCount)
   {

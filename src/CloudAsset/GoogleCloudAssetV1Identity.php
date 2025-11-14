@@ -22,12 +22,20 @@ class GoogleCloudAssetV1Identity extends \Google\Model
   protected $analysisStateType = IamPolicyAnalysisState::class;
   protected $analysisStateDataType = '';
   /**
+   * The identity of members, formatted as appear in an [IAM policy
+   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). For
+   * example, they might be formatted like the following: - user:foo@google.com
+   * - group:group1@google.com - serviceAccount:s1@prj1.iam.gserviceaccount.com
+   * - projectOwner:some_project_id - domain:google.com - allUsers
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param IamPolicyAnalysisState
+   * The analysis state of this identity.
+   *
+   * @param IamPolicyAnalysisState $analysisState
    */
   public function setAnalysisState(IamPolicyAnalysisState $analysisState)
   {
@@ -41,7 +49,13 @@ class GoogleCloudAssetV1Identity extends \Google\Model
     return $this->analysisState;
   }
   /**
-   * @param string
+   * The identity of members, formatted as appear in an [IAM policy
+   * binding](https://cloud.google.com/iam/reference/rest/v1/Binding). For
+   * example, they might be formatted like the following: - user:foo@google.com
+   * - group:group1@google.com - serviceAccount:s1@prj1.iam.gserviceaccount.com
+   * - projectOwner:some_project_id - domain:google.com - allUsers
+   *
+   * @param string $name
    */
   public function setName($name)
   {

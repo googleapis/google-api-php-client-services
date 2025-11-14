@@ -23,12 +23,17 @@ class GoogleCloudContactcenterinsightsV1ListDatasetsResponse extends \Google\Col
   protected $datasetsType = GoogleCloudContactcenterinsightsV1Dataset::class;
   protected $datasetsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1Dataset[]
+   * The datasets that match the request.
+   *
+   * @param GoogleCloudContactcenterinsightsV1Dataset[] $datasets
    */
   public function setDatasets($datasets)
   {
@@ -42,7 +47,10 @@ class GoogleCloudContactcenterinsightsV1ListDatasetsResponse extends \Google\Col
     return $this->datasets;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

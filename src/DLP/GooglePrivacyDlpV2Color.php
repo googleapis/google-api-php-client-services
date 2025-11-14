@@ -20,20 +20,28 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Color extends \Google\Model
 {
   /**
+   * The amount of blue in the color as a value in the interval [0, 1].
+   *
    * @var float
    */
   public $blue;
   /**
+   * The amount of green in the color as a value in the interval [0, 1].
+   *
    * @var float
    */
   public $green;
   /**
+   * The amount of red in the color as a value in the interval [0, 1].
+   *
    * @var float
    */
   public $red;
 
   /**
-   * @param float
+   * The amount of blue in the color as a value in the interval [0, 1].
+   *
+   * @param float $blue
    */
   public function setBlue($blue)
   {
@@ -47,7 +55,9 @@ class GooglePrivacyDlpV2Color extends \Google\Model
     return $this->blue;
   }
   /**
-   * @param float
+   * The amount of green in the color as a value in the interval [0, 1].
+   *
+   * @param float $green
    */
   public function setGreen($green)
   {
@@ -61,7 +71,9 @@ class GooglePrivacyDlpV2Color extends \Google\Model
     return $this->green;
   }
   /**
-   * @param float
+   * The amount of red in the color as a value in the interval [0, 1].
+   *
+   * @param float $red
    */
   public function setRed($red)
   {

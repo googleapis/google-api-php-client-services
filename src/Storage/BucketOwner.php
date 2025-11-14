@@ -20,16 +20,22 @@ namespace Google\Service\Storage;
 class BucketOwner extends \Google\Model
 {
   /**
+   * The entity, in the form project-owner-projectId.
+   *
    * @var string
    */
   public $entity;
   /**
+   * The ID for the entity.
+   *
    * @var string
    */
   public $entityId;
 
   /**
-   * @param string
+   * The entity, in the form project-owner-projectId.
+   *
+   * @param string $entity
    */
   public function setEntity($entity)
   {
@@ -43,7 +49,9 @@ class BucketOwner extends \Google\Model
     return $this->entity;
   }
   /**
-   * @param string
+   * The ID for the entity.
+   *
+   * @param string $entityId
    */
   public function setEntityId($entityId)
   {

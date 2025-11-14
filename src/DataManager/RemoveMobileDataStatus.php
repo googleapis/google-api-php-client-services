@@ -20,16 +20,28 @@ namespace Google\Service\DataManager;
 class RemoveMobileDataStatus extends \Google\Model
 {
   /**
+   * The total count of mobile Ids sent in the removal request. Includes all
+   * mobile ids in the request, regardless of whether they were successfully
+   * removed or not.
+   *
    * @var string
    */
   public $mobileIdCount;
   /**
+   * The total count of audience members sent in the removal request. Includes
+   * all audience members in the request, regardless of whether they were
+   * successfully removed or not.
+   *
    * @var string
    */
   public $recordCount;
 
   /**
-   * @param string
+   * The total count of mobile Ids sent in the removal request. Includes all
+   * mobile ids in the request, regardless of whether they were successfully
+   * removed or not.
+   *
+   * @param string $mobileIdCount
    */
   public function setMobileIdCount($mobileIdCount)
   {
@@ -43,7 +55,11 @@ class RemoveMobileDataStatus extends \Google\Model
     return $this->mobileIdCount;
   }
   /**
-   * @param string
+   * The total count of audience members sent in the removal request. Includes
+   * all audience members in the request, regardless of whether they were
+   * successfully removed or not.
+   *
+   * @param string $recordCount
    */
   public function setRecordCount($recordCount)
   {

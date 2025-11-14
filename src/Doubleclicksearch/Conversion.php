@@ -19,64 +19,118 @@ namespace Google\Service\Doubleclicksearch;
 
 class Conversion extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const AD_USER_DATA_CONSENT_UNKNOWN = 'UNKNOWN';
+  /**
+   * Granted.
+   */
+  public const AD_USER_DATA_CONSENT_GRANTED = 'GRANTED';
+  /**
+   * Denied.
+   */
+  public const AD_USER_DATA_CONSENT_DENIED = 'DENIED';
   protected $collection_key = 'customMetric';
   /**
+   * DS ad group ID.
+   *
    * @var string
    */
   public $adGroupId;
   /**
+   * DS ad ID.
+   *
    * @var string
    */
   public $adId;
   /**
+   * Represents consent for core platform services (CPS) preferences in
+   * settings. No default value. Acceptable values are: GRANTED: The desired
+   * consent status is to grant. Read the CPS preferences from GTE settings.
+   * DENIED: The desired consent status is to deny; CPS list is empty.
+   *
    * @var string
    */
   public $adUserDataConsent;
   /**
+   * DS advertiser ID.
+   *
    * @var string
    */
   public $advertiserId;
   /**
+   * DS agency ID.
+   *
    * @var string
    */
   public $agencyId;
   /**
+   * Available to advertisers only after contacting DoubleClick Search customer
+   * support.
+   *
    * @var string
    */
   public $attributionModel;
   /**
+   * DS campaign ID.
+   *
    * @var string
    */
   public $campaignId;
   /**
+   * Sales channel for the product. Acceptable values are: - "`local`": a
+   * physical store - "`online`": an online store
+   *
    * @var string
    */
   public $channel;
   /**
+   * DS click ID for the conversion.
+   *
    * @var string
    */
   public $clickId;
   /**
+   * For offline conversions, advertisers provide this ID. Advertisers can
+   * specify any ID that is meaningful to them. Each conversion in a request
+   * must specify a unique ID, and the combination of ID and timestamp must be
+   * unique amongst all conversions within the advertiser. For online
+   * conversions, DS copies the `dsConversionId` or `floodlightOrderId` into
+   * this property depending on the advertiser's Floodlight instructions.
+   *
    * @var string
    */
   public $conversionId;
   /**
+   * The time at which the conversion was last modified, in epoch millis UTC.
+   *
    * @var string
    */
   public $conversionModifiedTimestamp;
   /**
+   * The time at which the conversion took place, in epoch millis UTC.
+   *
    * @var string
    */
   public $conversionTimestamp;
   /**
+   * Available to advertisers only after contacting DoubleClick Search customer
+   * support.
+   *
    * @var string
    */
   public $countMillis;
   /**
+   * DS criterion (keyword) ID.
+   *
    * @var string
    */
   public $criterionId;
   /**
+   * The currency code for the conversion's revenue. Should be in ISO 4217
+   * alphabetic (3-char) format.
+   *
    * @var string
    */
   public $currencyCode;
@@ -85,80 +139,131 @@ class Conversion extends \Google\Collection
   protected $customMetricType = CustomMetric::class;
   protected $customMetricDataType = 'array';
   /**
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   *
    * @var string
    */
   public $customerId;
   /**
+   * The type of device on which the conversion occurred.
+   *
    * @var string
    */
   public $deviceType;
   /**
+   * ID that DoubleClick Search generates for each conversion.
+   *
    * @var string
    */
   public $dsConversionId;
   /**
+   * DS engine account ID.
+   *
    * @var string
    */
   public $engineAccountId;
   /**
+   * The Floodlight order ID provided by the advertiser for the conversion.
+   *
    * @var string
    */
   public $floodlightOrderId;
   /**
+   * ID that DS generates and uses to uniquely identify the inventory account
+   * that contains the product.
+   *
    * @var string
    */
   public $inventoryAccountId;
   /**
+   * The country registered for the Merchant Center feed that contains the
+   * product. Use an ISO 3166 code to specify a country.
+   *
    * @var string
    */
   public $productCountry;
   /**
+   * DS product group ID.
+   *
    * @var string
    */
   public $productGroupId;
   /**
+   * The product ID (SKU).
+   *
    * @var string
    */
   public $productId;
   /**
+   * The language registered for the Merchant Center feed that contains the
+   * product. Use an ISO 639 code to specify a language.
+   *
    * @var string
    */
   public $productLanguage;
   /**
+   * The quantity of this conversion, in millis.
+   *
    * @var string
    */
   public $quantityMillis;
   /**
+   * The revenue amount of this `TRANSACTION` conversion, in micros (value
+   * multiplied by 1000000, no decimal). For example, to specify a revenue value
+   * of "10" enter "10000000" (10 million) in your request.
+   *
    * @var string
    */
   public $revenueMicros;
   /**
+   * The numeric segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity ID).
+   *
    * @var string
    */
   public $segmentationId;
   /**
+   * The friendly segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity name).
+   *
    * @var string
    */
   public $segmentationName;
   /**
+   * The segmentation type of this conversion (for example, `FLOODLIGHT`).
+   *
    * @var string
    */
   public $segmentationType;
   /**
+   * The state of the conversion, that is, either `ACTIVE` or `REMOVED`. Note:
+   * state DELETED is deprecated.
+   *
    * @var string
    */
   public $state;
   /**
+   * The ID of the local store for which the product was advertised. Applicable
+   * only when the channel is "`local`".
+   *
    * @var string
    */
   public $storeId;
   /**
+   * The type of the conversion, that is, either `ACTION` or `TRANSACTION`. An
+   * `ACTION` conversion is an action by the user that has no monetarily
+   * quantifiable value, while a `TRANSACTION` conversion is an action that does
+   * have a monetarily quantifiable value. Examples are email list signups
+   * (`ACTION`) versus ecommerce purchases (`TRANSACTION`).
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * DS ad group ID.
+   *
+   * @param string $adGroupId
    */
   public function setAdGroupId($adGroupId)
   {
@@ -172,7 +277,9 @@ class Conversion extends \Google\Collection
     return $this->adGroupId;
   }
   /**
-   * @param string
+   * DS ad ID.
+   *
+   * @param string $adId
    */
   public function setAdId($adId)
   {
@@ -186,21 +293,30 @@ class Conversion extends \Google\Collection
     return $this->adId;
   }
   /**
-   * @param string
+   * Represents consent for core platform services (CPS) preferences in
+   * settings. No default value. Acceptable values are: GRANTED: The desired
+   * consent status is to grant. Read the CPS preferences from GTE settings.
+   * DENIED: The desired consent status is to deny; CPS list is empty.
+   *
+   * Accepted values: UNKNOWN, GRANTED, DENIED
+   *
+   * @param self::AD_USER_DATA_CONSENT_* $adUserDataConsent
    */
   public function setAdUserDataConsent($adUserDataConsent)
   {
     $this->adUserDataConsent = $adUserDataConsent;
   }
   /**
-   * @return string
+   * @return self::AD_USER_DATA_CONSENT_*
    */
   public function getAdUserDataConsent()
   {
     return $this->adUserDataConsent;
   }
   /**
-   * @param string
+   * DS advertiser ID.
+   *
+   * @param string $advertiserId
    */
   public function setAdvertiserId($advertiserId)
   {
@@ -214,7 +330,9 @@ class Conversion extends \Google\Collection
     return $this->advertiserId;
   }
   /**
-   * @param string
+   * DS agency ID.
+   *
+   * @param string $agencyId
    */
   public function setAgencyId($agencyId)
   {
@@ -228,7 +346,10 @@ class Conversion extends \Google\Collection
     return $this->agencyId;
   }
   /**
-   * @param string
+   * Available to advertisers only after contacting DoubleClick Search customer
+   * support.
+   *
+   * @param string $attributionModel
    */
   public function setAttributionModel($attributionModel)
   {
@@ -242,7 +363,9 @@ class Conversion extends \Google\Collection
     return $this->attributionModel;
   }
   /**
-   * @param string
+   * DS campaign ID.
+   *
+   * @param string $campaignId
    */
   public function setCampaignId($campaignId)
   {
@@ -256,7 +379,10 @@ class Conversion extends \Google\Collection
     return $this->campaignId;
   }
   /**
-   * @param string
+   * Sales channel for the product. Acceptable values are: - "`local`": a
+   * physical store - "`online`": an online store
+   *
+   * @param string $channel
    */
   public function setChannel($channel)
   {
@@ -270,7 +396,9 @@ class Conversion extends \Google\Collection
     return $this->channel;
   }
   /**
-   * @param string
+   * DS click ID for the conversion.
+   *
+   * @param string $clickId
    */
   public function setClickId($clickId)
   {
@@ -284,7 +412,14 @@ class Conversion extends \Google\Collection
     return $this->clickId;
   }
   /**
-   * @param string
+   * For offline conversions, advertisers provide this ID. Advertisers can
+   * specify any ID that is meaningful to them. Each conversion in a request
+   * must specify a unique ID, and the combination of ID and timestamp must be
+   * unique amongst all conversions within the advertiser. For online
+   * conversions, DS copies the `dsConversionId` or `floodlightOrderId` into
+   * this property depending on the advertiser's Floodlight instructions.
+   *
+   * @param string $conversionId
    */
   public function setConversionId($conversionId)
   {
@@ -298,7 +433,9 @@ class Conversion extends \Google\Collection
     return $this->conversionId;
   }
   /**
-   * @param string
+   * The time at which the conversion was last modified, in epoch millis UTC.
+   *
+   * @param string $conversionModifiedTimestamp
    */
   public function setConversionModifiedTimestamp($conversionModifiedTimestamp)
   {
@@ -312,7 +449,9 @@ class Conversion extends \Google\Collection
     return $this->conversionModifiedTimestamp;
   }
   /**
-   * @param string
+   * The time at which the conversion took place, in epoch millis UTC.
+   *
+   * @param string $conversionTimestamp
    */
   public function setConversionTimestamp($conversionTimestamp)
   {
@@ -326,7 +465,10 @@ class Conversion extends \Google\Collection
     return $this->conversionTimestamp;
   }
   /**
-   * @param string
+   * Available to advertisers only after contacting DoubleClick Search customer
+   * support.
+   *
+   * @param string $countMillis
    */
   public function setCountMillis($countMillis)
   {
@@ -340,7 +482,9 @@ class Conversion extends \Google\Collection
     return $this->countMillis;
   }
   /**
-   * @param string
+   * DS criterion (keyword) ID.
+   *
+   * @param string $criterionId
    */
   public function setCriterionId($criterionId)
   {
@@ -354,7 +498,10 @@ class Conversion extends \Google\Collection
     return $this->criterionId;
   }
   /**
-   * @param string
+   * The currency code for the conversion's revenue. Should be in ISO 4217
+   * alphabetic (3-char) format.
+   *
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {
@@ -368,7 +515,10 @@ class Conversion extends \Google\Collection
     return $this->currencyCode;
   }
   /**
-   * @param CustomDimension[]
+   * Custom dimensions for the conversion, which can be used to filter data in a
+   * report.
+   *
+   * @param CustomDimension[] $customDimension
    */
   public function setCustomDimension($customDimension)
   {
@@ -382,7 +532,9 @@ class Conversion extends \Google\Collection
     return $this->customDimension;
   }
   /**
-   * @param CustomMetric[]
+   * Custom metrics for the conversion.
+   *
+   * @param CustomMetric[] $customMetric
    */
   public function setCustomMetric($customMetric)
   {
@@ -396,7 +548,9 @@ class Conversion extends \Google\Collection
     return $this->customMetric;
   }
   /**
-   * @param string
+   * Customer ID of a client account in the new Search Ads 360 experience.
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {
@@ -410,7 +564,9 @@ class Conversion extends \Google\Collection
     return $this->customerId;
   }
   /**
-   * @param string
+   * The type of device on which the conversion occurred.
+   *
+   * @param string $deviceType
    */
   public function setDeviceType($deviceType)
   {
@@ -424,7 +580,9 @@ class Conversion extends \Google\Collection
     return $this->deviceType;
   }
   /**
-   * @param string
+   * ID that DoubleClick Search generates for each conversion.
+   *
+   * @param string $dsConversionId
    */
   public function setDsConversionId($dsConversionId)
   {
@@ -438,7 +596,9 @@ class Conversion extends \Google\Collection
     return $this->dsConversionId;
   }
   /**
-   * @param string
+   * DS engine account ID.
+   *
+   * @param string $engineAccountId
    */
   public function setEngineAccountId($engineAccountId)
   {
@@ -452,7 +612,9 @@ class Conversion extends \Google\Collection
     return $this->engineAccountId;
   }
   /**
-   * @param string
+   * The Floodlight order ID provided by the advertiser for the conversion.
+   *
+   * @param string $floodlightOrderId
    */
   public function setFloodlightOrderId($floodlightOrderId)
   {
@@ -466,7 +628,10 @@ class Conversion extends \Google\Collection
     return $this->floodlightOrderId;
   }
   /**
-   * @param string
+   * ID that DS generates and uses to uniquely identify the inventory account
+   * that contains the product.
+   *
+   * @param string $inventoryAccountId
    */
   public function setInventoryAccountId($inventoryAccountId)
   {
@@ -480,7 +645,10 @@ class Conversion extends \Google\Collection
     return $this->inventoryAccountId;
   }
   /**
-   * @param string
+   * The country registered for the Merchant Center feed that contains the
+   * product. Use an ISO 3166 code to specify a country.
+   *
+   * @param string $productCountry
    */
   public function setProductCountry($productCountry)
   {
@@ -494,7 +662,9 @@ class Conversion extends \Google\Collection
     return $this->productCountry;
   }
   /**
-   * @param string
+   * DS product group ID.
+   *
+   * @param string $productGroupId
    */
   public function setProductGroupId($productGroupId)
   {
@@ -508,7 +678,9 @@ class Conversion extends \Google\Collection
     return $this->productGroupId;
   }
   /**
-   * @param string
+   * The product ID (SKU).
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -522,7 +694,10 @@ class Conversion extends \Google\Collection
     return $this->productId;
   }
   /**
-   * @param string
+   * The language registered for the Merchant Center feed that contains the
+   * product. Use an ISO 639 code to specify a language.
+   *
+   * @param string $productLanguage
    */
   public function setProductLanguage($productLanguage)
   {
@@ -536,7 +711,9 @@ class Conversion extends \Google\Collection
     return $this->productLanguage;
   }
   /**
-   * @param string
+   * The quantity of this conversion, in millis.
+   *
+   * @param string $quantityMillis
    */
   public function setQuantityMillis($quantityMillis)
   {
@@ -550,7 +727,11 @@ class Conversion extends \Google\Collection
     return $this->quantityMillis;
   }
   /**
-   * @param string
+   * The revenue amount of this `TRANSACTION` conversion, in micros (value
+   * multiplied by 1000000, no decimal). For example, to specify a revenue value
+   * of "10" enter "10000000" (10 million) in your request.
+   *
+   * @param string $revenueMicros
    */
   public function setRevenueMicros($revenueMicros)
   {
@@ -564,7 +745,10 @@ class Conversion extends \Google\Collection
     return $this->revenueMicros;
   }
   /**
-   * @param string
+   * The numeric segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity ID).
+   *
+   * @param string $segmentationId
    */
   public function setSegmentationId($segmentationId)
   {
@@ -578,7 +762,10 @@ class Conversion extends \Google\Collection
     return $this->segmentationId;
   }
   /**
-   * @param string
+   * The friendly segmentation identifier (for example, DoubleClick Search
+   * Floodlight activity name).
+   *
+   * @param string $segmentationName
    */
   public function setSegmentationName($segmentationName)
   {
@@ -592,7 +779,9 @@ class Conversion extends \Google\Collection
     return $this->segmentationName;
   }
   /**
-   * @param string
+   * The segmentation type of this conversion (for example, `FLOODLIGHT`).
+   *
+   * @param string $segmentationType
    */
   public function setSegmentationType($segmentationType)
   {
@@ -606,7 +795,10 @@ class Conversion extends \Google\Collection
     return $this->segmentationType;
   }
   /**
-   * @param string
+   * The state of the conversion, that is, either `ACTIVE` or `REMOVED`. Note:
+   * state DELETED is deprecated.
+   *
+   * @param string $state
    */
   public function setState($state)
   {
@@ -620,7 +812,10 @@ class Conversion extends \Google\Collection
     return $this->state;
   }
   /**
-   * @param string
+   * The ID of the local store for which the product was advertised. Applicable
+   * only when the channel is "`local`".
+   *
+   * @param string $storeId
    */
   public function setStoreId($storeId)
   {
@@ -634,7 +829,13 @@ class Conversion extends \Google\Collection
     return $this->storeId;
   }
   /**
-   * @param string
+   * The type of the conversion, that is, either `ACTION` or `TRANSACTION`. An
+   * `ACTION` conversion is an action by the user that has no monetarily
+   * quantifiable value, while a `TRANSACTION` conversion is an action that does
+   * have a monetarily quantifiable value. Examples are email list signups
+   * (`ACTION`) versus ecommerce purchases (`TRANSACTION`).
+   *
+   * @param string $type
    */
   public function setType($type)
   {

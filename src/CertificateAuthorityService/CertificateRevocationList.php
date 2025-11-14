@@ -19,48 +19,84 @@ namespace Google\Service\CertificateAuthorityService;
 
 class CertificateRevocationList extends \Google\Collection
 {
+  /**
+   * Not specified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The CertificateRevocationList is up to date.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The CertificateRevocationList is no longer current.
+   */
+  public const STATE_SUPERSEDED = 'SUPERSEDED';
   protected $collection_key = 'revokedCertificates';
   /**
+   * Output only. The location where 'pem_crl' can be accessed.
+   *
    * @var string
    */
   public $accessUrl;
   /**
+   * Output only. The time at which this CertificateRevocationList was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Labels with user-defined metadata.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The resource name for this CertificateRevocationList in the
+   * format `projects/locations/caPoolscertificateAuthorities/
+   * certificateRevocationLists`.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The PEM-encoded X.509 CRL.
+   *
    * @var string
    */
   public $pemCrl;
   /**
+   * Output only. The revision ID of this CertificateRevocationList. A new
+   * revision is committed whenever a new CRL is published. The format is an
+   * 8-character hexadecimal string.
+   *
    * @var string
    */
   public $revisionId;
   protected $revokedCertificatesType = RevokedCertificate::class;
   protected $revokedCertificatesDataType = 'array';
   /**
+   * Output only. The CRL sequence number that appears in pem_crl.
+   *
    * @var string
    */
   public $sequenceNumber;
   /**
+   * Output only. The State for this CertificateRevocationList.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The time at which this CertificateRevocationList was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The location where 'pem_crl' can be accessed.
+   *
+   * @param string $accessUrl
    */
   public function setAccessUrl($accessUrl)
   {
@@ -74,7 +110,9 @@ class CertificateRevocationList extends \Google\Collection
     return $this->accessUrl;
   }
   /**
-   * @param string
+   * Output only. The time at which this CertificateRevocationList was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -88,7 +126,9 @@ class CertificateRevocationList extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string[]
+   * Optional. Labels with user-defined metadata.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -102,7 +142,11 @@ class CertificateRevocationList extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The resource name for this CertificateRevocationList in the
+   * format `projects/locations/caPoolscertificateAuthorities/
+   * certificateRevocationLists`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -116,7 +160,9 @@ class CertificateRevocationList extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The PEM-encoded X.509 CRL.
+   *
+   * @param string $pemCrl
    */
   public function setPemCrl($pemCrl)
   {
@@ -130,7 +176,11 @@ class CertificateRevocationList extends \Google\Collection
     return $this->pemCrl;
   }
   /**
-   * @param string
+   * Output only. The revision ID of this CertificateRevocationList. A new
+   * revision is committed whenever a new CRL is published. The format is an
+   * 8-character hexadecimal string.
+   *
+   * @param string $revisionId
    */
   public function setRevisionId($revisionId)
   {
@@ -144,7 +194,9 @@ class CertificateRevocationList extends \Google\Collection
     return $this->revisionId;
   }
   /**
-   * @param RevokedCertificate[]
+   * Output only. The revoked serial numbers that appear in pem_crl.
+   *
+   * @param RevokedCertificate[] $revokedCertificates
    */
   public function setRevokedCertificates($revokedCertificates)
   {
@@ -158,7 +210,9 @@ class CertificateRevocationList extends \Google\Collection
     return $this->revokedCertificates;
   }
   /**
-   * @param string
+   * Output only. The CRL sequence number that appears in pem_crl.
+   *
+   * @param string $sequenceNumber
    */
   public function setSequenceNumber($sequenceNumber)
   {
@@ -172,21 +226,27 @@ class CertificateRevocationList extends \Google\Collection
     return $this->sequenceNumber;
   }
   /**
-   * @param string
+   * Output only. The State for this CertificateRevocationList.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, SUPERSEDED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The time at which this CertificateRevocationList was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

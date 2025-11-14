@@ -20,44 +20,70 @@ namespace Google\Service\ShoppingContent;
 class DatafeedFetchSchedule extends \Google\Model
 {
   /**
+   * The day of the month the feed file should be fetched (1-31).
+   *
    * @var string
    */
   public $dayOfMonth;
   /**
+   * The URL where the feed file can be fetched. Google Merchant Center will
+   * support automatic scheduled uploads using the HTTP, HTTPS, FTP, or SFTP
+   * protocols, so the value will need to be a valid link using one of those
+   * four protocols.
+   *
    * @var string
    */
   public $fetchUrl;
   /**
+   * The hour of the day the feed file should be fetched (0-23).
+   *
    * @var string
    */
   public $hour;
   /**
+   * The minute of the hour the feed file should be fetched (0-59). Read-only.
+   *
    * @var string
    */
   public $minuteOfHour;
   /**
+   * An optional password for fetch_url.
+   *
    * @var string
    */
   public $password;
   /**
+   * Whether the scheduled fetch is paused or not.
+   *
    * @var bool
    */
   public $paused;
   /**
+   * Time zone used for schedule. UTC by default. For example,
+   * "America/Los_Angeles".
+   *
    * @var string
    */
   public $timeZone;
   /**
+   * An optional user name for fetch_url.
+   *
    * @var string
    */
   public $username;
   /**
+   * The day of the week the feed file should be fetched. Acceptable values are:
+   * - "`monday`" - "`tuesday`" - "`wednesday`" - "`thursday`" - "`friday`" -
+   * "`saturday`" - "`sunday`"
+   *
    * @var string
    */
   public $weekday;
 
   /**
-   * @param string
+   * The day of the month the feed file should be fetched (1-31).
+   *
+   * @param string $dayOfMonth
    */
   public function setDayOfMonth($dayOfMonth)
   {
@@ -71,7 +97,12 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->dayOfMonth;
   }
   /**
-   * @param string
+   * The URL where the feed file can be fetched. Google Merchant Center will
+   * support automatic scheduled uploads using the HTTP, HTTPS, FTP, or SFTP
+   * protocols, so the value will need to be a valid link using one of those
+   * four protocols.
+   *
+   * @param string $fetchUrl
    */
   public function setFetchUrl($fetchUrl)
   {
@@ -85,7 +116,9 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->fetchUrl;
   }
   /**
-   * @param string
+   * The hour of the day the feed file should be fetched (0-23).
+   *
+   * @param string $hour
    */
   public function setHour($hour)
   {
@@ -99,7 +132,9 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->hour;
   }
   /**
-   * @param string
+   * The minute of the hour the feed file should be fetched (0-59). Read-only.
+   *
+   * @param string $minuteOfHour
    */
   public function setMinuteOfHour($minuteOfHour)
   {
@@ -113,7 +148,9 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->minuteOfHour;
   }
   /**
-   * @param string
+   * An optional password for fetch_url.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -127,7 +164,9 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->password;
   }
   /**
-   * @param bool
+   * Whether the scheduled fetch is paused or not.
+   *
+   * @param bool $paused
    */
   public function setPaused($paused)
   {
@@ -141,7 +180,10 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->paused;
   }
   /**
-   * @param string
+   * Time zone used for schedule. UTC by default. For example,
+   * "America/Los_Angeles".
+   *
+   * @param string $timeZone
    */
   public function setTimeZone($timeZone)
   {
@@ -155,7 +197,9 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->timeZone;
   }
   /**
-   * @param string
+   * An optional user name for fetch_url.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {
@@ -169,7 +213,11 @@ class DatafeedFetchSchedule extends \Google\Model
     return $this->username;
   }
   /**
-   * @param string
+   * The day of the week the feed file should be fetched. Acceptable values are:
+   * - "`monday`" - "`tuesday`" - "`wednesday`" - "`thursday`" - "`friday`" -
+   * "`saturday`" - "`sunday`"
+   *
+   * @param string $weekday
    */
   public function setWeekday($weekday)
   {

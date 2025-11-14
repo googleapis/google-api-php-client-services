@@ -23,7 +23,9 @@ class NotificationConfig extends \Google\Model
   protected $pubsubDataType = '';
 
   /**
-   * @param PubSub
+   * Notification config for Pub/Sub.
+   *
+   * @param PubSub $pubsub
    */
   public function setPubsub(PubSub $pubsub)
   {

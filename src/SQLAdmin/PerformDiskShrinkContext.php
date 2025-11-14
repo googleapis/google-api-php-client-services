@@ -20,12 +20,16 @@ namespace Google\Service\SQLAdmin;
 class PerformDiskShrinkContext extends \Google\Model
 {
   /**
+   * The target disk shrink size in GigaBytes.
+   *
    * @var string
    */
   public $targetSizeGb;
 
   /**
-   * @param string
+   * The target disk shrink size in GigaBytes.
+   *
+   * @param string $targetSizeGb
    */
   public function setTargetSizeGb($targetSizeGb)
   {

@@ -21,28 +21,57 @@ class CalendarOptions extends \Google\Collection
 {
   protected $collection_key = 'responseStatuses';
   /**
+   * Matches only those events whose location contains all of the words in the
+   * given set. If the string contains quoted phrases, this method only matches
+   * those events whose location contain the exact phrase. Entries in the set
+   * are considered in "and". Word splitting example: ["New Zealand"] vs
+   * ["New","Zealand"] "New Zealand": matched by both "New and better Zealand":
+   * only matched by the later
+   *
    * @var string[]
    */
   public $locationQuery;
   /**
+   * Matches only those events that do not contain any of the words in the given
+   * set in title, description, location, or attendees. Entries in the set are
+   * considered in "or".
+   *
    * @var string[]
    */
   public $minusWords;
   /**
+   * Matches only those events whose attendees contain all of the words in the
+   * given set. Entries in the set are considered in "and".
+   *
    * @var string[]
    */
   public $peopleQuery;
   /**
+   * Matches only events for which the custodian gave one of these responses. If
+   * the set is empty or contains ATTENDEE_RESPONSE_UNSPECIFIED there will be no
+   * filtering on responses.
+   *
    * @var string[]
    */
   public $responseStatuses;
   /**
+   * Search the current version of the Calendar event, but export the contents
+   * of the last version saved before 12:00 AM UTC on the specified date. Enter
+   * the date in UTC.
+   *
    * @var string
    */
   public $versionDate;
 
   /**
-   * @param string[]
+   * Matches only those events whose location contains all of the words in the
+   * given set. If the string contains quoted phrases, this method only matches
+   * those events whose location contain the exact phrase. Entries in the set
+   * are considered in "and". Word splitting example: ["New Zealand"] vs
+   * ["New","Zealand"] "New Zealand": matched by both "New and better Zealand":
+   * only matched by the later
+   *
+   * @param string[] $locationQuery
    */
   public function setLocationQuery($locationQuery)
   {
@@ -56,7 +85,11 @@ class CalendarOptions extends \Google\Collection
     return $this->locationQuery;
   }
   /**
-   * @param string[]
+   * Matches only those events that do not contain any of the words in the given
+   * set in title, description, location, or attendees. Entries in the set are
+   * considered in "or".
+   *
+   * @param string[] $minusWords
    */
   public function setMinusWords($minusWords)
   {
@@ -70,7 +103,10 @@ class CalendarOptions extends \Google\Collection
     return $this->minusWords;
   }
   /**
-   * @param string[]
+   * Matches only those events whose attendees contain all of the words in the
+   * given set. Entries in the set are considered in "and".
+   *
+   * @param string[] $peopleQuery
    */
   public function setPeopleQuery($peopleQuery)
   {
@@ -84,7 +120,11 @@ class CalendarOptions extends \Google\Collection
     return $this->peopleQuery;
   }
   /**
-   * @param string[]
+   * Matches only events for which the custodian gave one of these responses. If
+   * the set is empty or contains ATTENDEE_RESPONSE_UNSPECIFIED there will be no
+   * filtering on responses.
+   *
+   * @param string[] $responseStatuses
    */
   public function setResponseStatuses($responseStatuses)
   {
@@ -98,7 +138,11 @@ class CalendarOptions extends \Google\Collection
     return $this->responseStatuses;
   }
   /**
-   * @param string
+   * Search the current version of the Calendar event, but export the contents
+   * of the last version saved before 12:00 AM UTC on the specified date. Enter
+   * the date in UTC.
+   *
+   * @param string $versionDate
    */
   public function setVersionDate($versionDate)
   {

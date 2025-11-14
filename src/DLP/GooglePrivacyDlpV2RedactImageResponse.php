@@ -20,18 +20,28 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2RedactImageResponse extends \Google\Model
 {
   /**
+   * If an image was being inspected and the InspectConfig's include_quote was
+   * set to true, then this field will include all text, if any, that was found
+   * in the image.
+   *
    * @var string
    */
   public $extractedText;
   protected $inspectResultType = GooglePrivacyDlpV2InspectResult::class;
   protected $inspectResultDataType = '';
   /**
+   * The redacted image. The type will be the same as the original image.
+   *
    * @var string
    */
   public $redactedImage;
 
   /**
-   * @param string
+   * If an image was being inspected and the InspectConfig's include_quote was
+   * set to true, then this field will include all text, if any, that was found
+   * in the image.
+   *
+   * @param string $extractedText
    */
   public function setExtractedText($extractedText)
   {
@@ -45,7 +55,9 @@ class GooglePrivacyDlpV2RedactImageResponse extends \Google\Model
     return $this->extractedText;
   }
   /**
-   * @param GooglePrivacyDlpV2InspectResult
+   * The findings. Populated when include_findings in the request is true.
+   *
+   * @param GooglePrivacyDlpV2InspectResult $inspectResult
    */
   public function setInspectResult(GooglePrivacyDlpV2InspectResult $inspectResult)
   {
@@ -59,7 +71,9 @@ class GooglePrivacyDlpV2RedactImageResponse extends \Google\Model
     return $this->inspectResult;
   }
   /**
-   * @param string
+   * The redacted image. The type will be the same as the original image.
+   *
+   * @param string $redactedImage
    */
   public function setRedactedImage($redactedImage)
   {

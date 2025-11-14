@@ -21,6 +21,11 @@ class GoogleCloudDialogflowCxV3BoostSpecs extends \Google\Collection
 {
   protected $collection_key = 'spec';
   /**
+   * Optional. Data Stores where the boosting configuration is applied. The full
+   * names of the referenced data stores. Formats: `projects/{project}/locations
+   * /{location}/collections/{collection}/dataStores/{data_store}`
+   * `projects/{project}/locations/{location}/dataStores/{data_store}`
+   *
    * @var string[]
    */
   public $dataStores;
@@ -28,7 +33,12 @@ class GoogleCloudDialogflowCxV3BoostSpecs extends \Google\Collection
   protected $specDataType = 'array';
 
   /**
-   * @param string[]
+   * Optional. Data Stores where the boosting configuration is applied. The full
+   * names of the referenced data stores. Formats: `projects/{project}/locations
+   * /{location}/collections/{collection}/dataStores/{data_store}`
+   * `projects/{project}/locations/{location}/dataStores/{data_store}`
+   *
+   * @param string[] $dataStores
    */
   public function setDataStores($dataStores)
   {
@@ -42,7 +52,9 @@ class GoogleCloudDialogflowCxV3BoostSpecs extends \Google\Collection
     return $this->dataStores;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3BoostSpec[]
+   * Optional. A list of boosting specifications.
+   *
+   * @param GoogleCloudDialogflowCxV3BoostSpec[] $spec
    */
   public function setSpec($spec)
   {

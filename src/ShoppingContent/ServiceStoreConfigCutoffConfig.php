@@ -22,16 +22,29 @@ class ServiceStoreConfigCutoffConfig extends \Google\Model
   protected $localCutoffTimeType = ServiceStoreConfigCutoffConfigLocalCutoffTime::class;
   protected $localCutoffTimeDataType = '';
   /**
+   * Merchants can opt-out of showing n+1 day local delivery when they have a
+   * shipping service configured to n day local delivery. For example, if the
+   * shipping service defines same-day delivery, and it's past the cut-off,
+   * setting this field to `true` results in the calculated shipping service
+   * rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this
+   * field to `false` results in the calculated shipping time being one day.
+   * This is only for local delivery.
+   *
    * @var bool
    */
   public $noDeliveryPostCutoff;
   /**
+   * Represents cutoff time as the number of hours before store closing.
+   * Mutually exclusive with other fields (hour and minute).
+   *
    * @var string
    */
   public $storeCloseOffsetHours;
 
   /**
-   * @param ServiceStoreConfigCutoffConfigLocalCutoffTime
+   * Time in hours and minutes in the local timezone when local delivery ends.
+   *
+   * @param ServiceStoreConfigCutoffConfigLocalCutoffTime $localCutoffTime
    */
   public function setLocalCutoffTime(ServiceStoreConfigCutoffConfigLocalCutoffTime $localCutoffTime)
   {
@@ -45,7 +58,15 @@ class ServiceStoreConfigCutoffConfig extends \Google\Model
     return $this->localCutoffTime;
   }
   /**
-   * @param bool
+   * Merchants can opt-out of showing n+1 day local delivery when they have a
+   * shipping service configured to n day local delivery. For example, if the
+   * shipping service defines same-day delivery, and it's past the cut-off,
+   * setting this field to `true` results in the calculated shipping service
+   * rate returning `NO_DELIVERY_POST_CUTOFF`. In the same example, setting this
+   * field to `false` results in the calculated shipping time being one day.
+   * This is only for local delivery.
+   *
+   * @param bool $noDeliveryPostCutoff
    */
   public function setNoDeliveryPostCutoff($noDeliveryPostCutoff)
   {
@@ -59,7 +80,10 @@ class ServiceStoreConfigCutoffConfig extends \Google\Model
     return $this->noDeliveryPostCutoff;
   }
   /**
-   * @param string
+   * Represents cutoff time as the number of hours before store closing.
+   * Mutually exclusive with other fields (hour and minute).
+   *
+   * @param string $storeCloseOffsetHours
    */
   public function setStoreCloseOffsetHours($storeCloseOffsetHours)
   {

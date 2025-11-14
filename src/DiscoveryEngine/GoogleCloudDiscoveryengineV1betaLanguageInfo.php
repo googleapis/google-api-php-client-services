@@ -20,24 +20,39 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaLanguageInfo extends \Google\Model
 {
   /**
+   * Output only. Language part of normalized_language_code. E.g.: `en-US` ->
+   * `en`, `zh-Hans-HK` -> `zh`, `en` -> `en`.
+   *
    * @var string
    */
   public $language;
   /**
+   * The language code for the DataStore.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Output only. This is the normalized form of language_code. E.g.:
+   * language_code of `en-GB`, `en_GB`, `en-UK` or `en-gb` will have
+   * normalized_language_code of `en-GB`.
+   *
    * @var string
    */
   public $normalizedLanguageCode;
   /**
+   * Output only. Region part of normalized_language_code, if present. E.g.:
+   * `en-US` -> `US`, `zh-Hans-HK` -> `HK`, `en` -> ``.
+   *
    * @var string
    */
   public $region;
 
   /**
-   * @param string
+   * Output only. Language part of normalized_language_code. E.g.: `en-US` ->
+   * `en`, `zh-Hans-HK` -> `zh`, `en` -> `en`.
+   *
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -51,7 +66,9 @@ class GoogleCloudDiscoveryengineV1betaLanguageInfo extends \Google\Model
     return $this->language;
   }
   /**
-   * @param string
+   * The language code for the DataStore.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -65,7 +82,11 @@ class GoogleCloudDiscoveryengineV1betaLanguageInfo extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Output only. This is the normalized form of language_code. E.g.:
+   * language_code of `en-GB`, `en_GB`, `en-UK` or `en-gb` will have
+   * normalized_language_code of `en-GB`.
+   *
+   * @param string $normalizedLanguageCode
    */
   public function setNormalizedLanguageCode($normalizedLanguageCode)
   {
@@ -79,7 +100,10 @@ class GoogleCloudDiscoveryengineV1betaLanguageInfo extends \Google\Model
     return $this->normalizedLanguageCode;
   }
   /**
-   * @param string
+   * Output only. Region part of normalized_language_code, if present. E.g.:
+   * `en-US` -> `US`, `zh-Hans-HK` -> `HK`, `en` -> ``.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {

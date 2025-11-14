@@ -22,6 +22,9 @@ class MoveAnalysis extends \Google\Model
   protected $analysisType = MoveAnalysisResult::class;
   protected $analysisDataType = '';
   /**
+   * The user friendly display name of the analysis. E.g. IAM, organization
+   * policy etc.
+   *
    * @var string
    */
   public $displayName;
@@ -29,7 +32,9 @@ class MoveAnalysis extends \Google\Model
   protected $errorDataType = '';
 
   /**
-   * @param MoveAnalysisResult
+   * Analysis result of moving the target resource.
+   *
+   * @param MoveAnalysisResult $analysis
    */
   public function setAnalysis(MoveAnalysisResult $analysis)
   {
@@ -43,7 +48,10 @@ class MoveAnalysis extends \Google\Model
     return $this->analysis;
   }
   /**
-   * @param string
+   * The user friendly display name of the analysis. E.g. IAM, organization
+   * policy etc.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -57,7 +65,9 @@ class MoveAnalysis extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param Status
+   * Description of error encountered when performing the analysis.
+   *
+   * @param Status $error
    */
   public function setError(Status $error)
   {

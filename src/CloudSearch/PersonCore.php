@@ -19,8 +19,15 @@ namespace Google\Service\CloudSearch;
 
 class PersonCore extends \Google\Collection
 {
+  public const AVAILABILITY_STATUS_UNKNOWN = 'UNKNOWN';
+  public const AVAILABILITY_STATUS_OUT_OF_OFFICE = 'OUT_OF_OFFICE';
+  public const AVAILABILITY_STATUS_OUTSIDE_WORKING_HOURS = 'OUTSIDE_WORKING_HOURS';
+  public const AVAILABILITY_STATUS_AVAILABLE = 'AVAILABLE';
   protected $collection_key = 'phoneNumbers';
   /**
+   * Instructions for how to address this person (e.g. custom pronouns). For
+   * google.com this is a set of pronouns from a defined list of options.
+   *
    * @var string
    */
   public $addressMeAs;
@@ -39,10 +46,15 @@ class PersonCore extends \Google\Collection
   protected $chatUrlType = SafeUrlProto::class;
   protected $chatUrlDataType = '';
   /**
+   * Person's cost center as a string, e.g. "926: Googler Apps".
+   *
    * @var string
    */
   public $costCenter;
   /**
+   * The person's Organization department, e.g. "People Operations". For
+   * google.com this is usually called "area".
+   *
    * @var string
    */
   public $department;
@@ -53,18 +65,29 @@ class PersonCore extends \Google\Collection
   protected $dottedLineReportsType = PersonCore::class;
   protected $dottedLineReportsDataType = 'array';
   /**
+   * E-mail addresses of the person. The primary or preferred email should be
+   * first.
+   *
    * @var string[]
    */
   public $emails;
   /**
+   * Person's employee number (external ID of type "organization") For
+   * google.com this is the badge number (e.g. 2 for Larry Page).
+   *
    * @var string
    */
   public $employeeId;
   /**
+   * A fingerprint used by PAPI to reliably determine if a resource has changed
+   * Externally it is used as part of the etag.
+   *
    * @var string
    */
   public $fingerprint;
   /**
+   * Full-time equivalent (in ‰) (e.g. 800 for a person who's working 80%).
+   *
    * @var string
    */
   public $ftePermille;
@@ -75,38 +98,57 @@ class PersonCore extends \Google\Collection
    */
   public $gmailUrl;
   /**
+   * Profile owner's job title (e.g. "Software Engineer"). For google.com this
+   * is the Workday preferred job title.
+   *
    * @var string
    */
   public $jobTitle;
   /**
+   * List of keys to use from the map 'keywords'.
+   *
    * @var string[]
    */
   public $keywordTypes;
   /**
+   * Custom keywords the domain admin has added.
+   *
    * @var string[]
    */
   public $keywords;
   protected $linksType = EnterpriseTopazFrontendTeamsLink::class;
   protected $linksDataType = 'array';
   /**
+   * Detailed desk location within the company. For google.com this is the desk
+   * location code (e.g. "DE-MUC-ARP-6T2-6T2C0C") if the person has a desk.
+   *
    * @var string
    */
   public $location;
   protected $managersType = PersonCore::class;
   protected $managersDataType = 'array';
   /**
+   * Custom mission statement the profile owner has added.
+   *
    * @var string
    */
   public $mission;
   /**
+   * Human-readable Unicode display name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Office/building identifier within the company. For google.com this is the
+   * office code (e.g. "DE-MUC-ARP").
+   *
    * @var string
    */
   public $officeLocation;
   /**
+   * The person's obfuscated Gaia ID.
+   *
    * @var string
    */
   public $personId;
@@ -115,22 +157,34 @@ class PersonCore extends \Google\Collection
   protected $photoUrlType = SafeUrlProto::class;
   protected $photoUrlDataType = '';
   /**
+   * Postal address of office/building.
+   *
    * @var string
    */
   public $postalAddress;
   /**
+   * Total count of the profile owner's direct reports.
+   *
    * @var int
    */
   public $totalDirectReportsCount;
   /**
+   * Total count of the profile owner's dotted-line reports.
+   *
    * @var int
    */
   public $totalDlrCount;
   /**
+   * The sum of all profile owner's reports and their own full-time-equivalents
+   * in ‰ (e.g. 1800 if one report is working 80% and profile owner 100%).
+   *
    * @var string
    */
   public $totalFteCount;
   /**
+   * External ID of type "login_id" for the profile. For google.com this is the
+   * username/LDAP.
+   *
    * @var string
    */
   public $username;
@@ -140,7 +194,10 @@ class PersonCore extends \Google\Collection
   public $waldoComeBackTime;
 
   /**
-   * @param string
+   * Instructions for how to address this person (e.g. custom pronouns). For
+   * google.com this is a set of pronouns from a defined list of options.
+   *
+   * @param string $addressMeAs
    */
   public function setAddressMeAs($addressMeAs)
   {
@@ -154,7 +211,10 @@ class PersonCore extends \Google\Collection
     return $this->addressMeAs;
   }
   /**
-   * @param PersonCore[]
+   * People the profile owner is an admin to. Note that not all fields of these
+   * PersonCores will be set, in particular, relationships will be empty.
+   *
+   * @param PersonCore[] $adminTo
    */
   public function setAdminTo($adminTo)
   {
@@ -168,7 +228,11 @@ class PersonCore extends \Google\Collection
     return $this->adminTo;
   }
   /**
-   * @param PersonCore[]
+   * The profile owner's admins in no particular order. Note that not all fields
+   * of these PersonCores will be set, in particular, relationships will be
+   * empty.
+   *
+   * @param PersonCore[] $admins
    */
   public function setAdmins($admins)
   {
@@ -182,21 +246,23 @@ class PersonCore extends \Google\Collection
     return $this->admins;
   }
   /**
-   * @param string
+   * @param self::AVAILABILITY_STATUS_* $availabilityStatus
    */
   public function setAvailabilityStatus($availabilityStatus)
   {
     $this->availabilityStatus = $availabilityStatus;
   }
   /**
-   * @return string
+   * @return self::AVAILABILITY_STATUS_*
    */
   public function getAvailabilityStatus()
   {
     return $this->availabilityStatus;
   }
   /**
-   * @param Date
+   * Person birthday.
+   *
+   * @param Date $birthday
    */
   public function setBirthday(Date $birthday)
   {
@@ -210,7 +276,9 @@ class PersonCore extends \Google\Collection
     return $this->birthday;
   }
   /**
-   * @param SafeUrlProto
+   * The URL to open the profile owner's primary calendar.
+   *
+   * @param SafeUrlProto $calendarUrl
    */
   public function setCalendarUrl(SafeUrlProto $calendarUrl)
   {
@@ -224,7 +292,10 @@ class PersonCore extends \Google\Collection
     return $this->calendarUrl;
   }
   /**
-   * @param SafeUrlProto
+   * The URL to start a chat conversation with the profile owner. For google.com
+   * this is a Hangouts URL.
+   *
+   * @param SafeUrlProto $chatUrl
    */
   public function setChatUrl(SafeUrlProto $chatUrl)
   {
@@ -238,7 +309,9 @@ class PersonCore extends \Google\Collection
     return $this->chatUrl;
   }
   /**
-   * @param string
+   * Person's cost center as a string, e.g. "926: Googler Apps".
+   *
+   * @param string $costCenter
    */
   public function setCostCenter($costCenter)
   {
@@ -252,7 +325,10 @@ class PersonCore extends \Google\Collection
     return $this->costCenter;
   }
   /**
-   * @param string
+   * The person's Organization department, e.g. "People Operations". For
+   * google.com this is usually called "area".
+   *
+   * @param string $department
    */
   public function setDepartment($department)
   {
@@ -266,7 +342,13 @@ class PersonCore extends \Google\Collection
     return $this->department;
   }
   /**
-   * @param PersonCore[]
+   * A subset of the profile owner's direct reports. The number of entities here
+   * may be less than total_direct_reports_count, because typically
+   * ProfileResponse does not include all the person's reports, if there are too
+   * many to retrieve efficiently. Note that not all fields of these PersonCores
+   * will be set, in particular, relationships will be empty.
+   *
+   * @param PersonCore[] $directReports
    */
   public function setDirectReports($directReports)
   {
@@ -280,7 +362,11 @@ class PersonCore extends \Google\Collection
     return $this->directReports;
   }
   /**
-   * @param PersonCore[]
+   * The profile owner's direct dotted line managers in no particular order.
+   * Note that not all fields of these PersonCores will be set, in particular,
+   * relationships will be empty.
+   *
+   * @param PersonCore[] $dottedLineManagers
    */
   public function setDottedLineManagers($dottedLineManagers)
   {
@@ -294,7 +380,11 @@ class PersonCore extends \Google\Collection
     return $this->dottedLineManagers;
   }
   /**
-   * @param PersonCore[]
+   * A subset of the profile owner's dotted-line reports. The number of entities
+   * here may be less than total_dlr_count. Note that not all fields of these
+   * PersonCores will be set, in particular, relationships will be empty.
+   *
+   * @param PersonCore[] $dottedLineReports
    */
   public function setDottedLineReports($dottedLineReports)
   {
@@ -308,7 +398,10 @@ class PersonCore extends \Google\Collection
     return $this->dottedLineReports;
   }
   /**
-   * @param string[]
+   * E-mail addresses of the person. The primary or preferred email should be
+   * first.
+   *
+   * @param string[] $emails
    */
   public function setEmails($emails)
   {
@@ -322,7 +415,10 @@ class PersonCore extends \Google\Collection
     return $this->emails;
   }
   /**
-   * @param string
+   * Person's employee number (external ID of type "organization") For
+   * google.com this is the badge number (e.g. 2 for Larry Page).
+   *
+   * @param string $employeeId
    */
   public function setEmployeeId($employeeId)
   {
@@ -336,7 +432,10 @@ class PersonCore extends \Google\Collection
     return $this->employeeId;
   }
   /**
-   * @param string
+   * A fingerprint used by PAPI to reliably determine if a resource has changed
+   * Externally it is used as part of the etag.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -350,7 +449,9 @@ class PersonCore extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * @param string
+   * Full-time equivalent (in ‰) (e.g. 800 for a person who's working 80%).
+   *
+   * @param string $ftePermille
    */
   public function setFtePermille($ftePermille)
   {
@@ -364,7 +465,7 @@ class PersonCore extends \Google\Collection
     return $this->ftePermille;
   }
   /**
-   * @param MapInfo
+   * @param MapInfo $geoLocation
    */
   public function setGeoLocation(MapInfo $geoLocation)
   {
@@ -378,7 +479,7 @@ class PersonCore extends \Google\Collection
     return $this->geoLocation;
   }
   /**
-   * @param string
+   * @param string $gmailUrl
    */
   public function setGmailUrl($gmailUrl)
   {
@@ -392,7 +493,10 @@ class PersonCore extends \Google\Collection
     return $this->gmailUrl;
   }
   /**
-   * @param string
+   * Profile owner's job title (e.g. "Software Engineer"). For google.com this
+   * is the Workday preferred job title.
+   *
+   * @param string $jobTitle
    */
   public function setJobTitle($jobTitle)
   {
@@ -406,7 +510,9 @@ class PersonCore extends \Google\Collection
     return $this->jobTitle;
   }
   /**
-   * @param string[]
+   * List of keys to use from the map 'keywords'.
+   *
+   * @param string[] $keywordTypes
    */
   public function setKeywordTypes($keywordTypes)
   {
@@ -420,7 +526,9 @@ class PersonCore extends \Google\Collection
     return $this->keywordTypes;
   }
   /**
-   * @param string[]
+   * Custom keywords the domain admin has added.
+   *
+   * @param string[] $keywords
    */
   public function setKeywords($keywords)
   {
@@ -434,7 +542,9 @@ class PersonCore extends \Google\Collection
     return $this->keywords;
   }
   /**
-   * @param EnterpriseTopazFrontendTeamsLink[]
+   * Custom links the profile owner has added.
+   *
+   * @param EnterpriseTopazFrontendTeamsLink[] $links
    */
   public function setLinks($links)
   {
@@ -448,7 +558,10 @@ class PersonCore extends \Google\Collection
     return $this->links;
   }
   /**
-   * @param string
+   * Detailed desk location within the company. For google.com this is the desk
+   * location code (e.g. "DE-MUC-ARP-6T2-6T2C0C") if the person has a desk.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -462,7 +575,12 @@ class PersonCore extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param PersonCore[]
+   * The profile owner's management chain from top to bottom, where managers[0]
+   * is the CEO, manager[N-2] is the person's manager's manager and
+   * managers[N-1] is the person's direct manager. Note that not all fields of
+   * these PersonCores will be set, in particular, relationships will be empty.
+   *
+   * @param PersonCore[] $managers
    */
   public function setManagers($managers)
   {
@@ -476,7 +594,9 @@ class PersonCore extends \Google\Collection
     return $this->managers;
   }
   /**
-   * @param string
+   * Custom mission statement the profile owner has added.
+   *
+   * @param string $mission
    */
   public function setMission($mission)
   {
@@ -490,7 +610,9 @@ class PersonCore extends \Google\Collection
     return $this->mission;
   }
   /**
-   * @param string
+   * Human-readable Unicode display name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -504,7 +626,10 @@ class PersonCore extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Office/building identifier within the company. For google.com this is the
+   * office code (e.g. "DE-MUC-ARP").
+   *
+   * @param string $officeLocation
    */
   public function setOfficeLocation($officeLocation)
   {
@@ -518,7 +643,9 @@ class PersonCore extends \Google\Collection
     return $this->officeLocation;
   }
   /**
-   * @param string
+   * The person's obfuscated Gaia ID.
+   *
+   * @param string $personId
    */
   public function setPersonId($personId)
   {
@@ -532,7 +659,7 @@ class PersonCore extends \Google\Collection
     return $this->personId;
   }
   /**
-   * @param EnterpriseTopazFrontendTeamsPersonCorePhoneNumber[]
+   * @param EnterpriseTopazFrontendTeamsPersonCorePhoneNumber[] $phoneNumbers
    */
   public function setPhoneNumbers($phoneNumbers)
   {
@@ -546,7 +673,9 @@ class PersonCore extends \Google\Collection
     return $this->phoneNumbers;
   }
   /**
-   * @param SafeUrlProto
+   * Person photo.
+   *
+   * @param SafeUrlProto $photoUrl
    */
   public function setPhotoUrl(SafeUrlProto $photoUrl)
   {
@@ -560,7 +689,9 @@ class PersonCore extends \Google\Collection
     return $this->photoUrl;
   }
   /**
-   * @param string
+   * Postal address of office/building.
+   *
+   * @param string $postalAddress
    */
   public function setPostalAddress($postalAddress)
   {
@@ -574,7 +705,9 @@ class PersonCore extends \Google\Collection
     return $this->postalAddress;
   }
   /**
-   * @param int
+   * Total count of the profile owner's direct reports.
+   *
+   * @param int $totalDirectReportsCount
    */
   public function setTotalDirectReportsCount($totalDirectReportsCount)
   {
@@ -588,7 +721,9 @@ class PersonCore extends \Google\Collection
     return $this->totalDirectReportsCount;
   }
   /**
-   * @param int
+   * Total count of the profile owner's dotted-line reports.
+   *
+   * @param int $totalDlrCount
    */
   public function setTotalDlrCount($totalDlrCount)
   {
@@ -602,7 +737,10 @@ class PersonCore extends \Google\Collection
     return $this->totalDlrCount;
   }
   /**
-   * @param string
+   * The sum of all profile owner's reports and their own full-time-equivalents
+   * in ‰ (e.g. 1800 if one report is working 80% and profile owner 100%).
+   *
+   * @param string $totalFteCount
    */
   public function setTotalFteCount($totalFteCount)
   {
@@ -616,7 +754,10 @@ class PersonCore extends \Google\Collection
     return $this->totalFteCount;
   }
   /**
-   * @param string
+   * External ID of type "login_id" for the profile. For google.com this is the
+   * username/LDAP.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {
@@ -630,7 +771,7 @@ class PersonCore extends \Google\Collection
     return $this->username;
   }
   /**
-   * @param string
+   * @param string $waldoComeBackTime
    */
   public function setWaldoComeBackTime($waldoComeBackTime)
   {

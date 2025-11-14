@@ -23,6 +23,10 @@ class GeoPolicyItem extends \Google\Collection
   protected $healthCheckedTargetsType = HealthCheckTargets::class;
   protected $healthCheckedTargetsDataType = '';
   /**
+   * The geo-location granularity is a GCP region. This location string should
+   * correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-
+   * east1", etc.
+   *
    * @var string
    */
   public $location;
@@ -31,12 +35,20 @@ class GeoPolicyItem extends \Google\Collection
    */
   public $rrdata;
   /**
+   * DNSSEC generated signatures for all the `rrdata` within this item. When
+   * using health-checked targets for DNSSEC-enabled zones, you can only use at
+   * most one health-checked IP address per item.
+   *
    * @var string[]
    */
   public $signatureRrdata;
 
   /**
-   * @param HealthCheckTargets
+   * For A and AAAA types only. Endpoints to return in the query result only if
+   * they are healthy. These can be specified along with `rrdata` within this
+   * item.
+   *
+   * @param HealthCheckTargets $healthCheckedTargets
    */
   public function setHealthCheckedTargets(HealthCheckTargets $healthCheckedTargets)
   {
@@ -50,7 +62,11 @@ class GeoPolicyItem extends \Google\Collection
     return $this->healthCheckedTargets;
   }
   /**
-   * @param string
+   * The geo-location granularity is a GCP region. This location string should
+   * correspond to a GCP region. e.g. "us-east1", "southamerica-east1", "asia-
+   * east1", etc.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -64,7 +80,7 @@ class GeoPolicyItem extends \Google\Collection
     return $this->location;
   }
   /**
-   * @param string[]
+   * @param string[] $rrdata
    */
   public function setRrdata($rrdata)
   {
@@ -78,7 +94,11 @@ class GeoPolicyItem extends \Google\Collection
     return $this->rrdata;
   }
   /**
-   * @param string[]
+   * DNSSEC generated signatures for all the `rrdata` within this item. When
+   * using health-checked targets for DNSSEC-enabled zones, you can only use at
+   * most one health-checked IP address per item.
+   *
+   * @param string[] $signatureRrdata
    */
   public function setSignatureRrdata($signatureRrdata)
   {

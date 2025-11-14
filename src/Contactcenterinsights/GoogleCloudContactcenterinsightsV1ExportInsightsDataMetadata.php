@@ -21,18 +21,26 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataMetadata extends \Goog
 {
   protected $collection_key = 'partialErrors';
   /**
+   * The number of conversations that were exported successfully.
+   *
    * @var int
    */
   public $completedExportCount;
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * The number of conversations that failed to be exported.
+   *
    * @var int
    */
   public $failedExportCount;
@@ -42,7 +50,9 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataMetadata extends \Goog
   protected $requestDataType = '';
 
   /**
-   * @param int
+   * The number of conversations that were exported successfully.
+   *
+   * @param int $completedExportCount
    */
   public function setCompletedExportCount($completedExportCount)
   {
@@ -56,7 +66,9 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataMetadata extends \Goog
     return $this->completedExportCount;
   }
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -70,7 +82,9 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataMetadata extends \Goog
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -84,7 +98,9 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataMetadata extends \Goog
     return $this->endTime;
   }
   /**
-   * @param int
+   * The number of conversations that failed to be exported.
+   *
+   * @param int $failedExportCount
    */
   public function setFailedExportCount($failedExportCount)
   {
@@ -98,7 +114,10 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataMetadata extends \Goog
     return $this->failedExportCount;
   }
   /**
-   * @param GoogleRpcStatus[]
+   * Partial errors during export operation that might cause the operation
+   * output to be incomplete.
+   *
+   * @param GoogleRpcStatus[] $partialErrors
    */
   public function setPartialErrors($partialErrors)
   {
@@ -112,7 +131,9 @@ class GoogleCloudContactcenterinsightsV1ExportInsightsDataMetadata extends \Goog
     return $this->partialErrors;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest
+   * The original request for export.
+   *
+   * @param GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest $request
    */
   public function setRequest(GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest $request)
   {

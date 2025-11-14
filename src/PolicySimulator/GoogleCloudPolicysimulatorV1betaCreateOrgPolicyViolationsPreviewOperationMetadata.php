@@ -20,32 +20,68 @@ namespace Google\Service\PolicySimulator;
 class GoogleCloudPolicysimulatorV1betaCreateOrgPolicyViolationsPreviewOperationMetadata extends \Google\Model
 {
   /**
+   * The state is unspecified.
+   */
+  public const STATE_PREVIEW_STATE_UNSPECIFIED = 'PREVIEW_STATE_UNSPECIFIED';
+  /**
+   * The OrgPolicyViolationsPreview has not been created yet.
+   */
+  public const STATE_PREVIEW_PENDING = 'PREVIEW_PENDING';
+  /**
+   * The OrgPolicyViolationsPreview is currently being created.
+   */
+  public const STATE_PREVIEW_RUNNING = 'PREVIEW_RUNNING';
+  /**
+   * The OrgPolicyViolationsPreview creation finished successfully.
+   */
+  public const STATE_PREVIEW_SUCCEEDED = 'PREVIEW_SUCCEEDED';
+  /**
+   * The OrgPolicyViolationsPreview creation failed with an error.
+   */
+  public const STATE_PREVIEW_FAILED = 'PREVIEW_FAILED';
+  /**
+   * Time when the request was received.
+   *
    * @var string
    */
   public $requestTime;
   /**
+   * Total number of resources that need scanning. Should equal resource_scanned
+   * + resources_pending
+   *
    * @var int
    */
   public $resourcesFound;
   /**
+   * Number of resources still to scan.
+   *
    * @var int
    */
   public $resourcesPending;
   /**
+   * Number of resources already scanned.
+   *
    * @var int
    */
   public $resourcesScanned;
   /**
+   * Time when the request started processing, i.e., when the state was set to
+   * RUNNING.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The current state of the operation.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * Time when the request was received.
+   *
+   * @param string $requestTime
    */
   public function setRequestTime($requestTime)
   {
@@ -59,7 +95,10 @@ class GoogleCloudPolicysimulatorV1betaCreateOrgPolicyViolationsPreviewOperationM
     return $this->requestTime;
   }
   /**
-   * @param int
+   * Total number of resources that need scanning. Should equal resource_scanned
+   * + resources_pending
+   *
+   * @param int $resourcesFound
    */
   public function setResourcesFound($resourcesFound)
   {
@@ -73,7 +112,9 @@ class GoogleCloudPolicysimulatorV1betaCreateOrgPolicyViolationsPreviewOperationM
     return $this->resourcesFound;
   }
   /**
-   * @param int
+   * Number of resources still to scan.
+   *
+   * @param int $resourcesPending
    */
   public function setResourcesPending($resourcesPending)
   {
@@ -87,7 +128,9 @@ class GoogleCloudPolicysimulatorV1betaCreateOrgPolicyViolationsPreviewOperationM
     return $this->resourcesPending;
   }
   /**
-   * @param int
+   * Number of resources already scanned.
+   *
+   * @param int $resourcesScanned
    */
   public function setResourcesScanned($resourcesScanned)
   {
@@ -101,7 +144,10 @@ class GoogleCloudPolicysimulatorV1betaCreateOrgPolicyViolationsPreviewOperationM
     return $this->resourcesScanned;
   }
   /**
-   * @param string
+   * Time when the request started processing, i.e., when the state was set to
+   * RUNNING.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -115,14 +161,19 @@ class GoogleCloudPolicysimulatorV1betaCreateOrgPolicyViolationsPreviewOperationM
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The current state of the operation.
+   *
+   * Accepted values: PREVIEW_STATE_UNSPECIFIED, PREVIEW_PENDING,
+   * PREVIEW_RUNNING, PREVIEW_SUCCEEDED, PREVIEW_FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

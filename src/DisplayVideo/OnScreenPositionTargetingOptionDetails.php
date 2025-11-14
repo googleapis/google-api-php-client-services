@@ -20,19 +20,45 @@ namespace Google\Service\DisplayVideo;
 class OnScreenPositionTargetingOptionDetails extends \Google\Model
 {
   /**
+   * On screen position is not specified in this version. This enum is a place
+   * holder for a default value and does not represent a real on screen
+   * position.
+   */
+  public const ON_SCREEN_POSITION_ON_SCREEN_POSITION_UNSPECIFIED = 'ON_SCREEN_POSITION_UNSPECIFIED';
+  /**
+   * The ad position is unknown on the screen.
+   */
+  public const ON_SCREEN_POSITION_ON_SCREEN_POSITION_UNKNOWN = 'ON_SCREEN_POSITION_UNKNOWN';
+  /**
+   * The ad is located above the fold.
+   */
+  public const ON_SCREEN_POSITION_ON_SCREEN_POSITION_ABOVE_THE_FOLD = 'ON_SCREEN_POSITION_ABOVE_THE_FOLD';
+  /**
+   * The ad is located below the fold.
+   */
+  public const ON_SCREEN_POSITION_ON_SCREEN_POSITION_BELOW_THE_FOLD = 'ON_SCREEN_POSITION_BELOW_THE_FOLD';
+  /**
+   * Output only. The on screen position.
+   *
    * @var string
    */
   public $onScreenPosition;
 
   /**
-   * @param string
+   * Output only. The on screen position.
+   *
+   * Accepted values: ON_SCREEN_POSITION_UNSPECIFIED,
+   * ON_SCREEN_POSITION_UNKNOWN, ON_SCREEN_POSITION_ABOVE_THE_FOLD,
+   * ON_SCREEN_POSITION_BELOW_THE_FOLD
+   *
+   * @param self::ON_SCREEN_POSITION_* $onScreenPosition
    */
   public function setOnScreenPosition($onScreenPosition)
   {
     $this->onScreenPosition = $onScreenPosition;
   }
   /**
-   * @return string
+   * @return self::ON_SCREEN_POSITION_*
    */
   public function getOnScreenPosition()
   {

@@ -21,44 +21,70 @@ class Destination extends \Google\Collection
 {
   protected $collection_key = 'endpoints';
   /**
+   * Output only. Time when the `Destination` resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. A description of this resource.
+   *
    * @var string
    */
   public $description;
   protected $endpointsType = DestinationEndpoint::class;
   protected $endpointsDataType = 'array';
   /**
+   * The etag is computed by the server, and might be sent with update and
+   * delete requests so that the client has an up-to-date value before
+   * proceeding.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Required. Immutable. The IP prefix that represents your workload on another
+   * CSP.
+   *
    * @var string
    */
   public $ipPrefix;
   /**
+   * Optional. User-defined labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Identifier. The name of the `Destination` resource. Format: `projects/{proj
+   * ect}/locations/{location}/multicloudDataTransferConfigs/{multicloud_data_tr
+   * ansfer_config}/destinations/{destination}`.
+   *
    * @var string
    */
   public $name;
   protected $stateTimelineType = StateTimeline::class;
   protected $stateTimelineDataType = '';
   /**
+   * Output only. The Google-generated unique ID for the `Destination` resource.
+   * This value is unique across all `Destination` resources. If a resource is
+   * deleted and another with the same name is created, the new resource is
+   * assigned a different and unique ID.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Time when the `Destination` resource was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Time when the `Destination` resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -72,7 +98,9 @@ class Destination extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. A description of this resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -86,7 +114,10 @@ class Destination extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param DestinationEndpoint[]
+   * Required. Unordered list. The list of `DestinationEndpoint` resources
+   * configured for the IP prefix.
+   *
+   * @param DestinationEndpoint[] $endpoints
    */
   public function setEndpoints($endpoints)
   {
@@ -100,7 +131,11 @@ class Destination extends \Google\Collection
     return $this->endpoints;
   }
   /**
-   * @param string
+   * The etag is computed by the server, and might be sent with update and
+   * delete requests so that the client has an up-to-date value before
+   * proceeding.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -114,7 +149,10 @@ class Destination extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Required. Immutable. The IP prefix that represents your workload on another
+   * CSP.
+   *
+   * @param string $ipPrefix
    */
   public function setIpPrefix($ipPrefix)
   {
@@ -128,7 +166,9 @@ class Destination extends \Google\Collection
     return $this->ipPrefix;
   }
   /**
-   * @param string[]
+   * Optional. User-defined labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -142,7 +182,11 @@ class Destination extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Identifier. The name of the `Destination` resource. Format: `projects/{proj
+   * ect}/locations/{location}/multicloudDataTransferConfigs/{multicloud_data_tr
+   * ansfer_config}/destinations/{destination}`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -156,7 +200,16 @@ class Destination extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param StateTimeline
+   * Output only. The timeline of the expected `Destination` states or the
+   * current rest state. If a state change is expected, the value is `ADDING`,
+   * `DELETING` or `SUSPENDING`, depending on the action specified. Example:
+   * "state_timeline": { "states": [ { // The time when the `Destination`
+   * resource will be activated. "effectiveTime": "2024-12-01T08:00:00Z",
+   * "state": "ADDING" }, { // The time when the `Destination` resource will be
+   * suspended. "effectiveTime": "2024-12-01T20:00:00Z", "state": "SUSPENDING" }
+   * ] }
+   *
+   * @param StateTimeline $stateTimeline
    */
   public function setStateTimeline(StateTimeline $stateTimeline)
   {
@@ -170,7 +223,12 @@ class Destination extends \Google\Collection
     return $this->stateTimeline;
   }
   /**
-   * @param string
+   * Output only. The Google-generated unique ID for the `Destination` resource.
+   * This value is unique across all `Destination` resources. If a resource is
+   * deleted and another with the same name is created, the new resource is
+   * assigned a different and unique ID.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -184,7 +242,9 @@ class Destination extends \Google\Collection
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Time when the `Destination` resource was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

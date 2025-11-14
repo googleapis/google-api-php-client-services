@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2StoredInfoTypeConfig extends \Google\Model
 {
   /**
+   * Description of the StoredInfoType (max 256 characters).
+   *
    * @var string
    */
   public $description;
   protected $dictionaryType = GooglePrivacyDlpV2Dictionary::class;
   protected $dictionaryDataType = '';
   /**
+   * Display name of the StoredInfoType (max 256 characters).
+   *
    * @var string
    */
   public $displayName;
@@ -35,7 +39,9 @@ class GooglePrivacyDlpV2StoredInfoTypeConfig extends \Google\Model
   protected $regexDataType = '';
 
   /**
-   * @param string
+   * Description of the StoredInfoType (max 256 characters).
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -49,7 +55,9 @@ class GooglePrivacyDlpV2StoredInfoTypeConfig extends \Google\Model
     return $this->description;
   }
   /**
-   * @param GooglePrivacyDlpV2Dictionary
+   * Store dictionary-based CustomInfoType.
+   *
+   * @param GooglePrivacyDlpV2Dictionary $dictionary
    */
   public function setDictionary(GooglePrivacyDlpV2Dictionary $dictionary)
   {
@@ -63,7 +71,9 @@ class GooglePrivacyDlpV2StoredInfoTypeConfig extends \Google\Model
     return $this->dictionary;
   }
   /**
-   * @param string
+   * Display name of the StoredInfoType (max 256 characters).
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -77,7 +87,9 @@ class GooglePrivacyDlpV2StoredInfoTypeConfig extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GooglePrivacyDlpV2LargeCustomDictionaryConfig
+   * StoredInfoType where findings are defined by a dictionary of phrases.
+   *
+   * @param GooglePrivacyDlpV2LargeCustomDictionaryConfig $largeCustomDictionary
    */
   public function setLargeCustomDictionary(GooglePrivacyDlpV2LargeCustomDictionaryConfig $largeCustomDictionary)
   {
@@ -91,7 +103,9 @@ class GooglePrivacyDlpV2StoredInfoTypeConfig extends \Google\Model
     return $this->largeCustomDictionary;
   }
   /**
-   * @param GooglePrivacyDlpV2Regex
+   * Store regular expression-based StoredInfoType.
+   *
+   * @param GooglePrivacyDlpV2Regex $regex
    */
   public function setRegex(GooglePrivacyDlpV2Regex $regex)
   {

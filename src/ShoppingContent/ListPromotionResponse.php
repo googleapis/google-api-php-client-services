@@ -21,6 +21,9 @@ class ListPromotionResponse extends \Google\Collection
 {
   protected $collection_key = 'promotions';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListPromotionResponse extends \Google\Collection
   protected $promotionsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListPromotionResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Promotion[]
+   * List of all available promotions for the merchant.
+   *
+   * @param Promotion[] $promotions
    */
   public function setPromotions($promotions)
   {

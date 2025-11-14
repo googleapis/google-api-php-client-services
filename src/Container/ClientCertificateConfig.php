@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class ClientCertificateConfig extends \Google\Model
 {
   /**
+   * Issue a client certificate.
+   *
    * @var bool
    */
   public $issueClientCertificate;
 
   /**
-   * @param bool
+   * Issue a client certificate.
+   *
+   * @param bool $issueClientCertificate
    */
   public function setIssueClientCertificate($issueClientCertificate)
   {

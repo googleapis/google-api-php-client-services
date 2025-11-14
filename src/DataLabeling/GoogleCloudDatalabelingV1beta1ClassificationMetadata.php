@@ -20,12 +20,16 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ClassificationMetadata extends \Google\Model
 {
   /**
+   * Whether the classification task is multi-label or not.
+   *
    * @var bool
    */
   public $isMultiLabel;
 
   /**
-   * @param bool
+   * Whether the classification task is multi-label or not.
+   *
+   * @param bool $isMultiLabel
    */
   public function setIsMultiLabel($isMultiLabel)
   {

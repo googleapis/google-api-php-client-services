@@ -23,12 +23,18 @@ class GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse ext
   protected $claimsType = GoogleFactcheckingFactchecktoolsV1alpha1Claim::class;
   protected $claimsDataType = 'array';
   /**
+   * The next pagination token in the Search response. It should be used as the
+   * `page_token` for the following request. An empty value means no more
+   * results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleFactcheckingFactchecktoolsV1alpha1Claim[]
+   * The list of claims and all of their associated information.
+   *
+   * @param GoogleFactcheckingFactchecktoolsV1alpha1Claim[] $claims
    */
   public function setClaims($claims)
   {
@@ -42,7 +48,11 @@ class GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse ext
     return $this->claims;
   }
   /**
-   * @param string
+   * The next pagination token in the Search response. It should be used as the
+   * `page_token` for the following request. An empty value means no more
+   * results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

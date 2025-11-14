@@ -21,12 +21,16 @@ class InstancesListServerCertificatesResponse extends \Google\Collection
 {
   protected $collection_key = 'serverCerts';
   /**
+   * The `sha1_fingerprint` of the active certificate from `server_certs`.
+   *
    * @var string
    */
   public $activeVersion;
   protected $caCertsType = SslCert::class;
   protected $caCertsDataType = 'array';
   /**
+   * This is always `sql#instancesListServerCertificates`.
+   *
    * @var string
    */
   public $kind;
@@ -34,7 +38,9 @@ class InstancesListServerCertificatesResponse extends \Google\Collection
   protected $serverCertsDataType = 'array';
 
   /**
-   * @param string
+   * The `sha1_fingerprint` of the active certificate from `server_certs`.
+   *
+   * @param string $activeVersion
    */
   public function setActiveVersion($activeVersion)
   {
@@ -48,7 +54,9 @@ class InstancesListServerCertificatesResponse extends \Google\Collection
     return $this->activeVersion;
   }
   /**
-   * @param SslCert[]
+   * List of server CA certificates for the instance.
+   *
+   * @param SslCert[] $caCerts
    */
   public function setCaCerts($caCerts)
   {
@@ -62,7 +70,9 @@ class InstancesListServerCertificatesResponse extends \Google\Collection
     return $this->caCerts;
   }
   /**
-   * @param string
+   * This is always `sql#instancesListServerCertificates`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -76,7 +86,10 @@ class InstancesListServerCertificatesResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param SslCert[]
+   * List of server certificates for the instance, signed by the corresponding
+   * CA from the `ca_certs` list.
+   *
+   * @param SslCert[] $serverCerts
    */
   public function setServerCerts($serverCerts)
   {

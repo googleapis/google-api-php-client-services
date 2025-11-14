@@ -20,12 +20,16 @@ namespace Google\Service\Docs;
 class CreateFootnoteResponse extends \Google\Model
 {
   /**
+   * The ID of the created footnote.
+   *
    * @var string
    */
   public $footnoteId;
 
   /**
-   * @param string
+   * The ID of the created footnote.
+   *
+   * @param string $footnoteId
    */
   public function setFootnoteId($footnoteId)
   {

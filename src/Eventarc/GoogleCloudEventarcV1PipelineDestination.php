@@ -24,6 +24,11 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
   protected $httpEndpointType = GoogleCloudEventarcV1PipelineDestinationHttpEndpoint::class;
   protected $httpEndpointDataType = '';
   /**
+   * Optional. The resource name of the Message Bus to which events should be
+   * published. The Message Bus resource should exist in the same project as the
+   * Pipeline. Format:
+   * `projects/{project}/locations/{location}/messageBuses/{message_bus}`
+   *
    * @var string
    */
   public $messageBus;
@@ -32,16 +37,30 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
   protected $outputPayloadFormatType = GoogleCloudEventarcV1PipelineMessagePayloadFormat::class;
   protected $outputPayloadFormatDataType = '';
   /**
+   * Optional. The resource name of the Pub/Sub topic to which events should be
+   * published. Format: `projects/{project}/locations/{location}/topics/{topic}`
+   *
    * @var string
    */
   public $topic;
   /**
+   * Optional. The resource name of the Workflow whose Executions are triggered
+   * by the events. The Workflow resource should be deployed in the same project
+   * as the Pipeline. Format:
+   * `projects/{project}/locations/{location}/workflows/{workflow}`
+   *
    * @var string
    */
   public $workflow;
 
   /**
-   * @param GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig
+   * Optional. An authentication config used to authenticate message requests,
+   * such that destinations can verify the source. For example, this can be used
+   * with private Google Cloud destinations that require Google Cloud
+   * credentials for access like Cloud Run. This field is optional and should be
+   * set only by users interested in authenticated push.
+   *
+   * @param GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig $authenticationConfig
    */
   public function setAuthenticationConfig(GoogleCloudEventarcV1PipelineDestinationAuthenticationConfig $authenticationConfig)
   {
@@ -55,7 +74,13 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
     return $this->authenticationConfig;
   }
   /**
-   * @param GoogleCloudEventarcV1PipelineDestinationHttpEndpoint
+   * Optional. An HTTP endpoint destination described by an URI. If a DNS FQDN
+   * is provided as the endpoint, Pipeline will create a peering zone to the
+   * consumer VPC and forward DNS requests to the VPC specified by network
+   * config to resolve the service endpoint. See:
+   * https://cloud.google.com/dns/docs/zones/zones-overview#peering_zones
+   *
+   * @param GoogleCloudEventarcV1PipelineDestinationHttpEndpoint $httpEndpoint
    */
   public function setHttpEndpoint(GoogleCloudEventarcV1PipelineDestinationHttpEndpoint $httpEndpoint)
   {
@@ -69,7 +94,12 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
     return $this->httpEndpoint;
   }
   /**
-   * @param string
+   * Optional. The resource name of the Message Bus to which events should be
+   * published. The Message Bus resource should exist in the same project as the
+   * Pipeline. Format:
+   * `projects/{project}/locations/{location}/messageBuses/{message_bus}`
+   *
+   * @param string $messageBus
    */
   public function setMessageBus($messageBus)
   {
@@ -83,7 +113,10 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
     return $this->messageBus;
   }
   /**
-   * @param GoogleCloudEventarcV1PipelineDestinationNetworkConfig
+   * Optional. Network config is used to configure how Pipeline resolves and
+   * connects to a destination.
+   *
+   * @param GoogleCloudEventarcV1PipelineDestinationNetworkConfig $networkConfig
    */
   public function setNetworkConfig(GoogleCloudEventarcV1PipelineDestinationNetworkConfig $networkConfig)
   {
@@ -97,7 +130,12 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
     return $this->networkConfig;
   }
   /**
-   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormat
+   * Optional. The message format before it is delivered to the destination. If
+   * not set, the message will be delivered in the format it was originally
+   * delivered to the Pipeline. This field can only be set if
+   * Pipeline.input_payload_format is also set.
+   *
+   * @param GoogleCloudEventarcV1PipelineMessagePayloadFormat $outputPayloadFormat
    */
   public function setOutputPayloadFormat(GoogleCloudEventarcV1PipelineMessagePayloadFormat $outputPayloadFormat)
   {
@@ -111,7 +149,10 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
     return $this->outputPayloadFormat;
   }
   /**
-   * @param string
+   * Optional. The resource name of the Pub/Sub topic to which events should be
+   * published. Format: `projects/{project}/locations/{location}/topics/{topic}`
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {
@@ -125,7 +166,12 @@ class GoogleCloudEventarcV1PipelineDestination extends \Google\Model
     return $this->topic;
   }
   /**
-   * @param string
+   * Optional. The resource name of the Workflow whose Executions are triggered
+   * by the events. The Workflow resource should be deployed in the same project
+   * as the Pipeline. Format:
+   * `projects/{project}/locations/{location}/workflows/{workflow}`
+   *
+   * @param string $workflow
    */
   public function setWorkflow($workflow)
   {

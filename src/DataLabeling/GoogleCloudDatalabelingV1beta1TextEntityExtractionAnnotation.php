@@ -25,7 +25,9 @@ class GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation extends \Goog
   protected $sequentialSegmentDataType = '';
 
   /**
-   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec
+   * Label of the text entities.
+   *
+   * @param GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec
    */
   public function setAnnotationSpec(GoogleCloudDatalabelingV1beta1AnnotationSpec $annotationSpec)
   {
@@ -39,7 +41,9 @@ class GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation extends \Goog
     return $this->annotationSpec;
   }
   /**
-   * @param GoogleCloudDatalabelingV1beta1SequentialSegment
+   * Position of the entity.
+   *
+   * @param GoogleCloudDatalabelingV1beta1SequentialSegment $sequentialSegment
    */
   public function setSequentialSegment(GoogleCloudDatalabelingV1beta1SequentialSegment $sequentialSegment)
   {

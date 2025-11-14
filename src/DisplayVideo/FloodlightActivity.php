@@ -19,40 +19,73 @@ namespace Google\Service\DisplayVideo;
 
 class FloodlightActivity extends \Google\Collection
 {
+  /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const SERVING_STATUS_FLOODLIGHT_ACTIVITY_SERVING_STATUS_UNSPECIFIED = 'FLOODLIGHT_ACTIVITY_SERVING_STATUS_UNSPECIFIED';
+  /**
+   * Enabled.
+   */
+  public const SERVING_STATUS_FLOODLIGHT_ACTIVITY_SERVING_STATUS_ENABLED = 'FLOODLIGHT_ACTIVITY_SERVING_STATUS_ENABLED';
+  /**
+   * Disabled.
+   */
+  public const SERVING_STATUS_FLOODLIGHT_ACTIVITY_SERVING_STATUS_DISABLED = 'FLOODLIGHT_ACTIVITY_SERVING_STATUS_DISABLED';
   protected $collection_key = 'remarketingConfigs';
   /**
+   * Output only. IDs of the advertisers that have access to the parent
+   * Floodlight group. Only advertisers under the provided partner ID will be
+   * listed in this field.
+   *
    * @var string[]
    */
   public $advertiserIds;
   /**
+   * Required. The display name of the Floodlight activity.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. The unique ID of the Floodlight activity. Assigned by the
+   * system.
+   *
    * @var string
    */
   public $floodlightActivityId;
   /**
+   * Required. Immutable. The ID of the parent Floodlight group.
+   *
    * @var string
    */
   public $floodlightGroupId;
   /**
+   * Output only. The resource name of the Floodlight activity.
+   *
    * @var string
    */
   public $name;
   protected $remarketingConfigsType = RemarketingConfig::class;
   protected $remarketingConfigsDataType = 'array';
   /**
+   * Optional. Whether the Floodlight activity is served.
+   *
    * @var string
    */
   public $servingStatus;
   /**
+   * Output only. Whether tags are required to be compliant.
+   *
    * @var bool
    */
   public $sslRequired;
 
   /**
-   * @param string[]
+   * Output only. IDs of the advertisers that have access to the parent
+   * Floodlight group. Only advertisers under the provided partner ID will be
+   * listed in this field.
+   *
+   * @param string[] $advertiserIds
    */
   public function setAdvertiserIds($advertiserIds)
   {
@@ -66,7 +99,9 @@ class FloodlightActivity extends \Google\Collection
     return $this->advertiserIds;
   }
   /**
-   * @param string
+   * Required. The display name of the Floodlight activity.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -80,7 +115,10 @@ class FloodlightActivity extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. The unique ID of the Floodlight activity. Assigned by the
+   * system.
+   *
+   * @param string $floodlightActivityId
    */
   public function setFloodlightActivityId($floodlightActivityId)
   {
@@ -94,7 +132,9 @@ class FloodlightActivity extends \Google\Collection
     return $this->floodlightActivityId;
   }
   /**
-   * @param string
+   * Required. Immutable. The ID of the parent Floodlight group.
+   *
+   * @param string $floodlightGroupId
    */
   public function setFloodlightGroupId($floodlightGroupId)
   {
@@ -108,7 +148,9 @@ class FloodlightActivity extends \Google\Collection
     return $this->floodlightGroupId;
   }
   /**
-   * @param string
+   * Output only. The resource name of the Floodlight activity.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -122,7 +164,13 @@ class FloodlightActivity extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param RemarketingConfig[]
+   * Output only. A list of configuration objects designating whether
+   * remarketing for this Floodlight Activity is enabled and available for a
+   * specifc advertiser. If enabled, this Floodlight Activity generates a
+   * remarketing user list that is able to be used in targeting under the
+   * advertiser.
+   *
+   * @param RemarketingConfig[] $remarketingConfigs
    */
   public function setRemarketingConfigs($remarketingConfigs)
   {
@@ -136,21 +184,29 @@ class FloodlightActivity extends \Google\Collection
     return $this->remarketingConfigs;
   }
   /**
-   * @param string
+   * Optional. Whether the Floodlight activity is served.
+   *
+   * Accepted values: FLOODLIGHT_ACTIVITY_SERVING_STATUS_UNSPECIFIED,
+   * FLOODLIGHT_ACTIVITY_SERVING_STATUS_ENABLED,
+   * FLOODLIGHT_ACTIVITY_SERVING_STATUS_DISABLED
+   *
+   * @param self::SERVING_STATUS_* $servingStatus
    */
   public function setServingStatus($servingStatus)
   {
     $this->servingStatus = $servingStatus;
   }
   /**
-   * @return string
+   * @return self::SERVING_STATUS_*
    */
   public function getServingStatus()
   {
     return $this->servingStatus;
   }
   /**
-   * @param bool
+   * Output only. Whether tags are required to be compliant.
+   *
+   * @param bool $sslRequired
    */
   public function setSslRequired($sslRequired)
   {

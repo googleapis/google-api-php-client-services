@@ -20,10 +20,16 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2PublishLabelRequest extends \Google\Model
 {
   /**
+   * The BCP-47 language code to use for evaluating localized field labels. When
+   * not specified, values in the default configured language will be used.
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
    * @var bool
    */
   public $useAdminAccess;
@@ -31,7 +37,10 @@ class GoogleAppsDriveLabelsV2PublishLabelRequest extends \Google\Model
   protected $writeControlDataType = '';
 
   /**
-   * @param string
+   * The BCP-47 language code to use for evaluating localized field labels. When
+   * not specified, values in the default configured language will be used.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -45,7 +54,10 @@ class GoogleAppsDriveLabelsV2PublishLabelRequest extends \Google\Model
     return $this->languageCode;
   }
   /**
-   * @param bool
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
+   * @param bool $useAdminAccess
    */
   public function setUseAdminAccess($useAdminAccess)
   {
@@ -59,7 +71,10 @@ class GoogleAppsDriveLabelsV2PublishLabelRequest extends \Google\Model
     return $this->useAdminAccess;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2WriteControl
+   * Provides control over how write requests are executed. Defaults to unset,
+   * which means the last write wins.
+   *
+   * @param GoogleAppsDriveLabelsV2WriteControl $writeControl
    */
   public function setWriteControl(GoogleAppsDriveLabelsV2WriteControl $writeControl)
   {

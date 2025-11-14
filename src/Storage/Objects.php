@@ -23,20 +23,31 @@ class Objects extends \Google\Collection
   protected $itemsType = StorageObject::class;
   protected $itemsDataType = 'array';
   /**
+   * The kind of item this is. For lists of objects, this is always
+   * storage#objects.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The list of prefixes of objects matching-but-not-listed up to and including
+   * the requested delimiter.
+   *
    * @var string[]
    */
   public $prefixes;
 
   /**
-   * @param StorageObject[]
+   * The list of items.
+   *
+   * @param StorageObject[] $items
    */
   public function setItems($items)
   {
@@ -50,7 +61,10 @@ class Objects extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The kind of item this is. For lists of objects, this is always
+   * storage#objects.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -64,7 +78,10 @@ class Objects extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * The continuation token, used to page through large result sets. Provide
+   * this value in a subsequent request to return the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -78,7 +95,10 @@ class Objects extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * The list of prefixes of objects matching-but-not-listed up to and including
+   * the requested delimiter.
+   *
+   * @param string[] $prefixes
    */
   public function setPrefixes($prefixes)
   {

@@ -19,18 +19,35 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest extends \Google\Collection
 {
+  /**
+   * Implies the field mask: `name,id,revision_id,label_type,properties.*`
+   */
+  public const VIEW_LABEL_VIEW_BASIC = 'LABEL_VIEW_BASIC';
+  /**
+   * All possible fields.
+   */
+  public const VIEW_LABEL_VIEW_FULL = 'LABEL_VIEW_FULL';
   protected $collection_key = 'requests';
   /**
+   * The BCP-47 language code to use for evaluating localized field labels when
+   * `include_label_in_response` is `true`.
+   *
    * @var string
    */
   public $languageCode;
   protected $requestsType = GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest::class;
   protected $requestsDataType = 'array';
   /**
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
    * @var bool
    */
   public $useAdminAccess;
   /**
+   * When specified, only certain fields belonging to the indicated view will be
+   * returned.
+   *
    * @var string
    */
   public $view;
@@ -38,7 +55,10 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest extends \Google\Collection
   protected $writeControlDataType = '';
 
   /**
-   * @param string
+   * The BCP-47 language code to use for evaluating localized field labels when
+   * `include_label_in_response` is `true`.
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -52,7 +72,10 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest[]
+   * A list of updates to apply to the label. Requests will be applied in the
+   * order they are specified.
+   *
+   * @param GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestRequest[] $requests
    */
   public function setRequests($requests)
   {
@@ -66,7 +89,10 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest extends \Google\Collection
     return $this->requests;
   }
   /**
-   * @param bool
+   * Set to `true` in order to use the user's admin credentials. The server will
+   * verify the user is an admin for the label before allowing access.
+   *
+   * @param bool $useAdminAccess
    */
   public function setUseAdminAccess($useAdminAccess)
   {
@@ -80,21 +106,28 @@ class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequest extends \Google\Collection
     return $this->useAdminAccess;
   }
   /**
-   * @param string
+   * When specified, only certain fields belonging to the indicated view will be
+   * returned.
+   *
+   * Accepted values: LABEL_VIEW_BASIC, LABEL_VIEW_FULL
+   *
+   * @param self::VIEW_* $view
    */
   public function setView($view)
   {
     $this->view = $view;
   }
   /**
-   * @return string
+   * @return self::VIEW_*
    */
   public function getView()
   {
     return $this->view;
   }
   /**
-   * @param GoogleAppsDriveLabelsV2WriteControl
+   * Provides control over how write requests are executed.
+   *
+   * @param GoogleAppsDriveLabelsV2WriteControl $writeControl
    */
   public function setWriteControl(GoogleAppsDriveLabelsV2WriteControl $writeControl)
   {

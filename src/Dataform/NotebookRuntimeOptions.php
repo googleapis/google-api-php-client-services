@@ -20,16 +20,29 @@ namespace Google\Service\Dataform;
 class NotebookRuntimeOptions extends \Google\Model
 {
   /**
+   * Optional. The resource name of the [Colab runtime template]
+   * (https://cloud.google.com/colab/docs/runtimes), from which a runtime is
+   * created for notebook executions. If not specified, a runtime is created
+   * with Colab's default specifications.
+   *
    * @var string
    */
   public $aiPlatformNotebookRuntimeTemplate;
   /**
+   * Optional. The Google Cloud Storage location to upload the result to.
+   * Format: `gs://bucket-name`.
+   *
    * @var string
    */
   public $gcsOutputBucket;
 
   /**
-   * @param string
+   * Optional. The resource name of the [Colab runtime template]
+   * (https://cloud.google.com/colab/docs/runtimes), from which a runtime is
+   * created for notebook executions. If not specified, a runtime is created
+   * with Colab's default specifications.
+   *
+   * @param string $aiPlatformNotebookRuntimeTemplate
    */
   public function setAiPlatformNotebookRuntimeTemplate($aiPlatformNotebookRuntimeTemplate)
   {
@@ -43,7 +56,10 @@ class NotebookRuntimeOptions extends \Google\Model
     return $this->aiPlatformNotebookRuntimeTemplate;
   }
   /**
-   * @param string
+   * Optional. The Google Cloud Storage location to upload the result to.
+   * Format: `gs://bucket-name`.
+   *
+   * @param string $gcsOutputBucket
    */
   public function setGcsOutputBucket($gcsOutputBucket)
   {

@@ -20,10 +20,15 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItem extends \Google\Model
 {
   /**
+   * Optional. Description of the carousel item. Maximum of four lines of text.
+   *
    * @var string
    */
   public $description;
   /**
+   * Optional. Text that appears at the bottom of the Browse Carousel Card.
+   * Maximum of one line of text.
+   *
    * @var string
    */
   public $footer;
@@ -32,12 +37,16 @@ class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselC
   protected $openUriActionType = GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction::class;
   protected $openUriActionDataType = '';
   /**
+   * Required. Title of the carousel item. Maximum of two lines of text.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Optional. Description of the carousel item. Maximum of four lines of text.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -51,7 +60,10 @@ class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselC
     return $this->description;
   }
   /**
-   * @param string
+   * Optional. Text that appears at the bottom of the Browse Carousel Card.
+   * Maximum of one line of text.
+   *
+   * @param string $footer
    */
   public function setFooter($footer)
   {
@@ -65,7 +77,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselC
     return $this->footer;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageImage
+   * Optional. Hero image for the carousel item.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageImage $image
    */
   public function setImage(GoogleCloudDialogflowV2beta1IntentMessageImage $image)
   {
@@ -79,7 +93,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselC
     return $this->image;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction
+   * Required. Action to present to the user.
+   *
+   * @param GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction $openUriAction
    */
   public function setOpenUriAction(GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction $openUriAction)
   {
@@ -93,7 +109,9 @@ class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselC
     return $this->openUriAction;
   }
   /**
-   * @param string
+   * Required. Title of the carousel item. Maximum of two lines of text.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

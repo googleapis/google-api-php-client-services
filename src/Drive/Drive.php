@@ -22,48 +22,81 @@ class Drive extends \Google\Model
   protected $backgroundImageFileType = DriveBackgroundImageFile::class;
   protected $backgroundImageFileDataType = '';
   /**
+   * Output only. A short-lived link to this shared drive's background image.
+   *
    * @var string
    */
   public $backgroundImageLink;
   protected $capabilitiesType = DriveCapabilities::class;
   protected $capabilitiesDataType = '';
   /**
+   * The color of this shared drive as an RGB hex string. It can only be set on
+   * a `drive.drives.update` request that does not set `themeId`.
+   *
    * @var string
    */
   public $colorRgb;
   /**
+   * The time at which the shared drive was created (RFC 3339 date-time).
+   *
    * @var string
    */
   public $createdTime;
   /**
+   * Whether the shared drive is hidden from default view.
+   *
    * @var bool
    */
   public $hidden;
   /**
+   * Output only. The ID of this shared drive which is also the ID of the top
+   * level folder of this shared drive.
+   *
    * @var string
    */
   public $id;
   /**
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string `"drive#drive"`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The name of this shared drive.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. The organizational unit of this shared drive. This field is
+   * only populated on `drives.list` responses when the `useDomainAdminAccess`
+   * parameter is set to `true`.
+   *
    * @var string
    */
   public $orgUnitId;
   protected $restrictionsType = DriveRestrictions::class;
   protected $restrictionsDataType = '';
   /**
+   * The ID of the theme from which the background image and color will be set.
+   * The set of possible `driveThemes` can be retrieved from a `drive.about.get`
+   * response. When not specified on a `drive.drives.create` request, a random
+   * theme is chosen from which the background image and color are set. This is
+   * a write-only field; it can only be set on requests that don't set
+   * `colorRgb` or `backgroundImageFile`.
+   *
    * @var string
    */
   public $themeId;
 
   /**
-   * @param DriveBackgroundImageFile
+   * An image file and cropping parameters from which a background image for
+   * this shared drive is set. This is a write only field; it can only be set on
+   * `drive.drives.update` requests that don't set `themeId`. When specified,
+   * all fields of the `backgroundImageFile` must be set.
+   *
+   * @param DriveBackgroundImageFile $backgroundImageFile
    */
   public function setBackgroundImageFile(DriveBackgroundImageFile $backgroundImageFile)
   {
@@ -77,7 +110,9 @@ class Drive extends \Google\Model
     return $this->backgroundImageFile;
   }
   /**
-   * @param string
+   * Output only. A short-lived link to this shared drive's background image.
+   *
+   * @param string $backgroundImageLink
    */
   public function setBackgroundImageLink($backgroundImageLink)
   {
@@ -91,7 +126,9 @@ class Drive extends \Google\Model
     return $this->backgroundImageLink;
   }
   /**
-   * @param DriveCapabilities
+   * Output only. Capabilities the current user has on this shared drive.
+   *
+   * @param DriveCapabilities $capabilities
    */
   public function setCapabilities(DriveCapabilities $capabilities)
   {
@@ -105,7 +142,10 @@ class Drive extends \Google\Model
     return $this->capabilities;
   }
   /**
-   * @param string
+   * The color of this shared drive as an RGB hex string. It can only be set on
+   * a `drive.drives.update` request that does not set `themeId`.
+   *
+   * @param string $colorRgb
    */
   public function setColorRgb($colorRgb)
   {
@@ -119,7 +159,9 @@ class Drive extends \Google\Model
     return $this->colorRgb;
   }
   /**
-   * @param string
+   * The time at which the shared drive was created (RFC 3339 date-time).
+   *
+   * @param string $createdTime
    */
   public function setCreatedTime($createdTime)
   {
@@ -133,7 +175,9 @@ class Drive extends \Google\Model
     return $this->createdTime;
   }
   /**
-   * @param bool
+   * Whether the shared drive is hidden from default view.
+   *
+   * @param bool $hidden
    */
   public function setHidden($hidden)
   {
@@ -147,7 +191,10 @@ class Drive extends \Google\Model
     return $this->hidden;
   }
   /**
-   * @param string
+   * Output only. The ID of this shared drive which is also the ID of the top
+   * level folder of this shared drive.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -161,7 +208,10 @@ class Drive extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Output only. Identifies what kind of resource this is. Value: the fixed
+   * string `"drive#drive"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -175,7 +225,9 @@ class Drive extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The name of this shared drive.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -189,7 +241,11 @@ class Drive extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. The organizational unit of this shared drive. This field is
+   * only populated on `drives.list` responses when the `useDomainAdminAccess`
+   * parameter is set to `true`.
+   *
+   * @param string $orgUnitId
    */
   public function setOrgUnitId($orgUnitId)
   {
@@ -203,7 +259,12 @@ class Drive extends \Google\Model
     return $this->orgUnitId;
   }
   /**
-   * @param DriveRestrictions
+   * A set of restrictions that apply to this shared drive or items inside this
+   * shared drive. Note that restrictions can't be set when creating a shared
+   * drive. To add a restriction, first create a shared drive and then use
+   * `drives.update` to add restrictions.
+   *
+   * @param DriveRestrictions $restrictions
    */
   public function setRestrictions(DriveRestrictions $restrictions)
   {
@@ -217,7 +278,14 @@ class Drive extends \Google\Model
     return $this->restrictions;
   }
   /**
-   * @param string
+   * The ID of the theme from which the background image and color will be set.
+   * The set of possible `driveThemes` can be retrieved from a `drive.about.get`
+   * response. When not specified on a `drive.drives.create` request, a random
+   * theme is chosen from which the background image and color are set. This is
+   * a write-only field; it can only be set on requests that don't set
+   * `colorRgb` or `backgroundImageFile`.
+   *
+   * @param string $themeId
    */
   public function setThemeId($themeId)
   {

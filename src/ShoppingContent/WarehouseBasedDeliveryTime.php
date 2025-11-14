@@ -20,40 +20,66 @@ namespace Google\Service\ShoppingContent;
 class WarehouseBasedDeliveryTime extends \Google\Model
 {
   /**
+   * Required. Carrier, such as `"UPS"` or `"Fedex"`. The list of supported
+   * carriers can be retrieved through the `listSupportedCarriers` method.
+   *
    * @var string
    */
   public $carrier;
   /**
+   * Required. Carrier service, such as `"ground"` or `"2 days"`. The list of
+   * supported services for a carrier can be retrieved through the
+   * `listSupportedCarriers` method. The name of the service must be in the
+   * eddSupportedServices list.
+   *
    * @var string
    */
   public $carrierService;
   /**
+   * Shipping origin's state.
+   *
    * @var string
    */
   public $originAdministrativeArea;
   /**
+   * Shipping origin's city.
+   *
    * @var string
    */
   public $originCity;
   /**
+   * Shipping origin's country represented as a [CLDR territory
+   * code](https://github.com/unicode-org/cldr/blob/latest/common/main/en.xml).
+   *
    * @var string
    */
   public $originCountry;
   /**
+   * Shipping origin.
+   *
    * @var string
    */
   public $originPostalCode;
   /**
+   * Shipping origin's street address.
+   *
    * @var string
    */
   public $originStreetAddress;
   /**
+   * The name of the warehouse. Warehouse name need to be matched with name. If
+   * warehouseName is set, the below fields will be ignored. The warehouse info
+   * will be read from warehouse.
+   *
    * @var string
    */
   public $warehouseName;
 
   /**
-   * @param string
+   * Required. Carrier, such as `"UPS"` or `"Fedex"`. The list of supported
+   * carriers can be retrieved through the `listSupportedCarriers` method.
+   *
+   * @param string $carrier
    */
   public function setCarrier($carrier)
   {
@@ -67,7 +93,12 @@ class WarehouseBasedDeliveryTime extends \Google\Model
     return $this->carrier;
   }
   /**
-   * @param string
+   * Required. Carrier service, such as `"ground"` or `"2 days"`. The list of
+   * supported services for a carrier can be retrieved through the
+   * `listSupportedCarriers` method. The name of the service must be in the
+   * eddSupportedServices list.
+   *
+   * @param string $carrierService
    */
   public function setCarrierService($carrierService)
   {
@@ -81,7 +112,9 @@ class WarehouseBasedDeliveryTime extends \Google\Model
     return $this->carrierService;
   }
   /**
-   * @param string
+   * Shipping origin's state.
+   *
+   * @param string $originAdministrativeArea
    */
   public function setOriginAdministrativeArea($originAdministrativeArea)
   {
@@ -95,7 +128,9 @@ class WarehouseBasedDeliveryTime extends \Google\Model
     return $this->originAdministrativeArea;
   }
   /**
-   * @param string
+   * Shipping origin's city.
+   *
+   * @param string $originCity
    */
   public function setOriginCity($originCity)
   {
@@ -109,7 +144,10 @@ class WarehouseBasedDeliveryTime extends \Google\Model
     return $this->originCity;
   }
   /**
-   * @param string
+   * Shipping origin's country represented as a [CLDR territory
+   * code](https://github.com/unicode-org/cldr/blob/latest/common/main/en.xml).
+   *
+   * @param string $originCountry
    */
   public function setOriginCountry($originCountry)
   {
@@ -123,7 +161,9 @@ class WarehouseBasedDeliveryTime extends \Google\Model
     return $this->originCountry;
   }
   /**
-   * @param string
+   * Shipping origin.
+   *
+   * @param string $originPostalCode
    */
   public function setOriginPostalCode($originPostalCode)
   {
@@ -137,7 +177,9 @@ class WarehouseBasedDeliveryTime extends \Google\Model
     return $this->originPostalCode;
   }
   /**
-   * @param string
+   * Shipping origin's street address.
+   *
+   * @param string $originStreetAddress
    */
   public function setOriginStreetAddress($originStreetAddress)
   {
@@ -151,7 +193,11 @@ class WarehouseBasedDeliveryTime extends \Google\Model
     return $this->originStreetAddress;
   }
   /**
-   * @param string
+   * The name of the warehouse. Warehouse name need to be matched with name. If
+   * warehouseName is set, the below fields will be ignored. The warehouse info
+   * will be read from warehouse.
+   *
+   * @param string $warehouseName
    */
   public function setWarehouseName($warehouseName)
   {

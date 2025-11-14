@@ -22,12 +22,16 @@ class DynamicFeedsInsertRequest extends \Google\Model
   protected $dynamicFeedType = DynamicFeed::class;
   protected $dynamicFeedDataType = '';
   /**
+   * Required. Dynamic profile ID of the inserted dynamic feed.
+   *
    * @var string
    */
   public $dynamicProfileId;
 
   /**
-   * @param DynamicFeed
+   * Required. Dynamic feed to insert.
+   *
+   * @param DynamicFeed $dynamicFeed
    */
   public function setDynamicFeed(DynamicFeed $dynamicFeed)
   {
@@ -41,7 +45,9 @@ class DynamicFeedsInsertRequest extends \Google\Model
     return $this->dynamicFeed;
   }
   /**
-   * @param string
+   * Required. Dynamic profile ID of the inserted dynamic feed.
+   *
+   * @param string $dynamicProfileId
    */
   public function setDynamicProfileId($dynamicProfileId)
   {

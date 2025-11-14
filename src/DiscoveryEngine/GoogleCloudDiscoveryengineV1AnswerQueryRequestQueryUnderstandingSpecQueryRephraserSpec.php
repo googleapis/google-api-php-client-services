@@ -20,10 +20,15 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec extends \Google\Model
 {
   /**
+   * Disable query rephraser.
+   *
    * @var bool
    */
   public $disable;
   /**
+   * Max rephrase steps. The max number is 5 steps. If not set or set to < 1, it
+   * will be set to 1 by default.
+   *
    * @var int
    */
   public $maxRephraseSteps;
@@ -31,7 +36,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryR
   protected $modelSpecDataType = '';
 
   /**
-   * @param bool
+   * Disable query rephraser.
+   *
+   * @param bool $disable
    */
   public function setDisable($disable)
   {
@@ -45,7 +52,10 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryR
     return $this->disable;
   }
   /**
-   * @param int
+   * Max rephrase steps. The max number is 5 steps. If not set or set to < 1, it
+   * will be set to 1 by default.
+   *
+   * @param int $maxRephraseSteps
    */
   public function setMaxRephraseSteps($maxRephraseSteps)
   {
@@ -59,7 +69,9 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryR
     return $this->maxRephraseSteps;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpecModelSpec
+   * Optional. Query Rephraser Model specification.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpecModelSpec $modelSpec
    */
   public function setModelSpec(GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpecModelSpec $modelSpec)
   {

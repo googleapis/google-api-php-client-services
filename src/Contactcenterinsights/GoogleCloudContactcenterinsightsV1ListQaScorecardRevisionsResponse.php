@@ -21,6 +21,9 @@ class GoogleCloudContactcenterinsightsV1ListQaScorecardRevisionsResponse extends
 {
   protected $collection_key = 'qaScorecardRevisions';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudContactcenterinsightsV1ListQaScorecardRevisionsResponse extends
   protected $qaScorecardRevisionsDataType = 'array';
 
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudContactcenterinsightsV1ListQaScorecardRevisionsResponse extends
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1QaScorecardRevision[]
+   * The QaScorecards under the parent.
+   *
+   * @param GoogleCloudContactcenterinsightsV1QaScorecardRevision[] $qaScorecardRevisions
    */
   public function setQaScorecardRevisions($qaScorecardRevisions)
   {

@@ -21,26 +21,38 @@ class AccessProposal extends \Google\Collection
 {
   protected $collection_key = 'rolesAndViews';
   /**
+   * The creation time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * The file ID that the proposal for access is on.
+   *
    * @var string
    */
   public $fileId;
   /**
+   * The ID of the access proposal.
+   *
    * @var string
    */
   public $proposalId;
   /**
+   * The email address of the user that will receive permissions, if accepted.
+   *
    * @var string
    */
   public $recipientEmailAddress;
   /**
+   * The message that the requester added to the proposal.
+   *
    * @var string
    */
   public $requestMessage;
   /**
+   * The email address of the requesting user.
+   *
    * @var string
    */
   public $requesterEmailAddress;
@@ -48,7 +60,9 @@ class AccessProposal extends \Google\Collection
   protected $rolesAndViewsDataType = 'array';
 
   /**
-   * @param string
+   * The creation time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -62,7 +76,9 @@ class AccessProposal extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * The file ID that the proposal for access is on.
+   *
+   * @param string $fileId
    */
   public function setFileId($fileId)
   {
@@ -76,7 +92,9 @@ class AccessProposal extends \Google\Collection
     return $this->fileId;
   }
   /**
-   * @param string
+   * The ID of the access proposal.
+   *
+   * @param string $proposalId
    */
   public function setProposalId($proposalId)
   {
@@ -90,7 +108,9 @@ class AccessProposal extends \Google\Collection
     return $this->proposalId;
   }
   /**
-   * @param string
+   * The email address of the user that will receive permissions, if accepted.
+   *
+   * @param string $recipientEmailAddress
    */
   public function setRecipientEmailAddress($recipientEmailAddress)
   {
@@ -104,7 +124,9 @@ class AccessProposal extends \Google\Collection
     return $this->recipientEmailAddress;
   }
   /**
-   * @param string
+   * The message that the requester added to the proposal.
+   *
+   * @param string $requestMessage
    */
   public function setRequestMessage($requestMessage)
   {
@@ -118,7 +140,9 @@ class AccessProposal extends \Google\Collection
     return $this->requestMessage;
   }
   /**
-   * @param string
+   * The email address of the requesting user.
+   *
+   * @param string $requesterEmailAddress
    */
   public function setRequesterEmailAddress($requesterEmailAddress)
   {
@@ -132,7 +156,12 @@ class AccessProposal extends \Google\Collection
     return $this->requesterEmailAddress;
   }
   /**
-   * @param AccessProposalRoleAndView[]
+   * A wrapper for the role and view of an access proposal. For more
+   * information, see [Roles and
+   * permissions](https://developers.google.com/workspace/drive/api/guides/ref-
+   * roles).
+   *
+   * @param AccessProposalRoleAndView[] $rolesAndViews
    */
   public function setRolesAndViews($rolesAndViews)
   {

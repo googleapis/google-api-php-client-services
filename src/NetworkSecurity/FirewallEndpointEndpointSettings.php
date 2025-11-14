@@ -20,12 +20,18 @@ namespace Google\Service\NetworkSecurity;
 class FirewallEndpointEndpointSettings extends \Google\Model
 {
   /**
+   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default
+   * value is false.
+   *
    * @var bool
    */
   public $jumboFramesEnabled;
 
   /**
-   * @param bool
+   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default
+   * value is false.
+   *
+   * @param bool $jumboFramesEnabled
    */
   public function setJumboFramesEnabled($jumboFramesEnabled)
   {

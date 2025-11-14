@@ -19,6 +19,11 @@ namespace Google\Service\Baremetalsolution;
 
 class QosPolicy extends \Google\Model
 {
+  /**
+   * The bandwidth permitted by the QOS policy, in gbps.
+   *
+   * @var 
+   */
   public $bandwidthGbps;
 
   public function setBandwidthGbps($bandwidthGbps)

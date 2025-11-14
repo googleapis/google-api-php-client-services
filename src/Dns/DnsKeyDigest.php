@@ -19,17 +19,28 @@ namespace Google\Service\Dns;
 
 class DnsKeyDigest extends \Google\Model
 {
+  public const TYPE_sha1 = 'sha1';
+  public const TYPE_sha256 = 'sha256';
+  public const TYPE_sha384 = 'sha384';
   /**
+   * The base-16 encoded bytes of this digest. Suitable for use in a DS resource
+   * record.
+   *
    * @var string
    */
   public $digest;
   /**
+   * Specifies the algorithm used to calculate this digest.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The base-16 encoded bytes of this digest. Suitable for use in a DS resource
+   * record.
+   *
+   * @param string $digest
    */
   public function setDigest($digest)
   {
@@ -43,14 +54,18 @@ class DnsKeyDigest extends \Google\Model
     return $this->digest;
   }
   /**
-   * @param string
+   * Specifies the algorithm used to calculate this digest.
+   *
+   * Accepted values: sha1, sha256, sha384
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

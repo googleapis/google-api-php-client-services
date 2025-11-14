@@ -20,20 +20,30 @@ namespace Google\Service\BigQueryConnectionService;
 class SalesforceDataCloudProperties extends \Google\Model
 {
   /**
+   * Output only. A unique Google-owned and Google-generated service account
+   * identity for the connection.
+   *
    * @var string
    */
   public $identity;
   /**
+   * The URL to the user's Salesforce DataCloud instance.
+   *
    * @var string
    */
   public $instanceUri;
   /**
+   * The ID of the user's Salesforce tenant.
+   *
    * @var string
    */
   public $tenantId;
 
   /**
-   * @param string
+   * Output only. A unique Google-owned and Google-generated service account
+   * identity for the connection.
+   *
+   * @param string $identity
    */
   public function setIdentity($identity)
   {
@@ -47,7 +57,9 @@ class SalesforceDataCloudProperties extends \Google\Model
     return $this->identity;
   }
   /**
-   * @param string
+   * The URL to the user's Salesforce DataCloud instance.
+   *
+   * @param string $instanceUri
    */
   public function setInstanceUri($instanceUri)
   {
@@ -61,7 +73,9 @@ class SalesforceDataCloudProperties extends \Google\Model
     return $this->instanceUri;
   }
   /**
-   * @param string
+   * The ID of the user's Salesforce tenant.
+   *
+   * @param string $tenantId
    */
   public function setTenantId($tenantId)
   {

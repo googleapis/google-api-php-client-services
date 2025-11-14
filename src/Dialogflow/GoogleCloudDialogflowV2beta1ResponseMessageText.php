@@ -21,12 +21,18 @@ class GoogleCloudDialogflowV2beta1ResponseMessageText extends \Google\Collection
 {
   protected $collection_key = 'text';
   /**
+   * A collection of text response variants. If multiple variants are defined,
+   * only one text response variant is returned at runtime.
+   *
    * @var string[]
    */
   public $text;
 
   /**
-   * @param string[]
+   * A collection of text response variants. If multiple variants are defined,
+   * only one text response variant is returned at runtime.
+   *
+   * @param string[] $text
    */
   public function setText($text)
   {

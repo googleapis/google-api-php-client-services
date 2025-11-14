@@ -20,16 +20,25 @@ namespace Google\Service\SQLAdmin;
 class ImportContextSqlImportOptionsPostgresImportOptions extends \Google\Model
 {
   /**
+   * Optional. The --clean flag for the pg_restore utility. This flag applies
+   * only if you enabled Cloud SQL to import files in parallel.
+   *
    * @var bool
    */
   public $clean;
   /**
+   * Optional. The --if-exists flag for the pg_restore utility. This flag
+   * applies only if you enabled Cloud SQL to import files in parallel.
+   *
    * @var bool
    */
   public $ifExists;
 
   /**
-   * @param bool
+   * Optional. The --clean flag for the pg_restore utility. This flag applies
+   * only if you enabled Cloud SQL to import files in parallel.
+   *
+   * @param bool $clean
    */
   public function setClean($clean)
   {
@@ -43,7 +52,10 @@ class ImportContextSqlImportOptionsPostgresImportOptions extends \Google\Model
     return $this->clean;
   }
   /**
-   * @param bool
+   * Optional. The --if-exists flag for the pg_restore utility. This flag
+   * applies only if you enabled Cloud SQL to import files in parallel.
+   *
+   * @param bool $ifExists
    */
   public function setIfExists($ifExists)
   {

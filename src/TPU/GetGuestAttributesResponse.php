@@ -24,7 +24,9 @@ class GetGuestAttributesResponse extends \Google\Collection
   protected $guestAttributesDataType = 'array';
 
   /**
-   * @param GuestAttributes[]
+   * The guest attributes for the TPU workers.
+   *
+   * @param GuestAttributes[] $guestAttributes
    */
   public function setGuestAttributes($guestAttributes)
   {

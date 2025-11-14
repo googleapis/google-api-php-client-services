@@ -20,12 +20,24 @@ namespace Google\Service\TPU;
 class CustomerEncryptionKey extends \Google\Model
 {
   /**
+   * The name of the encryption key that is stored in Google Cloud KMS. For
+   * example: "kmsKeyName": "projects/KMS_PROJECT_ID/locations/REGION/keyRings/K
+   * EY_REGION/cryptoKeys/KEY The fully-qualifed key name may be returned for
+   * resource GET requests. For example: "kmsKeyName": "projects/KMS_PROJECT_ID/
+   * locations/REGION/keyRings/KEY_REGION/cryptoKeys/KEY/cryptoKeyVersions/1
+   *
    * @var string
    */
   public $kmsKeyName;
 
   /**
-   * @param string
+   * The name of the encryption key that is stored in Google Cloud KMS. For
+   * example: "kmsKeyName": "projects/KMS_PROJECT_ID/locations/REGION/keyRings/K
+   * EY_REGION/cryptoKeys/KEY The fully-qualifed key name may be returned for
+   * resource GET requests. For example: "kmsKeyName": "projects/KMS_PROJECT_ID/
+   * locations/REGION/keyRings/KEY_REGION/cryptoKeys/KEY/cryptoKeyVersions/1
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {

@@ -20,20 +20,30 @@ namespace Google\Service\SecurityCommandCenter;
 class PathNodeAssociatedFinding extends \Google\Model
 {
   /**
+   * Canonical name of the associated findings. Example:
+   * `organizations/123/sources/456/findings/789`
+   *
    * @var string
    */
   public $canonicalFinding;
   /**
+   * The additional taxonomy group within findings from a given source.
+   *
    * @var string
    */
   public $findingCategory;
   /**
+   * Full resource name of the finding.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Canonical name of the associated findings. Example:
+   * `organizations/123/sources/456/findings/789`
+   *
+   * @param string $canonicalFinding
    */
   public function setCanonicalFinding($canonicalFinding)
   {
@@ -47,7 +57,9 @@ class PathNodeAssociatedFinding extends \Google\Model
     return $this->canonicalFinding;
   }
   /**
-   * @param string
+   * The additional taxonomy group within findings from a given source.
+   *
+   * @param string $findingCategory
    */
   public function setFindingCategory($findingCategory)
   {
@@ -61,7 +73,9 @@ class PathNodeAssociatedFinding extends \Google\Model
     return $this->findingCategory;
   }
   /**
-   * @param string
+   * Full resource name of the finding.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

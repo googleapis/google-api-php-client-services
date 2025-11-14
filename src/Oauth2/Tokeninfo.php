@@ -26,36 +26,56 @@ class Tokeninfo extends \Google\Model
         "verifiedEmail" => "verified_email",
   ];
   /**
+   * Who is the intended audience for this token. In general the same as
+   * issued_to.
+   *
    * @var string
    */
   public $audience;
   /**
+   * The email address of the user. Present only if the email scope is present
+   * in the request.
+   *
    * @var string
    */
   public $email;
   /**
+   * The expiry time of the token, as number of seconds left until expiry.
+   *
    * @var int
    */
   public $expiresIn;
   /**
+   * To whom was the token issued to. In general the same as audience.
+   *
    * @var string
    */
   public $issuedTo;
   /**
+   * The space separated list of scopes granted to this token.
+   *
    * @var string
    */
   public $scope;
   /**
+   * The obfuscated user id.
+   *
    * @var string
    */
   public $userId;
   /**
+   * Boolean flag which is true if the email address is verified. Present only
+   * if the email scope is present in the request.
+   *
    * @var bool
    */
   public $verifiedEmail;
 
   /**
-   * @param string
+   * Who is the intended audience for this token. In general the same as
+   * issued_to.
+   *
+   * @param string $audience
    */
   public function setAudience($audience)
   {
@@ -69,7 +89,10 @@ class Tokeninfo extends \Google\Model
     return $this->audience;
   }
   /**
-   * @param string
+   * The email address of the user. Present only if the email scope is present
+   * in the request.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -83,7 +106,9 @@ class Tokeninfo extends \Google\Model
     return $this->email;
   }
   /**
-   * @param int
+   * The expiry time of the token, as number of seconds left until expiry.
+   *
+   * @param int $expiresIn
    */
   public function setExpiresIn($expiresIn)
   {
@@ -97,7 +122,9 @@ class Tokeninfo extends \Google\Model
     return $this->expiresIn;
   }
   /**
-   * @param string
+   * To whom was the token issued to. In general the same as audience.
+   *
+   * @param string $issuedTo
    */
   public function setIssuedTo($issuedTo)
   {
@@ -111,7 +138,9 @@ class Tokeninfo extends \Google\Model
     return $this->issuedTo;
   }
   /**
-   * @param string
+   * The space separated list of scopes granted to this token.
+   *
+   * @param string $scope
    */
   public function setScope($scope)
   {
@@ -125,7 +154,9 @@ class Tokeninfo extends \Google\Model
     return $this->scope;
   }
   /**
-   * @param string
+   * The obfuscated user id.
+   *
+   * @param string $userId
    */
   public function setUserId($userId)
   {
@@ -139,7 +170,10 @@ class Tokeninfo extends \Google\Model
     return $this->userId;
   }
   /**
-   * @param bool
+   * Boolean flag which is true if the email address is verified. Present only
+   * if the email scope is present in the request.
+   *
+   * @param bool $verifiedEmail
    */
   public function setVerifiedEmail($verifiedEmail)
   {

@@ -20,40 +20,59 @@ namespace Google\Service\CloudAsset;
 class OsInfo extends \Google\Model
 {
   /**
+   * The system architecture of the operating system.
+   *
    * @var string
    */
   public $architecture;
   /**
+   * The VM hostname.
+   *
    * @var string
    */
   public $hostname;
   /**
+   * The kernel release of the operating system.
+   *
    * @var string
    */
   public $kernelRelease;
   /**
+   * The kernel version of the operating system.
+   *
    * @var string
    */
   public $kernelVersion;
   /**
+   * The operating system long name. For example 'Debian GNU/Linux 9' or
+   * 'Microsoft Window Server 2019 Datacenter'.
+   *
    * @var string
    */
   public $longName;
   /**
+   * The current version of the OS Config agent running on the VM.
+   *
    * @var string
    */
   public $osconfigAgentVersion;
   /**
+   * The operating system short name. For example, 'windows' or 'debian'.
+   *
    * @var string
    */
   public $shortName;
   /**
+   * The version of the operating system.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The system architecture of the operating system.
+   *
+   * @param string $architecture
    */
   public function setArchitecture($architecture)
   {
@@ -67,7 +86,9 @@ class OsInfo extends \Google\Model
     return $this->architecture;
   }
   /**
-   * @param string
+   * The VM hostname.
+   *
+   * @param string $hostname
    */
   public function setHostname($hostname)
   {
@@ -81,7 +102,9 @@ class OsInfo extends \Google\Model
     return $this->hostname;
   }
   /**
-   * @param string
+   * The kernel release of the operating system.
+   *
+   * @param string $kernelRelease
    */
   public function setKernelRelease($kernelRelease)
   {
@@ -95,7 +118,9 @@ class OsInfo extends \Google\Model
     return $this->kernelRelease;
   }
   /**
-   * @param string
+   * The kernel version of the operating system.
+   *
+   * @param string $kernelVersion
    */
   public function setKernelVersion($kernelVersion)
   {
@@ -109,7 +134,10 @@ class OsInfo extends \Google\Model
     return $this->kernelVersion;
   }
   /**
-   * @param string
+   * The operating system long name. For example 'Debian GNU/Linux 9' or
+   * 'Microsoft Window Server 2019 Datacenter'.
+   *
+   * @param string $longName
    */
   public function setLongName($longName)
   {
@@ -123,7 +151,9 @@ class OsInfo extends \Google\Model
     return $this->longName;
   }
   /**
-   * @param string
+   * The current version of the OS Config agent running on the VM.
+   *
+   * @param string $osconfigAgentVersion
    */
   public function setOsconfigAgentVersion($osconfigAgentVersion)
   {
@@ -137,7 +167,9 @@ class OsInfo extends \Google\Model
     return $this->osconfigAgentVersion;
   }
   /**
-   * @param string
+   * The operating system short name. For example, 'windows' or 'debian'.
+   *
+   * @param string $shortName
    */
   public function setShortName($shortName)
   {
@@ -151,7 +183,9 @@ class OsInfo extends \Google\Model
     return $this->shortName;
   }
   /**
-   * @param string
+   * The version of the operating system.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

@@ -20,40 +20,80 @@ namespace Google\Service\CloudFunctions;
 class OperationMetadataV1 extends \Google\Model
 {
   /**
+   * Unknown operation type.
+   */
+  public const TYPE_OPERATION_UNSPECIFIED = 'OPERATION_UNSPECIFIED';
+  /**
+   * Triggered by CreateFunction call
+   */
+  public const TYPE_CREATE_FUNCTION = 'CREATE_FUNCTION';
+  /**
+   * Triggered by UpdateFunction call
+   */
+  public const TYPE_UPDATE_FUNCTION = 'UPDATE_FUNCTION';
+  /**
+   * Triggered by DeleteFunction call.
+   */
+  public const TYPE_DELETE_FUNCTION = 'DELETE_FUNCTION';
+  /**
+   * The Cloud Build ID of the function created or updated by an API call. This
+   * field is only populated for Create and Update operations.
+   *
    * @var string
    */
   public $buildId;
   /**
+   * The Cloud Build Name of the function deployment. This field is only
+   * populated for Create and Update operations. `projects//locations//builds/`.
+   *
    * @var string
    */
   public $buildName;
   /**
+   * The original request that started the operation.
+   *
    * @var array[]
    */
   public $request;
   /**
+   * An identifier for Firebase function sources. Disclaimer: This field is only
+   * supported for Firebase function deployments.
+   *
    * @var string
    */
   public $sourceToken;
   /**
+   * Target of the operation - for example
+   * `projects/project-1/locations/region-1/functions/function-1`
+   *
    * @var string
    */
   public $target;
   /**
+   * Type of operation.
+   *
    * @var string
    */
   public $type;
   /**
+   * The last update timestamp of the operation.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Version id of the function created or updated by an API call. This field is
+   * only populated for Create and Update operations.
+   *
    * @var string
    */
   public $versionId;
 
   /**
-   * @param string
+   * The Cloud Build ID of the function created or updated by an API call. This
+   * field is only populated for Create and Update operations.
+   *
+   * @param string $buildId
    */
   public function setBuildId($buildId)
   {
@@ -67,7 +107,10 @@ class OperationMetadataV1 extends \Google\Model
     return $this->buildId;
   }
   /**
-   * @param string
+   * The Cloud Build Name of the function deployment. This field is only
+   * populated for Create and Update operations. `projects//locations//builds/`.
+   *
+   * @param string $buildName
    */
   public function setBuildName($buildName)
   {
@@ -81,7 +124,9 @@ class OperationMetadataV1 extends \Google\Model
     return $this->buildName;
   }
   /**
-   * @param array[]
+   * The original request that started the operation.
+   *
+   * @param array[] $request
    */
   public function setRequest($request)
   {
@@ -95,7 +140,10 @@ class OperationMetadataV1 extends \Google\Model
     return $this->request;
   }
   /**
-   * @param string
+   * An identifier for Firebase function sources. Disclaimer: This field is only
+   * supported for Firebase function deployments.
+   *
+   * @param string $sourceToken
    */
   public function setSourceToken($sourceToken)
   {
@@ -109,7 +157,10 @@ class OperationMetadataV1 extends \Google\Model
     return $this->sourceToken;
   }
   /**
-   * @param string
+   * Target of the operation - for example
+   * `projects/project-1/locations/region-1/functions/function-1`
+   *
+   * @param string $target
    */
   public function setTarget($target)
   {
@@ -123,21 +174,28 @@ class OperationMetadataV1 extends \Google\Model
     return $this->target;
   }
   /**
-   * @param string
+   * Type of operation.
+   *
+   * Accepted values: OPERATION_UNSPECIFIED, CREATE_FUNCTION, UPDATE_FUNCTION,
+   * DELETE_FUNCTION
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {
     return $this->type;
   }
   /**
-   * @param string
+   * The last update timestamp of the operation.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -151,7 +209,10 @@ class OperationMetadataV1 extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Version id of the function created or updated by an API call. This field is
+   * only populated for Create and Update operations.
+   *
+   * @param string $versionId
    */
   public function setVersionId($versionId)
   {

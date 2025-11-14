@@ -19,8 +19,23 @@ namespace Google\Service\Docs;
 
 class Dimension extends \Google\Model
 {
+  /**
+   * The units are unknown.
+   */
+  public const UNIT_UNIT_UNSPECIFIED = 'UNIT_UNSPECIFIED';
+  /**
+   * A point, 1/72 of an inch.
+   */
+  public const UNIT_PT = 'PT';
+  /**
+   * The magnitude.
+   *
+   * @var 
+   */
   public $magnitude;
   /**
+   * The units for magnitude.
+   *
    * @var string
    */
   public $unit;
@@ -34,14 +49,18 @@ class Dimension extends \Google\Model
     return $this->magnitude;
   }
   /**
-   * @param string
+   * The units for magnitude.
+   *
+   * Accepted values: UNIT_UNSPECIFIED, PT
+   *
+   * @param self::UNIT_* $unit
    */
   public function setUnit($unit)
   {
     $this->unit = $unit;
   }
   /**
-   * @return string
+   * @return self::UNIT_*
    */
   public function getUnit()
   {

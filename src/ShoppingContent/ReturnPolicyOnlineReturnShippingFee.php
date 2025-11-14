@@ -19,15 +19,33 @@ namespace Google\Service\ShoppingContent;
 
 class ReturnPolicyOnlineReturnShippingFee extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * The return shipping fee is a fixed value.
+   */
+  public const TYPE_FIXED = 'FIXED';
+  /**
+   * Customer will pay the actual return shipping fee.
+   */
+  public const TYPE_CUSTOMER_PAYING_ACTUAL_FEE = 'CUSTOMER_PAYING_ACTUAL_FEE';
   protected $fixedFeeType = PriceAmount::class;
   protected $fixedFeeDataType = '';
   /**
+   * Type of return shipping fee.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param PriceAmount
+   * Fixed return shipping fee amount. This value is only applicable when type
+   * is FIXED. We will treat the return shipping fee as free if type is FIXED
+   * and this value is not set.
+   *
+   * @param PriceAmount $fixedFee
    */
   public function setFixedFee(PriceAmount $fixedFee)
   {
@@ -41,14 +59,18 @@ class ReturnPolicyOnlineReturnShippingFee extends \Google\Model
     return $this->fixedFee;
   }
   /**
-   * @param string
+   * Type of return shipping fee.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, FIXED, CUSTOMER_PAYING_ACTUAL_FEE
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

@@ -19,7 +19,17 @@ namespace Google\Service\Monitoring;
 
 class Range extends \Google\Model
 {
+  /**
+   * The maximum of the population values.
+   *
+   * @var 
+   */
   public $max;
+  /**
+   * The minimum of the population values.
+   *
+   * @var 
+   */
   public $min;
 
   public function setMax($max)

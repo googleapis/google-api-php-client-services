@@ -23,12 +23,17 @@ class ListAccountLabelsResponse extends \Google\Collection
   protected $accountLabelsType = AccountLabel::class;
   protected $accountLabelsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AccountLabel[]
+   * The labels from the specified account.
+   *
+   * @param AccountLabel[] $accountLabels
    */
   public function setAccountLabels($accountLabels)
   {
@@ -42,7 +47,10 @@ class ListAccountLabelsResponse extends \Google\Collection
     return $this->accountLabels;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

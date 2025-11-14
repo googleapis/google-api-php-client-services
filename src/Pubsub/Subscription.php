@@ -19,8 +19,38 @@ namespace Google\Service\Pubsub;
 
 class Subscription extends \Google\Collection
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The subscription can actively receive messages
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The subscription cannot receive messages because of an error with the
+   * resource to which it pushes messages. See the more detailed error state in
+   * the corresponding configuration.
+   */
+  public const STATE_RESOURCE_ERROR = 'RESOURCE_ERROR';
   protected $collection_key = 'messageTransforms';
   /**
+   * Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+   * waits for the subscriber to acknowledge receipt before resending the
+   * message. In the interval after the message is delivered and before it is
+   * acknowledged, it is considered to be _outstanding_. During that time
+   * period, the message will not be redelivered (on a best-effort basis). For
+   * pull subscriptions, this value is used as the initial value for the ack
+   * deadline. To override this value for a given message, call
+   * `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
+   * pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using
+   * streaming pull. The minimum custom deadline you can specify is 10 seconds.
+   * The maximum custom deadline you can specify is 600 seconds (10 minutes). If
+   * this parameter is 0, a default value of 10 seconds is used. For push
+   * delivery, this value is also used to set the request timeout for the call
+   * to the push endpoint. If the subscriber never acknowledges the message, the
+   * Pub/Sub system will eventually redeliver the message.
+   *
    * @var int
    */
   public $ackDeadlineSeconds;
@@ -33,64 +63,148 @@ class Subscription extends \Google\Collection
   protected $deadLetterPolicyType = DeadLetterPolicy::class;
   protected $deadLetterPolicyDataType = '';
   /**
+   * Optional. Indicates whether the subscription is detached from its topic.
+   * Detached subscriptions don't receive messages from their topic and don't
+   * retain any backlog. `Pull` and `StreamingPull` requests will return
+   * FAILED_PRECONDITION. If the subscription is a push subscription, pushes to
+   * the endpoint will not be made.
+   *
    * @var bool
    */
   public $detached;
   /**
+   * Optional. If true, Pub/Sub provides the following guarantees for the
+   * delivery of a message with a given value of `message_id` on this
+   * subscription: * The message sent to a subscriber is guaranteed not to be
+   * resent before the message's acknowledgment deadline expires. * An
+   * acknowledged message will not be resent to a subscriber. Note that
+   * subscribers may still receive multiple copies of a message when
+   * `enable_exactly_once_delivery` is true if the message was published
+   * multiple times by a publisher client. These copies are considered distinct
+   * by Pub/Sub and have distinct `message_id` values.
+   *
    * @var bool
    */
   public $enableExactlyOnceDelivery;
   /**
+   * Optional. If true, messages published with the same `ordering_key` in
+   * `PubsubMessage` will be delivered to the subscribers in the order in which
+   * they are received by the Pub/Sub system. Otherwise, they may be delivered
+   * in any order.
+   *
    * @var bool
    */
   public $enableMessageOrdering;
   protected $expirationPolicyType = ExpirationPolicy::class;
   protected $expirationPolicyDataType = '';
   /**
+   * Optional. An expression written in the Pub/Sub [filter
+   * language](https://cloud.google.com/pubsub/docs/filtering). If non-empty,
+   * then only `PubsubMessage`s whose `attributes` field matches the filter are
+   * delivered on this subscription. If empty, then no messages are filtered
+   * out.
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. See [Creating and managing
+   * labels](https://cloud.google.com/pubsub/docs/labels).
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Optional. How long to retain unacknowledged messages in the subscription's
+   * backlog, from the moment a message is published. If `retain_acked_messages`
+   * is true, then this also configures the retention of acknowledged messages,
+   * and thus configures how far back in time a `Seek` can be done. Defaults to
+   * 7 days. Cannot be more than 31 days or less than 10 minutes.
+   *
    * @var string
    */
   public $messageRetentionDuration;
   protected $messageTransformsType = MessageTransform::class;
   protected $messageTransformsDataType = 'array';
   /**
+   * Required. The name of the subscription. It must have the format
+   * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
+   * start with a letter, and contain only letters (`[A-Za-z]`), numbers
+   * (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
+   * plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
+   * in length, and it must not start with `"goog"`.
+   *
    * @var string
    */
   public $name;
   protected $pushConfigType = PushConfig::class;
   protected $pushConfigDataType = '';
   /**
+   * Optional. Indicates whether to retain acknowledged messages. If true, then
+   * messages are not expunged from the subscription's backlog, even if they are
+   * acknowledged, until they fall out of the `message_retention_duration`
+   * window. This must be true if you would like to [`Seek` to a timestamp]
+   * (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in
+   * the past to replay previously-acknowledged messages.
+   *
    * @var bool
    */
   public $retainAckedMessages;
   protected $retryPolicyType = RetryPolicy::class;
   protected $retryPolicyDataType = '';
   /**
+   * Output only. An output-only field indicating whether or not the
+   * subscription can receive messages.
+   *
    * @var string
    */
   public $state;
   /**
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * resource. For example: "123/environment": "production", "123/costCenter":
+   * "marketing"
+   *
    * @var string[]
    */
   public $tags;
   /**
+   * Required. The name of the topic from which this subscription is receiving
+   * messages. Format is `projects/{project}/topics/{topic}`. The value of this
+   * field will be `_deleted-topic_` if the topic has been deleted.
+   *
    * @var string
    */
   public $topic;
   /**
+   * Output only. Indicates the minimum duration for which a message is retained
+   * after it is published to the subscription's topic. If this field is set,
+   * messages published to the subscription's topic in the last
+   * `topic_message_retention_duration` are always available to subscribers. See
+   * the `message_retention_duration` field in `Topic`. This field is set only
+   * in responses from the server; it is ignored if it is set in any requests.
+   *
    * @var string
    */
   public $topicMessageRetentionDuration;
 
   /**
-   * @param int
+   * Optional. The approximate amount of time (on a best-effort basis) Pub/Sub
+   * waits for the subscriber to acknowledge receipt before resending the
+   * message. In the interval after the message is delivered and before it is
+   * acknowledged, it is considered to be _outstanding_. During that time
+   * period, the message will not be redelivered (on a best-effort basis). For
+   * pull subscriptions, this value is used as the initial value for the ack
+   * deadline. To override this value for a given message, call
+   * `ModifyAckDeadline` with the corresponding `ack_id` if using non-streaming
+   * pull or send the `ack_id` in a `StreamingModifyAckDeadlineRequest` if using
+   * streaming pull. The minimum custom deadline you can specify is 10 seconds.
+   * The maximum custom deadline you can specify is 600 seconds (10 minutes). If
+   * this parameter is 0, a default value of 10 seconds is used. For push
+   * delivery, this value is also used to set the request timeout for the call
+   * to the push endpoint. If the subscriber never acknowledges the message, the
+   * Pub/Sub system will eventually redeliver the message.
+   *
+   * @param int $ackDeadlineSeconds
    */
   public function setAckDeadlineSeconds($ackDeadlineSeconds)
   {
@@ -104,7 +218,10 @@ class Subscription extends \Google\Collection
     return $this->ackDeadlineSeconds;
   }
   /**
-   * @param AnalyticsHubSubscriptionInfo
+   * Output only. Information about the associated Analytics Hub subscription.
+   * Only set if the subscritpion is created by Analytics Hub.
+   *
+   * @param AnalyticsHubSubscriptionInfo $analyticsHubSubscriptionInfo
    */
   public function setAnalyticsHubSubscriptionInfo(AnalyticsHubSubscriptionInfo $analyticsHubSubscriptionInfo)
   {
@@ -118,7 +235,10 @@ class Subscription extends \Google\Collection
     return $this->analyticsHubSubscriptionInfo;
   }
   /**
-   * @param BigQueryConfig
+   * Optional. If delivery to BigQuery is used with this subscription, this
+   * field is used to configure it.
+   *
+   * @param BigQueryConfig $bigqueryConfig
    */
   public function setBigqueryConfig(BigQueryConfig $bigqueryConfig)
   {
@@ -132,7 +252,10 @@ class Subscription extends \Google\Collection
     return $this->bigqueryConfig;
   }
   /**
-   * @param CloudStorageConfig
+   * Optional. If delivery to Google Cloud Storage is used with this
+   * subscription, this field is used to configure it.
+   *
+   * @param CloudStorageConfig $cloudStorageConfig
    */
   public function setCloudStorageConfig(CloudStorageConfig $cloudStorageConfig)
   {
@@ -146,7 +269,14 @@ class Subscription extends \Google\Collection
     return $this->cloudStorageConfig;
   }
   /**
-   * @param DeadLetterPolicy
+   * Optional. A policy that specifies the conditions for dead lettering
+   * messages in this subscription. If dead_letter_policy is not set, dead
+   * lettering is disabled. The Pub/Sub service account associated with this
+   * subscriptions's parent project (i.e., service-{project_number}@gcp-sa-
+   * pubsub.iam.gserviceaccount.com) must have permission to Acknowledge()
+   * messages on this subscription.
+   *
+   * @param DeadLetterPolicy $deadLetterPolicy
    */
   public function setDeadLetterPolicy(DeadLetterPolicy $deadLetterPolicy)
   {
@@ -160,7 +290,13 @@ class Subscription extends \Google\Collection
     return $this->deadLetterPolicy;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether the subscription is detached from its topic.
+   * Detached subscriptions don't receive messages from their topic and don't
+   * retain any backlog. `Pull` and `StreamingPull` requests will return
+   * FAILED_PRECONDITION. If the subscription is a push subscription, pushes to
+   * the endpoint will not be made.
+   *
+   * @param bool $detached
    */
   public function setDetached($detached)
   {
@@ -174,7 +310,17 @@ class Subscription extends \Google\Collection
     return $this->detached;
   }
   /**
-   * @param bool
+   * Optional. If true, Pub/Sub provides the following guarantees for the
+   * delivery of a message with a given value of `message_id` on this
+   * subscription: * The message sent to a subscriber is guaranteed not to be
+   * resent before the message's acknowledgment deadline expires. * An
+   * acknowledged message will not be resent to a subscriber. Note that
+   * subscribers may still receive multiple copies of a message when
+   * `enable_exactly_once_delivery` is true if the message was published
+   * multiple times by a publisher client. These copies are considered distinct
+   * by Pub/Sub and have distinct `message_id` values.
+   *
+   * @param bool $enableExactlyOnceDelivery
    */
   public function setEnableExactlyOnceDelivery($enableExactlyOnceDelivery)
   {
@@ -188,7 +334,12 @@ class Subscription extends \Google\Collection
     return $this->enableExactlyOnceDelivery;
   }
   /**
-   * @param bool
+   * Optional. If true, messages published with the same `ordering_key` in
+   * `PubsubMessage` will be delivered to the subscribers in the order in which
+   * they are received by the Pub/Sub system. Otherwise, they may be delivered
+   * in any order.
+   *
+   * @param bool $enableMessageOrdering
    */
   public function setEnableMessageOrdering($enableMessageOrdering)
   {
@@ -202,7 +353,15 @@ class Subscription extends \Google\Collection
     return $this->enableMessageOrdering;
   }
   /**
-   * @param ExpirationPolicy
+   * Optional. A policy that specifies the conditions for this subscription's
+   * expiration. A subscription is considered active as long as any connected
+   * subscriber is successfully consuming messages from the subscription or is
+   * issuing operations on the subscription. If `expiration_policy` is not set,
+   * a *default policy* with `ttl` of 31 days will be used. The minimum allowed
+   * value for `expiration_policy.ttl` is 1 day. If `expiration_policy` is set,
+   * but `expiration_policy.ttl` is not set, the subscription never expires.
+   *
+   * @param ExpirationPolicy $expirationPolicy
    */
   public function setExpirationPolicy(ExpirationPolicy $expirationPolicy)
   {
@@ -216,7 +375,13 @@ class Subscription extends \Google\Collection
     return $this->expirationPolicy;
   }
   /**
-   * @param string
+   * Optional. An expression written in the Pub/Sub [filter
+   * language](https://cloud.google.com/pubsub/docs/filtering). If non-empty,
+   * then only `PubsubMessage`s whose `attributes` field matches the filter are
+   * delivered on this subscription. If empty, then no messages are filtered
+   * out.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -230,7 +395,10 @@ class Subscription extends \Google\Collection
     return $this->filter;
   }
   /**
-   * @param string[]
+   * Optional. See [Creating and managing
+   * labels](https://cloud.google.com/pubsub/docs/labels).
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -244,7 +412,13 @@ class Subscription extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Optional. How long to retain unacknowledged messages in the subscription's
+   * backlog, from the moment a message is published. If `retain_acked_messages`
+   * is true, then this also configures the retention of acknowledged messages,
+   * and thus configures how far back in time a `Seek` can be done. Defaults to
+   * 7 days. Cannot be more than 31 days or less than 10 minutes.
+   *
+   * @param string $messageRetentionDuration
    */
   public function setMessageRetentionDuration($messageRetentionDuration)
   {
@@ -258,7 +432,10 @@ class Subscription extends \Google\Collection
     return $this->messageRetentionDuration;
   }
   /**
-   * @param MessageTransform[]
+   * Optional. Transforms to be applied to messages before they are delivered to
+   * subscribers. Transforms are applied in the order specified.
+   *
+   * @param MessageTransform[] $messageTransforms
    */
   public function setMessageTransforms($messageTransforms)
   {
@@ -272,7 +449,14 @@ class Subscription extends \Google\Collection
     return $this->messageTransforms;
   }
   /**
-   * @param string
+   * Required. The name of the subscription. It must have the format
+   * `"projects/{project}/subscriptions/{subscription}"`. `{subscription}` must
+   * start with a letter, and contain only letters (`[A-Za-z]`), numbers
+   * (`[0-9]`), dashes (`-`), underscores (`_`), periods (`.`), tildes (`~`),
+   * plus (`+`) or percent signs (`%`). It must be between 3 and 255 characters
+   * in length, and it must not start with `"goog"`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -286,7 +470,10 @@ class Subscription extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PushConfig
+   * Optional. If push delivery is used with this subscription, this field is
+   * used to configure it.
+   *
+   * @param PushConfig $pushConfig
    */
   public function setPushConfig(PushConfig $pushConfig)
   {
@@ -300,7 +487,14 @@ class Subscription extends \Google\Collection
     return $this->pushConfig;
   }
   /**
-   * @param bool
+   * Optional. Indicates whether to retain acknowledged messages. If true, then
+   * messages are not expunged from the subscription's backlog, even if they are
+   * acknowledged, until they fall out of the `message_retention_duration`
+   * window. This must be true if you would like to [`Seek` to a timestamp]
+   * (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in
+   * the past to replay previously-acknowledged messages.
+   *
+   * @param bool $retainAckedMessages
    */
   public function setRetainAckedMessages($retainAckedMessages)
   {
@@ -314,7 +508,13 @@ class Subscription extends \Google\Collection
     return $this->retainAckedMessages;
   }
   /**
-   * @param RetryPolicy
+   * Optional. A policy that specifies how Pub/Sub retries message delivery for
+   * this subscription. If not set, the default retry policy is applied. This
+   * generally implies that messages will be retried as soon as possible for
+   * healthy subscribers. RetryPolicy will be triggered on NACKs or
+   * acknowledgment deadline exceeded events for a given message.
+   *
+   * @param RetryPolicy $retryPolicy
    */
   public function setRetryPolicy(RetryPolicy $retryPolicy)
   {
@@ -328,21 +528,30 @@ class Subscription extends \Google\Collection
     return $this->retryPolicy;
   }
   /**
-   * @param string
+   * Output only. An output-only field indicating whether or not the
+   * subscription can receive messages.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, RESOURCE_ERROR
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string[]
+   * Optional. Input only. Immutable. Tag keys/values directly bound to this
+   * resource. For example: "123/environment": "production", "123/costCenter":
+   * "marketing"
+   *
+   * @param string[] $tags
    */
   public function setTags($tags)
   {
@@ -356,7 +565,11 @@ class Subscription extends \Google\Collection
     return $this->tags;
   }
   /**
-   * @param string
+   * Required. The name of the topic from which this subscription is receiving
+   * messages. Format is `projects/{project}/topics/{topic}`. The value of this
+   * field will be `_deleted-topic_` if the topic has been deleted.
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {
@@ -370,7 +583,14 @@ class Subscription extends \Google\Collection
     return $this->topic;
   }
   /**
-   * @param string
+   * Output only. Indicates the minimum duration for which a message is retained
+   * after it is published to the subscription's topic. If this field is set,
+   * messages published to the subscription's topic in the last
+   * `topic_message_retention_duration` are always available to subscribers. See
+   * the `message_retention_duration` field in `Topic`. This field is set only
+   * in responses from the server; it is ignored if it is set in any requests.
+   *
+   * @param string $topicMessageRetentionDuration
    */
   public function setTopicMessageRetentionDuration($topicMessageRetentionDuration)
   {

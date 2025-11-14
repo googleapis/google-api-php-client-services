@@ -20,16 +20,26 @@ namespace Google\Service\DeveloperConnect;
 class GKEWorkload extends \Google\Model
 {
   /**
+   * Required. Immutable. The name of the GKE cluster. Format:
+   * `projects/{project}/locations/{location}/clusters/{cluster}`.
+   *
    * @var string
    */
   public $cluster;
   /**
+   * Output only. The name of the GKE deployment. Format: `projects/{project}/lo
+   * cations/{location}/clusters/{cluster}/namespaces/{namespace}/deployments/{d
+   * eployment}`.
+   *
    * @var string
    */
   public $deployment;
 
   /**
-   * @param string
+   * Required. Immutable. The name of the GKE cluster. Format:
+   * `projects/{project}/locations/{location}/clusters/{cluster}`.
+   *
+   * @param string $cluster
    */
   public function setCluster($cluster)
   {
@@ -43,7 +53,11 @@ class GKEWorkload extends \Google\Model
     return $this->cluster;
   }
   /**
-   * @param string
+   * Output only. The name of the GKE deployment. Format: `projects/{project}/lo
+   * cations/{location}/clusters/{cluster}/namespaces/{namespace}/deployments/{d
+   * eployment}`.
+   *
+   * @param string $deployment
    */
   public function setDeployment($deployment)
   {

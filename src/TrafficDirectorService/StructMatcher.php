@@ -26,7 +26,9 @@ class StructMatcher extends \Google\Collection
   protected $valueDataType = '';
 
   /**
-   * @param PathSegment[]
+   * The path to retrieve the Value from the Struct.
+   *
+   * @param PathSegment[] $path
    */
   public function setPath($path)
   {
@@ -40,7 +42,10 @@ class StructMatcher extends \Google\Collection
     return $this->path;
   }
   /**
-   * @param ValueMatcher
+   * The StructMatcher is matched if the value retrieved by path is matched to
+   * this value.
+   *
+   * @param ValueMatcher $value
    */
   public function setValue(ValueMatcher $value)
   {

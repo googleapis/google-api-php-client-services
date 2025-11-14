@@ -20,28 +20,51 @@ namespace Google\Service\ServiceControl;
 class ResourceInfo extends \Google\Model
 {
   /**
+   * Optional. The identifier of the container of this resource. For Google
+   * Cloud APIs, the resource container must be one of the following formats: -
+   * `projects/` - `folders/` - `organizations/` Required for the policy
+   * enforcement on the container level (e.g. VPCSC, Location Policy check, Org
+   * Policy check).
+   *
    * @var string
    */
   public $container;
   /**
+   * Optional. The location of the resource, it must be a valid zone, region or
+   * multiregion, for example: "europe-west4", "northamerica-northeast1-a".
+   * Required for location policy check.
+   *
    * @var string
    */
   public $location;
   /**
+   * The name of the resource referenced in the request.
+   *
    * @var string
    */
   public $name;
   /**
+   * The resource permission needed for this request. The format must be
+   * "{service}/{plural}.{verb}".
+   *
    * @var string
    */
   public $permission;
   /**
+   * The resource type in the format of "{service}/{kind}".
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Optional. The identifier of the container of this resource. For Google
+   * Cloud APIs, the resource container must be one of the following formats: -
+   * `projects/` - `folders/` - `organizations/` Required for the policy
+   * enforcement on the container level (e.g. VPCSC, Location Policy check, Org
+   * Policy check).
+   *
+   * @param string $container
    */
   public function setContainer($container)
   {
@@ -55,7 +78,11 @@ class ResourceInfo extends \Google\Model
     return $this->container;
   }
   /**
-   * @param string
+   * Optional. The location of the resource, it must be a valid zone, region or
+   * multiregion, for example: "europe-west4", "northamerica-northeast1-a".
+   * Required for location policy check.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -69,7 +96,9 @@ class ResourceInfo extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The name of the resource referenced in the request.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -83,7 +112,10 @@ class ResourceInfo extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The resource permission needed for this request. The format must be
+   * "{service}/{plural}.{verb}".
+   *
+   * @param string $permission
    */
   public function setPermission($permission)
   {
@@ -97,7 +129,9 @@ class ResourceInfo extends \Google\Model
     return $this->permission;
   }
   /**
-   * @param string
+   * The resource type in the format of "{service}/{kind}".
+   *
+   * @param string $type
    */
   public function setType($type)
   {

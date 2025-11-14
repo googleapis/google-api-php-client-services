@@ -20,24 +20,39 @@ namespace Google\Service\ShoppingContent;
 class MethodQuota extends \Google\Model
 {
   /**
+   * Output only. The method name, for example `products.list`. Method name does
+   * not contain version because quota can be shared between different API
+   * versions of the same method.
+   *
    * @var string
    */
   public $method;
   /**
+   * Output only. The maximum number of calls allowed per day for the method.
+   *
    * @var string
    */
   public $quotaLimit;
   /**
+   * Output only. The maximum number of calls allowed per minute for the method.
+   *
    * @var string
    */
   public $quotaMinuteLimit;
   /**
+   * Output only. The current quota usage, meaning the number of calls already
+   * made to the method per day. Usage is reset every day at 12 PM midday UTC.
+   *
    * @var string
    */
   public $quotaUsage;
 
   /**
-   * @param string
+   * Output only. The method name, for example `products.list`. Method name does
+   * not contain version because quota can be shared between different API
+   * versions of the same method.
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {
@@ -51,7 +66,9 @@ class MethodQuota extends \Google\Model
     return $this->method;
   }
   /**
-   * @param string
+   * Output only. The maximum number of calls allowed per day for the method.
+   *
+   * @param string $quotaLimit
    */
   public function setQuotaLimit($quotaLimit)
   {
@@ -65,7 +82,9 @@ class MethodQuota extends \Google\Model
     return $this->quotaLimit;
   }
   /**
-   * @param string
+   * Output only. The maximum number of calls allowed per minute for the method.
+   *
+   * @param string $quotaMinuteLimit
    */
   public function setQuotaMinuteLimit($quotaMinuteLimit)
   {
@@ -79,7 +98,10 @@ class MethodQuota extends \Google\Model
     return $this->quotaMinuteLimit;
   }
   /**
-   * @param string
+   * Output only. The current quota usage, meaning the number of calls already
+   * made to the method per day. Usage is reset every day at 12 PM midday UTC.
+   *
+   * @param string $quotaUsage
    */
   public function setQuotaUsage($quotaUsage)
   {

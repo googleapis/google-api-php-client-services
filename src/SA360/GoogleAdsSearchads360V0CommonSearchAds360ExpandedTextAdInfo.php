@@ -20,40 +20,58 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Google\Model
 {
   /**
+   * The tracking id of the ad.
+   *
    * @var string
    */
   public $adTrackingId;
   /**
+   * The first line of the ad's description.
+   *
    * @var string
    */
   public $description1;
   /**
+   * The second line of the ad's description.
+   *
    * @var string
    */
   public $description2;
   /**
+   * The headline of the ad.
+   *
    * @var string
    */
   public $headline;
   /**
+   * The second headline of the ad.
+   *
    * @var string
    */
   public $headline2;
   /**
+   * The third headline of the ad.
+   *
    * @var string
    */
   public $headline3;
   /**
+   * Text appended to the auto-generated visible URL with a delimiter.
+   *
    * @var string
    */
   public $path1;
   /**
+   * Text appended to path1 with a delimiter.
+   *
    * @var string
    */
   public $path2;
 
   /**
-   * @param string
+   * The tracking id of the ad.
+   *
+   * @param string $adTrackingId
    */
   public function setAdTrackingId($adTrackingId)
   {
@@ -67,7 +85,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Googl
     return $this->adTrackingId;
   }
   /**
-   * @param string
+   * The first line of the ad's description.
+   *
+   * @param string $description1
    */
   public function setDescription1($description1)
   {
@@ -81,7 +101,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Googl
     return $this->description1;
   }
   /**
-   * @param string
+   * The second line of the ad's description.
+   *
+   * @param string $description2
    */
   public function setDescription2($description2)
   {
@@ -95,7 +117,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Googl
     return $this->description2;
   }
   /**
-   * @param string
+   * The headline of the ad.
+   *
+   * @param string $headline
    */
   public function setHeadline($headline)
   {
@@ -109,7 +133,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Googl
     return $this->headline;
   }
   /**
-   * @param string
+   * The second headline of the ad.
+   *
+   * @param string $headline2
    */
   public function setHeadline2($headline2)
   {
@@ -123,7 +149,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Googl
     return $this->headline2;
   }
   /**
-   * @param string
+   * The third headline of the ad.
+   *
+   * @param string $headline3
    */
   public function setHeadline3($headline3)
   {
@@ -137,7 +165,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Googl
     return $this->headline3;
   }
   /**
-   * @param string
+   * Text appended to the auto-generated visible URL with a delimiter.
+   *
+   * @param string $path1
    */
   public function setPath1($path1)
   {
@@ -151,7 +181,9 @@ class GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo extends \Googl
     return $this->path1;
   }
   /**
-   * @param string
+   * Text appended to path1 with a delimiter.
+   *
+   * @param string $path2
    */
   public function setPath2($path2)
   {

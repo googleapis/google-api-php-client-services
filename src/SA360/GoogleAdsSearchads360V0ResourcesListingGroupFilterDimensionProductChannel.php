@@ -20,19 +20,41 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductChannel extends \Google\Model
 {
   /**
+   * Not specified.
+   */
+  public const CHANNEL_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * Used for return value only. Represents value unknown in this version.
+   */
+  public const CHANNEL_UNKNOWN = 'UNKNOWN';
+  /**
+   * The item is sold online.
+   */
+  public const CHANNEL_ONLINE = 'ONLINE';
+  /**
+   * The item is sold in local stores.
+   */
+  public const CHANNEL_LOCAL = 'LOCAL';
+  /**
+   * Value of the locality.
+   *
    * @var string
    */
   public $channel;
 
   /**
-   * @param string
+   * Value of the locality.
+   *
+   * Accepted values: UNSPECIFIED, UNKNOWN, ONLINE, LOCAL
+   *
+   * @param self::CHANNEL_* $channel
    */
   public function setChannel($channel)
   {
     $this->channel = $channel;
   }
   /**
-   * @return string
+   * @return self::CHANNEL_*
    */
   public function getChannel()
   {

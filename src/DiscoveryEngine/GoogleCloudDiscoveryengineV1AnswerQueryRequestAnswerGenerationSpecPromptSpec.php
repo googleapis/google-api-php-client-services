@@ -20,12 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpecPromptSpec extends \Google\Model
 {
   /**
+   * Customized preamble.
+   *
    * @var string
    */
   public $preamble;
 
   /**
-   * @param string
+   * Customized preamble.
+   *
+   * @param string $preamble
    */
   public function setPreamble($preamble)
   {

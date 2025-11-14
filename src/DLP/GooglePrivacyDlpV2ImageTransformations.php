@@ -24,7 +24,9 @@ class GooglePrivacyDlpV2ImageTransformations extends \Google\Collection
   protected $transformsDataType = 'array';
 
   /**
-   * @param GooglePrivacyDlpV2ImageTransformation[]
+   * List of transforms to make.
+   *
+   * @param GooglePrivacyDlpV2ImageTransformation[] $transforms
    */
   public function setTransforms($transforms)
   {

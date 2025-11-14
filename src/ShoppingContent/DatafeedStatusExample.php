@@ -20,20 +20,28 @@ namespace Google\Service\ShoppingContent;
 class DatafeedStatusExample extends \Google\Model
 {
   /**
+   * The ID of the example item.
+   *
    * @var string
    */
   public $itemId;
   /**
+   * Line number in the data feed where the example is found.
+   *
    * @var string
    */
   public $lineNumber;
   /**
+   * The problematic value.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The ID of the example item.
+   *
+   * @param string $itemId
    */
   public function setItemId($itemId)
   {
@@ -47,7 +55,9 @@ class DatafeedStatusExample extends \Google\Model
     return $this->itemId;
   }
   /**
-   * @param string
+   * Line number in the data feed where the example is found.
+   *
+   * @param string $lineNumber
    */
   public function setLineNumber($lineNumber)
   {
@@ -61,7 +71,9 @@ class DatafeedStatusExample extends \Google\Model
     return $this->lineNumber;
   }
   /**
-   * @param string
+   * The problematic value.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

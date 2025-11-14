@@ -20,20 +20,28 @@ namespace Google\Service\Baremetalsolution;
 class NetworkAddress extends \Google\Model
 {
   /**
+   * IPv4 address to be assigned to the server.
+   *
    * @var string
    */
   public $address;
   /**
+   * Name of the existing network to use.
+   *
    * @var string
    */
   public $existingNetworkId;
   /**
+   * Id of the network to use, within the same ProvisioningConfig request.
+   *
    * @var string
    */
   public $networkId;
 
   /**
-   * @param string
+   * IPv4 address to be assigned to the server.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -47,7 +55,9 @@ class NetworkAddress extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * Name of the existing network to use.
+   *
+   * @param string $existingNetworkId
    */
   public function setExistingNetworkId($existingNetworkId)
   {
@@ -61,7 +71,9 @@ class NetworkAddress extends \Google\Model
     return $this->existingNetworkId;
   }
   /**
-   * @param string
+   * Id of the network to use, within the same ProvisioningConfig request.
+   *
+   * @param string $networkId
    */
   public function setNetworkId($networkId)
   {

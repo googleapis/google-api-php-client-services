@@ -20,36 +20,58 @@ namespace Google\Service\ShoppingContent;
 class DatafeedstatusesCustomBatchRequestEntry extends \Google\Model
 {
   /**
+   * An entry ID, unique within the batch request.
+   *
    * @var string
    */
   public $batchId;
   /**
+   * Deprecated. Use `feedLabel` instead. The country to get the datafeed status
+   * for. If this parameter is provided, then `language` must also be provided.
+   * Note that for multi-target datafeeds this parameter is required.
+   *
    * @var string
    */
   public $country;
   /**
+   * The ID of the data feed to get.
+   *
    * @var string
    */
   public $datafeedId;
   /**
+   * The feed label to get the datafeed status for. If this parameter is
+   * provided, then `language` must also be provided. Note that for multi-target
+   * datafeeds this parameter is required.
+   *
    * @var string
    */
   public $feedLabel;
   /**
+   * The language to get the datafeed status for. If this parameter is provided
+   * then `country` must also be provided. Note that for multi-target datafeeds
+   * this parameter is required.
+   *
    * @var string
    */
   public $language;
   /**
+   * The ID of the managing account.
+   *
    * @var string
    */
   public $merchantId;
   /**
+   * The method of the batch entry. Acceptable values are: - "`get`"
+   *
    * @var string
    */
   public $method;
 
   /**
-   * @param string
+   * An entry ID, unique within the batch request.
+   *
+   * @param string $batchId
    */
   public function setBatchId($batchId)
   {
@@ -63,7 +85,11 @@ class DatafeedstatusesCustomBatchRequestEntry extends \Google\Model
     return $this->batchId;
   }
   /**
-   * @param string
+   * Deprecated. Use `feedLabel` instead. The country to get the datafeed status
+   * for. If this parameter is provided, then `language` must also be provided.
+   * Note that for multi-target datafeeds this parameter is required.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -77,7 +103,9 @@ class DatafeedstatusesCustomBatchRequestEntry extends \Google\Model
     return $this->country;
   }
   /**
-   * @param string
+   * The ID of the data feed to get.
+   *
+   * @param string $datafeedId
    */
   public function setDatafeedId($datafeedId)
   {
@@ -91,7 +119,11 @@ class DatafeedstatusesCustomBatchRequestEntry extends \Google\Model
     return $this->datafeedId;
   }
   /**
-   * @param string
+   * The feed label to get the datafeed status for. If this parameter is
+   * provided, then `language` must also be provided. Note that for multi-target
+   * datafeeds this parameter is required.
+   *
+   * @param string $feedLabel
    */
   public function setFeedLabel($feedLabel)
   {
@@ -105,7 +137,11 @@ class DatafeedstatusesCustomBatchRequestEntry extends \Google\Model
     return $this->feedLabel;
   }
   /**
-   * @param string
+   * The language to get the datafeed status for. If this parameter is provided
+   * then `country` must also be provided. Note that for multi-target datafeeds
+   * this parameter is required.
+   *
+   * @param string $language
    */
   public function setLanguage($language)
   {
@@ -119,7 +155,9 @@ class DatafeedstatusesCustomBatchRequestEntry extends \Google\Model
     return $this->language;
   }
   /**
-   * @param string
+   * The ID of the managing account.
+   *
+   * @param string $merchantId
    */
   public function setMerchantId($merchantId)
   {
@@ -133,7 +171,9 @@ class DatafeedstatusesCustomBatchRequestEntry extends \Google\Model
     return $this->merchantId;
   }
   /**
-   * @param string
+   * The method of the batch entry. Acceptable values are: - "`get`"
+   *
+   * @param string $method
    */
   public function setMethod($method)
   {

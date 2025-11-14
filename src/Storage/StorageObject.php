@@ -23,148 +23,261 @@ class StorageObject extends \Google\Collection
   protected $aclType = ObjectAccessControl::class;
   protected $aclDataType = 'array';
   /**
+   * The name of the bucket containing this object.
+   *
    * @var string
    */
   public $bucket;
   /**
+   * Cache-Control directive for the object data. If omitted, and the object is
+   * accessible to all anonymous users, the default will be public, max-
+   * age=3600.
+   *
    * @var string
    */
   public $cacheControl;
   /**
+   * Number of underlying components that make up this object. Components are
+   * accumulated by compose operations.
+   *
    * @var int
    */
   public $componentCount;
   /**
+   * Content-Disposition of the object data.
+   *
    * @var string
    */
   public $contentDisposition;
   /**
+   * Content-Encoding of the object data.
+   *
    * @var string
    */
   public $contentEncoding;
   /**
+   * Content-Language of the object data.
+   *
    * @var string
    */
   public $contentLanguage;
   /**
+   * Content-Type of the object data. If an object is stored without a Content-
+   * Type, it is served as application/octet-stream.
+   *
    * @var string
    */
   public $contentType;
   protected $contextsType = StorageObjectContexts::class;
   protected $contextsDataType = '';
   /**
+   * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64
+   * in big-endian byte order. For more information about using the CRC32c
+   * checksum, see [Data Validation and Change
+   * Detection](https://cloud.google.com/storage/docs/data-validation).
+   *
    * @var string
    */
   public $crc32c;
   /**
+   * A timestamp in RFC 3339 format specified by the user for an object.
+   *
    * @var string
    */
   public $customTime;
   protected $customerEncryptionType = StorageObjectCustomerEncryption::class;
   protected $customerEncryptionDataType = '';
   /**
+   * HTTP 1.1 Entity tag for the object.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Whether an object is under event-based hold. Event-based hold is a way to
+   * retain objects until an event occurs, which is signified by the hold's
+   * release (i.e. this value is set to false). After being released (set to
+   * false), such objects will be subject to bucket-level retention (if any).
+   * One sample use case of this flag is for banks to hold loan documents for at
+   * least 3 years after loan is paid in full. Here, bucket-level retention is 3
+   * years and the event is the loan being paid in full. In this example, these
+   * objects will be held intact for any number of years until the event has
+   * occurred (event-based hold on the object is released) and then 3 more years
+   * after that. That means retention duration of the objects begins from the
+   * moment event-based hold transitioned from true to false.
+   *
    * @var bool
    */
   public $eventBasedHold;
   /**
+   * The content generation of this object. Used for object versioning.
+   *
    * @var string
    */
   public $generation;
   /**
+   * This is the time (in the future) when the soft-deleted object will no
+   * longer be restorable. It is equal to the soft delete time plus the current
+   * soft delete retention duration of the bucket.
+   *
    * @var string
    */
   public $hardDeleteTime;
   /**
+   * The ID of the object, including the bucket name, object name, and
+   * generation number.
+   *
    * @var string
    */
   public $id;
   /**
+   * The kind of item this is. For objects, this is always storage#object.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Not currently supported. Specifying the parameter causes the request to
+   * fail with status code 400 - Bad Request.
+   *
    * @var string
    */
   public $kmsKeyName;
   /**
+   * MD5 hash of the data; encoded using base64. For more information about
+   * using the MD5 hash, see [Data Validation and Change
+   * Detection](https://cloud.google.com/storage/docs/data-validation).
+   *
    * @var string
    */
   public $md5Hash;
   /**
+   * Media download link.
+   *
    * @var string
    */
   public $mediaLink;
   /**
+   * User-provided metadata, in key/value pairs.
+   *
    * @var string[]
    */
   public $metadata;
   /**
+   * The version of the metadata for this object at this generation. Used for
+   * preconditions and for detecting changes in metadata. A metageneration
+   * number is only meaningful in the context of a particular generation of a
+   * particular object.
+   *
    * @var string
    */
   public $metageneration;
   /**
+   * The name of the object. Required if not specified by URL parameter.
+   *
    * @var string
    */
   public $name;
   protected $ownerType = StorageObjectOwner::class;
   protected $ownerDataType = '';
   /**
+   * Restore token used to differentiate deleted objects with the same name and
+   * generation. This field is only returned for deleted objects in hierarchical
+   * namespace buckets.
+   *
    * @var string
    */
   public $restoreToken;
   protected $retentionType = StorageObjectRetention::class;
   protected $retentionDataType = '';
   /**
+   * A server-determined value that specifies the earliest time that the
+   * object's retention period expires. This value is in RFC 3339 format. Note
+   * 1: This field is not provided for objects with an active event-based hold,
+   * since retention expiration is unknown until the hold is removed. Note 2:
+   * This value can be provided even when temporary hold is set (so that the
+   * user can reason about policy without having to first unset the temporary
+   * hold).
+   *
    * @var string
    */
   public $retentionExpirationTime;
   /**
+   * The link to this object.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * Content-Length of the data in bytes.
+   *
    * @var string
    */
   public $size;
   /**
+   * The time at which the object became soft-deleted in RFC 3339 format.
+   *
    * @var string
    */
   public $softDeleteTime;
   /**
+   * Storage class of the object.
+   *
    * @var string
    */
   public $storageClass;
   /**
+   * Whether an object is under temporary hold. While this flag is set to true,
+   * the object is protected against deletion and overwrites. A common use case
+   * of this flag is regulatory investigations where objects need to be retained
+   * while the investigation is ongoing. Note that unlike event-based hold,
+   * temporary hold does not impact retention expiration time of an object.
+   *
    * @var bool
    */
   public $temporaryHold;
   /**
+   * The creation time of the object in RFC 3339 format.
+   *
    * @var string
    */
   public $timeCreated;
   /**
+   * The time at which the object became noncurrent in RFC 3339 format. Will be
+   * returned if and only if this version of the object has been deleted.
+   *
    * @var string
    */
   public $timeDeleted;
   /**
+   * The time when the object was finalized.
+   *
    * @var string
    */
   public $timeFinalized;
   /**
+   * The time at which the object's storage class was last changed. When the
+   * object is initially created, it will be set to timeCreated.
+   *
    * @var string
    */
   public $timeStorageClassUpdated;
   /**
+   * The modification time of the object metadata in RFC 3339 format. Set
+   * initially to object creation time and then updated whenever any metadata of
+   * the object changes. This includes changes made by a requester, such as
+   * modifying custom metadata, as well as changes made by Cloud Storage on
+   * behalf of a requester, such as changing the storage class based on an
+   * Object Lifecycle Configuration.
+   *
    * @var string
    */
   public $updated;
 
   /**
-   * @param ObjectAccessControl[]
+   * Access controls on the object.
+   *
+   * @param ObjectAccessControl[] $acl
    */
   public function setAcl($acl)
   {
@@ -178,7 +291,9 @@ class StorageObject extends \Google\Collection
     return $this->acl;
   }
   /**
-   * @param string
+   * The name of the bucket containing this object.
+   *
+   * @param string $bucket
    */
   public function setBucket($bucket)
   {
@@ -192,7 +307,11 @@ class StorageObject extends \Google\Collection
     return $this->bucket;
   }
   /**
-   * @param string
+   * Cache-Control directive for the object data. If omitted, and the object is
+   * accessible to all anonymous users, the default will be public, max-
+   * age=3600.
+   *
+   * @param string $cacheControl
    */
   public function setCacheControl($cacheControl)
   {
@@ -206,7 +325,10 @@ class StorageObject extends \Google\Collection
     return $this->cacheControl;
   }
   /**
-   * @param int
+   * Number of underlying components that make up this object. Components are
+   * accumulated by compose operations.
+   *
+   * @param int $componentCount
    */
   public function setComponentCount($componentCount)
   {
@@ -220,7 +342,9 @@ class StorageObject extends \Google\Collection
     return $this->componentCount;
   }
   /**
-   * @param string
+   * Content-Disposition of the object data.
+   *
+   * @param string $contentDisposition
    */
   public function setContentDisposition($contentDisposition)
   {
@@ -234,7 +358,9 @@ class StorageObject extends \Google\Collection
     return $this->contentDisposition;
   }
   /**
-   * @param string
+   * Content-Encoding of the object data.
+   *
+   * @param string $contentEncoding
    */
   public function setContentEncoding($contentEncoding)
   {
@@ -248,7 +374,9 @@ class StorageObject extends \Google\Collection
     return $this->contentEncoding;
   }
   /**
-   * @param string
+   * Content-Language of the object data.
+   *
+   * @param string $contentLanguage
    */
   public function setContentLanguage($contentLanguage)
   {
@@ -262,7 +390,10 @@ class StorageObject extends \Google\Collection
     return $this->contentLanguage;
   }
   /**
-   * @param string
+   * Content-Type of the object data. If an object is stored without a Content-
+   * Type, it is served as application/octet-stream.
+   *
+   * @param string $contentType
    */
   public function setContentType($contentType)
   {
@@ -276,7 +407,11 @@ class StorageObject extends \Google\Collection
     return $this->contentType;
   }
   /**
-   * @param StorageObjectContexts
+   * User-defined or system-defined object contexts. Each object context is a
+   * key-payload pair, where the key provides the identification and the payload
+   * holds the associated value and additional metadata.
+   *
+   * @param StorageObjectContexts $contexts
    */
   public function setContexts(StorageObjectContexts $contexts)
   {
@@ -290,7 +425,12 @@ class StorageObject extends \Google\Collection
     return $this->contexts;
   }
   /**
-   * @param string
+   * CRC32c checksum, as described in RFC 4960, Appendix B; encoded using base64
+   * in big-endian byte order. For more information about using the CRC32c
+   * checksum, see [Data Validation and Change
+   * Detection](https://cloud.google.com/storage/docs/data-validation).
+   *
+   * @param string $crc32c
    */
   public function setCrc32c($crc32c)
   {
@@ -304,7 +444,9 @@ class StorageObject extends \Google\Collection
     return $this->crc32c;
   }
   /**
-   * @param string
+   * A timestamp in RFC 3339 format specified by the user for an object.
+   *
+   * @param string $customTime
    */
   public function setCustomTime($customTime)
   {
@@ -318,7 +460,10 @@ class StorageObject extends \Google\Collection
     return $this->customTime;
   }
   /**
-   * @param StorageObjectCustomerEncryption
+   * Metadata of customer-supplied encryption key, if the object is encrypted by
+   * such a key.
+   *
+   * @param StorageObjectCustomerEncryption $customerEncryption
    */
   public function setCustomerEncryption(StorageObjectCustomerEncryption $customerEncryption)
   {
@@ -332,7 +477,9 @@ class StorageObject extends \Google\Collection
     return $this->customerEncryption;
   }
   /**
-   * @param string
+   * HTTP 1.1 Entity tag for the object.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -346,7 +493,19 @@ class StorageObject extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param bool
+   * Whether an object is under event-based hold. Event-based hold is a way to
+   * retain objects until an event occurs, which is signified by the hold's
+   * release (i.e. this value is set to false). After being released (set to
+   * false), such objects will be subject to bucket-level retention (if any).
+   * One sample use case of this flag is for banks to hold loan documents for at
+   * least 3 years after loan is paid in full. Here, bucket-level retention is 3
+   * years and the event is the loan being paid in full. In this example, these
+   * objects will be held intact for any number of years until the event has
+   * occurred (event-based hold on the object is released) and then 3 more years
+   * after that. That means retention duration of the objects begins from the
+   * moment event-based hold transitioned from true to false.
+   *
+   * @param bool $eventBasedHold
    */
   public function setEventBasedHold($eventBasedHold)
   {
@@ -360,7 +519,9 @@ class StorageObject extends \Google\Collection
     return $this->eventBasedHold;
   }
   /**
-   * @param string
+   * The content generation of this object. Used for object versioning.
+   *
+   * @param string $generation
    */
   public function setGeneration($generation)
   {
@@ -374,7 +535,11 @@ class StorageObject extends \Google\Collection
     return $this->generation;
   }
   /**
-   * @param string
+   * This is the time (in the future) when the soft-deleted object will no
+   * longer be restorable. It is equal to the soft delete time plus the current
+   * soft delete retention duration of the bucket.
+   *
+   * @param string $hardDeleteTime
    */
   public function setHardDeleteTime($hardDeleteTime)
   {
@@ -388,7 +553,10 @@ class StorageObject extends \Google\Collection
     return $this->hardDeleteTime;
   }
   /**
-   * @param string
+   * The ID of the object, including the bucket name, object name, and
+   * generation number.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -402,7 +570,9 @@ class StorageObject extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * The kind of item this is. For objects, this is always storage#object.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -416,7 +586,10 @@ class StorageObject extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Not currently supported. Specifying the parameter causes the request to
+   * fail with status code 400 - Bad Request.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {
@@ -430,7 +603,11 @@ class StorageObject extends \Google\Collection
     return $this->kmsKeyName;
   }
   /**
-   * @param string
+   * MD5 hash of the data; encoded using base64. For more information about
+   * using the MD5 hash, see [Data Validation and Change
+   * Detection](https://cloud.google.com/storage/docs/data-validation).
+   *
+   * @param string $md5Hash
    */
   public function setMd5Hash($md5Hash)
   {
@@ -444,7 +621,9 @@ class StorageObject extends \Google\Collection
     return $this->md5Hash;
   }
   /**
-   * @param string
+   * Media download link.
+   *
+   * @param string $mediaLink
    */
   public function setMediaLink($mediaLink)
   {
@@ -458,7 +637,9 @@ class StorageObject extends \Google\Collection
     return $this->mediaLink;
   }
   /**
-   * @param string[]
+   * User-provided metadata, in key/value pairs.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {
@@ -472,7 +653,12 @@ class StorageObject extends \Google\Collection
     return $this->metadata;
   }
   /**
-   * @param string
+   * The version of the metadata for this object at this generation. Used for
+   * preconditions and for detecting changes in metadata. A metageneration
+   * number is only meaningful in the context of a particular generation of a
+   * particular object.
+   *
+   * @param string $metageneration
    */
   public function setMetageneration($metageneration)
   {
@@ -486,7 +672,9 @@ class StorageObject extends \Google\Collection
     return $this->metageneration;
   }
   /**
-   * @param string
+   * The name of the object. Required if not specified by URL parameter.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -500,7 +688,9 @@ class StorageObject extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param StorageObjectOwner
+   * The owner of the object. This will always be the uploader of the object.
+   *
+   * @param StorageObjectOwner $owner
    */
   public function setOwner(StorageObjectOwner $owner)
   {
@@ -514,7 +704,11 @@ class StorageObject extends \Google\Collection
     return $this->owner;
   }
   /**
-   * @param string
+   * Restore token used to differentiate deleted objects with the same name and
+   * generation. This field is only returned for deleted objects in hierarchical
+   * namespace buckets.
+   *
+   * @param string $restoreToken
    */
   public function setRestoreToken($restoreToken)
   {
@@ -528,7 +722,9 @@ class StorageObject extends \Google\Collection
     return $this->restoreToken;
   }
   /**
-   * @param StorageObjectRetention
+   * A collection of object level retention parameters.
+   *
+   * @param StorageObjectRetention $retention
    */
   public function setRetention(StorageObjectRetention $retention)
   {
@@ -542,7 +738,15 @@ class StorageObject extends \Google\Collection
     return $this->retention;
   }
   /**
-   * @param string
+   * A server-determined value that specifies the earliest time that the
+   * object's retention period expires. This value is in RFC 3339 format. Note
+   * 1: This field is not provided for objects with an active event-based hold,
+   * since retention expiration is unknown until the hold is removed. Note 2:
+   * This value can be provided even when temporary hold is set (so that the
+   * user can reason about policy without having to first unset the temporary
+   * hold).
+   *
+   * @param string $retentionExpirationTime
    */
   public function setRetentionExpirationTime($retentionExpirationTime)
   {
@@ -556,7 +760,9 @@ class StorageObject extends \Google\Collection
     return $this->retentionExpirationTime;
   }
   /**
-   * @param string
+   * The link to this object.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -570,7 +776,9 @@ class StorageObject extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string
+   * Content-Length of the data in bytes.
+   *
+   * @param string $size
    */
   public function setSize($size)
   {
@@ -584,7 +792,9 @@ class StorageObject extends \Google\Collection
     return $this->size;
   }
   /**
-   * @param string
+   * The time at which the object became soft-deleted in RFC 3339 format.
+   *
+   * @param string $softDeleteTime
    */
   public function setSoftDeleteTime($softDeleteTime)
   {
@@ -598,7 +808,9 @@ class StorageObject extends \Google\Collection
     return $this->softDeleteTime;
   }
   /**
-   * @param string
+   * Storage class of the object.
+   *
+   * @param string $storageClass
    */
   public function setStorageClass($storageClass)
   {
@@ -612,7 +824,13 @@ class StorageObject extends \Google\Collection
     return $this->storageClass;
   }
   /**
-   * @param bool
+   * Whether an object is under temporary hold. While this flag is set to true,
+   * the object is protected against deletion and overwrites. A common use case
+   * of this flag is regulatory investigations where objects need to be retained
+   * while the investigation is ongoing. Note that unlike event-based hold,
+   * temporary hold does not impact retention expiration time of an object.
+   *
+   * @param bool $temporaryHold
    */
   public function setTemporaryHold($temporaryHold)
   {
@@ -626,7 +844,9 @@ class StorageObject extends \Google\Collection
     return $this->temporaryHold;
   }
   /**
-   * @param string
+   * The creation time of the object in RFC 3339 format.
+   *
+   * @param string $timeCreated
    */
   public function setTimeCreated($timeCreated)
   {
@@ -640,7 +860,10 @@ class StorageObject extends \Google\Collection
     return $this->timeCreated;
   }
   /**
-   * @param string
+   * The time at which the object became noncurrent in RFC 3339 format. Will be
+   * returned if and only if this version of the object has been deleted.
+   *
+   * @param string $timeDeleted
    */
   public function setTimeDeleted($timeDeleted)
   {
@@ -654,7 +877,9 @@ class StorageObject extends \Google\Collection
     return $this->timeDeleted;
   }
   /**
-   * @param string
+   * The time when the object was finalized.
+   *
+   * @param string $timeFinalized
    */
   public function setTimeFinalized($timeFinalized)
   {
@@ -668,7 +893,10 @@ class StorageObject extends \Google\Collection
     return $this->timeFinalized;
   }
   /**
-   * @param string
+   * The time at which the object's storage class was last changed. When the
+   * object is initially created, it will be set to timeCreated.
+   *
+   * @param string $timeStorageClassUpdated
    */
   public function setTimeStorageClassUpdated($timeStorageClassUpdated)
   {
@@ -682,7 +910,14 @@ class StorageObject extends \Google\Collection
     return $this->timeStorageClassUpdated;
   }
   /**
-   * @param string
+   * The modification time of the object metadata in RFC 3339 format. Set
+   * initially to object creation time and then updated whenever any metadata of
+   * the object changes. This includes changes made by a requester, such as
+   * modifying custom metadata, as well as changes made by Cloud Storage on
+   * behalf of a requester, such as changing the storage class based on an
+   * Object Lifecycle Configuration.
+   *
+   * @param string $updated
    */
   public function setUpdated($updated)
   {

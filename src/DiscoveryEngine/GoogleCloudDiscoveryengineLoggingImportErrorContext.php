@@ -20,28 +20,42 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineLoggingImportErrorContext extends \Google\Model
 {
   /**
+   * The detailed content which caused the error on importing a document.
+   *
    * @var string
    */
   public $document;
   /**
+   * Google Cloud Storage file path of the import source. Can be set for batch
+   * operation error.
+   *
    * @var string
    */
   public $gcsPath;
   /**
+   * Line number of the content in file. Should be empty for permission or batch
+   * operation error.
+   *
    * @var string
    */
   public $lineNumber;
   /**
+   * The operation resource name of the LRO.
+   *
    * @var string
    */
   public $operation;
   /**
+   * The detailed content which caused the error on importing a user event.
+   *
    * @var string
    */
   public $userEvent;
 
   /**
-   * @param string
+   * The detailed content which caused the error on importing a document.
+   *
+   * @param string $document
    */
   public function setDocument($document)
   {
@@ -55,7 +69,10 @@ class GoogleCloudDiscoveryengineLoggingImportErrorContext extends \Google\Model
     return $this->document;
   }
   /**
-   * @param string
+   * Google Cloud Storage file path of the import source. Can be set for batch
+   * operation error.
+   *
+   * @param string $gcsPath
    */
   public function setGcsPath($gcsPath)
   {
@@ -69,7 +86,10 @@ class GoogleCloudDiscoveryengineLoggingImportErrorContext extends \Google\Model
     return $this->gcsPath;
   }
   /**
-   * @param string
+   * Line number of the content in file. Should be empty for permission or batch
+   * operation error.
+   *
+   * @param string $lineNumber
    */
   public function setLineNumber($lineNumber)
   {
@@ -83,7 +103,9 @@ class GoogleCloudDiscoveryengineLoggingImportErrorContext extends \Google\Model
     return $this->lineNumber;
   }
   /**
-   * @param string
+   * The operation resource name of the LRO.
+   *
+   * @param string $operation
    */
   public function setOperation($operation)
   {
@@ -97,7 +119,9 @@ class GoogleCloudDiscoveryengineLoggingImportErrorContext extends \Google\Model
     return $this->operation;
   }
   /**
-   * @param string
+   * The detailed content which caused the error on importing a user event.
+   *
+   * @param string $userEvent
    */
   public function setUserEvent($userEvent)
   {

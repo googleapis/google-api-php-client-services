@@ -20,16 +20,24 @@ namespace Google\Service\DisplayVideo;
 class PartnerGeneralConfig extends \Google\Model
 {
   /**
+   * Immutable. Partner's currency in ISO 4217 format.
+   *
    * @var string
    */
   public $currencyCode;
   /**
+   * Immutable. The standard TZ database name of the partner's time zone. For
+   * example, `America/New_York`. See more at:
+   * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+   *
    * @var string
    */
   public $timeZone;
 
   /**
-   * @param string
+   * Immutable. Partner's currency in ISO 4217 format.
+   *
+   * @param string $currencyCode
    */
   public function setCurrencyCode($currencyCode)
   {
@@ -43,7 +51,11 @@ class PartnerGeneralConfig extends \Google\Model
     return $this->currencyCode;
   }
   /**
-   * @param string
+   * Immutable. The standard TZ database name of the partner's time zone. For
+   * example, `America/New_York`. See more at:
+   * https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+   *
+   * @param string $timeZone
    */
   public function setTimeZone($timeZone)
   {

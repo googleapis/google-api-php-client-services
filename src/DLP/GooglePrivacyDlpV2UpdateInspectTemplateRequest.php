@@ -22,12 +22,16 @@ class GooglePrivacyDlpV2UpdateInspectTemplateRequest extends \Google\Model
   protected $inspectTemplateType = GooglePrivacyDlpV2InspectTemplate::class;
   protected $inspectTemplateDataType = '';
   /**
+   * Mask to control which fields get updated.
+   *
    * @var string
    */
   public $updateMask;
 
   /**
-   * @param GooglePrivacyDlpV2InspectTemplate
+   * New InspectTemplate value.
+   *
+   * @param GooglePrivacyDlpV2InspectTemplate $inspectTemplate
    */
   public function setInspectTemplate(GooglePrivacyDlpV2InspectTemplate $inspectTemplate)
   {
@@ -41,7 +45,9 @@ class GooglePrivacyDlpV2UpdateInspectTemplateRequest extends \Google\Model
     return $this->inspectTemplate;
   }
   /**
-   * @param string
+   * Mask to control which fields get updated.
+   *
+   * @param string $updateMask
    */
   public function setUpdateMask($updateMask)
   {

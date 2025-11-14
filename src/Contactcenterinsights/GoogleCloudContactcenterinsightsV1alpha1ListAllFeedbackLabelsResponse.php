@@ -23,12 +23,17 @@ class GoogleCloudContactcenterinsightsV1alpha1ListAllFeedbackLabelsResponse exte
   protected $feedbackLabelsType = GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel::class;
   protected $feedbackLabelsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel[]
+   * The feedback labels that match the request.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1FeedbackLabel[] $feedbackLabels
    */
   public function setFeedbackLabels($feedbackLabels)
   {
@@ -42,7 +47,10 @@ class GoogleCloudContactcenterinsightsV1alpha1ListAllFeedbackLabelsResponse exte
     return $this->feedbackLabels;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

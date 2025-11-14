@@ -21,18 +21,26 @@ class MobileAppsListResponse extends \Google\Collection
 {
   protected $collection_key = 'mobileApps';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#mobileAppsListResponse".
+   *
    * @var string
    */
   public $kind;
   protected $mobileAppsType = MobileApp::class;
   protected $mobileAppsDataType = 'array';
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#mobileAppsListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +54,9 @@ class MobileAppsListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param MobileApp[]
+   * Mobile apps collection.
+   *
+   * @param MobileApp[] $mobileApps
    */
   public function setMobileApps($mobileApps)
   {
@@ -60,7 +70,9 @@ class MobileAppsListResponse extends \Google\Collection
     return $this->mobileApps;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

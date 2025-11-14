@@ -20,16 +20,24 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2SecretManagerCredential extends \Google\Model
 {
   /**
+   * Required. The name of the Secret Manager resource that stores the password,
+   * in the form `projects/project-id/secrets/secret-name/versions/version`.
+   *
    * @var string
    */
   public $passwordSecretVersionName;
   /**
+   * Required. The username.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * Required. The name of the Secret Manager resource that stores the password,
+   * in the form `projects/project-id/secrets/secret-name/versions/version`.
+   *
+   * @param string $passwordSecretVersionName
    */
   public function setPasswordSecretVersionName($passwordSecretVersionName)
   {
@@ -43,7 +51,9 @@ class GooglePrivacyDlpV2SecretManagerCredential extends \Google\Model
     return $this->passwordSecretVersionName;
   }
   /**
-   * @param string
+   * Required. The username.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {

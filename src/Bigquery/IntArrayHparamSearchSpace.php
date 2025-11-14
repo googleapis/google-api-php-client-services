@@ -24,7 +24,9 @@ class IntArrayHparamSearchSpace extends \Google\Collection
   protected $candidatesDataType = 'array';
 
   /**
-   * @param IntArray[]
+   * Candidates for the int array parameter.
+   *
+   * @param IntArray[] $candidates
    */
   public function setCandidates($candidates)
   {

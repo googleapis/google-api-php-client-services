@@ -23,16 +23,22 @@ class ListBackupPoliciesResponse extends \Google\Collection
   protected $backupPoliciesType = BackupPolicy::class;
   protected $backupPoliciesDataType = 'array';
   /**
+   * A token identifying a page of results the server should return.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param BackupPolicy[]
+   * The list of backup policies.
+   *
+   * @param BackupPolicy[] $backupPolicies
    */
   public function setBackupPolicies($backupPolicies)
   {
@@ -46,7 +52,9 @@ class ListBackupPoliciesResponse extends \Google\Collection
     return $this->backupPolicies;
   }
   /**
-   * @param string
+   * A token identifying a page of results the server should return.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +68,9 @@ class ListBackupPoliciesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

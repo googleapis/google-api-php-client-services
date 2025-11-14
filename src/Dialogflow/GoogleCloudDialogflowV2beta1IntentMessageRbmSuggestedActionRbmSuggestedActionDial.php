@@ -20,12 +20,20 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial extends \Google\Model
 {
   /**
+   * Required. The phone number to fill in the default dialer app. This field
+   * should be in [E.164](https://en.wikipedia.org/wiki/E.164) format. An
+   * example of a correctly formatted phone number: +15556767888.
+   *
    * @var string
    */
   public $phoneNumber;
 
   /**
-   * @param string
+   * Required. The phone number to fill in the default dialer app. This field
+   * should be in [E.164](https://en.wikipedia.org/wiki/E.164) format. An
+   * example of a correctly formatted phone number: +15556767888.
+   *
+   * @param string $phoneNumber
    */
   public function setPhoneNumber($phoneNumber)
   {

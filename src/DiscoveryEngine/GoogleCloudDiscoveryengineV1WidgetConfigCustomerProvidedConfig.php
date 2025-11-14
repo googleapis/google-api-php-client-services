@@ -20,19 +20,34 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1WidgetConfigCustomerProvidedConfig extends \Google\Model
 {
   /**
+   * Default customer type.
+   */
+  public const CUSTOMER_TYPE_DEFAULT_CUSTOMER = 'DEFAULT_CUSTOMER';
+  /**
+   * Government customer type. Some features are disabled for government
+   * customers due to legal requirements.
+   */
+  public const CUSTOMER_TYPE_GOVERNMENT_CUSTOMER = 'GOVERNMENT_CUSTOMER';
+  /**
+   * Customer type.
+   *
    * @var string
    */
   public $customerType;
 
   /**
-   * @param string
+   * Customer type.
+   *
+   * Accepted values: DEFAULT_CUSTOMER, GOVERNMENT_CUSTOMER
+   *
+   * @param self::CUSTOMER_TYPE_* $customerType
    */
   public function setCustomerType($customerType)
   {
     $this->customerType = $customerType;
   }
   /**
-   * @return string
+   * @return self::CUSTOMER_TYPE_*
    */
   public function getCustomerType()
   {

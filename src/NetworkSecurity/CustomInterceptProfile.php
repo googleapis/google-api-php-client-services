@@ -20,12 +20,20 @@ namespace Google\Service\NetworkSecurity;
 class CustomInterceptProfile extends \Google\Model
 {
   /**
+   * Required. The target InterceptEndpointGroup. When a firewall rule with this
+   * security profile attached matches a packet, the packet will be intercepted
+   * to the location-local target in this group.
+   *
    * @var string
    */
   public $interceptEndpointGroup;
 
   /**
-   * @param string
+   * Required. The target InterceptEndpointGroup. When a firewall rule with this
+   * security profile attached matches a packet, the packet will be intercepted
+   * to the location-local target in this group.
+   *
+   * @param string $interceptEndpointGroup
    */
   public function setInterceptEndpointGroup($interceptEndpointGroup)
   {

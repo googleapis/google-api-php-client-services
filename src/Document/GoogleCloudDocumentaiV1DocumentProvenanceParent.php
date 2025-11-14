@@ -20,26 +20,38 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1DocumentProvenanceParent extends \Google\Model
 {
   /**
+   * The id of the parent provenance.
+   *
+   * @deprecated
    * @var int
    */
   public $id;
   /**
+   * The index of the parent item in the corresponding item list (eg. list of
+   * entities, properties within entities, etc.) in the parent revision.
+   *
    * @var int
    */
   public $index;
   /**
+   * The index of the index into current revision's parent_ids list.
+   *
    * @var int
    */
   public $revision;
 
   /**
-   * @param int
+   * The id of the parent provenance.
+   *
+   * @deprecated
+   * @param int $id
    */
   public function setId($id)
   {
     $this->id = $id;
   }
   /**
+   * @deprecated
    * @return int
    */
   public function getId()
@@ -47,7 +59,10 @@ class GoogleCloudDocumentaiV1DocumentProvenanceParent extends \Google\Model
     return $this->id;
   }
   /**
-   * @param int
+   * The index of the parent item in the corresponding item list (eg. list of
+   * entities, properties within entities, etc.) in the parent revision.
+   *
+   * @param int $index
    */
   public function setIndex($index)
   {
@@ -61,7 +76,9 @@ class GoogleCloudDocumentaiV1DocumentProvenanceParent extends \Google\Model
     return $this->index;
   }
   /**
-   * @param int
+   * The index of the index into current revision's parent_ids list.
+   *
+   * @param int $revision
    */
   public function setRevision($revision)
   {

@@ -21,18 +21,24 @@ class ListNfsSharesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
   /**
+   * A token identifying a page of results from the server.
+   *
    * @var string
    */
   public $nextPageToken;
   protected $nfsSharesType = NfsShare::class;
   protected $nfsSharesDataType = 'array';
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param string
+   * A token identifying a page of results from the server.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +52,9 @@ class ListNfsSharesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param NfsShare[]
+   * The list of NFS shares.
+   *
+   * @param NfsShare[] $nfsShares
    */
   public function setNfsShares($nfsShares)
   {
@@ -60,7 +68,9 @@ class ListNfsSharesResponse extends \Google\Collection
     return $this->nfsShares;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

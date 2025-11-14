@@ -21,16 +21,25 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummarySafetyAttributes extends 
 {
   protected $collection_key = 'scores';
   /**
+   * The display names of Safety Attribute categories associated with the
+   * generated content. Order matches the Scores.
+   *
    * @var string[]
    */
   public $categories;
   /**
+   * The confidence scores of the each category, higher value means higher
+   * confidence. Order matches the Categories.
+   *
    * @var float[]
    */
   public $scores;
 
   /**
-   * @param string[]
+   * The display names of Safety Attribute categories associated with the
+   * generated content. Order matches the Scores.
+   *
+   * @param string[] $categories
    */
   public function setCategories($categories)
   {
@@ -44,7 +53,10 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummarySafetyAttributes extends 
     return $this->categories;
   }
   /**
-   * @param float[]
+   * The confidence scores of the each category, higher value means higher
+   * confidence. Order matches the Categories.
+   *
+   * @param float[] $scores
    */
   public function setScores($scores)
   {

@@ -20,16 +20,24 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class PlaceInfo extends \Google\Model
 {
   /**
+   * Required. The ID of the place. Must correspond to a region.
+   * (https://developers.google.com/places/web-service/supported_types#table3)
+   *
    * @var string
    */
   public $placeId;
   /**
+   * Required. The localized name of the place. For example, `Scottsdale, AZ`.
+   *
    * @var string
    */
   public $placeName;
 
   /**
-   * @param string
+   * Required. The ID of the place. Must correspond to a region.
+   * (https://developers.google.com/places/web-service/supported_types#table3)
+   *
+   * @param string $placeId
    */
   public function setPlaceId($placeId)
   {
@@ -43,7 +51,9 @@ class PlaceInfo extends \Google\Model
     return $this->placeId;
   }
   /**
-   * @param string
+   * Required. The localized name of the place. For example, `Scottsdale, AZ`.
+   *
+   * @param string $placeName
    */
   public function setPlaceName($placeName)
   {

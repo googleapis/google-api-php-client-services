@@ -20,16 +20,25 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2OrConditions extends \Google\Model
 {
   /**
+   * Minimum age a table must have before Cloud DLP can profile it. Value must
+   * be 1 hour or greater.
+   *
    * @var string
    */
   public $minAge;
   /**
+   * Minimum number of rows that should be present before Cloud DLP profiles a
+   * table
+   *
    * @var int
    */
   public $minRowCount;
 
   /**
-   * @param string
+   * Minimum age a table must have before Cloud DLP can profile it. Value must
+   * be 1 hour or greater.
+   *
+   * @param string $minAge
    */
   public function setMinAge($minAge)
   {
@@ -43,7 +52,10 @@ class GooglePrivacyDlpV2OrConditions extends \Google\Model
     return $this->minAge;
   }
   /**
-   * @param int
+   * Minimum number of rows that should be present before Cloud DLP profiles a
+   * table
+   *
+   * @param int $minRowCount
    */
   public function setMinRowCount($minRowCount)
   {

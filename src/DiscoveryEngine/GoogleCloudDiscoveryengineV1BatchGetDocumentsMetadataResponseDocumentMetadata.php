@@ -20,22 +20,50 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadata extends \Google\Model
 {
   /**
+   * Should never be set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Document is indexed.
+   */
+  public const STATE_INDEXED = 'INDEXED';
+  /**
+   * The Document is not indexed because its URI is not in the TargetSite.
+   */
+  public const STATE_NOT_IN_TARGET_SITE = 'NOT_IN_TARGET_SITE';
+  /**
+   * The Document is not indexed.
+   */
+  public const STATE_NOT_IN_INDEX = 'NOT_IN_INDEX';
+  /**
+   * The data ingestion source of the Document. Allowed values are: * `batch`:
+   * Data ingested via Batch API, e.g., ImportDocuments. * `streaming` Data
+   * ingested via Streaming API, e.g., FHIR streaming.
+   *
    * @var string
    */
   public $dataIngestionSource;
   /**
+   * The timestamp of the last time the Document was last indexed.
+   *
    * @var string
    */
   public $lastRefreshedTime;
   protected $matcherValueType = GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue::class;
   protected $matcherValueDataType = '';
   /**
+   * The state of the document.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The data ingestion source of the Document. Allowed values are: * `batch`:
+   * Data ingested via Batch API, e.g., ImportDocuments. * `streaming` Data
+   * ingested via Streaming API, e.g., FHIR streaming.
+   *
+   * @param string $dataIngestionSource
    */
   public function setDataIngestionSource($dataIngestionSource)
   {
@@ -49,7 +77,9 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetad
     return $this->dataIngestionSource;
   }
   /**
-   * @param string
+   * The timestamp of the last time the Document was last indexed.
+   *
+   * @param string $lastRefreshedTime
    */
   public function setLastRefreshedTime($lastRefreshedTime)
   {
@@ -63,7 +93,9 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetad
     return $this->lastRefreshedTime;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue
+   * The value of the matcher that was used to match the Document.
+   *
+   * @param GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue $matcherValue
    */
   public function setMatcherValue(GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue $matcherValue)
   {
@@ -77,14 +109,19 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetad
     return $this->matcherValue;
   }
   /**
-   * @param string
+   * The state of the document.
+   *
+   * Accepted values: STATE_UNSPECIFIED, INDEXED, NOT_IN_TARGET_SITE,
+   * NOT_IN_INDEX
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

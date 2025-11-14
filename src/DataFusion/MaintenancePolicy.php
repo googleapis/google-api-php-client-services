@@ -25,7 +25,9 @@ class MaintenancePolicy extends \Google\Model
   protected $maintenanceWindowDataType = '';
 
   /**
-   * @param TimeWindow
+   * Optional. The maintenance exclusion window of the instance.
+   *
+   * @param TimeWindow $maintenanceExclusionWindow
    */
   public function setMaintenanceExclusionWindow(TimeWindow $maintenanceExclusionWindow)
   {
@@ -39,7 +41,9 @@ class MaintenancePolicy extends \Google\Model
     return $this->maintenanceExclusionWindow;
   }
   /**
-   * @param MaintenanceWindow
+   * Optional. The maintenance window of the instance.
+   *
+   * @param MaintenanceWindow $maintenanceWindow
    */
   public function setMaintenanceWindow(MaintenanceWindow $maintenanceWindow)
   {

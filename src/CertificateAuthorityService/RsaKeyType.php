@@ -20,16 +20,28 @@ namespace Google\Service\CertificateAuthorityService;
 class RsaKeyType extends \Google\Model
 {
   /**
+   * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If
+   * this is not set, or if set to zero, the service will not enforce an
+   * explicit upper bound on RSA modulus sizes.
+   *
    * @var string
    */
   public $maxModulusSize;
   /**
+   * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If
+   * this is not set, or if set to zero, the service-level min RSA modulus size
+   * will continue to apply.
+   *
    * @var string
    */
   public $minModulusSize;
 
   /**
-   * @param string
+   * Optional. The maximum allowed RSA modulus size (inclusive), in bits. If
+   * this is not set, or if set to zero, the service will not enforce an
+   * explicit upper bound on RSA modulus sizes.
+   *
+   * @param string $maxModulusSize
    */
   public function setMaxModulusSize($maxModulusSize)
   {
@@ -43,7 +55,11 @@ class RsaKeyType extends \Google\Model
     return $this->maxModulusSize;
   }
   /**
-   * @param string
+   * Optional. The minimum allowed RSA modulus size (inclusive), in bits. If
+   * this is not set, or if set to zero, the service-level min RSA modulus size
+   * will continue to apply.
+   *
+   * @param string $minModulusSize
    */
   public function setMinModulusSize($minModulusSize)
   {

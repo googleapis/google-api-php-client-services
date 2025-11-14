@@ -20,24 +20,57 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Job extends \Google\Model
 {
   /**
+   * Unspecified represents an unknown state and should not be used.
+   */
+  public const STATE_JOB_STATE_UNSPECIFIED = 'JOB_STATE_UNSPECIFIED';
+  /**
+   * Job is scheduled and pending for run
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * Job in progress
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * Job has completed with success
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Job has completed but with failure
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Optional. If the job did not complete successfully, this field describes
+   * why.
+   *
    * @var int
    */
   public $errorCode;
   /**
+   * Optional. Gives the location where the job ran, such as `US` or `europe-
+   * west1`
+   *
    * @var string
    */
   public $location;
   /**
+   * The fully-qualified name for a job. e.g. `projects//jobs/`
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. State of the job, such as `RUNNING` or `PENDING`.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param int
+   * Optional. If the job did not complete successfully, this field describes
+   * why.
+   *
+   * @param int $errorCode
    */
   public function setErrorCode($errorCode)
   {
@@ -51,7 +84,10 @@ class GoogleCloudSecuritycenterV2Job extends \Google\Model
     return $this->errorCode;
   }
   /**
-   * @param string
+   * Optional. Gives the location where the job ran, such as `US` or `europe-
+   * west1`
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -65,7 +101,9 @@ class GoogleCloudSecuritycenterV2Job extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The fully-qualified name for a job. e.g. `projects//jobs/`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,14 +117,18 @@ class GoogleCloudSecuritycenterV2Job extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. State of the job, such as `RUNNING` or `PENDING`.
+   *
+   * Accepted values: JOB_STATE_UNSPECIFIED, PENDING, RUNNING, SUCCEEDED, FAILED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

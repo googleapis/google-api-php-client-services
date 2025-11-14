@@ -24,6 +24,13 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
   protected $queryType = GoogleCloudDiscoveryengineV1Query::class;
   protected $queryDataType = '';
   /**
+   * Optional. The session to use for the request. If specified, the assistant
+   * has access to the session history, and the query and the answer are stored
+   * there. If `-` is specified as the session ID, or it is left empty, then a
+   * new session is created with an automatically generated ID. Format: `project
+   * s/{project}/locations/{location}/collections/{collection}/engines/{engine}/
+   * sessions/{session}`
+   *
    * @var string
    */
   public $session;
@@ -33,7 +40,9 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
   protected $userMetadataDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestGenerationSpec
+   * Optional. Specification of the generation configuration for the request.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestGenerationSpec $generationSpec
    */
   public function setGenerationSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestGenerationSpec $generationSpec)
   {
@@ -47,7 +56,11 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
     return $this->generationSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1Query
+   * Optional. Current user query. Empty query is only supported if `file_ids`
+   * are provided. In this case, the answer will be generated based on those
+   * context files.
+   *
+   * @param GoogleCloudDiscoveryengineV1Query $query
    */
   public function setQuery(GoogleCloudDiscoveryengineV1Query $query)
   {
@@ -61,7 +74,14 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
     return $this->query;
   }
   /**
-   * @param string
+   * Optional. The session to use for the request. If specified, the assistant
+   * has access to the session history, and the query and the answer are stored
+   * there. If `-` is specified as the session ID, or it is left empty, then a
+   * new session is created with an automatically generated ID. Format: `project
+   * s/{project}/locations/{location}/collections/{collection}/engines/{engine}/
+   * sessions/{session}`
+   *
+   * @param string $session
    */
   public function setSession($session)
   {
@@ -75,7 +95,9 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
     return $this->session;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec
+   * Optional. Specification of tools that are used to serve the request.
+   *
+   * @param GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec $toolsSpec
    */
   public function setToolsSpec(GoogleCloudDiscoveryengineV1StreamAssistRequestToolsSpec $toolsSpec)
   {
@@ -89,7 +111,9 @@ class GoogleCloudDiscoveryengineV1StreamAssistRequest extends \Google\Model
     return $this->toolsSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1AssistUserMetadata
+   * Optional. Information about the user initiating the query.
+   *
+   * @param GoogleCloudDiscoveryengineV1AssistUserMetadata $userMetadata
    */
   public function setUserMetadata(GoogleCloudDiscoveryengineV1AssistUserMetadata $userMetadata)
   {

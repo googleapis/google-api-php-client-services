@@ -21,6 +21,10 @@ class QueryTimeSeriesResponse extends \Google\Collection
 {
   protected $collection_key = 'timeSeriesData';
   /**
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +36,11 @@ class QueryTimeSeriesResponse extends \Google\Collection
   protected $timeSeriesDescriptorDataType = '';
 
   /**
-   * @param string
+   * If there are more results than have been returned, then this field is set
+   * to a non-empty value. To see the additional results, use that value as
+   * page_token in the next call to this method.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +54,10 @@ class QueryTimeSeriesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Status[]
+   * Query execution errors that may have caused the time series data returned
+   * to be incomplete. The available data will be available in the response.
+   *
+   * @param Status[] $partialErrors
    */
   public function setPartialErrors($partialErrors)
   {
@@ -60,7 +71,9 @@ class QueryTimeSeriesResponse extends \Google\Collection
     return $this->partialErrors;
   }
   /**
-   * @param TimeSeriesData[]
+   * The time series data.
+   *
+   * @param TimeSeriesData[] $timeSeriesData
    */
   public function setTimeSeriesData($timeSeriesData)
   {
@@ -74,7 +87,9 @@ class QueryTimeSeriesResponse extends \Google\Collection
     return $this->timeSeriesData;
   }
   /**
-   * @param TimeSeriesDescriptor
+   * The descriptor for the time series data.
+   *
+   * @param TimeSeriesDescriptor $timeSeriesDescriptor
    */
   public function setTimeSeriesDescriptor(TimeSeriesDescriptor $timeSeriesDescriptor)
   {

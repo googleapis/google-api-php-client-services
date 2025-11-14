@@ -22,10 +22,14 @@ class LiaCountrySettings extends \Google\Model
   protected $aboutType = LiaAboutPageSettings::class;
   protected $aboutDataType = '';
   /**
+   * Required. CLDR country code (for example, "US").
+   *
    * @var string
    */
   public $country;
   /**
+   * The status of the "Merchant hosted local storefront" feature.
+   *
    * @var bool
    */
   public $hostedLocalStorefrontActive;
@@ -38,12 +42,16 @@ class LiaCountrySettings extends \Google\Model
   protected $posDataProviderType = LiaPosDataProvider::class;
   protected $posDataProviderDataType = '';
   /**
+   * The status of the "Store pickup" feature.
+   *
    * @var bool
    */
   public $storePickupActive;
 
   /**
-   * @param LiaAboutPageSettings
+   * The settings for the About page.
+   *
+   * @param LiaAboutPageSettings $about
    */
   public function setAbout(LiaAboutPageSettings $about)
   {
@@ -57,7 +65,9 @@ class LiaCountrySettings extends \Google\Model
     return $this->about;
   }
   /**
-   * @param string
+   * Required. CLDR country code (for example, "US").
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -71,7 +81,9 @@ class LiaCountrySettings extends \Google\Model
     return $this->country;
   }
   /**
-   * @param bool
+   * The status of the "Merchant hosted local storefront" feature.
+   *
+   * @param bool $hostedLocalStorefrontActive
    */
   public function setHostedLocalStorefrontActive($hostedLocalStorefrontActive)
   {
@@ -85,7 +97,9 @@ class LiaCountrySettings extends \Google\Model
     return $this->hostedLocalStorefrontActive;
   }
   /**
-   * @param LiaInventorySettings
+   * LIA inventory verification settings.
+   *
+   * @param LiaInventorySettings $inventory
    */
   public function setInventory(LiaInventorySettings $inventory)
   {
@@ -99,7 +113,9 @@ class LiaCountrySettings extends \Google\Model
     return $this->inventory;
   }
   /**
-   * @param LiaOmnichannelExperience
+   * The omnichannel experience configured for this country.
+   *
+   * @param LiaOmnichannelExperience $omnichannelExperience
    */
   public function setOmnichannelExperience(LiaOmnichannelExperience $omnichannelExperience)
   {
@@ -113,7 +129,9 @@ class LiaCountrySettings extends \Google\Model
     return $this->omnichannelExperience;
   }
   /**
-   * @param LiaOnDisplayToOrderSettings
+   * LIA "On Display To Order" settings.
+   *
+   * @param LiaOnDisplayToOrderSettings $onDisplayToOrder
    */
   public function setOnDisplayToOrder(LiaOnDisplayToOrderSettings $onDisplayToOrder)
   {
@@ -127,7 +145,9 @@ class LiaCountrySettings extends \Google\Model
     return $this->onDisplayToOrder;
   }
   /**
-   * @param LiaPosDataProvider
+   * The POS data provider linked with this country.
+   *
+   * @param LiaPosDataProvider $posDataProvider
    */
   public function setPosDataProvider(LiaPosDataProvider $posDataProvider)
   {
@@ -141,7 +161,9 @@ class LiaCountrySettings extends \Google\Model
     return $this->posDataProvider;
   }
   /**
-   * @param bool
+   * The status of the "Store pickup" feature.
+   *
+   * @param bool $storePickupActive
    */
   public function setStorePickupActive($storePickupActive)
   {

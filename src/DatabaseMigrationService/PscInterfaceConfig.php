@@ -20,12 +20,20 @@ namespace Google\Service\DatabaseMigrationService;
 class PscInterfaceConfig extends \Google\Model
 {
   /**
+   * Required. Fully qualified name of the Network Attachment that DMS will
+   * connect to. Format:
+   * `projects/{{project}}/regions/{{region}}/networkAttachments/{{name}}`
+   *
    * @var string
    */
   public $networkAttachment;
 
   /**
-   * @param string
+   * Required. Fully qualified name of the Network Attachment that DMS will
+   * connect to. Format:
+   * `projects/{{project}}/regions/{{region}}/networkAttachments/{{name}}`
+   *
+   * @param string $networkAttachment
    */
   public function setNetworkAttachment($networkAttachment)
   {

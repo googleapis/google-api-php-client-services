@@ -21,10 +21,15 @@ class SitesListResponse extends \Google\Collection
 {
   protected $collection_key = 'sites';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#sitesListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +37,10 @@ class SitesListResponse extends \Google\Collection
   protected $sitesDataType = 'array';
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#sitesListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -46,7 +54,9 @@ class SitesListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class SitesListResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Site[]
+   * Site collection.
+   *
+   * @param Site[] $sites
    */
   public function setSites($sites)
   {

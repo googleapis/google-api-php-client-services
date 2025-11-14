@@ -20,30 +20,46 @@ namespace Google\Service\StorageBatchOperations;
 class OperationMetadata extends \Google\Model
 {
   /**
+   * Output only. API version used to start the operation.
+   *
    * @var string
    */
   public $apiVersion;
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
   protected $jobType = Job::class;
   protected $jobDataType = '';
   /**
+   * Output only. The unique operation resource name. Format:
+   * projects/{project}/locations/global/operations/{operation}.
+   *
    * @var string
    */
   public $operation;
   /**
+   * Output only. Identifies whether the user has requested cancellation of the
+   * operation. Operations that have been cancelled successfully have
+   * google.longrunning.Operation.error value with a google.rpc.Status.code of
+   * 1, corresponding to `Code.CANCELLED`.
+   *
    * @var bool
    */
   public $requestedCancellation;
 
   /**
-   * @param string
+   * Output only. API version used to start the operation.
+   *
+   * @param string $apiVersion
    */
   public function setApiVersion($apiVersion)
   {
@@ -57,7 +73,9 @@ class OperationMetadata extends \Google\Model
     return $this->apiVersion;
   }
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -71,7 +89,9 @@ class OperationMetadata extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -85,7 +105,9 @@ class OperationMetadata extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param Job
+   * Output only. The Job associated with the operation.
+   *
+   * @param Job $job
    */
   public function setJob(Job $job)
   {
@@ -99,7 +121,10 @@ class OperationMetadata extends \Google\Model
     return $this->job;
   }
   /**
-   * @param string
+   * Output only. The unique operation resource name. Format:
+   * projects/{project}/locations/global/operations/{operation}.
+   *
+   * @param string $operation
    */
   public function setOperation($operation)
   {
@@ -113,7 +138,12 @@ class OperationMetadata extends \Google\Model
     return $this->operation;
   }
   /**
-   * @param bool
+   * Output only. Identifies whether the user has requested cancellation of the
+   * operation. Operations that have been cancelled successfully have
+   * google.longrunning.Operation.error value with a google.rpc.Status.code of
+   * 1, corresponding to `Code.CANCELLED`.
+   *
+   * @param bool $requestedCancellation
    */
   public function setRequestedCancellation($requestedCancellation)
   {

@@ -25,7 +25,9 @@ class DoubleHparamSearchSpace extends \Google\Model
   protected $rangeDataType = '';
 
   /**
-   * @param DoubleCandidates
+   * Candidates of the double hyperparameter.
+   *
+   * @param DoubleCandidates $candidates
    */
   public function setCandidates(DoubleCandidates $candidates)
   {
@@ -39,7 +41,9 @@ class DoubleHparamSearchSpace extends \Google\Model
     return $this->candidates;
   }
   /**
-   * @param DoubleRange
+   * Range of the double hyperparameter.
+   *
+   * @param DoubleRange $range
    */
   public function setRange(DoubleRange $range)
   {

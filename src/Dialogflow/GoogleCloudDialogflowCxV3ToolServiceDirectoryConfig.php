@@ -20,12 +20,22 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ToolServiceDirectoryConfig extends \Google\Model
 {
   /**
+   * Required. The name of [Service Directory](https://cloud.google.com/service-
+   * directory) service. Format: `projects//locations//namespaces//services/`.
+   * `LocationID` of the service directory must be the same as the location of
+   * the agent.
+   *
    * @var string
    */
   public $service;
 
   /**
-   * @param string
+   * Required. The name of [Service Directory](https://cloud.google.com/service-
+   * directory) service. Format: `projects//locations//namespaces//services/`.
+   * `LocationID` of the service directory must be the same as the location of
+   * the agent.
+   *
+   * @param string $service
    */
   public function setService($service)
   {

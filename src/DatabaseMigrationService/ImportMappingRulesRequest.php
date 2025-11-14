@@ -19,20 +19,40 @@ namespace Google\Service\DatabaseMigrationService;
 
 class ImportMappingRulesRequest extends \Google\Collection
 {
+  /**
+   * Unspecified rules format.
+   */
+  public const RULES_FORMAT_IMPORT_RULES_FILE_FORMAT_UNSPECIFIED = 'IMPORT_RULES_FILE_FORMAT_UNSPECIFIED';
+  /**
+   * HarbourBridge session file.
+   */
+  public const RULES_FORMAT_IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE = 'IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE';
+  /**
+   * Ora2Pg configuration file.
+   */
+  public const RULES_FORMAT_IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE = 'IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE';
   protected $collection_key = 'rulesFiles';
   /**
+   * Required. Should the conversion workspace be committed automatically after
+   * the import operation.
+   *
    * @var bool
    */
   public $autoCommit;
   protected $rulesFilesType = RulesFile::class;
   protected $rulesFilesDataType = 'array';
   /**
+   * Required. The format of the rules content file.
+   *
    * @var string
    */
   public $rulesFormat;
 
   /**
-   * @param bool
+   * Required. Should the conversion workspace be committed automatically after
+   * the import operation.
+   *
+   * @param bool $autoCommit
    */
   public function setAutoCommit($autoCommit)
   {
@@ -46,7 +66,9 @@ class ImportMappingRulesRequest extends \Google\Collection
     return $this->autoCommit;
   }
   /**
-   * @param RulesFile[]
+   * Required. One or more rules files.
+   *
+   * @param RulesFile[] $rulesFiles
    */
   public function setRulesFiles($rulesFiles)
   {
@@ -60,14 +82,20 @@ class ImportMappingRulesRequest extends \Google\Collection
     return $this->rulesFiles;
   }
   /**
-   * @param string
+   * Required. The format of the rules content file.
+   *
+   * Accepted values: IMPORT_RULES_FILE_FORMAT_UNSPECIFIED,
+   * IMPORT_RULES_FILE_FORMAT_HARBOUR_BRIDGE_SESSION_FILE,
+   * IMPORT_RULES_FILE_FORMAT_ORATOPG_CONFIG_FILE
+   *
+   * @param self::RULES_FORMAT_* $rulesFormat
    */
   public function setRulesFormat($rulesFormat)
   {
     $this->rulesFormat = $rulesFormat;
   }
   /**
-   * @return string
+   * @return self::RULES_FORMAT_*
    */
   public function getRulesFormat()
   {

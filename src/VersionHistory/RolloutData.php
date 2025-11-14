@@ -21,16 +21,24 @@ class RolloutData extends \Google\Collection
 {
   protected $collection_key = 'tag';
   /**
+   * The name of the rollout.
+   *
    * @var string
    */
   public $rolloutName;
   /**
+   * Tags associated with a release's role in a rollout. Most rollouts will have
+   * at least one release with a "rollout" tag and another release with a
+   * "control" tag. Some rollouts may have additional named arms.
+   *
    * @var string[]
    */
   public $tag;
 
   /**
-   * @param string
+   * The name of the rollout.
+   *
+   * @param string $rolloutName
    */
   public function setRolloutName($rolloutName)
   {
@@ -44,7 +52,11 @@ class RolloutData extends \Google\Collection
     return $this->rolloutName;
   }
   /**
-   * @param string[]
+   * Tags associated with a release's role in a rollout. Most rollouts will have
+   * at least one release with a "rollout" tag and another release with a
+   * "control" tag. Some rollouts may have additional named arms.
+   *
+   * @param string[] $tag
    */
   public function setTag($tag)
   {

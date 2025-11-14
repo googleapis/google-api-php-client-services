@@ -22,12 +22,18 @@ class GooglePrivacyDlpV2OrgConfig extends \Google\Model
   protected $locationType = GooglePrivacyDlpV2DiscoveryStartingLocation::class;
   protected $locationDataType = '';
   /**
+   * The project that will run the scan. The DLP service account that exists
+   * within this project must have access to all resources that are profiled,
+   * and the DLP API must be enabled.
+   *
    * @var string
    */
   public $projectId;
 
   /**
-   * @param GooglePrivacyDlpV2DiscoveryStartingLocation
+   * The data to scan: folder, org, or project
+   *
+   * @param GooglePrivacyDlpV2DiscoveryStartingLocation $location
    */
   public function setLocation(GooglePrivacyDlpV2DiscoveryStartingLocation $location)
   {
@@ -41,7 +47,11 @@ class GooglePrivacyDlpV2OrgConfig extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The project that will run the scan. The DLP service account that exists
+   * within this project must have access to all resources that are profiled,
+   * and the DLP API must be enabled.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {

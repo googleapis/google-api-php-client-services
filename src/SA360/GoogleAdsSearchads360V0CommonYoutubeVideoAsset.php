@@ -20,16 +20,24 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonYoutubeVideoAsset extends \Google\Model
 {
   /**
+   * YouTube video id. This is the 11 character string value used in the YouTube
+   * video URL.
+   *
    * @var string
    */
   public $youtubeVideoId;
   /**
+   * YouTube video title.
+   *
    * @var string
    */
   public $youtubeVideoTitle;
 
   /**
-   * @param string
+   * YouTube video id. This is the 11 character string value used in the YouTube
+   * video URL.
+   *
+   * @param string $youtubeVideoId
    */
   public function setYoutubeVideoId($youtubeVideoId)
   {
@@ -43,7 +51,9 @@ class GoogleAdsSearchads360V0CommonYoutubeVideoAsset extends \Google\Model
     return $this->youtubeVideoId;
   }
   /**
-   * @param string
+   * YouTube video title.
+   *
+   * @param string $youtubeVideoTitle
    */
   public function setYoutubeVideoTitle($youtubeVideoTitle)
   {

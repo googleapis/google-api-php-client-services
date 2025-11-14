@@ -19,19 +19,51 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2Lifecycle extends \Google\Model
 {
+  /**
+   * Unknown State.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The initial state of an object. Once published, the object can never return
+   * to this state. Once an object is published, certain kinds of changes are no
+   * longer permitted.
+   */
+  public const STATE_UNPUBLISHED_DRAFT = 'UNPUBLISHED_DRAFT';
+  /**
+   * The object has been published. The object might have unpublished draft
+   * changes as indicated by `has_unpublished_changes`.
+   */
+  public const STATE_PUBLISHED = 'PUBLISHED';
+  /**
+   * The object has been published and has since been disabled. The object might
+   * have unpublished draft changes as indicated by `has_unpublished_changes`.
+   */
+  public const STATE_DISABLED = 'DISABLED';
+  /**
+   * The object has been deleted.
+   */
+  public const STATE_DELETED = 'DELETED';
   protected $disabledPolicyType = GoogleAppsDriveLabelsV2LifecycleDisabledPolicy::class;
   protected $disabledPolicyDataType = '';
   /**
+   * Output only. Whether the object associated with this lifecycle has
+   * unpublished changes.
+   *
    * @var bool
    */
   public $hasUnpublishedChanges;
   /**
+   * Output only. The state of the object associated with this lifecycle.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param GoogleAppsDriveLabelsV2LifecycleDisabledPolicy
+   * The policy that governs how to show a disabled label, field, or selection
+   * choice.
+   *
+   * @param GoogleAppsDriveLabelsV2LifecycleDisabledPolicy $disabledPolicy
    */
   public function setDisabledPolicy(GoogleAppsDriveLabelsV2LifecycleDisabledPolicy $disabledPolicy)
   {
@@ -45,7 +77,10 @@ class GoogleAppsDriveLabelsV2Lifecycle extends \Google\Model
     return $this->disabledPolicy;
   }
   /**
-   * @param bool
+   * Output only. Whether the object associated with this lifecycle has
+   * unpublished changes.
+   *
+   * @param bool $hasUnpublishedChanges
    */
   public function setHasUnpublishedChanges($hasUnpublishedChanges)
   {
@@ -59,14 +94,19 @@ class GoogleAppsDriveLabelsV2Lifecycle extends \Google\Model
     return $this->hasUnpublishedChanges;
   }
   /**
-   * @param string
+   * Output only. The state of the object associated with this lifecycle.
+   *
+   * Accepted values: STATE_UNSPECIFIED, UNPUBLISHED_DRAFT, PUBLISHED, DISABLED,
+   * DELETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

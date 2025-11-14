@@ -20,16 +20,24 @@ namespace Google\Service\ServiceManagement;
 class ManagedService extends \Google\Model
 {
   /**
+   * ID of the project that produces and owns this service.
+   *
    * @var string
    */
   public $producerProjectId;
   /**
+   * The name of the service. See the
+   * [overview](https://cloud.google.com/service-infrastructure/docs/overview)
+   * for naming requirements.
+   *
    * @var string
    */
   public $serviceName;
 
   /**
-   * @param string
+   * ID of the project that produces and owns this service.
+   *
+   * @param string $producerProjectId
    */
   public function setProducerProjectId($producerProjectId)
   {
@@ -43,7 +51,11 @@ class ManagedService extends \Google\Model
     return $this->producerProjectId;
   }
   /**
-   * @param string
+   * The name of the service. See the
+   * [overview](https://cloud.google.com/service-infrastructure/docs/overview)
+   * for naming requirements.
+   *
+   * @param string $serviceName
    */
   public function setServiceName($serviceName)
   {

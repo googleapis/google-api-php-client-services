@@ -20,12 +20,22 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1WebhookRequestFulfillmentInfo extends \Google\Model
 {
   /**
+   * Always present. The value of the Fulfillment.tag field will be populated in
+   * this field by Dialogflow when the associated webhook is called. The tag is
+   * typically used by the webhook service to identify which fulfillment is
+   * being called, but it could be used for other purposes.
+   *
    * @var string
    */
   public $tag;
 
   /**
-   * @param string
+   * Always present. The value of the Fulfillment.tag field will be populated in
+   * this field by Dialogflow when the associated webhook is called. The tag is
+   * typically used by the webhook service to identify which fulfillment is
+   * being called, but it could be used for other purposes.
+   *
+   * @param string $tag
    */
   public function setTag($tag)
   {

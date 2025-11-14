@@ -20,16 +20,29 @@ namespace Google\Service\CloudResourceManager;
 class Capability extends \Google\Model
 {
   /**
+   * Immutable. Identifier. The resource name of the capability. Must be in the
+   * following form: * `folders/{folder_id}/capabilities/{capability_name}` For
+   * example, `folders/123/capabilities/app-management` Following are the
+   * allowed {capability_name} values: * `app-management`
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. The configured value of the capability at the given parent
+   * resource.
+   *
    * @var bool
    */
   public $value;
 
   /**
-   * @param string
+   * Immutable. Identifier. The resource name of the capability. Must be in the
+   * following form: * `folders/{folder_id}/capabilities/{capability_name}` For
+   * example, `folders/123/capabilities/app-management` Following are the
+   * allowed {capability_name} values: * `app-management`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +56,10 @@ class Capability extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Required. The configured value of the capability at the given parent
+   * resource.
+   *
+   * @param bool $value
    */
   public function setValue($value)
   {

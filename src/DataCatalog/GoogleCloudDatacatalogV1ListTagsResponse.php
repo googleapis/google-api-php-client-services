@@ -21,6 +21,9 @@ class GoogleCloudDatacatalogV1ListTagsResponse extends \Google\Collection
 {
   protected $collection_key = 'tags';
   /**
+   * Pagination token of the next results page. Empty if there are no more items
+   * in results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class GoogleCloudDatacatalogV1ListTagsResponse extends \Google\Collection
   protected $tagsDataType = 'array';
 
   /**
-   * @param string
+   * Pagination token of the next results page. Empty if there are no more items
+   * in results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class GoogleCloudDatacatalogV1ListTagsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudDatacatalogV1Tag[]
+   * Tag details.
+   *
+   * @param GoogleCloudDatacatalogV1Tag[] $tags
    */
   public function setTags($tags)
   {

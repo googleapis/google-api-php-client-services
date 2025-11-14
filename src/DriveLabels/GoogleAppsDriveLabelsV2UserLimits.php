@@ -23,7 +23,9 @@ class GoogleAppsDriveLabelsV2UserLimits extends \Google\Model
   protected $listLimitsDataType = '';
 
   /**
-   * @param GoogleAppsDriveLabelsV2ListLimits
+   * Limits for list-variant of a field type.
+   *
+   * @param GoogleAppsDriveLabelsV2ListLimits $listLimits
    */
   public function setListLimits(GoogleAppsDriveLabelsV2ListLimits $listLimits)
   {

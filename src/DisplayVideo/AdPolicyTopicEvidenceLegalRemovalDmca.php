@@ -20,12 +20,16 @@ namespace Google\Service\DisplayVideo;
 class AdPolicyTopicEvidenceLegalRemovalDmca extends \Google\Model
 {
   /**
+   * The entity who made the legal complaint.
+   *
    * @var string
    */
   public $complainant;
 
   /**
-   * @param string
+   * The entity who made the legal complaint.
+   *
+   * @param string $complainant
    */
   public function setComplainant($complainant)
   {

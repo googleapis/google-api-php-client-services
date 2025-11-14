@@ -23,16 +23,24 @@ class SnapshotListResponse extends \Google\Collection
   protected $itemsType = Snapshot::class;
   protected $itemsDataType = 'array';
   /**
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#snapshotListResponse`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token corresponding to the next page of results. If there are no more
+   * results, the token is omitted.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Snapshot[]
+   * The snapshots.
+   *
+   * @param Snapshot[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +54,10 @@ class SnapshotListResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * Uniquely identifies the type of this resource. Value is always the fixed
+   * string `games#snapshotListResponse`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +71,10 @@ class SnapshotListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token corresponding to the next page of results. If there are no more
+   * results, the token is omitted.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

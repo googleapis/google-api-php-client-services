@@ -23,7 +23,9 @@ class CommitSchemaRequest extends \Google\Model
   protected $schemaDataType = '';
 
   /**
-   * @param Schema
+   * Required. The schema revision to commit.
+   *
+   * @param Schema $schema
    */
   public function setSchema(Schema $schema)
   {

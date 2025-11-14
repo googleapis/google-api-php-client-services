@@ -25,7 +25,9 @@ class GooglePrivacyDlpV2DeidentifyDataSourceDetails extends \Google\Model
   protected $requestedOptionsDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2DeidentifyDataSourceStats
+   * Stats about the de-identification operation.
+   *
+   * @param GooglePrivacyDlpV2DeidentifyDataSourceStats $deidentifyStats
    */
   public function setDeidentifyStats(GooglePrivacyDlpV2DeidentifyDataSourceStats $deidentifyStats)
   {
@@ -39,7 +41,9 @@ class GooglePrivacyDlpV2DeidentifyDataSourceDetails extends \Google\Model
     return $this->deidentifyStats;
   }
   /**
-   * @param GooglePrivacyDlpV2RequestedDeidentifyOptions
+   * De-identification config used for the request.
+   *
+   * @param GooglePrivacyDlpV2RequestedDeidentifyOptions $requestedOptions
    */
   public function setRequestedOptions(GooglePrivacyDlpV2RequestedDeidentifyOptions $requestedOptions)
   {

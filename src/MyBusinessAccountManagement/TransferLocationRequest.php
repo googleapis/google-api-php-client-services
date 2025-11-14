@@ -20,12 +20,18 @@ namespace Google\Service\MyBusinessAccountManagement;
 class TransferLocationRequest extends \Google\Model
 {
   /**
+   * Required. Name of the account resource to transfer the location to (for
+   * example, "accounts/{account}").
+   *
    * @var string
    */
   public $destinationAccount;
 
   /**
-   * @param string
+   * Required. Name of the account resource to transfer the location to (for
+   * example, "accounts/{account}").
+   *
+   * @param string $destinationAccount
    */
   public function setDestinationAccount($destinationAccount)
   {

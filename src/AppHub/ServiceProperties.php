@@ -19,6 +19,8 @@ namespace Google\Service\AppHub;
 
 class ServiceProperties extends \Google\Model
 {
+  protected $extendedMetadataType = ExtendedMetadata::class;
+  protected $extendedMetadataDataType = 'map';
   protected $functionalTypeType = FunctionalType::class;
   protected $functionalTypeDataType = '';
   /**
@@ -35,6 +37,8 @@ class ServiceProperties extends \Google\Model
    * @var string
    */
   public $location;
+  protected $registrationTypeType = RegistrationType::class;
+  protected $registrationTypeDataType = '';
   /**
    * Output only. The location that the underlying resource resides in if it is
    * zonal, for example, us-west1-a).
@@ -43,6 +47,25 @@ class ServiceProperties extends \Google\Model
    */
   public $zone;
 
+  /**
+   * Output only. Additional metadata specific to the resource type. The key is
+   * a string that identifies the type of metadata and the value is the metadata
+   * contents specific to that type. Key format:
+   * `apphub.googleapis.com/{metadataType}`
+   *
+   * @param ExtendedMetadata[] $extendedMetadata
+   */
+  public function setExtendedMetadata($extendedMetadata)
+  {
+    $this->extendedMetadata = $extendedMetadata;
+  }
+  /**
+   * @return ExtendedMetadata[]
+   */
+  public function getExtendedMetadata()
+  {
+    return $this->extendedMetadata;
+  }
   /**
    * Output only. The type of the service.
    *
@@ -92,6 +115,22 @@ class ServiceProperties extends \Google\Model
   public function getLocation()
   {
     return $this->location;
+  }
+  /**
+   * Output only. The registration type of the service.
+   *
+   * @param RegistrationType $registrationType
+   */
+  public function setRegistrationType(RegistrationType $registrationType)
+  {
+    $this->registrationType = $registrationType;
+  }
+  /**
+   * @return RegistrationType
+   */
+  public function getRegistrationType()
+  {
+    return $this->registrationType;
   }
   /**
    * Output only. The location that the underlying resource resides in if it is

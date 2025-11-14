@@ -20,12 +20,18 @@ namespace Google\Service\ShoppingContent;
 class VerifyPhoneNumberResponse extends \Google\Model
 {
   /**
+   * Verified phone number if verification is successful. This phone number can
+   * only be replaced by another verified phone number.
+   *
    * @var string
    */
   public $verifiedPhoneNumber;
 
   /**
-   * @param string
+   * Verified phone number if verification is successful. This phone number can
+   * only be replaced by another verified phone number.
+   *
+   * @param string $verifiedPhoneNumber
    */
   public function setVerifiedPhoneNumber($verifiedPhoneNumber)
   {

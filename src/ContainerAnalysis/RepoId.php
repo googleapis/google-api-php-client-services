@@ -22,12 +22,16 @@ class RepoId extends \Google\Model
   protected $projectRepoIdType = ProjectRepoId::class;
   protected $projectRepoIdDataType = '';
   /**
+   * A server-assigned, globally unique identifier.
+   *
    * @var string
    */
   public $uid;
 
   /**
-   * @param ProjectRepoId
+   * A combination of a project ID and a repo name.
+   *
+   * @param ProjectRepoId $projectRepoId
    */
   public function setProjectRepoId(ProjectRepoId $projectRepoId)
   {
@@ -41,7 +45,9 @@ class RepoId extends \Google\Model
     return $this->projectRepoId;
   }
   /**
-   * @param string
+   * A server-assigned, globally unique identifier.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {

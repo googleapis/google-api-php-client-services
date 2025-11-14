@@ -20,22 +20,46 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1KnowledgeOperationMetadata extends \Google\Model
 {
   /**
+   * State unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The operation has been created.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * The operation is currently running.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The operation is done, either cancelled or completed.
+   */
+  public const STATE_DONE = 'DONE';
+  /**
+   * The time when the operation finished.
+   *
    * @var string
    */
   public $doneTime;
   protected $exportOperationMetadataType = GoogleCloudDialogflowV2beta1ExportOperationMetadata::class;
   protected $exportOperationMetadataDataType = '';
   /**
+   * The name of the knowledge base interacted with during the operation.
+   *
    * @var string
    */
   public $knowledgeBase;
   /**
+   * Required. Output only. The current state of this operation.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * The time when the operation finished.
+   *
+   * @param string $doneTime
    */
   public function setDoneTime($doneTime)
   {
@@ -49,7 +73,9 @@ class GoogleCloudDialogflowV2beta1KnowledgeOperationMetadata extends \Google\Mod
     return $this->doneTime;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1ExportOperationMetadata
+   * Metadata for the Export Data Operation such as the destination of export.
+   *
+   * @param GoogleCloudDialogflowV2beta1ExportOperationMetadata $exportOperationMetadata
    */
   public function setExportOperationMetadata(GoogleCloudDialogflowV2beta1ExportOperationMetadata $exportOperationMetadata)
   {
@@ -63,7 +89,9 @@ class GoogleCloudDialogflowV2beta1KnowledgeOperationMetadata extends \Google\Mod
     return $this->exportOperationMetadata;
   }
   /**
-   * @param string
+   * The name of the knowledge base interacted with during the operation.
+   *
+   * @param string $knowledgeBase
    */
   public function setKnowledgeBase($knowledgeBase)
   {
@@ -77,14 +105,18 @@ class GoogleCloudDialogflowV2beta1KnowledgeOperationMetadata extends \Google\Mod
     return $this->knowledgeBase;
   }
   /**
-   * @param string
+   * Required. Output only. The current state of this operation.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, RUNNING, DONE
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {

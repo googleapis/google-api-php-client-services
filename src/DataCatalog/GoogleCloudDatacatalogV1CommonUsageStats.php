@@ -20,12 +20,16 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1CommonUsageStats extends \Google\Model
 {
   /**
+   * View count in source system.
+   *
    * @var string
    */
   public $viewCount;
 
   /**
-   * @param string
+   * View count in source system.
+   *
+   * @param string $viewCount
    */
   public function setViewCount($viewCount)
   {

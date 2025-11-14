@@ -20,12 +20,26 @@ namespace Google\Service\Container;
 class CertificateConfig extends \Google\Model
 {
   /**
+   * The URI configures a secret from [Secret
+   * Manager](https://cloud.google.com/secret-manager) in the format
+   * "projects/$PROJECT_ID/secrets/$SECRET_NAME/versions/$VERSION" for global
+   * secret or "projects/$PROJECT_ID/locations/$REGION/secrets/$SECRET_NAME/vers
+   * ions/$VERSION" for regional secret. Version can be fixed (e.g. "2") or
+   * "latest"
+   *
    * @var string
    */
   public $gcpSecretManagerSecretUri;
 
   /**
-   * @param string
+   * The URI configures a secret from [Secret
+   * Manager](https://cloud.google.com/secret-manager) in the format
+   * "projects/$PROJECT_ID/secrets/$SECRET_NAME/versions/$VERSION" for global
+   * secret or "projects/$PROJECT_ID/locations/$REGION/secrets/$SECRET_NAME/vers
+   * ions/$VERSION" for regional secret. Version can be fixed (e.g. "2") or
+   * "latest"
+   *
+   * @param string $gcpSecretManagerSecretUri
    */
   public function setGcpSecretManagerSecretUri($gcpSecretManagerSecretUri)
   {

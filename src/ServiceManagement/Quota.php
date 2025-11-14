@@ -26,7 +26,9 @@ class Quota extends \Google\Collection
   protected $metricRulesDataType = 'array';
 
   /**
-   * @param QuotaLimit[]
+   * List of QuotaLimit definitions for the service.
+   *
+   * @param QuotaLimit[] $limits
    */
   public function setLimits($limits)
   {
@@ -40,7 +42,10 @@ class Quota extends \Google\Collection
     return $this->limits;
   }
   /**
-   * @param MetricRule[]
+   * List of MetricRule definitions, each one mapping a selected method to one
+   * or more metrics.
+   *
+   * @param MetricRule[] $metricRules
    */
   public function setMetricRules($metricRules)
   {

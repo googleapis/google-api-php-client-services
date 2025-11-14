@@ -20,12 +20,16 @@ namespace Google\Service\CloudIdentity;
 class RsaPublicKeyInfo extends \Google\Model
 {
   /**
+   * Key size in bits (size of the modulus).
+   *
    * @var int
    */
   public $keySize;
 
   /**
-   * @param int
+   * Key size in bits (size of the modulus).
+   *
+   * @param int $keySize
    */
   public function setKeySize($keySize)
   {

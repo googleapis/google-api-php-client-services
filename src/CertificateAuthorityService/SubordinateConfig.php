@@ -20,6 +20,11 @@ namespace Google\Service\CertificateAuthorityService;
 class SubordinateConfig extends \Google\Model
 {
   /**
+   * Required. This can refer to a CertificateAuthority that was used to create
+   * a subordinate CertificateAuthority. This field is used for information and
+   * usability purposes only. The resource name is in the format
+   * `projects/locations/caPools/certificateAuthorities`.
+   *
    * @var string
    */
   public $certificateAuthority;
@@ -27,7 +32,12 @@ class SubordinateConfig extends \Google\Model
   protected $pemIssuerChainDataType = '';
 
   /**
-   * @param string
+   * Required. This can refer to a CertificateAuthority that was used to create
+   * a subordinate CertificateAuthority. This field is used for information and
+   * usability purposes only. The resource name is in the format
+   * `projects/locations/caPools/certificateAuthorities`.
+   *
+   * @param string $certificateAuthority
    */
   public function setCertificateAuthority($certificateAuthority)
   {
@@ -41,7 +51,10 @@ class SubordinateConfig extends \Google\Model
     return $this->certificateAuthority;
   }
   /**
-   * @param SubordinateConfigChain
+   * Required. Contains the PEM certificate chain for the issuers of this
+   * CertificateAuthority, but not pem certificate for this CA itself.
+   *
+   * @param SubordinateConfigChain $pemIssuerChain
    */
   public function setPemIssuerChain(SubordinateConfigChain $pemIssuerChain)
   {

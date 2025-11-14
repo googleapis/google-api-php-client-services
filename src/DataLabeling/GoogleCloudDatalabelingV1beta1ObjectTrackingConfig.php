@@ -20,20 +20,31 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ObjectTrackingConfig extends \Google\Model
 {
   /**
+   * Required. Annotation spec set resource name.
+   *
    * @var string
    */
   public $annotationSpecSet;
   /**
+   * Videos will be cut to smaller clips to make it easier for labelers to work
+   * on. Users can configure is field in seconds, if not set, default value is
+   * 20s.
+   *
    * @var int
    */
   public $clipLength;
   /**
+   * The overlap length between different video clips. Users can configure is
+   * field in seconds, if not set, default value is 0.3s.
+   *
    * @var int
    */
   public $overlapLength;
 
   /**
-   * @param string
+   * Required. Annotation spec set resource name.
+   *
+   * @param string $annotationSpecSet
    */
   public function setAnnotationSpecSet($annotationSpecSet)
   {
@@ -47,7 +58,11 @@ class GoogleCloudDatalabelingV1beta1ObjectTrackingConfig extends \Google\Model
     return $this->annotationSpecSet;
   }
   /**
-   * @param int
+   * Videos will be cut to smaller clips to make it easier for labelers to work
+   * on. Users can configure is field in seconds, if not set, default value is
+   * 20s.
+   *
+   * @param int $clipLength
    */
   public function setClipLength($clipLength)
   {
@@ -61,7 +76,10 @@ class GoogleCloudDatalabelingV1beta1ObjectTrackingConfig extends \Google\Model
     return $this->clipLength;
   }
   /**
-   * @param int
+   * The overlap length between different video clips. Users can configure is
+   * field in seconds, if not set, default value is 0.3s.
+   *
+   * @param int $overlapLength
    */
   public function setOverlapLength($overlapLength)
   {

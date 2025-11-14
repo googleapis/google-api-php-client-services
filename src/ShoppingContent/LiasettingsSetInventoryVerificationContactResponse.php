@@ -20,12 +20,18 @@ namespace Google\Service\ShoppingContent;
 class LiasettingsSetInventoryVerificationContactResponse extends \Google\Model
 {
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsSetInventoryVerificationContactResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#liasettingsSetInventoryVerificationContactResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

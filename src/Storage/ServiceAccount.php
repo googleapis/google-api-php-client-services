@@ -23,16 +23,23 @@ class ServiceAccount extends \Google\Model
         "emailAddress" => "email_address",
   ];
   /**
+   * The ID of the notification.
+   *
    * @var string
    */
   public $emailAddress;
   /**
+   * The kind of item this is. For notifications, this is always
+   * storage#notification.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * The ID of the notification.
+   *
+   * @param string $emailAddress
    */
   public function setEmailAddress($emailAddress)
   {
@@ -46,7 +53,10 @@ class ServiceAccount extends \Google\Model
     return $this->emailAddress;
   }
   /**
-   * @param string
+   * The kind of item this is. For notifications, this is always
+   * storage#notification.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

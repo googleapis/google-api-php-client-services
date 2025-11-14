@@ -22,10 +22,16 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends \Google\Model
   protected $errorConfigType = GoogleCloudDiscoveryengineV1PurgeErrorConfig::class;
   protected $errorConfigDataType = '';
   /**
+   * Required. Filter matching documents to purge. Only currently supported
+   * value is `*` (all items).
+   *
    * @var string
    */
   public $filter;
   /**
+   * Actually performs the purge. If `force` is set to false, return the
+   * expected purge count without deleting any documents.
+   *
    * @var bool
    */
   public $force;
@@ -35,7 +41,9 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends \Google\Model
   protected $inlineSourceDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1PurgeErrorConfig
+   * The desired location of errors incurred during the purge.
+   *
+   * @param GoogleCloudDiscoveryengineV1PurgeErrorConfig $errorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1PurgeErrorConfig $errorConfig)
   {
@@ -49,7 +57,10 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends \Google\Model
     return $this->errorConfig;
   }
   /**
-   * @param string
+   * Required. Filter matching documents to purge. Only currently supported
+   * value is `*` (all items).
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -63,7 +74,10 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param bool
+   * Actually performs the purge. If `force` is set to false, return the
+   * expected purge count without deleting any documents.
+   *
+   * @param bool $force
    */
   public function setForce($force)
   {
@@ -77,7 +91,10 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends \Google\Model
     return $this->force;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1GcsSource
+   * Cloud Storage location for the input content. Supported `data_schema`: *
+   * `document_id`: One valid Document.id per line.
+   *
+   * @param GoogleCloudDiscoveryengineV1GcsSource $gcsSource
    */
   public function setGcsSource(GoogleCloudDiscoveryengineV1GcsSource $gcsSource)
   {
@@ -91,7 +108,9 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsRequest extends \Google\Model
     return $this->gcsSource;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1PurgeDocumentsRequestInlineSource
+   * Inline source for the input content for purge.
+   *
+   * @param GoogleCloudDiscoveryengineV1PurgeDocumentsRequestInlineSource $inlineSource
    */
   public function setInlineSource(GoogleCloudDiscoveryengineV1PurgeDocumentsRequestInlineSource $inlineSource)
   {

@@ -24,7 +24,10 @@ class GoogleCloudDiscoveryengineV1AnswerStepActionObservation extends \Google\Co
   protected $searchResultsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1AnswerStepActionObservationSearchResult[]
+   * Search results observed by the search action, it can be snippets info or
+   * chunk info, depending on the citation type set by the user.
+   *
+   * @param GoogleCloudDiscoveryengineV1AnswerStepActionObservationSearchResult[] $searchResults
    */
   public function setSearchResults($searchResults)
   {

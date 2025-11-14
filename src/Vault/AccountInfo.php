@@ -21,12 +21,16 @@ class AccountInfo extends \Google\Collection
 {
   protected $collection_key = 'emails';
   /**
+   * A set of accounts to search.
+   *
    * @var string[]
    */
   public $emails;
 
   /**
-   * @param string[]
+   * A set of accounts to search.
+   *
+   * @param string[] $emails
    */
   public function setEmails($emails)
   {

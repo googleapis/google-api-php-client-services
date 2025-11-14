@@ -20,40 +20,61 @@ namespace Google\Service\NetAppFiles;
 class TransferStats extends \Google\Model
 {
   /**
+   * Lag duration indicates the duration by which Destination region volume
+   * content lags behind the primary region volume content.
+   *
    * @var string
    */
   public $lagDuration;
   /**
+   * Last transfer size in bytes.
+   *
    * @var string
    */
   public $lastTransferBytes;
   /**
+   * Time taken during last transfer.
+   *
    * @var string
    */
   public $lastTransferDuration;
   /**
+   * Time when last transfer completed.
+   *
    * @var string
    */
   public $lastTransferEndTime;
   /**
+   * A message describing the cause of the last transfer failure.
+   *
    * @var string
    */
   public $lastTransferError;
   /**
+   * Cumulative time taken across all transfers for the replication
+   * relationship.
+   *
    * @var string
    */
   public $totalTransferDuration;
   /**
+   * Cumulative bytes transferred so far for the replication relationship.
+   *
    * @var string
    */
   public $transferBytes;
   /**
+   * Time when progress was updated last.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Lag duration indicates the duration by which Destination region volume
+   * content lags behind the primary region volume content.
+   *
+   * @param string $lagDuration
    */
   public function setLagDuration($lagDuration)
   {
@@ -67,7 +88,9 @@ class TransferStats extends \Google\Model
     return $this->lagDuration;
   }
   /**
-   * @param string
+   * Last transfer size in bytes.
+   *
+   * @param string $lastTransferBytes
    */
   public function setLastTransferBytes($lastTransferBytes)
   {
@@ -81,7 +104,9 @@ class TransferStats extends \Google\Model
     return $this->lastTransferBytes;
   }
   /**
-   * @param string
+   * Time taken during last transfer.
+   *
+   * @param string $lastTransferDuration
    */
   public function setLastTransferDuration($lastTransferDuration)
   {
@@ -95,7 +120,9 @@ class TransferStats extends \Google\Model
     return $this->lastTransferDuration;
   }
   /**
-   * @param string
+   * Time when last transfer completed.
+   *
+   * @param string $lastTransferEndTime
    */
   public function setLastTransferEndTime($lastTransferEndTime)
   {
@@ -109,7 +136,9 @@ class TransferStats extends \Google\Model
     return $this->lastTransferEndTime;
   }
   /**
-   * @param string
+   * A message describing the cause of the last transfer failure.
+   *
+   * @param string $lastTransferError
    */
   public function setLastTransferError($lastTransferError)
   {
@@ -123,7 +152,10 @@ class TransferStats extends \Google\Model
     return $this->lastTransferError;
   }
   /**
-   * @param string
+   * Cumulative time taken across all transfers for the replication
+   * relationship.
+   *
+   * @param string $totalTransferDuration
    */
   public function setTotalTransferDuration($totalTransferDuration)
   {
@@ -137,7 +169,9 @@ class TransferStats extends \Google\Model
     return $this->totalTransferDuration;
   }
   /**
-   * @param string
+   * Cumulative bytes transferred so far for the replication relationship.
+   *
+   * @param string $transferBytes
    */
   public function setTransferBytes($transferBytes)
   {
@@ -151,7 +185,9 @@ class TransferStats extends \Google\Model
     return $this->transferBytes;
   }
   /**
-   * @param string
+   * Time when progress was updated last.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

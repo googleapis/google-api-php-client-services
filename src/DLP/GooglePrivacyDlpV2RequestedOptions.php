@@ -25,7 +25,9 @@ class GooglePrivacyDlpV2RequestedOptions extends \Google\Model
   protected $snapshotInspectTemplateDataType = '';
 
   /**
-   * @param GooglePrivacyDlpV2InspectJobConfig
+   * Inspect config.
+   *
+   * @param GooglePrivacyDlpV2InspectJobConfig $jobConfig
    */
   public function setJobConfig(GooglePrivacyDlpV2InspectJobConfig $jobConfig)
   {
@@ -39,7 +41,10 @@ class GooglePrivacyDlpV2RequestedOptions extends \Google\Model
     return $this->jobConfig;
   }
   /**
-   * @param GooglePrivacyDlpV2InspectTemplate
+   * If run with an InspectTemplate, a snapshot of its state at the time of this
+   * run.
+   *
+   * @param GooglePrivacyDlpV2InspectTemplate $snapshotInspectTemplate
    */
   public function setSnapshotInspectTemplate(GooglePrivacyDlpV2InspectTemplate $snapshotInspectTemplate)
   {

@@ -20,20 +20,32 @@ namespace Google\Service\ContainerAnalysis;
 class Product extends \Google\Model
 {
   /**
+   * Contains a URI which is vendor-specific. Example: The artifact repository
+   * URL of an image.
+   *
    * @var string
    */
   public $genericUri;
   /**
+   * Token that identifies a product so that it can be referred to from other
+   * parts in the document. There is no predefined format as long as it uniquely
+   * identifies a group in the context of the current document.
+   *
    * @var string
    */
   public $id;
   /**
+   * Name of the product.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Contains a URI which is vendor-specific. Example: The artifact repository
+   * URL of an image.
+   *
+   * @param string $genericUri
    */
   public function setGenericUri($genericUri)
   {
@@ -47,7 +59,11 @@ class Product extends \Google\Model
     return $this->genericUri;
   }
   /**
-   * @param string
+   * Token that identifies a product so that it can be referred to from other
+   * parts in the document. There is no predefined format as long as it uniquely
+   * identifies a group in the context of the current document.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -61,7 +77,9 @@ class Product extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Name of the product.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

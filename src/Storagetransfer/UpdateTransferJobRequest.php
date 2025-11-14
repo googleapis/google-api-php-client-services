@@ -20,18 +20,29 @@ namespace Google\Service\Storagetransfer;
 class UpdateTransferJobRequest extends \Google\Model
 {
   /**
+   * Required. The ID of the Google Cloud project that owns the job.
+   *
    * @var string
    */
   public $projectId;
   protected $transferJobType = TransferJob::class;
   protected $transferJobDataType = '';
   /**
+   * The field mask of the fields in `transferJob` that are to be updated in
+   * this request. Fields in `transferJob` that can be updated are: description,
+   * transfer_spec, notification_config, logging_config, and status. To update
+   * the `transfer_spec` of the job, a complete transfer specification must be
+   * provided. An incomplete specification missing any required fields is
+   * rejected with the error INVALID_ARGUMENT.
+   *
    * @var string
    */
   public $updateTransferJobFieldMask;
 
   /**
-   * @param string
+   * Required. The ID of the Google Cloud project that owns the job.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -45,7 +56,13 @@ class UpdateTransferJobRequest extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param TransferJob
+   * Required. The job to update. `transferJob` is expected to specify one or
+   * more of five fields: description, transfer_spec, notification_config,
+   * logging_config, and status. An `UpdateTransferJobRequest` that specifies
+   * other fields are rejected with the error INVALID_ARGUMENT. Updating a job
+   * status to DELETED requires `storagetransfer.jobs.delete` permission.
+   *
+   * @param TransferJob $transferJob
    */
   public function setTransferJob(TransferJob $transferJob)
   {
@@ -59,7 +76,14 @@ class UpdateTransferJobRequest extends \Google\Model
     return $this->transferJob;
   }
   /**
-   * @param string
+   * The field mask of the fields in `transferJob` that are to be updated in
+   * this request. Fields in `transferJob` that can be updated are: description,
+   * transfer_spec, notification_config, logging_config, and status. To update
+   * the `transfer_spec` of the job, a complete transfer specification must be
+   * provided. An incomplete specification missing any required fields is
+   * rejected with the error INVALID_ARGUMENT.
+   *
+   * @param string $updateTransferJobFieldMask
    */
   public function setUpdateTransferJobFieldMask($updateTransferJobFieldMask)
   {

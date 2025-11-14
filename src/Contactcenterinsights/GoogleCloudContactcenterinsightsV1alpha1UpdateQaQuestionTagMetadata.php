@@ -20,10 +20,14 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagMetadata extends \Google\Model
 {
   /**
+   * Output only. The time the operation was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. The time the operation finished running.
+   *
    * @var string
    */
   public $endTime;
@@ -31,7 +35,9 @@ class GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagMetadata extend
   protected $requestDataType = '';
 
   /**
-   * @param string
+   * Output only. The time the operation was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -45,7 +51,9 @@ class GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagMetadata extend
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. The time the operation finished running.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -59,7 +67,9 @@ class GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagMetadata extend
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagRequest
+   * Output only. The original request.
+   *
+   * @param GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagRequest $request
    */
   public function setRequest(GoogleCloudContactcenterinsightsV1alpha1UpdateQaQuestionTagRequest $request)
   {

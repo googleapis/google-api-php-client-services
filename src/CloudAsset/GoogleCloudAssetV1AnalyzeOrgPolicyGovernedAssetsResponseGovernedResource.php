@@ -21,34 +21,65 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
 {
   protected $collection_key = 'folders';
   /**
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name
+   * Example: `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset
+   * Inventory Supported Asset Types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types) for all supported asset types.
+   *
    * @var string
    */
   public $assetType;
   protected $effectiveTagsType = EffectiveTagDetails::class;
   protected $effectiveTagsDataType = 'array';
   /**
+   * The folder(s) that this resource belongs to, in the format of
+   * folders/{FOLDER_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to one or more folders.
+   *
    * @var string[]
    */
   public $folders;
   /**
+   * The [full resource name] (https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format) of the Google Cloud resource.
+   *
    * @var string
    */
   public $fullResourceName;
   /**
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the
+   * resource belongs (directly or cascadingly) to an organization.
+   *
    * @var string
    */
   public $organization;
   /**
+   * The [full resource name] (https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format) of the parent of
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name.
+   *
    * @var string
    */
   public $parent;
   /**
+   * The project that this resource belongs to, in the format of
+   * projects/{PROJECT_NUMBER}. This field is available when the resource
+   * belongs to a project.
+   *
    * @var string
    */
   public $project;
 
   /**
-   * @param string
+   * The asset type of the
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name
+   * Example: `cloudresourcemanager.googleapis.com/Project` See [Cloud Asset
+   * Inventory Supported Asset Types](https://cloud.google.com/asset-
+   * inventory/docs/supported-asset-types) for all supported asset types.
+   *
+   * @param string $assetType
    */
   public function setAssetType($assetType)
   {
@@ -62,7 +93,9 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
     return $this->assetType;
   }
   /**
-   * @param EffectiveTagDetails[]
+   * The effective tags on this resource.
+   *
+   * @param EffectiveTagDetails[] $effectiveTags
    */
   public function setEffectiveTags($effectiveTags)
   {
@@ -76,7 +109,11 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
     return $this->effectiveTags;
   }
   /**
-   * @param string[]
+   * The folder(s) that this resource belongs to, in the format of
+   * folders/{FOLDER_NUMBER}. This field is available when the resource belongs
+   * (directly or cascadingly) to one or more folders.
+   *
+   * @param string[] $folders
    */
   public function setFolders($folders)
   {
@@ -90,7 +127,10 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
     return $this->folders;
   }
   /**
-   * @param string
+   * The [full resource name] (https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format) of the Google Cloud resource.
+   *
+   * @param string $fullResourceName
    */
   public function setFullResourceName($fullResourceName)
   {
@@ -104,7 +144,11 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
     return $this->fullResourceName;
   }
   /**
-   * @param string
+   * The organization that this resource belongs to, in the format of
+   * organizations/{ORGANIZATION_NUMBER}. This field is available when the
+   * resource belongs (directly or cascadingly) to an organization.
+   *
+   * @param string $organization
    */
   public function setOrganization($organization)
   {
@@ -118,7 +162,11 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
     return $this->organization;
   }
   /**
-   * @param string
+   * The [full resource name] (https://cloud.google.com/asset-
+   * inventory/docs/resource-name-format) of the parent of
+   * AnalyzeOrgPolicyGovernedAssetsResponse.GovernedResource.full_resource_name.
+   *
+   * @param string $parent
    */
   public function setParent($parent)
   {
@@ -132,7 +180,11 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource e
     return $this->parent;
   }
   /**
-   * @param string
+   * The project that this resource belongs to, in the format of
+   * projects/{PROJECT_NUMBER}. This field is available when the resource
+   * belongs to a project.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {

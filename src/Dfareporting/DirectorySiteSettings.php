@@ -20,22 +20,30 @@ namespace Google\Service\Dfareporting;
 class DirectorySiteSettings extends \Google\Model
 {
   /**
+   * Whether this directory site has disabled active view creatives.
+   *
    * @var bool
    */
   public $activeViewOptOut;
   protected $dfpSettingsType = DfpSettings::class;
   protected $dfpSettingsDataType = '';
   /**
+   * Whether this site accepts in-stream video ads.
+   *
    * @var bool
    */
   public $instreamVideoPlacementAccepted;
   /**
+   * Whether this site accepts interstitial ads.
+   *
    * @var bool
    */
   public $interstitialPlacementAccepted;
 
   /**
-   * @param bool
+   * Whether this directory site has disabled active view creatives.
+   *
+   * @param bool $activeViewOptOut
    */
   public function setActiveViewOptOut($activeViewOptOut)
   {
@@ -49,7 +57,9 @@ class DirectorySiteSettings extends \Google\Model
     return $this->activeViewOptOut;
   }
   /**
-   * @param DfpSettings
+   * Directory site Ad Manager settings.
+   *
+   * @param DfpSettings $dfpSettings
    */
   public function setDfpSettings(DfpSettings $dfpSettings)
   {
@@ -63,7 +73,9 @@ class DirectorySiteSettings extends \Google\Model
     return $this->dfpSettings;
   }
   /**
-   * @param bool
+   * Whether this site accepts in-stream video ads.
+   *
+   * @param bool $instreamVideoPlacementAccepted
    */
   public function setInstreamVideoPlacementAccepted($instreamVideoPlacementAccepted)
   {
@@ -77,7 +89,9 @@ class DirectorySiteSettings extends \Google\Model
     return $this->instreamVideoPlacementAccepted;
   }
   /**
-   * @param bool
+   * Whether this site accepts interstitial ads.
+   *
+   * @param bool $interstitialPlacementAccepted
    */
   public function setInterstitialPlacementAccepted($interstitialPlacementAccepted)
   {

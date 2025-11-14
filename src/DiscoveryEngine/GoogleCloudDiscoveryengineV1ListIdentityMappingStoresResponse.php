@@ -23,12 +23,17 @@ class GoogleCloudDiscoveryengineV1ListIdentityMappingStoresResponse extends \Goo
   protected $identityMappingStoresType = GoogleCloudDiscoveryengineV1IdentityMappingStore::class;
   protected $identityMappingStoresDataType = 'array';
   /**
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1IdentityMappingStore[]
+   * The Identity Mapping Stores.
+   *
+   * @param GoogleCloudDiscoveryengineV1IdentityMappingStore[] $identityMappingStores
    */
   public function setIdentityMappingStores($identityMappingStores)
   {
@@ -42,7 +47,10 @@ class GoogleCloudDiscoveryengineV1ListIdentityMappingStoresResponse extends \Goo
     return $this->identityMappingStores;
   }
   /**
-   * @param string
+   * A token that can be sent as `page_token` to retrieve the next page. If this
+   * field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

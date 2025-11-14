@@ -19,31 +19,54 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3Tool extends \Google\Model
 {
+  /**
+   * Default value. This value is unused.
+   */
+  public const TOOL_TYPE_TOOL_TYPE_UNSPECIFIED = 'TOOL_TYPE_UNSPECIFIED';
+  /**
+   * Customer provided tool.
+   */
+  public const TOOL_TYPE_CUSTOMIZED_TOOL = 'CUSTOMIZED_TOOL';
+  /**
+   * First party built-in tool created by Dialogflow which cannot be modified.
+   */
+  public const TOOL_TYPE_BUILTIN_TOOL = 'BUILTIN_TOOL';
   protected $dataStoreSpecType = GoogleCloudDialogflowCxV3ToolDataStoreTool::class;
   protected $dataStoreSpecDataType = '';
   /**
+   * Required. High level description of the Tool and its usage.
+   *
    * @var string
    */
   public $description;
   /**
+   * Required. The human-readable name of the Tool, unique within an agent.
+   *
    * @var string
    */
   public $displayName;
   protected $functionSpecType = GoogleCloudDialogflowCxV3ToolFunctionTool::class;
   protected $functionSpecDataType = '';
   /**
+   * The unique identifier of the Tool. Format:
+   * `projects//locations//agents//tools/`.
+   *
    * @var string
    */
   public $name;
   protected $openApiSpecType = GoogleCloudDialogflowCxV3ToolOpenApiTool::class;
   protected $openApiSpecDataType = '';
   /**
+   * Output only. The tool type.
+   *
    * @var string
    */
   public $toolType;
 
   /**
-   * @param GoogleCloudDialogflowCxV3ToolDataStoreTool
+   * Data store search tool specification.
+   *
+   * @param GoogleCloudDialogflowCxV3ToolDataStoreTool $dataStoreSpec
    */
   public function setDataStoreSpec(GoogleCloudDialogflowCxV3ToolDataStoreTool $dataStoreSpec)
   {
@@ -57,7 +80,9 @@ class GoogleCloudDialogflowCxV3Tool extends \Google\Model
     return $this->dataStoreSpec;
   }
   /**
-   * @param string
+   * Required. High level description of the Tool and its usage.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -71,7 +96,9 @@ class GoogleCloudDialogflowCxV3Tool extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Required. The human-readable name of the Tool, unique within an agent.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -85,7 +112,9 @@ class GoogleCloudDialogflowCxV3Tool extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ToolFunctionTool
+   * Client side executed function specification.
+   *
+   * @param GoogleCloudDialogflowCxV3ToolFunctionTool $functionSpec
    */
   public function setFunctionSpec(GoogleCloudDialogflowCxV3ToolFunctionTool $functionSpec)
   {
@@ -99,7 +128,10 @@ class GoogleCloudDialogflowCxV3Tool extends \Google\Model
     return $this->functionSpec;
   }
   /**
-   * @param string
+   * The unique identifier of the Tool. Format:
+   * `projects//locations//agents//tools/`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -113,7 +145,9 @@ class GoogleCloudDialogflowCxV3Tool extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3ToolOpenApiTool
+   * OpenAPI specification of the Tool.
+   *
+   * @param GoogleCloudDialogflowCxV3ToolOpenApiTool $openApiSpec
    */
   public function setOpenApiSpec(GoogleCloudDialogflowCxV3ToolOpenApiTool $openApiSpec)
   {
@@ -127,14 +161,18 @@ class GoogleCloudDialogflowCxV3Tool extends \Google\Model
     return $this->openApiSpec;
   }
   /**
-   * @param string
+   * Output only. The tool type.
+   *
+   * Accepted values: TOOL_TYPE_UNSPECIFIED, CUSTOMIZED_TOOL, BUILTIN_TOOL
+   *
+   * @param self::TOOL_TYPE_* $toolType
    */
   public function setToolType($toolType)
   {
     $this->toolType = $toolType;
   }
   /**
-   * @return string
+   * @return self::TOOL_TYPE_*
    */
   public function getToolType()
   {

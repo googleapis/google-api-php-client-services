@@ -20,44 +20,100 @@ namespace Google\Service\NetworkSecurity;
 class BackendAuthenticationConfig extends \Google\Model
 {
   /**
+   * Equivalent to NONE.
+   */
+  public const WELL_KNOWN_ROOTS_WELL_KNOWN_ROOTS_UNSPECIFIED = 'WELL_KNOWN_ROOTS_UNSPECIFIED';
+  /**
+   * The BackendService will only validate server certificates against roots
+   * specified in TrustConfig.
+   */
+  public const WELL_KNOWN_ROOTS_NONE = 'NONE';
+  /**
+   * The BackendService uses a set of well-known public roots, in addition to
+   * any roots specified in the trustConfig field, when validating the server
+   * certificates presented by the backend. Validation with these roots is only
+   * considered when the TlsSettings.sni field in the BackendService is set. The
+   * well-known roots are a set of root CAs managed by Google. CAs in this set
+   * can be added or removed without notice.
+   */
+  public const WELL_KNOWN_ROOTS_PUBLIC_ROOTS = 'PUBLIC_ROOTS';
+  /**
+   * Optional. A reference to a certificatemanager.googleapis.com.Certificate
+   * resource. This is a relative resource path following the form
+   * "projects/{project}/locations/{location}/certificates/{certificate}". Used
+   * by a BackendService to negotiate mTLS when the backend connection uses TLS
+   * and the backend requests a client certificate. Must have a CLIENT_AUTH
+   * scope.
+   *
    * @var string
    */
   public $clientCertificate;
   /**
+   * Output only. The timestamp when the resource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. Free-text description of the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Output only. Etag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Set of label tags associated with the resource.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Required. Name of the BackendAuthenticationConfig resource. It matches the
+   * pattern `projects/locations/{location}/backendAuthenticationConfigs/{backen
+   * d_authentication_config}`
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. A reference to a TrustConfig resource from the
+   * certificatemanager.googleapis.com namespace. This is a relative resource
+   * path following the form
+   * "projects/{project}/locations/{location}/trustConfigs/{trust_config}". A
+   * BackendService uses the chain of trust represented by this TrustConfig, if
+   * specified, to validate the server certificates presented by the backend.
+   * Required unless wellKnownRoots is set to PUBLIC_ROOTS.
+   *
    * @var string
    */
   public $trustConfig;
   /**
+   * Output only. The timestamp when the resource was updated.
+   *
    * @var string
    */
   public $updateTime;
   /**
+   * Well known roots to use for server certificate validation.
+   *
    * @var string
    */
   public $wellKnownRoots;
 
   /**
-   * @param string
+   * Optional. A reference to a certificatemanager.googleapis.com.Certificate
+   * resource. This is a relative resource path following the form
+   * "projects/{project}/locations/{location}/certificates/{certificate}". Used
+   * by a BackendService to negotiate mTLS when the backend connection uses TLS
+   * and the backend requests a client certificate. Must have a CLIENT_AUTH
+   * scope.
+   *
+   * @param string $clientCertificate
    */
   public function setClientCertificate($clientCertificate)
   {
@@ -71,7 +127,9 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->clientCertificate;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -85,7 +143,9 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. Free-text description of the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -99,7 +159,9 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Output only. Etag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -113,7 +175,9 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param string[]
+   * Set of label tags associated with the resource.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -127,7 +191,11 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string
+   * Required. Name of the BackendAuthenticationConfig resource. It matches the
+   * pattern `projects/locations/{location}/backendAuthenticationConfigs/{backen
+   * d_authentication_config}`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -141,7 +209,15 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. A reference to a TrustConfig resource from the
+   * certificatemanager.googleapis.com namespace. This is a relative resource
+   * path following the form
+   * "projects/{project}/locations/{location}/trustConfigs/{trust_config}". A
+   * BackendService uses the chain of trust represented by this TrustConfig, if
+   * specified, to validate the server certificates presented by the backend.
+   * Required unless wellKnownRoots is set to PUBLIC_ROOTS.
+   *
+   * @param string $trustConfig
    */
   public function setTrustConfig($trustConfig)
   {
@@ -155,7 +231,9 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->trustConfig;
   }
   /**
-   * @param string
+   * Output only. The timestamp when the resource was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -169,14 +247,18 @@ class BackendAuthenticationConfig extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param string
+   * Well known roots to use for server certificate validation.
+   *
+   * Accepted values: WELL_KNOWN_ROOTS_UNSPECIFIED, NONE, PUBLIC_ROOTS
+   *
+   * @param self::WELL_KNOWN_ROOTS_* $wellKnownRoots
    */
   public function setWellKnownRoots($wellKnownRoots)
   {
     $this->wellKnownRoots = $wellKnownRoots;
   }
   /**
-   * @return string
+   * @return self::WELL_KNOWN_ROOTS_*
    */
   public function getWellKnownRoots()
   {

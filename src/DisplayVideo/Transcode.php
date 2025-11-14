@@ -20,42 +20,64 @@ namespace Google\Service\DisplayVideo;
 class Transcode extends \Google\Model
 {
   /**
+   * Optional. The bit rate for the audio stream of the transcoded video, or the
+   * bit rate for the transcoded audio, in kilobits per second.
+   *
    * @var string
    */
   public $audioBitRateKbps;
   /**
+   * Optional. The sample rate for the audio stream of the transcoded video, or
+   * the sample rate for the transcoded audio, in hertz.
+   *
    * @var string
    */
   public $audioSampleRateHz;
   /**
+   * Optional. The transcoding bit rate of the transcoded video, in kilobits per
+   * second.
+   *
    * @var string
    */
   public $bitRateKbps;
   protected $dimensionsType = Dimensions::class;
   protected $dimensionsDataType = '';
   /**
+   * Optional. The size of the transcoded file, in bytes.
+   *
    * @var string
    */
   public $fileSizeBytes;
   /**
+   * Optional. The frame rate of the transcoded video, in frames per second.
+   *
    * @var float
    */
   public $frameRate;
   /**
+   * Optional. The MIME type of the transcoded file.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * Optional. The name of the transcoded file.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. Indicates if the transcoding was successful.
+   *
    * @var bool
    */
   public $transcoded;
 
   /**
-   * @param string
+   * Optional. The bit rate for the audio stream of the transcoded video, or the
+   * bit rate for the transcoded audio, in kilobits per second.
+   *
+   * @param string $audioBitRateKbps
    */
   public function setAudioBitRateKbps($audioBitRateKbps)
   {
@@ -69,7 +91,10 @@ class Transcode extends \Google\Model
     return $this->audioBitRateKbps;
   }
   /**
-   * @param string
+   * Optional. The sample rate for the audio stream of the transcoded video, or
+   * the sample rate for the transcoded audio, in hertz.
+   *
+   * @param string $audioSampleRateHz
    */
   public function setAudioSampleRateHz($audioSampleRateHz)
   {
@@ -83,7 +108,10 @@ class Transcode extends \Google\Model
     return $this->audioSampleRateHz;
   }
   /**
-   * @param string
+   * Optional. The transcoding bit rate of the transcoded video, in kilobits per
+   * second.
+   *
+   * @param string $bitRateKbps
    */
   public function setBitRateKbps($bitRateKbps)
   {
@@ -97,7 +125,9 @@ class Transcode extends \Google\Model
     return $this->bitRateKbps;
   }
   /**
-   * @param Dimensions
+   * Optional. The dimensions of the transcoded video.
+   *
+   * @param Dimensions $dimensions
    */
   public function setDimensions(Dimensions $dimensions)
   {
@@ -111,7 +141,9 @@ class Transcode extends \Google\Model
     return $this->dimensions;
   }
   /**
-   * @param string
+   * Optional. The size of the transcoded file, in bytes.
+   *
+   * @param string $fileSizeBytes
    */
   public function setFileSizeBytes($fileSizeBytes)
   {
@@ -125,7 +157,9 @@ class Transcode extends \Google\Model
     return $this->fileSizeBytes;
   }
   /**
-   * @param float
+   * Optional. The frame rate of the transcoded video, in frames per second.
+   *
+   * @param float $frameRate
    */
   public function setFrameRate($frameRate)
   {
@@ -139,7 +173,9 @@ class Transcode extends \Google\Model
     return $this->frameRate;
   }
   /**
-   * @param string
+   * Optional. The MIME type of the transcoded file.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -153,7 +189,9 @@ class Transcode extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * Optional. The name of the transcoded file.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -167,7 +205,9 @@ class Transcode extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Optional. Indicates if the transcoding was successful.
+   *
+   * @param bool $transcoded
    */
   public function setTranscoded($transcoded)
   {

@@ -25,12 +25,17 @@ class GooglePrivacyDlpV2RecordKey extends \Google\Collection
   protected $datastoreKeyType = GooglePrivacyDlpV2DatastoreKey::class;
   protected $datastoreKeyDataType = '';
   /**
+   * Values of identifying columns in the given row. Order of values matches the
+   * order of `identifying_fields` specified in the scanning request.
+   *
    * @var string[]
    */
   public $idValues;
 
   /**
-   * @param GooglePrivacyDlpV2BigQueryKey
+   * Datastore key
+   *
+   * @param GooglePrivacyDlpV2BigQueryKey $bigQueryKey
    */
   public function setBigQueryKey(GooglePrivacyDlpV2BigQueryKey $bigQueryKey)
   {
@@ -44,7 +49,9 @@ class GooglePrivacyDlpV2RecordKey extends \Google\Collection
     return $this->bigQueryKey;
   }
   /**
-   * @param GooglePrivacyDlpV2DatastoreKey
+   * BigQuery key
+   *
+   * @param GooglePrivacyDlpV2DatastoreKey $datastoreKey
    */
   public function setDatastoreKey(GooglePrivacyDlpV2DatastoreKey $datastoreKey)
   {
@@ -58,7 +65,10 @@ class GooglePrivacyDlpV2RecordKey extends \Google\Collection
     return $this->datastoreKey;
   }
   /**
-   * @param string[]
+   * Values of identifying columns in the given row. Order of values matches the
+   * order of `identifying_fields` specified in the scanning request.
+   *
+   * @param string[] $idValues
    */
   public function setIdValues($idValues)
   {

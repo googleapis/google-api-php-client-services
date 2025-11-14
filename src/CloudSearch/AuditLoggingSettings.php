@@ -20,24 +20,40 @@ namespace Google\Service\CloudSearch;
 class AuditLoggingSettings extends \Google\Model
 {
   /**
+   * Indicates whether audit logging is on/off for admin activity read APIs i.e.
+   * Get/List DataSources, Get/List SearchApplications etc.
+   *
    * @var bool
    */
   public $logAdminReadActions;
   /**
+   * Indicates whether audit logging is on/off for data access read APIs i.e.
+   * ListItems, GetItem etc.
+   *
    * @var bool
    */
   public $logDataReadActions;
   /**
+   * Indicates whether audit logging is on/off for data access write APIs i.e.
+   * IndexItem etc.
+   *
    * @var bool
    */
   public $logDataWriteActions;
   /**
+   * The resource name of the GCP Project to store audit logs. Cloud audit
+   * logging will be enabled after project_name has been updated through
+   * CustomerService. Format: projects/{project_id}
+   *
    * @var string
    */
   public $project;
 
   /**
-   * @param bool
+   * Indicates whether audit logging is on/off for admin activity read APIs i.e.
+   * Get/List DataSources, Get/List SearchApplications etc.
+   *
+   * @param bool $logAdminReadActions
    */
   public function setLogAdminReadActions($logAdminReadActions)
   {
@@ -51,7 +67,10 @@ class AuditLoggingSettings extends \Google\Model
     return $this->logAdminReadActions;
   }
   /**
-   * @param bool
+   * Indicates whether audit logging is on/off for data access read APIs i.e.
+   * ListItems, GetItem etc.
+   *
+   * @param bool $logDataReadActions
    */
   public function setLogDataReadActions($logDataReadActions)
   {
@@ -65,7 +84,10 @@ class AuditLoggingSettings extends \Google\Model
     return $this->logDataReadActions;
   }
   /**
-   * @param bool
+   * Indicates whether audit logging is on/off for data access write APIs i.e.
+   * IndexItem etc.
+   *
+   * @param bool $logDataWriteActions
    */
   public function setLogDataWriteActions($logDataWriteActions)
   {
@@ -79,7 +101,11 @@ class AuditLoggingSettings extends \Google\Model
     return $this->logDataWriteActions;
   }
   /**
-   * @param string
+   * The resource name of the GCP Project to store audit logs. Cloud audit
+   * logging will be enabled after project_name has been updated through
+   * CustomerService. Format: projects/{project_id}
+   *
+   * @param string $project
    */
   public function setProject($project)
   {

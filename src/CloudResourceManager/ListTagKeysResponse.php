@@ -21,6 +21,9 @@ class ListTagKeysResponse extends \Google\Collection
 {
   protected $collection_key = 'tagKeys';
   /**
+   * A pagination token returned from a previous call to `ListTagKeys` that
+   * indicates from where listing should continue.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListTagKeysResponse extends \Google\Collection
   protected $tagKeysDataType = 'array';
 
   /**
-   * @param string
+   * A pagination token returned from a previous call to `ListTagKeys` that
+   * indicates from where listing should continue.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListTagKeysResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param TagKey[]
+   * List of TagKeys that live under the specified parent in the request.
+   *
+   * @param TagKey[] $tagKeys
    */
   public function setTagKeys($tagKeys)
   {

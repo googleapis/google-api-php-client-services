@@ -21,40 +21,60 @@ class About extends \Google\Collection
 {
   protected $collection_key = 'teamDriveThemes';
   /**
+   * Whether the user has installed the requesting app.
+   *
    * @var bool
    */
   public $appInstalled;
   /**
+   * Whether the user can create shared drives.
+   *
    * @var bool
    */
   public $canCreateDrives;
   /**
+   * Deprecated: Use `canCreateDrives` instead.
+   *
+   * @deprecated
    * @var bool
    */
   public $canCreateTeamDrives;
   protected $driveThemesType = AboutDriveThemes::class;
   protected $driveThemesDataType = 'array';
   /**
+   * A map of source MIME type to possible targets for all supported exports.
+   *
    * @var string[]
    */
   public $exportFormats;
   /**
+   * The currently supported folder colors as RGB hex strings.
+   *
    * @var string[]
    */
   public $folderColorPalette;
   /**
+   * A map of source MIME type to possible targets for all supported imports.
+   *
    * @var string[]
    */
   public $importFormats;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#about"`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * A map of maximum import sizes by MIME type, in bytes.
+   *
    * @var string[]
    */
   public $maxImportSizes;
   /**
+   * The maximum upload size in bytes.
+   *
    * @var string
    */
   public $maxUploadSize;
@@ -66,7 +86,9 @@ class About extends \Google\Collection
   protected $userDataType = '';
 
   /**
-   * @param bool
+   * Whether the user has installed the requesting app.
+   *
+   * @param bool $appInstalled
    */
   public function setAppInstalled($appInstalled)
   {
@@ -80,7 +102,9 @@ class About extends \Google\Collection
     return $this->appInstalled;
   }
   /**
-   * @param bool
+   * Whether the user can create shared drives.
+   *
+   * @param bool $canCreateDrives
    */
   public function setCanCreateDrives($canCreateDrives)
   {
@@ -94,13 +118,17 @@ class About extends \Google\Collection
     return $this->canCreateDrives;
   }
   /**
-   * @param bool
+   * Deprecated: Use `canCreateDrives` instead.
+   *
+   * @deprecated
+   * @param bool $canCreateTeamDrives
    */
   public function setCanCreateTeamDrives($canCreateTeamDrives)
   {
     $this->canCreateTeamDrives = $canCreateTeamDrives;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getCanCreateTeamDrives()
@@ -108,7 +136,9 @@ class About extends \Google\Collection
     return $this->canCreateTeamDrives;
   }
   /**
-   * @param AboutDriveThemes[]
+   * A list of themes that are supported for shared drives.
+   *
+   * @param AboutDriveThemes[] $driveThemes
    */
   public function setDriveThemes($driveThemes)
   {
@@ -122,7 +152,9 @@ class About extends \Google\Collection
     return $this->driveThemes;
   }
   /**
-   * @param string[]
+   * A map of source MIME type to possible targets for all supported exports.
+   *
+   * @param string[] $exportFormats
    */
   public function setExportFormats($exportFormats)
   {
@@ -136,7 +168,9 @@ class About extends \Google\Collection
     return $this->exportFormats;
   }
   /**
-   * @param string[]
+   * The currently supported folder colors as RGB hex strings.
+   *
+   * @param string[] $folderColorPalette
    */
   public function setFolderColorPalette($folderColorPalette)
   {
@@ -150,7 +184,9 @@ class About extends \Google\Collection
     return $this->folderColorPalette;
   }
   /**
-   * @param string[]
+   * A map of source MIME type to possible targets for all supported imports.
+   *
+   * @param string[] $importFormats
    */
   public function setImportFormats($importFormats)
   {
@@ -164,7 +200,10 @@ class About extends \Google\Collection
     return $this->importFormats;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * `"drive#about"`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -178,7 +217,9 @@ class About extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string[]
+   * A map of maximum import sizes by MIME type, in bytes.
+   *
+   * @param string[] $maxImportSizes
    */
   public function setMaxImportSizes($maxImportSizes)
   {
@@ -192,7 +233,9 @@ class About extends \Google\Collection
     return $this->maxImportSizes;
   }
   /**
-   * @param string
+   * The maximum upload size in bytes.
+   *
+   * @param string $maxUploadSize
    */
   public function setMaxUploadSize($maxUploadSize)
   {
@@ -206,7 +249,12 @@ class About extends \Google\Collection
     return $this->maxUploadSize;
   }
   /**
-   * @param AboutStorageQuota
+   * The user's storage quota limits and usage. For users that are part of an
+   * organization with pooled storage, information about the limit and usage
+   * across all services is for the organization, rather than the individual
+   * user. All fields are measured in bytes.
+   *
+   * @param AboutStorageQuota $storageQuota
    */
   public function setStorageQuota(AboutStorageQuota $storageQuota)
   {
@@ -220,13 +268,17 @@ class About extends \Google\Collection
     return $this->storageQuota;
   }
   /**
-   * @param AboutTeamDriveThemes[]
+   * Deprecated: Use `driveThemes` instead.
+   *
+   * @deprecated
+   * @param AboutTeamDriveThemes[] $teamDriveThemes
    */
   public function setTeamDriveThemes($teamDriveThemes)
   {
     $this->teamDriveThemes = $teamDriveThemes;
   }
   /**
+   * @deprecated
    * @return AboutTeamDriveThemes[]
    */
   public function getTeamDriveThemes()
@@ -234,7 +286,9 @@ class About extends \Google\Collection
     return $this->teamDriveThemes;
   }
   /**
-   * @param User
+   * The authenticated user.
+   *
+   * @param User $user
    */
   public function setUser(User $user)
   {

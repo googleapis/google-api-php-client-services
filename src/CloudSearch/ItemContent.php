@@ -19,6 +19,22 @@ namespace Google\Service\CloudSearch;
 
 class ItemContent extends \Google\Model
 {
+  /**
+   * Invalid value.
+   */
+  public const CONTENT_FORMAT_UNSPECIFIED = 'UNSPECIFIED';
+  /**
+   * contentFormat is HTML.
+   */
+  public const CONTENT_FORMAT_HTML = 'HTML';
+  /**
+   * contentFormat is free text.
+   */
+  public const CONTENT_FORMAT_TEXT = 'TEXT';
+  /**
+   * contentFormat is raw bytes.
+   */
+  public const CONTENT_FORMAT_RAW = 'RAW';
   protected $contentDataRefType = UploadItemRef::class;
   protected $contentDataRefDataType = '';
   /**
@@ -26,16 +42,25 @@ class ItemContent extends \Google\Model
    */
   public $contentFormat;
   /**
+   * Hashing info calculated and provided by the API client for content. Can be
+   * used with the items.push method to calculate modified state. The maximum
+   * length is 2048 characters.
+   *
    * @var string
    */
   public $hash;
   /**
+   * Content that is supplied inlined within the update method. The maximum
+   * length is 102400 bytes (100 KiB).
+   *
    * @var string
    */
   public $inlineContent;
 
   /**
-   * @param UploadItemRef
+   * Upload reference ID of a previously uploaded content via write method.
+   *
+   * @param UploadItemRef $contentDataRef
    */
   public function setContentDataRef(UploadItemRef $contentDataRef)
   {
@@ -49,21 +74,25 @@ class ItemContent extends \Google\Model
     return $this->contentDataRef;
   }
   /**
-   * @param string
+   * @param self::CONTENT_FORMAT_* $contentFormat
    */
   public function setContentFormat($contentFormat)
   {
     $this->contentFormat = $contentFormat;
   }
   /**
-   * @return string
+   * @return self::CONTENT_FORMAT_*
    */
   public function getContentFormat()
   {
     return $this->contentFormat;
   }
   /**
-   * @param string
+   * Hashing info calculated and provided by the API client for content. Can be
+   * used with the items.push method to calculate modified state. The maximum
+   * length is 2048 characters.
+   *
+   * @param string $hash
    */
   public function setHash($hash)
   {
@@ -77,7 +106,10 @@ class ItemContent extends \Google\Model
     return $this->hash;
   }
   /**
-   * @param string
+   * Content that is supplied inlined within the update method. The maximum
+   * length is 102400 bytes (100 KiB).
+   *
+   * @param string $inlineContent
    */
   public function setInlineContent($inlineContent)
   {

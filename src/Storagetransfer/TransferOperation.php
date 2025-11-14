@@ -19,10 +19,44 @@ namespace Google\Service\Storagetransfer;
 
 class TransferOperation extends \Google\Collection
 {
+  /**
+   * Zero is an illegal value.
+   */
+  public const STATUS_STATUS_UNSPECIFIED = 'STATUS_UNSPECIFIED';
+  /**
+   * In progress.
+   */
+  public const STATUS_IN_PROGRESS = 'IN_PROGRESS';
+  /**
+   * Paused.
+   */
+  public const STATUS_PAUSED = 'PAUSED';
+  /**
+   * Completed successfully.
+   */
+  public const STATUS_SUCCESS = 'SUCCESS';
+  /**
+   * Terminated due to an unrecoverable failure.
+   */
+  public const STATUS_FAILED = 'FAILED';
+  /**
+   * Aborted by the user.
+   */
+  public const STATUS_ABORTED = 'ABORTED';
+  /**
+   * Temporarily delayed by the system. No user action is required.
+   */
+  public const STATUS_QUEUED = 'QUEUED';
+  /**
+   * The operation is suspending and draining the ongoing work to completion.
+   */
+  public const STATUS_SUSPENDING = 'SUSPENDING';
   protected $collection_key = 'errorBreakdowns';
   protected $countersType = TransferCounters::class;
   protected $countersDataType = '';
   /**
+   * End time of this transfer execution.
+   *
    * @var string
    */
   public $endTime;
@@ -31,24 +65,34 @@ class TransferOperation extends \Google\Collection
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
+   * A globally unique ID assigned by the system.
+   *
    * @var string
    */
   public $name;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
   /**
+   * The ID of the Google Cloud project that owns the operation.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * Start time of this transfer execution.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Status of the transfer operation.
+   *
    * @var string
    */
   public $status;
   /**
+   * The name of the transfer job that triggers this transfer operation.
+   *
    * @var string
    */
   public $transferJobName;
@@ -56,7 +100,9 @@ class TransferOperation extends \Google\Collection
   protected $transferSpecDataType = '';
 
   /**
-   * @param TransferCounters
+   * Information about the progress of the transfer operation.
+   *
+   * @param TransferCounters $counters
    */
   public function setCounters(TransferCounters $counters)
   {
@@ -70,7 +116,9 @@ class TransferOperation extends \Google\Collection
     return $this->counters;
   }
   /**
-   * @param string
+   * End time of this transfer execution.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -84,7 +132,9 @@ class TransferOperation extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param ErrorSummary[]
+   * Summarizes errors encountered with sample error log entries.
+   *
+   * @param ErrorSummary[] $errorBreakdowns
    */
   public function setErrorBreakdowns($errorBreakdowns)
   {
@@ -98,7 +148,9 @@ class TransferOperation extends \Google\Collection
     return $this->errorBreakdowns;
   }
   /**
-   * @param LoggingConfig
+   * Cloud Logging configuration.
+   *
+   * @param LoggingConfig $loggingConfig
    */
   public function setLoggingConfig(LoggingConfig $loggingConfig)
   {
@@ -112,7 +164,9 @@ class TransferOperation extends \Google\Collection
     return $this->loggingConfig;
   }
   /**
-   * @param string
+   * A globally unique ID assigned by the system.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -126,7 +180,9 @@ class TransferOperation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param NotificationConfig
+   * Notification configuration.
+   *
+   * @param NotificationConfig $notificationConfig
    */
   public function setNotificationConfig(NotificationConfig $notificationConfig)
   {
@@ -140,7 +196,9 @@ class TransferOperation extends \Google\Collection
     return $this->notificationConfig;
   }
   /**
-   * @param string
+   * The ID of the Google Cloud project that owns the operation.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -154,7 +212,9 @@ class TransferOperation extends \Google\Collection
     return $this->projectId;
   }
   /**
-   * @param string
+   * Start time of this transfer execution.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -168,21 +228,28 @@ class TransferOperation extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Status of the transfer operation.
+   *
+   * Accepted values: STATUS_UNSPECIFIED, IN_PROGRESS, PAUSED, SUCCESS, FAILED,
+   * ABORTED, QUEUED, SUSPENDING
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param string
+   * The name of the transfer job that triggers this transfer operation.
+   *
+   * @param string $transferJobName
    */
   public function setTransferJobName($transferJobName)
   {
@@ -196,7 +263,9 @@ class TransferOperation extends \Google\Collection
     return $this->transferJobName;
   }
   /**
-   * @param TransferSpec
+   * Transfer specification.
+   *
+   * @param TransferSpec $transferSpec
    */
   public function setTransferSpec(TransferSpec $transferSpec)
   {

@@ -595,7 +595,7 @@ class ChromeOsDevice extends \Google\Collection
     return $this->backlightInfo;
   }
   /**
-   * Output only. Information about bluetooth adapters of the device.
+   * Output only. Information about Bluetooth adapters of the device.
    *
    * @param BluetoothAdapterInfo[] $bluetoothAdapterInfo
    */

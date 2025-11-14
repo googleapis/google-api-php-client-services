@@ -22,24 +22,42 @@ class GoogleCloudDatacatalogV1EntryGroup extends \Google\Model
   protected $dataCatalogTimestampsType = GoogleCloudDatacatalogV1SystemTimestamps::class;
   protected $dataCatalogTimestampsDataType = '';
   /**
+   * Entry group description. Can consist of several sentences or paragraphs
+   * that describe the entry group contents. Default value is an empty string.
+   *
    * @var string
    */
   public $description;
   /**
+   * A short name to identify the entry group, for example, "analytics data -
+   * jan 2011". Default value is an empty string.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Identifier. The resource name of the entry group in URL format. Note: The
+   * entry group itself and its child resources might not be stored in the
+   * location specified in its name.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. When set to [true], it means DataCatalog EntryGroup was
+   * transferred to Dataplex Universal Catalog. It makes EntryGroup and its
+   * Entries to be read-only in DataCatalog. However, new Tags on EntryGroup and
+   * its Entries can be created. After setting the flag to [true] it cannot be
+   * unset.
+   *
    * @var bool
    */
   public $transferredToDataplex;
 
   /**
-   * @param GoogleCloudDatacatalogV1SystemTimestamps
+   * Output only. Timestamps of the entry group. Default value is empty.
+   *
+   * @param GoogleCloudDatacatalogV1SystemTimestamps $dataCatalogTimestamps
    */
   public function setDataCatalogTimestamps(GoogleCloudDatacatalogV1SystemTimestamps $dataCatalogTimestamps)
   {
@@ -53,7 +71,10 @@ class GoogleCloudDatacatalogV1EntryGroup extends \Google\Model
     return $this->dataCatalogTimestamps;
   }
   /**
-   * @param string
+   * Entry group description. Can consist of several sentences or paragraphs
+   * that describe the entry group contents. Default value is an empty string.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -67,7 +88,10 @@ class GoogleCloudDatacatalogV1EntryGroup extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * A short name to identify the entry group, for example, "analytics data -
+   * jan 2011". Default value is an empty string.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -81,7 +105,11 @@ class GoogleCloudDatacatalogV1EntryGroup extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Identifier. The resource name of the entry group in URL format. Note: The
+   * entry group itself and its child resources might not be stored in the
+   * location specified in its name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -95,7 +123,13 @@ class GoogleCloudDatacatalogV1EntryGroup extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * Optional. When set to [true], it means DataCatalog EntryGroup was
+   * transferred to Dataplex Universal Catalog. It makes EntryGroup and its
+   * Entries to be read-only in DataCatalog. However, new Tags on EntryGroup and
+   * its Entries can be created. After setting the flag to [true] it cannot be
+   * unset.
+   *
+   * @param bool $transferredToDataplex
    */
   public function setTransferredToDataplex($transferredToDataplex)
   {

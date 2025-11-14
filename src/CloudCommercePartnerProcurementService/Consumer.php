@@ -20,12 +20,16 @@ namespace Google\Service\CloudCommercePartnerProcurementService;
 class Consumer extends \Google\Model
 {
   /**
+   * A project name with format `projects/`.
+   *
    * @var string
    */
   public $project;
 
   /**
-   * @param string
+   * A project name with format `projects/`.
+   *
+   * @param string $project
    */
   public function setProject($project)
   {

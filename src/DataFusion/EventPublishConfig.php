@@ -20,16 +20,23 @@ namespace Google\Service\DataFusion;
 class EventPublishConfig extends \Google\Model
 {
   /**
+   * Required. Option to enable Event Publishing.
+   *
    * @var bool
    */
   public $enabled;
   /**
+   * Required. The resource name of the Pub/Sub topic. Format:
+   * projects/{project_id}/topics/{topic_id}
+   *
    * @var string
    */
   public $topic;
 
   /**
-   * @param bool
+   * Required. Option to enable Event Publishing.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {
@@ -43,7 +50,10 @@ class EventPublishConfig extends \Google\Model
     return $this->enabled;
   }
   /**
-   * @param string
+   * Required. The resource name of the Pub/Sub topic. Format:
+   * projects/{project_id}/topics/{topic_id}
+   *
+   * @param string $topic
    */
   public function setTopic($topic)
   {

@@ -23,16 +23,23 @@ class PerStepNamespaceMetrics extends \Google\Collection
   protected $metricValuesType = MetricValue::class;
   protected $metricValuesDataType = 'array';
   /**
+   * The namespace of these metrics on the worker.
+   *
    * @var string
    */
   public $metricsNamespace;
   /**
+   * The original system name of the unfused step that these metrics are
+   * reported from.
+   *
    * @var string
    */
   public $originalStep;
 
   /**
-   * @param MetricValue[]
+   * Optional. Metrics that are recorded for this namespace and unfused step.
+   *
+   * @param MetricValue[] $metricValues
    */
   public function setMetricValues($metricValues)
   {
@@ -46,7 +53,9 @@ class PerStepNamespaceMetrics extends \Google\Collection
     return $this->metricValues;
   }
   /**
-   * @param string
+   * The namespace of these metrics on the worker.
+   *
+   * @param string $metricsNamespace
    */
   public function setMetricsNamespace($metricsNamespace)
   {
@@ -60,7 +69,10 @@ class PerStepNamespaceMetrics extends \Google\Collection
     return $this->metricsNamespace;
   }
   /**
-   * @param string
+   * The original system name of the unfused step that these metrics are
+   * reported from.
+   *
+   * @param string $originalStep
    */
   public function setOriginalStep($originalStep)
   {

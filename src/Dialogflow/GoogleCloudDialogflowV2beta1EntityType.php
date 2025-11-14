@@ -19,46 +19,93 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2beta1EntityType extends \Google\Collection
 {
+  /**
+   * Auto expansion disabled for the entity.
+   */
+  public const AUTO_EXPANSION_MODE_AUTO_EXPANSION_MODE_UNSPECIFIED = 'AUTO_EXPANSION_MODE_UNSPECIFIED';
+  /**
+   * Allows an agent to recognize values that have not been explicitly listed in
+   * the entity.
+   */
+  public const AUTO_EXPANSION_MODE_AUTO_EXPANSION_MODE_DEFAULT = 'AUTO_EXPANSION_MODE_DEFAULT';
+  /**
+   * Not specified. This value should be never used.
+   */
+  public const KIND_KIND_UNSPECIFIED = 'KIND_UNSPECIFIED';
+  /**
+   * Map entity types allow mapping of a group of synonyms to a reference value.
+   */
+  public const KIND_KIND_MAP = 'KIND_MAP';
+  /**
+   * List entity types contain a set of entries that do not map to reference
+   * values. However, list entity types can contain references to other entity
+   * types (with or without aliases).
+   */
+  public const KIND_KIND_LIST = 'KIND_LIST';
+  /**
+   * Regexp entity types allow to specify regular expressions in entries values.
+   */
+  public const KIND_KIND_REGEXP = 'KIND_REGEXP';
   protected $collection_key = 'entities';
   /**
+   * Optional. Indicates whether the entity type can be automatically expanded.
+   *
    * @var string
    */
   public $autoExpansionMode;
   /**
+   * Required. The name of the entity type.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Enables fuzzy entity extraction during classification.
+   *
    * @var bool
    */
   public $enableFuzzyExtraction;
   protected $entitiesType = GoogleCloudDialogflowV2beta1EntityTypeEntity::class;
   protected $entitiesDataType = 'array';
   /**
+   * Required. Indicates the kind of entity type.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The unique identifier of the entity type. Required for
+   * EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes
+   * methods. Supported formats: - `projects//agent/entityTypes/` -
+   * `projects//locations//agent/entityTypes/`
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Optional. Indicates whether the entity type can be automatically expanded.
+   *
+   * Accepted values: AUTO_EXPANSION_MODE_UNSPECIFIED,
+   * AUTO_EXPANSION_MODE_DEFAULT
+   *
+   * @param self::AUTO_EXPANSION_MODE_* $autoExpansionMode
    */
   public function setAutoExpansionMode($autoExpansionMode)
   {
     $this->autoExpansionMode = $autoExpansionMode;
   }
   /**
-   * @return string
+   * @return self::AUTO_EXPANSION_MODE_*
    */
   public function getAutoExpansionMode()
   {
     return $this->autoExpansionMode;
   }
   /**
-   * @param string
+   * Required. The name of the entity type.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -72,7 +119,9 @@ class GoogleCloudDialogflowV2beta1EntityType extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param bool
+   * Optional. Enables fuzzy entity extraction during classification.
+   *
+   * @param bool $enableFuzzyExtraction
    */
   public function setEnableFuzzyExtraction($enableFuzzyExtraction)
   {
@@ -86,7 +135,9 @@ class GoogleCloudDialogflowV2beta1EntityType extends \Google\Collection
     return $this->enableFuzzyExtraction;
   }
   /**
-   * @param GoogleCloudDialogflowV2beta1EntityTypeEntity[]
+   * Optional. The collection of entity entries associated with the entity type.
+   *
+   * @param GoogleCloudDialogflowV2beta1EntityTypeEntity[] $entities
    */
   public function setEntities($entities)
   {
@@ -100,21 +151,30 @@ class GoogleCloudDialogflowV2beta1EntityType extends \Google\Collection
     return $this->entities;
   }
   /**
-   * @param string
+   * Required. Indicates the kind of entity type.
+   *
+   * Accepted values: KIND_UNSPECIFIED, KIND_MAP, KIND_LIST, KIND_REGEXP
+   *
+   * @param self::KIND_* $kind
    */
   public function setKind($kind)
   {
     $this->kind = $kind;
   }
   /**
-   * @return string
+   * @return self::KIND_*
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * The unique identifier of the entity type. Required for
+   * EntityTypes.UpdateEntityType and EntityTypes.BatchUpdateEntityTypes
+   * methods. Supported formats: - `projects//agent/entityTypes/` -
+   * `projects//locations//agent/entityTypes/`
+   *
+   * @param string $name
    */
   public function setName($name)
   {

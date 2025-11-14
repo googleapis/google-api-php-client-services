@@ -21,36 +21,61 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
 {
   protected $collection_key = 'claimAppearances';
   /**
+   * A list of links to works in which this claim appears, aside from the one
+   * specified in `claim_first_appearance`. Corresponds to
+   * `ClaimReview.itemReviewed[@type=Claim].appearance.url`.
+   *
    * @var string[]
    */
   public $claimAppearances;
   protected $claimAuthorType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor::class;
   protected $claimAuthorDataType = '';
   /**
+   * The date when the claim was made or entered public discourse. Corresponds
+   * to `ClaimReview.itemReviewed.datePublished`.
+   *
    * @var string
    */
   public $claimDate;
   /**
+   * A link to a work in which this claim first appears. Corresponds to
+   * `ClaimReview.itemReviewed[@type=Claim].firstAppearance.url`.
+   *
    * @var string
    */
   public $claimFirstAppearance;
   /**
+   * The location where this claim was made. Corresponds to
+   * `ClaimReview.itemReviewed.name`.
+   *
    * @var string
    */
   public $claimLocation;
   /**
+   * A short summary of the claim being evaluated. Corresponds to
+   * `ClaimReview.claimReviewed`.
+   *
    * @var string
    */
   public $claimReviewed;
   protected $ratingType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating::class;
   protected $ratingDataType = '';
   /**
+   * This field is optional, and will default to the page URL. We provide this
+   * field to allow you the override the default value, but the only permitted
+   * override is the page URL plus an optional anchor link ("page jump").
+   * Corresponds to `ClaimReview.url`
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string[]
+   * A list of links to works in which this claim appears, aside from the one
+   * specified in `claim_first_appearance`. Corresponds to
+   * `ClaimReview.itemReviewed[@type=Claim].appearance.url`.
+   *
+   * @param string[] $claimAppearances
    */
   public function setClaimAppearances($claimAppearances)
   {
@@ -64,7 +89,9 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
     return $this->claimAppearances;
   }
   /**
-   * @param GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor
+   * Info about the author of this claim.
+   *
+   * @param GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor $claimAuthor
    */
   public function setClaimAuthor(GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor $claimAuthor)
   {
@@ -78,7 +105,10 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
     return $this->claimAuthor;
   }
   /**
-   * @param string
+   * The date when the claim was made or entered public discourse. Corresponds
+   * to `ClaimReview.itemReviewed.datePublished`.
+   *
+   * @param string $claimDate
    */
   public function setClaimDate($claimDate)
   {
@@ -92,7 +122,10 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
     return $this->claimDate;
   }
   /**
-   * @param string
+   * A link to a work in which this claim first appears. Corresponds to
+   * `ClaimReview.itemReviewed[@type=Claim].firstAppearance.url`.
+   *
+   * @param string $claimFirstAppearance
    */
   public function setClaimFirstAppearance($claimFirstAppearance)
   {
@@ -106,7 +139,10 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
     return $this->claimFirstAppearance;
   }
   /**
-   * @param string
+   * The location where this claim was made. Corresponds to
+   * `ClaimReview.itemReviewed.name`.
+   *
+   * @param string $claimLocation
    */
   public function setClaimLocation($claimLocation)
   {
@@ -120,7 +156,10 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
     return $this->claimLocation;
   }
   /**
-   * @param string
+   * A short summary of the claim being evaluated. Corresponds to
+   * `ClaimReview.claimReviewed`.
+   *
+   * @param string $claimReviewed
    */
   public function setClaimReviewed($claimReviewed)
   {
@@ -134,7 +173,9 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
     return $this->claimReviewed;
   }
   /**
-   * @param GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating
+   * Info about the rating of this claim review.
+   *
+   * @param GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating $rating
    */
   public function setRating(GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating $rating)
   {
@@ -148,7 +189,12 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
     return $this->rating;
   }
   /**
-   * @param string
+   * This field is optional, and will default to the page URL. We provide this
+   * field to allow you the override the default value, but the only permitted
+   * override is the page URL plus an optional anchor link ("page jump").
+   * Corresponds to `ClaimReview.url`
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

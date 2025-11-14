@@ -20,13 +20,22 @@ namespace Google\Service\Doubleclicksearch;
 class CustomMetric extends \Google\Model
 {
   /**
+   * Custom metric name.
+   *
    * @var string
    */
   public $name;
+  /**
+   * Custom metric numeric value.
+   *
+   * @var 
+   */
   public $value;
 
   /**
-   * @param string
+   * Custom metric name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

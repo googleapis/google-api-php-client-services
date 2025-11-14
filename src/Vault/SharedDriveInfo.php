@@ -21,12 +21,18 @@ class SharedDriveInfo extends \Google\Collection
 {
   protected $collection_key = 'sharedDriveIds';
   /**
+   * A list of shared drive IDs, as provided by the [Drive
+   * API](https://developers.google.com/drive).
+   *
    * @var string[]
    */
   public $sharedDriveIds;
 
   /**
-   * @param string[]
+   * A list of shared drive IDs, as provided by the [Drive
+   * API](https://developers.google.com/drive).
+   *
+   * @param string[] $sharedDriveIds
    */
   public function setSharedDriveIds($sharedDriveIds)
   {

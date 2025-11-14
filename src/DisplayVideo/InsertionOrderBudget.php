@@ -19,34 +19,86 @@ namespace Google\Service\DisplayVideo;
 
 class InsertionOrderBudget extends \Google\Collection
 {
+  /**
+   * Insertion order automation option is not specified or is unknown in this
+   * version.
+   */
+  public const AUTOMATION_TYPE_INSERTION_ORDER_AUTOMATION_TYPE_UNSPECIFIED = 'INSERTION_ORDER_AUTOMATION_TYPE_UNSPECIFIED';
+  /**
+   * Automatic budget allocation. Allow the system to automatically shift budget
+   * to owning line items to optimize performance defined by kpi. No automation
+   * on bid settings.
+   */
+  public const AUTOMATION_TYPE_INSERTION_ORDER_AUTOMATION_TYPE_BUDGET = 'INSERTION_ORDER_AUTOMATION_TYPE_BUDGET';
+  /**
+   * No automation of bid or budget on insertion order level. Bid and budget
+   * must be manually configured at the line item level.
+   */
+  public const AUTOMATION_TYPE_INSERTION_ORDER_AUTOMATION_TYPE_NONE = 'INSERTION_ORDER_AUTOMATION_TYPE_NONE';
+  /**
+   * Allow the system to automatically adjust bids and shift budget to owning
+   * line items to optimize performance defined by kpi.
+   */
+  public const AUTOMATION_TYPE_INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET = 'INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET';
+  /**
+   * Type value is not specified or is unknown in this version.
+   */
+  public const BUDGET_UNIT_BUDGET_UNIT_UNSPECIFIED = 'BUDGET_UNIT_UNSPECIFIED';
+  /**
+   * Budgeting in currency amounts.
+   */
+  public const BUDGET_UNIT_BUDGET_UNIT_CURRENCY = 'BUDGET_UNIT_CURRENCY';
+  /**
+   * Budgeting in impression amounts.
+   */
+  public const BUDGET_UNIT_BUDGET_UNIT_IMPRESSIONS = 'BUDGET_UNIT_IMPRESSIONS';
   protected $collection_key = 'budgetSegments';
   /**
+   * Optional. The type of automation used to manage bid and budget for the
+   * insertion order. If this field is unspecified in creation, the value
+   * defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
+   *
    * @var string
    */
   public $automationType;
   protected $budgetSegmentsType = InsertionOrderBudgetSegment::class;
   protected $budgetSegmentsDataType = 'array';
   /**
+   * Required. Immutable. The budget unit specifies whether the budget is
+   * currency based or impression based.
+   *
    * @var string
    */
   public $budgetUnit;
 
   /**
-   * @param string
+   * Optional. The type of automation used to manage bid and budget for the
+   * insertion order. If this field is unspecified in creation, the value
+   * defaults to `INSERTION_ORDER_AUTOMATION_TYPE_NONE`.
+   *
+   * Accepted values: INSERTION_ORDER_AUTOMATION_TYPE_UNSPECIFIED,
+   * INSERTION_ORDER_AUTOMATION_TYPE_BUDGET,
+   * INSERTION_ORDER_AUTOMATION_TYPE_NONE,
+   * INSERTION_ORDER_AUTOMATION_TYPE_BID_BUDGET
+   *
+   * @param self::AUTOMATION_TYPE_* $automationType
    */
   public function setAutomationType($automationType)
   {
     $this->automationType = $automationType;
   }
   /**
-   * @return string
+   * @return self::AUTOMATION_TYPE_*
    */
   public function getAutomationType()
   {
     return $this->automationType;
   }
   /**
-   * @param InsertionOrderBudgetSegment[]
+   * Required. The list of budget segments. Use a budget segment to specify a
+   * specific budget for a given period of time an insertion order is running.
+   *
+   * @param InsertionOrderBudgetSegment[] $budgetSegments
    */
   public function setBudgetSegments($budgetSegments)
   {
@@ -60,14 +112,20 @@ class InsertionOrderBudget extends \Google\Collection
     return $this->budgetSegments;
   }
   /**
-   * @param string
+   * Required. Immutable. The budget unit specifies whether the budget is
+   * currency based or impression based.
+   *
+   * Accepted values: BUDGET_UNIT_UNSPECIFIED, BUDGET_UNIT_CURRENCY,
+   * BUDGET_UNIT_IMPRESSIONS
+   *
+   * @param self::BUDGET_UNIT_* $budgetUnit
    */
   public function setBudgetUnit($budgetUnit)
   {
     $this->budgetUnit = $budgetUnit;
   }
   /**
-   * @return string
+   * @return self::BUDGET_UNIT_*
    */
   public function getBudgetUnit()
   {

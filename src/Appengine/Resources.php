@@ -20,12 +20,30 @@ namespace Google\Service\Appengine;
 class Resources extends \Google\Collection
 {
   protected $collection_key = 'volumes';
+  /**
+   * Number of CPU cores needed.
+   *
+   * @var 
+   */
   public $cpu;
+  /**
+   * Disk size (GB) needed.
+   *
+   * @var 
+   */
   public $diskGb;
   /**
+   * The name of the encryption key that is stored in Google Cloud KMS. Only
+   * should be used by Cloud Composer to encrypt the vm disk
+   *
    * @var string
    */
   public $kmsKeyReference;
+  /**
+   * Memory (GB) needed.
+   *
+   * @var 
+   */
   public $memoryGb;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
@@ -47,7 +65,10 @@ class Resources extends \Google\Collection
     return $this->diskGb;
   }
   /**
-   * @param string
+   * The name of the encryption key that is stored in Google Cloud KMS. Only
+   * should be used by Cloud Composer to encrypt the vm disk
+   *
+   * @param string $kmsKeyReference
    */
   public function setKmsKeyReference($kmsKeyReference)
   {
@@ -69,7 +90,9 @@ class Resources extends \Google\Collection
     return $this->memoryGb;
   }
   /**
-   * @param Volume[]
+   * User specified volumes.
+   *
+   * @param Volume[] $volumes
    */
   public function setVolumes($volumes)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta3ImportProcessorVersionResponse extends \Google\Model
 {
   /**
+   * The destination processor version name.
+   *
    * @var string
    */
   public $processorVersion;
 
   /**
-   * @param string
+   * The destination processor version name.
+   *
+   * @param string $processorVersion
    */
   public function setProcessorVersion($processorVersion)
   {

@@ -20,16 +20,23 @@ namespace Google\Service\BigtableAdmin;
 class DropRowRangeRequest extends \Google\Model
 {
   /**
+   * Delete all rows in the table. Setting this to false is a no-op.
+   *
    * @var bool
    */
   public $deleteAllDataFromTable;
   /**
+   * Delete all rows that start with this row key prefix. Prefix cannot be zero
+   * length.
+   *
    * @var string
    */
   public $rowKeyPrefix;
 
   /**
-   * @param bool
+   * Delete all rows in the table. Setting this to false is a no-op.
+   *
+   * @param bool $deleteAllDataFromTable
    */
   public function setDeleteAllDataFromTable($deleteAllDataFromTable)
   {
@@ -43,7 +50,10 @@ class DropRowRangeRequest extends \Google\Model
     return $this->deleteAllDataFromTable;
   }
   /**
-   * @param string
+   * Delete all rows that start with this row key prefix. Prefix cannot be zero
+   * length.
+   *
+   * @param string $rowKeyPrefix
    */
   public function setRowKeyPrefix($rowKeyPrefix)
   {

@@ -20,28 +20,50 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1ServingConfigMediaConfig extends \Google\Model
 {
   /**
+   * Specifies the content freshness used for recommendation result. Contents
+   * will be demoted if contents were published for more than content freshness
+   * cutoff days.
+   *
    * @var int
    */
   public $contentFreshnessCutoffDays;
   /**
+   * Specifies the content watched percentage threshold for demotion. Threshold
+   * value must be between [0, 1.0] inclusive.
+   *
    * @var float
    */
   public $contentWatchedPercentageThreshold;
   /**
+   * Specifies the content watched minutes threshold for demotion.
+   *
    * @var float
    */
   public $contentWatchedSecondsThreshold;
   /**
+   * Optional. Specifies the number of days to look back for demoting watched
+   * content. If set to zero or unset, defaults to the maximum of 365 days.
+   *
    * @var int
    */
   public $demoteContentWatchedPastDays;
   /**
+   * Specifies the event type used for demoting recommendation result. Currently
+   * supported values: * `view-item`: Item viewed. * `media-play`: Start/resume
+   * watching a video, playing a song, etc. * `media-complete`: Finished or
+   * stopped midway through a video, song, etc. If unset, watch history demotion
+   * will not be applied. Content freshness demotion will still be applied.
+   *
    * @var string
    */
   public $demotionEventType;
 
   /**
-   * @param int
+   * Specifies the content freshness used for recommendation result. Contents
+   * will be demoted if contents were published for more than content freshness
+   * cutoff days.
+   *
+   * @param int $contentFreshnessCutoffDays
    */
   public function setContentFreshnessCutoffDays($contentFreshnessCutoffDays)
   {
@@ -55,7 +77,10 @@ class GoogleCloudDiscoveryengineV1ServingConfigMediaConfig extends \Google\Model
     return $this->contentFreshnessCutoffDays;
   }
   /**
-   * @param float
+   * Specifies the content watched percentage threshold for demotion. Threshold
+   * value must be between [0, 1.0] inclusive.
+   *
+   * @param float $contentWatchedPercentageThreshold
    */
   public function setContentWatchedPercentageThreshold($contentWatchedPercentageThreshold)
   {
@@ -69,7 +94,9 @@ class GoogleCloudDiscoveryengineV1ServingConfigMediaConfig extends \Google\Model
     return $this->contentWatchedPercentageThreshold;
   }
   /**
-   * @param float
+   * Specifies the content watched minutes threshold for demotion.
+   *
+   * @param float $contentWatchedSecondsThreshold
    */
   public function setContentWatchedSecondsThreshold($contentWatchedSecondsThreshold)
   {
@@ -83,7 +110,10 @@ class GoogleCloudDiscoveryengineV1ServingConfigMediaConfig extends \Google\Model
     return $this->contentWatchedSecondsThreshold;
   }
   /**
-   * @param int
+   * Optional. Specifies the number of days to look back for demoting watched
+   * content. If set to zero or unset, defaults to the maximum of 365 days.
+   *
+   * @param int $demoteContentWatchedPastDays
    */
   public function setDemoteContentWatchedPastDays($demoteContentWatchedPastDays)
   {
@@ -97,7 +127,13 @@ class GoogleCloudDiscoveryengineV1ServingConfigMediaConfig extends \Google\Model
     return $this->demoteContentWatchedPastDays;
   }
   /**
-   * @param string
+   * Specifies the event type used for demoting recommendation result. Currently
+   * supported values: * `view-item`: Item viewed. * `media-play`: Start/resume
+   * watching a video, playing a song, etc. * `media-complete`: Finished or
+   * stopped midway through a video, song, etc. If unset, watch history demotion
+   * will not be applied. Content freshness demotion will still be applied.
+   *
+   * @param string $demotionEventType
    */
   public function setDemotionEventType($demotionEventType)
   {

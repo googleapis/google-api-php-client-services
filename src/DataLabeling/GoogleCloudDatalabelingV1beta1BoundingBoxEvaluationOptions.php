@@ -20,12 +20,20 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptions extends \Google\Model
 {
   /**
+   * Minimum [intersection-over-union (IOU)](/vision/automl/object-
+   * detection/docs/evaluate#intersection-over-union) required for 2 bounding
+   * boxes to be considered a match. This must be a number between 0 and 1.
+   *
    * @var float
    */
   public $iouThreshold;
 
   /**
-   * @param float
+   * Minimum [intersection-over-union (IOU)](/vision/automl/object-
+   * detection/docs/evaluate#intersection-over-union) required for 2 bounding
+   * boxes to be considered a match. This must be a number between 0 and 1.
+   *
+   * @param float $iouThreshold
    */
   public function setIouThreshold($iouThreshold)
   {

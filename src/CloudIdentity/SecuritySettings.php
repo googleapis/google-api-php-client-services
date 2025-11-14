@@ -22,12 +22,17 @@ class SecuritySettings extends \Google\Model
   protected $memberRestrictionType = MemberRestriction::class;
   protected $memberRestrictionDataType = '';
   /**
+   * Output only. The resource name of the security settings. Shall be of the
+   * form `groups/{group_id}/securitySettings`.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param MemberRestriction
+   * The Member Restriction value
+   *
+   * @param MemberRestriction $memberRestriction
    */
   public function setMemberRestriction(MemberRestriction $memberRestriction)
   {
@@ -41,7 +46,10 @@ class SecuritySettings extends \Google\Model
     return $this->memberRestriction;
   }
   /**
-   * @param string
+   * Output only. The resource name of the security settings. Shall be of the
+   * form `groups/{group_id}/securitySettings`.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

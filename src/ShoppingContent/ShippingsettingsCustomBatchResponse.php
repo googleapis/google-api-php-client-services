@@ -23,12 +23,17 @@ class ShippingsettingsCustomBatchResponse extends \Google\Collection
   protected $entriesType = ShippingsettingsCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsCustomBatchResponse`".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param ShippingsettingsCustomBatchResponseEntry[]
+   * The result of the execution of the batch requests.
+   *
+   * @param ShippingsettingsCustomBatchResponseEntry[] $entries
    */
   public function setEntries($entries)
   {
@@ -42,7 +47,10 @@ class ShippingsettingsCustomBatchResponse extends \Google\Collection
     return $this->entries;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "`content#shippingsettingsCustomBatchResponse`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

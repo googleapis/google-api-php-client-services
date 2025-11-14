@@ -20,20 +20,28 @@ namespace Google\Service\SQLAdmin;
 class OperationError extends \Google\Model
 {
   /**
+   * Identifies the specific error that occurred.
+   *
    * @var string
    */
   public $code;
   /**
+   * This is always `sql#operationError`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Additional information about the error encountered.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * Identifies the specific error that occurred.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -47,7 +55,9 @@ class OperationError extends \Google\Model
     return $this->code;
   }
   /**
-   * @param string
+   * This is always `sql#operationError`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -61,7 +71,9 @@ class OperationError extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Additional information about the error encountered.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

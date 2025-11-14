@@ -20,6 +20,8 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3VariantsHistory extends \Google\Model
 {
   /**
+   * Update time of the variants.
+   *
    * @var string
    */
   public $updateTime;
@@ -27,7 +29,9 @@ class GoogleCloudDialogflowCxV3VariantsHistory extends \Google\Model
   protected $versionVariantsDataType = '';
 
   /**
-   * @param string
+   * Update time of the variants.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -41,7 +45,9 @@ class GoogleCloudDialogflowCxV3VariantsHistory extends \Google\Model
     return $this->updateTime;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3VersionVariants
+   * The flow versions as the variants.
+   *
+   * @param GoogleCloudDialogflowCxV3VersionVariants $versionVariants
    */
   public function setVersionVariants(GoogleCloudDialogflowCxV3VersionVariants $versionVariants)
   {

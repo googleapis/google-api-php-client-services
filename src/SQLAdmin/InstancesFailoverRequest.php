@@ -23,7 +23,9 @@ class InstancesFailoverRequest extends \Google\Model
   protected $failoverContextDataType = '';
 
   /**
-   * @param FailoverContext
+   * Failover Context.
+   *
+   * @param FailoverContext $failoverContext
    */
   public function setFailoverContext(FailoverContext $failoverContext)
   {

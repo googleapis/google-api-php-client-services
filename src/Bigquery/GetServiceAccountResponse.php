@@ -20,16 +20,22 @@ namespace Google\Service\Bigquery;
 class GetServiceAccountResponse extends \Google\Model
 {
   /**
+   * The service account email address.
+   *
    * @var string
    */
   public $email;
   /**
+   * The resource type of the response.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * The service account email address.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {
@@ -43,7 +49,9 @@ class GetServiceAccountResponse extends \Google\Model
     return $this->email;
   }
   /**
-   * @param string
+   * The resource type of the response.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

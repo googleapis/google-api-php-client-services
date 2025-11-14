@@ -25,7 +25,10 @@ class Strategy extends \Google\Model
   protected $standardDataType = '';
 
   /**
-   * @param Canary
+   * Optional. Canary deployment strategy provides progressive percentage based
+   * deployments to a Target.
+   *
+   * @param Canary $canary
    */
   public function setCanary(Canary $canary)
   {
@@ -39,7 +42,10 @@ class Strategy extends \Google\Model
     return $this->canary;
   }
   /**
-   * @param Standard
+   * Optional. Standard deployment strategy executes a single deploy and allows
+   * verifying the deployment.
+   *
+   * @param Standard $standard
    */
   public function setStandard(Standard $standard)
   {

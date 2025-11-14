@@ -20,12 +20,24 @@ namespace Google\Service\Transcoder;
 class SecretManagerSource extends \Google\Model
 {
   /**
+   * Required. The name of the Secret Version containing the encryption key in
+   * the following format:
+   * `projects/{project}/secrets/{secret_id}/versions/{version_number}` Note
+   * that only numbered versions are supported. Aliases like "latest" are not
+   * supported.
+   *
    * @var string
    */
   public $secretVersion;
 
   /**
-   * @param string
+   * Required. The name of the Secret Version containing the encryption key in
+   * the following format:
+   * `projects/{project}/secrets/{secret_id}/versions/{version_number}` Note
+   * that only numbered versions are supported. Aliases like "latest" are not
+   * supported.
+   *
+   * @param string $secretVersion
    */
   public function setSecretVersion($secretVersion)
   {

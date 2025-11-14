@@ -25,6 +25,14 @@ class IssuancePolicy extends \Google\Collection
   protected $allowedKeyTypesType = AllowedKeyType::class;
   protected $allowedKeyTypesDataType = 'array';
   /**
+   * Optional. The duration to backdate all certificates issued from this
+   * CaPool. If not set, the certificates will be issued with a not_before_time
+   * of the issuance time (i.e. the current time). If set, the certificates will
+   * be issued with a not_before_time of the issuance time minus the
+   * backdate_duration. The not_after_time will be adjusted to preserve the
+   * requested lifetime. The backdate_duration must be less than or equal to 48
+   * hours.
+   *
    * @var string
    */
   public $backdateDuration;
@@ -33,6 +41,11 @@ class IssuancePolicy extends \Google\Collection
   protected $identityConstraintsType = CertificateIdentityConstraints::class;
   protected $identityConstraintsDataType = '';
   /**
+   * Optional. The maximum lifetime allowed for issued Certificates. Note that
+   * if the issuing CertificateAuthority expires before a Certificate resource's
+   * requested maximum_lifetime, the effective lifetime will be explicitly
+   * truncated to match it.
+   *
    * @var string
    */
   public $maximumLifetime;
@@ -40,7 +53,10 @@ class IssuancePolicy extends \Google\Collection
   protected $passthroughExtensionsDataType = '';
 
   /**
-   * @param IssuanceModes
+   * Optional. If specified, then only methods allowed in the IssuanceModes may
+   * be used to issue Certificates.
+   *
+   * @param IssuanceModes $allowedIssuanceModes
    */
   public function setAllowedIssuanceModes(IssuanceModes $allowedIssuanceModes)
   {
@@ -54,7 +70,11 @@ class IssuancePolicy extends \Google\Collection
     return $this->allowedIssuanceModes;
   }
   /**
-   * @param AllowedKeyType[]
+   * Optional. If any AllowedKeyType is specified, then the certificate
+   * request's public key must match one of the key types listed here.
+   * Otherwise, any key may be used.
+   *
+   * @param AllowedKeyType[] $allowedKeyTypes
    */
   public function setAllowedKeyTypes($allowedKeyTypes)
   {
@@ -68,7 +88,15 @@ class IssuancePolicy extends \Google\Collection
     return $this->allowedKeyTypes;
   }
   /**
-   * @param string
+   * Optional. The duration to backdate all certificates issued from this
+   * CaPool. If not set, the certificates will be issued with a not_before_time
+   * of the issuance time (i.e. the current time). If set, the certificates will
+   * be issued with a not_before_time of the issuance time minus the
+   * backdate_duration. The not_after_time will be adjusted to preserve the
+   * requested lifetime. The backdate_duration must be less than or equal to 48
+   * hours.
+   *
+   * @param string $backdateDuration
    */
   public function setBackdateDuration($backdateDuration)
   {
@@ -82,7 +110,14 @@ class IssuancePolicy extends \Google\Collection
     return $this->backdateDuration;
   }
   /**
-   * @param X509Parameters
+   * Optional. A set of X.509 values that will be applied to all certificates
+   * issued through this CaPool. If a certificate request includes conflicting
+   * values for the same properties, they will be overwritten by the values
+   * defined here. If a certificate request uses a CertificateTemplate that
+   * defines conflicting predefined_values for the same properties, the
+   * certificate issuance request will fail.
+   *
+   * @param X509Parameters $baselineValues
    */
   public function setBaselineValues(X509Parameters $baselineValues)
   {
@@ -96,7 +131,11 @@ class IssuancePolicy extends \Google\Collection
     return $this->baselineValues;
   }
   /**
-   * @param CertificateIdentityConstraints
+   * Optional. Describes constraints on identities that may appear in
+   * Certificates issued through this CaPool. If this is omitted, then this
+   * CaPool will not add restrictions on a certificate's identity.
+   *
+   * @param CertificateIdentityConstraints $identityConstraints
    */
   public function setIdentityConstraints(CertificateIdentityConstraints $identityConstraints)
   {
@@ -110,7 +149,12 @@ class IssuancePolicy extends \Google\Collection
     return $this->identityConstraints;
   }
   /**
-   * @param string
+   * Optional. The maximum lifetime allowed for issued Certificates. Note that
+   * if the issuing CertificateAuthority expires before a Certificate resource's
+   * requested maximum_lifetime, the effective lifetime will be explicitly
+   * truncated to match it.
+   *
+   * @param string $maximumLifetime
    */
   public function setMaximumLifetime($maximumLifetime)
   {
@@ -124,7 +168,17 @@ class IssuancePolicy extends \Google\Collection
     return $this->maximumLifetime;
   }
   /**
-   * @param CertificateExtensionConstraints
+   * Optional. Describes the set of X.509 extensions that may appear in a
+   * Certificate issued through this CaPool. If a certificate request sets
+   * extensions that don't appear in the passthrough_extensions, those
+   * extensions will be dropped. If a certificate request uses a
+   * CertificateTemplate with predefined_values that don't appear here, the
+   * certificate issuance request will fail. If this is omitted, then this
+   * CaPool will not add restrictions on a certificate's X.509 extensions. These
+   * constraints do not apply to X.509 extensions set in this CaPool's
+   * baseline_values.
+   *
+   * @param CertificateExtensionConstraints $passthroughExtensions
    */
   public function setPassthroughExtensions(CertificateExtensionConstraints $passthroughExtensions)
   {

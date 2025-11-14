@@ -21,6 +21,11 @@ class RateGroup extends \Google\Collection
 {
   protected $collection_key = 'subtables';
   /**
+   * A list of shipping labels defining the products to which this rate group
+   * applies to. This is a disjunction: only one of the labels has to match for
+   * the rate group to apply. May only be empty for the last rate group of a
+   * service. Required.
+   *
    * @var string[]
    */
   public $applicableShippingLabels;
@@ -29,6 +34,9 @@ class RateGroup extends \Google\Collection
   protected $mainTableType = Table::class;
   protected $mainTableDataType = '';
   /**
+   * Name of the rate group. Optional. If set has to be unique within shipping
+   * service.
+   *
    * @var string
    */
   public $name;
@@ -38,7 +46,12 @@ class RateGroup extends \Google\Collection
   protected $subtablesDataType = 'array';
 
   /**
-   * @param string[]
+   * A list of shipping labels defining the products to which this rate group
+   * applies to. This is a disjunction: only one of the labels has to match for
+   * the rate group to apply. May only be empty for the last rate group of a
+   * service. Required.
+   *
+   * @param string[] $applicableShippingLabels
    */
   public function setApplicableShippingLabels($applicableShippingLabels)
   {
@@ -52,7 +65,10 @@ class RateGroup extends \Google\Collection
     return $this->applicableShippingLabels;
   }
   /**
-   * @param CarrierRate[]
+   * A list of carrier rates that can be referred to by `mainTable` or
+   * `singleValue`.
+   *
+   * @param CarrierRate[] $carrierRates
    */
   public function setCarrierRates($carrierRates)
   {
@@ -66,7 +82,10 @@ class RateGroup extends \Google\Collection
     return $this->carrierRates;
   }
   /**
-   * @param Table
+   * A table defining the rate group, when `singleValue` is not expressive
+   * enough. Can only be set if `singleValue` is not set.
+   *
+   * @param Table $mainTable
    */
   public function setMainTable(Table $mainTable)
   {
@@ -80,7 +99,10 @@ class RateGroup extends \Google\Collection
     return $this->mainTable;
   }
   /**
-   * @param string
+   * Name of the rate group. Optional. If set has to be unique within shipping
+   * service.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -94,7 +116,10 @@ class RateGroup extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Value
+   * The value of the rate group (for example, flat rate $10). Can only be set
+   * if `mainTable` and `subtables` are not set.
+   *
+   * @param Value $singleValue
    */
   public function setSingleValue(Value $singleValue)
   {
@@ -108,7 +133,10 @@ class RateGroup extends \Google\Collection
     return $this->singleValue;
   }
   /**
-   * @param Table[]
+   * A list of subtables referred to by `mainTable`. Can only be set if
+   * `mainTable` is set.
+   *
+   * @param Table[] $subtables
    */
   public function setSubtables($subtables)
   {

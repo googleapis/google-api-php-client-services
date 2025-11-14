@@ -20,48 +20,75 @@ namespace Google\Service\ShoppingContent;
 class OrderTrackingSignalLineItemDetails extends \Google\Model
 {
   /**
+   * Brand of the product.
+   *
    * @var string
    */
   public $brand;
   /**
+   * The Global Trade Item Number.
+   *
    * @var string
    */
   public $gtin;
   /**
+   * Required. The ID for this line item.
+   *
    * @var string
    */
   public $lineItemId;
   /**
+   * The manufacturer part number.
+   *
    * @var string
    */
   public $mpn;
   /**
+   * Plain text description of this product (deprecated: Please use
+   * product_title instead).
+   *
+   * @deprecated
    * @var string
    */
   public $productDescription;
   /**
+   * Required. The Content API REST ID of the product, in the form
+   * channel:contentLanguage:targetCountry:offerId.
+   *
    * @var string
    */
   public $productId;
   /**
+   * Plain text title of this product.
+   *
    * @var string
    */
   public $productTitle;
   /**
+   * The quantity of the line item in the order.
+   *
    * @var string
    */
   public $quantity;
   /**
+   * Merchant SKU for this item (deprecated).
+   *
+   * @deprecated
    * @var string
    */
   public $sku;
   /**
+   * Universal product code for this item (deprecated: Please use GTIN instead).
+   *
+   * @deprecated
    * @var string
    */
   public $upc;
 
   /**
-   * @param string
+   * Brand of the product.
+   *
+   * @param string $brand
    */
   public function setBrand($brand)
   {
@@ -75,7 +102,9 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->brand;
   }
   /**
-   * @param string
+   * The Global Trade Item Number.
+   *
+   * @param string $gtin
    */
   public function setGtin($gtin)
   {
@@ -89,7 +118,9 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->gtin;
   }
   /**
-   * @param string
+   * Required. The ID for this line item.
+   *
+   * @param string $lineItemId
    */
   public function setLineItemId($lineItemId)
   {
@@ -103,7 +134,9 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->lineItemId;
   }
   /**
-   * @param string
+   * The manufacturer part number.
+   *
+   * @param string $mpn
    */
   public function setMpn($mpn)
   {
@@ -117,13 +150,18 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->mpn;
   }
   /**
-   * @param string
+   * Plain text description of this product (deprecated: Please use
+   * product_title instead).
+   *
+   * @deprecated
+   * @param string $productDescription
    */
   public function setProductDescription($productDescription)
   {
     $this->productDescription = $productDescription;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getProductDescription()
@@ -131,7 +169,10 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->productDescription;
   }
   /**
-   * @param string
+   * Required. The Content API REST ID of the product, in the form
+   * channel:contentLanguage:targetCountry:offerId.
+   *
+   * @param string $productId
    */
   public function setProductId($productId)
   {
@@ -145,7 +186,9 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->productId;
   }
   /**
-   * @param string
+   * Plain text title of this product.
+   *
+   * @param string $productTitle
    */
   public function setProductTitle($productTitle)
   {
@@ -159,7 +202,9 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->productTitle;
   }
   /**
-   * @param string
+   * The quantity of the line item in the order.
+   *
+   * @param string $quantity
    */
   public function setQuantity($quantity)
   {
@@ -173,13 +218,17 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->quantity;
   }
   /**
-   * @param string
+   * Merchant SKU for this item (deprecated).
+   *
+   * @deprecated
+   * @param string $sku
    */
   public function setSku($sku)
   {
     $this->sku = $sku;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getSku()
@@ -187,13 +236,17 @@ class OrderTrackingSignalLineItemDetails extends \Google\Model
     return $this->sku;
   }
   /**
-   * @param string
+   * Universal product code for this item (deprecated: Please use GTIN instead).
+   *
+   * @deprecated
+   * @param string $upc
    */
   public function setUpc($upc)
   {
     $this->upc = $upc;
   }
   /**
+   * @deprecated
    * @return string
    */
   public function getUpc()

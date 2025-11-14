@@ -20,6 +20,9 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1Dependency extends \Google\Model
 {
   /**
+   * If set to true disable all dependency fetching (ignoring the default source
+   * as well).
+   *
    * @var bool
    */
   public $empty;
@@ -27,7 +30,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Dependency extends \Google\Mode
   protected $gitSourceDataType = '';
 
   /**
-   * @param bool
+   * If set to true disable all dependency fetching (ignoring the default source
+   * as well).
+   *
+   * @param bool $empty
    */
   public function setEmpty($empty)
   {
@@ -41,7 +47,9 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Dependency extends \Google\Mode
     return $this->empty;
   }
   /**
-   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency
+   * Represents a git repository as a build dependency.
+   *
+   * @param ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency $gitSource
    */
   public function setGitSource(ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency $gitSource)
   {

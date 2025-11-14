@@ -20,12 +20,20 @@ namespace Google\Service\DoubleClickBidManager;
 class Options extends \Google\Model
 {
   /**
+   * Whether to include data for audience lists specifically targeted by
+   * filtered line items or insertion orders. Requires the use of
+   * `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` filters.
+   *
    * @var bool
    */
   public $includeOnlyTargetedUserLists;
 
   /**
-   * @param bool
+   * Whether to include data for audience lists specifically targeted by
+   * filtered line items or insertion orders. Requires the use of
+   * `FILTER_INSERTION_ORDER` or `FILTER_LINE_ITEM` filters.
+   *
+   * @param bool $includeOnlyTargetedUserLists
    */
   public function setIncludeOnlyTargetedUserLists($includeOnlyTargetedUserLists)
   {

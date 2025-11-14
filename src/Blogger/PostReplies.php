@@ -23,16 +23,22 @@ class PostReplies extends \Google\Collection
   protected $itemsType = Comment::class;
   protected $itemsDataType = 'array';
   /**
+   * The URL of the comments on this post.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The count of comments on this post.
+   *
    * @var string
    */
   public $totalItems;
 
   /**
-   * @param Comment[]
+   * The List of Comments for this Post.
+   *
+   * @param Comment[] $items
    */
   public function setItems($items)
   {
@@ -46,7 +52,9 @@ class PostReplies extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The URL of the comments on this post.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -60,7 +68,9 @@ class PostReplies extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The count of comments on this post.
+   *
+   * @param string $totalItems
    */
   public function setTotalItems($totalItems)
   {

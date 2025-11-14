@@ -20,28 +20,49 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact extends \Google\Model
 {
   /**
+   * Maven `artifactId` value used when uploading the artifact to Artifact
+   * Registry.
+   *
    * @var string
    */
   public $artifactId;
   /**
+   * Maven `groupId` value used when uploading the artifact to Artifact
+   * Registry.
+   *
    * @var string
    */
   public $groupId;
   /**
+   * Optional. Path to an artifact in the build's workspace to be uploaded to
+   * Artifact Registry. This can be either an absolute path, e.g. /workspace/my-
+   * app/target/my-app-1.0.SNAPSHOT.jar or a relative path from /workspace, e.g.
+   * my-app/target/my-app-1.0.SNAPSHOT.jar.
+   *
    * @var string
    */
   public $path;
   /**
+   * Artifact Registry repository, in the form "https://$REGION-
+   * maven.pkg.dev/$PROJECT/$REPOSITORY" Artifact in the workspace specified by
+   * path will be uploaded to Artifact Registry with this location as a prefix.
+   *
    * @var string
    */
   public $repository;
   /**
+   * Maven `version` value used when uploading the artifact to Artifact
+   * Registry.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * Maven `artifactId` value used when uploading the artifact to Artifact
+   * Registry.
+   *
+   * @param string $artifactId
    */
   public function setArtifactId($artifactId)
   {
@@ -55,7 +76,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact extends 
     return $this->artifactId;
   }
   /**
-   * @param string
+   * Maven `groupId` value used when uploading the artifact to Artifact
+   * Registry.
+   *
+   * @param string $groupId
    */
   public function setGroupId($groupId)
   {
@@ -69,7 +93,12 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact extends 
     return $this->groupId;
   }
   /**
-   * @param string
+   * Optional. Path to an artifact in the build's workspace to be uploaded to
+   * Artifact Registry. This can be either an absolute path, e.g. /workspace/my-
+   * app/target/my-app-1.0.SNAPSHOT.jar or a relative path from /workspace, e.g.
+   * my-app/target/my-app-1.0.SNAPSHOT.jar.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -83,7 +112,11 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact extends 
     return $this->path;
   }
   /**
-   * @param string
+   * Artifact Registry repository, in the form "https://$REGION-
+   * maven.pkg.dev/$PROJECT/$REPOSITORY" Artifact in the workspace specified by
+   * path will be uploaded to Artifact Registry with this location as a prefix.
+   *
+   * @param string $repository
    */
   public function setRepository($repository)
   {
@@ -97,7 +130,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact extends 
     return $this->repository;
   }
   /**
-   * @param string
+   * Maven `version` value used when uploading the artifact to Artifact
+   * Registry.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

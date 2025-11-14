@@ -31,12 +31,16 @@ class ReportCriteria extends \Google\Collection
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
   /**
+   * The list of names of metrics the report should include.
+   *
    * @var string[]
    */
   public $metricNames;
 
   /**
-   * @param Activities
+   * Activity group.
+   *
+   * @param Activities $activities
    */
   public function setActivities(Activities $activities)
   {
@@ -50,7 +54,9 @@ class ReportCriteria extends \Google\Collection
     return $this->activities;
   }
   /**
-   * @param CustomRichMediaEvents
+   * Custom Rich Media Events group.
+   *
+   * @param CustomRichMediaEvents $customRichMediaEvents
    */
   public function setCustomRichMediaEvents(CustomRichMediaEvents $customRichMediaEvents)
   {
@@ -64,7 +70,9 @@ class ReportCriteria extends \Google\Collection
     return $this->customRichMediaEvents;
   }
   /**
-   * @param DateRange
+   * The date range for which this report should be run.
+   *
+   * @param DateRange $dateRange
    */
   public function setDateRange(DateRange $dateRange)
   {
@@ -78,7 +86,11 @@ class ReportCriteria extends \Google\Collection
     return $this->dateRange;
   }
   /**
-   * @param DimensionValue[]
+   * The list of filters on which dimensions are filtered. Filters for different
+   * dimensions are ANDed, filters for the same dimension are grouped together
+   * and ORed.
+   *
+   * @param DimensionValue[] $dimensionFilters
    */
   public function setDimensionFilters($dimensionFilters)
   {
@@ -92,7 +104,9 @@ class ReportCriteria extends \Google\Collection
     return $this->dimensionFilters;
   }
   /**
-   * @param SortedDimension[]
+   * The list of standard dimensions the report should include.
+   *
+   * @param SortedDimension[] $dimensions
    */
   public function setDimensions($dimensions)
   {
@@ -106,7 +120,9 @@ class ReportCriteria extends \Google\Collection
     return $this->dimensions;
   }
   /**
-   * @param string[]
+   * The list of names of metrics the report should include.
+   *
+   * @param string[] $metricNames
    */
   public function setMetricNames($metricNames)
   {

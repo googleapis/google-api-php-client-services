@@ -23,16 +23,26 @@ class ListAlertsResponse extends \Google\Collection
   protected $alertsType = Alert::class;
   protected $alertsDataType = 'array';
   /**
+   * If not empty, indicates that there may be more results that match the
+   * request. Use the value in the page_token field in a subsequent request to
+   * fetch the next set of results. The token is encrypted and only guaranteed
+   * to return correct results for 72 hours after it is created. If empty, all
+   * results have been returned.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * The estimated total number of matching results for this query.
+   *
    * @var int
    */
   public $totalSize;
 
   /**
-   * @param Alert[]
+   * The list of alerts.
+   *
+   * @param Alert[] $alerts
    */
   public function setAlerts($alerts)
   {
@@ -46,7 +56,13 @@ class ListAlertsResponse extends \Google\Collection
     return $this->alerts;
   }
   /**
-   * @param string
+   * If not empty, indicates that there may be more results that match the
+   * request. Use the value in the page_token field in a subsequent request to
+   * fetch the next set of results. The token is encrypted and only guaranteed
+   * to return correct results for 72 hours after it is created. If empty, all
+   * results have been returned.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +76,9 @@ class ListAlertsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param int
+   * The estimated total number of matching results for this query.
+   *
+   * @param int $totalSize
    */
   public function setTotalSize($totalSize)
   {

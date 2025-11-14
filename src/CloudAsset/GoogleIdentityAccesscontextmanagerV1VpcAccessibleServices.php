@@ -21,16 +21,29 @@ class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices extends \Google\
 {
   protected $collection_key = 'allowedServices';
   /**
+   * The list of APIs usable within the Service Perimeter. Must be empty unless
+   * 'enable_restriction' is True. You can specify a list of individual
+   * services, as well as include the 'RESTRICTED-SERVICES' value, which
+   * automatically includes all of the services protected by the perimeter.
+   *
    * @var string[]
    */
   public $allowedServices;
   /**
+   * Whether to restrict API calls within the Service Perimeter to the list of
+   * APIs specified in 'allowed_services'.
+   *
    * @var bool
    */
   public $enableRestriction;
 
   /**
-   * @param string[]
+   * The list of APIs usable within the Service Perimeter. Must be empty unless
+   * 'enable_restriction' is True. You can specify a list of individual
+   * services, as well as include the 'RESTRICTED-SERVICES' value, which
+   * automatically includes all of the services protected by the perimeter.
+   *
+   * @param string[] $allowedServices
    */
   public function setAllowedServices($allowedServices)
   {
@@ -44,7 +57,10 @@ class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices extends \Google\
     return $this->allowedServices;
   }
   /**
-   * @param bool
+   * Whether to restrict API calls within the Service Perimeter to the list of
+   * APIs specified in 'allowed_services'.
+   *
+   * @param bool $enableRestriction
    */
   public function setEnableRestriction($enableRestriction)
   {

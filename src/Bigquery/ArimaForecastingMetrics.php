@@ -25,28 +25,43 @@ class ArimaForecastingMetrics extends \Google\Collection
   protected $arimaSingleModelForecastingMetricsType = ArimaSingleModelForecastingMetrics::class;
   protected $arimaSingleModelForecastingMetricsDataType = 'array';
   /**
+   * Whether Arima model fitted with drift or not. It is always false when d is
+   * not 1.
+   *
+   * @deprecated
    * @var bool[]
    */
   public $hasDrift;
   protected $nonSeasonalOrderType = ArimaOrder::class;
   protected $nonSeasonalOrderDataType = 'array';
   /**
+   * Seasonal periods. Repeated because multiple periods are supported for one
+   * time series.
+   *
+   * @deprecated
    * @var string[]
    */
   public $seasonalPeriods;
   /**
+   * Id to differentiate different time series for the large-scale case.
+   *
+   * @deprecated
    * @var string[]
    */
   public $timeSeriesId;
 
   /**
-   * @param ArimaFittingMetrics[]
+   * Arima model fitting metrics.
+   *
+   * @deprecated
+   * @param ArimaFittingMetrics[] $arimaFittingMetrics
    */
   public function setArimaFittingMetrics($arimaFittingMetrics)
   {
     $this->arimaFittingMetrics = $arimaFittingMetrics;
   }
   /**
+   * @deprecated
    * @return ArimaFittingMetrics[]
    */
   public function getArimaFittingMetrics()
@@ -54,7 +69,10 @@ class ArimaForecastingMetrics extends \Google\Collection
     return $this->arimaFittingMetrics;
   }
   /**
-   * @param ArimaSingleModelForecastingMetrics[]
+   * Repeated as there can be many metric sets (one for each model) in auto-
+   * arima and the large-scale case.
+   *
+   * @param ArimaSingleModelForecastingMetrics[] $arimaSingleModelForecastingMetrics
    */
   public function setArimaSingleModelForecastingMetrics($arimaSingleModelForecastingMetrics)
   {
@@ -68,13 +86,18 @@ class ArimaForecastingMetrics extends \Google\Collection
     return $this->arimaSingleModelForecastingMetrics;
   }
   /**
-   * @param bool[]
+   * Whether Arima model fitted with drift or not. It is always false when d is
+   * not 1.
+   *
+   * @deprecated
+   * @param bool[] $hasDrift
    */
   public function setHasDrift($hasDrift)
   {
     $this->hasDrift = $hasDrift;
   }
   /**
+   * @deprecated
    * @return bool[]
    */
   public function getHasDrift()
@@ -82,13 +105,17 @@ class ArimaForecastingMetrics extends \Google\Collection
     return $this->hasDrift;
   }
   /**
-   * @param ArimaOrder[]
+   * Non-seasonal order.
+   *
+   * @deprecated
+   * @param ArimaOrder[] $nonSeasonalOrder
    */
   public function setNonSeasonalOrder($nonSeasonalOrder)
   {
     $this->nonSeasonalOrder = $nonSeasonalOrder;
   }
   /**
+   * @deprecated
    * @return ArimaOrder[]
    */
   public function getNonSeasonalOrder()
@@ -96,13 +123,18 @@ class ArimaForecastingMetrics extends \Google\Collection
     return $this->nonSeasonalOrder;
   }
   /**
-   * @param string[]
+   * Seasonal periods. Repeated because multiple periods are supported for one
+   * time series.
+   *
+   * @deprecated
+   * @param string[] $seasonalPeriods
    */
   public function setSeasonalPeriods($seasonalPeriods)
   {
     $this->seasonalPeriods = $seasonalPeriods;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getSeasonalPeriods()
@@ -110,13 +142,17 @@ class ArimaForecastingMetrics extends \Google\Collection
     return $this->seasonalPeriods;
   }
   /**
-   * @param string[]
+   * Id to differentiate different time series for the large-scale case.
+   *
+   * @deprecated
+   * @param string[] $timeSeriesId
    */
   public function setTimeSeriesId($timeSeriesId)
   {
     $this->timeSeriesId = $timeSeriesId;
   }
   /**
+   * @deprecated
    * @return string[]
    */
   public function getTimeSeriesId()

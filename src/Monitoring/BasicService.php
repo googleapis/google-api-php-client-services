@@ -20,16 +20,33 @@ namespace Google\Service\Monitoring;
 class BasicService extends \Google\Model
 {
   /**
+   * Labels that specify the resource that emits the monitoring data which is
+   * used for SLO reporting of this Service. Documentation and valid values for
+   * given service types here
+   * (https://cloud.google.com/stackdriver/docs/solutions/slo-
+   * monitoring/api/api-structures#basic-svc-w-basic-sli).
+   *
    * @var string[]
    */
   public $serviceLabels;
   /**
+   * The type of service that this basic service defines, e.g. APP_ENGINE
+   * service type. Documentation and valid values here
+   * (https://cloud.google.com/stackdriver/docs/solutions/slo-
+   * monitoring/api/api-structures#basic-svc-w-basic-sli).
+   *
    * @var string
    */
   public $serviceType;
 
   /**
-   * @param string[]
+   * Labels that specify the resource that emits the monitoring data which is
+   * used for SLO reporting of this Service. Documentation and valid values for
+   * given service types here
+   * (https://cloud.google.com/stackdriver/docs/solutions/slo-
+   * monitoring/api/api-structures#basic-svc-w-basic-sli).
+   *
+   * @param string[] $serviceLabels
    */
   public function setServiceLabels($serviceLabels)
   {
@@ -43,7 +60,12 @@ class BasicService extends \Google\Model
     return $this->serviceLabels;
   }
   /**
-   * @param string
+   * The type of service that this basic service defines, e.g. APP_ENGINE
+   * service type. Documentation and valid values here
+   * (https://cloud.google.com/stackdriver/docs/solutions/slo-
+   * monitoring/api/api-structures#basic-svc-w-basic-sli).
+   *
+   * @param string $serviceType
    */
   public function setServiceType($serviceType)
   {

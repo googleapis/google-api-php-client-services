@@ -21,26 +21,39 @@ class TableDataList extends \Google\Collection
 {
   protected $collection_key = 'rows';
   /**
+   * A hash of this page of results.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The resource type of the response.
+   *
    * @var string
    */
   public $kind;
   /**
+   * A token used for paging results. Providing this token instead of the
+   * startIndex parameter can help you retrieve stable results when an
+   * underlying table is changing.
+   *
    * @var string
    */
   public $pageToken;
   protected $rowsType = TableRow::class;
   protected $rowsDataType = 'array';
   /**
+   * Total rows of the entire table. In order to show default value 0 we have to
+   * present it as string.
+   *
    * @var string
    */
   public $totalRows;
 
   /**
-   * @param string
+   * A hash of this page of results.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -54,7 +67,9 @@ class TableDataList extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * The resource type of the response.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -68,7 +83,11 @@ class TableDataList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * A token used for paging results. Providing this token instead of the
+   * startIndex parameter can help you retrieve stable results when an
+   * underlying table is changing.
+   *
+   * @param string $pageToken
    */
   public function setPageToken($pageToken)
   {
@@ -82,7 +101,9 @@ class TableDataList extends \Google\Collection
     return $this->pageToken;
   }
   /**
-   * @param TableRow[]
+   * Rows of results.
+   *
+   * @param TableRow[] $rows
    */
   public function setRows($rows)
   {
@@ -96,7 +117,10 @@ class TableDataList extends \Google\Collection
     return $this->rows;
   }
   /**
-   * @param string
+   * Total rows of the entire table. In order to show default value 0 we have to
+   * present it as string.
+   *
+   * @param string $totalRows
    */
   public function setTotalRows($totalRows)
   {

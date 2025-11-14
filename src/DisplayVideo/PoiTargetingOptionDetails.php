@@ -20,14 +20,30 @@ namespace Google\Service\DisplayVideo;
 class PoiTargetingOptionDetails extends \Google\Model
 {
   /**
+   * Output only. The display name of a POI(e.g. "Times Square", "Space
+   * Needle"), followed by its full address if available.
+   *
    * @var string
    */
   public $displayName;
+  /**
+   * Output only. Latitude of the POI rounding to 6th decimal place.
+   *
+   * @var 
+   */
   public $latitude;
+  /**
+   * Output only. Longitude of the POI rounding to 6th decimal place.
+   *
+   * @var 
+   */
   public $longitude;
 
   /**
-   * @param string
+   * Output only. The display name of a POI(e.g. "Times Square", "Space
+   * Needle"), followed by its full address if available.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

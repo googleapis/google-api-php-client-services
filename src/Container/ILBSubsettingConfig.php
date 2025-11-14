@@ -20,12 +20,16 @@ namespace Google\Service\Container;
 class ILBSubsettingConfig extends \Google\Model
 {
   /**
+   * Enables l4 ILB subsetting for this cluster.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Enables l4 ILB subsetting for this cluster.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

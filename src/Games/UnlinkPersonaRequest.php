@@ -20,20 +20,32 @@ namespace Google\Service\Games;
 class UnlinkPersonaRequest extends \Google\Model
 {
   /**
+   * Value of the 'persona' field as it was provided by the client in
+   * LinkPersona RPC
+   *
    * @var string
    */
   public $persona;
   /**
+   * Required. Opaque server-generated string that encodes all the necessary
+   * information to identify the PGS player / Google user and application.
+   *
    * @var string
    */
   public $sessionId;
   /**
+   * Value of the Recall token as it was provided by the client in LinkPersona
+   * RPC
+   *
    * @var string
    */
   public $token;
 
   /**
-   * @param string
+   * Value of the 'persona' field as it was provided by the client in
+   * LinkPersona RPC
+   *
+   * @param string $persona
    */
   public function setPersona($persona)
   {
@@ -47,7 +59,10 @@ class UnlinkPersonaRequest extends \Google\Model
     return $this->persona;
   }
   /**
-   * @param string
+   * Required. Opaque server-generated string that encodes all the necessary
+   * information to identify the PGS player / Google user and application.
+   *
+   * @param string $sessionId
    */
   public function setSessionId($sessionId)
   {
@@ -61,7 +76,10 @@ class UnlinkPersonaRequest extends \Google\Model
     return $this->sessionId;
   }
   /**
-   * @param string
+   * Value of the Recall token as it was provided by the client in LinkPersona
+   * RPC
+   *
+   * @param string $token
    */
   public function setToken($token)
   {

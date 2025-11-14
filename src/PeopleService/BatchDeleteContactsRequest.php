@@ -21,12 +21,18 @@ class BatchDeleteContactsRequest extends \Google\Collection
 {
   protected $collection_key = 'resourceNames';
   /**
+   * Required. The resource names of the contact to delete. It's repeatable.
+   * Allows up to 500 resource names in a single request.
+   *
    * @var string[]
    */
   public $resourceNames;
 
   /**
-   * @param string[]
+   * Required. The resource names of the contact to delete. It's repeatable.
+   * Allows up to 500 resource names in a single request.
+   *
+   * @param string[] $resourceNames
    */
   public function setResourceNames($resourceNames)
   {

@@ -20,42 +20,69 @@ namespace Google\Service\Document;
 class GoogleTypeDateTime extends \Google\Model
 {
   /**
+   * Optional. Day of month. Must be from 1 to 31 and valid for the year and
+   * month, or 0 if specifying a datetime without a day.
+   *
    * @var int
    */
   public $day;
   /**
+   * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults
+   * to 0 (midnight). An API may choose to allow the value "24:00:00" for
+   * scenarios like business closing time.
+   *
    * @var int
    */
   public $hours;
   /**
+   * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+   *
    * @var int
    */
   public $minutes;
   /**
+   * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a
+   * datetime without a month.
+   *
    * @var int
    */
   public $month;
   /**
+   * Optional. Fractions of seconds in nanoseconds. Must be from 0 to
+   * 999,999,999, defaults to 0.
+   *
    * @var int
    */
   public $nanos;
   /**
+   * Optional. Seconds of minutes of the time. Must normally be from 0 to 59,
+   * defaults to 0. An API may allow the value 60 if it allows leap-seconds.
+   *
    * @var int
    */
   public $seconds;
   protected $timeZoneType = GoogleTypeTimeZone::class;
   protected $timeZoneDataType = '';
   /**
+   * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For
+   * example, a UTC offset of -4:00 would be represented as { seconds: -14400 }.
+   *
    * @var string
    */
   public $utcOffset;
   /**
+   * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a
+   * datetime without a year.
+   *
    * @var int
    */
   public $year;
 
   /**
-   * @param int
+   * Optional. Day of month. Must be from 1 to 31 and valid for the year and
+   * month, or 0 if specifying a datetime without a day.
+   *
+   * @param int $day
    */
   public function setDay($day)
   {
@@ -69,7 +96,11 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->day;
   }
   /**
-   * @param int
+   * Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults
+   * to 0 (midnight). An API may choose to allow the value "24:00:00" for
+   * scenarios like business closing time.
+   *
+   * @param int $hours
    */
   public function setHours($hours)
   {
@@ -83,7 +114,9 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->hours;
   }
   /**
-   * @param int
+   * Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
+   *
+   * @param int $minutes
    */
   public function setMinutes($minutes)
   {
@@ -97,7 +130,10 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->minutes;
   }
   /**
-   * @param int
+   * Optional. Month of year. Must be from 1 to 12, or 0 if specifying a
+   * datetime without a month.
+   *
+   * @param int $month
    */
   public function setMonth($month)
   {
@@ -111,7 +147,10 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->month;
   }
   /**
-   * @param int
+   * Optional. Fractions of seconds in nanoseconds. Must be from 0 to
+   * 999,999,999, defaults to 0.
+   *
+   * @param int $nanos
    */
   public function setNanos($nanos)
   {
@@ -125,7 +164,10 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->nanos;
   }
   /**
-   * @param int
+   * Optional. Seconds of minutes of the time. Must normally be from 0 to 59,
+   * defaults to 0. An API may allow the value 60 if it allows leap-seconds.
+   *
+   * @param int $seconds
    */
   public function setSeconds($seconds)
   {
@@ -139,7 +181,9 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->seconds;
   }
   /**
-   * @param GoogleTypeTimeZone
+   * Time zone.
+   *
+   * @param GoogleTypeTimeZone $timeZone
    */
   public function setTimeZone(GoogleTypeTimeZone $timeZone)
   {
@@ -153,7 +197,10 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->timeZone;
   }
   /**
-   * @param string
+   * UTC offset. Must be whole seconds, between -18 hours and +18 hours. For
+   * example, a UTC offset of -4:00 would be represented as { seconds: -14400 }.
+   *
+   * @param string $utcOffset
    */
   public function setUtcOffset($utcOffset)
   {
@@ -167,7 +214,10 @@ class GoogleTypeDateTime extends \Google\Model
     return $this->utcOffset;
   }
   /**
-   * @param int
+   * Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a
+   * datetime without a year.
+   *
+   * @param int $year
    */
   public function setYear($year)
   {

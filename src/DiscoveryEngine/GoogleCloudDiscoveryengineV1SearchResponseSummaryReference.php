@@ -23,20 +23,30 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummaryReference extends \Google
   protected $chunkContentsType = GoogleCloudDiscoveryengineV1SearchResponseSummaryReferenceChunkContent::class;
   protected $chunkContentsDataType = 'array';
   /**
+   * Required. Document.name of the document. Full resource name of the
+   * referenced document, in the format
+   * `projects/locations/collections/dataStores/branches/documents`.
+   *
    * @var string
    */
   public $document;
   /**
+   * Title of the document.
+   *
    * @var string
    */
   public $title;
   /**
+   * Cloud Storage or HTTP uri for the document.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1SearchResponseSummaryReferenceChunkContent[]
+   * List of cited chunk contents derived from document content.
+   *
+   * @param GoogleCloudDiscoveryengineV1SearchResponseSummaryReferenceChunkContent[] $chunkContents
    */
   public function setChunkContents($chunkContents)
   {
@@ -50,7 +60,11 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummaryReference extends \Google
     return $this->chunkContents;
   }
   /**
-   * @param string
+   * Required. Document.name of the document. Full resource name of the
+   * referenced document, in the format
+   * `projects/locations/collections/dataStores/branches/documents`.
+   *
+   * @param string $document
    */
   public function setDocument($document)
   {
@@ -64,7 +78,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummaryReference extends \Google
     return $this->document;
   }
   /**
-   * @param string
+   * Title of the document.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -78,7 +94,9 @@ class GoogleCloudDiscoveryengineV1SearchResponseSummaryReference extends \Google
     return $this->title;
   }
   /**
-   * @param string
+   * Cloud Storage or HTTP uri for the document.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

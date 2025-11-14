@@ -20,32 +20,61 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1DocumentLink extends \Google\Model
 {
   /**
+   * Unknown state of documentlink.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The documentlink has both source and target documents detected.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * Target document is deleted, and mark the documentlink as soft-deleted.
+   */
+  public const STATE_SOFT_DELETED = 'SOFT_DELETED';
+  /**
+   * Output only. The time when the documentLink is created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Description of this document-link.
+   *
    * @var string
    */
   public $description;
   /**
+   * Name of this document-link. It is required that the parent derived form the
+   * name to be consistent with the source document reference. Otherwise an
+   * exception will be thrown. Format: projects/{project_number}/locations/{loca
+   * tion}/documents/{source_document_id}/documentLinks/{document_link_id}.
+   *
    * @var string
    */
   public $name;
   protected $sourceDocumentReferenceType = GoogleCloudContentwarehouseV1DocumentReference::class;
   protected $sourceDocumentReferenceDataType = '';
   /**
+   * The state of the documentlink. If target node has been deleted, the link is
+   * marked as invalid. Removing a source node will result in removal of all
+   * associated links.
+   *
    * @var string
    */
   public $state;
   protected $targetDocumentReferenceType = GoogleCloudContentwarehouseV1DocumentReference::class;
   protected $targetDocumentReferenceDataType = '';
   /**
+   * Output only. The time when the documentLink is last updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. The time when the documentLink is created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -59,7 +88,9 @@ class GoogleCloudContentwarehouseV1DocumentLink extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Description of this document-link.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -73,7 +104,12 @@ class GoogleCloudContentwarehouseV1DocumentLink extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Name of this document-link. It is required that the parent derived form the
+   * name to be consistent with the source document reference. Otherwise an
+   * exception will be thrown. Format: projects/{project_number}/locations/{loca
+   * tion}/documents/{source_document_id}/documentLinks/{document_link_id}.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -87,7 +123,9 @@ class GoogleCloudContentwarehouseV1DocumentLink extends \Google\Model
     return $this->name;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1DocumentReference
+   * Document references of the source document.
+   *
+   * @param GoogleCloudContentwarehouseV1DocumentReference $sourceDocumentReference
    */
   public function setSourceDocumentReference(GoogleCloudContentwarehouseV1DocumentReference $sourceDocumentReference)
   {
@@ -101,21 +139,29 @@ class GoogleCloudContentwarehouseV1DocumentLink extends \Google\Model
     return $this->sourceDocumentReference;
   }
   /**
-   * @param string
+   * The state of the documentlink. If target node has been deleted, the link is
+   * marked as invalid. Removing a source node will result in removal of all
+   * associated links.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, SOFT_DELETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param GoogleCloudContentwarehouseV1DocumentReference
+   * Document references of the target document.
+   *
+   * @param GoogleCloudContentwarehouseV1DocumentReference $targetDocumentReference
    */
   public function setTargetDocumentReference(GoogleCloudContentwarehouseV1DocumentReference $targetDocumentReference)
   {
@@ -129,7 +175,9 @@ class GoogleCloudContentwarehouseV1DocumentLink extends \Google\Model
     return $this->targetDocumentReference;
   }
   /**
-   * @param string
+   * Output only. The time when the documentLink is last updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

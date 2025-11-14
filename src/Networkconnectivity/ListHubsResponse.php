@@ -23,16 +23,24 @@ class ListHubsResponse extends \Google\Collection
   protected $hubsType = Hub::class;
   protected $hubsDataType = 'array';
   /**
+   * The token for the next page of the response. To see more results, use this
+   * value as the page_token for your next request. If this value is empty,
+   * there are no more results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Hub[]
+   * The requested hubs.
+   *
+   * @param Hub[] $hubs
    */
   public function setHubs($hubs)
   {
@@ -46,7 +54,11 @@ class ListHubsResponse extends \Google\Collection
     return $this->hubs;
   }
   /**
-   * @param string
+   * The token for the next page of the response. To see more results, use this
+   * value as the page_token for your next request. If this value is empty,
+   * there are no more results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +72,9 @@ class ListHubsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

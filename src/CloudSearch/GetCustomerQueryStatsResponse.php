@@ -23,12 +23,14 @@ class GetCustomerQueryStatsResponse extends \Google\Collection
   protected $statsType = CustomerQueryStats::class;
   protected $statsDataType = 'array';
   /**
+   * Total successful query count (status code 200) for the given date range.
+   *
    * @var string
    */
   public $totalQueryCount;
 
   /**
-   * @param CustomerQueryStats[]
+   * @param CustomerQueryStats[] $stats
    */
   public function setStats($stats)
   {
@@ -42,7 +44,9 @@ class GetCustomerQueryStatsResponse extends \Google\Collection
     return $this->stats;
   }
   /**
-   * @param string
+   * Total successful query count (status code 200) for the given date range.
+   *
+   * @param string $totalQueryCount
    */
   public function setTotalQueryCount($totalQueryCount)
   {

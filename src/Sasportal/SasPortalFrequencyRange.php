@@ -19,7 +19,17 @@ namespace Google\Service\Sasportal;
 
 class SasPortalFrequencyRange extends \Google\Model
 {
+  /**
+   * The highest frequency of the frequency range in MHz.
+   *
+   * @var 
+   */
   public $highFrequencyMhz;
+  /**
+   * The lowest frequency of the frequency range in MHz.
+   *
+   * @var 
+   */
   public $lowFrequencyMhz;
 
   public function setHighFrequencyMhz($highFrequencyMhz)

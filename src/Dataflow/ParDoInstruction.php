@@ -25,18 +25,24 @@ class ParDoInstruction extends \Google\Collection
   protected $multiOutputInfosType = MultiOutputInfo::class;
   protected $multiOutputInfosDataType = 'array';
   /**
+   * The number of outputs.
+   *
    * @var int
    */
   public $numOutputs;
   protected $sideInputsType = SideInputInfo::class;
   protected $sideInputsDataType = 'array';
   /**
+   * The user function to invoke.
+   *
    * @var array[]
    */
   public $userFn;
 
   /**
-   * @param InstructionInput
+   * The input.
+   *
+   * @param InstructionInput $input
    */
   public function setInput(InstructionInput $input)
   {
@@ -50,7 +56,9 @@ class ParDoInstruction extends \Google\Collection
     return $this->input;
   }
   /**
-   * @param MultiOutputInfo[]
+   * Information about each of the outputs, if user_fn is a MultiDoFn.
+   *
+   * @param MultiOutputInfo[] $multiOutputInfos
    */
   public function setMultiOutputInfos($multiOutputInfos)
   {
@@ -64,7 +72,9 @@ class ParDoInstruction extends \Google\Collection
     return $this->multiOutputInfos;
   }
   /**
-   * @param int
+   * The number of outputs.
+   *
+   * @param int $numOutputs
    */
   public function setNumOutputs($numOutputs)
   {
@@ -78,7 +88,9 @@ class ParDoInstruction extends \Google\Collection
     return $this->numOutputs;
   }
   /**
-   * @param SideInputInfo[]
+   * Zero or more side inputs.
+   *
+   * @param SideInputInfo[] $sideInputs
    */
   public function setSideInputs($sideInputs)
   {
@@ -92,7 +104,9 @@ class ParDoInstruction extends \Google\Collection
     return $this->sideInputs;
   }
   /**
-   * @param array[]
+   * The user function to invoke.
+   *
+   * @param array[] $userFn
    */
   public function setUserFn($userFn)
   {

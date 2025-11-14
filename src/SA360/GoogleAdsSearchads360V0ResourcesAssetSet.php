@@ -20,16 +20,23 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAssetSet extends \Google\Model
 {
   /**
+   * Output only. The ID of the asset set.
+   *
    * @var string
    */
   public $id;
   /**
+   * Immutable. The resource name of the asset set. Asset set resource names
+   * have the form: `customers/{customer_id}/assetSets/{asset_set_id}`
+   *
    * @var string
    */
   public $resourceName;
 
   /**
-   * @param string
+   * Output only. The ID of the asset set.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +50,10 @@ class GoogleAdsSearchads360V0ResourcesAssetSet extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the asset set. Asset set resource names
+   * have the form: `customers/{customer_id}/assetSets/{asset_set_id}`
+   *
+   * @param string $resourceName
    */
   public function setResourceName($resourceName)
   {

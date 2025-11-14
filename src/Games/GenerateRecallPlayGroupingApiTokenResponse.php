@@ -23,7 +23,9 @@ class GenerateRecallPlayGroupingApiTokenResponse extends \Google\Model
   protected $tokenDataType = '';
 
   /**
-   * @param PlayGroupingApiToken
+   * Token for accessing the Play Grouping API.
+   *
+   * @param PlayGroupingApiToken $token
    */
   public function setToken(PlayGroupingApiToken $token)
   {

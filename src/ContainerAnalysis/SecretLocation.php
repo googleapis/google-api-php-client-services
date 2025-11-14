@@ -23,7 +23,9 @@ class SecretLocation extends \Google\Model
   protected $fileLocationDataType = '';
 
   /**
-   * @param GrafeasV1FileLocation
+   * The secret is found from a file.
+   *
+   * @param GrafeasV1FileLocation $fileLocation
    */
   public function setFileLocation(GrafeasV1FileLocation $fileLocation)
   {

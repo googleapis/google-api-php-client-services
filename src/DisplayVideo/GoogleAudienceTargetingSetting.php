@@ -20,12 +20,18 @@ namespace Google\Service\DisplayVideo;
 class GoogleAudienceTargetingSetting extends \Google\Model
 {
   /**
+   * Required. Google audience id of the Google audience targeting setting. This
+   * id is google_audience_id.
+   *
    * @var string
    */
   public $googleAudienceId;
 
   /**
-   * @param string
+   * Required. Google audience id of the Google audience targeting setting. This
+   * id is google_audience_id.
+   *
+   * @param string $googleAudienceId
    */
   public function setGoogleAudienceId($googleAudienceId)
   {

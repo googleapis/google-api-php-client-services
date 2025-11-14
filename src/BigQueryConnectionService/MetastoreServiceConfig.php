@@ -20,12 +20,18 @@ namespace Google\Service\BigQueryConnectionService;
 class MetastoreServiceConfig extends \Google\Model
 {
   /**
+   * Optional. Resource name of an existing Dataproc Metastore service. Example:
+   * * `projects/[project_id]/locations/[region]/services/[service_id]`
+   *
    * @var string
    */
   public $metastoreService;
 
   /**
-   * @param string
+   * Optional. Resource name of an existing Dataproc Metastore service. Example:
+   * * `projects/[project_id]/locations/[region]/services/[service_id]`
+   *
+   * @param string $metastoreService
    */
   public function setMetastoreService($metastoreService)
   {

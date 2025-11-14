@@ -20,36 +20,54 @@ namespace Google\Service\Dfareporting;
 class Metro extends \Google\Model
 {
   /**
+   * Country code of the country to which this metro region belongs.
+   *
    * @var string
    */
   public $countryCode;
   /**
+   * DART ID of the country to which this metro region belongs.
+   *
    * @var string
    */
   public $countryDartId;
   /**
+   * DART ID of this metro region.
+   *
    * @var string
    */
   public $dartId;
   /**
+   * DMA ID of this metro region. This is the ID used for targeting and
+   * generating reports, and is equivalent to metro_code.
+   *
    * @var string
    */
   public $dmaId;
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#metro".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Metro code of this metro region. This is equivalent to dma_id.
+   *
    * @var string
    */
   public $metroCode;
   /**
+   * Name of this metro region.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Country code of the country to which this metro region belongs.
+   *
+   * @param string $countryCode
    */
   public function setCountryCode($countryCode)
   {
@@ -63,7 +81,9 @@ class Metro extends \Google\Model
     return $this->countryCode;
   }
   /**
-   * @param string
+   * DART ID of the country to which this metro region belongs.
+   *
+   * @param string $countryDartId
    */
   public function setCountryDartId($countryDartId)
   {
@@ -77,7 +97,9 @@ class Metro extends \Google\Model
     return $this->countryDartId;
   }
   /**
-   * @param string
+   * DART ID of this metro region.
+   *
+   * @param string $dartId
    */
   public function setDartId($dartId)
   {
@@ -91,7 +113,10 @@ class Metro extends \Google\Model
     return $this->dartId;
   }
   /**
-   * @param string
+   * DMA ID of this metro region. This is the ID used for targeting and
+   * generating reports, and is equivalent to metro_code.
+   *
+   * @param string $dmaId
    */
   public function setDmaId($dmaId)
   {
@@ -105,7 +130,10 @@ class Metro extends \Google\Model
     return $this->dmaId;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#metro".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -119,7 +147,9 @@ class Metro extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Metro code of this metro region. This is equivalent to dma_id.
+   *
+   * @param string $metroCode
    */
   public function setMetroCode($metroCode)
   {
@@ -133,7 +163,9 @@ class Metro extends \Google\Model
     return $this->metroCode;
   }
   /**
-   * @param string
+   * Name of this metro region.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

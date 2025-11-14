@@ -23,16 +23,23 @@ class ListInternalRangesResponse extends \Google\Collection
   protected $internalRangesType = InternalRange::class;
   protected $internalRangesDataType = 'array';
   /**
+   * The next pagination token in the List response. It should be used as
+   * page_token for the following request. An empty value means no more result.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param InternalRange[]
+   * Internal ranges to be returned.
+   *
+   * @param InternalRange[] $internalRanges
    */
   public function setInternalRanges($internalRanges)
   {
@@ -46,7 +53,10 @@ class ListInternalRangesResponse extends \Google\Collection
     return $this->internalRanges;
   }
   /**
-   * @param string
+   * The next pagination token in the List response. It should be used as
+   * page_token for the following request. An empty value means no more result.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListInternalRangesResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -21,28 +21,42 @@ class GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings extends \Google\Col
 {
   protected $collection_key = 'allowlistedDomains';
   /**
+   * Whether public unauthenticated access is allowed.
+   *
    * @var bool
    */
   public $allowPublicAccess;
   /**
+   * List of domains that are allowed to integrate the search widget.
+   *
    * @var string[]
    */
   public $allowlistedDomains;
   /**
+   * Whether web app access is enabled.
+   *
    * @var bool
    */
   public $enableWebApp;
   /**
+   * Optional. Language code for user interface. Use language tags defined by
+   * [BCP47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). If unset, the
+   * default language code is "en-US".
+   *
    * @var string
    */
   public $languageCode;
   /**
+   * Optional. The workforce identity pool provider used to access the widget.
+   *
    * @var string
    */
   public $workforceIdentityPoolProvider;
 
   /**
-   * @param bool
+   * Whether public unauthenticated access is allowed.
+   *
+   * @param bool $allowPublicAccess
    */
   public function setAllowPublicAccess($allowPublicAccess)
   {
@@ -56,7 +70,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings extends \Google\Col
     return $this->allowPublicAccess;
   }
   /**
-   * @param string[]
+   * List of domains that are allowed to integrate the search widget.
+   *
+   * @param string[] $allowlistedDomains
    */
   public function setAllowlistedDomains($allowlistedDomains)
   {
@@ -70,7 +86,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings extends \Google\Col
     return $this->allowlistedDomains;
   }
   /**
-   * @param bool
+   * Whether web app access is enabled.
+   *
+   * @param bool $enableWebApp
    */
   public function setEnableWebApp($enableWebApp)
   {
@@ -84,7 +102,11 @@ class GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings extends \Google\Col
     return $this->enableWebApp;
   }
   /**
-   * @param string
+   * Optional. Language code for user interface. Use language tags defined by
+   * [BCP47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt). If unset, the
+   * default language code is "en-US".
+   *
+   * @param string $languageCode
    */
   public function setLanguageCode($languageCode)
   {
@@ -98,7 +120,9 @@ class GoogleCloudDiscoveryengineV1WidgetConfigAccessSettings extends \Google\Col
     return $this->languageCode;
   }
   /**
-   * @param string
+   * Optional. The workforce identity pool provider used to access the widget.
+   *
+   * @param string $workforceIdentityPoolProvider
    */
   public function setWorkforceIdentityPoolProvider($workforceIdentityPoolProvider)
   {

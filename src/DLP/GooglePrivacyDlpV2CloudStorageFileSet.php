@@ -20,12 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2CloudStorageFileSet extends \Google\Model
 {
   /**
+   * The url, in the format `gs:`. Trailing wildcard in the path is allowed.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * The url, in the format `gs:`. Trailing wildcard in the path is allowed.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

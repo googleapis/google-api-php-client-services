@@ -20,46 +20,69 @@ namespace Google\Service\DeveloperConnect;
 class GitHubEnterpriseConfig extends \Google\Model
 {
   /**
+   * Optional. ID of the GitHub App created from the manifest.
+   *
    * @var string
    */
   public $appId;
   /**
+   * Optional. ID of the installation of the GitHub App.
+   *
    * @var string
    */
   public $appInstallationId;
   /**
+   * Output only. The URL-friendly name of the GitHub App.
+   *
    * @var string
    */
   public $appSlug;
   /**
+   * Required. The URI of the GitHub Enterprise host this connection is for.
+   *
    * @var string
    */
   public $hostUri;
   /**
+   * Output only. The URI to navigate to in order to manage the installation
+   * associated with this GitHubEnterpriseConfig.
+   *
    * @var string
    */
   public $installationUri;
   /**
+   * Optional. SecretManager resource containing the private key of the GitHub
+   * App, formatted as `projects/secrets/versions`.
+   *
    * @var string
    */
   public $privateKeySecretVersion;
   /**
+   * Output only. GitHub Enterprise version installed at the host_uri.
+   *
    * @var string
    */
   public $serverVersion;
   protected $serviceDirectoryConfigType = ServiceDirectoryConfig::class;
   protected $serviceDirectoryConfigDataType = '';
   /**
+   * Optional. SSL certificate to use for requests to GitHub Enterprise.
+   *
    * @var string
    */
   public $sslCaCertificate;
   /**
+   * Optional. SecretManager resource containing the webhook secret of the
+   * GitHub App, formatted as `projects/secrets/versions`.
+   *
    * @var string
    */
   public $webhookSecretSecretVersion;
 
   /**
-   * @param string
+   * Optional. ID of the GitHub App created from the manifest.
+   *
+   * @param string $appId
    */
   public function setAppId($appId)
   {
@@ -73,7 +96,9 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->appId;
   }
   /**
-   * @param string
+   * Optional. ID of the installation of the GitHub App.
+   *
+   * @param string $appInstallationId
    */
   public function setAppInstallationId($appInstallationId)
   {
@@ -87,7 +112,9 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->appInstallationId;
   }
   /**
-   * @param string
+   * Output only. The URL-friendly name of the GitHub App.
+   *
+   * @param string $appSlug
    */
   public function setAppSlug($appSlug)
   {
@@ -101,7 +128,9 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->appSlug;
   }
   /**
-   * @param string
+   * Required. The URI of the GitHub Enterprise host this connection is for.
+   *
+   * @param string $hostUri
    */
   public function setHostUri($hostUri)
   {
@@ -115,7 +144,10 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->hostUri;
   }
   /**
-   * @param string
+   * Output only. The URI to navigate to in order to manage the installation
+   * associated with this GitHubEnterpriseConfig.
+   *
+   * @param string $installationUri
    */
   public function setInstallationUri($installationUri)
   {
@@ -129,7 +161,10 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->installationUri;
   }
   /**
-   * @param string
+   * Optional. SecretManager resource containing the private key of the GitHub
+   * App, formatted as `projects/secrets/versions`.
+   *
+   * @param string $privateKeySecretVersion
    */
   public function setPrivateKeySecretVersion($privateKeySecretVersion)
   {
@@ -143,7 +178,9 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->privateKeySecretVersion;
   }
   /**
-   * @param string
+   * Output only. GitHub Enterprise version installed at the host_uri.
+   *
+   * @param string $serverVersion
    */
   public function setServerVersion($serverVersion)
   {
@@ -157,7 +194,13 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->serverVersion;
   }
   /**
-   * @param ServiceDirectoryConfig
+   * Optional. Configuration for using Service Directory to privately connect to
+   * a GitHub Enterprise server. This should only be set if the GitHub
+   * Enterprise server is hosted on-premises and not reachable by public
+   * internet. If this field is left empty, calls to the GitHub Enterprise
+   * server will be made over the public internet.
+   *
+   * @param ServiceDirectoryConfig $serviceDirectoryConfig
    */
   public function setServiceDirectoryConfig(ServiceDirectoryConfig $serviceDirectoryConfig)
   {
@@ -171,7 +214,9 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->serviceDirectoryConfig;
   }
   /**
-   * @param string
+   * Optional. SSL certificate to use for requests to GitHub Enterprise.
+   *
+   * @param string $sslCaCertificate
    */
   public function setSslCaCertificate($sslCaCertificate)
   {
@@ -185,7 +230,10 @@ class GitHubEnterpriseConfig extends \Google\Model
     return $this->sslCaCertificate;
   }
   /**
-   * @param string
+   * Optional. SecretManager resource containing the webhook secret of the
+   * GitHub App, formatted as `projects/secrets/versions`.
+   *
+   * @param string $webhookSecretSecretVersion
    */
   public function setWebhookSecretSecretVersion($webhookSecretSecretVersion)
   {

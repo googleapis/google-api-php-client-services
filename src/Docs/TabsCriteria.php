@@ -21,12 +21,16 @@ class TabsCriteria extends \Google\Collection
 {
   protected $collection_key = 'tabIds';
   /**
+   * The list of tab IDs in which the request executes.
+   *
    * @var string[]
    */
   public $tabIds;
 
   /**
-   * @param string[]
+   * The list of tab IDs in which the request executes.
+   *
+   * @param string[] $tabIds
    */
   public function setTabIds($tabIds)
   {

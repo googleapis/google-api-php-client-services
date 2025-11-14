@@ -22,34 +22,58 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
   protected $advancedSettingsType = GoogleCloudDialogflowCxV3AdvancedSettings::class;
   protected $advancedSettingsDataType = '';
   /**
+   * The default value of an optional parameter. If the parameter is required,
+   * the default value will be ignored.
+   *
    * @var array
    */
   public $defaultValue;
   /**
+   * Required. The human-readable name of the parameter, unique within the form.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Required. The entity type of the parameter. Format:
+   * `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for
+   * example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or
+   * `projects//locations//agents//entityTypes/` for developer entity types.
+   *
    * @var string
    */
   public $entityType;
   protected $fillBehaviorType = GoogleCloudDialogflowCxV3FormParameterFillBehavior::class;
   protected $fillBehaviorDataType = '';
   /**
+   * Indicates whether the parameter represents a list of values.
+   *
    * @var bool
    */
   public $isList;
   /**
+   * Indicates whether the parameter content should be redacted in log. If
+   * redaction is enabled, the parameter content will be replaced by parameter
+   * name during logging. Note: the parameter content is subject to redaction if
+   * either parameter level redaction or entity type level redaction is enabled.
+   *
    * @var bool
    */
   public $redact;
   /**
+   * Indicates whether the parameter is required. Optional parameters will not
+   * trigger prompts; however, they are filled if the user specifies them.
+   * Required parameters must be filled before form filling concludes.
+   *
    * @var bool
    */
   public $required;
 
   /**
-   * @param GoogleCloudDialogflowCxV3AdvancedSettings
+   * Hierarchical advanced settings for this parameter. The settings exposed at
+   * the lower level overrides the settings exposed at the higher level.
+   *
+   * @param GoogleCloudDialogflowCxV3AdvancedSettings $advancedSettings
    */
   public function setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings $advancedSettings)
   {
@@ -63,7 +87,10 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
     return $this->advancedSettings;
   }
   /**
-   * @param array
+   * The default value of an optional parameter. If the parameter is required,
+   * the default value will be ignored.
+   *
+   * @param array $defaultValue
    */
   public function setDefaultValue($defaultValue)
   {
@@ -77,7 +104,9 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
     return $this->defaultValue;
   }
   /**
-   * @param string
+   * Required. The human-readable name of the parameter, unique within the form.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -91,7 +120,12 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Required. The entity type of the parameter. Format:
+   * `projects/-/locations/-/agents/-/entityTypes/` for system entity types (for
+   * example, `projects/-/locations/-/agents/-/entityTypes/sys.date`), or
+   * `projects//locations//agents//entityTypes/` for developer entity types.
+   *
+   * @param string $entityType
    */
   public function setEntityType($entityType)
   {
@@ -105,7 +139,9 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
     return $this->entityType;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3FormParameterFillBehavior
+   * Required. Defines fill behavior for the parameter.
+   *
+   * @param GoogleCloudDialogflowCxV3FormParameterFillBehavior $fillBehavior
    */
   public function setFillBehavior(GoogleCloudDialogflowCxV3FormParameterFillBehavior $fillBehavior)
   {
@@ -119,7 +155,9 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
     return $this->fillBehavior;
   }
   /**
-   * @param bool
+   * Indicates whether the parameter represents a list of values.
+   *
+   * @param bool $isList
    */
   public function setIsList($isList)
   {
@@ -133,7 +171,12 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
     return $this->isList;
   }
   /**
-   * @param bool
+   * Indicates whether the parameter content should be redacted in log. If
+   * redaction is enabled, the parameter content will be replaced by parameter
+   * name during logging. Note: the parameter content is subject to redaction if
+   * either parameter level redaction or entity type level redaction is enabled.
+   *
+   * @param bool $redact
    */
   public function setRedact($redact)
   {
@@ -147,7 +190,11 @@ class GoogleCloudDialogflowCxV3FormParameter extends \Google\Model
     return $this->redact;
   }
   /**
-   * @param bool
+   * Indicates whether the parameter is required. Optional parameters will not
+   * trigger prompts; however, they are filled if the user specifies them.
+   * Required parameters must be filled before form filling concludes.
+   *
+   * @param bool $required
    */
   public function setRequired($required)
   {

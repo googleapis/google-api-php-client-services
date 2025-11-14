@@ -20,16 +20,24 @@ namespace Google\Service\BigtableAdmin;
 class GoogleBigtableAdminV2TypeEnum extends \Google\Model
 {
   /**
+   * The fully qualified name of the protobuf enum message, including package.
+   * In the format of "foo.bar.EnumMessage".
+   *
    * @var string
    */
   public $enumName;
   /**
+   * The ID of the schema bundle that this enum is defined in.
+   *
    * @var string
    */
   public $schemaBundleId;
 
   /**
-   * @param string
+   * The fully qualified name of the protobuf enum message, including package.
+   * In the format of "foo.bar.EnumMessage".
+   *
+   * @param string $enumName
    */
   public function setEnumName($enumName)
   {
@@ -43,7 +51,9 @@ class GoogleBigtableAdminV2TypeEnum extends \Google\Model
     return $this->enumName;
   }
   /**
-   * @param string
+   * The ID of the schema bundle that this enum is defined in.
+   *
+   * @param string $schemaBundleId
    */
   public function setSchemaBundleId($schemaBundleId)
   {

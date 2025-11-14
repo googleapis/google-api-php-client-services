@@ -24,7 +24,9 @@ class V1Beta1BatchCreateProducerOverridesResponse extends \Google\Collection
   protected $overridesDataType = 'array';
 
   /**
-   * @param V1Beta1QuotaOverride[]
+   * The overrides that were created.
+   *
+   * @param V1Beta1QuotaOverride[] $overrides
    */
   public function setOverrides($overrides)
   {

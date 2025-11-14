@@ -21,18 +21,29 @@ class TenancyUnit extends \Google\Collection
 {
   protected $collection_key = 'tenantResources';
   /**
+   * Output only. @OutputOnly Cloud resource name of the consumer of this
+   * service. For example 'projects/123456'.
+   *
    * @var string
    */
   public $consumer;
   /**
+   * Output only. @OutputOnly The time this tenancy unit was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Globally unique identifier of this tenancy unit
+   * "services/{service}/{collection id}/{resource id}/tenancyUnits/{unit}"
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Google Cloud API name of the managed service owning this
+   * tenancy unit. For example 'serviceconsumermanagement.googleapis.com'.
+   *
    * @var string
    */
   public $service;
@@ -40,7 +51,10 @@ class TenancyUnit extends \Google\Collection
   protected $tenantResourcesDataType = 'array';
 
   /**
-   * @param string
+   * Output only. @OutputOnly Cloud resource name of the consumer of this
+   * service. For example 'projects/123456'.
+   *
+   * @param string $consumer
    */
   public function setConsumer($consumer)
   {
@@ -54,7 +68,9 @@ class TenancyUnit extends \Google\Collection
     return $this->consumer;
   }
   /**
-   * @param string
+   * Output only. @OutputOnly The time this tenancy unit was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -68,7 +84,10 @@ class TenancyUnit extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Globally unique identifier of this tenancy unit
+   * "services/{service}/{collection id}/{resource id}/tenancyUnits/{unit}"
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -82,7 +101,10 @@ class TenancyUnit extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Google Cloud API name of the managed service owning this
+   * tenancy unit. For example 'serviceconsumermanagement.googleapis.com'.
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -96,7 +118,10 @@ class TenancyUnit extends \Google\Collection
     return $this->service;
   }
   /**
-   * @param TenantResource[]
+   * Resources constituting the tenancy unit. There can be at most 512 tenant
+   * resources in a tenancy unit.
+   *
+   * @param TenantResource[] $tenantResources
    */
   public function setTenantResources($tenantResources)
   {

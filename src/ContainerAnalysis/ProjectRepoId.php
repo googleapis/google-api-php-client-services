@@ -20,16 +20,22 @@ namespace Google\Service\ContainerAnalysis;
 class ProjectRepoId extends \Google\Model
 {
   /**
+   * The ID of the project.
+   *
    * @var string
    */
   public $projectId;
   /**
+   * The name of the repo. Leave empty for the default repo.
+   *
    * @var string
    */
   public $repoName;
 
   /**
-   * @param string
+   * The ID of the project.
+   *
+   * @param string $projectId
    */
   public function setProjectId($projectId)
   {
@@ -43,7 +49,9 @@ class ProjectRepoId extends \Google\Model
     return $this->projectId;
   }
   /**
-   * @param string
+   * The name of the repo. Leave empty for the default repo.
+   *
+   * @param string $repoName
    */
   public function setRepoName($repoName)
   {

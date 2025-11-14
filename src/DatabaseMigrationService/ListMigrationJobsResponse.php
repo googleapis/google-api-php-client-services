@@ -23,16 +23,23 @@ class ListMigrationJobsResponse extends \Google\Collection
   protected $migrationJobsType = MigrationJob::class;
   protected $migrationJobsDataType = 'array';
   /**
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param MigrationJob[]
+   * The list of migration jobs objects.
+   *
+   * @param MigrationJob[] $migrationJobs
    */
   public function setMigrationJobs($migrationJobs)
   {
@@ -46,7 +53,10 @@ class ListMigrationJobsResponse extends \Google\Collection
     return $this->migrationJobs;
   }
   /**
-   * @param string
+   * A token which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListMigrationJobsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

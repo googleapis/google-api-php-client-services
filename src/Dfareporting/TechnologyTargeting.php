@@ -34,7 +34,12 @@ class TechnologyTargeting extends \Google\Collection
   protected $platformTypesDataType = 'array';
 
   /**
-   * @param Browser[]
+   * Browsers that this ad targets. For each browser either set browserVersionId
+   * or dartId along with the version numbers. If both are specified, only
+   * browserVersionId will be used. The other fields are populated automatically
+   * when the ad is inserted or updated.
+   *
+   * @param Browser[] $browsers
    */
   public function setBrowsers($browsers)
   {
@@ -48,7 +53,11 @@ class TechnologyTargeting extends \Google\Collection
     return $this->browsers;
   }
   /**
-   * @param ConnectionType[]
+   * Connection types that this ad targets. For each connection type only id is
+   * required. The other fields are populated automatically when the ad is
+   * inserted or updated.
+   *
+   * @param ConnectionType[] $connectionTypes
    */
   public function setConnectionTypes($connectionTypes)
   {
@@ -62,7 +71,12 @@ class TechnologyTargeting extends \Google\Collection
     return $this->connectionTypes;
   }
   /**
-   * @param MobileCarrier[]
+   * Mobile carriers that this ad targets. For each mobile carrier only id is
+   * required, and the other fields are populated automatically when the ad is
+   * inserted or updated. If targeting a mobile carrier, do not set targeting
+   * for any zip codes.
+   *
+   * @param MobileCarrier[] $mobileCarriers
    */
   public function setMobileCarriers($mobileCarriers)
   {
@@ -76,7 +90,13 @@ class TechnologyTargeting extends \Google\Collection
     return $this->mobileCarriers;
   }
   /**
-   * @param OperatingSystemVersion[]
+   * Operating system versions that this ad targets. To target all versions, use
+   * operatingSystems. For each operating system version, only id is required.
+   * The other fields are populated automatically when the ad is inserted or
+   * updated. If targeting an operating system version, do not set targeting for
+   * the corresponding operating system in operatingSystems.
+   *
+   * @param OperatingSystemVersion[] $operatingSystemVersions
    */
   public function setOperatingSystemVersions($operatingSystemVersions)
   {
@@ -90,7 +110,13 @@ class TechnologyTargeting extends \Google\Collection
     return $this->operatingSystemVersions;
   }
   /**
-   * @param OperatingSystem[]
+   * Operating systems that this ad targets. To target specific versions, use
+   * operatingSystemVersions. For each operating system only dartId is required.
+   * The other fields are populated automatically when the ad is inserted or
+   * updated. If targeting an operating system, do not set targeting for
+   * operating system versions for the same operating system.
+   *
+   * @param OperatingSystem[] $operatingSystems
    */
   public function setOperatingSystems($operatingSystems)
   {
@@ -104,7 +130,11 @@ class TechnologyTargeting extends \Google\Collection
     return $this->operatingSystems;
   }
   /**
-   * @param PlatformType[]
+   * Platform types that this ad targets. For example, desktop, mobile, or
+   * tablet. For each platform type, only id is required, and the other fields
+   * are populated automatically when the ad is inserted or updated.
+   *
+   * @param PlatformType[] $platformTypes
    */
   public function setPlatformTypes($platformTypes)
   {

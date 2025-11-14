@@ -25,7 +25,9 @@ class PerfEnvironment extends \Google\Model
   protected $memoryInfoDataType = '';
 
   /**
-   * @param CPUInfo
+   * CPU related environment info
+   *
+   * @param CPUInfo $cpuInfo
    */
   public function setCpuInfo(CPUInfo $cpuInfo)
   {
@@ -39,7 +41,9 @@ class PerfEnvironment extends \Google\Model
     return $this->cpuInfo;
   }
   /**
-   * @param MemoryInfo
+   * Memory related environment info
+   *
+   * @param MemoryInfo $memoryInfo
    */
   public function setMemoryInfo(MemoryInfo $memoryInfo)
   {

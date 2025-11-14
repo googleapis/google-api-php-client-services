@@ -20,28 +20,40 @@ namespace Google\Service\NetworkManagement;
 class DirectVpcEgressConnectionInfo extends \Google\Model
 {
   /**
+   * URI of direct access network.
+   *
    * @var string
    */
   public $networkUri;
   /**
+   * Region in which the Direct VPC egress is deployed.
+   *
    * @var string
    */
   public $region;
   /**
+   * Selected starting IP address, from the selected IP range.
+   *
    * @var string
    */
   public $selectedIpAddress;
   /**
+   * Selected IP range.
+   *
    * @var string
    */
   public $selectedIpRange;
   /**
+   * URI of direct access subnetwork.
+   *
    * @var string
    */
   public $subnetworkUri;
 
   /**
-   * @param string
+   * URI of direct access network.
+   *
+   * @param string $networkUri
    */
   public function setNetworkUri($networkUri)
   {
@@ -55,7 +67,9 @@ class DirectVpcEgressConnectionInfo extends \Google\Model
     return $this->networkUri;
   }
   /**
-   * @param string
+   * Region in which the Direct VPC egress is deployed.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -69,7 +83,9 @@ class DirectVpcEgressConnectionInfo extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * Selected starting IP address, from the selected IP range.
+   *
+   * @param string $selectedIpAddress
    */
   public function setSelectedIpAddress($selectedIpAddress)
   {
@@ -83,7 +99,9 @@ class DirectVpcEgressConnectionInfo extends \Google\Model
     return $this->selectedIpAddress;
   }
   /**
-   * @param string
+   * Selected IP range.
+   *
+   * @param string $selectedIpRange
    */
   public function setSelectedIpRange($selectedIpRange)
   {
@@ -97,7 +115,9 @@ class DirectVpcEgressConnectionInfo extends \Google\Model
     return $this->selectedIpRange;
   }
   /**
-   * @param string
+   * URI of direct access subnetwork.
+   *
+   * @param string $subnetworkUri
    */
   public function setSubnetworkUri($subnetworkUri)
   {

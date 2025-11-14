@@ -20,12 +20,16 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Contact extends \Google\Model
 {
   /**
+   * An email address. For example, "`person123@company.com`".
+   *
    * @var string
    */
   public $email;
 
   /**
-   * @param string
+   * An email address. For example, "`person123@company.com`".
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {

@@ -23,20 +23,33 @@ class ReportRequest extends \Google\Collection
   protected $columnsType = ReportApiColumnSpec::class;
   protected $columnsDataType = 'array';
   /**
+   * Format that the report should be returned in. Currently `csv` or `tsv` is
+   * supported.
+   *
    * @var string
    */
   public $downloadFormat;
   protected $filtersType = ReportRequestFilters::class;
   protected $filtersDataType = 'array';
   /**
+   * Determines if removed entities should be included in the report. Defaults
+   * to `false`. Deprecated, please use `includeRemovedEntities` instead.
+   *
    * @var bool
    */
   public $includeDeletedEntities;
   /**
+   * Determines if removed entities should be included in the report. Defaults
+   * to `false`.
+   *
    * @var bool
    */
   public $includeRemovedEntities;
   /**
+   * Asynchronous report only. The maximum number of rows per report file. A
+   * large report is split into many files based on this field. Acceptable
+   * values are `1000000` to `100000000`, inclusive.
+   *
    * @var int
    */
   public $maxRowsPerFile;
@@ -45,30 +58,57 @@ class ReportRequest extends \Google\Collection
   protected $reportScopeType = ReportRequestReportScope::class;
   protected $reportScopeDataType = '';
   /**
+   * Determines the type of rows that are returned in the report. For example,
+   * if you specify `reportType: keyword`, each row in the report will contain
+   * data about a keyword. See the [Types of Reports](/search-ads/v2/report-
+   * types/) reference for the columns that are available for each type.
+   *
    * @var string
    */
   public $reportType;
   /**
+   * Synchronous report only. The maximum number of rows to return; additional
+   * rows are dropped. Acceptable values are `0` to `10000`, inclusive. Defaults
+   * to `10000`.
+   *
    * @var int
    */
   public $rowCount;
   /**
+   * Synchronous report only. Zero-based index of the first row to return.
+   * Acceptable values are `0` to `50000`, inclusive. Defaults to `0`.
+   *
    * @var int
    */
   public $startRow;
   /**
+   * Specifies the currency in which monetary will be returned. Possible values
+   * are: `usd`, `agency` (valid if the report is scoped to agency or lower),
+   * `advertiser` (valid if the report is scoped to * advertiser or lower), or
+   * `account` (valid if the report is scoped to engine account or lower).
+   *
    * @var string
    */
   public $statisticsCurrency;
   protected $timeRangeType = ReportRequestTimeRange::class;
   protected $timeRangeDataType = '';
   /**
+   * If `true`, the report would only be created if all the requested stat data
+   * are sourced from a single timezone. Defaults to `false`.
+   *
    * @var bool
    */
   public $verifySingleTimeZone;
 
   /**
-   * @param ReportApiColumnSpec[]
+   * The columns to include in the report. This includes both DoubleClick Search
+   * columns and saved columns. For DoubleClick Search columns, only the
+   * `columnName` parameter is required. For saved columns only the
+   * `savedColumnName` parameter is required. Both `columnName` and
+   * `savedColumnName` cannot be set in the same stanza.\ The maximum number of
+   * columns per request is 300.
+   *
+   * @param ReportApiColumnSpec[] $columns
    */
   public function setColumns($columns)
   {
@@ -82,7 +122,10 @@ class ReportRequest extends \Google\Collection
     return $this->columns;
   }
   /**
-   * @param string
+   * Format that the report should be returned in. Currently `csv` or `tsv` is
+   * supported.
+   *
+   * @param string $downloadFormat
    */
   public function setDownloadFormat($downloadFormat)
   {
@@ -96,7 +139,10 @@ class ReportRequest extends \Google\Collection
     return $this->downloadFormat;
   }
   /**
-   * @param ReportRequestFilters[]
+   * A list of filters to be applied to the report.\ The maximum number of
+   * filters per request is 300.
+   *
+   * @param ReportRequestFilters[] $filters
    */
   public function setFilters($filters)
   {
@@ -110,7 +156,10 @@ class ReportRequest extends \Google\Collection
     return $this->filters;
   }
   /**
-   * @param bool
+   * Determines if removed entities should be included in the report. Defaults
+   * to `false`. Deprecated, please use `includeRemovedEntities` instead.
+   *
+   * @param bool $includeDeletedEntities
    */
   public function setIncludeDeletedEntities($includeDeletedEntities)
   {
@@ -124,7 +173,10 @@ class ReportRequest extends \Google\Collection
     return $this->includeDeletedEntities;
   }
   /**
-   * @param bool
+   * Determines if removed entities should be included in the report. Defaults
+   * to `false`.
+   *
+   * @param bool $includeRemovedEntities
    */
   public function setIncludeRemovedEntities($includeRemovedEntities)
   {
@@ -138,7 +190,11 @@ class ReportRequest extends \Google\Collection
     return $this->includeRemovedEntities;
   }
   /**
-   * @param int
+   * Asynchronous report only. The maximum number of rows per report file. A
+   * large report is split into many files based on this field. Acceptable
+   * values are `1000000` to `100000000`, inclusive.
+   *
+   * @param int $maxRowsPerFile
    */
   public function setMaxRowsPerFile($maxRowsPerFile)
   {
@@ -152,7 +208,11 @@ class ReportRequest extends \Google\Collection
     return $this->maxRowsPerFile;
   }
   /**
-   * @param ReportRequestOrderBy[]
+   * Synchronous report only. A list of columns and directions defining sorting
+   * to be performed on the report rows.\ The maximum number of orderings per
+   * request is 300.
+   *
+   * @param ReportRequestOrderBy[] $orderBy
    */
   public function setOrderBy($orderBy)
   {
@@ -166,7 +226,11 @@ class ReportRequest extends \Google\Collection
     return $this->orderBy;
   }
   /**
-   * @param ReportRequestReportScope
+   * The reportScope is a set of IDs that are used to determine which subset of
+   * entities will be returned in the report. The full lineage of IDs from the
+   * lowest scoped level desired up through agency is required.
+   *
+   * @param ReportRequestReportScope $reportScope
    */
   public function setReportScope(ReportRequestReportScope $reportScope)
   {
@@ -180,7 +244,12 @@ class ReportRequest extends \Google\Collection
     return $this->reportScope;
   }
   /**
-   * @param string
+   * Determines the type of rows that are returned in the report. For example,
+   * if you specify `reportType: keyword`, each row in the report will contain
+   * data about a keyword. See the [Types of Reports](/search-ads/v2/report-
+   * types/) reference for the columns that are available for each type.
+   *
+   * @param string $reportType
    */
   public function setReportType($reportType)
   {
@@ -194,7 +263,11 @@ class ReportRequest extends \Google\Collection
     return $this->reportType;
   }
   /**
-   * @param int
+   * Synchronous report only. The maximum number of rows to return; additional
+   * rows are dropped. Acceptable values are `0` to `10000`, inclusive. Defaults
+   * to `10000`.
+   *
+   * @param int $rowCount
    */
   public function setRowCount($rowCount)
   {
@@ -208,7 +281,10 @@ class ReportRequest extends \Google\Collection
     return $this->rowCount;
   }
   /**
-   * @param int
+   * Synchronous report only. Zero-based index of the first row to return.
+   * Acceptable values are `0` to `50000`, inclusive. Defaults to `0`.
+   *
+   * @param int $startRow
    */
   public function setStartRow($startRow)
   {
@@ -222,7 +298,12 @@ class ReportRequest extends \Google\Collection
     return $this->startRow;
   }
   /**
-   * @param string
+   * Specifies the currency in which monetary will be returned. Possible values
+   * are: `usd`, `agency` (valid if the report is scoped to agency or lower),
+   * `advertiser` (valid if the report is scoped to * advertiser or lower), or
+   * `account` (valid if the report is scoped to engine account or lower).
+   *
+   * @param string $statisticsCurrency
    */
   public function setStatisticsCurrency($statisticsCurrency)
   {
@@ -236,7 +317,10 @@ class ReportRequest extends \Google\Collection
     return $this->statisticsCurrency;
   }
   /**
-   * @param ReportRequestTimeRange
+   * If metrics are requested in a report, this argument will be used to
+   * restrict the metrics to a specific time range.
+   *
+   * @param ReportRequestTimeRange $timeRange
    */
   public function setTimeRange(ReportRequestTimeRange $timeRange)
   {
@@ -250,7 +334,10 @@ class ReportRequest extends \Google\Collection
     return $this->timeRange;
   }
   /**
-   * @param bool
+   * If `true`, the report would only be created if all the requested stat data
+   * are sourced from a single timezone. Defaults to `false`.
+   *
+   * @param bool $verifySingleTimeZone
    */
   public function setVerifySingleTimeZone($verifySingleTimeZone)
   {
