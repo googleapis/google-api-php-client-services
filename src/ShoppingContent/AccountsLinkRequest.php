@@ -21,28 +21,45 @@ class AccountsLinkRequest extends \Google\Collection
 {
   protected $collection_key = 'services';
   /**
+   * Action to perform for this link. The `"request"` action is only available
+   * to select merchants. Acceptable values are: - "`approve`" - "`remove`" -
+   * "`request`"
+   *
    * @var string
    */
   public $action;
   protected $eCommercePlatformLinkInfoType = ECommercePlatformLinkInfo::class;
   protected $eCommercePlatformLinkInfoDataType = '';
   /**
+   * Type of the link between the two accounts. Acceptable values are: -
+   * "`channelPartner`" - "`eCommercePlatform`" - "`paymentServiceProvider`"
+   *
    * @var string
    */
   public $linkType;
   /**
+   * The ID of the linked account.
+   *
    * @var string
    */
   public $linkedAccountId;
   protected $paymentServiceProviderLinkInfoType = PaymentServiceProviderLinkInfo::class;
   protected $paymentServiceProviderLinkInfoDataType = '';
   /**
+   * Acceptable values are: - "`shoppingAdsProductManagement`" -
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
+   * "`paymentProcessing`"
+   *
    * @var string[]
    */
   public $services;
 
   /**
-   * @param string
+   * Action to perform for this link. The `"request"` action is only available
+   * to select merchants. Acceptable values are: - "`approve`" - "`remove`" -
+   * "`request`"
+   *
+   * @param string $action
    */
   public function setAction($action)
   {
@@ -56,7 +73,9 @@ class AccountsLinkRequest extends \Google\Collection
     return $this->action;
   }
   /**
-   * @param ECommercePlatformLinkInfo
+   * Additional information required for `eCommercePlatform` link type.
+   *
+   * @param ECommercePlatformLinkInfo $eCommercePlatformLinkInfo
    */
   public function setECommercePlatformLinkInfo(ECommercePlatformLinkInfo $eCommercePlatformLinkInfo)
   {
@@ -70,7 +89,10 @@ class AccountsLinkRequest extends \Google\Collection
     return $this->eCommercePlatformLinkInfo;
   }
   /**
-   * @param string
+   * Type of the link between the two accounts. Acceptable values are: -
+   * "`channelPartner`" - "`eCommercePlatform`" - "`paymentServiceProvider`"
+   *
+   * @param string $linkType
    */
   public function setLinkType($linkType)
   {
@@ -84,7 +106,9 @@ class AccountsLinkRequest extends \Google\Collection
     return $this->linkType;
   }
   /**
-   * @param string
+   * The ID of the linked account.
+   *
+   * @param string $linkedAccountId
    */
   public function setLinkedAccountId($linkedAccountId)
   {
@@ -98,7 +122,9 @@ class AccountsLinkRequest extends \Google\Collection
     return $this->linkedAccountId;
   }
   /**
-   * @param PaymentServiceProviderLinkInfo
+   * Additional information required for `paymentServiceProvider` link type.
+   *
+   * @param PaymentServiceProviderLinkInfo $paymentServiceProviderLinkInfo
    */
   public function setPaymentServiceProviderLinkInfo(PaymentServiceProviderLinkInfo $paymentServiceProviderLinkInfo)
   {
@@ -112,7 +138,11 @@ class AccountsLinkRequest extends \Google\Collection
     return $this->paymentServiceProviderLinkInfo;
   }
   /**
-   * @param string[]
+   * Acceptable values are: - "`shoppingAdsProductManagement`" -
+   * "`shoppingActionsProductManagement`" - "`shoppingActionsOrderManagement`" -
+   * "`paymentProcessing`"
+   *
+   * @param string[] $services
    */
   public function setServices($services)
   {

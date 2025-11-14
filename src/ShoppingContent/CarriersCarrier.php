@@ -21,24 +21,38 @@ class CarriersCarrier extends \Google\Collection
 {
   protected $collection_key = 'services';
   /**
+   * The CLDR country code of the carrier (for example, "US"). Always present.
+   *
    * @var string
    */
   public $country;
   /**
+   * A list of services supported for EDD (Estimated Delivery Date) calculation.
+   * This is the list of valid values for
+   * WarehouseBasedDeliveryTime.carrierService.
+   *
    * @var string[]
    */
   public $eddServices;
   /**
+   * The name of the carrier (for example, `"UPS"`). Always present.
+   *
    * @var string
    */
   public $name;
   /**
+   * A list of supported services (for example, `"ground"`) for that carrier.
+   * Contains at least one service. This is the list of valid values for
+   * CarrierRate.carrierService.
+   *
    * @var string[]
    */
   public $services;
 
   /**
-   * @param string
+   * The CLDR country code of the carrier (for example, "US"). Always present.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -52,7 +66,11 @@ class CarriersCarrier extends \Google\Collection
     return $this->country;
   }
   /**
-   * @param string[]
+   * A list of services supported for EDD (Estimated Delivery Date) calculation.
+   * This is the list of valid values for
+   * WarehouseBasedDeliveryTime.carrierService.
+   *
+   * @param string[] $eddServices
    */
   public function setEddServices($eddServices)
   {
@@ -66,7 +84,9 @@ class CarriersCarrier extends \Google\Collection
     return $this->eddServices;
   }
   /**
-   * @param string
+   * The name of the carrier (for example, `"UPS"`). Always present.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -80,7 +100,11 @@ class CarriersCarrier extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * A list of supported services (for example, `"ground"`) for that carrier.
+   * Contains at least one service. This is the list of valid values for
+   * CarrierRate.carrierService.
+   *
+   * @param string[] $services
    */
   public function setServices($services)
   {

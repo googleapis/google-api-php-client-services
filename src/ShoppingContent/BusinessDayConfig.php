@@ -21,12 +21,16 @@ class BusinessDayConfig extends \Google\Collection
 {
   protected $collection_key = 'businessDays';
   /**
+   * Regular business days, such as '"monday"'. May not be empty.
+   *
    * @var string[]
    */
   public $businessDays;
 
   /**
-   * @param string[]
+   * Regular business days, such as '"monday"'. May not be empty.
+   *
+   * @param string[] $businessDays
    */
   public function setBusinessDays($businessDays)
   {

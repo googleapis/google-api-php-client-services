@@ -21,32 +21,49 @@ class Css extends \Google\Collection
 {
   protected $collection_key = 'labelIds';
   /**
+   * Output only. Immutable. The CSS domain ID.
+   *
    * @var string
    */
   public $cssDomainId;
   /**
+   * Output only. Immutable. The ID of the CSS group this CSS domain is
+   * affiliated with. Only populated for CSS group users.
+   *
    * @var string
    */
   public $cssGroupId;
   /**
+   * Output only. Immutable. The CSS domain's display name, used when space is
+   * constrained.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Output only. Immutable. The CSS domain's full name.
+   *
    * @var string
    */
   public $fullName;
   /**
+   * Output only. Immutable. The CSS domain's homepage.
+   *
    * @var string
    */
   public $homepageUri;
   /**
+   * A list of label IDs that are assigned to this CSS domain by its CSS group.
+   * Only populated for CSS group users.
+   *
    * @var string[]
    */
   public $labelIds;
 
   /**
-   * @param string
+   * Output only. Immutable. The CSS domain ID.
+   *
+   * @param string $cssDomainId
    */
   public function setCssDomainId($cssDomainId)
   {
@@ -60,7 +77,10 @@ class Css extends \Google\Collection
     return $this->cssDomainId;
   }
   /**
-   * @param string
+   * Output only. Immutable. The ID of the CSS group this CSS domain is
+   * affiliated with. Only populated for CSS group users.
+   *
+   * @param string $cssGroupId
    */
   public function setCssGroupId($cssGroupId)
   {
@@ -74,7 +94,10 @@ class Css extends \Google\Collection
     return $this->cssGroupId;
   }
   /**
-   * @param string
+   * Output only. Immutable. The CSS domain's display name, used when space is
+   * constrained.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -88,7 +111,9 @@ class Css extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param string
+   * Output only. Immutable. The CSS domain's full name.
+   *
+   * @param string $fullName
    */
   public function setFullName($fullName)
   {
@@ -102,7 +127,9 @@ class Css extends \Google\Collection
     return $this->fullName;
   }
   /**
-   * @param string
+   * Output only. Immutable. The CSS domain's homepage.
+   *
+   * @param string $homepageUri
    */
   public function setHomepageUri($homepageUri)
   {
@@ -116,7 +143,10 @@ class Css extends \Google\Collection
     return $this->homepageUri;
   }
   /**
-   * @param string[]
+   * A list of label IDs that are assigned to this CSS domain by its CSS group.
+   * Only populated for CSS group users.
+   *
+   * @param string[] $labelIds
    */
   public function setLabelIds($labelIds)
   {
