@@ -20,16 +20,22 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2IssueResourceAwsMetadataAwsAccount extends \Google\Model
 {
   /**
+   * The AWS account ID of the resource associated with the issue.
+   *
    * @var string
    */
   public $id;
   /**
+   * The AWS account name of the resource associated with the issue.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The AWS account ID of the resource associated with the issue.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -43,7 +49,9 @@ class GoogleCloudSecuritycenterV2IssueResourceAwsMetadataAwsAccount extends \Goo
     return $this->id;
   }
   /**
-   * @param string
+   * The AWS account name of the resource associated with the issue.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
