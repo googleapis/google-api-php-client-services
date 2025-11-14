@@ -20,12 +20,16 @@ namespace Google\Service\BigQueryDataTransfer;
 class EncryptionConfiguration extends \Google\Model
 {
   /**
+   * The name of the KMS key used for encrypting BigQuery data.
+   *
    * @var string
    */
   public $kmsKeyName;
 
   /**
-   * @param string
+   * The name of the KMS key used for encrypting BigQuery data.
+   *
+   * @param string $kmsKeyName
    */
   public function setKmsKeyName($kmsKeyName)
   {
