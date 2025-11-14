@@ -21,28 +21,46 @@ class ContextRule extends \Google\Collection
 {
   protected $collection_key = 'requested';
   /**
+   * A list of full type names or extension IDs of extensions allowed in grpc
+   * side channel from client to backend.
+   *
    * @var string[]
    */
   public $allowedRequestExtensions;
   /**
+   * A list of full type names or extension IDs of extensions allowed in grpc
+   * side channel from backend to client.
+   *
    * @var string[]
    */
   public $allowedResponseExtensions;
   /**
+   * A list of full type names of provided contexts. It is used to support
+   * propagating HTTP headers and ETags from the response extension.
+   *
    * @var string[]
    */
   public $provided;
   /**
+   * A list of full type names of requested contexts, only the requested context
+   * will be made available to the backend.
+   *
    * @var string[]
    */
   public $requested;
   /**
+   * Selects the methods to which this rule applies. Refer to selector for
+   * syntax details.
+   *
    * @var string
    */
   public $selector;
 
   /**
-   * @param string[]
+   * A list of full type names or extension IDs of extensions allowed in grpc
+   * side channel from client to backend.
+   *
+   * @param string[] $allowedRequestExtensions
    */
   public function setAllowedRequestExtensions($allowedRequestExtensions)
   {
@@ -56,7 +74,10 @@ class ContextRule extends \Google\Collection
     return $this->allowedRequestExtensions;
   }
   /**
-   * @param string[]
+   * A list of full type names or extension IDs of extensions allowed in grpc
+   * side channel from backend to client.
+   *
+   * @param string[] $allowedResponseExtensions
    */
   public function setAllowedResponseExtensions($allowedResponseExtensions)
   {
@@ -70,7 +91,10 @@ class ContextRule extends \Google\Collection
     return $this->allowedResponseExtensions;
   }
   /**
-   * @param string[]
+   * A list of full type names of provided contexts. It is used to support
+   * propagating HTTP headers and ETags from the response extension.
+   *
+   * @param string[] $provided
    */
   public function setProvided($provided)
   {
@@ -84,7 +108,10 @@ class ContextRule extends \Google\Collection
     return $this->provided;
   }
   /**
-   * @param string[]
+   * A list of full type names of requested contexts, only the requested context
+   * will be made available to the backend.
+   *
+   * @param string[] $requested
    */
   public function setRequested($requested)
   {
@@ -98,7 +125,10 @@ class ContextRule extends \Google\Collection
     return $this->requested;
   }
   /**
-   * @param string
+   * Selects the methods to which this rule applies. Refer to selector for
+   * syntax details.
+   *
+   * @param string $selector
    */
   public function setSelector($selector)
   {
