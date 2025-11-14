@@ -21,16 +21,22 @@ class NonSdkApiUsageViolation extends \Google\Collection
 {
   protected $collection_key = 'apiSignatures';
   /**
+   * Signatures of a subset of those hidden API's.
+   *
    * @var string[]
    */
   public $apiSignatures;
   /**
+   * Total number of unique hidden API's accessed.
+   *
    * @var int
    */
   public $uniqueApis;
 
   /**
-   * @param string[]
+   * Signatures of a subset of those hidden API's.
+   *
+   * @param string[] $apiSignatures
    */
   public function setApiSignatures($apiSignatures)
   {
@@ -44,7 +50,9 @@ class NonSdkApiUsageViolation extends \Google\Collection
     return $this->apiSignatures;
   }
   /**
-   * @param int
+   * Total number of unique hidden API's accessed.
+   *
+   * @param int $uniqueApis
    */
   public function setUniqueApis($uniqueApis)
   {

@@ -21,16 +21,22 @@ class OverlappingUIElements extends \Google\Collection
 {
   protected $collection_key = 'resourceName';
   /**
+   * Resource names of the overlapping screen elements
+   *
    * @var string[]
    */
   public $resourceName;
   /**
+   * The screen id of the elements
+   *
    * @var string
    */
   public $screenId;
 
   /**
-   * @param string[]
+   * Resource names of the overlapping screen elements
+   *
+   * @param string[] $resourceName
    */
   public function setResourceName($resourceName)
   {
@@ -44,7 +50,9 @@ class OverlappingUIElements extends \Google\Collection
     return $this->resourceName;
   }
   /**
-   * @param string
+   * The screen id of the elements
+   *
+   * @param string $screenId
    */
   public function setScreenId($screenId)
   {
