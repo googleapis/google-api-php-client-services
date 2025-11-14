@@ -26,7 +26,9 @@ class GetWorkspaceStatusResponse extends \Google\Collection
   protected $workspaceChangeDataType = 'array';
 
   /**
-   * @param MergeConflict[]
+   * The merge conflict after sync.
+   *
+   * @param MergeConflict[] $mergeConflict
    */
   public function setMergeConflict($mergeConflict)
   {
@@ -40,7 +42,9 @@ class GetWorkspaceStatusResponse extends \Google\Collection
     return $this->mergeConflict;
   }
   /**
-   * @param Entity[]
+   * Entities that have been changed in the workspace.
+   *
+   * @param Entity[] $workspaceChange
    */
   public function setWorkspaceChange($workspaceChange)
   {

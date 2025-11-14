@@ -21,6 +21,8 @@ class FolderEntities extends \Google\Collection
 {
   protected $collection_key = 'variable';
   /**
+   * Continuation token for fetching the next page of results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -32,7 +34,9 @@ class FolderEntities extends \Google\Collection
   protected $variableDataType = 'array';
 
   /**
-   * @param string
+   * Continuation token for fetching the next page of results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +50,9 @@ class FolderEntities extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Tag[]
+   * The list of tags inside the folder.
+   *
+   * @param Tag[] $tag
    */
   public function setTag($tag)
   {
@@ -60,7 +66,9 @@ class FolderEntities extends \Google\Collection
     return $this->tag;
   }
   /**
-   * @param Trigger[]
+   * The list of triggers inside the folder.
+   *
+   * @param Trigger[] $trigger
    */
   public function setTrigger($trigger)
   {
@@ -74,7 +82,9 @@ class FolderEntities extends \Google\Collection
     return $this->trigger;
   }
   /**
-   * @param Variable[]
+   * The list of variables inside the folder.
+   *
+   * @param Variable[] $variable
    */
   public function setVariable($variable)
   {
