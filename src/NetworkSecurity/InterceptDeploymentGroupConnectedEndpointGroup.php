@@ -20,12 +20,20 @@ namespace Google\Service\NetworkSecurity;
 class InterceptDeploymentGroupConnectedEndpointGroup extends \Google\Model
 {
   /**
+   * Output only. The connected endpoint group's resource name, for example:
+   * `projects/123456789/locations/global/interceptEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The connected endpoint group's resource name, for example:
+   * `projects/123456789/locations/global/interceptEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

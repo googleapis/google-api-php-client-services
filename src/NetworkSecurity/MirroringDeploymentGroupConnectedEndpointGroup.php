@@ -20,12 +20,20 @@ namespace Google\Service\NetworkSecurity;
 class MirroringDeploymentGroupConnectedEndpointGroup extends \Google\Model
 {
   /**
+   * Output only. The connected endpoint group's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * Output only. The connected endpoint group's resource name, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/124.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
