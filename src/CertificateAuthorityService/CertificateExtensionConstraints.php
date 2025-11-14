@@ -23,12 +23,19 @@ class CertificateExtensionConstraints extends \Google\Collection
   protected $additionalExtensionsType = ObjectId::class;
   protected $additionalExtensionsDataType = 'array';
   /**
+   * Optional. A set of named X.509 extensions. Will be combined with
+   * additional_extensions to determine the full set of X.509 extensions.
+   *
    * @var string[]
    */
   public $knownExtensions;
 
   /**
-   * @param ObjectId[]
+   * Optional. A set of ObjectIds identifying custom X.509 extensions. Will be
+   * combined with known_extensions to determine the full set of X.509
+   * extensions.
+   *
+   * @param ObjectId[] $additionalExtensions
    */
   public function setAdditionalExtensions($additionalExtensions)
   {
@@ -42,7 +49,10 @@ class CertificateExtensionConstraints extends \Google\Collection
     return $this->additionalExtensions;
   }
   /**
-   * @param string[]
+   * Optional. A set of named X.509 extensions. Will be combined with
+   * additional_extensions to determine the full set of X.509 extensions.
+   *
+   * @param string[] $knownExtensions
    */
   public function setKnownExtensions($knownExtensions)
   {
