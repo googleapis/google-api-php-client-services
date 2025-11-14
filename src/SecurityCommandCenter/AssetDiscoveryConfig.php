@@ -19,22 +19,47 @@ namespace Google\Service\SecurityCommandCenter;
 
 class AssetDiscoveryConfig extends \Google\Collection
 {
+  /**
+   * Unspecified. Setting the mode with this value will disable
+   * inclusion/exclusion filtering for Asset Discovery.
+   */
+  public const INCLUSION_MODE_INCLUSION_MODE_UNSPECIFIED = 'INCLUSION_MODE_UNSPECIFIED';
+  /**
+   * Asset Discovery will capture only the resources within the projects
+   * specified. All other resources will be ignored.
+   */
+  public const INCLUSION_MODE_INCLUDE_ONLY = 'INCLUDE_ONLY';
+  /**
+   * Asset Discovery will ignore all resources under the projects specified. All
+   * other resources will be retrieved.
+   */
+  public const INCLUSION_MODE_EXCLUDE = 'EXCLUDE';
   protected $collection_key = 'projectIds';
   /**
+   * The folder ids to use for filtering asset discovery. It consists of only
+   * digits, e.g., 756619654966.
+   *
    * @var string[]
    */
   public $folderIds;
   /**
+   * The mode to use for filtering asset discovery.
+   *
    * @var string
    */
   public $inclusionMode;
   /**
+   * The project ids to use for filtering asset discovery.
+   *
    * @var string[]
    */
   public $projectIds;
 
   /**
-   * @param string[]
+   * The folder ids to use for filtering asset discovery. It consists of only
+   * digits, e.g., 756619654966.
+   *
+   * @param string[] $folderIds
    */
   public function setFolderIds($folderIds)
   {
@@ -48,21 +73,27 @@ class AssetDiscoveryConfig extends \Google\Collection
     return $this->folderIds;
   }
   /**
-   * @param string
+   * The mode to use for filtering asset discovery.
+   *
+   * Accepted values: INCLUSION_MODE_UNSPECIFIED, INCLUDE_ONLY, EXCLUDE
+   *
+   * @param self::INCLUSION_MODE_* $inclusionMode
    */
   public function setInclusionMode($inclusionMode)
   {
     $this->inclusionMode = $inclusionMode;
   }
   /**
-   * @return string
+   * @return self::INCLUSION_MODE_*
    */
   public function getInclusionMode()
   {
     return $this->inclusionMode;
   }
   /**
-   * @param string[]
+   * The project ids to use for filtering asset discovery.
+   *
+   * @param string[] $projectIds
    */
   public function setProjectIds($projectIds)
   {

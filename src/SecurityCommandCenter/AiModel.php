@@ -20,50 +20,91 @@ namespace Google\Service\SecurityCommandCenter;
 class AiModel extends \Google\Model
 {
   /**
+   * Unspecified deployment platform.
+   */
+  public const DEPLOYMENT_PLATFORM_DEPLOYMENT_PLATFORM_UNSPECIFIED = 'DEPLOYMENT_PLATFORM_UNSPECIFIED';
+  /**
+   * Vertex AI.
+   */
+  public const DEPLOYMENT_PLATFORM_VERTEX_AI = 'VERTEX_AI';
+  /**
+   * Google Kubernetes Engine.
+   */
+  public const DEPLOYMENT_PLATFORM_GKE = 'GKE';
+  /**
+   * Google Compute Engine.
+   */
+  public const DEPLOYMENT_PLATFORM_GCE = 'GCE';
+  /**
+   * Fine tuned model.
+   */
+  public const DEPLOYMENT_PLATFORM_FINE_TUNED_MODEL = 'FINE_TUNED_MODEL';
+  /**
+   * The platform on which the model is deployed.
+   *
    * @var string
    */
   public $deploymentPlatform;
   /**
+   * The user defined display name of model. Ex. baseline-classification-model
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The domain of the model, for example, “image-classification”.
+   *
    * @var string
    */
   public $domain;
   /**
+   * The name of the model library, for example, “transformers”.
+   *
    * @var string
    */
   public $library;
   /**
+   * The region in which the model is used, for example, “us-central1”.
+   *
    * @var string
    */
   public $location;
   /**
+   * The name of the AI model, for example, "gemini:1.0.0".
+   *
    * @var string
    */
   public $name;
   /**
+   * The publisher of the model, for example, “google” or “nvidia”.
+   *
    * @var string
    */
   public $publisher;
 
   /**
-   * @param string
+   * The platform on which the model is deployed.
+   *
+   * Accepted values: DEPLOYMENT_PLATFORM_UNSPECIFIED, VERTEX_AI, GKE, GCE,
+   * FINE_TUNED_MODEL
+   *
+   * @param self::DEPLOYMENT_PLATFORM_* $deploymentPlatform
    */
   public function setDeploymentPlatform($deploymentPlatform)
   {
     $this->deploymentPlatform = $deploymentPlatform;
   }
   /**
-   * @return string
+   * @return self::DEPLOYMENT_PLATFORM_*
    */
   public function getDeploymentPlatform()
   {
     return $this->deploymentPlatform;
   }
   /**
-   * @param string
+   * The user defined display name of model. Ex. baseline-classification-model
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -77,7 +118,9 @@ class AiModel extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The domain of the model, for example, “image-classification”.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -91,7 +134,9 @@ class AiModel extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param string
+   * The name of the model library, for example, “transformers”.
+   *
+   * @param string $library
    */
   public function setLibrary($library)
   {
@@ -105,7 +150,9 @@ class AiModel extends \Google\Model
     return $this->library;
   }
   /**
-   * @param string
+   * The region in which the model is used, for example, “us-central1”.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -119,7 +166,9 @@ class AiModel extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * The name of the AI model, for example, "gemini:1.0.0".
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -133,7 +182,9 @@ class AiModel extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The publisher of the model, for example, “google” or “nvidia”.
+   *
+   * @param string $publisher
    */
   public function setPublisher($publisher)
   {
