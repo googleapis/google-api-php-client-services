@@ -23,16 +23,23 @@ class AdvertisersListResponse extends \Google\Collection
   protected $advertisersType = Advertiser::class;
   protected $advertisersDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#advertisersListResponse".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Pagination token to be used for the next list operation.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param Advertiser[]
+   * Advertiser collection.
+   *
+   * @param Advertiser[] $advertisers
    */
   public function setAdvertisers($advertisers)
   {
@@ -46,7 +53,10 @@ class AdvertisersListResponse extends \Google\Collection
     return $this->advertisers;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#advertisersListResponse".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -60,7 +70,9 @@ class AdvertisersListResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Pagination token to be used for the next list operation.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

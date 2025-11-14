@@ -25,12 +25,17 @@ class ConversionStatus extends \Google\Collection
   protected $errorsType = ConversionError::class;
   protected $errorsDataType = 'array';
   /**
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#conversionStatus".
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param Conversion
+   * The original conversion that was inserted or updated.
+   *
+   * @param Conversion $conversion
    */
   public function setConversion(Conversion $conversion)
   {
@@ -44,7 +49,9 @@ class ConversionStatus extends \Google\Collection
     return $this->conversion;
   }
   /**
-   * @param ConversionError[]
+   * A list of errors related to this conversion.
+   *
+   * @param ConversionError[] $errors
    */
   public function setErrors($errors)
   {
@@ -58,7 +65,10 @@ class ConversionStatus extends \Google\Collection
     return $this->errors;
   }
   /**
-   * @param string
+   * Identifies what kind of resource this is. Value: the fixed string
+   * "dfareporting#conversionStatus".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

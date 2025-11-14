@@ -20,20 +20,30 @@ namespace Google\Service\Dfareporting;
 class DfareportingStudioCreativeAssetsInsertRequest extends \Google\Model
 {
   /**
+   * Optional. Studio account ID of the studio creative asset. It is a optional.
+   *
    * @var string
    */
   public $studioAccountId;
   /**
+   * Required. Studio advertiser ID of the studio creative asset. It is a
+   * required field on insertion.
+   *
    * @var string
    */
   public $studioAdvertiserId;
   /**
+   * Optional. Studio creative ID of the studio creative asset. It is a optional
+   * field. If it is set, the asset will be associated to the creative.
+   *
    * @var string
    */
   public $studioCreativeId;
 
   /**
-   * @param string
+   * Optional. Studio account ID of the studio creative asset. It is a optional.
+   *
+   * @param string $studioAccountId
    */
   public function setStudioAccountId($studioAccountId)
   {
@@ -47,7 +57,10 @@ class DfareportingStudioCreativeAssetsInsertRequest extends \Google\Model
     return $this->studioAccountId;
   }
   /**
-   * @param string
+   * Required. Studio advertiser ID of the studio creative asset. It is a
+   * required field on insertion.
+   *
+   * @param string $studioAdvertiserId
    */
   public function setStudioAdvertiserId($studioAdvertiserId)
   {
@@ -61,7 +74,10 @@ class DfareportingStudioCreativeAssetsInsertRequest extends \Google\Model
     return $this->studioAdvertiserId;
   }
   /**
-   * @param string
+   * Optional. Studio creative ID of the studio creative asset. It is a optional
+   * field. If it is set, the asset will be associated to the creative.
+   *
+   * @param string $studioCreativeId
    */
   public function setStudioCreativeId($studioCreativeId)
   {

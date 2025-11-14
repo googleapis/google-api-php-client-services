@@ -24,7 +24,9 @@ class ContextualKeywordTargeting extends \Google\Collection
   protected $keywordsDataType = 'array';
 
   /**
-   * @param ContextualKeyword[]
+   * Contextual keywords that this ad targets
+   *
+   * @param ContextualKeyword[] $keywords
    */
   public function setKeywords($keywords)
   {
