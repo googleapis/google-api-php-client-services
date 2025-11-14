@@ -20,12 +20,24 @@ namespace Google\Service\PlayIntegrity;
 class DeviceAttributes extends \Google\Model
 {
   /**
+   * Android SDK version of the device, as defined in the public Android
+   * documentation:
+   * https://developer.android.com/reference/android/os/Build.VERSION_CODES. It
+   * won't be set if a necessary requirement was missed. For example
+   * DeviceIntegrity did not meet the minimum bar.
+   *
    * @var int
    */
   public $sdkVersion;
 
   /**
-   * @param int
+   * Android SDK version of the device, as defined in the public Android
+   * documentation:
+   * https://developer.android.com/reference/android/os/Build.VERSION_CODES. It
+   * won't be set if a necessary requirement was missed. For example
+   * DeviceIntegrity did not meet the minimum bar.
+   *
+   * @param int $sdkVersion
    */
   public function setSdkVersion($sdkVersion)
   {

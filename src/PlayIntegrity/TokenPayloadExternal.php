@@ -33,7 +33,9 @@ class TokenPayloadExternal extends \Google\Model
   protected $testingDetailsDataType = '';
 
   /**
-   * @param AccountDetails
+   * Required. Details about the Play Store account.
+   *
+   * @param AccountDetails $accountDetails
    */
   public function setAccountDetails(AccountDetails $accountDetails)
   {
@@ -47,7 +49,9 @@ class TokenPayloadExternal extends \Google\Model
     return $this->accountDetails;
   }
   /**
-   * @param AppIntegrity
+   * Required. Details about the application integrity.
+   *
+   * @param AppIntegrity $appIntegrity
    */
   public function setAppIntegrity(AppIntegrity $appIntegrity)
   {
@@ -61,7 +65,9 @@ class TokenPayloadExternal extends \Google\Model
     return $this->appIntegrity;
   }
   /**
-   * @param DeviceIntegrity
+   * Required. Details about the device integrity.
+   *
+   * @param DeviceIntegrity $deviceIntegrity
    */
   public function setDeviceIntegrity(DeviceIntegrity $deviceIntegrity)
   {
@@ -75,7 +81,9 @@ class TokenPayloadExternal extends \Google\Model
     return $this->deviceIntegrity;
   }
   /**
-   * @param EnvironmentDetails
+   * Details of the environment Play Integrity API runs in.
+   *
+   * @param EnvironmentDetails $environmentDetails
    */
   public function setEnvironmentDetails(EnvironmentDetails $environmentDetails)
   {
@@ -89,7 +97,9 @@ class TokenPayloadExternal extends \Google\Model
     return $this->environmentDetails;
   }
   /**
-   * @param RequestDetails
+   * Required. Details about the integrity request.
+   *
+   * @param RequestDetails $requestDetails
    */
   public function setRequestDetails(RequestDetails $requestDetails)
   {
@@ -103,7 +113,10 @@ class TokenPayloadExternal extends \Google\Model
     return $this->requestDetails;
   }
   /**
-   * @param TestingDetails
+   * Indicates that this payload is generated for testing purposes and contains
+   * any additional data that is linked with testing status.
+   *
+   * @param TestingDetails $testingDetails
    */
   public function setTestingDetails(TestingDetails $testingDetails)
   {

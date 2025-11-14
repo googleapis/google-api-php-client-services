@@ -20,20 +20,29 @@ namespace Google\Service\PlayIntegrity;
 class PcRequestDetails extends \Google\Model
 {
   /**
+   * Request hash that was provided in the request.
+   *
    * @var string
    */
   public $requestHash;
   /**
+   * Required. Application package name this attestation was requested for.
+   * Note: This field makes no guarantees or promises on the caller integrity.
+   *
    * @var string
    */
   public $requestPackageName;
   /**
+   * Required. Timestamp, of the integrity application request.
+   *
    * @var string
    */
   public $requestTime;
 
   /**
-   * @param string
+   * Request hash that was provided in the request.
+   *
+   * @param string $requestHash
    */
   public function setRequestHash($requestHash)
   {
@@ -47,7 +56,10 @@ class PcRequestDetails extends \Google\Model
     return $this->requestHash;
   }
   /**
-   * @param string
+   * Required. Application package name this attestation was requested for.
+   * Note: This field makes no guarantees or promises on the caller integrity.
+   *
+   * @param string $requestPackageName
    */
   public function setRequestPackageName($requestPackageName)
   {
@@ -61,7 +73,9 @@ class PcRequestDetails extends \Google\Model
     return $this->requestPackageName;
   }
   /**
-   * @param string
+   * Required. Timestamp, of the integrity application request.
+   *
+   * @param string $requestTime
    */
   public function setRequestTime($requestTime)
   {

@@ -19,15 +19,48 @@ namespace Google\Service\PlayIntegrity;
 
 class EnvironmentDetails extends \Google\Model
 {
+  /**
+   * Play Protect verdict has not been set.
+   */
+  public const PLAY_PROTECT_VERDICT_PLAY_PROTECT_VERDICT_UNSPECIFIED = 'PLAY_PROTECT_VERDICT_UNSPECIFIED';
+  /**
+   * Play Protect state was not evaluated. Device may not be trusted.
+   */
+  public const PLAY_PROTECT_VERDICT_UNEVALUATED = 'UNEVALUATED';
+  /**
+   * Play Protect is on and no issues found.
+   */
+  public const PLAY_PROTECT_VERDICT_NO_ISSUES = 'NO_ISSUES';
+  /**
+   * Play Protect is on but no scan has been performed yet. The device or Play
+   * Store app may have been reset.
+   */
+  public const PLAY_PROTECT_VERDICT_NO_DATA = 'NO_DATA';
+  /**
+   * Play Protect is on and warnings found.
+   */
+  public const PLAY_PROTECT_VERDICT_MEDIUM_RISK = 'MEDIUM_RISK';
+  /**
+   * Play Protect is on and high severity issues found.
+   */
+  public const PLAY_PROTECT_VERDICT_HIGH_RISK = 'HIGH_RISK';
+  /**
+   * Play Protect is turned off. Turn on Play Protect.
+   */
+  public const PLAY_PROTECT_VERDICT_POSSIBLE_RISK = 'POSSIBLE_RISK';
   protected $appAccessRiskVerdictType = AppAccessRiskVerdict::class;
   protected $appAccessRiskVerdictDataType = '';
   /**
+   * The evaluation of Play Protect verdict.
+   *
    * @var string
    */
   public $playProtectVerdict;
 
   /**
-   * @param AppAccessRiskVerdict
+   * The evaluation of the App Access Risk verdicts.
+   *
+   * @param AppAccessRiskVerdict $appAccessRiskVerdict
    */
   public function setAppAccessRiskVerdict(AppAccessRiskVerdict $appAccessRiskVerdict)
   {
@@ -41,14 +74,19 @@ class EnvironmentDetails extends \Google\Model
     return $this->appAccessRiskVerdict;
   }
   /**
-   * @param string
+   * The evaluation of Play Protect verdict.
+   *
+   * Accepted values: PLAY_PROTECT_VERDICT_UNSPECIFIED, UNEVALUATED, NO_ISSUES,
+   * NO_DATA, MEDIUM_RISK, HIGH_RISK, POSSIBLE_RISK
+   *
+   * @param self::PLAY_PROTECT_VERDICT_* $playProtectVerdict
    */
   public function setPlayProtectVerdict($playProtectVerdict)
   {
     $this->playProtectVerdict = $playProtectVerdict;
   }
   /**
-   * @return string
+   * @return self::PLAY_PROTECT_VERDICT_*
    */
   public function getPlayProtectVerdict()
   {

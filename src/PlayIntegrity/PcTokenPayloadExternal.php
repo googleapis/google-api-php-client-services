@@ -29,7 +29,9 @@ class PcTokenPayloadExternal extends \Google\Model
   protected $testingDetailsDataType = '';
 
   /**
-   * @param PcAccountDetails
+   * Details about the account information such as the licensing status.
+   *
+   * @param PcAccountDetails $accountDetails
    */
   public function setAccountDetails(PcAccountDetails $accountDetails)
   {
@@ -43,7 +45,9 @@ class PcTokenPayloadExternal extends \Google\Model
     return $this->accountDetails;
   }
   /**
-   * @param PcDeviceIntegrity
+   * Required. Details about the device integrity.
+   *
+   * @param PcDeviceIntegrity $deviceIntegrity
    */
   public function setDeviceIntegrity(PcDeviceIntegrity $deviceIntegrity)
   {
@@ -57,7 +61,9 @@ class PcTokenPayloadExternal extends \Google\Model
     return $this->deviceIntegrity;
   }
   /**
-   * @param PcRequestDetails
+   * Required. Details about the integrity request.
+   *
+   * @param PcRequestDetails $requestDetails
    */
   public function setRequestDetails(PcRequestDetails $requestDetails)
   {
@@ -71,7 +77,10 @@ class PcTokenPayloadExternal extends \Google\Model
     return $this->requestDetails;
   }
   /**
-   * @param PcTestingDetails
+   * Indicates that this payload is generated for testing purposes and contains
+   * any additional data that is linked with testing status.
+   *
+   * @param PcTestingDetails $testingDetails
    */
   public function setTestingDetails(PcTestingDetails $testingDetails)
   {

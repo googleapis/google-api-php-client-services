@@ -21,12 +21,16 @@ class PcDeviceIntegrity extends \Google\Collection
 {
   protected $collection_key = 'deviceRecognitionVerdict';
   /**
+   * Details about the integrity of the device the app is running on.
+   *
    * @var string[]
    */
   public $deviceRecognitionVerdict;
 
   /**
-   * @param string[]
+   * Details about the integrity of the device the app is running on.
+   *
+   * @param string[] $deviceRecognitionVerdict
    */
   public function setDeviceRecognitionVerdict($deviceRecognitionVerdict)
   {

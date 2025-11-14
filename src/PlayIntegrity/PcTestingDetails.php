@@ -20,12 +20,18 @@ namespace Google\Service\PlayIntegrity;
 class PcTestingDetails extends \Google\Model
 {
   /**
+   * Indicates that the information contained in this payload is a testing
+   * response that is statically overridden for a tester.
+   *
    * @var bool
    */
   public $isTestingResponse;
 
   /**
-   * @param bool
+   * Indicates that the information contained in this payload is a testing
+   * response that is statically overridden for a tester.
+   *
+   * @param bool $isTestingResponse
    */
   public function setIsTestingResponse($isTestingResponse)
   {

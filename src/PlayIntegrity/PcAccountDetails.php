@@ -20,19 +20,44 @@ namespace Google\Service\PlayIntegrity;
 class PcAccountDetails extends \Google\Model
 {
   /**
+   * Play does not have sufficient information to evaluate licensing details
+   */
+  public const APP_LICENSING_VERDICT_UNKNOWN = 'UNKNOWN';
+  /**
+   * The user has a valid license to use the app.
+   */
+  public const APP_LICENSING_VERDICT_LICENSED = 'LICENSED';
+  /**
+   * The user does not have a valid license to use the app.
+   */
+  public const APP_LICENSING_VERDICT_UNLICENSED = 'UNLICENSED';
+  /**
+   * Licensing details were not evaluated since a necessary requirement was
+   * missed.
+   */
+  public const APP_LICENSING_VERDICT_UNEVALUATED = 'UNEVALUATED';
+  /**
+   * Required. Details about the licensing status of the user for the app in the
+   * scope.
+   *
    * @var string
    */
   public $appLicensingVerdict;
 
   /**
-   * @param string
+   * Required. Details about the licensing status of the user for the app in the
+   * scope.
+   *
+   * Accepted values: UNKNOWN, LICENSED, UNLICENSED, UNEVALUATED
+   *
+   * @param self::APP_LICENSING_VERDICT_* $appLicensingVerdict
    */
   public function setAppLicensingVerdict($appLicensingVerdict)
   {
     $this->appLicensingVerdict = $appLicensingVerdict;
   }
   /**
-   * @return string
+   * @return self::APP_LICENSING_VERDICT_*
    */
   public function getAppLicensingVerdict()
   {

@@ -21,12 +21,16 @@ class AppAccessRiskVerdict extends \Google\Collection
 {
   protected $collection_key = 'appsDetected';
   /**
+   * List of detected app types signalled for App Access Risk.
+   *
    * @var string[]
    */
   public $appsDetected;
 
   /**
-   * @param string[]
+   * List of detected app types signalled for App Access Risk.
+   *
+   * @param string[] $appsDetected
    */
   public function setAppsDetected($appsDetected)
   {

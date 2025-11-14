@@ -23,7 +23,9 @@ class DecodePcIntegrityTokenResponse extends \Google\Model
   protected $tokenPayloadExternalDataType = '';
 
   /**
-   * @param PcTokenPayloadExternal
+   * Plain token payload generated from the decoded integrity token.
+   *
+   * @param PcTokenPayloadExternal $tokenPayloadExternal
    */
   public function setTokenPayloadExternal(PcTokenPayloadExternal $tokenPayloadExternal)
   {
