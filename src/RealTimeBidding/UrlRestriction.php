@@ -19,21 +19,71 @@ namespace Google\Service\RealTimeBidding;
 
 class UrlRestriction extends \Google\Model
 {
+  /**
+   * Default value that should never be used.
+   */
+  public const RESTRICTION_TYPE_RESTRICTION_TYPE_UNSPECIFIED = 'RESTRICTION_TYPE_UNSPECIFIED';
+  /**
+   * The tag URL (as recorded by the pixel callback) contains the specified URL.
+   */
+  public const RESTRICTION_TYPE_CONTAINS = 'CONTAINS';
+  /**
+   * The tag URL (as recorded by the pixel callback) exactly matches the
+   * specified URL.
+   */
+  public const RESTRICTION_TYPE_EQUALS = 'EQUALS';
+  /**
+   * The tag URL (as recorded by the pixel callback) starts with the specified
+   * URL.
+   */
+  public const RESTRICTION_TYPE_STARTS_WITH = 'STARTS_WITH';
+  /**
+   * The tag URL (as recorded by the pixel callback) ends with the specified
+   * URL.
+   */
+  public const RESTRICTION_TYPE_ENDS_WITH = 'ENDS_WITH';
+  /**
+   * The tag URL (as recorded by the pixel callback) does not equal the
+   * specified URL.
+   */
+  public const RESTRICTION_TYPE_DOES_NOT_EQUAL = 'DOES_NOT_EQUAL';
+  /**
+   * The tag URL (as recorded by the pixel callback) does not contain the
+   * specified URL.
+   */
+  public const RESTRICTION_TYPE_DOES_NOT_CONTAIN = 'DOES_NOT_CONTAIN';
+  /**
+   * The tag URL (as recorded by the pixel callback) does not start with the
+   * specified URL.
+   */
+  public const RESTRICTION_TYPE_DOES_NOT_START_WITH = 'DOES_NOT_START_WITH';
+  /**
+   * The tag URL (as recorded by the pixel callback) does not end with the
+   * specified URL.
+   */
+  public const RESTRICTION_TYPE_DOES_NOT_END_WITH = 'DOES_NOT_END_WITH';
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
   /**
+   * The restriction type for the specified URL.
+   *
    * @var string
    */
   public $restrictionType;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
   /**
+   * Required. The URL to use for applying the restriction on the user list.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param Date
+   * End date (if specified) of the URL restriction. End date should be later
+   * than the start date for the date range to be valid.
+   *
+   * @param Date $endDate
    */
   public function setEndDate(Date $endDate)
   {
@@ -47,21 +97,29 @@ class UrlRestriction extends \Google\Model
     return $this->endDate;
   }
   /**
-   * @param string
+   * The restriction type for the specified URL.
+   *
+   * Accepted values: RESTRICTION_TYPE_UNSPECIFIED, CONTAINS, EQUALS,
+   * STARTS_WITH, ENDS_WITH, DOES_NOT_EQUAL, DOES_NOT_CONTAIN,
+   * DOES_NOT_START_WITH, DOES_NOT_END_WITH
+   *
+   * @param self::RESTRICTION_TYPE_* $restrictionType
    */
   public function setRestrictionType($restrictionType)
   {
     $this->restrictionType = $restrictionType;
   }
   /**
-   * @return string
+   * @return self::RESTRICTION_TYPE_*
    */
   public function getRestrictionType()
   {
     return $this->restrictionType;
   }
   /**
-   * @param Date
+   * Start date (if specified) of the URL restriction.
+   *
+   * @param Date $startDate
    */
   public function setStartDate(Date $startDate)
   {
@@ -75,7 +133,9 @@ class UrlRestriction extends \Google\Model
     return $this->startDate;
   }
   /**
-   * @param string
+   * Required. The URL to use for applying the restriction on the user list.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

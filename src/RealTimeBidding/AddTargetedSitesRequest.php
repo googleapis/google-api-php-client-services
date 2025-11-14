@@ -19,18 +19,45 @@ namespace Google\Service\RealTimeBidding;
 
 class AddTargetedSitesRequest extends \Google\Collection
 {
+  /**
+   * Placeholder for undefined targeting mode.
+   */
+  public const TARGETING_MODE_TARGETING_MODE_UNSPECIFIED = 'TARGETING_MODE_UNSPECIFIED';
+  /**
+   * The inclusive list type. Inventory must match an item in this list to be
+   * targeted.
+   */
+  public const TARGETING_MODE_INCLUSIVE = 'INCLUSIVE';
+  /**
+   * The exclusive list type. Inventory must not match any item in this list to
+   * be targeted.
+   */
+  public const TARGETING_MODE_EXCLUSIVE = 'EXCLUSIVE';
   protected $collection_key = 'sites';
   /**
+   * A list of site URLs to target in the pretargeting configuration. These
+   * values will be added to the list of targeted URLs in
+   * PretargetingConfig.webTargeting.values.
+   *
    * @var string[]
    */
   public $sites;
   /**
+   * Required. The targeting mode that should be applied to the list of site
+   * URLs. If there are existing targeted sites, must be equal to the existing
+   * PretargetingConfig.webTargeting.targetingMode or a 400 bad request error
+   * will be returned.
+   *
    * @var string
    */
   public $targetingMode;
 
   /**
-   * @param string[]
+   * A list of site URLs to target in the pretargeting configuration. These
+   * values will be added to the list of targeted URLs in
+   * PretargetingConfig.webTargeting.values.
+   *
+   * @param string[] $sites
    */
   public function setSites($sites)
   {
@@ -44,14 +71,21 @@ class AddTargetedSitesRequest extends \Google\Collection
     return $this->sites;
   }
   /**
-   * @param string
+   * Required. The targeting mode that should be applied to the list of site
+   * URLs. If there are existing targeted sites, must be equal to the existing
+   * PretargetingConfig.webTargeting.targetingMode or a 400 bad request error
+   * will be returned.
+   *
+   * Accepted values: TARGETING_MODE_UNSPECIFIED, INCLUSIVE, EXCLUSIVE
+   *
+   * @param self::TARGETING_MODE_* $targetingMode
    */
   public function setTargetingMode($targetingMode)
   {
     $this->targetingMode = $targetingMode;
   }
   /**
-   * @return string
+   * @return self::TARGETING_MODE_*
    */
   public function getTargetingMode()
   {

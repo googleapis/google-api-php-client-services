@@ -22,16 +22,24 @@ class VideoContent extends \Google\Model
   protected $videoMetadataType = VideoMetadata::class;
   protected $videoMetadataDataType = '';
   /**
+   * The URL to fetch a video ad. The URL should return an XML response that
+   * conforms to the VAST 2.0, 3.0 or 4.x standard.
+   *
    * @var string
    */
   public $videoUrl;
   /**
+   * The contents of a VAST document for a video ad. This document should
+   * conform to the VAST 2.0, 3.0, or 4.x standard.
+   *
    * @var string
    */
   public $videoVastXml;
 
   /**
-   * @param VideoMetadata
+   * Output only. Video metadata.
+   *
+   * @param VideoMetadata $videoMetadata
    */
   public function setVideoMetadata(VideoMetadata $videoMetadata)
   {
@@ -45,7 +53,10 @@ class VideoContent extends \Google\Model
     return $this->videoMetadata;
   }
   /**
-   * @param string
+   * The URL to fetch a video ad. The URL should return an XML response that
+   * conforms to the VAST 2.0, 3.0 or 4.x standard.
+   *
+   * @param string $videoUrl
    */
   public function setVideoUrl($videoUrl)
   {
@@ -59,7 +70,10 @@ class VideoContent extends \Google\Model
     return $this->videoUrl;
   }
   /**
-   * @param string
+   * The contents of a VAST document for a video ad. This document should
+   * conform to the VAST 2.0, 3.0, or 4.x standard.
+   *
+   * @param string $videoVastXml
    */
   public function setVideoVastXml($videoVastXml)
   {

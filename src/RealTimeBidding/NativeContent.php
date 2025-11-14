@@ -20,28 +20,40 @@ namespace Google\Service\RealTimeBidding;
 class NativeContent extends \Google\Model
 {
   /**
+   * The name of the advertiser or sponsor, to be displayed in the ad creative.
+   *
    * @var string
    */
   public $advertiserName;
   protected $appIconType = Image::class;
   protected $appIconDataType = '';
   /**
+   * A long description of the ad.
+   *
    * @var string
    */
   public $body;
   /**
+   * A label for the button that the user is supposed to click.
+   *
    * @var string
    */
   public $callToAction;
   /**
+   * The URL that the browser/SDK will load when the user clicks the ad.
+   *
    * @var string
    */
   public $clickLinkUrl;
   /**
+   * The URL to use for click tracking.
+   *
    * @var string
    */
   public $clickTrackingUrl;
   /**
+   * A short title for the ad.
+   *
    * @var string
    */
   public $headline;
@@ -50,21 +62,34 @@ class NativeContent extends \Google\Model
   protected $logoType = Image::class;
   protected $logoDataType = '';
   /**
+   * The price of the promoted app including currency info.
+   *
    * @var string
    */
   public $priceDisplayText;
+  /**
+   * The app rating in the app store. Must be in the range [0-5].
+   *
+   * @var 
+   */
   public $starRating;
   /**
+   * The URL to fetch a native video ad.
+   *
    * @var string
    */
   public $videoUrl;
   /**
+   * The contents of a VAST document for a native video ad.
+   *
    * @var string
    */
   public $videoVastXml;
 
   /**
-   * @param string
+   * The name of the advertiser or sponsor, to be displayed in the ad creative.
+   *
+   * @param string $advertiserName
    */
   public function setAdvertiserName($advertiserName)
   {
@@ -78,7 +103,9 @@ class NativeContent extends \Google\Model
     return $this->advertiserName;
   }
   /**
-   * @param Image
+   * The app icon, for app download ads.
+   *
+   * @param Image $appIcon
    */
   public function setAppIcon(Image $appIcon)
   {
@@ -92,7 +119,9 @@ class NativeContent extends \Google\Model
     return $this->appIcon;
   }
   /**
-   * @param string
+   * A long description of the ad.
+   *
+   * @param string $body
    */
   public function setBody($body)
   {
@@ -106,7 +135,9 @@ class NativeContent extends \Google\Model
     return $this->body;
   }
   /**
-   * @param string
+   * A label for the button that the user is supposed to click.
+   *
+   * @param string $callToAction
    */
   public function setCallToAction($callToAction)
   {
@@ -120,7 +151,9 @@ class NativeContent extends \Google\Model
     return $this->callToAction;
   }
   /**
-   * @param string
+   * The URL that the browser/SDK will load when the user clicks the ad.
+   *
+   * @param string $clickLinkUrl
    */
   public function setClickLinkUrl($clickLinkUrl)
   {
@@ -134,7 +167,9 @@ class NativeContent extends \Google\Model
     return $this->clickLinkUrl;
   }
   /**
-   * @param string
+   * The URL to use for click tracking.
+   *
+   * @param string $clickTrackingUrl
    */
   public function setClickTrackingUrl($clickTrackingUrl)
   {
@@ -148,7 +183,9 @@ class NativeContent extends \Google\Model
     return $this->clickTrackingUrl;
   }
   /**
-   * @param string
+   * A short title for the ad.
+   *
+   * @param string $headline
    */
   public function setHeadline($headline)
   {
@@ -162,7 +199,9 @@ class NativeContent extends \Google\Model
     return $this->headline;
   }
   /**
-   * @param Image
+   * A large image.
+   *
+   * @param Image $image
    */
   public function setImage(Image $image)
   {
@@ -176,7 +215,9 @@ class NativeContent extends \Google\Model
     return $this->image;
   }
   /**
-   * @param Image
+   * A smaller image, for the advertiser's logo.
+   *
+   * @param Image $logo
    */
   public function setLogo(Image $logo)
   {
@@ -190,7 +231,9 @@ class NativeContent extends \Google\Model
     return $this->logo;
   }
   /**
-   * @param string
+   * The price of the promoted app including currency info.
+   *
+   * @param string $priceDisplayText
    */
   public function setPriceDisplayText($priceDisplayText)
   {
@@ -212,7 +255,9 @@ class NativeContent extends \Google\Model
     return $this->starRating;
   }
   /**
-   * @param string
+   * The URL to fetch a native video ad.
+   *
+   * @param string $videoUrl
    */
   public function setVideoUrl($videoUrl)
   {
@@ -226,7 +271,9 @@ class NativeContent extends \Google\Model
     return $this->videoUrl;
   }
   /**
-   * @param string
+   * The contents of a VAST document for a native video ad.
+   *
+   * @param string $videoVastXml
    */
   public function setVideoVastXml($videoVastXml)
   {
