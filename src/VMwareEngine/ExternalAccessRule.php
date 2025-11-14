@@ -19,72 +19,150 @@ namespace Google\Service\VMwareEngine;
 
 class ExternalAccessRule extends \Google\Collection
 {
+  /**
+   * Defaults to allow.
+   */
+  public const ACTION_ACTION_UNSPECIFIED = 'ACTION_UNSPECIFIED';
+  /**
+   * Allows connections that match the other specified components.
+   */
+  public const ACTION_ALLOW = 'ALLOW';
+  /**
+   * Blocks connections that match the other specified components.
+   */
+  public const ACTION_DENY = 'DENY';
+  /**
+   * The default value. This value is used if the state is omitted.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The rule is ready.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The rule is being created.
+   */
+  public const STATE_CREATING = 'CREATING';
+  /**
+   * The rule is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
+  /**
+   * The rule is being deleted.
+   */
+  public const STATE_DELETING = 'DELETING';
   protected $collection_key = 'sourcePorts';
   /**
+   * The action that the external access rule performs.
+   *
    * @var string
    */
   public $action;
   /**
+   * Output only. Creation time of this resource.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * User-provided description for this external access rule.
+   *
    * @var string
    */
   public $description;
   protected $destinationIpRangesType = IpRange::class;
   protected $destinationIpRangesDataType = 'array';
   /**
+   * A list of destination ports to which the external access rule applies. This
+   * field is only applicable for the UDP or TCP protocol. Each entry must be
+   * either an integer or a range. For example: `["22"]`, `["80","443"]`, or
+   * `["12345-12349"]`. To match all destination ports, specify `["0-65535"]`.
+   *
    * @var string[]
    */
   public $destinationPorts;
   /**
+   * The IP protocol to which the external access rule applies. This value can
+   * be one of the following three protocol strings (not case-sensitive): `tcp`,
+   * `udp`, or `icmp`.
+   *
    * @var string
    */
   public $ipProtocol;
   /**
+   * Output only. The resource name of this external access rule. Resource names
+   * are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1/networkPolicies/my-
+   * policy/externalAccessRules/my-rule`
+   *
    * @var string
    */
   public $name;
   /**
+   * External access rule priority, which determines the external access rule to
+   * use when multiple rules apply. If multiple rules have the same priority,
+   * their ordering is non-deterministic. If specific ordering is required,
+   * assign unique priorities to enforce such ordering. The external access rule
+   * priority is an integer from 100 to 4096, both inclusive. Lower integers
+   * indicate higher precedence. For example, a rule with priority `100` has
+   * higher precedence than a rule with priority `101`.
+   *
    * @var int
    */
   public $priority;
   protected $sourceIpRangesType = IpRange::class;
   protected $sourceIpRangesDataType = 'array';
   /**
+   * A list of source ports to which the external access rule applies. This
+   * field is only applicable for the UDP or TCP protocol. Each entry must be
+   * either an integer or a range. For example: `["22"]`, `["80","443"]`, or
+   * `["12345-12349"]`. To match all source ports, specify `["0-65535"]`.
+   *
    * @var string[]
    */
   public $sourcePorts;
   /**
+   * Output only. The state of the resource.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. System-generated unique identifier for the resource.
+   *
    * @var string
    */
   public $uid;
   /**
+   * Output only. Last update time of this resource.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * The action that the external access rule performs.
+   *
+   * Accepted values: ACTION_UNSPECIFIED, ALLOW, DENY
+   *
+   * @param self::ACTION_* $action
    */
   public function setAction($action)
   {
     $this->action = $action;
   }
   /**
-   * @return string
+   * @return self::ACTION_*
    */
   public function getAction()
   {
     return $this->action;
   }
   /**
-   * @param string
+   * Output only. Creation time of this resource.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -98,7 +176,9 @@ class ExternalAccessRule extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * User-provided description for this external access rule.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -112,7 +192,15 @@ class ExternalAccessRule extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param IpRange[]
+   * If destination ranges are specified, the external access rule applies only
+   * to the traffic that has a destination IP address in these ranges. The
+   * specified IP addresses must have reserved external IP addresses in the
+   * scope of the parent network policy. To match all external IP addresses in
+   * the scope of the parent network policy, specify `0.0.0.0/0`. To match a
+   * specific external IP address, specify it using the
+   * `IpRange.external_address` property.
+   *
+   * @param IpRange[] $destinationIpRanges
    */
   public function setDestinationIpRanges($destinationIpRanges)
   {
@@ -126,7 +214,12 @@ class ExternalAccessRule extends \Google\Collection
     return $this->destinationIpRanges;
   }
   /**
-   * @param string[]
+   * A list of destination ports to which the external access rule applies. This
+   * field is only applicable for the UDP or TCP protocol. Each entry must be
+   * either an integer or a range. For example: `["22"]`, `["80","443"]`, or
+   * `["12345-12349"]`. To match all destination ports, specify `["0-65535"]`.
+   *
+   * @param string[] $destinationPorts
    */
   public function setDestinationPorts($destinationPorts)
   {
@@ -140,7 +233,11 @@ class ExternalAccessRule extends \Google\Collection
     return $this->destinationPorts;
   }
   /**
-   * @param string
+   * The IP protocol to which the external access rule applies. This value can
+   * be one of the following three protocol strings (not case-sensitive): `tcp`,
+   * `udp`, or `icmp`.
+   *
+   * @param string $ipProtocol
    */
   public function setIpProtocol($ipProtocol)
   {
@@ -154,7 +251,13 @@ class ExternalAccessRule extends \Google\Collection
     return $this->ipProtocol;
   }
   /**
-   * @param string
+   * Output only. The resource name of this external access rule. Resource names
+   * are schemeless URIs that follow the conventions in
+   * https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1/networkPolicies/my-
+   * policy/externalAccessRules/my-rule`
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -168,7 +271,15 @@ class ExternalAccessRule extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param int
+   * External access rule priority, which determines the external access rule to
+   * use when multiple rules apply. If multiple rules have the same priority,
+   * their ordering is non-deterministic. If specific ordering is required,
+   * assign unique priorities to enforce such ordering. The external access rule
+   * priority is an integer from 100 to 4096, both inclusive. Lower integers
+   * indicate higher precedence. For example, a rule with priority `100` has
+   * higher precedence than a rule with priority `101`.
+   *
+   * @param int $priority
    */
   public function setPriority($priority)
   {
@@ -182,7 +293,14 @@ class ExternalAccessRule extends \Google\Collection
     return $this->priority;
   }
   /**
-   * @param IpRange[]
+   * If source ranges are specified, the external access rule applies only to
+   * traffic that has a source IP address in these ranges. These ranges can
+   * either be expressed in the CIDR format or as an IP address. As only inbound
+   * rules are supported, `ExternalAddress` resources cannot be the source IP
+   * addresses of an external access rule. To match all source addresses,
+   * specify `0.0.0.0/0`.
+   *
+   * @param IpRange[] $sourceIpRanges
    */
   public function setSourceIpRanges($sourceIpRanges)
   {
@@ -196,7 +314,12 @@ class ExternalAccessRule extends \Google\Collection
     return $this->sourceIpRanges;
   }
   /**
-   * @param string[]
+   * A list of source ports to which the external access rule applies. This
+   * field is only applicable for the UDP or TCP protocol. Each entry must be
+   * either an integer or a range. For example: `["22"]`, `["80","443"]`, or
+   * `["12345-12349"]`. To match all source ports, specify `["0-65535"]`.
+   *
+   * @param string[] $sourcePorts
    */
   public function setSourcePorts($sourcePorts)
   {
@@ -210,21 +333,27 @@ class ExternalAccessRule extends \Google\Collection
     return $this->sourcePorts;
   }
   /**
-   * @param string
+   * Output only. The state of the resource.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, CREATING, UPDATING, DELETING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. System-generated unique identifier for the resource.
+   *
+   * @param string $uid
    */
   public function setUid($uid)
   {
@@ -238,7 +367,9 @@ class ExternalAccessRule extends \Google\Collection
     return $this->uid;
   }
   /**
-   * @param string
+   * Output only. Last update time of this resource.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

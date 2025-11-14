@@ -20,16 +20,45 @@ namespace Google\Service\VMwareEngine;
 class VpcNetwork extends \Google\Model
 {
   /**
+   * The default value. This value should never be used.
+   */
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * VPC network that will be peered with a consumer VPC network or the intranet
+   * VPC of another VMware Engine network. Access a private cloud through
+   * Compute Engine VMs on a peered VPC network or an on-premises resource
+   * connected to a peered consumer VPC network.
+   */
+  public const TYPE_INTRANET = 'INTRANET';
+  /**
+   * VPC network used for internet access to and from a private cloud.
+   */
+  public const TYPE_INTERNET = 'INTERNET';
+  /**
+   * VPC network used for access to Google Cloud services like Cloud Storage.
+   */
+  public const TYPE_GOOGLE_CLOUD = 'GOOGLE_CLOUD';
+  /**
+   * Output only. The relative resource name of the service VPC network this
+   * VMware Engine network is attached to. For example:
+   * `projects/123123/global/networks/my-network`
+   *
    * @var string
    */
   public $network;
   /**
+   * Output only. Type of VPC network (INTRANET, INTERNET, or GOOGLE_CLOUD)
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Output only. The relative resource name of the service VPC network this
+   * VMware Engine network is attached to. For example:
+   * `projects/123123/global/networks/my-network`
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -43,14 +72,18 @@ class VpcNetwork extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * Output only. Type of VPC network (INTRANET, INTERNET, or GOOGLE_CLOUD)
+   *
+   * Accepted values: TYPE_UNSPECIFIED, INTRANET, INTERNET, GOOGLE_CLOUD
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

@@ -23,16 +23,23 @@ class ListAnnouncementsResponse extends \Google\Collection
   protected $announcementsType = Announcement::class;
   protected $announcementsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * list of unreachable locations
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param Announcement[]
+   * A list of announcement runs.
+   *
+   * @param Announcement[] $announcements
    */
   public function setAnnouncements($announcements)
   {
@@ -46,7 +53,10 @@ class ListAnnouncementsResponse extends \Google\Collection
     return $this->announcements;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListAnnouncementsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * list of unreachable locations
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

@@ -20,12 +20,18 @@ namespace Google\Service\VMwareEngine;
 class UndeletePrivateCloudRequest extends \Google\Model
 {
   /**
+   * Optional. The request ID must be a valid UUID with the exception that zero
+   * UUID is not supported (00000000-0000-0000-0000-000000000000).
+   *
    * @var string
    */
   public $requestId;
 
   /**
-   * @param string
+   * Optional. The request ID must be a valid UUID with the exception that zero
+   * UUID is not supported (00000000-0000-0000-0000-000000000000).
+   *
+   * @param string $requestId
    */
   public function setRequestId($requestId)
   {

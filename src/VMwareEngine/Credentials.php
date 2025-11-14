@@ -20,16 +20,22 @@ namespace Google\Service\VMwareEngine;
 class Credentials extends \Google\Model
 {
   /**
+   * Initial password.
+   *
    * @var string
    */
   public $password;
   /**
+   * Initial username.
+   *
    * @var string
    */
   public $username;
 
   /**
-   * @param string
+   * Initial password.
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -43,7 +49,9 @@ class Credentials extends \Google\Model
     return $this->password;
   }
   /**
-   * @param string
+   * Initial username.
+   *
+   * @param string $username
    */
   public function setUsername($username)
   {
