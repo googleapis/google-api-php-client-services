@@ -24,12 +24,17 @@ class Standard extends \Google\Model
   protected $predeployType = Predeploy::class;
   protected $predeployDataType = '';
   /**
+   * Optional. Whether to verify a deployment via `skaffold verify`.
+   *
    * @var bool
    */
   public $verify;
 
   /**
-   * @param Postdeploy
+   * Optional. Configuration for the postdeploy job. If this is not configured,
+   * the postdeploy job will not be present.
+   *
+   * @param Postdeploy $postdeploy
    */
   public function setPostdeploy(Postdeploy $postdeploy)
   {
@@ -43,7 +48,10 @@ class Standard extends \Google\Model
     return $this->postdeploy;
   }
   /**
-   * @param Predeploy
+   * Optional. Configuration for the predeploy job. If this is not configured,
+   * the predeploy job will not be present.
+   *
+   * @param Predeploy $predeploy
    */
   public function setPredeploy(Predeploy $predeploy)
   {
@@ -57,7 +65,9 @@ class Standard extends \Google\Model
     return $this->predeploy;
   }
   /**
-   * @param bool
+   * Optional. Whether to verify a deployment via `skaffold verify`.
+   *
+   * @param bool $verify
    */
   public function setVerify($verify)
   {

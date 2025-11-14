@@ -22,12 +22,17 @@ class RollbackTargetConfig extends \Google\Model
   protected $rolloutType = Rollout::class;
   protected $rolloutDataType = '';
   /**
+   * Optional. The starting phase ID for the `Rollout`. If unspecified, the
+   * `Rollout` will start in the stable phase.
+   *
    * @var string
    */
   public $startingPhaseId;
 
   /**
-   * @param Rollout
+   * Optional. The rollback `Rollout` to create.
+   *
+   * @param Rollout $rollout
    */
   public function setRollout(Rollout $rollout)
   {
@@ -41,7 +46,10 @@ class RollbackTargetConfig extends \Google\Model
     return $this->rollout;
   }
   /**
-   * @param string
+   * Optional. The starting phase ID for the `Rollout`. If unspecified, the
+   * `Rollout` will start in the stable phase.
+   *
+   * @param string $startingPhaseId
    */
   public function setStartingPhaseId($startingPhaseId)
   {

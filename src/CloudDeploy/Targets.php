@@ -20,16 +20,22 @@ namespace Google\Service\CloudDeploy;
 class Targets extends \Google\Model
 {
   /**
+   * Optional. The destination target ID.
+   *
    * @var string
    */
   public $destinationTargetId;
   /**
+   * Optional. The source target ID.
+   *
    * @var string
    */
   public $sourceTargetId;
 
   /**
-   * @param string
+   * Optional. The destination target ID.
+   *
+   * @param string $destinationTargetId
    */
   public function setDestinationTargetId($destinationTargetId)
   {
@@ -43,7 +49,9 @@ class Targets extends \Google\Model
     return $this->destinationTargetId;
   }
   /**
-   * @param string
+   * Optional. The source target ID.
+   *
+   * @param string $sourceTargetId
    */
   public function setSourceTargetId($sourceTargetId)
   {
