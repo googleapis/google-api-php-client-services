@@ -21,10 +21,21 @@ class GoogleCloudDialogflowCxV3RolloutConfig extends \Google\Collection
 {
   protected $collection_key = 'rolloutSteps';
   /**
+   * The conditions that are used to evaluate the failure of a rollout step. If
+   * not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR
+   * average_turn_count < 3". See the [conditions reference](https://cloud.googl
+   * e.com/dialogflow/cx/docs/reference/condition).
+   *
    * @var string
    */
   public $failureCondition;
   /**
+   * The conditions that are used to evaluate the success of a rollout step. If
+   * not specified, all rollout steps will proceed to the next one unless
+   * failure conditions are met. E.g. "containment_rate > 60% AND callback_rate
+   * < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/
+   * cx/docs/reference/condition).
+   *
    * @var string
    */
   public $rolloutCondition;
@@ -32,7 +43,12 @@ class GoogleCloudDialogflowCxV3RolloutConfig extends \Google\Collection
   protected $rolloutStepsDataType = 'array';
 
   /**
-   * @param string
+   * The conditions that are used to evaluate the failure of a rollout step. If
+   * not specified, no rollout steps will fail. E.g. "containment_rate < 10% OR
+   * average_turn_count < 3". See the [conditions reference](https://cloud.googl
+   * e.com/dialogflow/cx/docs/reference/condition).
+   *
+   * @param string $failureCondition
    */
   public function setFailureCondition($failureCondition)
   {
@@ -46,7 +62,13 @@ class GoogleCloudDialogflowCxV3RolloutConfig extends \Google\Collection
     return $this->failureCondition;
   }
   /**
-   * @param string
+   * The conditions that are used to evaluate the success of a rollout step. If
+   * not specified, all rollout steps will proceed to the next one unless
+   * failure conditions are met. E.g. "containment_rate > 60% AND callback_rate
+   * < 20%". See the [conditions reference](https://cloud.google.com/dialogflow/
+   * cx/docs/reference/condition).
+   *
+   * @param string $rolloutCondition
    */
   public function setRolloutCondition($rolloutCondition)
   {
@@ -60,7 +82,10 @@ class GoogleCloudDialogflowCxV3RolloutConfig extends \Google\Collection
     return $this->rolloutCondition;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3RolloutConfigRolloutStep[]
+   * Steps to roll out a flow version. Steps should be sorted by percentage in
+   * ascending order.
+   *
+   * @param GoogleCloudDialogflowCxV3RolloutConfigRolloutStep[] $rolloutSteps
    */
   public function setRolloutSteps($rolloutSteps)
   {

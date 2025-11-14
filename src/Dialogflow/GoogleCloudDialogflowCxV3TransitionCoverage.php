@@ -21,6 +21,8 @@ class GoogleCloudDialogflowCxV3TransitionCoverage extends \Google\Collection
 {
   protected $collection_key = 'transitions';
   /**
+   * The percent of transitions in the agent that are covered.
+   *
    * @var float
    */
   public $coverageScore;
@@ -28,7 +30,9 @@ class GoogleCloudDialogflowCxV3TransitionCoverage extends \Google\Collection
   protected $transitionsDataType = 'array';
 
   /**
-   * @param float
+   * The percent of transitions in the agent that are covered.
+   *
+   * @param float $coverageScore
    */
   public function setCoverageScore($coverageScore)
   {
@@ -42,7 +46,9 @@ class GoogleCloudDialogflowCxV3TransitionCoverage extends \Google\Collection
     return $this->coverageScore;
   }
   /**
-   * @param GoogleCloudDialogflowCxV3TransitionCoverageTransition[]
+   * The list of Transitions present in the agent.
+   *
+   * @param GoogleCloudDialogflowCxV3TransitionCoverageTransition[] $transitions
    */
   public function setTransitions($transitions)
   {
