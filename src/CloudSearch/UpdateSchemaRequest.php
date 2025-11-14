@@ -24,12 +24,17 @@ class UpdateSchemaRequest extends \Google\Model
   protected $schemaType = Schema::class;
   protected $schemaDataType = '';
   /**
+   * If true, the schema will be checked for validity, but will not be
+   * registered with the data source, even if valid.
+   *
    * @var bool
    */
   public $validateOnly;
 
   /**
-   * @param DebugOptions
+   * Common debug options.
+   *
+   * @param DebugOptions $debugOptions
    */
   public function setDebugOptions(DebugOptions $debugOptions)
   {
@@ -43,7 +48,9 @@ class UpdateSchemaRequest extends \Google\Model
     return $this->debugOptions;
   }
   /**
-   * @param Schema
+   * The new schema for the source.
+   *
+   * @param Schema $schema
    */
   public function setSchema(Schema $schema)
   {
@@ -57,7 +64,10 @@ class UpdateSchemaRequest extends \Google\Model
     return $this->schema;
   }
   /**
-   * @param bool
+   * If true, the schema will be checked for validity, but will not be
+   * registered with the data source, even if valid.
+   *
+   * @param bool $validateOnly
    */
   public function setValidateOnly($validateOnly)
   {

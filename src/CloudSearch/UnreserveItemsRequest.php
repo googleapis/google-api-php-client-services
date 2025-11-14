@@ -20,18 +20,26 @@ namespace Google\Service\CloudSearch;
 class UnreserveItemsRequest extends \Google\Model
 {
   /**
+   * The name of connector making this call. Format:
+   * datasources/{source_id}/connectors/{ID}
+   *
    * @var string
    */
   public $connectorName;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
   /**
+   * The name of a queue to unreserve items from.
+   *
    * @var string
    */
   public $queue;
 
   /**
-   * @param string
+   * The name of connector making this call. Format:
+   * datasources/{source_id}/connectors/{ID}
+   *
+   * @param string $connectorName
    */
   public function setConnectorName($connectorName)
   {
@@ -45,7 +53,9 @@ class UnreserveItemsRequest extends \Google\Model
     return $this->connectorName;
   }
   /**
-   * @param DebugOptions
+   * Common debug options.
+   *
+   * @param DebugOptions $debugOptions
    */
   public function setDebugOptions(DebugOptions $debugOptions)
   {
@@ -59,7 +69,9 @@ class UnreserveItemsRequest extends \Google\Model
     return $this->debugOptions;
   }
   /**
-   * @param string
+   * The name of a queue to unreserve items from.
+   *
+   * @param string $queue
    */
   public function setQueue($queue)
   {
